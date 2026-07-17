@@ -295,6 +295,7 @@ describe('TeacherNavigationBar', () => {
     screen.getByText(i18n.assessments());
     screen.getByText(i18n.teacherTabStats());
     screen.getByText(i18n.studentProjects());
+    screen.getByText('Student Snapshot');
     screen.getByText(i18n.roster());
     screen.getByText(i18n.settings());
   });

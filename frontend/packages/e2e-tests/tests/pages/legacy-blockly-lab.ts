@@ -3,6 +3,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 import {AuthoredHintsComponent} from '../components/authored-hints';
 import {CalloutsComponent} from '../components/callouts';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+import {waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
 
@@ -35,6 +36,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /** Congratulations overlay shown on puzzle completion. */
+  readonly congratsMessage: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -48,6 +52,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
+    this.congratsMessage = page.locator('.congrats');
   }
 
   /**
@@ -62,9 +67,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
 
   /**
    * Navigate to an arbitrary level URL and wait for the lab. For levels whose
-   * shape labLevelUrl does not model — standalone /hoc/N paths, or course levels
-   * carrying extra query params (e.g. show_callouts). Same wait strategy as
-   * gotoLevel; prefer gotoLevel when labLevelUrl can build the URL.
+   * shape labLevelUrl does not model, e.g. course levels carrying extra query
+   * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
+   * when labLevelUrl can build the URL.
    */
   async gotoLevelUrl(url: string): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
@@ -92,7 +97,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    await this.header.waitForSignedIn();
+    // State-agnostic: labs boot for anonymous sessions too, so wait for the
+    // header user area in either auth state, not specifically signed-in.
+    await this.header.waitForUserChrome();
     // Dismiss the instructions overlay if shown (anonymous sessions).
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
@@ -103,6 +110,47 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       'opacity',
       '1',
     );
+  }
+
+  /** Clear the workspace, then arrange and load the given blocks XML via the lab's test-only interface. */
+  async loadArrangedBlocksXml(blocksXml: string): Promise<void> {
+    await expect
+      .poll(() =>
+        this.page.evaluate(() => Boolean(window.Blockly?.mainBlockSpace)),
+      )
+      .toBe(true);
+
+    await this.page.evaluate((xml: string) => {
+      const {Blockly, __TestInterface} = window;
+      if (!Blockly || !__TestInterface) {
+        throw new Error('Blockly test globals unavailable');
+      }
+      Blockly.mainBlockSpace.clear();
+      __TestInterface.loadBlocks(__TestInterface.arrangeBlockPosition(xml, {}));
+    }, blocksXml);
+  }
+
+  /** A block's rendered SVG group, keyed by its Blockly block id. */
+  blockLocator(blockId: string): Locator {
+    return this.page.locator(`.blocklySvg [data-id="${blockId}"]`);
+  }
+
+  /**
+   * A block's workspace offset from its SVG translate transform. Auto-layout can
+   * nudge a block over a few frames after it attaches, so wait for it to settle.
+   */
+  async blockOffset(blockId: string): Promise<{x: number; y: number}> {
+    await waitUntilStable(this.blockLocator(blockId));
+    return this.page.evaluate((id: string) => {
+      const block = document.querySelector<SVGGElement>(
+        `.blocklySvg [data-id="${id}"]`,
+      );
+      if (!block) {
+        throw new Error(`Blockly block ${id} was not found`);
+      }
+      const transform = block.transform.baseVal.getItem(0);
+      return {x: transform.matrix.e, y: transform.matrix.f};
+    }, blockId);
   }
 
   /** Switch locale via the global dropdown; wait for the lab to reload. */
@@ -117,5 +165,30 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
+  }
+
+  /**
+   * Load a Blockly workspace from a serialization object. Mirrors
+   * load_json_blocks() from blockly_initialization_blocks.rb.
+   */
+  async loadBlocks(blocksJson: object): Promise<void> {
+    await this.page.waitForFunction(() =>
+      Boolean(window.Blockly?.getMainWorkspace()),
+    );
+    await this.page.evaluate(state => {
+      const blockly = window.Blockly;
+      const workspace = blockly?.getMainWorkspace();
+      if (!blockly || !workspace) {
+        throw new Error(
+          'Blockly main workspace unavailable when loading blocks',
+        );
+      }
+      blockly.serialization.workspaces.load(state, workspace);
+    }, blocksJson);
+  }
+
+  /** Click Run to execute the current workspace program. */
+  async run(): Promise<void> {
+    await this.runButton.click();
   }
 }

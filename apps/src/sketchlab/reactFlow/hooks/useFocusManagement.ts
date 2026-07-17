@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
@@ -31,6 +31,21 @@ export function useFocusManagement(
   setNodeOrEdgeFocused: (focused: boolean) => void
 ) {
   const {fitView, getZoom} = useReactFlow();
+
+  // Tracks whether the latest focus change was driven by a pointer rather
+  // than the keyboard. Mouse clicks don't auto-pan but keyboard navigation
+  // does.
+  const focusFromPointerRef = useRef(false);
+  useEffect(() => {
+    const markPointer = () => (focusFromPointerRef.current = true);
+    const markKeyboard = () => (focusFromPointerRef.current = false);
+    document.addEventListener('pointerdown', markPointer, true);
+    document.addEventListener('keydown', markKeyboard, true);
+    return () => {
+      document.removeEventListener('pointerdown', markPointer, true);
+      document.removeEventListener('keydown', markKeyboard, true);
+    };
+  }, []);
 
   // Close the toolbar on clicks outside nodes, edges, and the
   // toolbar itself. Clicking on non-focusable areas (e.g. the canvas
@@ -101,18 +116,18 @@ export function useFocusManagement(
       if (entry && tabOrder.some(tabEntry => entriesMatch(tabEntry, entry))) {
         setLastFocusedEntry(entry);
         setNodeOrEdgeFocused(true);
-        // Pan the focused element into view when it is off-screen.
+        // Pan the focused element into view when it is off-screen, but only
+        // for keyboard focus; a pointer click leaves it where the user aimed.
         // Deferred so it runs after React Flow finishes processing the
-        // focus event internally; calling fitView synchronously here
-        // gets overridden by React Flow's state reconciliation.
-        // The lookup must stay inside the rAF — it has to outlast that
-        // synchronous reconciliation.
-        requestAnimationFrame(() => {
-          const element = getElementForEntry(entry);
-          if (element) {
-            panToEntryIfNeeded(entry, element);
-          }
-        });
+        // focus event internally.
+        if (!focusFromPointerRef.current) {
+          requestAnimationFrame(() => {
+            const element = getElementForEntry(entry);
+            if (element) {
+              panToEntryIfNeeded(entry, element);
+            }
+          });
+        }
       } else {
         const focusTarget = event.target as HTMLElement;
         const inToolbar = focusTarget.closest(

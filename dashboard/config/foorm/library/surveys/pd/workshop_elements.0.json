@@ -78,20 +78,20 @@
           "category": "cohort_profile",
           "type": "radiogroup",
           "name": "cdo_pd_experience",
-          "title": "What is your previous experience with Code.org professional learning?",
-          "shortText": "Previous experience with Code.org professional learning",
+          "title": "What is your previous experience with CodeAI professional learning?",
+          "shortText": "Previous experience with CodeAI professional learning",
           "choices": [
             {
               "value": "first",
-              "text": "This is my first Code.org workshop"
+              "text": "This is my first CodeAI workshop"
             },
             {
               "value": "experienced_most_recent_this_sy",
-              "text": "I've attended Code.org workshops before, the most recent one was this school year"
+              "text": "I've attended CodeAI workshops before, the most recent one was this school year"
             },
             {
               "value": "experienced_most_recent_prior_sys",
-              "text": "I've attended Code.org workshops before, the most recent one was in a previous school year"
+              "text": "I've attended CodeAI workshops before, the most recent one was in a previous school year"
             },
             {
               "value": "not_sure",
@@ -581,7 +581,7 @@
             },
             {
               "value": "csc_support",
-              "text": "I know where to find Code.org help and support for CS Connections modules."
+              "text": "I know where to find CodeAI help and support for CS Connections modules."
             },
             {
               "value": "csc_understand_strategies",
@@ -709,7 +709,7 @@
             },
             {
               "value": "tools_updates",
-              "text": "Learning more about updates to Code.org curriculum and tools."
+              "text": "Learning more about updates to CodeAI curriculum and tools."
             }
           ]
         },
@@ -1022,7 +1022,7 @@
               "type": "matrix",
               "name": "curriculum_resources",
               "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'",
-              "title": "After participating in this workshop I feel prepared to use Code.org's {workshop_course} curriculum resources to:",
+              "title": "After participating in this workshop I feel prepared to use CodeAI's {workshop_course} curriculum resources to:",
               "columns": [
                 {
                   "value": "1",
@@ -1084,7 +1084,7 @@
               "type": "matrix",
               "name": "learning_platform",
               "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'",
-              "title": "I know how to use code.org’s learning platform to:",
+              "title": "I know how to use CodeAI's learning platform to:",
               "columns": [
                 {
                   "value": "1",
@@ -1398,7 +1398,7 @@
               "type": "matrix",
               "name": "curriculum_resources",
               "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'",
-              "title": "After participating in this workshop I feel prepared to use Code.org's {workshop_course} curriculum resources to:",
+              "title": "After participating in this workshop I feel prepared to use CodeAI's {workshop_course} curriculum resources to:",
               "columns": [
                 {
                   "value": "1",
@@ -1627,7 +1627,7 @@
               "type": "matrix",
               "name": "curriculum_investigation",
               "natalia_comment": "NOTE 1: added for CSD 06/08/2023, NOTE 2: removed by adding visible statement- 05/28/2024",
-              "title": "Please rate your level of agreement with the following question's about Code.org's Curriculum Investigation tool:",
+              "title": "Please rate your level of agreement with the following question's about CodeAI's Curriculum Investigation tool:",
               "columns": [
                 {
                   "value": "1",
@@ -1849,17 +1849,17 @@
         {
           "type": "html",
           "name": "pd_byow_pre_survey_preamble",
-          "html": "<h1><strong>Code.org Professional Learning Program</h1>\n<p><h2>Pre-Workshop Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
+          "html": "<h1><strong>CodeAI Professional Learning Program</h1>\n<p><h2>Pre-Workshop Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>CodeAI relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "html",
           "name": "pd_post_survey_preamble",
-          "html": "<h2>{workshop_course} Summer Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed the Code.org {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+          "html": "<h2>{workshop_course} Summer Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed the CodeAI {workshop_course} Summer workshop!</strong></p>\n<p>This survey asks questions about your experience today and the workshop as a whole.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take about <strong>10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "html",
           "name": "pd_survey_preamble",
-          "html": "<h2><strong>Code.org {workshop_course} Professional Learning Program Pre-Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
+          "html": "<h2><strong>CodeAI {workshop_course} Professional Learning Program Pre-Survey</strong></h2>\n<p><strong>Welcome to the program!</strong></p>\n<p>CodeAI relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>anonymous,</strong> aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>anonymized</strong> responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>Your honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "radiogroup",
@@ -1936,12 +1936,12 @@
         {
           "type": "html",
           "name": "summer_workshop_daily_preamble",
-          "html": "<h2>{workshop_course} Summer Workshop - Day {day}</h2><p>We're eager to hear how you're doing and what your facilitator(s) can do to improve, so we ask that you please take 5-10 minutes to complete this survey.</p><p>Your feedback will be shared with your facilitator(s), {regional_partner_name} and the Code.org staff.</p>\n<p><strong>Thank you for your time and honesty!</strong></p>"
+          "html": "<h2>{workshop_course} Summer Workshop - Day {day}</h2><p>We're eager to hear how you're doing and what your facilitator(s) can do to improve, so we ask that you please take 5-10 minutes to complete this survey.</p><p>Your feedback will be shared with your facilitator(s), {regional_partner_name} and the CodeAI staff.</p>\n<p><strong>Thank you for your time and honesty!</strong></p>"
         },
         {
           "type": "html",
           "name": "survey_preamble_header_and_text",
-          "html": "<h2>{workshop_course} Academic Year Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed a Code.org {workshop_course} Academic Year Workshop!</strong></p>\n<p>This survey asks questions about your experience today.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+          "html": "<h2>{workshop_course} Academic Year Workshop Post-Survey</h2>\n\n<p><strong>Congratulations! You've completed a CodeAI {workshop_course} Academic Year Workshop!</strong></p>\n<p>This survey asks questions about your experience today.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "rating",
@@ -2004,7 +2004,7 @@
             },
             {
               "value": "talk_about_workshop",
-              "text": "When I'm not in Code.org workshops, I frequently talk about ideas or content from the workshop with others."
+              "text": "When I'm not in CodeAI workshops, I frequently talk about ideas or content from the workshop with others."
             },
             {
               "value": "will_use_in_classroom",

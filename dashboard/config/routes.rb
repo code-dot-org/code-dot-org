@@ -75,7 +75,7 @@ Dashboard::Application.routes.draw do
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
-    get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/level_source/:script_id/:level_id(/user/:user_id)', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     resources :student_work_evaluations, only: [:create] do
@@ -1472,7 +1472,11 @@ Dashboard::Application.routes.draw do
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show]
-    resources :challenge_response_assets, only: [:show]
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

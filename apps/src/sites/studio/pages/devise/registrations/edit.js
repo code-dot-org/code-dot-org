@@ -8,6 +8,7 @@ import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailControlle
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
 import ChangeUserTypeSection from '@cdo/apps/accounts/ChangeUserTypeSection';
+import CreatePersonalLogin from '@cdo/apps/accounts/CreatePersonalLogin';
 import DeleteAccount from '@cdo/apps/accounts/DeleteAccount';
 import ExpireOtherSessions from '@cdo/apps/accounts/ExpireOtherSessions';
 import ForParentsAndGuardians from '@cdo/apps/accounts/ForParentsAndGuardians';
@@ -309,21 +310,42 @@ $(document).ready(() => {
     );
   }
 
+  const createPersonalLoginMountPoint = document.getElementById(
+    'create-personal-login'
+  );
+  if (createPersonalLoginMountPoint) {
+    const data = createPersonalLoginMountPoint.dataset;
+    createReactRoot(
+      <CreatePersonalLogin
+        linkingEnabled={data.linkingEnabled === 'true'}
+        noEmail={data.noEmail === 'true'}
+        secretWordAccount={data.secretWordAccount === 'true'}
+        userAge={userAge}
+        hashedEmail={data.hashedEmail}
+        heading={data.heading}
+        description={data.description}
+        enterNewLoginInfo={data.enterNewLoginInfo}
+        usernameLabel={data.usernameLabel}
+        emailLabelMarkdown={data.emailLabelMarkdown}
+        passwordLabel={data.passwordLabel}
+        passwordConfirmationLabel={data.passwordConfirmationLabel}
+        confirmSecretWordsHeading={data.confirmSecretWordsHeading}
+        secretWordsLabel={data.secretWordsLabel}
+        enterParentEmailHeading={data.enterParentEmailHeading}
+        parentEmailLabel={data.parentEmailLabel}
+        termsMarkdown={data.termsMarkdown}
+        emailNoteMarkdown={data.emailNoteMarkdown}
+        submitLabel={data.submitLabel}
+        lockIconSrc={data.lockIconSrc}
+      />,
+      createPersonalLoginMountPoint,
+      {
+        legacyReactDomRender: true,
+      }
+    );
+  }
+
   analyticsReporter.sendEvent(EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED, {
     'user type': userType,
   });
-
-  initializeCreatePersonalAccountControls();
 });
-
-function initializeCreatePersonalAccountControls() {
-  $('#edit_user_create_personal_account').on('submit', function (e) {
-    if ($('#create_personal_user_email').length) {
-      window.dashboard.hashEmail({
-        email_selector: '#create_personal_user_email',
-        hashed_email_selector: '#create_personal_user_hashed_email',
-        age_selector: '#user_age',
-      });
-    }
-  });
-}

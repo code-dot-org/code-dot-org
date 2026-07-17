@@ -711,8 +711,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "ridiculous chapter number throws NotFound instead of RangeError" do
+    create_hourofcode_unit_and_levels
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
         course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
@@ -864,13 +864,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "chapter based routing" do
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/reset"},
       {controller: "script_levels", action: "reset", script_id: Unit::HOC_NAME}
     )
 
+    create_hourofcode_unit_and_levels
     hoc_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::HOC_NAME).id, chapter: 1)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/hoc/1"},
@@ -878,6 +878,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal '/hoc/1', build_script_level_path(hoc_level)
 
+    create(:script, :with_levels, levels_count: 5, name: Unit::FLAPPY_NAME)
     flappy_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/flappy/5"},
@@ -885,6 +886,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
     assert_equal "/flappy/5", build_script_level_path(flappy_level)
 
+    # special case for jigsaw routing: /jigsaw/3 is recognized as chapter
+    # routing, but build_script_level_path emits the canonical /s/ path.
+    jigsaw_unit = create(:script, name: Unit::JIGSAW_NAME)
+    jigsaw_lesson = create(:lesson, script: jigsaw_unit, relative_position: '1', absolute_position: 1)
+    3.times {|i| create(:script_level, script: jigsaw_unit, lesson: jigsaw_lesson, chapter: i + 1)}
     jigsaw_level = ScriptLevel.find_by(script_id: Unit.get_from_cache(Unit::JIGSAW_NAME).id, chapter: 3)
     assert_routing(
       {method: "get", path: "http://#{CDO.dashboard_hostname}/jigsaw/3"},
@@ -991,6 +997,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for hoc" do
+    create_hourofcode_unit_and_levels
     get :show, params: {
       course_course_name: Unit::HOC_NAME,
       unit_position: 1,
@@ -1015,6 +1022,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show redirects to canonical url for special scripts" do
+    flappy_unit = create(:script, :with_levels, name: Unit::FLAPPY_NAME)
+    create(:hoc_course, unit: flappy_unit, name: Unit::FLAPPY_NAME, family_name: Unit::FLAPPY_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {
       course_course_name: Unit::FLAPPY_NAME,
       unit_position: 1,
@@ -1088,11 +1097,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "reset redirects admins to root" do
+    create_hourofcode_unit_and_levels
     sign_in create(:admin)
     get :reset, params: {script_id: Unit::HOC_NAME}
     assert_redirected_to root_path
+  end
+
+  test "reset for hoc when not logged in clears client state and redirects back through /hoc/1" do
+    create_hourofcode_unit_and_levels
+    client_state.set_level_progress(create(:script_level), 10)
+    refute client_state.level_progress_is_empty_for_test
+
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_response 200
+    assert_template 'levels/reset_and_redirect'
+    # The redirect target must flow through the hoc chapter dispatch in
+    # build_script_level_path, not the /s/ form.
+    assert_equal '/hoc/1', assigns(:redirect_path)
+
+    assert client_state.level_progress_is_empty_for_test
+    refute session['warden.user.user.key']
+  end
+
+  test "reset for hoc when logged in redirects to /hoc/1" do
+    create_hourofcode_unit_and_levels
+    sign_in(create(:user))
+    get :reset, params: {script_id: Unit::HOC_NAME}
+    assert_redirected_to '/hoc/1'
   end
 
   test "show with the reset param should reset session when not logged in" do
@@ -1212,26 +1244,33 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'end of HoC for a user is HOC endpoint' do
+    create_hourofcode_unit_and_levels
     stubs(:current_user).returns(@student)
     assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
+    create_hourofcode_unit_and_levels
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
+    frozen_unit = create(:script, name: Unit::FROZEN_NAME)
+    create(:hoc_course, unit: frozen_unit, name: Unit::FROZEN_NAME, family_name: Unit::FROZEN_NAME)
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
+    starwars_unit = create(:script, name: Unit::STARWARS_NAME)
+    create(:hoc_course, unit: starwars_unit, name: Unit::STARWARS_NAME, family_name: Unit::STARWARS_NAME)
     stubs(:current_user).returns(nil)
     assert_equal('https://test-studio.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
+    create_hourofcode_unit_and_levels
     sign_in create(:admin)
     get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_redirected_to root_path
@@ -1296,6 +1335,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should 404 for invalid chapter for flappy" do
+    create(:script, :with_levels, name: Unit::FLAPPY_NAME)
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {script_id: 'flappy', chapter: 40000}
     end

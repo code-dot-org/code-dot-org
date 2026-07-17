@@ -1,5 +1,5 @@
 {
-  "title": "Code.org Coach Training: Post-Workshop Survey",
+  "title": "CodeAI Coach Training: Post-Workshop Survey",
   "pages": [
     {
       "name": "page1",
@@ -22,12 +22,12 @@
         {
           "type": "html",
           "name": "intro",
-          "html": "<h1>Code.org Professional Learning for Coaches</h1><h2><strong>Well done, you've completed Code.org's professional development workshop for coaches!</h2><p><h3>Post-Workshop Survey</strong></h3>\n\n<p>This survey asks questions about your experience today and your plans as a Code.org coach. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p>\n<p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Post-Workshop Survey</h2>"
+          "html": "<h1>CodeAI Professional Learning for Coaches</h1><h2><strong>Well done, you've completed CodeAI's professional development workshop for coaches!</h2><p><h3>Post-Workshop Survey</strong></h3>\n\n<p>This survey asks questions about your experience today and your plans as a CodeAI coach. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p>\n<p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by CodeAI, our Regional Partners, and our facilitators for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Post-Workshop Survey</h2>"
         },
         {
           "type": "rating",
           "name": "nps_pd_coaches",
-          "title": "How likely are you to recommend this Code.org Coach Training to a colleague?",
+          "title": "How likely are you to recommend this CodeAI Coach Training to a colleague?",
           "rateCount": 11,
           "rateMin": 0,
           "rateMax": 10,
@@ -43,7 +43,7 @@
         {
           "type": "rating",
           "name": "confidence_ability_support_teachers",
-          "title": "How confident do you feel in your ability to support teachers using Code.org curriculum?",
+          "title": "How confident do you feel in your ability to support teachers using CodeAI curriculum?",
           "rateCount": 7,
           "rateMin": 1,
           "rateMax": 7,
@@ -53,7 +53,7 @@
         {
           "type": "rating",
           "name": "clarity_responsibilities_coach_network",
-          "title": "Do you feel clear on your responsibilities as part of Code.org's Coach Network?",
+          "title": "Do you feel clear on your responsibilities as part of CodeAI's Coach Network?",
           "rateCount": 7,
           "rateMin": 1,
           "rateMax": 7,
@@ -63,7 +63,7 @@
         {
           "type": "checkbox",
           "name": "coaches_next_steps",
-          "title": "What are your next steps as a Code.org Coach?",
+          "title": "What are your next steps as a CodeAI Coach?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -92,14 +92,14 @@
         {
           "type": "comment",
           "name": "barriers_pd_coaches",
-          "title": "Do you anticipate any barriers in taking your next steps as a Code.org Coach?",
+          "title": "Do you anticipate any barriers in taking your next steps as a CodeAI Coach?",
           "rows": 2
         },
         {
           "type": "comment",
           "name": "additional_support_pd_coaches",
           "description": "(Skip if you don't anticipate any barriers)",
-          "title": "How can Code.org better support you overcome this barrier as you take your next steps as a Code.org Coach?",
+          "title": "How can CodeAI better support you overcome this barrier as you take your next steps as a CodeAI Coach?",
           "rows": 2
         },
         {
@@ -123,7 +123,7 @@
         {
           "type": "radiogroup",
           "name": "permission_quote",
-          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "title": "I give CodeAI permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
           "choices": [
             {
               "value": "yes_with_name",
@@ -163,7 +163,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

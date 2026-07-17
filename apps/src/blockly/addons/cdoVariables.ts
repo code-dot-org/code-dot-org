@@ -26,7 +26,7 @@ export default function initializeVariables(
    * @returns {string[]} Array of all the variable IDs used.
    */
   blocklyWrapper.Variables.allVariablesFromBlock = function (block) {
-    return block.getVars();
+    return block.getVarModels().map(m => m.getId());
   };
 
   /**
@@ -64,19 +64,22 @@ export function deleteUnusedVariables(workspace: BlocklyCore.Workspace) {
     variable => !usedVariableIds.has(variable.getId())
   );
   unusedVariables.forEach(varToDelete => {
-    workspace.deleteVariableById(varToDelete.getId());
+    BlocklyCore.Variables.deleteVariable(workspace, varToDelete);
   });
 }
 
 export function getNonFunctionVariableIds(workspace: BlocklyCore.Workspace) {
   const allVariableIds =
-    workspace?.getVariablesOfType('').map(variable => variable.getId()) || [];
+    workspace
+      ?.getVariableMap()
+      .getVariablesOfType('')
+      .map(variable => variable.getId()) || [];
   if (!workspace.rendered) {
     // We don't need to worry about filtering variables in toolboxes or flyouts.
     return allVariableIds;
   }
   const nonFunctionIds = allVariableIds.filter(id => {
-    const varUses = workspace.getVariableUsesById(id);
+    const varUses = BlocklyCore.Variables.getVariableUsesById(workspace, id);
     return (
       // Newly created variables will not have any uses.
       !varUses.length ||

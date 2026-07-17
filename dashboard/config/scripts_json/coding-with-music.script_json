@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-19 16:27:11 UTC",
+    "serialized_at": "2026-07-13 21:42:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1916,11 +1916,12 @@
     },
     {
       "name": "Coding with Music Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
+      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/template/preview",
       "key": "coding_with_music_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
+        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/template/preview",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2360,6 +2361,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

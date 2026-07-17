@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-13 05:33:11 UTC",
+    "serialized_at": "2026-07-14 04:02:49 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -168,31 +168,88 @@
       }
     },
     {
-      "key": "lesson-8",
+      "key": "Lesson 3: Variables and Live Updates",
       "name": "Variables and Live Updates",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can I make my app “remember” what the user did and show it on screen?**\n\nStudents meet variables as the way apps \"remember\" state and learn the create-update-display pattern. The lesson centers QA Engineer as a role and introduces a bug-triage workflow: severity, expected vs. actual, hypothesis-first. The three Evaluate AI patterns — Is the output what you asked for? Does it work? Can you explain it? — give students shared vocabulary for critiquing AI suggestions instead of just accepting them.",
+        "preparation": "- Prepare blank sheets of paper for students to use in the changing values simulation activity\n",
+        "student_overview": "**How can I make my app “remember” what the user did and show it on screen?**\n\nApps remember things — your score, your cart, your scroll position — using variables. You learn how to create them, update them, and display them on the page. You also step into the shoes of a QA Engineer: the person whose job is to find bugs before users do. By the end of class, you know how to write a clean bug report and how to tell whether AI's \"fix\" actually fixes anything."
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "foundations-of-ai-programming-js"
       }
     },
     {
-      "key": "lesson-12",
-      "name": "Reactive Logic Project",
+      "key": "Lesson 4: Writing Reusable Functions",
+      "name": "Writing Reusable Functions",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**How can I make my code cleaner and easier to reuse?**\n\nStudents learn arrow functions, named vs. anonymous syntax, return values, and abstraction — with the framing that clean, well-named code helps humans and AI work with shared code. The spec.md activity introduces literal [Specify], [Predict], and [Return] tags as a handoff from natural-language planning to AI-generated code. \"Write Rewind on your own\" is the unit's first declared Write First task — AI Tutor will not write it.",
+        "student_overview": "**How can I make my code cleaner and easier to reuse?**\n\nRepeating the same lines of code over and over gets messy fast. Functions let you write a chunk of code once and reuse it everywhere. You learn to define and call arrow functions, use return values to send information back from a function, and see why naming matters for you, your teammates, and the AI tools you work with. You also write a quick plan in `spec.md` before you ask AI to generate code."
       },
       "seeding_key": {
-        "lesson.key": "lesson-12",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "Lesson 5: Making Decisions with If/Else",
+      "name": "Making Decisions with If/Else",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**How can I make my app make choices based on user actions?**\n\nStudents meet flowcharts and conditional statements together. The lesson names computer vision as the AI capability that lets students hand a sketched flowchart to AI as a visual spec — connecting visual planning directly to code generation. The Warm Up plants a Domain 4 hook (\"Who decided that liking one video means showing similar ones?\"), opening a conversation that returns in later lessons.",
+        "student_overview": "**How can I make my app make choices based on user actions?**\n\nApps make decisions all day — show this if logged in, otherwise show that. The tool for planning those decisions is a flowchart, and the code that runs them is the `if/else` statement. You sketch your first flowchart, hand it to AI as a visual spec, and check whether the code AI writes actually follows your plan. You also start asking a bigger question: who decided the rules the apps you use follow?"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "Lesson 10: Adding NOT and Complex Conditions",
+      "name": "Loops and Counted Repetition",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "**How can a for loop help an app repeat something the right number of times?**\n\nIn this lesson, students explore how for loops help apps repeat an action based on user input. They begin with a no-code example where an app displays one cat emoji for each number the user enters, then connect that idea to iteration, for loops, loop variables, and start, stop, and step values. Students use a debugging checklist to test whether an AI-generated loop repeats the correct number of times, then design a counted-repetition flowchart and use AI to translate it into pseudocode.",
+        "student_overview": "**How can a for loop help an app repeat something the right number of times?**\n\nToday you learn how apps use for loops to repeat an action a specific number of times. You start by thinking about an app that shows one cat emoji for each number a user enters, then learn how start, stop, and step values control a loop. You also test AI-generated loop code to check whether it repeats too many, too few, or the right number of times."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "Lesson 11: Reactive Logic Project",
+      "name": "Reactive Logic Project",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "**How can I design and build an interactive web app that responds to users in meaningful ways?**\n\nThe unit capstone — five days, four milestones, one student-designed interactive app. Students plan with a wireframe and flowchart, build, test, peer-review (TAG: Tell / Ask / Give), and finalize. Reflection prompts at each milestone push students to distinguish what AI did from what they did, building toward the Claim step they'll formalize in later units. Every Phase 1 concept comes together here: event-driven design, variables, functions, and conditionals including combined conditions.",
+        "preparation": "- Print copies of the Reactive Logic Project Rubric (one for each student)\n- Print copies of the Peer Feedback with TAG handout (one for each student)",
+        "student_overview": "**How can I design and build an interactive web app that responds to users in meaningful ways?**\n\nFive days. One app. Your idea, your plan, your code. You use what you've learned this unit — events, variables, functions, return values, if/else, for loops, and user-centered design — to build an interactive app that responds to the user. You plan it, build it in code, get feedback from your peers, and reflect on what worked, what didn't, and where AI helped vs. where you figured it out yourself. By the end, you have something to show — and to keep."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "foundations-of-ai-programming-js"
       }
@@ -490,6 +547,244 @@
         "lesson_activity.key": "f8f7f6fb-4e93-4f7b-ae51-73231326601d",
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "c58473b1-cc06-4fd8-ba7f-898193336646",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c58473b1-cc06-4fd8-ba7f-898193336646",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "e03f743a-f27f-4948-bf44-9f94b95cbdd0",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e03f743a-f27f-4948-bf44-9f94b95cbdd0",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "0b96ca2b-65f6-4621-b766-260cce426b85",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b96ca2b-65f6-4621-b766-260cce426b85",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "4d847018-4960-4850-94cc-3b855ca8551a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d847018-4960-4850-94cc-3b855ca8551a",
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "9a7c4ecc-7293-4c89-a383-03dfaa2b2d8e",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9a7c4ecc-7293-4c89-a383-03dfaa2b2d8e",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "4d7b7a38-9163-4c9d-af99-454ac7f0b927",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d7b7a38-9163-4c9d-af99-454ac7f0b927",
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "7904586a-8867-480e-86f7-b5be6293a8e3",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7904586a-8867-480e-86f7-b5be6293a8e3",
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "7076544a-116a-4028-b8ab-6f3883da426b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b",
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "13800ff7-505f-49c0-aacb-d8f50b973176",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13800ff7-505f-49c0-aacb-d8f50b973176",
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "2721d5d6-d6c7-422b-8052-8663282d42c8",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8",
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf",
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "69508864-34b3-4a2b-ab72-d35b97e65fd5",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5",
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 4"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c",
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js"
+      }
+    },
+    {
+      "key": "76739059-7cda-44aa-b931-4651b036e7be",
+      "position": 5,
+      "properties": {
+        "duration": 45,
+        "name": "Day 5"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be",
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "foundations-of-ai-programming-js"
       }
     }
@@ -2337,6 +2632,1235 @@
         "activity_section.key": "b654f131-3d4c-41c9-8bad-10d9575eeec2",
         "lesson_activity.key": "f8f7f6fb-4e93-4f7b-ae51-73231326601d"
       }
+    },
+    {
+      "key": "6a4a91b8-b4de-46ad-b19c-b9de8a706de6",
+      "position": 1,
+      "properties": {
+        "description": "Imagine you're a front-end developer at YouTube, and your job is to decide what videos show up on the homepage. All you can see are the buttons people click and information they submit. Based on just those actions, you have to decide which videos to show millions of people.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6a4a91b8-b4de-46ad-b19c-b9de8a706de6",
+        "lesson_activity.key": "c58473b1-cc06-4fd8-ba7f-898193336646"
+      }
+    },
+    {
+      "key": "38d76cf9-7530-4d77-ac62-d89b8fd284fd",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice when users click, type, or post?*\n- *What changes each time someone interacts?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \nStudents should identify the types of data YouTube tracks from user interactions (likes, views, comments, watch time, searches) and recognize that these values update over time. They should also identify the specific parts of the page (like/dislike buttons, play/pause controls, comment fields, search bars) that capture user actions and trigger those updates. Guide students to connect what they see on the screen to underlying variables that are stored and updated behind the scenes.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What data is YouTube tracking when users interact with the site? What parts of the page collect that data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify the types of data YouTube might track from user interactions (likes, views, comments, watch time, searches) and understand that these values are stored as variables that continuously update over time and shape what users see on the platform. Help students bring in examples (scores, timers, progress bars) from other sites and guide them to connect what they see on the screen to underlying variables that are updated behind the scenes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "38d76cf9-7530-4d77-ac62-d89b8fd284fd",
+        "lesson_activity.key": "c58473b1-cc06-4fd8-ba7f-898193336646"
+      }
+    },
+    {
+      "key": "7abd140b-fd66-4fb0-b48d-a8a9452fef8d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience how a value can change repeatedly while still being tracked — modeling the concept of a variable.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming (JavaScript) Unit Guide.",
+        "duration": "10",
+        "name": "From User Actions to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "7abd140b-fd66-4fb0-b48d-a8a9452fef8d",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "4ecd0ef7-8585-4788-9a9e-64bb925445db",
+      "position": 2,
+      "properties": {
+        "description": "When you click like, post a comment, or search on YouTube, the app has to keep track of what you did and update what you see. Programmers have specific names for the pieces that make that possible.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4ecd0ef7-8585-4788-9a9e-64bb925445db",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "68644701-a4bc-4040-bf90-7ec9bff328c8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect back to the warm-up by reminding students that the like count, comment text, and search history they identified are all examples of these concepts in action.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you move through the next three slides, refer back to specific examples students gave during the warm-up. For instance, if a student mentioned the like count going up, you can use that as your concrete example when defining variable (the like count is stored) and operation (clicking the like button adds 1)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "68644701-a4bc-4040-bf90-7ec9bff328c8",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "d9f052f2-6aaf-4881-8fe2-9e47922f2bf8",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d9f052f2-6aaf-4881-8fe2-9e47922f2bf8",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "2c0d2006-2084-43ed-90c7-55546693d51e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *variable*. Connect the definition back to the warm-up by reminding students of the YouTube examples they identified — the like count, the number of views, the comments, and the search history are all variables. They are containers that store information the app needs to keep track of. The value inside can change as users interact with the app.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students get stuck on the idea of a variable as a container, help them make the connection by explaining how you can take out what's inside and replace it with something new but you can only store one thing at a time. For now, students don't have to know the difference between let (a variable whose value can change) and const (a variable whose value is fixed) but they should recognize that those keywords indicate creating a new variable."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c0d2006-2084-43ed-90c7-55546693d51e",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "9b8d5b7e-2b54-41c7-94fb-35e6f4f76c32",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b8d5b7e-2b54-41c7-94fb-35e6f4f76c32",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "0fd19ce0-df79-49ef-b913-0fd1cbea9948",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *operation*. Connect this concept back to the warm-up by explaining that every time someone clicked the like button on YouTube, the like count went up by one. That action — adding one to the like count — is an operation. In code, operations are what make variables change in response to user actions."
+      },
+      "seeding_key": {
+        "activity_section.key": "0fd19ce0-df79-49ef-b913-0fd1cbea9948",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "9e984d76-d420-4343-a04b-9c6d28de6fa6",
+      "position": 8,
+      "properties": {
+        "description": "This three-step pattern — create, update, display — is the foundation for almost every interactive web app. Whenever you see a number or piece of text update on a page, this kind of code is running behind the scenes.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9e984d76-d420-4343-a04b-9c6d28de6fa6",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "67491227-b310-4a61-ab8d-419226a091f7",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the three lines of code one at a time. Explain that this is the pattern students will use and see over and over again: create a variable, update its value, and display the value on the page.\n- Line 1 creates the variable score and sets its starting value to 0. This is the program's starting state.\n- Line 2 updates the value stored in score. The variable name appears on both sides of the equals sign because the program needs to know which variable to update and what the new value should be.\n- Line 3 shows the current value of score on the page so the user can see it.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may wonder why score = score + 1 looks strange compared to math class, where this would be a contradiction. Explain that in code, the equals sign means \"store the value on the right into the variable on the left\" — it's not a math equation. The program calculates score + 1 first, then stores the result back into score."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "67491227-b310-4a61-ab8d-419226a091f7",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "1beee88f-a603-4249-8e48-ec103970232f",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1beee88f-a603-4249-8e48-ec103970232f",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "51448141-1192-4c53-bede-d980fb5cb8e6",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce `let` and `const` as the two keywords used to create variables in JavaScript. Use `let` when the value will change while the program runs (like a score that goes up). Use `const` when the value should stay the same (like the maximum number of lives in a game)."
+      },
+      "seeding_key": {
+        "activity_section.key": "51448141-1192-4c53-bede-d980fb5cb8e6",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "c62fc101-28fb-464c-a18c-c53aaf161381",
+      "position": 12,
+      "properties": {
+        "description": "When you see let or const in code, that's a signal that a new variable is being created. The keyword tells you whether the value is meant to change.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students don't need to memorize a strict rule for when to use each keyword yet. The main takeaway is recognition: when they see let or const, they should know a variable is being created."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c62fc101-28fb-464c-a18c-c53aaf161381",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "d3de28f5-9e6b-48ab-a7e6-1231e61ecbb2",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d3de28f5-9e6b-48ab-a7e6-1231e61ecbb2",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "95b5fd56-139f-4a68-8853-73e613fd708b",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore a dashboard in Sketch Lab and then in Weblab to observe how the score (state) changes over time. Then students generate and write code to track and update state through variables and user interactions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the role of QA Engineer. Emphasize that QA Engineers don't fix bugs — they find them, document them clearly enough that someone else can fix them, and decide which bugs are urgent enough to fix first.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *A bug report is a QA Engineer's main deliverable. What information did the QA Engineer include?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that a bug report contains specific kinds of information for specific reasons. Listen for them naming the parts: steps to reproduce (so the developer can see the bug themselves), expected vs. actual (so the developer knows what's wrong, not just that something is wrong), severity (so the team knows how urgent it is), and hypothesis (a useful starting guess, though the developer may find something different). If students focus on surface details like formatting, redirect them to function: \"Why does the developer need each piece?\"",
+        "duration": "20",
+        "name": "Working with Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The hypothesis line is the most interesting part for students to notice. A QA Engineer doesn't just say \"it's broken\" — they form a guess about why. That guess might be wrong, but it gives the developer a starting point. This is the same kind of thinking students will do in the next level when they triage bugs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "95b5fd56-139f-4a68-8853-73e613fd708b",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "ca445a75-41f2-4acf-8c73-0f3f2d4884a5",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca445a75-41f2-4acf-8c73-0f3f2d4884a5",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "c4eb1f01-8ede-4153-be4f-499c8807045c",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 3.\n- Level 1: Students explore how variables are set and change.\n- Level 2: Students choose one of the levels and use AI to debug code that should change a variable.\n- Level 3: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students explaining what value they are tracking and how it changes. Ask them what caused the variable to change and what the new value is. Have them confirm whether the result matched what they expected.",
+        "progression_name": "Working with Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4eb1f01-8ede-4153-be4f-499c8807045c",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "96eb2631-fe39-47da-b930-573d95d34f44",
+      "position": 17,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students accept AI-generated code quickly, pause them to explain how the value changes before moving on. Emphasize that they must verify that the value updates correctly on the screen."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 to check whether students can:\n- define what the app should do before using AI\n- update a variable correctly\n- explain how the value (state) changes over time\n- compare expected vs actual behavior\n- use AI to generate, test, and verify solutions"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "96eb2631-fe39-47da-b930-573d95d34f44",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "a9f0e2b9-6e6f-4071-93f7-a9e55b17adba",
+      "position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a9f0e2b9-6e6f-4071-93f7-a9e55b17adba",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "4c44a445-96e2-44ee-bed7-51681dd1e65e",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students state the goal out loud (\"It should say Hello Sonia\"), then click through the animated slide to show what the AI actually produced. Emphasize the habit: always check if the AI gave you what you intended, not just whether it wrote code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read the prompt and identify what the code is supposed to do (\"add 10 to score\"). Then have them trace through the code line by line and figure out what it actually does (\"subtracts 10, ending with -5\"). Emphasize the habit: read AI code carefully and compare it to what you asked for. Code that looks reasonable at a glance can still do the wrong thing.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Point out that there's nothing visibly broken about this code — no typos, no missing pieces, no error-looking syntax. That's exactly why this habit matters. The only way to catch a bug like this is to read the code and compare it to the original goal."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c44a445-96e2-44ee-bed7-51681dd1e65e",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "d2305da6-b836-4f93-9f21-a31f5df1aaf9",
+      "position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d2305da6-b836-4f93-9f21-a31f5df1aaf9",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "1798a8e2-4241-40e6-98ca-a307e2f1a4bf",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students trace through the code line by line and explain what is happening at each step. What is num after line 1? What does num + num evaluate to? What gets stored back in num after line 2? Emphasize the habit: even when AI code works correctly, you should be able to explain what it is doing. If you can't explain it, you don't really understand it — and you won't be able to fix it when something goes wrong.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This code is correct, which makes it different from the previous two examples. Students might be tempted to skim past it because there's no bug to catch. Push them to articulate why it works. A useful prompt: \"If a classmate asked you what num + num does, how would you explain it?\" Being able to put code into your own words is the difference between copying AI output and understanding it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1798a8e2-4241-40e6-98ca-a307e2f1a4bf",
+        "lesson_activity.key": "738ceacd-5e88-43ba-a40f-f1aa8e42c96c"
+      }
+    },
+    {
+      "key": "256b855b-9968-4751-a946-7d5c9b1d8a8b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students give specific examples from their debugged code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What surprised you about this work?*\n- *What's different about being the person who finds problems vs. the person who builds features?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on what it was like to do QA Engineer work and start comparing it to the Front-End Developer work they did last lesson. Listen for specific responses about the experience of finding problems — the patience required to test thoroughly, the satisfaction of catching something subtle, the frustration of bugs that don't reproduce, or the cognitive shift from \"make it work\" to \"find what's broken.\" For the second question, guide students to notice that the two roles require different mindsets: builders look for what to add, testers look for what's missing or wrong. Builders often want their code to work; testers need to want to break it. Neither role is better — they're complementary, and many software teams need both.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "256b855b-9968-4751-a946-7d5c9b1d8a8b",
+        "lesson_activity.key": "e03f743a-f27f-4948-bf44-9f94b95cbdd0"
+      }
+    },
+    {
+      "key": "b0852470-d61e-4b00-b358-1b0610e0184a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize problems caused by repeated code and begin to identify qualities of clean, maintainable code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What problems might happen if code is repeated many times?*\n- *What would make code easier to work with?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that repeating code can lead to bugs, make updates harder, and slow developers down. They should begin to identify that code is easier to work with when it is organized, readable, and reusable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why clean, organized code matters in real-world development.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b0852470-d61e-4b00-b358-1b0610e0184a",
+        "lesson_activity.key": "0b96ca2b-65f6-4621-b766-260cce426b85"
+      }
+    },
+    {
+      "key": "55c70367-6207-492e-b98e-51ddf3210e44",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that code can be grouped into a single behavior and that functions are used to name and reuse that behavior.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming (JavaScript) Unit Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9 Level 1. Students make predictions, review the code, and make modifications to explore functions.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students identify where the behavior is located. Check that they can distinguish between code that runs inside the event handler and behavior that could be moved into a function. Ask questions like: \"Where is the behavior right now?\" \"What is this code doing when it runs?\"",
+        "duration": "15",
+        "name": "Introduction to Functions",
+        "progression_name": "Exploring Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "55c70367-6207-492e-b98e-51ddf3210e44",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "7fea8029-2b23-4ba1-9b3f-42d96678c653",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *function*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this section of code tells JavaScript that we are creating a function and gives it a name. Recall the const keyword and explain that it is used to define a function because we don't want the value of the `addNotification` variable (which is the function) to change.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the empty parentheses and arrow (which is made using the equals sign and greater than symbol together) indicates this is a function. That makes this an arrow function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that within the curly braces is the code we want to execute when the function is called.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that having a named function allows us to call it anywhere we want to use it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that while some functions directly change the page, other functions calculate or prepare a value and send it back using return. The returned value can then be stored in a variable, displayed on the page, or used somewhere else in the program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that there are two common ways to write arrow functions: named and anonymous. For named arrow functions, emphasize that because it has a name, it can be reused or called later in the code. For anonymous arrow function, clarify that they are often used \"in place,\" such as inside an event handler or passed into another function."
+      },
+      "seeding_key": {
+        "activity_section.key": "7fea8029-2b23-4ba1-9b3f-42d96678c653",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "97a0d9e7-4584-49aa-ad1f-a9fa855f93ab",
+      "position": 3,
+      "properties": {
+        "description": "Think about it like this, if someone is anonymous, you can not call their name to get their attention. But if you know someone's name, you can call them anytime you need them. Named functions work the same way – we can call them again later.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "97a0d9e7-4584-49aa-ad1f-a9fa855f93ab",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "b9bce9e4-4bb6-4543-b581-9e69480bb94d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that abstraction hides details and that using named functions helps them organize and reuse behavior when wiring up interactions in an app.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define abstraction. Emphasize that abstraction means hiding the details and focusing on what something does. Use the visual to compare what's happening inside versus using the function name, and highlight how the name helps us understand the behavior without seeing the code.",
+        "duration": "20",
+        "name": "Writing Reusable Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9bce9e4-4bb6-4543-b581-9e69480bb94d",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "07aabde9-7d60-4147-933c-2880d62fe8b4",
+      "position": 5,
+      "properties": {
+        "description": "You've already been doing these things — you predicted what buttons would do, you fixed AI's mistakes and explained why. Today we name the habit. SPEC is the four-letter framework you'll see all semester.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "07aabde9-7d60-4147-933c-2880d62fe8b4",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "6a1fc33c-1b2c-4f6b-8b3a-d613e550cf3e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read each letter aloud. Tell students they'll see [Specify] and [Predict] tags inside the spec.md file in the next level.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which function is easier to understand without reading the code? Which one would AI be more confident about?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear function names improve understanding for both humans and AI, while vague names make it harder to predict what the code does."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a1fc33c-1b2c-4f6b-8b3a-d613e550cf3e",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "6119a7bf-d148-4989-bacd-93be5d9cc58e",
+      "position": 7,
+      "properties": {
+        "description": "Now you're going to act like a developer building an interactive app. You'll look at an example, then use AI to help you generate functions for new buttons, connect them, and test that they work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6119a7bf-d148-4989-bacd-93be5d9cc58e",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete Levels 2 through 4.\n- Level 2: Use AI to rewrite an event handler to use a function, then rewrite another event handler on their own.\n- Level 3: Use AI to implement functions to hook up buttons in a web app.\n- Level 4: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ensure they are following the spec → add named arrow function → add event listener → test process. Encourage students to test frequently after each change — when something doesn't work, have them check whether the function is defined correctly, whether it's being called, and whether the name matches what it does. Remind students that AI-generated code can look correct but still needs to be tested and verified.",
+        "progression_name": "Write Reusable Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "99fd3c86-f109-410f-833a-76583d7e4231",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that AI is generating code based on their description. Clearer descriptions lead to better results. Encourage them to revise their prompt or ask AI to explain the code if something doesn't work."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 3 to assess whether students can meet the lesson objectives. Look for evidence that students can:\n- Write arrow functions to organize code into reusable pieces\n- Refactor behavior into functions instead of writing it directly inside event handlers\n- Explain how abstraction makes code easier to maintain, including how naming and reusing functions improves clarity"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "99fd3c86-f109-410f-833a-76583d7e4231",
+        "lesson_activity.key": "39124c8c-34e0-47a0-b2ce-e08c9b4a04d7"
+      }
+    },
+    {
+      "key": "26612304-a2a7-43aa-8b50-69f3e8f07719",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students give general answers (like \"I used functions\"), prompt them to be more specific by asking follow-up questions such as:\n- \"What change made your code easier for someone else to understand?\"\n- \"How might AI tools benefit from code that’s clearly named and organized?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26612304-a2a7-43aa-8b50-69f3e8f07719",
+        "lesson_activity.key": "4d847018-4960-4850-94cc-3b855ca8551a"
+      }
+    },
+    {
+      "key": "06761e28-dd43-4ac4-b30e-21dd03f17376",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "06761e28-dd43-4ac4-b30e-21dd03f17376",
+        "lesson_activity.key": "4d847018-4960-4850-94cc-3b855ca8551a"
+      }
+    },
+    {
+      "key": "d96c7d60-4e53-437f-bf87-644e7d8ef767",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d96c7d60-4e53-437f-bf87-644e7d8ef767",
+        "lesson_activity.key": "4d847018-4960-4850-94cc-3b855ca8551a"
+      }
+    },
+    {
+      "key": "10b04cd6-d7ca-47e4-ae9d-372876e774f6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What functionality of a social media app does this flowchart represent?*\n- *Where else have you seen an app make a decision like this?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps make decisions based on user input or data, similar to a flowchart. Use familiar examples like social media apps deciding what to show next or a login screen checking if a password is correct. Emphasize that apps are full of these decision points, and each decision affects what the user sees or experiences.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Who decided that liking one video means showing you similar ones?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that algorithmic systems reflect human decisions — someone designed the rules that shape what they see — and begin to see themselves as participants in (not just users of) those systems.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "10b04cd6-d7ca-47e4-ae9d-372876e774f6",
+        "lesson_activity.key": "9a7c4ecc-7293-4c89-a383-03dfaa2b2d8e"
+      }
+    },
+    {
+      "key": "2804c1e3-d7d6-490f-95a2-e7ff8f9a86e5",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand the different flowchart components.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming (JavaScript) Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *flowchart*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the symbols that are often used to create flowcharts:\n- Start/End – where the process begins or stops\n- Process – an action the app or user takes\n- Decision – a question with Yes/No outcomes\n- Connector – shows the flow of logic\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that AI uses computer vision to interpret flowcharts.",
+        "duration": "10",
+        "name": "Intro to Flowcharts"
+      },
+      "seeding_key": {
+        "activity_section.key": "2804c1e3-d7d6-490f-95a2-e7ff8f9a86e5",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "1a02debb-0ced-4746-af7b-f4ba073aecb6",
+      "position": 2,
+      "properties": {
+        "description": "Standardization matters not just for humans, but also because it makes it easier for AI to correctly understand and build working programs from a picture of a flowchart.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1a02debb-0ced-4746-af7b-f4ba073aecb6",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "59ecd03f-4c3c-488e-8977-be14d86c8c98",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Create a Flowchart activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Flowchart activity guide. Click through the animated slide to show students an example of how to create a flowchart.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that test cases help test that the flowchart logic works. Make sure students try at least one value for each path of the if/else (e.g., one above and one below the temperature cutoff) and by tracing through the flowchart. If they are having trouble identifying that they need to set the temperature variable to different values, ask them what their condition or decision (yellow diamond) is checking."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59ecd03f-4c3c-488e-8977-be14d86c8c98",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "fb1fde80-1552-4854-8cb9-61f32b84a298",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fb1fde80-1552-4854-8cb9-61f32b84a298",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "c7d25de0-76e3-4caf-b1a4-6a36b1cde416",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will use flowcharts to generate conditional logic and verify that their code correctly interprets user decisions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1. Students explore a thermometer app, then write code to change the conditional logic.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students can identify the main parts of the program: the variable, the event listener, and the if/else condition. Prompt with questions like: \"What value is the program checking?\" and \"What happens when the slider is moved?\" Support students in connecting the flowchart steps to the code.",
+        "duration": "20",
+        "name": "Coding Conditionals with Flowcharts",
+        "progression_name": "Explore: Temperature App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level is based on the flowchart that students completed in their Unit Guide. Direct students to trace through the flowchart if they are struggling to understand the code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c7d25de0-76e3-4caf-b1a4-6a36b1cde416",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "6ccb6d9c-4ae6-4892-a739-e7902825a1b2",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6ccb6d9c-4ae6-4892-a739-e7902825a1b2",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "def701ec-5e4a-4ef9-992a-d31f02e484fa",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What does the condition check for?*\n- *What did you change in the conditional logic?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that the condition is checking the value of the temperature variable which is controlled by the slider (or can be hard-coded by the programmer). Students should have made changes to the message text, message color, and background color. They may also have modified the condition, e.g. changed it to temperature > 80.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *conditional statement*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Boolean expression*.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students practice modeling decisions as flowcharts and translate flowchart decisions into JavaScript if/else statements using AI as a coding partner.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete Levels 2 through 4.\n- Level 2: Students use Sketch Lab to build their own flowchart.\n- Level 3: Use AI to support them in generating code for conditional logic.\n- Level 4: Students complete a Check for Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components including a start, process, decision, and outcome. Each flowchart must incorporate at least one variable and at least one function. Help students who are not sure of how to flowchart by asking prompting questions like: \"What decisions does the app have to make?\" or \"What should the user see on screen?\"",
+        "progression_name": "Turning Flowcharts into Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "def701ec-5e4a-4ef9-992a-d31f02e484fa",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "7b64dd43-608d-4b99-ac78-145d6c122efb",
+      "position": 8,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are feeling confused by the flowchart elements, have them start with the yellow diamond decision point. Turn their decision into a question with (at least) two outcomes. Then have them work backwards to figure out any functions and variables needed for making that decision. Encourage students who finish early to incorporate more than one condition into their flowchart."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use this activity as a formative check of how well students understand flowcharting conditional statements. Look for evidence that students are:\n- Able to use diamond shapes to represent a decision point\n- Flowcharting least two outcomes as a result of a decision point (e.g. Yes/No)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7b64dd43-608d-4b99-ac78-145d6c122efb",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "d22818d6-4504-477a-ab43-5540e99edb2d",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d22818d6-4504-477a-ab43-5540e99edb2d",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "b794f3f9-90b9-48ba-9c67-df66340dc299",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. How does your conditional connect to what the user sees or experiences?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that conditionals can change what is visible on screen, as well as controlling system behavior behind the scenes. This includes things like sound, data, or app state. Students should connect the decision being made in their code to both the user's experience (what they hear or see on screen) and the underlying changes happening in the program (like volume level or number of items in a cart)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b794f3f9-90b9-48ba-9c67-df66340dc299",
+        "lesson_activity.key": "02ee2612-e082-47f8-ab8b-1d624a63fe5f"
+      }
+    },
+    {
+      "key": "fc7bf8db-b7de-4ce3-a20f-f2b1e42a3027",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc7bf8db-b7de-4ce3-a20f-f2b1e42a3027",
+        "lesson_activity.key": "4d7b7a38-9163-4c9d-af99-454ac7f0b927"
+      }
+    },
+    {
+      "key": "b1772b93-d7a1-41b7-a378-a237ac335e42",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that the app repeats the same action once for each number the user requested.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What repeated action did the app need to do?*\n- *How did it know when to stop?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the app repeatedly adds one cat emoji until it has added the number the user asked for. They do not need loop vocabulary yet. Guide them toward the idea that the user’s number controls how many times the app repeats.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What problem happens if the user enters 50?*\n- *What problem happens if the user enters a number we did not expect?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that copy/paste only works when the number is known ahead of time. If the user chooses the number, the program needs a way to repeat the action automatically.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1772b93-d7a1-41b7-a378-a237ac335e42",
+        "lesson_activity.key": "7904586a-8867-480e-86f7-b5be6293a8e3"
+      }
+    },
+    {
+      "key": "2979a01d-7106-4650-a796-65706a57a981",
+      "position": 1,
+      "properties": {
+        "description": "Build students' understanding of iteration and for loops by connecting vocabulary and definitions to annotated flowchart examples.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming (JavaScript) Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define iteration. Explain that iteration means doing the same set of steps over and over again — not just repeating an action once, but cycling through a complete set of steps multiple times. Use the laundry example on the slide: each load involves the same four steps (wash, dry, fold, put away), and doing all four steps once is one iteration. Point out that in programming, loops are how we write iteration in code. Direct students to record the definition in their Unit Guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some examples of tasks you repeat, and how do you know when to stop?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface that many real-world tasks involve repeating the same steps, and that there is usually some signal or condition that tells us when we are finished. Listen for students using the word \"iteration\" to describe their example and identifying what counts as one complete cycle of steps.",
+        "duration": "10",
+        "name": "Making Sense of Loops",
+        "progression_name": "Exploring the NOT Operator",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to think of an example, offer a few starting points such as brushing teeth, making a sandwich, or running laps. Encourage them to identify what one full iteration looks like in their example."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2979a01d-7106-4650-a796-65706a57a981",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "445e5963-feba-4848-a03f-79fca3481235",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "445e5963-feba-4848-a03f-79fca3481235",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "329d51c7-4e8d-4054-9f7c-ee1ea7c3b7d8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define for loop. Explain that a for loop is used when the program needs to repeat something a specific number of times. Connect back to the warm-up: the user’s number tells the app how many cat emojis to show, so the app needs a loop that can count and repeat that many times. Point out that \"count-controlled\" is another name for this type of loop. Direct students to record the definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce start value, stop value, and step as the three parts that control how many times a for loop runs. Use the staircase on the slide as a concrete example: the bottom is the start value (0), the top is the stop value (6), and each step up is the step (1). Emphasize that every for loop has all three parts, and that changing any one of them changes how the loop behaves. Let students know they will identify these parts in a for loop flowchart on the next slide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reveal each label on the for loop flowchart one at a time. As each label appears, briefly explain what it represents: the start value sets the counter's beginning, the stop value sets when the loop ends, the stop value check is where the loop compares the counter to the stop value each time, and the step is what changes the counter. Direct students to annotate the flowchart in their Unit Guide as each label is revealed.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define loop variable. Point to the i in the code and explain that i is the loop variable — it starts at 0 and changes by one each time the loop runs. Direct students to record the definition and add an example in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may think the loop variable controls how many times the loop runs, when really it's the condition that does that. If this comes up, acknowledge that i and the condition work together — i changes each time, and the condition checks whether to keep going.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "329d51c7-4e8d-4054-9f7c-ee1ea7c3b7d8",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "8a4b5dd0-5ab2-40ee-86c5-9e0fa492decd",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a4b5dd0-5ab2-40ee-86c5-9e0fa492decd",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "fb5b6384-046e-4553-9b94-1910abb3b3a2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reveal each label one at a time. As each label appears, briefly explain what it represents and direct students to annotate that part of the code in their Unit Guide before moving to the next label.\n- Start Value: where the counter begins (i = 0)\n- Stop Value: the condition that ends the loop (i <= 10)\n- Step Value: how much the counter changes each time (i += 2)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students often read the stop value as simply \"stop at 10\" rather than \"keep going as long as i is less than or equal to 10.\" If this comes up, ask: \"What is the last value of i that makes this condition true?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fb5b6384-046e-4553-9b94-1910abb3b3a2",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "55e475d0-6889-4d22-968f-34d3dc4bb384",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55e475d0-6889-4d22-968f-34d3dc4bb384",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "e2428091-fef3-425e-bc30-815d16f94c52",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Loop Debugging Checklist in their Unit Guide. Explain that before changing any code, QA teams run through each check to diagnose exactly what's wrong. Briefly walk through each check and connect it back to the for-loop parts students just annotated:\n- First Value Test → checks the start value (i = 0)\n- Last Value Test → checks the stop condition (i <= 10)\n- Step Value Check → checks that the counter changes by the right amount (i += 2)\n- Extra/Missing Iteration Checks → catches errors at the boundaries\n- Match Check → confirms the output actually matches what was asked for\n\nLet students know they use this checklist on the next level before touching any code.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the checklist is a diagnostic tool, not a fix-it list. The goal is to identify which check the AI failed before touching the code.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2428091-fef3-425e-bc30-815d16f94c52",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "3c23fa3f-bf9f-466b-9b82-7edc1a2fabbb",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c23fa3f-bf9f-466b-9b82-7edc1a2fabbb",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students apply their understanding of for loops by debugging an AI-generated loop, designing a counted-repetition flowchart, using AI to turn that flowchart into pseudocode, and checking whether the output matches the intended repetition.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to complete Levels 1-4.\n- Level 1: Students use the Loop Debugging Checklist in their Unit Guide to debug the AI-generated code.\n- Level 2: Students design their own for loop flowchart representing a personally relevant scenario, labeling start value, stop value, and step.\n- Level 3: Students use AI to turn their flowchart into pseudocode, then edit the output to accurately match their diagram.\n- Level 4: Students complete a Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, encourage students to work through the checklist before changing the code. Ask, \"Where does the loop start?\" \"What is the last value the loop should use?\" and \"Does the password length match what the user requested?\" Push students to name which check helped them find the bug.",
+        "duration": "25",
+        "name": "Test and Design a For Loop",
+        "progression_name": "Test and Design a For Loop",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may want to immediately ask AI to fix the code. Emphasize that the checklist helps them diagnose the problem first. Iteration boundary errors are common in AI-generated loops, so this is a place where AI output should be checked carefully rather than trusted automatically.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 1 can be used as a formative assessment of the lesson objective “Test whether a loop repeats the right number of times.” Look for students who can compare the expected output to the actual output, identify whether the loop repeats too many or too few times, and explain which checklist item helped them diagnose the problem.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "b99f95ab-d13a-4453-a515-1fe71266bde1",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b99f95ab-d13a-4453-a515-1fe71266bde1",
+        "lesson_activity.key": "7076544a-116a-4028-b8ab-6f3883da426b"
+      }
+    },
+    {
+      "key": "abc3ecca-7cfc-4223-9881-6c61bd3640fb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n- *When did it need to repeat an action?*\n- *How did the loop know when to stop?*\n- *How was testing the loop important?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect loops to a specific app or activity from the lesson. Listen for students explaining that the loop repeated an action a set number of times, stopped based on its start, stop, and step values, and needed testing to make sure it did not repeat too many or too few times.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students give vague answers like “it stopped when it was done,” prompt them to name the specific value or condition that controlled when the loop stopped.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "abc3ecca-7cfc-4223-9881-6c61bd3640fb",
+        "lesson_activity.key": "13800ff7-505f-49c0-aacb-d8f50b973176"
+      }
+    },
+    {
+      "key": "00be4ef6-3daf-45e7-98ba-0a5b4067e9e1",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "00be4ef6-3daf-45e7-98ba-0a5b4067e9e1",
+        "lesson_activity.key": "13800ff7-505f-49c0-aacb-d8f50b973176"
+      }
+    },
+    {
+      "key": "ef606c3e-4d25-4b3c-8f2a-cfeb9ad2c17d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "ef606c3e-4d25-4b3c-8f2a-cfeb9ad2c17d",
+        "lesson_activity.key": "13800ff7-505f-49c0-aacb-d8f50b973176"
+      }
+    },
+    {
+      "key": "78713955-151c-4e2f-a8aa-a1c75ab4ecbe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s an example of an app, game, or website that reacts in a way you really like ? Why do you think it feels satisfying or fun?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify qualities of engaging interactivity to inspire their own app designs and ground today’s planning in real user experiences.\n",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "78713955-151c-4e2f-a8aa-a1c75ab4ecbe",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "6a544f04-6a96-4495-b706-4d425d1e3a6f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Reactive Logic Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their concept to showcasing their final product.",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that milestones help them manage time and track progress, just like in real design and development projects. Encourage them to think of each milestone as a \"checkpoint\" to reflect on what's working, what needs improvement, and how their design aligns with their user and purpose."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a544f04-6a96-4495-b706-4d425d1e3a6f",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "1ae98f38-4025-4ee3-8310-fabaad9ffb64",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae98f38-4025-4ee3-8310-fabaad9ffb64",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 1 to complete Levels 1 through 4.\n- Level 1: Students plan their app idea.\n- Level 2: Students create a wireframe to plan the app layout.\n- Level 3: Students create a flowchart to illustrate the logic of their app.\n- Level 4: Students complete the Milestone 1 Reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore each level, ask guiding questions such as:\n- \"What is the main interaction in your app?\"\n- \"Where does the user interact with your app, and what happens in response?\"\n- \"How does your flowchart represent what your app should do?\"",
+        "progression_name": "Milestone 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "644612a2-976f-4773-86fe-f33d09d425ab",
+      "position": 5,
+      "properties": {
+        "progression_name": "Milestone 1 Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to move quickly from idea to design to logic. These levels are meant to help them get a clear starting point—not to fully plan every detail."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "644612a2-976f-4773-86fe-f33d09d425ab",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "290b7e6b-81ef-44ba-a9ae-f81d775ade51",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "290b7e6b-81ef-44ba-a9ae-f81d775ade51",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "3caef5b9-5bd1-4f5e-8b16-ee128d0af28b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Thinking back to the app you mentioned in the warm-up that reacts in a satisfying way — does your planned app have any of those same qualities? What would you need to add to make it feel that way?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their own design choices to the qualities of engaging interactivity they identified earlier, helping them notice gaps between their current plan and the kind of user experience they actually want to create.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "progression_name": "Milestone 1 Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "3caef5b9-5bd1-4f5e-8b16-ee128d0af28b",
+        "lesson_activity.key": "2721d5d6-d6c7-422b-8052-8663282d42c8"
+      }
+    },
+    {
+      "key": "7849fe3d-704a-4dc7-be7e-811bdffd1d38",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one part of your app that you're most excited to see working? What's one piece you're not sure how to build yet?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate clear goals and challenges for their first build session, helping them prioritize tasks and seek targeted support.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "7849fe3d-704a-4dc7-be7e-811bdffd1d38",
+        "lesson_activity.key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf"
+      }
+    },
+    {
+      "key": "a2b6736c-c8e8-4fcd-ad4b-3584bd207db3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete Levels 5 and 6.\n- Level 5: Students start working on their Reactive Logic Project.\n- Level 6: Students complete the Milestone 2 Reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a working first interaction. Ask check-in questions like:\n- \"What is the first interaction you're building?\"\n- \"What should happen when the user interacts with your app?\"\n- \"How will you know your interaction is working correctly?\"",
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Milestone 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2b6736c-c8e8-4fcd-ad4b-3584bd207db3",
+        "lesson_activity.key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf"
+      }
+    },
+    {
+      "key": "fb69a08a-d22c-475c-987c-1a4e17407954",
+      "position": 3,
+      "properties": {
+        "progression_name": "Milestone 2 Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb69a08a-d22c-475c-987c-1a4e17407954",
+        "lesson_activity.key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf"
+      }
+    },
+    {
+      "key": "929e33ad-2293-4348-a316-2b013bc14f68",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What was one moment today where the AI gave you something unexpected? What did you decide to do about it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should describe a specific moment of AI output that surprised, disappointed, or confused them — not a general feeling that \"the AI didn't get it right,\" but a concrete example of what the AI produced and why it didn't match their intent. For the second part, students should articulate a deliberate decision: they either refined their prompt and tried again, accepted the output and explained why it actually worked, or manually adjusted something and explained what they changed. Push students who say they just accepted the AI's output without reflection — ask them whether the result actually matched their user and their design intention from Day 1.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "929e33ad-2293-4348-a316-2b013bc14f68",
+        "lesson_activity.key": "b61b8245-c5e2-4f6a-9323-8edbf35cc0cf"
+      }
+    },
+    {
+      "key": "ba58b8cb-2b6f-47de-936f-36db77cdc9dd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one bug, glitch, or weird behavior your app is showing right now?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice describing and analyzing problems out loud, normalizing debugging as part of the creative process and preparing for peer or AI-assisted troubleshooting.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba58b8cb-2b6f-47de-936f-36db77cdc9dd",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "f8c02bdc-d4c2-4797-a8e7-24ce25cd150d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Peer Feedback with TAG handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up and exchange apps. Students should review one to two peers’ projects and use the TAG method (Tell, Ask, Give) to provide feedback using the provided handout. Emphasize that this is not a final critique — it’s an opportunity to gather feedback and identify ways to improve their app.",
+        "duration": "35",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product. Reinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance. If time allows, invite a few students to share one piece of feedback they received that will guide their next steps."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f8c02bdc-d4c2-4797-a8e7-24ce25cd150d",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "9716ac07-7796-4e21-ad29-09d1387d629f",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9716ac07-7796-4e21-ad29-09d1387d629f",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "fff20417-b003-4080-b569-e9709133e56c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 7 to complete Levels 7 through 9.\n- Level 7: Students continue working on their app.\n- Level 8: Students use the Peer Feedback with TAG handout to get peer feedback.\n- Level 9: Students complete the Milestone 3 Reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions such as:\n- \"Are all your planned conditions working as expected?\"\n- \"What happens when you try different inputs?\"\n- \"How are you using functions and variables to control your app's behavior?\"",
+        "name": "Milestone 3",
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "fff20417-b003-4080-b569-e9709133e56c",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "515de063-d666-46ad-acdd-369f4515a088",
+      "position": 5,
+      "properties": {
+        "progression_name": "Milestone 3 Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "515de063-d666-46ad-acdd-369f4515a088",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "b574c7dc-0c4c-472b-850e-d9810dc28146",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Did watching someone else use your app reveal anything you couldn't see on your own? What did they notice that you missed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that users experience apps differently than creators do — the designer knows what's supposed to happen, but the user only sees what actually happens. This builds the habit of testing with real people instead of just testing in your own head.",
+        "duration": "5",
+        "name": "Wrap Up",
+        "progression_name": "Milestone 3 Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "b574c7dc-0c4c-472b-850e-d9810dc28146",
+        "lesson_activity.key": "69508864-34b3-4a2b-ab72-d35b97e65fd5"
+      }
+    },
+    {
+      "key": "e9c51642-889d-4533-b46a-e6b3f959a2dc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone were testing your app right now, what’s the one thing you’d want them to notice first?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the purpose and user experience of their app, setting an intentional focus for peer testing and feedback during today’s class.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9c51642-889d-4533-b46a-e6b3f959a2dc",
+        "lesson_activity.key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c"
+      }
+    },
+    {
+      "key": "15d5fc83-7405-42f6-8537-0383e553afd8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 10 to work on their project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 4.",
+        "duration": "35",
+        "name": "Activity",
+        "progression_name": "Milestone 4",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be at different points when it's time for peer review. Reassure them that work doesn't need to be complete to be reviewed — feedback during the process helps improve the final product. Reinforce the mindset that design and development are iterative, and peer feedback offers new perspectives and guidance. If time allows, invite a few students to share one piece of feedback they received that will guide their next steps."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "15d5fc83-7405-42f6-8537-0383e553afd8",
+        "lesson_activity.key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c"
+      }
+    },
+    {
+      "key": "f9ecd33e-3a81-47eb-be40-a2ffe4f05c8a",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9ecd33e-3a81-47eb-be40-a2ffe4f05c8a",
+        "lesson_activity.key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c"
+      }
+    },
+    {
+      "key": "287ec7cf-7f9b-4290-800b-adb32869986d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your app right now, what's the one thing that has to work well tomorrow for you to feel proud of it? What are you willing to leave imperfect?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice making the kind of tradeoff decisions real designers make before a release — identifying the highest-impact fix and consciously letting go of lower-priority items.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "287ec7cf-7f9b-4290-800b-adb32869986d",
+        "lesson_activity.key": "c390de9e-2dc5-4c1a-a582-9bc4490f3b5c"
+      }
+    },
+    {
+      "key": "26e025e5-4211-4b75-b42b-9f53d652a873",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one thing you still need to check or polish before your app feels ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students self-assess their progress and identify final next steps, using available resources and the rubric to guide productive final work time.",
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "26e025e5-4211-4b75-b42b-9f53d652a873",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "f8a675be-5bf9-4e7f-91c0-6eddb5b2b73b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Project Rubric. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
+        "duration": "30",
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that self-assessment isn't just about scoring their project — it's a professional habit that helps them take ownership of their design choices. Say something like: \"Designers constantly evaluate their own work to make sure it aligns with their goals, audience, and purpose. This rubric helps you see where you've grown and what you can still refine.\" If time allows, have students highlight one category they feel especially proud of and one they'd like to improve next time."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f8a675be-5bf9-4e7f-91c0-6eddb5b2b73b",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "d98aa7cf-a575-4723-9311-14f193d1b12b",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d98aa7cf-a575-4723-9311-14f193d1b12b",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "77cddd97-5dc9-4aae-9619-a8cb98f6acb3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 10 to complete Levels 10 and 11.\n- Level 10: Students finalize their project.\n- Level 11: Students complete the final project reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
+        "progression_name": "Final Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that professional designers always prioritize fixes before a release. Say something like: \"You don't need to fix everything today — focus on what will have the biggest impact for your user. Iteration is about making smart choices with the time you have.\" If time allows at the end, invite students to do a brief pair preview, where they open a peer's site and give one final piece of positive or constructive feedback."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "77cddd97-5dc9-4aae-9619-a8cb98f6acb3",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "4aeba5ef-a69a-4203-bc44-a49b6ad757ad",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4aeba5ef-a69a-4203-bc44-a49b6ad757ad",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "6c81921a-df54-485d-8cad-7ca646878249",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Reactive Logic Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Frame the Gallery Walk as a celebration of learning and creativity, not a critique. Say something like: \"This is your chance to see how everyone's ideas came to life in different ways. You might even get inspired by someone else's approach!\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c81921a-df54-485d-8cad-7ca646878249",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "fcff99d3-5a95-4a8a-a4e5-0e83bb4805ce",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fcff99d3-5a95-4a8a-a4e5-0e83bb4805ce",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
+    },
+    {
+      "key": "19a7f598-a3ce-48a9-939d-d61b8d9f1260",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When was AI most helpful to you? When did you need to rely on your own judgment instead?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on AI as a collaborator with strengths and limits, articulating where it accelerated their work and where their own decisions mattered more.",
+        "duration": "10",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "19a7f598-a3ce-48a9-939d-d61b8d9f1260",
+        "lesson_activity.key": "76739059-7cda-44aa-b931-4651b036e7be"
+      }
     }
   ],
   "script_levels": [
@@ -2933,6 +4457,578 @@
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson2-cfu_js-2026"
       ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level2-revised-v2_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c4eb1f01-8ede-4153-be4f-499c8807045c"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson3-level2-revised-v2_js-2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Working with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c4eb1f01-8ede-4153-be4f-499c8807045c"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_js-2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "96eb2631-fe39-47da-b930-573d95d34f44"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised_js-2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level1_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "55c70367-6207-492e-b98e-51ddf3210e44"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson9-level1_2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write Reusable Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level2_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson9-level2_2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Write Reusable Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level3_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson9-level3_2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level4_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "99fd3c86-f109-410f-833a-76583d7e4231"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson9-level4_2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore: Temperature App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level1_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c7d25de0-76e3-4caf-b1a4-6a36b1cde416"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson10-level1_2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Turning Flowcharts into Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level2_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "def701ec-5e4a-4ef9-992a-d31f02e484fa"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson10-level2_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Turning Flowcharts into Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level3_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "def701ec-5e4a-4ef9-992a-d31f02e484fa"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson10-level3_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level4_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "7b64dd43-608d-4b99-ac78-145d6c122efb"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson10-level4_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test and Design a For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level1_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson11-level1_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Test and Design a For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level2_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson11-level2_2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Test and Design a For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level3_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson11-level3_2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Test and Design a For Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level4_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson11-level4_2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level1-v1_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level1-v1_2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level2-v1_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level2-v1_2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level3_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level3_2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Milestone 1 Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level4_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "644612a2-976f-4773-86fe-f33d09d425ab"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level4_2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level5_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "a2b6736c-c8e8-4fcd-ad4b-3584bd207db3"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level5_2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2 Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level6_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fb69a08a-d22c-475c-987c-1a4e17407954"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level6_2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level7_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fff20417-b003-4080-b569-e9709133e56c"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level7_2026"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level8_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fff20417-b003-4080-b569-e9709133e56c"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level8_2026"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Milestone 3 Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level9_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "515de063-d666-46ad-acdd-369f4515a088"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level9_2026"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Milestone 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level10_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "15d5fc83-7405-42f6-8537-0383e553afd8"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level10_2026"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Final Project Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level11_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "77cddd97-5dc9-4aae-9619-a8cb98f6acb3"
+      },
+      "level_keys": [
+        "foundations-of-ai-programming-js-lesson12-level11_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3259,6 +5355,318 @@
         "script.name": "foundations-of-ai-programming-js",
         "activity_section.key": "62a91d06-f28d-4ce1-ac72-63d9cfd90b42"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level2-revised-v2_js-2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level2-revised-v2_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c4eb1f01-8ede-4153-be4f-499c8807045c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_js-2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level3-revised-v2_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c4eb1f01-8ede-4153-be4f-499c8807045c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised_js-2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson6-level4-v2_2026-revised_js-2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "96eb2631-fe39-47da-b930-573d95d34f44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson9-level1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level1_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "55c70367-6207-492e-b98e-51ddf3210e44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson9-level2_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level2_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson9-level3_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level3_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "2260cad0-1715-4f12-91ba-ab3bb6a7e224"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson9-level4_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson9-level4_2026"
+        ],
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "99fd3c86-f109-410f-833a-76583d7e4231"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson10-level1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level1_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c7d25de0-76e3-4caf-b1a4-6a36b1cde416"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson10-level2_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level2_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "def701ec-5e4a-4ef9-992a-d31f02e484fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson10-level3_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level3_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "def701ec-5e4a-4ef9-992a-d31f02e484fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson10-level4_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson10-level4_2026"
+        ],
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "7b64dd43-608d-4b99-ac78-145d6c122efb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson11-level1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level1_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson11-level2_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level2_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson11-level3_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level3_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson11-level4_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson11-level4_2026"
+        ],
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "c130afa2-4442-4b1a-b84c-80cc031fe8d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level1-v1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level1-v1_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level2-v1_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level2-v1_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level3_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level3_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "1d4fc939-fd18-45d7-a2ef-7ad4d1f6221e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level4_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level4_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "644612a2-976f-4773-86fe-f33d09d425ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level5_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level5_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "a2b6736c-c8e8-4fcd-ad4b-3584bd207db3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level6_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level6_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fb69a08a-d22c-475c-987c-1a4e17407954"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level7_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level7_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fff20417-b003-4080-b569-e9709133e56c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level8_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level8_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "fff20417-b003-4080-b569-e9709133e56c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level9_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level9_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "515de063-d666-46ad-acdd-369f4515a088"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level10_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level10_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "15d5fc83-7405-42f6-8537-0383e553afd8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "foundations-of-ai-programming-js-lesson12-level11_2026",
+        "script_level.level_keys": [
+          "foundations-of-ai-programming-js-lesson12-level11_2026"
+        ],
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "foundations-of-ai-programming-js",
+        "activity_section.key": "77cddd97-5dc9-4aae-9619-a8cb98f6acb3"
+      }
     }
   ],
   "resources": [
@@ -3277,6 +5685,20 @@
       }
     },
     {
+      "name": "[KEY] Create a Flowchart",
+      "url": "https://docs.google.com/document/d/1kssuxFUvwpeqIK5q6Yc37xmxezW0zsi1AU1ITjTW_10/edit?usp=sharing",
+      "key": "_key_create_a_flowchart_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_create_a_flowchart_1"
+      }
+    },
+    {
       "name": "[KEY] Foundations of AI Programming (JavaScript) Unit Guide",
       "url": "https://docs.google.com/document/d/173dCRR5AEZPCFNnJR7L1bdb0D4nzl07j9bKkDWz2BCU/edit?usp=sharing",
       "key": "_key_foundations_of_ai_programming_javascript_unit_guide",
@@ -3288,6 +5710,34 @@
       },
       "seeding_key": {
         "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide"
+      }
+    },
+    {
+      "name": "[KEY] Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/173dCRR5AEZPCFNnJR7L1bdb0D4nzl07j9bKkDWz2BCU/edit?usp=sharing",
+      "key": "_key_foundations_of_ai_programming_javascript_unit_guide_10",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_10"
+      }
+    },
+    {
+      "name": "[KEY] Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/173dCRR5AEZPCFNnJR7L1bdb0D4nzl07j9bKkDWz2BCU/edit?usp=sharing",
+      "key": "_key_foundations_of_ai_programming_javascript_unit_guide_11",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_11"
       }
     },
     {
@@ -3375,6 +5825,34 @@
       }
     },
     {
+      "name": "[KEY] Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/173dCRR5AEZPCFNnJR7L1bdb0D4nzl07j9bKkDWz2BCU/edit?usp=sharing",
+      "key": "_key_foundations_of_ai_programming_javascript_unit_guide_8",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_8"
+      }
+    },
+    {
+      "name": "[KEY] Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/173dCRR5AEZPCFNnJR7L1bdb0D4nzl07j9bKkDWz2BCU/edit?usp=sharing",
+      "key": "_key_foundations_of_ai_programming_javascript_unit_guide_9",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_9"
+      }
+    },
+    {
       "name": "[KEY] Interactivity in Web Apps ",
       "url": "https://docs.google.com/document/d/1hCiPFCo_NpppCujugh6VzQK1JMRZwywSOLSyAod7lN4/edit?usp=sharing",
       "key": "_key_interactivity_in_web_apps_1",
@@ -3431,6 +5909,20 @@
       }
     },
     {
+      "name": "Create a Flowchart",
+      "url": "https://docs.google.com/document/d/1Ak0PvkHZNOnajMsvE3Fi7IPmShndGt3D44HS24rYyCo/edit?usp=sharing",
+      "key": "create_a_flowchart_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_flowchart_1"
+      }
+    },
+    {
       "name": "Foundations of AI Programming (JavaScript)",
       "url": "https://docs.google.com/document/d/1NfYrDasBjCfsD80xV3CsmipdN1udz9TVuE_7IBFSsKo/edit?usp=sharing",
       "key": "foundations_of_ai_programming_javascript_",
@@ -3456,6 +5948,20 @@
       },
       "seeding_key": {
         "resource.key": "foundations_of_ai_programming_javascript_unit_guide_1"
+      }
+    },
+    {
+      "name": "Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/1NfYrDasBjCfsD80xV3CsmipdN1udz9TVuE_7IBFSsKo/edit?usp=sharing",
+      "key": "foundations_of_ai_programming_javascript_unit_guide_10",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_10"
       }
     },
     {
@@ -3529,6 +6035,48 @@
       }
     },
     {
+      "name": "Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/1NfYrDasBjCfsD80xV3CsmipdN1udz9TVuE_7IBFSsKo/edit?usp=sharing",
+      "key": "foundations_of_ai_programming_javascript_unit_guide_7",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_7"
+      }
+    },
+    {
+      "name": "Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/1NfYrDasBjCfsD80xV3CsmipdN1udz9TVuE_7IBFSsKo/edit?usp=sharing",
+      "key": "foundations_of_ai_programming_javascript_unit_guide_8",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_8"
+      }
+    },
+    {
+      "name": "Foundations of AI Programming (JavaScript) Unit Guide",
+      "url": "https://docs.google.com/document/d/1NfYrDasBjCfsD80xV3CsmipdN1udz9TVuE_7IBFSsKo/edit?usp=sharing",
+      "key": "foundations_of_ai_programming_javascript_unit_guide_9",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_9"
+      }
+    },
+    {
       "name": "Interactivity In Web Apps",
       "url": "https://docs.google.com/presentation/d/1UrqPJM6qtNHkB7XbereZevoFSsHRgyp-wp8ZcI0RJpU/edit?usp=sharing",
       "key": "interactivity_in_web_apps_2",
@@ -3571,7 +6119,7 @@
       }
     },
     {
-      "name": "Lesson 1: Introduction to Web Apps",
+      "name": "Introduction to Web Apps",
       "url": "https://docs.google.com/presentation/d/1u2B1oVVYECke7W8tGXDsAQteV574XbZvI61TasvFK_Y/edit?usp=sharing",
       "key": "lesson_1_introduction_to_web_apps",
       "properties": {
@@ -3582,6 +6130,20 @@
       },
       "seeding_key": {
         "resource.key": "lesson_1_introduction_to_web_apps"
+      }
+    },
+    {
+      "name": "Loops and Counted Repetition",
+      "url": "https://docs.google.com/presentation/d/1OiOPnBt56OOGCaH-leb5tFRoFbSu6gPoBxVUGrHVLQM/edit?usp=sharing",
+      "key": "loops_and_counted_repetition",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_and_counted_repetition"
       }
     },
     {
@@ -3599,6 +6161,20 @@
       }
     },
     {
+      "name": "Making Decisions with If/Else",
+      "url": "https://docs.google.com/presentation/d/1SkcrDQT49vKmqROgaJdRIjDFvc70yOqGt-7ICEH7Bik/edit?usp=sharing",
+      "key": "making_decisions_with_if_else_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_if_else_1"
+      }
+    },
+    {
       "name": "Paper App Prototype Mystery Components",
       "url": "https://docs.google.com/presentation/d/1pCU8W3L1VJvHIhsw3w_SB2_1qT017d7KC_SP4b9tZSc/edit?usp=sharing",
       "key": "paper_app_prototype_mystery_components",
@@ -3610,6 +6186,62 @@
       },
       "seeding_key": {
         "resource.key": "paper_app_prototype_mystery_components"
+      }
+    },
+    {
+      "name": "Peer Feedback with TAG",
+      "url": "https://docs.google.com/document/d/1N0hJKNHEnW-dMF_7rOXQz6G_1bvaUX_qx1zHQKSyJtw/edit?usp=sharing",
+      "key": "peer_feedback_with_tag_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback_with_tag_1"
+      }
+    },
+    {
+      "name": "Reactive Logic Project",
+      "url": "https://docs.google.com/presentation/d/1G7M-pGERuweAoRY3uYSQ7BXs5Gli6d8kqB3efYwyZNk/edit?usp=sharing",
+      "key": "reactive_logic_project_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "reactive_logic_project_1"
+      }
+    },
+    {
+      "name": "Reactive Logic Project Rubric",
+      "url": "https://docs.google.com/document/d/1Yd-55wxZdrtNOnHOC4R27-oNTePp25_N9H66Mh3HarA/edit?usp=sharing",
+      "key": "reactive_logic_project_rubric_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "reactive_logic_project_rubric_1"
+      }
+    },
+    {
+      "name": "Variables and Live Updates",
+      "url": "https://docs.google.com/presentation/d/1uBNnrz0JJKmb4ksP_X_tjq6C-TLTpzTmZUXP7ZITPYM/edit?usp=sharing",
+      "key": "variables_and_live_updates_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_and_live_updates_1"
       }
     },
     {
@@ -3639,9 +6271,41 @@
       "seeding_key": {
         "resource.key": "wireframes"
       }
+    },
+    {
+      "name": "Writing Reusable Functions",
+      "url": "https://docs.google.com/presentation/d/1Tinbznitfuw4q9sV-XvR2WfWFvNl8OPsMOai9N5sS5E/edit?usp=drive_link",
+      "key": "writing_reusable_functions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "writing_reusable_functions"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "resource.key": "loops_and_counted_repetition"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
@@ -3658,6 +6322,24 @@
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
         "resource.key": "wireframes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "peer_feedback_with_tag_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "reactive_logic_project_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "resource.key": "reactive_logic_project_rubric_1"
       }
     },
     {
@@ -3724,6 +6406,72 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "resource.key": "foundations_of_ai_programming_javascript_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "resource.key": "variables_and_live_updates_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "resource.key": "writing_reusable_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "_key_create_a_flowchart_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "_key_foundations_of_ai_programming_javascript_unit_guide_10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "create_a_flowchart_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "foundations_of_ai_programming_javascript_unit_guide_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "resource.key": "making_decisions_with_if_else_1"
       }
     },
     {
@@ -3812,10 +6560,56 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "for_loop",
+      "word": "for loop",
+      "definition": "a loop that repeats a set of steps a specific number of times",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "iteration",
+      "definition": "doing the same set of steps over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "loop_variable",
+      "word": "loop variable",
+      "definition": "the variable that keeps track of how many times a loop has run or which item you are on.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop_variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "vocabulary.key": "loop_variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -3852,6 +6646,26 @@
       }
     },
     {
+      "key": "318b3863-4e08-4362-8477-e305ebbf35db",
+      "properties": {
+        "description": "Test whether a loop repeats the right number of times."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "objective.key": "318b3863-4e08-4362-8477-e305ebbf35db"
+      }
+    },
+    {
+      "key": "320ddfbb-cb9d-4564-a076-1c5d51b2f6c1",
+      "properties": {
+        "description": "Declare and update variables in JavaScript to track user choices or scores"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "objective.key": "320ddfbb-cb9d-4564-a076-1c5d51b2f6c1"
+      }
+    },
+    {
       "key": "3654a569-cbc6-4d4b-a31a-348c467680a4",
       "properties": {
         "description": "Modify the DOM to update page content when the button is clicked"
@@ -3859,6 +6673,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
         "objective.key": "3654a569-cbc6-4d4b-a31a-348c467680a4"
+      }
+    },
+    {
+      "key": "36f7bf39-8076-4336-a074-0426007fe2b3",
+      "properties": {
+        "description": "Model conditional logic with flowcharts before coding."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "36f7bf39-8076-4336-a074-0426007fe2b3"
       }
     },
     {
@@ -3872,6 +6696,16 @@
       }
     },
     {
+      "key": "52e93afb-b4f7-4320-b3c4-419095d15e9c",
+      "properties": {
+        "description": "Test and refine their app systematically by debugging errors, evaluating AI output, and revising design for accessibility, responsiveness, and inclusivity"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "objective.key": "52e93afb-b4f7-4320-b3c4-419095d15e9c"
+      }
+    },
+    {
       "key": "659d203d-7cd4-457c-a606-824c7bfae931",
       "properties": {
         "description": "Use AI prompts to identify and fix simple errors"
@@ -3879,6 +6713,86 @@
       "seeding_key": {
         "lesson.key": "Lesson 2: Making a Button Respond",
         "objective.key": "659d203d-7cd4-457c-a606-824c7bfae931"
+      }
+    },
+    {
+      "key": "6b79db16-15d8-430b-a1ff-99d85303c03a",
+      "properties": {
+        "description": "Use variables to dynamically update the DOM"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "objective.key": "6b79db16-15d8-430b-a1ff-99d85303c03a"
+      }
+    },
+    {
+      "key": "6e7a7d46-f020-4eb6-b0d8-5300ae379191",
+      "properties": {
+        "description": "Reflect on their development process, documenting effective AI use and assessing how well their app meets its original goals"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "objective.key": "6e7a7d46-f020-4eb6-b0d8-5300ae379191"
+      }
+    },
+    {
+      "key": "71093b03-1bf0-472e-bf27-683fd4e7f96d",
+      "properties": {
+        "description": "Use return values to send information from a function back to the rest of the program."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "71093b03-1bf0-472e-bf27-683fd4e7f96d"
+      }
+    },
+    {
+      "key": "72527649-81bd-419c-99de-ad8e500703c5",
+      "properties": {
+        "description": "Identify the start, stop, and step values in a for loop. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "objective.key": "72527649-81bd-419c-99de-ad8e500703c5"
+      }
+    },
+    {
+      "key": "7b17312c-9878-4641-a9ca-f25e09b67715",
+      "properties": {
+        "description": "Combine conditionals with variables and functions to make decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "7b17312c-9878-4641-a9ca-f25e09b67715"
+      }
+    },
+    {
+      "key": "7fd492d8-beb0-4167-bac2-90b11cebb23b",
+      "properties": {
+        "description": "Explain how abstraction makes code easier to maintain"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "7fd492d8-beb0-4167-bac2-90b11cebb23b"
+      }
+    },
+    {
+      "key": "83a7adb8-3b5b-44a4-8b97-f175e89957cb",
+      "properties": {
+        "description": "Refactor repeated code into a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "83a7adb8-3b5b-44a4-8b97-f175e89957cb"
+      }
+    },
+    {
+      "key": "861d082c-c1eb-4d13-8fab-ec619793e91e",
+      "properties": {
+        "description": "Write arrow functions to organize code into reusable pieces"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "objective.key": "861d082c-c1eb-4d13-8fab-ec619793e91e"
       }
     },
     {
@@ -3922,6 +6836,16 @@
       }
     },
     {
+      "key": "ad89b69b-50cb-40d5-9dd4-114f05d95731",
+      "properties": {
+        "description": "Implement core interactivity using event handlers, variables, conditional logic, and DOM updates"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "objective.key": "ad89b69b-50cb-40d5-9dd4-114f05d95731"
+      }
+    },
+    {
       "key": "bf3abac1-1e90-46cf-8608-9169a1937fce",
       "properties": {
         "description": "Refine an AI prompt when the output is flawed or incomplete."
@@ -3962,6 +6886,16 @@
       }
     },
     {
+      "key": "df5f2b73-a4a7-4932-b847-26b5ba6f9aa0",
+      "properties": {
+        "description": "Write if/else statements to control app behavior."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "objective.key": "df5f2b73-a4a7-4932-b847-26b5ba6f9aa0"
+      }
+    },
+    {
       "key": "e15f891f-50ba-4318-89e9-9278fd0eb4c8",
       "properties": {
         "description": "Use iterative testing when collaborating with AI to generate HTML/CSS."
@@ -3969,6 +6903,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "objective.key": "e15f891f-50ba-4318-89e9-9278fd0eb4c8"
+      }
+    },
+    {
+      "key": "e2f2a1f2-0c85-4ddb-8f81-ddc339c013c3",
+      "properties": {
+        "description": "Explain why an app might use a for loop to repeat an action based on user input."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "objective.key": "e2f2a1f2-0c85-4ddb-8f81-ddc339c013c3"
       }
     },
     {
@@ -3982,6 +6926,26 @@
       }
     },
     {
+      "key": "e78ead1d-125d-484d-921b-b71020e99a16",
+      "properties": {
+        "description": "Evaluate AI suggestions for debugging variable/DOM mismatches"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "objective.key": "e78ead1d-125d-484d-921b-b71020e99a16"
+      }
+    },
+    {
+      "key": "ee29ce22-6628-45d0-8c76-249fcaba14cb",
+      "properties": {
+        "description": "Expand their app with nested conditionals, logical operators, and parameterized functions to handle more complex rules"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "objective.key": "ee29ce22-6628-45d0-8c76-249fcaba14cb"
+      }
+    },
+    {
       "key": "f5c8bdca-2e2f-4aec-91d0-a95885d41d05",
       "properties": {
         "description": "Refine prompts to correct or adjust styling issues (e.g., wrong color, unreadable font)."
@@ -3990,9 +6954,40 @@
         "lesson.key": "Lesson 6: Intro to CSS",
         "objective.key": "f5c8bdca-2e2f-4aec-91d0-a95885d41d05"
       }
+    },
+    {
+      "key": "ff5d3b9b-5b59-4936-b363-06ad83c023c6",
+      "properties": {
+        "description": "Plan interactive features by defining criteria and creating flowcharts that model their logic"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "objective.key": "ff5d3b9b-5b59-4936-b363-06ad83c023c6"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: Adding NOT and Complex Conditions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
@@ -4012,6 +7007,41 @@
         "lesson.key": "Lesson 10: Wireframes",
         "framework.shortcode": "csta2026",
         "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Reactive Logic Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
       }
     },
     {
@@ -4075,6 +7105,62 @@
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "framework.shortcode": "csta2026",
         "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-VD-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Writing Reusable Functions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-RD-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Making Decisions with If/Else",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-PD-12"
       }
     },
     {
