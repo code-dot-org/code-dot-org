@@ -13,6 +13,13 @@ export class DocumentationPage extends BasePage {
    * "main" role uniquely disambiguates the one that carries the page content. */
   readonly mainContent: Locator;
 
+  /** CSS scope for an axe scan of the main content (axe's include takes a CSS
+   * selector, not the getByRole locator above). Excludes header/footer chrome. */
+  readonly mainSelector = 'main';
+
+  /** CSS scope for an axe scan of the IDE-docs sidebar. */
+  readonly navBarSelector = '.nav-bar';
+
   /**
    * The page's primary <h1>. Markdown-sourced doc content can embed its own
    * `#` headings, so this takes the first h1 on the page — matching the
@@ -38,7 +45,7 @@ export class DocumentationPage extends BasePage {
     super(page);
     this.mainContent = page.getByRole('main');
     this.heading = page.getByRole('heading', {level: 1}).first();
-    this.navBar = page.locator('.nav-bar');
+    this.navBar = page.locator(this.navBarSelector);
     this.pageContent = page.locator('.page-content');
   }
 
