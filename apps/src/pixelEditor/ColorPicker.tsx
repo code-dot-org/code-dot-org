@@ -75,6 +75,10 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
   // The color when the popover opened; Escape restores it (cancel), unlike
   // Enter/pointer-up which keep the live-sampled color.
   const colorOnOpenRef = useRef<RGBA>(color);
+  // True while the spectrum is being steered by keyboard: the sample cursor
+  // is always shown, so the OS pointer is hidden to avoid a second cursor
+  // over the spectrum. Any mouse movement turns it back off.
+  const [kbSteering, setKbSteering] = useState(false);
 
   // Return focus to the swatch after closing. Deferred a frame: closing
   // switches the swatch from a bare button to a tooltip-wrapped one, which
@@ -83,11 +87,16 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     requestAnimationFrame(() => swatchRef.current?.focus());
   }, []);
 
-  // Remember the color at open time so Escape can revert to it.
-  const openPicker = useCallback(() => {
-    colorOnOpenRef.current = color;
-    setOpen(true);
-  }, [color]);
+  // Remember the color at open time so Escape can revert to it. viaKeyboard
+  // (shortcut) starts in keyboard-steering mode so the OS pointer is hidden.
+  const openPicker = useCallback(
+    (viaKeyboard = false) => {
+      colorOnOpenRef.current = color;
+      setKbSteering(viaKeyboard);
+      setOpen(true);
+    },
+    [color]
+  );
 
   // Screen-reader narration; moves are debounced so held arrows don't
   // flood the queue.
@@ -123,7 +132,7 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       }
       if (e.key.toLowerCase() === OPEN_SHORTCUT) {
         e.preventDefault();
-        openPicker();
+        openPicker(true);
       }
     };
     window.addEventListener('keydown', onKeyDown);
@@ -200,6 +209,10 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
     [sampleAt]
   );
 
+  // Any mouse movement over the spectrum ends keyboard steering, so the OS
+  // pointer reappears.
+  const endKbSteering = useCallback(() => setKbSteering(false), []);
+
   const confirmAndClose = useCallback(() => {
     setOpen(false);
     focusSwatchSoon();
@@ -217,6 +230,7 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
       const delta = ARROWS[e.key];
       if (delta) {
         e.preventDefault();
+        setKbSteering(true);
         const step = e.shiftKey ? KB_SHIFT_STEP : 1;
         const next = {
           x: Math.min(
@@ -296,16 +310,21 @@ const ColorPicker: React.FunctionComponent<ColorPickerProps> = ({
               ref={canvasRef}
               width={SPECTRUM_WIDTH}
               height={SPECTRUM_HEIGHT}
+              // Hide the OS pointer while steering by keyboard, so it doesn't
+              // sit next to the sample cursor over the spectrum.
+              style={kbSteering ? {cursor: 'none'} : undefined}
               tabIndex={0}
               role="application"
               aria-label="Color spectrum"
               aria-describedby="pixel-spectrum-keyboard-help"
               onKeyDown={handleSpectrumKeyDown}
               onPointerDown={e => {
+                endKbSteering();
                 e.currentTarget.setPointerCapture(e.pointerId);
                 pick(e);
               }}
               onPointerMove={e => {
+                endKbSteering();
                 if (e.buttons & 1) {
                   pick(e);
                 }
