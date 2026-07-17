@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -174,12 +175,13 @@ export default class DesignProperties extends React.Component {
     return (
       <div style={{height: '100%'}}>
         <div id="designDescription" style={styles.workspaceDescription}>
-          <p
-            style={styles.workspaceDescriptionText}
+          <MuiTypography
+            variant="body3"
+            sx={styles.workspaceDescriptionText}
             title={applabMsg.designWorkspaceDescription()}
           >
             {applabMsg.designWorkspaceDescription()}
-          </p>
+          </MuiTypography>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
           <div
