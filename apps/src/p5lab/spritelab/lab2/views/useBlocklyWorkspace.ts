@@ -29,12 +29,7 @@ interface UseBlocklyWorkspaceOptions {
 interface UseBlocklyWorkspaceResult {
   /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
-  /**
-   * The serialization the workspace holds: the last loadCode input or
-   * user-edit emission (not a live re-serialize, so it keeps the identity of
-   * the object that crossed the boundary). Null before the first load and
-   * after a re-inject.
-   */
+  /** Returns the serialization the workspace holds; null before inject. */
   getCurrentBlocks: () => WorkspaceSerialization | null;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
@@ -61,32 +56,23 @@ export default function useBlocklyWorkspace({
   theme,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
-  // Theme changes apply at runtime (below); a ref keeps the inject effect
-  // from re-injecting on theme change while still injecting with the
-  // current theme.
+  // Store initial theme as a ref to prevent theme changes from re-injecting the workspace.
   const themeRef = useRef(theme);
   themeRef.current = theme;
   // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
-  // Last serialization through either door (loadCode in, user edit out).
   const currentBlocksRef = useRef<WorkspaceSerialization | null>(null);
-  // Listeners arrive via subscribeToChanges (not options) so the hook can be
-  // called before the machinery that consumes getCode. Held in refs so the
-  // subscription outlives re-injects.
   const onWorkspaceChangeRef = useRef<(source: WorkspaceSerialization) => void>(
     () => {}
   );
   const onIntermediateChangeRef = useRef<(() => void) | undefined>(undefined);
 
-  // Inject the workspace once enabled; re-injects only when the level's
-  // blocks/toolbox or the theme change.
+  // Inject the workspace once enabled; re-injects when the level data changes.
   useEffect(() => {
     if (!enabled) {
       return;
     }
     setupSpriteLab2BlocklyEnvironment();
-    // Install the level's DB-backed Sprite Lab block pool so the toolbox's
-    // block types exist.
     installSharedBlocks(sharedBlocks || []);
 
     const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
@@ -94,8 +80,7 @@ export default function useBlocklyWorkspace({
       return;
     }
 
-    // Prefer a JSON toolboxDefinition; otherwise the classic XML string
-    // (Blockly.inject parses XML toolboxes).
+    // Prefer a JSON toolboxDefinition; otherwise the classic XML string.
     let toolbox:
       | BlocklyCore.utils.toolbox.ToolboxDefinition
       | string
@@ -112,7 +97,7 @@ export default function useBlocklyWorkspace({
     }
 
     // Variable/behavior naming goes through Blockly.customSimpleDialog —
-    // creating a variable crashes without one. Same dialog Music Lab uses.
+    // creating a variable crashes without one.
     const customSimpleDialog = (options: {
       bodyText: string;
       promptPrefill: string;
@@ -146,20 +131,17 @@ export default function useBlocklyWorkspace({
         }
         return;
       }
-      // Mid-editor field edits (grid painting): follow along in the preview
-      // without serializing — the editor-close change event saves.
+      // Emit intermediate change if detected.
       if (e.type === BlocklyCore.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
         onIntermediateChangeRef.current?.();
         return;
       }
+      // Only proceed if the event is a user edit that changes the workspace serialization.
       if (
         e.type !== BlocklyCore.Events.BLOCK_CHANGE &&
         e.type !== BlocklyCore.Events.BLOCK_MOVE &&
         e.type !== BlocklyCore.Events.BLOCK_CREATE &&
         e.type !== BlocklyCore.Events.BLOCK_DELETE &&
-        // Variables live in the workspace serialization too; without these,
-        // a newly created/renamed variable isn't saved until some block
-        // event happens to fire.
         e.type !== BlocklyCore.Events.VAR_CREATE &&
         e.type !== BlocklyCore.Events.VAR_RENAME &&
         e.type !== BlocklyCore.Events.VAR_DELETE
@@ -181,14 +163,11 @@ export default function useBlocklyWorkspace({
     return () => {
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
-      // A re-injected workspace starts empty; callers comparing against
-      // getCurrentBlocks must see "never loaded".
       currentBlocksRef.current = null;
     };
   }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
 
-  // Theme changes apply at runtime — the workspace is injected once and
-  // never rebuilt, so the caller's reconcile only ever loads content.
+  // Update workspace theme on theme change.
   useEffect(() => {
     const workspace = workspaceRef.current;
     if (workspace) {
@@ -216,9 +195,7 @@ export default function useBlocklyWorkspace({
     pendingLoadsRef.current++;
     try {
       loadBlocksToWorkspace(workspace, JSON.stringify(source));
-      // Stamp at call time (not FINISHED_LOADING delivery): callers decide
-      // synchronously off getCurrentBlocks. Skipped on throw — a failed
-      // load should read as "not loaded" so the caller retries.
+      // Update ref here (instead of in change listener) since callers may read this synchronously.
       currentBlocksRef.current = source;
     } catch (e) {
       // Decrement the counter if there was an error.
