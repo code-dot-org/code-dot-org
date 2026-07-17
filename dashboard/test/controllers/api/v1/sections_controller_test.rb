@@ -1795,9 +1795,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     history = json_response[section.id.to_s]['history']
     assert_equal 2, history.length
-    assert history.any? {|e| e['date'] == yesterday}
-    assert history.all? {|e| e['lesson_id'] == lesson1.id}
-    assert history.all? {|e| e['name'].present?}
+    assert(history.any? {|e| e['date'] == yesterday})
+    assert(history.all? {|e| e['lesson_id'] == lesson1.id})
+    assert(history.all? {|e| e['name'].present?})
   end
 
   test 'suggested_lessons coming_up returns the next lesson in sequence' do

@@ -498,13 +498,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       memo[section.id] = lessons_by_id[data&.dig('lesson_id')]
     end
 
-    script_numbered_lessons = current_lesson_by_section.values.filter_map(&:itself).map(&:script_id).uniq
-      .each_with_object({}) do |script_id, memo|
-        memo[script_id] = Lesson
-          .where(script_id: script_id)
-          .where('has_lesson_plan = ? OR lockable = ?', true, false)
-          .order(:absolute_position)
-          .to_a
+    script_numbered_lessons = current_lesson_by_section.values.filter_map(&:itself).map(&:script_id).uniq.
+      index_with do |script_id|
+        Lesson.
+          where(script_id: script_id).
+          where('has_lesson_plan = ? OR lockable = ?', true, false).
+          order(:absolute_position).
+          to_a
       end
 
     coming_up_by_section = current_lesson_by_section.transform_values do |lesson|
