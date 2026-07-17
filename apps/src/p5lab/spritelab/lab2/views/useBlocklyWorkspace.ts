@@ -29,6 +29,13 @@ interface UseBlocklyWorkspaceOptions {
 interface UseBlocklyWorkspaceResult {
   /** Compile the workspace to JavaScript for the runtime; null before inject. */
   getCode: () => string | null;
+  /**
+   * The serialization the workspace holds: the last loadCode input or
+   * user-edit emission (not a live re-serialize, so it keeps the identity of
+   * the object that crossed the boundary). Null before the first load and
+   * after a re-inject.
+   */
+  getCurrentBlocks: () => WorkspaceSerialization | null;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
   /**
@@ -61,6 +68,8 @@ export default function useBlocklyWorkspace({
   themeRef.current = theme;
   // Tracks workspace loads (as opposed to user edits).
   const pendingLoadsRef = useRef(0);
+  // Last serialization through either door (loadCode in, user edit out).
+  const currentBlocksRef = useRef<WorkspaceSerialization | null>(null);
   // Listeners arrive via subscribeToChanges (not options) so the hook can be
   // called before the machinery that consumes getCode. Held in refs so the
   // subscription outlives re-injects.
@@ -163,6 +172,7 @@ export default function useBlocklyWorkspace({
       const serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
+      currentBlocksRef.current = serialized;
       onWorkspaceChangeRef.current(serialized);
     };
 
@@ -171,6 +181,9 @@ export default function useBlocklyWorkspace({
     return () => {
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
+      // A re-injected workspace starts empty; callers comparing against
+      // getCurrentBlocks must see "never loaded".
+      currentBlocksRef.current = null;
     };
   }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
 
@@ -203,12 +216,18 @@ export default function useBlocklyWorkspace({
     pendingLoadsRef.current++;
     try {
       loadBlocksToWorkspace(workspace, JSON.stringify(source));
+      // Stamp at call time (not FINISHED_LOADING delivery): callers decide
+      // synchronously off getCurrentBlocks. Skipped on throw — a failed
+      // load should read as "not loaded" so the caller retries.
+      currentBlocksRef.current = source;
     } catch (e) {
       // Decrement the counter if there was an error.
       pendingLoadsRef.current--;
       throw e;
     }
   }, []);
+
+  const getCurrentBlocks = useCallback(() => currentBlocksRef.current, []);
 
   const subscribeToChanges = useCallback(
     (
@@ -225,5 +244,5 @@ export default function useBlocklyWorkspace({
     []
   );
 
-  return {getCode, loadCode, subscribeToChanges};
+  return {getCode, getCurrentBlocks, loadCode, subscribeToChanges};
 }

@@ -1,6 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import {cloneDeep} from 'lodash';
+import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {AnyAction, Reducer} from 'redux';
 
@@ -326,13 +326,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Persist Images-tab changes back to sources in the serialized shape.
   const animationListState = useAppSelector(state => state.animationList);
-  const skipFirstAnimationSave = useRef(true);
   useEffect(() => {
-    if (skipFirstAnimationSave.current) {
-      // Don't immediately re-save the list we just seeded.
-      skipFirstAnimationSave.current = false;
-      return;
-    }
     // Serialize from the LIVE store, not this commit's snapshot: this effect
     // runs after compileExternalScene's synchronous merge-and-restore, and a
     // snapshot save would leak the classmate's costumes into sources.
@@ -343,13 +337,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [animationListState, patchSources]);
 
-  const {getCode, loadCode, subscribeToChanges} = useBlocklyWorkspace({
-    enabled: animationsSeeded,
-    toolboxDefinition: levelProperties.toolboxDefinition,
-    toolboxXml: levelProperties.toolboxBlocks,
-    sharedBlocks: levelProperties.sharedBlocks,
-    theme,
-  });
+  const {getCode, getCurrentBlocks, loadCode, subscribeToChanges} =
+    useBlocklyWorkspace({
+      enabled: animationsSeeded,
+      toolboxDefinition: levelProperties.toolboxDefinition,
+      toolboxXml: levelProperties.toolboxBlocks,
+      sharedBlocks: levelProperties.sharedBlocks,
+      theme,
+    });
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -628,23 +623,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, currentSources, activeSceneId]
   );
 
-  // What the workspace currently displays, as {scene id, source object}.
-  // Used to sync state between the Blockly workspace and current user code.
-  const workspaceSyncedRef = useRef<{
-    id: string | null;
-    source: WorkspaceSerialization | undefined;
-  }>({id: null, source: undefined});
-
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
     (source: WorkspaceSerialization) => {
-      workspaceSyncedRef.current = {id: activeSceneId, source};
       writeActiveSceneSource(source);
       // Keep the live preview in sync with the edited code.
       scheduleRun();
     },
-    [activeSceneId, writeActiveSceneSource, scheduleRun]
+    [writeActiveSceneSource, scheduleRun]
   );
 
   // Deliver user edits into the save/preview pipeline; intermediate field
@@ -654,22 +641,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [subscribeToChanges, handleWorkspaceChange, scheduleRun]
   );
 
-  // Update the workspace and run the current scene when the active scene or scene code changes.
+  // Update the workspace and run the current scene when the active scene code changes.
   useEffect(() => {
     if (!animationsSeeded) {
       return;
     }
-    const synced = workspaceSyncedRef.current;
-    if (synced.id === activeScene.id && synced.source === activeScene.source) {
+    const source = activeScene.source ?? DEFAULT_SCENE_SOURCE;
+    if (isEqual(getCurrentBlocks(), source)) {
       return;
     }
-    workspaceSyncedRef.current = {
-      id: activeScene.id,
-      source: activeScene.source,
-    };
-    loadCode(activeScene.source ?? DEFAULT_SCENE_SOURCE);
+    loadCode(source);
     runLocalScene(activeScene);
-  }, [animationsSeeded, activeScene, loadCode, runLocalScene]);
+  }, [
+    animationsSeeded,
+    activeScene,
+    getCurrentBlocks,
+    loadCode,
+    runLocalScene,
+  ]);
 
   const handleSelectScene = useCallback(
     (sceneId: string) => {
