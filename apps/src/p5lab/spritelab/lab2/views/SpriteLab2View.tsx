@@ -832,11 +832,7 @@ const SpriteLab2Container: React.FunctionComponent<
     projectManager,
     loadError,
     hasEdited,
-  } = useSources<SpriteLab2Source>({
-    levelProperties,
-    defaultSources,
-    includeVersionHistory: true,
-  });
+  } = useSources<SpriteLab2Source>({levelProperties, defaultSources});
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
