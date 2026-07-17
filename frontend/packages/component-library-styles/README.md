@@ -18,6 +18,7 @@ typography styles, and more to ensure visual consistency and a unified design la
   - [Font Awesome](#font-awesome)
   - [Typography](#typography)
   - [Variables](#variables)
+  - [Shape and Spacing](#shape-and-spacing)
   - [Mixins](#mixins)
 - [Best Practices](#best-practices)
 - [Theming](#theming)
@@ -612,6 +613,24 @@ With time there'll be more variables added to this file, so make sure to check i
 - New variables should be added to `variables.scss`.
 - Follow the existing naming conventions.
 - Consider the impact on light/dark mode or theming.
+
+---
+
+### Shape and Spacing
+
+The `shapeAndSpacingVariables.css` file defines the CADS shape
+(border-radius) and spacing (padding) ramps as CSS custom properties at
+`:root`. They are brand- and mode-invariant, so they need no
+`[data-brand]`/`[data-theme]` scoping and no migration at brand cutover.
+
+| Variable                               | Value                  |
+| -------------------------------------- | ---------------------- |
+| `--shape-sm` … `--shape-xl`            | `0.375rem` … `0.75rem` |
+| `--shape-round`                        | `62.4375rem` (pill)    |
+| `--spacing-p-xxs` … `--spacing-p-xxxl` | `0.5rem` … `4rem`      |
+
+Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) so
+surfaces that don't load the token entry points still render correctly.
 
 ---
 

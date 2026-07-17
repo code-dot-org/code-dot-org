@@ -1,0 +1,22 @@
+/* CADS shape (border-radius) and spacing (padding) ramps, from the CADS
+   Figma "number" collection. Unlike the color tokens these are mode- and
+   brand-invariant, so they sit at :root with no [data-brand]/[data-theme]
+   scoping: the names are new, nothing legacy references them, and they
+   need no promotion at brand cutover. (The Figma export wraps them in
+   [data-theme='CodeAI'] — that is the variable-collection name, not a
+   runtime selector.) */
+:root {
+  --shape-sm: 0.375rem;
+  --shape-md: 0.5rem;
+  --shape-lg: 0.625rem;
+  --shape-xl: 0.75rem;
+  --shape-round: 62.4375rem;
+  --spacing-p-xxs: 0.5rem;
+  --spacing-p-xs: 1rem;
+  --spacing-p-s: 1.5rem;
+  --spacing-p-m: 2rem;
+  --spacing-p-l: 2.5rem;
+  --spacing-p-xl: 3rem;
+  --spacing-p-xxl: 3.5rem;
+  --spacing-p-xxxl: 4rem;
+}
