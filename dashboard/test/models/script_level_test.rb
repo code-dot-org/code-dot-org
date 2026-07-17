@@ -785,11 +785,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
+  # Enables the 'lesson-tutor-redirect' experiment for the given user and
+  # disables it for every other invocation, so the end-of-lesson tutor branch
+  # is gated exactly as it is in production.
+  private def stub_lesson_tutor_experiment(user)
+    Experiment.stubs(:enabled?).returns(false)
+    Experiment.stubs(:enabled?).
+      with(user: user, experiment_name: 'lesson-tutor-redirect').returns(true)
+  end
+
   # For lessons with Tutor+ available (AIF/AID), the end of lesson goes to the
   # lesson deep dive instead of the unit overview / dialog redirect.
   test 'next_level_or_redirect_path_for_user goes to lesson tutor at end of tutor-available lesson' do
     student = create(:student)
-    student.stubs(:has_pilot_experiment?).returns true
+    stub_lesson_tutor_experiment(student)
     script_level = create_script_level_with_ancestors({})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson = script_level.lesson
@@ -799,10 +808,24 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
+  # Without the experiment, a tutor-available lesson falls back to the normal
+  # end-of-lesson redirect (the unit overview dialog), not the tutor path.
+  test 'next_level_or_redirect_path_for_user skips lesson tutor when experiment disabled' do
+    student = create(:student)
+    Experiment.stubs(:enabled?).returns(false)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    refute_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
   # Tutor takes precedence over lesson extras for tutor-available lessons.
   test 'next_level_or_redirect_path_for_user prefers lesson tutor over lesson extras at end of lesson' do
     student = create(:student)
-    student.stubs(:has_pilot_experiment?).returns true
+    stub_lesson_tutor_experiment(student)
     script_level = create_script_level_with_ancestors({})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     script_level.script.stubs(:lesson_extras_available).returns true
@@ -830,7 +853,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_levels[0].lesson.stubs(:lesson_tutor_available?).returns true
 
     student = create(:student)
-    student.stubs(:has_pilot_experiment?).returns true
+    stub_lesson_tutor_experiment(student)
 
     assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
