@@ -1,0 +1,291 @@
+@import 'color.scss';
+@import 'font.scss';
+
+// Consolidated styles for the lesson plan (lessonOverview) views. This replaces
+// the per-component inline `styles` objects and folds in the former
+// resource-list, lesson-standards, and lesson-tip CSS modules. The
+// level-details-dialog module is intentionally kept separate.
+
+// -- Shared by LessonOverview and StudentLessonOverview --------------------
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.navLink {
+  margin: 10px 0;
+  color: $purple;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.titleNoTopMargin {
+  margin-top: 0;
+}
+
+// Bulletless list, shared by LessonStandards and LessonAgenda.
+.noBullets {
+  list-style-type: none;
+}
+
+// -- LessonOverview --------------------------------------------------------
+
+.frontPage {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.left {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.right {
+  width: 40%;
+  padding: 0 10px 10px 20px;
+  border-left: solid 1px #333;
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.printDropdown {
+  margin-right: 5px;
+}
+
+.printIcon {
+  // the icon text is a different size than the button text, so nudge it up to
+  // keep it vertically centered
+  position: relative;
+  top: 1px;
+  margin: 0 2px;
+  font-size: 16px;
+}
+
+.customText {
+  margin: 0 2px;
+}
+
+.standardsHeaderAndButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fullCourseAlignmentButton {
+  margin-left: 50px;
+}
+
+.copyResourceWarningArea {
+  padding: 10px 10px 0;
+  border: 2px solid #f5e79e;
+  border-radius: 4px;
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+}
+
+// -- StudentLessonOverview -------------------------------------------------
+
+.headerActions {
+  display: flex;
+  align-items: center;
+}
+
+.printButton {
+  margin-right: 10px;
+}
+
+// -- LessonStandards -------------------------------------------------------
+
+.frameworkName {
+  @include main-font-semi-bold;
+  color: $dark_charcoal;
+}
+
+.categoryShortcode {
+  @include main-font-bold;
+  color: $link_color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.standardShortcode {
+  @include main-font-semi-bold;
+  color: $dark_charcoal;
+}
+
+.summary {
+  padding: 3px;
+}
+
+.standard {
+  padding: 3px;
+}
+
+// -- LessonNavigationDropdown ----------------------------------------------
+
+.dropdown {
+  display: inline-block;
+}
+
+.section {
+  @include main-font-regular;
+  width: 300px;
+  background-color: $lightest_purple;
+}
+
+.lesson {
+  @include main-font-regular;
+  width: 300px;
+}
+
+.lessonLabelWrapper {
+  margin-left: 10px;
+}
+
+.lessonLabel {
+  margin: 0 2px;
+}
+
+.boldText {
+  @include main-font-bold;
+}
+
+// -- LessonAgenda ----------------------------------------------------------
+
+.agendaSection {
+  margin-left: 15px;
+}
+
+// -- ResourceList (formerly resource-list.module.scss) ---------------------
+
+.dropdownButton {
+  top: -2px;
+}
+
+// -- Activity --------------------------------------------------------------
+
+.activityHeader {
+  color: $purple;
+}
+
+// -- ActivitySection -------------------------------------------------------
+
+.textAndProgression {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.remarksHeader {
+  margin-top: 0;
+}
+
+.remarks {
+  margin-left: 5px;
+  font-style: italic;
+}
+
+// Applied to the section body only when the section has remarks.
+.remarksBody {
+  margin-bottom: 5px;
+  padding-left: 5px;
+  border-left: 5px solid #ccc;
+}
+
+.progression {
+  margin-bottom: 5px;
+}
+
+// -- ProgressionDetails ----------------------------------------------------
+
+.progressionBox {
+  // The original inline style also set `margin: '10px, 0px'`, but the stray
+  // comma made it invalid CSS that browsers dropped; kept out here as a no-op.
+  padding: 0 10px 10px;
+}
+
+// -- LevelDetailsDialog ----------------------------------------------------
+
+.scrollContainer {
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.sublevelCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dialogButton {
+  margin: 5px;
+}
+
+// -- LessonTip (formerly lesson-tip.module.scss) ---------------------------
+
+.tip {
+  margin-bottom: 5px;
+}
+
+.tab {
+  // borders everywhere except the bottom
+  border-style: solid solid none solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-width: 1px;
+  border-color: var(--tip-border);
+  padding: 5px 10px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+// The tab's foreground/background swap on expand and invert on hover.
+// --tip-primary is the per-tip-type strong color; it pairs against the neutral
+// surface (--background-neutral-primary) and inverse text (--text-neutral-inverse)
+// tokens, which both resolve to white in light mode and flip together in dark.
+.tab.expanded {
+  background-color: var(--tip-primary);
+  color: var(--text-neutral-inverse);
+
+  &:hover {
+    background-color: var(--background-neutral-primary);
+    color: var(--tip-primary);
+  }
+}
+
+.tab.collapsed {
+  background-color: var(--background-neutral-primary);
+  color: var(--tip-primary);
+
+  &:hover {
+    background-color: var(--tip-primary);
+    color: var(--text-neutral-inverse);
+  }
+}
+
+.box {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--tip-border);
+  background-color: var(--tip-secondary);
+  padding: 10px;
+}
+
+.icon {
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+.caret {
+  margin-left: auto;
+}

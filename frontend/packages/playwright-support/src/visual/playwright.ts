@@ -1,6 +1,7 @@
 import type {Page, TestInfo} from 'playwright/test';
 import {expect} from 'playwright/test';
 
+import {settle} from './stability';
 import type {VisualCheck} from './types';
 
 /**
@@ -24,6 +25,7 @@ export async function withPlaywrightCheck(
   }
 
   const check: VisualCheck = async (name, opts = {}) => {
+    await settle(page);
     if (opts.region) {
       await expect(opts.region).toHaveScreenshot(`${name}.png`, {
         animations: 'disabled',

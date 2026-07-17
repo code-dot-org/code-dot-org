@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   padding: 20px 16px 16px;
+  color: var(--text-neutral-primary);
 }
 
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  color: #1b1464;
+  color: var(--text-neutral-primary);
   margin: 0 0 24px;
 }
 
@@ -120,13 +121,13 @@
 
 .progressFill {
   height: 100%;
-  background: #3c3fa0;
+  background: var(--background-brand-purple-primary);
   border-radius: 3px;
 }
 
 .completedIcon {
   flex-shrink: 0;
-  color: #00a862;
+  color: var(--text-success-primary);
   font-size: 1.25rem;
   display: flex;
   align-items: center;

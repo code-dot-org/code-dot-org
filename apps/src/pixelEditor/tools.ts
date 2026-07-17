@@ -15,6 +15,11 @@ export interface Raster {
 // Brush sizes offered by the UI, in pixels (square stamps).
 export const BRUSH_SIZES = [1, 2, 4, 8];
 
+// Fully transparent, as a pickable color: drawing with it writes transparent
+// pixels through the ordinary color path (every tool writes all four
+// channels), so it composes with pen, shapes, and flood fill alike.
+export const TRANSPARENT: RGBA = [0, 0, 0, 0];
+
 function setPixel(raster: Raster, x: number, y: number, color: RGBA | null) {
   if (x < 0 || y < 0 || x >= raster.width || y >= raster.height) {
     return;
@@ -91,10 +96,22 @@ export function stampLine(
 }
 
 /**
- * Flood-fill the region of pixels exactly matching the color at (x, y) with
- * the given color. A no-op when the target already matches.
+ * Flood-fill the region of pixels matching the color at (x, y) with the
+ * given color. tolerance is the summed per-channel (RGBA) difference a pixel
+ * may have from the clicked color and still count as part of the region —
+ * AI-generated "solid" areas carry tiny variations that exact matching
+ * splinters into unfilled specks. Matching compares against the CLICKED
+ * color, not the neighbor, so a gradient can't be crept across. A visited
+ * bitmap bounds the walk: with a tolerance the fill color itself can match
+ * the region, so painted-ness can't mark visited pixels.
  */
-export function floodFill(raster: Raster, x: number, y: number, color: RGBA) {
+export function floodFill(
+  raster: Raster,
+  x: number,
+  y: number,
+  color: RGBA,
+  tolerance = 0
+) {
   const {width, height, data} = raster;
   if (x < 0 || y < 0 || x >= width || y >= height) {
     return;
@@ -106,24 +123,23 @@ export function floodFill(raster: Raster, x: number, y: number, color: RGBA) {
     data[start + 2],
     data[start + 3],
   ];
-  if (
-    target[0] === color[0] &&
-    target[1] === color[1] &&
-    target[2] === color[2] &&
-    target[3] === color[3]
-  ) {
-    return;
-  }
   const matches = (i: number) =>
-    data[i] === target[0] &&
-    data[i + 1] === target[1] &&
-    data[i + 2] === target[2] &&
-    data[i + 3] === target[3];
+    Math.abs(data[i] - target[0]) +
+      Math.abs(data[i + 1] - target[1]) +
+      Math.abs(data[i + 2] - target[2]) +
+      Math.abs(data[i + 3] - target[3]) <=
+    tolerance;
+  const visited = new Uint8Array(width * height);
   const queue: number[] = [x, y];
   while (queue.length) {
     const py = queue.pop() as number;
     const px = queue.pop() as number;
-    const i = (py * width + px) * 4;
+    const p = py * width + px;
+    if (visited[p]) {
+      continue;
+    }
+    visited[p] = 1;
+    const i = p * 4;
     if (!matches(i)) {
       continue;
     }
@@ -193,4 +209,38 @@ export function drawCircle(
       err += 2 * (y - x) + 1;
     }
   }
+}
+
+/**
+ * Draw an axis-aligned rectangle between two corners (any order). Filled
+ * rectangles paint every interior pixel; outlines stamp the brush along the
+ * four edges, so the stroke thickness follows the brush size. Corners are
+ * hard: edges are plain horizontal/vertical lines.
+ */
+export function drawRect(
+  raster: Raster,
+  x0: number,
+  y0: number,
+  x1: number,
+  y1: number,
+  size: number,
+  color: RGBA,
+  filled: boolean
+) {
+  const left = Math.min(x0, x1);
+  const right = Math.max(x0, x1);
+  const top = Math.min(y0, y1);
+  const bottom = Math.max(y0, y1);
+  if (filled) {
+    for (let y = top; y <= bottom; y++) {
+      for (let x = left; x <= right; x++) {
+        setPixel(raster, x, y, color);
+      }
+    }
+    return;
+  }
+  stampLine(raster, left, top, right, top, size, color);
+  stampLine(raster, right, top, right, bottom, size, color);
+  stampLine(raster, right, bottom, left, bottom, size, color);
+  stampLine(raster, left, bottom, left, top, size, color);
 }
