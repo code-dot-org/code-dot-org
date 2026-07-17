@@ -1,0 +1,71 @@
+// Visuals match React Flow's NodeResizer (5px handles, 1px #3367d9 lines,
+// same CSS custom property) so selection looks unchanged at rotation 0.
+.resizer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+// Half-pixel inset centers the 1px border on the node edge, matching how
+// NodeResizer centers its line controls.
+.resizeBox {
+  position: absolute;
+  inset: -0.5px;
+  border: 1px solid
+    var(--xy-resize-background-color, var(--xy-resize-background-color-default));
+}
+
+.handle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  background-color: var(
+    --xy-resize-background-color,
+    var(--xy-resize-background-color-default)
+  );
+  translate: -50% -50%;
+  pointer-events: all;
+  touch-action: none;
+}
+
+.handleTopLeft {
+  left: 0;
+  top: 0;
+}
+
+.handleTop {
+  left: 50%;
+  top: 0;
+}
+
+.handleTopRight {
+  left: 100%;
+  top: 0;
+}
+
+.handleRight {
+  left: 100%;
+  top: 50%;
+}
+
+.handleBottomRight {
+  left: 100%;
+  top: 100%;
+}
+
+.handleBottom {
+  left: 50%;
+  top: 100%;
+}
+
+.handleBottomLeft {
+  left: 0;
+  top: 100%;
+}
+
+.handleLeft {
+  left: 0;
+  top: 50%;
+}

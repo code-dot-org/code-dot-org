@@ -6,9 +6,9 @@
   color: var(--text-neutral-primary);
 }
 
-// Rotatable layer that contains only the visual content (shape + label).
-// React Flow's NodeResizer, toolbar, and ConnectionHandles sit outside this
-// wrapper so resize math and edge attachment stay axis-aligned.
+// Rotatable layer holding the visual content (shape + label) and the
+// selection box + resize handles, so they rotate together. The toolbar and
+// ConnectionHandles sit outside so edge attachment stays axis-aligned.
 .rotatable {
   position: absolute;
   inset: 0;
