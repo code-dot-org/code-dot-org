@@ -1,6 +1,7 @@
 import {StepOptions, Tour} from 'shepherd.js';
 
-import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
+import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/excalidrawSketchLabTourSteps';
+import {createReactFlowSketchLabTourSteps} from '@cdo/apps/lab2/productTours/reactFlowSketchLabTourSteps';
 import experiments from '@cdo/apps/util/experiments';
 
 import {AppName, LevelProperties} from '../types';
@@ -13,6 +14,7 @@ export enum ProductTour {
   ResourcePanelOnboarding = 'resource_panel_onboarding',
   ResourcePanelValidation = 'resource_panel_validation',
   SketchlabIntro = 'sketchlab_intro',
+  SketchlabIntroReactFlow = 'sketchlab_intro_react_flow',
   Weblab2Intro = 'weblab2_intro',
 }
 
@@ -63,6 +65,13 @@ export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
       triggeredByLevel: false,
       getSteps: createSketchlabTourSteps,
     },
+    [ProductTour.SketchlabIntroReactFlow]: {
+      name: ProductTour.SketchlabIntroReactFlow,
+      displayName: 'Intro to Sketch Lab',
+      metricName: 'Sketch Lab React Flow Onboarding',
+      triggeredByLevel: false,
+      getSteps: createReactFlowSketchLabTourSteps,
+    },
     [ProductTour.Weblab2Intro]: {
       name: ProductTour.Weblab2Intro,
       displayName: 'Welcome to Web Lab',
@@ -105,14 +114,20 @@ export function isTourAvailableOnLevel(
   if (!isAvailableForLab) {
     return false;
   }
-  // The Sketch Lab tour(s) are only currently available for excalidraw-based
-  // Sketch lab.
+  // Sketch Lab has two implementations with their own tours: the legacy
+  // Excalidraw lab (behind the EXCALIDRAW experiment) and the default React
+  // Flow lab. Show each tour only on the implementation it targets.
   // TODO: remove excalidraw tour https://codedotorg.atlassian.net/browse/AFL-641
-  if (
-    levelProperties.appName === 'sketchlab' &&
-    !experiments.isEnabledAllowingQueryString(experiments.EXCALIDRAW)
-  ) {
-    return false;
+  if (levelProperties.appName === 'sketchlab') {
+    const excalidrawEnabled = experiments.isEnabledAllowingQueryString(
+      experiments.EXCALIDRAW
+    );
+    if (tour === ProductTour.SketchlabIntro && !excalidrawEnabled) {
+      return false;
+    }
+    if (tour === ProductTour.SketchlabIntroReactFlow && excalidrawEnabled) {
+      return false;
+    }
   }
   const config = ProductTourConfigurations[tour];
   if (config.shouldShowOnLevel && !config.shouldShowOnLevel(levelProperties)) {
@@ -130,6 +145,9 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
     ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
-  sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
+  sketchlab: [
+    ProductTourConfigurations[ProductTour.SketchlabIntro],
+    ProductTourConfigurations[ProductTour.SketchlabIntroReactFlow],
+  ],
   weblab2: [ProductTourConfigurations[ProductTour.Weblab2Intro]],
 };

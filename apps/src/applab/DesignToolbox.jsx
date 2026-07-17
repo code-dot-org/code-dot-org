@@ -1,3 +1,4 @@
+import {Box, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,8 +6,6 @@ import applabMsg from '@cdo/applab/locale';
 
 import ThemeDropdown from './designElements/ThemeDropdown';
 import DesignToolboxElement from './DesignToolboxElement';
-
-const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
 export default class DesignToolbox extends React.Component {
   static propTypes = {
@@ -29,9 +28,6 @@ export default class DesignToolbox extends React.Component {
       borderLeft: this.props.isRtl ? '1px solid gray' : '',
       overflowY: 'auto',
       padding: 10,
-      // setting this to 0 allows 2 columns with the potential scrollbar on Windows
-      paddingRight: this.props.isRtl ? 10 : 0,
-      paddingLeft: this.props.isRtl ? 0 : 10,
     };
 
     return (
@@ -43,85 +39,98 @@ export default class DesignToolbox extends React.Component {
           description={applabMsg.designElementTheme()}
           key={this.props.themeValue}
         />
-        <p>{applabMsg.designToolboxDescription()}</p>
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'button.png'}
-          desc={applabMsg.designElement_button()}
-          elementType={'BUTTON'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'input.png'}
-          desc={applabMsg.designElement_textInput()}
-          elementType={'TEXT_INPUT'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'label.png'}
-          desc={applabMsg.designElement_label()}
-          elementType={'LABEL'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'dropdown.png'}
-          desc={applabMsg.designElement_dropdown()}
-          elementType={'DROPDOWN'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'radio.png'}
-          desc={applabMsg.designElement_radioButton()}
-          elementType={'RADIO_BUTTON'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'checkbox.png'}
-          desc={applabMsg.designElement_checkbox()}
-          elementType={'CHECKBOX'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'image.png'}
-          desc={applabMsg.designElement_image()}
-          elementType={'IMAGE'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'canvas.png'}
-          desc={applabMsg.designElement_canvas()}
-          elementType={'CANVAS'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'screen.png'}
-          desc={applabMsg.designElement_screen()}
-          elementType={'SCREEN'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'textarea.png'}
-          desc={applabMsg.designElement_textArea()}
-          elementType={'TEXT_AREA'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'chart.png'}
-          desc={applabMsg.designElement_chart()}
-          elementType={'CHART'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'slider.png'}
-          desc={applabMsg.designElement_slider()}
-          elementType={'SLIDER'}
-          handleDragStart={this.props.handleDragStart}
-        />
-        <DesignToolboxElement
-          imageUrl={IMAGE_BASE_URL + 'camera.png'}
-          desc={applabMsg.designElement_photoSelect()}
-          elementType={'PHOTO_SELECT'}
-          handleDragStart={this.props.handleDragStart}
-        />
+        <MuiTypography variant="body3">
+          {applabMsg.designToolboxDescription()}
+        </MuiTypography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            gap: 1,
+            justifyContent: 'space-between',
+            padding: 2,
+          }}
+        >
+          <DesignToolboxElement
+            icon="hand-pointer"
+            desc={applabMsg.designElement_button()}
+            elementType={'BUTTON'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="i-cursor"
+            desc={applabMsg.designElement_textInput()}
+            elementType={'TEXT_INPUT'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="font"
+            desc={applabMsg.designElement_label()}
+            elementType={'LABEL'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="square-caret-down"
+            desc={applabMsg.designElement_dropdown()}
+            elementType={'DROPDOWN'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="circle-dot"
+            desc={applabMsg.designElement_radioButton()}
+            elementType={'RADIO_BUTTON'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="square-check"
+            desc={applabMsg.designElement_checkbox()}
+            elementType={'CHECKBOX'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="image"
+            desc={applabMsg.designElement_image()}
+            elementType={'IMAGE'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="paintbrush"
+            desc={applabMsg.designElement_canvas()}
+            elementType={'CANVAS'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="mobile-screen"
+            desc={applabMsg.designElement_screen()}
+            elementType={'SCREEN'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="align-left"
+            desc={applabMsg.designElement_textArea()}
+            elementType={'TEXT_AREA'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="chart-column"
+            desc={applabMsg.designElement_chart()}
+            elementType={'CHART'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="sliders"
+            desc={applabMsg.designElement_slider()}
+            elementType={'SLIDER'}
+            handleDragStart={this.props.handleDragStart}
+          />
+          <DesignToolboxElement
+            icon="camera"
+            desc={applabMsg.designElement_photoSelect()}
+            elementType={'PHOTO_SELECT'}
+            handleDragStart={this.props.handleDragStart}
+          />
+        </Box>
       </div>
     );
   }

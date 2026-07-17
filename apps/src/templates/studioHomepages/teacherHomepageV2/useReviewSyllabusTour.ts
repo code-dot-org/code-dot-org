@@ -7,10 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {
-  DemoType,
-  Section,
-} from '../../teacherDashboard/types/teacherSectionTypes';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createReviewSyllabusHomepageSteps,
@@ -91,9 +88,7 @@ export const resumeReviewSyllabusOnboardingTour = () => {
   tour.show(startStep.id);
 };
 
-const useReviewSyllabusTour = (demoSection: Section | null) => {
-  const demoType = demoSection?.demoType ?? null;
-
+const useReviewSyllabusTour = (demoType: DemoType | null) => {
   const demoPresets = useAppSelector(
     state => state.teacherSections.demoPresets
   );

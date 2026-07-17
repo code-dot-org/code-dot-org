@@ -22,11 +22,7 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
   );
 
   return (
-    <div
-      className={styles.imageNode}
-      aria-label={altText || 'Image node'}
-      {...hoverHandlers}
-    >
+    <div className={styles.imageNode} {...hoverHandlers}>
       <NodeResizer
         isVisible={selected && !data.locked}
         minWidth={MIN_NODE_WIDTH}
@@ -36,7 +32,7 @@ function ImageNode({data, selected, isConnectable}: NodeProps<ImageNodeType>) {
       <div className={styles.rotatable} style={rotatableStyle}>
         <img
           src={src}
-          alt={altText}
+          alt={altText || 'Image node'}
           className={styles.image}
           draggable={false}
         />

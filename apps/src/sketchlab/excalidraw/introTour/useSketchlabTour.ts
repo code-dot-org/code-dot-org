@@ -3,12 +3,12 @@ import {useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
+import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/excalidrawSketchLabTourSteps';
 import {
   ProductTour,
   ProductTourConfigurations,
   isTourEnabledOnLevel,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
-import {createSketchlabTourSteps} from '@cdo/apps/lab2/productTours/sketchlabTourSteps';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

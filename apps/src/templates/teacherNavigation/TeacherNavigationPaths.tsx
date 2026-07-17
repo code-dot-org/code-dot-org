@@ -158,5 +158,6 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.studentSnapshot),
     label: 'Student Snapshot',
     icon: 'screen-users',
+    tag: 'Beta',
   },
 };
