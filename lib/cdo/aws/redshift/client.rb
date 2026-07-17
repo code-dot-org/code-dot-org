@@ -48,29 +48,39 @@ module Cdo
           resp.id
         end
 
+        # The Redshift Data API's BatchExecuteStatement accepts at most this many SQL statements per
+        # call, so `batch_execute_async` transparently splits a longer list into successive batches.
+        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
+        MAX_BATCH_STATEMENTS = 40
+
         # SYNCHRONOUS: Executes multiple SQL statements serially. Blocks until all are FINISHED or one FAILS.
         # TODO: Does not return result sets. To support queries that return results, fetch_results would need to
         # iterate describe_statement sub_statements and call get_statement_result on each sub-statement ID.
         # @param sqls [Array<String>] SQL statements to execute in order.
         # @param timeout [Integer] Maximum time to wait in seconds. Defaults to 5 minutes.
+        # @return [Array<String>] final status of each submitted batch (see MAX_BATCH_STATEMENTS).
         def batch_execute(sqls, timeout: 5.minutes.to_i)
-          statement_id = batch_execute_async(sqls)
-          wait_for_completion(statement_id, timeout: timeout)
+          batch_execute_async(sqls).map {|statement_id| wait_for_completion(statement_id, timeout: timeout)}
         end
 
-        # ASYNCHRONOUS: Submits multiple SQL statements for serial execution and returns the statement ID immediately.
+        # ASYNCHRONOUS: Submits SQL statements for serial execution and returns immediately. Splits
+        # `sqls` into batches of at most MAX_BATCH_STATEMENTS (the Data API's per-call limit) so
+        # callers can pass any number of statements without minding the cap; each batch is submitted
+        # as its own BatchExecuteStatement call.
         # @param sqls [Array<String>] SQL statements to execute in order.
-        # @return [String] Statement ID.
+        # @return [Array<String>] one statement ID per submitted batch, in order (empty if no sqls).
         def batch_execute_async(sqls)
-          CDO.log.info "[Redshift] Submitting batch of #{sqls.length} SQL statements:\n#{sqls.map.with_index(1) {|s, i| "  [#{i}] #{s}"}.join("\n")}"
-          resp = @client.batch_execute_statement(
-            cluster_identifier: @cluster_id,
-            database: @database,
-            db_user: @db_user,
-            sqls: sqls
-          )
-          CDO.log.info "[Redshift] Batch statement submitted: #{resp.id}"
-          resp.id
+          sqls.each_slice(MAX_BATCH_STATEMENTS).map do |batch|
+            CDO.log.info "[Redshift] Submitting batch of #{batch.length} SQL statements:\n#{batch.map.with_index(1) {|s, i| "  [#{i}] #{s}"}.join("\n")}"
+            resp = @client.batch_execute_statement(
+              cluster_identifier: @cluster_id,
+              database: @database,
+              db_user: @db_user,
+              sqls: batch
+            )
+            CDO.log.info "[Redshift] Batch statement submitted: #{resp.id}"
+            resp.id
+          end
         end
 
         # Helper: Checks the status of an asynchronous statement.

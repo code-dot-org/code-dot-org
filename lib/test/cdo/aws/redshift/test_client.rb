@@ -215,8 +215,32 @@ class TestRedshiftClient < Minitest::Test
 
     ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(mock_resp)
 
-    id = @redshift.batch_execute_async(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
-    assert_equal 'batch-123', id
+    ids = @redshift.batch_execute_async(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
+    assert_equal ['batch-123'], ids
+  end
+
+  def test_batch_execute_async_splits_lists_over_the_data_api_limit_into_multiple_batches
+    resp0 = mock
+    resp0.stubs(:id).returns('batch-0')
+    resp1 = mock
+    resp1.stubs(:id).returns('batch-1')
+
+    batch_sizes = []
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:batch_execute_statement).
+      with {|args| batch_sizes << args[:sqls].length; true}.
+      returns(resp0, resp1)
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
+    ids = @redshift.batch_execute_async(sqls)
+
+    assert_equal ['batch-0', 'batch-1'], ids
+    assert_equal [max, 1], batch_sizes
+  end
+
+  def test_batch_execute_async_submits_nothing_for_an_empty_list
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).never
+    assert_empty @redshift.batch_execute_async([])
   end
 
   def test_batch_execute_synchronous_success
@@ -232,7 +256,7 @@ class TestRedshiftClient < Minitest::Test
       returns(desc_finished)
 
     status = @redshift.batch_execute(['SELECT 1', 'SELECT 2'])
-    assert_equal 'FINISHED', status
+    assert_equal ['FINISHED'], status
   end
 
   def test_batch_execute_raises_on_sub_statement_failure
