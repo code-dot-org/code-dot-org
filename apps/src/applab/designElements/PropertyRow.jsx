@@ -33,19 +33,21 @@ export default class PropertyRow extends React.Component {
 
   state = {
     value: this.props.initialValue,
-    isValidValue: true,
+    // Reason the current id value is invalid, or null when it's valid. Only
+    // ever set for id rows.
+    idError: null,
   };
 
   UNSAFE_componentWillReceiveProps(newProps) {
     this.setState({
       value: newProps.initialValue,
-      isValidValue: true,
+      idError: null,
     });
   }
 
-  isIdAvailable(value) {
+  getIdError(value) {
     if (value === this.props.initialValue) {
-      return true;
+      return null;
     }
 
     // Elements in divApplab must be allowed since divApplab may be stale
@@ -56,7 +58,7 @@ export default class PropertyRow extends React.Component {
       allowDesignElements: false,
       allowDesignPrefix: false,
     };
-    return elementUtils.isIdAvailable(value, options);
+    return elementUtils.getIdAvailabilityError(value, options);
   }
 
   handleChangeInternal = event => {
@@ -65,23 +67,23 @@ export default class PropertyRow extends React.Component {
     if (isIdRow) {
       value = value.replace(/\s+/g, '');
     }
-    const isValidValue = !isIdRow || this.isIdAvailable(value);
-    this.setValue(value, isValidValue);
+    const idError = isIdRow ? this.getIdError(value) : null;
+    this.setValue(value, idError);
   };
 
   /**
    * Updates this component's state, and calls the change handler
    * only if the new value is valid.
    * @param value {string} The new value of the property row.
-   * @param isValidValue {boolean} Whether the value is valid. Default: true.
+   * @param idError {?string} Reason the value is invalid, or null if valid.
+   *        Default: null.
    */
-  setValue(value, isValidValue) {
-    isValidValue = utils.valueOr(isValidValue, true);
+  setValue(value, idError = null) {
     this.setState({
       value: value,
-      isValidValue: isValidValue,
+      idError: idError,
     });
-    if (isValidValue) {
+    if (!idError) {
       this.props.handleChange(value);
     }
   }
@@ -95,7 +97,7 @@ export default class PropertyRow extends React.Component {
   };
 
   onIdRowBlur = () => {
-    if (!this.state.isValidValue) {
+    if (this.state.idError) {
       const value = this.props.initialValue;
       this.setValue(value);
     }
@@ -141,8 +143,12 @@ export default class PropertyRow extends React.Component {
                   : this.state.value
               }
               onChange={this.handleChangeInternal}
+              onBlur={this.props.isIdRow ? this.onIdRowBlur : undefined}
               size="s"
-              style={{width: '100%'}}
+              errorMessage={this.state.idError || undefined}
+              style={{
+                width: '100%',
+              }}
             />
             {this.props.lockState && (
               <MuiIconButton

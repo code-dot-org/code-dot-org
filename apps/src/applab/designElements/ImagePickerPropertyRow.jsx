@@ -98,6 +98,7 @@ export default class ImagePickerPropertyRow extends React.Component {
       >
         <Box style={rowStyle.container}>
           <TextField
+            id="imagePickerInput"
             name={''}
             label={this.props.desc}
             value={this.state.value}
@@ -106,7 +107,7 @@ export default class ImagePickerPropertyRow extends React.Component {
             style={{width: '100%'}}
           />
           <MuiButton
-            aria-label="Open color picker"
+            aria-label="Open image chooser"
             variant="outlined"
             color="secondary"
             size="extraSmall"
