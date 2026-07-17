@@ -7,7 +7,7 @@ import {
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -19,6 +19,21 @@ import {
 import {BACKGROUNDS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+// A generated image's name becomes a costume identifier that AI code-gen
+// references by matching the model's output token-by-token against the
+// project's names. Double quotes (stripped during that matching) and
+// irregular whitespace (re-split and rejoined on single spaces) make a name
+// impossible to reference, so keep those out of the field as it's typed
+// rather than silently rewriting on submit. Everyday punctuation — hyphens,
+// apostrophes, commas, emoji — is fine and left alone.
+const NAME_MAX_LENGTH = 40;
+const sanitizeName = (raw: string) =>
+  raw
+    .replace(/"/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/^\s+/, '')
+    .slice(0, NAME_MAX_LENGTH);
 
 // Read an image's pixel dimensions so the animation's frameSize matches the
 // generated PNG (single frame).
@@ -62,9 +77,23 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
   const [status, setStatus] = useState<'idle' | 'generating'>('idle');
   const [error, setError] = useState<string | null>(null);
 
+  const generating = status === 'generating';
+  const trimmedName = name.trim();
+  const trimmedPrompt = prompt.trim();
+  // Names must be unique: the runtime and block dropdowns identify a costume
+  // by name, so reusing one would collide (and the classic thunk would
+  // silently rename to name_N). Check against the live list.
+  const existingNames = useAppSelector(state =>
+    Object.values(state.animationList.propsByKey).map(p => p.name)
+  );
+  const nameTaken = !!trimmedName && existingNames.includes(trimmedName);
+  // Both fields are required (no more defaulting the name from the
+  // description) and the name must be free.
+  const canGenerate =
+    !generating && !!trimmedName && !!trimmedPrompt && !nameTaken;
+
   const handleGenerate = useCallback(async () => {
-    if (!prompt.trim()) {
-      setError('Enter a description first.');
+    if (!canGenerate) {
       return;
     }
     if (!channelId) {
@@ -77,7 +106,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     setError(null);
     try {
       const {filename, uint8Array, mediaType, pixelGridSize} =
-        await generateImage(prompt, itemType, style);
+        await generateImage(trimmedPrompt, itemType, style);
       const url = await uploadAssetToProject(
         channelId,
         filename,
@@ -85,7 +114,6 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
         mediaType
       );
       const frameSize = await getImageSize(uint8Array, mediaType);
-      const desiredName = name.trim() || prompt.trim().slice(0, 20);
       const key = createUuid();
       // Bridge into the animation list: addAnimation fetches sourceUrl, builds
       // the dataURI, and (for Sprite Lab) inserts at the top of the list.
@@ -93,7 +121,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
         // addAnimation is an untyped JS thunk (inferred as Function); cast so
         // the dispatch overloads accept it. redux-thunk runs the function.
         addAnimation(key, {
-          name: desiredName,
+          name: trimmedName,
           sourceUrl: url,
           frameSize,
           frameCount: 1,
@@ -106,16 +134,18 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
         }) as unknown as AnyAction
       );
       // The classic thunk unconditionally renames to name_N; take the plain
-      // name back when nothing else uses it (this animation currently holds
-      // the _N name, so the uniqueness check is against the others).
+      // name back (we required it free above, so it's still available).
       if (
         isNameUnique(
-          desiredName,
+          trimmedName,
           getStore().getState().animationList.propsByKey
         )
       ) {
-        dispatch(setAnimationName(key, desiredName) as unknown as AnyAction);
+        dispatch(setAnimationName(key, trimmedName) as unknown as AnyAction);
       }
+      // Clear both fields so the next generation starts fresh — a leftover
+      // description paired with a new name is how you get an image that
+      // doesn't match its name.
       setName('');
       setPrompt('');
     } catch (e) {
@@ -123,9 +153,15 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     } finally {
       setStatus('idle');
     }
-  }, [prompt, name, itemType, style, channelId, dispatch]);
-
-  const generating = status === 'generating';
+  }, [
+    canGenerate,
+    trimmedName,
+    trimmedPrompt,
+    itemType,
+    style,
+    channelId,
+    dispatch,
+  ]);
 
   return (
     <div className={moduleStyles.guideForm}>
@@ -137,7 +173,8 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
             type="text"
             value={name}
             placeholder="e.g. hero"
-            onChange={e => setName(e.target.value)}
+            maxLength={NAME_MAX_LENGTH}
+            onChange={e => setName(sanitizeName(e.target.value))}
             disabled={generating}
           />
         </label>
@@ -172,10 +209,15 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           onChange={e => setPrompt(e.target.value)}
           disabled={generating}
         />
-        <button type="button" onClick={handleGenerate} disabled={generating}>
+        <button type="button" onClick={handleGenerate} disabled={!canGenerate}>
           {generating ? 'Generating…' : 'Generate'}
         </button>
       </div>
+      {nameTaken && (
+        <div className={moduleStyles.generateError}>
+          That name is already used. Choose a new name.
+        </div>
+      )}
       {error && <div className={moduleStyles.generateError}>{error}</div>}
     </div>
   );
