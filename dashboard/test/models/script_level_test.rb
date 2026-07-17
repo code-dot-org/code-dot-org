@@ -785,15 +785,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
-  # Enables the 'lesson-tutor-redirect' experiment for the given user and
-  # disables it for every other invocation, so the end-of-lesson tutor branch
-  # is gated exactly as it is in production.
-  private def stub_lesson_tutor_experiment(user)
-    Experiment.stubs(:enabled?).returns(false)
-    Experiment.stubs(:enabled?).
-      with(user: user, experiment_name: 'lesson-tutor-redirect').returns(true)
-  end
-
   # For lessons with Tutor+ available (AIF/AID), the end of lesson goes to the
   # lesson deep dive instead of the unit overview / dialog redirect.
   test 'next_level_or_redirect_path_for_user goes to lesson tutor at end of tutor-available lesson' do
@@ -1291,5 +1282,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @user = create(:teacher)
     user_course_enrollment = create(:plc_user_course_enrollment, plc_course: @plc_course_unit.plc_course, user: @user)
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
+  end
+
+  # Enables the 'lesson-tutor-redirect' experiment for the given user and
+  # disables it for every other invocation, so the end-of-lesson tutor branch
+  # is gated exactly as it is in production.
+  private def stub_lesson_tutor_experiment(user)
+    Experiment.stubs(:enabled?).returns(false)
+    Experiment.stubs(:enabled?).
+      with(user: user, experiment_name: 'lesson-tutor-redirect').returns(true)
   end
 end
