@@ -1,3 +1,6 @@
+// Grab thickness of the invisible edge strips, straddling the node edge.
+$edge-grab-thickness: 10px;
+
 .resizer {
   position: absolute;
   inset: 0;
@@ -15,23 +18,30 @@
 
 .handle {
   position: absolute;
+  pointer-events: all;
+  touch-action: none;
+}
+
+// Corner dots: the visible resize affordance. Rendered after the edge strips
+// so they sit on top of the strip ends, where a grab should resize both axes.
+.handleCorner {
   width: 5px;
   height: 5px;
   border: 1px solid #fff;
   border-radius: 1px;
   background-color: var(--borders-brand-teal-primary);
   translate: -50% -50%;
-  pointer-events: all;
-  touch-action: none;
+}
+
+// Edge strips: transparent hit targets spanning the full edge so the whole
+// edge resizes, not just the midpoint (which the connection handle covers).
+// The visible edge line is drawn by .resizeBox.
+.handleEdge {
+  background-color: transparent;
 }
 
 .handleTopLeft {
   left: 0;
-  top: 0;
-}
-
-.handleTop {
-  left: 50%;
   top: 0;
 }
 
@@ -40,18 +50,8 @@
   top: 0;
 }
 
-.handleRight {
-  left: 100%;
-  top: 50%;
-}
-
 .handleBottomRight {
   left: 100%;
-  top: 100%;
-}
-
-.handleBottom {
-  left: 50%;
   top: 100%;
 }
 
@@ -60,7 +60,34 @@
   top: 100%;
 }
 
+.handleTop {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $edge-grab-thickness;
+  translate: 0 -50%;
+}
+
+.handleBottom {
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: $edge-grab-thickness;
+  translate: 0 -50%;
+}
+
+.handleRight {
+  left: 100%;
+  top: 0;
+  width: $edge-grab-thickness;
+  height: 100%;
+  translate: -50% 0;
+}
+
 .handleLeft {
   left: 0;
-  top: 50%;
+  top: 0;
+  width: $edge-grab-thickness;
+  height: 100%;
+  translate: -50% 0;
 }

@@ -47,6 +47,30 @@ const HANDLE_CLASS: Record<ResizeHandlePosition, string> = {
   left: styles.handleLeft,
 };
 
+// Corner handles resize both axes; their names are hyphenated ('top-left').
+// Edge handles resize one axis; their names are single words ('top').
+const isCornerHandle = (handle: ResizeHandlePosition) => handle.includes('-');
+
+// Edge strips before corners, so the corner dots stack on top of the strip
+// ends where a grab should resize both axes.
+const RESIZE_HANDLE_RENDER_ORDER: readonly ResizeHandlePosition[] = [
+  ...RESIZE_HANDLE_POSITIONS.filter(handle => !isCornerHandle(handle)),
+  ...RESIZE_HANDLE_POSITIONS.filter(isCornerHandle),
+];
+
+// Counter-scale corner dots uniformly. Edge strips must keep their full-edge
+// length, so scale only their perpendicular thickness.
+function handleScaleValue(
+  handle: ResizeHandlePosition,
+  handleScale: number
+): string {
+  if (isCornerHandle(handle)) {
+    return `${handleScale}`;
+  }
+  const isHorizontalEdge = handle === 'top' || handle === 'bottom';
+  return isHorizontalEdge ? `1 ${handleScale}` : `${handleScale} 1`;
+}
+
 /**
  * Selection bounding box + resize handles that rotate with the node,
  * replacing React Flow's axis-aligned NodeResizer. Dragging a handle
@@ -168,26 +192,30 @@ function RotatedNodeResizer({
   return (
     <div className={styles.resizer} aria-hidden="true">
       <div className={styles.resizeBox} />
-      {RESIZE_HANDLE_POSITIONS.map(handle => (
-        <div
-          key={handle}
-          className={classNames(
-            styles.handle,
-            HANDLE_CLASS[handle],
-            REACT_FLOW_INTERACTION_CLASS.noDrag,
-            REACT_FLOW_INTERACTION_CLASS.noPan
-          )}
-          style={{
-            cursor: resizeCursorForHandle(handle, rotation),
-            scale: `${handleScale}`,
-          }}
-          onPointerDown={event => handlePointerDown(event, handle)}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerEnd}
-          onPointerCancel={handlePointerEnd}
-          onLostPointerCapture={handlePointerEnd}
-        />
-      ))}
+      {RESIZE_HANDLE_RENDER_ORDER.map(handle => {
+        const isCorner = isCornerHandle(handle);
+        return (
+          <div
+            key={handle}
+            className={classNames(
+              styles.handle,
+              isCorner ? styles.handleCorner : styles.handleEdge,
+              HANDLE_CLASS[handle],
+              REACT_FLOW_INTERACTION_CLASS.noDrag,
+              REACT_FLOW_INTERACTION_CLASS.noPan
+            )}
+            style={{
+              cursor: resizeCursorForHandle(handle, rotation),
+              scale: handleScaleValue(handle, handleScale),
+            }}
+            onPointerDown={event => handlePointerDown(event, handle)}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerEnd}
+            onPointerCancel={handlePointerEnd}
+            onLostPointerCapture={handlePointerEnd}
+          />
+        );
+      })}
     </div>
   );
 }
