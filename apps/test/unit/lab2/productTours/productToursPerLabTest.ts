@@ -155,6 +155,30 @@ describe('isTourEnabledOnLevel', () => {
         )
       ).toBe(false);
     });
+
+    it('enables the React Flow tour only when EXCALIDRAW is disabled', () => {
+      jest
+        .spyOn(experiments, 'isEnabledAllowingQueryString')
+        .mockReturnValue(false);
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.SketchlabIntroReactFlow,
+          makeLevelProperties('sketchlab')
+        )
+      ).toBe(true);
+    });
+
+    it('disables the React Flow tour when EXCALIDRAW is enabled', () => {
+      jest
+        .spyOn(experiments, 'isEnabledAllowingQueryString')
+        .mockImplementation(key => key === experiments.EXCALIDRAW);
+      expect(
+        isTourEnabledOnLevel(
+          ProductTour.SketchlabIntroReactFlow,
+          makeLevelProperties('sketchlab')
+        )
+      ).toBe(false);
+    });
   });
 
   describe('when the tour has a shouldShowOnLevel check', () => {
