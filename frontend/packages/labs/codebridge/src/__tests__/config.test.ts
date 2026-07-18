@@ -19,7 +19,13 @@ const config: CodebridgeConfig = {
 const source: MultiFileSource = {
   folders: {'5': {id: '5', name: 'sub', parentId: '0'}},
   files: {
-    '1': {id: '1', name: 'main.py', language: 'python', contents: '', folderId: '0'},
+    '1': {
+      id: '1',
+      name: 'main.py',
+      language: 'python',
+      contents: '',
+      folderId: '0',
+    },
   },
 };
 
@@ -37,16 +43,24 @@ describe('validateFileName', () => {
     expect(validateFileName(config, source, '0', 'other.py')).toBeUndefined();
   });
   it('rejects an empty name', () => {
-    expect(validateFileName(config, source, '0', '  ')).toMatch(/enter a file name/i);
+    expect(validateFileName(config, source, '0', '  ')).toMatch(
+      /enter a file name/i,
+    );
   });
   it('rejects a disallowed extension', () => {
-    expect(validateFileName(config, source, '0', 'notes.txt')).toMatch(/must end in/i);
+    expect(validateFileName(config, source, '0', 'notes.txt')).toMatch(
+      /must end in/i,
+    );
   });
   it('rejects a duplicate in the same folder', () => {
-    expect(validateFileName(config, source, '0', 'main.py')).toMatch(/already exists/i);
+    expect(validateFileName(config, source, '0', 'main.py')).toMatch(
+      /already exists/i,
+    );
   });
   it('allows renaming a file to its own name (excludeId)', () => {
-    expect(validateFileName(config, source, '0', 'main.py', '1')).toBeUndefined();
+    expect(
+      validateFileName(config, source, '0', 'main.py', '1'),
+    ).toBeUndefined();
   });
   it('is unrestricted on extension when editableFileTypes is empty', () => {
     expect(

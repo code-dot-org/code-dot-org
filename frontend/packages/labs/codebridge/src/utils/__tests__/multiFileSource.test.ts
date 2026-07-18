@@ -22,8 +22,21 @@ import {
 const source = (): MultiFileSource => ({
   folders: {},
   files: {
-    '1': {id: '1', name: 'a.py', language: 'python', contents: 'a', folderId: '0', active: true},
-    '2': {id: '2', name: 'b.py', language: 'python', contents: 'b', folderId: '0'},
+    '1': {
+      id: '1',
+      name: 'a.py',
+      language: 'python',
+      contents: 'a',
+      folderId: '0',
+      active: true,
+    },
+    '2': {
+      id: '2',
+      name: 'b.py',
+      language: 'python',
+      contents: 'b',
+      folderId: '0',
+    },
   },
   openFiles: ['1', '2'],
 });
@@ -72,9 +85,17 @@ describe('closeFile', () => {
 
 describe('createNewFile', () => {
   it('adds an active file with the next id', () => {
-    const next = createNewFile({source: source(), fileName: 'c.py', language: 'python'});
+    const next = createNewFile({
+      source: source(),
+      fileName: 'c.py',
+      language: 'python',
+    });
     const id = getNextFileId(Object.values(source().files)); // '3'
-    expect(next.files[id]).toMatchObject({name: 'c.py', language: 'python', active: true});
+    expect(next.files[id]).toMatchObject({
+      name: 'c.py',
+      language: 'python',
+      active: true,
+    });
     expect(next.files['1'].active).toBe(false);
     expect(getOpenFileIds(next)).toContain(id);
   });
@@ -106,7 +127,19 @@ describe('folders', () => {
     expect(s.folders['1'].open).toBe(true);
 
     // Put a file inside the folder, then delete the folder.
-    s = {...s, files: {...s.files, '9': {id: '9', name: 'in.py', language: 'python', contents: '', folderId: '1'}}};
+    s = {
+      ...s,
+      files: {
+        ...s.files,
+        '9': {
+          id: '9',
+          name: 'in.py',
+          language: 'python',
+          contents: '',
+          folderId: '1',
+        },
+      },
+    };
     const deleted = deleteFolder(s, '1');
     expect(deleted.folders['1']).toBeUndefined();
     expect(deleted.files['9']).toBeUndefined();

@@ -15,8 +15,21 @@ import FileTabs from '../FileTabs';
 const twoFiles: MultiFileSource = {
   folders: {},
   files: {
-    '1': {id: '1', name: 'a.py', language: 'python', contents: 'a', folderId: '0', active: true},
-    '2': {id: '2', name: 'b.py', language: 'python', contents: 'b', folderId: '0'},
+    '1': {
+      id: '1',
+      name: 'a.py',
+      language: 'python',
+      contents: 'a',
+      folderId: '0',
+      active: true,
+    },
+    '2': {
+      id: '2',
+      name: 'b.py',
+      language: 'python',
+      contents: 'b',
+      folderId: '0',
+    },
   },
   openFiles: ['1', '2'],
 };

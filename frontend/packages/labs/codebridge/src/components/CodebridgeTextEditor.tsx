@@ -1,7 +1,10 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
-import {getActiveFileForSource, saveFileContents} from '../utils/multiFileSource';
+import {
+  getActiveFileForSource,
+  saveFileContents,
+} from '../utils/multiFileSource';
 
 /**
  * A minimal single-file editor over the Codebridge multi-file source. It reads

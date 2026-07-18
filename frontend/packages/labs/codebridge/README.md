@@ -9,7 +9,7 @@ Codebridge builds on the base `@code-dot-org/lab` framework. `CodebridgeLab`
 specializes `LabWithSources` to a `MultiFileSource`, the same way `BlocklyLab`
 specializes it to a Blockly serialization. The multi-file source itself and its
 save path live in the base `labProjectSlice`; this package owns the file/folder
-*semantics* (the edit helpers and the thunks that dispatch base `setAndSaveSource`)
+_semantics_ (the edit helpers and the thunks that dispatch base `setAndSaveSource`)
 and the IDE UI.
 
 See [docs/port-plan.md](./docs/port-plan.md) for the port from the legacy

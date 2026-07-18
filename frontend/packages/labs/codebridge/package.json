@@ -13,11 +13,11 @@
     "directory": "frontend/packages/labs/codebridge"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "type": "module",
   "sideEffects": [
     "**/*.css",
     "**/*.scss"
   ],
+  "type": "module",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -49,6 +49,13 @@
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
+    "@codemirror/autocomplete": "^6.18.6",
+    "@codemirror/commands": "^6.8.0",
+    "@codemirror/language": "^6.11.0",
+    "@codemirror/search": "^6.5.10",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.36.5",
     "@reduxjs/toolkit": "catalog:"
   },
   "devDependencies": {

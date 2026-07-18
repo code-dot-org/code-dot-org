@@ -56,7 +56,9 @@ it('shows the active file and saves edits back through the project manager', () 
   const save = vi.fn();
   renderEditor(save);
 
-  const textarea = screen.getByLabelText('Editing main.py') as HTMLTextAreaElement;
+  const textarea = screen.getByLabelText(
+    'Editing main.py',
+  ) as HTMLTextAreaElement;
   // Reads the active file from the multi-file source.
   expect(textarea.value).toBe(samplePythonSource.files['1'].contents);
 

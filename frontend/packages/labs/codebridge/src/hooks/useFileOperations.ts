@@ -53,7 +53,8 @@ export const useFileOperations = (): FileOperations => {
       source,
       activateFile: id => commit(edit.activateFile(source, id)),
       closeFile: id => commit(edit.closeFile(source, id)),
-      saveFile: (id, contents) => commit(edit.saveFileContents(source, id, contents)),
+      saveFile: (id, contents) =>
+        commit(edit.saveFileContents(source, id, contents)),
       newFile: args => commit(edit.createNewFile({source, ...args})),
       renameFile: (id, name) => commit(edit.renameFile(source, id, name)),
       deleteFile: id => commit(edit.deleteFile(source, id)),
@@ -62,7 +63,8 @@ export const useFileOperations = (): FileOperations => {
         commit(edit.createNewFolder(source, name, parentId)),
       renameFolder: (id, name) => commit(edit.renameFolder(source, id, name)),
       deleteFolder: id => commit(edit.deleteFolder(source, id)),
-      moveFolder: (id, parentId) => commit(edit.moveFolder(source, id, parentId)),
+      moveFolder: (id, parentId) =>
+        commit(edit.moveFolder(source, id, parentId)),
       toggleFolder: id => commit(edit.toggleFolderOpen(source, id)),
     };
   }, [source, currentSources, updateSources]);

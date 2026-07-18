@@ -49,9 +49,10 @@ mostly re-pointing Codebridge's read/write path — not lifting a filesystem.
   // base value-import triggers injection of the base lab slices
   import {default as labStore} from '@code-dot-org/lab/redux';
   import {injectSlices, storeHooks} from '@code-dot-org/core/redux';
-  const store = injectSlices<[typeof codebridgeWorkspaceSlice], typeof labStore>(
-    [codebridgeWorkspaceSlice],
-  );
+  const store = injectSlices<
+    [typeof codebridgeWorkspaceSlice],
+    typeof labStore
+  >([codebridgeWorkspaceSlice]);
   export const {useAppDispatch, useAppSelector} = storeHooks<typeof store>();
   ```
 
@@ -91,18 +92,18 @@ The redux `labProjectSlice` (`projectSources` + `setAndSaveSource`) is a
 not by `SourcesContext`. Codebridge's file CRUD therefore goes through
 `updateSources`, NOT `setAndSaveSource`.
 
-| Legacy weld | Frontend replacement | Status |
-|---|---|---|
-| `state.lab2Project` (file state) | base `SourcesContext.currentSources` (via `useSources<MultiFileSource>()`) | exists |
-| `lab2ProjectReduxThunks` (CRUD writes) | pure edit helpers + `updateSources(applyEdit(current))` | in progress (save proven) |
-| `useAppSelector/Dispatch` on global `RootState` | base `storeHooks` + `injectSlices` singleton | exists |
-| `Lab2Registry` / `CodebridgeRegistry` | base `LabRegistry` / ported `CodebridgeRegistry` | LabRegistry exists; port Cb registry |
-| `lab2System` run flags | base `labSystemSlice` | exists |
+| Legacy weld                                     | Frontend replacement                                                       | Status                               |
+| ----------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------ |
+| `state.lab2Project` (file state)                | base `SourcesContext.currentSources` (via `useSources<MultiFileSource>()`) | exists                               |
+| `lab2ProjectReduxThunks` (CRUD writes)          | pure edit helpers + `updateSources(applyEdit(current))`                    | in progress (save proven)            |
+| `useAppSelector/Dispatch` on global `RootState` | base `storeHooks` + `injectSlices` singleton                               | exists                               |
+| `Lab2Registry` / `CodebridgeRegistry`           | base `LabRegistry` / ported `CodebridgeRegistry`                           | LabRegistry exists; port Cb registry |
+| `lab2System` run flags                          | base `labSystemSlice`                                                      | exists                               |
 
 ## Ownership boundary
 
 The base `SourcesContext` owns the `MultiFileSource` container and its save path,
-generic over the source type. The multi-file *semantics* — files, folders, tabs —
+generic over the source type. The multi-file _semantics_ — files, folders, tabs —
 live in the codebridge package, because Blockly labs never touch them:
 
 - Port the pure edit helpers from `apps/src/lab2/utils/multiFileSourceEditUtils.ts`
@@ -207,6 +208,7 @@ What landed:
   called with the edited source. Passes.
 
 Harness notes for the next tests:
+
 - The save path is gated by `isReadOnlyWorkspace`, which is true until the user
   owns the channel — seed one with `labActions.setChannel({isOwner: true})`.
 - `ProjectManager` is not exported from `@code-dot-org/lab`; install a mock via
@@ -241,6 +243,7 @@ The multi-file edit set and the two tree components landed, over the
   green with the write-path test.
 
 Deferred here:
+
 - `@dnd-kit` for tab reorder + file/folder drag-move (helpers `moveFile`/
   `moveFolder` already exist to back it).
 - FileBrowser dialog flows are only smoke-testable until a test wraps
@@ -270,10 +273,43 @@ components (the consuming lab supplies layouts), and the `onRun`/`onStop`/consol
 I/O and AI-tutor/asset bundle — those ride the runtime context built with the
 console step.
 
+## CodeMirror editor — DONE
+
+The `<textarea>` is superseded by a real CodeMirror editor (the textarea editor
+survives as `CodebridgeTextEditor`, still used by the write-path test):
+
+- Core `@codemirror/*` packages added to the package (state, view, commands,
+  language, autocomplete, search, theme-one-dark). Language packages
+  (`@codemirror/lang-*`) stay in the consuming lab — codebridge is language-agnostic.
+- `src/editor/editorConfig.ts` — the base extension set ported from
+  `apps/src/codemirror/editorConfig.ts` (line numbers, history, bracket matching,
+  keymaps, tab size). Syntax highlighting is left to the theme so light/dark don't
+  stack two highlight styles.
+- `src/editor/editorThemes.ts` — `lightTheme` (default highlight style) and
+  `darkTheme` (One Dark, a stand-in until the design-system editor theme is ported).
+- `src/editor/CodeEditor.tsx` — reads the active file from the SourcesContext and
+  writes edits back through `saveFile`; per-file syntax support comes from
+  `config.languageExtensions[file.language]`. Read-only and theme are live
+  compartments; external content changes sync in without fighting typing; the
+  editor is keyed by file id so switching files remounts cleanly. Ports the a11y
+  tab-stop/aria setup (scroller is the tab stop, Enter/Escape move in/out, gutter
+  un-hidden).
+- `CodebridgeConfig.languageExtensions` (`{languageId: Extension}`) added — the
+  lab supplies CodeMirror language support keyed by the same identifier as
+  `languageMapping`.
+- Test: `src/editor/__tests__/CodeEditor.test.tsx` (mounts, shows contents, a11y
+  attributes). CodeMirror runs in jsdom. 26 tests green.
+
+Also: added the package's missing `.gitignore` / `.prettierignore` /
+`.lintstagedrc.mjs` (a scaffolding gap — without lint-staged, committed files were
+never prettier-formatted and `prettier --check` scanned `dist/`). Formatted the
+package to prettier; source is now clean.
+
+Deferred in the editor: per-user font-size (backend-backed), AI-tutor split-diff.
+
 ## Next
 
-- CodeMirror editor to replace the `<textarea>` (step 4); the `config` language
-  identifier keys its `LanguageSupport`.
 - Runtime context (`onRun`/`onStop`/console I/O) + `CodebridgeRegistry`
   (console/miniapp singleton), built with the console.
-- Then `@code-dot-org/python-lab` (step 5).
+- Then `@code-dot-org/python-lab` (step 5) — supplies `@codemirror/lang-python`
+  via `config.languageExtensions` and the pyodide runtime.

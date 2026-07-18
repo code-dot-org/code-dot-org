@@ -8,13 +8,17 @@
 // See docs/port-plan.md for the port sequence. This barrel grows as the shell
 // lands.
 
-export {default as CodebridgeLab, STARTOVER_CODEBRIDGE_MESSAGE} from './CodebridgeLab';
+export {
+  default as CodebridgeLab,
+  STARTOVER_CODEBRIDGE_MESSAGE,
+} from './CodebridgeLab';
 export type {CodebridgeLabProps} from './CodebridgeLab';
 
 export * from './config';
 export * from './constants';
 export * from './components';
 export * from './contexts';
+export * from './editor';
 export * from './hooks';
 export * from './utils';
 

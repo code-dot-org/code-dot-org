@@ -1,3 +1,5 @@
+import type {Extension} from '@codemirror/state';
+
 import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
 
 import {getFileExtension} from './utils/multiFileSource';
@@ -23,6 +25,13 @@ export interface CodebridgeConfig {
   supportedFileTypes: string[];
   /** Extension -> language identifier for new files. Falls back to the extension. */
   languageMapping: {[extension: string]: string};
+  /**
+   * Language identifier -> CodeMirror extension providing syntax support for the
+   * editor (e.g. {python: python()}). The language packages (@codemirror/lang-*)
+   * are language-specific, so the consuming lab supplies these; the generic shell
+   * stays language-agnostic. Keyed by the same identifier as `languageMapping`.
+   */
+  languageExtensions?: {[languageId: string]: Extension};
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
 }
