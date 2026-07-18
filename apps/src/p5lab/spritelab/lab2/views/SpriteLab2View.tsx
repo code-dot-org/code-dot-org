@@ -563,6 +563,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the previewed scene. "Start over" re-runs whichever this is.
   const playStartSceneRef = useRef<string | null>(null);
 
+  // The live preview and Blockly share the window keyboard: p5 listens on
+  // window, so a game that reads arrows/space would eat those keys while the
+  // student is editing on the Code tab. Give the game the keyboard only in
+  // Play. Stop the event at document — after Blockly's own handlers (on
+  // descendants) have run, before p5's window listener — so block editing,
+  // text fields, and workspace nav keep working; only the game is cut off.
+  useEffect(() => {
+    if (activeTab === 'Play') {
+      return;
+    }
+    const GAME_KEYS = new Set([
+      'ArrowLeft',
+      'ArrowRight',
+      'ArrowUp',
+      'ArrowDown',
+      ' ',
+      'Spacebar',
+    ]);
+    const swallow = (e: KeyboardEvent) => {
+      if (GAME_KEYS.has(e.key)) {
+        e.stopPropagation();
+      }
+    };
+    document.addEventListener('keydown', swallow);
+    document.addEventListener('keyup', swallow);
+    return () => {
+      document.removeEventListener('keydown', swallow);
+      document.removeEventListener('keyup', swallow);
+    };
+  }, [activeTab]);
+
   // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs change.
   useEffect(() => {
     const engine = engineRef.current;
