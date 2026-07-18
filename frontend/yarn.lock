@@ -1895,6 +1895,9 @@ __metadata:
     "@codemirror/state": "npm:^6.5.2"
     "@codemirror/theme-one-dark": "npm:^6.1.2"
     "@codemirror/view": "npm:^6.36.5"
+    "@emotion/react": "catalog:"
+    "@emotion/styled": "catalog:"
+    "@mui/material": "catalog:"
     "@reduxjs/toolkit": "catalog:"
     "@testing-library/dom": "catalog:"
     "@testing-library/react": "catalog:"
@@ -1914,6 +1917,9 @@ __metadata:
     vite-plugin-externalize-deps: "catalog:"
     vitest: "catalog:"
   peerDependencies:
+    "@emotion/react": ^11.0.0
+    "@emotion/styled": ^11.0.0
+    "@mui/material": ^7.0.0
     react: ^18 || ^19
     react-dom: ^18 || ^19
   languageName: unknown

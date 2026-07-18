@@ -56,6 +56,9 @@
     "@codemirror/state": "^6.5.2",
     "@codemirror/theme-one-dark": "^6.1.2",
     "@codemirror/view": "^6.36.5",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
     "@reduxjs/toolkit": "catalog:",
     "@xterm/addon-fit": "^0.10.0",
     "@xterm/xterm": "^5.5.0"
@@ -79,6 +82,9 @@
     "vitest": "catalog:"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^7.0.0",
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   }

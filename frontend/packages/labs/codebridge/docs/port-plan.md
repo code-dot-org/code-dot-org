@@ -336,6 +336,31 @@ The runtime seam and the xterm.js console landed:
   component itself needs a real browser (xterm), so it is not unit-tested in jsdom.
   32 tests green.
 
+## Design system: use MUI directly (Button / IconButton / Typography)
+
+Button, IconButton, and Typography are migrated to `@mui/material` (their DSCO
+`@code-dot-org/component-library` wrappers are deprecated), so this package — and
+Python Lab — import them straight from `@mui/material`. The DSCO→MUI mapping:
+`type`→`variant` (primary→contained, secondary→outlined, tertiary→text), `size`
+(xs→extraSmall, s→small, m→medium, l→large), `color` (purple→primary,
+black→secondary, gray→tertiary, white→white, destructive→error). Icon-only
+buttons become `<IconButton variant=... color=... size=...>` with a
+`<FontAwesomeV6Icon>` child. Other DSCO components (dialogs, text field, etc.)
+stay DSCO.
+
+Two things this requires per package:
+
+- The custom sizes/colors/variants (`extraSmall`, `tertiary`, IconButton
+  `variant`, Typography variants) come from MUI module augmentation, which does
+  NOT cross package boundaries. Each consumer mirrors it: `src/types/mui.d.ts`
+  here mirrors `component-library/src/themes/code.org/muiAugmentation.ts`. Python
+  Lab needs its own copy. Keep them in sync with the source.
+- `@mui/material` + `@emotion/react` + `@emotion/styled` are dependencies (catalog)
+  and peer dependencies (`^7`/`^11`). The `CdoTheme` MUI `ThemeProvider` is applied
+  by the host (studio app root), so styling works in the app; isolated unit tests
+  fall back to MUI's default theme (fine — `ControlButtons` uses standard
+  primary/secondary colors so its test needs no theme).
+
 ## Next — `@code-dot-org/python-lab` (step 5)
 
 The shell now has editor + file tree + console + config/runtime seams. Python Lab:

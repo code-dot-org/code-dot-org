@@ -1,9 +1,10 @@
+import {IconButton} from '@mui/material';
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
 import {useEffect, useRef} from 'react';
 
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {useCodebridgeRuntime} from '../contexts';
@@ -111,17 +112,17 @@ const Console = () => {
         <strong>Console</strong>
         <span className={styles.headerActions}>
           <ControlButtons />
-          <Button
-            isIconOnly
-            icon={{iconName: 'trash'}}
+          <IconButton
             aria-label="Clear console"
+            variant="text"
+            color="tertiary"
+            size="extraSmall"
             onClick={() =>
               CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
             }
-            type="tertiary"
-            color="gray"
-            size="xs"
-          />
+          >
+            <FontAwesomeV6Icon iconName="trash" />
+          </IconButton>
         </span>
       </div>
       <div

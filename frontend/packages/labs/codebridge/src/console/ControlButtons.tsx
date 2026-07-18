@@ -1,4 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button} from '@mui/material';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {useCodebridgeRuntime} from '../contexts';
 import {useAppSelector} from '../redux/store';
@@ -16,27 +18,29 @@ const ControlButtons = () => {
   if (isRunning) {
     return (
       <Button
-        text="Stop"
-        iconLeft={{iconName: 'stop'}}
+        variant="contained"
+        color="secondary"
+        size="small"
+        startIcon={<FontAwesomeV6Icon iconName="stop" />}
         onClick={() => onStop?.()}
         disabled={!onStop}
-        type="primary"
-        color="black"
-        size="s"
-      />
+      >
+        Stop
+      </Button>
     );
   }
 
   return (
     <Button
-      text="Run"
-      iconLeft={{iconName: 'play'}}
+      variant="contained"
+      color="primary"
+      size="small"
+      startIcon={<FontAwesomeV6Icon iconName="play" />}
       onClick={() => onRun?.()}
       disabled={!onRun}
-      type="primary"
-      color="purple"
-      size="s"
-    />
+    >
+      Run
+    </Button>
   );
 };
 

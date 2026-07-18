@@ -1,6 +1,6 @@
+import {Button, IconButton} from '@mui/material';
 import {useCallback} from 'react';
 
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {
   FileId,
@@ -46,15 +46,15 @@ const RowAction = ({
   label: string;
   onClick: () => void;
 }) => (
-  <Button
-    isIconOnly
-    icon={{iconName}}
+  <IconButton
     aria-label={label}
     onClick={onClick}
-    type="tertiary"
-    color="gray"
-    size="xs"
-  />
+    variant="text"
+    color="tertiary"
+    size="extraSmall"
+  >
+    <FontAwesomeV6Icon iconName={iconName} />
+  </IconButton>
 );
 
 /** The recursive folder/file tree rooted at `parentId`. */
@@ -295,20 +295,22 @@ const FileBrowser = () => {
         <strong>Files</strong>
         <span className={styles.headerActions}>
           <Button
-            text="New file"
+            variant="outlined"
+            color="tertiary"
+            size="small"
             onClick={() => newFileIn(DEFAULT_FOLDER_ID)}
-            type="secondary"
-            color="gray"
-            size="s"
-          />
+          >
+            New file
+          </Button>
           {!config.hideNewFolderButton && (
             <Button
-              text="New folder"
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={() => newFolderIn(DEFAULT_FOLDER_ID)}
-              type="secondary"
-              color="gray"
-              size="s"
-            />
+            >
+              New folder
+            </Button>
           )}
         </span>
       </div>
