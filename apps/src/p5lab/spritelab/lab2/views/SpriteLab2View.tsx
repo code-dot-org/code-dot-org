@@ -90,10 +90,15 @@ registerReducers({
   spriteLab2: spriteLab2Reducer,
 });
 
-// The scenes UI variant replaces the World tab with per-scene code workspaces.
-const ENABLED_TABS: readonly SpriteLab2Tab[] = SCENES_UI_VARIANT
-  ? ['Images', 'Code', 'Play']
-  : ['Images', 'World', 'Code', 'Play'];
+// World and Code are both per-scene sub-tabs of the central scene area now, so
+// the World tab is shown alongside scenes (it was dropped in the first cut of
+// the scenes variant).
+const ENABLED_TABS: readonly SpriteLab2Tab[] = [
+  'Images',
+  'World',
+  'Code',
+  'Play',
+];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -875,7 +880,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           </div>
         )}
 
-        {!SCENES_UI_VARIANT && activeTab === 'World' && (
+        {activeTab === 'World' && (
           <div className={classNames(moduleStyles.codeTabWrapper)}>
             <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
           </div>
