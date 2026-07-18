@@ -3,7 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {useFileOperations} from '../hooks/useFileOperations';
 import {getOpenFiles} from '../utils/multiFileSource';
 
-import styles from './fileTabs.module.scss';
+import styles from './fileTabs.module.css';
 
 /**
  * The row of open-file tabs above the editor. Clicking (or Enter/Space on) a tab

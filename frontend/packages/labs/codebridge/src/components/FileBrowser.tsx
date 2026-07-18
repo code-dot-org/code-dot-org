@@ -15,7 +15,7 @@ import {useFileOperations} from '../hooks/useFileOperations';
 import {usePrompts} from '../hooks/usePrompts';
 import {getFileExtension, shouldShowFile} from '../utils/multiFileSource';
 
-import styles from './fileBrowser.module.scss';
+import styles from './fileBrowser.module.css';
 
 interface RowHandlers {
   activateFile: (fileId: FileId) => void;
