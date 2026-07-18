@@ -51,20 +51,16 @@ export interface SpriteLab2ItemEntry {
   itemType?: 'sprite' | 'background';
 }
 
-// Standalone world-grid editor state. Persisted but not yet wired into the
-// p5.play runtime (see plan, World tab).
-export interface SpriteLab2World {
-  id: string;
-  grid: string[][];
-}
-
-// A named code workspace. The id is the source of truth (the go-to-scene
-// block stores it); scenes[0] is the default scene Play starts at.
+// A named scene: a code workspace plus its world-grid placement. The id is the
+// source of truth (the go-to-scene block stores it); scenes[0] is the default
+// scene Play starts at.
 export interface SpriteLab2Scene {
   id: string;
   name: string;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
+  // This scene's world-grid editor state (a costume name per cell, '' empty).
+  world?: string[][];
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.
@@ -74,9 +70,6 @@ export interface SpriteLab2Source extends ProjectSources {
   // Scenes UI variant: per-scene code workspaces. When present, `source`
   // mirrors scenes[0].source so projects still open with the variant off.
   scenes?: SpriteLab2Scene[];
-  // World tab state.
-  worlds?: SpriteLab2World[];
-  activeWorldId?: string;
   // Items tab gallery metadata.
   items?: SpriteLab2ItemEntry[];
 }

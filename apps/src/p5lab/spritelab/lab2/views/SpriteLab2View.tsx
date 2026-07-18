@@ -118,8 +118,6 @@ function getScenes(sources: SpriteLab2Source): SpriteLab2Scene[] {
   ];
 }
 
-const DEFAULT_WORLD_ID = 'world1';
-
 // Debounce between a workspace edit and the live-preview re-run.
 const RUN_DEBOUNCE_MS = 400;
 
@@ -752,21 +750,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
-  // World grid (rudimentary, single world for now). Persisted to sources but
-  // not yet wired into the runtime.
-  const worldGrid =
-    currentSources.worlds?.find(w => w.id === currentSources.activeWorldId)
-      ?.grid ||
-    currentSources.worlds?.[0]?.grid ||
-    createEmptyGrid();
+  // World grid for the active scene (placement of sprites). Persisted per
+  // scene; not yet wired into the runtime (see plan, World tab).
+  const worldGrid = activeScene?.world ?? createEmptyGrid();
   const handleWorldGridChange = useCallback(
     (grid: string[][]) => {
-      patchSources({
-        worlds: [{id: DEFAULT_WORLD_ID, grid}],
-        activeWorldId: DEFAULT_WORLD_ID,
-      });
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === activeSceneId ? {...s, world: grid} : s
+        ),
+      }));
     },
-    [patchSources]
+    [updateSources, activeSceneId]
   );
 
   const handleCodeGenerated = useCallback(
