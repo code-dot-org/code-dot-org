@@ -361,17 +361,37 @@ Two things this requires per package:
   fall back to MUI's default theme (fine — `ControlButtons` uses standard
   primary/secondary colors so its test needs no theme).
 
-## Next — `@code-dot-org/python-lab` (step 5)
+## `@code-dot-org/python-lab` — shell composition DONE (step 5a)
 
-The shell now has editor + file tree + console + config/runtime seams. Python Lab:
+The package exists and composes the shell (`frontend/packages/labs/python`):
 
-- Scaffolds like music/oceans; `App.tsx` composes `<CodebridgeLab config={...}>`
-  with a `<CodebridgeRuntimeProvider>` and a layout placing FileBrowser + FileTabs
-  - CodeEditor + Console.
-- Supplies `config.languageMapping` (`{py: 'python'}`), `editableFileTypes`, and
-  `config.languageExtensions` (`{python: python()}` from `@codemirror/lang-python`).
-- Ports the pyodide runtime (worker manager, web worker, stdin service worker,
-  runner) and wires `onRun`/`onStop`/`sendConsoleInput`, writing output through
+- Scaffolded like codebridge (tsconfig/vite/vitest/eslint, the three dotfiles,
+  `src/types/mui.d.ts` mirror, MUI/emotion deps).
+- `src/config.ts` — `pythonConfig`: `editableFileTypes` (`py/csv/txt/json`),
+  `languageMapping` (`{py: 'python', json: 'json'}`), and `languageExtensions`
+  (`{python: python(), json: json()}` from `@codemirror/lang-python`/`lang-json`).
+- `src/constants.ts` — `DEFAULT_PROJECT` (a single `main.py`).
+- `src/layout/PythonLayout.tsx` — file browser | (tabs + editor) | console, from
+  the codebridge exports.
+- `src/App.tsx` — the default-export entrypoint (accepts `LabEntrypointProps`),
+  composing `<CodebridgeLab config={pythonConfig} defaultSources={DEFAULT_PROJECT}>`
+  - `<CodebridgeRuntimeProvider>` + `PythonLayout`.
+- Tests: `config.test.ts` and `App.test.tsx` (mounts the whole shell — file
+  browser + editor + console — with xterm stubbed for jsdom). 4 green.
+
+**Run is a STUB**: `App.tsx`'s runtime writes a placeholder to the console rather
+than executing Python.
+
+## Next — python-lab runtime (step 5b)
+
+- Port the pyodide runtime (`apps/src/pythonlab/pyodide{Runner,WorkerManager,
+WebWorker}.ts` + `inputServiceWorker.js`, ~850 lines). Wire the real
+  `onRun`/`onStop`/`sendConsoleInput`, writing output through
   `CodebridgeRegistry.getConsoleManager()` and run status through base `labSystem`.
 - Vite worker/wasm config for pyodide (music's `worker`/`optimizeDeps` is the
-  precedent).
+  precedent). This is the real-risk chunk (worker + wasm + service-worker bundling).
+- Studio registration: add `python` to `LAB_REGISTRY` in
+  `frontend/apps/studio/src/modules/labs/config/labs.ts` (+ fixtures) — deferred
+  until Run works, so studio doesn't ship a non-functional lab.
+- A standalone dev harness (`main.tsx`/`index.html`/MSW fixtures, like music) is
+  also still pending.

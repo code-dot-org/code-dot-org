@@ -1,0 +1,33 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  overflow: auto;
+  border-right: 1px solid var(--codebridge-border, #ccc);
+}
+
+.editorPane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.editor {
+  flex: 1;
+  min-height: 0;
+}
+
+.consolePane {
+  width: 40%;
+  flex-shrink: 0;
+  min-height: 0;
+  border-left: 1px solid var(--codebridge-border, #ccc);
+}
