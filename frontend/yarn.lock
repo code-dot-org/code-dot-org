@@ -1881,6 +1881,35 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/codebridge@workspace:packages/labs/codebridge":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/codebridge@workspace:packages/labs/codebridge"
+  dependencies:
+    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/lab": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@reduxjs/toolkit": "catalog:"
+    "@testing-library/dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    react-redux: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^18 || ^19
+    react-dom: ^18 || ^19
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/component-library-styles@workspace:*, @code-dot-org/component-library-styles@workspace:packages/component-library-styles":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library-styles@workspace:packages/component-library-styles"

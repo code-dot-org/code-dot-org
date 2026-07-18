@@ -1,0 +1,76 @@
+{
+  "name": "@code-dot-org/codebridge",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Code.org Codebridge multi-file IDE lab shell",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/codebridge/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/codebridge"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/lab": "workspace:*",
+    "@reduxjs/toolkit": "catalog:"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-redux": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  }
+}
