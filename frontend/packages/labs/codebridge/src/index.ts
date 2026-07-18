@@ -14,9 +14,12 @@ export {
 } from './CodebridgeLab';
 export type {CodebridgeLabProps} from './CodebridgeLab';
 
+export {default as CodebridgeRegistry} from './CodebridgeRegistry';
+
 export * from './config';
 export * from './constants';
 export * from './components';
+export * from './console';
 export * from './contexts';
 export * from './editor';
 export * from './hooks';

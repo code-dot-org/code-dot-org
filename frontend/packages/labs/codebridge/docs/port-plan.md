@@ -307,9 +307,46 @@ package to prettier; source is now clean.
 
 Deferred in the editor: per-user font-size (backend-backed), AI-tutor split-diff.
 
-## Next
+## Runtime context + console — DONE
 
-- Runtime context (`onRun`/`onStop`/console I/O) + `CodebridgeRegistry`
-  (console/miniapp singleton), built with the console.
-- Then `@code-dot-org/python-lab` (step 5) — supplies `@codemirror/lang-python`
-  via `config.languageExtensions` and the pyodide runtime.
+The runtime seam and the xterm.js console landed:
+
+- `src/contexts/CodebridgeRuntimeContext.tsx` — `CodebridgeRuntime`
+  (`onRun`/`onStop`/`sendConsoleInput`) + `CodebridgeRuntimeProvider` +
+  `useCodebridgeRuntime`. The lab supplies these; the shell has no runtime of its
+  own. The runtime owns the lifecycle (its `onRun` dispatches the base `labSystem`
+  run flags).
+- `src/CodebridgeRegistry.ts` — a single shared instance (like base `LabRegistry`)
+  holding the `ConsoleManager`, so a lab's off-React-tree code runner can write to
+  the console. Trimmed from the legacy registry (neighborhood/theater deferred).
+- `src/console/ConsoleManager.ts` — terminal line/partial-line tracking + input
+  buffer + line listeners; ported near-verbatim.
+- `src/console/consoleThemes.ts` — light/dark xterm `ITheme`s (ported).
+- `src/console/Console.tsx` — the xterm terminal: output via the ConsoleManager,
+  input buffered and sent to `sendConsoleInput` on Enter, Tab/Escape released so
+  it is not a keyboard trap, live theme, plus a header with `ControlButtons` and a
+  clear button. Deferred: per-user font size (backend), analytics, image addon,
+  level-change clearing, `PanelContainer` chrome.
+- `src/console/ControlButtons.tsx` — Run/Stop reflecting `labSystem.isRunning`,
+  invoking the runtime callbacks.
+- Deps added: `@xterm/xterm`, `@xterm/addon-fit` (xterm CSS bundles into
+  `dist/codebridge.css`).
+- Tests: `ConsoleManager.test.ts` (line/input-buffer logic with a stub terminal)
+  and `ControlButtons.test.tsx` (Run→onRun, running→Stop→onStop). The `Console`
+  component itself needs a real browser (xterm), so it is not unit-tested in jsdom.
+  32 tests green.
+
+## Next — `@code-dot-org/python-lab` (step 5)
+
+The shell now has editor + file tree + console + config/runtime seams. Python Lab:
+
+- Scaffolds like music/oceans; `App.tsx` composes `<CodebridgeLab config={...}>`
+  with a `<CodebridgeRuntimeProvider>` and a layout placing FileBrowser + FileTabs
+  - CodeEditor + Console.
+- Supplies `config.languageMapping` (`{py: 'python'}`), `editableFileTypes`, and
+  `config.languageExtensions` (`{python: python()}` from `@codemirror/lang-python`).
+- Ports the pyodide runtime (worker manager, web worker, stdin service worker,
+  runner) and wires `onRun`/`onStop`/`sendConsoleInput`, writing output through
+  `CodebridgeRegistry.getConsoleManager()` and run status through base `labSystem`.
+- Vite worker/wasm config for pyodide (music's `worker`/`optimizeDeps` is the
+  precedent).
