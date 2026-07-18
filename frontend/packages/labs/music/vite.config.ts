@@ -4,7 +4,7 @@ import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import dts from 'vite-plugin-dts';
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 /**
  * Get Rollup output configuration.
@@ -28,18 +28,13 @@ export default defineConfig({
     react(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({tsconfigPath: './tsconfig.app.json'}),
-    // Inject CSS directly into JS bundle as inline styles so CSS loads
-    // automatically when a module is imported (no separate CSS import needed).
-    //
-    // `relativeCSSInjection: true` is required for this `preserveModules` +
-    // multi-entry library build. In the plugin's default global mode it
-    // concatenates ALL css and appends it to a single entry chunk — and with
-    // multiple entries it picks the LAST one (here `src/fixtures/index.ts`, the
-    // `./mocks` export), leaving the `.` export (`src/App.tsx` -> App.mjs) with
-    // no styles at all. Studio loads the `.` export, so styles never applied.
-    // Relative mode instead injects each chunk's css alongside the module that
-    // imports it, so styles ride along with whatever entry pulls them in.
-    cssInjectedByJsPlugin({relativeCSSInjection: true}),
+    // Emit each chunk's CSS as a real `.css` file and inject an `import` for it
+    // at the top of that chunk's JS, so styles load automatically when a module
+    // is imported — the host bundler owns when/how the CSS loads, and
+    // `sideEffects: ["**/*.css"]` keeps the imports from being tree-shaken.
+    // Matches the markdown package's setup (replaces the previous
+    // `vite-plugin-css-injected-by-js`).
+    libInjectCss(),
     // Ensure dependencies are externalized for library build
     // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
     // Instead, they are expected to be provided by the host application.

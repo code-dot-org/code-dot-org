@@ -2220,9 +2220,9 @@ __metadata:
     stylelint: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
-    vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
   peerDependencies:
     react: ^18.0.0 || ^19.0.0
@@ -2338,9 +2338,9 @@ __metadata:
     typescript: "catalog:"
     typescript-eslint: "catalog:"
     vite: "catalog:"
-    vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "catalog:"
     vite-plugin-externalize-deps: "catalog:"
+    vite-plugin-lib-inject-css: "npm:^2.2.2"
     vitest: "catalog:"
     zod: "catalog:"
   peerDependencies:
@@ -25581,15 +25581,6 @@ __metadata:
   dependencies:
     "@vimeo/player": "npm:2.29.0"
   checksum: 10c0/0c38d3591a91c3cc34f2ff7e26408c15732497e0d2881a12eecda7c17c7243412e5d9825741586d7fe8d11bc1f4067ad4b2b68ed06cf74e4e7e66cc55899e8a9
-  languageName: node
-  linkType: hard
-
-"vite-plugin-css-injected-by-js@npm:^3.5.2":
-  version: 3.5.2
-  resolution: "vite-plugin-css-injected-by-js@npm:3.5.2"
-  peerDependencies:
-    vite: ">2.0.0-0"
-  checksum: 10c0/5c6a2434d4f302640a4bfc7695d56cf83eca03a4f89f05820057fedd8a2e788186105942360d19808042872ba0970ed6b1c04cd02337bbe67d8321993a464c04
   languageName: node
   linkType: hard
 

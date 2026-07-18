@@ -1,9 +1,9 @@
 import path from 'node:path';
 import type {OutputOptions} from 'rollup';
 import {defineConfig} from 'vite';
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
+import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 /**
  * Get Rollup output configuration.
@@ -23,36 +23,17 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    // Inject CSS directly into JS bundle as inline styles.
-    // This ensures CSS is automatically loaded when the module is imported,
-    // so consumers don't need separate CSS imports.
+    // Emit each chunk's CSS as a real `.css` file and inject an `import` for it
+    // at the top of that chunk's JS, so consumers get the styles just by
+    // importing the module — the host bundler owns when/how the CSS loads.
+    // `sideEffects: ["**/*.css"]` in package.json keeps those imports from being
+    // tree-shaken. Matches the markdown package's setup.
     //
-    // Prepend (rather than append) base's <style> tags to <head> so framework
-    // styles sit at the top — lowest precedence among equal-specificity CSS
-    // modules — letting a lab's own styles override them. The default appends
-    // at runtime per chunk, which lands base styles last (highest precedence)
-    // and wrongly overrides the lab. (A `@layer`-based scheme would make this
-    // order-independent; this is the lighter-weight ordering fix.)
-    cssInjectedByJsPlugin({
-      // `relativeCSSInjection: true` is required for this `preserveModules` +
-      // multi-entry library build. The plugin's default global mode concatenates
-      // ALL css onto a single entry chunk, and with multiple entries it picks the
-      // LAST one (`src/interpreter/index.ts`), leaving the `.` export (index.mjs,
-      // which consumers load via `@code-dot-org/lab`) with no styles. Relative
-      // mode injects each chunk's css alongside the module that imports it.
-      relativeCSSInjection: true,
-      injectCodeFunction: cssCode => {
-        try {
-          if (typeof document !== 'undefined') {
-            const style = document.createElement('style');
-            style.appendChild(document.createTextNode(cssCode));
-            document.head.prepend(style);
-          }
-        } catch (e) {
-          console.error('vite-plugin-css-injected-by-js', e);
-        }
-      },
-    }),
+    // CSS precedence follows module order: a dependency's CSS imports execute
+    // before its dependents', so base (framework) styles load before a lab's and
+    // sit at lower precedence — letting the lab override them. (This replaces the
+    // previous `vite-plugin-css-injected-by-js` head-prepend hack.)
+    libInjectCss(),
     // Generate Typescript declaration files using the Vite default tsconfig
     dts({
       tsconfigPath: './tsconfig.json',
