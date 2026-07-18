@@ -13,88 +13,64 @@ interface TabShellProps {
   onTabChange: (tab: SpriteLab2Tab) => void;
   // Tabs not yet implemented are disabled in the bar.
   enabledTabs: readonly SpriteLab2Tab[];
-  // Tabs to show at all. Defaults to every tab; the scenes UI variant drops
-  // World entirely rather than disabling it.
+  // Tabs to show at all. Defaults to every tab.
   visibleTabs?: readonly SpriteLab2Tab[];
-  // Rendered in the tab bar immediately after the Code button (the scenes
-  // variant puts the scene selector there).
-  codeTabExtra?: React.ReactNode;
+  // The scene picker, rendered at the left of the World/Code scene group. It
+  // governs both sub-tabs: the chosen scene is what World and Code operate on.
+  sceneChooser?: React.ReactNode;
   // Rendered immediately after the Play button (the Start-over control).
   playTabExtra?: React.ReactNode;
   children: React.ReactNode;
 }
 
 /**
- * The full-screen tab chrome for SpriteLab2: a button bar plus the active
- * tab's content. The Code tab is kept mounted by the parent (behind a
- * clip-path) so its Blockly workspace survives tab switches; the bar here only
- * tracks which tab is visible.
+ * The full-screen tab chrome for SpriteLab2. Images and Play are top-level
+ * tabs; World and Code are the per-scene sub-tabs, grouped with the scene
+ * picker into one segmented "scene area" between them. The Code tab is kept
+ * mounted by the parent (behind a clip-path) so its Blockly workspace survives
+ * tab switches; the bar here only tracks which tab is visible.
  */
 const TabShell: React.FunctionComponent<TabShellProps> = ({
   activeTab,
   onTabChange,
   enabledTabs,
   visibleTabs = SPRITE_LAB2_TABS,
-  codeTabExtra,
+  sceneChooser,
   playTabExtra,
   children,
 }) => {
+  const show = (tab: SpriteLab2Tab) => visibleTabs.includes(tab);
+  const renderTab = (tab: SpriteLab2Tab) => (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={activeTab === tab}
+      disabled={!enabledTabs.includes(tab)}
+      className={classNames(
+        moduleStyles.tab,
+        activeTab === tab && moduleStyles.tabActive
+      )}
+      onClick={() => onTabChange(tab)}
+    >
+      {tab}
+    </button>
+  );
+
+  const hasSceneGroup = show('World') || show('Code');
+
   return (
     <div className={moduleStyles.tabShell}>
       <div className={moduleStyles.tabBar} role="tablist">
-        {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
-          const enabled = enabledTabs.includes(tab);
-          const button = (
-            <button
-              type="button"
-              role="tab"
-              aria-selected={activeTab === tab}
-              disabled={!enabled}
-              className={classNames(
-                moduleStyles.tab,
-                activeTab === tab && moduleStyles.tabActive
-              )}
-              onClick={() => onTabChange(tab)}
-            >
-              {tab}
-            </button>
-          );
-          // The Code tab and its extra (the scene selector) read as one
-          // segmented control: the group carries the active-tab background,
-          // the pieces inside are transparent.
-          if (tab === 'Code' && codeTabExtra) {
-            return (
-              <div
-                key={tab}
-                className={classNames(
-                  moduleStyles.tabGroup,
-                  activeTab === 'Code' && moduleStyles.tabGroupActive
-                )}
-                // The whole group is the Code tab's click target: the scene
-                // selector is disabled (pointer-events: none) on other tabs,
-                // so clicks on it land here and activate the tab.
-                onClick={() => {
-                  if (activeTab !== 'Code' && enabled) {
-                    onTabChange('Code');
-                  }
-                }}
-              >
-                {button}
-                {codeTabExtra}
-              </div>
-            );
-          }
-          // The Start-over control sits just right of the Play button.
-          if (tab === 'Play' && playTabExtra) {
-            return (
-              <React.Fragment key={tab}>
-                {button}
-                {playTabExtra}
-              </React.Fragment>
-            );
-          }
-          return <React.Fragment key={tab}>{button}</React.Fragment>;
-        })}
+        {show('Images') && renderTab('Images')}
+        {hasSceneGroup && (
+          <div className={moduleStyles.sceneGroup}>
+            {sceneChooser}
+            {show('World') && renderTab('World')}
+            {show('Code') && renderTab('Code')}
+          </div>
+        )}
+        {show('Play') && renderTab('Play')}
+        {playTabExtra}
       </div>
       <div className={moduleStyles.tabContent}>{children}</div>
     </div>
