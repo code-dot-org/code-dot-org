@@ -428,6 +428,12 @@
             <field name="CONDITION">"when"</field>
             <field name="KEY">"up"</field>
           </block>
+          <block type="gamelab_whileKey" id="toolbox_gamelab_whileKey">
+            <field name="KEY">"left"</field>
+          </block>
+          <block type="gamelab_whenKey" id="toolbox_gamelab_whenKey">
+            <field name="KEY">"space"</field>
+          </block>
           <block type="gamelab_spriteClicked" id="bv/OnI-!(v6WfV7+P{(X">
             <mutation useDefaultIcon="true"/>
             <field name="button_gamelab_spriteClicked"/>
