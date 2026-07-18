@@ -10,10 +10,16 @@ import type {
   ProjectFolder,
 } from '@code-dot-org/core/api';
 
+import {
+  languageForFileName,
+  useCodebridgeConfig,
+  validateFileName,
+  validateFolderName,
+} from '../config';
 import {DEFAULT_FOLDER_ID} from '../constants';
 import {useFileOperations} from '../hooks/useFileOperations';
 import {usePrompts} from '../hooks/usePrompts';
-import {getFileExtension, shouldShowFile} from '../utils/multiFileSource';
+import {shouldShowFile} from '../utils/multiFileSource';
 
 import styles from './fileBrowser.module.css';
 
@@ -56,10 +62,12 @@ const FileTree = ({
   source,
   parentId,
   handlers,
+  hideNewFolderButton,
 }: {
   source: MultiFileSource;
   parentId: FolderId;
   handlers: RowHandlers;
+  hideNewFolderButton?: boolean;
 }) => {
   const folders = Object.values(source.folders)
     .filter(f => f.parentId === parentId)
@@ -93,11 +101,13 @@ const FileTree = ({
                 label={`New file in ${folder.name}`}
                 onClick={() => handlers.newFileIn(folder.id)}
               />
-              <RowAction
-                iconName="folder-plus"
-                label={`New folder in ${folder.name}`}
-                onClick={() => handlers.newFolderIn(folder.id)}
-              />
+              {!hideNewFolderButton && (
+                <RowAction
+                  iconName="folder-plus"
+                  label={`New folder in ${folder.name}`}
+                  onClick={() => handlers.newFolderIn(folder.id)}
+                />
+              )}
               <RowAction
                 iconName="pen"
                 label={`Rename ${folder.name}`}
@@ -115,6 +125,7 @@ const FileTree = ({
               source={source}
               parentId={folder.id}
               handlers={handlers}
+              hideNewFolderButton={hideNewFolderButton}
             />
           )}
         </li>
@@ -166,27 +177,37 @@ const FileTree = ({
 const FileBrowser = () => {
   const ops = useFileOperations();
   const {promptForName, confirm} = usePrompts();
+  const config = useCodebridgeConfig();
+
+  const newFilePlaceholder = config.editableFileTypes[0]
+    ? `name.${config.editableFileTypes[0]}`
+    : 'name';
 
   const newFileIn = useCallback(
     async (parentId: FolderId) => {
       const name = await promptForName({
         title: 'New file',
-        placeholder: 'main.py',
+        placeholder: newFilePlaceholder,
+        validateInput: value =>
+          validateFileName(config, ops.source, parentId, value),
       });
       if (name) {
         ops.newFile({
           fileName: name,
-          language: getFileExtension(name),
+          language: languageForFileName(config, name),
           folderId: parentId,
         });
       }
     },
-    [ops, promptForName],
+    [ops, promptForName, config, newFilePlaceholder],
   );
 
   const newFolderIn = useCallback(
     async (parentId: FolderId) => {
-      const name = await promptForName({title: 'New folder'});
+      const name = await promptForName({
+        title: 'New folder',
+        validateInput: value => validateFolderName(ops.source, parentId, value),
+      });
       if (name) {
         ops.newFolder(name, parentId);
       }
@@ -196,12 +217,17 @@ const FileBrowser = () => {
 
   const renameFile = useCallback(
     async (file: ProjectFile) => {
-      const name = await promptForName({title: 'Rename file', value: file.name});
+      const name = await promptForName({
+        title: 'Rename file',
+        value: file.name,
+        validateInput: value =>
+          validateFileName(config, ops.source, file.folderId, value, file.id),
+      });
       if (name && name !== file.name) {
         ops.renameFile(file.id, name);
       }
     },
-    [ops, promptForName],
+    [ops, promptForName, config],
   );
 
   const renameFolder = useCallback(
@@ -209,6 +235,8 @@ const FileBrowser = () => {
       const name = await promptForName({
         title: 'Rename folder',
         value: folder.name,
+        validateInput: value =>
+          validateFolderName(ops.source, folder.parentId, value, folder.id),
       });
       if (name && name !== folder.name) {
         ops.renameFolder(folder.id, name);
@@ -273,13 +301,15 @@ const FileBrowser = () => {
             color="gray"
             size="s"
           />
-          <Button
-            text="New folder"
-            onClick={() => newFolderIn(DEFAULT_FOLDER_ID)}
-            type="secondary"
-            color="gray"
-            size="s"
-          />
+          {!config.hideNewFolderButton && (
+            <Button
+              text="New folder"
+              onClick={() => newFolderIn(DEFAULT_FOLDER_ID)}
+              type="secondary"
+              color="gray"
+              size="s"
+            />
+          )}
         </span>
       </div>
       {isEmpty ? (
@@ -289,6 +319,7 @@ const FileBrowser = () => {
           source={source}
           parentId={DEFAULT_FOLDER_ID}
           handlers={handlers}
+          hideNewFolderButton={config.hideNewFolderButton}
         />
       )}
     </div>

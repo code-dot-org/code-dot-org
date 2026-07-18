@@ -240,18 +240,38 @@ The multi-file edit set and the two tree components landed, over the
   `src/components/__tests__/FileTabs.test.tsx` (render/activate/close). 15 tests
   green with the write-path test.
 
-Deferred here, needed next:
+Deferred here:
 - `@dnd-kit` for tab reorder + file/folder drag-move (helpers `moveFile`/
   `moveFolder` already exist to back it).
-- New-file `language` is a placeholder (the file extension); the real value comes
-  from the Codebridge `config.languageMapping`, which arrives with
-  `codebridgeContext`/config.
 - FileBrowser dialog flows are only smoke-testable until a test wraps
   `DialogControlProvider`.
 
+## Codebridge config context — DONE
+
+A trimmed port of the legacy `ConfigType`, resolving the new-file `language`
+placeholder and adding name validation:
+
+- `src/config.tsx` — `CodebridgeConfig` (`editableFileTypes`, `supportedFileTypes`,
+  `languageMapping` ext->language identifier, `hideNewFolderButton`), a permissive
+  `DEFAULT_CODEBRIDGE_CONFIG`, `CodebridgeConfigProvider`, `useCodebridgeConfig`
+  (defaulted, so components work with no provider), plus pure helpers
+  `languageForFileName`, `validateFileName`, `validateFolderName`.
+- `CodebridgeLab` takes an optional `config?: Partial<CodebridgeConfig>` and
+  provides it merged over the defaults — the seam Python Lab / Web Lab 2 fill.
+- FileBrowser now sets a new file's `language` from `config.languageMapping`,
+  validates names (empty / disallowed extension / duplicate sibling) via the
+  prompt's `validateInput`, and honors `hideNewFolderButton`.
+- Test: `src/__tests__/config.test.ts` (helpers). 25 tests green total.
+
+Deferred from the legacy `ConfigType`/`codebridgeContext`: layouts + preview
+components (the consuming lab supplies layouts), and the `onRun`/`onStop`/console
+I/O and AI-tutor/asset bundle — those ride the runtime context built with the
+console step.
+
 ## Next
 
-- `codebridgeContext` + `ConfigType` (language mapping, layouts, editable types)
-  and `CodebridgeRegistry` (console/miniapp singleton).
-- CodeMirror editor to replace the `<textarea>` (step 4).
+- CodeMirror editor to replace the `<textarea>` (step 4); the `config` language
+  identifier keys its `LanguageSupport`.
+- Runtime context (`onRun`/`onStop`/console I/O) + `CodebridgeRegistry`
+  (console/miniapp singleton), built with the console.
 - Then `@code-dot-org/python-lab` (step 5).

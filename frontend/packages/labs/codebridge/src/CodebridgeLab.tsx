@@ -6,16 +6,23 @@ import type {
 import {LabWithSources} from '@code-dot-org/lab';
 import type {LabWithSourcesProps} from '@code-dot-org/lab';
 
+import {
+  CodebridgeConfigProvider,
+  DEFAULT_CODEBRIDGE_CONFIG,
+} from './config';
+import type {CodebridgeConfig} from './config';
 import {getEmptyProject} from './utils/multiFileSource';
 
 /**
  * Props for {@link CodebridgeLab}. The same as a {@link LabWithSources} keyed to
  * a {@link MultiFileSource}, except `defaultSources` is optional (it defaults to
- * an empty project).
+ * an empty project) and an optional Codebridge `config` (merged over the
+ * permissive defaults) is provided to the children.
  */
 export type CodebridgeLabProps<T extends LevelProperties = LevelProperties> =
   Omit<LabWithSourcesProps<T, MultiFileSource>, 'defaultSources'> & {
     defaultSources?: ProjectSources<MultiFileSource>;
+    config?: Partial<CodebridgeConfig>;
   };
 
 export const STARTOVER_CODEBRIDGE_MESSAGE =
@@ -50,6 +57,7 @@ const parseSource = (
 const CodebridgeLab = <T extends LevelProperties = LevelProperties>({
   children,
   defaultSources,
+  config,
   ...props
 }: CodebridgeLabProps<T>) => (
   <LabWithSources<T, MultiFileSource>
@@ -58,7 +66,11 @@ const CodebridgeLab = <T extends LevelProperties = LevelProperties>({
     startOverMessage={props.startOverMessage ?? STARTOVER_CODEBRIDGE_MESSAGE}
     transform={props.transform ?? parseSource}
   >
-    {children}
+    <CodebridgeConfigProvider
+      config={{...DEFAULT_CODEBRIDGE_CONFIG, ...config}}
+    >
+      {children}
+    </CodebridgeConfigProvider>
   </LabWithSources>
 );
 
