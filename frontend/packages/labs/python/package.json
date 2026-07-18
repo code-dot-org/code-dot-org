@@ -53,6 +53,9 @@
     "@mui/material": "catalog:"
   },
   "devDependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@testing-library/dom": "catalog:",
     "@testing-library/react": "catalog:",

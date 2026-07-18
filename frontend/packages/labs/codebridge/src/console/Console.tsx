@@ -64,7 +64,18 @@ const Console = () => {
     CodebridgeRegistry.setConsoleManager(manager);
 
     terminal.open(terminalRef.current);
-    fitAddon.fit();
+
+    // fit() throws if the container has no size yet (it reads dimensions that
+    // aren't computed until layout). Guard it, and refit whenever the container
+    // resizes — which also covers the initial zero-size mount.
+    const safeFit = () => {
+      try {
+        fitAddon.fit();
+      } catch {
+        // No layout dimensions yet; a later resize will fit.
+      }
+    };
+    safeFit();
 
     terminal.onData((data: string) => {
       const charCode = data.charCodeAt(0);
@@ -88,11 +99,16 @@ const Console = () => {
       event => !(event.key === 'Tab' || event.key === 'Escape'),
     );
 
-    const onResize = () => fitAddon.fit();
-    window.addEventListener('resize', onResize);
+    // Refit on container resize (also covers the initial zero-size mount).
+    // ResizeObserver is absent in jsdom, so guard it.
+    const resizeObserver =
+      typeof ResizeObserver !== 'undefined'
+        ? new ResizeObserver(safeFit)
+        : undefined;
+    resizeObserver?.observe(terminalRef.current);
 
     return () => {
-      window.removeEventListener('resize', onResize);
+      resizeObserver?.disconnect();
       terminal.dispose();
       CodebridgeRegistry.setConsoleManager(null);
     };
