@@ -251,11 +251,13 @@ Deferred here:
 A trimmed port of the legacy `ConfigType`, resolving the new-file `language`
 placeholder and adding name validation:
 
-- `src/config.tsx` — `CodebridgeConfig` (`editableFileTypes`, `supportedFileTypes`,
+- `src/config.ts` — `CodebridgeConfig` (`editableFileTypes`, `supportedFileTypes`,
   `languageMapping` ext->language identifier, `hideNewFolderButton`), a permissive
-  `DEFAULT_CODEBRIDGE_CONFIG`, `CodebridgeConfigProvider`, `useCodebridgeConfig`
-  (defaulted, so components work with no provider), plus pure helpers
-  `languageForFileName`, `validateFileName`, `validateFolderName`.
+  `DEFAULT_CODEBRIDGE_CONFIG`, plus pure helpers `languageForFileName`,
+  `validateFileName`, `validateFolderName`.
+- `src/contexts/CodebridgeConfigContext.tsx` — the React context carrying the
+  config: `CodebridgeConfigProvider` and `useCodebridgeConfig` (defaulted, so
+  components work with no provider). Contexts live under `src/contexts/`.
 - `CodebridgeLab` takes an optional `config?: Partial<CodebridgeConfig>` and
   provides it merged over the defaults — the seam Python Lab / Web Lab 2 fill.
 - FileBrowser now sets a new file's `language` from `config.languageMapping`,

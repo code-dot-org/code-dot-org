@@ -12,11 +12,11 @@ import type {
 
 import {
   languageForFileName,
-  useCodebridgeConfig,
   validateFileName,
   validateFolderName,
 } from '../config';
 import {DEFAULT_FOLDER_ID} from '../constants';
+import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
 import {usePrompts} from '../hooks/usePrompts';
 import {shouldShowFile} from '../utils/multiFileSource';

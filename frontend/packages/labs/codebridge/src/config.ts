@@ -1,6 +1,3 @@
-import {createContext, useContext} from 'react';
-import type {PropsWithChildren} from 'react';
-
 import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
 
 import {getFileExtension} from './utils/multiFileSource';
@@ -15,6 +12,9 @@ import {getFileExtension} from './utils/multiFileSource';
  * consuming lab supplies layouts). `languageMapping` here is extension ->
  * language identifier (e.g. {py: 'python'}); the CodeMirror `LanguageSupport`
  * lookup will key off the same identifier when the editor is ported.
+ *
+ * The React context that carries this config lives in
+ * `contexts/CodebridgeConfigContext`.
  */
 export interface CodebridgeConfig {
   /** Extensions the user may create/edit (e.g. ['py']). Empty = unrestricted. */
@@ -32,22 +32,6 @@ export const DEFAULT_CODEBRIDGE_CONFIG: CodebridgeConfig = {
   supportedFileTypes: [],
   languageMapping: {},
 };
-
-const CodebridgeConfigContext = createContext<CodebridgeConfig>(
-  DEFAULT_CODEBRIDGE_CONFIG,
-);
-
-/** The current Codebridge config. Returns permissive defaults with no provider. */
-export const useCodebridgeConfig = () => useContext(CodebridgeConfigContext);
-
-export const CodebridgeConfigProvider = ({
-  config,
-  children,
-}: PropsWithChildren<{config: CodebridgeConfig}>) => (
-  <CodebridgeConfigContext.Provider value={config}>
-    {children}
-  </CodebridgeConfigContext.Provider>
-);
 
 /** The `language` tag a new file should carry, per the config's mapping. */
 export const languageForFileName = (

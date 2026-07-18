@@ -6,11 +6,9 @@ import type {
 import {LabWithSources} from '@code-dot-org/lab';
 import type {LabWithSourcesProps} from '@code-dot-org/lab';
 
-import {
-  CodebridgeConfigProvider,
-  DEFAULT_CODEBRIDGE_CONFIG,
-} from './config';
+import {DEFAULT_CODEBRIDGE_CONFIG} from './config';
 import type {CodebridgeConfig} from './config';
+import {CodebridgeConfigProvider} from './contexts';
 import {getEmptyProject} from './utils/multiFileSource';
 
 /**
