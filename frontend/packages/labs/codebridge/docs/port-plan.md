@@ -170,7 +170,9 @@ Web Lab 2's cross-backpack imports.
    sources load/save round-trip against a fixture. **(Done — see the vertical
    slice below.)**
 3. FileBrowser + FileTabs + `codebridgeContext` + `CodebridgeRegistry`,
-   selectors/dispatch re-pointed at base. `@dnd-kit` comes along.
+   selectors/dispatch re-pointed at base. `@dnd-kit` comes along. **(Partly done:
+   edit helpers, `useFileOperations`, `usePrompts`, FileTabs, FileBrowser landed;
+   see below. Still to do: `codebridgeContext`/config, `CodebridgeRegistry`, dnd.)**
 4. CodeMirror editor (net-new) + Console / ConsoleManager.
 5. Scaffold `@code-dot-org/python-lab`: pyodide runner/worker + Vite wiring,
    python layouts (`apps/src/pythonlab/layout/`), `App.tsx` composing
@@ -210,10 +212,46 @@ Harness notes for the next tests:
 - `ProjectManager` is not exported from `@code-dot-org/lab`; install a mock via
   `LabRegistry.projectManager = {save} as unknown as typeof LabRegistry.projectManager`.
 
+## File edit helpers + FileTabs + FileBrowser — DONE
+
+The multi-file edit set and the two tree components landed, over the
+`SourcesContext` write path (no redux):
+
+- `src/utils/multiFileSource.ts` — full pure edit set ported from lab2's
+  `multiFileSource{,Edit}Utils`: `createNewFile`, `activateFile`, `closeFile`,
+  `deleteFile`, `renameFile`, `moveFile`, `createNewFolder`, `deleteFolder`,
+  `renameFolder`, `moveFolder`, `toggleFolderOpen`, plus `getOpenFiles(Ids)`,
+  `shouldShowFile`, `findFiles`/`findSubFolders`, id allocators. Adapted to the
+  frontend schema (no `url`/`flagged`/asset-deletion; start-mode hiding deferred).
+- `src/hooks/useFileOperations.ts` — binds the helpers to
+  `useSources<MultiFileSource>()`: each op applies a helper and commits via
+  `updateSources`, skipping no-op edits. The frontend replacement for
+  `lab2ProjectReduxThunks`.
+- `src/hooks/usePrompts.ts` — name/confirm flows over the base dialog system
+  (`showDialog({type: DialogType.GenericPrompt | GenericConfirmation})`).
+- `src/components/FileTabs.tsx` — open-file tabs; click/Enter activates,
+  close/Backspace/Delete closes. Drag-reorder deferred (`@dnd-kit` not in the
+  workspace).
+- `src/components/FileBrowser.tsx` — recursive folder/file tree with
+  create/rename/delete for files and folders and folder expand/collapse, using
+  design-system `Button`/`FontAwesomeV6Icon`. Deferred: drag-move, asset upload,
+  backpack row actions, levelbuilder file-type toggles.
+- Tests: `src/utils/__tests__/multiFileSource.test.ts` (pure helpers) and
+  `src/components/__tests__/FileTabs.test.tsx` (render/activate/close). 15 tests
+  green with the write-path test.
+
+Deferred here, needed next:
+- `@dnd-kit` for tab reorder + file/folder drag-move (helpers `moveFile`/
+  `moveFolder` already exist to back it).
+- New-file `language` is a placeholder (the file extension); the real value comes
+  from the Codebridge `config.languageMapping`, which arrives with
+  `codebridgeContext`/config.
+- FileBrowser dialog flows are only smoke-testable until a test wraps
+  `DialogControlProvider`.
+
 ## Next
 
-- Port `activateFileHelper` / `createNewFileHelper` and the remaining
-  `multiFileSourceEditUtils` (step 3), then FileTabs + FileBrowser over
-  `useSources` + the `codebridgeWorkspace` slice.
+- `codebridgeContext` + `ConfigType` (language mapping, layouts, editable types)
+  and `CodebridgeRegistry` (console/miniapp singleton).
 - CodeMirror editor to replace the `<textarea>` (step 4).
 - Then `@code-dot-org/python-lab` (step 5).

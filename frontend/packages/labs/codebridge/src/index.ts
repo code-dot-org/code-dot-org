@@ -11,7 +11,9 @@
 export {default as CodebridgeLab, STARTOVER_CODEBRIDGE_MESSAGE} from './CodebridgeLab';
 export type {CodebridgeLabProps} from './CodebridgeLab';
 
+export * from './constants';
 export * from './components';
+export * from './hooks';
 export * from './utils';
 
 export * from './redux';

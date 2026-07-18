@@ -1,0 +1,79 @@
+.fileBrowser {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 4px;
+}
+
+.tree,
+.folderChildren {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.folderChildren {
+  padding-inline-start: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px;
+}
+
+.rowLabel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.rowActions {
+  display: flex;
+  gap: 2px;
+  visibility: hidden;
+}
+
+.row:hover .rowActions,
+.row:focus-within .rowActions {
+  visibility: visible;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+}
+
+.empty {
+  color: var(--codebridge-muted, #666);
+  padding: 4px;
+}

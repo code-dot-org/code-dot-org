@@ -1,0 +1,39 @@
+.fileTabs {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--codebridge-border, #ccc);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--codebridge-accent, #1e88e5);
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.close {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+}
