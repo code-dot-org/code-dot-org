@@ -20,13 +20,8 @@ import {BACKGROUNDS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-// A generated image's name becomes a costume identifier that AI code-gen
-// references by matching the model's output token-by-token against the
-// project's names. Double quotes (stripped during that matching) and
-// irregular whitespace (re-split and rejoined on single spaces) make a name
-// impossible to reference, so keep those out of the field as it's typed
-// rather than silently rewriting on submit. Everyday punctuation — hyphens,
-// apostrophes, commas, emoji — is fine and left alone.
+// Sanitize names as typed (drop double quotes, collapse whitespace) so they
+// stay reliable references in AI-generated code, which matches names as tokens.
 const NAME_MAX_LENGTH = 40;
 const sanitizeName = (raw: string) =>
   raw
@@ -80,15 +75,12 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
   const generating = status === 'generating';
   const trimmedName = name.trim();
   const trimmedPrompt = prompt.trim();
-  // Names must be unique: the runtime and block dropdowns identify a costume
-  // by name, so reusing one would collide (and the classic thunk would
-  // silently rename to name_N). Check against the live list.
+  // Names must be unique — the runtime and block dropdowns identify a costume by name.
   const existingNames = useAppSelector(state =>
     Object.values(state.animationList.propsByKey).map(p => p.name)
   );
   const nameTaken = !!trimmedName && existingNames.includes(trimmedName);
-  // Both fields are required (no more defaulting the name from the
-  // description) and the name must be free.
+  // Both fields are required, and the name must be free.
   const canGenerate =
     !generating && !!trimmedName && !!trimmedPrompt && !nameTaken;
 
@@ -143,9 +135,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
       ) {
         dispatch(setAnimationName(key, trimmedName) as unknown as AnyAction);
       }
-      // Clear both fields so the next generation starts fresh — a leftover
-      // description paired with a new name is how you get an image that
-      // doesn't match its name.
+      // Clear both fields so a stale description can't pair with a new name.
       setName('');
       setPrompt('');
     } catch (e) {
