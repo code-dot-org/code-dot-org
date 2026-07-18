@@ -550,6 +550,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     return () => setExternalSceneRefreshHandler(null);
   }, [levelProperties.id, dispatch, scenes]);
 
+  // Scene jumps should only navigate while playing. In preview (Code tab) a
+  // goToScene block would otherwise pull the preview off the scene being edited.
+  // The handlers below are wired once, so they read the live mode through a ref.
+  const isPlayingRef = useRef(activeTab === 'Play');
+  useEffect(() => {
+    isPlayingRef.current = activeTab === 'Play';
+  }, [activeTab]);
+
   // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs change.
   useEffect(() => {
     const engine = engineRef.current;
@@ -557,6 +565,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     engine.onGoToScene = (sceneId: string) => {
+      // Previewing: don't navigate; resume the scene being edited.
+      if (!isPlayingRef.current) {
+        engine.cancelSceneJump();
+        return;
+      }
       if (scenes.some(s => s.id === sceneId)) {
         runScene(sceneId);
         return;
@@ -569,9 +582,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // Unknown scene id: resume the old scene rather than staying frozen.
       engine.cancelSceneJump();
     };
-    engine.onGoToExternalScene = runExternalScene;
-    // Cover on jump start, fade on landing.
-    engine.onSceneJumpStart = () => setJumpCover(true);
+    engine.onGoToExternalScene = (key: string) => {
+      if (!isPlayingRef.current) {
+        engine.cancelSceneJump();
+        return;
+      }
+      runExternalScene(key);
+    };
+    // Cover on jump start, fade on landing — but not while previewing, where
+    // the jump is cancelled (above) and the cover would just flash.
+    engine.onSceneJumpStart = () => {
+      if (isPlayingRef.current) {
+        setJumpCover(true);
+      }
+    };
     engine.onSceneJumpLand = () => {
       setFadeTrigger(t => t + 1);
       setJumpCover(false);
