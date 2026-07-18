@@ -19,6 +19,8 @@ interface TabShellProps {
   // Rendered in the tab bar immediately after the Code button (the scenes
   // variant puts the scene selector there).
   codeTabExtra?: React.ReactNode;
+  // Rendered immediately after the Play button (the Start-over control).
+  playTabExtra?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -34,6 +36,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   enabledTabs,
   visibleTabs = SPRITE_LAB2_TABS,
   codeTabExtra,
+  playTabExtra,
   children,
 }) => {
   return (
@@ -79,6 +82,15 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                 {button}
                 {codeTabExtra}
               </div>
+            );
+          }
+          // The Start-over control sits just right of the Play button.
+          if (tab === 'Play' && playTabExtra) {
+            return (
+              <React.Fragment key={tab}>
+                {button}
+                {playTabExtra}
+              </React.Fragment>
             );
           }
           return <React.Fragment key={tab}>{button}</React.Fragment>;

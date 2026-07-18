@@ -107,6 +107,23 @@ $tab-segment-height: $tab-item-height - 2px;
   background: var(--background-neutral-primary);
 }
 
+// Action button beside the Play tab (shown only while playing), not a tab.
+.startOver {
+  height: $tab-item-height;
+  padding: 0 12px;
+  margin-inline-start: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
+}
+
 .sceneSelect {
   height: $tab-segment-height;
   max-width: 160px;
@@ -482,6 +499,44 @@ $tab-segment-height: $tab-item-height - 2px;
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
 }
 
 // Location-picker hover ghost: the sprite being placed, previewed at the

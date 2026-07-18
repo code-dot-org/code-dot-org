@@ -558,6 +558,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
+  // The scene Play (re)starts from: null means the default scene. The Play tab
+  // button clears it (start from the beginning); clicking a preview sets it to
+  // the previewed scene. "Start over" re-runs whichever this is.
+  const playStartSceneRef = useRef<string | null>(null);
+
   // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs change.
   useEffect(() => {
     const engine = engineRef.current;
@@ -627,7 +632,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     if (activeTab === 'Play') {
-      runScene(scenes[0]?.id ?? null);
+      runScene(playStartSceneRef.current ?? scenes[0]?.id ?? null);
     } else if (activeTab === 'Code') {
       runScene(activeSceneId);
     }
@@ -738,10 +743,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const handleTabChange = useCallback(
     (tab: SpriteLab2Tab) => {
+      // Entering Play from the tab button starts from the beginning.
+      if (tab === 'Play') {
+        playStartSceneRef.current = null;
+      }
       dispatch(setActiveTab(tab));
     },
     [dispatch]
   );
+
+  // Re-run the current play session from its start scene.
+  const handleStartOver = useCallback(() => {
+    runScene(playStartSceneRef.current ?? scenes[0]?.id ?? null);
+  }, [runScene, scenes]);
+
+  // Clicking the live preview opens Play on the scene being previewed.
+  const handlePreviewClick = useCallback(() => {
+    playStartSceneRef.current = activeSceneId;
+    dispatch(setActiveTab('Play'));
+  }, [dispatch, activeSceneId]);
 
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
@@ -782,6 +802,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               onSelectScene={handleSelectScene}
               onCreateScene={handleCreateScene}
             />
+          ) : undefined
+        }
+        playTabExtra={
+          playspaceMode === 'play' ? (
+            <button
+              type="button"
+              className={moduleStyles.startOver}
+              onClick={handleStartOver}
+            >
+              Start over
+            </button>
           ) : undefined
         }
       >
@@ -827,6 +858,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           covered={jumpCover}
           loading={externalLoading}
           getDefaultSpriteSize={getDefaultSpriteSize}
+          onPreviewClick={handlePreviewClick}
         />
 
         {/* The image form always shows on Images; codegen only when the
