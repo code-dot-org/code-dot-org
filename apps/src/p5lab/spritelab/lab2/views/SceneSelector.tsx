@@ -1,4 +1,6 @@
-import React, {useCallback} from 'react';
+import Dialog from '@code-dot-org/component-library/dialog';
+import TextField from '@code-dot-org/component-library/textField';
+import React, {useCallback, useState} from 'react';
 
 import {SceneMetadata} from '../redux/spriteLab2Redux';
 
@@ -18,10 +20,10 @@ interface SceneSelectorProps {
 }
 
 /**
- * Scene picker in the tab bar (scenes UI variant): choose which scene's code
- * workspace is open in the Code tab, or create a new scene via the option at
- * the bottom. Scene names are labels only; the ids underneath are the source
- * of truth.
+ * Scene picker in the tab bar: choose which scene the World and Code sub-tabs
+ * operate on, or create a new scene via the option at the bottom (which opens
+ * a naming dialog). Scene names are labels only; the ids underneath are the
+ * source of truth.
  */
 const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   scenes,
@@ -30,39 +32,79 @@ const SceneSelector: React.FunctionComponent<SceneSelectorProps> = ({
   onSelectScene,
   onCreateScene,
 }) => {
+  const [naming, setNaming] = useState(false);
+  const [newName, setNewName] = useState('');
+
+  const closeDialog = useCallback(() => {
+    setNaming(false);
+    setNewName('');
+  }, []);
+
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      const value = e.target.value;
-      if (value === NEW_SCENE_VALUE) {
-        // TODO: replace with a design-system dialog; prompt() is placeholder
-        // chrome for the experiment.
-        const name = window.prompt('Name your new scene:');
-        if (name && name.trim()) {
-          onCreateScene(name.trim());
-        }
-        // If cancelled, the controlled value snaps back to the active scene.
+      if (e.target.value === NEW_SCENE_VALUE) {
+        // Open the naming dialog; the controlled value snaps back to the active
+        // scene until a new one is actually created.
+        setNaming(true);
       } else {
-        onSelectScene(value);
+        onSelectScene(e.target.value);
       }
     },
-    [onSelectScene, onCreateScene]
+    [onSelectScene]
   );
 
+  const handleCreate = useCallback(() => {
+    const name = newName.trim();
+    if (name) {
+      onCreateScene(name);
+    }
+    closeDialog();
+  }, [newName, onCreateScene, closeDialog]);
+
   return (
-    <select
-      className={moduleStyles.sceneSelect}
-      value={activeSceneId ?? ''}
-      onChange={handleChange}
-      disabled={disabled}
-      aria-label="Scene"
-    >
-      {scenes.map(scene => (
-        <option key={scene.id} value={scene.id}>
-          {scene.name}
-        </option>
-      ))}
-      <option value={NEW_SCENE_VALUE}>＋ New scene…</option>
-    </select>
+    <>
+      <select
+        className={moduleStyles.sceneSelect}
+        value={activeSceneId ?? ''}
+        onChange={handleChange}
+        disabled={disabled}
+        aria-label="Scene"
+      >
+        {scenes.map(scene => (
+          <option key={scene.id} value={scene.id}>
+            {scene.name}
+          </option>
+        ))}
+        <option value={NEW_SCENE_VALUE}>＋ New scene…</option>
+      </select>
+      {naming && (
+        <Dialog
+          title="New scene"
+          onClose={closeDialog}
+          customContent={
+            <TextField
+              name="sceneName"
+              label="Scene name"
+              value={newName}
+              onChange={e => setNewName(e.target.value)}
+            />
+          }
+          primaryButtonProps={{
+            children: 'Create',
+            size: 'small',
+            disabled: !newName.trim(),
+            onClick: handleCreate,
+          }}
+          secondaryButtonProps={{
+            children: 'Cancel',
+            size: 'small',
+            color: 'tertiary',
+            variant: 'outlined',
+            onClick: closeDialog,
+          }}
+        />
+      )}
+    </>
   );
 };
 
