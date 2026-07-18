@@ -7,7 +7,11 @@
 .buttonSpacing {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 10;
   margin-right: 0;
-  box-shadow: 'none';
+
+  // common.scss puts a shadow on every button:hover; these buttons sit inside
+  // the header's overflow:hidden clip, which cuts the shadow off mid-blur.
+  &:hover {
+    box-shadow: none;
+  }
 }
