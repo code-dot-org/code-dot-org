@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +9,6 @@ import styleConstants from '@cdo/apps/styleConstants';
 import msg from '@cdo/locale';
 
 import SettingsCog from '../code-studio/components/SettingsCog';
-import commonStyles from '../commonStyles';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import color from '../util/color';
@@ -56,29 +57,43 @@ export default class DesignModeHeaders extends React.Component {
 
   hideToolboxIcon() {
     return (
-      <button
-        className="hide-toolbox-icon"
+      <MuiIconButton
         type="button"
-        style={{
-          ...commonStyles.hidden,
-          ...this.chevronStyle(!this.props.isRtl),
-        }}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        aria-label="Hide the toolbox"
+        className="hide-toolbox-icon"
         onClick={this.onToggleToolbox}
+        sx={{
+          borderRadius: '50%',
+          height: '1rem',
+          width: '1rem',
+        }}
       >
-        <i className="fa-solid fa-circle-chevron-right" />
-      </button>
+        <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
+      </MuiIconButton>
     );
   }
 
   showToolboxIcon() {
     return (
-      <button
+      <MuiIconButton
         type="button"
-        style={{...commonStyles.hidden, ...this.chevronStyle(this.props.isRtl)}}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        aria-label="Show the toolbox"
         className="show-toolbox-icon"
+        onClick={this.onToggleToolbox}
+        sx={{
+          borderRadius: '50%',
+          height: '1rem',
+          width: '1rem',
+        }}
       >
-        <i className="fa-solid fa-circle-chevron-right" />
-      </button>
+        <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
+      </MuiIconButton>
     );
   }
 
@@ -87,10 +102,10 @@ export default class DesignModeHeaders extends React.Component {
       toolboxHeader: {
         display: this.props.isToolboxVisible ? 'flex' : 'none',
         justifyContent: 'space-between',
-        width: 271,
+        alignItems: 'center',
+        width: 270,
         borderLeft: this.props.isRtl ? '1px solid gray' : '',
         borderRight: this.props.isRtl ? '' : '1px solid gray',
-        float: this.props.isRtl ? 'right' : 'left',
       },
       showToolboxHeader: {
         float: this.props.isRtl ? 'right' : 'left',
@@ -156,16 +171,8 @@ export default class DesignModeHeaders extends React.Component {
             'workspace-header',
             this.props.isRunning && 'is-running'
           )}
-          style={styles.showToolboxHeader}
         >
-          <span
-            key="show-toolbox-clickable"
-            className="workspace-header-clickable"
-            style={styles.showToolboxClickable}
-            onClick={this.onToggleToolbox}
-          >
-            {this.showToolboxIcon()}
-          </span>
+          {this.showToolboxIcon()}
           <span>{msg.showToolbox()}</span>
           <span>{settingsCog}</span>
         </PaneSection>

@@ -818,26 +818,6 @@ html[dir="RTL"] .prompt-icon-cell {
   overflow-x: hidden;
   height: $workspace-headers-height;
   color: white;
-  .workspace-header-clickable:hover {
-    cursor: pointer;
-    color: $yellow;
-  }
-  span {
-    line-height: $workspace-headers-height;
-  }
-  .fa {
-    font-size: 18px;
-  }
-
-  /* We don't want some of these styles to affect modal content. */
-  .ml-modal {
-    span {
-      line-height: 12px;
-    }
-    .fa {
-      font-size: 12px;
-    }
-  }
 
   &.is-running {
     background-color: $lighter-purple;
