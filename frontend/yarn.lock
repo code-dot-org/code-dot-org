@@ -1894,10 +1894,10 @@ __metadata:
     "@codemirror/language": "npm:^6.11.0"
     "@codemirror/search": "npm:^6.5.10"
     "@codemirror/state": "npm:^6.5.2"
-    "@codemirror/theme-one-dark": "npm:^6.1.2"
     "@codemirror/view": "npm:^6.36.5"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
+    "@lezer/highlight": "npm:^1.2.0"
     "@mui/material": "catalog:"
     "@reduxjs/toolkit": "catalog:"
     "@testing-library/dom": "catalog:"
@@ -2687,19 +2687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codemirror/theme-one-dark@npm:^6.1.2":
-  version: 6.1.3
-  resolution: "@codemirror/theme-one-dark@npm:6.1.3"
-  dependencies:
-    "@codemirror/language": "npm:^6.0.0"
-    "@codemirror/state": "npm:^6.0.0"
-    "@codemirror/view": "npm:^6.0.0"
-    "@lezer/highlight": "npm:^1.0.0"
-  checksum: 10c0/de8483c69911bcd61a19679384de663ced9c8bed3c776f08581a8b724e9f456a17053b1cf6e9d1f2a475fa6bc42e905ec8ba1ee0a8b55213d18087d9d9150317
-  languageName: node
-  linkType: hard
-
-"@codemirror/view@npm:^6.0.0, @codemirror/view@npm:^6.17.0, @codemirror/view@npm:^6.23.0, @codemirror/view@npm:^6.27.0, @codemirror/view@npm:^6.36.5, @codemirror/view@npm:^6.37.0":
+"@codemirror/view@npm:^6.17.0, @codemirror/view@npm:^6.23.0, @codemirror/view@npm:^6.27.0, @codemirror/view@npm:^6.36.5, @codemirror/view@npm:^6.37.0":
   version: 6.43.6
   resolution: "@codemirror/view@npm:6.43.6"
   dependencies:
@@ -5464,7 +5452,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/highlight@npm:^1.0.0":
+"@lezer/highlight@npm:^1.0.0, @lezer/highlight@npm:^1.2.0":
   version: 1.2.3
   resolution: "@lezer/highlight@npm:1.2.3"
   dependencies:

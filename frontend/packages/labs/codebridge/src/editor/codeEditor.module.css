@@ -7,8 +7,3 @@
 .codeEditor :global(.cm-editor) {
   height: 100%;
 }
-
-.empty {
-  padding: 8px;
-  color: var(--text-neutral-secondary, #666);
-}

@@ -1,5 +1,6 @@
 import {useAppSelector} from '@code-dot-org/codebridge';
 import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
+import {useThemeSetting} from '@code-dot-org/lab/hooks';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 
 /**
@@ -15,6 +16,9 @@ const InstructionsPanel = () => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
+  // Python Lab supports both themes, so it opts in to the settings-panel theme
+  // toggle (the editor carries a matching light and dark theme).
+  const themeSetting = useThemeSetting(['Light', 'Dark']);
 
   if (!levelProperties) {
     return null;
@@ -27,6 +31,7 @@ const InstructionsPanel = () => {
       hasRun={hasRun}
       hasEdited={false}
       documentationUrl="/docs/ide/python"
+      settings={themeSetting ? [themeSetting] : []}
     />
   );
 };

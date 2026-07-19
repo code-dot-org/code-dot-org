@@ -17,7 +17,7 @@ import {getActiveFileForSource} from '../utils/multiFileSource';
 
 import styles from './codeEditor.module.css';
 import {editorConfig} from './editorConfig';
-import {darkTheme, lightTheme} from './editorThemes';
+import {darkTheme, fontSizeTheme, lightTheme} from './editorThemes';
 
 const readOnlyExtensions = (isReadOnly: boolean): Extension => [
   EditorState.readOnly.of(isReadOnly),
@@ -78,6 +78,7 @@ const InnerCodeEditor = ({
         extensions: [
           ...editorConfig,
           autocompletion(),
+          fontSizeTheme,
           updateListener,
           ...(langExtension ? [langExtension] : []),
           readOnlyCompartment.of(readOnlyExtensions(isReadOnly)),
