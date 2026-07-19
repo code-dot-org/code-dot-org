@@ -62,9 +62,7 @@ import {
   SpriteLab2LevelProperties,
   SpriteLab2Scene,
   SpriteLab2Source,
-  SpriteLab2WorldType,
 } from '../types';
-import {createEmptyGrid} from '../world/gridConstants';
 
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
@@ -72,7 +70,6 @@ import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
-import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -91,15 +88,7 @@ registerReducers({
   spriteLab2: spriteLab2Reducer,
 });
 
-// World and Code are both per-scene sub-tabs of the central scene area now, so
-// the World tab is shown alongside scenes (it was dropped in the first cut of
-// the scenes variant).
-const ENABLED_TABS: readonly SpriteLab2Tab[] = [
-  'Images',
-  'World',
-  'Code',
-  'Play',
-];
+const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Images', 'Code', 'Play'];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -751,35 +740,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources]
   );
 
-  // World grid for the active scene (placement of sprites). Persisted per
-  // scene; not yet wired into the runtime (see plan, World tab).
-  const worldGrid = activeScene?.world ?? createEmptyGrid();
-  const handleWorldGridChange = useCallback(
-    (grid: string[][]) => {
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).map(s =>
-          s.id === activeSceneId ? {...s, world: grid} : s
-        ),
-      }));
-    },
-    [updateSources, activeSceneId]
-  );
-
-  // Grid mode for the active scene ('none' hides the grid; see the plan).
-  const worldType: SpriteLab2WorldType = activeScene?.worldType ?? 'none';
-  const handleWorldTypeChange = useCallback(
-    (nextType: SpriteLab2WorldType) => {
-      updateSources(prev => ({
-        ...prev,
-        scenes: getScenes(prev).map(s =>
-          s.id === activeSceneId ? {...s, worldType: nextType} : s
-        ),
-      }));
-    },
-    [updateSources, activeSceneId]
-  );
-
   const handleCodeGenerated = useCallback(
     (source: WorkspaceSerialization) => {
       writeActiveSceneSource(source);
@@ -845,7 +805,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
-              disabled={activeTab !== 'World' && activeTab !== 'Code'}
+              disabled={activeTab !== 'Code'}
               onSelectScene={handleSelectScene}
               onCreateScene={handleCreateScene}
             />
@@ -888,17 +848,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             <ItemsTab />
-          </div>
-        )}
-
-        {activeTab === 'World' && (
-          <div className={classNames(moduleStyles.codeTabWrapper)}>
-            <WorldTab
-              grid={worldGrid}
-              onGridChange={handleWorldGridChange}
-              worldType={worldType}
-              onWorldTypeChange={handleWorldTypeChange}
-            />
           </div>
         )}
 

@@ -15,8 +15,8 @@ interface TabShellProps {
   enabledTabs: readonly SpriteLab2Tab[];
   // Tabs to show at all. Defaults to every tab.
   visibleTabs?: readonly SpriteLab2Tab[];
-  // The scene picker, rendered at the left of the World/Code scene group. It
-  // governs both sub-tabs: the chosen scene is what World and Code operate on.
+  // The scene picker, grouped with the Code tab: the chosen scene is whose
+  // code the Code tab shows.
   sceneChooser?: React.ReactNode;
   // Rendered immediately after the Play button (the Start-over control).
   playTabExtra?: React.ReactNode;
@@ -24,11 +24,10 @@ interface TabShellProps {
 }
 
 /**
- * The full-screen tab chrome for SpriteLab2. Images and Play are top-level
- * tabs; World and Code are the per-scene sub-tabs, grouped with the scene
- * picker into one segmented "scene area" between them. The Code tab is kept
- * mounted by the parent (behind a clip-path) so its Blockly workspace survives
- * tab switches; the bar here only tracks which tab is visible.
+ * The full-screen tab chrome for SpriteLab2: Images, the scene picker grouped
+ * with the Code tab, and Play. The Code tab is kept mounted by the parent
+ * (behind a clip-path) so its Blockly workspace survives tab switches; the bar
+ * here only tracks which tab is visible.
  */
 const TabShell: React.FunctionComponent<TabShellProps> = ({
   activeTab,
@@ -56,17 +55,14 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
     </button>
   );
 
-  const hasSceneGroup = show('World') || show('Code');
-
   return (
     <div className={moduleStyles.tabShell}>
       <div className={moduleStyles.tabBar} role="tablist">
         {show('Images') && renderTab('Images')}
-        {hasSceneGroup && (
+        {show('Code') && (
           <div className={moduleStyles.sceneGroup}>
             {sceneChooser}
-            {show('World') && renderTab('World')}
-            {show('Code') && renderTab('Code')}
+            {renderTab('Code')}
           </div>
         )}
         {show('Play') && renderTab('Play')}
