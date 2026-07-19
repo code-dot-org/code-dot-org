@@ -2430,7 +2430,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/python-lab@workspace:packages/labs/python":
+"@code-dot-org/python-lab@workspace:*, @code-dot-org/python-lab@workspace:packages/labs/python":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/python-lab@workspace:packages/labs/python"
   dependencies:
@@ -2504,6 +2504,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
+    "@code-dot-org/python-lab": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"

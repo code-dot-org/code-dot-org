@@ -44,73 +44,87 @@ const Console = () => {
 
   // Create the terminal once.
   useEffect(() => {
-    if (!terminalRef.current) {
+    const container = terminalRef.current;
+    if (!container) {
       return;
     }
 
-    const terminal = new Terminal({
-      screenReaderMode: true,
-      minimumContrastRatio: 4.5,
-      tabStopWidth: 2,
-      // Translate bare \n to \r\n so the cursor returns to column 0 on each
-      // newline; otherwise prompts like "name?\n" leave input indented.
-      convertEol: true,
-      fontSize: DEFAULT_FONT_SIZE,
-      theme: isDark ? darkTheme : lightTheme,
+    // Defer terminal creation by one frame. Under React StrictMode (which the
+    // studio host uses) the mount effect runs, is cleaned up, then runs again —
+    // synchronously. Creating the terminal inline would `open()` it (scheduling
+    // an async xterm render) only for the immediate cleanup to dispose it; that
+    // orphaned render then reads the torn-down renderer and throws "reading
+    // 'dimensions'", leaving a broken console. Deferring to rAF lets the cleanup
+    // cancel the pending creation, so exactly one terminal is ever opened.
+    let terminal: Terminal | undefined;
+    let resizeObserver: ResizeObserver | undefined;
+
+    const frame = requestAnimationFrame(() => {
+      terminal = new Terminal({
+        screenReaderMode: true,
+        minimumContrastRatio: 4.5,
+        tabStopWidth: 2,
+        // Translate bare \n to \r\n so the cursor returns to column 0 on each
+        // newline; otherwise prompts like "name?\n" leave input indented.
+        convertEol: true,
+        fontSize: DEFAULT_FONT_SIZE,
+        theme: isDark ? darkTheme : lightTheme,
+      });
+      const fitAddon = new FitAddon();
+      terminal.loadAddon(fitAddon);
+
+      const manager = new ConsoleManager(terminal, fitAddon);
+      CodebridgeRegistry.setConsoleManager(manager);
+
+      terminal.open(container);
+
+      // fit() throws if the container has no size yet (it reads dimensions that
+      // aren't computed until layout). Guard it, and refit whenever the
+      // container resizes — which also covers the initial zero-size mount.
+      const safeFit = () => {
+        try {
+          fitAddon.fit();
+        } catch {
+          // No layout dimensions yet; a later resize will fit.
+        }
+      };
+      safeFit();
+
+      terminal.onData((data: string) => {
+        const charCode = data.charCodeAt(0);
+        if (charCode === ENTER) {
+          terminal!.writeln('');
+          sendInputRef.current?.(manager.getInputBuffer());
+          manager.saveAndClearInputBuffer();
+        } else if (charCode === BACKSPACE) {
+          terminal!.write('\b \b');
+          manager.backspaceInputBuffer();
+        } else if (charCode >= 32) {
+          terminal!.write(data);
+          manager.appendToInputBuffer(data);
+        }
+        // charCode < 32 (other control characters): ignored.
+      });
+
+      // Let Tab and Escape move focus out of the terminal instead of being
+      // captured, so the console is not a keyboard trap.
+      terminal.attachCustomKeyEventHandler(
+        event => !(event.key === 'Tab' || event.key === 'Escape'),
+      );
+
+      // Refit on container resize (also covers the initial zero-size mount).
+      // ResizeObserver is absent in jsdom, so guard it.
+      resizeObserver =
+        typeof ResizeObserver !== 'undefined'
+          ? new ResizeObserver(safeFit)
+          : undefined;
+      resizeObserver?.observe(container);
     });
-    const fitAddon = new FitAddon();
-    terminal.loadAddon(fitAddon);
-
-    const manager = new ConsoleManager(terminal, fitAddon);
-    CodebridgeRegistry.setConsoleManager(manager);
-
-    terminal.open(terminalRef.current);
-
-    // fit() throws if the container has no size yet (it reads dimensions that
-    // aren't computed until layout). Guard it, and refit whenever the container
-    // resizes — which also covers the initial zero-size mount.
-    const safeFit = () => {
-      try {
-        fitAddon.fit();
-      } catch {
-        // No layout dimensions yet; a later resize will fit.
-      }
-    };
-    safeFit();
-
-    terminal.onData((data: string) => {
-      const charCode = data.charCodeAt(0);
-      if (charCode === ENTER) {
-        terminal.writeln('');
-        sendInputRef.current?.(manager.getInputBuffer());
-        manager.saveAndClearInputBuffer();
-      } else if (charCode === BACKSPACE) {
-        terminal.write('\b \b');
-        manager.backspaceInputBuffer();
-      } else if (charCode >= 32) {
-        terminal.write(data);
-        manager.appendToInputBuffer(data);
-      }
-      // charCode < 32 (other control characters): ignored.
-    });
-
-    // Let Tab and Escape move focus out of the terminal instead of being
-    // captured, so the console is not a keyboard trap.
-    terminal.attachCustomKeyEventHandler(
-      event => !(event.key === 'Tab' || event.key === 'Escape'),
-    );
-
-    // Refit on container resize (also covers the initial zero-size mount).
-    // ResizeObserver is absent in jsdom, so guard it.
-    const resizeObserver =
-      typeof ResizeObserver !== 'undefined'
-        ? new ResizeObserver(safeFit)
-        : undefined;
-    resizeObserver?.observe(terminalRef.current);
 
     return () => {
+      cancelAnimationFrame(frame);
       resizeObserver?.disconnect();
-      terminal.dispose();
+      terminal?.dispose();
       CodebridgeRegistry.setConsoleManager(null);
     };
   }, []);
