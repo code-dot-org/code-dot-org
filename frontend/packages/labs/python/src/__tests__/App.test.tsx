@@ -42,6 +42,7 @@ vi.mock('../runtime/pythonRunner', () => ({
   runPython: vi.fn(),
   stopPython: vi.fn(),
   preloadPython: vi.fn(),
+  sendPythonInput: vi.fn(),
 }));
 
 it('renders the Python Lab shell from the default project', async () => {

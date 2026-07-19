@@ -13,7 +13,12 @@ import styles from './app.module.css';
 import {pythonConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import PythonLayout from './layout/PythonLayout';
-import {preloadPython, runPython, stopPython} from './runtime/pythonRunner';
+import {
+  preloadPython,
+  runPython,
+  sendPythonInput,
+  stopPython,
+} from './runtime/pythonRunner';
 
 /**
  * Host-supplied props for the Python Lab entrypoint — the standard
@@ -48,8 +53,8 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
     () => ({
       onRun: () => runPython(sourceRef.current),
       onStop: () => stopPython(),
-      // Stdin (`input()`) support is deferred with the input service worker.
-      sendConsoleInput: () => {},
+      // Stdin for `input()`; only wired on the sandbox path (see pythonRunner).
+      sendConsoleInput: (value: string) => sendPythonInput(value),
     }),
     [],
   );

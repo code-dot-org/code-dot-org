@@ -2,8 +2,8 @@
 
 Python Lab, built on the Codebridge shell (`@code-dot-org/codebridge`). This
 package supplies the Python-specific pieces — CodeMirror language support, the
-file-type config, the default project, and (once ported) the pyodide runtime —
-and composes them with the generic shell.
+file-type config, the default project, and the pyodide runtime — and composes
+them with the generic shell.
 
 The default export is the studio lab entrypoint: it accepts the host loading
 contract (`LabEntrypointProps`) and renders `<CodebridgeLab>` wrapping a
@@ -18,17 +18,37 @@ and streams output to the console. It has two backends behind one façade:
 - `pyodideManager.ts` — the façade. Picks a backend once and exposes
   `preloadPyodide` / `asyncRun` / `restartWorkerIfRunning` to `pythonRunner.ts`.
   Only the selected backend's module is imported.
-- `pyodideWorkerManager.ts` — the **direct** backend (default). Runs the pyodide
-  web worker on this page.
+- `pyodideWorkerManager.ts` — the **direct** backend. Runs the pyodide web worker
+  on this page. It is the fallback when no sandbox is configured — a local-dev and
+  demo convenience. **Every real deployment configures the sandbox** (below); the
+  direct path is not a student-facing path.
 - `pyodideRuntime.ts` — the shared `PyodideRuntime` interface and the worker
   message router (console + `labSystem` slice), used by both backends.
 - `pyodideWebWorker.ts` — loads pyodide (from the jsDelivr CDN for now), writes
   project files to its virtual FS, runs the program, streams stdout/stderr.
 
 pyodide preloads at lab mount (`App.tsx` calls `preloadPython()`), so the first
-Run is fast. Deferred, matching the direct-worker port: stdin `input()` (an input
-service worker), package pre-loading (numpy/matplotlib + wheels), matplotlib
+Run is fast. Deferred: package pre-loading (numpy/matplotlib + wheels), matplotlib
 images, source write-back, the neighborhood mini-app, and validation.
+
+### Input
+
+Blocking `input()` works via a service worker (`public/inputServiceWorker.js`,
+ported from `apps/src/pythonlab/inputServiceWorker.js`). The pyodide worker is
+single-threaded, so `input()` is patched (`runtime/input/pythonInput.ts`) to make
+a **synchronous** XHR to `/pythonlab-input-sw/`; the service worker holds that
+response open, asks the window for a line, and resolves it when the user submits —
+unblocking the worker exactly like real stdin.
+
+The service worker must control the origin at scope `/` (so it intercepts the
+worker's fetch), and the pyodide worker must be created _after_ it takes control.
+Input is wired **only on the sandbox path** — the only path real deployments use —
+where the worker runs on its own origin. On the direct path `sendInput` is a
+no-op, so `input()` reports "Input is not supported here." This is deliberate, not
+a gap: the direct path is dev/demo-only, and its demo origin already has MSW at
+scope `/`, which a second service worker can't share. (Studio's legacy direct
+path registers the service worker itself; this package does not, since no
+deployment runs the direct path.)
 
 ## Domain sandbox
 
@@ -74,6 +94,13 @@ sandbox:
 yarn dev:isolated   # app on :5137, sandbox page on :5200
 # then open:
 http://localhost:5137/?pyodide-sandbox=http://localhost:5200/sandbox.html
+```
+
+The `input` fixture scenario runs a program that calls `input()`; load it on the
+sandbox path to exercise the input service worker:
+
+```
+http://localhost:5137/app/projects/python/input/edit?pyodide-sandbox=http://localhost:5200/sandbox.html
 ```
 
 ## Scripts

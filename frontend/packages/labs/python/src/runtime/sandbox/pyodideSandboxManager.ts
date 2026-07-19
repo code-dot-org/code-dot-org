@@ -25,6 +25,8 @@ import {
 export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
   // Resolvers for in-flight runs, keyed by id (see pyodideWorkerManager).
   const callbacks: Record<string, () => void> = {};
+  // Id of the program currently blocked awaiting input, if any.
+  let awaitingInputId = '';
 
   // Resolve the URL against this page, then split off the origin we trust for
   // messages from the exact src (with the parent-origin param) the iframe loads.
@@ -40,6 +42,12 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
       }
       if (event.data?.type === FromSandboxMessage.READY) {
         resolve();
+        return;
+      }
+      if (event.data?.type === FromSandboxMessage.AWAITING_INPUT) {
+        // A program is blocked on input(); remember which run, so sendInput can
+        // address it. The prompt itself arrives separately as tagged stdout.
+        awaitingInputId = event.data.id;
         return;
       }
       // Everything else is a pyodideWebWorker message relayed up by the iframe.
@@ -89,8 +97,22 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
           callbacks[id]();
           delete callbacks[id];
         });
+        awaitingInputId = '';
         post({type: ToSandboxMessage.RESTART_WORKER});
       }
+    },
+
+    sendInput(value: string) {
+      // Ignore stray input when nothing is waiting for it.
+      if (!awaitingInputId) {
+        return;
+      }
+      post({
+        type: ToSandboxMessage.SENDING_INPUT,
+        id: awaitingInputId,
+        value,
+      });
+      awaitingInputId = '';
     },
   };
 }

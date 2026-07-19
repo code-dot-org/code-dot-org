@@ -11,9 +11,10 @@ import type {WorkerFile} from '../messages';
 //
 // Two directional maps (rather than one) so the compiler rejects a message sent
 // the wrong way. `as const` objects rather than TS enums, which this package's
-// `erasableSyntaxOnly` forbids. Stdin `input()` support (a SENDING_INPUT /
-// AWAITING_INPUT pair plus an input service worker) is deferred, matching the
-// direct-worker runtime.
+// `erasableSyntaxOnly` forbids.
+//
+// Blocking `input()`: the iframe's service worker reports AWAITING_INPUT up
+// through the iframe; the parent sends the user's line back down as SENDING_INPUT.
 
 /** Query param the parent adds to the iframe URL so the sandbox knows which
  * origin to trust for postMessage and to post its results back to. */
@@ -23,11 +24,13 @@ export const PARENT_ORIGIN_PARAM = 'parentOrigin';
 export const ToSandboxMessage = {
   RUN: 'run',
   RESTART_WORKER: 'restart_worker',
+  SENDING_INPUT: 'sending_input',
 } as const;
 
 /** Sandbox iframe → parent page. */
 export const FromSandboxMessage = {
   READY: 'ready',
+  AWAITING_INPUT: 'awaiting_input',
 } as const;
 
 export interface SandboxRunMessage {
@@ -41,8 +44,22 @@ export interface SandboxRestartMessage {
   type: typeof ToSandboxMessage.RESTART_WORKER;
 }
 
-export type ToSandbox = SandboxRunMessage | SandboxRestartMessage;
+export interface SandboxSendingInputMessage {
+  type: typeof ToSandboxMessage.SENDING_INPUT;
+  id: string;
+  value: string;
+}
+
+export type ToSandbox =
+  | SandboxRunMessage
+  | SandboxRestartMessage
+  | SandboxSendingInputMessage;
 
 export interface SandboxReadyMessage {
   type: typeof FromSandboxMessage.READY;
+}
+
+export interface SandboxAwaitingInputMessage {
+  type: typeof FromSandboxMessage.AWAITING_INPUT;
+  id: string;
 }

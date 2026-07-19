@@ -1,5 +1,6 @@
 import type {LabFixtures} from '@code-dot-org/core/api/mocks';
 
+import input from './input';
 import simple from './simple';
 
 // Per-tag mock scenarios for Python Lab. The studio host (and the standalone
@@ -7,4 +8,5 @@ import simple from './simple';
 // picks the active tag.
 export const PythonFixtures: LabFixtures = {
   simple,
+  input,
 };

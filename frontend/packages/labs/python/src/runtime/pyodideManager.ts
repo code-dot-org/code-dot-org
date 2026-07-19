@@ -59,3 +59,7 @@ export async function asyncRun(
 export async function restartWorkerIfRunning(): Promise<void> {
   (await getRuntime()).restartWorkerIfRunning();
 }
+
+export async function sendInput(value: string): Promise<void> {
+  (await getRuntime()).sendInput(value);
+}

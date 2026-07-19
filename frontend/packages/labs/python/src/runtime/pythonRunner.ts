@@ -7,6 +7,7 @@ import {
   asyncRun,
   preloadPyodide,
   restartWorkerIfRunning,
+  sendInput,
 } from './pyodideManager';
 
 const MAIN_PYTHON_FILE = 'main.py';
@@ -45,6 +46,11 @@ export async function runPython(source: MultiFileSource) {
     store.dispatch(labSystemActions.setIsRunning(false));
     store.dispatch(labSystemActions.setHasRun(true));
   }
+}
+
+/** Send a line of stdin to a program blocked on `input()`. */
+export function sendPythonInput(value: string) {
+  void sendInput(value);
 }
 
 /** Stop the running program. */

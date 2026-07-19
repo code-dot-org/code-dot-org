@@ -40,7 +40,7 @@ injectFontAwesome();
 // as the fixture scenario tag, matching the studio convention).
 const channelId =
   window.location.pathname.match(
-    /^\/app\/projects\/python\/([^/]+)\/edit$/,
+    /^\/frontend-studio\/projects\/python\/([^/]+)\/edit$/,
   )?.[1] ?? 'simple';
 
 // Start the mock API and register Python Lab's fixtures before rendering, so the

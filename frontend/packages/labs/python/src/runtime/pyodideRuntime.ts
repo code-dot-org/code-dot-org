@@ -1,6 +1,7 @@
 import {CodebridgeRegistry} from '@code-dot-org/codebridge';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
+import {MessageTag} from './input/constants';
 import type {PyodideMessage, WorkerFile} from './messages';
 
 // Shared by both execution backends — the direct worker (pyodideWorkerManager)
@@ -15,11 +16,18 @@ export interface PyodideRuntime {
   asyncRun(python: string, files: WorkerFile[]): Promise<void>;
   /** Stop a running program by restarting the worker. No-op if idle. */
   restartWorkerIfRunning(): void;
+  /** Supply a line of stdin to a program blocked on `input()`. */
+  sendInput(value: string): void;
 }
 
 /** Write one line to the Codebridge console, if it is mounted. */
 export function writeConsole(message: string) {
   CodebridgeRegistry.getConsoleManager()?.writeConsoleMessage(message);
+}
+
+/** Write output that is not newline-terminated (an input prompt). */
+function writePartialConsole(message: string) {
+  CodebridgeRegistry.getConsoleManager()?.writePartialLine(message);
 }
 
 /**
@@ -37,11 +45,21 @@ export function routeWorkerMessage(
   switch (type) {
     case 'sysout':
     case 'syserr':
-      writeConsole(message ?? '');
+      // An input prompt is printed with a tag and no trailing newline, so the
+      // user types on the same line; render it as a partial line.
+      if (message?.startsWith(MessageTag.INPUT_PROMPT)) {
+        writePartialConsole(message.slice(MessageTag.INPUT_PROMPT.length));
+      } else {
+        writeConsole(message ?? '');
+      }
       break;
     case 'error':
       store.dispatch(labSystemActions.setHasError(true));
-      writeConsole(message ?? '');
+      writeConsole(
+        message?.includes(MessageTag.INPUT_FAILED)
+          ? 'Input is not supported here.'
+          : (message ?? ''),
+      );
       break;
     case 'run_complete':
       writeConsole('');

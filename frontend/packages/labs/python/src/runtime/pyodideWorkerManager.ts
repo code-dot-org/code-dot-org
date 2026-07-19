@@ -63,5 +63,11 @@ export function createWorkerRuntime(): PyodideRuntime {
         worker = createWorker();
       }
     },
+
+    // Blocking `input()` needs the input service worker controlling the worker's
+    // origin, which collides with anything else owning that origin's scope (in
+    // the demo, MSW). Input is therefore supported only on the sandbox path; here
+    // a program that calls `input()` gets INPUT_FAILED. See the README.
+    sendInput() {},
   };
 }
