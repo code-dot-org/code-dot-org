@@ -47,6 +47,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
+    "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
     "@codemirror/autocomplete": "^6.18.6",

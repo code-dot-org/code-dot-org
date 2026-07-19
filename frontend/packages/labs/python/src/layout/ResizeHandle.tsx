@@ -1,4 +1,4 @@
-import {useCallback} from 'react';
+import {useCallback, useRef, useState} from 'react';
 
 import styles from './resizeHandle.module.css';
 
@@ -20,6 +20,11 @@ interface ResizeHandleProps {
  * A draggable divider between two layout panels. Drag with the pointer, or focus
  * and use the arrow keys, to report a size delta to the parent. A lightweight
  * stand-in for the legacy lab2 `ResizeBar`.
+ *
+ * The drag uses pointer capture, so a fast drag that outruns the 1px bar — or one
+ * that leaves and re-enters the window — keeps tracking and keeps the `dragging`
+ * accent lit (rather than dropping it the instant the cursor leaves the bar, the
+ * way a `:hover`-only accent would).
  */
 const ResizeHandle = ({
   axis,
@@ -29,29 +34,49 @@ const ResizeHandle = ({
   min,
   max,
 }: ResizeHandleProps) => {
+  // A ref drives the drag math (read synchronously in the move handler, no render
+  // lag); the state drives the `dragging` accent class.
+  const draggingRef = useRef(false);
+  const lastRef = useRef(0);
+  const [dragging, setDragging] = useState(false);
+
   const onPointerDown = useCallback(
     (event: React.PointerEvent<HTMLDivElement>) => {
       event.preventDefault();
-      let last = axis === 'x' ? event.clientX : event.clientY;
-
-      const onMove = (moveEvent: PointerEvent) => {
-        const current = axis === 'x' ? moveEvent.clientX : moveEvent.clientY;
-        onDelta(current - last);
-        last = current;
-      };
-      const onUp = () => {
-        document.removeEventListener('pointermove', onMove);
-        document.removeEventListener('pointerup', onUp);
-        document.body.style.userSelect = '';
-      };
-
+      // Capture the pointer so all subsequent moves/up route here, even off the
+      // 1px bar or outside the window.
+      event.currentTarget.setPointerCapture(event.pointerId);
+      lastRef.current = axis === 'x' ? event.clientX : event.clientY;
+      draggingRef.current = true;
+      setDragging(true);
       // Suppress text selection while dragging.
       document.body.style.userSelect = 'none';
-      document.addEventListener('pointermove', onMove);
-      document.addEventListener('pointerup', onUp);
+    },
+    [axis],
+  );
+
+  const onPointerMove = useCallback(
+    (event: React.PointerEvent<HTMLDivElement>) => {
+      if (!draggingRef.current) {
+        return;
+      }
+      const current = axis === 'x' ? event.clientX : event.clientY;
+      onDelta(current - lastRef.current);
+      lastRef.current = current;
     },
     [axis, onDelta],
   );
+
+  // End the drag. Idempotent: fires from both pointerup and the implicit
+  // lostpointercapture (which covers the pointer being cancelled mid-drag).
+  const endDrag = useCallback(() => {
+    if (!draggingRef.current) {
+      return;
+    }
+    draggingRef.current = false;
+    setDragging(false);
+    document.body.style.userSelect = '';
+  }, []);
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -84,8 +109,13 @@ const ResizeHandle = ({
       aria-valuemin={min}
       aria-valuemax={max}
       tabIndex={0}
-      className={axis === 'x' ? styles.handleX : styles.handleY}
+      className={`${axis === 'x' ? styles.handleX : styles.handleY}${
+        dragging ? ` ${styles.dragging}` : ''
+      }`}
       onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={endDrag}
+      onLostPointerCapture={endDrag}
       onKeyDown={onKeyDown}
     />
   );

@@ -1,26 +1,39 @@
+/* Ported from apps/src/codebridge/FileTabs/styles/fileTabs.module.scss (the
+   aiTutorVersion variants are out of scope). */
+
 .fileTabs {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 0.5rem;
+  padding-inline: 0.5rem;
   overflow-x: auto;
+  max-width: 100%;
   box-sizing: border-box;
   scrollbar-width: thin;
+  scroll-padding-inline-start: 1rem;
   background-color: var(--background-neutral-primary, #fff);
-  border-bottom: 1px solid var(--borders-neutral-primary, #ccc);
+  color: var(--text-neutral-secondary, #555);
+}
+
+.fileTabs *:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: 2px;
+  border-radius: 4px;
+  z-index: 10;
 }
 
 .tab {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 0.25rem;
   height: 24px;
-  padding: 0 0.25rem 0 0.5rem;
+  padding-block: 0;
+  padding-inline: 0.075rem 0.2rem;
   white-space: nowrap;
   cursor: pointer;
   border-radius: 4px;
-  color: var(--text-neutral-secondary, #555);
   background-color: var(--background-neutral-secondary, #f0f0f0);
   transition: background-color 0.2s ease-in-out;
 }
@@ -29,32 +42,37 @@
   background-color: var(--background-neutral-tertiary, #e4e4e4);
 }
 
-.active {
-  color: var(--text-neutral-white-fixed, #fff);
-  background-color: var(--background-brand-teal-primary, #0090a0);
-}
-
-.tabButton {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
-}
-
-.close {
+/* The label button: file-type icon + name. Reset the native button chrome so it
+   reads as plain tab content. */
+.label {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  padding-inline: 0.375rem 0.25rem;
   background: none;
   border: none;
-  padding: 0 2px;
   cursor: pointer;
   color: inherit;
-  line-height: 1;
-  border-radius: 3px;
 }
 
-.close:hover {
-  background-color: rgb(0 0 0 / 0.12);
+.label p {
+  color: var(--text-neutral-tertiary, #767676);
+}
+
+.active {
+  background-color: var(--background-brand-teal-primary, #0090a0);
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
+.active p,
+.active i {
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
+.active *:focus-visible {
+  outline-color: var(--text-neutral-primary, #000);
+}
+
+.closeButton {
+  outline-offset: 4px;
 }

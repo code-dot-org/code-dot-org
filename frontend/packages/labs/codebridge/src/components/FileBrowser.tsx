@@ -1,4 +1,4 @@
-import {Button, IconButton} from '@mui/material';
+import {Button, IconButton, Typography} from '@mui/material';
 import {useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -19,6 +19,7 @@ import {DEFAULT_FOLDER_ID} from '../constants';
 import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
 import {usePrompts} from '../hooks/usePrompts';
+import {getFileIcon} from '../utils/fileIcons';
 import {shouldShowFile} from '../utils/multiFileSource';
 
 import styles from './fileBrowser.module.css';
@@ -88,12 +89,13 @@ const FileTree = ({
               aria-expanded={Boolean(folder.open)}
               onClick={() => handlers.toggleFolder(folder.id)}
             >
+              {/* Legacy signals open/closed by swapping the folder icon rather
+                  than showing a caret; `aria-expanded` keeps the a11y state. */}
               <FontAwesomeV6Icon
-                iconName={folder.open ? 'chevron-down' : 'chevron-right'}
+                iconName={folder.open ? 'folder-open' : 'folder'}
                 iconStyle="solid"
               />
-              <FontAwesomeV6Icon iconName="folder" iconStyle="solid" />
-              {folder.name}
+              <Typography variant="body4">{folder.name}</Typography>
             </button>
             <span className={styles.rowActions}>
               <RowAction
@@ -130,36 +132,43 @@ const FileTree = ({
           )}
         </li>
       ))}
-      {files.map(file => (
-        <li key={file.id}>
-          <div className={styles.row}>
-            <button
-              type="button"
-              className={
-                file.active
-                  ? `${styles.rowLabel} ${styles.active}`
-                  : styles.rowLabel
-              }
-              onClick={() => handlers.activateFile(file.id)}
-            >
-              <FontAwesomeV6Icon iconName="file" iconStyle="regular" />
-              {file.name}
-            </button>
-            <span className={styles.rowActions}>
-              <RowAction
-                iconName="pen"
-                label={`Rename ${file.name}`}
-                onClick={() => handlers.renameFile(file)}
-              />
-              <RowAction
-                iconName="trash"
-                label={`Delete ${file.name}`}
-                onClick={() => handlers.deleteFile(file)}
-              />
-            </span>
-          </div>
-        </li>
-      ))}
+      {files.map(file => {
+        const {iconName, iconStyle, isBrand} = getFileIcon(file.name);
+        return (
+          <li key={file.id}>
+            <div className={styles.row}>
+              <button
+                type="button"
+                className={
+                  file.active
+                    ? `${styles.rowLabel} ${styles.active}`
+                    : styles.rowLabel
+                }
+                onClick={() => handlers.activateFile(file.id)}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle={iconStyle}
+                  iconFamily={isBrand ? 'brands' : undefined}
+                />
+                <Typography variant="body4">{file.name}</Typography>
+              </button>
+              <span className={styles.rowActions}>
+                <RowAction
+                  iconName="pen"
+                  label={`Rename ${file.name}`}
+                  onClick={() => handlers.renameFile(file)}
+                />
+                <RowAction
+                  iconName="trash"
+                  label={`Delete ${file.name}`}
+                  onClick={() => handlers.deleteFile(file)}
+                />
+              </span>
+            </div>
+          </li>
+        );
+      })}
     </ol>
   );
 };

@@ -48,6 +48,7 @@
 
 .rowLabel {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -56,12 +57,18 @@
   padding: 0;
   cursor: pointer;
   color: inherit;
-  font: inherit;
   text-align: start;
 }
 
-.active {
-  font-weight: bold;
+/* Truncate long names with an ellipsis rather than overflowing the row. */
+.rowLabel p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active p {
+  font-weight: 600;
 }
 
 .rowActions {

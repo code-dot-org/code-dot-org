@@ -1885,6 +1885,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/codebridge@workspace:packages/labs/codebridge"
   dependencies:
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
