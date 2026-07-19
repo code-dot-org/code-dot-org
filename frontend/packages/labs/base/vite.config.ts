@@ -6,6 +6,24 @@ import {externalizeDeps} from 'vite-plugin-externalize-deps';
 import {libInjectCss} from 'vite-plugin-lib-inject-css';
 
 /**
+ * Rename emitted CSS-module assets from `*.module.css` to plain `*.css` (and
+ * lib-inject-css's injected `import` follows the rename). This matters when
+ * another Vite app consumes this package's `dist`: a file still named
+ * `.module.css` gets the CSS-modules transform re-run and its selectors
+ * re-hashed, so they no longer match the class names already baked into this
+ * package's JS — leaving components unstyled (e.g. the studio app). The scoping
+ * hash is applied at build time here, so the plain `.css` is self-contained.
+ * Every other asset keeps the path lib-inject-css/preserveModules gave it.
+ */
+const stripModuleFromCssName: OutputOptions['assetFileNames'] = info => {
+  const name = info.names?.[0];
+  if (name?.endsWith('.module.css')) {
+    return name.replace(/\.module\.css$/, '.css');
+  }
+  return name ?? 'assets/[name]-[hash][extname]';
+};
+
+/**
  * Get Rollup output configuration.
  * @param format es or cjs
  * @returns Rollup output configuration
@@ -17,6 +35,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
     preserveModules: true,
     preserveModulesRoot: 'src',
+    assetFileNames: stripModuleFromCssName,
   };
 }
 
