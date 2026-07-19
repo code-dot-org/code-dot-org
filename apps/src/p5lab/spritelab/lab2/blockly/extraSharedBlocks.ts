@@ -98,4 +98,81 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       '}',
     ].join('\n'),
   },
+  // The two platformer composites. They assume the zGameDev helper library
+  // (per-tick gravity + player/wall collisions, 8x8 grid, default sprite size
+  // = one cell) — the same assumption the GameDev pool blocks make. Defaults
+  // are overridable with the existing blocks (gravity, set speed, ...).
+  {
+    name: 'spritelab2_makePlatformPlayer',
+    pool: 'spritelab2',
+    category: 'World',
+    config: {
+      func: 'makePlatformPlayer',
+      inline: false,
+      blockText:
+        'make platform player {ANIMATION_NAME} at grid location: {GRID}',
+      style: 'sprite_blocks',
+      args: [
+        {name: 'ANIMATION_NAME', customInput: 'costumePicker'},
+        {name: 'GRID', customInput: 'bitmap'},
+      ],
+    },
+    // One block = a player sprite at the marked grid cell (same 8x8 bitmap
+    // widget as "make sprites using grid"; cell math mirrors
+    // makeEnvironmentSprites), created directly in the 'players' group
+    // (zGameDev then applies gravity/collisions and the cell-sized default),
+    // plus arrow movement and a space jump. Everything is keyed to the group,
+    // not the costume — a label that fails to round-trip must not orphan the
+    // player from its physics. Move speed reads the sprite's own speed
+    // property so "set speed" still applies; the jump requires standing on a
+    // wall. setProp velocityY negates, so 13 is upward.
+    helperCode: [
+      'function makePlatformPlayer(animation, layout) {',
+      '  var cell = 400 / layout.length;',
+      '  for (var row = 0; row < layout.length; row++) {',
+      '    for (var col = 0; col < layout[row].length; col++) {',
+      '      if (layout[row][col]) {',
+      "        makeNewGroupSprite(animation, 'players', {",
+      '          x: cell / 2 + cell * col,',
+      '          y: cell / 2 + cell * row,',
+      '        });',
+      '      }',
+      '    }',
+      '  }',
+      "  keyPressed('while', 'left', function () {",
+      "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'West');",
+      '  });',
+      "  keyPressed('while', 'right', function () {",
+      "    moveInDirection({group: 'players'}, getProp({group: 'players'}, 'speed'), 'East');",
+      '  });',
+      "  keyPressed('when', 'space', function () {",
+      "    if (isDirectlyAbove({group: 'players'}, {group: 'walls'})) {",
+      "      setProp({group: 'players'}, 'velocityY', 13);",
+      '    }',
+      '  });',
+      '}',
+    ].join('\n'),
+  },
+  {
+    name: 'spritelab2_makePlatformBlocks',
+    pool: 'spritelab2',
+    category: 'World',
+    config: {
+      func: 'makePlatformBlocks',
+      inline: false,
+      blockText: 'make {ANIMATION_NAME} platform blocks using grid: {GRID}',
+      style: 'sprite_blocks',
+      args: [
+        {name: 'ANIMATION_NAME', customInput: 'costumePicker'},
+        {name: 'GRID', customInput: 'bitmap'},
+      ],
+    },
+    // makeSpritesGrid + environment typing in one: the 'walls' group is what
+    // zGameDev collides players against.
+    helperCode: [
+      'function makePlatformBlocks(animation, layout) {',
+      "  makeEnvironmentSprites(animation, 'walls', layout);",
+      '}',
+    ].join('\n'),
+  },
 ] as unknown as BlockDefinition[];
