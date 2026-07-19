@@ -61,7 +61,8 @@ environment_defaults: &environment_defaults
     password: <%= writer.password || '' %>
     port: <%= writer.port || 3306 %>
     username: <%= writer.user || 'root' %>
-  <% if reader && reader != writer %>
+  # ProxySQL can only by used when the cdo-mysql Chef cookbook has configured a separate `reader` SQL user.
+<% if DCDO.get('database_proxy', 'proxysql') == 'proxysql' && (reader && reader != writer) %>
   primary_replica:
     replica: true
     <<: *mysql_defaults
@@ -70,7 +71,21 @@ environment_defaults: &environment_defaults
     password: <%= reader.password %>
     port: <%= reader.port || 3306 %>
     username: <%= reader.user %>
-  <% end %>
+<% elsif DCDO.get('database_proxy', 'proxysql') == 'rdsproxy' %>
+  # When RDS Proxy is enabled, provision the read replica connection pool against the RDS Proxy reader endpoint. This
+  # endpoint exists even in environments that do not have an Aurora cluster with read replicas, such as local
+  # development environments and continuous integration builds. In those non-AWS environments,
+  # CDO.db_endpoint_proxy_reader is set to the same servername as the writer (typically 'localhost').
+  primary_replica:
+    replica: true
+    <<: *mysql_defaults
+    host: <%= CDO.db_endpoint_proxy_reader %>
+    port: <%= CDO.db_endpoint_proxy_reader_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
+<% end %>
+
   # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
   # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
   # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
