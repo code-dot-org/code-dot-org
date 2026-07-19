@@ -147,7 +147,6 @@
             <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
           </block>
           <block type="spritelab2_makePlatformBlocks" id="toolbox_makePlatformBlocks">
-            <field name="ANIMATION_NAME">"purple bunny"</field>
             <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
           </block>
           <block type="gamelab_makeNewSpriteAnon" id="szn(fkTvbZ6MISe3_T]0">

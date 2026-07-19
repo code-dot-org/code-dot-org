@@ -237,7 +237,8 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       blockText: 'make {ANIMATION_NAME} platform blocks using grid: {GRID}',
       style: 'sprite_blocks',
       args: [
-        {name: 'ANIMATION_NAME', customInput: 'costumePicker'},
+        // Platform pieces come from the 'blocks' image category.
+        {name: 'ANIMATION_NAME', customInput: 'blockPicker'},
         {name: 'GRID', customInput: 'bitmap'},
       ],
     },

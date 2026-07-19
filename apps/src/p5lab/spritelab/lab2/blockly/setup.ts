@@ -15,7 +15,7 @@ import {getStore} from '@cdo/apps/redux';
 import {SCENES_UI_VARIANT} from '../experiments';
 import {getTrimmedThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import sceneBlockDefinitions from './blockDefinitions';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
@@ -305,36 +305,43 @@ const MAKE_IMAGE_BUTTONS = [
   },
 ];
 
-type AnimationKind = 'costume' | 'background';
+type AnimationKind = 'costume' | 'background' | 'block';
 
 // Thumbnail sizes in the dropdown grid, matching classic blocks.js.
 const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
   costume: 32,
   background: 40,
+  block: 32,
 };
 
-// Thumbnail options for one kind of animation. Costumes prefer the
-// border-trimmed image (see imageTrim.ts) so the sprite's content fills the
-// field instead of floating in its transparent margins. Mirrors the classic
-// costumeList/backgroundList in spritelab/blocks.js otherwise.
+// Thumbnail options for one kind of animation, filtered by image category:
+// backgrounds and blocks each list only their own category, costumes list
+// everything else. Costumes prefer the border-trimmed image (see imageTrim.ts)
+// so the sprite's content fills the field instead of floating in its
+// transparent margins. Mirrors the classic costumeList/backgroundList in
+// spritelab/blocks.js otherwise.
 function animationOptions(kind: AnimationKind): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;
   if (!animationList) {
     return EMPTY_IMAGE_OPTION;
   }
-  const wantBackgrounds = kind === 'background';
+  const kindOf = (categories: string[]): AnimationKind =>
+    categories.includes(BACKGROUNDS_CATEGORY)
+      ? 'background'
+      : categories.includes(BLOCKS_CATEGORY)
+      ? 'block'
+      : 'costume';
   const results: [string, string][] = [];
   animationList.orderedKeys.forEach((key: string) => {
     const animation = animationList.propsByKey[key];
-    const isBackground = (animation.categories || []).includes(
-      BACKGROUNDS_CATEGORY
-    );
-    if (isBackground !== wantBackgrounds) {
+    if (kindOf(animation.categories || []) !== kind) {
       return;
     }
     const url =
-      (wantBackgrounds ? undefined : getTrimmedThumbnail(animation.name)) ||
+      (kind === 'background'
+        ? undefined
+        : getTrimmedThumbnail(animation.name)) ||
       animation.sourceUrl ||
       animationSourceUrl(key, animation, state.pageConstants?.channelId);
     results.push([url, `"${animation.name}"`]);
@@ -411,6 +418,7 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
       // Images tab.
       costumePicker: animationPicker('costume'),
       backgroundPicker: animationPicker('background'),
+      blockPicker: animationPicker('block'),
     } as unknown as CustomInputTypes,
   });
 }
