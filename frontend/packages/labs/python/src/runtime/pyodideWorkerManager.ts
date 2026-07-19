@@ -64,6 +64,15 @@ function ensureWorker(): Worker {
   return worker;
 }
 
+/**
+ * Spin up the worker (and start loading pyodide) ahead of the first Run, so the
+ * environment is ready by the time the user runs a program. Safe to call more
+ * than once — the worker is created only if it does not already exist.
+ */
+export function preloadPyodide() {
+  ensureWorker();
+}
+
 /** Run a program in the worker; resolves when the run completes. */
 export function asyncRun(python: string, files: WorkerFile[]): Promise<void> {
   const id = crypto.randomUUID();

@@ -1,4 +1,4 @@
-import {useMemo, useRef} from 'react';
+import {useEffect, useMemo, useRef} from 'react';
 import type {PropsWithChildren} from 'react';
 
 import {
@@ -13,7 +13,7 @@ import styles from './app.module.css';
 import {pythonConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import PythonLayout from './layout/PythonLayout';
-import {runPython, stopPython} from './runtime/pythonRunner';
+import {preloadPython, runPython, stopPython} from './runtime/pythonRunner';
 
 /**
  * Host-supplied props for the Python Lab entrypoint — the standard
@@ -38,6 +38,11 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
   const {currentSources} = useSources<MultiFileSource>();
   const sourceRef = useRef(currentSources.source);
   sourceRef.current = currentSources.source;
+
+  // Start loading pyodide as soon as the lab mounts so the first Run is fast.
+  useEffect(() => {
+    preloadPython();
+  }, []);
 
   const runtime = useMemo<CodebridgeRuntime>(
     () => ({

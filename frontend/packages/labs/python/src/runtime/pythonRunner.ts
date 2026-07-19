@@ -3,9 +3,21 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import type {WorkerFile} from './messages';
-import {asyncRun, restartWorkerIfRunning} from './pyodideWorkerManager';
+import {
+  asyncRun,
+  preloadPyodide,
+  restartWorkerIfRunning,
+} from './pyodideWorkerManager';
 
 const MAIN_PYTHON_FILE = 'main.py';
+
+/**
+ * Start loading pyodide ahead of the first Run (e.g. when the lab mounts) so the
+ * environment is ready by the time a program runs.
+ */
+export function preloadPython() {
+  preloadPyodide();
+}
 
 /**
  * Run the project's `main.py` in pyodide, streaming output to the console and
