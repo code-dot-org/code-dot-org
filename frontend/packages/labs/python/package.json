@@ -55,7 +55,8 @@
     "@codemirror/state": "^6.5.2",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
-    "@mui/material": "catalog:"
+    "@mui/material": "catalog:",
+    "pyodide": "^0.28.3"
   },
   "devDependencies": {
     "@code-dot-org/component-library": "workspace:*",

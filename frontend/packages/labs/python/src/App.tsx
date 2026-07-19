@@ -1,17 +1,19 @@
-import {useMemo} from 'react';
+import {useMemo, useRef} from 'react';
+import type {PropsWithChildren} from 'react';
 
 import {
   CodebridgeLab,
-  CodebridgeRegistry,
   CodebridgeRuntimeProvider,
 } from '@code-dot-org/codebridge';
 import type {CodebridgeRuntime} from '@code-dot-org/codebridge';
-import type {LevelPropertiesMap} from '@code-dot-org/core/api';
+import type {LevelPropertiesMap, MultiFileSource} from '@code-dot-org/core/api';
+import {useSources} from '@code-dot-org/lab/contexts';
 
 import styles from './app.module.css';
 import {pythonConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import PythonLayout from './layout/PythonLayout';
+import {runPython, stopPython} from './runtime/pythonRunner';
 
 /**
  * Host-supplied props for the Python Lab entrypoint — the standard
@@ -27,46 +29,51 @@ export interface PythonLabProps {
 }
 
 /**
- * The runtime callbacks Codebridge invokes (Run/Stop, console input). This is a
- * STUB until the pyodide runtime is ported: `onRun` just notes that execution
- * isn't wired yet. It proves the console + registry seam end to end.
+ * Provides the pyodide runtime callbacks to Codebridge. Reads the current
+ * sources (so Run always uses the latest edits) through a ref, so the runtime
+ * object stays stable. Mounted inside `CodebridgeLab`, whose `SourcesProvider`
+ * backs `useSources`.
  */
-const useStubPythonRuntime = (): CodebridgeRuntime =>
-  useMemo(
+const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
+  const {currentSources} = useSources<MultiFileSource>();
+  const sourceRef = useRef(currentSources.source);
+  sourceRef.current = currentSources.source;
+
+  const runtime = useMemo<CodebridgeRuntime>(
     () => ({
-      onRun: () => {
-        CodebridgeRegistry.getConsoleManager()?.writeConsoleMessage(
-          'Python execution is not wired up yet (pyodide pending).',
-        );
-      },
-      onStop: () => {},
+      onRun: () => runPython(sourceRef.current),
+      onStop: () => stopPython(),
+      // Stdin (`input()`) support is deferred with the input service worker.
       sendConsoleInput: () => {},
     }),
     [],
   );
 
+  return (
+    <CodebridgeRuntimeProvider runtime={runtime}>
+      {children}
+    </CodebridgeRuntimeProvider>
+  );
+};
+
 /**
  * The Python Lab entrypoint. Composes the Codebridge shell: `CodebridgeLab`
  * provides the multi-file sources, config, and lab context; the runtime provider
- * supplies Run/Stop/console callbacks; {@link PythonLayout} lays out the file
- * browser, editor, and console.
+ * supplies Run/Stop/console callbacks (pyodide); {@link PythonLayout} lays out the
+ * instructions, file browser, editor, and console.
  */
-const PythonLab = (props: PythonLabProps) => {
-  const runtime = useStubPythonRuntime();
-
-  return (
-    <div className={styles.app}>
-      <CodebridgeLab
-        {...props}
-        config={pythonConfig}
-        defaultSources={DEFAULT_PROJECT}
-      >
-        <CodebridgeRuntimeProvider runtime={runtime}>
-          <PythonLayout />
-        </CodebridgeRuntimeProvider>
-      </CodebridgeLab>
-    </div>
-  );
-};
+const PythonLab = (props: PythonLabProps) => (
+  <div className={styles.app}>
+    <CodebridgeLab
+      {...props}
+      config={pythonConfig}
+      defaultSources={DEFAULT_PROJECT}
+    >
+      <PythonRuntimeProvider>
+        <PythonLayout />
+      </PythonRuntimeProvider>
+    </CodebridgeLab>
+  </div>
+);
 
 export default PythonLab;

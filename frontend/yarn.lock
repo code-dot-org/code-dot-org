@@ -2454,6 +2454,7 @@ __metadata:
     eslint: "catalog:"
     jsdom: "catalog:"
     prettier: "catalog:"
+    pyodide: "npm:^0.28.3"
     react: "catalog:"
     react-dom: "catalog:"
     typescript: "catalog:"
@@ -20935,6 +20936,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pyodide@npm:^0.28.3":
+  version: 0.28.3
+  resolution: "pyodide@npm:0.28.3"
+  dependencies:
+    ws: "npm:^8.5.0"
+  checksum: 10c0/19cf826b2ed2aa4dd1e30b57de6cbccfc5cd1abed955ec755a06475e1095ec7a8cea59d8e85305d4708fec068947be0b654ece73d648aa5279afcf298c6349bd
+  languageName: node
+  linkType: hard
+
 "qrcode.react@npm:^4.2.0":
   version: 4.2.0
   resolution: "qrcode.react@npm:4.2.0"
@@ -26378,6 +26388,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 10c0/ef4a243476283fc49bc7550966c4af4aa0eef56273837211e700de3b664e08604a760cdddcb5ba43c049140e74ccfec5b0ee0bb439e08c2adf9138902fdde5f9
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.5.0":
+  version: 8.21.1
+  resolution: "ws@npm:8.21.1"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10c0/c4c6f1d95f6d465262de2037c57c715725d67e078dd49420ede4e19115668aba159cb64d85c5e89c06eb2826be599e62e5095860ad6cc54ff42e8bd7684e1db8
   languageName: node
   linkType: hard
 

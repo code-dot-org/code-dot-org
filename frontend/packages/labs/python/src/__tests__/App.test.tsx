@@ -37,6 +37,12 @@ vi.mock('../layout/InstructionsPanel', () => ({
   default: () => <div>instructions</div>,
 }));
 
+// The pyodide runner spins up a web worker; keep it out of jsdom.
+vi.mock('../runtime/pythonRunner', () => ({
+  runPython: vi.fn(),
+  stopPython: vi.fn(),
+}));
+
 it('renders the Python Lab shell from the default project', async () => {
   render(
     <RootStateProvider>

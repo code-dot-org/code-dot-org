@@ -39,7 +39,7 @@ const simple: LabFixture = {
         '## Python Lab\n\nEdit `main.py`, then press **Run**.\n\n' +
         '- Create files and folders in the browser\n' +
         '- Multi-file projects are supported\n' +
-        '- Running code with pyodide is coming soon',
+        '- Output streams to the console below',
     }),
   },
   theme: {},

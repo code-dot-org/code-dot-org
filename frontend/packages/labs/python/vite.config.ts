@@ -57,6 +57,14 @@ export default defineConfig(({command}) => ({
         : {}),
     },
   },
+  // The pyodide runtime runs in an ES module web worker.
+  worker: {
+    format: 'es',
+  },
+  // pyodide ships a large wasm loader that must not be pre-bundled by esbuild.
+  optimizeDeps: {
+    exclude: ['pyodide'],
+  },
   build: {
     sourcemap: true,
     cssCodeSplit: true,
