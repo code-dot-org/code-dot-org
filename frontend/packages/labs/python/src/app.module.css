@@ -3,4 +3,21 @@
   flex-direction: column;
   height: 100%;
   min-height: 0;
+
+  /* Grow to fill a flex-column host container. The studio host renders the lab
+     in a flex column bounded only by `min-height: calc(100vh - header)`, which
+     gives no definite height for our `height: 100%` to resolve against; the
+     flex-grow makes the lab fill that space instead of collapsing to content
+     height. Inert (harmless) in the standalone demo, whose wrapper already has a
+     definite 100vh height. Matches music's `.app`. */
+  flex: 1 1 0;
+}
+
+/* CodebridgeLab wraps the layout in the component-library ThemeProvider's
+   `<div data-theme>`, which is a plain block with no height. Pass our (now
+   definite) height through it so PythonLayout's `height: 100%` resolves and the
+   panels fill the lab instead of collapsing to content height. Matches music's
+   `.app > div`. */
+.app > div {
+  height: 100%;
 }

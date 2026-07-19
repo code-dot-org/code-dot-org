@@ -20,7 +20,7 @@ const ControlButtons = () => {
       <Button
         variant="contained"
         color="secondary"
-        size="small"
+        size="extraSmall"
         startIcon={<FontAwesomeV6Icon iconName="stop" />}
         onClick={() => onStop?.()}
         disabled={!onStop}
@@ -34,7 +34,7 @@ const ControlButtons = () => {
     <Button
       variant="contained"
       color="primary"
-      size="small"
+      size="extraSmall"
       startIcon={<FontAwesomeV6Icon iconName="play" />}
       onClick={() => onRun?.()}
       disabled={!onRun}
