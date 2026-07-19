@@ -72,35 +72,39 @@ $tab-item-height: 34px;
   font-weight: 600;
 }
 
-// World + Code as one segmented "scene area" alongside the scene picker: the
-// group carries a single outline; the picker and the two sub-tab buttons are
-// borderless segments split by dividers. Segments share an explicit height so
-// their text lines up on one centerline.
+// The Code tab + scene picker as one segmented control (scenes UI variant):
+// the group carries the tab pill's shape and active background; the button
+// and select inside are transparent segments split by a divider. Both
+// segments get the same explicit height so their text shares a centerline.
+// Segments sit inside the group's 1px outline.
 $tab-segment-height: $tab-item-height - 2px;
 
-.sceneGroup {
+.tabGroup {
   display: flex;
   align-items: center;
   box-sizing: border-box;
   height: $tab-item-height;
+  // The whole group activates the Code tab when it isn't active.
+  cursor: pointer;
+  // The group carries the single outline; the segments inside are borderless
+  // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
-  // Clip the segments to the group's rounded outline.
-  overflow: hidden;
 
   .tab {
     height: $tab-segment-height;
     border: none;
-    border-radius: 0;
-    // Divider before each sub-tab (picker | World | Code).
-    border-left: 1px solid var(--borders-neutral-primary);
+    border-radius: 4px 0 0 0;
   }
 
-  // The active sub-tab (World or Code) carries the active background.
+  // The group paints the active background so both segments share it.
   .tabActive {
-    background: var(--background-neutral-primary);
-    font-weight: 600;
+    background: transparent;
   }
+}
+
+.tabGroupActive {
+  background: var(--background-neutral-primary);
 }
 
 // Action button beside the Play tab (shown only while playing), not a tab.
@@ -129,10 +133,9 @@ $tab-segment-height: $tab-item-height - 2px;
   // appearance, our own chevron, and disabled = the same content dimmed.
   appearance: none;
   padding: 0 26px 0 10px;
-  // Leftmost segment of the scene group; the group's outline frames it and the
-  // following sub-tabs supply their own left dividers.
   border: none;
-  border-radius: 0;
+  border-left: 1px solid var(--borders-neutral-primary);
+  border-radius: 0 4px 0 0;
   background: transparent
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23888' stroke-width='1.5'/></svg>")
     no-repeat right 9px center;
