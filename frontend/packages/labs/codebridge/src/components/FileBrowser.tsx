@@ -1,4 +1,4 @@
-import {Button, IconButton, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import {useCallback} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -23,6 +23,8 @@ import {getFileIcon} from '../utils/fileIcons';
 import {shouldShowFile} from '../utils/multiFileSource';
 
 import styles from './fileBrowser.module.css';
+import {PopUpButton} from './PopUpButton';
+import {PopUpButtonOption} from './PopUpButtonOption';
 
 interface RowHandlers {
   activateFile: (fileId: FileId) => void;
@@ -37,26 +39,6 @@ interface RowHandlers {
 
 const byName = <T extends {name: string}>(a: T, b: T) =>
   a.name.localeCompare(b.name);
-
-const RowAction = ({
-  iconName,
-  label,
-  onClick,
-}: {
-  iconName: string;
-  label: string;
-  onClick: () => void;
-}) => (
-  <IconButton
-    aria-label={label}
-    onClick={onClick}
-    variant="text"
-    color="tertiary"
-    size="extraSmall"
-  >
-    <FontAwesomeV6Icon iconName={iconName} />
-  </IconButton>
-);
 
 /** The recursive folder/file tree rooted at `parentId`. */
 const FileTree = ({
@@ -98,28 +80,34 @@ const FileTree = ({
               <Typography variant="body4">{folder.name}</Typography>
             </button>
             <span className={styles.rowActions}>
-              <RowAction
-                iconName="file-plus"
-                label={`New file in ${folder.name}`}
-                onClick={() => handlers.newFileIn(folder.id)}
-              />
-              {!hideNewFolderButton && (
-                <RowAction
-                  iconName="folder-plus"
-                  label={`New folder in ${folder.name}`}
-                  onClick={() => handlers.newFolderIn(folder.id)}
+              <PopUpButton
+                iconName="ellipsis-v"
+                ariaLabel={`Options for ${folder.name}`}
+                alignment="right"
+              >
+                <PopUpButtonOption
+                  iconName="plus"
+                  labelText="New File"
+                  clickHandler={() => handlers.newFileIn(folder.id)}
                 />
-              )}
-              <RowAction
-                iconName="pen"
-                label={`Rename ${folder.name}`}
-                onClick={() => handlers.renameFolder(folder)}
-              />
-              <RowAction
-                iconName="trash"
-                label={`Delete ${folder.name}`}
-                onClick={() => handlers.deleteFolder(folder)}
-              />
+                {!hideNewFolderButton && (
+                  <PopUpButtonOption
+                    iconName="folder-plus"
+                    labelText="Add sub-folder"
+                    clickHandler={() => handlers.newFolderIn(folder.id)}
+                  />
+                )}
+                <PopUpButtonOption
+                  iconName="pencil"
+                  labelText="Rename"
+                  clickHandler={() => handlers.renameFolder(folder)}
+                />
+                <PopUpButtonOption
+                  iconName="trash"
+                  labelText="Delete"
+                  clickHandler={() => handlers.deleteFolder(folder)}
+                />
+              </PopUpButton>
             </span>
           </div>
           {folder.open && (
@@ -154,16 +142,22 @@ const FileTree = ({
                 <Typography variant="body4">{file.name}</Typography>
               </button>
               <span className={styles.rowActions}>
-                <RowAction
-                  iconName="pen"
-                  label={`Rename ${file.name}`}
-                  onClick={() => handlers.renameFile(file)}
-                />
-                <RowAction
-                  iconName="trash"
-                  label={`Delete ${file.name}`}
-                  onClick={() => handlers.deleteFile(file)}
-                />
+                <PopUpButton
+                  iconName="ellipsis-v"
+                  ariaLabel={`Options for ${file.name}`}
+                  alignment="right"
+                >
+                  <PopUpButtonOption
+                    iconName="pencil"
+                    labelText="Rename"
+                    clickHandler={() => handlers.renameFile(file)}
+                  />
+                  <PopUpButtonOption
+                    iconName="trash"
+                    labelText="Delete"
+                    clickHandler={() => handlers.deleteFile(file)}
+                  />
+                </PopUpButton>
               </span>
             </div>
           </li>
@@ -301,27 +295,28 @@ const FileBrowser = () => {
   return (
     <div className={styles.fileBrowser}>
       <div className={styles.header}>
-        <strong>Files</strong>
-        <span className={styles.headerActions}>
-          <Button
-            variant="outlined"
-            color="tertiary"
-            size="small"
-            onClick={() => newFileIn(DEFAULT_FOLDER_ID)}
-          >
-            New file
-          </Button>
+        <Typography
+          variant="body4"
+          component="h2"
+          className={styles.headerTitle}
+        >
+          Files
+        </Typography>
+        {/* A single collapsed "+" menu, matching the legacy header PopUpButton. */}
+        <PopUpButton iconName="plus" ariaLabel="Manage files" alignment="right">
+          <PopUpButtonOption
+            iconName="plus"
+            labelText="New File"
+            clickHandler={() => newFileIn(DEFAULT_FOLDER_ID)}
+          />
           {!config.hideNewFolderButton && (
-            <Button
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              onClick={() => newFolderIn(DEFAULT_FOLDER_ID)}
-            >
-              New folder
-            </Button>
+            <PopUpButtonOption
+              iconName="plus"
+              labelText="New Folder"
+              clickHandler={() => newFolderIn(DEFAULT_FOLDER_ID)}
+            />
           )}
-        </span>
+        </PopUpButton>
       </div>
       <div className={styles.body}>
         {isEmpty ? (

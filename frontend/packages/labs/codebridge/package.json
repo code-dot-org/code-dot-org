@@ -62,7 +62,9 @@
     "@mui/material": "catalog:",
     "@reduxjs/toolkit": "catalog:",
     "@xterm/addon-fit": "^0.10.0",
-    "@xterm/xterm": "^5.5.0"
+    "@xterm/xterm": "^5.5.0",
+    "classnames": "catalog:",
+    "focus-trap-react": "^11.0.4"
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",

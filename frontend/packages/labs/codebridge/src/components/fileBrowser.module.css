@@ -6,18 +6,23 @@
   background-color: var(--background-neutral-primary, #fff);
 }
 
+/* The file-browser header shares the workspace's 40px top-bar row (legacy sizes
+   this via the Workspace grid's `grid-auto-rows: 40px ...`); here we set it
+   directly so it lines up with the 40px file-tab strip beside it. */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 4px;
-  padding: 0.25rem 0.5rem;
+  height: 40px;
+  min-height: 40px;
+  padding-inline: 0.5rem;
+  box-sizing: border-box;
   border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
 }
 
-.headerActions {
-  display: flex;
-  gap: 4px;
+.headerTitle {
+  margin: 0;
 }
 
 .body {

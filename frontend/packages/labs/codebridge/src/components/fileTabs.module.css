@@ -6,6 +6,11 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
+
+  /* Fill the 40px top-bar row so the tabs line up with the file-browser header
+     beside them (legacy sizes this via the Workspace grid row; we set it here). */
+  height: 40px;
+  min-height: 40px;
   padding-inline: 0.5rem;
   overflow-x: auto;
   max-width: 100%;

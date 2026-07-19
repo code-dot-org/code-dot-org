@@ -67,7 +67,10 @@ await enableMocks();
 // - The base `<Lab>` wraps content in the component-library ThemeProvider's
 //   `<div data-theme>`, which has no intrinsic height. The studio host sizes
 //   labs via its own layout CSS; here we make that wrapper fill the viewport so
-//   the lab's flex layout has a height to divide.
+//   the lab's flex layout has a height to divide. Scoped to `#root` so it does
+//   NOT match `<div data-theme>` menus/dialogs that portal to `<body>` (those
+//   also carry `data-theme`, and a `height: 100%` would stretch them to the
+//   whole window).
 // - The DSCO tooltip portals to `<body>` with `height: fit-content`, which
 //   Chromium resolves against the full-height viewport here (stretching it to
 //   the whole window). `max-content` renders it at its content height, as
@@ -76,7 +79,7 @@ await enableMocks();
 const fullHeight = (
   <GlobalStyles
     styles={{
-      'div[data-theme]': {height: '100%'},
+      '#root div[data-theme]': {height: '100%'},
       'body > [class*="_tooltip_"]': {height: 'max-content'},
     }}
   />
