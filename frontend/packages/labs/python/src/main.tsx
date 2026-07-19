@@ -63,12 +63,23 @@ async function enableMocks() {
 
 await enableMocks();
 
-// The base `<Lab>` wraps content in the component-library ThemeProvider's
-// `<div data-theme>`, which has no intrinsic height. The studio host sizes labs
-// via its own layout CSS; here we make that wrapper (and this harness's own) fill
-// the viewport so the lab's flex layout has a height to divide.
+// Global tweaks for the standalone harness:
+// - The base `<Lab>` wraps content in the component-library ThemeProvider's
+//   `<div data-theme>`, which has no intrinsic height. The studio host sizes
+//   labs via its own layout CSS; here we make that wrapper fill the viewport so
+//   the lab's flex layout has a height to divide.
+// - The DSCO tooltip portals to `<body>` with `height: fit-content`, which
+//   Chromium resolves against the full-height viewport here (stretching it to
+//   the whole window). `max-content` renders it at its content height, as
+//   intended. Scoped to the portaled tooltip (`_tooltip_` name prefix), not the
+//   `_tooltipOverlay_` wrapper.
 const fullHeight = (
-  <GlobalStyles styles={{'div[data-theme]': {height: '100%'}}} />
+  <GlobalStyles
+    styles={{
+      'div[data-theme]': {height: '100%'},
+      'body > [class*="_tooltip_"]': {height: 'max-content'},
+    }}
+  />
 );
 
 const rootElement = document.getElementById('root');
