@@ -1,0 +1,24 @@
+.handleX,
+.handleY {
+  flex-shrink: 0;
+  background-color: var(--borders-neutral-light, #e4e4e4);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.handleX:hover,
+.handleX:focus-visible,
+.handleY:hover,
+.handleY:focus-visible {
+  background-color: var(--background-brand-teal-primary, #0090a0);
+  outline: none;
+}
+
+.handleX {
+  width: 5px;
+  cursor: col-resize;
+}
+
+.handleY {
+  height: 5px;
+  cursor: row-resize;
+}

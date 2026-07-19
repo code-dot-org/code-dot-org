@@ -1,15 +1,22 @@
 .layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
   min-height: 0;
 }
 
+/* File browser + editor, side by side; grows to fill above the console. */
+.topArea {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+}
+
 .sidebar {
-  width: 220px;
   flex-shrink: 0;
-  overflow: auto;
-  border-right: 1px solid var(--borders-neutral-primary, #ccc);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .editorPane {
@@ -26,8 +33,6 @@
 }
 
 .consolePane {
-  width: 40%;
   flex-shrink: 0;
   min-height: 0;
-  border-left: 1px solid var(--borders-neutral-primary, #ccc);
 }
