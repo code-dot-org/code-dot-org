@@ -115,8 +115,14 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
     // grounded sprites exactly on top of walls — probed half a grid cell
     // ahead so the sprite turns when its center reaches the edge. The
     // playspace floor counts as footing, so a floor patroller just walks the
-    // bounds. Known tradeoff: the half-cell probe can see across a one-cell
-    // gap, so patrollers fall into them.
+    // bounds. A one-cell gap is narrower than the sprite, so it gets walked
+    // across — with one subtlety: at the gap's exact center the sprite touches
+    // both sides with zero overlap, the collide stops holding it (though
+    // isDirectlyAbove, being edge-inclusive, still says supported), and it
+    // starts dropping through the seam — whether a walk lands on that
+    // knife-edge depends on step parity. Detect the drop as grounded-last-tick
+    // /airborne-now and recover: nudge past the seam, lift back to the walking
+    // line, cancel the fall. Two-cell gaps read as edges via the probe.
     helperCode: [
       'function patrollingOnBlocks() {',
       '  return {',
@@ -129,7 +135,16 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       "      var dir = getProp(spriteId, 'patrolOBDir');",
       "      var grounded = isDirectlyAbove(spriteId, {group: 'walls'});",
       "      var expected = getProp(spriteId, 'patrolOBExpX');",
-      "      if (grounded && expected != undefined && getProp(spriteId, 'x') !== expected) {",
+      '      var blocked =',
+      "        expected != undefined && getProp(spriteId, 'x') !== expected;",
+      "      if (!grounded && getProp(spriteId, 'patrolOBWasG')) {",
+      '        // Dropped through a bridged gap’s zero-overlap seam last tick:',
+      '        // step past it, back up to the walking line, cancel the fall.',
+      "        changePropBy(spriteId, 'x', speed * dir);",
+      "        changePropBy(spriteId, 'y', 3);",
+      "        setProp(spriteId, 'velocityY', 0);",
+      '      }',
+      '      if (grounded && blocked) {',
       '        dir = -dir;',
       "        setProp(spriteId, 'patrolOBDir', dir);",
       '      }',
@@ -152,6 +167,7 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       "        setProp(spriteId, 'patrolOBDir', -1);",
       '      }',
       "      setProp(spriteId, 'patrolOBExpX', x);",
+      "      setProp(spriteId, 'patrolOBWasG', grounded);",
       '    },',
       "    name: 'patrolling on blocks',",
       '  };',
