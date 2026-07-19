@@ -29,6 +29,14 @@ vi.mock('@xterm/addon-fit', () => ({
   },
 }));
 
+// Stub the instructions panel: it renders the base ResourcePanel, which calls
+// the dashboard API (via useApiClient) and needs the host's ApiClientProvider.
+// That's base's concern and is exercised in the dev demo; here we only assert
+// the shell composes.
+vi.mock('../layout/InstructionsPanel', () => ({
+  default: () => <div>instructions</div>,
+}));
+
 it('renders the Python Lab shell from the default project', async () => {
   render(
     <RootStateProvider>

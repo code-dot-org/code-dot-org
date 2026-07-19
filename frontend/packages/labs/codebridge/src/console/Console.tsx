@@ -5,6 +5,7 @@ import {useEffect, useRef} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {PanelContainer} from '@code-dot-org/lab';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {useCodebridgeRuntime} from '../contexts';
@@ -123,30 +124,31 @@ const Console = () => {
   }, [isDark]);
 
   return (
-    <div className={styles.console}>
-      <div className={styles.header}>
-        <strong>Console</strong>
-        <span className={styles.headerActions}>
-          <ControlButtons />
-          <IconButton
-            aria-label="Clear console"
-            variant="text"
-            color="tertiary"
-            size="extraSmall"
-            onClick={() =>
-              CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
-            }
-          >
-            <FontAwesomeV6Icon iconName="trash" />
-          </IconButton>
-        </span>
-      </div>
+    <PanelContainer
+      id="codebridge-console"
+      className={styles.console}
+      headerContent="Console"
+      leftHeaderContent={<ControlButtons />}
+      rightHeaderContent={
+        <IconButton
+          aria-label="Clear console"
+          variant="text"
+          color="tertiary"
+          size="extraSmall"
+          onClick={() =>
+            CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
+          }
+        >
+          <FontAwesomeV6Icon iconName="trash" />
+        </IconButton>
+      }
+    >
       <div
         ref={terminalRef}
         className={styles.terminal}
         aria-label="Console output"
       />
-    </div>
+    </PanelContainer>
   );
 };
 

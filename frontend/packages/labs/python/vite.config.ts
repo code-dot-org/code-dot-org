@@ -46,6 +46,12 @@ export default defineConfig(({command}) => ({
               __dirname,
               '../codebridge/src',
             ),
+            // More specific than the '@code-dot-org/lab' prefix below, so it must
+            // come first: the scss lives outside the src root the prefix assumes.
+            '@code-dot-org/lab/styles/variables.scss': path.resolve(
+              __dirname,
+              '../base/src/components/layout/variables.scss',
+            ),
             '@code-dot-org/lab': path.resolve(__dirname, '../base/src'),
           }
         : {}),
@@ -55,7 +61,9 @@ export default defineConfig(({command}) => ({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: ['src/index.ts'],
+      // `src/fixtures/index.ts` is an explicit entry so its JS emits at
+      // dist/fixtures/index.* — the `./mocks` export subpath resolves to it.
+      entry: ['src/index.ts', 'src/fixtures/index.ts'],
       name: 'python-lab',
       formats: ['es', 'cjs'],
     },

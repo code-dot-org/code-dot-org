@@ -1,24 +1,7 @@
+/* The base PanelContainer supplies the flex column + header; this just sets the
+   background and the terminal area that fills below the header. */
 .console {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 0;
   background-color: var(--background-neutral-primary, #fff);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 0.25rem 0.5rem;
-  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
-}
-
-.headerActions {
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }
 
 .terminal {
