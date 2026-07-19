@@ -4,9 +4,22 @@
   background-color: var(--background-neutral-primary, #fff);
 }
 
+/* The xterm area. Its background tracks the terminal theme (legacy
+   `.consoleContainerLight` / `Dark`) so the padding around the canvas matches
+   the terminal — white on light, black on dark. */
 .terminal {
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  padding: 4px;
+  padding-left: 4px;
+  background-color: #fff;
+}
+
+.terminalDark {
+  background-color: #000;
+}
+
+/* Legacy `.controlButton` — spacing around the Run/Stop button in the header. */
+.controlButton {
+  margin: 8px 8px 8px 4px;
 }

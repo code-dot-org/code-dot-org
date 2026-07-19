@@ -1,7 +1,7 @@
 import {IconButton} from '@mui/material';
 import {FitAddon} from '@xterm/addon-fit';
 import {Terminal} from '@xterm/xterm';
-import {useEffect, useRef} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -9,6 +9,7 @@ import {PanelContainer} from '@code-dot-org/lab';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {useCodebridgeRuntime} from '../contexts';
+import {useAppSelector} from '../redux/store';
 
 import styles from './console.module.css';
 import ConsoleManager from './ConsoleManager';
@@ -41,6 +42,15 @@ const Console = () => {
 
   const {theme} = useTheme(true);
   const isDark = theme === 'Dark';
+
+  // The clear button is disabled while running or when the console has no
+  // output (legacy RightButtons). The manager is created asynchronously inside
+  // the rAF below, so surface it via state to drive the subscription effect.
+  const [consoleManager, setConsoleManager] = useState<ConsoleManager | null>(
+    null,
+  );
+  const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
+  const isRunning = useAppSelector(state => state.labSystem.isRunning);
 
   // Create the terminal once.
   useEffect(() => {
@@ -75,6 +85,7 @@ const Console = () => {
 
       const manager = new ConsoleManager(terminal, fitAddon);
       CodebridgeRegistry.setConsoleManager(manager);
+      setConsoleManager(manager);
 
       terminal.open(container);
 
@@ -126,8 +137,25 @@ const Console = () => {
       resizeObserver?.disconnect();
       terminal?.dispose();
       CodebridgeRegistry.setConsoleManager(null);
+      setConsoleManager(null);
     };
   }, []);
+
+  // Track whether the console has any output, so the clear button can disable
+  // when empty (legacy RightButtons subscribes to the same listener).
+  useEffect(() => {
+    if (!consoleManager) {
+      return;
+    }
+    setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
+    const handleUpdate = (terminalLines: string[]) => {
+      setHasConsoleOutput(terminalLines.length > 0);
+    };
+    consoleManager.addTerminalLinesListener(handleUpdate);
+    return () => {
+      consoleManager.removeTerminalLinesListener(handleUpdate);
+    };
+  }, [consoleManager]);
 
   // Apply theme changes live.
   useEffect(() => {
@@ -149,17 +177,20 @@ const Console = () => {
           variant="text"
           color="tertiary"
           size="extraSmall"
+          disabled={isRunning || !hasConsoleOutput}
           onClick={() =>
             CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
           }
         >
-          <FontAwesomeV6Icon iconName="trash" />
+          <FontAwesomeV6Icon iconName="eraser" />
         </IconButton>
       }
     >
       <div
         ref={terminalRef}
-        className={styles.terminal}
+        className={
+          isDark ? `${styles.terminal} ${styles.terminalDark}` : styles.terminal
+        }
         aria-label="Console output"
       />
     </PanelContainer>
