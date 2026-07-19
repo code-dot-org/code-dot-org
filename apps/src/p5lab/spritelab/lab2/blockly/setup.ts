@@ -112,6 +112,66 @@ export function ensureSceneBlocks(toolboxXml: string): string {
   }
 }
 
+// Sensible toolbox defaults for the platformer composites: the player marked
+// mid-air above a full bottom-row floor.
+const PLATFORMER_GRID_SIZE = 8;
+function platformerGrid(mark: (row: number, col: number) => 0 | 1): string {
+  return JSON.stringify(
+    Array.from({length: PLATFORMER_GRID_SIZE}, (_, row) =>
+      Array.from({length: PLATFORMER_GRID_SIZE}, (_, col) => mark(row, col))
+    )
+  );
+}
+
+/**
+ * Lead the "Sprites" category with the platformer composites. They're
+ * lab-owned blocks (extraSharedBlocks), so DB-authored toolboxes don't know
+ * them; skipped when a level curates its own entries (same type present) or
+ * has no Sprites category.
+ */
+export function ensurePlatformerBlocks(toolboxXml: string): string {
+  try {
+    const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
+    const category = Array.from(
+      doc.getElementsByTagNameNS('*', 'category')
+    ).find(c => c.getAttribute('name') === 'Sprites');
+    if (!category) {
+      return toolboxXml;
+    }
+    const present = new Set(
+      Array.from(category.getElementsByTagNameNS('*', 'block')).map(b =>
+        b.getAttribute('type')
+      )
+    );
+    // Prepended in reverse so the player block ends up first.
+    const composites: [string, string][] = [
+      [
+        'spritelab2_makePlatformBlocks',
+        platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
+      ],
+      [
+        'spritelab2_makePlatformPlayer',
+        platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
+      ],
+    ];
+    composites.forEach(([type, grid]) => {
+      if (present.has(type)) {
+        return;
+      }
+      const block = doc.createElementNS(category.namespaceURI, 'block');
+      block.setAttribute('type', type);
+      const field = doc.createElementNS(category.namespaceURI, 'field');
+      field.setAttribute('name', 'GRID');
+      field.textContent = grid;
+      block.appendChild(field);
+      category.insertBefore(block, category.firstChild);
+    });
+    return new XMLSerializer().serializeToString(doc);
+  } catch {
+    return toolboxXml;
+  }
+}
+
 /**
  * Compile a serialized workspace to JS headless (for scenes not open in the
  * Code tab). Returns '' for an empty/missing source.

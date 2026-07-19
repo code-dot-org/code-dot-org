@@ -105,7 +105,7 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
   {
     name: 'spritelab2_makePlatformPlayer',
     pool: 'spritelab2',
-    category: 'World',
+    category: 'Sprites',
     config: {
       func: 'makePlatformPlayer',
       inline: false,
@@ -156,7 +156,7 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
   {
     name: 'spritelab2_makePlatformBlocks',
     pool: 'spritelab2',
-    category: 'World',
+    category: 'Sprites',
     config: {
       func: 'makePlatformBlocks',
       inline: false,
