@@ -87,7 +87,7 @@ export async function generateImage(
   if (itemType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
   } else if (itemType === 'block') {
-    fullPrompt = `${fullPrompt} Draw a single square tile that fills the entire image edge-to-edge, designed so copies placed side by side tile seamlessly. No border, no background scene — just the tile texture.`;
+    fullPrompt = `${fullPrompt} Draw one square block that extends to the very edges of the image on all four sides — no margins, padding, or frame. A few empty pixels at the edges for a slightly irregular outline are fine, but the shape should essentially fill the whole square, so copies placed side by side read as continuous ground. No background scene — just the block itself.`;
   }
 
   const {files} = await generateText({
