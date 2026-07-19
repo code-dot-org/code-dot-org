@@ -49,6 +49,26 @@
   min-height: 0;
 }
 
+/* The tab strip row: the file-tabs, plus (when the file browser is collapsed) a
+   re-open toggle to its left. */
+.tabBar {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-neutral-primary, #fff);
+}
+
+.tabsFill {
+  flex: 1;
+  min-width: 0;
+}
+
+.reopen {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-inline: 4px;
+}
+
 .editor {
   flex: 1;
   min-height: 0;

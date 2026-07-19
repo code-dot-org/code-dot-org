@@ -4,6 +4,7 @@ import {
   CodeEditor,
   Console,
   FileBrowser,
+  FileBrowserToggleButton,
   FileTabs,
 } from '@code-dot-org/codebridge';
 import {PanelContainer, WorkspaceHeader} from '@code-dot-org/lab';
@@ -29,6 +30,9 @@ const CONSOLE = {initial: 260, min: 100, max: 620};
 const PythonLayout = () => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   const [consoleHeight, setConsoleHeight] = useState(CONSOLE.initial);
+  // Legacy has no draggable file-browser divider, only a collapse toggle; we
+  // keep both — resize when open, collapse to a thin rail via the button.
+  const [fileBrowserCollapsed, setFileBrowserCollapsed] = useState(false);
 
   return (
     <div className={styles.layout}>
@@ -41,21 +45,46 @@ const PythonLayout = () => {
             headerContent={<WorkspaceHeader />}
           >
             <div className={styles.topArea}>
-              <aside className={styles.sidebar} style={{width: sidebarWidth}}>
-                <FileBrowser />
-              </aside>
-              <ResizeHandle
-                axis="x"
-                ariaLabel="Resize file browser"
-                value={sidebarWidth}
-                min={SIDEBAR.min}
-                max={SIDEBAR.max}
-                onDelta={dx =>
-                  setSidebarWidth(w => clamp(w + dx, SIDEBAR.min, SIDEBAR.max))
-                }
-              />
+              {/* Collapsed: the file browser is fully hidden so the editor spans
+                  the whole width; the re-open toggle sits in the tab strip. */}
+              {!fileBrowserCollapsed && (
+                <>
+                  <aside
+                    className={styles.sidebar}
+                    style={{width: sidebarWidth}}
+                  >
+                    <FileBrowser
+                      onToggleCollapse={() => setFileBrowserCollapsed(true)}
+                    />
+                  </aside>
+                  <ResizeHandle
+                    axis="x"
+                    ariaLabel="Resize file browser"
+                    value={sidebarWidth}
+                    min={SIDEBAR.min}
+                    max={SIDEBAR.max}
+                    onDelta={dx =>
+                      setSidebarWidth(w =>
+                        clamp(w + dx, SIDEBAR.min, SIDEBAR.max),
+                      )
+                    }
+                  />
+                </>
+              )}
               <div className={styles.editorPane}>
-                <FileTabs />
+                <div className={styles.tabBar}>
+                  {fileBrowserCollapsed && (
+                    <span className={styles.reopen}>
+                      <FileBrowserToggleButton
+                        collapsed
+                        onClick={() => setFileBrowserCollapsed(false)}
+                      />
+                    </span>
+                  )}
+                  <div className={styles.tabsFill}>
+                    <FileTabs />
+                  </div>
+                </div>
                 <div className={styles.editor}>
                   <CodeEditor />
                 </div>

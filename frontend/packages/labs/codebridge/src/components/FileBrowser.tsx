@@ -23,6 +23,7 @@ import {getFileIcon} from '../utils/fileIcons';
 import {shouldShowFile} from '../utils/multiFileSource';
 
 import styles from './fileBrowser.module.css';
+import {FileBrowserToggleButton} from './FileBrowserToggleButton';
 import {PopUpButton} from './PopUpButton';
 import {PopUpButtonOption} from './PopUpButtonOption';
 
@@ -167,6 +168,13 @@ const FileTree = ({
   );
 };
 
+interface FileBrowserProps {
+  /** When provided, a collapse toggle shows in the header. The host owns the
+   * collapsed state and the surrounding layout — it hides this whole panel and
+   * provides the re-open affordance (so the editor can take the full width). */
+  onToggleCollapse?: () => void;
+}
+
 /**
  * The file/folder tree with create/rename/delete actions. Ported from
  * apps/src/codebridge/FileBrowser, driven by {@link useFileOperations} over the
@@ -177,7 +185,7 @@ const FileTree = ({
  * toggles. New-file language is a placeholder derived from the extension until
  * the Codebridge `config.languageMapping` is ported.
  */
-const FileBrowser = () => {
+const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
   const ops = useFileOperations();
   const {promptForName, confirm} = usePrompts();
   const config = useCodebridgeConfig();
@@ -302,21 +310,32 @@ const FileBrowser = () => {
         >
           Files
         </Typography>
-        {/* A single collapsed "+" menu, matching the legacy header PopUpButton. */}
-        <PopUpButton iconName="plus" ariaLabel="Manage files" alignment="right">
-          <PopUpButtonOption
+        <div className={styles.headerButtons}>
+          {/* A single collapsed "+" menu, matching the legacy header PopUpButton. */}
+          <PopUpButton
             iconName="plus"
-            labelText="New File"
-            clickHandler={() => newFileIn(DEFAULT_FOLDER_ID)}
-          />
-          {!config.hideNewFolderButton && (
+            ariaLabel="Manage files"
+            alignment="right"
+          >
             <PopUpButtonOption
               iconName="plus"
-              labelText="New Folder"
-              clickHandler={() => newFolderIn(DEFAULT_FOLDER_ID)}
+              labelText="New File"
+              clickHandler={() => newFileIn(DEFAULT_FOLDER_ID)}
             />
+            {!config.hideNewFolderButton && (
+              <PopUpButtonOption
+                iconName="plus"
+                labelText="New Folder"
+                clickHandler={() => newFolderIn(DEFAULT_FOLDER_ID)}
+              />
+            )}
+          </PopUpButton>
+          {/* Collapse the file browser; the host re-opens it from outside the
+              (now-hidden) panel. */}
+          {onToggleCollapse && (
+            <FileBrowserToggleButton onClick={onToggleCollapse} />
           )}
-        </PopUpButton>
+        </div>
       </div>
       <div className={styles.body}>
         {isEmpty ? (
