@@ -494,6 +494,51 @@ const customInputTypes = {
       return JSON.stringify(block.getFieldValue(arg.name));
     },
   },
+
+  // A bitmap that holds at most one set cell — a position picker, not a
+  // painter. Marking a second cell clears the first.
+  bitmapSingle: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+        fieldHeight: 42,
+        buttons: {randomize: false},
+      };
+      const singleCell = function (newValue) {
+        if (!Array.isArray(newValue)) {
+          return newValue;
+        }
+        const marked = [];
+        newValue.forEach((row, r) =>
+          row.forEach((v, c) => v && marked.push([r, c]))
+        );
+        if (marked.length <= 1) {
+          return newValue;
+        }
+        // Keep the newest mark: one absent from the current value. (A drag
+        // can add several at once; the last painted wins.)
+        const old = this.getValue();
+        const fresh = marked.filter(([r, c]) => !old?.[r]?.[c]);
+        const keep = fresh.length
+          ? fresh[fresh.length - 1]
+          : marked[marked.length - 1];
+        return newValue.map((row, r) =>
+          row.map((v, c) => (r === keep[0] && c === keep[1] ? 1 : 0))
+        );
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new CdoFieldBitmap(null, singleCell, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
+    },
+  },
 };
 
 export default {

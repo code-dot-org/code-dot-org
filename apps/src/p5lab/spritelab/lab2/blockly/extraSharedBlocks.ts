@@ -114,7 +114,9 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       style: 'sprite_blocks',
       args: [
         {name: 'ANIMATION_NAME', customInput: 'costumePicker'},
-        {name: 'GRID', customInput: 'bitmap'},
+        // Single-select: the player has one position, so a new mark replaces
+        // the old one.
+        {name: 'GRID', customInput: 'bitmapSingle'},
       ],
     },
     // One block = a player sprite at the marked grid cell (same 8x8 bitmap

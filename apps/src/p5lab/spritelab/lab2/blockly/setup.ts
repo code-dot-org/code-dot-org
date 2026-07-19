@@ -123,49 +123,109 @@ function platformerGrid(mark: (row: number, col: number) => 0 | 1): string {
   );
 }
 
+// [block type, default GRID field] for the two composites, player first.
+const PLATFORMER_COMPOSITES: [string, string][] = [
+  [
+    'spritelab2_makePlatformPlayer',
+    platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
+  ],
+  [
+    'spritelab2_makePlatformBlocks',
+    platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
+  ],
+];
+
+const HOUR_2026_CATEGORY = 'Hour2026';
+
+// The Hour2026 category's full lineup, in display order: the platformer
+// composites plus the core storytelling/event blocks. Entries already in the
+// toolbox elsewhere are cloned (keeping their curated shadows/defaults);
+// otherwise a bare block is created with its field defaults.
+const HOUR_2026_BLOCK_TYPES = [
+  'spritelab2_makePlatformPlayer',
+  'spritelab2_makePlatformBlocks',
+  'gamelab_setBackgroundImageAs',
+  'gamelab_spriteClicked',
+  'gamelab_checkTouching',
+  'gamelab_atTime',
+  'gamelab_spriteSay',
+  GO_TO_SCENE_BLOCK_TYPE,
+  GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+];
+
 /**
- * Lead the "Sprites" category with the platformer composites. They're
- * lab-owned blocks (extraSharedBlocks), so DB-authored toolboxes don't know
- * them; skipped when a level curates its own entries (same type present) or
- * has no Sprites category.
+ * Surface the platformer composites: lead the "Sprites" category with them,
+ * and build the "Hour2026" category at the top of the toolbox — the
+ * composites plus the core event/storytelling blocks (toolbox categories
+ * reference block types, so a block can appear in any number of them). The
+ * composites are lab-owned blocks (extraSharedBlocks), so DB-authored
+ * toolboxes don't know them; each category is skipped when a level curates
+ * its own entries (same type present).
  */
 export function ensurePlatformerBlocks(toolboxXml: string): string {
   try {
     const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
-    const category = Array.from(
-      doc.getElementsByTagNameNS('*', 'category')
-    ).find(c => c.getAttribute('name') === 'Sprites');
-    if (!category) {
+    const categories = Array.from(doc.getElementsByTagNameNS('*', 'category'));
+    const sprites = categories.find(c => c.getAttribute('name') === 'Sprites');
+    if (!sprites) {
       return toolboxXml;
     }
-    const present = new Set(
-      Array.from(category.getElementsByTagNameNS('*', 'block')).map(b =>
-        b.getAttribute('type')
-      )
-    );
-    // Prepended in reverse so the player block ends up first.
-    const composites: [string, string][] = [
-      [
-        'spritelab2_makePlatformBlocks',
-        platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
-      ],
-      [
-        'spritelab2_makePlatformPlayer',
-        platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
-      ],
-    ];
-    composites.forEach(([type, grid]) => {
-      if (present.has(type)) {
-        return;
-      }
-      const block = doc.createElementNS(category.namespaceURI, 'block');
+    const compositeGrids = new Map(PLATFORMER_COMPOSITES);
+
+    // A new block element: the composites carry their GRID defaults, anything
+    // else starts bare (fields initialize to their own defaults).
+    const makeBlock = (type: string) => {
+      const block = doc.createElementNS(sprites.namespaceURI, 'block');
       block.setAttribute('type', type);
-      const field = doc.createElementNS(category.namespaceURI, 'field');
-      field.setAttribute('name', 'GRID');
-      field.textContent = grid;
-      block.appendChild(field);
-      category.insertBefore(block, category.firstChild);
+      const grid = compositeGrids.get(type);
+      if (grid) {
+        const field = doc.createElementNS(sprites.namespaceURI, 'field');
+        field.setAttribute('name', 'GRID');
+        field.textContent = grid;
+        block.appendChild(field);
+      }
+      return block;
+    };
+    // Prefer cloning a curated entry from elsewhere in the toolbox — it keeps
+    // the level's shadows and defaults.
+    const cloneOrMakeBlock = (type: string) => {
+      const existing = Array.from(
+        doc.getElementsByTagNameNS('*', 'block')
+      ).find(b => b.getAttribute('type') === type && b.closest('category'));
+      return existing ? (existing.cloneNode(true) as Element) : makeBlock(type);
+    };
+    const presentIn = (category: Element) =>
+      new Set(
+        Array.from(category.getElementsByTagNameNS('*', 'block')).map(b =>
+          b.getAttribute('type')
+        )
+      );
+
+    // The composites lead the Sprites category (reversed so player is first).
+    const spritesPresent = presentIn(sprites);
+    [...PLATFORMER_COMPOSITES].reverse().forEach(([type]) => {
+      if (!spritesPresent.has(type)) {
+        sprites.insertBefore(makeBlock(type), sprites.firstChild);
+      }
     });
+
+    // The Hour2026 category at the top of the toolbox.
+    let hour = categories.find(
+      c => c.getAttribute('name') === HOUR_2026_CATEGORY
+    );
+    if (!hour) {
+      hour = doc.createElementNS(sprites.namespaceURI, 'category');
+      hour.setAttribute('name', HOUR_2026_CATEGORY);
+      const firstCategory = categories[0];
+      firstCategory.parentNode?.insertBefore(hour, firstCategory);
+    }
+    const hourPresent = presentIn(hour);
+    HOUR_2026_BLOCK_TYPES.forEach(type => {
+      if (!hourPresent.has(type)) {
+        hour.appendChild(cloneOrMakeBlock(type));
+      }
+    });
+
     return new XMLSerializer().serializeToString(doc);
   } catch {
     return toolboxXml;
