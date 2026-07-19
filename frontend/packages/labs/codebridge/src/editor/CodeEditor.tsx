@@ -7,6 +7,8 @@ import {useEffect, useMemo, useRef} from 'react';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
 
+import emptyFilesPlaceholderImage from '../assets/empty-files-placeholder.svg';
+import {CodebridgeEmptyState} from '../components';
 import type {CodebridgeConfig} from '../config';
 import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
@@ -163,7 +165,13 @@ const CodeEditor = () => {
   const {theme} = useTheme(true);
 
   if (!activeFile) {
-    return <div className={styles.empty}>No file open</div>;
+    return (
+      <CodebridgeEmptyState
+        imageProps={{src: emptyFilesPlaceholderImage}}
+        title="No files open"
+        description="Create a new file or open one from the file manager to start coding your project."
+      />
+    );
   }
 
   return (

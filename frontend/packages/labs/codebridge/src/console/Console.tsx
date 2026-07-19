@@ -5,6 +5,7 @@ import {useEffect, useRef, useState} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {PanelContainer} from '@code-dot-org/lab';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
@@ -172,18 +173,27 @@ const Console = () => {
       headerContent="Console"
       leftHeaderContent={<ControlButtons />}
       rightHeaderContent={
-        <IconButton
-          aria-label="Clear console"
-          variant="text"
-          color="tertiary"
-          size="extraSmall"
-          disabled={isRunning || !hasConsoleOutput}
-          onClick={() =>
-            CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
-          }
+        <WithTooltip
+          tooltipProps={{
+            text: 'Clear console',
+            size: 'xs',
+            direction: 'onLeft',
+            tooltipId: 'clear-console-tooltip',
+          }}
         >
-          <FontAwesomeV6Icon iconName="eraser" />
-        </IconButton>
+          <IconButton
+            aria-label="Clear console"
+            variant="text"
+            color="tertiary"
+            size="extraSmall"
+            disabled={isRunning || !hasConsoleOutput}
+            onClick={() =>
+              CodebridgeRegistry.getConsoleManager()?.clearTerminalLines()
+            }
+          >
+            <FontAwesomeV6Icon iconName="eraser" />
+          </IconButton>
+        </WithTooltip>
       }
     >
       <div

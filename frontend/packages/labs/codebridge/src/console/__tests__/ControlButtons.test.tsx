@@ -11,6 +11,7 @@ import ControlButtons from '../ControlButtons';
 afterEach(() => {
   act(() => {
     store.dispatch(labSystemActions.setIsRunning(false));
+    store.dispatch(labSystemActions.setLoadedCodeEnvironment(false));
   });
 });
 
@@ -23,12 +24,26 @@ const renderButtons = (runtime: {onRun?: () => void; onStop?: () => void}) =>
     </RootStateProvider>,
   );
 
-it('shows Run and invokes onRun when not running', () => {
+it('shows Run and invokes onRun once the environment has loaded', () => {
   const onRun = vi.fn();
   renderButtons({onRun});
 
+  act(() => {
+    store.dispatch(labSystemActions.setLoadedCodeEnvironment(true));
+  });
+
   fireEvent.click(screen.getByRole('button', {name: /run/i}));
   expect(onRun).toHaveBeenCalled();
+});
+
+it('disables Run while the environment is still loading', () => {
+  const onRun = vi.fn();
+  renderButtons({onRun});
+
+  const runButton = screen.getByRole('button', {name: /run/i});
+  expect((runButton as HTMLButtonElement).disabled).toBe(true);
+  fireEvent.click(runButton);
+  expect(onRun).not.toHaveBeenCalled();
 });
 
 it('shows Stop and invokes onStop while running', () => {

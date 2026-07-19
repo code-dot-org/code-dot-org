@@ -1,4 +1,7 @@
-import {CodebridgeRegistry} from '@code-dot-org/codebridge';
+import {
+  CodebridgeRegistry,
+  getRunTimestampMessage,
+} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
@@ -40,6 +43,8 @@ export async function runPython(source: MultiFileSource) {
   }
 
   store.dispatch(labSystemActions.setIsRunning(true));
+  // Gray "RUN AT hh:mm" banner marks the start of this run in the console.
+  consoleManager?.writeConsoleMessage(getRunTimestampMessage());
   try {
     await asyncRun(main.contents, files);
   } finally {

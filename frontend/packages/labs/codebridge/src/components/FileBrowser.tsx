@@ -84,7 +84,7 @@ const FileTree = ({
               <PopUpButton
                 iconName="ellipsis-v"
                 ariaLabel={`Options for ${folder.name}`}
-                alignment="right"
+                alignment="left"
               >
                 <PopUpButtonOption
                   iconName="plus"
@@ -146,7 +146,7 @@ const FileTree = ({
                 <PopUpButton
                   iconName="ellipsis-v"
                   ariaLabel={`Options for ${file.name}`}
-                  alignment="right"
+                  alignment="left"
                 >
                   <PopUpButtonOption
                     iconName="pencil"
@@ -315,7 +315,7 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
           <PopUpButton
             iconName="plus"
             ariaLabel="Manage files"
-            alignment="right"
+            alignment="left"
           >
             <PopUpButtonOption
               iconName="plus"
