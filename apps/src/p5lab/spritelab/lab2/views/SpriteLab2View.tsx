@@ -551,10 +551,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
-  // The scene Play (re)starts from: null means the default scene. The Play tab
-  // button clears it (start from the beginning); clicking a preview sets it to
-  // the previewed scene. "Start over" re-runs whichever this is.
-  const playStartSceneRef = useRef<string | null>(null);
+  // The scene Play (re)starts from: null means the beginning (the default
+  // scene). The Play tab button clears it; clicking a preview sets it to the
+  // previewed scene. "Start over" re-runs whichever this is; "Play from
+  // beginning" clears it mid-play. State (not a ref) because the Play tab's
+  // "Playing from" label renders from it.
+  const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
 
   // The live preview and Blockly share the window keyboard: p5 listens on
   // window, so a game that reads arrows/space would eat those keys while the
@@ -656,11 +658,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     if (activeTab === 'Play') {
-      runScene(playStartSceneRef.current ?? scenes[0]?.id ?? null);
+      runScene(playStartSceneId ?? scenes[0]?.id ?? null);
     } else if (activeTab === 'Code') {
       runScene(activeSceneId);
     }
-  }, [activeTab, engineReady, runScene, activeSceneId, scenes]);
+    // playStartSceneId is set in the same batch as the tab change; the
+    // prevTab guard keeps its later changes from re-running the scene.
+  }, [
+    activeTab,
+    engineReady,
+    runScene,
+    activeSceneId,
+    scenes,
+    playStartSceneId,
+  ]);
 
   // Save workspace code to the active scene.
   const writeActiveSceneSource = useCallback(
@@ -752,7 +763,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (tab: SpriteLab2Tab) => {
       // Entering Play from the tab button starts from the beginning.
       if (tab === 'Play') {
-        playStartSceneRef.current = null;
+        setPlayStartSceneId(null);
       }
       dispatch(setActiveTab(tab));
     },
@@ -761,14 +772,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // Re-run the current play session from its start scene.
   const handleStartOver = useCallback(() => {
-    runScene(playStartSceneRef.current ?? scenes[0]?.id ?? null);
+    runScene(playStartSceneId ?? scenes[0]?.id ?? null);
+  }, [runScene, scenes, playStartSceneId]);
+
+  // Mid-play switch from a scene start to the whole game.
+  const handlePlayFromBeginning = useCallback(() => {
+    setPlayStartSceneId(null);
+    runScene(scenes[0]?.id ?? null);
   }, [runScene, scenes]);
 
   // Clicking the live preview opens Play on the scene being previewed.
+  // Previewing the first scene IS the beginning; keep the quiet default state.
   const handlePreviewClick = useCallback(() => {
-    playStartSceneRef.current = activeSceneId;
+    setPlayStartSceneId(
+      activeSceneId === (scenes[0]?.id ?? null) ? null : activeSceneId
+    );
     dispatch(setActiveTab('Play'));
-  }, [dispatch, activeSceneId]);
+  }, [dispatch, activeSceneId, scenes]);
 
   const playspaceMode: PlayspaceMode =
     activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
@@ -813,13 +833,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         }
         playTabExtra={
           playspaceMode === 'play' ? (
-            <button
-              type="button"
-              className={moduleStyles.startOver}
-              onClick={handleStartOver}
-            >
-              Start over
-            </button>
+            <>
+              {playStartSceneId && (
+                <>
+                  <span className={moduleStyles.playingFrom}>
+                    Playing from:{' '}
+                    {sceneMetadata.find(s => s.id === playStartSceneId)?.name ??
+                      'scene'}
+                  </span>
+                  <button
+                    type="button"
+                    className={moduleStyles.startOver}
+                    onClick={handlePlayFromBeginning}
+                  >
+                    Play from beginning
+                  </button>
+                </>
+              )}
+              <button
+                type="button"
+                className={moduleStyles.startOver}
+                onClick={handleStartOver}
+              >
+                Start over
+              </button>
+            </>
           ) : undefined
         }
       >
