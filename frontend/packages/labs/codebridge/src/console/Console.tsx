@@ -6,7 +6,7 @@ import {useEffect, useRef, useState} from 'react';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {PanelContainer} from '@code-dot-org/lab';
+import {FontSize, PanelContainer} from '@code-dot-org/lab';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {useCodebridgeRuntime} from '../contexts';
@@ -19,8 +19,6 @@ import ControlButtons from './ControlButtons';
 
 import '@xterm/xterm/css/xterm.css';
 
-const DEFAULT_FONT_SIZE = 14;
-
 // Enter=13, Backspace=127. Control characters (<32) other than Enter are ignored.
 const ENTER = 13;
 const BACKSPACE = 127;
@@ -30,8 +28,8 @@ const BACKSPACE = 127;
  * (registered on {@link CodebridgeRegistry} so the lab's off-tree runner can reach
  * it); user input is buffered and sent to the runtime's `sendConsoleInput` on
  * Enter. Ported and trimmed from apps/src/codebridge/Console/Console.tsx —
- * per-user font size (backend), analytics, the image addon, and level-change
- * clearing are deferred.
+ * analytics, the image addon, and level-change clearing are deferred (as is the
+ * backend persistence of the font-size choice, which is session-only here).
  */
 const Console = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
@@ -43,6 +41,16 @@ const Console = () => {
 
   const {theme} = useTheme(true);
   const isDark = theme === 'Dark';
+
+  // Console font size (Settings menu). Read through a ref so the mount-once
+  // terminal creation picks up the current value; a separate effect applies
+  // later changes live.
+  const consoleFontSizeKey = useAppSelector(
+    state => state.labView.consoleFontSizeKey,
+  );
+  const fontSizePx = FontSize[consoleFontSizeKey];
+  const fontSizeRef = useRef(fontSizePx);
+  fontSizeRef.current = fontSizePx;
 
   // The clear button is disabled while running or when the console has no
   // output (legacy RightButtons). The manager is created asynchronously inside
@@ -78,7 +86,7 @@ const Console = () => {
         // Translate bare \n to \r\n so the cursor returns to column 0 on each
         // newline; otherwise prompts like "name?\n" leave input indented.
         convertEol: true,
-        fontSize: DEFAULT_FONT_SIZE,
+        fontSize: fontSizeRef.current,
         theme: isDark ? darkTheme : lightTheme,
       });
       const fitAddon = new FitAddon();
@@ -165,6 +173,20 @@ const Console = () => {
       terminal.options.theme = isDark ? darkTheme : lightTheme;
     }
   }, [isDark]);
+
+  // Apply font-size changes live, refitting so the column/row count updates.
+  useEffect(() => {
+    const manager = CodebridgeRegistry.getConsoleManager();
+    const terminal = manager?.getTerminal();
+    if (terminal) {
+      terminal.options.fontSize = fontSizePx;
+      try {
+        manager?.getTerminalFitAddon().fit();
+      } catch {
+        // No layout dimensions yet; a later resize will fit.
+      }
+    }
+  }, [fontSizePx]);
 
   return (
     <PanelContainer

@@ -5,6 +5,7 @@ import {EditorView} from '@codemirror/view';
 import {useEffect, useMemo, useRef} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {FontSize} from '@code-dot-org/lab';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import emptyFilesPlaceholderImage from '../assets/empty-files-placeholder.svg';
@@ -17,7 +18,7 @@ import {getActiveFileForSource} from '../utils/multiFileSource';
 
 import styles from './codeEditor.module.css';
 import {editorConfig} from './editorConfig';
-import {darkTheme, fontSizeTheme, lightTheme} from './editorThemes';
+import {darkTheme, getFontSizeTheme, lightTheme} from './editorThemes';
 
 const readOnlyExtensions = (isReadOnly: boolean): Extension => [
   EditorState.readOnly.of(isReadOnly),
@@ -31,6 +32,7 @@ interface InnerCodeEditorProps {
   languageExtensions: CodebridgeConfig['languageExtensions'];
   isReadOnly: boolean;
   isDark: boolean;
+  fontSizePx: number;
 }
 
 /**
@@ -46,6 +48,7 @@ const InnerCodeEditor = ({
   languageExtensions,
   isReadOnly,
   isDark,
+  fontSizePx,
 }: InnerCodeEditorProps) => {
   const parentRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef<EditorView | null>(null);
@@ -57,6 +60,7 @@ const InnerCodeEditor = ({
 
   const readOnlyCompartment = useMemo(() => new Compartment(), []);
   const themeCompartment = useMemo(() => new Compartment(), []);
+  const fontSizeCompartment = useMemo(() => new Compartment(), []);
 
   // Create the editor once. Contents/language are captured at mount; the outer
   // component's `key` remounts this on file switch, so they stay correct.
@@ -78,7 +82,7 @@ const InnerCodeEditor = ({
         extensions: [
           ...editorConfig,
           autocompletion(),
-          fontSizeTheme,
+          fontSizeCompartment.of(getFontSizeTheme(fontSizePx)),
           updateListener,
           ...(langExtension ? [langExtension] : []),
           readOnlyCompartment.of(readOnlyExtensions(isReadOnly)),
@@ -136,6 +140,13 @@ const InnerCodeEditor = ({
     });
   }, [isDark, themeCompartment]);
 
+  // Reconfigure the font size live (Settings menu).
+  useEffect(() => {
+    viewRef.current?.dispatch({
+      effects: fontSizeCompartment.reconfigure(getFontSizeTheme(fontSizePx)),
+    });
+  }, [fontSizePx, fontSizeCompartment]);
+
   // Sync in external content changes (e.g. start over) without fighting typing:
   // after a keystroke, `initialContents` already equals the doc, so this no-ops.
   useEffect(() => {
@@ -161,6 +172,9 @@ const CodeEditor = () => {
   const activeFile = getActiveFileForSource(source);
   const {languageExtensions} = useCodebridgeConfig();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
+  const editorFontSizeKey = useAppSelector(
+    state => state.labView.editorFontSizeKey,
+  );
   // Optional so the editor renders outside a ThemeProvider (e.g. unit tests);
   // theme is undefined there, which reads as light.
   const {theme} = useTheme(true);
@@ -184,6 +198,7 @@ const CodeEditor = () => {
       languageExtensions={languageExtensions}
       isReadOnly={isReadOnly}
       isDark={theme === 'Dark'}
+      fontSizePx={FontSize[editorFontSizeKey]}
     />
   );
 };

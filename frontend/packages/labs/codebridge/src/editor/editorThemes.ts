@@ -184,13 +184,14 @@ const lightThemeView = EditorView.theme(
   {dark: false},
 );
 
-// The editor's default font size (legacy FontSize.Small; per-user sizing, saved
-// on the backend, is deferred). Kept as a standalone extension so it stays
-// constant across light/dark theme switches.
-export const DEFAULT_FONT_SIZE_PX = 13;
-export const fontSizeTheme: Extension = EditorView.theme({
-  '&': {fontSize: `${DEFAULT_FONT_SIZE_PX}px`},
-});
+// A theme that sets just the editor font size. Kept separate from the light/dark
+// themes so it stays constant across theme switches and can be reconfigured live
+// from the Settings menu (legacy's `getFontSizeTheme`). The default is 13px
+// (legacy FontSize.Small).
+export const getFontSizeTheme = (fontSizePx: number): Extension =>
+  EditorView.theme({
+    '&': {fontSize: `${fontSizePx}px`},
+  });
 
 // Each theme bundles editor chrome + its own highlight style, so exactly one
 // highlight style is active at a time. Light uses CodeMirror's default highlight

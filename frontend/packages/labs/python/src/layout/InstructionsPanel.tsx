@@ -1,4 +1,4 @@
-import {useAppSelector} from '@code-dot-org/codebridge';
+import {useAppSelector, useCodebridgeSettings} from '@code-dot-org/codebridge';
 import {useMaybeLevelProperties} from '@code-dot-org/lab/contexts';
 import {useThemeSetting} from '@code-dot-org/lab/hooks';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
@@ -16,9 +16,15 @@ const InstructionsPanel = () => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
-  // Python Lab supports both themes, so it opts in to the settings-panel theme
-  // toggle (the editor carries a matching light and dark theme).
+  // Codebridge contributes the editor/console font-size settings; Python Lab
+  // supports both themes, so it also opts in to the theme toggle (its editor
+  // carries a matching light and dark theme). Order matches legacy: font sizes,
+  // then theme.
+  const codebridgeSettings = useCodebridgeSettings();
   const themeSetting = useThemeSetting(['Light', 'Dark']);
+  const settings = themeSetting
+    ? [...codebridgeSettings, themeSetting]
+    : codebridgeSettings;
 
   if (!levelProperties) {
     return null;
@@ -31,7 +37,7 @@ const InstructionsPanel = () => {
       hasRun={hasRun}
       hasEdited={false}
       documentationUrl="/docs/ide/python"
-      settings={themeSetting ? [themeSetting] : []}
+      settings={settings}
     />
   );
 };
