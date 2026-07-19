@@ -36,8 +36,10 @@
 .body {
   flex: 1;
   min-height: 0;
-  overflow: auto;
+  overflow-y: auto;
   padding-block: 4px;
+  scrollbar-color: var(--background-neutral-senary, #b0b0b0)
+    var(--background-neutral-secondary, #f0f0f0);
 }
 
 .folderChildren {
@@ -46,17 +48,23 @@
   padding: 0;
 }
 
-/* Each nesting level indents and draws one continuous vertical guide line down
-   the group (legacy `.folder .folder`). Putting the border on the container —
-   not each row — keeps it straight (per-row borders break at the row gaps and
-   round with the row corners). */
+/* Each nesting level indents its rows. */
 .folderChildren .folderChildren {
   padding-inline-start: 8px;
-  border-inline-start: 1px solid var(--borders-neutral-light, #e4e4e4);
+}
+
+/* A file/folder inside an open directory gets a guide border on its leading
+   edge, kept square on that side so the borders line up into a vertical guide
+   and the hover fill sits flush against it (legacy `.folder .folder .row`). */
+.folderChildren .folderChildren > li > .row {
+  border-inline-start: 1px solid var(--borders-neutral-primary, #ccc);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
 }
 
 .row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 4px;
   min-height: 24px;
@@ -64,6 +72,7 @@
   margin-bottom: 2px;
   padding-block: 0.125rem;
   padding-inline: 4px;
+  font-size: 14px;
   border-radius: var(--border-radius, 4px);
   transition: background-color 0.2s ease-in-out;
 }
@@ -77,13 +86,28 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.5rem;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   color: inherit;
   text-align: start;
+}
+
+/* The file-type / folder icon: grayed and a fixed width, so names line up
+   (legacy `.rowIcon` + `.label i { color: --text-neutral-tertiary }`). */
+.rowLabel i {
+  width: 0.75rem;
+  font-size: 0.875rem;
+  text-align: center;
+  color: var(--text-neutral-tertiary, #6b7280);
+}
+
+.rowLabel:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: -2px;
+  border-radius: 0.375rem;
 }
 
 /* Truncate long names with an ellipsis rather than overflowing the row. */
