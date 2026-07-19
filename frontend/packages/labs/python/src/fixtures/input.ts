@@ -5,7 +5,7 @@ import {
 
 // A Python Lab scenario whose program blocks on input(), for exercising the
 // input service worker on the sandbox path. Load it with the `input` channel:
-//   /app/projects/python/input/edit?pyodide-sandbox=<sandbox url>
+//   /frontend-studio/projects/python/input/edit?pyodide-sandbox=<sandbox url>
 const input: LabFixture = {
   sources: {
     source: {

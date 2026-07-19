@@ -24,12 +24,24 @@ and streams output to the console. It has two backends behind one façade:
   direct path is not a student-facing path.
 - `pyodideRuntime.ts` — the shared `PyodideRuntime` interface and the worker
   message router (console + `labSystem` slice), used by both backends.
-- `pyodideWebWorker.ts` — loads pyodide (from the jsDelivr CDN for now), writes
-  project files to its virtual FS, runs the program, streams stdout/stderr.
+- `pyodideWebWorker.ts` — loads pyodide + our Python packages from a hosted
+  directory (see below), writes project files to its virtual FS, runs the
+  program, streams stdout/stderr, and loads matplotlib/numpy plus the custom
+  `pythonlab_setup` (+ `neighborhood`, which it imports) wheels.
+- `pyodideConfig.ts` — the configurable hosted directory. `setPyodideBaseUrl`
+  (re-exported from the package) points the runtime at where pyodide core, the
+  package wheels, and our custom wheels are served. Default:
+  `/blockly/js/pyodide/<version>/` (studio's layout — studio already serves them
+  there). The demo overrides it to `/pyodide/<version>/`; see
+  `scripts/setup-pyodide-assets.mjs`, which assembles that directory (git-ignored)
+  from `node_modules/pyodide` + `apps/lib/pyodide`, run automatically by `yarn dev`.
 
 pyodide preloads at lab mount (`App.tsx` calls `preloadPython()`), so the first
-Run is fast. Deferred: package pre-loading (numpy/matplotlib + wheels), matplotlib
-images, source write-back, the neighborhood mini-app, and validation.
+Run is fast. **matplotlib figures render inline in the console**: the
+`pythonlab_setup` wheel patches `plt.show()` to emit a tagged base64 PNG, which
+`routeWorkerMessage` turns into a `getImageMessage` escape rendered by xterm's
+`ImageAddon`. Deferred: source write-back, the neighborhood mini-app, and
+validation.
 
 ### Input
 
@@ -77,6 +89,14 @@ entry as a lazy chunk). The sandbox page itself is a host artifact; a real host
 serves it from its isolated origin (studio already has the Rails controller from
 #73741). Absent the query param, nothing here loads and the worker runs directly.
 
+**Pyodide assets on the sandbox origin.** The pyodide worker runs inside the
+iframe, so it loads pyodide + wheels from the _sandbox_ origin, not the parent's.
+The parent passes its configured base URL to the iframe via `?pyodideBase=` — an
+origin-relative path, so it resolves against the sandbox origin, which **must
+serve the assets at that same path**. In the demo the sandbox is the same Vite
+project on another port, so `/pyodide/<version>/` is already served there; a real
+separate-origin host must serve the directory too.
+
 ## Standalone demo
 
 `yarn dev` serves a standalone harness (`index.html` + `src/main.tsx`) at
@@ -100,7 +120,14 @@ The `input` fixture scenario runs a program that calls `input()`; load it on the
 sandbox path to exercise the input service worker:
 
 ```
-http://localhost:5137/app/projects/python/input/edit?pyodide-sandbox=http://localhost:5200/sandbox.html
+http://localhost:5137/frontend-studio/projects/python/input/edit?pyodide-sandbox=http://localhost:5200/sandbox.html
+```
+
+The `matplotlib` fixture scenario plots a chart with `plt.show()` to demonstrate
+inline console figures (works on either path):
+
+```
+http://localhost:5137/frontend-studio/projects/python/matplotlib/edit
 ```
 
 ## Scripts

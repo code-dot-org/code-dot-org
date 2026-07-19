@@ -1,4 +1,4 @@
-import {CodebridgeRegistry} from '@code-dot-org/codebridge';
+import {CodebridgeRegistry, getImageMessage} from '@code-dot-org/codebridge';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import {MessageTag} from './input/constants';
@@ -45,9 +45,14 @@ export function routeWorkerMessage(
   switch (type) {
     case 'sysout':
     case 'syserr':
-      // An input prompt is printed with a tag and no trailing newline, so the
-      // user types on the same line; render it as a partial line.
-      if (message?.startsWith(MessageTag.INPUT_PROMPT)) {
+      // A matplotlib figure arrives as `MATPLOTLIB_SHOW_IMG <base64>`; render it
+      // as an inline console image rather than printing the base64.
+      if (message?.startsWith(MessageTag.MATPLOTLIB_IMG)) {
+        const image = message.slice(MessageTag.MATPLOTLIB_IMG.length + 1);
+        writeConsole(getImageMessage(image));
+      } else if (message?.startsWith(MessageTag.INPUT_PROMPT)) {
+        // An input prompt is printed with a tag and no trailing newline, so the
+        // user types on the same line; render it as a partial line.
         writePartialConsole(message.slice(MessageTag.INPUT_PROMPT.length));
       } else {
         writeConsole(message ?? '');

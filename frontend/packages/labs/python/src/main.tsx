@@ -31,9 +31,15 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost, RootStateProvider} from '@code-dot-org/lab';
 
 import App from './App';
+import {PYODIDE_VERSION, setPyodideBaseUrl} from './runtime/pyodideConfig';
 
 initializeCore({plugins: [localizationPlugin]});
 injectFontAwesome();
+
+// The demo self-hosts the pyodide runtime + wheels under /pyodide/<version>/
+// (assembled by scripts/setup-pyodide-assets.mjs; served from public/). Studio
+// serves its own copy at the default path, so this override is demo-only.
+setPyodideBaseUrl(`/pyodide/${PYODIDE_VERSION}/`);
 
 // The lab loads a project by channel id from the URL; default to the `simple`
 // fixture scenario so the harness works at the root path (the channel id doubles

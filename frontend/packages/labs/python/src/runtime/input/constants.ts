@@ -29,4 +29,9 @@ export const MessageTag = {
   INPUT_PROMPT: '[INPUT_PROMPT]',
   /** The blocking input request failed (no controlling service worker). */
   INPUT_FAILED: '[INPUT_FAILED]',
+  /**
+   * Prefix of a stdout line carrying a base64-encoded matplotlib figure (emitted
+   * by pythonlab_setup's patched `plt.show()`): `MATPLOTLIB_SHOW_IMG <base64>`.
+   */
+  MATPLOTLIB_IMG: 'MATPLOTLIB_SHOW_IMG',
 } as const;

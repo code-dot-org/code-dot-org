@@ -1,4 +1,5 @@
-import type {PyodideMessage, RunRequest, WorkerFile} from './messages';
+import type {PyodideMessage, WorkerFile, WorkerRequest} from './messages';
+import {getPyodideBaseUrl} from './pyodideConfig';
 import {type PyodideRuntime, routeWorkerMessage} from './pyodideRuntime';
 
 // The direct backend: runs the pyodide web worker on this page. This is today's
@@ -28,6 +29,13 @@ export function createWorkerRuntime(): PyodideRuntime {
         callbacks[id]?.();
         delete callbacks[id];
       });
+    // Tell the worker where to load pyodide + wheels from; this also starts the
+    // load (preload). Sent synchronously so it precedes any run.
+    const init: WorkerRequest = {
+      type: 'init',
+      pyodideBaseUrl: getPyodideBaseUrl(),
+    };
+    w.postMessage(init);
     return w;
   }
 
@@ -47,7 +55,7 @@ export function createWorkerRuntime(): PyodideRuntime {
       const id = crypto.randomUUID();
       return new Promise<void>(resolve => {
         callbacks[id] = resolve;
-        const request: RunRequest = {id, python, files};
+        const request: WorkerRequest = {type: 'run', id, python, files};
         ensureWorker().postMessage(request);
       });
     },

@@ -20,6 +20,14 @@ import type {WorkerFile} from '../messages';
  * origin to trust for postMessage and to post its results back to. */
 export const PARENT_ORIGIN_PARAM = 'parentOrigin';
 
+/**
+ * Query param the parent adds to the iframe URL naming where the sandbox should
+ * load pyodide + wheels from. It is the parent's configured base URL (an
+ * origin-relative path like `/pyodide/<version>/`), which resolves against the
+ * sandbox's own origin — so that origin must serve the assets at the same path.
+ */
+export const PYODIDE_BASE_PARAM = 'pyodideBase';
+
 /** Parent page → sandbox iframe. */
 export const ToSandboxMessage = {
   RUN: 'run',

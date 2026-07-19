@@ -27,7 +27,6 @@
 /* The status icon (a spinner while the environment loads) shown beside a
    disabled Run button (legacy `.disabledInfoIcon`). */
 .disabledInfoIcon {
-  padding: 12px;
   color: var(--text-neutral-primary);
   font-size: 16px;
 }

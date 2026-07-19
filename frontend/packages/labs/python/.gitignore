@@ -4,3 +4,6 @@
 /.nyc_output
 /.idea
 .DS_Store
+
+# Assembled by scripts/setup-pyodide-assets.mjs for the demo (not committed).
+/public/pyodide

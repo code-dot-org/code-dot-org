@@ -1,5 +1,6 @@
 import {IconButton} from '@mui/material';
 import {FitAddon} from '@xterm/addon-fit';
+import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
 import {useEffect, useRef, useState} from 'react';
 
@@ -91,6 +92,9 @@ const Console = () => {
       });
       const fitAddon = new FitAddon();
       terminal.loadAddon(fitAddon);
+      // Renders inline images (matplotlib figures) written via getImageMessage's
+      // iTerm2 escape sequence.
+      terminal.loadAddon(new ImageAddon());
 
       const manager = new ConsoleManager(terminal, fitAddon);
       CodebridgeRegistry.setConsoleManager(manager);

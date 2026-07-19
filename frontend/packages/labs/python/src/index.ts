@@ -8,3 +8,6 @@
 export {default} from './App';
 export type {PythonLabProps} from './App';
 export {pythonConfig} from './config';
+// Host-supplied configuration for where the pyodide runtime + wheels are served
+// from (defaults to studio's /blockly/js/pyodide/<version>/).
+export {PYODIDE_VERSION, setPyodideBaseUrl} from './runtime/pyodideConfig';

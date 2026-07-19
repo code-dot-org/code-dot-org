@@ -33,14 +33,15 @@
   },
   "scripts": {
     "build": "vite build",
-    "dev": "vite --port 5137 --strictPort",
+    "dev": "yarn setup:pyodide && vite --port 5137 --strictPort",
     "dev:isolated": "concurrently -k -n app,sandbox -c blue,magenta \"yarn dev\" \"yarn dev:sandbox\"",
-    "dev:sandbox": "vite --port 5200 --strictPort",
+    "dev:sandbox": "yarn setup:pyodide && vite --port 5200 --strictPort",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
+    "setup:pyodide": "node scripts/setup-pyodide-assets.mjs",
     "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },

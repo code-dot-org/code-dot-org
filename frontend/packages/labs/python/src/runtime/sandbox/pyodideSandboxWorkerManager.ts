@@ -1,12 +1,15 @@
+import {version} from 'pyodide';
+
 import {
   initializeInputServiceWorker,
   sendInputToServiceWorker,
 } from '../input/inputServiceWorkerClient';
-import type {PyodideMessage} from '../messages';
+import type {PyodideMessage, WorkerRequest} from '../messages';
 
 import {
   FromSandboxMessage,
   PARENT_ORIGIN_PARAM,
+  PYODIDE_BASE_PARAM,
   type SandboxRunMessage,
   type SandboxSendingInputMessage,
   type ToSandbox,
@@ -26,6 +29,13 @@ const parentOrigin = new URLSearchParams(window.location.search).get(
   PARENT_ORIGIN_PARAM,
 );
 
+// Where to load pyodide + wheels from, named by the parent (see PYODIDE_BASE_PARAM
+// in messages.ts). Resolves against this sandbox origin. Falls back to studio's
+// default path if the parent did not name one.
+const pyodideBaseUrl =
+  new URLSearchParams(window.location.search).get(PYODIDE_BASE_PARAM) ||
+  `/blockly/js/pyodide/${version}/`;
+
 function postToParent(message: unknown) {
   if (parentOrigin) {
     window.parent.postMessage(message, parentOrigin);
@@ -42,6 +52,10 @@ function createWorker(): Worker {
   // Relay every worker message straight up to the parent.
   worker.onmessage = (event: MessageEvent<PyodideMessage>) =>
     postToParent(event.data);
+  // Start the worker's load from this (sandbox) origin's hosted pyodide
+  // directory (named by the parent; see pyodideBaseUrl above).
+  const init: WorkerRequest = {type: 'init', pyodideBaseUrl};
+  worker.postMessage(init);
   return worker;
 }
 
@@ -56,7 +70,8 @@ window.addEventListener('message', event => {
   switch (data?.type) {
     case ToSandboxMessage.RUN: {
       const {id, python, files} = data as SandboxRunMessage;
-      worker?.postMessage({id, python, files});
+      const request: WorkerRequest = {type: 'run', id, python, files};
+      worker?.postMessage(request);
       break;
     }
     case ToSandboxMessage.RESTART_WORKER:

@@ -1905,6 +1905,7 @@ __metadata:
     "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
     "@xterm/addon-fit": "npm:^0.10.0"
+    "@xterm/addon-image": "npm:^0.8.0"
     "@xterm/xterm": "npm:^5.5.0"
     classnames: "catalog:"
     eslint: "catalog:"
@@ -9216,6 +9217,15 @@ __metadata:
   peerDependencies:
     "@xterm/xterm": ^5.0.0
   checksum: 10c0/76926120fc940376afef2cb68b15aec2a99fc628b6e3cc84f2bcb1682ca9b87f982b3c10ff206faf4ebc5b410467b81a7b5e83be37b4ac386586f472e4fa1c61
+  languageName: node
+  linkType: hard
+
+"@xterm/addon-image@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@xterm/addon-image@npm:0.8.0"
+  peerDependencies:
+    "@xterm/xterm": ^5.2.0
+  checksum: 10c0/ddeb425191a595fcf73f92b0733cbf44b3e71e88907a662b16a5b55d433f605d7d2949f78892c0dcfee05ffebf441e30aea0012139fce6fd3f10cc91fb4db3b0
   languageName: node
   linkType: hard
 

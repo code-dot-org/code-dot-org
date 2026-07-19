@@ -31,3 +31,12 @@ export interface RunRequest {
   /** All project files, written to the worker's virtual FS so imports resolve. */
   files: WorkerFile[];
 }
+
+/**
+ * Messages the main thread posts *to* the worker. `init` carries the hosted
+ * pyodide directory and must be sent before any run (the worker begins loading
+ * on receiving it); `run` executes a program.
+ */
+export type WorkerRequest =
+  | {type: 'init'; pyodideBaseUrl: string}
+  | ({type: 'run'} & RunRequest);

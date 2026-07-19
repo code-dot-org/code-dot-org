@@ -1,9 +1,11 @@
 import type {PyodideMessage, WorkerFile} from '../messages';
+import {getPyodideBaseUrl} from '../pyodideConfig';
 import {type PyodideRuntime, routeWorkerMessage} from '../pyodideRuntime';
 
 import {
   FromSandboxMessage,
   PARENT_ORIGIN_PARAM,
+  PYODIDE_BASE_PARAM,
   type SandboxRunMessage,
   type ToSandbox,
   ToSandboxMessage,
@@ -33,6 +35,9 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
   const resolved = new URL(sandboxUrl, window.location.href);
   const sandboxOrigin = resolved.origin;
   resolved.searchParams.set(PARENT_ORIGIN_PARAM, window.location.origin);
+  // Tell the sandbox where to load pyodide from. This is an origin-relative path,
+  // so it resolves against the sandbox origin — which must serve the assets there.
+  resolved.searchParams.set(PYODIDE_BASE_PARAM, getPyodideBaseUrl());
 
   const readyPromise = new Promise<void>(resolve => {
     window.addEventListener('message', event => {
