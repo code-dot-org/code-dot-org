@@ -404,6 +404,7 @@ const PREDEFINED_BEHAVIOR_BLOCKS = [
   'spritelab2_movingLeft',
   'spritelab2_movingWithArrowKeys',
   'spritelab2_patrollingLeftRight',
+  'spritelab2_patrollingOnBlocks',
 ];
 
 /**

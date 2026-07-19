@@ -98,6 +98,66 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       '}',
     ].join('\n'),
   },
+  {
+    name: 'spritelab2_patrollingOnBlocks',
+    pool: 'spritelab2',
+    category: 'Behaviors',
+    config: {
+      func: 'patrollingOnBlocks',
+      blockText: 'patrolling left and right on blocks',
+      returnType: 'Behavior',
+      style: 'behavior_blocks',
+    },
+    // Platform patrol: walk left/right along the 'walls' group, turning at a
+    // platform edge, at the playspace edge, or when blocked (this tick's x
+    // differs from where last tick's step left it — a wall collision pushed
+    // it back). Footing comes from isDirectlyAbove — zGameDev's collide keeps
+    // grounded sprites exactly on top of walls — probed half a grid cell
+    // ahead so the sprite turns when its center reaches the edge. The
+    // playspace floor counts as footing, so a floor patroller just walks the
+    // bounds. Known tradeoff: the half-cell probe can see across a one-cell
+    // gap, so patrollers fall into them.
+    helperCode: [
+      'function patrollingOnBlocks() {',
+      '  return {',
+      '    func: function (spriteId) {',
+      '      var speed = 2;',
+      '      var look = 25;',
+      "      if (getProp(spriteId, 'patrolOBDir') == undefined) {",
+      "        setProp(spriteId, 'patrolOBDir', 1);",
+      '      }',
+      "      var dir = getProp(spriteId, 'patrolOBDir');",
+      "      var grounded = isDirectlyAbove(spriteId, {group: 'walls'});",
+      "      var expected = getProp(spriteId, 'patrolOBExpX');",
+      "      if (grounded && expected != undefined && getProp(spriteId, 'x') !== expected) {",
+      '        dir = -dir;',
+      "        setProp(spriteId, 'patrolOBDir', dir);",
+      '      }',
+      "      changePropBy(spriteId, 'x', speed * dir);",
+      '      if (grounded) {',
+      "        changePropBy(spriteId, 'x', look * dir);",
+      "        var supported = isDirectlyAbove(spriteId, {group: 'walls'});",
+      "        changePropBy(spriteId, 'x', -look * dir);",
+      '        if (!supported) {',
+      "          changePropBy(spriteId, 'x', -speed * dir);",
+      '          dir = -dir;',
+      "          setProp(spriteId, 'patrolOBDir', dir);",
+      '        }',
+      '      }',
+      "      var x = getProp(spriteId, 'x');",
+      '      if (x <= 25 && dir < 0) {',
+      "        setProp(spriteId, 'patrolOBDir', 1);",
+      '      }',
+      '      if (x >= 375 && dir > 0) {',
+      "        setProp(spriteId, 'patrolOBDir', -1);",
+      '      }',
+      "      setProp(spriteId, 'patrolOBExpX', x);",
+      '    },',
+      "    name: 'patrolling on blocks',",
+      '  };',
+      '}',
+    ].join('\n'),
+  },
   // The two platformer composites. They assume the zGameDev helper library
   // (per-tick gravity + player/wall collisions, 8x8 grid, default sprite size
   // = one cell) — the same assumption the GameDev pool blocks make. Defaults
