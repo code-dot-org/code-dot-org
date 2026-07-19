@@ -5,6 +5,9 @@ import {RGBA} from '@cdo/apps/pixelEditor/tools';
 // The animation-list category marking an image as a background rather than a
 // costume.
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
+// Square tiles for platform pieces (the "make platform blocks" block's grid
+// draws from these).
+export const BLOCKS_CATEGORY = 'blocks';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
 // `SerializedAnimationProps` typedef in p5lab/shapes.js (which is plain JS, so

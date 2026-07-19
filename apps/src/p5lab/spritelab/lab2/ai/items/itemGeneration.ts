@@ -9,7 +9,9 @@ import {createUuid} from '@cdo/apps/utils';
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {removeBackground} from './removeBackground';
 
-export type SpriteLab2ItemType = 'sprite' | 'background';
+// 'block' is a square platform tile: drawn full-bleed (no background removal)
+// so copies butt seamlessly when laid out on the grid.
+export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
 // 1-bit background cut); 'smooth' yields a shaded illustration (and a feathered,
@@ -84,6 +86,8 @@ export async function generateImage(
   let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
+  } else if (itemType === 'block') {
+    fullPrompt = `${fullPrompt} Draw a single square tile that fills the entire image edge-to-edge, designed so copies placed side by side tile seamlessly. No border, no background scene — just the tile texture.`;
   }
 
   const {files} = await generateText({
