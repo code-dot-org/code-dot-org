@@ -7,7 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
-import {removeBackground} from './removeBackground';
+import {cropToContent, removeBackground} from './removeBackground';
 
 // 'block' is a square platform tile: drawn full-bleed (no background removal)
 // so copies butt seamlessly when laid out on the grid.
@@ -87,7 +87,7 @@ export async function generateImage(
   if (itemType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
   } else if (itemType === 'block') {
-    fullPrompt = `${fullPrompt} Draw one square block that extends to the very edges of the image on all four sides — no margins, padding, or frame. A few empty pixels at the edges for a slightly irregular outline are fine, but the shape should essentially fill the whole square, so copies placed side by side read as continuous ground. No background scene — just the block itself.`;
+    fullPrompt = `${fullPrompt} Draw one mostly-square block that fills nearly the whole image, on a plain solid bright green (#00FF00) background that shows only where the block's outline falls short of the edges. No background scene — just the block itself.`;
   }
 
   const {files} = await generateText({
@@ -102,15 +102,24 @@ export async function generateImage(
 
   // One processing pipeline: sprites get the green background removed
   // (flood-fill from top-left; pixel art a sharp 1-bit cut, smooth art a
-  // feathered matte), pixel style gets grid-normalized, and any processed
+  // feathered matte); blocks get an edge-seeded key (the block may reach the
+  // corners, where corner-seeding would key the block itself) and are then
+  // cropped to content so the delivered image fills its frame and grid-placed
+  // copies butt cleanly; pixel style gets grid-normalized; any processed
   // image comes back as PNG. A smooth background passes through as-is.
-  if (itemType === 'sprite' || style === 'pixel') {
+  if (itemType !== 'background' || style === 'pixel') {
     let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
     );
     if (itemType === 'sprite') {
       blob = await removeBackground(blob, {soft: style === 'smooth'});
+    } else if (itemType === 'block') {
+      blob = await removeBackground(blob, {
+        soft: style === 'smooth',
+        edgeSeededKey: [0, 255, 0],
+      });
+      blob = await cropToContent(blob);
     }
     let pixelGridSize: number | undefined;
     if (style === 'pixel') {

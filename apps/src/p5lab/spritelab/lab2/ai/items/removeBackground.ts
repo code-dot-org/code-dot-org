@@ -1,9 +1,11 @@
 /**
- * Background removal (green-screen chroma key) for AI-generated sprites.
+ * Background removal (green-screen chroma key) for AI-generated images.
  *
  * The image is generated on a flat #00FF00 background; we flood-fill from the
  * top-left corner and key out every pixel connected to it that matches the
- * corner color. Two matte styles are supported, chosen by the caller:
+ * corner color — or, with edgeSeededKey, key against explicit green flooding
+ * from every border pixel (for subjects that may reach the corners). Two
+ * matte styles are supported, chosen by the caller:
  *
  *   - Sharp (default): a binary 1-bit alpha cut. Background pixels become fully
  *     transparent, everything else stays fully opaque. This is what pixel art
@@ -16,6 +18,8 @@
  * canvas); removeBackground() is the thin DOM/canvas wrapper.
  */
 
+import {findOpaqueBounds} from '../../imageTrim';
+
 export interface MatteOptions {
   // Soft matte feathers the edge (partial alpha + spill suppression). When
   // false (default) the cut is binary, which is correct for pixel art.
@@ -26,6 +30,12 @@ export interface MatteOptions {
   // Soft matte only: distance up to which a background-connected pixel is still
   // part of the edge ramp and gets partial alpha. Ignored when sharp.
   highThreshold?: number;
+  // Key against this exact color and flood from every border pixel, instead
+  // of reading the reference from the top-left corner and flooding from it.
+  // For subjects that may reach the corners (platform blocks): corner-seeding
+  // there would key the subject itself, and background slivers mid-edge
+  // aren't connected to a corner.
+  edgeSeededKey?: [number, number, number];
 }
 
 // Max per-channel difference from the reference color. Cheap and good enough
@@ -68,18 +78,34 @@ export function keyOutBackground(
   data: Uint8ClampedArray,
   width: number,
   height: number,
-  {soft = false, lowThreshold = 30, highThreshold = 90}: MatteOptions = {}
+  {
+    soft = false,
+    lowThreshold = 30,
+    highThreshold = 90,
+    edgeSeededKey,
+  }: MatteOptions = {}
 ): void {
-  const refR = data[0];
-  const refG = data[1];
-  const refB = data[2];
+  const [refR, refG, refB] = edgeSeededKey ?? [data[0], data[1], data[2]];
 
   // Sharp matte collapses the band to a single threshold (binary cut).
   const hi = soft ? Math.max(highThreshold, lowThreshold) : lowThreshold;
 
   const visited = new Uint8Array(width * height);
-  const stack: number[] = [0];
-  visited[0] = 1;
+  const stack: number[] = [];
+  if (edgeSeededKey) {
+    // Seed every border pixel; subject pixels among them are dropped by the
+    // same threshold check that stops the fill crossing the subject.
+    for (let x = 0; x < width; x++) {
+      stack.push(x, (height - 1) * width + x);
+    }
+    for (let y = 1; y < height - 1; y++) {
+      stack.push(y * width, y * width + width - 1);
+    }
+    stack.forEach(idx => (visited[idx] = 1));
+  } else {
+    stack.push(0);
+    visited[0] = 1;
+  }
 
   while (stack.length > 0) {
     const idx = stack.pop()!;
@@ -146,6 +172,65 @@ export async function removeBackground(
 
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob(result => {
+      if (result) {
+        resolve(result);
+      } else {
+        reject(new Error('Failed to convert canvas to blob'));
+      }
+    }, 'image/png');
+  });
+}
+
+/**
+ * Crop an image Blob to its opaque content bounds and return a new PNG Blob.
+ * Returns the input unchanged when there's nothing to crop (full-bleed
+ * content or nothing opaque). Run after keying: the delivered image then
+ * fills its own frame edge-to-edge, so grid-placed copies butt cleanly no
+ * matter how much margin the model left.
+ */
+export async function cropToContent(blob: Blob): Promise<Blob> {
+  const img = await loadImage(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const bounds = findOpaqueBounds(
+    imageData.data,
+    imageData.width,
+    imageData.height
+  );
+  if (
+    !bounds ||
+    (bounds.left === 0 &&
+      bounds.top === 0 &&
+      bounds.right === canvas.width - 1 &&
+      bounds.bottom === canvas.height - 1)
+  ) {
+    return blob;
+  }
+
+  const cropped = document.createElement('canvas');
+  cropped.width = bounds.right - bounds.left + 1;
+  cropped.height = bounds.bottom - bounds.top + 1;
+  cropped
+    .getContext('2d')!
+    .drawImage(
+      canvas,
+      bounds.left,
+      bounds.top,
+      cropped.width,
+      cropped.height,
+      0,
+      0,
+      cropped.width,
+      cropped.height
+    );
+
+  return new Promise<Blob>((resolve, reject) => {
+    cropped.toBlob(result => {
       if (result) {
         resolve(result);
       } else {
