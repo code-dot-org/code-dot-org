@@ -7,7 +7,7 @@ import {
   asyncRun,
   preloadPyodide,
   restartWorkerIfRunning,
-} from './pyodideWorkerManager';
+} from './pyodideManager';
 
 const MAIN_PYTHON_FILE = 'main.py';
 
@@ -16,7 +16,8 @@ const MAIN_PYTHON_FILE = 'main.py';
  * environment is ready by the time a program runs.
  */
 export function preloadPython() {
-  preloadPyodide();
+  // Fire-and-forget: the façade resolves its backend and warms pyodide.
+  void preloadPyodide();
 }
 
 /**
@@ -48,6 +49,7 @@ export async function runPython(source: MultiFileSource) {
 
 /** Stop the running program. */
 export function stopPython() {
-  restartWorkerIfRunning();
+  // Fire-and-forget the restart; reflect the stopped state immediately.
+  void restartWorkerIfRunning();
   store.dispatch(labSystemActions.setIsRunning(false));
 }
