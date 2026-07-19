@@ -55,10 +55,14 @@ $tab-item-height: 34px;
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
-  background: transparent;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
 
   &:disabled {
     opacity: 0.4;
@@ -70,6 +74,11 @@ $tab-item-height: 34px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
 }
 
 // The Code tab + scene picker as one segmented control (scenes UI variant):
@@ -90,6 +99,7 @@ $tab-segment-height: $tab-item-height - 2px;
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
@@ -97,14 +107,21 @@ $tab-segment-height: $tab-item-height - 2px;
     border-radius: 4px 0 0 0;
   }
 
-  // The group paints the active background so both segments share it.
+  // The group paints the active background and teal edge; the segments
+  // inside stay transparent so both share them.
   .tabActive {
     background: transparent;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
   }
 }
 
 .tabGroupActive {
   background: var(--background-neutral-primary);
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
 }
 
 // "Playing from: <scene>" label beside the Play tab: present only when the
