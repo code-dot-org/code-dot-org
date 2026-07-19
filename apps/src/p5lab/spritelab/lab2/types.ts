@@ -51,6 +51,10 @@ export interface SpriteLab2ItemEntry {
   itemType?: 'sprite' | 'background';
 }
 
+// How a scene's world grid behaves. 'none' hides the grid; 'platform' and
+// 'topdown' show it and (Phase 3) drive runtime placement + gravity.
+export type SpriteLab2WorldType = 'none' | 'platform' | 'topdown';
+
 // A named scene: a code workspace plus its world-grid placement. The id is the
 // source of truth (the go-to-scene block stores it); scenes[0] is the default
 // scene Play starts at.
@@ -61,6 +65,8 @@ export interface SpriteLab2Scene {
   source?: WorkspaceSerialization;
   // This scene's world-grid editor state (a costume name per cell, '' empty).
   world?: string[][];
+  // Grid mode; absent = 'none' (no grid), the default for legacy scenes.
+  worldType?: SpriteLab2WorldType;
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.

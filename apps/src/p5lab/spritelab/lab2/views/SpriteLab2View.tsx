@@ -62,6 +62,7 @@ import {
   SpriteLab2LevelProperties,
   SpriteLab2Scene,
   SpriteLab2Source,
+  SpriteLab2WorldType,
 } from '../types';
 import {createEmptyGrid} from '../world/gridConstants';
 
@@ -765,6 +766,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId]
   );
 
+  // Grid mode for the active scene ('none' hides the grid; see the plan).
+  const worldType: SpriteLab2WorldType = activeScene?.worldType ?? 'none';
+  const handleWorldTypeChange = useCallback(
+    (nextType: SpriteLab2WorldType) => {
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === activeSceneId ? {...s, worldType: nextType} : s
+        ),
+      }));
+    },
+    [updateSources, activeSceneId]
+  );
+
   const handleCodeGenerated = useCallback(
     (source: WorkspaceSerialization) => {
       writeActiveSceneSource(source);
@@ -878,7 +893,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
         {activeTab === 'World' && (
           <div className={classNames(moduleStyles.codeTabWrapper)}>
-            <WorldTab grid={worldGrid} onGridChange={handleWorldGridChange} />
+            <WorldTab
+              grid={worldGrid}
+              onGridChange={handleWorldGridChange}
+              worldType={worldType}
+              onWorldTypeChange={handleWorldTypeChange}
+            />
           </div>
         )}
 

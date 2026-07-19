@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {SpriteLab2WorldType} from '../types';
 import {GRID_COLS, GRID_ROWS} from '../world/gridConstants';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -23,6 +24,8 @@ function colorForItem(name: string): string {
 interface WorldTabProps {
   grid: string[][];
   onGridChange: (grid: string[][]) => void;
+  worldType: SpriteLab2WorldType;
+  onWorldTypeChange: (worldType: SpriteLab2WorldType) => void;
 }
 
 /**
@@ -34,6 +37,8 @@ interface WorldTabProps {
 const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   grid,
   onGridChange,
+  worldType,
+  onWorldTypeChange,
 }) => {
   // Available costumes to paint with, from the animation list.
   const itemNames = useAppSelector(state =>
@@ -74,61 +79,90 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       onMouseUp={stopPainting}
       onMouseLeave={stopPainting}
     >
-      <div className={moduleStyles.worldPalette}>
-        <strong>Paint:</strong>
-        <button
-          type="button"
-          className={brush === ERASE ? moduleStyles.brushActive : undefined}
-          onClick={() => setBrush(ERASE)}
+      <label className={moduleStyles.worldTypeRow}>
+        <strong>World:</strong>
+        <select
+          className={moduleStyles.worldTypeSelect}
+          value={worldType}
+          onChange={e =>
+            onWorldTypeChange(e.target.value as SpriteLab2WorldType)
+          }
+          aria-label="World type"
         >
-          Erase
-        </button>
-        {itemNames.map(name => (
-          <button
-            key={name}
-            type="button"
-            className={brush === name ? moduleStyles.brushActive : undefined}
-            onClick={() => setBrush(name)}
-          >
-            <span
-              className={moduleStyles.brushSwatch}
-              style={{background: colorForItem(name)}}
-            />
-            {name}
-          </button>
-        ))}
-        {itemNames.length === 0 && (
-          <span>Add costumes in the Images tab to paint with them.</span>
-        )}
-      </div>
+          <option value="none">None (no grid)</option>
+          <option value="platform">Platformer</option>
+          <option value="topdown">Top-down</option>
+        </select>
+      </label>
 
-      <div
-        className={moduleStyles.worldGrid}
-        style={{
-          gridTemplateColumns: `repeat(${GRID_COLS}, 1fr)`,
-          gridTemplateRows: `repeat(${GRID_ROWS}, 1fr)`,
-        }}
-      >
-        {cells.map((row, r) =>
-          row.map((cell, c) => (
-            <div
-              key={`${r}-${c}`}
-              className={moduleStyles.worldCell}
-              title={cell || 'empty'}
-              style={{background: cell ? colorForItem(cell) : undefined}}
-              onMouseDown={() => {
-                painting.current = true;
-                paint(r, c);
-              }}
-              onMouseEnter={() => {
-                if (painting.current) {
-                  paint(r, c);
+      {worldType === 'none' && (
+        <p className={moduleStyles.worldNone}>
+          No world grid. Choose Platformer or Top-down to place sprites on a
+          grid, or place them from code instead.
+        </p>
+      )}
+
+      {worldType !== 'none' && (
+        <>
+          <div className={moduleStyles.worldPalette}>
+            <strong>Paint:</strong>
+            <button
+              type="button"
+              className={brush === ERASE ? moduleStyles.brushActive : undefined}
+              onClick={() => setBrush(ERASE)}
+            >
+              Erase
+            </button>
+            {itemNames.map(name => (
+              <button
+                key={name}
+                type="button"
+                className={
+                  brush === name ? moduleStyles.brushActive : undefined
                 }
-              }}
-            />
-          ))
-        )}
-      </div>
+                onClick={() => setBrush(name)}
+              >
+                <span
+                  className={moduleStyles.brushSwatch}
+                  style={{background: colorForItem(name)}}
+                />
+                {name}
+              </button>
+            ))}
+            {itemNames.length === 0 && (
+              <span>Add costumes in the Images tab to paint with them.</span>
+            )}
+          </div>
+
+          <div
+            className={moduleStyles.worldGrid}
+            style={{
+              gridTemplateColumns: `repeat(${GRID_COLS}, 1fr)`,
+              gridTemplateRows: `repeat(${GRID_ROWS}, 1fr)`,
+            }}
+          >
+            {cells.map((row, r) =>
+              row.map((cell, c) => (
+                <div
+                  key={`${r}-${c}`}
+                  className={moduleStyles.worldCell}
+                  title={cell || 'empty'}
+                  style={{background: cell ? colorForItem(cell) : undefined}}
+                  onMouseDown={() => {
+                    painting.current = true;
+                    paint(r, c);
+                  }}
+                  onMouseEnter={() => {
+                    if (painting.current) {
+                      paint(r, c);
+                    }
+                  }}
+                />
+              ))
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };

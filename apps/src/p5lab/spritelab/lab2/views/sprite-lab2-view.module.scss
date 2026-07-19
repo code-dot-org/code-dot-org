@@ -423,6 +423,30 @@ $tab-segment-height: $tab-item-height - 2px;
   color: var(--text-neutral-primary);
 }
 
+// World-type picker row at the top of the World tab.
+.worldTypeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.worldTypeSelect {
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+}
+
+// Shown instead of the grid when world type is 'none'.
+.worldNone {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+  font-size: 14px;
+}
+
 .worldPalette {
   display: flex;
   flex-wrap: wrap;
