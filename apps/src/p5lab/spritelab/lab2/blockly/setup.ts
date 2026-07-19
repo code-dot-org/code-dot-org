@@ -135,13 +135,13 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
   ],
 ];
 
-const HOUR_2026_CATEGORY = 'Hour2026';
+const PLATFORM_CATEGORY = 'Platform';
 
-// The Hour2026 category's full lineup, in display order: the platformer
+// The Platform category's full lineup, in display order: the platformer
 // composites plus the core storytelling/event blocks. Entries already in the
 // toolbox elsewhere are cloned (keeping their curated shadows/defaults);
 // otherwise a bare block is created with its field defaults.
-const HOUR_2026_BLOCK_TYPES = [
+const PLATFORM_CATEGORY_BLOCK_TYPES = [
   'spritelab2_makePlatformPlayer',
   'spritelab2_makePlatformBlocks',
   'gamelab_setBackgroundImageAs',
@@ -155,7 +155,7 @@ const HOUR_2026_BLOCK_TYPES = [
 
 /**
  * Surface the platformer composites: lead the "Sprites" category with them,
- * and build the "Hour2026" category at the top of the toolbox — the
+ * and build the "Platform" category at the top of the toolbox — the
  * composites plus the core event/storytelling blocks (toolbox categories
  * reference block types, so a block can appear in any number of them). The
  * composites are lab-owned blocks (extraSharedBlocks), so DB-authored
@@ -209,20 +209,20 @@ export function ensurePlatformerBlocks(toolboxXml: string): string {
       }
     });
 
-    // The Hour2026 category at the top of the toolbox.
-    let hour = categories.find(
-      c => c.getAttribute('name') === HOUR_2026_CATEGORY
+    // The Platform category at the top of the toolbox.
+    let platformCat = categories.find(
+      c => c.getAttribute('name') === PLATFORM_CATEGORY
     );
-    if (!hour) {
-      hour = doc.createElementNS(sprites.namespaceURI, 'category');
-      hour.setAttribute('name', HOUR_2026_CATEGORY);
+    if (!platformCat) {
+      platformCat = doc.createElementNS(sprites.namespaceURI, 'category');
+      platformCat.setAttribute('name', PLATFORM_CATEGORY);
       const firstCategory = categories[0];
-      firstCategory.parentNode?.insertBefore(hour, firstCategory);
+      firstCategory.parentNode?.insertBefore(platformCat, firstCategory);
     }
-    const hourPresent = presentIn(hour);
-    HOUR_2026_BLOCK_TYPES.forEach(type => {
-      if (!hourPresent.has(type)) {
-        hour.appendChild(cloneOrMakeBlock(type));
+    const platformPresent = presentIn(platformCat);
+    PLATFORM_CATEGORY_BLOCK_TYPES.forEach(type => {
+      if (!platformPresent.has(type)) {
+        platformCat.appendChild(cloneOrMakeBlock(type));
       }
     });
 
