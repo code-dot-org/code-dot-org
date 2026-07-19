@@ -108,21 +108,19 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       returnType: 'Behavior',
       style: 'behavior_blocks',
     },
-    // Platform patrol: walk left/right along the 'walls' group, turning at a
-    // platform edge, at the playspace edge, or when blocked (this tick's x
-    // differs from where last tick's step left it — a wall collision pushed
-    // it back). Footing comes from isDirectlyAbove — zGameDev's collide keeps
-    // grounded sprites exactly on top of walls — probed half a grid cell
-    // ahead so the sprite turns when its center reaches the edge. The
+    // Platform patrol: walk left/right along the 'walls' group, turning at
+    // any gap or platform edge, at the playspace edge, or when blocked (this
+    // tick's x differs from where last tick's step left it — a wall collision
+    // pushed it back). Edges/gaps are found with a hasSupportAt point probe
+    // half a grid cell ahead of center: a point sees gaps narrower than the
+    // sprite, so even a cell-wide patroller turns at a one-cell gap instead
+    // of bridging it. Grounding comes from isDirectlyAbove; zGameDev's
+    // collide keeps grounded sprites exactly on top of walls, and the
     // playspace floor counts as footing, so a floor patroller just walks the
-    // bounds. A one-cell gap is narrower than the sprite, so it gets walked
-    // across — with one subtlety: at the gap's exact center the sprite touches
-    // both sides with zero overlap, the collide stops holding it (though
-    // isDirectlyAbove, being edge-inclusive, still says supported), and it
-    // starts dropping through the seam — whether a walk lands on that
-    // knife-edge depends on step parity. Detect the drop as grounded-last-tick
-    // /airborne-now and recover: nudge past the seam, lift back to the walking
-    // line, cancel the fall. Two-cell gaps read as edges via the probe.
+    // bounds. The knife-edge recovery is a safety net for a sprite that ends
+    // up dropping through a gap's zero-overlap seam anyway (e.g. shoved onto
+    // it): grounded last tick + airborne now → nudge past the seam, back up
+    // to the walking line, cancel the fall.
     helperCode: [
       'function patrollingOnBlocks() {',
       '  return {',
@@ -150,9 +148,7 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       '      }',
       "      changePropBy(spriteId, 'x', speed * dir);",
       '      if (grounded) {',
-      "        changePropBy(spriteId, 'x', look * dir);",
-      "        var supported = isDirectlyAbove(spriteId, {group: 'walls'});",
-      "        changePropBy(spriteId, 'x', -look * dir);",
+      "        var supported = hasSupportAt(spriteId, look * dir, {group: 'walls'});",
       '        if (!supported) {',
       "          changePropBy(spriteId, 'x', -speed * dir);",
       '          dir = -dir;',
