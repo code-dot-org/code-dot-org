@@ -10,5 +10,5 @@
 
 .empty {
   padding: 8px;
-  color: var(--codebridge-muted, #666);
+  color: var(--text-neutral-secondary, #666);
 }

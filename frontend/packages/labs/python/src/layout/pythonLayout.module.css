@@ -9,7 +9,7 @@
   width: 220px;
   flex-shrink: 0;
   overflow: auto;
-  border-right: 1px solid var(--codebridge-border, #ccc);
+  border-right: 1px solid var(--borders-neutral-primary, #ccc);
 }
 
 .editorPane {
@@ -29,5 +29,5 @@
   width: 40%;
   flex-shrink: 0;
   min-height: 0;
-  border-left: 1px solid var(--codebridge-border, #ccc);
+  border-left: 1px solid var(--borders-neutral-primary, #ccc);
 }

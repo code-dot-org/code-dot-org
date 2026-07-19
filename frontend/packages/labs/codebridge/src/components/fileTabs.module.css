@@ -1,23 +1,37 @@
 .fileTabs {
   display: flex;
   flex-direction: row;
-  gap: 2px;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
   overflow-x: auto;
-  border-bottom: 1px solid var(--codebridge-border, #ccc);
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  background-color: var(--background-neutral-primary, #fff);
+  border-bottom: 1px solid var(--borders-neutral-primary, #ccc);
 }
 
 .tab {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 4px 8px;
+  gap: 0.25rem;
+  height: 24px;
+  padding: 0 0.25rem 0 0.5rem;
   white-space: nowrap;
   cursor: pointer;
+  border-radius: 4px;
+  color: var(--text-neutral-secondary, #555);
+  background-color: var(--background-neutral-secondary, #f0f0f0);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tab:hover:not(.active) {
+  background-color: var(--background-neutral-tertiary, #e4e4e4);
 }
 
 .active {
-  font-weight: bold;
-  border-bottom: 2px solid var(--codebridge-accent, #1e88e5);
+  color: var(--text-neutral-white-fixed, #fff);
+  background-color: var(--background-brand-teal-primary, #0090a0);
 }
 
 .tabButton {
@@ -30,10 +44,17 @@
 }
 
 .close {
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   padding: 0 2px;
   cursor: pointer;
   color: inherit;
   line-height: 1;
+  border-radius: 3px;
+}
+
+.close:hover {
+  background-color: rgb(0 0 0 / 0.12);
 }

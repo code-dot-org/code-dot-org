@@ -314,16 +314,18 @@ const FileBrowser = () => {
           )}
         </span>
       </div>
-      {isEmpty ? (
-        <div className={styles.empty}>No files yet.</div>
-      ) : (
-        <FileTree
-          source={source}
-          parentId={DEFAULT_FOLDER_ID}
-          handlers={handlers}
-          hideNewFolderButton={config.hideNewFolderButton}
-        />
-      )}
+      <div className={styles.body}>
+        {isEmpty ? (
+          <div className={styles.empty}>No files yet.</div>
+        ) : (
+          <FileTree
+            source={source}
+            parentId={DEFAULT_FOLDER_ID}
+            handlers={handlers}
+            hideNewFolderButton={config.hideNewFolderButton}
+          />
+        )}
+      </div>
     </div>
   );
 };

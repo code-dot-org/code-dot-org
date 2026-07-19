@@ -1,8 +1,9 @@
 .fileBrowser {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 4px;
+  height: 100%;
+  min-height: 0;
+  background-color: var(--background-neutral-primary, #fff);
 }
 
 .header {
@@ -10,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 4px;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
 }
 
 .headerActions {
@@ -17,14 +20,17 @@
   gap: 4px;
 }
 
-.tree,
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 4px;
+}
+
 .folderChildren {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.folderChildren {
   padding-inline-start: 16px;
 }
 
@@ -33,6 +39,11 @@
   align-items: center;
   gap: 4px;
   padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.row:hover {
+  background-color: var(--background-neutral-secondary, #f0f0f0);
 }
 
 .rowLabel {
@@ -74,6 +85,6 @@
 }
 
 .empty {
-  color: var(--codebridge-muted, #666);
+  color: var(--text-neutral-secondary, #666);
   padding: 4px;
 }
