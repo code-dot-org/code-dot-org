@@ -3,9 +3,7 @@
  *
  * The image is generated on a flat #00FF00 background; we flood-fill from the
  * top-left corner and key out every pixel connected to it that matches the
- * corner color — or, with edgeSeededKey, key against explicit green flooding
- * from every border pixel (for subjects that may reach the corners). Two
- * matte styles are supported, chosen by the caller:
+ * corner color. Two matte styles are supported, chosen by the caller:
  *
  *   - Sharp (default): a binary 1-bit alpha cut. Background pixels become fully
  *     transparent, everything else stays fully opaque. This is what pixel art
@@ -30,12 +28,6 @@ export interface MatteOptions {
   // Soft matte only: distance up to which a background-connected pixel is still
   // part of the edge ramp and gets partial alpha. Ignored when sharp.
   highThreshold?: number;
-  // Key against this exact color and flood from every border pixel, instead
-  // of reading the reference from the top-left corner and flooding from it.
-  // For subjects that may reach the corners (platform blocks): corner-seeding
-  // there would key the subject itself, and background slivers mid-edge
-  // aren't connected to a corner.
-  edgeSeededKey?: [number, number, number];
 }
 
 // Max per-channel difference from the reference color. Cheap and good enough
@@ -78,34 +70,18 @@ export function keyOutBackground(
   data: Uint8ClampedArray,
   width: number,
   height: number,
-  {
-    soft = false,
-    lowThreshold = 30,
-    highThreshold = 90,
-    edgeSeededKey,
-  }: MatteOptions = {}
+  {soft = false, lowThreshold = 30, highThreshold = 90}: MatteOptions = {}
 ): void {
-  const [refR, refG, refB] = edgeSeededKey ?? [data[0], data[1], data[2]];
+  const refR = data[0];
+  const refG = data[1];
+  const refB = data[2];
 
   // Sharp matte collapses the band to a single threshold (binary cut).
   const hi = soft ? Math.max(highThreshold, lowThreshold) : lowThreshold;
 
   const visited = new Uint8Array(width * height);
-  const stack: number[] = [];
-  if (edgeSeededKey) {
-    // Seed every border pixel; subject pixels among them are dropped by the
-    // same threshold check that stops the fill crossing the subject.
-    for (let x = 0; x < width; x++) {
-      stack.push(x, (height - 1) * width + x);
-    }
-    for (let y = 1; y < height - 1; y++) {
-      stack.push(y * width, y * width + width - 1);
-    }
-    stack.forEach(idx => (visited[idx] = 1));
-  } else {
-    stack.push(0);
-    visited[0] = 1;
-  }
+  const stack: number[] = [0];
+  visited[0] = 1;
 
   while (stack.length > 0) {
     const idx = stack.pop()!;

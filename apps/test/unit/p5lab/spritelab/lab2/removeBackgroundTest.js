@@ -57,42 +57,4 @@ describe('SpriteLab2 keyOutBackground', () => {
     expect(alpha(data, 1)).toBe(255);
     expect(alpha(data, 2)).toBe(255); // not connected to corner -> kept
   });
-
-  describe('edgeSeededKey (blocks: subject may reach the corners)', () => {
-    const RED = [255, 0, 0];
-    const opts = {edgeSeededKey: [0, 255, 0]};
-
-    it('keys a mid-edge sliver while keeping corner-touching subject', () => {
-      // 3x3, red block touching every corner, one green sliver mid-left edge.
-      // Corner-seeding would key the red itself; edge seeding keys only green.
-      const data = rgba([
-        ...[RED, RED, RED],
-        ...[GREEN, RED, RED],
-        ...[RED, RED, RED],
-      ]);
-      keyOutBackground(data, 3, 3, opts);
-      expect(alpha(data, 3)).toBe(0); // the sliver
-      [0, 1, 2, 4, 5, 6, 7, 8].forEach(i => expect(alpha(data, i)).toBe(255));
-    });
-
-    it('preserves enclosed key color (not border-connected)', () => {
-      const data = rgba([
-        ...[RED, RED, RED],
-        ...[RED, GREEN, RED],
-        ...[RED, RED, RED],
-      ]);
-      keyOutBackground(data, 3, 3, opts);
-      [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach(i =>
-        expect(alpha(data, i)).toBe(255)
-      );
-    });
-
-    it('still keys background connected to a green corner', () => {
-      const data = rgba([GREEN, GREEN, RED]);
-      keyOutBackground(data, 3, 1, opts);
-      expect(alpha(data, 0)).toBe(0);
-      expect(alpha(data, 1)).toBe(0);
-      expect(alpha(data, 2)).toBe(255);
-    });
-  });
 });
