@@ -135,32 +135,55 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
   ],
 ];
 
-const PLATFORM_CATEGORY = 'Platform';
-
-// The Platform category's full lineup, in display order: the platformer
-// composites plus the core storytelling/event blocks. Entries already in the
-// toolbox elsewhere are cloned (keeping their curated shadows/defaults);
-// otherwise a bare block is created with its field defaults.
-const PLATFORM_CATEGORY_BLOCK_TYPES = [
-  'spritelab2_makePlatformPlayer',
-  'spritelab2_makePlatformBlocks',
-  'gamelab_setBackgroundImageAs',
-  'gamelab_spriteClicked',
-  'gamelab_checkTouching',
-  'gamelab_atTime',
-  'gamelab_spriteSay',
-  GO_TO_SCENE_BLOCK_TYPE,
-  GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+// Lab-injected toolbox categories, inserted in this order at the top of every
+// level's toolbox. Each lists its lineup in display order. Entries already in
+// the toolbox elsewhere are cloned (keeping their curated shadows/defaults);
+// otherwise a bare block is created with its field defaults. A category a
+// level already curates itself is left alone (per-type dedupe).
+const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
+  {
+    // The platformer composites plus the core event blocks.
+    name: 'Platform',
+    types: [
+      'spritelab2_makePlatformPlayer',
+      'spritelab2_makePlatformBlocks',
+      'gamelab_setBackgroundImageAs',
+      'gamelab_spriteClicked',
+      'gamelab_checkTouching',
+      'gamelab_atTime',
+      'gamelab_spriteSay',
+      GO_TO_SCENE_BLOCK_TYPE,
+      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+    ],
+  },
+  {
+    // Scene-driven storytelling: place and size characters, speech, click and
+    // timer events, scene jumps, and the simple movement behaviors.
+    name: 'Story',
+    types: [
+      'gamelab_setBackgroundImageAs',
+      'gamelab_makeNewSpriteAnon',
+      'gamelab_setProp',
+      'gamelab_spriteSay',
+      'gamelab_spriteSayTime',
+      'gamelab_spriteClicked',
+      GO_TO_SCENE_BLOCK_TYPE,
+      GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
+      'gamelab_atTime',
+      'gamelab_addBehaviorSimple',
+      'spritelab2_movingLeft',
+      'spritelab2_patrollingLeftRight',
+    ],
+  },
 ];
 
 /**
- * Surface the platformer composites: lead the "Sprites" category with them,
- * and build the "Platform" category at the top of the toolbox — the
- * composites plus the core event/storytelling blocks (toolbox categories
- * reference block types, so a block can appear in any number of them). The
- * composites are lab-owned blocks (extraSharedBlocks), so DB-authored
- * toolboxes don't know them; each category is skipped when a level curates
- * its own entries (same type present).
+ * Lab toolbox additions: lead the "Sprites" category with the platformer
+ * composites, and build the injected categories (Platform, Story, ...) at the
+ * top of the toolbox (toolbox categories reference block types, so a block
+ * can appear in any number of them). The composites are lab-owned blocks
+ * (extraSharedBlocks), so DB-authored toolboxes don't know them; per-type
+ * dedupe leaves alone whatever a level curates itself.
  */
 export function ensurePlatformerBlocks(toolboxXml: string): string {
   try {
@@ -209,21 +232,21 @@ export function ensurePlatformerBlocks(toolboxXml: string): string {
       }
     });
 
-    // The Platform category at the top of the toolbox.
-    let platformCat = categories.find(
-      c => c.getAttribute('name') === PLATFORM_CATEGORY
-    );
-    if (!platformCat) {
-      platformCat = doc.createElementNS(sprites.namespaceURI, 'category');
-      platformCat.setAttribute('name', PLATFORM_CATEGORY);
-      const firstCategory = categories[0];
-      firstCategory.parentNode?.insertBefore(platformCat, firstCategory);
-    }
-    const platformPresent = presentIn(platformCat);
-    PLATFORM_CATEGORY_BLOCK_TYPES.forEach(type => {
-      if (!platformPresent.has(type)) {
-        platformCat.appendChild(cloneOrMakeBlock(type));
+    // The injected categories, in list order, at the top of the toolbox.
+    const firstCategory = categories[0];
+    INJECTED_CATEGORIES.forEach(({name, types}) => {
+      let category = categories.find(c => c.getAttribute('name') === name);
+      if (!category) {
+        category = doc.createElementNS(sprites.namespaceURI, 'category');
+        category.setAttribute('name', name);
+        firstCategory.parentNode?.insertBefore(category, firstCategory);
       }
+      const present = presentIn(category);
+      types.forEach(type => {
+        if (!present.has(type)) {
+          category.appendChild(cloneOrMakeBlock(type));
+        }
+      });
     });
 
     return new XMLSerializer().serializeToString(doc);
