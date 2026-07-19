@@ -293,4 +293,107 @@ describe('SpriteLab2 generateBlocklyJson', () => {
       generateBlocklyJson('when_run\n  behavior owl flying')
     ).toThrow();
   });
+
+  it('maps when_click to a gamelab_spriteClicked hat', () => {
+    const result = generateBlocklyJson(
+      'when_run\n  say hero hi\nwhen_click hero\n  say hero ouch'
+    );
+    const hat = result.blocks.blocks[1];
+    expect(hat.type).toBe('gamelab_spriteClicked');
+    expect(hat.fields.CONDITION).toBe('"when"');
+    expect(hat.inputs.SPRITE.block.fields.ANIMATION).toBe('"hero"');
+    expect(hat.next.block.type).toBe('gamelab_spriteSay');
+  });
+
+  it('maps at_time to a gamelab_atTime hat (seconds default)', () => {
+    const result = generateBlocklyJson(
+      'when_run\n  say hero hi\nat_time 3\n  say hero later'
+    );
+    const hat = result.blocks.blocks[1];
+    expect(hat.type).toBe('gamelab_atTime');
+    expect(hat.fields.UNIT).toBe('"seconds"');
+    expect(hat.inputs.N.block.fields.NUM).toBe(3);
+  });
+
+  it('maps say_for to gamelab_spriteSayTime with text and seconds inputs', () => {
+    const result = generateBlocklyJson('when_run\n  say_for hero 3 Be brave');
+    const block = result.blocks.blocks[0].next.block;
+    expect(block.type).toBe('gamelab_spriteSayTime');
+    expect(block.inputs.SPRITE.block.fields.ANIMATION).toBe('"hero"');
+    expect(block.inputs.TEXT1.block.fields.TEXT).toBe('Be brave');
+    expect(block.inputs.NUM.block.fields.NUM).toBe(3);
+  });
+
+  it('maps the platform composites with XML-wrapped grids', () => {
+    const result = generateBlocklyJson(
+      'when_run\n  platform_blocks brick 00000000 11111111\n  platform_player hero 01000000',
+      {blockNames: ['brick'], costumeNames: ['hero']}
+    );
+    const blocks = result.blocks.blocks[0].next.block;
+    expect(blocks.type).toBe('spritelab2_makePlatformBlocks');
+    expect(blocks.fields.ANIMATION_NAME).toBe('"brick"');
+    expect(blocks.fields.GRID).toContain('<field name="GRID">');
+    const player = blocks.next.block;
+    expect(player.type).toBe('spritelab2_makePlatformPlayer');
+    expect(player.fields.ANIMATION_NAME).toBe('"hero"');
+  });
+
+  it('validates platform_blocks names against the block-image list', () => {
+    expect(() =>
+      generateBlocklyJson('when_run\n  platform_blocks hero 11111111', {
+        blockNames: ['brick'],
+      })
+    ).toThrow(/block image/);
+  });
+
+  describe('profiles', () => {
+    it('platform profile drops story-only and legacy commands', () => {
+      const result = generateBlocklyJson(
+        [
+          'profile: platform',
+          'when_run',
+          '  platform_blocks brick 11111111',
+          '  make_sprite hero 200 100', // story-only: dropped
+          '  gravity hero medium', // legacy: dropped
+          '  say hero go',
+        ].join('\n')
+      );
+      const types = [];
+      for (let b = result.blocks.blocks[0].next?.block; b; b = b.next?.block) {
+        types.push(b.type);
+      }
+      expect(types).toEqual([
+        'spritelab2_makePlatformBlocks',
+        'gamelab_spriteSay',
+      ]);
+    });
+
+    it('story profile drops platform-only commands and off-list behaviors', () => {
+      const result = generateBlocklyJson(
+        [
+          'profile: story',
+          'when_run',
+          '  make_sprite hero 200 100',
+          '  platform_blocks brick 11111111', // platform-only: dropped
+          '  behavior hero draggable', // not a Story behavior: dropped
+          '  behavior hero moving left',
+        ].join('\n')
+      );
+      const types = [];
+      for (let b = result.blocks.blocks[0].next?.block; b; b = b.next?.block) {
+        types.push(b.type);
+      }
+      expect(types).toEqual([
+        'gamelab_makeNewSpriteAnon',
+        'gamelab_addBehaviorSimple',
+      ]);
+    });
+
+    it('without a profile line the legacy vocabulary still works', () => {
+      const result = generateBlocklyJson(
+        'when_run\n  gravity hero medium\n  make_grid block 11111111'
+      );
+      expect(result.blocks.blocks[0].next.block.type).toBe('GameDev_gravity');
+    });
+  });
 });

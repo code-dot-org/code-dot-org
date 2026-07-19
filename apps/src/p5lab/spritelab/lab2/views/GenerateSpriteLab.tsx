@@ -72,7 +72,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   const handleGenerate = useCallback(async () => {
     // Almost every command needs a costume, and with an empty list the model
     // invents names that can't validate. Guide instead of half-loading.
-    const {costumes, backgrounds} = getAvailableImageNames();
+    const {costumes, backgrounds, blocks} = getAvailableImageNames();
     if (costumes.length === 0) {
       setError(
         'Your project has no images yet. Make some in the Images tab first, then generate.'
@@ -98,6 +98,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         sceneIdByName: getSceneIdByName(),
         costumeNames: costumes,
         backgroundNames: backgrounds,
+        blockNames: blocks,
       });
       onCodeGenerated(source);
       setStatus('generated');

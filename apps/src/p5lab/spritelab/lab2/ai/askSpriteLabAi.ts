@@ -2,32 +2,38 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {getStore} from '@cdo/apps/redux';
 
 import {buildPrompt} from '../blockly/generateContent';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import {getTextModel} from './items/modelHelpers';
 
-// The project's costume and background names from the animationList slice, so
-// the model only references images that actually exist. Exported so the
-// generate flow can validate the model's output against the same lists.
+// The project's costume, background, and block-tile names from the
+// animationList slice, so the model only references images that actually
+// exist. Exported so the generate flow can validate the model's output
+// against the same lists.
 export function getAvailableImageNames(): {
   costumes: string[];
   backgrounds: string[];
+  blocks: string[];
 } {
   const costumes: string[] = [];
   const backgrounds: string[] = [];
+  const blocks: string[] = [];
   const animationList = getStore().getState().animationList;
   (animationList?.orderedKeys || []).forEach((key: string) => {
     const props = animationList.propsByKey[key];
     if (!props?.name) {
       return;
     }
-    if ((props.categories || []).includes(BACKGROUNDS_CATEGORY)) {
+    const categories = props.categories || [];
+    if (categories.includes(BACKGROUNDS_CATEGORY)) {
       backgrounds.push(props.name);
+    } else if (categories.includes(BLOCKS_CATEGORY)) {
+      blocks.push(props.name);
     } else {
       costumes.push(props.name);
     }
   });
-  return {costumes, backgrounds};
+  return {costumes, backgrounds, blocks};
 }
 
 // The project's scene names (for go_to_scene). Empty outside the scenes UI
@@ -49,12 +55,13 @@ function getSceneNames(): string[] {
 export default async function askSpriteLabAi(
   userPrompt: string
 ): Promise<string> {
-  const {costumes, backgrounds} = getAvailableImageNames();
+  const {costumes, backgrounds, blocks} = getAvailableImageNames();
   const prompt = buildPrompt(
     userPrompt,
     costumes,
     backgrounds,
-    getSceneNames()
+    getSceneNames(),
+    blocks
   );
 
   let text = '';

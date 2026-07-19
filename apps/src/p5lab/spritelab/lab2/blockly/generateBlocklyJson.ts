@@ -31,6 +31,42 @@ const GROUP_VALUES: {[name: string]: string} = {
 // gamelab_whenKey / gamelab_whileKey KEY dropdown options.
 const KEY_NAMES = ['up', 'down', 'left', 'right', 'space', 'a', 'w', 's', 'd'];
 
+// Command whitelists mirroring the Platform and Story toolbox categories
+// (setup.ts INJECTED_CATEGORIES). When the pseudocode opens with a
+// "profile: platform|story" line, only that profile's commands are emitted —
+// the generated program then draws solely on the matching category's blocks.
+// Without a profile line the full legacy vocabulary applies. Keep in sync
+// with the categories as their lineups evolve.
+export type CodegenProfile = 'platform' | 'story';
+const PROFILE_COMMANDS: Record<CodegenProfile, Set<string>> = {
+  platform: new Set([
+    'when_run',
+    'when_click',
+    'when_touching',
+    'at_time',
+    'set_background',
+    'platform_player',
+    'platform_blocks',
+    'say',
+    'go_to_scene',
+  ]),
+  story: new Set([
+    'when_run',
+    'when_click',
+    'at_time',
+    'set_background',
+    'make_sprite',
+    'set_size',
+    'say',
+    'say_for',
+    'behavior',
+    'go_to_scene',
+  ]),
+};
+// The Story category offers exactly these behaviors (letters-only keys, like
+// BEHAVIOR_BLOCK_TYPES).
+const STORY_BEHAVIORS = new Set(['movingleft', 'patrollingleftandright']);
+
 // gamelab_moveInDirection DIRECTION values by friendly direction name.
 const DIRECTION_VALUES: {[name: string]: string} = {
   up: '"North"',
@@ -74,6 +110,8 @@ export interface GenerateBlocklyJsonOptions {
   // skip validation.
   costumeNames?: string[];
   backgroundNames?: string[];
+  // Platform-tile image names ('blocks' category), for platform_blocks.
+  blockNames?: string[];
 }
 
 interface ScopeFrame {
@@ -109,6 +147,7 @@ export function generateBlocklyJson(
   };
   const knownCostumes = canonicalNames(options.costumeNames);
   const knownBackgrounds = canonicalNames(options.backgroundNames);
+  const knownBlocks = canonicalNames(options.blockNames);
 
   // Dropdowns store the quoted name. Strip any quotes the model added, then
   // validate against the project's images (when provided): a name the
@@ -130,18 +169,21 @@ export function generateBlocklyJson(
     }
     return `"${name}"`;
   };
-  const costumeValue = (raw: string) => imageValue(raw, knownCostumes, 'image');
   const backgroundValue = (raw: string) =>
     imageValue(raw, knownBackgrounds, 'background');
 
-  // Take a costume name off the front of a token list, matching the LONGEST
-  // token-prefix against the project's costumes so multi-word names ("Hero
+  // Take an image name off the front of a token list, matching the LONGEST
+  // token-prefix against the given known names so multi-word names ("Hero
   // Cat") survive whitespace tokenization. Returns the quoted canonical name
   // and the remaining tokens. Without a known-name list, takes one token.
-  const takeCostume = (tokens: string[]): [string, string[]] => {
-    if (knownCostumes) {
+  const takeName = (
+    tokens: string[],
+    known: {[lower: string]: string} | null,
+    kind: string
+  ): [string, string[]] => {
+    if (known) {
       for (let n = Math.min(tokens.length, 6); n >= 1; n--) {
-        const match = knownCostumes[tokens.slice(0, n).join(' ').toLowerCase()];
+        const match = known[tokens.slice(0, n).join(' ').toLowerCase()];
         if (match) {
           return [`"${match}"`, tokens.slice(n)];
         }
@@ -149,11 +191,37 @@ export function generateBlocklyJson(
       throw new Error(
         `"${
           tokens[0] || ''
-        }" isn't one of this project's images (line ${currentLineNumber}). Add it in the Images tab or try rephrasing.`
+        }" isn't one of this project's ${kind}s (line ${currentLineNumber}). Add it in the Images tab or try rephrasing.`
       );
     }
-    return [costumeValue(tokens[0] || ''), tokens.slice(1)];
+    return [`"${(tokens[0] || '').replace(/"/g, '')}"`, tokens.slice(1)];
   };
+  const takeCostume = (tokens: string[]): [string, string[]] =>
+    takeName(tokens, knownCostumes, 'image');
+  const takeBlockImage = (tokens: string[]): [string, string[]] =>
+    takeName(tokens, knownBlocks, 'block image');
+
+  // Rows of 0/1 digits -> rectangular grid for the bitmap field (short rows
+  // padded), or null when no valid rows are present.
+  const parseGridRows = (rows: string[]): (0 | 1)[][] | null => {
+    const grid = rows
+      .filter(row => /^[01]+$/.test(row))
+      .map(row => [...row].map(c => (c === '1' ? 1 : 0) as 0 | 1));
+    if (grid.length === 0) {
+      return null;
+    }
+    const width = Math.max(...grid.map(r => r.length));
+    grid.forEach(r => {
+      while (r.length < width) {
+        r.push(0);
+      }
+    });
+    return grid;
+  };
+  // See make_grid: the bitmap field has no loadState, so field state
+  // round-trips through the XML hooks.
+  const gridFieldValue = (grid: (0 | 1)[][]): string =>
+    `<field name="GRID">${JSON.stringify(grid)}</field>`;
 
   // Sprite-type value input: all sprites wearing the given (quoted) costume.
   const spriteInput = (quotedCostume: string): {block: JsonBlockConfig} => ({
@@ -180,6 +248,15 @@ export function generateBlocklyJson(
     throw new Error(
       "The AI's answer didn't contain a program (no when_run). Try rephrasing."
     );
+  }
+  // A "profile: platform|story" line ahead of the program restricts the
+  // vocabulary to that profile (see PROFILE_COMMANDS).
+  let profile: CodegenProfile | null = null;
+  for (const line of lines.slice(0, firstWhenRun)) {
+    const match = line.trim().match(/^profile:\s*(platform|story)$/i);
+    if (match) {
+      profile = match[1].toLowerCase() as CodegenProfile;
+    }
   }
   lines = lines.slice(firstWhenRun);
 
@@ -232,6 +309,17 @@ export function generateBlocklyJson(
     const trimmed = line.trim();
     const [command, ...rest] = trimmed.split(/\s+/);
     const args = rest.map(a => a.replace(/"/g, ''));
+
+    // Out-of-profile commands are skipped like unknown ones, so the emitted
+    // workspace only ever holds the chosen category's blocks.
+    if (profile && !PROFILE_COMMANDS[profile].has(command)) {
+      console.warn(
+        `generateBlocklyJson: skipping "${command}" — not in the ${profile} profile (line ${
+          i + 1
+        })`
+      );
+      continue;
+    }
 
     if (command === 'when_run') {
       if (i !== 0 || indentation !== 0) {
@@ -293,6 +381,56 @@ export function generateBlocklyJson(
             SPRITE1: spriteInput(costumeA),
             SPRITE2: spriteInput(costumeB),
           },
+        },
+        null
+      );
+      continue;
+    }
+
+    if (command === 'when_click') {
+      if (indentation !== 0) {
+        throw new Error(
+          `'when_click' must be unindented — it starts a new event (line ${
+            i + 1
+          }).`
+        );
+      }
+      const [costume] = takeCostume(args);
+      startHat(
+        {
+          type: 'gamelab_spriteClicked',
+          id: nextId(),
+          fields: {CONDITION: '"when"'},
+          inputs: {SPRITE: spriteInput(costume)},
+        },
+        null
+      );
+      continue;
+    }
+
+    if (command === 'at_time') {
+      if (indentation !== 0) {
+        throw new Error(
+          `'at_time' must be unindented — it starts a new event (line ${
+            i + 1
+          }).`
+        );
+      }
+      const n = parseInt(args[0], 10);
+      const unit = (args[1] || 'seconds').toLowerCase();
+      if (isNaN(n) || !['seconds', 'frames'].includes(unit)) {
+        throw new Error(
+          `'at_time' needs a number and seconds/frames (line ${
+            i + 1
+          }): "${line}"`
+        );
+      }
+      startHat(
+        {
+          type: 'gamelab_atTime',
+          id: nextId(),
+          fields: {UNIT: `"${unit}"`},
+          inputs: {N: numberInput(n)},
         },
         null
       );
@@ -383,33 +521,79 @@ export function generateBlocklyJson(
           );
         }
         const [costume, rows] = takeCostume(args);
-        const grid = rows
-          .filter(row => /^[01]+$/.test(row))
-          .map(row => [...row].map(c => (c === '1' ? 1 : 0)));
-        if (grid.length === 0) {
+        const grid = parseGridRows(rows);
+        if (!grid) {
           throw new Error(
             `'make_grid' needs a costume and rows of 0/1 (line ${
               i + 1
             }): "${line}"`
           );
         }
-        // The bitmap field requires a rectangular grid; pad short rows.
-        const width = Math.max(...grid.map(r => r.length));
-        grid.forEach(r => {
-          while (r.length < width) {
-            r.push(0);
-          }
-        });
         attach(frame, {
           type: 'gamelab_makeSpritesGrid',
           id: nextId(),
-          fields: {
-            ANIMATION_NAME: costume,
-            // The bitmap field has no loadState, so field state round-trips
-            // through the XML hooks: a plain array would hit DOMParser and
-            // load as an "unknown block". This matches what workspaces.save
-            // emits for a real grid block.
-            GRID: `<field name="GRID">${JSON.stringify(grid)}</field>`,
+          fields: {ANIMATION_NAME: costume, GRID: gridFieldValue(grid)},
+        });
+        break;
+      }
+      case 'platform_player': {
+        const [costume, rows] = takeCostume(args);
+        const grid = parseGridRows(rows);
+        if (!grid) {
+          throw new Error(
+            `'platform_player' needs a costume and rows of 0/1 (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'spritelab2_makePlatformPlayer',
+          id: nextId(),
+          fields: {ANIMATION_NAME: costume, GRID: gridFieldValue(grid)},
+        });
+        break;
+      }
+      case 'platform_blocks': {
+        const [blockImage, rows] = takeBlockImage(args);
+        const grid = parseGridRows(rows);
+        if (!grid) {
+          throw new Error(
+            `'platform_blocks' needs a block image and rows of 0/1 (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'spritelab2_makePlatformBlocks',
+          id: nextId(),
+          fields: {ANIMATION_NAME: blockImage, GRID: gridFieldValue(grid)},
+        });
+        break;
+      }
+      case 'say_for': {
+        const [costume, restArgs] = takeCostume(args);
+        const seconds = parseInt(restArgs[0], 10);
+        const words = restArgs.slice(1);
+        if (isNaN(seconds) || words.length === 0) {
+          throw new Error(
+            `'say_for' needs a costume, seconds, and some text (line ${
+              i + 1
+            }): "${line}"`
+          );
+        }
+        attach(frame, {
+          type: 'gamelab_spriteSayTime',
+          id: nextId(),
+          inputs: {
+            SPRITE: spriteInput(costume),
+            TEXT1: {
+              block: {
+                type: 'text',
+                id: nextId(),
+                fields: {TEXT: words.join(' ')},
+              },
+            },
+            NUM: numberInput(seconds),
           },
         });
         break;
@@ -535,6 +719,14 @@ export function generateBlocklyJson(
           .join('')
           .toLowerCase()
           .replace(/[^a-z]/g, '');
+        if (profile === 'story' && !STORY_BEHAVIORS.has(normalized)) {
+          console.warn(
+            `generateBlocklyJson: skipping behavior "${normalized}" — not in the story profile (line ${
+              i + 1
+            })`
+          );
+          break;
+        }
         const behaviorType = BEHAVIOR_BLOCK_TYPES[normalized];
         if (!behaviorType) {
           throw new Error(
