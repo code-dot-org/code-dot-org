@@ -22,23 +22,25 @@ plt.show()
 print("Plotted", len(x), "points")
 `;
 
-const matplotlib: LabFixture = {
-  sources: {
-    source: {
-      files: {
-        '0': {
-          id: '0',
-          name: 'main.py',
-          language: 'python',
-          contents: PROGRAM,
-          folderId: '0',
-          active: true,
-        },
-      },
-      folders: {},
-      openFiles: ['0'],
+// The project this scenario loads. The version panel's "Initial version"
+// restores the sources as first loaded, so this doubles as that baseline.
+const SOURCE = {
+  files: {
+    '0': {
+      id: '0',
+      name: 'main.py',
+      language: 'python',
+      contents: PROGRAM,
+      folderId: '0',
+      active: true,
     },
   },
+  folders: {},
+  openFiles: ['0'],
+};
+
+const matplotlib: LabFixture = {
+  sources: {source: SOURCE},
   levelProperties: {
     '1': createLevelPropertyFixture({
       id: 1,

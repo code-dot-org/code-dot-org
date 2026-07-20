@@ -6,24 +6,26 @@ import {
 // Minimal Python Lab scenario for the standalone demo harness. The host
 // (LabHost) fetches these level properties, app options, and theme from the
 // mock API; the project sources fall back to the lab's DEFAULT_PROJECT.
-const simple: LabFixture = {
-  // The project the host loads for this scenario — a single main.py.
-  sources: {
-    source: {
-      files: {
-        '0': {
-          id: '0',
-          name: 'main.py',
-          language: 'python',
-          contents: 'print("Hello world!")',
-          folderId: '0',
-          active: true,
-        },
-      },
-      folders: {},
-      openFiles: ['0'],
+// The project this scenario loads. The version panel's "Initial version"
+// restores the sources as first loaded, so this doubles as that baseline.
+const SOURCE = {
+  files: {
+    '0': {
+      id: '0',
+      name: 'main.py',
+      language: 'python',
+      contents: 'print("Hello world!")',
+      folderId: '0',
+      active: true,
     },
   },
+  folders: {},
+  openFiles: ['0'],
+};
+
+const simple: LabFixture = {
+  // The project the host loads for this scenario — a single main.py.
+  sources: {source: SOURCE},
   levelProperties: {
     '1': createLevelPropertyFixture({
       id: 1,
