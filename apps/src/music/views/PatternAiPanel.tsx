@@ -728,8 +728,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 color="white"
                 size="small"
                 // Native `disabled` blurs the button, which closes Blockly's
-                // DropDownDiv. Use aria-disabled + a handler guard instead.
+                // DropDownDiv. Use aria-disabled + a handler guard instead;
+                // disableRipple suppresses MUI's press feedback while busy.
                 aria-disabled={generateState === 'generating'}
+                disableRipple={generateState === 'generating'}
                 data-generating={generateState === 'generating'}
                 className={styles.button}
                 onClick={handleAiClick}
