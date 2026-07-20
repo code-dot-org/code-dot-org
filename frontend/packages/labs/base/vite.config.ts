@@ -89,6 +89,7 @@ export default defineConfig({
       entry: [
         // The host shell (Studio / apps only — see lint-config/eslint/lab.mjs).
         'src/host.ts',
+        'src/metrics.ts',
         'src/index.ts',
         'src/types.ts',
         'src/constants.ts',

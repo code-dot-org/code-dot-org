@@ -1,7 +1,7 @@
 import type * as Blockly from 'blockly/core';
 
 import {LabRegistry} from '@code-dot-org/lab/contexts';
-import {LabMetricsReporter} from '@code-dot-org/lab/host';
+import {LabMetricsReporter} from '@code-dot-org/lab/metrics';
 
 import {BlockTypes} from './blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from './blockly/constants';

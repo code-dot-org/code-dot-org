@@ -24,7 +24,7 @@ import {KeyFromName, KeyMapping} from './utils/Notes';
 import type {MusicLevelProperties} from './types';
 import AnalyticsReporter from './LabMusicMetricsReporter';
 
-import type {LabMetricsReporter} from '@code-dot-org/lab/host';
+import type {LabMetricsReporter} from '@code-dot-org/lab/metrics';
 import {LabRegistry} from '@code-dot-org/lab/contexts';
 
 // The tick rate that the Driver will emit Tick events during playback

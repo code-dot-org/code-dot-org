@@ -1,4 +1,4 @@
-import type {LabMetricsReporter} from '@code-dot-org/lab/host';
+import type {LabMetricsReporter} from '@code-dot-org/lab/metrics';
 import {LabRegistry} from '@code-dot-org/lab/contexts';
 
 import type {MusicApiClient, SoundFolder} from '../api';
