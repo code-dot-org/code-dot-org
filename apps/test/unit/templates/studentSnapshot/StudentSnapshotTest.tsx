@@ -76,7 +76,7 @@ describe('StudentSnapshot', () => {
       );
     });
 
-    screen.getByText('Next student >');
+    screen.getByText('Next student');
     screen.getByRole('heading', {level: 4, name: 'Student1 Test'});
     screen.getByText('Lesson Insight');
   });
