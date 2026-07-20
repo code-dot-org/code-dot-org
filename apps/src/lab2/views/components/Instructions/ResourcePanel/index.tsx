@@ -156,12 +156,6 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
-  /**
-   * For standalone projects, collapse the panel on initial mount even when tabs
-   * are present. The user can still expand it. Sketch Lab uses this to give the
-   * canvas full width by default.
-   */
-  collapseOnLoad?: boolean;
   backpackProps?: BackpackProps;
   onImageFlagged?: (
     file: File,
@@ -196,7 +190,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
-  collapseOnLoad = false,
   backpackProps,
   onImageFlagged,
   hasInstructionsDrawer,
@@ -481,11 +474,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     return Object.keys(availableTabs).length > 0;
   }, [availableTabs]);
 
-  const hasOnlyVersionHistoryTab = useMemo(() => {
-    return (
-      Object.keys(availableTabs).length === 1 &&
-      availableTabs[Tabs.VersionHistory] !== undefined
-    );
+  const hasAiTutorTab = useMemo(() => {
+    return availableTabs[Tabs.AiTutor] !== undefined;
   }, [availableTabs]);
 
   const floatingSettingsPanelStyles = usePanelPosition(
@@ -496,25 +486,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
 
   useEffect(() => {
-    // Auto-collapse on initial mount if on a standalone project and either the
-    // lab opted in via collapseOnLoad, there are no available tabs, or the only
-    // available tab is version history. Only run this once to allow the user to
-    // toggle the panel.
-    if (
-      !hasAutoCollapsed.current &&
-      isProjectLevel &&
-      (collapseOnLoad || !hasTabs || hasOnlyVersionHistoryTab)
-    ) {
+    // On a standalone project, auto-collapse the panel on initial mount unless
+    // it offers the AI Tutor tab, which is worth keeping open by default.
+    // Only run this once to allow the user to toggle the panel.
+    if (!hasAutoCollapsed.current && isProjectLevel && !hasAiTutorTab) {
       dispatch(setIsStandaloneCollapsed(true));
       hasAutoCollapsed.current = true;
     }
-  }, [
-    isProjectLevel,
-    hasTabs,
-    dispatch,
-    hasOnlyVersionHistoryTab,
-    collapseOnLoad,
-  ]);
+  }, [isProjectLevel, hasAiTutorTab, dispatch]);
 
   useEffect(() => {
     if (currentTab === undefined && Object.keys(availableTabs).length > 0) {

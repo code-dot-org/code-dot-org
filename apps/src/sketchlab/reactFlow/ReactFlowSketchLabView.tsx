@@ -282,7 +282,6 @@ function ReactFlowSketchLabViewInner({
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
-            collapseOnLoad
             settings={[themeSetting]}
             versionHistoryProps={{
               startSources:
