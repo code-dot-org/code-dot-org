@@ -127,12 +127,18 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         name: 'OK',
         exact: true,
       });
-      if (await dialogOk.isVisible()) {
-        await dialogOk.click();
-      } else {
-        await overlay.click();
-      }
-      await expect(overlay).toBeHidden();
+      // Retry the dismissal until the overlay actually hides. On firefox the
+      // first click can land before the dialog's onClick (closeOverlay) is
+      // bound and silently no-op, leaving the overlay up; re-clicking once the
+      // handler is attached clears it.
+      await expect(async () => {
+        if (await dialogOk.isVisible()) {
+          await dialogOk.click();
+        } else {
+          await overlay.click();
+        }
+        await expect(overlay).toBeHidden({timeout: 2_000});
+      }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
     }
     // Let the header animation finish.
     await expect(this.page.locator('#header_middle_content')).toHaveCSS(
