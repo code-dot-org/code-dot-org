@@ -53,6 +53,9 @@ const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
+// 1px narrower than the 3.5rem (56px) rail so the sidebar overflows and the
+// resize bar paints over the selected tab's border, yielding one uniform edge.
+const COLLAPSED_INFO_PANEL_WIDTH = 55;
 
 function ReactFlowSketchLabViewInner({
   levelProperties,
@@ -274,7 +277,11 @@ function ReactFlowSketchLabViewInner({
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
         <div
-          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          style={{
+            width: isResourcePanelCollapsed
+              ? COLLAPSED_INFO_PANEL_WIDTH
+              : leftPanelWidth,
+          }}
           className={panelClassName}
         >
           <ResourcePanel
@@ -293,13 +300,11 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        {!isResourcePanelCollapsed && (
-          <ResizeBar
-            isVertical={true}
-            separatorProps={panelSeparatorProps}
-            isDragging={isDragging}
-          />
-        )}
+        <ResizeBar
+          isVertical={true}
+          separatorProps={panelSeparatorProps}
+          isDragging={isDragging}
+        />
         <div
           style={
             isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
