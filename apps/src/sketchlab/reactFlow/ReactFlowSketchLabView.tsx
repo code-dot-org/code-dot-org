@@ -3,6 +3,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
@@ -53,9 +54,6 @@ const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
-// 1px narrower than the 3.5rem (56px) rail so the sidebar overflows and the
-// resize bar paints over the selected tab's border, yielding one uniform edge.
-const COLLAPSED_INFO_PANEL_WIDTH = 55;
 
 function ReactFlowSketchLabViewInner({
   levelProperties,
@@ -277,12 +275,11 @@ function ReactFlowSketchLabViewInner({
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
         <div
-          style={{
-            width: isResourcePanelCollapsed
-              ? COLLAPSED_INFO_PANEL_WIDTH
-              : leftPanelWidth,
-          }}
-          className={panelClassName}
+          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          className={classNames(
+            panelClassName,
+            isResourcePanelCollapsed && styles.collapsedPanel
+          )}
         >
           <ResourcePanel
             levelProperties={levelProperties}
@@ -300,11 +297,13 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        <ResizeBar
-          isVertical={true}
-          separatorProps={panelSeparatorProps}
-          isDragging={isDragging}
-        />
+        {!isResourcePanelCollapsed && (
+          <ResizeBar
+            isVertical={true}
+            separatorProps={panelSeparatorProps}
+            isDragging={isDragging}
+          />
+        )}
         <div
           style={
             isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}

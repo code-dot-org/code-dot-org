@@ -137,9 +137,8 @@
     }
 
     &.selected {
-      // Adding this border to match the border on non-selected tabs when collapsed
-      border-inline-end: variables.$default-border;
-
+      // Collapsed, the selected tab looks like the others: no teal accent and
+      // no right border (any rail edge comes from the adjacent resize bar).
       i {
         color: var(--text-neutral-quaternary);
       }
