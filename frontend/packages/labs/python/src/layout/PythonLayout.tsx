@@ -1,7 +1,11 @@
 import {useState, type CSSProperties} from 'react';
 
 import {Console, InfoPanel, Workspace} from '@code-dot-org/codebridge';
-import {PanelContainer, ResizeHandle, WorkspaceHeader} from '@code-dot-org/lab/components';
+import {
+  PanelContainer,
+  ResizeHandle,
+  WorkspaceHeader,
+} from '@code-dot-org/lab/components';
 
 import styles from './pythonLayout.module.css';
 

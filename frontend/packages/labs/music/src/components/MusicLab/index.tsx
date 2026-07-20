@@ -14,7 +14,13 @@ import {
   TopLeftMetricsManager,
 } from '@code-dot-org/blockly';
 import type {BlocklySerialization} from '@code-dot-org/blockly';
-import {GuideInstructions, Layout, Panel, PanelContainer, WorkspaceHeader} from '@code-dot-org/lab/components';
+import {
+  GuideInstructions,
+  Layout,
+  Panel,
+  PanelContainer,
+  WorkspaceHeader,
+} from '@code-dot-org/lab/components';
 import {useLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useBlocklySettings} from '@code-dot-org/lab/hooks';
 import type {ProjectSources} from '@code-dot-org/core/api';
