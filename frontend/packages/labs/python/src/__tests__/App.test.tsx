@@ -33,9 +33,12 @@ vi.mock('@xterm/addon-fit', () => ({
 // the dashboard API (via useApiClient) and needs the host's ApiClientProvider.
 // That's base's concern and is exercised in the dev demo; here we only assert
 // the shell composes.
-vi.mock('../layout/InstructionsPanel', () => ({
-  default: () => <div>instructions</div>,
-}));
+vi.mock('@code-dot-org/codebridge', async () => {
+  const actual = await vi.importActual<
+    typeof import('@code-dot-org/codebridge')
+  >('@code-dot-org/codebridge');
+  return {...actual, InfoPanel: () => <div>instructions</div>};
+});
 
 // The pyodide runner spins up a web worker; keep it out of jsdom.
 vi.mock('../runtime/pythonRunner', () => ({

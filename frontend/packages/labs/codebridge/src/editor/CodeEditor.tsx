@@ -9,7 +9,7 @@ import {FontSize} from '@code-dot-org/lab';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import emptyFilesPlaceholderImage from '../assets/empty-files-placeholder.svg';
-import {CodebridgeEmptyState} from '../components';
+import {CodebridgeEmptyState} from '../components/CodebridgeEmptyState';
 import type {CodebridgeConfig} from '../config';
 import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';

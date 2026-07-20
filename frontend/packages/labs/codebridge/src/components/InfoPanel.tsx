@@ -1,10 +1,6 @@
 import {useCallback, useEffect, useRef} from 'react';
 
-import {
-  useAppDispatch,
-  useAppSelector,
-  useCodebridgeSettings,
-} from '@code-dot-org/codebridge';
+import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 import {LifecycleEvent} from '@code-dot-org/lab';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
@@ -12,16 +8,35 @@ import {useLifecycleNotifier, useThemeSetting} from '@code-dot-org/lab/hooks';
 import {labProjectActions} from '@code-dot-org/lab/redux';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
+import {useAppDispatch, useAppSelector} from '../redux/store';
+
+export interface InfoPanelProps {
+  className?: string;
+  /** Link target for the panel's documentation button. */
+  documentationUrl?: string;
+  /**
+   * Themes this lab supports. Two or more adds a theme picker to the settings
+   * menu; one (or none) leaves it out. See the base `useThemeSetting`.
+   */
+  supportedThemes?: Theme[];
+}
+
 /**
- * The left-hand instructions / resource panel, built on the base
- * `ResourcePanel` (the same component music lab uses). It renders the level's
- * `longInstructions`, version history, and lesson navigation, reading run state
- * from the base `labSystem` slice.
+ * The left-hand instructions / resource panel shared by every Codebridge lab
+ * (legacy `@codebridge/InfoPanel`), built on the base `ResourcePanel` that music
+ * lab uses too. Renders the level's `longInstructions`, version history,
+ * settings, and lesson navigation, reading run state from the base `labSystem`
+ * slice, and publishes what the version panel needs (see below).
  *
- * PythonLayout only mounts inside `CodebridgeLab`, which renders its children
- * only once level properties resolve, so they are present here.
+ * Only mounts inside `CodebridgeLab`, which renders its children once level
+ * properties resolve, so they are present here.
  */
-const InstructionsPanel = ({className}: {className?: string}) => {
+export const InfoPanel = ({
+  className,
+  documentationUrl,
+  supportedThemes = ['Light', 'Dark'],
+}: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
@@ -80,7 +95,7 @@ const InstructionsPanel = ({className}: {className?: string}) => {
   // carries a matching light and dark theme). Order matches legacy: font sizes,
   // then theme.
   const codebridgeSettings = useCodebridgeSettings();
-  const themeSetting = useThemeSetting(['Light', 'Dark']);
+  const themeSetting = useThemeSetting(supportedThemes);
   const settings = themeSetting
     ? [...codebridgeSettings, themeSetting]
     : codebridgeSettings;
@@ -110,7 +125,7 @@ const InstructionsPanel = ({className}: {className?: string}) => {
       isRunning={isRunning}
       hasRun={hasRun}
       hasEdited={hasEdited}
-      documentationUrl="/docs/ide/python"
+      documentationUrl={documentationUrl}
       settings={settings}
       // Enables the Version History tab (like music lab). Auto-save groups stay
       // collapsed by default (`alwaysShowAutoSaves` unset), so the named
@@ -130,5 +145,3 @@ const InstructionsPanel = ({className}: {className?: string}) => {
     />
   );
 };
-
-export default InstructionsPanel;

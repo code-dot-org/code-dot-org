@@ -4,3 +4,7 @@ export {default as FileBrowser} from './FileBrowser';
 export {FileBrowserToggleButton} from './FileBrowserToggleButton';
 export {WithConditionalTooltip} from './WithConditionalTooltip';
 export {CodebridgeEmptyState} from './CodebridgeEmptyState';
+export {InfoPanel} from './InfoPanel';
+export type {InfoPanelProps} from './InfoPanel';
+export {Workspace} from './Workspace';
+export type {WorkspaceProps} from './Workspace';

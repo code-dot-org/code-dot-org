@@ -25,7 +25,8 @@ interface ResizeHandleProps {
 /**
  * A draggable divider between two layout panels. Drag with the pointer, or focus
  * and use the arrow keys, to report a size delta to the parent. A lightweight
- * stand-in for the legacy lab2 `ResizeBar`.
+ * port of the legacy lab2 `ResizeBar` (apps/src/lab2/views/components/layout),
+ * shared by every lab that splits panes.
  *
  * The drag uses pointer capture, so a fast drag that outruns the 1px bar — or one
  * that leaves and re-enters the window — keeps tracking and keeps the `dragging`
@@ -111,8 +112,10 @@ const ResizeHandle = ({
 
   // A resize divider is the WAI-ARIA window-splitter pattern: a focusable,
   // keyboard-operable `separator`. jsx-a11y treats the separator role as
-  // non-interactive, so its interaction / tabindex rules don't apply here.
-  /* eslint-disable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex */
+  // non-interactive, so its interaction / tabindex rules would flag this — but
+  // this package's eslint config does not load jsx-a11y, so no disable is
+  // needed (adding one errors as an unknown rule). Re-add the disables if base
+  // ever adopts the shared react lint config.
   return (
     <div
       role="separator"
@@ -134,7 +137,6 @@ const ResizeHandle = ({
       title={onReset ? 'Drag to resize, double-click to reset' : undefined}
     />
   );
-  /* eslint-enable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex */
 };
 
 export default ResizeHandle;
