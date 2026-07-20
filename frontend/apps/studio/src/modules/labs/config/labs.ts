@@ -39,6 +39,10 @@ export const LAB_REGISTRY = {
     load: () => import('@code-dot-org/python-lab'),
     fixtures: () => import('@code-dot-org/python-lab/mocks'),
   },
+  web: {
+    load: () => import('@code-dot-org/web-lab'),
+    fixtures: () => import('@code-dot-org/web-lab/mocks'),
+  },
 } as const satisfies Record<string, LabRegistryEntry>;
 
 /** A registered lab type (the `$labType` route segment). */

@@ -2515,6 +2515,7 @@ __metadata:
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
     "@code-dot-org/python-lab": "workspace:*"
+    "@code-dot-org/web-lab": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
@@ -2613,7 +2614,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/web-lab@workspace:packages/labs/web":
+"@code-dot-org/web-lab@workspace:*, @code-dot-org/web-lab@workspace:packages/labs/web":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/web-lab@workspace:packages/labs/web"
   dependencies:
