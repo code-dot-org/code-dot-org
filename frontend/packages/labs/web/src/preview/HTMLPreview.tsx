@@ -1,9 +1,11 @@
 import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
+import {useAppSelector} from '@code-dot-org/codebridge';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
+import {labActions, predictLevelActions} from '@code-dot-org/lab/redux';
 
 import {DEFAULT_START_HTML_FILE} from '../constants';
 import {useDebug} from '../debug/DebugContext';
@@ -23,6 +25,7 @@ import {
   getPreviewFiles,
   type PreviewFiles,
 } from './projectFiles';
+import {allowUserScripts} from './scriptPolicy';
 
 // The lab-side half of the preview (legacy apps/src/weblab2/htmlPreview/
 // HTMLPreview.tsx, reduced). It renders an iframe pointed at the preview page on
@@ -31,9 +34,14 @@ import {
 //
 // This side never runs student code — that is the whole point of the split.
 
+// Levelbuilder's start mode, where a curriculum author edits the level's start
+// code and must be able to run it. Base stubs this to false everywhere
+// (see labs/base getInitialSources.ts, SourcesContext.tsx) because the frontend
+// does not read appOptions yet; named here so it is greppable when base wires
+// it up, and because legacy's rule is not complete without it.
+const isStartMode = false;
+
 export interface HTMLPreviewProps {
-  /** False on predict levels, where student scripts must not run. */
-  allowScripts?: boolean;
   /** Block requests leaving the project (reported in the debug panel). */
   blockNetwork?: boolean;
 }
@@ -42,10 +50,7 @@ export interface HTMLPreviewProps {
  * Renders the project in an iframe on the preview origin, keeping it in sync as
  * the student edits.
  */
-export const HTMLPreview = ({
-  allowScripts = true,
-  blockNetwork = true,
-}: HTMLPreviewProps) => {
+export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
   const {currentSources} = useSources<MultiFileSource>();
   const {addConsoleLog, addNetworkRequest, addNetworkResponse} = useDebug();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -59,6 +64,27 @@ export const HTMLPreview = ({
   const [isStopped, setIsStopped] = useState(false);
   // Element inspection runs on the preview origin; we only own the toggle.
   const [inspectorEnabled, setInspectorEnabled] = useState(false);
+
+  // On a predict level the student commits to an answer *before* seeing what the
+  // page does, so their scripts stay off until the prediction is submitted.
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel,
+  );
+  const hasSubmittedPredictResponse = useAppSelector(
+    predictLevelActions.isPredictResponseSubmitted,
+  );
+  const allowScripts = allowUserScripts({
+    isPredictLevel: Boolean(isPredictLevel),
+    hasSubmittedPredictResponse,
+    isStartMode,
+  });
+
+  // Hold the project back until the level has finished loading. Without this the
+  // preview serves the page while levelProperties is still undefined — which
+  // reads as "not a predict level", so the student's scripts run once before the
+  // gate above can apply, showing them the outcome they were meant to predict.
+  // Legacy holds the same way, via its LEVEL_LOADING message.
+  const isLabLoading = useAppSelector(labActions.isLabLoading);
 
   const previewUrl = getPreviewUrl();
   const previewOrigin = useMemo(
@@ -140,7 +166,7 @@ export const HTMLPreview = ({
 
   // Send the project once the preview is up, and on every edit after that.
   useEffect(() => {
-    if (!isReady || !previewOrigin) {
+    if (!isReady || !previewOrigin || isLabLoading) {
       return;
     }
     iframeRef.current?.contentWindow?.postMessage(
@@ -156,7 +182,14 @@ export const HTMLPreview = ({
       {type: IframeMessage.SET_BLOCK_NETWORK, blockNetwork},
       previewOrigin,
     );
-  }, [isReady, previewOrigin, files, contentSecurityPolicy, blockNetwork]);
+  }, [
+    isReady,
+    previewOrigin,
+    files,
+    contentSecurityPolicy,
+    blockNetwork,
+    isLabLoading,
+  ]);
 
   // Push the inspector toggle down. Also re-sent whenever the preview reports
   // ready again: a stop-and-reload replaces the preview page, which comes back

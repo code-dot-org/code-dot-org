@@ -53,8 +53,29 @@ subdomain (`{channelId}.preview.…codeprojects.org`, served by dashboard's
 **the demo uses a single preview origin** to avoid needing wildcard DNS locally,
 which is weaker isolation than production.
 
-Defaults follow legacy's level-driven policy: scripts allowed, network blocked.
-Wiring those to level properties is deferred.
+### Script and network policy
+
+Scripts are gated by the predict-level rule (`src/preview/scriptPolicy.ts`,
+legacy's `allowUserScripts`): on a predict level the student's scripts stay off
+until they submit a prediction, so the page cannot show them the outcome they
+were asked to predict. The answer drives `script-src` in the CSP the service
+worker attaches, so a denial means the script never executes on the preview
+origin at all — not merely that it is hidden.
+
+Two consequences worth knowing:
+
+- The preview holds the project back while `isLabLoading` is true. It has to:
+  before the level loads, `levelProperties` is undefined, which reads as "not a
+  predict level", and the page would run once under a permissive CSP before the
+  gate applied. Legacy holds the same way via its `LEVEL_LOADING` message.
+- Under `script-src 'none'` our own injected reporting scripts are refused too,
+  so a predict level's debug console stays empty until the prediction is in.
+  Legacy behaves the same way.
+
+`blockNetwork` is still hardcoded to `true` here. In legacy it is not level-driven
+at all but a NetworkPanel toggle (`networkRequestsBlocked`) defaulting to
+**false**; porting that toggle is pending, and until then this package is
+deliberately the stricter of the two.
 
 ### Inspector
 
@@ -87,16 +108,22 @@ and the debug panel (console + network, with repeat grouping and blocked/CSP
 reporting) are ported too. Stopping tears the iframe down, so a runaway page
 actually stops running. So is the element inspector described above.
 
+Editor linting lives in the Codebridge shell (`codebridge/src/editor/linters.ts`),
+not here: HTML via htmlhint and JS via eslint-in-the-browser. Legacy's
+`weblab2/cssLinter.ts` was not ported — it is an unwired prototype calling a
+`stylelint` global nothing provides.
+
+The lab is registered with the studio app in
+`frontend/apps/studio/src/modules/labs/config/labs.ts`.
+
 Still to port from legacy:
 
-- **Linters** (`weblab2/htmlLinter.ts`, `cssLinter.ts`) — CodeMirror lint
-  integration for HTML and CSS.
 - Preview navigation history (legacy's back/forward buttons), the per-request
   details box with response bodies, and the copy button — the data already
   arrives for all three.
-- Level-driven `allowScripts` / `blockNetwork`, uploaded assets (the frontend
-  `ProjectFile` schema has no `url` field yet), studio `LAB_REGISTRY`
-  registration, share view, AI tutor, and the intro tour.
+- Uploaded assets: the frontend `ProjectFile` schema has no `url` field yet.
+- The NetworkPanel's block-network toggle (see the policy note above).
+- Share view, AI tutor, and the intro tour.
 
 ## Standalone demo
 
@@ -109,7 +136,11 @@ Fixture scenarios load by channel id:
 
 ```
 http://localhost:5138/frontend-studio/projects/web/simple/edit
+http://localhost:5138/frontend-studio/projects/web/predict/edit
 ```
+
+`predict` is the same project on a predict level, for exercising the script gate:
+`script.js` must not run until a prediction is submitted.
 
 To exercise the preview locally, run the lab and the preview page on two origins
 and point the lab at it:
