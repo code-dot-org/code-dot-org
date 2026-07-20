@@ -61,14 +61,21 @@ class TextResponsesTable extends Component {
     }
   };
 
-  // Questions are often authored in markdown. Strip the
-  // formatting to plain text so the cell stays compact and readable.
-  // markdownToTxt only recognizes headings with a space after '#'
-  // (`## Foo`), so strip any leftover leading '#' markers ourselves
-  // (questions commonly omit the space after '#').
+  // Questions are often authored in markdown. Strip the formatting to plain
+  // text. markdownToTxt leaves a few things behind that we clean up ourselves:
+  //  - markdown images whose URL contains spaces aren't valid syntax, so they
+  //    survive as literal `![](...)` text;
+  //  - raw <img> tags authored as HTML;
+  //  - heading markers with no space after '#' (`##Foo`), which markdownToTxt
+  //    doesn't treat as a heading.
+
   questionFormatter = question =>
     question
-      ? markdownToTxt(question).replace(/^[ \t]*#+[ \t]*/gm, '')
+      ? markdownToTxt(question)
+          .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+          .replace(/<img[^>]*>/gi, '')
+          .replace(/^[ \t]*#+[ \t]*/gm, '')
+          .trim()
       : question;
 
   responseFormatter = (_, {rowData}) => {
