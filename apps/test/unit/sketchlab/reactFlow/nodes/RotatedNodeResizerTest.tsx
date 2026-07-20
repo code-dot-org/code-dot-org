@@ -76,8 +76,6 @@ describe('RotatedNodeResizer', () => {
     expect(rotatable?.querySelector('.resizer')).not.toBeNull();
     // Connection handles must live inside the rotated wrapper so they rotate
     // with the node rather than staying axis-aligned.
-    expect(
-      rotatable?.querySelector('.react-flow__handle')
-    ).not.toBeNull();
+    expect(rotatable?.querySelector('.react-flow__handle')).not.toBeNull();
   });
 });
