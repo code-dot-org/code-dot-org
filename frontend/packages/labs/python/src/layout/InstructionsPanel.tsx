@@ -21,7 +21,7 @@ import ResourcePanel from '@code-dot-org/lab/resourcePanel';
  * PythonLayout only mounts inside `CodebridgeLab`, which renders its children
  * only once level properties resolve, so they are present here.
  */
-const InstructionsPanel = () => {
+const InstructionsPanel = ({className}: {className?: string}) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
   const hasRun = useAppSelector(state => state.labSystem.hasRun);
@@ -105,6 +105,7 @@ const InstructionsPanel = () => {
 
   return (
     <ResourcePanel
+      className={className}
       levelProperties={levelProperties}
       isRunning={isRunning}
       hasRun={hasRun}

@@ -6,18 +6,28 @@
   min-height: 0;
 }
 
-/* Right column: workspace header, workspace, console. The left border is the
-   divider between the (self-sizing) instructions panel and the workspace. */
+/* The instructions / resource panel, sized by the layout so the seam beside it
+   can be dragged — legacy sizes its InfoPanel the same way
+   (`<InfoPanel style={{width: leftPanelWidth}}>`).
+   The width MUST land on the panel itself, not a wrapper: base sizes
+   `.resourcePanel` as `calc(3.5rem + 20%)`, a percentage of its parent, so a
+   fixed-width wrapper compounds (320px wrapper -> 120px panel). Overriding the
+   width here takes that percentage out of play. */
+.instructions {
+  width: var(--instructions-width, 320px);
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Right column: workspace header, workspace, console. The divider on its left
+   is a ResizeHandle, so no border here. */
 .rightColumn {
   flex: 1;
   display: flex;
   flex-direction: column;
   min-width: 0;
   min-height: 0;
-  border-left: var(
-    --lab-border-default,
-    1px solid var(--borders-neutral-primary, #ccc)
-  );
 }
 
 /* Holds the base PanelContainer (which fills 100% of its parent) for the

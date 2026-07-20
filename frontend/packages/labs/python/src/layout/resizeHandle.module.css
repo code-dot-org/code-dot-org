@@ -13,8 +13,11 @@
   background-color: var(--background-neutral-quaternary, #d5d5d5);
 
   /* Raise the handle (and its overhanging grab pseudo) above the adjacent
-     panels so the whole grab area is draggable, not just the 1px line. */
-  z-index: 1;
+     panels so the whole grab area is draggable, not just the 1px line.
+     Must beat the base PanelContainer's own `z-index: 1` header, which is a
+     later sibling and would otherwise cover the overhang that reaches into it —
+     leaving half the grab area dead. */
+  z-index: 2;
 }
 
 /* Grab area — transparent, overhangs 3px into each panel (7px total target). */

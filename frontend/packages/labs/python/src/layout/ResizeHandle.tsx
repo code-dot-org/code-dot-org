@@ -14,6 +14,12 @@ interface ResizeHandleProps {
   value: number;
   min: number;
   max: number;
+  /**
+   * Restore the panel to its default size. Wired to double-click (and Enter /
+   * Space, so it is reachable from the keyboard). Not a legacy behavior — legacy
+   * bars only drag — but a common convention for split panes.
+   */
+  onReset?: () => void;
 }
 
 /**
@@ -33,6 +39,7 @@ const ResizeHandle = ({
   value,
   min,
   max,
+  onReset,
 }: ResizeHandleProps) => {
   // A ref drives the drag math (read synchronously in the move handler, no render
   // lag); the state drives the `dragging` accent class.
@@ -91,9 +98,15 @@ const ResizeHandle = ({
       if (delta !== 0) {
         event.preventDefault();
         onDelta(delta);
+        return;
+      }
+      // Keyboard equivalent of double-clicking the bar to restore the default.
+      if (onReset && (event.key === 'Enter' || event.key === ' ')) {
+        event.preventDefault();
+        onReset();
       }
     },
-    [axis, onDelta],
+    [axis, onDelta, onReset],
   );
 
   // A resize divider is the WAI-ARIA window-splitter pattern: a focusable,
@@ -116,7 +129,9 @@ const ResizeHandle = ({
       onPointerMove={onPointerMove}
       onPointerUp={endDrag}
       onLostPointerCapture={endDrag}
+      onDoubleClick={onReset}
       onKeyDown={onKeyDown}
+      title={onReset ? 'Drag to resize, double-click to reset' : undefined}
     />
   );
   /* eslint-enable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/no-noninteractive-tabindex */
