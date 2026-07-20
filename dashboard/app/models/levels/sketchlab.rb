@@ -28,6 +28,7 @@ class Sketchlab < Level
   serialized_attrs %w(
     start_sources
     exemplar_sources
+    is_project_level
   )
 
   def self.create_from_level_builder(params, level_params)

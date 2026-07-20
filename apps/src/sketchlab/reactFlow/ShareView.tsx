@@ -2,13 +2,19 @@ import React from 'react';
 
 import ShareButtonPanel from '@cdo/apps/lab2/views/components/layout/ShareButtonPanel';
 
-import ReactFlowCanvas, {ReactFlowCanvasProps} from './components/ReactFlowCanvas';
+import ReactFlowCanvas, {
+  ReactFlowCanvasProps,
+} from './components/ReactFlowCanvas';
 
 import shareStyles from '@cdo/apps/lab2/views/components/layout/share-layout.module.scss';
 
 type ShareViewProps = Pick<
   ReactFlowCanvasProps,
-  'levelName' | 'initialNodes' | 'initialEdges' | 'initialViewport' | 'colorMode'
+  | 'levelName'
+  | 'initialNodes'
+  | 'initialEdges'
+  | 'initialViewport'
+  | 'colorMode'
 >;
 
 /**
@@ -18,7 +24,7 @@ type ShareViewProps = Pick<
 const ShareView: React.FunctionComponent<ShareViewProps> = props => {
   return (
     <div className={shareStyles.shareContainer}>
-      <ShareButtonPanel />
+      <ShareButtonPanel hideViewCode />
       <div className={shareStyles.previewContainer}>
         <ReactFlowCanvas {...props} readOnly updateSources={() => {}} />
       </div>
