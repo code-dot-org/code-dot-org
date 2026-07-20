@@ -56,8 +56,13 @@ STORY profile commands:
 
   set_background <image>          Set the stage background to a background image.
   make_sprite <costume> <x> <y>   Make one sprite wearing <costume> at (x, y).
+                                  Sprites start SMALL (50 pixels): in a story
+                                  scene, follow every make_sprite with a
+                                  set_size between 150 and 250 so characters
+                                  are nice and big, unless the user asks for
+                                  something small.
   set_size <costume> <number>     Set the size of sprites with <costume> in
-                                  pixels (100 is typical; the stage is 400).
+                                  pixels (the stage is 400).
   say <costume> <text...>         Say the text in a speech bubble (stays up).
   say_for <costume> <n> <text...> Say the text for <n> seconds, then hide it.
   behavior <costume> <name>       Give sprites with <costume> an ongoing
@@ -90,8 +95,9 @@ profile: story
 when_run
   set_background castle
   make_sprite knight 120 300
+  set_size knight 180
   make_sprite dragon 300 280
-  set_size dragon 150
+  set_size dragon 250
   say_for knight 3 Who goes there?
   behavior dragon patrolling left and right
 when_click dragon

@@ -135,6 +135,16 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
   ],
 ];
 
+// Grid-placement blocks that aren't composites still want a marked-cell
+// default in the toolbox.
+const GRID_FIELD_DEFAULTS = new Map<string, string>([
+  ...PLATFORMER_COMPOSITES,
+  [
+    'spritelab2_makeSpriteAtGrid',
+    platformerGrid((row, col) => (row === 4 && col === 5 ? 1 : 0)),
+  ],
+]);
+
 // Lab-injected toolbox categories, inserted in this order at the top of every
 // level's toolbox. Each lists its lineup in display order. Entries already in
 // the toolbox elsewhere are cloned (keeping their curated shadows/defaults);
@@ -147,6 +157,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     types: [
       'spritelab2_makePlatformPlayer',
       'spritelab2_makePlatformBlocks',
+      'spritelab2_makeSpriteAtGrid',
       'gamelab_setBackgroundImageAs',
       'gamelab_spriteClicked',
       'gamelab_checkTouching',
@@ -193,14 +204,12 @@ export function ensurePlatformerBlocks(toolboxXml: string): string {
     if (!sprites) {
       return toolboxXml;
     }
-    const compositeGrids = new Map(PLATFORMER_COMPOSITES);
-
-    // A new block element: the composites carry their GRID defaults, anything
-    // else starts bare (fields initialize to their own defaults).
+    // A new block element: grid-placement blocks carry their GRID defaults,
+    // anything else starts bare (fields initialize to their own defaults).
     const makeBlock = (type: string) => {
       const block = doc.createElementNS(sprites.namespaceURI, 'block');
       block.setAttribute('type', type);
-      const grid = compositeGrids.get(type);
+      const grid = GRID_FIELD_DEFAULTS.get(type);
       if (grid) {
         const field = doc.createElementNS(sprites.namespaceURI, 'field');
         field.setAttribute('name', 'GRID');

@@ -367,6 +367,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
   // callbacks, not here — editor/tab switches don't fade.
+  // What's on stage right now — updated by every run, including scene jumps —
+  // so "Restart scene" can re-run it.
+  const currentPlayingRef = useRef<
+    | {kind: 'local'; scene: SpriteLab2Scene}
+    | {kind: 'external'; project: ExternalProject; sceneId: string}
+    | null
+  >(null);
+
   const runLocalScene = useCallback(
     (scene: SpriteLab2Scene) => {
       const engine = engineRef.current;
@@ -376,6 +384,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       // Running a local scene leaves any external-project context behind.
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
+      currentPlayingRef.current = {kind: 'local', scene};
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -469,6 +478,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         return;
       }
       currentExternalProjectRef.current = project;
+      currentPlayingRef.current = {kind: 'external', project, sceneId};
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -770,16 +780,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
-  // Re-run the current play session from its start scene.
-  const handleStartOver = useCallback(() => {
-    runScene(playStartSceneId ?? scenes[0]?.id ?? null);
-  }, [runScene, scenes, playStartSceneId]);
-
-  // Mid-play switch from a scene start to the whole game.
-  const handlePlayFromBeginning = useCallback(() => {
+  // Restart the whole game from the first scene.
+  const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(scenes[0]?.id ?? null);
   }, [runScene, scenes]);
+
+  // Re-run whatever scene is on stage right now (through any jumps).
+  const handleRestartScene = useCallback(() => {
+    const current = currentPlayingRef.current;
+    if (!current) {
+      runScene(scenes[0]?.id ?? null);
+    } else if (current.kind === 'local') {
+      // Re-resolve by id: the scene's code may have been edited since.
+      runScene(current.scene.id);
+    } else {
+      runExternalProjectScene(current.project, current.sceneId);
+    }
+  }, [runScene, scenes, runExternalProjectScene]);
 
   // Clicking the live preview opens Play on the scene being previewed.
   // Previewing the first scene IS the beginning; keep the quiet default state.
@@ -834,28 +852,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         playTabExtra={
           playspaceMode === 'play' ? (
             <>
-              {playStartSceneId && (
-                <>
-                  <span className={moduleStyles.playingFrom}>
-                    Playing from:{' '}
-                    {sceneMetadata.find(s => s.id === playStartSceneId)?.name ??
-                      'scene'}
-                  </span>
-                  <button
-                    type="button"
-                    className={moduleStyles.startOver}
-                    onClick={handlePlayFromBeginning}
-                  >
-                    Play from beginning
-                  </button>
-                </>
-              )}
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleStartOver}
+                onClick={handleRestartGame}
               >
-                Start over
+                Restart game
+              </button>
+              <button
+                type="button"
+                className={moduleStyles.startOver}
+                onClick={handleRestartScene}
+              >
+                Restart scene
               </button>
             </>
           ) : undefined

@@ -124,17 +124,7 @@ $tab-segment-height: $tab-item-height - 2px;
   box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
 }
 
-// "Playing from: <scene>" label beside the Play tab: present only when the
-// run started from a previewed scene, so its absence marks a from-the-
-// beginning run.
-.playingFrom {
-  margin-inline-start: 8px;
-  color: var(--text-neutral-secondary);
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-// Action button beside the Play tab (shown only while playing), not a tab.
+// Action buttons beside the Play tab (shown only while playing), not tabs.
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;

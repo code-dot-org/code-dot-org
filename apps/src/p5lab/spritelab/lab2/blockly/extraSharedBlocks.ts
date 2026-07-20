@@ -228,6 +228,39 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
     ].join('\n'),
   },
   {
+    name: 'spritelab2_makeSpriteAtGrid',
+    pool: 'spritelab2',
+    category: 'Sprites',
+    config: {
+      func: 'makeSpriteAtGrid',
+      inline: false,
+      blockText: 'make new {ANIMATION_NAME} sprite at grid location: {GRID}',
+      style: 'sprite_blocks',
+      args: [
+        {name: 'ANIMATION_NAME', customInput: 'costumePicker'},
+        // Single-select, like the platform player: one sprite, one cell.
+        {name: 'GRID', customInput: 'bitmapSingle'},
+      ],
+    },
+    // Plain placement on the same 8x8 grid the platform blocks use — no
+    // group, no controls; just makeNewSpriteAnon at the marked cell's center.
+    helperCode: [
+      'function makeSpriteAtGrid(animation, layout) {',
+      '  var cell = 400 / layout.length;',
+      '  for (var row = 0; row < layout.length; row++) {',
+      '    for (var col = 0; col < layout[row].length; col++) {',
+      '      if (layout[row][col]) {',
+      '        makeNewSpriteAnon(animation, {',
+      '          x: cell / 2 + cell * col,',
+      '          y: cell / 2 + cell * row,',
+      '        });',
+      '      }',
+      '    }',
+      '  }',
+      '}',
+    ].join('\n'),
+  },
+  {
     name: 'spritelab2_makePlatformBlocks',
     pool: 'spritelab2',
     category: 'Sprites',
