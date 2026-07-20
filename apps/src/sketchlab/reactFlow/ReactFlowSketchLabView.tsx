@@ -32,6 +32,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
+import ShareView from './ShareView';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -67,6 +68,8 @@ function ReactFlowSketchLabViewInner({
   const isResourcePanelCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
+  const isShareView = useAppSelector(state => state.lab.isShareView);
+  const themeSetting = useThemeSetting('sketchlab');
 
   useReactFlowSketchLabTour({levelProperties});
 
@@ -255,6 +258,18 @@ function ReactFlowSketchLabViewInner({
     readonlyWorkspace,
   ]);
 
+  if (isShareView) {
+    return (
+      <ShareView
+        levelName={levelProperties.name}
+        initialNodes={initialNodes}
+        initialEdges={initialEdges}
+        initialViewport={initialViewport}
+        colorMode={colorMode}
+      />
+    );
+  }
+
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
@@ -268,7 +283,7 @@ function ReactFlowSketchLabViewInner({
             hasRun={hasRun}
             hasEdited={false}
             collapseOnLoad
-            settings={[useThemeSetting('sketchlab')]}
+            settings={[themeSetting]}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||
