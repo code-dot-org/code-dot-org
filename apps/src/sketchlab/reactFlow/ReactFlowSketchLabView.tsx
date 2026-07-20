@@ -74,7 +74,7 @@ function ReactFlowSketchLabViewInner({
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
 
   const hasAttempted = useAppSelector(
-    state => getCurrentLevel(state)?.status === LevelStatus.attempted
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
   );
 
   const reactFlow = useReactFlow();
