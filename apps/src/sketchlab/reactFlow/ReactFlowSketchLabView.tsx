@@ -71,7 +71,7 @@ function ReactFlowSketchLabViewInner({
   const isShareView = useAppSelector(state => state.lab.isShareView);
   const themeSetting = useThemeSetting('sketchlab');
 
-  useReactFlowSketchLabTour({levelProperties});
+  useReactFlowSketchLabTour({levelProperties, enabled: !isShareView});
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();

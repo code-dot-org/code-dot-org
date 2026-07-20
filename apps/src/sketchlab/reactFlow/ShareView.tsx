@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import ShareButtonPanel from '@cdo/apps/lab2/views/components/layout/ShareButtonPanel';
 
@@ -22,11 +22,16 @@ type ShareViewProps = Pick<
  * next to the sketch canvas. The instructions/resource panel is omitted.
  */
 const ShareView: React.FunctionComponent<ShareViewProps> = props => {
+  const noOpUpdateSources = useCallback(() => {}, []);
   return (
     <div className={shareStyles.shareContainer}>
       <ShareButtonPanel hideViewCode />
       <div className={shareStyles.previewContainer}>
-        <ReactFlowCanvas {...props} readOnly updateSources={() => {}} />
+        <ReactFlowCanvas
+          {...props}
+          readOnly
+          updateSources={noOpUpdateSources}
+        />
       </div>
     </div>
   );
