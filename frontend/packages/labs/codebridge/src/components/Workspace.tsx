@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import {ResizeHandle} from '@code-dot-org/lab';
+import {ResizeHandle} from '@code-dot-org/lab/components';
 
 import CodeEditor from '../editor/CodeEditor';
 

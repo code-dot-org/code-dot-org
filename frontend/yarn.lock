@@ -2205,6 +2205,7 @@ __metadata:
     eslint-plugin-react-hooks: "catalog:"
     eslint-plugin-react-refresh: "catalog:"
     focus-trap-react: "npm:^11.0.4"
+    intro.js: "npm:^7.2.0"
     intro.js-react: "npm:^1.0.0"
     lodash: "npm:^4.17.21"
     prettier: "catalog:"
@@ -15448,6 +15449,13 @@ __metadata:
     intro.js: ">=2.5.0"
     react: ">=0.14.0"
   checksum: 10c0/e45a429419dc746408c7ad5a97f716a0bb16eb66f36742719e140f26f23a81ccab1cdc5f9d3a59b46ff00869ddeb8edf3c62a8f97024b746a13a891eaebc0b12
+  languageName: node
+  linkType: hard
+
+"intro.js@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "intro.js@npm:7.2.0"
+  checksum: 10c0/36570c156409c7197002e4ea13e21e01d43c8d98355f9208ab8263a0476a56abdc8e485b4ef59c5308309dc8c17acc643336713a35d6121095a0470d9d9753f9
   languageName: node
   linkType: hard
 

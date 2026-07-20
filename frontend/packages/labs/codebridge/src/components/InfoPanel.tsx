@@ -2,9 +2,8 @@ import {useCallback, useEffect, useRef} from 'react';
 
 import type {Theme} from '@code-dot-org/component-library/common/contexts';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
-import {LifecycleEvent} from '@code-dot-org/lab';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
-import {useLifecycleNotifier, useThemeSetting} from '@code-dot-org/lab/hooks';
+import {LifecycleEvent,useLifecycleNotifier, useThemeSetting} from '@code-dot-org/lab/hooks';
 import {labProjectActions} from '@code-dot-org/lab/redux';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 

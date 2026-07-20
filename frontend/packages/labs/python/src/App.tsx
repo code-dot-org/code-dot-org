@@ -12,8 +12,7 @@ import type {
   MultiFileSource,
   ProjectSources,
 } from '@code-dot-org/core/api';
-import {LabRegistry} from '@code-dot-org/lab';
-import {useSources} from '@code-dot-org/lab/contexts';
+import {LabRegistry,useSources} from '@code-dot-org/lab/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import styles from './app.module.css';

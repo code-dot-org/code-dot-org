@@ -1,7 +1,7 @@
 import {act, fireEvent, render, screen} from '@testing-library/react';
 import {afterEach, expect, it, vi} from 'vitest';
 
-import {RootStateProvider} from '@code-dot-org/lab';
+import {RootStateProvider} from '@code-dot-org/core/redux';
 import {labSystemActions} from '@code-dot-org/lab/redux';
 
 import {CodebridgeRuntimeProvider} from '../../contexts';

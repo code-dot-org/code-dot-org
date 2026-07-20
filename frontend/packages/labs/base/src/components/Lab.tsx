@@ -13,6 +13,7 @@ import {LevelPropertiesProvider} from '../contexts/LevelPropertiesContext';
 import DialogViews from '../dialogs/DialogViews';
 import {useAppDispatch} from '../redux/store';
 
+import ErrorBoundary from './ErrorBoundary';
 import Loading from './Loading';
 import LoadingOverlay from './LoadingOverlay';
 
@@ -81,11 +82,19 @@ export interface LabProps extends PropsWithChildren {
  * source of truth and lets the host coordinate the lab with the rest of the
  * page (progress, header, etc.).
  */
+const ERROR_MESSAGE =
+  'An error occurred while loading the lab. Try reloading the page.';
+
+function defaultOnError(error: Error, componentStack: string) {
+  console.error('[Lab] render error:', error, componentStack);
+}
+
 const Lab = ({
   isLoading = false,
   levelId,
   standaloneProjectType,
   levelPropertiesMap,
+  onError,
   children,
 }: LabProps) => {
   // Ensure FontAwesome icons are available for all labs
@@ -101,28 +110,39 @@ const Lab = ({
   );
 
   return (
-    <Suspense fallback={isLoading ? <LoadingOverlay isLoading /> : <Loading />}>
-      {!isLoading && (
-        /* UI theming */
-        <ThemeProvider>
-          {/* Supports extra links buttons and toggling */}
-          <ExtraLinksButtonProvider>
-            {/* The host supplies the resolved level-properties map. */}
-            <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
-              {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
+    // A render error in any lab must not take the page down with it — upstream's
+    // shell caught these and this one keeps that contract.
+    <ErrorBoundary
+      key={levelId}
+      // Plain <p>: an error fallback must be minimal or it can fail in turn.
+      fallback={<p role="alert">{ERROR_MESSAGE}</p>}
+      onError={onError ?? defaultOnError}
+    >
+      <Suspense
+        fallback={isLoading ? <LoadingOverlay isLoading /> : <Loading />}
+      >
+        {!isLoading && (
+          /* UI theming */
+          <ThemeProvider>
+            {/* Supports extra links buttons and toggling */}
+            <ExtraLinksButtonProvider>
+              {/* The host supplies the resolved level-properties map. */}
+              <LevelPropertiesProvider levelPropertiesMap={levelPropertiesMap}>
+                {/* Manages the shared lab dialogs (Start Over, Skip, Share, …);
                   without it `useDialogControl().showDialog` is a no-op. */}
-              <DialogControlProvider dialogViews={DialogViews}>
-                {/* Provides browser text-to-speech availability to the
+                <DialogControlProvider dialogViews={DialogViews}>
+                  {/* Provides browser text-to-speech availability to the
                     instructions' TextToSpeech buttons. */}
-                <BrowserTextToSpeechWrapper>
-                  {labContent}
-                </BrowserTextToSpeechWrapper>
-              </DialogControlProvider>
-            </LevelPropertiesProvider>
-          </ExtraLinksButtonProvider>
-        </ThemeProvider>
-      )}
-    </Suspense>
+                  <BrowserTextToSpeechWrapper>
+                    {labContent}
+                  </BrowserTextToSpeechWrapper>
+                </DialogControlProvider>
+              </LevelPropertiesProvider>
+            </ExtraLinksButtonProvider>
+          </ThemeProvider>
+        )}
+      </Suspense>
+    </ErrorBoundary>
   );
 };
 

@@ -82,7 +82,17 @@
     "./redux/predictLevelSlice": {
       "types": "./dist/redux/predictLevelSlice.d.ts"
     },
-    "./styles/variables.scss": "./src/components/layout/variables.scss"
+    "./styles/variables.scss": "./src/components/layout/variables.scss",
+    "./constants": {
+      "types": "./dist/constants.d.ts",
+      "import": "./dist/constants.mjs",
+      "require": "./dist/constants.cjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.mjs",
+      "require": "./dist/types.cjs"
+    }
   },
   "files": [
     "dist",
@@ -97,6 +107,7 @@
     "prettier:fix": "prettier --write .",
     "stylelint": "stylelint src/**/*.scss",
     "stylelint:fix": "yarn run stylelint --fix",
+    "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -117,6 +128,7 @@
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@reduxjs/toolkit": "catalog:",
     "focus-trap-react": "^11.0.4",
+    "intro.js": "^7.2.0",
     "intro.js-react": "^1.0.0",
     "lodash": "^4.17.21",
     "qrcode.react": "^4.2.0",

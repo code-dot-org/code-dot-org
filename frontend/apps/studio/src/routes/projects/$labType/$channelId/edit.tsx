@@ -2,6 +2,8 @@ import {createFileRoute, notFound} from '@tanstack/react-router';
 
 import {Lab} from '@code-dot-org/lab/host';
 
+import LabProviders from '@/modules/labs/LabProviders';
+
 import {getLabEntrypoint} from '@/modules/labs/router/getLabEntrypoint';
 import {getLabFixtures} from '@/modules/labs/router/getLabFixtures';
 
@@ -42,8 +44,10 @@ function RouteComponent() {
   const {LabEntrypoint} = Route.useLoaderData();
 
   return (
-    <Lab>
+    <LabProviders>
+      <Lab>
       <LabEntrypoint />
-    </Lab>
+      </Lab>
+    </LabProviders>
   );
 }

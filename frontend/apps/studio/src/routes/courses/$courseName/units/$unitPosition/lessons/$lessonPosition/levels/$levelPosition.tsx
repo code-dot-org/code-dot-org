@@ -8,6 +8,8 @@ import {
 } from '@code-dot-org/core/api';
 import {Lab} from '@code-dot-org/lab/host';
 
+import LabProviders from '@/modules/labs/LabProviders';
+
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';
@@ -112,19 +114,21 @@ function CourseLevelRoute() {
         currentPosition={resolved.position}
         levels={resolved.levels}
       />
-      <Lab
-        levelId={resolved.levelId}
-        levelPropertiesMap={{[String(resolved.levelId)]: resolved.properties}}
-      >
-        {LabEntrypoint ? (
-          <LabEntrypoint />
-        ) : (
-          // h1: this is the only heading visible when no lab entrypoint exists.
-          <Typography variant="h6" component="h1" sx={{p: 4}}>
-            Unsupported level type: {resolved.properties.appName}
-          </Typography>
-        )}
-      </Lab>
+      <LabProviders>
+        <Lab
+          levelId={resolved.levelId}
+          levelPropertiesMap={{[String(resolved.levelId)]: resolved.properties}}
+        >
+          {LabEntrypoint ? (
+            <LabEntrypoint />
+          ) : (
+            // h1: this is the only heading visible when no lab entrypoint exists.
+            <Typography variant="h6" component="h1" sx={{p: 4}}>
+              Unsupported level type: {resolved.properties.appName}
+            </Typography>
+          )}
+        </Lab>
+      </LabProviders>
     </>
   );
 }

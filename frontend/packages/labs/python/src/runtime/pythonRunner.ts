@@ -4,7 +4,7 @@ import {
   getRunTimestampMessage,
 } from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
-import {LabRegistry} from '@code-dot-org/lab';
+import {LabRegistry} from '@code-dot-org/lab/contexts';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import {

@@ -7,7 +7,7 @@ import {
   type PropsWithChildren,
 } from 'react';
 
-import {LifecycleEvent, useLifecycleNotifier} from '@code-dot-org/lab';
+import {LifecycleEvent, useLifecycleNotifier} from '@code-dot-org/lab/hooks';
 
 // State for the debug panel: what the student's page logged, and what it asked
 // the network for. Ported from apps/src/weblab2/redux/{consoleRedux,networkRedux}.ts
