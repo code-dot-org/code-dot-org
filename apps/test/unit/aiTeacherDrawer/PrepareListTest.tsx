@@ -124,9 +124,7 @@ describe('PrepareList', () => {
       ])
     );
     await renderAndSettle(<PrepareList />);
-    expect(
-      screen.queryByText('Period 1: Intro to CS')
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText('Period 1: Intro to CS')).not.toBeInTheDocument();
     expect(screen.getByText('Period 2: Game Design')).toBeInTheDocument();
   });
 
@@ -192,9 +190,7 @@ describe('PrepareList', () => {
     });
 
     await renderAndSettle(<PrepareList />);
-    expect(
-      screen.getByText(/finishing this unit/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/finishing this unit/i)).toBeInTheDocument();
   });
 
   it('adds Coming up option to date picker when coming_up data is present', async () => {
@@ -204,15 +200,18 @@ describe('PrepareList', () => {
     (HttpClient.fetchJson as jest.Mock).mockResolvedValue({
       value: {
         1: makeLessonData({
-          coming_up: {lesson_id: 20, name: 'Lesson 2: Loops', url: '/lessons/2', podcast_url: null},
+          coming_up: {
+            lesson_id: 20,
+            name: 'Lesson 2: Loops',
+            url: '/lessons/2',
+            podcast_url: null,
+          },
         }),
       },
     });
 
     await renderAndSettle(<PrepareList />);
-    expect(
-      screen.getByRole('option', {name: 'Coming up'})
-    ).toBeInTheDocument();
+    expect(screen.getByRole('option', {name: 'Coming up'})).toBeInTheDocument();
   });
 
   it('shows coming_up lesson when Coming up option is selected', async () => {
@@ -224,7 +223,12 @@ describe('PrepareList', () => {
       value: {
         1: makeLessonData({
           name: 'Lesson 1: Intro',
-          coming_up: {lesson_id: 20, name: 'Lesson 2: Loops', url: '/lessons/2', podcast_url: null},
+          coming_up: {
+            lesson_id: 20,
+            name: 'Lesson 2: Loops',
+            url: '/lessons/2',
+            podcast_url: null,
+          },
         }),
       },
     });
@@ -248,15 +252,19 @@ describe('PrepareList', () => {
       value: {
         1: makeLessonData({
           history: [
-            {lesson_id: 5, name: 'Lesson 5', date: '2026-07-15', url: '/lessons/5', podcast_url: null},
+            {
+              lesson_id: 5,
+              name: 'Lesson 5',
+              date: '2026-07-15',
+              url: '/lessons/5',
+              podcast_url: null,
+            },
           ],
         }),
       },
     });
 
     await renderAndSettle(<PrepareList />);
-    expect(
-      screen.getByRole('option', {name: /July 15/})
-    ).toBeInTheDocument();
+    expect(screen.getByRole('option', {name: /July 15/})).toBeInTheDocument();
   });
 });

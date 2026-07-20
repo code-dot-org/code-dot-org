@@ -98,16 +98,12 @@ describe('SectionPodcastCard', () => {
           lesson={{completed_unit: true, name: 'Lesson 5: Variables'}}
         />
       );
-      expect(
-        screen.queryByText('Lesson 5: Variables')
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText('Lesson 5: Variables')).not.toBeInTheDocument();
     });
 
     it('does not show lesson name when lesson is null', () => {
       render(<SectionPodcastCard {...DEFAULT_PROPS} lesson={null} />);
-      expect(
-        screen.queryByText('Lesson 3: Variables')
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText('Lesson 3: Variables')).not.toBeInTheDocument();
     });
   });
 
