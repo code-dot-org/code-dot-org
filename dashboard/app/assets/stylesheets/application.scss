@@ -300,8 +300,8 @@ img.video_thumbnail {
       }
 
       &:hover, &:active {
-        // no borders-accent-orange token exists; background token used as the underline color
-        border-bottom: solid 2px var(--background-accent-orange-primary);
+        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
+        border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
       }
@@ -331,7 +331,8 @@ img.video_thumbnail {
     height: 35px;
     a:hover {
       text-decoration: none;
-      background-color: var(--background-accent-orange-primary);
+      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
+      background-color: $orange;
     }
     &:active {
       border: 1px solid var(--background-neutral-white-fixed) !important;
