@@ -100,10 +100,33 @@ export async function startPreviewPage() {
     return;
   }
 
+  /**
+   * Inject our reporting scripts into every HTML file BEFORE the worker serves
+   * it. This has to happen here, not when the iframe loads: the page's own
+   * scripts run while it parses, so an override applied on `load` would miss
+   * everything they logged. (Legacy does the same in useProjectServiceWorker.)
+   */
+  const withInjectedScripts = (source: PreviewFiles): PreviewFiles =>
+    Object.fromEntries(
+      Object.entries(source).map(([path, file]) => {
+        if (!path.endsWith('.html')) {
+          return [path, file];
+        }
+        const doc = new DOMParser().parseFromString(file.content, 'text/html');
+        // Relative URLs resolve against the file's own folder.
+        const folder = path.includes('/') ? path.replace(/[^/]+$/, '') : '';
+        addBaseTagToDocument(doc, `${window.location.origin}/${folder}`);
+        addConsoleOverrideToDocument(doc);
+        addCSPViolationListenerToDocument(doc);
+        addParametersToDocument({}, doc);
+        return [path, {...file, content: doc.documentElement.outerHTML}];
+      }),
+    );
+
   const sendFiles = (contentSecurityPolicy: string) =>
     worker?.postMessage({
       type: ProjectServiceWorkerMessage.UPDATE_FILES,
-      files,
+      files: withInjectedScripts(files),
       contentSecurityPolicy,
     });
 
@@ -148,22 +171,6 @@ export async function startPreviewPage() {
       default:
         break;
     }
-  });
-
-  // Inject the reporting scripts into each page as it loads. Same-origin, so
-  // the document is reachable.
-  iframe.addEventListener('load', () => {
-    const doc = iframe.contentDocument;
-    if (!doc) {
-      return;
-    }
-    const base = currentFile.includes('/')
-      ? `${window.location.origin}/${currentFile.replace(/[^/]+$/, '')}`
-      : `${window.location.origin}/`;
-    addBaseTagToDocument(doc, base);
-    addConsoleOverrideToDocument(doc);
-    addCSPViolationListenerToDocument(doc);
-    addParametersToDocument({}, doc);
   });
 
   postToParent({type: IframeMessage.IFRAME_READY});

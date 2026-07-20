@@ -4,6 +4,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {DEFAULT_START_HTML_FILE} from '../constants';
+import {useDebug} from '../debug/DebugContext';
 
 import {IframeMessage} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicy';
@@ -38,6 +39,7 @@ export const HTMLPreview = ({
   blockNetwork = true,
 }: HTMLPreviewProps) => {
   const {currentSources} = useSources<MultiFileSource>();
+  const {addConsoleLog, addNetworkRequest, addNetworkResponse} = useDebug();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isReady, setIsReady] = useState(false);
 
@@ -77,8 +79,9 @@ export const HTMLPreview = ({
     [previewOrigin, allowScripts],
   );
 
-  // Listen for the preview page coming up. (Console and network reports arrive
-  // on the same channel; the debug panel consumes them in a later increment.)
+  // Listen to the preview: readiness, plus everything the student's page
+  // reported (console output, errors, CSP violations, network activity), which
+  // the debug panel displays.
   useEffect(() => {
     if (!previewOrigin) {
       return;
@@ -87,13 +90,31 @@ export const HTMLPreview = ({
       if (event.origin !== previewOrigin) {
         return;
       }
-      if (event.data?.type === IframeMessage.IFRAME_READY) {
-        setIsReady(true);
+      const data = event.data ?? {};
+      switch (data.type) {
+        case IframeMessage.IFRAME_READY:
+          setIsReady(true);
+          break;
+        case IframeMessage.CONSOLE_LOG:
+          addConsoleLog(data.level, data.args ?? []);
+          break;
+        case IframeMessage.NETWORK_REQUEST:
+          if (data.requestData?.id) {
+            addNetworkRequest(data.requestData.id, data.requestData);
+          }
+          break;
+        case IframeMessage.NETWORK_RESPONSE:
+          if (data.responseData?.id) {
+            addNetworkResponse(data.responseData.id, data.responseData);
+          }
+          break;
+        default:
+          break;
       }
     };
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
-  }, [previewOrigin]);
+  }, [previewOrigin, addConsoleLog, addNetworkRequest, addNetworkResponse]);
 
   // Send the project once the preview is up, and on every edit after that.
   useEffect(() => {
