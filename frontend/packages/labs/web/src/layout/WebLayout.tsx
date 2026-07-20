@@ -67,6 +67,9 @@ const WebWorkspace = () => {
       <InfoPanel
         className={styles.instructions}
         documentationUrl="/docs/ide/web"
+        // Web Lab's console is the debug panel's, styled by the design system,
+        // so the Codebridge console font-size setting would do nothing here.
+        hasConsole={false}
       />
       <ResizeHandle
         axis="x"
@@ -140,7 +143,11 @@ const WebWorkspace = () => {
               // Alone, the preview takes the whole column; split, it is sized by
               // the divider and the editor takes what is left.
               <div
-                className={styles.previewPane}
+                className={
+                  isSplit
+                    ? styles.previewPane
+                    : `${styles.previewPane} ${styles.previewPaneFull}`
+                }
                 style={isSplit ? {width: previewWidth} : undefined}
               >
                 <HTMLPreview />

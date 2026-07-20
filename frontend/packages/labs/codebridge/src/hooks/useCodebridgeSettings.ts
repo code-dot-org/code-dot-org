@@ -11,15 +11,26 @@ const fontSizeOptions = (Object.keys(FontSize) as FontSizeKey[]).map(key => ({
   text: key,
 }));
 
+export interface CodebridgeSettingsOptions {
+  /**
+   * Whether this lab renders the Codebridge `Console`. Only then is its font
+   * size worth offering — a lab with no such console (Web Lab, whose console
+   * lives in its own debug panel) would show a setting that changes nothing.
+   */
+  hasConsole?: boolean;
+}
+
 /**
  * The Codebridge-owned settings for the resource panel's Settings menu: editor
- * and console font size. Ported and trimmed from
- * apps/src/codebridge/hooks/useCodebridgeSettings.ts — the theme setting is
- * contributed separately by the host lab (see the base `useThemeSetting`), and
- * the layout toggle is omitted (the port has a single layout). Backend
- * per-user persistence is deferred; the choice is session-only.
+ * font size, and console font size for labs that have a Codebridge console.
+ * Ported and trimmed from apps/src/codebridge/hooks/useCodebridgeSettings.ts —
+ * the theme setting is contributed separately by the host lab (see the base
+ * `useThemeSetting`), and the layout toggle is omitted (the port has a single
+ * layout). Backend per-user persistence is deferred; the choice is session-only.
  */
-export const useCodebridgeSettings = (): Setting[] => {
+export const useCodebridgeSettings = ({
+  hasConsole = true,
+}: CodebridgeSettingsOptions = {}): Setting[] => {
   const dispatch = useAppDispatch();
   const editorFontSizeKey = useAppSelector(
     state => state.labView.editorFontSizeKey,
@@ -28,15 +39,21 @@ export const useCodebridgeSettings = (): Setting[] => {
     state => state.labView.consoleFontSizeKey,
   );
 
+  const editorFontSize: Setting = {
+    id: 'editorFontSize',
+    label: 'Text editor font size',
+    options: fontSizeOptions,
+    selectedValue: editorFontSizeKey,
+    onChange: value =>
+      dispatch(labViewActions.setEditorFontSize(value as FontSizeKey)),
+  };
+
+  if (!hasConsole) {
+    return [editorFontSize];
+  }
+
   return [
-    {
-      id: 'editorFontSize',
-      label: 'Text editor font size',
-      options: fontSizeOptions,
-      selectedValue: editorFontSizeKey,
-      onChange: value =>
-        dispatch(labViewActions.setEditorFontSize(value as FontSizeKey)),
-    },
+    editorFontSize,
     {
       id: 'consoleFontSize',
       label: 'Console font size',

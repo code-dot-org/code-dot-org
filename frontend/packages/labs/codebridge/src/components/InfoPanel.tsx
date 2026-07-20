@@ -20,6 +20,12 @@ export interface InfoPanelProps {
    * menu; one (or none) leaves it out. See the base `useThemeSetting`.
    */
   supportedThemes?: Theme[];
+  /**
+   * Whether this lab renders the Codebridge `Console`. False drops the console
+   * font-size setting, which would otherwise change nothing (Web Lab shows its
+   * console in the debug panel, styled by the design system).
+   */
+  hasConsole?: boolean;
 }
 
 /**
@@ -36,6 +42,7 @@ export const InfoPanel = ({
   className,
   documentationUrl,
   supportedThemes = ['Light', 'Dark'],
+  hasConsole = true,
 }: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
@@ -90,11 +97,11 @@ export const InfoPanel = ({
     }
   }, [dispatch, currentSources]);
 
-  // Codebridge contributes the editor/console font-size settings; Python Lab
-  // supports both themes, so it also opts in to the theme toggle (its editor
-  // carries a matching light and dark theme). Order matches legacy: font sizes,
-  // then theme.
-  const codebridgeSettings = useCodebridgeSettings();
+  // Codebridge contributes the font-size settings — console font size only for
+  // labs that render its console. Python Lab supports both themes, so it also
+  // opts in to the theme toggle (its editor carries a matching light and dark
+  // theme). Order matches legacy: font sizes, then theme.
+  const codebridgeSettings = useCodebridgeSettings({hasConsole});
   const themeSetting = useThemeSetting(supportedThemes);
   const settings = themeSetting
     ? [...codebridgeSettings, themeSetting]
