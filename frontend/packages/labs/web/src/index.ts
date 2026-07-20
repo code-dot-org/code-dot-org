@@ -7,6 +7,5 @@
 // HTML preview and debug panel.
 
 export {default} from './App';
-export type {WebLabProps} from './App';
 export {webConfig} from './config';
 export {DEFAULT_PROJECT, DEFAULT_START_HTML_FILE} from './constants';

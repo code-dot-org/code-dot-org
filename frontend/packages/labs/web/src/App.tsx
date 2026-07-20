@@ -1,23 +1,9 @@
 import {CodebridgeLab} from '@code-dot-org/codebridge';
-import type {LevelPropertiesMap} from '@code-dot-org/core/api';
 
 import styles from './app.module.css';
 import {webConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import WebLayout from './layout/WebLayout';
-
-/**
- * Host-supplied props for the Web Lab entrypoint — the standard
- * `LabEntrypointProps` loading contract the studio host drives. Forwarded to
- * {@link CodebridgeLab}, which owns sources, theming, and the level-properties
- * context.
- */
-export interface WebLabProps {
-  isLoading: boolean;
-  levelId?: string;
-  standaloneProjectType?: string;
-  levelPropertiesMap?: LevelPropertiesMap;
-}
 
 /**
  * The Web Lab entrypoint. Composes the Codebridge shell: `CodebridgeLab`
@@ -28,13 +14,11 @@ export interface WebLabProps {
  * re-renders as the project changes), and its console is the debug panel rather
  * than the Codebridge one. Both arrive with the preview increment.
  */
-const WebLab = (props: WebLabProps) => (
+// Self-contained: the studio host renders the single `<Lab>` (see LabHost) and
+// publishes level data to context, so the entrypoint takes no props.
+const WebLab = () => (
   <div className={styles.app}>
-    <CodebridgeLab
-      {...props}
-      config={webConfig}
-      defaultSources={DEFAULT_PROJECT}
-    >
+    <CodebridgeLab config={webConfig} defaultSources={DEFAULT_PROJECT}>
       <WebLayout />
     </CodebridgeLab>
   </div>

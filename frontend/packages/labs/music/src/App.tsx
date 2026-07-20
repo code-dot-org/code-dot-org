@@ -3,7 +3,6 @@ import {darkTheme} from '@code-dot-org/blockly/themes';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ThrasosRenderer from '@code-dot-org/blockly/renderers/thrasos';
-import type {BlocklyLabProps} from '@code-dot-org/lab/components';
 import {BlocklyLab} from '@code-dot-org/lab/components';
 import {useMemo} from 'react';
 
@@ -22,9 +21,9 @@ registerLevelKindSchema('music', LevelKindSchema);
 
 const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
 
-const App = ({
-  ...props
-}: Omit<BlocklyLabProps, 'defaultSources' | 'blocklyProps'>) => {
+// Self-contained: the studio host renders the single `<Lab>` (see LabHost) and
+// publishes level data to context, so the entrypoint takes no props.
+const App = () => {
   const api = useApiClient();
   const musicApi = useMemo(
     () => (api ? createMusicApiClient(api) : undefined),
@@ -37,9 +36,7 @@ const App = ({
       <div className={styles.app}>
         {/* The BlocklyLab wraps the sources and other lab reduxes */}
         <BlocklyLab
-          {...props}
           defaultSources={{source: {}}}
-          standaloneProjectType="music"
           blocklyProps={{
             theme: darkTheme,
             renderer: ThrasosRenderer,

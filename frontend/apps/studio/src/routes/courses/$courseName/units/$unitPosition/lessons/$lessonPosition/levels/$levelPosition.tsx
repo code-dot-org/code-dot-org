@@ -9,7 +9,6 @@ import {
 import {Lab} from '@code-dot-org/lab/host';
 
 import LabProviders from '@/modules/labs/LabProviders';
-
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {resolveCourseLevel} from '@/modules/labs/router/resolveCourseLevel';

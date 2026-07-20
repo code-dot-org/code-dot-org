@@ -18,7 +18,7 @@ import {
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import {RootStateProvider} from '@code-dot-org/core/redux';
-import {LabHost} from '@code-dot-org/lab/components';
+import {LabHost} from '@code-dot-org/lab/host';
 
 // Import lab CSS variables (borders, z-indices, etc.)
 import '@code-dot-org/lab/styles/variables.scss';

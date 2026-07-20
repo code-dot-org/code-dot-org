@@ -1,3 +1,5 @@
+import type {ReactNode} from 'react';
+
 import type {LevelProperties} from '@code-dot-org/core/api';
 
 import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
@@ -5,13 +7,21 @@ import {ProjectProvider} from '../contexts/ProjectContext';
 import {SourcesProvider} from '../contexts/SourcesContext';
 import type {ProjectSources, ProjectManager} from '../projects';
 
-import Lab from './Lab';
-import type {LabProps} from './Lab';
-
+/**
+ * The sources layer a lab renders inside the host's `<Lab>`. It reads the level
+ * properties the host published to context (`useMaybeLevelProperties`), loads
+ * the project's sources for them, and provides the sources/project contexts to
+ * the lab UI.
+ *
+ * It does NOT render `<Lab>` itself: the host (see `LabHost`) owns the single
+ * `<Lab>` wrapper at the top of the tree and this reads what it needs from that
+ * context. That is what keeps a lab from double-wrapping `<Lab>` when the studio
+ * host already provides one.
+ */
 export interface LabWithSourcesProps<
   T extends LevelProperties = LevelProperties,
   U = string,
-> extends LabProps {
+> {
   defaultSources: ProjectSources<U>;
   /**
    * Optionally supply a custom ProjectManager to use in place of the LabRegistry's ProjectManager.
@@ -29,9 +39,10 @@ export interface LabWithSourcesProps<
   startOverMessage?: string;
   /** A transformer to parse the sources into the typed ProjectSources form expected */
   transform?: (projectSources: ProjectSources<U>) => ProjectSources<U>;
+  children?: ReactNode;
 }
 
-const LabWithSourcesWrapper = <
+const LabWithSources = <
   T extends LevelProperties = LevelProperties,
   U = string,
 >({
@@ -58,27 +69,6 @@ const LabWithSourcesWrapper = <
       <ProjectProvider>{children}</ProjectProvider>
     </SourcesProvider>
   ) : undefined;
-};
-
-const LabWithSources = <
-  T extends LevelProperties = LevelProperties,
-  U = string,
->({
-  children,
-  ...props
-}: LabWithSourcesProps<T, U>) => {
-  const {levelId, standaloneProjectType, isLoading, levelPropertiesMap} = props;
-
-  return (
-    <Lab
-      levelId={levelId}
-      standaloneProjectType={standaloneProjectType}
-      isLoading={isLoading}
-      levelPropertiesMap={levelPropertiesMap}
-    >
-      <LabWithSourcesWrapper<T, U> {...props}>{children}</LabWithSourcesWrapper>
-    </Lab>
-  );
 };
 
 export default LabWithSources;

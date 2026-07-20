@@ -5,18 +5,18 @@ import {
   useAppOptions,
   useLevelProperties,
   type LevelPropertiesRequestParams,
-  type LevelPropertiesMap,
 } from '@code-dot-org/core/api';
 
 import {useLoadLab} from '../contexts/ProjectContext';
 import {useThrowIfPageError} from '../hooks/useThrowIfPageError';
 
+import Lab from './Lab';
 import LabErrorBoundary from './LabErrorBoundary';
 
 /**
  * The prop contract a `@code-dot-org/lab`-based lab entrypoint accepts from a
  * host. The host resolves the level data and identity and passes them down; the
- * lab forwards them to its own `<Lab>` / `<LabWithSources>` and supplies the
+ * lab reads them from the `<Lab>` context this host renders and supplies the
  * lab-specific bits (default sources, the lab UI) itself.
  *
  * The host owns the project load entirely (see {@link LabHost}): it resolves
@@ -25,21 +25,12 @@ import LabErrorBoundary from './LabErrorBoundary';
  * part of this contract — the channel id is a load input consumed by the host,
  * not drilled through the lab component tree.
  */
-export interface LabEntrypointProps {
-  /** Whether the host is still resolving level properties / app options. */
-  isLoading: boolean;
-  /** Current level id (host-resolved: the given unit level id, or a standalone project's first map key). */
-  levelId?: string;
-  /** Standalone project type, when not a particular level. */
-  standaloneProjectType?: string;
-  /** Resolved level-properties map (host-fetched). */
-  levelPropertiesMap?: LevelPropertiesMap;
-}
+export type LabEntrypointProps = Record<string, never>;
 
 /** Inputs shared by both level-identification modes. */
 interface LabHostBaseProps {
   /** The lab entrypoint to render once level data is resolved. */
-  LabEntrypoint: ComponentType<LabEntrypointProps>;
+  LabEntrypoint: ComponentType;
   /** Channel id for the project, if known (e.g. the `$channelId` segment). */
   channelId?: string;
   /** User being viewed, e.g. a teacher viewing a student. */
@@ -162,12 +153,17 @@ function LabHostContent(props: LabHostProps) {
   // Re-throw a failed `loadLab` (recorded in redux) into the boundary.
   useThrowIfPageError();
 
+  // The single `<Lab>` for the whole tree lives here, at the host. It publishes
+  // the resolved level data to context; the entrypoint and its LabWithSources
+  // read it rather than receiving props, so nothing double-wraps `<Lab>`.
   return (
-    <LabEntrypoint
+    <Lab
       isLoading={!levelPropertiesMap || !appOptions}
       standaloneProjectType={props.standaloneProjectType}
-      levelId={levelId !== undefined ? String(levelId) : undefined}
+      levelId={levelId}
       levelPropertiesMap={levelPropertiesMap}
-    />
+    >
+      <LabEntrypoint />
+    </Lab>
   );
 }
