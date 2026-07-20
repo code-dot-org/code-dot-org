@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  min-width: 0;
+  padding: 0.5rem;
+  background-color: var(--background-neutral-secondary, #f5f5f5);
+  border-bottom: 1px solid var(--borders-neutral-primary, #ccc);
+  box-sizing: border-box;
+}
+
+/* Full screen floats the preview on a dark backdrop; round the top corners with
+   the frame below (legacy's .fullScreenPreviewHeaderContainer). The header keeps
+   its own background, which is also what keeps the toolbar icons legible there. */
+.fullScreenHeader {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* The address bar: current page plus refresh. */
+.urlBar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+  padding-inline: 4px;
+  border: 1px solid var(--borders-neutral-primary, #ccc);
+  border-radius: var(--border-radius, 4px);
+  background-color: var(--background-neutral-primary, #fff);
+}
+
+.urlInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 2px 4px;
+  font-size: 13px;
+  color: var(--text-neutral-primary, #000);
+}
+
+.urlInput:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: -2px;
+  border-radius: var(--border-radius, 4px);
+}
+
+/* A toggle button in its "on" state (legacy html-preview-header.module.scss).
+   Doubled selector to outweigh the MUI IconButton's own variant styles. */
+.activeToggleButton.activeToggleButton {
+  background-color: var(--background-brand-teal-primary, #0090a0);
+  color: var(--text-neutral-white-fixed, #fff);
+  border: 1px solid transparent;
+}
+
+.activeToggleButton.activeToggleButton:hover {
+  background-color: var(--background-brand-teal-strong, #007888);
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}

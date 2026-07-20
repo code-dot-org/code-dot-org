@@ -23,6 +23,11 @@
       "types": "./dist/fixtures/index.d.ts",
       "import": "./dist/fixtures/index.mjs",
       "require": "./dist/fixtures/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
@@ -44,6 +49,7 @@
   "dependencies": {
     "@code-dot-org/core": "workspace:*",
     "@mui/utils": "catalog:",
+    "@reduxjs/toolkit": "catalog:",
     "tabbable": "^6.5.0"
   },
   "devDependencies": {

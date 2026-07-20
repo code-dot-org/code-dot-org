@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Lab preview</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      #preview-frame {
+        border: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      The Web Lab preview page. Meant to be loaded in an iframe from the lab, on
+      a *separate origin*, so student HTML/JS never shares the lab's cookies or
+      session. It owns the project service worker and the inner iframe the
+      student's page renders in; see src/preview/previewPage.ts.
+    -->
+    <iframe
+      id="preview-frame"
+      title="Page preview"
+      sandbox="allow-scripts allow-same-origin allow-forms"
+    ></iframe>
+    <script type="module" src="/src/preview/previewMain.ts"></script>
+  </body>
+</html>

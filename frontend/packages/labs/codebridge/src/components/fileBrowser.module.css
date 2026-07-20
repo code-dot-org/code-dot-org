@@ -1,0 +1,146 @@
+/* The file browser is a gray sidebar (legacy `.fileBrowserContents` uses
+   --background-neutral-secondary), distinct from the lighter editor beside it. */
+.fileBrowser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background-color: var(--background-neutral-secondary, #f0f0f0);
+}
+
+/* The file-browser header shares the workspace's 40px top-bar row (legacy sizes
+   this via the Workspace grid's `grid-auto-rows: 40px ...`); here we set it
+   directly so it lines up with the 40px file-tab strip beside it. */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  height: 40px;
+  min-height: 40px;
+  padding-inline: 0.5rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
+}
+
+.headerTitle {
+  margin: 0;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-block: 4px;
+  scrollbar-color: var(--background-neutral-senary, #b0b0b0)
+    var(--background-neutral-secondary, #f0f0f0);
+}
+
+.folderChildren {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each nesting level indents its rows. */
+.folderChildren .folderChildren {
+  padding-inline-start: 8px;
+}
+
+/* A file/folder inside an open directory gets a guide border on its leading
+   edge, kept square on that side so the borders line up into a vertical guide
+   and the hover fill sits flush against it (legacy `.folder .folder .row`). */
+.folderChildren .folderChildren > li > .row {
+  border-inline-start: 1px solid var(--borders-neutral-primary, #ccc);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  min-height: 24px;
+  margin-inline: 0.375rem;
+  margin-bottom: 2px;
+  padding-block: 0.125rem;
+  padding-inline: 4px;
+  font-size: 14px;
+  border-radius: var(--border-radius, 4px);
+  transition: all 0.2s ease-in-out;
+}
+
+.row:hover {
+  background-color: var(--background-neutral-tertiary, #e4e4e4);
+}
+
+.rowLabel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 0.5rem;
+  overflow: hidden;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: start;
+}
+
+/* The file-type / folder icon: grayed and a fixed width, so names line up
+   (legacy `.rowIcon` + `.label i { color: --text-neutral-tertiary }`). */
+.rowLabel i {
+  width: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 125%;
+  text-align: center;
+  color: var(--text-neutral-tertiary, #6b7280);
+}
+
+.rowLabel i::before {
+  vertical-align: middle;
+}
+
+.rowLabel:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: -2px;
+  border-radius: 0.375rem;
+}
+
+/* Truncate long names with an ellipsis rather than overflowing the row. */
+.rowLabel p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.active p {
+  font-weight: 600;
+}
+
+.rowActions {
+  display: flex;
+  gap: 2px;
+  visibility: hidden;
+}
+
+.row:hover .rowActions,
+.row:focus-within .rowActions {
+  visibility: visible;
+}
+
+.empty {
+  color: var(--text-neutral-secondary, #666);
+  padding: 4px 0.375rem;
+}

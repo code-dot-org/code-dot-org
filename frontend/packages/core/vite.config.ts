@@ -46,6 +46,8 @@ export default defineConfig({
     lib: {
       entry: [
         'src/index.ts',
+        // ./redux subpath — the shared store the lab packages inject slices into.
+        'src/redux/index.ts',
         'src/api/index.ts',
         'src/api/mocks/index.ts',
         'src/api/mocks/server.ts',
