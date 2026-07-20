@@ -53,14 +53,16 @@ set -x # show the command
 docker buildx build --tag $IMAGE $args $cache_from $cache_to "$BUILD_CONTEXT" $@
 
 if [ "$PUSH_IMAGE" != true ] || [ "$IMPORT_IMAGE_TO_K8S_NODE" = true ]; then
-  image_id=$(docker image inspect --format '{{.Id}}' "$IMAGE" | sed 's/^sha256://')
+  # Skaffold deploys locally built images using an immutable tag derived from
+  # the Docker image ID. Create that reference before the custom build returns.
+  local_image="$IMAGE_REPO:$(docker image inspect --format '{{.Id}}' "$IMAGE" | sed 's/^sha256://')"
 fi
 
 if [ "$PUSH_IMAGE" != true ]; then
-  docker tag "$IMAGE" "$IMAGE_REPO:$image_id"
+  docker tag "$IMAGE" "$local_image"
 fi
 
 if [ "$IMPORT_IMAGE_TO_K8S_NODE" = true ]; then
   K8S_NODE_CONTAINER=${K8S_NODE_CONTAINER:-desktop-control-plane}
-  docker save "$IMAGE_REPO:$image_id" | docker exec -i "$K8S_NODE_CONTAINER" ctr -n k8s.io images import -
+  docker save "$local_image" | docker exec -i "$K8S_NODE_CONTAINER" ctr -n k8s.io images import -
 fi

@@ -109,6 +109,9 @@ manifests:
 
 deploy:
   kubectl: {}
+  # Rails takes long enough to boot that the startup probe can fail transiently.
+  # Let Kubernetes enforce the probe threshold instead of failing on its first event.
+  tolerateFailuresUntilDeadline: true
 
 profiles:
 
