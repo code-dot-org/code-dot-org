@@ -1,5 +1,5 @@
-@use '@code-dot-org/component-library-styles/font.scss' as font;
+@use '@code-dot-org/component-library-styles/font.scss' as *;
 
 html {
-  @include font.main-font-regular;
+  @include main-font-regular;
 }
