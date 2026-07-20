@@ -1,8 +1,10 @@
 import {CodebridgeRegistry, getImageMessage} from '@code-dot-org/codebridge';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import {MessageTag} from './input/constants';
-import type {PyodideMessage, WorkerFile} from './messages';
+import type {PyodideMessage} from './messages';
+import {writeUpdatedSource} from './sourceWriteBack';
 
 // Shared by both execution backends — the direct worker (pyodideWorkerManager)
 // and the iframe sandbox (sandbox/pyodideSandboxManager). The façade
@@ -13,7 +15,7 @@ export interface PyodideRuntime {
   /** Start loading pyodide ahead of the first run (e.g. at lab mount). */
   preloadPyodide(): void;
   /** Run a program; resolves when it completes. */
-  asyncRun(python: string, files: WorkerFile[]): Promise<void>;
+  asyncRun(python: string, source: MultiFileSource): Promise<void>;
   /** Stop a running program by restarting the worker. No-op if idle. */
   restartWorkerIfRunning(): void;
   /** Supply a line of stdin to a program blocked on `input()`. */
@@ -41,7 +43,7 @@ export function routeWorkerMessage(
   data: PyodideMessage,
   onRunComplete: (id: string) => void,
 ) {
-  const {type, id, message} = data;
+  const {type, id, message, source} = data;
   switch (type) {
     case 'sysout':
     case 'syserr':
@@ -65,6 +67,19 @@ export function routeWorkerMessage(
           ? 'Input is not supported here.'
           : (message ?? ''),
       );
+      break;
+    case 'updated_source':
+      // Files the program created or changed, folded back into the project.
+      // This goes through the SourcesContext, so it saves like any other edit
+      // (throttled — legacy's setAndSaveSource does not force a save either).
+      if (source) {
+        writeUpdatedSource(source);
+      }
+      break;
+    case 'internal_error':
+      // A filesystem problem in our own write-back code, not the user's program.
+      // Not shown in the console (legacy only reports it); log for debugging.
+      console.error(`Python Lab internal error: ${message}`);
       break;
     case 'run_complete':
       writeConsole('');

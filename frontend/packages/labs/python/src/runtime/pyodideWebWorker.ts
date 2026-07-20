@@ -4,12 +4,17 @@ import {loadPyodide, type PyodideInterface, version} from 'pyodide';
 import {MessageTag} from './input/constants';
 import {patchInputCode, pythonlabInputModule} from './input/pythonInput';
 import type {PyodideMessage, WorkerRequest} from './messages';
+import {
+  DEFAULT_FOLDER_ID,
+  getUpdatedSourceAndDeleteFiles,
+  writeSource,
+} from './pythonScriptUtils';
 
 // A pyodide web worker: load pyodide and our Python packages from a hosted
 // directory, write the project files to its virtual filesystem, run the program,
 // and stream stdout/stderr back. Ported and reduced from
-// apps/src/pythonlab/pyodideWebWorker.ts — validation, the neighborhood
-// mini-app, and source write-back are still deferred.
+// apps/src/pythonlab/pyodideWebWorker.ts — validation and the neighborhood
+// mini-app are still deferred.
 //
 // The hosted directory (pyodide core + package wheels + our custom wheels) is
 // supplied by the main thread via the `init` message; loading starts then. See
@@ -136,20 +141,37 @@ ctx.onmessage = async (event: MessageEvent<WorkerRequest>) => {
 
   // A run request. Ensure loading is done first (defensive if no init arrived).
   await initializePyodide();
-  const {id, python, files} = data;
+  const {id, python, source} = data;
 
   try {
-    // Write every project file to the working directory so imports and file
-    // reads resolve. (Folder paths are flattened to file names for now.)
-    for (const file of files) {
-      // A string is written as UTF-8.
-      pyodide.FS.writeFile(file.name, file.contents);
-    }
+    // Write the project (with its folder tree) to the filesystem so imports and
+    // file reads resolve.
+    writeSource(source, DEFAULT_FOLDER_ID, '', pyodide);
     // Point `input()` at this run's id before running the user's code.
     await pyodide.runPythonAsync(patchInputCode(id));
     await pyodide.runPythonAsync(python);
   } catch (error) {
     post({type: 'error', message: (error as Error).message, id});
+  }
+
+  // Drain the filesystem back into the project: files the program created or
+  // changed are folded in, and everything is deleted so the next run starts
+  // from the project alone. Runs even if the program errored — a program that
+  // writes a file and then throws should still keep the file.
+  try {
+    const updatedSource = getUpdatedSourceAndDeleteFiles(
+      source,
+      id,
+      pyodide,
+      post,
+    );
+    post({type: 'updated_source', source: updatedSource, id});
+  } catch (error) {
+    post({
+      type: 'internal_error',
+      message: `Failed to update source: ${(error as Error).message}`,
+      id,
+    });
   }
 
   post({type: 'run_complete', id});

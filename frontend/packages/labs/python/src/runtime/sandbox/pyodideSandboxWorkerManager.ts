@@ -69,8 +69,8 @@ window.addEventListener('message', event => {
   const data = event.data as ToSandbox;
   switch (data?.type) {
     case ToSandboxMessage.RUN: {
-      const {id, python, files} = data as SandboxRunMessage;
-      const request: WorkerRequest = {type: 'run', id, python, files};
+      const {id, python, source} = data as SandboxRunMessage;
+      const request: WorkerRequest = {type: 'run', id, python, source};
       worker?.postMessage(request);
       break;
     }

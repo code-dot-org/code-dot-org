@@ -4,10 +4,17 @@ import type {PropsWithChildren} from 'react';
 import {
   CodebridgeLab,
   CodebridgeRuntimeProvider,
+  useAppSelector,
 } from '@code-dot-org/codebridge';
 import type {CodebridgeRuntime} from '@code-dot-org/codebridge';
-import type {LevelPropertiesMap, MultiFileSource} from '@code-dot-org/core/api';
+import type {
+  LevelPropertiesMap,
+  MultiFileSource,
+  ProjectSources,
+} from '@code-dot-org/core/api';
+import {LabRegistry} from '@code-dot-org/lab';
 import {useSources} from '@code-dot-org/lab/contexts';
+import {labActions} from '@code-dot-org/lab/redux';
 
 import styles from './app.module.css';
 import {pythonConfig} from './config';
@@ -19,6 +26,7 @@ import {
   sendPythonInput,
   stopPython,
 } from './runtime/pythonRunner';
+import {registerSourceWriter} from './runtime/sourceWriteBack';
 
 /**
  * Host-supplied props for the Python Lab entrypoint — the standard
@@ -40,7 +48,7 @@ export interface PythonLabProps {
  * backs `useSources`.
  */
 const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
-  const {currentSources} = useSources<MultiFileSource>();
+  const {currentSources, previewSources} = useSources<MultiFileSource>();
   const sourceRef = useRef(currentSources.source);
   sourceRef.current = currentSources.source;
 
@@ -48,6 +56,35 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
   useEffect(() => {
     preloadPython();
   }, []);
+
+  // Let the runtime (which lives outside the React tree) fold a run's updated
+  // project back in: files the program created or changed.
+  //
+  // This cannot go through `updateSources`: Python Lab marks the workspace
+  // read-only *while a program runs* (to stop the user editing mid-run), and the
+  // write-back arrives during exactly that window, so `updateSources` would skip
+  // the save and the new files would never persist. Legacy has the same rule and
+  // sidesteps it by having `setAndSaveSource` call the project manager directly.
+  // We do the same: show the sources without saving, then save explicitly —
+  // skipping only when the workspace is *permanently* read-only (not the owner,
+  // frozen, viewing an old version), where no save should ever happen.
+  const currentSourcesRef = useRef(currentSources);
+  currentSourcesRef.current = currentSources;
+  const permanentlyReadOnly = useAppSelector(
+    labActions.isPermanentlyReadOnlyWorkspace,
+  );
+  const permanentlyReadOnlyRef = useRef(permanentlyReadOnly);
+  permanentlyReadOnlyRef.current = permanentlyReadOnly;
+  useEffect(() => {
+    registerSourceWriter(source => {
+      const next = {...currentSourcesRef.current, source};
+      previewSources(next);
+      if (!permanentlyReadOnlyRef.current) {
+        void LabRegistry.projectManager?.save(next as ProjectSources);
+      }
+    });
+    return () => registerSourceWriter(null);
+  }, [previewSources]);
 
   const runtime = useMemo<CodebridgeRuntime>(
     () => ({

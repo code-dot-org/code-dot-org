@@ -1,4 +1,5 @@
-import type {WorkerFile} from './messages';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
 import type {PyodideRuntime} from './pyodideRuntime';
 
 // The runtime façade. Picks, once, whether Python Lab runs the pyodide worker
@@ -51,9 +52,9 @@ export async function preloadPyodide(): Promise<void> {
 
 export async function asyncRun(
   python: string,
-  files: WorkerFile[],
+  source: MultiFileSource,
 ): Promise<void> {
-  return (await getRuntime()).asyncRun(python, files);
+  return (await getRuntime()).asyncRun(python, source);
 }
 
 export async function restartWorkerIfRunning(): Promise<void> {

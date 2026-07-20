@@ -1,4 +1,6 @@
-import type {PyodideMessage, WorkerFile} from '../messages';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import type {PyodideMessage} from '../messages';
 import {getPyodideBaseUrl} from '../pyodideConfig';
 import {type PyodideRuntime, routeWorkerMessage} from '../pyodideRuntime';
 
@@ -78,7 +80,7 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
       // The iframe (and its worker) already started when this runtime was built.
     },
 
-    async asyncRun(python: string, files: WorkerFile[]): Promise<void> {
+    async asyncRun(python: string, source: MultiFileSource): Promise<void> {
       // Wait until the iframe has loaded and posted READY before sending a run.
       await readyPromise;
       const id = crypto.randomUUID();
@@ -88,7 +90,7 @@ export function createSandboxRuntime(sandboxUrl: string): PyodideRuntime {
           type: ToSandboxMessage.RUN,
           id,
           python,
-          files,
+          source,
         };
         post(message);
       });

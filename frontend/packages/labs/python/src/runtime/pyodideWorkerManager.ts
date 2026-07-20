@@ -1,4 +1,6 @@
-import type {PyodideMessage, WorkerFile, WorkerRequest} from './messages';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import type {PyodideMessage, WorkerRequest} from './messages';
 import {getPyodideBaseUrl} from './pyodideConfig';
 import {type PyodideRuntime, routeWorkerMessage} from './pyodideRuntime';
 
@@ -51,11 +53,11 @@ export function createWorkerRuntime(): PyodideRuntime {
       ensureWorker();
     },
 
-    asyncRun(python: string, files: WorkerFile[]): Promise<void> {
+    asyncRun(python: string, source: MultiFileSource): Promise<void> {
       const id = crypto.randomUUID();
       return new Promise<void>(resolve => {
         callbacks[id] = resolve;
-        const request: WorkerRequest = {type: 'run', id, python, files};
+        const request: WorkerRequest = {type: 'run', id, python, source};
         ensureWorker().postMessage(request);
       });
     },

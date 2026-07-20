@@ -1,4 +1,4 @@
-import type {WorkerFile} from '../messages';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 
 // The postMessage contract between the parent page (pyodideSandboxManager.ts,
 // running on the host origin) and the sandbox iframe
@@ -45,7 +45,7 @@ export interface SandboxRunMessage {
   type: typeof ToSandboxMessage.RUN;
   id: string;
   python: string;
-  files: WorkerFile[];
+  source: MultiFileSource;
 }
 
 export interface SandboxRestartMessage {

@@ -1,12 +1,12 @@
 import {
   CodebridgeRegistry,
+  DEFAULT_FOLDER_ID,
   getRunTimestampMessage,
 } from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {LabRegistry} from '@code-dot-org/lab';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
-import type {WorkerFile} from './messages';
 import {
   asyncRun,
   preloadPyodide,
@@ -31,11 +31,11 @@ export function preloadPython() {
  * lifecycle, as the ControlButtons reflect `labSystem.isRunning`.
  */
 export async function runPython(source: MultiFileSource) {
-  const files: WorkerFile[] = Object.values(source.files).map(file => ({
-    name: file.name,
-    contents: file.contents,
-  }));
-  const main = files.find(file => file.name === MAIN_PYTHON_FILE);
+  // main.py at the project root is the entry script.
+  const main = Object.values(source.files).find(
+    file =>
+      file.name === MAIN_PYTHON_FILE && file.folderId === DEFAULT_FOLDER_ID,
+  );
 
   // Flush any pending (throttled) save before running, matching legacy's
   // PythonlabView.onRun. Students typically run right before navigating away, so
@@ -54,7 +54,7 @@ export async function runPython(source: MultiFileSource) {
   // Gray "RUN AT hh:mm" banner marks the start of this run in the console.
   consoleManager?.writeConsoleMessage(getRunTimestampMessage());
   try {
-    await asyncRun(main.contents, files);
+    await asyncRun(main.contents, source);
   } finally {
     store.dispatch(labSystemActions.setIsRunning(false));
     store.dispatch(labSystemActions.setHasRun(true));
