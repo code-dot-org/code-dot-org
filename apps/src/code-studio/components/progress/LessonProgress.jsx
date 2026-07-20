@@ -289,15 +289,15 @@ const styles = {
   },
   headerVignetteLeftRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px',
   },
   headerVignetteRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   spacer: {
     marginRight: 'auto',
