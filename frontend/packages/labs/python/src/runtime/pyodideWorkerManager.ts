@@ -3,6 +3,13 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import type {PyodideMessage, WorkerRequest} from './messages';
 import {getPyodideBaseUrl} from './pyodideConfig';
 import {type PyodideRuntime, routeWorkerMessage} from './pyodideRuntime';
+// Inline worker: `?worker&inline` base64-embeds the worker into the JS so a
+// consumer re-bundling this dist (studio) has no separate /assets chunk to
+// resolve — `new Worker(new URL(..., import.meta.url))` bakes one it cannot.
+// TS resolves the default via vite/client; the import-x resolver cannot follow
+// the query suffix, hence the disable.
+// eslint-disable-next-line import-x/default
+import PyodideWorker from './pyodideWebWorker.ts?worker&inline';
 
 // The direct backend: runs the pyodide web worker on this page. This is today's
 // default (studio's PYTHONLAB_SEPARATE_DOMAIN experiment off). For isolation on a
@@ -23,9 +30,7 @@ export function createWorkerRuntime(): PyodideRuntime {
   let worker: Worker | undefined;
 
   function createWorker(): Worker {
-    const w = new Worker(new URL('./pyodideWebWorker.ts', import.meta.url), {
-      type: 'module',
-    });
+    const w = new PyodideWorker();
     w.onmessage = (event: MessageEvent<PyodideMessage>) =>
       routeWorkerMessage(event.data, id => {
         callbacks[id]?.();
