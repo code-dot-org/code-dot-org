@@ -1,4 +1,5 @@
 import {autocompletion} from '@codemirror/autocomplete';
+import {lintGutter} from '@codemirror/lint';
 import {Compartment, EditorState} from '@codemirror/state';
 import type {Extension} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
@@ -19,6 +20,7 @@ import {getActiveFileForSource} from '../utils/multiFileSource';
 import styles from './codeEditor.module.css';
 import {editorConfig} from './editorConfig';
 import {darkTheme, getFontSizeTheme, lightTheme} from './editorThemes';
+import {lintExtensionsFor} from './linters';
 
 const readOnlyExtensions = (isReadOnly: boolean): Extension => [
   EditorState.readOnly.of(isReadOnly),
@@ -70,6 +72,9 @@ const InnerCodeEditor = ({
     }
 
     const langExtension = languageExtensions?.[language];
+    // Lint the languages we have linters for (JS, HTML), with the gutter marker
+    // that shows where the problems are.
+    const lintExtensions = lintExtensionsFor(language);
     const updateListener = EditorView.updateListener.of(update => {
       if (update.docChanged) {
         onChangeRef.current(update.state.doc.toString());
@@ -85,6 +90,8 @@ const InnerCodeEditor = ({
           fontSizeCompartment.of(getFontSizeTheme(fontSizePx)),
           updateListener,
           ...(langExtension ? [langExtension] : []),
+          ...lintExtensions,
+          ...(lintExtensions.length ? [lintGutter()] : []),
           readOnlyCompartment.of(readOnlyExtensions(isReadOnly)),
           themeCompartment.of(isDark ? darkTheme : lightTheme),
         ],
