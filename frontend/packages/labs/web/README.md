@@ -56,6 +56,27 @@ which is weaker isolation than production.
 Defaults follow legacy's level-driven policy: scripts allowed, network blocked.
 Wiring those to level properties is deferred.
 
+### Inspector
+
+The element inspector (`src/preview/inspector.ts`) draws a highlight box and a
+`<tag> #id .class` label over whatever element the student hovers or Tabs to. It
+runs on the **preview origin**, installed by `previewPage` against the inner
+iframe's document — the lab can't reach that document across the origin split, so
+it only posts the toggle down (`SET_INSPECTOR_ENABLED`, from the header button).
+
+Two consequences of living in the student's document:
+
+- Styles are set via `element.style`, not a CSS module: that document never loads
+  our bundle's CSS, and inline styles are not subject to its CSP.
+- The overlay elements belong to a different realm, so the helpers test
+  `nodeType` and read attributes rather than using `instanceof Element`.
+
+To make the whole page reachable without a mouse, the inspector puts
+`tabindex="0"` on rendered elements that aren't already focusable, and keeps up
+with the page via a `MutationObserver`. All of it is reverted on teardown —
+which runs on every toggle and on every iframe load, since a load replaces the
+document out from under the previous overlay.
+
 ## Status
 
 Ported: the shell composition (config, default project, layout, demo harness)
@@ -64,12 +85,10 @@ and the preview core above.
 The preview chrome (address bar, refresh, stop/reload, desktop-mobile toggle)
 and the debug panel (console + network, with repeat grouping and blocked/CSP
 reporting) are ported too. Stopping tears the iframe down, so a runaway page
-actually stops running.
+actually stops running. So is the element inspector described above.
 
 Still to port from legacy:
 
-- **Preview inspector** (`htmlPreviewInspector*`, ~540 lines) — hover/select
-  elements in the preview.
 - **Linters** (`weblab2/htmlLinter.ts`, `cssLinter.ts`) — CodeMirror lint
   integration for HTML and CSS.
 - Preview navigation history (legacy's back/forward buttons), the per-request

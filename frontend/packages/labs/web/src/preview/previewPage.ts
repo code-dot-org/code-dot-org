@@ -10,6 +10,7 @@ import {
   addCSPViolationListenerToDocument,
   addParametersToDocument,
 } from './htmlParsingHelpers';
+import {installInspector, type InspectorController} from './inspector';
 import type {PreviewFiles} from './projectFiles';
 
 // The preview page, running on the PREVIEW ORIGIN (not the lab's). Ported and
@@ -48,6 +49,25 @@ export async function startPreviewPage() {
 
   let files: PreviewFiles = {};
   let currentFile = 'index.html';
+
+  // The element inspector runs here, not in the lab: it needs the inner
+  // document, which is same-origin to this page and cross-origin to the lab.
+  let inspectorEnabled = false;
+  let inspector: InspectorController | null = null;
+
+  // (Re)install the inspector against the live inner document. Runs when the lab
+  // toggles it and on every iframe load, because a load replaces the document —
+  // taking the previous overlay's nodes and listeners with it.
+  const syncInspector = () => {
+    inspector?.teardown();
+    inspector = null;
+    const innerDocument = iframe.contentDocument;
+    if (inspectorEnabled && innerDocument) {
+      inspector = installInspector(innerDocument);
+    }
+  };
+
+  iframe.addEventListener('load', syncInspector);
 
   // Relay the worker's and the page's reports up to the lab.
   const channel = new BroadcastChannel(
@@ -160,6 +180,10 @@ export async function startPreviewPage() {
           type: ProjectServiceWorkerMessage.SET_BLOCK_NETWORK,
           blockNetwork: data.blockNetwork,
         });
+        break;
+      case IframeMessage.SET_INSPECTOR_ENABLED:
+        inspectorEnabled = !!data.enabled;
+        syncInspector();
         break;
       case IframeMessage.REFRESH:
         reload();

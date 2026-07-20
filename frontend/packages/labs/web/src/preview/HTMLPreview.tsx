@@ -57,6 +57,8 @@ export const HTMLPreview = ({
   );
   // Stopping tears the iframe down entirely, so a runaway page stops running.
   const [isStopped, setIsStopped] = useState(false);
+  // Element inspection runs on the preview origin; we only own the toggle.
+  const [inspectorEnabled, setInspectorEnabled] = useState(false);
 
   const previewUrl = getPreviewUrl();
   const previewOrigin = useMemo(
@@ -156,6 +158,19 @@ export const HTMLPreview = ({
     );
   }, [isReady, previewOrigin, files, contentSecurityPolicy, blockNetwork]);
 
+  // Push the inspector toggle down. Also re-sent whenever the preview reports
+  // ready again: a stop-and-reload replaces the preview page, which comes back
+  // with the inspector off.
+  useEffect(() => {
+    if (!isReady || !previewOrigin) {
+      return;
+    }
+    iframeRef.current?.contentWindow?.postMessage(
+      {type: IframeMessage.SET_INSPECTOR_ENABLED, enabled: inspectorEnabled},
+      previewOrigin,
+    );
+  }, [isReady, previewOrigin, inspectorEnabled]);
+
   const post = (message: unknown) => {
     if (previewOrigin) {
       iframeRef.current?.contentWindow?.postMessage(message, previewOrigin);
@@ -186,6 +201,8 @@ export const HTMLPreview = ({
       isStopEnabled={!isStopped}
       viewMode={viewMode}
       setViewMode={setViewMode}
+      inspectorEnabled={inspectorEnabled}
+      setInspectorEnabled={setInspectorEnabled}
     />
   );
 

@@ -22,6 +22,9 @@ export interface HTMLPreviewHeaderProps {
   isStopEnabled: boolean;
   viewMode: PreviewViewModeType;
   setViewMode: (viewMode: PreviewViewModeType) => void;
+  /** Whether hover/Tab element inspection is running in the preview. */
+  inspectorEnabled: boolean;
+  setInspectorEnabled: (enabled: boolean) => void;
 }
 
 export const HTMLPreviewHeader = ({
@@ -32,6 +35,8 @@ export const HTMLPreviewHeader = ({
   isStopEnabled,
   viewMode,
   setViewMode,
+  inspectorEnabled,
+  setInspectorEnabled,
 }: HTMLPreviewHeaderProps) => {
   const [value, setValue] = useState(currentFile);
 
@@ -68,6 +73,30 @@ export const HTMLPreviewHeader = ({
       </form>
 
       <span className={styles.actions}>
+        <WithTooltip
+          tooltipProps={{
+            tooltipId: 'toggle-inspector',
+            direction: 'onBottom',
+            size: 'xs',
+            text: inspectorEnabled ? 'Stop inspecting' : 'Inspect elements',
+          }}
+        >
+          <IconButton
+            variant="outlined"
+            color="tertiary"
+            size="extraSmall"
+            className={inspectorEnabled ? styles.activeToggleButton : undefined}
+            onClick={() => setInspectorEnabled(!inspectorEnabled)}
+            aria-label={
+              inspectorEnabled ? 'Stop inspecting' : 'Inspect elements'
+            }
+            aria-pressed={inspectorEnabled}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="arrow-pointer" />
+          </IconButton>
+        </WithTooltip>
+
         <WithTooltip
           tooltipProps={{
             tooltipId: 'preview-view-mode',

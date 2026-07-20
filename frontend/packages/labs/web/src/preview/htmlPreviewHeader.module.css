@@ -37,6 +37,19 @@
   border-radius: var(--border-radius, 4px);
 }
 
+/* A toggle button in its "on" state (legacy html-preview-header.module.scss).
+   Doubled selector to outweigh the MUI IconButton's own variant styles. */
+.activeToggleButton.activeToggleButton {
+  background-color: var(--background-brand-teal-primary, #0090a0);
+  color: var(--text-neutral-white-fixed, #fff);
+  border: 1px solid transparent;
+}
+
+.activeToggleButton.activeToggleButton:hover {
+  background-color: var(--background-brand-teal-strong, #007888);
+  color: var(--text-neutral-white-fixed, #fff);
+}
+
 .actions {
   display: flex;
   align-items: center;
