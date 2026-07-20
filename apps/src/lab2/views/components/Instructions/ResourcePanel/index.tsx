@@ -156,11 +156,6 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
-  /**
-   * For labs that draw their own full-height border on the collapsed rail
-   * (e.g. Sketch Lab), suppress the per-tab selected-tab border so the two
-   * don't stack into a double edge.
-   */
   hideCollapsedTabBorder?: boolean;
   backpackProps?: BackpackProps;
   onImageFlagged?: (
