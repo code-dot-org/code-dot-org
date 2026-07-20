@@ -64,6 +64,9 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isResourcePanelCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
 
   useReactFlowSketchLabTour({levelProperties});
 
@@ -255,12 +258,16 @@ function ReactFlowSketchLabViewInner({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
-        <div style={{width: leftPanelWidth}} className={panelClassName}>
+        <div
+          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          className={panelClassName}
+        >
           <ResourcePanel
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
+            collapseOnLoad
             settings={[useThemeSetting('sketchlab')]}
             versionHistoryProps={{
               startSources:
@@ -272,12 +279,18 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        <ResizeBar
-          isVertical={true}
-          separatorProps={panelSeparatorProps}
-          isDragging={isDragging}
-        />
-        <div style={{width: rightPanelWidth}}>
+        {!isResourcePanelCollapsed && (
+          <ResizeBar
+            isVertical={true}
+            separatorProps={panelSeparatorProps}
+            isDragging={isDragging}
+          />
+        )}
+        <div
+          style={
+            isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
+          }
+        >
           <PanelContainer
             id="workspace"
             className={panelClassName}
