@@ -33,6 +33,7 @@ export function useTeachingProfileData(): UseTeachingProfileDataReturn {
       const response = await fetch('/teaching_profile_data', {
         method: 'GET',
         headers: {
+          Accept: 'application/json',
           'X-CSRF-Token':
             document
               .querySelector('meta[name="csrf-token"]')
