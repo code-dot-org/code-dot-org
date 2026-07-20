@@ -94,6 +94,11 @@ profiles:
     - command: debug
     - kubeContext: docker-desktop
   patches:
+    # Rails takes long enough to boot that the startup probe can fail transiently.
+    # Let Kubernetes enforce the probe threshold instead of failing on its first event.
+    - op: add
+      path: /deploy/tolerateFailuresUntilDeadline
+      value: true
     - op: replace
       path: /build/artifacts/0/custom/buildCommand
       value: |
@@ -163,9 +168,6 @@ profiles:
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/activejob-only.values.yaml
-    - op: replace
-      path: /deploy/helm/releases/0/setValueTemplates/image
-      value: "code-dot-org:{{.IMAGE_TAG_code_dot_org}}"
 
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
