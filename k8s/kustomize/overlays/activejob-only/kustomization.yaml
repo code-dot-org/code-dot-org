@@ -5,4 +5,6 @@ resources:
   - active-job-worker-deployment.yaml
 patches:
   - path: deployment.patch.yaml
+  - path: ingress.patch.yaml
   - path: locals.patch.yaml
+  - path: service.patch.yaml

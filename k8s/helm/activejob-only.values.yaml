@@ -2,11 +2,8 @@
 RAILS_ENV: adhoc
 imagePullPolicy: Never
 
-command:
-  - sh
-  - -c
-args:
-  - sleep infinity
+dashboard:
+  enabled: false
 
 healthChecks:
   enabled: false

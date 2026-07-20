@@ -13,6 +13,9 @@ RAILS_ENV:
 dnsName: studio-development
 dashboard_workers: 0
 
+dashboard:
+  enabled: true
+
 locals.yml:
   # For example:
   # levelbuilder_mode: true
