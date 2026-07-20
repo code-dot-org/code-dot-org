@@ -286,6 +286,7 @@ function ReactFlowSketchLabViewInner({
             isRunning={false}
             hasRun={hasRun}
             hasEdited={false}
+            hideCollapsedTabBorder
             settings={[themeSetting]}
             versionHistoryProps={{
               startSources:

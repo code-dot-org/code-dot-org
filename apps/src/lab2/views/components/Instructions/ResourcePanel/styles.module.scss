@@ -137,8 +137,8 @@
     }
 
     &.selected {
-      // Collapsed, the selected tab looks like the others: no teal accent and
-      // no right border (any rail edge comes from the adjacent resize bar).
+      border-inline-end: variables.$default-border;
+
       i {
         color: var(--text-neutral-quaternary);
       }
@@ -148,6 +148,10 @@
         content: none;
       }
     }
+  }
+
+  &.hideCollapsedTabBorder.collapsed .tabButton.tabButton.selected {
+    border-inline-end: none;
   }
 
   .bottomTabs {
