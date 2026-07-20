@@ -293,7 +293,7 @@ const styles = {
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px)',
   },
   headerVignetteRight: {
     background:
