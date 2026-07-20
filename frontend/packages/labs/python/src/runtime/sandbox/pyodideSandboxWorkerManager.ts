@@ -1,3 +1,5 @@
+// See pyodideWorkerManager for why this is an inline worker rather than
+// `new Worker(new URL(...))`.
 import {version} from 'pyodide';
 
 import {
@@ -5,6 +7,13 @@ import {
   sendInputToServiceWorker,
 } from '../input/inputServiceWorkerClient';
 import type {PyodideMessage, WorkerRequest} from '../messages';
+// Inline worker: `?worker&inline` base64-embeds the worker into the JS so a
+// consumer re-bundling this dist (studio) has no separate /assets chunk to
+// resolve — `new Worker(new URL(..., import.meta.url))` bakes one it cannot.
+// TS resolves the default via vite/client; the import-x resolver cannot follow
+// the query suffix, hence the disable.
+// eslint-disable-next-line import-x/default
+import PyodideWorker from '../pyodideWebWorker.ts?worker&inline';
 
 import {
   FromSandboxMessage,
@@ -43,12 +52,7 @@ function postToParent(message: unknown) {
 }
 
 function createWorker(): Worker {
-  const worker = new Worker(
-    new URL('../pyodideWebWorker.ts', import.meta.url),
-    {
-      type: 'module',
-    },
-  );
+  const worker = new PyodideWorker();
   // Relay every worker message straight up to the parent.
   worker.onmessage = (event: MessageEvent<PyodideMessage>) =>
     postToParent(event.data);
