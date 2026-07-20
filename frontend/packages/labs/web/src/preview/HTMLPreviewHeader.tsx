@@ -2,6 +2,7 @@ import {IconButton} from '@mui/material';
 import {useEffect, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 
 import {PreviewViewMode, type PreviewViewModeType} from './constants';
@@ -30,6 +31,12 @@ export interface HTMLPreviewHeaderProps {
   /** Whether hover/Tab element inspection is running in the preview. */
   inspectorEnabled: boolean;
   setInspectorEnabled: (enabled: boolean) => void;
+  /** The debug panel is toggled from here, as in legacy. */
+  isDebugPanelOpen: boolean;
+  setIsDebugPanelOpen: (isOpen: boolean) => void;
+  /** Blows the preview up to fill the viewport. */
+  isFullScreen: boolean;
+  onToggleFullScreen: () => void;
 }
 
 export const HTMLPreviewHeader = ({
@@ -46,6 +53,10 @@ export const HTMLPreviewHeader = ({
   setViewMode,
   inspectorEnabled,
   setInspectorEnabled,
+  isDebugPanelOpen,
+  setIsDebugPanelOpen,
+  isFullScreen,
+  onToggleFullScreen,
 }: HTMLPreviewHeaderProps) => {
   const [value, setValue] = useState(currentFile);
 
@@ -54,7 +65,13 @@ export const HTMLPreviewHeader = ({
   useEffect(() => setValue(currentFile), [currentFile]);
 
   return (
-    <div className={styles.header}>
+    <div
+      className={
+        isFullScreen
+          ? `${styles.header} ${styles.fullScreenHeader}`
+          : styles.header
+      }
+    >
       <IconButton
         variant="text"
         color="tertiary"
@@ -107,6 +124,70 @@ export const HTMLPreviewHeader = ({
       <span className={styles.actions}>
         <WithTooltip
           tooltipProps={{
+            tooltipId: 'stop-preview',
+            direction: 'onBottom',
+            size: 'xs',
+            text: 'Stop preview',
+          }}
+        >
+          <IconButton
+            variant="outlined"
+            color="error"
+            size="extraSmall"
+            disabled={!isStopEnabled}
+            onClick={onStop}
+            aria-label="Stop Preview"
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="circle-stop" iconStyle="solid" />
+          </IconButton>
+        </WithTooltip>
+
+        <SegmentedButtons
+          size="xs"
+          type="iconOnly"
+          selectedButtonValue={viewMode}
+          onChange={value => setViewMode(value as PreviewViewModeType)}
+          buttons={[
+            {
+              value: PreviewViewMode.DESKTOP,
+              ariaLabel: 'Desktop View',
+              icon: {iconName: 'desktop', iconStyle: 'solid', title: 'Desktop'},
+            },
+            {
+              value: PreviewViewMode.MOBILE,
+              ariaLabel: 'Mobile View',
+              icon: {iconName: 'mobile', iconStyle: 'solid', title: 'Mobile'},
+            },
+          ]}
+        />
+
+        <WithTooltip
+          tooltipProps={{
+            tooltipId: 'toggle-debug-panel',
+            direction: 'onBottom',
+            size: 'xs',
+            text: isDebugPanelOpen ? 'Close debug panel' : 'Open debug panel',
+          }}
+        >
+          <IconButton
+            variant="outlined"
+            color="tertiary"
+            size="extraSmall"
+            className={isDebugPanelOpen ? styles.activeToggleButton : undefined}
+            onClick={() => setIsDebugPanelOpen(!isDebugPanelOpen)}
+            aria-label={
+              isDebugPanelOpen ? 'Close debug panel' : 'Open debug panel'
+            }
+            aria-pressed={isDebugPanelOpen}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="bug" />
+          </IconButton>
+        </WithTooltip>
+
+        <WithTooltip
+          tooltipProps={{
             tooltipId: 'toggle-inspector',
             direction: 'onBottom',
             size: 'xs',
@@ -129,63 +210,17 @@ export const HTMLPreviewHeader = ({
           </IconButton>
         </WithTooltip>
 
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'preview-view-mode',
-            direction: 'onBottom',
-            size: 'xs',
-            text: viewMode === PreviewViewMode.DESKTOP ? 'Mobile' : 'Desktop',
-          }}
+        <IconButton
+          variant="text"
+          color="tertiary"
+          size="extraSmall"
+          onClick={onToggleFullScreen}
+          aria-label={isFullScreen ? 'Minimize preview' : 'Maximize preview'}
+          aria-pressed={isFullScreen}
+          type="button"
         >
-          <IconButton
-            variant="text"
-            color="tertiary"
-            size="extraSmall"
-            aria-label={
-              viewMode === PreviewViewMode.DESKTOP
-                ? 'Switch to mobile view'
-                : 'Switch to desktop view'
-            }
-            aria-pressed={viewMode === PreviewViewMode.MOBILE}
-            onClick={() =>
-              setViewMode(
-                viewMode === PreviewViewMode.DESKTOP
-                  ? PreviewViewMode.MOBILE
-                  : PreviewViewMode.DESKTOP,
-              )
-            }
-            type="button"
-          >
-            <FontAwesomeV6Icon
-              iconName={
-                viewMode === PreviewViewMode.DESKTOP
-                  ? 'mobile-screen'
-                  : 'desktop'
-              }
-            />
-          </IconButton>
-        </WithTooltip>
-
-        <WithTooltip
-          tooltipProps={{
-            tooltipId: 'stop-preview',
-            direction: 'onBottom',
-            size: 'xs',
-            text: 'Stop preview',
-          }}
-        >
-          <IconButton
-            variant="outlined"
-            color="error"
-            size="extraSmall"
-            disabled={!isStopEnabled}
-            onClick={onStop}
-            aria-label="Stop Preview"
-            type="button"
-          >
-            <FontAwesomeV6Icon iconName="square" iconStyle="solid" />
-          </IconButton>
-        </WithTooltip>
+          <FontAwesomeV6Icon iconName={isFullScreen ? 'compress' : 'expand'} />
+        </IconButton>
       </span>
     </div>
   );

@@ -12,9 +12,24 @@ contract (`LabEntrypointProps`) and renders `<CodebridgeLab>` wrapping
 ## Layout
 
 `WebLayout` mirrors legacy's `weblab2/layout/VerticalLayout`: the instructions /
-resource panel on the far left, the Codebridge `Workspace` (file browser + tabs +
-editor) in the middle, and the page preview on the right. Both dividers drag to
-resize and restore their default size on double-click.
+resource panel on the far left, and beside it one workspace column.
+
+```
+┌─────────────┬───────────────────────────────────────┐
+│             │ [Code|Preview|Split]   header         │
+│ instructions├───────────────────┬───────────────────┤
+│             │ editor            │ preview           │
+│             ├───────────────────┴───────────────────┤
+│             │ debug (console + network)             │
+└─────────────┴───────────────────────────────────────┘
+```
+
+The editor and the preview are two panes _inside_ that column, under a single
+shared header — **the preview has no header of its own**. That is the point of
+the arrangement: it lets the debug panel span the full width beneath both panes
+rather than being boxed into a right-hand column with the preview. The header's
+segmented buttons collapse the split to either pane alone. Every divider drags to
+resize and restores its default size on double-click.
 
 The shared pieces — `InfoPanel`, `Workspace`, `FileBrowser`, `CodeEditor` — come
 from the Codebridge package, exactly as legacy shares `@codebridge/InfoPanel` and
@@ -123,10 +138,14 @@ document out from under the previous overlay.
 Ported: the shell composition (config, default project, layout, demo harness)
 and the preview core above.
 
-The preview chrome (back/forward, address bar, refresh, stop/reload,
-desktop-mobile toggle) is ported too. Stopping tears the iframe down, so a
-runaway page actually stops running; refreshing clears the debug panel, since
-what the last run logged is stale. So is the element inspector described above.
+The preview toolbar is ported too, in legacy's order: back/forward, address bar
+with refresh, then stop, the desktop/mobile segmented pair, the debug-panel
+toggle, the inspector toggle, and full screen. Stopping tears the iframe down, so
+a runaway page actually stops running; refreshing clears the debug panel, since
+what the last run logged is stale. Full screen floats the preview over the page
+at viewport size and exits on Escape as well as from the toolbar — legacy keeps
+that flag in shared lab redux because other labs use it, but nothing else here
+needs it, so it stays local to the preview.
 
 Page history (`src/preview/previewHistory.ts`) records both ways of navigating —
 a link click inside the student's page, and a path typed in the address bar — and

@@ -7,3 +7,10 @@
   scrollbar-color: var(--background-neutral-senary, #b0b0b0)
     var(--background-neutral-primary, #fff);
 }
+
+/* Clear + close, in the panel header. */
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

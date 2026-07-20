@@ -63,6 +63,8 @@ export const HTMLPreview = () => {
     addNetworkResponse,
     blockNetwork,
     clear: clearDebugPanel,
+    isOpen: isDebugPanelOpen,
+    setIsOpen: setIsDebugPanelOpen,
   } = useDebug();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isReady, setIsReady] = useState(false);
@@ -80,9 +82,27 @@ export const HTMLPreview = () => {
     useState(false);
   // Element inspection runs on the preview origin; we only own the toggle.
   const [inspectorEnabled, setInspectorEnabled] = useState(false);
+  // Blown up over the page. Legacy keeps this in lab redux because other labs
+  // share the flag; nothing else in this workspace needs it, so it stays here.
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   // Where the student has been in the preview; see previewHistory.ts.
   const [history, setHistory] = useState<PreviewHistory>(EMPTY_HISTORY);
+
+  // Escape leaves full screen. An overlay that covers the page must be
+  // dismissable from the keyboard, and Escape is where people reach first.
+  useEffect(() => {
+    if (!isFullScreen) {
+      return;
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsFullScreen(false);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isFullScreen]);
 
   const recordNavigation = useCallback(
     (filePath: string) =>
@@ -291,6 +311,10 @@ export const HTMLPreview = () => {
       setViewMode={setViewMode}
       inspectorEnabled={inspectorEnabled}
       setInspectorEnabled={setInspectorEnabled}
+      isDebugPanelOpen={isDebugPanelOpen}
+      setIsDebugPanelOpen={setIsDebugPanelOpen}
+      isFullScreen={isFullScreen}
+      onToggleFullScreen={() => setIsFullScreen(current => !current)}
     />
   );
 
@@ -330,7 +354,10 @@ export const HTMLPreview = () => {
   );
 
   return (
-    <>
+    // Full screen floats the preview over the page at viewport size. Legacy
+    // positions this absolutely and nudges it up by the header height; `fixed`
+    // against the viewport needs no such correction.
+    <div className={isFullScreen ? styles.fullScreen : styles.container}>
       {header}
       {isServiceWorkerUnavailable ? (
         <div className={stateStyles.state}>
@@ -375,7 +402,7 @@ export const HTMLPreview = () => {
       ) : (
         frame
       )}
-    </>
+    </div>
   );
 };
 

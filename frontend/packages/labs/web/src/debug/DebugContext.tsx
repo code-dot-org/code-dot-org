@@ -69,6 +69,14 @@ interface DebugState {
    */
   blockNetwork: boolean;
   setBlockNetwork: (blockNetwork: boolean) => void;
+  /**
+   * Whether the debug panel is showing. Lives here because three places touch
+   * it: the preview toolbar's toggle, the panel's own close button, and the
+   * layout that gives it room. Legacy keeps it in weblab2Redux for the same
+   * reason.
+   */
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
 const DebugContext = createContext<DebugState>({
@@ -82,6 +90,8 @@ const DebugContext = createContext<DebugState>({
   clear: () => {},
   blockNetwork: false,
   setBlockNetwork: () => {},
+  isOpen: false,
+  setIsOpen: () => {},
 });
 
 export const useDebug = () => useContext(DebugContext);
@@ -92,6 +102,8 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
   // Off by default, as in legacy: student pages may reach the allowed hosts
   // until someone deliberately cuts them off.
   const [blockNetwork, setBlockNetwork] = useState(false);
+  // Closed until asked for, as in legacy.
+  const [isOpen, setIsOpen] = useState(false);
 
   // Unblock on level change, so a block set on one level does not silently
   // follow the student to the next (legacy does this on LevelLoadStarted).
@@ -163,6 +175,8 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
       clear,
       blockNetwork,
       setBlockNetwork,
+      isOpen,
+      setIsOpen,
     }),
     [
       logs,
@@ -174,6 +188,7 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
       clearRequests,
       clear,
       blockNetwork,
+      isOpen,
     ],
   );
 

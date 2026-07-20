@@ -52,3 +52,15 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
     openFiles: ['0'],
   },
 };
+
+/**
+ * Which of the workspace's two panes are showing. Legacy's `weblab2` `ViewMode`
+ * (types.ts); the segmented buttons in the workspace header switch between them.
+ */
+export const ViewMode = {
+  SPLIT: 'split',
+  CODE: 'code',
+  PREVIEW: 'preview',
+} as const;
+
+export type ViewModeType = (typeof ViewMode)[keyof typeof ViewMode];

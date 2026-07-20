@@ -1,6 +1,6 @@
-/* Outer: instructions panel | workspace | preview, side by side. Legacy's
-   weblab2 VerticalLayout splits the workspace and preview vertically down the
-   middle of the page (hence "vertical"), with the info panel on the far left. */
+/* Outer: instructions panel beside the workspace column. Legacy's weblab2
+   VerticalLayout splits the workspace and preview vertically down the middle of
+   the page (hence "vertical"), with the info panel on the far left. */
 .layout {
   display: flex;
   flex-direction: row;
@@ -19,15 +19,44 @@
   overflow: hidden;
 }
 
-/* The code side: the Codebridge workspace (file browser + tabs + editor). */
-.workspaceSection {
+/* Everything but the instructions: the editor/preview split under one header,
+   with the debug panel across the bottom. */
+.workspaceColumn {
   flex: 1;
   min-width: 0;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* The preview side, sized by the layout so its divider can be dragged. */
+/* The workspace panel takes whatever the debug panel leaves. */
+.workspacePanel {
+  flex: 1;
+  min-height: 0;
+}
+
+/* The editor and preview panes, side by side inside the workspace panel. */
+.editorAndPreview {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/* The editor takes the space the preview does not claim. */
+.editorPane {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sized by the layout when split (an inline width wins over this flex basis);
+   flexes to fill when it is the only pane. */
 .previewPane {
+  flex: 1;
   flex-shrink: 0;
   min-width: 0;
   min-height: 0;
@@ -35,12 +64,7 @@
   flex-direction: column;
 }
 
-/* The preview fills the space above the debug panel. */
-.previewSection {
-  flex: 1;
-  min-height: 0;
-}
-
+/* Full width of the workspace column, under both panes. */
 .debugPane {
   flex-shrink: 0;
   min-height: 0;

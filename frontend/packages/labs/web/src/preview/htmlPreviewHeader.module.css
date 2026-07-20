@@ -4,7 +4,17 @@
   gap: 0.5rem;
   flex-shrink: 0;
   min-width: 0;
-  padding: 4px;
+  padding: 0.5rem;
+  background-color: var(--background-neutral-secondary, #f5f5f5);
+  border-bottom: 1px solid var(--borders-neutral-primary, #ccc);
+  box-sizing: border-box;
+}
+
+/* Full screen floats the preview on a dark backdrop; round the top corners with
+   the frame below (legacy's .fullScreenPreviewHeaderContainer). The header keeps
+   its own background, which is also what keeps the toolbar icons legible there. */
+.fullScreenHeader {
+  border-radius: 0.25rem 0.25rem 0 0;
 }
 
 /* The address bar: current page plus refresh. */
