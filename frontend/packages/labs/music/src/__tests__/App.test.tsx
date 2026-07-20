@@ -33,7 +33,7 @@ it('renders without crashing', async () => {
     <RootStateProvider>
       <QueryClientProvider>
         <ApiClientProvider client={DashboardApiClient}>
-          <App isLoading={false} />
+          <App />
         </ApiClientProvider>
       </QueryClientProvider>
     </RootStateProvider>,

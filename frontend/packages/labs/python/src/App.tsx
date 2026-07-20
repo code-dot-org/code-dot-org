@@ -8,7 +8,6 @@ import {
 } from '@code-dot-org/codebridge';
 import type {CodebridgeRuntime} from '@code-dot-org/codebridge';
 import type {
-  LevelPropertiesMap,
   MultiFileSource,
   ProjectSources,
 } from '@code-dot-org/core/api';
@@ -26,19 +25,6 @@ import {
   stopPython,
 } from './runtime/pythonRunner';
 import {registerSourceWriter} from './runtime/sourceWriteBack';
-
-/**
- * Host-supplied props for the Python Lab entrypoint — the standard
- * `LabEntrypointProps` loading contract the studio host drives. Forwarded to
- * {@link CodebridgeLab}, which owns sources, theming, and the level-properties
- * context.
- */
-export interface PythonLabProps {
-  isLoading: boolean;
-  levelId?: string;
-  standaloneProjectType?: string;
-  levelPropertiesMap?: LevelPropertiesMap;
-}
 
 /**
  * Provides the pyodide runtime callbacks to Codebridge. Reads the current
@@ -108,13 +94,11 @@ const PythonRuntimeProvider = ({children}: PropsWithChildren) => {
  * supplies Run/Stop/console callbacks (pyodide); {@link PythonLayout} lays out the
  * instructions, file browser, editor, and console.
  */
-const PythonLab = (props: PythonLabProps) => (
+// Self-contained: the studio host renders the single `<Lab>` (see LabHost) and
+// publishes level data to context, so the entrypoint takes no props.
+const PythonLab = () => (
   <div className={styles.app}>
-    <CodebridgeLab
-      {...props}
-      config={pythonConfig}
-      defaultSources={DEFAULT_PROJECT}
-    >
+    <CodebridgeLab config={pythonConfig} defaultSources={DEFAULT_PROJECT}>
       <PythonRuntimeProvider>
         <PythonLayout />
       </PythonRuntimeProvider>

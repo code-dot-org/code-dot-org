@@ -6,7 +6,6 @@
 // (language support) and, once ported, the pyodide runtime.
 
 export {default} from './App';
-export type {PythonLabProps} from './App';
 export {pythonConfig} from './config';
 // Host-supplied configuration for where the pyodide runtime + wheels are served
 // from (defaults to studio's /blockly/js/pyodide/<version>/).

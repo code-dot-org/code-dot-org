@@ -29,7 +29,7 @@ import {
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
-import {LabHost} from '@code-dot-org/lab/components';
+import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
 import {PYODIDE_VERSION, setPyodideBaseUrl} from './runtime/pyodideConfig';

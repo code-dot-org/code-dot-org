@@ -3,6 +3,7 @@ import {expect, it, vi} from 'vitest';
 
 import type {LevelProperties} from '@code-dot-org/core/api';
 import {RootStateProvider} from '@code-dot-org/core/redux';
+import {Lab} from '@code-dot-org/lab/host';
 
 import WebLab from '../App';
 
@@ -44,11 +45,9 @@ vi.mock('@code-dot-org/codebridge', async () => {
 it('renders the Web Lab shell from the default project', async () => {
   render(
     <RootStateProvider>
-      <WebLab
-        isLoading={false}
-        levelId="1"
-        levelPropertiesMap={{'1': {} as LevelProperties}}
-      />
+      <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
+        <WebLab />
+      </Lab>
     </RootStateProvider>,
   );
 
