@@ -1,2 +1,2 @@
 @use '@fontsource/geist/scss/mixins' as Geist;
-@include Geist.faces($family: 'Geist');
+@include Geist.faces($family: 'Geist', $styles: all, $weights: all);
