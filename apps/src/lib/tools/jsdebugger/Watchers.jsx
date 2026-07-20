@@ -14,7 +14,7 @@ import {add, update, remove} from '../../../redux/watchedExpressions';
 
 import AutocompleteSelector from './AutocompleteSelector';
 
-import moduleStyles from './Watchers.module.scss';
+import moduleStyles from './watchers.module.scss';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
