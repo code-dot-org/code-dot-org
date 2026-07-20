@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import {expect, it} from 'vitest';
 
 import type {LevelProperties, MultiFileSource} from '@code-dot-org/core/api';
-import {RootStateProvider} from '@code-dot-org/lab';
+import {RootStateProvider} from '@code-dot-org/core/redux';
 import {SourcesProvider} from '@code-dot-org/lab/contexts';
 
 import {getEmptyProject} from '../../utils/multiFileSource';

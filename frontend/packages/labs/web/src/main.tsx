@@ -26,8 +26,9 @@ import {
   QueryClientProvider,
 } from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import {RootStateProvider} from '@code-dot-org/core/redux';
 import {injectFontAwesome} from '@code-dot-org/fonts';
-import {LabHost, RootStateProvider} from '@code-dot-org/lab';
+import {LabHost} from '@code-dot-org/lab/components';
 
 import App from './App';
 

@@ -6,8 +6,8 @@ import type {
   LevelProperties,
   MultiFileSource,
 } from '@code-dot-org/core/api';
-import {LabRegistry, RootStateProvider} from '@code-dot-org/lab';
-import {SourcesProvider} from '@code-dot-org/lab/contexts';
+import {RootStateProvider} from '@code-dot-org/core/redux';
+import {LabRegistry,SourcesProvider} from '@code-dot-org/lab/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import CodebridgeTextEditor from '../components/CodebridgeTextEditor';

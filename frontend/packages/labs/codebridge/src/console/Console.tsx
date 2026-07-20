@@ -7,7 +7,8 @@ import {useEffect, useRef, useState} from 'react';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {FontSize, PanelContainer} from '@code-dot-org/lab';
+import {PanelContainer} from '@code-dot-org/lab/components';
+import {FontSize} from '@code-dot-org/lab/constants';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {useCodebridgeRuntime} from '../contexts';

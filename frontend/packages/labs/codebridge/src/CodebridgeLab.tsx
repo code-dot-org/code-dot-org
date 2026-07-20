@@ -3,8 +3,8 @@ import type {
   MultiFileSource,
   ProjectSources,
 } from '@code-dot-org/core/api';
-import {LabWithSources} from '@code-dot-org/lab';
-import type {LabWithSourcesProps} from '@code-dot-org/lab';
+import {LabWithSources} from '@code-dot-org/lab/components';
+import type {LabWithSourcesProps} from '@code-dot-org/lab/components';
 
 import {DEFAULT_CODEBRIDGE_CONFIG} from './config';
 import type {CodebridgeConfig} from './config';

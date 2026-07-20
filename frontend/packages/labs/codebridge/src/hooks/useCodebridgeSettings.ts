@@ -1,5 +1,5 @@
-import {FontSize} from '@code-dot-org/lab';
-import type {FontSizeKey} from '@code-dot-org/lab';
+import {FontSize} from '@code-dot-org/lab/constants';
+import type {FontSizeKey} from '@code-dot-org/lab/constants';
 import {labViewActions} from '@code-dot-org/lab/redux';
 import type {Setting} from '@code-dot-org/lab/resourcePanel';
 

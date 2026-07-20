@@ -11,3 +11,6 @@ export * from './LevelPropertiesContext';
 export * from './SourcesContext';
 export * from './ProjectContext';
 export type {LevelPropertiesMap} from '../types';
+
+// The lab-facing runtime registry (metrics reporter, lifecycle notifier).
+export {default as LabRegistry} from '../LabRegistry';

@@ -6,7 +6,7 @@ import {EditorView} from '@codemirror/view';
 import {useEffect, useMemo, useRef} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {FontSize} from '@code-dot-org/lab';
+import {FontSize} from '@code-dot-org/lab/constants';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import emptyFilesPlaceholderImage from '../assets/empty-files-placeholder.svg';

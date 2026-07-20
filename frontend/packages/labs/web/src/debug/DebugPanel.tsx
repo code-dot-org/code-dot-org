@@ -5,7 +5,7 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {PanelContainer} from '@code-dot-org/lab';
+import {PanelContainer} from '@code-dot-org/lab/components';
 
 import {Console} from './Console';
 import {useDebug} from './DebugContext';
