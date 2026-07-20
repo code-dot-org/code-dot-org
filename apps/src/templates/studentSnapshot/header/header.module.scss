@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '@code-dot-org/component-library-styles/mixins';
 
 .header {
   margin-bottom: 16px;
@@ -8,7 +9,15 @@
   justify-content: space-between;
   gap: 32px;
 
+  .groupLabel {
+    @include label-three;
+    display: block;
+    margin-bottom: 0;
+  }
+
   .dropdown {
+    flex: 1 1 auto;
+    min-width: 0;
     width: 100%;
 
     div {
@@ -27,12 +36,26 @@
   width: 100%;
 }
 
-.buttonGroup {
+.prevNextDropdown {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
+  width: 100%;
 
-  .button {
-    flex-grow: 1;
+  button {
+    flex: 0 0 auto;
+    width: fit-content;
+    padding: 0 32px;
+  }
+}
+
+.unitSelector {
+  width: 100%;
+
+  div {
+    width: 100%;
+    select {
+      width: 100%;
+    }
   }
 }

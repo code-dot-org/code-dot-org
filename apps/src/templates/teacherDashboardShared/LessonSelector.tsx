@@ -55,6 +55,7 @@ interface LessonSelectorProps {
   className?: string;
   isLabelVisible?: boolean;
   labelText?: string;
+  dropdownTextThickness?: 'thick' | 'thin';
 }
 
 const LessonSelector: React.FC<LessonSelectorProps> = ({
@@ -67,6 +68,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   className,
   isLabelVisible = false,
   labelText = i18n.chooseLesson(),
+  dropdownTextThickness = 'thick',
 }) => {
   const onDropdownChange = (value: string) => {
     onLessonChange(Number(value));
@@ -118,6 +120,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
       size="s"
       id="ui-test-lessons-in-assigned-unit-dropdown"
       className={className}
+      dropdownTextThickness={dropdownTextThickness}
     />
   );
 };
