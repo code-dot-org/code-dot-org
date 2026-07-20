@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  min-width: 0;
+  padding: 4px;
+}
+
+/* The address bar: current page plus refresh. */
+.urlBar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+  padding-inline: 4px;
+  border: 1px solid var(--borders-neutral-primary, #ccc);
+  border-radius: var(--border-radius, 4px);
+  background-color: var(--background-neutral-primary, #fff);
+}
+
+.urlInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 2px 4px;
+  font-size: 13px;
+  color: var(--text-neutral-primary, #000);
+}
+
+.urlInput:focus-visible {
+  outline: var(--borders-brand-teal-primary, #0090a0) solid 2px;
+  outline-offset: -2px;
+  border-radius: var(--border-radius, 4px);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}

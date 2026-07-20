@@ -1,15 +1,23 @@
+import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {DEFAULT_START_HTML_FILE} from '../constants';
 import {useDebug} from '../debug/DebugContext';
 
-import {IframeMessage} from './constants';
+import {
+  IframeMessage,
+  PreviewViewMode,
+  type PreviewViewModeType,
+} from './constants';
 import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicy';
 import styles from './htmlPreview.module.css';
+import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 import {getPreviewUrl, PARENT_ORIGIN_PARAM} from './previewConfig';
+import stateStyles from './previewStates.module.css';
 import {
   filterSourceForPreview,
   getPreviewFiles,
@@ -42,6 +50,13 @@ export const HTMLPreview = ({
   const {addConsoleLog, addNetworkRequest, addNetworkResponse} = useDebug();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isReady, setIsReady] = useState(false);
+  // Which page the preview is showing, and how it is framed.
+  const [currentFile, setCurrentFile] = useState(DEFAULT_START_HTML_FILE);
+  const [viewMode, setViewMode] = useState<PreviewViewModeType>(
+    PreviewViewMode.DESKTOP,
+  );
+  // Stopping tears the iframe down entirely, so a runaway page stops running.
+  const [isStopped, setIsStopped] = useState(false);
 
   const previewUrl = getPreviewUrl();
   const previewOrigin = useMemo(
@@ -95,6 +110,11 @@ export const HTMLPreview = ({
         case IframeMessage.IFRAME_READY:
           setIsReady(true);
           break;
+        case IframeMessage.CHANGE_FILE_URL_BAR:
+          if (data.filePath) {
+            setCurrentFile(data.filePath);
+          }
+          break;
         case IframeMessage.CONSOLE_LOG:
           addConsoleLog(data.level, data.args ?? []);
           break;
@@ -136,6 +156,39 @@ export const HTMLPreview = ({
     );
   }, [isReady, previewOrigin, files, contentSecurityPolicy, blockNetwork]);
 
+  const post = (message: unknown) => {
+    if (previewOrigin) {
+      iframeRef.current?.contentWindow?.postMessage(message, previewOrigin);
+    }
+  };
+
+  const header = (
+    <HTMLPreviewHeader
+      currentFile={currentFile}
+      onNavigate={filePath => {
+        setCurrentFile(filePath);
+        post({type: IframeMessage.CHANGE_FILE_URL_BAR, filePath});
+      }}
+      onRefresh={() => {
+        if (isStopped) {
+          // Reloading after a stop rebuilds the iframe; sources are re-sent
+          // once it reports ready again.
+          setIsStopped(false);
+          setIsReady(false);
+        } else {
+          post({type: IframeMessage.REFRESH});
+        }
+      }}
+      onStop={() => {
+        setIsStopped(true);
+        setIsReady(false);
+      }}
+      isStopEnabled={!isStopped}
+      viewMode={viewMode}
+      setViewMode={setViewMode}
+    />
+  );
+
   if (!iframeSrc) {
     return (
       <div className={styles.notConfigured}>
@@ -146,13 +199,60 @@ export const HTMLPreview = ({
     );
   }
 
+  // The wrapper is always present and only its class changes: moving the iframe
+  // in the DOM would remount it, reloading the student's page on every toggle.
+  const frame = (
+    <div
+      className={
+        viewMode === PreviewViewMode.MOBILE
+          ? stateStyles.mobileWrapper
+          : stateStyles.desktopWrapper
+      }
+    >
+      <div
+        className={
+          viewMode === PreviewViewMode.MOBILE ? stateStyles.mobileFrame : ''
+        }
+      >
+        <iframe
+          ref={iframeRef}
+          className={styles.frame}
+          title="Page preview"
+          src={iframeSrc}
+        />
+      </div>
+    </div>
+  );
+
   return (
-    <iframe
-      ref={iframeRef}
-      className={styles.frame}
-      title="Page preview"
-      src={iframeSrc}
-    />
+    <>
+      {header}
+      {isStopped ? (
+        <div className={stateStyles.state}>
+          <Typography variant="h4" component="p" className={stateStyles.title}>
+            Preview stopped
+          </Typography>
+          <Typography variant="body3">
+            You stopped the preview. Review your code, then reload to run it
+            again.
+          </Typography>
+          <Button
+            variant="outlined"
+            color="tertiary"
+            size="small"
+            startIcon={<FontAwesomeV6Icon iconName="sync" iconStyle="solid" />}
+            onClick={() => {
+              setIsStopped(false);
+              setIsReady(false);
+            }}
+          >
+            Reload preview
+          </Button>
+        </div>
+      ) : (
+        frame
+      )}
+    </>
   );
 };
 

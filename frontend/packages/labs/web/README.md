@@ -61,18 +61,20 @@ Wiring those to level properties is deferred.
 Ported: the shell composition (config, default project, layout, demo harness)
 and the preview core above.
 
+The preview chrome (address bar, refresh, stop/reload, desktop-mobile toggle)
+and the debug panel (console + network, with repeat grouping and blocked/CSP
+reporting) are ported too. Stopping tears the iframe down, so a runaway page
+actually stops running.
+
 Still to port from legacy:
 
-- **Preview chrome** (`HTMLPreviewHeader`, empty/stopped/404 states) — URL bar,
-  refresh, stop, desktop/mobile toggle.
-- **Debug panel** (`weblab2/debugPanel/`) — console + network panels. The
-  messages already flow: the worker and the injected page scripts report console
-  output, errors, CSP violations, and network activity. Web Lab does not use the
-  Codebridge xterm console.
 - **Preview inspector** (`htmlPreviewInspector*`, ~540 lines) — hover/select
   elements in the preview.
 - **Linters** (`weblab2/htmlLinter.ts`, `cssLinter.ts`) — CodeMirror lint
   integration for HTML and CSS.
+- Preview navigation history (legacy's back/forward buttons), the per-request
+  details box with response bodies, and the copy button — the data already
+  arrives for all three.
 - Level-driven `allowScripts` / `blockNetwork`, uploaded assets (the frontend
   `ProjectFile` schema has no `url` field yet), studio `LAB_REGISTRY`
   registration, share view, AI tutor, and the intro tour.
