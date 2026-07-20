@@ -196,7 +196,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
  * (extraSharedBlocks), so DB-authored toolboxes don't know them; per-type
  * dedupe leaves alone whatever a level curates itself.
  */
-export function ensurePlatformerBlocks(toolboxXml: string): string {
+export function ensureInjectedCategories(toolboxXml: string): string {
   try {
     const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
     const categories = Array.from(doc.getElementsByTagNameNS('*', 'category'));

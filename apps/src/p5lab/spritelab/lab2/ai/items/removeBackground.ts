@@ -16,7 +16,7 @@
  * canvas); removeBackground() is the thin DOM/canvas wrapper.
  */
 
-import {findOpaqueBounds} from '../../imageTrim';
+import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 
 export interface MatteOptions {
   // Soft matte feathers the edge (partial alpha + spill suppression). When
@@ -161,7 +161,7 @@ export async function removeBackground(
  * Crop an image Blob to its opaque content bounds and return a new PNG Blob.
  * Returns the input unchanged when there's nothing to crop (full-bleed
  * content or nothing opaque). Run after keying: the delivered image then
- * fills its own frame edge-to-edge, so grid-placed copies butt cleanly no
+ * fills its own frame edge-to-edge, so grid-placed copies tile seamlessly no
  * matter how much margin the model left.
  */
 export async function cropToContent(blob: Blob): Promise<Blob> {

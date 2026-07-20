@@ -13,7 +13,7 @@ const NEW_SCENE_VALUE = '__new_scene__';
 interface SceneSelectorProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
-  // Disabled outside the scene area (World/Code), where switching has no effect.
+  // Disabled off the Code tab, where switching has no effect.
   disabled?: boolean;
   onSelectScene: (sceneId: string) => void;
   onCreateScene: (name: string) => void;

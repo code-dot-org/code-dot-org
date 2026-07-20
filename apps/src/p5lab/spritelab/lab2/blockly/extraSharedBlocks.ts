@@ -199,10 +199,11 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
     // not the costume — a label that fails to round-trip must not orphan the
     // player from its physics. Move speed reads the sprite's own speed
     // property so "set speed" still applies; the jump requires standing on a
-    // wall. setProp velocityY negates, so 13 is upward.
+    // wall. setProp velocityY negates, so jumpSpeed is upward.
     helperCode: [
       'function makePlatformPlayer(animation, layout) {',
       '  var cell = 400 / layout.length;',
+      '  var jumpSpeed = 13;',
       '  for (var row = 0; row < layout.length; row++) {',
       '    for (var col = 0; col < layout[row].length; col++) {',
       '      if (layout[row][col]) {',
@@ -221,7 +222,7 @@ export const SPRITELAB2_EXTRA_SHARED_BLOCKS = [
       '  });',
       "  keyPressed('when', 'space', function () {",
       "    if (isDirectlyAbove({group: 'players'}, {group: 'walls'})) {",
-      "      setProp({group: 'players'}, 'velocityY', 13);",
+      "      setProp({group: 'players'}, 'velocityY', jumpSpeed);",
       '    }',
       '  });',
       '}',

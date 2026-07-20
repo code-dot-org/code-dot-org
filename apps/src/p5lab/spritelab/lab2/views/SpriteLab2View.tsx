@@ -561,11 +561,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
-  // The scene Play (re)starts from: null means the beginning (the default
-  // scene). The Play tab button clears it; clicking a preview sets it to the
-  // previewed scene. "Start over" re-runs whichever this is; "Play from
-  // beginning" clears it mid-play. State (not a ref) because the Play tab's
-  // "Playing from" label renders from it.
+  // The scene Play (re)starts from: null means the beginning (the first
+  // scene). Clicking a preview sets it to the previewed scene; entering Play
+  // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
 
   // The live preview and Blockly share the window keyboard: p5 listens on
@@ -657,9 +655,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [engineReady, runProgram]);
 
-  // Scenes variant tab semantics: Play always (re)starts at the default scene;
-  // returning to Code resumes previewing the scene being edited. Skip the
-  // initial mount — the engine-ready effect handles the first run.
+  // Scenes variant tab semantics: Play (re)starts at the chosen start scene
+  // (or the beginning); returning to Code resumes previewing the scene being
+  // edited. Skip the initial mount — the engine-ready effect handles the
+  // first run.
   const prevTabRef = useRef(activeTab);
   useEffect(() => {
     const prevTab = prevTabRef.current;

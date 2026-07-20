@@ -9,8 +9,8 @@ import {createUuid} from '@cdo/apps/utils';
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
 
-// 'block' is a square platform tile: drawn full-bleed (no background removal)
-// so copies butt seamlessly when laid out on the grid.
+// 'block' is a square platform tile: keyed and cropped to its content so
+// copies tile seamlessly when laid out on the grid.
 export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
@@ -104,8 +104,8 @@ export async function generateImage(
   // removed exactly the same way (flood-fill from top-left — the block prompt
   // asks for green padding on all sides, so the corner is background; pixel
   // art a sharp 1-bit cut, smooth art a feathered matte). Blocks are then
-  // cropped to content so the padding is trimmed and grid-placed copies butt
-  // cleanly. Pixel style gets grid-normalized; any processed image comes back
+  // cropped to content so the padding is trimmed and grid-placed copies tile
+  // seamlessly. Pixel style gets grid-normalized; any processed image comes back
   // as PNG. A smooth background passes through as-is.
   if (itemType !== 'background' || style === 'pixel') {
     let blob = new Blob(
