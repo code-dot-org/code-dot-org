@@ -1,10 +1,4 @@
-import {
-  act,
-  render,
-  screen,
-  fireEvent,
-  within,
-} from '@testing-library/react';
+import {act, render, screen, fireEvent, within} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
