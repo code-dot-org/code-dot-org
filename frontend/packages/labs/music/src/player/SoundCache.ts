@@ -1,5 +1,5 @@
 import {ApiError} from '@code-dot-org/core/api';
-import type {LabMetricsReporter} from '@code-dot-org/lab/host';
+import type {LabMetricsReporter} from '@code-dot-org/lab/metrics';
 import {LabRegistry} from '@code-dot-org/lab/contexts';
 
 import type {Sample} from './types';

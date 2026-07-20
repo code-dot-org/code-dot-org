@@ -12,7 +12,7 @@ import type {ToneAudioNode} from 'tone';
 import type {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
 import type {Source, SourceOptions} from 'tone/build/esm/source/Source';
 
-import type {LabMetricsReporter} from '@code-dot-org/lab/host';
+import type {LabMetricsReporter} from '@code-dot-org/lab/metrics';
 import {LabRegistry} from '@code-dot-org/lab/contexts';
 
 import type {MusicApiClient} from '../api';

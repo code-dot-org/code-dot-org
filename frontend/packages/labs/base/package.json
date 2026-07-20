@@ -27,6 +27,11 @@
       "import": "./dist/host.mjs",
       "require": "./dist/host.cjs"
     },
+    "./metrics": {
+      "types": "./dist/metrics.d.ts",
+      "import": "./dist/metrics.mjs",
+      "require": "./dist/metrics.cjs"
+    },
     "./dialogs": {
       "types": "./dist/dialogs/index.d.ts",
       "import": "./dist/dialogs/index.mjs",
