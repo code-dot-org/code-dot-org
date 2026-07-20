@@ -318,8 +318,7 @@ img.video_thumbnail {
     align-items: center;
     color: var(--text-neutral-white-fixed);
     background-color: transparent;
-    // no border-white token exists; background token used as the border color
-    border: 1px solid var(--background-neutral-white-fixed);
+    border: 1px solid var(--borders-neutral-white-fixed);
     border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
@@ -335,7 +334,7 @@ img.video_thumbnail {
       background-color: $orange;
     }
     &:active {
-      border: 1px solid var(--background-neutral-white-fixed) !important;
+      border: 1px solid var(--borders-neutral-white-fixed) !important;
     }
   }
 
