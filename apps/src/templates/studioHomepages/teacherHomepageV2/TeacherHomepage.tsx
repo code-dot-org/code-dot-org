@@ -164,7 +164,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
     // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
       try {
-        const response = await fetch('/teaching_profile_data');
+        const response = await fetch('/teaching_profile_data', {
+          headers: {Accept: 'application/json'},
+        });
         const data = await response.json();
         setPersonaData({
           hasMatchedPersona: !!data.data.matchedPersona,

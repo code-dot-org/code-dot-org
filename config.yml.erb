@@ -298,6 +298,9 @@ user_content_s3_bucket: <%=
     'staging'      => 'org.code.staging-studio.user-content',
     'test'         => 'org.code.test-studio.user-content',
     'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+    # Development has no bucket of its own; borrow the test bucket. Requires
+    # AWS credentials with access to it (see aws_credentials in locals.yml).
+    'development'  => 'org.code.test-studio.user-content',
   }[env]
 %>
 

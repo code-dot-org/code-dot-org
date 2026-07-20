@@ -21,6 +21,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getInnerEnvironment} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {filterSourceForPreview} from '@cdo/apps/weblab2/htmlPreview/filterSourceForPreview';
@@ -68,13 +69,10 @@ export const HTMLPreview: React.FC = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
-    const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
-    const environmentKey = location.hostname.replace(re, '');
-    const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+    const {subdomain, isLocalhost, port} = getInnerEnvironment();
     const useFullUrlOnLocal = experiments.isEnabledAllowingQueryString(
       experiments.WEBLAB2_FULL_URLS
     );
-    const isLocalhost = 'localhost' === environmentKey;
     // When testing on localhost, it is convenient to have a fixed subdomain
     // to avoid having to give permissions to every channel id version of the preview url.
     // Use the flag ?weblab2-full-urls=true or ?enableExperiments=weblab2-full-urls
@@ -94,7 +92,6 @@ export const HTMLPreview: React.FC = () => {
       }
     }
 
-    const port = isLocalhost && location.port ? `:${location.port}` : '';
     return `${location.protocol}//${prefix}.preview.${subdomain}codeprojects.org${port}`;
   }, [
     isEditingExemplar,

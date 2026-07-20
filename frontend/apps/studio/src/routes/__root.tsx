@@ -20,7 +20,7 @@ import {
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
 import {useCallback} from 'react';
 
-import {CdoTheme} from '@code-dot-org/component-library/themes';
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
@@ -105,6 +105,8 @@ const cssLayerOrder = (
   <GlobalStyles styles="@layer theme, base, mui, components, utilities;" />
 );
 
+const theme = getMuiThemeForBrand(document.documentElement.dataset.brand);
+
 /** Root layout: applies the CDO MUI theme and Bootstrap providers to all routes. */
 function RootLayout() {
   return (
@@ -112,7 +114,7 @@ function RootLayout() {
       <StyledEngineProvider enableCssLayer>
         <HeadContent />
         {cssLayerOrder}
-        <ThemeProvider theme={CdoTheme}>
+        <ThemeProvider theme={theme}>
           {responsiveFloorStyles}
           <Bootstrap locale="en-US">
             <RootContent />

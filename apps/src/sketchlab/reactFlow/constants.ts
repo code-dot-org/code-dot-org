@@ -44,6 +44,16 @@ export const MIN_ZOOM = 0.1;
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
 
+// data-* attribute the onboarding tour targets to highlight a set of related
+// buttons as one unit.
+export const TOUR_GROUP_ATTR = 'data-tour-group';
+export const TOUR_GROUP = {
+  selectionTools: 'selection-tools',
+  shapeTools: 'shape-tools',
+  undoRedo: 'undo-redo',
+  zoom: 'zoom',
+} as const;
+
 // Padding (px) added around child nodes when computing initial group bounds.
 // This is consistent with the padding used by React Flow's built-in group node.
 export const GROUP_PADDING_PX = 10;
