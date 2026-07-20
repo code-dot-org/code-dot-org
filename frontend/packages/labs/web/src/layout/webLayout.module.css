@@ -1,0 +1,49 @@
+/* Outer: instructions panel | workspace | preview, side by side. Legacy's
+   weblab2 VerticalLayout splits the workspace and preview vertically down the
+   middle of the page (hence "vertical"), with the info panel on the far left. */
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 0;
+}
+
+/* The instructions / resource panel, sized by the layout so the seam beside it
+   can be dragged. The width MUST land on the panel itself, not a wrapper: base
+   sizes `.resourcePanel` as `calc(3.5rem + 20%)`, a percentage of its parent, so
+   a fixed-width wrapper compounds (320px wrapper -> 120px panel). */
+.instructions {
+  width: var(--instructions-width, 320px);
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* The code side: the Codebridge workspace (file browser + tabs + editor). */
+.workspaceSection {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* The preview side, sized by the layout so its divider can be dragged. */
+.previewPane {
+  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placeholder body until the real HTML preview lands. */
+.previewPlaceholder {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-neutral-secondary, #666);
+  background-color: var(--background-neutral-primary, #fff);
+}
