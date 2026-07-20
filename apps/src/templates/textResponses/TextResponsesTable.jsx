@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import orderBy from 'lodash/orderBy';
+import markdownToTxt from 'markdown-to-txt';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
@@ -59,6 +60,15 @@ class TextResponsesTable extends Component {
       return <span className="uitest-name-cell">{name}</span>;
     }
   };
+
+  // Questions are authored in markdown (headings, bold, etc.). Strip the
+  // formatting to plain text so the cell stays compact and readable.
+  // markdownToTxt only recognizes headings with a space after '#'
+  // (`## Foo`), so strip any leftover leading '#' markers ourselves.
+  questionFormatter = question =>
+    question
+      ? markdownToTxt(question).replace(/^[ \t]*#+[ \t]*/gm, '')
+      : question;
 
   responseFormatter = (_, {rowData}) => {
     const {response, url} = rowData;
@@ -158,6 +168,7 @@ class TextResponsesTable extends Component {
           transforms: [sortable],
         },
         cell: {
+          formatters: [this.questionFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
