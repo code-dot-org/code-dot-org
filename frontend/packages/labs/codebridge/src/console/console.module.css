@@ -1,0 +1,32 @@
+/* The base PanelContainer supplies the flex column + header; this just sets the
+   background and the terminal area that fills below the header. */
+.console {
+  background-color: var(--background-neutral-primary, #fff);
+}
+
+/* The xterm area. Its background tracks the terminal theme (legacy
+   `.consoleContainerLight` / `Dark`) so the padding around the canvas matches
+   the terminal — white on light, black on dark. */
+.terminal {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding-left: 4px;
+  background-color: #fff;
+}
+
+.terminalDark {
+  background-color: #000;
+}
+
+/* Legacy `.controlButton` — spacing around the Run/Stop button in the header. */
+.controlButton {
+  margin: 8px 8px 8px 4px;
+}
+
+/* The status icon (a spinner while the environment loads) shown beside a
+   disabled Run button (legacy `.disabledInfoIcon`). */
+.disabledInfoIcon {
+  color: var(--text-neutral-primary);
+  font-size: 16px;
+}

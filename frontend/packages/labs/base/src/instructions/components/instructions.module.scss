@@ -1,0 +1,308 @@
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.instructions {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 200%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  overflow: hidden;
+
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.fixedDarkBackground {
+  background-color: var(--background-neutral-black-fixed);
+}
+
+.standardBackground {
+  background-color: var(--background-neutral-primary);
+}
+
+.item {
+  display: flex;
+  pointer-events: auto;
+  flex: 1;
+  opacity: 1;
+  height: 100%;
+
+  &.itemVertical {
+    flex-direction: column;
+  }
+}
+
+.mainInstructions {
+  white-space: normal;
+}
+
+.bubble {
+  position: relative;
+  padding: 12px;
+  border-radius: 4px;
+  animation: slidein 0.5s;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text-neutral-primary);
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  a:link,
+  a {
+    color: var(--text-brand-purple-primary);
+    text-decoration: underline;
+    &:hover {
+      color: var(--text-brand-purple-secondary);
+    }
+  }
+}
+
+.textContent {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.ttsContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bubbleNoSlide {
+  animation: none;
+}
+
+.buttonInstruction {
+  width: 100%;
+  height: 32px;
+}
+
+// Ensure the TooltipOverlay wrapper div matches the button width
+// without changing TooltipOverlay's calculated position.
+.buttonInstructionTooltipOverlay {
+  > div {
+    width: 100%;
+  }
+
+  // Contained button takes full width.
+  button {
+    width: 100%;
+    height: 32px;
+  }
+}
+
+.markdownText {
+  user-select: text;
+  word-break: break-word;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5em 0;
+
+    &:not(h5, h6),
+    em,
+    strong {
+      font-family: var(--font-family-barlow-semi-condensed-semibold);
+    }
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.28;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.32;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.48;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.48;
+    text-transform: uppercase;
+  }
+
+  ol,
+  ul {
+    line-height: 0;
+    margin: 0 0 0.5rem 1.5rem;
+    padding: 0;
+  }
+
+  li {
+    line-height: 1.5rem;
+    margin-bottom: 0.375rem;
+  }
+
+  code,
+  pre {
+    color: var(--text-info-secondary);
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-strong);
+  }
+
+  pre code {
+    border: none;
+  }
+
+  code {
+    // Allow code to wrap.
+    white-space: pre-wrap;
+    line-height: 1.8;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  details {
+    line-height: 1.2;
+    summary {
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 4px 0;
+
+      &:hover {
+        background-color: var(--background-neutral-quaternary);
+      }
+    }
+  }
+}
+
+// For markdown content that contains the tts button inside its contents
+.markdownTts {
+  > *:first-child {
+    // Make room within the first element to fit the tts button
+    margin-inline-end: 1.5rem;
+  }
+}
+
+.validationIcon {
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.predictQuestion {
+  width: auto;
+  margin: 4px;
+}
+
+.button {
+  padding: 12px;
+}
+
+.imageContainer {
+  text-align: center;
+
+  &.horizontal {
+    text-align: left;
+    width: 140px;
+  }
+
+  .image {
+    cursor: pointer;
+    max-height: 120px;
+
+    &.fixedHeight {
+      height: 70px;
+    }
+  }
+
+  .bigImage {
+    position: absolute;
+    width: 440px;
+    text-align: left;
+    top: 0;
+    left: 0;
+
+    &Left {
+      left: auto;
+      right: 0;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      border: 10px var(--background-neutral-lab) solid;
+      z-index: 80;
+      cursor: pointer;
+    }
+  }
+}
+
+.feedback {
+  &Bottom {
+    margin-top: auto;
+  }
+}
+
+%scrolling-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 15px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
+}
+
+.bottomComponent {
+  overflow: hidden;
+}
+
+.predictSummaryBubble {
+  flex-shrink: 0; // Ensure the contents always fits in the bubble.
+}

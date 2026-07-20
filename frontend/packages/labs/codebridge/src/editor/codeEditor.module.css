@@ -1,0 +1,9 @@
+.codeEditor {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CodeMirror manages its own DOM inside this container; make it fill height. */
+.codeEditor :global(.cm-editor) {
+  height: 100%;
+}

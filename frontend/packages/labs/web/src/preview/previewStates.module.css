@@ -1,0 +1,51 @@
+/* The preview body when there is nothing to show, or the student stopped it. */
+.state {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-secondary, #666);
+}
+
+.title {
+  color: var(--text-neutral-primary, #000);
+}
+
+/* Desktop viewport: the frame simply fills the panel. */
+.desktopWrapper {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.desktopWrapper > div {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+/* Mobile viewport: a phone-width column centered in the panel. */
+.mobileWrapper {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-neutral-secondary, #f0f0f0);
+  padding: 0.5rem 0;
+}
+
+.mobileFrame {
+  width: 390px;
+  max-width: 100%;
+  border: 1px solid var(--borders-neutral-primary, #ccc);
+  border-radius: var(--border-radius, 4px);
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+}

@@ -1,0 +1,26 @@
+/* Ported from apps/src/weblab2/debugPanel/network-request-chip.module.scss. */
+
+.networkRequestChip {
+  display: flex;
+  width: 100%;
+  padding: 6px 10px;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary, #ccc);
+  background: var(--background-neutral-secondary, #f5f5f5);
+  box-sizing: border-box;
+}
+
+.radioButton {
+  min-width: 0;
+  flex: 1;
+}
+
+/* The label is a URL segment and may not fit; clip rather than wrap. */
+.radioButton span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

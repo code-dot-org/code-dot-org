@@ -1,0 +1,61 @@
+/* Ported from apps/src/weblab2/debugPanel/console.module.scss. */
+
+.consoleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  height: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.consoleLogEntry {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+.consoleLogEntry p {
+  margin-bottom: 0;
+}
+
+/* Shrinkable, so a long message wraps instead of pushing the meta off. */
+.consoleLogMessage {
+  min-width: 0;
+  word-break: break-word;
+}
+
+.logMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.countBadge {
+  font-family: monospace;
+  white-space: nowrap;
+  margin: 0 8px 0 0;
+}
+
+.timestamp {
+  font-family: monospace;
+  color: var(--text-neutral-secondary, #666);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.consoleLog {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.consoleLog span {
+  display: block;
+  width: 100%;
+
+  /* Override the Alert's default offset so the log sits vertically centred. */
+  margin-top: 0 !important;
+}

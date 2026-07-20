@@ -12,3 +12,10 @@ export type {
   AuthenticationOptionSummary,
   UserType,
 } from '@code-dot-org/core/api';
+
+// The current-user/session redux layer, consumed by labs, progress, and the
+// teacher dashboard. Same package, separate concern from the settings page.
+export * from './constants';
+export * from './redux';
+export * from './sessionId';
+export * from './types';
