@@ -61,10 +61,11 @@ class TextResponsesTable extends Component {
     }
   };
 
-  // Questions are authored in markdown (headings, bold, etc.). Strip the
+  // Questions are often authored in markdown. Strip the
   // formatting to plain text so the cell stays compact and readable.
   // markdownToTxt only recognizes headings with a space after '#'
-  // (`## Foo`), so strip any leftover leading '#' markers ourselves.
+  // (`## Foo`), so strip any leftover leading '#' markers ourselves
+  // (questions commonly omit the space after '#').
   questionFormatter = question =>
     question
       ? markdownToTxt(question).replace(/^[ \t]*#+[ \t]*/gm, '')
