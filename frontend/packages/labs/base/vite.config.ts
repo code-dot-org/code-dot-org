@@ -98,6 +98,7 @@ export default defineConfig({
         'src/components/index.ts',
         'src/resourcePanel/index.ts',
         'src/hooks/index.ts',
+        'src/utils/index.ts',
         'src/redux/index.ts',
         'src/redux/labSlice.ts',
         'src/redux/labViewSlice.ts',

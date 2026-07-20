@@ -1,6 +1,13 @@
 import {act, render} from '@testing-library/react';
 import {vi} from 'vitest';
 
+import {
+  ApiClientProvider,
+  DashboardApiClient,
+  QueryClientProvider,
+} from '@code-dot-org/core/api';
+import {RootStateProvider} from '@code-dot-org/core/redux';
+
 import App from '../App';
 
 vi.mock('@code-dot-org/core', () => ({
@@ -20,7 +27,17 @@ vi.mock('@code-dot-org/core/plugins/observability', () => ({
 // real `DashboardApiClient` singleton runs end to end here.
 
 it('renders without crashing', async () => {
-  const {container} = render(<App />);
+  // App requires the host provider stack (shared store, react-query, API
+  // client) — the same providers the dev harness and studio set up around it.
+  const {container} = render(
+    <RootStateProvider>
+      <QueryClientProvider>
+        <ApiClientProvider client={DashboardApiClient}>
+          <App isLoading={false} />
+        </ApiClientProvider>
+      </QueryClientProvider>
+    </RootStateProvider>,
+  );
   // Flush microtasks so the API promises (and their setState calls) settle
   // inside an act scope. Without this, React warns about updates outside act.
   await act(async () => {});

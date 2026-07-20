@@ -1,0 +1,106 @@
+@use '../MusicLab/musicLab.module.scss' as musicLab;
+
+.controlsContainer {
+  display: flex;
+  background-color: var(--neutral-gray-95);
+  border-radius: musicLab.$default-border-radius;
+  position: relative;
+  padding: 10px;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+%control-button {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 38px;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  border: initial;
+  border-radius: 8px;
+  margin: 2px;
+  padding: 5px 10px;
+
+  .text,
+  .icon {
+    transition: opacity 0.1s ease-in;
+  }
+
+  &:active {
+    border: initial !important;
+  }
+
+  &.disabled {
+    .text,
+    .icon {
+      opacity: 50%;
+    }
+
+    cursor: default;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.runButton {
+  @extend %control-button;
+  flex: 2;
+  background-color: #fca401 !important;
+  color: var(--neutral-gray-5) !important;
+  margin: 0;
+  gap: 10px;
+
+  .text,
+  .icon {
+    transition-delay: 0.2s; // Transition after a delay to avoid flickering
+  }
+}
+
+.skipButton {
+  @extend %control-button;
+  flex: 0.5;
+  background-color: var(--neutral-dark-20);
+  color: var(--neutral-base-black);
+}
+
+.loadingProgress {
+  width: 100%;
+  height: 5px;
+  background-color: var(--neutral-dark-80);
+  position: relative;
+  margin-top: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.1s ease-in 0.2s; // Transition after a delay to avoid flickering
+
+  .loadingProgressFill {
+    transition: width 0.2s ease-in;
+    height: 5px;
+    background-color: var(--neutral-dark-60);
+    position: absolute;
+
+    &Zero {
+      transition: none;
+    }
+  }
+
+  &Hide {
+    transition: opacity 0.5s ease-in;
+    opacity: 0;
+  }
+}

@@ -62,6 +62,11 @@
       "import": "./dist/hooks/index.mjs",
       "require": "./dist/hooks/index.cjs"
     },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.cjs"
+    },
     "./redux": {
       "types": "./dist/redux/index.d.ts",
       "import": "./dist/redux/index.mjs",
