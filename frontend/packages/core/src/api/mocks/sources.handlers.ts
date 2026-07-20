@@ -16,6 +16,12 @@ interface StoredVersion {
   versionId: string;
   lastModified: string;
   sources: ProjectSourcesAny;
+  /**
+   * Set when the user saves a *named* version (POST /project_commits). The
+   * version panel shows commented versions individually and groups the
+   * uncommented ones as auto-saves.
+   */
+  comment?: string;
 }
 
 function defaultSources(): ProjectSourcesAny {
@@ -53,6 +59,21 @@ function nextVersionId(current: string): string {
   return `mock-v${n + 1}`;
 }
 
+/**
+ * Attach a commit message to a stored version. Exported so the projects handler
+ * (which owns POST /project_commits) can record it against the version list that
+ * lives here.
+ */
+export function setVersionComment(versionId: string, comment: string) {
+  const all = versions();
+  writeResource(
+    'versions',
+    all.map(version =>
+      version.versionId === versionId ? {...version, comment} : version,
+    ),
+  );
+}
+
 export const sourcesHandlers = [
   // PUT /v3/sources/:channelId/restore?version=:versionId
   // Listed before the bare PUT so it wins the match. Restoring appends a new
@@ -75,14 +96,18 @@ export const sourcesHandlers = [
   }),
 
   // GET /v3/sources/:channelId/:sourceFile/versions[?with_comments=true]
-  // Newest first, matching the real API's ordering.
-  http.get('*/v3/sources/:channelId/:sourceFile/versions', () => {
+  // Newest first, matching the real API's ordering. Commit messages come back
+  // only when asked for, as with the real endpoint.
+  http.get('*/v3/sources/:channelId/:sourceFile/versions', ({request}) => {
+    const withComments =
+      new URL(request.url).searchParams.get('with_comments') === 'true';
     const all = versions();
     const list: ProjectVersion[] = all
       .map((version, index) => ({
         versionId: version.versionId,
         lastModified: version.lastModified,
         isLatest: index === all.length - 1,
+        ...(withComments && version.comment ? {comment: version.comment} : {}),
       }))
       .reverse();
     return HttpResponse.json(list);

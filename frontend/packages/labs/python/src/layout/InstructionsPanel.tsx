@@ -1,10 +1,15 @@
-import {useCallback, useRef} from 'react';
+import {useCallback, useEffect, useRef} from 'react';
 
-import {useAppSelector, useCodebridgeSettings} from '@code-dot-org/codebridge';
+import {
+  useAppDispatch,
+  useAppSelector,
+  useCodebridgeSettings,
+} from '@code-dot-org/codebridge';
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 import {LifecycleEvent} from '@code-dot-org/lab';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {useLifecycleNotifier, useThemeSetting} from '@code-dot-org/lab/hooks';
+import {labProjectActions} from '@code-dot-org/lab/redux';
 import ResourcePanel from '@code-dot-org/lab/resourcePanel';
 
 /**
@@ -42,6 +47,34 @@ const InstructionsPanel = () => {
       [],
     ),
   );
+  // Mirror the current sources into redux, and flag when they differ from the
+  // project as loaded. Both feed the version panel's "save a named version"
+  // flow: base `SaveVersionPanel` reads `labProject.projectSources` (legacy's
+  // source of truth, which nothing else populates here, so it would no-op) and
+  // only renders once `labProject.hasEdited` is true — there is nothing to name
+  // until the student has changed something. This lab keeps sources in the
+  // SourcesContext, so it has to publish both.
+  const dispatch = useAppDispatch();
+  const hasEdited = useAppSelector(state => state.labProject.hasEdited);
+  useEffect(() => {
+    dispatch(
+      labProjectActions.setProjectSource(
+        currentSources as unknown as ProjectSources,
+      ),
+    );
+    // Compare against the loaded baseline rather than the previous value: the
+    // sources arrive asynchronously after mount, and that first arrival is a
+    // load, not an edit.
+    const baseline = loadedSourcesRef.current;
+    if (
+      baseline &&
+      JSON.stringify(currentSources.source) !==
+        JSON.stringify((baseline as unknown as {source: unknown}).source)
+    ) {
+      dispatch(labProjectActions.setHasEdited(true));
+    }
+  }, [dispatch, currentSources]);
+
   // Codebridge contributes the editor/console font-size settings; Python Lab
   // supports both themes, so it also opts in to the theme toggle (its editor
   // carries a matching light and dark theme). Order matches legacy: font sizes,
@@ -75,11 +108,12 @@ const InstructionsPanel = () => {
       levelProperties={levelProperties}
       isRunning={isRunning}
       hasRun={hasRun}
-      hasEdited={false}
+      hasEdited={hasEdited}
       documentationUrl="/docs/ide/python"
       settings={settings}
-      // Enables the Version History tab (like music lab). `alwaysShowAutoSaves`
-      // surfaces the throttled auto-saves the editor makes, not just named ones.
+      // Enables the Version History tab (like music lab). Auto-save groups stay
+      // collapsed by default (`alwaysShowAutoSaves` unset), so the named
+      // versions a student saved are what the list leads with.
       // `onLoadVersion` is what actually swaps a previewed/restored version into
       // the editor: this lab's source of truth is the SourcesContext, not redux,
       // so the panel's sources have to be written back through it. It must use
@@ -89,7 +123,6 @@ const InstructionsPanel = () => {
       // in the same tick, so it can't be relied on to suppress that save).
       versionHistoryProps={{
         startSources,
-        alwaysShowAutoSaves: true,
         onLoadVersion: sources =>
           previewSources(sources as unknown as typeof currentSources),
       }}

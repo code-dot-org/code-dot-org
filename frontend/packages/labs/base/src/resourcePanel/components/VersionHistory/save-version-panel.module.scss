@@ -1,21 +1,21 @@
-.footer-panel {
+.footerPanel {
   border-top: 1px solid var(--borders-neutral-primary);
   z-index: 1;
 }
 
-.save-current-version-description {
+.saveCurrentVersionDescription {
   background-color: var(--background-neutral-secondary);
   border-radius: 0 0 var(--lab-border-radius-default)
     var(--lab-border-radius-default);
   padding: 0.5rem;
 }
 
-.save-current-version-description-input {
+.saveCurrentVersionDescriptionInput {
   box-sizing: border-box;
   width: 100%;
 }
 
-.text-area {
+.textArea {
   background-color: var(--background-neutral-primary);
   border: var(--lab-border-strong);
   border-radius: var(--lab-border-radius-default);
@@ -40,7 +40,7 @@
   }
 }
 
-.version-button {
+.versionButton {
   box-sizing: border-box;
   height: 32px;
   width: 100%;

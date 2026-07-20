@@ -2,6 +2,7 @@ import {http, HttpResponse} from 'msw';
 
 import {getActiveScenario} from './scenario';
 import {writeResource} from './scenarioStore';
+import {setVersionComment} from './sources.handlers';
 
 function activeChannelId(): string {
   return getActiveScenario()?.tag ?? '';
@@ -42,8 +43,18 @@ export const projectsHandlers = [
   http.get('*/projects/level/:levelId/user/:userId', channelForLevel),
   http.get('*/projects/level/:levelId', channelForLevel),
 
-  // POST /project_commits
-  http.post('*/project_commits', () => HttpResponse.json({})),
+  // POST /project_commits — records a commit message against a stored version,
+  // so the version panel lists it as a named version rather than an auto-save.
+  http.post('*/project_commits', async ({request}) => {
+    const body = (await request.json()) as {
+      version_id?: string;
+      comment?: string;
+    };
+    if (body?.version_id && body?.comment) {
+      setVersionComment(body.version_id, body.comment);
+    }
+    return HttpResponse.json({});
+  }),
 
   // GET /projects/:channelId/extra_links
   http.get('*/projects/:channelId/extra_links', () =>
