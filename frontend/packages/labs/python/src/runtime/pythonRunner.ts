@@ -3,6 +3,7 @@ import {
   getRunTimestampMessage,
 } from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
+import {LabRegistry} from '@code-dot-org/lab';
 import store, {labSystemActions} from '@code-dot-org/lab/redux';
 
 import type {WorkerFile} from './messages';
@@ -35,6 +36,13 @@ export async function runPython(source: MultiFileSource) {
     contents: file.contents,
   }));
   const main = files.find(file => file.name === MAIN_PYTHON_FILE);
+
+  // Flush any pending (throttled) save before running, matching legacy's
+  // PythonlabView.onRun. Students typically run right before navigating away, so
+  // this both makes leaving the page fast and means a run always persists the
+  // code it ran instead of waiting out the autosave interval. Fire-and-forget,
+  // as legacy does — the run should not wait on the network.
+  void LabRegistry.projectManager?.flushSave();
 
   const consoleManager = CodebridgeRegistry.getConsoleManager();
   if (!main) {

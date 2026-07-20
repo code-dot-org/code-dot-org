@@ -502,14 +502,19 @@ export default class ProjectManager {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
+    // The exact sources this save writes. Everything below refers to this
+    // snapshot rather than `this.sourcesToSave`, which can be replaced by newer
+    // edits while the request is in flight — recording those as saved (or
+    // clearing them at the end) would silently drop them.
+    const sourcesBeingSaved = this.sourcesToSave;
     // Only save the source if it has changed.
-    if (this.sourcesToSave && sourceChanged) {
+    if (sourcesBeingSaved && sourceChanged) {
       try {
         await this.sourcesStore.save(
           this.apiClient,
           this.queryClient,
           this.channelId,
-          this.sourcesToSave,
+          sourcesBeingSaved,
           this.lastChannel.projectType,
           forceNewVersion || this.getForceNewVersion(),
         );
@@ -527,7 +532,10 @@ export default class ProjectManager {
         this.onSaveFail('Error saving sources', errorToReport);
         return;
       }
-      this.lastSource = JSON.stringify(this.sourcesToSave);
+      // Record what was actually written, not whatever `sourcesToSave` holds
+      // now — if a newer edit arrived mid-save, treating it as saved would make
+      // `sourceChanged()` report no change and the edit would never be written.
+      this.lastSource = JSON.stringify(sourcesBeingSaved);
 
       // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
       if (forceNewVersion || this.getForceNewVersion()) {
@@ -584,9 +592,23 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
-    this.sourcesToSave = undefined;
+    // Only clear the pending sources if they are still the ones we just wrote.
+    // Edits made while the request was in flight replaced them, and dropping
+    // those would lose the user's work; enqueue another save instead.
+    const newerEditArrived = this.sourcesToSave !== sourcesBeingSaved;
+    if (!newerEditArrived) {
+      this.sourcesToSave = undefined;
+    }
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    if (newerEditArrived && !this.destroyed) {
+      // Not awaited: this schedules the follow-up save on the normal interval
+      // (a save just completed, so it enqueues rather than firing immediately).
+      void this.enqueueSaveOrSave(
+        /* forceSave */ false,
+        /* forceNewVersion */ false,
+      );
+    }
   }
 
   private onSaveFail(errorMessage: string, error: Error) {

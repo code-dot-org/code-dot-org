@@ -38,6 +38,16 @@ const isStartMode = false;
 export interface SourcesContent<T = string> {
   currentSources: ProjectSources<T>;
   updateSources: (newSources: ProjectSources<T>, forceSave?: boolean) => void;
+  /**
+   * Show sources that already exist on the server without saving them back —
+   * previewing or restoring a version from the version history. Unlike
+   * {@link updateSources} this never enqueues a save, so it cannot overwrite the
+   * project with the content being viewed. (Read-only state alone is not enough
+   * to make `updateSources` safe here: it reads a ref refreshed on render, but
+   * the version thunks call back synchronously with the dispatch that marks the
+   * workspace read-only, so that ref is still stale.)
+   */
+  previewSources: (newSources: ProjectSources<T>) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
   setReinitializationHandler: (handler: () => void) => void;
   startOver: () => void;
@@ -51,6 +61,7 @@ const SourcesContext = createContext<SourcesContent>({
     source: '',
   },
   updateSources: (_, __) => {},
+  previewSources: _ => {},
   showStartOverDialog: (_, __) => {},
   setReinitializationHandler: _ => {},
   startOver: () => {},
@@ -201,6 +212,19 @@ export const SourcesProvider = <
     [setCurrentSources, transform, projectManager],
   );
 
+  // Reflect sources that already exist on the server, without saving them back.
+  // See `previewSources` in SourcesContent for why read-only state alone can't
+  // be relied on to make `updateSources` safe in this path.
+  const previewSources = useCallback(
+    (newSources: ProjectSources<U>) => {
+      setCurrentSources(prev => {
+        const transformed = transform?.(newSources) || newSources;
+        return isEqual(prev, transformed) ? prev : transformed;
+      });
+    },
+    [setCurrentSources, transform],
+  );
+
   const onLevelLoad = useCallback(
     (
       _levelProperties?: LevelProperties,
@@ -236,6 +260,7 @@ export const SourcesProvider = <
       value={{
         currentSources,
         updateSources,
+        previewSources,
         showStartOverDialog,
         setReinitializationHandler,
         startOver: onStartOver,

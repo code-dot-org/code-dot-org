@@ -27,7 +27,7 @@ const InstructionsPanel = () => {
   // sources arrive asynchronously, so a render-time snapshot would be the
   // default. Later edits don't move it. A level's own start sources take
   // precedence when it has them (see below).
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, previewSources} = useSources<MultiFileSource>();
   const loadedSourcesRef = useRef<ProjectSources | undefined>(undefined);
   useLifecycleNotifier(
     LifecycleEvent.LevelLoadCompleted,
@@ -82,14 +82,16 @@ const InstructionsPanel = () => {
       // surfaces the throttled auto-saves the editor makes, not just named ones.
       // `onLoadVersion` is what actually swaps a previewed/restored version into
       // the editor: this lab's source of truth is the SourcesContext, not redux,
-      // so the panel's sources have to be written back through it. Previewing an
-      // old version marks the workspace read-only, and `updateSources` skips
-      // saving in that state, so a preview cannot overwrite the project.
+      // so the panel's sources have to be written back through it. It must use
+      // `previewSources`, never `updateSources` — every version the panel hands
+      // us already exists on the server, and saving it back would overwrite the
+      // project with the version being *viewed* (the read-only flag is dispatched
+      // in the same tick, so it can't be relied on to suppress that save).
       versionHistoryProps={{
         startSources,
         alwaysShowAutoSaves: true,
         onLoadVersion: sources =>
-          updateSources(sources as unknown as typeof currentSources),
+          previewSources(sources as unknown as typeof currentSources),
       }}
     />
   );
