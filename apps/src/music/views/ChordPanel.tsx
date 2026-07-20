@@ -132,14 +132,19 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         <div className={moduleStyles.optionsRow}>
           <select
             value={instrument}
-            // Native `disabled` blurs the focused select while loading, which
-            // closes Blockly's DropDownDiv. aria-disabled + a handler guard
-            // instead; SCSS blocks pointer interaction via data-loading.
+            // Stand-in for `disabled` while loading — the native attribute
+            // blurs the select and closes Blockly's DropDownDiv.
             onChange={event => {
               if (isLoading) {
                 return;
               }
               setInstrument(event.target.value);
+            }}
+            onKeyDown={event => {
+              if (isLoading && event.key !== 'Tab') {
+                event.preventDefault();
+                event.stopPropagation();
+              }
             }}
             aria-disabled={isLoading}
             data-loading={isLoading}
