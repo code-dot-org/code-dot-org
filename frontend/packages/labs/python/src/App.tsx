@@ -7,11 +7,8 @@ import {
   useAppSelector,
 } from '@code-dot-org/codebridge';
 import type {CodebridgeRuntime} from '@code-dot-org/codebridge';
-import type {
-  MultiFileSource,
-  ProjectSources,
-} from '@code-dot-org/core/api';
-import {LabRegistry,useSources} from '@code-dot-org/lab/contexts';
+import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
+import {LabRegistry, useSources} from '@code-dot-org/lab/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import styles from './app.module.css';

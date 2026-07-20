@@ -2,7 +2,11 @@ import {useState, type CSSProperties} from 'react';
 
 import {InfoPanel, Workspace} from '@code-dot-org/codebridge';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {PanelContainer, ResizeHandle, WorkspaceHeader} from '@code-dot-org/lab/components';
+import {
+  PanelContainer,
+  ResizeHandle,
+  WorkspaceHeader,
+} from '@code-dot-org/lab/components';
 
 import {ViewMode, type ViewModeType} from '../constants';
 import {DebugProvider, useDebug} from '../debug/DebugContext';
