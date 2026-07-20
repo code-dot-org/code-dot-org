@@ -3,6 +3,8 @@ import {useState, type CSSProperties} from 'react';
 import {InfoPanel, Workspace} from '@code-dot-org/codebridge';
 import {PanelContainer, ResizeHandle, WorkspaceHeader} from '@code-dot-org/lab';
 
+import {HTMLPreview} from '../preview/HTMLPreview';
+
 import styles from './webLayout.module.css';
 
 const clamp = (value: number, min: number, max: number) =>
@@ -17,9 +19,9 @@ const PREVIEW = {initial: 460, min: 240, max: 900};
  * browser + editor with tabs) in the middle, and the page preview on the right.
  * Both dividers drag to resize and restore their default on double-click.
  *
- * The preview is a placeholder for now — the real one renders the project in an
- * iframe served by a project service worker (legacy htmlPreview/), and the debug
- * panel (console + network) sits beneath it. Both are separate increments.
+ * The preview renders the project in an iframe on its own origin, served by a
+ * project service worker (legacy htmlPreview/). The preview chrome (URL bar,
+ * refresh, viewport toggle) and the debug panel are separate increments.
  */
 const WebLayout = () => {
   const [instructionsWidth, setInstructionsWidth] = useState(
@@ -76,9 +78,7 @@ const WebLayout = () => {
 
       <div className={styles.previewPane} style={{width: previewWidth}}>
         <PanelContainer id="web-preview" headerContent="Preview">
-          <div className={styles.previewPlaceholder}>
-            The page preview lands in the next increment.
-          </div>
+          <HTMLPreview />
         </PanelContainer>
       </div>
     </div>

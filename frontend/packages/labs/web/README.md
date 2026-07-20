@@ -21,23 +21,61 @@ from the Codebridge package, exactly as legacy shares `@codebridge/InfoPanel` an
 `@codebridge/Workspace` between weblab2 and pythonlab. `ResizeHandle` comes from
 base (legacy's `lab2` `ResizeBar`).
 
+## Preview
+
+The preview renders the student's project — and it never runs on the lab's
+origin. Student HTML/JS gets its own origin so it cannot reach the lab's cookies
+or session, the same isolation the Python Lab pyodide sandbox uses.
+
+```
+lab origin                        preview origin
+┌──────────────────┐  postMessage  ┌──────────────────────────────┐
+│ HTMLPreview      │◄─────────────►│ previewPage                  │
+│  outer iframe ───┼──────────────►│  registers the project SW    │
+└──────────────────┘               │  inner iframe → /index.html  │
+                                   │       ▲ SW serves it from    │
+                                   │       └ the project files    │
+                                   └──────────────────────────────┘
+```
+
+- `preview.html` + `src/preview/previewPage.ts` run on the preview origin: they
+  register `public/webLabProjectServiceWorker.js` and host the inner iframe.
+- The worker answers every request the student's page makes from the project
+  files, attaching the generated content-security policy, and reports (or blocks)
+  requests that leave the project.
+- `src/preview/HTMLPreview.tsx` is the lab-side half: it posts the project down
+  and keeps it in sync as the student edits. It never runs student code.
+
+The preview origin is host-supplied (`setPreviewBaseUrl`, or `?web-preview=` on
+the lab's URL) rather than hard-coded. Legacy gives every project its own
+subdomain (`{channelId}.preview.…codeprojects.org`, served by dashboard's
+`codeprojects_preview_controller`), which also isolates projects from each other;
+**the demo uses a single preview origin** to avoid needing wildcard DNS locally,
+which is weaker isolation than production.
+
+Defaults follow legacy's level-driven policy: scripts allowed, network blocked.
+Wiring those to level properties is deferred.
+
 ## Status
 
-Ported: the shell composition — config (file types + CodeMirror language
-support), the default project, the layout, and the standalone demo harness.
+Ported: the shell composition (config, default project, layout, demo harness)
+and the preview core above.
 
-**The preview is a placeholder.** Still to port from legacy:
+Still to port from legacy:
 
-- **HTML preview** (`weblab2/htmlPreview/`) — the project rendered in an iframe
-  served by a project service worker, with a generated content-security policy,
-  console/base-tag/parameter injection, and the preview inspector. This wants the
-  same origin-isolation treatment the Python Lab pyodide sandbox got: the preview
-  runs student-authored HTML/JS, so it should not share the host page's origin.
-- **Debug panel** (`weblab2/debugPanel/`) — console + network panels fed by the
-  preview iframe. Web Lab does not use the Codebridge xterm console.
+- **Preview chrome** (`HTMLPreviewHeader`, empty/stopped/404 states) — URL bar,
+  refresh, stop, desktop/mobile toggle.
+- **Debug panel** (`weblab2/debugPanel/`) — console + network panels. The
+  messages already flow: the worker and the injected page scripts report console
+  output, errors, CSP violations, and network activity. Web Lab does not use the
+  Codebridge xterm console.
+- **Preview inspector** (`htmlPreviewInspector*`, ~540 lines) — hover/select
+  elements in the preview.
 - **Linters** (`weblab2/htmlLinter.ts`, `cssLinter.ts`) — CodeMirror lint
   integration for HTML and CSS.
-- Studio `LAB_REGISTRY` registration, share view, AI tutor, and the intro tour.
+- Level-driven `allowScripts` / `blockNetwork`, uploaded assets (the frontend
+  `ProjectFile` schema has no `url` field yet), studio `LAB_REGISTRY`
+  registration, share view, AI tutor, and the intro tour.
 
 ## Standalone demo
 
@@ -52,9 +90,23 @@ Fixture scenarios load by channel id:
 http://localhost:5138/frontend-studio/projects/web/simple/edit
 ```
 
+To exercise the preview locally, run the lab and the preview page on two origins
+and point the lab at it:
+
+```
+yarn dev:isolated   # lab on :5138, preview origin on :5201
+# then open:
+http://localhost:5138/?web-preview=http://localhost:5201/preview.html
+```
+
+Without `?web-preview=`, the preview panel explains that no preview origin is
+configured — the lab will not run student code on its own origin.
+
 ## Scripts
 
 - `yarn dev` — standalone demo harness on :5138
+- `yarn dev:preview` — serve just the preview page on :5201
+- `yarn dev:isolated` — run both in parallel (lab + preview origin)
 - `yarn build` — library build (ESM + CJS + d.ts)
 - `yarn typecheck` — `tsc -b --noEmit`
 - `yarn test` — Vitest

@@ -1,0 +1,21 @@
+.frame {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  border: 0;
+  background-color: #fff;
+}
+
+/* Shown when no preview origin is configured — the lab will not run student
+   code on its own origin. */
+.notConfigured {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-neutral-secondary, #666);
+  background-color: var(--background-neutral-primary, #fff);
+}
