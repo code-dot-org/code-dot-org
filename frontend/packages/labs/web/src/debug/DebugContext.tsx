@@ -7,6 +7,8 @@ import {
   type PropsWithChildren,
 } from 'react';
 
+import {LifecycleEvent, useLifecycleNotifier} from '@code-dot-org/lab';
+
 // State for the debug panel: what the student's page logged, and what it asked
 // the network for. Ported from apps/src/weblab2/redux/{consoleRedux,networkRedux}.ts
 // — legacy keeps these in redux; this package holds them in a context, since only
@@ -57,7 +59,16 @@ interface DebugState {
   addConsoleLog: (level: ConsoleLogLevel, args: string[]) => void;
   addNetworkRequest: (id: string, request: NetworkRequestData) => void;
   addNetworkResponse: (id: string, response: NetworkResponseData) => void;
+  /** Clear one pane or both; legacy's clear button only clears the visible one. */
+  clearLogs: () => void;
+  clearRequests: () => void;
   clear: () => void;
+  /**
+   * Whether requests leaving the project are refused. Owned here rather than by
+   * either consumer: the NetworkPanel toggles it and the preview enforces it.
+   */
+  blockNetwork: boolean;
+  setBlockNetwork: (blockNetwork: boolean) => void;
 }
 
 const DebugContext = createContext<DebugState>({
@@ -66,7 +77,11 @@ const DebugContext = createContext<DebugState>({
   addConsoleLog: () => {},
   addNetworkRequest: () => {},
   addNetworkResponse: () => {},
+  clearLogs: () => {},
+  clearRequests: () => {},
   clear: () => {},
+  blockNetwork: false,
+  setBlockNetwork: () => {},
 });
 
 export const useDebug = () => useContext(DebugContext);
@@ -74,6 +89,15 @@ export const useDebug = () => useContext(DebugContext);
 export const DebugProvider = ({children}: PropsWithChildren) => {
   const [logs, setLogs] = useState<ConsoleEntry[]>([]);
   const [requests, setRequests] = useState<NetworkEntry[]>([]);
+  // Off by default, as in legacy: student pages may reach the allowed hosts
+  // until someone deliberately cuts them off.
+  const [blockNetwork, setBlockNetwork] = useState(false);
+
+  // Unblock on level change, so a block set on one level does not silently
+  // follow the student to the next (legacy does this on LevelLoadStarted).
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () =>
+    setBlockNetwork(false),
+  );
 
   const addConsoleLog = useCallback(
     (level: ConsoleLogLevel, args: string[]) => {
@@ -119,6 +143,9 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
     [],
   );
 
+  const clearLogs = useCallback(() => setLogs([]), []);
+  const clearRequests = useCallback(() => setRequests([]), []);
+
   const clear = useCallback(() => {
     setLogs([]);
     setRequests([]);
@@ -131,7 +158,11 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
       addConsoleLog,
       addNetworkRequest,
       addNetworkResponse,
+      clearLogs,
+      clearRequests,
       clear,
+      blockNetwork,
+      setBlockNetwork,
     }),
     [
       logs,
@@ -139,7 +170,10 @@ export const DebugProvider = ({children}: PropsWithChildren) => {
       addConsoleLog,
       addNetworkRequest,
       addNetworkResponse,
+      clearLogs,
+      clearRequests,
       clear,
+      blockNetwork,
     ],
   );
 

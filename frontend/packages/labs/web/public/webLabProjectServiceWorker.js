@@ -15,6 +15,7 @@ const PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL = 'weblab2-file-preview';
 const SERVING_HTML_FILE = 'SERVING_HTML_FILE';
 const RECEIVED_SOURCE = 'RECEIVED_SOURCE';
 const UPDATE_FILES = 'UPDATE_FILES';
+const KEEP_ALIVE = 'KEEP_ALIVE';
 const SET_BLOCK_NETWORK = 'SET_BLOCK_NETWORK';
 const NETWORK_REQUEST = 'NETWORK_REQUEST';
 const NETWORK_RESPONSE = 'NETWORK_RESPONSE';
@@ -46,6 +47,10 @@ function main() {
       contentSecurityPolicyValue = contentSecurityPolicy;
     } else if (type === SET_BLOCK_NETWORK && event.origin === location.origin) {
       blockNetworkRequests = !!event.data.blockNetwork;
+    } else if (type === KEEP_ALIVE) {
+      // Nothing to do: receiving the message is the point. The browser
+      // terminates an idle worker, and `filesData` above dies with it — see the
+      // ping in previewPage.
     }
   });
 

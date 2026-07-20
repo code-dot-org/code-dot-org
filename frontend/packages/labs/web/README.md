@@ -46,6 +46,23 @@ lab origin                        preview origin
 - `src/preview/HTMLPreview.tsx` is the lab-side half: it posts the project down
   and keeps it in sync as the student edits. It never runs student code.
 
+The worker holds the project **in memory**, which makes its lifetime load-bearing:
+a browser reclaims an idle service worker, and the files go with it. Two things
+guard against that, and both are needed. The preview page pings `KEEP_ALIVE`
+every 15s so an open lab keeps its worker (as legacy does), and every navigation
+re-sends the project and waits for the worker's `RECEIVED_SOURCE` before
+pointing the iframe — a ping alone is not enough, since timers in a background
+tab are throttled below the idle timeout. Without the re-send, a request the
+worker cannot serve falls through to the network, and on the demo's single-origin
+setup that means the _lab_ loads inside its own preview.
+
+The worker's _version_ matters for the same reason. It registers with
+`updateViaCache: 'none'` and calls `registration.update()` on load, so an edit to
+the worker script takes effect on the next reload instead of leaving a stale copy
+serving the preview until someone unregisters it by hand. If the worker cannot
+start at all, the lab says so (`SERVICE_WORKER_UNAVAILABLE`) rather than showing
+whatever else the preview origin serves.
+
 The preview origin is host-supplied (`setPreviewBaseUrl`, or `?web-preview=` on
 the lab's URL) rather than hard-coded. Legacy gives every project its own
 subdomain (`{channelId}.preview.…codeprojects.org`, served by dashboard's
@@ -72,10 +89,13 @@ Two consequences worth knowing:
   so a predict level's debug console stays empty until the prediction is in.
   Legacy behaves the same way.
 
-`blockNetwork` is still hardcoded to `true` here. In legacy it is not level-driven
-at all but a NetworkPanel toggle (`networkRequestsBlocked`) defaulting to
-**false**; porting that toggle is pending, and until then this package is
-deliberately the stricter of the two.
+Blocking network activity is not level-driven at all: it is a toggle in the debug
+panel's network pane, off by default, matching legacy's `networkRequestsBlocked`.
+It lives in `DebugContext` because the pane sets it and the preview enforces it,
+and it resets on level change so a block does not silently follow the student to
+the next level. Enforcement is in the service worker, which refuses the request
+and reports it as blocked — CSP is a separate, earlier gate, so a request to a
+host the policy already forbids never reaches the toggle at all.
 
 ### Inspector
 
@@ -103,10 +123,39 @@ document out from under the previous overlay.
 Ported: the shell composition (config, default project, layout, demo harness)
 and the preview core above.
 
-The preview chrome (address bar, refresh, stop/reload, desktop-mobile toggle)
-and the debug panel (console + network, with repeat grouping and blocked/CSP
-reporting) are ported too. Stopping tears the iframe down, so a runaway page
-actually stops running. So is the element inspector described above.
+The preview chrome (back/forward, address bar, refresh, stop/reload,
+desktop-mobile toggle) is ported too. Stopping tears the iframe down, so a
+runaway page actually stops running; refreshing clears the debug panel, since
+what the last run logged is stale. So is the element inspector described above.
+
+Page history (`src/preview/previewHistory.ts`) records both ways of navigating —
+a link click inside the student's page, and a path typed in the address bar — and
+back/forward walk it without appending. It is kept as one value rather than
+legacy's separate list and index, and the rule that a report of the page already
+showing is not a navigation is what keeps back/forward from corrupting it: the
+preview reports every page it serves, including the one back just asked for.
+
+The debug panel is complete. The console pane renders each log as an Alert
+coloured by level, with repeat-count grouping and auto-scroll to the tail. The
+network pane has the activity list, sort order, per-request and per-response
+details with copy-to-clipboard, response bodies (JSON pretty-printed), status
+icons and the request/response divider, and the block toggle. Failures are
+distinguished: a CSP refusal names the host, a blocked request says so, and a
+pending request shows as pending rather than as a failure. Clearing acts on the
+pane you are looking at, as legacy's does.
+
+One deliberate divergence, in the console pane's keyboard model. Legacy makes the
+whole list a single tab stop and requires Enter to enter a roving-tabindex mode
+over individual logs (Tab wraps, Escape exits), so a chatty page's hundreds of
+logs do not become hundreds of tab stops. That composite carries no ARIA role, so
+this workspace's stricter `jsx-a11y` rules reject it. The pane is a readable,
+scrollable region rather than a widget, so it is one instead: a labelled
+`role="region"`, keyboard-focusable because a scrollable container must be
+(WCAG 2.2 SC 2.1.1), with no focusable entries. That keeps legacy's actual goal —
+one tab stop regardless of log count — without inventing a role, and a screen
+reader still reaches every entry, each carrying the same accessible name legacy
+built. Note each Alert is already a live region (`role="alert"`), so the
+container deliberately is not one; nesting them risks double announcements.
 
 Editor linting lives in the Codebridge shell (`codebridge/src/editor/linters.ts`),
 not here: HTML via htmlhint and JS via eslint-in-the-browser. Legacy's
@@ -118,11 +167,9 @@ The lab is registered with the studio app in
 
 Still to port from legacy:
 
-- Preview navigation history (legacy's back/forward buttons), the per-request
-  details box with response bodies, and the copy button — the data already
-  arrives for all three.
+- Legacy's close button on the debug panel: the panel's open/closed state belongs
+  to the layout, which this package models with a resize handle instead.
 - Uploaded assets: the frontend `ProjectFile` schema has no `url` field yet.
-- The NetworkPanel's block-network toggle (see the policy note above).
 - Share view, AI tutor, and the intro tour.
 
 ## Standalone demo
@@ -137,10 +184,15 @@ Fixture scenarios load by channel id:
 ```
 http://localhost:5138/frontend-studio/projects/web/simple/edit
 http://localhost:5138/frontend-studio/projects/web/predict/edit
+http://localhost:5138/frontend-studio/projects/web/network/edit
+http://localhost:5138/frontend-studio/projects/web/pages/edit
 ```
 
 `predict` is the same project on a predict level, for exercising the script gate:
-`script.js` must not run until a prediction is submitted.
+`script.js` must not run until a prediction is submitted. `network` adds a
+`fetch`, for the debug panel's network pane — note the demo allow-lists no hosts,
+so that request is refused by CSP and shows the failure path. `pages` is two
+linked pages, for preview navigation and the back/forward buttons.
 
 To exercise the preview locally, run the lab and the preview page on two origins
 and point the lab at it:

@@ -20,6 +20,11 @@ export interface HTMLPreviewHeaderProps {
   onRefresh: () => void;
   onStop: () => void;
   isStopEnabled: boolean;
+  /** Whether there is anywhere to go in the preview's page history. */
+  canNavigateBack: boolean;
+  canNavigateForward: boolean;
+  onNavigateBack: () => void;
+  onNavigateForward: () => void;
   viewMode: PreviewViewModeType;
   setViewMode: (viewMode: PreviewViewModeType) => void;
   /** Whether hover/Tab element inspection is running in the preview. */
@@ -33,6 +38,10 @@ export const HTMLPreviewHeader = ({
   onRefresh,
   onStop,
   isStopEnabled,
+  canNavigateBack,
+  canNavigateForward,
+  onNavigateBack,
+  onNavigateForward,
   viewMode,
   setViewMode,
   inspectorEnabled,
@@ -46,6 +55,29 @@ export const HTMLPreviewHeader = ({
 
   return (
     <div className={styles.header}>
+      <IconButton
+        variant="text"
+        color="tertiary"
+        size="extraSmall"
+        disabled={!canNavigateBack}
+        onClick={onNavigateBack}
+        aria-label="Navigate back"
+        type="button"
+      >
+        <FontAwesomeV6Icon iconName="chevron-left" />
+      </IconButton>
+      <IconButton
+        variant="text"
+        color="tertiary"
+        size="extraSmall"
+        disabled={!canNavigateForward}
+        onClick={onNavigateForward}
+        aria-label="Navigate forward"
+        type="button"
+      >
+        <FontAwesomeV6Icon iconName="chevron-right" />
+      </IconButton>
+
       <form
         className={styles.urlBar}
         onSubmit={event => {

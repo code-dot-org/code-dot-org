@@ -1,8 +1,9 @@
 import {Button, Typography} from '@mui/material';
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@code-dot-org/codebridge';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {isDevelopmentEnvironment} from '@code-dot-org/core';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, predictLevelActions} from '@code-dot-org/lab/redux';
@@ -19,6 +20,14 @@ import {generateContentSecurityPolicyForPreview} from './contentSecurityPolicy';
 import styles from './htmlPreview.module.css';
 import {HTMLPreviewHeader} from './HTMLPreviewHeader';
 import {getPreviewUrl, PARENT_ORIGIN_PARAM} from './previewConfig';
+import {
+  addToHistory,
+  canNavigateBack as historyCanGoBack,
+  canNavigateForward as historyCanGoForward,
+  EMPTY_HISTORY,
+  navigate as navigateInHistory,
+  type PreviewHistory,
+} from './previewHistory';
 import stateStyles from './previewStates.module.css';
 import {
   filterSourceForPreview,
@@ -41,18 +50,20 @@ import {allowUserScripts} from './scriptPolicy';
 // it up, and because legacy's rule is not complete without it.
 const isStartMode = false;
 
-export interface HTMLPreviewProps {
-  /** Block requests leaving the project (reported in the debug panel). */
-  blockNetwork?: boolean;
-}
-
 /**
  * Renders the project in an iframe on the preview origin, keeping it in sync as
  * the student edits.
  */
-export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
+export const HTMLPreview = () => {
   const {currentSources} = useSources<MultiFileSource>();
-  const {addConsoleLog, addNetworkRequest, addNetworkResponse} = useDebug();
+  // blockNetwork is toggled in the debug panel's network pane; we enforce it.
+  const {
+    addConsoleLog,
+    addNetworkRequest,
+    addNetworkResponse,
+    blockNetwork,
+    clear: clearDebugPanel,
+  } = useDebug();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [isReady, setIsReady] = useState(false);
   // Which page the preview is showing, and how it is framed.
@@ -62,8 +73,22 @@ export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
   );
   // Stopping tears the iframe down entirely, so a runaway page stops running.
   const [isStopped, setIsStopped] = useState(false);
+  // The preview cannot serve the project without its worker. Say so: the
+  // alternative is a preview that silently shows whatever else the preview
+  // origin serves, which is far harder to diagnose than an error.
+  const [isServiceWorkerUnavailable, setIsServiceWorkerUnavailable] =
+    useState(false);
   // Element inspection runs on the preview origin; we only own the toggle.
   const [inspectorEnabled, setInspectorEnabled] = useState(false);
+
+  // Where the student has been in the preview; see previewHistory.ts.
+  const [history, setHistory] = useState<PreviewHistory>(EMPTY_HISTORY);
+
+  const recordNavigation = useCallback(
+    (filePath: string) =>
+      setHistory(previous => addToHistory(previous, filePath)),
+    [],
+  );
 
   // On a predict level the student commits to an answer *before* seeing what the
   // page does, so their scripts stay off until the prediction is submitted.
@@ -138,9 +163,13 @@ export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
         case IframeMessage.IFRAME_READY:
           setIsReady(true);
           break;
+        case IframeMessage.SERVICE_WORKER_UNAVAILABLE:
+          setIsServiceWorkerUnavailable(true);
+          break;
         case IframeMessage.CHANGE_FILE_URL_BAR:
           if (data.filePath) {
             setCurrentFile(data.filePath);
+            recordNavigation(data.filePath);
           }
           break;
         case IframeMessage.CONSOLE_LOG:
@@ -162,7 +191,13 @@ export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
     };
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
-  }, [previewOrigin, addConsoleLog, addNetworkRequest, addNetworkResponse]);
+  }, [
+    previewOrigin,
+    addConsoleLog,
+    addNetworkRequest,
+    addNetworkResponse,
+    recordNavigation,
+  ]);
 
   // Send the project once the preview is up, and on every edit after that.
   useEffect(() => {
@@ -210,14 +245,34 @@ export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
     }
   };
 
+  // Walk the history without appending: the entry is already there, and the
+  // preview's report of the page it serves is absorbed by addToHistory's guard.
+  const navigateHistory = (delta: number) => {
+    const moved = navigateInHistory(history, delta);
+    if (!moved) {
+      return;
+    }
+    setHistory(moved.history);
+    setCurrentFile(moved.filePath);
+    post({type: IframeMessage.CHANGE_FILE_URL_BAR, filePath: moved.filePath});
+  };
+
   const header = (
     <HTMLPreviewHeader
       currentFile={currentFile}
       onNavigate={filePath => {
         setCurrentFile(filePath);
+        recordNavigation(filePath);
         post({type: IframeMessage.CHANGE_FILE_URL_BAR, filePath});
       }}
+      canNavigateBack={historyCanGoBack(history)}
+      canNavigateForward={historyCanGoForward(history)}
+      onNavigateBack={() => navigateHistory(-1)}
+      onNavigateForward={() => navigateHistory(1)}
       onRefresh={() => {
+        // The page is about to run again, so what the last run logged and
+        // requested is stale (legacy clears both here too).
+        clearDebugPanel();
         if (isStopped) {
           // Reloading after a stop rebuilds the iframe; sources are re-sent
           // once it reports ready again.
@@ -277,7 +332,25 @@ export const HTMLPreview = ({blockNetwork = true}: HTMLPreviewProps) => {
   return (
     <>
       {header}
-      {isStopped ? (
+      {isServiceWorkerUnavailable ? (
+        <div className={stateStyles.state}>
+          <Typography variant="h4" component="p" className={stateStyles.title}>
+            Preview unavailable
+          </Typography>
+          <Typography variant="body3">
+            The preview could not start, so your pages cannot be shown. Try
+            reloading the page.
+          </Typography>
+          {isDevelopmentEnvironment() && (
+            // Developer-only: the cause is almost always a stale service worker
+            // on the preview origin, which a student can do nothing about.
+            <Typography variant="body3">
+              The preview&apos;s service worker did not start. Unregistering it
+              for the preview origin and reloading usually clears this.
+            </Typography>
+          )}
+        </div>
+      ) : isStopped ? (
         <div className={stateStyles.state}>
           <Typography variant="h4" component="p" className={stateStyles.title}>
             Preview stopped

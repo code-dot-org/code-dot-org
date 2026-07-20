@@ -1,5 +1,7 @@
 import type {LabFixtures} from '@code-dot-org/core/api/mocks';
 
+import network from './network';
+import pages from './pages';
 import predict from './predict';
 import simple from './simple';
 
@@ -9,4 +11,6 @@ import simple from './simple';
 export const WebFixtures: LabFixtures = {
   simple,
   predict,
+  network,
+  pages,
 };
