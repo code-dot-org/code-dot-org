@@ -46,9 +46,9 @@ db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
 db_endpoint_proxy_reporting_port: 3306
 
-db_credential_admin: {"username":"root", "password":""}
-db_credential_writer: {"username":"root", "password":""}
-db_credential_reader: {"username":"root", "password":""}
+db_credential_admin: {"username":"root", "password":"not-a-secret"}
+db_credential_writer: {"username":"writer", "password":"not-a-secret"}
+db_credential_reader: {"username":"reader", "password":"not-a-secret"}
 db_writer: 'mysql://root@localhost/'
 <% end -%>
 
