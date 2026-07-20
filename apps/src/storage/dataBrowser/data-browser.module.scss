@@ -1,8 +1,6 @@
-@import "color.scss";
-
 $tab-height: 35px;
-$border-color: $lighter_gray;
-$bg-color: $lightest_gray;
+$border-color: var(--borders-neutral-primary);
+$bg-color: var(--background-neutral-tertiary);
 
 .tab {
   border-color: $border-color;

@@ -37,7 +37,11 @@ export const ShortcutsPerLab: Partial<
       {shortcut: 'Esc', explanation: 'Finish editing'},
     ],
     Connecting: [
-      {shortcut: 'C', explanation: 'Start or cancel a connection'},
+      {
+        shortcut: 'C',
+        explanation:
+          'Start a connection. If already started, connect to the focused element',
+      },
       {shortcut: 'Enter', explanation: 'Connect to the focused element'},
       {shortcut: 'Esc', explanation: 'Cancel connection'},
     ],
