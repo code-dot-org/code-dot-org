@@ -5,7 +5,8 @@
   "level_num": "custom",
   "user_id": 2,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "is_project_level": "true"
   },
   "published": true
 }]]></config>
