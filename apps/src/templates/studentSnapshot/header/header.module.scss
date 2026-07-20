@@ -39,13 +39,13 @@
 .prevNextDropdown {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 8px;
   width: 100%;
 
   button {
     flex: 0 0 auto;
     width: fit-content;
-    padding: 0 32px;
+    padding: 0 12px;
   }
 }
 

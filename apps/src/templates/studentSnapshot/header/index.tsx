@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useMemo} from 'react';
 
@@ -145,17 +146,6 @@ const Header: React.FC<HeaderProps> = ({
         <div>
           <span className={styles.groupLabel}>Lesson</span>
           <div className={styles.prevNextDropdown}>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              disabled={!previousLesson || !lessons?.length || isLessonsLoading}
-              className={styles.button}
-              onClick={handlePreviousLesson}
-              type="button"
-            >
-              {'< Prev'}
-            </MuiButton>
             <LessonSelector
               lessons={lessons || []}
               selectedLesson={selectedLesson}
@@ -173,12 +163,25 @@ const Header: React.FC<HeaderProps> = ({
               variant="outlined"
               color="tertiary"
               size="small"
+              disabled={!previousLesson || !lessons?.length || isLessonsLoading}
+              className={styles.button}
+              onClick={handlePreviousLesson}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               disabled={!nextLesson || !lessons?.length || isLessonsLoading}
               className={styles.button}
               onClick={handleNextLesson}
               type="button"
+              endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
             >
-              {'Next >'}
+              Next
             </MuiButton>
           </div>
         </div>
@@ -199,17 +202,6 @@ const Header: React.FC<HeaderProps> = ({
         <div>
           <span className={styles.groupLabel}>Student</span>
           <div className={styles.prevNextDropdown}>
-            <MuiButton
-              variant="outlined"
-              color="tertiary"
-              size="small"
-              disabled={!previousStudent || !selectedStudents?.length}
-              className={styles.button}
-              onClick={handlePreviousStudent}
-              type="button"
-            >
-              {'< Prev'}
-            </MuiButton>
             <SimpleDropdown
               labelText="Student"
               name="student"
@@ -225,6 +217,18 @@ const Header: React.FC<HeaderProps> = ({
               dropdownTextThickness="thin"
             />
             <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
+              disabled={!previousStudent || !selectedStudents?.length}
+              className={styles.button}
+              onClick={handlePreviousStudent}
+              type="button"
+              startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
+            >
+              Prev
+            </MuiButton>
+            <MuiButton
               variant="contained"
               color="primary"
               size="small"
@@ -232,8 +236,9 @@ const Header: React.FC<HeaderProps> = ({
               className={styles.button}
               onClick={handleNextStudent}
               type="button"
+              endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
             >
-              {'Next >'}
+              Next
             </MuiButton>
           </div>
         </div>
