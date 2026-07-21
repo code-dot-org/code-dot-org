@@ -2,11 +2,12 @@ import React from 'react';
 
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import SublevelCard from './SublevelCard';
+
+import styles from './BubbleChoice.module.scss';
 
 export default class BubbleChoice extends React.Component {
   static propTypes = {level: levelType};
@@ -26,7 +27,7 @@ export default class BubbleChoice extends React.Component {
           <button
             type="button"
             onClick={() => this.goToUrl(backButtonUrl)}
-            style={styles.btn}
+            className={styles.btn}
           >
             {i18n.back()}
           </button>
@@ -35,7 +36,7 @@ export default class BubbleChoice extends React.Component {
           <button
             type="button"
             onClick={() => this.goToUrl(finishButtonUrl)}
-            style={{...styles.btn, ...styles.btnOrange}}
+            className={`${styles.btn} ${styles.btnOrange}`}
           >
             {i18n.finish()}
           </button>
@@ -52,8 +53,8 @@ export default class BubbleChoice extends React.Component {
         <h1>{level.display_name}</h1>
         <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
-        <h2 style={styles.h2}>{i18n.chooseActivity()}</h2>
-        <div style={styles.cards}>
+        <h2 className={styles.h2}>{i18n.chooseActivity()}</h2>
+        <div className={styles.cards}>
           {level.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -67,23 +68,3 @@ export default class BubbleChoice extends React.Component {
     );
   }
 }
-
-const styles = {
-  h2: {
-    color: color.charcoal,
-    padding: '10px 0',
-  },
-  btn: {
-    color: color.white,
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray,
-  },
-  btnOrange: {
-    backgroundColor: color.orange,
-    borderColor: color.orange,
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-};
