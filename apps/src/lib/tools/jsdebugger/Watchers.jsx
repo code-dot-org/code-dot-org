@@ -1,3 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {IconButton as MuiIconButton} from '@mui/material';
 import Immutable from 'immutable';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,6 +13,8 @@ import i18n from '@cdo/locale';
 import {add, update, remove} from '../../../redux/watchedExpressions';
 
 import AutocompleteSelector from './AutocompleteSelector';
+
+import moduleStyles from './watchers.module.scss';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
@@ -29,7 +34,6 @@ const OPTIONS_GAMELAB = [
 
 const buttonSize = '28px';
 const valueAndInputWidth = 'calc(100% - 41px)';
-const inputElementHeight = 23;
 
 /**
  * A "watchers" window for our debugger.
@@ -348,14 +352,7 @@ class Watchers extends React.Component {
               </div>
             );
           })}
-          <div style={styles.watchInputSection}>
-            <button
-              style={styles.watchAddButton}
-              onClick={this.addButtonClick}
-              type="button"
-            >
-              +
-            </button>
+          <div className={moduleStyles.watchInputSection}>
             <TetherComponent
               attachment="bottom left"
               targetAttachment="top left"
@@ -367,14 +364,15 @@ class Watchers extends React.Component {
               ]}
               style={styles.autocompleteDropdown}
             >
-              <input
+              <TextField
+                name="watch-expression"
                 placeholder={i18n.debugWatchersPlaceholder()}
-                ref="debugInput"
                 onKeyDown={this.onKeyDown}
                 onChange={this.onChange}
                 onClick={() => this.setState({autocompleteOpen: true})}
                 value={this.state.text}
-                style={styles.watchInput}
+                size="s"
+                className={moduleStyles.watchTextField}
               />
               {this.state.autocompleteOpen && (
                 <AutocompleteSelector
@@ -395,6 +393,9 @@ class Watchers extends React.Component {
                 />
               )}
             </TetherComponent>
+            <MuiIconButton onClick={this.addButtonClick} size="small">
+              <FontAwesomeV6Icon iconName="plus" />
+            </MuiIconButton>
           </div>
         </div>
       </div>
@@ -425,21 +426,6 @@ const styles = {
     border: 'none',
     borderRadius: 0,
   },
-  watchAddButton: {
-    fontSize: 20,
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    float: 'right',
-    cursor: 'pointer',
-    backgroundColor: '#1e93cd',
-    color: 'white',
-    margin: 0,
-    padding: 0,
-    border: 'none',
-    borderRadius: 0,
-  },
   watchItemDescription: {
     whiteSpace: 'nowrap',
     minHeight: buttonSize,
@@ -454,14 +440,6 @@ const styles = {
     display: 'inline-flex',
     alignItems: 'center',
     minHeight: '28px',
-  },
-  watchInputSection: {
-    clear: 'both',
-  },
-  watchInput: {
-    width: valueAndInputWidth,
-    marginTop: 0,
-    height: inputElementHeight,
   },
 };
 
