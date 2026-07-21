@@ -238,14 +238,18 @@ const config = {
         // resulting GC stalls made unrelated async tests exceed their timeouts.
         // Type errors are still caught by ForkTsCheckerWebpackPlugin in `yarn
         // start` and `yarn build`, in development and CI alike.
-        isolatedModules: true,
+        //
+        // Transpile-only is enabled by isolatedModules in tsconfig.build.json.
+        // Do not remove it there, or performance problems may come back.
 
         tsconfig: {
           target: 'es6',
 
           // Keeps dynamic import() working in jest: it compiles import() down
           // to require, which jest's CJS runtime executes natively, so
-          // React.lazy(() => import(...)) components load in tests.
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
           module: 'commonjs',
 
           // The inherited moduleResolution: node16 is invalid next to
