@@ -6,3 +6,5 @@ export {
 } from './_Tooltip';
 export type {WithTooltipProps, WithTooltipHandle} from './WithTooltip';
 export {default as WithTooltip} from './WithTooltip';
+export type {WithKeyboardTooltipProps} from './WithKeyboardTooltip';
+export {default as WithKeyboardTooltip} from './WithKeyboardTooltip';
