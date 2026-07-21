@@ -211,6 +211,10 @@ $sidebar-tooltip-z-index: 2010;
   }
 }
 
+[data-brand='codeai-next'] .taOverlayHeader span {
+  color: var(--text-neutral-white-fixed);
+}
+
 .aiDiffHeader {
   border-radius: 4px 4px 0 0;
   background: var(--background-neutral-primary-inverse);
