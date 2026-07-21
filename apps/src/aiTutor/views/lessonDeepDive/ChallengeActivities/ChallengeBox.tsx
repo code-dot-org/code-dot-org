@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {Challenge, challengeValidator} from '../types';
 
@@ -8,17 +9,6 @@ import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
 
 import styles from './challenge-box.module.scss';
-
-type ChallengeType = 'video' | 'whiteboard';
-
-// // Mirrors Challenge#summarize in dashboard/app/models/challenge.rb.
-// export interface Challenge {
-//   id: number;
-//   lesson_id: number;
-//   question: string;
-//   default_modality: ChallengeType | null;
-//   whiteboard_starter_image_alt_text: string | null;
-// }
 
 interface ChallengeBoxProps {
   lessonId: number;
@@ -28,28 +18,9 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
   const [submitted, setSubmitted] = useState(false);
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
-  const [challengeType, setChallengeType] =
-    useState<ChallengeType>('whiteboard');
-
-  // const fetchChallenges = useCallback(() => {
-  //   const params = new URLSearchParams();
-  //   params.append('lesson_id', lessonId.toString());
-  //   const query = params.toString();
-  //   HttpClient.fetchJson<Challenge[]>(
-  //     `/challenges?${query}`,
-  //     {},
-  //     challengeValidator
-  //   ).then(response => {
-  //     const challenges = response.value;
-  //     if (!challenges || challenges.length === 0) return;
-  //     //for now, just show the first challenge question
-  //     setSelectedChallenge(challenges[0]);
-  //   });
-  // }, [lessonId]);
-
-  // useEffect(() => {
-  //   fetchChallenges();
-  // }, [fetchChallenges]);
+  const [challengeType, setChallengeType] = useState<string>(
+    ChallengeTypes.WHITEBOARD
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -85,7 +56,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
     };
   }, [lessonId]);
 
-  const switchTo = (type: ChallengeType) => {
+  const switchTo = (type: string) => {
     setChallengeType(type);
     setSubmitted(false);
   };
@@ -111,7 +82,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
         {renderInstructions()}
       </aside>
       <div className={styles.activityColumn}>
-        {challengeType === 'whiteboard' ? (
+        {challengeType === ChallengeTypes.WHITEBOARD ? (
           <WhiteboardChallenge
             challengeId={challenge?.id ?? null}
             submitted={submitted}
@@ -128,16 +99,20 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
           <button
             type="button"
             className={
-              challengeType === 'whiteboard' ? styles.active : undefined
+              challengeType === ChallengeTypes.WHITEBOARD
+                ? styles.active
+                : undefined
             }
-            onClick={() => switchTo('whiteboard')}
+            onClick={() => switchTo(ChallengeTypes.WHITEBOARD)}
           >
             Whiteboard
           </button>
           <button
             type="button"
-            className={challengeType === 'video' ? styles.active : undefined}
-            onClick={() => switchTo('video')}
+            className={
+              challengeType === ChallengeTypes.VIDEO ? styles.active : undefined
+            }
+            onClick={() => switchTo(ChallengeTypes.VIDEO)}
           >
             Video
           </button>
