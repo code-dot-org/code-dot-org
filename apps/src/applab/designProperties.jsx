@@ -150,7 +150,7 @@ export default class DesignProperties extends React.Component {
         userSelect: 'none',
       },
       workspaceBody: {
-        height: 'calc(100% - 83px)',
+        height: 'calc(100% - 62px)',
         padding: '10px 10px 10px 0',
         borderColor: borderColor,
         borderStyle: 'solid',

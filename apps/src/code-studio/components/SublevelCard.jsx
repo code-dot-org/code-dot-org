@@ -126,7 +126,9 @@ export default class SublevelCard extends React.Component {
           <div
             style={{
               ...styles.column,
-              ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)},
+              ...{
+                width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE) + BORDER * 2,
+              },
             }}
           >
             <div style={styles.bubbleAndTitle}>
@@ -157,24 +159,25 @@ export default class SublevelCard extends React.Component {
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
 const WIDTH = 435;
+const BORDER = 1;
 
 const styles = {
   row: {
     display: 'flex',
-    width: WIDTH,
+    width: WIDTH + BORDER * 2,
     marginBottom: MARGIN,
     marginInlineEnd: MARGIN,
     backgroundColor: color.white,
-    border: '1px solid rgb(187, 187, 187)',
+    border: `${BORDER}px solid rgb(187, 187, 187)`,
     borderRadius: 2,
     cursor: 'pointer',
   },
   thumbnail: {
-    minWidth: THUMBNAIL_IMAGE_SIZE,
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
+    minWidth: THUMBNAIL_IMAGE_SIZE + MARGIN * 2 + BORDER,
+    width: THUMBNAIL_IMAGE_SIZE + MARGIN * 2 + BORDER,
+    height: THUMBNAIL_IMAGE_SIZE + MARGIN * 2,
     padding: MARGIN,
-    borderInlineEnd: '1px solid rgb(187, 187, 187)',
+    borderInlineEnd: `${BORDER}px solid rgb(187, 187, 187)`,
   },
   placeholderThumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
@@ -184,7 +187,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: '1px solid rgb(187, 187, 187)',
+    border: `${BORDER}px solid rgb(187, 187, 187)`,
     borderRadius: 2,
   },
   icon: {
