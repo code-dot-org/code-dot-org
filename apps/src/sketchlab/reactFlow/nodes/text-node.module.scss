@@ -1,3 +1,5 @@
+@use './node-mixins.scss' as mixins;
+
 .textNode {
   position: relative;
   outline: none;
@@ -29,10 +31,8 @@
   transition: border-color 0.15s;
 }
 
-// Keyboard focus ring on the rotated wrapper so it turns with the node.
 :global(.react-flow__node-text:focus-visible) .rotatable {
-  outline: 2px solid var(--borders-brand-teal-primary);
-  outline-offset: 2px;
+  @include mixins.node-focus-ring;
 }
 
 .text {

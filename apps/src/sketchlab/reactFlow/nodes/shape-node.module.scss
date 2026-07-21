@@ -1,3 +1,5 @@
+@use './node-mixins.scss' as mixins;
+
 .shapeNode {
   position: relative;
   width: 100%;
@@ -15,11 +17,8 @@
   transform-origin: center;
 }
 
-// Keyboard focus ring on the rotated wrapper so it turns with the node.
 :global(.react-flow__node-shape:focus-visible) .rotatable {
-  outline: 2px solid var(--borders-brand-teal-primary);
-  outline-offset: 2px;
-  border-radius: 4px;
+  @include mixins.node-focus-ring;
 }
 
 .shapeSvg {
