@@ -233,6 +233,19 @@ const config = {
       {
         tsconfig: {
           target: 'es6',
+
+          // Keeps dynamic import() working in jest: it compiles import() down
+          // to require, which jest's CJS runtime executes natively, so
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
+          module: 'commonjs',
+
+          // The inherited moduleResolution: node16 is invalid next to
+          // module: commonjs (TS5110), so override it with a compatible
+          // value. No effect beyond satisfying validation, since jest
+          // resolves imports itself.
+          moduleResolution: 'node',
         },
       },
     ],
