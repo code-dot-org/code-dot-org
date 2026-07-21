@@ -1775,7 +1775,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'suggested_lesson_stale? returns true for a stale timestamp' do
     @section.update!(
-      suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601},
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.days.ago.utc.iso8601},
       suggested_lesson_history: [{'lesson_id' => 1, 'date' => (Time.zone.today - 1).iso8601}]
     )
     assert @section.suggested_lesson_stale?
