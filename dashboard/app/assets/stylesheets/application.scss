@@ -70,6 +70,7 @@ body.pin_bottom {
   bottom: 0;
   right: 0;
   left: 0;
+  background-color: var(--background-neutral-secondary);
 }
 
 body.oceans-blue {
@@ -598,10 +599,6 @@ html, body {
   .legacy-share-view & {
     position: relative;
   }
-}
-
-body.pin_bottom {
-  background-color: var(--background-neutral-secondary);
 }
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
