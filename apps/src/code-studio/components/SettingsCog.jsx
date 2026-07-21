@@ -1,5 +1,6 @@
 /** @file Settings menu cog icon */
-import classNames from 'classnames';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
@@ -9,14 +10,11 @@ import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDia
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import * as makerToolkitRedux from '../../maker/redux';
 import ConfirmEnableMakerDialog from '../../maker/ui/ConfirmEnableMakerDialog';
 import {getStore} from '../../redux';
 import * as assets from '../assets';
 import project from '../initApp/project';
-
-import moduleStyles from './settings-cog.module.scss';
 
 // Exported for testing
 export class SettingsCog extends Component {
@@ -103,24 +101,23 @@ export class SettingsCog extends Component {
   }
 
   render() {
-    const {isRunning, runModeIndicators} = this.props;
-
     return (
       <span>
-        <button
+        <MuiIconButton
           type="button"
+          variant="outlined"
+          color="secondary"
           onClick={this.toggleOpen}
-          className={classNames(
-            moduleStyles.settingsButton,
-            runModeIndicators && isRunning && moduleStyles.settingsButtonRunning
-          )}
+          size="extraSmall"
+          sx={{
+            borderRadius: '50%',
+            height: '1rem',
+            width: '1rem',
+          }}
+          aria-label={msg.settings()}
         >
-          <FontAwesome
-            className="settings-cog"
-            icon="gear"
-            title={msg.settings()}
-          />
-        </button>
+          <FontAwesomeV6Icon iconName="gear" iconStyle="solid" />
+        </MuiIconButton>
         {this.state.open && (
           <JavalabDropdown className="ui-test-settings-cog-menu">
             {renderMenuItem(this.manageAssets, msg.manageAssets())}

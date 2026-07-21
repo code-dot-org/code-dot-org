@@ -1,5 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,7 +13,7 @@ import msg from '@cdo/locale';
 
 import SettingsCog from '../code-studio/components/SettingsCog';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIconV2';
 import color from '../util/color';
 
 export default class DesignModeHeaders extends React.Component {
@@ -106,13 +109,19 @@ export default class DesignModeHeaders extends React.Component {
         width: 270,
         borderLeft: this.props.isRtl ? '1px solid gray' : '',
         borderRight: this.props.isRtl ? '' : '1px solid gray',
+        paddingLeft: '.5rem',
+        paddingRight: '.5rem',
+        boxSizing: 'border-box',
+        gap: '.5rem',
       },
       showToolboxHeader: {
-        float: this.props.isRtl ? 'right' : 'left',
         display: this.props.isToolboxVisible ? 'none' : 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
-        paddingLeft: this.props.isRtl ? '' : 10,
-        paddingRight: this.props.isRtl ? 10 : '',
+        paddingLeft: '.5rem',
+        paddingRight: '.5rem',
+        boxSizing: 'border-box',
+        gap: '.5rem',
       },
       showToolboxClickable: {
         marginLeft: this.props.isRtl ? '' : 18,
@@ -163,7 +172,14 @@ export default class DesignModeHeaders extends React.Component {
           style={styles.toolboxHeader}
         >
           <span>{this.hideToolboxIcon()}</span>
-          <span>{applabMsg.designToolboxHeader()}</span>
+          <MuiTypography
+            variant="body4"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+            }}
+          >
+            {applabMsg.designToolboxHeader()}
+          </MuiTypography>
           <span>{settingsCog}</span>
         </PaneSection>
         <PaneSection
@@ -171,10 +187,39 @@ export default class DesignModeHeaders extends React.Component {
             'workspace-header',
             this.props.isRunning && 'is-running'
           )}
+          style={styles.showToolboxHeader}
         >
           {this.showToolboxIcon()}
           <span>{msg.showToolbox()}</span>
           <span>{settingsCog}</span>
+        </PaneSection>
+        <PaneSection
+          id="design-workspace-header"
+          className={classNames(
+            'workspace-header',
+            this.props.isRunning && 'is-running'
+          )}
+          style={{
+            alignItems: 'center',
+            flex: '1 1 0',
+            gap: '0.5rem',
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}
+        >
+          {this.props.showProjectTemplateWorkspaceIcon && (
+            <ProjectTemplateWorkspaceIcon tooltipPlace="onTop" />
+          )}
+          <MuiTypography
+            variant="body4"
+            id="workspace-header-span"
+            sx={{
+              color: 'var(--text-neutral-white-fixed)',
+            }}
+          >
+            {applabMsg.designWorkspaceHeader()}
+          </MuiTypography>
         </PaneSection>
         <PaneButton
           id="design-mode-versions-header"
@@ -185,18 +230,6 @@ export default class DesignModeHeaders extends React.Component {
           isRtl={this.props.isRtl}
           onClick={this.props.handleVersionHistory}
         />
-        <PaneSection
-          id="design-workspace-header"
-          className={classNames(
-            'workspace-header',
-            this.props.isRunning && 'is-running'
-          )}
-        >
-          {this.props.showProjectTemplateWorkspaceIcon && (
-            <ProjectTemplateWorkspaceIcon />
-          )}
-          <span>{applabMsg.designWorkspaceHeader()}</span>
-        </PaneSection>
       </PaneHeader>
     );
   }
