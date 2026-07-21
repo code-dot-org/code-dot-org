@@ -29,7 +29,7 @@ interface RotatedNodeResizerProps {
 }
 
 interface ActiveDrag {
-  handle: ResizeHandlePosition;
+  resizeHandle: ResizeHandlePosition;
   pointerId: number;
   startFlowPointer: {x: number; y: number};
   start: RotatedResizeStart;
@@ -76,6 +76,8 @@ function handleScaleValue(
  * replacing React Flow's axis-aligned NodeResizer. Dragging a handle
  * resizes the node along its own rotated axes with the opposite
  * corner/edge pinned in place.
+ * There are 2 resize handle types: corner dots, which are small squares on each
+ * corner, and edge strips, which are the entire length of the corresponding edge.
  */
 function RotatedNodeResizer({
   isVisible,
@@ -109,7 +111,7 @@ function RotatedNodeResizer({
       event.preventDefault();
       event.currentTarget.setPointerCapture(event.pointerId);
       activeDragRef.current = {
-        handle,
+        resizeHandle: handle,
         pointerId: event.pointerId,
         startFlowPointer: screenToFlowPosition({
           x: event.clientX,
@@ -152,7 +154,7 @@ function RotatedNodeResizer({
       }
       const result = computeRotatedResize({
         start: drag.start,
-        handle: drag.handle,
+        handle: drag.resizeHandle,
         pointerDelta,
         minWidth,
         minHeight,
