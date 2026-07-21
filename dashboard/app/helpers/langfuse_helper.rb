@@ -2,7 +2,7 @@ module LangfuseHelper
   include LevelsHelper
 
   def self.fetch_prompt(prompt_name)
-    response = client.fetch_prompt(prompt_name)
+    response = tutor_client.fetch_prompt(prompt_name)
 
     if response.code == 200
       {status: :ok, json: JSON.parse(response.body)}
