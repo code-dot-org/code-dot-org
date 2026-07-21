@@ -123,7 +123,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -1472,7 +1472,11 @@ Dashboard::Application.routes.draw do
     resources :aidiff_artifacts, only: [:index, :create]
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
-    resources :practice_problems, only: [:index, :show]
+    resources :practice_problems, only: [:index, :show, :create, :update, :destroy] do
+      collection do
+        post 'generate'
+      end
+    end
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show]

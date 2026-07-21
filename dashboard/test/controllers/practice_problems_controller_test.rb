@@ -105,4 +105,134 @@ class PracticeProblemsControllerTest < ActionController::TestCase
     assert_equal @objective1.id, objective_entry['id']
     assert_equal @objective1.description, objective_entry['description']
   end
+
+  # --- create / update / destroy / generate are levelbuilder-only ---
+
+  test_user_gets_response_for :create, method: :post, params: -> {{problem_type: 'match', problem_text: 'x', solution: []}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, method: :post, params: -> {{problem_type: 'match', problem_text: 'x', solution: []}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :generate, method: :post, params: -> {{lesson_id: 1}}, user: :student, response: :forbidden
+
+  # --- generate ---
+
+  test 'generate returns candidate problems from the generator' do
+    sign_in create(:levelbuilder)
+    lesson = create(:lesson)
+    candidates = [
+      {problemType: 'match', problemText: 'Q', solution: [{option: 'a', correct: 'b'}], objectiveIds: []},
+    ]
+    PracticeProblemGenerator.expects(:generate).with(lesson: lesson, count: 5).returns(candidates)
+
+    post :generate, params: {lesson_id: lesson.id, count: 5}
+    assert_response :ok
+    assert_equal 'Q', JSON.parse(response.body).first['problemText']
+  end
+
+  test 'generate returns 502 when generation fails' do
+    sign_in create(:levelbuilder)
+    lesson = create(:lesson)
+    PracticeProblemGenerator.stubs(:generate).raises(PracticeProblemGenerator::OpenaiError.new('boom'))
+
+    post :generate, params: {lesson_id: lesson.id}
+    assert_response :bad_gateway
+  end
+
+  test 'generate returns 404 for an unknown lesson' do
+    sign_in create(:levelbuilder)
+    post :generate, params: {lesson_id: 0}
+    assert_response :not_found
+  end
+
+  test 'create persists a problem, associates lesson objectives, and returns the summary' do
+    sign_in create(:levelbuilder)
+    lesson = create(:lesson)
+    objective = create(:objective, lesson: lesson)
+
+    post :create, params: {
+      problem_type: 'multiple_choice_single_select',
+      problem_text: 'Which is a loop?',
+      active: true,
+      solution: [{option: 'for', correct: true}, {option: 'if', correct: false}],
+      lesson_id: lesson.id,
+      objective_ids: [objective.id],
+    }
+    assert_response :ok
+
+    data = JSON.parse(response.body)
+    problem = PracticeProblem.find(data['id'])
+    assert_equal 'multiple_choice_single_select', problem.problem_type
+    assert_equal 'Which is a loop?', problem.problem_text
+    assert_includes problem.objectives, objective
+    assert data['key'].present?, 'key should be auto-generated'
+    assert_equal [objective.id], data['objectiveIds']
+  end
+
+  test 'create returns 400 for an invalid problem' do
+    sign_in create(:levelbuilder)
+    post :create, params: {problem_type: 'not_a_type', problem_text: '', solution: []}
+    assert_response :bad_request
+  end
+
+  test 'update edits fields and preserves objectives from other lessons' do
+    sign_in create(:levelbuilder)
+    lesson_a = create(:lesson)
+    lesson_b = create(:lesson)
+    obj_a = create(:objective, lesson: lesson_a)
+    obj_b = create(:objective, lesson: lesson_b)
+    problem = create(:practice_problem)
+    problem.objectives = [obj_a, obj_b]
+
+    # Editing from lesson_b, clearing its objective, must not touch lesson_a.
+    # The client sends a lone empty-string marker for an empty selection since
+    # Rails drops a truly-empty array param.
+    patch :update, params: {
+      id: problem.id,
+      problem_text: 'edited',
+      lesson_id: lesson_b.id,
+      objective_ids: [''],
+    }
+    assert_response :ok
+
+    problem.reload
+    assert_equal 'edited', problem.problem_text
+    assert_includes problem.objectives, obj_a
+    refute_includes problem.objectives, obj_b
+  end
+
+  test 'update returns 404 for an unknown id' do
+    sign_in create(:levelbuilder)
+    patch :update, params: {id: 0, problem_text: 'x'}
+    assert_response :not_found
+  end
+
+  test 'destroy detaches only this lesson objectives when used elsewhere' do
+    sign_in create(:levelbuilder)
+    lesson_a = create(:lesson)
+    lesson_b = create(:lesson)
+    obj_a = create(:objective, lesson: lesson_a)
+    obj_b = create(:objective, lesson: lesson_b)
+    problem = create(:practice_problem)
+    problem.objectives = [obj_a, obj_b]
+
+    delete :destroy, params: {id: problem.id, lesson_id: lesson_a.id}
+    assert_response :ok
+
+    assert_equal false, JSON.parse(response.body)['deleted']
+    problem.reload
+    refute_includes problem.objectives, obj_a
+    assert_includes problem.objectives, obj_b
+  end
+
+  test 'destroy deletes the problem entirely once orphaned' do
+    sign_in create(:levelbuilder)
+    lesson = create(:lesson)
+    objective = create(:objective, lesson: lesson)
+    problem = create(:practice_problem)
+    problem.objectives = [objective]
+
+    delete :destroy, params: {id: problem.id, lesson_id: lesson.id}
+    assert_response :ok
+
+    assert_equal true, JSON.parse(response.body)['deleted']
+    assert_nil PracticeProblem.find_by(id: problem.id)
+  end
 end

@@ -493,6 +493,7 @@ class Ability
         JitPlExemplar,
         JitPlTeachingTip,
         JSONVideo,
+        PracticeProblem,
         CourseOffering,
         UnitGroup,
         Resource,

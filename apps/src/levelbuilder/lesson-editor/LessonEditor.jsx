@@ -16,6 +16,7 @@ import ObjectivesEditor from '@cdo/apps/levelbuilder/lesson-editor/ObjectivesEdi
 import ProgrammingExpressionsEditor from '@cdo/apps/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
 import StandardsEditor from '@cdo/apps/levelbuilder/lesson-editor/StandardsEditor';
+import TutorDeepDiveEditor from '@cdo/apps/levelbuilder/lesson-editor/TutorDeepDiveEditor';
 import VocabulariesEditor from '@cdo/apps/levelbuilder/lesson-editor/VocabulariesEditor';
 import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
 import {
@@ -495,6 +496,20 @@ class LessonEditor extends Component {
             allConcepts={this.props.initialLessonData.allJitPlConcepts || []}
             selectedConceptIds={this.state.jitPlConceptIds}
             onChange={ids => this.setState({jitPlConceptIds: ids})}
+          />
+        </CollapsibleEditorSection>
+        <CollapsibleEditorSection
+          title="Tutor Deep Dive"
+          collapsed={true}
+          fullWidth={true}
+        >
+          <TutorDeepDiveEditor
+            lessonId={this.props.initialLessonData.id}
+            objectives={this.state.objectives}
+            initialVideos={this.props.initialLessonData.tutorVideos || []}
+            initialPracticeProblems={
+              this.props.initialLessonData.tutorPracticeProblems || []
+            }
           />
         </CollapsibleEditorSection>
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
