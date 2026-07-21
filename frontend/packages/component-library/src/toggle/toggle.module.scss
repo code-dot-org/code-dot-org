@@ -261,3 +261,90 @@ html[dir='rtl'] {
     order: 1;
   }
 }
+
+// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
+// brand overrides"); tags/tags.module.scss is the reference example.
+// The token bridge maps the legacy teal tokens onto the CADS brand ramp,
+// but the CADS toggle's ON side uses the dedicated mode-inverted
+// selected-state tokens (brand track + seafoam thumb/icon in light,
+// seafoam track + navy thumb/icon in dark), and the OFF track sits one
+// step further down the neutral ramp than legacy (septenary/octonary
+// instead of senary/septenary) — same-name tokens the bridge cannot
+// retarget. The focus ring and the disabled track fills already resolve
+// correctly through the bridge.
+// The thumb's Figma token (background/state/selected/primary-inverse) is
+// not in the colors_codeAi.css export yet; until a sandbox re-export
+// carries it, the fallback --text-selected-primary holds the identical
+// value pair by design ("selected text pairs with selected background").
+// Each selector mirrors its legacy counterpart plus the [data-brand]
+// attribute; rule order in the block mirrors the legacy cascade.
+[data-brand='codeai-next'] {
+  .toggle {
+    div .switch i {
+      // ON half of the track and its icon: the selected pair.
+      &::before {
+        color: var(--text-selected-primary);
+        background-color: var(--background-selected-primary);
+      }
+
+      // OFF half of the track.
+      &::after {
+        background-color: var(--background-neutral-septenary);
+      }
+    }
+
+    // ON thumb inverts against the selected track. OFF and disabled
+    // thumbs keep the legacy white-fixed fill.
+    div input[type='checkbox']:checked:not(:disabled) + .switch span {
+      background: var(
+        --background-selected-primary-inverse,
+        var(--text-selected-primary)
+      );
+    }
+
+    // Hover
+    &:hover {
+      div .switch i {
+        &::before {
+          background-color: var(--background-selected-hover);
+        }
+
+        &::after {
+          background-color: var(--background-neutral-octonary);
+        }
+      }
+    }
+
+    // Pressed — the legacy pressed border blends into the fill: on the
+    // ON side border-selected-hover matches background-selected-hover
+    // by design; the OFF side has no matching border token, so the
+    // border stays at its transparent base.
+    &:active div input[type='checkbox']:not(:disabled) + .switch i,
+    div input[type='checkbox']:active:not(:disabled) + .switch i {
+      &::before {
+        border-color: var(--border-selected-hover);
+        background: var(--background-selected-hover);
+      }
+
+      &::after {
+        border-color: transparent;
+        background: var(--background-neutral-octonary);
+      }
+    }
+
+    // Disabled — solid-fill disabled elements pair the disabled track
+    // with the disabled-inverse label (white in Light, black in Dark);
+    // also keeps the ::before icon recolor above from leaking into the
+    // disabled state.
+    &:has(input[type='checkbox']:disabled) {
+      > div {
+        .switch i {
+          &::before,
+          &::after {
+            color: var(--text-disabled-neutral-inverse);
+          }
+        }
+      }
+    }
+  }
+}
