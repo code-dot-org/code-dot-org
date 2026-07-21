@@ -2,6 +2,36 @@
   padding-right: 16px;
 }
 
+// The DSCO Modal content section is a flex child with align-items: flex-start,
+// so children take content width by default. Stretch the wrapper so the
+// version list fills the full modal width.
+.modalBody {
+  width: 100%;
+}
+
+.versionList {
+  width: 100%;
+  max-height: 330px;
+  overflow-y: auto;
+  margin: 1em 0;
+  scrollbar-color: var(--background-neutral-quinary)
+    var(--background-neutral-primary);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--background-neutral-primary);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-neutral-quinary);
+    border-radius: 5px;
+    border: 2px solid var(--background-neutral-primary);
+  }
+}
+
 // Override MUI secondary palette so Cancel keeps its neutral outline treatment.
 .cancelButton {
   background-color: var(--background-neutral-primary) !important;
@@ -24,13 +54,5 @@
     background-color: var(--background-brand-purple-strong) !important;
     color: var(--text-neutral-white-fixed) !important;
     text-decoration: none !important;
-  }
-}
-
-// Keep the selected-row View button legible while disabled.
-.disabledViewButton {
-  &:global(.Mui-disabled) {
-    background-color: var(--neutral-gray-90) !important;
-    color: var(--text-neutral-white-fixed) !important;
   }
 }

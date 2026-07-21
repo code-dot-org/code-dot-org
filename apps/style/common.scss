@@ -1175,7 +1175,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     vertical-align: middle;
   }
   tr.highlight {
-    background-color: $lightest_purple;
+    background-color: var(--background-neutral-secondary);
   }
 
   .template-level-warning {
