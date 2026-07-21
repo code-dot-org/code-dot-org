@@ -7,6 +7,8 @@ import {
 } from '@code-dot-org/core/api';
 import {RootStateProvider} from '@code-dot-org/core/redux';
 
+import queryClient from '@/modules/router/queryClient';
+
 /** Props for {@link LabProviders}. */
 interface LabProvidersProps {
   /** Lab subtree to render inside the data providers. */
@@ -29,7 +31,10 @@ interface LabProvidersProps {
 export default function LabProviders({children}: LabProvidersProps) {
   return (
     <RootStateProvider>
-      <QueryClientProvider>
+      {/* The router's queryClient, so a route loader's prefetch (e.g. a course
+          level's level_properties) is the same cache LabHost reads from — one
+          client, no duplicate fetch. */}
+      <QueryClientProvider client={queryClient}>
         <ApiClientProvider client={DashboardApiClient}>
           {children}
         </ApiClientProvider>

@@ -6,7 +6,7 @@ import {
   coursesKeys,
   levelsKeys,
 } from '@code-dot-org/core/api';
-import {Lab} from '@code-dot-org/lab/host';
+import {LabHost} from '@code-dot-org/lab/host';
 
 import LabProviders from '@/modules/labs/LabProviders';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
@@ -93,7 +93,7 @@ export const Route = createFileRoute(
       resolved.properties.appName,
     );
 
-    return {resolved, LabEntrypoint};
+    return {resolved, LabEntrypoint, scriptName, lessonPosition};
   },
   component: CourseLevelRoute,
   notFoundComponent: () => (
@@ -105,7 +105,8 @@ export const Route = createFileRoute(
 });
 
 function CourseLevelRoute() {
-  const {resolved, LabEntrypoint} = Route.useLoaderData();
+  const {resolved, LabEntrypoint, scriptName, lessonPosition} =
+    Route.useLoaderData();
 
   return (
     <>
@@ -114,19 +115,24 @@ function CourseLevelRoute() {
         levels={resolved.levels}
       />
       <LabProviders>
-        <Lab
-          levelId={resolved.levelId}
-          levelPropertiesMap={{[String(resolved.levelId)]: resolved.properties}}
-        >
-          {LabEntrypoint ? (
-            <LabEntrypoint />
-          ) : (
-            // h1: this is the only heading visible when no lab entrypoint exists.
-            <Typography variant="h6" component="h1" sx={{p: 4}}>
-              Unsupported level type: {resolved.properties.appName}
-            </Typography>
-          )}
-        </Lab>
+        {LabEntrypoint ? (
+          // LabHost (unit mode) is the single host: it resolves the level's
+          // properties + app options, dispatches the load (so sources-backed
+          // labs actually load — a bare <Lab> never does), and renders the
+          // propless entrypoint inside one <Lab>. scriptName + lessonPosition
+          // key the lesson-shared level-properties fetch the loader primed.
+          <LabHost
+            LabEntrypoint={LabEntrypoint}
+            levelId={resolved.levelId}
+            scriptName={scriptName}
+            lessonPosition={lessonPosition}
+          />
+        ) : (
+          // h1: this is the only heading visible when no lab entrypoint exists.
+          <Typography variant="h6" component="h1" sx={{p: 4}}>
+            Unsupported level type: {resolved.properties.appName}
+          </Typography>
+        )}
       </LabProviders>
     </>
   );
