@@ -194,3 +194,57 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
+// brand overrides"); tags/tags.module.scss is the reference example.
+// The token bridge maps the legacy teal tokens onto the CADS brand ramp
+// (purple-50/-80), but the CADS chip's checked state uses the dedicated
+// selected-state tokens instead — a mode-inverted pair (brand fill +
+// seafoam text in light, seafoam fill + navy text in dark) that no global
+// token mapping can pick per-component — and the pressed fill moves from
+// the neutral ramp to brand-light. Everything else (default, hover,
+// focus ring, unselected disabled) already resolves correctly through the
+// bridge, so only these states are overridden.
+// CADS semantic tokens only (brandCodeAiNext.css) — Dark mode comes from
+// the tokens, no [data-theme] rules needed. Each selector mirrors its
+// legacy counterpart's structure so it outranks it by exactly the
+// [data-brand] attribute; rule order within the block matters for the
+// equal-specificity checked/hover/disabled combinations, mirroring the
+// legacy cascade.
+[data-brand='codeai-next'] {
+  .chips fieldset .chip {
+    // Pressed
+    &:active {
+      background-color: var(--background-brand-light);
+    }
+
+    // Selected
+    &:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-primary);
+      background-color: var(--background-selected-primary);
+      color: var(--text-selected-primary);
+    }
+
+    // Selected + hover (border intentionally matches the fill)
+    &:hover:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-hover);
+      background-color: var(--background-selected-hover);
+    }
+
+    // Selected + pressed; outline-color recolors the legacy inset
+    // outline so it blends into the fill.
+    &:active:has(input[type='checkbox']:checked) {
+      background-color: var(--background-selected-hover);
+      outline-color: var(--border-selected-hover);
+    }
+
+    // Selected + disabled — solid disabled fill with the inverse label
+    // (white in light, black in dark), unlike the always-white legacy
+    // label. Last so it outranks the checked hover/pressed rules above.
+    &:has(input[type='checkbox']:disabled:checked) {
+      border-color: var(--border-disabled-neutral);
+      background-color: var(--background-disabled-neutral);
+      color: var(--text-disabled-neutral-inverse);
+    }
+  }
+}
