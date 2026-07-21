@@ -68,7 +68,7 @@ Here are some examples:
 
 ```
 
-**_Always rely on css selector priority, not the order of stylesheets being loaded._** (Since order of stylesheets load can be changed almost randomly [example here](https://codedotorg.slack.com/archives/C0T0PNTM3/p1710363328926969))
+**_Always rely on css selector priority, not the order of stylesheets being loaded._** (Since order of stylesheets load can be changed almost randomly [example here](https://codeai.slack.com/archives/C0T0PNTM3/p1710363328926969))
 
 ## Consuming This Package
 

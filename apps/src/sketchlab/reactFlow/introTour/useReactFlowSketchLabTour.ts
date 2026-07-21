@@ -40,14 +40,19 @@ const onTourCancel = (stepIndex: number) =>
 
 interface UseReactFlowSketchLabTourParams {
   levelProperties: LevelProperties;
+  enabled?: boolean;
 }
 
 const useReactFlowSketchLabTour = ({
   levelProperties,
+  enabled = true,
 }: UseReactFlowSketchLabTourParams) => {
   // Wait for the toolbar to render before starting; steps attach to its buttons.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
+    if (!enabled) {
+      return;
+    }
     const tourSeen = tryGetLocalStorage(
       SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
       'no'
@@ -77,7 +82,7 @@ const useReactFlowSketchLabTour = ({
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [enabled]);
 
   const additionalStepOptions = useMemo(
     () => ({
@@ -92,6 +97,7 @@ const useReactFlowSketchLabTour = ({
     getSteps: createReactFlowSketchLabTourSteps,
     localStorageKey: SKETCHLAB_REACTFLOW_ONBOARDING_TOUR_SEEN,
     tourAvailable:
+      enabled &&
       isToolbarReady &&
       isTourEnabledOnLevel(
         ProductTour.SketchlabIntroReactFlow,

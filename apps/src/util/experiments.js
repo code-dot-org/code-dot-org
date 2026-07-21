@@ -71,8 +71,6 @@ experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
 experiments.USE_AI_GATEWAY = 'useAiGateway';
 // Enable speech-to-text input in AI chat lab and AI tutor for all models
 experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
-// Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
-experiments.EXCALIDRAW = 'excalidraw';
 // Run the pyodide worker in a hidden iframe on a separate codeprojects.org
 // subdomain, isolated from studio.code.org's cookies/session, instead of directly
 // on studio.code.org.
