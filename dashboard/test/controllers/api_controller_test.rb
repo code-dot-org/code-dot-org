@@ -2248,12 +2248,7 @@ end
 
 # ApiController#load_script resolves the script_id param, then the section's
 # assigned unit; when neither is present it returns nil, and the section
-# endpoints render an empty state or reject the request. (Until 2026
-# load_script instead fell back
-# to the hourofcode unit; no shipped client could observe that default
-# producing anything but these same empty responses.) These tests pin the
-# empty-state responses, and that they do not depend on the hourofcode unit
-# being seeded — UI-test environments no longer seed it.
+# endpoints render an empty state or reject the request.
 class ApiControllerNoDefaultScriptTest < ActionController::TestCase
   tests ApiController
   include Devise::Test::ControllerHelpers
