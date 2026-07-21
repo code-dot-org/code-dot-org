@@ -23,11 +23,11 @@ export default class BubbleChoice extends React.Component {
     const finishButtonUrl = level.redirect_url || level.script_url;
 
     return (
-      <div>
+      <div className={styles.buttons}>
         {backButtonUrl && (
           <Button
-            variant="text"
-            color="primary"
+            variant="outlined"
+            color="secondary"
             onClick={() => this.goToUrl(backButtonUrl)}
           >
             {i18n.back()}
@@ -51,10 +51,16 @@ export default class BubbleChoice extends React.Component {
 
     return (
       <div>
-        <Typography variant="h1">{level.display_name}</Typography>
+        <Typography variant="h1" className={styles.displayNameHeader}>
+          {level.display_name}
+        </Typography>
         <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
-        <Typography variant="h2" className={styles.h2}>
+        <Typography
+          variant="h3"
+          component="h2"
+          className={styles.chooseActivityHeader}
+        >
           {i18n.chooseActivity()}
         </Typography>
         <div className={styles.cards}>

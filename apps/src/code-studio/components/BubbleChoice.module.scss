@@ -1,5 +1,22 @@
-.h2 {
+.displayNameHeader {
+  padding-bottom: 10px;
+}
+
+.chooseActivityHeader {
   padding: 10px 0;
+
+  // MUI's Typography root resets `margin: 0` at the same specificity as this
+  // class, so a bare `margin-top` here is load-order dependent. Combine with
+  // the MUI class to win on specificity instead of stylesheet order.
+  &:global(.MuiTypography-root) {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
 .cards {
