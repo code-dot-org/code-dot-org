@@ -1,4 +1,4 @@
-import {Button} from '@mui/material';
+import {Button, Typography} from '@mui/material';
 import React from 'react';
 
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
@@ -51,10 +51,12 @@ export default class BubbleChoice extends React.Component {
 
     return (
       <div>
-        <h1>{level.display_name}</h1>
+        <Typography variant="h1">{level.display_name}</Typography>
         <SafeMarkdown markdown={level.description} />
         {this.renderButtons()}
-        <h2 className={styles.h2}>{i18n.chooseActivity()}</h2>
+        <Typography variant="h2" className={styles.h2}>
+          {i18n.chooseActivity()}
+        </Typography>
         <div className={styles.cards}>
           {level.sublevels.map(sublevel => (
             <SublevelCard
