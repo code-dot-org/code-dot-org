@@ -90,7 +90,12 @@ describe('TextResponsesTable', () => {
       <TextResponsesTable responses={markdownResponses} sectionId={sectionId} />
     );
 
-    const questionText = wrapper.find('tbody tr').first().find('td').at(3).text();
+    const questionText = wrapper
+      .find('tbody tr')
+      .first()
+      .find('td')
+      .at(3)
+      .text();
     expect(questionText).to.not.contain('#');
     expect(questionText).to.not.contain('*');
     expect(questionText).to.contain('Predict and Run');
@@ -113,7 +118,12 @@ describe('TextResponsesTable', () => {
       <TextResponsesTable responses={markdownResponses} sectionId={sectionId} />
     );
 
-    const questionText = wrapper.find('tbody tr').first().find('td').at(3).text();
+    const questionText = wrapper
+      .find('tbody tr')
+      .first()
+      .find('td')
+      .at(3)
+      .text();
     expect(questionText).to.equal('Predict and Run');
   });
 
@@ -136,7 +146,12 @@ describe('TextResponsesTable', () => {
       <TextResponsesTable responses={imageResponses} sectionId={sectionId} />
     );
 
-    const questionText = wrapper.find('tbody tr').first().find('td').at(3).text();
+    const questionText = wrapper
+      .find('tbody tr')
+      .first()
+      .find('td')
+      .at(3)
+      .text();
     expect(questionText).to.not.contain('![');
     expect(questionText).to.not.contain('<img');
     expect(questionText).to.not.contain('.png');
