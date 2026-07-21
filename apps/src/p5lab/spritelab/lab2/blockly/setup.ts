@@ -146,10 +146,13 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 ]);
 
 // Lab-injected toolbox categories, inserted in this order at the top of every
-// level's toolbox. Each lists its lineup in display order. Entries already in
-// the toolbox elsewhere are cloned (keeping their curated shadows/defaults);
-// otherwise a bare block is created with its field defaults. A category a
-// level already curates itself is left alone (per-type dedupe).
+// level's toolbox. Each lists its default lineup in display order. Entries
+// already in the toolbox elsewhere are cloned (keeping their curated
+// shadows/defaults); otherwise a bare block is created with its field
+// defaults. The levelbuilder owns whatever they author: a category with this
+// name in the level's toolbox is used as written, and an EMPTY one suppresses
+// the category entirely — the default lineup only appears when the level
+// doesn't mention the category at all.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
     // The platformer composites plus the core event blocks.
@@ -193,8 +196,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
  * composites, and build the injected categories (Platform, Story, ...) at the
  * top of the toolbox (toolbox categories reference block types, so a block
  * can appear in any number of them). The composites are lab-owned blocks
- * (extraSharedBlocks), so DB-authored toolboxes don't know them; per-type
- * dedupe leaves alone whatever a level curates itself.
+ * (extraSharedBlocks), so DB-authored toolboxes don't know them. See
+ * INJECTED_CATEGORIES for how a level opts out of the defaults.
  */
 export function ensureInjectedCategories(toolboxXml: string): string {
   try {
@@ -241,21 +244,22 @@ export function ensureInjectedCategories(toolboxXml: string): string {
       }
     });
 
-    // The injected categories, in list order, at the top of the toolbox.
+    // The injected categories, in list order, at the top of the toolbox. A
+    // category the level authors itself is used as written; an empty authored
+    // one suppresses the category (see INJECTED_CATEGORIES).
     const firstCategory = categories[0];
     INJECTED_CATEGORIES.forEach(({name, types}) => {
-      let category = categories.find(c => c.getAttribute('name') === name);
-      if (!category) {
-        category = doc.createElementNS(sprites.namespaceURI, 'category');
-        category.setAttribute('name', name);
-        firstCategory.parentNode?.insertBefore(category, firstCategory);
-      }
-      const present = presentIn(category);
-      types.forEach(type => {
-        if (!present.has(type)) {
-          category.appendChild(cloneOrMakeBlock(type));
+      const authored = categories.find(c => c.getAttribute('name') === name);
+      if (authored) {
+        if (presentIn(authored).size === 0) {
+          authored.remove();
         }
-      });
+        return;
+      }
+      const category = doc.createElementNS(sprites.namespaceURI, 'category');
+      category.setAttribute('name', name);
+      firstCategory.parentNode?.insertBefore(category, firstCategory);
+      types.forEach(type => category.appendChild(cloneOrMakeBlock(type)));
     });
 
     return new XMLSerializer().serializeToString(doc);
