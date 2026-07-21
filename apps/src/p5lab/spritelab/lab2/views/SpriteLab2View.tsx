@@ -36,7 +36,6 @@ import {
   refreshAnimationDropdownThumbnails,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
-import {SCENES_UI_VARIANT} from '../experiments';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
@@ -214,9 +213,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
   useEffect(() => {
-    if (SCENES_UI_VARIANT) {
-      dispatch(setScenes(sceneMetadata));
-    }
+    dispatch(setScenes(sceneMetadata));
   }, [sceneMetadata, dispatch]);
 
   // Cleanup on level switch.
@@ -242,10 +239,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         true /* isSpriteLab */
       )
     );
-    if (!SCENES_UI_VARIANT) {
-      setAnimationsSeeded(true);
-      return;
-    }
     // Workspace injection only waits on the section-scenes fetch when saved
     // blocks reference external scenes; the gated path times out into
     // placeholder options so a hung API can't blank the lab.
@@ -536,9 +529,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The external dropdown re-fetches the section list on every open, so
   // scenes classmates add while this lab is open show up.
   useEffect(() => {
-    if (!SCENES_UI_VARIANT) {
-      return;
-    }
     setExternalSceneRefreshHandler(async () => {
       const refs = await fetchSectionScenes(levelProperties.id);
       const options = toExternalSceneOptions(refs);
@@ -655,7 +645,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [engineReady, runProgram]);
 
-  // Scenes variant tab semantics: Play (re)starts at the chosen start scene
+  // Tab semantics: Play (re)starts at the chosen start scene
   // (or the beginning); returning to Code resumes previewing the scene being
   // edited. Skip the initial mount — the engine-ready effect handles the
   // first run.
@@ -663,7 +653,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     const prevTab = prevTabRef.current;
     prevTabRef.current = activeTab;
-    if (!SCENES_UI_VARIANT || !engineReady || prevTab === activeTab) {
+    if (!engineReady || prevTab === activeTab) {
       return;
     }
     if (activeTab === 'Play') {
@@ -685,16 +675,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Save workspace code to the active scene.
   const writeActiveSceneSource = useCallback(
     (source: WorkspaceSerialization) => {
-      if (SCENES_UI_VARIANT) {
-        updateSources(prev => ({
-          ...prev,
-          scenes: getScenes(prev).map(s =>
-            s.id === activeSceneId ? {...s, source} : s
-          ),
-        }));
-      } else {
-        updateSources(prev => ({...prev, source}));
-      }
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === activeSceneId ? {...s, source} : s
+        ),
+      }));
     },
     [updateSources, activeSceneId]
   );
@@ -838,7 +824,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={ENABLED_TABS}
         visibleTabs={ENABLED_TABS}
         codeTabExtra={
-          SCENES_UI_VARIANT && animationsSeeded ? (
+          animationsSeeded ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}

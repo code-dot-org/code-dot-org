@@ -12,7 +12,6 @@ import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 import {getStore} from '@cdo/apps/redux';
 
-import {SCENES_UI_VARIANT} from '../experiments';
 import {getTrimmedThumbnail} from '../imageTrim';
 import {setActiveTab} from '../redux/spriteLab2Redux';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
@@ -53,9 +52,7 @@ export function setupSpriteLab2BlocklyEnvironment(
   const blockInstallOptions = {skin, isK1: false, level};
   blocksCommon.install(Blockly, blockInstallOptions);
   spritelabBlocks.install(Blockly, blockInstallOptions);
-  if (SCENES_UI_VARIANT) {
-    installSceneBlocks();
-  }
+  installSceneBlocks();
   isSetup = true;
 }
 
@@ -80,12 +77,9 @@ function installSceneBlocks(): void {
 
 /**
  * Append the scene blocks to the "Game Design" category. No-op when the
- * variant is off or the category is absent.
+ * category is absent.
  */
 export function ensureSceneBlocks(toolboxXml: string): string {
-  if (!SCENES_UI_VARIANT) {
-    return toolboxXml;
-  }
   try {
     const doc = new DOMParser().parseFromString(toolboxXml, 'text/xml');
     const category = Array.from(
