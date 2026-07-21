@@ -599,6 +599,10 @@ html, body {
     position: relative;
   }
 }
+
+body.pin_bottom {
+  background-color: var(--background-neutral-secondary);
+}
 .push {
   height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
 }

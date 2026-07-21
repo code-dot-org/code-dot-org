@@ -94,6 +94,9 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyPath:focus {
       outline: none;
     }
+    .blocklySvg {
+      background-color: var(--background-neutral-secondary) !important;
+    }
     .blocklyToolbox {
       background-color: var(--background-neutral-tertiary) !important;
     }
