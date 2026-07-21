@@ -267,6 +267,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
+
+    # Later chapters keep the custom route too; this is what the client's
+    # continue-to-next-level navigation consumes.
+    assert_equal "#{CDO.studio_url}/hoc/2", Unit.hoc_2014_unit.script_levels.second.summarize[:url]
   end
 
   test 'named level summarize' do
@@ -323,6 +327,26 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, summary[:paired]
     assert_equal [], summary[:partnerNames]
     assert_equal 0, summary[:partnerCount]
+  end
+
+  test 'teacher panel summarize reads legacy contained progress for a migrated predict level' do
+    student = create(:student)
+    teacher = create(:teacher)
+    section = create(:section, teacher: teacher)
+    section.students << student
+
+    contained = create(:multi, name: 'teacher panel legacy contained')
+    level = create(:level, type: 'Javalab', name: 'teacher panel migrated predict', properties: {predict_settings: {isPredictLevel: true}})
+    level.contained_level_names = [contained.name]
+    level.save!
+    sl = create_script_level_with_ancestors({levels: [level]})
+
+    # Pre-migration progress was recorded against the contained level.
+    create(:user_level, user: student, level: contained, script_id: sl.script.id, best_result: ActivityConstants::BEST_PASS_RESULT)
+
+    summary = sl.summarize_for_teacher_panel(student, teacher)
+    assert_equal LEVEL_STATUS.perfect, summary[:status]
+    assert summary[:passed]
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
@@ -835,6 +859,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
+    create_hourofcode_unit_and_levels
     script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
     assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
 

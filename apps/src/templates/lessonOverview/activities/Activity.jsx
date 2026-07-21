@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
 import {activityShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import styles from '../lesson-plan.module.scss';
 
 export default class Activity extends Component {
   static propTypes = {
@@ -15,7 +16,7 @@ export default class Activity extends Component {
 
     return (
       <div>
-        <h2 style={styles.activityHeader} id={`activity-${activity.key}`}>
+        <h2 className={styles.activityHeader} id={`activity-${activity.key}`}>
           {activity.displayName}
           {activity.duration > 0 && (
             <span>
@@ -32,9 +33,3 @@ export default class Activity extends Component {
     );
   }
 }
-
-const styles = {
-  activityHeader: {
-    color: color.purple,
-  },
-};

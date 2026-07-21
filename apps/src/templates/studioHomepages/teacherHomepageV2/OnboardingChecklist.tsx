@@ -6,8 +6,12 @@ import React from 'react';
 import {Tour} from 'shepherd.js';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {
+  createDemoSection,
+  DemoSectionCreationError,
+} from '../../teacherDashboard/teacherSectionsRedux';
 import {
   DemoType,
   Section,
@@ -53,18 +57,20 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   isHidden,
   onHide,
 }) => {
+  const dispatch = useAppDispatch();
   const gradesTeaching = useAppSelector(
     state => state.currentUser.gradesTeaching
   );
   const createSectionTour = useCreateSectionTour(gradesTeaching);
-  const reviewSyllabusTour = useReviewSyllabusTour(demoSection);
-  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoSection);
+  const reviewSyllabusTour = useReviewSyllabusTour(demoType);
+  const learnHowToEvaluateTour = useLearnHowToEvaluateTour(demoType);
 
   const [completedTourNames, setCompletedTourNames] = React.useState<
     Set<string>
   >(new Set());
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [resetFailed, setResetFailed] = React.useState(false);
+  const [creationError, setCreationError] = React.useState(false);
 
   const stalenessCheck = React.useRef<Promise<boolean>>(Promise.resolve(false));
 
@@ -83,6 +89,29 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     stalenessCheck.current = confirmDemoSectionSettings(demoSectionId);
   }, [demoSectionId]);
 
+  // When there is no real demo section yet, create one before starting the
+  // tour so the tour has a real section ID to work with. A freshly created
+  // section is never stale, so we skip the staleness check in that case.
+  const ensureDemoSection = async (): Promise<boolean> => {
+    if (demoSection?.id) return true;
+    setCreationError(false);
+    try {
+      const section = await dispatch(createDemoSection(demoType));
+      if (!section?.id) {
+        setCreationError(true);
+        return false;
+      }
+      stalenessCheck.current = Promise.resolve(false);
+      return true;
+    } catch (error) {
+      if (!(error instanceof DemoSectionCreationError)) {
+        console.error('Failed to create demo section:', error);
+      }
+      setCreationError(true);
+      return false;
+    }
+  };
+
   const startTourOrBlock = async (tour: Tour | null) => {
     if (await stalenessCheck.current) {
       setPendingTour(tour);
@@ -91,7 +120,8 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
     }
   };
 
-  const handleButtonClick = (tourName: string) => {
+  const handleButtonClick = async (tourName: string) => {
+    if (!(await ensureDemoSection())) return;
     recordTourStart(tourName, demoType);
     if (tourName === 'create_class_section') {
       createSectionTour?.start();
@@ -129,6 +159,10 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
       });
   };
 
+  const allToursCompleted = CHECKLIST_ITEMS.every(({id}) =>
+    completedTourNames.has(id)
+  );
+
   if (isHidden) {
     return null;
   }
@@ -154,46 +188,97 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
           onClose={() => setResetFailed(false)}
         />
       </Snackbar>
-      <div className={styles.onboardingChecklistOuter}>
+      <Snackbar
+        open={creationError}
+        autoHideDuration={6000}
+        onClose={() => setCreationError(false)}
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+      >
+        <Alert
+          type="danger"
+          size="m"
+          text="Couldn't create your practice section. Please try again."
+          onClose={() => setCreationError(false)}
+        />
+      </Snackbar>
+      <div
+        className={`${styles.onboardingChecklistOuter}${
+          allToursCompleted
+            ? ` ${styles.onboardingChecklistOuterCelebration}`
+            : ''
+        }`}
+      >
         <div className={styles.onboardingChecklistInner}>
           <div className={styles.onboardingChecklistInnerContent}>
-            <Typography variant="h4">
-              <span className={styles.gradientIcon}>
-                <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
-              </span>
-              Where should we start?
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-              Teaching Assistant can help you get started with CodeAI
-            </Typography>
-            <div className={styles.onboardingChecklistButtons}>
-              {CHECKLIST_ITEMS.map(({id, label}) => (
-                <MuiButton
-                  key={id}
-                  variant="outlined"
-                  color="secondary"
-                  className={styles.onboardingChecklistButton}
-                  onClick={() => handleButtonClick(id)}
-                  type="button"
-                  size="small"
+            {allToursCompleted ? (
+              <div className={styles.onboardingChecklistCelebration}>
+                <span
+                  aria-hidden="true"
+                  className={styles.onboardingCelebrationEmoji}
                 >
-                  {completedTourNames.has(id) && (
-                    <span className={styles.onboardingChecklistCheckIcon}>
-                      <FontAwesomeV6Icon
-                        iconName="circle-check"
-                        iconStyle="solid"
-                      />
-                    </span>
-                  )}
-                  {label}
+                  🎉
+                </span>
+                <Typography variant="h4" gutterBottom>
+                  You're all set!
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  You've explored some of the teacher tools available with
+                  CodeAI. As you continue to use CodeAI, your Teaching Assistant
+                  is always available to answer questions, modify course
+                  materials, provide professional learning and more.
+                </Typography>
+                <MuiButton
+                  type="button"
+                  variant="outlined"
+                  color="tertiary"
+                  onClick={onHide}
+                >
+                  Complete onboarding
                 </MuiButton>
-              ))}
-            </div>
+              </div>
+            ) : (
+              <>
+                <Typography variant="h4">
+                  <span className={styles.gradientIcon}>
+                    <FontAwesomeV6Icon iconName="sparkle" iconStyle="solid" />
+                  </span>
+                  Where should we start?
+                </Typography>
+                <Typography variant="body2" gutterBottom>
+                  Teaching Assistant can help you get started with CodeAI
+                </Typography>
+                <div className={styles.onboardingChecklistButtons}>
+                  {CHECKLIST_ITEMS.map(({id, label}) => (
+                    <MuiButton
+                      key={id}
+                      variant="outlined"
+                      color="secondary"
+                      className={styles.onboardingChecklistButton}
+                      onClick={() => handleButtonClick(id)}
+                      type="button"
+                      size="small"
+                    >
+                      {completedTourNames.has(id) && (
+                        <span className={styles.onboardingChecklistCheckIcon}>
+                          <FontAwesomeV6Icon
+                            iconName="circle-check"
+                            iconStyle="solid"
+                          />
+                        </span>
+                      )}
+                      {label}
+                    </MuiButton>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
-        <MuiButton type="button" onClick={onHide} color="tertiary">
-          Hide onboarding
-        </MuiButton>
+        {!allToursCompleted && (
+          <MuiButton type="button" onClick={onHide} color="tertiary">
+            Hide onboarding
+          </MuiButton>
+        )}
       </div>
     </>
   );

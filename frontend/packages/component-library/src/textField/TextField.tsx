@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ChangeEvent, InputHTMLAttributes, useId} from 'react';
+import {ChangeEvent, forwardRef, InputHTMLAttributes, useId} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -62,77 +62,87 @@ export interface TextFieldProps
  *
  * Design System: TextField Component.
  * Used to render a text field.
+ *
+ * Forwards `ref` to the underlying `<input>` so callers can focus/select it.
  */
-const TextField: React.FunctionComponent<TextFieldProps> = ({
-  id,
-  inputType = 'text',
-  label,
-  onChange,
-  name,
-  value,
-  placeholder,
-  disabled = false,
-  readOnly = false,
-  helperMessage,
-  helperIcon,
-  errorMessage,
-  className,
-  maxLength,
-  minLength,
-  autoComplete,
-  color = 'black',
-  size = 'm',
-  ['aria-describedby']: describedBy,
-  ['aria-invalid']: ariaInvalid,
-  ...HTMLAttributes
-}) => {
-  const errorId = useId();
-  // When there's an error, mark the input invalid and point its
-  // aria-describedby at the rendered message (merged with any the caller
-  // passed), so a screen reader reads the error on reaching the field.
-  const describedByIds =
-    [errorMessage ? errorId : undefined, describedBy]
-      .filter(Boolean)
-      .join(' ') || undefined;
+const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
+  (
+    {
+      id,
+      inputType = 'text',
+      label,
+      onChange,
+      name,
+      value,
+      placeholder,
+      disabled = false,
+      readOnly = false,
+      helperMessage,
+      helperIcon,
+      errorMessage,
+      className,
+      maxLength,
+      minLength,
+      autoComplete,
+      color = 'black',
+      size = 'm',
+      ['aria-describedby']: describedBy,
+      ['aria-invalid']: ariaInvalid,
+      ...HTMLAttributes
+    },
+    ref,
+  ) => {
+    const errorId = useId();
+    // When there's an error, mark the input invalid and point its
+    // aria-describedby at the rendered message (merged with any the caller
+    // passed), so a screen reader reads the error on reaching the field.
+    const describedByIds =
+      [errorMessage ? errorId : undefined, describedBy]
+        .filter(Boolean)
+        .join(' ') || undefined;
 
-  return (
-    <FormFieldWrapper
-      color={color}
-      size={size}
-      label={label}
-      helperMessage={helperMessage}
-      helperIcon={helperIcon}
-      errorMessage={errorMessage}
-      errorMessageId={errorMessage ? errorId : undefined}
-      className={classNames(
-        moduleStyles.textField,
-        moduleStyles[`textField-color-${color}`],
-        moduleStyles[`textField-size-${size}`],
-        className,
-      )}
-    >
-      <input
-        id={id}
-        type={inputType}
-        name={name}
-        value={value}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        disabled={disabled}
-        maxLength={maxLength}
-        minLength={minLength}
-        autoComplete={autoComplete}
-        onChange={onChange}
-        className={classNames({
-          [moduleStyles.hasError]: errorMessage,
-        })}
-        {...HTMLAttributes}
-        aria-invalid={errorMessage ? true : ariaInvalid}
-        aria-describedby={describedByIds}
-        aria-disabled={disabled || HTMLAttributes['aria-disabled']}
-      />
-    </FormFieldWrapper>
-  );
-};
+    return (
+      <FormFieldWrapper
+        color={color}
+        size={size}
+        label={label}
+        helperMessage={helperMessage}
+        helperIcon={helperIcon}
+        errorMessage={errorMessage}
+        errorMessageId={errorMessage ? errorId : undefined}
+        className={classNames(
+          moduleStyles.textField,
+          moduleStyles[`textField-color-${color}`],
+          moduleStyles[`textField-size-${size}`],
+          className,
+        )}
+      >
+        <input
+          ref={ref}
+          id={id}
+          type={inputType}
+          name={name}
+          value={value}
+          placeholder={placeholder}
+          readOnly={readOnly}
+          disabled={disabled}
+          maxLength={maxLength}
+          minLength={minLength}
+          autoComplete={autoComplete}
+          onChange={onChange}
+          className={classNames({
+            [moduleStyles.hasError]: errorMessage,
+          })}
+          {...HTMLAttributes}
+          aria-invalid={errorMessage ? true : ariaInvalid}
+          aria-describedby={describedByIds}
+          aria-disabled={disabled || HTMLAttributes['aria-disabled']}
+        />
+      </FormFieldWrapper>
+    );
+  },
+);
+
+TextField.displayName = 'TextField';
 
 export default TextField;

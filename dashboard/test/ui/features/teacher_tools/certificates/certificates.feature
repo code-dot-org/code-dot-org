@@ -3,6 +3,7 @@ Feature: Certificate page features
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
+  @contentful_key
   Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)

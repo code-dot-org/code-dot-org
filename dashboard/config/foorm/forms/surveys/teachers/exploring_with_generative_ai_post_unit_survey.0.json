@@ -1,5 +1,5 @@
 {
-  "title": "Code.org Teacher Survey - {unit_variable_name}",
+  "title": "CodeAI Teacher Survey - {unit_variable_name}",
   "logoPosition": "right",
   "pages": [
     {
@@ -50,17 +50,17 @@
         {
           "type": "html",
           "name": "intro_text",
-          "html": "<h1>Welcome to Code.org's Exploring with Generative AI \n<p><h2>{unit_variable_name}</h2><h3>Post-Unit Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's {unit_variable_name}.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+          "html": "<h1>Welcome to CodeAI's Exploring with Generative AI \n<p><h2>{unit_variable_name}</h2><h3>Post-Unit Teacher Survey\n\n<p><strong>CodeAI relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with CodeAI's {unit_variable_name}.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by CodeAI to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         },
         {
           "type": "html",
           "name": "curriculum_perceptions",
-          "html": "<h2>Your Perceptions About Code.org's {unit_variable_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of the Exploring Generative AI curriculum.</span></p>"
+          "html": "<h2>Your Perceptions About CodeAI's {unit_variable_name}</h1>\n<p><span style='font-size: 12pt;'>Please share with us your thoughts about the design and content of the Exploring Generative AI curriculum.</span></p>"
         },
         {
           "type": "checkbox",
           "name": "previous_units",
-          "title": "Have you taught other Code.org Generative AI units already?",
+          "title": "Have you taught other CodeAI Generative AI units already?",
           "description": "(Select all that apply)",
           "choices": [
             {
@@ -75,7 +75,7 @@
             },
             {
               "value": "none",
-              "text": "Not yet, this is the first Code.org Generative AI unit I've taught"
+              "text": "Not yet, this is the first CodeAI Generative AI unit I've taught"
             }
           ]
         },
@@ -410,7 +410,7 @@
         {
           "type": "html",
           "name": "thank_you",
-          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from CodeAI for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
         }
       ]
     }

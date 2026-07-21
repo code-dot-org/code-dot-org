@@ -38,3 +38,16 @@ export function labLevelUrl({
   const path = `/courses/${course}/units/${unit}/lessons/${lesson}/levels/${level}${langSegment}`;
   return queryString ? `${path}?${queryString}` : path;
 }
+
+export interface UnitOverviewUrlParams {
+  course?: string;
+  unit?: number;
+}
+
+/** Build a relative URL for a unit overview page. */
+export function unitOverviewUrl({
+  course = 'allthethingscourse',
+  unit = 1,
+}: UnitOverviewUrlParams = {}): string {
+  return `/courses/${course}/units/${unit}`;
+}

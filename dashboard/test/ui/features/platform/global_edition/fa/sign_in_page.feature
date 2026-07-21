@@ -1,4 +1,5 @@
 @chrome
+@playwright
 Feature: Global Edition - Farsi MVP - Sign In page
 
   Background:

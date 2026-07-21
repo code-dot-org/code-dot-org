@@ -1,0 +1,30 @@
+{
+  "completedHtml": "Thank you for your response.",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "confident_to_teach_jit_pl",
+          "title": "How confident do you feel using CodeAI to teach in your classroom?",
+          "isRequired": true,
+          "requiredErrorText": "Please select a value",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Confident At All",
+          "maxRateDescription": "Very Confident"
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "description": "(Optional)",
+          "visibleIf": "{confident_to_teach_jit_pl} notempty",
+          "title": "Is there anything else you would like to share about your experience exploring CodeAI teacher tools with the CodeAI team? Your constructive feedback is essential for us to improve, and we appreciate you sharing it with us.",
+          "rows": 3
+        }
+      ]
+    }
+  ],
+  "published": true
+}

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-08 20:23:51 UTC",
+    "serialized_at": "2026-07-13 16:21:14 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -657,6 +657,28 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-designthinkging-user-perception"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-designthinkging-user-perception"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-aif-2-U4-rendering-w-fallbacks-weblab"
         ],
@@ -677,8 +699,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -702,8 +724,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -724,8 +746,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -746,8 +768,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -768,8 +790,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -793,8 +815,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -815,8 +837,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -840,8 +862,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -865,8 +887,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 31,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -890,8 +912,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 32,
+      "chapter": 33,
+      "position": 33,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -912,8 +934,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 33,
+      "chapter": 34,
+      "position": 34,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -934,8 +956,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 34,
+      "chapter": 35,
+      "position": 35,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -956,8 +978,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 35,
+      "chapter": 36,
+      "position": 36,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -978,8 +1000,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 36,
+      "chapter": 37,
+      "position": 37,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1003,8 +1025,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 37,
+      "chapter": 38,
+      "position": 38,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1274,6 +1296,18 @@
         "level.key": "pl-aif-2-U4-display-obj-cards",
         "script_level.level_keys": [
           "pl-aif-2-U4-display-obj-cards"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-4",
+        "activity_section.key": "128ee1dc-8c18-4436-93b0-3da6ea402475"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-designthinkging-user-perception",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-designthinkging-user-perception"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

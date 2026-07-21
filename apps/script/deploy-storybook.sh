@@ -36,6 +36,13 @@ echo "Copying static files"
 mkdir -p $DIR_TO_DEPLOY/js
 cp -R build/package/css $DIR_TO_DEPLOY
 cp -R build/package/js/en_us $DIR_TO_DEPLOY/js
+cp -RL fonts $DIR_TO_DEPLOY
+
+# GitHub Pages serves Storybook under `/cdo-styleguide/*`,
+# but Dashboard's compiled CSS references fonts using root-relative `/fonts/*` URLs.
+# Rewrite them as `../fonts/` so they resolve within the deployed Storybook site.
+echo "Fixing font URLs for GitHub Pages"
+sed -i -E "s#url\\(([\"']?)/fonts/#url(\\1../fonts/#g" "$DIR_TO_DEPLOY/css/application.css"
 
 echo "Pushing to github... cloning gh-pages branch"
 # Clone the gh-pages branch to /tmp/pages

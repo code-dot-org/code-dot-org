@@ -4,10 +4,10 @@ description ''
 question '#### In the following examples, identify which option correctly defines a function for the painter to turn right '
 height'200'
 
-wrong '![](https://images.code.org/b03c44dfc0415554771e2d9a0af9e7ec-image-1741367712750.png)' 
-wrong '![](https://images.code.org/2ad023d82e02f96faf142deb4d1eff65-image-1743531295580.png)'
-wrong '![](https://images.code.org/296a16ee9f7567389edb1a1a276aaa33-image-1741367136048.png)'
-right 'https://images.code.org/56b9f8d346e9508128573385ca208559-image-1741367476173.png'
+wrong '![](https://images.code.org/ec08ed532bb06832510a6cccffd4bb92-image-1784158994785.42.49 PM.png)' 
+wrong '![](https://images.code.org/d5ec19d31f86a4401f169d6e396f19c3-image-1784158994772.42.21 PM.png)'
+wrong '![](https://images.code.org/b1fc5d6373768d934a185a0d24122b55-image-1784158994756.41.54 PM.png)'
+right '![](https://images.code.org/afc73d6ddc98d0fb2deec61cd295c634-image-1784158757022.38.38 PM.png)'
 allow_multiple_attempts true
 
 

@@ -4,6 +4,7 @@ import Shepherd, {
   type Tour,
 } from 'shepherd.js';
 
+import {registerActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {navigateToHref} from '@cdo/apps/utils';
 
 // Scrolls the element to the center of the viewport only if it is not already
@@ -195,5 +196,6 @@ export const createTourWithSteps = (
     },
   });
   tour.addSteps(getSteps(tour));
+  registerActiveTour(tour);
   return tour;
 };

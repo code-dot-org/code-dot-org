@@ -4,6 +4,7 @@ import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
@@ -142,9 +143,16 @@ function ShapeNode({
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
+  }, [
+    data.fontColor,
+    data.fontSize,
+    data.fontFamily,
+    data.textAlign,
+    isEditing,
+  ]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
@@ -181,7 +189,7 @@ function ShapeNode({
           />
         )}
 
-        {/* Text label: click or enter to start editing */}
+        {/* Text label: double-click or Enter to start editing */}
         <div
           ref={labelRef}
           className={classNames(

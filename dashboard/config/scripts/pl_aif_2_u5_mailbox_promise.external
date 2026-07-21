@@ -36,8 +36,8 @@ You walk to the mailbox to check it.
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px; border-bottom:1px solid #f0f2f5;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#dccbea; font-size: 14pt;">
+          <td style="padding:10px; border-bottom:1px solid #d5efff;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:5px; background:#d5efff; font-size: 14pt;">
               <strong>Pending</strong>
             </span>
           </td>
@@ -47,7 +47,7 @@ You walk to the mailbox to check it.
         </tr>
         <tr>
           <td style="padding:10px; border-bottom:1px solid #f0f2f5;font-size: 14pt;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#b2dee3; font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:5px; background:#ccf1d0; font-size: 14pt;">
               <strong>Fulfilled</strong>
             </span>
           </td>
@@ -57,7 +57,7 @@ You walk to the mailbox to check it.
         </tr>
         <tr>
           <td style="padding:10px;">
-            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f7bfbf; font-size: 14pt;">
+            <span style="display:inline-block; padding:4px 10px; border-radius:5px; background:#ffe3ce; font-size: 14pt;">
               <strong>Rejected</strong>
             </span>
           </td>
@@ -99,15 +99,15 @@ You walk to the mailbox to check it.
 <p style = "font-size: 12pt;">These same three words — <strong>pending</strong>, <strong>fulfilled</strong>, and <strong>rejected</strong> — are exactly how JavaScript describes the status of a <strong>Promise</strong>.</p>
 
 <div style="display:grid; gap:10px; margin:12px 0; max-width:760px;">
-  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 12pt;">
+  <div style="border:0px solid #e5e7eb; border-radius:12px; padding:12px; background:#d5efff;font-size: 12pt;">
     <div><strong>Pending</strong></div>
     <div style="margin-top:4px;font-size: 12pt;">The request is still in progress (you’re still waiting).</div>
   </div>
-  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 12pt;">
+  <div style="border:0px solid #e5e7eb; border-radius:12px; padding:12px; background:#ccf1d0;font-size: 12pt;">
     <div><strong>Fulfilled</strong></div>
     <div style="margin-top:4px;font-size: 12pt;">The request succeeded — your code received the data.</div>
   </div>
-  <div style="border:1px solid #e5e7eb; border-radius:12px; padding:12px; background:#ffffff;font-size: 12pt;">
+  <div style="border:0px solid #ffe3ce; border-radius:12px; padding:12px; background:#ffe3ce;font-size: 12pt;">
     <div><strong>Rejected</strong></div>
     <div style="margin-top:4px;font-size: 12pt;">Something went wrong — the request failed (error).</div>
   </div>
