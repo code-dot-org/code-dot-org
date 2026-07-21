@@ -17,7 +17,7 @@ $noto-sans-fonts: 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto S
 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math';
 
 $main-font: $geist-font, $noto-sans-fonts, sans-serif;
-$heading-font: $space-grotesk-font, $noto-sans-fonts, sans-serif;
+$heading-font: $space-grotesk-font, $main-font;
 
 $thin-font-weight: 100;
 $extra-light-font-weight: 200;
