@@ -1,3 +1,4 @@
+import {Button} from '@mui/material';
 import React from 'react';
 
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
@@ -24,22 +25,22 @@ export default class BubbleChoice extends React.Component {
     return (
       <div>
         {backButtonUrl && (
-          <button
-            type="button"
+          <Button
+            variant="text"
+            color="primary"
             onClick={() => this.goToUrl(backButtonUrl)}
-            className={styles.btn}
           >
             {i18n.back()}
-          </button>
+          </Button>
         )}
         {finishButtonUrl && (
-          <button
-            type="button"
+          <Button
+            variant="contained"
+            color="primary"
             onClick={() => this.goToUrl(finishButtonUrl)}
-            className={`${styles.btn} ${styles.btnOrange}`}
           >
             {i18n.finish()}
-          </button>
+          </Button>
         )}
       </div>
     );
