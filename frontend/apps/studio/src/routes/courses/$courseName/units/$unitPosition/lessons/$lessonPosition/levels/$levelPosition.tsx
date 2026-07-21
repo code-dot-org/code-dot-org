@@ -7,7 +7,7 @@ import {
   coursesKeys,
   levelsKeys,
 } from '@code-dot-org/core/api';
-import {Lab} from '@code-dot-org/lab/host';
+import {LabHost} from '@code-dot-org/lab/host';
 
 import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
@@ -113,7 +113,7 @@ export const Route = createFileRoute(
       resolved.properties.appName,
     );
 
-    return {resolved, LabEntrypoint};
+    return {resolved, LabEntrypoint, scriptName, lessonPosition};
   },
   // The lab is full-bleed and fills the viewport itself (FullHeightLabFrame);
   // suppress the global StudioFooter so it doesn't sit below the fold.

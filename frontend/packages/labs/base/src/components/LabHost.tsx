@@ -107,14 +107,18 @@ function LabHostContent(props: LabHostProps) {
   // lesson by scriptName/lessonPosition). `throwOnError` routes fetch failures
   // to the surrounding LabErrorBoundary instead of leaving `isLoading` true.
   // (The `!== undefined` checks stay inline so TS narrows `props` per branch.)
+  // Mirror getLevelPropertiesUrl's own scoping: a unit level with both
+  // scriptName and lessonPosition is fetched lesson-wide (`/s/.../lessons/...`),
+  // and levelId only indexes into the result — so it must NOT go in the params,
+  // or it pollutes the react-query key and misses the lesson-shared cache a
+  // course-level route loader populated. Fall back to keying by levelId only
+  // when the lesson coordinates are absent.
   const params: LevelPropertiesRequestParams =
     props.standaloneProjectType !== undefined
       ? {standaloneProjectType: props.standaloneProjectType}
-      : {
-          levelId: props.levelId,
-          scriptName: props.scriptName,
-          lessonPosition: props.lessonPosition,
-        };
+      : props.scriptName !== undefined && props.lessonPosition !== undefined
+        ? {scriptName: props.scriptName, lessonPosition: props.lessonPosition}
+        : {levelId: props.levelId};
   const {data: levelPropertiesMap} = useLevelProperties(api, params, {
     throwOnError: true,
   });
