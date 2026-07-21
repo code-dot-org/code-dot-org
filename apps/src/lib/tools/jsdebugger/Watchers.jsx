@@ -33,7 +33,7 @@ const OPTIONS_GAMELAB = [
 ];
 
 const buttonSize = '28px';
-const valueAndInputWidth = 'calc(100% - 41px)';
+const valueAndInputWidth = 'calc(100% - 33px)';
 
 /**
  * A "watchers" window for our debugger.
