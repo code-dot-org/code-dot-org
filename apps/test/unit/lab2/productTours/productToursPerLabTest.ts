@@ -4,7 +4,6 @@ import {
   ProductTour,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import experiments from '@cdo/apps/util/experiments';
 
 const makeLevelProperties = (
   appName: string,
@@ -12,25 +11,12 @@ const makeLevelProperties = (
 ): LevelProperties =>
   ({appName, id: 0, name: 'test', ...overrides} as LevelProperties);
 
-// Sketch Lab tours are gated on the EXCALIDRAW experiment. Default to
-// enabled so the non-gating tests can focus on tour-selection logic;
-// individual tests below override this to verify the gating itself.
-beforeEach(() => {
-  jest
-    .spyOn(experiments, 'isEnabledAllowingQueryString')
-    .mockImplementation(key => key === experiments.EXCALIDRAW);
-});
-
-afterEach(() => {
-  jest.restoreAllMocks();
-});
-
 describe('isTourEnabledOnLevel', () => {
   describe('when the tour is not available for the lab', () => {
     it('returns false for a tour not in the lab list', () => {
       expect(
         isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
+          ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('pythonlab')
         )
       ).toBe(false);
@@ -50,7 +36,7 @@ describe('isTourEnabledOnLevel', () => {
     it('returns true when the tour is available for the lab, regardless of productTours', () => {
       expect(
         isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
+          ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('sketchlab')
         )
       ).toBe(true);
@@ -59,7 +45,7 @@ describe('isTourEnabledOnLevel', () => {
     it('returns true even when productTours is an empty array', () => {
       expect(
         isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
+          ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('sketchlab', {productTours: []})
         )
       ).toBe(true);
@@ -68,7 +54,7 @@ describe('isTourEnabledOnLevel', () => {
     it('returns true even when productTours does not include the tour', () => {
       expect(
         isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
+          ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('sketchlab', {productTours: ['some_other_tour']})
         )
       ).toBe(true);
@@ -132,52 +118,13 @@ describe('isTourEnabledOnLevel', () => {
   });
 
   describe('when the lab is sketchlab', () => {
-    it('returns true when the EXCALIDRAW experiment is enabled', () => {
-      jest
-        .spyOn(experiments, 'isEnabledAllowingQueryString')
-        .mockImplementation(key => key === experiments.EXCALIDRAW);
-      expect(
-        isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
-          makeLevelProperties('sketchlab')
-        )
-      ).toBe(true);
-    });
-
-    it('returns false when the EXCALIDRAW experiment is not enabled', () => {
-      jest
-        .spyOn(experiments, 'isEnabledAllowingQueryString')
-        .mockReturnValue(false);
-      expect(
-        isTourEnabledOnLevel(
-          ProductTour.SketchlabIntro,
-          makeLevelProperties('sketchlab')
-        )
-      ).toBe(false);
-    });
-
-    it('enables the React Flow tour only when EXCALIDRAW is disabled', () => {
-      jest
-        .spyOn(experiments, 'isEnabledAllowingQueryString')
-        .mockReturnValue(false);
+    it('enables the React Flow tour', () => {
       expect(
         isTourEnabledOnLevel(
           ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('sketchlab')
         )
       ).toBe(true);
-    });
-
-    it('disables the React Flow tour when EXCALIDRAW is enabled', () => {
-      jest
-        .spyOn(experiments, 'isEnabledAllowingQueryString')
-        .mockImplementation(key => key === experiments.EXCALIDRAW);
-      expect(
-        isTourEnabledOnLevel(
-          ProductTour.SketchlabIntroReactFlow,
-          makeLevelProperties('sketchlab')
-        )
-      ).toBe(false);
     });
   });
 
@@ -224,7 +171,7 @@ describe('isTourAvailableOnLevel', () => {
     it('returns false for a tour absent from the lab list', () => {
       expect(
         isTourAvailableOnLevel(
-          ProductTour.SketchlabIntro,
+          ProductTour.SketchlabIntroReactFlow,
           makeLevelProperties('pythonlab')
         )
       ).toBe(false);

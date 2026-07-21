@@ -1178,6 +1178,7 @@ StudioApp.prototype.toggleRunReset = function (button) {
   });
 
   document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
+    reset.classList.toggle('hide', showRun);
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
   });
@@ -1667,7 +1668,9 @@ StudioApp.prototype.resizeToolboxHeader = function () {
   } else if (this.isUsingBlockly()) {
     toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('toolbox-header').style.width = `${
+    toolboxWidth + 1
+  }px`;
 };
 
 /**
