@@ -119,7 +119,7 @@ export default function CertificateBatch({
             className={'batch-certificate-form'}
           >
             <RailsAuthenticityToken />
-            <input name="courseName" value={courseName} type="hidden" />
+            <input name="courseName" value={courseName || ''} type="hidden" />
             <textarea
               cols="40"
               name="studentNames"

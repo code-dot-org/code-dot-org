@@ -1906,7 +1906,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/fonts@workspace:packages/fonts"
   dependencies:
-    "@fontsource-variable/figtree": "npm:^5.1.2"
+    "@fontsource-variable/geist": "npm:^5.3.0"
     "@fontsource-variable/noto-sans": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-arabic": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-armenian": "npm:^5.1.1"
@@ -1926,6 +1926,7 @@ __metadata:
     "@fontsource-variable/noto-sans-thaana": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-thai": "npm:^5.1.1"
     "@fontsource/barlow-semi-condensed": "npm:^5.1.1"
+    "@fontsource/geist": "npm:^5.3.0"
     "@fontsource/noto-sans-jp": "npm:^5.1.1"
     "@fontsource/noto-sans-kr": "npm:^5.1.1"
     "@fontsource/noto-sans-math": "npm:^5.1.1"
@@ -3488,10 +3489,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource-variable/figtree@npm:^5.1.2":
-  version: 5.1.2
-  resolution: "@fontsource-variable/figtree@npm:5.1.2"
-  checksum: 10c0/c0a4d0d0e9a46ad0ff3b48ec63804ffe712383d384e422e35de6ab9bb213b490e2772d04cca652413336d438a17a30f310e11a962302b5b075019599653e3687
+"@fontsource-variable/geist@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/geist@npm:5.3.0"
+  checksum: 10c0/6b1d1d249643377c885d040769bf0964f242e8d03c4470535329ad4eed3d30a8134fea0d45c0b99b8069924a1f506a3bcb5b8d9cea77b7b5234dc7dd57371842
   languageName: node
   linkType: hard
 
@@ -3625,6 +3626,13 @@ __metadata:
   version: 5.1.1
   resolution: "@fontsource/barlow-semi-condensed@npm:5.1.1"
   checksum: 10c0/2f3eacbb1b220f65d35387136f90c7848f355695a240307bf6d07634de4128ad76d4d05a230a647640141ce16f6fd9ab6292fc27f2d6220b7a1b2bd79a555b4e
+  languageName: node
+  linkType: hard
+
+"@fontsource/geist@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/geist@npm:5.3.0"
+  checksum: 10c0/e30cc521d63978e4004b0f6dc403282bcbf5cc9a9fea90fa0a97ca55e3454fb57a1e469963837700667bd128cb8fe1f62f61afc9a48e6c6c24ef28aa551e63bd
   languageName: node
   linkType: hard
 

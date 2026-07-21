@@ -7,7 +7,6 @@ import msg from '@cdo/locale';
 import {ApplabInterfaceMode} from '../../applab/constants';
 import Dialog from '../../legacySharedComponents/Dialog';
 import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
-import color from '../../util/color';
 import {DataView} from '../constants';
 import {clearWarning} from '../redux/data';
 
@@ -90,17 +89,17 @@ const styles = {
     left: 0,
     right: 0,
     padding: 0,
-    backgroundColor: color.white,
+    backgroundColor: 'var(--background-neutral-primary)',
     boxSizing: 'border-box',
-    borderLeft: '1px solid gray',
-    borderRight: '1px solid gray',
-    borderBottom: '1px solid gray',
+    borderLeft: '1px solid var(--borders-neutral-strong)',
+    borderRight: '1px solid var(--borders-neutral-strong)',
+    borderBottom: '1px solid var(--borders-neutral-strong)',
     overflowY: 'auto',
   },
   libraryHeader: {
     display: 'block',
     width: 271,
-    borderRight: '1px solid gray',
+    borderRight: '1px solid var(--borders-neutral-strong)',
     float: 'left',
   },
 };

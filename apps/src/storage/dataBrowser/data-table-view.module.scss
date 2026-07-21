@@ -1,5 +1,3 @@
-@import "color.scss";
-
 .container {
   flex-direction: column;
   height: 99%;
@@ -26,9 +24,9 @@
 }
 
 .debugData {
-  background-color: $lightest_gray;
+  background-color: var(--background-neutral-tertiary);
   border-radius: 10px;
-  border: 1px solid $light_gray;
+  border: 1px solid var(--borders-neutral-strong);
   flex-grow: 1;
   font-family: monospace;
   overflow: scroll;

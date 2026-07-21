@@ -1,3 +1,4 @@
+@playwright
 Feature: Complete a bee level
 
 Scenario: Complete Bee Conditions 4-5 Level 3

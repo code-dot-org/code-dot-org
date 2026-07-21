@@ -7,17 +7,6 @@ import {waitUntilStable} from '../shared/stability';
 
 import {LessonLevelPage} from './lesson-level-page';
 
-declare global {
-  /** Blockly's test-only globals, exposed on window by legacy labs. */
-  interface Window {
-    Blockly?: {mainBlockSpace: {clear(): void}};
-    __TestInterface?: {
-      arrangeBlockPosition(blocksXml: string, options: object): string;
-      loadBlocks(blocksXml: string): void;
-    };
-  }
-}
-
 /** Base for legacy Blockly labs (maze, artist, flappy, ...). */
 export class LegacyBlocklyLab extends LessonLevelPage {
   /** Instructions tab; its text localizes with the lab locale. */
@@ -47,6 +36,17 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
+  /** Congratulations overlay shown on puzzle completion. */
+  readonly congratsMessage: Locator;
+
+  /**
+   * The maze/game visualization surface (#visualization, see
+   * apps/src/maze/Visualization.jsx). Sprite art (e.g. idle-animation frames)
+   * can render mid-transition when the screenshot is taken, so visual checks
+   * that don't care about the exact playfield frame should mask this.
+   */
+  readonly visualization: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -60,6 +60,8 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
+    this.congratsMessage = page.locator('.congrats');
+    this.visualization = page.locator('#visualization');
   }
 
   /**
@@ -74,9 +76,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
 
   /**
    * Navigate to an arbitrary level URL and wait for the lab. For levels whose
-   * shape labLevelUrl does not model — standalone /hoc/N paths, or course levels
-   * carrying extra query params (e.g. show_callouts). Same wait strategy as
-   * gotoLevel; prefer gotoLevel when labLevelUrl can build the URL.
+   * shape labLevelUrl does not model, e.g. course levels carrying extra query
+   * params (show_callouts). Same wait strategy as gotoLevel; prefer gotoLevel
+   * when labLevelUrl can build the URL.
    */
   async gotoLevelUrl(url: string): Promise<void> {
     await this.page.goto(url, {waitUntil: 'domcontentloaded'});
@@ -104,11 +106,29 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       timeout: LAB_LOAD_TIMEOUT_MS,
     });
     await expect(this.runButton).toBeVisible({timeout: LAB_LOAD_TIMEOUT_MS});
-    await this.header.waitForSignedIn();
-    // Dismiss the instructions overlay if shown (anonymous sessions).
+    // State-agnostic: labs boot for anonymous sessions too, so wait for the
+    // header user area in either auth state, not specifically signed-in.
+    await this.header.waitForUserChrome();
+    // Dismiss the instructions overlay if shown (anonymous sessions). Its
+    // backdrop (#overlay) fills the viewport and a plain .click() lands on
+    // the default center point, which the instructions dialog itself can
+    // cover for levels with enough instructions text — that dialog then
+    // intercepts the click instead of the backdrop underneath it (see
+    // apps/src/templates/Overlay.jsx, apps/src/templates/instructions/
+    // InstructionsCsfMiddleCol.jsx). Click the dialog's own OK button
+    // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
-      await overlay.click();
+      const dialogOk = this.page.getByRole('button', {
+        name: 'OK',
+        exact: true,
+      });
+      if (await dialogOk.isVisible()) {
+        await dialogOk.click();
+      } else {
+        await overlay.click();
+      }
+      await expect(overlay).toBeHidden();
     }
     // Let the header animation finish.
     await expect(this.page.locator('#header_middle_content')).toHaveCSS(
@@ -170,5 +190,30 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       this.footer.localeDropdown.selectOption({label}),
     ]);
     await this.waitForReady();
+  }
+
+  /**
+   * Load a Blockly workspace from a serialization object. Mirrors
+   * load_json_blocks() from blockly_initialization_blocks.rb.
+   */
+  async loadBlocks(blocksJson: object): Promise<void> {
+    await this.page.waitForFunction(() =>
+      Boolean(window.Blockly?.getMainWorkspace()),
+    );
+    await this.page.evaluate(state => {
+      const blockly = window.Blockly;
+      const workspace = blockly?.getMainWorkspace();
+      if (!blockly || !workspace) {
+        throw new Error(
+          'Blockly main workspace unavailable when loading blocks',
+        );
+      }
+      blockly.serialization.workspaces.load(state, workspace);
+    }, blocksJson);
+  }
+
+  /** Click Run to execute the current workspace program. */
+  async run(): Promise<void> {
+    await this.runButton.click();
   }
 }

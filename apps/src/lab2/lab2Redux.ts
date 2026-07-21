@@ -19,7 +19,6 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 
-import {lab2EntryPoints} from '../../lab2EntryPoints';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -121,6 +120,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelProperties: LevelProperties;
     channelId?: string;
     userId?: number;
+    managesOwnProject?: boolean;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -144,20 +144,9 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = payload.levelProperties;
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
-    if (!levelProperties.usesProjects) {
-      // If projects are disabled on this level, we can skip loading projects data.
-      setProjectAndLevelData(
-        {levelProperties},
-        thunkAPI.signal.aborted,
-        thunkAPI.dispatch,
-        thunkAPI.getState
-      );
-      return;
-    }
-
-    // If the lab loads and saves its own project (the useSources hook), skip
-    // the framework's project setup and just set the level data.
-    if (lab2EntryPoints[levelProperties.appName]?.managesOwnProject) {
+    // If projects are disabled on this level, or this lab manages loading its own project,
+    // skip loading projects data.
+    if (!levelProperties.usesProjects || payload.managesOwnProject) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,

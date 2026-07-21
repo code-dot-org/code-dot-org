@@ -1027,6 +1027,48 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
   end
 
+  # A unit can be reused in more than one unit group. Rollup resources ("All
+  # Resources" etc.) store a single URL baked to the unit's original course, so
+  # when summarized in the context of a different unit group we rewrite that URL
+  # to the viewing course and position. Otherwise the resource page breadcrumb
+  # sends teachers back to the wrong course.
+  test 'summarize rewrites rollup resource urls to the viewing unit group' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(true)
+    unit = create(:unit)
+    # The first unit group created becomes the unit's original_unit_group; its
+    # position (3) is where the rollup url is baked.
+    original_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: original_group, script: unit, position: 3)
+    reused_group = create(:unit_group)
+    reused_ugu = create(:unit_group_unit, unit_group: reused_group, script: unit, position: 1)
+    unit.reload
+
+    rollup = create(
+      :resource,
+      name: 'All Resources',
+      url: "/courses/#{original_group.name}/units/3/resources",
+      is_rollup: true
+    )
+    plain = create(:resource, name: 'Plain Handout', url: 'https://example.com/handout')
+    unit.resources = [rollup, plain]
+
+    summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: reused_ugu)
+    resources = summary[:teacher_resources]
+
+    rewritten = resources.find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{reused_group.name}/units/1/resources", rewritten[:url]
+
+    # Non-rollup resources keep their url untouched.
+    untouched = resources.find {|r| r[:name] == 'Plain Handout'}
+    assert_equal 'https://example.com/handout', untouched[:url]
+
+    # Summarized in its original context, the rollup url is unchanged.
+    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group == original_group}
+    original_summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: original_ugu)
+    original_rollup = original_summary[:teacher_resources].find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{original_group.name}/units/3/resources", original_rollup[:url]
+  end
+
   test 'summarize defaults to original unit group when no unit group unit is provided' do
     unit = create(:course_version, :with_single_unit_course).content_root.first_unit
     secondary_course = create(:single_unit_course, unit: unit)

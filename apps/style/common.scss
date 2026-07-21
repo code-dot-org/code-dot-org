@@ -651,10 +651,6 @@ button.share:focus {
 button:hover > img {
   opacity: 1;
 }
-button:active {
-  // TODO: Can we remove it?
-  border: 1px solid #888 !important;
-}
 button:hover {
   box-shadow: 2px 2px 5px $shadow;
 }
@@ -1255,28 +1251,42 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $neutral_dark;
+      color: var(--text-neutral-primary);
       margin-bottom: 10px;
+
 
       &.caption-text {
         @include main-font-semi-bold;
-      }
-
-      a {
-        @include main-font-regular;
-        color: $brand_secondary_default;
-        text-decoration: underline;
-        &:hover {
-          color: $brand_secondary_dark;
-        }
       }
     }
   }
   .generatedCode {
     font-size: 14px;
     overflow: scroll;
-    max-height: 400px;
-    margin: 12px 0;
+    max-height: 340px;
+    margin: 0;
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-primary);
+
+    // Chrome (>=v121), Edge, Firefox
+    scrollbar-color: var(--background-neutral-quinary)
+      var(--background-neutral-tertiary);
+
+    // Safari / older WebKit
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background: var(--background-neutral-tertiary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--background-neutral-quinary);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: var(--background-neutral-tertiary);
+    }
   }
 }
 

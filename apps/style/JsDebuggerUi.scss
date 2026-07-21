@@ -23,44 +23,6 @@
   }
 }
 
-#debug-buttons {
-  display: inline;
-  white-space: normal;
-}
-
-.debugger_button {
-  border: 1px solid $cyan;
-  background-color: $cyan;
-  color: #fff;
-  margin-left: 0;
-  margin-right: 3px;
-  padding: 3px 6px;
-  font-size: 14px;
-  min-width: 120px;
-
-  &:disabled {
-    cursor: not-allowed;
-    &:active {
-      // We need this !important in order to overwrite !important styles in common.scss
-      // (apps/style/common.scss, line 628)that makes disabled active button to have a black border.
-      border: none !important;
-    }
-  }
-}
-
-#continueButton {
-  border-color: $orange;
-  background-color: $orange;
-}
-
-.debugger_button:focus {
-  outline-style: none;
-}
-
-.debugger_button > img {
-  float: left;
-  opacity: 1;
-}
 
 // When opening the debug console with the ellipsis, the codeTextbox sometimes
 // renders over the debug console. Setting the z-index to 2 is a work-around for
@@ -195,24 +157,3 @@ $debug-watch-max-column-width: 200px;
   fill: #eee;
 }
 
-/* Sprited icons. */
-.pause-btn {
-  background-position: 0 -84px;
-  margin-right: 3px;
-}
-.continue-btn {
-  background-position: -21px -84px;
-  margin-right: 3px;
-}
-.step-in-btn {
-  background-position: 0 -105px;
-  margin-right: 3px;
-}
-.step-out-btn {
-  background-position: -21px -105px;
-  margin-right: 3px;
-}
-.step-over-btn {
-  background-position: 0 21px;
-  margin-right: 3px;
-}
