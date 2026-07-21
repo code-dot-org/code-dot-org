@@ -6,6 +6,7 @@ import '@xyflow/react/dist/style.css';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -30,6 +31,7 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
 import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
@@ -77,6 +79,10 @@ function ReactFlowSketchLabViewInner({
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
+
+  const hasAttempted = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
@@ -285,7 +291,7 @@ function ReactFlowSketchLabViewInner({
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
-            hasEdited={false}
+            hasEdited={hasAttempted}
             hideCollapsedTabBorder
             settings={[themeSetting]}
             versionHistoryProps={{

@@ -7,6 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "This is an allthethings sketch lab level that uses the React Flow version of start sources.",
+    "require_edit_to_continue": "true",
     "start_sources": {
       "source": {
         "nodes": [
