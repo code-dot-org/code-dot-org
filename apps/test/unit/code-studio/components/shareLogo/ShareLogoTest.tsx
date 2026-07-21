@@ -15,12 +15,12 @@ describe('ShareLogo', () => {
   });
 
   it('links to the provided home url', () => {
-    render(<ShareLogo homeUrl="/home" />);
+    render(<ShareLogo logoUrl="/home" />);
     expect(screen.getByRole('link')).toHaveAttribute('href', '/home');
   });
 
   it('labels the logo for screen readers', () => {
-    render(<ShareLogo homeUrl="/home" />);
+    render(<ShareLogo logoUrl="/home" />);
     expect(screen.getByRole('img')).toHaveAttribute('alt', 'CodeAI home');
   });
 });
