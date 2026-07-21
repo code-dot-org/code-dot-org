@@ -164,7 +164,6 @@ const Header: React.FC<HeaderProps> = ({
               color="tertiary"
               size="small"
               disabled={!previousLesson || !lessons?.length || isLessonsLoading}
-              className={styles.button}
               onClick={handlePreviousLesson}
               type="button"
               startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
@@ -176,7 +175,6 @@ const Header: React.FC<HeaderProps> = ({
               color="tertiary"
               size="small"
               disabled={!nextLesson || !lessons?.length || isLessonsLoading}
-              className={styles.button}
               onClick={handleNextLesson}
               type="button"
               endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
@@ -221,7 +219,6 @@ const Header: React.FC<HeaderProps> = ({
               color="tertiary"
               size="small"
               disabled={!previousStudent || !selectedStudents?.length}
-              className={styles.button}
               onClick={handlePreviousStudent}
               type="button"
               startIcon={<FontAwesomeV6Icon iconName="chevron-left" />}
@@ -233,7 +230,6 @@ const Header: React.FC<HeaderProps> = ({
               color="primary"
               size="small"
               disabled={!nextStudent || !selectedStudents?.length}
-              className={styles.button}
               onClick={handleNextStudent}
               type="button"
               endIcon={<FontAwesomeV6Icon iconName="chevron-right" />}
