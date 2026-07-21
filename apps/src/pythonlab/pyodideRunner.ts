@@ -20,10 +20,7 @@ import {captureThumbnailFromSvgPythonlabNeighborhood} from '@cdo/apps/util/thumb
 import {getValidationFromSource, RunType} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
-import {
-  asyncRun,
-  restartPyodideIfProgramIsRunning,
-} from './pyodideWorkerManager';
+import {asyncRun, restartPyodideIfProgramIsRunning} from './pyodideManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 const appName = 'pythonlab';
