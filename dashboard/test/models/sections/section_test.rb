@@ -1922,6 +1922,31 @@ class SectionTest < ActiveSupport::TestCase
     assert_nil entry['lesson_id']
   end
 
+  test 'compute_suggested_lesson history entry includes coming_up with next lesson id' do
+    _unit, _lesson1, lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert_equal lesson2.id, entry.dig('coming_up', 'lesson_id')
+  end
+
+  test 'compute_suggested_lesson history entry coming_up has completed_unit when current is the last numbered lesson' do
+    unit, _lesson1, _lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    # lesson2 is last; no further lesson exists
+    assert entry.dig('coming_up', 'completed_unit')
+  end
+
+  test 'compute_suggested_lesson history entry coming_up has completed_unit when unit is finished' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert entry.dig('coming_up', 'completed_unit')
+  end
+
   private def build_suggested_lesson_section
     unit = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: unit)

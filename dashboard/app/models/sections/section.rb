@@ -273,11 +273,19 @@ class Section < ApplicationRecord
                   {'lesson_id' => next_lesson.id, 'timestamp' => Time.now.utc.iso8601}
                 end
 
+    coming_up = if finished_unit
+                  {'completed_unit' => true}
+                else
+                  idx = numbered_lessons.index(next_lesson)
+                  next_next = numbered_lessons[idx + 1]
+                  next_next ? {'lesson_id' => next_next.id} : {'completed_unit' => true}
+                end
+
     today = Time.zone.today.iso8601
     cutoff = (Time.zone.today - SUGGESTED_LESSON_HISTORY_MAX_DAYS).iso8601
     history = (suggested_lesson_history || []).
       reject {|entry| entry['date'] == today || entry['date'] < cutoff}
-    history << new_value.merge('date' => today)
+    history << new_value.merge('date' => today, 'coming_up' => coming_up)
 
     update!(suggested_lesson: new_value, suggested_lesson_history: history)
   end

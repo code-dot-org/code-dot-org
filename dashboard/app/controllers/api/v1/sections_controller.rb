@@ -485,40 +485,15 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       [section, section.suggested_lesson, section.suggested_lesson_history || []]
     end
 
-    # Batch load all current and historical lessons.
-    current_and_history_ids = section_data.flat_map do |_, current, history|
-      [current&.dig('lesson_id'), *history.filter_map {|e| e['lesson_id']}]
+    # Batch load all lessons referenced by current, history, and coming_up entries.
+    all_lesson_ids = section_data.flat_map do |_, current, history|
+      [
+        current&.dig('lesson_id'),
+        *history.flat_map {|e| [e['lesson_id'], e.dig('coming_up', 'lesson_id')]}
+      ]
     end.uniq.compact
 
-    lessons_by_id = Lesson.where(id: current_and_history_ids).index_by(&:id)
-
-    # Find the "coming up" lesson for each section: the next numbered lesson in
-    # sequence after the current suggestion. Batched per unique script.
-    current_lesson_by_section = section_data.each_with_object({}) do |(section, data, _), memo|
-      memo[section.id] = lessons_by_id[data&.dig('lesson_id')]
-    end
-
-    script_numbered_lessons = current_lesson_by_section.values.filter_map(&:itself).map(&:script_id).uniq.
-      index_with do |script_id|
-        Lesson.
-          where(script_id: script_id).
-          where('has_lesson_plan = ? OR lockable = ?', true, false).
-          order(:absolute_position).
-          to_a
-      end
-
-    coming_up_by_section = current_lesson_by_section.transform_values do |lesson|
-      next nil unless lesson
-      numbered = script_numbered_lessons[lesson.script_id] || []
-      idx = numbered.index {|l| l.id == lesson.id}
-      idx && numbered[idx + 1]
-    end
-
-    # Merge coming_up lessons into the batch S3 existence check.
-    coming_up_ids = coming_up_by_section.values.filter_map {|l| l&.id}
-    new_ids = coming_up_ids - current_and_history_ids
-    Lesson.where(id: new_ids).each {|l| lessons_by_id[l.id] = l}
-    all_lesson_ids = current_and_history_ids + new_ids
+    lessons_by_id = Lesson.where(id: all_lesson_ids).index_by(&:id)
 
     bucket = AWS::S3.user_content_bucket
     podcast_exists = all_lesson_ids.each_with_object({}) do |lesson_id, memo|
@@ -536,26 +511,13 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       )
     end
 
-    enrich_lesson = lambda do |lesson|
-      return nil unless lesson
-      podcast_url = podcast_exists[lesson.id] ? "/ai_lesson_summary_podcasts/show?lesson_id=#{lesson.id}" : nil
-      {
-        'lesson_id' => lesson.id,
-        'name' => lesson.localized_title,
-        'url' => script_lesson_path(lesson.script, lesson),
-        'podcast_url' => podcast_url
-      }
-    end
-
+    today = Time.zone.today.iso8601
     result = section_data.each_with_object({}) do |(section, data, history), hash|
       next hash[section.id] = nil unless data
       enriched = enrich.call(data)
       enriched_history = history.map {|e| enrich.call(e)}
-      coming_up = if data['completed_unit']
-                    {'completed_unit' => true}
-                  else
-                    enrich_lesson.call(coming_up_by_section[section.id])
-                  end
+      raw_coming_up = history.find {|e| e['date'] == today}&.dig('coming_up')
+      coming_up = raw_coming_up ? enrich.call(raw_coming_up) : nil
       hash[section.id] = enriched.merge('history' => enriched_history, 'coming_up' => coming_up)
     end
 
