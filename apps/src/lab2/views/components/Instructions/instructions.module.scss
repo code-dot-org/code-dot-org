@@ -165,7 +165,8 @@
     &:not(h5, h6),
     em,
     strong {
-      font-family: var(--font-family-heading-semibold);
+      font-family: var(--font-family-main);
+      font-weight: var(--font-weight-semi-bold);
     }
   }
 

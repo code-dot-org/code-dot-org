@@ -711,7 +711,8 @@ html body .sidebarActionTooltip {
     color: var(--text-neutral-primary);
     font-size: 24px;
     line-height: 31.68px;
-    font-family: $heading-semibold-font;
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-semi-bold);
     margin: 0 0 8px 0;
   }
 

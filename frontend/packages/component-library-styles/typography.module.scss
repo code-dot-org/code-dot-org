@@ -74,7 +74,7 @@
 
 @mixin heading-xxl {
   @include heading-common;
-  font-family: var(--font-family-heading-semibold);
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-semi-bold);
   font-size: 3rem;
   line-height: 1.08;
@@ -83,7 +83,7 @@
 
 @mixin heading-xl {
   @include heading-common;
-  font-family: var(--font-family-heading-semibold);
+  font-family: var(--font-family-heading);
   font-weight: var(--font-weight-semi-bold);
   font-size: 2.375rem;
   line-height: 1.05;

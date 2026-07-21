@@ -14,7 +14,8 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: $heading-semibold-font;
+  font-family: $main-font;
+  font-weight: $semi-bold-font-weight;
   margin-bottom: 1em;
 }
 
@@ -31,7 +32,8 @@ h2 {
 }
 
 h4 {
-  font-family: $heading-medium-font;
+  font-family: $main-font;
+  font-weight: $medium-font-weight;
   font-size: 1.5em;
   line-height: 1.2;
   margin-bottom: 1em;

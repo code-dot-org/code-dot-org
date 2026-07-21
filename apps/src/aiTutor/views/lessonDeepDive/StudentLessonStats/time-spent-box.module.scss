@@ -24,7 +24,7 @@ $purple: hsl(271deg 58% 65%);
 }
 
 .bigNumber {
-  font-family: var(--font-family-heading-semibold);
+  font-family: var(--font-family-main);
   font-size: clamp(7rem, 20vw, 14rem);
   font-weight: 800;
   line-height: 0.9;
@@ -32,7 +32,7 @@ $purple: hsl(271deg 58% 65%);
 }
 
 .statHeading {
-  font-family: var(--font-family-heading-semibold);
+  font-family: var(--font-family-main);
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 800;
   color: #fff;

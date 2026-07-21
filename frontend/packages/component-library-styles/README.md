@@ -315,20 +315,19 @@ Or in JSX/TSX inline styles:
 
 Font families and weights are available as CSS variables (defined in `fontVariables.css`):
 
-| CSS Variable                     | Description                            | Value                                                     |
-| -------------------------------- | -------------------------------------- | --------------------------------------------------------- |
-| `--font-family-main`             | Combined main font (Geist + Noto Sans) | `'Geist', 'Noto Sans', 'Noto Sans Math', ..., sans-serif` |
-| `--font-family-heading-semibold` | Space Grotesk SemiBold font            | `'Space Grotesk SemiBold', 'Noto Sans', ..., sans-serif`  |
-| `--font-family-heading-medium`   | Space Grotesk Medium font              | `'Space Grotesk Medium', 'Noto Sans', ..., sans-serif`    |
-| `--font-weight-thin`             | Thin font weight                       | `100`                                                     |
-| `--font-weight-extra-light`      | Extra light font weight                | `200`                                                     |
-| `--font-weight-light`            | Light font weight                      | `300`                                                     |
-| `--font-weight-regular`          | Regular font weight                    | `400`                                                     |
-| `--font-weight-medium`           | Medium font weight                     | `500`                                                     |
-| `--font-weight-semi-bold`        | Semi-bold font weight                  | `600`                                                     |
-| `--font-weight-bold`             | Bold font weight                       | `700`                                                     |
-| `--font-weight-extra-bold`       | Extra bold font weight                 | `800`                                                     |
-| `--font-weight-black`            | Black font weight                      | `900`                                                     |
+| CSS Variable                | Description                            | Value                                                     |
+| --------------------------- | -------------------------------------- | --------------------------------------------------------- |
+| `--font-family-main`        | Combined main font (Geist + Noto Sans) | `'Geist', 'Noto Sans', 'Noto Sans Math', ..., sans-serif` |
+| `--font-family-heading`     | Space Grotesk font                     | `'Space Grotesk', 'Noto Sans', ..., sans-serif`           |
+| `--font-weight-thin`        | Thin font weight                       | `100`                                                     |
+| `--font-weight-extra-light` | Extra light font weight                | `200`                                                     |
+| `--font-weight-light`       | Light font weight                      | `300`                                                     |
+| `--font-weight-regular`     | Regular font weight                    | `400`                                                     |
+| `--font-weight-medium`      | Medium font weight                     | `500`                                                     |
+| `--font-weight-semi-bold`   | Semi-bold font weight                  | `600`                                                     |
+| `--font-weight-bold`        | Bold font weight                       | `700`                                                     |
+| `--font-weight-extra-bold`  | Extra bold font weight                 | `800`                                                     |
+| `--font-weight-black`       | Black font weight                      | `900`                                                     |
 
 ---
 
