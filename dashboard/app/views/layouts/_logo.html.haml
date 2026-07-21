@@ -1,5 +1,5 @@
-%div{id: 'main-logo'}
-  - if current_user
-    = link_to(image_tag(Cdo::Brand.header_logo_filename(request)), '/home', {id: "logo-img", alt: Cdo::Brand.logo_alt_text(request)})
-  - else
-    = link_to(image_tag(Cdo::Brand.header_logo_filename(request)), CDO.code_org_url, {id: "logo-img", alt: Cdo::Brand.logo_alt_text(request)})
+-# Mount node for the React ShareLogo (apps/src/code-studio/components/shareLogo).
+-# Rendered only on share pages via view_options[:code_studio_logo]. The logo
+-# image is chosen client-side from the current theme; the home link target is
+-# passed through as a data attribute.
+%div{id: 'main-logo', data: {'home-url': current_user ? '/home' : CDO.code_org_url}}
