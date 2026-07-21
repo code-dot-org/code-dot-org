@@ -13,6 +13,7 @@ import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import Loading from '@cdo/apps/lab2/views/Loading';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
@@ -128,6 +129,8 @@ interface SpriteLab2ViewProps {
   patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
   channelId?: string;
   hasEdited: boolean;
+  startOver: () => void;
+  isEditable: boolean;
 }
 
 const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
@@ -137,6 +140,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   patchSources,
   channelId,
   hasEdited,
+  startOver,
+  isEditable,
 }) => {
   const {theme} = useTheme();
   const dispatch = useAppDispatch();
@@ -192,6 +197,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
+  const [showStartOver, setShowStartOver] = useState(false);
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -731,6 +737,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   return (
     <div className={moduleStyles.labRow}>
+      {showStartOver && isEditable && (
+        <StartOverDialog
+          onConfirm={() => {
+            startOver();
+            setShowStartOver(false);
+          }}
+          onCancel={() => setShowStartOver(false)}
+          type="blocks"
+        />
+      )}
       <ResourcePanel
         levelProperties={levelProperties}
         isRunning={isRunning}
@@ -749,6 +765,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         onTabChange={handleTabChange}
         enabledTabs={ENABLED_TABS}
         visibleTabs={ENABLED_TABS}
+        onClickStartOver={() => setShowStartOver(true)}
         codeTabExtra={
           SCENES_UI_VARIANT && animationsSeeded ? (
             <SceneSelector
@@ -838,6 +855,8 @@ const SpriteLab2Container: React.FunctionComponent<
     projectManager,
     loadError,
     hasEdited,
+    startOver,
+    isEditable,
   } = useSources<SpriteLab2Source>({levelProperties, defaultSources});
 
   // Set the project manager in the registry for external components that need it (e.g. header).
@@ -867,6 +886,8 @@ const SpriteLab2Container: React.FunctionComponent<
       patchSources={patchSources}
       channelId={channel?.id}
       hasEdited={hasEdited}
+      startOver={startOver}
+      isEditable={isEditable}
     />
   );
 };
