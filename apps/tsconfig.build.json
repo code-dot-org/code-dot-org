@@ -25,6 +25,9 @@
     "skipDefaultLibCheck": true,
     "skipLibCheck": true,
     "allowJs": true,
+    // tell the type-checker to enforce extra rules to ensure the codebase is
+    // safe to compile one file at a time.
+    "isolatedModules": true,
     "baseUrl": "./",
     "preserveSymlinks": true,
     "paths": {
