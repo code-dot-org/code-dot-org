@@ -2259,11 +2259,6 @@ class ApiControllerNoDefaultScriptTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    # Keep the unit cache out of the picture so unit lookups reflect the DB
-    # directly, regardless of how the suite is run (spring/CI disable caching;
-    # a plain `rails test` does not).
-    Unit.stubs(:should_cache?).returns(false)
-
     @teacher = create(:teacher)
     # A section with no assigned script or course, so Section#default_script is
     # nil and load_script returns nil.
