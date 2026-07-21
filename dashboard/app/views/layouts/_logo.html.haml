@@ -1,5 +1,4 @@
 -# Mount node for the React ShareLogo (apps/src/code-studio/components/shareLogo).
 -# Rendered only on share pages via view_options[:code_studio_logo]. The logo
--# image is chosen client-side from the current theme; the home link target is
--# passed through as a data attribute.
+-# image is chosen client-side from the current theme.
 %div{id: 'main-logo', data: {'logo-url': current_user ? '/home' : CDO.code_org_url}}
