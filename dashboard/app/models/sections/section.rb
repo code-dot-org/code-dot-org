@@ -199,7 +199,7 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.minute
+  SUGGESTED_LESSON_TTL = 1.day
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
   SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
