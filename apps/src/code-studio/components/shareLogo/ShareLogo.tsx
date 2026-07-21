@@ -1,8 +1,9 @@
 import React from 'react';
 
 // The inverse (white) logo reads on dark backgrounds; the black logo on light.
-import inverseLogo from './logo-codeai-inverse.svg';
-import blackLogo from './logo-codeai.svg';
+import inverseLogo from '@cdo/static/logo-codeai-inverse.svg';
+import blackLogo from '@cdo/static/logo-codeai.svg';
+
 import useBackgroundTheme from './useBackgroundTheme';
 
 interface ShareLogoProps {
