@@ -58,11 +58,7 @@ module Slack
   #   (`<@U12345>`) into display-name text (`@displayname`). Pass `raw: true`
   #   when the caller needs to preserve user IDs (e.g. to extract them).
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map: false, raw: false)
-    if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
-      channel_name = CHANNEL_MAP[channel_name]
-    end
-
+  def self.get_topic(channel_name, raw: false)
     channel_id = get_channel_id(channel_name)
     return nil unless channel_id
 
@@ -74,14 +70,8 @@ module Slack
 
   # @param channel_name [String] The channel to update the topic.
   # @param new_topic [String] The topic to post.
-  # @param use_channel_map [Boolean] Whether to look up channel_name in
-  #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map: false)
-    if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
-      channel_name = CHANNEL_MAP[channel_name]
-    end
-
+  def self.update_topic(channel_name, new_topic)
     channel_id = get_channel_id(channel_name)
     return false unless channel_id
 
@@ -185,7 +175,7 @@ module Slack
     return CHANNEL_IDS[channel_name] if CHANNEL_IDS[channel_name]
 
     raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
-    # Documentation at https://api.slack.com/methods/channels.list.
+    # Documentation at https://api.slack.com/methods/conversations.list.
     url = "https://slack.com/api/conversations.list?limit=1000&types=public_channel&exclude_archived=true"
     parsed_channels = post_to_slack(url)
     return nil unless parsed_channels && parsed_channels['channels']

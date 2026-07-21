@@ -59,7 +59,7 @@ If you want more information on how FontAwesome expects us to set things up, see
 - [frontend/packages/fonts/src/loader/index.ts](/frontend/packages/fonts/src/loader/index.ts)
 - [shared/css/font.scss](/shared/css/font.scss)
 
-If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codedotorg.slack.com/archives/C03CK49G9/p1681500978173639).
+If we end up changing the location of these files in S3 outside of the `cdo-dsco` bucket, we may need to update CORS settings. More documentation on those changes are in [this Slack thread](https://codeai.slack.com/archives/C03CK49G9/p1681500978173639).
 
 As of April 2026, these files were referenced in the following places:
 
