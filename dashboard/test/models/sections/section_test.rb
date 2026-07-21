@@ -1757,7 +1757,7 @@ class SectionTest < ActiveSupport::TestCase
     assert @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
+  test 'suggested_lesson_stale? returns false when timestamp is from today' do
     @section.update!(
       suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
       suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.today.iso8601}]
@@ -1765,7 +1765,7 @@ class SectionTest < ActiveSupport::TestCase
     refute @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns true when suggested_lesson_history is nil despite fresh timestamp' do
+  test 'suggested_lesson_stale? returns true when suggested_lesson_history is nil despite timestamp from today' do
     @section.update!(
       suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
       suggested_lesson_history: nil
@@ -1773,10 +1773,10 @@ class SectionTest < ActiveSupport::TestCase
     assert @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns true for a stale timestamp' do
+  test 'suggested_lesson_stale? returns true when timestamp is from a previous day' do
     @section.update!(
-      suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.days.ago.utc.iso8601},
-      suggested_lesson_history: [{'lesson_id' => 1, 'date' => (Time.zone.today - 1).iso8601}]
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.zone.yesterday.end_of_day.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.yesterday.iso8601}]
     )
     assert @section.suggested_lesson_stale?
   end

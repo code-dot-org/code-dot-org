@@ -199,7 +199,6 @@ class Section < ApplicationRecord
 
   serialized_attrs %w(code_review_expires_at suggested_lesson suggested_lesson_history)
 
-  SUGGESTED_LESSON_TTL = 1.day
   SUGGESTED_LESSON_PASSING_THRESHOLD = ActivityConstants::MINIMUM_PASS_RESULT
   SUGGESTED_LESSON_HISTORY_MAX_DAYS = 10
 
@@ -209,7 +208,7 @@ class Section < ApplicationRecord
     return true if suggested_lesson_history.nil?
     timestamp = data['timestamp']
     return true if timestamp.blank?
-    Time.parse(timestamp.to_s) < SUGGESTED_LESSON_TTL.ago
+    Time.parse(timestamp.to_s).to_date < Time.zone.today
   rescue ArgumentError
     true
   end

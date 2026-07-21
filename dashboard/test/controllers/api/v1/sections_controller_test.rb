@@ -1641,9 +1641,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert json_response['name'].present?
   end
 
-  test 'get suggested_lesson recomputes when data is stale' do
+  test 'get suggested_lesson recomputes when data is from a previous day' do
     section, student, lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
-    stale_timestamp = 2.hours.ago.utc.iso8601
+    stale_timestamp = Time.zone.yesterday.end_of_day.utc.iso8601
     section.update!(suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => stale_timestamp})
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
