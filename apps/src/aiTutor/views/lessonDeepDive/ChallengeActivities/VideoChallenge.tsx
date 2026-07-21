@@ -26,10 +26,11 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   challenge = null,
 }) => {
   const [hasRecording, setHasRecording] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
   const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
 
   const [isUploading, setIsUploading] = useState(false);
-  const canSubmit = !submitted && !isUploading && hasRecording;
+  const canSubmit = !submitted && !isUploading && hasRecording && !isRecording;
 
   const createChallengeResponse = useCallback(() => {
     if (!challenge) {
@@ -37,6 +38,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     }
     const body = JSON.stringify({
       challenge_id: challenge.id,
+      is_final: true,
       assets: [{asset_type: 'video'}],
     });
     return HttpClient.post('/challenge_responses', body, true, {
@@ -55,14 +57,17 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     setIsUploading(true);
     try {
       const challengeResponse = await createChallengeResponse();
-      const uploadUrl = challengeResponse?.assets[0]?.upload_url;
-      if (!uploadUrl) return;
+      const assetId = challengeResponse?.assets[0]?.id;
+      if (!assetId) {
+        throw new Error('The server did not return a video asset.');
+      }
       const blob = await fetch(recordedUrl).then(r => r.blob());
-      await fetch(uploadUrl, {
-        method: 'PUT',
-        body: blob,
-        headers: {'Content-Type': 'video/webm'},
-      });
+      await HttpClient.put(
+        `/challenge_response_assets/${assetId}/upload`,
+        blob,
+        true, // useAuthenticityToken
+        {'Content-Type': 'video/webm'}
+      );
     } catch (error) {
       console.log(error);
     } finally {
@@ -78,6 +83,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       </div>
       <VideoRecorder
         onRecordingChange={setHasRecording}
+        onIsRecordingChange={setIsRecording}
         disabled={submitted || isUploading}
         recordedUrl={recordedUrl}
         setRecordedUrl={setRecordedUrl}
