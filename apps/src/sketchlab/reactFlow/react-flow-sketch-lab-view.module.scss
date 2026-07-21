@@ -3,3 +3,9 @@
   height: 100%;
   display: flex;
 }
+
+// Right edge for the collapsed rail. The resize bar is hidden while collapsed
+// (you can't resize a collapsed rail), so the panel draws its own edge.
+.collapsedPanel {
+  border-inline-end: 1px solid var(--borders-neutral-primary);
+}
