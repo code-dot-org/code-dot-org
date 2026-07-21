@@ -75,6 +75,17 @@ class DatastoreCache
     @local_cache
   end
 
+  # Re-read the datastore (the source of truth) into both the shared and local
+  # caches. Unlike update_local_cache, which only copies the shared cache into
+  # the local cache, this picks up values that were persisted out of band -- by
+  # another server, or before this process started -- and were therefore never
+  # loaded into the shared cache. The admin interfaces call this so they display
+  # what is actually persisted rather than a possibly-cold cache.
+  def reload!
+    populate_shared_cache
+    update_local_cache
+  end
+
   # Clear the datastore
   def clear
     @local_cache = {}
