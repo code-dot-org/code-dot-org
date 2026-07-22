@@ -8,16 +8,10 @@ all of `apps/src/`. Subdirectories may add stricter rules.
 
 - Default to none. Add one only for a non-obvious *why*; never restate the code.
 - Prefer a good name over a comment, a clause over a sentence.
-- Lead with the one load-bearing sentence and stop: mechanism narratives,
-  worked examples, and design rationale belong in the PR description. Review
-  feedback here is consistently "trim", never "expand".
-- Don't describe callers or call sites — they drift, and grep answers
-  who-calls-this.
 - Describe the code as it is — no "previously…", "no longer…", or rejected
   alternatives.
 - Say it once, and keep it true to the code it sits on: update or delete it in
   the same change as the thing it describes.
-- "allowlist"/"blocklist", not "whitelist"/"blacklist".
 - Worked good/bad examples: `apps/src/sketchlab/reactFlow/AGENTS.md`.
 
 ## One source of truth
