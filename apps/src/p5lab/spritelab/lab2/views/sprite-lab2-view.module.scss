@@ -60,10 +60,14 @@ $tab-item-height: 34px;
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
-  background: transparent;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
 
   &:disabled {
     opacity: 0.4;
@@ -75,6 +79,11 @@ $tab-item-height: 34px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
 }
 
 // The Code tab + scene picker as one segmented control (scenes UI variant):
@@ -95,6 +104,7 @@ $tab-segment-height: $tab-item-height - 2px;
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
@@ -102,14 +112,38 @@ $tab-segment-height: $tab-item-height - 2px;
     border-radius: 4px 0 0 0;
   }
 
-  // The group paints the active background so both segments share it.
+  // The group paints the active background and teal edge; the segments
+  // inside stay transparent so both share them.
   .tabActive {
     background: transparent;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
   }
 }
 
 .tabGroupActive {
   background: var(--background-neutral-primary);
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+}
+
+// Action buttons beside the Play tab (shown only while playing), not tabs.
+.startOver {
+  height: $tab-item-height;
+  padding: 0 12px;
+  margin-inline-start: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
 }
 
 .sceneSelect {
@@ -321,6 +355,11 @@ $tab-segment-height: $tab-item-height - 2px;
   border: 1px solid rgb(255 255 255 / 25%);
   border-radius: 6px;
   box-shadow: none;
+  // Explicit colors: nothing styles bare form elements globally, so these
+  // would inherit the guide's white text onto their own light control
+  // background. The guide panel is dark in both themes.
+  background: #fff;
+  color: #333;
   font-size: 14px;
 }
 
@@ -401,63 +440,6 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-.worldTab {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  padding: 8px;
-  gap: 8px;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}
-
-.worldPalette {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-  }
-}
-
-.brushActive {
-  outline: 2px solid #1565c0;
-}
-
-.brushSwatch {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--borders-neutral-strong);
-}
-
-.worldGrid {
-  display: grid;
-  width: min(100%, 480px);
-  aspect-ratio: 1;
-  border: 1px solid var(--borders-neutral-strong);
-  user-select: none;
-}
-
-.worldCell {
-  border: 1px solid var(--borders-neutral-primary);
-  cursor: pointer;
-
-  &:hover {
-    outline: 1px solid var(--borders-neutral-strong);
-    outline-offset: -1px;
-  }
-}
-
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
@@ -487,6 +469,44 @@ $tab-segment-height: $tab-item-height - 2px;
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
 }
 
 // Location-picker hover ghost: the sprite being placed, previewed at the
