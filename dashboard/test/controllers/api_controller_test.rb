@@ -241,6 +241,45 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
+  test "text_responses question prefers long_instructions over title" do
+    script = create(:script, :in_single_unit_course, name: 'long-instructions-script')
+    lesson_group = create(:lesson_group, script: script)
+    lesson1 = create(:lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group)
+    lesson2 = create(:lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group)
+
+    # long_instructions present alongside title: long_instructions wins.
+    level1 = create(:free_response)
+    level1.properties['title'] = 'Ignored Title'
+    level1.properties['long_instructions'] = '## The real question'
+    level1.save!
+    create(:script_level, script: script, levels: [level1], lesson: lesson1)
+
+    # no long_instructions: falls back to title.
+    level2 = create(:free_response)
+    level2.properties['title'] = 'Only a title'
+    level2.save!
+    create(:script_level, script: script, levels: [level2], lesson: lesson2)
+
+    level_source1 = create(:level_source, level: level1, data: 'answer 1')
+    create(:activity, user: @student_1, level: level1, level_source: level_source1)
+    create(:user_level, user: @student_1, level: level1, script: script, attempts: 1, level_source: level_source1)
+
+    level_source2 = create(:level_source, level: level2, data: 'answer 2')
+    create(:activity, user: @student_1, level: level2, level_source: level_source2)
+    create(:user_level, user: @student_1, level: level2, script: script, attempts: 1, level_source: level_source2)
+
+    get :section_text_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+    assert_response :success
+
+    questions = JSON.parse(@response.body).map {|row| row['question']}
+    assert_includes questions, '## The real question'
+    assert_includes questions, 'Only a title'
+    refute_includes questions, 'Ignored Title'
+  end
+
   test "should get no text_responses results for section with script without text response" do
     script = create(:script, :in_single_unit_course, name: 'text-response-script')
     lesson_group = create(:lesson_group, script: script)
