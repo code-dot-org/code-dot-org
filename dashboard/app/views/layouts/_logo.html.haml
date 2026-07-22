@@ -1,4 +1,9 @@
--# Mount node for the React ShareLogo (apps/src/code-studio/components/shareLogo).
--# Rendered only on share pages via view_options[:code_studio_logo]. The logo
--# image is chosen client-side from the current theme.
-%div{id: 'main-logo', data: {'logo-url': current_user ? '/home' : CDO.code_org_url}}
+-# Mount node for the React ShareLogo (apps/src/code-studio/components/shareLogo),
+-# which swaps the image to match the theme once levels/show.js loads. The
+-# server-rendered logo below is the fallback for share pages that don't load
+-# that bundle (e.g. legacy /c/ and /r/ level_source shares); React replaces it
+-# on mount. Uses the brand's inverse (white) logo to match the default dark
+-# background.
+- logo_url = current_user ? '/home' : CDO.code_org_url
+%div{id: 'main-logo', data: {'logo-url': logo_url}}
+  = link_to(image_tag(Cdo::Brand.header_logo_filename(request), id: 'logo-img', alt: Cdo::Brand.logo_alt_text(request)), logo_url)
