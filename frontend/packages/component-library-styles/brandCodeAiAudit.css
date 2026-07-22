@@ -85,6 +85,7 @@
   --borders-neutral-primary: #ffd6ec;
   --borders-neutral-solid: #5c0f38;
   --borders-neutral-strong: #cc2b7a;
+  --borders-neutral-white-fixed: #fff8fc;
   --borders-success-light: #ffd6ec;
   --borders-success-primary: #e8488f;
   --borders-success-strong: #99255d;
@@ -237,6 +238,7 @@
   --borders-neutral-primary: #8f2058;
   --borders-neutral-solid: #fff0f7;
   --borders-neutral-strong: #cc2b7a;
+  --borders-neutral-white-fixed: #fff8fc;
   --borders-success-light: #6e1543;
   --borders-success-primary: #ff8fc9;
   --borders-success-strong: #99255d;
