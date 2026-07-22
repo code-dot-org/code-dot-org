@@ -774,12 +774,13 @@ StudioApp.prototype.getSettingsHandler = function () {
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
-    var contentDiv = document.createElement('div');
-    var dialog = this.createModalDialog({
-      contentDiv: contentDiv,
-      defaultBtnSelector: 'again-button',
-      id: 'showVersionsModal',
-    });
+    const container = document.createElement('div');
+    container.id = 'showVersionsModal';
+    document.body.appendChild(container);
+    const close = () => {
+      ReactDOM.unmountComponentAtNode(container);
+      container.remove();
+    };
     createReactRoot(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
@@ -787,14 +788,11 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         useFilesApi: !!config.useFilesApi,
         selectedVersion: queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
+        onClose: close,
       }),
-      contentDiv,
-      {
-        legacyReactDomRender: true,
-      }
+      container,
+      {legacyReactDomRender: true}
     );
-
-    dialog.show();
   };
 };
 
