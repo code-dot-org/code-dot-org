@@ -10,12 +10,8 @@ import movingWithArrowKeys from './movingWithArrowKeys';
 import patrollingLeftRight from './patrollingLeftRight';
 import patrollingOnBlocks from './patrollingOnBlocks';
 
-// Lab-owned blocks, defined client-side (not in the DB block pool): the scene
-// blocks because their dropdown options are the project's scenes, which only
-// this lab knows, plus the behaviors and grid composites. A block whose
-// runtime half is interpreted code exports it as helperCode; picker option
-// values are pre-quoted and grid field values are 2d arrays, so generators
-// drop both into calls as source text.
+// Lab-owned blocks, defined client-side rather than in the DB block pool. A
+// block whose runtime half is interpreted code exports it as helperCode.
 const labBlockDefinitions: {
   definition: BlockJson;
   generator: GeneratorFunction;

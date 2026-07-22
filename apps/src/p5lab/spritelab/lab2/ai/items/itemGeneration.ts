@@ -101,14 +101,10 @@ export async function generateImage(
     throw new Error('No image was generated');
   }
 
-  // One processing pipeline: sprites and blocks get the key-color background
-  // removed exactly the same way (flood-fill from the top-left corner, which
-  // samples the key — the block prompt asks for padding on all sides, so the
-  // corner is background; pixel art a sharp 1-bit cut, smooth art a feathered
-  // matte). Blocks are then
-  // cropped to content so the padding is trimmed and grid-placed copies tile
-  // seamlessly. Pixel style gets grid-normalized; any processed image comes back
-  // as PNG. A smooth background passes through as-is.
+  // Sprites and blocks get the key-color background removed the same way
+  // (both prompts keep the corner as background); blocks are then cropped to
+  // content so grid-placed copies tile seamlessly. Pixel style gets
+  // grid-normalized; a smooth background passes through as-is.
   if (itemType !== 'background' || style === 'pixel') {
     let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],

@@ -20,8 +20,6 @@ const definition: BlockJson = {
   style: BlockStyles.SPRITE,
 };
 
-// Straight to the native command: the 'walls' group is what zGameDev collides
-// players against.
 const generator: GeneratorFunction = block =>
   `makeEnvironmentSprites(${block.getFieldValue('ANIMATION_NAME')}, ` +
   `'walls', ${JSON.stringify(block.getFieldValue('GRID'))});\n`;

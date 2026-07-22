@@ -15,9 +15,8 @@ const generator: GeneratorFunction = () => [
   Order.FUNCTION_CALL,
 ];
 
-// The oceanSetup helper libraries' moving_with_arrow_keys, in this lab's
-// behavior-factory shape. Moves at the sprite's own speed property, like the
-// classic behavior.
+// Moves at the sprite's own speed property, like the classic
+// moving_with_arrow_keys behavior.
 const helperCode = [
   'function movingWithArrowKeys() {',
   '  return {',

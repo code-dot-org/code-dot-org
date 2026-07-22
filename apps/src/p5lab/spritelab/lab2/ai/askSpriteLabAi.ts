@@ -10,8 +10,7 @@ import {getTextModel} from './items/modelHelpers';
  * (Gemini 2.5 Flash), straight through the AI Gateway like the levelbuilder
  * generator tools. Returns the generated pseudocode text. Prompt safety is
  * whatever the gateway enforces; the aichat moderation pipeline is not on
- * this path. The caller supplies the project's image and scene names (see
- * redux/selectors).
+ * this path.
  */
 export default async function askSpriteLabAi(
   userPrompt: string,

@@ -1,21 +1,10 @@
 /**
- * Background removal (chroma key) for AI-generated images.
- *
- * The image is generated on a flat key color the prompt asks the model to
- * pick as a strong contrast to the subject; we sample it from the top-left
- * corner, flood-fill from there, and key out every pixel connected to it that
- * matches. Two matte styles are supported, chosen by the caller:
- *
- *   - Sharp (default): a binary 1-bit alpha cut. Background pixels become fully
- *     transparent, everything else stays fully opaque. This is what pixel art
- *     wants — hard, aliased edges with no feathering.
- *   - Soft: edge pixels in the ramp between background and subject get partial
- *     alpha proportional to their chroma distance, plus key-spill suppression
- *     to kill the key-colored fringe. This is what smooth/illustrated art
- *     wants.
- *
- * keyOutBackground() holds the per-pixel decision (unit-testable without a
- * canvas); removeBackground() is the thin DOM/canvas wrapper.
+ * Background removal (chroma key) for AI-generated images: the key color is
+ * sampled from the top-left corner and flood-filled out. Two matte styles:
+ * sharp (binary alpha, what pixel art wants) and soft (feathered edge ramp
+ * with key-spill suppression, what illustrated art wants). keyOutBackground()
+ * holds the per-pixel decision (unit-testable without a canvas);
+ * removeBackground() is the thin canvas wrapper.
  */
 
 import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';

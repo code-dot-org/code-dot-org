@@ -146,14 +146,10 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
   ],
 ]);
 
-// Lab-injected toolbox categories, inserted in this order at the top of every
-// level's toolbox. Each lists its default lineup in display order. Entries
-// already in the toolbox elsewhere are cloned (keeping their curated
-// shadows/defaults); otherwise a bare block is created with its field
-// defaults. The levelbuilder owns whatever they author: a category with this
-// name in the level's toolbox is used as written, and an EMPTY one suppresses
-// the category entirely — the default lineup only appears when the level
-// doesn't mention the category at all.
+// Lab-injected toolbox categories, inserted at the top of every level's
+// toolbox. The levelbuilder owns whatever they author: a category with this
+// name is used as written, an EMPTY one suppresses the category, and the
+// default lineup appears only when the level doesn't mention the name.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
     // The platformer composites plus the core event blocks.
@@ -193,12 +189,10 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
 ];
 
 /**
- * Lab toolbox additions: lead the "Sprites" category with the platformer
- * composites, and build the injected categories (Platform, Story, ...) at the
- * top of the toolbox (toolbox categories reference block types, so a block
- * can appear in any number of them). The composites are lab-owned blocks
- * (blockDefinitions), so DB-authored toolboxes don't know them. See
- * INJECTED_CATEGORIES for how a level opts out of the defaults.
+ * Lead the "Sprites" category with the platformer composites and build the
+ * injected categories at the top of the toolbox (lab-owned blocks, so
+ * DB-authored toolboxes don't know them). See INJECTED_CATEGORIES for how a
+ * level opts out.
  */
 export function ensureInjectedCategories(toolboxXml: string): string {
   try {

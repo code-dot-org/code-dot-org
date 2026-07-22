@@ -58,12 +58,9 @@ const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
   block: 32,
 };
 
-// Thumbnail options for one kind of animation, filtered by image category:
-// backgrounds and blocks each list only their own category, costumes list
-// everything else. Costumes prefer the border-trimmed image (see imageTrim.ts)
-// so the sprite's content fills the field instead of floating in its
-// transparent margins. Mirrors the classic costumeList/backgroundList in
-// spritelab/blocks.js otherwise.
+// Thumbnail options for one kind of animation, filtered by image category.
+// Costumes and blocks prefer the border-trimmed image (imageTrim.ts) so the
+// content fills the field instead of floating in its transparent margins.
 function animationOptions(kind: AnimationKind): [string, string][] {
   const state = getStore().getState();
   const animationList = state.animationList;

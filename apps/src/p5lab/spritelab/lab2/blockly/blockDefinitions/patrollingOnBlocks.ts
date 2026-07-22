@@ -15,18 +15,12 @@ const generator: GeneratorFunction = () => [
   Order.FUNCTION_CALL,
 ];
 
-// Platform patrol: walk left/right along the 'walls' group, turning at any
-// gap or platform edge, at the playspace edge, or when blocked (this tick's x
-// differs from where last tick's step left it — a wall collision pushed it
-// back). Edges/gaps are found with a hasSupportAt point probe half a grid
-// cell ahead of center: a point sees gaps narrower than the sprite, so even a
-// cell-wide patroller turns at a one-cell gap instead of bridging it.
-// Grounding comes from isDirectlyAbove; zGameDev's collide keeps grounded
-// sprites exactly on top of walls, and the playspace floor counts as footing,
-// so a floor patroller just walks the bounds. The knife-edge recovery is a
-// safety net for a sprite that ends up dropping through a gap's zero-overlap
-// seam anyway (e.g. shoved onto it): grounded last tick + airborne now →
-// nudge past the seam, back up to the walking line, cancel the fall.
+// Walk left/right along the 'walls' group, turning at gaps, edges, the
+// playspace bounds, or when blocked (x differs from where last tick left it).
+// Gaps are found with a hasSupportAt point probe ahead of center: a point
+// sees gaps narrower than the sprite. The knife-edge recovery catches a
+// sprite dropping through a gap's zero-overlap seam (grounded last tick,
+// airborne now): nudge past the seam, back up, cancel the fall.
 const helperCode = [
   'function patrollingOnBlocks() {',
   '  return {',

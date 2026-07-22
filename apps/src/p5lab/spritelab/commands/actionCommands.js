@@ -183,12 +183,9 @@ export const commands = {
   },
 
   // Whether there is footing at the sprite's foot level, offsetX from its
-  // center: some target's top edge meets the sprite's bottom and its span
-  // contains that point (resting on the playspace floor always counts). A
-  // point probe, unlike isDirectlyAbove's full-width collider, can see gaps
-  // narrower than the sprite — a cell-wide patroller otherwise bridges a
-  // one-cell gap — and a point on the seam between adjacent blocks is inside
-  // both, so contiguous ground never reads as a gap.
+  // center (resting on the playspace floor always counts). A point probe,
+  // unlike isDirectlyAbove's full-width collider, sees gaps narrower than
+  // the sprite.
   hasSupportAt(spriteArg, offsetX, targetArg) {
     let sprites = this.getSpriteArray(spriteArg);
     let targets = this.getSpriteArray(targetArg);

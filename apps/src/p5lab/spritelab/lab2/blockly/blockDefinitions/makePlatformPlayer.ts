@@ -23,17 +23,12 @@ const generator: GeneratorFunction = block =>
   `makePlatformPlayer(${block.getFieldValue('ANIMATION_NAME')}, ` +
   `${JSON.stringify(block.getFieldValue('GRID'))});\n`;
 
-// One block = a player sprite at the marked grid cell, plus arrow movement
-// and a space jump. Assumes the zGameDev helper library (per-tick gravity +
-// player/wall collisions, 8x8 grid, default sprite size = one cell), like the
-// GameDev pool blocks; defaults are overridable with the existing blocks
-// (gravity, set speed, ...). The sprite is created directly in the 'players'
-// group (zGameDev then applies gravity/collisions and the cell-sized
-// default). Everything is keyed to the group, not the costume — a label that
-// fails to round-trip must not orphan the player from its physics. Move speed
-// reads the sprite's own speed property so "set speed" still applies; the
-// jump requires standing on a wall. setProp velocityY negates, so jumpSpeed
-// is upward. Cell math mirrors makeEnvironmentSprites.
+// A player sprite at the marked grid cell, plus arrow movement and a space
+// jump. Assumes the zGameDev helper library (per-tick gravity, player/wall
+// collisions, cell-sized sprites). Keyed to the 'players' group, not the
+// costume, so a label that fails to round-trip can't orphan the player from
+// its physics. Movement reads the sprite's own speed so "set speed" still
+// applies; setProp velocityY negates, so jumpSpeed is upward.
 const helperCode = [
   'function makePlatformPlayer(animation, layout) {',
   '  var cell = 400 / layout.length;',

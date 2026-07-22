@@ -31,12 +31,10 @@ const GROUP_VALUES: {[name: string]: string} = {
 // gamelab_whenKey / gamelab_whileKey KEY dropdown options.
 const KEY_NAMES = ['up', 'down', 'left', 'right', 'space', 'a', 'w', 's', 'd'];
 
-// Command whitelists mirroring the Platform and Story toolbox categories
-// (setup.ts INJECTED_CATEGORIES). When the pseudocode opens with a
-// "profile: platform|story" line, only that profile's commands are emitted —
-// the generated program then draws solely on the matching category's blocks.
-// Without a profile line the full legacy vocabulary applies. Keep in sync
-// with the categories as their lineups evolve.
+// Command allowlists mirroring the Platform and Story toolbox categories
+// (setup.ts INJECTED_CATEGORIES) — keep in sync as the lineups evolve. A
+// "profile: platform|story" first line restricts emission to that profile;
+// without one the full legacy vocabulary applies.
 export type CodegenProfile = 'platform' | 'story';
 const PROFILE_COMMANDS: Record<CodegenProfile, Set<string>> = {
   platform: new Set([

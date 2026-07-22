@@ -584,12 +584,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // from the tab button or "Restart game" clears it.
   const [playStartSceneId, setPlayStartSceneId] = useState<string | null>(null);
 
-  // The live preview and Blockly share the window keyboard: p5 listens on
-  // window, so a game that reads arrows/space would eat those keys while the
-  // student is editing on the Code tab. Give the game the keyboard only in
-  // Play. Stop the event at document — after Blockly's own handlers (on
-  // descendants) have run, before p5's window listener — so block editing,
-  // text fields, and workspace nav keep working; only the game is cut off.
+  // p5 listens for keys on window, so a game reading arrows/space would eat
+  // them while the student edits blocks. Give the game the keyboard only in
+  // Play: stopping the event at document runs after Blockly's own handlers
+  // (on descendants) and before p5's window listener.
   useEffect(() => {
     if (activeTab === 'Play') {
       return;

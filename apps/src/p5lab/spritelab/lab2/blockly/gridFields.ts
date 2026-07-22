@@ -17,9 +17,8 @@ const GRID_CONFIG = {
   buttons: {randomize: false, clear: true},
 };
 
-// A null starting value renders the empty grid from GRID_CONFIG (the
-// constructor's TS type doesn't admit null, but the classic blocks.js call
-// passes it from JS and the plugin handles it).
+// A null starting value renders the empty grid from GRID_CONFIG; the
+// constructor's TS type doesn't admit null but the plugin handles it.
 const EMPTY_GRID = null as unknown as number[][];
 
 // Single-select: one position, so a new mark replaces the old one.
