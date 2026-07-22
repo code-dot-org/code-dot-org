@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import {render, waitFor} from '@testing-library/react';
-import React from 'react';
+import {cleanup, render} from '@testing-library/react';
+import React, {act} from 'react';
 
 import useBackgroundTheme from '@cdo/apps/code-studio/components/shareLogo/useBackgroundTheme';
 
@@ -13,6 +13,7 @@ function ThemeProbe() {
 
 describe('useBackgroundTheme', () => {
   afterEach(() => {
+    cleanup();
     document.body.className = '';
   });
 
@@ -44,9 +45,10 @@ describe('useBackgroundTheme', () => {
     const {container} = render(<ThemeProbe />);
     expect(container).toHaveTextContent('dark');
 
-    // jsdom delivers the MutationObserver callback outside React's act scope,
-    // so this emits a benign act(...) warning; the update itself is reliable.
-    document.body.className = 'background-light';
-    await waitFor(() => expect(container).toHaveTextContent('light'));
+    await act(async () => {
+      document.body.className = 'background-light';
+      await Promise.resolve();
+    });
+    expect(container).toHaveTextContent('light');
   });
 });

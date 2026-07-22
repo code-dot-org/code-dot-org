@@ -7,7 +7,6 @@ import blackLogo from '@cdo/static/logo-codeai.svg';
 import useBackgroundTheme from './useBackgroundTheme';
 
 interface ShareLogoProps {
-  // Where the logo links to.
   logoUrl: string;
 }
 
