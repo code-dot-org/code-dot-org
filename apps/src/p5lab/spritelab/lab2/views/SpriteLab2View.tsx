@@ -782,7 +782,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         onTabChange={handleTabChange}
         enabledTabs={ENABLED_TABS}
         visibleTabs={ENABLED_TABS}
-        onClickStartOver={() => setShowStartOver(true)}
+        onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
         codeTabExtra={
           SCENES_UI_VARIANT && animationsSeeded ? (
             <SceneSelector

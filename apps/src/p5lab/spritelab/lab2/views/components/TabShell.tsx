@@ -91,14 +91,13 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
             }
           )}
         </div>
-        <div className={moduleStyles.tabBar} role="tablist">
+        <div className={moduleStyles.tabBar}>
           {onClickStartOver && (
             <MuiButton
               variant="outlined"
               color="secondary"
               size="extraSmall"
               onClick={onClickStartOver}
-              aria-label={'Start Over'}
               type="button"
               endIcon={
                 <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
