@@ -192,6 +192,9 @@ class ProjectsController < ApplicationController
     },
     music_dance_ai: {
       name: "New Music Dance AI Project"
+    },
+    sketchlab: {
+      name: 'New Sketch Lab Project'
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze

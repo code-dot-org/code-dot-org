@@ -3,7 +3,7 @@
 - active ||= nil
 %a{name: active}
 .row.navcontainer
-  .span12{style: 'margin-left: 0'}
+  .col-md-12{style: 'margin-left: 0'}
     %ul.nav.nav-pills{style: 'margin: 0'}
       - if current_user && Queries::ScriptActivity.working_on_user_scripts(current_user).any?
         %li{class: active == :working ? 'active' : ''}

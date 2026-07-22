@@ -1,13 +1,10 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {hasPreview} from '@cdo/apps/codebridge';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ShareButtonPanel from '@cdo/apps/lab2/views/components/layout/ShareButtonPanel';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
 
 import ConsoleAndPreviewShare from './ConsoleAndPreviewShare';
 import ConsoleShare from './ConsoleShare';
@@ -21,14 +18,6 @@ const ShareView: React.FunctionComponent = () => {
   const miniApp = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
-  const projectManager = Lab2Registry.getInstance().getProjectManager();
-  const onViewCode = () => {
-    projectManager?.redirectToView();
-  };
-
-  const onRemix = () => {
-    projectManager?.redirectToRemix();
-  };
 
   const [consoleVisible, setConsoleVisible] = useState(false);
 
@@ -56,7 +45,7 @@ const ShareView: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.shareContainer}>
-      <div className={moduleStyles.sidebar}>
+      <ShareButtonPanel>
         {showPreview && (
           <div className={moduleStyles.consoleToggle}>
             <Toggle
@@ -70,44 +59,7 @@ const ShareView: React.FunctionComponent = () => {
             />
           </div>
         )}
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          onClick={onViewCode}
-          type="button"
-          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
-        >
-          {commonI18n.viewCode()}
-        </MuiButton>
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          onClick={onRemix}
-          type="button"
-          startIcon={
-            <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
-          }
-        >
-          {commonI18n.makeMyOwn()}
-        </MuiButton>
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          onClick={() => window.open('/report_abuse', '_blank')}
-          type="button"
-          startIcon={
-            <FontAwesomeV6Icon
-              iconStyle="regular"
-              iconName="message-exclamation"
-            />
-          }
-        >
-          {'Report abuse'}
-        </MuiButton>
-      </div>
+      </ShareButtonPanel>
       <div
         className={moduleStyles.previewContainer}
         style={{width: previewWidth, height: previewHeight}}
