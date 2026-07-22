@@ -1,4 +1,9 @@
+import Popover from '@code-dot-org/component-library/popover';
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import 'qtip2';
 var clientState = require('./clientState');
@@ -60,7 +65,7 @@ export default function createCallouts(callouts) {
           var api = $(this).qtip('api');
           var target = $(api.elements.target);
           if ($('.ace_gutter').has(target)) {
-            api.destroy();
+            destroyDscoQtip(api);
           }
         });
         return;
@@ -99,6 +104,68 @@ export default function createCallouts(callouts) {
   $(window).on('hashchange', detectTriggerCalloutOnHash);
 }
 
+// qtip corner strings lead with the edge of the callout that touches the
+// target ('bottom left' = callout sits above the target). Map that edge to
+// the DSCO Popover direction so the Popover's tail points at the target.
+function popoverDirectionForCorner(my) {
+  switch ((my || '').split(/\s+/)[0]) {
+    case 'top':
+      return 'onBottom';
+    case 'left':
+      return 'onRight';
+    case 'right':
+      return 'onLeft';
+    default:
+      return 'onTop';
+  }
+}
+
+/**
+ * Destroy a qtip whose content is a React-rendered DSCO Popover, unmounting
+ * the React tree first so it doesn't leak.
+ */
+function destroyDscoQtip(api, immediate) {
+  var content = api.elements && api.elements.content;
+  if (content) {
+    content.children().each(function () {
+      ReactDOM.unmountComponentAtNode(this);
+    });
+  }
+  api.destroy(immediate);
+}
+
+/**
+ * Create one qtip on `element`, rendering a DSCO Popover as its content.
+ * qtip supplies positioning and show/hide lifecycle; the Popover supplies
+ * all visual chrome (see `.qtip-dsco` in common.scss).
+ */
+function createDscoQtip(element, config, text) {
+  var el = $(element);
+  var container = document.createElement('div');
+  var corner = (config.position.my || '').split(/\s+/);
+  var direction = popoverDirectionForCorner(config.position.my);
+  // Second corner token places the tail along the facing edge
+  // ('bottom left' -> tail near the left end of the bottom edge).
+  container.className =
+    'callout-tail-' + direction + ' callout-align-' + (corner[1] || 'center');
+  createReactRoot(
+    <Popover
+      title=""
+      content=""
+      direction={direction}
+      onClose={() => el.qtip('hide')}
+      className="callout-popover"
+    >
+      {/* eslint-disable-next-line react/no-danger -- levelbuilder-authored
+          callout HTML; qtip rendered the same string as raw HTML before */}
+      <span dangerouslySetInnerHTML={{__html: text}} />
+    </Popover>,
+    container,
+    {legacyReactDomRender: true}
+  );
+  el.qtip($.extend(true, {}, config, {content: {text: $(container)}}));
+}
+
 export function addCallouts(callouts) {
   $.fn.qtip.zindex = 500;
 
@@ -112,24 +179,8 @@ export function addCallouts(callouts) {
     var defaultConfig = {
       codeStudio: {},
       content: {
+        // Placeholder; each qtip gets a DSCO Popover element in createDscoQtip.
         text: callout.localized_text,
-        title: {
-          button: $(
-            '<div class="tooltip-x-close" tabindex="0" role="button" aria-label="Close tooltip"/>'
-          )
-            .on('keydown', function (e) {
-              if (e.key === 'Enter') {
-                e.preventDefault(); // Prevent default behavior for Enter
-                $(this).trigger('click'); // Trigger click on Enter key
-              }
-            })
-            .on('keyup', function (e) {
-              if (e.key === ' ' || e.code === 'Space') {
-                e.preventDefault(); // Prevent page scrolling
-                $(this).trigger('click'); // Trigger click on Space key
-              }
-            }),
-        },
       },
       style: {
         classes: '',
@@ -153,7 +204,7 @@ export function addCallouts(callouts) {
         ? $.parseJSON(callout.qtip_config)
         : callout.qtip_config;
     var config = $.extend(true, {}, defaultConfig, customConfig);
-    config.style.classes = config.style.classes.concat(' cdo-qtips');
+    config.style.classes = config.style.classes.concat(' cdo-qtips qtip-dsco');
 
     callout.seen = clientState.hasSeenCallout(callout.id);
     if (showCalloutsMode) {
@@ -218,7 +269,9 @@ export function addCallouts(callouts) {
               config.codeStudio.canReappear
             ) {
               // create callout(s)
-              $(config.codeStudio.selector).qtip(config);
+              $(config.codeStudio.selector).each(function () {
+                createDscoQtip(this, config, callout.localized_text);
+              });
               allCallouts.push(config.codeStudio.selector);
               showHideCalloutsOnInit(config.codeStudio.selector, container);
             }
@@ -228,7 +281,9 @@ export function addCallouts(callouts) {
       });
     } else if (!callout.seen) {
       // create callout(s)
-      $(selector).qtip(config);
+      $(selector).each(function () {
+        createDscoQtip(this, config, callout.localized_text);
+      });
       allCallouts.push(selector);
       showHideCalloutsOnInit(selector, container);
     }
@@ -296,7 +351,7 @@ function showOrHideCalloutsByTargetVisibility(containerSelector) {
         var target = $(api.elements.target);
 
         if ($(document).has(target).length === 0) {
-          api.destroy(true);
+          destroyDscoQtip(api, true);
           invalidCallouts.push(selector);
           return;
         }

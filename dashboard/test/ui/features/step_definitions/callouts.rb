@@ -13,7 +13,9 @@ And(/^callout "([^"]*)" is hidden$/) do |callout_id|
 end
 
 And(/^I close callout "([^"]*)"$/) do |callout_id|
-  xpath = "(//*[contains(@class, 'cdo-qtips')])[#{callout_id.to_i + 1}]/div[3]"
+  # Callouts render a DSCO Popover whose close control is a button with
+  # aria-label "Close".
+  xpath = "(//*[contains(@class, 'cdo-qtips')])[#{callout_id.to_i + 1}]//button[@aria-label='Close']"
   @button = @browser.find_element(:xpath, xpath)
   @button.click
   short_wait.until {!callout_visible?(callout_id)}

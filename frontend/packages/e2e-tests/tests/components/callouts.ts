@@ -29,9 +29,9 @@ export class CalloutsComponent {
     return this.containers.nth(index);
   }
 
-  /** The close (x) button inside the nth callout. */
+  /** The close (x) button inside the nth callout (DSCO Popover CloseButton). */
   closeButton(index: number): Locator {
-    return this.callout(index).locator('.tooltip-x-close');
+    return this.callout(index).locator('button[aria-label="Close"]');
   }
 
   /** The qTip wrapper for the nth callout (#qtip-0, ...); carries the z-index. */

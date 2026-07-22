@@ -1711,7 +1711,7 @@ body.iframe_embed_app_and_code {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: $neutral_dark;
+  color: var(--text-neutral-primary);
   @include main-font-semi-bold;
   padding-right: 25px;
 }
@@ -1724,9 +1724,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: $white;
-  color: $charcoal;
-  border: 1px solid $charcoal;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-solid);
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
   padding: 10px;

@@ -921,11 +921,96 @@ html[dir="RTL"] .prompt-icon-cell {
   }
 }
 
+// Callouts render a DSCO Popover inside a qtip shell (see callouts.js).
+// qtip only positions; strip its chrome so the Popover paints everything.
+$callout-tail-length: 12px;
+
+.qtip.cdo-qtips.qtip-dsco {
+  background: none;
+  border: none;
+  box-shadow: none;
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+
+  .qtip-content {
+    padding: 0;
+    overflow: visible;
+  }
+
+  // stylelint-disable-next-line declaration-no-important -- qtip sets inline display on the tip
+  .qtip-tip {
+    display: none !important;
+  }
+
+  // Popover defaults to position: fixed (it expects to position itself);
+  // inside a qtip the shell is the positioner, and the tail's absolute
+  // placement needs the Popover as its containing block.
+  // The drop-shadow stack outlines the composite bubble + tail silhouette;
+  // a plain border can't follow the ::after tail triangle. The Popover's own
+  // box-shadow is dropped (the filters would compound it into a heavy halo)
+  // and replaced by the final soft drop-shadow.
+  .callout-popover {
+    position: relative;
+    box-shadow: none;
+    filter: drop-shadow(1px 0 0 var(--borders-neutral-solid))
+      drop-shadow(-1px 0 0 var(--borders-neutral-solid))
+      drop-shadow(0 1px 0 var(--borders-neutral-solid))
+      drop-shadow(0 -1px 0 var(--borders-neutral-solid))
+      drop-shadow(0 2px 6px rgb(0 0 0 / 0.15));
+
+    // Callouts have no title/content props; hide the Popover's empty
+    // Typography nodes so their flex-gap slots don't offset the message.
+    h5:empty,
+    p:empty {
+      display: none;
+    }
+  }
+
+  // Reserve a gap between the bubble and the target so the Popover tail
+  // (which renders outside the bubble) doesn't overlap the target.
+  .callout-tail-onBottom .callout-popover {
+    margin-top: $callout-tail-length;
+  }
+
+  .callout-tail-onTop .callout-popover {
+    margin-bottom: $callout-tail-length;
+  }
+
+  .callout-tail-onRight .callout-popover {
+    margin-inline-start: $callout-tail-length;
+  }
+
+  .callout-tail-onLeft .callout-popover {
+    margin-inline-end: $callout-tail-length;
+  }
+
+  // Pull the tail toward the anchored corner (Popover centers it by default).
+  .callout-align-left .callout-popover::after {
+    inset-inline-start: 28px;
+  }
+
+  .callout-align-right .callout-popover::after {
+    inset-inline-start: auto;
+    inset-inline-end: 16px;
+    margin-inline-start: 0;
+  }
+
+  .callout-align-top .callout-popover::after {
+    inset-block-start: 20px;
+  }
+
+  .callout-align-bottom .callout-popover::after {
+    inset-block-start: auto;
+    inset-block-end: 20px;
+  }
+}
+
 .qtip.cdo-qtips.qtip-authored-hint {
   .qtip-content {
     @include main-font-regular;
     padding: 10px 10px 0 10px;
-    color: $charcoal;
+    color: var(--text-neutral-primary);
 
     h3 {
       @include main-font-bold;
