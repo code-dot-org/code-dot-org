@@ -15,6 +15,12 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 // Review every couple of years to see if an increase improves test performance
 const MEM_PER_TEST_PROCESS_MB = 4300;
 
+// Jest workers are cheaper than karma processes: ts-jest runs transpile-only
+// (no per-worker type-check program, see #73925) and workers peak at ~1.7 GB
+// heap. Sizing them at 2500 MB fills all 16 CPUs on drone's 64 GB machines
+// while leaving headroom above the observed peak.
+const MEM_PER_JEST_PROCESS_MB = 2500;
+
 module.exports = function (grunt) {
   // Enable time-grunt for detailed task timing if profiling is enabled
   if (envConstants.PROFILE_APPS_BUILD) {
@@ -631,3 +637,4 @@ module.exports = function (grunt) {
 
 // Exported for matching use in `run-tests-in-parallel.sh`
 module.exports.MEM_PER_TEST_PROCESS_MB = MEM_PER_TEST_PROCESS_MB;
+module.exports.MEM_PER_JEST_PROCESS_MB = MEM_PER_JEST_PROCESS_MB;

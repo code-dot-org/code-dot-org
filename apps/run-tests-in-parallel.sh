@@ -7,11 +7,16 @@
 
 set -e
 
+# Jest workers (transpile-only, see #73925) need much less memory than karma
+# processes (which webpack in-process), so they are sized separately: on
+# drone's 16-CPU/64 GB machines jest gets all 16 CPUs while the karma jobs
+# keep their old sizing.
 MEM_PER_TEST_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_TEST_PROCESS_MB)" 2>/dev/null)
-NODE_OPTIONS="--max-old-space-size=${MEM_PER_TEST_PROCESS_MB}"
+MEM_PER_JEST_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_JEST_PROCESS_MB)" 2>/dev/null)
 PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS=80
 
 function linuxNumProcs() {
+  local mem_per_process_mb=$1
   local nprocs=$(nproc)
 
   # Use MemAvailable when available, otherwise fall back to MemFree
@@ -26,7 +31,7 @@ function linuxNumProcs() {
     awk "/${mem_metric}/ {printf \"%d\", \$2 / 1024}" /proc/meminfo
   )
   local mem_you_can_use_mb=$(( mem_available_mb * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
-  local mem_procs=$(( mem_you_can_use_mb / MEM_PER_TEST_PROCESS_MB ))
+  local mem_procs=$(( mem_you_can_use_mb / mem_per_process_mb ))
   local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
   if ((procs == 0)); then
@@ -48,8 +53,9 @@ function macMemAvailableMB() {
 }
 
 function macNumProcs() {
+  local mem_per_process_mb=$1
   local mem_you_can_use=$(( $(macMemAvailableMB) * PERCENT_OF_MEM_AVAILABLE_TO_USE_FOR_TESTS / 100 ))
-  local mem_procs=$(( mem_you_can_use / MEM_PER_TEST_PROCESS_MB ))
+  local mem_procs=$(( mem_you_can_use / mem_per_process_mb ))
   local procs=$(( ${mem_procs} < $(nproc) ? ${mem_procs} : $(nproc) ))
 
   # Run at least two copies in parallel
@@ -61,9 +67,11 @@ function macNumProcs() {
 }
 
 if [ "$(uname)" = "Darwin" ]; then
-  PROCS=$(macNumProcs)
+  PROCS=$(macNumProcs ${MEM_PER_TEST_PROCESS_MB})
+  JEST_PROCS=$(macNumProcs ${MEM_PER_JEST_PROCESS_MB})
 elif [ "$(uname)" = "Linux" ]; then
-  PROCS=$(linuxNumProcs)
+  PROCS=$(linuxNumProcs ${MEM_PER_TEST_PROCESS_MB})
+  JEST_PROCS=$(linuxNumProcs ${MEM_PER_JEST_PROCESS_MB})
 else
   echo "$(uname) not supported"
   exit 1
@@ -75,9 +83,9 @@ echo "#     Running test jobs with ${PROCS}x-parallelism     #"
 echo "##################################################"
 echo
 
-echo && echo "Starting jest with ${PROCS}x workers:"
+echo && echo "Starting jest with ${JEST_PROCS}x workers:"
 
-npx jest --silent --maxWorkers ${PROCS}
+npx jest --silent --maxWorkers ${JEST_PROCS}
 
 echo && echo "Pre-webpacking karma tests before running them:"
 
