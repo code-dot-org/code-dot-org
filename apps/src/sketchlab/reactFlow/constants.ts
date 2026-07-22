@@ -10,6 +10,10 @@ export const DEFAULT_ROTATION = 0;
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
 
+// Screen pixels the viewport shifts per arrow-key press when panning the
+// workspace with the keyboard in hand mode.
+export const KEYBOARD_PAN_STEP = 50;
+
 // Side length of the hidden node that anchors a line endpoint.
 export const LINE_ANCHOR_SIZE_PX = 10;
 
