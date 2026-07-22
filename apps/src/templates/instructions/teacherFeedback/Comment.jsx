@@ -22,6 +22,7 @@ class Comment extends React.Component {
     return (
       <textarea
         id="ui-test-feedback-input"
+        className="form-control"
         style={{...styles.textInput, ...readOnlyStyle}}
         onChange={this.commentChanged}
         placeholder={this.props.placeholderText}
@@ -37,7 +38,7 @@ const styles = {
     marginTop: 0,
     marginBottom: 8,
     display: 'block',
-    width: '90%',
+    width: 'calc(90% + 14px)',
     fontSize: 12,
   },
   readOnly: {

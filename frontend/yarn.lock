@@ -1906,6 +1906,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/fonts@workspace:packages/fonts"
   dependencies:
+    "@fontsource-variable/geist": "npm:^5.3.0"
     "@fontsource-variable/noto-sans": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-arabic": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-armenian": "npm:^5.1.1"
@@ -1924,7 +1925,9 @@ __metadata:
     "@fontsource-variable/noto-sans-telugu": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-thaana": "npm:^5.1.1"
     "@fontsource-variable/noto-sans-thai": "npm:^5.1.1"
+    "@fontsource-variable/space-grotesk": "npm:^5.3.0"
     "@fontsource/barlow-semi-condensed": "npm:^5.1.1"
+    "@fontsource/geist": "npm:^5.3.0"
     "@fontsource/noto-sans-jp": "npm:^5.1.1"
     "@fontsource/noto-sans-kr": "npm:^5.1.1"
     "@fontsource/noto-sans-math": "npm:^5.1.1"
@@ -1932,6 +1935,7 @@ __metadata:
     "@fontsource/noto-sans-sc": "npm:^5.1.1"
     "@fontsource/noto-sans-tc": "npm:^5.1.1"
     "@fontsource/roboto-mono": "npm:^5.2.6"
+    "@fontsource/space-grotesk": "npm:^5.3.0"
     react: "catalog:"
     react-dom: "catalog:"
     sass: "npm:^1.85.0"
@@ -3487,6 +3491,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/geist@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/geist@npm:5.3.0"
+  checksum: 10c0/6b1d1d249643377c885d040769bf0964f242e8d03c4470535329ad4eed3d30a8134fea0d45c0b99b8069924a1f506a3bcb5b8d9cea77b7b5234dc7dd57371842
+  languageName: node
+  linkType: hard
+
 "@fontsource-variable/noto-sans-arabic@npm:^5.1.1":
   version: 5.1.1
   resolution: "@fontsource-variable/noto-sans-arabic@npm:5.1.1"
@@ -3613,10 +3624,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/space-grotesk@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource-variable/space-grotesk@npm:5.3.0"
+  checksum: 10c0/5b92b6c2878be04996caf1785bb7b0920e33c097da1d0c3568355a33a63797c809c1f3b14d19711561129cb2273f1c81adadadd8e6af6165b8f70310a0923189
+  languageName: node
+  linkType: hard
+
 "@fontsource/barlow-semi-condensed@npm:^5.1.1":
   version: 5.1.1
   resolution: "@fontsource/barlow-semi-condensed@npm:5.1.1"
   checksum: 10c0/2f3eacbb1b220f65d35387136f90c7848f355695a240307bf6d07634de4128ad76d4d05a230a647640141ce16f6fd9ab6292fc27f2d6220b7a1b2bd79a555b4e
+  languageName: node
+  linkType: hard
+
+"@fontsource/geist@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/geist@npm:5.3.0"
+  checksum: 10c0/e30cc521d63978e4004b0f6dc403282bcbf5cc9a9fea90fa0a97ca55e3454fb57a1e469963837700667bd128cb8fe1f62f61afc9a48e6c6c24ef28aa551e63bd
   languageName: node
   linkType: hard
 
@@ -3666,6 +3691,13 @@ __metadata:
   version: 5.2.6
   resolution: "@fontsource/roboto-mono@npm:5.2.6"
   checksum: 10c0/a0ac77aacdce5b5fa4a1a4cdb364615e52a208040d5cfdf0537fcf9d84fd3130b7321e627969948430cc557599f4bdd89e38cd7ceaf13cf429b108f697c6a72e
+  languageName: node
+  linkType: hard
+
+"@fontsource/space-grotesk@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/space-grotesk@npm:5.3.0"
+  checksum: 10c0/6804603d339edb99e50419e951c153d6ab0c175cd1a3c5044341c5efa261dcae63aec2288d5dd4d698d82b44c9a23a34f065881055b08887de08df2769c9791a
   languageName: node
   linkType: hard
 

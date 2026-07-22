@@ -211,7 +211,8 @@ button.advancedSettingsButton {
   flex-direction: column;
   text-align: center;
   padding: 36px;
-  font-family: var(--font-family-barlow-semi-condensed-medium);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-medium);
 }
 
 .celebrationDialogBody .celebrationGif {

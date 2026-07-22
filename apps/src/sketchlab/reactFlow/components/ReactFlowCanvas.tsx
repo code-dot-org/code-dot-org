@@ -14,7 +14,14 @@ import {
 } from '@xyflow/react';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from 'react';
 
 import {
   SketchlabReactFlowSource,
@@ -22,6 +29,10 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {
+  hasActiveTour,
+  subscribeToActiveTour,
+} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -151,6 +162,7 @@ export default function ReactFlowCanvas({
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
   const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
     useUndoHistory();
   // Keep undo history refs in sync with current canvas state.
@@ -180,7 +192,11 @@ export default function ReactFlowCanvas({
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
-  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
+  // Read-only viewers get no editing toolbar, so grab (pan) is the only useful
+  // default; editors start in cursor mode.
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>(
+    readOnly ? 'grab' : 'cursor'
+  );
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
@@ -547,6 +563,9 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
+    // The onboarding tour moves focus into its own popup to point at the
+    // element toolbar; don't treat that as the user leaving the element.
+    if (tourActive) return;
     // If the user is actively interacting with the toolbar (mouse or keyboard
     // focus inside it), keep it open regardless of where the focus-tracking
     // state currently points.
@@ -562,7 +581,13 @@ export default function ReactFlowCanvas({
     ) {
       closeToolbar();
     }
-  }, [openToolbarTarget, nodeOrEdgeFocused, lastFocusedEntry, closeToolbar]);
+  }, [
+    openToolbarTarget,
+    nodeOrEdgeFocused,
+    lastFocusedEntry,
+    closeToolbar,
+    tourActive,
+  ]);
 
   // Close the toolbar when its owning node/edge is deleted.
   useEffect(() => {

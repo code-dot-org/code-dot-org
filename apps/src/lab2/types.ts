@@ -31,7 +31,7 @@ import type {
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
 
-export {Theme};
+export type {Theme};
 
 /// ------ USER APP OPTIONS ------ ///
 
