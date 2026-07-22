@@ -739,11 +739,13 @@
 // becomes a solid disabled fill with the inverse label. Everything else
 // (default, hover, unselected disabled, destructive default/hover/pressed)
 // resolves correctly through the bridge.
-// Two Figma tokens are not in the colors_codeAi.css export yet and get
-// the series' fallback pattern: background/state/selected/strong (the
-// export carries that value as --background-selected-hover) and
+// Several Figma tokens are not in the colors_codeAi.css export yet and
+// get the series' fallback pattern: background/state/selected/strong
+// (the export carries that value as --background-selected-hover),
 // border/state/focused/primary (the bridge resolves the legacy focus
-// token to --border-brand-primary, the same indigo).
+// token to --border-brand-primary, the same indigo), the selected
+// checkbox glyph's background/text selected primary-inverse pair, and
+// border/state/focused/inverse (the ring on selected items).
 // Selectors mirror their legacy counterparts plus the [data-brand]
 // attribute; rule order in the block matters for the equal-specificity
 // pressed/selected/disabled combinations and mirrors the legacy cascade.
@@ -780,19 +782,25 @@
             }
           }
 
-          // Selected: the mode-inverted selected pair. On the checked
-          // glyph the square is the glyph color and the check is a
-          // cutout showing background-color through, so the pairing
-          // inverts: seafoam square, selected-fill check.
+          // Selected: the mode-inverted selected pair. The checked
+          // glyph is outline-style — its strokes (square outline +
+          // check) draw in the glyph color and background-color fills
+          // the inner — so the Figma pairing maps to a
+          // primary-inverse inner with the strokes in
+          // text/state/selected/primary-inverse (the selected fill
+          // color): a seafoam box with the check in the fill color.
           &:has(input[type='checkbox']:checked),
           &:has(.selectedDropdownMenuItem) {
             background-color: var(--background-selected-primary);
 
             i::before {
-              background-color: var(--background-selected-primary);
-              color: var(
+              background-color: var(
                 --background-selected-primary-inverse,
                 var(--text-selected-primary)
+              );
+              color: var(
+                --text-selected-primary-inverse,
+                var(--background-selected-primary)
               );
             }
 
@@ -810,6 +818,16 @@
                 color: var(--text-selected-primary);
               }
             }
+
+            // The ring flips to the inverse focused border (seafoam on
+            // the selected fill); the fallback carries the same value
+            // pair as the selected text.
+            .dropdownMenuItem:focus-visible {
+              outline-color: var(
+                --border-focused-inverse,
+                var(--text-selected-primary)
+              );
+            }
           }
 
           // Selected + hover / pressed: Figma background/state/selected/
@@ -821,10 +839,8 @@
           &:active:has(.selectedDropdownMenuItem) {
             background-color: var(--background-selected-hover);
 
-            i::before {
-              background-color: var(--background-selected-hover);
-            }
-
+            // The checkbox glyph keeps its inverse pairing; only the
+            // icon plate follows the fill.
             .dropdownMenuItem i::before {
               background-color: var(--background-selected-hover);
             }
