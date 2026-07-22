@@ -463,14 +463,14 @@ Craft.init = function (config) {
         <ThemeProvider theme={minecraftMuiTheme}>
           <AppView
             collapseIcon={
-              <img style={{width: '1rem'}} src={lessButtonImg} alt="" />
+              <img style={{width: '2rem'}} src={lessButtonImg} alt="" />
             }
             expandIcon={
-              <img style={{width: '1rem'}} src={moreButtonImg} alt="" />
+              <img style={{width: '2rem'}} src={moreButtonImg} alt="" />
             }
-            upIcon={<img style={{width: '1rem'}} src={upButtonImg} alt="" />}
+            upIcon={<img style={{width: '2rem'}} src={upButtonImg} alt="" />}
             downIcon={
-              <img style={{width: '1rem'}} src={downButtonImg} alt="" />
+              <img style={{width: '2rem'}} src={downButtonImg} alt="" />
             }
             visualizationColumn={
               <CraftVisualizationColumn

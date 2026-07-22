@@ -28,7 +28,6 @@ export const RunButton = props => (
     color="primary"
     className={props.hidden ? 'hide' : ''}
     sx={{
-      ...(props.style || {}),
       backgroundColor: 'var(--background-accent-orange-primary)',
       color: 'var(--text-neutral-white-fixed)',
       '&:hover, &.force-hover, &[data-force-hover="true"]': {

@@ -247,6 +247,7 @@ const styles = {
     boxSizing: 'border-box',
     display: 'flex',
     minWidth: 100,
+    flex: '1 1 0',
   },
   helpTabsLtr: {
     paddingLeft: 30,

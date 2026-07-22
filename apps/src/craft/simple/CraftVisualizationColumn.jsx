@@ -10,7 +10,7 @@ import runButtonImg from '../../../static/craft/Sliced_Parts/MC_Run_Arrow_Icon_S
 import BelowVisualization from '../../templates/BelowVisualization';
 import GameButtons from '../../templates/GameButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
-import minecraftMuiTheme from '../minecraftMuiTheme';
+import {minecraftGameButtonMuiTheme} from '../minecraftMuiTheme';
 
 const CraftVisualizationColumn = function (props) {
   return (
@@ -20,19 +20,23 @@ const CraftVisualizationColumn = function (props) {
           <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>
-      <ThemeProvider theme={minecraftMuiTheme}>
+      <ThemeProvider theme={minecraftGameButtonMuiTheme}>
         <GameButtons
           runButtonIcon={
             <img
               alt=""
-              style={{imageRendering: 'pixelated', padding: '.25rem'}}
+              style={{
+                imageRendering: 'pixelated',
+                padding: '.25rem',
+                width: '2.375rem',
+              }}
               src={runButtonImg}
             />
           }
           resetButtonIcon={
             <img
               alt=""
-              style={{imageRendering: 'pixelated'}}
+              style={{imageRendering: 'pixelated', width: '2.375rem'}}
               src={resetButtonImg}
             />
           }

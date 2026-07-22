@@ -14,7 +14,7 @@ import ArrowButtons from '../../templates/ArrowButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
 import GameButtons from '../../templates/GameButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
-import minecraftMuiTheme from '../minecraftMuiTheme';
+import {minecraftGameButtonMuiTheme} from '../minecraftMuiTheme';
 
 const CraftVisualizationColumn = function (props) {
   return (
@@ -25,34 +25,78 @@ const CraftVisualizationColumn = function (props) {
           <div id="phaser-game" />
         </div>
       </ProtectedVisualizationDiv>
-      <ThemeProvider theme={minecraftMuiTheme}>
+      <ThemeProvider theme={minecraftGameButtonMuiTheme}>
         <GameButtons
           runButtonIcon={
             <img
               alt=""
-              style={{imageRendering: 'pixelated', padding: '.25rem'}}
+              style={{
+                imageRendering: 'pixelated',
+                padding: '.25rem',
+                width: '2.375rem',
+              }}
               src={runButtonImg}
             />
           }
           resetButtonIcon={
             <img
               alt=""
-              style={{imageRendering: 'pixelated'}}
+              style={{
+                imageRendering: 'pixelated',
+                width: '2.375rem',
+              }}
               src={resetButtonImg}
             />
           }
         >
           <ArrowButtons
-            downIcon={<img src={downArrowImg} alt="" />}
+            downIcon={
+              <img
+                style={{
+                  width: '28px',
+                  height: '20px',
+                  opacity: 1,
+                }}
+                src={downArrowImg}
+                alt=""
+              />
+            }
             leftIcon={
               <img
-                style={{transform: 'scaleX(-1)'}}
+                style={{
+                  transform: 'scaleX(-1)',
+                  width: '16px',
+                  height: '32px',
+                  padding: '0 6px',
+                  opacity: 1,
+                }}
                 src={runButtonImg}
                 alt=""
               />
             }
-            rightIcon={<img src={runButtonImg} alt="" />}
-            upIcon={<img src={upArrowImg} alt="" />}
+            rightIcon={
+              <img
+                style={{
+                  width: '16px',
+                  height: '32px',
+                  padding: '0 6px',
+                  opacity: 1,
+                }}
+                src={runButtonImg}
+                alt=""
+              />
+            }
+            upIcon={
+              <img
+                style={{
+                  width: '28px',
+                  height: '20px',
+                  opacity: 1,
+                }}
+                src={upArrowImg}
+                alt=""
+              />
+            }
           />
 
           {props.showFinishButton && (

@@ -15,7 +15,7 @@ import BelowVisualization from '../../templates/BelowVisualization';
 import {default as GameButtons} from '../../templates/GameButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import craftMsg from '../locale';
-import minecraftMuiTheme from '../minecraftMuiTheme';
+import {minecraftGameButtonMuiTheme} from '../minecraftMuiTheme';
 
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
@@ -40,7 +40,7 @@ export default class CraftVisualizationColumn extends React.Component {
             )}
           </div>
         </ProtectedVisualizationDiv>
-        <ThemeProvider theme={minecraftMuiTheme}>
+        <ThemeProvider theme={minecraftGameButtonMuiTheme}>
           <GameButtons
             runButtonIcon={
               <img
