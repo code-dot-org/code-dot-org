@@ -219,7 +219,7 @@ class TestRedshiftClient < Minitest::Test
     assert_equal ['batch-123'], ids
   end
 
-  def test_batch_execute_async_splits_lists_over_the_data_api_limit_into_multiple_batches
+  def test_batch_execute_async_splits_over_the_limit_when_separate_transactions_allowed
     resp0 = mock
     resp0.stubs(:id).returns('batch-0')
     resp1 = mock
@@ -232,10 +232,66 @@ class TestRedshiftClient < Minitest::Test
 
     max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
     sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
-    ids = @redshift.batch_execute_async(sqls)
+    ids = @redshift.batch_execute_async(sqls, allow_separate_transactions: true)
 
     assert_equal ['batch-0', 'batch-1'], ids
     assert_equal [max, 1], batch_sizes
+  end
+
+  def test_batch_execute_async_raises_over_the_limit_without_opt_in
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).never
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
+    error = assert_raises(ArgumentError) {@redshift.batch_execute_async(sqls)}
+    assert_includes error.message, 'allow_separate_transactions'
+  end
+
+  def test_batch_execute_async_allows_exactly_the_limit_in_one_atomic_batch
+    resp = mock
+    resp.stubs(:id).returns('batch-0')
+    batch_sizes = []
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:batch_execute_statement).
+      with {|args| batch_sizes << args[:sqls].length; true}.
+      returns(resp)
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    ids = @redshift.batch_execute_async(Array.new(max) {|i| "SELECT #{i}"})
+
+    assert_equal ['batch-0'], ids
+    assert_equal [max], batch_sizes
+  end
+
+  def test_batch_execute_async_preserves_submitted_ids_when_a_later_batch_fails_to_submit
+    resp0 = mock
+    resp0.stubs(:id).returns('batch-0')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:batch_execute_statement).
+      returns(resp0).then.raises(StandardError.new('throttled'))
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
+    error = assert_raises(Cdo::Aws::Redshift::Client::BatchSubmitError) do
+      @redshift.batch_execute_async(sqls, allow_separate_transactions: true)
+    end
+    assert_equal ['batch-0'], error.submitted_ids
+    assert_equal 'throttled', error.cause.message
+  end
+
+  def test_batch_execute_async_propagates_original_error_when_the_first_batch_fails_to_submit
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:batch_execute_statement).
+      raises(StandardError.new('boom'))
+
+    error = assert_raises(StandardError) {@redshift.batch_execute_async(['SELECT 1'])}
+    assert_equal 'boom', error.message
+    refute_kind_of Cdo::Aws::Redshift::Client::BatchSubmitError, error
+  end
+
+  def test_batch_execute_raises_over_the_limit_without_opt_in
+    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).never
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
+    assert_raises(ArgumentError) {@redshift.batch_execute(sqls)}
   end
 
   def test_batch_execute_async_submits_nothing_for_an_empty_list
@@ -243,53 +299,63 @@ class TestRedshiftClient < Minitest::Test
     assert_empty @redshift.batch_execute_async([])
   end
 
-  def test_batch_execute_synchronous_success
+  def test_batch_execute_returns_joined_outcome_on_success
     batch_resp = mock
     batch_resp.stubs(:id).returns('batch-sync-123')
     ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(batch_resp)
 
     desc_finished = mock
     desc_finished.stubs(:status).returns('FINISHED')
-
-    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-sync-123').
       returns(desc_finished)
 
-    status = @redshift.batch_execute(['SELECT 1', 'SELECT 2'])
-    assert_equal ['FINISHED'], status
+    result = @redshift.batch_execute(['SELECT 1', 'SELECT 2'])
+    assert_equal [0], result[:finished]
+    assert_empty result[:failed]
   end
 
-  def test_batch_execute_raises_on_sub_statement_failure
+  def test_batch_execute_returns_failed_batch_rather_than_raising
     batch_resp = mock
     batch_resp.stubs(:id).returns('batch-fail-123')
     ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:batch_execute_statement).returns(batch_resp)
 
-    sub1 = mock
-    sub1.stubs(:status).returns('FINISHED')
-    sub1.stubs(:error).returns(nil)
-    sub1.stubs(:query_string).returns('DROP MATERIALIZED VIEW IF EXISTS s.v')
-
-    sub2 = mock
-    sub2.stubs(:status).returns('FAILED')
-    sub2.stubs(:error).returns('permission denied for schema s')
-    sub2.stubs(:query_string).returns('CREATE MATERIALIZED VIEW s.v AS SELECT 1')
-
     desc_failed = mock
     desc_failed.stubs(:status).returns('FAILED')
-    desc_failed.stubs(:error).returns('')
-    desc_failed.stubs(:query_string).returns('')
-    desc_failed.stubs(:sub_statements).returns([sub1, sub2])
-
-    ::Aws::RedshiftDataAPIService::Client.any_instance.expects(:describe_statement).
+    desc_failed.stubs(:error).returns('permission denied for schema s')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-fail-123').
-      twice.
-      returns(desc_failed, desc_failed)
+      returns(desc_failed)
 
-    error = assert_raises(Cdo::Aws::Redshift::Client::QueryError) do
-      @redshift.batch_execute(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
-    end
-    assert_includes error.message, 'Sub-statement 2 FAILED'
-    assert_includes error.message, 'permission denied for schema s'
+    result = @redshift.batch_execute(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
+    assert_empty result[:finished]
+    assert_equal [[0, 'permission denied for schema s']], result[:failed]
+  end
+
+  def test_batch_execute_reports_each_batch_separately_on_the_split_path
+    resp0 = mock
+    resp0.stubs(:id).returns('batch-0')
+    resp1 = mock
+    resp1.stubs(:id).returns('batch-1')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:batch_execute_statement).
+      returns(resp0).then.returns(resp1)
+
+    ok = mock
+    ok.stubs(:status).returns('FINISHED')
+    bad = mock
+    bad.stubs(:status).returns('FAILED')
+    bad.stubs(:error).returns('boom')
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
+      with(id: 'batch-0').returns(ok)
+    ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
+      with(id: 'batch-1').returns(bad)
+
+    max = Cdo::Aws::Redshift::Client::MAX_BATCH_STATEMENTS
+    sqls = Array.new(max + 1) {|i| "SELECT #{i}"}
+    result = @redshift.batch_execute(sqls, allow_separate_transactions: true)
+
+    assert_equal [0], result[:finished]
+    assert_equal [[1, 'boom']], result[:failed]
   end
 
   def test_execute_failure_includes_sub_statement_errors

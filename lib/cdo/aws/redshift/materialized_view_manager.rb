@@ -420,12 +420,14 @@ module Cdo
             end
           end
 
-          # Drop orphaned views. `batch_execute_async` splits the consolidated drop (a full
-          # re-provision can produce a couple hundred) across as many Data API batches as the
-          # per-call statement limit requires, returning one statement id per batch.
+          # Drop orphaned views. A full re-provision can orphan a couple hundred, exceeding the Data
+          # API's per-call statement limit, so we opt into `allow_separate_transactions`: these drops
+          # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
+          # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
+          # batch.
           if plan[:to_drop].any?
             drop_sqls = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
-            client.batch_execute_async(drop_sqls).each_with_index do |statement_id, batch_index|
+            client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
               plan[:statements]["__drop_orphans___#{batch_index}"] = statement_id
             end
             yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
