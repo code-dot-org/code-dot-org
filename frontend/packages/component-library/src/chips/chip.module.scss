@@ -231,9 +231,10 @@
       background-color: var(--background-selected-hover);
     }
 
-    // Selected + pressed; outline-color recolors the legacy inset
-    // outline so it blends into the fill.
+    // Selected + pressed; border and the legacy inset outline both take
+    // the fill color, so no ring shows regardless of hover state.
     &:active:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-hover);
       background-color: var(--background-selected-hover);
       outline-color: var(--border-selected-hover);
     }
