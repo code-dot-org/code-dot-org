@@ -413,8 +413,12 @@ export default function ReactFlowCanvas({
     [readOnly, getViewport, setReactFlowViewport]
   );
 
+  // Only treat keyboard focus as "on the workspace". A mouse pan also focuses
+  // this div, but :focus-visible is false for pointer focus — matching the CSS
+  // focus frame — so the pan hint stays hidden for mouse users.
   const handleWorkspaceFocus = useCallback((event: React.FocusEvent) => {
-    if (event.target === event.currentTarget) setWorkspaceFocused(true);
+    if (event.target !== event.currentTarget) return;
+    setWorkspaceFocused(event.currentTarget.matches(':focus-visible'));
   }, []);
 
   const handleWorkspaceBlur = useCallback((event: React.FocusEvent) => {
