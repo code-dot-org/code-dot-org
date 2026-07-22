@@ -1397,10 +1397,6 @@ class LevelsControllerTest < ActionController::TestCase
     end
   end
 
-  # extra_links gates the levelbuilder edit-mode links on
-  # Level#channel_backed?; the toolbox link additionally requires a Blockly
-  # level.
-
   test "extra_links includes start, exemplar, and toolbox links for music levels" do
     texts = extra_links_texts(create(:music))
     assert_includes texts, '[s]tart'
