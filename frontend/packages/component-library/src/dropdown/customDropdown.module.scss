@@ -802,6 +802,14 @@
                 --text-selected-primary-inverse,
                 var(--background-selected-primary)
               );
+
+              // The Checkbox component draws its own 2px checked
+              // border; the spec has no separate glyph border — it
+              // matches the inner fill.
+              border-color: var(
+                --background-selected-primary-inverse,
+                var(--text-selected-primary)
+              );
             }
 
             span {
