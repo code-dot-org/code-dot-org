@@ -1,6 +1,9 @@
 import {useCallback, useEffect} from 'react';
 import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -18,10 +21,15 @@ import {
 
 export {REVIEW_SYLLABUS_ONBOARDING_STEP_KEY};
 
+const TOUR_NAME = 'view_syllabus';
+
 export const recordViewSyllabusCompletion = () => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_COMPLETED, {
+    tour_name: TOUR_NAME,
+  });
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
-    JSON.stringify({tour_name: 'view_syllabus'}),
+    JSON.stringify({tour_name: TOUR_NAME}),
     true,
     {'Content-Type': 'application/json'}
   ).catch(err => console.error('Failed to record tour completion:', err));
@@ -82,7 +90,14 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     clearStep();
     recordViewSyllabusCompletion();
   });
-  tour.on('cancel', clearStep);
+  tour.on('cancel', () => {
+    recordOnboardingTourAbandonment(
+      tour,
+      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+      TOUR_NAME
+    );
+    clearStep();
+  });
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
   tour.show(startStep.id);
@@ -135,6 +150,7 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
   const {tour} = useOnboardingTour({
     getSteps,
     sessionStorageKey: REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+    tourName: TOUR_NAME,
   });
 
   return tour;

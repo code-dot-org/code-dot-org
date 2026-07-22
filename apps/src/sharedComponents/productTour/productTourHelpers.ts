@@ -4,8 +4,10 @@ import Shepherd, {
   type Tour,
 } from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
-import {navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref, tryGetSessionStorage} from '@cdo/apps/utils';
 
 // Scrolls the element to the center of the viewport only if it is not already
 // fully visible. Avoids jarring scroll when the target is already on screen.
@@ -180,6 +182,32 @@ export const createQuizWhenHandlers = (
       }
     },
   };
+};
+
+// Call from a tour's 'cancel' handler, before clearing sessionStorage, to
+// report abandonment unless this cancel is actually a hand-off to the next
+// page. When a step's click handler hands off (e.g. "View progress"), it
+// saves the destination page's step id to sessionStorage and calls
+// step.hide() rather than tour.cancel() — tour.currentStep is left pointing
+// at the pre-hand-off step. The tour is only cancelled later, when the next
+// page's resume function calls Shepherd.activeTour?.cancel() to retire it.
+// At that point sessionStorage still holds the (different) destination step
+// id, which is how a hand-off is told apart from a genuine abandonment.
+export const recordOnboardingTourAbandonment = (
+  tour: Tour,
+  sessionStorageKey: string,
+  tourName: string
+): void => {
+  const pendingHandoffStepId = tryGetSessionStorage(sessionStorageKey, '');
+  const currentStepId = tour.currentStep?.id;
+  const isHandoff =
+    pendingHandoffStepId !== '' && pendingHandoffStepId !== currentStepId;
+  if (isHandoff) return;
+
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_ABANDONED, {
+    tour_name: tourName,
+    step_id: currentStepId,
+  });
 };
 
 export const createTourWithSteps = (

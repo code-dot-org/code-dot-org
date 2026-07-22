@@ -1,6 +1,9 @@
 import {renderHook} from '@testing-library/react-hooks';
 import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useLearnHowToEvaluateTour, {
   resumeLearnHowToEvaluateTour,
@@ -19,6 +22,12 @@ const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
 >;
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+  ),
+  recordTourAbandonment: jest.fn(),
+}));
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
   jest.fn(({getSteps}: {getSteps: (t: Tour) => unknown}) => {
     const tour = (
@@ -53,6 +62,10 @@ const mockTryGetSessionStorage = tryGetSessionStorage as jest.MockedFunction<
 const mockTrySetSessionStorage = trySetSessionStorage as jest.MockedFunction<
   typeof trySetSessionStorage
 >;
+const mockRecordTourAbandonment =
+  recordOnboardingTourAbandonment as jest.MockedFunction<
+    typeof recordOnboardingTourAbandonment
+  >;
 
 const makeMockTour = () => {
   const handlers: Record<string, (() => void)[]> = {};
@@ -74,9 +87,14 @@ const makeMockTour = () => {
 };
 
 describe('recordLearnToEvaluateCompletion', () => {
+  let sendEventSpy: jest.SpyInstance;
+
   beforeEach(() => {
     jest.clearAllMocks();
     mockHttpClientPost.mockResolvedValue(new Response());
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
   });
 
   it('calls HttpClient.post with correct args', () => {
@@ -86,6 +104,16 @@ describe('recordLearnToEvaluateCompletion', () => {
       JSON.stringify({tour_name: 'learn_to_evaluate'}),
       true,
       {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('sends an ONBOARDING_TOUR_COMPLETED analytics event with the tour name', () => {
+    recordLearnToEvaluateCompletion();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_COMPLETED,
+      {
+        tour_name: 'learn_to_evaluate',
+      }
     );
   });
 
@@ -180,6 +208,26 @@ describe('resumeLearnHowToEvaluateTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('reports abandonment before clearing sessionStorage on cancel', () => {
+    const savedStepId = 'progress-table-step';
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+    mockTryGetSessionStorage.mockReturnValue(savedStepId);
+
+    resumeLearnHowToEvaluateTour();
+    (mockTour as unknown as {_trigger: (event: string) => void})._trigger(
+      'cancel'
+    );
+
+    expect(mockRecordTourAbandonment).toHaveBeenCalledWith(
+      mockTour,
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'learn_to_evaluate'
+    );
+    expect(mockRecordTourAbandonment.mock.invocationCallOrder[0]).toBeLessThan(
+      mockTrySetSessionStorage.mock.invocationCallOrder[0]
+    );
   });
 
   it('cancels any active Shepherd tour before creating the resumed tour', () => {
