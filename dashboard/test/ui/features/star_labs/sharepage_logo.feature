@@ -58,7 +58,7 @@ Feature: Lab share page logo
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
-    And element "#main-logo" does not exist
+    And element "#main_logo" does not exist
 
   @only_mobile
   Scenario: When on a gamelab share page while logged out on mobile, there is no logo.
@@ -68,4 +68,4 @@ Feature: Lab share page logo
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
-    And element "#main-logo" does not exist
+    And element "#main_logo" does not exist
