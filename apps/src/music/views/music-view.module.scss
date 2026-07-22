@@ -3,7 +3,7 @@
 @import '../../mixins.scss';
 
 // Constants
-$timeline-area-height: 200px;
+$timeline-area-height: 202px;
 $work-area-min-height: 50%;
 $default-border-radius: 0;
 $default-spacing: 2px;
@@ -39,7 +39,6 @@ $default-spacing: 2px;
   flex-direction: row;
   min-height: $work-area-min-height;
   overflow: hidden;
-  margin-top: $default-spacing;
 
   &.toolboxMode {
     max-height: 100%; // Allow the work area to take full height
@@ -57,7 +56,7 @@ $default-spacing: 2px;
   flex-direction: row;
 
   .controlsArea {
-    width: 220px;
+    width: 221px;
     height: 100%;
     border: variables.$default-border;
     border-inline-start: none;

@@ -22,11 +22,12 @@ const ThreeColumns = props => {
       boxSizing: 'border-box',
     },
     middle: {
-      width: '100%',
       position: 'relative',
       float: isRtl ? 'right' : 'left',
       height,
+      width: '100%',
       overflowY: 'scroll',
+      scrollbarWidth: 'none',
     },
     left: {
       position: 'relative',

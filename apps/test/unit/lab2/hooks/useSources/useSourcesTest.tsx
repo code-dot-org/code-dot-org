@@ -98,10 +98,7 @@ describe('useSources', () => {
     levelProperties: LevelProperties = LEVEL_ONE,
     options: {
       includeVersionHistory?: boolean;
-      computeHasEdited?: (
-        prev: TestSources | undefined,
-        next: TestSources
-      ) => boolean;
+      computeHasEdited?: (prev: TestSources, next: TestSources) => boolean;
     } = {}
   ) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
@@ -259,7 +256,7 @@ describe('useSources', () => {
   describe('computeHasEdited', () => {
     it('lets the lab decide which changes count as edits', async () => {
       const {result} = renderUseSources(LEVEL_ONE, {
-        computeHasEdited: (prev, next) => prev?.source !== next.source,
+        computeHasEdited: (prev, next) => prev.source !== next.source,
       });
       await flush();
 
