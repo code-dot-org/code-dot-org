@@ -287,14 +287,24 @@ html[dir='rtl'] {
         background-color: var(--background-selected-primary);
       }
 
-      // OFF half of the track.
+      // OFF half of the track; its icon follows the theme (white in
+      // Light, black in Dark) instead of the legacy fixed white — the
+      // neutral ramp inverts in Dark (septenary resolves to gray-30),
+      // so a fixed-white icon would sit at ~1.9:1 there.
       &::after {
+        color: var(--text-neutral-primary-inverse);
         background-color: var(--background-neutral-septenary);
       }
     }
 
-    // ON thumb inverts against the selected track. OFF and disabled
-    // thumbs keep the legacy white-fixed fill.
+    // Thumbs follow the theme for the same reason as the OFF icon (the
+    // Figma thumb fill is background/neutral/primary); the disabled
+    // thumb keeps the legacy white-fixed fill from the base rule.
+    div input[type='checkbox']:not(:disabled) + .switch span {
+      background: var(--background-neutral-primary);
+    }
+
+    // ON thumb inverts against the selected track.
     div input[type='checkbox']:checked:not(:disabled) + .switch span {
       background: var(
         --background-selected-primary-inverse,
