@@ -46,10 +46,7 @@ function initPage() {
   if (mainLogoMountPoint) {
     createReactRoot(
       <ShareLogo logoUrl={mainLogoMountPoint.dataset.logoUrl} />,
-      mainLogoMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      mainLogoMountPoint
     );
   }
 
