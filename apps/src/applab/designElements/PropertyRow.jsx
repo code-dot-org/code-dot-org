@@ -116,8 +116,10 @@ export default class PropertyRow extends React.Component {
     if (this.props.isMultiLine) {
       inputElement = (
         <textarea
+          className="form-control"
           value={this.state.value}
           onChange={this.handleChangeInternal}
+          style={{marginBottom: 18}}
         />
       );
     } else {
