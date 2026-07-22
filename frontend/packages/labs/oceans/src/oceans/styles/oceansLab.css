@@ -52,6 +52,3 @@
   flex-shrink: 0;
   font-size: calc(var(--oceans-lab-width) * var(--oceans-lab-font-scale));
 }
-
-/* The box-sizing reset for #container-react lives in scenes.css so it
- * ships with the lab itself; this file no longer carries it. */

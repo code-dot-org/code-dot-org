@@ -192,7 +192,11 @@ export default function ReactFlowCanvas({
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
-  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
+  // Read-only viewers get no editing toolbar, so grab (pan) is the only useful
+  // default; editors start in cursor mode.
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>(
+    readOnly ? 'grab' : 'cursor'
+  );
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
