@@ -111,9 +111,23 @@
           display: flex;
           gap: 20px;
           align-items: center;
+          position: relative;
 
-          &Alternate {
+          > * {
+            position: relative;
+            z-index: 1;
+          }
+
+          // This is color-mix(var(--background-neutral-secondary), transparent 50%)
+          // without color-mix(), which misses our Chrome 109 and Safari iOS 16 floor.
+          &Alternate:not(.packSelected)::before {
+            content: '';
+            position: absolute;
+            inset: 0;
             background-color: var(--background-neutral-secondary);
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 0;
           }
 
           &Selected {
