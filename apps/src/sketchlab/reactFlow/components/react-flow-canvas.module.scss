@@ -7,9 +7,6 @@
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;
 
-// In hand mode this wrapper is the single tab stop for the whole workspace,
-// so keyboard users can pan with the arrow keys. Frame it on keyboard focus
-// to show the workspace is selected.
 .workspace {
   position: relative;
   width: 100%;

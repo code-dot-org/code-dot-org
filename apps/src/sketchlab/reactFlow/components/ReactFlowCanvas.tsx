@@ -208,7 +208,7 @@ export default function ReactFlowCanvas({
     string | null
   >(null);
   // True while the workspace wrapper itself (the hand-mode tab stop) holds
-  // keyboard focus. Gates the pan hint banner and the arrow/Esc handling.
+  // keyboard focus.
   const [workspaceFocused, setWorkspaceFocused] = useState(false);
 
   const openToolbar = useCallback(
@@ -351,16 +351,31 @@ export default function ReactFlowCanvas({
   // One banner at a time, highest priority first: an upload error, then a
   // group-mode error, the group-mode hint while group mode is active, and
   // finally the hand-tool pan hint while the workspace itself is focused.
-  const banner: {message: string; variant: 'info' | 'error'} | null =
-    imageUploadError
-      ? {message: imageUploadError, variant: 'error'}
-      : groupModeError
-      ? {message: groupModeError, variant: 'info'}
-      : isGroupMode
-      ? {message: GROUP_MODE_HINT, variant: 'info'}
-      : !readOnly && isGrabMode && workspaceFocused
-      ? {message: HAND_MODE_HINT, variant: 'info'}
-      : null;
+  const banner = useMemo<{
+    message: string;
+    variant: 'info' | 'error';
+  } | null>(() => {
+    if (imageUploadError) {
+      return {message: imageUploadError, variant: 'error'};
+    }
+    if (groupModeError) {
+      return {message: groupModeError, variant: 'info'};
+    }
+    if (isGroupMode) {
+      return {message: GROUP_MODE_HINT, variant: 'info'};
+    }
+    if (!readOnly && isGrabMode && workspaceFocused) {
+      return {message: HAND_MODE_HINT, variant: 'info'};
+    }
+    return null;
+  }, [
+    imageUploadError,
+    groupModeError,
+    isGroupMode,
+    readOnly,
+    isGrabMode,
+    workspaceFocused,
+  ]);
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
@@ -368,14 +383,13 @@ export default function ReactFlowCanvas({
   }, [clearSelection]);
 
   // The workspace wrapper is the single tab stop for the canvas in hand mode.
-  // While it holds focus, arrow keys pan the viewport (scroll convention: an
-  // arrow reveals content on that side) and Esc returns to the select tool.
+  // While it holds focus, arrow keys pan the viewport and Esc returns to the select tool.
   const handleWorkspaceKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
       if (event.target !== event.currentTarget) return;
 
-      // Only editors can switch back to the hand tool, so leave read-only
-      // viewers in pan mode on Escape rather than stranding them.
+      // Leave read-only viewers in pan mode on Escape rather than stranding them,
+      // as the only tool available in read only is the hand tool.
       if (event.key === 'Escape') {
         if (readOnly) return;
         event.preventDefault();
@@ -413,9 +427,6 @@ export default function ReactFlowCanvas({
     [readOnly, getViewport, setReactFlowViewport]
   );
 
-  // Only treat keyboard focus as "on the workspace". A mouse pan also focuses
-  // this div, but :focus-visible is false for pointer focus — matching the CSS
-  // focus frame — so the pan hint stays hidden for mouse users.
   const handleWorkspaceFocus = useCallback((event: React.FocusEvent) => {
     if (event.target !== event.currentTarget) return;
     setWorkspaceFocused(event.currentTarget.matches(':focus-visible'));
@@ -968,10 +979,8 @@ export default function ReactFlowCanvas({
                     {ariaAnnouncement}
                   </div>
                   {/* In hand mode this is the single keyboard tab stop for
-                      the canvas: role=application so the arrow keys reach our
-                      pan handler instead of the browser, and it is only a tab
-                      stop while the hand tool is active. */}
-                  {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- role=application canvas region intentionally owns keyboard pan handlers */}
+                      the canvas, so users can use arrow keys to pan */}
+                  {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
                   <div
                     className={styles.workspace}
                     role="application"
