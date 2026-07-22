@@ -7,13 +7,10 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
-import useSources, {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
+import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
-import {setPageError} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {LabProps} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
-import Loading from '@cdo/apps/lab2/views/Loading';
+import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
@@ -128,6 +125,10 @@ interface SpriteLab2ViewProps {
   patchSources: UseSourcesOutput<SpriteLab2Source>['patchSources'];
   channelId?: string;
   hasEdited: boolean;
+  startOver: () => void;
+  isEditable: boolean;
+  // Used for keying effects off of sources reinitializing.
+  sourcesReinitializedCount: number;
 }
 
 const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
@@ -137,6 +138,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   patchSources,
   channelId,
   hasEdited,
+  startOver,
+  isEditable,
+  sourcesReinitializedCount,
 }) => {
   const {theme} = useTheme();
   const dispatch = useAppDispatch();
@@ -192,6 +196,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
+  const [showStartOver, setShowStartOver] = useState(false);
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -218,6 +223,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
 
+  // Reset activeSceneId if it doesn't point to an existing scene (e.g. code cleared via start over).
+  useEffect(() => {
+    if (!scenes.some(s => s.id === activeSceneId)) {
+      setActiveSceneId(scenes[0].id);
+    }
+  }, [scenes, activeSceneId]);
+
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
   useEffect(() => {
@@ -234,21 +246,29 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [levelProperties.id, dispatch]);
 
+  // Seed the redux animation list from a sources animations value.
+  const seedAnimationList = useCallback(
+    (animations: SpriteLab2Source['animations']) => {
+      dispatch(
+        setInitialAnimationList(
+          // Deep-cloned: the legacy thunk normalizes its argument IN PLACE,
+          // and this object belongs to the sources state.
+          cloneDeep(animations || EMPTY_ANIMATION_LIST),
+          // No v3 migration; the engine never runs the legacy share path.
+          undefined as unknown as object,
+          true /* isSpriteLab */
+        )
+      );
+    },
+    [dispatch]
+  );
+
   // Seed the animation list BEFORE the workspace injects: dropdown fields
   // validate saved values against the store at block-load time — hence the
   // animationsSeeded gate on useBlocklyWorkspace, not just dispatch ordering.
   useEffect(() => {
     let cancelled = false;
-    dispatch(
-      setInitialAnimationList(
-        // Deep-cloned: the legacy thunk normalizes its argument IN PLACE,
-        // and this object belongs to the sources state.
-        cloneDeep(initialSources.animations || EMPTY_ANIMATION_LIST),
-        // No v3 migration; the engine never runs the legacy share path.
-        undefined as unknown as object,
-        true /* isSpriteLab */
-      )
-    );
+    seedAnimationList(initialSources.animations);
     if (!SCENES_UI_VARIANT) {
       setAnimationsSeeded(true);
       return;
@@ -299,9 +319,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     return () => {
       cancelled = true;
     };
-    // Re-seeds only when the level changes (dispatch is store-stable,
+    // Re-seeds only when the level changes (seedAnimationList is stable,
     // initialSources is a ref-captured constant).
-  }, [levelProperties.id, dispatch, initialSources]);
+  }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
+
+  // Reseed the animation list when sources are reinitialized (e.g. start over).
+  const seededReinitCountRef = useRef(0);
+  useEffect(() => {
+    if (sourcesReinitializedCount === seededReinitCountRef.current) {
+      return;
+    }
+    seededReinitCountRef.current = sourcesReinitializedCount;
+    seedAnimationList(currentSources.animations);
+  }, [sourcesReinitializedCount, currentSources.animations, seedAnimationList]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
@@ -731,6 +761,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   return (
     <div className={moduleStyles.labRow}>
+      {showStartOver && isEditable && (
+        <StartOverDialog
+          onConfirm={() => {
+            startOver();
+            setShowStartOver(false);
+          }}
+          onCancel={() => setShowStartOver(false)}
+          type="blocks"
+        />
+      )}
       <ResourcePanel
         levelProperties={levelProperties}
         isRunning={isRunning}
@@ -749,6 +789,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         onTabChange={handleTabChange}
         enabledTabs={ENABLED_TABS}
         visibleTabs={ENABLED_TABS}
+        onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
         codeTabExtra={
           SCENES_UI_VARIANT && animationsSeeded ? (
             <SceneSelector
@@ -825,50 +866,4 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 };
 
-// Container that handles loading sources and wiring project manager, and the hands off to the inner view.
-const SpriteLab2Container: React.FunctionComponent<
-  LabProps<SpriteLab2LevelProperties, SpriteLab2Source>
-> = ({levelProperties}) => {
-  const dispatch = useAppDispatch();
-  const {
-    currentSources,
-    updateSources,
-    patchSources,
-    channel,
-    projectManager,
-    loadError,
-    hasEdited,
-  } = useSources<SpriteLab2Source>({levelProperties, defaultSources});
-
-  // Set the project manager in the registry for external components that need it (e.g. header).
-  useEffect(() => {
-    if (projectManager) {
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-    }
-    return () => Lab2Registry.getInstance().clearProjectManager();
-  }, [projectManager]);
-
-  useEffect(() => {
-    if (loadError) {
-      dispatch(
-        setPageError({errorMessage: 'Error loading project', error: loadError})
-      );
-    }
-  }, [loadError, dispatch]);
-
-  if (!currentSources) {
-    return <Loading isLoading={true} />;
-  }
-  return (
-    <SpriteLab2View
-      levelProperties={levelProperties}
-      currentSources={currentSources}
-      updateSources={updateSources}
-      patchSources={patchSources}
-      channelId={channel?.id}
-      hasEdited={hasEdited}
-    />
-  );
-};
-
-export default SpriteLab2Container;
+export default SpriteLab2View;
