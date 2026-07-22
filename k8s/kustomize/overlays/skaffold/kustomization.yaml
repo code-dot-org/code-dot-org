@@ -1,6 +1,9 @@
+# Full-app deploy target for Skaffold. The base Skaffold config deploys
+# ../skaffold-backend; the dashboard profile swaps in this path.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../development
 patches:
   - path: deployment-root.patch.yaml
+  - path: active-job-worker-root.patch.yaml

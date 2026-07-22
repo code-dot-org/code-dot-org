@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cdo-locals.yml
+  labels:
+    app.kubernetes.io/component: locals.yml
+data:
+  build_apps: "true"
+  use_my_apps: "true"
+
+  # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
+  #
+
+  # These are secrets that cause exceptions booting our dashbaord app in development
+  # We hope to get rid of needing these overrides soon, see:
+  # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
+  cloudfront_key_pair_id: ""
+  cloudfront_private_key: ""
+  slack_bot_token: ""
+  properties_encryption_key: ""
+
+  # Same idea for the adhoc environment used by the ActiveJob worker and the
+  # setup-db-minimal job: without these blanks, config resolution falls
+  # through to AWS Secrets Manager, which has no credentials in a local
+  # cluster. Real values injected later via cdo-external-secrets still win
+  # (later envFrom sources override the ConfigMap).
+  contentful_api_key: ""
+  contentful_cs_for_all_access_token: ""
+  javabuilder_key_password: ""
+  javabuilder_private_key: ""
+  openai_student_learning_api_key: ""
+  puma_control_server_token: ""
+  recaptcha_secret_key: ""
+  recaptcha_site_key: ""
+
+  # Read at eager-load time by rake db:migrate in development (the
+  # analytics_exportable enhance eager-loads the app); Secret-marked in
+  # config/development.yml.erb.
+  ai_gateway_auth_key: ""
+  ai_gateway_auth_key_passphrase: ""
+
+  #
+
+  # Local service non-secret configuration. Append-only so we do not mix these
+  # values into the legacy locals.yml sections above.
+  dashboard_workers: "0"
+
+  # ActiveJob queue adapter, shared by enqueuers (dashboard) and the
+  # cdo-active-job-worker deployment so jobs land where the worker looks.
+  # Mirrored in k8s/helm/templates/locals.yml.yaml.
+  active_job_queue_adapter: ":delayed_job"

@@ -7,9 +7,15 @@
 
 # Pull in the static assets and db seed layers built from separate dockerfiles by
 # skaffold.
-ARG CODE_DOT_ORG_PEGASUS
-ARG CODE_DOT_ORG_STATIC
-ARG CODE_DOT_ORG_DB_SEED
+#
+# The frontend-chain images default to `scratch` so backend-only builds
+# (--target code-dot-org-activejob-only) can omit them: BuildKit rejects a
+# blank FROM name at parse time even for stages the target never reaches.
+# Targets that actually consume these stages (runtime) get real values from
+# skaffold.
+ARG CODE_DOT_ORG_PEGASUS=scratch
+ARG CODE_DOT_ORG_STATIC=scratch
+ARG CODE_DOT_ORG_DB_SEED=scratch
 ARG CODE_DOT_ORG_CORE
 ARG BUNDLE_JOBS=2
 ARG BUNDLE_WITHOUT=development:test

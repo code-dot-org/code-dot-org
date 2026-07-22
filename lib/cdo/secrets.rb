@@ -7,10 +7,15 @@ require 'json'
 
 module Cdo
   # Interface for fetching secrets from AWS Secrets Manager.
+  #
+  # SDK references must be written ::Aws, fully qualified: inside `module Cdo`
+  # a bare Aws:: resolves to Cdo::Aws (lib/cdo/aws/redshift) whenever that
+  # namespace has been loaded, e.g. under `rake`, which loads
+  # dashboard/lib/tasks/analytics_exportable.rake.
   class Secrets
     CURRENT = "AWSCURRENT".freeze
-    NOT_FOUND = Aws::SecretsManager::Errors::ResourceNotFoundException
-    EXISTS = Aws::SecretsManager::Errors::ResourceExistsException
+    NOT_FOUND = ::Aws::SecretsManager::Errors::ResourceNotFoundException
+    EXISTS = ::Aws::SecretsManager::Errors::ResourceExistsException
 
     attr_accessor :logger
 
@@ -26,10 +31,10 @@ module Cdo
       required(*required)
     end
 
-    # @return [Concurrent::Promises::Future<Aws::SecretsManager::Client>] Secrets Manager Client
+    # @return [Concurrent::Promises::Future<::Aws::SecretsManager::Client>] Secrets Manager Client
     def client_promise
       @client_promise ||= Concurrent::Promises.future_on(@pool) do
-        @client || Aws::SecretsManager::Client.new
+        @client || ::Aws::SecretsManager::Client.new
       end
     end
 
@@ -126,7 +131,7 @@ module Cdo
     end
 
     # Call GetSecretValue for the provided key.
-    # @param client[Aws::SecretsManager::Client]
+    # @param client[::Aws::SecretsManager::Client]
     # @param key[String]
     # @return [String]
     private def get_secret_value(client, key)

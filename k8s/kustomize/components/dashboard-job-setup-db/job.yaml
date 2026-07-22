@@ -15,11 +15,14 @@ spec:
       containers:
         - name: setup-db
           image: code-dot-org:latest
+          imagePullPolicy: IfNotPresent
           command:
             - sh
             - -c
           args:
-            - cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'
+            # bundle exec: the ruby-slim base image ships an older default
+            # rake than the Gemfile pins, so bare `rake` fails to activate.
+            - cd dashboard && bundle exec rake dashboard:setup_db && echo 'setup-db COMPLETE'
           tty: true
           env:
             - name: RAILS_ENV

@@ -1,3 +1,17 @@
+# ActiveJob (delayed_job) worker. First piece of the app to move to
+# Kubernetes; server envTypes in k8s-gitops will configure it per
+# environment. Until they do, everything environment-specific is pinned
+# here (and mirrored in the Helm chart's activeJobWorker values) so the
+# manifest renders identically for every environment:
+#
+# - RAILS_ENV is pinned to adhoc; env overlays may override.
+# - The CDO_* env entries pin worker tuning; the blank secret overrides the
+#   adhoc boot needs live in the shared locals ConfigMap (locals.yml.yaml)
+#   so the setup-db-minimal job inherits them too.
+#
+# Local-dev relaxations (allowPrivilegeEscalation, optional external
+# secrets) live in ../../overlays/backend, mirroring how
+# ../../overlays/development relaxes the dashboard deployment.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,12 +31,12 @@ spec:
       containers:
         - name: active-job-worker
           image: code-dot-org:latest
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           command:
             - sh
             - -c
           args:
-            - cd dashboard && RAILS_ENV=adhoc RACK_ENV=adhoc bundle exec bin/delayed_job run
+            - cd dashboard && bundle exec bin/delayed_job run
           tty: true
           env:
             - name: RAILS_ENV
@@ -33,6 +47,10 @@ spec:
               value: "1"
             - name: AWS_EC2_METADATA_DISABLED
               value: "true"
+            - name: CDO_ACTIVE_JOB_BACKEND_N_WORKERS_TO_START
+              value: "1"
+            - name: CDO_ACTIVE_JOB_BACKEND_ROLLING_RESTART_IN_N_BATCHES
+              value: "1"
           envFrom:
             - prefix: CDO_
               configMapRef:
@@ -40,7 +58,7 @@ spec:
             - prefix: CDO_
               secretRef:
                 name: cdo-external-secrets
-                optional: true
+                optional: false
             - prefix: CDO_
               secretRef:
                 name: cdo-local-secrets
@@ -54,9 +72,9 @@ spec:
               memory: 2Gi
               ephemeral-storage: 30Gi
           securityContext:
-            allowPrivilegeEscalation: true
+            allowPrivilegeEscalation: false
       securityContext:
-        runAsUser: 0
-        runAsGroup: 0
-        fsGroup: 0
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
       enableServiceLinks: false

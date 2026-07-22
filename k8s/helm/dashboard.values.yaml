@@ -1,0 +1,6 @@
+# Additive layer: the dashboard frontend on top of the backend-only chart
+# defaults (values.yaml). Stacked by the Skaffold `dashboard` profile and by
+# any server render that wants the full app. Deactivate with
+# `skaffold dev -p -dashboard` for a backend-only deployment.
+dashboard:
+  enabled: true

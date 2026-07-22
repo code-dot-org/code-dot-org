@@ -5,6 +5,14 @@
 #
 # IF YOU MODIFY THIS FILE, also fix its sibling ../../../skaffold.yaml in the same
 # way until we decide between Helm and Kustomize.
+#
+# Layering: the base config builds and deploys a BACKEND-ONLY stack (the
+# ActiveJob worker, no dashboard frontend, no frontend asset build) from
+# overlays/skaffold-backend. Every additional layer is an explicit profile:
+#
+#   skaffold dev                  # backend only (the base config)
+#   skaffold dev -p dashboard     # full app (overlays/skaffold)
+#   skaffold build -p release     # full production-flavored image
 
 apiVersion: skaffold/v4beta13
 kind: Config
@@ -15,6 +23,9 @@ build:
       # repo-root cdo-local-secrets.env file used by the Helm Skaffold config.
       - command: ["./bin/generate-cdo-local-secrets"]
   artifacts:
+  # Backend-only runtime image: Rails without the frontend asset build.
+  # The dashboard/release profiles below retarget this artifact to the full
+  # `runtime` image and add the frontend artifact chain it requires.
   - image: code-dot-org
     context: ../..
     sync:
@@ -33,25 +44,16 @@ build:
         if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
           K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
         fi
-        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
-          --target runtime \
+        IMPORT_IMAGE_TO_K8S_NODE=true "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target code-dot-org-activejob-only \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
-          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
-          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
-          --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
+          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration
       dependencies:
         dockerfile:
           path: ../docker/code-dot-org.dockerfile
     requires:
     - image: code-dot-org-core
       alias: CODE_DOT_ORG_CORE
-    - image: code-dot-org-db-seed
-      alias: CODE_DOT_ORG_DB_SEED
-    - image: code-dot-org-pegasus
-      alias: CODE_DOT_ORG_PEGASUS
-    - image: code-dot-org-static
-      alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
     context: ../..
     custom:
@@ -65,47 +67,11 @@ build:
       dependencies:
         dockerfile:
           path: ../docker/code-dot-org-core.dockerfile
-  - image: code-dot-org-pegasus
-    context: ../..
-    custom:
-      buildCommand: |
-        K8S_DIR="$BUILD_CONTEXT/k8s"
-        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
-          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
-        fi
-        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-pegasus.dockerfile"
-      dependencies:
-        dockerfile:
-          path: ../docker/code-dot-org-pegasus.dockerfile
-  - image: code-dot-org-static
-    context: ../..
-    custom:
-      buildCommand: |
-        K8S_DIR="$BUILD_CONTEXT/k8s"
-        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
-          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
-        fi
-        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-static.dockerfile"
-      dependencies:
-        dockerfile:
-          path: ../docker/code-dot-org-static.dockerfile
-  - image: code-dot-org-db-seed
-    context: ../..
-    custom:
-      buildCommand: |
-        K8S_DIR="$BUILD_CONTEXT/k8s"
-        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
-          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
-        fi
-        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-db-seed.dockerfile"
-      dependencies:
-        dockerfile:
-          path: ../docker/code-dot-org-db-seed.dockerfile
 
 manifests:
   kustomize:
     paths:
-      - overlays/skaffold
+      - overlays/skaffold-backend
 
 deploy:
   kubectl: {}
@@ -115,16 +81,117 @@ deploy:
 
 profiles:
 
-# Mount local machine credential directories into the dashboard container so it can
-# use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
-- name: local-dev
+# Layer the dashboard frontend on top of the backend-only base: build the
+# full `runtime` image (with the frontend artifact chain) and deploy
+# overlays/skaffold (backend + dashboard). Explicit opt-in:
+# `skaffold dev -p dashboard`.
+#
+# NOTE: the mimic profile patches build artifacts by index assuming this
+# profile's additions are in place, so keep it defined first and always
+# combine mimic with it (`-p dashboard,mimic`).
+- name: dashboard
   patches:
+    # Development-flavored full image; see the `release` profile for the
+    # production-flavored equivalent.
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
+    # Keep the requires order (core, db-seed, pegasus, static) and the
+    # artifact order (pegasus, static, db-seed) stable: mimic patches both
+    # by index.
     - op: add
-      path: /manifests/kustomize/paths/-
-      value: overlays/skaffold-local-dev
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-db-seed
+        alias: CODE_DOT_ORG_DB_SEED
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-pegasus
+        alias: CODE_DOT_ORG_PEGASUS
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-static
+        alias: CODE_DOT_ORG_STATIC
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-pegasus
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-pegasus.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-pegasus.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-static
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-static.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-static.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-db-seed
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-db-seed.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-db-seed.dockerfile
+    - op: replace
+      path: /manifests/kustomize/paths/0
+      value: overlays/skaffold
+    - op: add
+      path: /portForward/-
+      value:
+        resourceType: Service
+        resourceName: cdo-dashboard
+        port: http
+        localPort: 13000
+    - op: add
+      path: /portForward/-
+      value:
+        resourceType: Service
+        resourceName: cdo-dashboard
+        port: http-hmr
+        localPort: 19000
 
-# Build the runtime image with a minimal frontend package for ActiveJob experiments.
-- name: activejob-only
+# Production-flavored full image build, matching the `release` profile in the
+# sibling Helm skaffold.yaml. Do NOT combine with the dashboard profile (both
+# add the same artifacts).
+- name: release
   patches:
     - op: replace
       path: /build/artifacts/0/custom/buildCommand
@@ -133,21 +200,87 @@ profiles:
         if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
           K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
         fi
-        IMPORT_IMAGE_TO_K8S_NODE=true "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
           --target runtime \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
-          --build-arg BUNDLE_JOBS=1 \
-          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration \
-          --build-arg SKIP_FRONTEND_BUILD=1
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-db-seed
+        alias: CODE_DOT_ORG_DB_SEED
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-pegasus
+        alias: CODE_DOT_ORG_PEGASUS
+    - op: add
+      path: /build/artifacts/0/requires/-
+      value:
+        image: code-dot-org-static
+        alias: CODE_DOT_ORG_STATIC
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-pegasus
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-pegasus.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-pegasus.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-static
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-static.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-static.dockerfile
+    - op: add
+      path: /build/artifacts/-
+      value:
+        image: code-dot-org-db-seed
+        context: ../..
+        custom:
+          buildCommand: |
+            K8S_DIR="$BUILD_CONTEXT/k8s"
+            if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+              K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+            fi
+            "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-db-seed.dockerfile"
+          dependencies:
+            dockerfile:
+              path: ../docker/code-dot-org-db-seed.dockerfile
+    - op: replace
+      path: /manifests/kustomize/paths/0
+      value: overlays/skaffold
+
+# Mount local machine credential directories into the dashboard container so it can
+# use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
+- name: local-dev
+  patches:
     - op: add
       path: /manifests/kustomize/paths/-
-      value: overlays/activejob-only
+      value: overlays/skaffold-local-dev
 
 # Populates Dashboard DB (rake dashboard:setup_db)
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
+# Needs the full image (seed data), so include the dashboard profile.
+# Run: skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
 - name: setup-db
   patches:
       - op: add
@@ -155,7 +288,7 @@ profiles:
         value: overlays/setup-db
 
 # Creates or migrates the Dashboard DB without seeding curriculum data.
-# Run: skaffold dev --trigger=manual -p activejob-only -p setup-db-minimal
+# Run: skaffold dev --trigger=manual -p setup-db-minimal
 - name: setup-db-minimal
   patches:
       - op: add
@@ -163,7 +296,7 @@ profiles:
         value: overlays/setup-db-minimal
 
 # Create standard cdo-v3-* S3 buckets in minio.
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
+# Run: skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
 - name: setup-s3
   patches:
       - op: add
@@ -174,8 +307,12 @@ profiles:
 # fast iterative development of our k8s docker files and helm charts.
 #
 # To use:
-# 1. First-time: cd k8s/kustomize && skaffold dev -p mimic --cache-artifacts=false
-# 2. Run: cd k8s/kustomize && skaffold dev -p mimic
+# 1. First-time: cd k8s/kustomize && skaffold dev -p dashboard,mimic --cache-artifacts=false
+# 2. Run: cd k8s/kustomize && skaffold dev -p dashboard,mimic
+#
+# NOTE: mimic patches build artifacts by index and requires the dashboard
+# profile's artifact additions — always combine with -p dashboard (a bare
+# -p mimic fails on an invalid patch path).
 #
 # For details, see: ../mimic/README.md
 - name: mimic
@@ -216,28 +353,28 @@ profiles:
     - op: replace
       path: /build/artifacts/1/image
       value: mimic-core
-    # Artifact 2 (code-dot-org-pegasus)
+    # Artifact 2 (code-dot-org-pegasus, added by the dashboard profile)
     - op: replace
       path: /build/artifacts/2/context
       value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/2/image
       value: mimic-pegasus
-    # Artifact 3 (code-dot-org-static)
+    # Artifact 3 (code-dot-org-static, added by the dashboard profile)
     - op: replace
       path: /build/artifacts/3/context
       value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/3/image
       value: mimic-static
-    # Artifact 4 (code-dot-org-db-seed)
+    # Artifact 4 (code-dot-org-db-seed, added by the dashboard profile)
     - op: replace
       path: /build/artifacts/4/context
       value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/4/image
       value: mimic-db-seed
-    # Update required images in artifact 0
+    # Update required images in artifact 0 (order: core, db-seed, pegasus, static)
     - op: replace
       path: /build/artifacts/0/requires/0/image
       value: mimic-core
@@ -256,14 +393,6 @@ profiles:
       value: overlays/skaffold-mimic
 
 portForward:
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http
-  localPort: 13000
-- resourceType: Service
-  resourceName: cdo-dashboard
-  port: http-hmr
-  localPort: 19000
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql
