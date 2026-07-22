@@ -726,3 +726,196 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
+// brand overrides"); tags/tags.module.scss is the reference example.
+// The CADS menu-item spec diverges from what the token bridge can express
+// in four ways: the selected item uses the dedicated mode-inverted
+// selected tokens (not the bridge's brand-ramp mapping of the legacy
+// teal); pressed no longer shares the selected fill (the legacy rule
+// lumps :active in with checked/selected — CADS presses to the hover
+// gray); keyboard focus adds a brand-light fill and the destructive item
+// recolors its focus ring to the error border; and disabled+selected
+// becomes a solid disabled fill with the inverse label. Everything else
+// (default, hover, unselected disabled, destructive default/hover/pressed)
+// resolves correctly through the bridge.
+// Two Figma tokens are not in the colors_codeAi.css export yet and get
+// the series' fallback pattern: background/state/selected/strong (the
+// export carries that value as --background-selected-hover) and
+// border/state/focused/primary (the bridge resolves the legacy focus
+// token to --border-brand-primary, the same indigo).
+// Selectors mirror their legacy counterparts plus the [data-brand]
+// attribute; rule order in the block matters for the equal-specificity
+// pressed/selected/disabled combinations and mirrors the legacy cascade.
+[data-brand='codeai-next'] {
+  .dropdownContainer {
+    .dropdownMenuContainer {
+      ul {
+        li {
+          // Pressed (split out of the legacy selected rule): hover
+          // surface, normal text; the checkbox glyph gets the
+          // brand-light inner (glyph color draws the square outline,
+          // its background-color fills the inner).
+          &:active {
+            background-color: var(--background-neutral-tertiary);
+
+            i::before {
+              background-color: var(--background-brand-light);
+              color: var(--text-neutral-primary);
+            }
+
+            span {
+              color: var(--text-neutral-primary);
+            }
+
+            .dropdownMenuItem {
+              i::before {
+                background-color: unset;
+                color: var(--text-neutral-primary);
+              }
+
+              span {
+                color: var(--text-neutral-primary);
+              }
+            }
+          }
+
+          // Selected: the mode-inverted selected pair. On the checked
+          // glyph the square is the glyph color and the check is a
+          // cutout showing background-color through, so the pairing
+          // inverts: seafoam square, selected-fill check.
+          &:has(input[type='checkbox']:checked),
+          &:has(.selectedDropdownMenuItem) {
+            background-color: var(--background-selected-primary);
+
+            i::before {
+              background-color: var(--background-selected-primary);
+              color: var(
+                --background-selected-primary-inverse,
+                var(--text-selected-primary)
+              );
+            }
+
+            span {
+              color: var(--text-selected-primary);
+            }
+
+            .dropdownMenuItem {
+              i::before {
+                background-color: var(--background-selected-primary);
+                color: var(--text-selected-primary);
+              }
+
+              span {
+                color: var(--text-selected-primary);
+              }
+            }
+          }
+
+          // Selected + hover / pressed: Figma background/state/selected/
+          // strong; the export carries that value as
+          // --background-selected-hover.
+          &:hover:has(input[type='checkbox']:checked),
+          &:hover:has(.selectedDropdownMenuItem),
+          &:active:has(input[type='checkbox']:checked),
+          &:active:has(.selectedDropdownMenuItem) {
+            background-color: var(--background-selected-hover);
+
+            i::before {
+              background-color: var(--background-selected-hover);
+            }
+
+            .dropdownMenuItem i::before {
+              background-color: var(--background-selected-hover);
+            }
+          }
+
+          // Keyboard focus: brand-light fill (unselected items only —
+          // selected items keep their fill under the ring) and the
+          // focused border token once the sandbox exports it.
+          .dropdownMenuItem:focus-visible {
+            outline-color: var(
+              --border-focused-primary,
+              var(--border-brand-primary)
+            );
+          }
+
+          &:not(
+              :has(input[type='checkbox']:checked),
+              :has(.selectedDropdownMenuItem)
+            ) {
+            .dropdownMenuItem:focus-visible {
+              background-color: var(--background-brand-light);
+            }
+          }
+
+          // Destructive item: error-family focus ring on the default
+          // surface, and pressed keeps its legacy white-on-error colors
+          // (the pressed rule above would otherwise recolor its label).
+          .dropdownMenuItem.destructiveDropdownMenuItem {
+            &:focus-visible {
+              outline-color: var(--border-error-primary);
+              background-color: var(--background-neutral-primary);
+            }
+
+            &:active {
+              i::before {
+                background-color: var(--background-error-primary);
+                color: var(--text-neutral-white-fixed);
+              }
+
+              span {
+                color: var(--text-neutral-white-fixed);
+              }
+            }
+          }
+
+          // Disabled: re-asserted under the brand scope so the selected
+          // overrides above don't outrank the legacy disabled rules.
+          &:has(input[type='checkbox']:disabled),
+          &:has(.disabledDropdownMenuItem) {
+            background-color: unset;
+
+            i::before {
+              background-color: unset;
+              color: var(--text-neutral-disabled);
+            }
+
+            span,
+            .dropdownMenuItem span {
+              color: var(--text-neutral-disabled);
+            }
+
+            .dropdownMenuItem i::before {
+              background-color: unset;
+              color: var(--text-neutral-disabled);
+            }
+          }
+
+          // Disabled + selected: solid disabled fill with the inverse
+          // label (white in Light, black in Dark); the check cutout
+          // shows the fill. Last so it outranks every state above.
+          &:has(input[type='checkbox']:disabled:checked),
+          &:has(.selectedDropdownMenuItem.disabledDropdownMenuItem) {
+            background-color: var(--background-disabled-neutral);
+
+            i::before {
+              background-color: unset;
+              color: var(--text-disabled-neutral-inverse);
+            }
+
+            span,
+            .dropdownMenuItem span {
+              color: var(--text-disabled-neutral-inverse);
+            }
+
+            .dropdownMenuItem i::before {
+              background-color: unset;
+              color: var(--text-disabled-neutral-inverse);
+            }
+          }
+        }
+      }
+    }
+  }
+}
