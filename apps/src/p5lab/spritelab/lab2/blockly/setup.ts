@@ -8,15 +8,15 @@ import {
   WorkspaceSerialization,
 } from '@cdo/apps/blockly/types';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
-import {animationSourceUrl} from '@cdo/apps/p5lab/redux/animationList';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
-import {getStore} from '@cdo/apps/redux';
 
-import {getTrimmedThumbnail} from '../imageTrim';
-import {setActiveTab} from '../redux/spriteLab2Redux';
-import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
-
-import sceneBlockDefinitions from './blockDefinitions';
+import labBlockDefinitions from './blockDefinitions';
+import {
+  FIELD_GRID_SINGLE_TYPE,
+  FIELD_GRID_TYPE,
+  GridField,
+  GridSingleField,
+} from './blockDefinitions/extraBlocks';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
 import {
   FIELD_SCENE_DROPDOWN_TYPE,
@@ -27,9 +27,13 @@ import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
 } from './externalSceneDropdown';
-import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './extraSharedBlocks';
-
-import moduleStyles from './image-dropdown.module.scss';
+import {
+  animationPicker,
+  BlockImageField,
+  CostumeField,
+  FIELD_BLOCK_IMAGE_TYPE,
+  FIELD_COSTUME_TYPE,
+} from './imagePickerFields';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -52,11 +56,11 @@ export function setupSpriteLab2BlocklyEnvironment(
   const blockInstallOptions = {skin, isK1: false, level};
   blocksCommon.install(Blockly, blockInstallOptions);
   spritelabBlocks.install(Blockly, blockInstallOptions);
-  installSceneBlocks();
+  installLabBlocks();
   isSetup = true;
 }
 
-function installSceneBlocks(): void {
+function installLabBlocks(): void {
   if (Blockly.Blocks[GO_TO_SCENE_BLOCK_TYPE]) {
     return;
   }
@@ -65,7 +69,11 @@ function installSceneBlocks(): void {
     FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
     ExternalSceneDropdown
   );
-  for (const {definition, generator} of sceneBlockDefinitions) {
+  Blockly.fieldRegistry.register(FIELD_COSTUME_TYPE, CostumeField);
+  Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
+  Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
+  Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
         this.jsonInit(definition);
@@ -190,7 +198,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
  * composites, and build the injected categories (Platform, Story, ...) at the
  * top of the toolbox (toolbox categories reference block types, so a block
  * can appear in any number of them). The composites are lab-owned blocks
- * (extraSharedBlocks), so DB-authored toolboxes don't know them. See
+ * (blockDefinitions/extraBlocks), so DB-authored toolboxes don't know them.
+ * See
  * INJECTED_CATEGORIES for how a level opts out of the defaults.
  */
 export function ensureInjectedCategories(toolboxXml: string): string {
@@ -281,110 +290,6 @@ export function compileWorkspaceSource(
   }
 }
 
-// The neutral-gray design-token value, copied because an SVG data URI can't
-// read CSS variables.
-const EMPTY_TILE_STROKE = '#a0a6b2';
-
-// Shown when the project has no matching images yet: an "add an image" tile
-// (Blockly dropdowns cannot have zero options). Selecting it generates the
-// no-op value `null`.
-const EMPTY_IMAGE_OPTION: [string, string][] = [
-  [
-    'data:image/svg+xml,' +
-      encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">' +
-          '<rect x="4" y="6" width="32" height="28" rx="3" fill="none"' +
-          ` stroke="${EMPTY_TILE_STROKE}" stroke-width="2"` +
-          ' stroke-dasharray="4 3"/>' +
-          '</svg>'
-      ),
-    'null',
-  ],
-];
-
-// One button below the image grid: jump to the Images tab, where images are
-// made. Doubles as the empty state's affordance.
-const MAKE_IMAGE_BUTTONS = [
-  {
-    text: 'Make an image',
-    action: () => getStore().dispatch(setActiveTab('Images')),
-    className: moduleStyles.makeImageButton,
-  },
-];
-
-type AnimationKind = 'costume' | 'background' | 'block';
-
-// Thumbnail sizes in the dropdown grid, matching classic blocks.js.
-const THUMBNAIL_SIZE: Record<AnimationKind, number> = {
-  costume: 32,
-  background: 40,
-  block: 32,
-};
-
-// Thumbnail options for one kind of animation, filtered by image category:
-// backgrounds and blocks each list only their own category, costumes list
-// everything else. Costumes prefer the border-trimmed image (see imageTrim.ts)
-// so the sprite's content fills the field instead of floating in its
-// transparent margins. Mirrors the classic costumeList/backgroundList in
-// spritelab/blocks.js otherwise.
-function animationOptions(kind: AnimationKind): [string, string][] {
-  const state = getStore().getState();
-  const animationList = state.animationList;
-  if (!animationList) {
-    return EMPTY_IMAGE_OPTION;
-  }
-  const kindOf = (categories: string[]): AnimationKind =>
-    categories.includes(BACKGROUNDS_CATEGORY)
-      ? 'background'
-      : categories.includes(BLOCKS_CATEGORY)
-      ? 'block'
-      : 'costume';
-  const results: [string, string][] = [];
-  animationList.orderedKeys.forEach((key: string) => {
-    const animation = animationList.propsByKey[key];
-    if (kindOf(animation.categories || []) !== kind) {
-      return;
-    }
-    const url =
-      (kind === 'background'
-        ? undefined
-        : getTrimmedThumbnail(animation.name)) ||
-      animation.sourceUrl ||
-      animationSourceUrl(key, animation, state.pageConstants?.channelId);
-    results.push([url, `"${animation.name}"`]);
-  });
-  return results.length ? results : EMPTY_IMAGE_OPTION;
-}
-
-// The classic costumePicker/backgroundPicker input types, with lab2's empty
-// state and Images-tab button. (The classic animation-mode buttons don't
-// apply here — this lab has no AnimationTab.)
-function animationPicker(kind: AnimationKind) {
-  return {
-    addInput(
-      blockly: unknown,
-      block: BlocklyCore.Block,
-      inputConfig: {name: string; label: string},
-      currentInputRow: BlocklyCore.Input
-    ) {
-      currentInputRow
-        .appendField(inputConfig.label)
-        .appendField(
-          new CdoFieldAnimationDropdown(
-            () => animationOptions(kind),
-            THUMBNAIL_SIZE[kind],
-            THUMBNAIL_SIZE[kind],
-            MAKE_IMAGE_BUTTONS
-          ),
-          inputConfig.name
-        );
-    },
-    generateCode(block: BlocklyCore.Block, arg: {name: string}) {
-      return block.getFieldValue(arg.name);
-    },
-  };
-}
-
 /**
  * Refresh every costume dropdown's thumbnail, so blocks rendered before an
  * image was trimmed pick up the trim.
@@ -406,18 +311,16 @@ export function refreshAnimationDropdownThumbnails(): void {
 }
 
 /**
- * Install the level's DB-backed block pool plus the lab's own additions;
- * returns category -> block type names. Mirrors dance's installSharedBlocks.
+ * Install the level's DB-backed block pool; returns category -> block type
+ * names. Mirrors dance's installSharedBlocks. (Lab-owned blocks install via
+ * installLabBlocks, not here.)
  */
 export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   [category: string]: string[];
 } {
   return blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: [
-      ...(sharedBlocks || []),
-      ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
-    ],
+    blockDefinitions: sharedBlocks || [],
     customInputTypes: {
       ...(spritelabBlocks.customInputTypes as unknown as CustomInputTypes),
       // Lab2 pickers: trim-aware costume thumbnails (backgrounds stay
@@ -431,7 +334,7 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
 }
 
 // Predefined behaviors (runtime implementations in NativeSpriteLab or
-// extraSharedBlocks). Levels typically list only a subset; we surface all.
+// blockDefinitions/extraBlocks). Levels typically list only a subset; we surface all.
 const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_draggable',
   'gamelab_avoidingTargets',
