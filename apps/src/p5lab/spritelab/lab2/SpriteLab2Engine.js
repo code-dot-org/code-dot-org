@@ -7,7 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions/extraBlocks';
+import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
 
 const NOOP = () => {};

@@ -10,12 +10,6 @@ import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
 import labBlockDefinitions from './blockDefinitions';
-import {
-  FIELD_GRID_SINGLE_TYPE,
-  FIELD_GRID_TYPE,
-  GridField,
-  GridSingleField,
-} from './blockDefinitions/extraBlocks';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
 import {
   FIELD_SCENE_DROPDOWN_TYPE,
@@ -26,6 +20,12 @@ import {
   ExternalSceneDropdown,
   FIELD_EXTERNAL_SCENE_DROPDOWN_TYPE,
 } from './externalSceneDropdown';
+import {
+  FIELD_GRID_SINGLE_TYPE,
+  FIELD_GRID_TYPE,
+  GridField,
+  GridSingleField,
+} from './gridFields';
 import {
   animationPicker,
   BlockImageField,
@@ -197,8 +197,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
  * composites, and build the injected categories (Platform, Story, ...) at the
  * top of the toolbox (toolbox categories reference block types, so a block
  * can appear in any number of them). The composites are lab-owned blocks
- * (blockDefinitions/extraBlocks), so DB-authored toolboxes don't know them.
- * See
+ * (blockDefinitions), so DB-authored toolboxes don't know them. See
  * INJECTED_CATEGORIES for how a level opts out of the defaults.
  */
 export function ensureInjectedCategories(toolboxXml: string): string {
@@ -313,7 +312,7 @@ export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
 }
 
 // Predefined behaviors (runtime implementations in NativeSpriteLab or
-// blockDefinitions/extraBlocks). Levels typically list only a subset; we surface all.
+// blockDefinitions). Levels typically list only a subset; we surface all.
 const PREDEFINED_BEHAVIOR_BLOCKS = [
   'gamelab_draggable',
   'gamelab_avoidingTargets',
