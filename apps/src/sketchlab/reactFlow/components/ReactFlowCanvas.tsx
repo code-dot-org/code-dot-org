@@ -111,6 +111,7 @@ const GROUP_MODE_HINT =
 
 const HAND_MODE_HINT =
   'Hand tool — use the arrow keys to pan — Esc to return to select';
+const HAND_MODE_HINT_READ_ONLY = 'Hand tool — use the arrow keys to pan';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
 // fields a new line gets. markerEnd is intentionally omitted so edges saved
@@ -364,8 +365,11 @@ export default function ReactFlowCanvas({
     if (isGroupMode) {
       return {message: GROUP_MODE_HINT, variant: 'info'};
     }
-    if (!readOnly && isGrabMode && workspaceFocused) {
-      return {message: HAND_MODE_HINT, variant: 'info'};
+    if (isGrabMode && workspaceFocused) {
+      return {
+        message: readOnly ? HAND_MODE_HINT_READ_ONLY : HAND_MODE_HINT,
+        variant: 'info',
+      };
     }
     return null;
   }, [
@@ -980,14 +984,24 @@ export default function ReactFlowCanvas({
                   </div>
                   {/* In hand mode this is the single keyboard tab stop for
                       the canvas, so users can use arrow keys to pan */}
-                  {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
                   <div
                     className={styles.workspace}
-                    role="application"
-                    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+                    // Only claim the application role while the workspace is the
+                    // grab-mode pan target. In cursor mode it's a passive wrapper,
+                    // and an always-on application region would put the toolbar and
+                    // controls inside it into screen-reader application mode.
+                    role={isGrabMode ? 'application' : undefined}
                     tabIndex={isGrabMode ? 0 : -1}
-                    aria-label="Canvas workspace. Use the arrow keys to pan. Press Escape to return to the select tool."
-                    aria-keyshortcuts="ArrowUp ArrowDown ArrowLeft ArrowRight Escape"
+                    aria-label={
+                      readOnly
+                        ? 'Canvas workspace. Use the arrow keys to pan.'
+                        : 'Canvas workspace. Use the arrow keys to pan. Press Escape to return to the select tool.'
+                    }
+                    aria-keyshortcuts={
+                      readOnly
+                        ? 'ArrowUp ArrowDown ArrowLeft ArrowRight'
+                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight Escape'
+                    }
                     onFocus={handleWorkspaceFocus}
                     onBlur={handleWorkspaceBlur}
                     onKeyDown={handleWorkspaceKeyDown}
