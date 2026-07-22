@@ -3,7 +3,10 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
-import {Challenge} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {
+  Challenge,
+  challengeValidator,
+} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -40,7 +43,11 @@ describe('ChallengeBox', () => {
 
     render(<ChallengeBox lessonId={42} />);
 
-    expect(fetchJson).toHaveBeenCalledWith('/challenges?lesson_id=42');
+    expect(fetchJson).toHaveBeenCalledWith(
+      '/challenges?lesson_id=42',
+      {},
+      challengeValidator
+    );
     await waitFor(() =>
       expect(
         screen.getByText('Draw a flowchart of the algorithm.')
