@@ -93,8 +93,11 @@ function animationOptions(kind: AnimationKind): [string, string][] {
   return results.length ? results : EMPTY_IMAGE_OPTION;
 }
 
-function animationDropdown(kind: AnimationKind): CdoFieldAnimationDropdown {
-  return new CdoFieldAnimationDropdown(
+function animationDropdown(
+  kind: AnimationKind,
+  Ctor: typeof CdoFieldAnimationDropdown = CdoFieldAnimationDropdown
+): CdoFieldAnimationDropdown {
+  return new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
@@ -127,12 +130,32 @@ export function animationPicker(kind: AnimationKind) {
 // same dropdowns.
 export class CostumeField extends CdoFieldAnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
-    return animationDropdown('costume');
+    return animationDropdown('costume', CostumeField);
   }
 }
 
 export class BlockImageField extends CdoFieldAnimationDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
-    return animationDropdown('block');
+    return animationDropdown('block', BlockImageField);
   }
+}
+
+/**
+ * Refresh every costume dropdown's thumbnail, so blocks rendered before an
+ * image was trimmed pick up the trim.
+ */
+export function refreshAnimationDropdownThumbnails(): void {
+  const workspace = Blockly.getMainWorkspace?.();
+  if (!workspace) {
+    return;
+  }
+  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
+    block.inputList.forEach(input => {
+      input.fieldRow.forEach(field => {
+        if (field instanceof CdoFieldAnimationDropdown) {
+          field.refreshSelectedOption();
+        }
+      });
+    });
+  });
 }

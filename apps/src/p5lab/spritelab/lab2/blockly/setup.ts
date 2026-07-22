@@ -1,7 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
 import * as blockUtils from '@cdo/apps/block_utils';
-import CdoFieldAnimationDropdown from '@cdo/apps/blockly/addons/cdoFieldAnimationDropdown';
 import {
   BlockDefinition,
   CustomInputTypes,
@@ -288,26 +287,6 @@ export function compileWorkspaceSource(
   } finally {
     workspace.dispose();
   }
-}
-
-/**
- * Refresh every costume dropdown's thumbnail, so blocks rendered before an
- * image was trimmed pick up the trim.
- */
-export function refreshAnimationDropdownThumbnails(): void {
-  const workspace = Blockly.getMainWorkspace?.();
-  if (!workspace) {
-    return;
-  }
-  workspace.getAllBlocks(false).forEach((block: BlocklyCore.Block) => {
-    block.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        if (field instanceof CdoFieldAnimationDropdown) {
-          field.refreshSelectedOption();
-        }
-      });
-    });
-  });
 }
 
 /**

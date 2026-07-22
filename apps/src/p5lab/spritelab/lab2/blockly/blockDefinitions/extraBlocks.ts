@@ -118,7 +118,7 @@ export const SPRITELAB2_EXTRA_BLOCKS: ExtraBlock[] = [
     '}',
   ]),
   // The oceanSetup helper libraries' moving_with_arrow_keys, in the
-  // behavior-factory shape this pool uses. Moves at the sprite's own
+  // behavior-factory shape these behaviors use. Moves at the sprite's own
   // speed property, like the classic behavior.
   behavior(
     'spritelab2_movingWithArrowKeys',

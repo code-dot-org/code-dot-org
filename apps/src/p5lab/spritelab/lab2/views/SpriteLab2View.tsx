@@ -31,10 +31,8 @@ import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
-import {
-  compileWorkspaceSource,
-  refreshAnimationDropdownThumbnails,
-} from '../blockly/setup';
+import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {compileWorkspaceSource} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
