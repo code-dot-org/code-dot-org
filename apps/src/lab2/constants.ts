@@ -28,6 +28,7 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'pythonlab',
   'weblab2',
   'music_dance_ai',
+  'sketchlab',
 ];
 
 // Text-based labs that are currently supported by lab2.
