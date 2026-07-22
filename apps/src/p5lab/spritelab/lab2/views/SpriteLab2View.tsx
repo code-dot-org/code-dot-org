@@ -223,6 +223,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
 
+  // Reset activeSceneId if it doesn't point to an existing scene (e.g. code cleared via start over).
+  useEffect(() => {
+    if (!scenes.some(s => s.id === activeSceneId)) {
+      setActiveSceneId(scenes[0].id);
+    }
+  }, [scenes, activeSceneId]);
+
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
   useEffect(() => {
