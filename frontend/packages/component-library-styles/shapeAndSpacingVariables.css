@@ -1,5 +1,5 @@
 /* CADS shape (border-radius) and spacing (padding) ramps, from the CADS
-   Figma "number" collection. Unlike the color tokens these are mode- and
+   Figma "number" collection. Unlike the color tokens, these are mode- and
    brand-invariant, so they sit at :root with no [data-brand]/[data-theme]
    scoping: the names are new, nothing legacy references them, and they
    need no promotion at brand cutover. */

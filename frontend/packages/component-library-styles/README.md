@@ -58,13 +58,14 @@ To use it in your project:
   typography;
 ```
 
-For CSS variables (colors and fonts), import them globally in your application root:
+For CSS variables (colors, fonts, shape, and spacing), import them globally in your application root:
 
 ```javascript
 // In your main application entry point (e.g., __root.tsx or App.tsx)
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 ```
 
 ## Development
@@ -620,8 +621,10 @@ With time there'll be more variables added to this file, so make sure to check i
 
 The `shapeAndSpacingVariables.css` file defines the CADS shape
 (border-radius) and spacing (padding) ramps as CSS custom properties at
-`:root`. They are brand- and mode-invariant, so they need no
-`[data-brand]`/`[data-theme]` scoping and no migration at brand cutover.
+`:root`. Import it globally in your application root (see
+[Installation](#installation)). They are brand- and mode-invariant, so
+they need no `[data-brand]`/`[data-theme]` scoping and no migration at
+brand cutover.
 
 | Variable                               | Value                  |
 | -------------------------------------- | ---------------------- |
