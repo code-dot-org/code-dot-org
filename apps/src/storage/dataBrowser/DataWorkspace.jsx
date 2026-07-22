@@ -98,7 +98,7 @@ const styles = {
   },
   libraryHeader: {
     display: 'block',
-    width: 270,
+    width: 271,
     borderRight: '1px solid var(--borders-neutral-strong)',
     float: 'left',
   },

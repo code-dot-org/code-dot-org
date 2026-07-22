@@ -2,7 +2,7 @@ import color from '../../util/color';
 
 export var input = {
   display: 'inline-block',
-  height: 20,
+  height: 30,
   padding: '4px 6px',
   marginBottom: 0,
   marginLeft: 0,
@@ -27,7 +27,7 @@ export var container = {
 };
 
 export var maxWidth = {
-  maxWidth: 245,
+  maxWidth: 265,
 };
 
 export var description = {
@@ -35,7 +35,7 @@ export var description = {
 };
 
 export var checkbox = {
-  width: 20,
+  width: 22,
   height: 20,
   fontSize: 20,
   paddingLeft: 2,
