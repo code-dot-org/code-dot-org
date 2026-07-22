@@ -355,9 +355,9 @@ $tab-segment-height: $tab-item-height - 2px;
   border: 1px solid rgb(255 255 255 / 25%);
   border-radius: 6px;
   box-shadow: none;
-  // Explicit colors: bare inputs/selects otherwise inherit the guide's white
-  // text onto their own light control background (Bootstrap no longer styles
-  // bare form elements). The guide panel is dark in both themes.
+  // Explicit colors: nothing styles bare form elements globally, so these
+  // would inherit the guide's white text onto their own light control
+  // background. The guide panel is dark in both themes.
   background: #fff;
   color: #333;
   font-size: 14px;
