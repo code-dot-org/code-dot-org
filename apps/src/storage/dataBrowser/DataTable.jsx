@@ -205,7 +205,7 @@ class DataTable extends React.Component {
     return (
       <div>
         <DataEntryError isVisible={this.state.showError} />
-        <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
+        <div style={{overflow: 'auto', height: 'calc(100vh - 430px)'}}>
           <table
             className={classNames(style.table, 'uitest-data-table-content')}
           >

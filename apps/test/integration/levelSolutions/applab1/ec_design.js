@@ -559,7 +559,7 @@ module.exports = {
 
         $('#design-mode-versions-header').click();
         assert.equal(
-          $('.dialog-title:visible').text(),
+          $('[role="dialog"]:visible h3').first().text(),
           'Version History',
           'version history dialog is visible'
         );

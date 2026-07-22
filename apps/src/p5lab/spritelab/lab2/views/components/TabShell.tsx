@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -18,9 +20,10 @@ interface TabShellProps {
   // Rendered in the tab bar immediately after the Code button (the scene
   // selector).
   codeTabExtra?: React.ReactNode;
-  // Rendered immediately after the Play button (the Start-over control).
+  // Rendered immediately after the Play button (the restart controls).
   playTabExtra?: React.ReactNode;
   children: React.ReactNode;
+  onClickStartOver?: () => void;
 }
 
 /**
@@ -37,63 +40,84 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   codeTabExtra,
   playTabExtra,
   children,
+  onClickStartOver,
 }) => {
   return (
     <div className={moduleStyles.tabShell}>
-      <div className={moduleStyles.tabBar} role="tablist">
-        {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(tab => {
-          const enabled = enabledTabs.includes(tab);
-          const button = (
-            <button
+      <div className={moduleStyles.tabContainer}>
+        <div className={moduleStyles.tabBar} role="tablist">
+          {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(
+            tab => {
+              const enabled = enabledTabs.includes(tab);
+              const button = (
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={activeTab === tab}
+                  disabled={!enabled}
+                  className={classNames(
+                    moduleStyles.tab,
+                    activeTab === tab && moduleStyles.tabActive
+                  )}
+                  onClick={() => onTabChange(tab)}
+                >
+                  {tab}
+                </button>
+              );
+              // The Code tab and its extra (the scene selector) read as one
+              // segmented control: the group carries the active-tab background,
+              // the pieces inside are transparent.
+              if (tab === 'Code' && codeTabExtra) {
+                return (
+                  <div
+                    key={tab}
+                    className={classNames(
+                      moduleStyles.tabGroup,
+                      activeTab === 'Code' && moduleStyles.tabGroupActive
+                    )}
+                    // The whole group is the Code tab's click target: the scene
+                    // selector is disabled (pointer-events: none) on other tabs,
+                    // so clicks on it land here and activate the tab.
+                    onClick={() => {
+                      if (activeTab !== 'Code' && enabled) {
+                        onTabChange('Code');
+                      }
+                    }}
+                  >
+                    {button}
+                    {codeTabExtra}
+                  </div>
+                );
+              }
+              // The restart controls sit just right of the Play button.
+              if (tab === 'Play' && playTabExtra) {
+                return (
+                  <React.Fragment key={tab}>
+                    {button}
+                    {playTabExtra}
+                  </React.Fragment>
+                );
+              }
+              return <React.Fragment key={tab}>{button}</React.Fragment>;
+            }
+          )}
+        </div>
+        <div className={moduleStyles.tabBar}>
+          {onClickStartOver && (
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              onClick={onClickStartOver}
               type="button"
-              role="tab"
-              aria-selected={activeTab === tab}
-              disabled={!enabled}
-              className={classNames(
-                moduleStyles.tab,
-                activeTab === tab && moduleStyles.tabActive
-              )}
-              onClick={() => onTabChange(tab)}
+              endIcon={
+                <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
+              }
             >
-              {tab}
-            </button>
-          );
-          // The Code tab and its extra (the scene selector) read as one
-          // segmented control: the group carries the active-tab background,
-          // the pieces inside are transparent.
-          if (tab === 'Code' && codeTabExtra) {
-            return (
-              <div
-                key={tab}
-                className={classNames(
-                  moduleStyles.tabGroup,
-                  activeTab === 'Code' && moduleStyles.tabGroupActive
-                )}
-                // The whole group is the Code tab's click target: the scene
-                // selector is disabled (pointer-events: none) on other tabs,
-                // so clicks on it land here and activate the tab.
-                onClick={() => {
-                  if (activeTab !== 'Code' && enabled) {
-                    onTabChange('Code');
-                  }
-                }}
-              >
-                {button}
-                {codeTabExtra}
-              </div>
-            );
-          }
-          // The Start-over control sits just right of the Play button.
-          if (tab === 'Play' && playTabExtra) {
-            return (
-              <React.Fragment key={tab}>
-                {button}
-                {playTabExtra}
-              </React.Fragment>
-            );
-          }
-          return <React.Fragment key={tab}>{button}</React.Fragment>;
-        })}
+              Start Over
+            </MuiButton>
+          )}
+        </div>
       </div>
       <div className={moduleStyles.tabContent}>{children}</div>
     </div>

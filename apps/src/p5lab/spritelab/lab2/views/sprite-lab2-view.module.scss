@@ -37,15 +37,20 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
+.tabContainer {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  justify-content: space-between;
+}
+
 .tabBar {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   gap: 4px;
-  padding: 6px 8px;
-  // Design-system tokens so the chrome is legible in both Light and Dark.
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .tab {
