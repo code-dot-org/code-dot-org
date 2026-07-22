@@ -93,6 +93,7 @@
   --border-neutral-primary: var(--borders-neutral-primary);
   --border-neutral-secondary: var(--borders-neutral-strong);
   --border-neutral-solid: var(--borders-neutral-solid);
+  --border-neutral-white-fixed: var(--borders-neutral-white-fixed);
   --border-brand-primary: var(--borders-brand-teal-primary);
   --border-brand-light: var(--borders-brand-teal-light);
   --border-brand-mid: var(--brand-teal-20); /* primitive: theme-fixed */
