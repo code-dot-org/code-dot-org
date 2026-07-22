@@ -1397,6 +1397,63 @@ class LevelsControllerTest < ActionController::TestCase
     end
   end
 
+  # extra_links gates the levelbuilder edit-mode links on
+  # Level#channel_backed?; the toolbox link additionally requires a Blockly
+  # level.
+
+  test "extra_links includes start, exemplar, and toolbox links for music levels" do
+    texts = extra_links_texts(create(:music))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start and exemplar but not toolbox for non-Blockly pythonlab levels" do
+    texts = extra_links_texts(create(:pythonlab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for lab2 dance levels" do
+    level = create(:dance)
+    level.uses_lab2 = true
+    level.save!
+    texts = extra_links_texts(level)
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for classic dance levels" do
+    texts = extra_links_texts(create(:dance))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for sprite lab levels" do
+    texts = extra_links_texts(create(:spritelab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for non-channel-backed levels" do
+    texts = extra_links_texts(create(:panels))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  private def extra_links_texts(level)
+    get :extra_links, params: {id: level.id}
+    assert_response :success
+    JSON.parse(@response.body)['links'][level.name].map {|link| link['text']}
+  end
+
   # Assert that the url is a real S3 url, and not a placeholder.
   private def assert_s3_image_url(url)
     assert(

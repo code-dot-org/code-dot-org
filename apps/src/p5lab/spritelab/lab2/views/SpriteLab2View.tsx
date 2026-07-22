@@ -6,9 +6,15 @@ import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -27,6 +33,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {
+  uploadAssetToLevel,
+  uploadAssetToProject,
+  UploadImageFunction,
+} from '../ai/items/itemGeneration';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {
   compileWorkspaceSource,
@@ -34,7 +45,7 @@ import {
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {SCENES_UI_VARIANT} from '../experiments';
-import {onTrimsUpdated} from '../imageTrim';
+import {onTrimsUpdated, trimAnimationListImages} from '../imageTrim';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -63,8 +74,8 @@ import {
 import {createEmptyGrid} from '../world/gridConstants';
 
 import TabShell from './components/TabShell';
+import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
-import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -117,6 +128,11 @@ const RUN_DEBOUNCE_MS = 400;
 
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
+
+// Levelbuilder edit modes (start, toolbox, exemplar) run without a project
+// channel; generated images upload to the level's starter assets instead.
+const isLevelEditMode =
+  !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -189,6 +205,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // (the container remounts this view per level, after sources load).
   const initialSources = useRef(currentSources).current;
 
+  const uploadImage: UploadImageFunction | undefined = useMemo(() => {
+    if (channelId) {
+      return (filename, data, mediaType) =>
+        uploadAssetToProject(channelId, filename, data, mediaType);
+    }
+    if (isLevelEditMode) {
+      const levelName = levelProperties.name;
+      return (filename, data, mediaType) =>
+        uploadAssetToLevel(levelName, filename, data, mediaType);
+    }
+    return undefined;
+  }, [channelId, levelProperties.name]);
+
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
@@ -197,6 +226,34 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
+
+  const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        if (mode === 'toolbox') {
+          return {}; // TODO: Support toolbox mode with conversion to JSON.
+        }
+        const sources = cloneDeep(currentSources);
+        if (mode === 'start' && Blockly.blockIdOverrides) {
+          // Apply Block ID overrides for top-level sources and all scenes.
+          [
+            sources.source as WorkspaceSerialization | undefined,
+            ...(sources.scenes ?? []).map(scene => scene.source),
+          ].forEach(source => {
+            if (source) {
+              applyBlockIdOverrides(source, Blockly.blockIdOverrides);
+            }
+          });
+        }
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: sources,
+        };
+      },
+      [currentSources]
+    )
+  );
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -323,6 +380,54 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // initialSources is a ref-captured constant).
   }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
 
+  // Refresh trims and the playspace once a reseeded animation list finishes
+  // loading. The reseed-triggered rerun happens immediately, but reseeded
+  // entries carry only a sourceUrl (dataURIs load async): trimming skips
+  // entries without one (stale gallery/dropdown thumbnails), and the engine
+  // run can't draw unloaded images (costume/background commands no-op on
+  // unknown names — a blank playspace until the next run). Kept in a ref
+  // (not effect cleanup): the reseed effect's deps churn on every animation
+  // write, which would cancel a pending watcher mid-load.
+  const cancelTrimWatchRef = useRef<() => void>();
+  // Latest active-scene run, for the watcher's async callback.
+  const runActiveSceneRef = useRef<() => void>(() => {});
+  useEffect(() => () => cancelTrimWatchRef.current?.(), []);
+  const trimWhenAnimationsLoaded = useCallback(() => {
+    cancelTrimWatchRef.current?.();
+    const store = getStore();
+    const allLoaded = () => {
+      const list = store.getState().animationList;
+      return list.orderedKeys.every(
+        (key: string) => list.propsByKey[key]?.loadedFromSource
+      );
+    };
+    // Trim the live list, not a reseed-time snapshot: entries may have been
+    // edited or deleted while loads were in flight.
+    const trimLiveList = () =>
+      trimAnimationListImages(store.getState().animationList);
+    if (allLoaded()) {
+      trimLiveList();
+      return;
+    }
+    const finish = () => {
+      cancel();
+      trimLiveList();
+      runActiveSceneRef.current();
+    };
+    const unsubscribe = store.subscribe(() => allLoaded() && finish());
+    // Give up quietly if a load never completes; thumbnails stay stale, no
+    // worse than not watching.
+    const timer = window.setTimeout(() => cancel(), 10000);
+    const cancel = () => {
+      unsubscribe();
+      clearTimeout(timer);
+      if (cancelTrimWatchRef.current === cancel) {
+        cancelTrimWatchRef.current = undefined;
+      }
+    };
+    cancelTrimWatchRef.current = cancel;
+  }, []);
+
   // Reseed the animation list when sources are reinitialized (e.g. start over).
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
@@ -331,7 +436,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
     seedAnimationList(currentSources.animations);
-  }, [sourcesReinitializedCount, currentSources.animations, seedAnimationList]);
+    trimWhenAnimationsLoaded();
+  }, [
+    sourcesReinitializedCount,
+    currentSources.animations,
+    seedAnimationList,
+    trimWhenAnimationsLoaded,
+  ]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
@@ -428,6 +539,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [dispatch, activeSceneId, getCode]
   );
+  runActiveSceneRef.current = () => runLocalScene(activeScene);
 
   const runScene = useCallback(
     (sceneId: string | null) => {
@@ -802,6 +914,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ) : undefined
         }
       >
+        {WorkspaceAlert}
         {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
         <div
@@ -826,7 +939,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
             }}
           >
-            <ItemsTab />
+            <div className={moduleStyles.itemsTab}>
+              <GenerateImagePane uploadImage={uploadImage} />
+            </div>
           </div>
         )}
 
@@ -858,7 +973,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             instructions={levelProperties.longInstructions}
             onCodeGenerated={handleCodeGenerated}
-            channelId={channelId}
+            uploadImage={uploadImage}
           />
         )}
       </TabShell>
