@@ -56,6 +56,7 @@ const CraftVisualizationColumn = function (props) {
                   width: '28px',
                   height: '20px',
                   opacity: 1,
+                  boxSizing: 'content-box',
                 }}
                 src={downArrowImg}
                 alt=""
@@ -69,6 +70,7 @@ const CraftVisualizationColumn = function (props) {
                   height: '32px',
                   padding: '0 6px',
                   opacity: 1,
+                  boxSizing: 'content-box',
                 }}
                 src={runButtonImg}
                 alt=""
@@ -81,6 +83,7 @@ const CraftVisualizationColumn = function (props) {
                   height: '32px',
                   padding: '0 6px',
                   opacity: 1,
+                  boxSizing: 'content-box',
                 }}
                 src={runButtonImg}
                 alt=""
@@ -92,6 +95,7 @@ const CraftVisualizationColumn = function (props) {
                   width: '28px',
                   height: '20px',
                   opacity: 1,
+                  boxSizing: 'content-box',
                 }}
                 src={upArrowImg}
                 alt=""
