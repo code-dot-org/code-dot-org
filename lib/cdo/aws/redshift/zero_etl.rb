@@ -28,9 +28,17 @@ module Cdo
         # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
         HEALTHY_TABLE_STATES = %w[Synced ResyncInitiated].freeze
 
-        # @param environment_type [Symbol, String]
+        # We only have Zero ETL Integration provisioned for the production and managed test systems.
+        VALID_ENVIRONMENT_TYPES = %w[production test].freeze
+
+        # @param environment_type [Symbol, String] one of VALID_ENVIRONMENT_TYPES
         # @return [String] e.g. "test_learningplatform_mysql_zeroetl"
+        # @raise [ArgumentError] if environment_type is not a recognized environment
         def self.target_database(environment_type)
+          unless VALID_ENVIRONMENT_TYPES.include?(environment_type.to_s)
+            raise ArgumentError,
+              "unknown environment_type #{environment_type.inspect}: expected one of #{VALID_ENVIRONMENT_TYPES.join(', ')}"
+          end
           "#{environment_type}_#{TARGET_DATABASE_SUFFIX}"
         end
 

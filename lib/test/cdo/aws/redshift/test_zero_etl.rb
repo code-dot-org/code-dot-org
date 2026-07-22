@@ -8,6 +8,28 @@ class TestZeroEtl < Minitest::Test
     assert_equal 'test_learningplatform_mysql_zeroetl', ZeroEtl.target_database('test')
   end
 
+  def test_target_database_accepts_a_symbol_environment_type
+    assert_equal 'production_learningplatform_mysql_zeroetl', ZeroEtl.target_database(:production)
+  end
+
+  def test_target_database_rejects_an_unknown_environment_type
+    error = assert_raises(ArgumentError) {ZeroEtl.target_database('bogus')}
+    assert_includes error.message, 'bogus'
+  end
+
+  def test_target_database_rejects_a_sql_injection_attempt
+    injection = "test'; DROP TABLE users; --"
+    assert_raises(ArgumentError) {ZeroEtl.target_database(injection)}
+  end
+
+  def test_integration_errors_rejects_an_unknown_environment_type
+    client = mock('client')
+    client.expects(:execute).never
+    assert_raises(ArgumentError) do
+      ZeroEtl.integration_errors(client: client, environment_type: "x' OR '1'='1")
+    end
+  end
+
   def test_integration_errors_queries_svv_integration_for_the_target_database_error_state
     client = mock('client')
     client.expects(:execute).with do |sql|
