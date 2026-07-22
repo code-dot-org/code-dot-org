@@ -67,7 +67,8 @@ async function normalizeIfPixelArt(
 /**
  * Generate an image from a text prompt using gemini-2.5-flash-image, straight
  * through the AI Gateway (which logs/attributes via AichatContextManager).
- * Sprites get a flat green background that is flood-filled to transparency.
+ * Sprites and blocks get a flat key color the model picks to contrast with
+ * the subject, flood-filled to transparency.
  *
  * @returns the generated image as {filename, uint8Array, mediaType}.
  */
@@ -85,9 +86,9 @@ export async function generateImage(
   const styleClause = STYLE_PROMPT[style];
   let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
-    fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
+    fullPrompt = `${fullPrompt} Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.`;
   } else if (itemType === 'block') {
-    fullPrompt = `${fullPrompt} Draw one large square block centered in the image, with a clear margin of plain solid bright green (#00FF00) background around all four sides, extending to the image edges. No background scene — just the block on the flat green background.`;
+    fullPrompt = `${fullPrompt} Draw one large square block centered in the image, with a clear margin around all four sides of one plain solid flat color that contrasts strongly with the block and appears nowhere on it, extending to the image edges. No background scene — just the block on that flat background.`;
   }
 
   const {files} = await generateText({
@@ -100,10 +101,11 @@ export async function generateImage(
     throw new Error('No image was generated');
   }
 
-  // One processing pipeline: sprites and blocks get the green background
-  // removed exactly the same way (flood-fill from top-left — the block prompt
-  // asks for green padding on all sides, so the corner is background; pixel
-  // art a sharp 1-bit cut, smooth art a feathered matte). Blocks are then
+  // One processing pipeline: sprites and blocks get the key-color background
+  // removed exactly the same way (flood-fill from the top-left corner, which
+  // samples the key — the block prompt asks for padding on all sides, so the
+  // corner is background; pixel art a sharp 1-bit cut, smooth art a feathered
+  // matte). Blocks are then
   // cropped to content so the padding is trimmed and grid-placed copies tile
   // seamlessly. Pixel style gets grid-normalized; any processed image comes back
   // as PNG. A smooth background passes through as-is.
