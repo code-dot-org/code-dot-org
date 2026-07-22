@@ -167,7 +167,7 @@ const styles = {
     marginBottom: MARGIN,
     marginInlineEnd: MARGIN,
     backgroundColor: 'var(--background-neutral-primary)',
-    border: `${BORDER}px solid var(--borders-neutral-primary)1,
+    border: `${BORDER}px solid var(--borders-neutral-primary)`,
     borderRadius: 2,
     cursor: 'pointer',
   },
