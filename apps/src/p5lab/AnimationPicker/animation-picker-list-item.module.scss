@@ -1,11 +1,15 @@
 $thumbnail-size: 115px;
 $thumbnail-border-width: 1px;
+$thumbnail-padding: 2px;
+$thumbnail-root-padding: 10px;
 $hover-plus-size: 24px;
 $thumbnail-margin-height: 10px;
 
-// Used for the width and height properties of AnimationPreview
+// AnimationPreview renders inside the .thumbnail button's inner content-box:
+//   thumbnail-size - root-padding-right - 2 * border-width - 2 * button-padding
+// = 115 - 10 - 2 - 4 = 99
 :export {
-  previewSize: calc(($thumbnail-size - 2 * $thumbnail-border-width) / 1px);
+  previewSize: 99;
 }
 
 .root {
@@ -28,7 +32,9 @@ $thumbnail-margin-height: 10px;
   border-radius: 12px;
   padding: 2px;
   cursor: pointer;
-  background: none;
+  // Explicit transparent to override common.scss `button { background-color: #eee }`.
+  background-color: transparent;
+  background-image: none;
   box-shadow: none;
   margin: 0 0 0 0;
   outline: none;
