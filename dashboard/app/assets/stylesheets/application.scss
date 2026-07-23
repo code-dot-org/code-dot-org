@@ -1710,8 +1710,8 @@ body.iframe_embed_app_and_code {
 
 .qtip-content {
   font-family: var(--font-family-main);
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
   line-height: 1.48;
   color: var(--text-neutral-primary);
   padding-right: 25px;
@@ -1756,7 +1756,7 @@ html[dir=rtl] .qtip-content {
   background: transparent;
 
   i {
-    font-size: 1rem;
+    font-size: var(--font-size-body-md);
     line-height: 125%;
   }
 
