@@ -178,6 +178,23 @@ describe('platformPhysics', () => {
     expect(feet(player)).toBeGreaterThan(300);
   });
 
+  it('falls promptly off an edge — walking never carries across a one-block gap', () => {
+    const walls = [
+      wallAt(0, 6),
+      wallAt(1, 6),
+      wallAt(3, 6),
+      wallAt(3, 7),
+      wallAt(4, 6),
+    ];
+    for (const startX of [15, 19, 23, 27, 31, 35]) {
+      const player = makeSprite(startX, 275);
+      player.__slab2Prev = {x: startX, y: 275};
+      run(player, walls, 60, 6);
+      expect(feet(player)).toBe(400);
+      expect(player.position.x).toBe(140);
+    }
+  });
+
   it('contains the sides and floor but leaves the top open', () => {
     const player = makeSprite(30, 375);
     run(player, [], 20, -6);

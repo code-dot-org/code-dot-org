@@ -24,6 +24,12 @@ export const CONTACT_EPSILON = 0.1;
 // band there is zero clearance to enter them.
 export const MIN_SOLID_OVERLAP = 8;
 
+// Stepping off an edge falls at least this fast (px/frame). Ramping from
+// zero, a walking player drifted across a one-block gap and caught the far
+// lip only on lucky frames — an inconsistent coin flip; falling at once
+// makes a gap a gap (crossing one takes a jump).
+export const LEDGE_FALL_SPEED = 5;
+
 // The player's solid body is the art box scaled by this factor, anchored
 // at the feet: a default-size (50px) costume gets a 40px body, so every
 // costume shape fits a one-cell opening, and the size block scales the
@@ -115,6 +121,7 @@ export function resolvePlatformPhysics(
     // straight back down, never shoved sideways. The clauses below only
     // arbitrate corners reached with horizontal movement.
     const vertical = Math.abs(dx) <= CONTACT_EPSILON;
+    let landed = false;
     boxes.forEach(wall => {
       if (
         Math.abs(x - wall.x) >= halfW + wall.halfW ||
@@ -139,6 +146,7 @@ export function resolvePlatformPhysics(
         if (vertical || centerOn || wasAt) {
           y = Math.min(y, top - halfH);
           sprite.velocity.y = 0;
+          landed = true;
         }
       } else if (
         dy < 0 &&
@@ -154,6 +162,7 @@ export function resolvePlatformPhysics(
     if (y > view.height - halfH) {
       y = view.height - halfH;
       sprite.velocity.y = 0;
+      landed = true;
     }
     // De-penetration: a declined crossing slides off the corner sideways;
     // other thin penetration (squeeze-band drift, a lip grazed on the way
@@ -185,6 +194,20 @@ export function resolvePlatformPhysics(
         x += x < wall.x ? -penX : penX;
       }
     });
+    // Footing lost this frame with nothing catching the fall: drop at
+    // ledge speed at once (see LEDGE_FALL_SPEED).
+    if (!landed && sprite.velocity.y >= 0) {
+      const hadFooting =
+        prev.y + halfH >= view.height - CONTACT_EPSILON ||
+        boxes.some(
+          wall =>
+            Math.abs(prev.y + halfH - (wall.y - wall.halfH)) <=
+              CONTACT_EPSILON && Math.abs(prev.x - wall.x) < halfW + wall.halfW
+        );
+      if (hadFooting && sprite.velocity.y < LEDGE_FALL_SPEED) {
+        sprite.velocity.y = LEDGE_FALL_SPEED;
+      }
+    }
     // Gravity accrues after the cap, so the effective fall step is the cap
     // plus one gravity step.
     if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
