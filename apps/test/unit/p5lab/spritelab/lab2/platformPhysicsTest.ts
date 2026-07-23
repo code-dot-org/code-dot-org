@@ -1,15 +1,17 @@
 import {
   resolvePlatformPhysics,
+  PhysicsBox,
+  PhysicsSprite,
   TERMINAL_FALL_SPEED,
   PLATFORM_GRAVITY,
 } from '@cdo/apps/p5lab/spritelab/lab2/platformPhysics';
 
-// One test per feel rule; the scenarios mirror the browser verification the
-// rules were tuned against (400x400 view, 50px grid).
+// One test per feel rule, on the lab's real geometry (400x400 view, 50px
+// grid).
 const VIEW = {width: 400, height: 400};
 
 // Default art box 25x50 at scale 1: body 20x40, feet-anchored (drop 5).
-const makeSprite = (x, y, w = 25, h = 50) => ({
+const makeSprite = (x: number, y: number, w = 25, h = 50): PhysicsSprite => ({
   position: {x, y},
   velocity: {x: 0, y: 0},
   width: w,
@@ -17,18 +19,19 @@ const makeSprite = (x, y, w = 25, h = 50) => ({
   scale: 1,
 });
 
-const wallAt = (col, row) => ({
+const wallAt = (col: number, row: number): PhysicsBox => ({
   position: {x: col * 50 + 25, y: row * 50 + 25},
   width: 50,
   height: 50,
   scale: 1,
 });
 
-const feet = sprite => sprite.position.y + (sprite.height * sprite.scale) / 2;
+const feet = (sprite: PhysicsSprite) =>
+  sprite.position.y + (sprite.height * sprite.scale) / 2;
 
 // One frame: p5's pre-phase velocity integration, held-key movement (the
 // interpreted blocks move sprites imperatively), then the resolver.
-const step = (sprite, walls, vx = 0) => {
+const step = (sprite: PhysicsSprite, walls: PhysicsBox[], vx = 0) => {
   sprite.position.y += sprite.velocity.y;
   sprite.position.x += vx;
   resolvePlatformPhysics(
@@ -38,7 +41,13 @@ const step = (sprite, walls, vx = 0) => {
   );
 };
 
-const run = (sprite, walls, frames, vx = 0, onFrame) => {
+const run = (
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[],
+  frames: number,
+  vx = 0,
+  onFrame?: (sprite: PhysicsSprite, frame: number) => void
+) => {
   for (let i = 0; i < frames; i++) {
     step(sprite, walls, vx);
     if (onFrame) {
@@ -74,7 +83,7 @@ describe('platformPhysics', () => {
   it('does not teleport a two-row-tall walker onto a head-height block', () => {
     const walls = [wallAt(4, 6)];
     const player = makeSprite(100, 350, 25, 100);
-    const feetSeen = new Set();
+    const feetSeen = new Set<number>();
     run(player, walls, 30, 6, s => feetSeen.add(feet(s)));
     expect(player.position.x).toBe(190);
     expect([...feetSeen]).toEqual([400]);
@@ -133,7 +142,7 @@ describe('platformPhysics', () => {
     const player = makeSprite(141, 275);
     player.__slab2Prev = {x: 141, y: 275};
     player.velocity.y = -13.5;
-    const xs = new Set();
+    const xs = new Set<number>();
     run(player, walls, 60, 0, s => xs.add(s.position.x));
     expect([...xs]).toEqual([141]);
     expect(feet(player)).toBe(300);
@@ -146,7 +155,7 @@ describe('platformPhysics', () => {
     const player = makeSprite(141, 375);
     player.__slab2Prev = {x: 141, y: 375};
     player.velocity.y = -13.5;
-    const xs = new Set();
+    const xs = new Set<number>();
     run(player, walls, 60, 0, s => xs.add(s.position.x));
     expect([...xs]).toEqual([141]);
     expect(feet(player)).toBe(400);

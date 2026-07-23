@@ -51,15 +51,12 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
-// Served in place of the zGameDev library (see loadHelperLibraries): the
-// cell-sized sprite default is all this lab keeps of it — the per-frame
-// physics loop (stock collide passes, edge bounce, gravity) is engine-
-// owned (platformPhysics.js), and no DB block helper references the
-// library's globals. In this lab the library name is the level's opt-in
-// to platformer physics; the library's own code never runs. Legacy labs
-// load the real thing.
+// Served in place of the zGameDev library (see loadHelperLibraries). In
+// this lab the library name is a level's opt-in to platformer physics,
+// which is engine-owned (platformPhysics.ts); the cell-sized sprite
+// default is all the interpreted side needs.
 const PLATFORM_LIBRARY_SOURCE = [
-  '// Replaced by SpriteLab2Engine: physics is engine-owned in this lab.',
+  '// Physics is engine-owned in this lab; see platformPhysics.ts.',
   'setDefaultSpriteSize(50);',
 ].join('\n');
 
@@ -398,7 +395,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  // Platformer physics for players (see platformPhysics.js for the rules),
+  // Platformer physics for players (see platformPhysics.ts for the rules),
   // run immediately before every paint — after p5's pre-phase velocity
   // integration and after this frame's behaviors/events have moved
   // sprites. Program-driven (non-player) sprites keep the stock resolver.
