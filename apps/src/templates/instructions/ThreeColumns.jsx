@@ -20,6 +20,7 @@ const ThreeColumns = props => {
       float: isRtl ? 'right' : 'left',
       width: '100%',
       boxSizing: 'border-box',
+      position: 'relative',
     },
     middle: {
       position: 'relative',
@@ -38,11 +39,13 @@ const ThreeColumns = props => {
       marginRight: isRtl ? '-100%' : 0,
     },
     right: {
-      position: 'relative',
-      float: isRtl ? 'right' : 'left',
+      position: 'absolute',
+      right: isRtl ? undefined : 0,
+      left: isRtl ? 0 : undefined,
+      bottom: 0,
+      top: 0,
       width: rightColWidth,
-      marginRight: isRtl ? 0 : -rightColWidth,
-      marginLeft: isRtl ? -rightColWidth : 0,
+      overflow: 'hidden',
     },
   };
 

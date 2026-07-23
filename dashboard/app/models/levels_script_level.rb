@@ -2,19 +2,27 @@
 #
 # Table name: levels_script_levels
 #
-#  level_id        :integer          not null
-#  script_level_id :integer          not null
+#  level_id        :integer          not null, primary key
+#  script_level_id :integer          not null, primary key
 #
 # Indexes
 #
-#  index_levels_script_levels_on_level_id                      (level_id)
-#  index_levels_script_levels_on_script_level_id               (script_level_id)
-#  index_levels_script_levels_on_script_level_id_and_level_id  (script_level_id,level_id) UNIQUE
+#  index_levels_script_levels_on_level_id         (level_id)
+#  index_levels_script_levels_on_script_level_id  (script_level_id)
 #
 
 # Join table.
 # Don't add anything to this model, beyond what's needed for serialization and seeding; used for convenience for ActiveRecord Import.
 class LevelsScriptLevel < ApplicationRecord
+  self.primary_keys = :script_level_id, :level_id
+
+  export_to_analytics
+
+  data_classification(
+    level_id: :public,
+    script_level_id: :public,
+  )
+
   belongs_to :script_level, optional: true
   belongs_to :level, optional: true
 
