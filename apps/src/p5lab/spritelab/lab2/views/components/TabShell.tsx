@@ -81,9 +81,12 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                       moduleStyles.tabGroupWorld
                     )}
                     // Clicks on the disabled selector fall through here and
-                    // open the group's default tab.
-                    onClick={() => {
+                    // open the group's default tab. The tab buttons handle
+                    // their own clicks; acting on their bubbled events too
+                    // would override them (activeTab is stale in this render).
+                    onClick={e => {
                       if (
+                        !(e.target as HTMLElement).closest('button') &&
                         activeTab !== 'Code' &&
                         activeTab !== 'World' &&
                         enabledTabs.includes('Code')
