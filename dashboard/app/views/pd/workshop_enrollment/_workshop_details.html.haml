@@ -1,30 +1,30 @@
 %div.row
-  %div.span6
+  %div.col-md-6
     %h2
       Workshop Details
 %div.row
-  %div.span2{style: 'text-align: right'}
+  %div.col-md-2{style: 'text-align: right'}
     %strong
       = @workshop.sessions.count == 1 ? 'Date:' : 'Dates:'
-  %div.span4
+  %div.col-md-4
     - @workshop.sessions.each do |session|
       = session.formatted_date_with_start_and_end_times
       %br
 %div.row
-  %div.span2{style: 'text-align: right'}
+  %div.col-md-2{style: 'text-align: right'}
     %strong
       Location:
-  %div.span2
+  %div.col-md-2
     = @workshop.location_name
     - if @workshop.location_address.present?
       %br
       = @workshop.location_address
 
 %div.row
-  %div.span2{style: 'text-align: right'}
+  %div.col-md-2{style: 'text-align: right'}
     %strong
       Course:
-  %div.span2
+  %div.col-md-2
     - if @workshop.course_url
       = link_to @workshop.course, @workshop.course_url
     - else
@@ -33,6 +33,6 @@
     - if @workshop.subject
       = "(#{@workshop.subject})"
 
-  %div.span6
+  %div.col-md-6
     %p{style: 'white-space: pre-wrap'}
       = @workshop.notes

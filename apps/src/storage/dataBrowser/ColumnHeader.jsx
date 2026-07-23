@@ -7,7 +7,6 @@ import React from 'react';
 
 import Dialog from '../../legacySharedComponents/Dialog';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import color from '../../util/color';
 import {valueOr} from '../../utils';
 
 import ColumnMenu from './ColumnMenu';
@@ -122,7 +121,9 @@ class ColumnHeader extends React.Component {
     const inputStyle = {
       ...{
         display: this.props.isEditing ? null : 'none',
-        backgroundColor: this.isInputValid() ? null : color.lightest_red,
+        backgroundColor: this.isInputValid()
+          ? null
+          : 'var(--background-error-light)',
         minWidth: 80,
       },
     };

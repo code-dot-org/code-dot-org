@@ -33,11 +33,26 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Show Code header toggle; opens the program's code dialog. */
   readonly showCodeHeader: Locator;
 
+  /**
+   * Show Code dialog's overlay (the DSCO Modal's role="presentation" backdrop,
+   * mounted on #showCodeModal appended to body). Carries the modal-backdrop
+   * z-index; this is the element whose stacking sits in front of the callouts.
+   */
+  readonly showCodeModalOverlay: Locator;
+
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
   /** Congratulations overlay shown on puzzle completion. */
   readonly congratsMessage: Locator;
+
+  /**
+   * The maze/game visualization surface (#visualization, see
+   * apps/src/maze/Visualization.jsx). Sprite art (e.g. idle-animation frames)
+   * can render mid-transition when the screenshot is taken, so visual checks
+   * that don't care about the exact playfield frame should mask this.
+   */
+  readonly visualization: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -49,10 +64,14 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.loadingSpinner = page.locator('#codeApp .loading');
     this.resetButton = page.locator('#resetButton');
     this.showCodeHeader = page.locator('#show-code-header');
+    this.showCodeModalOverlay = page.locator(
+      '#showCodeModal [role="presentation"]',
+    );
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
     this.congratsMessage = page.locator('.congrats');
+    this.visualization = page.locator('#visualization');
   }
 
   /**
@@ -100,10 +119,26 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     // State-agnostic: labs boot for anonymous sessions too, so wait for the
     // header user area in either auth state, not specifically signed-in.
     await this.header.waitForUserChrome();
-    // Dismiss the instructions overlay if shown (anonymous sessions).
+    // Dismiss the instructions overlay if shown (anonymous sessions). Its
+    // backdrop (#overlay) fills the viewport and a plain .click() lands on
+    // the default center point, which the instructions dialog itself can
+    // cover for levels with enough instructions text — that dialog then
+    // intercepts the click instead of the backdrop underneath it (see
+    // apps/src/templates/Overlay.jsx, apps/src/templates/instructions/
+    // InstructionsCsfMiddleCol.jsx). Click the dialog's own OK button
+    // instead: same dismissal (closeOverlay), no coordinate guessing.
     const overlay = this.page.locator('#overlay');
     if (await overlay.isVisible()) {
-      await overlay.click();
+      const dialogOk = this.page.getByRole('button', {
+        name: 'OK',
+        exact: true,
+      });
+      if (await dialogOk.isVisible()) {
+        await dialogOk.click();
+      } else {
+        await overlay.click();
+      }
+      await expect(overlay).toBeHidden();
     }
     // Let the header animation finish.
     await expect(this.page.locator('#header_middle_content')).toHaveCSS(

@@ -16,6 +16,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
@@ -43,6 +44,8 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
 
   const dispatch = useAppDispatch();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const managesOwnProject =
+    lab2EntryPoints[levelProperties.appName]?.managesOwnProject;
 
   // When the level changes, reset metadata relating to the project in redux.
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () =>
@@ -68,6 +71,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           scriptId,
           levelProperties,
           channelId,
+          managesOwnProject,
         })
       );
     }
@@ -76,7 +80,15 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // An early return could happen if the level is changed mid-load.
       promise?.abort();
     };
-  }, [channelId, currentLevelId, scriptId, levelProperties, dispatch, userId]);
+  }, [
+    channelId,
+    currentLevelId,
+    scriptId,
+    levelProperties,
+    dispatch,
+    userId,
+    managesOwnProject,
+  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {

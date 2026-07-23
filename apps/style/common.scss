@@ -416,7 +416,7 @@ html[dir="rtl"] {
   left: 400px;
   cursor: ew-resize;
   text-align: center;
-  color: $lighter_gray;
+  color: var(--borders-neutral-strong);
   font-size: 24px;
   line-height: 400px;
 }
@@ -891,13 +891,13 @@ input[type="radio"] {
 .prompt-icon-cell {
   vertical-align: top;
   text-align: center;
-  width: 50px;
+  width: 60px;
   padding-right: 10px;
   height: auto;
 
   /* authored hints */
   &.authored_hints {
-    width: 80px;
+    width: 90px;
 
     #prompt-icon {
       padding-top: 20px;
@@ -1171,7 +1171,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     vertical-align: middle;
   }
   tr.highlight {
-    background-color: $lightest_purple;
+    background-color: var(--background-neutral-secondary);
   }
 
   .template-level-warning {
@@ -1251,28 +1251,42 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $neutral_dark;
+      color: var(--text-neutral-primary);
       margin-bottom: 10px;
+
 
       &.caption-text {
         @include main-font-semi-bold;
-      }
-
-      a {
-        @include main-font-regular;
-        color: $brand_secondary_default;
-        text-decoration: underline;
-        &:hover {
-          color: $brand_secondary_dark;
-        }
       }
     }
   }
   .generatedCode {
     font-size: 14px;
     overflow: scroll;
-    max-height: 400px;
-    margin: 12px 0;
+    max-height: 340px;
+    margin: 0;
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-primary);
+
+    // Chrome (>=v121), Edge, Firefox
+    scrollbar-color: var(--background-neutral-quinary)
+      var(--background-neutral-tertiary);
+
+    // Safari / older WebKit
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+      background: var(--background-neutral-tertiary);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--background-neutral-quinary);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-corner {
+      background: var(--background-neutral-tertiary);
+    }
   }
 }
 
@@ -1379,8 +1393,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   $image-height: $image-width;
 
   .feedback-image {
-    width: $image-width;
-    height: $image-height;
+    width: $image-width + 6px;
+    height: $image-height + 6px;
     margin: 0;
     float: left;
     border: $lighter_gray;
@@ -1658,7 +1672,7 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 .WireframeButtons_containerLeft {
-  flex: 1 1 372px;
+  flex: 1 1 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1670,7 +1684,7 @@ $see-examples-thick-underline-color: $yellow;
 }
 
 .WireframeButtons_containerRight {
-  flex: 1 0 372px;
+  flex: 1 0 392px;
   overflow: hidden;
   padding-top: 20px;
   padding-right: 20px;
@@ -1679,7 +1693,7 @@ $see-examples-thick-underline-color: $yellow;
 
 @media (max-width: 845px) {
   .WireframeButtons_containerRight {
-    flex: 1 1 372px;
+    flex: 1 1 392px;
   }
 
   .WireframeButtons_containerLeft {
@@ -1731,7 +1745,7 @@ div.WireframeButtons_active {
   .legacy-share-view {
     div#visualizationColumn.wireframeShare {
       width: 402px !important;
-      height: 602px !important;
+      height: 642px !important;
       background-size: 402px 602px;
 
       div#phoneFrameScreen {
@@ -1771,7 +1785,7 @@ div.WireframeButtons_active {
 
   #visualizationColumn.wireframeShare {
     width: 432px !important;
-    height: 757px !important;
+    height: 797px !important;
     margin: 0 auto;
     padding: 20px 0;
     overflow: hidden;
@@ -1782,8 +1796,8 @@ div.WireframeButtons_active {
       left: 16px;
       border: solid thin #202b34;
       background-color: #202b34;
-      width: 400px;
-      height: 600px;
+      width: 402px;
+      height: 602px;
     }
   }
 
@@ -1827,7 +1841,6 @@ div.WireframeButtons_active {
   }
 }
 
-#manageAssetsModal {
+#manageAssetsModal .modal-dialog {
   width: 800px;
-  margin-left: -400px;
 }

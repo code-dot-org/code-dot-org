@@ -14,7 +14,7 @@
     .field
       = f.label :serialized_maze
       - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
-      = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
+      = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'form-control'
 
 -# This element exists instead of the _encrypted_examples element as a temporary workaround in order
 -# to facilitate level urls instead of project urls in the example solutions. This is needed because
