@@ -472,6 +472,13 @@ class ShareFilteringTest < Minitest::Test
     assert_equal false, ShareFiltering.should_filter_program(generate_sketchlab_source, 'sketchlab')
   end
 
+  def test_hash_program_with_blockly_type_is_unfilterable_not_an_error
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
+
+    assert_equal false, ShareFiltering.should_filter_program(generate_sketchlab_source, 'spritelab')
+    assert_nil ShareFiltering.find_share_failure(generate_sketchlab_source, 'en', 'spritelab')
+  end
+
   # Tests for ShareFiltering.extract_text_from_js
   # These tests cover expected extraction behavior.
 
