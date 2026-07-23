@@ -112,6 +112,7 @@
   --borders-neutral-primary: var(--border-neutral-primary);
   --borders-neutral-solid: var(--border-neutral-solid);
   --borders-neutral-strong: var(--border-neutral-secondary);
+  --borders-neutral-white-fixed: var(--border-neutral-white-fixed);
 
   /* Text — brand families collapse */
   --text-brand-aqua-primary: var(--text-brand-primary);

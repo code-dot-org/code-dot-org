@@ -71,7 +71,7 @@ var LegacyDialog = (module.exports = function (options) {
   var closeLink = $(
     '<button id="x-close" type="button" aria-label="Close"></button>'
   )
-    .addClass('x-close')
+    .addClass('x-close no-mc')
     .attr('data-dismiss', 'modal');
   this.div = $('<div tabindex="-1"/>').addClass('modal');
 
