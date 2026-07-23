@@ -12,7 +12,6 @@ import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import color from '@cdo/apps/util/color';
 
 export default class SublevelCard extends React.Component {
   static propTypes = {
@@ -167,8 +166,8 @@ const styles = {
     width: WIDTH + BORDER * 2,
     marginBottom: MARGIN,
     marginInlineEnd: MARGIN,
-    backgroundColor: color.white,
-    border: `${BORDER}px solid rgb(187, 187, 187)`,
+    backgroundColor: 'var(--background-neutral-primary)',
+    border: `${BORDER}px solid var(--borders-neutral-primary)`,
     borderRadius: 2,
     cursor: 'pointer',
   },
@@ -177,22 +176,22 @@ const styles = {
     width: THUMBNAIL_IMAGE_SIZE + MARGIN * 2 + BORDER,
     height: THUMBNAIL_IMAGE_SIZE + MARGIN * 2,
     padding: MARGIN,
-    borderInlineEnd: `${BORDER}px solid rgb(187, 187, 187)`,
+    borderInlineEnd: `${BORDER}px solid var(--borders-neutral-primary)`,
   },
   placeholderThumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: 'var(--background-neutral-quinary)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    border: `${BORDER}px solid rgb(187, 187, 187)`,
+    border: `${BORDER}px solid var(--borders-neutral-primary)`,
     borderRadius: 2,
   },
   icon: {
     fontSize: THUMBNAIL_IMAGE_SIZE - 50,
-    color: color.white,
+    color: 'var(--text-neutral-white-fixed)',
     opacity: 0.8,
   },
   column: {
@@ -213,7 +212,7 @@ const styles = {
     fontSize: 16,
     lineHeight: '25px',
     ...fontConstants['main-font-semi-bold'],
-    color: color.teal,
+    color: 'var(--text-brand-teal-primary)',
     marginBottom: 10,
     marginInlineStart: MARGIN,
     overflowWrap: 'break-word',
@@ -225,6 +224,6 @@ const styles = {
   description: {
     marginTop: 6,
     marginInlineStart: 4,
-    color: color.black,
+    color: 'var(--text-neutral-primary)',
   },
 };
