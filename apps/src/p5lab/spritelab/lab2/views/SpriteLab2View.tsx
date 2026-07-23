@@ -807,16 +807,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // Restart the whole game from the first scene.
-  // Restarting hands focus to the game region, so it doesn't stay parked on
-  // the clicked button (where Space, also a game key, would re-activate it).
-  // Keyboard activations land on the playspace with its focus-visible ring;
-  // pointer activations focus it silently.
+  // Restarting must not leave focus parked on the clicked button, where
+  // Space — also a game key — would re-activate it on every press. Keyboard
+  // activations hand focus to the playspace, ring included; pointer
+  // activations blur to the page instead — a silent focus on the playspace
+  // would still grow a ring at the player's first keypress, because the
+  // browser promotes the focused element to :focus-visible on keyboard use.
   const playspaceRef = useRef<HTMLDivElement>(null);
+  const handOffRestartFocus = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (event.detail > 0) {
+        event.currentTarget.blur();
+      } else {
+        playspaceRef.current?.focus({preventScroll: true});
+      }
+    },
+    []
+  );
 
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(scenes[0]?.id ?? null);
-    playspaceRef.current?.focus({preventScroll: true});
   }, [runScene, scenes]);
 
   // Re-run whatever scene is on stage right now (through any jumps).
@@ -830,7 +841,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runExternalProjectScene(current.project, current.sceneId);
     }
-    playspaceRef.current?.focus({preventScroll: true});
   }, [runScene, scenes, runExternalProjectScene]);
 
   // Clicking the live preview opens Play on the scene being previewed.
@@ -900,14 +910,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartGame}
+                onClick={event => {
+                  handOffRestartFocus(event);
+                  handleRestartGame();
+                }}
               >
                 Restart game
               </button>
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartScene}
+                onClick={event => {
+                  handOffRestartFocus(event);
+                  handleRestartScene();
+                }}
               >
                 Restart scene
               </button>
