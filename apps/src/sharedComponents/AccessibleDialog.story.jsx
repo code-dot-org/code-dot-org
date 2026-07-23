@@ -23,7 +23,8 @@ customStyle.innerHTML = `
     border: solid 1px rgb(121 124 128);
     p {
       font-size: 30px;
-      font-family: "Barlow Semi Condensed Medium", sans-serif;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 500;
     }
   }
 

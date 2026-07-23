@@ -24,6 +24,7 @@
  *= require fonts/barlow-semi-condensed
  *= require fonts/geist
  *= require fonts/noto-sans
+ *= require fonts/space-grotesk
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -51,8 +52,6 @@ $selectUserTypeButtonBackgroundColorHover: #ddd;
 $selectUserTypeButtonTextColorHover: #000;
 $selectUserTypeButtonBackgroundColorSelected: #0093a4;
 $selectUserTypeButtonTextColorSelected: #fff;
-
-$contrastTealHeader: #00818f;
 
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
@@ -215,16 +214,16 @@ img.video_thumbnail {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
-    background-color: $contrastTealHeader;
-    color: $header_text;
+    background-color: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
     a:link {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
     a:visited {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
 
@@ -310,6 +309,7 @@ img.video_thumbnail {
       }
 
       &:hover, &:active {
+        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
@@ -325,9 +325,9 @@ img.video_thumbnail {
     @include main-font-regular;
     display: flex;
     align-items: center;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     background-color: transparent;
-    border: 1px solid $white;
+    border: 1px solid var(--borders-neutral-white-fixed);
     border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
@@ -339,10 +339,11 @@ img.video_thumbnail {
     height: 35px;
     a:hover {
       text-decoration: none;
+      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
       background-color: $orange;
     }
     &:active {
-      border: 1px solid $white !important;
+      border: 1px solid var(--borders-neutral-white-fixed) !important;
     }
   }
 
@@ -369,8 +370,8 @@ img.video_thumbnail {
   }
 
   #header_user_create_account {
-    background-color: $light_white !important;
-    color: $light_primary_500;
+    background-color: var(--background-neutral-primary) !important;
+    color: var(--text-brand-teal-primary);
     font-weight: $semi-bold-font-weight;
   }
 
@@ -380,7 +381,7 @@ img.video_thumbnail {
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
-      background-color: $dark_red;
+      background-color: var(--background-error-primary);
       padding: 0 5px;
       margin-top: 2px;
       font-size: 12px;
@@ -413,7 +414,7 @@ img.video_thumbnail {
 
       // Usually transparent, so adding teal allows button to render in front
       .header_user {
-        background-color: $teal;
+        background-color: var(--background-brand-teal-primary);
       }
     }
   }
@@ -619,11 +620,11 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $darkest_gray;
-  color: $header_text;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-inverse);
   a:link, a:visited, a:hover, a:active {
     @include main-font-regular;
-    color: $white;
+    color: var(--text-neutral-inverse);
     background-color: transparent;
   }
   a:hover {
@@ -992,7 +993,7 @@ body.background-dark, body.music-black {
   margin-top: -8px;
   margin-right: 2px;
   height: 42px;
-  border-right: 1px solid $inset_color;
+  border-right: 1px solid var(--borders-neutral-strong);
   border-right-style: inset;
   display: inline-block;
 }
@@ -1000,22 +1001,22 @@ body.background-dark, body.music-black {
 .user_options, .help_contents {
   display: none;
   a:link {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:visited {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:hover {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
     text-decoration: none;
   }
   a:active {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
   }
-  border: 1px solid $black;
-  color: $black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
   padding: 10px;
 }
 
