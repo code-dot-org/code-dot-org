@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-14 21:45:58 UTC",
+    "serialized_at": "2026-07-23 06:05:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -34,7 +34,7 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
+      "key": "lesson-3",
       "name": "Lesson 1",
       "absolute_position": 1,
       "lockable": false,
@@ -43,23 +43,220 @@
       "properties": {
       },
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Project Kickoff",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 12",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "cody-playground"
       }
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "376ba9ad-0f20-461a-8dea-e5986e29c8c2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "376ba9ad-0f20-461a-8dea-e5986e29c8c2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground"
+      }
+    },
+    {
+      "key": "88570c74-0dde-4c03-a688-e25e236fbb98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88570c74-0dde-4c03-a688-e25e236fbb98",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "81da7421-b98f-424d-aa4d-2fc6e1373e75",
+      "position": 1,
+      "properties": {
+        "description": "<a href = \"https://docs.google.com/presentation/d/1r-tN_wtxh-0Xlb3JQdF5LBCwuHzEqoZ8YVbxd4PTF50/edit?usp=sharing\">Slides</a>\n\n<a href = \"https://docs.google.com/document/d/1tzepkWj2T_yITbIgxINCHIHH_A2OW7qfSmdFTYypZgc/edit?usp=sharing\"> Project Guide </a>",
+        "name": "Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "81da7421-b98f-424d-aa4d-2fc6e1373e75",
+        "lesson_activity.key": "376ba9ad-0f20-461a-8dea-e5986e29c8c2"
+      }
+    },
+    {
+      "key": "f3356e4e-e0df-4f1d-9274-7915ebbc0c40",
+      "position": 2,
+      "properties": {
+        "name": "Day 1",
+        "progression_name": "Day 1 - Refine Your Data Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3356e4e-e0df-4f1d-9274-7915ebbc0c40",
+        "lesson_activity.key": "376ba9ad-0f20-461a-8dea-e5986e29c8c2"
+      }
+    },
+    {
+      "key": "f3a5abd6-144d-4f32-8a3a-fbc7e055877a",
+      "position": 3,
+      "properties": {
+        "name": "Day 2",
+        "progression_name": "Day 2 - Plan Your Data Collection"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3a5abd6-144d-4f32-8a3a-fbc7e055877a",
+        "lesson_activity.key": "376ba9ad-0f20-461a-8dea-e5986e29c8c2"
+      }
+    },
+    {
+      "key": "a866c5b4-73b6-4b2c-bd37-1cb5d7635381",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a866c5b4-73b6-4b2c-bd37-1cb5d7635381",
+        "lesson_activity.key": "88570c74-0dde-4c03-a688-e25e236fbb98"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Day 1 - Refine Your Data Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "f3356e4e-e0df-4f1d-9274-7915ebbc0c40"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson2-level1-2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Day 2 - Plan Your Data Collection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson2-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "f3a5abd6-144d-4f32-8a3a-fbc7e055877a"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson2-level2-2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson12-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "a866c5b4-73b6-4b2c-bd37-1cb5d7635381"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson12-level1-2026"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson2-level1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson2-level1-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "f3356e4e-e0df-4f1d-9274-7915ebbc0c40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson2-level2-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson2-level2-2026"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "f3a5abd6-144d-4f32-8a3a-fbc7e055877a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson12-level1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson12-level1-2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "cody-playground",
+        "activity_section.key": "a866c5b4-73b6-4b2c-bd37-1cb5d7635381"
+      }
+    }
   ],
   "resources": [
 

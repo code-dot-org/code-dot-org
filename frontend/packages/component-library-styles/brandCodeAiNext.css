@@ -220,6 +220,7 @@
   --border-neutral-primary: var(--neutral-gray-20);
   --border-neutral-secondary: var(--neutral-gray-40);
   --border-neutral-solid: var(--neutral-base-black);
+  --border-neutral-white-fixed: var(--neutral-base-white);
   --border-brand-primary: var(--brand-purple-50);
   --border-brand-light: var(--brand-purple-5);
   --border-brand-mid: var(--brand-purple-20);
@@ -390,6 +391,7 @@
   --border-neutral-primary: var(--neutral-gray-80);
   --border-neutral-secondary: var(--neutral-gray-60);
   --border-neutral-solid: var(--neutral-base-white);
+  --border-neutral-white-fixed: var(--neutral-base-white);
 
   /* Primary borders of all colors stay at level 50 in dark mode since contrast only needs 3:1. */
   --border-brand-primary: var(--brand-purple-50);

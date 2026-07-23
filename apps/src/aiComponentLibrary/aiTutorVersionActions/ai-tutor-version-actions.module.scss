@@ -51,6 +51,10 @@
   margin-bottom: 0.375rem;
   padding: 0.625rem;
 
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+
   &:focus {
     outline: none;
     border: variables.$strong-border;

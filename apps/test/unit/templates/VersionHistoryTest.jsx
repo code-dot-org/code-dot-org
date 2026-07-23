@@ -70,6 +70,7 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: false,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
         act(() => {
@@ -122,6 +123,7 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: true,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
         act(() => {
