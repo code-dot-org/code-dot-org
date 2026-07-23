@@ -117,8 +117,11 @@ module ShareFiltering
     if source.is_a?(String)
       begin
         source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
-      rescue JSON::ParserError
+      rescue JSON::NestingError
         CDO.log.warn "ShareFiltering.extract_text_sketchlab: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: malformed JSON"
         return []
       end
     end
