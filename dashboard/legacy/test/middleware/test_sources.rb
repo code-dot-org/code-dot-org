@@ -275,7 +275,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_get_source_blocks_sketchlab_profanity_violations
-    # Given a Sketch Lab program (object-shaped source) with profanity
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
@@ -283,6 +282,7 @@ class SourcesTest < FilesApiTestBase
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
+    # Mock that the profanity filter will find a violation
     ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
 
     # owner can view
