@@ -3,6 +3,7 @@ import {
   EventType,
   utils as CraftUtils,
 } from '@code-dot-org/craft';
+import {ThemeProvider} from '@mui/material/styles';
 import $ from 'jquery';
 import React from 'react';
 
@@ -14,6 +15,10 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
+import lessButtonImg from '../../../static/craft/CDO_MC_Less.png';
+import moreButtonImg from '../../../static/craft/CDO_MC_More.png';
+import downButtonImg from '../../../static/craft/CDO_MC_ScrollDown.png';
+import upButtonImg from '../../../static/craft/CDO_MC_ScrollUp.png';
 import {TestResults} from '../../constants';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../../redux';
@@ -21,6 +26,7 @@ import Sounds from '../../Sounds';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
+import minecraftMuiTheme from '../minecraftMuiTheme';
 
 var Provider = require('react-redux').Provider;
 
@@ -454,15 +460,27 @@ Craft.init = function (config) {
   createReactRoot(
     <Provider store={getStore()}>
       <div>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn
-              showFinishButton={!config.level.isProjectLevel}
-            />
-          }
-          onMount={onMount}
-        />
-        <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+        <ThemeProvider theme={minecraftMuiTheme}>
+          <AppView
+            collapseIcon={
+              <img style={{width: '2rem'}} src={lessButtonImg} alt="" />
+            }
+            expandIcon={
+              <img style={{width: '2rem'}} src={moreButtonImg} alt="" />
+            }
+            upIcon={<img style={{width: '2rem'}} src={upButtonImg} alt="" />}
+            downIcon={
+              <img style={{width: '2rem'}} src={downButtonImg} alt="" />
+            }
+            visualizationColumn={
+              <CraftVisualizationColumn
+                showFinishButton={!config.level.isProjectLevel}
+              />
+            }
+            onMount={onMount}
+          />
+          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
+        </ThemeProvider>
       </div>
     </Provider>,
     document.getElementById(config.containerId),
