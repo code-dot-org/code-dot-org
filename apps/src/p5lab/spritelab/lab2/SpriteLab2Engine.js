@@ -54,6 +54,11 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 // resolvePlatformPhysics_.
 const TERMINAL_FALL_SPEED = 10;
 
+// zGameDev's per-frame gravity magnitude, mirrored for the rising-arc
+// restore below. A level that overrides gravity decays restored arcs at
+// this rate anyway — close enough for the one-frame correction.
+const PLATFORM_GRAVITY = 0.75;
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -421,10 +426,30 @@ export default class SpriteLab2Engine extends SpriteLab {
     commands.edgesCollide.call(this.library, {group: 'players'});
     // Cap fall speed: a single frame's step must stay small enough that a
     // falling sprite can't pass a block corner between frames (tunneling).
+    // And a rising player can't land: a held direction sliding the player up
+    // a wall face lets the end-of-frame collide snap it onto the lip and
+    // zero the ascent the moment its feet clear the top. Grounding while
+    // moving upward is always that snap, never a landing — restore the arc.
+    // (A head bonk resolves downward, leaving the player under the block,
+    // not grounded — so bonks still cancel the rise.)
     this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
       }
+      const risingVy = sprite.__slab2RisingVy;
+      if (
+        risingVy !== undefined &&
+        sprite.velocity.y >= 0 &&
+        commands.isDirectlyAbove.call(
+          this.library,
+          {id: sprite.id},
+          {group: 'walls'}
+        )
+      ) {
+        sprite.velocity.y = risingVy + PLATFORM_GRAVITY;
+      }
+      sprite.__slab2RisingVy =
+        sprite.velocity.y < -1 ? sprite.velocity.y : undefined;
     });
   }
 
