@@ -59,6 +59,14 @@ const TERMINAL_FALL_SPEED = 10;
 // resolver can leave sub-pixel noise on it.
 const CONTACT_EPSILON = 0.1;
 
+// A landing needs at least this much footing (px of horizontal overlap,
+// capped at half the collider for narrow sprites); a thinner corner graze
+// slides off the corner and the fall continues. Without this, dropping into
+// a one-cell gap is nearly impossible — the falling player's collider is
+// almost always grazing a neighboring block's corner at the moment the feet
+// cross the top line, and every graze would count as a landing.
+const LANDING_MIN_OVERLAP = 8;
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -484,6 +492,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       // brings the player back.
       x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
       y = prev.y + dy;
+      // Downward crossings collect into one candidate landing (highest top
+      // wins; adjacent blocks sharing that top are one surface, so a seam
+      // never reads as thin footing) and resolve after the loop against
+      // LANDING_MIN_OVERLAP. Upward crossings bonk immediately.
+      let landTop = Infinity;
+      let landOverlap = 0;
+      let landWall = null;
       walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
@@ -497,8 +512,15 @@ export default class SpriteLab2Engine extends SpriteLab {
           dy > 0 &&
           prev.y + halfH <= wall.position.y - wallHalfH + CONTACT_EPSILON
         ) {
-          y = Math.min(y, wall.position.y - wallHalfH - halfH);
-          sprite.velocity.y = 0;
+          const top = wall.position.y - wallHalfH;
+          const overlapX = halfW + wallHalfW - Math.abs(x - wall.position.x);
+          if (top + CONTACT_EPSILON < landTop) {
+            landTop = top;
+            landOverlap = overlapX;
+            landWall = wall;
+          } else if (Math.abs(top - landTop) <= CONTACT_EPSILON) {
+            landOverlap += overlapX;
+          }
         } else if (
           dy < 0 &&
           prev.y - halfH >= wall.position.y + wallHalfH - CONTACT_EPSILON
@@ -507,6 +529,22 @@ export default class SpriteLab2Engine extends SpriteLab {
           sprite.velocity.y = 0;
         }
       });
+      if (landWall) {
+        if (landOverlap >= Math.min(LANDING_MIN_OVERLAP, halfW)) {
+          y = Math.min(y, landTop - halfH);
+          sprite.velocity.y = 0;
+        } else {
+          // Corner graze: slide off the corner instead of landing; the
+          // push-out keeps the resolved state overlap-free (the swept X
+          // pass never resolves a pre-existing overlap).
+          const wallHalfW = (landWall.width * landWall.scale) / 2;
+          x =
+            x < landWall.position.x
+              ? landWall.position.x - wallHalfW - halfW
+              : landWall.position.x + wallHalfW + halfW;
+          x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
+        }
+      }
       // The bottom clamp sits the image bottom exactly on the floor line, so
       // hasSupportAt's floor branch holds and the player can jump from pits.
       if (y > p5.height - imgHalfH) {
