@@ -42,6 +42,10 @@ interface PlayspaceProps {
   getDefaultSpriteSize?: () => number;
   // Clicking the live preview (Code tab) opens Play on the previewed scene.
   onPreviewClick?: () => void;
+  // The play-mode game region (the keyboard focus stop): the view focuses it
+  // when a restart button starts a scene, so focus doesn't stay parked on
+  // the button.
+  boxRef?: React.RefObject<HTMLDivElement>;
 }
 
 /**
@@ -56,6 +60,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   fadeTrigger = 0,
   covered = false,
   loading = false,
+  boxRef,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -234,6 +239,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
     >
       <div
+        ref={boxRef}
         className={moduleStyles.playspaceBox}
         // A keyboard stop for players: game keys arrive via window listeners
         // regardless of focus, but focus needs somewhere harmless to rest

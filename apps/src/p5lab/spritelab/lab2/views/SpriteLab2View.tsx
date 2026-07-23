@@ -58,7 +58,6 @@ import {
   SpriteLab2Source,
 } from '../types';
 
-import {blurAfterPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
@@ -808,9 +807,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // Restart the whole game from the first scene.
+  // Restarting hands focus to the game region, so it doesn't stay parked on
+  // the clicked button (where Space, also a game key, would re-activate it).
+  // Keyboard activations land on the playspace with its focus-visible ring;
+  // pointer activations focus it silently.
+  const playspaceRef = useRef<HTMLDivElement>(null);
+
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(scenes[0]?.id ?? null);
+    playspaceRef.current?.focus({preventScroll: true});
   }, [runScene, scenes]);
 
   // Re-run whatever scene is on stage right now (through any jumps).
@@ -824,6 +830,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     } else {
       runExternalProjectScene(current.project, current.sceneId);
     }
+    playspaceRef.current?.focus({preventScroll: true});
   }, [runScene, scenes, runExternalProjectScene]);
 
   // Clicking the live preview opens Play on the scene being previewed.
@@ -893,20 +900,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={event => {
-                  blurAfterPointerClick(event);
-                  handleRestartGame();
-                }}
+                onClick={handleRestartGame}
               >
                 Restart game
               </button>
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={event => {
-                  blurAfterPointerClick(event);
-                  handleRestartScene();
-                }}
+                onClick={handleRestartScene}
               >
                 Restart scene
               </button>
@@ -947,6 +948,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         {/* Always mounted so the engine keeps running; animates between the
           Code tab's corner preview and the Play tab's centered view. */}
         <Playspace
+          boxRef={playspaceRef}
           mode={playspaceMode}
           fadeTrigger={fadeTrigger}
           covered={jumpCover}
