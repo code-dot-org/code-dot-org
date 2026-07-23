@@ -51,7 +51,9 @@ class CompletionButton extends Component {
           color="primary"
           size="medium"
           className="share"
-          style={this.props.playspacePhoneFrame ? styles.phoneFrameButton : undefined}
+          style={
+            this.props.playspacePhoneFrame ? styles.phoneFrameButton : undefined
+          }
         >
           {contents}
         </MuiButton>
