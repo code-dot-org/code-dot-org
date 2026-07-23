@@ -1,4 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -15,7 +16,6 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

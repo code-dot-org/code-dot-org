@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {act, fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -19,11 +24,6 @@ import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} fro
 import teacherRubric, {
   setLoadedStudentStatusForTest,
 } from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {

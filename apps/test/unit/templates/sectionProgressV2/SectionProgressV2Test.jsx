@@ -1,3 +1,6 @@
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -11,9 +14,6 @@ import sectionProgress, {
   finishLoadingProgress,
 } from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProgressV2.jsx';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {createStore} from './sectionProgressTestHelpers';
 

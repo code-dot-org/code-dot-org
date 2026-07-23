@@ -1,3 +1,9 @@
+import {
+  pageTypes,
+  selectSection,
+  setPageType,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -21,12 +27,6 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {
-  pageTypes,
-  selectSection,
-  setPageType,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';

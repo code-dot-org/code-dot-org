@@ -1,3 +1,8 @@
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@code-dot-org/teacher-dashboard/redux';
+
 import {TestResults} from '@cdo/apps/constants';
 import {registerReducers, createStoreWithReducers} from '@cdo/apps/redux';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -10,10 +15,6 @@ import sectionProgress, {
   addDataByUnit,
 } from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import teacherSections, {
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   LevelStatus,
   SectionLoginType,

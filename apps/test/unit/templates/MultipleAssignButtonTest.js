@@ -1,3 +1,7 @@
+import {
+  assignToSection,
+  testingFunction,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -5,10 +9,6 @@ import React from 'react';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {UnconnectedMultipleAssignButton as MultipleAssignButton} from '@cdo/apps/templates/MultipleAssignButton';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
-import {
-  assignToSection,
-  testingFunction,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 describe('MultipleAssignButtonTest', () => {
   const defaultProps = {

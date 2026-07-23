@@ -1,3 +1,5 @@
+import {setPageType, pageTypes} from '@code-dot-org/teacher-dashboard/redux';
+
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
@@ -9,10 +11,6 @@ import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import googlePlatformApi, {
   loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
-import {
-  setPageType,
-  pageTypes,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {PeerReviewLessonInfo} from '@cdo/apps/types/progressTypes';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 

@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,7 +13,6 @@ import {
   selectHasLoadedStudentStatus,
   selectReadyStudentCount,
 } from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

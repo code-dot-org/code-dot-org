@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {ThemeProvider} from '@mui/material/styles';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -8,11 +13,6 @@ import currentUser, {
   setCurrentUserName,
 } from '@cdo/apps/templates/currentUserRedux';
 import ParentLetter from '@cdo/apps/templates/teacherDashboard/ParentLetter';
-import teacherSections, {
-  selectSection,
-  setSections,
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {getMuiThemeForBrand} from '@cdo/apps/util/brand';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 

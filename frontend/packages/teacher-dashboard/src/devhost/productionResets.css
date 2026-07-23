@@ -1,0 +1,108 @@
+/*
+ * Production CSS environment resets.
+ *
+ * In production, the teacher dashboard renders inside a Rails page that loads
+ * Bootstrap 3, code-studio.css, and application.css. These global stylesheets
+ * set body typography, list/paragraph resets, link colors, and heading margins
+ * that the homepage components were developed against.
+ *
+ * MUI CssBaseline provides a modern reset, but its defaults (body1 = 20px,
+ * rgba(0,0,0,0.87) text, browser-default list padding) differ from what
+ * production delivers. This file bridges that gap so the dev host renders
+ * identically to production.
+ *
+ * Sources:
+ *   body font/color   — code-studio.css body rule
+ *   list/p resets      — Bootstrap 3 type rules + code-studio ul/ol override
+ *   link colors        — shared/css/color.scss $link_color via application.css
+ *   spin keyframes     — used by FontAwesome spinner icons
+ */
+
+/* --- Body ---------------------------------------------------------------- */
+
+/* CssBaseline injects body styles via Emotion at render time, after static
+ * CSS imports. The !important here is intentional: this file exists to
+ * override CssBaseline's body1 defaults (20px / rgba(0,0,0,0.87)) with the
+ * production values the components were developed against. */
+
+body {
+  font-size: 13px !important;
+  line-height: 18px !important;
+  color: #333 !important;
+}
+
+/* --- Links --------------------------------------------------------------- */
+
+a {
+  color: #0596ce;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #036083;
+  text-decoration: underline;
+}
+
+/* --- Lists --------------------------------------------------------------- */
+
+/* Bootstrap 3: margin-top: 0, margin-bottom: 10px.
+ * code-studio.css: padding: 0, margin: 0 0 10px 25px. */
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+/* --- Paragraphs ---------------------------------------------------------- */
+
+/* Bootstrap 3: p { margin: 0 0 10px } */
+
+p {
+  margin: 0 0 10px;
+}
+
+/* --- Headings ------------------------------------------------------------ */
+
+/* Bootstrap 3 heading margins. Font properties are set by MUI Typography
+ * class selectors (higher specificity), so only margins leak through. */
+
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* --- Form elements ------------------------------------------------------- */
+
+/* Bootstrap 3 + application.scss: label, input, button, select, textarea
+ * get font-size: 14px, line-height: 20px. Components that nest these
+ * elements (e.g. promotion cards with MUI Buttons) inherit this in
+ * production, giving them 20px line-height inside the 18px body. */
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+/* --- Utilities ----------------------------------------------------------- */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

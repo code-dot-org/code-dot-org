@@ -1,4 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import _ from 'lodash';
 import React from 'react';
 import {useBlocker, useParams} from 'react-router-dom';
@@ -8,7 +9,6 @@ import i18n from '@cdo/locale';
 
 import LoadingSectionsSetUpContainer from '../sectionsRefresh/LoadingSectionsSetUpContainer';
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 interface DashboardSectionSettingsProps {
   redirectUrl: string;

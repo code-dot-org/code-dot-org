@@ -1,11 +1,11 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import React, {useCallback} from 'react';
 
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {editStudent} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 

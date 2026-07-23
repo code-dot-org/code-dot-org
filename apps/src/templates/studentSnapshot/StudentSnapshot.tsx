@@ -1,4 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {
+  isLearnToEvaluateTourOnSnapshotPage,
+  resumeLearnHowToEvaluateTour,
+} from '@code-dot-org/teacher-dashboard/home';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useEffect, useState} from 'react';
@@ -7,10 +11,6 @@ import {useSelector} from 'react-redux';
 import DCDO from '@cdo/apps/dcdo';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
-import {
-  isLearnToEvaluateTourOnSnapshotPage,
-  resumeLearnHowToEvaluateTour,
-} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import {LessonOption} from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

@@ -1,3 +1,11 @@
+import {
+  setRosterProvider,
+  removeSectionOrThrow,
+  toggleSectionHidden,
+  importOrUpdateRoster,
+  sectionCode,
+  sectionName,
+} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -9,7 +17,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
-import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -21,12 +28,6 @@ import BaseDialog from '../BaseDialog';
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';
 import {sortableSectionShape} from './shapes.jsx';
-import {
-  removeSectionOrThrow,
-  toggleSectionHidden,
-  importOrUpdateRoster,
-} from './teacherSectionsRedux';
-import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {

@@ -1,3 +1,9 @@
+import {TeacherHomepage} from '@code-dot-org/teacher-dashboard/home';
+import {
+  sectionDoesNotHaveNewData,
+  sectionProviderName,
+  selectedSectionSelector,
+} from '@code-dot-org/teacher-dashboard/redux';
 import _ from 'lodash';
 import React, {useEffect, useRef} from 'react';
 import {useDispatch} from 'react-redux';
@@ -18,7 +24,6 @@ import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAc
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
-import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -27,14 +32,9 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import SectionProgressV2 from '../sectionProgressV2/SectionProgressV2';
 import StudentSnapshot from '../studentSnapshot/StudentSnapshot';
-import TeacherHomepage from '../studioHomepages/teacherHomepageV2/TeacherHomepage';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import SkillsDashboard from '../teacherDashboard/skillsDashboard/SkillsDashboard';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {
-  sectionProviderName,
-  selectedSectionSelector,
-} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
 import DashboardSectionSettings from './DashboardSectionSettings';

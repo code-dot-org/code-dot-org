@@ -1,4 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  pageTypes,
+  setStudentsForCurrentSection,
+  setSections,
+  selectSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -30,12 +36,6 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getExampleSolutionLink} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import {
-  pageTypes,
-  setStudentsForCurrentSection,
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

@@ -1,5 +1,6 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Modal from '@code-dot-org/component-library/modal';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
@@ -9,7 +10,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {bulkSet} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {BulkSetModalProps} from '@cdo/apps/templates/manageStudents/Table/UsStateColumn/interface';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {RootState} from '@cdo/apps/types/redux';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

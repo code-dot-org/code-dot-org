@@ -1,3 +1,4 @@
+import {beginEditingSection} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -5,7 +6,6 @@ import {connect} from 'react-redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
-import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 class SetUpSections extends Component {

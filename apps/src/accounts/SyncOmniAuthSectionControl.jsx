@@ -1,3 +1,12 @@
+import {
+  importOrUpdateRoster,
+  sectionCode,
+  sectionProvider,
+  sectionProviderName,
+  sectionName,
+  ltiSyncResult,
+  syncEnabled,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,15 +22,6 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ReauthorizeClever from '@cdo/apps/templates/teacherDashboard/ReauthorizeClever';
 import ReauthorizeGoogleClassroom from '@cdo/apps/templates/teacherDashboard/ReauthorizeGoogleClassroom';
-import {importOrUpdateRoster} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {
-  sectionCode,
-  sectionProvider,
-  sectionProviderName,
-  sectionName,
-  ltiSyncResult,
-  syncEnabled,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

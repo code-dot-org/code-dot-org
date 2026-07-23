@@ -1,3 +1,10 @@
+import {resumeReviewSyllabusOnboardingTour} from '@code-dot-org/teacher-dashboard/home';
+import {
+  selectSection,
+  setSections,
+  setPageType,
+  pageTypes,
+} from '@code-dot-org/teacher-dashboard/redux';
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -24,13 +31,6 @@ import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/Pare
 import googlePlatformApi, {
   loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
-import {resumeReviewSyllabusOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
-import {
-  selectSection,
-  setSections,
-  setPageType,
-  pageTypes,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';

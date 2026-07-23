@@ -1,3 +1,7 @@
+import {
+  isDemoSection as isDemoSectionSelector,
+  sectionCode as sectionCodeSelector,
+} from '@code-dot-org/teacher-dashboard/redux';
 import path from 'path';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -10,10 +14,6 @@ import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageSt
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import {
-  isDemoSection as isDemoSectionSelector,
-  sectionCode as sectionCodeSelector,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
