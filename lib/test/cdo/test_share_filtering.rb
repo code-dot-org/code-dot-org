@@ -301,7 +301,7 @@ class ShareFilteringTest < Minitest::Test
 
   def test_should_filter_program_playlab_only_with_indicator
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
-    indicator = ShareFiltering::USER_ENTERED_TEXT_FIELDS.first
+    indicator = ShareFiltering::BLOCKLY_TEXT_FIELDS.first
 
     # no indicator in program
     no_indicator = "<xml><block type=\"studio_showTitleScreen\"/></xml>"

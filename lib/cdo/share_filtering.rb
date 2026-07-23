@@ -39,7 +39,7 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
   FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
   SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
   JSON_MAX_DEPTH = 999
@@ -50,8 +50,7 @@ module ShareFiltering
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   #
-  # @param [String, Hash] program the student's program text. Sketch Lab
-  #   sources may be passed as the parsed Hash from main.json.
+  # @param [String, Hash] program the student's program text.
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [String] project_type
   def self.find_share_failure(program, locale, project_type, exceptions: false)
@@ -104,19 +103,16 @@ module ShareFiltering
   end
 
   # Extracts user-entered text from a Sketch Lab (React Flow) source.
-  # Shape nodes carry a `label`, text nodes a `text`, and image nodes an
-  # `altText` — all under each node's `data`. Edges carry no user text.
+  # The only user entered data appears in the node data fields 'text', 'label' and 'altText'.
   # @param source [Hash, String] the parsed 'source' value from main.json,
   #   or its JSON-serialized string form.
   # @return [Array<String>] unique, non-blank user-entered strings. Returns
-  #   an empty array for malformed input or non-React-Flow shapes (e.g.
-  #   legacy Excalidraw sources, which have 'elements' instead of 'nodes').
+  #   an empty array for malformed input or non-React-Flow shapes.
   def self.extract_text_sketchlab(source)
     if source.is_a?(String)
       begin
         source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
       rescue JSON::ParserError
-        # Covers JSON::NestingError as well.
         return []
       end
     end
@@ -161,7 +157,7 @@ module ShareFiltering
     inputs = block["inputs"] || {}
 
     fields.each do |key, value|
-      if USER_ENTERED_TEXT_FIELDS.include?(key)
+      if BLOCKLY_TEXT_FIELDS.include?(key)
         cleaned = clean_text_value(value)
         texts << cleaned if cleaned && !cleaned.strip.empty?
       end
@@ -187,7 +183,7 @@ module ShareFiltering
     return true if project_type == 'sketchlab'
 
     # Only filter if program contains fields that accept user-entered strings.
-    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
+    return program.match?(/(?:#{BLOCKLY_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
