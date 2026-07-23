@@ -103,7 +103,6 @@ Dashboard::Application.config.session_store RedisSessionStore,
   key: environment_specific_cookie_name('_learn_session'),
   servers: ["#{CDO.redis_url}/session"],
   secure: !CDO.no_https_store && (!Rails.env.development? || CDO.https_development),
-  domain: nil,
 
   # Users who interact with the site at least once a month will remain logged in.
   expire_after: CDO.dashboard_session_ttl_days.days,
