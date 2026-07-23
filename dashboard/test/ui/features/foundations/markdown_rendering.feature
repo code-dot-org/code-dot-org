@@ -1,3 +1,4 @@
+@playwright
 Feature: Markdown rendering across the website
 
   Scenario: Visiting an external markdown level with details tag

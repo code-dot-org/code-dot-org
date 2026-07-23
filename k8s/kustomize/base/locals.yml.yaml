@@ -13,7 +13,7 @@ data:
 
   # These are secrets that cause exceptions booting our dashbaord app in development
   # We hope to get rid of needing these overrides soon, see:
-  # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
+  # - https://codeai.slack.com/archives/C03CK49G9/p1773224406769729
   cloudfront_key_pair_id: ""
   cloudfront_private_key: ""
   slack_bot_token: ""

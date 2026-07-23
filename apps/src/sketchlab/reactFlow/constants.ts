@@ -10,6 +10,10 @@ export const DEFAULT_ROTATION = 0;
 export const KEYBOARD_RESIZE_STEP = 20;
 export const KEYBOARD_MOVE_STEP = 10;
 
+// Screen pixels the viewport shifts per arrow-key press when panning the
+// workspace with the keyboard in hand mode.
+export const KEYBOARD_PAN_STEP = 50;
+
 // Side length of the hidden node that anchors a line endpoint.
 export const LINE_ANCHOR_SIZE_PX = 10;
 
@@ -43,6 +47,16 @@ export const MIN_ZOOM = 0.1;
 
 // Stable class used by focus and pointer-down handlers.
 export const SKETCHLAB_TOOLBAR_PANEL_CLASS = 'sketchlab-toolbar-panel';
+
+// data-* attribute the onboarding tour targets to highlight a set of related
+// buttons as one unit.
+export const TOUR_GROUP_ATTR = 'data-tour-group';
+export const TOUR_GROUP = {
+  selectionTools: 'selection-tools',
+  shapeTools: 'shape-tools',
+  undoRedo: 'undo-redo',
+  zoom: 'zoom',
+} as const;
 
 // Padding (px) added around child nodes when computing initial group bounds.
 // This is consistent with the padding used by React Flow's built-in group node.

@@ -1,26 +1,25 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/font';
 
 .categoryName {
   @include main-font-bold;
   cursor: pointer;
-  color: $dark_charcoal;
+  color: var(--text-neutral-primary);
 }
 
 .tableNumber {
   @include main-font-regular;
   float: right;
-  color: $light_gray;
+  color: var(--text-neutral-secondary);
 }
 
 .categoryDescription {
   @include main-font-regular;
-  color: $dark_charcoal;
+  color: var(--text-neutral-primary);
 }
 
 .tableName {
   @include main-font-semi-bold;
-  color: $cyan;
+  color: var(--text-brand-teal-primary);
 }
 
 .collapsibleContainer {

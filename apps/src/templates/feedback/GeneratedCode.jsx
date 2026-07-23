@@ -1,11 +1,10 @@
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import SafeMarkdown from '../SafeMarkdown';
-
 export default class GeneratedCode extends React.Component {
   static propTypes = {
-    message: PropTypes.string.isRequired,
+    message: PropTypes.node,
     code: PropTypes.string.isRequired,
     style: PropTypes.object,
   };
@@ -13,9 +12,13 @@ export default class GeneratedCode extends React.Component {
   render() {
     return (
       <div className="generated-code-container" style={this.props.style}>
-        <div className="generatedCodeMessage">
-          <SafeMarkdown markdown={this.props.message} />
-        </div>
+        {this.props.message && (
+          <div className="generatedCodeMessage">
+            <Typography variant="body3" component="p">
+              {this.props.message}
+            </Typography>
+          </div>
+        )}
 
         {/* code container should be LTR even in RTL mode */}
         <pre className="generatedCode" dir="ltr">

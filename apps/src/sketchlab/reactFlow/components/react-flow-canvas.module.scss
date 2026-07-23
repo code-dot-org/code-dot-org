@@ -7,6 +7,17 @@
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;
 
+.workspace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
+
 .canvasContainer {
   position: relative;
   width: 100%;
@@ -65,16 +76,9 @@ $handle-grab-buffer: 10px;
     cursor: grabbing;
   }
 
-  // Focus outline for keyboard navigation, matching the component library pattern.
-  // Group nodes are excluded — React Flow provides their focus indicator.
-  // Line anchors are excluded too — they get a focus ring on the handle dot
-  // itself below, not a square around the node.
-  :global(
-      .react-flow__node:not(
-          .react-flow__node-group,
-          .react-flow__node-lineAnchor
-        ):focus-visible
-    ),
+  // Focus outline for keyboard navigation, matching the component library
+  // pattern. Shape/text/image nodes draw their own focus ring on the rotated
+  // wrapper so it turns with the node; group nodes and line anchors provide their own indicators.
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;

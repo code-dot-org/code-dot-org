@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import './skills.css';
 
 import SkillsTable from './SkillsTable';
-import {SkillsByConcept} from './types';
+import {type SkillsByConcept} from './types';
 
 interface SkillsByConceptTableProps {
   skills: SkillsByConcept;
