@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -324,16 +325,13 @@ class P5LabVisualizationColumn extends React.Component {
 
   renderGridCheckbox() {
     return (
-      <label className={moduleStyles.gridCheckboxLabel}>
-        <input
-          id="grid-checkbox"
-          name="grid-checkbox"
-          type="checkbox"
-          onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
-        />
-        <i className="fa-solid" />
-        <span>{i18n.showGrid()}</span>
-      </label>
+      <Checkbox
+        id="grid-checkbox"
+        name="grid-checkbox"
+        checked={this.props.showGrid}
+        onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
+        label={i18n.showGrid()}
+      />
     );
   }
   render() {
@@ -380,19 +378,23 @@ class P5LabVisualizationColumn extends React.Component {
           )}
         </div>
 
-        <GameButtons>
-          {showPauseButton && (
-            <PauseButton
-              pauseHandler={this.props.pauseHandler}
-              marginRight={isShareView ? 10 : 0}
-            />
-          )}
-          <ArrowButtons />
+        <div className={moduleStyles.gameButtonsRow}>
+          <div className={moduleStyles.gameButtonsFlexItem}>
+            <GameButtons>
+              {showPauseButton && (
+                <PauseButton
+                  pauseHandler={this.props.pauseHandler}
+                  marginRight={isShareView ? 10 : 0}
+                />
+              )}
+              <ArrowButtons />
 
-          <CompletionButton />
+              <CompletionButton />
+            </GameButtons>
+          </div>
 
           {!isSpritelab && !isShareView && this.renderGridCheckbox()}
-        </GameButtons>
+        </div>
         {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
