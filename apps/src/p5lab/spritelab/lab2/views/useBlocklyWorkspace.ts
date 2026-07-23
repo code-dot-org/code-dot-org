@@ -8,6 +8,7 @@ import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlock
 import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
 
 import {
+  ensureInjectedCategories,
   ensurePredefinedBehaviors,
   ensureSceneBlocks,
   filterToolboxToRegisteredBlocks,
@@ -89,10 +90,13 @@ export default function useBlocklyWorkspace({
         ? toolboxDefinition
         : undefined;
     if (!toolbox && toolboxXml) {
-      // Add the full behavior set + scene blocks, then drop unregistered
-      // block references so opening a category never throws.
+      // Add the full behavior set, scene blocks, and injected categories,
+      // then drop unregistered block references so opening a category never
+      // throws.
       toolbox = filterToolboxToRegisteredBlocks(
-        ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
+        ensureInjectedCategories(
+          ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
+        )
       );
     }
 

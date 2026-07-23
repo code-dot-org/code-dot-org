@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-22T19:37:16.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Refine Your Data Question\r\n\r\nIn this level, you’ll choose and refine the data question for your project.\r\n\r\nOpen `project_plan.txt` and add:\r\n\r\n- your community\r\n- the community problem\r\n- one data question your group developed\r\n\r\nComplete the data-question checklist in your Project Planning Guide. Then use AI Tutor to help strengthen any areas where you answered **No**.\r\n\r\nReview the feedback and decide which suggestions to use. Discuss your revised question with a partner, then record your final data question in `project_plan.txt`.\r\n\r\n:::details [**Not Sure Where To Start?**]\r\n\r\nTell AI Tutor which checklist criteria your question did not meet. Ask it to:\r\n\r\n- explain how your question could be stronger\r\n- suggest possible revisions\r\n- help you compare revisions without choosing your final question for you\r\n\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "name_suffix": "_pilot-2024",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "datasciencewithpython-project-template-2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-22T19:37:16.573+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson12-level1-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson12-level1-2026\"},{\"changed_at\":\"2026-07-22 20:24:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-22 20:29:03 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-22 20:50:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>
