@@ -664,6 +664,8 @@ $preview-clearance: 400px * 0.64 + 2 * 24px;
   display: grid;
   width: fit-content;
   border: 1px solid var(--borders-neutral-primary);
+  // Drag painting: keep touch drags painting instead of scrolling.
+  touch-action: none;
 }
 
 .worldCell {
@@ -682,6 +684,9 @@ $preview-clearance: 400px * 0.64 + 2 * 24px;
     object-fit: contain;
     // See the palette-item note: undo the legacy button > img dimming.
     opacity: 1;
+    // Keep a drag that starts on a painted cell painting, instead of
+    // becoming a native image drag.
+    pointer-events: none;
   }
 
   &:hover {

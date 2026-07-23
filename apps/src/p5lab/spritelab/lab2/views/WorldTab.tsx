@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useMemo, useState} from 'react';
+import React, {useMemo, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -64,15 +64,26 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const [selected, setSelected] = useState<PaletteItem | 'erase' | null>(null);
 
   const grid = world?.grid ?? createEmptyWorld().grid;
-  const paintCell = (row: number, col: number) => {
+  const paintCell = (row: number, col: number, erase: boolean) => {
     if (!selected) {
       return;
     }
     onPaintCell(
       row,
       col,
-      selected === 'erase' ? null : {image: selected.image, kind: selected.kind}
+      erase || selected === 'erase'
+        ? null
+        : {image: selected.image, kind: selected.kind}
     );
+  };
+  // A press on a tile already holding the selected item erases instead
+  // (click-again-to-remove). The pressed tile decides for the whole drag
+  // stroke, so dragging across painted tiles doesn't toggle them.
+  const strokeErase = useRef(false);
+  const startStroke = (row: number, col: number) => {
+    strokeErase.current =
+      selected !== 'erase' && grid[row]?.[col]?.image === selected?.image;
+    paintCell(row, col, strokeErase.current);
   };
 
   const cellPixels = GRID_PIXELS / displaySize;
@@ -136,7 +147,25 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                   outsideScene && moduleStyles.worldCellOutside
                 )}
                 style={{height: cellPixels}}
-                onClick={() => paintCell(row, col)}
+                // Drag painting: paint on press, then on each cell the held
+                // pointer enters. Touch implicitly captures the pointer on
+                // the pressed cell, which would keep enter events from the
+                // neighbors — release it.
+                onPointerDown={e => {
+                  e.currentTarget.releasePointerCapture?.(e.pointerId);
+                  startStroke(row, col);
+                }}
+                onPointerEnter={e => {
+                  if (e.buttons & 1) {
+                    paintCell(row, col, strokeErase.current);
+                  }
+                }}
+                // Pointer presses painted above; this is keyboard activation.
+                onClick={e => {
+                  if (e.detail === 0) {
+                    startStroke(row, col);
+                  }
+                }}
               >
                 {thumb && <img src={thumb} alt="" />}
               </button>
