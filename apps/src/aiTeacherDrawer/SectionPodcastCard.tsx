@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {SectionAvatar} from '@code-dot-org/teacher-dashboard/home';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-
-import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 
 import styles from './prepare-list.module.scss';
 

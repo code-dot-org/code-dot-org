@@ -3,7 +3,7 @@ import cookies from 'js-cookie';
 import React from 'react';
 import '@testing-library/jest-dom';
 
-import LogoTransition from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LogoTransition';
+import LogoTransition from '../LogoTransition';
 
 const SEEN_COOKIE_NAME = 'hide_codeai_logo_transition';
 const PRE_HIDE_STYLE_ID = 'logo-transition-pre-hide';
@@ -193,8 +193,8 @@ describe('LogoTransition', () => {
     const findCard = (): HTMLDivElement | undefined =>
       Array.from(
         document.body.querySelectorAll<HTMLDivElement>(
-          'div[aria-hidden="true"]'
-        )
+          'div[aria-hidden="true"]',
+        ),
       ).find(el => el.style.top !== '');
 
     it('re-centers the card when the window resizes', () => {
@@ -249,7 +249,7 @@ describe('LogoTransition', () => {
       setupHeaderContainer();
       render(<LogoTransition />);
       const ariaHiddenDivs = Array.from(
-        document.body.querySelectorAll('div[aria-hidden="true"]')
+        document.body.querySelectorAll('div[aria-hidden="true"]'),
       );
       // Both the backdrop and the card carry aria-hidden=true.
       expect(ariaHiddenDivs.length).toBeGreaterThanOrEqual(2);

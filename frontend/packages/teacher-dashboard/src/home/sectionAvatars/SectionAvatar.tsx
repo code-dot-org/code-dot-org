@@ -1,4 +1,4 @@
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import type {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -19,7 +19,7 @@ const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji, size}) => {
     <div
       className={classNames(
         styles.sectionAvatar,
-        styles[`sectionAvatar-${size}`]
+        styles[`sectionAvatar-${size}`],
       )}
       style={{backgroundColor: COLORS[safeColor]}}
       aria-label={`${COLOR_LABELS[safeColor]}, ${EMOJI_LABELS[safeEmoji]}`}

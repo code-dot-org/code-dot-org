@@ -108,7 +108,7 @@ const LogoTransition: React.FC = () => {
   const [mountTarget] = useState<HTMLElement | null>(() =>
     typeof document !== 'undefined'
       ? document.querySelector<HTMLElement>(HEADER_LOGO_SELECTOR)
-      : null
+      : null,
   );
 
   useLayoutEffect(() => {
@@ -236,7 +236,7 @@ const LogoTransition: React.FC = () => {
     <>
       {createPortal(
         <div className={backdropClassName} aria-hidden="true" />,
-        document.body
+        document.body,
       )}
       {createPortal(
         <div ref={cardRef} className={cardClassName} aria-hidden="true">
@@ -318,7 +318,7 @@ const LogoTransition: React.FC = () => {
             </svg>
           )}
         </div>,
-        document.body
+        document.body,
       )}
     </>
   );

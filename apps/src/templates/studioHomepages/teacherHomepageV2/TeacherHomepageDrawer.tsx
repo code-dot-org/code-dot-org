@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import type {SchoolInfo} from '@code-dot-org/teacher-dashboard/home';
 import {Typography, Button as MuiButton} from '@mui/material';
 import Drawer from '@mui/material/Drawer';
 import React from 'react';
@@ -18,7 +19,6 @@ import SchoolDataInputs from '../../SchoolDataInputs';
 
 import drawerConfirmationImage from './images/drawer-confirmation-image.png';
 import NpsSurveyContainer from './NpsSurveyContainer';
-import {SchoolInfo} from './TeacherHomepageConstants';
 
 import styles from './teacherHomepage.module.scss';
 

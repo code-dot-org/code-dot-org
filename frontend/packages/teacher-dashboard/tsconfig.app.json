@@ -4,5 +4,6 @@
     "baseUrl": ".",
     "composite": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/__tests__"]
 }

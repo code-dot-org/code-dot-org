@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 
-import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
+import SectionAvatar from '../../sectionAvatars/SectionAvatar';
 
 describe('SectionAvatar', () => {
   const renderComponent = (color: number, emoji: number) => {
@@ -16,8 +16,8 @@ describe('SectionAvatar', () => {
 
   it('selects a background color based on the seed number', () => {
     renderComponent(1, 1);
-    expect(document.firstElementChild).toHaveStyle(
-      "background-color: '#F62CAF'"
-    );
+    expect(screen.getByRole('img')).toHaveStyle({
+      backgroundColor: '#F62CAF',
+    });
   });
 });

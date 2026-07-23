@@ -57,11 +57,14 @@
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "classnames": "^2.3.2",
     "eslint": "catalog:",
+    "js-cookie": "^3.0.5",
     "jsdom": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
@@ -75,10 +78,13 @@
   },
   "peerDependencies": {
     "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@mui/material": "^7.0.0",
     "@tanstack/react-query": "^5.0.0",
+    "classnames": "^2.3.0",
+    "js-cookie": "^3.0.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   }

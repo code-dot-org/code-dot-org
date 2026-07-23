@@ -23,10 +23,10 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
   avatarEmoji,
 }) => {
   const [selectedColor, setSelectedColor] = React.useState<number>(
-    avatarColor || 0
+    avatarColor || 0,
   );
   const [selectedEmoji, setSelectedEmoji] = React.useState<number>(
-    avatarEmoji || 0
+    avatarEmoji || 0,
   );
 
   return (
@@ -92,6 +92,7 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
       <div className={styles.avatarDialogFooter}>
         <MuiButton
           variant="outlined"
+          // @ts-expect-error -- "tertiary" is a theme extension in Studio's MUI config
           color="tertiary"
           size="small"
           onClick={() => closeCallback()}

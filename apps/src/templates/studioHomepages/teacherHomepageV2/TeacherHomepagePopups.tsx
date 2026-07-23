@@ -1,3 +1,4 @@
+import type {SchoolInfo} from '@code-dot-org/teacher-dashboard/home';
 import React from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
@@ -7,7 +8,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
-import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 
 export interface TeacherHomepagePopupsProps {}

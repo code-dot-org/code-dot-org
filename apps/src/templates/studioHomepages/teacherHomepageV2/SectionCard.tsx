@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {SectionAvatar} from '@code-dot-org/teacher-dashboard/home';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
@@ -11,7 +12,6 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import i18n from '@cdo/locale';
 
 import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
-import SectionAvatar from './sectionAvatars/SectionAvatar';
 import SectionCardBody from './SectionCardBody';
 import SectionOptionsDropdown from './SectionOptionsDropdown';
 

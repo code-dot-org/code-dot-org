@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import PickerGrid from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/PickerGrid';
+import PickerGrid from '../../sectionAvatars/PickerGrid';
 
 describe('PickerGrid', () => {
   let selectCallbackSpy: jest.Mock;
@@ -14,14 +14,14 @@ describe('PickerGrid', () => {
   const renderComponent = (
     type: 'emoji' | 'color',
     selectCallbackSpy: () => void,
-    selected: number
+    selected: number,
   ) => {
     render(
       <PickerGrid
         type={type}
         selectCallback={selectCallbackSpy}
         selected={selected}
-      />
+      />,
     );
   };
 

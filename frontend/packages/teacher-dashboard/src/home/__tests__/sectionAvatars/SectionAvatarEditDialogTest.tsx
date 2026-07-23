@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import SectionAvatarEditDialog from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
+import SectionAvatarEditDialog from '../../sectionAvatars/SectionAvatarEditDialog';
 
 describe('SectionAvatarEditDialog', () => {
   let closeCallbackSpy: jest.Mock;
@@ -17,7 +17,7 @@ describe('SectionAvatarEditDialog', () => {
     closeCallbackSpy: () => void,
     saveCallbackSpy: (color: number, emoji: number) => void,
     avatarColor: number,
-    avatarEmoji: number
+    avatarEmoji: number,
   ) => {
     render(
       <SectionAvatarEditDialog
@@ -25,7 +25,7 @@ describe('SectionAvatarEditDialog', () => {
         saveCallback={saveCallbackSpy}
         avatarColor={avatarColor}
         avatarEmoji={avatarEmoji}
-      />
+      />,
     );
   };
 

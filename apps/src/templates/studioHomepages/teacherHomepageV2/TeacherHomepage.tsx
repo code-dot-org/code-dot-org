@@ -1,4 +1,5 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import {LogoTransition} from '@code-dot-org/teacher-dashboard/home';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -31,7 +32,6 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
-import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
 import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';

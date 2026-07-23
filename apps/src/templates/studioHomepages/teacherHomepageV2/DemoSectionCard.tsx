@@ -1,5 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {SectionAvatar} from '@code-dot-org/teacher-dashboard/home';
 import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import React from 'react';
 import {generatePath, useNavigate} from 'react-router-dom';
@@ -30,7 +31,6 @@ import {DemoSectionCourseContentDropdown} from './DemoSectionCourseContentDropdo
 import DemoSectionOptionsDropdown from './DemoSectionOptionsDropdown';
 import {EmptyHomepage} from './EmptyHomepage';
 import {pickDemoType} from './pickDemoType';
-import SectionAvatar from './sectionAvatars/SectionAvatar';
 
 import joinLinkStyles from './JoinLink/joinLinkCopyButton.module.scss';
 import styles from './teacherHomepage.module.scss';

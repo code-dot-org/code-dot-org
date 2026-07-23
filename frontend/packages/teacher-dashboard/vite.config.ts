@@ -24,12 +24,14 @@ export default defineConfig({
     lib: {
       entry: {
         index: 'src/index.ts',
+        'home/index': 'src/home/index.ts',
         'mocks/index': 'src/mocks/index.ts',
       },
       name: 'teacherDashboard',
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
+      external: ['@cdo/locale'],
       output: [
         {
           format: 'es',

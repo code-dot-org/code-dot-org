@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {DemoSectionStalenessDialog} from '@code-dot-org/teacher-dashboard/home';
 import {Typography, Button as MuiButton} from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
@@ -18,7 +19,6 @@ import {
 } from '../../teacherDashboard/types/teacherSectionTypes';
 
 import confirmDemoSectionSettings from './confirmDemoSectionSettings';
-import DemoSectionStalenessDialog from './DemoSectionStalenessDialog';
 import useCreateSectionTour from './useCreateSectionTour';
 import useLearnHowToEvaluateTour from './useLearnHowToEvaluateTour';
 import useReviewSyllabusTour from './useReviewSyllabusTour';
