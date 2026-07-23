@@ -96,7 +96,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     /* Excluded on Minecraft (Craft) labs which keep their own dark chrome. */
     body:not(.minecraft) .blocklySvg {
-      background-color: var(--background-neutral-secondary) !important;
+      background-color: var(--background-neutral-primary) !important;
     }
     .blocklyToolbox {
       background-color: var(--background-neutral-tertiary) !important;
