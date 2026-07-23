@@ -328,12 +328,32 @@ class P5LabVisualizationColumn extends React.Component {
       <Checkbox
         id="grid-checkbox"
         name="grid-checkbox"
+        size="xs"
         checked={this.props.showGrid}
         onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
         label={i18n.showGrid()}
       />
     );
   }
+
+  renderGameButtons() {
+    const {isShareView, hidePauseButton, spriteLab: isSpritelab} = this.props;
+    const showPauseButton = isSpritelab && !hidePauseButton;
+    return (
+      <GameButtons>
+        {showPauseButton && (
+          <PauseButton
+            pauseHandler={this.props.pauseHandler}
+            marginRight={isShareView ? 10 : 0}
+          />
+        )}
+        <ArrowButtons />
+
+        <CompletionButton />
+      </GameButtons>
+    );
+  }
+
   render() {
     const {isResponsive, isShareView, isRtl} = this.props;
     const divGameLabStyle = {
@@ -345,7 +365,7 @@ class P5LabVisualizationColumn extends React.Component {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
     const isSpritelab = this.props.spriteLab;
-    const showPauseButton = isSpritelab && !this.props.hidePauseButton;
+    const showGridCheckbox = !isSpritelab && !isShareView;
 
     return (
       <div>
@@ -378,23 +398,16 @@ class P5LabVisualizationColumn extends React.Component {
           )}
         </div>
 
-        <div className={moduleStyles.gameButtonsRow}>
-          <div className={moduleStyles.gameButtonsFlexItem}>
-            <GameButtons>
-              {showPauseButton && (
-                <PauseButton
-                  pauseHandler={this.props.pauseHandler}
-                  marginRight={isShareView ? 10 : 0}
-                />
-              )}
-              <ArrowButtons />
-
-              <CompletionButton />
-            </GameButtons>
+        {showGridCheckbox ? (
+          <div className={moduleStyles.gameButtonsRow}>
+            <div className={moduleStyles.gameButtonsFlexItem}>
+              {this.renderGameButtons()}
+            </div>
+            {this.renderGridCheckbox()}
           </div>
-
-          {!isSpritelab && !isShareView && this.renderGridCheckbox()}
-        </div>
+        ) : (
+          this.renderGameButtons()
+        )}
         {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
