@@ -598,15 +598,11 @@ $tab-segment-height: $tab-item-height - 2px;
 
 // --- World tab (experiment) ---
 
-// The live preview floats over the tab's top-right corner (Playspace:
-// 400px canvas x PREVIEW_SCALE 0.64, PREVIEW_MARGIN 24px each side).
-$preview-clearance: 400px * 0.64 + 2 * 24px;
-
 .worldTab {
   height: 100%;
   padding: 16px;
-  // Keep the palette and grid clear of the floating preview.
-  padding-right: $preview-clearance;
+  // padding-right comes inline from Playspace's PREVIEW_CLEARANCE, keeping
+  // the palette and grid clear of the floating preview.
   overflow: auto;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);

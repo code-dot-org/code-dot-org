@@ -11,6 +11,8 @@ import {
   WorldCell,
 } from '../world';
 
+import {PREVIEW_CLEARANCE} from './Playspace';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
 
 // The editor draws the grid at a fixed overall size; cells shrink as the
@@ -88,7 +90,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
 
   const cellPixels = GRID_PIXELS / displaySize;
   return (
-    <div className={moduleStyles.worldTab}>
+    <div
+      className={moduleStyles.worldTab}
+      style={{paddingRight: PREVIEW_CLEARANCE}}
+    >
       <div className={moduleStyles.worldPalette}>
         {palette.map(item => (
           <button
@@ -147,9 +152,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                   outsideScene && moduleStyles.worldCellOutside
                 )}
                 style={{height: cellPixels}}
-                // Drag painting: paint on press, then on each cell the held
-                // pointer enters. Touch implicitly captures the pointer on
-                // the pressed cell, which would keep enter events from the
+                // Touch implicitly captures the pointer on the pressed cell,
+                // which would keep drag painting's enter events from the
                 // neighbors — release it.
                 onPointerDown={e => {
                   e.currentTarget.releasePointerCapture?.(e.pointerId);

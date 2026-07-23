@@ -875,12 +875,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     dispatch(setActiveTab('Play'));
   }, [dispatch, activeSceneId, scenes]);
 
+  // World and Code are the scene-editing tabs: they share the corner
+  // preview and the scene selector.
+  const onSceneTab = activeTab === 'Code' || activeTab === 'World';
   const playspaceMode: PlayspaceMode =
-    activeTab === 'Play'
-      ? 'play'
-      : activeTab === 'Code' || activeTab === 'World'
-      ? 'preview'
-      : 'hidden';
+    activeTab === 'Play' ? 'play' : onSceneTab ? 'preview' : 'hidden';
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
@@ -925,7 +924,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
-              disabled={activeTab !== 'Code' && activeTab !== 'World'}
+              disabled={!onSceneTab}
               onSelectScene={handleSelectScene}
               onCreateScene={handleCreateScene}
             />
