@@ -6,7 +6,7 @@ import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboard
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
+import {DemoType} from '../../teacherDashboard/types/teacherSectionTypes';
 
 import {
   createLearnHowToEvaluateHomepageSteps,
@@ -76,9 +76,7 @@ export const resumeLearnHowToEvaluateTour = () => {
   tour.show(startStep.id);
 };
 
-const useLearnHowToEvaluateTour = (demoSection: Section | null) => {
-  const demoType = demoSection?.demoType ?? null;
-
+const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
   const getSteps = useCallback(
     (tour: Tour) =>
       demoType

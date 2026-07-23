@@ -1,4 +1,5 @@
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -17,11 +18,13 @@ import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
 import {
   BRUSH_SIZES,
   drawCircle,
+  drawRect,
   floodFill,
   Raster,
   RGBA,
   stamp,
   stampLine,
+  TRANSPARENT,
 } from './tools';
 
 import moduleStyles from './pixel-editor.module.scss';
@@ -45,8 +48,45 @@ const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
 // Dark navy ink.
 const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
 
+// Summed per-channel difference a pixel may have from the clicked color and
+// still flood-fill: AI-generated "solid" regions carry small variations that
+// exact matching splinters into unfilled specks. Small enough that
+// anti-aliased edges (which differ by far more) still stop the fill.
+const FILL_TOLERANCE = 32;
+
+// Shape previews drawn in the picked color would be invisible when that
+// color is transparent; the preview layer uses this stand-in instead. The
+// committed shape uses the real color.
+const PREVIEW_STANDIN: RGBA = [128, 128, 128, 140];
+
+// Undo history: one snapshot per completed operation, bounded by memory, not
+// count — a 64x64 pixel-art backing is 16KB but a native-resolution image
+// can be megabytes. At least MIN_UNDO_DEPTH steps are always kept.
+const UNDO_BYTE_BUDGET = 16 * 1024 * 1024;
+const MIN_UNDO_DEPTH = 4;
+const MAX_UNDO_DEPTH = 30;
+
+// Recently used colors, shown as one row in the color picker. The caller
+// seeds them and persists the updated list handed back on save.
+const RECENT_COLORS_MAX = 8;
+
+const SHAPE_TOOLS: ReadonlySet<PixelTool> = new Set([
+  'circle',
+  'filledCircle',
+  'rect',
+  'filledRect',
+]);
+
 // Brush-size swatch dot: rendered edge in px for brush size N.
 const brushDotPx = (size: number) => 3 + size * 1.6;
+
+export interface PixelEditorSaveMeta {
+  pixelGridSize?: number;
+  // Recently used colors after this session, most recent first; the caller
+  // persists them (e.g. in the image's project data) and seeds them back via
+  // initialRecentColors next time.
+  recentColors?: RGBA[];
+}
 
 interface PixelEditorModalProps {
   title: string;
@@ -57,21 +97,26 @@ interface PixelEditorModalProps {
   // LOGICAL resolution. Absent/1 = edit at native resolution; the editor
   // does no detection of its own.
   knownPixelGrid?: number;
-  onSave: (dataURI: string, meta: {pixelGridSize?: number}) => void;
+  // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
+  initialRecentColors?: RGBA[];
+  onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
 }
 
 /**
  * A small, self-contained pixel editor in a modal. Edits happen on a backing
  * canvas at the image's native resolution; the display canvas scales it up
- * with nearest-neighbor sampling. Tools: pen, eraser, bucket fill, outline
- * and solid circles, four brush sizes, one color (full-spectrum picker).
- * Save hands back a PNG dataURI; Cancel discards. Both close the modal.
+ * with nearest-neighbor sampling. Tools: pen, eraser, tolerant bucket fill,
+ * eyedropper, outline/solid circles and rectangles, four brush sizes, one
+ * color (full-spectrum picker with per-image recents and transparent), and
+ * memory-bounded undo/redo. Save hands back a PNG dataURI; Cancel discards.
+ * Both close the modal.
  */
 const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   title,
   imageUrl,
   knownPixelGrid,
+  initialRecentColors,
   onSave,
   onCancel,
 }) => {
@@ -93,7 +138,85 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const scaleRef = useRef(1);
   const drawingRef = useRef(false);
   const lastPointRef = useRef<{x: number; y: number} | null>(null);
-  const circleCenterRef = useRef<{x: number; y: number} | null>(null);
+  // Anchor corner/center of the shape being dragged (circle or rectangle).
+  const shapeStartRef = useRef<{x: number; y: number} | null>(null);
+
+  // Undo/redo: snapshots of the backing's pixels, one per completed
+  // operation, in refs (they change on every stroke). historyVersion only
+  // exists to re-render the buttons' disabled state.
+  const undoStackRef = useRef<Uint8ClampedArray[]>([]);
+  const redoStackRef = useRef<Uint8ClampedArray[]>([]);
+  const [historyVersion, setHistoryVersion] = useState(0);
+
+  // Recently used colors, most recent first (transparent excluded: it has a
+  // permanent swatch of its own in the picker). Handed back on save for the
+  // caller to persist.
+  const [recentColors, setRecentColors] = useState<RGBA[]>(
+    () => initialRecentColors ?? []
+  );
+  const recordColorUse = useCallback((used: RGBA) => {
+    if (used[3] === 0) {
+      return;
+    }
+    setRecentColors(prev =>
+      [used, ...prev.filter(c => !c.every((v, i) => v === used[i]))].slice(
+        0,
+        RECENT_COLORS_MAX
+      )
+    );
+  }, []);
+
+  // Snapshot the backing before a mutating operation. Memory-bounded: total
+  // snapshot bytes stay under UNDO_BYTE_BUDGET (large images keep fewer
+  // steps, never fewer than MIN_UNDO_DEPTH). A new operation invalidates the
+  // redo stack.
+  const pushUndo = useCallback(() => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return;
+    }
+    const stack = undoStackRef.current;
+    stack.push(
+      new Uint8ClampedArray(
+        ctx.getImageData(0, 0, backing.width, backing.height).data
+      )
+    );
+    const bytesPer = backing.width * backing.height * 4;
+    const maxDepth = Math.min(
+      MAX_UNDO_DEPTH,
+      Math.max(MIN_UNDO_DEPTH, Math.floor(UNDO_BYTE_BUDGET / bytesPer))
+    );
+    while (stack.length > maxDepth) {
+      stack.shift();
+    }
+    redoStackRef.current = [];
+    setHistoryVersion(v => v + 1);
+  }, []);
+
+  const restoreSnapshot = useCallback((pixels: Uint8ClampedArray) => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return;
+    }
+    ctx.putImageData(
+      new ImageData(new Uint8ClampedArray(pixels), backing.width),
+      0,
+      0
+    );
+  }, []);
+
+  const currentPixels = useCallback(() => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return null;
+    }
+    return new Uint8ClampedArray(
+      ctx.getImageData(0, 0, backing.width, backing.height).data
+    );
+  }, []);
 
   // Composite the transparency checkerboard, the backing, and (while
   // dragging a circle) the preview to the display. The checker lives in the
@@ -128,6 +251,60 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, []);
+
+  // Abandon any in-progress stroke or shape drag. Losing the window
+  // mid-press swallows the pointerup (and pointercancel isn't reliably
+  // fired), so without this, returning to the editor keeps painting with
+  // no button held.
+  const cancelInteraction = useCallback(() => {
+    if (!drawingRef.current) {
+      return;
+    }
+    drawingRef.current = false;
+    lastPointRef.current = null;
+    shapeStartRef.current = null;
+    const preview = previewRef.current;
+    preview?.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
+    repaint();
+  }, [repaint]);
+
+  useEffect(() => {
+    window.addEventListener('blur', cancelInteraction);
+    return () => window.removeEventListener('blur', cancelInteraction);
+  }, [cancelInteraction]);
+
+  const undo = useCallback(() => {
+    const previous = undoStackRef.current.pop();
+    if (!previous) {
+      return;
+    }
+    const current = currentPixels();
+    if (current) {
+      redoStackRef.current.push(current);
+    }
+    restoreSnapshot(previous);
+    repaint();
+    setHistoryVersion(v => v + 1);
+  }, [currentPixels, restoreSnapshot, repaint]);
+
+  const redo = useCallback(() => {
+    const next = redoStackRef.current.pop();
+    if (!next) {
+      return;
+    }
+    const current = currentPixels();
+    if (current) {
+      undoStackRef.current.push(current);
+    }
+    restoreSnapshot(next);
+    repaint();
+    setHistoryVersion(v => v + 1);
+  }, [currentPixels, restoreSnapshot, repaint]);
+  // Refs so the window keydown listener below can stay mounted once.
+  const undoRef = useRef(undo);
+  undoRef.current = undo;
+  const redoRef = useRef(redo);
+  redoRef.current = redo;
 
   // Load the image into the backing canvas (at logical resolution when
   // knownPixelGrid applies) and size the display. Decode via
@@ -229,10 +406,24 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   }, [imageUrl, knownPixelGrid]);
 
   // Single-key shortcuts (shown in the tooltips): letters pick tools, digits
-  // 1-4 pick brush sizes. Modifier combos pass through so browser shortcuts
-  // keep working.
+  // 1-4 pick brush sizes. Ctrl/Cmd+Z undoes, with Shift (or Ctrl+Y) redoes;
+  // other modifier combos pass through so browser shortcuts keep working.
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
+      const key = e.key.toLowerCase();
+      if (
+        (e.metaKey || e.ctrlKey) &&
+        !e.altKey &&
+        (key === 'z' || key === 'y')
+      ) {
+        e.preventDefault();
+        if (key === 'y' || e.shiftKey) {
+          redoRef.current();
+        } else {
+          undoRef.current();
+        }
+        return;
+      }
       if (e.metaKey || e.ctrlKey || e.altKey) {
         return;
       }
@@ -326,6 +517,54 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
     [repaint]
   );
 
+  // Draw the active shape tool between its anchor and the current point.
+  const drawShape = useCallback(
+    (
+      raster: Raster,
+      start: {x: number; y: number},
+      end: {x: number; y: number},
+      size: number,
+      shapeColor: RGBA
+    ) => {
+      if (tool === 'circle' || tool === 'filledCircle') {
+        const radius = Math.hypot(end.x - start.x, end.y - start.y);
+        drawCircle(
+          raster,
+          start.x,
+          start.y,
+          radius,
+          size,
+          shapeColor,
+          tool === 'filledCircle'
+        );
+      } else {
+        drawRect(
+          raster,
+          start.x,
+          start.y,
+          end.x,
+          end.y,
+          size,
+          shapeColor,
+          tool === 'filledRect'
+        );
+      }
+    },
+    [tool]
+  );
+
+  // Read the backing pixel under the pointer into the active color. The
+  // spectrum picker has no alpha axis, so partial alpha snaps to opaque;
+  // fully transparent picks the transparent color.
+  const pickColorAt = useCallback((p: {x: number; y: number}) => {
+    const ctx = backingRef.current?.getContext('2d');
+    if (!ctx) {
+      return;
+    }
+    const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+    setColor(a === 0 ? TRANSPARENT : [r, g, b, 255]);
+  }, []);
+
   const handlePointerDown = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {
       const p = toPixel(e);
@@ -335,23 +574,48 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       e.currentTarget.setPointerCapture(e.pointerId);
       drawingRef.current = true;
-      if (tool === 'pen' || tool === 'eraser') {
+      if (tool === 'eyedropper') {
+        pickColorAt(p);
+      } else if (tool === 'pen' || tool === 'eraser') {
+        pushUndo();
+        if (tool === 'pen') {
+          recordColorUse(color);
+        }
         lastPointRef.current = p;
         withRaster(backing, raster =>
           stamp(raster, p.x, p.y, brushSize, tool === 'pen' ? color : null)
         );
       } else if (tool === 'bucket') {
-        withRaster(backing, raster => floodFill(raster, p.x, p.y, color));
+        pushUndo();
+        recordColorUse(color);
+        withRaster(backing, raster =>
+          floodFill(raster, p.x, p.y, color, FILL_TOLERANCE)
+        );
       } else {
-        circleCenterRef.current = p;
+        shapeStartRef.current = p;
       }
     },
-    [tool, brushSize, color, toPixel, withRaster]
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      pushUndo,
+      recordColorUse,
+      pickColorAt,
+    ]
   );
 
   const handlePointerMove = useCallback(
     (e: React.PointerEvent<HTMLCanvasElement>) => {
       if (!drawingRef.current) {
+        return;
+      }
+      if ((e.buttons & 1) === 0) {
+        // The press ended somewhere we couldn't see it (window switch mid
+        // stroke); a buttonless move must not paint.
+        cancelInteraction();
         return;
       }
       const p = toPixel(e);
@@ -360,7 +624,9 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       if (!p || !backing) {
         return;
       }
-      if (tool === 'pen' || tool === 'eraser') {
+      if (tool === 'eyedropper') {
+        pickColorAt(p);
+      } else if (tool === 'pen' || tool === 'eraser') {
         const last = lastPointRef.current || p;
         lastPointRef.current = p;
         withRaster(backing, raster =>
@@ -374,30 +640,32 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             tool === 'pen' ? color : null
           )
         );
-      } else if (
-        (tool === 'circle' || tool === 'filledCircle') &&
-        circleCenterRef.current &&
-        preview
-      ) {
-        const c = circleCenterRef.current;
-        const radius = Math.hypot(p.x - c.x, p.y - c.y);
+      } else if (SHAPE_TOOLS.has(tool) && shapeStartRef.current && preview) {
+        const start = shapeStartRef.current;
         preview
           .getContext('2d')
           ?.clearRect(0, 0, preview.width, preview.height);
         withRaster(preview, raster =>
-          drawCircle(
+          drawShape(
             raster,
-            c.x,
-            c.y,
-            radius,
+            start,
+            p,
             brushSize,
-            color,
-            tool === 'filledCircle'
+            color[3] === 0 ? PREVIEW_STANDIN : color
           )
         );
       }
     },
-    [tool, brushSize, color, toPixel, withRaster]
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      drawShape,
+      pickColorAt,
+      cancelInteraction,
+    ]
   );
 
   const handlePointerUp = useCallback(
@@ -407,39 +675,49 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
       }
       drawingRef.current = false;
       lastPointRef.current = null;
+      if (tool === 'eyedropper') {
+        // The pick is final on release (a drag samples continuously until
+        // then); hand the pen back so the picked color is immediately
+        // usable.
+        setTool('pen');
+        return;
+      }
       const backing = backingRef.current;
       const preview = previewRef.current;
       if (
-        (tool === 'circle' || tool === 'filledCircle') &&
-        circleCenterRef.current &&
+        SHAPE_TOOLS.has(tool) &&
+        shapeStartRef.current &&
         backing &&
         preview
       ) {
         const p = toPixel(e);
-        const c = circleCenterRef.current;
-        circleCenterRef.current = null;
+        const start = shapeStartRef.current;
+        shapeStartRef.current = null;
         preview
           .getContext('2d')
           ?.clearRect(0, 0, preview.width, preview.height);
         if (p) {
-          const radius = Math.hypot(p.x - c.x, p.y - c.y);
+          pushUndo();
+          recordColorUse(color);
           withRaster(backing, raster =>
-            drawCircle(
-              raster,
-              c.x,
-              c.y,
-              radius,
-              brushSize,
-              color,
-              tool === 'filledCircle'
-            )
+            drawShape(raster, start, p, brushSize, color)
           );
         } else {
           repaint();
         }
       }
     },
-    [tool, brushSize, color, toPixel, withRaster, repaint]
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      repaint,
+      drawShape,
+      pushUndo,
+      recordColorUse,
+    ]
   );
 
   const handleSave = useCallback(() => {
@@ -469,12 +747,20 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
             0,
             0
           );
-        onSave(out.toDataURL('image/png'), {pixelGridSize: crispScale});
+        onSave(out.toDataURL('image/png'), {
+          pixelGridSize: crispScale,
+          recentColors,
+        });
         return;
       }
     }
-    onSave(backing.toDataURL('image/png'), {});
-  }, [onSave, pixelMode]);
+    onSave(backing.toDataURL('image/png'), {recentColors});
+  }, [onSave, pixelMode, recentColors]);
+
+  // historyVersion re-renders this component whenever the stacks change; the
+  // stacks themselves live in refs.
+  const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
+  const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
 
   if (!loaded && !loadError) {
     return null;
@@ -493,58 +779,108 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           Draw on the image with the toolbar's tools, then save or cancel.
         </span>
-        <div className={moduleStyles.header}>{title}</div>
+        {/* Tabbable so the dialog's focus trap lands here on open (the
+            WAI-ARIA dialog pattern's title-as-initial-focus): its
+            first-focusable would otherwise be the pen button, whose
+            focus-triggered tooltip then appears unprompted — positioned
+            against the still-animating (scaled) modal — and lingers. */}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+        <div className={moduleStyles.header} tabIndex={0}>
+          {title}
+        </div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.toolbar}>
-            {TOOLS.map(t => (
-              <PixelTooltip
-                key={t.id}
-                tooltipId={`pixel-tool-${t.id}-tooltip`}
-                text={toolTitle(t)}
-              >
-                <button
-                  type="button"
-                  aria-label={toolTitle(t)}
-                  aria-pressed={tool === t.id}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    tool === t.id && moduleStyles.toolActive
-                  )}
-                  onClick={() => setTool(t.id)}
+            <div className={moduleStyles.toolGrid}>
+              {TOOLS.map((t, index) => (
+                <PixelTooltip
+                  key={t.id}
+                  tooltipId={`pixel-tool-${t.id}-tooltip`}
+                  text={toolTitle(t)}
+                  fromLeftColumn={index % 2 === 0}
                 >
-                  {t.icon}
-                </button>
-              </PixelTooltip>
-            ))}
-            <div className={moduleStyles.toolbarDivider} />
-            {BRUSH_SIZES.map((size, index) => (
-              <PixelTooltip
-                key={size}
-                tooltipId={`pixel-brush-${size}-tooltip`}
-                text={`Brush size ${size} (${index + 1})`}
-              >
-                <button
-                  type="button"
-                  aria-label={`Brush size ${size} (${index + 1})`}
-                  aria-pressed={brushSize === size}
-                  className={classNames(
-                    moduleStyles.toolButton,
-                    brushSize === size && moduleStyles.toolActive
-                  )}
-                  onClick={() => setBrushSize(size)}
-                >
-                  <span
+                  <button
+                    type="button"
+                    aria-label={toolTitle(t)}
+                    aria-pressed={tool === t.id}
                     className={classNames(
-                      moduleStyles.brushDot,
-                      pixelMode && moduleStyles.brushDotSquare
+                      moduleStyles.toolButton,
+                      tool === t.id && moduleStyles.toolActive
                     )}
-                    style={{width: brushDotPx(size), height: brushDotPx(size)}}
-                  />
+                    onClick={() => setTool(t.id)}
+                  >
+                    {t.icon}
+                  </button>
+                </PixelTooltip>
+              ))}
+              <div className={moduleStyles.toolbarDivider} />
+              {BRUSH_SIZES.map((size, index) => (
+                <PixelTooltip
+                  key={size}
+                  tooltipId={`pixel-brush-${size}-tooltip`}
+                  text={`Brush size ${size} (${index + 1})`}
+                  fromLeftColumn={index % 2 === 0}
+                >
+                  <button
+                    type="button"
+                    aria-label={`Brush size ${size} (${index + 1})`}
+                    aria-pressed={brushSize === size}
+                    className={classNames(
+                      moduleStyles.toolButton,
+                      brushSize === size && moduleStyles.toolActive
+                    )}
+                    onClick={() => setBrushSize(size)}
+                  >
+                    <span
+                      className={classNames(
+                        moduleStyles.brushDot,
+                        pixelMode && moduleStyles.brushDotSquare
+                      )}
+                      style={{
+                        width: brushDotPx(size),
+                        height: brushDotPx(size),
+                      }}
+                    />
+                  </button>
+                </PixelTooltip>
+              ))}
+              <div className={moduleStyles.toolbarDivider} />
+              <ColorPicker
+                color={color}
+                onChange={setColor}
+                recentColors={recentColors}
+              />
+            </div>
+            <div className={moduleStyles.historyRow}>
+              <PixelTooltip
+                tooltipId="pixel-undo-tooltip"
+                text="Undo (Ctrl+Z)"
+                fromLeftColumn
+              >
+                <button
+                  type="button"
+                  aria-label="Undo (Ctrl+Z)"
+                  className={moduleStyles.toolButton}
+                  disabled={!canUndo}
+                  onClick={undo}
+                >
+                  <FontAwesomeV6Icon iconName="rotate-left" />
                 </button>
               </PixelTooltip>
-            ))}
-            <div className={moduleStyles.toolbarDivider} />
-            <ColorPicker color={color} onChange={setColor} />
+              <PixelTooltip
+                tooltipId="pixel-redo-tooltip"
+                text="Redo (Ctrl+Shift+Z)"
+              >
+                <button
+                  type="button"
+                  aria-label="Redo (Ctrl+Shift+Z)"
+                  className={moduleStyles.toolButton}
+                  disabled={!canRedo}
+                  onClick={redo}
+                >
+                  <FontAwesomeV6Icon iconName="rotate-right" />
+                </button>
+              </PixelTooltip>
+            </div>
           </div>
           <div className={moduleStyles.canvasArea}>
             {loadError ? (

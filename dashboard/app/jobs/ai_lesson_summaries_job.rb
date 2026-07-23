@@ -1,7 +1,7 @@
 require 'cdo/aws/metrics'
 
 class AiLessonSummariesJob < ApplicationJob
-  queue_as :low_priority
+  queue_as CDO.active_job_queues[:low_priority]
 
   after_perform do |job|
     next unless DCDO.get('ai-lesson-summaries-notifications-enabled', false)

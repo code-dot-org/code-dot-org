@@ -68,7 +68,7 @@ export default class VersionRow extends React.Component {
         <MuiTypography
           key={'latest-version-message'}
           component="span"
-          variant="body2"
+          variant="body3"
         >
           {msg.latestVersion()}
         </MuiTypography>
@@ -118,12 +118,11 @@ export default class VersionRow extends React.Component {
           key={'disabled-view-button'}
           id={viewButtonId}
           type="button"
-          color="secondary"
+          color="primary"
           size="small"
           variant="contained"
           disabled
           aria-describedby={versionLabelId}
-          className={styles.disabledViewButton}
         >
           {msg.view()}
         </MuiButton>

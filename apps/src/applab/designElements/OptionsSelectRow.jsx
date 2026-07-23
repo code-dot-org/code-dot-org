@@ -34,13 +34,14 @@ export default class OptionsSelectRow extends React.Component {
 
   render() {
     const textAreaStyle = Object.assign({}, rowStyle.input, {
-      height: 40,
+      height: 50,
     });
     return (
       <div style={rowStyle.container}>
         <div style={rowStyle.description}>{this.props.desc}</div>
         <div>
           <textarea
+            className="form-control"
             onChange={this.handleChangeInternal}
             value={this.state.value}
             style={textAreaStyle}

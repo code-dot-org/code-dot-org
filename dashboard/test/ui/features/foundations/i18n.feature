@@ -1,8 +1,8 @@
 @single_session
-Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various languages
+Feature: Maze, Frozen, and Minecraft:Agent tutorials in various languages
 
-Scenario: HoC tutorial in Spanish
-  Given I am on "http://studio.code.org/hoc/15/lang/es-MX"
+Scenario: Maze tutorial in Spanish
+  Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/5/lang/es-MX"
   And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
@@ -46,8 +46,8 @@ Scenario: Translated function names in Spanish
   # Workspace definition block is translated
   And element "[data-id='definitionBlock'] > .blocklyNonEditableField > .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
-Scenario: HoC tutorial in Portuguese
-  Given I am on "http://studio.code.org/hoc/15/lang/pt-br"
+Scenario: Maze tutorial in Portuguese
+  Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/5/lang/pt-br"
   And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
@@ -91,8 +91,8 @@ Scenario: Translated function names in Portuguese
   # Workspace definition block is translated
   And element "[data-id='definitionBlock'] > .blocklyNonEditableField > .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
-Scenario: HoC tutorial in Arabic (RTL)
-  Given I am on "http://studio.code.org/hoc/15/lang/ar-sa"
+Scenario: Maze tutorial in Arabic (RTL)
+  Given I am on "http://studio.code.org/courses/ui-test-maze/units/1/lessons/1/levels/5/lang/ar-sa"
   And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible

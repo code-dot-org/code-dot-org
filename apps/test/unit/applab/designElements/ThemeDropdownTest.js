@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import ThemeDropdown from '@cdo/apps/applab/designElements/ThemeDropdown';
@@ -9,30 +9,33 @@ const DEFAULT_PROPS = {
   description: 'Theme',
 };
 
+// The dropdown trigger button carries the description as its aria-label.
+const getTrigger = () => screen.getByRole('button', {name: 'Theme'});
+
 describe('ThemeDropdown', () => {
-  describe('handleChange', () => {
-    it('sets the new theme from the event value', () => {
-      const handleChangeSpy = jest.fn();
-      const wrapper = shallow(
-        <ThemeDropdown {...DEFAULT_PROPS} handleChange={handleChangeSpy} />
-      );
+  it('shows the selected theme name and preview icon in the closed control', () => {
+    render(<ThemeDropdown {...DEFAULT_PROPS} />);
 
-      expect(wrapper.state('selectedValue')).toBe(DEFAULT_PROPS.initialValue);
-      wrapper.find('Select').simulate('change', {value: 'bubblegum'});
-      expect(handleChangeSpy).toHaveBeenCalledTimes(1);
-      expect(wrapper.state('selectedValue')).toBe('bubblegum');
-    });
+    expect(getTrigger()).toHaveTextContent('Citrus');
+    expect(getTrigger().querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('citrus.png')
+    );
+  });
 
-    it('sets the theme to default if the event is null', () => {
-      const handleChangeSpy = jest.fn();
-      const wrapper = shallow(
-        <ThemeDropdown {...DEFAULT_PROPS} handleChange={handleChangeSpy} />
-      );
+  it('calls handleChange with the option value and updates the selection', () => {
+    const handleChangeSpy = jest.fn();
+    render(<ThemeDropdown {...DEFAULT_PROPS} handleChange={handleChangeSpy} />);
 
-      expect(wrapper.state('selectedValue')).toBe(DEFAULT_PROPS.initialValue);
-      wrapper.find('Select').simulate('change', null);
-      expect(handleChangeSpy).toHaveBeenCalledTimes(1);
-      expect(wrapper.state('selectedValue')).toBe('default');
-    });
+    fireEvent.click(getTrigger());
+    fireEvent.click(screen.getByRole('button', {name: /Bubblegum/}));
+
+    expect(handleChangeSpy).toHaveBeenCalledTimes(1);
+    expect(handleChangeSpy).toHaveBeenCalledWith('bubblegum');
+    expect(getTrigger()).toHaveTextContent('Bubblegum');
+    expect(getTrigger().querySelector('img')).toHaveAttribute(
+      'src',
+      expect.stringContaining('bubblegum.png')
+    );
   });
 });

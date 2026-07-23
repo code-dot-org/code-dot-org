@@ -13,7 +13,6 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
   before do
     AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
-    AWS::S3.stubs(:presigned_upload_url).returns('https://s3.example/upload')
     AWS::S3.stubs(:presigned_download_url).returns('https://s3.example/download')
   end
 
@@ -39,7 +38,7 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['student_text']).must_equal 'my answer'
       end
 
-      it 'creates an asset row per asset_type and returns upload URLs' do
+      it 'creates an asset row per asset_type, without download URLs' do
         assert_difference 'ChallengeResponseAsset.count', 2 do
           post :create, params: {
             challenge_id: challenge.id,
@@ -50,7 +49,12 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         assert_response :created
         assets = response_json['assets']
         _(assets.map {|a| a['asset_type']}).must_equal %w[whiteboard_image video]
-        _(assets.map {|a| a['upload_url']}).must_equal ['https://s3.example/upload'] * 2
+        # The bytes are not in S3 yet; the client PUTs them to the upload
+        # endpoint using these ids.
+        assets.each do |asset|
+          _(asset['id']).wont_be_nil
+          _(asset).wont_include 'download_url'
+        end
       end
 
       it 'ignores server-owned fields' do

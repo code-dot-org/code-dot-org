@@ -267,6 +267,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
+
+    # Later chapters keep the custom route too; this is what the client's
+    # continue-to-next-level navigation consumes.
+    assert_equal "#{CDO.studio_url}/hoc/2", Unit.hoc_2014_unit.script_levels.second.summarize[:url]
   end
 
   test 'named level summarize' do
@@ -855,6 +859,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
+    create_hourofcode_unit_and_levels
     script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
     assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
 
