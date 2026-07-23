@@ -198,7 +198,6 @@ class CodeWorkspace extends React.Component {
             </MuiIconButton>
             <MuiTypography
               variant="body4"
-              id="workspace-header-span"
               sx={{
                 color: 'var(--text-neutral-white-fixed)',
               }}

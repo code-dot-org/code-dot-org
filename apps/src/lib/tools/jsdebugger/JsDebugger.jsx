@@ -484,7 +484,6 @@ class JsDebugger extends React.Component {
               <MuiTypography
                 className={styles.noUserSelect}
                 variant="body4"
-                id="workspace-header-span"
                 sx={{
                   color: 'var(--text-neutral-white-fixed)',
                   flex: '1 1 0',
