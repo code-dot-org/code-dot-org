@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-23T17:14:51.000Z",
   "level_num": "custom",
@@ -14,28 +13,17 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "print('Hello from the start!')",
+          "contents": "from theater import Scene, play_scenes, Instrument\n\nscene = Scene()\n\n# Title card\nscene.clear(\"navy\")\nscene.set_text_color(\"gold\")\nscene.set_text_height(40)\nscene.draw_text(\"Sunrise!\", 110, 210)\nscene.pause(1)\n\n# Animate a sun rising up the sky while a scale plays.\n# Each loop draws a fresh frame and plays the next note; play_note_and_pause\n# holds the frame for the length of the note.\nnotes = [60, 62, 64, 65, 67, 69, 71, 72]  # a C-major scale, 60 = middle C\nfor step, note in enumerate(notes):\n    scene.clear(\"aqua\")\n\n    # Ground\n    scene.set_fill_color(\"green\")\n    scene.remove_stroke_color()\n    scene.draw_rectangle(0, 320, 400, 80)\n\n    # Sun climbs higher each step\n    sun_y = 300 - step * 30\n    scene.set_fill_color(\"gold\")\n    scene.set_stroke_color(\"orange\")\n    scene.set_stroke_width(3)\n    scene.draw_ellipse(160, sun_y, 80, 80)\n\n    scene.play_note_and_pause(note, 0.4, instrument=Instrument.PIANO)\n\n# A shape and a chord to finish\nscene.clear(\"black\")\nscene.set_fill_color(\"fuchsia\")\nscene.set_stroke_color(\"white\")\nscene.set_stroke_width(2)\nscene.draw_regular_polygon(200, 200, 5, 90)   # a pentagon\n\nscene.set_text_color(\"white\")\nscene.set_text_height(28)\nscene.draw_text(\"The End\", 140, 210)\n\n# Play a chord by stacking notes at the same time, then hold the final frame.\nscene.play_note(60, 1.5)\nscene.play_note(64, 1.5)\nscene.play_note(67, 1.5)\nscene.pause(1.5)\n\nplay_scenes(scene)\n",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true,
           "type": "locked_starter"
-        },
-        "2": {
-          "id": "2",
-          "name": "support.py",
-          "language": "py",
-          "contents": "",
-          "folderId": "0",
-          "active": false,
-          "open": true,
-          "type": "support"
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0",
-        "2"
+        "0"
       ]
     },
     "long_instructions": "## Theater in Python Lab",
@@ -68,6 +56,7 @@
     },
     "mini_app": "theater"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-23T10:14:51.166-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2026-07-23 10:17:38 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-23 10:26:13 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-23T10:14:51.166-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2026-07-23 10:17:38 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-23 10:26:13 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-23 11:14:27 -0700\",\"changed\":[\"start_sources\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

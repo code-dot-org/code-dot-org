@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-22 03:41:03 UTC",
+    "serialized_at": "2026-07-23 18:15:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7906,6 +7906,27 @@
     },
     {
       "chapter": 231,
+      "position": 13,
+      "activity_section_position": 13,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 15"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 15"
+      ]
+    },
+    {
+      "chapter": 232,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7929,7 +7950,7 @@
       ]
     },
     {
-      "chapter": 232,
+      "chapter": 233,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7953,7 +7974,7 @@
       ]
     },
     {
-      "chapter": 233,
+      "chapter": 234,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7977,7 +7998,7 @@
       ]
     },
     {
-      "chapter": 234,
+      "chapter": 235,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8001,7 +8022,7 @@
       ]
     },
     {
-      "chapter": 235,
+      "chapter": 236,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8025,7 +8046,7 @@
       ]
     },
     {
-      "chapter": 236,
+      "chapter": 237,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8049,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 237,
+      "chapter": 238,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8073,7 +8094,7 @@
       ]
     },
     {
-      "chapter": 238,
+      "chapter": 239,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8097,7 +8118,7 @@
       ]
     },
     {
-      "chapter": 239,
+      "chapter": 240,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -8121,7 +8142,7 @@
       ]
     },
     {
-      "chapter": 240,
+      "chapter": 241,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -8145,7 +8166,7 @@
       ]
     },
     {
-      "chapter": 241,
+      "chapter": 242,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -8169,7 +8190,7 @@
       ]
     },
     {
-      "chapter": 242,
+      "chapter": 243,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8193,7 +8214,7 @@
       ]
     },
     {
-      "chapter": 243,
+      "chapter": 244,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8217,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 244,
+      "chapter": 245,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8241,7 +8262,7 @@
       ]
     },
     {
-      "chapter": 245,
+      "chapter": 246,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8265,7 +8286,7 @@
       ]
     },
     {
-      "chapter": 246,
+      "chapter": 247,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -8289,7 +8310,7 @@
       ]
     },
     {
-      "chapter": 247,
+      "chapter": 248,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -8313,7 +8334,7 @@
       ]
     },
     {
-      "chapter": 248,
+      "chapter": 249,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -8337,7 +8358,7 @@
       ]
     },
     {
-      "chapter": 249,
+      "chapter": 250,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -8361,7 +8382,7 @@
       ]
     },
     {
-      "chapter": 250,
+      "chapter": 251,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -8382,27 +8403,6 @@
       },
       "level_keys": [
         "Sprite Lab in Lab2 showcase 0"
-      ]
-    },
-    {
-      "chapter": 251,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Sketch Lab Lab2 Showcase"
-        ],
-        "lesson.key": "lesson-55",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
-      },
-      "level_keys": [
-        "Sketch Lab Lab2 Showcase"
       ]
     },
     {
@@ -10455,19 +10455,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 1 new",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ramp_video_artistIntro",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -10481,7 +10468,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "2-3 Artist 1 new",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -10494,7 +10494,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -11775,6 +11775,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Allthethings Python Lab 15",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 15"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Allthethings Weblab2 1",
         "script_level.level_keys": [
           "Allthethings Weblab2 1"
@@ -12006,18 +12018,6 @@
         "level.key": "Sprite Lab in Lab2 showcase 0",
         "script_level.level_keys": [
           "Sprite Lab in Lab2 showcase 0"
-        ],
-        "lesson.key": "lesson-55",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Sketch Lab Lab2 Showcase",
-        "script_level.level_keys": [
-          "Sketch Lab Lab2 Showcase"
         ],
         "lesson.key": "lesson-55",
         "lesson_group.key": "",
