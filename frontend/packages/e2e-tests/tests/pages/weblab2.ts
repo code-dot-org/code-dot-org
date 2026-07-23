@@ -41,6 +41,13 @@ const WEBLAB2_LEVEL: LabLevelUrlParams = {
  *   only resolves on a real deployed environment, not localhost/Drone.
  */
 export class WebLab2 extends LessonLevelPage {
+  /**
+   * The lab2 framework's root container (apps/src/lab2/views/Lab2Wrapper.tsx);
+   * wraps the instructions, file browser, editor, and preview. Used to scope
+   * axe scans to the lab, excluding the shared site header/footer.
+   */
+  readonly rootSelector = '#lab-container';
+
   /** Instructions region; holds the level's long_instructions text. */
   readonly instructionsPanel: Locator;
 

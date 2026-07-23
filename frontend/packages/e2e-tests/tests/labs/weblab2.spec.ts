@@ -1,6 +1,7 @@
 import {expect, test} from '../fixtures';
 import {WebLab2} from '../pages/weblab2';
 import {createStudent, resetSession, signOut} from '../shared/auth';
+import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 
 test.describe('Web Lab 2', () => {
   // Both scenarios carry @no_safari: Safari 16 throws on a regex the app uses
@@ -29,6 +30,27 @@ test.describe('Web Lab 2', () => {
       await lab.expectEditorLoaded();
     },
   );
+
+  /**
+   * Net-new coverage (no Cucumber source): WCAG AA scan of the lab workspace
+   * once the instructions, file browser, and editor have real content.
+   */
+  test('The lab workspace passes a WCAG AA scan', async ({page}) => {
+    await resetSession(page);
+    await page.goto('/');
+    await createStudent(page, {name: 'Penelope'});
+
+    const lab = new WebLab2(page);
+    await lab.gotoLevel();
+
+    // Gate on real content so the scan covers the populated workspace,
+    // not the loading state.
+    await lab.expectEditorLoaded();
+
+    expect(
+      await analyze(page, {include: lab.rootSelector, tags: WCAG_AA_TAGS}),
+    ).toEqual({});
+  });
 
   /**
    * Migration status: COMPLETED
