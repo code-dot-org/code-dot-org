@@ -164,7 +164,6 @@ export default class DesignModeHeaders extends React.Component {
       <PaneHeader
         id="design-headers"
         dir={this.props.isRtl ? 'rtl' : 'ltr'}
-        hasFocus={hasFocus}
         style={{color: 'white'}}
       >
         <PaneSection

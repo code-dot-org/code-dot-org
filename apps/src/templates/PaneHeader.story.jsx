@@ -19,7 +19,7 @@ export default {
 };
 
 export const HasFocus = () => (
-  <PaneHeader hasFocus={true}>
+  <PaneHeader>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
         <span>Section1</span>
@@ -38,7 +38,7 @@ export const HasFocus = () => (
 );
 
 export const DoesNotHaveFocus = () => (
-  <PaneHeader hasFocus={false}>
+  <PaneHeader>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
         <span>Section1</span>
@@ -57,7 +57,7 @@ export const DoesNotHaveFocus = () => (
 );
 
 export const TeacherOnlyWithFocus = () => (
-  <PaneHeader hasFocus={true} teacherOnly={true}>
+  <PaneHeader>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
         <span>Section1</span>
@@ -76,7 +76,7 @@ export const TeacherOnlyWithFocus = () => (
 );
 
 export const TeacherOnlyWithoutFocus = () => (
-  <PaneHeader hasFocus={false} teacherOnly={true}>
+  <PaneHeader>
     <div style={styles.flex}>
       <PaneSection style={styles.header}>
         <span>Section1</span>
@@ -95,7 +95,7 @@ export const TeacherOnlyWithoutFocus = () => (
 );
 
 export const WithRTLAndLTRButtons = () => (
-  <PaneHeader hasFocus={false} teacherOnly={true}>
+  <PaneHeader>
     <div style={styles.flex}>
       <PaneButton
         headerHasFocus={false}

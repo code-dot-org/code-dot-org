@@ -34,7 +34,6 @@ function JavalabEditorHeader({
 
   return (
     <PaneHeader
-      hasFocus
       style={{
         backgroundColor: 'var(--brand-purple-80)',
         paddingLeft: '0.125rem',

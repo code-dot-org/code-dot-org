@@ -65,12 +65,7 @@ function TopInstructionsHeader(props) {
   };
 
   return (
-    <PaneHeader
-      hasFocus={false}
-      isOldPurpleColor={isOldPurpleColor}
-      teacherOnly={teacherOnly}
-      isMinecraft={isMinecraft}
-    >
+    <PaneHeader>
       {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
       {collapsible &&
         !isEmbedView &&

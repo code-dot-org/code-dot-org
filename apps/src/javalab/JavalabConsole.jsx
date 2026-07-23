@@ -220,7 +220,6 @@ class JavalabConsole extends React.Component {
       <div style={style}>
         <PaneHeader
           id="pane-header"
-          hasFocus
           style={{
             backgroundColor: 'var(--brand-purple-80)',
             paddingLeft: '0.125rem',

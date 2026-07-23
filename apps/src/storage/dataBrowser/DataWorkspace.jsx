@@ -39,7 +39,6 @@ class DataWorkspace extends React.Component {
         <PaneHeader
           id="headers"
           dir={this.props.isRtl ? 'rtl' : 'ltr'}
-          hasFocus={!this.props.isRunning}
           className={this.props.isRunning ? 'is-running' : ''}
         >
           {(this.props.view === DataView.OVERVIEW ||

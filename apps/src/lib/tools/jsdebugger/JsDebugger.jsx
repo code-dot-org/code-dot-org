@@ -441,11 +441,7 @@ class JsDebugger extends React.Component {
         >
           <i className="fa-solid fa-ellipsis" />
         </div>
-        <PaneHeader
-          id="debug-area-header"
-          hasFocus={hasFocus}
-          className={styles.debugAreaHeader}
-        >
+        <PaneHeader id="debug-area-header" className={styles.debugAreaHeader}>
           <PaneSection
             id="debug-commands-header"
             style={{

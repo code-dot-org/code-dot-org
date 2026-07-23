@@ -84,7 +84,7 @@ class WebLabView extends React.Component {
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            <PaneHeader hasFocus={true} id="headers">
+            <PaneHeader id="headers">
               {!this.props.isFullScreenPreviewOn &&
                 !this.props.isReadOnlyWorkspace && (
                   <div>

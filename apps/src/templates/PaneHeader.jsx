@@ -12,18 +12,12 @@ import React, {forwardRef} from 'react';
 import moduleStyles from './pane-header.module.scss';
 
 /**
- * A purple pane header that can have be focused (purple) or unfocused (light purple).
+ * The pane header shared across several of our apps. Renders a styled div and
+ * forwards any remaining props (id, dir, ...) onto it.
  */
 class PaneHeader extends React.Component {
   static propTypes = {
-    hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    // TODO: [Phase 2] Need to maintain legacy styling for Javalab now.
-    //  Once Javalab receives rebranded styles - remove this prop and all of it's usage in the project
-    //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
-    isOldPurpleColor: PropTypes.bool,
-    teacherOnly: PropTypes.bool,
-    isMinecraft: PropTypes.bool,
     className: PropTypes.string,
   };
 

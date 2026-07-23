@@ -249,7 +249,6 @@ class CodeWorkspace extends React.Component {
         <PaneHeader
           id="headers"
           dir={isRtl ? 'rtl' : 'ltr'}
-          hasFocus={hasFocus}
           className={props.isRunning ? 'is-running' : ''}
         >
           {this.renderToolboxHeaders()}
