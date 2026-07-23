@@ -108,6 +108,16 @@ const RUN_DEBOUNCE_MS = 400;
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 
+// The keys a game typically reads (p5 listens for them on window).
+const GAME_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  ' ',
+  'Spacebar',
+]);
+
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
   currentSources: SpriteLab2Source;
@@ -607,14 +617,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeTab === 'Play') {
       return;
     }
-    const GAME_KEYS = new Set([
-      'ArrowLeft',
-      'ArrowRight',
-      'ArrowUp',
-      'ArrowDown',
-      ' ',
-      'Spacebar',
-    ]);
     const swallow = (e: KeyboardEvent) => {
       if (GAME_KEYS.has(e.key)) {
         e.stopPropagation();
@@ -627,6 +629,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       document.removeEventListener('keyup', swallow);
     };
   }, [activeTab]);
+
+  // A game key aimed at a focused control (Tab, then Space on "Restart
+  // scene") belongs to the control: activate the button, don't also jump.
+  // Stopping at document keeps the event from p5's window listener; the
+  // button's default activation is unaffected.
+  useEffect(() => {
+    const swallowOnControls = (e: KeyboardEvent) => {
+      if (!GAME_KEYS.has(e.key)) {
+        return;
+      }
+      const target = e.target instanceof Element ? e.target : null;
+      if (target?.closest('button, a, input, select, textarea')) {
+        e.stopPropagation();
+      }
+    };
+    document.addEventListener('keydown', swallowOnControls);
+    document.addEventListener('keyup', swallowOnControls);
+    return () => {
+      document.removeEventListener('keydown', swallowOnControls);
+      document.removeEventListener('keyup', swallowOnControls);
+    };
+  }, []);
 
   // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs change.
   useEffect(() => {
