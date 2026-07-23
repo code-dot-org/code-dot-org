@@ -1,4 +1,3 @@
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -34,6 +33,8 @@ import {
 } from './redux/locationPicker';
 import SpritelabInput from './spritelab/SpritelabInput';
 import TextConsole from './spritelab/TextConsole';
+
+import moduleStyles from './P5LabVisualizationColumn.module.scss';
 
 const MODAL_Z_INDEX = 1050;
 const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
@@ -220,13 +221,6 @@ class P5LabVisualizationColumn extends React.Component {
       } else {
         $('#grid-overlay')[0].style.display = 'none';
       }
-      // The grid checkbox also lives in a protected div (see GameButtons'
-      // ProtectedStatefulDiv), so it never re-renders after mount. Sync its
-      // checked state directly instead of relying on the checked prop.
-      const gridCheckbox = document.getElementById('grid-checkbox');
-      if (gridCheckbox) {
-        gridCheckbox.checked = nextProps.showGrid;
-      }
     }
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
@@ -330,13 +324,16 @@ class P5LabVisualizationColumn extends React.Component {
 
   renderGridCheckbox() {
     return (
-      <Checkbox
-        id="grid-checkbox"
-        name="grid-checkbox"
-        defaultChecked={this.props.showGrid}
-        onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
-        label={i18n.showGrid()}
-      />
+      <label className={moduleStyles.gridCheckboxLabel}>
+        <input
+          id="grid-checkbox"
+          name="grid-checkbox"
+          type="checkbox"
+          onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
+        />
+        <i className="fa-solid" />
+        <span>{i18n.showGrid()}</span>
+      </label>
     );
   }
   render() {

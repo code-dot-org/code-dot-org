@@ -1,0 +1,63 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as typography;
+
+// Matches the look of the design system's Checkbox component
+// (frontend/packages/component-library/src/checkbox), reimplemented with a
+// plain uncontrolled input because this checkbox lives inside a
+// ProtectedStatefulDiv that never re-renders after mount.
+.gridCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+
+  span {
+    @include typography.body-three;
+  }
+
+  input[type='checkbox'] {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+
+    & + i {
+      vertical-align: bottom;
+      box-sizing: content-box;
+      width: 18px;
+      height: 18px;
+
+      &::before {
+        display: inline-block;
+        content: ' ';
+        text-align: center;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-size: 10px;
+        border: 2px solid var(--borders-neutral-solid);
+        border-radius: 4px;
+      }
+    }
+
+    &:checked + i::before {
+      content: '\f00c';
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-brand-teal-primary);
+      border: 2px solid var(--borders-brand-teal-primary);
+    }
+
+    &:focus-visible + i::before {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  &:hover input[type='checkbox'] + i::before {
+    background-color: var(--background-brand-teal-extra-light);
+  }
+
+  &:hover input[type='checkbox']:checked + i::before {
+    background: var(--background-brand-teal-strong);
+    border-color: var(--borders-brand-teal-strong);
+  }
+}
