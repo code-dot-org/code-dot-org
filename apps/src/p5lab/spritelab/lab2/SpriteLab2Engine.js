@@ -333,6 +333,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       )
     );
     p5.allSprites.removeSprites();
+    // removeSprites destroyed the edge sprites too; clear the handle so the
+    // next edgesCollide/edgesDisplace recreates them instead of colliding
+    // against dead sprites.
+    p5.edges = undefined;
     if (this.JSInterpreter) {
       this.JSInterpreter.deinitialize();
     }
@@ -483,9 +487,28 @@ export default class SpriteLab2Engine extends SpriteLab {
     // always that snap, never a landing — restore the arc. (A head bonk
     // resolves downward, leaving the player under the block, not grounded —
     // so bonks still cancel the rise.)
+    const p5 = this.p5Wrapper.p5;
     this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
+      }
+      // Hard playfield containment — this lab never lets the player leave.
+      // Image-box halves, matching the grounded checks: the bottom clamp
+      // puts the image bottom exactly on the floor line, so hasSupportAt's
+      // floor branch holds and the player can jump from the world bottom.
+      const imgHalfW = (sprite.width * sprite.scale) / 2;
+      const imgHalfH = (sprite.height * sprite.scale) / 2;
+      sprite.position.x = Math.min(
+        Math.max(sprite.position.x, imgHalfW),
+        p5.width - imgHalfW
+      );
+      if (sprite.position.y < imgHalfH) {
+        sprite.position.y = imgHalfH;
+        sprite.velocity.y = Math.max(sprite.velocity.y, 0);
+      }
+      if (sprite.position.y > p5.height - imgHalfH) {
+        sprite.position.y = p5.height - imgHalfH;
+        sprite.velocity.y = 0;
       }
       const risingVy = sprite.__slab2RisingVy;
       if (
