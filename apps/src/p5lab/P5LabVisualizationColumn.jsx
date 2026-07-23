@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -219,6 +220,13 @@ class P5LabVisualizationColumn extends React.Component {
       } else {
         $('#grid-overlay')[0].style.display = 'none';
       }
+      // The grid checkbox also lives in a protected div (see GameButtons'
+      // ProtectedStatefulDiv), so it never re-renders after mount. Sync its
+      // checked state directly instead of relying on the checked prop.
+      const gridCheckbox = document.getElementById('grid-checkbox');
+      if (gridCheckbox) {
+        gridCheckbox.checked = nextProps.showGrid;
+      }
     }
     // Also manually raise/lower the zIndex of the playspace when selecting a
     // location because of the protected div
@@ -322,17 +330,13 @@ class P5LabVisualizationColumn extends React.Component {
 
   renderGridCheckbox() {
     return (
-      <div>
-        <label style={styles.checkboxLabel}>
-          <input
-            id="grid-checkbox"
-            type="checkbox"
-            onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
-            style={styles.checkbox}
-          />
-          {i18n.showGrid()}
-        </label>
-      </div>
+      <Checkbox
+        id="grid-checkbox"
+        name="grid-checkbox"
+        defaultChecked={this.props.showGrid}
+        onChange={() => this.props.toggleShowGrid(!this.props.showGrid)}
+        label={i18n.showGrid()}
+      />
     );
   }
   render() {
@@ -438,16 +442,6 @@ const styles = {
   },
   selectStyle: {
     width: APP_WIDTH,
-  },
-  checkbox: {
-    flex: 'none',
-    marginBottom: 3,
-    marginRight: 4,
-  },
-  checkboxLabel: {
-    display: 'flex',
-    alignItems: 'center',
-    fontSize: 13,
   },
   // Visually hidden but still announced by screen readers.
   srOnly: {
