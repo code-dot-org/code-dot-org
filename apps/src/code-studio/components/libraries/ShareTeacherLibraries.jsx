@@ -1,3 +1,7 @@
+import {
+  asyncLoadSectionData,
+  sectionsNameAndId,
+} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -9,8 +13,6 @@ import {
   setPersonalProjects,
   updateProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

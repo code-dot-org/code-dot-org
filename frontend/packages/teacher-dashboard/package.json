@@ -24,6 +24,11 @@
       "import": "./dist/home/index.mjs",
       "require": "./dist/home/index.cjs"
     },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
+    },
     "./mocks": {
       "types": "./dist/mocks/index.d.ts",
       "import": "./dist/mocks/index.mjs",
@@ -48,27 +53,42 @@
   "devDependencies": {
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
+    "@reduxjs/toolkit": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
+    "@types/jquery": "^3.5.0",
     "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.17.0",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "classnames": "^2.3.2",
     "eslint": "catalog:",
+    "jquery": "^3.7.0",
     "js-cookie": "^3.0.5",
     "jsdom": "catalog:",
+    "lodash": "^4.17.21",
+    "msw": "catalog:",
     "prettier": "catalog:",
+    "prop-types": "^15.8.1",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "react-redux": "catalog:",
+    "react-router-dom": "^6.26.0",
+    "shepherd.js": "^11.2.0",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
@@ -82,10 +102,21 @@
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@mui/material": "^7.0.0",
+    "@reduxjs/toolkit": "^2.0.0",
     "@tanstack/react-query": "^5.0.0",
     "classnames": "^2.3.0",
+    "jquery": "^3.0.0",
     "js-cookie": "^3.0.0",
+    "lodash": "^4.17.0",
     "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0"
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "react-redux": "^8.0.0 || ^9.0.0",
+    "react-router-dom": "^6.0.0 || ^7.0.0",
+    "shepherd.js": "^11.0.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

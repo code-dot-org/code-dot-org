@@ -1,6 +1,7 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {beginEditingSection} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -12,7 +13,6 @@ import i18n from '@cdo/locale';
 
 import OwnedPlSectionsTable from './OwnedPlSectionsTable';
 import OwnedSectionsTable from './OwnedSectionsTable';
-import {beginEditingSection} from './teacherSectionsRedux';
 
 import moduleStyles from './ownedSections.module.scss';
 

@@ -1,3 +1,7 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -28,10 +32,6 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import teacherSections, {
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

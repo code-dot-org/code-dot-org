@@ -1,4 +1,12 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {
+  beginImportRosterFlow,
+  setRosterProvider,
+  editSectionProperties,
+  cancelEditingSection,
+  isAddingSection,
+  assignedCourseOffering,
+} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
@@ -14,16 +22,6 @@ import LoginTypePicker, {
 } from './LoginTypePicker';
 import ParticipantTypePicker from './ParticipantTypePicker';
 import {sectionShape} from './shapes';
-import {
-  beginImportRosterFlow,
-  setRosterProvider,
-  editSectionProperties,
-  cancelEditingSection,
-} from './teacherSectionsRedux';
-import {
-  isAddingSection,
-  assignedCourseOffering,
-} from './teacherSectionsReduxSelectors';
 
 import styles from './sectionSetup.module.scss';
 

@@ -1,4 +1,5 @@
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
@@ -17,7 +18,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,

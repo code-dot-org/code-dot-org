@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -8,7 +9,6 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import SummaryContainer from '@cdo/apps/templates/levelSummary/SummaryContainer';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const INITIAL_STATE = {

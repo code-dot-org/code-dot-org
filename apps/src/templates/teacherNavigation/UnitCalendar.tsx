@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -17,7 +18,6 @@ import {
   getSelectedCourseName,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';

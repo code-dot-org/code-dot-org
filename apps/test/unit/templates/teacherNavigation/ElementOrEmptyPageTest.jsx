@@ -1,3 +1,7 @@
+import teacherSections, {
+  finishLoadingSectionData,
+  startLoadingSectionData,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -9,10 +13,6 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import teacherSections, {
-  finishLoadingSectionData,
-  startLoadingSectionData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ElementOrEmptyPage from '@cdo/apps/templates/teacherNavigation/ElementOrEmptyPage';
 import i18n from '@cdo/locale';
 

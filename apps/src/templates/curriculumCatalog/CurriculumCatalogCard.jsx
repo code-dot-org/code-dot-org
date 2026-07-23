@@ -1,4 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  assignToSection,
+  unassignSection,
+  sectionsForDropdown,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
@@ -24,11 +29,6 @@ import {
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {
-  assignToSection,
-  unassignSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

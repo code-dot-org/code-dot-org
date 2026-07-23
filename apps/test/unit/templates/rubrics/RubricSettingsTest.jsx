@@ -1,3 +1,7 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen, fireEvent, act} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -21,10 +25,6 @@ import teacherRubric, {
   setAllTeacherEvaluationData,
   setAiEvalStatusCounters,
 } from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const fakeStudent = {

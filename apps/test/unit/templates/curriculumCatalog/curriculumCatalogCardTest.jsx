@@ -1,3 +1,6 @@
+import teacherSections, {
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {intersection, pull} from 'lodash';
 import React from 'react';
@@ -15,9 +18,6 @@ import {
   translatedCourseOfferingCsTopics,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {sections} from '../studioHomepages/fakeSectionUtils';
 

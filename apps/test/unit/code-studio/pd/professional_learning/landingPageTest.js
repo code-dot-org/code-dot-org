@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -17,7 +18,6 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({

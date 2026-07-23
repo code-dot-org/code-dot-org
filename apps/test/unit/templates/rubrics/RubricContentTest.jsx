@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -12,7 +13,6 @@ import {
 } from '@cdo/apps/redux';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 describe('RubricContent', () => {
   let store;

@@ -1,3 +1,7 @@
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, fireEvent} from '@testing-library/react';
 import React, {useState} from 'react';
 import {Provider} from 'react-redux';
@@ -12,10 +16,6 @@ import manageStudents, {
   setStudents,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import AgeGatedStudentsModal from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsModal';
-import teacherSections, {
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

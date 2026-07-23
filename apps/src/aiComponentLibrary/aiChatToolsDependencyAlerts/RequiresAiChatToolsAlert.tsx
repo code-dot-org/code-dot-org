@@ -1,11 +1,11 @@
 import Link from '@code-dot-org/component-library/link';
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {AI_SETTINGS_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {navigateToHref} from '@cdo/apps/utils';

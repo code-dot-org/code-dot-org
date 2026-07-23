@@ -1,3 +1,4 @@
+import {resumeLearnHowToEvaluateTour} from '@code-dot-org/teacher-dashboard/home';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -12,7 +13,6 @@ import {
 } from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
-import {resumeLearnHowToEvaluateTour} from '../studioHomepages/teacherHomepageV2/useLearnHowToEvaluateTour';
 import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import DownloadProgressCsv from './DownloadProgressCsv';

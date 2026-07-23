@@ -3,13 +3,13 @@
  * the course overview page, and the lesson locking dialog.
  */
 
-import $ from 'jquery';
-import _ from 'lodash';
-
 import {
   NO_SECTION,
   SELECT_SECTION,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+} from '@code-dot-org/teacher-dashboard/redux';
+import $ from 'jquery';
+import _ from 'lodash';
+
 import {makeEnum} from '@cdo/apps/utils';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');

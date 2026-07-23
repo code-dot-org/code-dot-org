@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
@@ -20,7 +21,6 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
 import {assert, expect as chaiExpect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

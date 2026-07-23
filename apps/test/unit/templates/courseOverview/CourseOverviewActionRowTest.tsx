@@ -1,3 +1,6 @@
+import teacherSections, {
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -11,9 +14,6 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import CourseOverviewActionRow from '@cdo/apps/templates/courseOverview/CourseOverviewActionRow';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
 const DEFAULT_PROPS = {

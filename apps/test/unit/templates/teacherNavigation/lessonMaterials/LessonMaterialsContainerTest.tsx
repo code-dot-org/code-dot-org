@@ -1,3 +1,7 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -17,10 +21,6 @@ import currentUser, {
   setShowAITAPodcasts,
   setHasCompletedPersonalizationQuiz,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
 import experiments from '@cdo/apps/util/experiments';

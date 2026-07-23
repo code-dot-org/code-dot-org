@@ -1,4 +1,7 @@
 // react testing library import
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
@@ -20,9 +23,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

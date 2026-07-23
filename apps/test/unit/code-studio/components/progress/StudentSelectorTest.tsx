@@ -1,3 +1,7 @@
+import teacherSections, {
+  setStudentsForCurrentSection,
+  ServerStudent,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -7,10 +11,6 @@ import StudentSelector from '@cdo/apps/code-studio/components/progress/StudentSe
 import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {ServerStudent} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {InitProgressPayload} from '@cdo/apps/types/progressTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
