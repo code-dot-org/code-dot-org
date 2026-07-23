@@ -67,6 +67,14 @@ const CONTACT_EPSILON = 0.1;
 // allowed the squeeze implicitly.
 const MIN_SOLID_OVERLAP = 8;
 
+// The player's solid body is the art box scaled by this factor, anchored at
+// the feet. A default-size (50px) costume gets a 40px body, so every
+// costume shape fits a one-cell opening with clearance to spare; art
+// outside the body overhangs walls cosmetically. The size block scales art
+// and body together, so an explicitly enlarged sprite outgrows standard
+// gaps — on purpose.
+const PLAYER_BODY_SCALE = 0.8;
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -105,21 +113,6 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // Platformer players get a physics collider narrower than their art, so
-    // characters that visibly fit through a gap actually fit (a wingspan's
-    // corners are transparent). Width only: the grounded checks measure the
-    // image box, so the collider's height and feet must match it.
-    library.commands.setColliderWidth = function (spriteArg, fraction) {
-      this.getSpriteArray(spriteArg).forEach(sprite => {
-        sprite.setCollider(
-          'rectangle',
-          0,
-          0,
-          sprite.width * fraction,
-          sprite.height
-        );
-      });
-    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -444,11 +437,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     // resolution reconstructs each player's frame movement as
     // (position − last resolved position), and the stock resolver's shove
     // would corrupt that.
-    const moved = players.map(sprite => ({
-      sprite,
-      x: sprite.position.x,
-      y: sprite.position.y,
-    }));
+    const moved = players.map(sprite => {
+      this.syncPlayerBodyCollider_(sprite);
+      return {sprite, x: sprite.position.x, y: sprite.position.y};
+    });
     // Non-player sprites keep the stock resolver; running it pre-paint means
     // patrollers and props draw already resolved.
     this.library.commands.collide.call(
@@ -461,15 +453,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     moved.forEach(({sprite, x: curX, y: curY}) => {
       const imgHalfW = (sprite.width * sprite.scale) / 2;
       const imgHalfH = (sprite.height * sprite.scale) / 2;
-      // Physics width comes from the (narrowed) collider; height is always
-      // the image box, which the grounded checks measure.
-      const halfW = sprite.collider
-        ? (sprite.collider._width * sprite._getScaleX()) / 2
-        : imgHalfW;
-      const halfH = imgHalfH;
-      const prev = sprite.__slab2Prev || {x: curX, y: curY};
+      const halfW = imgHalfW * PLAYER_BODY_SCALE;
+      const halfH = imgHalfH * PLAYER_BODY_SCALE;
+      // The resolution runs on the feet-anchored body box: y here is the
+      // BODY center, `drop` below the sprite's image center. The feet
+      // anchor keeps body bottom == image bottom, which the grounded
+      // checks (image box, exact equality on the support line) measure.
+      const drop = imgHalfH - halfH;
+      const stored = sprite.__slab2Prev || {x: curX, y: curY};
+      const prev = {x: stored.x, y: stored.y + drop};
       const dx = curX - prev.x;
-      const dy = curY - prev.y;
+      const dy = curY + drop - prev.y;
       let x = prev.x + dx;
       let y = prev.y;
       walls.forEach(wall => {
@@ -542,10 +536,10 @@ export default class SpriteLab2Engine extends SpriteLab {
           sprite.velocity.y = 0;
         }
       });
-      // The bottom clamp sits the image bottom exactly on the floor line, so
+      // The bottom clamp sits the feet exactly on the floor line, so
       // hasSupportAt's floor branch holds and the player can jump from pits.
-      if (y > p5.height - imgHalfH) {
-        y = p5.height - imgHalfH;
+      if (y > p5.height - halfH) {
+        y = p5.height - halfH;
         sprite.velocity.y = 0;
       }
       // De-penetration: settle what the gates left overlapping. A crossing
@@ -590,9 +584,29 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
       }
       sprite.position.x = x;
-      sprite.position.y = y;
-      sprite.__slab2Prev = {x, y};
+      sprite.position.y = y - drop;
+      sprite.__slab2Prev = {x, y: y - drop};
     });
+  }
+
+  // The stock passes (zGameDev's post-paint collide and the edge pass) must
+  // agree with the resolver about the player's solid body, or they shove a
+  // player back out of an opening the resolver let them enter. Collider
+  // dimensions are unscaled local px; the +y offset anchors the box at the
+  // feet.
+  syncPlayerBodyCollider_(sprite) {
+    const key = sprite.width + ':' + sprite.height + ':' + sprite.scale;
+    if (sprite.__slab2BodyKey === key) {
+      return;
+    }
+    sprite.__slab2BodyKey = key;
+    sprite.setCollider(
+      'rectangle',
+      0,
+      (sprite.height * (1 - PLAYER_BODY_SCALE)) / 2,
+      sprite.width * PLAYER_BODY_SCALE,
+      sprite.height * PLAYER_BODY_SCALE
+    );
   }
 
   // The resolution must run after this frame's behaviors/events but before
