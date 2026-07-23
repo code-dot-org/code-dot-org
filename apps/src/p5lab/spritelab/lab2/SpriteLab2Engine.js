@@ -54,6 +54,24 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 // resolvePlatformPhysics_.
 const TERMINAL_FALL_SPEED = 10;
 
+// Downward gravity (px/frame²) for platformer players, matching the
+// zGameDev library loop this engine replaces.
+const PLATFORM_GRAVITY = 0.75;
+
+// Served in place of the zGameDev library (see loadHelperLibraries): its
+// globals and cell-sized sprite default, minus the per-frame physics loop
+// (stock collide passes, edge bounce, gravity) — all of that is
+// engine-owned here (resolvePlatformPhysics_). In this lab the library
+// name is the level's opt-in to platformer physics; the library's own
+// code never runs. Legacy labs load the real thing.
+const PLATFORM_LIBRARY_SOURCE = [
+  '// Replaced by SpriteLab2Engine: physics is engine-owned in this lab.',
+  'var GRID_SIZE = 8;',
+  'var CELL_SIZE = 400 / GRID_SIZE;',
+  'var GRAVITY = -0.75;',
+  'setDefaultSpriteSize(CELL_SIZE);',
+].join('\n');
+
 // Slack (px) for "was on the clear side of this face last frame" tests in
 // resolvePlatformPhysics_: resting contact is exact equality, and the stock
 // resolver can leave sub-pixel noise on it.
@@ -216,11 +234,17 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // Replicates StudioApp.loadLibrary_: source text stashed where
-  // initInterpreter expects it.
+  // initInterpreter expects it. zGameDev is served from
+  // PLATFORM_LIBRARY_SOURCE instead of the server: this lab replaces the
+  // library's interpreted physics loop with engine-owned physics.
   async loadHelperLibraries(names) {
     await Promise.all(
       (names || []).map(async name => {
         if (this.studioApp_.libraries[name]) {
+          return;
+        }
+        if (name === 'zGameDev') {
+          this.studioApp_.libraries[name] = PLATFORM_LIBRARY_SOURCE;
           return;
         }
         const response = await HttpClient.get('/libraries/' + name);
@@ -426,21 +450,16 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // zGameDev's edge pass bounces players off the top of the canvas; this
-    // lab keeps the top open (a jump may carry above the screen — gravity
-    // brings the player back), so park the top edge sprite out of reach.
-    if (p5.topEdge && p5.topEdge.position.y > -1000) {
-      p5.topEdge.position.y -= 10000;
-    }
     const players = this.library.getSpriteArray({group: 'players'});
     // Snapshot player positions before the stock pass below: the swept
     // resolution reconstructs each player's frame movement as
     // (position − last resolved position), and the stock resolver's shove
     // would corrupt that.
-    const moved = players.map(sprite => {
-      this.syncPlayerBodyCollider_(sprite);
-      return {sprite, x: sprite.position.x, y: sprite.position.y};
-    });
+    const moved = players.map(sprite => ({
+      sprite,
+      x: sprite.position.x,
+      y: sprite.position.y,
+    }));
     // Non-player sprites keep the stock resolver; running it pre-paint means
     // patrollers and props draw already resolved.
     this.library.commands.collide.call(
@@ -602,34 +621,17 @@ export default class SpriteLab2Engine extends SpriteLab {
         }
       });
       // Cap fall speed: a single frame's step must stay small enough that a
-      // falling sprite can't pass a block corner between frames.
+      // falling sprite can't pass a block corner between frames. Gravity
+      // accrues after the cap, so the next frame's step is capped + g —
+      // the same order the zGameDev loop produced.
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
       }
+      sprite.velocity.y += PLATFORM_GRAVITY;
       sprite.position.x = x;
       sprite.position.y = y - drop;
       sprite.__slab2Prev = {x, y: y - drop};
     });
-  }
-
-  // The stock passes (zGameDev's post-paint collide and the edge pass) must
-  // agree with the resolver about the player's solid body, or they shove a
-  // player back out of an opening the resolver let them enter. Collider
-  // dimensions are unscaled local px; the +y offset anchors the box at the
-  // feet.
-  syncPlayerBodyCollider_(sprite) {
-    const key = sprite.width + ':' + sprite.height + ':' + sprite.scale;
-    if (sprite.__slab2BodyKey === key) {
-      return;
-    }
-    sprite.__slab2BodyKey = key;
-    sprite.setCollider(
-      'rectangle',
-      0,
-      (sprite.height * (1 - PLAYER_BODY_SCALE)) / 2,
-      sprite.width * PLAYER_BODY_SCALE,
-      sprite.height * PLAYER_BODY_SCALE
-    );
   }
 
   // The resolution must run after this frame's behaviors/events but before
