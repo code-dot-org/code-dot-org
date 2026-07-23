@@ -1,0 +1,135 @@
+import {
+  expect,
+  type FrameLocator,
+  type Locator,
+  type Page,
+} from '@playwright/test';
+
+import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
+
+import {LessonLevelPage} from './lesson-level-page';
+
+/**
+ * The allthethings level backing these tests: lesson "Web Lab 2" position 51,
+ * level 11 — a fixed level seeded with an index.html containing a
+ * #hello-world-message div (see dashboard/config/levels/custom/weblab2/
+ * "Allthethings Weblab2 11.level"). hideProductTours suppresses the onboarding
+ * overlays that would otherwise cover the workspace on first load.
+ */
+const WEBLAB2_LEVEL: LabLevelUrlParams = {
+  lesson: 51,
+  level: 11,
+  hideProductTours: true,
+};
+
+/**
+ * Page object for Web Lab 2 (Lab2-architecture HTML/CSS/JS lab).
+ *
+ * DOM contract:
+ * - #instructions-panel is the lab2-framework-wide instructions region (see
+ *   apps/src/lab2/views/components/Instructions/InstructionsV2.tsx) — not
+ *   weblab2-specific, but this is the sole concrete POM for a lab2 lab today.
+ * - #uitest-files-list and .codemirror-container come from the shared
+ *   Codebridge file browser and lab2 code editor (apps/src/codebridge/,
+ *   apps/src/lab2/views/components/editor/CodeEditor.tsx).
+ * - The web preview renders through two nested iframes: the outer #preview
+ *   iframe (apps/src/weblab2/htmlPreview/HTMLPreview.tsx) loads a
+ *   preview.codeprojects.org document that mounts #codeprojects-preview-container
+ *   (apps/src/sites/studio/pages/codeprojects_preview/show.js), which in turn
+ *   renders the student's own page inside #inner-preview
+ *   (apps/src/weblab2/htmlPreview/InnerHTMLPreview.tsx). This preview chain
+ *   only resolves on a real deployed environment, not localhost/Drone.
+ */
+export class WebLab2 extends LessonLevelPage {
+  /** Instructions region; holds the level's long_instructions text. */
+  readonly instructionsPanel: Locator;
+
+  /** Codebridge file list (e.g. contains "index.html"). */
+  readonly filesList: Locator;
+
+  /** CodeMirror editor container; holds the seeded source content. */
+  readonly editorContainer: Locator;
+
+  /** The outer preview <iframe id="preview"> element itself, for visibility checks. */
+  readonly previewIframe: Locator;
+
+  /** Content inside the outer preview iframe. */
+  readonly previewFrame: FrameLocator;
+
+  /** The outer preview React app's mount point, inside previewFrame. */
+  readonly previewContainer: Locator;
+
+  /** The inner preview <iframe id="inner-preview"> element itself, inside previewFrame. */
+  readonly innerPreviewIframe: Locator;
+
+  /** Content inside the inner (student page) preview iframe. */
+  readonly innerPreviewFrame: FrameLocator;
+
+  /** The hello-world div from the level's seeded index.html source. */
+  readonly helloWorldMessage: Locator;
+
+  constructor(page: Page) {
+    super(page);
+    this.instructionsPanel = page.locator('#instructions-panel');
+    this.filesList = page.locator('#uitest-files-list');
+    this.editorContainer = page.locator('.codemirror-container');
+    this.previewIframe = page.locator('#preview');
+    this.previewFrame = page.frameLocator('#preview');
+    this.previewContainer = this.previewFrame.locator(
+      '#codeprojects-preview-container',
+    );
+    this.innerPreviewIframe = this.previewFrame.locator('#inner-preview');
+    this.innerPreviewFrame = this.previewFrame.frameLocator('#inner-preview');
+    this.helloWorldMessage = this.innerPreviewFrame.locator(
+      '#hello-world-message',
+    );
+  }
+
+  /** Navigate to the Web Lab 2 level and wait for the instructions to mount. */
+  async gotoLevel(params: LabLevelUrlParams = WEBLAB2_LEVEL): Promise<void> {
+    await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+    await this.waitForReady();
+  }
+
+  /**
+   * The lab is ready once the instructions panel mounts. The outer chrome
+   * (header, lesson progress) paints first and the content region stays a
+   * flat, empty background until the React app hydrates and paints
+   * instructions/editor/preview together — so this is the true readiness
+   * signal, not the header.
+   */
+  async waitForReady(): Promise<void> {
+    await expect(this.instructionsPanel).toBeVisible();
+  }
+
+  /** Assert the instructions, file list, and editor have all mounted with content. */
+  async expectEditorLoaded(): Promise<void> {
+    await expect(this.instructionsPanel).toContainText(
+      'This is the level for a basic Web Lab 2 UI Test. Please do not change the start code for this level without changing the UI test!',
+    );
+    await expect(this.filesList).toContainText('index.html');
+    await expect(this.editorContainer).toContainText('Hello world!');
+  }
+
+  /**
+   * Wait for the nested web preview to render the seeded page, up to the
+   * hello-world element becoming visible. Neither outer element is a
+   * reliable readiness signal: #codeprojects-preview-container
+   * (InnerHTMLPreview's mount point) never has box visibility of its own —
+   * its real content (.fileIframe, in inner-html-preview.module.scss) is
+   * `position: absolute` against the page's initial containing block, so the
+   * container itself stays a collapsed, zero-height box for the entire
+   * loading sequence and Playwright reports it "hidden" even once the inner
+   * iframe is fully painted. So we only assert it's attached (mounted),
+   * never that it's visible, and gate real readiness on the innermost
+   * element itself, with a generous timeout in place of the Cucumber step's
+   * fixed 5-second sleep (jQuery is unavailable inside the iframe, which is
+   * why that step used a sleep instead of a polling wait).
+   */
+  async waitForPreviewLoaded(): Promise<void> {
+    await expect(this.previewIframe).toBeVisible();
+    await this.previewContainer.waitFor({state: 'attached'});
+    await expect(this.innerPreviewIframe).toBeVisible();
+    await expect(this.helloWorldMessage).toBeVisible({timeout: 30_000});
+  }
+}
