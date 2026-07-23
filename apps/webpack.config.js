@@ -852,4 +852,6 @@ module.exports = {
   WEBPACK_BASE_CONFIG,
   APPLICATION_ALIASES,
   LOCALE_ALIASES,
+  // Shared with rspack.config.js so the transpile scope stays identical.
+  nodeModulesToTranspile,
 };
