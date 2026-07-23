@@ -262,22 +262,7 @@ html[dir='rtl'] {
   }
 }
 
-// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
-// brand overrides"); tags/tags.module.scss is the reference example.
-// The token bridge maps the legacy teal tokens onto the CADS brand ramp,
-// but the CADS toggle's ON side uses the dedicated mode-inverted
-// selected-state tokens (brand track + seafoam thumb/icon in light,
-// seafoam track + navy thumb/icon in dark), and the OFF track sits one
-// step further down the neutral ramp than legacy (septenary/octonary
-// instead of senary/septenary) — same-name tokens the bridge cannot
-// retarget. The focus ring and the disabled track fills already resolve
-// correctly through the bridge.
-// The thumb's Figma token (background/state/selected/primary-inverse) is
-// not in the colors_codeAi.css export yet; until a sandbox re-export
-// carries it, the fallback --text-selected-primary holds the identical
-// value pair by design ("selected text pairs with selected background").
-// Each selector mirrors its legacy counterpart plus the [data-brand]
-// attribute; rule order in the block mirrors the legacy cascade.
+// CodeAI (CADS) brand overrides — see themes/README.md
 [data-brand='codeai-next'] {
   .toggle {
     div .switch i {
