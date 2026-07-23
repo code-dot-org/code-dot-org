@@ -58,18 +58,16 @@ const TERMINAL_FALL_SPEED = 10;
 // zGameDev library loop this engine replaces.
 const PLATFORM_GRAVITY = 0.75;
 
-// Served in place of the zGameDev library (see loadHelperLibraries): its
-// globals and cell-sized sprite default, minus the per-frame physics loop
-// (stock collide passes, edge bounce, gravity) — all of that is
-// engine-owned here (resolvePlatformPhysics_). In this lab the library
-// name is the level's opt-in to platformer physics; the library's own
-// code never runs. Legacy labs load the real thing.
+// Served in place of the zGameDev library (see loadHelperLibraries): the
+// cell-sized sprite default is all this lab keeps of it — the per-frame
+// physics loop (stock collide passes, edge bounce, gravity) is engine-
+// owned (resolvePlatformPhysics_), and no DB block helper references the
+// library's globals. In this lab the library name is the level's opt-in
+// to platformer physics; the library's own code never runs. Legacy labs
+// load the real thing.
 const PLATFORM_LIBRARY_SOURCE = [
   '// Replaced by SpriteLab2Engine: physics is engine-owned in this lab.',
-  'var GRID_SIZE = 8;',
-  'var CELL_SIZE = 400 / GRID_SIZE;',
-  'var GRAVITY = -0.75;',
-  'setDefaultSpriteSize(CELL_SIZE);',
+  'setDefaultSpriteSize(50);',
 ].join('\n');
 
 // Slack (px) for "was on the clear side of this face last frame" tests in
