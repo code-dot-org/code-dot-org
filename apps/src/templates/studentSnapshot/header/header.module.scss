@@ -27,12 +27,32 @@
   width: 100%;
 }
 
+// Row placing the Prev/Next buttons inline to the left of the Lesson/Student
+// dropdown. The buttons hug their content; the dropdown fills the remaining
+// width. Align to the bottom so the buttons line up with the select control,
+// which sits below the dropdown's label.
+.selectorRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+
+  .dropdown {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
 .buttonGroup {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  flex: 0 0 auto;
 
   .button {
-    flex-grow: 1;
+    flex: 0 0 auto;
+    // Match the height of the size="s" dropdown select (2rem).
+    min-height: 2rem;
   }
 }
