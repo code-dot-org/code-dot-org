@@ -1,9 +1,9 @@
-@use '../../lab2/views/components/layout/variables.scss' as variables;
 @import '../../mixins.scss';
 
 .headerContainer {
-  height: 2.5rem;
-  border-bottom: variables.$default-border;
+  // Match panelContainerHeader so the 1px border stays visible under
+  // Bootstrap 3 border-box (2.5rem / 40px was clipping it).
+  height: 41px;
 }
 
 .workspaceContainer {
