@@ -23,6 +23,10 @@ class InstructionsCsfRightCol extends React.Component {
     setColWidth: PropTypes.func.isRequired,
     setColHeight: PropTypes.func.isRequired,
     hasShortAndLongInstructions: PropTypes.bool.isRequired,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     // from redux
     collapsed: PropTypes.bool.isRequired,
@@ -95,27 +99,29 @@ class InstructionsCsfRightCol extends React.Component {
   render() {
     const displayCollapserButton = this.shouldDisplayCollapserButton();
 
-    const scrollButtonsBelowCollapserStyle = this.props.isMinecraft
-      ? styles.craftStyles.scrollButtonsBelowCollapser
-      : styles.scrollButtonsBelowCollapser;
-
     const scrollButtonsHeight =
-      this.props.height -
-      HEADER_HEIGHT -
-      RESIZER_HEIGHT -
-      (displayCollapserButton ? scrollButtonsBelowCollapserStyle.top : 10);
+      this.props.height - HEADER_HEIGHT - RESIZER_HEIGHT - 10;
 
     return (
-      <div>
+      <div
+        style={{
+          padding: '5px 0',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 5,
+          maxHeight: '100%',
+          overflow: 'hidden',
+          height: '100%',
+          boxSizing: 'border-box',
+        }}
+      >
         {displayCollapserButton && (
           <CollapserButton
             ref={c => {
               this.collapser = c;
             }}
-            style={{
-              ...styles.collapserButton,
-              ...(this.props.isMinecraft && styles.craftStyles.collapserButton),
-            }}
+            collapseIcon={this.props.collapseIcon}
+            expandIcon={this.props.expandIcon}
             collapsed={this.props.collapsed}
             onClick={this.props.handleClickCollapser}
             isMinecraft={this.props.isMinecraft}
@@ -126,15 +132,12 @@ class InstructionsCsfRightCol extends React.Component {
           <ScrollButtons
             style={{
               ...styles.scrollButtons,
-              ...(this.props.isMinecraft &&
-                (this.props.isRtl
-                  ? styles.craftStyles.scrollButtonsRtl
-                  : styles.craftStyles.scrollButtons)),
-              ...(displayCollapserButton && scrollButtonsBelowCollapserStyle),
             }}
             ref={c => {
               this.scrollButtons = c;
             }}
+            upIcon={this.props.upIcon}
+            downIcon={this.props.downIcon}
             getScrollTarget={this.props.getScrollTarget}
             visible={true}
             height={scrollButtonsHeight}
@@ -147,38 +150,8 @@ class InstructionsCsfRightCol extends React.Component {
 }
 
 const styles = {
-  collapserButton: {
-    position: 'absolute',
-    right: 0,
-    marginTop: 9,
-    marginRight: 5,
-  },
   scrollButtons: {
-    margin: '10px 0px 5px 0px',
-    minWidth: '40px',
-    position: 'relative',
-  },
-  scrollButtonsBelowCollapser: {
-    position: 'relative',
-    top: 50,
-    margin: '0px',
-  },
-  craftStyles: {
-    collapserButton: {
-      padding: 5,
-      marginBottom: 0,
-    },
-    scrollButtons: {
-      left: 0,
-    },
-    scrollButtonsRtl: {
-      right: 0,
-    },
-    scrollButtonsBelowCollapser: {
-      position: 'relative',
-      top: 60,
-      margin: '0px',
-    },
+    minWidth: 40,
   },
 };
 

@@ -117,6 +117,10 @@ class TopInstructions extends Component {
     resizable: PropTypes.bool,
     setAllowInstructionsResize: PropTypes.func,
     collapsible: PropTypes.bool,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
     displayDocumentationTab: PropTypes.bool,
     displayReviewTab: PropTypes.bool,
     initialSelectedTab: PropTypes.oneOf(Object.values(TabType)),
@@ -541,6 +545,10 @@ class TopInstructions extends Component {
           adjustMaxNeededHeight={this.adjustMaxNeededHeight}
           isEmbedView={isEmbedView}
           teacherViewingStudentWork={teacherViewingStudentWork}
+          collapseIcon={this.props.collapseIcon}
+          expandIcon={this.props.expandIcon}
+          upIcon={this.props.upIcon}
+          downIcon={this.props.downIcon}
         />
       );
     } else if (tabSelected === TabType.INSTRUCTIONS) {

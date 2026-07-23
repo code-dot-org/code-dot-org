@@ -40,6 +40,8 @@ interface PlayspaceProps {
   // location-picker's hover ghost. Read at hover time — helper libraries can
   // change it per run.
   getDefaultSpriteSize?: () => number;
+  // Clicking the live preview (Code tab) opens Play on the previewed scene.
+  onPreviewClick?: () => void;
 }
 
 /**
@@ -55,6 +57,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   getDefaultSpriteSize,
+  onPreviewClick,
 }) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -265,6 +268,25 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           id="divGameLab"
           className={moduleStyles.playspaceCanvas}
         />
+        {/* Click-to-play: a transparent catcher over the live preview so a
+            click opens Play on this scene. Only in preview and never while
+            picking a location; the game canvas stays non-interactive beneath. */}
+        {mode === 'preview' && !picking && onPreviewClick && (
+          <div
+            className={moduleStyles.previewClickCatch}
+            role="button"
+            tabIndex={0}
+            title="Play this scene"
+            aria-label="Play this scene"
+            onClick={onPreviewClick}
+            onKeyDown={e => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onPreviewClick();
+              }
+            }}
+          />
+        )}
         {/* Location-picker hover ghost: preview the sprite being placed at
             the hovered spot (box coordinates are canvas coordinates). */}
         {picking &&

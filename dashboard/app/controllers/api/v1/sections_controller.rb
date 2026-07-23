@@ -133,7 +133,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       section
     end
 
-    render json: section.summarize
+    # The demo students were just written to the primary; read summarize's counts back from the
+    # primary too, since the read replica may not have caught up with this request's write yet.
+    render json: section.summarize(role: :writing)
   rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => exception
     if exception.is_a?(ActiveRecord::RecordNotUnique) || (exception.respond_to?(:record) && exception.record.errors.of_kind?(:demo_type, :taken))
       render json: {error: "demo section of type #{params[:demo_type]} already exists"}, status: :conflict

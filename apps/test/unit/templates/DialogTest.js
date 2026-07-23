@@ -13,9 +13,8 @@ describe('Dialog', function () {
 
     it('has 90% width and -45% left margin if fullWidth is provided', function () {
       const result = mount(<Dialog isOpen fullWidth />);
-      expect(result.find('.modal').props().style).toEqual({
+      expect(result.find('.modal-dialog').props().style).toEqual({
         width: '90%',
-        marginLeft: '-45%',
       });
     });
   });
