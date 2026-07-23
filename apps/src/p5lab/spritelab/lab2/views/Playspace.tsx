@@ -235,6 +235,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     >
       <div
         className={moduleStyles.playspaceBox}
+        // A keyboard stop for players: game keys arrive via window listeners
+        // regardless of focus, but focus needs somewhere harmless to rest
+        // after the tab-bar buttons (a focused button turns Space into its
+        // activator). role="application" also makes screen readers pass
+        // keystrokes through to the game.
+        role={mode === 'play' ? 'application' : undefined}
+        aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);

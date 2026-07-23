@@ -58,6 +58,7 @@ import {
   SpriteLab2Source,
 } from '../types';
 
+import {blurAfterPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
@@ -579,6 +580,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
+  // The Code and Images tabs stay mounted behind a clip-path, which hides
+  // them visually but leaves their contents (the whole Blockly workspace)
+  // in the tab order and the accessibility tree. Inert while hidden.
+  // Set via refs: React 18's JSX has no inert attribute.
+  const codeWrapperRef = useRef<HTMLDivElement>(null);
+  const imagesWrapperRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (codeWrapperRef.current) {
+      codeWrapperRef.current.inert = activeTab !== 'Code';
+    }
+    if (imagesWrapperRef.current) {
+      imagesWrapperRef.current.inert = activeTab !== 'Images';
+    }
+  }, [activeTab]);
+
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
   // from the tab button or "Restart game" clears it.
@@ -877,14 +893,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartGame}
+                onClick={event => {
+                  blurAfterPointerClick(event);
+                  handleRestartGame();
+                }}
               >
                 Restart game
               </button>
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartScene}
+                onClick={event => {
+                  blurAfterPointerClick(event);
+                  handleRestartScene();
+                }}
               >
                 Restart scene
               </button>
@@ -895,6 +917,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
         <div
+          ref={codeWrapperRef}
           className={moduleStyles.codeTabWrapper}
           style={{
             clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -910,6 +933,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           the guide's transition frames, and remounting loses gallery state. */}
         {imagesMounted && (
           <div
+            ref={imagesWrapperRef}
             className={classNames(moduleStyles.codeTabWrapper)}
             style={{
               clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
