@@ -162,6 +162,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
+    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
     this.level = {
       helperLibraries,
       softButtons: [],
@@ -372,6 +373,38 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(getStore().getState().animationList)
     );
+  }
+
+  // Platformer collision resolution, run before the interpreted draw() so
+  // every paint happens with resolved positions. p5 integrates velocity in
+  // its pre-phase and zGameDev's own pass corrects only at the end of the
+  // frame, after the paint — landings otherwise render one frame deep inside
+  // the block, and grounded checks read a sunk position at event time.
+  // zGameDev's pass still runs (it handles movement from this frame's
+  // events); these collides just make it a no-op for gravity.
+  resolvePlatformPhysics_() {
+    if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
+      return;
+    }
+    const commands = this.library.commands;
+    commands.collide.call(
+      this.library,
+      'collide',
+      {group: 'players'},
+      {group: 'walls'}
+    );
+    commands.collide.call(
+      this.library,
+      'collide',
+      {group: ''},
+      {group: 'walls'}
+    );
+    commands.edgesCollide.call(this.library, {group: 'players'});
+  }
+
+  onP5Draw() {
+    this.resolvePlatformPhysics_();
+    super.onP5Draw();
   }
 
   // --- Overrides that sever the global studioApp() singleton ---
