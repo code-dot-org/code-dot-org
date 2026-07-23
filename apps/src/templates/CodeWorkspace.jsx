@@ -286,6 +286,10 @@ class CodeWorkspace extends React.Component {
             </MuiTypography>
             <MuiTypography
               variant="body4"
+              // body4 maps to <p> in the code.org theme, and the block count is
+              // filled in by a ProtectedStatefulDiv - a <div> in a <p> is
+              // invalid nesting, so render this one as a div.
+              component="div"
               id="blockCounter"
               ref={el => (this.blockCounterEl = el)}
               sx={{
