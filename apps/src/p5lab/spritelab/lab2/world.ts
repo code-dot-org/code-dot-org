@@ -23,14 +23,17 @@ export interface SpriteLab2World {
 }
 
 // One placement, as a pure update: safe to apply inside a functional
-// sources updater, so rapid paints can't overwrite each other.
+// sources updater, so rapid paints can't overwrite each other. A world
+// without a grid (saved by an older experiment) is treated as empty.
 export function paintWorldCell(
   world: SpriteLab2World | undefined,
   row: number,
   col: number,
   cell: WorldCell | null
 ): SpriteLab2World {
-  const grid = (world ?? createEmptyWorld()).grid.map(cells => [...cells]);
+  const grid = (world?.grid ?? createEmptyWorld().grid).map(cells => [
+    ...cells,
+  ]);
   if (grid[row] && col < grid[row].length) {
     grid[row][col] = cell;
   }

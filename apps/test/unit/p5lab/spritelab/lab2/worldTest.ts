@@ -51,6 +51,13 @@ describe('world', () => {
     expect(paintWorldCell(second, 0, 0, null).grid[0][0]).toBeNull();
   });
 
+  it('paints over a gridless world saved by an older experiment', () => {
+    const legacy = {} as Parameters<typeof paintWorldCell>[0];
+    const world = paintWorldCell(legacy, 2, 3, {image: 'a', kind: 'block'});
+    expect(world.grid).toHaveLength(WORLD_GRID_SIZE);
+    expect(world.grid[2][3]).toEqual({image: 'a', kind: 'block'});
+  });
+
   it('quotes image names safely', () => {
     const world = createEmptyWorld();
     world.grid[0][0] = {image: 'say "hi"', kind: 'sprite'};
