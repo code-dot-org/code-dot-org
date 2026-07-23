@@ -14,7 +14,7 @@ export interface PyodideMessage {
   id: string;
   // Present only on 'theater_media' messages: the rendered gif and optional
   // audio track as raw bytes.
-  gif?: Uint8Array;
+  gif?: Uint8Array | null;
   audio?: Uint8Array | null;
 }
 

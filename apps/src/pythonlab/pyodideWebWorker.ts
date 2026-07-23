@@ -18,6 +18,13 @@ import {
 } from './pythonHelpers/pythonScriptUtils';
 import {MessageType} from './types';
 
+// A PyProxy wrapping a Python bytes object, exposing the buffer protocol so we
+// can copy its contents into a JS Uint8Array.
+interface PyBytesProxy {
+  getBuffer: () => {data: Uint8Array; release: () => void};
+  destroy: () => void;
+}
+
 let pyodide: PyodideInterface;
 async function loadPyodideAndPackages() {
   pyodide = await loadPyodide({
@@ -46,11 +53,29 @@ async function loadPyodideAndPackages() {
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Bridge for the theater mini-app: Python hands over the rendered gif and
-  // (optional) audio as raw bytes, which arrive here as Uint8Arrays and are
-  // relayed to the host. A null audio value means the program produced no sound.
+  // (optional) audio. Python bytes cross as a PyProxy, which postMessage can't
+  // clone, so we copy each out of WASM memory into a standalone Uint8Array (and
+  // release the proxy). A null/absent audio value means no sound was produced.
+  const copyProxyBytes = (proxy: PyBytesProxy | null | undefined) => {
+    if (!proxy) {
+      return null;
+    }
+    const buffer = proxy.getBuffer();
+    try {
+      return buffer.data.slice();
+    } finally {
+      buffer.release();
+      proxy.destroy();
+    }
+  };
   const theaterBridgeModule = {
-    publish: (gif: Uint8Array, audio: Uint8Array | null) => {
-      postMessage({type: 'theater_media', gif, audio, id: 'none'});
+    publish: (gif: PyBytesProxy, audio: PyBytesProxy | null | undefined) => {
+      postMessage({
+        type: 'theater_media',
+        gif: copyProxyBytes(gif),
+        audio: copyProxyBytes(audio),
+        id: 'none',
+      });
     },
   };
   Object.freeze(theaterBridgeModule);
