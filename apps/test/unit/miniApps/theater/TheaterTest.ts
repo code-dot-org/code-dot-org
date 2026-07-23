@@ -63,6 +63,57 @@ describe('Theater', () => {
     expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
+  it('appends a cache-bust suffix to remote urls', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'https://example.com/theater.gif'},
+    });
+    expect(imageElement.src).toContain('https://example.com/theater.gif?=');
+  });
+
+  it('uses blob and data urls verbatim without a cache-bust suffix', () => {
+    theater.startPlayback = jest.fn();
+    theater.handleSignal({
+      value: TheaterSignalType.VISUAL_URL,
+      detail: {url: 'blob:https://studio.code.org/abc-123'},
+    });
+    expect(imageElement.src).toBe('blob:https://studio.code.org/abc-123');
+
+    theater.handleSignal({
+      value: TheaterSignalType.AUDIO_URL,
+      detail: {url: 'data:audio/wav;base64,AAAA'},
+    });
+    expect(audioElement.src).toBe('data:audio/wav;base64,AAAA');
+  });
+
+  it('revokes blob urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    imageElement.style = {} as CSSStyleDeclaration;
+    imageElement.src = 'blob:https://studio.code.org/img';
+    audioElement.src = 'blob:https://studio.code.org/audio';
+
+    theater.reset();
+
+    expect(revokeSpy).toHaveBeenCalledWith('blob:https://studio.code.org/img');
+    expect(revokeSpy).toHaveBeenCalledWith(
+      'blob:https://studio.code.org/audio'
+    );
+  });
+
+  it('does not revoke remote urls on reset', () => {
+    const revokeSpy = jest.fn();
+    window.URL.revokeObjectURL = revokeSpy;
+    imageElement.style = {} as CSSStyleDeclaration;
+    imageElement.src = 'https://example.com/theater.gif';
+    audioElement.src = '';
+
+    theater.reset();
+
+    expect(revokeSpy).not.toHaveBeenCalled();
+  });
+
   it('shows a/v once elements have loaded', () => {
     const url = 'url';
     const audioData = {

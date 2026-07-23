@@ -12,6 +12,10 @@ export interface PyodideMessage {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   message: any;
   id: string;
+  // Present only on 'theater_media' messages: the rendered gif and optional
+  // audio track as raw bytes.
+  gif?: Uint8Array;
+  audio?: Uint8Array | null;
 }
 
 export type MessageType =
@@ -26,7 +30,8 @@ export type MessageType =
   | 'loaded_pyodide'
   | 'load_failed'
   | 'loading_packages'
-  | 'loaded_packages';
+  | 'loaded_packages'
+  | 'theater_media';
 
 export interface PythonValidationResult {
   name: string;

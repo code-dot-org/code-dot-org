@@ -45,6 +45,18 @@ async function loadPyodideAndPackages() {
 
   pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
+  // Bridge for the theater mini-app: Python hands over the rendered gif and
+  // (optional) audio as raw bytes, which arrive here as Uint8Arrays and are
+  // relayed to the host. A null audio value means the program produced no sound.
+  const theaterBridgeModule = {
+    publish: (gif: Uint8Array, audio: Uint8Array | null) => {
+      postMessage({type: 'theater_media', gif, audio, id: 'none'});
+    },
+  };
+  Object.freeze(theaterBridgeModule);
+  Object.freeze(theaterBridgeModule.publish);
+  pyodide.registerJsModule('_theater_bridge', theaterBridgeModule);
+
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
   // which will frequently be used. We have seen occasional issues with loading
@@ -207,6 +219,7 @@ async function loadPackages() {
       `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.4.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/theater-0.1.0-py3-none-any.whl`,
     ],
     {
       errorCallback: (message: string) => {

@@ -26,6 +26,7 @@ import {
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
+import {handleTheaterMedia} from './pythonHelpers/theaterMedia';
 import {
   FromPyodideSandboxMessage,
   ToPyodideSandboxMessage,
@@ -94,7 +95,7 @@ const getSandboxOrigin = () => {
 const sandboxOrigin = getSandboxOrigin();
 
 const handlePyodideMessage = (data: PyodideMessage) => {
-  const {type, id, message} = data;
+  const {type, id, message, gif, audio} = data;
   const onSuccess = callbacks[id];
 
   const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -199,6 +200,11 @@ const handlePyodideMessage = (data: PyodideMessage) => {
       break;
     case 'loaded_packages':
       directLogsToDevConsole = false;
+      break;
+    case 'theater_media':
+      if (gif) {
+        handleTheaterMedia(gif, audio ?? null);
+      }
       break;
     default:
       console.warn(

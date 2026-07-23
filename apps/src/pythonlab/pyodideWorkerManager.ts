@@ -26,6 +26,7 @@ import {
   parseErrorMessage,
 } from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
+import {handleTheaterMedia} from './pythonHelpers/theaterMedia';
 import {PyodideMessage} from './types';
 
 let callbacks: {[key: string]: (event: PyodideMessage) => void} = {};
@@ -92,7 +93,7 @@ const setUpPyodideWorker = () => {
   callbacks = {};
 
   worker.onmessage = event => {
-    const {type, id, message} = event.data as PyodideMessage;
+    const {type, id, message, gif, audio} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
 
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
@@ -197,6 +198,11 @@ const setUpPyodideWorker = () => {
         break;
       case 'loaded_packages':
         directLogsToDevConsole = false;
+        break;
+      case 'theater_media':
+        if (gif) {
+          handleTheaterMedia(gif, audio ?? null);
+        }
         break;
       default:
         console.warn(

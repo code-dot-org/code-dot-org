@@ -59,14 +59,13 @@ export default class Theater extends MiniApp {
       case TheaterSignalType.AUDIO_URL: {
         // Wait for the audio to load before starting playback
         this.hasAudio = true;
-        this.getAudioElement().src =
-          data.detail.url + this.getCacheBustSuffix();
+        this.getAudioElement().src = this.withCacheBust(data.detail.url);
         this.getAudioElement().oncanplaythrough = () => this.startPlayback();
         break;
       }
       case TheaterSignalType.VISUAL_URL: {
         // Preload the image. Once it's ready, start the playback
-        this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
+        this.getImgElement().src = this.withCacheBust(data.detail.url);
         this.getImgElement().onload = () => this.startPlayback();
         break;
       }
@@ -114,8 +113,11 @@ export default class Theater extends MiniApp {
   resetAudioAndVideo() {
     const audioElement = this.getAudioElement();
     audioElement.pause();
+    this.releaseIfBlobUrl(audioElement.src);
     audioElement.src = '';
-    this.getImgElement().src = '';
+    const imgElement = this.getImgElement();
+    this.releaseIfBlobUrl(imgElement.src);
+    imgElement.src = '';
     this.hasAudio = false;
   }
 
@@ -139,6 +141,25 @@ export default class Theater extends MiniApp {
 
   getCacheBustSuffix() {
     return '?=' + new Date().getTime();
+  }
+
+  // Remote URLs (Java Lab) are cache-busted to force a re-fetch. Locally
+  // generated blob:/data: URLs (Python Lab) must be used verbatim: a query
+  // suffix is not part of a registered object URL and corrupts a data URI.
+  withCacheBust(url: string | undefined) {
+    if (!url) {
+      return '';
+    }
+    if (url.startsWith('blob:') || url.startsWith('data:')) {
+      return url;
+    }
+    return url + this.getCacheBustSuffix();
+  }
+
+  releaseIfBlobUrl(url: string) {
+    if (url && url.startsWith('blob:')) {
+      URL.revokeObjectURL(url);
+    }
   }
 
   onPhotoPrompterFileSelected(photo: Blob) {
