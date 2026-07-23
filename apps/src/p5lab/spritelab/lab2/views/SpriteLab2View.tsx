@@ -58,6 +58,7 @@ import {
   SpriteLab2Source,
 } from '../types';
 
+import {isPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
 import ItemsTab from './ItemsTab';
@@ -107,6 +108,10 @@ const RUN_DEBOUNCE_MS = 400;
 
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
+
+// Focused controls own the game keys pressed on them (see the
+// swallowOnControls effect).
+const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
 
 // The keys a game typically reads (p5 listens for them on window).
 const GAME_KEYS = new Set([
@@ -630,17 +635,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     };
   }, [activeTab]);
 
-  // A game key aimed at a focused control (Tab, then Space on "Restart
-  // scene") belongs to the control: activate the button, don't also jump.
-  // Stopping at document keeps the event from p5's window listener; the
-  // button's default activation is unaffected.
+  // A game key aimed at a focused control belongs to the control: activate
+  // it, don't also jump. Stopping at document keeps the event from p5's
+  // window listener; the control's default activation is unaffected.
   useEffect(() => {
     const swallowOnControls = (e: KeyboardEvent) => {
       if (!GAME_KEYS.has(e.key)) {
         return;
       }
       const target = e.target instanceof Element ? e.target : null;
-      if (target?.closest('button, a, input, select, textarea')) {
+      if (target?.closest(INTERACTIVE_CONTROLS)) {
         e.stopPropagation();
       }
     };
@@ -833,14 +837,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Restart the whole game from the first scene.
   // Restarting must not leave focus parked on the clicked button, where
   // Space — also a game key — would re-activate it on every press. Keyboard
-  // activations hand focus to the playspace, ring included; pointer
-  // activations blur to the page instead — a silent focus on the playspace
-  // would still grow a ring at the player's first keypress, because the
-  // browser promotes the focused element to :focus-visible on keyboard use.
+  // activations hand focus to the playspace; pointer activations blur to
+  // the page instead — a silent focus on the playspace would still grow a
+  // ring at the player's first keypress, because the browser promotes the
+  // focused element to :focus-visible on keyboard use.
   const playspaceRef = useRef<HTMLDivElement>(null);
   const handOffRestartFocus = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
-      if (event.detail > 0) {
+      if (isPointerClick(event)) {
         event.currentTarget.blur();
       } else {
         playspaceRef.current?.focus({preventScroll: true});

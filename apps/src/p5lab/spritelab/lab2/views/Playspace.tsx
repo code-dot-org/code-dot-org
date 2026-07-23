@@ -42,9 +42,7 @@ interface PlayspaceProps {
   getDefaultSpriteSize?: () => number;
   // Clicking the live preview (Code tab) opens Play on the previewed scene.
   onPreviewClick?: () => void;
-  // The play-mode game region (the keyboard focus stop): the view focuses it
-  // when a restart button starts a scene, so focus doesn't stay parked on
-  // the button.
+  // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
 }
 
