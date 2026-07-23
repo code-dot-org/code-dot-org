@@ -876,7 +876,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, activeSceneId, scenes]);
 
   const playspaceMode: PlayspaceMode =
-    activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
+    activeTab === 'Play'
+      ? 'play'
+      : activeTab === 'Code' || activeTab === 'World'
+      ? 'preview'
+      : 'hidden';
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
