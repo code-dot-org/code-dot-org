@@ -50,6 +50,10 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
+// Max downward speed (px/frame) for platformer players; see
+// resolvePlatformPhysics_.
+const TERMINAL_FALL_SPEED = 10;
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -88,6 +92,21 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    // Platformer players get a physics collider narrower than their art, so
+    // characters that visibly fit through a gap actually fit (a wingspan's
+    // corners are transparent). Width only: the grounded checks measure the
+    // image box, so the collider's height and feet must match it.
+    library.commands.setColliderWidth = function (spriteArg, fraction) {
+      this.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.setCollider(
+          'rectangle',
+          0,
+          0,
+          sprite.width * fraction,
+          sprite.height
+        );
+      });
+    };
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -400,6 +419,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       {group: 'walls'}
     );
     commands.edgesCollide.call(this.library, {group: 'players'});
+    // Cap fall speed: a single frame's step must stay small enough that a
+    // falling sprite can't pass a block corner between frames (tunneling).
+    this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
+      if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
+        sprite.velocity.y = TERMINAL_FALL_SPEED;
+      }
+    });
   }
 
   onP5Draw() {
