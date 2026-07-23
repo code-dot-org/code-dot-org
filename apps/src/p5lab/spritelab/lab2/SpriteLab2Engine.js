@@ -399,39 +399,90 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  // Platformer collision resolution, run before the interpreted draw() so
-  // every paint happens with resolved positions. p5 integrates velocity in
-  // its pre-phase and zGameDev's own pass corrects only at the end of the
-  // frame, after the paint — landings otherwise render one frame deep inside
-  // the block, and grounded checks read a sunk position at event time.
-  // zGameDev's pass still runs (it handles movement from this frame's
-  // events); these collides just make it a no-op for gravity.
+  // Platformer collision resolution, run immediately before every paint —
+  // after p5's pre-phase velocity integration AND after this frame's
+  // behaviors/events have moved sprites. zGameDev's own end-of-frame pass
+  // corrects only after drawSprites has painted, so landings and wall-slide
+  // arrivals otherwise render one frame deep inside blocks.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const commands = this.library.commands;
-    commands.collide.call(
-      this.library,
-      'collide',
-      {group: 'players'},
-      {group: 'walls'}
-    );
-    commands.collide.call(
-      this.library,
-      'collide',
-      {group: ''},
-      {group: 'walls'}
-    );
-    commands.edgesCollide.call(this.library, {group: 'players'});
+    // Snapshot rising players: a riser that clips an overhang's corner gets
+    // resolved along the smallest axis — often sideways, shoving a
+    // straight-up jump horizontally. A rising head-clip must resolve
+    // vertically instead: keep x, stop under the block (see below).
+    const risingBefore = new Map();
+    this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
+      if (sprite.velocity.y < -1) {
+        risingBefore.set(sprite, sprite.position.x);
+      }
+    });
+    // Two rounds: wedged in a corner (a wall face plus the floor), a single
+    // round resolves only the smaller-overlap pair and paints the other
+    // penetration; the second round sees it alone and resolves it.
+    for (let round = 0; round < 2; round++) {
+      commands.collide.call(
+        this.library,
+        'collide',
+        {group: 'players'},
+        {group: 'walls'}
+      );
+      commands.collide.call(
+        this.library,
+        'collide',
+        {group: ''},
+        {group: 'walls'}
+      );
+      commands.edgesCollide.call(this.library, {group: 'players'});
+    }
+    risingBefore.forEach((xBefore, sprite) => {
+      const dx = sprite.position.x - xBefore;
+      // Sub-pixel displacements are float noise from exact-contact collides.
+      if (Math.abs(dx) < 0.5) {
+        return;
+      }
+      // Classify the contact at the pre-shove x: a head-clip is a wall whose
+      // bottom sits above the player's center. Any deeper overlap is a wall
+      // face — that sideways push is a legitimate wall slide, keep it.
+      sprite.position.x = xBefore;
+      const halfW = (sprite.collider._width * sprite._getScaleX()) / 2;
+      const halfH = (sprite.collider._height * sprite._getScaleY()) / 2;
+      let headWallBottom = -Infinity;
+      let sideContact = false;
+      this.library.getSpriteArray({group: 'walls'}).forEach(wall => {
+        const wallHalfW = (wall.width * wall.scale) / 2;
+        const wallHalfH = (wall.height * wall.scale) / 2;
+        const wallBottom = wall.position.y + wallHalfH;
+        const overlaps =
+          Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalfW &&
+          sprite.position.y - halfH < wallBottom &&
+          sprite.position.y + halfH > wall.position.y - wallHalfH;
+        if (!overlaps) {
+          return;
+        }
+        if (wallBottom <= sprite.position.y) {
+          headWallBottom = Math.max(headWallBottom, wallBottom);
+        } else {
+          sideContact = true;
+        }
+      });
+      if (sideContact || headWallBottom === -Infinity) {
+        sprite.position.x = xBefore + dx;
+        return;
+      }
+      sprite.position.y = headWallBottom + halfH;
+      sprite.velocity.y = 0;
+    });
     // Cap fall speed: a single frame's step must stay small enough that a
     // falling sprite can't pass a block corner between frames (tunneling).
     // And a rising player can't land: a held direction sliding the player up
-    // a wall face lets the end-of-frame collide snap it onto the lip and
-    // zero the ascent the moment its feet clear the top. Grounding while
-    // moving upward is always that snap, never a landing — restore the arc.
-    // (A head bonk resolves downward, leaving the player under the block,
-    // not grounded — so bonks still cancel the rise.)
+    // a wall face lets the collide snap it onto the lip and zero the ascent
+    // the moment its feet clear the top. Grounding while moving upward is
+    // always that snap, never a landing — restore the arc. (A head bonk
+    // resolves downward, leaving the player under the block, not grounded —
+    // so bonks still cancel the rise.)
     this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
@@ -453,8 +504,23 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
+  // The resolution must run after this frame's behaviors/events but before
+  // the paint; the only seam with that timing is the paint call itself.
+  wrapDrawSpritesOnce_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || p5.__slab2ResolvesBeforePaint) {
+      return;
+    }
+    p5.__slab2ResolvesBeforePaint = true;
+    const paint = p5.drawSprites.bind(p5);
+    p5.drawSprites = (...args) => {
+      this.resolvePlatformPhysics_();
+      return paint(...args);
+    };
+  }
+
   onP5Draw() {
-    this.resolvePlatformPhysics_();
+    this.wrapDrawSpritesOnce_();
     super.onP5Draw();
   }
 
