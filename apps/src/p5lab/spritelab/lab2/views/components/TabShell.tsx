@@ -15,12 +15,13 @@ interface TabShellProps {
   onTabChange: (tab: SpriteLab2Tab) => void;
   // Tabs not yet implemented are disabled in the bar.
   enabledTabs: readonly SpriteLab2Tab[];
-  // Tabs to show at all. Defaults to every tab; the scenes UI variant drops
-  // World entirely rather than disabling it.
+  // Tabs to show at all. Defaults to every tab.
   visibleTabs?: readonly SpriteLab2Tab[];
-  // Rendered in the tab bar immediately after the Code button (the scenes
-  // variant puts the scene selector there).
+  // Rendered in the tab bar immediately after the Code button (the scene
+  // selector).
   codeTabExtra?: React.ReactNode;
+  // Rendered immediately after the Play button (the restart controls).
+  playTabExtra?: React.ReactNode;
   children: React.ReactNode;
   onClickStartOver?: () => void;
 }
@@ -37,6 +38,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   enabledTabs,
   visibleTabs = SPRITE_LAB2_TABS,
   codeTabExtra,
+  playTabExtra,
   children,
   onClickStartOver,
 }) => {
@@ -85,6 +87,15 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                     {button}
                     {codeTabExtra}
                   </div>
+                );
+              }
+              // The restart controls sit just right of the Play button.
+              if (tab === 'Play' && playTabExtra) {
+                return (
+                  <React.Fragment key={tab}>
+                    {button}
+                    {playTabExtra}
+                  </React.Fragment>
                 );
               }
               return <React.Fragment key={tab}>{button}</React.Fragment>;

@@ -268,6 +268,13 @@
           <block type="gamelab_locationMouse" id="e[xaLj^WH_W!Uh.o?)B0"/>
         </category>
         <category name="Sprites">
+          <block type="spritelab2_makePlatformPlayer" id="toolbox_makePlatformPlayer">
+            <field name="ANIMATION_NAME">"purple bunny"</field>
+            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]</field>
+          </block>
+          <block type="spritelab2_makePlatformBlocks" id="toolbox_makePlatformBlocks">
+            <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1]]</field>
+          </block>
           <block type="gamelab_makeNewSpriteAnon" id="szn(fkTvbZ6MISe3_T]0">
             <field name="ANIMATION_NAME">"purple bunny"</field>
             <value name="LOCATION">
@@ -553,6 +560,12 @@
           <block type="gamelab_keyPressed" id="Ffbo1e}1Mv5~wjU4;E~@">
             <field name="CONDITION">"when"</field>
             <field name="KEY">"up"</field>
+          </block>
+          <block type="gamelab_whileKey" id="toolbox_gamelab_whileKey">
+            <field name="KEY">"left"</field>
+          </block>
+          <block type="gamelab_whenKey" id="toolbox_gamelab_whenKey">
+            <field name="KEY">"space"</field>
           </block>
           <block type="gamelab_spriteClicked" id="bv/OnI-!(v6WfV7+P{(X">
             <mutation useDefaultIcon="true"/>

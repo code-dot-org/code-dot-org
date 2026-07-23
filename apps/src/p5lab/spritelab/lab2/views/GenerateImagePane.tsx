@@ -82,6 +82,14 @@ const GenerateImagePane: React.FunctionComponent<{
   const [, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 
+  // Compute trims for images added after the initial load (a fresh
+  // generation lands here before any engine preload runs). The pass is
+  // source-cached, so only new images do work.
+  const animationList = useAppSelector(state => state.animationList);
+  useEffect(() => {
+    trimAnimationListImages(animationList);
+  }, [animationList]);
+
   const handleDelete = useCallback(
     (key: string) => {
       dispatch(
