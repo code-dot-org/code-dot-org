@@ -59,13 +59,13 @@ const TERMINAL_FALL_SPEED = 10;
 // resolver can leave sub-pixel noise on it.
 const CONTACT_EPSILON = 0.1;
 
-// A landing needs at least this much footing (px of horizontal overlap,
-// capped at half the collider for narrow sprites); a thinner corner graze
-// slides off the corner and the fall continues. Without this, dropping into
-// a one-cell gap is nearly impossible — the falling player's collider is
-// almost always grazing a neighboring block's corner at the moment the feet
-// cross the top line, and every graze would count as a landing.
-const LANDING_MIN_OVERLAP = 8;
+// The squeeze band (px): a face engaged thinner than this on the
+// perpendicular axis doesn't block, and the leftover thin penetration
+// resolves along its shallow axis at the end of the pass. One-cell notches
+// and doorways are exactly player-sized in these maps, so without a band
+// there is zero clearance to enter them; p5.play's min-axis resolution
+// allowed the squeeze implicitly.
+const MIN_SOLID_OVERLAP = 8;
 
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
@@ -422,6 +422,12 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Downward crossings land, upward crossings stop under the block; corners
   // behave (a rising player can't be snapped onto a lip, a head-clip can't
   // shove sideways). Program-driven sprites keep the stock resolver.
+  //
+  // Three feel rules refine the crossings: footing is kept generously
+  // (until the collider leaves the block) but gained strictly (center over
+  // the surface — corner grazes slide off); faces engaged thinner than the
+  // squeeze band don't block, so exact-fit openings are enterable; and the
+  // final de-penetration settles thin overlap along its shallow axis.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
@@ -469,8 +475,12 @@ export default class SpriteLab2Engine extends SpriteLab {
       walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
+        // A face engaged thinner than the squeeze band vertically doesn't
+        // block sideways movement; the de-penetration pass below settles
+        // whatever thin overlap results.
         if (
-          Math.abs(y - wall.position.y) >= halfH + wallHalfH ||
+          halfH + wallHalfH - Math.abs(y - wall.position.y) <
+            MIN_SOLID_OVERLAP ||
           Math.abs(x - wall.position.x) >= halfW + wallHalfW
         ) {
           return;
@@ -492,13 +502,6 @@ export default class SpriteLab2Engine extends SpriteLab {
       // brings the player back.
       x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
       y = prev.y + dy;
-      // Downward crossings collect into one candidate landing (highest top
-      // wins; adjacent blocks sharing that top are one surface, so a seam
-      // never reads as thin footing) and resolve after the loop against
-      // LANDING_MIN_OVERLAP. Upward crossings bonk immediately.
-      let landTop = Infinity;
-      let landOverlap = 0;
-      let landWall = null;
       walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
@@ -508,49 +511,79 @@ export default class SpriteLab2Engine extends SpriteLab {
         ) {
           return;
         }
-        if (
-          dy > 0 &&
-          prev.y + halfH <= wall.position.y - wallHalfH + CONTACT_EPSILON
-        ) {
-          const top = wall.position.y - wallHalfH;
-          const overlapX = halfW + wallHalfW - Math.abs(x - wall.position.x);
-          if (top + CONTACT_EPSILON < landTop) {
-            landTop = top;
-            landOverlap = overlapX;
-            landWall = wall;
-          } else if (Math.abs(top - landTop) <= CONTACT_EPSILON) {
-            landOverlap += overlapX;
+        const top = wall.position.y - wallHalfH;
+        const centerOn = Math.abs(x - wall.position.x) <= wallHalfW;
+        // Crossing tolerance is the squeeze band, not mere contact: a
+        // player who slipped sideways through the band arrives with feet
+        // already a few px past the face and must still be caught here —
+        // de-penetration would see the fall-deepened overlap and eject
+        // them sideways instead.
+        if (dy > 0 && prev.y + halfH <= top + MIN_SOLID_OVERLAP) {
+          // Footing is kept generously but gained strictly: a player
+          // already resting on this block keeps it until the collider
+          // fully leaves (a jump from the outer edge still works), while
+          // one arriving from the air lands only once their center is over
+          // it — a corner graze slides off via de-penetration instead
+          // (else one-cell gaps are unenterable: the feet almost always
+          // graze a neighbor's corner as they cross the top line).
+          const wasResting =
+            Math.abs(prev.y + halfH - top) <= CONTACT_EPSILON &&
+            Math.abs(prev.x - wall.position.x) < halfW + wallHalfW;
+          if (centerOn || wasResting) {
+            y = Math.min(y, top - halfH);
+            sprite.velocity.y = 0;
           }
         } else if (
           dy < 0 &&
-          prev.y - halfH >= wall.position.y + wallHalfH - CONTACT_EPSILON
+          prev.y - halfH >= wall.position.y + wallHalfH - MIN_SOLID_OVERLAP &&
+          centerOn
         ) {
           y = Math.max(y, wall.position.y + wallHalfH + halfH);
           sprite.velocity.y = 0;
         }
       });
-      if (landWall) {
-        if (landOverlap >= Math.min(LANDING_MIN_OVERLAP, halfW)) {
-          y = Math.min(y, landTop - halfH);
-          sprite.velocity.y = 0;
-        } else {
-          // Corner graze: slide off the corner instead of landing; the
-          // push-out keeps the resolved state overlap-free (the swept X
-          // pass never resolves a pre-existing overlap).
-          const wallHalfW = (landWall.width * landWall.scale) / 2;
-          x =
-            x < landWall.position.x
-              ? landWall.position.x - wallHalfW - halfW
-              : landWall.position.x + wallHalfW + halfW;
-          x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
-        }
-      }
       // The bottom clamp sits the image bottom exactly on the floor line, so
       // hasSupportAt's floor branch holds and the player can jump from pits.
       if (y > p5.height - imgHalfH) {
         y = p5.height - imgHalfH;
         sprite.velocity.y = 0;
       }
+      // De-penetration: settle what the gates left overlapping. A crossing
+      // the gates declined (center past the edge) slides off the corner
+      // sideways; other thin penetration — squeeze-band drift, a lip
+      // grazed on the way up — resolves along its shallow axis. dx per
+      // frame is smaller than the band, so overlap entered from a clear
+      // side always resolves; deep overlap (a sprite spawned inside a
+      // wall) is left for the program to sort out.
+      walls.forEach(wall => {
+        const wallHalfW = (wall.width * wall.scale) / 2;
+        const wallHalfH = (wall.height * wall.scale) / 2;
+        const penX = halfW + wallHalfW - Math.abs(x - wall.position.x);
+        const penY = halfH + wallHalfH - Math.abs(y - wall.position.y);
+        if (penX <= 0 || penY <= 0) {
+          return;
+        }
+        const crossed =
+          y < wall.position.y
+            ? dy > 0 &&
+              prev.y + halfH <= wall.position.y - wallHalfH + CONTACT_EPSILON
+            : dy < 0 &&
+              prev.y - halfH >= wall.position.y + wallHalfH - CONTACT_EPSILON;
+        if (crossed) {
+          x += x < wall.position.x ? -penX : penX;
+        } else if (penY <= MIN_SOLID_OVERLAP && penY <= penX) {
+          if (y < wall.position.y) {
+            y -= penY;
+            // Keep upward speed: popping onto a lip must not cancel a jump.
+            sprite.velocity.y = Math.min(sprite.velocity.y, 0);
+          } else {
+            y += penY;
+            sprite.velocity.y = Math.max(sprite.velocity.y, 0);
+          }
+        } else if (penX <= MIN_SOLID_OVERLAP) {
+          x += x < wall.position.x ? -penX : penX;
+        }
+      });
       // Cap fall speed: a single frame's step must stay small enough that a
       // falling sprite can't pass a block corner between frames.
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
