@@ -2,6 +2,8 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {SpriteLab2World} from './world';
+
 // The animation-list category marking an image as a background rather than a
 // costume.
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
@@ -61,6 +63,9 @@ export interface SpriteLab2Scene {
   name: string;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
+  // World-tab experiment: starter sprite/block placements, spawned ahead of
+  // the scene's program.
+  world?: SpriteLab2World;
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.

@@ -590,3 +590,122 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+
+// --- World tab (experiment) ---
+
+.worldTab {
+  height: 100%;
+  padding: 16px;
+  overflow: auto;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.worldPalette {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.worldPaletteItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+  cursor: pointer;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.worldPaletteErase {
+  width: auto;
+  padding: 0 10px;
+  color: var(--text-neutral-primary);
+  font-size: 13px;
+}
+
+.worldPaletteSelected {
+  border-color: var(--borders-brand-teal-primary);
+  box-shadow: 0 0 0 1px var(--borders-brand-teal-primary);
+}
+
+.worldEmpty {
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}
+
+.worldGrid {
+  display: grid;
+  width: fit-content;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+.worldCell {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1px;
+  border: 1px solid var(--borders-neutral-quaternary, var(--borders-neutral-primary));
+  border-radius: 0;
+  background: var(--background-neutral-primary);
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    background: var(--background-neutral-tertiary);
+  }
+}
+
+// Beyond the scene's top-left corner (world=large): authorable, not yet run.
+.worldCellOutside {
+  background: var(--background-neutral-secondary);
+
+  img {
+    opacity: 0.55;
+  }
+}
+
+.worldHint {
+  margin-top: 10px;
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}
+
+// World-tab experiment: the scene selector leads its group, with the World
+// and Code tabs as segments after it. The group's radius clips the segments,
+// and the active segment carries its own teal edge (two tabs share the
+// group, so a group-wide edge wouldn't say which is active).
+.tabGroupWorld {
+  overflow: hidden;
+
+  .tab {
+    border-radius: 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+  }
+
+  .sceneSelect {
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .tabActive {
+    box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  }
+}

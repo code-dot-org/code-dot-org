@@ -57,6 +57,14 @@ import {
   SpriteLab2Scene,
   SpriteLab2Source,
 } from '../types';
+import {
+  compileWorldPrelude,
+  paintWorldCell,
+  SCENE_GRID_SIZE,
+  SpriteLab2World,
+  WORLD_GRID_SIZE,
+  WorldCell,
+} from '../world';
 
 import TabShell from './components/TabShell';
 import GenerateSpriteLab from './GenerateSpriteLab';
@@ -64,6 +72,7 @@ import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
+import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -83,6 +92,22 @@ registerReducers({
 });
 
 const ENABLED_TABS: readonly SpriteLab2Tab[] = ['Images', 'Code', 'Play'];
+const WORLD_TABS: readonly SpriteLab2Tab[] = [
+  'Images',
+  'World',
+  'Code',
+  'Play',
+];
+
+// World-tab experiment flags: ?world-tab=true shows the tab; &world=large
+// widens the editor from the scene grid to the whole world.
+function getWorldTabParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    enabled: params.get('world-tab') === 'true',
+    large: params.get('world') === 'large',
+  };
+}
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
@@ -136,6 +161,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
+  const worldTab = useMemo(getWorldTabParams, []);
+  const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -366,6 +393,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       theme,
     });
 
+  // The active scene's world, by ref: run callbacks read it at call time,
+  // so world edits don't churn their identities.
+  const activeWorldRef = useRef<SpriteLab2World | undefined>(undefined);
+  useEffect(() => {
+    activeWorldRef.current = activeScene?.world;
+  }, [activeScene]);
+
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
@@ -373,7 +407,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     dispatch(setIsRunning(true));
-    engine.runProgram(getCode() ?? '');
+    engine.runProgram(
+      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+    );
   }, [dispatch, getCode]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
@@ -406,6 +442,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       currentExternalProjectRef.current = null;
       engine.preloadAnimationsOverride = null;
       currentPlayingRef.current = {kind: 'local', scene};
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
@@ -417,7 +454,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         console.error('Failed to compile scene', scene.id, e);
       }
       dispatch(setIsRunning(true));
-      engine.runProgram(code);
+      engine.runProgram(prelude + code);
     },
     [dispatch, activeSceneId, getCode]
   );
@@ -500,6 +537,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       currentExternalProjectRef.current = project;
       currentPlayingRef.current = {kind: 'external', project, sceneId};
+      const prelude = compileWorldPrelude(scene.world);
       let code = '';
       try {
         code = compileExternalScene(scene, project);
@@ -519,7 +557,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(code);
+      engine.runProgram(prelude + code);
     },
     [dispatch, compileExternalScene]
   );
@@ -711,6 +749,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId]
   );
 
+  // Persist World-tab placements to the active scene and refresh the
+  // preview, mirroring code edits. Applied cell-by-cell against the saved
+  // sources so rapid paints can't overwrite each other.
+  const handlePaintWorldCell = useCallback(
+    (row: number, col: number, cell: WorldCell | null) => {
+      updateSources(prev => ({
+        ...prev,
+        scenes: getScenes(prev).map(s =>
+          s.id === activeSceneId
+            ? {...s, world: paintWorldCell(s.world, row, col, cell)}
+            : s
+        ),
+      }));
+      scheduleRun();
+    },
+    [updateSources, activeSceneId, scheduleRun]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -820,7 +876,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [dispatch, activeSceneId, scenes]);
 
   const playspaceMode: PlayspaceMode =
-    activeTab === 'Play' ? 'play' : activeTab === 'Code' ? 'preview' : 'hidden';
+    activeTab === 'Play'
+      ? 'play'
+      : activeTab === 'Code' || activeTab === 'World'
+      ? 'preview'
+      : 'hidden';
 
   // Sizes the location-picker's hover ghost like the sprite the program would
   // create (helper libraries can change the default per run).
@@ -857,15 +917,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       <TabShell
         activeTab={activeTab}
         onTabChange={handleTabChange}
-        enabledTabs={ENABLED_TABS}
-        visibleTabs={ENABLED_TABS}
+        enabledTabs={tabs}
+        visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
         codeTabExtra={
           animationsSeeded ? (
             <SceneSelector
               scenes={sceneMetadata}
               activeSceneId={activeSceneId}
-              disabled={activeTab !== 'Code'}
+              disabled={activeTab !== 'Code' && activeTab !== 'World'}
               onSelectScene={handleSelectScene}
               onCreateScene={handleCreateScene}
             />
@@ -917,6 +977,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             <ItemsTab />
+          </div>
+        )}
+
+        {worldTab.enabled && activeTab === 'World' && (
+          <div className={moduleStyles.codeTabWrapper}>
+            <WorldTab
+              world={activeScene?.world}
+              displaySize={worldTab.large ? WORLD_GRID_SIZE : SCENE_GRID_SIZE}
+              onPaintCell={handlePaintWorldCell}
+            />
           </div>
         )}
 
