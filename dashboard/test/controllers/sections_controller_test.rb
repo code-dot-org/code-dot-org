@@ -4,7 +4,7 @@ class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # The page header falls back to the hourofcode unit,
     # so full page renders need it to exist.
     create_hourofcode_unit_and_levels
 
