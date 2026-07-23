@@ -9,6 +9,7 @@ import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
+import {resolvePlatformPhysics} from './platformPhysics';
 
 const NOOP = () => {};
 
@@ -50,18 +51,10 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
-// Max downward speed (px/frame) for platformer players; see
-// resolvePlatformPhysics_.
-const TERMINAL_FALL_SPEED = 10;
-
-// Downward gravity (px/frame²) for platformer players, matching the
-// zGameDev library loop this engine replaces.
-const PLATFORM_GRAVITY = 0.75;
-
 // Served in place of the zGameDev library (see loadHelperLibraries): the
 // cell-sized sprite default is all this lab keeps of it — the per-frame
 // physics loop (stock collide passes, edge bounce, gravity) is engine-
-// owned (resolvePlatformPhysics_), and no DB block helper references the
+// owned (platformPhysics.js), and no DB block helper references the
 // library's globals. In this lab the library name is the level's opt-in
 // to platformer physics; the library's own code never runs. Legacy labs
 // load the real thing.
@@ -69,27 +62,6 @@ const PLATFORM_LIBRARY_SOURCE = [
   '// Replaced by SpriteLab2Engine: physics is engine-owned in this lab.',
   'setDefaultSpriteSize(50);',
 ].join('\n');
-
-// Slack (px) for "was on the clear side of this face last frame" tests in
-// resolvePlatformPhysics_: resting contact is exact equality, and the stock
-// resolver can leave sub-pixel noise on it.
-const CONTACT_EPSILON = 0.1;
-
-// The squeeze band (px): a face engaged thinner than this on the
-// perpendicular axis doesn't block, and the leftover thin penetration
-// resolves along its shallow axis at the end of the pass. One-cell notches
-// and doorways are exactly player-sized in these maps, so without a band
-// there is zero clearance to enter them; p5.play's min-axis resolution
-// allowed the squeeze implicitly.
-const MIN_SOLID_OVERLAP = 8;
-
-// The player's solid body is the art box scaled by this factor, anchored at
-// the feet. A default-size (50px) costume gets a 40px body, so every
-// costume shape fits a one-cell opening with clearance to spare; art
-// outside the body overhangs walls cosmetically. The size block scales art
-// and body together, so an explicitly enlarged sprite outgrows standard
-// gaps — on purpose.
-const PLAYER_BODY_SCALE = 0.8;
 
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
@@ -426,212 +398,40 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  // Platformer collision resolution for players, run immediately before
-  // every paint — after p5's pre-phase velocity integration AND after this
-  // frame's behaviors/events have moved sprites. One rule, applied per axis:
-  // reconstruct the frame's movement from the last resolved position, apply
-  // the horizontal part and resolve horizontally, then the vertical part and
-  // resolve vertically. A wall face only blocks if the player was on its
-  // clear side last frame (swept, not overlap: a two-row-tall player whose
-  // head brushes a head-height block must not be teleported on top of it).
-  // Downward crossings land, upward crossings stop under the block; corners
-  // behave (a rising player can't be snapped onto a lip, a head-clip can't
-  // shove sideways). Program-driven sprites keep the stock resolver.
-  //
-  // Three feel rules refine the crossings: a crossing lands (or bonks)
-  // when the player is genuinely arriving — already over the column, or
-  // center on it, or pressed on its face, or moving straight down — while
-  // a same-frame lateral graze slides off; faces engaged thinner than the
-  // squeeze band don't block, so exact-fit openings are enterable; and the
-  // final de-penetration settles thin overlap along its shallow axis.
+  // Platformer physics for players (see platformPhysics.js for the rules),
+  // run immediately before every paint — after p5's pre-phase velocity
+  // integration and after this frame's behaviors/events have moved
+  // sprites. Program-driven (non-player) sprites keep the stock resolver.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    const players = this.library.getSpriteArray({group: 'players'});
-    // Snapshot player positions before the stock pass below: the swept
-    // resolution reconstructs each player's frame movement as
-    // (position − last resolved position), and the stock resolver's shove
-    // would corrupt that.
-    const moved = players.map(sprite => ({
-      sprite,
-      x: sprite.position.x,
-      y: sprite.position.y,
-    }));
-    // Non-player sprites keep the stock resolver; running it pre-paint means
-    // patrollers and props draw already resolved.
+    // Snapshot player positions before the stock pass below: the movement
+    // reconstruction must not see its shove.
+    const moved = this.library
+      .getSpriteArray({group: 'players'})
+      .map(sprite => ({
+        sprite,
+        x: sprite.position.x,
+        y: sprite.position.y,
+      }));
+    // Non-player sprites keep the stock resolver; running it pre-paint
+    // means patrollers and props draw already resolved.
     this.library.commands.collide.call(
       this.library,
       'collide',
       {group: ''},
       {group: 'walls'}
     );
-    const walls = this.library.getSpriteArray({group: 'walls'});
-    moved.forEach(({sprite, x: curX, y: curY}) => {
-      const imgHalfW = (sprite.width * sprite.scale) / 2;
-      const imgHalfH = (sprite.height * sprite.scale) / 2;
-      const halfW = imgHalfW * PLAYER_BODY_SCALE;
-      const halfH = imgHalfH * PLAYER_BODY_SCALE;
-      // The resolution runs on the feet-anchored body box: y here is the
-      // BODY center, `drop` below the sprite's image center. The feet
-      // anchor keeps body bottom == image bottom, which the grounded
-      // checks (image box, exact equality on the support line) measure.
-      const drop = imgHalfH - halfH;
-      const stored = sprite.__slab2Prev || {x: curX, y: curY};
-      const prev = {x: stored.x, y: stored.y + drop};
-      const dx = curX - prev.x;
-      const dy = curY + drop - prev.y;
-      let x = prev.x + dx;
-      let y = prev.y;
-      walls.forEach(wall => {
-        const wallHalfW = (wall.width * wall.scale) / 2;
-        const wallHalfH = (wall.height * wall.scale) / 2;
-        // A face engaged thinner than the squeeze band vertically doesn't
-        // block sideways movement; the de-penetration pass below settles
-        // whatever thin overlap results.
-        if (
-          halfH + wallHalfH - Math.abs(y - wall.position.y) <
-            MIN_SOLID_OVERLAP ||
-          Math.abs(x - wall.position.x) >= halfW + wallHalfW
-        ) {
-          return;
-        }
-        if (
-          dx > 0 &&
-          prev.x + halfW <= wall.position.x - wallHalfW + CONTACT_EPSILON
-        ) {
-          x = Math.min(x, wall.position.x - wallHalfW - halfW);
-        } else if (
-          dx < 0 &&
-          prev.x - halfW >= wall.position.x + wallHalfW - CONTACT_EPSILON
-        ) {
-          x = Math.max(x, wall.position.x + wallHalfW + halfW);
-        }
-      });
-      // Side containment uses the image box so the art stays on screen; the
-      // top is open on purpose — a jump may carry above the screen, gravity
-      // brings the player back.
-      x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
-      y = prev.y + dy;
-      // Pressed against a face last frame? The swept clamps pin at exact
-      // contact, so an epsilon test on the face line is reliable. A pressed
-      // player's landings and bonks are generous below: entering an opening
-      // in the face necessarily starts with only one step's worth of
-      // overlap, and the strict center rule would eject what the squeeze
-      // band just let in — the source of "misses the gap most of the time".
-      const wasPressed = walls.some(wall => {
-        const wallHalfW = (wall.width * wall.scale) / 2;
-        const wallHalfH = (wall.height * wall.scale) / 2;
-        return (
-          Math.abs(Math.abs(prev.x - wall.position.x) - (halfW + wallHalfW)) <=
-            CONTACT_EPSILON &&
-          halfH + wallHalfH - Math.abs(prev.y - wall.position.y) > 0
-        );
-      });
-      // Purely vertical motion is stable: whatever the player is directly
-      // over or under, they land on or bonk against — no corner
-      // arbitration, no sideways correction. A jump straight up from a
-      // spot retention allowed (standing past a block's edge) comes back
-      // down to that same spot, and a head bonk never shoves sideways. The
-      // strict clauses below only arbitrate corners reached with
-      // horizontal movement — the gap-crossing case they exist for.
-      const vertical = Math.abs(dx) <= CONTACT_EPSILON;
-      walls.forEach(wall => {
-        const wallHalfW = (wall.width * wall.scale) / 2;
-        const wallHalfH = (wall.height * wall.scale) / 2;
-        if (
-          Math.abs(x - wall.position.x) >= halfW + wallHalfW ||
-          Math.abs(y - wall.position.y) >= halfH + wallHalfH
-        ) {
-          return;
-        }
-        const top = wall.position.y - wallHalfH;
-        const centerOn = Math.abs(x - wall.position.x) <= wallHalfW;
-        // The body already overlapped this column before the frame's
-        // movement: crossing its face is then a descent onto (or rise
-        // into) the block, not a lateral graze. Standing on a block is
-        // the degenerate case, so this also keeps footing until the body
-        // fully leaves an edge. Only a same-frame graze is declined and
-        // slides off via de-penetration — its overlap is at most one
-        // step, so the slide is never a visible yank, and gaps stay
-        // enterable (a crossing graze mustn't grab the far corner).
-        const wasOver =
-          halfW + wallHalfW - Math.abs(prev.x - wall.position.x) >
-          CONTACT_EPSILON;
-        // Crossing tolerance is the squeeze band, not mere contact: a
-        // player who slipped sideways through the band arrives with feet
-        // already a few px past the face and must still be caught here —
-        // de-penetration would see the fall-deepened overlap and eject
-        // them sideways instead.
-        if (dy > 0 && prev.y + halfH <= top + MIN_SOLID_OVERLAP) {
-          if (vertical || centerOn || wasOver || wasPressed) {
-            y = Math.min(y, top - halfH);
-            sprite.velocity.y = 0;
-          }
-        } else if (
-          dy < 0 &&
-          prev.y - halfH >= wall.position.y + wallHalfH - MIN_SOLID_OVERLAP &&
-          (vertical || centerOn || wasOver || wasPressed)
-        ) {
-          y = Math.max(y, wall.position.y + wallHalfH + halfH);
-          sprite.velocity.y = 0;
-        }
-      });
-      // The bottom clamp sits the feet exactly on the floor line, so
-      // hasSupportAt's floor branch holds and the player can jump from pits.
-      if (y > p5.height - halfH) {
-        y = p5.height - halfH;
-        sprite.velocity.y = 0;
+    resolvePlatformPhysics(
+      moved,
+      this.library.getSpriteArray({group: 'walls'}),
+      {
+        width: p5.width,
+        height: p5.height,
       }
-      // De-penetration: settle what the gates left overlapping. A crossing
-      // the gates declined (center past the edge) slides off the corner
-      // sideways; other thin penetration — squeeze-band drift, a lip
-      // grazed on the way up — resolves along its shallow axis. dx per
-      // frame is smaller than the band, so overlap entered from a clear
-      // side always resolves; deep overlap (a sprite spawned inside a
-      // wall) is left for the program to sort out.
-      walls.forEach(wall => {
-        const wallHalfW = (wall.width * wall.scale) / 2;
-        const wallHalfH = (wall.height * wall.scale) / 2;
-        const penX = halfW + wallHalfW - Math.abs(x - wall.position.x);
-        const penY = halfH + wallHalfH - Math.abs(y - wall.position.y);
-        if (penX <= 0 || penY <= 0) {
-          return;
-        }
-        const crossed =
-          y < wall.position.y
-            ? dy > 0 &&
-              prev.y + halfH <= wall.position.y - wallHalfH + CONTACT_EPSILON
-            : dy < 0 &&
-              prev.y - halfH >= wall.position.y + wallHalfH - CONTACT_EPSILON;
-        if (crossed) {
-          x += x < wall.position.x ? -penX : penX;
-        } else if (penY <= MIN_SOLID_OVERLAP && penY <= penX) {
-          if (y < wall.position.y) {
-            y -= penY;
-            // Keep upward speed: popping onto a lip must not cancel a jump.
-            sprite.velocity.y = Math.min(sprite.velocity.y, 0);
-          } else {
-            y += penY;
-            sprite.velocity.y = Math.max(sprite.velocity.y, 0);
-          }
-        } else if (penX <= MIN_SOLID_OVERLAP) {
-          x += x < wall.position.x ? -penX : penX;
-        }
-      });
-      // Cap fall speed: a single frame's step must stay small enough that a
-      // falling sprite can't pass a block corner between frames. Gravity
-      // accrues after the cap, so the next frame's step is capped + g —
-      // the same order the zGameDev loop produced.
-      if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
-        sprite.velocity.y = TERMINAL_FALL_SPEED;
-      }
-      sprite.velocity.y += PLATFORM_GRAVITY;
-      sprite.position.x = x;
-      sprite.position.y = y - drop;
-      sprite.__slab2Prev = {x, y: y - drop};
-    });
+    );
   }
 
   // The resolution must run after this frame's behaviors/events but before
