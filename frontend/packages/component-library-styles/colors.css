@@ -89,6 +89,7 @@
   --borders-neutral-primary: var(--neutral-gray-20);
   --borders-neutral-solid: var(--neutral-base-black);
   --borders-neutral-strong: var(--neutral-gray-40);
+  --borders-neutral-white-fixed: var(--neutral-base-white);
   --borders-success-light: var(--sentiment-success-10);
   --borders-success-primary: var(--sentiment-success-50);
   --borders-success-strong: var(--sentiment-success-70);
@@ -200,6 +201,7 @@
   --borders-neutral-primary: var(--neutral-gray-80);
   --borders-neutral-solid: var(--neutral-base-white);
   --borders-neutral-strong: var(--neutral-gray-50);
+  --borders-neutral-white-fixed: var(--neutral-base-white);
   --borders-success-light: var(--sentiment-success-90);
   --borders-success-primary: var(--sentiment-success-40);
   --borders-success-strong: var(--sentiment-success-70);

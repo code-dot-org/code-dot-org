@@ -416,7 +416,7 @@ html[dir="rtl"] {
   left: 400px;
   cursor: ew-resize;
   text-align: center;
-  color: $lighter_gray;
+  color: var(--borders-neutral-strong);
   font-size: 24px;
   line-height: 400px;
 }
@@ -1171,7 +1171,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     vertical-align: middle;
   }
   tr.highlight {
-    background-color: $lightest_purple;
+    background-color: var(--background-neutral-secondary);
   }
 
   .template-level-warning {
