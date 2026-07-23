@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import 'font';
+@import 'brand-selectors';
 
 .user_menu, .create_menu, .help_button {
   user-select: none;
@@ -50,24 +51,24 @@
     z-index: 100001;
     position: absolute;
     inset-inline-end: 0px;
-    background-color: $white;
-    border: 1px solid $light_gray_200;
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
     border-radius: 0.25rem;
     text-align: initial;
     padding: 0;
     min-width: 228px;
     max-width: 300px;
     padding: 0.375rem;
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+    box-shadow: 0 4px 6px -1px var(--neutral-black-alpha-10), 0 2px 4px -1px var(--neutral-black-alpha-5);
 
     a {
-      color: $light_black !important;
+      color: var(--text-neutral-primary) !important;
       transition: background-color 0.2s ease-in-out;
       text-decoration: none;
     }
 
     a:hover {
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-tertiary);
       text-decoration: none;
       border-radius: 4px;
     }
@@ -84,8 +85,8 @@
     }
     .display_name {
       @include main-font-semi-bold;
-      background-color: $charcoal;
-      color: $white;
+      background-color: var(--background-neutral-octonary);
+      color: var(--text-neutral-white-fixed);
       padding: 10px;
       text-align: center;
       cursor: default;
@@ -130,7 +131,7 @@
   .help_icon {
     padding: 11px 0 16px 0;
     font-size: 22px;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     cursor: pointer;
     // Reserve the glyph box. Otherwise the width comes from the Font Awesome
     // webfont: zero until it loads, then 22px, shifting the adjacent user menu.
@@ -202,7 +203,7 @@
     }
     .text,
     #view_all_projects {
-      color: $light_black;
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -222,8 +223,7 @@
   // create menu has to collapse sooner to keep the inline nav from wrapping.
   // Bump each threshold up; preserve the original ~97px gap between the
   // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
-  html[data-brand="codeai"] &,
-  html[data-brand="codeai-next"] & {
+  @include codeai-family-brand($ancestor: true) {
     @media screen and (max-width: 1103px) {
       &.show-small-desktop {
         display: none !important;

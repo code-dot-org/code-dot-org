@@ -120,6 +120,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelProperties: LevelProperties;
     channelId?: string;
     userId?: number;
+    managesOwnProject?: boolean;
   },
   {dispatch: AppDispatch; state: RootState}
 >('lab/setUpWithLevel', async (payload, thunkAPI) => {
@@ -143,8 +144,9 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = payload.levelProperties;
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
-    if (!levelProperties.usesProjects) {
-      // If projects are disabled on this level, we can skip loading projects data.
+    // If projects are disabled on this level, or this lab manages loading its own project,
+    // skip loading projects data.
+    if (!levelProperties.usesProjects || payload.managesOwnProject) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -172,7 +174,11 @@ export const setUpWithLevel = createAsyncThunk<
     // We only can load predict responses if we have a script id.
     if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
       const predictResponse =
-        (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+        (await getPredictResponse(
+          payload.levelId,
+          payload.scriptId,
+          payload.userId
+        )) || '';
       thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
     } else {
       // If this isn't a predict level, reset the response to an empty string

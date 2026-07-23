@@ -31,6 +31,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: "pyodide-sandbox.#{CDO.preview_codeprojects_hostname}" do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
   constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
@@ -75,7 +79,7 @@ Dashboard::Application.routes.draw do
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
-    get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/level_source/:script_id/:level_id(/user/:user_id)', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     resources :student_work_evaluations, only: [:create] do
@@ -119,7 +123,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -1472,7 +1476,11 @@ Dashboard::Application.routes.draw do
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show]
-    resources :challenge_response_assets, only: [:show]
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

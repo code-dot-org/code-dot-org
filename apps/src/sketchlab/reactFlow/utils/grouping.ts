@@ -102,6 +102,48 @@ export function groupSelectedNodes(
 }
 
 /**
+ * Expands a pending deletion so removing a group also removes its children.
+ *
+ * React Flow's cascade delete only propagates to deletable children, but
+ * grouped children are marked deletable:false (so a user can't delete one
+ * child out of a group). This re-adds each deleted group's children, plus any edges whose
+ * endpoints are being removed, so no dangling nodes or edges survive.
+ */
+export function expandGroupDeletion<
+  E extends {id: string; source: string; target: string}
+>(
+  nodesToDelete: SketchLabNode[],
+  edgesToDelete: E[],
+  allNodes: SketchLabNode[],
+  allEdges: E[]
+): {nodes: SketchLabNode[]; edges: E[]} {
+  const deletedNodeIds = new Set(nodesToDelete.map(node => node.id));
+  const orphanedChildren = allNodes.filter(
+    node =>
+      node.parentId &&
+      deletedNodeIds.has(node.parentId) &&
+      !deletedNodeIds.has(node.id)
+  );
+  if (orphanedChildren.length === 0) {
+    return {nodes: nodesToDelete, edges: edgesToDelete};
+  }
+
+  const finalNodesToDelete = [...nodesToDelete, ...orphanedChildren];
+  const finalNodeIds = new Set(finalNodesToDelete.map(node => node.id));
+  const finalEdgeIds = new Set(edgesToDelete.map(edge => edge.id));
+  const finalEdgesToDelete = [...edgesToDelete];
+  for (const edge of allEdges) {
+    if (
+      !finalEdgeIds.has(edge.id) &&
+      (finalNodeIds.has(edge.source) || finalNodeIds.has(edge.target))
+    ) {
+      finalEdgesToDelete.push(edge);
+    }
+  }
+  return {nodes: finalNodesToDelete, edges: finalEdgesToDelete};
+}
+
+/**
  * Dissolves a group: removes the group node and converts child positions back
  * to absolute coordinates.
  */

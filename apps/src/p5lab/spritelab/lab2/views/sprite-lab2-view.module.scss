@@ -1,5 +1,29 @@
 @use '../quiet-button.scss' as buttons;
 
+.labRow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  .tabShell {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+// Instructions column width when the full panel shows (no guide).
+.instructionsArea {
+  flex: 0;
+  min-width: 25%;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--background-neutral-quaternary);
+}
+
 .tabShell {
   display: flex;
   flex-direction: column;
@@ -13,15 +37,20 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
+.tabContainer {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  justify-content: space-between;
+}
+
 .tabBar {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   gap: 4px;
-  padding: 6px 8px;
-  // Design-system tokens so the chrome is legible in both Light and Dark.
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .tab {
@@ -31,10 +60,14 @@ $tab-item-height: 34px;
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
-  background: transparent;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
 
   &:disabled {
     opacity: 0.4;
@@ -46,6 +79,11 @@ $tab-item-height: 34px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
 }
 
 // The Code tab + scene picker as one segmented control (scenes UI variant):
@@ -66,6 +104,7 @@ $tab-segment-height: $tab-item-height - 2px;
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
@@ -73,14 +112,38 @@ $tab-segment-height: $tab-item-height - 2px;
     border-radius: 4px 0 0 0;
   }
 
-  // The group paints the active background so both segments share it.
+  // The group paints the active background and teal edge; the segments
+  // inside stay transparent so both share them.
   .tabActive {
     background: transparent;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
   }
 }
 
 .tabGroupActive {
   background: var(--background-neutral-primary);
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+}
+
+// Action buttons beside the Play tab (shown only while playing), not tabs.
+.startOver {
+  height: $tab-item-height;
+  padding: 0 12px;
+  margin-inline-start: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
 }
 
 .sceneSelect {
@@ -140,69 +203,19 @@ $tab-segment-height: $tab-item-height - 2px;
   color: var(--text-neutral-primary);
 }
 
-.generatePane {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-  max-width: 680px;
-  padding: 16px;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-}
-
-.generateHeading {
-  font-size: 15px;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  // Drop the global <label> bottom margin: flex counts it in the line's cross
-  // size, so it would push the (margin-less) Generate button below the inputs.
-  margin: 0;
-  font-size: 12px;
-
-  span {
-    color: var(--text-neutral-secondary);
-  }
-
-  input,
-  select {
-    width: 100%;
-    height: 32px;
-    // Drop the global form-control bottom margin so the label box ends at the
-    // input; otherwise the flex-end row aligns the Generate button to that
-    // phantom space instead of to the inputs.
-    margin: 0;
-    padding: 4px 8px;
-    box-sizing: border-box;
-  }
-}
-
-.fieldGrow {
-  flex: 1 1 auto;
-}
-
-.fieldRow {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-// MUI Button owns its own typography/padding/color; we only pin the height so
-// it matches the 32px Name/Type inputs beside it (the flex-end row then aligns
-// their bottoms).
-.generateButton {
-  height: 32px;
-  white-space: nowrap;
-}
-
 .generateError {
   // Legible on the guide's dark panel; the old dark red vanished into it.
   color: #ff9d9d;
   font-size: 13px;
   font-weight: 600;
+}
+
+// Sidebar-only resource panel (guide-based instructions): no instruction
+// tabs render inside the nav, so its top border would read as a stray line.
+.resourceSidebar {
+  :global(#resource-panel-tabs) {
+    border-top: 0;
+  }
 }
 
 .imagesManager {
@@ -213,9 +226,10 @@ $tab-segment-height: $tab-item-height - 2px;
 .imageGallery {
   display: flex;
   flex-wrap: wrap;
-  // Generous row spacing so the cards read as rows, not a dense grid.
+  // Generous row spacing so the cards read as rows, not a dense grid; the
+  // bottom padding lets the last row scroll clear of the Guide overlay.
   gap: 28px 14px;
-  padding: 28px 16px 24px;
+  padding: 28px 16px 220px;
 }
 
 .galleryEmpty {
@@ -329,23 +343,33 @@ $tab-segment-height: $tab-item-height - 2px;
   border-top: 1px solid rgb(255 255 255 / 20%);
 }
 
+// Shared metrics for the guide's form controls. All controls in the guide
+// read as one family: same height, radius, and type size. The zeroed margin
+// and shadow undo dashboard's global element styles (button {margin: 5px},
+// input {margin-bottom: 10px} + inset shadow), which otherwise knock rows
+// out of alignment.
+@mixin guide-control {
+  box-sizing: border-box;
+  height: 36px;
+  margin: 0;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 6px;
+  box-shadow: none;
+  // Explicit colors: nothing styles bare form elements globally, so these
+  // would inherit the guide's white text onto their own light control
+  // background. The guide panel is dark in both themes.
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+}
+
 .guideRow {
   display: flex;
   gap: 8px;
 
-  // The input and button read as one control pair: same height, radius, and
-  // type size. The zeroed margin and shadow undo dashboard's global element
-  // styles (button {margin: 5px}, input {margin-bottom: 10px} + inset
-  // shadow), which otherwise knock the pair out of alignment.
   input,
   button {
-    box-sizing: border-box;
-    height: 36px;
-    margin: 0;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 6px;
-    box-shadow: none;
-    font-size: 14px;
+    @include guide-control;
   }
 
   input {
@@ -374,60 +398,45 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-.worldTab {
+// Vertical gap matching the rows' horizontal gaps.
+.guideForm {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  padding: 8px;
   gap: 8px;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
 }
 
-.worldPalette {
+// Labeled field stacks: label above its control.
+.guideFields {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
+  gap: 8px;
 
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
+  label {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0;
+    color: rgb(255 255 255 / 70%);
+    font-size: 12px;
   }
-}
 
-.brushActive {
-  outline: 2px solid #1565c0;
-}
+  input,
+  select {
+    @include guide-control;
 
-.brushSwatch {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--borders-neutral-strong);
-}
+    width: 100%;
+    padding: 0 10px;
+  }
 
-.worldGrid {
-  display: grid;
-  width: min(100%, 480px);
-  aspect-ratio: 1;
-  border: 1px solid var(--borders-neutral-strong);
-  user-select: none;
-}
+  select {
+    // Native selects ignore height on some platforms without an explicit
+    // appearance reset; padding keeps the arrow clear of the text.
+    padding: 0 6px;
+  }
 
-.worldCell {
-  border: 1px solid var(--borders-neutral-primary);
-  cursor: pointer;
-
-  &:hover {
-    outline: 1px solid var(--borders-neutral-strong);
-    outline-offset: -1px;
+  label.guideFieldGrow {
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
@@ -460,6 +469,44 @@ $tab-segment-height: $tab-item-height - 2px;
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
 }
 
 // Location-picker hover ghost: the sprite being placed, previewed at the

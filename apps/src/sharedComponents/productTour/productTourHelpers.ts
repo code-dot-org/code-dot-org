@@ -4,11 +4,15 @@ import Shepherd, {
   type Tour,
 } from 'shepherd.js';
 
+import {registerActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {navigateToHref} from '@cdo/apps/utils';
 
 // Scrolls the element to the center of the viewport only if it is not already
 // fully visible. Avoids jarring scroll when the target is already on screen.
-export const scrollIntoViewIfNeeded = (el: HTMLElement): void => {
+export const scrollIntoViewIfNeeded = (el?: HTMLElement): void => {
+  if (!el) {
+    return;
+  }
   const rect = el.getBoundingClientRect();
   const fullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
   if (!fullyVisible) {
@@ -195,5 +199,6 @@ export const createTourWithSteps = (
     },
   });
   tour.addSteps(getSteps(tour));
+  registerActiveTour(tour);
   return tour;
 };

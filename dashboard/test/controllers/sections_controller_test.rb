@@ -4,6 +4,10 @@ class SectionsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
+    # The page header falls back to the hourofcode unit,
+    # so full page renders need it to exist.
+    create_hourofcode_unit_and_levels
+
     @teacher = create(:teacher)
 
     @word_section = create(:section, user: @teacher, login_type: 'word')
@@ -14,7 +18,12 @@ class SectionsControllerTest < ActionController::TestCase
 
     @regular_section = create(:section, user: @teacher, login_type: 'email')
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id, course_id: Unit.flappy_unit.original_unit_group_id)
+    @flappy_unit = create(:script, :with_levels, name: 'flappy')
+    @flappy_unit.lessons.first.update!(has_lesson_plan: true)
+    create(:hoc_course, unit: @flappy_unit, name: 'flappy', family_name: 'flappy', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @flappy_unit.reload
+
+    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: @flappy_unit.id, course_id: @flappy_unit.original_unit_group_id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
@@ -339,6 +348,12 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   test 'retrieve_lessons_for_dropdown returns demo preset lesson links for a demo type' do
+    # In the test environment, demo presets resolve to the allthethings unit
+    # and unit group (see Policies::DemoSections.curriculum_names).
+    allthethings_unit = create(:unit, :with_levels, name: Policies::DemoSections::ALLTHETHINGS_UNIT_NAME)
+    allthethings_unit.lessons.first.update!(has_lesson_plan: true)
+    create(:unit_group_unit, position: 1, script: allthethings_unit, unit_group: create(:unit_group, name: Policies::DemoSections::ALLTHETHINGS_UNIT_GROUP_NAME))
+
     sign_in @teacher
 
     get :retrieve_lessons_for_dropdown, params: {id: 'high'}

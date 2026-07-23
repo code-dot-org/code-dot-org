@@ -4,11 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 21:43:07 UTC",
+    "serialized_at": "2026-07-23 02:12:21 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -32,19 +40,264 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Lesson 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Lesson 2",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Lesson 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Lesson 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Lesson 5",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Lesson 6",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Lesson 7",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Lesson 8",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Lesson 9",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Lesson 10",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Lesson 11",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Lesson 12",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Lesson 13",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d",
+        "lesson_activity.key": "2ffb79b3-d3af-4ebc-8c33-8f2c10bbd33f"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Classification"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d"
+      },
+      "level_keys": [
+        "Classification"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "Classification",
+        "script_level.level_keys": [
+          "Classification"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit2",
+        "activity_section.key": "e6bd4fa0-d505-4f77-9ff5-5ef14cf7fe0d"
+      }
+    }
   ],
   "resources": [
 
