@@ -94,6 +94,10 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyPath:focus {
       outline: none;
     }
+    /* Excluded on Minecraft (Craft) labs which keep their own dark chrome. */
+    body:not(.minecraft) .blocklySvg {
+      background-color: var(--background-neutral-primary) !important;
+    }
     .blocklyToolbox {
       background-color: var(--background-neutral-tertiary) !important;
     }
@@ -109,6 +113,15 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .blocklyDropDownDiv {
       background-color: var(--background-neutral-primary) !important;
       border-color: var(--borders-neutral-primary) !important;
+    }
+    /* Text token must follow the background token above, or dark-themed
+       labs get Blockly's default black text on a black background. */
+    .blocklyDropDownDiv .blocklyMenuItemContent {
+      color: var(--text-neutral-primary) !important;
+    }
+    /* Checkmark is a baked-in black glyph from sprites.svg; invert it in dark. */
+    [data-theme='Dark'] .blocklyDropDownDiv .blocklyMenuItemCheckbox {
+      filter: invert(1);
     }
     `
   );

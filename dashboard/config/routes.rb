@@ -31,6 +31,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: "pyodide-sandbox.#{CDO.preview_codeprojects_hostname}" do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
   constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
@@ -1472,7 +1476,11 @@ Dashboard::Application.routes.draw do
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show]
-    resources :challenge_response_assets, only: [:show]
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

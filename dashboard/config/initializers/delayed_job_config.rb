@@ -32,3 +32,18 @@ Delayed::Worker.queue_attributes = CDO.active_job_queues.each_with_object({}) do
     priority: CDO.active_job_queue_priorities[name].to_i,
   }
 end
+
+# Retries deletion of a completed DelayedJob record when the database raises a deadlock.
+# This prevents a successfully executed job from being treated as failed
+# and potentially executed again because its queue record could not be removed.
+module DelayedJobDestroyDeadlockRetry
+  def destroy(...)
+    Retryable.retryable(on: ActiveRecord::Deadlocked, tries: 3, sleep: proc {rand(0.1..0.5)}) do
+      super
+    end
+  rescue ActiveRecord::Deadlocked => exception
+    Observability::Errors.capture_exception(exception) if defined?(Observability::Errors)
+    raise
+  end
+end
+Delayed::Backend::ActiveRecord::Job.prepend(DelayedJobDestroyDeadlockRetry)

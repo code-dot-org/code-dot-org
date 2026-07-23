@@ -94,7 +94,7 @@ const buttonReset = {
 
 const styles = {
   icon: {
-    color: 'white',
+    color: 'var(--text-neutral-white-fixed)',
     cursor: 'pointer',
   },
   dropdownToggle: {

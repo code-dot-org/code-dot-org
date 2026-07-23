@@ -1,5 +1,3 @@
-@import "color.scss";
-
 .container {
   position: absolute;
   top: 0;
@@ -7,12 +5,12 @@
   left: 0;
   width: 270px;
   box-sizing: border-box;
-  border-right: 1px solid gray;
+  border-right: 1px solid var(--borders-neutral-strong);
   overflow-y: auto;
   padding: 10px;
 }
 
 .divider {
-  border-color: $light_gray;
+  border-color: var(--borders-neutral-strong);
   margin: 5px 0 10px 0;
 }

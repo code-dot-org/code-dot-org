@@ -3,8 +3,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -29,8 +31,11 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
+import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
+import ShareView from './ShareView';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -63,10 +68,21 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isResourcePanelCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const isShareView = useAppSelector(state => state.lab.isShareView);
+  const themeSetting = useThemeSetting('sketchlab');
+
+  useReactFlowSketchLabTour({levelProperties, enabled: !isShareView});
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
+
+  const hasAttempted = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
@@ -249,16 +265,35 @@ function ReactFlowSketchLabViewInner({
     readonlyWorkspace,
   ]);
 
+  if (isShareView) {
+    return (
+      <ShareView
+        levelName={levelProperties.name}
+        initialNodes={initialNodes}
+        initialEdges={initialEdges}
+        initialViewport={initialViewport}
+        colorMode={colorMode}
+      />
+    );
+  }
+
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
-        <div style={{width: leftPanelWidth}} className={panelClassName}>
+        <div
+          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          className={classNames(
+            panelClassName,
+            isResourcePanelCollapsed && styles.collapsedPanel
+          )}
+        >
           <ResourcePanel
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
-            hasEdited={false}
-            settings={[useThemeSetting('sketchlab')]}
+            hasEdited={hasAttempted}
+            hideCollapsedTabBorder
+            settings={[themeSetting]}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||
@@ -269,12 +304,18 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        <ResizeBar
-          isVertical={true}
-          separatorProps={panelSeparatorProps}
-          isDragging={isDragging}
-        />
-        <div style={{width: rightPanelWidth}}>
+        {!isResourcePanelCollapsed && (
+          <ResizeBar
+            isVertical={true}
+            separatorProps={panelSeparatorProps}
+            isDragging={isDragging}
+          />
+        )}
+        <div
+          style={
+            isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
+          }
+        >
           <PanelContainer
             id="workspace"
             className={panelClassName}

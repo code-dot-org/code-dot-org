@@ -1,20 +1,16 @@
-@import "color.scss";
-
-$min-table-width: 600px;
-
 .addColumnHeader {
-  width: 19px;
+  width: 40px;
 }
 
 .table {
-  min-width: $min-table-width;
+  min-width: 600px;
 }
 
 .plusIcon {
   align-items: center;
   border-radius: 2px;
-  background-color: white;
-  color: $teal;
+  background-color: var(--background-neutral-white-fixed);
+  color: var(--text-brand-teal-primary-fixed);
   cursor: pointer;
   display: inline-flex;
   height: 18px;

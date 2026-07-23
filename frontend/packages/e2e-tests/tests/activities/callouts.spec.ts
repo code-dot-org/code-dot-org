@@ -113,11 +113,10 @@ test.describe('Callouts', () => {
       const lab = new LegacyBlocklyLab(page);
       await lab.gotoLevelUrl(CALLOUT_TEST_LEVEL_URL);
       await lab.dismissLoginReminder();
-      // Show Code modal backdrop (z-index 1040) must sit in front of callout #qtip-0 (1030).
+      // Show Code modal overlay (z-index 1040) must sit in front of callout #qtip-0 (1030).
       await lab.showCodeHeader.click();
-      const modalBackdrop = page.locator('.modal-backdrop');
-      await expect(modalBackdrop).toBeVisible();
-      expect(await computedZIndex(modalBackdrop)).toBeGreaterThan(
+      await expect(lab.showCodeModalOverlay).toBeVisible();
+      expect(await computedZIndex(lab.showCodeModalOverlay)).toBeGreaterThan(
         await computedZIndex(lab.callouts.qtip(0)),
       );
     },

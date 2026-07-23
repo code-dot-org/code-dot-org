@@ -92,3 +92,22 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides.
+[data-brand='codeai-next'] {
+  .tags {
+    .tag {
+      background: var(--background-brand-light);
+      border: 1px solid var(--border-brand-mid);
+      border-radius: var(--shape-sm, 0.375rem);
+      color: var(--text-brand-secondary);
+
+      span {
+        // CADS tags use the Label style, not an overline.
+        text-transform: none;
+        letter-spacing: normal;
+        color: var(--text-brand-secondary);
+      }
+    }
+  }
+}
