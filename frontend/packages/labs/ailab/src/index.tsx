@@ -100,7 +100,6 @@ export const instructionsDismissed = function (): void {
 // Process an optional mode.
 const processMode = (mode: Mode | undefined): void => {
   const assetPath = getAssetPath();
-  let panelSet = false;
 
   if (mode) {
     // Load a single dataset immediately.
@@ -118,12 +117,6 @@ const processMode = (mode: Mode | undefined): void => {
       // Also retrieve model metadata and set column data types.
       parseJSON(assetPath + item.metadataPath);
 
-      if (mode.hideSelectLabel) {
-        store.dispatch(setCurrentPanel('dataDisplayFeatures'));
-      } else {
-        store.dispatch(setCurrentPanel('dataDisplayLabel'));
-      }
-      panelSet = true;
     }
   }
 
@@ -132,9 +125,7 @@ const processMode = (mode: Mode | undefined): void => {
     : TestDataLocations.END;
   store.dispatch(setReserveLocation(reserveLocation));
 
-  if (!panelSet) {
-    store.dispatch(setCurrentPanel('selectDataset'));
-  }
+  store.dispatch(setCurrentPanel('selectAlgorithm'));
 };
 
 // Export a few types.

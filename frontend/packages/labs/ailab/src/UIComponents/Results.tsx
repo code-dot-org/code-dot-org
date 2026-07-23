@@ -6,6 +6,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {setShowResultsDetails, setResultsPhase} from '../redux';
 
+import DecisionTreeVisualization from './DecisionTreeVisualization';
 import ResultsDetails from './ResultsDetails';
 import ScrollableContent from './ScrollableContent';
 import {UnconnectedStatement} from './Statement';
@@ -84,6 +85,7 @@ const Results = () => {
               </div>
             );
           })}
+          <DecisionTreeVisualization />
         </ScrollableContent>
       </div>
     </div>

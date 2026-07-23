@@ -10,6 +10,13 @@ export const MLTypes = {
 
 export const RegressionTrainer = 'knnRegress';
 export const ClassificationTrainer = 'knnClassify';
+export const DecisionTreeRegressionTrainer = 'id3Regress';
+export const DecisionTreeClassificationTrainer = 'id3Classify';
+
+export const Algorithms = {
+  KNN: 'knn',
+  DECISION_TREE: 'decisionTree',
+} as const;
 
 export const REGRESSION_ERROR_TOLERANCE = 5;
 
@@ -105,6 +112,154 @@ export const styles = {
   bodyContainer: {
     height: 'calc(100% - 50px)',
     boxSizing: 'border-box',
+  },
+
+  bodyContainerWithNavigationTabs: {
+    height: 'calc(100% - 114px)',
+    boxSizing: 'border-box',
+  },
+
+  algorithmPanel: {
+    padding: 30,
+    justifyContent: 'flex-start',
+  },
+
+  algorithmChoiceFieldset: {
+    border: 'none',
+    margin: 0,
+    padding: 0,
+  },
+
+  algorithmChoiceLegend: {
+    lineHeight: '38px',
+    fontSize: 24,
+    marginBottom: 20,
+    borderBottom: 'solid 1px black',
+    paddingBottom: 10,
+    width: '100%',
+    boxSizing: 'border-box',
+  },
+
+  algorithmChoiceGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, minmax(220px, 360px))',
+    gap: 20,
+    alignItems: 'stretch',
+  },
+
+  algorithmChoice: {
+    display: 'flex',
+    gap: 12,
+    alignItems: 'flex-start',
+    minHeight: 150,
+    boxSizing: 'border-box',
+    backgroundColor: colors.background,
+    border: 'solid 4px #f2f2f2',
+    borderRadius: 0,
+    cursor: 'pointer',
+    padding: 18,
+  },
+
+  algorithmChoiceSelected: {
+    borderColor: colors.teal,
+    backgroundColor: 'white',
+  },
+
+  algorithmChoiceInput: {
+    marginTop: 4,
+  },
+
+  algorithmChoiceTitle: {
+    display: 'block',
+    fontSize: 20,
+    marginBottom: 8,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  algorithmChoiceDescription: {
+    display: 'block',
+    fontSize: 14,
+    lineHeight: 1.4,
+    marginBottom: 0,
+  },
+
+  navigationTabsRail: {
+    height: 64,
+    boxSizing: 'border-box',
+    backgroundColor: '#fbf7fb',
+    borderBottom: 'solid 1px #e1dce2',
+    padding: '6px 8px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  navigationTabs: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 4,
+    height: '100%',
+    width: '100%',
+  },
+
+  navigationTab: {
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    border: 'none',
+    borderRadius: 28,
+    boxSizing: 'border-box',
+    color: '#3f3348',
+    cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'row',
+    flex: 1,
+    gap: 10,
+    height: 52,
+    justifyContent: 'center',
+    margin: 0,
+    maxWidth: 260,
+    minWidth: 112,
+    padding: '0 20px',
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  navigationTabSelected: {
+    backgroundColor: '#ddd9f6',
+    color: '#141020',
+  },
+
+  navigationTabDisabled: {
+    cursor: 'default',
+    opacity: 0.5,
+  },
+
+  navigationTabIconIndicator: {
+    alignItems: 'center',
+    display: 'flex',
+    height: 20,
+    justifyContent: 'center',
+    minWidth: 20,
+  },
+
+  navigationTabIcon: {
+    fontSize: 16,
+  },
+
+  navigationTabLabel: {
+    display: 'block',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    lineHeight: 1.2,
+    maxWidth: 150,
+    overflow: 'hidden',
+    textAlign: 'center',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+
+  navigationTabLabelSelected: {
+    fontFamily: '"Gotham 5r", sans-serif',
   },
 
   largeText: {
@@ -534,6 +689,75 @@ export const styles = {
     top: -7,
   },
 
+  decisionTreePanel: {
+    clear: 'both',
+    borderTop: 'solid 1px #cccccc',
+    marginTop: 20,
+    paddingTop: 18,
+  },
+
+  decisionTreeLayout: {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0, 1fr) minmax(220px, 0.55fr)',
+    gap: 16,
+    alignItems: 'start',
+  },
+
+  decisionTreeScroll: {
+    overflowX: 'auto',
+    paddingBottom: 8,
+  },
+
+  decisionTreeSvg: {
+    display: 'block',
+    margin: '0 auto',
+    fontFamily: '"Gotham 4r", sans-serif',
+  },
+
+  decisionTreeTrace: {
+    backgroundColor: 'white',
+    border: 'solid 1px #cccccc',
+    padding: 12,
+  },
+
+  decisionTreeTraceControls: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 10,
+  },
+
+  decisionTreeTraceButton: {
+    fontSize: 13,
+    padding: '6px 10px',
+    border: 'none',
+    cursor: 'pointer',
+    borderRadius: 5,
+    backgroundColor: colors.teal,
+    color: 'white',
+    lineHeight: 1.3,
+  },
+
+  decisionTreeTraceProgress: {
+    fontSize: 13,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  decisionTreeTraceList: {
+    margin: '8px 0 0 20px',
+    padding: 0,
+  },
+
+  decisionTreeTraceItem: {
+    fontSize: 14,
+    marginBottom: 8,
+    padding: 4,
+  },
+
+  decisionTreeTraceItemActive: {
+    backgroundColor: tealColorTransparent,
+  },
+
   resultsToggle: {
     marginTop: 20,
     backgroundColor: colors.background,
@@ -878,6 +1102,160 @@ export const styles = {
 
   saveInputsWidth: {
     width: '95%',
+  },
+
+  exportModelHeader: {
+    marginBottom: 16,
+  },
+
+  exportModelHeading: {
+    lineHeight: '38px',
+    fontSize: 24,
+    margin: 0,
+    borderBottom: 'solid 1px black',
+    paddingBottom: 10,
+  },
+
+  exportModelSectionHeading: {
+    fontSize: 18,
+    marginTop: 0,
+    marginBottom: 8,
+    fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  exportModelApiPreview: {
+    backgroundColor: 'white',
+    border: 'solid 1px #cccccc',
+    boxSizing: 'border-box',
+    marginBottom: 18,
+    padding: 16,
+  },
+
+  exportModelBlocklyPreview: {
+    marginTop: 14,
+    overflowX: 'auto',
+    paddingBottom: 2,
+  },
+
+  exportModelBlocklyBlock: {
+    backgroundColor: '#277c83',
+    border: 'solid 1px #1e6368',
+    borderRadius: 6,
+    boxShadow: 'inset 0 -3px 0 rgba(0, 0, 0, 0.18)',
+    boxSizing: 'border-box',
+    color: 'white',
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    minWidth: 360,
+    padding: 12,
+  },
+
+  exportModelBlocklyHeader: {
+    alignItems: 'center',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: 8,
+    lineHeight: 1.3,
+  },
+
+  exportModelBlocklyFunctionName: {
+    fontSize: 16,
+  },
+
+  exportModelBlocklyInputLabel: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+  },
+
+  exportModelBlocklyValueSlot: {
+    backgroundColor: 'rgba(255, 255, 255, 0.18)',
+    border: 'solid 1px rgba(255, 255, 255, 0.5)',
+    borderRadius: 4,
+    color: 'white',
+    padding: '5px 10px',
+  },
+
+  exportModelBlocklyDataBlock: {
+    backgroundColor: '#f5fbfc',
+    border: 'solid 1px #a7d9de',
+    borderRadius: 4,
+    boxSizing: 'border-box',
+    color: '#222222',
+    marginTop: 10,
+    padding: 10,
+  },
+
+  exportModelBlocklyDataHeader: {
+    color: '#24575c',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    marginBottom: 6,
+  },
+
+  exportModelBlocklyFeatureRow: {
+    alignItems: 'center',
+    display: 'grid',
+    gap: 8,
+    gridTemplateColumns: 'minmax(120px, 1fr) minmax(90px, 120px)',
+    marginTop: 6,
+  },
+
+  exportModelBlocklyFeatureName: {
+    backgroundColor: '#e2f3f5',
+    border: 'solid 1px #b2dde2',
+    borderRadius: 4,
+    boxSizing: 'border-box',
+    color: '#111111',
+    fontFamily: '"Gotham 4r", sans-serif',
+    overflow: 'hidden',
+    padding: '5px 8px',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+
+  exportModelBlocklyValueInput: {
+    backgroundColor: 'white',
+    border: 'solid 1px #9aa8ad',
+    borderRadius: 4,
+    boxSizing: 'border-box',
+    color: '#333333',
+    fontFamily: '"Gotham 4r", sans-serif',
+    padding: '5px 8px',
+  },
+
+  exportModelBlocklyNoFields: {
+    color: '#4d575f',
+    fontFamily: '"Gotham 4r", sans-serif',
+    paddingTop: 2,
+  },
+
+  exportModelBlocklyReturnRow: {
+    alignItems: 'center',
+    display: 'flex',
+    flexWrap: 'wrap',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    gap: 8,
+    marginTop: 10,
+  },
+
+  exportModelBlocklyReturnValue: {
+    backgroundColor: '#fff4e5',
+    border: 'solid 1px #f5bd68',
+    borderRadius: 4,
+    color: '#3d2a0b',
+    fontFamily: '"Gotham 5r", sans-serif',
+    padding: '5px 10px',
+  },
+
+  saveModelToggleButton: {
+    backgroundColor: 'transparent',
+    border: 'none',
+    cursor: 'pointer',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
+    padding: 0,
+    textAlign: 'left',
   },
 
   saveModelToggle: {

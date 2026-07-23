@@ -1,18 +1,30 @@
-import {faSpinner} from '@fortawesome/free-solid-svg-icons';
+import type {IconDefinition} from '@fortawesome/fontawesome-svg-core';
+import {
+  faBrain,
+  faChartLine,
+  faSpinner,
+  faTable,
+  faUpload,
+  faVial,
+} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {type ReactNode, useEffect} from 'react';
+import {type KeyboardEvent, type ReactNode, useEffect} from 'react';
 
 import {styles} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
+  getNavigationTabs,
   isSaveComplete,
+  shouldShowNavigationTabs,
   shouldDisplaySaveStatus,
 } from './helpers/navigationValidation';
-import {shallowEqual, useAppDispatch, useAppSelector} from './hooks';
+import {deepEqual, shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import type {
   InstructionsKey,
+  NavigationTab,
+  NavigationTabId,
   Panel,
   PrevNextButtons,
   SaveResponseData,
@@ -21,11 +33,12 @@ import type {
 import ColumnInspector from './UIComponents/ColumnInspector';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
+import ExportModel from './UIComponents/ExportModel';
 import GenerateResults from './UIComponents/GenerateResults';
 import ModelCard from './UIComponents/ModelCard';
 import Predict from './UIComponents/Predict';
 import Results from './UIComponents/Results';
-import SaveModel from './UIComponents/SaveModel';
+import SelectAlgorithm from './UIComponents/SelectAlgorithm';
 import SelectDataset from './UIComponents/SelectDataset';
 import TrainModel from './UIComponents/TrainModel';
 
@@ -62,7 +75,7 @@ const PanelButtons = ({
     if (panelButtons.next) {
       if (['continue', 'finish'].includes(panelButtons.next.panel)) {
         onContinue();
-      } else if (currentPanel === 'saveModel') {
+      } else if (currentPanel === 'exportModel') {
         startSaveTrainedModel();
       } else {
         setCurrentPanel(panelButtons.next.panel);
@@ -123,7 +136,7 @@ const PanelButtons = ({
       )}
 
       {shouldDisplaySaveStatusProp(saveStatus) &&
-        currentPanel === 'saveModel' && (
+        currentPanel === 'exportModel' && (
           <div style={styles.modelSaveMessage}>
             {loadSaveStatus}
             {loadSaveResponseData && (
@@ -156,12 +169,146 @@ const PanelButtons = ({
   );
 };
 
-interface BodyContainerProps {
-  children: ReactNode;
+interface NavigationTabsProps {
+  navigationTabs: NavigationTab[];
+  currentPanel: Panel;
+  setCurrentPanel: (panel: Panel) => void;
 }
 
-const BodyContainer = ({children}: BodyContainerProps) => {
-  return <div style={styles.bodyContainer}>{children}</div>;
+function navigationTabId(tab: NavigationTab): string {
+  return `ailab-${tab.id}-tab`;
+}
+
+const navigationTabIcons: Record<NavigationTabId, IconDefinition> = {
+  algorithm: faBrain,
+  dataset: faTable,
+  train: faChartLine,
+  test: faVial,
+  export: faUpload,
+};
+
+const NavigationTabs = ({
+  navigationTabs,
+  currentPanel,
+  setCurrentPanel,
+}: NavigationTabsProps) => {
+  const onClickTab = (tab: NavigationTab) => {
+    if (tab.enabled && tab.panel && tab.panel !== currentPanel) {
+      setCurrentPanel(tab.panel);
+    }
+  };
+
+  const onKeyDownTab = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    tab: NavigationTab,
+  ) => {
+    const enabledTabs = navigationTabs.filter(navigationTab => {
+      return navigationTab.enabled && navigationTab.panel;
+    });
+    const tabIndex = enabledTabs.findIndex(
+      navigationTab => navigationTab.id === tab.id,
+    );
+
+    if (tabIndex === -1) {
+      return;
+    }
+
+    let targetTab: NavigationTab | undefined;
+    if (event.key === 'ArrowRight') {
+      targetTab = enabledTabs[(tabIndex + 1) % enabledTabs.length];
+    } else if (event.key === 'ArrowLeft') {
+      targetTab =
+        enabledTabs[(tabIndex + enabledTabs.length - 1) % enabledTabs.length];
+    } else if (event.key === 'Home') {
+      targetTab = enabledTabs[0];
+    } else if (event.key === 'End') {
+      targetTab = enabledTabs[enabledTabs.length - 1];
+    }
+
+    if (targetTab?.panel) {
+      event.preventDefault();
+      setCurrentPanel(targetTab.panel);
+      window.requestAnimationFrame(() => {
+        document.getElementById(navigationTabId(targetTab))?.focus();
+      });
+    }
+  };
+
+  return (
+    <nav
+      aria-label={I18n.t('navigationTabsAriaLabel')}
+      style={styles.navigationTabsRail}
+    >
+      <div role="tablist" style={styles.navigationTabs}>
+        {navigationTabs.map(tab => (
+          <button
+            key={tab.id}
+            type="button"
+            id={navigationTabId(tab)}
+            role="tab"
+            aria-selected={tab.selected}
+            aria-controls="ailab-active-panel"
+            tabIndex={tab.enabled ? 0 : -1}
+            disabled={!tab.enabled}
+            onClick={() => onClickTab(tab)}
+            onKeyDown={event => onKeyDownTab(event, tab)}
+            style={{
+              ...styles.navigationTab,
+              ...(tab.selected ? styles.navigationTabSelected : undefined),
+              ...(!tab.enabled ? styles.navigationTabDisabled : undefined),
+            }}
+          >
+            <span
+              aria-hidden="true"
+              style={styles.navigationTabIconIndicator}
+            >
+              <FontAwesomeIcon
+                icon={navigationTabIcons[tab.id]}
+                style={styles.navigationTabIcon}
+              />
+            </span>
+            <span
+              style={{
+                ...styles.navigationTabLabel,
+                ...(tab.selected
+                  ? styles.navigationTabLabelSelected
+                  : undefined),
+              }}
+            >
+              {tab.text}
+            </span>
+          </button>
+        ))}
+      </div>
+    </nav>
+  );
+};
+
+interface BodyContainerProps {
+  children: ReactNode;
+  hasNavigationTabs: boolean;
+  labelledBy?: string;
+}
+
+const BodyContainer = ({
+  children,
+  hasNavigationTabs,
+  labelledBy,
+}: BodyContainerProps) => {
+  return (
+    <div
+      id={hasNavigationTabs ? 'ailab-active-panel' : undefined}
+      role={hasNavigationTabs ? 'tabpanel' : undefined}
+      aria-labelledby={labelledBy}
+      style={
+        hasNavigationTabs
+          ? styles.bodyContainerWithNavigationTabs
+          : styles.bodyContainer
+      }
+    >
+      {children}
+    </div>
+  );
 };
 
 interface ContainerLeftProps {
@@ -217,12 +364,21 @@ const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
 const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
+  const navigationTabs = useAppSelector(getNavigationTabs, deepEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
   const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
   const instructionsKey = useAppSelector(state => state.instructionsKey);
   const showOverlay = useAppSelector(state => state.showOverlay);
+  const showNavigationTabs = shouldShowNavigationTabs(currentPanel);
+  const selectedNavigationTab = navigationTabs.find(tab => tab.selected);
+  const bodyContainerProps = {
+    hasNavigationTabs: showNavigationTabs,
+    labelledBy: selectedNavigationTab
+      ? navigationTabId(selectedNavigationTab)
+      : undefined,
+  };
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -238,8 +394,24 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
 
   return (
     <div style={styles.app}>
+      {showNavigationTabs && (
+        <NavigationTabs
+          navigationTabs={navigationTabs}
+          currentPanel={currentPanel}
+          setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
+        />
+      )}
+
+      {currentPanel === 'selectAlgorithm' && (
+        <BodyContainer {...bodyContainerProps}>
+          <ContainerFullWidth>
+            <SelectAlgorithm />
+          </ContainerFullWidth>
+        </BodyContainer>
+      )}
+
       {currentPanel === 'selectDataset' && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerLeft>
             <SelectDataset />
           </ContainerLeft>
@@ -250,7 +422,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerLeft>
             <DataDisplay />
           </ContainerLeft>
@@ -262,7 +434,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {currentPanel === 'trainModel' && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerFullWidth>
             <TrainModel />
           </ContainerFullWidth>
@@ -270,7 +442,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {currentPanel === 'generateResults' && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerFullWidth>
             <GenerateResults />
           </ContainerFullWidth>
@@ -278,7 +450,7 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       )}
 
       {currentPanel === 'results' && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerLeft>
             <Results />
           </ContainerLeft>
@@ -290,16 +462,16 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {currentPanel === 'saveModel' && (
-        <BodyContainer>
+      {currentPanel === 'exportModel' && (
+        <BodyContainer {...bodyContainerProps}>
           <ContainerFullWidth>
-            <SaveModel />
+            <ExportModel />
           </ContainerFullWidth>
         </BodyContainer>
       )}
 
       {currentPanel === 'modelSummary' && (
-        <BodyContainer>
+        <BodyContainer {...bodyContainerProps}>
           <ContainerFullWidth>
             <ModelCard />
           </ContainerFullWidth>

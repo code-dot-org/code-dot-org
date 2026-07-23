@@ -3,6 +3,7 @@ import KNN from 'ml-knn';
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];
+const ID3Trainers = ['id3Classify', 'id3Regress'];
 
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
@@ -58,7 +59,46 @@ function convertTestValue(featureNumberKey, feature, value) {
   const convertedValue = Object.keys(featureNumberKey).includes(feature)
     ? featureNumberKey[feature][value]
     : value;
-  return parseInt(convertedValue);
+  return parseFloat(convertedValue);
+}
+
+function predictDecisionTreeNode(node, testValues) {
+  if (node.type === 'leaf') {
+    return node.prediction;
+  }
+
+  const value = testValues[node.featureIndex];
+  if (node.splitType === 'numerical') {
+    const child = value <= node.threshold ? node.left : node.right;
+    return child
+      ? predictDecisionTreeNode(child, testValues)
+      : node.defaultLabel;
+  }
+
+  const child = node.children[String(value)];
+  return child ? predictDecisionTreeNode(child, testValues) : node.defaultLabel;
+}
+
+function convertPrediction(featureNumberKey, label, rawPrediction) {
+  return Object.keys(featureNumberKey).includes(label)
+    ? getKeyByValue(featureNumberKey[label], rawPrediction)
+    : parseFloat(rawPrediction);
+}
+
+function getModelFeatures(modelData) {
+  return modelData.features
+    ? modelData.features.map(feature => feature.id)
+    : modelData.selectedFeatures;
+}
+
+function getTestValues(modelData, features) {
+  return features.map(feature =>
+    convertTestValue(
+      modelData.featureNumberKey,
+      feature,
+      modelData.testData[stripSpaceAndSpecial(feature)]
+    )
+  );
 }
 
 export function predict(modelData) {
@@ -67,28 +107,25 @@ export function predict(modelData) {
     // Re-instantiate the trained model.
     const model = KNN.load(modelData.trainedModel);
     // Prepare test data.
-    const features = modelData.features
-      ? modelData.features.map(feature => feature.id)
-      : modelData.selectedFeatures;
-
-    const testValues = features.map(feature =>
-      convertTestValue(
-        modelData.featureNumberKey,
-        feature,
-        modelData.testData[stripSpaceAndSpecial(feature)]
-      )
-    );
+    const features = getModelFeatures(modelData);
+    const testValues = getTestValues(modelData, features);
     // Make a prediction.
     const rawPrediction = model.predict(testValues);
     // Convert prediction to human readable (if needed)
 
     const label = modelData.label ? modelData.label.id : model.labelColumn;
 
-    const prediction = Object.keys(modelData.featureNumberKey).includes(label)
-      ? getKeyByValue(modelData.featureNumberKey[label], rawPrediction)
-      : parseFloat(rawPrediction);
-    return prediction;
-  } else {
-    return 'Error: unknown trainer';
+    return convertPrediction(modelData.featureNumberKey, label, rawPrediction);
   }
+
+  if (ID3Trainers.includes(modelData.selectedTrainer)) {
+    const features = getModelFeatures(modelData);
+    const testValues = getTestValues(modelData, features);
+    const label = modelData.label ? modelData.label.id : modelData.labelColumn;
+    const root = modelData.trainedModel.root || modelData.trainedModel;
+    const rawPrediction = predictDecisionTreeNode(root, testValues);
+    return convertPrediction(modelData.featureNumberKey, label, rawPrediction);
+  }
+
+  return 'Error: unknown trainer';
 }

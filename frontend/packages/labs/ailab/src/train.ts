@@ -2,7 +2,11 @@
 
 import type {Store} from 'redux';
 
-import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
+import {
+  Algorithms,
+  TestDataLocations,
+  PERCENT_OF_DATASET_FOR_TESTING,
+} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
@@ -15,6 +19,7 @@ import {
   setAccuracyCheckLabels,
 } from './redux';
 import {getSelectedCategoricalColumns} from './selectors';
+import ID3Trainer from './trainers/ID3Trainer';
 import KNNTrainer from './trainers/KNNTrainer';
 import type {DataRow} from './types';
 
@@ -132,11 +137,19 @@ const prepareTestData = (store: Store<RootState>): number[] => {
   return testValues;
 };
 
-const trainingState: {trainer?: KNNTrainer} = {};
+type Trainer = KNNTrainer | ID3Trainer;
+
+function createTrainer(store: Store<RootState>): Trainer {
+  return store.getState().selectedAlgorithm === Algorithms.DECISION_TREE
+    ? new ID3Trainer(store)
+    : new KNNTrainer(store);
+}
+
+const trainingState: {trainer?: Trainer} = {};
 const init = (store: Store<RootState>): void => {
-  trainingState.trainer = new KNNTrainer(store);
   buildOptionNumberKeysByFeature(store);
   prepareTrainingData(store);
+  trainingState.trainer = createTrainer(store);
 };
 
 const onClickTrain = (store: Store<RootState>): void => {
