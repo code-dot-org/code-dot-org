@@ -54,6 +54,11 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 // resolvePlatformPhysics_.
 const TERMINAL_FALL_SPEED = 10;
 
+// Slack (px) for "was on the clear side of this face last frame" tests in
+// resolvePlatformPhysics_: resting contact is exact equality, and the stock
+// resolver can leave sub-pixel noise on it.
+const CONTACT_EPSILON = 0.1;
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -403,16 +408,35 @@ export default class SpriteLab2Engine extends SpriteLab {
   // frame's behaviors/events have moved sprites. One rule, applied per axis:
   // reconstruct the frame's movement from the last resolved position, apply
   // the horizontal part and resolve horizontally, then the vertical part and
-  // resolve vertically — downward contact lands, upward contact stops under
-  // the block. Directional per-axis resolution is what makes platformer
-  // corners behave: a rising player can't be snapped onto a lip, a head-clip
-  // can't shove sideways, and wedges (wall face plus floor) settle in one
-  // pass. Program-driven sprites keep the stock resolver.
+  // resolve vertically. A wall face only blocks if the player was on its
+  // clear side last frame (swept, not overlap: a two-row-tall player whose
+  // head brushes a head-height block must not be teleported on top of it).
+  // Downward crossings land, upward crossings stop under the block; corners
+  // behave (a rising player can't be snapped onto a lip, a head-clip can't
+  // shove sideways). Program-driven sprites keep the stock resolver.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
     const p5 = this.p5Wrapper.p5;
+    // zGameDev's edge pass bounces players off the top of the canvas; this
+    // lab keeps the top open (a jump may carry above the screen — gravity
+    // brings the player back), so park the top edge sprite out of reach.
+    if (p5.topEdge && p5.topEdge.position.y > -1000) {
+      p5.topEdge.position.y -= 10000;
+    }
+    const players = this.library.getSpriteArray({group: 'players'});
+    // Snapshot player positions before the stock pass below: the swept
+    // resolution reconstructs each player's frame movement as
+    // (position − last resolved position), and the stock resolver's shove
+    // would corrupt that.
+    const moved = players.map(sprite => ({
+      sprite,
+      x: sprite.position.x,
+      y: sprite.position.y,
+    }));
+    // Non-player sprites keep the stock resolver; running it pre-paint means
+    // patrollers and props draw already resolved.
     this.library.commands.collide.call(
       this.library,
       'collide',
@@ -420,7 +444,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       {group: 'walls'}
     );
     const walls = this.library.getSpriteArray({group: 'walls'});
-    this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
+    moved.forEach(({sprite, x: curX, y: curY}) => {
       const imgHalfW = (sprite.width * sprite.scale) / 2;
       const imgHalfH = (sprite.height * sprite.scale) / 2;
       // Physics width comes from the (narrowed) collider; height is always
@@ -429,12 +453,9 @@ export default class SpriteLab2Engine extends SpriteLab {
         ? (sprite.collider._width * sprite._getScaleX()) / 2
         : imgHalfW;
       const halfH = imgHalfH;
-      const prev = sprite.__slab2Prev || {
-        x: sprite.position.x,
-        y: sprite.position.y,
-      };
-      const dx = sprite.position.x - prev.x;
-      const dy = sprite.position.y - prev.y;
+      const prev = sprite.__slab2Prev || {x: curX, y: curY};
+      const dx = curX - prev.x;
+      const dy = curY - prev.y;
       let x = prev.x + dx;
       let y = prev.y;
       walls.forEach(wall => {
@@ -446,14 +467,21 @@ export default class SpriteLab2Engine extends SpriteLab {
         ) {
           return;
         }
-        if (dx > 0) {
+        if (
+          dx > 0 &&
+          prev.x + halfW <= wall.position.x - wallHalfW + CONTACT_EPSILON
+        ) {
           x = Math.min(x, wall.position.x - wallHalfW - halfW);
-        } else if (dx < 0) {
+        } else if (
+          dx < 0 &&
+          prev.x - halfW >= wall.position.x + wallHalfW - CONTACT_EPSILON
+        ) {
           x = Math.max(x, wall.position.x + wallHalfW + halfW);
         }
       });
-      // Containment uses the image box so the art stays fully on screen;
-      // this lab never lets the player leave the playfield.
+      // Side containment uses the image box so the art stays on screen; the
+      // top is open on purpose — a jump may carry above the screen, gravity
+      // brings the player back.
       x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
       y = prev.y + dy;
       walls.forEach(wall => {
@@ -465,18 +493,20 @@ export default class SpriteLab2Engine extends SpriteLab {
         ) {
           return;
         }
-        if (dy > 0) {
+        if (
+          dy > 0 &&
+          prev.y + halfH <= wall.position.y - wallHalfH + CONTACT_EPSILON
+        ) {
           y = Math.min(y, wall.position.y - wallHalfH - halfH);
           sprite.velocity.y = 0;
-        } else if (dy < 0) {
+        } else if (
+          dy < 0 &&
+          prev.y - halfH >= wall.position.y + wallHalfH - CONTACT_EPSILON
+        ) {
           y = Math.max(y, wall.position.y + wallHalfH + halfH);
           sprite.velocity.y = 0;
         }
       });
-      if (y < imgHalfH) {
-        y = imgHalfH;
-        sprite.velocity.y = Math.max(sprite.velocity.y, 0);
-      }
       // The bottom clamp sits the image bottom exactly on the floor line, so
       // hasSupportAt's floor branch holds and the player can jump from pits.
       if (y > p5.height - imgHalfH) {
