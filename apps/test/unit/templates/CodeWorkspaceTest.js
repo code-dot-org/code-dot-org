@@ -46,20 +46,23 @@ describe('CodeWorkspace', () => {
     restoreStudioApp();
   });
 
+  // The counter renders as a MuiTypography, so the id selector matches the
+  // component, its inner Typography and the DOM element. Take the last, since
+  // the display style is set imperatively on the DOM node.
+  const blockCounter = () => workspace.find('#blockCounter').last();
+
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {
     studioApp.enableShowBlockCount = true;
 
     workspace.find(ShowCodeToggle).simulate('click');
-    let counter = workspace.find('#blockCounter');
-    expect(counter).to.have.style('display', 'flex');
+    expect(blockCounter()).to.have.style('display', 'flex');
   });
 
   it('onToggleShowCode does not display blocks for levels with enableShowBlockCount=false', () => {
     studioApp.enableShowBlockCount = false;
 
     workspace.find(ShowCodeToggle).simulate('click');
-    let counter = workspace.find('#blockCounter');
-    expect(counter).to.have.style('display', 'none');
+    expect(blockCounter()).to.have.style('display', 'none');
   });
 
   it('displays old version warning when displayOldVersionBanner is true', () => {

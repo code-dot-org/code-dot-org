@@ -124,7 +124,6 @@ describe('The ShowCodeToggle component', () => {
             headerHasFocus={false}
             isRtl={false}
             label="Show Blocks"
-            style={{display: 'inline-block'}}
           />
         )
       ).to.be.true;
@@ -147,10 +146,11 @@ describe('The ShowCodeToggle component', () => {
             isRtl={false}
             iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Text"
-            style={{display: 'inline-block'}}
           />
         )
       ).to.be.true;
+      // Only the hidden case passes a style; visible leaves it unset.
+      expect(toggle.find(PaneButton).props().style).to.be.undefined;
     });
 
     describe('after being clicked', () => {
@@ -164,7 +164,6 @@ describe('The ShowCodeToggle component', () => {
               headerHasFocus={false}
               isRtl={false}
               label="Show Blocks"
-              style={{display: 'inline-block'}}
             />
           )
         ).to.be.true;
@@ -199,7 +198,6 @@ describe('The ShowCodeToggle component', () => {
                 isRtl={false}
                 iconProps={{iconName: 'code', iconStyle: 'solid'}}
                 label="Show Text"
-                style={{display: 'inline-block'}}
               />
             )
           ).to.be.true;
@@ -255,7 +253,6 @@ describe('The ShowCodeToggle component', () => {
             isRtl={false}
             iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Code"
-            style={{display: 'inline-block'}}
           />
         )
       ).to.be.true;

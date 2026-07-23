@@ -4,6 +4,7 @@ import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
 
 import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -67,23 +68,12 @@ describe('SignedInUser', () => {
     expect(onUnmuteSpy).to.have.been.calledOnce;
   });
 
-  describe('minecraft vs starwars styling', () => {
-    it('uses starwars styling if isMinecraft is false', () => {
-      const wrapper = setUp({
-        isMinecraft: false,
-      });
-      expect(
-        wrapper.find('#uitest-mute-music-button').at(0).props().style.color
-      ).to.equal('rgb(118, 101, 160)');
-    });
-
-    it('uses minecraft styling if isMinecraft is true', () => {
+  describe('minecraft styling', () => {
+    it('passes isMinecraft through to the PaneButton', () => {
       const wrapper = setUp({
         isMinecraft: true,
       });
-      expect(
-        wrapper.find('#uitest-mute-music-button').at(0).props().isMinecraft
-      ).to.be.true;
+      expect(wrapper.find(PaneButton).props().isMinecraft).to.be.true;
     });
   });
 });

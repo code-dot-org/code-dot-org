@@ -96,21 +96,6 @@ BackgroundMusicMuteButton.propTypes = {
   unmuteBackgroundMusic: PropTypes.func.isRequired,
 };
 
-export const styles = {
-  button: {
-    whiteSpace: 'nowrap',
-    minWidth: 'fit-content',
-  },
-  musicOn: {
-    color: 'rgb(118, 101, 160)',
-    backgroundColor: 'rgb(255, 255, 255)',
-  },
-  musicOff: {
-    color: 'rgb(255, 255, 255)',
-    backgroundColor: 'rgb(166, 155, 193)',
-  },
-};
-
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
 
 export default connect(
