@@ -496,6 +496,21 @@ export default class SpriteLab2Engine extends SpriteLab {
       // brings the player back.
       x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
       y = prev.y + dy;
+      // Pressed against a face last frame? The swept clamps pin at exact
+      // contact, so an epsilon test on the face line is reliable. A pressed
+      // player's landings and bonks are generous below: entering an opening
+      // in the face necessarily starts with only one step's worth of
+      // overlap, and the strict center rule would eject what the squeeze
+      // band just let in — the source of "misses the gap most of the time".
+      const wasPressed = walls.some(wall => {
+        const wallHalfW = (wall.width * wall.scale) / 2;
+        const wallHalfH = (wall.height * wall.scale) / 2;
+        return (
+          Math.abs(Math.abs(prev.x - wall.position.x) - (halfW + wallHalfW)) <=
+            CONTACT_EPSILON &&
+          halfH + wallHalfH - Math.abs(prev.y - wall.position.y) > 0
+        );
+      });
       walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
@@ -516,21 +531,21 @@ export default class SpriteLab2Engine extends SpriteLab {
           // Footing is kept generously but gained strictly: a player
           // already resting on this block keeps it until the collider
           // fully leaves (a jump from the outer edge still works), while
-          // one arriving from the air lands only once their center is over
-          // it — a corner graze slides off via de-penetration instead
+          // one arriving from open air lands only once their center is
+          // over it — a corner graze slides off via de-penetration instead
           // (else one-cell gaps are unenterable: the feet almost always
           // graze a neighbor's corner as they cross the top line).
           const wasResting =
             Math.abs(prev.y + halfH - top) <= CONTACT_EPSILON &&
             Math.abs(prev.x - wall.position.x) < halfW + wallHalfW;
-          if (centerOn || wasResting) {
+          if (centerOn || wasResting || wasPressed) {
             y = Math.min(y, top - halfH);
             sprite.velocity.y = 0;
           }
         } else if (
           dy < 0 &&
           prev.y - halfH >= wall.position.y + wallHalfH - MIN_SOLID_OVERLAP &&
-          centerOn
+          (centerOn || wasPressed)
         ) {
           y = Math.max(y, wall.position.y + wallHalfH + halfH);
           sprite.velocity.y = 0;
