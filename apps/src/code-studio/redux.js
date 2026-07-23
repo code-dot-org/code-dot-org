@@ -1,4 +1,5 @@
 /* eslint no-unused-vars: "error" */
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import codebridgeWorkspace from '@codebridge/redux/workspaceRedux';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
@@ -14,7 +15,6 @@ import layout from '@cdo/apps/redux/layout';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import teacherRubric from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import microBit from '../maker/microBitRedux';
 import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';

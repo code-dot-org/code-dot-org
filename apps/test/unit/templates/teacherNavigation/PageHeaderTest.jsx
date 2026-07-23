@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  startLoadingSectionData,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
@@ -13,11 +18,6 @@ import {
 import manageStudents, {
   setSectionInfo,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-  startLoadingSectionData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import PageHeader from '@cdo/apps/templates/teacherNavigation/PageHeader';
 
 describe('PageHeader', () => {

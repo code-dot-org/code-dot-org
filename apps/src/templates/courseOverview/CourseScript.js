@@ -1,3 +1,4 @@
+import {sectionsForDropdown} from '@code-dot-org/teacher-dashboard/redux';
 import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -12,7 +13,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 

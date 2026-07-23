@@ -1,3 +1,4 @@
+import {NO_SECTION, selectSection} from '@code-dot-org/teacher-dashboard/redux';
 import $ from 'jquery';
 import _ from 'lodash';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -23,10 +24,6 @@ import {
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import {
-  NO_SECTION,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import fakeSectionData, {scriptId} from './fakeSectionData';
 

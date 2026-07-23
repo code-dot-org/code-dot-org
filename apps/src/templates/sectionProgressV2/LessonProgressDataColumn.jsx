@@ -1,3 +1,4 @@
+import {studentShape} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,7 +7,6 @@ import {
   studentLessonProgressType,
   studentLevelProgressType,
 } from '../progress/progressTypes';
-import {studentShape} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import LessonDataCell from './LessonDataCell';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';

@@ -1,3 +1,5 @@
+import {resumeReviewSyllabusOnboardingTour} from '@code-dot-org/teacher-dashboard/home';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import React, {useRef, useState} from 'react';
 import {
   generatePath,
@@ -9,8 +11,6 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {resumeReviewSyllabusOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useReviewSyllabusTour';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   TEACHER_NAVIGATION_PATHS,
   getBasePath,

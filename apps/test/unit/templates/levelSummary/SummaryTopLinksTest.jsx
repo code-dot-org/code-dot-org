@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -7,7 +8,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 

@@ -1,3 +1,4 @@
+import {DEMO_SECTION_CODE_PLACEHOLDER} from '@code-dot-org/teacher-dashboard/redux';
 import {Box, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,7 +6,6 @@ import {connect} from 'react-redux';
 
 import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {DEMO_SECTION_CODE_PLACEHOLDER} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   EmailLinks,
   SectionLoginType,

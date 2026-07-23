@@ -1,3 +1,8 @@
+import {
+  pageTypes,
+  setPageType,
+  selectedSectionSelector,
+} from '@code-dot-org/teacher-dashboard/redux';
 import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
@@ -33,8 +38,6 @@ import {
   setUserRoleInCourse,
   setUserSignedIn,
 } from '../currentUserRedux';
-import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 import CourseOverview from './CourseOverview';

@@ -1,5 +1,6 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
@@ -17,7 +18,6 @@ import {
   getSelectedUnitId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';

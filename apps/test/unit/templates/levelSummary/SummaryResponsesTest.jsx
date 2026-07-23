@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -7,7 +8,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const JS_DATA = {
   levels: [

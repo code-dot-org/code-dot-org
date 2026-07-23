@@ -1,3 +1,9 @@
+import {TeacherHomepage} from '@code-dot-org/teacher-dashboard/home';
+import teacherSections, {
+  setAuthProviders,
+  selectSection,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -21,13 +27,7 @@ import currentUser, {
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import teacherSections, {
-  setAuthProviders,
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';

@@ -1,3 +1,6 @@
+import teacherSections, {
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -8,9 +11,6 @@ import FloatingHeader from '@cdo/apps/templates/sectionProgressV2/floatingHeader
 import sectionProgress, {
   addExpandedLesson,
 } from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
-import teacherSections, {
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore, getScriptData} from '../sectionProgressTestHelpers';

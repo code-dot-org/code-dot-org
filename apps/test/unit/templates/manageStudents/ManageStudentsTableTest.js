@@ -1,3 +1,7 @@
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
@@ -28,10 +32,6 @@ import manageStudents, {
 import ManageStudentsTable, {
   sortRows,
 } from '@cdo/apps/templates/manageStudents/Table';
-import teacherSections, {
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

@@ -1,3 +1,7 @@
+import {
+  selectedSectionSelector,
+  Section,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {generatePath} from 'react-router-dom';
@@ -7,8 +11,6 @@ import NoLessonMaterialsForLegacyCourses from '@cdo/apps/templates/teacherNaviga
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {selectedSectionSelector} from '../../teacherDashboard/teacherSectionsReduxSelectors';
-import {Section} from '../../teacherDashboard/types/teacherSectionTypes';
 import {EmptyState, EmptyStateProps} from '../EmptyState';
 import {
   getNoCurriculumAssignedEmptyState,

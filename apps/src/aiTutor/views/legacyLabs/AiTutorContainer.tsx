@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
@@ -9,7 +10,6 @@ import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 

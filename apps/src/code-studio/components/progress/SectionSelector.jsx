@@ -1,11 +1,13 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {
+  selectSection,
+  sectionsNameAndId,
+} from '@code-dot-org/teacher-dashboard/redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {reload} from '../../../utils';

@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  serverSectionFromSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -15,11 +20,6 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import * as selectedSectionLoader from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationBar from '@cdo/apps/templates/teacherNavigation/TeacherNavigationBar';
 import {

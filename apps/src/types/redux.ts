@@ -1,3 +1,4 @@
+import {TeacherSectionState} from '@code-dot-org/teacher-dashboard/redux';
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux';
@@ -23,7 +24,6 @@ import {LocaleState} from '@cdo/apps/redux/localesRedux';
 import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import {TeacherRubricState} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
-import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Weblab2ConsoleState} from '@cdo/apps/weblab2/redux/consoleRedux';
 import {Weblab2NetworkState} from '@cdo/apps/weblab2/redux/networkRedux';
 import {Weblab2State} from '@cdo/apps/weblab2/weblab2Redux';

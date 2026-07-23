@@ -1,3 +1,4 @@
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {useMemo} from 'react';
 
 import {
@@ -9,7 +10,6 @@ import {
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 interface UseAiChatDisabledStateParams {

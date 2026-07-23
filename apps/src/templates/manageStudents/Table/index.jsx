@@ -1,3 +1,12 @@
+import {JoinLinkCopyButton} from '@code-dot-org/teacher-dashboard/home';
+import {
+  selectedSectionSelector,
+  syncEnabled,
+  sectionCode,
+  sectionName,
+  sectionUnitName,
+  isDemoSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton, Typography} from '@mui/material';
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
@@ -46,7 +55,6 @@ import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,
@@ -59,14 +67,6 @@ import {
   NON_LMS_LOGIN_TYPES,
   PICTURE_OR_WORD_LOGIN_TYPES,
 } from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
-import {
-  selectedSectionSelector,
-  syncEnabled,
-  sectionCode,
-  sectionName,
-  sectionUnitName,
-  isDemoSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';

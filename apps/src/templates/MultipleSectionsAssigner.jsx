@@ -1,5 +1,10 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Modal from '@code-dot-org/component-library/modal';
+import {
+  assignToSection,
+  unassignSection,
+  sectionHasNewData,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -9,11 +14,6 @@ import AssigningAvailableAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiC
 import AssigningEssentialAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/AssigningEssentialAiChatToolsAlert';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {
-  assignToSection,
-  unassignSection,
-  sectionHasNewData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

@@ -1,3 +1,4 @@
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -12,8 +13,6 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {AgeGatedStudentsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 

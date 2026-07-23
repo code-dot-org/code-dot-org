@@ -1,7 +1,7 @@
+import {sortSectionsList} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {sortSectionsList} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {studentsShape} from './types';
