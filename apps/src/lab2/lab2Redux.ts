@@ -76,9 +76,6 @@ export interface LabState {
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
   isBlockedAbuse: boolean | undefined;
-  // If this lab is blocked because the server's share filter found
-  // profanity or PII in the project content.
-  hasPrivacyProfanityViolation: boolean | undefined;
   // If this lab/project is blocked for project non-owners (excluding owner's teacher).
   projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
@@ -101,7 +98,6 @@ const initialState: LabState = {
   scriptId: undefined,
   isShareView: undefined,
   isBlockedAbuse: undefined,
-  hasPrivacyProfanityViolation: undefined,
   projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
@@ -240,7 +236,6 @@ export const setUpWithLevel = createAsyncThunk<
       channel,
       abuseScore,
       sharingDisabled,
-      hasPrivacyProfanityViolation,
       isTeacherOfProjectOwner,
     } = await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
@@ -250,7 +245,6 @@ export const setUpWithLevel = createAsyncThunk<
         levelProperties,
         abuseScore,
         sharingDisabled,
-        hasPrivacyProfanityViolation,
         isTeacherOfProjectOwner,
       },
       thunkAPI.signal.aborted,
@@ -306,7 +300,6 @@ const labSlice = createSlice({
         initialSources?: ProjectSources;
         abuseScore?: number;
         sharingDisabled?: boolean;
-        hasPrivacyProfanityViolation?: boolean;
         isTeacherOfProjectOwner?: boolean;
       }>
     ) {
@@ -317,8 +310,6 @@ const labSlice = createSlice({
       if (typeof action.payload.abuseScore === 'number') {
         state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
-      state.hasPrivacyProfanityViolation =
-        action.payload.hasPrivacyProfanityViolation;
       state.projectSharingDisabled =
         action.payload.sharingDisabled &&
         OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
@@ -464,7 +455,6 @@ function setProjectAndLevelData(
     initialSources?: ProjectSources;
     abuseScore?: number;
     sharingDisabled?: boolean;
-    hasPrivacyProfanityViolation?: boolean;
     isTeacherOfProjectOwner?: boolean;
   },
   aborted: boolean,

@@ -10,10 +10,6 @@ import FocusLock from 'react-focus-lock';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  ShareFailure,
-  ShareFailureType,
-} from '@cdo/apps/lab2/projects/channelsApi';
 import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
@@ -25,27 +21,6 @@ import {CopyToClipboardButton} from './CopyToClipboardButton';
 import HoaiCongrats from './finishDialogs/HoaiCongrats';
 
 import moduleStyles from './share-dialog.module.scss';
-
-export const SHARE_FAILURE_TITLE = "This project can't be shared";
-
-export const SHARE_FAILURE_MESSAGES: Record<ShareFailureType, string> = {
-  profanity:
-    "This project can't be shared because it may contain profanity. " +
-    'Remove that content and save your project, then try sharing again. ' +
-    'If you think this is a mistake, contact support@code.org.',
-  email:
-    "This project can't be shared because it appears to contain an email " +
-    'address. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-  phone:
-    "This project can't be shared because it appears to contain a phone " +
-    'number. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-  address:
-    "This project can't be shared because it appears to contain a street " +
-    'address. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-};
 
 const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
@@ -142,7 +117,6 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick: () => void;
   submissionStatus: SubmissionStatusType | undefined;
   userSharingDisabled: boolean | undefined;
-  shareFailure?: ShareFailure | null;
 }> = ({
   dialogId,
   shareUrl,
@@ -151,7 +125,6 @@ const ShareDialog: React.FunctionComponent<{
   onSubmitClick,
   submissionStatus,
   userSharingDisabled,
-  shareFailure,
 }) => {
   const dispatch = useAppDispatch();
   const sharingDisabled = () =>
@@ -173,26 +146,6 @@ const ShareDialog: React.FunctionComponent<{
   // ThemeProvider (the header is in its own tree). We copy the lab theme to the registry
   // in Lab2Wrapper.
   const theme = Lab2Registry.getInstance().getTheme();
-
-  if (shareFailure) {
-    // The server omits the offending text for profanity failures; for PII
-    // failures, showing it helps students find what to remove.
-    const flaggedText = shareFailure.content
-      ? ` Flagged text: "${shareFailure.content}"`
-      : '';
-    return (
-      <div data-theme={theme}>
-        <Modal
-          title={SHARE_FAILURE_TITLE}
-          description={SHARE_FAILURE_MESSAGES[shareFailure.type] + flaggedText}
-          primaryButtonProps={{
-            onClick: handleClose,
-            children: i18n.ok(),
-          }}
-        />
-      </div>
-    );
-  }
 
   if (finishUrl && dialogId === 'hoai2025') {
     return (

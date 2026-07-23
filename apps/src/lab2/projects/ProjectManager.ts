@@ -18,7 +18,6 @@ import {
   isProductionEnvironment,
 } from '@cdo/apps/utils';
 
-import {PROJECT_TYPES_WITH_SHARE_FILTERING} from '../constants';
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
@@ -120,20 +119,6 @@ export default class ProjectManager {
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
     );
-    let hasPrivacyProfanityViolation: boolean | undefined;
-    if (PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
-      try {
-        hasPrivacyProfanityViolation =
-          await this.channelsStore.getPrivacyProfanityViolation(channel);
-      } catch (error) {
-        // Fail open, matching server behavior when the filtering service
-        // is unavailable.
-        this.metricsReporter.logWarning(
-          'Unable to fetch privacy/profanity violation status. Defaulting to no violation.'
-        );
-        hasPrivacyProfanityViolation = false;
-      }
-    }
     const isTeacherOfProjectOwner =
       await this.channelsStore.getIsTeacherOfProjectOwner(channel);
     this.setTitleFromChannel(channel);
@@ -142,7 +127,6 @@ export default class ProjectManager {
       channel,
       abuseScore,
       sharingDisabled,
-      hasPrivacyProfanityViolation,
       isTeacherOfProjectOwner,
     };
   }

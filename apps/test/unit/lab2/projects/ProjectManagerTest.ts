@@ -69,61 +69,6 @@ describe('ProjectManager', () => {
     expect(channel).to.deep.equal(FAKE_CHANNEL);
   });
 
-  it('fetches privacy/profanity violation status for share-filtered project types', async () => {
-    const sketchlabChannel: Channel = {
-      ...FAKE_CHANNEL,
-      projectType: 'sketchlab',
-    };
-    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
-    channelsStore.getPrivacyProfanityViolation.returns(Promise.resolve(true));
-    stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager({
-      sourcesStore,
-      channelsStore,
-      channelId: FAKE_CHANNEL_ID,
-      reduceChannelUpdates: false,
-      isStandaloneProjectLevel: false,
-    });
-    const {hasPrivacyProfanityViolation} = await projectManager.load();
-    assert.isTrue(hasPrivacyProfanityViolation);
-  });
-
-  it('does not check privacy/profanity violation for non-filtered project types', async () => {
-    stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager({
-      sourcesStore,
-      channelsStore,
-      channelId: FAKE_CHANNEL_ID,
-      reduceChannelUpdates: false,
-      isStandaloneProjectLevel: false,
-    });
-    // FAKE_CHANNEL is a music project, which is not share-filtered.
-    const {hasPrivacyProfanityViolation} = await projectManager.load();
-    assert.isUndefined(hasPrivacyProfanityViolation);
-    assert.isTrue(channelsStore.getPrivacyProfanityViolation.notCalled);
-  });
-
-  it('defaults to no privacy/profanity violation if the check fails', async () => {
-    const sketchlabChannel: Channel = {
-      ...FAKE_CHANNEL,
-      projectType: 'sketchlab',
-    };
-    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
-    channelsStore.getPrivacyProfanityViolation.throws(
-      new Error('network error')
-    );
-    stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager({
-      sourcesStore,
-      channelsStore,
-      channelId: FAKE_CHANNEL_ID,
-      reduceChannelUpdates: false,
-      isStandaloneProjectLevel: false,
-    });
-    const {hasPrivacyProfanityViolation} = await projectManager.load();
-    assert.isFalse(hasPrivacyProfanityViolation);
-  });
-
   it('triggers save immediately on first save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
     const projectManager = new ProjectManager({
