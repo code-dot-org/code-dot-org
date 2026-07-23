@@ -38,7 +38,7 @@ class CodeWorkspace extends React.Component {
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
     showDebugger: PropTypes.bool.isRequired,
-    style: PropTypes.bool,
+    style: PropTypes.object,
     isRunning: PropTypes.bool.isRequired,
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
