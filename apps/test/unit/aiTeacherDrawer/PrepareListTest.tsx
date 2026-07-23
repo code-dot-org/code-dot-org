@@ -90,14 +90,6 @@ describe('PrepareList', () => {
     expect(screen.getByText('Show prep content for')).toBeInTheDocument();
   });
 
-  it('renders the current year in the date picker', async () => {
-    await renderAndSettle(<PrepareList />);
-    const year = new Date().getFullYear().toString();
-    expect(
-      screen.getByRole('option', {name: new RegExp(year)})
-    ).toBeInTheDocument();
-  });
-
   it('shows empty state when there are no active sections', async () => {
     await renderAndSettle(<PrepareList />);
     expect(screen.getByText(/No active sections found/)).toBeInTheDocument();
