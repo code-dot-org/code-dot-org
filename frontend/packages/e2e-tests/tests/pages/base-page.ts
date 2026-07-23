@@ -25,6 +25,13 @@ export class BasePage {
   /** OneTrust cookie-consent banner and SDK script tags. */
   readonly oneTrust: OneTrustComponent;
 
+  /**
+   * The main content landmark (#main_content) from the application layout —
+   * present on every page and the "skip to main content" link target. Scope
+   * page content to this to exclude global overlays (header, OneTrust, etc.).
+   */
+  readonly mainContent: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.header = new HeaderComponent(page);
@@ -32,6 +39,7 @@ export class BasePage {
     this.gdprDialog = new GdprDialogComponent(page);
     this.studentInfoModal = new StudentInfoModalComponent(page);
     this.oneTrust = new OneTrustComponent(page);
+    this.mainContent = page.locator('#main_content');
   }
 
   /**
@@ -71,6 +79,27 @@ export class BasePage {
     url.searchParams.set('ge_region', regionCode);
     await this.page.goto(url.toString());
     await expect(this.globalEditionRegionHtml(regionCode)).toBeVisible();
+  }
+
+  /** Navigate to a path, optionally within a Global Edition region. */
+  async goto({
+    path,
+    globalRegion,
+  }: {
+    path: string;
+    globalRegion?: string;
+  }): Promise<void> {
+    if (!globalRegion) {
+      await this.page.goto(path);
+      return;
+    }
+    // A fresh context drops the ge_region Set-Cookie on the 302 redirect
+    // follow unless the origin has been visited once first. Warm up with a
+    // plain root navigation, set+confirm the region, then land on the target.
+    await this.page.goto('/');
+    await this.switchToGlobalEditionRegion(globalRegion);
+    await this.page.goto(`/${globalRegion}${path}`);
+    await expect(this.globalEditionRegionHtml(globalRegion)).toBeVisible();
   }
 
   /**

@@ -17,7 +17,7 @@
   .field
     = f.label :solution
     %p Optional solution markdown to display to teachers.
-    = f.text_area :solution, rows: 3, class: "input-block-level"
+    = f.text_area :solution, rows: 3, class: "form-control"
   .field
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :peer_reviewable, description: "Is peer reviewable"}
     %p

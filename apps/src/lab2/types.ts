@@ -31,7 +31,7 @@ import type {
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
 
-export {Theme};
+export type {Theme};
 
 /// ------ USER APP OPTIONS ------ ///
 
@@ -408,6 +408,10 @@ export interface Lab2EntryPoint {
    * An array of themes that the lab supports.
    */
   themes: Theme[];
+  /**
+   * The lab loads and saves its own project (via the useSources hook).
+   */
+  managesOwnProject?: boolean;
 }
 
 export type LevelData =

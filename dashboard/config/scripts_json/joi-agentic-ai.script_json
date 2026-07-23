@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-11 03:10:36 UTC",
+    "serialized_at": "2026-07-14 13:39:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -302,6 +302,28 @@
     },
     {
       "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": " First Day at The Scoop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "thescoop-weblab-l1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "6781752d-bc52-46a3-9985-3a61248586f4"
+      },
+      "level_keys": [
+        "thescoop-weblab-l1"
+      ]
+    },
+    {
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -323,7 +345,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -345,7 +367,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -367,7 +389,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -389,7 +411,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -417,6 +439,18 @@
         "level.key": "thescoop-panels-level1",
         "script_level.level_keys": [
           "thescoop-panels-level1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "joi-agentic-ai",
+        "activity_section.key": "6781752d-bc52-46a3-9985-3a61248586f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "thescoop-weblab-l1",
+        "script_level.level_keys": [
+          "thescoop-weblab-l1"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

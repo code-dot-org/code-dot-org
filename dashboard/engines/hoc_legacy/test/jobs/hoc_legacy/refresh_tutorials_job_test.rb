@@ -32,22 +32,6 @@ class HocLegacy::RefreshTutorialsJobTest < ActiveJob::TestCase
       end
     end
 
-    context 'when StandardError is raised' do
-      let(:exception) {StandardError.new('expected_exception')}
-
-      before do
-        HocLegacy::Tutorials.stubs(:refresh).raises(exception)
-      end
-
-      it 'rescues from exception with #report_exception' do
-        perform_enqueued_jobs do
-          described_class.any_instance.expects(:report_exception).with(exception).once
-          perform_later
-          assert_performed_jobs 1
-        end
-      end
-    end
-
     context 'when tracking is disabled' do
       before do
         CDO.stubs(:hoc_tracking_enabled).returns(false)

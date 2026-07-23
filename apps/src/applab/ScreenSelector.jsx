@@ -1,4 +1,5 @@
 /** @file Dropdown for selecting design mode screens */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -74,7 +75,7 @@ class ScreenSelector extends React.Component {
     return (
       <select
         id="screenSelector"
-        className={style.dropdown}
+        className={classNames(style.dropdown, 'form-control')}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}

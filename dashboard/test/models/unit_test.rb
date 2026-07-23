@@ -143,14 +143,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Unit.find_by_name('artist')
-    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
+    unit = create(:unit, :with_levels)
+    assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Unit.find_by_name('flappy')
-    frozen = Unit.find_by_name('frozen')
+    flappy = create(:unit, name: 'flappy')
+    frozen = create(:unit, name: 'frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
@@ -464,13 +464,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
+    assert_nil create(:unit).banner_image
+    assert_nil @csf_unit.banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Unit.find_by_name('flappy').old_professional_learning_course?
-    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
+    refute create(:unit).old_professional_learning_course?
+    old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+    assert old_pl_course_unit.old_professional_learning_course?
   end
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
@@ -1024,6 +1025,48 @@ class UnitTest < ActiveSupport::TestCase
     summary = unit.summarize
     assert_equal 1, summary[:teacher_resources].count
     assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
+  end
+
+  # A unit can be reused in more than one unit group. Rollup resources ("All
+  # Resources" etc.) store a single URL baked to the unit's original course, so
+  # when summarized in the context of a different unit group we rewrite that URL
+  # to the viewing course and position. Otherwise the resource page breadcrumb
+  # sends teachers back to the wrong course.
+  test 'summarize rewrites rollup resource urls to the viewing unit group' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(true)
+    unit = create(:unit)
+    # The first unit group created becomes the unit's original_unit_group; its
+    # position (3) is where the rollup url is baked.
+    original_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: original_group, script: unit, position: 3)
+    reused_group = create(:unit_group)
+    reused_ugu = create(:unit_group_unit, unit_group: reused_group, script: unit, position: 1)
+    unit.reload
+
+    rollup = create(
+      :resource,
+      name: 'All Resources',
+      url: "/courses/#{original_group.name}/units/3/resources",
+      is_rollup: true
+    )
+    plain = create(:resource, name: 'Plain Handout', url: 'https://example.com/handout')
+    unit.resources = [rollup, plain]
+
+    summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: reused_ugu)
+    resources = summary[:teacher_resources]
+
+    rewritten = resources.find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{reused_group.name}/units/1/resources", rewritten[:url]
+
+    # Non-rollup resources keep their url untouched.
+    untouched = resources.find {|r| r[:name] == 'Plain Handout'}
+    assert_equal 'https://example.com/handout', untouched[:url]
+
+    # Summarized in its original context, the rollup url is unchanged.
+    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group == original_group}
+    original_summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: original_ugu)
+    original_rollup = original_summary[:teacher_resources].find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{original_group.name}/units/3/resources", original_rollup[:url]
   end
 
   test 'summarize defaults to original unit group when no unit group unit is provided' do
@@ -1715,7 +1758,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
+      [@csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
@@ -2637,6 +2680,30 @@ class UnitTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'name' => 'A'}])}
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
+  end
+
+  test 'lesson_tutor_available? is true for AIF and AID student courses' do
+    %w[AIF AID].each_with_index do |initiative, i|
+      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
+      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
+    end
+  end
+
+  test 'lesson_tutor_available? is false for non-AI course offerings' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a unit with no course version' do
+    refute create(:unit).lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)

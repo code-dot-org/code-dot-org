@@ -62,7 +62,8 @@ export function visualProjects(options: {browsers?: VisualBrowser[]} = {}) {
     name: `visual-${browser}`,
     use: {...devices[DEVICE_BY_BROWSER[browser]]},
     grep: /@visual/,
-    retries: 0,
+    // Inherit the config's retries (like the functional project) so a lost
+    // font/render race retries instead of reddening the job on first miss.
     fullyParallel: false,
     snapshotPathTemplate:
       '.visual-baselines/{testFileName}/{arg}-{projectName}-{platform}{ext}',

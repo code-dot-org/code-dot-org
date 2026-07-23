@@ -11,7 +11,7 @@
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   currentLocation,
   getEnvironment,
@@ -234,16 +234,13 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave() {
+  async flushSave(forceNewVersion = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(
-      /* forceSave */ true,
-      /* forceNewVersion */ false
-    );
+    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
   }
 
   /**
@@ -377,6 +374,31 @@ export default class ProjectManager {
 
   getCurrentVersionId(): string | null {
     return this.sourcesStore.getCurrentVersionId();
+  }
+
+  /**
+   * Create a named commit: force-flush any pending sources as a new version,
+   * then record the comment against that version. Subsequent saves start a
+   * fresh version so the committed one stays intact.
+   */
+  async createCommit(description: string): Promise<void> {
+    this.throwErrorIfDestroyed('createCommit');
+    await this.flushSave(/* forceNewVersion */ true);
+    const versionId = this.getCurrentVersionId();
+    if (!versionId) {
+      throw new Error(
+        'Cannot create a commit: the project has no saved version'
+      );
+    }
+    const payload = {
+      storage_id: this.channelId,
+      version_id: versionId,
+      comment: description,
+    };
+    await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+    this.setForceNewVersion(true);
   }
 
   getForceNewVersion(): boolean {

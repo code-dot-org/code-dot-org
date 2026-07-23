@@ -6,7 +6,7 @@ import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
 
@@ -488,6 +488,53 @@ describe('ProjectManager', () => {
     // Second save should not force new version (comment state reset)
     await projectManager.save(UPDATED_SOURCE_2);
     assert.isFalse(projectManager.getForceNewVersion());
+  });
+
+  it('createCommit throws when the project has no saved version', async () => {
+    sourcesStore.getCurrentVersionId.returns(null);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+
+    let error: Error | undefined;
+    try {
+      await projectManager.createCommit('a note');
+    } catch (e) {
+      error = e as Error;
+    }
+    expect(error?.message).to.contain('no saved version');
+  });
+
+  it('createCommit posts the comment against the flushed version', async () => {
+    sourcesStore.getCurrentVersionId.returns('v123');
+    const post = sinon.stub(HttpClient, 'post').resolves(new Response(''));
+    try {
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.createCommit('a note');
+
+      sinon.assert.calledOnce(post);
+      const [url, body] = post.firstCall.args;
+      expect(url).to.equal('/project_commits');
+      expect(JSON.parse(body as string)).to.deep.equal({
+        storage_id: FAKE_CHANNEL_ID,
+        version_id: 'v123',
+        comment: 'a note',
+      });
+      // Later saves must start a new version so this one stays intact.
+      assert.isTrue(projectManager.getForceNewVersion());
+    } finally {
+      post.restore();
+    }
   });
 });
 

@@ -47,6 +47,11 @@
       "types": "./dist/plugins/observability/index.d.ts",
       "import": "./dist/plugins/observability/index.mjs",
       "require": "./dist/plugins/observability/index.cjs"
+    },
+    "./redux": {
+      "types": "./dist/redux/index.d.ts",
+      "import": "./dist/redux/index.mjs",
+      "require": "./dist/redux/index.cjs"
     }
   },
   "scripts": {
@@ -68,6 +73,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@reduxjs/toolkit": "catalog:",
     "@sentry/browser": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@types/flat": "^5.0.5",
@@ -81,6 +87,7 @@
     "msw": "catalog:",
     "prettier": "catalog:",
     "react": "catalog:",
+    "react-redux": "catalog:",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
     "vite": "catalog:",
@@ -90,16 +97,39 @@
     "zod": "catalog:"
   },
   "peerDependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
     "@sentry/browser": "^10.51.0",
     "@tanstack/react-query": "*",
     "ky": "^1.14.3",
     "msw": "^2.7.0",
     "react": "^18.0.0 || ^19.0.0",
+    "react-redux": "^9.2.0",
     "uuid": ">=8.3.2",
     "zod": "^4.3.6"
   },
   "peerDependenciesMeta": {
+    "@reduxjs/toolkit": {
+      "optional": true
+    },
+    "@statsig/js-client": {
+      "optional": true
+    },
+    "@statsig/session-replay": {
+      "optional": true
+    },
+    "@statsig/web-analytics": {
+      "optional": true
+    },
+    "js-cookie": {
+      "optional": true
+    },
     "msw": {
+      "optional": true
+    },
+    "query-string": {
+      "optional": true
+    },
+    "react-redux": {
       "optional": true
     }
   }

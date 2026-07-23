@@ -1409,8 +1409,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: sorted_user_facing_resources(resources),
-        student_resources: sorted_user_facing_resources(student_resources),
+        teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+        student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1482,8 +1482,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: sorted_user_facing_resources(resources),
-      student_resources: sorted_user_facing_resources(student_resources),
+      teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+      student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1954,6 +1954,14 @@ class Unit < ApplicationRecord
     unit_group&.pl_course?
   end
 
+  # The lesson tutor deep dive is scoped to the AI Foundations (AIF) and AI
+  # Discovery (AID) student curricula. PL/facilitator courses are excluded even
+  # if they carry an AI marketing initiative.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
+  end
+
   # returns true if the user is a levelbuilder, or a teacher with any pilot
   # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
@@ -2062,7 +2070,44 @@ class Unit < ApplicationRecord
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
-  private def sorted_user_facing_resources(resources)
-    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
+  private def sorted_user_facing_resources(resources, unit_group_unit: nil)
+    resources.
+      filter(&:show_in_resource_ui?).
+      sort_by(&:name).
+      map {|resource| summarize_resource_for_dropdown(resource, unit_group_unit)}
+  end
+
+  # Rollup resources ("All Resources", "All Code", "All Standards", "All
+  # Vocabulary") store a single static URL, baked at generation time to the
+  # unit's original course. When the same unit is reused in another unit group
+  # (e.g. a full-year course built from semester courses), that URL points at
+  # the wrong course, which corrupts the resource-page breadcrumb trail. Rewrite
+  # the course/position portion of rollup URLs to match the unit group the user
+  # is actually viewing.
+  private def summarize_resource_for_dropdown(resource, unit_group_unit)
+    summary = resource.summarize_for_resources_dropdown
+    if resource.is_rollup && Policies::Courses.modularity_enabled? && unit_group_unit
+      rebuilt = rebuild_rollup_url(summary[:url], unit_group_unit)
+      summary[:url] = rebuilt if rebuilt
+    end
+    summary
+  end
+
+  private def rebuild_rollup_url(url, unit_group_unit)
+    rollup_type = url[%r{/(code|resources|standards|vocab)\z}, 1]
+    return nil unless rollup_type
+
+    course = unit_group_unit.cached_unit_group
+    position = unit_group_unit.position
+    case rollup_type
+    when 'code'
+      code_course_unit_path(course, position)
+    when 'resources'
+      resources_course_unit_path(course, position)
+    when 'standards'
+      standards_course_unit_path(course, position)
+    when 'vocab'
+      vocab_course_unit_path(course, position)
+    end
   end
 end

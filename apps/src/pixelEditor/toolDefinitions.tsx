@@ -1,9 +1,20 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
-export type PixelTool = 'pen' | 'eraser' | 'bucket' | 'circle' | 'filledCircle';
+export type PixelTool =
+  | 'pen'
+  | 'eraser'
+  | 'bucket'
+  | 'eyedropper'
+  | 'circle'
+  | 'filledCircle'
+  | 'rect'
+  | 'filledRect';
 
 // Each tool has a single-key shortcut; the hover tooltip reads
-// "<label> (<KEY>)".
+// "<label> (<KEY>)". Order matters: the toolbar lays these out two per row
+// (pen/fill, erase/eyedrop, circles, rectangles). The regular (outline) vs
+// solid FontAwesome style distinguishes the hollow/filled shape pairs.
 export const TOOLS: {
   id: PixelTool;
   label: string;
@@ -14,58 +25,49 @@ export const TOOLS: {
     id: 'pen',
     label: 'Pen',
     shortcut: 'p',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M2 14l1-4 8-8 3 3-8 8-4 1z" />
-      </svg>
-    ),
-  },
-  {
-    id: 'eraser',
-    label: 'Eraser',
-    shortcut: 'e',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M6 13L2 9l7-7 5 5-6 6H6zm-1 1h9v1H5v-1z" />
-      </svg>
-    ),
+    icon: <FontAwesomeV6Icon iconName="pen" />,
   },
   {
     id: 'bucket',
     label: 'Fill',
     shortcut: 'f',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <path d="M8 1l6 6-6 6-5-5 5-5V1zm5.5 9.5S15 12.4 15 13.5a1.5 1.5 0 0 1-3 0c0-1.1 1.5-3 1.5-3z" />
-      </svg>
-    ),
+    icon: <FontAwesomeV6Icon iconName="fill-drip" />,
+  },
+  {
+    id: 'eraser',
+    label: 'Eraser',
+    shortcut: 'e',
+    icon: <FontAwesomeV6Icon iconName="eraser" />,
+  },
+  {
+    id: 'eyedropper',
+    label: 'Eyedropper',
+    shortcut: 'i',
+    icon: <FontAwesomeV6Icon iconName="eye-dropper" />,
   },
   {
     id: 'circle',
     label: 'Circle outline',
     shortcut: 'c',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <circle
-          cx="8"
-          cy="8"
-          r="6"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-      </svg>
-    ),
+    icon: <FontAwesomeV6Icon iconName="circle" iconStyle="regular" />,
   },
   {
     id: 'filledCircle',
     label: 'Solid circle',
     shortcut: 's',
-    icon: (
-      <svg viewBox="0 0 16 16" aria-hidden="true">
-        <circle cx="8" cy="8" r="7" />
-      </svg>
-    ),
+    icon: <FontAwesomeV6Icon iconName="circle" iconStyle="solid" />,
+  },
+  {
+    id: 'rect',
+    label: 'Rectangle outline',
+    shortcut: 'r',
+    icon: <FontAwesomeV6Icon iconName="square" iconStyle="regular" />,
+  },
+  {
+    id: 'filledRect',
+    label: 'Solid rectangle',
+    shortcut: 'b',
+    icon: <FontAwesomeV6Icon iconName="square" iconStyle="solid" />,
   },
 ];
 
