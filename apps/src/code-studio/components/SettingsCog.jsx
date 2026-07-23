@@ -109,6 +109,8 @@ export class SettingsCog extends Component {
           color="secondary"
           onClick={this.toggleOpen}
           size="extraSmall"
+          /* Needed for legacy UI tests */
+          className="settings-cog"
           sx={{
             borderRadius: '50%',
             height: '1rem',
