@@ -54,11 +54,6 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
 // resolvePlatformPhysics_.
 const TERMINAL_FALL_SPEED = 10;
 
-// zGameDev's per-frame gravity magnitude, mirrored for the rising-arc
-// restore below. A level that overrides gravity decays restored arcs at
-// this rate anyway — close enough for the one-frame correction.
-const PLATFORM_GRAVITY = 0.75;
-
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -403,127 +398,99 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
   }
 
-  // Platformer collision resolution, run immediately before every paint —
-  // after p5's pre-phase velocity integration AND after this frame's
-  // behaviors/events have moved sprites. zGameDev's own end-of-frame pass
-  // corrects only after drawSprites has painted, so landings and wall-slide
-  // arrivals otherwise render one frame deep inside blocks.
+  // Platformer collision resolution for players, run immediately before
+  // every paint — after p5's pre-phase velocity integration AND after this
+  // frame's behaviors/events have moved sprites. One rule, applied per axis:
+  // reconstruct the frame's movement from the last resolved position, apply
+  // the horizontal part and resolve horizontally, then the vertical part and
+  // resolve vertically — downward contact lands, upward contact stops under
+  // the block. Directional per-axis resolution is what makes platformer
+  // corners behave: a rising player can't be snapped onto a lip, a head-clip
+  // can't shove sideways, and wedges (wall face plus floor) settle in one
+  // pass. Program-driven sprites keep the stock resolver.
   resolvePlatformPhysics_() {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
-    const commands = this.library.commands;
-    // Snapshot rising players: a riser that clips an overhang's corner gets
-    // resolved along the smallest axis — often sideways, shoving a
-    // straight-up jump horizontally. A rising head-clip must resolve
-    // vertically instead: keep x, stop under the block (see below).
-    const risingBefore = new Map();
+    const p5 = this.p5Wrapper.p5;
+    this.library.commands.collide.call(
+      this.library,
+      'collide',
+      {group: ''},
+      {group: 'walls'}
+    );
+    const walls = this.library.getSpriteArray({group: 'walls'});
     this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
-      if (sprite.velocity.y < -1) {
-        risingBefore.set(sprite, sprite.position.x);
-      }
-    });
-    // Two rounds: wedged in a corner (a wall face plus the floor), a single
-    // round resolves only the smaller-overlap pair and paints the other
-    // penetration; the second round sees it alone and resolves it.
-    for (let round = 0; round < 2; round++) {
-      commands.collide.call(
-        this.library,
-        'collide',
-        {group: 'players'},
-        {group: 'walls'}
-      );
-      commands.collide.call(
-        this.library,
-        'collide',
-        {group: ''},
-        {group: 'walls'}
-      );
-      commands.edgesCollide.call(this.library, {group: 'players'});
-    }
-    risingBefore.forEach((xBefore, sprite) => {
-      const dx = sprite.position.x - xBefore;
-      // Sub-pixel displacements are float noise from exact-contact collides.
-      if (Math.abs(dx) < 0.5) {
-        return;
-      }
-      // Classify the contact at the pre-shove x: a head-clip is a wall whose
-      // bottom sits above the player's center. Any deeper overlap is a wall
-      // face — that sideways push is a legitimate wall slide, keep it.
-      sprite.position.x = xBefore;
-      const halfW = (sprite.collider._width * sprite._getScaleX()) / 2;
-      const halfH = (sprite.collider._height * sprite._getScaleY()) / 2;
-      let headWallBottom = -Infinity;
-      let sideContact = false;
-      this.library.getSpriteArray({group: 'walls'}).forEach(wall => {
+      const imgHalfW = (sprite.width * sprite.scale) / 2;
+      const imgHalfH = (sprite.height * sprite.scale) / 2;
+      // Physics width comes from the (narrowed) collider; height is always
+      // the image box, which the grounded checks measure.
+      const halfW = sprite.collider
+        ? (sprite.collider._width * sprite._getScaleX()) / 2
+        : imgHalfW;
+      const halfH = imgHalfH;
+      const prev = sprite.__slab2Prev || {
+        x: sprite.position.x,
+        y: sprite.position.y,
+      };
+      const dx = sprite.position.x - prev.x;
+      const dy = sprite.position.y - prev.y;
+      let x = prev.x + dx;
+      let y = prev.y;
+      walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
-        const wallBottom = wall.position.y + wallHalfH;
-        const overlaps =
-          Math.abs(sprite.position.x - wall.position.x) < halfW + wallHalfW &&
-          sprite.position.y - halfH < wallBottom &&
-          sprite.position.y + halfH > wall.position.y - wallHalfH;
-        if (!overlaps) {
+        if (
+          Math.abs(y - wall.position.y) >= halfH + wallHalfH ||
+          Math.abs(x - wall.position.x) >= halfW + wallHalfW
+        ) {
           return;
         }
-        if (wallBottom <= sprite.position.y) {
-          headWallBottom = Math.max(headWallBottom, wallBottom);
-        } else {
-          sideContact = true;
+        if (dx > 0) {
+          x = Math.min(x, wall.position.x - wallHalfW - halfW);
+        } else if (dx < 0) {
+          x = Math.max(x, wall.position.x + wallHalfW + halfW);
         }
       });
-      if (sideContact || headWallBottom === -Infinity) {
-        sprite.position.x = xBefore + dx;
-        return;
+      // Containment uses the image box so the art stays fully on screen;
+      // this lab never lets the player leave the playfield.
+      x = Math.min(Math.max(x, imgHalfW), p5.width - imgHalfW);
+      y = prev.y + dy;
+      walls.forEach(wall => {
+        const wallHalfW = (wall.width * wall.scale) / 2;
+        const wallHalfH = (wall.height * wall.scale) / 2;
+        if (
+          Math.abs(x - wall.position.x) >= halfW + wallHalfW ||
+          Math.abs(y - wall.position.y) >= halfH + wallHalfH
+        ) {
+          return;
+        }
+        if (dy > 0) {
+          y = Math.min(y, wall.position.y - wallHalfH - halfH);
+          sprite.velocity.y = 0;
+        } else if (dy < 0) {
+          y = Math.max(y, wall.position.y + wallHalfH + halfH);
+          sprite.velocity.y = 0;
+        }
+      });
+      if (y < imgHalfH) {
+        y = imgHalfH;
+        sprite.velocity.y = Math.max(sprite.velocity.y, 0);
       }
-      sprite.position.y = headWallBottom + halfH;
-      sprite.velocity.y = 0;
-    });
-    // Cap fall speed: a single frame's step must stay small enough that a
-    // falling sprite can't pass a block corner between frames (tunneling).
-    // And a rising player can't land: a held direction sliding the player up
-    // a wall face lets the collide snap it onto the lip and zero the ascent
-    // the moment its feet clear the top. Grounding while moving upward is
-    // always that snap, never a landing — restore the arc. (A head bonk
-    // resolves downward, leaving the player under the block, not grounded —
-    // so bonks still cancel the rise.)
-    const p5 = this.p5Wrapper.p5;
-    this.library.getSpriteArray({group: 'players'}).forEach(sprite => {
+      // The bottom clamp sits the image bottom exactly on the floor line, so
+      // hasSupportAt's floor branch holds and the player can jump from pits.
+      if (y > p5.height - imgHalfH) {
+        y = p5.height - imgHalfH;
+        sprite.velocity.y = 0;
+      }
+      // Cap fall speed: a single frame's step must stay small enough that a
+      // falling sprite can't pass a block corner between frames.
       if (sprite.velocity.y > TERMINAL_FALL_SPEED) {
         sprite.velocity.y = TERMINAL_FALL_SPEED;
       }
-      // Hard playfield containment — this lab never lets the player leave.
-      // Image-box halves, matching the grounded checks: the bottom clamp
-      // puts the image bottom exactly on the floor line, so hasSupportAt's
-      // floor branch holds and the player can jump from the world bottom.
-      const imgHalfW = (sprite.width * sprite.scale) / 2;
-      const imgHalfH = (sprite.height * sprite.scale) / 2;
-      sprite.position.x = Math.min(
-        Math.max(sprite.position.x, imgHalfW),
-        p5.width - imgHalfW
-      );
-      if (sprite.position.y < imgHalfH) {
-        sprite.position.y = imgHalfH;
-        sprite.velocity.y = Math.max(sprite.velocity.y, 0);
-      }
-      if (sprite.position.y > p5.height - imgHalfH) {
-        sprite.position.y = p5.height - imgHalfH;
-        sprite.velocity.y = 0;
-      }
-      const risingVy = sprite.__slab2RisingVy;
-      if (
-        risingVy !== undefined &&
-        sprite.velocity.y >= 0 &&
-        commands.isDirectlyAbove.call(
-          this.library,
-          {id: sprite.id},
-          {group: 'walls'}
-        )
-      ) {
-        sprite.velocity.y = risingVy + PLATFORM_GRAVITY;
-      }
-      sprite.__slab2RisingVy =
-        sprite.velocity.y < -1 ? sprite.velocity.y : undefined;
+      sprite.position.x = x;
+      sprite.position.y = y;
+      sprite.__slab2Prev = {x, y};
     });
   }
 
