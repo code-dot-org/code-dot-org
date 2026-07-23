@@ -214,7 +214,7 @@ class CodeWorkspace extends React.Component {
 
   onToggleShowCode = usingBlocks => {
     this.blockCounterEl.style.display =
-      usingBlocks && studioApp().enableShowBlockCount ? '' : 'none';
+      usingBlocks && studioApp().enableShowBlockCount ? 'flex' : 'none';
   };
 
   // The workspace alert will be displayed at the bottom of codeTextbox if editCode is
@@ -267,7 +267,10 @@ class CodeWorkspace extends React.Component {
             {props.showProjectTemplateWorkspaceIcon && (
               <ProjectTemplateWorkspaceIcon
                 tooltipPlace="onTop"
-                className={moduleStyles.projectIcon}
+                className={classNames(
+                  moduleStyles.projectIcon,
+                  'projectTemplateWorkspaceIcon'
+                )}
               />
             )}
             <MuiTypography

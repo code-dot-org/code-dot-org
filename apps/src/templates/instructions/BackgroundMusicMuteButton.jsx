@@ -79,14 +79,6 @@ function BackgroundMusicMuteButton({
       isMinecraft={isMinecraft}
       isDisabled={isSavingMutePreference}
       onClick={isSavingMutePreference ? () => {} : handleMuteMusicTabClick}
-      style={{
-        ...styles.button,
-        ...(!isMinecraft
-          ? isBackgroundMusicMuted
-            ? styles.musicOff
-            : styles.musicOn
-          : {}),
-      }}
     />
   );
 }

@@ -26,6 +26,10 @@ describe('SignedInUser', () => {
     return mount(<BackgroundMusicMuteButton {...props} />);
   };
 
+  // The component passes its `className` prop through to PaneButton as the
+  // button's DOM id, so match the rendered <button> rather than the class.
+  const muteButton = wrapper => wrapper.find('button#uitest-mute-music-button');
+
   let server;
   beforeEach(() => {
     server = sinon.fakeServer.create();
@@ -37,7 +41,7 @@ describe('SignedInUser', () => {
   it('switches label and icon when button is pressed', () => {
     const wrapper = setUp();
     assert(wrapper.text() === i18n.backgroundMusicOn());
-    wrapper.find('.uitest-mute-music-button').simulate('click');
+    muteButton(wrapper).simulate('click');
     assert(wrapper.text() === i18n.backgroundMusicOff());
   });
 
@@ -49,7 +53,7 @@ describe('SignedInUser', () => {
       unmuteBackgroundMusic: onUnmuteSpy,
     });
     await act(async () => {
-      wrapper.find('.uitest-mute-music-button').simulate('click');
+      muteButton(wrapper).simulate('click');
     });
     await act(async () => {
       server.respond();
@@ -57,7 +61,7 @@ describe('SignedInUser', () => {
     wrapper.update();
     expect(onMuteSpy).to.have.been.calledOnce;
     await act(async () => {
-      wrapper.find('.uitest-mute-music-button').simulate('click');
+      muteButton(wrapper).simulate('click');
     });
     wrapper.update();
     expect(onUnmuteSpy).to.have.been.calledOnce;

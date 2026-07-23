@@ -123,12 +123,13 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass=""
             label="Show Blocks"
             style={{display: 'inline-block'}}
           />
         )
       ).to.be.true;
+      // In blocks mode the code icon is replaced by the blocks glyph image.
+      expect(toggle.find('img')).to.have.lengthOf(1);
     });
   });
 
@@ -144,7 +145,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa-solid fa-code"
+            iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Text"
             style={{display: 'inline-block'}}
           />
@@ -162,12 +163,13 @@ describe('The ShowCodeToggle component', () => {
               id="show-code-header"
               headerHasFocus={false}
               isRtl={false}
-              iconClass=""
               label="Show Blocks"
               style={{display: 'inline-block'}}
             />
           )
         ).to.be.true;
+        // In blocks mode the code icon is replaced by the blocks glyph image.
+        expect(toggle.find('img')).to.have.lengthOf(1);
       });
 
       it('makes the editor stop using blocks', () => {
@@ -195,7 +197,7 @@ describe('The ShowCodeToggle component', () => {
                 id="show-code-header"
                 headerHasFocus={false}
                 isRtl={false}
-                iconClass="fa-solid fa-code"
+                iconProps={{iconName: 'code', iconStyle: 'solid'}}
                 label="Show Text"
                 style={{display: 'inline-block'}}
               />
@@ -251,7 +253,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa-solid fa-code"
+            iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Code"
             style={{display: 'inline-block'}}
           />
@@ -284,7 +286,7 @@ describe('The ShowCodeToggle component', () => {
               id="show-code-header"
               headerHasFocus={false}
               isRtl={false}
-              iconClass="fa-solid fa-code"
+              iconProps={{iconName: 'code', iconStyle: 'solid'}}
               label="Show Code"
               style={{display: 'none'}}
             />
@@ -307,7 +309,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa-solid fa-code"
+            iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Text"
             style={{display: 'none'}}
           />
@@ -333,7 +335,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa-solid fa-code"
+            iconProps={{iconName: 'code', iconStyle: 'solid'}}
             label="Show Text"
             style={{display: 'none'}}
           />

@@ -73,6 +73,7 @@ export const PaneButton = function (props) {
     ariaLabel,
     onClick,
     id,
+    style,
     className,
   } = props;
 
@@ -89,6 +90,7 @@ export const PaneButton = function (props) {
       variant="outlined"
       color="secondary"
       size="extraSmall"
+      style={style}
     >
       {buttonLabel}
     </MuiButton>

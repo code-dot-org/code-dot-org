@@ -65,9 +65,7 @@ class ShowCodeButton extends Component {
         isMinecraft={!!this.props.isMinecraft}
         headerHasFocus={!!this.props.hasFocus}
         onClick={this.onClick.bind(this)}
-        style={
-          this.props.hidden ? {display: 'none'} : {display: 'inline-block'}
-        }
+        style={this.props.hidden ? {display: 'none'} : undefined}
       />
     );
   }
