@@ -1,8 +1,6 @@
 @import '../../mixins.scss';
 
 .headerContainer {
-  // Match panelContainerHeader so the 1px border stays visible under
-  // Bootstrap 3 border-box (2.5rem / 40px was clipping it).
   height: 41px;
 }
 
