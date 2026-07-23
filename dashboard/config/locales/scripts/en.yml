@@ -29257,10 +29257,36 @@ en:
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
         aif-year2-semester1-unit2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+            lesson-13:
+              name: Lesson 13
           lesson_groups: {}
           name: aif-year2-semester1-unit2
-          title: AIF Year 2 Semester 1 Unit 2
+          title: Machine Learning Fundamentals
           description_audience: ''
           description_short: ''
           description: ''
@@ -29630,6 +29656,10 @@ en:
         cody-playground:
           lessons:
             lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 12
+            lesson-3:
               name: Lesson 1
           lesson_groups:
             lessonGroup-2:
