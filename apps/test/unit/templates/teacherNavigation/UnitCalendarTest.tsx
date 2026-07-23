@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  ServerSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -19,11 +24,6 @@ import unitSelection, {
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSections, {
-  selectSection,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {ServerSection} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import UnitCalendar from '@cdo/apps/templates/teacherNavigation/UnitCalendar';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';

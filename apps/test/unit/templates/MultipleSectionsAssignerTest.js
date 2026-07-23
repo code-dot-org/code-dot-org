@@ -1,3 +1,8 @@
+import {
+  assignToSection,
+  unassignSection,
+  sectionHasNewData,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -5,11 +10,6 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
-import {
-  assignToSection,
-  unassignSection,
-  sectionHasNewData,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

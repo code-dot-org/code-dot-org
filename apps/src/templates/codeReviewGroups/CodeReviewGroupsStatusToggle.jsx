@@ -1,11 +1,13 @@
 import Toggle from '@code-dot-org/component-library/toggle';
+import {
+  setSectionCodeReviewExpiresAt,
+  selectedSectionSelector,
+} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {setSectionCodeReviewExpiresAt} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';

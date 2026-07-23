@@ -1,3 +1,4 @@
+import {sectionProviderName} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -9,7 +10,6 @@ import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStude
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LtiLogins} from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
-import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

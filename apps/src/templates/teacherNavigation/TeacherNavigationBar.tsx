@@ -1,4 +1,8 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {
+  selectedSectionSelector,
+  Section,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
@@ -19,9 +23,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
-import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {

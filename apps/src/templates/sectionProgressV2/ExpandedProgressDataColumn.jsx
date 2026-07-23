@@ -1,3 +1,4 @@
+import {studentShape} from '@code-dot-org/teacher-dashboard/redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +8,6 @@ import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import {studentLevelProgressType} from '../progress/progressTypes';
-import {studentShape} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
 import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';

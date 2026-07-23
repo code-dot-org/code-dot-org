@@ -1,15 +1,13 @@
-import $ from 'jquery';
-import _ from 'lodash';
-
 import {
   demoSecretPictureUrlFor,
   demoSecretWordsFor,
-} from '@cdo/apps/templates/teacherDashboard/demoStudentSecrets';
-import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {
+  asyncLoadSectionData,
   sectionCode,
   sectionName,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+} from '@code-dot-org/teacher-dashboard/redux';
+import $ from 'jquery';
+import _ from 'lodash';
+
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {

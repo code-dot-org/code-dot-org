@@ -1,10 +1,9 @@
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {selectedSectionSelector} from '../teacherSectionsReduxSelectors';
 
 interface SkillsDashboardProps {}
 

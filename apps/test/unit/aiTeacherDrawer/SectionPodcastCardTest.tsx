@@ -4,15 +4,12 @@ import React from 'react';
 
 import SectionPodcastCard from '@cdo/apps/aiTeacherDrawer/SectionPodcastCard';
 
-jest.mock(
-  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar',
-  () => ({
-    __esModule: true,
-    default: ({color, emoji}: {color: number; emoji: number}) => (
-      <span role="img" aria-label={`section-avatar-${color}-${emoji}`} />
-    ),
-  })
-);
+jest.mock('@code-dot-org/teacher-dashboard/home', () => ({
+  __esModule: true,
+  default: ({color, emoji}: {color: number; emoji: number}) => (
+    <span role="img" aria-label={`section-avatar-${color}-${emoji}`} />
+  ),
+}));
 
 const PODCAST_URL = '/ai_lesson_summary_podcasts/show?lesson_id=42';
 

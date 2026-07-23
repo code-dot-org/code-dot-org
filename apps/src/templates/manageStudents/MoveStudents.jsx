@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import {getVisibleSections} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import {compact} from 'lodash';
 import PropTypes from 'prop-types';
@@ -7,7 +8,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
-import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
 
 import {NON_LMS_LOGIN_TYPES} from '../teacherDashboard/LoginTypeConstants';

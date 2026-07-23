@@ -1,3 +1,7 @@
+import teacherSections, {
+  setSections,
+  selectSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -10,10 +14,6 @@ import {initProgress} from '@cdo/apps/code-studio/progressRedux';
 import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-import teacherSections, {
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';

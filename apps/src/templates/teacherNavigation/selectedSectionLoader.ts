@@ -1,3 +1,13 @@
+import {
+  finishLoadingSectionData,
+  selectSection,
+  setRosterProvider,
+  setRosterProviderName,
+  setStudentsForCurrentSection,
+  startLoadingSectionData,
+  updateSelectedSection,
+} from '@code-dot-org/teacher-dashboard/redux';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -9,15 +19,6 @@ import {
   setShowSharingColumn,
   loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
-import {
-  finishLoadingSectionData,
-  selectSection,
-  setRosterProvider,
-  setRosterProviderName,
-  setStudentsForCurrentSection,
-  startLoadingSectionData,
-  updateSelectedSection,
-} from '../teacherDashboard/teacherSectionsRedux';
 
 export const asyncLoadSelectedSection = async (
   sectionId: string,

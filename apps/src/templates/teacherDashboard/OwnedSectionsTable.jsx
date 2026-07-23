@@ -1,3 +1,4 @@
+import {getSectionRows} from '@code-dot-org/teacher-dashboard/redux';
 import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -20,7 +21,6 @@ import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
-import {getSectionRows} from './teacherSectionsReduxSelectors';
 
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 

@@ -1,10 +1,10 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Student} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useMemo} from 'react';
 
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
-import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import LessonSelector, {
   LessonOption,
 } from '@cdo/apps/templates/teacherDashboardShared/LessonSelector';

@@ -1,3 +1,6 @@
+import teacherSections, {
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -9,9 +12,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import {UnconnectedOwnedSectionsTable as OwnedSectionsTable} from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const sectionRowData = [

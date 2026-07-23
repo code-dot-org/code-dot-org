@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -10,7 +11,6 @@ import {
 } from '@cdo/apps/redux';
 import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
 import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 

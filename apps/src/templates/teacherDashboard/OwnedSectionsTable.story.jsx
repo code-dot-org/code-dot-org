@@ -1,12 +1,12 @@
+import teacherSections, {
+  setCourseOfferings,
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
-import teacherSections, {
-  setCourseOfferings,
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import OwnedSectionsTable from './OwnedSectionsTable';
 

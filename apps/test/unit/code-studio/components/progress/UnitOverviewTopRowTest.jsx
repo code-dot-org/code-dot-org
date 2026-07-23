@@ -1,3 +1,8 @@
+import teacherSections, {
+  selectSection,
+  setSections,
+  setStudentsForCurrentSection,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton} from '@mui/material';
 import {render, screen} from '@testing-library/react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
@@ -10,11 +15,6 @@ import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/cod
 import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import teacherSections, {
-  selectSection,
-  setSections,
-  setStudentsForCurrentSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';

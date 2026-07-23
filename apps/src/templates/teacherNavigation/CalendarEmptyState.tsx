@@ -1,11 +1,12 @@
+import {
+  selectedSectionSelector,
+  Section,
+} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
-
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
-import {Section} from '../teacherDashboard/types/teacherSectionTypes';
 
 import {EmptyState, EmptyStateProps} from './EmptyState';
 import {

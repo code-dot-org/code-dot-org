@@ -1,3 +1,4 @@
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {renderHook} from '@testing-library/react-hooks';
 
 import {
@@ -9,7 +10,6 @@ import {
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 let mockState = {
   currentUser: {
@@ -28,12 +28,9 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   ) => selector(mockState),
 }));
 
-jest.mock(
-  '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors',
-  () => ({
-    selectedSectionSelector: jest.fn(),
-  })
-);
+jest.mock('@code-dot-org/teacher-dashboard/redux', () => ({
+  selectedSectionSelector: jest.fn(),
+}));
 
 jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
   areAiChatToolsEnabled: jest.fn(),

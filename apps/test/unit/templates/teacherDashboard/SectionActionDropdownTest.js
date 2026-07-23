@@ -1,9 +1,9 @@
+import {setRosterProvider} from '@code-dot-org/teacher-dashboard/redux';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
-import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 

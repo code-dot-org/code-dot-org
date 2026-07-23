@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
+import {COLORS, EMOJIS} from '@code-dot-org/teacher-dashboard/home';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
@@ -24,11 +25,6 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {
-  COLORS,
-  EMOJIS,
-} from '../studioHomepages/teacherHomepageV2/sectionAvatars/avatarConstants';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
 import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';

@@ -8,17 +8,14 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 jest.mock('@cdo/apps/util/HttpClient');
 
-jest.mock('@cdo/apps/templates/teacherDashboard/teacherSectionsRedux', () => ({
+jest.mock('@code-dot-org/teacher-dashboard/redux', () => ({
   asyncLoadSectionData: () => () => Promise.resolve(),
 }));
 
-jest.mock(
-  '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar',
-  () => ({
-    __esModule: true,
-    default: () => <span role="img" aria-label="section-avatar" />,
-  })
-);
+jest.mock('@code-dot-org/teacher-dashboard/home', () => ({
+  __esModule: true,
+  default: () => <span role="img" aria-label="section-avatar" />,
+}));
 
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: () => jest.fn(),

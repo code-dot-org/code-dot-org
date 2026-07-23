@@ -1,5 +1,9 @@
 import Chips from '@code-dot-org/component-library/chips';
 import TextField from '@code-dot-org/component-library/textField';
+import {
+  SectionAvatar,
+  SectionAvatarEditDialog,
+} from '@code-dot-org/teacher-dashboard/home';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -8,16 +12,14 @@ import React, {useState} from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import DemoChip from '../DemoChip';
-import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 
 import moduleStyles from './sections-refresh.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
-import styles from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/section-avatars.module.scss';
+import styles from '@code-dot-org/teacher-dashboard/src/home/sectionAvatars/section-avatars.module.scss';
 
 export default function SingleSectionSetUp({
   sectionNum,

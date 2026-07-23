@@ -1,3 +1,4 @@
+import {studentShape} from '@code-dot-org/teacher-dashboard/redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,7 +8,6 @@ import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
 import {studentLevelProgressType} from '../progress/progressTypes';

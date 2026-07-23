@@ -1,3 +1,6 @@
+import teacherSections, {
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {
   render,
   screen,
@@ -44,9 +47,6 @@ import {
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   AiInteractionStatus as Status,

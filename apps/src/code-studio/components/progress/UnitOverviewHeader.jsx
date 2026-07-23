@@ -1,4 +1,5 @@
 import NotificationBanner from '@code-dot-org/component-library/notification-banner';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
@@ -14,7 +15,6 @@ import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/Partic
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,

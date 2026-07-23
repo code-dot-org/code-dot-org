@@ -1,10 +1,10 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 

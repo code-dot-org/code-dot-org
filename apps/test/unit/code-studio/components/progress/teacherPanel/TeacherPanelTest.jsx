@@ -1,3 +1,4 @@
+import {pageTypes} from '@code-dot-org/teacher-dashboard/redux';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -12,7 +13,6 @@ import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle
 import * as utils from '@cdo/apps/code-studio/utils';
 import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const students = [

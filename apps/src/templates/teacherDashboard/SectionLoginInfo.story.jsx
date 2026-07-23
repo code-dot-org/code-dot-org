@@ -1,3 +1,4 @@
+import {teacherSectionsReducer as teacherSections} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -5,7 +6,6 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import SectionLoginInfo from './SectionLoginInfo';
-import teacherSections from './teacherSectionsRedux';
 
 export default {
   component: SectionLoginInfo,

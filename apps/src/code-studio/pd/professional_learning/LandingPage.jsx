@@ -1,6 +1,11 @@
 // My Professional Learning landing page
 // studio.code.org/my-professional-learning
 import Tabs from '@code-dot-org/component-library/tabs';
+import {
+  asyncLoadSectionData,
+  asyncLoadCoteacherInvite,
+  hiddenPlSectionIds,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
@@ -21,11 +26,6 @@ import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import {
-  asyncLoadSectionData,
-  asyncLoadCoteacherInvite,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 import teacherImg from '@cdo/static/misc/teacher-540x300.png';

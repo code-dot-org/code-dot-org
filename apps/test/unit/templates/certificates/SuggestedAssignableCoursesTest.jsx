@@ -1,4 +1,7 @@
 import '@testing-library/jest-dom';
+import teacherSections, {
+  setSections,
+} from '@code-dot-org/teacher-dashboard/redux';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -10,9 +13,6 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import SuggestedAssignableCourses from '@cdo/apps/templates/certificates/SuggestedAssignableCourses';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {sections} from '../studioHomepages/fakeSectionUtils';
 

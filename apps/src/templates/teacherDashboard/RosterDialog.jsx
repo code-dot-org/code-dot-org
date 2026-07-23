@@ -1,3 +1,9 @@
+import {
+  cancelImportRosterFlow,
+  importOrUpdateRoster,
+  rosterImportFailed,
+  isRosterDialogOpen,
+} from '@code-dot-org/teacher-dashboard/redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -11,12 +17,6 @@ import BaseDialog from '../BaseDialog';
 
 import ReauthorizeGoogleClassroom from './ReauthorizeGoogleClassroom';
 import {classroomShape, loadErrorShape} from './shapes';
-import {
-  cancelImportRosterFlow,
-  importOrUpdateRoster,
-  rosterImportFailed,
-} from './teacherSectionsRedux';
-import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';

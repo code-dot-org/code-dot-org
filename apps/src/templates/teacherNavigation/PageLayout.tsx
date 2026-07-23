@@ -1,11 +1,10 @@
+import {selectedSectionSelector} from '@code-dot-org/teacher-dashboard/redux';
 import React from 'react';
 import {Outlet, useLocation, useParams} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
 
 import PageHeader from './PageHeader';
 import {getPageNameFromPathname} from './TeacherNavigationPaths';
