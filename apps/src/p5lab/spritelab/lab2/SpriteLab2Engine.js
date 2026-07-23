@@ -511,6 +511,14 @@ export default class SpriteLab2Engine extends SpriteLab {
           halfH + wallHalfH - Math.abs(prev.y - wall.position.y) > 0
         );
       });
+      // Purely vertical motion is stable: whatever the player is directly
+      // over or under, they land on or bonk against — no corner
+      // arbitration, no sideways correction. A jump straight up from a
+      // spot retention allowed (standing past a block's edge) comes back
+      // down to that same spot, and a head bonk never shoves sideways. The
+      // strict clauses below only arbitrate corners reached with
+      // horizontal movement — the gap-crossing case they exist for.
+      const vertical = Math.abs(dx) <= CONTACT_EPSILON;
       walls.forEach(wall => {
         const wallHalfW = (wall.width * wall.scale) / 2;
         const wallHalfH = (wall.height * wall.scale) / 2;
@@ -538,14 +546,14 @@ export default class SpriteLab2Engine extends SpriteLab {
           const wasResting =
             Math.abs(prev.y + halfH - top) <= CONTACT_EPSILON &&
             Math.abs(prev.x - wall.position.x) < halfW + wallHalfW;
-          if (centerOn || wasResting || wasPressed) {
+          if (vertical || centerOn || wasResting || wasPressed) {
             y = Math.min(y, top - halfH);
             sprite.velocity.y = 0;
           }
         } else if (
           dy < 0 &&
           prev.y - halfH >= wall.position.y + wallHalfH - MIN_SOLID_OVERLAP &&
-          (centerOn || wasPressed)
+          (vertical || centerOn || wasPressed)
         ) {
           y = Math.max(y, wall.position.y + wallHalfH + halfH);
           sprite.velocity.y = 0;
