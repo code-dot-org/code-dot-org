@@ -296,7 +296,7 @@ button.arrow:disabled {
 }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
+  border: 1px solid var(--borders-neutral-strong);
 }
 
 #codeTextbox.has_banner {
@@ -313,7 +313,7 @@ html[dir="rtl"] .editor-column {
 
 #codeWorkspace.pin_bottom {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--borders-neutral-strong);
 }
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it

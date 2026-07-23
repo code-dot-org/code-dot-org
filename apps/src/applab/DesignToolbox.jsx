@@ -24,8 +24,12 @@ export default class DesignToolbox extends React.Component {
       bottom: 0,
       width: 270,
       boxSizing: 'border-box',
-      borderRight: this.props.isRtl ? '' : '1px solid gray',
-      borderLeft: this.props.isRtl ? '1px solid gray' : '',
+      borderRight: this.props.isRtl
+        ? ''
+        : '1px solid var(--borders-neutral-strong)',
+      borderLeft: this.props.isRtl
+        ? '1px solid var(--borders-neutral-strong)'
+        : '',
       overflowY: 'auto',
       padding: 10,
     };
