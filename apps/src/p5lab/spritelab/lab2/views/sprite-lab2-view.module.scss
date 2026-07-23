@@ -55,6 +55,10 @@ $tab-item-height: 34px;
 
 .tab {
   height: $tab-item-height;
+  // Explicit: a legacy global (apps/style/common.scss `button`) puts 5px
+  // margin on every button, which floats the Code segment inside its group
+  // so the hover fill can't reach the edges.
+  margin: 0;
   padding: 0 16px;
   // A subtle outline gives every tab item the same "button" structure, so
   // the Code+scene segmented group reads coherently next to plain tabs.
@@ -133,6 +137,7 @@ $tab-segment-height: $tab-item-height - 2px;
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;
+  margin: 0;
   margin-inline-start: 4px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
