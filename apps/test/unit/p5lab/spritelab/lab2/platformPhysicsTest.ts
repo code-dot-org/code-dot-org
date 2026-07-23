@@ -186,12 +186,20 @@ describe('platformPhysics', () => {
       wallAt(3, 7),
       wallAt(4, 6),
     ];
-    for (const startX of [15, 19, 23, 27, 31, 35]) {
-      const player = makeSprite(startX, 275);
-      player.__slab2Prev = {x: startX, y: 275};
-      run(player, walls, 60, 6);
-      expect(feet(player)).toBe(400);
-      expect(player.position.x).toBe(140);
+    // Every default-size costume shape drops in, including the widest
+    // possible body (50px art), at every walk-off phase.
+    for (const [w, h] of [
+      [25, 50],
+      [50, 50],
+      [50, 32],
+    ]) {
+      for (const startX of [15, 19, 23, 27, 31, 35]) {
+        const player = makeSprite(startX, 300 - h / 2, w, h);
+        player.__slab2Prev = {x: startX, y: 300 - h / 2};
+        run(player, walls, 60, 6);
+        expect(feet(player)).toBe(400);
+        expect(player.position.x).toBe(150 - (w * 0.8) / 2);
+      }
     }
   });
 

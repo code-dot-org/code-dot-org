@@ -24,11 +24,12 @@ export const CONTACT_EPSILON = 0.1;
 // band there is zero clearance to enter them.
 export const MIN_SOLID_OVERLAP = 8;
 
-// Stepping off an edge falls at least this fast (px/frame). Ramping from
-// zero, a walking player drifted across a one-block gap and caught the far
-// lip only on lucky frames — an inconsistent coin flip; falling at once
-// makes a gap a gap (crossing one takes a jump).
-export const LEDGE_FALL_SPEED = 5;
+// Stepping off an edge falls at least this fast (px/frame): the very
+// first airborne step already drops past the landing band, so no walk-off
+// can catch the far lip of a gap — at any costume shape or phase. Ramping
+// from zero instead made a one-block gap a coin flip. A gap is a gap:
+// crossing one takes a jump.
+export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
 
 // The player's solid body is the art box scaled by this factor, anchored
 // at the feet: a default-size (50px) costume gets a 40px body, so every
