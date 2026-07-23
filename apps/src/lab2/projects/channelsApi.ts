@@ -55,6 +55,33 @@ export async function fetchSharingDisabled(
   return value.sharing_disabled;
 }
 
+export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
+
+export interface ShareFailure {
+  type: ShareFailureType;
+  // The offending text. Omitted by the server for profanity failures.
+  content?: string;
+}
+
+export async function fetchPrivacyProfanityViolation(
+  channelId: string
+): Promise<boolean> {
+  // The server responds with 0 (not false) when there is no violation.
+  const {value} = await HttpClient.fetchJson<{has_violation: boolean | number}>(
+    `${rootUrl}/${channelId}/privacy-profanity`
+  );
+  return !!value.has_violation;
+}
+
+export async function fetchShareFailure(
+  channelId: string
+): Promise<ShareFailure | null> {
+  const {value} = await HttpClient.fetchJson<{
+    share_failure: ShareFailure | false;
+  }>(`${rootUrl}/${channelId}/share-failure`);
+  return value.share_failure || null;
+}
+
 export async function fetchIsTeacherOfProjectOwner(
   channelId: string
 ): Promise<boolean> {

@@ -40,7 +40,8 @@ module ShareFiltering
   end
 
   USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -49,15 +50,17 @@ module ShareFiltering
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   #
-  # @param [String] program the student's program text
+  # @param [String, Hash] program the student's program text. Sketch Lab
+  #   sources may be passed as the parsed Hash from main.json.
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [String] project_type
   def self.find_share_failure(program, locale, project_type, exceptions: false)
     # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    texts = extract_text_blockly(program)
+    texts = project_type == 'sketchlab' ? extract_text_sketchlab(program) : extract_text_blockly(program)
     program_text = texts.join(" ")
+    return nil if program_text.strip.empty?
 
     # Email and phone: check concatenated text.
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
@@ -98,6 +101,37 @@ module ShareFiltering
 
     # Return a list of all extracted text (no duplicates).
     texts.compact.uniq
+  end
+
+  # Extracts user-entered text from a Sketch Lab (React Flow) source.
+  # Shape nodes carry a `label`, text nodes a `text`, and image nodes an
+  # `altText` — all under each node's `data`. Edges carry no user text.
+  # @param source [Hash, String] the parsed 'source' value from main.json,
+  #   or its JSON-serialized string form.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input or non-React-Flow shapes (e.g.
+  #   legacy Excalidraw sources, which have 'elements' instead of 'nodes').
+  def self.extract_text_sketchlab(source)
+    if source.is_a?(String)
+      begin
+        source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::ParserError
+        # Covers JSON::NestingError as well.
+        return []
+      end
+    end
+    return [] unless source.is_a?(Hash)
+
+    nodes = source['nodes']
+    return [] unless nodes.is_a?(Array)
+
+    nodes.flat_map do |node|
+      next [] unless node.is_a?(Hash) && node['data'].is_a?(Hash)
+      SKETCHLAB_TEXT_FIELDS.filter_map do |field|
+        value = node['data'][field]
+        value if value.is_a?(String) && !value.strip.empty?
+      end
+    end.uniq
   end
 
   # Clean string values from XML-wrapped field values.
@@ -146,6 +180,11 @@ module ShareFiltering
     # Return false early if filtering is disabled or project type not in filter list.
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
+
+    # Sketch Lab sources are structured JSON (possibly already parsed to a
+    # Hash); the blockly field-name pre-check below does not apply. Rely on
+    # extraction plus the empty-text bail in find_share_failure instead.
+    return true if project_type == 'sketchlab'
 
     # Only filter if program contains fields that accept user-entered strings.
     return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)

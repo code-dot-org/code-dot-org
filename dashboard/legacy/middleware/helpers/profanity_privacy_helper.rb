@@ -93,12 +93,15 @@ def share_failure_from_body(body, locale, project_type)
   blockly_source = parsed_json['source']
   return false unless blockly_source
 
-  # This probably means the filter only works on blockly-based labs
-  # as e.g. Java Lab stores an object in the `main.json` source field like:
+  # Sketch Lab stores a structured object in the `source` field;
+  # ShareFiltering knows how to extract its text fields. Other object-shaped
+  # sources are not filterable, e.g. Java Lab stores an object like:
   # blockly_source = {"MyClass.java"=>{"text"=>"my source code for MyClass.java here", "isVisible"=>true, "tabOrder"=>0}}
   #
   # See: https://github.com/code-dot-org/code-dot-org/pull/60329#issuecomment-2282270302
-  return false unless blockly_source.is_a? String
+  filterable = blockly_source.is_a?(String) ||
+    (project_type == 'sketchlab' && blockly_source.is_a?(Hash))
+  return false unless filterable
 
   begin
     ShareFiltering.find_share_failure(blockly_source, locale, project_type)

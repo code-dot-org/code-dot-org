@@ -313,6 +313,165 @@ class ShareFilteringTest < Minitest::Test
       ShareFiltering.should_filter_program(with_indicator, 'playlab')
   end
 
+  # @return [Hash] A sample Sketch Lab (React Flow) source, as parsed from
+  #   the 'source' field of main.json.
+  def generate_sketchlab_source(label: 'shape label', text: 'text node text', alt_text: 'image alt text')
+    {
+      'nodes' => [
+        {
+          'id' => 'shape1',
+          'type' => 'shape',
+          'position' => {'x' => 0, 'y' => 0},
+          'data' => {'shapeType' => 'rectangle', 'label' => label, 'backgroundColor' => '#fff'},
+        },
+        {
+          'id' => 'text1',
+          'type' => 'text',
+          'position' => {'x' => 10, 'y' => 10},
+          'data' => {'text' => text, 'fontColor' => '#000'},
+        },
+        {
+          'id' => 'image1',
+          'type' => 'image',
+          'position' => {'x' => 20, 'y' => 20},
+          'data' => {'src' => 'https://example.org/cat.png', 'altText' => alt_text},
+        },
+        {
+          'id' => 'anchor1',
+          'type' => 'lineAnchor',
+          'position' => {'x' => 30, 'y' => 30},
+          'data' => {},
+        },
+      ],
+      'edges' => [
+        {'id' => 'edge1', 'source' => 'shape1', 'target' => 'text1', 'data' => {'rotation' => 0}},
+      ],
+      'viewport' => {'x' => 0, 'y' => 0, 'zoom' => 1},
+    }
+  end
+
+  def test_find_share_failure_sketchlab_email_in_text_node
+    source = generate_sketchlab_source(text: 'write to test@example.com')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
+      ShareFiltering.find_share_failure(source, 'en', 'sketchlab')
+    )
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
+      assert_raises(PIIFilterException) do
+        ShareFiltering.find_share_failure(source, 'en', 'sketchlab', exceptions: true)
+      end.share_failure
+    )
+  end
+
+  def test_find_share_failure_sketchlab_phone_in_label
+    source = generate_sketchlab_source(label: 'call 123-456-7890')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      ShareFiltering.find_share_failure(source, 'en', 'sketchlab')
+    )
+  end
+
+  def test_find_share_failure_sketchlab_profanity_in_alt_text
+    WebPurify.stubs(:find_potential_profanities).returns(['damn'])
+
+    source = generate_sketchlab_source(alt_text: 'damn')
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
+      ShareFiltering.find_share_failure(source, 'en', 'sketchlab')
+    )
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
+      assert_raises(ProfanityFilterException) do
+        ShareFiltering.find_share_failure(source, 'en', 'sketchlab', exceptions: true)
+      end.share_failure
+    )
+  end
+
+  def test_find_share_failure_sketchlab_clean_source_returns_nil
+    WebPurify.stubs(:find_potential_profanities).returns(nil)
+
+    source = generate_sketchlab_source
+    assert_nil ShareFiltering.find_share_failure(source, 'en', 'sketchlab')
+  end
+
+  def test_find_share_failure_sketchlab_empty_source_skips_filters
+    ProfanityFilter.expects(:find_potential_profanity).never
+    RegexpUtils.expects(:find_potential_email).never
+
+    source = {'nodes' => [], 'edges' => [], 'viewport' => {'x' => 0, 'y' => 0, 'zoom' => 1}}
+    assert_nil ShareFiltering.find_share_failure(source, 'en', 'sketchlab')
+  end
+
+  def test_extract_text_sketchlab_collects_all_text_fields
+    source = generate_sketchlab_source
+    assert_equal(
+      ['shape label', 'text node text', 'image alt text'],
+      ShareFiltering.extract_text_sketchlab(source)
+    )
+  end
+
+  def test_extract_text_sketchlab_accepts_json_string
+    source = generate_sketchlab_source
+    assert_equal(
+      ['shape label', 'text node text', 'image alt text'],
+      ShareFiltering.extract_text_sketchlab(source.to_json)
+    )
+  end
+
+  def test_extract_text_sketchlab_skips_blank_and_non_string_values
+    source = {
+      'nodes' => [
+        {'id' => 'a', 'type' => 'shape', 'data' => {'label' => '   '}},
+        {'id' => 'b', 'type' => 'text', 'data' => {'text' => 42}},
+        {'id' => 'c', 'type' => 'image', 'data' => {'altText' => 'kept'}},
+      ],
+      'edges' => [],
+    }
+    assert_equal ['kept'], ShareFiltering.extract_text_sketchlab(source)
+  end
+
+  def test_extract_text_sketchlab_deduplicates
+    source = {
+      'nodes' => [
+        {'id' => 'a', 'type' => 'text', 'data' => {'text' => 'same'}},
+        {'id' => 'b', 'type' => 'text', 'data' => {'text' => 'same'}},
+      ],
+    }
+    assert_equal ['same'], ShareFiltering.extract_text_sketchlab(source)
+  end
+
+  def test_extract_text_sketchlab_robust_to_malformed_input
+    assert_equal [], ShareFiltering.extract_text_sketchlab(nil)
+    assert_equal [], ShareFiltering.extract_text_sketchlab(42)
+    assert_equal [], ShareFiltering.extract_text_sketchlab([])
+    assert_equal [], ShareFiltering.extract_text_sketchlab('not json {{{')
+    assert_equal [], ShareFiltering.extract_text_sketchlab({})
+    assert_equal [], ShareFiltering.extract_text_sketchlab({'nodes' => 'oops'})
+    assert_equal [], ShareFiltering.extract_text_sketchlab({'nodes' => [nil, 'oops', {'id' => 'a'}, {'id' => 'b', 'data' => 'oops'}]})
+  end
+
+  def test_extract_text_sketchlab_ignores_legacy_excalidraw_sources
+    legacy = {
+      'elements' => [
+        {'type' => 'text', 'text' => 'legacy text'},
+        {'type' => 'rectangle'},
+      ],
+    }
+    assert_equal [], ShareFiltering.extract_text_sketchlab(legacy)
+  end
+
+  def test_should_filter_program_sketchlab
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
+    # Hash programs must not crash the blockly field-name regex pre-check.
+    assert_equal true, ShareFiltering.should_filter_program(generate_sketchlab_source, 'sketchlab')
+
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(false)
+    assert_equal false, ShareFiltering.should_filter_program(generate_sketchlab_source, 'sketchlab')
+  end
+
   # Tests for ShareFiltering.extract_text_from_js
   # These tests cover expected extraction behavior.
 
