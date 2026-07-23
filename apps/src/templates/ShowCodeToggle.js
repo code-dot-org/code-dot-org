@@ -40,18 +40,12 @@ class ShowCodeButton extends Component {
   }
 
   render() {
-    const blockGlyphIconStyle = {
-      ...styles.blocksGlyph,
-      ...(this.props.isRtl && styles.blocksGlyphRtl),
-    };
     const iconImageStyle = {
       ...styles.iconImage,
       ...(this.props.isRtl && styles.blocksGlyphImageRtl),
     };
     const blocksGlyphIcon = (
-      <i style={blockGlyphIconStyle}>
-        <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
-      </i>
+      <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
     );
     return (
       <PaneButton
@@ -203,6 +197,9 @@ const styles = {
   },
   iconImage: {
     verticalAlign: 'text-bottom',
+    maxWidth: 'none',
+    width: '14px',
+    height: '14px',
   },
   blocksGlyphRtl: {
     paddingRight: 0,

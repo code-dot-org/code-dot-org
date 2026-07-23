@@ -1,4 +1,8 @@
-import {Typography as MuiTypography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -14,7 +18,6 @@ import i18n from '@cdo/locale';
 import SettingsCog from '../code-studio/components/SettingsCog';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import {queryParams} from '../code-studio/utils';
-import commonStyles from '../commonStyles';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import {singleton as studioApp} from '../StudioApp';
 import color from '../util/color';
@@ -114,10 +117,6 @@ class CodeWorkspace extends React.Component {
       autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
-    const chevronStyle = {
-      ...styles.chevronButton,
-      ...(runModeIndicators && isRunning ? styles.runningIcon : {}),
-    };
 
     const settingsCog = showSettingsCog && (
       <SettingsCog
@@ -132,17 +131,23 @@ class CodeWorkspace extends React.Component {
           key="toolbox-header"
           style={styles.toolboxHeaderContainer}
         >
-          <span>
-            <button
-              id="hide-toolbox-icon"
-              style={{...commonStyles.hidden, ...chevronStyle}}
-              type="button"
-              aria-label={i18n.toolboxHeaderDroplet()}
-              aria-expanded
-            >
-              <i className="fa-solid fa-circle-chevron-right" />
-            </button>
-          </span>
+          <MuiIconButton
+            type="button"
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            aria-label="Hide the toolbox"
+            id="hide-toolbox-icon"
+            className="hide-toolbox-icon"
+            onClick={this.onToggleToolbox}
+            sx={{
+              borderRadius: '50%',
+              height: '1rem',
+              width: '1rem',
+            }}
+          >
+            <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
+          </MuiIconButton>
           <MuiTypography
             variant="body4"
             sx={{
@@ -151,26 +156,57 @@ class CodeWorkspace extends React.Component {
           >
             {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
           </MuiTypography>
-          <span>{settingsCog}</span>
+          {settingsCog}
         </PaneSection>
         <PaneSection
           id="show-toolbox-header"
           key="show-toolbox-header"
-          style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
+          style={{
+            alignItems: 'center',
+            display: 'none',
+            justifyContent: 'space-between',
+            paddingLeft: '.5rem',
+            paddingRight: '.5rem',
+            gap: '0.5rem',
+          }}
         >
-          <span id="show-toolbox-click-target">
-            <button
-              id="show-toolbox-icon"
-              style={chevronStyle}
+          <span
+            id="show-toolbox-click-target"
+            style={{
+              alignItems: 'center',
+              display: 'flex',
+              justifyContent: 'space-between',
+              gap: '0.5rem',
+            }}
+          >
+            <MuiIconButton
               type="button"
-              aria-label={i18n.toolboxHeaderDroplet()}
-              aria-expanded={false}
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              id="show-toolbox-icon"
+              aria-label="Show the toolbox"
+              className="show-toolbox-icon"
+              onClick={this.onToggleToolbox}
+              sx={{
+                borderRadius: '50%',
+                height: '1rem',
+                width: '1rem',
+              }}
             >
-              <i className="fa-solid fa-circle-chevron-right" />
-            </button>
-            <span className="show-toolbox-label">{i18n.showToolbox()}</span>
+              <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
+            </MuiIconButton>
+            <MuiTypography
+              variant="body4"
+              id="workspace-header-span"
+              sx={{
+                color: 'var(--text-neutral-white-fixed)',
+              }}
+            >
+              {i18n.showToolbox()}
+            </MuiTypography>
           </span>
-          <span>{settingsCog}</span>
+          {settingsCog}
         </PaneSection>
       </>
     );
@@ -433,6 +469,10 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingLeft: '.5rem',
+    paddingRight: '.5rem',
+    borderRight: '1px solid var(--borders-neutral-strong)',
+    height: '30px',
   },
 };
 

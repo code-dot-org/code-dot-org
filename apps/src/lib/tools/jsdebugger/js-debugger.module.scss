@@ -54,20 +54,17 @@ $debug-watch-max-column-width: 200px;
 $debug-header-border-width: 1px;
 
 .debugWatchHeader {
-  width: $debug-watch-max-column-width + ($debug-header-border-width * 2);
-  float: right;
-  border-left: $debug-header-border-width solid gray;
+  width: $debug-watch-max-column-width - 3px;
 }
 
 .watchersHidden {
   border-left: none;
   text-align: right;
-  margin-right: 30px;
 }
 
 .sliderDebug {
-  margin-left: 5px;
-  margin-right: 5px;
+  position: relative;
+  top: 7px;
 }
 
 .slider {

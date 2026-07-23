@@ -220,9 +220,11 @@ class JavalabConsole extends React.Component {
       <div style={style}>
         <PaneHeader
           id="pane-header"
-          style={styles.header}
           hasFocus
-          isOldPurpleColor
+          style={{
+            backgroundColor: 'var(--brand-purple-80)',
+            paddingLeft: '0.125rem',
+          }}
         >
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
@@ -243,7 +245,7 @@ class JavalabConsole extends React.Component {
               onClick={() => {
                 clearConsoleLogs();
               }}
-              iconClass="fa-solid fa-eraser"
+              iconProps={{iconName: 'eraser', iconStyle: 'solid'}}
               label={javalabMsg.clearConsole()}
             />
           </PaneSection>
@@ -311,7 +313,6 @@ const styles = {
     color: color.black,
   },
   container: {
-    marginTop: 30,
     display: 'flex',
     flexGrow: 1,
     overflowY: 'hidden',

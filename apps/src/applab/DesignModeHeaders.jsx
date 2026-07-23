@@ -106,9 +106,13 @@ export default class DesignModeHeaders extends React.Component {
         display: this.props.isToolboxVisible ? 'flex' : 'none',
         justifyContent: 'space-between',
         alignItems: 'center',
-        width: 270,
-        borderLeft: this.props.isRtl ? '1px solid gray' : '',
-        borderRight: this.props.isRtl ? '' : '1px solid gray',
+        width: 271,
+        borderLeft: this.props.isRtl
+          ? '1px solid var(--borders-neutral-strong)'
+          : '',
+        borderRight: this.props.isRtl
+          ? ''
+          : '1px solid var(--borders-neutral-strong)',
         paddingLeft: '.5rem',
         paddingRight: '.5rem',
         boxSizing: 'border-box',

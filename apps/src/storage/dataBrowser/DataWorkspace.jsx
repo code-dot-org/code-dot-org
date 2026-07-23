@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -44,10 +45,43 @@ class DataWorkspace extends React.Component {
           {(this.props.view === DataView.OVERVIEW ||
             this.props.view === DataView.PROPERTIES) && (
             <PaneSection id="library-header" style={styles.libraryHeader}>
-              <span id="library-header-span">{msg.dataLibraryHeader()}</span>
+              <MuiTypography
+                variant="body4"
+                id="library-header-span"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                }}
+              >
+                {msg.dataLibraryHeader()}
+              </MuiTypography>
             </PaneSection>
           )}
-          <div id="dataModeHeaders">
+          <span
+            id="dataModeHeaders"
+            style={{
+              flex: '1 1 0',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
+            <PaneSection
+              id="workspace-header"
+              style={{
+                flex: '1 1 0',
+              }}
+            >
+              <MuiTypography
+                variant="body4"
+                id="workspace-header-span"
+                sx={{
+                  color: 'var(--text-neutral-white-fixed)',
+                }}
+              >
+                {msg.dataWorkspaceHeader()}
+              </MuiTypography>
+            </PaneSection>
             <PaneButton
               id="data-mode-versions-header"
               iconProps={{iconName: 'clock', iconStyle: 'regular'}}
@@ -56,12 +90,7 @@ class DataWorkspace extends React.Component {
               isRtl={this.props.isRtl}
               onClick={this.props.handleVersionHistory}
             />
-            <PaneSection id="workspace-header">
-              <span id="workspace-header-span">
-                {msg.dataWorkspaceHeader()}
-              </span>
-            </PaneSection>
-          </div>
+          </span>
         </PaneHeader>
 
         <div id="data-mode-container" style={styles.container}>
@@ -97,8 +126,11 @@ const styles = {
     overflowY: 'auto',
   },
   libraryHeader: {
-    display: 'block',
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'flex',
     width: 271,
+    height: 30,
     borderRight: '1px solid var(--borders-neutral-strong)',
     float: 'left',
   },
