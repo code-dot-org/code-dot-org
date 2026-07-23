@@ -440,9 +440,10 @@ export default class SpriteLab2Engine extends SpriteLab {
   // behave (a rising player can't be snapped onto a lip, a head-clip can't
   // shove sideways). Program-driven sprites keep the stock resolver.
   //
-  // Three feel rules refine the crossings: footing is kept generously
-  // (until the collider leaves the block) but gained strictly (center over
-  // the surface — corner grazes slide off); faces engaged thinner than the
+  // Three feel rules refine the crossings: a crossing lands (or bonks)
+  // when the player is genuinely arriving — already over the column, or
+  // center on it, or pressed on its face, or moving straight down — while
+  // a same-frame lateral graze slides off; faces engaged thinner than the
   // squeeze band don't block, so exact-fit openings are enterable; and the
   // final de-penetration settles thin overlap along its shallow axis.
   resolvePlatformPhysics_() {
@@ -549,30 +550,31 @@ export default class SpriteLab2Engine extends SpriteLab {
         }
         const top = wall.position.y - wallHalfH;
         const centerOn = Math.abs(x - wall.position.x) <= wallHalfW;
+        // The body already overlapped this column before the frame's
+        // movement: crossing its face is then a descent onto (or rise
+        // into) the block, not a lateral graze. Standing on a block is
+        // the degenerate case, so this also keeps footing until the body
+        // fully leaves an edge. Only a same-frame graze is declined and
+        // slides off via de-penetration — its overlap is at most one
+        // step, so the slide is never a visible yank, and gaps stay
+        // enterable (a crossing graze mustn't grab the far corner).
+        const wasOver =
+          halfW + wallHalfW - Math.abs(prev.x - wall.position.x) >
+          CONTACT_EPSILON;
         // Crossing tolerance is the squeeze band, not mere contact: a
         // player who slipped sideways through the band arrives with feet
         // already a few px past the face and must still be caught here —
         // de-penetration would see the fall-deepened overlap and eject
         // them sideways instead.
         if (dy > 0 && prev.y + halfH <= top + MIN_SOLID_OVERLAP) {
-          // Footing is kept generously but gained strictly: a player
-          // already resting on this block keeps it until the collider
-          // fully leaves (a jump from the outer edge still works), while
-          // one arriving from open air lands only once their center is
-          // over it — a corner graze slides off via de-penetration instead
-          // (else one-cell gaps are unenterable: the feet almost always
-          // graze a neighbor's corner as they cross the top line).
-          const wasResting =
-            Math.abs(prev.y + halfH - top) <= CONTACT_EPSILON &&
-            Math.abs(prev.x - wall.position.x) < halfW + wallHalfW;
-          if (vertical || centerOn || wasResting || wasPressed) {
+          if (vertical || centerOn || wasOver || wasPressed) {
             y = Math.min(y, top - halfH);
             sprite.velocity.y = 0;
           }
         } else if (
           dy < 0 &&
           prev.y - halfH >= wall.position.y + wallHalfH - MIN_SOLID_OVERLAP &&
-          (vertical || centerOn || wasPressed)
+          (vertical || centerOn || wasOver || wasPressed)
         ) {
           y = Math.max(y, wall.position.y + wallHalfH + halfH);
           sprite.velocity.y = 0;
