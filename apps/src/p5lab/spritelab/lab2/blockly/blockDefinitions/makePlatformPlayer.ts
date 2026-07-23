@@ -32,7 +32,7 @@ const generator: GeneratorFunction = block =>
 const helperCode = [
   'function makePlatformPlayer(animation, layout) {',
   '  var cell = 400 / layout.length;',
-  '  var jumpSpeed = 15;',
+  '  var jumpSpeed = 11;',
   '  var colliderWidth = 0.7;',
   '  for (var row = 0; row < layout.length; row++) {',
   '    for (var col = 0; col < layout[row].length; col++) {',
