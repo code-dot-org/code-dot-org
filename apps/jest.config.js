@@ -231,8 +231,32 @@ const config = {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
+        // Transpile only, no type-checking (mirrors ts-loader's transpileOnly
+        // in webpack.config.js). With type-checking on, every jest worker built
+        // a TS program spanning all of src/ and test/ (~3 GB heap, ~20s CPU per
+        // worker), pinning CI workers near the default ~4 GB V8 heap limit; the
+        // resulting GC stalls made unrelated async tests exceed their timeouts.
+        // Type errors are still caught by ForkTsCheckerWebpackPlugin in `yarn
+        // start` and `yarn build`, in development and CI alike.
+        //
+        // Transpile-only is enabled by isolatedModules in tsconfig.build.json.
+        // Do not remove it there, or performance problems may come back.
+
         tsconfig: {
           target: 'es6',
+
+          // Keeps dynamic import() working in jest: it compiles import() down
+          // to require, which jest's CJS runtime executes natively, so
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
+          module: 'commonjs',
+
+          // The inherited moduleResolution: node16 is invalid next to
+          // module: commonjs (TS5110), so override it with a compatible
+          // value. No effect beyond satisfying validation, since jest
+          // resolves imports itself.
+          moduleResolution: 'node',
         },
       },
     ],

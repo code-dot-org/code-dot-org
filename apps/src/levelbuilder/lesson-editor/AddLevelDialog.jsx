@@ -91,7 +91,6 @@ export default class AddLevelDialog extends Component {
 const styles = {
   dialog: {
     width: 970,
-    marginLeft: -500,
   },
   dialogContent: {
     display: 'flex',

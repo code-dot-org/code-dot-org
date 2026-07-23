@@ -16,6 +16,12 @@
     .dropdown {
       width: 48%;
       font-size: 12px;
+
+      // Stand-in for :disabled — see the instrument select in ChordPanel.tsx.
+      &[data-loading='true'] {
+        pointer-events: none;
+        opacity: 0.6;
+      }
     }
   }
 

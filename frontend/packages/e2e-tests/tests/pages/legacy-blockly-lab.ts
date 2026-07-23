@@ -33,6 +33,13 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Show Code header toggle; opens the program's code dialog. */
   readonly showCodeHeader: Locator;
 
+  /**
+   * Show Code dialog's overlay (the DSCO Modal's role="presentation" backdrop,
+   * mounted on #showCodeModal appended to body). Carries the modal-backdrop
+   * z-index; this is the element whose stacking sits in front of the callouts.
+   */
+  readonly showCodeModalOverlay: Locator;
+
   /** Inline feedback panel rendered below the instructions after an incorrect solution. */
   readonly inlineFeedback: Locator;
 
@@ -57,6 +64,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.loadingSpinner = page.locator('#codeApp .loading');
     this.resetButton = page.locator('#resetButton');
     this.showCodeHeader = page.locator('#show-code-header');
+    this.showCodeModalOverlay = page.locator(
+      '#showCodeModal [role="presentation"]',
+    );
     this.inlineFeedback = page.locator(
       '.uitest-topInstructions-inline-feedback',
     );
