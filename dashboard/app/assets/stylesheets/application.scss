@@ -3399,7 +3399,8 @@ h5.dialog-title {
   #feedbackButtons > div {
     display: flex;
     justify-content: flex-end;
-    gap: 12px;
+    align-items: center;
+    gap: 24px;
     margin-top: 16px;
   }
 
@@ -3407,22 +3408,7 @@ h5.dialog-title {
   #feedbackButtons #again-button {
     float: none !important;
     margin: 0 !important;
-    min-width: 100px !important;
-    border-radius: 0.25rem !important;
-    padding: 8px 16px !important;
     font-family: var(--font-family-main);
-  }
-
-  #feedbackButtons #continue-button {
-    background-color: var(--background-brand-purple-primary) !important;
-    border-color: var(--background-brand-purple-primary) !important;
-    color: var(--text-neutral-white-fixed) !important;
-  }
-
-  #feedbackButtons #again-button {
-    background-color: transparent !important;
-    border: 1px solid var(--borders-neutral-strong) !important;
-    color: var(--text-neutral-primary) !important;
   }
 
   // Puzzle rating buttons. !important on the fills beats
