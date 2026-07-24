@@ -33,6 +33,7 @@ $max-cell-width: 350px;
 .headerCell {
   background-color: var(--background-brand-teal-primary);
   border: 1px solid var(--borders-neutral-strong);
+  color: var(--text-neutral-white-fixed);
   max-width: $max-cell-width;
   padding: 6px 10px;
   white-space: nowrap;
@@ -84,13 +85,16 @@ $max-cell-width: 350px;
   }
 }
 
-.input {
+// DSCO TextField used inside compact data-table cells. FormFieldWrapper
+// defaults to min-width 18.75rem, which blows out the cells; the doubled
+// class beats the DS single-class rule so the field fills its cell instead.
+.dataField.dataField {
+  min-width: 0;
   width: 100%;
-  height: 30px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 5px;
-  padding: 4px 6px;
-  margin-bottom: 0;
+
+  input {
+    width: 100%;
+  }
 }
 
 .buttonText {
