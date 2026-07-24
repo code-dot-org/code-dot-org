@@ -1,20 +1,13 @@
 /**
- * Background removal (green-screen chroma key) for AI-generated sprites.
- *
- * The image is generated on a flat #00FF00 background; we flood-fill from the
- * top-left corner and key out every pixel connected to it that matches the
- * corner color. Two matte styles are supported, chosen by the caller:
- *
- *   - Sharp (default): a binary 1-bit alpha cut. Background pixels become fully
- *     transparent, everything else stays fully opaque. This is what pixel art
- *     wants — hard, aliased edges with no feathering.
- *   - Soft: edge pixels in the ramp between background and subject get partial
- *     alpha proportional to their chroma distance, plus green-spill suppression
- *     to kill the green fringe. This is what smooth/illustrated art wants.
- *
- * keyOutBackground() holds the per-pixel decision (unit-testable without a
- * canvas); removeBackground() is the thin DOM/canvas wrapper.
+ * Background removal (chroma key) for AI-generated images: the key color is
+ * sampled from the top-left corner and flood-filled out. Two matte styles:
+ * sharp (binary alpha, what pixel art wants) and soft (feathered edge ramp
+ * with key-spill suppression, what illustrated art wants). keyOutBackground()
+ * holds the per-pixel decision (unit-testable without a canvas);
+ * removeBackground() is the thin canvas wrapper.
  */
+
+import {findOpaqueBounds} from '@cdo/apps/p5lab/spritelab/lab2/imageTrim';
 
 export interface MatteOptions {
   // Soft matte feathers the edge (partial alpha + spill suppression). When
@@ -44,16 +37,30 @@ function chromaDistance(
   );
 }
 
-// Pull a green-dominant edge pixel back toward its nearest non-green channel,
-// removing the green halo left when the subject's anti-aliased edge blended
-// into the key color. Only meaningful for a green key, which is what we use.
-function suppressGreenSpill(data: Uint8ClampedArray, px: number): void {
-  const r = data[px];
-  const g = data[px + 1];
-  const b = data[px + 2];
-  const maxRB = Math.max(r, b);
-  if (g > maxRB) {
-    data[px + 1] = maxRB;
+// The key color's strictly dominant RGB channel, or null when no single
+// channel dominates. Spill suppression only makes sense for single-channel
+// keys (green, blue, red-ish); for mixed keys (magenta, cyan, white) clamping
+// one channel would shift hue, so it's skipped.
+function dominantChannel(r: number, g: number, b: number): number | null {
+  const channels = [r, g, b];
+  const max = Math.max(r, g, b);
+  return channels.filter(c => c === max).length === 1
+    ? channels.indexOf(max)
+    : null;
+}
+
+// Pull a key-dominant edge pixel back toward its other channels, removing the
+// key-colored halo left when the subject's anti-aliased edge blended into the
+// key color.
+function suppressKeySpill(
+  data: Uint8ClampedArray,
+  px: number,
+  keyChannel: number
+): void {
+  const others = [0, 1, 2].filter(c => c !== keyChannel);
+  const maxOther = Math.max(data[px + others[0]], data[px + others[1]]);
+  if (data[px + keyChannel] > maxOther) {
+    data[px + keyChannel] = maxOther;
   }
 }
 
@@ -61,8 +68,8 @@ function suppressGreenSpill(data: Uint8ClampedArray, px: number): void {
  * Key out the background in-place. The reference color is read from pixel
  * (0, 0); every pixel connected to it (4-neighbour) within the threshold band
  * is made transparent (sharp) or feathered (soft). Pixels beyond highThreshold
- * are treated as subject and the fill does not cross them, so green *inside*
- * the subject is preserved.
+ * are treated as subject and the fill does not cross them, so key color
+ * *inside* the subject is preserved.
  */
 export function keyOutBackground(
   data: Uint8ClampedArray,
@@ -76,6 +83,7 @@ export function keyOutBackground(
 
   // Sharp matte collapses the band to a single threshold (binary cut).
   const hi = soft ? Math.max(highThreshold, lowThreshold) : lowThreshold;
+  const keyChannel = soft ? dominantChannel(refR, refG, refB) : null;
 
   const visited = new Uint8Array(width * height);
   const stack: number[] = [0];
@@ -95,11 +103,13 @@ export function keyOutBackground(
       // Pure background.
       data[px + 3] = 0;
     } else {
-      // Edge ramp: partial alpha, de-greened.
+      // Edge ramp: partial alpha, spill-suppressed.
       data[px + 3] = Math.round(
         (255 * (dist - lowThreshold)) / (hi - lowThreshold)
       );
-      suppressGreenSpill(data, px);
+      if (keyChannel !== null) {
+        suppressKeySpill(data, px, keyChannel);
+      }
     }
 
     const x = idx % width;
@@ -146,6 +156,65 @@ export async function removeBackground(
 
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob(result => {
+      if (result) {
+        resolve(result);
+      } else {
+        reject(new Error('Failed to convert canvas to blob'));
+      }
+    }, 'image/png');
+  });
+}
+
+/**
+ * Crop an image Blob to its opaque content bounds and return a new PNG Blob.
+ * Returns the input unchanged when there's nothing to crop (full-bleed
+ * content or nothing opaque). Run after keying: the delivered image then
+ * fills its own frame edge-to-edge, so grid-placed copies tile seamlessly no
+ * matter how much margin the model left.
+ */
+export async function cropToContent(blob: Blob): Promise<Blob> {
+  const img = await loadImage(blob);
+  const canvas = document.createElement('canvas');
+  canvas.width = img.width;
+  canvas.height = img.height;
+  const ctx = canvas.getContext('2d')!;
+  ctx.drawImage(img, 0, 0);
+
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const bounds = findOpaqueBounds(
+    imageData.data,
+    imageData.width,
+    imageData.height
+  );
+  if (
+    !bounds ||
+    (bounds.left === 0 &&
+      bounds.top === 0 &&
+      bounds.right === canvas.width - 1 &&
+      bounds.bottom === canvas.height - 1)
+  ) {
+    return blob;
+  }
+
+  const cropped = document.createElement('canvas');
+  cropped.width = bounds.right - bounds.left + 1;
+  cropped.height = bounds.bottom - bounds.top + 1;
+  cropped
+    .getContext('2d')!
+    .drawImage(
+      canvas,
+      bounds.left,
+      bounds.top,
+      cropped.width,
+      cropped.height,
+      0,
+      0,
+      cropped.width,
+      cropped.height
+    );
+
+  return new Promise<Blob>((resolve, reject) => {
+    cropped.toBlob(result => {
       if (result) {
         resolve(result);
       } else {

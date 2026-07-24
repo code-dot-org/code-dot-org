@@ -7,7 +7,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 import SpriteLab from '../SpriteLab';
 
-import {SPRITELAB2_EXTRA_SHARED_BLOCKS} from './blockly/extraSharedBlocks';
+import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
 
 const NOOP = () => {};
@@ -165,10 +165,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.level = {
       helperLibraries,
       softButtons: [],
-      // So the lab-owned behaviors' helperCode is prepended like pool blocks'.
+      // So the lab-owned blocks' helperCode is prepended like pool blocks'.
       sharedBlocks: [
         ...(levelProperties.sharedBlocks || []),
-        ...SPRITELAB2_EXTRA_SHARED_BLOCKS,
+        ...SPRITELAB2_HELPER_CODE,
       ],
       customHelperLibrary: levelProperties.customHelperLibrary,
     };

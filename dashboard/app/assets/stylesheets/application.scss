@@ -79,6 +79,11 @@ body.pin_bottom {
   left: 0;
 }
 
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft labs
+body.pin_bottom:not(.minecraft) {
+  background-color: var(--background-neutral-secondary);
+}
+
 body.oceans-blue {
   background-color: $oceans_deep_blue;
 }
