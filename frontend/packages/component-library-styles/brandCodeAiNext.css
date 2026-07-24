@@ -18,7 +18,11 @@
 
 /* stylelint-disable color-hex-length */
 [data-brand='codeai-next']:root,
-[data-brand='codeai-next'] {
+[data-brand='codeai-next'],
+[data-brand='codeai-next'][data-theme='Light'],
+[data-brand='codeai-next'] [data-theme='Light'],
+[data-brand='codeai-next'][data-theme='Dark'],
+[data-brand='codeai-next'] [data-theme='Dark'] {
   --brand-purple-5: #e4e2f8;
   --brand-purple-10: #cac6f5;
   --brand-purple-20: #aca8ea;
