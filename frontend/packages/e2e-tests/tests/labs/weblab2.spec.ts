@@ -88,8 +88,9 @@ test.describe('Web Lab 2', () => {
 
       // The preview iframe is masked so this test can run everywhere: its
       // content only resolves on a real deployed environment. The
-      // deployed-only preview visual check below covers it unmasked.
-      const masks = [lab.lessonHeaderInfo, lab.previewIframe];
+      // deployed-only preview visual check below covers it unmasked. The AI
+      // tutor tab's pulsing dot animates, so its capture phase is unstable.
+      const masks = [lab.lessonHeaderInfo, lab.previewIframe, lab.aiTutorTab];
 
       // Park the pointer between steps so tooltips on the preview-header
       // buttons never appear in a checkpoint.
@@ -114,15 +115,18 @@ test.describe('Web Lab 2', () => {
       await lab.gotoLevel();
       await lab.waitForPreviewLoaded();
 
+      // The AI tutor tab is masked for its animated notification dot.
+      const masks = [lab.lessonHeaderInfo, lab.aiTutorTab];
+
       // The level opens in split view (editor and preview side by side).
       await page.mouse.move(0, 0);
-      await visualCheck('split view', {mask: [lab.lessonHeaderInfo]});
+      await visualCheck('split view', {mask: masks});
 
       await lab.codeViewButton.click();
       await expect(lab.codeViewButton).toHaveAttribute('aria-pressed', 'true');
       await expect(lab.previewIframe).toBeHidden();
       await page.mouse.move(0, 0);
-      await visualCheck('code view', {mask: [lab.lessonHeaderInfo]});
+      await visualCheck('code view', {mask: masks});
 
       await lab.previewViewButton.click();
       await expect(lab.previewViewButton).toHaveAttribute(
@@ -133,7 +137,7 @@ test.describe('Web Lab 2', () => {
       // chain to render again before capturing.
       await lab.waitForPreviewLoaded();
       await page.mouse.move(0, 0);
-      await visualCheck('preview view', {mask: [lab.lessonHeaderInfo]});
+      await visualCheck('preview view', {mask: masks});
 
       await lab.mobileViewButton.click();
       await expect(lab.mobileViewButton).toHaveAttribute(
@@ -141,7 +145,7 @@ test.describe('Web Lab 2', () => {
         'true',
       );
       await page.mouse.move(0, 0);
-      await visualCheck('mobile preview view', {mask: [lab.lessonHeaderInfo]});
+      await visualCheck('mobile preview view', {mask: masks});
     },
   );
 });

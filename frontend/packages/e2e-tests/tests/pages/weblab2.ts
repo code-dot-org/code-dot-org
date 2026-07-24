@@ -90,6 +90,13 @@ export class WebLab2 extends LessonLevelPage {
   /** Workspace-header segmented button showing the web preview only. */
   readonly previewViewButton: Locator;
 
+  /**
+   * AI tutor tab in the instructions side panel. New users (every test run)
+   * get a pulsing notification dot here, so visual checkpoints mask the whole
+   * tab — the pulse ring animates and overflows the dot's own box.
+   */
+  readonly aiTutorTab: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsPanel = page.locator('#instructions-panel');
@@ -116,6 +123,7 @@ export class WebLab2 extends LessonLevelPage {
     this.previewViewButton = page.getByRole('button', {
       name: 'View web preview only',
     });
+    this.aiTutorTab = page.locator('#resource-panel-tab-aiTutor');
   }
 
   /** Open the debug panel and wait for it to mount. */
