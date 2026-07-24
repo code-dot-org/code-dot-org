@@ -62,6 +62,10 @@ class InstructionsCSF extends React.Component {
       })
     ).isRequired,
     collapsed: PropTypes.bool.isRequired,
+    collapseIcon: PropTypes.node,
+    expandIcon: PropTypes.node,
+    upIcon: PropTypes.node,
+    downIcon: PropTypes.node,
 
     shortInstructions: PropTypes.string,
     longInstructions: PropTypes.string,
@@ -344,6 +348,10 @@ class InstructionsCSF extends React.Component {
             setColHeight={this.setRightColHeight}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
             hasShortAndLongInstructions={hasShortAndLongInstructions}
+            collapseIcon={this.props.collapseIcon}
+            expandIcon={this.props.expandIcon}
+            upIcon={this.props.upIcon}
+            downIcon={this.props.downIcon}
           />
         </ThreeColumns>
       </div>

@@ -4,7 +4,7 @@ This package is intended for import in first-party Code.org web applications and
 
 ## Singletons instantiated at module load
 
-Three singletons are created the moment their module is first imported — not lazily:
+These singletons are created the moment their module is first imported — not lazily:
 
 **`CodeStudioConfig`** ([`src/config/SiteConfig.ts`](../src/config/SiteConfig.ts))
 
@@ -43,6 +43,14 @@ installs a deferred adapter synchronously so module-level calls made
 immediately after `initializeCore()` are buffered while the async factory
 dynamically imports the Sentry adapter. Log and metric sampling are
 session-based via an observability-owned session ID stored in `sessionStorage`.
+
+**`defaultStore`** ([`src/redux/store.ts`](../src/redux/store.ts))
+
+The global redux store, created with only a built-in bookkeeping slice.
+Feature packages own their slices and hosts inject them at runtime via
+`injectSlices`. Available via the `@code-dot-org/core/redux` sub-path export;
+the injection convention is documented in
+[`src/redux/README.md`](../src/redux/README.md).
 
 ## Plugin model
 
