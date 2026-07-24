@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:46:07.000Z",
   "level_num": "custom",
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px; float:right; margin-left: 20px;\">\r\n\r\n# Heading Sizes\r\n\r\n\r\nHeadings can come in different sizes.  In this page, there are six different sized headings, but they are all mixed up.  Can you and your partner figure out how to fix them?\r\n\r\n# Do This:\r\n1) Use AI Tutor to figure out what makes the headings different sizes\r\n2) Make sure you and your partner agree on what the different heading tags do.\r\n3) Change the tags so that the headings are in order from biggest to smallest, and the text says the correct size, as in the picture to the right. \r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n![Gif showing how to change the headings to the proper order](https://images.code.org/10e66bba6d87e921ea1a1640502a629c-image-1767509067609.gif)\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n:::",
+    "long_instructions": "<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15 PM.png\" style=\"width:100px; float:right; margin-left: 20px;\">\r\n\r\n# Heading Sizes\r\n\r\n\r\nHeadings can come in different sizes.  In this page, there are six different sized headings, but they are all mixed up.  Can you and your partner figure out how to fix them?\r\n\r\n# Do This:\r\n1) Use the Inspect Tool to figure out what makes the headings different sizes\r\n2) Make sure you and your partner agree on what the different heading tags do.\r\n3) Change the tags so that the headings are in order from biggest to smallest, and the text says the correct size, as in the picture to the right. \r\n\r\n::: details [🔎 **Show Me How To Get Started** 🔍]\r\n\r\n![Gif showing how to change the headings to the proper order](https://images.code.org/10e66bba6d87e921ea1a1640502a629c-image-1767509067609.gif)\r\n:::\r\n\r\n::: details [Help & Tips]\r\n- [<i class=\"fa-regular fa-map\"></i> Headings and Paragraphs](https://studio.code.org/courses/csd-2024/guides/headings-and-paragraphs)\r\n- [<i class=\"fa-solid fa-book\"></i> HTML Tags](https://studio.code.org/courses/csd-2024/guides/html-tags)\r\n:::",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -55,9 +56,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:07.869+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L3-L3-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:07.869+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L3-2025\\\"\"],\"cloned_from\":\"CSD U2L3-L3-2025\"},{\"changed_at\":\"2026-07-24 00:26:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>
