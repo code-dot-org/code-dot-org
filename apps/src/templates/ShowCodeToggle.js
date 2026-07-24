@@ -10,9 +10,6 @@ import {singleton as studioApp} from '../StudioApp';
 
 import {PaneButton} from './PaneHeader';
 
-const BLOCKS_GLYPH_DARK =
-  'data:image/gif;base64,R0lGODlhEAAQAIAAAE1XX01XXyH+GkNyZWF0ZWQgd2l0aCBHSU1QIG9uIGEgTWFjACH5BAEKAAEALAAAAAAQABAAAAIdjI+py40AowRp2molznBzB3LTIWpGGZEoda7gCxYAOw==';
-
 const commonProps = {
   hasFocus: PropTypes.bool,
   isRtl: PropTypes.bool,
@@ -40,22 +37,15 @@ class ShowCodeButton extends Component {
   }
 
   render() {
-    const iconImageStyle = {
-      ...styles.iconImage,
-      ...(this.props.isRtl && styles.blocksGlyphImageRtl),
-    };
-    const blocksGlyphIcon = (
-      <img src={BLOCKS_GLYPH_DARK} style={iconImageStyle} alt="" />
-    );
     return (
       <PaneButton
         id="show-code-header"
-        iconProps={
-          this.props.showingBlocks
-            ? {iconName: 'code', iconStyle: 'solid'}
-            : undefined
-        }
-        icon={this.props.showingBlocks ? undefined : blocksGlyphIcon}
+        iconProps={{
+          iconName: this.props.showingBlocks
+            ? 'code'
+            : 'chart-simple-horizontal',
+          iconStyle: 'solid',
+        }}
         label={
           this.props.showingBlocks
             ? this.props.showCodeLabel
@@ -185,29 +175,3 @@ export default class ShowCodeToggle extends Component {
     );
   }
 }
-
-const styles = {
-  blocksGlyph: {
-    lineHeight: '22px',
-    paddingRight: 8,
-    fontSize: 15,
-    fontWeight: 'bold',
-  },
-  iconImage: {
-    verticalAlign: 'text-bottom',
-    maxWidth: 'none',
-    width: '14px',
-    height: '14px',
-  },
-  blocksGlyphRtl: {
-    paddingRight: 0,
-    paddingLeft: 8,
-  },
-  blocksGlyphImageRtl: {
-    transform: 'scale(-1, 1)',
-    MozTransform: 'scale(-1, 1)',
-    WebkitTransform: 'scale(-1, 1)',
-    OTransform: 'scale(-1, 1)',
-    msTransform: 'scale(-1, 1)',
-  },
-};
