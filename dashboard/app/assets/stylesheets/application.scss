@@ -1669,12 +1669,38 @@ body.iframe_embed_app_and_code {
   }
 }
 
+// Matches DSCO CloseButton (color dark). Sits inside the modal
+// top-right; no wrapper surface. Renders <i class="fa-solid fa-xmark">
+// (see LegacyDialog.js).
 .x-close {
-  @include close-button($cornerOffset: -20px);
-  // Reset native <button> styles so the icon matches the old <div>-based markup.
-  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
   border: 0;
   padding: 0;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 .open-link {
@@ -3231,7 +3257,9 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-body {
+// Scoped under .dash_modal so LegacyDialog paint doesn't leak onto
+// react-bootstrap modals in non-lab surfaces (teacher tools, PD, account).
+.dash_modal .modal-body {
   .modal-content {
     margin-left: $modal-image-width + $modal-image-margin-gap;
     html[dir=rtl] & {
@@ -3242,20 +3270,23 @@ $modal-no-icon-gap: 22px;
       margin-left: $modal-no-icon-gap;
     }
 
-    p, pre {
-      line-height: 27px;
-      font-size: 24px;
-      color: $neutral_dark;
-    }
-
-    pre {
-      color: $purple;
-    }
-
+    // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
+    // Targets the specific class so the Show Code panel's own p/pre
+    // styling inside .generated-code-container is untouched.
     .congrats {
-      @include main-font-semi-bold;
-      font-size: 21px;
-      line-height: 27px;
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-semi-bold);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .lines-of-code-message {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
     .instructions-markdown p {
@@ -3362,6 +3393,60 @@ h5.dialog-title {
   color: $white;
   margin-left: 0;
   margin-right: 10px;
+}
+
+// Puzzle-complete dialog polish (scoped to LegacyDialog surfaces).
+.dash_modal {
+  // Rebrand the collapsible "Show code" toggle only; the panel inside
+  // (.generated-code-container) keeps its own styling. CodeWritten
+  // renders the summary with inline styles (fontSize: 18, fontWeight:
+  // 'normal') so !important is needed to override.
+  .modal-content .show-code > summary {
+    font-family: var(--font-family-main) !important;
+    font-size: var(--font-size-body-md) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  // DialogButtons renders <div><button/><button/></div> inside
+  // #feedbackButtons; flex on that inner wrapper puts the buttons in a
+  // row rather than stacked.
+  #feedbackButtons > div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  // LegacyButton applies Radium inline styles (backgroundColor, borderColor,
+  // color, float:right). Inline styles beat class specificity, so !important
+  // is needed to override.
+  #feedbackButtons #continue-button,
+  #feedbackButtons #again-button {
+    float: none !important;
+    margin: 0 !important;
+    min-width: 100px !important;
+    border-radius: 0.25rem !important;
+    padding: 8px 16px !important;
+    font-family: var(--font-family-main);
+  }
+
+  #feedbackButtons #continue-button {
+    background-color: var(--background-brand-purple-primary) !important;
+    border-color: var(--background-brand-purple-primary) !important;
+    color: var(--text-neutral-white-fixed) !important;
+  }
+
+  #feedbackButtons #again-button {
+    background-color: transparent !important;
+    border: 1px solid var(--borders-neutral-strong) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  // Drop the "Did you like this puzzle?" rating row per product ask.
+  #puzzleRatingButtons {
+    display: none;
+  }
 }
 
 .modal-image {
