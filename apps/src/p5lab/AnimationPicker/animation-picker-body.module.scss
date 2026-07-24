@@ -55,3 +55,7 @@
     }
   }
 }
+
+:global(.modal-content):has(> .pickerDialog) {
+  background-color: var(--background-neutral-primary);
+}
