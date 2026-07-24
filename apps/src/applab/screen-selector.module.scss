@@ -2,13 +2,7 @@
 
 select.dropdown {
   width: 100%;
+  height: 28px;
   margin: 0;
-
-  > div {
-    width: 100%;
-  }
-
-  select {
-    width: 100%;
-  }
+  border-color: color.$light_gray;
 }
