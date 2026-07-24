@@ -291,17 +291,14 @@ html[dir='rtl'] {
 
     // ON thumb inverts against the selected track.
     div input[type='checkbox']:checked:not(:disabled) + .switch span {
-      background: var(
-        --background-selected-primary-inverse,
-        var(--text-selected-primary)
-      );
+      background: var(--background-selected-primary-inverse);
     }
 
     // Hover
     &:hover {
       div .switch i {
         &::before {
-          background-color: var(--background-selected-hover);
+          background-color: var(--background-selected-strong);
         }
 
         &::after {
@@ -311,14 +308,14 @@ html[dir='rtl'] {
     }
 
     // Pressed — the legacy pressed border blends into the fill: on the
-    // ON side border-selected-hover matches background-selected-hover
+    // ON side border-selected-strong matches background-selected-strong
     // by design; the OFF side has no matching border token, so the
     // border stays at its transparent base.
     &:active div input[type='checkbox']:not(:disabled) + .switch i,
     div input[type='checkbox']:active:not(:disabled) + .switch i {
       &::before {
-        border-color: var(--border-selected-hover);
-        background: var(--background-selected-hover);
+        border-color: var(--border-selected-strong);
+        background: var(--background-selected-strong);
       }
 
       &::after {
