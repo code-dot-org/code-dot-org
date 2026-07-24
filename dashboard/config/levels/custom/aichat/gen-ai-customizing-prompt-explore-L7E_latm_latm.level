@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the last level!\r\n\r\n### Do This\r\n\r\nAdd a system prompt that matches the chatbot you described. You may not be able to get it 100% perfect yet, but this can be a good start!\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
+    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the last level!\r\n\r\n### Do This\r\n\r\nAdd a system prompt that matches the chatbot you described. You may not be able to get it 100% perfect yet, but this can be a good start!\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- A specific role or tone to use when responding\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#4c42cf\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",

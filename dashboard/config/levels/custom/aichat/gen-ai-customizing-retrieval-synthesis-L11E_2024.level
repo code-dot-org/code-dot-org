@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
+    "long_instructions": "## Make Your Own\r\n\r\nMake the chatbot you described in the check-in level! Add a system prompt and at least 10 retrieval statements. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible.\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#4c42cf\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
