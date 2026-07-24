@@ -451,7 +451,7 @@ img.video_thumbnail {
   .header-wrapper .headerlinks .headerlink {
     padding: 5px 10px;
     border-radius: 0.5rem;
-    font-weight: $semi-bold-font-weight;
+    font-weight: var(--font-weight-semi-bold);
     // Pills never wrap to two lines; the row overflows visibly rather than
     // silently breaking vertical rhythm.
     white-space: nowrap;
@@ -476,7 +476,7 @@ img.video_thumbnail {
   .header-wrapper .header_button {
     height: 32px;
     border-radius: 0.5rem;
-    font-weight: $semi-bold-font-weight;
+    font-weight: var(--font-weight-semi-bold);
 
     &:hover, a:hover {
       background-color: var(--neutral-white-alpha-20);
