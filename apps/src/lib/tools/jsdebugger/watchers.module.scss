@@ -23,4 +23,9 @@
 .watchTextField {
   flex: 1;
   min-width: 0;
+  overflow: hidden;
+}
+
+.watchTextFieldInput {
+  width: 100%;
 }

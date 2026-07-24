@@ -379,6 +379,7 @@ class Watchers extends React.Component {
                   onClick={() => this.setState({autocompleteOpen: true})}
                   value={this.state.text}
                   size="s"
+                  className={moduleStyles.watchTextFieldInput}
                 />
                 {this.state.autocompleteOpen && (
                   <AutocompleteSelector
