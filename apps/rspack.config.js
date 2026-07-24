@@ -10,13 +10,11 @@
 // for rspack builtins or their rspack forks.  Every deliberate divergence
 // is marked RSPACK-DIFF with rationale.
 //
-// Output parity vs the webpack build (dev, full entry set): named
-// manifest keys match 3633/3634.  The one gap is fonts referenced by
-// root-relative url('/fonts/...') in CSS, which the css-loader url
-// filter below skips on purpose (dashboard serves those paths).
-// Numeric async chunk filenames do not correspond between the two
-// builds ('deterministic' ids here vs webpack 'total-size'), which is
-// cosmetic.
+// Known output differences vs the webpack build: fonts referenced by
+// root-relative url('/fonts/...') in CSS are skipped by the css-loader
+// url filter below (dashboard serves those paths), and numeric async
+// chunk filenames do not correspond ('deterministic' ids here vs
+// webpack 'total-size').
 //
 // Usage:
 //   DEV=1 npx rspack build --config rspack.config.js
@@ -228,14 +226,13 @@ function createRspackConfig({
         // swc loader.  This is where the order-of-magnitude speedup lives:
         // JS loaders serialize on the node thread even under rspack.
         //
-        // RSPACK_SWC=ts replaces only ts-loader.  swc with commonjs modules
-        // matches ts-loader's transpileOnly output closely, so this mode is
-        // safe.  RSPACK_SWC=all also replaces babel-loader for js/jsx and
+        // RSPACK_SWC=ts replaces only ts-loader; swc with commonjs
+        // modules matches ts-loader's transpileOnly output closely.
+        // RSPACK_SWC=all also replaces babel-loader for js/jsx, which
         // needs three babel behaviors reproduced (all wired below): the
         // add-module-exports shim loader, sourceType-unambiguous module
-        // detection (isModule 'unknown'), and loose classes WITHOUT loose
-        // spread (jsc.assumptions).  Browser-validated on dance, sprite
-        // lab, and music playback; ~9s full build.
+        // detection (isModule 'unknown'), and loose classes without
+        // loose spread (jsc.assumptions).
         ...(process.env.RSPACK_SWC === 'all' || process.env.RSPACK_SWC === '1'
           ? [
               {
@@ -265,14 +262,14 @@ function createRspackConfig({
                           },
                         },
                         // babel.config.json targets es5, with loose
-                        // applied ONLY to transform-classes.  swc's global
-                        // `loose` also degrades spread to [].concat, which
-                        // wraps Sets instead of expanding them (broke
-                        // Blockly's flyout).  These assumptions reproduce
-                        // babel's loose classes — methods assigned to the
-                        // prototype, enumerable, which
-                        // CustomMarshalingInterpreter's for..in marshaling
-                        // requires — while spread stays spec-compliant.
+                        // applied ONLY to transform-classes; swc's global
+                        // `loose` would also degrade spread to [].concat,
+                        // which passes iterables through unexpanded.
+                        // These assumptions reproduce babel's loose
+                        // classes — methods assigned to the prototype,
+                        // enumerable, which CustomMarshalingInterpreter's
+                        // for..in marshaling requires — while spread
+                        // stays spec-compliant.
                         target: 'es5',
                         assumptions: {
                           setClassMethods: true,
@@ -341,10 +338,9 @@ function createRspackConfig({
                     // assignments (enumerable), matching ts-loader's es5
                     // emit: CustomMarshalingInterpreter marshals scope
                     // objects with for..in, so defineProperty-style class
-                    // emit hides every method from student code (music
-                    // lab's Sequencer was the first to break).  Targeted
+                    // emit hides every method from student code.  Targeted
                     // assumptions instead of global `loose`, which would
-                    // also degrade spread-of-Set semantics.
+                    // also degrade spread-of-iterable semantics.
                     assumptions: {
                       setClassMethods: true,
                       constantSuper: true,
@@ -602,31 +598,24 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
-    // RSPACK-DIFF: @rspack/cli would default this on for web targets
-    // under `serve` anyway, but set it explicitly: with 240 entries and
-    // ~100 dynamic-import chunks, deferring imports until a page asks
-    // for them cuts server startup roughly 3x (31s -> 11s).  Entries
-    // stay eager because Rails script tags load them without the lazy
-    // client stub.  The /_rspack/lazy trigger endpoint must be excluded
-    // from the catch-all proxy below or React.lazy chunks 404 and
-    // Suspense boundaries crash (first seen in lab2's ProgressContainer).
-    // RSPACK_LAZY_ENTRIES=1 additionally defers the 240 entries
-    // themselves.  Measured: 0.55s startup, ~6.6s to an interactive
-    // first page.  BROKEN for our pages, though: the entry request is
-    // answered with a stub and the real code hot-patches in later, so
-    // the Rails inline scripts that synchronously expect entry globals
-    // (appOptions init, header build) throw before the code arrives.
-    // Usable only if the middleware learns to stall the entry request
-    // until compiled.  Left as a toggle for future experiments.
+    // RSPACK-DIFF: @rspack/cli defaults this on for web targets under
+    // `serve`; set it explicitly so build and serve agree.  Deferring
+    // dynamic imports until a page requests them is a small startup
+    // win; the /_rspack/lazy trigger endpoint must be excluded from the
+    // catch-all proxy below or React.lazy chunks 404 and Suspense
+    // boundaries crash.  Entries stay eager: the lazy entry stub is
+    // hot-patched in after load, and Rails inline scripts synchronously
+    // expect entry globals, so RSPACK_LAZY_ENTRIES=1 is usable only if
+    // the middleware learns to stall entry requests until compiled.
     lazyCompilation: {
       imports: !process.env.RSPACK_NO_LAZY,
       entries: !!process.env.RSPACK_LAZY_ENTRIES,
     },
-    // Startup note: serving over a populated build/package/js pays
-    // ~18s of writeToDisk reading and comparing the previous output
-    // (2.8GB) before writing — 29s vs 11s measured.  start:rspack
-    // removes the js output dir first; the dev server serves from
-    // memory, so nothing reads those files before the first compile.
+    // Serving over a populated build/package/js makes writeToDisk read
+    // and compare the previous output before writing, which dominates
+    // startup.  start:rspack removes the js output dir first; the dev
+    // server serves from memory, so nothing reads those files before
+    // the first compile.
     devServer: envConstants.DEV
       ? {
           allowedHosts: [

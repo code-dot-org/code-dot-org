@@ -86,9 +86,7 @@ if (process.env.WEBPACK_LAZY) {
     ...config.experiments,
     lazyCompilation: {
       // Entries stay eager: Rails inline scripts synchronously expect
-      // entry globals, and the lazy stub + hot-patch flow races them
-      // (verified broken under rspack's equivalent).  Imports-only is
-      // the semantically safe variant.
+      // entry globals, and the lazy stub + hot-patch flow races them.
       entries: false,
       imports: true,
     },

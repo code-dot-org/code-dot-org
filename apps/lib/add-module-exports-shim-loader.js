@@ -1,34 +1,20 @@
 /**
- * @file Replicates two babel module-output behaviors for swc output.
+ * @file Replicates two babel module-output behaviors that require()
+ * sites across src/ depend on and swc has no options for.  Chain it
+ * before builtin:swc-loader in the `use` array so it receives swc's
+ * CommonJS output; the footer runs at end of module, the position
+ * where babel-plugin-add-module-exports injects its assignment.
  *
- * 1. babel-plugin-add-module-exports appends `module.exports =
- *    exports.default` to any module whose ONLY export is default.  Large
- *    parts of src/ depend on that: `require('./clientApi')` expects the
- *    default export object itself, not `{default: ...}`.
- *
- * 2. babel stamps `__esModule` only on modules with export
- *    DECLARATIONS.  Legacy files that mix `import` with bare
- *    `exports.foo =` assignments (e.g. block_utils.js) therefore carry
- *    no marker under babel, so a consumer's `import blockUtils from`
- *    interop wraps the whole exports object as the default.  swc stamps
- *    the marker on every module-classified file, which turns those
- *    default imports into `undefined`.
- *
- * swc has no equivalent options, so this loader appends a runtime
- * footer with the same effects at the same position (end of module,
- * exactly where the babel plugin injects its assignment):
- *
- * - `default` as sole enumerable export (swc defines `__esModule`
- *   non-enumerably, so Object.keys sees only real exports): unwrap, as
- *   add-module-exports would.
- * - `__esModule` present but every export is a plain data property
- *   (swc emits ESM export declarations as getters; manual `exports.foo`
- *   assignments are data properties): the module declared no ESM
- *   exports, so rebuild module.exports without the marker — it is
- *   defined non-configurable and cannot be deleted in place.
- *
- * Chain it before builtin:swc-loader in the `use` array so it receives
- * swc's CommonJS output.
+ * - Sole default export: unwrap to `module.exports = exports.default`,
+ *   as add-module-exports does.  swc defines `__esModule`
+ *   non-enumerably, so Object.keys sees only real exports.
+ * - `__esModule` present but every export is a plain data property:
+ *   babel stamps the marker only on modules with export DECLARATIONS,
+ *   so files mixing `import` with bare `exports.foo =` assignments
+ *   must not carry it or default-import interop stops wrapping the
+ *   exports object.  swc emits ESM exports as getters, so data-only
+ *   exports mean none were declared; rebuild module.exports without
+ *   the marker (it is non-configurable and cannot be deleted).
  */
 'use strict';
 
@@ -55,9 +41,6 @@ const FOOTER = `
 module.exports = function addModuleExportsShim(source, map, meta) {
   // Only ESM-compiled output carries the marker; skip everything else.
   if (typeof source === 'string' && source.includes('__esModule')) {
-    // The footer goes after the code but must not land inside a
-    // trailing sourceMappingURL comment; swc emits maps separately
-    // under our config, so a plain append is safe.
     this.callback(null, source + FOOTER, map, meta);
     return;
   }
