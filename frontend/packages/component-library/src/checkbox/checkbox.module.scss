@@ -258,7 +258,7 @@
 // (brand box + seafoam check in light, seafoam box + navy check in
 // dark) where the bridge maps the legacy teal onto the brand ramp, and
 // hover/pressed go to Figma's selected/strong, which the export carries
-// as --background-selected-hover. The box border always matches the
+// as --background-selected-strong. The box border always matches the
 // fill. Everything else — unselected hover/pressed (brand-light inner,
 // indigo pressed border), the focus ring, and the disabled grays —
 // resolves correctly through the bridge, and the legacy disabled rules
@@ -285,8 +285,8 @@
       &:checked + i::before,
       &:indeterminate + i::before {
         color: var(--text-selected-primary);
-        background: var(--background-selected-hover);
-        border-color: var(--border-selected-hover);
+        background: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
       }
     }
   }

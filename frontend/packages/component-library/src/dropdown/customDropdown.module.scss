@@ -739,13 +739,11 @@
 // becomes a solid disabled fill with the inverse label. Everything else
 // (default, hover, unselected disabled, destructive default/hover/pressed)
 // resolves correctly through the bridge.
-// Several Figma tokens are not in the colors_codeAi.css export yet and
-// get the series' fallback pattern: background/state/selected/strong
-// (the export carries that value as --background-selected-hover),
-// border/state/focused/primary (the bridge resolves the legacy focus
-// token to --border-brand-primary, the same indigo), the selected
-// checkbox glyph's background/text selected primary-inverse pair, and
-// border/state/focused/inverse (the ring on selected items).
+// Tokens used: background/border-selected-strong (hover/pressed fill),
+// border-focused-primary (unselected ring), border-focused-inverse (the
+// ring on selected items), and the selected checkbox glyph's
+// background/text-selected-primary-inverse pair — all first-class in the
+// CADS export as of #74066.
 // Selectors mirror their legacy counterparts plus the [data-brand]
 // attribute; rule order in the block matters for the equal-specificity
 // pressed/selected/disabled combinations and mirrors the legacy cascade.
@@ -795,22 +793,13 @@
             background-color: var(--background-selected-primary);
 
             i::before {
-              background-color: var(
-                --background-selected-primary-inverse,
-                var(--text-selected-primary)
-              );
-              color: var(
-                --text-selected-primary-inverse,
-                var(--background-selected-primary)
-              );
+              background-color: var(--background-selected-primary-inverse);
+              color: var(--text-selected-primary-inverse);
 
               // The Checkbox component draws its own 2px checked
               // border; the spec has no separate glyph border — it
               // matches the inner fill.
-              border-color: var(
-                --background-selected-primary-inverse,
-                var(--text-selected-primary)
-              );
+              border-color: var(--background-selected-primary-inverse);
             }
 
             span {
@@ -829,50 +818,40 @@
             }
 
             // The ring flips to the inverse focused border (seafoam on
-            // the selected fill); the fallback carries the same value
-            // pair as the selected text.
+            // the selected fill).
             .dropdownMenuItem:focus-visible {
-              outline-color: var(
-                --border-focused-inverse,
-                var(--text-selected-primary)
-              );
+              outline-color: var(--border-focused-inverse);
             }
 
             // Checkbox items focus the hidden input and the Checkbox
             // component draws the ring on the glyph — flip that ring
             // to the inverse as well.
             input[type='checkbox']:focus-visible + i::before {
-              outline-color: var(
-                --border-focused-inverse,
-                var(--text-selected-primary)
-              );
+              outline-color: var(--border-focused-inverse);
             }
           }
 
           // Selected + hover / pressed: Figma background/state/selected/
           // strong; the export carries that value as
-          // --background-selected-hover.
+          // --background-selected-strong.
           &:hover:has(input[type='checkbox']:checked),
           &:hover:has(.selectedDropdownMenuItem),
           &:active:has(input[type='checkbox']:checked),
           &:active:has(.selectedDropdownMenuItem) {
-            background-color: var(--background-selected-hover);
+            background-color: var(--background-selected-strong);
 
             // The checkbox glyph keeps its inverse pairing; only the
             // icon plate follows the fill.
             .dropdownMenuItem i::before {
-              background-color: var(--background-selected-hover);
+              background-color: var(--background-selected-strong);
             }
           }
 
           // Keyboard focus: brand-light fill (unselected items only —
-          // selected items keep their fill under the ring) and the
-          // focused border token once the sandbox exports it.
+          // selected items keep their fill under the ring) plus the
+          // focused border token.
           .dropdownMenuItem:focus-visible {
-            outline-color: var(
-              --border-focused-primary,
-              var(--border-brand-primary)
-            );
+            outline-color: var(--border-focused-primary);
           }
 
           &:not(
