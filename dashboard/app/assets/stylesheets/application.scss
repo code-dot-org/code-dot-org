@@ -3425,9 +3425,35 @@ h5.dialog-title {
     color: var(--text-neutral-primary) !important;
   }
 
-  // Drop the "Did you like this puzzle?" rating row per design
+  // Puzzle rating buttons. !important on the fills beats
+  // apps/style/common.scss:652 which selects by #like/#dislike id.
   #puzzleRatingButtons {
-    display: none;
+    margin-top: 16px;
+
+    hr {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-md);
+      color: var(--text-neutral-tertiary);
+      margin: 8px 10px 0 0;
+
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .puzzle-rating-btn {
+      fill: var(--text-neutral-quaternary) !important;
+
+      &:hover,
+      &.enabled {
+        fill: var(--text-neutral-primary) !important;
+      }
+    }
   }
 }
 
