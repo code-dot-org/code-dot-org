@@ -64,12 +64,6 @@ module Cdo
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
 
-        # The Redshift Data API's BatchExecuteStatement accepts at most 40 SQL statements per
-        # call. The consolidated orphan-drop can exceed this (a full re-provision of ~110 models
-        # produces ~220 drops), so we submit it in chunks of this size.
-        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
-        MAX_BATCH_STATEMENTS = 40
-
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
         # full recompute or incrementally); states >= 100 mean the view can no
@@ -298,7 +292,9 @@ module Cdo
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
 
-            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql])
+            # A create-or-replace is drop+create+comment (3 statements), always a single batch, so
+            # `batch_execute_async` returns exactly one statement id.
+            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql]).first
           end
 
           statements
@@ -424,11 +420,17 @@ module Cdo
             end
           end
 
-          # Drop orphaned views in chunks: the Data API caps a batch at MAX_BATCH_STATEMENTS.
-          plan[:to_drop].each_slice(MAX_BATCH_STATEMENTS).with_index do |fqns, chunk_index|
-            drop_sql = fqns.map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
-            plan[:statements]["__drop_orphans___#{chunk_index}"] = client.batch_execute_async(drop_sql)
-            yield(:drop_batch_submitted, fqns) if block_given?
+          # Drop orphaned views. A full re-provision can orphan a couple hundred, exceeding the Data
+          # API's per-call statement limit, so we opt into `allow_separate_transactions`: these drops
+          # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
+          # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
+          # batch.
+          if plan[:to_drop].any?
+            drop_sqls = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+            client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
+              plan[:statements]["__drop_orphans___#{batch_index}"] = statement_id
+            end
+            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
           end
 
           plan
