@@ -9,9 +9,6 @@ import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
 import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
 
-import styleConstants from '../../styleConstants';
-import color from '../../util/color';
-
 import {TabType} from './TopInstructions';
 
 function TopInstructionsHeader(props) {
@@ -55,17 +52,8 @@ function TopInstructionsHeader(props) {
   const showContainedLevelAnswer =
     hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
-  const collapserIconStyles = {
-    ...styles.collapserIcon.showHideButton,
-    ...(isRtl
-      ? styles.collapserIcon.showHideButtonRtl
-      : styles.collapserIcon.showHideButtonLtr),
-    ...(!isOldPurpleColor && styles.collapserIcon.rebrandPhase1StylesColor),
-    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
-  };
-
   return (
-    <PaneHeader>
+    <PaneHeader style={{padding: '0 0.5rem'}}>
       {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
       {collapsible &&
         !isEmbedView &&
@@ -75,7 +63,6 @@ function TopInstructionsHeader(props) {
             id="ui-test-collapser"
             isCollapsed={isCollapsed}
             onClick={handleClickCollapser}
-            style={collapserIconStyles}
           />
         )}
       {documentationUrl && tabSelected !== TabType.COMMENTS && (
@@ -207,7 +194,6 @@ function TopInstructionsHeader(props) {
 
 const styles = {
   paneHeaderOverride: {
-    color: color.default_text,
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
@@ -241,42 +227,6 @@ const styles = {
     display: 'flex',
     minWidth: 100,
     flex: '1 1 0',
-  },
-  helpTabsLtr: {
-    paddingLeft: 30,
-  },
-  helpTabsRtl: {
-    paddingRight: 30,
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      cursor: 'pointer',
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white,
-      },
-    },
-    showHideButtonLtr: {
-      left: 8,
-    },
-    showHideButtonRtl: {
-      right: 8,
-    },
-    rebrandPhase1StylesColor: {
-      color: color.white,
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text,
-      },
-    },
   },
   documentationButton: {
     order: 4,
