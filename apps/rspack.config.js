@@ -648,7 +648,13 @@ function createRspackConfig({
           hot: envConstants.HOT,
           liveReload: envConstants.HOT,
           devMiddleware: {
-            writeToDisk: true,
+            // Incremental rebuilds are dominated by rewriting the
+            // entry bundles a change invalidates; pages served through
+            // this dev server load JS from memory, so RSPACK_NO_WRITE=1
+            // skips the disk copy.  On by default for parity: direct
+            // :3000 access and anything else reading build/package
+            // still needs files.
+            writeToDisk: !process.env.RSPACK_NO_WRITE,
           },
         }
       : undefined,
