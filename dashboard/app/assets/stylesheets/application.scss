@@ -3435,9 +3435,16 @@ h5.dialog-title {
     .puzzle-rating-btn {
       fill: var(--text-neutral-quaternary) !important;
 
-      &:hover,
-      &.enabled {
+      &:hover {
         fill: var(--text-neutral-primary) !important;
+      }
+
+      &#like.enabled {
+        fill: var(--text-error-primary-fixed) !important;
+      }
+
+      &#dislike.enabled {
+        fill: var(--text-info-primary-fixed) !important;
       }
     }
   }
