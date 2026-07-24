@@ -230,12 +230,12 @@ function createRspackConfig({
         //
         // RSPACK_SWC=ts replaces only ts-loader.  swc with commonjs modules
         // matches ts-loader's transpileOnly output closely, so this mode is
-        // safe.  RSPACK_SWC=all also replaces babel-loader for js/jsx —
-        // measurably faster but KNOWN BROKEN at runtime: swc has no
-        // add-module-exports, and ~128 legacy files mix `import` with
-        // `module.exports =` (e.g. code-studio/initApp/project.js), which
-        // babel tolerates and swc does not.  'all' is for timing only until
-        // those files are codemodded.
+        // safe.  RSPACK_SWC=all also replaces babel-loader for js/jsx and
+        // needs three babel behaviors reproduced (all wired below): the
+        // add-module-exports shim loader, sourceType-unambiguous module
+        // detection (isModule 'unknown'), and loose classes WITHOUT loose
+        // spread (jsc.assumptions).  Browser-validated on dance, sprite
+        // lab, and music playback; ~9s full build.
         ...(process.env.RSPACK_SWC === 'all' || process.env.RSPACK_SWC === '1'
           ? [
               {
@@ -243,33 +243,58 @@ function createRspackConfig({
                 enforce: 'pre',
                 include: [...nodeModulesToTranspile, p('src'), p('test')],
                 exclude: [p('src/lodash.js')],
-                loader: 'builtin:swc-loader',
-                options: {
-                  jsc: {
-                    parser: {syntax: 'ecmascript', jsx: true},
-                    transform: {
-                      react: {
-                        runtime: 'classic',
-                        refresh: !!envConstants.HOT,
+                use: [
+                  // Post-processes swc output (loaders run bottom-up);
+                  // replicates babel-plugin-add-module-exports, which
+                  // require() sites across src/ depend on.
+                  {loader: p('lib/add-module-exports-shim-loader')},
+                  {
+                    loader: 'builtin:swc-loader',
+                    options: {
+                      // babel uses sourceType 'unambiguous': files without
+                      // import/export compile as sloppy scripts.  Mirror
+                      // it, or swc stamps "use strict" onto legacy CJS
+                      // code that assigns to frozen objects at runtime.
+                      isModule: 'unknown',
+                      jsc: {
+                        parser: {syntax: 'ecmascript', jsx: true},
+                        transform: {
+                          react: {
+                            runtime: 'classic',
+                            refresh: !!envConstants.HOT,
+                          },
+                        },
+                        // babel.config.json targets es5, with loose
+                        // applied ONLY to transform-classes.  swc's global
+                        // `loose` also degrades spread to [].concat, which
+                        // wraps Sets instead of expanding them (broke
+                        // Blockly's flyout).  These assumptions reproduce
+                        // babel's loose classes — methods assigned to the
+                        // prototype, enumerable, which
+                        // CustomMarshalingInterpreter's for..in marshaling
+                        // requires — while spread stays spec-compliant.
+                        target: 'es5',
+                        assumptions: {
+                          setClassMethods: true,
+                          constantSuper: true,
+                          noClassCalls: true,
+                          superIsCallableConstructor: true,
+                        },
+                      },
+                      // babel runs plugin-transform-modules-commonjs, so
+                      // the bundler never links strict ESM; mixed CJS/ESM
+                      // interop (e.g. the @cdo/locale stubs) depends on
+                      // that.  Mirror it, keeping import() dynamic for
+                      // code splitting and import.meta intact for
+                      // worker-chunk detection (see the ts rule below).
+                      module: {
+                        type: 'commonjs',
+                        ignoreDynamic: true,
+                        preserveImportMeta: true,
                       },
                     },
-                    // babel.config.json targets es5 via preset-env with
-                    // loose classes; mirror the target.
-                    target: 'es5',
-                    loose: true,
                   },
-                  // babel runs plugin-transform-modules-commonjs, so the
-                  // bundler never links strict ESM; mixed CJS/ESM interop
-                  // (e.g. the @cdo/locale stubs) depends on that.  Mirror
-                  // it, keeping import() dynamic for code splitting and
-                  // import.meta intact for worker-chunk detection (see the
-                  // ts rule below).
-                  module: {
-                    type: 'commonjs',
-                    ignoreDynamic: true,
-                    preserveImportMeta: true,
-                  },
-                },
+                ],
               },
             ]
           : [
@@ -312,14 +337,20 @@ function createRspackConfig({
                       },
                     },
                     target: 'es5',
-                    // loose matches ts-loader's es5 emit: methods assigned
-                    // directly to the prototype (enumerable), not defined
-                    // via _create_class/defineProperty (non-enumerable).
-                    // CustomMarshalingInterpreter marshals scope objects
-                    // with for..in, so strict-mode class emit hides every
-                    // method from student code (music lab's Sequencer was
-                    // the first to break).
-                    loose: true,
+                    // Class methods must land on the prototype as plain
+                    // assignments (enumerable), matching ts-loader's es5
+                    // emit: CustomMarshalingInterpreter marshals scope
+                    // objects with for..in, so defineProperty-style class
+                    // emit hides every method from student code (music
+                    // lab's Sequencer was the first to break).  Targeted
+                    // assumptions instead of global `loose`, which would
+                    // also degrade spread-of-Set semantics.
+                    assumptions: {
+                      setClassMethods: true,
+                      constantSuper: true,
+                      noClassCalls: true,
+                      superIsCallableConstructor: true,
+                    },
                   },
                   // See the jsx rule above: mirror babel's commonjs module
                   // output (tsconfig.build.json module node16 does the same
