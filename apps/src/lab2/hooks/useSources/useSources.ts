@@ -12,7 +12,10 @@ import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import type {
   BlocklyLevelProperties,
   Channel,
@@ -28,7 +31,8 @@ import setProjectCallbacks from './setProjectCallbacks';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const isLevelEditMode = isStartMode || isToolboxMode;
+const isLevelEditMode =
+  isStartMode || isToolboxMode || !!getAppOptionsEditingExemplar();
 
 export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
@@ -380,6 +384,9 @@ export default function useSources<T extends ProjectSources>({
   );
 
   useEffect(() => {
+    if (isLevelEditMode) {
+      return;
+    }
     dispatch(clearHeader());
     if (projectManagerRef.current && !isLoading) {
       configureHeader(isOwner || false, levelProperties);
