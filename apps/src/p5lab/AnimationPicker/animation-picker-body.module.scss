@@ -45,12 +45,12 @@
 
 .pickerDialog {
   :global(#x-close) {
-    background-color: transparent !important;
-    box-shadow: none !important;
+    background-color: transparent;
+    box-shadow: none;
     color: var(--text-neutral-primary) !important;
 
     &:hover {
-      background-color: transparent !important;
+      background-color: transparent;
       color: var(--text-brand-purple-primary) !important;
     }
   }
