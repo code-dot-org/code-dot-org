@@ -122,8 +122,7 @@ export class WebLab2 extends LessonLevelPage {
    * The lab is ready once the instructions panel mounts. The outer chrome
    * (header, lesson progress) paints first and the content region stays a
    * flat, empty background until the React app hydrates and paints
-   * instructions/editor/preview together — so this is the true readiness
-   * signal, not the header.
+   * instructions/editor/preview together.
    */
   async waitForReady(): Promise<void> {
     await expect(this.instructionsPanel).toBeVisible();
@@ -140,18 +139,7 @@ export class WebLab2 extends LessonLevelPage {
 
   /**
    * Wait for the nested web preview to render the seeded page, up to the
-   * hello-world element becoming visible. Neither outer element is a
-   * reliable readiness signal: #codeprojects-preview-container
-   * (InnerHTMLPreview's mount point) never has box visibility of its own —
-   * its real content (.fileIframe, in inner-html-preview.module.scss) is
-   * `position: absolute` against the page's initial containing block, so the
-   * container itself stays a collapsed, zero-height box for the entire
-   * loading sequence and Playwright reports it "hidden" even once the inner
-   * iframe is fully painted. So we only assert it's attached (mounted),
-   * never that it's visible, and gate real readiness on the innermost
-   * element itself, with a generous timeout in place of the Cucumber step's
-   * fixed 5-second sleep (jQuery is unavailable inside the iframe, which is
-   * why that step used a sleep instead of a polling wait).
+   * hello-world element in the preview becoming visible.
    */
   async waitForPreviewLoaded(): Promise<void> {
     await expect(this.previewIframe).toBeVisible();
