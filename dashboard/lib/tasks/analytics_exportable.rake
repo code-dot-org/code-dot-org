@@ -113,35 +113,31 @@ namespace :analytics_export do
 
     environment_type = args[:environment_type]
     table_names = args[:table_names].split(/\s+/)
-    client = Cdo::Aws::Redshift::MaterializedViewManager.redshift_client
 
-    begin
-      statement_id = Cdo::Aws::Redshift::ZeroEtl.resync_tables(
-        client: client, environment_type: environment_type, table_names: table_names
-      )
-      client.wait_for_completion(statement_id)
-    rescue Cdo::Aws::Redshift::Client::QueryError => exception
-      # `ALTER DATABASE ... INTEGRATION REFRESH` is a control command: on failure the Data API
-      # statement carries no error detail. The actionable reason is in SVV_INTEGRATION_TABLE_STATE,
-      # so surface it here rather than leaving the operator with an empty "Statement FAILED".
-      warn "Resync request failed: #{exception.message}"
-      states = Cdo::Aws::Redshift::ZeroEtl.table_states(
-        client: client, environment_type: environment_type, table_names: table_names
-      )
-      warn "\nCurrent Zero ETL state (SVV_INTEGRATION_TABLE_STATE):"
-      if states.empty?
-        warn "  (no rows for #{table_names.join(', ')} — check the table name and environment)"
-      else
-        states.each do |table|
-          warn "  #{table['schema_name']}.#{table['table_name']} state=#{table['table_state']} reason=#{table['reason']}"
-        end
-      end
-      abort "\nResync did not start; resolve the reason above (the table won't replicate until it's fixed)."
+    result = Cdo::Aws::Redshift::ZeroEtl.resync_and_report(
+      client: Cdo::Aws::Redshift::MaterializedViewManager.redshift_client,
+      environment_type: environment_type,
+      table_names: table_names
+    )
+    result[:states].each do |row|
+      puts "  #{row['schema_name']}.#{row['table_name']} state=#{row['table_state']}"
     end
 
-    puts "Resync requested for #{table_names.join(', ')}."
-    puts 'Each table is unavailable in Redshift while it resyncs; poll SVV_INTEGRATION_TABLE_STATE ' \
-      '(or `analytics_export:materialized_view_status`) to watch it return to `Synced`.'
+    case result[:outcome]
+    when :requested
+      puts "Resync requested for #{table_names.join(', ')}. Each table is unavailable in Redshift while it " \
+        "resyncs; re-run analytics_export:zero_etl_export_status[#{environment_type}] to watch it return to Synced."
+    when :already_syncing
+      puts "Nothing to do: #{table_names.join(', ')} already Synced or resyncing (REFRESH is a no-op once a resync has started)."
+    when :unknown
+      abort "No SVV_INTEGRATION_TABLE_STATE rows for #{table_names.join(', ')} — check the table name and environment."
+    when :blocked
+      warn "\nResync did not start; resolve the reason(s) below (the table won't replicate until fixed):"
+      result[:blocked].each do |row|
+        warn "  #{row['schema_name']}.#{row['table_name']} reason=#{row['reason']}"
+      end
+      exit 1
+    end
   end
 
   # bundle exec rake 'analytics_export:zero_etl_export_status[production]'

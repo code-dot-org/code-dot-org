@@ -3,7 +3,7 @@ require 'cdo/aws/redshift/client'
 module Cdo
   module Aws
     module Redshift
-      # SQL-level operations on the AWS RDS Zero ETL Integration itself — the continuous MySQL ->
+      # Redshit SQL statements on the AWS RDS Zero ETL Integration itself — the continuous MySQL ->
       # Redshift replication that `Cdo::Aws::Redshift::MaterializedViewManager`'s views are built on
       # top of. Everything here runs as a SQL statement in Redshift (a `SVV_INTEGRATION*` catalog
       # read or an `ALTER DATABASE ... INTEGRATION ...` command). Integration operations that go
@@ -18,9 +18,7 @@ module Cdo
       #     is fixed in MySQL the sync does not retry itself — Redshift must be told to resync.
       module ZeroEtl
         # Suffix of the Redshift database Zero ETL continuously replicates MySQL data into, e.g.
-        # `test_learningplatform_mysql_zeroetl`. Matches `TARGET_DB` in
-        # `bin/cron/monitor_mysql_to_redshift_zeroetl_integration` and the database half of
-        # `MaterializedViewManager::ZERO_ETL_SOURCE_SCHEMA_PREFIX`'s doc comment.
+        # `test_learningplatform_mysql_zeroetl`.
         TARGET_DATABASE_SUFFIX = 'learningplatform_mysql_zeroetl'.freeze
 
         # Schema prefix of the Zero ETL source tables inside the target database, mirroring the
@@ -48,11 +46,15 @@ module Cdo
         # @return [String] e.g. "test_learningplatform_mysql_zeroetl"
         # @raise [ArgumentError] if environment_type is not a recognized environment
         def self.target_database(environment_type)
-          unless VALID_ENVIRONMENT_TYPES.include?(environment_type.to_s)
-            raise ArgumentError,
-              "unknown environment_type #{environment_type.inspect}: expected one of #{VALID_ENVIRONMENT_TYPES.join(', ')}"
-          end
-          "#{environment_type}_#{TARGET_DATABASE_SUFFIX}"
+          "#{validated_environment_type(environment_type)}_#{TARGET_DATABASE_SUFFIX}"
+        end
+
+        # Schema housing this environment's Zero ETL source tables, e.g. "dashboard_test".
+        # @param environment_type [Symbol, String] one of VALID_ENVIRONMENT_TYPES
+        # @return [String]
+        # @raise [ArgumentError] if environment_type is not a recognized environment
+        def self.source_schema(environment_type)
+          "#{SOURCE_SCHEMA_PREFIX}_#{validated_environment_type(environment_type)}"
         end
 
         # Integrations targeting this environment's Zero ETL database that are in an error state.
@@ -73,7 +75,7 @@ module Cdo
         # anything not in a `HEALTHY_TABLE_STATES` state. These are the tables `resync_tables` fixes
         # once the underlying cause (from each row's `reason`) is resolved. Empty when all synced.
         #
-        # @param client [Cdo::Aws::Redshift::Client]
+        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the target Redshift database owner or SUPERUSER.
         # @param environment_type [Symbol, String]
         # @return [Array<Hash>] SVV_INTEGRATION_TABLE_STATE rows (column name => value).
         def self.unsynced_tables(client:, environment_type:)
@@ -98,6 +100,7 @@ module Cdo
         def self.table_states(client:, environment_type:, table_names:)
           names = Array(table_names)
           return [] if names.empty?
+          validate_table_names!(names)
 
           quoted_names = names.map {|name| "'#{name}'"}.join(', ')
           client.execute(<<~SQL)
@@ -138,14 +141,7 @@ module Cdo
         # so resync any already-failed tables (`resync_tables`) afterward to re-ingest them under the
         # settings.
         #
-        # Must be run as the Redshift SUPERUSER. `ALTER DATABASE` allows superuser / database owner /
-        # the ALTER DATABASE privilege, but we deliberately keep ownership of and write access to the
-        # raw target database with the superuser and off `etl_client`: the target database holds the
-        # full UNFILTERED Zero-ETL dataset (all PII/highly-restricted rows — the include-all-then-
-        # exclude model syncs any newly added source table), and only the superuser should touch it.
-        # Analysts get the access-controlled materialized views, never this database.
-        #
-        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the superuser.
+        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the target Redshift database owner or SUPERUSER.
         # @param environment_type [Symbol, String]
         # @return [String] the ALTER statement that was executed.
         def self.apply_required_integration_settings(client:, environment_type:)
@@ -161,24 +157,87 @@ module Cdo
         # its resync completes, which happens asynchronously in the background — this only submits the
         # request.
         #
-        # Must be run as the Redshift SUPERUSER: this is `ALTER DATABASE` on the raw target database
-        # (see `apply_required_integration_settings` for why write access there stays superuser-only).
-        #
-        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the superuser. The target
-        #   database is named explicitly in the SQL, so the client's own connected database doesn't matter.
+        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the target Redshift database owner or SUPERUSER.
         # @param environment_type [Symbol, String]
         # @param table_names [Array<String>, String] one or more MySQL table names, unqualified.
         # @return [String] the Redshift Data API statement ID.
         def self.resync_tables(client:, environment_type:, table_names:)
-          table_names = Array(table_names)
-          raise ArgumentError, 'table_names must not be empty' if table_names.empty?
+          names = Array(table_names)
+          raise ArgumentError, 'table_names must not be empty' if names.empty?
+          validate_table_names!(names)
 
-          schema = "#{SOURCE_SCHEMA_PREFIX}_#{environment_type}"
-          qualified_tables = table_names.map {|table_name| "#{schema}.#{table_name}"}.join(', ')
+          schema = source_schema(environment_type)
+          qualified_tables = names.map {|name| "#{schema}.#{name}"}.join(', ')
           client.execute_async(
             "ALTER DATABASE #{target_database(environment_type)} INTEGRATION REFRESH TABLE #{qualified_tables};"
           )
         end
+
+        # Request a resync (`resync_tables`) and report status.
+        #
+        # @param client [Cdo::Aws::Redshift::Client] must authenticate as the target Redshift database owner or SUPERUSER.
+        # @param environment_type [Symbol, String]
+        # @param table_names [Array<String>, String] one or more MySQL table names, unqualified.
+        # @return [Hash]
+        #   :outcome [Symbol]
+        #     :requested       — the REFRESH was accepted; a resync has been submitted.
+        #     :already_syncing — REFRESH was a no-op because the table(s) are already Synced/ResyncInitiated.
+        #     :blocked         — one or more tables are in a non-healthy state; resolve `:blocked` first.
+        #     :unknown         — no SVV_INTEGRATION_TABLE_STATE rows matched (wrong table name or environment).
+        #   :states  [Array<Hash>] SVV rows for the requested tables (empty when :unknown).
+        #   :blocked [Array<Hash>] the subset of :states not in HEALTHY_TABLE_STATES (empty unless :blocked).
+        def self.resync_and_report(client:, environment_type:, table_names:)
+          refresh_failed = false
+          begin
+            statement_id = resync_tables(client: client, environment_type: environment_type, table_names: table_names)
+            client.wait_for_completion(statement_id)
+          rescue Cdo::Aws::Redshift::Client::QueryError
+            refresh_failed = true
+          end
+
+          states = table_states(client: client, environment_type: environment_type, table_names: table_names)
+          blocked = states.reject {|row| HEALTHY_TABLE_STATES.include?(row['table_state'])}
+
+          outcome =
+            if states.empty?
+              :unknown
+            elsif blocked.any?
+              :blocked
+            elsif refresh_failed
+              :already_syncing
+            else
+              :requested
+            end
+
+          {outcome: outcome, states: states, blocked: blocked}
+        end
+
+        # @raise [ArgumentError] unless environment_type is one of VALID_ENVIRONMENT_TYPES.
+        # @return [String] the validated environment_type, as a String.
+        def self.validated_environment_type(environment_type)
+          env = environment_type.to_s
+          return env if VALID_ENVIRONMENT_TYPES.include?(env)
+
+          raise ArgumentError,
+            "unknown environment_type #{environment_type.inspect}: expected one of #{VALID_ENVIRONMENT_TYPES.join(', ')}"
+        end
+
+        # Prevent SQL injection.
+        # @raise [ArgumentError] if any name is not a table in the database schema.
+        def self.validate_table_names!(names)
+          unknown = names.reject {|name| table_exists?(name)}
+          return if unknown.empty?
+
+          raise ArgumentError, "unknown table(s) #{unknown.map(&:inspect).join(', ')}: not found in the database schema"
+        end
+
+        # Seam over the ActiveRecord dependency so the SQL-building methods stay unit-testable without a
+        # database connection (stub `table_exists?` in tests). Resolves against the local MySQL schema.
+        def self.table_exists?(name)
+          ActiveRecord::Base.connection.data_source_exists?(name.to_s)
+        end
+
+        private_class_method :validated_environment_type, :validate_table_names!, :table_exists?
       end
     end
   end

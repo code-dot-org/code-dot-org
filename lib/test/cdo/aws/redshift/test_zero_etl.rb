@@ -4,6 +4,13 @@ require 'cdo/aws/redshift/zero_etl'
 class TestZeroEtl < Minitest::Test
   include Cdo::Aws::Redshift
 
+  def setup
+    # resync_tables / table_states validate names via ActiveRecord (`data_source_exists?`), which has
+    # no connection in this bare lib test. Stub the seam to "table exists" by default; the rejection
+    # tests override it to false.
+    ZeroEtl.stubs(:table_exists?).returns(true)
+  end
+
   def test_target_database_appends_the_suffix
     assert_equal 'test_learningplatform_mysql_zeroetl', ZeroEtl.target_database('test')
   end
@@ -32,6 +39,84 @@ class TestZeroEtl < Minitest::Test
       ZeroEtl.resync_tables(client: mock('client'), environment_type: 'test', table_names: [])
     end
     assert_includes error.message, 'table_names must not be empty'
+  end
+
+  def test_resync_and_report_returns_requested_when_the_refresh_is_accepted
+    client = mock('client')
+    client.stubs(:execute_async).returns('stmt-1')
+    client.stubs(:wait_for_completion)
+    client.stubs(:execute).returns(
+      [{'schema_name' => 'dashboard_test', 'table_name' => 'levels_script_levels', 'table_state' => 'ResyncInitiated', 'reason' => ''}]
+    )
+
+    result = ZeroEtl.resync_and_report(client: client, environment_type: 'test', table_names: 'levels_script_levels')
+    assert_equal :requested, result[:outcome]
+    assert_empty result[:blocked]
+  end
+
+  def test_resync_and_report_returns_already_syncing_when_refresh_fails_but_table_is_healthy
+    client = mock('client')
+    client.stubs(:execute_async).returns('stmt-1')
+    client.stubs(:wait_for_completion).raises(Client::QueryError.new('Statement FAILED'))
+    client.stubs(:execute).returns(
+      [{'schema_name' => 'dashboard_test', 'table_name' => 'levels_script_levels', 'table_state' => 'ResyncInitiated', 'reason' => ''}]
+    )
+
+    result = ZeroEtl.resync_and_report(client: client, environment_type: 'test', table_names: 'levels_script_levels')
+    assert_equal :already_syncing, result[:outcome]
+    assert_empty result[:blocked]
+  end
+
+  def test_resync_and_report_returns_blocked_when_a_table_is_not_healthy
+    client = mock('client')
+    client.stubs(:execute_async).returns('stmt-1')
+    client.stubs(:wait_for_completion).raises(Client::QueryError.new('Statement FAILED'))
+    client.stubs(:execute).returns(
+      [{'schema_name' => 'dashboard_test', 'table_name' => 'levels_script_levels', 'table_state' => 'Failed', 'reason' => 'missing a primary key'}]
+    )
+
+    result = ZeroEtl.resync_and_report(client: client, environment_type: 'test', table_names: 'levels_script_levels')
+    assert_equal :blocked, result[:outcome]
+    assert_equal 1, result[:blocked].length
+    assert_equal 'missing a primary key', result[:blocked].first['reason']
+  end
+
+  def test_resync_and_report_returns_unknown_when_no_state_rows_match
+    client = mock('client')
+    client.stubs(:execute_async).returns('stmt-1')
+    client.stubs(:wait_for_completion)
+    client.stubs(:execute).returns([])
+
+    result = ZeroEtl.resync_and_report(client: client, environment_type: 'test', table_names: 'nonexistent')
+    assert_equal :unknown, result[:outcome]
+    assert_empty result[:states]
+  end
+
+  def test_source_schema_builds_the_source_schema_for_the_environment
+    assert_equal 'dashboard_test', ZeroEtl.source_schema('test')
+  end
+
+  def test_source_schema_rejects_an_unknown_environment_type
+    assert_raises(ArgumentError) {ZeroEtl.source_schema("test'; DROP DATABASE x; --")}
+  end
+
+  def test_resync_tables_rejects_a_table_that_is_not_in_the_schema
+    ZeroEtl.stubs(:table_exists?).returns(false)
+    client = mock('client')
+    client.expects(:execute_async).never
+    error = assert_raises(ArgumentError) do
+      ZeroEtl.resync_tables(client: client, environment_type: 'test', table_names: 'users; DROP TABLE x; --')
+    end
+    assert_includes error.message, 'unknown table'
+  end
+
+  def test_table_states_rejects_a_table_that_is_not_in_the_schema
+    ZeroEtl.stubs(:table_exists?).returns(false)
+    client = mock('client')
+    client.expects(:execute).never
+    assert_raises(ArgumentError) do
+      ZeroEtl.table_states(client: client, environment_type: 'test', table_names: ["users' OR '1'='1"])
+    end
   end
 
   def test_target_database_accepts_a_symbol_environment_type
