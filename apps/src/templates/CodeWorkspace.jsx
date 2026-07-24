@@ -144,6 +144,7 @@ class CodeWorkspace extends React.Component {
               borderRadius: '50%',
               height: '1rem',
               width: '1rem',
+              display: 'none',
             }}
           >
             <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />

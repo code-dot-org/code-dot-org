@@ -1666,24 +1666,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
   } else if (this.isUsingBlockly()) {
     toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
-  const showToolboxHeader = document.getElementById('show-toolbox-header');
-  const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
   if (toolboxWidth < 2) {
     // Effectively hidden
-    if (showToolboxHeader) {
-      showToolboxHeader.style.display = 'flex';
-    }
-    if (hideToolboxIcon) {
-      hideToolboxIcon.style.display = 'none';
-    }
     document.getElementById('toolbox-header').style.display = 'none';
   } else {
-    if (showToolboxHeader) {
-      showToolboxHeader.style.display = 'none';
-    }
-    if (hideToolboxIcon) {
-      hideToolboxIcon.style.display = 'flex';
-    }
     document.getElementById('toolbox-header').style.display = 'flex';
     document.getElementById('toolbox-header').style.width = `${
       toolboxWidth + 1
