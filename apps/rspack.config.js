@@ -10,14 +10,13 @@
 // for rspack builtins or their rspack forks.  Every deliberate divergence
 // is marked RSPACK-DIFF with rationale.
 //
-// Known output gaps vs the webpack build (dev, full entry set), all
-// small and none affecting the named entry bundles, which match 1:1:
-//   - static/json asset/resource files (10) are not emitted; rspack's
-//     builtin json module type appears to win over the asset rule
-//   - worker chunks lose their webpack names (pyodide-web-worker-*,
-//     input-service-worker-*) and emit under numeric chunk ids
-//   - chunk ids differ ('deterministic' here vs webpack 'total-size'),
-//     so numeric async chunk filenames do not correspond
+// Output parity vs the webpack build (dev, full entry set): named
+// manifest keys match 3633/3634.  The one gap is fonts referenced by
+// root-relative url('/fonts/...') in CSS, which the css-loader url
+// filter below skips on purpose (dashboard serves those paths).
+// Numeric async chunk filenames do not correspond between the two
+// builds ('deterministic' ids here vs webpack 'total-size'), which is
+// cosmetic.
 //
 // Usage:
 //   DEV=1 npx rspack build --config rspack.config.js
