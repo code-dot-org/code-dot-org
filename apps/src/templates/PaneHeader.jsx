@@ -4,7 +4,7 @@
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {forwardRef} from 'react';
@@ -72,6 +72,27 @@ export const PaneButton = function (props) {
   } = props;
 
   const buttonLabel = isPressed ? pressedLabel : label;
+
+  if (label === '') {
+    return (
+      <MuiIconButton
+        className={className}
+        disabled={isDisabled}
+        id={id}
+        onClick={onClick}
+        aria-label={ariaLabel}
+        variant="outlined"
+        color="secondary"
+        size="extraSmall"
+        style={style}
+      >
+        {icon ??
+          (iconProps && (
+            <FontAwesomeV6Icon style={{lineHeight: '1rem'}} {...iconProps} />
+          ))}
+      </MuiIconButton>
+    );
+  }
 
   return (
     <MuiButton

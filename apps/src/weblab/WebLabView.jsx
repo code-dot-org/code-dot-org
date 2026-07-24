@@ -7,11 +7,10 @@ import Meter from '@cdo/apps/templates/Meter';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
 
-import styleConstants from '../styleConstants';
 import CompletionButton from '../templates/CompletionButton';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
-import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIconV2';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 // Helper for converting bytes to megabytes.
@@ -71,7 +70,7 @@ class WebLabView extends React.Component {
   render() {
     const {maxProjectCapacity, projectSize} = this.props;
 
-    let headersHeight = styleConstants['workspace-headers-height'];
+    let headersHeight = 30;
     let iframeHeightOffset =
       headersHeight + (this.props.isProjectLevel ? 0 : 70);
     let iframeStyles = {
@@ -84,12 +83,21 @@ class WebLabView extends React.Component {
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            <PaneHeader id="headers">
+            <PaneHeader id="headers" style={{padding: '0 .125rem'}}>
               {!this.props.isFullScreenPreviewOn &&
                 !this.props.isReadOnlyWorkspace && (
-                  <div>
+                  <PaneSection
+                    style={{
+                      alignItems: 'center',
+                      flex: '0 1 auto',
+                      gap: '0.125rem',
+                      display: 'flex',
+                      flexDirection: 'row',
+                      justifyContent: 'center',
+                    }}
+                  >
                     <PaneButton
-                      iconClass="fa-solid fa-circle-plus"
+                      iconProps={{iconName: 'circle-plus', iconStyle: 'solid'}}
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
@@ -97,7 +105,7 @@ class WebLabView extends React.Component {
                       label={weblabMsg.addHTMLButton()}
                     />
                     <PaneButton
-                      iconClass="fa-solid fa-circle-plus"
+                      iconProps={{iconName: 'circle-plus', iconStyle: 'solid'}}
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
@@ -106,22 +114,116 @@ class WebLabView extends React.Component {
                     />
                     <PaneButton
                       id="ui-test-add-image"
-                      iconClass="fa-solid fa-circle-plus"
+                      iconProps={{iconName: 'circle-plus', iconStyle: 'solid'}}
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
                       onClick={this.props.onAddFileImage}
                       label={weblabMsg.addImageButton()}
                     />
-                  </div>
+                  </PaneSection>
                 )}
-              <div>
+              <PaneSection
+                id="workspace-header"
+                style={{
+                  alignItems: 'center',
+                  flex: this.props.isReadOnlyWorkspace ? '1 1 0' : '0 1 auto',
+                  gap: '0.125rem',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  marginLeft:
+                    this.props.showProjectTemplateWorkspaceIcon ||
+                    this.props.isReadOnlyWorkspace
+                      ? 0
+                      : '-0.125rem',
+                }}
+              >
+                {this.props.showProjectTemplateWorkspaceIcon && (
+                  <ProjectTemplateWorkspaceIcon />
+                )}
+                {this.props.isReadOnlyWorkspace && (
+                  <span id="workspace-header-span">
+                    {msg.readonlyWorkspaceHeader()}
+                  </span>
+                )}
+              </PaneSection>
+              <PaneSection
+                style={{
+                  alignItems: 'center',
+                  flex:
+                    this.props.isFullScreenPreviewOn ||
+                    this.props.isReadOnlyWorkspace
+                      ? '0 1 auto'
+                      : '1 1 0',
+                  gap: '0.125rem',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                }}
+              >
+                {!this.props.isFullScreenPreviewOn && (
+                  <PaneButton
+                    id="versions-header"
+                    iconProps={{iconName: 'clock', iconStyle: 'solid'}}
+                    leftJustified={true}
+                    headerHasFocus={true}
+                    isRtl={false}
+                    label={msg.showVersionsHeader()}
+                  />
+                )}
+                {!this.props.isFullScreenPreviewOn &&
+                  !this.props.isReadOnlyWorkspace && (
+                    <>
+                      {maxProjectCapacity > 0 && projectSize > 0 ? (
+                        <Meter
+                          id="weblab-project-capacity"
+                          label={this.projectCapacityLabel()}
+                          value={projectSize}
+                          max={maxProjectCapacity}
+                          containerStyle={{
+                            flex: '1 1 0',
+                            height: 30,
+                          }}
+                        />
+                      ) : (
+                        <span style={{flex: '1 1 0'}} />
+                      )}
+                    </>
+                  )}
+                {!this.props.isFullScreenPreviewOn && (
+                  <PaneButton
+                    iconProps={{iconName: 'arrow-pointer', iconStyle: 'solid'}}
+                    leftJustified={false}
+                    headerHasFocus={true}
+                    isPressed={this.props.isInspectorOn}
+                    pressedLabel={weblabMsg.toggleInspectorOff()}
+                    isRtl={false}
+                    onClick={this.props.onToggleInspector}
+                    label={weblabMsg.toggleInspectorOn()}
+                  />
+                )}
+                {!this.props.isFullScreenPreviewOn &&
+                  !this.props.isReadOnlyWorkspace && (
+                    <PaneButton
+                      iconProps={{
+                        iconName: 'rotate-right',
+                        iconStyle: 'solid',
+                      }}
+                      leftJustified={false}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onRefreshPreview}
+                      label={weblabMsg.refreshPreview()}
+                    />
+                  )}
                 <PaneButton
-                  iconClass={
-                    this.props.isFullScreenPreviewOn
-                      ? 'fa-solid fa-compress'
-                      : 'fa-solid fa-up-down-left-right'
-                  }
+                  iconProps={{
+                    iconName: this.props.isFullScreenPreviewOn
+                      ? 'compress'
+                      : 'up-down-left-right',
+                    iconStyle: 'solid',
+                  }}
                   leftJustified={false}
                   headerHasFocus={true}
                   isRtl={false}
@@ -137,64 +239,7 @@ class WebLabView extends React.Component {
                   }
                   label=""
                 />
-                {!this.props.isFullScreenPreviewOn && (
-                  <PaneButton
-                    id="versions-header"
-                    iconClass="fa-regular fa-clock"
-                    leftJustified={true}
-                    headerHasFocus={true}
-                    isRtl={false}
-                    label={msg.showVersionsHeader()}
-                  />
-                )}
-                {!this.props.isFullScreenPreviewOn &&
-                  !this.props.isReadOnlyWorkspace && (
-                    <div>
-                      {maxProjectCapacity > 0 && projectSize > 0 && (
-                        <Meter
-                          id="weblab-project-capacity"
-                          label={this.projectCapacityLabel()}
-                          value={projectSize}
-                          max={maxProjectCapacity}
-                          containerStyle={{
-                            float: 'left',
-                            height: styleConstants['workspace-headers-height'],
-                          }}
-                        />
-                      )}
-                      <PaneButton
-                        iconClass="fa-solid fa-rotate-right"
-                        leftJustified={false}
-                        headerHasFocus={true}
-                        isRtl={false}
-                        onClick={this.props.onRefreshPreview}
-                        label={weblabMsg.refreshPreview()}
-                      />
-                    </div>
-                  )}
-                {!this.props.isFullScreenPreviewOn && (
-                  <PaneButton
-                    iconClass="fa-solid fa-arrow-pointer"
-                    leftJustified={false}
-                    headerHasFocus={true}
-                    isPressed={this.props.isInspectorOn}
-                    pressedLabel={weblabMsg.toggleInspectorOff()}
-                    isRtl={false}
-                    onClick={this.props.onToggleInspector}
-                    label={weblabMsg.toggleInspectorOn()}
-                  />
-                )}
-                <PaneSection id="workspace-header">
-                  {this.props.showProjectTemplateWorkspaceIcon && (
-                    <ProjectTemplateWorkspaceIcon />
-                  )}
-                  {this.props.isReadOnlyWorkspace && (
-                    <span id="workspace-header-span">
-                      {msg.readonlyWorkspaceHeader()}
-                    </span>
-                  )}
-                </PaneSection>
-              </div>
+              </PaneSection>
             </PaneHeader>
             <iframe
               className="weblab-host"

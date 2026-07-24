@@ -463,8 +463,8 @@ class JsDebugger extends React.Component {
               variant="outlined"
               color="secondary"
               size="extraSmall"
-              id="show-toolbox-icon"
-              className="show-toolbox-icon"
+              id="show-debug-icon"
+              className="show-debug-icon"
               onClick={this.slideToggle}
               aria-label={i18n.debugArea()}
               aria-expanded={this.state.open}

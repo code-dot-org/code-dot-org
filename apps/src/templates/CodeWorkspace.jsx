@@ -152,6 +152,7 @@ class CodeWorkspace extends React.Component {
             variant="body4"
             sx={{
               color: 'var(--text-neutral-white-fixed)',
+              flex: '1 1 auto',
             }}
           >
             {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
