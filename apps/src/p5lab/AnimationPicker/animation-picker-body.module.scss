@@ -42,3 +42,16 @@
   justify-content: flex-end;
   margin-top: 5px;
 }
+
+.pickerDialog {
+  :global(#x-close) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: var(--text-neutral-primary) !important;
+
+    &:hover {
+      background-color: transparent !important;
+      color: var(--text-brand-purple-primary) !important;
+    }
+  }
+}

@@ -43,7 +43,6 @@ export default class SearchBar extends React.Component {
 const BORDER_WIDTH = 1;
 const BORDER_COLOR = 'var(--borders-neutral-strong)';
 const BORDER_RADIUS = 4;
-const ICON_COLOR = 'var(--text-neutral-secondary)';
 
 // We have side-by-side elements that should format sort of like one element
 const styles = {

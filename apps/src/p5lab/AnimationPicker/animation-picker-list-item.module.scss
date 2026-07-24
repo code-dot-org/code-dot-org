@@ -5,11 +5,8 @@ $thumbnail-root-padding: 10px;
 $hover-plus-size: 24px;
 $thumbnail-margin-height: 10px;
 
-// AnimationPreview renders inside the .thumbnail button's inner content-box:
-//   thumbnail-size - root-padding-right - 2 * border-width - 2 * button-padding
-// = 115 - 10 - 2 - 4 = 99
 :export {
-  previewSize: 99;
+  previewSize: $thumbnail-size - $thumbnail-root-padding - 2 * $thumbnail-border-width - 2 * $thumbnail-padding;
 }
 
 .root {
@@ -37,7 +34,7 @@ $thumbnail-margin-height: 10px;
   background-image: none;
   box-shadow: none;
   margin: 0 0 0 0;
-  outline: none;
+  position: relative;
 }
 
 .thumbnailIcon {
@@ -53,6 +50,9 @@ $thumbnail-margin-height: 10px;
     background-color: var(--background-brand-purple-strong);
     border-color: var(--borders-brand-purple-strong);
   }
+  .label {
+    color: var(--text-neutral-white-fixed);
+  }
 }
 
 .icon {
@@ -64,6 +64,7 @@ $thumbnail-margin-height: 10px;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
+  color: var(--text-neutral-primary);
 }
 
 .noLabel {
@@ -86,8 +87,9 @@ $thumbnail-margin-height: 10px;
   height: $hover-plus-size;
   width: $hover-plus-size;
   border-radius: 5px;
-  top: calc($thumbnail-size / 2 - $hover-plus-size / 2);
-  left: calc($thumbnail-size / 2 - $hover-plus-size / 2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hoverIcon {
