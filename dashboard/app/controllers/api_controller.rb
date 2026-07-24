@@ -215,7 +215,8 @@ class ApiController < ApplicationController
         section_id: section.id,
         section_name: section.name,
         ai_chat_access_level: section.ai_chat_access_level,
-        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+        # A nil script has no lockable lessons.
+        lessons: (script&.lessons || []).each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
@@ -257,6 +258,8 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
+    return head :bad_request unless script
+
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -295,6 +298,8 @@ class ApiController < ApplicationController
     prevent_caching
     section = load_section
     script = load_script(section)
+
+    return head :bad_request unless script
 
     if params[:level_id]
       script_level = script.script_levels.find do |sl|
@@ -560,6 +565,7 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
+    return render(json: []) unless script
     # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
     # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
     unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
@@ -726,8 +732,6 @@ class ApiController < ApplicationController
   private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.hoc_2014_unit
-    script
+    Unit.get_from_cache(script_id) if script_id
   end
 end
