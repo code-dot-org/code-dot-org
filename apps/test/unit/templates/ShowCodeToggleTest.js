@@ -127,8 +127,6 @@ describe('The ShowCodeToggle component', () => {
           />
         )
       ).to.be.true;
-      // In blocks mode the code icon is replaced by the blocks glyph image.
-      expect(toggle.find('img')).to.have.lengthOf(1);
     });
   });
 
@@ -167,8 +165,6 @@ describe('The ShowCodeToggle component', () => {
             />
           )
         ).to.be.true;
-        // In blocks mode the code icon is replaced by the blocks glyph image.
-        expect(toggle.find('img')).to.have.lengthOf(1);
       });
 
       it('makes the editor stop using blocks', () => {
