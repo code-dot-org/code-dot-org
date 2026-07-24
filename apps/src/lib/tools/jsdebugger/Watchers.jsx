@@ -348,7 +348,7 @@ class Watchers extends React.Component {
                   {this.renderValue(varValue)}
                 </div>
                 <MuiIconButton
-                  size="extraSmall"
+                  size="small"
                   variant="contained"
                   color="error"
                   onClick={() => this.props.remove(wv.get('expression'))}
@@ -403,7 +403,7 @@ class Watchers extends React.Component {
             </div>
             <MuiIconButton
               onClick={this.addButtonClick}
-              size="extraSmall"
+              size="small"
               variant="contained"
               color="primary"
             >
