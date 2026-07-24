@@ -619,7 +619,7 @@ function createRspackConfig({
     // Usable only if the middleware learns to stall the entry request
     // until compiled.  Left as a toggle for future experiments.
     lazyCompilation: {
-      imports: true,
+      imports: !process.env.RSPACK_NO_LAZY,
       entries: !!process.env.RSPACK_LAZY_ENTRIES,
     },
     // Startup note: serving over a populated build/package/js pays

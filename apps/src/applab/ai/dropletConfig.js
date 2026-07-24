@@ -1,9 +1,5 @@
 import * as api from '@cdo/apps/applab/api';
 
-export let aiConfig = {
-  blocks: [...aiBlocks],
-};
-
 const aiBlocks = [
   {
     func: 'getPrediction',
@@ -13,3 +9,7 @@ const aiBlocks = [
     params: ['"name"', '"id"', 'data', 'function (value) {\n \n}'],
   },
 ];
+
+export let aiConfig = {
+  blocks: [...aiBlocks],
+};
