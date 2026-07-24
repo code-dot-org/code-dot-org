@@ -120,3 +120,22 @@ CLAUDE.local.md
 # playwright-best-practices: managed by skills-lock.json, not vendored.
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/
+
+# OS metadata
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
