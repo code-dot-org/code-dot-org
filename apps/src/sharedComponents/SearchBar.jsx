@@ -2,8 +2,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
-
 export default class SearchBar extends React.Component {
   static propTypes = {
     placeholderText: PropTypes.string.isRequired,
@@ -43,7 +41,7 @@ export default class SearchBar extends React.Component {
 }
 
 const BORDER_WIDTH = 1;
-const BORDER_COLOR = color.light_gray;
+const BORDER_COLOR = 'var(--borders-neutral-strong)';
 const BORDER_RADIUS = 4;
 
 // We have side-by-side elements that should format sort of like one element
@@ -64,14 +62,14 @@ const styles = {
     top: 6,
     left: 5,
     fontSize: 16,
-    color: color.light_gray,
+    color: 'var(--text-neutral-secondary)',
   },
   clearIcon: {
     position: 'absolute',
     top: 6,
     right: 5,
     fontSize: 16,
-    color: color.light_gray,
+    color: 'var(--text-neutral-secondary)',
     cursor: 'pointer',
   },
   searchArea: {
