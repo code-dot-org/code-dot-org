@@ -18,7 +18,7 @@ The studio share URL (`studio.code.org/projects/weblab2/<channel>`) does **not**
 change, so existing shared links keep working; only the inner preview origin the
 share page embeds moves.
 
-## Scope of the code change (this PR)
+## Scope of the application cutover (Part 2)
 
 Single source of truth is `CDO.preview_codeaiprojects_hostname`
 (`lib/cdo.rb`), built from a new `CDO.codeaiprojects_hostname`. This is a **hard
@@ -80,6 +80,20 @@ Per environment (production uses the bare apex; test/staging/adhoc use
 5. **Merge + deploy the app cutover** (Part 2). Load a Web Lab 2 share and a
    Python Lab level; confirm the preview iframe now points at
    `*.preview.codeaiprojects.org` and renders.
+
+## Local development
+
+Local previews use `*.preview.localhost.codeaiprojects.org`. Two options:
+
+- Rely on the staging-managed Route 53 records
+  (`LocalhostCodeaiprojectsRecord`, `LocalhostPreviewCodeaiprojectsRecord` in
+  `codeaiprojects_resources.yml.erb`) that resolve to `127.0.0.1`, or
+- Add `/etc/hosts` entries mapping `localhost.codeaiprojects.org` and a test
+  preview label (e.g. `localtesting.preview.localhost.codeaiprojects.org`) to
+  `127.0.0.1`.
+
+Then update the Chrome insecure-origin flag per `apps/src/weblab2/README.md`
+(the four URLs now use `codeaiprojects.org`).
 
 ## Pull requests
 
@@ -154,20 +168,6 @@ Legacy Web Lab's serving path is not part of this migration. Do **not** remove:
 - the bare `localhost.codeprojects.org` development hosts
 - everything else in `codeprojects_resources.yml.erb` (apex, `www`, `static`,
   `bramble-download`)
-
-### Local development
-
-Local previews use `*.preview.localhost.codeaiprojects.org`. Two options:
-
-- Rely on the staging-managed Route 53 records
-  (`LocalhostCodeaiprojectsRecord`, `LocalhostPreviewCodeaiprojectsRecord` in
-  `codeaiprojects_resources.yml.erb`) that resolve to `127.0.0.1`, or
-- Add `/etc/hosts` entries mapping `localhost.codeaiprojects.org` and a test
-  preview label (e.g. `localtesting.preview.localhost.codeaiprojects.org`) to
-  `127.0.0.1`.
-
-Then update the Chrome insecure-origin flag per `apps/src/weblab2/README.md`
-(the four URLs now use `codeaiprojects.org`).
 
 ## Rollback
 
