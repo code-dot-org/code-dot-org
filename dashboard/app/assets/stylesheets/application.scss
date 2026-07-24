@@ -1669,9 +1669,6 @@ body.iframe_embed_app_and_code {
   }
 }
 
-// Matches DSCO CloseButton (color dark). Sits inside the modal
-// top-right; no wrapper surface. Renders <i class="fa-solid fa-xmark">
-// (see LegacyDialog.js).
 .x-close {
   position: absolute;
   top: 6px;
@@ -3257,8 +3254,6 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-// Scoped under .dash_modal so LegacyDialog paint doesn't leak onto
-// react-bootstrap modals in non-lab surfaces (teacher tools, PD, account).
 .dash_modal .modal-body {
   .modal-content {
     margin-left: $modal-image-width + $modal-image-margin-gap;
@@ -3271,8 +3266,6 @@ $modal-no-icon-gap: 22px;
     }
 
     // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
-    // Targets the specific class so the Show Code panel's own p/pre
-    // styling inside .generated-code-container is untouched.
     .congrats {
       font-family: var(--font-family-main);
       font-size: var(--font-size-body-lg);
@@ -3395,12 +3388,7 @@ h5.dialog-title {
   margin-right: 10px;
 }
 
-// Puzzle-complete dialog polish (scoped to LegacyDialog surfaces).
 .dash_modal {
-  // Rebrand the collapsible "Show code" toggle only; the panel inside
-  // (.generated-code-container) keeps its own styling. CodeWritten
-  // renders the summary with inline styles (fontSize: 18, fontWeight:
-  // 'normal') so !important is needed to override.
   .modal-content .show-code > summary {
     font-family: var(--font-family-main) !important;
     font-size: var(--font-size-body-md) !important;
@@ -3408,9 +3396,6 @@ h5.dialog-title {
     color: var(--text-neutral-primary) !important;
   }
 
-  // DialogButtons renders <div><button/><button/></div> inside
-  // #feedbackButtons; flex on that inner wrapper puts the buttons in a
-  // row rather than stacked.
   #feedbackButtons > div {
     display: flex;
     justify-content: flex-end;
@@ -3418,9 +3403,6 @@ h5.dialog-title {
     margin-top: 16px;
   }
 
-  // LegacyButton applies Radium inline styles (backgroundColor, borderColor,
-  // color, float:right). Inline styles beat class specificity, so !important
-  // is needed to override.
   #feedbackButtons #continue-button,
   #feedbackButtons #again-button {
     float: none !important;
@@ -3443,7 +3425,7 @@ h5.dialog-title {
     color: var(--text-neutral-primary) !important;
   }
 
-  // Drop the "Did you like this puzzle?" rating row per product ask.
+  // Drop the "Did you like this puzzle?" rating row per design
   #puzzleRatingButtons {
     display: none;
   }
