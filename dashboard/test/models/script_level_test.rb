@@ -261,7 +261,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'summarize with custom route' do
     create_hourofcode_unit_and_levels
-    summary = Unit.hoc_2014_unit.script_levels.first.summarize
+    hourofcode = Unit.get_from_cache(Unit::HOC_NAME)
+    summary = hourofcode.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
@@ -270,7 +271,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     # Later chapters keep the custom route too; this is what the client's
     # continue-to-next-level navigation consumes.
-    assert_equal "#{CDO.studio_url}/hoc/2", Unit.hoc_2014_unit.script_levels.second.summarize[:url]
+    assert_equal "#{CDO.studio_url}/hoc/2", hourofcode.script_levels.second.summarize[:url]
   end
 
   test 'named level summarize' do
@@ -860,8 +861,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'cached_find' do
     create_hourofcode_unit_and_levels
-    script_level = ScriptLevel.cache_find(Unit.hoc_2014_unit.script_levels[0].id)
-    assert_equal(Unit.hoc_2014_unit.script_levels[0], script_level)
+    hourofcode = Unit.get_from_cache(Unit::HOC_NAME)
+    script_level = ScriptLevel.cache_find(hourofcode.script_levels[0].id)
+    assert_equal(hourofcode.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)

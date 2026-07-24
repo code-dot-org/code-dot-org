@@ -33,6 +33,10 @@
     background: var(--background-neutral-primary);
     color: var(--text-neutral-primary);
 
+    &::placeholder {
+      color: var(--text-neutral-placeholder);
+    }
+
     &:disabled {
       opacity: 0.5;
       background: none;
