@@ -46,6 +46,18 @@
   }
 }
 
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+}
+
+.sliderDebug {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+
 .hidden {
   display: none;
 }
@@ -60,16 +72,6 @@ $debug-header-border-width: 1px;
 .watchersHidden {
   border-left: none;
   text-align: right;
-}
-
-.sliderDebug {
-  position: relative;
-  top: 7px;
-}
-
-.slider {
-  margin-left: 45px;
-  margin-right: 5px;
 }
 
 .displayInitial {

@@ -405,8 +405,7 @@ class JsDebugger extends React.Component {
   };
 
   render() {
-    const {appType, isAttached, canRunNext, isRunning, debugButtons} =
-      this.props;
+    const {appType, isAttached, canRunNext, isRunning} = this.props;
     const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
@@ -446,14 +445,14 @@ class JsDebugger extends React.Component {
             id="debug-commands-header"
             style={{
               alignItems: 'center',
-              flex: '0 0 271px',
+              flex: this.props.debugButtons ? '0 0 271px' : '0 0 auto',
               gap: '0.5rem',
               display: 'flex',
               flexDirection: 'row',
               justifyContent: 'center',
               paddingLeft: '0.5rem',
               paddingRight: '0.5rem',
-              width: 271,
+              width: this.props.debugButtons ? 271 : 'auto',
               height: 30,
               borderRight: '1px solid var(--borders-neutral-strong)',
             }}
@@ -543,7 +542,11 @@ class JsDebugger extends React.Component {
             )}
             {this.props.debugSlider && (
               <SpeedSlider
-                className={debugButtons ? styles.sliderDebug : styles.slider}
+                className={
+                  this.state.consoleWidth <= MIN_CONSOLE_WIDTH
+                    ? styles.sliderDebug
+                    : styles.slider
+                }
                 hasFocus={hasFocus}
                 value={this.props.stepSpeed}
                 lineWidth={130}
@@ -562,6 +565,7 @@ class JsDebugger extends React.Component {
                 flex: '1 1 0',
                 gap: '0.5rem',
                 display: 'flex',
+                justifyContent: 'center',
               }}
             >
               {i18n.debugConsoleHeader()}
