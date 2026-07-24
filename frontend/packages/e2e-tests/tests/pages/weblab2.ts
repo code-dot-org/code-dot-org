@@ -84,6 +84,12 @@ export class WebLab2 extends LessonLevelPage {
   /** Preview-header segmented button that switches the preview to mobile view. */
   readonly mobileViewButton: Locator;
 
+  /** Workspace-header segmented button showing the code editor only. */
+  readonly codeViewButton: Locator;
+
+  /** Workspace-header segmented button showing the web preview only. */
+  readonly previewViewButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsPanel = page.locator('#instructions-panel');
@@ -104,6 +110,12 @@ export class WebLab2 extends LessonLevelPage {
     });
     this.debugPanel = page.locator('#debug-panel-container');
     this.mobileViewButton = page.getByRole('button', {name: 'Mobile View'});
+    this.codeViewButton = page.getByRole('button', {
+      name: 'View code editor only',
+    });
+    this.previewViewButton = page.getByRole('button', {
+      name: 'View web preview only',
+    });
   }
 
   /** Open the debug panel and wait for it to mount. */

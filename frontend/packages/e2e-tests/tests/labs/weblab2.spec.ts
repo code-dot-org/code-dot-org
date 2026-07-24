@@ -99,14 +99,6 @@ test.describe('Web Lab 2', () => {
       await lab.openDebugPanel();
       await page.mouse.move(0, 0);
       await visualCheck('debug panel open', {mask: masks});
-
-      await lab.mobileViewButton.click();
-      await expect(lab.mobileViewButton).toHaveAttribute(
-        'aria-pressed',
-        'true',
-      );
-      await page.mouse.move(0, 0);
-      await visualCheck('mobile preview view', {mask: masks});
     },
   );
 
@@ -122,8 +114,34 @@ test.describe('Web Lab 2', () => {
       await lab.gotoLevel();
       await lab.waitForPreviewLoaded();
 
+      // The level opens in split view (editor and preview side by side).
       await page.mouse.move(0, 0);
-      await visualCheck('preview loaded', {mask: [lab.lessonHeaderInfo]});
+      await visualCheck('split view', {mask: [lab.lessonHeaderInfo]});
+
+      await lab.codeViewButton.click();
+      await expect(lab.codeViewButton).toHaveAttribute('aria-pressed', 'true');
+      await expect(lab.previewIframe).toBeHidden();
+      await page.mouse.move(0, 0);
+      await visualCheck('code view', {mask: [lab.lessonHeaderInfo]});
+
+      await lab.previewViewButton.click();
+      await expect(lab.previewViewButton).toHaveAttribute(
+        'aria-pressed',
+        'true',
+      );
+      // Leaving code view remounts the preview; wait for the full iframe
+      // chain to render again before capturing.
+      await lab.waitForPreviewLoaded();
+      await page.mouse.move(0, 0);
+      await visualCheck('preview view', {mask: [lab.lessonHeaderInfo]});
+
+      await lab.mobileViewButton.click();
+      await expect(lab.mobileViewButton).toHaveAttribute(
+        'aria-pressed',
+        'true',
+      );
+      await page.mouse.move(0, 0);
+      await visualCheck('mobile preview view', {mask: [lab.lessonHeaderInfo]});
     },
   );
 });
