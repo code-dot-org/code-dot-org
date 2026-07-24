@@ -212,16 +212,16 @@
 
     // Selected + hover (border intentionally matches the fill)
     &:hover:has(input[type='checkbox']:checked) {
-      border-color: var(--border-selected-hover);
-      background-color: var(--background-selected-hover);
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
     }
 
     // Selected + pressed; border and the legacy inset outline both take
     // the fill color, so no ring shows regardless of hover state.
     &:active:has(input[type='checkbox']:checked) {
-      border-color: var(--border-selected-hover);
-      background-color: var(--background-selected-hover);
-      outline-color: var(--border-selected-hover);
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
+      outline-color: var(--border-selected-strong);
     }
 
     // Selected + disabled — solid disabled fill with the inverse label
