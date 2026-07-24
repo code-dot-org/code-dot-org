@@ -33,7 +33,6 @@ const OPTIONS_GAMELAB = [
 ];
 
 const buttonSize = '28px';
-const valueAndInputWidth = 'calc(100% - 33px)';
 
 /**
  * A "watchers" window for our debugger.
@@ -336,19 +335,26 @@ class Watchers extends React.Component {
             const varName = wv.get('expression');
             const varValue = wv.get('lastValue');
             return (
-              <div className="debug-watch-item" key={wv.get('uuid')}>
-                <button
-                  style={styles.watchRemoveButton}
-                  onClick={() => this.props.remove(wv.get('expression'))}
-                  type="button"
+              <div
+                className={`debug-watch-item ${moduleStyles.watchItem}`}
+                key={wv.get('uuid')}
+              >
+                <div
+                  className={moduleStyles.watchItemDescription}
+                  style={styles.watchItemDescription}
                 >
-                  ×
-                </button>
-                <div style={styles.watchItemDescription}>
                   <span className="watch-variable">{varName}</span>
                   <span className="watch-separator">: </span>
                   {this.renderValue(varValue)}
                 </div>
+                <MuiIconButton
+                  size="extraSmall"
+                  variant="contained"
+                  color="error"
+                  onClick={() => this.props.remove(wv.get('expression'))}
+                >
+                  <FontAwesomeV6Icon iconName="xmark" />
+                </MuiIconButton>
               </div>
             );
           })}
@@ -394,7 +400,12 @@ class Watchers extends React.Component {
                 )}
               </TetherComponent>
             </div>
-            <MuiIconButton onClick={this.addButtonClick} size="small">
+            <MuiIconButton
+              onClick={this.addButtonClick}
+              size="extraSmall"
+              variant="contained"
+              color="primary"
+            >
               <FontAwesomeV6Icon iconName="plus" />
             </MuiIconButton>
           </div>
@@ -412,27 +423,11 @@ const styles = {
     width: '100%',
     height: '100%',
   },
-  watchRemoveButton: {
-    fontSize: 23,
-    float: 'right',
-    cursor: 'pointer',
-    width: buttonSize,
-    lineHeight: buttonSize,
-    height: buttonSize,
-    textAlign: 'center',
-    backgroundColor: '#be0712',
-    color: 'white',
-    margin: 0,
-    padding: 0,
-    border: 'none',
-    borderRadius: 0,
-  },
   watchItemDescription: {
     whiteSpace: 'nowrap',
     minHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
-    width: valueAndInputWidth,
   },
   watchValueArray: {
     whiteSpace: 'normal',
