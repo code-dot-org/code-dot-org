@@ -1,5 +1,5 @@
 /** @file Dropdown for selecting design mode screens */
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -11,7 +11,7 @@ import * as constants from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
 
-import moduleStyles from './screen-selector.module.scss';
+import style from './screen-selector.module.scss';
 
 /**
  * The dropdown that appears above the visualization in design mode, used
@@ -49,47 +49,47 @@ class ScreenSelector extends React.Component {
       return null;
     }
 
+    const options = this.props.screenIds.map(function (item) {
+      return (
+        <option key={item} value={item}>
+          {item}
+        </option>
+      );
+    });
+
     const defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
-    const options = this.props.screenIds
-      .sort((a, b) =>
-        a === defaultScreenId
-          ? -1
-          : b === defaultScreenId
-          ? 1
-          : a.localeCompare(b)
-      )
-      .map(item => ({
-        value: item,
-        text: item,
-      }));
+
+    options.sort(function (a, b) {
+      if (a.key === defaultScreenId) {
+        return -1;
+      } else if (b.key === defaultScreenId) {
+        return 1;
+      } else {
+        return a.key.localeCompare(b.key);
+      }
+    });
 
     const canAddScreen =
       this.props.interfaceMode === constants.ApplabInterfaceMode.DESIGN;
 
-    const importScreen = localization.translate(constants.IMPORT_SCREEN);
-    const newScreen = localization.translate(constants.NEW_SCREEN);
-
     return (
-      <SimpleDropdown
+      <select
         id="screenSelector"
+        className={classNames(style.dropdown, 'form-control')}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}
-        labelText={applabMsg.selectScreen()}
-        isLabelVisible={false}
-        size="s"
-        className={moduleStyles.dropdown}
+        aria-label={applabMsg.selectScreen()}
         data-notranslate="true"
-        items={[
-          ...options,
-          ...(canAddScreen
-            ? [
-                {text: importScreen, value: importScreen},
-                {text: newScreen, value: newScreen},
-              ]
-            : []),
-        ]}
-      />
+      >
+        {options}
+        {canAddScreen && (
+          <option>{localization.translate(constants.IMPORT_SCREEN)}</option>
+        )}
+        {canAddScreen && (
+          <option>{localization.translate(constants.NEW_SCREEN)}</option>
+        )}
+      </select>
     );
   }
 }
