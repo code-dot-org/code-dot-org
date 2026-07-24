@@ -57,7 +57,7 @@ export default class DesignModeBox extends React.Component {
     };
 
     let transparencyLayer;
-    // Slightly var(--borders-neutral-strong) everything while running
+    // Slightly gray everything while running
     if (this.props.isDimmed) {
       transparencyLayer = (
         <div id={'design-mode-dimmed'} style={styles.transparent} />
