@@ -437,7 +437,7 @@ img.video_thumbnail {
 // Pill nav links and outlined header buttons for codeai-next/codeai-audit;
 // default codeai keeps its square 35px/4px buttons and orange hover underline.
 @include codeai-brand {
-  // aiday.org spacing model: no container gap, spacing comes from pill padding.
+  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
   .header-wrapper .headerlinks {
     flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
   }
