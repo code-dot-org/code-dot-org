@@ -353,46 +353,47 @@ class Watchers extends React.Component {
             );
           })}
           <div className={moduleStyles.watchInputSection}>
-            <TetherComponent
-              attachment="bottom left"
-              targetAttachment="top left"
-              constraints={[
-                {
-                  to: 'scrollParent',
-                  attachment: 'together',
-                },
-              ]}
-              style={styles.autocompleteDropdown}
-            >
-              <TextField
-                name="watch-expression"
-                placeholder={i18n.debugWatchersPlaceholder()}
-                onKeyDown={this.onKeyDown}
-                onChange={this.onChange}
-                onClick={() => this.setState({autocompleteOpen: true})}
-                value={this.state.text}
-                size="s"
-                className={moduleStyles.watchTextField}
-              />
-              {this.state.autocompleteOpen && (
-                <AutocompleteSelector
-                  options={this.state.autocompleteOptions}
-                  currentIndex={
-                    this.state.autocompleteSelecting
-                      ? this.state.autocompleteIndex
-                      : -1
-                  }
-                  onOptionClicked={this.onAutocompleteOptionClicked}
-                  onOptionHovered={index =>
-                    this.setState({
-                      autocompleteSelecting: true,
-                      autocompleteIndex: index,
-                    })
-                  }
-                  onClickOutside={this.closeAutocomplete}
+            <div className={moduleStyles.watchTextField}>
+              <TetherComponent
+                attachment="bottom left"
+                targetAttachment="top left"
+                constraints={[
+                  {
+                    to: 'scrollParent',
+                    attachment: 'together',
+                  },
+                ]}
+                style={styles.autocompleteDropdown}
+              >
+                <TextField
+                  name="watch-expression"
+                  placeholder={i18n.debugWatchersPlaceholder()}
+                  onKeyDown={this.onKeyDown}
+                  onChange={this.onChange}
+                  onClick={() => this.setState({autocompleteOpen: true})}
+                  value={this.state.text}
+                  size="s"
                 />
-              )}
-            </TetherComponent>
+                {this.state.autocompleteOpen && (
+                  <AutocompleteSelector
+                    options={this.state.autocompleteOptions}
+                    currentIndex={
+                      this.state.autocompleteSelecting
+                        ? this.state.autocompleteIndex
+                        : -1
+                    }
+                    onOptionClicked={this.onAutocompleteOptionClicked}
+                    onOptionHovered={index =>
+                      this.setState({
+                        autocompleteSelecting: true,
+                        autocompleteIndex: index,
+                      })
+                    }
+                    onClickOutside={this.closeAutocomplete}
+                  />
+                )}
+              </TetherComponent>
+            </div>
             <MuiIconButton onClick={this.addButtonClick} size="small">
               <FontAwesomeV6Icon iconName="plus" />
             </MuiIconButton>
