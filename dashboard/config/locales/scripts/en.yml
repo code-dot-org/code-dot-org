@@ -27410,6 +27410,8 @@ en:
             '
           description_short: Learn how humans work with computers to solve problems.
           description_audience: ''
+          lessons: {}
+          name: csd1-2026
         csd3-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27423,6 +27425,8 @@ en:
           student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: Learn to program animations, interactive art, and games in Game Lab.
           description_audience: ''
+          lessons: {}
+          name: csd3-2026
         csd4-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27436,6 +27440,8 @@ en:
           student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: Learn how to design a program that meets the needs of your users.
           description_audience: ''
+          lessons: {}
+          name: csd4-2026
         csd5-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27466,6 +27472,8 @@ en:
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
+          lessons: {}
+          name: csd6a-2026
         csd6b-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27481,6 +27489,8 @@ en:
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: csd6b-2026
         csd7-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27496,6 +27506,8 @@ en:
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description_audience: ''
+          lessons: {}
+          name: csd7-2026
         programming-with-music-lab-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28913,11 +28925,11 @@ en:
           description: |-
             #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+            #### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
           student_description: |-
             #### This professional learning module is designed to help you prepare to teach CodeAI's [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+            #### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026:
           lessons: {}
           lesson_groups: {}
@@ -29661,9 +29673,13 @@ en:
               name: Lesson 12
             lesson-3:
               name: Lesson 1
+            lesson-4:
+              name: csd preamble
           lesson_groups:
             lessonGroup-2:
               display_name: Data Sci w/Python
+            lessonGroup-3:
+              display_name: Dev Stuff
           name: cody-playground
           title: Cody's Playground
           description_audience: ''
