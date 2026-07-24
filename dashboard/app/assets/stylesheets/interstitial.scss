@@ -201,6 +201,10 @@ $almost_white: #eee;
   justify-content: space-between;
 }
 
+#student-information-modal .modal-dialog {
+  width: 450px;
+}
+
 #student-information-modal .header-divider {
   margin: 15px 0;
   border-color: $lighter_gray;
