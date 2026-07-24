@@ -10,7 +10,7 @@ const styles: Record<string, React.CSSProperties> = {
     color: '#fff',
   },
   heading: {
-    fontFamily: 'var(--font-family-barlow-semi-condensed-semibold)',
+    fontFamily: 'var(--font-family-main)',
     fontSize: 'clamp(2rem, 8vw, 4rem)',
     fontWeight: 800,
     lineHeight: 1.05,

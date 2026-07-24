@@ -51,6 +51,7 @@ export default defineConfig({
         'src/api/mocks/server.ts',
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',
+        'src/redux/index.ts',
       ],
       name: 'core',
     },

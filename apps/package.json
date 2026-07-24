@@ -177,7 +177,7 @@
     "terser-webpack-plugin": "^5.3.10",
     "thread-loader": "^4.0.2",
     "time-grunt": "^2.0.0",
-    "ts-jest": "^29.1.2",
+    "ts-jest": "^29.4.11",
     "ts-loader": "^9.5.1",
     "ts-sinon": "^2.0.2",
     "typescript": "^5.9.3",

@@ -7,7 +7,7 @@
 
 #hoc_download
   .row
-    .span12
+    .col-md-12
       %div
         #deprecation-warning-banner{class: 'alert alert-warning', role: 'alert'}
           %span
@@ -15,11 +15,11 @@
           %span
             = t('hoc_download.deprecation')
   .row
-    .span12
+    .col-md-12
       %h1
         = t('hoc_download.title')
   .row
-    .span12
+    .col-md-12
       .capsule
         .indent
           %h3
@@ -28,16 +28,16 @@
             != t('hoc_download.capsule_desc', url: @hoc_url, app_name: @app_name, markdown: true)
   .indent
     .row
-      .span12
+      .col-md-12
         %h3
           = t('hoc_download.instructions_headline')
     .row
-      .span12
+      .col-md-12
         .smalltext
           != t('hoc_download.instructions', url: CDO.code_org_url('/certificates', 'https:'), markdown: true)
         %br/
     .row
-      .span12
+      .col-md-12
         %strong
           = t('hoc_download.download_message', app_name: @app_name)
         %ul

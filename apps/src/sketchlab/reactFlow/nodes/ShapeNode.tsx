@@ -1,4 +1,4 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
@@ -10,10 +10,12 @@ import {
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './shape-node.module.scss';
 
@@ -159,6 +161,7 @@ function ShapeNode({
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -167,12 +170,6 @@ function ShapeNode({
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}
         {isRectangle ? (
@@ -214,13 +211,20 @@ function ShapeNode({
         >
           {label}
         </div>
-      </div>
 
-      <ConnectionHandles
-        visible={showHandles}
-        isConnectable={isConnectable}
-        shapeType={shapeType}
-      />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+          shapeType={shapeType}
+        />
+      </div>
     </div>
   );
 }

@@ -16,7 +16,7 @@ import {
   SpriteLab2ItemType,
   uploadAssetToProject,
 } from '../ai/items/itemGeneration';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -119,7 +119,12 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           frameCount: 1,
           frameDelay: 2,
           looping: true,
-          categories: itemType === 'background' ? [BACKGROUNDS_CATEGORY] : [],
+          categories:
+            itemType === 'background'
+              ? [BACKGROUNDS_CATEGORY]
+              : itemType === 'block'
+              ? [BLOCKS_CATEGORY]
+              : [],
           // Recorded once here; the pixel editor trusts this instead of
           // re-detecting the grid on every open.
           pixelGridSize,
@@ -177,6 +182,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           >
             <option value="sprite">Sprite (costume)</option>
             <option value="background">Background</option>
+            <option value="block">Block (platform tile)</option>
           </select>
         </label>
         <label>
