@@ -313,6 +313,14 @@ function createRspackConfig({
                       },
                     },
                     target: 'es5',
+                    // loose matches ts-loader's es5 emit: methods assigned
+                    // directly to the prototype (enumerable), not defined
+                    // via _create_class/defineProperty (non-enumerable).
+                    // CustomMarshalingInterpreter marshals scope objects
+                    // with for..in, so strict-mode class emit hides every
+                    // method from student code (music lab's Sequencer was
+                    // the first to break).
+                    loose: true,
                   },
                   // See the jsx rule above: mirror babel's commonjs module
                   // output (tsconfig.build.json module node16 does the same
