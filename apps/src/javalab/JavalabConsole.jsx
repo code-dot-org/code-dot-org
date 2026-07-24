@@ -221,7 +221,7 @@ class JavalabConsole extends React.Component {
         <PaneHeader
           id="pane-header"
           style={{
-            backgroundColor: 'var(--brand-purple-80)',
+            backgroundColor: '#7665a0',
             paddingLeft: '0.125rem',
           }}
         >

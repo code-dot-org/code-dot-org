@@ -35,7 +35,7 @@ function JavalabEditorHeader({
   return (
     <PaneHeader
       style={{
-        backgroundColor: 'var(--brand-purple-80)',
+        backgroundColor: '#7665a0',
         paddingLeft: '0.125rem',
       }}
     >
