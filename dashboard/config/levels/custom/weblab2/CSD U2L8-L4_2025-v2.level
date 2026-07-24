@@ -33,7 +33,7 @@
           "name": "index.html",
           "language": "html",
           "contents": "<!DOCTYPE html> \n<html> \n \t<head>\n    <link rel=\"stylesheet\" href=\"nature.css\">\n\t</head>\n\t<body>\n    <!-- colors in nature content -->\n\t\t<h1>Colors in Nature</h1>\n\t\t\n    <h2>Red</h2>\n\t\t\n    <!-- 1) Using the file menu for reference, fix each of the image tags -->\n    \n    <img src=\"red.jpg\" alt=\"red sky\"> \n    \n    <p>Grant W. Goodge/ NOAA - Library of Congress - Public Domain</p>\n\t\t\n    <h2>Green</h2>\n\t\t\n    <img src=\"grass.jpg\" alt=\"green grass\"> \n    \n    <p>Jin Zan - Wikimedia Commons - CC-BY-SA</p>\n\t\t\n    <h2>Blue</h2>\n\t\t\n    <img src=\"blu.jpg\" alt=\"blue islands\">\n    \n    <p>MALIZ ONG - PublicDomainPicture.net - CC0 Public Domain</p>\n\t</body>\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -72,14 +72,11 @@
           "language": "css",
           "contents": "p {\n  color: black;\n  font-size: 6px;\n}\nh1 {\n  font-weight: bold;\n  color: deepskyblue;\n}\nh2 {\n  font-weight: bold;\n  color: coral;\n}",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
         "1",
-        "2",
-        "3",
-        "4",
         "5"
       ]
     },
@@ -100,6 +97,6 @@
     "name_suffix": "_2025-v2"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:27.485+00:00\",\"changed\":[\"cloned from \\\"CSD U2L8-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L8-L4-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:27.485+00:00\",\"changed\":[\"cloned from \\\"CSD U2L8-L4-2025\\\"\"],\"cloned_from\":\"CSD U2L8-L4-2025\"},{\"changed_at\":\"2026-07-24 01:26:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

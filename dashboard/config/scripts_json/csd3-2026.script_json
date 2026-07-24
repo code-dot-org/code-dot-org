@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "07c8d0cb-c49c-4493-b374-23177f96836e",
+          "notice": "Looking at CS Discoveries?",
+          "details": "Consider AI Discoveries, our newest middle school course offering: it builds on this course, with an AI focus woven throughout. ",
+          "link": "https://support.code.org/hc/en-us/articles/47237786998669-Transitioning-to-AI-Discoveries-from-CS-Discoveries",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "See what's new →"
+        }
+      ],
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_unnumbered_lessons": true,
@@ -19,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-24 12:35:43 UTC",
+    "serialized_at": "2026-07-23 20:10:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -19787,6 +19799,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [
