@@ -1,5 +1,3 @@
-.projectIcon {
-  i {
-    color: var(--text-neutral-white-fixed);
-  }
+.projectIcon i {
+  color: var(--text-neutral-white-fixed);
 }
