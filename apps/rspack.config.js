@@ -572,13 +572,31 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
-    // RSPACK-DIFF: under `serve`, @rspack/cli defaults the top-level
-    // lazyCompilation option to {imports: true} for web targets.  Its
-    // /_rspack/lazy trigger endpoint loses to our catch-all proxy to
-    // Rails, so React.lazy chunks 404 and Suspense boundaries crash
-    // (first seen in lab2's ProgressContainer).  Disable it; webpack has
-    // no such default, so this also keeps timing comparisons honest.
-    lazyCompilation: false,
+    // RSPACK-DIFF: @rspack/cli would default this on for web targets
+    // under `serve` anyway, but set it explicitly: with 240 entries and
+    // ~100 dynamic-import chunks, deferring imports until a page asks
+    // for them cuts server startup roughly 3x (31s -> 11s).  Entries
+    // stay eager because Rails script tags load them without the lazy
+    // client stub.  The /_rspack/lazy trigger endpoint must be excluded
+    // from the catch-all proxy below or React.lazy chunks 404 and
+    // Suspense boundaries crash (first seen in lab2's ProgressContainer).
+    // RSPACK_LAZY_ENTRIES=1 additionally defers the 240 entries
+    // themselves.  Measured: 0.55s startup, ~6.6s to an interactive
+    // first page.  BROKEN for our pages, though: the entry request is
+    // answered with a stub and the real code hot-patches in later, so
+    // the Rails inline scripts that synchronously expect entry globals
+    // (appOptions init, header build) throw before the code arrives.
+    // Usable only if the middleware learns to stall the entry request
+    // until compiled.  Left as a toggle for future experiments.
+    lazyCompilation: {
+      imports: true,
+      entries: !!process.env.RSPACK_LAZY_ENTRIES,
+    },
+    // Startup note: serving over a populated build/package/js pays
+    // ~18s of writeToDisk reading and comparing the previous output
+    // (2.8GB) before writing — 29s vs 11s measured.  start:rspack
+    // removes the js output dir first; the dev server serves from
+    // memory, so nothing reads those files before the first compile.
     devServer: envConstants.DEV
       ? {
           allowedHosts: [
@@ -599,7 +617,9 @@ function createRspackConfig({
               ws: true,
             },
             {
-              context: ['**'],
+              // Everything except rspack's own lazy-compilation trigger
+              // endpoint falls through to Rails.
+              context: ['**', '!/_rspack/**'],
               target: 'http://localhost-studio.code.org:3000',
               changeOrigin: false,
               logLevel: 'debug',

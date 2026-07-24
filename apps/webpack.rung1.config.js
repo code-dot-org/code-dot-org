@@ -85,8 +85,11 @@ if (process.env.WEBPACK_LAZY) {
   config.experiments = {
     ...config.experiments,
     lazyCompilation: {
-      // Keep entries eager-compilable on request; dynamic imports too.
-      entries: true,
+      // Entries stay eager: Rails inline scripts synchronously expect
+      // entry globals, and the lazy stub + hot-patch flow races them
+      // (verified broken under rspack's equivalent).  Imports-only is
+      // the semantically safe variant.
+      entries: false,
       imports: true,
     },
   };
