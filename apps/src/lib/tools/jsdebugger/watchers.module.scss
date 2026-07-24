@@ -1,9 +1,6 @@
-// .debug-watch * sets font-family: monospace on all descendants; this
-// restores the FA6 font on icon elements so glyphs render correctly.
 .watchItem i,
 .watchInputSection i {
-  // stylelint-disable-next-line font-family-no-missing-generic-family-keyword
-  font-family: 'Font Awesome 6 Pro';
+  font-family: 'Font Awesome 6 Pro', sans-serif;
 }
 
 .watchItem {
