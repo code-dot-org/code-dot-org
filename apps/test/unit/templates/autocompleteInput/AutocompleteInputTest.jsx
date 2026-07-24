@@ -71,9 +71,15 @@ describe('AutocompleteInput Component', () => {
     jest.useRealTimers();
   });
 
-  it('forwards aria-label to the input when provided', () => {
+  it('forwards aria-label to the input when label is undefined', () => {
     renderComponent({label: undefined, 'aria-label': 'Address bar'});
     expect(screen.getByLabelText('Address bar')).toBeInTheDocument();
+  });
+
+  it('uses label over aria-label ', () => {
+    renderComponent({label: 'Other label', 'aria-label': 'Address bar'});
+    expect(screen.getByLabelText('Other label')).toBeInTheDocument();
+    expect(screen.queryByLabelText('Address bar')).not.toBeInTheDocument();
   });
 
   it('renders the TextField with correct initial props', () => {
