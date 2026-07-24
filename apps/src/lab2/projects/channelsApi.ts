@@ -9,6 +9,14 @@ import {Channel} from '../types';
 
 const rootUrl = '/v3/channels';
 
+export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
+
+export interface ShareFailure {
+  type: ShareFailureType;
+  // The offending text. Omitted by the server for profanity failures.
+  content?: string;
+}
+
 export async function get(channelId: string): Promise<Channel> {
   const {value} = await HttpClient.fetchJson<Channel>(
     `${rootUrl}/${channelId}`
@@ -53,14 +61,6 @@ export async function fetchSharingDisabled(
     `${rootUrl}/${channelId}/sharing_disabled`
   );
   return value.sharing_disabled;
-}
-
-export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
-
-export interface ShareFailure {
-  type: ShareFailureType;
-  // The offending text. Omitted by the server for profanity failures.
-  content?: string;
 }
 
 export async function fetchPrivacyProfanityViolation(

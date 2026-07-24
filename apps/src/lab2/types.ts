@@ -75,8 +75,6 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
-  // True when the server's share filter found profanity or PII in the
-  // project content. Only checked for share-filtered project types.
   hasPrivacyProfanityViolation?: boolean;
   isTeacherOfProjectOwner?: boolean;
 }

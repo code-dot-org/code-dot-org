@@ -15,14 +15,11 @@ export type BlockedType =
   | 'privacyProfanity'
   | 'projectSharingDisabled';
 
-// Shown to the owner (or their teacher) inside the lab when the server's
-// share filter blocked the project.
 export const PRIVACY_PROFANITY_OWNER_ALERT =
   "This project contains content that can't be shared, such as profanity " +
   "or personal information. Others won't be able to view it until that " +
   'content is removed.';
 
-// Shown to non-owners in place of the blocked project.
 export const PRIVACY_PROFANITY_BLOCKED_MESSAGE =
   "This project contains content that can't be shared with others, such " +
   'as profanity or personal information. Please contact the project owner ' +
@@ -88,15 +85,15 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   }
 
   // A share-filtered project stays fully usable for its owner (and their
-  // teacher); outside the lab pages there is nothing to overlay. The lab
-  // pages get the warning alert below instead.
-  if (
-    blockedType === 'privacyProfanity' &&
-    (isOwner || isTeacherOfProjectOwner) &&
-    !['view', 'edit', 'level'].includes(pageAction)
-  ) {
-    return null;
-  }
+  // teacher); The lab pages get a warning alert instead (below).
+  // TODO: should we do this? Or should we still show the banner?
+  // if (
+  //   blockedType === 'privacyProfanity' &&
+  //   (isOwner || isTeacherOfProjectOwner) &&
+  //   !['view', 'edit', 'level'].includes(pageAction)
+  // ) {
+  //   return null;
+  // }
 
   // If page action is view/edit/level, project is flagged for abuse, and user has view or edit access,
   // render workspace alert with warning about flagged project.

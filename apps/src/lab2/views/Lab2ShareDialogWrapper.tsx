@@ -63,7 +63,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     SubmissionStatusType | undefined
   >(undefined);
 
-  // undefined = check pending, null = no failure (or project type not filtered).
+  // undefined = check pending, null = no failure or project type not filtered.
   const [shareFailure, setShareFailure] = useState<
     ShareFailure | null | undefined
   >(undefined);
@@ -82,7 +82,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     fetchShareFailure(channelId)
       .then(setShareFailure)
       .catch(() => {
-        // Fail open, matching server behavior when the filtering service
+        // Fail silently, matching server behavior when the filtering service
         // is unavailable.
         MetricsReporter.logWarning({
           event: 'lab2_share_failure_fetch_error',

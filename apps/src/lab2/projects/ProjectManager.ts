@@ -126,7 +126,7 @@ export default class ProjectManager {
         hasPrivacyProfanityViolation =
           await this.channelsStore.getPrivacyProfanityViolation(channel);
       } catch (error) {
-        // Fail open, matching server behavior when the filtering service
+        // Fail silently, matching server behavior when the filtering service
         // is unavailable.
         this.metricsReporter.logWarning(
           'Unable to fetch privacy/profanity violation status. Defaulting to no violation.'
