@@ -71,7 +71,7 @@ describe('AutocompleteInput Component', () => {
     jest.useRealTimers();
   });
 
-  it('forwards aria-label to the input when no visible label is rendered', () => {
+  it('forwards aria-label to the input when provided', () => {
     renderComponent({label: undefined, 'aria-label': 'Address bar'});
     expect(screen.getByLabelText('Address bar')).toBeInTheDocument();
   });

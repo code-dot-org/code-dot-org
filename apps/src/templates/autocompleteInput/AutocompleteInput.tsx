@@ -40,7 +40,6 @@ export const AutocompleteInput = memo(
   }: {
     id: string;
     label?: string;
-    /** Accessible name for the input when no visible label is rendered. */
     'aria-label'?: string;
     name: string;
     size: TextFieldProps['size'];
