@@ -55,7 +55,7 @@ class DataWorkspace extends React.Component {
               </MuiTypography>
             </PaneSection>
           )}
-          <span
+          <div
             id="dataModeHeaders"
             style={{
               flex: '1 1 0',
@@ -89,7 +89,7 @@ class DataWorkspace extends React.Component {
               isRtl={this.props.isRtl}
               onClick={this.props.handleVersionHistory}
             />
-          </span>
+          </div>
         </PaneHeader>
 
         <div id="data-mode-container" style={styles.container}>
