@@ -301,7 +301,7 @@ class ShareFilteringTest < Minitest::Test
 
   def test_should_filter_program_playlab_only_with_indicator
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
-    indicator = ShareFiltering::USER_ENTERED_TEXT_FIELDS.first
+    indicator = ShareFiltering::BLOCKLY_TEXT_FIELDS.first
 
     # no indicator in program
     no_indicator = "<xml><block type=\"studio_showTitleScreen\"/></xml>"
@@ -470,6 +470,13 @@ class ShareFilteringTest < Minitest::Test
 
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(false)
     assert_equal false, ShareFiltering.should_filter_program(generate_sketchlab_source, 'sketchlab')
+  end
+
+  def test_hash_program_with_blockly_type_is_unfilterable_not_an_error
+    Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
+
+    assert_equal false, ShareFiltering.should_filter_program(generate_sketchlab_source, 'spritelab')
+    assert_nil ShareFiltering.find_share_failure(generate_sketchlab_source, 'en', 'spritelab')
   end
 
   # Tests for ShareFiltering.extract_text_from_js

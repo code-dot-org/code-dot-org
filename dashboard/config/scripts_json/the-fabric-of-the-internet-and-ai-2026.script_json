@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:22:32 UTC",
+    "serialized_at": "2026-07-23 23:33:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6369,6 +6369,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: Internet Access Advocacy Campaign Project",
         "resource.key": "persona_summary_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Network Security",
+        "resource.key": "_key_the_fabric_of_the_internet_and_ai_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Network Security",
+        "resource.key": "fabric_of_the_internet_and_ai_unit_guide"
       }
     },
     {

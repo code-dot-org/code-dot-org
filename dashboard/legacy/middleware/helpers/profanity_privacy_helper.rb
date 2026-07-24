@@ -90,21 +90,11 @@ def share_failure_from_body(body, locale, project_type)
     return false
   end
 
-  blockly_source = parsed_json['source']
-  return false unless blockly_source
-
-  # Sketch Lab stores a structured object in the `source` field;
-  # ShareFiltering knows how to extract its text fields. Other object-shaped
-  # sources are not filterable, e.g. Java Lab stores an object like:
-  # blockly_source = {"MyClass.java"=>{"text"=>"my source code for MyClass.java here", "isVisible"=>true, "tabOrder"=>0}}
-  #
-  # See: https://github.com/code-dot-org/code-dot-org/pull/60329#issuecomment-2282270302
-  filterable = blockly_source.is_a?(String) ||
-    (project_type == 'sketchlab' && blockly_source.is_a?(Hash))
-  return false unless filterable
+  source = parsed_json['source']
+  return false unless source
 
   begin
-    ShareFiltering.find_share_failure(blockly_source, locale, project_type)
+    ShareFiltering.find_share_failure(source, locale, project_type)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
     return false

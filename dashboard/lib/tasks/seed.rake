@@ -83,7 +83,6 @@ namespace :seed do
     allthethings
     allthettsthings
     frozen
-    hourofcode
     mc
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
 
@@ -250,7 +249,6 @@ namespace :seed do
       alltheselfpacedplthings
       allthettsthings
       frozen
-      hourofcode
       mc
       original-allthelessonplans-course
       original-allthethings-course
