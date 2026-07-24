@@ -225,13 +225,19 @@ function createRspackConfig({
         // the JS thread under webpack (CI only); rspack parallelizes module
         // processing natively and thread-loader would only add IPC overhead.
         //
-        // RSPACK_SWC=1 swaps babel-loader/ts-loader for rspack's built-in
-        // rust swc loader.  This is where the order-of-magnitude speedup
-        // lives: JS loaders serialize on the node thread even under rspack.
-        // swc does not run our babel plugin set (add-module-exports,
-        // transform-classes loose, etc), so output semantics are NOT yet
-        // verified — timing experiments only.
-        ...(process.env.RSPACK_SWC
+        // RSPACK_SWC swaps JS-thread loaders for rspack's built-in rust
+        // swc loader.  This is where the order-of-magnitude speedup lives:
+        // JS loaders serialize on the node thread even under rspack.
+        //
+        // RSPACK_SWC=ts replaces only ts-loader.  swc with commonjs modules
+        // matches ts-loader's transpileOnly output closely, so this mode is
+        // safe.  RSPACK_SWC=all also replaces babel-loader for js/jsx —
+        // measurably faster but KNOWN BROKEN at runtime: swc has no
+        // add-module-exports, and ~128 legacy files mix `import` with
+        // `module.exports =` (e.g. code-studio/initApp/project.js), which
+        // babel tolerates and swc does not.  'all' is for timing only until
+        // those files are codemodded.
+        ...(process.env.RSPACK_SWC === 'all' || process.env.RSPACK_SWC === '1'
           ? [
               {
                 test: /\.jsx?$/,
@@ -256,29 +262,14 @@ function createRspackConfig({
                   // babel runs plugin-transform-modules-commonjs, so the
                   // bundler never links strict ESM; mixed CJS/ESM interop
                   // (e.g. the @cdo/locale stubs) depends on that.  Mirror
-                  // it, keeping import() dynamic for code splitting.
-                  module: {type: 'commonjs', ignoreDynamic: true},
-                },
-              },
-              {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                loader: 'builtin:swc-loader',
-                options: {
-                  jsc: {
-                    parser: {syntax: 'typescript', tsx: true},
-                    transform: {
-                      react: {
-                        runtime: 'classic',
-                        refresh: !!envConstants.HOT,
-                      },
-                    },
-                    target: 'es5',
+                  // it, keeping import() dynamic for code splitting and
+                  // import.meta intact for worker-chunk detection (see the
+                  // ts rule below).
+                  module: {
+                    type: 'commonjs',
+                    ignoreDynamic: true,
+                    preserveImportMeta: true,
                   },
-                  // See the jsx rule above: mirror babel's commonjs module
-                  // output (tsconfig.build.json module node16 does the same
-                  // for ts-loader).
-                  module: {type: 'commonjs', ignoreDynamic: true},
                 },
               },
             ]
@@ -305,6 +296,40 @@ function createRspackConfig({
                   },
                 ],
               },
+            ]),
+        ...(process.env.RSPACK_SWC
+          ? [
+              {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                loader: 'builtin:swc-loader',
+                options: {
+                  jsc: {
+                    parser: {syntax: 'typescript', tsx: true},
+                    transform: {
+                      react: {
+                        runtime: 'classic',
+                        refresh: !!envConstants.HOT,
+                      },
+                    },
+                    target: 'es5',
+                  },
+                  // See the jsx rule above: mirror babel's commonjs module
+                  // output (tsconfig.build.json module node16 does the same
+                  // for ts-loader).  preserveImportMeta keeps
+                  // `new URL(..., import.meta.url)` intact so rspack still
+                  // detects worker chunks (music patternAiWorker, pyodide);
+                  // without it swc lowers import.meta.url to a Node-only
+                  // pathToFileURL(__filename) that crashes in the browser.
+                  module: {
+                    type: 'commonjs',
+                    ignoreDynamic: true,
+                    preserveImportMeta: true,
+                  },
+                },
+              },
+            ]
+          : [
               {
                 test: /\.tsx?$/,
                 use: [
@@ -539,6 +564,13 @@ function createRspackConfig({
       }),
       ...(envConstants.HOT ? [new ReactRefreshRspackPlugin()] : []),
     ],
+    // RSPACK-DIFF: under `serve`, @rspack/cli defaults the top-level
+    // lazyCompilation option to {imports: true} for web targets.  Its
+    // /_rspack/lazy trigger endpoint loses to our catch-all proxy to
+    // Rails, so React.lazy chunks 404 and Suspense boundaries crash
+    // (first seen in lab2's ProgressContainer).  Disable it; webpack has
+    // no such default, so this also keeps timing comparisons honest.
+    lazyCompilation: false,
     devServer: envConstants.DEV
       ? {
           allowedHosts: [
