@@ -140,7 +140,8 @@
   --background-neutral-alpha-80: #ff69b4cc;
   --background-neutral-alpha-90: #ff69b4e5;
   --background-neutral-alpha-95: #ff69b4f2;
-  --background-selected-hover: #ffd6ec;
+  --background-selected-strong: #ffd6ec;
+  --border-neutral-black-fixed: #5c0f38;
   --background-accent-orange-mid: #ffb3dc;
   --background-accent-pink-mid: #ffb3dc;
   --border-brand-mid: #ffb3dc;
@@ -148,7 +149,7 @@
   --border-warning-mid: #ffb3dc;
   --border-success-mid: #ffb3dc;
   --border-info-mid: #ffb3dc;
-  --border-selected-hover: #b02e6c;
+  --border-selected-strong: #b02e6c;
   --border-accent-orange-primary: #ff69b4;
   --border-accent-orange-light: #fff0f7;
   --border-accent-orange-mid: #ffb3dc;
@@ -159,10 +160,10 @@
   --border-accent-pink-strong: #b02e6c;
   --text-accent-orange-primary: #d63384;
   --text-accent-orange-primary-fixed: #d63384;
-  --text-accent-orange-strong: #99255d;
+  --text-accent-orange-secondary: #99255d;
   --text-accent-pink-primary: #d63384;
   --text-accent-pink-primary-fixed: #d63384;
-  --text-accent-pink-strong: #99255d;
+  --text-accent-pink-secondary: #99255d;
 }
 
 /* Dark theme overrides (ALL pink for visual auditing) */
@@ -290,7 +291,8 @@
   --background-neutral-alpha-80: #ff69b4cc;
   --background-neutral-alpha-90: #ff69b4e5;
   --background-neutral-alpha-95: #ff69b4f2;
-  --background-selected-hover: #8f2058;
+  --background-selected-strong: #8f2058;
+  --border-neutral-black-fixed: #5c0f38;
   --background-accent-orange-mid: #8f2058;
   --background-accent-pink-mid: #8f2058;
   --border-brand-mid: #8f2058;
@@ -298,7 +300,7 @@
   --border-warning-mid: #8f2058;
   --border-success-mid: #8f2058;
   --border-info-mid: #8f2058;
-  --border-selected-hover: #99255d;
+  --border-selected-strong: #99255d;
   --border-accent-orange-primary: #ff8fc9;
   --border-accent-orange-light: #6e1543;
   --border-accent-orange-mid: #8f2058;
@@ -309,9 +311,9 @@
   --border-accent-pink-strong: #99255d;
   --text-accent-orange-primary: #fff0f7;
   --text-accent-orange-primary-fixed: #ff8fc9;
-  --text-accent-orange-strong: #ffe0ef;
+  --text-accent-orange-secondary: #ffe0ef;
   --text-accent-pink-primary: #fff0f7;
   --text-accent-pink-primary-fixed: #ff8fc9;
-  --text-accent-pink-strong: #ffe0ef;
+  --text-accent-pink-secondary: #ffe0ef;
 }
 /* stylelint-enable color-hex-length */

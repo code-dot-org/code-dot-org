@@ -41,7 +41,7 @@ export default class SearchBar extends React.Component {
 }
 
 const BORDER_WIDTH = 1;
-const BORDER_COLOR = 'var(--borders-neutral-primary)';
+const BORDER_COLOR = 'var(--borders-neutral-strong)';
 const BORDER_RADIUS = 4;
 const ICON_COLOR = 'var(--text-neutral-secondary)';
 
@@ -65,14 +65,14 @@ const styles = {
     top: 6,
     left: 5,
     fontSize: 16,
-    color: ICON_COLOR,
+    color: 'var(--text-neutral-secondary)',
   },
   clearIcon: {
     position: 'absolute',
     top: 6,
     right: 5,
     fontSize: 16,
-    color: ICON_COLOR,
+    color: 'var(--text-neutral-secondary)',
     cursor: 'pointer',
   },
   searchArea: {
