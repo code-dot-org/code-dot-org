@@ -89,6 +89,71 @@ Per environment (production uses the bare apex; test/staging/adhoc use
   caller (routes, preview CSP, level-starter-asset CORS, cookie scoping, the
   frontend preview-URL builders and origin-parsing helpers, and dev host
   allowlists).
+- **Part 3 — cleanup:** retire the unused `*.preview.codeprojects.org`
+  infrastructure and the transitional route guard. Details below.
+
+## Part 3 — cleanup
+
+Do this only after Part 2 has deployed and been verified in **every**
+environment. None of it is user-facing; it removes infrastructure and code that
+no longer serves traffic.
+
+Part 2 leaves `*.preview.codeprojects.org` resolving (the legacy component still
+provisions it) but matching no preview route. A transitional guard in
+`dashboard/config/routes.rb` — the `retired_preview_host` local excluded from the
+dashboard block — makes those hostnames 404 rather than fall through to the full
+dashboard route table. Part 3 removes both the guard and the DNS that makes it
+necessary, in that order of dependency: **delete the infrastructure first, then
+the guard.**
+
+1. **Remove the preview resources from
+   `aws/cloudformation/components/codeprojects_resources.yml.erb`** (the legacy
+   component). Every reference to `preview` in that file:
+   - the `*.preview.${CodeprojectsBaseDomainName}` certificate SAN and its
+     matching `DomainValidationOptions` entry
+   - the `*.preview.${CodeprojectsBaseDomainName}` Route 53 record
+   - the `*.preview.${CodeprojectsBaseDomainName}` CloudFront alias
+   - the staging-only `*.preview.localhost.codeprojects.org` dev record
+   - the domain list in the file's header comment
+
+   ⚠️ Removing a SAN **replaces the ACM certificate**, which forces an update of
+   the *legacy* CloudFront distribution (roughly 15 minutes of propagation).
+   Schedule this deliberately rather than bundling it with unrelated stack
+   changes.
+
+2. **Remove the transitional route guard** in `dashboard/config/routes.rb`: the
+   `retired_preview_host` local and its alternative in the negative-lookahead
+   host constraint. Safe once step 1 has deployed, because the hostnames no
+   longer resolve.
+
+3. **Remove the dead development host entries** for the old preview origin:
+   - `dashboard/config/environments/development.rb` — the
+     `/[^.]+\.preview\.localhost\.codeprojects\.org/` pattern
+   - `apps/webpack.config.js` — `.preview.localhost.codeprojects.org`
+
+   Keep the bare `localhost.codeprojects.org` entries in both files; legacy Web
+   Lab still needs them locally.
+
+4. **Optional, cosmetic.** These names still say `codeprojects` but have no
+   functional coupling to the domain; they were left alone to keep the cutover
+   diff reviewable. Rename only if the churn is worth it:
+   `apps/src/util/codeprojectsPreviewOrigin.ts`,
+   `dashboard/app/controllers/codeprojects_preview_controller.rb`, and the
+   `codeprojects_preview` route names and view directory.
+
+### What stays on codeprojects.org permanently
+
+Legacy Web Lab's serving path is not part of this migration. Do **not** remove:
+
+- `CDO.codeprojects_hostname` (`lib/cdo.rb`)
+- the `/weblab/footer` route and the legacy share redirect to
+  `codeprojects.org/<channel>/` (`dashboard/config/routes.rb`)
+- the `code_projects_domain` routes that serve legacy student HTML
+  (`dashboard/legacy/middleware/files_api.rb`)
+- `codeprojects.org` in the shared-cookie-domain list (`lib/cdo/rack/request.rb`)
+- the bare `localhost.codeprojects.org` development hosts
+- everything else in `codeprojects_resources.yml.erb` (apex, `www`, `static`,
+  `bramble-download`)
 
 ### Local development
 
@@ -106,10 +171,17 @@ Then update the Chrome insecure-origin flag per `apps/src/weblab2/README.md`
 
 ## Rollback
 
-Revert this PR. Because legacy `codeprojects.org` resources are untouched and
-the codeaiprojects CloudFront distribution/cert are separate resources, reverting
-the app change restores `*.preview.codeprojects.org` previews immediately. The
-codeaiprojects infra can be left in place (idle) or torn down separately.
+Revert **Part 2**. Because the legacy `codeprojects.org` resources are untouched
+and the codeaiprojects CloudFront distribution and certificate are separate
+resources, reverting the application cutover restores
+`*.preview.codeprojects.org` previews immediately. The codeaiprojects
+infrastructure from Part 1 can be left in place (idle) or torn down separately.
+
+This is only true while Part 3 is outstanding. Once Part 3 has removed the
+`*.preview.codeprojects.org` certificate SAN, DNS record and CloudFront alias,
+reverting Part 2 alone no longer restores previews — the old hostnames will not
+resolve. After that point, roll back by reverting Part 3 as well, or by fixing
+forward.
 
 ## Notes / open items
 
