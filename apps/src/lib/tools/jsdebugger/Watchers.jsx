@@ -351,6 +351,7 @@ class Watchers extends React.Component {
                   size="small"
                   variant="contained"
                   color="error"
+                  aria-label="Delete"
                   onClick={() => this.props.remove(wv.get('expression'))}
                 >
                   <FontAwesomeV6Icon iconName="xmark" />
@@ -406,6 +407,7 @@ class Watchers extends React.Component {
               size="small"
               variant="contained"
               color="primary"
+              aria-label="Add"
             >
               <FontAwesomeV6Icon iconName="plus" />
             </MuiIconButton>
@@ -428,7 +430,6 @@ const styles = {
     whiteSpace: 'nowrap',
     minHeight: buttonSize,
     marginLeft: 3,
-    overflow: 'hidden',
   },
   watchValueArray: {
     whiteSpace: 'normal',
