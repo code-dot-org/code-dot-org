@@ -18,14 +18,23 @@
   clear: both;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 
 .watchTextField {
   flex: 1;
   min-width: 0;
-  overflow: hidden;
-}
 
-.watchTextFieldInput {
-  width: 100%;
+  // FormFieldWrapper defaults to min-width: 18.75rem, wider than the watchers pane.
+  .watchTextFieldInput {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    input {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
