@@ -53,7 +53,15 @@ function TopInstructionsHeader(props) {
     hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
   return (
-    <PaneHeader style={{padding: '0 0.5rem'}}>
+    <PaneHeader
+      style={{
+        padding: '0 0.5rem',
+        backgroundColor:
+          tabSelected === TabType.TEACHER_ONLY
+            ? 'var(--background-info-primary)'
+            : undefined,
+      }}
+    >
       {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
       {collapsible &&
         !isEmbedView &&
