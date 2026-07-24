@@ -73,4 +73,57 @@ test.describe('Web Lab 2', () => {
       await signOut(page);
     },
   );
+
+  test(
+    'Web Lab 2 workspace visual checks',
+    {tag: ['@visual', '@no_mobile']},
+    async ({page, visualCheck}) => {
+      await resetSession(page);
+      await page.goto('/');
+      await createStudent(page, {name: 'Penelope'});
+
+      const lab = new WebLab2(page);
+      await lab.gotoLevel();
+      await lab.expectEditorLoaded();
+
+      // The preview iframe is masked so this test can run everywhere: its
+      // content only resolves on a real deployed environment. The
+      // deployed-only preview visual check below covers it unmasked.
+      const masks = [lab.lessonHeaderInfo, lab.previewIframe];
+
+      // Park the pointer between steps so tooltips on the preview-header
+      // buttons never appear in a checkpoint.
+      await page.mouse.move(0, 0);
+      await visualCheck('initial load', {mask: masks});
+
+      await lab.openDebugPanel();
+      await page.mouse.move(0, 0);
+      await visualCheck('debug panel open', {mask: masks});
+
+      await lab.mobileViewButton.click();
+      await expect(lab.mobileViewButton).toHaveAttribute(
+        'aria-pressed',
+        'true',
+      );
+      await page.mouse.move(0, 0);
+      await visualCheck('mobile preview view', {mask: masks});
+    },
+  );
+
+  test(
+    'Web Lab 2 preview visual check',
+    {tag: ['@visual', '@no_mobile', '@no_ci']},
+    async ({page, visualCheck}) => {
+      await resetSession(page);
+      await page.goto('/');
+      await createStudent(page, {name: 'Penelope'});
+
+      const lab = new WebLab2(page);
+      await lab.gotoLevel();
+      await lab.waitForPreviewLoaded();
+
+      await page.mouse.move(0, 0);
+      await visualCheck('preview loaded', {mask: [lab.lessonHeaderInfo]});
+    },
+  );
 });

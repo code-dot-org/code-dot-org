@@ -75,6 +75,15 @@ export class WebLab2 extends LessonLevelPage {
   /** The hello-world div from the level's seeded index.html source. */
   readonly helloWorldMessage: Locator;
 
+  /** Preview-header toggle that opens the debug (console/network) panel. */
+  readonly openDebugPanelButton: Locator;
+
+  /** The debug panel; mounts only while open. */
+  readonly debugPanel: Locator;
+
+  /** Preview-header segmented button that switches the preview to mobile view. */
+  readonly mobileViewButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsPanel = page.locator('#instructions-panel');
@@ -90,6 +99,17 @@ export class WebLab2 extends LessonLevelPage {
     this.helloWorldMessage = this.innerPreviewFrame.locator(
       '#hello-world-message',
     );
+    this.openDebugPanelButton = page.getByRole('button', {
+      name: 'Open debug panel',
+    });
+    this.debugPanel = page.locator('#debug-panel-container');
+    this.mobileViewButton = page.getByRole('button', {name: 'Mobile View'});
+  }
+
+  /** Open the debug panel and wait for it to mount. */
+  async openDebugPanel(): Promise<void> {
+    await this.openDebugPanelButton.click();
+    await expect(this.debugPanel).toBeVisible();
   }
 
   /** Navigate to the Web Lab 2 level and wait for the instructions to mount. */
