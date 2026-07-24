@@ -1,3 +1,5 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Box} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -26,25 +28,21 @@ export default class EnumPropertyRow extends React.Component {
     const {options, displayOptions = [], desc} = this.props;
     const {selectedValue} = this.state;
 
-    const renderedOptions = options.map(function (option, index) {
-      return (
-        <option key={index} value={option}>
-          {displayOptions[index] || option}
-        </option>
-      );
-    });
     return (
-      <div style={this.props.containerStyle || rowStyle.container}>
-        <div style={rowStyle.description}>{desc}</div>
-        <select
-          className="form-control"
-          style={rowStyle.enumInput}
-          value={selectedValue}
+      <Box style={this.props.containerStyle || rowStyle.container}>
+        <SimpleDropdown
+          labelText={desc}
+          size="s"
+          selectedValue={selectedValue}
           onChange={this.handleChange}
-        >
-          {renderedOptions}
-        </select>
-      </div>
+          items={options.map((item, index) => ({
+            value: item,
+            text: displayOptions[index] || item,
+          }))}
+          styleAsFormField
+          style={{width: '100%'}}
+        />
+      </Box>
     );
   }
 }

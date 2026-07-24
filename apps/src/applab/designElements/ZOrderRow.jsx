@@ -1,10 +1,13 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Box,
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
-
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import color from '../../util/color';
 
 import * as rowStyle from './rowStyle';
 
@@ -26,65 +29,68 @@ export default class ZOrderRow extends React.Component {
     const isBackMost = index === 0;
     const isFrontMost = index + 1 === outerElement.parentNode.children.length;
 
-    const squareButton = {
-      width: 42,
-      height: 42,
-      marginLeft: 0,
-      marginRight: 10,
-      backgroundColor: color.cyan,
-    };
-
-    const squareButtonDisabled = {
-      width: 42,
-      height: 42,
-      marginLeft: 0,
-      marginRight: 10,
-    };
-
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>
+      <Box
+        style={{
+          ...rowStyle.container,
+          flexDirection: 'column',
+        }}
+        sx={{
+          gap: 0.5,
+        }}
+      >
+        <MuiTypography variant="label3">
           {applabMsg.designElementProperty_zOrder()}
-        </div>
-        <div>
-          <button
-            type="button"
-            style={isBackMost ? squareButtonDisabled : squareButton}
+        </MuiTypography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            gap: 1,
+          }}
+        >
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
             title={applabMsg.designElementProperty_zOrder_backButton()}
           >
-            <FontAwesome icon="angles-left" />
-          </button>
-          <button
-            type="button"
-            style={isBackMost ? squareButtonDisabled : squareButton}
+            <FontAwesomeV6Icon iconName="angles-left" iconStyle="solid" />
+          </MuiIconButton>
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
             title={applabMsg.designElementProperty_zOrder_backwardButton()}
           >
-            <FontAwesome icon="angle-left" />
-          </button>
-          <button
-            type="button"
-            style={isFrontMost ? squareButtonDisabled : squareButton}
+            <FontAwesomeV6Icon iconName="angle-left" iconStyle="solid" />
+          </MuiIconButton>
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
             title={applabMsg.designElementProperty_zOrder_forwardButton()}
           >
-            <FontAwesome icon="angle-right" />
-          </button>
-          <button
-            type="button"
-            style={isFrontMost ? squareButtonDisabled : squareButton}
+            <FontAwesomeV6Icon iconName="angle-right" iconStyle="solid" />
+          </MuiIconButton>
+          <MuiIconButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}
             title={applabMsg.designElementProperty_zOrder_frontButton()}
           >
-            <FontAwesome icon="angles-right" />
-          </button>
-        </div>
-      </div>
+            <FontAwesomeV6Icon iconName="angles-right" iconStyle="solid" />
+          </MuiIconButton>
+        </Box>
+      </Box>
     );
   }
 }
