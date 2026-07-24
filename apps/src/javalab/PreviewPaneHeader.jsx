@@ -37,9 +37,9 @@ export default function PreviewPaneHeader({
           color="secondary"
           size="extraSmall"
           onClick={toggleVisualizationCollapsed}
-          ariaLabel={isCollapsed ? i18n.showPreview() : i18n.hidePreview()}
-          ariaExpanded={isCollapsed}
-          ariaControls="visualization"
+          aria-label={isCollapsed ? i18n.showPreview() : i18n.hidePreview()}
+          aria-expanded={!isCollapsed}
+          aria-controls="visualization"
           sx={{
             borderRadius: '50%',
             height: '1rem',
