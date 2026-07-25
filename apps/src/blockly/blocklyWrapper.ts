@@ -101,6 +101,7 @@ import {
   initializeVariableLocalization,
   isDarkTheme,
   loadBlocksToWorkspace,
+  publishSetupBlockColor,
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
@@ -771,6 +772,12 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     trashcan.init();
 
     blocklyWrapper.setMainWorkspace(workspace);
+    publishSetupBlockColor(workspace.getTheme());
+    workspace.addChangeListener(event => {
+      if (event.type === BlocklyCore.Events.THEME_CHANGE) {
+        publishSetupBlockColor(workspace.getTheme());
+      }
+    });
 
     if (optOptionsExtended.useBlocklyDynamicCategories) {
       const originalVariableFlyoutCategory =
