@@ -1,0 +1,153 @@
+# Build, smoke-test, and publish the cdo-gems image (docker/gems/).
+#
+# Smoke test: the same Dockerfile must build on docker AND podman
+# (dual-engine policy, see docker/gems/README.md); smoke-test.sh asserts the
+# bundle resolves and the native gems load against cdo-base's runtime
+# libraries. Runs on PRs and pushes nothing.
+#
+# amd64 only, unlike cdo-base. Gemfile.lock's PLATFORMS lists arm64-darwin
+# and x86_64-linux but not aarch64-linux, so an arm64 Linux build resolves
+# the generic `ruby` platform variants instead — for libv8-node that means
+# building V8 from source rather than using the prebuilt gem, which is a
+# different artifact, not the same image for another arch. Adding
+# aarch64-linux to the lockfile is its own change; see docker/gems/README.md.
+#
+# Every job builds cdo-build first because it is deliberately unpublished
+# (docker/build/README.md) — it is materialized per build and discarded.
+#
+# Triggers are Bundler's inputs, not the source tree: the lockfile the image
+# is keyed on, and the engine gemspecs and version.rb files it resolves path
+# gems from. Engine source is deliberately excluded — it changes ~9x more
+# often and does not affect the bundle. docker/build is included, since the
+# builder produces this image's contents.
+#
+# The weekly cron picks up a refreshed cdo-base. Without it a base security
+# rebuild would not reach anything downstream until the next lockfile change.
+
+name: cdo-gems-image
+
+# The path lists below are duplicated between pull_request and push on
+# purpose: the workflow parser does not support YAML anchors.
+on:
+  pull_request:
+    paths:
+      - 'docker/gems/**'
+      - 'docker/build/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'dashboard/engines/*/*.gemspec'
+      - 'dashboard/engines/*/lib/*/version.rb'
+      - '.github/workflows/cdo-gems-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/gems/**'
+      - 'docker/build/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'dashboard/engines/*/*.gemspec'
+      - 'dashboard/engines/*/lib/*/version.rb'
+      - '.github/workflows/cdo-gems-image.yml'
+  schedule:
+    - cron: '0 8 * * 0' # weekly, Sunday 8am UTC — after cdo-base 4am, cdo-build 6am
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-gems
+
+jobs:
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }})
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [docker, podman]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      # Cone-mode sparse checkout also brings every file in the repo root,
+      # which is where .ruby-version, Gemfile, and Gemfile.lock live.
+      - name: Checkout gem inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/build
+            docker/gems
+            dashboard/engines
+
+      - name: Build cdo-build with ${{ matrix.engine }}
+        run: ${{ matrix.engine }} build -t cdo-build:ci docker/build/
+
+      - name: Build cdo-gems with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            -f docker/gems/Dockerfile \
+            --build-arg BUILD_IMAGE=cdo-build:ci \
+            -t cdo-gems:smoke .
+
+      - name: Smoke test
+        run: ./docker/gems/smoke-test.sh cdo-gems:smoke ${{ matrix.engine }}
+
+  # Plain `docker build`, not buildx-with-registry-cache, because cdo-build
+  # stays unpublished. The default docker driver resolves `FROM cdo-build:ci`
+  # from the local daemon; a docker-container buildx builder cannot see a
+  # loaded image and would try to pull the tag from a registry instead.
+  #
+  # No registry build cache as a result. That costs little here: this image
+  # rebuilds when the lockfile moves, and a moved lockfile invalidates the
+  # gem layer anyway, so a cold build is the expected case rather than the
+  # exception. It also means nothing untagged is ever pushed, so unlike
+  # cdo-base this workflow needs no cleanup job.
+  build-push:
+    name: build and push
+    if: github.event_name != 'pull_request'
+    needs: smoke-test
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout gem inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/build
+            docker/gems
+            dashboard/engines
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-build
+        run: docker build -t cdo-build:ci docker/build/
+
+      # The lock- tag is the content key: a downstream build asks for the gem
+      # layer matching its own lockfile and hits it whenever the lockfile has
+      # not moved, regardless of which commit built it.
+      - name: Build and push cdo-gems
+        run: |
+          lock="lock-$(sha256sum Gemfile.lock | cut -c1-12)"
+          docker build \
+            -f docker/gems/Dockerfile \
+            --build-arg BUILD_IMAGE=cdo-build:ci \
+            -t "$IMAGE:git-${{ github.sha }}" \
+            -t "$IMAGE:latest" \
+            -t "$IMAGE:$lock" \
+            .
+          docker push "$IMAGE:git-${{ github.sha }}"
+          docker push "$IMAGE:latest"
+          docker push "$IMAGE:$lock"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$IMAGE:latest"
