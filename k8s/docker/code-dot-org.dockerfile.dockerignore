@@ -5,6 +5,7 @@ skaffold.yaml
 .github/workflows
 k8s
 !k8s/docker/locals.rake-build.yml
+!k8s/bin
 
 ##########################################################################
 # THESE LARGE STATIC FILES ARE INJECTED USING code-dot-org-static.dockerfile #
@@ -40,6 +41,8 @@ i18n/
 
 
 **/.git
+!.git/HEAD
+!.git/refs/heads/**
 
 # Why can't I find this in .gitignore? Anyway, it changes whenever vscode does its automatic 
 # `bundle install` which triggers constant surprise skaffold rebuilds (ugh)
