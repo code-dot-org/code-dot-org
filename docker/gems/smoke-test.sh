@@ -69,23 +69,11 @@ run "Bundler.setup over the full bundle" "setup-ok" -- \
 # 3. Native gems load against the runtime libraries cdo-base provides. This
 #    is the seam between the two images: the extensions were compiled in
 #    cdo-build, and nothing verifies they still resolve until they are
-#    required here. rmagick links libMagickWand, mysql2 libmysqlclient,
-#    mini_racer its own bundled libv8.
+#    required here. rmagick links libMagickWand, mysql2 libmysqlclient.
 run "mysql2 loads" "mysql2-ok" -- \
   bundle exec ruby -e 'require "mysql2"; puts "mysql2-ok"'
 run "rmagick loads against libMagickWand" "rmagick-ok" -- \
   bundle exec ruby -e 'require "rmagick"; puts "rmagick-ok"'
-# mini_racer runs with LD_PRELOAD cleared, which is not papering over a
-# cdo-gems defect. Creating any V8 context aborts at interpreter teardown
-# under jemalloc ("free(): invalid pointer", exit 139) — after the JS has
-# evaluated correctly, and with explicit dispose too, so it is not reachable
-# from Ruby. That is a property of the jemalloc preload cdo-base ships, which
-# production has had all along via cookbooks/cdo-apps/recipes/jemalloc.rb.
-# See docker/gems/README.md. What this check owns is narrower and still worth
-# asserting: libv8 compiled in cdo-build, and it loads and runs JS here.
-# shellcheck disable=SC2016
-run "mini_racer evaluates JS" "js-ok" -- \
-  sh -c 'LD_PRELOAD= bundle exec ruby -e '\''require "mini_racer"; abort unless MiniRacer::Context.new.eval("1+1") == 2; puts "js-ok"'\'''
 run "nokogiri loads" "nokogiri-ok" -- \
   bundle exec ruby -e 'require "nokogiri"; puts "nokogiri-ok"'
 

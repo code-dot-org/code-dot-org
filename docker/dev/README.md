@@ -17,24 +17,6 @@ clears `BUNDLE_WITHOUT` and `BUNDLE_DEPLOYMENT` and installs the 39 remaining
 development and test gems as a delta. A lockfile bump costs that delta rather
 than a cold install of the whole bundle.
 
-More importantly, it fixes a dev/prod divergence. Exactly one gem is
-production-only:
-
-```ruby
-gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
-```
-
-`mini_racer` is the JS runtime. The previous devcontainer image excluded every
-production group, so it had no mini_racer and ExecJS fell back to Node — its
-Dockerfile installed Node with the comment *"Rails boot needs ExecJS
-runtime."* Production runs in-process V8; development ran Node. Inheriting
-cdo-gems makes local Rails evaluate JS the way production does, which is the
-point of containerising the environment at all.
-
-That exclusion looks like an arm64 accommodation rather than a choice:
-`libv8-node` has no `aarch64-linux` build in the lockfile, so on Apple Silicon
-mini_racer compiles V8 from source. See the arm64 note below.
-
 ## Build
 
 Context is the repo root, not this directory, because the build reads
@@ -82,30 +64,16 @@ rollout improvement rather than a blocker.
 
 Making it native needs `bundle lock --add-platform aarch64-linux` plus
 confirming every platform-specific gem in the lockfile publishes an aarch64
-build. That is also what would let mini_racer be native on a Mac, so the two
-are the same piece of work.
-
-## mini_racer aborts at teardown under jemalloc
-
-Because this image now has mini_racer, it inherits the abort documented in
-[docker/gems/README.md](../gems/README.md): creating any V8 context makes the
-process exit 139 with `free(): invalid pointer` at interpreter teardown, after
-the JS has evaluated correctly.
-
-Developers will see this where previously they could not, since they had no
-mini_racer. That is the environment consistency working as intended — the
-behaviour was always in production — but it will read as a broken devcontainer
-the first time someone hits it, so it should be resolved rather than absorbed.
+build.
 
 ## Smoke test
 
     ./docker/dev/smoke-test.sh cdo-dev:test docker
     ./docker/dev/smoke-test.sh cdo-dev:test podman
 
-The checks are in two halves: that the delta installed (the dev/test groups
-resolve and load) and that nothing inherited was lost — mini_racer in
-particular, since a mistake in the `BUNDLE_WITHOUT` handling would silently
-drop it and reintroduce the Node fallback.
+The checks are in two halves: that the delta installed — the dev/test groups
+resolve and load — and that the toolchain the image promises is present and
+working, including ExecJS resolving to node.
 
 The script overrides `ENTRYPOINT` on every check. The image's entrypoint starts
 sidecar services and expects a devcontainer around it.

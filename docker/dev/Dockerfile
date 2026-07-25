@@ -4,9 +4,7 @@
 #
 # It stacks on cdo-gems rather than cdo-base so the dev/test gems install as a
 # delta over a warm tree: a lockfile bump costs the delta, not a cold install
-# of the whole bundle. Inheriting cdo-gems also means the one production-only
-# gem — mini_racer — is present here, so local Rails evaluates JS through
-# in-process V8 the way production does instead of falling back to Node.
+# of the whole bundle.
 #
 # Build context is the repo root, pruned by Dockerfile.dockerignore. Build
 # from the root, not from this directory:

@@ -6,11 +6,10 @@
 # libraries. Runs on PRs and pushes nothing.
 #
 # amd64 only, unlike cdo-base. Gemfile.lock's PLATFORMS lists arm64-darwin
-# and x86_64-linux but not aarch64-linux, so an arm64 Linux build resolves
-# the generic `ruby` platform variants instead — for libv8-node that means
-# building V8 from source rather than using the prebuilt gem, which is a
-# different artifact, not the same image for another arch. Adding
-# aarch64-linux to the lockfile is its own change; see docker/gems/README.md.
+# and x86_64-linux but not aarch64-linux, so an arm64 Linux build resolves the
+# generic `ruby` platform variants instead, building from source what amd64
+# takes prebuilt — a different artifact, not the same image for another arch.
+# Adding aarch64-linux to the lockfile is its own change; see the README.
 #
 # Every job builds cdo-build first because it is deliberately unpublished
 # (docker/build/README.md) — it is materialized per build and discarded.

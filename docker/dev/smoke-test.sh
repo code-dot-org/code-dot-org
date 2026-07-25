@@ -62,13 +62,10 @@ run "cucumber available" "" -- bundle exec cucumber --version
 run "bootsnap loads" "bootsnap-ok" -- \
   bundle exec ruby -e 'require "bootsnap"; puts "bootsnap-ok"'
 
-# 3. mini_racer survives the delta. It is the one production-only gem, and
-#    inheriting it is why local Rails evaluates JS the way production does
-#    rather than falling back to Node. LD_PRELOAD is cleared for the same
-#    reason as in docker/gems/smoke-test.sh — jemalloc aborts V8 at teardown.
-# shellcheck disable=SC2016
-run "mini_racer still present" "js-ok" -- \
-  sh -c 'LD_PRELOAD= bundle exec ruby -e '\''require "mini_racer"; abort unless MiniRacer::Context.new.eval("1+1") == 2; puts "js-ok"'\'''
+# 3. ExecJS resolves to node. autoprefixer drives it during asset precompile,
+#    and the test environment compiles assets on demand.
+run "ExecJS runs on node" "Node.js" -- \
+  bundle exec ruby -e 'require "execjs"; abort unless ExecJS.eval("1+1") == 2; puts ExecJS.runtime.name'
 
 # 4. Toolchain. Unlike cdo-gems, this image is supposed to have it.
 run "cc present" "" -- cc --version

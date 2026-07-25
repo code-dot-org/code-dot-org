@@ -3,9 +3,8 @@
 # The bundle is compiled in cdo-build and copied onto cdo-base, so the
 # shipped image carries the gems but none of the toolchain that built them.
 #
-# One gem set, the union of every non-development group. Workers could drop
-# the mini_racer/libv8 group, but one layer shared by web and worker beats
-# two near-duplicate private ones on a node running both.
+# One gem set, the union of every non-development group: one layer shared by
+# web and worker beats two near-duplicate private ones on a node running both.
 #
 # Build context is the repo root, pruned to 56 kB by
 # Dockerfile.dockerignore. Build from the root, not from this directory:
