@@ -39,7 +39,7 @@
   background: $black;
   font: bold 14pt monospace;
   padding: 1px 7px;
-  max-width: 300px;
+  max-width: 314px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
@@ -73,13 +73,13 @@
 #file_format div {
   padding: 3px 5px;
   border: 1px solid $black;
-  max-width: 230px;
+  max-width: 240px;
   background: $white;
 }
 
 #file_format .byte {
   border-bottom: 0;
-  width: 140px;
+  width: 152px;
 }
 
 #image_controls {
@@ -104,7 +104,8 @@ input[type=radio] {
 }
 
 input[type=number] {
-  width: 50px;
+  width: 64px;
+  height: 30px;
 }
 
 input[type=range] {

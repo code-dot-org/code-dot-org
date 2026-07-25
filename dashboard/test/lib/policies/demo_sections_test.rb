@@ -105,8 +105,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     assert_equal 'adhoc-high-unit', high_preset[:unit_name]
     assert_equal 'adhoc-high-course', high_preset[:unit_group_name]
-    assert_equal 'csd2-2026', middle_preset[:unit_name]
-    assert_equal 'csd-2026', middle_preset[:unit_group_name]
+    assert_equal 'web-development-2026', middle_preset[:unit_name]
+    assert_equal 'ai-discoveries-2026', middle_preset[:unit_group_name]
   end
 
   test 'get_preset ignores malformed adhoc curriculum config' do
@@ -144,6 +144,12 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
   # preset_view
 
   test 'preset_view returns a display projection for a valid preset' do
+    # In the test environment, presets resolve to the allthethings unit and
+    # unit group (see Policies::DemoSections.curriculum_names). The unit's
+    # display name comes from static i18n keyed by its name.
+    unit = create(:unit, name: Policies::DemoSections::ALLTHETHINGS_UNIT_NAME)
+    create(:unit_group_unit, position: 1, script: unit, unit_group: create(:unit_group, name: Policies::DemoSections::ALLTHETHINGS_UNIT_GROUP_NAME))
+
     view = Policies::DemoSections.preset_view(:high)
 
     assert_equal 'high', view[:demo_type]

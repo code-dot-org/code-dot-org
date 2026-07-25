@@ -6,9 +6,13 @@ import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import askSpriteLabAi, {getAvailableImageNames} from '../ai/askSpriteLabAi';
+import askSpriteLabAi from '../ai/askSpriteLabAi';
+import {UploadImageFunction} from '../ai/items/itemGeneration';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
+import {selectAvailableImageNames, selectSceneNames} from '../redux/selectors';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
+
+import GenerateImageForm from './GenerateImageForm';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -26,21 +30,25 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 }
 
 interface GenerateSpriteLabProps {
-  guideMode: 'instructions' | 'aiCodeGenerate';
+  guideMode: 'instructions' | 'aiCodeGenerate' | 'aiImageGenerate';
   instructions?: string;
-  // Load AI-generated blocks into the Code workspace.
+  /** Load AI-generated blocks into the Code workspace. */
   onCodeGenerated: (source: WorkspaceSerialization) => void;
+  /** Upload a generated image; undefined when there is nowhere to save it. */
+  uploadImage?: UploadImageFunction;
 }
 
 /**
  * The Lab2 Guide overlay, modeled on Music Lab's guideMode. 'instructions'
  * shows the level's instructions; 'aiCodeGenerate' adds the AI prompt that
- * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab.
+ * generates blocks (pseudocode -> generateBlocklyJson) into the Code tab;
+ * 'aiImageGenerate' hosts the Images tab's generation form instead.
  */
 const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
   instructions,
   onCodeGenerated,
+  uploadImage,
 }) => {
   const dispatch = useAppDispatch();
   const [prompt, setPrompt] = useState('');
@@ -66,7 +74,9 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   const handleGenerate = useCallback(async () => {
     // Almost every command needs a costume, and with an empty list the model
     // invents names that can't validate. Guide instead of half-loading.
-    const {costumes, backgrounds} = getAvailableImageNames();
+    const state = getStore().getState();
+    const imageNames = selectAvailableImageNames(state);
+    const {costumes, backgrounds, blocks} = imageNames;
     if (costumes.length === 0) {
       setError(
         'Your project has no images yet. Make some in the Images tab first, then generate.'
@@ -79,7 +89,11 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
     dispatch(setAiGenerateState('generating'));
     let pseudocode: string | null = null;
     try {
-      pseudocode = await askSpriteLabAi(prompt);
+      pseudocode = await askSpriteLabAi(
+        prompt,
+        imageNames,
+        selectSceneNames(state)
+      );
       // Diagnosis breadcrumb: what the model actually said, collapsed so it
       // doesn't spam the console.
       console.groupCollapsed('SpriteLab2 AI codegen: pseudocode');
@@ -92,6 +106,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
         sceneIdByName: getSceneIdByName(),
         costumeNames: costumes,
         backgroundNames: backgrounds,
+        blockNames: blocks,
       });
       onCodeGenerated(source);
       setStatus('generated');
@@ -127,6 +142,16 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
           {guideMode === 'instructions' ? (
             instructionsBlock ||
             'Build a program in the Code tab, then press Run.'
+          ) : guideMode === 'aiImageGenerate' ? (
+            <>
+              {instructionsBlock && (
+                <>
+                  {instructionsBlock}
+                  <hr className={moduleStyles.guideDivider} />
+                </>
+              )}
+              <GenerateImageForm uploadImage={uploadImage} />
+            </>
           ) : (
             <>
               {instructionsBlock && (

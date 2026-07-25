@@ -1,18 +1,21 @@
-import {NodeResizer, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
 import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
 import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
 import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './text-node.module.scss';
 
@@ -42,15 +45,17 @@ function TextNode({
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign]);
+  }, [data.fontColor, data.fontSize, data.fontFamily, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -59,12 +64,6 @@ function TextNode({
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
           ref={editableRef}
@@ -86,9 +85,19 @@ function TextNode({
         >
           {text}
         </div>
-      </div>
 
-      <ConnectionHandles visible={showHandles} isConnectable={isConnectable} />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+        />
+      </div>
     </div>
   );
 }

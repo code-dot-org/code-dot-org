@@ -12,15 +12,37 @@
  */
 
 /*
- * Reset box-sizing inside the React UI overlay.  CssBaseline (and most
- * modern resets) set border-box globally; the lab's %-based padding /
- * height inside #container-react assumes content-box (matching the
- * curriculum path's Rails-default behaviour).  Re-scope locally rather
- * than fighting the host.
+ * Box model.  The scene dimensions below are a verbatim translation of
+ * the apps/ FishView styles, authored against that path's box model,
+ * which is just the browser's UA default (no reset): content-box on
+ * divs / spans / imgs, border-box on the elements that were <button>.
+ * The curriculum path (studio.code.org) is the golden reference the lab
+ * matches pixel-for-pixel.
+ *
+ * Re-assert content-box here so the lab is self-contained and renders
+ * the same under a host that carries a global reset: studio's MUI
+ * CssBaseline forces border-box on every element via
+ * `* { box-sizing: inherit }`, which would crush the %-padded counter /
+ * panels.  This belongs to the lab, not the host — it is the lab's own
+ * layout contract, and a host-side rule can never reach a non-MUI
+ * consumer (e.g. the standalone dev harness the visual tests screenshot).
+ *
+ * The border-box exception keys on `.ocean-button` (the shared <Button>
+ * component: train / word / continue / dialog buttons), NOT the `button`
+ * tag.  Those were <button> in apps and are authored for border-box.
+ * The erase / media / info / toggle controls were div / span there
+ * (content-box); the port promotes them to <button> for accessibility,
+ * but their %-dimensions still assume content-box, so they must inherit
+ * the subtree default.  `#container-react .ocean-button` (specificity
+ * 1,1,0) beats the wildcard (1,0,0).
  */
 #container-react,
 #container-react * {
   box-sizing: content-box;
+}
+
+#container-react .ocean-button {
+  box-sizing: border-box;
 }
 
 :root {

@@ -14,13 +14,14 @@ import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanS
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import color from '@cdo/apps/util/color';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
 
 import StyledCodeBlock from './StyledCodeBlock';
+
+import styles from './lesson-plan.module.scss';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
@@ -48,21 +49,21 @@ class StudentLessonOverview extends Component {
     return (
       <div>
         <div className="lesson-overview-header">
-          <div style={styles.header}>
+          <div className={styles.header}>
             <a
               href={linkWithQueryParams(lesson.unit.link)}
-              style={styles.navLink}
+              className={styles.navLink}
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div style={{display: 'flex', alignItems: 'center'}}>
+            <div className={styles.headerActions}>
               {lesson.studentLessonPlanPdfUrl && (
                 <Button
                   __useDeprecatedTag
                   color={Button.ButtonColor.gray}
                   download
                   href={lesson.studentLessonPlanPdfUrl}
-                  style={{marginRight: 10}}
+                  className={styles.printButton}
                   target="_blank"
                   text={i18n.print()}
                 />
@@ -83,7 +84,7 @@ class StudentLessonOverview extends Component {
         <h1>{lesson.title}</h1>
         {lesson.overview && (
           <div>
-            <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
+            <h2 className={styles.titleNoTopMargin}>{i18n.overview()}</h2>
             <EnhancedSafeMarkdown
               markdown={lesson.overview}
               expandableImages={true}
@@ -92,7 +93,7 @@ class StudentLessonOverview extends Component {
         )}
         {lesson.vocabularies.length > 0 && (
           <div>
-            <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
+            <h2 className={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
             <ul>
               {lesson.vocabularies.map(vocab => (
                 <li key={vocab.key}>
@@ -106,7 +107,7 @@ class StudentLessonOverview extends Component {
         )}
         {lesson.programmingExpressions.length > 0 && (
           <div id="unit-test-introduced-code">
-            <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+            <h2 className={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
             <ul>
               {lesson.programmingExpressions.map(expression => (
                 <li key={expression.name}>
@@ -133,23 +134,6 @@ class StudentLessonOverview extends Component {
     );
   }
 }
-
-const styles = {
-  header: {
-    margin: '10px 0px',
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-    margin: '10px 0px',
-  },
-  titleNoTopMargin: {
-    marginTop: 0,
-  },
-};
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 

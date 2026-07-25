@@ -342,7 +342,6 @@ namespace :analytics_export do
 
     require 'cdo/aws/redshift/materialized_view_manager'
     require 'cdo/aws/redshift/client'
-    require 'csv'
 
     Rails.application.eager_load!
 
@@ -357,60 +356,27 @@ namespace :analytics_export do
       hours_back: hours_back
     )
 
-    counts = rows.each_with_object(Hash.new(0)) {|r, h| h[r.status] += 1}
-    expected_count = rows.count {|r| r.model_name != '(orphan)'}
-    orphan_count = rows.length - expected_count
+    summary = Cdo::Aws::Redshift::MaterializedViewManager.summarize_view_status(rows)
 
     warn "Materialized View status — env=#{env}, window=#{hours_back}h"
-    warn "Rows: #{rows.length} (#{expected_count} expected, #{orphan_count} orphan)"
-    warn "Status counts: #{counts.sort.map {|k, v| "#{v} #{k}"}.join(', ')}" unless counts.empty?
+    warn "Rows: #{rows.length} (#{summary[:expected]} expected, #{summary[:orphan]} orphan)"
+    unless summary[:by_status].empty?
+      warn "Status counts: #{summary[:by_status].sort.map {|status, count| "#{count} #{status}"}.join(', ')}"
+    end
 
-    # Surface failure detail to stderr so it's visible without opening the CSV. Group by the
+    # Surface failure detail to stderr so it's visible without opening the CSV. Grouped by the
     # error message, since a misconfiguration (e.g. a missing target schema) tends to fail
     # every view identically.
-    failed = rows.select(&:error)
-    unless failed.empty?
-      warn "\nFailures (#{failed.length}):"
-      failed.group_by(&:error).each do |error, group|
+    failures_by_error = summary[:failures_by_error]
+    unless failures_by_error.empty?
+      warn "\nFailures (#{failures_by_error.values.sum(&:length)}):"
+      failures_by_error.each do |error, group|
         sample = group.first
         warn "  #{group.length}× #{error}"
         warn "      e.g. #{sample.table_name} (#{sample.view_type}), statement #{sample.statement_id}"
       end
     end
 
-    CSV($stdout) do |csv|
-      csv << %w[
-        model
-        mysql_table_name
-        view_type
-        most_recent_operation
-        operation_executed_at
-        operation_duration_seconds
-        redshift_statement_id
-        operation_status
-        redshift_db_user
-        view_is_stale
-        view_state
-        view_state_description
-        error
-      ]
-      rows.each do |r|
-        csv << [
-          r.model_name,
-          r.table_name,
-          r.view_type,
-          r.operation,
-          r.executed_at&.iso8601,
-          r.duration_seconds&.round(1),
-          r.statement_id,
-          r.status,
-          r.db_user,
-          r.is_stale.nil? ? nil : r.is_stale.to_s,
-          r.state,
-          r.state_description,
-          r.error
-        ]
-      end
-    end
+    $stdout.write(Cdo::Aws::Redshift::MaterializedViewManager.view_status_to_csv(rows))
   end
 end

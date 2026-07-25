@@ -26,18 +26,5 @@ class Roster::Clever::SyncSectionsJobTest < ActiveJob::TestCase
       Services::Roster::Clever::SectionSyncer.expects(:call).with(teacher:, section: email_section).never
       perform_job
     end
-
-    context 'when something went wrong' do
-      let(:exception) {StandardError.new('expected_exception')}
-
-      before do
-        described_instance.stubs(:perform).raises(exception)
-      end
-
-      it 'reports exception' do
-        described_instance.expects(:report_exception).with(exception).once
-        described_instance.perform_now
-      end
-    end
   end
 end

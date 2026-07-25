@@ -33,6 +33,39 @@ header:
         domain: code.org
         id: header-about
 
+    signed_out_marketing:
+      - title: teachers
+        url: /teachers
+        domain: code.org
+        id: header-teachers
+      - title: districts
+        url: /districts
+        domain: code.org
+        id: header-districts
+      - title: advocacy
+        url: https://advocacy.code.org
+        id: header-advocacy
+      - title: hour_of_ai
+        url: /hour-of-ai
+        domain: code.org
+        id: header-hoa
+      - title: parents
+        url: /parents
+        domain: code.org
+        id: header-parents
+      - title: students
+        url: /students
+        domain: code.org
+        id: header-students
+      - title: about
+        url: /about
+        domain: code.org
+        id: header-about
+      - title: donate
+        url: /donate
+        domain: code.org
+        id: header-donate
+
     student:
       - title: my_dashboard
         url: /home
@@ -75,6 +108,21 @@ header:
 
   # The three-bar "hamburger" menu
   hamburger:
+    signed_out_marketing:
+      - title: legal
+        type: expander
+        id: legal_entries
+        subentries:
+          - title: legal_privacy
+            domain: code.org
+            url: /privacy
+          - title: legal_cookie_notice
+            domain: code.org
+            url: /cookies
+          - title: legal_tos
+            domain: code.org
+            url: /terms-of-service
+
     student:
       - title: learn
         domain: code.org

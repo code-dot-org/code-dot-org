@@ -31,6 +31,10 @@
     display: block;
   }
 
+  .dropdownFieldLabel {
+    color: var(--text-neutral-primary);
+  }
+
   .dropdownButton {
     display: inline-flex;
     align-items: center;

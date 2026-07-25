@@ -757,27 +757,30 @@ StudioApp.prototype.alertIfCompletedWhilePairing = function (config) {
 
 StudioApp.prototype.getSettingsHandler = function () {
   return () => {
-    const contentDiv = document.createElement('div');
-    const dialog = this.createModalDialog({
-      contentDiv: contentDiv,
-      id: 'settings-modal',
-    });
-
-    createReactRoot(React.createElement(SettingsModal), contentDiv, {
-      legacyReactDomRender: true,
-    });
-    dialog.show();
+    const container = document.createElement('div');
+    container.id = 'settings-modal';
+    document.body.appendChild(container);
+    const close = () => {
+      ReactDOM.unmountComponentAtNode(container);
+      container.remove();
+    };
+    createReactRoot(
+      React.createElement(SettingsModal, {onClose: close}),
+      container,
+      {legacyReactDomRender: true}
+    );
   };
 };
 
 StudioApp.prototype.getVersionHistoryHandler = function (config) {
   return () => {
-    var contentDiv = document.createElement('div');
-    var dialog = this.createModalDialog({
-      contentDiv: contentDiv,
-      defaultBtnSelector: 'again-button',
-      id: 'showVersionsModal',
-    });
+    const container = document.createElement('div');
+    container.id = 'showVersionsModal';
+    document.body.appendChild(container);
+    const close = () => {
+      ReactDOM.unmountComponentAtNode(container);
+      container.remove();
+    };
     createReactRoot(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
@@ -785,14 +788,11 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         useFilesApi: !!config.useFilesApi,
         selectedVersion: queryParams('version'),
         isReadOnly: !!config.readonlyWorkspace,
+        onClose: close,
       }),
-      contentDiv,
-      {
-        legacyReactDomRender: true,
-      }
+      container,
+      {legacyReactDomRender: true}
     );
-
-    dialog.show();
   };
 };
 
@@ -1171,12 +1171,13 @@ StudioApp.prototype.toggleRunReset = function (button) {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
-      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
+      showRun && !this.config.alwaysHideRunButton ? '' : 'none';
     run.disabled = !showRun;
   });
 
   document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
-    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.classList.toggle('hide', showRun);
+    reset.style.display = !showRun ? '' : 'none';
     reset.disabled = showRun;
   });
 
@@ -1665,7 +1666,9 @@ StudioApp.prototype.resizeToolboxHeader = function () {
   } else if (this.isUsingBlockly()) {
     toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
-  document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
+  document.getElementById('toolbox-header').style.width = `${
+    toolboxWidth + 1
+  }px`;
 };
 
 /**
