@@ -138,20 +138,13 @@
    at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
    brand-purple-5–90) are already redefined by brandCodeAiNext.css.
 
-   Primitives are theme-fixed, so this block is scoped to the
-   brand-carrying element only — same scope as brandCodeAiNext.css's
-   primitive block. It must NOT be re-declared on theme-carrying
-   elements: brandLegacyShim.css declares the reverse mapping
-   (--brand-orange-60: var(--accent-orange-60), etc.) on bare
-   [data-theme] elements, where brandCodeAiNext.css declares no
-   primitives to outrank it. Declaring both directions on one element
-   is a var() dependency cycle, and per css-variables-1 §3.4 every
-   property in the cycle computes to the guaranteed-invalid value —
-   this blanked e.g. Music Lab's run button (--accent-orange-60)
-   inside Lab2's nested data-theme='Dark' div. Root-only declaration
-   is sufficient: the values are constants and inherit as resolved
-   values, which also feeds the shim's reverse rows on theme elements
-   the correct CADS values. */
+   Unlike the aliases above, primitives do not vary by theme, so this
+   one root-level block covers both. Do not re-declare these rows on
+   [data-theme] elements: brandLegacyShim.css defines the same pairs
+   in the opposite direction there (--brand-orange-60 from
+   --accent-orange-60), and when both directions apply to the same
+   element, CSS treats the definitions as circular and blanks both
+   variables. */
 [data-brand='codeai-next']:root,
 [data-brand='codeai-next'] {
   --brand-aqua-10: var(--brand-purple-10);
