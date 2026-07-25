@@ -1,0 +1,37 @@
+{
+  "name": "code-dot-org",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/code-dot-org",
+  "remoteUser": "cdo",
+  "shutdownAction": "stopCompose",
+
+  // Runs on the host before compose comes up: creates the repo volume and
+  // clones into it. Idempotent, and it resolves worktrees to the real .git.
+  "initializeCommand": ".devcontainer/scripts/init-repo-volume.sh",
+
+  // The CLI replaces the image's ENTRYPOINT with its own keep-alive process,
+  // so the entrypoint runs here instead. "true" means do the work and exit.
+  "postStartCommand": "/usr/local/bin/entrypoint.sh true",
+
+  "forwardPorts": [3000, 9000, 3036, 3306],
+  "portsAttributes": {
+    "3000": {"label": "rails (dashboard)"},
+    "9000": {"label": "apps webpack dev server"},
+    "3036": {"label": "frontend vite"},
+    "3306": {"label": "mysql"}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

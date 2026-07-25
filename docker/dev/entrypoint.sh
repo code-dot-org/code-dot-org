@@ -1,22 +1,9 @@
 #!/bin/bash
-# Sandbox entrypoint: start in-container services, bootstrap assets, exec CMD.
+# Sandbox entrypoint: prepare the repo volume and database, then exec CMD.
 # Invoked both by ENTRYPOINT (plain docker run) and by postStartCommand
 # (devcontainer path, where the CLI replaces ENTRYPOINT with keep-alive).
-# Pass "true" as $1 to run services then exit (postStartCommand mode).
+# Pass "true" as $1 to do the work then exit (postStartCommand mode).
 set -euo pipefail
-
-start_services() {
-  # MinIO (emulated S3) — always in-container, no sidecar.
-  if command -v minio >/dev/null 2>&1 && [ -d /opt/minio-data ]; then
-    MINIO_ROOT_USER=local-development MINIO_ROOT_PASSWORD=allstudents \
-      minio server /opt/minio-data --address 127.0.0.1:33993 --quiet &
-    echo "entrypoint: waiting for minio..."
-    until curl -sf http://127.0.0.1:33993/minio/health/ready >/dev/null 2>&1; do
-      sleep 0.2
-    done
-    echo "entrypoint: minio ready"
-  fi
-}
 
 bootstrap_apps() {
   # Only needed for fullstack profile (level pages need /blockly/* assets).
@@ -75,13 +62,12 @@ auto_migrate() {
   echo "entrypoint: migrations complete"
 }
 
-start_services
 install_hooks
 auto_migrate
 bootstrap_apps
 
 if [ "${1:-}" = "true" ]; then
-  echo "entrypoint: services started (postStartCommand mode)"
+  echo "entrypoint: ready (postStartCommand mode)"
   exit 0
 fi
 
