@@ -1,8 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {memo, useCallback} from 'react';
+import React, {CSSProperties, memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {useRunButtonColorOverride} from '@cdo/apps/blockly/utils/setupBlockColor';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Trigger} from '@cdo/apps/music/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -126,6 +127,11 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
     const isLoading = music.soundLoadingProgress < 1;
     return isLoading || (isPredictLevel && !hasPredictResponse);
   });
+  // Mirrors the setup ("when run") block color under accessibility themes.
+  const runColorOverride = useRunButtonColorOverride();
+  const runButtonStyle = runColorOverride
+    ? ({'--run-button-override': runColorOverride.background} as CSSProperties)
+    : undefined;
   return (
     <div
       id="controls"
@@ -145,6 +151,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
           }}
           type="button"
           disabled={disableRun}
+          style={runButtonStyle}
         >
           <FontAwesomeV6Icon
             iconName={isPlaying ? 'stop' : 'play'}

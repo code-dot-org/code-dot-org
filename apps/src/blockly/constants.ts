@@ -26,6 +26,9 @@ export enum Themes {
 }
 
 export const DARK_THEME_SUFFIX = 'dark';
+// Dispatched on document when a theme is applied to all workspaces
+// (user switch or injection). detail: {theme: BlocklyCore.Theme}.
+export const BLOCKLY_THEME_APPLIED_EVENT = 'blocklyThemeApplied';
 export const CLOCKWISE_TURN_DIRECTION = 'turnRight';
 
 export enum BlockStyles {
@@ -44,9 +47,11 @@ export enum BlockStyles {
   LAB_BLOCKS = 'lab_blocks',
 }
 
+// Only COMMENT, UNKNOWN and DISABLED are consumed; the named-style rows are
+// vestigial (block colors live in themes/cdoBlockStyles.js).
 export const BlockColors = {
   DEFAULT: [184, 1.0, 0.74],
-  SETUP: [39, 1.0, 0.99],
+  SETUP: [26, 1.0, 0.96],
   EVENT: [140, 1.0, 0.74],
   LOOP: [322, 0.9, 0.95],
   LOGIC: [196, 1.0, 0.79],

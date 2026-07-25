@@ -100,6 +100,7 @@ import {
   initializeVariableLocalization,
   isDarkTheme,
   loadBlocksToWorkspace,
+  notifyThemeApplied,
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
@@ -673,6 +674,9 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
         theme,
         options.theme as BlocklyCore.Theme
       );
+      // The persisted user theme resolves asynchronously; notify listeners
+      // that mounted before it landed.
+      notifyThemeApplied(theme);
     });
     workspace.defs = BlocklyCore.utils.dom.createSvgElement(
       'defs',

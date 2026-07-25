@@ -6,6 +6,15 @@
 // - node accessibleStylesGenerator.mjs
 // - yarn remove nearest-color
 // Copy the values output by the script into cdoAccessibleStyles and commit both changes together.
+//
+// EXCEPTION: setup_blocks matches the lab Run button (Primary Orange,
+// --background-run-primary in component-library-styles/labRunButton.css),
+// and the Run button mirrors the ACTIVE theme's setup_blocks at runtime
+// (utils/setupBlockColor.ts). The accessible palettes keep their own setup
+// colors on purpose (cdoAccessibleStyles.js #FF4235, cdoHighContrast.js
+// #996300). The generator remaps every style by nearest color, so never
+// regenerate on account of setup_blocks; after regenerating for any other
+// style, restore the accessible setup_blocks values.
 
 // These block styles are used in 4 or more of our Blockly labs.
 const commonBlockStyles = {
@@ -13,7 +22,8 @@ const commonBlockStyles = {
     colourPrimary: '#00b0bc',
   },
   setup_blocks: {
-    colourPrimary: '#fca400',
+    // Primary Orange; keep equal to --background-run-primary (see header).
+    colourPrimary: '#f46800',
   },
   event_blocks: {
     colourPrimary: '#00bc3e',

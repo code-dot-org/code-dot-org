@@ -4,6 +4,7 @@ import {
   DARK_THEME_SUFFIX,
   Themes,
   BLOCKLY_THEME,
+  BLOCKLY_THEME_APPLIED_EVENT,
 } from '@cdo/apps/blockly/constants';
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
@@ -93,6 +94,14 @@ export function setAllWorkspacesTheme(
     const workspace = baseWorkspace as BlocklyCore.WorkspaceSvg;
     setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
   });
+  notifyThemeApplied(newTheme);
+}
+
+// Dispatched once per theme application, not per workspace.
+export function notifyThemeApplied(theme: BlocklyCore.Theme) {
+  document.dispatchEvent(
+    new CustomEvent(BLOCKLY_THEME_APPLIED_EVENT, {detail: {theme}})
+  );
 }
 
 /**

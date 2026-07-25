@@ -1,0 +1,45 @@
+/* Run-control purpose tokens.
+ *
+ * Every lab Run button (and the when-run/setup block color it pairs with,
+ * apps/src/blockly/themes/cdoBlockStyles.js) uses Primary Orange — CADS
+ * brand-orange-50 — under ALL brands, ahead of the codeai-next cutover.
+ * This is a deliberate exception to the brand-bridge layering in this
+ * directory: the values below are ungated because block colors are JS
+ * literals that cannot be brand-gated, and design accepted the legacy
+ * brand showing the new orange early.
+ *
+ * The :root block carries literals (the legacy schema has no token equal
+ * to brand-orange-50); the [data-brand='codeai-next'] blocks re-point at
+ * the CADS ramp so a design re-export moves these automatically. At brand
+ * cutover cleanup, delete the brand-scoped blocks and fold their var()
+ * references into :root.
+ *
+ * Cycle hazard (see brandCodeAiNextAliases.css): tokens declared on
+ * theme-carrying elements must never form a reverse var() pair with
+ * another bridge file. These names are new and referenced one-way only.
+ */
+:root,
+[data-theme='Light'],
+[data-theme='Dark'] {
+  --background-run-primary: #f46800; /* CADS brand-orange-50 */
+  --background-run-hover: #b34800; /* CADS brand-orange-70 */
+}
+
+/* Dark surfaces flip the hover lighter, mirroring the CADS
+   background-accent-orange-strong Light/Dark pair. */
+[data-theme='Dark'] {
+  --background-run-hover: #ff8b38; /* CADS brand-orange-40 */
+}
+
+[data-brand='codeai-next']:root,
+[data-brand='codeai-next'][data-theme='Light'],
+[data-brand='codeai-next'] [data-theme='Light'] {
+  --background-run-primary: var(--brand-orange-50);
+  --background-run-hover: var(--brand-orange-70);
+}
+
+[data-brand='codeai-next'][data-theme='Dark'],
+[data-brand='codeai-next'] [data-theme='Dark'] {
+  --background-run-primary: var(--brand-orange-50);
+  --background-run-hover: var(--brand-orange-40);
+}

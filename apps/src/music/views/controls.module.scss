@@ -60,7 +60,13 @@
 .runButton {
   @extend %control-button;
   flex: 2;
-  background-color: var(--accent-orange-60);
+  // --run-button-override carries the accessibility-theme mirror color
+  // (set per-element from Controls.tsx); absent, the Primary Orange
+  // run token applies.
+  background-color: var(
+    --run-button-override,
+    var(--background-run-primary)
+  );
   color: var(--text-neutral-white-fixed);
   margin: 0;
   gap: 10px;

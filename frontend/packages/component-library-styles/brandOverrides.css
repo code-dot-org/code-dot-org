@@ -20,3 +20,6 @@
 @import './brandCodeAiNext.css';
 @import './brandCodeAiNextAliases.css';
 @import './brandCodeAiAudit.css';
+
+/* Purpose tokens that are deliberately NOT brand-gated (see file header). */
+@import './labRunButton.css';

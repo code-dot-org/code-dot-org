@@ -6,8 +6,6 @@
   float: left;
   font-size: 15px;
   width: 140px;
-  background-color: $orange;
-  border-color: $orange;
   padding: 5px 12px;
   margin: 5px 0 5px 5px;
   justify-content: center;
@@ -19,8 +17,17 @@
 }
 
 .button {
+  // Run/stop: Primary Orange, shared with every lab run button
+  // (component-library-styles/labRunButton.css).
   &Orange {
     @extend %control-button;
+    background-color: var(--background-run-primary);
+    border-color: var(--background-run-primary);
+
+    &:hover {
+      background-color: var(--background-run-hover);
+      border-color: var(--background-run-hover);
+    }
   }
 
   &Blue {
