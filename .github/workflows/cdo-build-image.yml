@@ -1,0 +1,64 @@
+# Smoke-test the cdo-build image (docker/build/).
+#
+# The same Dockerfile must build on docker AND podman (dual-engine policy,
+# see docker/build/README.md) on amd64 and arm64; smoke-test.sh asserts the
+# image's toolchain contract.
+#
+# There is no publish leg: cdo-build is materialized during downstream
+# builds and discarded, so there is no published image to push.
+#
+# The weekly cron is the only thing that exercises this image on a schedule.
+# It builds FROM the published cdo-base:latest, which the cdo-base workflow
+# rebuilds weekly for OS security updates, so a base change that breaks the
+# toolchain (an apt conflict, a dropped package) would otherwise surface to
+# whoever next builds cdo-gems rather than here.
+#
+# Pulling cdo-base needs no credentials: ghcr.io/code-dot-org/cdo-base is a
+# public package. If it is ever flipped private this gate fails with an auth
+# error on the FROM.
+
+name: cdo-build-image
+
+on:
+  pull_request:
+    paths:
+      - 'docker/build/**'
+      - '.github/workflows/cdo-build-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/build/**'
+      - '.github/workflows/cdo-build-image.yml'
+  schedule:
+    - cron: '0 6 * * 0' # weekly, Sunday 6am UTC — after the cdo-base 4am rebuild
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }}, ${{ matrix.arch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { engine: docker, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: podman, arch: amd64, runs-on: ubuntu-24.04 }
+          - { engine: docker, arch: arm64, runs-on: ubuntu-24.04-arm }
+          - { engine: podman, arch: arm64, runs-on: ubuntu-24.04-arm }
+    runs-on: ${{ matrix.runs-on }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout docker/build only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: docker/build
+
+      - name: Build with ${{ matrix.engine }}
+        run: ${{ matrix.engine }} build -t cdo-build:smoke docker/build/
+
+      - name: Smoke test
+        run: ./docker/build/smoke-test.sh cdo-build:smoke ${{ matrix.engine }}
