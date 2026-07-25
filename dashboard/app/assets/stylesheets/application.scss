@@ -3565,12 +3565,6 @@ $modal-no-icon-gap: 22px;
       color: var(--text-neutral-primary);
     }
 
-    .instructions-markdown p {
-      line-height: 25px;
-      font-size: 16px;
-      color: $neutral_dark;
-    }
-
     .instructions2 {
       font-size: 18px;
       color: $charcoal;
@@ -3779,17 +3773,6 @@ h5.dialog-title {
 }
 
 .csf-top-instructions, .instructions-markdown {
-  p {
-    line-height: 25px;
-    font-size: 16px;
-    color: $black;
-  }
-
-  .secondary-instructions p {
-    font-size: 14px;
-    color: $charcoal;
-  }
-
   strong {
     @include main-font-semi-bold;
   }

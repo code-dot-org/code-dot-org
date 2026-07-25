@@ -1,4 +1,8 @@
-import {Box, Button as MuiButton} from '@mui/material';
+import {
+  Box,
+  Button as MuiButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -26,7 +30,9 @@ const HintPrompt = ({
       skinId={skinId}
       textToSpeechEnabled={textToSpeechEnabled}
     >
-      <p id={'hint-prompt-message'}>{message}</p>
+      <MuiTypography variant="body4" id="hint-prompt-message">
+        {message}
+      </MuiTypography>
       <Box
         sx={{
           display: 'flex',

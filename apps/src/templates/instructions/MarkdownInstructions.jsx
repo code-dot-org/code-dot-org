@@ -1,12 +1,15 @@
+import {extensions} from '@code-dot-org/markdown';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
+
+import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
-
-import {convertXmlToBlockly} from './utils';
+import BlocklyMarkdown from '../markdown/BlocklyMarkdown';
 
 class MarkdownInstructions extends React.Component {
   static propTypes = {
@@ -15,12 +18,36 @@ class MarkdownInstructions extends React.Component {
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
-    showImageDialog: PropTypes.func,
+    // From redux.
+    isRtl: PropTypes.bool,
+    openImageDialog: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
     noInstructionsWhenCollapsed: false,
   };
+
+  constructor(props) {
+    super(props);
+
+    // Parity with the EnhancedSafeMarkdown path, which always renders with
+    // expandable images. `openImageDialog` is a stable bound dispatcher, so this
+    // array reference is stable across renders and BlocklyMarkdown can memoize
+    // its processor.
+    this.blocklyExtensions = [
+      extensions.expandableImages({onExpand: props.openImageDialog}),
+      extensions.details,
+    ];
+
+    // Fire the parent resize once embedded blocks have (asynchronously) built.
+    this.handleWorkspaceRender = () => this.props.onResize?.();
+
+    // Hold embedded workspace creation until the main block space exists, lest
+    // we violate Blockly's assumption that the main workspace comes first — the
+    // same gate the legacy imperative convertXmlToBlockly path used.
+    this.deferWorkspaceCreation = create =>
+      Blockly.BlockSpace.onMainBlockSpaceCreated(create);
+  }
 
   componentDidMount() {
     this.configureMarkdown_();
@@ -33,7 +60,9 @@ class MarkdownInstructions extends React.Component {
   }
 
   /**
-   * Attach any necessary jQuery to our markdown
+   * Attach any necessary jQuery to our markdown. Blockly blocks are rendered by
+   * BlocklyMarkdown (React), so unlike the legacy path this no longer scans the
+   * DOM for inline XML.
    */
   configureMarkdown_() {
     if (!this.props.onResize) {
@@ -46,23 +75,12 @@ class MarkdownInstructions extends React.Component {
       details.addEventListener('toggle', this.props.onResize);
     });
 
-    if (this.props.isBlockly) {
-      // Convert any inline XML into blockly blocks. Note that we want to
-      // make sure we don't initialize any blockspace before the main
-      // block space has been created, lest we violate some assumptions
-      // blockly has.
-      Blockly.BlockSpace.onMainBlockSpaceCreated(() => {
-        convertXmlToBlockly(ReactDOM.findDOMNode(this));
-        this.props.onResize();
-      });
-    }
-
     // Parent needs to readjust some sizing after images have loaded
     $(thisNode).find('img').load(this.props.onResize);
   }
 
   render() {
-    const {inTopPane, markdown} = this.props;
+    const {inTopPane, markdown, isBlockly, isRtl} = this.props;
 
     const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
@@ -74,7 +92,17 @@ class MarkdownInstructions extends React.Component {
           inTopPane && canCollapse && styles.inTopPaneCanCollapse,
         ]}
       >
-        <EnhancedSafeMarkdown markdown={markdown} expandableImages />
+        {isBlockly ? (
+          <BlocklyMarkdown
+            content={markdown}
+            isRtl={isRtl}
+            extensions={this.blocklyExtensions}
+            onWorkspaceRender={this.handleWorkspaceRender}
+            deferWorkspaceCreation={this.deferWorkspaceCreation}
+          />
+        ) : (
+          <EnhancedSafeMarkdown markdown={markdown} expandableImages />
+        )}
       </div>
     );
   }
@@ -96,4 +124,15 @@ const styles = {
   },
 };
 
-export default Radium(MarkdownInstructions);
+export const UnconnectedMarkdownInstructions = Radium(MarkdownInstructions);
+
+export default connect(
+  state => ({
+    isRtl: state.isRtl,
+  }),
+  dispatch => ({
+    openImageDialog(imgUrl, imgAlt) {
+      dispatch(openDialog({imgOnly: true, imgUrl, imgAlt}));
+    },
+  })
+)(UnconnectedMarkdownInstructions);
