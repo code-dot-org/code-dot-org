@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-04-16T16:17:12.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "You've learned a lot about how to work with AI.\nHow to describe what you want. How to evaluate what it gives you. How to push back when it misses.\nIt turns out, different people put those skills together in different ways.",
+        "imageUrl": "https://images.code.org/74e2ce3e5b4de8c3b993428275ed80f4-panel-1.png ",
+        "key": "intro-web-lab3-13-panel-1",
+        "layout": "text-top-left",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Jordan is the careful editor. Every time AI makes a change, Jordan checks the preview against exactly what they asked for.\nJordan isn't afraid to hit Reject - and always says why, so the next attempt is closer.\nFor Jordan, the power isn't in accepting work. It's in judging it.",
+        "imageUrl": "https://images.code.org/8a82a5728586de13892ac10d70fda287-panel-2.png",
+        "key": "intro-web-lab3-13-panel-2",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "Mia works with AI the whole way through - but in small steps.\nShe brainstorms ideas with AI before building it together. She writes some things, it writes others - they both make suggestions.\nSince they speak the same language, it doesn’t take long to turn her vision into reality.",
+        "imageUrl": "https://images.code.org/09dd1809537286248874511389ae5a07-panel-3.png ",
+        "key": "intro-web-lab3-13-panel-3",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Dev spends a lot of time on his vision document before asking AI to build anything.\nIt’s not just ideas anymore - it's specific: fonts, colors, layout structure, and how each section should behave.\nFor Dev, a detailed vision with clear language means the first draft is already close.\n",
+        "imageUrl": "https://images.code.org/21c8e0eb92f232f5d0c5e34c40a6472a-panel-4.png",
+        "key": "intro-web-lab3-13-panel-4",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "None of these approaches is the right one. They're just different.\nYou've practiced all three: writing a detailed vision like Dev, building step by step like Mia, and judging every change like Jordan.\nNow it's your turn. How do you want to work with AI?\n",
+        "imageUrl": "https://images.code.org/4f0ecba5d54802ad2160c6cc7edc5203-panel-5.png ",
+        "key": "intro-web-lab3-13-panel-5",
+        "layout": "text-top-left",
+        "typing": true,
+        "fadeInOverPrevious": true
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"intro-web-lab2-14\\\" for intro-to-web-lab3\"], \"cloned_from\": \"intro-web-lab2-14\"}]"
+}]]></config>
+</Panels>
