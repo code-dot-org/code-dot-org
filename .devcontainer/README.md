@@ -25,6 +25,8 @@ half-environments is not.
     .devcontainer/scripts/bake-db.sh
     docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:latest .devcontainer
 
+    # bake-db.sh writes .devcontainer/mysql-data.tar, which is that context.
+
     # 3. Open in VS Code: "Dev Containers: Reopen in Container"
     #    or without VS Code:
     .devcontainer/scripts/init-repo-volume.sh
@@ -40,9 +42,15 @@ it with `CDO_DEV_IMAGE=cdo-dev:local`.
 `scripts/init-repo-volume.sh` runs on the host before compose comes up and
 clones your checkout into the `cdo-repo` volume — a real clone, not a
 bind-mount. It is idempotent, and it resolves worktrees to the real `.git`
-directory, so it works from a worktree as well as a full checkout. The clone
-takes about two minutes once; after that the volume persists across restarts
-and rebuilds.
+directory, so it works from a worktree as well as a full checkout. It clones
+your **current branch**, not a fixed default. Measured at 23 s and 8.7 GB on a
+fast machine; after that the volume persists across restarts and rebuilds.
+
+Note what "idempotent" means here: on a volume that already has a clone the
+script only runs `git fetch origin`, and `origin` is GitHub, not your checkout.
+Your host's unpushed branches never reach an existing sandbox, and
+`sandbox-locals.yml` is only copied on the *first* run, so edits to it do not
+propagate either. `docker volume rm cdo-repo` is the reset.
 
 A bind-mount of the host checkout would be simpler, but the volume is what
 makes the environment *the same* everywhere rather than half host and half

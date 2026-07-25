@@ -4,7 +4,8 @@
 # db:setup_or_migrate (schema:load path, NOT migration replay).
 set -euo pipefail
 
-OUTPUT="${1:-mysql-data.tar}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+OUTPUT="${1:-$SCRIPT_DIR/../mysql-data.tar}"
 NETWORK="cdo-bake-$$"
 DB_CONTAINER="cdo-bake-db-$$"
 APP_CONTAINER="cdo-bake-app-$$"
@@ -68,7 +69,10 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
   "
 
 info "shutting down mysql cleanly..."
-docker exec "$DB_CONTAINER" mysqladmin -uroot -ppassword shutdown --wait
+# mysqladmin exits 137 here: --wait retries after mysqld is gone, the
+# container stops, and the exec is killed. The real check is the ping loop
+# and the "Shutdown complete" assertion below, so ignore the status.
+docker exec "$DB_CONTAINER" mysqladmin -uroot -ppassword shutdown || true
 until ! docker exec "$DB_CONTAINER" mysqladmin -uroot -ppassword ping --silent 2>/dev/null; do
   sleep 0.5
 done
