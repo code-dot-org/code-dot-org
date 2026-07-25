@@ -165,7 +165,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const worldTabParams = useMemo(getWorldTabParams, []);
   const worldTab = {
     enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
-    large: worldTabParams.large,
+    large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
   const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
   // The Images tab mounts once (idle pre-mount after seeding, or first
