@@ -16,9 +16,9 @@ export interface RunButtonColorOverride {
  *
  * Null means "use the stock Primary Orange token": no Blockly global or
  * workspace on the page, the modern theme or its dark variant (their
- * setup_blocks already equals Primary Orange, and the CSS token carries the
- * brand- and dark-aware hover), or jigsaw (its blocks hard-code colors, so
- * its inherited blockStyles say nothing about the canvas).
+ * setup blocks are already Primary Orange, and the stylesheet picks the
+ * right hover shade per brand and theme), or jigsaw (its blocks hard-code
+ * colors, so its theme's block styles say nothing about the canvas).
  */
 export function getSetupBlockColorOverride(
   theme?: BlocklyCore.Theme

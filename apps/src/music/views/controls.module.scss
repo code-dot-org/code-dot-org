@@ -60,9 +60,8 @@
 .runButton {
   @extend %control-button;
   flex: 2;
-  // --run-button-override carries the accessibility-theme mirror color
-  // (set per-element from Controls.tsx); absent, the Primary Orange
-  // run token applies.
+  // When a Blockly accessibility theme is active, --run-button-override
+  // holds its when-run block color; otherwise Primary Orange applies.
   background-color: var(
     --run-button-override,
     var(--background-run-primary)
