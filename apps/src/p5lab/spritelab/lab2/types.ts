@@ -83,6 +83,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
+  // World-tab experiment: show the tab on this level (equivalent to the
+  // world-tab=true URL parameter).
+  showWorldTab?: boolean;
   // XML string representation of toolbox blocks.
   // TODO: deprecate in favor of the JSON toolbox definition.
   toolboxBlocks?: string;

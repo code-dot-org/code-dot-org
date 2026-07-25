@@ -99,8 +99,9 @@ const WORLD_TABS: readonly SpriteLab2Tab[] = [
   'Play',
 ];
 
-// World-tab experiment flags: ?world-tab=true shows the tab; &world=large
-// widens the editor from the scene grid to the whole world.
+// World-tab experiment flags: ?world-tab=true shows the tab (levels can also
+// opt in via the show_world_tab property); &world=large widens the editor
+// from the scene grid to the whole world.
 function getWorldTabParams() {
   const params = new URLSearchParams(window.location.search);
   return {
@@ -161,7 +162,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const dispatch = useAppDispatch();
 
   const activeTab = useAppSelector(state => state.spriteLab2.activeTab);
-  const worldTab = useMemo(getWorldTabParams, []);
+  const worldTabParams = useMemo(getWorldTabParams, []);
+  const worldTab = {
+    enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
+    large: worldTabParams.large,
+  };
   const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
