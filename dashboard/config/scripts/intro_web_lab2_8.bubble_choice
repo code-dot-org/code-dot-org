@@ -1,0 +1,13 @@
+name 'intro-web-lab2-8'
+display_name 'Learn about a CSS Rule'
+description 'Choose at least one CSS rule to learn more about with AI Tutor. Once you\'ve explored one: you can either choose more rules to explore, or continue to the next level.'
+
+sublevels
+level 'intro-web-lab2-8a'
+level 'intro-web-lab2-8b'
+level 'intro-web-lab2-8c'
+level 'intro-web-lab2-8d'
+level 'intro-web-lab2-8e'
+
+uses_lab2
+navigation_type 'next_level'

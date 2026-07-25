@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:12.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Fix it Yourself: Destiny's Sports Page\r\n\r\n*\"I can barely read anything on my page. I wanted it to look bold and dramatic with the team colors, but now the text and the background are basically the same color. I don't understand what went wrong.\"*\r\n\r\nAnother hands-on fix - AI Tutor can explain, but the typing is yours.\r\n\r\n**Do This:**\r\n1. **Diagnose:** Look at the `<style>` block in `index.html`. Compare the `background-color` of `body` with its `color`. Can you spot the problem?\r\n2. **Edit:** Fix it yourself by changing a value or two, so every word is readable. Keep Destiny's team colors: navy blue and gold.\r\n3. **Check:** Look at the preview. Can you read the team history *and* the player list?\r\n\r\n> **Hint:** The `color` rule on `body` sets the text color for everything nested inside it - that's **inheritance**, the same thing the Tag Inspector showed you. Fixing one value in one place can fix the whole page.\r\n\r\nWhen you can read every word on the page, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "hint": "- NEVER write, generate, or edit HTML or CSS for the student on this level. This level is about the student editing code themselves.\n- If the student asks you to make a change, do not make it. Instead, point them to the specific line and value in index.html they should edit, and let them type the change themselves.\n- You may explain what a property or tag does, and suggest example values they could try.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- NEVER write, generate, or edit HTML or CSS for the student on this level. This level is about the student editing code themselves.\n- If the student asks you to make a change, do not make it. Instead, point them to the specific line and value in index.html they should edit, and let them type the change themselves.\n- You may explain what a property or tag does, and suggest example values they could try.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Fix it Yourself: Destiny's Sports Page",
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        background-color: #003366;\n        color: #003366;\n        font-family: sans-serif;\n        padding: 1rem;\n      }\n      h1 {\n        color: #ffd700;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Westview Wolves</h1>\n\n    <section>\n      <h2>Team History</h2>\n      <p>The Westview Wolves have been a staple of local basketball since 1987. Known for their fast-paced play and strong defense, the Wolves have won three regional championships in the last decade.</p>\n    </section>\n\n    <section>\n      <h2>Starting Players</h2>\n      <ul>\n        <li>Marcus T. — Point Guard</li>\n        <li>Jordan S. — Shooting Guard</li>\n        <li>Priya N. — Small Forward</li>\n        <li>DeShawn W. — Power Forward</li>\n        <li>Aaliyah R. — Center</li>\n      </ul>\n    </section>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page about the Westview Wolves, my favorite local basketball team. Make it dark and bold using the team colors: navy blue and gold.\n\nThe page should have the team name at the top, a section about the team's history, and a list of the starting players.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** A second hand-edit, one notch subtler than Maya's. The bug is a contrast failure caused by inheritance: `body` sets `background-color: #003366` *and* `color: #003366`, so every element that inherits its text color disappears - except the `h1`, which has its own gold rule. Students must connect what the Tag Inspector taught (styles flow down from containers) to a real repair. The fix is one value. This is also a quiet accessibility lesson: contrast is what makes a page readable.\r\n\r\n**Circulation questions:**\r\n\r\n- \"Why is the title readable when nothing else is?\"\r\n- \"The paragraph has no color rule of its own - where is its color coming from?\"\r\n- \"You changed one line and the whole page fixed itself. Why?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may add a color rule to every element instead of fixing `body` - both work; ask them which is less code and why\r\n- Students may lose the team colors while fixing readability - remind them the vision says navy and gold; light gold text on navy keeps both\r\n- Students may not connect this to inheritance - ask them to hover the equivalent element on the last level's inspector in their memory: \"who did the paragraph get its color from?\"\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-12c_pilot2_launch\\\" for intro-to-web-lab2\"], \"cloned_from\": \"hoai-web-design-v2-12c_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>

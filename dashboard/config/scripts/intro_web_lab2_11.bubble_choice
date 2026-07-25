@@ -1,0 +1,13 @@
+name 'intro-web-lab2-11'
+display_name 'Prompting Puzzles'
+description 'Now it\'s time to apply what you\'ve learned by helping others make their own webpages. Choose one of the people below to help improve their website.'
+
+sublevels
+level 'intro-web-lab2-11a'
+level 'intro-web-lab2-11b'
+level 'intro-web-lab2-11c'
+level 'intro-web-lab2-11d'
+level 'intro-web-lab2-11e'
+
+uses_lab2
+navigation_type 'next_level'

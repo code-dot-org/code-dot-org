@@ -1,0 +1,897 @@
+{
+  "script": {
+    "name": "intro-to-web-lab2",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "hoc",
+      "curriculum_umbrella": "HOAI",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-03 05:34:08 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "intro-to-web-lab2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Web Design",
+      "name": "Intro to Web Lab 2",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "This self-paced lesson introduces students to building webpages in Web Lab, working with AI Tutor as an assistant and collaborative partner. Students write a vision, use AI to generate a first draft, learn to read the HTML and CSS behind the page, fix small pieces of code with their own hands, and return to iterate on their own page. By the end, students will have built a complete webpage that reflects their own creative decisions, can read the basic anatomy of the code behind it, and have developed a working relationship with AI."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c18adec6-614e-41df-a9ad-196529d392fb",
+      "position": 1,
+      "properties": {
+        "name": "Preparing"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c18adec6-614e-41df-a9ad-196529d392fb",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    },
+    {
+      "key": "80db9a9d-50be-449b-a2d7-6a0673aadb23",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Part 1: Establish the Vision"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80db9a9d-50be-449b-a2d7-6a0673aadb23",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    },
+    {
+      "key": "0fdaa12f-4747-4e80-9b68-21461abf733c",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fdaa12f-4747-4e80-9b68-21461abf733c",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    },
+    {
+      "key": "1d59c4b3-6a72-4bdb-84da-3ecb7d9b01d7",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d59c4b3-6a72-4bdb-84da-3ecb7d9b01d7",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    },
+    {
+      "key": "5b4716f3-0ec3-4667-8ed2-905d9b982f80",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b4716f3-0ec3-4667-8ed2-905d9b982f80",
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "730ee7c5-58e0-44bd-a0f4-de3108ab86b9",
+      "position": 1,
+      "properties": {
+        "description": "This self-paced lesson introduces students to building webpages in Web Lab by working with AI Tutor as an AI assistant and collaborative partner. The progression has three parts:\r\n\r\n- **Part 1:** Students write a vision and use AI Tutor to generate a first draft \\- quickly discovering that AI output doesn't always match what they had in mind.\r\n- **Part 2:** Students learn to *read* the language of the web: the Tag Inspector teaches tag anatomy (opening/closing tags, attributes), nesting, and CSS selectors. They build HTML and CSS vocabulary through choice levels, then \\- new in this version \\- **edit code with their own hands** in two small \"Fix it Yourself\" levels where AI Tutor explains but never writes code. They finish Part 2 with prompting puzzles and debugging challenges that mirror real design problems.\r\n- **Part 3:** Students return to their original page and iterate freely, using everything they've learned to bring their vision closer to reality.\r\n\r\n**In order to get students started right away, the lesson has no slides and no dedicated warm up / wrap up** - instead, we recommend adapting any of your existing classroom routines to this lesson.",
+        "name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "730ee7c5-58e0-44bd-a0f4-de3108ab86b9",
+        "lesson_activity.key": "c18adec6-614e-41df-a9ad-196529d392fb"
+      }
+    },
+    {
+      "key": "9bc115a9-265a-411b-963c-efd1a0eca404",
+      "position": 2,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform.\r\n\r\n> ⚠️ **Make sure AI Tutor is enabled:** AI Tutor is a required part of this lesson. If you plan on teaching it with your students, make sure you follow these steps:\r\n> 1) [Become a verified teacher](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)\r\n> 2) [Assign the course to a section](https://support.code.org/hc/en-us/articles/202114633-Creating-Accounts-for-Students-and-Adding-Them-to-Your-Section)\r\n> 3) [Make sure AI Tools are enabled for that section](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)\r\n",
+        "name": "Setup the Classroom"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bc115a9-265a-411b-963c-efd1a0eca404",
+        "lesson_activity.key": "c18adec6-614e-41df-a9ad-196529d392fb"
+      }
+    },
+    {
+      "key": "545f674b-0ec7-4be2-96fc-75a893d28db8",
+      "position": 3,
+      "properties": {
+        "description": "We recommend attempting each level in the progression before running this activity for students so you are familiar with the user interface and the general tasks on each level. Verified teachers can also access the Teaching Tips in each level. Note in particular levels 9 and 10, where AI Tutor is intentionally restricted from writing code - students edit the code themselves.",
+        "name": "Preview the Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "545f674b-0ec7-4be2-96fc-75a893d28db8",
+        "lesson_activity.key": "c18adec6-614e-41df-a9ad-196529d392fb"
+      }
+    },
+    {
+      "key": "b19c69ca-182a-44c9-b5f8-cd25c26271db",
+      "position": 1,
+      "properties": {
+        "description": "Students build something real, fast. The goal is to give them a page they care about before the Essential Question is introduced. Expect students to spend between 20-30 minutes in this first part as they get familiar with Web Lab and AI Tutor, write their initial vision, and generate the first draft of their website.\r\n\r\n| Level | Title | Description |\r\n| :---- | :---- | :---- |\r\n| 1 | Introduction to Part 1 | Students view an interactive slideshow introducing the Big Idea of the lesson: **designers communicate a vision**. |\r\n| 2 | Exploring Web Lab | Students make their first interaction with AI Tutor using a pre-built otter webpage, and use the Accept/Reject mechanic for the first time. |\r\n| 3 | Create Your Own Vision | Students fill in a `vision.md` template for a topic of their own choosing, then prompt AI Tutor to generate an HTML page from it. |\r\n| 4 | Reflection: Your First Version | Students reflect on the gap between their vision and the generated page - and are prompted to fact-check the content AI wrote for them. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "b19c69ca-182a-44c9-b5f8-cd25c26271db",
+        "lesson_activity.key": "80db9a9d-50be-449b-a2d7-6a0673aadb23"
+      }
+    },
+    {
+      "key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 1: Establish a Vision",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Staying in Early Levels:** The goal of Part 1 is a first draft, not a finished page. If students linger because they feel \"stuck\", encourage them onward with the promise that Part 2 teaches them how to get unstuck. Students who are already fluent with AI tools or HTML may reasonably be allowed to keep iterating here."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c",
+        "lesson_activity.key": "80db9a9d-50be-449b-a2d7-6a0673aadb23"
+      }
+    },
+    {
+      "key": "a75cfab5-9e18-49c1-9263-02f0b5e62105",
+      "position": 1,
+      "properties": {
+        "description": "Students learn to *read* the language of the web before directing it. This part is longer than in the original Intro to Web Lab: it adds explicit HTML anatomy instruction and two hands-on code-editing levels. Expect students to spend 25-35 minutes here.\r\n\r\n| Level | Title | Description |\r\n| :---- | :---- | :---- |\r\n| 5 | Introduction to Part 2 | Slideshow introducing the essential question: **How do designers close the gap between vision and reality?** |\r\n| 6 | Reading the Hidden Code | The Tag Inspector now teaches HTML anatomy: hovering an element shows its opening tag with attributes, its content, its closing tag, its **nesting path**, and the CSS rules that style it - including rules **inherited** from ancestors, labeled by where they come from. |\r\n| 7 | HTML Choice Levels | Students choose one HTML feature to investigate. Each level opens with a short **Read** step tying the feature to a syntax concept (tag pairs, nesting, attributes, self-closing tags). |\r\n| 8 | CSS Choice Levels | Students choose one CSS feature. Instructions now emphasize naming the **target element** and describing the intended look in the student's own words, then reading the generated CSS to spot the property that did the work. |\r\n| 9 | Fix it Yourself: Maya's Page | **No AI code changes.** Students hand-edit five color values in a small `<style>` block to fix a page where \"a rainbow exploded.\" AI Tutor explains but never writes code. |\r\n| 10 | Fix it Yourself: Destiny's Page | **No AI code changes.** Students diagnose and hand-fix a contrast bug caused by inheritance (`body` sets matching text and background colors). |\r\n| 11 | Prompting Puzzles | Students receive someone else's raw content and a non-technical vision, and prompt AI Tutor to realize it. The AI is constrained to act only on explicit student requests. |\r\n| 12 | Debug the Gap | Two scenarios (Eli's underspecified vision, Carlos's over-generated page) where the right fix is at the vision/prompt level - students choose how to intervene. |\r\n| 13 | Reflection: What Changed? | Check for Understanding. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "a75cfab5-9e18-49c1-9263-02f0b5e62105",
+        "lesson_activity.key": "0fdaa12f-4747-4e80-9b68-21461abf733c"
+      }
+    },
+    {
+      "key": "638e0ca0-fc60-40e7-8006-e18b7386b633",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 2: Close the Gap"
+      },
+      "seeding_key": {
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633",
+        "lesson_activity.key": "0fdaa12f-4747-4e80-9b68-21461abf733c"
+      }
+    },
+    {
+      "key": "c39b27f9-d62a-4f5d-b335-01b2ac34cee0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This reflection can be an appropriate place to gauge how well students are internalizing the concepts from this lesson. Look for responses that suggest \"being more specific\" is important for prompting, and responses that reference something the student could only know from reading the code (a tag name, a property, inheritance)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c39b27f9-d62a-4f5d-b335-01b2ac34cee0",
+        "lesson_activity.key": "0fdaa12f-4747-4e80-9b68-21461abf733c"
+      }
+    },
+    {
+      "key": "da444fe3-5e97-451b-9223-c9a4fc54c524",
+      "position": 1,
+      "properties": {
+        "description": "Students return to their own page from Part 1 with new vocabulary, hands-on experience editing code, and a genuine choice about how to work. Expect students to spend the remainder of class iterating on their webpage.\r\n\r\n| Level | Title | Description |\r\n| :---- | :---- | :---- |\r\n| 14 | Introduction to Part 3 | Slideshow showing three ways of working with AI (vision-first, step-by-step, hands-on-code) - all of which students have now actually practiced. |\r\n| 15 | Revisiting Your Vision | Students reload their page from Level 3 with full choice about how to continue: prompt AI, edit code directly, or both. Version History, Share, and Remix are available. |"
+      },
+      "seeding_key": {
+        "activity_section.key": "da444fe3-5e97-451b-9223-c9a4fc54c524",
+        "lesson_activity.key": "1d59c4b3-6a72-4bdb-84da-3ecb7d9b01d7"
+      }
+    },
+    {
+      "key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part 3: Iterate for Real"
+      },
+      "seeding_key": {
+        "activity_section.key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5",
+        "lesson_activity.key": "1d59c4b3-6a72-4bdb-84da-3ecb7d9b01d7"
+      }
+    },
+    {
+      "key": "98ec599d-638c-435a-b2c1-86ae7d4830d6",
+      "position": 1,
+      "properties": {
+        "description": "**More Projects in Web Lab:** Web Lab is a tool that can be used for standalone projects outside of this lesson. You can find Web Lab in the \"New projects+\" menu in the header. [Click here to learn more about Web Lab and standalone projects](https://code.org/en-US/tools/web-lab).\r\n\r\n**Learn More about Web Development and AI:** If your students want to continue learning how to make webpages - including multi-page websites, wireframes, accessibility, and Javascript programming - consider exploring our [AI Foundations Semester 2 course](https://code.org/en-US/incubator).",
+        "name": "What Comes Next?"
+      },
+      "seeding_key": {
+        "activity_section.key": "98ec599d-638c-435a-b2c1-86ae7d4830d6",
+        "lesson_activity.key": "5b4716f3-0ec3-4667-8ed2-905d9b982f80"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-1"
+        ],
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-1"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      },
+      "level_keys": [
+        "intro-web-lab2-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-2"
+        ],
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      },
+      "level_keys": [
+        "intro-web-lab2-2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-3"
+        ],
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-3"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      },
+      "level_keys": [
+        "intro-web-lab2-3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-4"
+        ],
+        "progression": "Part 1: Establish a Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-4"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      },
+      "level_keys": [
+        "intro-web-lab2-4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-5"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-5"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-6"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-6"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-7"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-7"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-8"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-8"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-8"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-9"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-9"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-9"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-10"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-10"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-10"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-11"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-11"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-11"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-12"
+        ],
+        "progression": "Part 2: Close the Gap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-12"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      },
+      "level_keys": [
+        "intro-web-lab2-12"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-13"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-13"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "c39b27f9-d62a-4f5d-b335-01b2ac34cee0"
+      },
+      "level_keys": [
+        "intro-web-lab2-13"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-14"
+        ],
+        "progression": "Part 3: Iterate for Real"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-14"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5"
+      },
+      "level_keys": [
+        "intro-web-lab2-14"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro-web-lab2-15"
+        ],
+        "progression": "Part 3: Iterate for Real"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-web-lab2-15"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5"
+      },
+      "level_keys": [
+        "intro-web-lab2-15"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-1",
+        "script_level.level_keys": [
+          "intro-web-lab2-1"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-2",
+        "script_level.level_keys": [
+          "intro-web-lab2-2"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-3",
+        "script_level.level_keys": [
+          "intro-web-lab2-3"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-4",
+        "script_level.level_keys": [
+          "intro-web-lab2-4"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "facf9e8d-5d06-4eba-86ab-2f185becfd6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-5",
+        "script_level.level_keys": [
+          "intro-web-lab2-5"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-6",
+        "script_level.level_keys": [
+          "intro-web-lab2-6"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-7",
+        "script_level.level_keys": [
+          "intro-web-lab2-7"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-8",
+        "script_level.level_keys": [
+          "intro-web-lab2-8"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-9",
+        "script_level.level_keys": [
+          "intro-web-lab2-9"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-10",
+        "script_level.level_keys": [
+          "intro-web-lab2-10"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-11",
+        "script_level.level_keys": [
+          "intro-web-lab2-11"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-12",
+        "script_level.level_keys": [
+          "intro-web-lab2-12"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "638e0ca0-fc60-40e7-8006-e18b7386b633"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-13",
+        "script_level.level_keys": [
+          "intro-web-lab2-13"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "c39b27f9-d62a-4f5d-b335-01b2ac34cee0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-14",
+        "script_level.level_keys": [
+          "intro-web-lab2-14"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-web-lab2-15",
+        "script_level.level_keys": [
+          "intro-web-lab2-15"
+        ],
+        "lesson.key": "Web Design",
+        "lesson_group.key": "",
+        "script.name": "intro-to-web-lab2",
+        "activity_section.key": "30efd6bf-3376-4e25-a8ca-e1d3639982d5"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "098bc868-0466-4fe1-b107-14d23136ccdb",
+      "properties": {
+        "description": "Read basic HTML and CSS: identify opening and closing tags, attributes, nesting, and which CSS rule (including inherited rules) styles an element."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "098bc868-0466-4fe1-b107-14d23136ccdb"
+      }
+    },
+    {
+      "key": "8e4d2b87-d5e6-48f1-b3d3-a3f4c51af735",
+      "properties": {
+        "description": "Write specific prompts that name the target element and describe the intended change, and evaluate whether AI-generated output matches the vision before accepting it."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "8e4d2b87-d5e6-48f1-b3d3-a3f4c51af735"
+      }
+    },
+    {
+      "key": "a5add30c-7351-4b90-8935-6badee60c6e6",
+      "properties": {
+        "description": "Debug a page that doesn't match its vision by choosing the right intervention: revising the vision, prompting for targeted changes, or editing code values directly."
+      },
+      "seeding_key": {
+        "lesson.key": "Web Design",
+        "objective.key": "a5add30c-7351-4b90-8935-6badee60c6e6"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

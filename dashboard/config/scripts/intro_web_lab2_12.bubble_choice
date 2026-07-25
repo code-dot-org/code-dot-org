@@ -1,0 +1,10 @@
+name 'intro-web-lab2-12'
+display_name 'AI Frustrations'
+description 'These students tried using AI to generate webpages, but the AI-generated webpage doesn\'t match their vision. Pick a student to help them debug their AI interaction!'
+
+sublevels
+level 'intro-web-lab2-12a'
+level 'intro-web-lab2-12b'
+
+uses_lab2
+navigation_type 'next_level'

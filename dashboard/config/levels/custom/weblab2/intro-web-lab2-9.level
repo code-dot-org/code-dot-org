@@ -1,0 +1,67 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-04-16T16:17:11.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Fix it Yourself: Maya's Rainbow Page\r\n\r\n*\"I asked for a colorful page but it looks like a rainbow exploded! Every single thing is a different color. That's not what I meant at all. I wanted it to feel fun and bright, not chaotic.\"*\r\n\r\nSo far, AI has made every change for you. This time **you** are the one editing the code - AI Tutor can explain things, but it won't write code on this level.\r\n\r\n**Do This:**\r\n1. **Read:** Open `index.html` and find the `<style>` block at the top. Each rule sets a `color` or `background-color` for one kind of element.\r\n2. **Edit:** Change the color values yourself. Pick 2-3 colors that look good together. Color names like `navy`, `white`, or `gold` work - so do hex codes like `#336699`.\r\n3. **Check:** Watch the preview update as you edit. Keep tweaking until the page feels fun and bright - not chaotic.\r\n\r\n> **Hint:** Stuck on what a rule does? Ask AI Tutor to *explain* it - just remember, on this level the typing is all yours.\r\n\r\nWhen Maya's page looks fun instead of chaotic, click **Continue**.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "hint": "- NEVER write, generate, or edit HTML or CSS for the student on this level. This level is about the student editing code themselves.\n- If the student asks you to make a change, do not make it. Instead, point them to the specific line and value in index.html they should edit, and let them type the change themselves.\n- You may explain what a property or tag does, and suggest example values they could try.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button.",
+        "explainCode": "- NEVER write, generate, or edit HTML or CSS for the student on this level. This level is about the student editing code themselves.\n- If the student asks you to make a change, do not make it. Instead, point them to the specific line and value in index.html they should edit, and let them type the change themselves.\n- You may explain what a property or tag does, and suggest example values they could try.\n- Keep all explanations short, concise, and simple.\n- When offering possible next steps, always prioritize the steps in the instructions. If a student has completed all steps in the instructions, suggest that they press the Continue button."
+      }
+    },
+    "display_name": "Fix it Yourself: Maya's Rainbow Page",
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      h1 { \n        color: #ff0000;\n        background-color: #0000ff;\n      }\n      h2 { \n        color: #ff6600;\n        background-color: #ab11ab;\n      }\n      p { \n        color: #9900cc; \n        background-color: #00ffff;\n      }\n      li { \n        color: #0000ff; \n        background-color: #000000;\n      }\n      body { \n        background-color: #ffff00; \n      }\n    </style>\n  </head>\n  <body>\n    <h1>Photography Club</h1>\n    <p>We are a group of students who love taking photos. We explore different styles of photography, edit our work, and share it with the school community. Everyone is welcome — no experience needed!</p>\n\n    <h2>Upcoming Meetings</h2>\n    <ul>\n      <li>Monday, March 10 — Room 204, 3:30pm</li>\n      <li>Monday, March 17 — Room 204, 3:30pm</li>\n      <li>Monday, March 24 — Room 204, 3:30pm</li>\n    </ul>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join.\n\nThe page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    },
+    "offer_browser_tts": "true",
+    "teacher_markdown": "**Intent:** This is the first level where students edit code with their own hands. The scope is deliberately tiny: five CSS rules, and only their color values need to change. Students discover that the code they've been reading is editable, that the preview responds instantly, and that nothing breaks permanently. AI Tutor is restricted to explaining - it will not write code here - so the edit-observe loop belongs entirely to the student.\r\n\r\n**Circulation questions:**\r\n\r\n- \"Which rule did you change first? How did you find it?\"\r\n- \"What colors did you pick, and why do they work together when the original ones didn't?\"\r\n- \"Was editing it yourself faster or slower than prompting AI would have been?\"\r\n\r\n**Expected mistakes and misconceptions:**\r\n\r\n- Students may be afraid of breaking the page - reassure them: change one value, look at the preview, change it back if needed\r\n- Students may ask AI Tutor to make the change and be surprised it declines - point them to the instructions: this level is theirs to type\r\n- Students may change colors randomly - ask \"what feeling is Maya going for? Pick colors on purpose\"\r\n",
+    "require_edit_to_continue": "true"
+  },
+  "audit_log": "[{\"changed_at\": \"2026-07-03T00:00:00.000+00:00\", \"changed\": [\"cloned from \\\"hoai-web-design-v2-12a_pilot2_launch\\\" for intro-to-web-lab2\"], \"cloned_from\": \"hoai-web-design-v2-12a_pilot2_launch\"}]"
+}]]></config>
+</Weblab2>
