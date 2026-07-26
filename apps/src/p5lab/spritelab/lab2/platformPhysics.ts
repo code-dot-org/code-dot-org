@@ -17,18 +17,18 @@ export const PLATFORM_GRAVITY = 0.75;
 // exact equalities, with possible sub-pixel noise on them.
 export const CONTACT_EPSILON = 0.1;
 
-// The squeeze band (px): a face engaged thinner than this on the
-// perpendicular axis doesn't block, and the leftover thin penetration
-// resolves along its shallow axis at the end of the pass. One-cell notches
-// and doorways are exactly player-sized on the default grid, so without a
-// band there is zero clearance to enter them.
+// Thin-contact allowance (px): a wall overlapped by less than this along
+// one axis doesn't block movement along the other, and any such thin
+// overlap left at the end of the pass is pushed out the short way.
+// One-cell notches and doorways are exactly player-sized on the default
+// grid, so without the allowance there is zero clearance to enter them.
 export const MIN_SOLID_OVERLAP = 8;
 
 // Stepping off an edge falls at least this fast (px/frame): the very
-// first airborne step already drops past the landing band, so no walk-off
-// can catch the far lip of a gap — at any costume shape or phase. Ramping
-// from zero instead made a one-block gap a coin flip. A gap is a gap:
-// crossing one takes a jump.
+// first airborne step already falls deeper than a landing accepts, so no
+// walk-off can catch the far lip of a gap — at any costume shape or
+// phase. Ramping from zero instead made a one-block gap a coin flip. A
+// gap is a gap: crossing one takes a jump.
 export const LEDGE_FALL_SPEED = MIN_SOLID_OVERLAP;
 
 // The player's solid body is the art box scaled by this factor, anchored
@@ -93,10 +93,10 @@ export function resolvePlatformPhysics(
     let x = prev.x + dx;
     let y = prev.y;
     boxes.forEach(wall => {
-      // A face only blocks a body that was on its clear side last frame
-      // (swept: a two-row-tall player whose head brushes a head-height
-      // block must not be snapped on top of it), and only when engaged
-      // thicker than the squeeze band vertically.
+      // A wall side only blocks a body that was on its clear side last
+      // frame (a two-row-tall player whose head brushes a head-height
+      // block must not snap on top of it), and only when the vertical
+      // overlap exceeds the thin-contact allowance.
       if (
         halfH + wall.halfH - Math.abs(y - wall.y) < MIN_SOLID_OVERLAP ||
         Math.abs(x - wall.x) >= halfW + wall.halfW
@@ -118,9 +118,9 @@ export function resolvePlatformPhysics(
     x = Math.min(Math.max(x, imgHalfW), view.width - imgHalfW);
     y = prev.y + dy;
     // Purely vertical motion is stable: land on whatever is directly
-    // below, bonk on whatever is directly above — a straight-up jump comes
-    // straight back down, never shoved sideways. The clauses below only
-    // arbitrate corners reached with horizontal movement.
+    // below, bump the head on whatever is directly above — a straight-up
+    // jump comes straight back down, never shoved sideways. The clauses
+    // below only arbitrate corners reached with horizontal movement.
     const vertical = Math.abs(dx) <= CONTACT_EPSILON;
     let landed = false;
     boxes.forEach(wall => {
@@ -135,14 +135,14 @@ export function resolvePlatformPhysics(
       // The body was already at or over this column before the frame's
       // movement, so the crossing is a genuine arrival — this includes
       // standing on the block, so footing also holds until the body fully
-      // leaves an edge. A same-frame lateral graze fails all three
-      // clauses and slides off via de-penetration (at most one step
-      // wide), keeping gaps enterable.
+      // leaves an edge. A body that only now moved over the corner fails
+      // all three clauses and the final push-out below slides it off
+      // sideways (at most one step wide), keeping gaps enterable.
       const wasAt =
         halfW + wall.halfW - Math.abs(prev.x - wall.x) > -CONTACT_EPSILON;
-      // Crossing tolerance is the squeeze band, not mere contact: a body
-      // that slipped sideways through the band arrives with feet already
-      // a few px past the face and must still be caught here.
+      // A landing accepts feet up to the thin-contact allowance past the
+      // top, not merely touching it: a body that slipped sideways through
+      // a tight opening arrives a few px deep and must still land here.
       if (dy > 0 && prev.y + halfH <= top + MIN_SOLID_OVERLAP) {
         if (vertical || centerOn || wasAt) {
           y = Math.min(y, top - halfH);
@@ -165,11 +165,12 @@ export function resolvePlatformPhysics(
       sprite.velocity.y = 0;
       landed = true;
     }
-    // De-penetration: a declined crossing slides off the corner sideways;
-    // other thin penetration (squeeze-band drift, a lip grazed on the way
-    // up) resolves along its shallow axis. Per-frame dx is smaller than
-    // the band, so overlap entered from a clear side always resolves;
-    // deeper overlap (a sprite spawned inside a wall) is left alone.
+    // Final push-out: a landing or head bump declined above slides off
+    // the corner sideways; other thin overlap (sideways drift through a
+    // tight opening, a lip brushed on the way up) is pushed out the short
+    // way. Per-frame sideways movement is smaller than the allowance, so
+    // overlap entered from a clear side always resolves; deeper overlap
+    // (a sprite spawned inside a wall) is left alone.
     boxes.forEach(wall => {
       const penX = halfW + wall.halfW - Math.abs(x - wall.x);
       const penY = halfH + wall.halfH - Math.abs(y - wall.y);
