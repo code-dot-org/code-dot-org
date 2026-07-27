@@ -54,8 +54,7 @@ services:
 
   # Pre-seeded MySQL. Seeding from scratch takes ~20 minutes; this image ships
   # a baked datadir so a fresh sandbox is usable in seconds. Build it with
-  # scripts/bake-db.sh. See the README — the migrate image from the container
-  # hierarchy is meant to replace this.
+  # scripts/bake-db.sh, which seeds via the cdo-migrate image — see the README.
   db:
     image: ${CDO_DEV_DB_IMAGE:-cdo-dev-db:latest}
     tmpfs:

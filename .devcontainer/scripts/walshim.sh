@@ -13,7 +13,6 @@ mkdir -p "$W"
 # directory tells mysqld "clean 8.0.30+ shutdown, recreate logs fresh" — no
 # crash recovery, instant start.
 mkdir -p "$W/#innodb_redo"
-chown -R mysql:mysql "$W"
 
 if [ -d "$D/#innodb_redo" ]; then
   T0=$(date +%s%N)
@@ -23,6 +22,12 @@ if [ -d "$D/#innodb_redo" ]; then
   T1=$(date +%s%N)
   echo "WAL copy to tmpfs: $(( (T1-T0)/1000000 ))ms ($(du -sh "$W" | cut -f1))"
 fi
+
+# chown must follow the copies: this runs as root, so files copied above
+# land root-owned, and mysqld runs as mysql. Chowning first (as this once
+# did) leaves the redo copies unreadable and the first start of a fresh
+# container aborts with errno 13.
+chown -R mysql:mysql "$W"
 
 EXTRA_FLAGS="--innodb-log-group-home-dir=$W --innodb-undo-directory=$W"
 

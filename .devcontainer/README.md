@@ -21,7 +21,8 @@ half-environments is not.
     # 1. The dev image. Published, so normally just pull it:
     docker pull ghcr.io/code-dot-org/cdo-dev:latest
 
-    # 2. The seeded database image, built locally (~20 min, one-time):
+    # 2. The seeded database image, built locally (~20 min, one-time).
+    #    Seeding runs the cdo-migrate image (pulled on first use):
     .devcontainer/scripts/bake-db.sh
     docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:latest .devcontainer
 
@@ -76,16 +77,27 @@ where you expect.
 The image itself lives in [docker/dev/](../docker/dev/README.md), alongside
 the rest of the container hierarchy. This directory is only the wiring.
 
-## The database is interim
+## The database comes from the migrate image
 
-`bake-db.sh` starts a mysql sidecar, runs `db:setup_or_migrate` and
-`seed:default` inside cdo-dev, then tars the datadir for `Dockerfile.db` to
-bake. That is the same work the `migrate` image in the container hierarchy
-does — seeding a database from the curriculum — reached by a different route.
+`bake-db.sh` starts a mysql sidecar and runs
+[cdo-migrate](../docker/migrate/README.md) against it — the same image whose
+default job seeds deploy databases — then tars the datadir for `Dockerfile.db`
+to bake. One lineage: the code that seeds your sandbox database is the code
+baked into the published migrate image, not whatever happens to be in your
+repo volume. The bake does not touch the volume and works before
+`init-repo-volume.sh` has ever run.
 
-When `migrate` lands, the seeded database should come from it instead, and
-this script and Dockerfile go away. Until then two lineages produce the same
-artifact, which is worth knowing when one of them drifts.
+The seeded schema drifts from your branch between bakes; the entrypoint's
+auto-migrate covers that on container start. What nothing covers is
+curriculum drift — a sandbox is for working on code, not for authoring
+curriculum, so a bake as old as the last migrate publish is fine. Re-run the
+bake when it is not.
+
+The old route precompiled test assets into the repo volume as a side effect.
+The migrate route cannot (its filesystem is discarded), so before the first
+dashboard test run in a sandbox:
+
+    cd dashboard && RAILS_ENV=test bundle exec rake assets:precompile
 
 S3 emulation is not wired up yet — `sandbox-locals.yml` points at a minio that
 nothing starts, so features touching S3 fail. `docker/developers/` has the
@@ -99,6 +111,7 @@ Compose reads these from the environment:
 |---|---|---|
 | `CDO_DEV_IMAGE` | `ghcr.io/code-dot-org/cdo-dev:latest` | the dev image |
 | `CDO_DEV_DB_IMAGE` | `cdo-dev-db:latest` | the seeded database image |
+| `CDO_MIGRATE_IMAGE` | `ghcr.io/code-dot-org/cdo-migrate:latest` | what bake-db.sh seeds with |
 | `CDO_REPO_VOLUME` | `cdo-repo` | repo volume name, for parallel sandboxes |
 | `CDO_MEMORY_LIMIT` | `12g` | memory ceiling for the app container |
 | `CDO_RAILS_PORT` | `3000` | published Rails port |

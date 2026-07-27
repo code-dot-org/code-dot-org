@@ -1,7 +1,12 @@
 #!/bin/bash
 # Bake a seeded MySQL datadir for the cdo-dev-db image.
-# Uses mysql:8.0 as a sidecar (matching the runtime topology) and
-# db:setup_or_migrate (schema:load path, NOT migration replay).
+#
+# Runs the cdo-migrate image — Rails source and curriculum baked, the same
+# image the k8s seed Job uses — against a mysql:8.0 sidecar (matching the
+# runtime topology). db:setup_or_migrate takes the schema:load path on the
+# fresh server, NOT migration replay. The repo volume is not involved: the
+# code that seeds is the code in the image, so the bake works before
+# init-repo-volume.sh has ever run.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -49,22 +54,21 @@ info "creating databases..."
 docker exec "$DB_CONTAINER" mysql -uroot -ppassword -e \
   "CREATE DATABASE IF NOT EXISTS dashboard_test;"
 
-info "running schema:load + seed..."
+# locals.yml is mounted, not baked: the migrate image deliberately carries
+# no configuration. The test-DB migrate rides along because sandboxes run
+# the test suite; it is not part of the image's default job (a k8s seed Job
+# has no test database).
+info "running migrate job (db:setup_or_migrate + seed:default)..."
 docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
-  -v cdo-repo:/code-dot-org \
-  -e DEVCONTAINER_BOOTSTRAP_APPS=false \
-  --entrypoint bash \
-  "${CDO_DEV_IMAGE:-cdo-dev:latest}" -c "
+  -v "$SCRIPT_DIR/sandbox-locals.yml":/code-dot-org/locals.yml:ro \
+  -e AWS_EC2_METADATA_DISABLED=true \
+  "${CDO_MIGRATE_IMAGE:-ghcr.io/code-dot-org/cdo-migrate:latest}" \
+  bash -c "
     set -euo pipefail
-    cd /code-dot-org/dashboard
-    echo 'bake: running db:setup_or_migrate...'
-    bundle exec rake db:setup_or_migrate
-    echo 'bake: running seed:default...'
-    bundle exec rake seed:default
+    cdo-migrate
     echo 'bake: migrating test DB...'
+    cd /code-dot-org/dashboard
     RAILS_ENV=test bundle exec rake db:migrate
-    echo 'bake: precompiling test assets...'
-    RAILS_ENV=test bundle exec rake assets:precompile
     echo 'bake: complete'
   "
 

@@ -1,0 +1,32 @@
+# Allowlist, like docker/gems: the context is the repo root, and a denylist
+# makes every new large directory a silent context regression.
+#
+# What stays in: the repo-root files Rails boot reads, the shared cdo config
+# and libraries, and the whole dashboard tree including the curriculum.
+# The denials under dashboard/ drop dev-machine artifacts that a clean CI
+# checkout never has — logs, caches, and the blockly symlink into the apps
+# build — so a local build produces the same image CI does.
+*
+!.ruby-version
+!Gemfile
+!Gemfile.lock
+!deployment.rb
+!config.yml.erb
+!pyproject.toml
+!uv.lock
+!.python-version
+!python
+!config
+!lib
+!shared
+!dashboard
+dashboard/tmp
+dashboard/log
+dashboard/node_modules
+dashboard/public/assets
+dashboard/public/blockly
+!docker
+docker/*
+!docker/migrate
+docker/migrate/*
+!docker/migrate/migrate.sh
