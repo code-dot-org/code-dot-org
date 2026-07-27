@@ -75,6 +75,7 @@
 
 .tags-s {
   .tag {
+    min-height: 24px;
     span {
       @include typography.overline-three;
       line-height: 1.8;
