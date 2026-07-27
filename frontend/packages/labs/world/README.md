@@ -21,6 +21,20 @@ Phaser binding runs it. Console output is relayed back to the Console box.
 
 See `specs/PLAN.md` for the full design and milestone status.
 
+## File types and editors
+
+Text files (`js`/`ts`/`json`/`md`/`txt`) edit in CodeMirror. `rule` and `actor`
+files are **Blockly-authored** — a `.rule`/`.actor` is a Blockly workspace stored
+as serialized JSON (INTERFACE.md) — and open in a Blockly editor instead. This
+uses Codebridge's per-language editor seam (`CodebridgeConfig.editorComponents`,
+parallel to `languageExtensions`); World routes `rule`/`actor` to
+`src/blockly/BlocklyFileEditor.tsx`, which loads/saves through the same file
+`onChange` seam as CodeMirror.
+
+The Blockly toolbox is a starter set of stock blocks for now; domain blocks
+(Rules/Traits/Actors/Events) and Blockly → `world-lab` code generation (so an
+authored `.rule` actually runs through the compiler) are the next increment.
+
 ## Layout
 
 ```

@@ -4,18 +4,29 @@ import {markdown} from '@codemirror/lang-markdown';
 
 import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
+import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
+
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
  * its `scenes` / `worlds` / `actors` / `rules` — code, not a web page. There is
  * no editable `index.html`: the preview sandbox serves a fixed host shell and
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
- * The editable set is therefore code — JS/TS/JSON plus notes (MD/TXT). Images
- * (`png`) are supported (shown in the tree, handed to the game) but not edited.
- * New editors and file types (`.rule`, `.anim`, …) get wired in here as they
- * land: extend the lists and add the matching language mapping/extension.
+ * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule` and `actor` are
+ * Blockly-authored: they carry no CodeMirror language, and `editorComponents`
+ * routes them to the Blockly editor instead (INTERFACE.md — a `.rule`/`.actor`
+ * file is a Blockly workspace stored as serialized JSON). Images (`png`) are
+ * supported (shown in the tree, handed to the game) but not edited.
  */
-export const WORLD_EDITABLE_FILE_TYPES = ['js', 'ts', 'json', 'md', 'txt'];
+export const WORLD_EDITABLE_FILE_TYPES = [
+  'js',
+  'ts',
+  'json',
+  'md',
+  'txt',
+  'rule',
+  'actor',
+];
 const IMAGE_FILE_TYPES = ['png'];
 
 export const worldConfig: Partial<CodebridgeConfig> = {
@@ -26,10 +37,18 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     ts: 'javascript',
     json: 'json',
     md: 'markdown',
+    rule: 'rule',
+    actor: 'actor',
   },
   languageExtensions: {
     javascript: javascript(),
     json: json(),
     markdown: markdown(),
+  },
+  // Blockly-authored file types open in the Blockly editor (Codebridge's
+  // per-language editor seam), not CodeMirror.
+  editorComponents: {
+    rule: BlocklyFileEditor,
+    actor: BlocklyFileEditor,
   },
 };

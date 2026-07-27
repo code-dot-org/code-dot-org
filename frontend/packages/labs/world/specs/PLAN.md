@@ -608,8 +608,13 @@ Unit first, then browser:
   per-project subdomain. The origin config must not hard-code a single host.
 - **Editor typings for `world-lab`.** Learner TS autocomplete is a
   Codebridge-editor concern, deferred; the engine ships `.d.ts` so it is ready.
-- **`.rule` Blockly compilation.** Deferred; only `.js`/`.ts` execute for now.
-  Generated JS will flow through the same compiler unchanged.
+- **Blockly authoring (`.rule` / `.actor`).** The _editor_ is now wired: these
+  file types open in a Blockly workspace (via Codebridge's new
+  `editorComponents` per-language seam → `src/blockly/BlocklyFileEditor.tsx`),
+  stored as serialized JSON. Still to come: domain blocks
+  (Rules/Traits/Actors/Events) and the Blockly → `world-lab` code generator, so
+  an authored file compiles and runs through the same esbuild path unchanged
+  (only `.js`/`.ts` execute today).
 
 ## 16. Milestones
 

@@ -1,8 +1,24 @@
 import type {Extension} from '@codemirror/state';
+import type {ComponentType} from 'react';
 
 import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
 
 import {getFileExtension} from './utils/multiFileSource';
+
+/**
+ * Props a custom editor receives for the active file. Mirrors the seam the
+ * built-in CodeMirror editor uses: `initialContents` loads it (mount once,
+ * keyed by `fileId`) and `onChange` persists edits back through the same
+ * `saveFile` path.
+ */
+export interface CustomEditorProps {
+  fileId: string;
+  initialContents: string;
+  /** The file's language tag (from `languageMapping`). */
+  language: string;
+  isReadOnly: boolean;
+  onChange: (contents: string) => void;
+}
 
 /**
  * Static configuration for a Codebridge lab: which file types the user may work
@@ -32,6 +48,14 @@ export interface CodebridgeConfig {
    * stays language-agnostic. Keyed by the same identifier as `languageMapping`.
    */
   languageExtensions?: {[languageId: string]: Extension};
+  /**
+   * Language identifier -> a custom editor component that replaces the default
+   * CodeMirror editor for files of that language (e.g. a Blockly editor for a
+   * `rule` language). Keyed by the same identifier as `languageMapping`; a file
+   * whose language has no entry uses the CodeMirror editor. The component
+   * receives the active file via {@link CustomEditorProps}.
+   */
+  editorComponents?: {[languageId: string]: ComponentType<CustomEditorProps>};
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
 }
