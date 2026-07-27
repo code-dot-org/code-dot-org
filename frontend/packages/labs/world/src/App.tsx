@@ -1,6 +1,7 @@
 import {CodebridgeLab} from '@code-dot-org/codebridge';
 
 import styles from './app.module.css';
+import {WorldBlocklyThemeProvider} from './blockly/worldBlocklyTheme';
 import {worldConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import WorldLayout from './layout/WorldLayout';
@@ -19,7 +20,9 @@ const WorldLab = () => (
   <div className={styles.app}>
     <CodebridgeLab config={worldConfig} defaultSources={DEFAULT_PROJECT}>
       <WorldRuntimeProvider>
-        <WorldLayout />
+        <WorldBlocklyThemeProvider>
+          <WorldLayout />
+        </WorldBlocklyThemeProvider>
       </WorldRuntimeProvider>
     </CodebridgeLab>
   </div>

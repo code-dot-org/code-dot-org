@@ -9,7 +9,7 @@ import {
   useThemeSetting,
 } from '@code-dot-org/lab/hooks';
 import {labProjectActions} from '@code-dot-org/lab/redux';
-import ResourcePanel from '@code-dot-org/lab/resourcePanel';
+import ResourcePanel, {type Setting} from '@code-dot-org/lab/resourcePanel';
 
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 import {useAppDispatch, useAppSelector} from '../redux/store';
@@ -29,6 +29,12 @@ export interface InfoPanelProps {
    * console in the debug panel, styled by the design system).
    */
   hasConsole?: boolean;
+  /**
+   * Extra settings-panel dropdowns a lab contributes (appended after the shared
+   * font-size / theme settings) — e.g. A Lab's Blockly block-color theme, if
+   * needed.
+   */
+  extraSettings?: Setting[];
 }
 
 /**
@@ -46,6 +52,7 @@ export const InfoPanel = ({
   documentationUrl,
   supportedThemes = ['Light', 'Dark'],
   hasConsole = true,
+  extraSettings = [],
 }: InfoPanelProps) => {
   const levelProperties = useMaybeLevelProperties();
   const isRunning = useAppSelector(state => state.labSystem.isRunning);
@@ -106,9 +113,11 @@ export const InfoPanel = ({
   // theme). Order matches legacy: font sizes, then theme.
   const codebridgeSettings = useCodebridgeSettings({hasConsole});
   const themeSetting = useThemeSetting(supportedThemes);
-  const settings = themeSetting
-    ? [...codebridgeSettings, themeSetting]
-    : codebridgeSettings;
+  const settings = [
+    ...codebridgeSettings,
+    ...(themeSetting ? [themeSetting] : []),
+    ...extraSettings,
+  ];
 
   if (!levelProperties) {
     return null;
