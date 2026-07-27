@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -18,6 +19,21 @@ import {refreshCurrentDataView} from './loadDataForView';
 import PreviewModal from './PreviewModal';
 
 import style from './data-library-pane.module.scss';
+
+// Defined at module scope so SafeMarkdown can cache its processor (see the
+// rehypeMap docs in SafeMarkdown.jsx). Overriding `a` replaces SafeMarkdown's
+// localization wrapper, so carry its data attributes over; target/rel from
+// openExternalLinksInNewTab pass through Link to the anchor.
+const rehypeMap = {
+  a: props => (
+    <Link
+      size="xs"
+      data-lz-url="true"
+      data-localize="markdown-url"
+      {...props}
+    />
+  ),
+};
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -91,6 +107,7 @@ class DataLibraryPane extends React.Component {
         <SafeMarkdown
           markdown={msg.dataLibraryDescription()}
           openExternalLinksInNewTab
+          rehypeMap={rehypeMap}
         />
         <SearchBar
           placeholderText={msg.dataLibrarySearchPlacholder()}
