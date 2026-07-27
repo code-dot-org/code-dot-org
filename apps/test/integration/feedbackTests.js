@@ -582,6 +582,7 @@ describe('unusedBlocks', function () {
   beforeEach(function () {
     reduxStub = sinon.stub(redux, 'getStore').returns({
       getState: sinon.stub().returns({pageConstants: {isBramble: false}}),
+      dispatch: sinon.stub(),
     });
     setupTestBlockly();
     var blockInstallOptions = {isK1: false};
