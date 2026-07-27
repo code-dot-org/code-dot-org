@@ -704,7 +704,11 @@ Unit first, then browser:
    animation `{frames, frameRate}` specs; the binding preloads the sheets,
    registers the Phaser animations, and draws a playing `Sprite`; the
    `world_play_animation` block picks one; the demo gained a spinning coin.
-   Browser-verified (the coin's gold-pixel area oscillates as it spins).
-   Remaining: more traits/rules/events (incl. key-press _events_, which need
-   per-actor event payloads), and learner-supplied image assets (needs the
-   project binary-asset pipeline).
+   Browser-verified (the coin's gold-pixel area oscillates as it spins). NOTE:
+   this slice is an interim architecture — hardcoded built-ins with Phaser-owned
+   timing — that diverges from `INTERFACE.md` §Animations (project-serialized
+   `.anim` assets, an engine-driven Animation Rule with frame/end events).
+   `ANIMATIONS.md` is the plan to bring it into alignment. Remaining: more
+   traits/rules/events (incl. key-press _events_, which need per-actor event
+   payloads), the spec-aligned animation rework (`ANIMATIONS.md`), and learner-
+   supplied image assets (needs the project binary-asset pipeline).
