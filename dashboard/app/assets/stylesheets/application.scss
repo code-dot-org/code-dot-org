@@ -56,6 +56,36 @@ $selectUserTypeButtonTextColorSelected: #fff;
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
 
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+}
+
+// Bootstramp runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+}
+
 label, input, button, select, textarea {
   font-size: 14px;
   font-weight: normal;
