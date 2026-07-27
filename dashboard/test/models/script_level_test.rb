@@ -1297,6 +1297,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
   private def stub_lesson_tutor_experiment(user)
     Experiment.stubs(:enabled?).returns(false)
     Experiment.stubs(:enabled?).
-      with(user: user, experiment_name: 'lesson-tutor-redirect').returns(true)
+      with(user: user, experiment_name: 'lesson-tutor').returns(true)
   end
 end
