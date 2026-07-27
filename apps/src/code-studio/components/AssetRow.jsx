@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -77,9 +79,15 @@ export default class AssetRow extends React.Component {
     // `flex` is the "Choose" button in file-choose mode, or the filesize.
     if (this.props.onChoose) {
       flex = (
-        <button type="button" onClick={this.chooseAsset}>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          onClick={this.chooseAsset}
+          type="button"
+        >
           {i18n.choose()}
-        </button>
+        </MuiButton>
       );
     } else {
       const size = (this.props.size / 1000).toFixed(2);
@@ -94,16 +102,22 @@ export default class AssetRow extends React.Component {
       case 'normal':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            {flex}
-            {!this.props.hideDelete && (
-              <button
-                type="button"
-                className={usage > 0 ? '' : 'btn-danger'}
-                onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
-              >
-                <i className="fa-regular fa-trash-can" />
-              </button>
-            )}
+            <span style={styles.actionGroup}>
+              {flex}
+              {!this.props.hideDelete && (
+                <MuiIconButton
+                  variant="text"
+                  color={usage > 0 ? 'secondary' : 'error'}
+                  size="small"
+                  aria-label="Delete file"
+                  onClick={
+                    usage > 0 ? this.attemptBadDelete : this.confirmDelete
+                  }
+                >
+                  <FontAwesomeV6Icon iconName="trash-can" iconStyle="regular" />
+                </MuiIconButton>
+              )}
+            </span>
 
             {this.state.attemptedUsedDelete && (
               <div style={styles.deleteWarning}>
@@ -116,16 +130,26 @@ export default class AssetRow extends React.Component {
       case 'confirming delete':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <button
-              type="button"
-              className="btn-danger"
-              onClick={this.handleDelete}
-            >
-              Delete File
-            </button>
-            <button type="button" onClick={this.cancelDelete}>
-              Cancel
-            </button>
+            <span style={styles.actionGroup}>
+              <MuiButton
+                variant="contained"
+                color="error"
+                size="small"
+                onClick={this.handleDelete}
+                type="button"
+              >
+                Delete File
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                onClick={this.cancelDelete}
+                type="button"
+              >
+                Cancel
+              </MuiButton>
+            </span>
             <div style={styles.deleteWarning}>
               {i18n.confirmDeleteExplanation()}
             </div>
@@ -168,6 +192,11 @@ export default class AssetRow extends React.Component {
 }
 
 const styles = {
+  actionGroup: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 8,
+  },
   deleteWarning: {
     paddingLeft: '34px',
     textAlign: 'left',
