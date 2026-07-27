@@ -108,11 +108,21 @@ export interface PreviewReadyMessage {
   type: typeof FromPreviewMessage.READY;
 }
 
-/** The module imported and ran; `detail` carries whatever the run reported. */
+/** How a `load` was applied: a fresh start, a live reconcile, or a restart. */
+export type ReloadMode = 'built' | 'reconciled' | 'restarted';
+
+/** What the preview reports after applying a `load` (hot-reload outcome). */
+export interface ReloadReport {
+  mode: ReloadMode;
+  /** Current world-scoped property values, by `${ruleId}.${propId}`. */
+  world: Record<string, unknown>;
+}
+
+/** The module imported and ran; `detail` reports the hot-reload outcome. */
 export interface BuiltMessage {
   type: typeof FromPreviewMessage.BUILT;
   id: string;
-  detail?: unknown;
+  detail?: ReloadReport;
 }
 
 export interface ConsoleMessage {

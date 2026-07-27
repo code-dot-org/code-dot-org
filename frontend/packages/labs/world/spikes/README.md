@@ -42,6 +42,16 @@ binding renders it.
   falls, and lands (relayed `startsFalling`/`stopsFalling`), under the production
   CSPs. Run: `yarn setup:world && node spikes/milestone-3/roundtrip.mjs`
 
+## milestone-4/
+
+Level-1 hot-reload verification (`specs/PLAN.md` §16 milestone 4): three
+sequential loads across the real sandbox under the production CSPs.
+
+- `harness.ts` — exposes `window.__load(files, entry)` returning the reload report.
+- `roundtrip.mjs` — asserts base → `built` (900), a strength-only edit →
+  `reconciled` (live-patched to 1500, no restart), and an actor-value edit →
+  `restarted`. Run: `yarn setup:world && node spikes/milestone-4/roundtrip.mjs`.
+
 ## milestone-5/
 
 Browser check of the whole lab (`specs/PLAN.md` §16 milestone 5). Unlike the

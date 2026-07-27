@@ -49,8 +49,16 @@ yarn dev:isolated     # lab on :5139, sandbox on :5202
 
 then open **http://localhost:5139/**. The demo defaults the sandbox origin to
 `http://localhost:5202/`; override with `?world-sandbox=<url>`. Edit the code and
-the game recompiles and reloads; `console.log` from the game appears in the
-Console box.
+the game updates; `console.log` from the game appears in the Console box.
+
+Edits reload as cheaply as possible: a change that only alters a world-scoped
+property value (e.g. gravity strength) is **applied live** to the running game
+with no restart; a structural or actor change **restarts** it. The Console notes
+which happened ("↻ Applied changes live" / "↻ Restarted the game").
+
+> Editing the **engine** (`src/engine/`) is different from editing lab code: the
+> engine is served as a pre-bundled `public/vendor/world-lab.mjs`, so run
+> `yarn setup:world` (or restart `dev`) to regenerate it — Vite HMR alone won't.
 
 > The **first** load triggers a one-time Vite dependency optimization (`phaser`,
 > `esbuild-wasm`) that reloads the sandbox iframes — reload the page once and it
