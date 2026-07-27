@@ -10,10 +10,12 @@
 // without a browser, like every other rule.
 
 import {RuleBuilder} from '../builders/RuleBuilder';
+import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
 import {APPEARANCE} from '../core/spatialKeys';
+import {Vector} from '../core/Vector';
 
-import {PositionalTrait, SpatialRule} from './spatial';
+import {IntrinsicSizeProperty, PositionalTrait, SpatialRule} from './spatial';
 
 const rule = new RuleBuilder({id: APPEARANCE.rule, name: 'Has Appearance'});
 rule.requires([SpatialRule]);
@@ -79,6 +81,26 @@ export const FrameChangedEvent = rule.addEvent('frameChanged', {
   name: 'animation frame changes',
 });
 
+/**
+ * Set the actor's `IntrinsicSizeProperty` to the largest cell in `def` — a
+ * stable, frame-independent box. Leaves it untouched when no frame carries a
+ * cell (a single image), so it stays `(0, 0)` = "unknown" and Collision falls
+ * back to its default box.
+ */
+function publishIntrinsicSize(actor: Actor, def: AnimationDef): void {
+  let width = 0;
+  let height = 0;
+  for (const frame of def.frames) {
+    if (frame.position) {
+      width = Math.max(width, frame.position.width);
+      height = Math.max(height, frame.position.height);
+    }
+  }
+  if (width > 0 && height > 0) {
+    actor.set(IntrinsicSizeProperty, new Vector(width, height));
+  }
+}
+
 export const AdvanceAnimationStep = rule.addStep(
   'advanceAnimation',
   (world, delta) => {
@@ -98,6 +120,12 @@ export const AdvanceAnimationStep = rule.addStep(
       if (!def || def.frames.length === 0) {
         continue;
       }
+      // Publish this actor's intrinsic bounding size for Collision to default
+      // its box to (spatial trait). Use the largest frame cell so the box is
+      // stable across frames rather than pulsing with the animation; frames
+      // without a cell (a whole single image) contribute nothing, since the
+      // engine cannot know their pixel size.
+      publishIntrinsicSize(actor, def);
       const loop = def.loop ?? true;
       const last = def.frames.length - 1;
       let frame = actor.get(FrameProperty);

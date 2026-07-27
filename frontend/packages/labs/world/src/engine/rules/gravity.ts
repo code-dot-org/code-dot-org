@@ -7,7 +7,12 @@
 import {RuleBuilder} from '../builders/RuleBuilder';
 import {Vector} from '../core/Vector';
 
-import {CollidableTrait, CollisionRule, ResolveStep} from './collision';
+import {
+  CollidableTrait,
+  CollisionRule,
+  ResolveStep,
+  collisionSize,
+} from './collision';
 import {MotionRule, MovableTrait, VelocityProperty} from './motion';
 import {PositionProperty} from './spatial';
 
@@ -85,22 +90,29 @@ export const ApplyVelocityStep = rule.addStepBefore(
 
 // After Collision resolves: land affected actors on the topmost ground surface,
 // and raise startsFalling / stopsFalling as their state changes. A 1-D vertical
-// model for the slice; real AABB resolution is later work.
+// model for the slice — bounding boxes are resolved with half-extents so an
+// actor rests *on* the surface rather than sinking its centre into it, but the
+// horizontal axis (does the actor overlap this ground's x-span? which block's
+// top?) is still real-AABB work for later.
 export const HandleCollisionsStep = rule.addStepAfter(
   'handleCollisions',
   ResolveStep,
   world => {
-    let groundY = Infinity;
+    // The topmost ground *surface* — each ground's box top, not its centre.
+    let groundTop = Infinity;
     for (const ground of world.actors.with(GroundTrait)) {
-      groundY = Math.min(groundY, ground.get(PositionProperty).y);
+      const top = ground.get(PositionProperty).y - collisionSize(ground).y / 2;
+      groundTop = Math.min(groundTop, top);
     }
     for (const actor of world.actors.with(AffectedByGravityTrait)) {
       const position = actor.get(PositionProperty);
       const velocity = actor.get(VelocityProperty);
       const wasFalling = actor.get(FallingProperty);
-      if (position.y >= groundY) {
+      // Rest so the actor's box bottom meets the surface: centre a half-height up.
+      const restY = groundTop - collisionSize(actor).y / 2;
+      if (position.y >= restY) {
         // Landed: clamp to the surface and stop vertical motion.
-        actor.set(PositionProperty, new Vector(position.x, groundY));
+        actor.set(PositionProperty, new Vector(position.x, restY));
         actor.set(VelocityProperty, new Vector(velocity.x, 0));
         if (wasFalling) {
           actor.set(FallingProperty, false);

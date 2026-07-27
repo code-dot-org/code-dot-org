@@ -11,6 +11,7 @@ export const SPATIAL = {
   scale: 'scale',
   rotation: 'rotation',
   skew: 'skew',
+  intrinsicSize: 'intrinsicSize',
 } as const;
 
 // The Animation rule's member ids, shared with core so `World.renderSnapshot`
