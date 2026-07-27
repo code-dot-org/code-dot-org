@@ -61,18 +61,30 @@ tighten them (for example, denying scripts on a predict level).
 ```
 default-src 'self';
 script-src  'self' 'wasm-unsafe-eval';
-connect-src 'none';
+connect-src 'self';
 ```
 
 `'wasm-unsafe-eval'` is the narrow CSP Level 3 keyword that permits
 `WebAssembly.compile` / `WebAssembly.instantiate` from bytes while still
 forbidding JavaScript `eval` and `new Function`. It is strictly weaker than
 `'unsafe-eval'`. The only thing it authorizes here is our own vendored,
-self-hosted esbuild-wasm instantiating its own WebAssembly. Because no
-learner-derived code runs on this surface — the compiler emits a module but
-never imports it — learner-supplied WebAssembly cannot execute here. The origin
-is sessionless and `connect-src 'none'`, so even a defect in the bundler has no
-credentials to steal and nowhere to send them.
+self-hosted esbuild-wasm instantiating its own WebAssembly — verified necessary
+and sufficient (milestone-0 Spike C: with it esbuild initializes; without it,
+instantiation is refused).
+
+`connect-src 'self'` is required, not `'none'`: esbuild-wasm fetches its own
+`esbuild.wasm`, and a `fetch` is governed by `connect-src`. This is a same-origin
+static asset only — no cross-origin destination is reachable, the surface is
+sessionless, and no learner-derived code runs here — so it grants the learner
+nothing. (A stricter alternative inlines the wasm bytes into the bundle to keep
+`connect-src 'none'`, at the cost of a large base64 blob; not worth it.)
+
+The bundler is initialized with `worker: false` so esbuild runs on this
+surface's own (idle, hidden) main thread rather than spawning a blob-URL Web
+Worker — which would otherwise force `worker-src blob:` into this policy.
+
+Because no learner-derived code runs on this surface — the compiler emits a
+module but never imports it — learner-supplied WebAssembly cannot execute here.
 
 Compatibility: `'wasm-unsafe-eval'` is a recent keyword; engines that predate it
 fall back to requiring the broader `'unsafe-eval'`. The target browser matrix
@@ -112,12 +124,15 @@ and thus the final preview policy, is a prerequisite spike in `PLAN.md`.
 
 ## Network and session
 
-- **Network.** `connect-src 'none'` on both surfaces denies `fetch`, `XHR`,
-  `WebSocket`, `EventSource`, and beacons. Learner code cannot originate network
-  traffic. This is stricter than Web Lab, which allows a host-configured
-  allow-list; World Lab has no network story and grants none. A service worker
-  on the sandbox origin (the one used for transport, below) additionally refuses
-  any stray request that escapes the CSP, and reports it.
+- **Network.** The preview surface is `connect-src 'none'` — it denies `fetch`,
+  `XHR`, `WebSocket`, `EventSource`, and beacons, so learner code cannot
+  originate network traffic. This is stricter than Web Lab, which allows a
+  host-configured allow-list; World Lab has no network story and grants none.
+  The compile surface is `connect-src 'self'` for the single purpose of loading
+  its own same-origin `esbuild.wasm`; since no learner code runs there, the
+  learner still cannot originate traffic. A service worker on the sandbox origin
+  (the one used for transport, below) additionally refuses any stray request
+  that escapes the CSP, and reports it.
 - **Session.** The sandbox origin carries no cookies and no shared storage with
   the lab. Cross-origin isolation prevents reading the lab's storage or DOM.
 - **Page takeover.** `frame-ancestors` restricts who may embed the preview;

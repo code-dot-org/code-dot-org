@@ -57,7 +57,9 @@
     "@codemirror/state": "^6.5.2",
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
-    "@mui/material": "catalog:"
+    "@mui/material": "catalog:",
+    "esbuild-wasm": "^0.28.1",
+    "phaser": "^4.2.1"
   },
   "devDependencies": {
     "@code-dot-org/component-library": "workspace:*",
