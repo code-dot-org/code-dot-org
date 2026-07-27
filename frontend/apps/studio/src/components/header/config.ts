@@ -101,61 +101,76 @@ export const CREATE_MENU_ITEMS: CreateMenuItem[] = [
   },
 ];
 
-export const GLOBAL_NAV: GlobalNavItem[] = [
-  {label: 'Learn', href: '//code.org/students'},
-  {
-    label: 'Teach',
-    subItems: [
-      {label: 'Educator Overview', href: '//code.org/teach'},
-      {
-        label: 'Elementary School',
-        href: '//code.org/educate/curriculum/elementary-school',
-      },
-      {
-        label: 'Middle School',
-        href: '//code.org/educate/curriculum/middle-school',
-      },
-      {label: 'High School', href: '//code.org/educate/curriculum/high-school'},
-      {label: 'Hour of AI', href: '//code.org/hour-of-ai'},
-      {
-        label: 'Beyond CodeAI',
-        href: '//code.org/educate/curriculum/3rd-party',
-      },
-      {label: 'Online Community', href: 'https://forum.code.org/'},
-      {label: 'Technical Requirements', href: '//code.org/educate/it'},
-      {label: 'Tools and Videos', href: '//code.org/educate/resources/videos'},
-    ],
-  },
-  {label: 'Districts', href: '//code.org/administrators'},
-  {label: 'Stats', href: '//code.org/promote'},
-  {label: 'Donate', href: '//code.org/donate'},
-  {label: 'Incubator', href: '//code.org/incubator'},
-  {
-    label: 'About',
-    subItems: [
-      {label: 'About Us', href: '//code.org/about'},
-      {label: 'Leadership', href: '//code.org/about/leadership'},
-      {label: 'Donors', href: '//code.org/about/donors'},
-      {label: 'Partners', href: '//code.org/about/partners'},
-      {label: 'Full Team', href: '//code.org/about/team'},
-      {label: 'Newsroom', href: '//code.org/about/news'},
-      {label: 'Careers', href: '//code.org/about/jobs'},
-      {label: 'Contact Us', href: '//code.org/contact'},
-      {label: 'FAQs', href: '//code.org/faq'},
-    ],
-  },
-  // Legal lives in the hamburger drawer only (matches the legacy header's "Legal"
-  // expander); the top bar never shows it.
-  {
-    label: 'Privacy & Legal',
-    hamburgerOnly: true,
-    subItems: [
-      {label: 'Privacy Policy', href: '//code.org/privacy'},
-      {label: 'Cookie Notice', href: '//code.org/cookies'},
-      {label: 'Terms of Service', href: '//code.org/terms-of-service'},
-    ],
-  },
-];
+/**
+ * Build the studio global nav. Called lazily (not at module load) so
+ * siteConfig is always fully initialised — and test mocks are in place —
+ * when hrefs are resolved. Mirrors `getFooterLinks` in config/footerLinks.ts.
+ *
+ * @returns Ordered array of global nav items.
+ */
+export function buildGlobalNav(): GlobalNavItem[] {
+  return [
+    {label: 'Learn', href: '//code.org/students'},
+    {
+      label: 'Teach',
+      subItems: [
+        {label: 'Educator Overview', href: '//code.org/teach'},
+        {
+          label: 'Elementary School',
+          href: '//code.org/educate/curriculum/elementary-school',
+        },
+        {
+          label: 'Middle School',
+          href: '//code.org/educate/curriculum/middle-school',
+        },
+        {
+          label: 'High School',
+          href: '//code.org/educate/curriculum/high-school',
+        },
+        {label: 'Hour of AI', href: siteConfig.marketingUrl('/hour-of-ai')},
+        {
+          label: 'Beyond CodeAI',
+          href: '//code.org/educate/curriculum/3rd-party',
+        },
+        {label: 'Online Community', href: 'https://forum.code.org/'},
+        {label: 'Technical Requirements', href: '//code.org/educate/it'},
+        {
+          label: 'Tools and Videos',
+          href: '//code.org/educate/resources/videos',
+        },
+      ],
+    },
+    {label: 'Districts', href: '//code.org/administrators'},
+    {label: 'Stats', href: '//code.org/promote'},
+    {label: 'Donate', href: '//code.org/donate'},
+    {label: 'Incubator', href: '//code.org/incubator'},
+    {
+      label: 'About',
+      subItems: [
+        {label: 'About Us', href: '//code.org/about'},
+        {label: 'Leadership', href: '//code.org/about/leadership'},
+        {label: 'Donors', href: '//code.org/about/donors'},
+        {label: 'Partners', href: '//code.org/about/partners'},
+        {label: 'Full Team', href: '//code.org/about/team'},
+        {label: 'Newsroom', href: '//code.org/about/news'},
+        {label: 'Careers', href: '//code.org/about/jobs'},
+        {label: 'Contact Us', href: '//code.org/contact'},
+        {label: 'FAQs', href: '//code.org/faq'},
+      ],
+    },
+    // Legal lives in the hamburger drawer only (matches the legacy header's
+    // "Legal" expander); the top bar never shows it.
+    {
+      label: 'Privacy & Legal',
+      hamburgerOnly: true,
+      subItems: [
+        {label: 'Privacy Policy', href: '//code.org/privacy'},
+        {label: 'Cookie Notice', href: '//code.org/cookies'},
+        {label: 'Terms of Service', href: '//code.org/terms-of-service'},
+      ],
+    },
+  ];
+}
 
 /**
  * Signed-out marketing navigation. Advocacy is an absolute external host, so

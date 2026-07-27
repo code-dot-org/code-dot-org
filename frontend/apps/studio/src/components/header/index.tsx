@@ -6,10 +6,10 @@ import {useAuth} from '@/modules/auth';
 
 import {
   BRAND_NAME,
+  buildGlobalNav,
   buildMarketingGlobalNav,
   buildSupportLinks,
   CREATE_MENU_ITEMS,
-  GLOBAL_NAV,
   LOGO_IMAGE_URL,
   STUDENT_MENU_ITEMS,
   TEACHER_MENU_ITEMS,
@@ -31,7 +31,7 @@ export default function SiteHeader() {
   // Signed-out always gets the marketing nav; signed-in nav is unaffected.
   const marketingNav = !userType;
   const globalNavItems = useMemo(
-    () => (marketingNav ? buildMarketingGlobalNav() : GLOBAL_NAV),
+    () => (marketingNav ? buildMarketingGlobalNav() : buildGlobalNav()),
     [marketingNav],
   );
 
