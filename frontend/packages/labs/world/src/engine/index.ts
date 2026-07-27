@@ -13,7 +13,7 @@ export {SceneBuilder, type SceneMap} from './builders/SceneBuilder';
 export {Vector, type VectorLike} from './core/Vector';
 export {Trait} from './core/Trait';
 export {Actor, type ActorInit} from './core/Actor';
-export {World, type WorldInit} from './core/World';
+export {World, type WorldInit, type RenderState} from './core/World';
 export {Scheduler} from './core/Scheduler';
 export {EventQueue} from './core/EventQueue';
 export {DependencySet} from './core/traits';

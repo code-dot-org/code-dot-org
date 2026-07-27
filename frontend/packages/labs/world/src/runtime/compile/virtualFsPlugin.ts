@@ -9,7 +9,6 @@
 
 import type {Loader, Plugin} from 'esbuild-wasm';
 
-const EXTERNALS = new Set(['world-lab', 'phaser']);
 const EXT_ORDER = ['', '.ts', '.js', '.json', '/index.ts', '/index.js'];
 const NS = 'world-project';
 
@@ -65,16 +64,23 @@ function loaderFor(path: string): Loader {
 /**
  * @param getFiles - returns the current project map (path -> source). Read lazily
  *   so a warm esbuild context sees each rebuild's latest sources.
+ * @param externals - specifier -> replacement URL. `world-lab` / `phaser` are
+ *   rewritten to their self-hosted absolute URLs (e.g. `/vendor/world-lab.mjs`)
+ *   rather than left as bare specifiers, so the compiled module imports them
+ *   directly under the preview's `script-src 'self'` — no import map needed
+ *   (an inline import map would itself be blocked by that CSP).
  */
 export function virtualFsPlugin(
   getFiles: () => ReadonlyMap<string, string>,
+  externals: Readonly<Record<string, string>>,
 ): Plugin {
   return {
     name: 'world-virtual-fs',
     setup(build) {
       build.onResolve({filter: /.*/}, args => {
-        if (EXTERNALS.has(args.path)) {
-          return {path: args.path, external: true};
+        const externalUrl = externals[args.path];
+        if (externalUrl !== undefined) {
+          return {path: externalUrl, external: true};
         }
         if (args.kind === 'entry-point') {
           return {path: normalize(args.path), namespace: NS};

@@ -34,12 +34,20 @@ function initEsbuild(wasmURL?: string): Promise<void> {
 
 export class WorldCompiler {
   private readonly wasmURL?: string;
+  private readonly externals: Record<string, string>;
   private readonly files = new Map<string, string>();
   private context: esbuild.BuildContext | null = null;
   private contextEntry: string | null = null;
 
-  constructor(opts: {wasmURL?: string} = {}) {
+  constructor(opts: {wasmURL?: string; assetBase?: string} = {}) {
     this.wasmURL = opts.wasmURL;
+    // `world-lab` / `phaser` are rewritten to their self-hosted URLs under the
+    // asset base so the compiled module imports them same-origin (no import map).
+    const base = opts.assetBase ?? '/vendor/';
+    this.externals = {
+      'world-lab': `${base}world-lab.mjs`,
+      phaser: `${base}phaser.esm.js`,
+    };
   }
 
   /** Initialize esbuild-wasm (idempotent). */
@@ -70,7 +78,7 @@ export class WorldCompiler {
         write: false,
         sourcemap: 'inline',
         logLevel: 'silent',
-        plugins: [virtualFsPlugin(() => this.files)],
+        plugins: [virtualFsPlugin(() => this.files, this.externals)],
       });
     }
 

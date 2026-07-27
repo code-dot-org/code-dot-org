@@ -29,7 +29,10 @@ export async function start(): Promise<void> {
   };
 
   const worker = await registerBuildSw({awaitControl: false});
-  const compiler = new WorldCompiler({wasmURL: `${assetBase}esbuild.wasm`});
+  const compiler = new WorldCompiler({
+    wasmURL: `${assetBase}esbuild.wasm`,
+    assetBase,
+  });
   await compiler.init();
   post({type: FromCompileMessage.READY});
 

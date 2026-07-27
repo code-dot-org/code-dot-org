@@ -628,10 +628,15 @@ Unit first, then browser:
    self-hosting script + `dev:sandbox`/`dev:isolated`. The round-trip compiles a
    project, stores it in the SW, and imports+runs it in the preview across two
    origins under the production CSPs. No game yet.
-3. **Preview sandbox + Phaser binding** — `preview.html` grows the engine: import
-   the compiled module, resolve `world-lab` (import map / SW), construct the
-   Scene, run the loop, render the falling sprite. (The import + report path is
-   already wired by milestone 2.)
+3. **Preview sandbox + Phaser binding** — DONE
+   (`spikes/milestone-3/roundtrip.mjs`). The engine grew a driver-facing render
+   API (`World.renderSnapshot`, `SceneBuilder.getWorld`); `PhaserBinding`
+   constructs `Phaser.Game` from the built World and reconciles each positional
+   actor each frame; the preview imports the compiled Scene and runs it,
+   relaying console. `world-lab` resolves via a **compiler URL rewrite** to the
+   self-hosted `/vendor/world-lab.mjs` (one engine instance) — not an import map,
+   which the preview's `script-src 'self'` would block inline. The round-trip
+   renders a gravity actor that falls and lands, under the production CSPs.
 4. **Hot reload Levels 0–1** — restart on structural edits; `set_property`
    changes gravity live.
 5. **WorldPreview integration + README + Playwright verification** — slice done

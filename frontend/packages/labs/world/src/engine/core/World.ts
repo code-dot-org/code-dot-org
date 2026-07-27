@@ -7,9 +7,25 @@
 import type {Actor} from './Actor';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
+import {SPATIAL} from './spatialKeys';
+import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {GameEvent, Property, Rule, Step, WorldAction} from './types';
 import {Vector} from './Vector';
+
+/**
+ * A renderer-friendly view of one positional actor. The driver's Phaser binding
+ * consumes these each frame; it needs no engine internals, only these numbers.
+ */
+export interface RenderState {
+  actor: Actor;
+  x: number;
+  y: number;
+  scaleX: number;
+  scaleY: number;
+  /** Degrees. */
+  rotation: number;
+}
 
 /** The data a WorldBuilder hands the World constructor. */
 export interface WorldInit {
@@ -131,6 +147,50 @@ export class World {
   /** The active rules, directly-used and implied. */
   activeRules(): readonly Rule[] {
     return this.membership.items();
+  }
+
+  /**
+   * A per-actor render view for the driver: every actor carrying the Spatial
+   * "positional" trait, with its transform. Read in-instance — the Property
+   * objects come from this world's own Spatial rule, so their identities match
+   * the actors' stores — so the driver needs no engine internals, only these
+   * numbers. Empty when the Spatial rule is not in play.
+   */
+  renderSnapshot(): RenderState[] {
+    const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
+    const positional: Trait | undefined = spatial?.traits[SPATIAL.trait];
+    if (!positional) {
+      return [];
+    }
+    const positionProp = positional.properties[SPATIAL.position] as
+      | Property<Vector>
+      | undefined;
+    const scaleProp = positional.properties[SPATIAL.scale] as
+      | Property<Vector>
+      | undefined;
+    const rotationProp = positional.properties[SPATIAL.rotation] as
+      | Property<number>
+      | undefined;
+    if (!positionProp || !scaleProp || !rotationProp) {
+      return [];
+    }
+    const states: RenderState[] = [];
+    for (const actor of this.actorList) {
+      if (!actor.has(positional)) {
+        continue;
+      }
+      const position = actor.get(positionProp);
+      const scale = actor.get(scaleProp);
+      states.push({
+        actor,
+        x: position.x,
+        y: position.y,
+        scaleX: scale.x,
+        scaleY: scale.y,
+        rotation: actor.get(rotationProp),
+      });
+    }
+    return states;
   }
 
   /** Remove every actor (used by `SceneBuilder.clear`). */

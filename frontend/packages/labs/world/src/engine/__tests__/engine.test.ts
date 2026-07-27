@@ -163,6 +163,27 @@ describe('SceneBuilder.populate (Map data)', () => {
   });
 });
 
+describe('renderSnapshot (driver view)', () => {
+  it('reports the transform of each positional actor, tracking the sim', () => {
+    const {world, player} = makeScene(new Vector(10, 0), 100);
+    const before = world.renderSnapshot();
+    // Both the player and the ground carry the positional trait.
+    expect(before).toHaveLength(2);
+    const playerState = before.find(s => s.actor === player);
+    expect(playerState).toMatchObject({x: 10, y: 0, scaleX: 1, scaleY: 1});
+
+    world.tick(0.1); // player falls to y≈9
+    const after = world.renderSnapshot().find(s => s.actor === player);
+    expect(after?.y).toBeCloseTo(9);
+    expect(after?.x).toBe(10);
+  });
+
+  it('is empty for a world without the Spatial rule', () => {
+    const world = new WorldBuilder({id: 'bare', name: 'Bare'}).instantiate();
+    expect(world.renderSnapshot()).toEqual([]);
+  });
+});
+
 describe('world actions', () => {
   it('invert flips gravity direction in place', () => {
     const {world, player} = makeScene(new Vector(0, 0), 100_000);

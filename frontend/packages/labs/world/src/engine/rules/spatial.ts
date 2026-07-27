@@ -3,36 +3,42 @@
 // rotation, and vertical skew, plus the actions to change them (DESIGN.md).
 
 import {RuleBuilder} from '../builders/RuleBuilder';
+import {SPATIAL} from '../core/spatialKeys';
 import {Vector, type VectorLike} from '../core/Vector';
 
-const rule = new RuleBuilder({id: 'spatial', name: 'Has Space'});
+// Ids come from the shared SPATIAL table so core's renderSnapshot and this rule
+// cannot drift apart.
+const rule = new RuleBuilder({id: SPATIAL.rule, name: 'Has Space'});
 
 export const PositionalTrait = rule.addTrait({
-  id: 'positional',
+  id: SPATIAL.trait,
   name: 'Can Be Positioned',
 });
 
 export const PositionProperty = PositionalTrait.addProperty(
-  'position',
+  SPATIAL.position,
   'vector',
   new Vector(0, 0),
   {name: 'position'},
 );
 export const ScaleProperty = PositionalTrait.addProperty(
-  'scale',
+  SPATIAL.scale,
   'vector',
   new Vector(1, 1),
   {name: 'scale'},
 );
 export const RotationProperty = PositionalTrait.addProperty(
-  'rotation',
+  SPATIAL.rotation,
   'number',
   0,
   {name: 'rotation'},
 );
-export const SkewProperty = PositionalTrait.addProperty('skew', 'number', 0, {
-  name: 'vertical skew',
-});
+export const SkewProperty = PositionalTrait.addProperty(
+  SPATIAL.skew,
+  'number',
+  0,
+  {name: 'vertical skew'},
+);
 
 export const MoveAction = PositionalTrait.addAction(
   'move',
