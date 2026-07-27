@@ -1,5 +1,5 @@
-// Keyboard-synthesized clicks (Space/Enter on a focused control) arrive
-// with detail 0; pointer clicks count ≥ 1.
+// Keyboard-synthesized clicks (Space/Enter on a focused control) have
+// detail 0.
 export function isPointerClick(event: React.MouseEvent<HTMLElement>) {
   return event.detail > 0;
 }
