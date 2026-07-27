@@ -8,9 +8,6 @@ type StaticCategoryInfo = BlocklyCore.utils.toolbox.StaticCategoryInfo;
 export type NamedDynamicCategoryInfo =
   BlocklyCore.utils.toolbox.DynamicCategoryInfo & {name: string};
 
-// Category factories: Blockly declares the styling fields required-but-
-// undefined (no `?`), so object literals need every key spelled out.
-
 export function makeCategory(
   name: string,
   contents: ToolboxItemInfo[]
@@ -19,7 +16,7 @@ export function makeCategory(
     kind: 'category',
     name,
     contents,
-    id: undefined,
+    id: name,
     categorystyle: undefined,
     colour: undefined,
     cssconfig: undefined,
@@ -35,7 +32,7 @@ export function makeDynamicCategory(
     kind: 'category',
     name,
     custom,
-    id: undefined,
+    id: name,
     categorystyle: undefined,
     colour: undefined,
     cssconfig: undefined,

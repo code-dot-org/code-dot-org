@@ -3,6 +3,7 @@
 
 import * as BlocklyCore from 'blockly/core';
 
+import {DYNAMIC_CATEGORY_OPTIONS} from '../../constants';
 import {getSimplifiedStateForFlyout} from '../serialization/flyouts';
 import {convertXmlToJson} from '../serialization/xmlToJson';
 
@@ -44,12 +45,30 @@ export function toolboxXmlToDefinition(xml: string): ToolboxInfo | undefined {
     const name = child.getAttribute('name') || '';
     const custom = child.getAttribute('custom');
     if (custom) {
-      contents.push(makeDynamicCategory(name, custom));
-      return;
+      // Dynamic categories are keyed by their DYNAMIC_CATEGORY_OPTIONS entry
+      // (which names the category); a custom flyout with no entry (e.g.
+      // legacy "Behavior") falls through to a static category of the XML
+      // children.
+      const key = Object.keys(DYNAMIC_CATEGORY_OPTIONS).find(
+        k => DYNAMIC_CATEGORY_OPTIONS[k] === custom
+      );
+      if (key) {
+        contents.push(makeDynamicCategory(key, custom));
+        return;
+      }
     }
     try {
+      // domToBlockSpace only reads <block> children of an <xml> root, so
+      // rewrap the category's blocks in one.
+      const wrapper = doc.createElement('xml');
+      Array.from(child.children).forEach(block =>
+        wrapper.appendChild(block.cloneNode(true))
+      );
       contents.push(
-        makeCategory(name, getSimplifiedStateForFlyout(convertXmlToJson(child)))
+        makeCategory(
+          name,
+          getSimplifiedStateForFlyout(convertXmlToJson(wrapper))
+        )
       );
     } catch (e) {
       console.warn(`toolboxXmlToDefinition: dropped category "${name}"`, e);
