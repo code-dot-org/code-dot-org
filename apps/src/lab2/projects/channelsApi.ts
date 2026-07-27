@@ -13,7 +13,6 @@ export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
 
 export interface ShareFailure {
   type: ShareFailureType;
-  // The offending text. Omitted by the server for profanity failures.
   content?: string;
 }
 

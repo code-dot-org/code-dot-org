@@ -84,17 +84,6 @@ export const ProjectBlockedUI: React.FunctionComponent<{
     return null;
   }
 
-  // A share-filtered project stays fully usable for its owner (and their
-  // teacher); The lab pages get a warning alert instead (below).
-  // TODO: should we do this? Or should we still show the banner?
-  // if (
-  //   blockedType === 'privacyProfanity' &&
-  //   (isOwner || isTeacherOfProjectOwner) &&
-  //   !['view', 'edit', 'level'].includes(pageAction)
-  // ) {
-  //   return null;
-  // }
-
   // If page action is view/edit/level, project is flagged for abuse, and user has view or edit access,
   // render workspace alert with warning about flagged project.
   if (['view', 'edit', 'level'].includes(pageAction) && hasViewOrEditAccess) {

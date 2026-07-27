@@ -175,11 +175,12 @@ const ShareDialog: React.FunctionComponent<{
   const theme = Lab2Registry.getInstance().getTheme();
 
   if (shareFailure) {
-    // The server omits the offending text for profanity failures; for PII
-    // failures, showing it helps students find what to remove.
-    const flaggedText = shareFailure.content
-      ? ` Flagged text: "${shareFailure.content}"`
-      : '';
+    // For PII failures, showing the flagged text helps students find what to
+    // remove. For profanity, we don't echo the word back to the student.
+    const flaggedText =
+      shareFailure.content && shareFailure.type !== 'profanity'
+        ? ` Flagged text: "${shareFailure.content}"`
+        : '';
     return (
       <div data-theme={theme}>
         <Modal
