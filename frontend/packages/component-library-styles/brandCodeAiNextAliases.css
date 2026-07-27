@@ -129,13 +129,24 @@
   --text-neutral-disabled: var(--text-disabled-neutral);
   --text-neutral-disabled-inverse: var(--text-disabled-neutral-inverse);
   --text-neutral-inverse: var(--text-neutral-primary-inverse);
+}
 
-  /* Legacy primitives with no CADS successor. Direct primitive usage is
-     rare (~30 call sites for the colored families) but must not fall
-     through to the legacy :root values under this brand. Same-step
-     mapping into the successor family; step 100 retires, CADS tops out
-     at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
-     brand-purple-5–90) are already redefined by brandCodeAiNext.css. */
+/* Legacy primitives with no CADS successor. Direct primitive usage is
+   rare (~30 call sites for the colored families) but must not fall
+   through to the legacy :root values under this brand. Same-step
+   mapping into the successor family; step 100 retires, CADS tops out
+   at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
+   brand-purple-5–90) are already redefined by brandCodeAiNext.css.
+
+   Unlike the aliases above, primitives do not vary by theme, so this
+   one root-level block covers both. Do not re-declare these rows on
+   [data-theme] elements: brandLegacyShim.css defines the same pairs
+   in the opposite direction there (--brand-orange-60 from
+   --accent-orange-60), and when both directions apply to the same
+   element, CSS treats the definitions as circular and blanks both
+   variables. */
+[data-brand='codeai-next']:root,
+[data-brand='codeai-next'] {
   --brand-aqua-10: var(--brand-purple-10);
   --brand-aqua-20: var(--brand-purple-20);
   --brand-aqua-30: var(--brand-purple-30);
