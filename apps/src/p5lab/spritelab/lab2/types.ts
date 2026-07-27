@@ -78,4 +78,6 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
+  /** Legacy stringified XML toolbox. */
+  toolboxBlocks?: string;
 }

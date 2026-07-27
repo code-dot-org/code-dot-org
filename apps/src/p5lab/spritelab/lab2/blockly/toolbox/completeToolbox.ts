@@ -1,10 +1,13 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-import {getToolboxDefinition} from '@cdo/apps/blockly/utils/toolbox';
+import {
+  getToolboxDefinition,
+  makeDynamicCategory,
+} from '@cdo/apps/blockly/utils/toolbox';
 
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 
-import {makeDynamicCategory, ToolboxInfo} from './types';
+import {ToolboxInfo} from './types';
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {

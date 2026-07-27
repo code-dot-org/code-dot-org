@@ -14,10 +14,7 @@ import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes'
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
-import {
-  installSharedBlocks,
-  setupSpriteLab2BlocklyEnvironment,
-} from '../blockly/setup';
+import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
 import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
 
@@ -85,7 +82,6 @@ export default function useBlocklyWorkspace({
     if (!enabled) {
       return;
     }
-    setupSpriteLab2BlocklyEnvironment();
     const blocksByCategory = installSharedBlocks(sharedBlocks || []);
 
     const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);

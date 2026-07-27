@@ -7,6 +7,7 @@ import {cloneDeep} from 'lodash';
 import {
   isBlockInfo,
   isStaticCategoryInfo,
+  makeCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
@@ -15,7 +16,6 @@ import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {
   BlockInfo,
   findCategory,
-  makeCategory,
   StaticCategoryInfo,
   ToolboxInfo,
 } from './types';
