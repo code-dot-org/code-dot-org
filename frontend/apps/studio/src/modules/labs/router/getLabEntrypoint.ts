@@ -14,6 +14,7 @@ const LabEntrypoints: LabEntrypointMap = {
   ['oceans']: lazy(() => import('@/modules/labs/oceans')),
   ['web']: lazy(() => import('@code-dot-org/web-lab')),
   ['python']: lazy(() => import('@code-dot-org/python-lab')),
+  ['world']: lazy(() => import('@code-dot-org/world-lab')),
 };
 
 /**

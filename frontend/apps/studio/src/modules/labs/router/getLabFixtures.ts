@@ -14,6 +14,7 @@ const LabFixturesLoaders: Partial<Record<Lab, LabFixturesLoader>> = {
   music: () => import('@code-dot-org/music-lab/mocks'),
   web: () => import('@code-dot-org/web-lab/mocks'),
   python: () => import('@code-dot-org/python-lab/mocks'),
+  world: () => import('@code-dot-org/world-lab/mocks'),
 };
 
 /**
