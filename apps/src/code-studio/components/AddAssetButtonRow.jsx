@@ -1,7 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
 
@@ -20,22 +21,22 @@ export const assetButtonStyles = {
     display: 'flex',
     flexFlow: 'row',
     alignItems: 'center',
+    gap: 10,
   },
 };
 
 const RecordButton = ({onSelectRecord, disabled}) => (
-  <span>
-    <Button
-      onClick={onSelectRecord}
-      id="record-asset"
-      className="share"
-      text={i18n.recordAudio()}
-      icon="microphone"
-      style={assetButtonStyles.button}
-      size="large"
-      disabled={disabled}
-    />
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="medium"
+    onClick={onSelectRecord}
+    id="record-asset"
+    disabled={disabled}
+    startIcon={<FontAwesomeV6Icon iconName="microphone" iconStyle="solid" />}
+  >
+    {i18n.recordAudio()}
+  </MuiButton>
 );
 
 RecordButton.propTypes = {
