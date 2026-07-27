@@ -721,6 +721,10 @@ Unit first, then browser:
    emits `FrameChangedEvent` carrying the frame index (per-actor event payloads
    already flowed through `EventQueue`); `world_on_event` binds the handler's
    event value and a `world_log_event_value` block reads it. The spec-aligned
-   animation rework (`ANIMATIONS.md` phases A–E) is complete. Remaining for
-   custom uploaded images: the Codebridge upload port (`UPLOADS.md`); reacting to
-   a specific frame awaits a conditional/expression block vocabulary.
+   animation rework (`ANIMATIONS.md` phases A–E) is complete. The Codebridge
+   upload port (`UPLOADS.md`, U1–U4) is also done: a core `ProjectFile.url` +
+   assets client, a codebridge upload UI, and World Lab forwarding uploaded
+   images to the preview as data URLs — a learner can upload a PNG and reference
+   it as a sprite. Remaining niceties: reacting to a specific frame (needs a
+   conditional/expression block vocabulary), image moderation, and matching the
+   real assets backend's raw-PUT contract in production.

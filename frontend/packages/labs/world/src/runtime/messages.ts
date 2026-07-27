@@ -87,6 +87,8 @@ export interface LoadMessage {
   type: typeof ToPreviewMessage.LOAD;
   id: string;
   moduleUrl: string;
+  /** Uploaded assets as `{fileName: dataURL}`, for the driver's textures. */
+  assets?: Record<string, string>;
 }
 
 export interface StopMessage {

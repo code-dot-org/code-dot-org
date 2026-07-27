@@ -29,6 +29,7 @@ import {projectAnimationIds} from '../blockly/projectAnimations';
 import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
+import {projectAssets} from './projectAssets';
 import {projectFiles} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {WorldPreviewManager} from './sandbox/worldPreviewManager';
@@ -182,11 +183,16 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     const mine = ++generation.current;
     setStatus('compiling');
     try {
-      const moduleUrl = await pair.compile.compile(compileFiles, ENTRY_FILE);
+      // Compile the code and gather the uploaded image assets in parallel; the
+      // preview needs both to draw the game.
+      const [moduleUrl, assets] = await Promise.all([
+        pair.compile.compile(compileFiles, ENTRY_FILE),
+        projectAssets(currentSources.source),
+      ]);
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile
       }
-      const detail = (await pair.preview.load(moduleUrl)) as
+      const detail = (await pair.preview.load(moduleUrl, assets)) as
         | ReloadReport
         | undefined;
       if (mine !== generation.current) {

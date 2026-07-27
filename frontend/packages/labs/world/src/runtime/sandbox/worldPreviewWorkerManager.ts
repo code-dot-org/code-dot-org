@@ -65,7 +65,7 @@ export async function start(): Promise<void> {
     }
   });
 
-  async function load({id, moduleUrl}: LoadMessage) {
+  async function load({id, moduleUrl, assets}: LoadMessage) {
     try {
       const mod: SceneModule = await import(/* @vite-ignore */ moduleUrl);
       const scene = mod.default;
@@ -81,7 +81,7 @@ export async function start(): Promise<void> {
       if (!binding || !runningWorld) {
         // First load: start fresh.
         runningWorld = incoming;
-        binding = new PhaserBinding(incoming, parent, assetBase);
+        binding = new PhaserBinding(incoming, parent, assetBase, assets);
         baseline = incoming.snapshot();
         mode = 'built';
       } else {
@@ -92,7 +92,7 @@ export async function start(): Promise<void> {
         if (result.mode === 'restarted') {
           binding.stop();
           runningWorld = incoming;
-          binding = new PhaserBinding(incoming, parent, assetBase);
+          binding = new PhaserBinding(incoming, parent, assetBase, assets);
         }
         // 'reconciled': reconcile() already patched runningWorld; keep the game.
       }

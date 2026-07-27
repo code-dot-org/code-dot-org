@@ -70,11 +70,14 @@ URL will not load there. Two ways out:
   satisfied. Reuses the SW-serves-from-memory pattern already in play for the
   compiled module, and preserves isolation. **Recommended.**
 
-Either way the binary travels lab→sandbox by `postMessage` (an `ArrayBuffer` is
-structured-clone-able) — **not** through the esbuild compiler, which stays
-text-only per `ANIMATIONS.md`. Stock vendor sprites and uploaded sprites then
-both resolve to self-origin URLs; the driver's sprite-ref resolver is the single
-place that knows which is which.
+Either way the binary travels lab→sandbox by `postMessage` — **not** through the
+esbuild compiler, which stays text-only per `ANIMATIONS.md`.
+
+**Implemented (U4): a third option (c), simpler than (b).** The lab forwards each
+asset as a `data:` URL in the `LOAD` message and the driver `load.image`s it. The
+preview CSP already permits `img-src 'self' blob: data:`, and Phaser loads images
+via `Image` elements (so `connect-src 'none'` never applies), so no service
+worker, no self-origin path, and no store-before-load ack are needed. See §7 U4.
 
 ## 4. Port design, in layers
 
@@ -144,14 +147,23 @@ type="file">`: a text file reads into contents, a binary file uploads via the
   in the tree, and previews in the editor (MSW GET 200) as
   `/v3/assets/:channel/:uuid.png`. NOTE deferred to U4-adjacent polish: per-folder
   upload, `moderateImage`, and matching the real backend's raw-PUT contract.
-- **U4** — World Lab asset forwarding + SW serve + sprite resolver (L4). NEXT.
-  Verify: an uploaded PNG renders on an actor in the preview game under
-  `img-src 'self'`.
+- **U4** — World Lab asset forwarding + driver textures (L4). DONE — and simpler
+  than §3's option (b). Rather than serve uploaded bytes from the transport SW at
+  a self-origin path, the lab (`runtime/projectAssets.ts`) fetches each uploaded
+  asset (same-origin) and inlines it as a **`data:` URL**, forwarded to the
+  preview in the existing `LOAD` message (`assets: {fileName: dataURL}`). The
+  preview's CSP already allows `img-src 'self' blob: data:`, and Phaser loads
+  images via `Image` elements (not `fetch`, so `connect-src 'none'` is not in
+  play — that is why the vendor sprites load too), so the driver just
+  `load.image(fileName, dataURL)`s them; an animation frame or `SpriteProperty`
+  references an uploaded sprite by its file name. No SW change, no self-origin
+  path, no ack race. Unit-tested (`projectAssets`) and browser-verified: after
+  uploading an image an actor that references it renders it in the preview game.
 
 U1–U3 are framework work (Web Lab shares them); U4 is World-Lab-specific. This
 slots **before** `ANIMATIONS.md` Phase D's custom-asset half — Phases A–C (stock
-animations) need none of it, and stock + uploaded share the L4 resolver, so the
-two plans converge there rather than duplicating.
+animations) need none of it; stock and uploaded sprites converge on the driver's
+texture-key lookup (`frame.sprite` = a stock name or an uploaded file name).
 
 ## 8. Risks and decisions
 

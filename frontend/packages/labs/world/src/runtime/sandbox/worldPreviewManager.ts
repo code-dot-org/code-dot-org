@@ -84,14 +84,17 @@ export class WorldPreviewManager {
   };
 
   /** Import and run a compiled module URL; resolves with its reported detail. */
-  async load(moduleUrl: string): Promise<unknown> {
+  async load(
+    moduleUrl: string,
+    assets?: Record<string, string>,
+  ): Promise<unknown> {
     await this.ready;
     const id = crypto.randomUUID();
     const result = new Promise<unknown>((resolve, reject) => {
       this.pending.set(id, {resolve, reject});
     });
     this.iframe.contentWindow?.postMessage(
-      {type: ToPreviewMessage.LOAD, id, moduleUrl},
+      {type: ToPreviewMessage.LOAD, id, moduleUrl, assets},
       this.sandboxOrigin,
     );
     return result;
