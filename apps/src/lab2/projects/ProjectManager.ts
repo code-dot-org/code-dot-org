@@ -121,24 +121,15 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     await this.initializeForceNewVersionState();
-    const abuseScore = await this.channelsStore.getAbuseScore(channel);
-    const sharingDisabled = await this.channelsStore.getSharingDisabled(
-      channel
-    );
-    let shareFailure: ShareFailure | null = null;
-    if (PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
-      try {
-        shareFailure = await this.channelsStore.getShareFailure(channel);
-      } catch (error) {
-        // Fail open, matching server behavior when the filtering service
-        // is unavailable.
-        this.metricsReporter.logWarning(
-          'Unable to fetch share failure status. Defaulting to no failure.'
-        );
-      }
-    }
-    const isTeacherOfProjectOwner =
-      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    // These are independent per-channel lookups; fetch them concurrently so
+    // project load waits for the slowest one instead of the sum of all four.
+    const [abuseScore, sharingDisabled, shareFailure, isTeacherOfProjectOwner] =
+      await Promise.all([
+        this.channelsStore.getAbuseScore(channel),
+        this.channelsStore.getSharingDisabled(channel),
+        this.getShareFailureIfFiltered(channel),
+        this.channelsStore.getIsTeacherOfProjectOwner(channel),
+      ]);
     this.setTitleFromChannel(channel);
     return {
       sources,
@@ -148,6 +139,26 @@ export default class ProjectManager {
       shareFailure,
       isTeacherOfProjectOwner,
     };
+  }
+
+  // Fetch the share-filter result for project types the server filters;
+  // resolves to null for everything else.
+  private async getShareFailureIfFiltered(
+    channel: Channel
+  ): Promise<ShareFailure | null> {
+    if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
+      return null;
+    }
+    try {
+      return await this.channelsStore.getShareFailure(channel);
+    } catch (error) {
+      // Fail open, matching server behavior when the filtering service
+      // is unavailable.
+      this.metricsReporter.logWarning(
+        'Unable to fetch share failure status. Defaulting to no failure.'
+      );
+      return null;
+    }
   }
 
   // Restore the given version of the project. This will call restore on the sources store
