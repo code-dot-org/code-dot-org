@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
 
-import styles from './AutocompleteSelector.module.scss';
+import styles from './autocomplete-selector.module.scss';
 
 export default onClickOutside(
   class AutocompleteSelector extends React.Component {
