@@ -170,6 +170,11 @@ namespace :ci do
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
 
+    # Runs here, before Cucumber, so its result doesn't depend on whether
+    # Cucumber goes on to pass or fail.
+    ENV['TARGET_URL'] ||= 'http://localhost-studio.code.org:3000'
+    Rake::Task['test:playwright_ui'].invoke
+
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
@@ -214,6 +219,13 @@ namespace :ci do
     end
     close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
+  ensure
+    # Both results together, Cucumber's output having scrolled Playwright's
+    # verdict away by now. $! names Cucumber's failure when that is what failed.
+    if PLAYWRIGHT_ROLLUP[:line]
+      cucumber = $! ? "❌ Cucumber: #{$!.message}." : '✅ Cucumber: passed.'
+      ChatClient.log ['UI suites:', PLAYWRIGHT_ROLLUP[:line], cucumber].join("\n")
+    end
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'

@@ -17,8 +17,8 @@ module Cdo
     # Recursively upload report_dir, preserving relative paths and per-file
     # content types.
     # @param report_dir [String] path to the playwright-report directory
-    # @return [String, nil] public URL of index.html, or nil if the report is
-    #   missing or the upload fails (best-effort; never raises).
+    # @return [String, nil] versioned public URL of index.html, or nil if the
+    #   report is missing or the upload fails (best-effort; never raises).
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
@@ -31,11 +31,12 @@ module Cdo
         url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
-        # Return the unversioned URL: the report SPA resolves sibling data/
-        # attachments relative to its own URL, so a ?versionId= (which belongs
-        # to index.html) leaks onto those requests and 404s. The bare key serves
-        # the latest upload, matching the overwrite-per-run behavior anyway.
-        index_url = url.split('?', 2).first if name == 'index.html'
+        # Keep the ?versionId=: the key is overwritten every run, so this is the
+        # only permanent link to this run's report. The report embeds its own
+        # results, so it renders in full; only trace attachments 404, the
+        # version leaking onto the sibling data/ requests the SPA resolves
+        # against its own URL. index_url is the unversioned link for those.
+        index_url = url if name == 'index.html'
       end
       index_url
     rescue StandardError => exception
@@ -43,7 +44,8 @@ module Cdo
       nil
     end
 
-    # Computed without uploading, so the report can be linked before the run finishes.
+    # The unversioned key, which serves the latest upload. Computed without
+    # uploading, so the report can also be linked before the run finishes.
     def self.index_url
       AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
     rescue StandardError => exception
