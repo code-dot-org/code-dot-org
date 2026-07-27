@@ -26,7 +26,7 @@ export default class TableDescription extends React.Component {
             {datasetInfo.description}
           </Typography>
           {datasetInfo.docUrl && (
-            <Link href={datasetInfo.docUrl} openInNewTab external size="s">
+            <Link href={datasetInfo.docUrl} openInNewTab size="s">
               {msg.moreInfo()}
             </Link>
           )}

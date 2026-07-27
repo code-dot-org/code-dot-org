@@ -4,6 +4,12 @@
   @include main-font-bold;
   cursor: pointer;
   color: var(--text-neutral-primary);
+
+  // The legacy global a:hover rule (apps/style/common.scss) outranks the bare
+  // class and would turn this teal; restate the color to keep it neutral.
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
 }
 
 .tableNumber {
@@ -15,11 +21,6 @@
 .categoryDescription {
   @include main-font-regular;
   color: var(--text-neutral-primary);
-}
-
-.tableName {
-  @include main-font-semi-bold;
-  color: var(--text-brand-teal-primary);
 }
 
 .collapsibleContainer {
