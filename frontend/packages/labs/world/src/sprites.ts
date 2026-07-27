@@ -1,13 +1,14 @@
-// The built-in appearance assets — the single source of truth for the driver's
-// texture/animation preloading and the Blockly dropdowns. The PNGs are written
-// by scripts/generate-sprites.mjs (which keeps its own copies of these lists for
-// Node); a test (`sprites.test.ts`) asserts they all agree with each other and
-// with the files on disk.
+// The built-in appearance assets the DRIVER preloads — its manifest of which
+// vendor PNGs are single images vs. spritesheets. The engine owns animation
+// timing (rules/animation.ts stock library); this side only says how to load the
+// textures. `generate-sprites.mjs` writes the PNGs; a test (`sprites.test.ts`)
+// keeps the three lists — this manifest, the generator, and the engine stock —
+// in agreement.
 
 /** Frame (and static sprite) edge length, in pixels. */
 export const SPRITE_SIZE = 32;
 
-/** Static single-image sprites. */
+/** Static single-image sprites (loaded via `load.image`). */
 export const SPRITE_NAMES = [
   'player',
   'ground',
@@ -18,16 +19,8 @@ export const SPRITE_NAMES = [
 
 export type SpriteName = (typeof SPRITE_NAMES)[number];
 
-/** An animation: a horizontal spritesheet of `frames` cells, played at `frameRate`. */
-export interface AnimationSpec {
-  frames: number;
-  frameRate: number;
-}
-
-/** Built-in looping animations, each backed by a `${name}.png` spritesheet. */
-export const ANIMATIONS: Record<string, AnimationSpec> = {
-  coinSpin: {frames: 6, frameRate: 12},
-  playerWalk: {frames: 4, frameRate: 8},
-};
-
-export const ANIMATION_NAMES = Object.keys(ANIMATIONS);
+/**
+ * Spritesheet names (loaded via `load.spritesheet`, `frameWidth = SPRITE_SIZE`).
+ * Each also names a stock animation the engine ships under the same id.
+ */
+export const SPRITESHEET_NAMES = ['coinSpin', 'playerWalk'] as const;

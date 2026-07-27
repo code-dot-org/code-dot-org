@@ -3,7 +3,6 @@ import {describe, expect, it} from 'vitest';
 import {
   ActorBuilder,
   AffectedByGravityTrait,
-  AnimationProperty,
   CollidableTrait,
   FallingProperty,
   GravityRule,
@@ -13,7 +12,6 @@ import {
   PositionProperty,
   PositionalTrait,
   SceneBuilder,
-  SpriteProperty,
   StartsFallingEvent,
   StopsFallingEvent,
   StrengthProperty,
@@ -185,16 +183,11 @@ describe('renderSnapshot (driver view)', () => {
     expect(world.renderSnapshot()).toEqual([]);
   });
 
-  it('reports the actor sprite and animation (empty when unset)', () => {
+  it('has no frame for an actor without an appearance', () => {
     const {world, player} = makeScene(new Vector(0, 0), 100);
-    // Default: no sprite/animation → the driver draws a rectangle.
-    const state = () => world.renderSnapshot().find(s => s.actor === player);
-    expect(state()?.sprite).toBe('');
-    expect(state()?.animation).toBe('');
-    player.set(SpriteProperty, 'player');
-    player.set(AnimationProperty, 'playerWalk');
-    expect(state()?.sprite).toBe('player');
-    expect(state()?.animation).toBe('playerWalk');
+    expect(world.renderSnapshot().find(s => s.actor === player)?.frame).toBe(
+      undefined,
+    );
   });
 });
 

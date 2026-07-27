@@ -704,11 +704,15 @@ Unit first, then browser:
    animation `{frames, frameRate}` specs; the binding preloads the sheets,
    registers the Phaser animations, and draws a playing `Sprite`; the
    `world_play_animation` block picks one; the demo gained a spinning coin.
-   Browser-verified (the coin's gold-pixel area oscillates as it spins). NOTE:
-   this slice is an interim architecture — hardcoded built-ins with Phaser-owned
-   timing — that diverges from `INTERFACE.md` §Animations (project-serialized
-   `.anim` assets, an engine-driven Animation Rule with frame/end events).
-   `ANIMATIONS.md` is the plan to bring it into alignment. Remaining: more
-   traits/rules/events (incl. key-press _events_, which need per-actor event
-   payloads), the spec-aligned animation rework (`ANIMATIONS.md`), and learner-
-   supplied image assets (needs the project binary-asset pipeline).
+   Browser-verified. The interim slice (Phaser-owned timing) was then reworked
+   to match `INTERFACE.md` §Animations — see `ANIMATIONS.md`, phases B+C DONE: an
+   engine **Animation Rule** (`engine/rules/animation.ts`) owns per-frame timing
+   and emits `AnimationEndedEvent`; appearance moved to its own `AppearanceTrait`
+   (off the spatial trait); `renderSnapshot` emits a `frame` descriptor and the
+   Phaser binding is now a blitter. Stock animations are spec-model
+   `AnimationDef`s; `WorldBuilder.useAnimations` registers learner ones. Browser-
+   verified engine-driven (coin spins, sprite/movement/gravity intact). Remaining
+   (`ANIMATIONS.md`): learner-authored `.anim` files (phase A), the dynamic
+   Blockly dropdown + `AnimationEnded` block (phase D), frame-change events
+   (phase E, needs per-actor event payloads), and — for custom images — the
+   Codebridge upload port (`UPLOADS.md`).

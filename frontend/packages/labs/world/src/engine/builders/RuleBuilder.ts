@@ -3,6 +3,7 @@
 // and per-tick Steps. Members are returned as they are added so a learner can
 // capture and export them; `build()` freezes the traits and returns the Rule.
 
+import type {AnimationDef} from '../core/animationTypes';
 import {Trait} from '../core/Trait';
 import type {
   GameEvent,
@@ -24,6 +25,7 @@ export class RuleBuilder {
   private readonly events: Record<string, GameEvent> = {};
   private readonly traitMap: Record<string, Trait> = {};
   private readonly steps: Record<string, Step> = {};
+  private readonly animationDefs: Record<string, AnimationDef> = {};
   private built = false;
 
   constructor(opts: {id: string; name: string}) {
@@ -92,6 +94,13 @@ export class RuleBuilder {
     return event;
   }
 
+  /** Register a stock animation this rule ships (a World seeds it by id). */
+  addAnimation(id: string, def: AnimationDef): AnimationDef {
+    this.assertMutable();
+    this.animationDefs[id] = def;
+    return def;
+  }
+
   /** Add a per-tick step with no ordering constraint. */
   addStep(id: string, run: StepFn): Step {
     return this.registerStep(id, run, {kind: 'free'});
@@ -130,6 +139,7 @@ export class RuleBuilder {
       events: Object.freeze({...this.events}),
       traits: Object.freeze({...this.traitMap}),
       steps: Object.freeze({...this.steps}),
+      animations: Object.freeze({...this.animationDefs}),
     });
   }
 }

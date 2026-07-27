@@ -9,9 +9,11 @@
 // engine instance — so there is exactly one engine instance and no Property
 // identity to marshal across a module boundary.
 //
-// Appearance: an actor whose `animation` render field names a built-in
-// animation is drawn as a looping Phaser Sprite; else its `sprite` field names a
-// static texture drawn as an Image; else it falls back to a plain rectangle. All
+// Appearance: the ENGINE owns animation timing (rules/animation.ts) and resolves
+// each actor's current frame; `renderSnapshot` hands it over as a `frame`
+// descriptor and this binding just blits it — a textured Image cropped to the
+// frame's spritesheet cell (or a whole single image), else a plain rectangle for
+// an actor with no appearance. Phaser is a renderer, not the animator. All
 // textures/spritesheets are preloaded from the self-hosted `${assetBase}sprites/`.
 //
 // Input: each frame we read Phaser's cursor keys and hand the pressed set to the
@@ -23,7 +25,7 @@ import Phaser from 'phaser';
 
 import type {Actor, RenderState, World} from 'world-lab';
 
-import {ANIMATIONS, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
+import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 
 const ACTOR_SIZE = 24;
 const DEFAULT_WIDTH = 400;
@@ -31,11 +33,8 @@ const DEFAULT_HEIGHT = 300;
 const DEGREES_TO_RADIANS = Math.PI / 180;
 const DEFAULT_ASSET_BASE = '/vendor/';
 
-/** A drawn actor — an animated/static texture or the fallback rectangle. */
-type GameObject =
-  | Phaser.GameObjects.Sprite
-  | Phaser.GameObjects.Image
-  | Phaser.GameObjects.Rectangle;
+/** A drawn actor — a textured image or the fallback rectangle. */
+type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
 
 /** Phaser cursor keys → the DOM `KeyboardEvent.key` names the engine expects. */
 function pressedKeys(
@@ -65,25 +64,21 @@ export class PhaserBinding {
     const objects = new Map<Actor, GameObject>();
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 
-    // Create the object for an actor once: a playing animation wins, then a
-    // static sprite texture, then the fallback rectangle.
-    const create = (scene: Phaser.Scene, state: RenderState): GameObject => {
-      if (state.animation && scene.anims.exists(state.animation)) {
-        const sprite = scene.add.sprite(state.x, state.y, state.animation);
-        sprite.play(state.animation);
-        return sprite;
-      }
-      if (state.sprite && scene.textures.exists(state.sprite)) {
-        return scene.add.image(state.x, state.y, state.sprite);
-      }
-      return scene.add.rectangle(
-        state.x,
-        state.y,
-        ACTOR_SIZE,
-        ACTOR_SIZE,
-        0x33cc66,
-      );
-    };
+    // The engine resolves each actor's current appearance frame; the driver just
+    // draws it. An actor with a frame gets a textured Image; one without (no
+    // appearance) gets the fallback rectangle. The Image's texture/cell is
+    // refreshed every tick, so an animation's frames — same spritesheet, changing
+    // cell — update in place.
+    const create = (scene: Phaser.Scene, state: RenderState): GameObject =>
+      state.frame && scene.textures.exists(state.frame.sprite)
+        ? scene.add.image(state.x, state.y, state.frame.sprite)
+        : scene.add.rectangle(
+            state.x,
+            state.y,
+            ACTOR_SIZE,
+            ACTOR_SIZE,
+            0x33cc66,
+          );
 
     const sync = (scene: Phaser.Scene) => {
       for (const state of world.renderSnapshot() as RenderState[]) {
@@ -92,9 +87,28 @@ export class PhaserBinding {
           object = create(scene, state);
           objects.set(state.actor, object);
         }
-        object.setPosition(state.x, state.y);
-        object.setScale(state.scaleX, state.scaleY);
-        object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+        const frame = state.frame;
+        if (frame && object instanceof Phaser.GameObjects.Image) {
+          // A cell (spritesheet source rect) maps to a frame index in the
+          // uniform strip; no cell ⇒ the whole single image.
+          const index = frame.cell
+            ? Math.round(frame.cell.x / frame.cell.width)
+            : undefined;
+          object.setTexture(frame.sprite, index);
+          object.setPosition(
+            state.x + frame.offset.x,
+            state.y + frame.offset.y,
+          );
+          object.setScale(
+            state.scaleX * frame.scale,
+            state.scaleY * frame.scale,
+          );
+          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+        } else {
+          object.setPosition(state.x, state.y);
+          object.setScale(state.scaleX, state.scaleY);
+          object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+        }
       }
     };
 
@@ -111,7 +125,7 @@ export class PhaserBinding {
           for (const name of SPRITE_NAMES) {
             this.load.image(name, `${assetBase}sprites/${name}.png`);
           }
-          for (const name of Object.keys(ANIMATIONS)) {
+          for (const name of SPRITESHEET_NAMES) {
             this.load.spritesheet(name, `${assetBase}sprites/${name}.png`, {
               frameWidth: SPRITE_SIZE,
               frameHeight: SPRITE_SIZE,
@@ -119,20 +133,6 @@ export class PhaserBinding {
           }
         },
         create(this: Phaser.Scene) {
-          // Register the looping animations before any actor sprite plays one.
-          for (const [name, {frames, frameRate}] of Object.entries(
-            ANIMATIONS,
-          )) {
-            this.anims.create({
-              key: name,
-              frames: this.anims.generateFrameNumbers(name, {
-                start: 0,
-                end: frames - 1,
-              }),
-              frameRate,
-              repeat: -1,
-            });
-          }
           cursors = this.input.keyboard?.createCursorKeys();
           sync(this);
         },

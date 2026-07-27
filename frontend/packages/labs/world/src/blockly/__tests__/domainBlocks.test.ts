@@ -70,15 +70,17 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_set_sprite sets the sprite property', () => {
+  it('world_set_sprite elects the appearance trait and sets the sprite', () => {
     expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
-      'actor.set(WorldLab.SpriteProperty, "player");\n',
+      'actor.useTraits([WorldLab.AppearanceTrait]);\n' +
+        'actor.set(WorldLab.SpriteProperty, "player");\n',
     );
   });
 
-  it('world_play_animation sets the animation property', () => {
+  it('world_play_animation elects the appearance trait and sets the animation', () => {
     expect(emit('world_play_animation', {ANIMATION: 'coinSpin'})).toBe(
-      'actor.set(WorldLab.AnimationProperty, "coinSpin");\n',
+      'actor.useTraits([WorldLab.AppearanceTrait]);\n' +
+        'actor.set(WorldLab.AnimationProperty, "coinSpin");\n',
     );
   });
 

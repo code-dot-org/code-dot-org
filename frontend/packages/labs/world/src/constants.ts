@@ -13,7 +13,7 @@ export const ENTRY_FILE = 'scenes/main.js';
  * default-exported Scene. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
-const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionalTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
+const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionalTrait, AppearanceTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
 import PlatformWorld from 'worlds/platform';
 import Player from 'actors/player';
 
@@ -25,7 +25,7 @@ scene.addActor(Player);
 // The ground the player lands on, drawn with the built-in "ground" sprite.
 scene.addActor(
   new ActorBuilder({id: 'ground', name: 'Ground'})
-    .useTraits([GroundTrait])
+    .useTraits([GroundTrait, AppearanceTrait])
     .set(PositionProperty, new Vector(200, 260))
     .set(SpriteProperty, 'ground'),
 );
@@ -33,7 +33,7 @@ scene.addActor(
 // A coin floating above the ground, playing the "coinSpin" animation.
 scene.addActor(
   new ActorBuilder({id: 'coin', name: 'Coin'})
-    .useTraits([PositionalTrait])
+    .useTraits([PositionalTrait, AppearanceTrait])
     .set(PositionProperty, new Vector(320, 70))
     .set(AnimationProperty, 'coinSpin'),
 );
@@ -41,13 +41,13 @@ scene.addActor(
 export default scene;
 `;
 
-const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule} from 'world-lab';
+const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule} from 'world-lab';
 
 // A World is the set of rules in play. "Has Gravity" pulls in motion and
 // collision automatically; "Responds to Input" lets arrow-key-controlled actors
-// move.
+// move; "Has Appearance" draws actors with sprites and animations.
 export default new WorldBuilder({id: 'platform', name: 'Platform World'}).useRules(
-  [GravityRule, InputRule],
+  [GravityRule, InputRule, AnimationRule],
 );
 `;
 

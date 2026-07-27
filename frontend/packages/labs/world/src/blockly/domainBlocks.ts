@@ -10,7 +10,7 @@
 
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
-import {ANIMATION_NAMES, SPRITE_NAMES} from '../sprites';
+import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -28,11 +28,10 @@ const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
   name,
 ]);
 
-/** Dropdown `[label, value]` pairs for the built-in animations. */
-const ANIMATION_OPTIONS: Array<[string, string]> = ANIMATION_NAMES.map(name => [
-  label(name),
-  name,
-]);
+/** Dropdown `[label, value]` pairs for the built-in animations (one per sheet). */
+const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
+  name => [label(name), name],
+);
 
 // Dropdown value -> the `world-lab` export name.
 const TRAIT_CONST: Record<string, string> = {
@@ -130,7 +129,12 @@ const worldSetSprite = defineBlock({
   generator: {
     javascript(block) {
       const sprite = block.getFieldValue('SPRITE');
-      return `actor.set(WorldLab.SpriteProperty, ${str(sprite)});\n`;
+      // Drawing a sprite needs the appearance trait; elect it here so the block
+      // "just works" on its own.
+      return (
+        `actor.useTraits([WorldLab.AppearanceTrait]);\n` +
+        `actor.set(WorldLab.SpriteProperty, ${str(sprite)});\n`
+      );
     },
   },
 });
@@ -148,7 +152,10 @@ const worldPlayAnimation = defineBlock({
   generator: {
     javascript(block) {
       const animation = block.getFieldValue('ANIMATION');
-      return `actor.set(WorldLab.AnimationProperty, ${str(animation)});\n`;
+      return (
+        `actor.useTraits([WorldLab.AppearanceTrait]);\n` +
+        `actor.set(WorldLab.AnimationProperty, ${str(animation)});\n`
+      );
     },
   },
 });

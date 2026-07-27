@@ -38,9 +38,19 @@ export type {
   Rule,
 } from './core/types';
 
-// The standard rule library (Spatial → Motion → Collision → Gravity → Input).
+// The standard rule library (Spatial → Motion → Collision → Gravity → Input →
+// Animation).
 export * from './rules/spatial';
 export * from './rules/motion';
 export * from './rules/collision';
 export * from './rules/gravity';
 export * from './rules/input';
+export * from './rules/animation';
+
+// The animation serialization model.
+export type {
+  AnimationDef,
+  AnimationFrame,
+  Cell,
+  FrameState,
+} from './core/animationTypes';
