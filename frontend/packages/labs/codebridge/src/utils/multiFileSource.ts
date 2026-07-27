@@ -246,6 +246,46 @@ export const createNewFile = ({
   return activateFile(newSource, fileId);
 };
 
+export interface CreateExternalFileArgs {
+  source: MultiFileSource;
+  fileName: string;
+  language: string;
+  /** Where the uploaded bytes live (the assets backend URL). */
+  url: string;
+  mimeType?: string;
+  folderId?: FolderId;
+}
+
+/**
+ * Add an uploaded (binary) file — an image, audio, etc. Unlike a text file it
+ * has no editable `contents`; the bytes live in the assets backend and are
+ * referenced by `url` (see `ProjectFile`). Same id/activation flow as
+ * {@link createNewFile}.
+ */
+export const createExternalFile = ({
+  source,
+  fileName,
+  language,
+  url,
+  mimeType,
+  folderId = DEFAULT_FOLDER_ID,
+}: CreateExternalFileArgs): MultiFileSource => {
+  const fileId = getNextFileId(Object.values(source.files));
+  const newSource: MultiFileSource = {...source, files: {...source.files}};
+
+  newSource.files[fileId] = {
+    id: fileId,
+    name: fileName,
+    language,
+    contents: '',
+    folderId,
+    url,
+    mimeType,
+  };
+
+  return activateFile(newSource, fileId);
+};
+
 /** Delete a file, activating a neighbor if it was active. */
 export const deleteFile = (
   source: MultiFileSource,

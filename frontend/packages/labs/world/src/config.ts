@@ -32,6 +32,9 @@ const IMAGE_FILE_TYPES = ['png'];
 export const worldConfig: Partial<CodebridgeConfig> = {
   editableFileTypes: WORLD_EDITABLE_FILE_TYPES,
   supportedFileTypes: [...WORLD_EDITABLE_FILE_TYPES, ...IMAGE_FILE_TYPES],
+  // Learners can upload PNG sprites; they're stored in the assets backend and
+  // referenced by URL (the game resolves them for the preview — see UPLOADS.md).
+  validMimeTypes: ['image/png'],
   languageMapping: {
     js: 'javascript',
     ts: 'javascript',

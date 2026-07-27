@@ -6,6 +6,7 @@ import {
   activateFile,
   closeFile,
   createNewFile,
+  createExternalFile,
   createNewFolder,
   deleteFile,
   deleteFolder,
@@ -97,6 +98,28 @@ describe('createNewFile', () => {
       active: true,
     });
     expect(next.files['1'].active).toBe(false);
+    expect(getOpenFileIds(next)).toContain(id);
+  });
+});
+
+describe('createExternalFile', () => {
+  it('adds an active url-referenced file with empty contents', () => {
+    const next = createExternalFile({
+      source: source(),
+      fileName: 'hero.png',
+      language: 'png',
+      url: '/v3/assets/chan/abc.png',
+      mimeType: 'image/png',
+    });
+    const id = getNextFileId(Object.values(source().files));
+    expect(next.files[id]).toMatchObject({
+      name: 'hero.png',
+      language: 'png',
+      contents: '',
+      url: '/v3/assets/chan/abc.png',
+      mimeType: 'image/png',
+      active: true,
+    });
     expect(getOpenFileIds(next)).toContain(id);
   });
 });

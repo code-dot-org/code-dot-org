@@ -131,11 +131,22 @@ assets client.
   contract is a FormData PUT; matching the real backend's raw-PUT `/v3/assets`
   (or re-pointing at whatever the studio host exposes) is production-integration
   work for U3/U4 wiring.
-- **U3** — codebridge upload UI + hook + `createExternalFile` (L3). NEXT. Verify:
-  a PNG uploads, lands in the tree as `{contents:'', url}`, and previews in the
-  editor.
-- **U4** — World Lab asset forwarding + SW serve + sprite resolver (L4). Verify:
-  an uploaded PNG renders on an actor in the preview game under `img-src 'self'`.
+- **U3** — codebridge upload UI + hook + `createExternalFile` (L3). DONE.
+  `createExternalFile` writes `{contents:'', url, mimeType}`; `useFileOperations`
+  exposes `newExternalFile`. The FileBrowser header gained an "Upload File" option
+  (shown when `config.validMimeTypes` is set) driving a hidden `<input
+type="file">`: a text file reads into contents, a binary file uploads via the
+  `DashboardApiClient.assets` singleton (no `ApiClientProvider` dependency — the
+  bare shell tests render fine) scoped to `state.lab.channel?.id`, and is added by
+  URL. `CodeEditor` previews an uploaded image as `<img>`; `CodebridgeConfig`
+  gained `validMimeTypes`; World Lab's config sets `['image/png']`. Unit-tested
+  (`createExternalFile`) and browser-verified: a PNG uploads (MSW PUT 200), lands
+  in the tree, and previews in the editor (MSW GET 200) as
+  `/v3/assets/:channel/:uuid.png`. NOTE deferred to U4-adjacent polish: per-folder
+  upload, `moderateImage`, and matching the real backend's raw-PUT contract.
+- **U4** — World Lab asset forwarding + SW serve + sprite resolver (L4). NEXT.
+  Verify: an uploaded PNG renders on an actor in the preview game under
+  `img-src 'self'`.
 
 U1–U3 are framework work (Web Lab shares them); U4 is World-Lab-specific. This
 slots **before** `ANIMATIONS.md` Phase D's custom-asset half — Phases A–C (stock
