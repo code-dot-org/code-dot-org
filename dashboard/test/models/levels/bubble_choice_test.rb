@@ -682,16 +682,6 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     assert_equal @sublevel2.id, result_id
   end
 
-  # A migrated predict sublevel keeps its contained level (for reading back
-  # pre-migration responses) but records new progress on itself.
-  private def create_migrated_predict_sublevel(name)
-    contained = create(:free_response, name: "#{name} contained")
-    sublevel = create(:level, name: name, properties: {predict_settings: {isPredictLevel: true}})
-    sublevel.contained_level_names = [contained.name]
-    sublevel.save!
-    [sublevel, contained]
-  end
-
   test 'a bubble choice and its sublevels must be on the same side of the UI Test partition' do
     ui_test_sublevel = create(:level, name: 'UI Test BubbleChoiceTest sublevel')
     create(:level, name: 'BubbleChoiceTest prod sublevel')
@@ -730,5 +720,15 @@ class BubbleChoiceTest < ActiveSupport::TestCase
 
     level = BubbleChoice.create_from_level_builder({}, {name: 'UI Test BubbleChoiceTest parent', dsl_text: input_dsl})
     assert_equal [ui_test_sublevel], level.sublevels
+  end
+
+  # A migrated predict sublevel keeps its contained level (for reading back
+  # pre-migration responses) but records new progress on itself.
+  private def create_migrated_predict_sublevel(name)
+    contained = create(:free_response, name: "#{name} contained")
+    sublevel = create(:level, name: name, properties: {predict_settings: {isPredictLevel: true}})
+    sublevel.contained_level_names = [contained.name]
+    sublevel.save!
+    [sublevel, contained]
   end
 end
