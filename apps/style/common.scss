@@ -1125,6 +1125,26 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+#showCodeModal {
+  img {
+    background: transparent !important;
+  }
+
+  [class*='modalContentSection'] {
+    max-height: 500px !important;
+  }
+
+  .generated-code-container {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .generatedCode {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
 .light-yellow-background {
   background-color: $lightest_yellow;
 }

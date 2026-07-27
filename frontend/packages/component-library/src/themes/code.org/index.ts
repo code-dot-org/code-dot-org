@@ -16,7 +16,6 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: 1.08,
       letterSpacing: '-0.03rem',
-      marginBottom: '0.5em',
     },
     h2: {
       fontFamily: HEADING_FONT_STACK,
@@ -24,35 +23,30 @@ const theme = createTheme({
       fontWeight: 600,
       lineHeight: 1.05,
       letterSpacing: '-0.03rem',
-      marginBottom: '0.5em',
     },
     h3: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1.75rem', // 28px
       fontWeight: 600,
       lineHeight: 1.29,
-      marginBottom: '0.5em',
     },
     h4: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1.5rem', // 24px
       fontWeight: 600,
       lineHeight: 1.33,
-      marginBottom: '0.5em',
     },
     h5: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1.375rem', // 22px
       fontWeight: 600,
       lineHeight: 1.36,
-      marginBottom: '0.5em',
     },
     h6: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1.25rem', // 20px
       fontWeight: 600,
       lineHeight: 1.4,
-      marginBottom: '0.5em',
     },
     body1: {
       fontFamily: MAIN_FONT_STACK,

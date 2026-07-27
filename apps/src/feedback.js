@@ -1156,6 +1156,9 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
       title={msg.showCodeHeader()}
       onClose={close}
       closeLabel={msg.closeDialog()}
+      imageUrl={this.studioApp_.icon || undefined}
+      imageAlt=""
+      imagePlacement="inline"
       customContent={
         <GeneratedCode
           message={generatedCodeProperties.message}

@@ -18,6 +18,7 @@ typography styles, and more to ensure visual consistency and a unified design la
   - [Font Awesome](#font-awesome)
   - [Typography](#typography)
   - [Variables](#variables)
+  - [Shape and Spacing](#shape-and-spacing)
   - [Mixins](#mixins)
 - [Best Practices](#best-practices)
 - [Theming](#theming)
@@ -57,13 +58,14 @@ To use it in your project:
   typography;
 ```
 
-For CSS variables (colors and fonts), import them globally in your application root:
+For CSS variables (colors, fonts, shape, and spacing), import them globally in your application root:
 
 ```javascript
 // In your main application entry point (e.g., __root.tsx or App.tsx)
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 ```
 
 ## Development
@@ -611,6 +613,26 @@ With time there'll be more variables added to this file, so make sure to check i
 - New variables should be added to `variables.scss`.
 - Follow the existing naming conventions.
 - Consider the impact on light/dark mode or theming.
+
+---
+
+### Shape and Spacing
+
+The `shapeAndSpacingVariables.css` file defines the CADS shape
+(border-radius) and spacing (padding) ramps as CSS custom properties at
+`:root`. Import it globally in your application root (see
+[Installation](#installation)). They are brand- and mode-invariant, so
+they need no `[data-brand]`/`[data-theme]` scoping and no migration at
+brand cutover.
+
+| Variable                               | Value                  |
+| -------------------------------------- | ---------------------- |
+| `--shape-sm` … `--shape-xl`            | `0.375rem` … `0.75rem` |
+| `--shape-round`                        | `62.4375rem` (pill)    |
+| `--spacing-p-xxs` … `--spacing-p-xxxl` | `0.5rem` … `4rem`      |
+
+Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) so
+surfaces that don't load the token entry points still render correctly.
 
 ---
 
