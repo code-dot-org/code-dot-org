@@ -54,6 +54,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
    */
   readonly visualization: Locator;
 
+  /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
+  readonly continueButton: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -72,6 +75,7 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     );
     this.congratsMessage = page.locator('.congrats');
     this.visualization = page.locator('#visualization');
+    this.continueButton = page.locator('#continue-button');
   }
 
   /**
@@ -133,12 +137,18 @@ export class LegacyBlocklyLab extends LessonLevelPage {
         name: 'OK',
         exact: true,
       });
-      if (await dialogOk.isVisible()) {
-        await dialogOk.click();
-      } else {
-        await overlay.click();
-      }
-      await expect(overlay).toBeHidden();
+      // Retry the dismissal until the overlay actually hides. On firefox the
+      // first click can land before the dialog's onClick (closeOverlay) is
+      // bound and silently no-op, leaving the overlay up; re-clicking once the
+      // handler is attached clears it.
+      await expect(async () => {
+        if (await dialogOk.isVisible()) {
+          await dialogOk.click();
+        } else {
+          await overlay.click();
+        }
+        await expect(overlay).toBeHidden({timeout: 2_000});
+      }).toPass({timeout: LAB_LOAD_TIMEOUT_MS});
     }
     // Let the header animation finish.
     await expect(this.page.locator('#header_middle_content')).toHaveCSS(
@@ -225,5 +235,15 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Click Run to execute the current workspace program. */
   async run(): Promise<void> {
     await this.runButton.click();
+  }
+
+  /** Click Continue on the post-run feedback dialog; typically triggers a real navigation to the next level. */
+  async continue(): Promise<void> {
+    await this.continueButton.click();
+  }
+
+  /** Click Reset to clear the run result and return the workspace to its pre-run state. */
+  async reset(): Promise<void> {
+    await this.resetButton.click();
   }
 }

@@ -3938,6 +3938,7 @@ __metadata:
     camelcase-keys: "npm:^10.0.2"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
+    mitt: "npm:^3.0.1"
     tldts: "npm:^7.0.23"
   peerDependencies:
     "@reduxjs/toolkit": ^2.8.2
@@ -22452,7 +22453,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"mitt@npm:^3.0.0":
+"mitt@npm:^3.0.0, mitt@npm:^3.0.1":
   version: 3.0.1
   resolution: "mitt@npm:3.0.1"
   checksum: 10/287c70d8e73ffc25624261a4989c783768aed95ecb60900f051d180cf83e311e3e59865bfd6e9d029cdb149dc20ba2f128a805e9429c5c4ce33b1416c65bbd14

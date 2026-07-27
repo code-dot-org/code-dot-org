@@ -4,6 +4,7 @@ import type {
   MenuItem,
   UserType,
 } from '@code-dot-org/component-library/header';
+import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 
 import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
 import ArtistIcon from '@/config/brand/assets/courses/artist-icon.webp';
@@ -155,6 +156,38 @@ export const GLOBAL_NAV: GlobalNavItem[] = [
     ],
   },
 ];
+
+/**
+ * Signed-out marketing navigation. Advocacy is an absolute external host, so
+ * it's used as-is rather than resolved through `siteConfig.marketingUrl`.
+ * About and Donate are `alignEnd`, pinning them to the trailing edge of the bar.
+ *
+ * Keep in sync with the signed-out marketing nav served by the Rails studio
+ * header.
+ *
+ * A function (not a static export, like {@link buildSupportLinks}) because
+ * `siteConfig.marketingUrl` needs `siteConfig` fully initialised, which a
+ * module-load-time array can't guarantee — see getFooterLinks in
+ * config/footerLinks.ts for the same pattern.
+ *
+ * @returns Ordered marketing nav items.
+ */
+export function buildMarketingGlobalNav(): GlobalNavItem[] {
+  return [
+    {label: 'Teachers', href: siteConfig.marketingUrl('/teachers')},
+    {label: 'Districts', href: siteConfig.marketingUrl('/districts')},
+    {label: 'Advocacy', href: 'https://advocacy.code.org'},
+    {label: 'Hour of AI', href: siteConfig.marketingUrl('/hour-of-ai')},
+    {label: 'Parents', href: siteConfig.marketingUrl('/parents')},
+    {label: 'Students', href: siteConfig.marketingUrl('/students')},
+    {label: 'About', href: siteConfig.marketingUrl('/about'), alignEnd: true},
+    {
+      label: 'Donate',
+      href: siteConfig.marketingUrl('/donate'),
+      alignEnd: true,
+    },
+  ];
+}
 
 /** Help/support links; teachers additionally get the forum. All open in a new tab. */
 export function buildSupportLinks(userType?: UserType): MenuItem[] {

@@ -96,6 +96,33 @@ are buffered and replayed once the async provider client finishes loading.
 
 See [`src/plugins/observability/README.md`](src/plugins/observability/README.md) for full usage details.
 
+## Consent
+
+`consentPlugin`, `consent`, and `useConsent` are available via the
+`./plugins/consent` sub-path export:
+
+```ts
+import {initializeCore} from '@code-dot-org/core';
+import {consentPlugin, consent} from '@code-dot-org/core/plugins/consent';
+
+initializeCore({plugins: [consentPlugin]});
+
+consent.current().categories.has('performance');
+```
+
+Host pages own OneTrust loading (legacy `apps/` pages and the Studio Rails
+shell render the shared partial via `render_shared_haml`), so the plugin
+adopts the existing `window.oneTrustPromise`; it never injects scripts, and
+a host without the tags — standalone Studio today — has no OneTrust by
+design. CMP vocabulary is confined to
+the plugin's `providers/onetrust/` directory; consumers only ever see the
+semantic categories `strictly-necessary`, `performance`, `functional`,
+`targeting`. With no CMP present (or before the plugin is registered), the
+store reports `strictly-necessary` only and `subscribe` never fires.
+
+See [`src/plugins/consent/README.md`](src/plugins/consent/README.md) for full
+usage details.
+
 ## Plugin vs. new package
 
 When adding a new code.org-specific integration, use this table to decide where it belongs:
@@ -110,6 +137,11 @@ When adding a new code.org-specific integration, use this table to decide where 
 | **Open-source fork impact**        | Fork omits the sub-path import — code stays in repo but is never bundled     | Fork omits the entire package from `package.json` — code never enters the repo clone      |
 
 **Default rule:** Start as a plugin in core. Graduate to a new package only if the npm dependency weight or architectural independence makes the package boundary genuinely necessary.
+
+Current count: four plugins (localization, observability, consent, with
+analytics pending). This is the top of the "≤ ~3–4" guidance above;
+extraction trigger for consent specifically is a consumer that wants it
+without the rest of core.
 
 ## Writing a plugin
 

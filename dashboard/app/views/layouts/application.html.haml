@@ -4,6 +4,7 @@
 - html_attrs = {dir: locale_dir, lang: locale}
 - html_attrs['data-brand'] = brand
 - html_attrs['data-ge-region'] = request.ge_region if request.ge_region.present?
+- html_attrs[:class] = 'nav-reskin' if Cdo::Brand.codeai_next?(request)
 %html{html_attrs}
   %head
     %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}

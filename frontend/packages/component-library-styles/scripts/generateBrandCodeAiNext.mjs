@@ -32,9 +32,18 @@ const read = name => readFileSync(join(pkgDir, name), 'utf8');
 // beat the legacy primitiveColors.css :root declarations (0,1,0)
 // regardless of stylesheet order; the bare attribute selector covers a
 // data-brand attribute on a non-root element.
+// Primitives are theme-invariant, but they must still be re-declared on
+// theme-carrying elements ([data-theme] on a nested div, per Lab2). The
+// legacy shim (brandLegacyShim.css) aliases CADS-only primitive names
+// (e.g. --brand-purple-95) under bare [data-theme='Light'/'Dark']
+// selectors; without matching brand-scoped rules on those same elements,
+// a descendant inside a theme wrapper would inherit the shim's alias
+// (legacy value) instead of the CADS primitive set at <html>. Mirror the
+// semantics' selector set so the brand block outranks the shim (two
+// attribute selectors beat one) at every level under the brand.
 const primitives = read('primitiveColors_codeAi.css').replace(
   /^:root \{$/gm,
-  `${BRAND}:root,\n${BRAND} {`,
+  `${BRAND}:root,\n${BRAND},\n${BRAND}[data-theme='Light'],\n${BRAND} [data-theme='Light'],\n${BRAND}[data-theme='Dark'],\n${BRAND} [data-theme='Dark'] {`,
 );
 if (!primitives.includes(BRAND)) {
   throw new Error('primitiveColors_codeAi.css: ":root {" selector not found');

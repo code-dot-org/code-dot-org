@@ -6,6 +6,20 @@ module Cdo
       class Client
         class QueryError < StandardError; end
 
+        # Raised by `batch_execute_async` when a batch fails to submit AFTER one or more earlier
+        # batches were already submitted (only possible on the `allow_separate_transactions` path).
+        # The earlier statements are already running on Redshift and are NOT rolled back by this
+        # error; `submitted_ids` carries their statement ids so the caller can poll or cancel them
+        # (e.g. via `wait_for_statements` / `cancel_statement`) rather than losing the handles.
+        class BatchSubmitError < StandardError
+          attr_reader :submitted_ids
+
+          def initialize(message, submitted_ids:)
+            super(message)
+            @submitted_ids = submitted_ids
+          end
+        end
+
         # Default Redshift database for a new client. `dev` is the primary database in our
         # cluster for the data/analytics team: it holds their dbt models (per-developer
         # sandboxes plus the shared analytics and reporting schemas) and the schemas where
@@ -48,29 +62,77 @@ module Cdo
           resp.id
         end
 
-        # SYNCHRONOUS: Executes multiple SQL statements serially. Blocks until all are FINISHED or one FAILS.
-        # TODO: Does not return result sets. To support queries that return results, fetch_results would need to
-        # iterate describe_statement sub_statements and call get_statement_result on each sub-statement ID.
-        # @param sqls [Array<String>] SQL statements to execute in order.
-        # @param timeout [Integer] Maximum time to wait in seconds. Defaults to 5 minutes.
-        def batch_execute(sqls, timeout: 5.minutes.to_i)
-          statement_id = batch_execute_async(sqls)
-          wait_for_completion(statement_id, timeout: timeout)
+        # The Redshift Data API's BatchExecuteStatement accepts at most 40 SQL statements per call.
+        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
+        MAX_BATCH_STATEMENTS = 40
+
+        # SYNCHRONOUS `batch_execute_async` + `wait_for_statements`. Submits every batch, waits for all
+        # of them to reach a terminal state under one `timeout`, and returns the joined per-batch
+        # outcome. It does NOT raise on a batch failure, so a partial success on the split path
+        # (`allow_separate_transactions: true`) is fully visible: successes and failures come back
+        # together, keyed by batch index. Structural errors still raise -- `ArgumentError` for
+        # > MAX_BATCH_STATEMENTS without opt-in, `BatchSubmitError` for a submission failure (see
+        # `batch_execute_async`). Does not return result sets.
+        # @param sqls [Array<String>]
+        # @param timeout [Integer, nil] max TOTAL wait in seconds; nil polls until all terminal (default nil).
+        # @param allow_separate_transactions [Boolean] see `batch_execute_async`.
+        # @return [Hash] {finished: [batch_index, ...], failed: [[batch_index, error_message], ...]}
+        def batch_execute(sqls, timeout: nil, allow_separate_transactions: false)
+          ids = batch_execute_async(sqls, allow_separate_transactions: allow_separate_transactions)
+          wait_for_statements(statements: ids.each_with_index.to_h {|id, i| [i, id]}, timeout: timeout)
         end
 
-        # ASYNCHRONOUS: Submits multiple SQL statements for serial execution and returns the statement ID immediately.
-        # @param sqls [Array<String>] SQL statements to execute in order.
-        # @return [String] Statement ID.
-        def batch_execute_async(sqls)
-          CDO.log.info "[Redshift] Submitting batch of #{sqls.length} SQL statements:\n#{sqls.map.with_index(1) {|s, i| "  [#{i}] #{s}"}.join("\n")}"
-          resp = @client.batch_execute_statement(
-            cluster_identifier: @cluster_id,
-            database: @database,
-            db_user: @db_user,
-            sqls: sqls
-          )
-          CDO.log.info "[Redshift] Batch statement submitted: #{resp.id}"
-          resp.id
+        # ASYNCHRONOUS: submits `sqls` and returns one statement id per batch immediately. An id means
+        # submitted, NOT succeeded -- poll ids with `wait_for_statements` for {finished:, failed:}.
+        #
+        # A single BatchExecuteStatement runs its <= MAX_BATCH_STATEMENTS statements as ONE transaction,
+        # serially in order. By default, submitting >MAX_BATCH_STATEMENTS raises `ArgumentError`, so the caller is
+        # guaranteed that single atomic, ordered batch. `allow_separate_transactions: true` splits into
+        # successive batches that are INDEPENDENT transactions (no atomicity or ordering across them; they
+        # may run concurrently) -- only opt in for mutually independent, order-insensitive statements
+        # (e.g. idempotent `DROP ... IF EXISTS`). Atomic execution of > MAX_BATCH_STATEMENTS is not
+        # supported (would need a Data API session with explicit BEGIN/COMMIT).
+        # @param sqls [Array<String>]
+        # @param allow_separate_transactions [Boolean] permit splitting > MAX_BATCH_STATEMENTS into
+        #   independent, non-atomic, unordered batches. Default false (raise instead).
+        # @raise [ArgumentError] > MAX_BATCH_STATEMENTS with allow_separate_transactions false.
+        # @raise [BatchSubmitError] a later batch fails to submit; #submitted_ids holds the in-flight ids.
+        # @return [Array<String>] one statement id per batch, in submission order (empty if no sqls).
+        def batch_execute_async(sqls, allow_separate_transactions: false)
+          if !allow_separate_transactions && sqls.length > MAX_BATCH_STATEMENTS
+            raise ArgumentError,
+              "#{sqls.length} statements exceeds the #{MAX_BATCH_STATEMENTS}-statement limit for a " \
+              "single atomic, ordered batch. Pass allow_separate_transactions: true to split into " \
+              "independent batches that are NOT atomic or ordered relative to each other."
+          end
+
+          # When allowed, each slice is a separate transaction; see the ordering/atomicity contract above.
+          submitted_ids = []
+          sqls.each_slice(MAX_BATCH_STATEMENTS) do |batch|
+            CDO.log.info "[Redshift] Submitting batch of #{batch.length} SQL statements:\n#{batch.map.with_index(1) {|s, i| "  [#{i}] #{s}"}.join("\n")}"
+            begin
+              resp = @client.batch_execute_statement(
+                cluster_identifier: @cluster_id,
+                database: @database,
+                db_user: @db_user,
+                sqls: batch
+              )
+            rescue => exception
+              # Nothing submitted yet (first/only batch): preserve the original error and type.
+              raise if submitted_ids.empty?
+
+              # Earlier batches are already running on Redshift; surface their ids rather than losing
+              # them to this exception. Ruby records `exception` as the BatchSubmitError's #cause.
+              raise BatchSubmitError.new(
+                "batch_execute_statement failed after submitting #{submitted_ids.length} batch(es); " \
+                "those statements are running on Redshift (see BatchSubmitError#submitted_ids): #{exception.message}",
+                submitted_ids: submitted_ids
+              )
+            end
+            CDO.log.info "[Redshift] Batch statement submitted: #{resp.id}"
+            submitted_ids << resp.id
+          end
+          submitted_ids
         end
 
         # Helper: Checks the status of an asynchronous statement.
