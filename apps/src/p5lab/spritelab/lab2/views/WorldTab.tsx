@@ -13,7 +13,7 @@ import {
 
 import {PREVIEW_CLEARANCE} from './Playspace';
 
-import moduleStyles from './sprite-lab2-view.module.scss';
+import moduleStyles from './world-tab.module.scss';
 
 // The editor draws the grid at a fixed overall size; cells shrink as the
 // visible extent grows.
