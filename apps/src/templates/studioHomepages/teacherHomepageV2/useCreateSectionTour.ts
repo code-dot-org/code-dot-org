@@ -74,7 +74,8 @@ const useCreateSectionTour = (gradesTeaching: string[] | null | undefined) => {
       createHomepageSteps(
         tour,
         gradesTeaching,
-        CREATE_SECTION_ONBOARDING_STEP_KEY
+        CREATE_SECTION_ONBOARDING_STEP_KEY,
+        TOUR_NAME
       ),
     [gradesTeaching]
   );

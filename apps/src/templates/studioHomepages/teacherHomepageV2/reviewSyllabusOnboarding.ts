@@ -4,6 +4,7 @@ import {
   createCompletionStep,
   createQuizWhenHandlers,
   nextButton,
+  recordOnboardingNavigation,
   withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
@@ -195,7 +196,8 @@ const createBreadcrumbStep = (
 const createHomepageSteps = (
   tour: Tour,
   sessionStorageKey: string,
-  unitOverviewStartStepId: string
+  unitOverviewStartStepId: string,
+  tourName: string
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -248,6 +250,7 @@ const createHomepageSteps = (
 
           lessonClickHandler = () => {
             trySetSessionStorage(sessionStorageKey, unitOverviewStartStepId);
+            recordOnboardingNavigation(tourName, 'unit_overview');
             dropdownItems.forEach(el =>
               el.removeEventListener('click', lessonClickHandler!)
             );
@@ -281,7 +284,8 @@ const createHomepageSteps = (
 export const createReviewSyllabusHomepageSteps = (
   tour: Tour,
   sessionStorageKey: string,
-  demoType: DemoType
+  demoType: DemoType,
+  tourName: string
 ): StepOptions[] => {
   switch (demoType) {
     case 'high':
@@ -289,13 +293,15 @@ export const createReviewSyllabusHomepageSteps = (
       return createHomepageSteps(
         tour,
         sessionStorageKey,
-        COURSE_HEADER_STEP_ID
+        COURSE_HEADER_STEP_ID,
+        tourName
       );
     case 'elementary':
       return createHomepageSteps(
         tour,
         sessionStorageKey,
-        'teacher-resources-dropdown'
+        'teacher-resources-dropdown',
+        tourName
       );
     default:
       return [];

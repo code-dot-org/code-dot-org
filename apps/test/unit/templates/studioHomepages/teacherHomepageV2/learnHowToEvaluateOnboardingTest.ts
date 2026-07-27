@@ -54,7 +54,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('returns one step attached to the View progress button', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     expect(steps).toHaveLength(1);
     expect(steps[0].attachTo?.element).toContain('task-button-View-progress');
@@ -63,7 +64,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('saves the progress table step id to sessionStorage when View progress is clicked', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     (steps[0].when as {show: () => void}).show();
 
@@ -78,7 +80,8 @@ describe('createLearnHowToEvaluateHomepageSteps', () => {
   it('removes the highlight class when the step is hidden', () => {
     const steps = createLearnHowToEvaluateHomepageSteps(
       mockTour as unknown as Tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+      'test_tour'
     );
     const when = steps[0].when as {show: () => void; hide: () => void};
     when.show();

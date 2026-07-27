@@ -96,7 +96,8 @@ const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
       demoType
         ? createLearnHowToEvaluateHomepageSteps(
             tour,
-            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+            TOUR_NAME
           )
         : [],
     [demoType]

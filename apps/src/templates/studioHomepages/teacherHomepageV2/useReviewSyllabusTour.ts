@@ -140,7 +140,8 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
         ? createReviewSyllabusHomepageSteps(
             tour,
             REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-            demoType
+            demoType,
+            TOUR_NAME
           )
         : [],
     [demoType]

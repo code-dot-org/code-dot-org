@@ -4,6 +4,7 @@ import {
   createCompletionStep,
   createQuizWhenHandlers,
   nextButton,
+  recordOnboardingNavigation,
   withSparkle,
 } from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {trySetSessionStorage} from '@cdo/apps/utils';
@@ -101,7 +102,8 @@ const buildQuizHtml = (studentNames: string[]): string => {
 // Homepage steps
 export const createLearnHowToEvaluateHomepageSteps = (
   tour: Tour,
-  sessionStorageKey: string
+  sessionStorageKey: string,
+  tourName: string
 ): StepOptions[] => {
   let viewProgressClickHandler: (() => void) | null = null;
 
@@ -124,6 +126,7 @@ export const createLearnHowToEvaluateHomepageSteps = (
 
           viewProgressClickHandler = () => {
             trySetSessionStorage(sessionStorageKey, PROGRESS_TABLE_STEP_ID);
+            recordOnboardingNavigation(tourName, 'progress');
             document
               .querySelector(VIEW_PROGRESS_SELECTOR)
               ?.removeEventListener('click', viewProgressClickHandler!);
@@ -218,6 +221,7 @@ export const createLearnHowToEvaluateProgressSteps = (
               LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
               STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID
             );
+            recordOnboardingNavigation(tourName, 'student_snapshot');
             document
               .querySelector(STUDENT_SNAPSHOT_SELECTOR)
               ?.classList.remove('tour-step-highlight');

@@ -215,6 +215,16 @@ export const recordOnboardingStepViewed = (
   });
 };
 
+export const recordOnboardingNavigation = (
+  tourName: string,
+  toPage: string
+): void => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_NAVIGATION, {
+    tour_name: tourName,
+    to_page: toPage,
+  });
+};
+
 export const recordOnboardingTourAbandonment = (
   tour: Tour,
   sessionStorageKey: string,
