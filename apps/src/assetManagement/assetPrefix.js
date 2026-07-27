@@ -1,18 +1,8 @@
 import {unicode} from '@cdo/apps/code-studio/components/icons';
 import {getStore} from '@cdo/apps/redux';
 
-// For proxying non-https assets
-const MEDIA_PROXY = '//' + location.host + '/media?u=';
-
 // starts with http or https
 export const ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
-
-// absolute URL to curriculum.code.org (which doesn't require media proxy)
-const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
-  '^https://curriculum.code.org/',
-  'i'
-);
-const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp('^https://images.code.org/', 'i');
 
 export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
 
@@ -46,32 +36,12 @@ export function init(config) {
  * the path to the assets directory for this project to the filename.
  *
  * If the sound filename starts with 'sound://', replace it with the api path.
- *
- * If the filename URL is absolute, route it through the MEDIA_PROXY.
  * @param {string} filename
  * @returns {string}
  */
 export function fixPath(filename) {
-  // Rewrite urls to pass through our media proxy. Unless of course we are in an
-  // exported app, in which case our media proxy won't be good for anything
-  // anyway.
-  if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
-    if (
-      ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename) ||
-      ABSOLUTE_CDO_IMAGES_REGEXP.test(filename)
-    ) {
-      // We know that files served from this location will respond with the
-      // access-control-allow-origin: * header, meaning no CORS issue & no need
-      // for the media proxy.
-      return filename;
-    }
-    // We want to be able to handle the case where our filename contains a
-    // space, i.e. "www.example.com/images/foo bar.png", even though this is a
-    // technically invalid URL. encodeURIComponent will replace space with %20
-    // for us, but as soon as it's decoded, we again have an invalid URL. For
-    // this reason we first replace space with %20 ourselves, such that we now
-    // have a valid URL, and then call encodeURIComponent on the result.
-    return MEDIA_PROXY + encodeURIComponent(filename.replace(/ /g, '%20'));
+  if (ABSOLUTE_REGEXP.test(filename)) {
+    return filename;
   }
 
   filename = filename || '';

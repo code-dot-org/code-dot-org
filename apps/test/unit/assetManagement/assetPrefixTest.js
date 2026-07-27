@@ -25,24 +25,12 @@ describe('apps/src/assetManagement/assetPrefix.js', () => {
       reduxStub.mockRestore();
     });
 
-    it('should route an absolute URL through the MEDIA_PROXY', () => {
+    it('should return absolute URLs unchanged', () => {
       result = fixPath('http://example.com/test%20image.png');
-      expect(result).toBe(
-        `//${location.host}/media?u=http%3A%2F%2Fexample.com%2Ftest%2520image.png`
-      );
+      expect(result).toBe('http://example.com/test%20image.png');
 
       result = fixPath('https://example.com/test%20image.png');
-      expect(result).toBe(
-        `//${location.host}/media?u=https%3A%2F%2Fexample.com%2Ftest%2520image.png`
-      );
-    });
-
-    it('should not route known absolute URLs through the MEDIA_PROXY', () => {
-      result = fixPath('https://curriculum.code.org/test-image.png');
-      expect(result).toBe('https://curriculum.code.org/test-image.png');
-
-      result = fixPath('https://images.code.org/test-image.png');
-      expect(result).toBe('https://images.code.org/test-image.png');
+      expect(result).toBe('https://example.com/test%20image.png');
     });
 
     it('should return the default image when the filename is empty', () => {
