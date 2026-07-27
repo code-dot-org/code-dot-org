@@ -2711,8 +2711,10 @@ __metadata:
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    esbuild-wasm: "npm:^0.28.1"
     eslint: "catalog:"
     jsdom: "catalog:"
+    phaser: "npm:^4.2.1"
     prettier: "catalog:"
     react: "catalog:"
     react-dom: "catalog:"
@@ -12938,6 +12940,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esbuild-wasm@npm:^0.28.1":
+  version: 0.28.1
+  resolution: "esbuild-wasm@npm:0.28.1"
+  bin:
+    esbuild: bin/esbuild
+  checksum: 10c0/876de242aaaca622b8e9462688203bbfbd20fb31e671ec91c4126828f38a7e81de4446ab50b4572b35781cbb9d728f4019368890436cb43559ea7c1e31b8aec3
+  languageName: node
+  linkType: hard
+
 "esbuild@npm:^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0 || ^0.26.0 || ^0.27.0":
   version: 0.27.1
   resolution: "esbuild@npm:0.27.1"
@@ -13770,6 +13781,13 @@ __metadata:
   version: 5.0.1
   resolution: "eventemitter3@npm:5.0.1"
   checksum: 10c0/4ba5c00c506e6c786b4d6262cfbce90ddc14c10d4667e5c83ae993c9de88aa856033994dd2b35b83e8dc1170e224e66a319fa80adc4c32adcd2379bbc75da814
+  languageName: node
+  linkType: hard
+
+"eventemitter3@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "eventemitter3@npm:5.0.4"
+  checksum: 10c0/575b8cac8d709e1473da46f8f15ef311b57ff7609445a7c71af5cd42598583eee6f098fa7a593e30f27e94b8865642baa0689e8fa97c016f742abdb3b1bf6d9a
   languageName: node
   linkType: hard
 
@@ -20594,6 +20612,15 @@ __metadata:
   version: 1.2.0
   resolution: "pend@npm:1.2.0"
   checksum: 10c0/8a87e63f7a4afcfb0f9f77b39bb92374afc723418b9cb716ee4257689224171002e07768eeade4ecd0e86f1fa3d8f022994219fb45634f2dbd78c6803e452458
+  languageName: node
+  linkType: hard
+
+"phaser@npm:^4.2.1":
+  version: 4.2.1
+  resolution: "phaser@npm:4.2.1"
+  dependencies:
+    eventemitter3: "npm:^5.0.4"
+  checksum: 10c0/3fa1b0600d7287b64af2ebc9d5874b3fdd82d2036c911feacf9b8e589e8375c91326f7a23e5fc5555250c68778ad822e27c0e82a2716099b07279b90b65e59d0
   languageName: node
   linkType: hard
 

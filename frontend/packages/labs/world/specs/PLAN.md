@@ -268,7 +268,14 @@ through an in-memory resolve/load plugin: project-relative specifiers resolve to
 files in the map; `.json` as JSON; `.png` as an asset URL the engine hands to
 Phaser's loader; `.ts` transpiled; `world-lab` and `phaser` marked **external**.
 Compile errors surface with file/line as `compile_error`. The compiler never
-executes the result — it only writes it out.
+executes the result — it only writes it out. esbuild is initialized with
+`worker: false` so it runs on the (idle, hidden) compile surface's main thread
+rather than spawning a blob-URL Web Worker that the tight CSP would block
+(milestone-0 finding, §15).
+
+Verified in milestone-0 Spike B: a warm `esbuild.context()` over the
+`PreviewFiles` map bundles multi-file TS + JSON + external `world-lab` with cold
+build ~89 ms and warm incremental rebuild ~10 ms.
 
 Rejected as primary: **service-worker + import-maps serving raw learner files**
 (web-lab's SW without a bundler). It runs only native ESM (no `.ts` — the design
@@ -290,7 +297,10 @@ keyed by a cache-busting URL like `/__world_build__/<id>.mjs`; the preview then
 (clean stack traces and source maps, and CSP stays `script-src 'self'` — no
 `blob:` needed); the compiler and preview stay decoupled; the module never
 transits the lab. The SW registration + keep-alive + `updateViaCache:'none'`
-concerns are already solved in web-lab and port directly.
+concerns are already solved in web-lab and port directly. Milestone-0 Spike C
+confirmed a same-origin compiled module imports and runs under `script-src
+'self'`, while a blob import is refused there — so this transport is what keeps
+the preview CSP tight.
 
 Simpler fallback: **`BroadcastChannel` + blob module.** The compiler posts the
 bundle text on a named same-origin channel; the preview wraps it in a `blob:`
@@ -308,34 +318,36 @@ the point.
 learner code:
 
 - `script-src 'self' 'wasm-unsafe-eval'`
-- `connect-src 'none'`, `default-src 'self'`, no `blob:`, no `img-src` needs.
+- `connect-src 'self'` (for esbuild's own `esbuild.wasm` fetch), `default-src
+'self'`, no `blob:`, no `img-src` needs. esbuild is initialized with
+  `worker: false` so no `worker-src blob:` is needed.
 
 `'wasm-unsafe-eval'` is the narrow CSP Level 3 keyword that permits
 `WebAssembly.instantiate`/`compile` from bytes while still forbidding JS
 `eval`/`new Function` — strictly weaker than `'unsafe-eval'`. The only thing it
-trusts here is our vendored esbuild-wasm instantiating its own wasm. No
-learner-derived code ever runs on this origin (the compiler transforms text and
-emits it; it never imports the result), so learner-supplied wasm cannot execute
-here. The origin is sessionless and `connect-src 'none'`, so even a hypothetical
-misuse has no credentials to take and nowhere to reach.
+trusts here is our vendored esbuild-wasm instantiating its own wasm (Spike C
+confirmed it is necessary and sufficient). No learner-derived code ever runs on
+this origin (the compiler transforms text and emits it; it never imports the
+result), so learner-supplied wasm cannot execute here. `connect-src 'self'` — not
+`'none'` — is required because esbuild fetches its own same-origin wasm; that is
+the only fetch, it reaches no cross-origin destination, and the surface is
+sessionless with no learner code, so it grants the learner nothing.
 
-**Preview sandbox** (`role=preview`) — runs learner code, ideally with **no**
-wasm-eval:
+**Preview sandbox** (`role=preview`) — runs learner code with **no** wasm-eval:
 
 - `script-src 'self'` (SW-served compiled module; add `blob:` only under the
-  fallback transport). **`'wasm-unsafe-eval'` omitted iff Phaser 4 needs no
-  wasm** — then learner-supplied `.wasm` is refused outright.
+  fallback transport). `'wasm-unsafe-eval'` is **omitted** — Spike A/C confirmed
+  Phaser 4.2.1 needs no wasm and no eval — so learner-supplied `.wasm` is refused
+  outright.
 - `connect-src 'none'`, `img-src 'self' blob: data:` (sprites arrive as
   blobs/data URLs, not network), `frame-ancestors <labOrigin> 'self'`,
   `form-action 'none'`, credential-less origin.
 
-So the two dangerous capabilities never coincide: wasm-eval lives only where no
-learner logic runs; learner logic runs only where (pending the Phaser spike, §15)
-there is no wasm-eval. **Milestone 0 must determine Phaser 4's wasm needs** — if
-Phaser needs `'wasm-unsafe-eval'` on the preview origin, learner wasm becomes
-possible there, though still confined to a sessionless/networkless origin
-(compute only; wasm has no ambient DOM/syscall/network authority). Compatibility
-note: `'wasm-unsafe-eval'` is recent; engines that predate it fall back to
+So the two dangerous capabilities never coincide: wasm-eval lives only on the
+compile surface, where no learner logic runs; the preview surface runs learner
+logic with no wasm-eval, so learner wasm cannot execute there at all.
+Compatibility note: `'wasm-unsafe-eval'` is recent; engines that predate it fall
+back to
 requiring `'unsafe-eval'` — check the target browser matrix.
 
 Production keeps legacy's per-project subdomain so projects are isolated from
@@ -542,27 +554,35 @@ Unit first, then browser:
 
 ## 14. Dependencies to add
 
-- `phaser` — Phaser 4. **Risk:** confirm the npm dist tag / that the installed
-  major is v4, and whether it needs wasm (drives §8's preview CSP). Not in the
-  shared catalog; pin in-package.
-- `esbuild-wasm` — the browser bundler for the compile sandbox. Self-hosted; not
-  the Node-only native `esbuild` already present transitively.
-- `concurrently` (dev) — the multi-port script, as web/python use.
+- `phaser` — Phaser 4. Added as `phaser@^4.2.1` (dependency). Confirmed in
+  milestone 0: ships ESM, no wasm, no eval. Not in the shared catalog; pinned
+  in-package.
+- `esbuild-wasm` — the browser bundler for the compile sandbox. Added as
+  `esbuild-wasm@^0.28.1` (dependency). Self-hosted; not the Node-only native
+  `esbuild` already present transitively.
+- `concurrently` (dev) — the multi-port script, as web/python use. Not yet added.
 
 ## 15. Risks and open questions
 
-- **Phaser 4 packaging + wasm.** v4 is newer; verify it self-hosts as an ES
-  module and whether it instantiates wasm. If it needs `'wasm-unsafe-eval'` on
-  the preview origin, learner wasm becomes possible there (still sandboxed).
-  Milestone-0 spike; it decides the preview CSP.
+- **Phaser 4 packaging + wasm.** RESOLVED (milestone-0 Spikes A & C, see
+  `spikes/milestone-0/FINDINGS.md`): Phaser 4.2.1 ships ESM, uses no wasm and no
+  eval, and renders under a bare `script-src 'self'` with zero CSP violations.
+  The preview surface stays wasm-free and learner wasm is refused outright.
 - **`'wasm-unsafe-eval'` support.** Recent CSP keyword; engines predating it
-  fall back to `'unsafe-eval'`. Check the browser matrix.
-- **esbuild-wasm size + boot.** ~1–2 MB wasm to self-host and initialize once
-  per compile-sandbox load. Keep the context warm across edits; measure boot.
-- **Compile→preview transport.** Confirm the shared service worker serves
-  compiled modules to the _sibling_ preview iframe cleanly (registration scope,
-  keep-alive across two clients). Fall back to `BroadcastChannel` + blob module
-  if fiddly (costs a `blob:` in the preview CSP).
+  fall back to `'unsafe-eval'`. Verified working on chromium-1228; the older
+  browser matrix is still unchecked.
+- **esbuild-wasm size + boot + init options.** RESOLVED enough to proceed:
+  self-hosted, `initialize` ~4 ms and warm incremental rebuild ~10 ms in Node
+  (Spike B). Two required init details (Spike C): `worker: false` (else it
+  needs `worker-src blob:`) and the compile surface's `connect-src 'self'` (for
+  the wasm fetch). Browser boot time on a cold load still to be measured under
+  the real self-hosting path.
+- **Compile→preview transport.** Partially resolved: a same-origin compiled
+  module imports and runs under `script-src 'self'` (Spike C), so the SW
+  transport keeps the CSP tight; the live two-sibling-iframe SW handoff
+  (registration scope, keep-alive across two clients) is still to be wired.
+  Fall back to `BroadcastChannel` + blob module if fiddly (costs a `blob:` in
+  the preview `script-src`).
 - **Hot-reload Levels 2–3.** State-preserving code swap and structural reconcile
   are non-trivial; the id-keyed instance store makes them possible, but they are
   staged after the slice and may need iteration.
@@ -576,11 +596,13 @@ Unit first, then browser:
 
 ## 16. Milestones
 
-0. **Spikes** — (a) Phaser 4 self-host + render a sprite in the preview iframe
-   under CSP, and whether it needs wasm; (b) esbuild-wasm warm-context bundle of
-   a two-file project with external `world-lab`, served to a sibling iframe via
-   the SW transport and imported there. Resolves §15's top risks before the
-   slice.
+0. **Spikes** — DONE (`spikes/milestone-0/`, see `FINDINGS.md`). (a) Phaser
+   4.2.1 self-hosts as ESM, needs no wasm/eval, renders under `script-src
+'self'`; (b) esbuild-wasm warm-context bundling works (cold ~89 ms, warm
+   ~10 ms) with `worker: false` + compile `connect-src 'self'`; a same-origin
+   compiled module imports under `script-src 'self'`, blob needs `blob:`. §15's
+   top risks resolved; specs updated. Remaining for later: the live
+   two-iframe SW handoff and the older-browser `'wasm-unsafe-eval'` matrix.
 1. **Engine core** — `src/engine/**` with Vitest coverage (§13). No DOM.
 2. **Compile sandbox + transport** — `compile.html`, the compile manager split,
    `messages.ts`, the warm esbuild context, the SW transport. Round-trips a
