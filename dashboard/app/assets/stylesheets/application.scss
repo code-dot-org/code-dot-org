@@ -140,6 +140,12 @@ h1 {
   }
 }
 
+@include codeai-brand {
+  h1.existing-account-heading {
+    color: var(--text-neutral-primary);
+  }
+}
+
 h2 {
   margin: 25px 0 10px 0;
   @include main-font-semi-bold;
@@ -2154,6 +2160,45 @@ a.download-video {
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
+  }
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
   }
   .neutral-button {
     background-color: $neutral_white;

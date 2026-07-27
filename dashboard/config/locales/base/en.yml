@@ -177,7 +177,7 @@ en:
       Your sign-in with %{provider} has expired.
       Please sign out of Code.org and sign back in using your %{provider} account to continue.
     existing_account:
-      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      account_exists: "Good news! You already have a CodeAI account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
       sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
