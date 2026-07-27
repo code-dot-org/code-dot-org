@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -363,11 +364,11 @@ export default class AssetManager extends React.Component {
             </div>
           </div>
         ) : (
-          <div>
+          <MuiTypography variant="body2" component="div">
             {i18n.manageAssetsDefaultMessage({
               assetUploaderButtonText: i18n.uploadFile(),
             })}
-          </div>
+          </MuiTypography>
         );
       assetList = (
         <div>
