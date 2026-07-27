@@ -9,8 +9,8 @@
 
 import type {Loader, Plugin} from 'esbuild-wasm';
 
-// `.rule` / `.actor` are Blockly-authored; by the time the compiler sees them
-// the lab has generated their JavaScript, so they resolve and load as JS.
+// `.rule` / `.actor` / `.scene` are Blockly-authored; by the time the compiler
+// sees them the lab has generated their JavaScript, so they load as JS.
 const EXT_ORDER = [
   '',
   '.ts',
@@ -18,6 +18,7 @@ const EXT_ORDER = [
   '.json',
   '.rule',
   '.actor',
+  '.scene',
   '/index.ts',
   '/index.js',
 ];

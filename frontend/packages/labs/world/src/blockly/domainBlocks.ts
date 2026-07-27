@@ -250,6 +250,104 @@ const worldEventValue = defineBlock({
   },
 });
 
+// ── Scene composition ────────────────────────────────────────────────────────
+// A `.scene` file is authored with `world_scene` (the root, like `world_actor`)
+// and `world_add_actor` children. Each `add` block PLACES an instance of an
+// actor template: it binds `const actor = scene.addActor(Template, <id>)` in its
+// own block scope, so the very same `set`-style body blocks that target `actor`
+// in an actor definition compose here unchanged (only the pure `actor.set(...)`
+// ones — `set position` — are valid on a live instance; trait/appearance blocks
+// belong to the template). The instance id is the Blockly block's own id, which
+// is stable across edits — realizing "scene tools supply stable ids".
+
+/** A JS import identifier for a project module path (`actors/coin` → `Coin`). */
+const importVar = (path: string): string => {
+  const base = (path.split('/').pop() ?? path).replace(/\.[^.]+$/, '');
+  const camel = base.replace(/[^a-zA-Z0-9]+(.)?/g, (_all, c: string) =>
+    c ? c.toUpperCase() : '',
+  );
+  const pascal = camel.charAt(0).toUpperCase() + camel.slice(1);
+  return pascal || 'Module';
+};
+
+/** Register a hoisted top-level import; Blockly's `finish()` emits it, deduped. */
+const addImport = (generator: unknown, key: string, code: string): void => {
+  (generator as {definitions_: Record<string, string>}).definitions_[key] =
+    code;
+};
+
+const worldScene = defineBlock({
+  type: 'world_scene',
+  message0: 'scene  id %1  name %2',
+  args0: [
+    {type: 'field_input', name: 'ID', text: 'game'},
+    {type: 'field_input', name: 'NAME', text: 'Game'},
+  ],
+  message1: 'world %1',
+  args1: [{type: 'field_input', name: 'WORLD', text: 'worlds/platform'}],
+  message2: '%1',
+  args2: [{type: 'input_statement', name: 'BODY'}],
+  style: 'setup_blocks',
+  tooltip:
+    'Define a scene: the world its actors live in, and the actors in it.',
+  generator: {
+    javascript(block, generator) {
+      const id = block.getFieldValue('ID');
+      const name = block.getFieldValue('NAME');
+      const world = block.getFieldValue('WORLD');
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
+      addImport(
+        generator,
+        `mod:${world}`,
+        `import ${importVar(world)} from ${str(world)};`,
+      );
+      const body = generator.statementToCode(block, 'BODY');
+      return (
+        `const scene = new WorldLab.SceneBuilder({id: ${str(id)}, name: ${str(
+          name,
+        )}});\n` +
+        `scene.useWorld(${importVar(world)});\n` +
+        body
+      );
+    },
+  },
+});
+
+const worldAddActor = defineBlock({
+  type: 'world_add_actor',
+  message0: 'add actor %1',
+  args0: [{type: 'field_input', name: 'ACTOR', text: 'actors/player'}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'behavior_blocks',
+  tooltip: 'Place an instance of an actor and set its per-instance properties.',
+  generator: {
+    javascript(block, generator) {
+      const actor = block.getFieldValue('ACTOR');
+      addImport(
+        generator,
+        `mod:${actor}`,
+        `import ${importVar(actor)} from ${str(actor)};`,
+      );
+      const body = generator.statementToCode(block, 'DO');
+      // Block scope: each add's `actor` binding is independent, so several adds
+      // in one scene don't collide, and the DO body's `actor.set(...)` blocks
+      // (e.g. set position) target it. The block id is the stable instance id.
+      return (
+        `{\nconst actor = scene.addActor(${importVar(actor)}, ${str(
+          block.id,
+        )});\n` + `${body}}\n`
+      );
+    },
+  },
+});
+
 /**
  * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
  * Blockly blocks the toolbox also offers (controls_if, logic_compare,
@@ -269,10 +367,16 @@ export const DOMAIN_BLOCKS = [
   worldLog,
   worldPrint,
   worldEventValue,
+  worldScene,
+  worldAddActor,
 ];
 
 /** The toolbox for the Blockly editor: the domain blocks, grouped. */
 export const DOMAIN_TOOLBOX: Toolbox = [
+  {
+    name: 'Scene',
+    blocks: ['world_scene', 'world_add_actor', 'world_set_position'],
+  },
   {name: 'Actor', blocks: ['world_actor']},
   {
     name: 'Traits',

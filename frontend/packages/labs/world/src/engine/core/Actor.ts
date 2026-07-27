@@ -17,7 +17,10 @@ import {Vector} from './Vector';
 
 /** The data an ActorBuilder hands the Actor constructor. */
 export interface ActorInit {
+  /** Unique instance id (the Scene assigns it). */
   id: string;
+  /** The template this instance was made from; defaults to `id`. */
+  type?: string;
   name: string;
   /** Explicitly-applied traits; their dependencies are pulled in implicitly. */
   traits: Trait[];
@@ -34,6 +37,8 @@ const coerce = <T>(property: Property<T>, value: unknown): T =>
 
 export class Actor {
   readonly id: string;
+  /** The template (ActorBuilder id) this instance came from — a type tag. */
+  readonly type: string;
   readonly name: string;
   private readonly membership = new DependencySet<Trait>(
     trait => trait.requiredTraits,
@@ -44,6 +49,7 @@ export class Actor {
 
   constructor(init: ActorInit) {
     this.id = init.id;
+    this.type = init.type ?? init.id;
     this.name = init.name;
     for (const trait of init.traits) {
       this.membership.add(trait);
@@ -73,8 +79,10 @@ export class Actor {
     return this.store.get(property) as T;
   }
 
-  set<T>(property: Property<T>, value: T): void {
+  /** Set a property's value; returns `this` so instance setup can chain. */
+  set<T>(property: Property<T>, value: T): this {
     this.store.set(property, coerce(property, value));
+    return this;
   }
 
   /** Whether this actor has the given trait (directly or by dependency). */

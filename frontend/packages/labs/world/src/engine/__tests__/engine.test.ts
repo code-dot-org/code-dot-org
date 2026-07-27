@@ -407,3 +407,49 @@ describe('world actions', () => {
     expect(player.get(VelocityProperty).y).toBeLessThan(0); // now pulled up
   });
 });
+
+describe('SceneBuilder.addActor (instances)', () => {
+  function makeCoinScene() {
+    const scene = new SceneBuilder({id: 'game', name: 'Game'});
+    scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
+    );
+    const coin = () =>
+      new ActorBuilder({id: 'coin', name: 'Coin'}).useTraits([PositionalTrait]);
+    return {scene, coin};
+  }
+
+  it('gives a lone actor its template id and a repeat a random unique one', () => {
+    const {scene, coin} = makeCoinScene();
+    const first = scene.addActor(coin());
+    const second = scene.addActor(coin());
+    expect(first.id).toBe('coin');
+    expect(second.id).not.toBe('coin');
+    expect(second.id.startsWith('coin-')).toBe(true);
+    // Distinct instances, both sharing the template type, both in the snapshot.
+    expect(first.type).toBe('coin');
+    expect(second.type).toBe('coin');
+    expect(scene.getWorld().snapshot().actorIds.sort()).toEqual(
+      [first.id, second.id].sort(),
+    );
+  });
+
+  it('honors an explicit id and sets per-instance props on the returned instance', () => {
+    const {scene, coin} = makeCoinScene();
+    // The returned instance's set() chains, so placement reads inline.
+    const c = scene
+      .addActor(coin(), 'coin-a')
+      .set(PositionProperty, new Vector(320, 70));
+    expect(c.id).toBe('coin-a');
+    expect(c.get(PositionProperty).equals({x: 320, y: 70})).toBe(true);
+  });
+
+  it('keeps an explicit base id stable, disambiguating repeats with an ordinal', () => {
+    // Same base id twice — e.g. one Blockly `add` block running in a loop.
+    const {scene, coin} = makeCoinScene();
+    const a = scene.addActor(coin(), 'coin-a');
+    const b = scene.addActor(coin(), 'coin-a');
+    const c = scene.addActor(coin(), 'coin-a');
+    expect([a.id, b.id, c.id]).toEqual(['coin-a', 'coin-a#2', 'coin-a#3']);
+  });
+});

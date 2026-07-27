@@ -13,7 +13,7 @@ import {
   BlocklyWorkspace,
 } from '@code-dot-org/blockly';
 
-import {assembleActorModule} from './assembleActorModule';
+import {assembleActorModule, assembleSceneModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {DOMAIN_BLOCKS} from './domainBlocks';
 
@@ -63,7 +63,11 @@ export const BlocklyGenerator = forwardRef<
           type: block.type,
           code: asString(generator.blockToCode(block)),
         }));
-        return generator.finish(assembleActorModule(generated));
+        // A scene file is rooted by `world_scene`; anything else is an actor.
+        const assemble = generated.some(b => b.type === 'world_scene')
+          ? assembleSceneModule
+          : assembleActorModule;
+        return generator.finish(assemble(generated));
       },
     }),
     [],

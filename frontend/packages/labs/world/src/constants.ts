@@ -4,7 +4,7 @@ import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
  * The scene the game starts on — the driver's compile + run entry point
  * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
  */
-export const ENTRY_FILE = 'scenes/main.js';
+export const ENTRY_FILE = 'scenes/main.scene';
 
 /**
  * The default project for a new World Lab: a small gravity game across the
@@ -13,42 +13,35 @@ export const ENTRY_FILE = 'scenes/main.js';
  * default-exported Scene. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
-const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, SolidTrait, PositionalTrait, AppearanceTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
-import PlatformWorld from 'worlds/platform';
-import Player from 'actors/player';
+// The actors are TEMPLATES — a set of traits and appearance, but no position:
+// the Scene (main.scene, authored in Blockly) places each instance and sets its
+// per-instance position. `ground` is a JS template, `player` a Blockly `.actor`;
+// the scene adds all of them the same way. (The player is arrow-key controlled,
+// so it also carries the input trait — authored in its `.actor` file.)
 
-// A Scene glues a World (the rules) to the Actors living in it.
-const scene = new SceneBuilder({id: 'game', name: 'Game'});
-scene.useWorld(PlatformWorld);
-scene.addActor(Player);
+const GROUND_ACTOR = `import {ActorBuilder, GroundTrait, SolidTrait, AppearanceTrait, SpriteProperty} from 'world-lab';
 
-// The ground the player lands on, drawn with the built-in "ground" sprite.
-// GroundTrait makes it landable; SolidTrait makes it a wall too (you can't walk
-// through its sides) — a normal tile is both.
-scene.addActor(
-  new ActorBuilder({id: 'ground', name: 'Ground'})
-    .useTraits([GroundTrait, SolidTrait, AppearanceTrait])
-    .set(PositionProperty, new Vector(200, 260))
-    .set(SpriteProperty, 'ground'),
-);
+// A ground tile: landable (GroundTrait) and a wall (SolidTrait), drawn with the
+// built-in "ground" sprite. A normal tile is both.
+export default new ActorBuilder({id: 'ground', name: 'Ground'})
+  .useTraits([GroundTrait, SolidTrait, AppearanceTrait])
+  .set(SpriteProperty, 'ground');
+`;
 
-// A coin floating above the ground, playing the built-in "coinSpin" animation.
-scene.addActor(
-  new ActorBuilder({id: 'coin', name: 'Coin'})
-    .useTraits([PositionalTrait, AppearanceTrait])
-    .set(PositionProperty, new Vector(320, 70))
-    .set(AnimationProperty, 'coinSpin'),
-);
+const COIN_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
 
-// A ball playing "pulse" — the animation authored in animations/pulse.json.
-scene.addActor(
-  new ActorBuilder({id: 'ball', name: 'Ball'})
-    .useTraits([PositionalTrait, AppearanceTrait])
-    .set(PositionProperty, new Vector(90, 90))
-    .set(AnimationProperty, 'pulse'),
-);
+// A coin playing the built-in "coinSpin" animation.
+export default new ActorBuilder({id: 'coin', name: 'Coin'})
+  .useTraits([PositionalTrait, AppearanceTrait])
+  .set(AnimationProperty, 'coinSpin');
+`;
 
-export default scene;
+const BALL_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
+
+// A ball playing "pulse" — the animation authored in animations/game.json.
+export default new ActorBuilder({id: 'ball', name: 'Ball'})
+  .useTraits([PositionalTrait, AppearanceTrait])
+  .set(AnimationProperty, 'pulse');
 `;
 
 const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule, parseAnimationFile} from 'world-lab';
@@ -85,6 +78,67 @@ const onEvent = (event: string, x: number, y: number, message: string) => ({
   },
 });
 
+// One `add actor` block: places `actorPath` and sets its start position in the
+// `do` body. The block's own `id` becomes the actor instance id (stable across
+// edits), so it is spelled out here rather than left to Blockly to randomize.
+const addActorBlock = (
+  id: string,
+  actorPath: string,
+  x: number,
+  y: number,
+  next?: object,
+) => ({
+  type: 'world_add_actor',
+  id,
+  fields: {ACTOR: actorPath},
+  inputs: {
+    DO: {block: {type: 'world_set_position', fields: {X: x, Y: y}}},
+  },
+  ...(next ? {next: {block: next}} : {}),
+});
+
+// The scene, authored in Blockly (`main.scene`): a `world_scene` root naming the
+// world, with a chain of `add actor` blocks placing each template instance.
+const MAIN_SCENE = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_scene',
+          x: 20,
+          y: 20,
+          fields: {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
+          inputs: {
+            BODY: {
+              block: addActorBlock(
+                'add-player',
+                'actors/player',
+                200,
+                20,
+                addActorBlock(
+                  'add-ground',
+                  'actors/ground',
+                  200,
+                  260,
+                  addActorBlock(
+                    'add-coin',
+                    'actors/coin',
+                    320,
+                    70,
+                    addActorBlock('add-ball', 'actors/ball', 90, 90),
+                  ),
+                ),
+              ),
+            },
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
 const PLAYER_ACTOR = JSON.stringify(
   {
     blocks: {
@@ -100,16 +154,14 @@ const PLAYER_ACTOR = JSON.stringify(
                 {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
                 nextBlock(
                   {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
-                  nextBlock(
-                    {type: 'world_set_position', fields: {X: 200, Y: 20}},
-                    // Plays a learner-authored animation (game.json) — its id is
-                    // in the dropdown because the lab feeds the project's
-                    // animations to the block (Phase D).
-                    {
-                      type: 'world_play_animation',
-                      fields: {ANIMATION: 'playerBob'},
-                    },
-                  ),
+                  // Plays a learner-authored animation (game.json) — its id is
+                  // in the dropdown because the lab feeds the project's
+                  // animations to the block (Phase D). Position is set by the
+                  // Scene when it places this actor, not here.
+                  {
+                    type: 'world_play_animation',
+                    fields: {ANIMATION: 'playerBob'},
+                  },
                 ),
               ),
             },
@@ -163,8 +215,8 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
     files: {
       main: {
         id: 'main',
-        name: 'main.js',
-        language: 'javascript',
+        name: 'main.scene',
+        language: 'scene',
         contents: MAIN_SCENE,
         folderId: 'scenes',
         active: true,
@@ -182,6 +234,27 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         name: 'player.actor',
         language: 'actor',
         contents: PLAYER_ACTOR,
+        folderId: 'actors',
+      },
+      ground: {
+        id: 'ground',
+        name: 'ground.js',
+        language: 'javascript',
+        contents: GROUND_ACTOR,
+        folderId: 'actors',
+      },
+      coin: {
+        id: 'coin',
+        name: 'coin.js',
+        language: 'javascript',
+        contents: COIN_ACTOR,
+        folderId: 'actors',
+      },
+      ball: {
+        id: 'ball',
+        name: 'ball.js',
+        language: 'javascript',
+        contents: BALL_ACTOR,
         folderId: 'actors',
       },
       gameAnimations: {

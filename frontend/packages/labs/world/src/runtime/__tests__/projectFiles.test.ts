@@ -9,12 +9,16 @@ describe('projectFiles', () => {
   it('flattens the default project to folder-prefixed paths', () => {
     const files = projectFiles(DEFAULT_PROJECT.source);
     expect(Object.keys(files).sort()).toEqual([
+      'actors/ball.js',
+      'actors/coin.js',
+      'actors/ground.js',
       'actors/player.actor',
       'animations/game.json',
-      'scenes/main.js',
+      'scenes/main.scene',
       'worlds/platform.js',
     ]);
-    expect(files['scenes/main.js']).toContain('SceneBuilder');
+    // The scene is a Blockly workspace (generated to a SceneBuilder at compile).
+    expect(files['scenes/main.scene']).toContain('world_add_actor');
   });
 
   it('nests through multiple folder levels', () => {

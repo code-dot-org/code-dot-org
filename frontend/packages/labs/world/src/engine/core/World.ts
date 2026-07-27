@@ -162,6 +162,11 @@ export class World {
     this.actorList.push(actor);
   }
 
+  /** Whether an actor with `id` is already in this world. */
+  hasActor(id: string): boolean {
+    return this.actorList.some(actor => actor.id === id);
+  }
+
   /** Raise an event for `actor`; dispatched after the current tick's steps. */
   emit(event: GameEvent, actor: Actor, detail?: unknown): void {
     this.events.enqueue(event, actor, detail);

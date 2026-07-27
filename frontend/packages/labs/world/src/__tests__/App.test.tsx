@@ -31,6 +31,14 @@ vi.mock('@xterm/addon-fit', () => ({
 }));
 vi.mock('@xterm/addon-image', () => ({ImageAddon: class {}}));
 
+// The default project opens on `main.scene`, a Blockly file, so the visible
+// Blockly editor mounts. Blockly needs a real browser (injects CSS/observers
+// jsdom can't handle), like xterm above — stub it; this smoke test asserts the
+// shell composes, not Blockly's rendering (covered by the blockly/ tests).
+vi.mock('../blockly/BlocklyFileEditor', () => ({
+  BlocklyFileEditor: () => <div>blockly editor</div>,
+}));
+
 // Stub the info panel: it renders the base ResourcePanel, which calls the
 // dashboard API (via useApiClient) and needs the host's ApiClientProvider.
 // That's base's concern and is exercised in the dev demo; here we only assert
@@ -56,12 +64,12 @@ it('renders the World Lab shell from the default project', async () => {
   await act(async () => {});
 
   // The default project's open file and folders appear in the browser.
-  expect((await screen.findAllByText('main.js')).length).toBeGreaterThan(0);
+  expect((await screen.findAllByText('main.scene')).length).toBeGreaterThan(0);
   expect(screen.getAllByText('scenes').length).toBeGreaterThan(0);
   expect(screen.getAllByText('worlds').length).toBeGreaterThan(0);
   expect(screen.getAllByText('actors').length).toBeGreaterThan(0);
-  // The CodeMirror editor mounted with the active file.
-  expect(document.querySelector('.cm-editor')).not.toBe(null);
+  // The active file is the Blockly scene, so its (stubbed) Blockly editor mounts.
+  expect(screen.getByText('blockly editor')).toBeTruthy();
   // The preview view toggle rendered.
   expect(screen.getByText('Preview')).toBeTruthy();
   // No sandbox is configured under jsdom, so the preview says so.
