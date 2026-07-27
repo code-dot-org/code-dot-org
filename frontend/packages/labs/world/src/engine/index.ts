@@ -38,8 +38,9 @@ export type {
   Rule,
 } from './core/types';
 
-// The standard rule library (Spatial → Motion → Collision → Gravity).
+// The standard rule library (Spatial → Motion → Collision → Gravity → Input).
 export * from './rules/spatial';
 export * from './rules/motion';
 export * from './rules/collision';
 export * from './rules/gravity';
+export * from './rules/input';

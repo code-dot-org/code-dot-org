@@ -17,6 +17,7 @@ const str = (value: unknown): string => JSON.stringify(String(value));
 const TRAIT_CONST: Record<string, string> = {
   affected: 'AffectedByGravityTrait',
   ground: 'GroundTrait',
+  controlled: 'ControlledByArrowsTrait',
 };
 const EVENT_CONST: Record<string, string> = {
   startsFalling: 'StartsFallingEvent',
@@ -61,6 +62,7 @@ const worldUseTrait = defineBlock({
       options: [
         ['Affected by Gravity', 'affected'],
         ['Acts as Ground', 'ground'],
+        ['Controlled by Arrow Keys', 'controlled'],
       ],
     },
   ],

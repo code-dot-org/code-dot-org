@@ -86,6 +86,11 @@ export class World {
   private readonly actorList: Actor[] = [];
   private readonly scheduler: Scheduler;
   private readonly events = new EventQueue();
+  // The set of currently-pressed input keys, refreshed by the driver each frame
+  // before `tick` (the engine is DOM-free, so input arrives as plain data).
+  // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
+  // names ('ArrowLeft', 'a', ' ').
+  private keys: ReadonlySet<string> = new Set();
 
   constructor(init: WorldInit) {
     this.id = init.id;
@@ -141,6 +146,16 @@ export class World {
   /** Raise an event for `actor`; dispatched after the current tick's steps. */
   emit(event: GameEvent, actor: Actor, detail?: unknown): void {
     this.events.enqueue(event, actor, detail);
+  }
+
+  /** Replace the pressed-key set (driver calls this each frame before `tick`). */
+  setInput(keys: Iterable<string>): void {
+    this.keys = new Set(keys);
+  }
+
+  /** Whether `key` (a DOM `KeyboardEvent.key` name) is currently pressed. */
+  isKeyDown(key: string): boolean {
+    return this.keys.has(key);
   }
 
   /** Advance the simulation by `delta` seconds. */

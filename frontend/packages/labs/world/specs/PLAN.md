@@ -608,13 +608,19 @@ Unit first, then browser:
   per-project subdomain. The origin config must not hard-code a single host.
 - **Editor typings for `world-lab`.** Learner TS autocomplete is a
   Codebridge-editor concern, deferred; the engine ships `.d.ts` so it is ready.
-- **Blockly authoring (`.rule` / `.actor`).** The _editor_ is now wired: these
-  file types open in a Blockly workspace (via Codebridge's new
-  `editorComponents` per-language seam → `src/blockly/BlocklyFileEditor.tsx`),
-  stored as serialized JSON. Still to come: domain blocks
-  (Rules/Traits/Actors/Events) and the Blockly → `world-lab` code generator, so
-  an authored file compiles and runs through the same esbuild path unchanged
-  (only `.js`/`.ts` execute today).
+- **Blockly authoring (`.rule` / `.actor`).** DONE (milestone 6). The file types
+  open in a Blockly workspace (via Codebridge's new `editorComponents`
+  per-language seam → `src/blockly/BlocklyFileEditor.tsx`), stored as serialized
+  JSON. `src/blockly/domainBlocks.ts` defines the Actor vocabulary (actor,
+  traits, position, events, log), each carrying its `world-lab` generator;
+  `src/blockly/BlocklyGenerator.tsx` transforms an authored file to JS before
+  compile, so it runs through the same esbuild path unchanged. Events are their
+  own free-floating top-level blocks (like `when_run`), so
+  `src/blockly/assembleActorModule.ts` orders the generated blocks
+  deterministically (actor first — TDZ-safe — then handlers, then the export).
+  Verified in the browser (editor renders the floating blocks; the game runs)
+  and unit-tested headlessly. Still open: a richer block/engine vocabulary
+  (input, sprites) — see milestone 7.
 
 ## 16. Milestones
 
@@ -661,3 +667,28 @@ Unit first, then browser:
    real browser via `dev:isolated`: the actor renders, falls, and lands, with
    console relayed to the box. (First `dev:isolated` load triggers a one-time
    Vite dep-optimization reload — reload the page once.)
+6. **Blockly authoring — editor, domain blocks, generator** — DONE. `.rule` /
+   `.actor` files open in a Blockly workspace (Codebridge `editorComponents`
+   seam → `src/blockly/BlocklyFileEditor.tsx`), stored as serialized JSON.
+   `src/blockly/domainBlocks.ts` is the Actor vocabulary (actor, traits,
+   position, events, log), each block carrying its `world-lab` generator;
+   `src/blockly/BlocklyGenerator.tsx` transforms an authored file to JS before
+   compile so it runs through the same esbuild path unchanged. Events are their
+   own free-floating top-level blocks (the code.org `when_run` idiom), so
+   `src/blockly/assembleActorModule.ts` orders the generated blocks
+   deterministically (actor first — TDZ-safe — then handlers, then the export).
+   Verified in the browser (default project's player is a `.actor`; the editor
+   renders the floating blocks; the game runs) and unit-tested headlessly
+   (`assembleActorModule`, `domainBlocks` generators). The default project now
+   pairs a JS scene/world with the Blockly-authored player.
+7. **Richer vocabulary + interactivity** — IN PROGRESS. Grow the engine and
+   blocks beyond the gravity demo. First slice DONE — keyboard input: the World
+   gained a DOM-free input channel (`setInput`/`isKeyDown`), a new `input` rule
+   (`engine/rules/input.ts`) adds a `ControlledByArrowsTrait` whose step drives
+   horizontal velocity from the arrow keys (composing with gravity into a
+   platformer), the Phaser binding reads cursor keys each frame, and the
+   `world_use_trait` block gained a "Controlled by Arrow Keys" option. Unit-
+   tested (`engine/__tests__/input.test.ts`) and browser-verified (the player
+   falls, lands, and moves right under ArrowRight). Remaining: more
+   traits/rules/events (incl. key-press _events_, which need per-actor event
+   payloads), and Phaser sprites/assets in the binding.
