@@ -83,13 +83,7 @@ function RootContent() {
           the fold while a route's chunk or data loads, and doesn't jump down when
           the content arrives. Layout-level concern shared by every async route;
           the offset approximates the header height. */}
-      <Box
-        sx={{
-          minHeight: 'calc(100vh - 50px)',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
+      <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
         {renderRouteArea(auth, onRetry)}
       </Box>
       <StudioFooter />

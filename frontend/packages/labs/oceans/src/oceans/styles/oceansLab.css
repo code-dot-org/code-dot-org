@@ -44,7 +44,6 @@
   position: relative;
   width: var(--oceans-lab-width);
   min-width: var(--oceans-lab-min-width);
-  overflow: hidden;
 
   /*
    * Lock against flex-shrink so a narrower flex parent overflows/scrolls

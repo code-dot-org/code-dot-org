@@ -167,7 +167,16 @@ function CourseLevelRoute() {
   }, [resolved, router]);
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0}}>
+    // Own full-height flex context (the shared root layout stays block, so
+    // centered routes like /users/edit are unaffected); the lab fills below the
+    // nav. Offset mirrors the root's header-height reserve.
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: 'calc(100vh - 50px)',
+      }}
+    >
       <LevelNavigation
         currentPosition={resolved.position}
         levels={resolved.levels}
