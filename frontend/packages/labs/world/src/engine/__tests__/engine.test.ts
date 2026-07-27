@@ -11,7 +11,9 @@ import {
   MovableTrait,
   PositionProperty,
   PositionalTrait,
+  ScaleProperty,
   SceneBuilder,
+  SizeProperty,
   StartsFallingEvent,
   StopsFallingEvent,
   StrengthProperty,
@@ -21,8 +23,15 @@ import {
 } from '../index';
 
 // Build a gravity world with one faller and one ground actor, wired through the
-// public builders exactly as a learner's scene would be.
-function makeScene(playerStart = new Vector(0, 0), groundY = 100) {
+// public builders exactly as a learner's scene would be. Sizes are explicit so
+// the half-extent landing math is unambiguous: neither actor has a sprite, so
+// without an override each would fall back to the default box.
+function makeScene(
+  playerStart = new Vector(0, 0),
+  groundY = 100,
+  playerSize = new Vector(20, 20),
+  groundSize = new Vector(20, 20),
+) {
   const scene = new SceneBuilder({id: 'game', name: 'Game'});
   const world = scene.useWorld(
     new WorldBuilder({id: 'platform', name: 'Platform'}).useRules([
@@ -32,12 +41,14 @@ function makeScene(playerStart = new Vector(0, 0), groundY = 100) {
   const player = scene.addActor(
     new ActorBuilder({id: 'player', name: 'Player'})
       .useTraits([AffectedByGravityTrait])
-      .set(PositionProperty, playerStart),
+      .set(PositionProperty, playerStart)
+      .set(SizeProperty, playerSize),
   );
   scene.addActor(
     new ActorBuilder({id: 'ground', name: 'Ground'})
       .useTraits([GroundTrait])
-      .set(PositionProperty, new Vector(0, groundY)),
+      .set(PositionProperty, new Vector(0, groundY))
+      .set(SizeProperty, groundSize),
   );
   return {world, player};
 }
@@ -66,8 +77,10 @@ describe('trait resolution through the standard rules', () => {
 describe('gravity simulation', () => {
   const DELTA = 0.1; // strength 900 → +90 px/s of velocity per tick
 
-  it('accelerates a faller and lands it on the ground', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 100);
+  it('accelerates a faller and rests its box on the ground surface', () => {
+    // Ground centre 120, half-height 10 → surface top at 110. Player half-height
+    // 10 → its box bottom meets the surface when its centre reaches 100.
+    const {world, player} = makeScene(new Vector(0, 0), 120);
     let starts = 0;
     let stops = 0;
     player.on(StartsFallingEvent, () => (starts += 1));
@@ -81,7 +94,7 @@ describe('gravity simulation', () => {
     expect(starts).toBe(1);
     expect(stops).toBe(0);
 
-    // Ticks 2–4: keeps accelerating, still above the ground (p.y: 27, 54, 90).
+    // Ticks 2–4: keeps accelerating, still above the surface (p.y: 27, 54, 90).
     world.tick(DELTA);
     world.tick(DELTA);
     world.tick(DELTA);
@@ -89,13 +102,39 @@ describe('gravity simulation', () => {
     expect(player.get(FallingProperty)).toBe(true);
     expect(starts).toBe(1); // only the one transition
 
-    // Tick 5: would reach 135 → clamps to the ground at 100, velocity zeroed.
+    // Tick 5: would reach 135 → its box bottom meets the surface; centre rests
+    // at 100 (not buried at the ground centre, 120), velocity zeroed.
     world.tick(DELTA);
     expect(player.get(PositionProperty).y).toBeCloseTo(100);
     expect(player.get(VelocityProperty).y).toBe(0);
     expect(player.get(FallingProperty)).toBe(false);
     expect(player.query(IsOnGroundQuery)).toBe(true);
     expect(stops).toBe(1);
+  });
+
+  it('rests a taller actor higher — the box half-height sets the resting centre', () => {
+    // Same ground (surface top 110), but a 40px-tall player (half-height 20)
+    // rests with its centre 20 above the surface, at 90.
+    const {world, player} = makeScene(
+      new Vector(0, 0),
+      120,
+      new Vector(40, 40),
+    );
+    for (let i = 0; i < 20; i++) {
+      world.tick(DELTA);
+    }
+    expect(player.get(FallingProperty)).toBe(false);
+    expect(player.get(PositionProperty).y).toBeCloseTo(90);
+  });
+
+  it('scales the collision box by the actor scale', () => {
+    // A 20px player at 2× scale is a 40px box (half-height 20) → rests at 90.
+    const {world, player} = makeScene(new Vector(0, 0), 120);
+    player.set(ScaleProperty, new Vector(2, 2));
+    for (let i = 0; i < 20; i++) {
+      world.tick(DELTA);
+    }
+    expect(player.get(PositionProperty).y).toBeCloseTo(90);
   });
 
   it('runs the steps in the intended per-tick order', () => {

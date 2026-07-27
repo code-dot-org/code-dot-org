@@ -78,8 +78,11 @@ function playerBody(c) {
 const STATIC = {
   player: c => playerBody(c),
   ground(c) {
-    c.rect(0, 8, 32, 24, [107, 74, 43]); // soil
-    c.rect(0, 8, 32, 6, [90, 160, 44]); // grass top
+    // Fill the whole cell so the drawn tile is an exact 32x32 square: its top
+    // edge is the cell top, matching the collision box (rules/collision.ts), so
+    // an actor rests on the visible grass rather than floating above it.
+    c.rect(0, 0, 32, 32, [107, 74, 43]); // soil fills the tile
+    c.rect(0, 0, 32, 6, [90, 160, 44]); // grass top strip
   },
   coin(c) {
     c.disc(16, 16, 13, [244, 196, 48]);

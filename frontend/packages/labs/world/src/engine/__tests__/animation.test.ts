@@ -8,6 +8,7 @@ import {
   AppearanceTrait,
   FrameChangedEvent,
   FrameProperty,
+  IntrinsicSizeProperty,
   PositionProperty,
   SceneBuilder,
   SpriteProperty,
@@ -46,6 +47,38 @@ describe('the Animation rule', () => {
     }
     expect(actor.get(FrameProperty)).toBeLessThan(6);
     expect(actor.get(FrameProperty)).toBeGreaterThanOrEqual(0);
+  });
+
+  it('publishes the animation frame-cell size as the actor intrinsic size', () => {
+    // "coinSpin" is a 32px uniform strip; the Collision rule reads this to fit
+    // its default box to the sprite.
+    const {world, actor} = makeScene('coinSpin');
+    // Unknown until the first tick resolves the animation.
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
+  });
+
+  it('leaves the intrinsic size unknown for a whole-image sprite (no cell)', () => {
+    // A frame without a `position` cell carries no pixel dimensions the engine
+    // can know, so the intrinsic size stays (0, 0) and Collision falls back.
+    const wholeImage: AnimationDef = {
+      frames: [{sprite: 's', delay: 100}],
+    };
+    const scene = new SceneBuilder({id: 'gw', name: 'GW'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'ww', name: 'WW'})
+        .useRules([AnimationRule])
+        .useAnimations({wholeImage}),
+    );
+    const actor = scene.addActor(
+      new ActorBuilder({id: 'aw', name: 'AW'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(AnimationProperty, 'wholeImage'),
+    );
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
   });
 
   it('holds the last frame and emits AnimationEnded once when a non-looping animation finishes', () => {

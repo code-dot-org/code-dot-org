@@ -40,6 +40,23 @@ export const SkewProperty = PositionalTrait.addProperty(
   {name: 'vertical skew'},
 );
 
+/**
+ * The actor's intrinsic bounding size in sprite pixels — the box the sprite
+ * "fits", before scale. Lives on the positional trait so both the Animation
+ * rule (which writes it) and the Collision rule (which reads it as the default
+ * collision box) can reach it without depending on each other; the Animation
+ * rule owns the writes, publishing the current animation's frame-cell extent
+ * (rules/animation.ts). A degenerate `(0, 0)` means "unknown" — no appearance,
+ * or a single image whose pixel size the engine cannot know (the engine never
+ * interprets pixels) — and Collision falls back to its own default box.
+ */
+export const IntrinsicSizeProperty = PositionalTrait.addProperty(
+  SPATIAL.intrinsicSize,
+  'vector',
+  new Vector(0, 0),
+  {readonly: true, name: 'intrinsic size'},
+);
+
 export const MoveAction = PositionalTrait.addAction(
   'move',
   (actor, to) => actor.set(PositionProperty, Vector.from(to as VectorLike)),
