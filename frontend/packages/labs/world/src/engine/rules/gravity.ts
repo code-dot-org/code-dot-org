@@ -88,38 +88,79 @@ export const ApplyVelocityStep = rule.addStepBefore(
   },
 );
 
-// After Collision resolves: land affected actors on the topmost ground surface,
-// and raise startsFalling / stopsFalling as their state changes. A 1-D vertical
-// model for the slice — bounding boxes are resolved with half-extents so an
-// actor rests *on* the surface rather than sinking its centre into it, but the
-// horizontal axis (does the actor overlap this ground's x-span? which block's
-// top?) is still real-AABB work for later.
+// After Collision resolves: push affected actors out of the ground blocks they
+// overlap, and raise startsFalling / stopsFalling as their resting state
+// changes. Full axis-aligned box resolution: each overlap is resolved on the
+// axis the actor *entered through* — the axis on which it was clear one tick
+// ago — so it lands on a block's top, stops at a block's side (a wall), and can
+// walk to a block's edge and off it without catching. Using the pre-move
+// position (rather than the shallower current overlap) is what avoids two
+// classic failures: a fast faller tunnelling to the wrong side, and an actor
+// sliding along a surface being ejected sideways near the edge.
+//
+// Grounds are treated as static; overlaps are resolved per block in turn, which
+// is exact for separated blocks. A row of abutting blocks can still snag an
+// actor on an interior seam (the min-penetration fallback for a deep, already-
+// overlapping hit) — swept resolution across the whole set is the next step up.
 export const HandleCollisionsStep = rule.addStepAfter(
   'handleCollisions',
   ResolveStep,
-  world => {
-    // The topmost ground *surface* — each ground's box top, not its centre.
-    let groundTop = Infinity;
-    for (const ground of world.actors.with(GroundTrait)) {
-      const top = ground.get(PositionProperty).y - collisionSize(ground).y / 2;
-      groundTop = Math.min(groundTop, top);
-    }
+  (world, delta) => {
+    const grounds = [...world.actors.with(GroundTrait)];
     for (const actor of world.actors.with(AffectedByGravityTrait)) {
-      const position = actor.get(PositionProperty);
-      const velocity = actor.get(VelocityProperty);
-      const wasFalling = actor.get(FallingProperty);
-      // Rest so the actor's box bottom meets the surface: centre a half-height up.
-      const restY = groundTop - collisionSize(actor).y / 2;
-      if (position.y >= restY) {
-        // Landed: clamp to the surface and stop vertical motion.
-        actor.set(PositionProperty, new Vector(position.x, restY));
-        actor.set(VelocityProperty, new Vector(velocity.x, 0));
-        if (wasFalling) {
-          actor.set(FallingProperty, false);
-          world.emit(StopsFallingEvent, actor);
+      const size = collisionSize(actor);
+      let position = actor.get(PositionProperty);
+      let velocity = actor.get(VelocityProperty);
+      // Where the actor was before Motion moved it this tick — the entry side.
+      const prevX = position.x - velocity.x * delta;
+      const prevY = position.y - velocity.y * delta;
+      let onGround = false;
+
+      for (const ground of grounds) {
+        const groundPosition = ground.get(PositionProperty);
+        const groundSize = collisionSize(ground);
+        // Centre distance at which the boxes just touch, per axis.
+        const reachX = (size.x + groundSize.x) / 2;
+        const reachY = (size.y + groundSize.y) / 2;
+        const overlapX = reachX - Math.abs(position.x - groundPosition.x);
+        const overlapY = reachY - Math.abs(position.y - groundPosition.y);
+        if (overlapX <= 0 || overlapY <= 0) {
+          continue; // this block isn't touching the actor
         }
-      } else if (!wasFalling) {
-        // Left the ground.
+        // Resolve on the axis the actor entered through — the one it was clear
+        // of a tick ago. If it was already overlapping both (a deep hit), fall
+        // back to the shallower axis.
+        const clearedY = reachY - Math.abs(prevY - groundPosition.y) <= 0;
+        const clearedX = reachX - Math.abs(prevX - groundPosition.x) <= 0;
+        const resolveVertical = clearedY || (!clearedX && overlapY <= overlapX);
+        if (resolveVertical) {
+          if (prevY <= groundPosition.y) {
+            position = new Vector(position.x, groundPosition.y - reachY); // on top
+            onGround = true;
+          } else {
+            position = new Vector(position.x, groundPosition.y + reachY); // ceiling
+          }
+          velocity = new Vector(velocity.x, 0);
+        } else {
+          if (prevX <= groundPosition.x) {
+            position = new Vector(groundPosition.x - reachX, position.y); // left face
+          } else {
+            position = new Vector(groundPosition.x + reachX, position.y); // right face
+          }
+          velocity = new Vector(0, velocity.y);
+        }
+      }
+
+      actor.set(PositionProperty, position);
+      actor.set(VelocityProperty, velocity);
+
+      // Resting on a block this tick ⇒ grounded; otherwise falling. Emit only on
+      // the transition.
+      const wasFalling = actor.get(FallingProperty);
+      if (onGround && wasFalling) {
+        actor.set(FallingProperty, false);
+        world.emit(StopsFallingEvent, actor);
+      } else if (!onGround && !wasFalling) {
         actor.set(FallingProperty, true);
         world.emit(StartsFallingEvent, actor);
       }
