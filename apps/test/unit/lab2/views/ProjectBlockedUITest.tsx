@@ -86,9 +86,7 @@ describe('ProjectBlockedUI for privacy/profanity violations', () => {
       />
     );
 
-    expect(
-      screen.getByText(PRIVACY_PROFANITY_OWNER_ALERT)
-    ).toBeInTheDocument();
+    expect(screen.getByText(PRIVACY_PROFANITY_OWNER_ALERT)).toBeInTheDocument();
     expect(
       screen.queryByText(PRIVACY_PROFANITY_BLOCKED_MESSAGE)
     ).not.toBeInTheDocument();
