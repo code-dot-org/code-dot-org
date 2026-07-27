@@ -177,7 +177,7 @@ const InnerCodeEditor = ({
 const CodeEditor = () => {
   const {source, saveFile} = useFileOperations();
   const activeFile = getActiveFileForSource(source);
-  const {languageExtensions} = useCodebridgeConfig();
+  const {languageExtensions, editorComponents} = useCodebridgeConfig();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
   const editorFontSizeKey = useAppSelector(
     state => state.labView.editorFontSizeKey,
@@ -192,6 +192,22 @@ const CodeEditor = () => {
         imageProps={{src: emptyFilesPlaceholderImage}}
         title="No files open"
         description="Create a new file or open one from the file manager to start coding your project."
+      />
+    );
+  }
+
+  // A lab may supply a custom editor for a language (e.g. Blockly for `rule`);
+  // fall back to CodeMirror when there is none.
+  const CustomEditor = editorComponents?.[activeFile.language];
+  if (CustomEditor) {
+    return (
+      <CustomEditor
+        key={activeFile.id}
+        fileId={activeFile.id}
+        initialContents={activeFile.contents}
+        language={activeFile.language}
+        isReadOnly={isReadOnly}
+        onChange={contents => saveFile(activeFile.id, contents)}
       />
     );
   }

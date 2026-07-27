@@ -61,6 +61,22 @@ player.on(StopsFallingEvent, () => console.log('Player landed!'));
 export default player;
 `;
 
+// A starter `.rule` — a Blockly workspace stored as serialized JSON. It is not
+// yet imported by the scene (Blockly → world-lab code generation is the next
+// increment); it exists so the Blockly editor has something to open.
+const EXAMPLE_RULE = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {type: 'controls_if', x: 40, y: 40},
+        {type: 'math_number', x: 40, y: 140, fields: {NUM: 42}},
+      ],
+    },
+  },
+  null,
+  2,
+);
+
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   source: {
     files: {
@@ -87,11 +103,19 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: PLAYER_ACTOR,
         folderId: 'actors',
       },
+      example: {
+        id: 'example',
+        name: 'example.rule',
+        language: 'rule',
+        contents: EXAMPLE_RULE,
+        folderId: 'rules',
+      },
     },
     folders: {
       scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
+      rules: {id: 'rules', name: 'rules', parentId: '0'},
     },
     openFiles: ['main'],
   },

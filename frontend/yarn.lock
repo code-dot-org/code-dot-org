@@ -2692,6 +2692,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/world-lab@workspace:packages/labs/world"
   dependencies:
+    "@code-dot-org/blockly": "workspace:*"
     "@code-dot-org/codebridge": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/component-library-styles": "workspace:*"

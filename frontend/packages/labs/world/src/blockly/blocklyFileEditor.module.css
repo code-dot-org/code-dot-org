@@ -1,0 +1,16 @@
+/* Fills the editor pane Codebridge hands the custom editor. Blockly's own
+   container (className below) is flex:1/height:100% and injects its own CSS, so
+   this only needs to be a sized flex column. */
+.editor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.workspace {
+  flex: 1;
+  min-height: 0;
+}
