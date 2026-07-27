@@ -84,6 +84,12 @@ module GitUtils
     Dir.chdir(project_directory) do
       `git rev-parse --short=8 HEAD`.strip
     end
+  rescue Errno::ENOENT
+    # No git binary (container images bake source without git). Worse than
+    # nil-and-continue: this is called from inside config/test.yml.erb ERB,
+    # and lib/cdo/yaml.rb swallows ENOENT as "config file missing", silently
+    # rendering the whole file to nothing.
+    nil
   end
 
   def self.git_revision_branch(branch)

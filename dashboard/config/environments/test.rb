@@ -55,8 +55,9 @@ Dashboard::Application.configure do
   config.active_support.deprecation = :stderr
 
   # See stack traces around SQL queries in the log. Off by default because it
-  # slows things down.
-  ActiveRecordQueryTrace.enabled = false
+  # slows things down. Absent entirely when the test gem group is not
+  # installed (production-gem images booting test, see docker/migrate).
+  ActiveRecordQueryTrace.enabled = false if defined?(ActiveRecordQueryTrace)
 
   # Explicitly set legacy test-order behavior in Rails 4.2.
   # See http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ordering-of-test-cases
