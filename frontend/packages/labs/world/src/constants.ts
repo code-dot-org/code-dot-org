@@ -32,12 +32,13 @@ scene.addActor(
 export default scene;
 `;
 
-const PLATFORM_WORLD = `import {WorldBuilder, GravityRule} from 'world-lab';
+const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule} from 'world-lab';
 
 // A World is the set of rules in play. "Has Gravity" pulls in motion and
-// collision automatically.
+// collision automatically; "Responds to Input" lets arrow-key-controlled actors
+// move.
 export default new WorldBuilder({id: 'platform', name: 'Platform World'}).useRules(
-  [GravityRule],
+  [GravityRule, InputRule],
 );
 `;
 
@@ -76,7 +77,10 @@ const PLAYER_ACTOR = JSON.stringify(
             BODY: {
               block: nextBlock(
                 {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
-                {type: 'world_set_position', fields: {X: 200, Y: 20}},
+                nextBlock(
+                  {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
+                  {type: 'world_set_position', fields: {X: 200, Y: 20}},
+                ),
               ),
             },
           },

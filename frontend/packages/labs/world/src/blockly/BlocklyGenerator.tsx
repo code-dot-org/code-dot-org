@@ -13,6 +13,7 @@ import {
   BlocklyWorkspace,
 } from '@code-dot-org/blockly';
 
+import {assembleActorModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {DOMAIN_BLOCKS} from './domainBlocks';
 
@@ -51,28 +52,18 @@ export const BlocklyGenerator = forwardRef<
         Blockly.serialization.workspaces.load(state, workspace);
 
         // Events are their own top-level blocks, so we can't rely on
-        // `workspaceToCode`'s position ordering: an event dragged above the
-        // actor would emit `actor.on(...)` before `const actor` (a TDZ error).
-        // Assemble deterministically instead — the actor block first, then the
-        // floating event handlers, then the default export. `export default`
-        // captures the actor object by reference, so handlers that register
-        // after it still mutate the exported instance.
+        // `workspaceToCode`'s position ordering (see assembleActorModule).
+        // Generate each top block's code, then let assembleActorModule order
+        // them deterministically — the actor first, then the floating handlers,
+        // then the default export.
         const asString = (code: string | [string, number]): string =>
           Array.isArray(code) ? code[0] : code;
-        const tops = workspace.getTopBlocks(true);
-        const actorBlock = tops.find(block => block.type === 'world_actor');
-        const eventBlocks = tops.filter(block => block !== actorBlock);
-
         generator.init(workspace);
-        const actorCode = actorBlock
-          ? asString(generator.blockToCode(actorBlock))
-          : '';
-        const eventsCode = eventBlocks
-          .map(block => asString(generator.blockToCode(block)))
-          .join('');
-        return generator.finish(
-          `${actorCode}${eventsCode}export default actor;\n`,
-        );
+        const generated = workspace.getTopBlocks(true).map(block => ({
+          type: block.type,
+          code: asString(generator.blockToCode(block)),
+        }));
+        return generator.finish(assembleActorModule(generated));
       },
     }),
     [],

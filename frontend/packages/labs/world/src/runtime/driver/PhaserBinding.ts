@@ -11,6 +11,11 @@
 //
 // The slice draws each actor as a plain rectangle; sprites and animations are
 // later work (the asset pipeline).
+//
+// Input: each frame we read Phaser's cursor keys and hand the pressed set to the
+// World (`setInput`) before ticking, so the engine's Input rule can drive
+// controlled actors. Phaser attaches its keyboard listeners to the game canvas,
+// so the preview iframe must have focus for keys to register.
 
 import Phaser from 'phaser';
 
@@ -21,11 +26,29 @@ const DEFAULT_WIDTH = 400;
 const DEFAULT_HEIGHT = 300;
 const DEGREES_TO_RADIANS = Math.PI / 180;
 
+/** Phaser cursor keys → the DOM `KeyboardEvent.key` names the engine expects. */
+function pressedKeys(
+  cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined,
+): string[] {
+  if (!cursors) {
+    return [];
+  }
+  const map: Array<[Phaser.Input.Keyboard.Key | undefined, string]> = [
+    [cursors.left, 'ArrowLeft'],
+    [cursors.right, 'ArrowRight'],
+    [cursors.up, 'ArrowUp'],
+    [cursors.down, 'ArrowDown'],
+    [cursors.space, ' '],
+  ];
+  return map.filter(([key]) => key?.isDown).map(([, name]) => name);
+}
+
 export class PhaserBinding {
   private readonly game: Phaser.Game;
 
   constructor(world: World, parent: HTMLElement) {
     const objects = new Map<Actor, Phaser.GameObjects.Rectangle>();
+    let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 
     const sync = (scene: Phaser.Scene) => {
       for (const state of world.renderSnapshot() as RenderState[]) {
@@ -56,9 +79,12 @@ export class PhaserBinding {
       audio: {noAudio: true},
       scene: {
         create(this: Phaser.Scene) {
+          cursors = this.input.keyboard?.createCursorKeys();
           sync(this);
         },
         update(this: Phaser.Scene, _time: number, delta: number) {
+          // Feed this frame's keys in before advancing the simulation.
+          world.setInput(pressedKeys(cursors));
           // Phaser's delta is milliseconds; the engine ticks in seconds.
           world.tick(delta / 1000);
           sync(this);
