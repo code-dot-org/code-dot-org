@@ -6,6 +6,7 @@ import {
   CollidableTrait,
   FallingProperty,
   GravityRule,
+  GravityScaleProperty,
   GroundTrait,
   IsOnGroundQuery,
   MovableTrait,
@@ -135,6 +136,88 @@ describe('gravity simulation', () => {
       world.tick(DELTA);
     }
     expect(player.get(PositionProperty).y).toBeCloseTo(90);
+  });
+
+  it('falls again after walking off the edge of the ground', () => {
+    // Ground and player are both 20px wide, centred at x=0 (span [-10, 10]).
+    const {world, player} = makeScene(new Vector(0, 0), 120);
+    for (let i = 0; i < 20; i++) {
+      world.tick(DELTA);
+    }
+    expect(player.get(FallingProperty)).toBe(false); // resting on the block
+
+    // Slide fully past the block's right edge — centres 40 apart, more than the
+    // summed half-widths (20), so no horizontal overlap: support is gone.
+    const {y} = player.get(PositionProperty);
+    player.set(PositionProperty, new Vector(40, y));
+    world.tick(DELTA);
+    expect(player.get(FallingProperty)).toBe(true);
+
+    // And it keeps accelerating downward, off the world.
+    const afterOne = player.get(PositionProperty).y;
+    world.tick(DELTA);
+    expect(player.get(PositionProperty).y).toBeGreaterThan(afterOne);
+  });
+
+  it('stops at the side of a ground block instead of passing through it', () => {
+    // A wall block at x=25 (20 wide → left face at 15) reaching well above and
+    // below the player. Gravity is disabled so this isolates the horizontal axis.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
+    );
+    const player = scene.addActor(
+      new ActorBuilder({id: 'player', name: 'Player'})
+        .useTraits([AffectedByGravityTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(SizeProperty, new Vector(20, 20))
+        .set(GravityScaleProperty, 0),
+    );
+    scene.addActor(
+      new ActorBuilder({id: 'wall', name: 'Wall'})
+        .useTraits([GroundTrait])
+        .set(PositionProperty, new Vector(25, 0))
+        .set(SizeProperty, new Vector(20, 400)),
+    );
+    // Drive the player rightward each tick (resolution zeroes the velocity on
+    // contact); it must not tunnel through the wall despite a fast approach.
+    for (let i = 0; i < 10; i++) {
+      const {y} = player.get(VelocityProperty);
+      player.set(VelocityProperty, new Vector(300, y));
+      world.tick(DELTA);
+    }
+    // Player right edge (x + 10) rests against the wall's left face (15) → x = 5.
+    expect(player.get(PositionProperty).x).toBeCloseTo(5);
+  });
+
+  it('does not snap up onto a higher overlapping platform it never touched', () => {
+    // Player already resting on a lower block; a second block overlaps its x but
+    // sits well above it. The old min-surface model yanked the player up to the
+    // higher block — full AABB leaves it on the block it is actually touching.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
+    );
+    const player = scene.addActor(
+      new ActorBuilder({id: 'player', name: 'Player'})
+        .useTraits([AffectedByGravityTrait])
+        .set(PositionProperty, new Vector(0, 100)) // resting on the lower block
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    scene.addActor(
+      new ActorBuilder({id: 'lower', name: 'Lower'})
+        .useTraits([GroundTrait])
+        .set(PositionProperty, new Vector(0, 120)) // surface top 110
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    scene.addActor(
+      new ActorBuilder({id: 'higher', name: 'Higher'})
+        .useTraits([GroundTrait])
+        .set(PositionProperty, new Vector(0, 60)) // above, overlaps x
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    world.tick(DELTA);
+    expect(player.get(PositionProperty).y).toBeCloseTo(100); // still on the lower
   });
 
   it('runs the steps in the intended per-tick order', () => {
