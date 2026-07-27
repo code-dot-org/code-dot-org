@@ -135,33 +135,38 @@ that registers such a one-frame animation, preserving the current API.
 Each phase is independently shippable and verified (unit + browser), matching how
 milestones 1–7 were staged.
 
-- **A — Serialization + asset transform.** Add the `.anim`/spritesheet types and
-  the lab-side transform (`.anim` JSON → JS module exporting the definition;
-  frame `sprite`s stay stock-asset names). Register the transform on the
-  existing seam (`WorldRuntimeContext`, `virtualFsPlugin` `EXT_ORDER`). All text
-  — no compiler FS or binary changes. Unit-test the transform and a compile
-  round-trip importing a `.anim`. No runtime behavior yet.
+- **B — Engine Animation Rule.** DONE. `engine/rules/animation.ts`: the
+  `AppearanceTrait` (requires `PositionalTrait`), `SpriteProperty` +
+  `AnimationProperty` + internal frame state, a per-world animation registry
+  (`World.animation(id)`, seeded from rules' stock + `WorldBuilder.useAnimations`),
+  `AdvanceAnimationStep`, and `AnimationEndedEvent`. Appearance moved off the
+  spatial trait (new `APPEARANCE` key table); `renderSnapshot` emits the `frame`
+  descriptor. Stock `coinSpin`/`playerWalk` ship on the rule via
+  `RuleBuilder.addAnimation`. Unit-tested (`engine/__tests__/animation.test.ts`:
+  per-frame stepping, loop wrap, end-event-once + hold-last-frame, reset on
+  switch, the render descriptor).
 
-- **B — Engine Animation Rule.** `engine/rules/animation.ts`: trait, `animation`
-  property, world registry, `AdvanceAnimationStep`, `AnimationEndedEvent`. Fold
-  `SpriteProperty` in. `renderSnapshot` emits the `frame` descriptor. Delete the
-  `sprite`/`animation` string fields from the spatial trait and `SPATIAL` keys.
-  Unit-test frame stepping deterministically (elapsed → index across `delay`
-  boundaries; loop wrap vs. clamp + `AnimationEndedEvent`); test static-sprite
-  sugar and the render descriptor.
+- **C — Driver renders frames.** DONE. `PhaserBinding` no longer owns timing — it
+  blits the `frame` descriptor (texture per sprite, cell → strip frame index,
+  offset, scale). `anims.create`/`play` gone. Browser-verified: the coin spins
+  (engine-driven, same gold-oscillation signature) with the sprite/movement/
+  gravity demo intact.
 
-- **C — Driver renders frames.** Rework `PhaserBinding` to blit the `frame`
-  descriptor (texture-per-sprite cache, cell crop, offset, scale, center). Remove
-  the anims registration and the built-in preload. Browser-verify parity — the
-  demo coin still spins, now driven by the engine.
+- **A — Learner-authored `.anim` files.** Simplified by the render-time
+  resolution decision (§2): a `.anim` needs **no transform** — its sprite fields
+  are stock names resolved by the driver, so it is plain JSON. Teach the compiler
+  `.anim` → `json` (`virtualFsPlugin` `EXT_ORDER` + `loaderFor`); the learner
+  `import`s it and passes it to `WorldBuilder.useAnimations` (already wired). Add
+  a validator. Unit-test a compile round-trip importing a `.anim`.
 
-- **D — Blockly + project integration.** `world_play_animation`'s dropdown is
-  sourced from the project's `.anim` ids (dynamic, not a fixed list);
-  `world_on_event` gains `AnimationEnded`. Repackage the stock coin/player as a
-  spec-model `AnimationDef` **stock library** whose frames name the vendor PNGs
-  (still emitted by `generate-sprites.mjs`); the default project references them
-  by id. `src/sprites.ts`'s uniform-strip `ANIMATIONS` map retires. Browser-
-  verify the authored path end to end.
+- **D — Blockly + project integration.** PARTLY DONE. Done: the stock coin/player
+  are spec-model `AnimationDef`s on the rule (frames name the vendor sheets, still
+  emitted by `generate-sprites.mjs`); the default project's coin references
+  `coinSpin` by id; `world_set_sprite`/`world_play_animation` elect the appearance
+  trait; `src/sprites.ts` is now just the driver's load manifest
+  (`SPRITE_NAMES` + `SPRITESHEET_NAMES`), the uniform-strip `ANIMATIONS` map gone.
+  Remaining: source the `world_play_animation` dropdown from the project's `.anim`
+  ids (needs Phase A), and add `AnimationEnded` to `world_on_event`.
 
 - **E — Frame events (payloads).** Once per-actor event payloads land (§7), add
   `FrameChangedEvent` with the frame index and a `world_on_event` option, so a

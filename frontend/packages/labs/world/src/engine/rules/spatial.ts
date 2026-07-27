@@ -39,25 +39,6 @@ export const SkewProperty = PositionalTrait.addProperty(
   0,
   {name: 'vertical skew'},
 );
-// The built-in sprite the driver draws this actor with (empty = a plain
-// rectangle). A single image for now; spritesheets/animations are later work
-// (GLOSSARY.md). The driver maps the name to a self-hosted texture.
-export const SpriteProperty = PositionalTrait.addProperty(
-  SPATIAL.sprite,
-  'string',
-  '',
-  {name: 'sprite'},
-);
-// The built-in animation (a looping sprite sequence) to play on this actor,
-// taking precedence over a static sprite (empty = none). Animations and
-// spritesheets are the richer appearance layer (GLOSSARY.md); the driver owns
-// the frames and timing.
-export const AnimationProperty = PositionalTrait.addProperty(
-  SPATIAL.animation,
-  'string',
-  '',
-  {name: 'animation'},
-);
 
 export const MoveAction = PositionalTrait.addAction(
   'move',

@@ -5,9 +5,10 @@
 // then flush the events those steps raised.
 
 import type {Actor} from './Actor';
+import type {AnimationDef, FrameState} from './animationTypes';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
-import {SPATIAL} from './spatialKeys';
+import {APPEARANCE, SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {GameEvent, Property, Rule, Step, WorldAction} from './types';
@@ -40,10 +41,8 @@ export interface RenderState {
   scaleY: number;
   /** Degrees. */
   rotation: number;
-  /** Built-in sprite name; empty means draw a plain rectangle. */
-  sprite: string;
-  /** Built-in animation name; empty means none. Takes precedence over sprite. */
-  animation: string;
+  /** The current appearance frame to draw; absent means draw a plain rectangle. */
+  frame?: FrameState;
 }
 
 /** The data a WorldBuilder hands the World constructor. */
@@ -54,6 +53,8 @@ export interface WorldInit {
   rules: Rule[];
   /** Initial world-property values overriding rule defaults. */
   overrides: Array<[Property, unknown]>;
+  /** Animations to register beyond the active rules' stock, by id. */
+  animations?: Array<[string, AnimationDef]>;
 }
 
 const coerce = <T>(property: Property<T>, value: unknown): T =>
@@ -90,6 +91,9 @@ export class World {
   private readonly actorList: Actor[] = [];
   private readonly scheduler: Scheduler;
   private readonly events = new EventQueue();
+  // Animations known to this world, by id — seeded from the active rules' stock
+  // animations. The Animation rule's step and renderSnapshot resolve ids here.
+  private readonly animationDefs = new Map<string, AnimationDef>();
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
   // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
@@ -115,6 +119,17 @@ export class World {
     }
     for (const [property, value] of init.overrides) {
       this.store.set(property, coerce(property, value));
+    }
+
+    // Seed the animation registry from every active rule's stock animations,
+    // then apply any the builder registered (imported `.anim` files).
+    for (const rule of rules) {
+      for (const [id, def] of Object.entries(rule.animations)) {
+        this.animationDefs.set(id, def);
+      }
+    }
+    for (const [id, def] of init.animations ?? []) {
+      this.animationDefs.set(id, def);
     }
 
     // The per-tick order is fixed by the active rules' steps.
@@ -162,6 +177,11 @@ export class World {
     return this.keys.has(key);
   }
 
+  /** The definition of a known animation, or undefined. */
+  animation(id: string): AnimationDef | undefined {
+    return this.animationDefs.get(id);
+  }
+
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
     this.scheduler.run(this, delta);
@@ -205,15 +225,51 @@ export class World {
     const rotationProp = positional.properties[SPATIAL.rotation] as
       | Property<number>
       | undefined;
-    const spriteProp = positional.properties[SPATIAL.sprite] as
-      | Property<string>
-      | undefined;
-    const animationProp = positional.properties[SPATIAL.animation] as
-      | Property<string>
-      | undefined;
     if (!positionProp || !scaleProp || !rotationProp) {
       return [];
     }
+    // Appearance is a separate, optional trait; resolve its properties once.
+    const appearance = this.membership
+      .items()
+      .find(r => r.id === APPEARANCE.rule);
+    const appearanceTrait: Trait | undefined =
+      appearance?.traits[APPEARANCE.trait];
+    const spriteProp = appearanceTrait?.properties[APPEARANCE.sprite] as
+      | Property<string>
+      | undefined;
+    const animationProp = appearanceTrait?.properties[APPEARANCE.animation] as
+      | Property<string>
+      | undefined;
+    const frameProp = appearanceTrait?.properties[APPEARANCE.frame] as
+      | Property<number>
+      | undefined;
+    // Resolve one actor's current appearance frame: a playing animation's frame
+    // wins, then a static sprite, then nothing (a plain rectangle).
+    const frameFor = (actor: Actor): FrameState | undefined => {
+      if (!appearanceTrait || !actor.has(appearanceTrait)) {
+        return undefined;
+      }
+      const animId = animationProp ? actor.get(animationProp) : '';
+      if (animId) {
+        const def = this.animationDefs.get(animId);
+        if (def && def.frames.length > 0) {
+          const index = frameProp ? actor.get(frameProp) : 0;
+          const f = def.frames[Math.min(index, def.frames.length - 1)];
+          return {
+            sprite: f.sprite,
+            cell: f.position,
+            offset: f.offset ?? {x: 0, y: 0},
+            scale: f.scale ?? 1,
+          };
+        }
+      }
+      const sprite = spriteProp ? actor.get(spriteProp) : '';
+      if (sprite) {
+        return {sprite, offset: {x: 0, y: 0}, scale: 1};
+      }
+      return undefined;
+    };
+
     const states: RenderState[] = [];
     for (const actor of this.actorList) {
       if (!actor.has(positional)) {
@@ -228,10 +284,7 @@ export class World {
         scaleX: scale.x,
         scaleY: scale.y,
         rotation: actor.get(rotationProp),
-        // The sprite/animation properties were added to the positional trait
-        // later; tolerate their absence so an older built world still renders.
-        sprite: spriteProp ? actor.get(spriteProp) : '',
-        animation: animationProp ? actor.get(animationProp) : '',
+        frame: frameFor(actor),
       });
     }
     return states;

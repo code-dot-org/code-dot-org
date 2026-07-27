@@ -3,6 +3,7 @@
 // a rule for the simple view without removing it, and `set` overrides a
 // world-scoped property's default.
 
+import type {AnimationDef} from '../core/animationTypes';
 import type {Property, Rule} from '../core/types';
 import {World} from '../core/World';
 
@@ -12,6 +13,7 @@ export class WorldBuilder {
   private rules: Rule[] = [];
   private readonly hidden = new Set<Rule>();
   private readonly overrides: Array<[Property, unknown]> = [];
+  private readonly animations: Record<string, AnimationDef> = {};
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -40,6 +42,15 @@ export class WorldBuilder {
     return this;
   }
 
+  /**
+   * Register animations (typically from imported `.anim` files) by id, in
+   * addition to the stock animations the active rules ship.
+   */
+  useAnimations(defs: Record<string, AnimationDef>): this {
+    Object.assign(this.animations, defs);
+    return this;
+  }
+
   /** Create a live World from this description. */
   instantiate(): World {
     return new World({
@@ -47,6 +58,7 @@ export class WorldBuilder {
       name: this.name,
       rules: [...this.rules],
       overrides: [...this.overrides],
+      animations: Object.entries(this.animations),
     });
   }
 }

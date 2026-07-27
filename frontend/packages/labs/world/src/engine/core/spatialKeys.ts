@@ -11,11 +11,20 @@ export const SPATIAL = {
   scale: 'scale',
   rotation: 'rotation',
   skew: 'skew',
-  // The name of the built-in sprite to draw the actor with; empty = a plain
-  // rectangle. Lives on the positional trait so every drawable actor can carry
-  // one, and renderSnapshot reads it alongside the transform.
+} as const;
+
+// The Animation rule's member ids, shared with core so `World.renderSnapshot`
+// can read an actor's appearance (its selected sprite/animation and the current
+// frame index) without importing the rule — the same decoupling `SPATIAL` gives
+// for the transform. Appearance is its own trait (rules/animation.ts), elected
+// separately from the positional transform.
+export const APPEARANCE = {
+  rule: 'animation',
+  trait: 'appearance',
   sprite: 'sprite',
-  // The name of the built-in animation (a sprite sequence) to play. Takes
-  // precedence over `sprite`; empty = none. Also on the positional trait.
   animation: 'animation',
+  frame: 'frame',
+  elapsed: 'elapsed',
+  done: 'done',
+  playing: 'playing',
 } as const;
