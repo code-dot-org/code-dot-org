@@ -215,9 +215,12 @@ their own, replacing the stock library with project `.anim` files.
   resolved to self-origin URLs at render time (§2). `.anim`/spritesheet
   definitions are text and flow through the existing text pipeline untouched.
   Everything in Phases A–D is unblocked by this. **Learner-supplied custom
-  images are the one gated leaf** — they wait on the framework-level Codebridge
-  upload capability (`ProjectFile.url` + an asset endpoint), which is
-  cross-cutting (Web Lab needs the same) and out of World Lab's scope to build.
+  images** are handled by porting the legacy Codebridge uploader — see
+  `UPLOADS.md`. That port (a `ProjectFile.url` field, a core assets client, the
+  upload hook/UI, and forwarding uploaded bytes to the sandbox SW so they load
+  under `img-src 'self'`) replaces the earlier "gated leaf": uploaded and stock
+  sprites converge on the same self-origin render path (this plan's §2), so the
+  render/rule model here is unchanged whether a sprite is stock or uploaded.
 
 - **Per-actor event payloads.** `FrameChangedEvent` needs a payload (the frame);
   the event system currently emits per-actor with no learner-visible detail.
