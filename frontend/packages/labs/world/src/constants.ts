@@ -41,35 +41,48 @@ export default new WorldBuilder({id: 'platform', name: 'Platform World'}).useRul
 );
 `;
 
-const PLAYER_ACTOR = `import {
-  ActorBuilder,
-  AffectedByGravityTrait,
-  PositionProperty,
-  StartsFallingEvent,
-  StopsFallingEvent,
-  Vector,
-} from 'world-lab';
+// The player is authored in Blockly — a `.actor` file is a Blockly workspace
+// stored as serialized JSON (INTERFACE.md). The lab generates world-lab code
+// from it before compiling; the scene imports it exactly like a `.js` actor.
+// Shows both representations — JS scene/world, Blockly actor — in one project.
+//
+// The `world_actor` block holds the actor's configuration (traits, start
+// position). Each event handler is a separate top-level block floating in the
+// workspace — its own starting block — so the events sit beside the actor, not
+// chained inside it.
+const nextBlock = (block: object, next?: object) =>
+  next ? {...block, next: {block: next}} : block;
 
-// An Actor is a set of traits (which add properties) plus event handlers.
-const player = new ActorBuilder({id: 'player', name: 'Player'})
-  .useTraits([AffectedByGravityTrait])
-  .set(PositionProperty, new Vector(200, 20));
+const onEvent = (event: string, x: number, y: number, message: string) => ({
+  type: 'world_on_event',
+  x,
+  y,
+  fields: {EVENT: event},
+  inputs: {
+    HANDLER: {block: {type: 'world_log', fields: {TEXT: message}}},
+  },
+});
 
-player.on(StartsFallingEvent, () => console.log('Player started falling'));
-player.on(StopsFallingEvent, () => console.log('Player landed!'));
-
-export default player;
-`;
-
-// A starter `.rule` — a Blockly workspace stored as serialized JSON. It is not
-// yet imported by the scene (Blockly → world-lab code generation is the next
-// increment); it exists so the Blockly editor has something to open.
-const EXAMPLE_RULE = JSON.stringify(
+const PLAYER_ACTOR = JSON.stringify(
   {
     blocks: {
       blocks: [
-        {type: 'controls_if', x: 40, y: 40},
-        {type: 'math_number', x: 40, y: 140, fields: {NUM: 42}},
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {ID: 'player', NAME: 'Player'},
+          inputs: {
+            BODY: {
+              block: nextBlock(
+                {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
+                {type: 'world_set_position', fields: {X: 200, Y: 20}},
+              ),
+            },
+          },
+        },
+        onEvent('startsFalling', 20, 200, 'Player started falling'),
+        onEvent('stopsFalling', 20, 320, 'Player landed!'),
       ],
     },
   },
@@ -98,24 +111,16 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       },
       player: {
         id: 'player',
-        name: 'player.js',
-        language: 'javascript',
+        name: 'player.actor',
+        language: 'actor',
         contents: PLAYER_ACTOR,
         folderId: 'actors',
-      },
-      example: {
-        id: 'example',
-        name: 'example.rule',
-        language: 'rule',
-        contents: EXAMPLE_RULE,
-        folderId: 'rules',
       },
     },
     folders: {
       scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
-      rules: {id: 'rules', name: 'rules', parentId: '0'},
     },
     openFiles: ['main'],
   },

@@ -20,6 +20,10 @@ import {
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {
+  BlocklyGenerator,
+  type BlocklyGeneratorHandle,
+} from '../blockly/BlocklyGenerator';
 import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
@@ -27,6 +31,10 @@ import {projectFiles} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {WorldPreviewManager} from './sandbox/worldPreviewManager';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
+
+/** A `.rule` / `.actor` file needs Blockly → world-lab generation before compile. */
+const isBlocklyPath = (path: string): boolean =>
+  path.endsWith('.rule') || path.endsWith('.actor');
 
 export interface ConsoleLine {
   level: string;
@@ -67,8 +75,27 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   // Generation counter so a slow compile can't clobber a newer one.
   const generation = useRef(0);
 
+  // The Blockly → world-lab generator (a hidden workspace); ready once injected.
+  const blocklyGenerator = useRef<BlocklyGeneratorHandle>(null);
+  const [generatorReady, setGeneratorReady] = useState(false);
+
   const pushConsole = (line: ConsoleLine) =>
     setConsoleLog(prev => [...prev, line].slice(-MAX_CONSOLE_LINES));
+
+  /** Replace each Blockly file's JSON with its generated JavaScript. */
+  const generateBlocklyFiles = (
+    files: Record<string, string>,
+  ): Record<string, string> => {
+    const generator = blocklyGenerator.current;
+    const out: Record<string, string> = {};
+    for (const [path, contents] of Object.entries(files)) {
+      out[path] =
+        isBlocklyPath(path) && generator
+          ? generator.generate(contents)
+          : contents;
+    }
+    return out;
+  };
 
   // Create the sandbox managers once, when configured.
   useEffect(() => {
@@ -105,22 +132,41 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     if (Object.keys(files).length === 0) {
       return;
     }
+    // Wait for the Blockly generator before compiling a project that has any
+    // Blockly-authored files; this effect re-runs when it becomes ready.
+    if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {
+      return;
+    }
     const handle = window.setTimeout(() => {
       void compileAndLoad(files);
     }, DEBOUNCE_MS);
     return () => window.clearTimeout(handle);
     // compileAndLoad closes over refs and stable state setters only.
-  }, [currentSources]);
+  }, [currentSources, generatorReady]);
 
   async function compileAndLoad(files: Record<string, string>) {
     const pair = managers.current;
     if (!pair) {
       return;
     }
+    // Generate JavaScript for any Blockly (.rule/.actor) files before compiling.
+    let compileFiles: Record<string, string>;
+    try {
+      compileFiles = generateBlocklyFiles(files);
+    } catch (error) {
+      pushConsole({
+        level: 'error',
+        text: `Blockly generation failed: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
+      });
+      setStatus('error');
+      return;
+    }
     // A clearer message than the compiler's raw "no such project file" when the
     // project simply has no entry (e.g. a stale saved project after the entry
     // moved). Reset the demo's saved state with `?cdoMockReset=1`.
-    if (!files[ENTRY_FILE]) {
+    if (!compileFiles[ENTRY_FILE]) {
       pushConsole({
         level: 'error',
         text: `No entry file "${ENTRY_FILE}" in the project.`,
@@ -131,7 +177,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     const mine = ++generation.current;
     setStatus('compiling');
     try {
-      const moduleUrl = await pair.compile.compile(files, ENTRY_FILE);
+      const moduleUrl = await pair.compile.compile(compileFiles, ENTRY_FILE);
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile
       }
@@ -170,6 +216,15 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
 
   return (
     <WorldRuntimeContext.Provider value={value}>
+      {/* The offscreen Blockly generator; only when a sandbox (and thus the
+          compile pipeline) is active, so tests/unconfigured hosts don't inject
+          Blockly. */}
+      {sandboxUrl && (
+        <BlocklyGenerator
+          ref={blocklyGenerator}
+          onReady={() => setGeneratorReady(true)}
+        />
+      )}
       {children}
     </WorldRuntimeContext.Provider>
   );
