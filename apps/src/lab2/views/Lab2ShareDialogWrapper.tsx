@@ -70,6 +70,9 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   useEffect(() => {
     if (!isDialogOpen || !channelId || !projectType) {
+      // Reset to pending while closed so reopening doesn't briefly render
+      // the previous result before the fresh fetch below completes.
+      setShareFailure(undefined);
       return;
     }
     if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(projectType)) {
@@ -79,8 +82,13 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     // Fetch on every open (not just mount) so the result reflects the
     // latest save.
     setShareFailure(undefined);
+    let cancelled = false;
     fetchShareFailure(channelId)
-      .then(setShareFailure)
+      .then(failure => {
+        if (!cancelled) {
+          setShareFailure(failure);
+        }
+      })
       .catch(() => {
         // Fail silently, matching server behavior when the filtering service
         // is unavailable.
@@ -90,8 +98,13 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
           projectType,
           channelId,
         });
-        setShareFailure(null);
+        if (!cancelled) {
+          setShareFailure(null);
+        }
       });
+    return () => {
+      cancelled = true;
+    };
   }, [isDialogOpen, channelId, projectType]);
 
   const fetchSubmissionStatusHandleError = (

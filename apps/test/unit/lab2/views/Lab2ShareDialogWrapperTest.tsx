@@ -44,9 +44,9 @@ const mockedUseSelector = useSelector as jest.Mock;
 const mockedUseAppSelector = useAppSelector as jest.Mock;
 const mockedUseAppDispatch = useAppDispatch as jest.Mock;
 
-function setState(projectType: string) {
+function setState(projectType: string, isOpen = true) {
   mockedUseSelector.mockImplementation(selector =>
-    selector({shareDialog: {isOpen: true}})
+    selector({shareDialog: {isOpen}})
   );
   mockedUseAppSelector.mockImplementation(selector =>
     selector({
@@ -107,6 +107,37 @@ describe('Lab2ShareDialogWrapper', () => {
       expect(screen.getByText('share dialog: no failure')).toBeInTheDocument()
     );
     expect(mockedFetchShareFailure).not.toHaveBeenCalled();
+  });
+
+  it('does not flash the previous result when the dialog is reopened', async () => {
+    setState('sketchlab');
+    mockedFetchShareFailure.mockResolvedValue(null);
+
+    const {rerender} = render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+    await waitFor(() =>
+      expect(screen.getByText('share dialog: no failure')).toBeInTheDocument()
+    );
+
+    // Close the dialog.
+    setState('sketchlab', false);
+    rerender(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+    expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
+
+    // Reopen; the project is now flagged but the check is still pending.
+    let resolveFetch: (failure: {type: string}) => void = () => {};
+    mockedFetchShareFailure.mockImplementation(
+      () => new Promise(resolve => (resolveFetch = resolve))
+    );
+    setState('sketchlab', true);
+    rerender(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+
+    // The stale clean result must not flash while the check is pending.
+    expect(screen.queryByText(/share dialog/)).not.toBeInTheDocument();
+
+    resolveFetch({type: 'profanity'});
+    await waitFor(() =>
+      expect(screen.getByText('share dialog: profanity')).toBeInTheDocument()
+    );
   });
 
   it('fails open when the share failure check errors', async () => {
