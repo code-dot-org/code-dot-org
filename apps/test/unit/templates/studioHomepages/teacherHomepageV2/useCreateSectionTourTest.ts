@@ -25,7 +25,7 @@ jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => ({
   ...jest.requireActual(
     '@cdo/apps/sharedComponents/productTour/productTourHelpers'
   ),
-  recordTourAbandonment: jest.fn(),
+  recordOnboardingTourAbandonment: jest.fn(),
 }));
 jest.mock(
   '@cdo/apps/templates/studioHomepages/teacherHomepageV2/createSectionOnboarding',
