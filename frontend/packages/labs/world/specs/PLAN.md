@@ -252,6 +252,19 @@ The driver's entry is the scene the game starts on. For the slice, fix it to
 Modules import each other by project-relative path; they import the engine as
 the bare specifier `world-lab`. `phaser` is not learner-facing.
 
+**There is no project `index.html`.** Unlike Web Lab — where the page _is_ the
+artifact and the service worker serves the project's own `index.html` to the
+iframe — a World project is the game defined by `scenes`/`worlds`/`actors`/
+`rules`. The host page is a fixed, uneditable shell that only mounts the canvas
+and `import()`s the compiled bundle; in this architecture that shell **is
+`preview.html`** (§2), served static by the sandbox origin, and the SW transport
+carries a compiled _JS module_, not an HTML page. Consequences: `config.ts`
+`editableFileTypes` is code (`js`/`ts`/`json`, later `.rule`/`.anim`), **not**
+`html`; `png` stays supported-but-not-editable; and `DEFAULT_PROJECT` is the
+engine demo (scenes/worlds/actors/rules + a sprite), never an `index.html`. The
+current scaffold's editable `index.html` + `'html'` type are placeholders cloned
+from Web Lab, replaced when the demo project lands (§11, milestone 3).
+
 ## 7. Compilation and transport (the decision)
 
 The task left the module-loading choice to the plan; your direction — a headless
