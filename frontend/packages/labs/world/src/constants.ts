@@ -13,7 +13,7 @@ export const ENTRY_FILE = 'scenes/main.js';
  * default-exported Scene. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
-const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionalTrait, AppearanceTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
+const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, SolidTrait, PositionalTrait, AppearanceTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
 import PlatformWorld from 'worlds/platform';
 import Player from 'actors/player';
 
@@ -23,9 +23,11 @@ scene.useWorld(PlatformWorld);
 scene.addActor(Player);
 
 // The ground the player lands on, drawn with the built-in "ground" sprite.
+// GroundTrait makes it landable; SolidTrait makes it a wall too (you can't walk
+// through its sides) — a normal tile is both.
 scene.addActor(
   new ActorBuilder({id: 'ground', name: 'Ground'})
-    .useTraits([GroundTrait, AppearanceTrait])
+    .useTraits([GroundTrait, SolidTrait, AppearanceTrait])
     .set(PositionProperty, new Vector(200, 260))
     .set(SpriteProperty, 'ground'),
 );

@@ -1,22 +1,34 @@
-// The Collision rule ("Has Collisions") — marks actors that can collide and
-// provides the `resolve` step other rules order against (DESIGN.md's gravity
-// runs "After Collision").
+// The Collision rule ("Has Collisions") — the general, gravity-agnostic
+// impenetrability: a movable body may not overlap a "Solid" body, on any axis.
+// Its `resolve` step is where that push-out happens; Gravity orders its own,
+// narrower step ("land on a ground") after it.
 //
 // Collision requires Motion: resolution operates on the positions Motion just
 // integrated, so `resolve` is ordered *after* Motion's `reposition`. This makes
 // the per-tick order a linear chain (velocity → move → resolve → react) rather
 // than leaving `reposition` and `resolve` unordered relative to each other.
 //
-// The `resolve` step is a placeholder for the slice — real AABB resolution is
-// later work; the ground-stop the slice needs lives in the Gravity rule, which
-// orders its own step after this one.
+// Solidity and "acts as ground" are deliberately separate traits: a Solid body
+// blocks all sides (a wall), while Gravity's Ground is the surface an actor
+// lands on and may pass *up* through (a jump-through platform). A normal tile
+// carries both; the two never had to be the same trait.
 
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
 import {Vector} from '../core/Vector';
 
-import {MotionRule, RepositionStep} from './motion';
-import {IntrinsicSizeProperty, PositionalTrait, ScaleProperty} from './spatial';
+import {
+  MotionRule,
+  MovableTrait,
+  RepositionStep,
+  VelocityProperty,
+} from './motion';
+import {
+  IntrinsicSizeProperty,
+  PositionProperty,
+  PositionalTrait,
+  ScaleProperty,
+} from './spatial';
 
 const rule = new RuleBuilder({id: 'collision', name: 'Has Collisions'});
 rule.requires([MotionRule]);
@@ -26,6 +38,15 @@ export const CollidableTrait = rule.addTrait({
   name: 'Can Collide',
 });
 CollidableTrait.requires([PositionalTrait]);
+
+/**
+ * A body a movable actor cannot pass through, on any side — a wall, a crate, the
+ * solid part of a tile. Independent of Gravity's "Acts as Ground": grounds you
+ * can jump up through are not solid; walls you never stand on are not ground.
+ */
+export const SolidTrait = rule.addTrait({id: 'solid', name: 'Solid'});
+// A solid has a box other bodies resolve against.
+SolidTrait.requires([CollidableTrait]);
 
 /**
  * An explicit collision-box size (width, height) in sprite pixels. Optional:
@@ -69,9 +90,76 @@ export function collisionSize(actor: Actor): Vector {
   return new Vector(base.x * Math.abs(scale.x), base.y * Math.abs(scale.y));
 }
 
-/** Ordering anchor for collision-reactive steps; AABB resolution is later. */
-export const ResolveStep = rule.addStepAfter('resolve', RepositionStep, () => {
-  // Intentionally empty for the vertical slice.
-});
+/**
+ * Push every movable actor out of every solid body it overlaps. Axis-aligned
+ * boxes; each overlap is resolved on the axis the actor *entered through* — the
+ * one it was clear of a tick ago, reconstructed from its pre-move position. That
+ * stops a fast mover at the face it actually crossed (rather than tunnelling to
+ * the nearer one) and lets a body slide along a surface to its edge without
+ * catching. Solids are treated as static; overlaps are resolved per body, exact
+ * for separated bodies (a row of abutting bodies can still snag on an interior
+ * seam via the deep-hit fallback — swept resolution is the next step up).
+ *
+ * This is impenetrability only. Landing on a surface you may pass up through
+ * ("Acts as Ground") is Gravity's concern, ordered after this.
+ */
+export const ResolveStep = rule.addStepAfter(
+  'resolve',
+  RepositionStep,
+  (world, delta) => {
+    const solids = [...world.actors.with(SolidTrait)];
+    for (const actor of world.actors.with(MovableTrait)) {
+      if (!actor.has(CollidableTrait)) {
+        continue; // no box to resolve
+      }
+      const size = collisionSize(actor);
+      let position = actor.get(PositionProperty);
+      let velocity = actor.get(VelocityProperty);
+      // Where the actor was before Motion moved it this tick — the entry side.
+      const prevX = position.x - velocity.x * delta;
+      const prevY = position.y - velocity.y * delta;
+
+      for (const solid of solids) {
+        if (solid === actor) {
+          continue; // a movable solid does not resolve against itself
+        }
+        const solidPosition = solid.get(PositionProperty);
+        const solidSize = collisionSize(solid);
+        const reachX = (size.x + solidSize.x) / 2;
+        const reachY = (size.y + solidSize.y) / 2;
+        const overlapX = reachX - Math.abs(position.x - solidPosition.x);
+        const overlapY = reachY - Math.abs(position.y - solidPosition.y);
+        if (overlapX <= 0 || overlapY <= 0) {
+          continue; // not touching this body
+        }
+        // Resolve on the axis the actor was clear of a tick ago; if it was
+        // already overlapping both (a deep hit), fall back to the shallower one.
+        const clearedY = reachY - Math.abs(prevY - solidPosition.y) <= 0;
+        const clearedX = reachX - Math.abs(prevX - solidPosition.x) <= 0;
+        const resolveVertical = clearedY || (!clearedX && overlapY <= overlapX);
+        if (resolveVertical) {
+          position = new Vector(
+            position.x,
+            prevY <= solidPosition.y
+              ? solidPosition.y - reachY // rest on top
+              : solidPosition.y + reachY, // under (ceiling)
+          );
+          velocity = new Vector(velocity.x, 0);
+        } else {
+          position = new Vector(
+            prevX <= solidPosition.x
+              ? solidPosition.x - reachX // left face
+              : solidPosition.x + reachX, // right face
+            position.y,
+          );
+          velocity = new Vector(0, velocity.y);
+        }
+      }
+
+      actor.set(PositionProperty, position);
+      actor.set(VelocityProperty, velocity);
+    }
+  },
+);
 
 export const CollisionRule = rule.build();
