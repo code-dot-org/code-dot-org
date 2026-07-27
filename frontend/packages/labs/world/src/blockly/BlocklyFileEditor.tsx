@@ -11,9 +11,14 @@ import {
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+import {useSources} from '@code-dot-org/lab/contexts';
+
+import {projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
 import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
+import {refreshProjectDropdowns} from './projectDropdowns';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
@@ -46,6 +51,18 @@ export const BlocklyFileEditor = ({
   onChange,
 }: CustomEditorProps) => {
   const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+
+  // Populate the project-derived dropdowns (actors/worlds/animations) BEFORE the
+  // workspace deserializes below: a dropdown drops a serialized value that isn't
+  // among its options, so the registry must be current first. This runs during
+  // render, ahead of the workspace's load effect. (WorldRuntimeContext also
+  // refreshes these for the generator; the calls are idempotent.)
+  const {currentSources} = useSources<MultiFileSource>();
+  useMemo(
+    () => refreshProjectDropdowns(projectFiles(currentSources.source)),
+    [currentSources],
+  );
+
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
   const startBlocks = useRef(parseWorkspace(initialContents)).current;

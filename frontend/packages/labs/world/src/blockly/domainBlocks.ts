@@ -16,6 +16,12 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {animationOptionsExtension} from './animationOptions';
 import {label} from './label';
+import {
+  actorOptions,
+  actorOptionsExtension,
+  worldOptions,
+  worldOptionsExtension,
+} from './moduleOptions';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -284,9 +290,10 @@ const worldScene = defineBlock({
     {type: 'field_input', name: 'NAME', text: 'Game'},
   ],
   message1: 'world %1',
-  args1: [{type: 'field_input', name: 'WORLD', text: 'worlds/platform'}],
+  args1: [{type: 'field_dropdown', name: 'WORLD', options: worldOptions()}],
   message2: '%1',
   args2: [{type: 'input_statement', name: 'BODY'}],
+  extensions: [worldOptionsExtension],
   style: 'setup_blocks',
   tooltip:
     'Define a scene: the world its actors live in, and the actors in it.',
@@ -320,11 +327,12 @@ const worldScene = defineBlock({
 const worldAddActor = defineBlock({
   type: 'world_add_actor',
   message0: 'add actor %1',
-  args0: [{type: 'field_input', name: 'ACTOR', text: 'actors/player'}],
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions()}],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
+  extensions: [actorOptionsExtension],
   style: 'behavior_blocks',
   tooltip: 'Place an instance of an actor and set its per-instance properties.',
   generator: {
