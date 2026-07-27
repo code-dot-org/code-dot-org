@@ -298,6 +298,7 @@ span:not(:global(.MuiButton-icon)) {
 
         img {
           height: 38px;
+          width: 38px;
           padding: 0.5rem;
           background: var(--background-neutral-primary);
           border: 1px solid var(--borders-neutral-primary);
@@ -314,8 +315,8 @@ span:not(:global(.MuiButton-icon)) {
       }
 
       img {
-        height: 38px;
-        width: 38px;
+        height: 18px;
+        width: 18px;
       }
 
       i {
