@@ -31,9 +31,17 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
+import {getSandboxUrl, setSandboxUrl} from './runtime/worldConfig';
 
 initializeCore({plugins: [localizationPlugin]});
 injectFontAwesome();
+
+// Demo convenience: default the sandbox origin to the `dev:sandbox` port so
+// `yarn dev:isolated` + opening the lab "just works" without a `?world-sandbox=`
+// query. An explicit `?world-sandbox=` still wins (getSandboxUrl reads it).
+if (!getSandboxUrl()) {
+  setSandboxUrl('http://localhost:5202/');
+}
 
 // The lab loads a project by channel id from the URL; default to the `simple`
 // fixture scenario so the harness works at the root path (the channel id doubles

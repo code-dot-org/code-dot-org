@@ -9,27 +9,17 @@ lab entrypoint, accepting no props (the host renders the single `<Lab>` and
 publishes level data to context). It renders `<CodebridgeLab>` wrapping
 `WorldLayout`.
 
-## Status
+## How it runs
 
-This is a scaffold. Ported/present:
+The lab edits a project and runs it as a Phaser 4 game inside an **isolated
+sandbox on a separate origin** — student code never runs on the lab's origin
+(see `specs/SANDBOX.md`). The sandbox has two surfaces: a hidden **compile**
+surface (esbuild-wasm bundles the project) and a visible **preview** surface
+(the game canvas). The lab posts the sources down, the compile surface bundles
+them, the transport service worker hands the module to the preview, and the
+Phaser binding runs it. Console output is relayed back to the Console box.
 
-- The shell composition — config, default project, layout, demo harness.
-- `WorldLayout`, mirroring `web-lab`'s `WebLayout`: an instructions / resource
-  panel on the far left, and beside it one workspace column holding the editor
-  and the preview as two panes under a shared header. The header's segmented
-  buttons collapse the split to either pane alone; every divider drags to resize
-  and restores its default size on double-click.
-
-Deliberately deferred (World Lab gets its own, later):
-
-- **The Phaser 4 runtime.** `WorldPreview` is a self-contained placeholder
-  iframe. It does not yet read the Codebridge project sources or boot a Phaser
-  game; that wiring is the next increment. See `src/preview/WorldPreview.tsx`.
-- The debug panel (console + network). `web-lab`'s is coupled to its
-  service-worker HTML preview; World Lab will grow its own once the Phaser
-  runtime lands.
-- Additional editors and file types beyond the starting HTML / JS / JSON / MD /
-  TXT set — added to `src/config.ts` as the lab grows.
+See `specs/PLAN.md` for the full design and milestone status.
 
 ## Layout
 
@@ -38,25 +28,44 @@ Deliberately deferred (World Lab gets its own, later):
 │             │ [Code|Preview|Split]   header         │
 │ instructions├───────────────────┬───────────────────┤
 │             │ editor            │ world preview     │
+│             │                   ├───────────────────┤
+│             │                   │ console           │
 └─────────────┴───────────────────┴───────────────────┘
 ```
 
 The shared pieces — `InfoPanel`, `Workspace` — come from the Codebridge package;
 `PanelContainer`, `ResizeHandle`, and `WorkspaceHeader` come from
-`@code-dot-org/lab` (base).
+`@code-dot-org/lab` (base). The Console box follows the running game: under the
+preview pane in split / preview-only view, under the editor when the editor is
+the only pane.
 
 ## Standalone demo
 
-`yarn dev` serves a harness (`index.html` + `src/main.tsx`) at
-http://localhost:5139 — no Rails backend. It mounts the App with the provider
-stack the studio host normally supplies, plus a fixture level served by MSW, so
-the full shell renders.
-
-Fixture scenarios load by channel id:
+The lab and the sandbox run on two origins (two dev ports). Run both:
 
 ```
-http://localhost:5139/frontend-studio/projects/world/simple/edit
+yarn dev:isolated     # lab on :5139, sandbox on :5202
 ```
+
+then open **http://localhost:5139/**. The demo defaults the sandbox origin to
+`http://localhost:5202/`; override with `?world-sandbox=<url>`. Edit the code and
+the game recompiles and reloads; `console.log` from the game appears in the
+Console box.
+
+> The **first** load triggers a one-time Vite dependency optimization (`phaser`,
+> `esbuild-wasm`) that reloads the sandbox iframes — reload the page once and it
+> runs. Subsequent loads are warm.
+
+> The demo's MSW mock saves your project to `sessionStorage`, so edits survive a
+> reload. If you change `DEFAULT_PROJECT`'s shape in code (e.g. move the entry),
+> a stale saved project can shadow it — load once with `?cdoMockReset=1` (or
+> clear `sessionStorage`) to drop it.
+
+`yarn dev` alone (lab only) shows the editor, but the preview says "no sandbox
+origin configured" until the sandbox is also running. Both `dev` and
+`dev:sandbox` run `yarn setup:world` first, which self-hosts the sandbox assets
+(esbuild-wasm, Phaser, and the bundled engine `world-lab.mjs`) into
+`public/vendor/`.
 
 The lab is registered with the studio app in
 `frontend/apps/studio/src/modules/labs/config/labs.ts` and reachable there at
@@ -64,7 +73,11 @@ The lab is registered with the studio app in
 
 ## Scripts
 
-- `yarn dev` — standalone demo harness on :5139
+- `yarn dev` — lab dev server on :5139
+- `yarn dev:sandbox` — sandbox dev server on :5202 (serves `compile.html` /
+  `preview.html`)
+- `yarn dev:isolated` — both, in parallel
+- `yarn setup:world` — self-host the sandbox assets into `public/vendor/`
 - `yarn build` — library build (ESM + CJS + d.ts)
 - `yarn typecheck` — `tsc -b --noEmit`
 - `yarn test` — Vitest

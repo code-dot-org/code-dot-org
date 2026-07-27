@@ -52,6 +52,15 @@
   flex-direction: column;
 }
 
+/* The editor proper, above an optional console (code-only view). */
+.editorMain {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Split: sized by the layout's inline width, so it must NOT flex — `flex: 1`
    implies `flex-basis: 0%`, which makes that width inert and leaves the divider
    dragging state that changes nothing on screen. */

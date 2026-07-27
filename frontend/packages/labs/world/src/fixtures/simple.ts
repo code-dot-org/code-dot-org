@@ -25,9 +25,11 @@ const simple: LabFixture = {
       showExemplarLink: false,
       exemplarSources: null,
       longInstructions:
-        '## World Lab\n\nEdit `index.html` and `main.js`.\n\n' +
-        '- The world preview is a placeholder for now\n' +
-        '- Multi-file projects are supported',
+        '## World Lab\n\nBuild a game world in code. Edit the scene, world, and ' +
+        'actors under `scenes/`, `worlds/`, and `actors/`.\n\n' +
+        '- The preview runs your game as you edit\n' +
+        '- `console.log` output appears in the Console\n' +
+        '- Try changing the player’s start position or gravity',
     }),
   },
   theme: {},
