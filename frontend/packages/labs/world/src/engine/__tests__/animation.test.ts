@@ -6,6 +6,7 @@ import {
   AnimationProperty,
   AnimationRule,
   AppearanceTrait,
+  FrameChangedEvent,
   FrameProperty,
   PositionProperty,
   SceneBuilder,
@@ -78,6 +79,19 @@ describe('the Animation rule', () => {
     }
     expect(actor.get(FrameProperty)).toBe(1); // holds the last frame
     expect(ends).toBe(1); // fires exactly once
+  });
+
+  it('emits FrameChangedEvent with the new frame index on each advance', () => {
+    const {world, actor} = makeScene('coinSpin'); // 6 frames, ~83ms each
+    const frames: unknown[] = [];
+    actor.on(FrameChangedEvent, (_world, _actor, detail) =>
+      frames.push(detail),
+    );
+    // Advance well past one loop; the first six frame changes are 1..5 then 0.
+    for (let i = 0; i < 8; i++) {
+      world.tick(0.1);
+    }
+    expect(frames.slice(0, 6)).toEqual([1, 2, 3, 4, 5, 0]);
   });
 
   it('resets frame state when the selected animation changes', () => {

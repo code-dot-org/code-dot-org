@@ -70,6 +70,15 @@ export const AnimationEndedEvent = rule.addEvent('animationEnded', {
   name: 'animation ends',
 });
 
+/**
+ * Emitted each time an animation advances to a new frame, carrying that frame's
+ * index as the event detail — so a handler can react to a specific frame (a
+ * footstep, a hit frame). The learner reads the detail via the event value.
+ */
+export const FrameChangedEvent = rule.addEvent('frameChanged', {
+  name: 'animation frame changes',
+});
+
 export const AdvanceAnimationStep = rule.addStep(
   'advanceAnimation',
   (world, delta) => {
@@ -111,6 +120,8 @@ export const AdvanceAnimationStep = rule.addStep(
           world.emit(AnimationEndedEvent, actor);
           break;
         }
+        // The frame changed; report it (detail = the new frame index).
+        world.emit(FrameChangedEvent, actor, frame);
       }
       actor.set(FrameProperty, frame);
       actor.set(ElapsedProperty, elapsed);

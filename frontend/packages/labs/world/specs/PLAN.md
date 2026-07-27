@@ -717,6 +717,10 @@ Unit first, then browser:
    `WorldBuilder.useAnimations`; the `world_play_animation` dropdown is dynamic
    (sourced from the project's animation files) and `world_on_event` gained
    `AnimationEnded`. Browser-verified: a Blockly actor plays a learner-authored
-   animation from `animations/game.json`. Remaining (`ANIMATIONS.md`): frame-
-   change events (phase E, needs per-actor event payloads), and — for custom
-   uploaded images — the Codebridge upload port (`UPLOADS.md`).
+   animation from `animations/game.json`. Phase E also DONE: the Animation rule
+   emits `FrameChangedEvent` carrying the frame index (per-actor event payloads
+   already flowed through `EventQueue`); `world_on_event` binds the handler's
+   event value and a `world_log_event_value` block reads it. The spec-aligned
+   animation rework (`ANIMATIONS.md` phases A–E) is complete. Remaining for
+   custom uploaded images: the Codebridge upload port (`UPLOADS.md`); reacting to
+   a specific frame awaits a conditional/expression block vocabulary.

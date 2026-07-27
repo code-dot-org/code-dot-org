@@ -179,9 +179,18 @@ milestones 1–7 were staged.
   oscillates (the bob), which only round-trips because the dropdown carried the
   authored id.
 
-- **E — Frame events (payloads).** Once per-actor event payloads land (§7), add
-  `FrameChangedEvent` with the frame index and a `world_on_event` option, so a
-  learner can react to a specific frame (footstep sounds, hit frames).
+- **E — Frame events (payloads).** DONE. Per-actor event payloads already flowed
+  at the engine level (`EventQueue.flush` passes `detail` to handlers); the gap
+  was Blockly exposure. The Animation rule now emits `FrameChangedEvent` with the
+  new frame index each advance; `world_on_event` gained an "animation frame
+  changes" option and now binds the handler args
+  (`(_world, _actor, eventValue) => …`, non-shadowing) so a body block can read
+  the payload; a `world_log_event_value` block logs it. Unit-tested (the
+  `FrameChangedEvent` index sequence; the handler + value-log generators) and
+  browser-verified (a Blockly `frame changes → log event value` handler on the
+  player logged the cycling frame indices 0..3). NOTE: reacting to a _specific_
+  frame (`if frame === 3`) still needs conditional/expression blocks — a separate
+  block-vocabulary effort, not part of this animation work.
 
 ## 5. Migration of the interim built-ins
 
