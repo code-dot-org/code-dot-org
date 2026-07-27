@@ -135,11 +135,6 @@ describe('recordOnboardingTourAbandonment', () => {
     );
   });
 
-  // A hand-off click handler saves the destination page's step id and calls
-  // step.hide() rather than tour.cancel(). The tour is only cancelled later
-  // by the destination page's resume function, at which point sessionStorage
-  // holds that different, pending step id rather than the tour's own
-  // (unmoved) currentStep — this is not a real abandonment.
   it('does not send an event when a different step is pending (a hand-off to the next page)', () => {
     mockTryGetSessionStorage.mockReturnValue('next-page-step');
 

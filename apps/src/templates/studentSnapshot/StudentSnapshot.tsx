@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
@@ -99,7 +99,11 @@ const StudentSnapshot: React.FC = () => {
 
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
+  const tourResumed = useRef(false);
+
   useEffect(() => {
+    if (tourResumed.current) return;
+    tourResumed.current = true;
     resumeLearnHowToEvaluateTour();
   }, []);
 
