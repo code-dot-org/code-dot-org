@@ -1,0 +1,23 @@
+.panel {
+  width: 100%;
+  min-width: 163px;
+  height: initial;
+  background: white;
+  color: #808080;
+  border: 1px gray solid;
+  padding: 0;
+  margin-top: -2px;
+  margin-left: -1px;
+}
+
+.option {
+  cursor: pointer;
+  margin: 0;
+  padding: 4px;
+
+  &:hover,
+  &.selected {
+    background-color: var(--background-neutral-tertiary);
+    color: black;
+  }
+}

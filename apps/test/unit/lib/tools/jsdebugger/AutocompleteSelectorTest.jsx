@@ -7,6 +7,8 @@ import AutocompleteSelector from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSel
 import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
+import styles from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSelector.module.scss';
+
 describe('AutocompleteSelector', () => {
   // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
   // This warning should be addressed after we've upgraded React.
@@ -41,7 +43,7 @@ describe('AutocompleteSelector', () => {
     let options;
 
     beforeEach(() => {
-      options = componentInstance.find('.autocomplete-option');
+      options = componentInstance.find(`.${styles.option}`);
       expect(options.length).to.equal(2);
     });
 
@@ -71,10 +73,12 @@ describe('AutocompleteSelector', () => {
     expect(clickOutside).to.have.been.calledOnce;
   });
 
-  it('styles selected elements with a background color', () => {
-    const optionElements = mount(component).find('.autocomplete-option');
+  it('marks the selected option', () => {
+    const optionElements = mount(component).find(`.${styles.option}`);
     expect(optionElements.length).to.equal(2);
-    expect(optionElements.at(0)).to.have.style('backgroundColor');
-    expect(optionElements.at(1)).to.not.have.style('backgroundColor');
+    expect(optionElements.at(0).prop('className')).to.include(styles.selected);
+    expect(optionElements.at(1).prop('className')).to.not.include(
+      styles.selected
+    );
   });
 });
