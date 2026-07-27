@@ -60,6 +60,9 @@ export class PhaserBinding {
     world: World,
     parent: HTMLElement,
     assetBase: string = DEFAULT_ASSET_BASE,
+    // Learner-uploaded textures as `{fileName: dataURL}`; an animation frame
+    // references one by its file name (see projectAssets / UPLOADS.md).
+    uploadedAssets: Record<string, string> = {},
   ) {
     const objects = new Map<Actor, GameObject>();
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
@@ -130,6 +133,10 @@ export class PhaserBinding {
               frameWidth: SPRITE_SIZE,
               frameHeight: SPRITE_SIZE,
             });
+          }
+          // Uploaded images, keyed by file name (data URLs — no network).
+          for (const [name, dataUrl] of Object.entries(uploadedAssets)) {
+            this.load.image(name, dataUrl);
           }
         },
         create(this: Phaser.Scene) {
