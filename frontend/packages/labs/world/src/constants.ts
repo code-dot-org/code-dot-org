@@ -13,7 +13,7 @@ export const ENTRY_FILE = 'scenes/main.js';
  * default-exported Scene. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
-const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionProperty, Vector} from 'world-lab';
+const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionProperty, SpriteProperty, Vector} from 'world-lab';
 import PlatformWorld from 'worlds/platform';
 import Player from 'actors/player';
 
@@ -22,11 +22,12 @@ const scene = new SceneBuilder({id: 'game', name: 'Game'});
 scene.useWorld(PlatformWorld);
 scene.addActor(Player);
 
-// The ground the player lands on.
+// The ground the player lands on, drawn with the built-in "ground" sprite.
 scene.addActor(
   new ActorBuilder({id: 'ground', name: 'Ground'})
     .useTraits([GroundTrait])
-    .set(PositionProperty, new Vector(200, 260)),
+    .set(PositionProperty, new Vector(200, 260))
+    .set(SpriteProperty, 'ground'),
 );
 
 export default scene;
@@ -79,7 +80,10 @@ const PLAYER_ACTOR = JSON.stringify(
                 {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
                 nextBlock(
                   {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
-                  {type: 'world_set_position', fields: {X: 200, Y: 20}},
+                  nextBlock(
+                    {type: 'world_set_position', fields: {X: 200, Y: 20}},
+                    {type: 'world_set_sprite', fields: {SPRITE: 'player'}},
+                  ),
                 ),
               ),
             },

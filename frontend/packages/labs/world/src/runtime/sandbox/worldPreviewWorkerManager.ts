@@ -10,6 +10,7 @@ import type {World, WorldSnapshot} from 'world-lab';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
 import {
+  ASSET_BASE_PARAM,
   FromPreviewMessage,
   PARENT_ORIGIN_PARAM,
   ToPreviewMessage,
@@ -28,6 +29,8 @@ interface SceneModule {
 export async function start(): Promise<void> {
   const params = new URLSearchParams(window.location.search);
   const parentOrigin = params.get(PARENT_ORIGIN_PARAM);
+  // Where the preview loads its self-hosted sprite textures from.
+  const assetBase = params.get(ASSET_BASE_PARAM) ?? '/vendor/';
 
   const post = (message: unknown) => {
     if (parentOrigin) {
@@ -78,7 +81,7 @@ export async function start(): Promise<void> {
       if (!binding || !runningWorld) {
         // First load: start fresh.
         runningWorld = incoming;
-        binding = new PhaserBinding(incoming, parent);
+        binding = new PhaserBinding(incoming, parent, assetBase);
         baseline = incoming.snapshot();
         mode = 'built';
       } else {
@@ -89,7 +92,7 @@ export async function start(): Promise<void> {
         if (result.mode === 'restarted') {
           binding.stop();
           runningWorld = incoming;
-          binding = new PhaserBinding(incoming, parent);
+          binding = new PhaserBinding(incoming, parent, assetBase);
         }
         // 'reconciled': reconcile() already patched runningWorld; keep the game.
       }

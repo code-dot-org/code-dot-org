@@ -9,8 +9,10 @@
 // engine instance — so there is exactly one engine instance and no Property
 // identity to marshal across a module boundary.
 //
-// The slice draws each actor as a plain rectangle; sprites and animations are
-// later work (the asset pipeline).
+// Appearance: an actor whose `sprite` render field names a built-in sprite is
+// drawn as that texture (preloaded from the self-hosted `${assetBase}sprites/`);
+// an actor with no sprite falls back to a plain rectangle. Spritesheets and
+// animations are later work (the asset pipeline / GLOSSARY.md).
 //
 // Input: each frame we read Phaser's cursor keys and hand the pressed set to the
 // World (`setInput`) before ticking, so the engine's Input rule can drive
@@ -21,10 +23,16 @@ import Phaser from 'phaser';
 
 import type {Actor, RenderState, World} from 'world-lab';
 
+import {SPRITE_NAMES} from '../../sprites';
+
 const ACTOR_SIZE = 24;
 const DEFAULT_WIDTH = 400;
 const DEFAULT_HEIGHT = 300;
 const DEGREES_TO_RADIANS = Math.PI / 180;
+const DEFAULT_ASSET_BASE = '/vendor/';
+
+/** A drawn actor — a textured sprite or the fallback rectangle. */
+type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
 
 /** Phaser cursor keys → the DOM `KeyboardEvent.key` names the engine expects. */
 function pressedKeys(
@@ -46,26 +54,37 @@ function pressedKeys(
 export class PhaserBinding {
   private readonly game: Phaser.Game;
 
-  constructor(world: World, parent: HTMLElement) {
-    const objects = new Map<Actor, Phaser.GameObjects.Rectangle>();
+  constructor(
+    world: World,
+    parent: HTMLElement,
+    assetBase: string = DEFAULT_ASSET_BASE,
+  ) {
+    const objects = new Map<Actor, GameObject>();
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 
-    const sync = (scene: Phaser.Scene) => {
-      for (const state of world.renderSnapshot() as RenderState[]) {
-        let rectangle = objects.get(state.actor);
-        if (!rectangle) {
-          rectangle = scene.add.rectangle(
+    // Create the object for an actor once, choosing sprite vs rectangle from its
+    // current sprite name (a loaded texture wins; otherwise the rectangle).
+    const create = (scene: Phaser.Scene, state: RenderState): GameObject =>
+      state.sprite && scene.textures.exists(state.sprite)
+        ? scene.add.image(state.x, state.y, state.sprite)
+        : scene.add.rectangle(
             state.x,
             state.y,
             ACTOR_SIZE,
             ACTOR_SIZE,
             0x33cc66,
           );
-          objects.set(state.actor, rectangle);
+
+    const sync = (scene: Phaser.Scene) => {
+      for (const state of world.renderSnapshot() as RenderState[]) {
+        let object = objects.get(state.actor);
+        if (!object) {
+          object = create(scene, state);
+          objects.set(state.actor, object);
         }
-        rectangle.setPosition(state.x, state.y);
-        rectangle.setScale(state.scaleX, state.scaleY);
-        rectangle.setRotation(state.rotation * DEGREES_TO_RADIANS);
+        object.setPosition(state.x, state.y);
+        object.setScale(state.scaleX, state.scaleY);
+        object.setRotation(state.rotation * DEGREES_TO_RADIANS);
       }
     };
 
@@ -78,6 +97,11 @@ export class PhaserBinding {
       banner: false,
       audio: {noAudio: true},
       scene: {
+        preload(this: Phaser.Scene) {
+          for (const name of SPRITE_NAMES) {
+            this.load.image(name, `${assetBase}sprites/${name}.png`);
+          }
+        },
         create(this: Phaser.Scene) {
           cursors = this.input.keyboard?.createCursorKeys();
           sync(this);

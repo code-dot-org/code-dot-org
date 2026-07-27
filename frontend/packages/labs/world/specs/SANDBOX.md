@@ -97,7 +97,7 @@ only, which still runs no learner code.
 default-src   'self';
 script-src    'self';            /* + blob: only under the fallback transport */
 connect-src   'none';
-img-src       'self' blob: data:;
+img-src       'self' blob: data:;  /* built-in sprite textures load from 'self' */
 font-src      'self';
 style-src     'self' 'unsafe-inline';
 frame-ancestors <lab-origin> 'self';
