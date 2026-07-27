@@ -507,6 +507,9 @@ const EVENTS = {
 
   // Just In Time PL - Onboarding
   ONBOARDING_TOUR_STARTED: 'Onboarding tour started',
+  ONBOARDING_STEP_VIEWED: 'Onboarding step viewed',
+  ONBOARDING_QUIZ_ANSWERED: 'Onboarding quiz answered',
+  ONBOARDING_NAVIGATION: 'Onboarding navigation',
   ONBOARDING_TOUR_COMPLETED: 'Onboarding tour completed',
   ONBOARDING_TOUR_ABANDONED: 'Onboarding tour abandoned',
 

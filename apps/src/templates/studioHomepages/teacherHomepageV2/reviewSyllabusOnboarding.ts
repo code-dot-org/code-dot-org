@@ -149,7 +149,8 @@ const createQuizStep = (
   tour: Tour,
   controller: AbortController,
   lesson: number,
-  options: ReviewSyllabusQuizOption[]
+  options: ReviewSyllabusQuizOption[],
+  tourName: string
 ): StepOptions => {
   const lessonSelector = `#progress-lesson-${lesson}`;
   return {
@@ -165,6 +166,7 @@ const createQuizStep = (
     beforeShowPromise: () => waitForElement(lessonSelector, controller.signal),
     when: createQuizWhenHandlers(
       tour,
+      tourName,
       'Take another look. The purple checkmark indicator on a level means CodeAI recommends teachers review it.'
     ),
   };
@@ -309,7 +311,8 @@ export interface ReviewSyllabusQuizConfig {
 export const createReviewSyllabusUnitOverviewSteps = (
   tour: Tour,
   demoType: DemoType,
-  quizConfig: ReviewSyllabusQuizConfig | null
+  quizConfig: ReviewSyllabusQuizConfig | null,
+  tourName: string
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -323,7 +326,13 @@ export const createReviewSyllabusUnitOverviewSteps = (
   );
 
   const quizStep = quizConfig
-    ? createQuizStep(tour, controller, quizConfig.lesson, quizConfig.options)
+    ? createQuizStep(
+        tour,
+        controller,
+        quizConfig.lesson,
+        quizConfig.options,
+        tourName
+      )
     : null;
 
   switch (demoType) {

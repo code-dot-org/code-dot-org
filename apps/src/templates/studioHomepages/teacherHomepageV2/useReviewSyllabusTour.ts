@@ -3,7 +3,7 @@ import Shepherd, {Tour} from 'shepherd.js';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -76,7 +76,7 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     stepClass: 'custom-shepherd-onboarding-container',
   });
   tour.addSteps(
-    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig)
+    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig, TOUR_NAME)
   );
 
   if (tour.steps.length === 0) {
@@ -84,20 +84,19 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     return;
   }
 
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    REVIEW_SYLLABUS_ONBOARDING_STEP_KEY
+  );
+
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
   tour.on('complete', () => {
     clearStep();
     recordViewSyllabusCompletion();
   });
-  tour.on('cancel', () => {
-    recordOnboardingTourAbandonment(
-      tour,
-      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      TOUR_NAME
-    );
-    clearStep();
-  });
+  tour.on('cancel', clearStep);
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
   tour.show(startStep.id);

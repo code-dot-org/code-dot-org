@@ -120,7 +120,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -130,7 +131,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -140,7 +142,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -150,7 +153,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
     expect(ids).toContain(COURSE_HEADER_STEP_ID);
@@ -163,7 +167,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
     expect(ids).toContain(COURSE_HEADER_STEP_ID);
@@ -176,7 +181,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
     expect(ids).not.toContain(COURSE_HEADER_STEP_ID);
@@ -189,7 +195,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const ids = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     ).map(s => s.id);
     expect(ids).toContain('teacher-resources-dropdown');
   });
@@ -199,7 +206,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-1'});
@@ -210,7 +218,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-3'});
@@ -221,7 +230,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
@@ -237,7 +247,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
@@ -379,7 +390,8 @@ describe('quiz-level-priority when handler', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();
@@ -476,7 +488,8 @@ describe('middle school quiz-level-priority when handler', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();

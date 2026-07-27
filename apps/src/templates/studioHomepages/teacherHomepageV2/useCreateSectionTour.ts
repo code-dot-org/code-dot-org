@@ -3,7 +3,7 @@ import Shepherd, {Tour} from 'shepherd.js';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -48,6 +48,11 @@ export const resumeCreateSectionOnboardingTour = () => {
     stepClass: 'custom-shepherd-onboarding-container',
   });
   tour.addSteps(createSectionsNewSteps(tour));
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    CREATE_SECTION_ONBOARDING_STEP_KEY
+  );
 
   const clearStep = () =>
     trySetSessionStorage(CREATE_SECTION_ONBOARDING_STEP_KEY, '');
@@ -55,14 +60,7 @@ export const resumeCreateSectionOnboardingTour = () => {
     clearStep();
     recordTourCompletion();
   });
-  tour.on('cancel', () => {
-    recordOnboardingTourAbandonment(
-      tour,
-      CREATE_SECTION_ONBOARDING_STEP_KEY,
-      TOUR_NAME
-    );
-    clearStep();
-  });
+  tour.on('cancel', clearStep);
 
   // Resume at the saved step if it belongs to this page, otherwise start
   // at the first step (the saved step was from the previous page).

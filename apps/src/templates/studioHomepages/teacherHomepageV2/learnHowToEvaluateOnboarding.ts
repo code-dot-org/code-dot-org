@@ -154,7 +154,8 @@ export const createLearnHowToEvaluateHomepageSteps = (
 // Progress page steps
 
 export const createLearnHowToEvaluateProgressSteps = (
-  tour: Tour
+  tour: Tour,
+  tourName: string
 ): StepOptions[] => {
   const controller = new AbortController();
   tour.on('cancel', () => controller.abort());
@@ -184,6 +185,7 @@ export const createLearnHowToEvaluateProgressSteps = (
       waitForElement(PROGRESS_TABLE_SELECTOR, controller.signal),
     when: createQuizWhenHandlers(
       tour,
+      tourName,
       'Take another look at the status icons to find the student who is falling behind.',
       PROGRESS_TABLE_SELECTOR
     ),
