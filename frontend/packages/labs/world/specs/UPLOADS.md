@@ -120,10 +120,20 @@ assets client.
 
 ## 7. Phasing (and relation to ANIMATIONS)
 
-- **U1** — core `url`/`mimeType` field (L1). Tiny; unblocks the model.
-- **U2** — assets client + MSW mock (L2).
-- **U3** — codebridge upload UI + hook + `createExternalFile` (L3). Verify: a PNG
-  uploads, lands in the tree as `{contents:'', url}`, and previews in the editor.
+- **U1** — core `url`/`mimeType` field (L1). DONE. `ProjectFileSchema` gained
+  optional `url` + `mimeType` (backward-compatible; full core suite still green).
+- **U2** — assets client + MSW mock (L2). DONE. `api/dashboard/assets`
+  (`createAssetsApi`: `upload` → `PUT /v3/assets/:channel/:filename` as FormData
+  so the transport carries the bytes, returns the URL; `remove`), wired into
+  `createApiClient` as `client.assets`. An MSW mock (`assets.handlers.ts`) stores
+  uploads in the scenario store (base64) and serves them back on GET, so the
+  standalone demo needs no real backend. Unit-tested. NOTE: the demo/mock
+  contract is a FormData PUT; matching the real backend's raw-PUT `/v3/assets`
+  (or re-pointing at whatever the studio host exposes) is production-integration
+  work for U3/U4 wiring.
+- **U3** — codebridge upload UI + hook + `createExternalFile` (L3). NEXT. Verify:
+  a PNG uploads, lands in the tree as `{contents:'', url}`, and previews in the
+  editor.
 - **U4** — World Lab asset forwarding + SW serve + sprite resolver (L4). Verify:
   an uploaded PNG renders on an actor in the preview game under `img-src 'self'`.
 

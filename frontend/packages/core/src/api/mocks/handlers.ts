@@ -1,5 +1,6 @@
 import type {RequestHandler} from 'msw';
 
+import {assetsHandlers} from './assets.handlers';
 import {channelsHandlers} from './channels.handlers';
 import {dispatchHandlers} from './dispatch.handlers';
 import {levelsHandlers} from './levels.handlers';
@@ -24,5 +25,6 @@ export function getMockHandlers(): RequestHandler[] {
     ...channelsHandlers,
     ...sourcesHandlers,
     ...projectsHandlers,
+    ...assetsHandlers,
   ];
 }
