@@ -4,6 +4,7 @@ import {
   ActorBuilder,
   AffectedByGravityTrait,
   CollidableTrait,
+  CollisionRule,
   FallingProperty,
   GravityRule,
   GravityScaleProperty,
@@ -15,6 +16,7 @@ import {
   ScaleProperty,
   SceneBuilder,
   SizeProperty,
+  SolidTrait,
   StartsFallingEvent,
   StopsFallingEvent,
   StrengthProperty,
@@ -159,8 +161,8 @@ describe('gravity simulation', () => {
     expect(player.get(PositionProperty).y).toBeGreaterThan(afterOne);
   });
 
-  it('stops at the side of a ground block instead of passing through it', () => {
-    // A wall block at x=25 (20 wide → left face at 15) reaching well above and
+  it('stops at the side of a solid block instead of passing through it', () => {
+    // A solid wall at x=25 (20 wide → left face at 15) reaching well above and
     // below the player. Gravity is disabled so this isolates the horizontal axis.
     const scene = new SceneBuilder({id: 'g', name: 'G'});
     const world = scene.useWorld(
@@ -175,7 +177,7 @@ describe('gravity simulation', () => {
     );
     scene.addActor(
       new ActorBuilder({id: 'wall', name: 'Wall'})
-        .useTraits([GroundTrait])
+        .useTraits([SolidTrait])
         .set(PositionProperty, new Vector(25, 0))
         .set(SizeProperty, new Vector(20, 400)),
     );
@@ -188,6 +190,61 @@ describe('gravity simulation', () => {
     }
     // Player right edge (x + 10) rests against the wall's left face (15) → x = 5.
     expect(player.get(PositionProperty).x).toBeCloseTo(5);
+  });
+
+  it('blocks a plain movable actor at a solid wall — collision needs no gravity', () => {
+    // No gravity anywhere: just Motion + Collision. Solidity is general, so a
+    // bare movable body still cannot pass through a solid.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    const mover = scene.addActor(
+      new ActorBuilder({id: 'mover', name: 'Mover'})
+        .useTraits([MovableTrait, CollidableTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    scene.addActor(
+      new ActorBuilder({id: 'wall', name: 'Wall'})
+        .useTraits([SolidTrait])
+        .set(PositionProperty, new Vector(25, 0))
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    for (let i = 0; i < 10; i++) {
+      mover.set(VelocityProperty, new Vector(300, 0));
+      world.tick(DELTA);
+    }
+    expect(mover.get(PositionProperty).x).toBeCloseTo(5);
+  });
+
+  it('passes up through a one-way ground and lands on top coming back down', () => {
+    // A Ground-but-not-Solid platform at y=0 (top surface at -10). The player
+    // starts below it and jumps: it rises straight through (one-way), then falls
+    // and lands on top — proof it passed through, since it began underneath.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
+    );
+    const player = scene.addActor(
+      new ActorBuilder({id: 'player', name: 'Player'})
+        .useTraits([AffectedByGravityTrait])
+        .set(PositionProperty, new Vector(0, 40)) // below the platform
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    scene.addActor(
+      new ActorBuilder({id: 'platform', name: 'Platform'})
+        .useTraits([GroundTrait]) // landable, but NOT solid
+        .set(PositionProperty, new Vector(0, 0))
+        .set(SizeProperty, new Vector(20, 20)),
+    );
+    player.set(VelocityProperty, new Vector(0, -400)); // jump upward
+    for (let i = 0; i < 60; i++) {
+      world.tick(0.05);
+    }
+    // Rests on the platform's top: centre a half-height (10) above the top (-10).
+    expect(player.get(PositionProperty).y).toBeCloseTo(-20);
+    expect(player.get(FallingProperty)).toBe(false);
   });
 
   it('does not snap up onto a higher overlapping platform it never touched', () => {
