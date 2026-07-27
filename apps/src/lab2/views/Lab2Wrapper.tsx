@@ -59,7 +59,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isPageError: boolean = useSelector(hasPageError);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const hasPrivacyProfanityViolation = useAppSelector(
-    state => state.lab.hasPrivacyProfanityViolation
+    state => !!state.lab.shareFailure
   );
   const projectSharingDisabled = useAppSelector(
     state => state.lab.projectSharingDisabled

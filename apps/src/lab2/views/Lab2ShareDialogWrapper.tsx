@@ -4,14 +4,7 @@ import {useSelector} from 'react-redux';
 import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
-import {
-  PROJECT_TYPES_USING_NEW_SHARE_DIALOG,
-  PROJECT_TYPES_WITH_SHARE_FILTERING,
-} from '@cdo/apps/lab2/constants';
-import {
-  fetchShareFailure,
-  ShareFailure,
-} from '@cdo/apps/lab2/projects/channelsApi';
+import {PROJECT_TYPES_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
@@ -63,49 +56,9 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     SubmissionStatusType | undefined
   >(undefined);
 
-  // undefined = check pending, null = no failure or project type not filtered.
-  const [shareFailure, setShareFailure] = useState<
-    ShareFailure | null | undefined
-  >(undefined);
-
-  useEffect(() => {
-    if (!isDialogOpen || !channelId || !projectType) {
-      // Reset to pending while closed so reopening doesn't briefly render
-      // the previous result before the fresh fetch below completes.
-      setShareFailure(undefined);
-      return;
-    }
-    if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(projectType)) {
-      setShareFailure(null);
-      return;
-    }
-    // Fetch on every open (not just mount) so the result reflects the
-    // latest save.
-    setShareFailure(undefined);
-    let cancelled = false;
-    fetchShareFailure(channelId)
-      .then(failure => {
-        if (!cancelled) {
-          setShareFailure(failure);
-        }
-      })
-      .catch(() => {
-        // Fail silently, matching server behavior when the filtering service
-        // is unavailable.
-        MetricsReporter.logWarning({
-          event: 'lab2_share_failure_fetch_error',
-          message: 'Unable to fetch share failure status',
-          projectType,
-          channelId,
-        });
-        if (!cancelled) {
-          setShareFailure(null);
-        }
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [isDialogOpen, channelId, projectType]);
+  // The share filter result is fetched at project load and refreshed after
+  // each save, so the store always holds the latest settled answer.
+  const shareFailure = useAppSelector(state => state.lab.shareFailure);
 
   const fetchSubmissionStatusHandleError = (
     channelId: string,
@@ -159,14 +112,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   }
 
   if (PROJECT_TYPES_USING_NEW_SHARE_DIALOG.includes(projectType)) {
-    // Wait for a pending share-filter check so the share link never
-    // flashes before being replaced by the failure message.
-    if (
-      shareFailure === undefined &&
-      PROJECT_TYPES_WITH_SHARE_FILTERING.includes(projectType)
-    ) {
-      return null;
-    }
     return dialogPanel === 'share' ? (
       <ShareDialog
         dialogId={shareDialogId}

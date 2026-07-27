@@ -11,10 +11,11 @@ import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
+  ProjectType,
+  ShareDialogId,
   ShareFailure,
   ShareFailureType,
-} from '@cdo/apps/lab2/projects/channelsApi';
-import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
+} from '@cdo/apps/lab2/types';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';

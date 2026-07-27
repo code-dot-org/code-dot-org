@@ -5,16 +5,9 @@
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
-import {Channel} from '../types';
+import {Channel, ShareFailure} from '../types';
 
 const rootUrl = '/v3/channels';
-
-export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
-
-export interface ShareFailure {
-  type: ShareFailureType;
-  content?: string;
-}
 
 export async function get(channelId: string): Promise<Channel> {
   const {value} = await HttpClient.fetchJson<Channel>(
@@ -62,23 +55,20 @@ export async function fetchSharingDisabled(
   return value.sharing_disabled;
 }
 
-export async function fetchPrivacyProfanityViolation(
-  channelId: string
-): Promise<boolean> {
-  // The server responds with 0 (not false) when there is no violation.
-  const {value} = await HttpClient.fetchJson<{has_violation: boolean | number}>(
-    `${rootUrl}/${channelId}/privacy-profanity`
-  );
-  return !!value.has_violation;
-}
-
 export async function fetchShareFailure(
   channelId: string
 ): Promise<ShareFailure | null> {
   const {value} = await HttpClient.fetchJson<{
     share_failure: ShareFailure | false;
+    intl_share_failure: ShareFailure | false | null;
+    language: string;
   }>(`${rootUrl}/${channelId}/share-failure`);
-  return value.share_failure || null;
+  // share_failure is always the English check; intl_share_failure is the
+  // check in the user's language when that isn't English. Use the user's
+  // language, matching how legacy labs decide whether to block a project.
+  const failure =
+    value.language === 'en' ? value.share_failure : value.intl_share_failure;
+  return failure || null;
 }
 
 export async function fetchIsTeacherOfProjectOwner(

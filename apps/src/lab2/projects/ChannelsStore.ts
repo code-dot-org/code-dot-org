@@ -48,8 +48,8 @@ export class ChannelsStore {
     return channelsApi.fetchSharingDisabled(channel.id);
   }
 
-  getPrivacyProfanityViolation(channel: Channel) {
-    return channelsApi.fetchPrivacyProfanityViolation(channel.id);
+  getShareFailure(channel: Channel) {
+    return channelsApi.fetchShareFailure(channel.id);
   }
 
   getIsTeacherOfProjectOwner(channel: Channel) {

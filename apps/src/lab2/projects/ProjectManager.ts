@@ -22,7 +22,12 @@ import {PROJECT_TYPES_WITH_SHARE_FILTERING} from '../constants';
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
-import {Channel, ProjectAndSources, ProjectSources} from '../types';
+import {
+  Channel,
+  ProjectAndSources,
+  ProjectSources,
+  ShareFailure,
+} from '../types';
 
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
@@ -120,18 +125,16 @@ export default class ProjectManager {
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
     );
-    let hasPrivacyProfanityViolation: boolean | undefined;
+    let shareFailure: ShareFailure | null = null;
     if (PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
       try {
-        hasPrivacyProfanityViolation =
-          await this.channelsStore.getPrivacyProfanityViolation(channel);
+        shareFailure = await this.channelsStore.getShareFailure(channel);
       } catch (error) {
-        // Fail silently, matching server behavior when the filtering service
+        // Fail open, matching server behavior when the filtering service
         // is unavailable.
         this.metricsReporter.logWarning(
-          'Unable to fetch privacy/profanity violation status. Defaulting to no violation.'
+          'Unable to fetch share failure status. Defaulting to no failure.'
         );
-        hasPrivacyProfanityViolation = false;
       }
     }
     const isTeacherOfProjectOwner =
@@ -142,7 +145,7 @@ export default class ProjectManager {
       channel,
       abuseScore,
       sharingDisabled,
-      hasPrivacyProfanityViolation,
+      shareFailure,
       isTeacherOfProjectOwner,
     };
   }
