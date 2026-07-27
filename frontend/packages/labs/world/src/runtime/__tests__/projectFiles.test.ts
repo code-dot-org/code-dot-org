@@ -10,6 +10,7 @@ describe('projectFiles', () => {
     const files = projectFiles(DEFAULT_PROJECT.source);
     expect(Object.keys(files).sort()).toEqual([
       'actors/player.actor',
+      'animations/pulse.json',
       'scenes/main.js',
       'worlds/platform.js',
     ]);

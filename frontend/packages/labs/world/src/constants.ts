@@ -30,7 +30,7 @@ scene.addActor(
     .set(SpriteProperty, 'ground'),
 );
 
-// A coin floating above the ground, playing the "coinSpin" animation.
+// A coin floating above the ground, playing the built-in "coinSpin" animation.
 scene.addActor(
   new ActorBuilder({id: 'coin', name: 'Coin'})
     .useTraits([PositionalTrait, AppearanceTrait])
@@ -38,17 +38,27 @@ scene.addActor(
     .set(AnimationProperty, 'coinSpin'),
 );
 
+// A ball playing "pulse" — the animation authored in animations/pulse.json.
+scene.addActor(
+  new ActorBuilder({id: 'ball', name: 'Ball'})
+    .useTraits([PositionalTrait, AppearanceTrait])
+    .set(PositionProperty, new Vector(90, 90))
+    .set(AnimationProperty, 'pulse'),
+);
+
 export default scene;
 `;
 
-const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule} from 'world-lab';
+const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule, parseAnimationFile} from 'world-lab';
+import PulseFile from 'animations/pulse.json';
 
 // A World is the set of rules in play. "Has Gravity" pulls in motion and
 // collision automatically; "Responds to Input" lets arrow-key-controlled actors
 // move; "Has Appearance" draws actors with sprites and animations.
-export default new WorldBuilder({id: 'platform', name: 'Platform World'}).useRules(
-  [GravityRule, InputRule, AnimationRule],
-);
+// useAnimations registers the animations authored in animations/pulse.json.
+export default new WorldBuilder({id: 'platform', name: 'Platform World'})
+  .useRules([GravityRule, InputRule, AnimationRule])
+  .useAnimations(parseAnimationFile(PulseFile));
 `;
 
 // The player is authored in Blockly — a `.actor` file is a Blockly workspace
@@ -106,6 +116,30 @@ const PLAYER_ACTOR = JSON.stringify(
   2,
 );
 
+// A learner-authored animation file — plain JSON, discriminated by
+// `type: 'animation'` (INTERFACE.md §Animations). The world imports and
+// registers it (`useAnimations(parseAnimationFile(...))`); the ball actor plays
+// it. "pulse" reuses the built-in "ball" sprite, scaling it per frame — showing
+// the per-frame `scale` the stock strip animations don't use.
+const PULSE_ANIMATION = JSON.stringify(
+  {
+    type: 'animation',
+    animations: {
+      pulse: {
+        name: 'Pulse',
+        frames: [
+          {sprite: 'ball', scale: 0.7, delay: 160},
+          {sprite: 'ball', scale: 1.0, delay: 160},
+          {sprite: 'ball', scale: 1.3, delay: 160},
+          {sprite: 'ball', scale: 1.0, delay: 160},
+        ],
+      },
+    },
+  },
+  null,
+  2,
+);
+
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   source: {
     files: {
@@ -132,11 +166,19 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: PLAYER_ACTOR,
         folderId: 'actors',
       },
+      pulse: {
+        id: 'pulse',
+        name: 'pulse.json',
+        language: 'json',
+        contents: PULSE_ANIMATION,
+        folderId: 'animations',
+      },
     },
     folders: {
       scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
+      animations: {id: 'animations', name: 'animations', parentId: '0'},
     },
     openFiles: ['main'],
   },

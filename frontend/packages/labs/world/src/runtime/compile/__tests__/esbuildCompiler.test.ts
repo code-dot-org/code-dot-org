@@ -45,6 +45,24 @@ describe('WorldCompiler', () => {
     expect(code).not.toMatch(/: string =/);
   });
 
+  it('bundles an imported animation `.json` file', async () => {
+    const project: Record<string, string> = {
+      'scenes/main.ts': `
+        import {SceneBuilder} from 'world-lab';
+        import Spin from 'animations/spin.json';
+        const scene = new SceneBuilder({id: 'g', name: 'G'});
+        console.log(Spin.animations.spin.frames.length);
+        export default scene;
+      `,
+      'animations/spin.json': `{"type":"animation","animations":{"spin":{"frames":[{"sprite":"coin","delay":80}]}}}`,
+    };
+    const code = await compiler.compile(project, 'scenes/main.ts');
+    // The animation JSON is inlined into the bundle as an object literal.
+    expect(code).toContain('type: "animation"');
+    expect(code).toContain('sprite: "coin"');
+    expect(code).toContain('delay: 80');
+  });
+
   it('reflects an edit on a subsequent (warm) rebuild', async () => {
     await compiler.compile(PROJECT, 'scenes/main.ts');
     const edited = {...PROJECT, 'scenes/label.ts': `export default 'v2';`};

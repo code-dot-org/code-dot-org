@@ -54,3 +54,4 @@ export type {
   Cell,
   FrameState,
 } from './core/animationTypes';
+export {parseAnimationFile, type AnimationFile} from './core/animationFile';

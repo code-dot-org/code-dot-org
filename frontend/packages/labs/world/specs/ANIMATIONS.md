@@ -152,12 +152,18 @@ milestones 1–7 were staged.
   (engine-driven, same gold-oscillation signature) with the sprite/movement/
   gravity demo intact.
 
-- **A — Learner-authored `.anim` files.** Simplified by the render-time
-  resolution decision (§2): a `.anim` needs **no transform** — its sprite fields
-  are stock names resolved by the driver, so it is plain JSON. Teach the compiler
-  `.anim` → `json` (`virtualFsPlugin` `EXT_ORDER` + `loaderFor`); the learner
-  `import`s it and passes it to `WorldBuilder.useAnimations` (already wired). Add
-  a validator. Unit-test a compile round-trip importing a `.anim`.
+- **A — Learner-authored animation files.** DONE. An animation file is plain
+  `.json` (no bespoke extension, no compiler change — the compiler already
+  bundles `.json`), discriminated by `type: "animation"`, matching INTERFACE.md's
+  `animations/player.json` example. Frame `sprite`s are stock names the driver
+  resolves, so no transform is needed. `parseAnimationFile`
+  (`engine/core/animationFile.ts`) validates the imported JSON into an
+  `AnimationDef` map (clear errors on malformed input); the learner `import`s the
+  file and passes it to `WorldBuilder.useAnimations`. The default project ships
+  `animations/pulse.json` (a per-frame `scale` pulse on the "ball" sprite), and
+  the ball actor plays it. Unit-tested (`parseAnimationFile`, a compile
+  round-trip inlining an animation `.json`) and browser-verified (the ball's
+  red-pixel area oscillates as it pulses).
 
 - **D — Blockly + project integration.** PARTLY DONE. Done: the stock coin/player
   are spec-model `AnimationDef`s on the rule (frames name the vendor sheets, still
