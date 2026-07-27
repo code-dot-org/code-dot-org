@@ -1,5 +1,5 @@
-// Keyboard-synthesized clicks (Space/Enter on a focused control) have
-// detail 0.
+// event.detail is the click count; pressing Space/Enter on a focused
+// control also fires a click, but with detail 0.
 export function isPointerClick(event: React.MouseEvent<HTMLElement>) {
   return event.detail > 0;
 }
