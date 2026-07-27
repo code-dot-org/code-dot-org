@@ -17,6 +17,14 @@ export interface FileOperations {
     folderId?: FolderId;
     contents?: string;
   }) => void;
+  /** Add an uploaded binary file (no contents; referenced by URL). */
+  newExternalFile: (args: {
+    fileName: string;
+    language: string;
+    url: string;
+    mimeType?: string;
+    folderId?: FolderId;
+  }) => void;
   renameFile: (fileId: FileId, name: string) => void;
   deleteFile: (fileId: FileId) => void;
   moveFile: (fileId: FileId, folderId: FolderId) => void;
@@ -56,6 +64,8 @@ export const useFileOperations = (): FileOperations => {
       saveFile: (id, contents) =>
         commit(edit.saveFileContents(source, id, contents)),
       newFile: args => commit(edit.createNewFile({source, ...args})),
+      newExternalFile: args =>
+        commit(edit.createExternalFile({source, ...args})),
       renameFile: (id, name) => commit(edit.renameFile(source, id, name)),
       deleteFile: id => commit(edit.deleteFile(source, id)),
       moveFile: (id, folderId) => commit(edit.moveFile(source, id, folderId)),

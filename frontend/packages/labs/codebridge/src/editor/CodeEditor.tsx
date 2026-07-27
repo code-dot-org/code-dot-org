@@ -196,6 +196,19 @@ const CodeEditor = () => {
     );
   }
 
+  // An uploaded image has no editable contents; show it. Its bytes live in the
+  // assets backend, referenced by `url` (see `ProjectFile`).
+  if (activeFile.url && activeFile.mimeType?.startsWith('image/')) {
+    return (
+      <img
+        key={activeFile.id}
+        src={activeFile.url}
+        alt={activeFile.name}
+        className={styles.uploadedImage}
+      />
+    );
+  }
+
   // A lab may supply a custom editor for a language (e.g. Blockly for `rule`);
   // fall back to CodeMirror when there is none.
   const CustomEditor = editorComponents?.[activeFile.language];

@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material';
-import {useCallback} from 'react';
+import {useCallback, useRef, type ChangeEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {
@@ -9,6 +9,7 @@ import type {
   ProjectFile,
   ProjectFolder,
 } from '@code-dot-org/core/api';
+import {DashboardApiClient} from '@code-dot-org/core/api';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import {
@@ -22,7 +23,7 @@ import {useFileOperations} from '../hooks/useFileOperations';
 import {usePrompts} from '../hooks/usePrompts';
 import {useAppSelector} from '../redux/store';
 import {getFileIcon} from '../utils/fileIcons';
-import {shouldShowFile} from '../utils/multiFileSource';
+import {getFileExtension, shouldShowFile} from '../utils/multiFileSource';
 
 import styles from './fileBrowser.module.css';
 import {FileBrowserToggleButton} from './FileBrowserToggleButton';
@@ -190,10 +191,11 @@ interface FileBrowserProps {
  * apps/src/codebridge/FileBrowser, driven by {@link useFileOperations} over the
  * base SourcesContext and the base dialog system for name/confirm prompts.
  *
- * Deferred from the legacy version: drag-and-drop move (needs @dnd-kit), the
- * asset/image upload flow, backpack row actions, and levelbuilder file-type
- * toggles. New-file language is a placeholder derived from the extension until
- * the Codebridge `config.languageMapping` is ported.
+ * Upload (header "Upload File", shown when `config.validMimeTypes` is set) reads
+ * a text file into contents or stores a binary file in the assets backend and
+ * references it by URL. Deferred from the legacy version: drag-and-drop move
+ * (needs @dnd-kit), per-folder upload, moderation, backpack row actions, and
+ * levelbuilder file-type toggles.
  */
 const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
   const ops = useFileOperations();
@@ -203,6 +205,57 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
   // submitted level, a project you don't own — the file-editing menus are
   // hidden, matching legacy's `enableMenu={!isReadOnly}`.
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
+
+  // Upload: a hidden file input the "Upload File" menu triggers. A text file is
+  // read into contents; anything else is stored in the assets backend
+  // (`assets.upload`) and referenced by URL. The channel id scopes the asset to
+  // the current project. The api client is the app-wide singleton (no
+  // `ApiClientProvider` dependency — it renders fine in the bare shell tests).
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const canUpload = !isReadOnly && (config.validMimeTypes?.length ?? 0) > 0;
+
+  const handleFileSelected = useCallback(
+    async (event: ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      event.target.value = ''; // reset so the same file can be re-selected
+      if (!file) {
+        return;
+      }
+      const language = languageForFileName(config, file.name);
+      try {
+        if (file.type.startsWith('text/')) {
+          ops.newFile({
+            fileName: file.name,
+            language,
+            folderId: DEFAULT_FOLDER_ID,
+            contents: await file.text(),
+          });
+          return;
+        }
+        if (!channelId) {
+          return;
+        }
+        const ext = getFileExtension(file.name);
+        const filename = `${crypto.randomUUID()}${ext ? `.${ext}` : ''}`;
+        const {url} = await DashboardApiClient.assets.upload({
+          channelId,
+          filename,
+          data: file,
+        });
+        ops.newExternalFile({
+          fileName: file.name,
+          language,
+          folderId: DEFAULT_FOLDER_ID,
+          url,
+          mimeType: file.type,
+        });
+      } catch (error) {
+        console.error('File upload failed', error);
+      }
+    },
+    [ops, config, channelId],
+  );
 
   const newFilePlaceholder = config.editableFileTypes[0]
     ? `name.${config.editableFileTypes[0]}`
@@ -346,7 +399,24 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
                   clickHandler={() => newFolderIn(DEFAULT_FOLDER_ID)}
                 />
               )}
+              {canUpload && (
+                <PopUpButtonOption
+                  iconName="upload"
+                  labelText="Upload File"
+                  clickHandler={() => fileInputRef.current?.click()}
+                />
+              )}
             </PopUpButton>
+          )}
+          {canUpload && (
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept={config.validMimeTypes?.join(',')}
+              onChange={handleFileSelected}
+              style={{display: 'none'}}
+              aria-hidden="true"
+            />
           )}
           {/* Collapse the file browser; the host re-opens it from outside the
               (now-hidden) panel. */}

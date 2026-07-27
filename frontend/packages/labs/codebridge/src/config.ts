@@ -58,6 +58,12 @@ export interface CodebridgeConfig {
   editorComponents?: {[languageId: string]: ComponentType<CustomEditorProps>};
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
+  /**
+   * MIME types the user may upload (e.g. ['image/png']). Empty/undefined hides
+   * the upload affordance. A `text/*` upload is read into the file's contents; any
+   * other type is stored in the assets backend and referenced by URL.
+   */
+  validMimeTypes?: string[];
 }
 
 export const DEFAULT_CODEBRIDGE_CONFIG: CodebridgeConfig = {
