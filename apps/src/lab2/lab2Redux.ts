@@ -480,7 +480,7 @@ function refreshShareFailure(
       dispatch(setShareFailure(failure));
     })
     .catch(() => {
-      // Fail open and keep the last known value.
+      // Fail silently and keep the last known value.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logWarning('Unable to refresh share failure status after save.');
@@ -488,8 +488,6 @@ function refreshShareFailure(
 }
 
 // Resolves once any in-flight post-save share filter check has settled.
-// The share button waits on this so the dialog never opens with the result
-// for the previous save and then swaps to the failure for the new content.
 export function waitForShareFailureRefresh(): Promise<void> {
   return shareFailureRefresh;
 }

@@ -29,8 +29,6 @@ import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
 
-// Fallback for failure types the server may add before this list learns
-// about them.
 export const SHARE_FAILURE_FALLBACK_PREFIX =
   "The project can't be shared because it contains flagged content. ";
 

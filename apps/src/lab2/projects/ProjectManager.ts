@@ -152,8 +152,7 @@ export default class ProjectManager {
     try {
       return await this.channelsStore.getShareFailure(channel);
     } catch (error) {
-      // Fail open, matching server behavior when the filtering service
-      // is unavailable.
+      // Fail silently, matching server behavior.
       this.metricsReporter.logWarning(
         'Unable to fetch share failure status. Defaulting to no failure.'
       );

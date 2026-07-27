@@ -63,9 +63,6 @@ export async function fetchShareFailure(
     intl_share_failure: ShareFailure | false | null;
     language: string;
   }>(`${rootUrl}/${channelId}/share-failure`);
-  // share_failure is always the English check; intl_share_failure is the
-  // check in the user's language when that isn't English. Use the user's
-  // language, matching how legacy labs decide whether to block a project.
   const failure =
     value.language === 'en' ? value.share_failure : value.intl_share_failure;
   return failure || null;

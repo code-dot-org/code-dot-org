@@ -56,8 +56,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     SubmissionStatusType | undefined
   >(undefined);
 
-  // The share filter result is fetched at project load and refreshed after
-  // each save, so the store always holds the latest settled answer.
   const shareFailure = useAppSelector(state => state.lab.shareFailure);
 
   const fetchSubmissionStatusHandleError = (
