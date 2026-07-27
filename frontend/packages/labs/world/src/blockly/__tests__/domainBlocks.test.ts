@@ -96,6 +96,18 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_on_event handles the animationEnded event', () => {
+    expect(
+      emit(
+        'world_on_event',
+        {EVENT: 'animationEnded'},
+        {HANDLER: 'console.log("done");\n'},
+      ),
+    ).toBe(
+      'actor.on(WorldLab.AnimationEndedEvent, () => {\nconsole.log("done");\n});\n',
+    );
+  });
+
   it('world_log prints the text field', () => {
     expect(emit('world_log', {TEXT: 'Player landed!'})).toBe(
       'console.log("Player landed!");\n',

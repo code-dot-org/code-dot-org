@@ -20,10 +20,12 @@ import {
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {setProjectAnimations} from '../blockly/animationOptions';
 import {
   BlocklyGenerator,
   type BlocklyGeneratorHandle,
 } from '../blockly/BlocklyGenerator';
+import {projectAnimationIds} from '../blockly/projectAnimations';
 import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
@@ -132,6 +134,9 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     if (Object.keys(files).length === 0) {
       return;
     }
+    // Refresh the `world_play_animation` dropdown from the project's animation
+    // files, before the editor loads a block or the generator runs.
+    setProjectAnimations(projectAnimationIds(files));
     // Wait for the Blockly generator before compiling a project that has any
     // Blockly-authored files; this effect re-runs when it becomes ready.
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {
