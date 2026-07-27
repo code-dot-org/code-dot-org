@@ -1,0 +1,24 @@
+{
+  "name": "aif-pl-playground",
+  "script_names": [
+
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "aif-pl-playground",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

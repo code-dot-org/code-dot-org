@@ -35,7 +35,7 @@
           "name": "index.html",
           "language": "html",
           "contents": "<!DOCTYPE html> \n<html> \n<head>\n   <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n  \n  <!-- text to help us explore -->\n  <h1>We're about to learn a new language!</h1>\n  <h2>And it's going to help us add STYLE</h2>\n  <h1>But how does it work?</h1>\n</body>\n</html>",
-          "active": false,
+          "active": true,
           "folderId": "0"
         },
         "2": {
@@ -44,7 +44,7 @@
           "language": "css",
           "contents": "h1 {\n    color: blue;\n    text-align: center;\n}\n\nh2 {\ntext-align: right;\n  color: red;\n}",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "openFiles": [
@@ -68,6 +68,6 @@
     "name_suffix": "_2025-v2"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:18.338+00:00\",\"changed\":[\"cloned from \\\"CSD U2L6-L2-2025\\\"\"],\"cloned_from\":\"CSD U2L6-L2-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:18.338+00:00\",\"changed\":[\"cloned from \\\"CSD U2L6-L2-2025\\\"\"],\"cloned_from\":\"CSD U2L6-L2-2025\"},{\"changed_at\":\"2026-07-24 00:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

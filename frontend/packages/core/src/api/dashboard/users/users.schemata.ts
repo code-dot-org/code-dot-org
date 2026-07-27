@@ -172,6 +172,10 @@ export const UserSettingsResponseSchema = z
     // them for students on save, and a blank save surfaces the server's error.
     age: z.union([z.number(), z.string()]).nullable(),
     us_state: z.string().nullable(),
+    // Raw free-text gender the student entered; null when unset.
+    gender: z.string().nullable(),
+    // Request resolves to the USA; the client gates the US-state field on it.
+    is_usa: z.boolean(),
     parent_email: z.string().nullable(),
     dependent_students_count: z.number(),
     age_options: z.array(DropdownOptionSchema),
@@ -197,6 +201,8 @@ export const UserSettingsResponseSchema = z
     canDeleteOwnAccount: r.can_delete_own_account,
     age: r.age,
     usState: r.us_state,
+    gender: r.gender,
+    isUsa: r.is_usa,
     parentEmail: r.parent_email,
     dependentStudentsCount: r.dependent_students_count,
     ageOptions: r.age_options,
