@@ -13,6 +13,7 @@ require 'set'
 
 class MediaProxyController < ApplicationController
   include ProxyHelper
+  include SharedConstants
 
   # Content types that we are willing to proxy
   ALLOWED_CONTENT_TYPES = Set.new(
@@ -38,6 +39,9 @@ class MediaProxyController < ApplicationController
   # How long the content is allowed to be cached.
   EXPIRY_TIME = 10.years
 
+  # Hostname suffixes that media proxy requests are allowed to fetch.
+  MEDIA_ALLOWED_HOSTNAME_SUFFIXES = (ALLOWED_HOSTNAME_SUFFIXES + ALLOWED_IMAGE_HOSTNAME_SUFFIXES).uniq.freeze
+
   # Return the proxied media at the given URL.
   def get
     # Restrictive Content Security Policy for proxied media.
@@ -45,7 +49,7 @@ class MediaProxyController < ApplicationController
     render_proxied_url(
       params[:u],
       allowed_content_types: ALLOWED_CONTENT_TYPES,
-      allowed_hostname_suffixes: nil, # allow any hostname
+      allowed_hostname_suffixes: MEDIA_ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
       infer_content_type: true,
       no_transform: true

@@ -3,7 +3,8 @@ require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
 
 class MediaProxyControllerTest < ActionController::TestCase
-  IMAGE_URI = 'http://www.example.com/foo.jpg'
+  IMAGE_URI = 'http://images.code.org/foo.jpg'
+  BLOCKED_IMAGE_URI = 'http://www.example.com/foo.jpg'
   IMAGE_DATA = 'JPG_\u0000\u00FF'.force_encoding(Encoding::BINARY)
 
   test "should fetch proxied media in all content types" do
@@ -50,6 +51,12 @@ class MediaProxyControllerTest < ActionController::TestCase
     stub_request(:get, IMAGE_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'image/jpeg'})
     get :get, params: {foo: 'bar'}
     assert_response 400
+  end
+
+  test "should fail if hostname is not allowlisted" do
+    get :get, params: {u: BLOCKED_IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, "not in the list of allowed hostnames"
   end
 
   test "can't access loopback IP addresses" do
