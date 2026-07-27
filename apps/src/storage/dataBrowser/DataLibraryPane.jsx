@@ -27,10 +27,10 @@ import style from './data-library-pane.module.scss';
 const rehypeMap = {
   a: props => (
     <Link
+      {...props}
       size="xs"
       data-lz-url="true"
       data-localize="markdown-url"
-      {...props}
     />
   ),
 };
