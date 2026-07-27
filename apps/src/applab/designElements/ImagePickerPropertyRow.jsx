@@ -1,3 +1,5 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Box, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -87,21 +89,39 @@ export default class ImagePickerPropertyRow extends React.Component {
 
   render() {
     return (
-      <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
-        <div>
-          <input
-            className="imagePickerInput"
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 1,
+        }}
+      >
+        <Box style={rowStyle.container}>
+          <TextField
+            id="imagePickerInput"
+            name={''}
+            label={this.props.desc}
             value={this.state.value}
             onChange={this.handleChangeInternal}
-            style={rowStyle.input}
+            size="s"
+            style={{width: '100%'}}
           />
-          &nbsp;
-          <a style={rowStyle.link} onClick={this.handleButtonClick}>
+          <MuiButton
+            aria-label="Open image chooser"
+            variant="outlined"
+            color="secondary"
+            size="extraSmall"
+            type="button"
+            sx={{
+              height: '2rem',
+              marginTop: '1.375rem',
+            }}
+            onClick={this.handleButtonClick}
+          >
             {commonMsg.choosePrefix()}
-          </a>
-        </div>
-      </div>
+          </MuiButton>
+        </Box>
+      </Box>
     );
   }
 }

@@ -6,9 +6,15 @@ import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -27,6 +33,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+import {
+  uploadAssetToLevel,
+  uploadAssetToProject,
+  UploadImageFunction,
+} from '../ai/items/itemGeneration';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
@@ -60,8 +71,8 @@ import {
 
 import {isPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
+import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
-import ItemsTab from './ItemsTab';
 import Playspace, {PlayspaceMode} from './Playspace';
 import SceneSelector from './SceneSelector';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -122,6 +133,11 @@ const GAME_KEYS = new Set([
   ' ',
   'Spacebar',
 ]);
+
+// Levelbuilder edit modes (start, toolbox, exemplar) run without a project
+// channel; generated images upload to the level's starter assets instead.
+const isLevelEditMode =
+  !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -194,6 +210,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // (the container remounts this view per level, after sources load).
   const initialSources = useRef(currentSources).current;
 
+  const uploadImage: UploadImageFunction | undefined = useMemo(() => {
+    if (channelId) {
+      return (filename, data, mediaType) =>
+        uploadAssetToProject(channelId, filename, data, mediaType);
+    }
+    if (isLevelEditMode) {
+      const levelName = levelProperties.name;
+      return (filename, data, mediaType) =>
+        uploadAssetToLevel(levelName, filename, data, mediaType);
+    }
+    return undefined;
+  }, [channelId, levelProperties.name]);
+
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
@@ -202,6 +231,34 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
+
+  const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        if (mode === 'toolbox') {
+          return {}; // TODO: Support toolbox mode with conversion to JSON.
+        }
+        const sources = cloneDeep(currentSources);
+        if (mode === 'start' && Blockly.blockIdOverrides) {
+          // Apply Block ID overrides for top-level sources and all scenes.
+          [
+            sources.source as WorkspaceSerialization | undefined,
+            ...(sources.scenes ?? []).map(scene => scene.source),
+          ].forEach(source => {
+            if (source) {
+              applyBlockIdOverrides(source, Blockly.blockIdOverrides);
+            }
+          });
+        }
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: sources,
+        };
+      },
+      [currentSources]
+    )
+  );
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -322,6 +379,57 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     // initialSources is a ref-captured constant).
   }, [levelProperties.id, dispatch, initialSources, seedAnimationList]);
 
+  // What's on stage right now — updated by every run, including scene jumps —
+  // so "Restart scene" (and the reseed watcher below) can re-run it.
+  const currentPlayingRef = useRef<
+    | {kind: 'local'; scene: SpriteLab2Scene}
+    | {kind: 'external'; project: ExternalProject; sceneId: string}
+    | null
+  >(null);
+
+  // Re-run the stage once a reseeded animation list finishes loading. The
+  // reseed-triggered run happens immediately, but reseeded entries carry
+  // only a sourceUrl (dataURIs load async) and the engine can't draw
+  // unloaded images (costume/background commands no-op on unknown names —
+  // a blank playspace until the next run). Thumbnails self-heal without
+  // this: GenerateImagePane re-trims on every list change. Kept in a ref
+  // (not effect cleanup): the reseed effect's deps churn on every animation
+  // write, which would cancel a pending watcher mid-load.
+  const cancelRerunWatchRef = useRef<() => void>();
+  // Latest restart-scene handler, for the watcher's async callback.
+  const restartSceneRef = useRef<() => void>(() => {});
+  useEffect(() => () => cancelRerunWatchRef.current?.(), []);
+  const rerunWhenAnimationsLoaded = useCallback(() => {
+    cancelRerunWatchRef.current?.();
+    const store = getStore();
+    const allLoaded = () => {
+      const list = store.getState().animationList;
+      return list.orderedKeys.every(
+        (key: string) => list.propsByKey[key]?.loadedFromSource
+      );
+    };
+    if (allLoaded()) {
+      // The reseed-triggered run has everything it needs.
+      return;
+    }
+    const finish = () => {
+      cancel();
+      restartSceneRef.current();
+    };
+    const unsubscribe = store.subscribe(() => allLoaded() && finish());
+    // Give up quietly if a load never completes; the playspace stays stale,
+    // no worse than not watching.
+    const timer = window.setTimeout(() => cancel(), 10000);
+    const cancel = () => {
+      unsubscribe();
+      clearTimeout(timer);
+      if (cancelRerunWatchRef.current === cancel) {
+        cancelRerunWatchRef.current = undefined;
+      }
+    };
+    cancelRerunWatchRef.current = cancel;
+  }, []);
+
   // Reseed the animation list when sources are reinitialized (e.g. start over).
   const seededReinitCountRef = useRef(0);
   useEffect(() => {
@@ -330,7 +438,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     seededReinitCountRef.current = sourcesReinitializedCount;
     seedAnimationList(currentSources.animations);
-  }, [sourcesReinitializedCount, currentSources.animations, seedAnimationList]);
+    // The stage's scene belongs to the pre-reset sources; restart-scene
+    // falls back to the first scene.
+    currentPlayingRef.current = null;
+    rerunWhenAnimationsLoaded();
+  }, [
+    sourcesReinitializedCount,
+    currentSources.animations,
+    seedAnimationList,
+    rerunWhenAnimationsLoaded,
+  ]);
 
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
@@ -403,14 +520,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
   // callbacks, not here — editor/tab switches don't fade.
-  // What's on stage right now — updated by every run, including scene jumps —
-  // so "Restart scene" can re-run it.
-  const currentPlayingRef = useRef<
-    | {kind: 'local'; scene: SpriteLab2Scene}
-    | {kind: 'external'; project: ExternalProject; sceneId: string}
-    | null
-  >(null);
-
   const runLocalScene = useCallback(
     (scene: SpriteLab2Scene) => {
       const engine = engineRef.current;
@@ -870,6 +979,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       runExternalProjectScene(current.project, current.sceneId);
     }
   }, [runScene, scenes, runExternalProjectScene]);
+  restartSceneRef.current = handleRestartScene;
 
   // Clicking the live preview opens Play on the scene being previewed.
   // Previewing the first scene IS the beginning; keep the quiet default state.
@@ -959,6 +1069,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           ) : undefined
         }
       >
+        {WorkspaceAlert}
         {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
         <div
@@ -985,7 +1096,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               pointerEvents: activeTab === 'Images' ? 'auto' : 'none',
             }}
           >
-            <ItemsTab />
+            <div className={moduleStyles.itemsTab}>
+              <GenerateImagePane uploadImage={uploadImage} />
+            </div>
           </div>
         )}
 
@@ -1013,7 +1126,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             instructions={levelProperties.longInstructions}
             onCodeGenerated={handleCodeGenerated}
-            channelId={channelId}
+            uploadImage={uploadImage}
           />
         )}
       </TabShell>

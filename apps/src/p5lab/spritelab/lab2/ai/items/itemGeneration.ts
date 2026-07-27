@@ -155,3 +155,35 @@ export async function uploadAssetToProject(
   });
   return url;
 }
+
+/**
+ * Upload a generated image to the level's starter assets.
+ * @returns the URL of the uploaded asset.
+ */
+export async function uploadAssetToLevel(
+  levelName: string,
+  filename: string,
+  data: Uint8Array,
+  mediaType: string
+): Promise<string> {
+  const extension = filename.split('.').pop() || 'png';
+  const uuidName = `${createUuid()}.${extension}`;
+  const url = `/level_starter_assets/${encodeURIComponent(
+    levelName
+  )}/uuid/${uuidName}`;
+  const buffer = new Uint8Array(data).buffer as ArrayBuffer;
+  const bodyData = new FormData();
+  bodyData.append('files[]', new File([buffer], uuidName, {type: mediaType}));
+  await HttpClient.post(url, bodyData, true);
+  return url;
+}
+
+/**
+ * Uploads an image to wherever the current context persists images.
+ * @returns the URL of the uploaded asset.
+ */
+export type UploadImageFunction = (
+  filename: string,
+  data: Uint8Array,
+  mediaType: string
+) => Promise<string>;

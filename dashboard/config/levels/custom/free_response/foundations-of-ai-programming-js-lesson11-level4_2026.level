@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check Your Understanding",
-    "long_instructions": "An app should show one emoji for each number the user enters. A user enters 6, but the app only shows 5 emojis.\r\n\r\nHow would you test and debug the loop?",
+    "long_instructions": "> An app should show one emoji for each number the user enters. A user enters 6, but the app only shows 5 emojis.\r\n>\r\n> How would you test and debug the loop?",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "enter response here...",
@@ -21,7 +21,7 @@
     "skip_sound": true,
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-14T00:15:21.666+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level2-v1-2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level2-v1-2026\"},{\"changed_at\":\"2026-07-14 00:15:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-07-14T00:15:21.666+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level2-v1-2026\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level2-v1-2026\"},{\"changed_at\":\"2026-07-14 00:15:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-24 20:42:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
