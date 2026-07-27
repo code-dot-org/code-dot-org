@@ -16,7 +16,6 @@ import {
   add as addWatchExpression,
   remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
-import color from '../../../util/color';
 
 import CommandHistory from './CommandHistory';
 import {actions, selectors} from './redux';
@@ -42,10 +41,10 @@ const style = {
     flexGrow: 1,
   },
   debugOutputBackgroundError: {
-    backgroundColor: color.lightest_red,
+    backgroundColor: 'var(--background-error-extra-light)',
   },
   debugOutputBackgroundWarning: {
-    backgroundColor: color.lightest_yellow,
+    backgroundColor: 'var(--background-warning-extra-light)',
   },
   debugInputWrapper: {
     flexGrow: 0,
@@ -56,7 +55,7 @@ const style = {
     flexGrow: 0,
     flexShrink: 0,
     display: 'flex',
-    backgroundColor: '#eee',
+    backgroundColor: 'var(--background-neutral-disabled)',
   },
   debugInputPrompt: {
     height: DEBUG_INPUT_HEIGHT,
