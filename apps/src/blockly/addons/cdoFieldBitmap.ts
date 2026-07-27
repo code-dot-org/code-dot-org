@@ -29,4 +29,29 @@ export class CdoFieldBitmap extends FieldBitmap {
     const bitmap = JSON.parse(fieldElement.textContent || '[]');
     this.setValue(bitmap);
   }
+
+  /**
+   * JSON serialization: the bitmap itself. Without these hooks Blockly
+   * routes JSON-serialized field state through the legacy XML path (because
+   * fromXml is overridden): saves embed an XML string, and loading a plain
+   * JSON field value (e.g. a toolbox entry's fields) crashes in DOMParser.
+   */
+  saveState(): number[][] | null {
+    return this.getValue();
+  }
+
+  loadState(state: unknown): void {
+    if (typeof state === 'string') {
+      const text = state.trim();
+      // States saved before these hooks existed are legacy XML strings;
+      // toolbox defaults may carry the bitmap as a JSON string.
+      if (text.startsWith('<')) {
+        this.fromXml(BlocklyCore.utils.xml.textToDom(text));
+        return;
+      }
+      this.setValue(JSON.parse(text));
+      return;
+    }
+    this.setValue(state);
+  }
 }

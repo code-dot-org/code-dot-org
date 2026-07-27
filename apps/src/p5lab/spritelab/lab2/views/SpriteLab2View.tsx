@@ -7,6 +7,8 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
+import {getCodeFromSerializedWorkspace} from '@cdo/apps/blockly/utils/workspace/getCode';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
@@ -40,7 +42,6 @@ import {
 } from '../ai/items/itemGeneration';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
-import {compileWorkspaceSource} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
@@ -123,6 +124,7 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 // channel; generated images upload to the level's starter assets instead.
 const isLevelEditMode =
   !!getAppOptionsEditBlocks() || !!getAppOptionsEditingExemplar();
+const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SpriteLab2ViewProps {
   levelProperties: SpriteLab2LevelProperties;
@@ -216,34 +218,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [jumpCover, setJumpCover] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(0);
   const [showStartOver, setShowStartOver] = useState(false);
-
-  const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
-    levelProperties.id,
-    !!levelProperties.projectTemplateLevelName,
-    useCallback(
-      mode => {
-        if (mode === 'toolbox') {
-          return {}; // TODO: Support toolbox mode with conversion to JSON.
-        }
-        const sources = cloneDeep(currentSources);
-        if (mode === 'start' && Blockly.blockIdOverrides) {
-          // Apply Block ID overrides for top-level sources and all scenes.
-          [
-            sources.source as WorkspaceSerialization | undefined,
-            ...(sources.scenes ?? []).map(scene => scene.source),
-          ].forEach(source => {
-            if (source) {
-              applyBlockIdOverrides(source, Blockly.blockIdOverrides);
-            }
-          });
-        }
-        return {
-          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: sources,
-        };
-      },
-      [currentSources]
-    )
-  );
 
   // Idle pre-mount (see imagesMounted above).
   useEffect(() => {
@@ -437,6 +411,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Instantiate the engine once per level. No legacy default-sprite library:
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
+    if (isToolboxMode) {
+      // Toolbox editing has nothing to run: the workspace holds the toolbox
+      // itself. With no engine, the run machinery no-ops.
+      return;
+    }
     let cancelled = false;
     const savedAnimations = initialSources.animations || EMPTY_ANIMATION_LIST;
 
@@ -474,14 +453,51 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [animationListState, patchSources]);
 
-  const {getCode, getCurrentBlocks, loadCode, subscribeToChanges} =
-    useBlocklyWorkspace({
-      enabled: animationsSeeded,
-      toolboxDefinition: levelProperties.toolboxDefinition,
-      toolboxXml: levelProperties.toolboxBlocks,
-      sharedBlocks: levelProperties.sharedBlocks,
-      theme,
-    });
+  const {
+    getCode,
+    getCurrentBlocks,
+    getToolboxDefinition,
+    loadCode,
+    subscribeToChanges,
+  } = useBlocklyWorkspace({
+    enabled: animationsSeeded,
+    toolboxDefinition: levelProperties.toolboxDefinition,
+    sharedBlocks: levelProperties.sharedBlocks,
+    theme,
+  });
+
+  const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
+    levelProperties.id,
+    !!levelProperties.projectTemplateLevelName,
+    useCallback(
+      mode => {
+        if (mode === 'toolbox') {
+          // The workspace holds the toolbox laid out as blocks; serialize it
+          // back into the level's toolbox definition.
+          const toolboxDefinition = getToolboxDefinition();
+          return toolboxDefinition
+            ? {toolbox_definition: toolboxDefinition}
+            : {};
+        }
+        const sources = cloneDeep(currentSources);
+        if (mode === 'start' && Blockly.blockIdOverrides) {
+          // Apply Block ID overrides for top-level sources and all scenes.
+          [
+            sources.source as WorkspaceSerialization | undefined,
+            ...(sources.scenes ?? []).map(scene => scene.source),
+          ].forEach(source => {
+            if (source) {
+              applyBlockIdOverrides(source, Blockly.blockIdOverrides);
+            }
+          });
+        }
+        return {
+          [mode === 'start' ? 'start_sources' : 'exemplar_sources']: sources,
+        };
+      },
+      [currentSources, getToolboxDefinition]
+    )
+  );
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -519,7 +535,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       try {
         const live = scene.id === activeSceneId ? getCode() : null;
         code =
-          live ?? compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
+          live ??
+          getCodeFromSerializedWorkspace(scene.source ?? DEFAULT_SCENE_SOURCE);
       } catch (e) {
         // A scene that fails to compile shouldn't kill the jump entirely;
         // run it as an empty scene.
@@ -587,7 +604,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ])
       );
       try {
-        return compileWorkspaceSource(scene.source ?? DEFAULT_SCENE_SOURCE);
+        return getCodeFromSerializedWorkspace(
+          scene.source ?? DEFAULT_SCENE_SOURCE
+        );
       } finally {
         dispatch({
           type: SET_INITIAL_ANIMATION_LIST,
