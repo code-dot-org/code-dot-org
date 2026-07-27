@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>World compile sandbox</title>
+  </head>
+  <body>
+    <!--
+      The compile surface (specs/SANDBOX.md). Loaded in a HIDDEN iframe on the
+      sandbox origin. It runs esbuild-wasm and transforms text only; it never
+      runs learner code. `entry.ts` reads the role from this page's filename.
+    -->
+    <script type="module" src="/src/runtime/sandbox/entry.ts"></script>
+  </body>
+</html>

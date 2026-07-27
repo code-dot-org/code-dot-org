@@ -221,9 +221,14 @@ Adapted from `HTMLPreview.tsx`. Responsibilities:
   `compile` with the entry (`scenes/main.js`, §6).
 - Toolbar (reuse `WorkspaceHeader` + segmented buttons already in
   `WorldLayout`): run/refresh, stop, pause/resume.
-- Relay `console`/`engine_error` to the Codebridge console
-  (`CodebridgeRegistry.getConsoleManager()`, as python does). A richer web-lab
-  style debug panel is later work.
+- Relay `console`/`engine_error` (the preview's `FromPreviewMessage`) into a
+  **Console/Debugger box in the layout**, not the Codebridge console. Placement
+  rule: the box sits **under the preview pane** in split or preview-only view,
+  and **under the editor pane** only when the editor is the sole visible pane —
+  it follows the preview and falls back to the editor when the preview is
+  hidden. This is _not_ a full-width bar under both panes (web-lab's shape);
+  World's console tracks whichever pane is showing the running game. A richer
+  web-lab-style debug panel (network, etc.) is later work.
 
 ### 5.3 The direct backend (`runtime/driverManager.ts`)
 
@@ -590,12 +595,11 @@ Unit first, then browser:
   needs `worker-src blob:`) and the compile surface's `connect-src 'self'` (for
   the wasm fetch). Browser boot time on a cold load still to be measured under
   the real self-hosting path.
-- **Compile→preview transport.** Partially resolved: a same-origin compiled
-  module imports and runs under `script-src 'self'` (Spike C), so the SW
-  transport keeps the CSP tight; the live two-sibling-iframe SW handoff
-  (registration scope, keep-alive across two clients) is still to be wired.
-  Fall back to `BroadcastChannel` + blob module if fiddly (costs a `blob:` in
-  the preview `script-src`).
+- **Compile→preview transport.** RESOLVED (milestone 2, `spikes/milestone-2/`):
+  the live round-trip works across two real origins under the production CSPs —
+  the compile surface bundles and stores the module in the SW, and the preview
+  surface imports the SW-served URL and runs it under `script-src 'self'`. The
+  `BroadcastChannel` + blob fallback remains available if needed.
 - **Hot-reload Levels 2–3.** State-preserving code swap and structural reconcile
   are non-trivial; the id-keyed instance store makes them possible, but they are
   staged after the slice and may need iteration.
@@ -616,13 +620,18 @@ Unit first, then browser:
    compiled module imports under `script-src 'self'`, blob needs `blob:`. §15's
    top risks resolved; specs updated. Remaining for later: the live
    two-iframe SW handoff and the older-browser `'wasm-unsafe-eval'` matrix.
-1. **Engine core** — `src/engine/**` with Vitest coverage (§13). No DOM.
-2. **Compile sandbox + transport** — `compile.html`, the compile manager split,
-   `messages.ts`, the warm esbuild context, the SW transport. Round-trips a
-   compiled module URL; no game yet.
-3. **Preview sandbox + Phaser binding** — `preview.html`, the preview manager
-   split, import the module, construct the Scene, run the loop, render the
-   falling sprite.
+1. **Engine core** — DONE. `src/engine/**` with Vitest coverage (§13). No DOM.
+2. **Compile sandbox + transport** — DONE (`spikes/milestone-2/roundtrip.mjs`).
+   `messages.ts`, `worldConfig.ts`, the esbuild compiler + virtual-FS plugin
+   (Node-tested), `compile.html`/`preview.html` + `entry.ts`, the compile &
+   preview worker managers, the parent managers, the transport SW, the
+   self-hosting script + `dev:sandbox`/`dev:isolated`. The round-trip compiles a
+   project, stores it in the SW, and imports+runs it in the preview across two
+   origins under the production CSPs. No game yet.
+3. **Preview sandbox + Phaser binding** — `preview.html` grows the engine: import
+   the compiled module, resolve `world-lab` (import map / SW), construct the
+   Scene, run the loop, render the falling sprite. (The import + report path is
+   already wired by milestone 2.)
 4. **Hot reload Levels 0–1** — restart on structural edits; `set_property`
    changes gravity live.
 5. **WorldPreview integration + README + Playwright verification** — slice done
