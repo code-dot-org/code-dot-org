@@ -464,6 +464,8 @@ async function setUpAndLoadProject(
   return await projectManager.load(resetToStartSources);
 }
 
+let shareFailureRefresh: Promise<void> = Promise.resolve();
+
 // Re-run the share filter after a successful save so the blocked UI and the
 // share dialog both reflect the saved content.
 function refreshShareFailure(
@@ -473,14 +475,23 @@ function refreshShareFailure(
   if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
     return;
   }
-  fetchShareFailure(channel.id)
-    .then(failure => dispatch(setShareFailure(failure)))
+  shareFailureRefresh = fetchShareFailure(channel.id)
+    .then(failure => {
+      dispatch(setShareFailure(failure));
+    })
     .catch(() => {
       // Fail open and keep the last known value.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logWarning('Unable to refresh share failure status after save.');
     });
+}
+
+// Resolves once any in-flight post-save share filter check has settled.
+// The share button waits on this so the dialog never opens with the result
+// for the previous save and then swaps to the failure for the new content.
+export function waitForShareFailureRefresh(): Promise<void> {
+  return shareFailureRefresh;
 }
 
 // Helper function to set the channel, source, and level data in redux.
