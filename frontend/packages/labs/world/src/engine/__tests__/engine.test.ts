@@ -3,6 +3,7 @@ import {describe, expect, it} from 'vitest';
 import {
   ActorBuilder,
   AffectedByGravityTrait,
+  AnimationProperty,
   CollidableTrait,
   FallingProperty,
   GravityRule,
@@ -184,16 +185,16 @@ describe('renderSnapshot (driver view)', () => {
     expect(world.renderSnapshot()).toEqual([]);
   });
 
-  it('reports the actor sprite (empty when unset)', () => {
+  it('reports the actor sprite and animation (empty when unset)', () => {
     const {world, player} = makeScene(new Vector(0, 0), 100);
-    // Default: no sprite → the driver draws a rectangle.
-    expect(world.renderSnapshot().find(s => s.actor === player)?.sprite).toBe(
-      '',
-    );
+    // Default: no sprite/animation → the driver draws a rectangle.
+    const state = () => world.renderSnapshot().find(s => s.actor === player);
+    expect(state()?.sprite).toBe('');
+    expect(state()?.animation).toBe('');
     player.set(SpriteProperty, 'player');
-    expect(world.renderSnapshot().find(s => s.actor === player)?.sprite).toBe(
-      'player',
-    );
+    player.set(AnimationProperty, 'playerWalk');
+    expect(state()?.sprite).toBe('player');
+    expect(state()?.animation).toBe('playerWalk');
   });
 });
 

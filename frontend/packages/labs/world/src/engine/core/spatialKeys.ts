@@ -15,4 +15,7 @@ export const SPATIAL = {
   // rectangle. Lives on the positional trait so every drawable actor can carry
   // one, and renderSnapshot reads it alongside the transform.
   sprite: 'sprite',
+  // The name of the built-in animation (a sprite sequence) to play. Takes
+  // precedence over `sprite`; empty = none. Also on the positional trait.
+  animation: 'animation',
 } as const;

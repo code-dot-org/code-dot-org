@@ -62,8 +62,12 @@ await esbuild.build({
 });
 console.log('world assets: bundled world-lab.mjs');
 
-// Generate the built-in sprite images the preview loads as self-hosted assets.
-const sprites = generateSprites(join(vendorDir, 'sprites'));
-console.log(`world assets: generated ${sprites.length} sprites`);
+// Generate the built-in sprite + animation images the preview loads as
+// self-hosted assets.
+const {sprites, animations} = generateSprites(join(vendorDir, 'sprites'));
+console.log(
+  `world assets: generated ${sprites.length} sprites, ` +
+    `${animations.length} animations`,
+);
 
 console.log('world assets: ready in public/vendor/');

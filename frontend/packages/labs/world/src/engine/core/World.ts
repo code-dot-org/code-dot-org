@@ -42,6 +42,8 @@ export interface RenderState {
   rotation: number;
   /** Built-in sprite name; empty means draw a plain rectangle. */
   sprite: string;
+  /** Built-in animation name; empty means none. Takes precedence over sprite. */
+  animation: string;
 }
 
 /** The data a WorldBuilder hands the World constructor. */
@@ -206,6 +208,9 @@ export class World {
     const spriteProp = positional.properties[SPATIAL.sprite] as
       | Property<string>
       | undefined;
+    const animationProp = positional.properties[SPATIAL.animation] as
+      | Property<string>
+      | undefined;
     if (!positionProp || !scaleProp || !rotationProp) {
       return [];
     }
@@ -223,9 +228,10 @@ export class World {
         scaleX: scale.x,
         scaleY: scale.y,
         rotation: actor.get(rotationProp),
-        // The sprite property was added to the positional trait later; tolerate
-        // its absence so an older built world still renders (as rectangles).
+        // The sprite/animation properties were added to the positional trait
+        // later; tolerate their absence so an older built world still renders.
         sprite: spriteProp ? actor.get(spriteProp) : '',
+        animation: animationProp ? actor.get(animationProp) : '',
       });
     }
     return states;

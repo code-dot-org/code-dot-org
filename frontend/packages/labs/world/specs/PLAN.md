@@ -697,7 +697,14 @@ Unit first, then browser:
    draws a textured `Image` per actor (rectangle fallback when no sprite); the
    `world_set_sprite` block picks one. `src/sprites.ts` is the shared name list,
    kept in sync with the generator and the files by a test. Browser-verified
-   (player + ground render as sprites, not rectangles). Remaining: more
-   traits/rules/events (incl. key-press _events_, which need per-actor event
-   payloads), spritesheets/animations, and learner-supplied image assets (needs
-   the project binary-asset pipeline).
+   (player + ground render as sprites, not rectangles). Third slice DONE —
+   animations: an `AnimationProperty` (also on the positional trait, taking
+   precedence over `sprite`) names a built-in looping animation; the generator
+   also writes horizontal spritesheet PNGs (`coinSpin`, `playerWalk`) with per-
+   animation `{frames, frameRate}` specs; the binding preloads the sheets,
+   registers the Phaser animations, and draws a playing `Sprite`; the
+   `world_play_animation` block picks one; the demo gained a spinning coin.
+   Browser-verified (the coin's gold-pixel area oscillates as it spins).
+   Remaining: more traits/rules/events (incl. key-press _events_, which need
+   per-actor event payloads), and learner-supplied image assets (needs the
+   project binary-asset pipeline).

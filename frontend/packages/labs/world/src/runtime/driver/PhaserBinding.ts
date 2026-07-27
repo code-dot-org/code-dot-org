@@ -9,10 +9,10 @@
 // engine instance — so there is exactly one engine instance and no Property
 // identity to marshal across a module boundary.
 //
-// Appearance: an actor whose `sprite` render field names a built-in sprite is
-// drawn as that texture (preloaded from the self-hosted `${assetBase}sprites/`);
-// an actor with no sprite falls back to a plain rectangle. Spritesheets and
-// animations are later work (the asset pipeline / GLOSSARY.md).
+// Appearance: an actor whose `animation` render field names a built-in
+// animation is drawn as a looping Phaser Sprite; else its `sprite` field names a
+// static texture drawn as an Image; else it falls back to a plain rectangle. All
+// textures/spritesheets are preloaded from the self-hosted `${assetBase}sprites/`.
 //
 // Input: each frame we read Phaser's cursor keys and hand the pressed set to the
 // World (`setInput`) before ticking, so the engine's Input rule can drive
@@ -23,7 +23,7 @@ import Phaser from 'phaser';
 
 import type {Actor, RenderState, World} from 'world-lab';
 
-import {SPRITE_NAMES} from '../../sprites';
+import {ANIMATIONS, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 
 const ACTOR_SIZE = 24;
 const DEFAULT_WIDTH = 400;
@@ -31,8 +31,11 @@ const DEFAULT_HEIGHT = 300;
 const DEGREES_TO_RADIANS = Math.PI / 180;
 const DEFAULT_ASSET_BASE = '/vendor/';
 
-/** A drawn actor — a textured sprite or the fallback rectangle. */
-type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
+/** A drawn actor — an animated/static texture or the fallback rectangle. */
+type GameObject =
+  | Phaser.GameObjects.Sprite
+  | Phaser.GameObjects.Image
+  | Phaser.GameObjects.Rectangle;
 
 /** Phaser cursor keys → the DOM `KeyboardEvent.key` names the engine expects. */
 function pressedKeys(
@@ -62,18 +65,25 @@ export class PhaserBinding {
     const objects = new Map<Actor, GameObject>();
     let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
 
-    // Create the object for an actor once, choosing sprite vs rectangle from its
-    // current sprite name (a loaded texture wins; otherwise the rectangle).
-    const create = (scene: Phaser.Scene, state: RenderState): GameObject =>
-      state.sprite && scene.textures.exists(state.sprite)
-        ? scene.add.image(state.x, state.y, state.sprite)
-        : scene.add.rectangle(
-            state.x,
-            state.y,
-            ACTOR_SIZE,
-            ACTOR_SIZE,
-            0x33cc66,
-          );
+    // Create the object for an actor once: a playing animation wins, then a
+    // static sprite texture, then the fallback rectangle.
+    const create = (scene: Phaser.Scene, state: RenderState): GameObject => {
+      if (state.animation && scene.anims.exists(state.animation)) {
+        const sprite = scene.add.sprite(state.x, state.y, state.animation);
+        sprite.play(state.animation);
+        return sprite;
+      }
+      if (state.sprite && scene.textures.exists(state.sprite)) {
+        return scene.add.image(state.x, state.y, state.sprite);
+      }
+      return scene.add.rectangle(
+        state.x,
+        state.y,
+        ACTOR_SIZE,
+        ACTOR_SIZE,
+        0x33cc66,
+      );
+    };
 
     const sync = (scene: Phaser.Scene) => {
       for (const state of world.renderSnapshot() as RenderState[]) {
@@ -101,8 +111,28 @@ export class PhaserBinding {
           for (const name of SPRITE_NAMES) {
             this.load.image(name, `${assetBase}sprites/${name}.png`);
           }
+          for (const name of Object.keys(ANIMATIONS)) {
+            this.load.spritesheet(name, `${assetBase}sprites/${name}.png`, {
+              frameWidth: SPRITE_SIZE,
+              frameHeight: SPRITE_SIZE,
+            });
+          }
         },
         create(this: Phaser.Scene) {
+          // Register the looping animations before any actor sprite plays one.
+          for (const [name, {frames, frameRate}] of Object.entries(
+            ANIMATIONS,
+          )) {
+            this.anims.create({
+              key: name,
+              frames: this.anims.generateFrameNumbers(name, {
+                start: 0,
+                end: frames - 1,
+              }),
+              frameRate,
+              repeat: -1,
+            });
+          }
           cursors = this.input.keyboard?.createCursorKeys();
           sync(this);
         },
