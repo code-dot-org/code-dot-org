@@ -5,7 +5,9 @@ import cdoLabConfig from '@code-dot-org/lint-config/eslint/lab.mjs';
 export default [
   // `spikes/` holds throwaway de-risking harnesses (browser globals, console
   // logging, Node scripts) that are not part of the build or its tests.
-  globalIgnores(['dist', 'spikes']),
+  // `public/vendor` holds self-hosted third-party bundles (esbuild-wasm, Phaser)
+  // copied in by `yarn setup:world` — not our source to lint.
+  globalIgnores(['dist', 'spikes', 'public/vendor']),
   ...cdoLabConfig,
   {
     // The dev harness and the entrypoint test play the host role (like Studio),

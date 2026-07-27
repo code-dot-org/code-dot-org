@@ -2711,6 +2711,7 @@ __metadata:
     "@testing-library/react": "catalog:"
     "@types/node": "catalog:"
     "@vitejs/plugin-react": "catalog:"
+    concurrently: "npm:^9.1.0"
     esbuild-wasm: "npm:^0.28.1"
     eslint: "catalog:"
     jsdom: "catalog:"

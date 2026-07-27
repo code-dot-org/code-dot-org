@@ -18,3 +18,15 @@ De-risks the driver's foundations (`specs/PLAN.md` §16 milestone 0). See
 - `spike-c.mjs` + `browser/` — drives headless chromium (Playwright) to verify
   the two sandbox CSPs, module import, the transport, and a Phaser render. Run:
   `node spikes/milestone-0/spike-c.mjs`
+
+## milestone-2/
+
+End-to-end verification of the compile → SW → preview transport (`specs/PLAN.md`
+§16 milestone 2), driving the real parent/iframe managers across two origins
+under the production CSPs.
+
+- `harness.ts` — lab-side page wiring `WorldCompileManager` + `WorldPreviewManager`.
+- `roundtrip.mjs` — bundles the harness and the sandbox entry, serves the lab and
+  the sandbox on separate ports with per-surface CSP headers, and asserts a
+  2-file project compiles, stores in the SW, and imports+runs in the preview.
+  Run: `yarn setup:world && node spikes/milestone-2/roundtrip.mjs`
