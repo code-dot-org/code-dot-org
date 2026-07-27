@@ -1,0 +1,69 @@
+/* Outer: instructions panel beside the workspace column. Mirrors web-lab's
+   VerticalLayout — the info panel on the far left, the editor/preview split
+   beside it. */
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  min-height: 0;
+}
+
+/* The instructions / resource panel, sized by the layout so the seam beside it
+   can be dragged. The width MUST land on the panel itself, not a wrapper: base
+   sizes `.resourcePanel` as `calc(3.5rem + 20%)`, a percentage of its parent, so
+   a fixed-width wrapper compounds (320px wrapper -> 120px panel). */
+.instructions {
+  width: var(--instructions-width, 320px);
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Everything but the instructions: the editor/preview split under one header. */
+.workspaceColumn {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The workspace panel fills the column. */
+.workspacePanel {
+  flex: 1;
+  min-height: 0;
+}
+
+/* The editor and preview panes, side by side inside the workspace panel. */
+.editorAndPreview {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/* The editor takes the space the preview does not claim. */
+.editorPane {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Split: sized by the layout's inline width, so it must NOT flex — `flex: 1`
+   implies `flex-basis: 0%`, which makes that width inert and leaves the divider
+   dragging state that changes nothing on screen. */
+.previewPane {
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Alone in the row (view mode "Preview"): take all of it. */
+.previewPaneFull {
+  flex: 1;
+}
