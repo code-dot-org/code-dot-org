@@ -1,4 +1,4 @@
-import {useState, type CSSProperties} from 'react';
+import {useMemo, useState, type CSSProperties} from 'react';
 
 import {InfoPanel, Workspace} from '@code-dot-org/codebridge';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
@@ -7,7 +7,10 @@ import {
   ResizeHandle,
   WorkspaceHeader,
 } from '@code-dot-org/lab/components';
+import {useAppSelector} from '@code-dot-org/lab/redux';
+import type {Setting} from '@code-dot-org/lab/resourcePanel';
 
+import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {WorldPreview} from '../preview/WorldPreview';
@@ -49,6 +52,26 @@ const WorldLayout = () => {
   const [previewWidth, setPreviewWidth] = useState(PREVIEW.initial);
   const [viewMode, setViewMode] = useState<ViewModeType>(ViewMode.SPLIT);
 
+  // The base ResourcePanel collapses to its icon strip; when it does, the
+  // instructions resize seam has nothing to size, so hide it.
+  const isInstructionsCollapsed = useAppSelector(
+    state => state.labView?.isStandaloneCollapsed ?? false,
+  );
+
+  // A "Block Color Theme" dropdown in the settings pane. The context applies the
+  // choice (and its dark variant) to the Blockly editors.
+  const {options, selectedBase, setSelectedBase} = useWorldBlocklyTheme();
+  const blocklyThemeSetting = useMemo<Setting>(
+    () => ({
+      id: 'blocklyTheme',
+      label: 'Block Color Theme',
+      options: [...options],
+      selectedValue: selectedBase,
+      onChange: setSelectedBase,
+    }),
+    [options, selectedBase, setSelectedBase],
+  );
+
   const showEditor = viewMode !== ViewMode.PREVIEW;
   const showPreview = viewMode !== ViewMode.CODE;
   const isSplit = showEditor && showPreview;
@@ -66,20 +89,23 @@ const WorldLayout = () => {
         className={styles.instructions}
         documentationUrl="/docs/ide/world"
         hasConsole={false}
+        extraSettings={[blocklyThemeSetting]}
       />
-      <ResizeHandle
-        axis="x"
-        ariaLabel="Resize instructions"
-        value={instructionsWidth}
-        min={INSTRUCTIONS.min}
-        max={INSTRUCTIONS.max}
-        onDelta={dx =>
-          setInstructionsWidth(w =>
-            clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
-          )
-        }
-        onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
-      />
+      {!isInstructionsCollapsed && (
+        <ResizeHandle
+          axis="x"
+          ariaLabel="Resize instructions"
+          value={instructionsWidth}
+          min={INSTRUCTIONS.min}
+          max={INSTRUCTIONS.max}
+          onDelta={dx =>
+            setInstructionsWidth(w =>
+              clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
+            )
+          }
+          onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+        />
+      )}
 
       <div className={styles.workspaceColumn}>
         <PanelContainer

@@ -14,6 +14,7 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 
 import styles from './blocklyFileEditor.module.css';
 import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
+import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
 
@@ -77,14 +78,19 @@ export const BlocklyFileEditor = ({
     [onChange],
   );
 
+  // The selected block-color theme (its dark variant when the app is in dark
+  // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.
+  const {theme} = useWorldBlocklyTheme();
+
   return (
     <div className={styles.editor}>
-      <BlocklyProvider blocks={DOMAIN_BLOCKS} plugins={plugins}>
+      <BlocklyProvider blocks={DOMAIN_BLOCKS} plugins={plugins} theme={theme}>
         <BlocklyWorkspace
           className={styles.workspace}
           startBlocks={startBlocks}
           toolbox={DOMAIN_TOOLBOX}
           options={options}
+          theme={theme}
           workspaceRef={workspaceRef}
           onChange={handleChange}
         />

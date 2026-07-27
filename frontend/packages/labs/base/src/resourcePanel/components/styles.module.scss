@@ -5,7 +5,13 @@
   width: calc(3.5rem + 20%);
 }
 
-.resourcePanelCollapsed {
+/* The collapsed width must beat a consumer's width override on the panel — a lab
+   may size `.resourcePanel` via a className (e.g. World Lab's `.instructions`,
+   for a resize seam). A bare `.resourcePanelCollapsed` ties that on specificity
+   and loses on cascade order, leaving the panel at its expanded width (an empty
+   gap). The compound selector (`.resourcePanel.resourcePanelCollapsed`) outranks
+   any single-class override, so collapse is authoritative. */
+.resourcePanel.resourcePanelCollapsed {
   width: 3.5rem;
 }
 
