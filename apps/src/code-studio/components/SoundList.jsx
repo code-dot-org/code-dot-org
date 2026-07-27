@@ -52,7 +52,7 @@ export default class SoundList extends React.Component {
 
   render() {
     if (!this.state.soundLibrary) {
-      return <div style={styles.root} />;
+      return <div style={styles.root}>Loading sounds...</div>;
     }
 
     const results = this.getMatches(this.props.search);
