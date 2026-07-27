@@ -129,7 +129,7 @@
   }
 
   .chip {
-    padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
+    padding: 0.62rem 1.25rem;
 
     &.chip-thick {
       @include mixins.button-one-text;
@@ -147,7 +147,7 @@
   }
 
   .chip {
-    padding: calc(0.5rem + 2px) 1rem 0.5rem;
+    padding: 0.5rem 1rem;
 
     &.chip-thick {
       @include mixins.button-two-text;
@@ -165,7 +165,7 @@
   }
 
   .chip {
-    padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
+    padding: 0.31rem 0.75rem;
 
     &.chip-thick {
       @include mixins.button-three-text;
@@ -183,7 +183,7 @@
   }
 
   .chip {
-    padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
+    padding: 0.12rem 0.5rem;
 
     &.chip-thick {
       @include mixins.button-four-text;

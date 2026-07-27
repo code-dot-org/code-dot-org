@@ -1,18 +1,18 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Box, Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import applabMsg from '@cdo/applab/locale';
 
-import color from '../util/color';
-
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
 import DeleteElementButton from './designElements/DeleteElementButton';
 import DuplicateElementButton from './designElements/DuplicateElementButton';
+import * as elementUtils from './designElements/elementUtils.js';
 import elementLibrary from './designElements/library';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 import designMode from './designMode';
-import ElementSelect from './ElementSelect';
 
 let nextKey = 0;
 
@@ -72,8 +72,8 @@ export default class DesignProperties extends React.Component {
     const isOnlyScreen = isScreen && onlyOneScreen;
 
     const tabHeight = 35;
-    const borderColor = color.lighter_gray;
-    const bgColor = color.lightest_gray;
+    const borderColor = 'var(--border-neutral-secondary)';
+    const bgColor = 'var(--background-neutral-secondary)';
 
     // Diagram of how tabs outlines are drawn. 'x' represents solid border.
     // '-' and '|' represent no border.
@@ -102,29 +102,36 @@ export default class DesignProperties extends React.Component {
 
     /** @constant {Object} */
     const styles = {
-      activeTab: Object.assign({}, baseTabStyle, {
+      activeTab: {
+        ...baseTabStyle,
         backgroundColor: bgColor,
         borderTopWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 0,
         borderLeftWidth: 0,
         float: 'left',
-      }),
-      inactiveTab: Object.assign({}, baseTabStyle, {
+      },
+      inactiveTab: {
+        ...baseTabStyle,
         borderTopWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 1,
         borderLeftWidth: 0,
         float: 'left',
-      }),
+      },
       // This tab should fill the remaining horizontal space.
-      emptyTab: Object.assign({}, baseTabStyle, {
+      emptyTab: {
+        ...baseTabStyle,
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderBottomWidth: 1,
         borderLeftWidth: 0,
         width: '100%',
-      }),
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'end',
+        padding: 0,
+      },
       workspaceDescription: {
         height: 28,
         overflow: 'hidden',
@@ -141,12 +148,11 @@ export default class DesignProperties extends React.Component {
         borderRightWidth: 0,
         borderBottomWidth: 0,
         borderLeftWidth: 1,
+        display: 'flex',
+        flexDirection: 'row',
       },
       tabLabel: {
         lineHeight: tabHeight + 'px',
-        WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        msUserSelect: 'none',
         userSelect: 'none',
       },
       workspaceBody: {
@@ -174,12 +180,13 @@ export default class DesignProperties extends React.Component {
     return (
       <div style={{height: '100%'}}>
         <div id="designDescription" style={styles.workspaceDescription}>
-          <p
-            style={styles.workspaceDescriptionText}
+          <MuiTypography
+            variant="body3"
+            sx={styles.workspaceDescriptionText}
             title={applabMsg.designWorkspaceDescription()}
           >
             {applabMsg.designWorkspaceDescription()}
-          </p>
+          </MuiTypography>
         </div>
         <div id="designWorkspaceTabs" style={styles.workspaceTabs}>
           <div
@@ -192,9 +199,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
-            <span style={styles.tabLabel}>
+            <MuiTypography variant="body4" sx={styles.tabLabel}>
               {applabMsg.designWorkspace_propertiesTab()}
-            </span>
+            </MuiTypography>
           </div>
           <div
             id="eventsTab"
@@ -206,15 +213,28 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
-            <span style={styles.tabLabel}>
+            <MuiTypography variant="body4" sx={styles.tabLabel}>
               {applabMsg.designWorkspace_eventsTab()}
-            </span>
+            </MuiTypography>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
-            <ElementSelect
-              onChangeElement={this.props.onChangeElement}
-              elementIdList={this.props.elementIdList}
-              selected={this.props.element}
+            <SimpleDropdown
+              labelText="Choose element"
+              isLabelVisible={false}
+              size="s"
+              selectedValue={elementUtils.getId(this.props.element)}
+              data-notranslate="true"
+              onChange={e => {
+                const element = elementUtils.getPrefixedElementById(
+                  e.target.value
+                );
+                this.props.onChangeElement(element, null);
+              }}
+              items={this.props.elementIdList.map(item => ({
+                value: item,
+                text: item,
+              }))}
+              styleAsFormField
             />
           </div>
         </div>
@@ -231,7 +251,17 @@ export default class DesignProperties extends React.Component {
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
             <div key={key}>
-              <div style={{float: this.props.isRtl ? 'left' : 'right'}}>
+              <Box
+                sx={{
+                  backgroundColor: 'var(--background-neutral-secondary)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  float: this.props.isRtl ? 'left' : 'right',
+                  gap: 1,
+                  alignItems: 'end',
+                  padding: 1,
+                }}
+              >
                 {!isOnlyScreen && (
                   <DeleteElementButton
                     shouldConfirm={isScreen}
@@ -252,7 +282,7 @@ export default class DesignProperties extends React.Component {
                     screenIds={this.props.screenIds}
                   />
                 )}
-              </div>
+              </Box>
               <PropertyComponent
                 element={this.props.element}
                 handleChange={this.props.handleChange}
