@@ -6,13 +6,13 @@ import {useAuth} from '@/modules/auth';
 
 import {
   BRAND_NAME,
+  buildCreateMenuItems,
   buildGlobalNav,
   buildMarketingGlobalNav,
+  buildStudentMenuItems,
   buildSupportLinks,
-  CREATE_MENU_ITEMS,
+  buildTeacherMenuItems,
   LOGO_IMAGE_URL,
-  STUDENT_MENU_ITEMS,
-  TEACHER_MENU_ITEMS,
 } from './config';
 
 /** Studio site header: maps auth state to the component-library Header. */
@@ -21,12 +21,17 @@ export default function SiteHeader() {
   const userType = auth.status === 'signed-in' ? auth.user_type : undefined;
   // App nav is signed-in only; signed-out (and pre-auth) shows no app nav — the
   // marketing nav lives in globalNavItems / the hamburger.
-  const menuItems = !userType
-    ? []
-    : userType === 'teacher'
-      ? TEACHER_MENU_ITEMS
-      : STUDENT_MENU_ITEMS;
+  const menuItems = useMemo(
+    () =>
+      !userType
+        ? []
+        : userType === 'teacher'
+          ? buildTeacherMenuItems()
+          : buildStudentMenuItems(),
+    [userType],
+  );
   const supportLinks = useMemo(() => buildSupportLinks(userType), [userType]);
+  const createMenuItems = useMemo(() => buildCreateMenuItems(), []);
 
   // Signed-out always gets the marketing nav; signed-in nav is unaffected.
   const marketingNav = !userType;
@@ -41,7 +46,7 @@ export default function SiteHeader() {
       brandName={BRAND_NAME}
       menuItems={menuItems}
       userAuth={auth}
-      createMenuItems={CREATE_MENU_ITEMS}
+      createMenuItems={createMenuItems}
       globalNavItems={globalNavItems}
       supportLinks={supportLinks}
       marketingNav={marketingNav}
