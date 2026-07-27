@@ -9,7 +9,18 @@
 
 import type {Loader, Plugin} from 'esbuild-wasm';
 
-const EXT_ORDER = ['', '.ts', '.js', '.json', '/index.ts', '/index.js'];
+// `.rule` / `.actor` are Blockly-authored; by the time the compiler sees them
+// the lab has generated their JavaScript, so they resolve and load as JS.
+const EXT_ORDER = [
+  '',
+  '.ts',
+  '.js',
+  '.json',
+  '.rule',
+  '.actor',
+  '/index.ts',
+  '/index.js',
+];
 const NS = 'world-project';
 
 function normalize(path: string): string {

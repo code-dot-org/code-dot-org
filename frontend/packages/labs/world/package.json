@@ -62,6 +62,7 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
+    "blockly": "^13.1.0",
     "esbuild-wasm": "^0.28.1",
     "phaser": "^4.2.1"
   },

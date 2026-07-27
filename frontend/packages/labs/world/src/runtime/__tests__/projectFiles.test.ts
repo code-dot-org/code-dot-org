@@ -9,8 +9,7 @@ describe('projectFiles', () => {
   it('flattens the default project to folder-prefixed paths', () => {
     const files = projectFiles(DEFAULT_PROJECT.source);
     expect(Object.keys(files).sort()).toEqual([
-      'actors/player.js',
-      'rules/example.rule',
+      'actors/player.actor',
       'scenes/main.js',
       'worlds/platform.js',
     ]);

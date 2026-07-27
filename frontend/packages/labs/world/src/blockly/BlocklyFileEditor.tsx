@@ -5,11 +5,11 @@ import {
   BlocklyProvider,
   BlocklyWorkspace,
   type BlocklySerialization,
-  type Toolbox,
 } from '@code-dot-org/blockly';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 
 import styles from './blocklyFileEditor.module.css';
+import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
 
 // A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON
 // (INTERFACE.md). This is the editor Codebridge mounts for those languages via
@@ -17,17 +17,9 @@ import styles from './blocklyFileEditor.module.css';
 // workspace and writes the workspace back out on every change — through the
 // same `onChange` seam the CodeMirror editor uses, so persistence is identical.
 //
-// The toolbox is a small starter set of stock blocks for now; domain blocks
-// (Rules/Traits/Actors/Events) and the Blockly → world-lab code generation are
-// the next increment.
-
-const STARTER_TOOLBOX: Toolbox = [
-  {name: 'Logic', blocks: ['controls_if', 'logic_compare', 'logic_boolean']},
-  {name: 'Loops', blocks: ['controls_repeat_ext']},
-  {name: 'Math', blocks: ['math_number', 'math_arithmetic']},
-  {name: 'Text', blocks: ['text', 'text_print']},
-  {name: 'Variables', blocks: ['variables_get', 'variables_set']},
-];
+// The toolbox is the World Lab domain blocks (Actor / Traits / Events); passing
+// `DOMAIN_BLOCKS` registers them (and their world-lab generators) on this
+// workspace, the same definitions the generator uses.
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
 function parseWorkspace(contents: string): BlocklySerialization {
@@ -77,11 +69,11 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
-      <BlocklyProvider>
+      <BlocklyProvider blocks={DOMAIN_BLOCKS}>
         <BlocklyWorkspace
           className={styles.workspace}
           startBlocks={startBlocks}
-          toolbox={STARTER_TOOLBOX}
+          toolbox={DOMAIN_TOOLBOX}
           options={options}
           workspaceRef={workspaceRef}
           onChange={handleChange}
