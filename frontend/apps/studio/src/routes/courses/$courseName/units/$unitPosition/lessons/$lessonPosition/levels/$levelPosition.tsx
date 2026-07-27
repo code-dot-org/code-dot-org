@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import {createFileRoute, notFound, useRouter} from '@tanstack/react-router';
 import {useCallback} from 'react';
 
@@ -118,6 +118,16 @@ export const Route = createFileRoute(
   // (?guide, ?testFreeze, ?tts) straight from location.search, so we must not
   // strip to a known subset — pass search through untouched.
   validateSearch: (search: Record<string, unknown>) => search,
+  // Title is set here, not in a component effect: HeadContent manages it per
+  // matched route, so it needs no cleanup and is restored on navigation.
+  head: ({loaderData}) => {
+    const props = loaderData?.resolved.properties as
+      | {displayName?: string}
+      | undefined;
+    const name =
+      props?.displayName ?? loaderData?.resolved.scriptTitle ?? 'CodeAI';
+    return {meta: [{title: `${name} | CodeAI`}]};
+  },
   component: CourseLevelRoute,
   notFoundComponent: () => (
     // h1: this is the only heading on the page when the not-found state renders.
@@ -157,7 +167,7 @@ function CourseLevelRoute() {
   }, [resolved, router]);
 
   return (
-    <>
+    <Box sx={{display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0}}>
       <LevelNavigation
         currentPosition={resolved.position}
         levels={resolved.levels}
@@ -175,6 +185,6 @@ function CourseLevelRoute() {
           </Typography>
         )}
       </Lab>
-    </>
+    </Box>
   );
 }

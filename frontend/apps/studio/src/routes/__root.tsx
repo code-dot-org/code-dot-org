@@ -83,7 +83,13 @@ function RootContent() {
           the fold while a route's chunk or data loads, and doesn't jump down when
           the content arrives. Layout-level concern shared by every async route;
           the offset approximates the header height. */}
-      <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
+      <Box
+        sx={{
+          minHeight: 'calc(100vh - 50px)',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
         {renderRouteArea(auth, onRetry)}
       </Box>
       <StudioFooter />
@@ -136,6 +142,9 @@ function RootLayout() {
 export const Route = createRootRoute({
   // Declared here, not in the Rails haml or index.html, so it covers every serving mode.
   head: () => ({
+    // Default document title; leaf routes override it via their own `head`.
+    // HeadContent restores this when navigating back to a title-less route.
+    meta: [{title: 'CodeAI'}],
     links: [
       {
         rel: 'icon',
