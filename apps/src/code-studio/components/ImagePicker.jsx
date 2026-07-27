@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -122,11 +123,6 @@ export default class ImagePicker extends React.Component {
         borderColor: color.purple,
         margin: '5px 0',
       },
-      warning: {
-        color: color.red,
-        fontSize: 13,
-        fontWeight: 'bold',
-      },
     };
 
     if (this.state.mode === ImageMode.FILE) {
@@ -152,9 +148,13 @@ export default class ImagePicker extends React.Component {
 
     let modeSwitch,
       title = this.props.assetChosen ? (
-        <p className="dialog-title">{i18n.chooseAssets()}</p>
+        <MuiTypography variant="h3" gutterBottom>
+          {i18n.chooseAssets()}
+        </MuiTypography>
       ) : (
-        <p className="dialog-title">{i18n.manageAssets()}</p>
+        <MuiTypography variant="h3" gutterBottom>
+          {i18n.manageAssets()}
+        </MuiTypography>
       );
 
     const imageTypeFilter =
@@ -203,9 +203,17 @@ export default class ImagePicker extends React.Component {
       <div className="modal-content" style={styles.root}>
         {title}
         {this.props.showUnderageWarning && (
-          <p style={styles.warning}>
+          <MuiTypography
+            variant="body4"
+            component="span"
+            sx={{
+              display: 'block',
+              color: 'var(--text-error-primary)',
+              fontWeight: 'bold',
+            }}
+          >
             {i18n.warningUploadingPersonalInformation()}
-          </p>
+          </MuiTypography>
         )}
         {modeSwitch}
         {this.getBody(disableAudio, levelName, isStartMode)}
