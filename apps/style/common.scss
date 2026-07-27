@@ -258,7 +258,7 @@ div.droplet-palette-group-header-selected.orange {
 }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
+  border: 1px solid var(--borders-neutral-strong);
 }
 
 #codeTextbox.has_banner {
@@ -275,7 +275,7 @@ html[dir="rtl"] .editor-column {
 
 #codeWorkspace.pin_bottom {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--borders-neutral-strong);
 }
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
@@ -1122,6 +1122,26 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     &::-webkit-scrollbar-corner {
       background: var(--background-neutral-tertiary);
     }
+  }
+}
+
+#showCodeModal {
+  img {
+    background: transparent !important;
+  }
+
+  [class*='modalContentSection'] {
+    max-height: 500px !important;
+  }
+
+  .generated-code-container {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .generatedCode {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 

@@ -107,6 +107,28 @@ class BrandTest < ActiveSupport::TestCase
     assert_equal 'logo-codeai-inverse.svg', Cdo::Brand.header_logo_filename(request)
   end
 
+  test 'codeai_next? is false by default' do
+    assert_equal false, Cdo::Brand.codeai_next?
+  end
+
+  test 'codeai_next? is true for codeai-next via router' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai-next'})
+    assert_equal true, Cdo::Brand.codeai_next?(request)
+  end
+
+  test 'codeai_next? is true for codeai-audit' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai-audit'})
+    assert_equal true, Cdo::Brand.codeai_next?(request)
+  end
+
+  test 'codeai_next? is false for codeai' do
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    request = mock_request(params: {'brand' => 'codeai'})
+    assert_equal false, Cdo::Brand.codeai_next?(request)
+  end
+
   test 'codeai-audit can never become the default brand, even if DCDO is set to it' do
     DCDO.stubs(:get).with('default-brand', Cdo::Brand::BRAND_CODEAI).returns(Cdo::Brand::BRAND_CODEAI_AUDIT)
     assert_equal Cdo::Brand::BRAND_CODEAI, Cdo::Brand.current_brand_code

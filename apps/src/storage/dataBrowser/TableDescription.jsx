@@ -2,6 +2,7 @@
  * @overview Component for description of a data table.
  */
 import {Link} from '@dsco_/link';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -21,7 +22,9 @@ export default class TableDescription extends React.Component {
     if (datasetInfo) {
       return (
         <div>
-          <p>{datasetInfo.description}</p>
+          <Typography variant="body3" sx={{mb: '10px'}}>
+            {datasetInfo.description}
+          </Typography>
           {datasetInfo.docUrl && (
             <Link href={datasetInfo.docUrl} openInNewTab external>
               {msg.moreInfo()}
