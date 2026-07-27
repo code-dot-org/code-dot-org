@@ -1,4 +1,5 @@
-.dropdownContainer label {
+/* Double class ensures it takes precedence over the SimpleDropdown css */
+.dropdownContainer.dropdownContainer label {
   min-width: 10rem;
   width: auto;
 }
