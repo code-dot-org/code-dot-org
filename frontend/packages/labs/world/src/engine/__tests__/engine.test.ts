@@ -12,6 +12,7 @@ import {
   PositionProperty,
   PositionalTrait,
   SceneBuilder,
+  SpriteProperty,
   StartsFallingEvent,
   StopsFallingEvent,
   StrengthProperty,
@@ -181,6 +182,18 @@ describe('renderSnapshot (driver view)', () => {
   it('is empty for a world without the Spatial rule', () => {
     const world = new WorldBuilder({id: 'bare', name: 'Bare'}).instantiate();
     expect(world.renderSnapshot()).toEqual([]);
+  });
+
+  it('reports the actor sprite (empty when unset)', () => {
+    const {world, player} = makeScene(new Vector(0, 0), 100);
+    // Default: no sprite → the driver draws a rectangle.
+    expect(world.renderSnapshot().find(s => s.actor === player)?.sprite).toBe(
+      '',
+    );
+    player.set(SpriteProperty, 'player');
+    expect(world.renderSnapshot().find(s => s.actor === player)?.sprite).toBe(
+      'player',
+    );
   });
 });
 

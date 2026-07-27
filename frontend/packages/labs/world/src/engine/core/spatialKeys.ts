@@ -11,4 +11,8 @@ export const SPATIAL = {
   scale: 'scale',
   rotation: 'rotation',
   skew: 'skew',
+  // The name of the built-in sprite to draw the actor with; empty = a plain
+  // rectangle. Lives on the positional trait so every drawable actor can carry
+  // one, and renderSnapshot reads it alongside the transform.
+  sprite: 'sprite',
 } as const;

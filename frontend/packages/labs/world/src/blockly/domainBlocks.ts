@@ -10,8 +10,16 @@
 
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
+import {SPRITE_NAMES} from '../sprites';
+
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
+
+/** Dropdown `[label, value]` pairs for the built-in sprites (Title Case label). */
+const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
+  name.charAt(0).toUpperCase() + name.slice(1),
+  name,
+]);
 
 // Dropdown value -> the `world-lab` export name.
 const TRAIT_CONST: Record<string, string> = {
@@ -98,6 +106,22 @@ const worldSetPosition = defineBlock({
   },
 });
 
+const worldSetSprite = defineBlock({
+  type: 'world_set_sprite',
+  message0: 'set sprite %1',
+  args0: [{type: 'field_dropdown', name: 'SPRITE', options: SPRITE_OPTIONS}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip: 'Draw the actor with a built-in sprite instead of a plain square.',
+  generator: {
+    javascript(block) {
+      const sprite = block.getFieldValue('SPRITE');
+      return `actor.set(WorldLab.SpriteProperty, ${str(sprite)});\n`;
+    },
+  },
+});
+
 const worldOnEvent = defineBlock({
   type: 'world_on_event',
   message0: 'when %1',
@@ -148,6 +172,7 @@ export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
   worldSetPosition,
+  worldSetSprite,
   worldOnEvent,
   worldLog,
 ];
@@ -155,6 +180,9 @@ export const DOMAIN_BLOCKS = [
 /** The toolbox for the Blockly editor: the domain blocks, grouped. */
 export const DOMAIN_TOOLBOX: Toolbox = [
   {name: 'Actor', blocks: ['world_actor']},
-  {name: 'Traits', blocks: ['world_use_trait', 'world_set_position']},
+  {
+    name: 'Traits',
+    blocks: ['world_use_trait', 'world_set_position', 'world_set_sprite'],
+  },
   {name: 'Events', blocks: ['world_on_event', 'world_log']},
 ];

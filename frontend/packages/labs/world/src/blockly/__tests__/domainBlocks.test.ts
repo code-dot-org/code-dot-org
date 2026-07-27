@@ -70,6 +70,12 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_set_sprite sets the sprite property', () => {
+    expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
+      'actor.set(WorldLab.SpriteProperty, "player");\n',
+    );
+  });
+
   it('world_on_event registers a handler with the mapped event', () => {
     expect(
       emit(

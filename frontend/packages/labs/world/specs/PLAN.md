@@ -689,6 +689,15 @@ Unit first, then browser:
    platformer), the Phaser binding reads cursor keys each frame, and the
    `world_use_trait` block gained a "Controlled by Arrow Keys" option. Unit-
    tested (`engine/__tests__/input.test.ts`) and browser-verified (the player
-   falls, lands, and moves right under ArrowRight). Remaining: more
+   falls, lands, and moves right under ArrowRight). Second slice DONE —
+   sprites: a `SpriteProperty` on the positional trait names a built-in image;
+   `renderSnapshot` reports it; `scripts/generate-sprites.mjs` writes the PNGs
+   into `public/vendor/sprites/` (self-hosted like the other vendor assets — a
+   pure-Node PNG encoder, no image dep); the Phaser binding preloads them and
+   draws a textured `Image` per actor (rectangle fallback when no sprite); the
+   `world_set_sprite` block picks one. `src/sprites.ts` is the shared name list,
+   kept in sync with the generator and the files by a test. Browser-verified
+   (player + ground render as sprites, not rectangles). Remaining: more
    traits/rules/events (incl. key-press _events_, which need per-actor event
-   payloads), and Phaser sprites/assets in the binding.
+   payloads), spritesheets/animations, and learner-supplied image assets (needs
+   the project binary-asset pipeline).

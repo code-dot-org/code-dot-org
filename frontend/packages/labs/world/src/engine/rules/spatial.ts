@@ -39,6 +39,15 @@ export const SkewProperty = PositionalTrait.addProperty(
   0,
   {name: 'vertical skew'},
 );
+// The built-in sprite the driver draws this actor with (empty = a plain
+// rectangle). A single image for now; spritesheets/animations are later work
+// (GLOSSARY.md). The driver maps the name to a self-hosted texture.
+export const SpriteProperty = PositionalTrait.addProperty(
+  SPATIAL.sprite,
+  'string',
+  '',
+  {name: 'sprite'},
+);
 
 export const MoveAction = PositionalTrait.addAction(
   'move',
