@@ -29,6 +29,7 @@ const simple: LabFixture = {
         'actors under `scenes/`, `worlds/`, and `actors/`.\n\n' +
         '- The preview runs your game as you edit\n' +
         '- Click the preview, then use the arrow keys to move the player\n' +
+        '- The coin plays a built-in looping animation\n' +
         '- `console.log` output appears in the Console\n' +
         '- Try changing the player’s start position, gravity, or move speed',
     }),

@@ -10,14 +10,27 @@
 
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
-import {SPRITE_NAMES} from '../sprites';
+import {ANIMATION_NAMES, SPRITE_NAMES} from '../sprites';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
 
-/** Dropdown `[label, value]` pairs for the built-in sprites (Title Case label). */
+/** `camelCase`/`name` → a human "Title Case" dropdown label. */
+const label = (name: string): string =>
+  name
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/^./, c => c.toUpperCase())
+    .trim();
+
+/** Dropdown `[label, value]` pairs for the built-in sprites. */
 const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
-  name.charAt(0).toUpperCase() + name.slice(1),
+  label(name),
+  name,
+]);
+
+/** Dropdown `[label, value]` pairs for the built-in animations. */
+const ANIMATION_OPTIONS: Array<[string, string]> = ANIMATION_NAMES.map(name => [
+  label(name),
   name,
 ]);
 
@@ -122,6 +135,24 @@ const worldSetSprite = defineBlock({
   },
 });
 
+const worldPlayAnimation = defineBlock({
+  type: 'world_play_animation',
+  message0: 'play animation %1',
+  args0: [
+    {type: 'field_dropdown', name: 'ANIMATION', options: ANIMATION_OPTIONS},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip: 'Draw the actor with a looping built-in animation.',
+  generator: {
+    javascript(block) {
+      const animation = block.getFieldValue('ANIMATION');
+      return `actor.set(WorldLab.AnimationProperty, ${str(animation)});\n`;
+    },
+  },
+});
+
 const worldOnEvent = defineBlock({
   type: 'world_on_event',
   message0: 'when %1',
@@ -173,6 +204,7 @@ export const DOMAIN_BLOCKS = [
   worldUseTrait,
   worldSetPosition,
   worldSetSprite,
+  worldPlayAnimation,
   worldOnEvent,
   worldLog,
 ];
@@ -182,7 +214,11 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   {name: 'Actor', blocks: ['world_actor']},
   {
     name: 'Traits',
-    blocks: ['world_use_trait', 'world_set_position', 'world_set_sprite'],
+    blocks: ['world_use_trait', 'world_set_position'],
+  },
+  {
+    name: 'Looks',
+    blocks: ['world_set_sprite', 'world_play_animation'],
   },
   {name: 'Events', blocks: ['world_on_event', 'world_log']},
 ];

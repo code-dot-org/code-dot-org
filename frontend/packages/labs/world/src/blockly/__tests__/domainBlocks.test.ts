@@ -76,6 +76,12 @@ describe('domain block generators', () => {
     );
   });
 
+  it('world_play_animation sets the animation property', () => {
+    expect(emit('world_play_animation', {ANIMATION: 'coinSpin'})).toBe(
+      'actor.set(WorldLab.AnimationProperty, "coinSpin");\n',
+    );
+  });
+
   it('world_on_event registers a handler with the mapped event', () => {
     expect(
       emit(

@@ -13,7 +13,7 @@ export const ENTRY_FILE = 'scenes/main.js';
  * default-exported Scene. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
-const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionProperty, SpriteProperty, Vector} from 'world-lab';
+const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionalTrait, PositionProperty, SpriteProperty, AnimationProperty, Vector} from 'world-lab';
 import PlatformWorld from 'worlds/platform';
 import Player from 'actors/player';
 
@@ -28,6 +28,14 @@ scene.addActor(
     .useTraits([GroundTrait])
     .set(PositionProperty, new Vector(200, 260))
     .set(SpriteProperty, 'ground'),
+);
+
+// A coin floating above the ground, playing the "coinSpin" animation.
+scene.addActor(
+  new ActorBuilder({id: 'coin', name: 'Coin'})
+    .useTraits([PositionalTrait])
+    .set(PositionProperty, new Vector(320, 70))
+    .set(AnimationProperty, 'coinSpin'),
 );
 
 export default scene;
