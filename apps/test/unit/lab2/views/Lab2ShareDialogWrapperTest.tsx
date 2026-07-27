@@ -113,7 +113,9 @@ describe('Lab2ShareDialogWrapper', () => {
     setState('sketchlab');
     mockedFetchShareFailure.mockResolvedValue(null);
 
-    const {rerender} = render(<Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />);
+    const {rerender} = render(
+      <Lab2ShareDialogWrapper shareUrl="fakeShareUrl" />
+    );
     await waitFor(() =>
       expect(screen.getByText('share dialog: no failure')).toBeInTheDocument()
     );
