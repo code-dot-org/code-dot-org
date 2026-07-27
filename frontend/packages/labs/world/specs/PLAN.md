@@ -725,6 +725,10 @@ Unit first, then browser:
    upload port (`UPLOADS.md`, U1–U4) is also done: a core `ProjectFile.url` +
    assets client, a codebridge upload UI, and World Lab forwarding uploaded
    images to the preview as data URLs — a learner can upload a PNG and reference
-   it as a sprite. Remaining niceties: reacting to a specific frame (needs a
-   conditional/expression block vocabulary), image moderation, and matching the
-   real assets backend's raw-PUT contract in production.
+   it as a sprite. A conditional/expression Blockly vocabulary now rounds this out:
+   `world_event_value` + `world_print` plus the standard `controls_if` /
+   `logic_compare` / `math_number` / `logic_operation` / `math_modulo` / `text` /
+   … blocks (native `@code-dot-org/blockly` registrations, offered via the
+   toolbox), so a learner can e.g. react to a specific animation frame. Remaining
+   niceties: image moderation, and matching the real assets backend's raw-PUT
+   contract in production.

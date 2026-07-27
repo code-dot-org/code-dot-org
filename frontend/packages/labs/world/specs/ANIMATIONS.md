@@ -188,9 +188,14 @@ milestones 1–7 were staged.
   the payload; a `world_log_event_value` block logs it. Unit-tested (the
   `FrameChangedEvent` index sequence; the handler + value-log generators) and
   browser-verified (a Blockly `frame changes → log event value` handler on the
-  player logged the cycling frame indices 0..3). NOTE: reacting to a _specific_
-  frame (`if frame === 3`) still needs conditional/expression blocks — a separate
-  block-vocabulary effort, not part of this animation work.
+  player logged the cycling frame indices 0..3). Reacting to a _specific_ frame
+  (`if frame === 3`) is now possible: the Blockly vocabulary gained a
+  `world_event_value` expression + `world_print`, and the toolbox offers the
+  standard `controls_if` / `logic_compare` / `math_number` / … blocks (registered
+  natively by `@code-dot-org/blockly`, referenced by the toolbox — not
+  re-registered through the design-system Driver, which drops their connections).
+  Browser-verified: a `when frame changes → if (event value = 2) → print` handler
+  fires filtered to frame 2.
 
 ## 5. Migration of the interim built-ins
 

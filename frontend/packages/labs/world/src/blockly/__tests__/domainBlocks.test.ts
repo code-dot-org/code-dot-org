@@ -1,6 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
-import {DOMAIN_BLOCKS} from '../domainBlocks';
+import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from '../domainBlocks';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -24,10 +24,12 @@ const emit = (
   type: string,
   fields: Record<string, string | number>,
   statements: Record<string, string> = {},
+  values: Record<string, string> = {},
 ): string => {
   const block = {getFieldValue: (name: string) => fields[name]};
   const generator = {
     statementToCode: (_block: unknown, name: string) => statements[name] ?? '',
+    valueToCode: (_block: unknown, name: string) => values[name] ?? '',
   };
   return generatorFor(type)(
     block as never,
@@ -116,9 +118,29 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_log_event_value prints the handler event value', () => {
-    expect(emit('world_log_event_value', {})).toBe(
+  it('world_print logs a value input', () => {
+    expect(emit('world_print', {}, {}, {VALUE: 'eventValue'})).toBe(
       'console.log(eventValue);\n',
     );
+    // No value connected → prints an empty string, not `undefined`.
+    expect(emit('world_print', {})).toBe("console.log('');\n");
+  });
+
+  it('world_event_value yields the handler event value as an expression', () => {
+    const result = generatorFor('world_event_value')(
+      {} as never,
+      {} as never,
+      {} as never,
+    );
+    expect(Array.isArray(result) && result[0]).toBe('eventValue');
+  });
+
+  it('offers the standard logic/math/text blocks in the toolbox', () => {
+    const toolboxTypes = (DOMAIN_TOOLBOX as Array<{blocks: string[]}>).flatMap(
+      c => c.blocks,
+    );
+    for (const t of ['controls_if', 'logic_compare', 'math_number', 'text']) {
+      expect(toolboxTypes).toContain(t);
+    }
   });
 });

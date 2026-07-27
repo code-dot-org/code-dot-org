@@ -8,6 +8,8 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
+import {Order} from 'blockly/javascript';
+
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
@@ -214,25 +216,49 @@ const worldLog = defineBlock({
   },
 });
 
-const worldLogEventValue = defineBlock({
-  type: 'world_log_event_value',
-  message0: 'log event value',
+// Prints any value — pairs with the standard expression blocks (and
+// `world_event_value`) so a learner can log a computed value, not just a literal.
+const worldPrint = defineBlock({
+  type: 'world_print',
+  message0: 'print %1',
+  args0: [{type: 'input_value', name: 'VALUE'}],
   previousStatement: true,
   nextStatement: true,
   style: 'text_blocks',
-  tooltip:
-    "Print the current event's value — e.g. the animation frame — inside a " +
-    '"when" handler.',
+  tooltip: 'Print a value to the console.',
   generator: {
-    // `eventValue` is the handler arg bound by world_on_event; only meaningful
-    // inside a "when" block.
-    javascript() {
-      return `console.log(eventValue);\n`;
+    javascript(block, generator) {
+      const value = generator.valueToCode(block, 'VALUE', Order.NONE) || "''";
+      return `console.log(${value});\n`;
     },
   },
 });
 
-/** The domain blocks — pass to a workspace/provider `blocks` prop. */
+// The current event's value as an expression — e.g. the animation frame in a
+// "when animation frame changes" handler. `eventValue` is the handler arg bound
+// by world_on_event, so this is only meaningful inside a "when" block.
+const worldEventValue = defineBlock({
+  type: 'world_event_value',
+  message0: 'event value',
+  output: 'Number',
+  style: 'variable_blocks',
+  tooltip: 'The value of the current event (e.g. the animation frame).',
+  generator: {
+    javascript() {
+      return ['eventValue', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+/**
+ * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
+ * Blockly blocks the toolbox also offers (controls_if, logic_compare,
+ * math_number, text, …) are NOT listed here: importing `@code-dot-org/blockly`
+ * already registers them (and their JavaScript generators) natively, and
+ * re-registering them through the design-system Driver drops their statement
+ * connections. The toolbox references them by type; the workspace resolves them
+ * from the native registry.
+ */
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
@@ -241,7 +267,8 @@ export const DOMAIN_BLOCKS = [
   worldPlayAnimation,
   worldOnEvent,
   worldLog,
-  worldLogEventValue,
+  worldPrint,
+  worldEventValue,
 ];
 
 /** The toolbox for the Blockly editor: the domain blocks, grouped. */
@@ -257,6 +284,18 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   },
   {
     name: 'Events',
-    blocks: ['world_on_event', 'world_log', 'world_log_event_value'],
+    blocks: ['world_on_event', 'world_log', 'world_print', 'world_event_value'],
   },
+  {
+    name: 'Logic',
+    blocks: [
+      'controls_if',
+      'logic_compare',
+      'logic_operation',
+      'logic_negate',
+      'logic_boolean',
+    ],
+  },
+  {name: 'Math', blocks: ['math_number', 'math_arithmetic', 'math_modulo']},
+  {name: 'Text', blocks: ['text']},
 ];
