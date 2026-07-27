@@ -84,7 +84,7 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_on_event registers a handler with the mapped event', () => {
+  it('world_on_event registers a handler binding the event value', () => {
     expect(
       emit(
         'world_on_event',
@@ -92,25 +92,33 @@ describe('domain block generators', () => {
         {HANDLER: 'console.log("hi");\n'},
       ),
     ).toBe(
-      'actor.on(WorldLab.StartsFallingEvent, () => {\nconsole.log("hi");\n});\n',
+      'actor.on(WorldLab.StartsFallingEvent, (_world, _actor, eventValue) => {\n' +
+        'console.log("hi");\n});\n',
     );
   });
 
-  it('world_on_event handles the animationEnded event', () => {
+  it('world_on_event handles the frameChanged event', () => {
     expect(
       emit(
         'world_on_event',
-        {EVENT: 'animationEnded'},
-        {HANDLER: 'console.log("done");\n'},
+        {EVENT: 'frameChanged'},
+        {HANDLER: 'console.log(eventValue);\n'},
       ),
     ).toBe(
-      'actor.on(WorldLab.AnimationEndedEvent, () => {\nconsole.log("done");\n});\n',
+      'actor.on(WorldLab.FrameChangedEvent, (_world, _actor, eventValue) => {\n' +
+        'console.log(eventValue);\n});\n',
     );
   });
 
   it('world_log prints the text field', () => {
     expect(emit('world_log', {TEXT: 'Player landed!'})).toBe(
       'console.log("Player landed!");\n',
+    );
+  });
+
+  it('world_log_event_value prints the handler event value', () => {
+    expect(emit('world_log_event_value', {})).toBe(
+      'console.log(eventValue);\n',
     );
   });
 });

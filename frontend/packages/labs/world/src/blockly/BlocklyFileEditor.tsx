@@ -4,12 +4,18 @@ import {
   Blockly,
   BlocklyProvider,
   BlocklyWorkspace,
+  ScrollBlockDragger,
+  TopLeftMetricsManager,
   type BlocklySerialization,
 } from '@code-dot-org/blockly';
+import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
+import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 
 import styles from './blocklyFileEditor.module.css';
 import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
+
+const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
 
 // A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON
 // (INTERFACE.md). This is the editor Codebridge mounts for those languages via
@@ -46,8 +52,12 @@ export const BlocklyFileEditor = ({
   const options = useMemo(
     () => ({
       readOnly: isReadOnly,
-      trashcan: true,
+      trashcan: false,
       move: {wheel: true, drag: true, scrollbars: true},
+      plugins: {
+        metricsManager: TopLeftMetricsManager,
+        blockDragger: ScrollBlockDragger,
+      },
     }),
     [isReadOnly],
   );
@@ -69,7 +79,7 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
-      <BlocklyProvider blocks={DOMAIN_BLOCKS}>
+      <BlocklyProvider blocks={DOMAIN_BLOCKS} plugins={plugins}>
         <BlocklyWorkspace
           className={styles.workspace}
           startBlocks={startBlocks}

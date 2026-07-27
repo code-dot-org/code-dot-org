@@ -41,6 +41,7 @@ const EVENT_CONST: Record<string, string> = {
   startsFalling: 'StartsFallingEvent',
   stopsFalling: 'StopsFallingEvent',
   animationEnded: 'AnimationEndedEvent',
+  frameChanged: 'FrameChangedEvent',
 };
 
 const worldActor = defineBlock({
@@ -171,6 +172,7 @@ const worldOnEvent = defineBlock({
         ['starts falling', 'startsFalling'],
         ['stops falling', 'stopsFalling'],
         ['animation ends', 'animationEnded'],
+        ['animation frame changes', 'frameChanged'],
       ],
     },
   ],
@@ -186,7 +188,13 @@ const worldOnEvent = defineBlock({
     javascript(block, generator) {
       const eventConst = EVENT_CONST[block.getFieldValue('EVENT')] ?? '';
       const handler = generator.statementToCode(block, 'HANDLER');
-      return `actor.on(WorldLab.${eventConst}, () => {\n${handler}});\n`;
+      // Bind the handler args so a body block can read the event's value
+      // (`eventValue` — e.g. the animation frame). `_world`/`_actor` don't shadow
+      // the outer `actor` builder, so it stays reachable inside the handler.
+      return (
+        `actor.on(WorldLab.${eventConst}, (_world, _actor, eventValue) => {\n` +
+        `${handler}});\n`
+      );
     },
   },
 });
@@ -206,6 +214,24 @@ const worldLog = defineBlock({
   },
 });
 
+const worldLogEventValue = defineBlock({
+  type: 'world_log_event_value',
+  message0: 'log event value',
+  previousStatement: true,
+  nextStatement: true,
+  style: 'text_blocks',
+  tooltip:
+    "Print the current event's value — e.g. the animation frame — inside a " +
+    '"when" handler.',
+  generator: {
+    // `eventValue` is the handler arg bound by world_on_event; only meaningful
+    // inside a "when" block.
+    javascript() {
+      return `console.log(eventValue);\n`;
+    },
+  },
+});
+
 /** The domain blocks — pass to a workspace/provider `blocks` prop. */
 export const DOMAIN_BLOCKS = [
   worldActor,
@@ -215,6 +241,7 @@ export const DOMAIN_BLOCKS = [
   worldPlayAnimation,
   worldOnEvent,
   worldLog,
+  worldLogEventValue,
 ];
 
 /** The toolbox for the Blockly editor: the domain blocks, grouped. */
@@ -228,5 +255,8 @@ export const DOMAIN_TOOLBOX: Toolbox = [
     name: 'Looks',
     blocks: ['world_set_sprite', 'world_play_animation'],
   },
-  {name: 'Events', blocks: ['world_on_event', 'world_log']},
+  {
+    name: 'Events',
+    blocks: ['world_on_event', 'world_log', 'world_log_event_value'],
+  },
 ];
