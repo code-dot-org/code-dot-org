@@ -16,6 +16,8 @@ import type {WorldBuilder} from './WorldBuilder';
 export interface SceneMap {
   actors: Array<{
     type: string;
+    /** Stable instance id; a random unique one is assigned when omitted. */
+    id?: string;
     /** Overrides keyed by owner id (rule or trait), then property id. */
     properties?: Record<string, Record<string, unknown>>;
   }>;
@@ -58,12 +60,52 @@ export class SceneBuilder {
     return this;
   }
 
-  /** Instantiate an actor, add it to the world, and return it. */
-  addActor(builder: ActorBuilder): Actor {
+  /**
+   * Instantiate an actor from `builder`, add it to the world, and return the
+   * live instance so the caller can `.set()` per-instance properties on it
+   * (chainable): `scene.addActor(Coin, 'coin-a').set(PositionProperty, ...)`.
+   *
+   * The instance `id` is the one given, else the builder's id when it is free,
+   * else a random unique id (`type-uuid`). So a lone actor keeps a stable,
+   * readable id (a scene rebuild reconciles it live), while repeated spawns of
+   * one template each get their own id and simply restart the scene. Scene tools
+   * (map editors, the Blockly scene editor) pass explicit ids to pin identity.
+   */
+  addActor(builder: ActorBuilder, id?: string): Actor {
     const world = this.requireWorld();
-    const actor = builder.instantiate();
+    const actor = builder.instantiate(
+      this.resolveInstanceId(world, builder, id),
+    );
     world.addActor(actor);
     return actor;
+  }
+
+  /**
+   * Choose a unique instance id. The requested id (an explicit one, else the
+   * builder's) is used verbatim when free. On collision we keep as much of the
+   * caller's stability as they gave us: an explicit *base* (e.g. a Blockly
+   * block's id, which repeats when its `add` block runs in a loop) is kept and
+   * disambiguated with an ordinal (`base`, `base#2`, …), stable as long as the
+   * loop is; a bare template id (an anonymous repeat with no stable identity)
+   * falls back to a random `type-uuid`.
+   */
+  private resolveInstanceId(
+    world: World,
+    builder: ActorBuilder,
+    explicitId?: string,
+  ): string {
+    const base = explicitId ?? builder.id;
+    if (!world.hasActor(base)) {
+      return base;
+    }
+    if (explicitId === undefined) {
+      return `${builder.id}-${crypto.randomUUID()}`;
+    }
+    let ordinal = 2;
+    while (world.hasActor(`${base}#${ordinal}`)) {
+      ordinal += 1;
+    }
+    return `${base}#${ordinal}`;
   }
 
   /** Remove every actor from the scene's world. */
@@ -88,7 +130,9 @@ export class SceneBuilder {
             `'${entry.type}' (register it with define())`,
         );
       }
-      const actor = builder.instantiate();
+      const actor = builder.instantiate(
+        this.resolveInstanceId(world, builder, entry.id),
+      );
       for (const [ownerId, props] of Object.entries(entry.properties ?? {})) {
         for (const [propId, value] of Object.entries(props)) {
           const property = lookup.get(`${ownerId}.${propId}`);

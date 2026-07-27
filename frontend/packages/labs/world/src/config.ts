@@ -12,11 +12,12 @@ import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
  * no editable `index.html`: the preview sandbox serves a fixed host shell and
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
- * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule` and `actor` are
- * Blockly-authored: they carry no CodeMirror language, and `editorComponents`
- * routes them to the Blockly editor instead (INTERFACE.md — a `.rule`/`.actor`
- * file is a Blockly workspace stored as serialized JSON). Images (`png`) are
- * supported (shown in the tree, handed to the game) but not edited.
+ * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, and
+ * `scene` are Blockly-authored: they carry no CodeMirror language, and
+ * `editorComponents` routes them to the Blockly editor instead (INTERFACE.md — a
+ * `.rule`/`.actor`/`.scene` file is a Blockly workspace stored as serialized
+ * JSON). Images (`png`) are supported (shown in the tree, handed to the game)
+ * but not edited.
  */
 export const WORLD_EDITABLE_FILE_TYPES = [
   'js',
@@ -26,6 +27,7 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'txt',
   'rule',
   'actor',
+  'scene',
 ];
 const IMAGE_FILE_TYPES = ['png'];
 
@@ -42,6 +44,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     md: 'markdown',
     rule: 'rule',
     actor: 'actor',
+    scene: 'scene',
   },
   languageExtensions: {
     javascript: javascript(),
@@ -53,5 +56,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   editorComponents: {
     rule: BlocklyFileEditor,
     actor: BlocklyFileEditor,
+    scene: BlocklyFileEditor,
   },
 };

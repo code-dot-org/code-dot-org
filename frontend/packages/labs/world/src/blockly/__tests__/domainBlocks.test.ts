@@ -144,3 +144,55 @@ describe('domain block generators', () => {
     }
   });
 });
+
+describe('scene block generators', () => {
+  // The scene blocks read block.id and register imports on generator.definitions_
+  // (which Blockly's finish() hoists), so they need richer fakes than `emit`.
+  const run = (
+    type: string,
+    block: Record<string, unknown>,
+    definitions: Record<string, string>,
+    body: string,
+  ) =>
+    generatorFor(type)(
+      {getFieldValue: (n: string) => block[n], id: block.id} as never,
+      {
+        definitions_: definitions,
+        statementToCode: () => body,
+      } as never,
+      {} as never,
+    ) as string;
+
+  it('world_scene builds the scene, imports the world, and hosts the body', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_scene',
+      {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
+      defs,
+      '{ /* add */ }\n',
+    );
+    expect(code).toContain(
+      'const scene = new WorldLab.SceneBuilder({id: "game", name: "Game"});',
+    );
+    expect(code).toContain('scene.useWorld(Platform);');
+    expect(code).toContain('{ /* add */ }');
+    expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
+    expect(defs['mod:worlds/platform']).toBe(
+      'import Platform from "worlds/platform";',
+    );
+  });
+
+  it('world_add_actor block-scopes the instance, using the block id as its id', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_add_actor',
+      {ACTOR: 'actors/coin', id: 'add-coin'},
+      defs,
+      'actor.set(X);\n',
+    );
+    expect(code).toBe(
+      '{\nconst actor = scene.addActor(Coin, "add-coin");\nactor.set(X);\n}\n',
+    );
+    expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
+  });
+});

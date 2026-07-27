@@ -8,7 +8,8 @@ import {Trait} from '../core/Trait';
 import type {EventHandler, GameEvent, Property} from '../core/types';
 
 export class ActorBuilder {
-  private readonly id: string;
+  /** The template's id — the actor's type, and the default instance id. */
+  readonly id: string;
   private readonly name: string;
   private traits: Trait[] = [];
   private readonly overrides: Array<[Property, unknown]> = [];
@@ -36,10 +37,16 @@ export class ActorBuilder {
     return this;
   }
 
-  /** Create a live Actor from this description. */
-  instantiate(): Actor {
+  /**
+   * Create a live Actor from this description. `instanceId` is the unique id the
+   * Scene assigns (defaulting to this template's id); this builder's id becomes
+   * the actor's `type`. The builder is reusable — each call yields an
+   * independent actor, so one template can be spawned many times.
+   */
+  instantiate(instanceId?: string): Actor {
     return new Actor({
-      id: this.id,
+      id: instanceId ?? this.id,
+      type: this.id,
       name: this.name,
       traits: [...this.traits],
       overrides: [...this.overrides],

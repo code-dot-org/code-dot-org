@@ -23,3 +23,18 @@ export function assembleActorModule(blocks: GeneratedBlock[]): string {
   const eventsCode = events.map(block => block.code).join('');
   return `${actorCode}${eventsCode}export default actor;\n`;
 }
+
+/**
+ * Assemble a `.scene` file's module. The `world_scene` block is the root — it
+ * builds `const scene = …` and generates its `world_add_actor` children inline
+ * (each a block-scoped `scene.addActor(...)`), so it is the only top-level block
+ * here; any stray others are appended before the default export. Imports the
+ * blocks registered are hoisted separately by the generator's `finish()`.
+ */
+export function assembleSceneModule(blocks: GeneratedBlock[]): string {
+  const scene = blocks.find(block => block.type === 'world_scene');
+  const rest = blocks.filter(block => block !== scene);
+  const sceneCode = scene ? scene.code : '';
+  const restCode = rest.map(block => block.code).join('');
+  return `${sceneCode}${restCode}export default scene;\n`;
+}
