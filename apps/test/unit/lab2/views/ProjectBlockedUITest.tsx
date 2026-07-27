@@ -76,16 +76,21 @@ describe('ProjectBlockedUI for privacy/profanity violations', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders nothing for the owner outside the lab pages', () => {
+  it('shows the owner message, not the blocked message, to the owner on the share page', () => {
     setState({isOwner: true, pageAction: 'share'});
 
-    const {container} = render(
+    render(
       <ProjectBlockedUI
         blockedType="privacyProfanity"
         isProjectValidator={false}
       />
     );
 
-    expect(container).toBeEmptyDOMElement();
+    expect(
+      screen.getByText(PRIVACY_PROFANITY_OWNER_ALERT)
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText(PRIVACY_PROFANITY_BLOCKED_MESSAGE)
+    ).not.toBeInTheDocument();
   });
 });

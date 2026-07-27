@@ -52,7 +52,9 @@ export const ProjectBlockedUI: React.FunctionComponent<{
     blockedType === 'projectAbuse'
       ? i18n.tosLong({url: 'http://code.org/tos'})
       : blockedType === 'privacyProfanity'
-      ? PRIVACY_PROFANITY_BLOCKED_MESSAGE
+      ? isOwner
+        ? PRIVACY_PROFANITY_OWNER_ALERT
+        : PRIVACY_PROFANITY_BLOCKED_MESSAGE
       : i18n.sharingDisabled({
           sign_in_url: 'https://studio.code.org/users/sign_in',
         });
