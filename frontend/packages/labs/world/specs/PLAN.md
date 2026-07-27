@@ -637,9 +637,16 @@ Unit first, then browser:
    self-hosted `/vendor/world-lab.mjs` (one engine instance) — not an import map,
    which the preview's `script-src 'self'` would block inline. The round-trip
    renders a gravity actor that falls and lands, under the production CSPs.
-4. **Hot reload Levels 0–1** — Level 0 (recompile + reload) is DONE as part of
-   milestone 5 (the provider recompiles and reloads on every edit). Remaining:
-   Level 1 (`set_property` patches a world property live without a rebuild).
+4. **Hot reload Levels 0–1** — DONE (`spikes/milestone-4/roundtrip.mjs`). The
+   preview reconciles instead of always restarting: on each rebuild it diffs the
+   incoming world against the last build's `snapshot()`; if only world-scoped
+   property values changed (same rules/actors/actor-values) it patches the
+   running world in place (`setWorldProperty`) and keeps the game — Level 1,
+   e.g. change gravity strength and see it live — otherwise it restarts
+   (Level 0). The provider logs the outcome ("↻ Applied changes live" /
+   "↻ Restarted the game"). Reconcile is pure logic over the engine's public
+   `snapshot`/`setWorldProperty`, unit-tested headlessly. Level 2 (state-
+   preserving code-body swap) and Level 3 (structural reconcile) remain.
 5. **WorldPreview integration + Console + verification** — DONE
    (`spikes/milestone-5/verify.mjs`). `WorldRuntimeProvider` compiles the
    Codebridge sources on edit and runs them in the preview; `WorldPreview`

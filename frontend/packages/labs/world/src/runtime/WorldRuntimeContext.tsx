@@ -22,6 +22,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {ENTRY_FILE} from '../constants';
 
+import type {ReloadReport} from './messages';
 import {projectFiles} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {WorldPreviewManager} from './sandbox/worldPreviewManager';
@@ -134,9 +135,17 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile
       }
-      await pair.preview.load(moduleUrl);
+      const detail = (await pair.preview.load(moduleUrl)) as
+        | ReloadReport
+        | undefined;
       if (mine !== generation.current) {
         return;
+      }
+      // Tell the learner how the change was applied (hot reload feedback).
+      if (detail?.mode === 'reconciled') {
+        pushConsole({level: 'info', text: '↻ Applied changes live'});
+      } else if (detail?.mode === 'restarted') {
+        pushConsole({level: 'info', text: '↻ Restarted the game'});
       }
       setStatus('running');
     } catch (error) {

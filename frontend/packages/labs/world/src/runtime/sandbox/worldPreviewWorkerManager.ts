@@ -5,14 +5,16 @@
 // self-hosted engine bundle URL (`/vendor/world-lab.mjs`), so there is one
 // engine instance shared with the binding's type view (SANDBOX.md / PLAN §7).
 
-import type {World} from 'world-lab';
+import type {World, WorldSnapshot} from 'world-lab';
 
 import {PhaserBinding} from '../driver/PhaserBinding';
+import {reconcile} from '../driver/reconcile';
 import {
   FromPreviewMessage,
   PARENT_ORIGIN_PARAM,
   ToPreviewMessage,
   type LoadMessage,
+  type ReloadMode,
   type ToPreview,
 } from '../messages';
 
@@ -40,7 +42,10 @@ export async function start(): Promise<void> {
   await registerBuildSw({awaitControl: true});
   post({type: FromPreviewMessage.READY});
 
+  // The running game and the baseline snapshot for hot-reload decisions.
   let binding: PhaserBinding | null = null;
+  let runningWorld: World | null = null;
+  let baseline: WorldSnapshot | null = null;
 
   window.addEventListener('message', event => {
     if (!parentOrigin || event.origin !== parentOrigin) {
@@ -52,13 +57,13 @@ export async function start(): Promise<void> {
     } else if (data?.type === ToPreviewMessage.STOP) {
       binding?.stop();
       binding = null;
+      runningWorld = null;
+      baseline = null;
     }
   });
 
   async function load({id, moduleUrl}: LoadMessage) {
     try {
-      binding?.stop();
-      binding = null;
       const mod: SceneModule = await import(/* @vite-ignore */ moduleUrl);
       const scene = mod.default;
       if (!scene || typeof scene.getWorld !== 'function') {
@@ -66,9 +71,34 @@ export async function start(): Promise<void> {
           `entry module must default-export a Scene (got ${typeof scene})`,
         );
       }
+      const incoming = scene.getWorld();
       const parent = document.getElementById('game') ?? document.body;
-      binding = new PhaserBinding(scene.getWorld(), parent);
-      post({type: FromPreviewMessage.BUILT, id});
+
+      let mode: ReloadMode;
+      if (!binding || !runningWorld) {
+        // First load: start fresh.
+        runningWorld = incoming;
+        binding = new PhaserBinding(incoming, parent);
+        baseline = incoming.snapshot();
+        mode = 'built';
+      } else {
+        // Reconcile against the last build; patch live or restart.
+        const result = reconcile(runningWorld, incoming, baseline);
+        baseline = result.snapshot;
+        mode = result.mode;
+        if (result.mode === 'restarted') {
+          binding.stop();
+          runningWorld = incoming;
+          binding = new PhaserBinding(incoming, parent);
+        }
+        // 'reconciled': reconcile() already patched runningWorld; keep the game.
+      }
+
+      post({
+        type: FromPreviewMessage.BUILT,
+        id,
+        detail: {mode, world: runningWorld.snapshot().world},
+      });
     } catch (error) {
       post({
         type: FromPreviewMessage.ENGINE_ERROR,

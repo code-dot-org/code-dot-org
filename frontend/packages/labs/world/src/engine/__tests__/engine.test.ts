@@ -184,6 +184,30 @@ describe('renderSnapshot (driver view)', () => {
   });
 });
 
+describe('snapshot + setWorldProperty (hot-reload support)', () => {
+  it('captures structure and values, and patches a world property by path', () => {
+    const {world, player} = makeScene(new Vector(0, 0), 100);
+    const snap = world.snapshot();
+
+    expect(snap.ruleIds).toEqual(['collision', 'gravity', 'motion', 'spatial']);
+    expect(snap.actorIds).toEqual(['ground', 'player']);
+    expect(snap.world['gravity.strength']).toBe(900);
+    // Actor property values are captured per actor, by trait.prop path.
+    expect(snap.actors.player['positional.position']).toMatchObject({
+      x: 0,
+      y: 0,
+    });
+
+    // Patch by path — the running sim uses it on the next tick.
+    expect(world.setWorldProperty('gravity.strength', 1800)).toBe(true);
+    world.tick(0.1);
+    expect(player.get(VelocityProperty).y).toBeCloseTo(180); // 1800 * 0.1
+    expect(world.snapshot().world['gravity.strength']).toBe(1800);
+
+    expect(world.setWorldProperty('nope.missing', 1)).toBe(false);
+  });
+});
+
 describe('world actions', () => {
   it('invert flips gravity direction in place', () => {
     const {world, player} = makeScene(new Vector(0, 0), 100_000);

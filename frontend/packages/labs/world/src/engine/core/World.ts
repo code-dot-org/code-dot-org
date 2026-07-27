@@ -14,6 +14,21 @@ import type {GameEvent, Property, Rule, Step, WorldAction} from './types';
 import {Vector} from './Vector';
 
 /**
+ * A pristine, comparable view of a built world — its structure and every
+ * property value, keyed by `${owner}.${id}` path. The driver diffs two of these
+ * across a rebuild to decide hot-reload strategy (PLAN §9): if only `world`
+ * values changed, patch the running world live; otherwise restart.
+ */
+export interface WorldSnapshot {
+  ruleIds: string[];
+  actorIds: string[];
+  /** World-scoped property values, by `${ruleId}.${propId}`. */
+  world: Record<string, unknown>;
+  /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
+  actors: Record<string, Record<string, unknown>>;
+}
+
+/**
  * A renderer-friendly view of one positional actor. The driver's Phaser binding
  * consumes these each frame; it needs no engine internals, only these numbers.
  */
@@ -196,5 +211,45 @@ export class World {
   /** Remove every actor (used by `SceneBuilder.clear`). */
   clearActors(): void {
     this.actorList.length = 0;
+  }
+
+  /** Set a world-scoped property by its `${ruleId}.${propId}` path. */
+  setWorldProperty(path: string, value: unknown): boolean {
+    for (const rule of this.membership.items()) {
+      for (const property of Object.values(rule.properties)) {
+        if (`${property.ownerId}.${property.id}` === path) {
+          this.set(property, value as never);
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  /** A pristine, comparable snapshot of this world's structure and values. */
+  snapshot(): WorldSnapshot {
+    const rules = this.membership.items();
+    const world: Record<string, unknown> = {};
+    for (const rule of rules) {
+      for (const property of Object.values(rule.properties)) {
+        world[`${property.ownerId}.${property.id}`] = this.get(property);
+      }
+    }
+    const actors: Record<string, Record<string, unknown>> = {};
+    for (const actor of this.actorList) {
+      const values: Record<string, unknown> = {};
+      for (const trait of actor.traits()) {
+        for (const property of Object.values(trait.properties)) {
+          values[`${property.ownerId}.${property.id}`] = actor.get(property);
+        }
+      }
+      actors[actor.id] = values;
+    }
+    return {
+      ruleIds: rules.map(rule => rule.id).sort(),
+      actorIds: this.actorList.map(actor => actor.id).sort(),
+      world,
+      actors,
+    };
   }
 }
