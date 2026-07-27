@@ -47,6 +47,11 @@ export class SceneBuilder {
     return this.world;
   }
 
+  /** The scene's world (throws if `useWorld` has not been called). */
+  getWorld(): World {
+    return this.requireWorld();
+  }
+
   /** Register an actor type so `populate` can instantiate it by name. */
   define(type: string, builder: ActorBuilder): this {
     this.types.set(type, builder);

@@ -30,3 +30,14 @@ under the production CSPs.
   the sandbox on separate ports with per-surface CSP headers, and asserts a
   2-file project compiles, stores in the SW, and imports+runs in the preview.
   Run: `yarn setup:world && node spikes/milestone-2/roundtrip.mjs`
+
+## milestone-3/
+
+End-to-end render verification (`specs/PLAN.md` §16 milestone 3): a learner
+project importing `world-lab` compiles, loads in the preview, and the Phaser
+binding renders it.
+
+- `harness.ts` — lab page that also captures the preview's relayed console.
+- `roundtrip.mjs` — asserts a gravity actor renders (green sprite on the canvas),
+  falls, and lands (relayed `startsFalling`/`stopsFalling`), under the production
+  CSPs. Run: `yarn setup:world && node spikes/milestone-3/roundtrip.mjs`

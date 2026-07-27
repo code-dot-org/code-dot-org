@@ -35,8 +35,9 @@ const PROJECT: Record<string, string> = {
 describe('WorldCompiler', () => {
   it('bundles a multi-file project to one ESM module', async () => {
     const code = await compiler.compile(PROJECT, 'scenes/main.ts');
-    // world-lab stays external; the preview supplies it.
-    expect(code).toMatch(/from ?["']world-lab["']/);
+    // world-lab is rewritten to its self-hosted URL (external), not bundled.
+    expect(code).toMatch(/from ?["']\/vendor\/world-lab\.mjs["']/);
+    expect(code).not.toContain('SceneBuilder =');
     // Root-relative + relative + JSON imports were inlined.
     expect(code).toContain('Platform World');
     expect(code).toContain('v1');

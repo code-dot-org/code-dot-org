@@ -3,7 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
-    "paths": {"@/*": ["src/*"]}
+    "paths": {
+      "@/*": ["src/*"],
+      "world-lab": ["src/engine/index.ts"]
+    }
   },
   "include": ["src"]
 }

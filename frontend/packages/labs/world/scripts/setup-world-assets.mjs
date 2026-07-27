@@ -1,13 +1,17 @@
-// Copies the sandbox's self-hosted runtime assets into public/vendor/ so the
+// Prepares the sandbox's self-hosted runtime assets in public/vendor/ so the
 // standalone demo serves them at an origin-relative path (no CDN, no runtime
 // network — mirrors python-lab's setup-pyodide-assets.mjs). The library build
 // does not run this; the studio host serves its own hosted copies.
 //
-//   esbuild.wasm    — the compile surface's bundler (milestone 2)
-//   phaser.esm.js   — the preview surface's engine (milestone 3)
+//   esbuild.wasm    — the compile surface's bundler (copied)
+//   phaser.esm.js   — the preview surface's engine dependency (copied)
+//   world-lab.mjs   — the engine, bundled from src/engine; the compiler rewrites
+//                     the learner's `import 'world-lab'` to this URL, so there is
+//                     exactly one engine instance (PLAN §7 / §10)
 //
 // Run: node scripts/setup-world-assets.mjs   (wired as `yarn setup:world`)
 
+import * as esbuild from 'esbuild';
 import {existsSync, mkdirSync, copyFileSync, statSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {dirname, join} from 'node:path';
@@ -15,37 +19,43 @@ import {fileURLToPath} from 'node:url';
 
 const require = createRequire(import.meta.url);
 const here = dirname(fileURLToPath(import.meta.url));
-const vendorDir = join(here, '..', 'public', 'vendor');
+const pkgRoot = join(here, '..');
+const vendorDir = join(pkgRoot, 'public', 'vendor');
 
 /** Resolve a file inside an installed package (which may not export it). */
 function pkgFile(pkg, ...segments) {
   return join(dirname(require.resolve(`${pkg}/package.json`)), ...segments);
 }
 
-const assets = [
+mkdirSync(vendorDir, {recursive: true});
+
+// Copy third-party binaries (idempotent — skip when size already matches).
+const copies = [
   {from: pkgFile('esbuild-wasm', 'esbuild.wasm'), to: 'esbuild.wasm'},
   {from: pkgFile('phaser', 'dist', 'phaser.esm.js'), to: 'phaser.esm.js'},
 ];
-
-mkdirSync(vendorDir, {recursive: true});
-
-let copied = 0;
-for (const {from, to} of assets) {
+for (const {from, to} of copies) {
   const dest = join(vendorDir, to);
   if (!existsSync(from)) {
     throw new Error(`missing source asset: ${from}`);
   }
-  // Idempotent: skip when the destination already matches by size.
   if (existsSync(dest) && statSync(dest).size === statSync(from).size) {
     continue;
   }
   copyFileSync(from, dest);
-  copied += 1;
   console.log(`world assets: copied ${to}`);
 }
 
-console.log(
-  copied === 0
-    ? 'world assets: up to date'
-    : `world assets: ${copied} file(s) copied to public/vendor/`,
-);
+// Bundle the engine to a single self-contained ESM module. Rebuilt every run —
+// it is our own source and cheap to bundle.
+await esbuild.build({
+  entryPoints: [join(pkgRoot, 'src', 'engine', 'index.ts')],
+  bundle: true,
+  format: 'esm',
+  platform: 'browser',
+  outfile: join(vendorDir, 'world-lab.mjs'),
+  logLevel: 'silent',
+});
+console.log('world assets: bundled world-lab.mjs');
+
+console.log('world assets: ready in public/vendor/');
