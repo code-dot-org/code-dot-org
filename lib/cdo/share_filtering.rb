@@ -39,25 +39,32 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design].freeze
+  BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
+  # Supported project types for filtering whose `source` is structured JSON
+  # rather than a blockly XML/JSON string.
+  STRUCTURED_SOURCE_EXTRACTORS = {'sketchlab' => :extract_text_sketchlab}.freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
+  # Returns nil if the program text or project type can't be filtered.
   #
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   #
-  # @param [String] program the student's program text
+  # @param [String, Hash] program the student's program text.
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [String] project_type
   def self.find_share_failure(program, locale, project_type, exceptions: false)
     # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    texts = extract_text_blockly(program)
+    extractor = STRUCTURED_SOURCE_EXTRACTORS.fetch(project_type, :extract_text_blockly)
+    texts = send(extractor, program)
     program_text = texts.join(" ")
+    return nil if program_text.strip.empty?
 
     # Email and phone: check concatenated text.
     failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
@@ -100,6 +107,38 @@ module ShareFiltering
     texts.compact.uniq
   end
 
+  # Extracts user-entered text from a Sketch Lab (React Flow) source.
+  # The only user entered data appears in the node data fields 'text', 'label' and 'altText'.
+  # @param source [Hash, String] the parsed 'source' value from main.json,
+  #   or its JSON-serialized string form.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input or non-React-Flow shapes.
+  def self.extract_text_sketchlab(source)
+    if source.is_a?(String)
+      begin
+        source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::NestingError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: malformed JSON"
+        return []
+      end
+    end
+    return [] unless source.is_a?(Hash)
+
+    nodes = source['nodes']
+    return [] unless nodes.is_a?(Array)
+
+    nodes.flat_map do |node|
+      next [] unless node.is_a?(Hash) && node['data'].is_a?(Hash)
+      SKETCHLAB_TEXT_FIELDS.filter_map do |field|
+        value = node['data'][field]
+        value if value.is_a?(String) && !value.strip.empty?
+      end
+    end.uniq
+  end
+
   # Clean string values from XML-wrapped field values.
   def self.clean_text_value(value)
     return nil unless value.is_a?(String)
@@ -127,7 +166,7 @@ module ShareFiltering
     inputs = block["inputs"] || {}
 
     fields.each do |key, value|
-      if USER_ENTERED_TEXT_FIELDS.include?(key)
+      if BLOCKLY_TEXT_FIELDS.include?(key)
         cleaned = clean_text_value(value)
         texts << cleaned if cleaned && !cleaned.strip.empty?
       end
@@ -147,8 +186,15 @@ module ShareFiltering
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
+    # Structured sources have no field-name pre-check; extraction plus the
+    # empty-text bail in find_share_failure decide instead.
+    return true if STRUCTURED_SOURCE_EXTRACTORS.key?(project_type)
+
+    # Blockly sources are strings; anything else is unfilterable, not an error.
+    return false unless program.is_a?(String)
+
     # Only filter if program contains fields that accept user-entered strings.
-    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
+    return program.match?(/(?:#{BLOCKLY_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.

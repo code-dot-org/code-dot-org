@@ -4,8 +4,6 @@ import React from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
 
-import * as color from '../../../util/color';
-
 import {CROSS_TAB_CHART_AREA} from './constants';
 
 export const MAX_CROSSTAB_COLUMNS = 150;
@@ -183,25 +181,25 @@ const chartTitleStyle = {
   ...fontConstants['main-font-bold'],
   fontSize: 16,
   lineHeight: '16px',
-  color: 'black',
+  color: 'var(--text-neutral-primary)',
 };
 const tableStyle = {
   width: '100%',
 };
 const cellStyle = {
   height: '2em',
-  border: '1px solid black',
+  border: '1px solid var(--borders-neutral-strong)',
   textAlign: 'center',
 };
 const topCellStyle = {
   ...cellStyle,
-  backgroundColor: color.lightest_gray,
-  color: 'black',
+  backgroundColor: 'var(--background-neutral-secondary)',
+  color: 'var(--text-neutral-primary)',
 };
 const leftCellStyle = {
   ...cellStyle,
-  backgroundColor: color.dark_charcoal,
-  color: 'white',
+  backgroundColor: 'var(--background-neutral-primary-inverse)',
+  color: 'var(--text-neutral-white-fixed)',
   padding: '0 1em',
   whiteSpace: 'nowrap',
 };
