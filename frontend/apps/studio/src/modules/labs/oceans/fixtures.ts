@@ -229,6 +229,12 @@ export const oceansScriptStructure = {
 
 export const oceansCourseFixtures: MockRoute[] = [
   {
+    // Progression milestone (onContinue) — accept and acknowledge the report.
+    method: 'post',
+    path: '*/milestone/:userId/:scriptLevelId/:levelId',
+    respond: {},
+  },
+  {
     path: '*/api/script_structure/courses/oceans/units/:unitPos',
     respond: oceansScriptStructure,
   },
