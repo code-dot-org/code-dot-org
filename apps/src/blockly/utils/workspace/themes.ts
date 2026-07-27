@@ -12,8 +12,8 @@ import {ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
-import {setSetupBlockColor} from '@cdo/apps/redux/blockly';
+import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
+import blockly, {setSetupBlockColor} from '@cdo/apps/redux/blockly';
 
 import {shrinkBlockSpaceContainer} from './resize';
 
@@ -29,6 +29,11 @@ export function isDarkTheme(theme: BlocklyCore.Theme | undefined) {
 }
 
 export function publishSetupBlockColor(theme: BlocklyCore.Theme) {
+  // Lab2 stores don't register the legacy common reducers, so the
+  // publisher guarantees its own slice.
+  if (!hasReducer('blockly')) {
+    registerReducers({blockly});
+  }
   getStore().dispatch(
     setSetupBlockColor(
       theme.blockStyles[BlockStyles.SETUP]?.colourPrimary ?? null

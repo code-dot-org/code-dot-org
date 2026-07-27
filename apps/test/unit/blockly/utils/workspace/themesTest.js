@@ -4,6 +4,8 @@ import {setSetupBlockColor} from '@cdo/apps/redux/blockly';
 
 jest.mock('@cdo/apps/redux', () => ({
   getStore: jest.fn(),
+  hasReducer: jest.fn().mockReturnValue(true),
+  registerReducers: jest.fn(),
 }));
 
 describe('publishSetupBlockColor', () => {
