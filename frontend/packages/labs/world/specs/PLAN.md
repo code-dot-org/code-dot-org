@@ -711,8 +711,12 @@ Unit first, then browser:
    (off the spatial trait); `renderSnapshot` emits a `frame` descriptor and the
    Phaser binding is now a blitter. Stock animations are spec-model
    `AnimationDef`s; `WorldBuilder.useAnimations` registers learner ones. Browser-
-   verified engine-driven (coin spins, sprite/movement/gravity intact). Remaining
-   (`ANIMATIONS.md`): learner-authored `.anim` files (phase A), the dynamic
-   Blockly dropdown + `AnimationEnded` block (phase D), frame-change events
-   (phase E, needs per-actor event payloads), and — for custom images — the
-   Codebridge upload port (`UPLOADS.md`).
+   verified engine-driven (coin spins, sprite/movement/gravity intact). Phases A
+   and D also DONE: learner-authored animation files are plain `.json`
+   (`type: "animation"`), validated by `parseAnimationFile` and registered via
+   `WorldBuilder.useAnimations`; the `world_play_animation` dropdown is dynamic
+   (sourced from the project's animation files) and `world_on_event` gained
+   `AnimationEnded`. Browser-verified: a Blockly actor plays a learner-authored
+   animation from `animations/game.json`. Remaining (`ANIMATIONS.md`): frame-
+   change events (phase E, needs per-actor event payloads), and — for custom
+   uploaded images — the Codebridge upload port (`UPLOADS.md`).

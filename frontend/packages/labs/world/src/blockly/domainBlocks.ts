@@ -12,15 +12,11 @@ import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
+import {animationOptionsExtension} from './animationOptions';
+import {label} from './label';
+
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
-
-/** `camelCase`/`name` → a human "Title Case" dropdown label. */
-const label = (name: string): string =>
-  name
-    .replace(/([A-Z])/g, ' $1')
-    .replace(/^./, c => c.toUpperCase())
-    .trim();
 
 /** Dropdown `[label, value]` pairs for the built-in sprites. */
 const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
@@ -28,7 +24,9 @@ const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
   name,
 ]);
 
-/** Dropdown `[label, value]` pairs for the built-in animations (one per sheet). */
+// The animation dropdown's static fallback — the stock ids. The
+// `animationOptionsExtension` replaces this at block-init with the live registry
+// (stock + the project's authored animations).
 const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
   name => [label(name), name],
 );
@@ -42,6 +40,7 @@ const TRAIT_CONST: Record<string, string> = {
 const EVENT_CONST: Record<string, string> = {
   startsFalling: 'StartsFallingEvent',
   stopsFalling: 'StopsFallingEvent',
+  animationEnded: 'AnimationEndedEvent',
 };
 
 const worldActor = defineBlock({
@@ -145,10 +144,11 @@ const worldPlayAnimation = defineBlock({
   args0: [
     {type: 'field_dropdown', name: 'ANIMATION', options: ANIMATION_OPTIONS},
   ],
+  extensions: [animationOptionsExtension],
   previousStatement: true,
   nextStatement: true,
   style: 'sprite_blocks',
-  tooltip: 'Draw the actor with a looping built-in animation.',
+  tooltip: 'Draw the actor with a looping animation.',
   generator: {
     javascript(block) {
       const animation = block.getFieldValue('ANIMATION');
@@ -170,6 +170,7 @@ const worldOnEvent = defineBlock({
       options: [
         ['starts falling', 'startsFalling'],
         ['stops falling', 'stopsFalling'],
+        ['animation ends', 'animationEnded'],
       ],
     },
   ],

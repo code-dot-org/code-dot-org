@@ -50,7 +50,7 @@ export default scene;
 `;
 
 const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule, parseAnimationFile} from 'world-lab';
-import PulseFile from 'animations/pulse.json';
+import GameAnimations from 'animations/game.json';
 
 // A World is the set of rules in play. "Has Gravity" pulls in motion and
 // collision automatically; "Responds to Input" lets arrow-key-controlled actors
@@ -58,7 +58,7 @@ import PulseFile from 'animations/pulse.json';
 // useAnimations registers the animations authored in animations/pulse.json.
 export default new WorldBuilder({id: 'platform', name: 'Platform World'})
   .useRules([GravityRule, InputRule, AnimationRule])
-  .useAnimations(parseAnimationFile(PulseFile));
+  .useAnimations(parseAnimationFile(GameAnimations));
 `;
 
 // The player is authored in Blockly — a `.actor` file is a Blockly workspace
@@ -100,7 +100,13 @@ const PLAYER_ACTOR = JSON.stringify(
                   {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
                   nextBlock(
                     {type: 'world_set_position', fields: {X: 200, Y: 20}},
-                    {type: 'world_set_sprite', fields: {SPRITE: 'player'}},
+                    // Plays a learner-authored animation (game.json) — its id is
+                    // in the dropdown because the lab feeds the project's
+                    // animations to the block (Phase D).
+                    {
+                      type: 'world_play_animation',
+                      fields: {ANIMATION: 'playerBob'},
+                    },
                   ),
                 ),
               ),
@@ -116,12 +122,13 @@ const PLAYER_ACTOR = JSON.stringify(
   2,
 );
 
-// A learner-authored animation file — plain JSON, discriminated by
-// `type: 'animation'` (INTERFACE.md §Animations). The world imports and
-// registers it (`useAnimations(parseAnimationFile(...))`); the ball actor plays
-// it. "pulse" reuses the built-in "ball" sprite, scaling it per frame — showing
-// the per-frame `scale` the stock strip animations don't use.
-const PULSE_ANIMATION = JSON.stringify(
+// Learner-authored animations — plain JSON, discriminated by `type: 'animation'`
+// (INTERFACE.md §Animations). The world imports and registers them
+// (`useAnimations(parseAnimationFile(...))`). Both scale a built-in sprite per
+// frame, showing the per-frame `scale` the stock strip animations don't use, and
+// both become selectable in the `world_play_animation` Blockly dropdown: "pulse"
+// (the ball, in JS) and "playerBob" (the player, authored in Blockly).
+const GAME_ANIMATIONS = JSON.stringify(
   {
     type: 'animation',
     animations: {
@@ -132,6 +139,15 @@ const PULSE_ANIMATION = JSON.stringify(
           {sprite: 'ball', scale: 1.0, delay: 160},
           {sprite: 'ball', scale: 1.3, delay: 160},
           {sprite: 'ball', scale: 1.0, delay: 160},
+        ],
+      },
+      playerBob: {
+        name: 'Player Bob',
+        frames: [
+          {sprite: 'player', scale: 1.0, delay: 150},
+          {sprite: 'player', scale: 1.25, delay: 150},
+          {sprite: 'player', scale: 1.0, delay: 150},
+          {sprite: 'player', scale: 0.8, delay: 150},
         ],
       },
     },
@@ -166,11 +182,11 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: PLAYER_ACTOR,
         folderId: 'actors',
       },
-      pulse: {
-        id: 'pulse',
-        name: 'pulse.json',
+      gameAnimations: {
+        id: 'gameAnimations',
+        name: 'game.json',
         language: 'json',
-        contents: PULSE_ANIMATION,
+        contents: GAME_ANIMATIONS,
         folderId: 'animations',
       },
     },

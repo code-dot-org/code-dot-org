@@ -165,14 +165,19 @@ milestones 1–7 were staged.
   round-trip inlining an animation `.json`) and browser-verified (the ball's
   red-pixel area oscillates as it pulses).
 
-- **D — Blockly + project integration.** PARTLY DONE. Done: the stock coin/player
-  are spec-model `AnimationDef`s on the rule (frames name the vendor sheets, still
-  emitted by `generate-sprites.mjs`); the default project's coin references
-  `coinSpin` by id; `world_set_sprite`/`world_play_animation` elect the appearance
-  trait; `src/sprites.ts` is now just the driver's load manifest
-  (`SPRITE_NAMES` + `SPRITESHEET_NAMES`), the uniform-strip `ANIMATIONS` map gone.
-  Remaining: source the `world_play_animation` dropdown from the project's `.anim`
-  ids (needs Phase A), and add `AnimationEnded` to `world_on_event`.
+- **D — Blockly + project integration.** DONE. Stock coin/player are spec-model
+  `AnimationDef`s on the rule; `world_set_sprite`/`world_play_animation` elect the
+  appearance trait; `src/sprites.ts` is now just the driver's load manifest. The
+  `world_play_animation` dropdown is **dynamic**: an extension
+  (`animationOptions.ts`, the Music-Lab `menuGenerator_` pattern) points it at a
+  registry the lab refreshes from the project's animation files
+  (`projectAnimationIds` in `WorldRuntimeContext`), so a learner picks stock _or_
+  authored animations. `world_on_event` gained an "animation ends" option
+  (`AnimationEndedEvent`). Unit-tested (`projectAnimationIds`, `animationOptions`,
+  the event generator). Browser-verified end to end: the Blockly player plays the
+  learner-authored `playerBob` from `animations/game.json` — its blue area
+  oscillates (the bob), which only round-trips because the dropdown carried the
+  authored id.
 
 - **E — Frame events (payloads).** Once per-actor event payloads land (§7), add
   `FrameChangedEvent` with the frame index and a `world_on_event` option, so a
