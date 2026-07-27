@@ -39,10 +39,7 @@ function pruneSerializedBlock(block: BlockInfo | SerializedBlock): void {
 
 /**
  * Remove block/shadow entries from a toolbox definition whose type isn't
- * registered in Blockly. A level's toolbox can reference blocks that aren't
- * in the installed block pool; without filtering, opening that category
- * throws "Invalid block definition for type ...". Call after blocks are
- * installed.
+ * registered in Blockly. Call after blocks are installed.
  */
 export function filterToolboxToRegisteredBlocks(def: ToolboxInfo): ToolboxInfo {
   const out = cloneDeep(def);

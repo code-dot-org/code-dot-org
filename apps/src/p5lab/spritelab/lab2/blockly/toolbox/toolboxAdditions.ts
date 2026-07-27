@@ -1,8 +1,6 @@
-// Lab-owned additions layered onto a level's authored toolbox at load time:
-// blocks and categories DB-authored toolboxes can't know about. Deliberately
-// one opaque step — the additions are a stopgap while every level wants the
-// same lineup, and this file should go away once levelbuilders author
-// fine-grained toolboxes themselves.
+// Lab-owned additions layered onto a level's authored toolbox at load time.
+// A stopgap while every level wants the same lineup; this file should go
+// away once levelbuilders author fine-grained toolboxes themselves.
 
 import {cloneDeep} from 'lodash';
 
@@ -117,8 +115,8 @@ function presentIn(category: StaticCategoryInfo): Set<string | undefined> {
   return new Set(category.contents.filter(isBlockInfo).map(b => b.type));
 }
 
-// Ensure the toolbox's "Behaviors" category lists all predefined behavior
-// blocks (that are registered), not just whatever the level included.
+// Add any missing (registered) predefined behavior blocks to the
+// "Behaviors" category.
 function ensurePredefinedBehaviors(def: ToolboxInfo): void {
   const behaviors = findCategory(def.contents, 'Behaviors');
   if (!behaviors) {
@@ -203,10 +201,9 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
 }
 
 /**
- * Layer every lab addition onto the authored toolbox: the full predefined
- * behavior set, the scene blocks, and the injected Platform/Story categories
- * and composites. Pure; the authored definition is not mutated. Call after
- * blocks are installed (behavior additions check registration).
+ * Layer the lab additions onto the authored toolbox: the predefined
+ * behaviors, the scene blocks, and the injected categories. Pure. Call
+ * after blocks are installed.
  */
 export function applyToolboxAdditions(def: ToolboxInfo): ToolboxInfo {
   const out = cloneDeep(def);

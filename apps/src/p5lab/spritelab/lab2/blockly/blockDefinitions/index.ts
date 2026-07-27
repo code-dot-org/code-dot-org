@@ -28,7 +28,7 @@ const labBlockDefinitions: {
   makePlatformPlayer,
   makeSpriteAtGrid,
   makePlatformBlocks,
-  // Toolbox edit mode's category marker blocks (shared with Dance).
+  // Toolbox edit mode's category marker blocks.
   category,
   custom_category,
 ];

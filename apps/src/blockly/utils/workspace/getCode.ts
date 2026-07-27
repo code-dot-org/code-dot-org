@@ -41,8 +41,7 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
 
 /**
  * Compiles a serialized (JSON) workspace to executable code on a throwaway
- * headless workspace — for code that isn't open in a rendered workspace,
- * e.g. Sprite Lab scenes. The JSON twin of getCodeFromBlockXmlSource.
+ * headless workspace. The JSON equivalent of getCodeFromBlockXmlSource.
  * Returns '' for a missing serialization.
  */
 export function getCodeFromSerializedWorkspace(

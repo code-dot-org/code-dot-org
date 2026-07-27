@@ -25,8 +25,8 @@ export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
 // In toolbox edit mode the toolbox holds every available block and the
 // workspace holds the level's toolbox definition as blocks. Start mode also
-// gets the complete toolbox (mirroring legacy edit_blocks), so start code
-// isn't limited to the student toolbox.
+// gets the complete toolbox, so start code isn't limited to the student
+// toolbox.
 const editBlocksMode = getAppOptionsEditBlocks();
 const isToolboxMode = editBlocksMode === TOOLBOX_BLOCKS;
 const isStartMode = editBlocksMode === START_SOURCES;
@@ -43,10 +43,7 @@ interface UseBlocklyWorkspaceResult {
   getCode: () => string | null;
   /** Returns the serialization the workspace holds; null before inject. */
   getCurrentBlocks: () => WorkspaceSerialization | null;
-  /**
-   * Serialize the workspace blocks into a toolbox definition (the toolbox
-   * edit mode save); null before inject.
-   */
+  /** Serialize the workspace blocks into a toolbox definition; null before inject. */
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Load code into the workspace. */
   loadCode: (source: WorkspaceSerialization) => void;
@@ -97,8 +94,8 @@ export default function useBlocklyWorkspace({
     }
 
     // Levelbuilder edit modes get the complete toolbox; otherwise the
-    // level's authored definition gets the lab additions, minus unregistered
-    // block references so opening a category never throws.
+    // level's authored definition gets the lab additions, filtered to
+    // registered blocks.
     let toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition | undefined;
     if (isToolboxMode || isStartMode) {
       toolbox = getCompleteToolboxDefinition(blocksByCategory, isToolboxMode);

@@ -79,8 +79,7 @@ function installLabBlocks(): void {
 
 /**
  * Install the level's DB-backed block pool; returns category -> block type
- * names. Mirrors dance's installSharedBlocks. (Lab-owned blocks install via
- * installLabBlocks, not here.)
+ * names. Lab-owned blocks install via installLabBlocks, not here.
  */
 export function installSharedBlocks(sharedBlocks: BlockDefinition[]): {
   [category: string]: string[];

@@ -22,10 +22,9 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   'Game Design': [GO_TO_SCENE_BLOCK_TYPE, GO_TO_EXTERNAL_SCENE_BLOCK_TYPE],
 };
 
-// Blocks registered outside the DB pool (Blockly core, blocksCommon, the
-// field-colour plugin, Sprite Lab's install): installCustomBlocks never
-// reports these in its category map, so list them for the complete toolbox.
-// Mirrors GamelabJr#common_blocks plus what our test toolboxes use.
+// Blocks registered outside the DB block pool (Blockly core, blocksCommon,
+// plugins), which installCustomBlocks doesn't report in its category map.
+// Mirrors GamelabJr#common_blocks.
 const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   Math: [
     'math_number',
@@ -56,14 +55,11 @@ const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 };
 
 /**
- * The complete toolbox for levelbuilder edit modes (legacy
- * Level#complete_toolbox): every available block sorted by category — the
- * level's DB block pool plus the lab-owned and common blocks. Toolbox
- * editing leads with the category marker blocks; start mode instead gets
- * the dynamic Variables/Functions categories so real code can be authored.
- * Behaviors stays a static category: the dynamic flyout can't read static
- * contents out of JSON toolboxes yet (see getLevelToolboxBlocks/CT-8), and
- * losing the predefined behaviors outweighs the create-behavior button.
+ * Every available block sorted by category: the level's DB block pool plus
+ * the lab-owned and common blocks. Toolbox editing leads with the category
+ * marker blocks; start mode appends the dynamic Variables/Functions
+ * categories instead. Behaviors stays static: the dynamic flyout can't read
+ * static contents from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
  */
 export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},

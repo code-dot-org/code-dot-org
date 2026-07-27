@@ -32,9 +32,7 @@ export class CdoFieldBitmap extends FieldBitmap {
 
   /**
    * JSON serialization: the bitmap itself. Without these hooks Blockly
-   * routes JSON-serialized field state through the legacy XML path (because
-   * fromXml is overridden): saves embed an XML string, and loading a plain
-   * JSON field value (e.g. a toolbox entry's fields) crashes in DOMParser.
+   * routes JSON-serialized field state through the legacy XML path.
    */
   saveState(): number[][] | null {
     return this.getValue();
