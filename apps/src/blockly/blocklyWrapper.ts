@@ -508,7 +508,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     xml,
     options = {}
   ) {
-    applyDscoThemeColors([CdoTheme, CdoDarkTheme]);
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
     const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
@@ -569,7 +569,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
-    applyDscoThemeColors([CdoTheme, CdoDarkTheme]);
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme, CdoJigsawTheme]);
 
     // Ensure we do not translate content within the blockly workspace
     if (typeof container !== 'string') {
