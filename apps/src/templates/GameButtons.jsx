@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import {getRunButtonSx} from './runButtonSx';
 import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
@@ -27,34 +28,7 @@ export const RunButton = props => (
     size="medium"
     color="primary"
     className={props.hidden ? 'hide' : ''}
-    sx={{
-      backgroundColor: 'var(--background-accent-orange-primary)',
-      color: 'var(--text-neutral-white-fixed)',
-      '&:hover, &.force-hover, &[data-force-hover="true"]': {
-        backgroundColor: 'var(--background-accent-orange-strong)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:focus, a&:focus': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:active, a&:active': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.Mui-disabled': {
-        backgroundColor: 'var(--background-neutral-octonary)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading': {
-        backgroundColor: 'var(--background-neutral-white-fixed)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
-        color: 'transparent',
-      },
-      '&.MuiButton-loading i': {
-        color: 'var(--text-neutral-primary)',
-      },
-    }}
+    sx={getRunButtonSx(props.setupBlockColor)}
     startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
   >
     {props.runButtonText || msg.runProgram()}
@@ -66,8 +40,13 @@ RunButton.propTypes = {
   style: PropTypes.object,
   runButtonText: PropTypes.string,
   icon: PropTypes.node,
+  setupBlockColor: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
+
+const ThemedRunButton = connect(state => ({
+  setupBlockColor: state.blockly?.setupBlockColor,
+}))(RunButton);
 
 // The reset button is hidden by default,
 // then shown either by passing in style props to override
@@ -104,7 +83,7 @@ export const UnconnectedGameButtons = props => (
     <ProtectedStatefulDiv id="gameButtons">
       {!props.noRunResetButton && (
         <>
-          <RunButton
+          <ThemedRunButton
             runButtonText={props.runButtonText}
             icon={props.runButtonIcon}
             hidden={props.hideRunButton}

@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {
+  BlockStyles,
   DARK_THEME_SUFFIX,
   Themes,
   BLOCKLY_THEME,
@@ -11,6 +12,8 @@ import {ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import {setSetupBlockColor} from '@cdo/apps/redux/blockly';
 
 import {shrinkBlockSpaceContainer} from './resize';
 
@@ -23,6 +26,14 @@ export function getBaseName(themeName: Themes) {
 
 export function isDarkTheme(theme: BlocklyCore.Theme | undefined) {
   return theme?.name.includes(DARK_THEME_SUFFIX);
+}
+
+export function publishSetupBlockColor(theme: BlocklyCore.Theme) {
+  getStore().dispatch(
+    setSetupBlockColor(
+      theme.blockStyles[BlockStyles.SETUP]?.colourPrimary ?? null
+    )
+  );
 }
 
 /**
