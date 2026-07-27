@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -21,32 +22,30 @@ export const FinishButton = () => (
   </MuiButton>
 );
 
-export const RunButton = props => (
-  <MuiButton
-    id={props.id || 'runButton'}
-    variant="contained"
-    size="medium"
-    color="primary"
-    className={props.hidden ? 'hide' : ''}
-    sx={getRunButtonSx(props.setupBlockColor)}
-    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
-  >
-    {props.runButtonText || msg.runProgram()}
-  </MuiButton>
-);
+export const RunButton = props => {
+  const setupBlockColor = useSetupBlockColor();
+  return (
+    <MuiButton
+      id={props.id || 'runButton'}
+      variant="contained"
+      size="medium"
+      color="primary"
+      className={props.hidden ? 'hide' : ''}
+      sx={getRunButtonSx(setupBlockColor)}
+      startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
+    >
+      {props.runButtonText || msg.runProgram()}
+    </MuiButton>
+  );
+};
 RunButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
   icon: PropTypes.node,
-  setupBlockColor: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
-
-const ThemedRunButton = connect(state => ({
-  setupBlockColor: state.blockly?.setupBlockColor,
-}))(RunButton);
 
 // The reset button is hidden by default,
 // then shown either by passing in style props to override
@@ -83,7 +82,7 @@ export const UnconnectedGameButtons = props => (
     <ProtectedStatefulDiv id="gameButtons">
       {!props.noRunResetButton && (
         <>
-          <ThemedRunButton
+          <RunButton
             runButtonText={props.runButtonText}
             icon={props.runButtonIcon}
             hidden={props.hideRunButton}

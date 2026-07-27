@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React, {memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {Trigger} from '@cdo/apps/music/constants';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
@@ -129,9 +130,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
     return isLoading || (isPredictLevel && !hasPredictResponse);
   });
   // Follows the "when run" block color under Blockly accessibility themes.
-  const setupBlockColor = useAppSelector(
-    state => state.blockly?.setupBlockColor
-  );
+  const setupBlockColor = useSetupBlockColor();
   return (
     <div
       id="controls"

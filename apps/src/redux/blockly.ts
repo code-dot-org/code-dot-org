@@ -3,7 +3,6 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 export interface BlocklyState {
   hasIncompatibleSources: boolean;
   failedToGenerateCode: boolean;
-  setupBlockColor: string | null;
 }
 
 const initialState: BlocklyState = {
@@ -12,9 +11,6 @@ const initialState: BlocklyState = {
   hasIncompatibleSources: false,
   // If we failed to generate code from blocks for any reason.
   failedToGenerateCode: false,
-  // The current main workspace setup block color. Shared lab controls use this
-  // to follow Blockly theme changes.
-  setupBlockColor: null,
 };
 
 const blocklySlice = createSlice({
@@ -27,16 +23,10 @@ const blocklySlice = createSlice({
     setFailedToGenerateCode(state, action: PayloadAction<boolean>) {
       state.failedToGenerateCode = action.payload;
     },
-    setSetupBlockColor(state, action: PayloadAction<string | null>) {
-      state.setupBlockColor = action.payload;
-    },
   },
 });
 
-export const {
-  setHasIncompatibleSources,
-  setFailedToGenerateCode,
-  setSetupBlockColor,
-} = blocklySlice.actions;
+export const {setHasIncompatibleSources, setFailedToGenerateCode} =
+  blocklySlice.actions;
 
 export default blocklySlice.reducer;

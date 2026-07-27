@@ -2,6 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -28,9 +29,7 @@ const DanceControls: React.FunctionComponent<DanceControlsProps> = ({
       state => state.dance.isLoading || state.dance.runIsStarting
     ) || disabled;
   // Follows the "when run" block color under Blockly accessibility themes.
-  const setupBlockColor = useAppSelector(
-    state => state.blockly?.setupBlockColor
-  );
+  const setupBlockColor = useSetupBlockColor();
 
   return (
     <div className={moduleStyles.controlsContainer}>
