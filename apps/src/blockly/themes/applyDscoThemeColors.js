@@ -2,10 +2,16 @@ import cdoBlockStyles from './cdoBlockStyles.js';
 
 const RUN_BUTTON_COLOR = '--background-accent-orange-primary';
 
-const getCssVariable = name =>
-  typeof window !== 'undefined' && document.body
-    ? window.getComputedStyle(document.body).getPropertyValue(name).trim()
-    : '';
+const getCssVariable = name => {
+  // Fall back on any failure: jsdom's getComputedStyle re-matches every
+  // stylesheet rule and its selector engine throws on selectors it cannot
+  // parse, such as the :has() rules MUI emits.
+  try {
+    return window.getComputedStyle(document.body).getPropertyValue(name).trim();
+  } catch {
+    return '';
+  }
+};
 
 export default function applyDscoThemeColors(themes) {
   const fallback = cdoBlockStyles.setup_blocks.colourPrimary;
