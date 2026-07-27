@@ -7,7 +7,7 @@ import AutocompleteSelector from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSel
 import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
-import styles from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSelector.module.scss';
+import styles from '@cdo/apps/lib/tools/jsdebugger/autocomplete-selector.module.scss';
 
 describe('AutocompleteSelector', () => {
   // TODO: (madelynkasula) Silences componentWillReceiveProps deprecation warning due to React 16 upgrade.
