@@ -34,6 +34,16 @@ half-environments is not.
     docker compose -f .devcontainer/docker-compose.yml up -d
     docker compose -f .devcontainer/docker-compose.yml exec app bash
 
+CI publishes the database image too, seeded by the migrate image from the same
+commit. Once that GHCR package is flipped public, step 2 becomes a pull like
+step 1 and the local bake is only for testing a change to the bake itself:
+
+    docker pull ghcr.io/code-dot-org/cdo-dev-db:latest
+    export CDO_DEV_DB_IMAGE=ghcr.io/code-dot-org/cdo-dev-db:latest
+
+`CDO_DEV_DB_IMAGE` still defaults to the local `cdo-dev-db:latest`; that
+default moves to the published image once the pull works without a token.
+
 To build the dev image yourself instead of pulling, see
 [docker/dev/README.md](../docker/dev/README.md), and point the compose file at
 it with `CDO_DEV_IMAGE=cdo-dev:local`.
@@ -71,7 +81,6 @@ where you expect.
 | `Dockerfile.db` | the pre-seeded mysql image |
 | `scripts/init-repo-volume.sh` | host-side: create and populate the repo volume |
 | `scripts/bake-db.sh` | host-side: seed a datadir for `Dockerfile.db` |
-| `scripts/walshim.sh` | mysql entrypoint: redo/undo logs onto tmpfs |
 | `scripts/sandbox-locals.yml` | zero-credential `locals.yml` for the sandbox |
 
 The image itself lives in [docker/dev/](../docker/dev/README.md), alongside
@@ -87,11 +96,45 @@ baked into the published migrate image, not whatever happens to be in your
 repo volume. The bake does not touch the volume and works before
 `init-repo-volume.sh` has ever run.
 
-The seeded schema drifts from your branch between bakes; the entrypoint's
-auto-migrate covers that on container start. What nothing covers is
-curriculum drift — a sandbox is for working on code, not for authoring
-curriculum, so a bake as old as the last migrate publish is fine. Re-run the
-bake when it is not.
+The image is otherwise stock `mysql:8.0` — stock entrypoint, no scripts, no
+config. The one deviation is where the datadir is baked: `/opt/mysql-data`
+rather than the base image's `/var/lib/mysql`, which is a declared `VOLUME`.
+Compose points mysqld at it with `command: --datadir=/opt/mysql-data`, the
+official image's documented way to pass server flags.
+
+### The database is ephemeral
+
+There is no volume. The baked datadir is read out of the image through
+overlayfs and writes go to the container's copy-on-write layer, which means:
+
+- **start is instant** — nothing is copied anywhere;
+- **each container is isolated** — parallel sandboxes need no naming scheme
+  to keep their databases apart;
+- **recreate is the reset** — `up -d --force-recreate db` returns to the
+  pristine baked state, and a rebuilt image takes effect the same way, with
+  no `down -v` ritual and no volume that quietly outlives the image it came
+  from;
+- **writes die with the container.** State you want to keep belongs in a
+  seed, or in the repo volume, not in this database.
+
+`stop` and `start` keep the writable layer, so that is the way to pause a
+sandbox without losing what is in it.
+
+### Syncing a stale sandbox
+
+Nothing migrates or seeds on container start. The baked schema and curriculum
+are as of the last `cdo-migrate` publish, so a branch with newer migrations
+will drift, and Rails says so — development mode raises
+`PendingMigrationError` naming what to run. Syncing is an operator action:
+
+    cd dashboard && bundle exec rake dashboard:setup_db
+
+That is `db:setup_or_migrate` plus `seed:default`, the same pair the bake
+runs. The scripts and DSL-defined-levels legs are incremental — each file is
+skipped when its md5 matches what is already in the database — so the cost is
+proportional to how stale the bake is, not to the size of the curriculum. A
+bake as old as the last migrate publish generally needs nothing; re-run the
+bake, or pull a newer image, when it does.
 
 The old route precompiled test assets into the repo volume as a side effect.
 The migrate route cannot (its filesystem is discarded), so before the first

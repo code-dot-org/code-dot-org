@@ -1,4 +1,5 @@
-# Build, smoke-test, and publish the cdo-migrate image (docker/migrate/).
+# Build, smoke-test, and publish the cdo-migrate image (docker/migrate/), and
+# from it the seeded cdo-dev-db image the devcontainer runs.
 #
 # Smoke test: the same Dockerfile must build on docker AND podman
 # (dual-engine policy, see docker/base/README.md); smoke-test.sh asserts the
@@ -8,10 +9,11 @@
 # Triggers are docker/migrate/** only, NOT the source tree the image bakes.
 # The image is keyed on the whole tree — every commit changes it — so
 # tree-path triggers would rebuild a 3 GB image on every push. Nothing needs
-# that: the devcontainer bake (.devcontainer/scripts/bake-db.sh) tolerates a
-# stale image because the sandbox entrypoint auto-migrates schema drift, and
-# k8s deploys build their own migrate per deploy. The weekly cron sets the
-# devcontainer freshness floor and picks up refreshed layers underneath.
+# that: k8s deploys build their own migrate per deploy, and a devcontainer
+# sandbox tolerates a stale schema because syncing it is an operator action
+# (`rake dashboard:setup_db`), not something that happens on container start.
+# The weekly cron sets the freshness floor for both published images and
+# picks up refreshed layers underneath.
 #
 # First publish: this build is FROM the published cdo-gems:latest, so it
 # cannot succeed until cdo-gems has published at least once. When both
@@ -44,6 +46,7 @@ concurrency:
 
 env:
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-migrate
+  DB_IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev-db
 
 jobs:
   smoke-test:
@@ -127,3 +130,62 @@ jobs:
 
       - name: Inspect published image
         run: docker buildx imagetools inspect "$IMAGE:latest"
+
+  # cdo-dev-db: the seeded MySQL image the devcontainer runs, baked by
+  # running the migrate image published above against a mysql:8.0 sidecar.
+  # Pinned to git-<sha>, not :latest, so the datadir and the code that
+  # produced it are one lineage rather than whatever won a race.
+  #
+  # Non-PR only: a ~20 minute bake with nothing to push is not worth a PR
+  # gate, and the weekly cron is what sets the devcontainer freshness floor.
+  #
+  # Like cdo-base, GHCR creates the package private on first publish. It
+  # needs a one-time manual flip to public in the package settings before
+  # anyone can pull it without a token.
+  bake-and-publish-db:
+    name: bake and publish cdo-dev-db
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # Only .devcontainer/ — the bake reads the seed code out of the migrate
+      # image, never out of the repo, so the source tree is dead weight here.
+      - name: Checkout bake inputs
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: .devcontainer
+
+      # Peak is ~13 GB: the migrate image, mysql:8.0, the exported datadir
+      # twice (host dir plus tar), and the image built from it. A stock
+      # ubuntu-24.04 runner does not have that spare.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
+          df -h /
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bake the seeded datadir
+        run: CDO_MIGRATE_IMAGE=$IMAGE:git-${{ github.sha }} .devcontainer/scripts/bake-db.sh
+
+      - name: Build and push cdo-dev-db
+        run: |
+          docker build \
+            -f .devcontainer/Dockerfile.db \
+            -t "$DB_IMAGE:git-${{ github.sha }}" \
+            -t "$DB_IMAGE:latest" \
+            .devcontainer
+          docker push "$DB_IMAGE:git-${{ github.sha }}"
+          docker push "$DB_IMAGE:latest"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$DB_IMAGE:latest"

@@ -29,10 +29,14 @@ info "creating network..."
 docker network create "$NETWORK"
 
 info "starting mysql:8.0 sidecar..."
+# Args after the image name pass through the official entrypoint to mysqld.
+# --skip-log-bin because MySQL 8.0 enables the binary log by default and the
+# seed's own binlog was 1.0 GB of a 2.9 GB export: dead weight in every
+# published image, and a sandbox replicates to nothing.
 docker run -d --name "$DB_CONTAINER" --network "$NETWORK" --network-alias db \
   -e MYSQL_ROOT_PASSWORD=password \
   -e MYSQL_ROOT_HOST='%' \
-  mysql:8.0
+  mysql:8.0 --skip-log-bin
 
 info "waiting for mysql..."
 until docker exec "$DB_CONTAINER" mysqladmin -uroot -ppassword ping --silent 2>/dev/null; do
@@ -55,9 +59,11 @@ docker exec "$DB_CONTAINER" mysql -uroot -ppassword -e \
   "CREATE DATABASE IF NOT EXISTS dashboard_test;"
 
 # locals.yml is mounted, not baked: the migrate image deliberately carries
-# no configuration. The test-DB migrate rides along because sandboxes run
-# the test suite; it is not part of the image's default job (a k8s seed Job
-# has no test database).
+# no configuration. The test-DB preparation rides along because sandboxes
+# run the test suite; it is not part of the image's default job (a k8s seed
+# Job has no test database). db:test:prepare is Rails' task for exactly
+# this — schema load, and this repo enhances it to load fixtures and
+# seed:test — so the baked test database is test-ready, not just migrated.
 info "running migrate job (db:setup_or_migrate + seed:default)..."
 docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
   -v "$SCRIPT_DIR/sandbox-locals.yml":/code-dot-org/locals.yml:ro \
@@ -66,9 +72,9 @@ docker run --rm --name "$APP_CONTAINER" --network "$NETWORK" \
   bash -c "
     set -euo pipefail
     cdo-migrate
-    echo 'bake: migrating test DB...'
+    echo 'bake: preparing test DB...'
     cd /code-dot-org/dashboard
-    RAILS_ENV=test bundle exec rake db:migrate
+    RAILS_ENV=test bundle exec rake db:test:prepare
     echo 'bake: complete'
   "
 

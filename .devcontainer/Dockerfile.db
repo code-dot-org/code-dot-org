@@ -1,21 +1,35 @@
-# syntax=docker/dockerfile:1
+# cdo-dev-db: pre-seeded MySQL 8.0 for development sandboxes.
 #
-# cdo-dev-db: pre-seeded MySQL 8.0 sidecar for development sandboxes.
-# Datadir baked at /opt/mysql-data (non-VOLUME path) so overlayfs CoW gives
-# each container instant, isolated copy-on-write access with no volume copy.
+# Stock mysql:8.0 — stock entrypoint, no scripts, no config. The only
+# addition is a seeded datadir, baked at /opt/mysql-data rather than the
+# base image's /var/lib/mysql, which is a declared VOLUME.
 #
-# The seed runs under this image's own mysqld, so server/datadir versions
-# match by construction (InnoDB refuses downgrade).
+# The non-VOLUME path is the whole point. Content at a VOLUME path is
+# shadowed at run time by whatever the engine mounts there, so it reaches
+# the server only through copy-up into an empty named volume: the datadir
+# then outlives the container, a rebuilt image does not propagate until the
+# volume is deleted, and the operator owes a `down -v` ritual to get back to
+# the baked state. At a plain path there is no mount and no volume — the
+# baked files are read through overlayfs and writes land in the container's
+# copy-on-write layer. That gives ephemeral-per-container semantics: start
+# is instant (nothing is copied), each container is isolated, recreate
+# returns to the pristine baked state, and a rebuilt image takes effect on
+# the next recreate with no volume-staleness trap.
 #
-# mysql:8.0 Docker Official is multiarch (amd64 + arm64).
-# Build with: docker buildx build -f Dockerfile.db --build-context seeddata=<dir-with-mysql-data.tar> .
+# mysqld is pointed at it by `command: --datadir=/opt/mysql-data` in
+# docker-compose.yml. Args after the image name are the official image's
+# documented way to pass server flags; the entrypoint reads the effective
+# datadir back from mysqld, finds it initialized, and skips init. The socket
+# is not datadir-relative and stays at /var/run/mysqld/mysqld.sock.
+#
+# The seed runs under this image's own mysqld (see scripts/bake-db.sh), so
+# server/datadir versions match by construction (InnoDB refuses downgrade).
+#
+# Build: bake-db.sh writes mysql-data.tar next to this file, then
+#   docker build -f .devcontainer/Dockerfile.db -t cdo-dev-db:latest .devcontainer
 
 FROM mysql:8.0
 
-# Bake the pre-seeded, cleanly-shut-down datadir at a non-VOLUME path.
-# mysql:8.0 (Docker Official) runs as uid:gid 999:999.
+# mysql:8.0 (Docker Official) runs as uid:gid 999:999; mysqld refuses a
+# datadir it does not own.
 ADD --chown=999:999 mysql-data.tar /opt/mysql-data/
-
-COPY --chmod=755 scripts/walshim.sh /usr/local/bin/walshim.sh
-
-ENTRYPOINT ["/usr/local/bin/walshim.sh"]

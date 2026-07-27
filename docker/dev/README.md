@@ -75,8 +75,10 @@ The checks are in two halves: that the delta installed — the dev/test groups
 resolve and load — and that the toolchain the image promises is present and
 working, including ExecJS resolving to node.
 
-The script overrides `ENTRYPOINT` on every check. The image's entrypoint starts
-sidecar services and expects a devcontainer around it.
+The script overrides `ENTRYPOINT` on every check. The image's entrypoint
+prepares the repo volume — git hooks, the apps package — and expects a
+devcontainer around it. It does not migrate or seed: that is an operator
+action, `rake dashboard:setup_db`.
 
 ## Dual-engine policy
 

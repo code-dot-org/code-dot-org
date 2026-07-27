@@ -55,12 +55,20 @@ services:
   # Pre-seeded MySQL. Seeding from scratch takes ~20 minutes; this image ships
   # a baked datadir so a fresh sandbox is usable in seconds. Build it with
   # scripts/bake-db.sh, which seeds via the cdo-migrate image — see the README.
+  #
+  # Ephemeral, deliberately: no volume. The baked datadir sits at a plain
+  # path in the image and writes go to the container's copy-on-write layer,
+  # so `up --force-recreate` is the reset — it returns to the pristine baked
+  # state — and a rebuilt image takes effect the same way. Writes die with
+  # the container, so durable state belongs in a seed, not in this database.
+  # --datadir is how the official image takes server flags; see Dockerfile.db.
   db:
     image: ${CDO_DEV_DB_IMAGE:-cdo-dev-db:latest}
-    tmpfs:
-      - /mysql-wal:size=256m,uid=999,gid=999
+    command: --datadir=/opt/mysql-data
+    # Socket form: mysqld's socket is not datadir-relative, so it stays at
+    # the default /var/run/mysqld/mysqld.sock and needs no -h.
     healthcheck:
-      test: ["CMD", "mysqladmin", "--socket=/opt/mysql-data/mysqld.sock", "-uroot", "-ppassword", "ping", "--silent"]
+      test: ["CMD", "mysqladmin", "-uroot", "-ppassword", "ping", "--silent"]
       interval: 1s
       timeout: 3s
       retries: 30

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sandbox entrypoint: prepare the repo volume and database, then exec CMD.
+# Sandbox entrypoint: prepare the repo volume, then exec CMD.
 # Invoked both by ENTRYPOINT (plain docker run) and by postStartCommand
 # (devcontainer path, where the CLI replaces ENTRYPOINT with keep-alive).
 # Pass "true" as $1 to do the work then exit (postStartCommand mode).
@@ -38,32 +38,12 @@ install_hooks() {
   fi
 }
 
-auto_migrate() {
-  # Auto-apply pending migrations if Rails and a DB are available.
-  # Uses a lightweight MySQL query instead of booting Rails (saves ~60s).
-  [ -f /code-dot-org/dashboard/Rakefile ] || return 0
-  command -v mysql >/dev/null 2>&1 || return 0
-
-  cd /code-dot-org/dashboard
-
-  # Count migration files vs schema_migrations rows without booting Rails.
-  local file_count dir_count
-  file_count=$(ls db/migrate/*.rb 2>/dev/null | wc -l)
-  dir_count=$(mysql -h "${DB_HOST:-db}" -u root -ppassword -N -e \
-    "SELECT COUNT(*) FROM dashboard_development.schema_migrations" 2>/dev/null || echo 0)
-
-  if [ "$file_count" = "$dir_count" ] 2>/dev/null; then
-    return 0
-  fi
-
-  echo "entrypoint: pending migrations detected ($file_count files vs $dir_count applied), running db:migrate..."
-  bundle exec rake db:migrate 2>&1 || echo "entrypoint: dev db:migrate had errors (may be non-fatal)"
-  RAILS_ENV=test bundle exec rake db:migrate 2>&1 || echo "entrypoint: test db:migrate had errors (may be non-fatal)"
-  echo "entrypoint: migrations complete"
-}
-
+# Nothing here migrates or seeds. That is an operator function: development
+# mode already raises PendingMigrationError naming what to run, and
+# `rake dashboard:setup_db` is the one-shot sync. Doing it on start spends
+# minutes on every container for a database that is usually already correct,
+# and hides the drift it is papering over.
 install_hooks
-auto_migrate
 bootstrap_apps
 
 if [ "${1:-}" = "true" ]; then
