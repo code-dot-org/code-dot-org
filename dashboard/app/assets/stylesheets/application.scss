@@ -24,6 +24,7 @@
  *= require fonts/barlow-semi-condensed
  *= require fonts/geist
  *= require fonts/noto-sans
+ *= require fonts/space-grotesk
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -52,10 +53,38 @@ $selectUserTypeButtonTextColorHover: #000;
 $selectUserTypeButtonBackgroundColorSelected: #0093a4;
 $selectUserTypeButtonTextColorSelected: #fff;
 
-$contrastTealHeader: #00818f;
-
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
+
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+}
+
+// Bootstramp runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+}
 
 label, input, button, select, textarea {
   font-size: 14px;
@@ -78,6 +107,11 @@ body.pin_bottom {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft labs
+body.pin_bottom:not(.minecraft) {
+  background-color: var(--background-neutral-secondary);
 }
 
 body.oceans-blue {
@@ -215,16 +249,16 @@ img.video_thumbnail {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
-    background-color: $contrastTealHeader;
-    color: $header_text;
+    background-color: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
     a:link {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
     a:visited {
       &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-        color: $header_text;
+        color: var(--text-neutral-white-fixed);
       }
     }
 
@@ -310,6 +344,7 @@ img.video_thumbnail {
       }
 
       &:hover, &:active {
+        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
@@ -325,9 +360,9 @@ img.video_thumbnail {
     @include main-font-regular;
     display: flex;
     align-items: center;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     background-color: transparent;
-    border: 1px solid $white;
+    border: 1px solid var(--borders-neutral-white-fixed);
     border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
@@ -339,10 +374,11 @@ img.video_thumbnail {
     height: 35px;
     a:hover {
       text-decoration: none;
+      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
       background-color: $orange;
     }
     &:active {
-      border: 1px solid $white !important;
+      border: 1px solid var(--borders-neutral-white-fixed) !important;
     }
   }
 
@@ -369,8 +405,8 @@ img.video_thumbnail {
   }
 
   #header_user_create_account {
-    background-color: $light_white !important;
-    color: $light_primary_500;
+    background-color: var(--background-neutral-primary) !important;
+    color: var(--text-brand-teal-primary);
     font-weight: $semi-bold-font-weight;
   }
 
@@ -380,7 +416,7 @@ img.video_thumbnail {
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
-      background-color: $dark_red;
+      background-color: var(--background-error-primary);
       padding: 0 5px;
       margin-top: 2px;
       font-size: 12px;
@@ -413,7 +449,7 @@ img.video_thumbnail {
 
       // Usually transparent, so adding teal allows button to render in front
       .header_user {
-        background-color: $teal;
+        background-color: var(--background-brand-teal-primary);
       }
     }
   }
@@ -424,6 +460,117 @@ img.video_thumbnail {
     .button-signin.desktop,
     .button-create-account.desktop {
       display: none;
+    }
+  }
+}
+
+// Pill nav links and outlined header buttons for codeai-next/codeai-audit;
+// default codeai keeps its square 35px/4px buttons and orange hover underline.
+@include codeai-brand {
+  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
+  .header-wrapper .headerlinks {
+    flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+  }
+
+  // marketing-nav-no-create only renders under the marketing nav (see
+  // user_header.haml), so there's no stock rule left to out-specificity here.
+  .create_menu.marketing-nav-no-create {
+    display: none;
+  }
+
+  .header-wrapper .headerlinks .headerlink {
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    // Pills never wrap to two lines; the row overflows visibly rather than
+    // silently breaking vertical rhythm.
+    white-space: nowrap;
+
+    &:hover, &:active {
+      border-bottom: none;
+      margin-top: -1px;
+      padding: 5px 10px;
+      background-color: var(--neutral-white-alpha-10);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  .header-wrapper .header_button {
+    height: 32px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+
+    &:hover, a:hover {
+      background-color: var(--neutral-white-alpha-20);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Stock markup only shows the UA outline while `.user-is-tabbing` is set
+  // (hamburger.js), which is invisible on teal; give these the same ring as
+  // the pills/buttons above for a consistent focus treatment.
+  .header-wrapper .help_button,
+  .header-wrapper #hamburger {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Signed-out Sign in / Create account: the tabbable element is the wrapping
+  // `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
+  // div nested inside it, so the `.header_button:focus-visible` rule above never
+  // engages here -- the anchor itself needs the ring.
+  .header-wrapper #signin_button,
+  .header-wrapper #create_account_button {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // This container replaces hide_on_tablet outright (see _header.html.haml);
+  // its link anchors also drop hide-mobile/hide-small-desktop, which assume a
+  // <=7-link row and would otherwise fight the two stages below. hamburger.rb's
+  // own get_header_contents() call is unaffected by this HAML change and still
+  // needs those stock classes to auto-invert hide->show for the hamburger menu.
+  .header-wrapper .headerlinks.marketing-nav {
+    #header-about {
+      margin-inline-start: auto;
+    }
+
+    // Stage 2: visible by default (>= 960px), hidden below. 960px measured
+    // (not the 900px default): the 6 remaining links start overlapping
+    // .header_right below ~950px.
+    @media (max-width: 959px) {
+      display: none;
+    }
+
+    // Stage 1: About/Donate collapse into the hamburger first; both have
+    // counterparts there. 1079px measured: the 8-link row's slack hits zero
+    // at ~1077px and labels start wrapping. Measured against us.yml's
+    // header.top.signed_out_marketing 8-link list; re-measure both stage
+    // thresholds if its labels, order, or count change.
+    @media (max-width: 1079px) {
+      #header-about, #header-donate {
+        display: none;
+      }
     }
   }
 }
@@ -619,11 +766,11 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $darkest_gray;
-  color: $header_text;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-inverse);
   a:link, a:visited, a:hover, a:active {
     @include main-font-regular;
-    color: $white;
+    color: var(--text-neutral-inverse);
     background-color: transparent;
   }
   a:hover {
@@ -992,7 +1139,7 @@ body.background-dark, body.music-black {
   margin-top: -8px;
   margin-right: 2px;
   height: 42px;
-  border-right: 1px solid $inset_color;
+  border-right: 1px solid var(--borders-neutral-strong);
   border-right-style: inset;
   display: inline-block;
 }
@@ -1000,22 +1147,22 @@ body.background-dark, body.music-black {
 .user_options, .help_contents {
   display: none;
   a:link {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:visited {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:hover {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
     text-decoration: none;
   }
   a:active {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
   }
-  border: 1px solid $black;
-  color: $black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
   padding: 10px;
 }
 
@@ -1222,6 +1369,13 @@ $default-modal-width: 640px;
     @media (min-width: 1024px) and (max-width: 1268px) {
       gap: 1.5rem;
     }
+  }
+}
+// Pill spacing comes from link padding, not container gap; re-assert over
+// the small-desktop band rule above, which would double-space the pills.
+@include codeai-brand {
+  .header-wrapper .header .headerlinks {
+    gap: 0;
   }
 }
 
@@ -1703,10 +1857,11 @@ body.iframe_embed_app_and_code {
 }
 
 .qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: $neutral_dark;
-  @include main-font-semi-bold;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.48;
+  color: var(--text-neutral-primary);
   padding-right: 25px;
 }
 
@@ -1718,9 +1873,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: $white;
-  color: $charcoal;
-  border: 1px solid $charcoal;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
@@ -1735,7 +1890,32 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -20px);
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 a.download-video {
@@ -2790,7 +2970,7 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid var(--borders-info-primary);
+    border: 5px solid var(--borders-info-strong);
     background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;

@@ -225,44 +225,6 @@ div.droplet-palette-group-header-selected.orange {
   min-height: 25px;
 }
 
-button.arrow {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: #fff;
-  margin: 5px 0;
-  margin-inline-end: 9px;
-  display: none;
-}
-button.arrow > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.arrow:disabled {
-  border: 1px solid $neutral_dark20;
-  background-color: $neutral_dark20;
-  color: $neutral_dark20;
-}
-
-#soft-buttons {
-  display: inline-block;
-  vertical-align: top;
-  -webkit-touch-callout: none;
-  &.soft-buttons-compact {
-    margin: 0;
-    button {
-      margin: 0;
-      margin-inline-end: 4px;
-    }
-  }
-  :last-child {
-    margin-inline-end: 0;
-  }
-
-  @supports not (gap: 0 9px) {
-    padding-inline-end: 9px;
-  }
-}
-
 .soft-buttons-1 {
   display: table-cell;
   vertical-align: top;
@@ -296,7 +258,7 @@ button.arrow:disabled {
 }
 
 #codeTextbox.pin_bottom {
-  border: 1px solid #ddd;
+  border: 1px solid var(--borders-neutral-strong);
 }
 
 #codeTextbox.has_banner {
@@ -313,7 +275,7 @@ html[dir="rtl"] .editor-column {
 
 #codeWorkspace.pin_bottom {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--borders-neutral-strong);
 }
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
@@ -416,7 +378,7 @@ html[dir="rtl"] {
   left: 400px;
   cursor: ew-resize;
   text-align: center;
-  color: $lighter_gray;
+  color: var(--borders-neutral-strong);
   font-size: 24px;
   line-height: 400px;
 }
@@ -545,7 +507,6 @@ html[dir="rtl"] div#visualizationResizeBar {
 }
 
 /* Buttons */
-button,
 label.img-upload {
   margin: 5px;
   padding: 10px;
@@ -554,138 +515,12 @@ label.img-upload {
   font-size: large;
   background-color: #eee;
   color: $black;
-}
-button.launch {
-  border: 1px solid $orange;
-  background-color: $orange;
-  color: $white;
-  font-size: large;
-  min-width: 96px;
-  margin-left: 0;
-  margin-right: 10px;
-
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-}
-button.launch[disabled] {
-  pointer-events: none;
-}
-html[dir="RTL"] button.launch {
-  text-align: right;
-}
-button.launch > img {
-  opacity: 1;
-  vertical-align: text-bottom;
-}
-button.blocklyLaunch {
-  display: inline-block;
-  &.hide {
-    display: none;
-  }
-
-  border: 1px solid $orange;
-  background-color: $orange;
-
-  @media screen and (min-width: 1051px) {
-    min-width: 111px;
-  }
-  padding: 7px 10px 7px 6px;
-
-  /* Can't use "text-align: start" due to IE. */
-  text-align: left;
-  img {
-    float: left;
-    margin-top: 0;
-    margin-left: 6px;
-  }
-  div {
-    text-align: left;
-    margin-top: 3px;
-    margin-right: 4px;
-    float: right;
-    padding: 0;
-    margin-left: 6px;
-
-    @media screen and (min-width: 1051px) {
-      min-width: 45px;
-    }
-  }
-  html[dir="RTL"] & {
-    margin-right: 0;
-  }
-
-  &#resetButton {
-    border: 1px solid $brand_secondary_default;
-    background-color: $brand_secondary_default;
-
-    &:hover {
-      background-color: $brand_secondary_dark;
-      border-color: $brand_secondary_dark;
-      box-shadow: none;
-    }
-  }
-
-  &.hideText {
-    width: 42px;
-    height: 42px;
-    min-width: 0;
-    padding: 7px;
-
-    img {
-      margin-left: 2px;
-      margin-top: -2px;
-    }
-  }
-}
-
-button.share {
-  border: 1px solid #ffa000;
-  background-color: #ffa000;
-  color: $white;
-  margin-left: 0;
-  margin-right: 0;
-}
-button.share:focus {
-  outline-style: none;
-}
-button:hover > img {
-  opacity: 1;
-}
-button:hover {
-  box-shadow: 2px 2px 5px $shadow;
-}
-button.disabled,
-button[disabled="disabled"],
-button:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
-  box-shadow: none;
-  &:hover {
-    box-shadow: none;
-  }
-}
-button.disabled:hover > img {
-  opacity: 0.6;
-}
-button.disabled {
-  display: none;
-}
-button.notext {
-  font-size: 10%;
-}
-label.img-upload {
   display: inline-block;
   vertical-align: middle;
 }
 input[type="radio"] {
   margin-left: 40px;
   margin-right: 10px;
-}
-
-@media screen and (max-width: 1050px) {
-  #stepButton {
-    min-width: 0;
-  }
 }
 
 #learn {
@@ -720,7 +555,7 @@ input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0 9px;
+  gap: .5rem;
 }
 
 #gameButtons:after {
@@ -1171,7 +1006,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     vertical-align: middle;
   }
   tr.highlight {
-    background-color: $lightest_purple;
+    background-color: var(--background-neutral-secondary);
   }
 
   .template-level-warning {
@@ -1287,6 +1122,26 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     &::-webkit-scrollbar-corner {
       background: var(--background-neutral-tertiary);
     }
+  }
+}
+
+#showCodeModal {
+  img {
+    background: transparent !important;
+  }
+
+  [class*='modalContentSection'] {
+    max-height: 500px !important;
+  }
+
+  .generated-code-container {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .generatedCode {
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
@@ -1552,11 +1407,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   @include icon26(0, 1);
 }
 
-#stepButton {
-  margin-right: 0;
-  text-align: center;
-}
-
 #share-fail-explanation {
   font-size: 20px;
 }
@@ -1806,9 +1656,6 @@ div.WireframeButtons_active {
     padding: 4px 5%;
     #right-button-cell {
       display: none; /* don't show Finish button in share view */
-    }
-    #soft-buttons button {
-      margin: 5px 1px;
     }
   }
 

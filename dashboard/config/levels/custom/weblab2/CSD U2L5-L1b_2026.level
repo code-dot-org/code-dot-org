@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "Debug: Paragraph Tag",
-    "long_instructions": "\r\n\r\n# Use Paragraph Tags\r\n\r\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\r\n\r\n# Do This\r\n\r\n1) Fix the code so that none of the tags turn pink.",
+    "long_instructions": "\r\n\r\n# Use Paragraph Tags\r\n\r\nThe `<p>` `</p>` tags or \"paragraph\" start and end tags are placed around text to indicate that it is part of a paragraph. Placing text between paragraph start and end tags lets the computer know that it should be treated differently, often just spacing it out from other text.\r\n\r\n# Do This\r\n\r\n1) Fix the HTML errors related to the paragraph tags.",
     "bubble_choice_description": "Find the bugs caused by incorrect paragraph tags.",
     "thumbnail_url": "https://images.code.org/ec41fe3dde442861737cc4f3ecf2e630-image-1585675979783.png",
     "submittable": "false",

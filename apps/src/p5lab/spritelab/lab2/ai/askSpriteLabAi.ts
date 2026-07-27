@@ -1,43 +1,9 @@
 import {generateText} from '@cdo/apps/aiGateway';
-import {getStore} from '@cdo/apps/redux';
 
 import {buildPrompt} from '../blockly/generateContent';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {AvailableImageNames} from '../redux/selectors';
 
 import {getTextModel} from './items/modelHelpers';
-
-// The project's costume and background names from the animationList slice, so
-// the model only references images that actually exist. Exported so the
-// generate flow can validate the model's output against the same lists.
-export function getAvailableImageNames(): {
-  costumes: string[];
-  backgrounds: string[];
-} {
-  const costumes: string[] = [];
-  const backgrounds: string[] = [];
-  const animationList = getStore().getState().animationList;
-  (animationList?.orderedKeys || []).forEach((key: string) => {
-    const props = animationList.propsByKey[key];
-    if (!props?.name) {
-      return;
-    }
-    if ((props.categories || []).includes(BACKGROUNDS_CATEGORY)) {
-      backgrounds.push(props.name);
-    } else {
-      costumes.push(props.name);
-    }
-  });
-  return {costumes, backgrounds};
-}
-
-// The project's scene names (for go_to_scene). Empty outside the scenes UI
-// variant, which keeps the command out of the prompt.
-function getSceneNames(): string[] {
-  const scenes = getStore().getState().spriteLab2?.scenes || [];
-  return scenes
-    .map((scene: {name?: string}) => scene.name)
-    .filter(Boolean) as string[];
-}
 
 /**
  * Ask the AI to turn a natural-language request into Sprite Lab pseudocode
@@ -47,14 +13,17 @@ function getSceneNames(): string[] {
  * this path.
  */
 export default async function askSpriteLabAi(
-  userPrompt: string
+  userPrompt: string,
+  imageNames: AvailableImageNames,
+  sceneNames: string[]
 ): Promise<string> {
-  const {costumes, backgrounds} = getAvailableImageNames();
+  const {costumes, backgrounds, blocks} = imageNames;
   const prompt = buildPrompt(
     userPrompt,
     costumes,
     backgrounds,
-    getSceneNames()
+    sceneNames,
+    blocks
   );
 
   let text = '';

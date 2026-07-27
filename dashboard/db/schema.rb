@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
+ActiveRecord::Schema[7.0].define(version: 2026_07_22_124043) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -1200,11 +1200,10 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["type"], name: "index_levels_on_type"
   end
 
-  create_table "levels_script_levels", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "levels_script_levels", primary_key: ["script_level_id", "level_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "level_id", null: false
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
-    t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
@@ -2221,8 +2220,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
-  create_table "schools", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "id", limit: 12, null: false, comment: "NCES public school ID"
+  create_table "schools", id: { type: :string, limit: 12, comment: "NCES public school ID" }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "school_district_id"
     t.string "name", null: false
     t.string "city", null: false
@@ -2240,7 +2238,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_06_26_143947) do
     t.string "last_known_school_year_open", limit: 9
     t.string "county_id"
     t.string "county_name"
-    t.index ["id"], name: "index_schools_on_id", unique: true
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"

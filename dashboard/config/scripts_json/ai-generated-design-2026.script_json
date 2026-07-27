@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-12 23:29:35 UTC",
+    "serialized_at": "2026-07-24 17:12:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6183,6 +6183,20 @@
       }
     },
     {
+      "name": "Brand Identity",
+      "url": "https://docs.google.com/presentation/d/14L83a37wE_O0DqL69JvOU9x7RY4ieb6pB_tI2VW0C10/edit?usp=sharing",
+      "key": "brand_identity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "brand_identity"
+      }
+    },
+    {
       "name": "Designing for Responsiveness",
       "url": "https://docs.google.com/presentation/d/1K9dvvhPTFekqKVMBRvB1OvMOiSvKaRh_SjrWaw5Upq4/edit?usp=sharing",
       "key": "designing_for_responsiveness",
@@ -6237,6 +6251,20 @@
       },
       "seeding_key": {
         "resource.key": "the_user_s_experience_1"
+      }
+    },
+    {
+      "name": "Welcome to Web Apps",
+      "url": "https://docs.google.com/presentation/d/1nThSKLKPussNxR2UupIklnzL7dvOK73boUKlWKKM_uw/edit?usp=sharing",
+      "key": "welcome_to_web_apps_1",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_web_apps_1"
       }
     }
   ],
@@ -6309,6 +6337,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "resource.key": "welcome_to_web_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
         "resource.key": "_exemplar_the_user_s_experience"
       }
@@ -6371,6 +6405,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 5: Brand Identity",
         "resource.key": "ai-generated_design_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Brand Identity",
+        "resource.key": "brand_identity"
       }
     },
     {

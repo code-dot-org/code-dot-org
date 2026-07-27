@@ -72,7 +72,7 @@ $debug-watch-max-column-width: 200px;
 .debug-console,
 .debug-watch {
   display: block;
-  background-color: $white;
+  background-color: var(--background-neutral-primary);
   border: 1px solid #ddd;
   position: absolute;
   top: $resize-bar-width + $workspace-headers-height;
@@ -91,6 +91,7 @@ $debug-watch-max-column-width: 200px;
   }
   right: 0;
   width: $debug-watch-max-column-width + ($debug-header-border-width * 2);
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -103,8 +104,6 @@ $debug-watch-max-column-width: 200px;
 .debug-watch-item {
   margin: 0;
   line-height: 14px;
-  clear: both;
-  margin-bottom: 1px;
 
   .watch-variable,
   .watch-separator {
@@ -131,6 +130,10 @@ $debug-watch-max-column-width: 200px;
 .debug-console input {
   font-family: monospace;
   font-size: 12px;
+}
+
+.debug-console input {
+  background-color: inherit;
 }
 
 #slider-cell {
