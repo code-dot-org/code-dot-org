@@ -29,25 +29,31 @@ The interim code produces the right pixels on the wrong architecture:
 ## 2. Target architecture
 
 ```
-  PROJECT (Codebridge)                LAB (transform)            COMPILE (esbuild)         PREVIEW (engine + driver)
-  animations/player.anim  ─┐                                                               ┌─ AnimationRule advances
-  sprites/Player.png       ├─▶ .anim JSON → JS module   ─▶  bundle; .png → dataurl,  ─▶    │   frames on tick, emits
-  scenes/main.js           ─┘   that imports its PNGs        .json → json (already)         │   Frame/End events
-                                                                                            └─ renderSnapshot exposes
-                                                                                               the CURRENT frame; the
-                                                                                               binding just blits it
+  PROJECT (Codebridge, TEXT only)     LAB (transform)          COMPILE (esbuild)     PREVIEW (engine + driver)
+  animations/player.anim  ─┐                                                         ┌─ AnimationRule advances
+  scenes/main.js           ├─▶ .anim JSON → JS module     ─▶  bundle (text only) ─▶  │   frames on tick, emits
+  (frames name stock       ─┘   exporting the AnimationDef                           │   Frame/End events
+   sprites, e.g. "coin")                                                             └─ renderSnapshot exposes the
+                                                                                        CURRENT frame; binding blits
+  public/vendor/sprites/*.png ───────────────────────────────────────────────────▶    it, loading the vendor PNG
+   (self-hosted; served on the sandbox origin, img-src 'self')                          by name from the sandbox origin
 ```
 
-Four moving parts, three of them reusing seams that already exist:
+Four moving parts, three of them reusing seams that already exist. Crucially,
+**no binary ever enters the project file map** (§7 records why): `.anim` files are
+_text_, and the image bytes come from self-hosted assets on the sandbox origin,
+not from project `contents`.
 
 1. **Serialization + loader (lab-side transform).** `.anim` / spritesheet JSON is
+   text, so Codebridge stores and round-trips it like any source file. It is
    transformed — the same seam that turns `.rule`/`.actor` Blockly JSON into JS
    (`WorldRuntimeContext.generateBlocklyFiles`, `virtualFsPlugin` `EXT_ORDER`) —
-   into a JS module that `import`s each referenced PNG and exports the animation
-   definition with sprite paths replaced by the imported values. The compiler
-   already loads `.png` as `dataurl` and `.json` as `json` (`virtualFsPlugin.
-loaderFor`), so a transformed `.anim` module resolves to a self-contained
-   object whose sprite fields are `data:` URLs — no network, no new transport.
+   into a JS module that exports the animation definition. A frame's `sprite`
+   names a **stock asset** (e.g. `"coin"`), which the driver resolves to
+   `${assetBase}sprites/coin.png` on the sandbox origin — the exact mechanism
+   already serving the vendor sprites. No PNG bytes travel through the compiler,
+   so the string-typed file map and text-only Codebridge are untouched.
+   Learner-supplied images are a separate, framework-gated concern (§7).
 
 2. **Engine Animation Rule (`engine/rules/animation.ts`).** A new rule owning the
    appearance vocabulary:
@@ -71,7 +77,7 @@ loaderFor`), so a transformed `.anim` module resolves to a self-contained
 
    ```ts
    frame?: {
-     sprite: string;                 // opaque image ref (a data: URL post-compile)
+     sprite: string;                 // stock asset ref, resolved to a self-origin URL
      cell?: {x; y; width; height};   // spritesheet source rect; absent = whole image
      offset: {x; y};                 // from the actor position (center-drawn)
      scale: number;                  // relative render scale
@@ -81,9 +87,9 @@ loaderFor`), so a transformed `.anim` module resolves to a self-contained
    Absent `frame` ⇒ the fallback rectangle (an actor with no appearance).
 
 4. **Driver (`PhaserBinding`).** Stops owning animation timing. Each render it
-   reads `frame`, ensures a texture for `frame.sprite` (keyed by a hash of the
-   ref; loaded once from the `data:` URL — `img-src 'self' blob: data:` already
-   permits it, `SANDBOX.md`), draws it cropped to `cell` at
+   reads `frame`, ensures a texture for `frame.sprite` (loaded once from
+   `${assetBase}sprites/<sprite>.png` on the sandbox origin — `img-src 'self'`
+   covers it, `SANDBOX.md`), draws it cropped to `cell` at
    `(x + offset.x, y + offset.y)`, scaled by `scale * actorScale`, centered.
    Phaser becomes a blitter; `anims.create`/`play` and the built-in registry are
    removed.
@@ -102,7 +108,7 @@ interface Cell {
 }
 
 interface AnimationFrame {
-  sprite: string; // image ref; a project path pre-compile, a data: URL after
+  sprite: string; // stock asset ref (e.g. "coin"); driver resolves to a self-origin URL
   position?: Cell; // spritesheet cell; omitted = the whole image
   offset?: {x: number; y: number}; // default (0, 0)
   scale?: number; // default 1
@@ -130,11 +136,11 @@ Each phase is independently shippable and verified (unit + browser), matching ho
 milestones 1–7 were staged.
 
 - **A — Serialization + asset transform.** Add the `.anim`/spritesheet types and
-  the lab-side transform (`.anim` JSON → JS module importing its PNGs). Extend
-  the compiler FS to carry PNG **bytes** (§7) and confirm the existing `dataurl`
-  loader inlines them. Unit-test the transform; add a compile round-trip that
-  imports a `.anim` and asserts its frames' sprites are `data:` URLs. No runtime
-  behavior yet.
+  the lab-side transform (`.anim` JSON → JS module exporting the definition;
+  frame `sprite`s stay stock-asset names). Register the transform on the
+  existing seam (`WorldRuntimeContext`, `virtualFsPlugin` `EXT_ORDER`). All text
+  — no compiler FS or binary changes. Unit-test the transform and a compile
+  round-trip importing a `.anim`. No runtime behavior yet.
 
 - **B — Engine Animation Rule.** `engine/rules/animation.ts`: trait, `animation`
   property, world registry, `AdvanceAnimationStep`, `AnimationEndedEvent`. Fold
@@ -151,11 +157,11 @@ milestones 1–7 were staged.
 
 - **D — Blockly + project integration.** `world_play_animation`'s dropdown is
   sourced from the project's `.anim` ids (dynamic, not a fixed list);
-  `world_on_event` gains `AnimationEnded`. Repackage the stock coin/player as
-  importable `.anim` + spritesheet + PNG assets in the default project; drop the
-  driver built-ins (`src/sprites.ts`, the animation half of
-  `generate-sprites.mjs` becomes a stock-asset emitter). Browser-verify the
-  authored path end to end.
+  `world_on_event` gains `AnimationEnded`. Repackage the stock coin/player as a
+  spec-model `AnimationDef` **stock library** whose frames name the vendor PNGs
+  (still emitted by `generate-sprites.mjs`); the default project references them
+  by id. `src/sprites.ts`'s uniform-strip `ANIMATIONS` map retires. Browser-
+  verify the authored path end to end.
 
 - **E — Frame events (payloads).** Once per-actor event payloads land (§7), add
   `FrameChangedEvent` with the frame index and a `world_on_event` option, so a
@@ -163,10 +169,14 @@ milestones 1–7 were staged.
 
 ## 5. Migration of the interim built-ins
 
-`coinSpin` / `playerWalk` are repurposed, not discarded: the generator emits them
-as **stock project assets** (a `.anim` + a spritesheet PNG + its `.json`) that the
-default project imports, rather than as compiled-in driver constants. The visual
-demo is preserved; only its provenance changes from built-in to imported asset.
+`coinSpin` / `playerWalk` are repurposed, not discarded. Their PNGs keep coming
+from `generate-sprites.mjs` (self-hosted vendor sprites/spritesheets); what
+changes is their _description_ — from a hardcoded `{frames, frameRate}` in
+`src/sprites.ts` played by Phaser, to a spec-model `AnimationDef` (per-frame
+`delay`, cells, offset) held by the engine's stock library and stepped by the
+Animation Rule. The visual demo is preserved; its architecture moves onto the
+spec's model. A future animation editor + asset uploads (§7) let learners author
+their own, replacing the stock library with project `.anim` files.
 
 ## 6. Files
 
@@ -175,26 +185,45 @@ demo is preserved; only its provenance changes from built-in to imported asset.
   `src/blockly/…` dropdown sourcing.
 - Changed: `engine/core/World.ts` (`renderSnapshot` frame descriptor),
   `engine/core/spatialKeys.ts` + `engine/rules/spatial.ts` (drop `sprite`/
-  `animation`), `engine/index.ts` (export the rule + types),
+  `animation`), `engine/index.ts` (export the rule + types + stock library),
   `runtime/WorldRuntimeContext.tsx` (generalize the transform beyond Blockly),
-  `runtime/compile/virtualFsPlugin.ts` (PNG bytes), `runtime/driver/PhaserBinding.
-ts`, `src/constants.ts` (default project assets), `scripts/generate-sprites.
-mjs` (emit stock `.anim`/spritesheet assets), `src/sprites.ts` (retire).
+  `runtime/driver/PhaserBinding.ts` (blit the frame descriptor from vendor URLs),
+  `src/constants.ts` (default project references stock animations),
+  `scripts/generate-sprites.mjs` (still emits the vendor PNGs/spritesheets),
+  `src/sprites.ts` (the `ANIMATIONS` map retires; `SPRITE_NAMES` stays as the
+  vendor manifest). No `virtualFsPlugin` binary change — the map stays text.
 
 ## 7. Prerequisites and risks
 
-- **Binary project files.** The compiler's file map is `Record<string, string>`;
-  PNGs are bytes. The lab must convey PNG bytes (base64 in the map, decoded to a
-  `Uint8Array` for esbuild's `dataurl` loader), which in turn requires Codebridge
-  to store/round-trip binary project files. If it cannot yet, stock assets ship as
-  base64 embedded directly in the transformed `.anim` module as an interim, and
-  learner-supplied PNGs wait on the Codebridge capability. **This is the gating
-  unknown.**
+- **Binary project files — RESOLVED, and it is why sprites come from vendor
+  assets, not project bytes.** Codebridge's project source is **text-only** and
+  cannot round-trip binary today: `ProjectFile.contents` is `z.string()`
+  (`core/.../sources.schemata.ts`), there is no `mimeType`/`isBinary`/`url`/
+  `encoding` field, no upload/import/`FileReader` path in the Codebridge UI (the
+  only add-file path writes a text placeholder), and the whole source is
+  persisted as a JSON string (`sources.api.ts`, `main.json`) with no base64
+  convention anywhere. Web Lab scaffolds the shape of a future feature — a mime
+  table, image extensions in `supportedFileTypes`, an optional `PreviewFile.url`,
+  and a service-worker `if (url) fetch(url)` branch — but nothing populates it,
+  and its `new Response(stringContents)` would corrupt real image bytes. The
+  repo's own comments label uploads "deferred" and point at a **`url` field +
+  asset-upload endpoint** as the intended direction, not base64-in-`contents`.
+
+  **Decision:** World Lab does not widen the file map to binary and does not
+  invent a base64-in-`contents` hack that diverges from that direction. Stock
+  sprite bytes stay in `public/vendor/sprites/` and are referenced by name,
+  resolved to self-origin URLs at render time (§2). `.anim`/spritesheet
+  definitions are text and flow through the existing text pipeline untouched.
+  Everything in Phases A–D is unblocked by this. **Learner-supplied custom
+  images are the one gated leaf** — they wait on the framework-level Codebridge
+  upload capability (`ProjectFile.url` + an asset endpoint), which is
+  cross-cutting (Web Lab needs the same) and out of World Lab's scope to build.
+
 - **Per-actor event payloads.** `FrameChangedEvent` needs a payload (the frame);
   the event system currently emits per-actor with no learner-visible detail.
   Phase E depends on that work; `AnimationEndedEvent` (no payload) does not.
-- **CSP.** No change — `img-src 'self' blob: data:` already covers `data:`-URL and
-  self-origin textures (`SANDBOX.md`).
+- **CSP.** No change — `img-src 'self'` covers the self-origin vendor textures
+  (`SANDBOX.md`); no `data:` needed.
 - **Hot reload.** Animation _definitions_ changing ⇒ restart (structural);
   animation _selection_ (the property) changing ⇒ a live value patch, like other
   per-actor values — folds into the existing `reconcile` snapshot diff. Runtime
