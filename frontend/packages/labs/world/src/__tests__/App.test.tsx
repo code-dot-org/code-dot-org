@@ -55,11 +55,15 @@ it('renders the World Lab shell from the default project', async () => {
   // default project renders.
   await act(async () => {});
 
-  // The project's files appear in the browser / tab strip.
-  expect((await screen.findAllByText('index.html')).length).toBeGreaterThan(0);
-  expect(screen.getAllByText('main.js').length).toBeGreaterThan(0);
+  // The default project's open file and folders appear in the browser.
+  expect((await screen.findAllByText('main.js')).length).toBeGreaterThan(0);
+  expect(screen.getAllByText('scenes').length).toBeGreaterThan(0);
+  expect(screen.getAllByText('worlds').length).toBeGreaterThan(0);
+  expect(screen.getAllByText('actors').length).toBeGreaterThan(0);
   // The CodeMirror editor mounted with the active file.
   expect(document.querySelector('.cm-editor')).not.toBe(null);
-  // The preview panel rendered.
+  // The preview view toggle rendered.
   expect(screen.getByText('Preview')).toBeTruthy();
+  // No sandbox is configured under jsdom, so the preview says so.
+  expect(screen.getByText(/no sandbox origin is configured/i)).toBeTruthy();
 });

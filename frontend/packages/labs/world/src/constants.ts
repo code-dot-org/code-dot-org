@@ -1,55 +1,99 @@
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
-/** The page the preview loads by default. */
-export const DEFAULT_START_HTML_FILE = 'index.html';
+/**
+ * The scene the game starts on — the driver's compile + run entry point
+ * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
+ */
+export const ENTRY_FILE = 'scenes/main.js';
 
 /**
- * The default project for a new World Lab: a host page and the game script that
- * draws the world. Used as `CodebridgeLab`'s `defaultSources` when a level
- * supplies none.
- *
- * The scaffold's page is a plain placeholder; wiring the Phaser 4 runtime is the
- * next increment (see `preview/WorldPreview`). When it lands, this default will
- * grow into a minimal Phaser scene.
+ * The default project for a new World Lab: a small gravity game across the
+ * conventional directories. The learner imports the engine as `world-lab`; the
+ * compiler resolves that to the self-hosted engine, and the preview runs the
+ * default-exported Scene. There is no `index.html` — the host page is the
+ * sandbox's fixed shell (PLAN §6).
  */
+const MAIN_SCENE = `import {SceneBuilder, ActorBuilder, GroundTrait, PositionProperty, Vector} from 'world-lab';
+import PlatformWorld from 'worlds/platform';
+import Player from 'actors/player';
+
+// A Scene glues a World (the rules) to the Actors living in it.
+const scene = new SceneBuilder({id: 'game', name: 'Game'});
+scene.useWorld(PlatformWorld);
+scene.addActor(Player);
+
+// The ground the player lands on.
+scene.addActor(
+  new ActorBuilder({id: 'ground', name: 'Ground'})
+    .useTraits([GroundTrait])
+    .set(PositionProperty, new Vector(200, 260)),
+);
+
+export default scene;
+`;
+
+const PLATFORM_WORLD = `import {WorldBuilder, GravityRule} from 'world-lab';
+
+// A World is the set of rules in play. "Has Gravity" pulls in motion and
+// collision automatically.
+export default new WorldBuilder({id: 'platform', name: 'Platform World'}).useRules(
+  [GravityRule],
+);
+`;
+
+const PLAYER_ACTOR = `import {
+  ActorBuilder,
+  AffectedByGravityTrait,
+  PositionProperty,
+  StartsFallingEvent,
+  StopsFallingEvent,
+  Vector,
+} from 'world-lab';
+
+// An Actor is a set of traits (which add properties) plus event handlers.
+const player = new ActorBuilder({id: 'player', name: 'Player'})
+  .useTraits([AffectedByGravityTrait])
+  .set(PositionProperty, new Vector(200, 20));
+
+player.on(StartsFallingEvent, () => console.log('Player started falling'));
+player.on(StopsFallingEvent, () => console.log('Player landed!'));
+
+export default player;
+`;
+
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   source: {
     files: {
-      '0': {
-        id: '0',
-        name: DEFAULT_START_HTML_FILE,
-        language: 'html',
-        contents: `<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>World</title>
-  </head>
-  <body>
-    <div id="game"></div>
-    <script src="main.js"></script>
-  </body>
-</html>
-`,
-        folderId: '0',
+      main: {
+        id: 'main',
+        name: 'main.js',
+        language: 'javascript',
+        contents: MAIN_SCENE,
+        folderId: 'scenes',
         active: true,
         open: true,
       },
-      '1': {
-        id: '1',
-        name: 'main.js',
+      platform: {
+        id: 'platform',
+        name: 'platform.js',
         language: 'javascript',
-        contents: `// Your World Lab game code runs here.
-//
-// The Phaser 4 runtime is not wired into the preview yet — this file is the
-// place the game world will be built once it is.
-console.log('Hello from main.js');
-`,
-        folderId: '0',
+        contents: PLATFORM_WORLD,
+        folderId: 'worlds',
+      },
+      player: {
+        id: 'player',
+        name: 'player.js',
+        language: 'javascript',
+        contents: PLAYER_ACTOR,
+        folderId: 'actors',
       },
     },
-    folders: {},
-    openFiles: ['0'],
+    folders: {
+      scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
+      worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
+      actors: {id: 'actors', name: 'actors', parentId: '0'},
+    },
+    openFiles: ['main'],
   },
 };
 

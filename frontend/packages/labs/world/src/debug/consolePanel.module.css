@@ -1,0 +1,38 @@
+/* The Console/Debugger box. A fixed-height slot placed by WorldLayout under
+   whichever pane shows the running game; the PanelContainer inside fills it
+   (its own header + the scrolling output). It does not grow, so the game keeps
+   the space. Colors come from the design-system CSS variables so it themes in
+   light and dark like the rest of the lab. */
+.slot {
+  flex-shrink: 0;
+  height: 160px;
+  min-height: 0;
+  border-top: var(--lab-border-default);
+}
+
+.list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0.25rem 0.5rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  box-sizing: border-box;
+}
+
+.line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.lineError {
+  color: var(--text-danger, #d32f2f);
+}
+
+.empty {
+  color: var(--text-neutral-tertiary);
+  font-style: italic;
+}

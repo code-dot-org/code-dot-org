@@ -41,3 +41,14 @@ binding renders it.
 - `roundtrip.mjs` — asserts a gravity actor renders (green sprite on the canvas),
   falls, and lands (relayed `startsFalling`/`stopsFalling`), under the production
   CSPs. Run: `yarn setup:world && node spikes/milestone-3/roundtrip.mjs`
+
+## milestone-5/
+
+Browser check of the whole lab (`specs/PLAN.md` §16 milestone 5). Unlike the
+others it drives the real dev servers rather than self-serving.
+
+- `verify.mjs` — with `yarn dev:isolated` running, opens the lab and asserts the
+  game renders (green sprite) and the Console box shows the actor landing. Run:
+  `yarn dev:isolated` (separately), then `node spikes/milestone-5/verify.mjs`.
+  (Reload once on the first run — Vite optimizes `phaser`/`esbuild-wasm` and
+  reloads the sandbox iframes.)

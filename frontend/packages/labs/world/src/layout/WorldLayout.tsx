@@ -9,6 +9,7 @@ import {
 } from '@code-dot-org/lab/components';
 
 import {ViewMode, type ViewModeType} from '../constants';
+import {ConsolePanel} from '../debug/ConsolePanel';
 import {WorldPreview} from '../preview/WorldPreview';
 
 import styles from './worldLayout.module.css';
@@ -32,12 +33,14 @@ const PREVIEW = {initial: 460, min: 240, max: 900};
  * │             │ [Code|Preview|Split]   header         │
  * │ instructions├───────────────────┬───────────────────┤
  * │             │ editor            │ world preview     │
+ * │             │                   ├───────────────────┤
+ * │             │                   │ console           │
  * └─────────────┴───────────────────┴───────────────────┘
  * ```
  *
- * web-lab's debug panel (console + network) is deliberately absent: it is
- * coupled to that lab's service-worker HTML preview. World Lab grows its own
- * once the Phaser 4 runtime lands.
+ * The Console/Debugger box follows the running game: it sits under the preview
+ * pane in split / preview-only view, and under the editor pane when the editor
+ * is the only pane. It is not a full-width bar under both (web-lab's shape).
  */
 const WorldLayout = () => {
   const [instructionsWidth, setInstructionsWidth] = useState(
@@ -114,7 +117,11 @@ const WorldLayout = () => {
           <div className={styles.editorAndPreview}>
             {showEditor && (
               <div className={styles.editorPane}>
-                <Workspace />
+                <div className={styles.editorMain}>
+                  <Workspace />
+                </div>
+                {/* Code-only view: the console falls back to under the editor. */}
+                {!showPreview && <ConsolePanel />}
               </div>
             )}
             {isSplit && (
@@ -144,6 +151,8 @@ const WorldLayout = () => {
                 style={isSplit ? {width: previewWidth} : undefined}
               >
                 <WorldPreview />
+                {/* The console lives under the preview whenever it is shown. */}
+                <ConsolePanel />
               </div>
             )}
           </div>

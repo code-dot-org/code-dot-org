@@ -637,7 +637,15 @@ Unit first, then browser:
    self-hosted `/vendor/world-lab.mjs` (one engine instance) — not an import map,
    which the preview's `script-src 'self'` would block inline. The round-trip
    renders a gravity actor that falls and lands, under the production CSPs.
-4. **Hot reload Levels 0–1** — restart on structural edits; `set_property`
-   changes gravity live.
-5. **WorldPreview integration + README + Playwright verification** — slice done
-   end-to-end.
+4. **Hot reload Levels 0–1** — Level 0 (recompile + reload) is DONE as part of
+   milestone 5 (the provider recompiles and reloads on every edit). Remaining:
+   Level 1 (`set_property` patches a world property live without a rebuild).
+5. **WorldPreview integration + Console + verification** — DONE
+   (`spikes/milestone-5/verify.mjs`). `WorldRuntimeProvider` compiles the
+   Codebridge sources on edit and runs them in the preview; `WorldPreview`
+   mounts the preview iframe; the `ConsolePanel` shows relayed output, placed
+   under the preview pane (or the editor when editor-only). `DEFAULT_PROJECT` is
+   the gravity demo (no `index.html`); `config.ts` is code-only. Verified in a
+   real browser via `dev:isolated`: the actor renders, falls, and lands, with
+   console relayed to the box. (First `dev:isolated` load triggers a one-time
+   Vite dep-optimization reload — reload the page once.)
