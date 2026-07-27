@@ -29,24 +29,26 @@ import moduleStyles from './share-dialog.module.scss';
 
 export const SHARE_FAILURE_TITLE = "This project can't be shared";
 
-export const SHARE_FAILURE_MESSAGES: Record<ShareFailureType, string> = {
-  profanity:
-    "This project can't be shared because it may contain profanity. " +
-    'Remove that content and save your project, then try sharing again. ' +
-    'If you think this is a mistake, contact support@code.org.',
-  email:
-    "This project can't be shared because it appears to contain an email " +
-    'address. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-  phone:
-    "This project can't be shared because it appears to contain a phone " +
-    'number. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-  address:
-    "This project can't be shared because it appears to contain a street " +
-    'address. Remove that personal information and save your project, ' +
-    'then try sharing again.',
-};
+// Fallback for failure types the server may add before this list learns
+// about them.
+export const SHARE_FAILURE_FALLBACK_PREFIX =
+  "The project can't be shared because it contains flagged content. ";
+
+export const SHARE_FAILURE_MESSAGE_PREFIXES: Record<ShareFailureType, string> =
+  {
+    profanity:
+      "This project can't be shared because it may contain profanity. ",
+    email:
+      "This project can't be shared because it appears to contain an email address. ",
+    phone:
+      "This project can't be shared because it appears to contain a phone number. ",
+    address:
+      "This project can't be shared because it appears to contain a street address. ",
+  };
+
+const SHARE_FILTER_MESSAGE_SUFFIX =
+  'Remove that content and save your project, then try sharing again. ' +
+  'If you think this is a mistake, contact support@code.org.';
 
 const TEACHER_FEEDBACK_LINK =
   'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
@@ -186,7 +188,12 @@ const ShareDialog: React.FunctionComponent<{
       <div data-theme={theme}>
         <Modal
           title={SHARE_FAILURE_TITLE}
-          description={SHARE_FAILURE_MESSAGES[shareFailure.type] + flaggedText}
+          description={
+            (SHARE_FAILURE_MESSAGE_PREFIXES[shareFailure.type] ??
+              SHARE_FAILURE_FALLBACK_PREFIX) +
+            SHARE_FILTER_MESSAGE_SUFFIX +
+            flaggedText
+          }
           primaryButtonProps={{
             onClick: handleClose,
             children: i18n.ok(),

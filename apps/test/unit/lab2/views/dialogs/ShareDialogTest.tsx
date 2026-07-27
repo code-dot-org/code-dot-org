@@ -3,8 +3,10 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import {ShareFailureType} from '@cdo/apps/lab2/types';
 import ShareDialog, {
-  SHARE_FAILURE_MESSAGES,
+  SHARE_FAILURE_FALLBACK_PREFIX,
+  SHARE_FAILURE_MESSAGE_PREFIXES,
   SHARE_FAILURE_TITLE,
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -61,11 +63,25 @@ describe('Lab2 ShareDialog', () => {
     });
     expect(screen.getByText(SHARE_FAILURE_TITLE)).toBeInTheDocument();
     expect(
-      screen.getByText(SHARE_FAILURE_MESSAGES.profanity)
+      screen.getByText(SHARE_FAILURE_MESSAGE_PREFIXES.profanity, {
+        exact: false,
+      })
     ).toBeInTheDocument();
     expect(
       screen.queryByRole('button', {name: 'Copy link to project'})
     ).not.toBeInTheDocument();
+  });
+
+  it('falls back to a generic message for unrecognized failure types', () => {
+    renderShareDialog({
+      shareFailure: {
+        type: 'new-server-type' as unknown as ShareFailureType,
+      },
+    });
+    expect(screen.getByText(SHARE_FAILURE_TITLE)).toBeInTheDocument();
+    expect(
+      screen.getByText(SHARE_FAILURE_FALLBACK_PREFIX, {exact: false})
+    ).toBeInTheDocument();
   });
 
   it('shows the flagged text for PII failures', () => {
