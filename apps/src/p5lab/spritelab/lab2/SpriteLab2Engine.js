@@ -51,14 +51,6 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
-// Served in place of the zGameDev library (see loadHelperLibraries). In
-// this lab the library name is a level's opt-in to platformer physics,
-// which is engine-owned (platformPhysics.ts); the cell-sized sprite
-// default is all the interpreted side needs.
-const PLATFORM_LIBRARY_SOURCE = [
-  '// Physics is engine-owned in this lab; see platformPhysics.ts.',
-  'setDefaultSpriteSize(50);',
-].join('\n');
 
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
@@ -98,6 +90,11 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    if (this.usesPlatformPhysics_) {
+      // Platformer levels size sprites to one grid cell by default (the
+      // legacy library's one load-bearing line).
+      library.defaultSpriteSize = 50;
+    }
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -172,9 +169,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
+    // The zGameDev name is only the level's opt-in to platformer physics,
+    // which is engine-owned (platformPhysics.ts); no library loads for it.
     this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
     this.level = {
-      helperLibraries,
+      helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
       // So the lab-owned blocks' helperCode is prepended like pool blocks'.
       sharedBlocks: [
@@ -197,21 +196,15 @@ export default class SpriteLab2Engine extends SpriteLab {
       spritelab: true,
     });
 
-    await this.loadHelperLibraries(helperLibraries);
+    await this.loadHelperLibraries(this.level.helperLibraries);
   }
 
   // Replicates StudioApp.loadLibrary_: source text stashed where
-  // initInterpreter expects it. zGameDev is served from
-  // PLATFORM_LIBRARY_SOURCE instead of the server: this lab replaces the
-  // library's interpreted physics loop with engine-owned physics.
+  // initInterpreter expects it.
   async loadHelperLibraries(names) {
     await Promise.all(
       (names || []).map(async name => {
         if (this.studioApp_.libraries[name]) {
-          return;
-        }
-        if (name === 'zGameDev') {
-          this.studioApp_.libraries[name] = PLATFORM_LIBRARY_SOURCE;
           return;
         }
         const response = await HttpClient.get('/libraries/' + name);
