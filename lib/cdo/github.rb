@@ -325,6 +325,8 @@ module GitHub
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
       set_dts_check_pass(pull)
+    rescue => exception
+      notify_dts_status_failure(pull, exception)
     end
   end
 
@@ -343,6 +345,8 @@ module GitHub
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
       set_dts_check_fail(pull)
+    rescue => exception
+      notify_dts_status_failure(pull, exception)
     end
   end
 
@@ -358,5 +362,16 @@ module GitHub
 
   def self.get_date_for_commit(commit_sha)
     return Octokit.commit(REPO, commit_sha)[:commit][:author][:date]
+  end
+
+  # A single PR (e.g. one with an unreachable head sha, or a request that hits
+  # GitHub's secondary rate limit) must not abort the whole batch: with ~600
+  # open PRs against staging, that would leave most of them stuck on a stale
+  # DTS status until the next open/close flip.
+  private_class_method def self.notify_dts_status_failure(pull, exception)
+    Honeybadger.notify(
+      exception,
+      error_message: "Unable to set DTS status for PR ##{pull['number']}: #{exception.message.to_s.strip}"
+    )
   end
 end
