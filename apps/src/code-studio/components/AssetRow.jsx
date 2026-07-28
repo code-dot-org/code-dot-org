@@ -116,7 +116,6 @@ export default class AssetRow extends React.Component {
               {flex}
               {!this.props.hideDelete && (
                 <MuiIconButton
-                  variant="text"
                   color={usage > 0 ? 'secondary' : 'error'}
                   size="medium"
                   aria-label="Delete file"
