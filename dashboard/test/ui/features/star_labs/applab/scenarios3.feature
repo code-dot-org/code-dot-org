@@ -5,13 +5,13 @@ Feature: App Lab Scenarios 3
     Given I start a new Applab project
     And I wait for the lab page to fully load
 
-  Scenario: App Lab Http Image
-    # Create an app with an http image.
+  Scenario: App Lab absolute image URL
+    # Create an app with an absolute image URL.
     When I ensure droplet is in text mode
-    And I append text to droplet "image('test123', 'http://example.com')"
+    And I append text to droplet "image('test123', 'https://example.com')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "http://example.com/"
+    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://example.com"
 
   Scenario: App Lab Clear Puzzle and Design Mode
     # Create an app with a design mode button, then clear the puzzle.
