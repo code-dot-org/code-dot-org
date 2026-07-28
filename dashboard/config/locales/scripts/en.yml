@@ -22195,32 +22195,32 @@ en:
               name: Navigating Support
           lesson_groups: {}
           name: self-paced-pl-getting-started-2024
-          title: Getting Started with Code.org
+          title: Getting Started with CodeAI
           description_audience: ''
           description_short: ''
           description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
           student_description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
@@ -29239,33 +29239,29 @@ en:
           description: |-
             This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
 
-            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
           student_description: |-
             In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
 
-            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. YAs you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
         aif-year2-semester1-unit2:

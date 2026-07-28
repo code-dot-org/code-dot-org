@@ -74,10 +74,6 @@ module Cdo
       CDO_SHARED_CACHE
     end
 
-    def cache
-      CDO_CACHE
-    end
-
     def i18n_backend
       @i18n_backend ||=
         # Because loading i18n files is super-slow, lazy load them in development.

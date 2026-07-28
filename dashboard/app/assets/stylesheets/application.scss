@@ -140,6 +140,12 @@ h1 {
   }
 }
 
+@include codeai-brand {
+  h1.existing-account-heading {
+    color: var(--text-neutral-primary);
+  }
+}
+
 h2 {
   margin: 25px 0 10px 0;
   @include main-font-semi-bold;
@@ -1818,11 +1824,34 @@ body.iframe_embed_app_and_code {
 }
 
 .x-close {
-  @include close-button($cornerOffset: -20px);
-  // Reset native <button> styles so the icon matches the old <div>-based markup.
-  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
   border: 0;
   padding: 0;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 .open-link {
@@ -2154,6 +2183,45 @@ a.download-video {
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
+  }
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
   }
   .neutral-button {
     background-color: $neutral_white;
@@ -3405,7 +3473,7 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-body {
+.dash_modal .modal-body {
   .modal-content {
     margin-left: $modal-image-width + $modal-image-margin-gap;
     html[dir=rtl] & {
@@ -3416,20 +3484,21 @@ $modal-no-icon-gap: 22px;
       margin-left: $modal-no-icon-gap;
     }
 
-    p, pre {
-      line-height: 27px;
-      font-size: 24px;
-      color: $neutral_dark;
-    }
-
-    pre {
-      color: $purple;
-    }
-
+    // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
     .congrats {
-      @include main-font-semi-bold;
-      font-size: 21px;
-      line-height: 27px;
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-semi-bold);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .lines-of-code-message {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
     .instructions-markdown p {
@@ -3536,6 +3605,68 @@ h5.dialog-title {
   color: $white;
   margin-left: 0;
   margin-right: 10px;
+}
+
+.dash_modal {
+  .modal-content .show-code > summary {
+    font-family: var(--font-family-main) !important;
+    font-size: var(--font-size-body-md) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  #feedbackButtons > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  #feedbackButtons #continue-button,
+  #feedbackButtons #again-button {
+    float: none !important;
+    margin: 0 !important;
+    font-family: var(--font-family-main);
+  }
+
+  // Puzzle rating buttons. !important on the fills beats
+  // apps/style/common.scss:652 which selects by #like/#dislike id.
+  #puzzleRatingButtons {
+    margin-top: 16px;
+
+    hr {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-md);
+      color: var(--text-neutral-tertiary);
+      margin: 8px 10px 0 0;
+
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .puzzle-rating-btn {
+      fill: var(--text-neutral-quaternary) !important;
+
+      &:hover {
+        fill: var(--text-neutral-primary) !important;
+      }
+
+      &#like.enabled {
+        fill: var(--text-error-primary-fixed) !important;
+      }
+
+      &#dislike.enabled {
+        fill: var(--text-info-primary-fixed) !important;
+      }
+    }
+  }
 }
 
 .modal-image {

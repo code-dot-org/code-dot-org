@@ -93,9 +93,9 @@ const GLOBAL_NAV_ITEMS = [
         href: '//code.org/educate/curriculum/middle-school',
       },
       {label: 'High School', href: '//code.org/educate/curriculum/high-school'},
-      {label: 'Hour of Code', href: 'https://hourofcode.com'},
+      {label: 'Hour of AI', href: '//code.org/hour-of-ai'},
       {
-        label: 'Beyond Code.org',
+        label: 'Beyond CodeAI',
         href: '//code.org/educate/curriculum/3rd-party',
       },
       {label: 'Online Community', href: 'https://forum.code.org/'},

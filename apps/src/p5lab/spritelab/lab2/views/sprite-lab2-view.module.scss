@@ -56,6 +56,8 @@ $tab-item-height: 34px;
 .tab {
   height: $tab-item-height;
   padding: 0 16px;
+  // Cancel the legacy global button margin so hover fills the group.
+  margin: 0;
   // A subtle outline gives every tab item the same "button" structure, so
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
@@ -133,6 +135,7 @@ $tab-segment-height: $tab-item-height - 2px;
 .startOver {
   height: $tab-item-height;
   padding: 0 12px;
+  margin: 0;
   margin-inline-start: 4px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
@@ -464,6 +467,13 @@ $tab-segment-height: $tab-item-height - 2px;
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
   // fades the box in on appearance.
+
+  // Keyboard focus ring for the play-mode game region; an outline so the
+  // 400x400 geometry the transform and pointer math rely on is untouched.
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: 2px;
+  }
 }
 
 .playspaceCanvas {
@@ -590,3 +600,24 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// World-tab experiment: the scene selector leads its group, with the World
+// and Code tabs as segments after it. The group's radius clips the segments,
+// and the active segment carries its own teal edge (two tabs share the
+// group, so a group-wide edge wouldn't say which is active).
+.tabGroupWorld {
+  overflow: hidden;
+
+  .tab {
+    border-radius: 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+  }
+
+  .sceneSelect {
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .tabActive {
+    box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  }
+}

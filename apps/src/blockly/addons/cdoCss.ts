@@ -73,7 +73,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .fieldAngleDropDownContainer .blocklyMenuItem{
       min-width: 0em;
     }
-    .k1ColourDropdown>tr>td {
+    .k1ColourDropdown .blocklyColourSwatch {
       height: 35px;
       width: 45px;
     }
