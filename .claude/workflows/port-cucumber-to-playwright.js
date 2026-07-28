@@ -464,6 +464,57 @@ log(`Dry Run: ${readiness.transitions.length} transition(s) characterized`)
 // agent definition; this is the per-port brief.
 phase('Generate')
 
+// Every port carries a WCAG AA baseline for the surfaces it loads. Cucumber never
+// asserted accessibility, so this is additive to the feature contract, not a port of
+// it — the Authority rule governs behaviour, not coverage. Baselines are MEASURED
+// (axe counts), never guessed, and lock in both directions so a regression and a
+// silent fix both fail loudly.
+const A11Y_GUIDANCE = `
+A11Y BASELINE (required — every port, not just Eyes)
+  This is the one addition the Authority rule does not govern. Authority fixes WHICH
+  BEHAVIOUR you port — never inherit scenarios from sibling features, never let a doc
+  override the Cucumber. It does not cap the suite at what Cucumber happened to assert.
+  Cucumber asserted no accessibility anywhere, so these scans are house policy layered
+  on top of a faithful port. Do not drop them as out-of-scope, and do not let them
+  change which scenarios you port or how you scope them.
+  Import from the shared helper, never construct AxeBuilder directly:
+    import {analyze, WCAG_AA_TAGS} from '../shared/axe';
+  analyze() calls settle() internally and returns {rule id -> failing node count}.
+
+  PLACEMENT: fold the scan into the scenario that ALREADY loads the surface, after
+  that scenario's own assertions. Add a standalone a11y-only test only for a surface
+  no scenario reaches. One scan per DISTINCT surface/state (initial load, modal open,
+  post-submit) — not one per scenario that re-loads the same surface.
+
+  SCOPE: always pass \`include\` targeting the feature's own mount. An unscoped scan
+  drags in shared header/footer chrome owned by other specs and will not be stable.
+  When the POM has a root container, expose its selector STRING (e.g. rootSelector,
+  modalSelector) on the POM and pass that, so the scope tracks the POM.
+
+  SHAPE: a module-level EXPECTED_VIOLATIONS const, asserted with toEqual so a NEW or
+  larger violation fails (regression) and a FIXED or smaller one also fails (prompting
+  a re-baseline). Single surface -> Record<string, number>; several -> keyed by surface:
+    const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
+      initialLoad: {'image-alt': 5},
+      winModal: {'color-contrast': 1},
+    };
+    expect(
+      await analyze(page, {include: level.rootSelector, tags: WCAG_AA_TAGS}),
+    ).toEqual(EXPECTED_VIOLATIONS.initialLoad);
+  A clean surface is \`{}\` — an empty map is a real baseline that locks cleanliness in,
+  not a reason to skip the scan.
+
+  MEASURE, DO NOT GUESS: run the spec against test-studio and record the counts it
+  actually reports. Then document each entry in the EXPECTED_VIOLATIONS comment: the
+  rule, the offending node, and why it fails (for color-contrast give the measured
+  ratio and colors, e.g. "#cacbcd on #f0f2f5 = 1.44:1, needs 4.5:1"). A baseline
+  nobody can audit is worse than none.
+
+  Counts must be identical across chromium/firefox/webkit; the stress gate runs all
+  three. If a rule's count differs by browser, that is a genuine finding — report it
+  rather than picking one browser's number.
+`
+
 const eyesGuidance = plan.isEyes
   ? `\nEYES (VISUAL TESTING) GUIDANCE:
   This is an @eyes feature. In the Playwright port:
@@ -499,7 +550,7 @@ SCOUT PLAN
   isEyes:             ${plan.isEyes}
   scenarios:          ${JSON.stringify(plan.scenarios)}
   stepResolution:     ${JSON.stringify(plan.stepResolution)}
-${eyesGuidance}
+${A11Y_GUIDANCE}${eyesGuidance}
 DRY RUN READINESS (wait-strategy guidance only — never implementation)
   ${JSON.stringify(readiness)}
 
@@ -510,8 +561,9 @@ locator. Wire waits from the readiness guidance (never networkidle, never waitFo
 respect the descendant-vs-container notes). Reuse shared/ and existing POMs per
 stepResolution; add NEW helpers to shared/. If foundationPresent is false, materialize
 the shared helpers/POM bases you import from the reference branch first (inside
-e2e-tests). Self-typecheck and self-lint before returning, and fix all issues.
-Report every file you wrote.`,
+e2e-tests). Run the spec against test-studio to MEASURE the a11y baselines — write the
+counts axe actually reports, never a guess. Self-typecheck and self-lint before
+returning, and fix all issues. Report every file you wrote.`,
   {agentType: 'playwright-test-generator', label: 'generate', phase: 'Generate', model: 'sonnet'},
 )
 if (!generated) throw new Error('generate agent was skipped — no port to review or stress')
@@ -529,9 +581,22 @@ GENERATED FILES: under frontend/packages/e2e-tests/tests/${plan.featureGroup} (s
 SCOUT step-resolution (for the DRY check): ${JSON.stringify(plan.stepResolution)}
 POM base / reuse target: ${plan.existingPomToReuseOrExtend || '(none)'}
 
-Run your four dimensions (fidelity, best-practices, DRY-vs-shared, TS smell), fix what you
-find inside e2e-tests only, then confirm typecheck passes. Do NOT run the test suite —
-the Healer owns runtime stability.`,
+Run your four dimensions (fidelity, best-practices, DRY-vs-shared, TS smell), plus a fifth:
+
+A11Y BASELINE. These scans are house policy layered on a faithful port, not scenarios
+inherited from a sibling feature — the Authority rule fixes which BEHAVIOUR is ported and
+does not cap the suite at what Cucumber asserted. Never remove one as out-of-scope.
+Every distinct surface the port loads carries an axe scan via
+analyze(page, {include, tags: WCAG_AA_TAGS}) from shared/axe, asserted with toEqual
+against a documented EXPECTED_VIOLATIONS map. Check: the scan is scoped with \`include\`
+to the feature's own mount and not the shared header/footer; it is folded into the
+scenario that already loads the surface rather than duplicated across scenarios; each
+expected violation carries a comment naming the rule, the node, and why it fails; and a
+clean surface is locked as \`{}\` rather than omitted. Flag — do not silently fix — any
+baseline that looks guessed rather than measured, since you are not running the suite.
+
+Fix what you find inside e2e-tests only, then confirm typecheck passes. Do NOT run the
+test suite — the Healer owns runtime stability.`,
   {agentType: 'playwright-port-reviewer', label: 'review', phase: 'Review', model: 'sonnet'},
 )
 if (!reviewed) throw new Error('review agent was skipped — port not reviewed before the stress gate')
@@ -653,7 +718,15 @@ while (!result.passed && attempt < 3) {
         .join('\n') +
       `\nDiagnose the ROOT CAUSE from the traces and fix it within e2e-tests only, per ` +
       `your instructions. Do NOT loosen assertions to force a pass — fix the real ` +
-      `timing/selector/state cause.`,
+      `timing/selector/state cause.\n` +
+      `A failing EXPECTED_VIOLATIONS map is the ONE case where correcting the expected ` +
+      `value is the right fix, and only when the observed axe counts are IDENTICAL across ` +
+      `every repeat and browser: the baseline was mis-measured, so write the measured ` +
+      `counts and update the comment explaining each one. If the counts VARY between runs ` +
+      `or browsers the baseline is not the bug — the scan is racing the page or its ` +
+      `\`include\` scope is too wide, catching shared chrome. Fix the scope or the ` +
+      `readiness wait. Never delete an a11y scan, widen it to {}, or drop \`include\` to ` +
+      `make it pass.`,
     {agentType: 'playwright-test-healer', label: `heal-${attempt}`, phase: 'Heal', model: 'sonnet'},
   )
   const reverify = await stress(`reverify-${attempt}`)
