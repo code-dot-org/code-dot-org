@@ -103,15 +103,15 @@ describe('animationList', function () {
       );
     });
 
-    it(`returns the absolute sourceUrl unchanged`, function () {
+    it(`returns the sourceUrl passed through the media proxy if it's an absolute url`, function () {
       const insecureProps = {sourceUrl: 'http://bar'};
       expect(animationSourceUrl(key, insecureProps, '123')).to.equal(
-        'http://bar'
+        `//${document.location.host}/media?u=http%3A%2F%2Fbar`
       );
 
       const secureProps = {sourceUrl: 'https://bar'};
       expect(animationSourceUrl(key, secureProps, '123')).to.equal(
-        'https://bar'
+        `//${document.location.host}/media?u=https%3A%2F%2Fbar`
       );
     });
 
