@@ -7,8 +7,6 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
-
 import AssetManager, {ImageMode} from './AssetManager';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
@@ -120,7 +118,7 @@ export default class ImagePicker extends React.Component {
         cursor: 'pointer',
       },
       divider: {
-        borderColor: color.purple,
+        borderColor: 'var(--borders-brand-purple-primary)',
         margin: '5px 0',
       },
     };

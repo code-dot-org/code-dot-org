@@ -165,7 +165,7 @@ const styles = {
     margin: '0 0 0 5px',
   },
   divider: {
-    borderColor: color.purple,
+    borderColor: 'var(--borders-brand-purple-primary)',
     margin: '5px 0',
   },
   warning: {

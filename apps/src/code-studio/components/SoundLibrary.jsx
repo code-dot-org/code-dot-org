@@ -6,7 +6,6 @@ import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
 import Sounds from '../../Sounds';
-import * as color from '../../util/color';
 
 import SoundCategory from './SoundCategory';
 import SoundList from './SoundList';
@@ -178,7 +177,7 @@ const styles = {
   },
   allCategoriesText: {
     fontSize: 16,
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
     ...fontConstants['main-font-semi-bold'],
     paddingRight: 5,
     cursor: 'pointer',
