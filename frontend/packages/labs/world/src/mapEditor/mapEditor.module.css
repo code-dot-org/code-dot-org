@@ -56,26 +56,71 @@
   white-space: nowrap;
 }
 
-/* The map stage: the canvas fits the width, 16:9, centred. */
+/* The map stage: the canvas fills it; the camera draws the bordered map space
+   somewhere inside. Positioned so the toolbar can overlay a corner. */
 .stage {
+  position: relative;
   flex: 1;
   min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
-  padding: 0.5rem;
 }
 
 .canvas {
   width: 100%;
-  max-width: 960px;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   display: block;
   image-rendering: pixelated;
-  box-shadow: 0 0 0 1px var(--borders-neutral-primary);
+  cursor: grab; /* the empty space pans */
+  touch-action: none; /* pointer pan/zoom own the gesture */
 }
 
 .canvas.placing {
   cursor: crosshair;
+}
+
+.canvas.panning {
+  cursor: grabbing;
+}
+
+/* Floating view controls (zoom readout + reset), top-right of the stage. */
+.toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-primary) 80%,
+    transparent
+  );
+  border: var(--lab-border-default);
+}
+
+.zoom {
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+  min-width: 3ch;
+  text-align: right;
+}
+
+.resetButton {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: var(--lab-border-default);
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background: var(
+    --background-neutral-tertiary,
+    var(--background-neutral-secondary)
+  );
 }
