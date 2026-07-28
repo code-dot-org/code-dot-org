@@ -21,6 +21,9 @@ import {
   actorOptionsExtension,
   animationFileOptions,
   animationFileOptionsExtension,
+  mapActorTypes,
+  mapOptions,
+  mapOptionsExtension,
   worldOptions,
   worldOptionsExtension,
 } from './moduleOptions';
@@ -358,6 +361,41 @@ const worldAddActor = defineBlock({
   },
 });
 
+const worldLoadMap = defineBlock({
+  type: 'world_load_map',
+  message0: 'load map %1',
+  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions()}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [mapOptionsExtension],
+  style: 'setup_blocks',
+  tooltip: 'Place all the actors a map file describes into the scene.',
+  generator: {
+    javascript(block, generator) {
+      const map = block.getFieldValue('MAP');
+      // A map places instances of actor templates (`scene.populate`), so each
+      // referenced template is imported and registered first. The generator
+      // reads the map's actor modules from the live project registry.
+      const defines = mapActorTypes(map)
+        .map(type => {
+          addImport(
+            generator,
+            `mod:${type}`,
+            `import ${importVar(type)} from ${str(type)};`,
+          );
+          return `scene.define(${str(type)}, ${importVar(type)});\n`;
+        })
+        .join('');
+      addImport(
+        generator,
+        `map:${map}`,
+        `import ${importVar(map)} from ${str(map)};`,
+      );
+      return `${defines}scene.populate(${importVar(map)});\n`;
+    },
+  },
+});
+
 // ── World composition ────────────────────────────────────────────────────────
 // A `.world` file is authored with `world_world` (the root, like `world_actor`)
 // and `world_use_rule` / `world_use_animations` children — the rules in play and
@@ -469,6 +507,7 @@ export const DOMAIN_BLOCKS = [
   worldEventValue,
   worldScene,
   worldAddActor,
+  worldLoadMap,
   worldWorld,
   worldUseRule,
   worldUseAnimations,
@@ -478,7 +517,12 @@ export const DOMAIN_BLOCKS = [
 export const DOMAIN_TOOLBOX: Toolbox = [
   {
     name: 'Scene',
-    blocks: ['world_scene', 'world_add_actor', 'world_set_position'],
+    blocks: [
+      'world_scene',
+      'world_add_actor',
+      'world_load_map',
+      'world_set_position',
+    ],
   },
   {
     name: 'World',

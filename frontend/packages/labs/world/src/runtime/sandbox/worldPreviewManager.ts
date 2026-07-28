@@ -68,6 +68,10 @@ export class WorldPreviewManager {
         this.pending.get(data.id)?.resolve(data.detail);
         this.pending.delete(data.id);
         break;
+      case FromPreviewMessage.THUMBNAILS:
+        this.pending.get(data.id)?.resolve(data.thumbnails);
+        this.pending.delete(data.id);
+        break;
       case FromPreviewMessage.CONSOLE:
         this.opts.onConsole?.(data.level, data.args);
         break;
@@ -105,6 +109,27 @@ export class WorldPreviewManager {
       {type: ToPreviewMessage.STOP},
       this.sandboxOrigin,
     );
+  }
+
+  /**
+   * Render actor thumbnails from a compiled thumbnail-manifest module; resolves
+   * with `{actorType: dataUrl}`. Independent of `load`, so it never disturbs the
+   * running game.
+   */
+  async thumbnails(moduleUrl: string): Promise<Record<string, string>> {
+    await this.ready;
+    const id = crypto.randomUUID();
+    const result = new Promise<Record<string, string>>((resolve, reject) => {
+      this.pending.set(id, {
+        resolve: value => resolve(value as Record<string, string>),
+        reject,
+      });
+    });
+    this.iframe.contentWindow?.postMessage(
+      {type: ToPreviewMessage.THUMBNAILS, id, moduleUrl},
+      this.sandboxOrigin,
+    );
+    return result;
   }
 
   /**

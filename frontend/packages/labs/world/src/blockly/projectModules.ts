@@ -97,3 +97,38 @@ export function projectAnimationFileOptions(
   }
   return options;
 }
+
+/**
+ * Actor module paths referenced by each map file (JSON under `maps/`), keyed by
+ * the map's extension-less path. The `world_load_map` block reads this to emit
+ * an import + `scene.define` for each actor a map places, then `scene.populate`.
+ */
+export function projectMapActorTypes(
+  files: Record<string, string>,
+): Record<string, string[]> {
+  const maps: Record<string, string[]> = {};
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.startsWith('maps/') || !path.endsWith('.map')) {
+      continue;
+    }
+    let types: string[] = [];
+    try {
+      const actors = (
+        JSON.parse(contents) as {actors?: Array<{type?: unknown}>}
+      ).actors;
+      if (Array.isArray(actors)) {
+        types = [
+          ...new Set(
+            actors
+              .map(actor => actor?.type)
+              .filter((type): type is string => typeof type === 'string'),
+          ),
+        ];
+      }
+    } catch {
+      // Not valid JSON yet (mid-edit); leave this map with no types.
+    }
+    maps[path.replace(/\.map$/, '')] = types;
+  }
+  return maps;
+}

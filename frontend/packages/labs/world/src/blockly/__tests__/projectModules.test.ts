@@ -3,6 +3,7 @@ import {describe, expect, it} from 'vitest';
 import {
   projectActorOptions,
   projectAnimationFileOptions,
+  projectMapActorTypes,
   projectWorldOptions,
 } from '../projectModules';
 
@@ -51,5 +52,26 @@ describe('projectModules', () => {
     const paths = projectActorOptions(FILES).map(([, path]) => path);
     expect(paths).not.toContain('animations/game');
     expect(paths).not.toContain('scenes/main');
+  });
+});
+
+describe('projectMapActorTypes', () => {
+  it('maps a map path to the distinct actor modules it places', () => {
+    const files = {
+      'maps/level1.map': JSON.stringify({
+        type: 'map',
+        actors: [
+          {type: 'actors/player'},
+          {type: 'actors/coin'},
+          {type: 'actors/coin'}, // deduped
+        ],
+      }),
+      'maps/empty.map': 'not json yet',
+      'actors/player.actor': '{}',
+    };
+    const maps = projectMapActorTypes(files);
+    expect(maps['maps/level1']).toEqual(['actors/player', 'actors/coin']);
+    expect(maps['maps/empty']).toEqual([]); // invalid JSON → no types
+    expect(maps['actors/player']).toBeUndefined(); // not under maps/
   });
 });

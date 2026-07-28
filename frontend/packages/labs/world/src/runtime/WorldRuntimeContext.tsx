@@ -32,6 +32,7 @@ import {projectAssets} from './projectAssets';
 import {projectFiles} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {WorldPreviewManager} from './sandbox/worldPreviewManager';
+import {thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
 /** A Blockly-authored file (.rule/.actor/.scene/.world) needs generation. */
@@ -57,6 +58,11 @@ interface WorldRuntimeValue {
   restart: () => void;
   /** Hand the preview sandbox the lab's resolved letterbox / border colors. */
   setPreviewColors: (background: string, border: string) => void;
+  /** Render actor-template thumbnails (map editor picker): `type` → data URL. */
+  getActorThumbnails: (
+    actorPaths: string[],
+    worldPath: string,
+  ) => Promise<Record<string, string>>;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -237,6 +243,29 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     void compileAndLoad(files);
   };
 
+  /**
+   * Render a static thumbnail for each actor template (for the map editor's
+   * actor picker). Compiles a throwaway "thumbnail manifest" entry importing the
+   * given world (for its animations) and actors, then has the preview surface
+   * draw each — independent of the running game.
+   */
+  const getActorThumbnails = async (
+    actorPaths: string[],
+    worldPath: string,
+  ): Promise<Record<string, string>> => {
+    const pair = managers.current;
+    if (!pair || actorPaths.length === 0) {
+      return {};
+    }
+    const files = generateBlocklyFiles(projectFiles(currentSources.source));
+    const entry = '__thumbnails__.js';
+    const moduleUrl = await pair.compile.compile(
+      {...files, [entry]: thumbnailManifest(actorPaths, worldPath)},
+      entry,
+    );
+    return pair.preview.thumbnails(moduleUrl);
+  };
+
   const value: WorldRuntimeValue = {
     isConfigured: Boolean(sandboxUrl),
     previewIframe,
@@ -246,6 +275,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     restart,
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
+    getActorThumbnails,
   };
 
   return (

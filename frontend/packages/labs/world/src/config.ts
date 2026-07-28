@@ -5,6 +5,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
+import {MapEditor} from './mapEditor/MapEditor';
 
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
@@ -13,11 +14,11 @@ import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
  * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, `scene`,
- * and `world` are Blockly-authored: they carry no CodeMirror language, and
- * `editorComponents` routes them to the Blockly editor instead (INTERFACE.md — a
- * `.rule`/`.actor`/`.scene`/`.world` file is a Blockly workspace stored as
- * serialized JSON). Images (`png`) are supported (shown in the tree, handed to
- * the game) but not edited.
+ * and `world` are Blockly-authored, and `map` is a scene-instantiation document;
+ * they carry no CodeMirror language, and `editorComponents` routes each to its
+ * custom editor (the Blockly workspace editor, or the visual map editor).
+ * Images (`png`) are supported (shown in the tree, handed to the game) but not
+ * edited.
  */
 export const WORLD_EDITABLE_FILE_TYPES = [
   'js',
@@ -29,6 +30,8 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'actor',
   'scene',
   'world',
+  // A `.map` is a scene-instantiation document, edited in the visual map editor.
+  'map',
 ];
 const IMAGE_FILE_TYPES = ['png'];
 
@@ -47,6 +50,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     actor: 'actor',
     scene: 'scene',
     world: 'world',
+    map: 'map',
   },
   languageExtensions: {
     javascript: javascript(),
@@ -60,5 +64,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     actor: BlocklyFileEditor,
     scene: BlocklyFileEditor,
     world: BlocklyFileEditor,
+    map: MapEditor,
   },
 };

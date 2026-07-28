@@ -5,8 +5,9 @@
 // self-hosted engine bundle URL (`/vendor/world-lab.mjs`), so there is one
 // engine instance shared with the binding's type view (SANDBOX.md / PLAN §7).
 
-import type {World, WorldSnapshot} from 'world-lab';
+import type {ActorBuilder, World, WorldBuilder, WorldSnapshot} from 'world-lab';
 
+import {frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
 import {
@@ -20,6 +21,16 @@ import {
 } from '../messages';
 
 import {registerBuildSw} from './registerBuildSw';
+
+const THUMBNAIL_SIZE = 48;
+
+/** The default export of a compiled thumbnail-manifest module. */
+interface ThumbnailManifest {
+  default?: {
+    world: WorldBuilder;
+    actors: Array<{type: string; builder: ActorBuilder}>;
+  };
+}
 
 /** The shape the compiled `scenes/main` module default-exports. */
 interface SceneModule {
@@ -49,6 +60,8 @@ export async function start(): Promise<void> {
   let binding: PhaserBinding | null = null;
   let runningWorld: World | null = null;
   let baseline: WorldSnapshot | null = null;
+  // The last load's uploaded textures — reused when rendering thumbnails.
+  let lastAssets: Record<string, string> = {};
 
   window.addEventListener('message', event => {
     if (!parentOrigin || event.origin !== parentOrigin) {
@@ -57,6 +70,8 @@ export async function start(): Promise<void> {
     const data = event.data as ToPreview;
     if (data?.type === ToPreviewMessage.LOAD) {
       void load(data);
+    } else if (data?.type === ToPreviewMessage.THUMBNAILS) {
+      void sendThumbnails(data.id, data.moduleUrl);
     } else if (data?.type === ToPreviewMessage.STOP) {
       binding?.stop();
       binding = null;
@@ -77,7 +92,51 @@ export async function start(): Promise<void> {
     }
   });
 
+  /**
+   * Render each actor a thumbnail-manifest module lists to a data URL. Builds a
+   * throwaway world from the manifest, adds one of each actor (no tick — their
+   * initial frame is what the picker shows), and draws each frame. Independent
+   * of the running game.
+   */
+  async function sendThumbnails(id: string, moduleUrl: string) {
+    const thumbnails: Record<string, string> = {};
+    try {
+      const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
+      const manifest = mod.default;
+      if (manifest) {
+        const world = manifest.world.instantiate();
+        const typeOf = new Map<unknown, string>();
+        for (const {type, builder} of manifest.actors) {
+          const actor = builder.instantiate(`thumb:${type}`);
+          world.addActor(actor);
+          typeOf.set(actor, type);
+        }
+        for (const state of world.renderSnapshot()) {
+          const type = typeOf.get(state.actor);
+          if (type) {
+            thumbnails[type] = await frameThumbnail(
+              state.frame,
+              assetBase,
+              lastAssets,
+              THUMBNAIL_SIZE,
+            );
+          }
+        }
+      }
+    } catch (error) {
+      post({
+        type: FromPreviewMessage.ENGINE_ERROR,
+        id,
+        message: error instanceof Error ? error.message : String(error),
+        phase: 'construct',
+      });
+      return;
+    }
+    post({type: FromPreviewMessage.THUMBNAILS, id, thumbnails});
+  }
+
   async function load({id, moduleUrl, assets}: LoadMessage) {
+    lastAssets = assets ?? {};
     try {
       const mod: SceneModule = await import(/* @vite-ignore */ moduleUrl);
       const scene = mod.default;

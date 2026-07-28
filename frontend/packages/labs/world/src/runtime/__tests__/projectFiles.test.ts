@@ -14,11 +14,12 @@ describe('projectFiles', () => {
       'actors/ground.js',
       'actors/player.actor',
       'animations/game.json',
+      'maps/level1.map',
       'scenes/main.scene',
       'worlds/platform.world',
     ]);
     // The scene is a Blockly workspace (generated to a SceneBuilder at compile).
-    expect(files['scenes/main.scene']).toContain('world_add_actor');
+    expect(files['scenes/main.scene']).toContain('world_load_map');
   });
 
   it('nests through multiple folder levels', () => {

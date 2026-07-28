@@ -16,6 +16,7 @@ const EXT_ORDER = [
   '.ts',
   '.js',
   '.json',
+  '.map',
   '.rule',
   '.actor',
   '.scene',
@@ -65,7 +66,9 @@ function loaderFor(path: string): Loader {
   if (path.endsWith('.ts')) {
     return 'ts';
   }
-  if (path.endsWith('.json')) {
+  if (path.endsWith('.json') || path.endsWith('.map')) {
+    // A `.map` is a raw scene-instantiation document (JSON), imported by the
+    // scene's `load map` block and handed to `scene.populate`.
     return 'json';
   }
   if (path.endsWith('.png')) {

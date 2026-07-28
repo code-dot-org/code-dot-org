@@ -62,27 +62,8 @@ const onEvent = (event: string, x: number, y: number, message: string) => ({
   },
 });
 
-// One `add actor` block: places `actorPath` and sets its start position in the
-// `do` body. The block's own `id` becomes the actor instance id (stable across
-// edits), so it is spelled out here rather than left to Blockly to randomize.
-const addActorBlock = (
-  id: string,
-  actorPath: string,
-  x: number,
-  y: number,
-  next?: object,
-) => ({
-  type: 'world_add_actor',
-  id,
-  fields: {ACTOR: actorPath},
-  inputs: {
-    DO: {block: {type: 'world_set_position', fields: {X: x, Y: y}}},
-  },
-  ...(next ? {next: {block: next}} : {}),
-});
-
 // The scene, authored in Blockly (`main.scene`): a `world_scene` root naming the
-// world, with a chain of `add actor` blocks placing each template instance.
+// world and a `load map` block that places every actor its map file describes.
 const MAIN_SCENE = JSON.stringify(
   {
     blocks: {
@@ -94,30 +75,37 @@ const MAIN_SCENE = JSON.stringify(
           fields: {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
           inputs: {
             BODY: {
-              block: addActorBlock(
-                'add-player',
-                'actors/player',
-                480,
-                80,
-                addActorBlock(
-                  'add-ground',
-                  'actors/ground',
-                  480,
-                  440,
-                  addActorBlock(
-                    'add-coin',
-                    'actors/coin',
-                    660,
-                    220,
-                    addActorBlock('add-ball', 'actors/ball', 300, 220),
-                  ),
-                ),
-              ),
+              block: {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
             },
           },
         },
       ],
     },
+  },
+  null,
+  2,
+);
+
+// A Map is the raw scene-instantiation document (SceneBuilder.populate): each
+// entry places an instance of an actor template by its module path, with an
+// optional id and property overrides keyed by owner (trait) id then property id
+// — `positional.position` is the actor's start position. A dedicated map editor
+// will author these; for now it is edited as JSON.
+const place = (type: string, id: string, x: number, y: number) => ({
+  type,
+  id,
+  properties: {positional: {position: {x, y}}},
+});
+const LEVEL1_MAP = JSON.stringify(
+  {
+    type: 'map',
+    tile: {width: 32, height: 32},
+    actors: [
+      place('actors/player', 'player', 480, 80),
+      place('actors/ground', 'ground', 480, 440),
+      place('actors/coin', 'coin', 660, 220),
+      place('actors/ball', 'ball', 300, 220),
+    ],
   },
   null,
   2,
@@ -286,12 +274,20 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: GAME_ANIMATIONS,
         folderId: 'animations',
       },
+      level1: {
+        id: 'level1',
+        name: 'level1.map',
+        language: 'map',
+        contents: LEVEL1_MAP,
+        folderId: 'maps',
+      },
     },
     folders: {
       scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
       animations: {id: 'animations', name: 'animations', parentId: '0'},
+      maps: {id: 'maps', name: 'maps', parentId: '0'},
     },
     openFiles: ['main'],
   },
