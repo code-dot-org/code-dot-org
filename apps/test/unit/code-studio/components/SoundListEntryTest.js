@@ -38,9 +38,9 @@ describe('SoundListEntry', () => {
       <SoundListEntry {...defaultProps} isSelected={false} />
     );
     // First child is a icon control for pause and play
-    expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa-solid fa-circle-play fa-2x'
-    );
+    expect(
+      wrapper.props().children[0].props.children.props.children.props.iconName
+    ).toEqual('circle-play');
   });
 
   it('renders a pause button when playing', () => {
@@ -49,9 +49,9 @@ describe('SoundListEntry', () => {
     );
     wrapper.setState({isPlaying: true});
     // First child is a icon control for pause and play
-    expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa-solid fa-circle-pause fa-2x'
-    );
+    expect(
+      wrapper.props().children[0].props.children.props.children.props.iconName
+    ).toEqual('circle-pause');
   });
 
   it('stops playing the sound when deselected', () => {
