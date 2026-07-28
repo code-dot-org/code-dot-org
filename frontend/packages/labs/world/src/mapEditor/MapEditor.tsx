@@ -1,4 +1,5 @@
 import type {
+  KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
   PointerEvent as ReactPointerEvent,
 } from 'react';
@@ -36,6 +37,7 @@ const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
 const MAP_BG = '#151521'; // the map region itself
 const GRID = 'rgba(255, 255, 255, 0.07)';
 const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
+const SELECT = '#4d9fff'; // highlights the selected placed actor
 
 const clamp = (n: number, lo: number, hi: number) =>
   Math.max(lo, Math.min(hi, n));
@@ -96,6 +98,15 @@ function parseMap(contents: string): MapDoc {
 const positionOf = (actor: Placement): Vec | undefined =>
   actor.properties?.positional?.position;
 
+/** A copy of `actor` with its positional position set to `pos`. */
+const withPosition = (actor: Placement, pos: Vec): Placement => ({
+  ...actor,
+  properties: {
+    ...actor.properties,
+    positional: {...actor.properties?.positional, position: pos},
+  },
+});
+
 /** Centre the whole map in a `w`×`h` pane with a margin (the reset view). */
 function fitView(w: number, h: number): View {
   const scale = clamp(
@@ -141,7 +152,10 @@ export const MapEditor = ({
   const [map, setMap] = useState(() => parseMap(initialContents));
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
+  // `selected` is the picker template to PLACE (place mode); when null we are in
+  // select mode, where `selectedId` is the placed instance under edit.
   const [selected, setSelected] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [hover, setHover] = useState<Vec | null>(null);
   const [size, setSize] = useState<Size>({w: 0, h: 0});
   const [view, setView] = useState<View | null>(null);
@@ -149,6 +163,10 @@ export const MapEditor = ({
 
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Latest map, for gesture handlers that commit once at the end (a drag mutates
+  // it live for feedback but writes `onChange` only on release).
+  const mapRef = useRef(map);
+  mapRef.current = map;
   // Active pan gesture: the pointer/offset at drag start (a ref so pointermove
   // doesn't need it in a dependency).
   const panRef = useRef<{
@@ -157,6 +175,15 @@ export const MapEditor = ({
     ox: number;
     oy: number;
     id: number;
+  } | null>(null);
+  // Active actor-move gesture: which instance, the grab offset (actor − pointer,
+  // in world units), the pointer id, and whether it actually moved.
+  const dragRef = useRef<{
+    id: string;
+    offX: number;
+    offY: number;
+    pointerId: number;
+    moved: boolean;
   } | null>(null);
 
   // `getActorThumbnails` is a fresh closure each render; hold it in a ref so the
@@ -279,7 +306,66 @@ export const MapEditor = ({
     };
   };
 
-  const endPan = () => {
+  // Topmost placed actor under a world point (actors draw in array order, so
+  // search back-to-front); its DRAW_SIZE box is the hit area.
+  const hitTest = (world: Vec): Placement | undefined => {
+    const actors = mapRef.current.actors;
+    for (let i = actors.length - 1; i >= 0; i--) {
+      const pos = positionOf(actors[i]);
+      if (
+        pos &&
+        Math.abs(world.x - pos.x) <= DRAW_SIZE / 2 &&
+        Math.abs(world.y - pos.y) <= DRAW_SIZE / 2
+      ) {
+        return actors[i];
+      }
+    }
+    return undefined;
+  };
+
+  // Live-move a placed actor (local only — the drag commits once on release).
+  const moveActor = (id: string, pos: Vec) => {
+    const next = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === id ? withPosition(a, pos) : a,
+      ),
+    };
+    mapRef.current = next;
+    setMap(next);
+  };
+
+  const deleteActor = (id: string) => {
+    commit({
+      ...mapRef.current,
+      actors: mapRef.current.actors.filter(a => a.id !== id),
+    });
+    setSelectedId(null);
+  };
+
+  const beginPan = (event: ReactPointerEvent, v: View) => {
+    panRef.current = {
+      sx: event.clientX,
+      sy: event.clientY,
+      ox: v.x,
+      oy: v.y,
+      id: event.pointerId,
+    };
+    canvasRef.current?.setPointerCapture(event.pointerId);
+    setPanning(true);
+  };
+
+  const endGesture = () => {
+    const drag = dragRef.current;
+    if (drag) {
+      canvasRef.current?.releasePointerCapture(drag.pointerId);
+      dragRef.current = null;
+      // Commit ONCE, and only if the actor actually moved — writing the `.map`
+      // recompiles the game, so a bare select (down-up, no move) must not.
+      if (drag.moved) {
+        commit(mapRef.current);
+      }
+    }
     const pan = panRef.current;
     if (pan) {
       canvasRef.current?.releasePointerCapture(pan.id);
@@ -288,25 +374,56 @@ export const MapEditor = ({
     }
   };
 
-  // Pan on middle-drag, or left-drag when no actor is selected (so it never
-  // fights placement, which uses left-click while an actor is selected).
   const handlePointerDown = (event: ReactPointerEvent) => {
-    if (!view || (event.button !== 1 && !(event.button === 0 && !selected))) {
+    if (!view) {
       return;
     }
+    if (event.button === 1) {
+      event.preventDefault(); // middle button always pans
+      beginPan(event, view);
+      return;
+    }
+    if (event.button !== 0) {
+      return;
+    }
+    // Left button in PLACE mode: placement happens on click, nothing on down.
+    if (selected) {
+      return;
+    }
+    // Left button in SELECT mode: grab a placed actor, else deselect + pan.
+    const world = screenToWorld(event.clientX, event.clientY);
+    const hit = isReadOnly ? undefined : hitTest(world);
+    if (hit) {
+      event.preventDefault();
+      const pos = positionOf(hit)!;
+      setSelectedId(hit.id);
+      dragRef.current = {
+        id: hit.id,
+        offX: pos.x - world.x,
+        offY: pos.y - world.y,
+        pointerId: event.pointerId,
+        moved: false,
+      };
+      canvasRef.current?.setPointerCapture(event.pointerId);
+      canvasRef.current?.focus(); // so Delete/Backspace reach onKeyDown
+      return;
+    }
+    setSelectedId(null);
     event.preventDefault();
-    panRef.current = {
-      sx: event.clientX,
-      sy: event.clientY,
-      ox: view.x,
-      oy: view.y,
-      id: event.pointerId,
-    };
-    canvasRef.current?.setPointerCapture(event.pointerId);
-    setPanning(true);
+    beginPan(event, view);
   };
 
   const handlePointerMove = (event: ReactPointerEvent) => {
+    const drag = dragRef.current;
+    if (drag) {
+      drag.moved = true;
+      const world = screenToWorld(event.clientX, event.clientY);
+      moveActor(
+        drag.id,
+        snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
+      );
+      return;
+    }
     const pan = panRef.current;
     if (pan) {
       const dx = event.clientX - pan.sx;
@@ -320,12 +437,24 @@ export const MapEditor = ({
   };
 
   const handlePointerLeave = () => {
-    endPan();
+    endGesture();
     setHover(null);
   };
 
+  const handleKeyDown = (event: ReactKeyboardEvent) => {
+    if (
+      !isReadOnly &&
+      selectedId &&
+      (event.key === 'Delete' || event.key === 'Backspace')
+    ) {
+      event.preventDefault();
+      deleteActor(selectedId);
+    }
+  };
+
   const handleClick = (event: ReactMouseEvent) => {
-    // A pan drag ends with a click; ignore it (and any click without a template).
+    // Placement (place mode). A pan drag ends with a click; ignore it, and any
+    // click with no template selected.
     if (isReadOnly || !selected || !view || panRef.current) {
       return;
     }
@@ -412,16 +541,32 @@ export const MapEditor = ({
       }
       ctx.globalAlpha = 1;
     };
+    let selectedPos: Vec | undefined;
     for (const actor of map.actors) {
       const pos = positionOf(actor);
       if (pos) {
         drawActor(actor.type, pos, 1);
+        if (actor.id === selectedId) {
+          selectedPos = pos;
+        }
       }
+    }
+    // Outline the selected placed actor (drawn last so it sits on top).
+    if (selectedPos) {
+      ctx.strokeStyle = SELECT;
+      ctx.lineWidth = 2 / view.scale;
+      const inset = DRAW_SIZE / 2 + 2;
+      ctx.strokeRect(
+        selectedPos.x - inset,
+        selectedPos.y - inset,
+        inset * 2,
+        inset * 2,
+      );
     }
     if (selected && hover) {
       drawActor(selected, hover, 0.5);
     }
-  }, [view, size, map, images, hover, selected]);
+  }, [view, size, map, images, hover, selected, selectedId]);
 
   const canvasClass = [
     styles.canvas,
@@ -442,7 +587,11 @@ export const MapEditor = ({
                 ? `${styles.actor} ${styles.selected}`
                 : styles.actor
             }
-            onClick={() => setSelected(path === selected ? null : path)}
+            onClick={() => {
+              // Entering place mode clears any placed-actor selection.
+              setSelected(path === selected ? null : path);
+              setSelectedId(null);
+            }}
             aria-pressed={path === selected}
           >
             {thumbnails[path] ? (
@@ -458,11 +607,13 @@ export const MapEditor = ({
         <canvas
           ref={canvasRef}
           className={canvasClass}
+          tabIndex={0}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
-          onPointerUp={endPan}
+          onPointerUp={endGesture}
           onPointerLeave={handlePointerLeave}
           onClick={handleClick}
+          onKeyDown={handleKeyDown}
         />
         <div className={styles.toolbar}>
           <span className={styles.zoom}>
