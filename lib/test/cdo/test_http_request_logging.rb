@@ -74,4 +74,11 @@ describe Cdo::HttpRequestLogging do
       _(subject.should_log?(:error)).must_equal true
     end
   end
+
+  describe '.enabled?' do
+    it 'is false when Rails is not loaded' do
+      # These lib unit tests run outside Rails.
+      _(subject.enabled?).must_equal false
+    end
+  end
 end
