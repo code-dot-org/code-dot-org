@@ -120,7 +120,7 @@ export default class AssetRow extends React.Component {
             </span>
 
             {this.state.attemptedUsedDelete && (
-              <div style={styles.deleteWarning}>
+              <div style={styles.confirmDeleteWarning}>
                 {i18n.cannotDeleteUsedImage()}
               </div>
             )}
@@ -150,7 +150,7 @@ export default class AssetRow extends React.Component {
                 Cancel
               </MuiButton>
             </span>
-            <div style={styles.deleteWarning}>
+            <div style={styles.confirmDeleteWarning}>
               {i18n.confirmDeleteExplanation()}
             </div>
             {this.state.actionText}
@@ -197,9 +197,9 @@ const styles = {
     alignItems: 'center',
     gap: 8,
   },
-  deleteWarning: {
-    paddingLeft: '34px',
-    textAlign: 'left',
+  confirmDeleteWarning: {
+    marginTop: 8,
+    textAlign: 'right',
     color: color.red,
   },
 };
