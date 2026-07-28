@@ -1,6 +1,10 @@
 import {describe, expect, it} from 'vitest';
 
-import {assembleActorModule, assembleSceneModule} from '../assembleActorModule';
+import {
+  assembleActorModule,
+  assembleSceneModule,
+  assembleWorldModule,
+} from '../assembleActorModule';
 
 describe('assembleActorModule', () => {
   it('emits the actor first, then events, then the default export', () => {
@@ -48,5 +52,19 @@ describe('assembleSceneModule', () => {
 
   it('still ends with the scene export when there is no scene block', () => {
     expect(assembleSceneModule([])).toBe('export default scene;\n');
+  });
+});
+
+describe('assembleWorldModule', () => {
+  it('emits the world block (with its inline rules) then the default export', () => {
+    const code = assembleWorldModule([
+      {
+        type: 'world_world',
+        code: 'const world = mk();\nworld.useRules([X]);\n',
+      },
+    ]);
+    expect(code).toBe(
+      'const world = mk();\nworld.useRules([X]);\nexport default world;\n',
+    );
   });
 });

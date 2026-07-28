@@ -6,12 +6,21 @@
 // deserializes a block that selected it.
 
 import {setProjectAnimations} from './animationOptions';
-import {setProjectActors, setProjectWorlds} from './moduleOptions';
+import {
+  setProjectActors,
+  setProjectAnimationFiles,
+  setProjectWorlds,
+} from './moduleOptions';
 import {projectAnimationIds} from './projectAnimations';
-import {projectActorOptions, projectWorldOptions} from './projectModules';
+import {
+  projectActorOptions,
+  projectAnimationFileOptions,
+  projectWorldOptions,
+} from './projectModules';
 
 export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectAnimations(projectAnimationIds(files));
   setProjectActors(projectActorOptions(files));
   setProjectWorlds(projectWorldOptions(files));
+  setProjectAnimationFiles(projectAnimationFileOptions(files));
 }

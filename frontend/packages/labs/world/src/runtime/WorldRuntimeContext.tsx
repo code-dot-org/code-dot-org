@@ -34,9 +34,9 @@ import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {WorldPreviewManager} from './sandbox/worldPreviewManager';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
-/** A `.rule` / `.actor` / `.scene` file needs Blockly → world-lab generation. */
+/** A Blockly-authored file (.rule/.actor/.scene/.world) needs generation. */
 const isBlocklyPath = (path: string): boolean =>
-  path.endsWith('.rule') || path.endsWith('.actor') || path.endsWith('.scene');
+  /\.(rule|actor|scene|world)$/.test(path);
 
 export interface ConsoleLine {
   level: string;
