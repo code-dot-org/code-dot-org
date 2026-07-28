@@ -297,11 +297,6 @@
     }
 
     .selectedSegmentedButton.segmentedButton {
-      // The selected segment is a fully rounded chip raised above the fused
-      // seam — its corners overlay the neighbors' straight edges (legacy
-      // stacks selected below, z-index 0 vs 1, so flip it above).
-      border-radius: var(--shape-sm, 0.375rem);
-      z-index: 2;
       background-color: var(--background-selected-primary);
       // Pairs with background-selected per colors_codeAi.css — always use
       // the selected background/border/text tokens together.
