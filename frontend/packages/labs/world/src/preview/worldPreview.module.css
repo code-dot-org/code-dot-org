@@ -1,3 +1,11 @@
+/* The PanelContainer (header + game) fills the space above the fixed-height
+   console in the preview pane. */
+.panel {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
 /* The preview fills its pane; the pane is sized by the layout (split width or
    full column). The mounted iframe fills this container. */
 .frame {
