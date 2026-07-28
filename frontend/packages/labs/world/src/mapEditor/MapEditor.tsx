@@ -1,4 +1,6 @@
+import {Button, Typography} from '@mui/material';
 import type {
+  ChangeEvent,
   KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
   PointerEvent as ReactPointerEvent,
@@ -6,6 +8,7 @@ import type {
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
@@ -38,6 +41,7 @@ const MAP_BG = '#151521'; // the map region itself
 const GRID = 'rgba(255, 255, 255, 0.07)';
 const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
 const SELECT = '#4d9fff'; // highlights the selected placed actor
+const DEG2RAD = Math.PI / 180;
 
 const clamp = (n: number, lo: number, hi: number) =>
   Math.max(lo, Math.min(hi, n));
@@ -53,7 +57,15 @@ interface Vec {
 interface Placement {
   type: string;
   id: string;
-  properties?: {positional?: {position?: Vec}};
+  properties?: {
+    positional?: {position?: Vec; scale?: Vec; rotation?: number};
+  };
+}
+/** An actor's resolved transform, with engine defaults (scale 1, rotation 0). */
+interface Transform {
+  pos: Vec;
+  scale: Vec;
+  rotation: number;
 }
 interface MapDoc {
   type: 'map';
@@ -98,12 +110,25 @@ function parseMap(contents: string): MapDoc {
 const positionOf = (actor: Placement): Vec | undefined =>
   actor.properties?.positional?.position;
 
-/** A copy of `actor` with its positional position set to `pos`. */
-const withPosition = (actor: Placement, pos: Vec): Placement => ({
+/** Resolve an actor's transform, filling the engine's defaults. */
+const transformOf = (actor: Placement): Transform => {
+  const p = actor.properties?.positional;
+  return {
+    pos: p?.position ?? {x: 0, y: 0},
+    scale: p?.scale ?? {x: 1, y: 1},
+    rotation: p?.rotation ?? 0,
+  };
+};
+
+/** A copy of `actor` with the given positional properties patched in. */
+const withPositional = (
+  actor: Placement,
+  patch: Partial<{position: Vec; scale: Vec; rotation: number}>,
+): Placement => ({
   ...actor,
   properties: {
     ...actor.properties,
-    positional: {...actor.properties?.positional, position: pos},
+    positional: {...actor.properties?.positional, ...patch},
   },
 });
 
@@ -128,8 +153,9 @@ function fitView(w: number, h: number): View {
  * bordered rectangle. Placing writes the `.map` JSON back through `onChange`, so
  * the running game updates. Snap-to-grid by default; hold Alt to place freely.
  * Middle-drag (or left-drag with no actor selected) pans; the wheel zooms toward
- * the cursor; a button resets the view. Moving/deleting/editing placed actors is
- * future work.
+ * the cursor; a button resets the view. In select mode (no template), clicking a
+ * placed actor selects it, dragging moves it, Delete removes it, and an inspector
+ * panel edits its position.
  */
 export const MapEditor = ({
   initialContents,
@@ -160,6 +186,17 @@ export const MapEditor = ({
   const [size, setSize] = useState<Size>({w: 0, h: 0});
   const [view, setView] = useState<View | null>(null);
   const [panning, setPanning] = useState(false);
+  // Inspector field drafts (strings so a field can be cleared mid-edit). Seeded
+  // from the selected actor on selection change and after a drag; a numeric edit
+  // applies live and commits on blur, an id edit renames on blur.
+  const [draft, setDraft] = useState<{
+    x: string;
+    y: string;
+    sx: string;
+    sy: string;
+    rot: string;
+    id: string;
+  }>({x: '', y: '', sx: '', sy: '', rot: '', id: ''});
 
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -311,24 +348,35 @@ export const MapEditor = ({
   const hitTest = (world: Vec): Placement | undefined => {
     const actors = mapRef.current.actors;
     for (let i = actors.length - 1; i >= 0; i--) {
-      const pos = positionOf(actors[i]);
-      if (
-        pos &&
-        Math.abs(world.x - pos.x) <= DRAW_SIZE / 2 &&
-        Math.abs(world.y - pos.y) <= DRAW_SIZE / 2
-      ) {
+      if (!positionOf(actors[i])) {
+        continue;
+      }
+      const t = transformOf(actors[i]);
+      // The world point in the actor's local (un-rotated, un-scaled) frame.
+      const a = t.rotation * DEG2RAD;
+      const cos = Math.cos(a);
+      const sin = Math.sin(a);
+      const dx = world.x - t.pos.x;
+      const dy = world.y - t.pos.y;
+      const lx = (dx * cos + dy * sin) / (t.scale.x || 1);
+      const ly = (-dx * sin + dy * cos) / (t.scale.y || 1);
+      if (Math.abs(lx) <= DRAW_SIZE / 2 && Math.abs(ly) <= DRAW_SIZE / 2) {
         return actors[i];
       }
     }
     return undefined;
   };
 
-  // Live-move a placed actor (local only — the drag commits once on release).
-  const moveActor = (id: string, pos: Vec) => {
+  // Live-patch a placed actor's transform (local only — a drag or field edit
+  // commits once on release / blur).
+  const setPositional = (
+    id: string,
+    patch: Partial<{position: Vec; scale: Vec; rotation: number}>,
+  ) => {
     const next = {
       ...mapRef.current,
       actors: mapRef.current.actors.map(a =>
-        a.id === id ? withPosition(a, pos) : a,
+        a.id === id ? withPositional(a, patch) : a,
       ),
     };
     mapRef.current = next;
@@ -342,6 +390,117 @@ export const MapEditor = ({
     });
     setSelectedId(null);
   };
+
+  // --- Inspector: edit the selected actor's properties -------------------
+
+  const selectedActor = selectedId
+    ? (map.actors.find(a => a.id === selectedId) ?? null)
+    : null;
+
+  const seedDraft = (actor: Placement | null) => {
+    if (!actor) {
+      setDraft({x: '', y: '', sx: '', sy: '', rot: '', id: ''});
+      return;
+    }
+    const t = transformOf(actor);
+    setDraft({
+      x: String(Math.round(t.pos.x)),
+      y: String(Math.round(t.pos.y)),
+      sx: String(t.scale.x),
+      sy: String(t.scale.y),
+      rot: String(t.rotation),
+      id: actor.id,
+    });
+  };
+
+  // Seed the drafts on selection change ONLY — not on every position change, so
+  // a live field edit or a canvas drag doesn't clobber the field mid-type. A
+  // drag re-seeds explicitly on release (endGesture).
+  useEffect(() => {
+    seedDraft(mapRef.current.actors.find(a => a.id === selectedId) ?? null);
+    // Seed on selection alone: `map`/`seedDraft` are deliberately not deps so
+    // live edits and drags don't re-seed the field mid-type.
+  }, [selectedId]);
+
+  // A numeric field edit (position / scale / rotation): keep the raw draft and,
+  // if it parses, apply it to the actor's transform live.
+  const editNum = (key: 'x' | 'y' | 'sx' | 'sy' | 'rot', value: string) => {
+    setDraft(d => ({...d, [key]: value}));
+    const n = Number(value);
+    if (value.trim() === '' || !Number.isFinite(n) || !selectedActor) {
+      return;
+    }
+    const t = transformOf(selectedActor);
+    const patch =
+      key === 'x'
+        ? {position: {x: n, y: t.pos.y}}
+        : key === 'y'
+          ? {position: {x: t.pos.x, y: n}}
+          : key === 'sx'
+            ? {scale: {x: n, y: t.scale.y}}
+            : key === 'sy'
+              ? {scale: {x: t.scale.x, y: n}}
+              : {rotation: n};
+    setPositional(selectedActor.id, patch);
+  };
+
+  const editId = (value: string) => setDraft(d => ({...d, id: value}));
+
+  // Persist a numeric edit (writes the `.map`, recompiles) — on blur / Enter.
+  const commitEdit = () => {
+    if (selectedId) {
+      commit(mapRef.current);
+    }
+  };
+
+  // Apply an id rename on blur / Enter. Rejects an empty name or one already
+  // taken by another actor (which would make selection ambiguous), reverting
+  // the draft to the current id.
+  const applyRename = () => {
+    if (!selectedActor) {
+      return;
+    }
+    const next = draft.id.trim();
+    const taken = mapRef.current.actors.some(
+      a => a.id === next && a !== selectedActor,
+    );
+    if (!next || next === selectedActor.id || taken) {
+      setDraft(d => ({...d, id: selectedActor.id}));
+      return;
+    }
+    const updated = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id ? {...a, id: next} : a,
+      ),
+    };
+    mapRef.current = updated;
+    commit(updated);
+    setSelectedId(next);
+  };
+
+  const blurOnEnter = (event: ReactKeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      event.currentTarget.blur();
+    }
+  };
+
+  // A numeric transform field (DSCO TextField): edits live, commits on blur.
+  const numberField = (key: 'x' | 'y' | 'sx' | 'sy' | 'rot', label: string) => (
+    <TextField
+      name={`actor-${key}`}
+      label={label}
+      inputType="number"
+      size="s"
+      value={draft[key]}
+      disabled={isReadOnly}
+      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+        editNum(key, event.target.value)
+      }
+      onBlur={commitEdit}
+      onKeyDown={blurOnEnter}
+    />
+  );
 
   const beginPan = (event: ReactPointerEvent, v: View) => {
     panRef.current = {
@@ -365,6 +524,8 @@ export const MapEditor = ({
       if (drag.moved) {
         commit(mapRef.current);
       }
+      // Reflect the dragged position in the inspector fields.
+      seedDraft(mapRef.current.actors.find(a => a.id === drag.id) ?? null);
     }
     const pan = panRef.current;
     if (pan) {
@@ -418,10 +579,12 @@ export const MapEditor = ({
     if (drag) {
       drag.moved = true;
       const world = screenToWorld(event.clientX, event.clientY);
-      moveActor(
-        drag.id,
-        snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
-      );
+      setPositional(drag.id, {
+        position: snap(
+          {x: world.x + drag.offX, y: world.y + drag.offY},
+          event.altKey,
+        ),
+      });
       return;
     }
     const pan = panRef.current;
@@ -528,43 +691,57 @@ export const MapEditor = ({
     ctx.lineWidth = 2 / view.scale;
     ctx.strokeRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-    const drawActor = (type: string, pos: Vec, alpha: number) => {
+    // Draw a sprite through its transform (translate → rotate → scale), centred
+    // on its position, so the editor shows the actor as the game will.
+    const drawSprite = (type: string, t: Transform, alpha: number) => {
+      ctx.save();
       ctx.globalAlpha = alpha;
+      ctx.translate(t.pos.x, t.pos.y);
+      ctx.rotate(t.rotation * DEG2RAD);
+      ctx.scale(t.scale.x, t.scale.y);
       const image = images[type];
-      const x = pos.x - DRAW_SIZE / 2;
-      const y = pos.y - DRAW_SIZE / 2;
       if (image) {
-        ctx.drawImage(image, x, y, DRAW_SIZE, DRAW_SIZE);
+        ctx.drawImage(
+          image,
+          -DRAW_SIZE / 2,
+          -DRAW_SIZE / 2,
+          DRAW_SIZE,
+          DRAW_SIZE,
+        );
       } else {
         ctx.fillStyle = '#33cc66';
-        ctx.fillRect(x, y, DRAW_SIZE, DRAW_SIZE);
+        ctx.fillRect(-DRAW_SIZE / 2, -DRAW_SIZE / 2, DRAW_SIZE, DRAW_SIZE);
       }
+      ctx.restore();
       ctx.globalAlpha = 1;
     };
-    let selectedPos: Vec | undefined;
+    let selectedTransform: Transform | null = null;
     for (const actor of map.actors) {
-      const pos = positionOf(actor);
-      if (pos) {
-        drawActor(actor.type, pos, 1);
-        if (actor.id === selectedId) {
-          selectedPos = pos;
-        }
+      if (!positionOf(actor)) {
+        continue;
+      }
+      const t = transformOf(actor);
+      drawSprite(actor.type, t, 1);
+      if (actor.id === selectedId) {
+        selectedTransform = t;
       }
     }
-    // Outline the selected placed actor (drawn last so it sits on top).
-    if (selectedPos) {
+    // Outline the selected actor: a rotated box hugging the scaled sprite, with a
+    // constant 2px screen stroke (the box size — not the stroke — carries scale).
+    if (selectedTransform) {
+      const {pos, scale, rotation} = selectedTransform;
+      ctx.save();
+      ctx.translate(pos.x, pos.y);
+      ctx.rotate(rotation * DEG2RAD);
+      const hw = (DRAW_SIZE * Math.abs(scale.x)) / 2 + 3 / view.scale;
+      const hh = (DRAW_SIZE * Math.abs(scale.y)) / 2 + 3 / view.scale;
       ctx.strokeStyle = SELECT;
       ctx.lineWidth = 2 / view.scale;
-      const inset = DRAW_SIZE / 2 + 2;
-      ctx.strokeRect(
-        selectedPos.x - inset,
-        selectedPos.y - inset,
-        inset * 2,
-        inset * 2,
-      );
+      ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
+      ctx.restore();
     }
     if (selected && hover) {
-      drawActor(selected, hover, 0.5);
+      drawSprite(selected, {pos: hover, scale: {x: 1, y: 1}, rotation: 0}, 0.5);
     }
   }, [view, size, map, images, hover, selected, selectedId]);
 
@@ -627,6 +804,42 @@ export const MapEditor = ({
             Reset view
           </button>
         </div>
+        {selectedActor && (
+          <div className={styles.inspector}>
+            <div className={styles.inspectorHead}>
+              <Typography variant="subtitle2" component="span">
+                {selectedActor.type.split('/').pop()}
+              </Typography>
+              <Button
+                variant="text"
+                size="extraSmall"
+                onClick={() => deleteActor(selectedActor.id)}
+                disabled={isReadOnly}
+              >
+                Delete
+              </Button>
+            </div>
+            <TextField
+              name="actor-id"
+              label="ID"
+              size="s"
+              value={draft.id}
+              disabled={isReadOnly}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                editId(event.target.value)
+              }
+              onBlur={applyRename}
+              onKeyDown={blurOnEnter}
+            />
+            <div className={styles.inspectorGrid}>
+              {numberField('x', 'Pos X')}
+              {numberField('y', 'Pos Y')}
+              {numberField('sx', 'Scale X')}
+              {numberField('sy', 'Scale Y')}
+            </div>
+            {numberField('rot', 'Rotation°')}
+          </div>
+        )}
       </div>
     </div>
   );

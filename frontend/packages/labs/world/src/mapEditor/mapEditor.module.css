@@ -138,3 +138,58 @@
     var(--background-neutral-secondary)
   );
 }
+
+/* Inspector for the selected placed actor — bottom-left, opposite the toolbar.
+   Capped in height so a tall field set scrolls rather than overflowing the map. */
+.inspector {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 15rem;
+  max-height: calc(100% - 1rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.6rem;
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-primary) 92%,
+    transparent
+  );
+  border: var(--lab-border-default);
+  color: var(--text-neutral-primary);
+}
+
+.inspectorHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* The vector pairs (Pos X/Y, Scale X/Y) two-up, each half width. */
+.inspectorGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+/* DSCO's FormFieldWrapper defaults to min-width 18.75rem, which overflows this
+   narrow panel (the horizontal scroll) and blocks the half-width pairs. Override
+   it by specificity — the wrapper is a <label>, direct child of the panel or the
+   grid — and let each field fill its column. */
+.inspector > label,
+.inspectorGrid > label {
+  width: 100%;
+  min-width: 0;
+}
+
+.inspector input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
