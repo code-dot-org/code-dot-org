@@ -61,7 +61,7 @@ describe('RosterDialog', () => {
 
     wrapper
       .find(MuiButton)
-      .filterWhere(button => button.prop('id') === 'cancel-button')
+      .filterWhere(button => button.prop('id') === 'roster-cancel-button')
       .simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');

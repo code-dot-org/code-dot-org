@@ -293,7 +293,7 @@ class RosterDialog extends React.Component {
         </div>
         <div className={moduleStyles.footer}>
           <MuiButton
-            id="cancel-button"
+            id="roster-cancel-button"
             variant="outlined"
             color="tertiary"
             size="small"
