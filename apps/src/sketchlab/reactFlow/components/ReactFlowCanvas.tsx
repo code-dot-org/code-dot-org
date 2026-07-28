@@ -852,10 +852,10 @@ export default function ReactFlowCanvas({
 
       const defaultHeight =
         type === 'text' ? DEFAULT_TEXT_NODE_HEIGHT : DEFAULT_NODE_HEIGHT;
-      const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
-        y: window.innerHeight / 2 - defaultHeight / 2,
-      });
+      const position = {
+        x: centerPosition.x - DEFAULT_NODE_WIDTH / 2,
+        y: centerPosition.y - defaultHeight / 2,
+      };
 
       const newNodeId = createUuid();
       // width/height are the React Flow fields NodeResizer also writes on drag,
