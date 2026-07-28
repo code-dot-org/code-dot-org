@@ -727,36 +727,13 @@
   }
 }
 
-// CodeAI (CADS) brand overrides — see themes/README.md ("Component-level
-// brand overrides"); tags/tags.module.scss is the reference example.
-// The CADS menu-item spec diverges from what the token bridge can express
-// in four ways: the selected item uses the dedicated mode-inverted
-// selected tokens (not the bridge's brand-ramp mapping of the legacy
-// teal); pressed no longer shares the selected fill (the legacy rule
-// lumps :active in with checked/selected — CADS presses to the hover
-// gray); keyboard focus adds a brand-light fill and the destructive item
-// recolors its focus ring to the error border; and disabled+selected
-// becomes a solid disabled fill with the inverse label. Everything else
-// (default, hover, unselected disabled, destructive default/hover/pressed)
-// resolves correctly through the bridge.
-// Tokens used: background/border-selected-strong (hover/pressed fill),
-// border-focused-primary (unselected ring), border-focused-inverse (the
-// ring on selected items), and the selected checkbox glyph's
-// background/text-selected-primary-inverse pair — all first-class in the
-// CADS export as of #74066.
-// Selectors mirror their legacy counterparts plus the [data-brand]
-// attribute; rule order in the block matters for the equal-specificity
-// pressed/selected/disabled combinations and mirrors the legacy cascade.
+// CodeAI (CADS) brand overrides — see themes/README.md
 [data-brand='codeai-next'] {
   .dropdownContainer {
     .dropdownMenuContainer {
       ul {
         li {
-          // Pressed (split out of the legacy selected rule): hover
-          // surface, normal text. The glyph values match the Checkbox
-          // component's own pressed treatment (brand-light inner); the
-          // rule exists to neutralize the legacy menu rule, which
-          // paints the glyph solid on row press.
+          // Pressed.
           &:active {
             background-color: var(--background-neutral-tertiary);
 
@@ -781,13 +758,7 @@
             }
           }
 
-          // Selected: the mode-inverted selected pair. The checkbox
-          // glyph inverts against the selected row — a seafoam box
-          // with the check in the fill color — overriding the Checkbox
-          // component's standalone selected look (brand box, seafoam
-          // check), which would blend into the row. On the glyph the
-          // check draws in the color property and background fills the
-          // box.
+          // Selected.
           &:has(input[type='checkbox']:checked),
           &:has(.selectedDropdownMenuItem) {
             background-color: var(--background-selected-primary);
@@ -795,10 +766,6 @@
             i::before {
               background-color: var(--background-selected-primary-inverse);
               color: var(--text-selected-primary-inverse);
-
-              // The Checkbox component draws its own 2px checked
-              // border; the spec has no separate glyph border — it
-              // matches the inner fill.
               border-color: var(--background-selected-primary-inverse);
             }
 
@@ -817,8 +784,6 @@
               }
             }
 
-            // The ring flips to the inverse focused border (seafoam on
-            // the selected fill).
             .dropdownMenuItem:focus-visible {
               outline-color: var(--border-focused-inverse);
             }
@@ -831,25 +796,18 @@
             }
           }
 
-          // Selected + hover / pressed: Figma background/state/selected/
-          // strong; the export carries that value as
-          // --background-selected-strong.
+          // Selected + hover / pressed.
           &:hover:has(input[type='checkbox']:checked),
           &:hover:has(.selectedDropdownMenuItem),
           &:active:has(input[type='checkbox']:checked),
           &:active:has(.selectedDropdownMenuItem) {
             background-color: var(--background-selected-strong);
 
-            // The checkbox glyph keeps its inverse pairing; only the
-            // icon plate follows the fill.
             .dropdownMenuItem i::before {
               background-color: var(--background-selected-strong);
             }
           }
 
-          // Keyboard focus: brand-light fill (unselected items only —
-          // selected items keep their fill under the ring) plus the
-          // focused border token.
           .dropdownMenuItem:focus-visible {
             outline-color: var(--border-focused-primary);
           }
@@ -874,9 +832,7 @@
             background-color: var(--background-brand-light);
           }
 
-          // Destructive item: error-family focus ring on the default
-          // surface, and pressed keeps its legacy white-on-error colors
-          // (the pressed rule above would otherwise recolor its label).
+          // Destructive item.
           .dropdownMenuItem.destructiveDropdownMenuItem {
             &:focus-visible {
               outline-color: var(--border-error-primary);
@@ -895,8 +851,6 @@
             }
           }
 
-          // Disabled: re-asserted under the brand scope so the selected
-          // overrides above don't outrank the legacy disabled rules.
           &:has(input[type='checkbox']:disabled),
           &:has(.disabledDropdownMenuItem) {
             background-color: unset;
@@ -917,9 +871,7 @@
             }
           }
 
-          // Disabled + selected: solid disabled fill with the inverse
-          // label (white in Light, black in Dark); the check cutout
-          // shows the fill. Last so it outranks every state above.
+          // Disabled + selected. Last so it outranks every state above.
           &:has(input[type='checkbox']:disabled:checked),
           &:has(.selectedDropdownMenuItem.disabledDropdownMenuItem) {
             background-color: var(--background-disabled-neutral);
