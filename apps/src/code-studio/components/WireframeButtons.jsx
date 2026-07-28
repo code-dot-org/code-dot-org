@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -49,7 +50,6 @@ export default class WireframeButtons extends React.Component {
 
   handleClickSendToPhone = () => {
     this.setState({clickedSendToPhone: !this.state.clickedSendToPhone});
-    return false; // so the # link doesn't go anywhere.
   };
 
   render() {
@@ -60,13 +60,14 @@ export default class WireframeButtons extends React.Component {
     const newProjectUrl = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     return (
       <div style={styles.main}>
-        {showViewCode && <ViewCodeButton />}
-        {newProjectUrl && <NewProjectButton url={newProjectUrl} />}
-        <SendToPhoneButton
-          active={clickedSendToPhone}
-          onClick={this.handleClickSendToPhone}
-        />
-        <br />
+        <div className="WireframeButtons_buttonRow">
+          {showViewCode && <ViewCodeButton />}
+          {newProjectUrl && <NewProjectButton url={newProjectUrl} />}
+          <SendToPhoneButton
+            active={clickedSendToPhone}
+            onClick={this.handleClickSendToPhone}
+          />
+        </div>
         {clickedSendToPhone && (
           <SendToPhoneControls
             appType={appType}
@@ -80,37 +81,48 @@ export default class WireframeButtons extends React.Component {
 }
 
 const ViewCodeButton = () => (
-  <span style={{display: 'inline-block'}}>
-    <a
-      className="WireframeButtons_button"
-      href={project.getProjectUrl('/view')}
-    >
-      <FontAwesomeV6Icon iconName="code" /> {i18n.viewCode()}
-    </a>
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="small"
+    href={project.getProjectUrl('/view')}
+    startIcon={<FontAwesomeV6Icon iconName="code" />}
+  >
+    {i18n.viewCode()}
+  </MuiButton>
 );
 
 const NewProjectButton = ({url}) => (
-  <span style={{display: 'inline-block'}}>
-    <a className="WireframeButtons_button" href={url}>
-      <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-      {i18n.makeMyOwn()}
-    </a>
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="small"
+    href={url}
+    startIcon={
+      <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />
+    }
+  >
+    {i18n.makeMyOwn()}
+  </MuiButton>
 );
 NewProjectButton.propTypes = {
   url: PropTypes.string.isRequired,
 };
 
+// Toggles the send-to-phone form below. Switches to the outlined variant while
+// the form is open so the button reads as pressed.
 const SendToPhoneButton = ({active, onClick}) => (
-  <span style={{display: 'inline-block'}}>
-    <a
-      className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
-      onClick={onClick}
-    >
-      <FontAwesomeV6Icon iconName="mobile-screen-button" /> {i18n.sendToPhone()}
-    </a>
-  </span>
+  <MuiButton
+    variant={active ? 'outlined' : 'contained'}
+    color="primary"
+    size="small"
+    type="button"
+    onClick={onClick}
+    aria-expanded={active}
+    startIcon={<FontAwesomeV6Icon iconName="mobile-screen-button" />}
+  >
+    {i18n.sendToPhone()}
+  </MuiButton>
 );
 SendToPhoneButton.propTypes = {
   active: PropTypes.bool,
