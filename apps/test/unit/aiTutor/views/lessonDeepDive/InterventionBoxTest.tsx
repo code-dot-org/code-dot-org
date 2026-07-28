@@ -5,6 +5,7 @@ import React from 'react';
 import InterventionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 
 // The modality content components pull in heavy dependencies (audio, video,
 // chat, redux) that are irrelevant to the navigation behavior under test, so
@@ -65,6 +66,27 @@ function renderInterventionBox(onNext: jest.Mock = jest.fn()) {
 describe('InterventionBox', () => {
   beforeEach(() => {
     sendEventMock.mockReset();
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+  });
+
+  it('Does not list the Challenge option in the practice menu if no experiment', () => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    renderInterventionBox();
+    expect(
+      screen.queryByRole('button', {name: 'Take on a challenge'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('Does not list the Challenge option in the bottom nav if no experiment', () => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    renderInterventionBox();
+    expect(
+      screen.queryByRole('button', {name: 'Challenge'})
+    ).not.toBeInTheDocument();
   });
 
   it('lists the Challenge option in the practice menu', () => {

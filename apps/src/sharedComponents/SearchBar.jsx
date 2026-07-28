@@ -56,6 +56,8 @@ const styles = {
     borderColor: BORDER_COLOR,
     borderRadius: BORDER_RADIUS,
     textIndent: 22,
+    color: 'var(--text-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   icon: {
     position: 'absolute',

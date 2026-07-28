@@ -9,6 +9,7 @@ import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
 import {trimAnimationListImages} from './imageTrim';
+import {resolvePlatformPhysics} from './platformPhysics';
 
 const NOOP = () => {};
 
@@ -50,6 +51,7 @@ const NOOP_MOBILE_CONTROLS = {init: NOOP, update: NOOP, reset: NOOP};
  * Owns no Blockly workspace and no StudioApp; the caller compiles the workspace
  * to JS and feeds it via run(code).
  */
+
 export default class SpriteLab2Engine extends SpriteLab {
   constructor(defaultAnimations) {
     super(defaultAnimations);
@@ -88,6 +90,11 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
+    if (this.usesPlatformPhysics_) {
+      // Platformer levels size sprites to one grid cell by default (the
+      // legacy library's one load-bearing line).
+      library.defaultSpriteSize = 50;
+    }
     library.commands.goToScene = sceneId => {
       if (!this.onGoToScene || !this.beginSceneJump_()) {
         return;
@@ -162,8 +169,11 @@ export default class SpriteLab2Engine extends SpriteLab {
     const helperLibraries = levelProperties.helperLibraries || [
       'NativeSpriteLab',
     ];
+    // The zGameDev name is only the level's opt-in to platformer physics,
+    // which is engine-owned (platformPhysics.ts); no library loads for it.
+    this.usesPlatformPhysics_ = helperLibraries.includes('zGameDev');
     this.level = {
-      helperLibraries,
+      helperLibraries: helperLibraries.filter(name => name !== 'zGameDev'),
       softButtons: [],
       // So the lab-owned blocks' helperCode is prepended like pool blocks'.
       sharedBlocks: [
@@ -186,7 +196,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       spritelab: true,
     });
 
-    await this.loadHelperLibraries(helperLibraries);
+    await this.loadHelperLibraries(this.level.helperLibraries);
   }
 
   // Replicates StudioApp.loadLibrary_: source text stashed where
@@ -308,6 +318,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       )
     );
     p5.allSprites.removeSprites();
+    // removeSprites destroyed the edge sprites too; clear the handle so the
+    // next edgesCollide/edgesDisplace recreates them instead of colliding
+    // against dead sprites.
+    p5.edges = undefined;
     if (this.JSInterpreter) {
       this.JSInterpreter.deinitialize();
     }
@@ -372,6 +386,62 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.p5Wrapper.preloadSpriteImages(
       await trimAnimationListImages(getStore().getState().animationList)
     );
+  }
+
+  // Platformer physics for players (see platformPhysics.ts for the rules),
+  // run immediately before every paint — after p5's pre-phase velocity
+  // integration and after this frame's behaviors/events have moved
+  // sprites. Program-driven (non-player) sprites keep the stock resolver.
+  resolvePlatformPhysics_() {
+    if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
+      return;
+    }
+    const p5 = this.p5Wrapper.p5;
+    // Snapshot player positions before the stock pass below: the movement
+    // reconstruction must not see its shove.
+    const moved = this.library
+      .getSpriteArray({group: 'players'})
+      .map(sprite => ({
+        sprite,
+        x: sprite.position.x,
+        y: sprite.position.y,
+      }));
+    // Non-player sprites keep the stock resolver; running it pre-paint
+    // means patrollers and props draw already resolved.
+    this.library.commands.collide.call(
+      this.library,
+      'collide',
+      {group: ''},
+      {group: 'walls'}
+    );
+    resolvePlatformPhysics(
+      moved,
+      this.library.getSpriteArray({group: 'walls'}),
+      {
+        width: p5.width,
+        height: p5.height,
+      }
+    );
+  }
+
+  // The resolution must run after this frame's behaviors/events but before
+  // the paint; the only seam with that timing is the paint call itself.
+  wrapDrawSpritesOnce_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || p5.__slab2ResolvesBeforePaint) {
+      return;
+    }
+    p5.__slab2ResolvesBeforePaint = true;
+    const paint = p5.drawSprites.bind(p5);
+    p5.drawSprites = (...args) => {
+      this.resolvePlatformPhysics_();
+      return paint(...args);
+    };
+  }
+
+  onP5Draw() {
+    this.wrapDrawSpritesOnce_();
+    super.onP5Draw();
   }
 
   // --- Overrides that sever the global studioApp() singleton ---

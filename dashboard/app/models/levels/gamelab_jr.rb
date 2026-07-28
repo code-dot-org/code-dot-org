@@ -40,6 +40,8 @@ class GamelabJr < Gamelab
     enable_big_playspace
     uses_lab2
     guide_mode
+    show_world_tab
+    show_large_world
   )
 
   def shared_blocks
