@@ -1,5 +1,6 @@
 require 'json'
 require 'sinatra'
+require 'dynamic_config/dcdo'
 require 'helpers/storage_id'
 require_relative './profanity_privacy_helper'
 
@@ -22,13 +23,15 @@ class Projects
 
     @table = Projects.table
 
-    CDO.log.info JSON.dump(
-      namespace: 'project_storage_creation',
-      event: 'project_initialization',
-      storage_id:,
-      caller: caller_locations(1, 1).first.to_s,
-      init_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ'),
-    )
+    if DCDO.get('project_initialization_log_enabled', false)
+      CDO.log.info JSON.dump(
+        namespace: 'project_storage_creation',
+        event: 'project_initialization',
+        storage_id:,
+        caller: caller_locations(1, 1).first.to_s,
+        init_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ'),
+      )
+    end
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
