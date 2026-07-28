@@ -1,0 +1,82 @@
+{
+  "name": "@code-dot-org/lesson-deep-dive",
+  "version": "0.0.0",
+  "private": true,
+  "description": "AI Tutor lesson deep dive (Tutor+) student experience",
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "devDependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@dnd-kit/core": "^6.3.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
+    "@playwright/test": "catalog:",
+    "@reduxjs/toolkit": "catalog:",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@xyflow/react": "^12.10.2",
+    "classnames": "^2.3.2",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "msw": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-redux": "catalog:",
+    "sass": "^1.77.0",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@dnd-kit/core": "^6.3.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@mui/material": "^7.0.0",
+    "@xyflow/react": "^12.0.0",
+    "classnames": "^2.3.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "react-redux": "^8.0.0 || ^9.0.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}

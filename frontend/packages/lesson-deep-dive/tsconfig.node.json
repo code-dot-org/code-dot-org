@@ -1,0 +1,8 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.node.json",
+  "include": [
+    "vite.config.ts",
+    "vitest.config.ts",
+    "src/devhost/cdoResolverPlugin.ts"
+  ]
+}
