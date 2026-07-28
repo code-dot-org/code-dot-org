@@ -1,4 +1,7 @@
-import type {MouseEvent as ReactMouseEvent} from 'react';
+import type {
+  MouseEvent as ReactMouseEvent,
+  PointerEvent as ReactPointerEvent,
+} from 'react';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
@@ -14,13 +17,28 @@ import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import styles from './mapEditor.module.css';
 
-// The map's world-coordinate space is the game's native resolution; the canvas
-// buffer is that, displayed scaled to the pane (like the preview). Actors draw
-// at their sprite size, centred on their position.
+// The map's world-coordinate space is the game's native resolution. The canvas
+// FILLS its pane; a camera (scale + offset) maps world coords onto it, so the map
+// region is a bordered rectangle you can pan and zoom around. Actors draw at
+// their sprite size, centred on their position.
 const GAME_WIDTH = 960;
 const GAME_HEIGHT = 540;
 const DEFAULT_TILE = 32;
 const DRAW_SIZE = 32;
+
+// Camera limits. `FIT_PADDING` leaves a margin so the bordered map doesn't touch
+// the pane edges at the default (reset) zoom.
+const MIN_SCALE = 0.1;
+const MAX_SCALE = 8;
+const FIT_PADDING = 0.92;
+
+const OUTSIDE_BG = '#0b0b12'; // the space beyond the map
+const MAP_BG = '#151521'; // the map region itself
+const GRID = 'rgba(255, 255, 255, 0.07)';
+const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
+
+const clamp = (n: number, lo: number, hi: number) =>
+  Math.max(lo, Math.min(hi, n));
 
 interface Tile {
   width: number;
@@ -39,6 +57,16 @@ interface MapDoc {
   type: 'map';
   tile: Tile;
   actors: Placement[];
+}
+/** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
+interface View {
+  scale: number;
+  x: number;
+  y: number;
+}
+interface Size {
+  w: number;
+  h: number;
 }
 
 function parseMap(contents: string): MapDoc {
@@ -68,12 +96,29 @@ function parseMap(contents: string): MapDoc {
 const positionOf = (actor: Placement): Vec | undefined =>
   actor.properties?.positional?.position;
 
+/** Centre the whole map in a `w`×`h` pane with a margin (the reset view). */
+function fitView(w: number, h: number): View {
+  const scale = clamp(
+    Math.min(w / GAME_WIDTH, h / GAME_HEIGHT) * FIT_PADDING,
+    MIN_SCALE,
+    MAX_SCALE,
+  );
+  return {
+    scale,
+    x: (w - GAME_WIDTH * scale) / 2,
+    y: (h - GAME_HEIGHT * scale) / 2,
+  };
+}
+
 /**
  * The map editor (Codebridge `.map` editorComponent): an actor picker of
- * sandbox-rendered thumbnails, and a grid canvas you click to place instances.
- * Placing writes the `.map` JSON back through `onChange`, so the running game
- * updates. Snap-to-grid by default; hold Alt to place freely. Property editing
- * beyond position is future work.
+ * sandbox-rendered thumbnails, and a pannable/zoomable canvas you click to place
+ * instances. The canvas fills the pane; the placeable map space is drawn as a
+ * bordered rectangle. Placing writes the `.map` JSON back through `onChange`, so
+ * the running game updates. Snap-to-grid by default; hold Alt to place freely.
+ * Middle-drag (or left-drag with no actor selected) pans; the wheel zooms toward
+ * the cursor; a button resets the view. Moving/deleting/editing placed actors is
+ * future work.
  */
 export const MapEditor = ({
   initialContents,
@@ -98,7 +143,21 @@ export const MapEditor = ({
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
   const [selected, setSelected] = useState<string | null>(null);
   const [hover, setHover] = useState<Vec | null>(null);
+  const [size, setSize] = useState<Size>({w: 0, h: 0});
+  const [view, setView] = useState<View | null>(null);
+  const [panning, setPanning] = useState(false);
+
+  const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Active pan gesture: the pointer/offset at drag start (a ref so pointermove
+  // doesn't need it in a dependency).
+  const panRef = useRef<{
+    sx: number;
+    sy: number;
+    ox: number;
+    oy: number;
+    id: number;
+  } | null>(null);
 
   // `getActorThumbnails` is a fresh closure each render; hold it in a ref so the
   // fetch effect doesn't re-run every render.
@@ -139,6 +198,58 @@ export const MapEditor = ({
     }
   }, [thumbnails, images]);
 
+  // Track the pane size; the canvas buffer follows it so the map fills the space.
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!stage) {
+      return;
+    }
+    const observer = new ResizeObserver(entries => {
+      const rect = entries[0].contentRect;
+      setSize({w: Math.round(rect.width), h: Math.round(rect.height)});
+    });
+    observer.observe(stage);
+    return () => observer.disconnect();
+  }, []);
+
+  // Initialise the camera to the fit view once the pane has a size.
+  useEffect(() => {
+    if (size.w > 0 && size.h > 0 && !view) {
+      setView(fitView(size.w, size.h));
+    }
+  }, [size, view]);
+
+  // Wheel zoom toward the cursor. A native, non-passive listener so we can
+  // preventDefault (the pane must not scroll under the zoom).
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) {
+      return;
+    }
+    const onWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const sx = event.clientX - rect.left;
+      const sy = event.clientY - rect.top;
+      setView(v => {
+        if (!v) {
+          return v;
+        }
+        const scale = clamp(
+          v.scale * Math.exp(-event.deltaY * 0.0015),
+          MIN_SCALE,
+          MAX_SCALE,
+        );
+        // Keep the world point under the cursor pinned in place.
+        const wx = (sx - v.x) / v.scale;
+        const wy = (sy - v.y) / v.scale;
+        return {scale, x: sx - wx * scale, y: sy - wy * scale};
+      });
+    };
+    canvas.addEventListener('wheel', onWheel, {passive: false});
+    return () => canvas.removeEventListener('wheel', onWheel);
+  }, []);
+
   const commit = useCallback(
     (next: MapDoc) => {
       setMap(next);
@@ -147,11 +258,12 @@ export const MapEditor = ({
     [onChange],
   );
 
-  const toWorld = (event: ReactMouseEvent): Vec => {
+  const screenToWorld = (clientX: number, clientY: number): Vec => {
     const rect = canvasRef.current!.getBoundingClientRect();
+    const v = view!;
     return {
-      x: ((event.clientX - rect.left) / rect.width) * GAME_WIDTH,
-      y: ((event.clientY - rect.top) / rect.height) * GAME_HEIGHT,
+      x: (clientX - rect.left - v.x) / v.scale,
+      y: (clientY - rect.top - v.y) / v.scale,
     };
   };
 
@@ -167,14 +279,57 @@ export const MapEditor = ({
     };
   };
 
-  const handleMove = (event: ReactMouseEvent) =>
-    setHover(snap(toWorld(event), event.altKey));
+  const endPan = () => {
+    const pan = panRef.current;
+    if (pan) {
+      canvasRef.current?.releasePointerCapture(pan.id);
+      panRef.current = null;
+      setPanning(false);
+    }
+  };
 
-  const handleClick = (event: ReactMouseEvent) => {
-    if (isReadOnly || !selected) {
+  // Pan on middle-drag, or left-drag when no actor is selected (so it never
+  // fights placement, which uses left-click while an actor is selected).
+  const handlePointerDown = (event: ReactPointerEvent) => {
+    if (!view || (event.button !== 1 && !(event.button === 0 && !selected))) {
       return;
     }
-    const pos = snap(toWorld(event), event.altKey);
+    event.preventDefault();
+    panRef.current = {
+      sx: event.clientX,
+      sy: event.clientY,
+      ox: view.x,
+      oy: view.y,
+      id: event.pointerId,
+    };
+    canvasRef.current?.setPointerCapture(event.pointerId);
+    setPanning(true);
+  };
+
+  const handlePointerMove = (event: ReactPointerEvent) => {
+    const pan = panRef.current;
+    if (pan) {
+      const dx = event.clientX - pan.sx;
+      const dy = event.clientY - pan.sy;
+      setView(v => v && {...v, x: pan.ox + dx, y: pan.oy + dy});
+      return;
+    }
+    if (selected && view) {
+      setHover(snap(screenToWorld(event.clientX, event.clientY), event.altKey));
+    }
+  };
+
+  const handlePointerLeave = () => {
+    endPan();
+    setHover(null);
+  };
+
+  const handleClick = (event: ReactMouseEvent) => {
+    // A pan drag ends with a click; ignore it (and any click without a template).
+    if (isReadOnly || !selected || !view || panRef.current) {
+      return;
+    }
+    const pos = snap(screenToWorld(event.clientX, event.clientY), event.altKey);
     const name = selected.split('/').pop() ?? selected;
     commit({
       ...map,
@@ -189,28 +344,61 @@ export const MapEditor = ({
     });
   };
 
-  // Redraw the grid, placed actors, and the hover ghost.
+  const resetView = () => {
+    if (size.w > 0 && size.h > 0) {
+      setView(fitView(size.w, size.h));
+    }
+  };
+
+  // Draw the scene through the camera transform: the outside fill, then (in world
+  // space) the map region, grid, its border, the placed actors, and the ghost.
   useEffect(() => {
-    const ctx = canvasRef.current?.getContext('2d');
+    const canvas = canvasRef.current;
+    if (!canvas || !view || size.w === 0 || size.h === 0) {
+      return;
+    }
+    const dpr = window.devicePixelRatio || 1;
+    const bw = Math.round(size.w * dpr);
+    const bh = Math.round(size.h * dpr);
+    if (canvas.width !== bw) {
+      canvas.width = bw;
+    }
+    if (canvas.height !== bh) {
+      canvas.height = bh;
+    }
+    const ctx = canvas.getContext('2d');
     if (!ctx) {
       return;
     }
-    ctx.fillStyle = '#101020';
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = OUTSIDE_BG;
+    ctx.fillRect(0, 0, bw, bh);
+
+    // World transform (device pixels): world → scaled + offset, DPR folded in.
+    const s = view.scale * dpr;
+    ctx.setTransform(s, 0, 0, s, view.x * dpr, view.y * dpr);
+
+    ctx.fillStyle = MAP_BG;
     ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
-    ctx.lineWidth = 1;
+
+    ctx.strokeStyle = GRID;
+    ctx.lineWidth = 1 / view.scale; // ~1 CSS px regardless of zoom
+    ctx.beginPath();
     for (let x = 0; x <= GAME_WIDTH; x += map.tile.width) {
-      ctx.beginPath();
-      ctx.moveTo(x + 0.5, 0);
-      ctx.lineTo(x + 0.5, GAME_HEIGHT);
-      ctx.stroke();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, GAME_HEIGHT);
     }
     for (let y = 0; y <= GAME_HEIGHT; y += map.tile.height) {
-      ctx.beginPath();
-      ctx.moveTo(0, y + 0.5);
-      ctx.lineTo(GAME_WIDTH, y + 0.5);
-      ctx.stroke();
+      ctx.moveTo(0, y);
+      ctx.lineTo(GAME_WIDTH, y);
     }
+    ctx.stroke();
+
+    ctx.strokeStyle = BORDER;
+    ctx.lineWidth = 2 / view.scale;
+    ctx.strokeRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+
     const drawActor = (type: string, pos: Vec, alpha: number) => {
       ctx.globalAlpha = alpha;
       const image = images[type];
@@ -233,7 +421,14 @@ export const MapEditor = ({
     if (selected && hover) {
       drawActor(selected, hover, 0.5);
     }
-  }, [map, images, hover, selected]);
+  }, [view, size, map, images, hover, selected]);
+
+  const canvasClass = [
+    styles.canvas,
+    panning ? styles.panning : selected ? styles.placing : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div className={styles.editor}>
@@ -259,18 +454,28 @@ export const MapEditor = ({
           </button>
         ))}
       </div>
-      <div className={styles.stage}>
+      <div className={styles.stage} ref={stageRef}>
         <canvas
           ref={canvasRef}
-          width={GAME_WIDTH}
-          height={GAME_HEIGHT}
-          className={
-            selected ? `${styles.canvas} ${styles.placing}` : styles.canvas
-          }
-          onMouseMove={handleMove}
-          onMouseLeave={() => setHover(null)}
+          className={canvasClass}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={endPan}
+          onPointerLeave={handlePointerLeave}
           onClick={handleClick}
         />
+        <div className={styles.toolbar}>
+          <span className={styles.zoom}>
+            {view ? `${Math.round(view.scale * 100)}%` : '—'}
+          </span>
+          <button
+            type="button"
+            className={styles.resetButton}
+            onClick={resetView}
+          >
+            Reset view
+          </button>
+        </div>
       </div>
     </div>
   );
