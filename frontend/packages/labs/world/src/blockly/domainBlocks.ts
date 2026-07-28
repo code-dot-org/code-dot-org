@@ -19,6 +19,8 @@ import {label} from './label';
 import {
   actorOptions,
   actorOptionsExtension,
+  animationFileOptions,
+  animationFileOptionsExtension,
   worldOptions,
   worldOptionsExtension,
 } from './moduleOptions';
@@ -356,6 +358,96 @@ const worldAddActor = defineBlock({
   },
 });
 
+// ── World composition ────────────────────────────────────────────────────────
+// A `.world` file is authored with `world_world` (the root, like `world_actor`)
+// and `world_use_rule` / `world_use_animations` children — the rules in play and
+// the animation files to register. Each body block targets the `const world`
+// the root binds, mirroring the actor/scene pattern.
+
+const worldWorld = defineBlock({
+  type: 'world_world',
+  message0: 'world  id %1  name %2',
+  args0: [
+    {type: 'field_input', name: 'ID', text: 'world'},
+    {type: 'field_input', name: 'NAME', text: 'World'},
+  ],
+  message1: '%1',
+  args1: [{type: 'input_statement', name: 'BODY'}],
+  style: 'setup_blocks',
+  tooltip: 'Define a world: the rules in play and the animations it registers.',
+  generator: {
+    javascript(block, generator) {
+      const id = block.getFieldValue('ID');
+      const name = block.getFieldValue('NAME');
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
+      const body = generator.statementToCode(block, 'BODY');
+      return (
+        `const world = new WorldLab.WorldBuilder({id: ${str(id)}, name: ${str(
+          name,
+        )}});\n` + body
+      );
+    },
+  },
+});
+
+const worldUseRule = defineBlock({
+  type: 'world_use_rule',
+  message0: 'use rule %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'RULE',
+      options: [
+        ['Has Gravity', 'GravityRule'],
+        ['Responds to Input', 'InputRule'],
+        ['Has Appearance', 'AnimationRule'],
+        ['Has Collisions', 'CollisionRule'],
+        ['Has Motion', 'MotionRule'],
+        ['Has Space', 'SpatialRule'],
+      ],
+    },
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'behavior_blocks',
+  tooltip: 'Put a rule (a game mechanic) in play for this world.',
+  generator: {
+    javascript(block) {
+      return `world.useRules([WorldLab.${block.getFieldValue('RULE')}]);\n`;
+    },
+  },
+});
+
+const worldUseAnimations = defineBlock({
+  type: 'world_use_animations',
+  message0: 'use animations %1',
+  args0: [
+    {type: 'field_dropdown', name: 'FILE', options: animationFileOptions()},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [animationFileOptionsExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Register the animations authored in a project animation file.',
+  generator: {
+    javascript(block, generator) {
+      const file = block.getFieldValue('FILE');
+      addImport(
+        generator,
+        `mod:${file}`,
+        `import ${importVar(file)} from ${str(file)};`,
+      );
+      return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
+        file,
+      )}));\n`;
+    },
+  },
+});
+
 /**
  * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
  * Blockly blocks the toolbox also offers (controls_if, logic_compare,
@@ -377,6 +469,9 @@ export const DOMAIN_BLOCKS = [
   worldEventValue,
   worldScene,
   worldAddActor,
+  worldWorld,
+  worldUseRule,
+  worldUseAnimations,
 ];
 
 /** The toolbox for the Blockly editor: the domain blocks, grouped. */
@@ -384,6 +479,10 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   {
     name: 'Scene',
     blocks: ['world_scene', 'world_add_actor', 'world_set_position'],
+  },
+  {
+    name: 'World',
+    blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
   {name: 'Actor', blocks: ['world_actor']},
   {

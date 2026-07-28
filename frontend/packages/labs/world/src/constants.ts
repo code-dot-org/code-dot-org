@@ -44,27 +44,11 @@ export default new ActorBuilder({id: 'ball', name: 'Ball'})
   .set(AnimationProperty, 'pulse');
 `;
 
-const PLATFORM_WORLD = `import {WorldBuilder, GravityRule, InputRule, AnimationRule, parseAnimationFile} from 'world-lab';
-import GameAnimations from 'animations/game.json';
-
-// A World is the set of rules in play. "Has Gravity" pulls in motion and
-// collision automatically; "Responds to Input" lets arrow-key-controlled actors
-// move; "Has Appearance" draws actors with sprites and animations.
-// useAnimations registers the animations authored in animations/pulse.json.
-export default new WorldBuilder({id: 'platform', name: 'Platform World'})
-  .useRules([GravityRule, InputRule, AnimationRule])
-  .useAnimations(parseAnimationFile(GameAnimations));
-`;
-
-// The player is authored in Blockly — a `.actor` file is a Blockly workspace
-// stored as serialized JSON (INTERFACE.md). The lab generates world-lab code
-// from it before compiling; the scene imports it exactly like a `.js` actor.
-// Shows both representations — JS scene/world, Blockly actor — in one project.
-//
-// The `world_actor` block holds the actor's configuration (traits, start
-// position). Each event handler is a separate top-level block floating in the
-// workspace — its own starting block — so the events sit beside the actor, not
-// chained inside it.
+// Blockly workspace helpers. A `.actor` / `.scene` / `.world` file is a Blockly
+// workspace stored as serialized JSON (INTERFACE.md); the lab generates
+// world-lab code from it before compiling. `nextBlock` chains statement blocks;
+// `onEvent` builds a floating event-handler block (its own workspace root, so it
+// sits beside the actor rather than chained inside it).
 const nextBlock = (block: object, next?: object) =>
   next ? {...block, next: {block: next}} : block;
 
@@ -126,6 +110,44 @@ const MAIN_SCENE = JSON.stringify(
                     320,
                     70,
                     addActorBlock('add-ball', 'actors/ball', 90, 90),
+                  ),
+                ),
+              ),
+            },
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+// The world, authored in Blockly (`platform.world`): a `world_world` root with
+// the rules in play and the animation file it registers. "Has Gravity" pulls in
+// motion and collision; "Responds to Input" moves arrow-controlled actors; "Has
+// Appearance" draws sprites and animations.
+const PLATFORM_WORLD = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_world',
+          x: 20,
+          y: 20,
+          fields: {ID: 'platform', NAME: 'Platform World'},
+          inputs: {
+            BODY: {
+              block: nextBlock(
+                {type: 'world_use_rule', fields: {RULE: 'GravityRule'}},
+                nextBlock(
+                  {type: 'world_use_rule', fields: {RULE: 'InputRule'}},
+                  nextBlock(
+                    {type: 'world_use_rule', fields: {RULE: 'AnimationRule'}},
+                    {
+                      type: 'world_use_animations',
+                      fields: {FILE: 'animations/game'},
+                    },
                   ),
                 ),
               ),
@@ -224,8 +246,8 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       },
       platform: {
         id: 'platform',
-        name: 'platform.js',
-        language: 'javascript',
+        name: 'platform.world',
+        language: 'world',
         contents: PLATFORM_WORLD,
         folderId: 'worlds',
       },

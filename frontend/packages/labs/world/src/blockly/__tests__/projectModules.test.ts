@@ -1,10 +1,20 @@
 import {describe, expect, it} from 'vitest';
 
-import {projectActorOptions, projectWorldOptions} from '../projectModules';
+import {
+  projectActorOptions,
+  projectAnimationFileOptions,
+  projectWorldOptions,
+} from '../projectModules';
 
 const FILES = {
   'scenes/main.scene': '{}',
-  'worlds/platform.js': `export default new WorldBuilder({id: 'platform', name: 'Platform World'});`,
+  'worlds/platform.world': JSON.stringify({
+    blocks: {
+      blocks: [
+        {type: 'world_world', fields: {ID: 'platform', NAME: 'Platform World'}},
+      ],
+    },
+  }),
   'actors/player.actor': JSON.stringify({
     blocks: {
       blocks: [{type: 'world_actor', fields: {ID: 'player', NAME: 'Player'}}],
@@ -24,10 +34,16 @@ describe('projectModules', () => {
     ]);
   });
 
-  it("labels a world by its builder's name, not the file stem", () => {
+  it('labels a world by its authored name, not the file stem', () => {
     // File is `platform` but the world calls itself "Platform World".
     expect(projectWorldOptions(FILES)).toEqual([
       ['Platform World', 'worlds/platform'],
+    ]);
+  });
+
+  it('lists animation files under animations/ as extension-less paths', () => {
+    expect(projectAnimationFileOptions(FILES)).toEqual([
+      ['Game', 'animations/game'],
     ]);
   });
 

@@ -15,7 +15,7 @@ describe('projectFiles', () => {
       'actors/player.actor',
       'animations/game.json',
       'scenes/main.scene',
-      'worlds/platform.js',
+      'worlds/platform.world',
     ]);
     // The scene is a Blockly workspace (generated to a SceneBuilder at compile).
     expect(files['scenes/main.scene']).toContain('world_add_actor');

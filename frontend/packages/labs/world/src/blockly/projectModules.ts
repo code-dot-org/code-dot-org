@@ -8,23 +8,26 @@
 
 import {label} from './label';
 
-// Code files that define a module: a Blockly actor, or plain JS/TS.
-const CODE_EXT = /\.(actor|ts|js)$/;
+// Code files that define a module: a Blockly actor/world, or plain JS/TS.
+const CODE_EXT = /\.(actor|world|ts|js)$/;
 
-/** Best-effort authored name: a Blockly actor's NAME field, else a builder's `name`. */
+// The root blocks whose NAME field names a Blockly-authored module.
+const NAMED_ROOTS = ['world_actor', 'world_world'];
+
+/** Best-effort authored name: a Blockly root's NAME field, else a builder's `name`. */
 function authoredName(contents: string): string | undefined {
   const trimmed = contents.trim();
   if (trimmed.startsWith('{')) {
     try {
       const blocks = (JSON.parse(trimmed) as {blocks?: {blocks?: unknown[]}})
         .blocks?.blocks;
-      const actor = Array.isArray(blocks)
-        ? (blocks.find(b => (b as {type?: string})?.type === 'world_actor') as
-            | {fields?: {NAME?: string}}
-            | undefined)
+      const root = Array.isArray(blocks)
+        ? (blocks.find(b =>
+            NAMED_ROOTS.includes((b as {type?: string})?.type ?? ''),
+          ) as {fields?: {NAME?: string}} | undefined)
         : undefined;
-      if (actor?.fields?.NAME) {
-        return actor.fields.NAME;
+      if (root?.fields?.NAME) {
+        return root.fields.NAME;
       }
     } catch {
       // Not Blockly JSON — fall through to the source scan.
@@ -72,4 +75,25 @@ export function projectWorldOptions(
   files: Record<string, string>,
 ): Array<[string, string]> {
   return modulesUnder(files, 'worlds/');
+}
+
+/**
+ * `[label, path]` options for the project's animation files (JSON under
+ * `animations/`) — the `world_use_animations` dropdown. The value is the
+ * extension-less path the world imports (`animations/game`).
+ */
+export function projectAnimationFileOptions(
+  files: Record<string, string>,
+): Array<[string, string]> {
+  const options: Array<[string, string]> = [];
+  for (const path of Object.keys(files)) {
+    if (path.startsWith('animations/') && path.endsWith('.json')) {
+      const modulePath = path.replace(/\.json$/, '');
+      options.push([
+        label(modulePath.split('/').pop() ?? modulePath),
+        modulePath,
+      ]);
+    }
+  }
+  return options;
 }

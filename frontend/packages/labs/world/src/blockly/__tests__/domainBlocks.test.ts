@@ -196,3 +196,54 @@ describe('scene block generators', () => {
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
   });
 });
+
+describe('world block generators', () => {
+  const run = (
+    type: string,
+    block: Record<string, unknown>,
+    definitions: Record<string, string>,
+    body: string,
+  ) =>
+    generatorFor(type)(
+      {getFieldValue: (n: string) => block[n], id: block.id} as never,
+      {definitions_: definitions, statementToCode: () => body} as never,
+      {} as never,
+    ) as string;
+
+  it('world_world builds the world and hosts its body', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_world',
+      {ID: 'platform', NAME: 'Platform World'},
+      defs,
+      'world.useRules([X]);\n',
+    );
+    expect(code).toBe(
+      'const world = new WorldLab.WorldBuilder({id: "platform", name: "Platform World"});\n' +
+        'world.useRules([X]);\n',
+    );
+    expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
+  });
+
+  it('world_use_rule adds a rule by its world-lab export name', () => {
+    expect(run('world_use_rule', {RULE: 'GravityRule'}, {}, '')).toBe(
+      'world.useRules([WorldLab.GravityRule]);\n',
+    );
+  });
+
+  it('world_use_animations imports the file and registers its animations', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_use_animations',
+      {FILE: 'animations/game'},
+      defs,
+      '',
+    );
+    expect(code).toBe(
+      'world.useAnimations(WorldLab.parseAnimationFile(Game));\n',
+    );
+    expect(defs['mod:animations/game']).toBe(
+      'import Game from "animations/game";',
+    );
+  });
+});

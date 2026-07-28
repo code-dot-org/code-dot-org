@@ -38,3 +38,17 @@ export function assembleSceneModule(blocks: GeneratedBlock[]): string {
   const restCode = rest.map(block => block.code).join('');
   return `${sceneCode}${restCode}export default scene;\n`;
 }
+
+/**
+ * Assemble a `.world` file's module. The `world_world` block is the root — it
+ * builds `const world = …` and generates its `use rule` / `use animations`
+ * children inline — so it is the only top-level block; any stray others are
+ * appended before the default export. Imports are hoisted by `finish()`.
+ */
+export function assembleWorldModule(blocks: GeneratedBlock[]): string {
+  const world = blocks.find(block => block.type === 'world_world');
+  const rest = blocks.filter(block => block !== world);
+  const worldCode = world ? world.code : '';
+  const restCode = rest.map(block => block.code).join('');
+  return `${worldCode}${restCode}export default world;\n`;
+}
