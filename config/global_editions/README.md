@@ -26,7 +26,9 @@ Each of these header sections (except `help`) is itself split into user context
 such as `student`, `teacher`, and `signed_out`. Then those sections are simply
 an array of links. Each link item provides a title (which is also used for
 translation), an id, the domain for the URL (`code.org`, `studio.code.org`), the
-URL (`/home`, etc).
+URL (`/home`, etc). `signed_out_marketing` is an additional variant used for
+signed-out visitors under the marketing nav; falls back to `signed_out` when a
+region doesn't configure it.
 
 The `help` links can specify a `level` property that matches the name of a `Game`
 type (e.g. `Spritelab`) where the entries only appear when within that type of

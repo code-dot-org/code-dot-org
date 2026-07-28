@@ -6,6 +6,7 @@ import {useAuth} from '@/modules/auth';
 
 import {
   BRAND_NAME,
+  buildMarketingGlobalNav,
   buildSupportLinks,
   CREATE_MENU_ITEMS,
   GLOBAL_NAV,
@@ -27,6 +28,13 @@ export default function SiteHeader() {
       : STUDENT_MENU_ITEMS;
   const supportLinks = useMemo(() => buildSupportLinks(userType), [userType]);
 
+  // Signed-out always gets the marketing nav; signed-in nav is unaffected.
+  const marketingNav = !userType;
+  const globalNavItems = useMemo(
+    () => (marketingNav ? buildMarketingGlobalNav() : GLOBAL_NAV),
+    [marketingNav],
+  );
+
   return (
     <Header
       logoImageUrl={LOGO_IMAGE_URL}
@@ -34,8 +42,9 @@ export default function SiteHeader() {
       menuItems={menuItems}
       userAuth={auth}
       createMenuItems={CREATE_MENU_ITEMS}
-      globalNavItems={GLOBAL_NAV}
+      globalNavItems={globalNavItems}
       supportLinks={supportLinks}
+      marketingNav={marketingNav}
     />
   );
 }

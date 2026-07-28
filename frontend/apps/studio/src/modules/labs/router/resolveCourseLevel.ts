@@ -4,6 +4,9 @@ import type {
   ScriptStructure,
 } from '@code-dot-org/core/api';
 
+/** Thrown when the requested course/lesson/level position has no match. */
+export class CourseLevelNotFoundError extends Error {}
+
 interface LevelEntry {
   position: number;
   levelId: number;
@@ -30,7 +33,7 @@ export function resolveCourseLevel(
 ): ResolvedCourseLevel {
   const lesson = structure.lessons.find(l => l.position === lessonPosition);
   if (!lesson) {
-    throw new Error(
+    throw new CourseLevelNotFoundError(
       `Lesson not found at position ${lessonPosition} in "${structure.name}"`,
     );
   }
@@ -44,7 +47,7 @@ export function resolveCourseLevel(
 
   const structureLevel = lesson.levels.find(l => l.position === levelPosition);
   if (!structureLevel) {
-    throw new Error(
+    throw new CourseLevelNotFoundError(
       `Level not found at position ${levelPosition} in lesson ${lessonPosition}`,
     );
   }
@@ -52,7 +55,7 @@ export function resolveCourseLevel(
   const activeId = structureLevel.activeId;
   const properties = levelPropertiesMap[activeId];
   if (!properties) {
-    throw new Error(
+    throw new CourseLevelNotFoundError(
       `Level properties not found for level ${activeId} (position ${levelPosition})`,
     );
   }
@@ -66,5 +69,38 @@ export function resolveCourseLevel(
     finishLink: lesson.finishLink,
     properties,
     levels,
+  };
+}
+
+/** The fields {@link nextDestination} reads from a resolved level. */
+export interface ContinueContext {
+  position: number;
+  scriptName: string;
+  finishLink?: string;
+  properties: {finishUrl?: string};
+  levels: readonly {position: number; path: string}[];
+}
+
+/**
+ * Where "Continue" goes from a resolved level: the next level in array order
+ * (the same source LevelNavigation uses, so the two never disagree), or — on
+ * the last level — the lesson finish link, falling back to the script overview
+ * so Continue is never a silent no-op.
+ */
+export function nextDestination(
+  resolved: ContinueContext,
+): {to: string} | {href: string} {
+  const currentIndex = resolved.levels.findIndex(
+    l => l.position === resolved.position,
+  );
+  const nextLevel = resolved.levels[currentIndex + 1];
+  if (nextLevel) {
+    return {to: nextLevel.path};
+  }
+  return {
+    href:
+      resolved.properties.finishUrl ??
+      resolved.finishLink ??
+      `/s/${resolved.scriptName}`,
   };
 }

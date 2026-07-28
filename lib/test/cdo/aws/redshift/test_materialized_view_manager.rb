@@ -263,7 +263,7 @@ module Cdo
           end
 
           it 'submits each view batch via batch_execute_async and returns statement IDs by FQN' do
-            client.stubs(:batch_execute_async).returns('id-pii').then.returns('id-non-pii')
+            client.stubs(:batch_execute_async).returns(['id-pii']).then.returns(['id-non-pii'])
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
@@ -286,8 +286,8 @@ module Cdo
             batches = []
             client.stubs(:batch_execute_async).with do |sqls|
               batches << sqls
-              "id-#{batches.length}"
-            end
+              true
+            end.returns(['id'])
 
             generator.create_or_replace_views(client: client, environment_type: :production)
 
@@ -303,7 +303,7 @@ module Cdo
 
           it 'renders ERB placeholders in the CREATE SQL' do
             batches = []
-            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; 'id'}
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
 
             generator.create_or_replace_views(client: client, environment_type: :test)
 
@@ -316,7 +316,7 @@ module Cdo
           it 'skips non-pii view when all columns are text' do
             model.stubs(:columns).returns([name_col, bio_col])
             batches = []
-            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; 'id'}
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
 
             result = generator.create_or_replace_views(client: client, environment_type: :production)
 
@@ -1057,7 +1057,7 @@ module Cdo
 
           it 'classifies new views as to_add' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute_async)
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1076,7 +1076,7 @@ module Cdo
                 {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute_async)
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1097,7 +1097,7 @@ module Cdo
                 {'schema' => 'learning_platform_production', 'name' => 'old_table', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute_async)
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1109,11 +1109,7 @@ module Cdo
 
           it 'submits async batches for changed views and returns their statement IDs' do
             client.stubs(:execute).returns([])
-            id_seq = 0
-            client.stubs(:batch_execute_async).with do |_sqls|
-              id_seq += 1
-              "id-#{id_seq}"
-            end
+            client.stubs(:batch_execute_async).returns(['id'])
 
             result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1132,8 +1128,8 @@ module Cdo
             submitted = []
             client.stubs(:batch_execute_async).with do |sqls|
               submitted << sqls
-              "id-#{submitted.length}"
-            end
+              true
+            end.returns(['id'])
 
             result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model]
@@ -1145,25 +1141,25 @@ module Cdo
             assert(drop_sqls.any? {|s| s.include?('old_table')})
           end
 
-          it 'chunks the orphan-drop into batches of at most MAX_BATCH_STATEMENTS statements' do
-            # 95 orphaned views must span 3 batches (40 + 40 + 15), since the Data API caps
-            # batch_execute_statement at 40 statements.
+          it 'hands the whole orphan-drop to the client in one call and keys a statement per returned id' do
+            # The Data API's per-call statement cap is the client's concern now (see
+            # Client#batch_execute_async / test_client.rb) -- the manager passes every orphan drop in a
+            # single call and records one __drop_orphans__ key per statement id the client returns.
             orphans = (1..95).map {|i| {'schema' => 'learning_platform_test', 'name' => "old_#{i}", 'comment' => nil}}
             client.stubs(:execute).returns(orphans)
 
-            drop_batches = []
+            drop_calls = []
             client.stubs(:batch_execute_async).with do |sqls|
-              drop_batches << sqls
-              "id-#{drop_batches.length}"
-            end
+              drop_calls << sqls if sqls.all? {|s| s.start_with?('DROP MATERIALIZED VIEW')}
+              true
+            end.returns(%w[id-a id-b id-c]) # client split the 95 drops into 3 batches -> 3 ids
 
             result = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: [model]
             )
 
-            drop_only = drop_batches.select {|sqls| sqls.all? {|s| s.start_with?('DROP MATERIALIZED VIEW')}}
-            assert_equal [40, 40, 15], drop_only.map(&:length)
-            assert(drop_only.all? {|sqls| sqls.length <= MaterializedViewManager::MAX_BATCH_STATEMENTS})
+            assert_equal 1, drop_calls.length, 'orphan drops should be submitted in a single call'
+            assert_equal 95, drop_calls.first.length
             drop_keys = result[:statements].keys.select {|k| k.start_with?('__drop_orphans__')}
             assert_equal 3, drop_keys.length
           end
@@ -1198,7 +1194,7 @@ module Cdo
 
           it 'yields :submitted with table name and submitted FQNs per model' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute_async).returns('id-1', 'id-2')
+            client.stubs(:batch_execute_async).returns(['id-1'], ['id-2'])
 
             events = []
             MaterializedViewManager.provision_all_views(
@@ -1218,7 +1214,7 @@ module Cdo
                 {'schema' => 'learning_platform_test', 'name' => 'old_table', 'comment' => nil}
               ]
             )
-            client.stubs(:batch_execute_async).returns('id')
+            client.stubs(:batch_execute_async).returns(['id'])
 
             drop_events = []
             MaterializedViewManager.provision_all_views(
@@ -1232,7 +1228,7 @@ module Cdo
 
           it 'does not yield :drop_batch_submitted when to_drop is empty' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute_async).returns('id')
+            client.stubs(:batch_execute_async).returns(['id'])
 
             events = []
             MaterializedViewManager.provision_all_views(
@@ -1244,12 +1240,9 @@ module Cdo
 
           it 'continues past per-model submit failures and records them under :failed' do
             client.stubs(:execute).returns([])
-            call_count = 0
-            client.stubs(:batch_execute_async).with do |_sqls|
-              call_count += 1
-              raise Cdo::Aws::Redshift::Client::QueryError, 'Submit failed' if call_count == 1
-              "id-#{call_count}"
-            end
+            # First submit raises; the rest succeed -- so the first model fails and the next still runs.
+            client.stubs(:batch_execute_async).
+              raises(Cdo::Aws::Redshift::Client::QueryError, 'Submit failed').then.returns(['id'])
 
             events = []
             plan = MaterializedViewManager.provision_all_views(
@@ -1268,7 +1261,7 @@ module Cdo
 
           it 'reports an empty :failed array when all submits succeed' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute_async)
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1309,7 +1302,7 @@ module Cdo
               ]
             )
             submitted = []
-            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; true}.returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1330,7 +1323,7 @@ module Cdo
               ]
             )
             submitted = []
-            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; 'id'}
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; true}.returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model]
@@ -1342,7 +1335,7 @@ module Cdo
 
           it 'handles multiple models' do
             client.stubs(:execute).returns([])
-            client.stubs(:batch_execute_async)
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :production, models: [model, activities_model]
@@ -1359,7 +1352,7 @@ module Cdo
             client.stubs(:execute).returns(
               [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
             )
-            client.stubs(:batch_execute_async).returns('id')
+            client.stubs(:batch_execute_async).returns(['id'])
 
             plan = MaterializedViewManager.provision_all_views(
               client: client, environment_type: :test, models: []
@@ -1442,6 +1435,81 @@ module Cdo
             )
             assert_nil summary[:max_seconds_since_last_refresh]
             assert_nil summary[:max_refresh_duration_seconds]
+          end
+        end
+
+        describe '.summarize_view_status' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'tallies status counts, expected/orphan split, and groups failures by error' do
+            rows = [
+              status_row(status: 'FINISHED'),
+              status_row(status: 'FINISHED', error: 'Schema "x" does not exist', table_name: 'levels'),
+              status_row(status: 'FAILED', error: 'Schema "x" does not exist', table_name: 'scripts'),
+              status_row(model_name: MaterializedViewManager::ORPHAN_MODEL_NAME, status: 'FINISHED', table_name: 'old_table')
+            ]
+            summary = MaterializedViewManager.summarize_view_status(rows)
+
+            assert_equal({'FINISHED' => 3, 'FAILED' => 1}, summary[:by_status])
+            assert_equal 3, summary[:expected]
+            assert_equal 1, summary[:orphan]
+            assert_equal ['Schema "x" does not exist'], summary[:failures_by_error].keys
+            assert_equal 2, summary[:failures_by_error]['Schema "x" does not exist'].length
+          end
+
+          it 'reports empty tallies for an empty row set' do
+            summary = MaterializedViewManager.summarize_view_status([])
+            assert_empty summary[:by_status]
+            assert_equal 0, summary[:expected]
+            assert_equal 0, summary[:orphan]
+            assert_empty summary[:failures_by_error]
+          end
+        end
+
+        describe '.view_status_to_csv' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.parse('2026-07-13T12:00:00Z'), duration_seconds: 5.27,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'emits a header row matching VIEW_STATUS_CSV_HEADERS' do
+            parsed = CSV.parse(MaterializedViewManager.view_status_to_csv([]))
+            assert_equal [MaterializedViewManager::VIEW_STATUS_CSV_HEADERS], parsed
+          end
+
+          it 'has the same number of values as headers, so columns never silently shift' do
+            values = MaterializedViewManager.view_status_csv_values(status_row)
+            assert_equal MaterializedViewManager::VIEW_STATUS_CSV_HEADERS.length, values.length
+          end
+
+          it 'serializes a row: iso8601 timestamp, rounded duration, stringified boolean' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row])
+            row = CSV.parse(csv, headers: true).first
+
+            assert_equal 'User', row['model']
+            assert_equal 'users', row['mysql_table_name']
+            assert_equal '2026-07-13T12:00:00Z', row['operation_executed_at']
+            assert_equal '5.3', row['operation_duration_seconds']
+            assert_equal 'false', row['view_is_stale']
+          end
+
+          it 'leaves is_stale blank (not "false") when it is nil' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row(is_stale: nil)])
+            row = CSV.parse(csv, headers: true).first
+            assert_nil row['view_is_stale']
           end
         end
 

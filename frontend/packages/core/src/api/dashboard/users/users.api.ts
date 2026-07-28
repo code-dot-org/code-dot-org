@@ -399,6 +399,9 @@ export function createUsersApi(transport: Transport) {
             ...(params.username !== undefined && {username: params.username}),
             ...(params.age !== undefined && {age: params.age}),
             ...(params.usState !== undefined && {us_state: params.usState}),
+            ...(params.gender !== undefined && {
+              gender_student_input: params.gender,
+            }),
           },
         },
       });

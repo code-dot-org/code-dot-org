@@ -1,5 +1,3 @@
-import color from '../../util/color';
-
 export var input = {
   display: 'inline-block',
   height: 30,
@@ -8,26 +6,18 @@ export var input = {
   marginLeft: 0,
   fontSize: 14,
   lineHeight: '20px',
-  color: color.charcoal,
   WebkitBorderRadius: 4,
   MozBorderRadius: 4,
   borderRadius: 4,
-  border: '1px solid ' + color.light_gray,
   verticalAlign: 'middle',
-};
-
-export var enumInput = {
-  marginBottom: 0,
-  border: '1px solid ' + color.light_gray,
 };
 
 export var container = {
   paddingLeft: 20,
   marginBottom: 8,
-};
-
-export var maxWidth = {
-  maxWidth: 265,
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '.5rem',
 };
 
 export var description = {
