@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -84,7 +84,13 @@ export default class AddAssetButtonRow extends React.Component {
             disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
           />
         )}
-        <span id="manage-asset-status">{this.props.statusMessage}</span>
+        <MuiTypography
+          id="manage-asset-status"
+          variant="body2"
+          component="span"
+        >
+          {this.props.statusMessage}
+        </MuiTypography>
       </div>
     );
   }

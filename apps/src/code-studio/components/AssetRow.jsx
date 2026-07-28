@@ -1,5 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -91,7 +95,11 @@ export default class AssetRow extends React.Component {
       );
     } else {
       const size = (this.props.size / 1000).toFixed(2);
-      flex = size + ' kb';
+      flex = (
+        <MuiTypography variant="body2" component="span">
+          {size} kb
+        </MuiTypography>
+      );
     }
 
     let usage = $('#visualization').find(
@@ -184,7 +192,11 @@ export default class AssetRow extends React.Component {
             levelName={this.props.levelName}
           />
         </td>
-        <td>{this.props.name}</td>
+        <td>
+          <MuiTypography variant="body2" component="span">
+            {this.props.name}
+          </MuiTypography>
+        </td>
         {actions}
       </tr>
     );
