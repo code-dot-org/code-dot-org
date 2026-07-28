@@ -6,7 +6,9 @@
 
 import {
   ASSET_BASE_PARAM,
+  ESBUILD_WORKER_PARAM,
   FromCompileMessage,
+  LAB_ESBUILD_WORKER_PARAM,
   PARENT_ORIGIN_PARAM,
   ROLE_PARAM,
   SandboxRole,
@@ -39,6 +41,15 @@ export class WorldCompileManager {
     url.searchParams.set(PARENT_ORIGIN_PARAM, window.location.origin);
     url.searchParams.set(ASSET_BASE_PARAM, opts.assetBase);
     url.searchParams.set(ROLE_PARAM, SandboxRole.COMPILE);
+    // Forward the esbuild-worker override (its value) from the lab URL to the
+    // surface. Default is worker-on; only a host that can't grant `worker-src
+    // blob:` sets `world-esbuild-worker=0` to fall back to the main thread.
+    const workerOverride = new URLSearchParams(window.location.search).get(
+      LAB_ESBUILD_WORKER_PARAM,
+    );
+    if (workerOverride != null) {
+      url.searchParams.set(ESBUILD_WORKER_PARAM, workerOverride || '1');
+    }
 
     this.ready = new Promise(resolve => {
       this.resolveReady = resolve;

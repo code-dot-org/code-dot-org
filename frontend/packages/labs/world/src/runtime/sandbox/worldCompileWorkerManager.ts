@@ -8,6 +8,7 @@ import {
   ASSET_BASE_PARAM,
   BUILD_PATH_PREFIX,
   BuildWorkerMessage,
+  ESBUILD_WORKER_PARAM,
   FromCompileMessage,
   PARENT_ORIGIN_PARAM,
   ToCompileMessage,
@@ -29,9 +30,14 @@ export async function start(): Promise<void> {
   };
 
   const worker = await registerBuildSw({awaitControl: false});
+  // Run esbuild in a Web Worker (default) unless the host forced the main-thread
+  // fallback with `esbuildWorker=0`/`false`. See ESBUILD_WORKER_PARAM.
+  const workerParam = params.get(ESBUILD_WORKER_PARAM);
+  const esbuildWorker = workerParam !== '0' && workerParam !== 'false';
   const compiler = new WorldCompiler({
     wasmURL: `${assetBase}esbuild.wasm`,
     assetBase,
+    esbuildWorker,
   });
   await compiler.init();
   post({type: FromCompileMessage.READY});

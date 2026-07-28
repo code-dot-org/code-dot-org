@@ -159,9 +159,14 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {
       return;
     }
+    // The first compile is the boot path — run it immediately; the debounce only
+    // needs to coalesce a burst of subsequent edits. `generation` is still 0
+    // until the first `compileAndLoad` starts, so this is exactly "have we booted
+    // yet?" without a second flag.
+    const delay = generation.current === 0 ? 0 : DEBOUNCE_MS;
     const handle = window.setTimeout(() => {
       void compileAndLoad(files);
-    }, DEBOUNCE_MS);
+    }, delay);
     return () => window.clearTimeout(handle);
     // compileAndLoad closes over refs and stable state setters only.
   }, [currentSources, generatorReady]);
@@ -198,6 +203,12 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
     const mine = ++generation.current;
     setStatus('compiling');
+    // Perf marks bracket the two expensive boot stages so boot time is
+    // measurable without DevTools (whose wasm de-optimization inflates the
+    // esbuild compile ~20x, swamping every other cost). `compile` spans the
+    // esbuild-wasm bundle; `running` fires once the game is live. The demo reads
+    // these; they are cheap and safe to keep in production for RUM.
+    performance.mark('world:compile-start');
     try {
       // Compile the code and gather the uploaded image assets in parallel; the
       // preview needs both to draw the game.
@@ -208,6 +219,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile
       }
+      performance.mark('world:compile-done');
       // The compiler is now warm and the surfaces are up; let the map editor
       // start rendering thumbnails in parallel with the Phaser boot below.
       setHasCompiled(true);
@@ -224,6 +236,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
         pushConsole({level: 'info', text: '↻ Restarted the game'});
       }
       setStatus('running');
+      performance.mark('world:running');
     } catch (error) {
       if (mine !== generation.current) {
         return;

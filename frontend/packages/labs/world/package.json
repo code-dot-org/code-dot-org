@@ -33,14 +33,16 @@
   },
   "scripts": {
     "build": "vite build",
+    "build:demo": "yarn setup:world && vite build --mode demo",
     "dev": "yarn setup:world && vite --port 5139 --strictPort",
-    "dev:isolated": "concurrently -k -n app,sandbox -c blue,magenta \"yarn dev\" \"yarn dev:sandbox\"",
+    "dev:isolated": "yarn setup:world && concurrently -k -n app,sandbox -c blue,magenta \"vite --port 5139 --strictPort\" \"vite --port 5202 --strictPort\"",
     "dev:sandbox": "yarn setup:world && vite --port 5202 --strictPort",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "preview": "vite preview",
+    "preview:demo": "concurrently -k -n app,sandbox -c blue,magenta \"vite preview --outDir dist-demo --port 5139 --strictPort\" \"vite preview --outDir dist-demo --port 5202 --strictPort\"",
     "setup:world": "node scripts/setup-world-assets.mjs",
     "test": "vitest --run",
     "typecheck": "tsc -b --noEmit"

@@ -31,6 +31,7 @@ import {injectFontAwesome} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
+import {mountBootBadge} from './demoBootBadge';
 import {getSandboxUrl, setSandboxUrl} from './runtime/worldConfig';
 
 initializeCore({plugins: [localizationPlugin]});
@@ -118,4 +119,7 @@ if (rootElement) {
       </ThemeProvider>
     </StyledEngineProvider>,
   );
+  // Demo-only: show the real boot time on-page so it can be read with DevTools
+  // closed (see demoBootBadge for why that matters).
+  mountBootBadge();
 }
