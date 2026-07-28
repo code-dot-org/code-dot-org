@@ -53,6 +53,8 @@ interface WorldRuntimeValue {
   consoleLog: ConsoleLine[];
   clearConsole: () => void;
   status: RuntimeStatus;
+  /** Re-run the current program from the start. */
+  restart: () => void;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -216,12 +218,30 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
   }
 
+  /** Re-run the current program from the start (the preview's restart button). */
+  const restart = () => {
+    const pair = managers.current;
+    if (!pair) {
+      return;
+    }
+    const files = projectFiles(currentSources.source);
+    if (Object.keys(files).length === 0) {
+      return;
+    }
+    // STOP tears the game down and resets the preview's reconcile baseline, so
+    // the re-run starts fresh (actors back to their initial state) instead of
+    // live-patching.
+    pair.preview.stop();
+    void compileAndLoad(files);
+  };
+
   const value: WorldRuntimeValue = {
     isConfigured: Boolean(sandboxUrl),
     previewIframe,
     consoleLog,
     clearConsole: () => setConsoleLog([]),
     status,
+    restart,
   };
 
   return (
