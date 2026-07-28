@@ -274,9 +274,23 @@ Rails Lograge logs typically include the core keys shown in the examples above:
 - `user_id` - The ID of the current logged in user (optional)
 - `admin_id` - Present if this is an admin assuming this user's identity
 
-Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`.
+Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`. For 5xx responses a `backtrace` key carries the filtered exception backtrace (the same exception is also reported to Sentry and Honeybadger).
 
-**Note:** The `@cee:` prefix is followed by a space and then the JSON object. Rails still emits unstructured lines (for example, `Rendered ...`) immediately before the JSON; parsers should filter for lines beginning with `@cee:` when extracting structured entries.
+**Note:** The `@cee:` prefix is followed by a space and then the JSON object. Parsers should filter for lines beginning with `@cee:` when extracting structured entries.
+
+#### Severity and volume control
+
+Each request line is logged at a severity derived from the response status, and lines below a configurable threshold are dropped before they reach syslog — so we do not pay to ship 2xx/3xx request logs to CloudWatch in production:
+
+| Status | Severity | Emitted when threshold is… |
+|--------|----------|----------------------------|
+| 5xx    | `error`  | `error`, `warn`, or `info` |
+| 4xx    | `warn`   | `warn` or `info`           |
+| 2xx/3xx| `info`   | `info` only                |
+
+The threshold is the DCDO key `http_request_log_level` (`info`, `warn`, or `error`). Its default is `warn` in production — so by default production logs only 4xx and 5xx — and `info` in every other environment. Set `http_request_log_level` to `info` in DCDO to get full request logging during an incident without a deploy; no restart is required. The policy lives in `Cdo::HttpRequestLogging` (`lib/cdo/http_request_logging.rb`).
+
+This threshold is independent of the Rails logger level (`config.log_level`, still `info`), so deliberate `CDO.log.info` / `CDO.log.warn` / `CDO.log.error` calls are unaffected by it. ActionView's per-render `Rendered ...` lines are silenced in the managed environments (`config.action_view.logger = nil`), so they no longer accompany each request.
 
 #### Other syslog lines you will see
 
