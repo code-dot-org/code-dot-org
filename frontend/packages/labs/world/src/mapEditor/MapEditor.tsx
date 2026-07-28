@@ -80,7 +80,7 @@ export const MapEditor = ({
   isReadOnly,
   onChange,
 }: CustomEditorProps) => {
-  const {getActorThumbnails, status} = useWorldRuntime();
+  const {getActorThumbnails, hasCompiled} = useWorldRuntime();
   const {currentSources} = useSources<MultiFileSource>();
 
   const files = useMemo(
@@ -105,11 +105,12 @@ export const MapEditor = ({
   const thumbFn = useRef(getActorThumbnails);
   thumbFn.current = getActorThumbnails;
 
-  // Fetch thumbnails once the sandbox is up (the game is running) and we have
-  // actors + a world to render them in; merge so new templates fill in.
+  // Fetch thumbnails as soon as the project has compiled once (compiler warm,
+  // surfaces up) and we have actors + a world to render them in — not waiting
+  // for the game to finish booting. Merge so new templates fill in.
   useEffect(() => {
     const paths = actorOptions.map(([, path]) => path);
-    if (status !== 'running' || !paths.length || !worldPath) {
+    if (!hasCompiled || !paths.length || !worldPath) {
       return;
     }
     if (paths.every(path => thumbnails[path])) {
@@ -124,7 +125,7 @@ export const MapEditor = ({
     return () => {
       alive = false;
     };
-  }, [actorOptions, worldPath, status, thumbnails]);
+  }, [actorOptions, worldPath, hasCompiled, thumbnails]);
 
   // Decode thumbnail data URLs to images for canvas drawing.
   useEffect(() => {

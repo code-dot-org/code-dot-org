@@ -1,7 +1,7 @@
 // Wraps esbuild-wasm for the compile surface: initialize once, keep a warm
-// build context, and bundle the learner's project on each request. Milestone-0
-// Spike B measured cold ~89 ms / warm-incremental ~10 ms; Spike C established the
-// two required init details baked in below.
+// build context per entry, and bundle the learner's project on each request.
+// Milestone-0 Spike B measured cold ~89 ms / warm-incremental ~10 ms; Spike C
+// established the two required init details baked in below.
 
 import * as esbuild from 'esbuild-wasm';
 
@@ -36,8 +36,12 @@ export class WorldCompiler {
   private readonly wasmURL?: string;
   private readonly externals: Record<string, string>;
   private readonly files = new Map<string, string>();
-  private context: esbuild.BuildContext | null = null;
-  private contextEntry: string | null = null;
+  // A warm, incremental build context per entry. Keying by entry (rather than a
+  // single shared context) is what keeps the game entry and the thumbnail-
+  // manifest entry BOTH warm: alternating between them no longer disposes and
+  // rebuilds the other's context. Rebuilds are sequential, so the shared `files`
+  // map is set correctly before each one.
+  private readonly contexts = new Map<string, esbuild.BuildContext>();
 
   constructor(opts: {wasmURL?: string; assetBase?: string} = {}) {
     this.wasmURL = opts.wasmURL;
@@ -56,8 +60,8 @@ export class WorldCompiler {
   }
 
   /**
-   * Bundle `files` into a single ESM module, starting at `entry`. The context is
-   * reused across calls with the same entry so rebuilds are incremental.
+   * Bundle `files` into a single ESM module, starting at `entry`. Each entry
+   * keeps its own warm context, so rebuilds of the same entry are incremental.
    * @throws CompileError on a resolve/parse/bundle failure.
    */
   async compile(files: Record<string, string>, entry: string): Promise<string> {
@@ -68,10 +72,9 @@ export class WorldCompiler {
       this.files.set(path, contents);
     }
 
-    if (!this.context || this.contextEntry !== entry) {
-      await this.context?.dispose();
-      this.contextEntry = entry;
-      this.context = await esbuild.context({
+    let context = this.contexts.get(entry);
+    if (!context) {
+      context = await esbuild.context({
         entryPoints: [entry],
         bundle: true,
         format: 'esm',
@@ -80,10 +83,11 @@ export class WorldCompiler {
         logLevel: 'silent',
         plugins: [virtualFsPlugin(() => this.files, this.externals)],
       });
+      this.contexts.set(entry, context);
     }
 
     try {
-      const result = await this.context.rebuild();
+      const result = await context.rebuild();
       const output = result.outputFiles?.[0];
       if (!output) {
         throw new CompileError('esbuild produced no output');
@@ -94,11 +98,10 @@ export class WorldCompiler {
     }
   }
 
-  /** Drop the warm context (teardown). */
+  /** Drop the warm contexts (teardown). */
   async dispose(): Promise<void> {
-    await this.context?.dispose();
-    this.context = null;
-    this.contextEntry = null;
+    await Promise.all([...this.contexts.values()].map(ctx => ctx.dispose()));
+    this.contexts.clear();
   }
 }
 
