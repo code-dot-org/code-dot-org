@@ -1,4 +1,4 @@
-import Modal from '@code-dot-org/component-library/modal';
+import Dialog from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -18,7 +18,7 @@ class ShareDisallowedDialog extends Component {
       return null;
     }
     return (
-      <Modal
+      <Dialog
         title={i18n.createAccountToShare()}
         description={i18n.createAccountToShareDescription()}
         onClose={this.props.hideShareDialog}
