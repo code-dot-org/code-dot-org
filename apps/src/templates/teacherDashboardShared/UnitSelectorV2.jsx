@@ -36,6 +36,7 @@ function UnitSelectorV2({
   isLabelVisible = false,
   labelText = i18n.selectUnit(),
   v1Styles = false,
+  onUserUnitChange,
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -61,8 +62,9 @@ function UnitSelectorV2({
         oldUnitId: unitId,
         unitId: newUnitId,
       });
+      onUserUnitChange?.(newUnitId);
     },
-    [unitId, setUnit, sectionId]
+    [unitId, setUnit, sectionId, onUserUnitChange]
   );
 
   const itemGroups = coursesWithProgress
@@ -132,6 +134,7 @@ UnitSelectorV2.propTypes = {
   isLabelVisible: PropTypes.bool,
   labelText: PropTypes.string,
   v1Styles: PropTypes.bool,
+  onUserUnitChange: PropTypes.func,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;

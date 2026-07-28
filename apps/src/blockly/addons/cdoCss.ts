@@ -73,7 +73,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     .fieldAngleDropDownContainer .blocklyMenuItem{
       min-width: 0em;
     }
-    .k1ColourDropdown>tr>td {
+    .k1ColourDropdown .blocklyColourSwatch {
       height: 35px;
       width: 45px;
     }
@@ -122,6 +122,12 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     /* Checkmark is a baked-in black glyph from sprites.svg; invert it in dark. */
     [data-theme='Dark'] .blocklyDropDownDiv .blocklyMenuItemCheckbox {
       filter: invert(1);
+    }
+    /* Restore text color lost when Bootstrap v3 dropped v2's bare-input rule.
+       Pair with background so both flip together under data-theme='Dark'. */
+    .blocklyHtmlInput {
+      background-color: var(--background-neutral-primary);
+      color: var(--text-neutral-primary);
     }
     `
   );

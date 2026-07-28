@@ -2,6 +2,8 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {SpriteLab2World} from './world';
+
 // The animation-list category marking an image as a background rather than a
 // costume.
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
@@ -23,7 +25,7 @@ export interface SerializedAnimationProps {
   categories?: string[];
   // Physical pixels per art pixel; absent on non-pixel-art animations.
   pixelGridSize?: number;
-  // Pixel-editor recently-used colors, most recent first; absent until the
+  // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
 }
@@ -61,6 +63,9 @@ export interface SpriteLab2Scene {
   name: string;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
+  // World-tab experiment: starter sprite/block placements, spawned ahead of
+  // the scene's program.
+  world?: SpriteLab2World;
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.
@@ -78,6 +83,12 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
+  // World-tab experiment: show the tab on this level (equivalent to the
+  // world-tab=true URL parameter).
+  showWorldTab?: boolean;
+  // World-tab experiment: the tab edits the whole world, not just the
+  // scene-sized corner (equivalent to the world=large URL parameter).
+  showLargeWorld?: boolean;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
 }

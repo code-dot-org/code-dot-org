@@ -147,7 +147,7 @@ en:
     continue_with: 'Continue with %{provider}'
     sign_in_with: 'Sign in with %{provider}'
     signed_in: 'Signed in!'
-    signed_out_markdown: '### You have signed out of [Code.org](%{url}).'
+    signed_out_markdown: '### You have signed out of [CodeAI](%{url}).'
     sign_out_of_markdown: '#### You used %{provider} to sign in. [Click here](%{url}) to sign out of %{provider}.'
     already_signedup: 'Already signed up?'
     notyet_signedup: "Haven't joined yet?"
@@ -177,7 +177,7 @@ en:
       Your sign-in with %{provider} has expired.
       Please sign out of Code.org and sign back in using your %{provider} account to continue.
     existing_account:
-      account_exists: "Good news! You already have a Code.org account that uses %{email}"
+      account_exists: "Good news! You already have a CodeAI account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
       sign_up: "Not your email? Want to create a new account with a different email? You will also be able to link your %{provider} profile from your Account Settings page if you choose to create a new account."
   signup_form:
@@ -306,7 +306,7 @@ en:
       confirm_password: 'Confirm new password'
       submit: 'Change my password'
   welcome_email:
-    subject: 'Join my class (on Code.org)'
+    subject: 'Join my class (on CodeAI)'
     body: |
       Click the link below to sign up for computer science tutorials on Code.org (with me as your "teacher"):
 
@@ -316,17 +316,17 @@ en:
 
       %{name}
   inactive_user_purge_mailer:
-    teacher_soft_delete_warning_subject: 'Action Required: Your Code.org Account Will Be Deleted Due to Inactivity'
+    teacher_soft_delete_warning_subject: 'Action Required: Your CodeAI Account Will Be Deleted Due to Inactivity'
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
-    parent_email_added_subject: 'Welcome to Code.org!'
-    parent_permission_request_subject: "Parental consent needed for your child's access to Code.org"
-    parent_permission_reminder_subject: "Reminder, parental consent needed for your child's access to Code.org"
-    parent_permission_confirmation_subject: "Thank you for approving your child's access to Code.org!"
+    student_associated_subject: 'Login information for CodeAI'
+    parent_email_added_subject: 'Welcome to CodeAI!'
+    parent_permission_request_subject: "Parental consent needed for your child's access to CodeAI"
+    parent_permission_reminder_subject: "Reminder, parental consent needed for your child's access to CodeAI"
+    parent_permission_confirmation_subject: "Thank you for approving your child's access to CodeAI!"
   teacher_mailer:
-    new_teacher_subject: 'Welcome to Code.org!'
-    delete_teacher_subject: 'Code.org notification: Your account has been deleted'
-    verified_teacher_subject: 'Verified Teacher Resources Unlocked: Your Code.org Access is Ready!'
+    new_teacher_subject: 'Welcome to CodeAI!'
+    delete_teacher_subject: 'CodeAI notification: Your account has been deleted'
+    verified_teacher_subject: 'Verified Teacher Resources Unlocked: Your CodeAI Access is Ready!'
   section:
     your_section:
       one: 'Your section:'
@@ -363,7 +363,7 @@ en:
       not_participant_type: "We couldn't add you to section %{section_code} because you do not meet the participant type for the section."
     mail:
       student_disassociated:
-        subject: "Code.org notification: %{student_name} is no longer associated as your student."
+        subject: "CodeAI notification: %{student_name} is no longer associated as your student."
   reports:
     error:
       access_denied: "You don't have access to this person's stats"
@@ -417,9 +417,8 @@ en:
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
       educate_high: "High School"
-      educate_hoc: "Hour of Code"
       educate_partner: "Partner with Us"
-      educate_beyond: "Beyond Code.org"
+      educate_beyond: "Beyond CodeAI"
       educate_inspire: "Inspire a Student"
       educate_community: "Online Community"
       educate_requirements: "Technical Requirements"
@@ -1477,7 +1476,7 @@ en:
     course3_retired: We’re sorry! Course 3 has been retired. We recommend [Course E](%{course_e_url}) as a replacement, or [Course F](%{course_f_url}) for older/more experienced students.
     course4_retired: We’re sorry! Course 4 has been retired. We recommend [Course F](%{course_f_url}) as a replacement.
     accelerated_course_retired: We’re sorry! The Accelerated Course has been retired. We recommend [Express Course](%{express_course_url}) as a replacement.
-  hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
+  hoc_tutorial_email_subject: "Rock the Hour of Code with CodeAI Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"
     intro_step_by_step_guide: "We're so excited that you're holding an Hour of Code event using Code.org's free activities and tutorials! We're honored to have educators like you introducing students to the exciting world of coding. Here's a step-by-step guide to ensure a successful Hour of Code event:"
@@ -1547,7 +1546,7 @@ en:
       form_instructions_2: "Full guides for obtaining your LMS Client ID, using LMS/LTI integrations, and our list of supported Learning Management Systems [can be found here](%{install_instructions})."
       form_instructions_3: "Not seeing your LMS in our list, or running into issues with your installation? Check out our [guides](%{lms_guides}), or [contact us](%{contact_us}) for additional help"
       guide_instructions: "Full guides for installing and our LTI integration [can be found here](%{lms_guides}). Running into issues? Feel free to [contact us](%{contact_us}) for additional support."
-      mailer_confirmation_subject: "Code.org has completed your LMS registration request"
+      mailer_confirmation_subject: "CodeAI has completed your LMS registration request"
       mailer_confirmation_body: "Great news! We’ve registered your LMS with Code.org. You should now be able to use our Code.org LMS integrations. Please feel free to review & share our [LMS integration guides](%{integration_guide_url}), or browse our [course offerings](%{course_offering_url})."
       mailer_confirmation_signature: "Thank you, and welcome!"
       privacy_policy: "Your privacy is of utmost importance to us. Your personal information will not be used for any marketing purposes. Please see our [Privacy Policy here](%{privacy_policy}) for more information."

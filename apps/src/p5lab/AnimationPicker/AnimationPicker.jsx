@@ -315,6 +315,7 @@ class AnimationPicker extends React.Component {
         }
         fullWidth={true}
         style={styles.dialog}
+        bodyClassName={style.pickerDialog}
       >
         <HiddenUploader
           key={this.state.uploadUrl}

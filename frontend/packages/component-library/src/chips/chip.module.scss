@@ -194,3 +194,43 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides — see themes/README.md
+[data-brand='codeai-next'] {
+  .chips fieldset .chip {
+    // Pressed
+    &:active {
+      background-color: var(--background-brand-light);
+    }
+
+    // Selected
+    &:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-primary);
+      background-color: var(--background-selected-primary);
+      color: var(--text-selected-primary);
+    }
+
+    // Selected + hover (border intentionally matches the fill)
+    &:hover:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
+    }
+
+    // Selected + pressed; border and the legacy inset outline both take
+    // the fill color, so no ring shows regardless of hover state.
+    &:active:has(input[type='checkbox']:checked) {
+      border-color: var(--border-selected-strong);
+      background-color: var(--background-selected-strong);
+      outline-color: var(--border-selected-strong);
+    }
+
+    // Selected + disabled — solid disabled fill with the inverse label
+    // (white in light, black in dark), unlike the always-white legacy
+    // label. Last so it outranks the checked hover/pressed rules above.
+    &:has(input[type='checkbox']:disabled:checked) {
+      border-color: var(--border-disabled-neutral);
+      background-color: var(--background-disabled-neutral);
+      color: var(--text-disabled-neutral-inverse);
+    }
+  }
+}

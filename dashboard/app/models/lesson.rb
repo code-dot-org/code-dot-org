@@ -338,7 +338,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonTutorPath: lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil,
+        lessonTutorPath: lesson_tutor_path,
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -423,6 +423,11 @@ class Lesson < ApplicationRecord
   # (assessments/surveys are excluded) that belong to an AIF/AID student course.
   def lesson_tutor_available?
     has_lesson_plan && !!script&.lesson_tutor_available?
+  end
+
+  # Path to the lesson's tutor deep dive space, or nil if it is unavailable.
+  def lesson_tutor_path
+    lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil
   end
 
   def summarize_for_calendar(unit_group_unit: nil)

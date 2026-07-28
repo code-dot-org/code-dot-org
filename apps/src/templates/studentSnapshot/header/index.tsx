@@ -3,6 +3,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import React, {useCallback, useMemo} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {Student} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -80,12 +82,19 @@ const Header: React.FC<HeaderProps> = ({
   const handlePreviousLesson = () => {
     if (previousLesson) {
       setSelectedLessonId(previousLesson.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_PREVIOUS_LESSON_CLICKED,
+        {lessonId: previousLesson.id}
+      );
     }
   };
 
   const handleNextLesson = () => {
     if (nextLesson) {
       setSelectedLessonId(nextLesson.id);
+      analyticsReporter.sendEvent(EVENTS.STUDENT_SNAPSHOT_NEXT_LESSON_CLICKED, {
+        lessonId: nextLesson.id,
+      });
     }
   };
 
@@ -123,12 +132,20 @@ const Header: React.FC<HeaderProps> = ({
   const handlePreviousStudent = useCallback(() => {
     if (previousStudent) {
       setSelectedStudentId(previousStudent.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_PREVIOUS_STUDENT_CLICKED,
+        {studentId: previousStudent.id}
+      );
     }
   }, [previousStudent, setSelectedStudentId]);
 
   const handleNextStudent = useCallback(() => {
     if (nextStudent) {
       setSelectedStudentId(nextStudent.id);
+      analyticsReporter.sendEvent(
+        EVENTS.STUDENT_SNAPSHOT_NEXT_STUDENT_CLICKED,
+        {studentId: nextStudent.id}
+      );
     }
   }, [nextStudent, setSelectedStudentId]);
 
@@ -141,6 +158,12 @@ const Header: React.FC<HeaderProps> = ({
             filterToSelectedCourse={false}
             className={styles.unitSelector}
             labelText="Unit"
+            onUserUnitChange={(unitId: number) => {
+              analyticsReporter.sendEvent(
+                EVENTS.STUDENT_SNAPSHOT_UNIT_SELECTED,
+                {unitId}
+              );
+            }}
           />
         </div>
         <div>
@@ -151,6 +174,12 @@ const Header: React.FC<HeaderProps> = ({
               selectedLesson={selectedLesson}
               onLessonChange={(lessonId: number) => {
                 setSelectedLessonId(lessonId);
+              }}
+              onUserLessonChange={(lessonId: number) => {
+                analyticsReporter.sendEvent(
+                  EVENTS.STUDENT_SNAPSHOT_LESSON_SELECTED,
+                  {lessonId}
+                );
               }}
               hasUnnumberedLessons={hasUnnumberedLessons}
               isLoading={isLessonsLoading}
@@ -205,9 +234,14 @@ const Header: React.FC<HeaderProps> = ({
               name="student"
               items={studentOptions}
               selectedValue={selectedStudent?.id.toString() || ''}
-              onChange={event =>
-                setSelectedStudentId(Number(event.target.value))
-              }
+              onChange={event => {
+                const studentId = Number(event.target.value);
+                setSelectedStudentId(studentId);
+                analyticsReporter.sendEvent(
+                  EVENTS.STUDENT_SNAPSHOT_STUDENT_SELECTED,
+                  {studentId}
+                );
+              }}
               className={styles.dropdown}
               size="s"
               color="gray"

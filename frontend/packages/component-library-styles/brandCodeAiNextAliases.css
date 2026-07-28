@@ -16,10 +16,10 @@
  * the color-bridge spec):
  *   - The three legacy brand families (aqua, teal, purple) collapse into
  *     the single CADS brand family.
- *   - Legacy ramp steps extra-light/light map to CADS light/mid for
- *     backgrounds (legacy had two sub-primary steps, CADS names them
- *     light and mid). Legacy border ramps only had one "light" step and
- *     map to CADS light directly.
+ *   - Legacy background ramp steps extra-light/light (and purple-hover)
+ *     both map to CADS light; CADS mid is a net-new darker step. Legacy
+ *     border ramps only had one "light" step and map to CADS light
+ *     directly.
  *   - accent-strawberry maps to accent-pink (nearest CADS accent).
  *   - background-neutral-lab maps to background-neutral-primary; the
  *     legacy Dark value (#121212) equals the CADS Dark primary exactly.
@@ -49,12 +49,12 @@
 [data-brand='codeai-next'] [data-theme='Dark'] {
   /* Backgrounds — brand families collapse to the CADS brand ramp */
   --background-brand-aqua-extra-light: var(--background-brand-light);
-  --background-brand-aqua-light: var(--background-brand-mid);
+  --background-brand-aqua-light: var(--background-brand-light);
   --background-brand-aqua-primary: var(--background-brand-primary);
   --background-brand-aqua-strong: var(--background-brand-strong);
   --background-brand-purple-extra-light: var(--background-brand-light);
-  --background-brand-purple-hover: var(--background-brand-mid);
-  --background-brand-purple-light: var(--background-brand-mid);
+  --background-brand-purple-hover: var(--background-brand-light);
+  --background-brand-purple-light: var(--background-brand-light);
   --background-brand-purple-primary: var(--background-brand-primary);
 
   /* -fixed means "same in both themes": alias to the primitive, which is
@@ -62,7 +62,7 @@
   --background-brand-purple-primary-fixed: var(--brand-purple-50);
   --background-brand-purple-strong: var(--background-brand-strong);
   --background-brand-teal-extra-light: var(--background-brand-light);
-  --background-brand-teal-light: var(--background-brand-mid);
+  --background-brand-teal-light: var(--background-brand-light);
   --background-brand-teal-primary: var(--background-brand-primary);
   --background-brand-teal-strong: var(--background-brand-strong);
 
@@ -71,7 +71,7 @@
   --background-accent-strawberry-primary: var(--background-accent-pink-primary);
   --background-accent-strawberry-strong: var(--background-accent-pink-strong);
 
-  /* Backgrounds — sentiment extra-light becomes light (light became mid) */
+  /* Backgrounds — sentiment extra-light becomes light */
   --background-error-extra-light: var(--background-error-light);
   --background-info-extra-light: var(--background-info-light);
   --background-success-extra-light: var(--background-success-light);
@@ -129,13 +129,24 @@
   --text-neutral-disabled: var(--text-disabled-neutral);
   --text-neutral-disabled-inverse: var(--text-disabled-neutral-inverse);
   --text-neutral-inverse: var(--text-neutral-primary-inverse);
+}
 
-  /* Legacy primitives with no CADS successor. Direct primitive usage is
-     rare (~30 call sites for the colored families) but must not fall
-     through to the legacy :root values under this brand. Same-step
-     mapping into the successor family; step 100 retires, CADS tops out
-     at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
-     brand-purple-5–90) are already redefined by brandCodeAiNext.css. */
+/* Legacy primitives with no CADS successor. Direct primitive usage is
+   rare (~30 call sites for the colored families) but must not fall
+   through to the legacy :root values under this brand. Same-step
+   mapping into the successor family; step 100 retires, CADS tops out
+   at 95. Colliding primitive names (neutral-*, sentiment-* 5–90,
+   brand-purple-5–90) are already redefined by brandCodeAiNext.css.
+
+   Unlike the aliases above, primitives do not vary by theme, so this
+   one root-level block covers both. Do not re-declare these rows on
+   [data-theme] elements: brandLegacyShim.css defines the same pairs
+   in the opposite direction there (--brand-orange-60 from
+   --accent-orange-60), and when both directions apply to the same
+   element, CSS treats the definitions as circular and blanks both
+   variables. */
+[data-brand='codeai-next']:root,
+[data-brand='codeai-next'] {
   --brand-aqua-10: var(--brand-purple-10);
   --brand-aqua-20: var(--brand-purple-20);
   --brand-aqua-30: var(--brand-purple-30);

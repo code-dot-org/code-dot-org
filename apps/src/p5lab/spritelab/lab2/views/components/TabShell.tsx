@@ -8,6 +8,8 @@ import {
   SpriteLab2Tab,
 } from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
+import {blurAfterPointerClick} from '../blurAfterPointerClick';
+
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
 interface TabShellProps {
@@ -42,6 +44,27 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   children,
   onClickStartOver,
 }) => {
+  // World-tab experiment: the scene selector, World, and Code read as one
+  // group (the selector governs both tabs).
+  const worldMode = visibleTabs.includes('World');
+  const renderTab = (tab: SpriteLab2Tab) => (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={activeTab === tab}
+      disabled={!enabledTabs.includes(tab)}
+      className={classNames(
+        moduleStyles.tab,
+        activeTab === tab && moduleStyles.tabActive
+      )}
+      onClick={event => {
+        blurAfterPointerClick(event);
+        onTabChange(tab);
+      }}
+    >
+      {tab}
+    </button>
+  );
   return (
     <div className={moduleStyles.tabShell}>
       <div className={moduleStyles.tabContainer}>
@@ -49,21 +72,40 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
           {SPRITE_LAB2_TABS.filter(tab => visibleTabs.includes(tab)).map(
             tab => {
               const enabled = enabledTabs.includes(tab);
-              const button = (
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={activeTab === tab}
-                  disabled={!enabled}
-                  className={classNames(
-                    moduleStyles.tab,
-                    activeTab === tab && moduleStyles.tabActive
-                  )}
-                  onClick={() => onTabChange(tab)}
-                >
-                  {tab}
-                </button>
-              );
+              const button = renderTab(tab);
+              if (worldMode && tab === 'Code') {
+                // Rendered inside the World group below.
+                return null;
+              }
+              if (worldMode && tab === 'World') {
+                return (
+                  <div
+                    key={tab}
+                    className={classNames(
+                      moduleStyles.tabGroup,
+                      moduleStyles.tabGroupWorld
+                    )}
+                    // Clicks on the disabled selector fall through here and
+                    // open the group's default tab. The tab buttons handle
+                    // their own clicks; acting on their bubbled events too
+                    // would override them (activeTab is stale in this render).
+                    onClick={e => {
+                      if (
+                        !(e.target as HTMLElement).closest('button') &&
+                        activeTab !== 'Code' &&
+                        activeTab !== 'World' &&
+                        enabledTabs.includes('Code')
+                      ) {
+                        onTabChange('Code');
+                      }
+                    }}
+                  >
+                    {codeTabExtra}
+                    {button}
+                    {renderTab('Code')}
+                  </div>
+                );
+              }
               // The Code tab and its extra (the scene selector) read as one
               // segmented control: the group carries the active-tab background,
               // the pieces inside are transparent.
@@ -108,7 +150,10 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
               variant="outlined"
               color="secondary"
               size="extraSmall"
-              onClick={onClickStartOver}
+              onClick={event => {
+                blurAfterPointerClick(event);
+                onClickStartOver();
+              }}
               type="button"
               endIcon={
                 <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
