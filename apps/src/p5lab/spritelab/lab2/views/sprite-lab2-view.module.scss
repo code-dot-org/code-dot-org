@@ -467,6 +467,13 @@ $tab-segment-height: $tab-item-height - 2px;
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
   // fades the box in on appearance.
+
+  // Keyboard focus ring for the play-mode game region; an outline so the
+  // 400x400 geometry the transform and pointer math rely on is untouched.
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: 2px;
+  }
 }
 
 .playspaceCanvas {

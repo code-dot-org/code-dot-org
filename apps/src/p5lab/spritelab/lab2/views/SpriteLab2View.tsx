@@ -77,6 +77,7 @@ import {
   WorldCell,
 } from '../world';
 
+import {isPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
 import GenerateSpriteLab from './GenerateSpriteLab';
@@ -144,6 +145,20 @@ const RUN_DEBOUNCE_MS = 400;
 
 // Sprites come from the Items tab, so a new project starts with no animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
+
+// Focused controls own the game keys pressed on them (see the
+// swallowOnControls effect).
+const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
+
+// The keys a game typically reads (p5 listens for them on window).
+const GAME_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  ' ',
+  'Spacebar',
+]);
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -731,6 +746,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     isPlayingRef.current = activeTab === 'Play';
   }, [activeTab]);
 
+  // The Code and Images tabs stay mounted behind a clip-path, which hides
+  // them visually but leaves their contents (the whole Blockly workspace)
+  // in the tab order and the accessibility tree. Inert while hidden.
+  // Set via refs: React 18's JSX has no inert attribute.
+  const codeWrapperRef = useRef<HTMLDivElement>(null);
+  const imagesWrapperRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (codeWrapperRef.current) {
+      codeWrapperRef.current.inert = activeTab !== 'Code';
+    }
+    if (imagesWrapperRef.current) {
+      imagesWrapperRef.current.inert = activeTab !== 'Images';
+    }
+  }, [activeTab]);
+
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
   // from the tab button or "Restart game" clears it.
@@ -744,14 +774,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeTab === 'Play') {
       return;
     }
-    const GAME_KEYS = new Set([
-      'ArrowLeft',
-      'ArrowRight',
-      'ArrowUp',
-      'ArrowDown',
-      ' ',
-      'Spacebar',
-    ]);
     const swallow = (e: KeyboardEvent) => {
       if (GAME_KEYS.has(e.key)) {
         e.stopPropagation();
@@ -764,6 +786,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       document.removeEventListener('keyup', swallow);
     };
   }, [activeTab]);
+
+  // A game key aimed at a focused control belongs to the control: activate
+  // it, don't also jump. Stopping at document keeps the event from p5's
+  // window listener; the control's default activation is unaffected.
+  useEffect(() => {
+    const swallowOnControls = (e: KeyboardEvent) => {
+      if (!GAME_KEYS.has(e.key)) {
+        return;
+      }
+      const target = e.target instanceof Element ? e.target : null;
+      if (target?.closest(INTERACTIVE_CONTROLS)) {
+        e.stopPropagation();
+      }
+    };
+    document.addEventListener('keydown', swallowOnControls);
+    document.addEventListener('keyup', swallowOnControls);
+    return () => {
+      document.removeEventListener('keydown', swallowOnControls);
+      document.removeEventListener('keyup', swallowOnControls);
+    };
+  }, []);
 
   // Wire the scene-jump blocks; reassigned whenever the callbacks' inputs change.
   useEffect(() => {
@@ -962,6 +1005,24 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
 
   // Restart the whole game from the first scene.
+  // Restarting must not leave focus parked on the clicked button, where
+  // Space — also a game key — would re-activate it on every press. Keyboard
+  // activations hand focus to the playspace; pointer activations blur to
+  // the page instead — a silent focus on the playspace would still grow a
+  // ring at the player's first keypress, because the browser promotes the
+  // focused element to :focus-visible on keyboard use.
+  const playspaceRef = useRef<HTMLDivElement>(null);
+  const handOffRestartFocus = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      if (isPointerClick(event)) {
+        event.currentTarget.blur();
+      } else {
+        playspaceRef.current?.focus({preventScroll: true});
+      }
+    },
+    []
+  );
+
   const handleRestartGame = useCallback(() => {
     setPlayStartSceneId(null);
     runScene(scenes[0]?.id ?? null);
@@ -1051,14 +1112,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartGame}
+                onClick={event => {
+                  handOffRestartFocus(event);
+                  handleRestartGame();
+                }}
               >
                 Restart game
               </button>
               <button
                 type="button"
                 className={moduleStyles.startOver}
-                onClick={handleRestartScene}
+                onClick={event => {
+                  handOffRestartFocus(event);
+                  handleRestartScene();
+                }}
               >
                 Restart scene
               </button>
@@ -1070,6 +1137,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on animationsSeeded (see the seed effect). */}
         <div
+          ref={codeWrapperRef}
           className={moduleStyles.codeTabWrapper}
           style={{
             clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -1085,6 +1153,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           the guide's transition frames, and remounting loses gallery state. */}
         {imagesMounted && (
           <div
+            ref={imagesWrapperRef}
             className={classNames(moduleStyles.codeTabWrapper)}
             style={{
               clipPath: activeTab === 'Images' ? 'none' : 'inset(100%)',
@@ -1110,6 +1179,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         {/* Always mounted so the engine keeps running; animates between the
           Code tab's corner preview and the Play tab's centered view. */}
         <Playspace
+          boxRef={playspaceRef}
           mode={playspaceMode}
           fadeTrigger={fadeTrigger}
           covered={jumpCover}

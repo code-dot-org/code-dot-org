@@ -8,6 +8,8 @@ import {
   SpriteLab2Tab,
 } from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
+import {blurAfterPointerClick} from '../blurAfterPointerClick';
+
 import moduleStyles from '../sprite-lab2-view.module.scss';
 
 interface TabShellProps {
@@ -55,7 +57,10 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
         moduleStyles.tab,
         activeTab === tab && moduleStyles.tabActive
       )}
-      onClick={() => onTabChange(tab)}
+      onClick={event => {
+        blurAfterPointerClick(event);
+        onTabChange(tab);
+      }}
     >
       {tab}
     </button>
@@ -145,7 +150,10 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
               variant="outlined"
               color="secondary"
               size="extraSmall"
-              onClick={onClickStartOver}
+              onClick={event => {
+                blurAfterPointerClick(event);
+                onClickStartOver();
+              }}
               type="button"
               endIcon={
                 <FontAwesomeV6Icon iconStyle="solid" iconName="refresh" />
