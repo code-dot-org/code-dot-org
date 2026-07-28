@@ -74,6 +74,20 @@
   touch-action: none; /* pointer pan/zoom own the gesture */
 }
 
+/* Focusable so Delete/Backspace reach it. Match the design system's keyboard
+   focus ring (component-library-styles mixins.focus-styles), shown only for
+   keyboard focus so click-to-select doesn't ring. The offset is pulled INWARD
+   (the DS uses +0.125rem): the canvas is full-bleed inside an overflow-hidden
+   stage, so an outward ring would be clipped. */
+.canvas:focus {
+  outline: none;
+}
+
+.canvas:focus-visible {
+  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline-offset: -0.125rem;
+}
+
 .canvas.placing {
   cursor: crosshair;
 }
