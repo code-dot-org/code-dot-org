@@ -248,14 +248,13 @@
 // example. Scoped to [data-brand='codeai-next'] so legacy brands render
 // exactly as before; only CADS semantic tokens, so Dark mode comes from the
 // tokens with no [data-theme] rules.
-// The CADS design diverges from the bridge mapping in three ways: every
-// segment is a --shape-sm chip (first/middle/last alike, not just the outer
-// corners), selection uses the CADS selected/focused state families instead
-// of brand teal, and hover/focus carry a 2px ring. The second ring pixel is
-// an inset box-shadow rather than a wider border so segment geometry doesn't
-// shift; the primary/strong color variants both collapse to this one design.
-// Inter-segment spacing (the fused -1px layout vs detached chips) is a
-// sizing concern handled separately.
+// The CADS design diverges from the bridge mapping in three ways: the
+// group's outer corners round to --shape-sm (the fused middle seams stay
+// square, same geometry as legacy at the new radius), selection uses the
+// CADS selected/focused state families instead of brand teal, and
+// hover/focus carry a 2px ring. The second ring pixel is an inset
+// box-shadow rather than a wider border so segment geometry doesn't shift;
+// the primary/strong color variants both collapse to this one design.
 [data-brand='codeai-next'] {
   .segmentedButtons {
     .segmentedButton {
@@ -263,13 +262,14 @@
       border-color: var(--border-neutral-primary);
       color: var(--text-neutral-primary);
 
-      // Repeated on :first-child/:last-child to outrank the base per-corner
-      // longhands without leaning on source order.
-      border-radius: var(--shape-sm, 0.375rem);
+      &:first-child {
+        border-start-start-radius: var(--shape-sm, 0.375rem);
+        border-end-start-radius: var(--shape-sm, 0.375rem);
+      }
 
-      &:first-child,
       &:last-child {
-        border-radius: var(--shape-sm, 0.375rem);
+        border-start-end-radius: var(--shape-sm, 0.375rem);
+        border-end-end-radius: var(--shape-sm, 0.375rem);
       }
 
       &:hover {
@@ -297,6 +297,11 @@
     }
 
     .selectedSegmentedButton.segmentedButton {
+      // The selected segment is a fully rounded chip raised above the fused
+      // seam — its corners overlay the neighbors' straight edges (legacy
+      // stacks selected below, z-index 0 vs 1, so flip it above).
+      border-radius: var(--shape-sm, 0.375rem);
+      z-index: 2;
       background-color: var(--background-selected-primary);
       // Pairs with background-selected per colors_codeAi.css — always use
       // the selected background/border/text tokens together.
