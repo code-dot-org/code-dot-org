@@ -101,20 +101,29 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        color: this.state.mode === ImageMode.FILE ? null : '#999',
+        color:
+          this.state.mode === ImageMode.FILE
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         fontSize: '16px',
         cursor: 'pointer',
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        color: this.state.mode === ImageMode.ICON ? null : '#999',
+        color:
+          this.state.mode === ImageMode.ICON
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         cursor: 'pointer',
       },
       urlModeToggle: {
         margin: '0 20px 0 0',
         fontSize: '16px',
-        color: this.state.mode === ImageMode.URL ? null : '#999',
+        color:
+          this.state.mode === ImageMode.URL
+            ? 'var(--text-brand-purple-primary)'
+            : 'var(--text-neutral-quaternary)',
         cursor: 'pointer',
       },
       divider: {

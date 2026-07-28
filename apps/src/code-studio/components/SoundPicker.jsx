@@ -79,21 +79,23 @@ export default class SoundPicker extends React.Component {
     if (isFileMode) {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
 
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
     } else {
       headerStyles.soundModeToggle = {
         ...headerStyles.soundModeToggle,
         ...fontConstants['main-font-semi-bold'],
+        color: 'var(--text-brand-purple-primary)',
       };
       headerStyles.fileModeToggle = {
         ...headerStyles.fileModeToggle,
-        color: color.light_gray,
+        color: 'var(--text-neutral-quaternary)',
       };
     }
 
