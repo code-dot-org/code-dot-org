@@ -218,9 +218,17 @@ module Dashboard
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
-    config.cache_store = :memory_store, {
-      size: 256.megabytes # max size of entire store
-    }
+    #
+    # We have historically used a per-process, in-memory store for this, but
+    # that's not an ideal approach for a frontend server with 32 independent
+    # Puma processes. While the infra team evaluates different alternatives, we
+    # temporarily support multiple different options.
+    #
+    # TODO infra: finalize this experiment and either enforce a path or default
+    # to :null_store.
+    config.cache_store = CDO.local_cache_file_path ?
+      [:file_store, CDO.local_cache_file_path] :
+      [:memory_store, {size: 256.megabytes}]
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
