@@ -98,10 +98,9 @@ describe('Lab2 ShareDialog', () => {
     expect(screen.queryByText(/Flagged text/)).not.toBeInTheDocument();
   });
 
-  it('does not echo the flagged text for profanity failures', () => {
+  it('shows the flagged text for profanity failures', () => {
     renderShareDialog({shareFailure: {type: 'profanity', content: 'badword'}});
-    expect(screen.queryByText(/Flagged text/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/badword/)).not.toBeInTheDocument();
+    expect(screen.getByText(/Flagged text: "badword"/)).toBeInTheDocument();
   });
 
   it('dismisses the failure dialog on confirm', async () => {
