@@ -1,15 +1,9 @@
-// Brands whose header/logo treatment matches CodeAI's wider rectangular
-// logo (BRAND_CODEAI, BRAND_CODEAI_NEXT, BRAND_CODEAI_AUDIT in
-// lib/cdo/brand.rb). Single source of truth so adding/removing a brand from
-// the family only requires editing this list.
-$codeai-family-brands: 'codeai', 'codeai-next', 'codeai-audit';
-
-// Applies @content once per codeai-family brand, scoped to
+// Applies @content once per brand in $brands, scoped to
 // html[data-brand="<brand>"]. Pass $ancestor: true to combine with the
 // current parent selector instead (html[data-brand="<brand>"] &), for use
 // inside an existing selector block.
-@mixin codeai-family-brand($ancestor: false) {
-  @each $brand in $codeai-family-brands {
+@mixin brand-scope($brands, $ancestor: false) {
+  @each $brand in $brands {
     @if $ancestor {
       html[data-brand='#{$brand}'] & {
         @content;
@@ -18,6 +12,32 @@ $codeai-family-brands: 'codeai', 'codeai-next', 'codeai-audit';
       html[data-brand='#{$brand}'] {
         @content;
       }
+    }
+  }
+}
+
+// Brands whose header/logo treatment matches CodeAI's wider rectangular
+// logo (BRAND_CODEAI, BRAND_CODEAI_NEXT, BRAND_CODEAI_AUDIT in
+// lib/cdo/brand.rb). Single source of truth so adding/removing a brand from
+// the family only requires editing this list.
+$codeai-family-brands: 'codeai', 'codeai-next', 'codeai-audit';
+
+@mixin codeai-family-brand($ancestor: false) {
+  @include brand-scope($codeai-family-brands, $ancestor) {
+    @content;
+  }
+}
+
+// Scoped to html.nav-reskin, set per Cdo::Brand.codeai_next? (see
+// application.html.haml). Carries the pill nav links and outlined header buttons.
+@mixin codeai-brand($ancestor: false) {
+  @if $ancestor {
+    html.nav-reskin & {
+      @content;
+    }
+  } @else {
+    html.nav-reskin {
+      @content;
     }
   }
 }

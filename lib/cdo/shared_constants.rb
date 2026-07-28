@@ -785,6 +785,11 @@ module SharedConstants
     AI_TUTOR_LESSON_DEEP_DIVE: 'ai_tutor_lesson_deep_dive'
   }.freeze
 
+  CHALLENGE_TYPES = {
+    VIDEO: 'video',
+    WHITEBOARD: 'whiteboard',
+  }.freeze
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',

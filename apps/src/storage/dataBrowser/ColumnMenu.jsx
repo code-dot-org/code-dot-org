@@ -33,7 +33,7 @@ export default class ColumnMenu extends React.Component {
         >
           <FontAwesome icon="gear" style={styles.icon} />
         </button>
-        <ul className="dropdown-menu dropdown-menu-right" style={{minWidth: 0}}>
+        <ul className="dropdown-menu dropdown-menu-right" style={styles.menu}>
           <li style={{cursor: 'pointer'}}>
             <button
               type="button"
@@ -97,6 +97,11 @@ const styles = {
     color: 'var(--text-neutral-white-fixed)',
     cursor: 'pointer',
   },
+  menu: {
+    minWidth: 0,
+    backgroundColor: 'var(--background-neutral-primary)',
+    borderColor: 'var(--borders-neutral-strong)',
+  },
   dropdownToggle: {
     ...buttonReset,
     padding: 0,
@@ -108,5 +113,6 @@ const styles = {
     width: '100%',
     textAlign: 'left',
     padding: '2px 12px',
+    color: 'var(--text-neutral-primary)',
   },
 };
