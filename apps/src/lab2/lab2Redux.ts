@@ -473,6 +473,9 @@ function refreshShareFailure(
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) {
   if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
+    // Avoid waiting on a stale refresh from a previously-opened filtered project.
+    shareFailureRefresh = Promise.resolve();
+    dispatch(setShareFailure(null));
     return;
   }
   shareFailureRefresh = fetchShareFailure(channel.id)
