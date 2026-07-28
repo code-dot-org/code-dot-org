@@ -1,14 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';
 import getRecorder, {RecordingFileType} from './recorders';
 
@@ -124,9 +122,15 @@ export default class AudioRecorder extends React.Component {
             value={this.state.audioName}
           />
           {this.state.recording && (
-            <span style={assetButtonStyles.button}>
-              <i style={styles.recordingIcon} className="fa-solid fa-circle" />
-              {i18n.recording()}
+            <span style={styles.recordingIndicator}>
+              <FontAwesomeV6Icon
+                iconName="circle"
+                iconStyle="solid"
+                style={styles.recordingIcon}
+              />
+              <MuiTypography variant="body2" component="span">
+                {i18n.recording()}
+              </MuiTypography>
             </span>
           )}
           <span style={styles.actionGroup}>
@@ -180,13 +184,13 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  recordingIcon: {
-    color: 'red',
-    margin: 5,
+  recordingIndicator: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 6,
   },
-  warning: {
-    textAlign: 'left',
-    color: color.red,
+  recordingIcon: {
+    color: 'var(--text-error-primary)',
   },
   actionGroup: {
     display: 'flex',
