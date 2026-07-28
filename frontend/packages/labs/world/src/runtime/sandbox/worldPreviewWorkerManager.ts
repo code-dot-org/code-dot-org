@@ -13,6 +13,7 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
+import {SPRITE_NAMES} from '../../sprites';
 import {frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
@@ -33,13 +34,29 @@ import {
 const DEFERRED_PROPS = new Set(['positional.skew']);
 
 /**
+ * Enumerable string properties → their allowed values, so the editor renders a
+ * dropdown. Keyed by `${ownerId}.${propId}`; `animation` resolves against the
+ * world's live registry (stock + project animations), `sprite` against the
+ * built-in sprite set. (Uploaded sprites are a later addition.)
+ */
+function optionsFor(key: string, animationIds: string[]): string[] | undefined {
+  if (key === 'appearance.sprite') {
+    return [...SPRITE_NAMES];
+  }
+  if (key === 'appearance.animation') {
+    return animationIds;
+  }
+  return undefined;
+}
+
+/**
  * Introspect an instantiated actor's editable per-instance properties, grouped
  * by the trait that declares them. A property is editable when it is actor-
  * scoped and not read-only (so falling / intrinsic-size / animation state and
  * other engine-owned state is excluded) and not deferred. Vectors are serialized
- * to plain `{x, y}` for postMessage.
+ * to plain `{x, y}` for postMessage; enum-like strings carry their `options`.
  */
-function describeActor(actor: Actor): ActorSchema {
+function describeActor(actor: Actor, animationIds: string[]): ActorSchema {
   const groups: ActorSchema = [];
   for (const trait of actor.traits()) {
     const props = Object.values(trait.properties)
@@ -54,6 +71,10 @@ function describeActor(actor: Actor): ActorSchema {
         // inherits) — e.g. the player's `playerBob` animation — not the
         // property's static default.
         const base = actor.get(property);
+        const options = optionsFor(
+          `${property.ownerId}.${property.id}`,
+          animationIds,
+        );
         return {
           ownerId: property.ownerId,
           propId: property.id,
@@ -63,6 +84,7 @@ function describeActor(actor: Actor): ActorSchema {
             property.type === 'vector'
               ? {x: (base as {x: number}).x, y: (base as {y: number}).y}
               : base,
+          ...(options ? {options} : {}),
         };
       });
     if (props.length) {
@@ -158,12 +180,13 @@ export async function start(): Promise<void> {
       const manifest = mod.default;
       if (manifest) {
         const world = manifest.world.instantiate();
+        const animationIds = world.animationIds();
         const typeOf = new Map<unknown, string>();
         for (const {type, builder} of manifest.actors) {
           const actor = builder.instantiate(`thumb:${type}`);
           world.addActor(actor);
           typeOf.set(actor, type);
-          schemas[type] = describeActor(actor);
+          schemas[type] = describeActor(actor, animationIds);
         }
         for (const state of world.renderSnapshot()) {
           const type = typeOf.get(state.actor);

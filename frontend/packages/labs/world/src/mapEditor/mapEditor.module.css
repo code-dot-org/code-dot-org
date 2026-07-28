@@ -186,6 +186,14 @@
   padding: 0.5rem;
 }
 
+.inspectorGroup label.inspectorDropdown {
+  width: 100%;
+}
+
+.inspectorGroup label.inspectorDropdown div {
+  width: 100%;
+}
+
 /* The trait accordion fills the panel width; each collapsible section is a
    native <details> the DSCO Accordion styles. */
 .inspectorAccordion {

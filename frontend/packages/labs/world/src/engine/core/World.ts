@@ -187,6 +187,11 @@ export class World {
     return this.animationDefs.get(id);
   }
 
+  /** The ids of every registered animation (active rules' stock + world extras). */
+  animationIds(): string[] {
+    return [...this.animationDefs.keys()];
+  }
+
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
     this.scheduler.run(this, delta);
