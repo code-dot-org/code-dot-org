@@ -10,6 +10,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import Accordion from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
@@ -502,6 +503,24 @@ export const MapEditor = ({
     });
   };
 
+  // Select an enum option (dropdown) — also a discrete action; commit at once.
+  const selectOption = (prop: PropertySchema, value: string) => {
+    if (!selectedActor) {
+      return;
+    }
+    setDraft(d => ({...d, [fieldKey(prop)]: value}));
+    const next = {
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id
+          ? withProperty(a, prop.ownerId, prop.propId, value)
+          : a,
+      ),
+    };
+    mapRef.current = next;
+    commit(next);
+  };
+
   const editId = (value: string) => setDraft(d => ({...d, id: value}));
 
   // Persist an in-progress edit (writes the `.map`, recompiles) — on blur/Enter.
@@ -557,6 +576,26 @@ export const MapEditor = ({
           disabled={isReadOnly}
           onChange={(event: ChangeEvent<HTMLInputElement>) =>
             toggleBool(prop, event.target.checked)
+          }
+        />
+      );
+    }
+    if (prop.type === 'string' && prop.options) {
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText={capitalize(prop.name)}
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={isReadOnly}
+          selectedValue={draft[fieldKey(prop)] ?? ''}
+          items={[
+            {value: '', text: '(none)'},
+            ...prop.options.map(option => ({value: option, text: option})),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
           }
         />
       );

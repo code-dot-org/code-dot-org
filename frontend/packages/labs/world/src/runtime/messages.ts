@@ -195,6 +195,11 @@ export interface PropertySchema {
   type: 'number' | 'boolean' | 'string' | 'vector';
   /** Default value; a vector is `{x, y}`. */
   default: unknown;
+  /**
+   * For an enum-like string property (sprite / animation): the allowed values.
+   * Present → the editor renders a dropdown; absent → a free text field.
+   */
+  options?: string[];
 }
 /** An actor's editable properties, grouped by the trait that declares them. */
 export interface TraitSchema {
