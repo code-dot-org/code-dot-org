@@ -31,7 +31,10 @@ import type {ReloadReport} from './messages';
 import {projectAssets} from './projectAssets';
 import {projectFiles} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
-import {WorldPreviewManager} from './sandbox/worldPreviewManager';
+import {
+  WorldPreviewManager,
+  type ActorInfo,
+} from './sandbox/worldPreviewManager';
 import {thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
@@ -60,11 +63,11 @@ interface WorldRuntimeValue {
   restart: () => void;
   /** Hand the preview sandbox the lab's resolved letterbox / border colors. */
   setPreviewColors: (background: string, border: string) => void;
-  /** Render actor-template thumbnails (map editor picker): `type` → data URL. */
-  getActorThumbnails: (
-    actorPaths: string[],
-    worldPath: string,
-  ) => Promise<Record<string, string>>;
+  /**
+   * Introspect the actor templates (map editor): picker thumbnails and inspector
+   * property schemas, both keyed by actor type (module path).
+   */
+  getActorInfo: (actorPaths: string[], worldPath: string) => Promise<ActorInfo>;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -267,18 +270,18 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   };
 
   /**
-   * Render a static thumbnail for each actor template (for the map editor's
-   * actor picker). Compiles a throwaway "thumbnail manifest" entry importing the
-   * given world (for its animations) and actors, then has the preview surface
-   * draw each — independent of the running game.
+   * Introspect each actor template for the map editor: compiles a throwaway
+   * "thumbnail manifest" entry importing the given world (for its animations) and
+   * actors, then has the preview surface draw a thumbnail and read each actor's
+   * editable property schema — independent of the running game.
    */
-  const getActorThumbnails = async (
+  const getActorInfo = async (
     actorPaths: string[],
     worldPath: string,
-  ): Promise<Record<string, string>> => {
+  ): Promise<ActorInfo> => {
     const pair = managers.current;
     if (!pair || actorPaths.length === 0) {
-      return {};
+      return {thumbnails: {}, schemas: {}};
     }
     const files = generateBlocklyFiles(projectFiles(currentSources.source));
     const entry = '__thumbnails__.js';
@@ -299,7 +302,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     restart,
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
-    getActorThumbnails,
+    getActorInfo,
   };
 
   return (

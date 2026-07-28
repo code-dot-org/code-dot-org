@@ -12,8 +12,15 @@ import {
   ROLE_PARAM,
   SandboxRole,
   ToPreviewMessage,
+  type ActorSchema,
   type FromPreview,
 } from '../messages';
+
+/** The map editor's per-type picker thumbnails + inspector schemas. */
+export interface ActorInfo {
+  thumbnails: Record<string, string>;
+  schemas: Record<string, ActorSchema>;
+}
 
 export interface PreviewManagerOptions {
   sandboxUrl: string;
@@ -69,7 +76,10 @@ export class WorldPreviewManager {
         this.pending.delete(data.id);
         break;
       case FromPreviewMessage.THUMBNAILS:
-        this.pending.get(data.id)?.resolve(data.thumbnails);
+        this.pending.get(data.id)?.resolve({
+          thumbnails: data.thumbnails,
+          schemas: data.schemas,
+        });
         this.pending.delete(data.id);
         break;
       case FromPreviewMessage.CONSOLE:
@@ -112,16 +122,16 @@ export class WorldPreviewManager {
   }
 
   /**
-   * Render actor thumbnails from a compiled thumbnail-manifest module; resolves
-   * with `{actorType: dataUrl}`. Independent of `load`, so it never disturbs the
-   * running game.
+   * Render actor thumbnails and introspect their property schemas from a compiled
+   * thumbnail-manifest module (one sandbox pass). Independent of `load`, so it
+   * never disturbs the running game.
    */
-  async thumbnails(moduleUrl: string): Promise<Record<string, string>> {
+  async thumbnails(moduleUrl: string): Promise<ActorInfo> {
     await this.ready;
     const id = crypto.randomUUID();
-    const result = new Promise<Record<string, string>>((resolve, reject) => {
+    const result = new Promise<ActorInfo>((resolve, reject) => {
       this.pending.set(id, {
-        resolve: value => resolve(value as Record<string, string>),
+        resolve: value => resolve(value as ActorInfo),
         reject,
       });
     });

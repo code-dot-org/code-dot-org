@@ -185,11 +185,36 @@ export interface EngineErrorMessage {
   phase: 'construct' | 'tick';
 }
 
-/** Rendered actor thumbnails, keyed by actor type (module path) → data URL. */
+/** One editable property in an actor's schema (introspected in the sandbox). */
+export interface PropertySchema {
+  /** The declaring trait's id (the `.map` override key's first level). */
+  ownerId: string;
+  propId: string;
+  /** Localizable label. */
+  name: string;
+  type: 'number' | 'boolean' | 'string' | 'vector';
+  /** Default value; a vector is `{x, y}`. */
+  default: unknown;
+}
+/** An actor's editable properties, grouped by the trait that declares them. */
+export interface TraitSchema {
+  trait: string;
+  traitName: string;
+  props: PropertySchema[];
+}
+/** An actor type's editable schema — its trait groups, in application order. */
+export type ActorSchema = TraitSchema[];
+
+/**
+ * Rendered actor thumbnails (type → data URL) plus each type's editable property
+ * schema (type → trait groups), both from one introspection pass in the sandbox.
+ * The map editor's picker uses the thumbnails; its inspector uses the schemas.
+ */
 export interface ThumbnailsReadyMessage {
   type: typeof FromPreviewMessage.THUMBNAILS;
   id: string;
   thumbnails: Record<string, string>;
+  schemas: Record<string, ActorSchema>;
 }
 
 export type FromPreview =

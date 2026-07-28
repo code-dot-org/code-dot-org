@@ -5,7 +5,13 @@
 // self-hosted engine bundle URL (`/vendor/world-lab.mjs`), so there is one
 // engine instance shared with the binding's type view (SANDBOX.md / PLAN §7).
 
-import type {ActorBuilder, World, WorldBuilder, WorldSnapshot} from 'world-lab';
+import type {
+  Actor,
+  ActorBuilder,
+  World,
+  WorldBuilder,
+  WorldSnapshot,
+} from 'world-lab';
 
 import {frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
@@ -15,10 +21,56 @@ import {
   FromPreviewMessage,
   PARENT_ORIGIN_PARAM,
   ToPreviewMessage,
+  type ActorSchema,
   type LoadMessage,
   type ReloadMode,
   type ToPreview,
 } from '../messages';
+
+// Properties the engine models but the editor defers: applied by the engine yet
+// not by the Phaser driver, so a field would be inert. `positional.skew` has no
+// sprite-shear in Phaser (SANDBOX/PLAN skew note); drop it until the driver does.
+const DEFERRED_PROPS = new Set(['positional.skew']);
+
+/**
+ * Introspect an instantiated actor's editable per-instance properties, grouped
+ * by the trait that declares them. A property is editable when it is actor-
+ * scoped and not read-only (so falling / intrinsic-size / animation state and
+ * other engine-owned state is excluded) and not deferred. Vectors are serialized
+ * to plain `{x, y}` for postMessage.
+ */
+function describeActor(actor: Actor): ActorSchema {
+  const groups: ActorSchema = [];
+  for (const trait of actor.traits()) {
+    const props = Object.values(trait.properties)
+      .filter(
+        property =>
+          !property.readonly &&
+          property.scope === 'actor' &&
+          !DEFERRED_PROPS.has(`${property.ownerId}.${property.id}`),
+      )
+      .map(property => {
+        // The actor template's configured value (what an unset placement
+        // inherits) — e.g. the player's `playerBob` animation — not the
+        // property's static default.
+        const base = actor.get(property);
+        return {
+          ownerId: property.ownerId,
+          propId: property.id,
+          name: property.name ?? property.id,
+          type: property.type,
+          default:
+            property.type === 'vector'
+              ? {x: (base as {x: number}).x, y: (base as {y: number}).y}
+              : base,
+        };
+      });
+    if (props.length) {
+      groups.push({trait: trait.id, traitName: trait.name, props});
+    }
+  }
+  return groups;
+}
 
 import {registerBuildSw} from './registerBuildSw';
 
@@ -100,6 +152,7 @@ export async function start(): Promise<void> {
    */
   async function sendThumbnails(id: string, moduleUrl: string) {
     const thumbnails: Record<string, string> = {};
+    const schemas: Record<string, ActorSchema> = {};
     try {
       const mod: ThumbnailManifest = await import(/* @vite-ignore */ moduleUrl);
       const manifest = mod.default;
@@ -110,6 +163,7 @@ export async function start(): Promise<void> {
           const actor = builder.instantiate(`thumb:${type}`);
           world.addActor(actor);
           typeOf.set(actor, type);
+          schemas[type] = describeActor(actor);
         }
         for (const state of world.renderSnapshot()) {
           const type = typeOf.get(state.actor);
@@ -132,7 +186,7 @@ export async function start(): Promise<void> {
       });
       return;
     }
-    post({type: FromPreviewMessage.THUMBNAILS, id, thumbnails});
+    post({type: FromPreviewMessage.THUMBNAILS, id, thumbnails, schemas});
   }
 
   async function load({id, moduleUrl, assets}: LoadMessage) {

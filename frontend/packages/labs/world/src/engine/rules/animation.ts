@@ -45,26 +45,32 @@ export const AnimationProperty = AppearanceTrait.addProperty(
 
 // Per-actor runtime state, written by the step. Internal to the rule, but stored
 // as properties so they live in the actor's one state store (and snapshots).
+// `readonly` marks them step-owned: not learner inputs, so scene-authoring tools
+// (the map editor) skip them.
 export const FrameProperty = AppearanceTrait.addProperty(
   APPEARANCE.frame,
   'number',
   0,
+  {readonly: true},
 );
 const ElapsedProperty = AppearanceTrait.addProperty(
   APPEARANCE.elapsed,
   'number',
   0,
+  {readonly: true},
 );
 const DoneProperty = AppearanceTrait.addProperty(
   APPEARANCE.done,
   'boolean',
   false,
+  {readonly: true},
 );
 // The animation currently playing, to detect when the selection changes.
 const PlayingProperty = AppearanceTrait.addProperty(
   APPEARANCE.playing,
   'string',
   '',
+  {readonly: true},
 );
 
 /** Emitted once when a non-looping animation reaches its last frame. */
