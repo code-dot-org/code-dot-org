@@ -1,6 +1,7 @@
 import {Button} from '@mui/material';
 import {useEffect, useRef} from 'react';
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {PanelContainer} from '@code-dot-org/lab/components';
 
@@ -20,8 +21,13 @@ import styles from './worldPreview.module.css';
  * `?world-sandbox=` (the standalone demo defaults it to the `dev:sandbox` port).
  */
 export const WorldPreview = () => {
-  const {isConfigured, previewIframe, restart, status} = useWorldRuntime();
+  const {isConfigured, previewIframe, restart, status, setPreviewColors} =
+    useWorldRuntime();
   const containerRef = useRef<HTMLDivElement | null>(null);
+  // The sandbox is a separate origin and can't read the lab's CSS variables, so
+  // resolve the design-system colors here and send them down. `theme` (light /
+  // dark) is a dependency so they re-send when the lab's theme flips.
+  const {theme} = useTheme(true);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -39,6 +45,21 @@ export const WorldPreview = () => {
       }
     };
   }, [previewIframe]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !previewIframe) {
+      return;
+    }
+    const cs = getComputedStyle(container);
+    const background = cs
+      .getPropertyValue('--background-neutral-secondary')
+      .trim();
+    const border = cs.getPropertyValue('--borders-neutral-primary').trim();
+    if (background || border) {
+      setPreviewColors(background, border);
+    }
+  }, [previewIframe, theme, setPreviewColors]);
 
   if (!isConfigured) {
     return (

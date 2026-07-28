@@ -80,6 +80,7 @@ export type FromCompile =
 export const ToPreviewMessage = {
   LOAD: 'load',
   STOP: 'stop',
+  COLORS: 'colors',
 } as const;
 
 /** Import and run the module at `moduleUrl` (served same-origin by the SW). */
@@ -95,7 +96,19 @@ export interface StopMessage {
   type: typeof ToPreviewMessage.STOP;
 }
 
-export type ToPreview = LoadMessage | StopMessage;
+/**
+ * The design-system colors for the preview surface, resolved on the lab side
+ * (the sandbox is a separate origin with no access to the lab's CSS variables):
+ * `background` paints the letterbox around the game, `border` draws a hairline
+ * on the canvas's open (letterboxed) sides.
+ */
+export interface ColorsMessage {
+  type: typeof ToPreviewMessage.COLORS;
+  background: string;
+  border: string;
+}
+
+export type ToPreview = LoadMessage | StopMessage | ColorsMessage;
 
 // ── Preview surface → lab ────────────────────────────────────────────────────
 

@@ -107,6 +107,20 @@ export class WorldPreviewManager {
     );
   }
 
+  /**
+   * Hand the sandbox the lab's resolved design-system colors for the preview
+   * letterbox background and the canvas border (the sandbox origin can't read
+   * the lab's CSS variables). Waits for the surface to be ready so an early call
+   * (before the iframe script attaches its listener) isn't dropped.
+   */
+  async setColors(background: string, border: string): Promise<void> {
+    await this.ready;
+    this.iframe.contentWindow?.postMessage(
+      {type: ToPreviewMessage.COLORS, background, border},
+      this.sandboxOrigin,
+    );
+  }
+
   destroy(): void {
     window.removeEventListener('message', this.onMessage);
     this.iframe.remove();

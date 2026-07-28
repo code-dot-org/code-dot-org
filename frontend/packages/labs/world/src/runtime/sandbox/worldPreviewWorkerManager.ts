@@ -62,6 +62,18 @@ export async function start(): Promise<void> {
       binding = null;
       runningWorld = null;
       baseline = null;
+    } else if (data?.type === ToPreviewMessage.COLORS) {
+      // Paint the letterbox (page background) and outline the game box with a 1px
+      // border. The border is a box-shadow on the game container, which the
+      // body's `overflow: hidden` clips on any side flush with the pane edge — so
+      // it shows only on the open (letterboxed) sides, no measuring needed.
+      document.body.style.background = data.background;
+      const game = document.getElementById('game');
+      if (game) {
+        game.style.boxShadow = data.border
+          ? `0 0 0 1px ${data.border}`
+          : 'none';
+      }
     }
   });
 

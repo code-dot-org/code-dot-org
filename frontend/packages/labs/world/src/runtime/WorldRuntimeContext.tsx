@@ -55,6 +55,8 @@ interface WorldRuntimeValue {
   status: RuntimeStatus;
   /** Re-run the current program from the start. */
   restart: () => void;
+  /** Hand the preview sandbox the lab's resolved letterbox / border colors. */
+  setPreviewColors: (background: string, border: string) => void;
 }
 
 const WorldRuntimeContext = createContext<WorldRuntimeValue | null>(null);
@@ -242,6 +244,8 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     clearConsole: () => setConsoleLog([]),
     status,
     restart,
+    setPreviewColors: (background, border) =>
+      void managers.current?.preview.setColors(background, border),
   };
 
   return (

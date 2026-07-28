@@ -28,8 +28,12 @@ import type {Actor, RenderState, World} from 'world-lab';
 import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 
 const ACTOR_SIZE = 24;
-const DEFAULT_WIDTH = 400;
-const DEFAULT_HEIGHT = 300;
+// The game's native resolution — its fixed logical coordinate space (16:9). The
+// Scale Manager's FIT mode letterboxes/centers the canvas to fit the preview
+// pane, shrinking it when the pane is smaller; the host page caps the container
+// at this width (preview.html), so it is never scaled *above* native.
+const GAME_WIDTH = 960;
+const GAME_HEIGHT = 540;
 const DEGREES_TO_RADIANS = Math.PI / 180;
 const DEFAULT_ASSET_BASE = '/vendor/';
 
@@ -118,8 +122,12 @@ export class PhaserBinding {
     this.game = new Phaser.Game({
       type: Phaser.CANVAS,
       parent,
-      width: parent.clientWidth || DEFAULT_WIDTH,
-      height: parent.clientHeight || DEFAULT_HEIGHT,
+      scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: GAME_WIDTH,
+        height: GAME_HEIGHT,
+      },
       backgroundColor: '#101020',
       banner: false,
       audio: {noAudio: true},
