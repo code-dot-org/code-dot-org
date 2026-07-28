@@ -686,6 +686,18 @@ const EVENTS = {
   IMPORT_FROM_BACKPACK_RENAME: 'Import a file from backpack, renaming it',
 
   // student snapshot events
+  STUDENT_SNAPSHOT_VIEWED: 'Student Snapshot page viewed',
+  STUDENT_SNAPSHOT_UNIT_SELECTED: 'Student Snapshot unit selected',
+  STUDENT_SNAPSHOT_LESSON_SELECTED: 'Student Snapshot lesson selected',
+  STUDENT_SNAPSHOT_NEXT_LESSON_CLICKED: 'Student Snapshot next lesson clicked',
+  STUDENT_SNAPSHOT_PREVIOUS_LESSON_CLICKED:
+    'Student Snapshot previous lesson clicked',
+  STUDENT_SNAPSHOT_STUDENT_SELECTED: 'Student Snapshot student selected',
+  STUDENT_SNAPSHOT_NEXT_STUDENT_CLICKED:
+    'Student Snapshot next student clicked',
+  STUDENT_SNAPSHOT_PREVIOUS_STUDENT_CLICKED:
+    'Student Snapshot previous student clicked',
+
   LESSON_SNAPSHOT_RESOURCE_LINK_ADDED:
     'Teacher clicks “Add resource link” and successfully adds a URL',
   LESSON_SNAPSHOT_SAVE_AS_DRAFT_CLICKED:

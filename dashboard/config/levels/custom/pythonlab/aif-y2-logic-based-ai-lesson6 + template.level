@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T15:47:51.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from helpers import run\n\n\ndef turn(up, current, down):\n    print(\"STAY\")\n\n\nrun(turn)\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "helpers.py",
+          "contents": "import io\nimport time\nfrom contextlib import redirect_stdout\nfrom typing import Callable\nfrom random import randint\n\npreferences = {\n    70: 17,\n    71: 25,\n    72: 33,\n    73: 39,\n    74: 50,\n    75: 38,\n    76: 25,\n    77: 18,\n    78: 12,\n    79: 8,\n    80: 5,\n}\n\nRENDER_WIDTH_MAX = 30\nPREFERENCE_COUNT_MAX = max(preferences.values())\nRESET = \"\\033[0m\"\nLOW, HIGH = 70, 80\n\n\ncurrent_temp = randint(LOW, HIGH)\n\n\ndef render() -> None:\n    \"\"\"Render thermostat and preferences\"\"\"\n\n    # Clear screen\n    out = [\"\\033[2J\\033[3J\\033[H\"]\n\n    # Write title\n    out.append(\n        \"\\033[1m  THERMOSTAT\\033[0m  \\u00b7 \\u00b0F and how many people prefer it\\n\\n\"\n    )\n\n    # Write bars\n    for temperature in range(HIGH, LOW - 1, -1):\n        count = preferences[temperature]\n        width = max(1, round(count / PREFERENCE_COUNT_MAX * RENDER_WIDTH_MAX))\n        bar = \"\\u2588\" * width + RESET\n        label = (\n            f\"\\033[1m{temperature:>3}\\u00b0F\\033[0m\"\n            if temperature == current_temp\n            else f\"{temperature:>3}\\u00b0F\"\n        )\n        marker = \"  \\033[1m\\u25c4 HERE\\033[0m\" if temperature == current_temp else \"\"\n        out.append(f\"  {label} \\u2524 {bar} {count}{marker}\\n\")\n    print(\"\".join(out), end=\"\")\n\n\ndef get_neighbors():\n    \"\"\"Get neighboring temperature preferences\"\"\"\n    here = preferences[current_temp]\n    down = preferences[current_temp - 1] if current_temp - 1 >= LOW else -1\n    up = preferences[current_temp + 1] if current_temp + 1 <= HIGH else -1\n    return here, down, up\n\n\ndef step(f: Callable) -> str:\n    \"\"\"Step through the animation, rendering and reporting decisions along the way\"\"\"\n    global current_temp\n\n    # Get neigboring preferences\n    here, down, up = get_neighbors()\n\n    # Create a buffer to capture stdout\n    buffer = io.StringIO()\n\n    # Capture stdout from student code\n    with redirect_stdout(buffer):\n        f(up, here, down)\n\n    # Parse a decision from student code, uppercasing so a typo like\n    # \"up\" or \"Stay\" is treated the same as \"UP\" or \"STAY\"\n    decision = buffer.getvalue().strip().upper()\n\n    # Move temperature, clamping to valid range so a student who only\n    # ever prints \"UP\"/\"DOWN\" can't push current_temp out of bounds\n    if decision == \"DOWN\":\n        current_temp = max(LOW, current_temp - 1)\n    elif decision == \"UP\":\n        current_temp = min(HIGH, current_temp + 1)\n\n    # Render\n    render()\n\n    return decision\n\n\ndef run(f: Callable) -> None:\n    \"\"\"Run the animation\"\"\"\n    render()\n    finished = False\n    while not finished:\n        time.sleep(0.3)\n        previous_temp = current_temp\n        decision = step(f)\n        # Stop when the temperature settles: either the student chose\n        # \"STAY\", or an \"UP\"/\"DOWN\" couldn't move us past a boundary\n        finished = decision == \"STAY\" or current_temp == previous_temp\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 15:48:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 15:52:16 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:24:04 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:24:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:30:46 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:31:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:36:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 16:49:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:04:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:05:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:05:14 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:05:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:05:45 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-27 18:05:50 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
