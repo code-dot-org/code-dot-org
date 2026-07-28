@@ -1,7 +1,7 @@
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import QRCode from 'qrcode.react';
 import React from 'react';
@@ -297,9 +297,12 @@ class ShareAllowedDialog extends React.Component {
                     />
                   )}
                   {showShareWarning && (
-                    <p className={moduleStyles.shareWarning}>
+                    <MuiTypography
+                      variant="body4"
+                      className={moduleStyles.shareWarning}
+                    >
                       {i18n.shareU13Warning()}
-                    </p>
+                    </MuiTypography>
                   )}
                   <div className={moduleStyles.thumbnailRow}>
                     <div className={moduleStyles.thumbnail}>
@@ -401,9 +404,12 @@ class ShareAllowedDialog extends React.Component {
                     </div>
                   </div>
                   {warningText && (
-                    <p className={moduleStyles.thumbnailWarning}>
+                    <MuiTypography
+                      variant="body4"
+                      className={moduleStyles.thumbnailWarning}
+                    >
                       {warningText}
-                    </p>
+                    </MuiTypography>
                   )}
                   {this.state.showSendToPhone && (
                     <div className={moduleStyles.sendToPhoneContainer}>
@@ -415,7 +421,9 @@ class ShareAllowedDialog extends React.Component {
                         />
                       </div>
                       <div className={moduleStyles.sendToPhoneRight}>
-                        <label>{i18n.scanQRCode()}</label>
+                        <MuiTypography variant="body3" component="label">
+                          {i18n.scanQRCode()}
+                        </MuiTypography>
                         <QRCode value={shareUrl + '?qr=true'} size={90} />
                       </div>
                     </div>

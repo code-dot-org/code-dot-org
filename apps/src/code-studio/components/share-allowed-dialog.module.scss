@@ -31,9 +31,7 @@
 
 .shareWarning {
   color: var(--text-error-primary);
-  font-size: 13px;
   font-weight: bold;
-  margin: 0;
   text-align: center;
 }
 
@@ -79,6 +77,20 @@
   line-height: 1;
 }
 
+.socialLink {
+  display: inline-block;
+  color: var(--text-neutral-primary);
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: var(--text-neutral-primary);
+    text-decoration: none;
+  }
+}
+
 .sendToPhoneContainer {
   width: 100%;
   display: flex;
@@ -94,23 +106,7 @@
   width: 30%;
 }
 
-.socialLink {
-  display: inline-block;
-  color: var(--text-neutral-primary);
-  text-decoration: none;
-
-  &:hover,
-  &:focus,
-  &:active,
-  &:visited {
-    color: var(--text-neutral-primary);
-    text-decoration: none;
-  }
-}
-
 .thumbnailWarning {
-  font-size: 12px;
   font-weight: bold;
-  margin: 0;
   text-align: center;
 }
