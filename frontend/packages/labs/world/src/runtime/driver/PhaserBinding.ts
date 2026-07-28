@@ -123,8 +123,11 @@ export class PhaserBinding {
       type: Phaser.CANVAS,
       parent,
       scale: {
+        // FIT sizes the canvas to the (CSS-sized, exactly 16:9) `#game` box, so
+        // its scale — and thus input mapping — stays correct. No autoCenter: CSS
+        // already centers `#game`, and CENTER_BOTH would measure the parent and
+        // apply a margin to the canvas on every (re)load.
         mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
         width: GAME_WIDTH,
         height: GAME_HEIGHT,
       },
