@@ -1,8 +1,10 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -112,10 +114,11 @@ export default class AudioRecorder extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.root}>
         <div style={styles.buttonRow}>
-          <input
-            type="text"
+          <TextField
+            name="audioName"
+            size="s"
             placeholder={i18n.soundName()}
             onChange={this.onNameChange}
             value={this.state.audioName}
@@ -126,33 +129,40 @@ export default class AudioRecorder extends React.Component {
               {i18n.recording()}
             </span>
           )}
-          <span>
+          <span style={styles.actionGroup}>
             {this.state.loading && this.state.audioName.length > 0 && (
-              <div style={styles.spinner}>
-                <i
-                  className="fa-solid fa-spinner fa-spin"
-                  style={{fontSize: '20px'}}
-                />
-              </div>
+              <FontAwesomeV6Icon
+                iconName="spinner"
+                animationType="spin"
+                style={{fontSize: '20px'}}
+              />
             )}
-            <Button
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
               onClick={this.toggleRecord}
               id="start-stop-record"
-              style={assetButtonStyles.button}
-              color={Button.ButtonColor.blue}
-              icon={this.state.recording ? 'stop' : 'circle'}
-              text={this.state.recording ? i18n.stop() : i18n.record()}
-              size="large"
               disabled={this.state.audioName.length === 0 || this.state.loading}
-            />
-            <Button
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName={this.state.recording ? 'stop' : 'circle'}
+                  iconStyle="solid"
+                />
+              }
+            >
+              {this.state.recording ? i18n.stop() : i18n.record()}
+            </MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
               onClick={this.onCancel}
               id="cancel-record"
-              style={assetButtonStyles.button}
-              color={Button.ButtonColor.gray}
-              text={i18n.cancel()}
-              size="large"
-            />
+              type="button"
+            >
+              {i18n.cancel()}
+            </MuiButton>
           </span>
         </div>
       </div>
@@ -161,6 +171,9 @@ export default class AudioRecorder extends React.Component {
 }
 
 const styles = {
+  root: {
+    marginBottom: 16,
+  },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
@@ -175,10 +188,9 @@ const styles = {
     textAlign: 'left',
     color: color.red,
   },
-  spinner: {
-    display: 'inline-block',
-    verticalAlign: 'top',
-    marginTop: '16px',
-    marginRight: '10px',
+  actionGroup: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 10,
   },
 };
