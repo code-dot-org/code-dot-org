@@ -6,7 +6,6 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -24,7 +23,8 @@ import {
   getHandleFlowPosition,
   lineAnchorHandleId,
 } from '../utils/lineAnchors';
-import {uploadImageAsset} from '../utils/uploadImageAsset';
+
+import type {ModeratedImageUploader} from './useModeratedImageUpload';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -38,7 +38,7 @@ interface UseCopyPasteOptions {
   pushSnapshot: () => void;
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
-  levelName: string;
+  uploadImage: ModeratedImageUploader;
   onImageUploadError: () => void;
 }
 
@@ -64,16 +64,13 @@ export function useCopyPaste({
   pushSnapshot,
   canvasContainerRef,
   readOnly,
-  levelName,
+  uploadImage,
   onImageUploadError,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
-  // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge
-  // whiteboard), so guard the whole chain.
-  const channelId = useAppSelector(state => state.lab?.channel?.id) ?? '';
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.
@@ -487,25 +484,18 @@ export function useCopyPaste({
         return;
       }
 
-      try {
-        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
-        if (!uploadUrl) {
-          onImageUploadError();
-          return;
-        }
-        pasteImage(uploadUrl);
-      } catch (error) {
-        console.error('Failed to upload pasted image:', error);
-        onImageUploadError();
-      }
+      await uploadImage({
+        file,
+        onUploaded: pasteImage,
+        onError: onImageUploadError,
+      });
     };
     document.addEventListener('paste', handlePaste);
     return () => document.removeEventListener('paste', handlePaste);
   }, [
     canvasContainerRef,
     readOnly,
-    levelName,
-    channelId,
+    uploadImage,
     paste,
     pasteImage,
     onImageUploadError,

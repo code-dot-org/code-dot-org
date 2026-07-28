@@ -3,30 +3,29 @@ import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
-import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
-  levelName: string;
+  uploadImage: ModeratedImageUploader;
+  onImageUploadError: () => void;
   canvasTool: CanvasTool;
   onSetCanvasTool: (tool: CanvasTool) => void;
 }
 
 export default function Toolbar({
   onAddNode,
-  levelName,
+  uploadImage,
+  onImageUploadError,
   canvasTool,
   onSetCanvasTool,
 }: ToolbarProps) {
-  // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge
-  // whiteboard), so guard the whole chain.
-  const channelId = useAppSelector(state => state.lab?.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
 
@@ -44,25 +43,22 @@ export default function Toolbar({
         return;
       }
 
-      try {
-        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
-        if (!uploadUrl) {
-          return;
-        }
-        onAddNode({
-          type: 'image',
-          data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
-        });
-      } catch (error) {
-        console.error('Failed to upload image:', error);
-      }
+      await uploadImage({
+        file,
+        onUploaded: src =>
+          onAddNode({
+            type: 'image',
+            data: {src, altText: file.name.replace(/\.[^.]+$/, '')},
+          }),
+        onError: onImageUploadError,
+      });
     },
-    [channelId, levelName, onAddNode]
+    [uploadImage, onAddNode, onImageUploadError]
   );
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     onFileSelected,
-    'image/*',
+    SafeAndSupportedImageTypes.join(','),
     false
   );
 

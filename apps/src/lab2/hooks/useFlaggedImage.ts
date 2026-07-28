@@ -7,13 +7,15 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-type FlaggedImageData = {
+export type FlaggedImageData = {
   file: File;
   fileType: string;
   uploadFunction: () => Promise<void>;
 };
 
-export const useFlaggedImage = () => {
+export const useFlaggedImage = (
+  uploaderType: string = 'Lab2 File Uploader'
+) => {
   const dispatch = useAppDispatch();
   const channelId = useAppSelector(state => state.lab.channel?.id);
 
@@ -45,7 +47,7 @@ export const useFlaggedImage = () => {
           );
           dispatch(setIsBlockedAbuse(true));
           analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
-            UploaderType: 'Lab2 File Uploader',
+            UploaderType: uploaderType,
             ProjectType: appName,
           });
         } catch (error) {
@@ -67,7 +69,7 @@ export const useFlaggedImage = () => {
 
   const handleCancelFlaggedImage = (appName: string) => {
     analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-      UploaderType: 'Lab2 File Uploader',
+      UploaderType: uploaderType,
       ProjectType: appName,
     });
     setFlaggedImageData(null);

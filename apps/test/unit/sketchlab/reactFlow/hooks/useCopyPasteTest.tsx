@@ -5,14 +5,6 @@ import {
   INTERNAL_CLIPBOARD_MIME,
 } from '@cdo/apps/sketchlab/reactFlow/constants';
 import {useCopyPaste} from '@cdo/apps/sketchlab/reactFlow/hooks/useCopyPaste';
-import {uploadImageAsset} from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
-
-jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset');
-
-// The hook reads channelId from redux; stub it so no store/Provider is needed.
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  useAppSelector: () => 'channel-1',
-}));
 
 // Stub useReactFlow so the hook runs without a mounted ReactFlow. The paste
 // path only needs screenToFlowPosition (identity here) and deleteElements.
@@ -22,10 +14,6 @@ jest.mock('@xyflow/react', () => ({
     screenToFlowPosition: (point: {x: number; y: number}) => point,
   }),
 }));
-
-const mockUploadImageAsset = uploadImageAsset as jest.MockedFunction<
-  typeof uploadImageAsset
->;
 
 function flushPromises() {
   return new Promise(resolve => setTimeout(resolve, 0));
@@ -53,10 +41,14 @@ describe('useCopyPaste paste handling', () => {
   let container: HTMLDivElement;
   let setNodes: jest.Mock;
   let setEdges: jest.Mock;
+  let uploadImage: jest.Mock;
   let onImageUploadError: jest.Mock;
 
   beforeEach(() => {
-    mockUploadImageAsset.mockResolvedValue('/v3/assets/channel-1/pasted.png');
+    // Successful moderated upload: hand the asset URL to the continuation.
+    uploadImage = jest.fn(async ({onUploaded}) =>
+      onUploaded('/v3/assets/channel-1/pasted.png')
+    );
 
     container = document.createElement('div');
     container.tabIndex = -1;
@@ -71,7 +63,6 @@ describe('useCopyPaste paste handling', () => {
   afterEach(() => {
     container.remove();
     jest.restoreAllMocks();
-    mockUploadImageAsset.mockReset();
   });
 
   function renderCopyPaste(readOnly = false) {
@@ -85,7 +76,7 @@ describe('useCopyPaste paste handling', () => {
         pushSnapshot: jest.fn(),
         canvasContainerRef,
         readOnly,
-        levelName: 'test-level',
+        uploadImage,
         onImageUploadError,
       })
     );
@@ -99,10 +90,9 @@ describe('useCopyPaste paste handling', () => {
     container.dispatchEvent(event);
     await flushPromises();
 
-    expect(mockUploadImageAsset).toHaveBeenCalledWith(file, {
-      levelName: 'test-level',
-      channelId: 'channel-1',
-    });
+    expect(uploadImage).toHaveBeenCalledWith(
+      expect.objectContaining({file, onError: onImageUploadError})
+    );
     expect(setNodes).toHaveBeenCalledTimes(1);
     const addedNodes = setNodes.mock.calls[0][0]([]);
     expect(addedNodes).toHaveLength(1);
@@ -112,7 +102,7 @@ describe('useCopyPaste paste handling', () => {
   });
 
   it('reports an error and adds no node when the upload fails', async () => {
-    mockUploadImageAsset.mockRejectedValue(new Error('network down'));
+    uploadImage.mockImplementation(async ({onError}) => onError());
     renderCopyPaste();
     const file = new File(['x'], 'pasted.png', {type: 'image/png'});
     const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
@@ -122,6 +112,22 @@ describe('useCopyPaste paste handling', () => {
 
     expect(onImageUploadError).toHaveBeenCalledTimes(1);
     expect(setNodes).not.toHaveBeenCalled();
+  });
+
+  it('adds no node when a flagged upload is left pending', async () => {
+    // A flagged verdict defers the upload until the user answers the modal;
+    // uploadImage resolves without invoking either callback.
+    uploadImage.mockImplementation(async () => {});
+    renderCopyPaste();
+    const file = new File(['x'], 'pasted.png', {type: 'image/png'});
+    const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
+
+    container.dispatchEvent(event);
+    await flushPromises();
+
+    expect(uploadImage).toHaveBeenCalledTimes(1);
+    expect(setNodes).not.toHaveBeenCalled();
+    expect(onImageUploadError).not.toHaveBeenCalled();
   });
 
   it('ignores a stale clipboard image when our copy marker is present', async () => {
@@ -137,7 +143,7 @@ describe('useCopyPaste paste handling', () => {
 
     // Marker present -> internal paste path; the (empty) clipboard yields no
     // nodes and no upload happens.
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(uploadImage).not.toHaveBeenCalled();
     expect(setNodes).not.toHaveBeenCalled();
   });
 
@@ -152,7 +158,7 @@ describe('useCopyPaste paste handling', () => {
     otherInput.dispatchEvent(event);
     await flushPromises();
 
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(uploadImage).not.toHaveBeenCalled();
     expect(setNodes).not.toHaveBeenCalled();
     otherInput.remove();
   });
@@ -166,7 +172,7 @@ describe('useCopyPaste paste handling', () => {
     document.body.dispatchEvent(event);
     await flushPromises();
 
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(uploadImage).not.toHaveBeenCalled();
     expect(setNodes).not.toHaveBeenCalled();
   });
 
@@ -178,7 +184,7 @@ describe('useCopyPaste paste handling', () => {
     container.dispatchEvent(event);
     await flushPromises();
 
-    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+    expect(uploadImage).not.toHaveBeenCalled();
     expect(setNodes).not.toHaveBeenCalled();
   });
 });

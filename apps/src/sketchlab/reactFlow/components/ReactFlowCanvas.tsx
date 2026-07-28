@@ -63,6 +63,7 @@ import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
+import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useTransientMessage} from '../hooks/useTransientMessage';
@@ -138,7 +139,11 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  levelName: string;
+  // Moderated image upload from useModeratedImageUpload. Optional because the
+  // canvas is also hosted outside lab2 (AI Tutor whiteboard), where there is
+  // no channel to upload to; the default reports an error, matching the old
+  // no-channel behavior there.
+  uploadImage?: ModeratedImageUploader;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -153,9 +158,12 @@ export interface ReactFlowCanvasProps {
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
 
+const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
+  onError();
+
 export default function ReactFlowCanvas({
   updateSources,
-  levelName,
+  uploadImage = uploadImageUnavailable,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -495,7 +503,7 @@ export default function ReactFlowCanvas({
     pushSnapshot,
     canvasContainerRef,
     readOnly,
-    levelName,
+    uploadImage,
     onImageUploadError: handleImageUploadError,
   });
 
@@ -971,7 +979,8 @@ export default function ReactFlowCanvas({
                   {!readOnly && (
                     <Toolbar
                       onAddNode={handleAddNode}
-                      levelName={levelName}
+                      uploadImage={uploadImage}
+                      onImageUploadError={handleImageUploadError}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />

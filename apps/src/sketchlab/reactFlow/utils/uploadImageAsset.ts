@@ -18,9 +18,31 @@ function extensionFor(file: File): string {
   return fromName || mimeToExtension(file.type) || 'png';
 }
 
+export function isStarterAssetOrExemplarUpload(): boolean {
+  return !!(getIsStartMode() || getAppOptionsEditingExemplar());
+}
+
 interface UploadImageAssetOptions {
   levelName: string;
   channelId: string;
+  // Use this URL instead of generating a fresh one. Lets callers compute the
+  // destination before moderation and upload to that same URL afterward.
+  precomputedUploadUrl?: string;
+}
+
+/**
+ * Computes the URL an image file would upload to, without uploading. Starter
+ * assets and exemplars target the level's starter-asset path; everything else
+ * targets the project's channel.
+ */
+export function generateImageAssetUploadUrl(
+  file: File,
+  {levelName, channelId}: {levelName: string; channelId: string}
+): string {
+  const filename = `${createUuid()}.${extensionFor(file)}`;
+  return isStarterAssetOrExemplarUpload()
+    ? `/level_starter_assets/${encodeURIComponent(levelName)}/uuid/${filename}`
+    : `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
 }
 
 /**
@@ -31,19 +53,16 @@ interface UploadImageAssetOptions {
  */
 export async function uploadImageAsset(
   file: File,
-  {levelName, channelId}: UploadImageAssetOptions
+  {levelName, channelId, precomputedUploadUrl}: UploadImageAssetOptions
 ): Promise<string | null> {
-  const isStarterAssetOrExemplar = !!(
-    getIsStartMode() || getAppOptionsEditingExemplar()
-  );
+  const isStarterAssetOrExemplar = isStarterAssetOrExemplarUpload();
   if (!isStarterAssetOrExemplar && !channelId) {
     return null;
   }
 
-  const filename = `${createUuid()}.${extensionFor(file)}`;
-  const uploadUrl = isStarterAssetOrExemplar
-    ? `/level_starter_assets/${encodeURIComponent(levelName)}/uuid/${filename}`
-    : `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
+  const uploadUrl =
+    precomputedUploadUrl ??
+    generateImageAssetUploadUrl(file, {levelName, channelId});
 
   if (isStarterAssetOrExemplar) {
     const bodyData = new FormData();
