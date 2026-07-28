@@ -505,6 +505,11 @@ const EVENTS = {
   DEMO_SECTION_TEACHER_DASHBOARD_VIEWED:
     'Demo Section Teacher Dashboard Viewed',
 
+  // Just In Time PL - Onboarding
+  ONBOARDING_TOUR_STARTED: 'Onboarding tour started',
+  ONBOARDING_TOUR_COMPLETED: 'Onboarding tour completed',
+  ONBOARDING_TOUR_ABANDONED: 'Onboarding tour abandoned',
+
   // Student Homepage
   STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
 
