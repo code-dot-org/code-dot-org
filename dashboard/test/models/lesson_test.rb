@@ -1520,6 +1520,15 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil lesson.summarize[:lessonTutorPath]
   end
 
+  test 'lesson_tutor_path returns the tutor path when available and nil otherwise' do
+    unit = ai_course_unit('AIF')
+    available = create(:lesson, script: unit, has_lesson_plan: true)
+    assert_equal "#{available.get_uncached_show_path}/tutor", available.lesson_tutor_path
+
+    unavailable = create(:lesson, script: unit, has_lesson_plan: false)
+    assert_nil unavailable.lesson_tutor_path
+  end
+
   # Builds the single unit of a course whose offering has the given marketing
   # initiative, so lessons created on it inherit that course's tutor eligibility.
   private def ai_course_unit(marketing_initiative)
