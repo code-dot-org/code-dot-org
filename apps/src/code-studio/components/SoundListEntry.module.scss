@@ -10,16 +10,15 @@
 }
 
 .selected {
-  background-color: #cfc9de;
+  background-color: var(--background-brand-purple-light);
 }
 
 .notSelected {
-  background-color: #fff;
+  background-color: var(--background-neutral-primary);
 }
 
 .icon {
   float: left;
-  padding: 6px 10px 6px 2px;
 }
 
 .metadata {
@@ -29,11 +28,6 @@
   text-overflow: ellipsis;
 }
 
-.soundName {
-  font-size: 14px;
-}
-
 .time {
-  color: #5b6770;
-  font-size: 11px;
+  color: var(--text-neutral-tertiary);
 }
