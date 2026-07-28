@@ -310,10 +310,6 @@ class Unit < ApplicationRecord
     generate_outline
   )
 
-  def self.hoc_2014_unit
-    Unit.get_from_cache(Unit::HOC_NAME)
-  end
-
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
   end

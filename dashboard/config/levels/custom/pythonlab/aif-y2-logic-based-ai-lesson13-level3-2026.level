@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T03:17:00.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You are building a conversational AI program based on a decision tree.\r\n\r\n**Do This**\r\n\r\n1. Translate your decision tree into a conversational AI Python program.\r\n2. Use conditional statements so that your program can branch in different directions.\r\n\r\n**💻 Coding Tip**\r\n\r\nYou can use the provided ask function to prompt the user with a yes/no question and ask them for an answer.\r\n\r\n```python\r\nif ask(\"Do you like sports?\"):\r\n    # Do something\r\nelse:\r\n    # Do something else\r\n\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def ask(question):\n    while True:\n        answer = input(f\"{question} (yes, no): \")\n        if answer.lower() == \"yes\":\n            return True\n        elif answer.lower() == \"no\":\n            return False\n        else:\n            print(\"Try again!\")\n\n\ndef main():\n    # TODO: Implement your conversational AI here\n    print(\"Hi! I can help you make a decision.\")\n\n\nmain()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:17:05 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

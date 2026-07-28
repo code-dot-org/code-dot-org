@@ -96,17 +96,17 @@ export const BUTTON_TYPES = {
   },
   cancel: {
     style: {
-      backgroundColor: color.neutral_white,
+      backgroundColor: 'var(--background-neutral-primary)',
       borderWidth: 2,
       borderStyle: 'solid',
-      borderColor: color.neutral_dark,
-      color: color.neutral_dark,
+      borderColor: 'var(--borders-neutral-strong)',
+      color: 'var(--text-neutral-primary)',
       ':hover': {
-        backgroundColor: color.neutral_dark20,
+        backgroundColor: 'var(--background-neutral-tertiary)',
         boxShadow: 'none',
       },
       ':focus': {
-        backgroundColor: color.neutral_dark20,
+        backgroundColor: 'var(--background-neutral-tertiary)',
         boxShadow: 'none',
       },
     },
@@ -125,9 +125,9 @@ export const BUTTON_TYPES = {
   },
   legacyPrimary: {
     style: {
-      backgroundColor: color.orange,
-      borderColor: color.orange,
-      color: color.neutral_white,
+      backgroundColor: 'var(--background-brand-purple-primary)',
+      borderColor: 'var(--background-brand-purple-primary)',
+      color: 'var(--text-neutral-white-fixed)',
     },
   },
   danger: {

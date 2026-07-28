@@ -2,9 +2,14 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
+import {SpriteLab2World} from './world';
+
 // The animation-list category marking an image as a background rather than a
 // costume.
 export const BACKGROUNDS_CATEGORY = 'backgrounds';
+// Square tiles for platform pieces (the "make platform blocks" block's grid
+// draws from these).
+export const BLOCKS_CATEGORY = 'blocks';
 
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
 // `SerializedAnimationProps` typedef in p5lab/shapes.js (which is plain JS, so
@@ -20,7 +25,7 @@ export interface SerializedAnimationProps {
   categories?: string[];
   // Physical pixels per art pixel; absent on non-pixel-art animations.
   pixelGridSize?: number;
-  // Pixel-editor recently-used colors, most recent first; absent until the
+  // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
 }
@@ -51,13 +56,6 @@ export interface SpriteLab2ItemEntry {
   itemType?: 'sprite' | 'background';
 }
 
-// Standalone world-grid editor state. Persisted but not yet wired into the
-// p5.play runtime (see plan, World tab).
-export interface SpriteLab2World {
-  id: string;
-  grid: string[][];
-}
-
 // A named code workspace. The id is the source of truth (the go-to-scene
 // block stores it); scenes[0] is the default scene Play starts at.
 export interface SpriteLab2Scene {
@@ -65,6 +63,9 @@ export interface SpriteLab2Scene {
   name: string;
   // This scene's Blockly workspace serialization.
   source?: WorkspaceSerialization;
+  // World-tab experiment: starter sprite/block placements, spawned ahead of
+  // the scene's program.
+  world?: SpriteLab2World;
 }
 
 // The single ProjectSources.source JSON for a SpriteLab2 project.
@@ -74,9 +75,6 @@ export interface SpriteLab2Source extends ProjectSources {
   // Scenes UI variant: per-scene code workspaces. When present, `source`
   // mirrors scenes[0].source so projects still open with the variant off.
   scenes?: SpriteLab2Scene[];
-  // World tab state.
-  worlds?: SpriteLab2World[];
-  activeWorldId?: string;
   // Items tab gallery metadata.
   items?: SpriteLab2ItemEntry[];
 }
@@ -85,6 +83,12 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   guideMode?: 'instructions' | 'aiCodeGenerate';
   aiCodeGenerateAdlib?: string;
   aiCodeGenerateText?: boolean;
+  // World-tab experiment: show the tab on this level (equivalent to the
+  // world-tab=true URL parameter).
+  showWorldTab?: boolean;
+  // World-tab experiment: the tab edits the whole world, not just the
+  // scene-sized corner (equivalent to the world=large URL parameter).
+  showLargeWorld?: boolean;
   // XML string representation of toolbox blocks.
   // TODO: deprecate in favor of the JSON toolbox definition.
   toolboxBlocks?: string;

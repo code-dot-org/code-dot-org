@@ -77,10 +77,14 @@ class ProjectInfo extends React.Component {
   }
 }
 
+// The nav-reskin focus ring paints 3px outside the buttons; the overflow
+// guard would clip it at the container edges.
+const navReskin = document.documentElement.classList.contains('nav-reskin');
+
 const styles = {
   headerContainer: {
     position: 'relative',
-    overflow: 'hidden',
+    ...(navReskin ? {} : {overflow: 'hidden'}),
     height: 38,
   },
   projectInfo: {

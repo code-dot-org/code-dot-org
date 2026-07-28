@@ -5,6 +5,8 @@ import React, {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import {
@@ -102,6 +104,7 @@ const StudentSnapshot: React.FC = () => {
   const tourResumed = useRef(false);
 
   useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.STUDENT_SNAPSHOT_VIEWED);
     if (tourResumed.current) return;
     tourResumed.current = true;
     resumeLearnHowToEvaluateTour();

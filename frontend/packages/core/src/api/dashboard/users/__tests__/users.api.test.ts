@@ -34,6 +34,8 @@ const WIRE_SETTINGS = {
   can_delete_own_account: true,
   age: '21+',
   us_state: null,
+  gender: null,
+  is_usa: true,
   parent_email: null,
   dependent_students_count: 0,
   age_options: [{value: '4', text: '4'}],
@@ -59,6 +61,8 @@ describe('createUsersApi.getSettings', () => {
     expect(settings.usStateOptions).toEqual([
       {value: 'WA', text: 'Washington'},
     ]);
+    expect(settings.isUsa).toBe(true);
+    expect(settings.gender).toBeNull();
   });
 
   it('rejects when the body fails schema validation', async () => {
@@ -76,6 +80,18 @@ describe('createUsersApi mutations target the right routes', () => {
         method: 'PATCH',
         url: '/dashboardapi/users',
         body: {user: {given_name: 'Grace', us_state: 'WA'}},
+      }),
+    );
+  });
+
+  it('updateProfile maps gender to gender_student_input', async () => {
+    const {api, request} = fakeTransport();
+    await api.updateProfile({gender: 'Example gender'});
+    expect(request).toHaveBeenCalledWith(
+      expect.objectContaining({
+        method: 'PATCH',
+        url: '/dashboardapi/users',
+        body: {user: {gender_student_input: 'Example gender'}},
       }),
     );
   });

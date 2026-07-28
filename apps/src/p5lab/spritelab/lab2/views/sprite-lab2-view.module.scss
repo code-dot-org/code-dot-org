@@ -37,28 +37,39 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
+.tabContainer {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  justify-content: space-between;
+}
+
 .tabBar {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   gap: 4px;
-  padding: 6px 8px;
-  // Design-system tokens so the chrome is legible in both Light and Dark.
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .tab {
   height: $tab-item-height;
   padding: 0 16px;
+  // Cancel the legacy global button margin so hover fills the group.
+  margin: 0;
   // A subtle outline gives every tab item the same "button" structure, so
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
-  background: transparent;
+  background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   cursor: pointer;
   font-size: 14px;
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-tertiary);
+  }
 
   &:disabled {
     opacity: 0.4;
@@ -70,6 +81,11 @@ $tab-item-height: 34px;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
   font-weight: 600;
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--background-neutral-primary);
+  }
 }
 
 // The Code tab + scene picker as one segmented control (scenes UI variant):
@@ -90,6 +106,7 @@ $tab-segment-height: $tab-item-height - 2px;
   // except for the divider between them.
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px 4px 0 0;
+  background: var(--background-neutral-primary);
 
   .tab {
     height: $tab-segment-height;
@@ -97,14 +114,39 @@ $tab-segment-height: $tab-item-height - 2px;
     border-radius: 4px 0 0 0;
   }
 
-  // The group paints the active background so both segments share it.
+  // The group paints the active background and teal edge; the segments
+  // inside stay transparent so both share them.
   .tabActive {
     background: transparent;
+    box-shadow: none;
+
+    &:hover:not(:disabled) {
+      background: transparent;
+    }
   }
 }
 
 .tabGroupActive {
   background: var(--background-neutral-primary);
+  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+}
+
+// Action buttons beside the Play tab (shown only while playing), not tabs.
+.startOver {
+  height: $tab-item-height;
+  padding: 0 12px;
+  margin: 0;
+  margin-inline-start: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: var(--background-neutral-primary);
+  }
 }
 
 .sceneSelect {
@@ -316,6 +358,11 @@ $tab-segment-height: $tab-item-height - 2px;
   border: 1px solid rgb(255 255 255 / 25%);
   border-radius: 6px;
   box-shadow: none;
+  // Explicit colors: nothing styles bare form elements globally, so these
+  // would inherit the guide's white text onto their own light control
+  // background. The guide panel is dark in both themes.
+  background: #fff;
+  color: #333;
   font-size: 14px;
 }
 
@@ -396,63 +443,6 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
-.worldTab {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  padding: 8px;
-  gap: 8px;
-  overflow: auto;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-}
-
-.worldPalette {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 4px 8px;
-    cursor: pointer;
-  }
-}
-
-.brushActive {
-  outline: 2px solid #1565c0;
-}
-
-.brushSwatch {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid var(--borders-neutral-strong);
-}
-
-.worldGrid {
-  display: grid;
-  width: min(100%, 480px);
-  aspect-ratio: 1;
-  border: 1px solid var(--borders-neutral-strong);
-  user-select: none;
-}
-
-.worldCell {
-  border: 1px solid var(--borders-neutral-primary);
-  cursor: pointer;
-
-  &:hover {
-    outline: 1px solid var(--borders-neutral-strong);
-    outline-offset: -1px;
-  }
-}
-
 // The persistent playspace overlay: spans the tab content area; lets clicks
 // through to the content beneath (e.g. the Blockly workspace) except over the
 // box itself.
@@ -477,11 +467,56 @@ $tab-segment-height: $tab-item-height - 2px;
   // Transitions, and the preview-only hairline seam, are set inline:
   // transform only animates between the two visible placements; opacity
   // fades the box in on appearance.
+
+  // Keyboard focus ring for the play-mode game region; an outline so the
+  // 400x400 geometry the transform and pointer math rely on is untouched.
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: 2px;
+  }
 }
 
 .playspaceCanvas {
   width: 400px;
   height: 400px;
+}
+
+// Click-to-play catcher over the live preview. Transparent until hover/focus,
+// when a faint veil + play glyph signal that clicking opens Play on this scene.
+// pointer-events: auto re-enables it over the otherwise-inert preview box.
+.previewClickCatch {
+  position: absolute;
+  inset: 0;
+  pointer-events: auto;
+  cursor: pointer;
+
+  &::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32px;
+    opacity: 0;
+    transition: opacity 0.12s ease-in;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgb(0 0 0 / 28%);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-neutral-primary);
+    outline-offset: -2px;
+  }
 }
 
 // Location-picker hover ghost: the sprite being placed, previewed at the
@@ -565,3 +600,24 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// World-tab experiment: the scene selector leads its group, with the World
+// and Code tabs as segments after it. The group's radius clips the segments,
+// and the active segment carries its own teal edge (two tabs share the
+// group, so a group-wide edge wouldn't say which is active).
+.tabGroupWorld {
+  overflow: hidden;
+
+  .tab {
+    border-radius: 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+  }
+
+  .sceneSelect {
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .tabActive {
+    box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  }
+}

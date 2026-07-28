@@ -51,6 +51,7 @@ export interface UpdateProfileParams {
   username?: string;
   age?: number | string;
   usState?: string;
+  gender?: string;
 }
 
 export interface UpdateEmailParams {

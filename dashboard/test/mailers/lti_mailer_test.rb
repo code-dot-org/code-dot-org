@@ -8,7 +8,7 @@ class LtiMailerTest < ActionMailer::TestCase
     end
 
     test 'lti_integration_confirmation - should have correct subject' do
-      assert_equal 'Code.org has completed your LMS registration request', @mail.subject
+      assert_equal 'CodeAI has completed your LMS registration request', @mail.subject
     end
 
     test 'lti_integration_confirmation - should have correct recipient' do

@@ -16,6 +16,7 @@ $widget-height: $default-footerless-height;
 div#visualization {
   height: 562.5px;
   width: 400px;
+  box-sizing: content-box;
 }
 
 div#visualization.with_padding {
@@ -239,7 +240,7 @@ div#visualizationResizeBar {
   // If you change this width and height,
   // make sure to update the AdvancedShareOptions.jsx iframe code.
   width: 352px;
-  height: 612px;
+  height: 652px;
   margin: 0 auto;
   padding: 20px 0;
 
@@ -579,4 +580,3 @@ div#visualizationResizeBar {
   width: calc(100% - 12px);
   bottom: 0;
 }
-

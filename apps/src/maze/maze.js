@@ -177,7 +177,8 @@ module.exports = class Maze {
 
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
-        finishButton.setAttribute('disabled', 'disabled');
+        finishButton.setAttribute('disabled', '');
+        finishButton.classList.add('Mui-disabled');
         dom.addClickTouchEvent(finishButton, this.finishButtonClick_);
       }
 
@@ -237,6 +238,7 @@ module.exports = class Maze {
     var stepButton = document.getElementById('stepButton');
     if (stepButton) {
       stepButton.setAttribute('disabled', '');
+      stepButton.classList.add('Mui-disabled');
     }
     this.execute_(false);
   };
@@ -249,6 +251,7 @@ module.exports = class Maze {
   stepButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.setAttribute('disabled', '');
+    stepButton.classList.add('Mui-disabled');
 
     if (this.animating_) {
       this.scheduleAnimations_(true);
@@ -264,6 +267,7 @@ module.exports = class Maze {
   resetButtonClick_ = () => {
     var stepButton = document.getElementById('stepButton');
     stepButton.removeAttribute('disabled');
+    stepButton.classList.remove('Mui-disabled');
   };
 
   /**
@@ -710,6 +714,7 @@ module.exports = class Maze {
       var finishButton = document.getElementById('finishButton');
       if (finishButton) {
         finishButton.removeAttribute('disabled');
+        finishButton.classList.remove('Mui-disabled');
       }
       var finishIcon = document.getElementById('finish');
       if (finishIcon) {
@@ -770,6 +775,7 @@ module.exports = class Maze {
     timeoutList.setTimeout(() => {
       if (stepsRemaining) {
         stepButton.removeAttribute('disabled');
+        stepButton.classList.remove('Mui-disabled');
       } else {
         this.animating_ = false;
         // If stepping and we failed, we want to retain highlighting until
