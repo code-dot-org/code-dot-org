@@ -9,7 +9,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import AssetThumbnail from './AssetThumbnail';
@@ -180,8 +179,9 @@ export default class AssetRow extends React.Component {
       case 'deleting':
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
-            <i
-              className="fa-solid fa-spinner fa-spin"
+            <FontAwesomeV6Icon
+              iconName="spinner"
+              animationType="spin"
               style={{
                 fontSize: '32px',
                 marginRight: '15px',
@@ -227,6 +227,6 @@ const styles = {
   confirmDeleteWarning: {
     marginTop: 8,
     textAlign: 'right',
-    color: color.red,
+    color: 'var(--text-error-primary)',
   },
 };
