@@ -8,10 +8,10 @@ Feature: App Lab Scenarios 3
   Scenario: App Lab absolute image URL
     # Create an app with an absolute image URL.
     When I ensure droplet is in text mode
-    And I append text to droplet "image('test123', 'https://example.com')"
+    And I append text to droplet "image('test123', 'https://example.com/image.png')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://example.com"
+    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://example.com/image.png"
 
   Scenario: App Lab Clear Puzzle and Design Mode
     # Create an app with a design mode button, then clear the puzzle.
