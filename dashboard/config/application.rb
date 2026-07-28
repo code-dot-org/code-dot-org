@@ -57,6 +57,16 @@ module Dashboard
       end
     end
 
+    # Transitional: safely narrow the `_learn_session` cookie from domain-wide
+    # (`domain: :all`, `.code.org`) to host-only (`domain: nil`, `studio.code.org`).
+    # Runs outermost so its HTTP_COOKIE rewrite is seen by every downstream reader -- the HTTP cache
+    # key, the /v3 Sinatra project endpoints, and the Rails session middleware.
+    # Remove once domain-wide cookies have aged out (one session TTL after
+    # deploy).
+    require 'cdo/rack/session_cookie_scope_migration'
+    config.middleware.insert_before 0, Rack::SessionCookieScopeMigration,
+      cookie_name: CDO.session_cookie_name
+
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
       require 'cdo/rack/cookie_dcdo'

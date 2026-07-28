@@ -303,6 +303,16 @@ module Cdo
       rack_env&.to_sym == env.to_sym
     end
 
+    SESSION_COOKIE_BASE_NAME = '_learn_session'.freeze
+
+    # Rails session cookie name. The name is environment-suffixed except production (`_learn_session` in prod).
+    #
+    # +env+ is a parameter, defaulting to the running rack env, so callers that
+    # render config for a specific environment rather than the running one.
+    def session_cookie_name(env = rack_env)
+      env.to_s == 'production' ? SESSION_COOKIE_BASE_NAME : "#{SESSION_COOKIE_BASE_NAME}_#{env}"
+    end
+
     # Identify whether we are executing on the managed test system (test-studio.code.org)
     # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
