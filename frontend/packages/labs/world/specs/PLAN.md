@@ -156,7 +156,7 @@ Compile → lab (`FromCompileMessage`):
 
 | kind              | payload                                 | meaning                                                                                                                          |
 | ----------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `'ready'`         | —                                       | esbuild initialized; handshake                                                                                                   |
+| `'ready'`         | —                                       | surface up (SW registered); handshake. esbuild init warms in the background, off the critical path, so a cache hit need not wait |
 | `'compiled'`      | `id`, `moduleUrl`, `changed?: string[]` | bundle ready at `moduleUrl` (served by the transport, §7); `changed` lists changed modules for the preview's hot-reload decision |
 | `'compile_error'` | `id`, `message`, `location?`            | a bundling/parse error, located to a file/line                                                                                   |
 
@@ -287,9 +287,11 @@ files in the map; `.json` as JSON; `.png` as an asset URL the engine hands to
 Phaser's loader; `.ts` transpiled; `world-lab` and `phaser` marked **external**.
 Compile errors surface with file/line as `compile_error`. The compiler never
 executes the result — it only writes it out. esbuild is initialized with
-`worker: false` so it runs on the (idle, hidden) compile surface's main thread
-rather than spawning a blob-URL Web Worker that the tight CSP would block
-(milestone-0 finding, §15).
+`worker: true` (a Web Worker): the Go→wasm runtime's many hand-offs per build hit
+the main thread's ~4 ms nested-timer clamp and its `Atomics.wait` ban, measuring
+~10 s per build in a real browser versus ~200 ms in a worker. This costs
+`worker-src blob:` in the compile CSP (§8); a host that cannot grant it forces the
+main-thread path with `esbuildWorker=0`. See `SANDBOX.md` for the full rationale.
 
 Verified in milestone-0 Spike B: a warm `esbuild.context()` over the
 `PreviewFiles` map bundles multi-file TS + JSON + external `world-lab` with cold
@@ -320,6 +322,27 @@ confirmed a same-origin compiled module imports and runs under `script-src
 'self'`, while a blob import is refused there — so this transport is what keeps
 the preview CSP tight.
 
+**Persistent compile cache (instant refresh).** The warm `esbuild.context()`
+lives in the compile surface's memory, so a page reload loses it — yet a reload's
+sources are byte-identical to the last, and esbuild is deterministic, so
+recompiling only reproduces bytes we already had. So the compile surface
+**content-addresses** each bundle: a SHA-256 over the exact inputs (the
+post-generation file map, the entry, and a salt of the esbuild version + asset
+base) names the module `/__world_build__/<hash>.mjs`. Before compiling it checks
+`CacheStorage` on the sandbox origin; on a **hit** it returns that URL without
+running esbuild at all, and the transport SW serves the persisted bundle (its
+`fetch` falls back from the in-memory map to `CacheStorage`, so a bundle survives
+both the reload and the worker being evicted). A **miss** compiles, persists the
+output (FIFO-capped), and warms the in-memory map. Two tiers, two jobs: this
+persistent tier covers the **unchanged** case (refresh / reopen); the warm
+context covers **edits**. The key folds in the toolchain (esbuild version +
+asset base), so a version or deploy bump misses rather than serving stale output
+— safe precisely because esbuild is deterministic. To keep hits off the
+wasm-init critical path, esbuild init no longer gates the surface's `ready`; a
+miss's compile awaits it internally, and concurrent identical requests share one
+build. Measured: an unchanged reload's compile step drops from ~0.8 s to ~0.14 s
+(esbuild skipped). See `runtime/compile/buildCache.ts`.
+
 Simpler fallback: **`BroadcastChannel` + blob module.** The compiler posts the
 bundle text on a named same-origin channel; the preview wraps it in a `blob:`
 URL and imports it. No SW, but CSP must allow `script-src blob:` and stack
@@ -337,8 +360,9 @@ learner code:
 
 - `script-src 'self' 'wasm-unsafe-eval'`
 - `connect-src 'self'` (for esbuild's own `esbuild.wasm` fetch), `default-src
-'self'`, no `blob:`, no `img-src` needs. esbuild is initialized with
-  `worker: false` so no `worker-src blob:` is needed.
+'self'`, `worker-src blob:` — esbuild runs in a Web Worker it spawns from a
+  `blob:` URL (§7), which runs no learner code. `SANDBOX.md` carries the full
+  policy and the invariant that keeps `worker-src blob:` safe here.
 
 `'wasm-unsafe-eval'` is the narrow CSP Level 3 keyword that permits
 `WebAssembly.instantiate`/`compile` from bytes while still forbidding JS
@@ -589,12 +613,16 @@ Unit first, then browser:
 - **`'wasm-unsafe-eval'` support.** Recent CSP keyword; engines predating it
   fall back to `'unsafe-eval'`. Verified working on chromium-1228; the older
   browser matrix is still unchecked.
-- **esbuild-wasm size + boot + init options.** RESOLVED enough to proceed:
-  self-hosted, `initialize` ~4 ms and warm incremental rebuild ~10 ms in Node
-  (Spike B). Two required init details (Spike C): `worker: false` (else it
-  needs `worker-src blob:`) and the compile surface's `connect-src 'self'` (for
-  the wasm fetch). Browser boot time on a cold load still to be measured under
-  the real self-hosting path.
+- **esbuild-wasm size + boot + init options.** RESOLVED: self-hosted,
+  `initialize` ~4 ms and warm incremental rebuild ~10 ms in Node (Spike B); the
+  compile surface's `connect-src 'self'` (for the wasm fetch) confirmed (Spike
+  C). Browser boot was later measured under the real self-hosting path and
+  overturned Spike C's `worker: false`: on a Window's main thread the Go→wasm
+  hand-offs made a trivial build take ~10 s in a real browser (vs ~200 ms in a
+  Worker), so the default is now `worker: true` at the cost of `worker-src blob:`
+  on the compile surface (§7, §8), with `esbuildWorker=0` as the main-thread
+  escape hatch. A persistent, content-addressed compile cache (§7) then takes an
+  unchanged refresh's compile off the critical path entirely (~0.8 s → ~0.14 s).
 - **Compile→preview transport.** RESOLVED (milestone 2, `spikes/milestone-2/`):
   the live round-trip works across two real origins under the production CSPs —
   the compile surface bundles and stores the module in the SW, and the preview
