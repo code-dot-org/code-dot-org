@@ -93,6 +93,24 @@ learner nothing. A host that cannot allow `blob:` here can force the main-thread
 path with `esbuildWorker=0` (see `ESBUILD_WORKER_PARAM`), accepting the
 slowdown; `worker-src` then drops from this policy.
 
+**Invariant — `worker-src blob:` is safe only while no learner code runs on
+this surface.** `blob:` in `worker-src` is a scoped code-from-a-string
+capability: `new Worker(URL.createObjectURL(new Blob([str])))` executes an
+arbitrary string, though only on a Worker thread, never the main thread (that is
+why the grant is in `worker-src`, not `script-src`/`default-src` — blob code
+stays out of the main script context). It is confined further by the rest of
+this policy: a blob worker inherits the surface's CSP, so `default-src`/
+`connect-src 'self'` still forbid it from loading remote scripts or reaching any
+cross-origin destination, and the surface is sessionless and cross-origin, so
+there is nothing here to steal. Today the only code that spawns the worker is
+our vendored esbuild, from esbuild's own shipped script — not learner input — so
+the capability grants an attacker nothing. This safety is _coupled to the "no
+learner-derived code runs on the compile surface" invariant_: if a future change
+ever routed learner-controlled data into code that executes here, the path
+`learner string → blob worker → execution` would become real and `worker-src
+blob:` would have to be re-examined (or the worker self-hosted so the grant can
+narrow to `worker-src 'self'`). Preserve the invariant, and this stays inert.
+
 Because no learner-derived code runs on this surface — the compiler emits a
 module but never imports it — learner-supplied WebAssembly cannot execute here.
 
