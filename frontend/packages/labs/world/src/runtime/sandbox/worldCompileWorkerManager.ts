@@ -3,6 +3,9 @@
 // (SANDBOX.md). On a `compile` request it bundles the project, stores the bundle
 // in the transport service worker, and reports the URL the preview can import.
 
+import {version as esbuildVersion} from 'esbuild-wasm';
+
+import {buildCacheKey, openBuildCache} from '../compile/buildCache';
 import {CompileError, WorldCompiler} from '../compile/esbuildCompiler';
 import {
   ASSET_BASE_PARAM,
@@ -39,7 +42,19 @@ export async function start(): Promise<void> {
     assetBase,
     esbuildWorker,
   });
-  await compiler.init();
+  // Warm esbuild in the background, but do NOT gate READY on it: a cache HIT
+  // needs no bundler, so init must not sit on the critical path. A MISS's
+  // compile awaits this same in-flight init internally, so it loses nothing.
+  void compiler.init();
+  // Everything outside the sources that changes esbuild's output, folded into
+  // the content key: the bundler version and the asset base (baked into the
+  // emitted `world-lab` / `phaser` import URLs).
+  const cacheSalt = `${esbuildVersion}|${assetBase}`;
+  const cache = await openBuildCache();
+  // Compiles in flight, keyed by content path, so two requests for the same
+  // bundle (the parent can fire the initial compile twice) share one esbuild run
+  // instead of racing — both would otherwise see `has() === false` and rebuild.
+  const inFlight = new Map<string, Promise<void>>();
   post({type: FromCompileMessage.READY});
 
   window.addEventListener('message', event => {
@@ -56,9 +71,25 @@ export async function start(): Promise<void> {
 
   async function handleCompile({id, files, entry}: CompileRequest) {
     try {
-      const code = await compiler.compile(files, entry);
-      const path = `${BUILD_PATH_PREFIX}${id}.mjs`;
-      await storeModule(worker, path, code);
+      // Content-address the bundle. On a HIT (e.g. an unchanged refresh) the
+      // service worker already holds it in CacheStorage, so we skip esbuild
+      // entirely; on a MISS we compile, persist it, and warm the in-memory tier
+      // for the rest of this session. `id` still correlates the response.
+      const key = await buildCacheKey(files, entry, cacheSalt);
+      const path = `${BUILD_PATH_PREFIX}${key}.mjs`;
+      if (!(await cache.has(path))) {
+        let build = inFlight.get(path);
+        if (!build) {
+          build = (async () => {
+            const code = await compiler.compile(files, entry);
+            await cache.put(path, code);
+            await storeModule(worker, path, code);
+          })();
+          inFlight.set(path, build);
+          void build.finally(() => inFlight.delete(path));
+        }
+        await build;
+      }
       post({
         type: FromCompileMessage.COMPILED,
         id,
