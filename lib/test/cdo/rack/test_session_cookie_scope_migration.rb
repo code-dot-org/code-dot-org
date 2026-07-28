@@ -2,26 +2,44 @@ require_relative '../../test_helper'
 require 'rack/utils'
 require 'cdo/rack/session_cookie_scope_migration'
 
-# Exercises the transitional middleware that narrows the `_learn_session`
-# cookie from domain-wide to host-only. The failure it guards against is a
-# same-name duplicate cookie collision, which is easiest to reproduce by
-# forging the raw Cookie header rather than driving a browser.
+# Exercises the transitional middleware that rolls the `_learn_session` cookie
+# between domain-wide and host-only scope. The failure it guards against is a
+# same-name duplicate cookie collision, easiest to reproduce by forging the raw
+# Cookie header rather than driving a browser.
+#
+# `session_domain` mirrors the live session_store `:domain` option and drives
+# which scope the middleware treats as stale. Default `nil` (host-only-writing
+# config) is the forward migration, where the wildcard cookie is stale; the
+# `:all` block below covers the rollback / current situation, where the
+# host-only cookie is the stale one.
 describe Rack::SessionCookieScopeMigration do
   COOKIE = '_learn_session'.freeze
   STUDIO_HOST = 'studio.code.org'.freeze
 
+  # The session_store's live :domain option: nil (host-only) or :all (wildcard).
+  let(:session_domain) {nil}
+  # The Domain the stub session store writes its cookie under -- host-only (nil)
+  # when session_domain is nil, `.code.org` when :all. Mirrors the real store.
+  let(:store_cookie_domain) {session_domain == :all ? '.code.org' : nil}
+
   # App under the middleware. Echoes the session id the downstream stack would
-  # read, and -- like the real session store -- writes the cookie back
-  # host-only (no domain attribute) when a session is present.
+  # read, and -- like the real session store -- writes the cookie back under the
+  # configured scope when a session is present.
   let(:app) do
     lambda do |env|
       read = Rack::Request.new(env).cookies[COOKIE]
       headers = {}
-      headers['Set-Cookie'] = "#{COOKIE}=#{read}; path=/; HttpOnly" if read
+      if read
+        cookie = "#{COOKIE}=#{read}; path=/; HttpOnly"
+        cookie += "; domain=#{store_cookie_domain}" if store_cookie_domain
+        headers['Set-Cookie'] = cookie
+      end
       [200, headers, [read.to_s]]
     end
   end
-  let(:middleware) {Rack::SessionCookieScopeMigration.new(app, cookie_name: COOKIE)}
+  let(:middleware) do
+    Rack::SessionCookieScopeMigration.new(app, cookie_name: COOKIE, session_domain: -> {session_domain})
+  end
 
   # Drive one request. Returns [status, headers, body, env] so tests can assert
   # both the rewritten request env and the response headers.
@@ -87,6 +105,36 @@ describe Rack::SessionCookieScopeMigration do
       fresh = set_cookies(headers).find {|c| c.start_with?("#{COOKIE}=FRESH")}
       _(fresh).wont_be_nil
       _(fresh).wont_include 'domain='
+    end
+  end
+
+  # The current situation: after a brief `domain: nil` deploy the config was
+  # rolled back to `domain: :all`. For users who first appeared during that
+  # window the roles invert -- the host-only cookie is the stale one, the
+  # wildcard cookie the config now writes is fresh -- so the stale cookie to
+  # expire is the host-only one, NOT the wildcard.
+  describe 'rollback: config writes the wildcard (domain: :all)' do
+    let(:session_domain) {:all}
+    let(:header) {"#{COOKIE}=STALE; #{COOKIE}=FRESH"}
+
+    it 'still keeps the last (newest) cookie on read' do
+      _, _, body, = call(header)
+      _(body.first).must_equal 'FRESH'
+    end
+
+    it 'expires the stale HOST-ONLY cookie (no Domain), not the wildcard' do
+      _, headers, = call(header)
+      deletion = deletions(headers).first
+      _(deletion).wont_be_nil
+      _(deletion).must_match(/\A#{COOKIE}=;/o)
+      _(deletion).wont_include 'domain=' # host-only expiry -- must never name .code.org
+    end
+
+    it 'does not clobber the wildcard cookie the session store just wrote' do
+      _, headers, = call(header)
+      store_write = set_cookies(headers).find {|c| c.start_with?("#{COOKIE}=FRESH")}
+      _(store_write).wont_be_nil
+      _(store_write).must_include 'domain=.code.org'
     end
   end
 

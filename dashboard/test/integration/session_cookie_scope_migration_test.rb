@@ -1,20 +1,19 @@
 require 'test_helper'
 
 # Integration coverage for Rack::SessionCookieScopeMigration through the full
-# dashboard middleware stack, focused on the rollout's transition window.
+# dashboard middleware stack, exercising the CURRENT situation: the session
+# cookie config is `domain: :all` (the test env's setting). After a brief
+# `domain: nil` deploy, users who first appeared in that window hold a stale
+# host-only cookie plus the fresh wildcard cookie the current config writes, so
+# the browser sends BOTH under the same name in one request:
 #
-# The migration ships in two deploys: first this middleware (while the session
-# cookie is still `domain: :all`, so it lies dormant -- no duplicates exist
-# yet), then the flip to host-only. Once flipped, a browser that already held
-# the legacy domain-wide (.code.org) cookie also receives the new host-only
-# cookie, so it sends BOTH under the same name in one request:
-#
-#     Cookie: _learn_session_test=<stale>; _learn_session_test=<fresh>
+#     Cookie: _learn_session_test=<stale host-only>; _learn_session_test=<fresh wildcard>
 #
 # Browsers order equal-path cookies oldest-first (RFC 6265 5.4) and Rack's
 # parser is first-wins, so plain parsing reads the STALE cookie -- logging the
 # user out and breaking CSRF. The middleware must instead read the fresh (last)
-# cookie and expire the legacy copy.
+# cookie and expire the stale one -- here the host-only cookie, since `:all`
+# writes the wildcard.
 #
 # A real browser holding two same-name cookies cannot be reproduced through the
 # single-valued integration cookie jar, so we forge the duplicate header
@@ -37,22 +36,15 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
     fresh
   end
 
-  # The legacy Domain the middleware derives for the current host: the
-  # registrable domain with a leading dot, matching what `domain: :all` set.
-  def legacy_domain
-    labels = host.split(':').first.split('.')
-    ".#{labels.last(2).join('.')}"
-  end
-
   def with_duplicate_cookies(first, last)
     get '/home', headers: {'HTTP_COOKIE' => "#{KEY}=#{first}; #{KEY}=#{last}"}
   end
 
-  test 'stale wildcard cookie first, fresh cookie last: server reads the fresh session' do
+  test 'stale cookie first, fresh cookie last: server reads the fresh session' do
     user = create(:teacher)
     fresh = sign_in_for_real(user)
 
-    # Stale (older, wildcard) cookie leads, as browsers order them. First-wins
+    # Stale (older, host-only) cookie leads, as browsers order them. First-wins
     # parsing would read it and log the user out; keep-LAST reads `fresh`.
     with_duplicate_cookies('stale-nonsense', fresh)
 
@@ -75,17 +67,19 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
     assert_nil signed_in_user_id, 'middleware should resolve the last (stale) cookie, so no user'
   end
 
-  test 'duplicate session cookies emit a deletion for the legacy wildcard cookie' do
+  test 'duplicate cookies under domain: :all expire the stale host-only cookie, not the wildcard' do
     user = create(:teacher)
     fresh = sign_in_for_real(user)
 
     with_duplicate_cookies('stale-nonsense', fresh)
 
     set_cookies = Array(response.headers['Set-Cookie']).flat_map {|h| h.split("\n")}
-    deletion = set_cookies.find {|c| c.start_with?("#{KEY}=;")}
-    assert deletion, "expected a deletion Set-Cookie for #{KEY}; got: #{set_cookies.inspect}"
-    assert_includes deletion, "domain=#{legacy_domain}"
-    assert_includes deletion, 'max-age=0'
+    deletion = set_cookies.find {|c| c.start_with?("#{KEY}=;") && c.include?('max-age=0')}
+    assert deletion, "expected a host-only deletion for #{KEY}; got: #{set_cookies.inspect}"
+    # Under `:all` the current config writes the wildcard cookie, so the stale
+    # duplicate is host-only: the deletion must carry NO Domain. A `domain=`
+    # here would delete the good wildcard cookie the user just got.
+    refute_includes deletion, 'domain='
   end
 
   test 'a single (not-yet-migrated) session cookie is left untouched' do

@@ -1,65 +1,61 @@
+require 'time'
 require 'rack/request'
 require 'rack/utils'
 
 module Rack
-  # Transitional middleware to safely narrow the Rails session cookie
-  # (`_learn_session`) from a domain-wide scope down to host-only.
+  # Transitional middleware for narrowing/rolling the Rails session cookie
+  # (`_learn_session`) between a domain-wide scope (`Domain=.code.org`, from
+  # `domain: :all`) and host-only (`studio.code.org`, from `domain: nil`).
   #
-  # Background: the session_store originally sets `domain: :all`, which scopes the
-  # cookie to the registrable domain (`Domain=.code.org`). We want to set the cookie
-  # host-only (`studio.code.org`).
-  #
-  # Re-scoping a cookie is not an in-place operation. Dropping `domain: :all`
-  # sets a new host-only cookie but leaves the old domain-wide cookie in place,
-  # so the browser then sends BOTH — same name, no domain attribute — in one
-  # request header:
+  # Re-scoping a cookie is not an in-place operation: changing the config sets a
+  # new cookie under the new scope but leaves the old cookie in place, so the
+  # browser then sends BOTH -- same name, no domain attribute -- in one header:
   #
   #     Cookie: _learn_session=OLD; _learn_session=NEW
   #
-  # Two facts make that fatal without intervention:
+  # Browsers order equal-path cookies oldest-first (RFC 6265 5.4) and Rack's
+  # parser is first-wins (`Rack::Utils.parse_cookies_header`), so plain reads
+  # resolve the OLDER cookie. Once a sign-in rotates the session id (Devise
+  # `reset_session`), OLD and NEW diverge and the server reads a stale session
+  # -> failed sign-ins and `ActionController::InvalidAuthenticityToken` (CSRF).
   #
-  #   * Browsers order equal-path cookies oldest-first (RFC 6265 5.4), so the
-  #     stale domain-wide cookie leads.
-  #   * Rack's cookie parser keeps the FIRST occurrence of a name and discards
-  #     the rest (`Rack::Utils.parse_cookies_header`).
+  # The single invariant that holds in BOTH directions: the newest cookie is the
+  # one the current config just wrote, i.e. the real one; the older,
+  # other-scoped cookie is the stale leftover. So:
   #
-  # So the server reads the stale domain-wide cookie. Because sign-in rotates
-  # the session id (Devise `reset_session`), OLD and NEW diverge and every
-  # reader resolves the stale session -> failed sign-ins and
-  # `ActionController::InvalidAuthenticityToken` (CSRF) errors. This is the
-  # regression that reverted #71051.
+  #   1. Read side (`dedupe_session_cookie`): keep the LAST occurrence -- the
+  #      newest, and therefore the cookie the current config wrote -- so both
+  #      readers (the Rails session middleware and
+  #      `Cdo::RequestExtension#user_id_from_session_store`, feeding the /v3
+  #      endpoints) resolve the correct session. This is direction-agnostic.
   #
-  # This middleware does two things per request:
+  #   2. Write side (`expire_stale_duplicate`): expire the OTHER-scoped, stale
+  #      cookie -- the scope the current config does NOT write:
+  #        * config writes wildcard (domain: :all) -> stale is host-only
+  #        * config writes host-only (domain: nil) -> stale is wildcard
+  #      Getting this direction wrong deletes the good cookie, so the scope is
+  #      taken from the live session_store config, not guessed.
   #
-  #   1. Read side (`dedupe_session_cookie`): when more than one session cookie
-  #      is present, rewrite HTTP_COOKIE to keep only the LAST occurrence. The
-  #      session store always writes the cookie host-only now, so the host-only
-  #      cookie is the most-recently-created and therefore the last one the
-  #      browser sends. Both readers of this cookie -- the Rails session
-  #      middleware and `Cdo::RequestExtension#user_id_from_session_store`, the
-  #      latter feeding the /v3 project endpoints via `current_user_id` -- read
-  #      through the rewritten header and resolve the correct session.
-  #
-  #   2. Write side (`delete_legacy_cookie`): duplicates prove a domain-wide
-  #      cookie still exists, so emit a deletion `Set-Cookie` for the legacy
-  #      domain. The stale cookie is removed and stops leaking. Self-limiting:
-  #      once it is gone there are no more duplicates and no more deletions.
-  #
-  # This is belt-and-suspenders. The read-side rewrite keeps every request
-  # correct even before the stale cookie is deleted; the write-side deletion
-  # performs the actual security cleanup. Remove this middleware once
-  # domain-wide cookies have aged out (one CDO.dashboard_session_ttl_days
-  # window after deploy).
+  # The read-side keep-LAST makes every request correct even before the stale
+  # cookie is expired; the write-side expiry is cleanup. Self-limiting: once the
+  # stale cookie is gone there are no duplicates and nothing fires. Remove this
+  # middleware once superseded cookies have aged out (one
+  # CDO.dashboard_session_ttl_days window after the last scope change).
   class SessionCookieScopeMigration
     # Set on the Rack env when the request carried duplicate session cookies,
-    # signalling the response phase to emit the legacy-cookie deletion.
+    # signalling the response phase to expire the stale one.
     DUPLICATES_ENV_KEY = 'cdo.session_cookie.duplicates_removed'.freeze
 
-    # @param cookie_name [String] the resolved session cookie key for this
+    # @param cookie_name [String] resolved session cookie key for this
     #   environment, i.e. `CDO.session_cookie_name`.
-    def initialize(app, cookie_name:)
+    # @param session_domain [#call] callable returning the session_store's live
+    #   `:domain` option (`:all` or `nil`). A callable, not a value, because the
+    #   session_store initializer runs after this middleware is wired, and the
+    #   option can change across deploys.
+    def initialize(app, cookie_name:, session_domain:)
       @app = app
       @cookie_name = cookie_name
+      @session_domain = session_domain
     end
 
     def call(env)
@@ -67,22 +63,20 @@ module Rack
 
       status, headers, body = @app.call(env)
 
-      if env[DUPLICATES_ENV_KEY] && (domain = legacy_cookie_domain(env))
-        delete_legacy_cookie(headers, domain)
-      end
+      expire_stale_duplicate(env, headers) if env[DUPLICATES_ENV_KEY]
 
       [status, headers, body]
     end
 
     # Collapse the session cookie to a single value in HTTP_COOKIE, keeping only
-    # its last occurrence. Flags the env when duplicates were found so the
-    # response phase can clean up the stale domain-wide cookie.
+    # its last (newest) occurrence. Flags the env when duplicates were found so
+    # the response phase can expire the stale one.
     #
     # We parse the raw header by hand rather than via
     # `Rack::Utils.parse_cookies_header` on purpose: that helper returns a Hash
-    # and is FIRST-wins, so it would silently discard the host-only cookie and
-    # hand us the stale domain-wide one -- exactly the collision we are here to
-    # fix. Working on the raw pairs is the only way to see the duplicates.
+    # and is FIRST-wins, so it would silently discard the newest cookie and hand
+    # us the stale one -- exactly the collision we are here to fix. Working on
+    # the raw pairs is the only way to see the duplicates.
     private def dedupe_session_cookie(env)
       header = env['HTTP_COOKIE']
       return if header.nil? || header.empty?
@@ -91,9 +85,9 @@ module Rack
       session, others = pairs.partition {|pair| session_cookie?(pair)}
       return if session.size < 2
 
-      # The session store always writes the cookie host-only now, so the last
-      # occurrence is the newest and the one to keep. Non-session cookies --
-      # including any legitimately duplicated ones -- keep their relative order.
+      # Keep the last (newest) session cookie -- the one the current config
+      # wrote. Non-session cookies -- including any legitimately duplicated
+      # ones -- keep their relative order.
       env['HTTP_COOKIE'] = (others << session.last).join('; ')
       env[DUPLICATES_ENV_KEY] = true
     end
@@ -102,10 +96,51 @@ module Rack
       pair.split('=', 2).first == @cookie_name
     end
 
-    # The domain the `domain: :all` option scoped the session cookie to
-    # for this host. A verbatim copy of the logic in (actionpack 7.0,
-    # action_dispatch/middleware/cookies.rb) for the no-`:tld_length` case our
-    # session_store uses.
+    # Expire the stale duplicate: the cookie scoped OPPOSITE to what the current
+    # config writes. Reading the direction from the live config -- rather than
+    # assuming one -- is what keeps a rollback (`:all` after a stint of `nil`)
+    # from deleting the good cookie.
+    private def expire_stale_duplicate(env, headers)
+      if wildcard_domain_config?
+        expire_host_only_cookie(headers)
+      else
+        expire_wildcard_cookie(env, headers)
+      end
+    end
+
+    private def wildcard_domain_config?
+      [:all, 'all'].include?(@session_domain.call)
+    end
+
+    # Config writes the wildcard cookie, so the stale duplicate is host-only.
+    # APPEND a host-only (no-Domain) expiry rather than using
+    # `delete_cookie_header!`: that helper rejects any prior same-name+path
+    # Set-Cookie, which would strip the session store's concurrent wildcard
+    # write from this very response. A plain append leaves that write intact --
+    # the browser applies both because (name, domain) differ.
+    private def expire_host_only_cookie(headers)
+      headers['Set-Cookie'] = Rack::Utils.add_cookie_to_header(
+        headers['Set-Cookie'], @cookie_name,
+        value: '', path: '/', max_age: '0', expires: Time.at(0)
+      )
+    end
+
+    # Config writes the host-only cookie, so the stale duplicate is the
+    # wildcard. `delete_cookie_header!` with both :domain and :path narrows its
+    # rejection regexp to a prior Set-Cookie bearing that exact domain+path --
+    # never the store's host-only write, which carries no domain attribute.
+    private def expire_wildcard_cookie(env, headers)
+      domain = legacy_cookie_domain(env)
+      return unless domain
+
+      Rack::Utils.delete_cookie_header!(headers, @cookie_name, domain: domain, path: '/')
+    end
+
+    # The domain `domain: :all` would scope the session cookie to for this host.
+    # A verbatim port of the `:all` branch in ActionDispatch::Cookies#handle_options
+    # (actionpack 7.0, action_dispatch/middleware/cookies.rb) for the
+    # no-`:tld_length` case our session_store uses. Returns nil for hosts that
+    # never carried a domain-wide cookie (IPs, malformed, single-label).
     private def legacy_cookie_domain(env)
       host = Rack::Request.new(env).host.to_s # strips port and IPv6 brackets
       labels = host.split('.', -1)
@@ -115,15 +150,6 @@ module Rack
       # keep two -- the registrable domain -- with a leading dot.
       registrable = /\.[^.]{2,3}\.[^.]{2}\z/.match?(host) ? labels.last(3) : labels.last(2)
       ".#{registrable.join('.')}"
-    end
-
-    # Append a deletion `Set-Cookie` for the legacy domain-wide cookie. Passing
-    # both :domain and :path narrows Rack's rejection regexp so it removes only
-    # a prior Set-Cookie bearing that exact domain and path -- never the
-    # host-only cookie the session store just wrote (which carries no domain
-    # attribute). See Rack::Utils.make_delete_cookie_header.
-    private def delete_legacy_cookie(headers, domain)
-      Rack::Utils.delete_cookie_header!(headers, @cookie_name, domain: domain, path: '/')
     end
   end
 end

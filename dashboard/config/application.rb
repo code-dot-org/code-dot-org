@@ -65,7 +65,11 @@ module Dashboard
     # deploy).
     require 'cdo/rack/session_cookie_scope_migration'
     config.middleware.insert_before 0, Rack::SessionCookieScopeMigration,
-      cookie_name: CDO.session_cookie_name
+      cookie_name: CDO.session_cookie_name,
+      # Callable: the session_store initializer runs after this line, so the
+      # :domain option is not yet set here. Read it live at request time so the
+      # stale-cookie expiry always points opposite the current config.
+      session_domain: -> {Dashboard::Application.config.session_options[:domain]}
 
     if CDO.use_cookie_dcdo
       # Enables the setting of DCDO via cookies for testing purposes.
