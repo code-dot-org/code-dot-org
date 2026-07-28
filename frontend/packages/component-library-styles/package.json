@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "release": "release-it --preRelease=alpha",
-    "test": "node scripts/generateBrandCodeAiNext.mjs --check"
+    "test": "node scripts/generateBrandCodeAiNext.mjs --check && node scripts/checkTokenGraph.mjs"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {

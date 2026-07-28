@@ -22,14 +22,23 @@
  * acceptable for a pre-cutover shim (dark mode ships with the CADS
  * schema, not the legacy one).
  *
- * Under [data-brand='codeai-next'] every one of these names is
- * re-declared at higher specificity by brandCodeAiNext.css, so this file
- * is inert there. Delete this file at brand cutover cleanup.
+ * Under [data-brand='codeai-next'] brandCodeAiNext.css re-declares these
+ * names at higher specificity, so this file is inert there — but only on
+ * the elements that file's selectors reach. It has to reach every element
+ * this one does. Where only this file matches, that element reads a
+ * legacy value while the rest of the page reads a CodeAI one; and if
+ * brandCodeAiNextAliases.css happens to define the same pair of names
+ * back the other way on that element, the two definitions are circular
+ * and CSS turns both names off, along with everything downstream. Both
+ * have happened. scripts/checkTokenGraph.mjs now fails the build on
+ * either. Delete this file at brand cutover cleanup.
  *
  * The [data-theme] selectors exist because custom properties substitute
  * their var() chains on the declaring element and inherit as resolved
  * values: without re-declaration on theme-carrying elements, a dark
- * subtree would inherit light-resolved values from <html>.
+ * subtree would inherit light-resolved values from <html>. That applies
+ * to rows whose value varies by theme; the primitives at the bottom do
+ * not vary, and are here only so the names resolve at all.
  */
 
 :root,
