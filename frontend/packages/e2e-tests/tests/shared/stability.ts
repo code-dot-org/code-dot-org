@@ -43,3 +43,28 @@ export async function waitForVisualStability(
     await waitUntilStable(locator);
   }
 }
+
+/**
+ * Wait for embedded read-only Blockly workspaces in markdown instructions
+ * (see convertXmlToBlockly() in apps/src/templates/instructions/utils.js) to
+ * render and settle. Their creation is gated on a real
+ * GET /user_preference/theme round-trip and is never awaited by its caller,
+ * so a container can sit at 0x0 well past document.fonts.ready; FieldImage
+ * blocks inside (e.g. K1 harvester blocks) can also resize once their icon
+ * loads. No-op if the level's instructions have no embedded blocks.
+ */
+export async function waitForEmbeddedBlocklyStable(page: Page): Promise<void> {
+  const containers = page.locator('.readonly-block-space-container');
+  const count = await containers.count();
+  for (let i = 0; i < count; i++) {
+    const container = containers.nth(i);
+    await expect(async () => {
+      const box = await container.boundingBox();
+      expect(
+        box?.width,
+        'embedded Blockly workspace has not rendered yet',
+      ).toBeGreaterThan(0);
+    }).toPass({intervals: [120], timeout: 15_000});
+    await waitUntilStable(container);
+  }
+}
