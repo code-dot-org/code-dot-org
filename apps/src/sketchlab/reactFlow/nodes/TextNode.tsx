@@ -4,6 +4,7 @@ import React, {memo, useMemo} from 'react';
 
 import {
   DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
   MIN_NODE_WIDTH,
   MIN_TEXT_NODE_HEIGHT,
 } from '../constants';
@@ -23,9 +24,6 @@ import ConnectionHandles from './ConnectionHandles';
 import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './text-node.module.scss';
-
-// Matches SHAPE_BORDER_PX so text-box and shape borders look the same.
-const TEXT_BORDER_PX = 2;
 
 function TextNode({
   id,
@@ -66,7 +64,7 @@ function TextNode({
     // stylesheet's transparent border (and its hover highlight) stays active.
     if (strokeColor !== 'transparent') {
       style.borderColor = strokeColor;
-      style.borderWidth = TEXT_BORDER_PX;
+      style.borderWidth = ELEMENT_BORDER_PX;
     }
     return style;
   }, [rotation, strokeColor]);

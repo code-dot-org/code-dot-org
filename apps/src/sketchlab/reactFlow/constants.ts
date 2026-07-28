@@ -11,6 +11,8 @@ export const MIN_NODE_HEIGHT = 60;
 // Text boxes can shrink to their single-line starting height.
 export const MIN_TEXT_NODE_HEIGHT = DEFAULT_TEXT_NODE_HEIGHT;
 
+export const ELEMENT_BORDER_PX = 2;
+
 // Default rotation in degrees.
 export const DEFAULT_ROTATION = 0;
 
