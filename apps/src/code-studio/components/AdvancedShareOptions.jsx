@@ -1,5 +1,8 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button as MuiButton} from '@mui/material';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import Link from '@code-dot-org/component-library/link';
+import Tabs from '@code-dot-org/component-library/tabs';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,7 +16,7 @@ import {CIPHER, ALPHABET} from '../../constants';
 
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 
-import styles from './advanced-share-options.module.scss';
+import moduleStyles from './advanced-share-options.module.scss';
 
 const ShareOptions = {
   EXPORT: 'export',
@@ -37,17 +40,11 @@ class AdvancedShareOptions extends React.Component {
     appType: PropTypes.string.isRequired,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedOption: props.exportApp
-        ? ShareOptions.EXPORT
-        : ShareOptions.EMBED,
-      exporting: false,
-      exportError: null,
-      embedWithoutCode: false,
-    };
-  }
+  state = {
+    exporting: false,
+    exportError: null,
+    embedWithoutCode: false,
+  };
 
   downloadExport = () => {
     analyticsReporter.sendEvent(EVENTS.EXPORT_APP, {
@@ -83,36 +80,36 @@ class AdvancedShareOptions extends React.Component {
     const {iframeWidth, iframeHeight} = this.props.embedOptions;
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
-      <div>
-        <p className={styles.paragraph}>{i18n.shareEmbedDescription()}</p>
-        <p className={classNames(styles.paragraph, styles.warningParagraph)}>
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
+          {i18n.shareEmbedDescription()}
+        </MuiTypography>
+        <MuiTypography
+          variant="body3"
+          className={classNames(
+            moduleStyles.paragraph,
+            moduleStyles.warningParagraph
+          )}
+        >
           {i18n.shareEmbedWarning()}
-        </p>
+        </MuiTypography>
         <textarea
           type="text"
           onClick={e => e.target.select()}
           readOnly={true}
           value={iframeHtml}
-          className={styles.embedInput}
+          className={moduleStyles.embedInput}
           aria-label={i18n.codeToEmbed()}
         />
-        <div>
-          <input
-            id="embedCodeCheckbox"
-            type="checkbox"
-            className={styles.embedCodeCheckbox}
-            checked={this.state.embedWithoutCode}
-            onChange={() =>
-              this.setState({embedWithoutCode: !this.state.embedWithoutCode})
-            }
-          />
-          <label
-            htmlFor="embedCodeCheckbox"
-            className={styles.embedCodeCheckboxLabel}
-          >
-            {i18n.hideAbilityToViewCode()}
-          </label>
-        </div>
+        <Checkbox
+          name="embedWithoutCode"
+          label={i18n.hideAbilityToViewCode()}
+          size="s"
+          checked={this.state.embedWithoutCode}
+          onChange={() =>
+            this.setState({embedWithoutCode: !this.state.embedWithoutCode})
+          }
+        />
       </div>
     );
   }
@@ -130,22 +127,24 @@ class AdvancedShareOptions extends React.Component {
       'https://support.code.org/hc/en-us/articles/13211665878157-Exporting-Projects-from-App-Lab';
 
     return (
-      <div>
-        <p className={styles.paragraph}>
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project. For
           instructions to run your exported project locally, see{' '}
-          <a href={exportSupportLink} target="_blank" rel="noreferrer">
-            our documentation
-          </a>
+          <Link
+            href={exportSupportLink}
+            text="our documentation"
+            external
+            size="s"
+          />
           .
-        </p>
+        </MuiTypography>
         <MuiButton
           variant="contained"
           color="secondary"
           size="medium"
           loading={this.state.exporting}
-          className={styles.exportButton}
           onClick={this.downloadExport}
           type="button"
         >
@@ -156,19 +155,16 @@ class AdvancedShareOptions extends React.Component {
     );
   }
 
-  onInputSelect = ({target}) => {
-    target.select();
-  };
-
   renderLibraryTab = () => {
     return (
-      <div>
-        <p className={styles.paragraph}>{i18n.shareLibraryWithClassmate()}</p>
+      <div className={moduleStyles.tabContent}>
+        <MuiTypography variant="body3" className={moduleStyles.paragraph}>
+          {i18n.shareLibraryWithClassmate()}
+        </MuiTypography>
         <MuiButton
           variant="contained"
           color="secondary"
           size="medium"
-          className={styles.shareLibraryButton}
           onClick={this.props.openLibraryCreationDialog}
           type="button"
         >
@@ -178,79 +174,63 @@ class AdvancedShareOptions extends React.Component {
     );
   };
 
-  renderAdvancedListItem = (option, name) => {
-    return (
-      /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
-      <li
-        className={classNames(styles.navItem, {
-          [styles.navItemSelected]: this.state.selectedOption === option,
-        })}
-        onClick={() => this.setState({selectedOption: option})}
-      >
-        {name}
-      </li>
-    );
-  };
+  buildTabs() {
+    const {exportApp, librariesEnabled} = this.props;
+    const tabs = [];
+    if (exportApp) {
+      tabs.push({
+        value: ShareOptions.EXPORT,
+        text: i18n.exportForWeb(),
+        tabContent: this.renderExportTab(),
+      });
+    }
+    tabs.push({
+      value: ShareOptions.EMBED,
+      text: i18n.embed(),
+      tabContent: this.renderEmbedTab(),
+    });
+    if (librariesEnabled) {
+      tabs.push({
+        value: ShareOptions.LIBRARY,
+        text: i18n.shareLibrary(),
+        tabContent: this.renderLibraryTab(),
+      });
+    }
+    return tabs;
+  }
 
   render() {
-    let {expanded, exportApp, onExpand, librariesEnabled} = this.props;
-    let {selectedOption} = this.state;
-    if (!selectedOption) {
-      // no options are available. Render nothing.
+    const {expanded, exportApp, onExpand} = this.props;
+    const tabs = this.buildTabs();
+    if (tabs.length === 0) {
       return null;
     }
-
-    let optionsNav, selectedTab, libraryTab;
-    if (expanded) {
-      let exportTab = null;
-      if (exportApp) {
-        exportTab = this.renderAdvancedListItem(
-          ShareOptions.EXPORT,
-          i18n.exportForWeb()
-        );
-      }
-      const embedTab = this.renderAdvancedListItem(
-        ShareOptions.EMBED,
-        i18n.embed()
-      );
-      if (librariesEnabled) {
-        libraryTab = this.renderAdvancedListItem(
-          ShareOptions.LIBRARY,
-          i18n.shareLibrary()
-        );
-      }
-      optionsNav = (
-        <div>
-          <ul className={styles.navList}>
-            {exportTab}
-            {embedTab}
-            {libraryTab}
-          </ul>
+    if (!expanded) {
+      const handleExpand = e => {
+        e.preventDefault();
+        onExpand();
+      };
+      return (
+        <div className={moduleStyles.root}>
+          <Link
+            text={i18n.advancedShare()}
+            onClick={handleExpand}
+            role="button"
+            size="s"
+          />
         </div>
       );
-      switch (selectedOption) {
-        case ShareOptions.EXPORT:
-          selectedTab = this.renderExportTab();
-          break;
-        case ShareOptions.EMBED:
-          selectedTab = this.renderEmbedTab();
-          break;
-        case ShareOptions.LIBRARY:
-          selectedTab = this.renderLibraryTab();
-          break;
-      }
     }
-    const expand =
-      expanded && selectedOption ? null : (
-        <a onClick={onExpand} className={styles.expand}>
-          {i18n.advancedShare()}
-        </a>
-      );
+    const defaultTab = exportApp ? ShareOptions.EXPORT : ShareOptions.EMBED;
     return (
-      <div className={styles.root}>
-        {expand}
-        {optionsNav}
-        {selectedTab}
+      <div className={moduleStyles.root}>
+        <Tabs
+          tabs={tabs}
+          name="advanced-share-options"
+          defaultSelectedTabValue={defaultTab}
+          onChange={() => {}}
+          size="s"
+        />
       </div>
     );
   }
