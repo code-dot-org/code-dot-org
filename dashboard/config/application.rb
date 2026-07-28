@@ -219,7 +219,8 @@ module Dashboard
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
-      size: 256.megabytes # max size of entire store
+      size: 64.megabytes, # max size of entire store (per process)
+      expires_in: 2.hours # default expiry
     }
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
