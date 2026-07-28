@@ -84,7 +84,9 @@ export const resumeLearnHowToEvaluateTour = () => {
     clearStep();
     recordLearnToEvaluateCompletion();
   });
-  tour.on('cancel', clearStep);
+  tour.on('cancel', () => {
+    clearStep();
+  });
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
   tour.show(startStep.id);

@@ -302,8 +302,7 @@ describe('SectionsSetUpContainer', () => {
       expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
     });
 
-    // TODO: times out in drone, needs investigation
-    it.skip('applies gradesTeaching when Redux is populated after initial render', async () => {
+    it('applies gradesTeaching when Redux is populated after initial render', async () => {
       // Render before gradesTeaching data has arrived (store starts empty).
       renderContainer();
       expect(screen.getByRole('checkbox', {name: '11'})).not.toBeChecked();
@@ -327,8 +326,7 @@ describe('SectionsSetUpContainer', () => {
       });
     });
 
-    // TODO: times out in drone, needs investigation
-    it.skip('does not overwrite grades the user changed before gradesTeaching arrived', async () => {
+    it('does not overwrite grades the user changed before gradesTeaching arrived', async () => {
       // Render before gradesTeaching data has arrived.
       renderContainer();
 

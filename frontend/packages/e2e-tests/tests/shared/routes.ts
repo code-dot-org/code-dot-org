@@ -7,6 +7,8 @@ export interface LabLevelUrlParams {
   noautoplay?: boolean;
   /** Show level callouts (qTip tooltips). Emitted as ?show_callouts=1. */
   showCallouts?: boolean;
+  /** Suppress first-run product-tour overlays. Emitted as ?hideProductTours=true. */
+  hideProductTours?: boolean;
   /** Force a UI locale. Emitted as a /lang/<code> path segment, which Rails rewrites to ?lang=<code>. */
   lang?: string;
 }
@@ -24,6 +26,7 @@ export function labLevelUrl({
   level,
   noautoplay = true,
   showCallouts = false,
+  hideProductTours = false,
   lang,
 }: LabLevelUrlParams): string {
   const query = new URLSearchParams();
@@ -32,6 +35,9 @@ export function labLevelUrl({
   }
   if (showCallouts) {
     query.set('show_callouts', '1');
+  }
+  if (hideProductTours) {
+    query.set('hideProductTours', 'true');
   }
   const queryString = query.toString();
   const langSegment = lang ? `/lang/${lang}` : '';

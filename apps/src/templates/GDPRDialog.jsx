@@ -46,19 +46,21 @@ export default class GDPRDialog extends Component {
         style={styles.dialog}
         uncloseable
       >
-        <h2 className="ui-test-gdpr-dialog">
-          {i18n.gdprDialogHeaderUpdated()}
-        </h2>
-        <div>{i18n.gdprDialogDetailsUpdated()}</div>
-        <div style={styles.instructions}>
-          <a
-            href={pegasus('/privacy')}
-            className="ui-test-gdpr-dialog-privacy-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {i18n.gdprDialogVisitPrivacyPolicy()}
-          </a>
+        <div style={styles.dialogBody}>
+          <h2 className="ui-test-gdpr-dialog">
+            {i18n.gdprDialogHeaderUpdated()}
+          </h2>
+          <div>{i18n.gdprDialogDetailsUpdated()}</div>
+          <div style={styles.instructions}>
+            <a
+              href={pegasus('/privacy')}
+              className="ui-test-gdpr-dialog-privacy-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {i18n.gdprDialogVisitPrivacyPolicy()}
+            </a>
+          </div>
         </div>
         <DialogFooter>
           <MuiButton
@@ -88,10 +90,13 @@ export default class GDPRDialog extends Component {
 
 const styles = {
   dialog: {
+    color: color.default_text,
+    width: 740,
+  },
+  dialogBody: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    color: color.default_text,
   },
   instructions: {
     marginTop: 20,

@@ -6,8 +6,10 @@ import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
 import {
+  ensureInjectedCategories,
   ensurePredefinedBehaviors,
   ensureSceneBlocks,
   filterToolboxToRegisteredBlocks,
@@ -89,10 +91,13 @@ export default function useBlocklyWorkspace({
         ? toolboxDefinition
         : undefined;
     if (!toolbox && toolboxXml) {
-      // Add the full behavior set + scene blocks, then drop unregistered
-      // block references so opening a category never throws.
+      // Add the full behavior set, scene blocks, and injected categories,
+      // then drop unregistered block references so opening a category never
+      // throws.
       toolbox = filterToolboxToRegisteredBlocks(
-        ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
+        ensureInjectedCategories(
+          ensureSceneBlocks(ensurePredefinedBehaviors(toolboxXml))
+        )
       );
     }
 
@@ -115,6 +120,7 @@ export default function useBlocklyWorkspace({
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       customSimpleDialog,
+      editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
     // CDO Blockly shrinks the container by the workspace-header height to

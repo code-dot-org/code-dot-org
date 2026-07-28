@@ -1,17 +1,36 @@
 require 'base64'
+require 'json'
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
   storage_id = create_storage_id_for_user(nil)
 
-  if defined?(Dashboard::Application)
+  dashboard_defined = !!defined?(Dashboard::Application)
+  enqueued = false
+  error = nil
+
+  if dashboard_defined
     begin
-      ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip)
+      ProjectStorage::AnonymousGeoRecordingJob.perform_later(storage_id, request.ip) do |job|
+        enqueued = job.successfully_enqueued?
+        error = job.enqueue_error&.inspect
+      end
     rescue StandardError => exception
+      error = exception.inspect
       raise exception unless rack_env?(:production)
       Observability::Errors.capture_exception(exception)
     end
   end
+
+  CDO.log.info JSON.dump(
+    namespace: 'project_storage_creation',
+    event: 'anonymous_project_storage_job_enqueuing',
+    storage_id:,
+    dashboard_defined:,
+    enqueued:,
+    error:,
+    enqueued_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ'),
+  )
 
   response.set_cookie(
     storage_id_cookie_name,
@@ -150,6 +169,14 @@ def storage_id_for_current_user
   user_id = request.user_id
   return nil unless user_id
 
+  unless Integer(user_id, exception: false)&.positive?
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'invalid_session_user_id',
+      invalid_user_id: user_id.inspect,
+    )
+  end
+
   # Return the user's storage-id, if it exists.
   user_storage_id = storage_id_for_user_id(user_id)
   return user_storage_id unless user_storage_id.nil?
@@ -224,7 +251,18 @@ end
 
 def create_storage_id_for_user(user_id)
   # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
+  storage_id = user_storage_ids_table.insert(user_id: user_id)
+
+  unless Integer(user_id, exception: false)
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'anonymous_project_storage_created',
+      storage_id:,
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ'),
+    )
+  end
+
+  storage_id
 rescue Sequel::UniqueConstraintViolation
   # We lost a race against someone performing the same operation. The row
   # we're looking for should now be in the database.

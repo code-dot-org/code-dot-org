@@ -60,7 +60,9 @@ export const resumeCreateSectionOnboardingTour = () => {
     clearStep();
     recordTourCompletion();
   });
-  tour.on('cancel', clearStep);
+  tour.on('cancel', () => {
+    clearStep();
+  });
 
   // Resume at the saved step if it belongs to this page, otherwise start
   // at the first step (the saved step was from the previous page).

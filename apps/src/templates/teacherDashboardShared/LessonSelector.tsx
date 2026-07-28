@@ -49,27 +49,32 @@ interface LessonSelectorProps {
   lessons: LessonOption[];
   selectedLesson: LessonOption | null;
   onLessonChange: (lessonId: number) => void;
+  onUserLessonChange?: (lessonId: number) => void;
   hasUnnumberedLessons: boolean;
   isLoading?: boolean;
   unitName?: string;
   className?: string;
   isLabelVisible?: boolean;
   labelText?: string;
+  dropdownTextThickness?: 'thick' | 'thin';
 }
 
 const LessonSelector: React.FC<LessonSelectorProps> = ({
   lessons,
   selectedLesson,
   onLessonChange,
+  onUserLessonChange,
   hasUnnumberedLessons,
   isLoading = false,
   unitName,
   className,
   isLabelVisible = false,
   labelText = i18n.chooseLesson(),
+  dropdownTextThickness = 'thick',
 }) => {
   const onDropdownChange = (value: string) => {
     onLessonChange(Number(value));
+    onUserLessonChange?.(Number(value));
 
     analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
       unitName,
@@ -118,6 +123,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
       size="s"
       id="ui-test-lessons-in-assigned-unit-dropdown"
       className={className}
+      dropdownTextThickness={dropdownTextThickness}
     />
   );
 };

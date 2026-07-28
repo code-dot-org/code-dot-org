@@ -14,9 +14,9 @@ import {
   generateImage,
   SpriteLab2ItemStyle,
   SpriteLab2ItemType,
-  uploadAssetToProject,
+  UploadImageFunction,
 } from '../ai/items/itemGeneration';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
@@ -51,18 +51,13 @@ function getImageSize(
 
 /**
  * The image-generation form, hosted in the Guide (see GenerateSpriteLab).
- * Generates a sprite or background from a text prompt, uploads it to the
- * project's asset bucket, and bridges it into the animation list so it
- * becomes an ordinary costume/background.
+ * Generates a sprite or background from a text prompt, uploads it via
+ * uploadImage, and bridges it into the animation list so it becomes an
+ * ordinary costume/background.
  */
-interface GenerateImageFormProps {
-  // The project channel generated assets upload to.
-  channelId?: string;
-}
-
-const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
-  channelId,
-}) => {
+const GenerateImageForm: React.FunctionComponent<{
+  uploadImage?: UploadImageFunction;
+}> = ({uploadImage}) => {
   const dispatch = useAppDispatch();
 
   const [name, setName] = useState('');
@@ -88,10 +83,9 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     if (!canGenerate) {
       return;
     }
-    if (!channelId) {
-      setError(
-        'This project has no channel yet, so generated images can’t be saved.'
-      );
+    // Don't generate if we can't upload.
+    if (!uploadImage) {
+      setError("Images can't be saved right now.");
       return;
     }
     setStatus('generating');
@@ -99,12 +93,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     try {
       const {filename, uint8Array, mediaType, pixelGridSize} =
         await generateImage(trimmedPrompt, itemType, style);
-      const url = await uploadAssetToProject(
-        channelId,
-        filename,
-        uint8Array,
-        mediaType
-      );
+      const url = await uploadImage(filename, uint8Array, mediaType);
       const frameSize = await getImageSize(uint8Array, mediaType);
       const key = createUuid();
       // Bridge into the animation list: addAnimation fetches sourceUrl, builds
@@ -119,7 +108,12 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           frameCount: 1,
           frameDelay: 2,
           looping: true,
-          categories: itemType === 'background' ? [BACKGROUNDS_CATEGORY] : [],
+          categories:
+            itemType === 'background'
+              ? [BACKGROUNDS_CATEGORY]
+              : itemType === 'block'
+              ? [BLOCKS_CATEGORY]
+              : [],
           // Recorded once here; the pixel editor trusts this instead of
           // re-detecting the grid on every open.
           pixelGridSize,
@@ -149,7 +143,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     trimmedPrompt,
     itemType,
     style,
-    channelId,
+    uploadImage,
     dispatch,
   ]);
 
@@ -177,6 +171,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           >
             <option value="sprite">Sprite (costume)</option>
             <option value="background">Background</option>
+            <option value="block">Block (platform tile)</option>
           </select>
         </label>
         <label>

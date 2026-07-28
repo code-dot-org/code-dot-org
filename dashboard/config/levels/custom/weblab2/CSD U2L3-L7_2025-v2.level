@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:46:09.000Z",
   "level_num": "custom",
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Comments\r\n\r\nHTML comments are an essential aspect of web design and development. They are used to add notes and explanations to your code, making it easier for yourself and others to understand and maintain. By using comments correctly, you can ensure that your code is well-organized and easy to understand, leading to a smoother development process.\r\n\r\nAdding a comment in HTML is done by using the `<!--` and `-->` tags. Anything that is placed between these tags **will not be displayed** in the browser, but **will** be visible when looking at the source code.\r\n\r\n_`<!-- This is a comment -->`_\r\n\r\n# Do This\r\n\r\n1) Use the comment tag to \"comment out\" the information *about* the content.\r\n\r\n::: details [🔎 **Show Me How To Complete This Level** 🔍]\r\n\r\n<img src=\"https://images.code.org/5f156a02fb203e3f072b2bab62b64c04-image-1703009877688.gif\" style=\"width:700px\">\r\n<br>\r\n<br>\r\n\r\n**More resources are in the \"Help and Tips\" tab**\r\n\r\n:::\r\n\r\n![]()",
+    "long_instructions": "# Comments\r\n\r\nHTML comments are an essential aspect of web design and development. They are used to add notes and explanations to your code, making it easier for yourself and others to understand and maintain. By using comments correctly, you can ensure that your code is well-organized and easy to understand, leading to a smoother development process.\r\n\r\nAdding a comment in HTML is done by using the `<!--` and `-->` tags. Anything that is placed between these tags **will not be displayed** in the browser, but **will** be visible when looking at the source code.\r\n\r\n_`<!-- This is a comment -->`_\r\n\r\n# Do This\r\n\r\n1) Use the comment tag to \"comment out\" the information *about* the content.\r\n\r\n::: details [🔎 **Show Me How** 🔍]\r\n\r\n<img src=\"https://images.code.org/5f156a02fb203e3f072b2bab62b64c04-image-1703009877688.gif\" style=\"width:700px\">\r\n<br>\r\n<br>\r\n\r\n:::\r\n\r\n![]()",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -55,9 +56,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:09.243+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L3-L7-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:46:09.243+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L3-L7-2025\"},{\"changed_at\":\"2026-07-24 00:38:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>
