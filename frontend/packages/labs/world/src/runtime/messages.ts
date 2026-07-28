@@ -13,6 +13,19 @@ export const PARENT_ORIGIN_PARAM = 'parentOrigin';
 export const ASSET_BASE_PARAM = 'assetBase';
 /** Which surface this page plays: `compile` or `preview`. */
 export const ROLE_PARAM = 'role';
+/**
+ * Whether esbuild-wasm runs in a Web Worker. ON by default: the main-thread path
+ * is ~50x slower in real browsers (Go→wasm hand-offs hit the main thread's
+ * ~4ms timer clamp and the Atomics.wait ban — see esbuildCompiler / SANDBOX.md).
+ * The worker costs a `worker-src blob:` CSP allowance; a host that cannot grant
+ * it sets this to `0`/`false` to force the main thread. Absent = default (on).
+ */
+export const ESBUILD_WORKER_PARAM = 'esbuildWorker';
+/**
+ * The lab-URL override, forwarded to the compile iframe as ESBUILD_WORKER_PARAM.
+ * Absent → default (worker on); `world-esbuild-worker=0` → main thread.
+ */
+export const LAB_ESBUILD_WORKER_PARAM = 'world-esbuild-worker';
 
 export const SandboxRole = {
   COMPILE: 'compile',

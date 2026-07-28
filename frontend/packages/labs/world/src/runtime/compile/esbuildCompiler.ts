@@ -21,19 +21,26 @@ export class CompileError extends Error {
 // promise is a module singleton rather than per-instance.
 let initPromise: Promise<void> | null = null;
 
-function initEsbuild(wasmURL?: string): Promise<void> {
+function initEsbuild(wasmURL?: string, worker = true): Promise<void> {
   if (!initPromise) {
-    // In the browser (wasmURL set) worker:false keeps esbuild on this (idle,
-    // hidden) surface's main thread, so the CSP needs no `worker-src blob:`
-    // (Spike C). In Node (no wasmURL, e.g. unit tests) esbuild-wasm finds its
-    // own binary and the worker option does not apply.
-    initPromise = esbuild.initialize(wasmURL ? {wasmURL, worker: false} : {});
+    // In the browser (wasmURL set) worker:true runs esbuild in a Web Worker.
+    // This is the default and it matters a LOT: esbuild is Go→wasm, whose runtime
+    // hands control between wasm and JS thousands of times per build. On the main
+    // thread each hand-off is throttled (Atomics.wait is forbidden there, and the
+    // Go runtime's setTimeout-based resume hits the ~4ms nested-timer clamp), so a
+    // trivial build measured ~10s in a real browser vs ~200ms in a worker. The
+    // worker pays a `worker-src blob:` CSP allowance (see SANDBOX.md); a host that
+    // cannot grant it forces worker:false via ESBUILD_WORKER_PARAM=0, accepting
+    // the main-thread slowdown. In Node (no wasmURL, e.g. unit tests) esbuild-wasm
+    // finds its own binary and the worker option does not apply.
+    initPromise = esbuild.initialize(wasmURL ? {wasmURL, worker} : {});
   }
   return initPromise;
 }
 
 export class WorldCompiler {
   private readonly wasmURL?: string;
+  private readonly esbuildWorker: boolean;
   private readonly externals: Record<string, string>;
   private readonly files = new Map<string, string>();
   // A warm, incremental build context per entry. Keying by entry (rather than a
@@ -43,8 +50,11 @@ export class WorldCompiler {
   // map is set correctly before each one.
   private readonly contexts = new Map<string, esbuild.BuildContext>();
 
-  constructor(opts: {wasmURL?: string; assetBase?: string} = {}) {
+  constructor(
+    opts: {wasmURL?: string; assetBase?: string; esbuildWorker?: boolean} = {},
+  ) {
     this.wasmURL = opts.wasmURL;
+    this.esbuildWorker = opts.esbuildWorker ?? true;
     // `world-lab` / `phaser` are rewritten to their self-hosted URLs under the
     // asset base so the compiled module imports them same-origin (no import map).
     const base = opts.assetBase ?? '/vendor/';
@@ -56,7 +66,7 @@ export class WorldCompiler {
 
   /** Initialize esbuild-wasm (idempotent). */
   async init(): Promise<void> {
-    await initEsbuild(this.wasmURL);
+    await initEsbuild(this.wasmURL, this.esbuildWorker);
   }
 
   /**

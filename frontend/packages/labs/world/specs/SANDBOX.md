@@ -62,6 +62,7 @@ tighten them (for example, denying scripts on a predict level).
 default-src 'self';
 script-src  'self' 'wasm-unsafe-eval';
 connect-src 'self';
+worker-src  blob:;
 ```
 
 `'wasm-unsafe-eval'` is the narrow CSP Level 3 keyword that permits
@@ -79,9 +80,18 @@ sessionless, and no learner-derived code runs here — so it grants the learner
 nothing. (A stricter alternative inlines the wasm bytes into the bundle to keep
 `connect-src 'none'`, at the cost of a large base64 blob; not worth it.)
 
-The bundler is initialized with `worker: false` so esbuild runs on this
-surface's own (idle, hidden) main thread rather than spawning a blob-URL Web
-Worker — which would otherwise force `worker-src blob:` into this policy.
+`worker-src blob:` is required because the bundler is initialized with
+`worker: true` (the default): esbuild-wasm runs the compile in a Web Worker it
+spawns from a `blob:` URL. This is not optional performance polish. esbuild is
+Go compiled to WebAssembly, and its runtime hands control between wasm and JS
+thousands of times per build; on a Window's main thread each hand-off is
+throttled (the ~4ms nested-`setTimeout` clamp, and `Atomics.wait` is forbidden
+off-worker), so a trivial build measured **~10 s** in a real browser versus
+**~200 ms** in a worker (milestone-0 Spike C revisited). The worker still runs
+no learner code — it only bundles text — so `worker-src blob:` grants the
+learner nothing. A host that cannot allow `blob:` here can force the main-thread
+path with `esbuildWorker=0` (see `ESBUILD_WORKER_PARAM`), accepting the
+slowdown; `worker-src` then drops from this policy.
 
 Because no learner-derived code runs on this surface — the compiler emits a
 module but never imports it — learner-supplied WebAssembly cannot execute here.
