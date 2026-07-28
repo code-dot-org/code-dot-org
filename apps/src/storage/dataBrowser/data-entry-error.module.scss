@@ -1,0 +1,22 @@
+// Reserves height so the table doesn't jump when the error appears.
+.wrapper {
+  min-height: 68px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+// Overrides applab's legacy <p> styles; renders backtick spans as code chips.
+.alert {
+  p {
+    color: var(--text-neutral-primary);
+    margin: 0;
+    background: transparent;
+  }
+
+  code {
+    color: var(--text-brand-purple-primary);
+    background: var(--background-neutral-white-fixed);
+    padding: 0.05rem 0.25rem;
+    border-radius: 0.1875rem;
+  }
+}
