@@ -22,6 +22,9 @@ export class LessonLevelPage extends BasePage {
   /** Lesson-progress strip; a11y scans scope here, not the shared chrome. */
   readonly progressSelector = '.header_level .react_stage';
 
+  /** Header popup container; a11y scans scope here once it's open. */
+  readonly headerPopupSelector = '.header_popup';
+
   /** Lesson-progress strip; one bubble link per level. */
   readonly lessonProgress: Locator;
 
@@ -49,15 +52,9 @@ export class LessonLevelPage extends BasePage {
     this.progressLessons = page.locator(PROGRESS_LESSON_SELECTOR);
   }
 
-  /** Navigate to a lab level and wait for the lesson header to render. */
+  /** Navigate to a lab level. */
   async gotoLevel(params: LabLevelUrlParams): Promise<void> {
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
-    await this.waitForReady();
-  }
-
-  /** The lesson header is ready once its "More"/"Less" toggle is visible. */
-  async waitForReady(): Promise<void> {
-    await expect(this.headerPopupButton).toBeVisible();
   }
 
   /** Open the header popup and wait for its progress cards to render. */
