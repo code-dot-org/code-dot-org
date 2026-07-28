@@ -1,0 +1,14 @@
+// Row-level chrome for AssetRow. Lives here (rather than a per-lab global
+// stylesheet) so it applies everywhere AssetRow is rendered, not just in
+// whichever lab's SCSS entry point happens to define it.
+.row {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

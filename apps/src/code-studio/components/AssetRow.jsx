@@ -4,6 +4,7 @@ import {
   IconButton as MuiIconButton,
   Typography as MuiTypography,
 } from '@mui/material';
+import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -12,6 +13,8 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import AssetThumbnail from './AssetThumbnail';
+
+import rowStyles from './AssetRow.module.scss';
 
 /**
  * A single row in the AssetManager, describing one asset.
@@ -190,7 +193,10 @@ export default class AssetRow extends React.Component {
     }
 
     return (
-      <tr className="assetRow" onDoubleClick={this.props.onChoose}>
+      <tr
+        className={classNames('assetRow', rowStyles.row)}
+        onDoubleClick={this.props.onChoose}
+      >
         <td width="80">
           <AssetThumbnail
             type={this.props.type}
