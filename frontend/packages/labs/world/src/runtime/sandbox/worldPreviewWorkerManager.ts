@@ -37,11 +37,15 @@ const DEFERRED_PROPS = new Set(['positional.skew']);
  * Enumerable string properties → their allowed values, so the editor renders a
  * dropdown. Keyed by `${ownerId}.${propId}`; `animation` resolves against the
  * world's live registry (stock + project animations), `sprite` against the
- * built-in sprite set. (Uploaded sprites are a later addition.)
+ * built-in sprite set plus the project's uploaded sprites (deduped).
  */
-function optionsFor(key: string, animationIds: string[]): string[] | undefined {
+function optionsFor(
+  key: string,
+  animationIds: string[],
+  uploadedSprites: string[],
+): string[] | undefined {
   if (key === 'appearance.sprite') {
-    return [...SPRITE_NAMES];
+    return [...new Set([...SPRITE_NAMES, ...uploadedSprites])];
   }
   if (key === 'appearance.animation') {
     return animationIds;
@@ -56,7 +60,11 @@ function optionsFor(key: string, animationIds: string[]): string[] | undefined {
  * other engine-owned state is excluded) and not deferred. Vectors are serialized
  * to plain `{x, y}` for postMessage; enum-like strings carry their `options`.
  */
-function describeActor(actor: Actor, animationIds: string[]): ActorSchema {
+function describeActor(
+  actor: Actor,
+  animationIds: string[],
+  uploadedSprites: string[],
+): ActorSchema {
   const groups: ActorSchema = [];
   for (const trait of actor.traits()) {
     const props = Object.values(trait.properties)
@@ -74,6 +82,7 @@ function describeActor(actor: Actor, animationIds: string[]): ActorSchema {
         const options = optionsFor(
           `${property.ownerId}.${property.id}`,
           animationIds,
+          uploadedSprites,
         );
         return {
           ownerId: property.ownerId,
@@ -181,12 +190,15 @@ export async function start(): Promise<void> {
       if (manifest) {
         const world = manifest.world.instantiate();
         const animationIds = world.animationIds();
+        // Uploaded sprites: the same asset map the thumbnails render from — its
+        // keys are the sprite names a placement may reference.
+        const uploadedSprites = Object.keys(lastAssets);
         const typeOf = new Map<unknown, string>();
         for (const {type, builder} of manifest.actors) {
           const actor = builder.instantiate(`thumb:${type}`);
           world.addActor(actor);
           typeOf.set(actor, type);
-          schemas[type] = describeActor(actor, animationIds);
+          schemas[type] = describeActor(actor, animationIds, uploadedSprites);
         }
         for (const state of world.renderSnapshot()) {
           const type = typeOf.get(state.actor);
