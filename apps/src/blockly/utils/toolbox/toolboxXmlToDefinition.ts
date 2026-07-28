@@ -1,6 +1,3 @@
-// Not re-exported from index.ts: convertXmlToJson pulls in blockly/types,
-// a heavy dependency graph the barrel's other modules avoid.
-
 import * as BlocklyCore from 'blockly/core';
 
 import {DYNAMIC_CATEGORY_OPTIONS} from '../../constants';

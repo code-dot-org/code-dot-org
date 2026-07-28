@@ -1,7 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
-import {toolboxXmlToDefinition} from '@cdo/apps/blockly/utils/toolbox/toolboxXmlToDefinition';
+import {
+  toolboxToWorkspaceBlocks,
+  toolboxXmlToDefinition,
+} from '@cdo/apps/blockly/utils/toolbox';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
