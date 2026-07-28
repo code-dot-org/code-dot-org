@@ -1,9 +1,16 @@
-import {type Locator, type Page} from '@playwright/test';
+import {expect, type Locator, type Page} from '@playwright/test';
 
 import {progressBubbleShows} from '../shared/progress';
 import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
+
+/**
+ * Uitest hook for the per-lesson progress card, one per lesson — the same
+ * component tree (HeaderPopup -> MiniView -> ProgressTable -> ProgressLesson)
+ * rendered here (inside the header popup) and on UnitOverviewPage.
+ */
+export const PROGRESS_LESSON_SELECTOR = '.uitest-progress-lesson';
 
 /**
  * A level played within a lesson — multi levels, Blockly labs, etc. Owns the
@@ -28,11 +35,9 @@ export class LessonLevelPage extends BasePage {
   readonly headerPopupButton: Locator;
 
   /**
-   * Per-lesson progress cards inside the header popup, one per lesson — the
-   * same component tree (HeaderPopup -> MiniView -> ProgressTable ->
-   * ProgressLesson) as UnitOverviewPage.progressLessons. Absent from the DOM
-   * entirely until headerPopupButton is clicked. No accessible role/name is
-   * exposed, so addressed by its uitest hook class.
+   * Per-lesson progress cards inside the header popup, one per lesson.
+   * Absent from the DOM entirely until headerPopupButton is clicked. No
+   * accessible role/name is exposed, so addressed by its uitest hook class.
    */
   readonly progressLessons: Locator;
 
@@ -41,17 +46,24 @@ export class LessonLevelPage extends BasePage {
     this.lessonProgress = page.locator(this.progressSelector);
     this.lessonHeaderInfo = page.locator('.header_level');
     this.headerPopupButton = page.locator('button.header_popup_link');
-    this.progressLessons = page.locator('.uitest-progress-lesson');
+    this.progressLessons = page.locator(PROGRESS_LESSON_SELECTOR);
   }
 
-  /** Navigate to a lab level. */
+  /** Navigate to a lab level and wait for the lesson header to render. */
   async gotoLevel(params: LabLevelUrlParams): Promise<void> {
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+    await this.waitForReady();
   }
 
-  /** Open the header popup (lesson-progress summary), toggled by headerPopupButton. */
+  /** The lesson header is ready once its "More"/"Less" toggle is visible. */
+  async waitForReady(): Promise<void> {
+    await expect(this.headerPopupButton).toBeVisible();
+  }
+
+  /** Open the header popup and wait for its progress cards to render. */
   async openHeaderPopup(): Promise<void> {
     await this.headerPopupButton.click();
+    await expect(this.progressLessons.first()).toBeVisible();
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */

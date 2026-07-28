@@ -11,15 +11,14 @@ import {BasePage} from './base-page';
 export class LessonOverviewPage extends BasePage {
   /**
    * The lesson's displayed title (unnumbered courses omit the "Lesson N"
-   * prefix). No accessible role/name is exposed beyond its own text, so
-   * addressed by its uitest hook class (see the feature's own
-   * ".uitest-lesson-title" selector).
+   * prefix) — the page's sole <h1> (LessonOverview.jsx), addressed by its
+   * implicit heading role rather than its ".uitest-lesson-title" hook class.
    */
   readonly lessonTitle: Locator;
 
   constructor(page: Page) {
     super(page);
-    this.lessonTitle = page.locator('.uitest-lesson-title');
+    this.lessonTitle = page.getByRole('heading', {level: 1});
   }
 
   /** Navigate to the lesson overview page. */
