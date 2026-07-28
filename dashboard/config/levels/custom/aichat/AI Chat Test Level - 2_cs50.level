@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button.",
+    "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the <code style=\"color:white; background-color:var(--background-brand-purple-primary-fixed)\">Continue</code> button.",
     "system_prompt": "Deprecated",
     "bot_title": "Deprecated",
     "bot_description": "Deprecated",

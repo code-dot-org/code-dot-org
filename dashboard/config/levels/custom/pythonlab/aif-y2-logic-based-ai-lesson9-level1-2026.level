@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T03:04:25.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’re a QA engineer testing a program for a smart speaker. The program should print out all the playlists that you can listen to, but there’s a bug.\r\n\r\n**Do This**\r\n\r\n1. Try to run the code!\r\n2. Read the error message. Use the error message to identify the bug in the program.\r\n3. Fix the bug and run the program again.\r\n\r\n**💻 Coding Tip**\r\n\r\nWhen Python shows you an error message, pay attention to what code it underlines and what line number it mentions. That can be a helpful place to start looking for problems in the code!",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "print(\"🎶 Here are your playlists:\")\nprint(\"⭐️ Today's Top Hits\")\nprint(\"🏃‍♀️ Workout\")\nprint(\"💙 Your Favorites\"\nprint(\"🌙 Calm Music to Unwind\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 03:04:30 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>
