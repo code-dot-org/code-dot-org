@@ -116,11 +116,12 @@ export default class AssetRow extends React.Component {
                 <MuiIconButton
                   variant="text"
                   color={usage > 0 ? 'secondary' : 'error'}
-                  size="small"
+                  size="medium"
                   aria-label="Delete file"
                   onClick={
                     usage > 0 ? this.attemptBadDelete : this.confirmDelete
                   }
+                  sx={{marginRight: 1}}
                 >
                   <FontAwesomeV6Icon iconName="trash-can" iconStyle="regular" />
                 </MuiIconButton>
@@ -137,7 +138,15 @@ export default class AssetRow extends React.Component {
         break;
       case 'confirming delete':
         actions = (
-          <td width="250" style={{textAlign: 'right'}}>
+          <td
+            width="250"
+            style={{
+              textAlign: 'right',
+              paddingRight: 16,
+              paddingTop: 16,
+              paddingBottom: 16,
+            }}
+          >
             <span style={styles.actionGroup}>
               <MuiButton
                 variant="contained"
