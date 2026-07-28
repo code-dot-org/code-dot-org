@@ -3,7 +3,6 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import Link from '@code-dot-org/component-library/link';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -86,10 +85,8 @@ class AdvancedShareOptions extends React.Component {
         </MuiTypography>
         <MuiTypography
           variant="body3"
-          className={classNames(
-            moduleStyles.paragraph,
-            moduleStyles.warningParagraph
-          )}
+          className={moduleStyles.paragraph}
+          style={{color: 'var(--text-error-primary)'}}
         >
           {i18n.shareEmbedWarning()}
         </MuiTypography>

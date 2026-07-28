@@ -300,6 +300,7 @@ class ShareAllowedDialog extends React.Component {
                     <MuiTypography
                       variant="body4"
                       className={moduleStyles.shareWarning}
+                      style={{color: 'var(--text-error-primary)'}}
                     >
                       {i18n.shareU13Warning()}
                     </MuiTypography>
