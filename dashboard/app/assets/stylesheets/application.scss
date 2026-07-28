@@ -152,6 +152,14 @@ h2 {
   font-size: 22px;
   line-height: 30px;
   color: var(--text-brand-teal-primary);
+
+  // Opt-in neutral heading, mirroring h1 above. Needed where a page's heading
+  // would otherwise share the brand color of its primary button: under
+  // codeai-next the brand teal here aliases to the same purple the button
+  // uses.
+  &.text-black {
+    color: var(--text-neutral-primary);
+  }
 }
 
 h3 {
