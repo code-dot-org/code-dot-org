@@ -179,8 +179,15 @@ export function drawCircle(
   radius = Math.max(0, Math.round(radius));
   if (filled) {
     const r2 = (radius + 0.5) * (radius + 0.5);
-    for (let dy = -radius; dy <= radius; dy++) {
-      for (let dx = -radius; dx <= radius; dx++) {
+    // Clip the scan to the on-canvas rows/columns: a shape dragged far past
+    // the edge can have a huge radius, and iterating the off-canvas remainder
+    // (which setPixel would just drop) is wasted work.
+    const dyMin = Math.max(-radius, -cy);
+    const dyMax = Math.min(radius, raster.height - 1 - cy);
+    const dxMin = Math.max(-radius, -cx);
+    const dxMax = Math.min(radius, raster.width - 1 - cx);
+    for (let dy = dyMin; dy <= dyMax; dy++) {
+      for (let dx = dxMin; dx <= dxMax; dx++) {
         if (dx * dx + dy * dy <= r2) {
           setPixel(raster, cx + dx, cy + dy, color);
         }
@@ -232,8 +239,14 @@ export function drawRect(
   const top = Math.min(y0, y1);
   const bottom = Math.max(y0, y1);
   if (filled) {
-    for (let y = top; y <= bottom; y++) {
-      for (let x = left; x <= right; x++) {
+    // Clip to on-canvas bounds; the corners can be far off-canvas when a
+    // drag runs past the edge, and setPixel would drop those writes anyway.
+    const x0c = Math.max(0, left);
+    const x1c = Math.min(raster.width - 1, right);
+    const y0c = Math.max(0, top);
+    const y1c = Math.min(raster.height - 1, bottom);
+    for (let y = y0c; y <= y1c; y++) {
+      for (let x = x0c; x <= x1c; x++) {
         setPixel(raster, x, y, color);
       }
     }
