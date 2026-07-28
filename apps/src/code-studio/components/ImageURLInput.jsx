@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -28,35 +29,32 @@ export default class ImageURLInput extends React.Component {
   render() {
     return (
       <div>
-        <div style={styles.supportingText}>
+        <MuiTypography
+          variant="body2"
+          component="div"
+          gutterBottom
+          sx={{marginTop: '1em'}}
+        >
           {i18n.imageURLInputDescription()}
-        </div>
+        </MuiTypography>
         <InputPrompt
           question={i18n.imageURLInputPrompt()}
           onInputReceived={this.handleSubmitWrapper}
           currentValue={this.props.currentValue}
         />
         {this.state.showError && (
-          <div style={styles.error}>{i18n.imageURLInputInvalid()}</div>
+          <MuiTypography
+            variant="body2"
+            component="div"
+            sx={{color: 'var(--text-error-primary)'}}
+          >
+            {i18n.imageURLInputInvalid()}
+          </MuiTypography>
         )}
-        <div style={styles.example}>{i18n.imageURLInputExample()}</div>
+        <MuiTypography variant="body2" component="div" gutterBottom>
+          {i18n.imageURLInputExample()}
+        </MuiTypography>
       </div>
     );
   }
 }
-
-const styles = {
-  supportingText: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px',
-  },
-  example: {
-    margin: '1em 0',
-    fontSize: '16px',
-    lineHeight: '20px',
-  },
-  error: {
-    color: 'red',
-  },
-};
