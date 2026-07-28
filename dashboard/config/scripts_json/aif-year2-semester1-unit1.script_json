@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-27 21:21:00 UTC",
+    "serialized_at": "2026-07-28 01:23:23 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -95,7 +95,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Lesson 4",
+      "name": "Hello, AI",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -373,6 +373,34 @@
       },
       "seeding_key": {
         "lesson_activity.key": "59354fcf-5c31-4346-861f-b22d6746f23d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "8b475d6c-0b29-4aef-9731-2a07f78895d6",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "bf31cf78-7621-4559-ae26-5be188699b78",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf31cf78-7621-4559-ae26-5be188699b78",
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1"
@@ -1263,10 +1291,427 @@
       "key": "2f2fda32-ecca-44ad-8ff0-198ab4716baa",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you’re building a social media website. What’s the same on each profile page? What’s different?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students look at the three example of social media profiles and identify what they share in common and where they differ. The goal is to get students thinking about what information in a piece of software stays the same and what information changes, which will lead into students using variables in this lesson to represent data that might change. Students might identify that the “Message” and “Follow” buttons stay the same, or that each profile has a similar layout, or that the text colors and fonts are the same. Students might also identify that each profile differs in name, photo, and the specific numbers for the post and follower counts. If students only point out differences, prompt them to think about what patterns all the profiles share. Once students have shared a few examples of similarities and a few examples of differences, end the discussion."
       },
       "seeding_key": {
         "activity_section.key": "2f2fda32-ecca-44ad-8ff0-198ab4716baa",
         "lesson_activity.key": "59354fcf-5c31-4346-861f-b22d6746f23d"
+      }
+    },
+    {
+      "key": "3c97874b-52c3-4698-8c78-079867add0e3",
+      "position": 2,
+      "properties": {
+        "description": "“As we start writing code, some information in our code will always be the same, and some information in our code might change, just like how some information on these social media profiles is the same and some information changes.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3c97874b-52c3-4698-8c78-079867add0e3",
+        "lesson_activity.key": "59354fcf-5c31-4346-861f-b22d6746f23d"
+      }
+    },
+    {
+      "key": "9228353b-34b2-4768-9d6d-f149d02a78ab",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "9228353b-34b2-4768-9d6d-f149d02a78ab",
+        "lesson_activity.key": "59354fcf-5c31-4346-861f-b22d6746f23d"
+      }
+    },
+    {
+      "key": "e136c9d2-428e-434b-8cf9-848fb224ed31",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students get experience using Python to print messages, accept input, and use variables.",
+        "duration": "20",
+        "name": "Build a Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "e136c9d2-428e-434b-8cf9-848fb224ed31",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "879e0612-9a0a-440e-ad2b-fcec56dc5c04",
+      "position": 2,
+      "properties": {
+        "description": "“You might have used AI chatbots that can read and respond to your messages. Modern chatbots are powered by lots of complex logic and data. But today, we’re going to build a very simple chatbot that can start a conversation by greeting you.”\n\n“In order to get the computer to do what we want, we need to give it instructions in a language the computer can understand.”\n\n“You’ll be writing code in a programming language called Python to build programs that can behave intelligently.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "879e0612-9a0a-440e-ad2b-fcec56dc5c04",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "863e0dec-cddd-476e-8023-9a045bd0a574",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that Python is a popular programming language used to build apps, websites, AI tools, and more."
+      },
+      "seeding_key": {
+        "activity_section.key": "863e0dec-cddd-476e-8023-9a045bd0a574",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "49fe2d2b-b274-4cdd-82de-ca1412c4d806",
+      "position": 4,
+      "properties": {
+        "description": "“In Python, we can tell the program what output to produce by using print. If we run this program, it will print out the words “Good morning!” to the console.”",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might need to be reminded that the console is a place where programs can provide text as output and can accept text as input."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "49fe2d2b-b274-4cdd-82de-ca1412c4d806",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "796b8d69-869c-4b2b-a61a-b00e19dc2fb3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _function_."
+      },
+      "seeding_key": {
+        "activity_section.key": "796b8d69-869c-4b2b-a61a-b00e19dc2fb3",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "8d681e6c-453a-4ca4-a8b1-bee85fa59ef5",
+      "position": 6,
+      "properties": {
+        "description": "“We can use functions to tell computers to do something. For example, the print function tells the computer to make some text appear in the console. When we “call” a function, that means we tell the computer to run the function.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d681e6c-453a-4ca4-a8b1-bee85fa59ef5",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "e23da3e8-542e-40e5-a031-8ac4c90350f9",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to call a function. In Python, a function is called by using the function’s name and following it with parentheses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _argument_."
+      },
+      "seeding_key": {
+        "activity_section.key": "e23da3e8-542e-40e5-a031-8ac4c90350f9",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "18f005d2-19df-4b54-a7b1-c832d5733821",
+      "position": 8,
+      "properties": {
+        "description": "“Some functions take arguments as input so that they know what to do. For example, the `print` function takes an argument that tells it what message to print.\"\n\n\"But we don’t always want our programs to print the same thing every time. Sometimes, we want programs that work with information that can change.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "18f005d2-19df-4b54-a7b1-c832d5733821",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "d6c0d817-76b1-49b8-99e5-36422f0f263c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _variable_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how variables can be assigned values in Python. The variable’s name goes on the left side of the `=` sign, and the value to store in the variable goes on the right.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they as programmers can pick what names to give to their variables. It’s a good idea to give variables descriptive names so that it’s easier for people to read and understand what the code does."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6c0d817-76b1-49b8-99e5-36422f0f263c",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "d915e25d-5ff1-457a-bf37-92d1e7206d66",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _data type_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that all values in Python have a data type. `int`, `string`, and `bool` are commonly used data types in Python, but there are others, too."
+      },
+      "seeding_key": {
+        "activity_section.key": "d915e25d-5ff1-457a-bf37-92d1e7206d66",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "fdb41d43-a70e-4bef-b550-79eb271ffcd3",
+      "position": 11,
+      "properties": {
+        "description": "“Just like each profile had different names and post counts, variables let our programs store information that changes while the program itself stays the same.”\n\n“Here’s a Python program that defines a variable named `posts` to keep track of how many posts a user has on social media.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fdb41d43-a70e-4bef-b550-79eb271ffcd3",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "c95a1c28-6163-438b-b91e-93ba88482a26",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will print, then reveal the answer.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on how much time is available, you might consider having students briefly discuss in pairs what they think the programs on each of these next slides will print. Alternatively, you could have students vote on possible options. For example, on this slide, you might ask whether students think the program will print the number 31 or the word “posts”.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c95a1c28-6163-438b-b91e-93ba88482a26",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "6953a85c-4a81-4f38-8000-7e3d33b62f93",
+      "position": 13,
+      "properties": {
+        "description": "“You can change the value that’s stored in a Python variable, too. To change the value in a variable, set it equal to something new.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6953a85c-4a81-4f38-8000-7e3d33b62f93",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "683fa400-b2dc-4dfa-8a02-1a58b472566b",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will print, then reveal the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "683fa400-b2dc-4dfa-8a02-1a58b472566b",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "8bdf347b-bfbd-42e1-a96b-9e41a3c71f6f",
+      "position": 15,
+      "properties": {
+        "description": "“If your variable is a number, you can also use Python for doing math with that number. You can use `+` for addition, `-` for subtraction, `*` for multiplication, and `/` for division.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8bdf347b-bfbd-42e1-a96b-9e41a3c71f6f",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "59724e55-8617-4b67-a8ca-2d6cb20824d8",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will print, then reveal the answer.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "59724e55-8617-4b67-a8ca-2d6cb20824d8",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "14a4d2ea-8a41-4c7b-9d58-177eacb97349",
+      "position": 17,
+      "properties": {
+        "description": "“Sometimes, we want to include a variable inside text that gets printed. Here’s an example where the code tries to print out how many followers someone has.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14a4d2ea-8a41-4c7b-9d58-177eacb97349",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "5f3cab37-a6b9-4c37-a583-34ee7fc9880e",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will print, then reveal the answer.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why didn’t this code print the number of followers?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students briefly discuss why the code didn’t work as expected. If students aren’t sure, prompt them with questions like “What did Python do with the word ‘followers’?” to help them identify that the word was treated as text to be printed rather than treated like a variable."
+      },
+      "seeding_key": {
+        "activity_section.key": "5f3cab37-a6b9-4c37-a583-34ee7fc9880e",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "831012d7-c346-4065-bde1-b96ee18ad0dc",
+      "position": 19,
+      "properties": {
+        "description": "“This code didn’t work the way we wanted it to! The `print` function doesn’t know that we’re trying to print out the value stored inside of a variable.”\n\n“In Python, we can use something called a formatted string to print text that includes variables in it.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "831012d7-c346-4065-bde1-b96ee18ad0dc",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "0e877cfd-b1bf-4264-b61d-1ce04799298a",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that a formatted string (or “f-string”) starts with the letter `f` before the first quotation mark. Then, variables can be named inside of curly braces to tell Python to include the contents of a variable in the string.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will print, then reveal the answer.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e877cfd-b1bf-4264-b61d-1ce04799298a",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "fab8057e-91e8-4ddd-844c-4e9f948927fc",
+      "position": 21,
+      "properties": {
+        "description": "“Now that you’ve practiced looking at some Python variables and functions, you’ll practice writing your own Python programs to tell a chatbot what to do.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fab8057e-91e8-4ddd-844c-4e9f948927fc",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "71d6b806-76d7-4fea-99e8-0b64ce735afc",
+      "position": 22,
+      "properties": {
+        "progression_name": "Build a Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "0bbfc3eb-6ccb-4fbc-b539-1fb0025db1ed",
+      "position": 23,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3.\n- Level 1: Students print a message that greets the user.\n- Level 2: Students use a variable to store a user’s name and print a message that uses the variable.\n- Level 3: Students use variables of different types to print a message that includes today’s date.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check on how they are implementing each program. Students are likely to run into errors, so remind them that mistakes and debugging are normal parts of the programming process. Be on the lookout for several common types of errors students might run into when implementing their own functions:\n- Students might forget to put quotation marks around strings. Remind these students that Python uses quotation marks to tell apart code from text.\n- Students might struggle with printing variables inside a string. Remind these students that they can use a formatted string by adding the letter `f` before the quotation marks and surrounding the variable’s name in curly braces."
+      },
+      "seeding_key": {
+        "activity_section.key": "0bbfc3eb-6ccb-4fbc-b539-1fb0025db1ed",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "0cdaf860-752a-4764-9e19-83486ed255e8",
+      "position": 24,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students write Python programs that accept input from the user.\n",
+        "duration": "15",
+        "name": "Asking Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cdaf860-752a-4764-9e19-83486ed255e8",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "ab654182-1fe0-47e1-8be6-929d16e73b79",
+      "position": 25,
+      "properties": {
+        "description": "“So far, we’ve been able to write Python programs that print output. But sometimes, we also want programs to accept input from the user, so the user can control what the program does.”\n\n“We can use the input function for that. The input function prints a message but then lets the user type a response. It then gives us the response as a string that we can save inside a variable.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ab654182-1fe0-47e1-8be6-929d16e73b79",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "fdfd9d18-e745-4063-9eca-d19d57320e70",
+      "position": 26,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will do, then reveal the answer."
+      },
+      "seeding_key": {
+        "activity_section.key": "fdfd9d18-e745-4063-9eca-d19d57320e70",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "30bf185b-c1b0-4b18-90ec-33da6a9ec1ec",
+      "position": 27,
+      "properties": {
+        "description": "“The input function always gives us the user’s input as a string, which is text. But if we want to use the user’s input as a number instead, we can use a different function called int to convert the string into an integer.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "30bf185b-c1b0-4b18-90ec-33da6a9ec1ec",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "29847213-3853-4a78-a8d9-4176539c468a",
+      "position": 28,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to suggest what they think the program will do, then reveal the answer.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "29847213-3853-4a78-a8d9-4176539c468a",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "da993460-71d2-46b7-9023-fb9a0647185e",
+      "position": 29,
+      "properties": {
+        "description": "“Now, let’s try writing some chatbot programs that ask the user for input, too.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "da993460-71d2-46b7-9023-fb9a0647185e",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d",
+      "position": 30,
+      "properties": {
+        "progression_name": "Asking Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "2c4933a4-5d90-4c96-889a-1eae0e6cff7e",
+      "position": 31,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 4-6.\n- Level 4: Students prompt the user for their name and print a greeting with the name.\n- Level 5: Students fix bugs in a program that prompts the user for their age.\n- Level 6: Students complete a Check Your Understanding about reading a Python program that uses inputs and variables.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check on how they are implementing each chatbot. Students might struggle with the syntax of f-strings (Python formatted strings). Remind these students about the syntax for f-strings: using an `f` before the first quotation mark and surrounding variable names in curly braces. Students might also have trouble converting inputs to integers. For these students, show them how functions can be called inside of other functions, so that the `input` function can be inside of the call to the `int` function.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 6 as an assessment opportunity to evaluate how well students understand inputs, outputs, variables, and data types. If students are confused by particular functions, like the int function, that can be a good opportunity to discuss data types again and to remind students that every Python value has a data type. If students are confused about how the total value is calculated, revisit the concept of mathematical operators in Python, showing how to add, subtract, multiply, and divide values in Python programs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c4933a4-5d90-4c96-889a-1eae0e6cff7e",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "6b967041-2fee-4bfa-a183-11ffeee5e9f8",
+      "position": 1,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students give specific examples from the code they wrote during today’s lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b967041-2fee-4bfa-a183-11ffeee5e9f8",
+        "lesson_activity.key": "bf31cf78-7621-4559-ae26-5be188699b78"
       }
     },
     {
@@ -1977,6 +2422,138 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Build a Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level3-2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Asking Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level4-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level4-2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Asking Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level5-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level5-2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Asking Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level6-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson4-level6-2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Hill Climbing in Code"
       },
       "bonus": false,
@@ -1994,7 +2571,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2016,7 +2593,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2038,7 +2615,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2060,7 +2637,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2082,7 +2659,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2104,7 +2681,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2126,7 +2703,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2148,7 +2725,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2241,6 +2818,78 @@
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1",
         "activity_section.key": "7f8e0ac5-ab69-4753-891f-fa3490a91690"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level1",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level2",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level3-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "71d6b806-76d7-4fea-99e8-0b64ce735afc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level4-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level5-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level5-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson4-level6-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson4-level6-2026"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
       }
     },
     {
