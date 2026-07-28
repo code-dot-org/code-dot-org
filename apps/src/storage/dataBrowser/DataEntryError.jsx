@@ -20,7 +20,12 @@ class DataEntryError extends React.Component {
           <Alert
             type="warning"
             className={moduleStyles.alert}
-            text={<SafeMarkdown markdown={msg.invalidDataEntryTypeError()} />}
+            text={
+              <SafeMarkdown
+                markdown={msg.invalidDataEntryTypeError()}
+                unwrapped
+              />
+            }
           />
         )}
       </div>
