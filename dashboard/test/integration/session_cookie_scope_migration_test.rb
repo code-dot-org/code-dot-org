@@ -57,7 +57,11 @@ class SessionCookieScopeMigrationTest < ActionDispatch::IntegrationTest
     with_duplicate_cookies('stale-nonsense', fresh)
 
     assert_equal user.id, signed_in_user_id, 'middleware should resolve the fresh (last) session'
-    assert_response :success
+    # An authenticated teacher hitting /home 302-redirects to their dashboard;
+    # an unauthenticated request would instead bounce to /users/sign_in. So
+    # "not sent to sign-in" is the HTTP-level confirmation the fresh session was
+    # read.
+    refute_includes response.location.to_s, '/users/sign_in'
   end
 
   test 'keep-LAST is deterministic: fresh first, stale last reads the stale (empty) session' do
