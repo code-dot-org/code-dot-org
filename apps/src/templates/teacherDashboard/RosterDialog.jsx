@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -18,20 +19,12 @@ import {
 } from './teacherSectionsRedux';
 import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
+import moduleStyles from './rosterDialog.module.scss';
+
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 const ARCHIVED_STATE = 'ARCHIVED';
-
-const ctaButtonStyle = {
-  background: color.orange,
-  color: color.white,
-  border: '1px solid #b07202',
-  borderRadius: 3,
-  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-  fontSize: 14,
-  padding: '8px 20px',
-};
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
   classrooms.length ? (
@@ -298,28 +291,28 @@ class RosterDialog extends React.Component {
             locale.loading()
           )}
         </div>
-        <div style={styles.footer}>
-          <button
+        <div className={moduleStyles.footer}>
+          <MuiButton
             id="cancel-button"
+            variant="outlined"
+            color="tertiary"
+            size="small"
             type="button"
             onClick={this.cancel}
-            style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
           >
             {locale.dialogCancel()}
-          </button>
-          <button
+          </MuiButton>
+          <MuiButton
             id="import-button-and-redirect"
+            variant="contained"
+            color="primary"
+            size="small"
             type="button"
             onClick={this.handleRedirect}
-            style={Object.assign(
-              {},
-              styles.buttonPrimary,
-              !this.state.selectedId && {opacity: 0.5}
-            )}
             disabled={!this.state.selectedId}
           >
             {locale.chooseSection()}
-          </button>
+          </MuiButton>
         </div>
       </BaseDialog>
     );
@@ -348,22 +341,6 @@ const styles = {
   highlightRow: {
     backgroundColor: color.default_blue,
     color: color.white,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 15,
-    right: 20,
-    left: 20,
-  },
-  buttonPrimary: {
-    ...ctaButtonStyle,
-    float: 'right',
-  },
-  buttonSecondary: {
-    float: 'left',
-    background: '#eee',
-    color: '#5b6770',
-    border: '1px solid #c5c5c5',
   },
 };
 export const UnconnectedRosterDialog = RosterDialog;

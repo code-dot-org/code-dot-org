@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -58,7 +59,10 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    wrapper.find('button[id="cancel-button"]').simulate('click');
+    wrapper
+      .find(MuiButton)
+      .filterWhere(button => button.prop('id') === 'cancel-button')
+      .simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
     assert.deepEqual(analyticsSpy.getCall(0).args[1], {
@@ -125,7 +129,13 @@ describe('RosterDialog', () => {
         userId={90}
       />
     );
-    expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
+    expect(
+      wrapper
+        .find(MuiButton)
+        .filterWhere(
+          button => button.prop('id') === 'import-button-and-redirect'
+        )
+    ).to.have.lengthOf(1);
   });
 
   it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
