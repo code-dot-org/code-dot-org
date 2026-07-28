@@ -19,9 +19,18 @@ export class UnitOverviewPage extends BasePage {
   /** Summary progress table; one row per lesson, one bubble per level. */
   private readonly summaryProgressTable: Locator;
 
+  /**
+   * Per-lesson progress cards, one per lesson, each showing the lesson's
+   * displayed name (unnumbered courses omit the "Lesson N" prefix). No
+   * accessible role/name is exposed, so addressed by its uitest hook class
+   * (see the feature's own ".uitest-progress-lesson" selector).
+   */
+  readonly progressLessons: Locator;
+
   constructor(page: Page) {
     super(page);
     this.summaryProgressTable = page.locator(this.summaryTableSelector);
+    this.progressLessons = page.locator('.uitest-progress-lesson');
   }
 
   /** Navigate to the unit overview page. */

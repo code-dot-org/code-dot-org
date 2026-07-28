@@ -1,6 +1,7 @@
 import {type Locator, type Page} from '@playwright/test';
 
 import {progressBubbleShows} from '../shared/progress';
+import {labLevelUrl, type LabLevelUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
 
@@ -23,10 +24,34 @@ export class LessonLevelPage extends BasePage {
    */
   readonly lessonHeaderInfo: Locator;
 
+  /** Header "More"/"Less" toggle that mounts the lesson-progress summary popup. */
+  readonly headerPopupButton: Locator;
+
+  /**
+   * Per-lesson progress cards inside the header popup, one per lesson — the
+   * same component tree (HeaderPopup -> MiniView -> ProgressTable ->
+   * ProgressLesson) as UnitOverviewPage.progressLessons. Absent from the DOM
+   * entirely until headerPopupButton is clicked. No accessible role/name is
+   * exposed, so addressed by its uitest hook class.
+   */
+  readonly progressLessons: Locator;
+
   constructor(page: Page) {
     super(page);
     this.lessonProgress = page.locator(this.progressSelector);
     this.lessonHeaderInfo = page.locator('.header_level');
+    this.headerPopupButton = page.locator('button.header_popup_link');
+    this.progressLessons = page.locator('.uitest-progress-lesson');
+  }
+
+  /** Navigate to a lab level. */
+  async gotoLevel(params: LabLevelUrlParams): Promise<void> {
+    await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
+  }
+
+  /** Open the header popup (lesson-progress summary), toggled by headerPopupButton. */
+  async openHeaderPopup(): Promise<void> {
+    await this.headerPopupButton.click();
   }
 
   /** Progress bubble for a 1-based level number (see progress.rb header_bubble_selector). */
