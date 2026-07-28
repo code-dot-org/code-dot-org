@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
   image: 'fa-regular fa-image',
@@ -41,7 +40,7 @@ export const styles = {
     textAlign: 'center',
   },
   audioIcon: {
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
     marginLeft: 'auto',
     marginRight: 'auto',
     display: 'block',
