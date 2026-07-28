@@ -23,11 +23,11 @@
   }
 
   & .modal-content {
-    // Bootstrap is @imported inside this block (above), so its own
-    // .modal-content rule compiles to this exact selector and specificity --
-    // only source order separates the two. `all: unset` used to sit here and
-    // win, which dropped bootstrap's white panel along with the chrome it was
-    // aimed at. Unset only the chrome; let the panel itself stand.
+    // Bootstrap is @imported inside `#parental-permission-modal` (above), so its own
+    // `.modal-content` rule compiles to this exact selector and specificity —
+    // only source order separates the two. `all: unset` used to sit here and win,
+    // which dropped Bootstrap's white panel along with the chrome it was aimed at.
+    // Unset only the chrome; let the panel itself stand.
     border: unset;
     box-shadow: unset;
 
