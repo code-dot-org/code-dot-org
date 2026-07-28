@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -97,7 +98,11 @@ export default class SoundPicker extends React.Component {
     }
 
     let modeSwitch;
-    let title = <p>{i18n.chooseSounds()}</p>;
+    let title = (
+      <MuiTypography variant="h3" gutterBottom>
+        {i18n.chooseSounds()}
+      </MuiTypography>
+    );
 
     modeSwitch = (
       <div id="modeSwitch">
