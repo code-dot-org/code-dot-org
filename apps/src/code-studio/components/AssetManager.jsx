@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -303,10 +304,14 @@ export default class AssetManager extends React.Component {
     const buttons = (
       <div>
         {this.state.audioErrorType === AudioErrorType.SAVE && (
-          <div>{i18n.audioSaveError()}</div>
+          <MuiTypography variant="body2" component="div">
+            {i18n.audioSaveError()}
+          </MuiTypography>
         )}
         {this.state.audioErrorType === AudioErrorType.INITIALIZE && (
-          <div>{i18n.audioInitializeError()}</div>
+          <MuiTypography variant="body2" component="div">
+            {i18n.audioInitializeError()}
+          </MuiTypography>
         )}
         {displayAudioRecorder && (
           <AudioRecorder
@@ -339,8 +344,9 @@ export default class AssetManager extends React.Component {
     if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i
-            className="fa-solid fa-spinner fa-spin"
+          <FontAwesomeV6Icon
+            iconName="spinner"
+            animationType="spin"
             style={{fontSize: '32px'}}
           />
         </div>
@@ -352,16 +358,16 @@ export default class AssetManager extends React.Component {
       const emptyText =
         this.props.allowedExtensions === '.mp3' ? (
           <div>
-            <div>
+            <MuiTypography variant="body2" component="div">
               {i18n.manageAssetsSoundLibraryMessage({
                 soundLibraryButtonText: i18n.soundLibrary(),
               })}
-            </div>
-            <div>
+            </MuiTypography>
+            <MuiTypography variant="body2" component="div">
               {i18n.manageAssetsSoundUploadMessage({
                 assetUploaderButtonText: i18n.uploadFile(),
               })}
-            </div>
+            </MuiTypography>
           </div>
         ) : (
           <MuiTypography variant="body2" component="div">
@@ -380,9 +386,7 @@ export default class AssetManager extends React.Component {
       const rows = [...this.getStarterAssetRows(), ...this.getAssetRows()];
       assetList = (
         <div>
-          <div
-            style={{maxHeight: '380px', overflowY: 'scroll', margin: '1em 0'}}
-          >
+          <div style={{maxHeight: '380px', overflowY: 'auto', margin: '1em 0'}}>
             <table style={{width: '100%'}}>
               <tbody>{rows}</tbody>
             </table>
