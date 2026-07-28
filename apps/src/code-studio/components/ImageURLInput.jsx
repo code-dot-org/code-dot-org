@@ -71,7 +71,7 @@ export default class ImageURLInput extends React.Component {
             size="small"
             sx={{alignSelf: 'flex-start'}}
           >
-            {i18n.submit()}
+            Submit
           </MuiButton>
         </form>
         {this.state.showError && (

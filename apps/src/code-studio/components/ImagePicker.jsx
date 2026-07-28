@@ -217,6 +217,7 @@ export default class ImagePicker extends React.Component {
               display: 'block',
               color: 'var(--text-error-primary)',
               fontWeight: 'bold',
+              marginBottom: '0.75em',
             }}
           >
             {i18n.warningUploadingPersonalInformation()}

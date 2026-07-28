@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -143,14 +144,14 @@ export default class SoundLibrary extends React.Component {
               selectedSound={this.state.selectedSound}
               soundsRegistry={this.sounds}
             />
-            <button
-              type="button"
-              className={'primary'}
+            <MuiButton
+              variant="contained"
+              color="primary"
               onClick={this.onClickChoose}
-              style={styles.button}
+              sx={{float: 'right', margin: '20px 0px'}}
             >
               Choose
-            </button>
+            </MuiButton>
           </div>
         )}
       </div>
@@ -164,10 +165,6 @@ const styles = {
   // .modal-content) isn't collapsed to zero.
   root: {
     display: 'flow-root',
-  },
-  button: {
-    float: 'right',
-    margin: '20px 0px',
   },
   categoryArea: {
     float: 'left',
@@ -188,6 +185,7 @@ const styles = {
   },
   categoryText: {
     fontSize: 14,
+    color: 'var(--text-neutral-primary)',
   },
   searchBarContainer: {
     width: '300px',
