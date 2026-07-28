@@ -4,8 +4,10 @@ import Shepherd, {
   type Tour,
 } from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {registerActiveTour} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
-import {navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref, tryGetSessionStorage} from '@cdo/apps/utils';
 
 // Scrolls the element to the center of the viewport only if it is not already
 // fully visible. Avoids jarring scroll when the target is already on screen.
@@ -180,6 +182,23 @@ export const createQuizWhenHandlers = (
       }
     },
   };
+};
+
+export const recordOnboardingTourAbandonment = (
+  tour: Tour,
+  sessionStorageKey: string,
+  tourName: string
+): void => {
+  const pendingHandoffStepId = tryGetSessionStorage(sessionStorageKey, '');
+  const currentStepId = tour.currentStep?.id;
+  const isHandoff =
+    pendingHandoffStepId !== '' && pendingHandoffStepId !== currentStepId;
+  if (isHandoff) return;
+
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_ABANDONED, {
+    tour_name: tourName,
+    step_id: currentStepId,
+  });
 };
 
 export const createTourWithSteps = (
