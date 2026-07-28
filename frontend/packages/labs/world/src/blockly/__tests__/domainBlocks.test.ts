@@ -1,6 +1,7 @@
-import {describe, expect, it} from 'vitest';
+import {afterEach, describe, expect, it} from 'vitest';
 
 import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from '../domainBlocks';
+import {setProjectMaps} from '../moduleOptions';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -245,5 +246,29 @@ describe('world block generators', () => {
     expect(defs['mod:animations/game']).toBe(
       'import Game from "animations/game";',
     );
+  });
+});
+
+describe('world_load_map generator', () => {
+  afterEach(() => setProjectMaps({}));
+
+  it('imports+defines each actor the map places, then populates', () => {
+    setProjectMaps({'maps/level1': ['actors/player', 'actors/coin']});
+    const defs: Record<string, string> = {};
+    const code = generatorFor('world_load_map')(
+      {getFieldValue: () => 'maps/level1'} as never,
+      {definitions_: defs, statementToCode: () => ''} as never,
+      {} as never,
+    ) as string;
+    expect(code).toBe(
+      'scene.define("actors/player", Player);\n' +
+        'scene.define("actors/coin", Coin);\n' +
+        'scene.populate(Level1);\n',
+    );
+    expect(defs['mod:actors/player']).toBe(
+      'import Player from "actors/player";',
+    );
+    expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
+    expect(defs['map:maps/level1']).toBe('import Level1 from "maps/level1";');
   });
 });

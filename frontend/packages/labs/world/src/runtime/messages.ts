@@ -81,6 +81,7 @@ export const ToPreviewMessage = {
   LOAD: 'load',
   STOP: 'stop',
   COLORS: 'colors',
+  THUMBNAILS: 'thumbnails',
 } as const;
 
 /** Import and run the module at `moduleUrl` (served same-origin by the SW). */
@@ -108,7 +109,23 @@ export interface ColorsMessage {
   border: string;
 }
 
-export type ToPreview = LoadMessage | StopMessage | ColorsMessage;
+/**
+ * Render a static thumbnail for each actor a compiled "thumbnail manifest"
+ * module lists (its default export is `{world, actors: [{type, builder}]}`). The
+ * sandbox instantiates them and draws each one's current frame — the actor
+ * picker in the map editor shows these. Reply: `ThumbnailsReadyMessage`.
+ */
+export interface ThumbnailsMessage {
+  type: typeof ToPreviewMessage.THUMBNAILS;
+  id: string;
+  moduleUrl: string;
+}
+
+export type ToPreview =
+  | LoadMessage
+  | StopMessage
+  | ColorsMessage
+  | ThumbnailsMessage;
 
 // ── Preview surface → lab ────────────────────────────────────────────────────
 
@@ -117,6 +134,7 @@ export const FromPreviewMessage = {
   BUILT: 'built',
   CONSOLE: 'console',
   ENGINE_ERROR: 'engine_error',
+  THUMBNAILS: 'thumbnails_ready',
 } as const;
 
 export interface PreviewReadyMessage {
@@ -154,11 +172,19 @@ export interface EngineErrorMessage {
   phase: 'construct' | 'tick';
 }
 
+/** Rendered actor thumbnails, keyed by actor type (module path) → data URL. */
+export interface ThumbnailsReadyMessage {
+  type: typeof FromPreviewMessage.THUMBNAILS;
+  id: string;
+  thumbnails: Record<string, string>;
+}
+
 export type FromPreview =
   | PreviewReadyMessage
   | BuiltMessage
   | ConsoleMessage
-  | EngineErrorMessage;
+  | EngineErrorMessage
+  | ThumbnailsReadyMessage;
 
 // ── Compile surface ↔ transport service worker ───────────────────────────────
 

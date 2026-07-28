@@ -9,12 +9,14 @@ import {setProjectAnimations} from './animationOptions';
 import {
   setProjectActors,
   setProjectAnimationFiles,
+  setProjectMaps,
   setProjectWorlds,
 } from './moduleOptions';
 import {projectAnimationIds} from './projectAnimations';
 import {
   projectActorOptions,
   projectAnimationFileOptions,
+  projectMapActorTypes,
   projectWorldOptions,
 } from './projectModules';
 
@@ -23,4 +25,5 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectActors(projectActorOptions(files));
   setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
+  setProjectMaps(projectMapActorTypes(files));
 }
