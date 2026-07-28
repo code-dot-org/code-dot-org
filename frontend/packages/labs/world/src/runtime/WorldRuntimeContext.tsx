@@ -54,6 +54,8 @@ interface WorldRuntimeValue {
   consoleLog: ConsoleLine[];
   clearConsole: () => void;
   status: RuntimeStatus;
+  /** True once a first compile has succeeded (compiler warm, surfaces ready). */
+  hasCompiled: boolean;
   /** Re-run the current program from the start. */
   restart: () => void;
   /** Hand the preview sandbox the lab's resolved letterbox / border colors. */
@@ -76,6 +78,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
 
   const [consoleLog, setConsoleLog] = useState<ConsoleLine[]>([]);
   const [status, setStatus] = useState<RuntimeStatus>('idle');
+  // True once the project has compiled at least once — esbuild is warm and the
+  // sandbox surfaces are up, so thumbnails can be rendered without racing the
+  // game's first compile. Flips before the game's Phaser boot, so the map editor
+  // can render its picker in parallel with the game coming up.
+  const [hasCompiled, setHasCompiled] = useState(false);
   const [previewIframe, setPreviewIframe] = useState<HTMLIFrameElement | null>(
     null,
   );
@@ -201,6 +208,9 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile
       }
+      // The compiler is now warm and the surfaces are up; let the map editor
+      // start rendering thumbnails in parallel with the Phaser boot below.
+      setHasCompiled(true);
       const detail = (await pair.preview.load(moduleUrl, assets)) as
         | ReloadReport
         | undefined;
@@ -272,6 +282,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     consoleLog,
     clearConsole: () => setConsoleLog([]),
     status,
+    hasCompiled,
     restart,
     setPreviewColors: (background, border) =>
       void managers.current?.preview.setColors(background, border),
