@@ -11,6 +11,7 @@ import {
   fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
+  DEFAULT_TEXT_BORDER_COLOR,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
 import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
@@ -22,6 +23,9 @@ import ConnectionHandles from './ConnectionHandles';
 import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './text-node.module.scss';
+
+// Matches SHAPE_BORDER_PX so text-box and shape borders look the same.
+const TEXT_BORDER_PX = 2;
 
 function TextNode({
   id,
@@ -55,10 +59,17 @@ function TextNode({
   }, [data.fontColor, data.fontSize, data.fontFamily, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
-  const rotatableStyle: React.CSSProperties = useMemo(
-    () => ({transform: `rotate(${rotation}deg)`}),
-    [rotation]
-  );
+  const strokeColor = data.strokeColor ?? DEFAULT_TEXT_BORDER_COLOR;
+  const rotatableStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {transform: `rotate(${rotation}deg)`};
+    // Only a chosen color gets inline border styles; when clear, the
+    // stylesheet's transparent border (and its hover highlight) stays active.
+    if (strokeColor !== 'transparent') {
+      style.borderColor = strokeColor;
+      style.borderWidth = TEXT_BORDER_PX;
+    }
+    return style;
+  }, [rotation, strokeColor]);
   useRotatedHandleInternals(rotation);
 
   return (

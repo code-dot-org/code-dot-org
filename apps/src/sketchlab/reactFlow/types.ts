@@ -39,6 +39,7 @@ export type ShapeNodeData = NodeDataBase & {
 
 export type TextNodeData = NodeDataBase & {
   text: string;
+  strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSize;
   fontFamily?: FontFamilyValue;
