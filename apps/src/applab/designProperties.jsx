@@ -13,6 +13,7 @@ import * as elementUtils from './designElements/elementUtils.js';
 import elementLibrary from './designElements/library';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 import designMode from './designMode';
+import moduleStyles from './designProperties.module.css';
 
 let nextKey = 0;
 
@@ -217,7 +218,11 @@ export default class DesignProperties extends React.Component {
               {applabMsg.designWorkspace_eventsTab()}
             </MuiTypography>
           </div>
-          <div id="emptyTab" style={styles.emptyTab}>
+          <div
+            id="emptyTab"
+            style={styles.emptyTab}
+            className={moduleStyles.dropdownContainer}
+          >
             <SimpleDropdown
               labelText="Choose element"
               isLabelVisible={false}
@@ -260,6 +265,8 @@ export default class DesignProperties extends React.Component {
                   gap: 1,
                   alignItems: 'end',
                   padding: 1,
+                  zIndex: 1,
+                  position: 'relative',
                 }}
               >
                 {!isOnlyScreen && (

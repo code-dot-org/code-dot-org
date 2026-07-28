@@ -56,6 +56,36 @@ $selectUserTypeButtonTextColorSelected: #fff;
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
 
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+}
+
+// Bootstramp runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+}
+
 label, input, button, select, textarea {
   font-size: 14px;
   font-weight: normal;
@@ -106,6 +136,12 @@ h1 {
   color: var(--text-brand-purple-primary);
 
   &.text-black {
+    color: var(--text-neutral-primary);
+  }
+}
+
+@include codeai-brand {
+  h1.existing-account-heading {
     color: var(--text-neutral-primary);
   }
 }
@@ -2125,6 +2161,45 @@ a.download-video {
     background-color: $blue;
     border: 1px solid $blue;
   }
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
+  }
   .neutral-button {
     background-color: $neutral_white;
     border: 2px solid $neutral_dark;
@@ -2940,7 +3015,7 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid var(--borders-info-primary);
+    border: 5px solid var(--borders-info-strong);
     background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;

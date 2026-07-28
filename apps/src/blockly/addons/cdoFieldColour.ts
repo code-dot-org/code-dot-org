@@ -66,7 +66,10 @@ export default class CdoFieldColour extends FieldColour {
     this.setColumns(this.columnsConfig || CdoFieldColour.COLUMNS);
     super.showEditor_();
     if (this.isK1) {
-      Blockly.utils.dom.addClass(this.picker, 'k1ColourDropdown');
+      Blockly.utils.dom.addClass(
+        Blockly.DropDownDiv.getContentDiv(),
+        'k1ColourDropdown'
+      );
     }
   }
 

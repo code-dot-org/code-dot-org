@@ -67,17 +67,22 @@ const CountdownRing: FC<CountdownRingProps> = ({
 
 interface VideoRecorderProps {
   onRecordingChange: (hasRecording: boolean) => void;
+  onIsRecordingChange?: (isRecording: boolean) => void;
+  recordedUrl: string | null;
+  setRecordedUrl: React.Dispatch<React.SetStateAction<string | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
 
 const VideoRecorder: FC<VideoRecorderProps> = ({
   onRecordingChange,
+  onIsRecordingChange,
+  recordedUrl,
+  setRecordedUrl,
   timeLimitSeconds = 30,
-  disabled,
+  disabled = false,
 }) => {
   const [recordingState, setRecordingState] = useState<RecordingState>('idle');
-  const [recordedUrl, setRecordedUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [timeRemaining, setTimeRemaining] = useState(timeLimitSeconds);
 
@@ -163,9 +168,11 @@ const VideoRecorder: FC<VideoRecorderProps> = ({
       const blob = new Blob(chunksRef.current, {type: 'video/webm'});
       setRecordedUrl(URL.createObjectURL(blob));
       onRecordingChange(true);
+      onIsRecordingChange?.(false);
     };
     recorderRef.current = recorder;
     recorder.start();
+    onIsRecordingChange?.(true);
     setRecordingState('recording');
 
     timerRef.current = setInterval(() => {
