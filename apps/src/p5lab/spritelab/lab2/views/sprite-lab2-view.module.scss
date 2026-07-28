@@ -55,11 +55,9 @@ $tab-item-height: 34px;
 
 .tab {
   height: $tab-item-height;
-  // Explicit: a legacy global (apps/style/common.scss `button`) puts 5px
-  // margin on every button, which floats the Code segment inside its group
-  // so the hover fill can't reach the edges.
-  margin: 0;
   padding: 0 16px;
+  // Cancel the legacy global button margin so hover fills the group.
+  margin: 0;
   // A subtle outline gives every tab item the same "button" structure, so
   // the Code+scene segmented group reads coherently next to plain tabs.
   border: 1px solid var(--borders-neutral-primary);
@@ -602,3 +600,24 @@ $tab-segment-height: $tab-item-height - 2px;
   }
 }
 
+// World-tab experiment: the scene selector leads its group, with the World
+// and Code tabs as segments after it. The group's radius clips the segments,
+// and the active segment carries its own teal edge (two tabs share the
+// group, so a group-wide edge wouldn't say which is active).
+.tabGroupWorld {
+  overflow: hidden;
+
+  .tab {
+    border-radius: 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+  }
+
+  .sceneSelect {
+    border-left: none;
+    border-radius: 0;
+  }
+
+  .tabActive {
+    box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
+  }
+}

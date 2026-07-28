@@ -24,6 +24,9 @@ const MARGIN = 12;
 // separated.
 const PREVIEW_MARGIN = 24;
 const PREVIEW_SCALE = 0.64;
+// The preview's full horizontal footprint, for siblings that must keep their
+// content clear of it (it floats over the active tab's top-right corner).
+export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 
 interface PlayspaceProps {
   mode: PlayspaceMode;
