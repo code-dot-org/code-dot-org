@@ -5,7 +5,12 @@ WebMock.disable_net_connect!(allow_localhost: true)
 class MediaProxyControllerTest < ActionController::TestCase
   IMAGE_URI = 'http://images.code.org/foo.jpg'
   BLOCKED_IMAGE_URI = 'http://www.example.com/foo.jpg'
+  SOUND_URI = 'http://audio.code.org/foo.mp3'
+  ANTHEM_URI = 'http://www.nationalanthems.info/af.mp3'
+  # Allowlisted for student web requests, but not a media source.
+  DATA_API_URI = 'http://api.themoviedb.org/foo.jpg'
   IMAGE_DATA = 'JPG_\u0000\u00FF'.force_encoding(Encoding::BINARY)
+  PUBLIC_IP = '93.184.216.34'.freeze
 
   test "should fetch proxied media in all content types" do
     content_types = [
@@ -55,6 +60,29 @@ class MediaProxyControllerTest < ActionController::TestCase
 
   test "should fail if hostname is not allowlisted" do
     get :get, params: {u: BLOCKED_IMAGE_URI}
+    assert_response 400
+    assert_includes response.body, "not in the list of allowed hostnames"
+  end
+
+  test "should fetch media from a code.org subdomain" do
+    IPSocket.stubs(:getaddress).returns(PUBLIC_IP)
+    stub_request(:get, SOUND_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'audio/mpeg'})
+    get :get, params: {u: SOUND_URI}
+    assert_response :success
+    assert_equal IMAGE_DATA, response.body
+  end
+
+  test "should fetch media from an allowlisted audio host" do
+    IPSocket.stubs(:getaddress).returns(PUBLIC_IP)
+    stub_request(:get, ANTHEM_URI).to_return(body: IMAGE_DATA, headers: {content_type: 'audio/mpeg'})
+    get :get, params: {u: ANTHEM_URI}
+    assert_response :success
+    assert_equal IMAGE_DATA, response.body
+  end
+
+  test "should fail for hostnames allowlisted only for student web requests" do
+    IPSocket.stubs(:getaddress).returns(PUBLIC_IP)
+    get :get, params: {u: DATA_API_URI}
     assert_response 400
     assert_includes response.body, "not in the list of allowed hostnames"
   end

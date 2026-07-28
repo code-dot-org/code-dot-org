@@ -1145,6 +1145,12 @@ module SharedConstants
     'upload.wikimedia.org' # Wikimedia-hosted images used in curriculum
   ].freeze
 
+  # Audio hosts the media proxy will relay. Unlike the image list, this does not
+  # feed any Content Security Policy.
+  ALLOWED_AUDIO_HOSTNAME_SUFFIXES = [
+    'nationalanthems.info' # Anthems in the Countries and Territories dataset - Public API
+  ].freeze
+
   ALLOWED_FONT_HOSTNAMES = [
     # These hostnames are used to load google fonts. Public API.
     'fonts.googleapis.com',

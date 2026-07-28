@@ -40,7 +40,11 @@ class MediaProxyController < ApplicationController
   EXPIRY_TIME = 10.years
 
   # Hostname suffixes that media proxy requests are allowed to fetch.
-  MEDIA_ALLOWED_HOSTNAME_SUFFIXES = (ALLOWED_HOSTNAME_SUFFIXES + ALLOWED_IMAGE_HOSTNAME_SUFFIXES).uniq.freeze
+  # 'code.org' is required for curriculum sounds on audio.code.org and for
+  # level HTML that references already-proxied URLs.
+  MEDIA_ALLOWED_HOSTNAME_SUFFIXES = (
+    ALLOWED_IMAGE_HOSTNAME_SUFFIXES + ALLOWED_AUDIO_HOSTNAME_SUFFIXES + %w(code.org)
+  ).freeze
 
   # Return the proxied media at the given URL.
   def get
