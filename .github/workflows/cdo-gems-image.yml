@@ -1,0 +1,189 @@
+# Builds cdo-gems, smoke-tests it on docker and podman, and publishes it from
+# staging. This also gates docker/build, since every job here builds cdo-build
+# anyway: it is unpublished, so there is nothing to pull. amd64 only.
+# See docker/gems/README.md and docker/build/README.md.
+
+name: cdo-gems-image
+
+on:
+  pull_request:
+    paths:
+      - 'docker/gems/**'
+      - 'docker/build/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'dashboard/engines/*/*.gemspec'
+      - 'dashboard/engines/*/lib/*/version.rb'
+      - '.github/workflows/cdo-gems-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/gems/**'
+      - 'docker/build/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'dashboard/engines/*/*.gemspec'
+      - 'dashboard/engines/*/lib/*/version.rb'
+      - '.github/workflows/cdo-gems-image.yml'
+  # Chained off cdo-base rather than scheduled, so the gem layer rebuilds on
+  # the base that just shipped and a failed base rebuilds nothing.
+  workflow_run:
+    workflows: [cdo-base-image]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Cancelling a publish would leave the tag set half-written.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-gems
+
+jobs:
+  # Resolve the base once and give the same digest to every build. Resolved
+  # per build instead, the builder and the final stage can land on different
+  # bases, and the extensions then ship on a base they were not compiled
+  # against.
+  #
+  # This is also where the workflow_run chain is filtered. That event fires for
+  # failed runs and for other branches, and skipping this job skips the rest.
+  resolve-base:
+    name: resolve cdo-base digest
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging')
+    permissions:
+      contents: read
+    outputs:
+      digest: ${{ steps.base.outputs.digest }}
+    steps:
+      # Takes the latest version and converts to a digest for supply chain
+      # digest pinning.
+      - name: Resolve cdo-base:latest to a digest
+        id: base
+        run: |
+          set -euxo pipefail
+          digest="$(docker buildx imagetools inspect \
+            ghcr.io/code-dot-org/cdo-base:latest \
+            --format '{{json .Manifest.Digest}}' | tr -d '"')"
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }})
+    needs: resolve-base
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [docker, podman]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    env:
+      BASE_IMAGE: ghcr.io/code-dot-org/cdo-base@${{ needs.resolve-base.outputs.digest }}
+    steps:
+      # Sparse checkout cone mode also brings the repo root, where the Gemfile lives.
+      - name: Checkout gem inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/build
+            docker/gems
+            dashboard/engines
+
+      - name: Build cdo-build with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            --build-arg BASE_IMAGE="$BASE_IMAGE" \
+            -t cdo-build:ci docker/build/
+
+      # A broken builder otherwise surfaces as a bundle install failure.
+      - name: Smoke test cdo-build
+        run: ./docker/build/smoke-test.sh cdo-build:ci ${{ matrix.engine }}
+
+      - name: Build cdo-gems with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            -f docker/gems/Dockerfile \
+            --build-arg BUILD_IMAGE=cdo-build:ci \
+            --build-arg BASE_IMAGE="$BASE_IMAGE" \
+            -t cdo-gems:smoke .
+
+      - name: Smoke test
+        run: ./docker/gems/smoke-test.sh cdo-gems:smoke ${{ matrix.engine }}
+
+  # Plain `docker build` rather than buildx: a container builder cannot see the
+  # cdo-build image this job just built, and would try to pull the tag instead.
+  build-push:
+    name: build and push
+    if: github.event_name != 'pull_request'
+    needs: [resolve-base, smoke-test]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    env:
+      BASE_IMAGE: ghcr.io/code-dot-org/cdo-base@${{ needs.resolve-base.outputs.digest }}
+    steps:
+      - name: Checkout gem inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/build
+            docker/gems
+            dashboard/engines
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-build
+        run: |
+          docker build \
+            --build-arg BASE_IMAGE="$BASE_IMAGE" \
+            -t cdo-build:ci docker/build/
+
+      # lock- is the tag downstream builds ask for. The date tag is the only
+      # immutable one: lock- and git- are re-pushed when a new base ships.
+      - name: Compute tags
+        run: |
+          {
+            echo "LOCK_TAG=lock-$(sha256sum Gemfile.lock | cut -c1-12)"
+            echo "DATE_TAG=$(date -u +%F)"
+          } >> "$GITHUB_ENV"
+
+      - name: Build cdo-gems
+        run: |
+          docker build \
+            -f docker/gems/Dockerfile \
+            --build-arg BUILD_IMAGE=cdo-build:ci \
+            --build-arg BASE_IMAGE="$BASE_IMAGE" \
+            -t "$IMAGE:git-${{ github.sha }}" \
+            -t "$IMAGE:latest" \
+            -t "$IMAGE:$LOCK_TAG" \
+            -t "$IMAGE:$DATE_TAG" \
+            .
+
+      # The matrix tested images built on other runners. These test the one
+      # actually being published.
+      - name: Smoke test cdo-build
+        run: ./docker/build/smoke-test.sh cdo-build:ci docker
+
+      - name: Smoke test cdo-gems
+        run: ./docker/gems/smoke-test.sh "$IMAGE:git-${{ github.sha }}" docker
+
+      # lock- first and latest last, so a publish that dies halfway never
+      # advertises a build downstream cannot resolve.
+      - name: Push cdo-gems
+        run: |
+          docker push "$IMAGE:$LOCK_TAG"
+          docker push "$IMAGE:git-${{ github.sha }}"
+          docker push "$IMAGE:$DATE_TAG"
+          docker push "$IMAGE:latest"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$IMAGE:latest"
