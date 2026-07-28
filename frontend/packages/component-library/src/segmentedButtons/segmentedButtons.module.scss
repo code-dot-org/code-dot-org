@@ -242,3 +242,86 @@
     }
   }
 }
+
+// CodeAI (CADS) brand overrides — see themes/README.md
+// "Component-level brand overrides"; tags/tags.module.scss is the reference
+// example. Scoped to [data-brand='codeai-next'] so legacy brands render
+// exactly as before; only CADS semantic tokens, so Dark mode comes from the
+// tokens with no [data-theme] rules.
+// The CADS design diverges from the bridge mapping in three ways: every
+// segment is a --shape-sm chip (first/middle/last alike, not just the outer
+// corners), selection uses the CADS selected/focused state families instead
+// of brand teal, and hover/focus carry a 2px ring. The second ring pixel is
+// an inset box-shadow rather than a wider border so segment geometry doesn't
+// shift; the primary/strong color variants both collapse to this one design.
+// Inter-segment spacing (the fused -1px layout vs detached chips) is a
+// sizing concern handled separately.
+[data-brand='codeai-next'] {
+  .segmentedButtons {
+    .segmentedButton {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--border-neutral-primary);
+      color: var(--text-neutral-primary);
+
+      // Repeated on :first-child/:last-child to outrank the base per-corner
+      // longhands without leaning on source order.
+      border-radius: var(--shape-sm, 0.375rem);
+
+      &:first-child,
+      &:last-child {
+        border-radius: var(--shape-sm, 0.375rem);
+      }
+
+      &:hover {
+        background-color: var(--background-neutral-secondary);
+      }
+
+      &:focus-visible {
+        background-color: var(--background-brand-light);
+        border-color: var(--border-focused-primary);
+        box-shadow: inset 0 0 0 1px var(--border-focused-primary);
+        color: var(--text-neutral-primary);
+      }
+
+      &:active {
+        background-color: var(--background-neutral-tertiary);
+        color: var(--text-neutral-secondary);
+      }
+
+      &:disabled {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--border-disabled-neutral);
+        color: var(--text-disabled-neutral);
+        box-shadow: none;
+      }
+    }
+
+    .selectedSegmentedButton.segmentedButton {
+      background-color: var(--background-selected-primary);
+      // Pairs with background-selected per colors_codeAi.css — always use
+      // the selected background/border/text tokens together.
+      border-color: var(--border-selected-primary);
+      color: var(--text-selected-primary);
+
+      &:hover {
+        background-color: var(--background-selected-primary);
+        border-color: var(--border-selected-strong);
+        box-shadow: inset 0 0 0 1px var(--border-selected-strong);
+        color: var(--text-selected-primary);
+      }
+
+      &:focus-visible {
+        background-color: var(--background-selected-primary);
+        border-color: var(--border-focused-inverse);
+        box-shadow: inset 0 0 0 1px var(--border-focused-inverse);
+        color: var(--text-selected-primary);
+      }
+
+      &:active {
+        background-color: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
+        box-shadow: none;
+      }
+    }
+  }
+}
