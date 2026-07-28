@@ -38,6 +38,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  DEFAULT_TEXT_NODE_HEIGHT,
   KEYBOARD_PAN_STEP,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
@@ -849,9 +850,11 @@ export default function ReactFlowCanvas({
         return;
       }
 
+      const defaultHeight =
+        type === 'text' ? DEFAULT_TEXT_NODE_HEIGHT : DEFAULT_NODE_HEIGHT;
       const position = screenToFlowPosition({
         x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
+        y: window.innerHeight / 2 - defaultHeight / 2,
       });
 
       const newNodeId = createUuid();
@@ -865,7 +868,7 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         width: DEFAULT_NODE_WIDTH,
-        height: DEFAULT_NODE_HEIGHT,
+        height: defaultHeight,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);

@@ -2,7 +2,11 @@ import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {
+  DEFAULT_ROTATION,
+  MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
+} from '../constants';
 import {
   fontFamilyCss,
   fontSizePx,
@@ -90,7 +94,7 @@ function TextNode({
           isVisible={selected && !data.locked}
           rotation={rotation}
           minWidth={MIN_NODE_WIDTH}
-          minHeight={MIN_NODE_HEIGHT}
+          minHeight={MIN_TEXT_NODE_HEIGHT}
         />
 
         <ConnectionHandles

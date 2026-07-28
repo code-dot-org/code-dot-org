@@ -1,8 +1,15 @@
 export const DEFAULT_NODE_WIDTH = 160;
 export const DEFAULT_NODE_HEIGHT = 120;
 
+// Text boxes start a single line tall: one line of the default 16px font at
+// 1.3 line-height, plus the text node's 8px padding and 1px border per side.
+export const DEFAULT_TEXT_NODE_HEIGHT = 40;
+
 export const MIN_NODE_WIDTH = 80;
 export const MIN_NODE_HEIGHT = 60;
+
+// Text boxes can shrink to their single-line starting height.
+export const MIN_TEXT_NODE_HEIGHT = DEFAULT_TEXT_NODE_HEIGHT;
 
 // Default rotation in degrees.
 export const DEFAULT_ROTATION = 0;
