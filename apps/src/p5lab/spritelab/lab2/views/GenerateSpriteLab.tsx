@@ -7,6 +7,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askSpriteLabAi from '../ai/askSpriteLabAi';
+import {UploadImageFunction} from '../ai/items/itemGeneration';
 import {generateBlocklyJson} from '../blockly/generateBlocklyJson';
 import {selectAvailableImageNames, selectSceneNames} from '../redux/selectors';
 import {setAiGenerateState} from '../redux/spriteLab2Redux';
@@ -31,10 +32,10 @@ function getSceneIdByName(): {[lowerCaseName: string]: string} {
 interface GenerateSpriteLabProps {
   guideMode: 'instructions' | 'aiCodeGenerate' | 'aiImageGenerate';
   instructions?: string;
-  // Load AI-generated blocks into the Code workspace.
+  /** Load AI-generated blocks into the Code workspace. */
   onCodeGenerated: (source: WorkspaceSerialization) => void;
-  // For 'aiImageGenerate': the project channel generated assets upload to.
-  channelId?: string;
+  /** Upload a generated image; undefined when there is nowhere to save it. */
+  uploadImage?: UploadImageFunction;
 }
 
 /**
@@ -47,7 +48,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
   guideMode,
   instructions,
   onCodeGenerated,
-  channelId,
+  uploadImage,
 }) => {
   const dispatch = useAppDispatch();
   const [prompt, setPrompt] = useState('');
@@ -149,7 +150,7 @@ const GenerateSpriteLab: React.FunctionComponent<GenerateSpriteLabProps> = ({
                   <hr className={moduleStyles.guideDivider} />
                 </>
               )}
-              <GenerateImageForm channelId={channelId} />
+              <GenerateImageForm uploadImage={uploadImage} />
             </>
           ) : (
             <>

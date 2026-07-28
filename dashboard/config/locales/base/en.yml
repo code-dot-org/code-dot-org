@@ -449,6 +449,10 @@ en:
       hour_of_ai: Hour of AI
       hour_of_code: "Hour of Code"
       csf: "CS Fundamentals"
+      teachers: "Teachers"
+      advocacy: "Advocacy"
+      parents: "Parents"
+      students: "Students"
 
     user:
       classroom: 'Teacher Home Page'

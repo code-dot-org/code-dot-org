@@ -6,6 +6,7 @@ import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
 import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
 import {
   ensureInjectedCategories,
@@ -119,6 +120,7 @@ export default function useBlocklyWorkspace({
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       customSimpleDialog,
+      editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
     // CDO Blockly shrinks the container by the workspace-header height to

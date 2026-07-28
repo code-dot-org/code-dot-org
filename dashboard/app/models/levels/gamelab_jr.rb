@@ -46,6 +46,11 @@ class GamelabJr < Gamelab
     Block.for(*block_pools.presence || type)
   end
 
+  # Lab2 Sprite Lab starter assets are always uploaded by UUID.
+  def add_starter_asset!(_, _)
+    true
+  end
+
   def self.standalone_app_names
     [
       ['Sprite Lab', 'spritelab'],

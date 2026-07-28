@@ -56,6 +56,36 @@ $selectUserTypeButtonTextColorSelected: #fff;
 @import "bootstrap";
 @import "bootstrap/v2-to-v3";
 
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+}
+
+// Bootstramp runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+}
+
 label, input, button, select, textarea {
   font-size: 14px;
   font-weight: normal;
@@ -430,6 +460,117 @@ img.video_thumbnail {
     .button-signin.desktop,
     .button-create-account.desktop {
       display: none;
+    }
+  }
+}
+
+// Pill nav links and outlined header buttons for codeai-next/codeai-audit;
+// default codeai keeps its square 35px/4px buttons and orange hover underline.
+@include codeai-brand {
+  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
+  .header-wrapper .headerlinks {
+    flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+  }
+
+  // marketing-nav-no-create only renders under the marketing nav (see
+  // user_header.haml), so there's no stock rule left to out-specificity here.
+  .create_menu.marketing-nav-no-create {
+    display: none;
+  }
+
+  .header-wrapper .headerlinks .headerlink {
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    // Pills never wrap to two lines; the row overflows visibly rather than
+    // silently breaking vertical rhythm.
+    white-space: nowrap;
+
+    &:hover, &:active {
+      border-bottom: none;
+      margin-top: -1px;
+      padding: 5px 10px;
+      background-color: var(--neutral-white-alpha-10);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  .header-wrapper .header_button {
+    height: 32px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+
+    &:hover, a:hover {
+      background-color: var(--neutral-white-alpha-20);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Stock markup only shows the UA outline while `.user-is-tabbing` is set
+  // (hamburger.js), which is invisible on teal; give these the same ring as
+  // the pills/buttons above for a consistent focus treatment.
+  .header-wrapper .help_button,
+  .header-wrapper #hamburger {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Signed-out Sign in / Create account: the tabbable element is the wrapping
+  // `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
+  // div nested inside it, so the `.header_button:focus-visible` rule above never
+  // engages here -- the anchor itself needs the ring.
+  .header-wrapper #signin_button,
+  .header-wrapper #create_account_button {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // This container replaces hide_on_tablet outright (see _header.html.haml);
+  // its link anchors also drop hide-mobile/hide-small-desktop, which assume a
+  // <=7-link row and would otherwise fight the two stages below. hamburger.rb's
+  // own get_header_contents() call is unaffected by this HAML change and still
+  // needs those stock classes to auto-invert hide->show for the hamburger menu.
+  .header-wrapper .headerlinks.marketing-nav {
+    #header-about {
+      margin-inline-start: auto;
+    }
+
+    // Stage 2: visible by default (>= 960px), hidden below. 960px measured
+    // (not the 900px default): the 6 remaining links start overlapping
+    // .header_right below ~950px.
+    @media (max-width: 959px) {
+      display: none;
+    }
+
+    // Stage 1: About/Donate collapse into the hamburger first; both have
+    // counterparts there. 1079px measured: the 8-link row's slack hits zero
+    // at ~1077px and labels start wrapping. Measured against us.yml's
+    // header.top.signed_out_marketing 8-link list; re-measure both stage
+    // thresholds if its labels, order, or count change.
+    @media (max-width: 1079px) {
+      #header-about, #header-donate {
+        display: none;
+      }
     }
   }
 }
@@ -1228,6 +1369,13 @@ $default-modal-width: 640px;
     @media (min-width: 1024px) and (max-width: 1268px) {
       gap: 1.5rem;
     }
+  }
+}
+// Pill spacing comes from link padding, not container gap; re-assert over
+// the small-desktop band rule above, which would double-space the pills.
+@include codeai-brand {
+  .header-wrapper .header .headerlinks {
+    gap: 0;
   }
 }
 
@@ -2822,7 +2970,7 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid var(--borders-info-primary);
+    border: 5px solid var(--borders-info-strong);
     background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;

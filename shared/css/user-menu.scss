@@ -75,8 +75,25 @@
   }
 }
 
+// .header_button already sets 32px/6px under codeai-brand (see
+// application.scss); repeated here because this file's own
+// `.user_menu, .create_menu, .help_button { height: 38px }` above loads
+// after application.scss in the sprockets manifest and would otherwise
+// win the cascade tie.
+.user_menu, .create_menu {
+  @include codeai-brand($ancestor: true) {
+    height: 32px;
+  }
+}
+
 .user_menu {
   padding: 7px 14px;
+
+  .display_name {
+    @include codeai-brand($ancestor: true) {
+      font-weight: 600;
+    }
+  }
 
   .user_options {
 
@@ -142,6 +159,16 @@
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
+
+    // fa-circle-question's solid glyph is a single white-filled disc with
+    // the question mark cut out, so the header's own background already
+    // shows through as the "glyph" color per brand -- no color change
+    // needed here, just the mock's larger 24px disc. Width matches, same
+    // glyph-advance reasoning as above.
+    @include codeai-brand($ancestor: true) {
+      font-size: 24px;
+      width: 24px;
+    }
   }
 
   .help_contents {
