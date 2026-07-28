@@ -8,6 +8,8 @@ import type {
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import Accordion from '@code-dot-org/component-library/accordion';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
@@ -16,6 +18,7 @@ import {
   projectActorOptions,
   projectWorldOptions,
 } from '../blockly/projectModules';
+import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
@@ -57,9 +60,8 @@ interface Vec {
 interface Placement {
   type: string;
   id: string;
-  properties?: {
-    positional?: {position?: Vec; scale?: Vec; rotation?: number};
-  };
+  /** Per-instance overrides, keyed by owner (trait) id then property id. */
+  properties?: Record<string, Record<string, unknown>>;
 }
 /** An actor's resolved transform, with engine defaults (scale 1, rotation 0). */
 interface Transform {
@@ -107,28 +109,43 @@ function parseMap(contents: string): MapDoc {
   }
 }
 
+// Overrides arrive as `unknown` (the generic property bag); coerce to what the
+// canvas needs, falling back when a value is absent or malformed.
+const asVec = (v: unknown): Vec | undefined =>
+  v && typeof (v as Vec).x === 'number' && typeof (v as Vec).y === 'number'
+    ? {x: (v as Vec).x, y: (v as Vec).y}
+    : undefined;
+const asNum = (v: unknown): number | undefined =>
+  typeof v === 'number' ? v : undefined;
+
+/** Read a placement's override for `owner.prop` (undefined if unset). */
+const propValue = (
+  actor: Placement,
+  ownerId: string,
+  propId: string,
+): unknown => actor.properties?.[ownerId]?.[propId];
+
 const positionOf = (actor: Placement): Vec | undefined =>
-  actor.properties?.positional?.position;
+  asVec(propValue(actor, 'positional', 'position'));
 
 /** Resolve an actor's transform, filling the engine's defaults. */
-const transformOf = (actor: Placement): Transform => {
-  const p = actor.properties?.positional;
-  return {
-    pos: p?.position ?? {x: 0, y: 0},
-    scale: p?.scale ?? {x: 1, y: 1},
-    rotation: p?.rotation ?? 0,
-  };
-};
+const transformOf = (actor: Placement): Transform => ({
+  pos: asVec(propValue(actor, 'positional', 'position')) ?? {x: 0, y: 0},
+  scale: asVec(propValue(actor, 'positional', 'scale')) ?? {x: 1, y: 1},
+  rotation: asNum(propValue(actor, 'positional', 'rotation')) ?? 0,
+});
 
-/** A copy of `actor` with the given positional properties patched in. */
-const withPositional = (
+/** A copy of `actor` with `owner.prop` set to `value`. */
+const withProperty = (
   actor: Placement,
-  patch: Partial<{position: Vec; scale: Vec; rotation: number}>,
+  ownerId: string,
+  propId: string,
+  value: unknown,
 ): Placement => ({
   ...actor,
   properties: {
     ...actor.properties,
-    positional: {...actor.properties?.positional, ...patch},
+    [ownerId]: {...actor.properties?.[ownerId], [propId]: value},
   },
 });
 
@@ -162,7 +179,7 @@ export const MapEditor = ({
   isReadOnly,
   onChange,
 }: CustomEditorProps) => {
-  const {getActorThumbnails, hasCompiled} = useWorldRuntime();
+  const {getActorInfo, hasCompiled} = useWorldRuntime();
   const {currentSources} = useSources<MultiFileSource>();
 
   const files = useMemo(
@@ -177,6 +194,7 @@ export const MapEditor = ({
 
   const [map, setMap] = useState(() => parseMap(initialContents));
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
+  const [schemas, setSchemas] = useState<Record<string, ActorSchema>>({});
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
   // `selected` is the picker template to PLACE (place mode); when null we are in
   // select mode, where `selectedId` is the placed instance under edit.
@@ -186,17 +204,12 @@ export const MapEditor = ({
   const [size, setSize] = useState<Size>({w: 0, h: 0});
   const [view, setView] = useState<View | null>(null);
   const [panning, setPanning] = useState(false);
-  // Inspector field drafts (strings so a field can be cleared mid-edit). Seeded
-  // from the selected actor on selection change and after a drag; a numeric edit
-  // applies live and commits on blur, an id edit renames on blur.
-  const [draft, setDraft] = useState<{
-    x: string;
-    y: string;
-    sx: string;
-    sy: string;
-    rot: string;
-    id: string;
-  }>({x: '', y: '', sx: '', sy: '', rot: '', id: ''});
+  // Inspector field drafts keyed by field name: `id`, or `${ownerId}.${propId}`
+  // for a scalar, or `${ownerId}.${propId}.x` / `.y` for a vector component.
+  // Strings so a field can be cleared mid-edit; seeded from the selected actor on
+  // selection change and after a drag; a scalar edit applies live + commits on
+  // blur, an id edit renames on blur.
+  const [draft, setDraft] = useState<Record<string, string>>({});
 
   const stageRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -223,14 +236,14 @@ export const MapEditor = ({
     moved: boolean;
   } | null>(null);
 
-  // `getActorThumbnails` is a fresh closure each render; hold it in a ref so the
-  // fetch effect doesn't re-run every render.
-  const thumbFn = useRef(getActorThumbnails);
-  thumbFn.current = getActorThumbnails;
+  // `getActorInfo` is a fresh closure each render; hold it in a ref so the fetch
+  // effect doesn't re-run every render.
+  const infoFn = useRef(getActorInfo);
+  infoFn.current = getActorInfo;
 
-  // Fetch thumbnails as soon as the project has compiled once (compiler warm,
-  // surfaces up) and we have actors + a world to render them in — not waiting
-  // for the game to finish booting. Merge so new templates fill in.
+  // Introspect the actor templates (thumbnails + property schemas) as soon as the
+  // project has compiled once (compiler warm, surfaces up) and we have actors + a
+  // world — not waiting for the game to boot. Merge so new templates fill in.
   useEffect(() => {
     const paths = actorOptions.map(([, path]) => path);
     if (!hasCompiled || !paths.length || !worldPath) {
@@ -240,9 +253,10 @@ export const MapEditor = ({
       return;
     }
     let alive = true;
-    void thumbFn.current(paths, worldPath).then(rendered => {
+    void infoFn.current(paths, worldPath).then(info => {
       if (alive) {
-        setThumbnails(prev => ({...prev, ...rendered}));
+        setThumbnails(prev => ({...prev, ...info.thumbnails}));
+        setSchemas(prev => ({...prev, ...info.schemas}));
       }
     });
     return () => {
@@ -367,16 +381,18 @@ export const MapEditor = ({
     return undefined;
   };
 
-  // Live-patch a placed actor's transform (local only — a drag or field edit
-  // commits once on release / blur).
-  const setPositional = (
+  // Live-patch a placed actor's `owner.prop` override (local only — a drag or
+  // field edit commits once on release / blur).
+  const setProperty = (
     id: string,
-    patch: Partial<{position: Vec; scale: Vec; rotation: number}>,
+    ownerId: string,
+    propId: string,
+    value: unknown,
   ) => {
     const next = {
       ...mapRef.current,
       actors: mapRef.current.actors.map(a =>
-        a.id === id ? withPositional(a, patch) : a,
+        a.id === id ? withProperty(a, ownerId, propId, value) : a,
       ),
     };
     mapRef.current = next;
@@ -396,57 +412,99 @@ export const MapEditor = ({
   const selectedActor = selectedId
     ? (map.actors.find(a => a.id === selectedId) ?? null)
     : null;
+  // The selected type's editable schema (trait groups), introspected in the
+  // sandbox; empty until it arrives, or `[]` when nothing is selected.
+  const selectedSchema: ActorSchema = selectedActor
+    ? (schemas[selectedActor.type] ?? [])
+    : [];
 
+  const fieldKey = (prop: PropertySchema, axis?: 'x' | 'y') =>
+    axis
+      ? `${prop.ownerId}.${prop.propId}.${axis}`
+      : `${prop.ownerId}.${prop.propId}`;
+
+  // The property's current value: the placement's override, else the default.
+  const valueOf = (actor: Placement, prop: PropertySchema): unknown =>
+    propValue(actor, prop.ownerId, prop.propId) ?? prop.default;
+
+  // Seed every field draft from the selected actor's schema + current values.
   const seedDraft = (actor: Placement | null) => {
     if (!actor) {
-      setDraft({x: '', y: '', sx: '', sy: '', rot: '', id: ''});
+      setDraft({});
       return;
     }
-    const t = transformOf(actor);
-    setDraft({
-      x: String(Math.round(t.pos.x)),
-      y: String(Math.round(t.pos.y)),
-      sx: String(t.scale.x),
-      sy: String(t.scale.y),
-      rot: String(t.rotation),
-      id: actor.id,
-    });
+    const next: Record<string, string> = {id: actor.id};
+    for (const group of schemas[actor.type] ?? []) {
+      for (const prop of group.props) {
+        const value = valueOf(actor, prop);
+        if (prop.type === 'vector') {
+          const v = asVec(value) ?? {x: 0, y: 0};
+          next[fieldKey(prop, 'x')] = String(v.x);
+          next[fieldKey(prop, 'y')] = String(v.y);
+        } else if (prop.type !== 'boolean') {
+          next[fieldKey(prop)] = String(value ?? '');
+        }
+      }
+    }
+    setDraft(next);
   };
 
-  // Seed the drafts on selection change ONLY — not on every position change, so
-  // a live field edit or a canvas drag doesn't clobber the field mid-type. A
-  // drag re-seeds explicitly on release (endGesture).
+  // Re-seed on selection change, or when the schema for the type arrives (it
+  // loads async). NOT on every value change — a live edit or drag must not
+  // clobber a field mid-type; a drag re-seeds explicitly on release.
   useEffect(() => {
     seedDraft(mapRef.current.actors.find(a => a.id === selectedId) ?? null);
-    // Seed on selection alone: `map`/`seedDraft` are deliberately not deps so
-    // live edits and drags don't re-seed the field mid-type.
-  }, [selectedId]);
+  }, [selectedId, schemas]);
 
-  // A numeric field edit (position / scale / rotation): keep the raw draft and,
-  // if it parses, apply it to the actor's transform live.
-  const editNum = (key: 'x' | 'y' | 'sx' | 'sy' | 'rot', value: string) => {
-    setDraft(d => ({...d, [key]: value}));
+  // Edit a scalar field: number applies parsed, string as-is; keep the draft.
+  const editScalar = (prop: PropertySchema, value: string) => {
+    setDraft(d => ({...d, [fieldKey(prop)]: value}));
+    if (!selectedActor) {
+      return;
+    }
+    if (prop.type === 'number') {
+      const n = Number(value);
+      if (value.trim() === '' || !Number.isFinite(n)) {
+        return;
+      }
+      setProperty(selectedActor.id, prop.ownerId, prop.propId, n);
+    } else {
+      setProperty(selectedActor.id, prop.ownerId, prop.propId, value);
+    }
+  };
+
+  // Edit one component of a vector field.
+  const editVector = (prop: PropertySchema, axis: 'x' | 'y', value: string) => {
+    setDraft(d => ({...d, [fieldKey(prop, axis)]: value}));
     const n = Number(value);
     if (value.trim() === '' || !Number.isFinite(n) || !selectedActor) {
       return;
     }
-    const t = transformOf(selectedActor);
-    const patch =
-      key === 'x'
-        ? {position: {x: n, y: t.pos.y}}
-        : key === 'y'
-          ? {position: {x: t.pos.x, y: n}}
-          : key === 'sx'
-            ? {scale: {x: n, y: t.scale.y}}
-            : key === 'sy'
-              ? {scale: {x: t.scale.x, y: n}}
-              : {rotation: n};
-    setPositional(selectedActor.id, patch);
+    const cur = asVec(valueOf(selectedActor, prop)) ?? {x: 0, y: 0};
+    setProperty(selectedActor.id, prop.ownerId, prop.propId, {
+      x: axis === 'x' ? n : cur.x,
+      y: axis === 'y' ? n : cur.y,
+    });
+  };
+
+  // Toggle a boolean — a discrete action, so commit immediately.
+  const toggleBool = (prop: PropertySchema, checked: boolean) => {
+    if (!selectedActor) {
+      return;
+    }
+    commit({
+      ...mapRef.current,
+      actors: mapRef.current.actors.map(a =>
+        a.id === selectedActor.id
+          ? withProperty(a, prop.ownerId, prop.propId, checked)
+          : a,
+      ),
+    });
   };
 
   const editId = (value: string) => setDraft(d => ({...d, id: value}));
 
-  // Persist a numeric edit (writes the `.map`, recompiles) — on blur / Enter.
+  // Persist an in-progress edit (writes the `.map`, recompiles) — on blur/Enter.
   const commitEdit = () => {
     if (selectedId) {
       commit(mapRef.current);
@@ -454,13 +512,12 @@ export const MapEditor = ({
   };
 
   // Apply an id rename on blur / Enter. Rejects an empty name or one already
-  // taken by another actor (which would make selection ambiguous), reverting
-  // the draft to the current id.
+  // taken by another actor (which would make selection ambiguous), reverting.
   const applyRename = () => {
     if (!selectedActor) {
       return;
     }
-    const next = draft.id.trim();
+    const next = draft.id?.trim() ?? '';
     const taken = mapRef.current.actors.some(
       a => a.id === next && a !== selectedActor,
     );
@@ -485,22 +542,64 @@ export const MapEditor = ({
     }
   };
 
-  // A numeric transform field (DSCO TextField): edits live, commits on blur.
-  const numberField = (key: 'x' | 'y' | 'sx' | 'sy' | 'rot', label: string) => (
-    <TextField
-      name={`actor-${key}`}
-      label={label}
-      inputType="number"
-      size="s"
-      value={draft[key]}
-      disabled={isReadOnly}
-      onChange={(event: ChangeEvent<HTMLInputElement>) =>
-        editNum(key, event.target.value)
-      }
-      onBlur={commitEdit}
-      onKeyDown={blurOnEnter}
-    />
-  );
+  const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+  // Render one property's editor by type: number/string → a field, vector → an
+  // X/Y pair, boolean → a checkbox.
+  const renderProp = (actor: Placement, prop: PropertySchema) => {
+    if (prop.type === 'boolean') {
+      return (
+        <Checkbox
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          label={capitalize(prop.name)}
+          checked={Boolean(valueOf(actor, prop))}
+          disabled={isReadOnly}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            toggleBool(prop, event.target.checked)
+          }
+        />
+      );
+    }
+    if (prop.type === 'vector') {
+      return (
+        <div key={fieldKey(prop)} className={styles.inspectorGrid}>
+          {(['x', 'y'] as const).map(axis => (
+            <TextField
+              key={axis}
+              name={`prop-${fieldKey(prop, axis)}`}
+              label={`${capitalize(prop.name)} ${axis.toUpperCase()}`}
+              inputType="number"
+              size="s"
+              value={draft[fieldKey(prop, axis)] ?? ''}
+              disabled={isReadOnly}
+              onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                editVector(prop, axis, event.target.value)
+              }
+              onBlur={commitEdit}
+              onKeyDown={blurOnEnter}
+            />
+          ))}
+        </div>
+      );
+    }
+    return (
+      <TextField
+        key={fieldKey(prop)}
+        name={`prop-${fieldKey(prop)}`}
+        label={capitalize(prop.name)}
+        inputType={prop.type === 'number' ? 'number' : 'text'}
+        size="s"
+        value={draft[fieldKey(prop)] ?? ''}
+        disabled={isReadOnly}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          editScalar(prop, event.target.value)
+        }
+        onBlur={commitEdit}
+        onKeyDown={blurOnEnter}
+      />
+    );
+  };
 
   const beginPan = (event: ReactPointerEvent, v: View) => {
     panRef.current = {
@@ -579,12 +678,12 @@ export const MapEditor = ({
     if (drag) {
       drag.moved = true;
       const world = screenToWorld(event.clientX, event.clientY);
-      setPositional(drag.id, {
-        position: snap(
-          {x: world.x + drag.offX, y: world.y + drag.offY},
-          event.altKey,
-        ),
-      });
+      setProperty(
+        drag.id,
+        'positional',
+        'position',
+        snap({x: world.x + drag.offX, y: world.y + drag.offY}, event.altKey),
+      );
       return;
     }
     const pan = panRef.current;
@@ -823,7 +922,7 @@ export const MapEditor = ({
               name="actor-id"
               label="ID"
               size="s"
-              value={draft.id}
+              value={draft.id ?? ''}
               disabled={isReadOnly}
               onChange={(event: ChangeEvent<HTMLInputElement>) =>
                 editId(event.target.value)
@@ -831,13 +930,20 @@ export const MapEditor = ({
               onBlur={applyRename}
               onKeyDown={blurOnEnter}
             />
-            <div className={styles.inspectorGrid}>
-              {numberField('x', 'Pos X')}
-              {numberField('y', 'Pos Y')}
-              {numberField('sx', 'Scale X')}
-              {numberField('sy', 'Scale Y')}
-            </div>
-            {numberField('rot', 'Rotation°')}
+            {selectedSchema.length > 0 && (
+              <Accordion
+                className={styles.inspectorAccordion}
+                items={selectedSchema.map(group => ({
+                  id: group.trait,
+                  label: group.traitName,
+                  content: (
+                    <div className={styles.inspectorGroup}>
+                      {group.props.map(prop => renderProp(selectedActor, prop))}
+                    </div>
+                  ),
+                }))}
+              />
+            )}
           </div>
         )}
       </div>

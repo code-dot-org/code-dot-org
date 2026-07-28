@@ -178,17 +178,39 @@
   gap: 0.5rem;
 }
 
-/* DSCO's FormFieldWrapper defaults to min-width 18.75rem, which overflows this
-   narrow panel (the horizontal scroll) and blocks the half-width pairs. Override
-   it by specificity — the wrapper is a <label>, direct child of the panel or the
-   grid — and let each field fill its column. */
-.inspector > label,
-.inspectorGrid > label {
+/* One trait's property fields, inside its accordion panel. */
+.inspectorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* The trait accordion fills the panel width; each collapsible section is a
+   native <details> the DSCO Accordion styles. */
+.inspectorAccordion {
+  width: 100%;
+  gap: 0.25rem;
+}
+
+/* Doubling class here to ensure it overrides base styles */
+.inspectorAccordion.inspectorAccordion details summary {
+  padding: 0.125rem 0.5rem;
+}
+
+.inspectorAccordion.inspectorAccordion details summary strong {
+  font-size: small;
+}
+
+/* DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem, which
+   overflows this narrow panel (the horizontal scroll) and blocks the half-width
+   pairs. Override it by specificity and let each field fill its column. */
+.inspector label {
   width: 100%;
   min-width: 0;
 }
 
-.inspector input {
+.inspector input:not([type='checkbox']) {
   box-sizing: border-box;
   width: 100%;
   min-width: 0;
