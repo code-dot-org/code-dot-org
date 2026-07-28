@@ -192,6 +192,9 @@ class ProjectsController < ApplicationController
     },
     music_dance_ai: {
       name: "New Music Dance AI Project"
+    },
+    sketchlab: {
+      name: 'New Sketch Lab Project'
     }
     # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
@@ -482,7 +485,6 @@ class ProjectsController < ApplicationController
 
     if params[:key] == 'dance'
       @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
-      replay_video_view_options unless sharing || readonly
     end
 
     begin
@@ -720,7 +722,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab weblab2).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)

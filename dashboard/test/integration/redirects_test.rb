@@ -44,6 +44,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/flappy/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/flappy/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/flappy/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
 
     cookies.delete('language_')
@@ -53,6 +56,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/playlab/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/s/playlab/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
 
     cookies.delete('language_')
@@ -62,6 +68,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/artist/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
     follow_redirect!
     assert_redirected_to '/s/artist/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
+    assert_redirected_to '/ar/s/artist/lessons/1/levels/1?lang=ar-SA'
+    follow_redirect!
     assert_equal 'ar-SA', cookies[:language_]
   end
 
@@ -70,36 +79,62 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/?set_locale=es&lang=es'
     follow_redirect!
     assert_redirected_to '/?lang=es'
+    follow_redirect!
+    assert_redirected_to '/es/?lang=es'
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
+
+    cookies.delete('language_')
+    cookies.delete('ge_region')
 
     get '/s/frozen/lang/es'
     assert_redirected_to '/s/frozen?set_locale=es&lang=es'
     follow_redirect!
     assert_redirected_to '/s/frozen?lang=es'
+    follow_redirect!
+    assert_redirected_to '/es/s/frozen?lang=es'
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
+
+    cookies.delete('language_')
+    cookies.delete('ge_region')
 
     get "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1/lang/es"
     assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?set_locale=es&lang=es"
     follow_redirect!
     assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
+    follow_redirect!
+    assert_redirected_to "/es/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
+    follow_redirect!
     assert_equal 'es-ES', cookies[:language_]
   end
 
   test 'redirects urls with stage and puzzle to lessons and levels' do
+    unit = create(:script, name: 'allthethings')
+    create(:unit_group_unit, position: 1, script: unit, unit_group: create(:unit_group, name: 'original-allthethings-course'))
+    lesson_group = create(:lesson_group, script: unit)
+    # lesson 1: plain level; lesson 2: sublevels; lesson 3: multi-page level.
+    lesson_1 = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 1, relative_position: '1')
+    create(:script_level, script: unit, lesson: lesson_1)
+    lesson_2 = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 2, relative_position: '2')
+    create(:script_level, script: unit, lesson: lesson_2, levels: [create(:bubble_choice_level, :with_sublevels)])
+    lesson_3 = create(:lesson, script: unit, lesson_group: lesson_group, absolute_position: 3, relative_position: '3')
+    create(:script_level, script: unit, lesson: lesson_3, levels: [create(:level_group, :with_sublevels)], assessment: true)
+
     get '/s/allthethings/stage/1/puzzle/1'
     assert_redirected_to '/s/allthethings/lessons/1/levels/1'
     follow_redirect!
     assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/1/levels/1'
 
-    get '/s/allthethings/stage/40/puzzle/1/sublevel/1'
-    assert_redirected_to '/s/allthethings/lessons/40/levels/1/sublevel/1'
+    get '/s/allthethings/stage/2/puzzle/1/sublevel/1'
+    assert_redirected_to '/s/allthethings/lessons/2/levels/1/sublevel/1'
     follow_redirect!
-    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/40/levels/1/sublevel/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/2/levels/1/sublevel/1'
 
-    get '/s/allthethings/stage/33/puzzle/1/page/1'
-    assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
+    get '/s/allthethings/stage/3/puzzle/1/page/1'
+    assert_redirected_to '/s/allthethings/lessons/3/levels/1/page/1'
     follow_redirect!
-    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/33/levels/1/page/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/3/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.

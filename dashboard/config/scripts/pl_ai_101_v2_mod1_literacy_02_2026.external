@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI Fluency
+# Digital Fluency
 
-You, your students, or fellow educators may have some misconceptions around AI fluency.
+You, your students, or fellow educators may have some misconceptions around digital fluency.
 
-> 💬 **Quick Reflection:** As you review the chart below try to identify any misconceptions you have heard about AI literacy. Where did these misconceptions come from?
+> 💬 **Quick Reflection:** As you review the chart below try to identify any misconceptions you have heard about digital fluency. Where did these misconceptions come from?
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 
@@ -16,7 +16,7 @@ You, your students, or fellow educators may have some misconceptions around AI f
 <div style="display:flex; flex-wrap:wrap; gap:16px;">
 
 <div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Fluency Is</div>
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Digital Fluency Is</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">
@@ -63,7 +63,7 @@ You, your students, or fellow educators may have some misconceptions around AI f
 </div>
 
 <div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">AI Fluency Is NOT</div>
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Digital Fluency Is NOT</div>
 <div style="padding:14px 16px 16px 16px;">
 
 <div style="display:flex; align-items:flex-start; margin-bottom:10px;">
@@ -113,5 +113,7 @@ You, your students, or fellow educators may have some misconceptions around AI f
 
 </div>
 
-AI literacy is a foundational understanding of AI, how it works, and how it impacts our lives. It is a key component of using AI safely and taking part in the ongoing dialogue around how AI is used in the world today.
+<br>
+
+Digital fluency is a foundational understanding of AI, how it works, and how it impacts our lives. It is a key component of using AI safely and taking part in the ongoing dialogue around how AI is used in the world today.
 MARKDOWN

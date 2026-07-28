@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:07.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-ffa5b68a-f736-4f81-b93a-59956f6b2a35",
+        "text": "Artificial Intelligence, or AI, might seem like magic at times. But it's not. Every AI system you encounter was designed and built by people.",
+        "imageUrl": "https://images.code.org/3d187e66396a97119e03a2b5454c9a73-sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-panel-1-cd2ab210-8dfb-4382-bde2-d634575d83a3.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-e1323537-61fc-4ad6-8d5d-bab064a18299",
+        "text": "Just like any human creation, the choices made during AI development have significant consequences.",
+        "imageUrl": "https://images.code.org/c4fd8bbd4492e7e4f80cdfd354480dae-sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-panel-2-8f1e3793-04b9-42f8-be37-b7235ac5a083.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-6dace75c-348d-4dee-aa21-5deb7f29547a",
+        "text": "Thoughtful design can lead to powerful solutions, like AI helping doctors diagnose diseases faster or making our cities more efficient and accessible.",
+        "imageUrl": "https://images.code.org/6b3e70b639d4773d370e97adb97673d7-sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-panel-3-a77ed478-f002-4753-a8e7-0114c035fe93.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-75363c11-e3c0-4a65-a284-aaf1d5152deb",
+        "text": "However, poor design choices, or unintended consequences, can perpetuate biases, create unfairness, or even cause harm to individuals and communities.",
+        "imageUrl": "https://images.code.org/1f8dd2003b168dd527ca016f58ebff87-sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-panel-4-9b502359-9921-44e6-adbf-40a4d7225711.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-76380071-1de3-472a-a956-508c198c9432",
+        "text": "Understanding how AI works and considering its real-world impact is crucial. As future designers and users of AI, we all play a role in shaping a responsible and equitable technological future.",
+        "imageUrl": "https://images.code.org/793999d239216a7ed41f71c3948cc43f-sample-aid-sc2-unit-generation-lesson-15-intro-societal-impact-panel-5-6bc877ca-43e1-4f3e-bb94-295aaa09c41b.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce students to the idea that artificial intelligence systems are designed by people and have significant real-world impacts on society and individuals. Explain that design choices made during AI development carry consequences, both positive and negative."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:07:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:07:57 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

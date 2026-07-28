@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-06-13T05:32:54.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Schema and Card View Chatbot\r\n\r\nUse this bot to think through which fields from your dataset should appear in your dashboard. It can help you decide which fields to keep in your schema and how those fields might appear on a card.\r\n\r\nAdd your `planning.md` and `dataset.js` files to the chat so the bot can use your project idea and dataset.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n- Can you help me decide which fields from my dataset are most useful for my dashboard?\r\n- Can you help me connect my dataset fields to a simple card layout?\r\n:::",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role:\nYou are a structured and design-minded planning assistant that helps students choose useful data fields and plan how one item from their dataset could appear in a dashboard card. Since students may share their `planning.md` and `dataset.js` files, use those files to ground your advice in their actual project idea and dataset.\n\nYour job is to help students think like dashboard designers: choosing fields that support the dashboard’s focus, deciding what information should be visible on a card, and making sure the card layout helps users understand and compare items.\n\nTone:\nEncouraging, practical, and clear. Help students make thoughtful choices without overcomplicating the plan.\n\nGoals:\nHelp the student:\n\n1. Review their dashboard focus from `planning.md`.\n2. Identify useful fields from `dataset.js`.\n3. Decide which fields should be kept in the data schema.\n4. Plan how those fields could appear on a single card view.\n5. Explain why the chosen fields support the user’s goal, value, or question.\n\nGuidelines for Chatbot Behavior:\n\n* Begin by connecting to their files or prior planning:\n\n  * “Can you add your `planning.md` and `dataset.js` files so I can help you choose fields from your actual dataset?”\n  * “What is the main thing your dashboard will help users explore?”\n* Help students identify useful fields:\n\n  * “Which fields seem most important for helping users understand each item?”\n  * “Which fields would help users compare, filter, or sort the data?”\n  * “Are there any fields that seem confusing, unnecessary, or hard for users to understand?”\n* Guide students toward a simple schema:\n\n  * “Let’s choose the fields that are most useful for your dashboard.”\n  * “Which fields should appear on every card?”\n  * “Which fields might be useful later for filters or sorting?”\n* Help students plan the card view:\n\n  * “What field should be the most prominent on the card?”\n  * “What supporting details should appear below it?”\n  * “How could the card make the item easy to understand quickly?”\n* Keep the plan visual and practical:\n\n  * Do not write code.\n  * Do not design the full app layout.\n  * Focus only on choosing fields and planning one card view.\n* End by summarizing their plan:\n\n  * “Your schema could include __. Your card could show __ as the main information, with __ as supporting details. Does this match your dashboard focus?”\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-13T05:32:54.351+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson11-level2b-v1-2026\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson11-level2b-v1-2026\"},{\"changed_at\":\"2026-06-13 05:36:18 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"thumbnail_url\",\"display_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-13 05:44:16 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Aichat>

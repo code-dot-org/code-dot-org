@@ -1,5 +1,6 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T21:39:59.000Z",
   "level_num": "custom",
@@ -41,7 +42,7 @@
       ]
     },
     "encrypted": "false",
-    "long_instructions": "## Progress Bar\r\n\r\n**Goal**: Use a **for loop** to make the bar fill from 0% to 100% in 10% increments. Each step appears one after another with a short pause.\r\n\r\n---\r\n\r\n### Do This\r\n\r\n1. **Find where to write your loop** inside the `fillBar()` function.\r\n\r\n2. Use a **for loop** that starts at 10 and ends at 100, counting by 10.\r\n   \r\n3. Inside your loop, use the loop variable to change the bar's width. \r\n\t\r\n    **Syntax:**\r\n\r\n   ```js\r\n   bar.style.width = \"50%\";\r\n   ```\r\n\r\n4. Use `setTimeout()` to delay each step so the fill happens over time.\r\n\r\n   * Hint: multiply your delay by the **loop variable** to stagger the timing.\r\n\r\n5. Make sure to **reset the bar** to `\"0%\"` before running your loop again.\r\n\r\n---\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I use a for loop to fill the bar in 10% steps?\"</li>\r\n  \t\t<li>\"How does setTimeout make the bar move gradually?\"</li>\r\n  \t\t<li>\"What does the loop variable control here?\"</li>\r\n    </ol>\r\n\r\n</details>",
+    "long_instructions": "## Progress Bar\r\n**Goal:** Use a **for loop** to fill the bar from 0% to 100% in 10% increments, with a short pause between each step so it animates.\r\n\r\n### Do This\r\n1. Reset the bar, then loop from 10 to 100 counting by 10.\r\n2. Use the loop variable to set the bar's width each step.\r\n3. Use `setTimeout()` to stagger the steps so the fill animates over time.\r\n\r\n<details>\r\n  <summary>Need help? Ask the AI Tutor.</summary>\r\n  \t<ol>\r\n      \t<li>\"How can I use a for loop to fill the bar in 10% steps?\"</li>\r\n  \t\t<li>\"How does setTimeout make the bar move gradually?\"</li>\r\n  \t\t<li>\"What does the loop variable control here?\"</li>\r\n    </ol>\r\n</details>\r\n\r\n",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
@@ -52,21 +53,33 @@
       "isPredictLevel": false,
       "solution": "",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
       "placeholderText": "",
       "multipleChoiceOptions": [
         ""
       ],
       "freeResponseHeight": 50,
-      "codeEditableAfterSubmit": false
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
     },
     "encrypted_exemplar_sources": "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\nuQnjSaOy5DCYZ9ANtAPFyytCg9c=\n",
     "display_name": "Progress Bar",
     "thumbnail_url": "https://images.code.org/e97c051dfefbcb5b7e3c5a6fbdabf5b9-progress-bar.png",
     "bubble_choice_description": "Use a for loop to make a progress bar fill from 0% to 100%.",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "buildJavaScript",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "level_system_prompt": "You generate starter JavaScript for a beginner CS exercise. The student must fill the fillBar() function so a progress bar fills from 0% to 100% in 10% steps, animated with a pause between each step.\r\n\r\nWrite the solution inside fillBar(). Reset the bar to \"0%\" first. Use a single explicit for loop that starts at 10, ends at 100, and counts by 10. Inside the loop, use setTimeout() to stagger each step, multiplying the delay by the loop variable so steps appear over time. Set the bar width with bar.style.width and the loop variable (e.g. bar.style.width = i + \"%\").\r\n\r\nRules: ES6 syntax (const/let, arrow functions). Use a for loop, never forEach or array methods. No helper functions or abstraction. Write directly to the existing bar variable. Keep it short, with brief comments a 9th grader can follow.",
+    "teacher_markdown": "### **Teacher Tips**\r\n\r\n **Students may expect the loop to animate by itself**\r\n\r\nSome students will write the loop correctly but be surprised when the progress bar jumps straight to 100%. Help them understand why `setTimeout()` is needed by asking: **\"How can we make each loop iteration happen at a different time instead of all at once?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nfor (let percent = 0; percent <= 100; percent += 10) {\r\n  setTimeout(() => {\r\n    bar.style.width = percent + \"%\";\r\n  }, percent * 30);\r\n}\r\n```\r\n\r\nThis reinforces that the loop schedules the updates, while `setTimeout()` creates the animation.\r\n\r\n---\r\n\r\n**Students may not connect the loop variable to the width**\r\n\r\nSome students may hard-code values instead of using the loop variable. Encourage them to trace the changing value by asking: **\"Which variable already contains 0, 10, 20, ..., 100?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nbar.style.width = percent + \"%\";\r\n```\r\n\r\nThis helps students recognize that one loop variable can control every step of the animation.\r\n\r\n---\r\n\r\n**Students may forget to reset the progress bar**\r\n\r\nStudents often click the button multiple times and wonder why the animation starts at the end. Ask: **\"What should the progress bar look like before the loop begins?\"**\r\n\r\nRelevant code:\r\n```javascript\r\nbar.style.width = \"0%\";\r\n```\r\n\r\nThis reinforces the idea of resetting the program state before starting a new animation.\r\n\r\n---\r\n\r\n**Students may change the loop but not the timing**\r\n\r\nSome students will correctly count by 10 but use the same delay for every iteration. Encourage them to think about the timing by asking: **\"If every `setTimeout()` uses the same delay, when will all the updates happen?\"**\r\n\r\nRelevant code:\r\n```javascript\r\n}, percent * 30);\r\n```\r\n\r\nThis helps students understand that the delay should increase with each iteration to create a smooth animation."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:59.855+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level6b-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level6b-test_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:39:59.855+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson2-level6b-test_2025-pilot\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson2-level6b-test_2025-pilot\"},{\"changed_at\":\"2026-06-09 20:58:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-09 21:05:44 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-29 18:10:34 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Weblab2>

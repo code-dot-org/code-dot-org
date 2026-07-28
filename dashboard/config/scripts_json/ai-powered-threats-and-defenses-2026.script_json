@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 22:36:09 UTC",
+    "serialized_at": "2026-07-10 21:26:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6614,38 +6614,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/resources",
-      "key": "all_resources_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/resources",
+      "key": "all_resources_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_3"
+        "resource.key": "all_resources_9"
       }
     },
     {
       "name": "All Standards",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/standards",
-      "key": "all_standards_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/standards",
+      "key": "all_standards_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_3"
+        "resource.key": "all_standards_9"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-2026/units/5/vocab",
-      "key": "all_vocabulary_3",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/4/vocab",
+      "key": "all_vocabulary_9",
       "properties": {
-        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_3"
+        "resource.key": "all_vocabulary_9"
       }
     },
     {
@@ -6820,10 +6817,11 @@
     },
     {
       "name": "Designing Secure Systems",
-      "url": "https://docs.google.com/presentation/d/1G2R8-LwkTCjdWFDNNzJzs72oaMSv_O46HfNPUHE8PYs/view",
+      "url": "https://docs.google.com/presentation/d/1U7Gap63attAW_8PPuzk30xCSatwGLtU0wPvCcG0ROn4/edit?usp=sharing",
       "key": "designing_secure_systems",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7447,19 +7445,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_3",
+        "resource.key": "all_resources_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_3",
+        "resource.key": "all_standards_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_3",
+        "resource.key": "all_vocabulary_9",
         "script.name": "ai-powered-threats-and-defenses-2026"
       }
     }
@@ -8205,6 +8203,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: AI in Encryption",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: AI in Encryption",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-ET-40"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: AI in Encryption",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Security vs Usability",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-21"
@@ -8222,6 +8241,27 @@
         "lesson.key": "Lesson 11: Security vs Usability",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Security vs Usability",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
       }
     },
     {
@@ -8250,6 +8290,20 @@
         "lesson.key": "Lesson 12: Layered Defenses",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Layered Defenses",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 12: Layered Defenses",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
       }
     },
     {
@@ -8289,6 +8343,34 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 13: Designing Secure Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-IM-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Designing Secure Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Designing Secure Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Designing Secure Systems Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Cybersecurity",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
@@ -8306,6 +8388,20 @@
         "lesson.key": "Lesson 1: Introduction to Cybersecurity",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Cybersecurity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-PRO-TR-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Cybersecurity",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
       }
     },
     {
@@ -8341,6 +8437,20 @@
         "lesson.key": "Lesson 2: Cybersecurity Threats",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Cybersecurity Threats",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Cybersecurity Threats",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
       }
     },
     {
@@ -8373,6 +8483,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 3: Phishing and Password Attacks",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Phishing and Password Attacks",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 4: Phishing with AI",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-05"
@@ -8394,6 +8518,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 4: Phishing with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Phishing with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Phishing with AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 5: Successful Cybersecurity Stories",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-06"
@@ -8404,6 +8549,20 @@
         "lesson.key": "Lesson 5: Successful Cybersecurity Stories",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Successful Cybersecurity Stories",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Successful Cybersecurity Stories",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
       }
     },
     {
@@ -8436,6 +8595,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 6: Confidentiality, Integrity, and Availability",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Confidentiality, Integrity, and Availability",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-CS-01"
@@ -8464,6 +8637,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-12"
@@ -8485,6 +8672,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 8: AAA and AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: AAA and AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: AAA and AI",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-32"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 9: Encryption",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-13"
@@ -8502,6 +8710,20 @@
         "lesson.key": "Lesson 9: Encryption",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Encryption",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-31"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Encryption",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SYS-SE-33"
       }
     }
   ],

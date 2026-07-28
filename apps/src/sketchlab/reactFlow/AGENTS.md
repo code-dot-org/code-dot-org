@@ -20,7 +20,49 @@ tool for making interactive diagrams, used by students in grades 6-12.
 - Ensure eslint passes. Run `./tools/hooks/pre-commit` from the repo root after making changes to verify.
 - CSS module class names should be camelCase so they can be accessed
   via `styles.someClass` rather than `styles['some-class']`.
-- Write comments in plain English, avoiding dense jargon.
 - Memoize derived values that are non-trivial to compute. The view re-renders
   frequently, so bias towards wrapping any non-trivial (more than O(1)) computation in `useMemo`.
   Wrap callbacks passed to children in `useCallback` for the same reason.
+
+## Comment style
+
+General comment rules live in `apps/src/AGENTS.md` → Comments. This lab adds a
+few React/JSX specifics:
+
+- No restating JSX. "If transparent, show the icon, else show the color"
+  duplicates code that's already self-explanatory.
+- Don't comment self-explanatory props. A prop named `title: string` used as
+  `title="Shape"` doesn't need a docstring.
+- For load-bearing timing / ordering (`useLayoutEffect` vs `useEffect`,
+  commit-phase vs effect-phase), one short sentence naming the constraint is
+  enough.
+
+Examples:
+
+Good:
+```
+// If focus is inside the toolbar, keep it open regardless of what the
+// focus-tracking state says.
+```
+
+Bad (history):
+```
+// MUI Popover auto-focuses its Paper but doesn't dive into the content,
+// so the user previously had to Tab once to land on a swatch before
+// arrow keys would work.
+```
+
+Bad (verbose mechanics):
+```
+// Inline Custom-px input rendered as the last item in the Size popover.
+// Using <MenuItem> as the root means MUI's MenuList includes the row in
+// its arrow-key navigation — arrowing down past the last preset lands
+// here. Stays blank while a preset (Small/Medium/...) is the active
+// size, so the user can click in and type a fresh value...
+```
+
+Better (same component):
+```
+// Custom font-size input. Blank when a preset is selected; commits on
+// blur or Enter.
+```

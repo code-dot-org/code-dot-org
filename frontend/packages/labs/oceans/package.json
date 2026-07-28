@@ -32,6 +32,7 @@
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
+    "test:visual:prove": "prove-visual",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -53,6 +54,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
@@ -73,7 +75,8 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "zod": "catalog:"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",

@@ -2,12 +2,17 @@ import {CodebridgeEmptyState} from '@codebridge/components/CodebridgeEmptyState'
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getOuterOrigin} from '@cdo/apps/util/codeprojectsPreviewOrigin';
 
 import {
   IframeMessageType,
   PROJECT_SERVICE_WORKER_BROADCAST_CHANNEL,
   ProjectServiceWorkerMessageType,
 } from './constants';
+import {
+  installInspector,
+  type InspectorController,
+} from './htmlPreviewInspector';
 import useProjectServiceWorker from './useProjectServiceWorker';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
@@ -39,16 +44,13 @@ const InnerHTMLPreview = () => {
   const [allowScripts, setAllowScripts] = useState(false);
   const [blockNetwork, setBlockNetwork] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
+  const [inspectorEnabled, setInspectorEnabled] = useState(false);
+  // Bumped each time the inner iframe finishes loading, so the inspector
+  // re-installs against the fresh document after a remount (renderKey change).
+  const [docLoadedTick, setDocLoadedTick] = useState(0);
+  const inspectorControllerRef = useRef<InspectorController | null>(null);
 
-  const parentOrigin = useMemo(() => {
-    const regex = /[^.]+\.preview\.([^.]+)\.codeprojects\.org/;
-    const match = location.hostname.match(regex);
-    const environment = match && match[1] ? `${match[1]}-` : '';
-    const port =
-      'localhost-' === environment && location.port ? `:${location.port}` : '';
-    const cdn = environment.includes('adhoc') ? 'cdn-' : '';
-    return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
-  }, []);
+  const parentOrigin = useMemo(getOuterOrigin, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
     useProjectServiceWorker(
@@ -76,6 +78,8 @@ const InnerHTMLPreview = () => {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.SET_BLOCK_NETWORK) {
         setBlockNetwork(!!data.block);
+      } else if (data.type === IframeMessageType.SET_INSPECTOR_ENABLED) {
+        setInspectorEnabled(!!data.enabled);
       } else if (data.type === IframeMessageType.REFRESH) {
         setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
@@ -205,6 +209,29 @@ const InnerHTMLPreview = () => {
     };
   }, [serviceWorkerReady, isLevelLoading, previewKey, currentFile]);
 
+  // Install or remove the element inspector on the inner document. Re-runs when
+  // the toggle changes and when docLoadedTick bumps after the iframe
+  // remounts, so we always attach to the live, same-origin contentDocument.
+  useEffect(() => {
+    inspectorControllerRef.current?.teardown();
+    inspectorControllerRef.current = null;
+    if (!inspectorEnabled) {
+      return;
+    }
+    const currentDocument = iframeRef.current?.contentDocument;
+    if (!currentDocument) {
+      // No document yet; this effect re-runs when docLoadedTick bumps on load.
+      return;
+    }
+    inspectorControllerRef.current = installInspector(currentDocument);
+    return () => {
+      inspectorControllerRef.current?.teardown();
+      inspectorControllerRef.current = null;
+    };
+    // docLoadedTick bumps on every iframe onLoad, which covers file changes
+    // (the iframe reloads and re-fires onLoad).
+  }, [inspectorEnabled, docLoadedTick]);
+
   const getPreview = useCallback(() => {
     if (swWarmedUp && currentFile && !isLevelLoading) {
       return (
@@ -217,6 +244,7 @@ const InnerHTMLPreview = () => {
           key={renderKey} // This forces a re-render when renderKey changes.
           src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
+          onLoad={() => setDocLoadedTick(prevTick => prevTick + 1)}
         />
       );
     } else if (serviceWorkerUnavailable) {

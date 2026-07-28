@@ -27,8 +27,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#ffffff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 1419,
@@ -672,7 +672,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -690,7 +690,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -708,7 +708,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -727,7 +727,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -746,7 +746,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -765,7 +765,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -784,7 +784,7 @@
             },
             "data": {
               "text": "Test Cases Table",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -883,8 +883,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -901,7 +901,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -919,7 +919,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -937,7 +937,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -955,7 +955,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -973,7 +973,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -991,7 +991,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1009,7 +1009,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1027,7 +1027,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "#000000",
               "fontSize": "large",
               "showHandles": false
             },
@@ -1051,8 +1051,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1075,8 +1075,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1099,8 +1099,8 @@
               "shapeType": "rectangle",
               "label": "Your answer here",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#e03131",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": "large"
             },
             "measured": {
@@ -1335,8 +1335,8 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#fafcff",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 2964,
@@ -1344,142 +1344,6 @@
             },
             "dragging": false,
             "zIndex": -1
-          },
-          {
-            "id": "x8--Iqo4nDhbzHV0lZNu4",
-            "type": "shape",
-            "position": {
-              "x": -2336.8784251947036,
-              "y": -870.6634567347194
-            },
-            "style": {
-              "width": 1082.137446470148,
-              "height": 1692.5055231865208
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "",
-              "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e"
-            },
-            "measured": {
-              "width": 1082,
-              "height": 1693
-            }
-          },
-          {
-            "id": "THhhaqw8VzvxuO2Hs_IHP",
-            "type": "shape",
-            "position": {
-              "x": -2055.4831852990187,
-              "y": 540.1800682085454
-            },
-            "style": {
-              "width": 513.8823310537864,
-              "height": 125.80517882441208
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Input",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 514,
-              "height": 126
-            }
-          },
-          {
-            "id": "tMVH_vgpF-KY1yHL5tlBh",
-            "type": "shape",
-            "position": {
-              "x": -2067.8546130116038,
-              "y": -308.04954089494345
-            },
-            "style": {
-              "width": 513.8823310537864,
-              "height": 187.641639197177
-            },
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Process",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 514,
-              "height": 188
-            }
-          },
-          {
-            "id": "EpA-j7qTGV8GU2mdJakfw",
-            "type": "shape",
-            "position": {
-              "x": -2206.453747011468,
-              "y": -25.427105502784343
-            },
-            "style": {
-              "width": 539.4695906812364,
-              "height": 469.1038539716472
-            },
-            "data": {
-              "shapeType": "diamond",
-              "label": "Decision",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 539,
-              "height": 469
-            }
-          },
-          {
-            "id": "lgTblwW9oGnX3OjYu5Es-",
-            "type": "shape",
-            "position": {
-              "x": -2079.2149390195655,
-              "y": -590.0462299150479
-            },
-            "style": {
-              "width": 528.8079749250982,
-              "height": 226.02277265964713
-            },
-            "data": {
-              "shapeType": "circle",
-              "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
-              "fontSize": 53.30726537637261
-            },
-            "measured": {
-              "width": 529,
-              "height": 226
-            }
-          },
-          {
-            "id": "76--N0Fz5WkloZJ1KY5dN",
-            "type": "text",
-            "position": {
-              "x": -2192.948971359361,
-              "y": -806.6948501261666
-            },
-            "data": {
-              "text": "Flowchart Components ",
-              "fontColor": "#1e1e1e",
-              "fontSize": 74.63017152692166,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 794,
-              "height": 212
-            }
           },
           {
             "id": "OeUSmpeQ4e7dMEJroTARW",
@@ -1490,7 +1354,7 @@
             },
             "data": {
               "text": "Your Workspace",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 64.86098403296546,
               "showHandles": false
             },
@@ -1513,9 +1377,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start / End",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-pink)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1537,9 +1401,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Age",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1561,9 +1425,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Enters Permissions",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1585,9 +1449,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Enters Permissons",
-              "backgroundColor": "#a5d8ff",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1609,9 +1473,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "userAge ≥\n18?",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1633,9 +1497,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show adult version",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1657,9 +1521,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show “Need \npermission”",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1681,9 +1545,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Show teen version",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1705,9 +1569,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Hide content",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 53.30726537637261
             },
             "measured": {
@@ -1729,9 +1593,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "hasConsent",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36
             },
             "measured": {
@@ -1753,9 +1617,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "hasConsent",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 36
             },
             "measured": {
@@ -1767,8 +1631,8 @@
             "id": "Su8h6-YoK4-E5FqMAu3JO",
             "type": "shape",
             "position": {
-              "x": 1944.3322676244356,
-              "y": -685.5662872199719
+              "x": 1915.2144779865448,
+              "y": -838.4346828188993
             },
             "style": {
               "width": 3368.2420844752446,
@@ -1777,34 +1641,15 @@
             "data": {
               "shapeType": "rectangle",
               "label": "",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e"
+              "backgroundColor": "transparent",
+              "strokeColor": "var(--sketchlab-stroke-default)"
             },
             "measured": {
               "width": 3368,
               "height": 2595
-            }
-          },
-          {
-            "id": "TmFvUihbCJTDrP_Nged-J",
-            "type": "image",
-            "position": {
-              "x": 2004.8870163308397,
-              "y": -32.698668687079135
             },
-            "style": {
-              "width": 3273.952551967417,
-              "height": 1127.6947678998881
-            },
-            "data": {
-              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4b_2026/uuid/2f3bab72631eb49750a9b360fdc9f8c7cdaaf2e0.png",
-              "altText": "",
-              "showHandles": false
-            },
-            "measured": {
-              "width": 3274,
-              "height": 1128
-            }
+            "zIndex": -4,
+            "dragging": false
           },
           {
             "id": "GIZ6LM-IptHyUjeVO6FGs",
@@ -1861,78 +1706,6 @@
             }
           },
           {
-            "id": "XhLgCR7rCHkXp4ZDpVOux",
-            "type": "text",
-            "position": {
-              "x": 2085.377646598415,
-              "y": 223.73280552391634
-            },
-            "data": {
-              "text": "Path 1",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 230,
-              "height": 121
-            }
-          },
-          {
-            "id": "1GqLoQiI851jF_zDwyH1p",
-            "type": "text",
-            "position": {
-              "x": 2069.2417681494594,
-              "y": 446.21141598225654
-            },
-            "data": {
-              "text": "Path 2",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964815,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 242,
-              "height": 121
-            }
-          },
-          {
-            "id": "FmOKPfbeU4Exj6pmMgUT1",
-            "type": "text",
-            "position": {
-              "x": 2071.4097521573553,
-              "y": 669.6648632301966
-            },
-            "data": {
-              "text": "Path 3",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 240,
-              "height": 121
-            }
-          },
-          {
-            "id": "eiED2_fUVxE7rh7MeXkZ2",
-            "type": "text",
-            "position": {
-              "x": 2069.0891601790604,
-              "y": 902.4296310496956
-            },
-            "data": {
-              "text": "Path 4",
-              "fontColor": "#1e1e1e",
-              "fontSize": 79.28127034964814,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 247,
-              "height": 121
-            }
-          },
-          {
             "id": "_Q9ge5TO5jDC4ZB0byr3F",
             "type": "text",
             "position": {
@@ -1951,76 +1724,61 @@
             }
           },
           {
-            "id": "vvw4QrFGiUYyJTieamjiL",
-            "type": "text",
-            "position": {
-              "x": 2810.6841208894443,
-              "y": -511.4369338814863
-            },
-            "data": {
-              "text": "Log",
-              "fontColor": "#ffffff",
-              "fontSize": 20,
-              "showHandles": false
-            },
-            "measured": {
-              "width": 58,
-              "height": 44
-            }
-          },
-          {
             "id": "6z2YDjZEjZcmXO741lG1b",
             "type": "text",
             "position": {
-              "x": 2608.1809966066016,
-              "y": 213.51740349335785
+              "x": 2668.383703513211,
+              "y": 229.36022110036032
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "E-TiiUYaqcrl6-ZxJY4QX",
             "type": "text",
             "position": {
-              "x": 3277.822787751879,
-              "y": 661.854051823335
+              "x": 3293.6656053588813,
+              "y": 626.9998530879295
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "hAcPKh-u6o44a_Wspq3h7",
             "type": "text",
             "position": {
-              "x": 2624.2631898355353,
-              "y": 433.0017924090456
+              "x": 2659.117388570941,
+              "y": 426.6646653662446
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 166,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "dRIN_o049TzDNeynhoTps",
@@ -2031,7 +1789,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -2049,7 +1807,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -2062,55 +1820,58 @@
             "id": "7XANIIdyzpwxweUm8bSK-",
             "type": "text",
             "position": {
-              "x": 2633.624989114814,
-              "y": 907.2574446816608
+              "x": 2655.8049337646175,
+              "y": 866.0661189034543
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "BDEpsX4KdH5wvLNa_wDnu",
             "type": "text",
             "position": {
-              "x": 2640.63951709824,
-              "y": 670.1296185453533
+              "x": 2659.650898226643,
+              "y": 638.4439833313482
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "5A0nEjxfY8kgdGgRWoH1b",
             "type": "text",
             "position": {
-              "x": 3293.1219777587007,
-              "y": 907.3362596028227
+              "x": 3267.7734695874965,
+              "y": 872.4820608674172
             },
             "data": {
               "text": "False",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 191,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "sNbcRmaR4D_cc4nnx3fDw",
@@ -2121,7 +1882,7 @@
             },
             "data": {
               "text": "Show adult version",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -2139,7 +1900,7 @@
             },
             "data": {
               "text": "Show teen version",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -2152,19 +1913,20 @@
             "id": "Qv7i4LpgHFHgRNbBUkf2t",
             "type": "text",
             "position": {
-              "x": 4125.801619836064,
-              "y": 899.743755530876
+              "x": 4217.689961956678,
+              "y": 868.0581203168709
             },
             "data": {
               "text": "Hide content",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
             "measured": {
               "width": 467,
               "height": 117
-            }
+            },
+            "dragging": false
           },
           {
             "id": "M4NPcykOO6-sb59GRoIM3",
@@ -2175,7 +1937,7 @@
             },
             "data": {
               "text": "Show “Need permission”",
-              "fontColor": "#e03131",
+              "fontColor": "var(--sketchlab-stroke-red)",
               "fontSize": 76.06270082580795,
               "showHandles": false
             },
@@ -2192,19 +1954,20 @@
             "id": "UJiw3_6bab_kYcPD-VSUD",
             "type": "text",
             "position": {
-              "x": 1942.2660492210434,
-              "y": -611.3642494680773
+              "x": 2020.9986978494308,
+              "y": -631.0474116251743
             },
             "data": {
               "text": "Test Cases Table",
-              "fontColor": "#1e1e1e",
-              "fontSize": 113.60551041342276,
+              "fontColor": "var(--sketchlab-stroke-default)",
+              "fontSize": 58,
               "showHandles": false
             },
             "measured": {
-              "width": 794,
-              "height": 313
-            }
+              "width": 449,
+              "height": 93
+            },
+            "dragging": false
           },
           {
             "id": "VBzMyPSl-O1dO7OKMfSl-",
@@ -2215,7 +1978,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2233,7 +1996,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2251,7 +2014,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2269,7 +2032,7 @@
             },
             "data": {
               "text": "True",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2287,7 +2050,7 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
@@ -2305,51 +2068,13 @@
             },
             "data": {
               "text": "False",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": 57.92254719603971,
               "showHandles": false
             },
             "measured": {
               "width": 150,
               "height": 93
-            }
-          },
-          {
-            "id": "1f5953e7-71d3-4ec9-bb7d-9e606c29f748",
-            "type": "lineAnchor",
-            "position": {
-              "x": -1509.9545214665175,
-              "y": 441.02608956966924
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "source"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
-            }
-          },
-          {
-            "id": "1b1b7ad9-1346-43a2-b34f-fc6f3962c7cf",
-            "type": "lineAnchor",
-            "position": {
-              "x": -1409.3321296564682,
-              "y": -4.089596658149958
-            },
-            "style": {
-              "width": 10,
-              "height": 10
-            },
-            "data": {
-              "lineAnchorRole": "target"
-            },
-            "measured": {
-              "width": 10,
-              "height": 10
             }
           },
           {
@@ -2655,18 +2380,30 @@
               "width": 10,
               "height": 10
             }
+          },
+          {
+            "id": "ba51129b-1054-469a-851b-32c7ed27390b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-algorithmic-decisions-lesson8-level4b_2026/uuid/b667eff5-f61a-4643-9852-01a1b08ae2e1.png",
+              "altText": "Screenshot 2026-05-25 214512"
+            },
+            "position": {
+              "x": 2433.474742505956,
+              "y": -336.36157044735523
+            },
+            "width": 2663,
+            "height": 1716,
+            "measured": {
+              "width": 2663,
+              "height": 1716
+            },
+            "dragging": false,
+            "resizing": false,
+            "zIndex": -3
           }
         ],
         "edges": [
-          {
-            "id": "3d6afd85-5fe6-420f-9df8-2ba733e9683a",
-            "source": "1f5953e7-71d3-4ec9-bb7d-9e606c29f748",
-            "target": "1b1b7ad9-1346-43a2-b34f-fc6f3962c7cf",
-            "type": "straight",
-            "markerEnd": {
-              "type": "arrowclosed"
-            }
-          },
           {
             "id": "686fbe39-6cfd-494a-987d-5300066ab4ff",
             "source": "b1c3c028-3571-4180-a7d1-4065f3d848e9",
@@ -2752,15 +2489,15 @@
           }
         ],
         "viewport": {
-          "x": 254.70043630453904,
-          "y": 268.73865390267576,
-          "zoom": 0.10055609207312804
+          "x": 372.2628049971071,
+          "y": 343.1473122834741,
+          "zoom": 0.18126484560570078
         }
       }
     },
     "name_suffix": "_2026"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:49.935+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level4b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level4b_2025\"},{\"changed_at\":\"2026-04-08 00:09:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:47:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:03:53 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:04:47 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:36:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:57:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:58:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:13:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:26:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:32:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:41:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:45:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:07:06 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 19:44:25 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:36:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:56:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:57:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-01 13:01:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:20:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:09:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 02:09:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 19:18:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:20:28 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:49.935+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson8-level4b_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson8-level4b_2025\"},{\"changed_at\":\"2026-04-08 00:09:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:47:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 16:48:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:03:53 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:04:47 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:21:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 17:36:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:57:39 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 18:58:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-08 20:13:04 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:26:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:32:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:41:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-09 18:45:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-04-16 19:07:06 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 19:44:25 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:36:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:56:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:57:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-04-16 20:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-05-01 13:01:06 -0400\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@dev.com\"},{\"changed_at\":\"2026-05-06 20:20:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-08 13:09:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2026-05-16 02:09:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-05-18 19:18:24 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-18 19:20:28 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-05-26 05:05:53 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-05-26 05:11:40 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Sketchlab>

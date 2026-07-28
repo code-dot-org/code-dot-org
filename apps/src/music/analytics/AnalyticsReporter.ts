@@ -64,7 +64,7 @@ interface ProjectContext {
 
 /**
  * An analytics reporter specifically used for Music Lab, which tracks Music Lab-specific
- * session information and forwards events to the global Code.org {@link AnalyticsReporter}.
+ * session information and forwards events to the global CodeAI {@link AnalyticsReporter}.
  */
 export default class MusicAnalyticsReporter {
   private session: Session | undefined;

@@ -1,0 +1,82 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-23T05:28:43.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n  <title>Boredom Buster</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n\n  <header>\n    <h1>Boredom Buster</h1>\n    <p>Not sure what to do? Let us decide for you.</p>\n  </header>\n\n  <main>\n    <button id=\"fetchButton\">Give me something to do</button>\n\n    <div class=\"activity-card\">\n      <p class=\"card-label\">TODAY'S ACTIVITY</p>\n      <p id=\"activityText\">Your activity will appear here.</p>\n    </div>\n  </main>\n\n  <script src=\"helpers.js\"></script>\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbody {\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  background-color: #F0F7FF;\n  background-image: radial-gradient(#C8DFFB 1.5px, transparent 1.5px);\n  background-size: 28px 28px;\n  color: #1A2E4A;\n  padding: 32px 20px;\n  line-height: 1.4;\n  min-height: 100vh;\n}\n\nheader {\n  max-width: 480px;\n  margin: 0 auto 28px;\n  text-align: center;\n}\n\nheader h1 {\n  font-size: 2rem;\n  font-weight: 800;\n  color: #1A6FD4;\n  margin-bottom: 6px;\n  letter-spacing: -0.01em;\n}\n\nheader p {\n  color: #5A7A9A;\n  font-size: 0.95rem;\n}\n\nmain {\n  max-width: 480px;\n  margin: 0 auto;\n  display: flex;\n  flex-direction: column;\n  gap: 20px;\n}\n\nbutton {\n  display: block;\n  width: 100%;\n  padding: 16px;\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  background-color: #1A6FD4;\n  border: none;\n  border-radius: 100px;\n  cursor: pointer;\n  box-shadow: 0 4px 0 #104FA0;\n  transition: transform 0.1s ease, box-shadow 0.1s ease;\n}\n\nbutton:hover {\n  background-color: #155BBF;\n}\n\nbutton:active {\n  transform: translateY(3px);\n  box-shadow: 0 1px 0 #104FA0;\n}\n\n.activity-card {\n  background: #FFFFFF;\n  border: 2px dashed #A8C8F0;\n  border-radius: 16px;\n  padding: 28px 24px;\n  text-align: center;\n}\n\n.card-label {\n  font-size: 10px;\n  font-weight: 700;\n  letter-spacing: 0.18em;\n  color: #5A7A9A;\n  margin-bottom: 12px;\n}\n\n#activityText {\n  font-size: 1.2rem;\n  font-weight: 500;\n  color: #1A2E4A;\n  line-height: 1.5;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const btn = document.getElementById(\"fetchButton\");\n\nconst API_URL = \"fake-boredom-buster-url.com\";\n\nconst fetchActivity = async () => {\n  \n  const response = await fetch(API_URL);\n  \n  const data = await response.json();\n\n  // These lines are never reached\n  showActivity(data.activity);\n};\n\nbtn.addEventListener(\"click\", () => {\n  fetchActivity();\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "helpers.js",
+          "contents": "// Updates the activity text on the page.\nconst showActivity = (text) => {\n  const activityText = document.getElementById(\"activityText\");\n  activityText.textContent = text;\n};",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Predict & Run\r\n\r\nWe want to test a standard `fetch()` request, but the URL stored in `API_URL` is not working.\r\n\r\n**If the app can't reach the URL in `API_URL`, what do you think will happen? What will the user see on screen?**\r\n\r\nWrite your answer below. Then click the button to test your prediction.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-23T05:28:43.777+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot_2026\"},{\"changed_at\":\"2026-06-23 05:28:46 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-01 23:18:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-01 23:21:50 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-01 23:22:54 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-01 23:48:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

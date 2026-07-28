@@ -1,3 +1,7 @@
+import {extensions as mimeToExtensions} from 'mime-types';
+
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {AppName, ProjectType} from './types';
 
 export const SOURCE_FILE = 'main.json';
@@ -24,6 +28,7 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'pythonlab',
   'weblab2',
   'music_dance_ai',
+  'sketchlab',
 ];
 
 // Text-based labs that are currently supported by lab2.
@@ -53,3 +58,7 @@ export enum FontSize {
 }
 
 export const INITIAL_VERSION_ID = 'initial-version';
+
+export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
+  mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
+);

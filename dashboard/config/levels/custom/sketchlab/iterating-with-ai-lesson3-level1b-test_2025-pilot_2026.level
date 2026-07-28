@@ -18,7 +18,7 @@
             },
             "data": {
               "text": "While loop",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -42,9 +42,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Start shopping",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -66,9 +66,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "addNewItem()\nitemCount--",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -94,9 +94,9 @@
             "data": {
               "shapeType": "diamond",
               "label": "Is\n\n",
-              "backgroundColor": "#ffec99",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -113,7 +113,7 @@
             },
             "data": {
               "text": "itemCount < 5?",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -137,9 +137,9 @@
             "data": {
               "shapeType": "rectangle",
               "label": "Set itemCount = 10",
-              "backgroundColor": "#e9ecef",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -165,9 +165,9 @@
             "data": {
               "shapeType": "circle",
               "label": "Finish shopping",
-              "backgroundColor": "#ffc9c9",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -189,9 +189,9 @@
             "data": {
               "shapeType": "circle",
               "label": "itemCount",
-              "backgroundColor": "#b2f2bb",
-              "strokeColor": "#1e1e1e",
-              "fontColor": "#1e1e1e",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "strokeColor": "var(--sketchlab-stroke-default)",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large"
             },
             "measured": {
@@ -211,7 +211,7 @@
             },
             "data": {
               "text": "Start \nvalue",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -230,7 +230,7 @@
             },
             "data": {
               "text": "Stop\ncondition",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },
@@ -254,7 +254,7 @@
               "shapeType": "rectangle",
               "label": "let itemCount = 10;\n\nwhile (itemCount < 5) { \n    addNewItem();\n    itemCount--;\n}",
               "backgroundColor": "transparent",
-              "strokeColor": "#1e1e1e",
+              "strokeColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "textAlign": "left"
             },
@@ -277,7 +277,7 @@
             },
             "data": {
               "text": "State variable ",
-              "fontColor": "#1e1e1e",
+              "fontColor": "var(--sketchlab-stroke-default)",
               "fontSize": "large",
               "showHandles": false
             },

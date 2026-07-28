@@ -1,0 +1,72 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-11T01:16:39.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "First Day at The Scoop",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "[SAM]: Oh good, you're here! Welcome to The Scoop. I'm Sam — owner, scooper, and as of yesterday... reluctant AI manager. ",
+        "imageUrl": "https://images.code.org/bc617700a4e3290ebb57c844c7683c19-Gemini_Generated_Image_j1c7hcj1c7hcj1c7 (1).png",
+        "key": "undefined-e0a9bcf5-aa9e-443d-a879-725e04f602e9",
+        "typing": true,
+        "layout": "text-bottom-center",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "[SAM]: My cousin installed an \"AI agent\" on our order window. It's supposed to talk to customers so I can focus on scooping.",
+        "imageUrl": "https://images.code.org/9b93de97c0bfd1e11304a7a3f81668f8-Gemini_Generated_Image_9v3nso9v3nso9v3n (1).png",
+        "key": "undefined-0c3cc5e2-306f-4680-a231-81a4c98f04fd",
+        "layout": "text-bottom-center",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "[SAM]: One problem. Yesterday it told a customer we sell PIZZA. We are an ice cream shop! We have never sold pizza.",
+        "imageUrl": "https://images.code.org/78b6367c05738408e0d23b5515e516f0-Gemini_Generated_Image_fst3f6fst3f6fst3 (1).png",
+        "key": "undefined-5ea2ca70-9731-48d5-8da0-199f0863e0d3",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: Here's the thing about these agents — they don't actually KNOW anything. They make stuff up unless you give them tools to check with and rules to follow.",
+        "imageUrl": "https://images.code.org/2cb2c42b3fa11a930dea7050fa891efd-Gemini_Generated_Image_rsj68arsj68arsj6 (1).png",
+        "key": "undefined-8823d531-5f2b-49fe-b76e-6f7a4c0a5204",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: So that's your job. You write its rules. I'll give it tools — but one at a time. It has to earn my trust.",
+        "imageUrl": "https://images.code.org/5b80dc25275cb9b7237034c759ec589d-Gemini_Generated_Image_ntmkr9ntmkr9ntmk (1).png",
+        "key": "undefined-7b46e7f5-ca1e-4332-a4c3-fba6bd9b9c34",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "[SAM]: First tool: it can read our menu board. That's it. Go teach it to stop inventing pizza.",
+        "imageUrl": "https://images.code.org/43db7d48f01d93358fedf649f70d390a-Gemini_Generated_Image_f974l5f974l5f974 (1).png",
+        "key": "undefined-a9e4390a-69d1-421c-8e7c-dfc1ede8809b",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# 🔓 TOOL UNLOCKED: MENU\n\nLooks up what The Scoop actually sells.",
+        "imageUrl": "https://images.code.org/5b2d3e7bc44c4967f170c71da0332d14-Gemini_Generated_Image_pv3sg1pv3sg1pv3s (1).png",
+        "key": "undefined-fee4b686-0582-462c-9774-c2f0ced0f100",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-11 01:16:47 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 01:17:17 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 14:12:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 14:25:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 14:31:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-07-11 14:45:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Panels>

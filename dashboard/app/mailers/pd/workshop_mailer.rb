@@ -65,7 +65,7 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: 'Code.org workshop registration',
+      subject: 'CodeAI workshop registration',
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -75,7 +75,7 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: 'text/html',
       from: from_teacher,
-      subject: 'Code.org workshop cancellation',
+      subject: 'CodeAI workshop cancellation',
       to: email_address(@enrollment.full_name, to_email.presence || @enrollment.email),
       reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
@@ -86,7 +86,7 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: 'Code.org workshop cancellation',
+      subject: 'CodeAI workshop cancellation',
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -220,19 +220,19 @@ class Pd::WorkshopMailer < ApplicationMailer
   end
 
   private def from_teacher
-    email_address('Code.org', 'teacher@code.org')
+    email_address('CodeAI', 'teacher@code.org')
   end
 
   private def from_facilitators
-    email_address('Code.org', 'facilitators@code.org')
+    email_address('CodeAI', 'facilitators@code.org')
   end
 
   private def from_no_reply
-    email_address('Code.org', 'noreply@code.org')
+    email_address('CodeAI', 'noreply@code.org')
   end
 
   private def from_survey
-    email_address('Code.org', 'survey@code.org')
+    email_address('CodeAI', 'survey@code.org')
   end
 
   private def get_details_partial(course, subject)
@@ -254,7 +254,7 @@ class Pd::WorkshopMailer < ApplicationMailer
         "You're enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
-      'Your upcoming Code.org workshop and next steps'
+      'Your upcoming CodeAI workshop and next steps'
     end
   end
 
@@ -262,7 +262,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     if workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
       "Details for your upcoming #{workshop.course_name} workshop have changed"
     else
-      'Details for your upcoming Code.org workshop have changed'
+      'Details for your upcoming CodeAI workshop have changed'
     end
   end
 

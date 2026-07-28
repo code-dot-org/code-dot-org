@@ -34,6 +34,25 @@ require 'cdo/shared_constants'
 # are only associated with one Level. There are some special cases where they can have multiple Levels, such as
 # with the now-deprecated variants feature.
 class ScriptLevel < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    script_id: :public,
+    chapter: :public,
+    created_at: :public,
+    updated_at: :public,
+    stage_id: :public,
+    position: :public,
+    assessment: :public,
+    properties: :public,
+    named_level: :public,
+    bonus: :public,
+    activity_section_id: :public,
+    seed_key: :public,
+    activity_section_position: :public,
+  )
+
   include SerializedProperties
   include LevelsHelper
   include SharedConstants
@@ -210,6 +229,13 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+      # For lessons with Tutor+ available (AIF/AID courses), send students at
+      # the end of the lesson to the lesson deep dive ("tutor") space instead of
+      # the next-level / unit-overview redirect. This is the single choke point
+      # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
+      # takes precedence over lesson extras and the unit overview dialog.
+      lesson.lesson_tutor_path
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
@@ -560,7 +586,11 @@ class ScriptLevel < ApplicationRecord
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
     level_for_progress = oldest_active_level.get_level_for_progress(student, script)
-    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
+    # A migrated predict level's attempt may live on the level itself (new) or
+    # its contained level (pre-migration), so consider both. Every other level
+    # (including bubble choice) resolves to a single progress level for the student.
+    progress_levels = oldest_active_level.predict_level? ? oldest_active_level.levels_for_progress : [level_for_progress]
+    user_level = student.last_attempt_for_any(progress_levels, script_id: script_id)
 
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
@@ -811,6 +841,6 @@ class ScriptLevel < ApplicationRecord
   end
 
   private def build_exemplar_url(path)
-    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
+    CDO.studio_url(path) + '?exemplar=true'
   end
 end

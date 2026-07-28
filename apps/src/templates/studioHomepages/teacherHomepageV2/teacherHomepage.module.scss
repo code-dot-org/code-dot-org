@@ -56,6 +56,7 @@
   flex-direction: column;
   gap: 16px;
   margin: 0;
+  padding: 0;
 }
 
 // SectionCard
@@ -67,6 +68,36 @@
   flex-direction: column;
   width: 100%;
   gap: 16px;
+}
+
+// Browsers don't expose dash length / gap for `border-style: dashed`, so paint
+// the dashed outline with four edge gradients instead. Adjust the 12px / 8px
+// values below to tune dash length and gap.
+.demoSectionCardWrapper {
+  border: none;
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--borders-neutral-primary) 0 12px,
+      transparent 12px 20px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--borders-neutral-primary) 0 12px,
+      transparent 12px 20px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--borders-neutral-primary) 0 12px,
+      transparent 12px 20px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--borders-neutral-primary) 0 12px,
+      transparent 12px 20px
+    );
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%;
+  background-repeat: no-repeat;
 }
 
 .sectionCardHeader {
@@ -256,7 +287,7 @@
   flex-direction: row;
   background-color: var(--background-neutral-primary);
   gap: 8px;
-  height: 38px;
+  height: 40px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -335,7 +366,7 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  height: 38px;
+  height: 40px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -364,10 +395,10 @@
 
 .promotion {
   position: relative;
-  width: 280px;
-  max-width: 280px;
-  min-height: 150px;
-  max-height: 800px;
+  width: 322px;
+  max-width: 322px;
+  min-height: 192px;
+  max-height: 842px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -422,7 +453,7 @@
 }
 
 .promotionPartnerLogo {
-  height: 22px;
+  height: 48px;
   max-width: 100%;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -456,8 +487,8 @@
   border: solid 1px var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   border-radius: 4px;
-  width: 280px;
-  max-width: 280px;
+  width: 322px;
+  max-width: 322px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -491,7 +522,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-flex;
-  padding-right: 4px;
+  padding-right: 8px;
 }
 
 .onboardingChecklistOuter {
@@ -503,15 +534,48 @@
 
 .onboardingChecklistInner {
   border-radius: 10px;
-  padding: 28px 32px 20px;
+  padding: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #15c5f9,
+    #2b72ff,
+    #8f20ec,
+    #c710c2,
+    #e50976,
+    #15c5f9
+  );
+  background-size: 300% 300%;
+  animation: onboarding-gradient-shift 12s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.onboardingChecklistInnerContent {
+  background: var(--background-neutral-primary, #fff);
+  border-radius: 7px;
+  padding: 40px 32px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: var(--borders-brand-purple-primary);
+  gap: 4px;
   text-align: center;
+}
+
+@keyframes onboarding-gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .onboardingChecklistButtons {
@@ -530,6 +594,19 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+}
+
+.onboardingChecklistOuterCelebration {
+  margin-bottom: 24px;
+}
+
+.onboardingChecklistCelebration {
+  width: 70%;
+}
+
+.onboardingCelebrationEmoji {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 // Drawer Component

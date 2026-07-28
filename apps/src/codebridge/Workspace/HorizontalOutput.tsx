@@ -1,6 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {MiniApps} from '@codebridge/constants';
+import {hasPreview} from '@codebridge/utils';
 import {throttle} from 'lodash';
 import React, {useRef, useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
@@ -90,9 +91,9 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         ?.getTerminalFitAddon()
         ?.fit();
 
-      // If this is a neighborhood level, also resize the visualization.
+      // Fit the console to the space left beside any mini app preview.
       if (
-        miniAppName === MiniApps.Neighborhood &&
+        hasPreview(miniAppName) &&
         (desiredHeight !== undefined || miniAppWidth)
       ) {
         const outputWidth =
@@ -111,11 +112,14 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         }
         setAdjustedMiniAppWidth(newMiniAppWidth);
 
-        const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
-        const newWidth = newMiniAppWidth;
-
-        const scale = scaleMiniApp(newHeight, newWidth);
-        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        // The neighborhood's SVG maze is the only preview that scales to fit;
+        // the theater image fits itself via CSS.
+        if (miniAppName === MiniApps.Neighborhood) {
+          const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
+          const newWidth = newMiniAppWidth;
+          const scale = scaleMiniApp(newHeight, newWidth);
+          CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
+        }
 
         setWaitingForResize(false);
       }

@@ -1,0 +1,107 @@
+# Playwright end-to-end suite for studio.code.org.
+#
+# Runs against test-studio.code.org by default. Set TARGET_URL to run against
+# a different deployment.
+name: E2E-Tests-CI
+
+on:
+  workflow_call:
+    inputs:
+      playwright-image-tag:
+        required: true
+        type: string
+        description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
+      playwright-projects:
+        required: false
+        type: string
+        default: '--project=chromium'
+        description: 'Playwright --project flags selecting browser projects. Defaults to Chromium, matching the legacy Drone Chrome-only lane; DTT overrides with the full engine matrix.'
+
+jobs:
+  e2e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: E2E Tests
+        # Step-level env: job-level env isn't reliably forwarded through yarn/turbo.
+        # The container pre-installs browsers at /ms-playwright.
+        env:
+          PLAYWRIGHT_PROVIDER: github-actions
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          # Firefox/WebKit won't launch as root unless $HOME is owned by the user;
+          # the image's /github/home is pwuser's, so point HOME at root's own dir.
+          HOME: /root
+          # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
+          TARGET_URL: https://test-studio.code.org
+        # Browser projects are caller-controlled: Chromium by default (PR lane),
+        # full engine matrix on DTT. See the playwright-projects input.
+        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- ${{ inputs.playwright-projects }}
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        if: failure() || cancelled()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-tests-report
+          path: |
+            frontend/packages/e2e-tests/playwright-report/
+            frontend/packages/e2e-tests/test-results/
+          retention-days: 7
+
+  eyes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      - name: Install LFS
+        run: apt-get update && apt-get install -y git-lfs
+
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+          lfs: true
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Eyes Tests
+        env:
+          VISUAL_PROVIDER: applitools
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+          APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+          APPLITOOLS_BATCH_NAME: E2E Playwright Eyes Tests
+          APPLITOOLS_BRANCH: ${{ github.head_ref || github.ref_name }}
+          PLAYWRIGHT_PROVIDER: github-actions
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+          HOME: /root
+          TARGET_URL: https://test-studio.code.org
+        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- --grep @visual --project=visual-chromium
+        working-directory: ./frontend
+
+      - name: Upload Playwright Report
+        if: failure() || cancelled()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-tests-eyes-report
+          path: |
+            frontend/packages/e2e-tests/playwright-report/
+            frontend/packages/e2e-tests/test-results/
+          retention-days: 7

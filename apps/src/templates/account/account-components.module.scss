@@ -11,8 +11,8 @@
 }
 
 .iconContainer img {
-  width: 60px;
-  height: 60px;
+  width: 150px;
+  height: auto;
 }
 
 .titleContainer {
@@ -41,6 +41,7 @@
 
     .icon {
       font-size: 1rem;
+      color: var(--text-neutral-primary);
     }
 
     li {

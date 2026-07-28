@@ -15,16 +15,16 @@ Scenario: Send lesson dialog renders properly
 Scenario: Send lesson dialog opens and closes
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   When I open the send lesson dialog for lesson 4
-  Then I wait until element ".modal" is visible
+  Then I wait until element "[role='dialog']" is visible
   And I wait until element "span:contains(Google)" is visible
   When I click selector "button:contains(Done)"
-  Then I wait until element ".modal" is not visible
+  Then I wait until element "[role='dialog']" is not visible
 
 @no_mobile
 Scenario: Send lesson dialog copy link button works
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1"
   When I open the send lesson dialog for lesson 2
-  Then I wait until element ".modal" is visible
+  Then I wait until element "[role='dialog']" is visible
   And I wait until element "#uitest-copy-button" is visible
   When I click selector "#uitest-copy-button"
   Then I wait until element "div:contains(Link copied!)" is visible

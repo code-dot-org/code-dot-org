@@ -16,7 +16,10 @@
     "csd2-web-lab-update-2025",
     "6-12-aif-s2-unit5",
     "6-12-aif-s2-unit6",
-    "6-12-aid-thinking-critically-about-ai-2026"
+    "6-12-aid-thinking-critically-about-ai-2026",
+    "sample-aid-sc2-unit-generation",
+    "ai-history",
+    "foundations-of-ai-programming-js"
   ],
   "original_script_names": [
     "6-12-intro-to-programming-python",
@@ -34,7 +37,10 @@
     "csd2-web-lab-update-2025",
     "6-12-aif-s2-unit5",
     "6-12-aif-s2-unit6",
-    "6-12-aid-thinking-critically-about-ai-2026"
+    "6-12-aid-thinking-critically-about-ai-2026",
+    "sample-aid-sc2-unit-generation",
+    "ai-history",
+    "foundations-of-ai-programming-js"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

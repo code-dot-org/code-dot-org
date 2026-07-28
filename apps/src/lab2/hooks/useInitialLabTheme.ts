@@ -22,6 +22,7 @@ interface UseInitialLabThemeProps {
   };
 }
 const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
+  'aichat',
   'pythonlab',
   'weblab2',
   'sketchlab',

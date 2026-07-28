@@ -56,14 +56,14 @@ $ai-modal-border-width: 8px;
   }
 
   max-width: initial !important;
-  width: 824px !important;
-  height: 508px;
+  width: 826px !important;
+  height: 510px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
 
   .headerArea {
-    width: calc(100% - 2 * $ai-modal-border-width);
+    width: 100%;
     height: 50px;
     background-color: $ai-block-color;
     color: white;
@@ -150,18 +150,6 @@ $ai-modal-border-width: 8px;
       justify-content: space-around;
       animation: appear 0.3s;
       margin-top: 3px;
-
-      span {
-        button {
-          &:focus-visible {
-            // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
-            // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
-            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability -
-            // we'll simply use SegmentedButton here.
-            outline: 2px solid $light_primary_500 !important;
-          }
-        }
-      }
     }
 
     .textArea {

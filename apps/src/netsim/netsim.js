@@ -1,5 +1,5 @@
 /**
- * @overview Internet Simulator app for Code.org.
+ * @overview Internet Simulator app for CodeAI.
  *           This file is the main entry point for the Internet Simulator.
  */
 

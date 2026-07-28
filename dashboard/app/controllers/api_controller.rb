@@ -156,6 +156,7 @@ class ApiController < ApplicationController
     @user_header_options[:session_pairings] = pairing_user_ids
     @user_header_options[:loc_prefix] = 'nav.user.'
     @user_header_options[:show_create_menu] = params[:showCreateMenu]
+    @user_header_options[:marketing_nav] = Cdo::Brand.codeai_next?(request)
   end
 
   def update_lockable_state
@@ -215,7 +216,8 @@ class ApiController < ApplicationController
         section_id: section.id,
         section_name: section.name,
         ai_chat_access_level: section.ai_chat_access_level,
-        lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
+        # A nil script has no lockable lessons.
+        lessons: (script&.lessons || []).each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
         end
@@ -257,6 +259,8 @@ class ApiController < ApplicationController
     section = load_section
     script = load_script(section)
 
+    return head :bad_request unless script
+
     # Clients are seeing requests time out for large sections as we attempt to
     # send back all of this data. Allow them to instead request paginated data
     page = [params[:page].to_i, 1].max
@@ -295,6 +299,8 @@ class ApiController < ApplicationController
     prevent_caching
     section = load_section
     script = load_script(section)
+
+    return head :bad_request unless script
 
     if params[:level_id]
       script_level = script.script_levels.find do |sl|
@@ -560,6 +566,7 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
+    return render(json: []) unless script
     # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
     # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
     unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
@@ -577,7 +584,7 @@ class ApiController < ApplicationController
           student: student_hash,
           lesson: level_hash[:script_level].lesson.localized_title,
           puzzle: level_hash[:script_level].position,
-          question: last_attempt.level.properties['title'],
+          question: last_attempt.level.properties['long_instructions'] || last_attempt.level.properties['title'],
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
@@ -594,7 +601,7 @@ class ApiController < ApplicationController
 
     # length of time these cookies are considered valid by cloudfront
     expiration_date = Time.now + 4.hours
-    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+    resource = CDO.studio_url('/restricted/*', ge_region: nil)
 
     cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
 
@@ -704,22 +711,14 @@ class ApiController < ApplicationController
         source: level_source
       }
 
-      # Pairing info
-      is_navigator = user_level.navigator?
-      if is_navigator
-        driver = user_level.driver
-        driver_level_source_id = user_level.driver_level_source_id
-      end
-
-      response[:isNavigator] = is_navigator
-      if driver
-        response[:pairingDriver] = driver.name
-        if driver_level_source_id
-          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-        elsif level.channel_backed?
-          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
-        end
-      end
+      response.merge!(
+        level.pairing_properties_for(
+          user,
+          script,
+          camelize_keys: true,
+          user_level: user_level
+        )
+      )
     end
 
     response
@@ -734,8 +733,6 @@ class ApiController < ApplicationController
   private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
-    script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.hoc_2014_unit
-    script
+    Unit.get_from_cache(script_id) if script_id
   end
 end

@@ -1,0 +1,1597 @@
+require_relative '../../../test_helper'
+require_relative '../../../../cdo/aws/redshift/materialized_view_manager'
+require 'erb'
+require 'fileutils'
+require 'tmpdir'
+
+module Cdo
+  module Aws
+    module Redshift
+      # Mimics DataClassification's default (no declarations) column projection so the
+      # generator tests can drive a plain model stub: `column_names_classified_as`
+      # recomputes from the stub's current `columns`, so the many `model.stubs(:columns)`
+      # overrides below need no per-site classification stubbing. The classification
+      # rules themselves are tested in
+      # dashboard/test/models/concerns/data_classification_test.rb.
+      module FakeClassification
+        NON_PII_DATE_TIME = %w[created_at updated_at deleted_at].freeze
+
+        def column_names_classified_as(*levels)
+          wanted = levels.flatten
+          columns.select {|col| wanted.include?(fake_classification(col))}.map(&:name)
+        end
+
+        def fake_classification(col)
+          case col.type
+          when :string, :text then :restricted
+          when :date, :datetime, :timestamp
+            NON_PII_DATE_TIME.include?(col.name) ? :public : :restricted
+          else :public
+          end
+        end
+      end
+
+      describe MaterializedViewManager do
+        def mock_column(name, type)
+          col = stub
+          col.stubs(:name).returns(name)
+          col.stubs(:type).returns(type)
+          col
+        end
+
+        let(:id_col)         {mock_column('id', :integer)}
+        let(:name_col)       {mock_column('name', :string)}
+        let(:email_col)      {mock_column('email', :string)}
+        let(:bio_col)        {mock_column('bio', :text)}
+        let(:age_col)        {mock_column('age', :integer)}
+        let(:is_admin_col)   {mock_column('is_admin', :boolean)}
+        let(:score_col)      {mock_column('score', :float)}
+        let(:created_at_col) {mock_column('created_at', :datetime)}
+        let(:updated_at_col) {mock_column('updated_at', :datetime)}
+        let(:deleted_at_col) {mock_column('deleted_at', :datetime)}
+        let(:last_login_col) {mock_column('last_login', :datetime)}
+        let(:birthday_col)   {mock_column('birthday', :date)}
+
+        let(:all_columns) {[id_col, name_col, email_col, bio_col, age_col, is_admin_col, score_col, created_at_col, updated_at_col, deleted_at_col, last_login_col, birthday_col]}
+
+        let(:model) {stub}
+        let(:described_class) {MaterializedViewManager}
+        let(:described_instance) {described_class.new(model)}
+
+        before do
+          model.extend(FakeClassification)
+          model.stubs(:table_name).returns('users')
+          model.stubs(:primary_key).returns('id')
+          model.stubs(:columns).returns(all_columns)
+        end
+
+        describe '#generate_pii_ddl' do
+          let(:generate_pii_ddl) {described_instance.generate_pii_ddl}
+
+          it 'includes all columns in the SELECT clause' do
+            all_columns.each {|col| _(generate_pii_ddl).must_include col.name}
+          end
+
+          it 'uses ERB template variable in the pii schema name' do
+            _(generate_pii_ddl).must_include 'learning_platform_<%=environment_type%>_pii.users'
+          end
+
+          it 'uses ERB template variables in the source table path' do
+            _(generate_pii_ddl).must_include '<%=environment_type%>_learningplatform_mysql_zeroetl.dashboard_<%=environment_type%>.users'
+          end
+
+          it 'uses the primary key as the distkey (double-quoted)' do
+            _(generate_pii_ddl).must_include 'DISTSTYLE KEY DISTKEY ("id")'
+          end
+
+          it 'disables backup and automated refresh' do
+            _(generate_pii_ddl).must_include 'BACKUP NO'
+            _(generate_pii_ddl).must_include 'AUTO REFRESH NO'
+          end
+
+          it 'returns nil when the model has no columns' do
+            model.stubs(:columns).returns([])
+            _(generate_pii_ddl).must_be_nil
+          end
+
+          it 'renders to the correct production schema when ERB is evaluated' do
+            environment_type = 'production'
+            rendered = ERB.new(generate_pii_ddl).result(binding)
+            _(rendered).must_include 'learning_platform_production_pii.users'
+            _(rendered).must_include 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          end
+        end
+
+        describe '#generate_non_pii_ddl' do
+          let(:generate_non_pii_ddl) {described_instance.generate_non_pii_ddl}
+
+          it 'excludes string columns' do
+            _(generate_non_pii_ddl).wont_include 'name'
+            _(generate_non_pii_ddl).wont_include 'email'
+          end
+
+          it 'excludes text columns' do
+            _(generate_non_pii_ddl).wont_include 'bio'
+          end
+
+          it 'excludes non-allowlisted datetime columns' do
+            _(generate_non_pii_ddl).wont_include 'last_login'
+          end
+
+          it 'excludes non-allowlisted date columns' do
+            _(generate_non_pii_ddl).wont_include 'birthday'
+          end
+
+          it 'includes allowlisted datetime columns (created_at, updated_at, deleted_at)' do
+            _(generate_non_pii_ddl).must_include 'created_at'
+            _(generate_non_pii_ddl).must_include 'updated_at'
+            _(generate_non_pii_ddl).must_include 'deleted_at'
+          end
+
+          it 'includes non-text, non-date columns (integer, boolean, float)' do
+            _(generate_non_pii_ddl).must_include 'id'
+            _(generate_non_pii_ddl).must_include 'age'
+            _(generate_non_pii_ddl).must_include 'is_admin'
+            _(generate_non_pii_ddl).must_include 'score'
+          end
+
+          it 'uses ERB template variable in the non-pii schema name' do
+            _(generate_non_pii_ddl).must_include 'learning_platform_<%=environment_type%>.users'
+            _(generate_non_pii_ddl).wont_include '_pii'
+          end
+
+          it 'disables backup and automated refresh' do
+            _(generate_non_pii_ddl).must_include 'BACKUP NO'
+            _(generate_non_pii_ddl).must_include 'AUTO REFRESH NO'
+          end
+
+          it 'returns nil when there are no non-pii columns' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            _(generate_non_pii_ddl).must_be_nil
+          end
+        end
+
+        describe '#save_ddl_templates' do
+          let(:generator) {MaterializedViewManager.new(model)}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'writes pii and non-pii template files' do
+            files = generator.save_ddl_templates
+            assert_equal 2, files.length
+            assert(files.any? {|f| f.end_with?('users_pii.sql.erb')})
+            assert(files.any? {|f| f.end_with?('users.sql.erb')})
+            files.each {|f| assert File.exist?(f)}
+          end
+
+          it 'prepends the generated-file header to each written template' do
+            generator.save_ddl_templates
+            %w[users_pii.sql.erb users.sql.erb].each do |name|
+              contents = File.read(File.join(tmpdir, name))
+              assert contents.start_with?('-- GENERATED FILE'), "#{name} should start with the header"
+              assert_includes contents, 'does NOT update the materialized view in Redshift'
+            end
+          end
+
+          it 'keeps the header out of the hashed/submitted DDL, so it forces no rebuild' do
+            # The header is documentation in the on-disk file only. The DDL that is hashed and
+            # submitted to the cluster comes from #rendered_ddls, which must not carry it.
+            generator.rendered_ddls(environment_type: 'production').each_value do |entry|
+              refute_includes entry[:sql], '-- GENERATED FILE'
+            end
+          end
+
+          it 'writes valid ERB templates that render correctly' do
+            generator.save_ddl_templates
+            pii_path = File.join(tmpdir, 'users_pii.sql.erb')
+            rendered = MaterializedViewManager.render_ddl(pii_path, environment_type: 'production')
+            assert_includes rendered, 'learning_platform_production_pii.users'
+            assert_includes rendered, 'production_learningplatform_mysql_zeroetl.dashboard_production.users'
+          end
+
+          it 'skips pii file when model has no columns' do
+            model.stubs(:columns).returns([])
+            files = generator.save_ddl_templates
+            assert_empty files
+          end
+
+          it 'skips non-pii file when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            files = generator.save_ddl_templates
+            # The PII view still contains the (text) columns, so its file is written.
+            # Only the non-PII view, which would have been empty, is skipped.
+            assert_equal 1, files.length
+            assert(files.any? {|f| f.end_with?('users_pii.sql.erb')})
+            refute(files.any? {|f| File.basename(f) == 'users.sql.erb'})
+          end
+        end
+
+        describe '.redshift_client' do
+          it 'builds a client pinned to the materialized-view database (dev)' do
+            Cdo::Aws::Redshift::Client.expects(:new).with(database: 'dev').returns(:client)
+            assert_equal :client, MaterializedViewManager.redshift_client
+          end
+
+          it 'uses MATERIALIZED_VIEW_DATABASE as the database' do
+            Cdo::Aws::Redshift::Client.expects(:new).with(database: MaterializedViewManager::MATERIALIZED_VIEW_DATABASE)
+            MaterializedViewManager.redshift_client
+          end
+        end
+
+        describe '.render_ddl' do
+          let(:tmpdir) {Dir.mktmpdir}
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'renders environment_type into the template' do
+            template_path = File.join(tmpdir, 'test_template.sql.erb')
+            File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
+            result = MaterializedViewManager.render_ddl(template_path, environment_type: 'production')
+            assert_equal 'SELECT * FROM production_db.table;', result
+          end
+
+          it 'accepts symbol environment_type' do
+            template_path = File.join(tmpdir, 'test_template.sql.erb')
+            File.write(template_path, 'SELECT * FROM <%=environment_type%>_db.table;')
+            result = MaterializedViewManager.render_ddl(template_path, environment_type: :test)
+            assert_equal 'SELECT * FROM test_db.table;', result
+          end
+        end
+
+        describe '#create_or_replace_views' do
+          let(:generator) {MaterializedViewManager.new(model)}
+          let(:client) {mock('redshift_client')}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'submits each view batch via batch_execute_async and returns statement IDs by FQN' do
+            client.stubs(:batch_execute_async).returns(['id-pii']).then.returns(['id-non-pii'])
+
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal(
+              {
+                'learning_platform_production_pii.users' => 'id-pii',
+                'learning_platform_production.users' => 'id-non-pii'
+              },
+              result
+            )
+          end
+
+          it 'returns empty hash when model has no columns' do
+            model.stubs(:columns).returns([])
+            client.expects(:batch_execute_async).never
+            assert_empty generator.create_or_replace_views(client: client, environment_type: :test)
+          end
+
+          it 'each batch is [DROP, CREATE, COMMENT ON COLUMN ... IS hash-of-create]' do
+            batches = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              batches << sqls
+              true
+            end.returns(['id'])
+
+            generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal 2, batches.length
+            batches.each do |sqls|
+              assert_equal 3, sqls.length
+              assert sqls[0].start_with?('DROP MATERIALIZED VIEW IF EXISTS ')
+              assert sqls[1].start_with?('CREATE MATERIALIZED VIEW ')
+              expected_hash = Digest::SHA256.hexdigest(sqls[1])
+              assert_match(/\ACOMMENT ON COLUMN \S+\.id IS '#{expected_hash}'\z/, sqls[2])
+            end
+          end
+
+          it 'renders ERB placeholders in the CREATE SQL' do
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            generator.create_or_replace_views(client: client, environment_type: :test)
+
+            batches.each do |sqls|
+              assert_includes sqls[1], 'test_learningplatform_mysql_zeroetl.dashboard_test.users'
+              refute_includes sqls[1], '<%='
+            end
+          end
+
+          it 'skips non-pii view when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            batches = []
+            client.stubs(:batch_execute_async).with {|sqls| batches << sqls; true}.returns(['id'])
+
+            result = generator.create_or_replace_views(client: client, environment_type: :production)
+
+            assert_equal 1, batches.length
+            assert_equal 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_production_pii.users', batches[0][0]
+            assert_includes batches[0][1], 'CREATE MATERIALIZED VIEW learning_platform_production_pii.users'
+            assert_equal ['learning_platform_production_pii.users'], result.keys
+          end
+        end
+
+        describe '.view_status' do
+          let(:client) {mock('redshift_client')}
+
+          before do
+            # view_status calls list_view_staleness via client.execute(...SVV_MV_INFO...).
+            # Default to "no staleness rows" — individual tests override when they
+            # exercise the SVV_MV_INFO integration.
+            client.stubs(:execute).returns([])
+          end
+
+          # Builds a stub matching the Aws::PageableResponse contract:
+          # only `each_page` is called by `view_status`.
+          def pageable(statements)
+            page = stub('page', statements: statements)
+            pageable = stub('pageable')
+            pageable.stubs(:each_page).yields(page)
+            pageable
+          end
+
+          def list_stmt(id:, query_string:, created_at: Time.now, status: 'FINISHED')
+            stub('list_stmt', id: id, query_string: query_string, created_at: created_at, status: status)
+          end
+
+          def describe(sub_query_strings:, db_user: 'dev', duration: 0)
+            subs = sub_query_strings.map {|qs| stub('sub', query_string: qs)}
+            stub('desc',
+              sub_statements: subs,
+              db_user: db_user,
+              query_string: sub_query_strings.first,
+              duration: duration
+            )
+          end
+
+          # Stubs `describe_statement` for a single-statement (non-batch)
+          # submission — Redshift sets sub_statements=nil for these, and
+          # `query_string` carries the only SQL.
+          def describe_single(query_string:, db_user: 'dev', duration: 0)
+            stub('desc',
+              sub_statements: nil,
+              db_user: db_user,
+              query_string: query_string,
+              duration: duration
+            )
+          end
+
+          it 'captures the failure detail of a FAILED CREATE batch in the row error' do
+            batch = list_stmt(id: 'b1', status: 'FAILED',
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
+)
+            drop_sub = stub('drop_sub',
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
+              status: 'FINISHED', error: ''
+            )
+            create_sub = stub('create_sub',
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;',
+              status: 'FAILED', error: 'Schema "learning_platform_test_pii" does not exist'
+            )
+            desc = stub('desc',
+              sub_statements: [drop_sub, create_sub], db_user: 'dev', duration: 0, error: nil,
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users'
+            )
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('b1').returns(desc)
+            model.stubs(:name).returns('User')
+            model.stubs(:columns).returns([name_col]) # PII-only model → single view variant.
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            assert_equal 'FAILED', pii_row.status
+            assert_equal 'Schema "learning_platform_test_pii" does not exist', pii_row.error
+          end
+
+          it 'leaves error nil for a FINISHED batch' do
+            batch = list_stmt(id: 'ok-1',
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
+)
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('ok-1').returns(describe(sub_query_strings: [
+                                                                              'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
+                                                                            ]
+)
+)
+            model.stubs(:name).returns('User')
+            model.stubs(:columns).returns([name_col])
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+            assert_nil rows.find {|r| r.view_type == 'pii'}.error
+          end
+
+          it 'returns a CREATE row for each PII and non-PII view in the most recent batch' do
+            batch_pii = list_stmt(id: 'pii-1',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.usersCREATE MATERIALIZED VIEW learning_platform_test_pii.users"
+)
+            batch_non_pii = list_stmt(id: 'non-pii-1',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.usersCREATE MATERIALIZED VIEW learning_platform_test.users"
+)
+
+            client.stubs(:list_statements).returns(pageable([batch_pii, batch_non_pii]))
+            client.stubs(:describe_statement).with('pii-1').returns(describe(sub_query_strings: [
+                                                                               'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
+                                                                               'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;',
+                                                                               "COMMENT ON COLUMN learning_platform_test_pii.users.id IS 'abc'"
+                                                                             ]
+)
+)
+            client.stubs(:describe_statement).with('non-pii-1').returns(describe(sub_query_strings: [
+                                                                                   'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test.users',
+                                                                                   'CREATE MATERIALIZED VIEW learning_platform_test.users AS SELECT id FROM x;',
+                                                                                   "COMMENT ON COLUMN learning_platform_test.users.id IS 'def'"
+                                                                                 ]
+)
+)
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert_equal 2, rows.length
+            non_pii_row = rows.find {|r| r.view_type == 'non_pii'}
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            assert_equal 'CREATE', pii_row.operation
+            assert_equal 'CREATE', non_pii_row.operation
+            assert_equal 'pii-1', pii_row.statement_id
+            assert_equal 'non-pii-1', non_pii_row.statement_id
+            assert_equal 'User', pii_row.model_name
+            assert_equal 'users', pii_row.table_name
+            assert_equal 'dev', pii_row.db_user
+          end
+
+          it 'CREATE wins over DROP within the same batch (DROP+CREATE+COMMENT)' do
+            batch = list_stmt(id: 'b1',
+              query_string: 'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
+)
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('b1').returns(describe(sub_query_strings: [
+                                                                            'DROP MATERIALIZED VIEW IF EXISTS learning_platform_test_pii.users',
+                                                                            'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
+                                                                          ]
+)
+)
+            model.stubs(:name).returns('User')
+            model.stubs(:columns).returns([name_col]) # PII-only model
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            row = rows.first
+            assert_equal 'CREATE', row.operation
+          end
+
+          it 'reports the consolidated orphan-drop batch per FQN' do
+            orphan_pii = 'learning_platform_test_pii.old'
+            orphan_non_pii = 'learning_platform_test.old'
+            batch = list_stmt(id: 'drop-batch',
+              query_string: "DROP MATERIALIZED VIEW IF EXISTS #{orphan_pii} DROP MATERIALIZED VIEW IF EXISTS #{orphan_non_pii}"
+)
+            client.stubs(:list_statements).returns(pageable([batch]))
+            client.stubs(:describe_statement).with('drop-batch').returns(describe(sub_query_strings: [
+                                                                                    "DROP MATERIALIZED VIEW IF EXISTS #{orphan_pii}",
+                                                                                    "DROP MATERIALIZED VIEW IF EXISTS #{orphan_non_pii}"
+                                                                                  ]
+)
+)
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            orphan_rows = rows.select {|r| r.model_name == '(orphan)'}
+            assert_equal 2, orphan_rows.length
+            orphan_rows.each do |r|
+              assert_equal 'DROP', r.operation
+              assert_equal 'old', r.table_name
+              assert_equal 'drop-batch', r.statement_id
+            end
+          end
+
+          it 'emits a "(no recent)" row for expected views with no matching statement' do
+            client.stubs(:list_statements).returns(pageable([]))
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert_equal 2, rows.length
+            rows.each do |r|
+              assert_equal '(no recent)', r.status
+              assert_nil r.operation
+              assert_nil r.statement_id
+              assert_nil r.executed_at
+            end
+          end
+
+          it 'ignores statements that do not mention our materialized view schema prefixes' do
+            unrelated = list_stmt(id: 'unrelated', query_string: 'SELECT * FROM some_other_table')
+            client.stubs(:list_statements).returns(pageable([unrelated]))
+            client.expects(:describe_statement).never
+
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            rows.each {|r| assert_equal '(no recent)', r.status}
+          end
+
+          it 'stops paginating once the cutoff is crossed' do
+            recent = list_stmt(id: 'recent', created_at: Time.now,
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
+)
+            old = list_stmt(id: 'old', created_at: 48.hours.ago,
+              query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users'
+)
+
+            client.stubs(:list_statements).returns(pageable([recent, old]))
+            client.stubs(:describe_statement).with('recent').returns(describe(sub_query_strings: [
+                                                                                'CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'
+                                                                              ]
+)
+)
+            client.expects(:describe_statement).with('old').never
+
+            model.stubs(:name).returns('User')
+
+            MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model], hours_back: 24
+            )
+          end
+
+          it 'populates is_stale, state, and state_description from SVV_MV_INFO' do
+            # Override the default empty execute stub: PII view is stale and
+            # refreshes incrementally (state 1); non-PII view is fresh and
+            # refreshes by full recompute (state 0).
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_test_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 1},
+                {'schema' => 'learning_platform_test', 'name' => 'users', 'is_stale' => 'f', 'state' => 0}
+              ]
+            )
+            client.stubs(:list_statements).returns(pageable([]))
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            non_pii_row = rows.find {|r| r.view_type == 'non_pii'}
+            assert_equal true, pii_row.is_stale
+            assert_equal 1, pii_row.state
+            assert_equal 'Refreshes incrementally', pii_row.state_description
+            assert_equal false, non_pii_row.is_stale
+            assert_equal 0, non_pii_row.state
+            assert_equal 'Refreshes by full recompute', non_pii_row.state_description
+          end
+
+          it 'describes an unrefreshable view (state >= 100) in state_description' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 101}]
+            )
+            client.stubs(:list_statements).returns(pageable([]))
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            assert_equal 101, pii_row.state
+            assert_includes pii_row.state_description, "Can't refresh"
+            assert_includes pii_row.state_description, 'rebuild required'
+          end
+
+          it 'converts describe_statement.duration from nanoseconds to Float seconds (nil when zero / in-progress)' do
+            finished = list_stmt(id: 'f1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test_pii.users')
+            in_progress = list_stmt(id: 'p1', query_string: 'CREATE MATERIALIZED VIEW learning_platform_test.users')
+
+            client.stubs(:list_statements).returns(pageable([finished, in_progress]))
+            client.stubs(:describe_statement).with('f1').returns(describe(
+                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test_pii.users AS SELECT id FROM x;'],
+                                                                   duration: 12_345_000_000 # 12.345 seconds in nanoseconds
+            )
+)
+            client.stubs(:describe_statement).with('p1').returns(describe(
+                                                                   sub_query_strings: ['CREATE MATERIALIZED VIEW learning_platform_test.users AS SELECT id FROM x;'],
+                                                                   duration: 0
+            )
+)
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            non_pii_row = rows.find {|r| r.view_type == 'non_pii'}
+            assert_in_delta 12.345, pii_row.duration_seconds, 0.001
+            assert_nil non_pii_row.duration_seconds
+          end
+
+          it 'handles single-statement submissions (sub_statements=nil) by parsing query_string directly' do
+            # REFRESH submitted via `execute_async` is a single, non-batch
+            # statement; describe_statement reports sub_statements=nil with the
+            # SQL in `query_string`. view_status must handle that without
+            # blowing up.
+            refresh_stmt = list_stmt(id: 'r1', query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.users')
+            client.stubs(:list_statements).returns(pageable([refresh_stmt]))
+            client.stubs(:describe_statement).with('r1').returns(
+              describe_single(query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.users')
+            )
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            pii_row = rows.find {|r| r.view_type == 'pii'}
+            assert_equal 'REFRESH', pii_row.operation
+            assert_equal 'r1', pii_row.statement_id
+          end
+
+          it 'leaves is_stale and state nil for views not present in SVV_MV_INFO' do
+            # The default empty execute stub stays in effect.
+            client.stubs(:list_statements).returns(pageable([]))
+            model.stubs(:name).returns('User')
+
+            rows = MaterializedViewManager.view_status(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            rows.each do |r|
+              assert_nil r.is_stale
+              assert_nil r.state
+            end
+          end
+        end
+
+        describe '#refresh_views' do
+          let(:generator) {MaterializedViewManager.new(model)}
+          let(:client) {mock('redshift_client')}
+
+          it 'submits one async REFRESH per view and returns statement IDs by FQN' do
+            calls = []
+            client.stubs(:execute_async).with {|sql| calls << sql; true}.returns('id-1', 'id-2')
+
+            result = generator.refresh_views(client: client, environment_type: :production)
+
+            assert_equal(
+              [
+                'REFRESH MATERIALIZED VIEW learning_platform_production_pii.users',
+                'REFRESH MATERIALIZED VIEW learning_platform_production.users'
+              ],
+              calls
+            )
+            assert_equal(
+              {
+                'learning_platform_production_pii.users' => 'id-1',
+                'learning_platform_production.users' => 'id-2'
+              },
+              result
+            )
+          end
+
+          it 'returns empty hash when model has no columns' do
+            model.stubs(:columns).returns([])
+            client.expects(:execute_async).never
+            assert_empty generator.refresh_views(client: client, environment_type: :production)
+          end
+
+          it 'skips non-pii view when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            calls = []
+            client.stubs(:execute_async).with {|sql| calls << sql; 'id'}
+
+            result = generator.refresh_views(client: client, environment_type: :production)
+
+            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.users'], calls
+            assert_equal ['learning_platform_production_pii.users'], result.keys
+          end
+        end
+
+        describe '.refresh_all_views' do
+          let(:client) {mock('redshift_client')}
+          let(:activities_model) {stub}
+
+          before do
+            activities_model.extend(FakeClassification)
+            activities_model.stubs(:table_name).returns('activities')
+            activities_model.stubs(:primary_key).returns('id')
+            activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])
+
+            # `refresh_all_views` first calls `list_view_staleness` via
+            # client.execute(...SVV_MV_INFO...). Default to no rows so every
+            # view is treated as "unknown freshness" and therefore refreshed
+            # (the safer default). Individual tests override to exercise skip
+            # behavior.
+            client.stubs(:execute).returns([])
+          end
+
+          it 'submits async REFRESH for every model and returns merged statement IDs' do
+            client.stubs(:execute_async).returns('id-1', 'id-2', 'id-3', 'id-4')
+
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model, activities_model]
+            )
+
+            # Two models, two views each → four statement IDs.
+            assert_equal 4, result[:statements].length
+            assert_includes result[:statements].keys, 'learning_platform_production_pii.users'
+            assert_includes result[:statements].keys, 'learning_platform_production.users'
+            assert_includes result[:statements].keys, 'learning_platform_production_pii.activities'
+            assert_includes result[:statements].keys, 'learning_platform_production.activities'
+            assert_empty result[:failed]
+          end
+
+          it 'skips models whose every view is not stale' do
+            # SVV_MV_INFO says both of this model's views are fresh.
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 'f', 'state' => 101},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 'f', 'state' => 101}
+              ]
+            )
+            client.expects(:execute_async).never
+
+            events = []
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, _| events << [event, payload]}
+
+            assert_includes events, [:skipped, 'users']
+            assert_empty result[:statements]
+          end
+
+          it 'refreshes only the stale views of a model with one stale and one fresh view' do
+            # PII is stale, non-PII is fresh.
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 100},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 'f', 'state' => 101}
+              ]
+            )
+            calls = []
+            client.stubs(:execute_async).with {|sql| calls << sql; true}.returns('id-1')
+
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal ['REFRESH MATERIALIZED VIEW learning_platform_production_pii.users'], calls
+            assert_equal ['learning_platform_production_pii.users'], result[:statements].keys
+          end
+
+          it 'treats a view missing from SVV_MV_INFO as stale (rebuilds it)' do
+            # No rows returned — staleness map is empty.
+            client.stubs(:execute).returns([])
+            client.stubs(:execute_async).returns('id-1', 'id-2')
+
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal 2, result[:statements].length
+          end
+
+          it 'yields :submitted with table name and submitted FQNs' do
+            client.stubs(:execute_async).returns('id-a', 'id-b')
+
+            events = []
+            MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            submitted = events.find {|e| e[0] == :submitted}
+            refute_nil submitted
+            assert_equal 'users', submitted[1]
+            assert_equal 2, submitted[2].length
+          end
+
+          it 'yields :no_views and skips models with no view variants' do
+            empty_model = stub('empty_model',
+              table_name: 'empties',
+              primary_key: 'id',
+              columns: []
+            )
+            empty_model.extend(FakeClassification)
+            client.expects(:execute_async).never
+
+            events = []
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [empty_model]
+            ) {|event, payload, _| events << [event, payload]}
+
+            assert_includes events, [:no_views, 'empties']
+            assert_empty result[:statements]
+          end
+
+          it 'continues past per-model submit failures and records them under :failed' do
+            call_count = 0
+            client.stubs(:execute_async).with do |_sql|
+              call_count += 1
+              raise Cdo::Aws::Redshift::Client::QueryError, 'Refresh failed' if call_count == 1
+              true
+            end.returns('id-2', 'id-3')
+
+            events = []
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model, activities_model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            error_events = events.select {|e| e[0] == :error}
+            assert_equal 1, error_events.length
+            assert_equal 'users', error_events[0][1]
+            assert_instance_of Cdo::Aws::Redshift::Client::QueryError, error_events[0][2]
+            assert_equal ['users'], result[:failed]
+
+            # Subsequent model still got a :submitted event.
+            assert(events.any? {|ev, payload, _| ev == :submitted && payload == 'activities'})
+          end
+
+          it 'returns empty result for an empty model set' do
+            client.expects(:execute_async).never
+
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: []
+            )
+
+            assert_empty result[:statements]
+            assert_empty result[:failed]
+          end
+
+          it 'yields :would_refresh with the stale FQNs and submits nothing when dry_run is true' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'is_stale' => 't', 'state' => 100},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'is_stale' => 't', 'state' => 100}
+              ]
+            )
+            client.expects(:execute_async).never
+
+            events = []
+            result = MaterializedViewManager.refresh_all_views(
+              client: client, environment_type: :production, models: [model], dry_run: true
+            ) {|event, table, payload| events << [event, table, payload]}
+
+            would_refresh = events.find {|e| e[0] == :would_refresh}
+            refute_nil would_refresh
+            assert_equal 'users', would_refresh[1]
+            assert_equal 2, would_refresh[2].length
+            assert_includes would_refresh[2], 'learning_platform_production_pii.users'
+
+            assert_empty result[:statements]
+            assert_empty result[:failed]
+          end
+        end
+
+        describe '#distkey_clause (via generated DDL)' do
+          it 'uses the first element of a composite primary key (double-quoted)' do
+            model.stubs(:primary_key).returns(%w[user_id activity_id])
+            model.stubs(:columns).returns([mock_column('user_id', :integer), mock_column('activity_id', :integer)])
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
+            assert_includes ddl, 'DISTSTYLE KEY DISTKEY ("user_id")'
+          end
+
+          it 'falls back to DISTSTYLE AUTO when primary_key is nil' do
+            model.stubs(:primary_key).returns(nil)
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
+            assert_includes ddl, 'DISTSTYLE AUTO'
+            refute_includes ddl, 'DISTKEY'
+          end
+
+          it 'falls back to DISTSTYLE AUTO when primary_key is blank' do
+            model.stubs(:primary_key).returns('')
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
+            assert_includes ddl, 'DISTSTYLE AUTO'
+            refute_includes ddl, 'DISTKEY'
+          end
+
+          it 'falls back to DISTSTYLE AUTO when distkey column is filtered out of the projection' do
+            # Mirrors school_stats_by_years: composite PK whose leading column
+            # is a string and so is dropped from the non-PII view.
+            string_pk_col = mock_column('school_id', :string)
+            year_col = mock_column('school_year', :string)
+            int_col = mock_column('students_total', :integer)
+            model.stubs(:primary_key).returns(%w[school_id school_year])
+            model.stubs(:columns).returns([string_pk_col, year_col, int_col])
+
+            non_pii = MaterializedViewManager.new(model).generate_non_pii_ddl
+            assert_includes non_pii, 'DISTSTYLE AUTO'
+            refute_includes non_pii, 'DISTKEY'
+          end
+        end
+
+        describe 'reserved-word column names' do
+          it 'double-quotes column identifiers in the SELECT list' do
+            group_col = mock_column('group', :integer)
+            end_col   = mock_column('end', :datetime)
+            model.stubs(:columns).returns([id_col, group_col, end_col])
+
+            ddl = MaterializedViewManager.new(model).generate_pii_ddl
+            assert_includes ddl, '"id"'
+            assert_includes ddl, '"group"'
+            assert_includes ddl, '"end"'
+          end
+        end
+
+        describe '#expected_view_fqns' do
+          it 'returns both PII and non-PII FQNs when non-pii columns exist' do
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:production)
+            assert_equal %w[learning_platform_production_pii.users learning_platform_production.users], fqns
+          end
+
+          it 'returns only PII FQN when all columns are text' do
+            model.stubs(:columns).returns([name_col, bio_col])
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:test)
+            assert_equal %w[learning_platform_test_pii.users], fqns
+          end
+
+          it 'returns empty array when model has no columns' do
+            model.stubs(:columns).returns([])
+            fqns = MaterializedViewManager.new(model).expected_view_fqns(:production)
+            assert_empty fqns
+          end
+
+          it 'accepts string environment_type' do
+            fqns = MaterializedViewManager.new(model).expected_view_fqns('test')
+            assert_equal %w[learning_platform_test_pii.users learning_platform_test.users], fqns
+          end
+        end
+
+        describe '.describe_mv_state' do
+          it 'maps documented SVV_MV_INFO state codes to descriptions' do
+            assert_equal 'Refreshes by full recompute', MaterializedViewManager.describe_mv_state(0)
+            assert_equal 'Refreshes incrementally', MaterializedViewManager.describe_mv_state(1)
+            assert_includes MaterializedViewManager.describe_mv_state(101), 'column was dropped'
+            assert_includes MaterializedViewManager.describe_mv_state(105), 'schema was renamed'
+          end
+
+          it 'falls back to a generic rebuild message for undocumented state >= 100' do
+            assert_includes MaterializedViewManager.describe_mv_state(199), 'rebuild required'
+            assert_includes MaterializedViewManager.describe_mv_state(199), '199'
+          end
+
+          it 'reports unknown for an undocumented state < 100' do
+            assert_includes MaterializedViewManager.describe_mv_state(42), 'Unknown'
+          end
+
+          it 'returns nil for a nil state' do
+            assert_nil MaterializedViewManager.describe_mv_state(nil)
+          end
+        end
+
+        describe '.generate_all_ddl_templates' do
+          let(:tmpdir) {Dir.mktmpdir}
+
+          before do
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'writes the PII and non-PII templates for each model' do
+            result = MaterializedViewManager.generate_all_ddl_templates(models: [model])
+
+            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
+            assert_equal 2, result[:written].length
+          end
+
+          it 'prunes orphaned templates that no current model produces' do
+            orphan = File.join(tmpdir, 'old_table.sql.erb')
+            File.write(orphan, 'stale')
+
+            result = MaterializedViewManager.generate_all_ddl_templates(models: [model])
+
+            refute File.exist?(orphan), 'orphaned template should be deleted'
+            assert_includes result[:deleted], orphan
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb')), 'current template should remain'
+          end
+        end
+
+        describe '.provision_all_views' do
+          let(:client) {mock('redshift_client')}
+          let(:tmpdir) {Dir.mktmpdir}
+
+          let(:activities_model) {stub}
+
+          before do
+            MaterializedViewManager.send(:remove_const, :SQL_VIEW_TEMPLATE_DIR)
+            MaterializedViewManager.const_set(:SQL_VIEW_TEMPLATE_DIR, tmpdir)
+
+            activities_model.extend(FakeClassification)
+            activities_model.stubs(:table_name).returns('activities')
+            activities_model.stubs(:primary_key).returns('id')
+            activities_model.stubs(:columns).returns([id_col, age_col, created_at_col])
+          end
+
+          after do
+            FileUtils.remove_entry(tmpdir)
+          end
+
+          it 'regenerates the templates even on a dry run (flags the pending change without touching the cluster)' do
+            client.stubs(:execute).returns([])
+            client.expects(:batch_execute_async).never
+
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model], dry_run: true
+            )
+
+            assert File.exist?(File.join(tmpdir, 'users_pii.sql.erb'))
+            assert File.exist?(File.join(tmpdir, 'users.sql.erb'))
+          end
+
+          it 'classifies new views as to_add' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_includes plan[:to_add], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_add], 'learning_platform_production.users'
+            assert_empty plan[:to_update]
+            assert_empty plan[:to_drop]
+          end
+
+          it 'classifies existing-but-stale views as to_update' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
+              ]
+            )
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_empty plan[:to_add]
+            assert_includes plan[:to_update], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_update], 'learning_platform_production.users'
+            assert_empty plan[:to_drop]
+          end
+
+          it 'classifies orphaned views as to_drop' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production_pii', 'name' => 'old_table', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'old_table', 'comment' => nil}
+              ]
+            )
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_includes plan[:to_drop], 'learning_platform_production_pii.old_table'
+            assert_includes plan[:to_drop], 'learning_platform_production.old_table'
+          end
+
+          it 'submits async batches for changed views and returns their statement IDs' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_equal 2, result[:statements].length
+            assert(result[:statements].keys.any? {|fqn| fqn.include?('users')})
+            refute_empty result[:to_add]
+            assert_empty result[:failed]
+          end
+
+          it 'submits the orphan-drop batch async and includes it under a __drop_orphans__ key' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
+            )
+            submitted = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              submitted << sqls
+              true
+            end.returns(['id'])
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert(result[:statements].keys.any? {|k| k.start_with?('__drop_orphans__')})
+            drop_sqls = submitted.find {|sqls| sqls.all? {|s| s.include?('DROP') && !s.include?('CREATE')}}
+            refute_nil drop_sqls
+            assert(drop_sqls.any? {|s| s.include?('old_table')})
+          end
+
+          it 'hands the whole orphan-drop to the client in one call and keys a statement per returned id' do
+            # The Data API's per-call statement cap is the client's concern now (see
+            # Client#batch_execute_async / test_client.rb) -- the manager passes every orphan drop in a
+            # single call and records one __drop_orphans__ key per statement id the client returns.
+            orphans = (1..95).map {|i| {'schema' => 'learning_platform_test', 'name' => "old_#{i}", 'comment' => nil}}
+            client.stubs(:execute).returns(orphans)
+
+            drop_calls = []
+            client.stubs(:batch_execute_async).with do |sqls|
+              drop_calls << sqls if sqls.all? {|s| s.start_with?('DROP MATERIALIZED VIEW')}
+              true
+            end.returns(%w[id-a id-b id-c]) # client split the 95 drops into 3 batches -> 3 ids
+
+            result = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: [model]
+            )
+
+            assert_equal 1, drop_calls.length, 'orphan drops should be submitted in a single call'
+            assert_equal 95, drop_calls.first.length
+            drop_keys = result[:statements].keys.select {|k| k.start_with?('__drop_orphans__')}
+            assert_equal 3, drop_keys.length
+          end
+
+          it 'does not submit anything when dry_run is true' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
+            )
+            client.expects(:batch_execute_async).never
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: [model], dry_run: true
+            )
+
+            refute_empty plan[:to_add]
+            refute_empty plan[:to_drop]
+            assert_empty plan[:statements]
+          end
+
+          it 'does not yield any events on dry_run' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
+            )
+
+            events = []
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: [model], dry_run: true
+            ) {|event, _, _| events << event}
+
+            assert_empty events
+          end
+
+          it 'yields :submitted with table name and submitted FQNs per model' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id-1'], ['id-2'])
+
+            events = []
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            submitted = events.find {|e| e[0] == :submitted}
+            refute_nil submitted
+            assert_equal 'users', submitted[1]
+            assert_equal 2, submitted[2].length
+          end
+
+          it 'yields :drop_batch_submitted with the orphan FQNs' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil},
+                {'schema' => 'learning_platform_test', 'name' => 'old_table', 'comment' => nil}
+              ]
+            )
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            drop_events = []
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: [model]
+            ) {|event, payload, _| drop_events << payload if event == :drop_batch_submitted}
+
+            assert_equal 1, drop_events.length
+            assert_includes drop_events[0], 'learning_platform_test_pii.old_table'
+            assert_includes drop_events[0], 'learning_platform_test.old_table'
+          end
+
+          it 'does not yield :drop_batch_submitted when to_drop is empty' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            events = []
+            MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, _payload, _| events << event}
+
+            refute_includes events, :drop_batch_submitted
+          end
+
+          it 'continues past per-model submit failures and records them under :failed' do
+            client.stubs(:execute).returns([])
+            # First submit raises; the rest succeed -- so the first model fails and the next still runs.
+            client.stubs(:batch_execute_async).
+              raises(Cdo::Aws::Redshift::Client::QueryError, 'Submit failed').then.returns(['id'])
+
+            events = []
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model, activities_model]
+            ) {|event, payload, extra| events << [event, payload, extra]}
+
+            error_events = events.select {|e| e[0] == :error}
+            assert_equal 1, error_events.length
+            assert_equal 'users', error_events[0][1]
+            assert_instance_of Cdo::Aws::Redshift::Client::QueryError, error_events[0][2]
+
+            assert_equal ['users'], plan[:failed]
+            # Subsequent model still got a :submitted event.
+            assert(events.any? {|ev, payload, _| ev == :submitted && payload == 'activities'})
+          end
+
+          it 'reports an empty :failed array when all submits succeed' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            assert_empty plan[:failed]
+          end
+
+          it 'skips models whose existing comment hash matches the desired DDL' do
+            generator = MaterializedViewManager.new(model)
+            desired = generator.rendered_ddls(environment_type: :production)
+
+            client.stubs(:execute).returns(
+              desired.map do |fqn, info|
+                schema, name = fqn.split('.', 2)
+                {'schema' => schema, 'name' => name, 'comment' => Digest::SHA256.hexdigest(info[:sql])}
+              end
+            )
+            client.expects(:batch_execute_async).never
+
+            events = []
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            ) {|event, payload, _| events << [event, payload]}
+
+            assert_includes events, [:skipped, 'users']
+            refute_empty plan[:unchanged]
+            assert_empty plan[:to_add]
+            assert_empty plan[:to_update]
+            assert_empty plan[:statements]
+          end
+
+          it 'recreates models whose existing comment hash differs from the desired DDL' do
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => 'stale-hash'},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => 'also-stale'}
+              ]
+            )
+            submitted = []
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; true}.returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            refute_empty submitted
+            refute_empty plan[:to_update]
+            assert_empty plan[:unchanged]
+          end
+
+          it 'recreates models whose existing views have no comment' do
+            # Views created before this change shipped have no COMMENT stored;
+            # the catalog query reports comment=nil. Treat as "unknown" and rebuild.
+            client.stubs(:execute).returns(
+              [
+                {'schema' => 'learning_platform_production_pii', 'name' => 'users', 'comment' => nil},
+                {'schema' => 'learning_platform_production', 'name' => 'users', 'comment' => nil}
+              ]
+            )
+            submitted = []
+            client.stubs(:batch_execute_async).with {|sqls| submitted << sqls; true}.returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model]
+            )
+
+            refute_empty submitted
+            assert_empty plan[:unchanged]
+          end
+
+          it 'handles multiple models' do
+            client.stubs(:execute).returns([])
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :production, models: [model, activities_model]
+            )
+
+            assert_equal 4, plan[:to_add].length
+            assert_includes plan[:to_add], 'learning_platform_production_pii.users'
+            assert_includes plan[:to_add], 'learning_platform_production.users'
+            assert_includes plan[:to_add], 'learning_platform_production_pii.activities'
+            assert_includes plan[:to_add], 'learning_platform_production.activities'
+          end
+
+          it 'handles empty model set' do
+            client.stubs(:execute).returns(
+              [{'schema' => 'learning_platform_test_pii', 'name' => 'old_table', 'comment' => nil}]
+            )
+            client.stubs(:batch_execute_async).returns(['id'])
+
+            plan = MaterializedViewManager.provision_all_views(
+              client: client, environment_type: :test, models: []
+            )
+
+            assert_empty plan[:to_add]
+            assert_empty plan[:to_update]
+            assert_includes plan[:to_drop], 'learning_platform_test_pii.old_table'
+          end
+        end
+
+        describe '.view_status_summary' do
+          # ViewStatusRow factory; defaults to a healthy, freshly-refreshed non-PII view.
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          let(:now) {Time.now}
+
+          it 'classifies a FAILED provision statement as failed_provisioning' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: 'CREATE', status: 'FAILED', error: 'Schema "x" does not exist')], now: now
+            )
+            assert_equal 1, summary[:error_views].length
+            assert_equal :failed_provisioning, summary[:error_views].first[:condition]
+          end
+
+          it 'classifies state >= 100 as unrefreshable' do
+            summary = MaterializedViewManager.view_status_summary([status_row(state: 101)], now: now)
+            assert_equal :unrefreshable, summary[:error_views].first[:condition]
+          end
+
+          it 'classifies an expected-but-absent view as missing' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)],
+              now: now
+            )
+            assert_equal :missing, summary[:error_views].first[:condition]
+          end
+
+          it 'treats a stale-but-healthy view as stale, not an error' do
+            summary = MaterializedViewManager.view_status_summary([status_row(is_stale: true)], now: now)
+            assert_empty summary[:error_views]
+            assert_equal 1, summary[:stale_views].length
+          end
+
+          it 'reports total and the max age / duration across CREATE and REFRESH rows, ignoring DROP' do
+            rows = [
+              status_row(executed_at: now - 100, duration_seconds: 3.0),
+              status_row(executed_at: now - 3600, duration_seconds: 42.0),
+              status_row(operation: 'CREATE', executed_at: now - 999_999, duration_seconds: 7.0),
+              status_row(operation: 'DROP', executed_at: now - 10_000_000, duration_seconds: 1.0)
+            ]
+            summary = MaterializedViewManager.view_status_summary(rows, now: now)
+            assert_equal 4, summary[:total]
+            assert_equal 999_999, summary[:max_seconds_since_last_refresh]
+            assert_equal 42.0, summary[:max_refresh_duration_seconds]
+          end
+
+          it 'takes the max age/duration across a mix of CREATE and REFRESH rows' do
+            rows = [
+              status_row(operation: 'REFRESH', executed_at: now - 100, duration_seconds: 42.0),
+              status_row(operation: 'CREATE', executed_at: now - 50, duration_seconds: 3.0)
+            ]
+            summary = MaterializedViewManager.view_status_summary(rows, now: now)
+            assert_equal 100, summary[:max_seconds_since_last_refresh]
+            assert_equal 42.0, summary[:max_refresh_duration_seconds]
+          end
+
+          it 'returns nil age/duration when no CREATE/REFRESH has been observed (view missing or dropped)' do
+            summary = MaterializedViewManager.view_status_summary(
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)],
+              now: now
+            )
+            assert_nil summary[:max_seconds_since_last_refresh]
+            assert_nil summary[:max_refresh_duration_seconds]
+          end
+        end
+
+        describe '.summarize_view_status' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'tallies status counts, expected/orphan split, and groups failures by error' do
+            rows = [
+              status_row(status: 'FINISHED'),
+              status_row(status: 'FINISHED', error: 'Schema "x" does not exist', table_name: 'levels'),
+              status_row(status: 'FAILED', error: 'Schema "x" does not exist', table_name: 'scripts'),
+              status_row(model_name: MaterializedViewManager::ORPHAN_MODEL_NAME, status: 'FINISHED', table_name: 'old_table')
+            ]
+            summary = MaterializedViewManager.summarize_view_status(rows)
+
+            assert_equal({'FINISHED' => 3, 'FAILED' => 1}, summary[:by_status])
+            assert_equal 3, summary[:expected]
+            assert_equal 1, summary[:orphan]
+            assert_equal ['Schema "x" does not exist'], summary[:failures_by_error].keys
+            assert_equal 2, summary[:failures_by_error]['Schema "x" does not exist'].length
+          end
+
+          it 'reports empty tallies for an empty row set' do
+            summary = MaterializedViewManager.summarize_view_status([])
+            assert_empty summary[:by_status]
+            assert_equal 0, summary[:expected]
+            assert_equal 0, summary[:orphan]
+            assert_empty summary[:failures_by_error]
+          end
+        end
+
+        describe '.view_status_to_csv' do
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.parse('2026-07-13T12:00:00Z'), duration_seconds: 5.27,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          it 'emits a header row matching VIEW_STATUS_CSV_HEADERS' do
+            parsed = CSV.parse(MaterializedViewManager.view_status_to_csv([]))
+            assert_equal [MaterializedViewManager::VIEW_STATUS_CSV_HEADERS], parsed
+          end
+
+          it 'has the same number of values as headers, so columns never silently shift' do
+            values = MaterializedViewManager.view_status_csv_values(status_row)
+            assert_equal MaterializedViewManager::VIEW_STATUS_CSV_HEADERS.length, values.length
+          end
+
+          it 'serializes a row: iso8601 timestamp, rounded duration, stringified boolean' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row])
+            row = CSV.parse(csv, headers: true).first
+
+            assert_equal 'User', row['model']
+            assert_equal 'users', row['mysql_table_name']
+            assert_equal '2026-07-13T12:00:00Z', row['operation_executed_at']
+            assert_equal '5.3', row['operation_duration_seconds']
+            assert_equal 'false', row['view_is_stale']
+          end
+
+          it 'leaves is_stale blank (not "false") when it is nil' do
+            csv = MaterializedViewManager.view_status_to_csv([status_row(is_stale: nil)])
+            row = CSV.parse(csv, headers: true).first
+            assert_nil row['view_is_stale']
+          end
+        end
+
+        describe '.emit_view_status_metrics' do
+          let(:client) {mock('redshift_client')}
+
+          def status_row(**opts)
+            defaults = {
+              model_name: 'User', table_name: 'users', view_type: 'non_pii',
+              operation: 'REFRESH', executed_at: Time.now, duration_seconds: 5.0,
+              statement_id: 'id-1', status: 'FINISHED', db_user: 'etl_client',
+              is_stale: false, state: 1, state_description: nil, error: nil
+            }
+            ViewStatusRow.new(**defaults.merge(opts))
+          end
+
+          # Captures Cdo::Metrics.put calls. Mocha delivers the `unit:` kwarg as a trailing
+          # positional hash, so args = [namespace, name, value, dimensions, {unit:}].
+          def capture_metrics(&)
+            calls = []
+            Cdo::Metrics.stubs(:put).with {|*args| calls << args; true}
+            yield
+            calls.to_h {|args| [args[1], {value: args[2], dims: args[3], unit: args[4][:unit], ns: args[0]}]}
+          end
+
+          it 'emits a metric per name (with Environment dimension and Count/Seconds units) and logs each error view' do
+            rows = [
+              status_row(operation: 'CREATE', status: 'FAILED', error: 'boom', table_name: 'levels'),
+              status_row(is_stale: true)
+            ]
+            MaterializedViewManager.stubs(:view_status).returns(rows)
+            CDO.log.expects(:error).at_least_once
+
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
+              )
+            end
+
+            assert_equal 1, metrics['ViewsInErrorState'][:value]
+            assert_equal 1, metrics['ViewsStale'][:value]
+            assert_equal 2, metrics['ViewsTotal'][:value]
+            assert_equal 'ZeroEtlMaterializedViews', metrics['ViewsInErrorState'][:ns]
+            assert_equal 'Count', metrics['ViewsInErrorState'][:unit]
+            assert_equal({Environment: CDO.rack_env.to_s}, metrics['ViewsInErrorState'][:dims])
+            assert_equal 'Seconds', metrics['MaxSecondsSinceLastRefresh'][:unit]
+          end
+
+          it 'emits 0 for ViewsInErrorState when every view is healthy' do
+            MaterializedViewManager.stubs(:view_status).returns([status_row])
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
+              )
+            end
+            assert_equal 0, metrics['ViewsInErrorState'][:value]
+          end
+
+          it 'skips nil-valued metrics rather than emitting them' do
+            MaterializedViewManager.stubs(:view_status).returns(
+              [status_row(operation: nil, status: '(no recent)', executed_at: nil, duration_seconds: nil, state: nil, is_stale: nil)]
+            )
+            metrics = capture_metrics do
+              MaterializedViewManager.emit_view_status_metrics(
+                client: client, environment_type: :test, models: [Object.new], now: Time.now
+              )
+            end
+            refute_includes metrics.keys, 'MaxSecondsSinceLastRefresh'
+            refute_includes metrics.keys, 'MaxRefreshDurationSeconds'
+          end
+
+          it 'flushes the metrics buffer so short-lived callers (the cron) deliver all metrics' do
+            MaterializedViewManager.stubs(:view_status).returns([status_row])
+            Cdo::Metrics.stubs(:put)
+            Cdo::Metrics.expects(:flush!).once
+
+            MaterializedViewManager.emit_view_status_metrics(
+              client: client, environment_type: :test, models: [Object.new], now: Time.now
+            )
+          end
+        end
+      end
+    end
+  end
+end

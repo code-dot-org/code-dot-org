@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-06-29T17:08:35.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "require_edit_to_continue": true,
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "41d545bc-d405-4197-9113-3fea79b5ac9e": {
+          "id": "41d545bc-d405-4197-9113-3fea79b5ac9e",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>AI Mood Classifier Analysis</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <div class=\"container\">\n        <h1>Analyze This AI Program</h1>\n        <p>You are evaluating a simple AI program designed to classify a user's mood from text input and suggest a song.</p>\n\n        <div class=\"scenario\">\n            <h2>Scenario:</h2>\n            <h3>User Input:</h3>\n            <p>\"I had a really tough day, nothing went right. I just want to chill.\"</p>\n            <h3>AI Program Output:</h3>\n            <div class=\"ai-output\">\n                <p><strong>Mood Classification:</strong> Sad</p>\n                <p><strong>Suggested Song:</strong> \"Happy\" by Pharrell Williams</p>\n            </div>\n        </div>\n\n        <div class=\"analysis-section\">\n            <h2>Your Analysis:</h2>\n            <p>Based on what you've learned about user-centered AI design, identify the shortcomings of this AI program's output. Consider fairness, accuracy, and usefulness for a real user.</p>\n            <!-- \n                --------------------------------------------------------------------------------------\n                YOUR ANALYSIS GOES BELOW THIS LINE. \n                Write your thoughts here as HTML comments, explaining where the AI falls short \n                and how it could be improved.\n                --------------------------------------------------------------------------------------\n            -->\n\n            <!-- \n                Example considerations:\n                - Is \"Sad\" the best classification for \"tough day\"? Is it fair to label it that way?\n                - Is suggesting \"Happy\" a good response to \"Sad\" or \"tough day\" when the user wants to \"chill\"? Why or why not? What might be a negative impact of this suggestion?\n                - What other information might the AI need from the user to give a better suggestion? How could the program be more useful?\n            -->\n\n            <!-- \n                Write your detailed analysis and proposed improvements here:\n                \n                Shortcoming 1 (e.g., Accuracy/Fairness/Usefulness): \n                Explanation: \n                \n                Shortcoming 2 (e.g., Accuracy/Fairness/Usefulness): \n                Explanation: \n\n                Possible Improvements:\n                1. \n                2. \n\n            -->\n            \n            <p>Once you're done, remember to save your changes!</p>\n        </div>\n    </div>\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "folderId": "0",
+          "type": "starter",
+          "active": true
+        },
+        "6bb5e0e4-6886-4d3c-af44-0e944e1417d1": {
+          "id": "6bb5e0e4-6886-4d3c-af44-0e944e1417d1",
+          "name": "style.css",
+          "contents": "body {\n    font-family: sans-serif;\n    margin: 20px;\n    background-color: #f4f4f4;\n    color: #333;\n    line-height: 1.6;\n}\n\n.container {\n    max-width: 800px;\n    margin: 0 auto;\n    background-color: #fff;\n    padding: 20px 30px;\n    border-radius: 8px;\n    box-shadow: 0 2px 10px rgba(0,0,0,0.1);\n}\n\nh1, h2, h3 {\n    color: #0056b3;\n}\n\n.scenario {\n    border: 1px solid #ddd;\n    padding: 15px;\n    margin-bottom: 20px;\n    background-color: #e9f7ff;\n    border-radius: 5px;\n}\n\n.ai-output {\n    background-color: #fff;\n    border: 1px dashed #ccc;\n    padding: 10px;\n    margin-top: 10px;\n    border-radius: 3px;\n}\n\n.ai-output p {\n    margin: 5px 0;\n}\n\n.analysis-section {\n    border-top: 2px solid #0056b3;\n    padding-top: 20px;\n    margin-top: 30px;\n}\n\n.analysis-section p {\n    margin-bottom: 10px;\n}",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        },
+        "bc052353-154d-4f69-a734-a1a34261dba1": {
+          "id": "bc052353-154d-4f69-a734-a1a34261dba1",
+          "name": "script.js",
+          "contents": "// This script is linked to index.html, but you don't need to modify it for this level.\n// Your task is to analyze the AI's output and add comments to index.html!\nconsole.log(\"Welcome to the AI Mood Classifier Analysis!\");\n",
+          "folderId": "0",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "41d545bc-d405-4197-9113-3fea79b5ac9e",
+        "6bb5e0e4-6886-4d3c-af44-0e944e1417d1",
+        "bc052353-154d-4f69-a734-a1a34261dba1"
+      ]
+    },
+    "long_instructions": "In this level, you'll be putting on your designer hat to evaluate an AI program from the perspective of an end-user. We've talked about how important it is for AI programs to be fair, usable, and truly helpful. Now, you'll get to apply those ideas!\r\n\r\nOpen `index.html` in your editor. You'll see a scenario where a user interacts with a simple AI program designed to suggest a song based on their mood. Read the user's input and the AI's output carefully.\r\n\r\nYour task is to identify where this AI program might fall short for a real user. Think about:\r\n*   Is the AI's classification accurate or too simplistic?\r\n*   Is the suggested song actually *useful* or even appropriate for someone feeling that way?\r\n*   Could the AI's output potentially cause a negative impact, even if unintended?\r\n\r\nAdd your observations and proposed improvements as comments directly within the `<!-- -->` tags in `index.html`.",
+    "generate_outline": "Students will analyze a simplified AI program's output within a given scenario. They will identify specific instances where the AI model's results might fall short for real users, considering fairness, accuracy, or usefulness, and articulate why."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:56 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:56 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:09:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

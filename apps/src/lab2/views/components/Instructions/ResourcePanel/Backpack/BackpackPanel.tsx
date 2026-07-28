@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography, Button as MuiButton, Snackbar, Fade} from '@mui/material';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {TransitionGroup} from 'react-transition-group';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -40,7 +40,11 @@ const SnackbarPassthrough = React.forwardRef<
   {children?: React.ReactNode}
 >(({children}, ref) => <div ref={ref}>{children}</div>);
 
-type AlertConfig = {id: number; type: 'success' | 'danger'; message: string};
+type AlertConfig = {
+  id: number;
+  type: 'success' | 'danger' | 'info';
+  message: string;
+};
 const ALERT_AUTO_HIDE_MS = 3000;
 let nextAlertId = 0;
 
@@ -76,6 +80,9 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
   );
+  const uploadingFileAlertIdsRef = useRef<{
+    [key: string]: number;
+  }>({});
 
   function loadForApi(
     backpackApi: BackpackClientApi | undefined,
@@ -129,11 +136,18 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
   }, []);
 
   const addAlert = useCallback(
-    (type: 'success' | 'danger', message: string) => {
+    (
+      type: 'success' | 'danger' | 'info',
+      message: string,
+      autoHide: boolean = true
+    ) => {
       const id = nextAlertId++;
       setAlertList(prevAlerts => [...prevAlerts, {id, type, message}]);
       openPanelCallback();
-      setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+      if (autoHide) {
+        setTimeout(() => removeAlert(id), ALERT_AUTO_HIDE_MS);
+      }
+      return id;
     },
     [openPanelCallback, removeAlert]
   );
@@ -151,6 +165,17 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
     }
   }, [backpackRefreshKey, loadBackpackFiles]);
 
+  const removeUploadingAlert = useCallback(
+    (appKey: string, filename: string) => {
+      const alertId = uploadingFileAlertIdsRef.current[`${appKey}_${filename}`];
+      if (alertId !== undefined) {
+        removeAlert(alertId);
+        delete uploadingFileAlertIdsRef.current[`${appKey}_${filename}`];
+      }
+    },
+    [removeAlert]
+  );
+
   useEffect(() => {
     const eventListener =
       (appKey: string) => (event: BackpackEvent, filename: string) => {
@@ -163,6 +188,22 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             ? setFileList
             : (fileList: string[]) =>
                 setSecondaryFileLists(prev => ({...prev, [appKey]: fileList}));
+
+        if (event === BackpackEvent.UploadStarted) {
+          const alertId = addAlert(
+            'info',
+            `Uploading ${filename} to your Backpack...`,
+            false
+          );
+          uploadingFileAlertIdsRef.current[`${appKey}_${filename}`] = alertId;
+          return;
+        } else if (event === BackpackEvent.UploadFailed) {
+          // Client handles showing upload failed alert where it makes the most sense for the lab.
+          removeUploadingAlert(appKey, filename);
+          return;
+        }
+
+        // If we are here, the event was either FileAdded or FileDeleted, so we need to reload the backpack file list.
         // We don't show the load view here to avoid the screen flickering when the backpack updates.
         setLoadError(false);
         loadForApi(clientToLoad, listCallback, false);
@@ -179,6 +220,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
             }
             return {...prevFiles, [appKey]: [...previousListForApp, filename]};
           });
+          removeUploadingAlert(appKey, filename);
           setTimeout(() => {
             setRecentlyAddedFiles(prevFiles => {
               let previousListForApp = prevFiles[appKey];
@@ -216,7 +258,14 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         });
       }
     };
-  }, [loadBackpackFiles, primaryBackpackApi, secondaryBackpackApis, addAlert]);
+  }, [
+    loadBackpackFiles,
+    primaryBackpackApi,
+    secondaryBackpackApis,
+    addAlert,
+    removeAlert,
+    removeUploadingAlert,
+  ]);
 
   const isBackpackEmpty = useMemo(() => {
     const emptyPrimaryBackpack =
@@ -385,7 +434,7 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           disabled={actionInProgress || viewingOldVersion}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (error: string) =>
-              addAlert('danger', error)
+              addAlert('danger', error, false)
             )
           }
           type="button"

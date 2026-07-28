@@ -66,7 +66,7 @@ export const AiTutorContainer: FC<{
     !!labState.appType &&
     !shouldShowAiTutor({
       appName: labState.appType,
-      tutorLevel: aiTutorAvailableForLevel,
+      isTutorLevel: aiTutorAvailableForLevel,
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 

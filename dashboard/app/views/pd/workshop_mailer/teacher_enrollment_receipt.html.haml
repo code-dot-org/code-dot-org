@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Figtree, sans-serif;
+    font-family: Geist, sans-serif;
   }
 
 %p
@@ -11,7 +11,7 @@
   %p
     Thanks for enrolling in
     = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
-    5-day Summer workshop on the Code.org
+    5-day Summer workshop on the CodeAI
     = @workshop.course
     curriculum.
 - elsif Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course && Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO == @workshop.subject
@@ -29,7 +29,7 @@
     Thanks for enrolling in
     = "#{@workshop.organizer.name}'#{@workshop.organizer.name.ends_with?('s') ? '' : 's'} "
     = @workshop.subject
-    on the Code.org
+    on the CodeAI
     = @workshop.course
     curriculum.
 - elsif Pd::Workshop::COURSE_FACILITATOR == @workshop.course
@@ -38,7 +38,7 @@
     forward to seeing you there!
 - else
   %p
-    Thanks for enrolling in Code.org's
+    Thanks for enrolling in CodeAI's
     - if @workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
       = @workshop.name.presence || Pd::Workshop::COURSE_BUILD_YOUR_OWN
     - else

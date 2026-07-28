@@ -1,5 +1,6 @@
 import {globalIgnores} from 'eslint/config';
 
-import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import cdoLabConfig from '@code-dot-org/lint-config/eslint/lab.mjs';
+import cdoVitestConfig from '@code-dot-org/lint-config/eslint/vitest.mjs';
 
-export default [globalIgnores(['dist']), ...cdoReactConfig];
+export default [globalIgnores(['dist']), ...cdoLabConfig, ...cdoVitestConfig];

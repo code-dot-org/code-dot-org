@@ -21,6 +21,7 @@ export default function QuickAssignTable({
   setSelectedCourseOffering,
   updateCourse,
   sectionCourse,
+  selectedCourseUnavailable,
 }) {
   // Key is type of curriculum e.g. 'Course' or 'Module', which is the singular
   // version of the title we want for the column
@@ -41,7 +42,8 @@ export default function QuickAssignTable({
             courseOfferings[marketingAudience][key],
             sectionCourse,
             updateCourse,
-            setSelectedCourseOffering
+            setSelectedCourseOffering,
+            selectedCourseUnavailable
           )}
         </tbody>
       </table>
@@ -66,4 +68,5 @@ QuickAssignTable.propTypes = {
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,
+  selectedCourseUnavailable: PropTypes.bool,
 };

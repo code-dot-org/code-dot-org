@@ -3,8 +3,11 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -17,8 +20,7 @@ import {
   ProjectSources,
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
-import PreviousVersionAlert from '@cdo/apps/lab2/views/alerts/previousVersion';
-import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
+import WorkspaceAlerts from '@cdo/apps/lab2/views/alerts/workspaceAlerts';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -29,14 +31,20 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
-import {ReactFlowSketchLabSources} from './types';
+import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
+import ShareView from './ShareView';
+import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
   uploadConvertedDataUrlImages,
 } from './utils/convertExcalidrawSources';
+import {makeBackpackImageImportHandler} from './utils/handleBackpackImageImport';
+import {handleDownloadSketch} from './utils/handleDownloadSketch';
 import {handleSaveToBackpack} from './utils/handleSaveToBackpack';
+import {migrateTriangleHandleIds} from './utils/migrateReactFlowSources';
 
 import styles from './react-flow-sketch-lab-view.module.scss';
 
@@ -60,13 +68,33 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isResourcePanelCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const isShareView = useAppSelector(state => state.lab.isShareView);
+  const themeSetting = useThemeSetting('sketchlab');
+
+  useReactFlowSketchLabTour({levelProperties, enabled: !isShareView});
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
 
+  const hasAttempted = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
+
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
+  // A Backpack image the user asked to import. The canvas watches this prop and
+  // adds it as a node (reusing its placement, undo, and focus behavior), then
+  // clears it via onImageImportConsumed.
+  const [pendingImageImport, setPendingImageImport] =
+    useState<ImageNodeData | null>(null);
+  const clearPendingImageImport = useCallback(
+    () => setPendingImageImport(null),
+    []
+  );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -74,7 +102,10 @@ function ReactFlowSketchLabViewInner({
   const backpackContext = useMemo(
     () =>
       currentUserId
-        ? {primaryApi: new BackpackClientApi('sketchlab', null)}
+        ? {
+            primaryApi: new BackpackClientApi('sketchlab', null),
+            secondaryApis: {aichat: new BackpackClientApi('aichat', null)},
+          }
         : null,
     [currentUserId]
   );
@@ -113,10 +144,9 @@ function ReactFlowSketchLabViewInner({
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
   }, [showStartOverDialog]);
-
-  const teacherViewingStudent = Boolean(
-    useAppSelector(state => state.progress.viewAsUserId)
-  );
+  const onClickDownload = useCallback(() => {
+    void handleDownloadSketch(reactFlow, dialogControl);
+  }, [reactFlow, dialogControl]);
 
   const WorkspaceAlert = useLevelEditMode<LevelProperties>(
     levelProperties.id,
@@ -158,8 +188,8 @@ function ReactFlowSketchLabViewInner({
         isSupportFileName: false,
         newFileName: fileName,
       }),
-      // Sketch Lab doesn't support importing Backpack files into the
-      // project, so these import-related handlers are no-ops.
+      // Importing goes through addFileHandler below, so these callbacks are
+      // no-ops.
       saveFileToProject: () => {},
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
@@ -174,14 +204,20 @@ function ReactFlowSketchLabViewInner({
           ),
         text: 'Save Sketch to Backpack',
       },
-      supportedFileTypes: [],
+      supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
+      addFileTooltipText: 'Add to sketch',
+      addFileHandler: makeBackpackImageImportHandler({
+        levelName: levelProperties.name,
+        channelId,
+        addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
+      }),
     }),
-    [reactFlow, backpackContext, dialogControl]
+    [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
   );
 
   // Read sources, converting from Excalidraw if this project was last
-  // saved by the old lab. Deep-clone so React Flow can mutate node
-  // style objects during resize.
+  // saved by the old lab. Migrates stale triangle handle IDs from prior
+  // renames. Deep-clone so React Flow can mutate node style objects during resize.
   const {initialNodes, initialEdges, initialViewport, convertedFromExcalidraw} =
     useMemo(() => {
       const source = currentSources.source as
@@ -197,6 +233,12 @@ function ReactFlowSketchLabViewInner({
         didConvert = true;
       } else if (Array.isArray((source as SketchlabReactFlowSource)?.nodes)) {
         normalized = source as SketchlabReactFlowSource;
+      }
+      // TODO: once all start sources and student projects have been audited and
+      // confirmed free of stale triangle handle IDs, remove this migration call
+      // and delete migrateReactFlowSources.ts.
+      if (normalized) {
+        normalized = migrateTriangleHandleIds(normalized);
       }
       const cloned = normalized ? structuredClone(normalized) : null;
       return {
@@ -223,16 +265,35 @@ function ReactFlowSketchLabViewInner({
     readonlyWorkspace,
   ]);
 
+  if (isShareView) {
+    return (
+      <ShareView
+        levelName={levelProperties.name}
+        initialNodes={initialNodes}
+        initialEdges={initialEdges}
+        initialViewport={initialViewport}
+        colorMode={colorMode}
+      />
+    );
+  }
+
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
-        <div style={{width: leftPanelWidth}} className={panelClassName}>
+        <div
+          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          className={classNames(
+            panelClassName,
+            isResourcePanelCollapsed && styles.collapsedPanel
+          )}
+        >
           <ResourcePanel
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
-            hasEdited={false}
-            settings={[useThemeSetting('sketchlab')]}
+            hasEdited={hasAttempted}
+            hideCollapsedTabBorder
+            settings={[themeSetting]}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||
@@ -243,16 +304,37 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        <ResizeBar
-          isVertical={true}
-          separatorProps={panelSeparatorProps}
-          isDragging={isDragging}
-        />
-        <div style={{width: rightPanelWidth}}>
+        {!isResourcePanelCollapsed && (
+          <ResizeBar
+            isVertical={true}
+            separatorProps={panelSeparatorProps}
+            isDragging={isDragging}
+          />
+        )}
+        <div
+          style={
+            isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
+          }
+        >
           <PanelContainer
             id="workspace"
             className={panelClassName}
             headerContent={<WorkspaceHeader.Content />}
+            leftHeaderContent={
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                onClick={onClickDownload}
+                aria-label="Download"
+                type="button"
+                startIcon={
+                  <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+                }
+              >
+                Download
+              </MuiButton>
+            }
             rightHeaderContent={
               <>
                 <WorkspaceHeader.TemplateIcon />
@@ -277,10 +359,10 @@ function ReactFlowSketchLabViewInner({
               </>
             }
           >
-            {teacherViewingStudent && (
-              <TeacherViewingStudentProjectAlert inWorkspaceContainer />
-            )}
-            <PreviousVersionAlert />
+            <WorkspaceAlerts
+              inWorkspaceContainer
+              hasStandaloneProjectLevel={false}
+            />
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
@@ -290,6 +372,8 @@ function ReactFlowSketchLabViewInner({
               initialViewport={initialViewport}
               colorMode={colorMode}
               readOnly={readonlyWorkspace}
+              pendingImageImport={pendingImageImport}
+              onImageImportConsumed={clearPendingImageImport}
             />
             {WorkspaceAlert}
           </PanelContainer>

@@ -77,7 +77,7 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, unit_group_unit: unit_group_unit, **params))
   end
 
-  def url_from_path(path, scheme = '')
+  def url_from_path(path, scheme = CDO.default_scheme)
     CDO.studio_url(path, scheme)
   end
 
@@ -85,35 +85,6 @@ module LevelsHelper
     level_view_options(@level.id, skip_instructions_popup: true)
     view_options(readonly_workspace: true)
     view_options(callouts: [])
-  end
-
-  # Provide a presigned URL that can upload the video log to S3 for processing
-  # in to a video. Currently only used by Dance, in both project mode and for
-  # the last level of the progression.
-  # NOTE: any client that has this value set will be able to upload a log and
-  # regenerate the share video. Make sure this is only provided to views with
-  # edit permission (ie, the project creator, but not the sharing view)
-  def replay_video_view_options(channel = nil)
-    return unless DCDO.get('share_video_generation_enabled', true)
-
-    signed_url = AWS::S3.presigned_upload_url(
-      "cdo-p5-replay-source.s3.amazonaws.com",
-      "source/#{channel || @view_options['channel']}",
-      virtual_host: true
-    )
-
-    # manually force https since the AWS SDK assumes all virtual hosts are
-    # http-only
-    signed_url.sub!('http:', 'https:')
-
-    # manually point to our custom CloudFront domain so we don't have to worry
-    # about whitelists. Note that we _should_ be able to do this by just
-    # passing the custom domain as the first argument to presigned_upload_url,
-    # but the Ruby AWS SDK appears to mess that up.
-    # TODO: elijah: explore other options for doing this
-    signed_url.sub!('cdo-p5-replay-source.s3.amazonaws.com', 'dance-api.code.org')
-
-    view_options(signed_replay_log_url: signed_url)
   end
 
   def get_project_and_version_id(level_id, script_id)
@@ -355,22 +326,9 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
-      is_navigator = !user_level.nil? && user_level.navigator?
-      if is_navigator
-        driver = user_level.driver
-        driver_level_source_id = user_level.driver_level_source_id
-      end
-
-      level_view_options(@level.id, is_navigator: is_navigator)
-      if driver
-        level_view_options(@level.id, pairing_driver: driver.name)
-        if driver_level_source_id
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
-        elsif @level.channel_backed?
-          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
-        end
-      end
+      pairing_properties = @level.pairing_properties_for(pairing_check_user, @script)
+      level_view_options(@level.id, is_navigator: pairing_properties.delete(:is_navigator) || false)
+      level_view_options(@level.id, pairing_properties) if pairing_properties.present?
     end
 
     @app_options =

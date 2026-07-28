@@ -124,7 +124,7 @@ module Pd
     def new_facilitator_post
       workshop = Pd::Workshop.find(params[:workshop_id])
       if workshop.course == COURSE_BUILD_YOUR_OWN
-        redirect_to CDO.studio_url BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY, CDO.default_scheme
+        redirect_to CDO.studio_url(BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY)
       else
         new_facilitator_post_foorm(workshop)
       end

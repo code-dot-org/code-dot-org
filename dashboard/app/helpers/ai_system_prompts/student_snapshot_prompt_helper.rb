@@ -23,77 +23,103 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
     }.freeze
 
-  LESSON_INSIGHT_PROMPT = <<~INSIGHT_PROMPT
+  LESSON_INSIGHT_PROMPT_FALLBACK = <<~INSIGHT_PROMPT
     You are a teaching assistant for a computer science curriculum. I need you to return a short summary of what a student has done on a specific lesson that contains multiple levels.
     Follow these steps to generate a progress summary and assessment:
       List the completed levels, including the level number and any completed sublevels under the level.
       List time spent if available
-      For “Check Your Understanding” levels, list whether the student was correct.
+      For "Check Your Understanding" levels, list whether the student was correct.
       List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
     Write the following summary based on all info and above steps. returned in JSON format and should be composed as follows:
       {progress: Write 1-2 sentences about the student's progress through the levels, optional sublevels, and finally the assessment level. The student's performance on the assessment level is the most important,
-      misconceptions: Write 1-2 sentences about any of the student’s misconceptions in the lesson. If there are no misconceptions, say “Student showed no misconceptions”,
+      misconceptions: Write 1-2 sentences about any of the student's misconceptions in the lesson. If there are no misconceptions, say "Student showed no misconceptions",
       assessment: Write 1-2 sentences specifically about the assessment level, including a brief description of what they did and what their program does. Write about what skills they did well on and/or need to improve on. Only include information about the assessment level,
       next_steps: Write 1 sentence based on any misconceptions or issues with their code levels (especially the assessment level) with suggestions on what to do next. This could be going over concepts, trying additional levels or sublevels or just stating that they should continue on to the next lesson. Do not recommend completing additional sublevels if the student has completed one and there are no misconceptions,}
-    Use the following lesson info to complete the steps above:
+    Use the following lesson info to generate your summary:
+
+    Lesson Name: {{lesson_name}}
+    Lesson Overview: {{lesson_overview}}
+    Learning Objectives: {{learning_objectives}}
+    Standards: {{standards}}
+    Unit Name: {{unit_name}}
+    Unit Overview: {{unit_overview}}
+    Levels: [{
+    {{levels_info}}
+    }]
   INSIGHT_PROMPT
 
-  LESSON_FEEDBACK_PROMPT = <<~FEEDBACK_PROMPT
+  LESSON_FEEDBACK_PROMPT_FALLBACK = <<~FEEDBACK_PROMPT
     You are a teaching assistant for a computer science teacher using a computer science curriculum. I need you to provide constructive student-facing feedback to help students improve their computer science understanding and skills.
     Follow these steps to generate a progress summary and assessment:
       List the completed levels, including the level number and any completed sublevels under the level.
       List time spent if available
-      For “Check Your Understanding” levels, list whether the student was correct.
+      For "Check Your Understanding" levels, list whether the student was correct.
       List the actions the student did during their assessment and what actions they spent most time on- debugging, writing code, running the code
     Write the student-facing feedback based on all info and above steps. The student-facing feedback should be specific, actionable, and encouraging.
     Keep the tone positive and supportive, aiming to motivate the student to continue learning and growing in computer science.
     The student facing feedback should be returned in JSON format and should be composed as follows:
-      {feedback:  Provide one piece of constructive feedback that describes a strength the student is demonstrating as well as one area of growth that the student should focus on improving. The feedback should be brief and skimmable for students at a 4th grade reading level or below.}"
-    Use the following lesson info to complete the steps above:
+      {feedback: Provide one piece of constructive feedback that describes a strength the student is demonstrating as well as one area of growth that the student should focus on improving. The feedback should be brief and skimmable for students at a 4th grade reading level or below.}
+    Use the following lesson info to generate your feedback:
+
+    Lesson Name: {{lesson_name}}
+    Lesson Overview: {{lesson_overview}}
+    Learning Objectives: {{learning_objectives}}
+    Standards: {{standards}}
+    Unit Name: {{unit_name}}
+    Unit Overview: {{unit_overview}}
+    Levels: [{
+    {{levels_info}}
+    }]
   FEEDBACK_PROMPT
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-
-    "#{LESSON_INSIGHT_PROMPT}\n#{general_prompt}"
+    template = fetch_prompt_template("teaching-assistant/lesson-insight", LESSON_INSIGHT_PROMPT_FALLBACK)
+    variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
+    compile_prompt(template, variables)
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    general_prompt = get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-
-    "#{LESSON_FEEDBACK_PROMPT}\n#{general_prompt}"
+    template = fetch_prompt_template("teaching-assistant/lesson-feedback", LESSON_FEEDBACK_PROMPT_FALLBACK)
+    variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
+    compile_prompt(template, variables)
   end
 
-  def self.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
+  def self.compile_prompt(template, variables)
+    variables.reduce(template) {|text, (key, value)| text.gsub("{{#{key}}}", value.to_s)}
+  end
+
+  def self.fetch_prompt_template(langfuse_prompt_name, fallback)
+    Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development? || ENV.fetch('CI', nil)) do
+      response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name)
+      response[:status] == :ok ? response[:json]['prompt'] : nil
+    end || fallback
+  rescue => exception
+    Rails.logger.warn("StudentSnapshotPromptHelper.fetch_prompt_template failed for #{langfuse_prompt_name}: #{exception.message}")
+    fallback
+  end
+
+  def self.get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
     unit = Unit.find(unit_id)
     unit_description = unit&.localized_description ? Services::MarkdownPreprocessor.process(unit.localized_description)&.gsub(/\n/, '. ')&.strip : nil
 
     lesson = Lesson.find(lesson_id)
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
-    lesson_info = {
-      "Lesson Name" => lesson.name,
-      "Lesson Overview" => lesson.render_property(:overview)&.gsub(/\n/, '. ')&.strip,
-      "Learning Objectives" => objectives,
-      "Standards" => lesson.standards.map(&:summarize_for_lesson_show).to_json,
-      "Unit Name" => unit.title_for_display,
-      "Unit Overview" => "\"#{unit_description}\""
-    }
-
     levels = lesson.levels.order(:position)
     assessment_level = lesson.levels.where(type: 'Pythonlab').last
     level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
-    lesson_info_str = lesson_info.map {|key, value| "#{key}: #{value}"}.join("\n")
-
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}
 
-    "Use the following lesson info to generate your summary:
-
-#{lesson_info_str}
-Levels: [{
-#{level_info_strings.join("\n},{\n")}
-}]"
+    {
+      lesson_name: lesson.name,
+      lesson_overview: lesson.render_property(:overview)&.gsub(/\n/, '. ')&.strip,
+      learning_objectives: objectives,
+      standards: lesson.standards.map(&:summarize_for_lesson_show).to_json,
+      unit_name: unit.title_for_display,
+      unit_overview: "\"#{unit_description}\"",
+      levels_info: level_info_strings.join("\n},{\n"),
+    }
   end
 
   def self.get_level_number(level, script_level, parent_script_level = nil, parent_level_display_text = nil)

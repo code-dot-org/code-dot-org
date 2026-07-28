@@ -130,6 +130,20 @@ module.exports = function (grunt) {
           src: ['**'],
           dest: 'build/package/media/skins/ailab',
         },
+        {
+          // @code-dot-org/ailab emits both images and datasets under dist/assets
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ailab/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/ailab',
+        },
+        {
+          // ml-playground images are emitted to dist/images, not dist/assets.
+          expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-playground/dist',
+          src: ['images/**'],
+          dest: 'build/package/media/skins/ailab',
+        },
 
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
@@ -370,6 +384,7 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
+    generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
@@ -395,6 +410,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:static',
   ]);
 
@@ -451,7 +467,7 @@ module.exports = function (grunt) {
     // JS files watched by webpack
     style: {
       files: ['style/**/*.scss', 'style/**/*.sass'],
-      tasks: ['newer:sass', 'notify:sass'],
+      tasks: ['newer:sass'],
       options: {
         interval: DEV_WATCH_INTERVAL,
         interrupt: true,
@@ -459,21 +475,21 @@ module.exports = function (grunt) {
     },
     content: {
       files: ['static/**/*'],
-      tasks: ['newer:copy', 'notify:content'],
+      tasks: ['newer:copy'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     vendor_js: {
       files: ['lib/**/*.js'],
-      tasks: ['newer:copy:lib', 'notify:vendor_js'],
+      tasks: ['newer:copy:lib'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
     },
     messages: {
       files: ['i18n/**/*.json'],
-      tasks: ['messages', 'notify:messages'],
+      tasks: ['messages'],
       options: {
         interval: DEV_WATCH_INTERVAL,
       },
@@ -490,16 +506,20 @@ module.exports = function (grunt) {
     },
   };
 
-  config.notify = {
-    'js-build': {options: {message: 'JS build completed.'}},
-    sass: {options: {message: 'SASS build completed.'}},
-    content: {options: {message: 'Content build completed.'}},
-    ejs: {options: {message: 'EJS build completed.'}},
-    messages: {options: {message: 'i18n messages build completed.'}},
-    vendor_js: {options: {message: 'vendor JS copy done.'}},
-  };
-
   grunt.initConfig(config);
+
+  // grunt-newer compares each Sass entry file's mtime against its compiled
+  // output, so it never notices a change to a partial pulled in only via
+  // @import. Force a full recompile when the changed file isn't one of the
+  // known entries, so partial edits actually take effect.
+  var sassEntryFiles = new Set(_.values(config.sass.all.files));
+  grunt.event.on('watch', function (action, filepath, target) {
+    if (target !== 'style') {
+      return;
+    }
+    var tasks = sassEntryFiles.has(filepath) ? ['newer:sass'] : ['sass:all'];
+    grunt.config(['watch', 'style', 'tasks'], tasks);
+  });
 
   // Autoload grunt tasks
   require('load-grunt-tasks')(grunt, {
@@ -545,6 +565,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateRegionConfigurations',
+    'exec:generateStudioRoutes',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
@@ -605,7 +626,6 @@ module.exports = function (grunt) {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
-    'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);

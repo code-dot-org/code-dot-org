@@ -354,7 +354,7 @@ const s3HeaderToMetadataKey = httpHeaderName =>
     : httpHeaderName.replace(/^x-amz-meta-/, '').replaceAll('-', '_');
 
 // Fetch test results directly from S3, already stored as object metadata on each *_output.html file
-// This function is used when running as static HTML. In this condition, the test_status_UI.html (etc)
+// This function is used when running as static HTML. In this condition, the test_status_Eyes.html (etc)
 // pages we're running in will be served from the same S3 bucket, and therefore domain, as the *_output.html
 // files. Therefore, there is no CORS issue doing HEAD requests against them.
 async function fetchMetadataDirectlyFromS3For(browser, featureKey) {

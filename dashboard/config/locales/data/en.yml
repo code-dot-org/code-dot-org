@@ -932,6 +932,17 @@ en:
         pl-teaching-moves-assessment-in-the-age-of-ai: 'Teaching Moves: Assessment in the Age of AI'
         pl-aif2-filtering-data-u3: Filtering Data U3 Movie filter
         pl-aif2-teaching-moves-coding-with-ai: Teaching Coding + AI
+        pl-aif2-debug-for-loop: Debugging For Loops
+        pl-aif2-filter-for-transparency: Filtering for Transparency
+        aif2-pl-redesign-filter-logic: Redesigning Filter Logic
+        pl-aif2-transparency-cues-U4: Transparency Cues
+        pl-aif2-making-decions-in-code: Making Decisions in Code
+        pl-aif2-debugging-variables: Debugging Variables
+        pl-aif2-displaying-data-UI: 'Displaying Data '
+        pl-aif2-dot-notation-api: Accessing Data in APIs
+        pl-aif2-u5-try-catch: Try and Catch Blocks
+        pl-aif2-filtering-data-movies-U3: Filtering Data
+        pl-aif2-building-pipelines-u3: Building Pipelines
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -1,0 +1,23 @@
+name 'pl-survey-embeddings'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Survey Embeddings
+
+
+## Confidence Check
+<div style="width:95%;max-width:620px;margin:18px 0 18px 0;">
+<iframe src="https://micahkennedy.github.io/confidence_meter/?page=mod1level5" width="100%" height="150" style="border:none;overflow:hidden;display:block;"></iframe>
+</div>
+
+## Pulse Check
+
+<br>
+
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Unit=unit5&Level=level5&Activity_Type=activity" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
+
+<br><br>
+
+<iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Level=level7&Activity_Type=video" width="340" height="50" style="border:none;overflow:hidden;"></iframe>
+MARKDOWN

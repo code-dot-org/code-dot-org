@@ -1,0 +1,1001 @@
+age,gender,race,bleeding,shortness_of_breath,weight,area_of_pain,decision
+Over 60,male,W,yes,no,under 100 lbs,stomach,normal
+18-34,female,W,yes,no,under 100 lbs,limb,normal
+Under 18,female,BAM,no,yes,under 100 lbs,chest,priority
+18-34,female,A,no,no,under 100 lbs,head,priority
+Under 18,male,A,no,yes,150-200 lbs,head,priority
+35-60,male,W,no,no,Over 300 lbs,chest,priority
+Over 60,female,A,no,yes,under 100 lbs,stomach,normal
+18-34,female,A,no,no,under 100 lbs,chest,priority
+35-60,female,A,yes,no,under 100 lbs,stomach,return_later
+35-60,male,W,yes,no,100-150 lbs,stomach,normal
+18-34,female,NHPI,yes,yes,Over 300 lbs,chest,return_later
+35-60,male,AIAN,no,no,under 100 lbs,chest,return_later
+18-34,male,W,yes,yes,150-200 lbs,limb,normal
+Under 18,female,A,yes,yes,100-150 lbs,chest,priority
+Over 60,male,BAM,no,yes,200-300 lbs,limb,normal
+18-34,female,W,yes,yes,150-200 lbs,stomach,normal
+35-60,female,BAM,no,yes,Over 300 lbs,head,priority
+Over 60,male,W,yes,yes,100-150 lbs,chest,priority
+Under 18,female,A,yes,no,150-200 lbs,stomach,normal
+Over 60,female,A,no,no,under 100 lbs,stomach,return_later
+18-34,female,A,no,yes,100-150 lbs,limb,normal
+18-34,female,BAM,yes,no,200-300 lbs,stomach,normal
+18-34,female,BAM,no,yes,200-300 lbs,limb,normal
+18-34,female,BAM,yes,no,200-300 lbs,head,normal
+Under 18,male,W,yes,no,150-200 lbs,head,priority
+Under 18,male,BAM,no,yes,200-300 lbs,limb,normal
+35-60,female,BAM,yes,yes,150-200 lbs,head,priority
+Over 60,male,A,no,no,150-200 lbs,limb,normal
+Under 18,female,A,yes,yes,100-150 lbs,chest,priority
+18-34,male,W,yes,yes,100-150 lbs,chest,priority
+35-60,male,BAM,yes,yes,200-300 lbs,stomach,normal
+Over 60,male,BAM,yes,yes,150-200 lbs,chest,priority
+Over 60,male,BAM,no,no,Over 300 lbs,limb,normal
+Under 18,female,A,no,no,under 100 lbs,head,return_later
+Over 60,female,A,yes,yes,100-150 lbs,head,priority
+Under 18,male,BAM,yes,no,100-150 lbs,limb,priority
+Under 18,female,A,yes,no,under 100 lbs,limb,priority
+Over 60,male,A,yes,yes,100-150 lbs,chest,priority
+18-34,male,BAM,yes,no,Over 300 lbs,chest,priority
+35-60,male,BAM,yes,no,under 100 lbs,limb,return_later
+Over 60,male,BAM,yes,yes,under 100 lbs,limb,priority
+Under 18,female,BAM,no,no,100-150 lbs,limb,normal
+35-60,male,A,no,no,Over 300 lbs,limb,normal
+Over 60,male,W,yes,no,200-300 lbs,head,normal
+18-34,male,BAM,no,no,150-200 lbs,limb,normal
+35-60,male,A,no,no,Over 300 lbs,stomach,normal
+18-34,female,W,no,no,200-300 lbs,stomach,normal
+18-34,male,BAM,no,no,150-200 lbs,limb,normal
+Over 60,male,A,no,no,150-200 lbs,limb,normal
+35-60,male,A,yes,yes,150-200 lbs,limb,normal
+35-60,female,BAM,yes,no,200-300 lbs,limb,normal
+Under 18,male,W,no,yes,under 100 lbs,stomach,normal
+35-60,male,A,yes,no,under 100 lbs,head,normal
+Under 18,female,BAM,no,no,under 100 lbs,chest,priority
+18-34,male,BAM,yes,no,100-150 lbs,head,normal
+Over 60,female,W,no,yes,Over 300 lbs,limb,normal
+Over 60,female,A,yes,no,100-150 lbs,chest,normal
+35-60,female,W,yes,no,under 100 lbs,chest,priority
+35-60,female,A,no,yes,150-200 lbs,limb,return_later
+18-34,female,A,yes,no,under 100 lbs,head,priority
+35-60,female,W,no,no,under 100 lbs,head,priority
+Over 60,female,A,yes,yes,Over 300 lbs,head,priority
+35-60,female,AIAN,no,no,Over 300 lbs,limb,return_later
+18-34,male,BAM,yes,yes,100-150 lbs,limb,normal
+18-34,male,BAM,no,yes,100-150 lbs,chest,normal
+Under 18,male,W,no,no,150-200 lbs,chest,normal
+35-60,male,A,no,no,150-200 lbs,chest,normal
+Under 18,female,W,yes,no,150-200 lbs,limb,normal
+18-34,male,A,yes,no,150-200 lbs,chest,return_later
+35-60,female,BAM,yes,yes,Over 300 lbs,chest,return_later
+35-60,male,A,no,no,200-300 lbs,chest,normal
+Over 60,female,BAM,no,no,150-200 lbs,chest,normal
+18-34,female,A,no,no,under 100 lbs,chest,priority
+Over 60,female,BAM,yes,yes,100-150 lbs,head,priority
+Under 18,male,W,yes,yes,under 100 lbs,chest,priority
+18-34,female,W,yes,no,200-300 lbs,stomach,normal
+Under 18,female,A,yes,yes,Over 300 lbs,chest,priority
+Over 60,male,A,no,no,Over 300 lbs,chest,priority
+Over 60,male,W,no,no,200-300 lbs,stomach,normal
+Over 60,male,BAM,no,no,150-200 lbs,head,normal
+Over 60,male,BAM,no,yes,Over 300 lbs,stomach,normal
+Under 18,female,W,no,yes,200-300 lbs,limb,normal
+18-34,female,BAM,no,no,under 100 lbs,stomach,normal
+Under 18,female,W,no,no,under 100 lbs,head,priority
+18-34,male,A,no,yes,under 100 lbs,chest,priority
+Over 60,male,W,yes,no,150-200 lbs,stomach,normal
+18-34,male,A,no,yes,150-200 lbs,head,normal
+Under 18,female,A,yes,yes,200-300 lbs,limb,normal
+18-34,male,BAM,yes,no,150-200 lbs,chest,normal
+18-34,male,W,no,yes,Over 300 lbs,limb,normal
+18-34,female,A,no,yes,100-150 lbs,stomach,normal
+Over 60,male,W,yes,no,200-300 lbs,chest,normal
+35-60,female,W,yes,yes,100-150 lbs,chest,priority
+18-34,female,A,yes,yes,Over 300 lbs,limb,return_later
+Under 18,male,A,no,no,under 100 lbs,limb,normal
+35-60,male,AIAN,no,no,200-300 lbs,chest,return_later
+Over 60,male,W,no,no,100-150 lbs,head,normal
+18-34,female,BAM,yes,no,under 100 lbs,stomach,normal
+Over 60,male,BAM,yes,yes,100-150 lbs,chest,priority
+18-34,male,A,no,no,under 100 lbs,limb,normal
+18-34,male,NHPI,no,no,Over 300 lbs,head,return_later
+Over 60,male,W,no,no,under 100 lbs,limb,normal
+35-60,male,BAM,yes,yes,150-200 lbs,head,priority
+35-60,female,W,no,yes,200-300 lbs,chest,normal
+18-34,male,A,no,no,100-150 lbs,chest,normal
+Under 18,male,BAM,no,yes,100-150 lbs,limb,normal
+Under 18,male,W,no,yes,Over 300 lbs,chest,normal
+Under 18,male,BAM,no,yes,Over 300 lbs,limb,normal
+Over 60,male,BAM,no,no,under 100 lbs,limb,normal
+Under 18,male,BAM,yes,yes,Over 300 lbs,limb,priority
+18-34,female,BAM,no,yes,200-300 lbs,limb,priority
+18-34,female,W,yes,yes,150-200 lbs,stomach,normal
+35-60,female,NHPI,no,no,200-300 lbs,limb,return_later
+Over 60,female,A,no,no,150-200 lbs,chest,normal
+Under 18,female,BAM,yes,yes,150-200 lbs,head,priority
+35-60,female,BAM,no,no,200-300 lbs,stomach,normal
+Under 18,male,BAM,no,no,150-200 lbs,limb,normal
+Under 18,female,BAM,no,yes,100-150 lbs,stomach,normal
+35-60,female,BAM,yes,yes,200-300 lbs,limb,normal
+Over 60,female,W,yes,no,200-300 lbs,chest,return_later
+Under 18,male,W,yes,yes,200-300 lbs,stomach,normal
+18-34,male,BAM,yes,yes,under 100 lbs,head,priority
+18-34,male,BAM,no,no,Over 300 lbs,chest,priority
+Under 18,female,A,no,no,100-150 lbs,chest,normal
+Over 60,male,A,no,no,200-300 lbs,chest,normal
+Over 60,male,NHPI,yes,no,100-150 lbs,stomach,return_later
+Over 60,male,A,no,yes,Over 300 lbs,limb,normal
+Under 18,male,A,yes,yes,Over 300 lbs,limb,priority
+Under 18,female,A,yes,no,200-300 lbs,limb,normal
+35-60,male,A,no,no,200-300 lbs,chest,normal
+35-60,male,BAM,yes,yes,Over 300 lbs,limb,priority
+Over 60,male,BAM,yes,yes,under 100 lbs,limb,priority
+35-60,male,BAM,yes,yes,under 100 lbs,chest,priority
+18-34,male,AIAN,yes,no,150-200 lbs,head,return_later
+18-34,female,A,no,no,Over 300 lbs,head,priority
+35-60,male,W,no,yes,200-300 lbs,stomach,normal
+35-60,male,BAM,no,no,100-150 lbs,stomach,normal
+18-34,male,W,no,yes,under 100 lbs,limb,normal
+Under 18,male,W,no,no,150-200 lbs,stomach,priority
+35-60,female,A,yes,yes,150-200 lbs,stomach,normal
+18-34,male,BAM,no,no,150-200 lbs,limb,normal
+18-34,female,A,no,no,under 100 lbs,stomach,normal
+35-60,female,W,yes,yes,200-300 lbs,chest,priority
+18-34,female,BAM,yes,no,150-200 lbs,limb,normal
+18-34,male,W,no,yes,150-200 lbs,chest,normal
+Under 18,male,W,no,yes,100-150 lbs,chest,normal
+35-60,male,W,yes,yes,100-150 lbs,limb,normal
+18-34,female,W,yes,yes,150-200 lbs,limb,normal
+Over 60,male,W,yes,no,100-150 lbs,stomach,normal
+18-34,male,BAM,no,no,150-200 lbs,limb,normal
+18-34,female,W,no,yes,200-300 lbs,stomach,normal
+Under 18,male,BAM,yes,yes,under 100 lbs,head,priority
+35-60,female,W,yes,yes,under 100 lbs,head,priority
+18-34,female,A,no,no,under 100 lbs,limb,normal
+Over 60,male,A,no,no,100-150 lbs,limb,normal
+Under 18,female,W,no,no,under 100 lbs,head,priority
+35-60,female,A,yes,yes,150-200 lbs,stomach,normal
+18-34,female,W,yes,yes,200-300 lbs,stomach,priority
+Under 18,female,W,yes,yes,under 100 lbs,limb,priority
+Over 60,female,A,no,yes,Over 300 lbs,limb,normal
+18-34,female,W,no,no,150-200 lbs,stomach,normal
+Over 60,male,BAM,no,yes,200-300 lbs,head,normal
+Under 18,female,A,no,no,150-200 lbs,head,normal
+Under 18,male,A,no,yes,200-300 lbs,stomach,normal
+Over 60,male,BAM,no,no,Over 300 lbs,stomach,normal
+35-60,female,A,yes,yes,200-300 lbs,stomach,normal
+35-60,male,A,no,yes,200-300 lbs,head,normal
+Under 18,female,A,yes,no,Over 300 lbs,head,priority
+Over 60,male,W,no,yes,under 100 lbs,limb,normal
+35-60,female,BAM,no,no,100-150 lbs,limb,normal
+18-34,male,W,no,yes,200-300 lbs,chest,normal
+Over 60,male,A,yes,yes,200-300 lbs,head,priority
+Over 60,female,W,no,yes,150-200 lbs,chest,normal
+35-60,female,BAM,no,no,150-200 lbs,head,normal
+Over 60,female,W,no,yes,Over 300 lbs,head,priority
+Over 60,male,NHPI,no,no,100-150 lbs,limb,return_later
+35-60,male,W,yes,no,under 100 lbs,head,priority
+35-60,male,BAM,no,no,100-150 lbs,head,normal
+18-34,male,W,yes,yes,150-200 lbs,limb,normal
+18-34,female,BAM,yes,yes,150-200 lbs,head,priority
+Over 60,male,A,no,yes,under 100 lbs,head,priority
+Over 60,male,BAM,yes,no,150-200 lbs,limb,normal
+Under 18,female,BAM,yes,yes,100-150 lbs,stomach,normal
+Under 18,female,W,yes,no,200-300 lbs,chest,normal
+Under 18,male,W,yes,yes,under 100 lbs,limb,priority
+Under 18,male,W,no,yes,200-300 lbs,limb,normal
+18-34,male,BAM,yes,yes,Over 300 lbs,limb,priority
+Under 18,male,BAM,yes,yes,200-300 lbs,stomach,normal
+35-60,male,W,no,no,Over 300 lbs,limb,normal
+Under 18,female,BAM,yes,no,under 100 lbs,head,priority
+35-60,female,AIAN,yes,no,150-200 lbs,head,return_later
+Over 60,female,NHPI,yes,yes,200-300 lbs,limb,return_later
+35-60,female,NHPI,yes,no,under 100 lbs,chest,return_later
+Over 60,male,W,yes,yes,150-200 lbs,stomach,normal
+Under 18,female,W,no,yes,200-300 lbs,head,priority
+Under 18,male,BAM,yes,yes,200-300 lbs,chest,normal
+18-34,female,BAM,yes,no,150-200 lbs,stomach,normal
+Over 60,male,NHPI,no,no,under 100 lbs,head,return_later
+Under 18,female,BAM,yes,no,Over 300 lbs,head,priority
+18-34,male,A,no,no,100-150 lbs,chest,normal
+35-60,male,A,no,no,200-300 lbs,chest,normal
+Under 18,male,W,yes,no,Over 300 lbs,chest,priority
+Under 18,female,BAM,no,yes,100-150 lbs,head,normal
+18-34,male,NHPI,no,yes,200-300 lbs,stomach,return_later
+Over 60,female,A,no,no,150-200 lbs,stomach,normal
+Under 18,male,W,yes,no,100-150 lbs,head,normal
+Under 18,female,BAM,yes,no,150-200 lbs,chest,normal
+Over 60,female,A,no,no,Over 300 lbs,limb,normal
+35-60,male,BAM,no,yes,100-150 lbs,head,normal
+Under 18,female,AIAN,yes,no,200-300 lbs,limb,return_later
+Under 18,male,W,no,no,under 100 lbs,chest,priority
+18-34,male,W,yes,no,under 100 lbs,stomach,normal
+35-60,male,A,no,yes,under 100 lbs,chest,priority
+Under 18,female,W,no,yes,200-300 lbs,chest,normal
+Under 18,female,A,no,yes,150-200 lbs,head,normal
+35-60,female,A,no,no,100-150 lbs,stomach,normal
+Under 18,female,W,no,yes,under 100 lbs,stomach,normal
+Over 60,male,BAM,yes,yes,200-300 lbs,head,priority
+18-34,female,BAM,yes,yes,150-200 lbs,head,priority
+35-60,male,NHPI,yes,no,Over 300 lbs,stomach,return_later
+18-34,female,BAM,no,yes,150-200 lbs,limb,normal
+Over 60,female,W,no,no,Over 300 lbs,chest,priority
+Over 60,female,A,no,yes,100-150 lbs,stomach,priority
+18-34,female,A,no,yes,150-200 lbs,limb,normal
+Over 60,female,BAM,yes,no,under 100 lbs,stomach,normal
+35-60,male,AIAN,no,yes,200-300 lbs,limb,return_later
+35-60,female,BAM,no,yes,Over 300 lbs,stomach,normal
+Under 18,male,BAM,no,no,200-300 lbs,limb,normal
+Under 18,male,W,no,yes,under 100 lbs,stomach,normal
+18-34,male,BAM,no,yes,100-150 lbs,stomach,normal
+Over 60,female,A,no,yes,Over 300 lbs,limb,normal
+Over 60,female,W,no,yes,100-150 lbs,limb,normal
+Under 18,male,A,no,no,100-150 lbs,chest,priority
+18-34,female,W,no,yes,under 100 lbs,chest,priority
+35-60,female,A,no,no,150-200 lbs,stomach,normal
+18-34,male,BAM,no,yes,100-150 lbs,head,normal
+18-34,male,NHPI,yes,no,150-200 lbs,chest,return_later
+Over 60,female,BAM,yes,no,Over 300 lbs,stomach,normal
+35-60,female,A,yes,yes,Over 300 lbs,limb,priority
+35-60,female,BAM,yes,yes,under 100 lbs,head,priority
+18-34,male,W,yes,yes,100-150 lbs,chest,normal
+18-34,male,BAM,yes,yes,Over 300 lbs,stomach,priority
+18-34,female,A,no,yes,100-150 lbs,chest,normal
+18-34,male,W,no,no,150-200 lbs,head,normal
+Under 18,male,W,no,no,100-150 lbs,head,priority
+35-60,male,BAM,yes,no,150-200 lbs,limb,normal
+35-60,male,W,yes,no,200-300 lbs,stomach,normal
+Over 60,male,A,yes,yes,200-300 lbs,limb,normal
+Under 18,female,BAM,yes,yes,200-300 lbs,limb,normal
+Under 18,female,W,yes,no,100-150 lbs,head,normal
+18-34,male,A,no,no,100-150 lbs,chest,normal
+18-34,male,BAM,yes,yes,150-200 lbs,chest,priority
+18-34,male,BAM,yes,no,200-300 lbs,chest,normal
+35-60,female,BAM,no,yes,200-300 lbs,limb,normal
+18-34,female,A,yes,yes,Over 300 lbs,head,priority
+35-60,male,BAM,no,no,150-200 lbs,head,normal
+Over 60,male,W,no,yes,under 100 lbs,chest,priority
+Over 60,female,W,no,no,150-200 lbs,head,normal
+Over 60,female,BAM,no,no,100-150 lbs,limb,normal
+Over 60,female,W,no,no,under 100 lbs,chest,priority
+18-34,male,A,no,no,200-300 lbs,stomach,normal
+35-60,male,W,yes,no,under 100 lbs,head,priority
+18-34,female,BAM,yes,yes,100-150 lbs,chest,priority
+Over 60,female,BAM,no,no,under 100 lbs,head,priority
+18-34,male,A,no,no,100-150 lbs,head,normal
+Under 18,female,W,yes,no,200-300 lbs,limb,normal
+35-60,female,A,no,yes,under 100 lbs,head,priority
+18-34,female,A,yes,yes,Over 300 lbs,chest,priority
+Under 18,female,BAM,yes,no,100-150 lbs,head,priority
+Under 18,female,BAM,yes,yes,under 100 lbs,limb,priority
+Under 18,male,BAM,yes,no,150-200 lbs,stomach,normal
+Under 18,female,A,yes,yes,under 100 lbs,limb,return_later
+35-60,female,A,no,yes,150-200 lbs,head,normal
+Over 60,female,BAM,no,no,100-150 lbs,limb,normal
+35-60,male,W,no,no,100-150 lbs,stomach,normal
+Under 18,male,A,yes,no,200-300 lbs,stomach,normal
+18-34,female,A,yes,yes,150-200 lbs,head,priority
+Over 60,female,BAM,yes,yes,under 100 lbs,chest,priority
+Over 60,male,BAM,yes,yes,150-200 lbs,stomach,normal
+18-34,female,BAM,no,no,under 100 lbs,head,priority
+Over 60,female,A,no,no,Over 300 lbs,stomach,return_later
+Over 60,male,A,no,yes,100-150 lbs,limb,normal
+18-34,female,A,yes,yes,150-200 lbs,chest,priority
+Under 18,male,A,yes,yes,100-150 lbs,head,priority
+Under 18,male,BAM,no,yes,100-150 lbs,head,return_later
+35-60,male,A,yes,yes,150-200 lbs,head,priority
+Under 18,female,W,yes,no,200-300 lbs,stomach,normal
+35-60,female,A,no,yes,150-200 lbs,chest,normal
+18-34,female,A,yes,no,200-300 lbs,limb,normal
+35-60,female,W,no,yes,150-200 lbs,limb,normal
+Over 60,male,BAM,no,yes,Over 300 lbs,head,priority
+Under 18,male,BAM,no,no,100-150 lbs,head,priority
+18-34,female,AIAN,no,no,under 100 lbs,stomach,return_later
+Under 18,male,BAM,yes,yes,100-150 lbs,chest,priority
+35-60,female,W,no,yes,under 100 lbs,limb,normal
+Over 60,female,W,no,yes,200-300 lbs,stomach,normal
+35-60,female,A,yes,no,100-150 lbs,stomach,priority
+Under 18,female,A,yes,yes,100-150 lbs,head,priority
+Over 60,female,W,no,yes,under 100 lbs,stomach,normal
+35-60,female,W,no,no,Over 300 lbs,stomach,normal
+35-60,male,NHPI,yes,yes,100-150 lbs,chest,return_later
+Over 60,male,A,yes,no,150-200 lbs,limb,normal
+Under 18,male,A,no,no,100-150 lbs,chest,return_later
+Over 60,male,BAM,no,no,Over 300 lbs,chest,priority
+Under 18,male,BAM,yes,no,100-150 lbs,head,normal
+35-60,male,W,no,yes,150-200 lbs,head,normal
+35-60,male,W,yes,yes,Over 300 lbs,head,priority
+18-34,female,BAM,yes,yes,under 100 lbs,chest,priority
+Under 18,female,A,yes,no,Over 300 lbs,limb,normal
+18-34,female,BAM,no,no,100-150 lbs,head,normal
+Over 60,male,A,no,yes,Over 300 lbs,head,priority
+Under 18,female,W,no,yes,100-150 lbs,stomach,normal
+Over 60,male,A,yes,yes,under 100 lbs,stomach,priority
+Over 60,female,A,yes,no,Over 300 lbs,chest,priority
+Over 60,male,W,yes,no,under 100 lbs,head,priority
+35-60,male,W,yes,yes,Over 300 lbs,limb,priority
+Under 18,male,W,yes,no,under 100 lbs,limb,normal
+Over 60,male,A,no,no,under 100 lbs,head,priority
+18-34,female,NHPI,no,no,100-150 lbs,limb,return_later
+18-34,male,W,no,no,150-200 lbs,stomach,normal
+Over 60,female,A,yes,no,Over 300 lbs,chest,priority
+35-60,female,BAM,no,no,under 100 lbs,limb,normal
+Over 60,male,BAM,yes,no,150-200 lbs,stomach,normal
+Under 18,female,A,no,yes,150-200 lbs,stomach,normal
+Over 60,male,BAM,no,no,under 100 lbs,limb,normal
+18-34,male,A,no,yes,100-150 lbs,head,normal
+Over 60,female,W,no,yes,under 100 lbs,limb,normal
+18-34,male,W,no,no,200-300 lbs,chest,normal
+Under 18,female,W,no,no,150-200 lbs,limb,normal
+35-60,male,BAM,yes,yes,150-200 lbs,head,return_later
+Over 60,male,BAM,no,no,150-200 lbs,chest,normal
+Over 60,male,A,no,yes,Over 300 lbs,head,priority
+Under 18,male,A,no,no,200-300 lbs,limb,normal
+18-34,female,A,yes,yes,150-200 lbs,head,priority
+Over 60,female,NHPI,no,no,Over 300 lbs,stomach,return_later
+18-34,female,BAM,yes,no,Over 300 lbs,head,return_later
+18-34,female,A,yes,no,100-150 lbs,stomach,normal
+18-34,female,BAM,no,no,Over 300 lbs,stomach,normal
+Under 18,male,A,no,no,200-300 lbs,head,normal
+18-34,male,AIAN,yes,yes,200-300 lbs,stomach,return_later
+35-60,male,A,no,yes,150-200 lbs,chest,normal
+Over 60,female,BAM,no,yes,200-300 lbs,head,normal
+18-34,male,BAM,yes,yes,100-150 lbs,head,return_later
+Over 60,female,BAM,yes,no,150-200 lbs,chest,normal
+18-34,female,A,no,no,under 100 lbs,stomach,priority
+18-34,male,W,no,yes,150-200 lbs,stomach,normal
+Over 60,female,BAM,no,no,200-300 lbs,stomach,normal
+Over 60,female,A,no,yes,100-150 lbs,limb,normal
+35-60,male,W,no,no,under 100 lbs,stomach,normal
+Over 60,female,BAM,no,yes,100-150 lbs,limb,normal
+Over 60,male,A,no,yes,100-150 lbs,head,normal
+Under 18,male,W,yes,yes,under 100 lbs,head,priority
+Under 18,male,BAM,no,yes,100-150 lbs,head,normal
+18-34,male,BAM,yes,no,150-200 lbs,stomach,normal
+18-34,female,BAM,no,yes,under 100 lbs,limb,priority
+Over 60,female,W,yes,no,100-150 lbs,limb,priority
+35-60,male,A,yes,yes,under 100 lbs,stomach,priority
+Over 60,male,A,yes,yes,200-300 lbs,limb,normal
+35-60,male,BAM,yes,no,150-200 lbs,stomach,priority
+Over 60,female,BAM,no,no,under 100 lbs,head,priority
+Under 18,male,W,yes,no,150-200 lbs,stomach,normal
+Over 60,female,BAM,no,no,150-200 lbs,stomach,normal
+35-60,male,A,no,no,200-300 lbs,head,priority
+35-60,male,W,yes,no,200-300 lbs,head,normal
+Under 18,female,A,no,no,100-150 lbs,limb,normal
+35-60,female,W,no,no,150-200 lbs,chest,normal
+35-60,male,W,yes,yes,100-150 lbs,stomach,normal
+18-34,male,A,yes,yes,under 100 lbs,limb,priority
+Under 18,female,W,no,yes,under 100 lbs,head,priority
+Over 60,male,NHPI,no,no,under 100 lbs,chest,return_later
+Under 18,female,W,no,yes,100-150 lbs,head,normal
+Under 18,male,BAM,yes,no,100-150 lbs,stomach,priority
+Under 18,male,BAM,no,no,150-200 lbs,stomach,normal
+Over 60,female,BAM,no,no,Over 300 lbs,head,priority
+Under 18,female,BAM,no,no,100-150 lbs,stomach,normal
+18-34,female,W,no,yes,200-300 lbs,head,priority
+35-60,male,BAM,yes,no,200-300 lbs,head,normal
+18-34,male,BAM,yes,no,Over 300 lbs,head,priority
+Under 18,female,A,no,yes,under 100 lbs,limb,normal
+Under 18,female,BAM,yes,yes,Over 300 lbs,limb,priority
+35-60,female,AIAN,yes,no,100-150 lbs,chest,return_later
+18-34,female,W,yes,yes,200-300 lbs,stomach,priority
+35-60,female,AIAN,yes,yes,100-150 lbs,stomach,return_later
+35-60,male,BAM,yes,yes,Over 300 lbs,stomach,normal
+35-60,male,A,no,yes,200-300 lbs,chest,normal
+35-60,female,A,no,yes,100-150 lbs,chest,normal
+18-34,female,BAM,no,yes,150-200 lbs,chest,normal
+35-60,male,W,yes,yes,Over 300 lbs,limb,normal
+Under 18,female,A,yes,yes,Over 300 lbs,stomach,priority
+18-34,female,W,yes,yes,Over 300 lbs,stomach,priority
+Over 60,male,BAM,yes,yes,under 100 lbs,head,priority
+Over 60,male,BAM,no,yes,100-150 lbs,stomach,normal
+18-34,female,BAM,no,no,under 100 lbs,limb,normal
+Under 18,female,W,no,no,Over 300 lbs,head,priority
+Over 60,male,W,no,no,under 100 lbs,chest,priority
+18-34,male,A,no,no,Over 300 lbs,chest,priority
+35-60,female,A,no,no,200-300 lbs,stomach,normal
+Under 18,female,BAM,no,no,150-200 lbs,head,return_later
+Under 18,female,BAM,yes,yes,under 100 lbs,stomach,normal
+Over 60,female,W,no,no,200-300 lbs,limb,normal
+18-34,female,A,yes,yes,under 100 lbs,limb,priority
+Under 18,female,W,yes,no,100-150 lbs,chest,normal
+35-60,male,BAM,no,no,200-300 lbs,limb,normal
+Over 60,male,W,yes,no,Over 300 lbs,chest,priority
+Over 60,male,A,no,yes,Over 300 lbs,limb,normal
+18-34,male,A,yes,yes,100-150 lbs,chest,priority
+18-34,female,A,yes,no,100-150 lbs,head,normal
+18-34,female,NHPI,yes,yes,150-200 lbs,limb,return_later
+Over 60,female,W,no,no,100-150 lbs,chest,normal
+Over 60,female,BAM,yes,yes,150-200 lbs,stomach,normal
+35-60,male,A,no,no,100-150 lbs,head,normal
+Under 18,male,W,no,no,150-200 lbs,limb,normal
+35-60,female,A,yes,no,Over 300 lbs,chest,priority
+Over 60,female,W,yes,yes,150-200 lbs,limb,normal
+35-60,male,A,yes,yes,150-200 lbs,chest,return_later
+Over 60,male,BAM,no,yes,200-300 lbs,limb,normal
+35-60,male,W,yes,yes,100-150 lbs,chest,priority
+35-60,male,A,no,yes,100-150 lbs,stomach,normal
+Under 18,female,A,no,no,150-200 lbs,stomach,normal
+35-60,female,W,yes,yes,200-300 lbs,head,priority
+Over 60,female,A,yes,no,under 100 lbs,stomach,normal
+18-34,male,BAM,yes,no,Over 300 lbs,head,priority
+Over 60,male,A,no,no,Over 300 lbs,chest,priority
+18-34,female,W,no,yes,under 100 lbs,chest,priority
+Under 18,male,A,no,yes,under 100 lbs,stomach,normal
+18-34,female,BAM,no,no,Over 300 lbs,chest,priority
+Over 60,female,BAM,no,yes,150-200 lbs,stomach,normal
+Under 18,female,W,yes,no,Over 300 lbs,head,priority
+Under 18,female,BAM,yes,no,100-150 lbs,limb,normal
+Over 60,male,NHPI,yes,yes,150-200 lbs,limb,return_later
+18-34,male,BAM,yes,no,150-200 lbs,chest,normal
+18-34,male,W,no,yes,150-200 lbs,head,normal
+35-60,female,W,no,no,100-150 lbs,stomach,normal
+35-60,female,W,no,no,200-300 lbs,head,normal
+Under 18,female,A,yes,no,200-300 lbs,stomach,normal
+Over 60,male,A,yes,no,under 100 lbs,chest,return_later
+Under 18,male,A,yes,yes,150-200 lbs,chest,priority
+Over 60,male,BAM,no,yes,100-150 lbs,head,normal
+18-34,male,W,no,yes,200-300 lbs,stomach,normal
+Under 18,female,W,no,yes,100-150 lbs,stomach,normal
+18-34,male,W,yes,yes,200-300 lbs,stomach,normal
+Over 60,female,BAM,yes,yes,Over 300 lbs,chest,priority
+Under 18,female,BAM,yes,yes,under 100 lbs,chest,return_later
+Over 60,female,BAM,yes,yes,under 100 lbs,chest,priority
+Over 60,female,BAM,no,no,150-200 lbs,limb,normal
+Under 18,male,W,no,yes,150-200 lbs,limb,normal
+Over 60,female,W,yes,yes,150-200 lbs,stomach,normal
+18-34,female,BAM,yes,no,under 100 lbs,limb,return_later
+Over 60,male,A,no,no,Over 300 lbs,stomach,priority
+35-60,female,A,yes,yes,Over 300 lbs,chest,priority
+Under 18,male,NHPI,yes,no,Over 300 lbs,stomach,return_later
+35-60,male,A,yes,yes,under 100 lbs,limb,return_later
+35-60,male,AIAN,yes,yes,100-150 lbs,head,return_later
+Under 18,female,BAM,yes,no,Over 300 lbs,head,priority
+18-34,male,A,yes,yes,Over 300 lbs,stomach,priority
+18-34,female,W,yes,no,100-150 lbs,chest,normal
+Over 60,male,W,no,yes,100-150 lbs,stomach,normal
+18-34,female,BAM,no,no,100-150 lbs,head,priority
+35-60,female,BAM,yes,yes,150-200 lbs,limb,normal
+Under 18,female,BAM,no,no,150-200 lbs,head,normal
+Under 18,male,W,no,no,Over 300 lbs,stomach,normal
+18-34,female,A,no,no,200-300 lbs,stomach,normal
+35-60,male,BAM,yes,yes,Over 300 lbs,chest,priority
+18-34,male,W,no,no,under 100 lbs,chest,return_later
+Under 18,female,BAM,no,yes,under 100 lbs,chest,priority
+18-34,male,BAM,no,no,200-300 lbs,limb,normal
+18-34,male,A,yes,yes,100-150 lbs,chest,priority
+Under 18,male,NHPI,no,yes,150-200 lbs,chest,return_later
+18-34,male,AIAN,yes,yes,Over 300 lbs,head,return_later
+35-60,female,W,yes,no,under 100 lbs,stomach,normal
+Over 60,male,W,no,yes,150-200 lbs,limb,normal
+Over 60,male,W,yes,yes,under 100 lbs,stomach,priority
+Under 18,female,W,yes,no,under 100 lbs,stomach,normal
+Under 18,male,BAM,no,yes,Over 300 lbs,limb,normal
+Under 18,male,BAM,no,yes,200-300 lbs,limb,normal
+Over 60,female,A,yes,no,100-150 lbs,stomach,normal
+Over 60,male,BAM,yes,no,100-150 lbs,chest,normal
+18-34,female,BAM,no,yes,under 100 lbs,limb,normal
+35-60,female,A,yes,yes,under 100 lbs,limb,priority
+18-34,female,A,no,no,100-150 lbs,chest,normal
+18-34,female,NHPI,no,no,200-300 lbs,chest,return_later
+35-60,female,BAM,yes,no,150-200 lbs,chest,normal
+18-34,female,BAM,no,no,150-200 lbs,head,normal
+Under 18,male,BAM,yes,yes,under 100 lbs,chest,priority
+Under 18,female,W,yes,yes,under 100 lbs,stomach,priority
+Over 60,female,A,no,no,150-200 lbs,chest,priority
+Under 18,female,BAM,yes,yes,150-200 lbs,chest,priority
+Under 18,male,A,yes,yes,Over 300 lbs,head,priority
+Over 60,male,W,yes,no,150-200 lbs,stomach,normal
+18-34,male,A,no,no,150-200 lbs,stomach,normal
+35-60,female,W,no,yes,150-200 lbs,stomach,normal
+Under 18,male,W,yes,yes,200-300 lbs,limb,normal
+18-34,female,BAM,no,no,Over 300 lbs,limb,normal
+35-60,female,BAM,no,yes,100-150 lbs,head,normal
+Under 18,female,A,yes,yes,100-150 lbs,chest,priority
+Under 18,male,W,no,yes,Over 300 lbs,head,priority
+18-34,male,A,no,no,Over 300 lbs,head,priority
+Over 60,female,W,yes,no,200-300 lbs,stomach,return_later
+Over 60,male,A,no,no,200-300 lbs,stomach,normal
+Under 18,female,BAM,yes,yes,Over 300 lbs,chest,priority
+18-34,male,AIAN,no,yes,Over 300 lbs,limb,return_later
+Under 18,male,W,yes,yes,under 100 lbs,limb,priority
+35-60,female,W,no,no,200-300 lbs,limb,normal
+18-34,female,BAM,yes,no,150-200 lbs,stomach,normal
+35-60,male,W,yes,no,200-300 lbs,head,normal
+Under 18,female,A,no,no,Over 300 lbs,stomach,normal
+Over 60,male,A,yes,no,200-300 lbs,chest,normal
+Under 18,male,A,no,yes,under 100 lbs,stomach,return_later
+18-34,male,BAM,no,no,150-200 lbs,chest,priority
+Under 18,female,A,yes,no,Over 300 lbs,head,priority
+Over 60,female,NHPI,yes,no,Over 300 lbs,chest,return_later
+Over 60,male,A,no,no,100-150 lbs,stomach,normal
+Over 60,male,BAM,yes,no,100-150 lbs,limb,normal
+Over 60,male,A,yes,no,Over 300 lbs,chest,priority
+35-60,female,BAM,no,yes,Over 300 lbs,chest,priority
+Under 18,female,W,no,no,Over 300 lbs,limb,return_later
+35-60,male,BAM,no,no,150-200 lbs,chest,priority
+Over 60,male,W,yes,yes,100-150 lbs,head,priority
+Over 60,male,A,no,yes,200-300 lbs,head,normal
+18-34,female,A,no,no,100-150 lbs,chest,priority
+35-60,male,W,yes,yes,200-300 lbs,stomach,normal
+Under 18,female,A,yes,yes,200-300 lbs,head,priority
+35-60,female,A,yes,no,150-200 lbs,stomach,normal
+Over 60,male,A,yes,no,100-150 lbs,chest,priority
+Under 18,female,BAM,no,yes,150-200 lbs,chest,normal
+Under 18,female,BAM,no,no,100-150 lbs,chest,normal
+18-34,male,BAM,no,yes,under 100 lbs,chest,priority
+18-34,female,AIAN,no,no,150-200 lbs,limb,return_later
+35-60,male,A,no,yes,100-150 lbs,stomach,normal
+35-60,female,A,yes,yes,200-300 lbs,chest,priority
+35-60,male,A,no,yes,under 100 lbs,chest,priority
+35-60,female,A,no,yes,under 100 lbs,chest,priority
+18-34,male,W,yes,yes,100-150 lbs,limb,normal
+Under 18,male,W,yes,no,Over 300 lbs,head,priority
+Under 18,male,A,no,no,150-200 lbs,chest,return_later
+18-34,male,A,no,yes,under 100 lbs,stomach,priority
+Under 18,female,BAM,yes,yes,150-200 lbs,stomach,normal
+Under 18,female,BAM,yes,yes,150-200 lbs,stomach,normal
+18-34,female,BAM,no,yes,200-300 lbs,chest,normal
+35-60,female,A,yes,yes,Over 300 lbs,limb,priority
+Under 18,male,BAM,yes,yes,150-200 lbs,limb,priority
+Over 60,female,BAM,yes,yes,under 100 lbs,stomach,priority
+Over 60,female,BAM,yes,no,Over 300 lbs,head,priority
+18-34,male,W,no,yes,Over 300 lbs,chest,normal
+18-34,female,A,no,yes,under 100 lbs,head,priority
+Under 18,female,BAM,yes,yes,100-150 lbs,limb,return_later
+35-60,male,BAM,no,no,100-150 lbs,chest,normal
+18-34,male,W,yes,yes,200-300 lbs,chest,priority
+Under 18,male,A,yes,yes,150-200 lbs,head,priority
+35-60,male,W,no,no,100-150 lbs,stomach,normal
+Over 60,male,A,no,yes,Over 300 lbs,chest,normal
+Over 60,female,BAM,yes,yes,Over 300 lbs,head,priority
+18-34,female,W,yes,yes,Over 300 lbs,head,priority
+18-34,female,A,no,yes,150-200 lbs,head,normal
+35-60,female,W,yes,yes,Over 300 lbs,head,return_later
+Under 18,female,A,yes,yes,Over 300 lbs,limb,priority
+18-34,female,A,yes,no,under 100 lbs,chest,priority
+35-60,male,W,no,yes,100-150 lbs,stomach,normal
+Under 18,female,BAM,yes,yes,Over 300 lbs,chest,priority
+Under 18,male,BAM,yes,no,200-300 lbs,head,normal
+18-34,male,A,yes,yes,under 100 lbs,stomach,priority
+Over 60,female,A,no,no,100-150 lbs,stomach,normal
+35-60,male,A,yes,no,under 100 lbs,limb,normal
+18-34,female,W,yes,no,150-200 lbs,head,normal
+35-60,male,BAM,no,no,under 100 lbs,stomach,priority
+18-34,male,W,no,no,100-150 lbs,chest,normal
+35-60,male,BAM,no,yes,under 100 lbs,limb,normal
+18-34,male,W,no,no,200-300 lbs,chest,normal
+35-60,male,A,yes,yes,Over 300 lbs,head,priority
+18-34,female,W,yes,no,under 100 lbs,limb,priority
+Over 60,female,A,yes,no,200-300 lbs,stomach,normal
+35-60,male,BAM,yes,yes,Over 300 lbs,stomach,priority
+Over 60,male,A,yes,no,100-150 lbs,stomach,normal
+Under 18,male,BAM,yes,no,150-200 lbs,chest,normal
+18-34,female,A,yes,no,Over 300 lbs,limb,normal
+Over 60,male,BAM,no,yes,100-150 lbs,limb,return_later
+35-60,male,BAM,yes,no,Over 300 lbs,head,priority
+35-60,male,BAM,no,no,200-300 lbs,head,normal
+18-34,female,W,yes,yes,200-300 lbs,head,priority
+Over 60,male,BAM,no,no,100-150 lbs,stomach,normal
+18-34,male,BAM,yes,no,Over 300 lbs,stomach,normal
+35-60,male,W,no,yes,200-300 lbs,head,normal
+18-34,female,BAM,no,no,150-200 lbs,stomach,normal
+35-60,female,BAM,no,yes,100-150 lbs,head,normal
+35-60,male,BAM,yes,yes,200-300 lbs,limb,normal
+Over 60,female,BAM,no,no,100-150 lbs,chest,normal
+Over 60,female,AIAN,yes,no,100-150 lbs,chest,return_later
+18-34,female,A,no,no,100-150 lbs,stomach,return_later
+Under 18,female,W,no,no,Over 300 lbs,head,priority
+Under 18,female,BAM,no,no,100-150 lbs,stomach,normal
+18-34,female,A,yes,no,under 100 lbs,limb,normal
+18-34,male,A,yes,no,Over 300 lbs,stomach,normal
+35-60,female,A,no,yes,150-200 lbs,chest,normal
+Under 18,male,W,yes,no,150-200 lbs,stomach,normal
+18-34,male,A,yes,no,under 100 lbs,stomach,normal
+18-34,female,W,yes,yes,Over 300 lbs,head,priority
+Over 60,male,W,no,no,under 100 lbs,limb,normal
+Over 60,male,W,yes,yes,Over 300 lbs,limb,priority
+35-60,male,W,no,no,Over 300 lbs,chest,priority
+35-60,male,A,no,yes,150-200 lbs,head,normal
+Over 60,female,W,yes,no,150-200 lbs,head,priority
+35-60,female,A,yes,yes,200-300 lbs,limb,priority
+35-60,male,A,yes,yes,Over 300 lbs,stomach,priority
+18-34,female,BAM,no,no,150-200 lbs,head,return_later
+35-60,female,W,no,yes,200-300 lbs,chest,normal
+Under 18,male,A,yes,no,100-150 lbs,limb,normal
+Under 18,male,BAM,no,yes,200-300 lbs,chest,normal
+18-34,male,W,yes,no,150-200 lbs,stomach,return_later
+Over 60,female,A,yes,no,under 100 lbs,chest,priority
+Over 60,female,A,yes,no,150-200 lbs,limb,normal
+18-34,female,BAM,no,yes,200-300 lbs,limb,normal
+Under 18,male,A,yes,yes,under 100 lbs,head,priority
+Over 60,female,A,no,no,under 100 lbs,chest,priority
+35-60,male,BAM,yes,yes,100-150 lbs,chest,normal
+35-60,female,BAM,no,no,150-200 lbs,limb,normal
+Under 18,female,BAM,no,no,100-150 lbs,stomach,normal
+18-34,female,A,yes,no,150-200 lbs,chest,normal
+Over 60,male,W,no,yes,200-300 lbs,limb,normal
+18-34,female,A,no,no,100-150 lbs,chest,normal
+Under 18,female,A,yes,no,100-150 lbs,limb,normal
+Over 60,female,BAM,yes,no,150-200 lbs,head,normal
+Over 60,female,BAM,yes,yes,100-150 lbs,limb,normal
+18-34,female,A,no,yes,100-150 lbs,stomach,normal
+35-60,male,A,no,no,Over 300 lbs,head,normal
+35-60,male,A,no,no,Over 300 lbs,limb,normal
+35-60,male,W,no,yes,150-200 lbs,limb,normal
+18-34,male,A,yes,no,Over 300 lbs,chest,priority
+35-60,female,W,no,no,100-150 lbs,head,normal
+Under 18,male,W,no,yes,Over 300 lbs,limb,normal
+18-34,female,BAM,yes,yes,200-300 lbs,limb,normal
+18-34,female,W,no,yes,Over 300 lbs,stomach,normal
+Under 18,male,W,yes,no,Over 300 lbs,limb,priority
+Over 60,female,W,no,no,150-200 lbs,chest,priority
+Under 18,female,BAM,yes,yes,100-150 lbs,head,priority
+Over 60,male,W,yes,no,under 100 lbs,limb,normal
+Over 60,female,A,no,yes,100-150 lbs,stomach,priority
+Over 60,female,BAM,no,no,200-300 lbs,head,normal
+Under 18,male,W,yes,yes,100-150 lbs,stomach,normal
+Over 60,male,A,yes,yes,100-150 lbs,chest,priority
+Under 18,male,BAM,no,yes,200-300 lbs,chest,normal
+18-34,male,A,yes,no,Over 300 lbs,limb,normal
+18-34,female,A,no,yes,Over 300 lbs,stomach,return_later
+18-34,female,W,no,no,200-300 lbs,limb,normal
+Over 60,male,BAM,no,yes,150-200 lbs,limb,normal
+Over 60,male,W,yes,no,150-200 lbs,chest,normal
+Over 60,female,BAM,yes,yes,200-300 lbs,head,priority
+35-60,male,A,no,no,150-200 lbs,chest,normal
+Under 18,male,BAM,yes,no,200-300 lbs,chest,normal
+18-34,male,AIAN,no,yes,under 100 lbs,head,return_later
+Under 18,male,A,no,no,Over 300 lbs,limb,return_later
+Under 18,male,A,yes,yes,200-300 lbs,chest,priority
+35-60,female,W,no,no,100-150 lbs,limb,return_later
+Over 60,male,NHPI,yes,yes,under 100 lbs,chest,return_later
+Over 60,female,BAM,yes,yes,100-150 lbs,head,priority
+Over 60,male,W,yes,no,under 100 lbs,limb,priority
+Under 18,female,BAM,yes,yes,under 100 lbs,chest,return_later
+35-60,male,A,no,no,Over 300 lbs,limb,normal
+Under 18,female,NHPI,no,yes,under 100 lbs,stomach,return_later
+Over 60,female,BAM,yes,yes,200-300 lbs,chest,priority
+18-34,male,W,no,yes,Over 300 lbs,limb,priority
+Over 60,male,A,no,no,100-150 lbs,stomach,normal
+Under 18,female,BAM,yes,yes,150-200 lbs,chest,normal
+18-34,male,A,yes,yes,100-150 lbs,limb,normal
+18-34,male,BAM,yes,no,Over 300 lbs,stomach,normal
+Under 18,female,BAM,no,yes,under 100 lbs,chest,priority
+18-34,male,BAM,no,yes,100-150 lbs,chest,normal
+18-34,male,A,no,yes,200-300 lbs,limb,normal
+Over 60,male,W,no,yes,100-150 lbs,head,normal
+Under 18,female,BAM,yes,yes,150-200 lbs,chest,priority
+Over 60,male,A,yes,yes,150-200 lbs,head,priority
+Over 60,female,W,no,yes,under 100 lbs,head,priority
+35-60,female,BAM,yes,yes,150-200 lbs,head,priority
+Over 60,male,BAM,no,yes,100-150 lbs,head,normal
+Under 18,female,A,no,no,Over 300 lbs,limb,normal
+18-34,male,W,yes,no,under 100 lbs,stomach,normal
+Under 18,female,A,yes,no,under 100 lbs,stomach,return_later
+18-34,male,W,no,yes,200-300 lbs,limb,normal
+18-34,male,A,no,no,100-150 lbs,head,return_later
+35-60,male,W,yes,no,Over 300 lbs,chest,priority
+18-34,female,NHPI,yes,no,100-150 lbs,limb,return_later
+35-60,male,NHPI,yes,yes,100-150 lbs,chest,return_later
+Under 18,female,W,yes,no,under 100 lbs,chest,priority
+35-60,female,A,yes,no,200-300 lbs,stomach,normal
+Under 18,female,W,no,yes,100-150 lbs,limb,normal
+Over 60,female,BAM,no,yes,under 100 lbs,limb,normal
+Under 18,male,A,yes,no,150-200 lbs,stomach,normal
+35-60,female,BAM,no,yes,200-300 lbs,chest,normal
+18-34,female,W,no,yes,150-200 lbs,chest,normal
+Under 18,female,W,no,yes,under 100 lbs,chest,priority
+Under 18,female,A,yes,yes,100-150 lbs,stomach,normal
+35-60,female,W,yes,no,under 100 lbs,stomach,normal
+Over 60,female,W,no,yes,Over 300 lbs,stomach,normal
+35-60,female,W,no,yes,150-200 lbs,stomach,normal
+35-60,female,BAM,yes,yes,100-150 lbs,stomach,normal
+18-34,male,A,yes,yes,200-300 lbs,head,priority
+18-34,female,BAM,yes,yes,under 100 lbs,stomach,priority
+Under 18,female,BAM,yes,yes,Over 300 lbs,head,priority
+Under 18,female,BAM,yes,no,200-300 lbs,stomach,normal
+18-34,male,A,no,no,200-300 lbs,limb,normal
+Over 60,female,W,yes,no,Over 300 lbs,chest,priority
+35-60,female,BAM,yes,no,100-150 lbs,chest,normal
+35-60,male,BAM,no,no,Over 300 lbs,head,return_later
+Under 18,male,BAM,yes,yes,under 100 lbs,chest,priority
+35-60,male,A,yes,no,Over 300 lbs,chest,priority
+35-60,female,BAM,yes,no,150-200 lbs,stomach,normal
+35-60,male,BAM,yes,no,100-150 lbs,limb,normal
+Over 60,female,W,yes,no,150-200 lbs,stomach,normal
+Under 18,female,W,yes,yes,150-200 lbs,chest,priority
+18-34,female,AIAN,yes,no,150-200 lbs,stomach,return_later
+Over 60,female,BAM,no,yes,150-200 lbs,limb,return_later
+35-60,female,A,no,yes,100-150 lbs,head,normal
+Over 60,male,BAM,yes,no,200-300 lbs,stomach,normal
+18-34,female,A,yes,yes,150-200 lbs,limb,normal
+18-34,female,A,no,yes,under 100 lbs,head,priority
+18-34,female,A,no,yes,200-300 lbs,head,return_later
+Over 60,female,W,yes,yes,150-200 lbs,chest,priority
+18-34,male,AIAN,no,yes,100-150 lbs,chest,return_later
+Over 60,female,BAM,yes,yes,100-150 lbs,stomach,normal
+Under 18,female,W,yes,yes,under 100 lbs,stomach,priority
+35-60,female,BAM,no,no,200-300 lbs,chest,normal
+18-34,male,BAM,no,yes,150-200 lbs,stomach,normal
+18-34,female,A,yes,no,under 100 lbs,chest,priority
+18-34,female,NHPI,no,no,under 100 lbs,chest,return_later
+18-34,male,W,no,yes,100-150 lbs,chest,normal
+35-60,female,A,no,yes,150-200 lbs,limb,normal
+18-34,male,A,yes,no,100-150 lbs,stomach,return_later
+35-60,male,BAM,yes,yes,200-300 lbs,stomach,normal
+Under 18,male,BAM,yes,no,200-300 lbs,stomach,normal
+18-34,male,BAM,yes,no,under 100 lbs,limb,normal
+18-34,male,BAM,no,no,100-150 lbs,stomach,normal
+Over 60,male,W,yes,no,100-150 lbs,stomach,normal
+18-34,female,BAM,no,no,150-200 lbs,stomach,normal
+35-60,male,BAM,no,no,under 100 lbs,stomach,normal
+18-34,female,BAM,yes,yes,150-200 lbs,stomach,normal
+18-34,male,BAM,yes,no,Over 300 lbs,limb,normal
+Under 18,female,W,yes,yes,200-300 lbs,chest,return_later
+Under 18,male,BAM,no,yes,100-150 lbs,chest,normal
+18-34,female,BAM,yes,yes,200-300 lbs,limb,normal
+Under 18,female,A,yes,no,Over 300 lbs,head,priority
+Under 18,female,A,yes,yes,150-200 lbs,stomach,normal
+Over 60,female,BAM,no,no,150-200 lbs,head,normal
+35-60,male,BAM,yes,yes,200-300 lbs,chest,priority
+18-34,female,W,no,yes,under 100 lbs,chest,normal
+18-34,female,BAM,yes,yes,under 100 lbs,chest,priority
+Under 18,female,W,yes,yes,Over 300 lbs,chest,priority
+35-60,female,A,no,no,Over 300 lbs,limb,normal
+Over 60,male,W,yes,no,Over 300 lbs,limb,normal
+Over 60,female,BAM,no,yes,under 100 lbs,stomach,normal
+Over 60,male,BAM,yes,no,200-300 lbs,limb,return_later
+18-34,female,A,no,yes,150-200 lbs,chest,normal
+Under 18,female,A,yes,yes,150-200 lbs,stomach,normal
+Over 60,female,BAM,yes,yes,under 100 lbs,limb,priority
+Under 18,male,W,no,no,100-150 lbs,chest,normal
+Under 18,female,BAM,yes,yes,100-150 lbs,head,priority
+Over 60,male,A,yes,no,150-200 lbs,limb,normal
+18-34,male,BAM,yes,yes,150-200 lbs,stomach,normal
+Over 60,male,BAM,no,yes,under 100 lbs,stomach,return_later
+Over 60,male,W,yes,yes,200-300 lbs,limb,normal
+18-34,male,A,no,yes,under 100 lbs,stomach,normal
+Over 60,female,W,no,no,under 100 lbs,limb,priority
+Under 18,male,BAM,yes,yes,200-300 lbs,head,priority
+35-60,female,A,yes,no,Over 300 lbs,head,priority
+Under 18,female,A,no,yes,100-150 lbs,stomach,normal
+Under 18,female,W,no,no,200-300 lbs,limb,normal
+Over 60,female,NHPI,yes,no,under 100 lbs,stomach,return_later
+Under 18,female,A,yes,no,under 100 lbs,stomach,normal
+Over 60,male,W,no,no,200-300 lbs,limb,normal
+Under 18,male,A,no,yes,Over 300 lbs,head,priority
+18-34,male,A,no,yes,200-300 lbs,head,return_later
+Under 18,male,A,yes,no,200-300 lbs,stomach,normal
+Under 18,male,W,yes,no,150-200 lbs,limb,normal
+35-60,male,W,yes,yes,under 100 lbs,stomach,priority
+18-34,male,NHPI,no,yes,Over 300 lbs,stomach,return_later
+35-60,female,W,yes,yes,150-200 lbs,stomach,normal
+Over 60,female,W,yes,yes,200-300 lbs,stomach,normal
+35-60,female,BAM,yes,no,Over 300 lbs,limb,normal
+Under 18,female,W,yes,yes,Over 300 lbs,head,priority
+18-34,male,W,yes,yes,100-150 lbs,chest,priority
+18-34,female,BAM,no,no,200-300 lbs,limb,normal
+35-60,male,BAM,yes,yes,200-300 lbs,stomach,normal
+18-34,male,AIAN,no,no,Over 300 lbs,head,return_later
+18-34,female,A,yes,no,200-300 lbs,chest,normal
+35-60,male,A,no,no,100-150 lbs,head,normal
+Under 18,male,A,no,yes,Over 300 lbs,stomach,normal
+Over 60,male,A,yes,no,200-300 lbs,limb,normal
+Under 18,male,BAM,yes,yes,200-300 lbs,stomach,normal
+Under 18,male,A,no,no,150-200 lbs,chest,normal
+35-60,male,BAM,yes,yes,Over 300 lbs,head,priority
+35-60,female,BAM,yes,yes,200-300 lbs,head,priority
+35-60,female,BAM,no,no,Over 300 lbs,chest,priority
+18-34,male,BAM,no,no,Over 300 lbs,stomach,normal
+Over 60,male,BAM,no,no,150-200 lbs,chest,normal
+Under 18,female,W,no,no,Over 300 lbs,head,return_later
+18-34,female,BAM,no,yes,100-150 lbs,stomach,normal
+35-60,female,A,no,yes,Over 300 lbs,limb,normal
+35-60,female,W,yes,no,150-200 lbs,stomach,normal
+35-60,male,BAM,yes,yes,under 100 lbs,chest,priority
+18-34,female,BAM,no,yes,Over 300 lbs,head,priority
+Under 18,male,W,no,yes,150-200 lbs,chest,normal
+Under 18,male,BAM,yes,no,Over 300 lbs,chest,normal
+35-60,female,BAM,no,no,under 100 lbs,limb,normal
+18-34,male,BAM,yes,yes,Over 300 lbs,chest,priority
+35-60,male,BAM,yes,yes,200-300 lbs,head,priority
+Under 18,female,A,yes,yes,100-150 lbs,stomach,normal
+35-60,female,BAM,no,yes,150-200 lbs,chest,normal
+35-60,male,A,no,no,Over 300 lbs,chest,priority
+Under 18,male,A,yes,no,Over 300 lbs,stomach,normal
+Under 18,female,BAM,no,yes,100-150 lbs,limb,normal
+35-60,male,BAM,yes,no,200-300 lbs,stomach,return_later
+18-34,male,BAM,no,no,100-150 lbs,stomach,normal
+Under 18,male,BAM,no,yes,200-300 lbs,head,normal
+18-34,female,W,yes,yes,100-150 lbs,chest,priority
+18-34,female,BAM,yes,yes,150-200 lbs,chest,priority
+Under 18,female,AIAN,yes,yes,200-300 lbs,stomach,return_later
+18-34,male,W,yes,no,under 100 lbs,limb,normal
+35-60,male,W,yes,no,100-150 lbs,chest,normal
+35-60,male,W,no,yes,100-150 lbs,chest,normal
+Over 60,female,W,no,no,200-300 lbs,chest,normal
+35-60,female,A,yes,yes,150-200 lbs,chest,normal
+Under 18,female,BAM,yes,yes,under 100 lbs,stomach,priority
+Over 60,male,BAM,yes,no,under 100 lbs,limb,priority
+35-60,male,W,yes,yes,200-300 lbs,limb,normal
+35-60,female,A,yes,yes,100-150 lbs,head,priority
+Under 18,female,A,no,yes,200-300 lbs,chest,priority
+Over 60,male,BAM,yes,no,150-200 lbs,stomach,normal
+Under 18,male,A,yes,yes,150-200 lbs,head,normal
+18-34,male,A,yes,yes,100-150 lbs,head,normal
+Under 18,male,A,yes,yes,100-150 lbs,limb,normal
+18-34,male,A,no,no,under 100 lbs,head,priority
+Over 60,male,BAM,yes,yes,200-300 lbs,stomach,normal
+Over 60,male,W,no,yes,100-150 lbs,stomach,normal
+Under 18,female,W,yes,yes,200-300 lbs,head,priority
+35-60,female,BAM,yes,no,200-300 lbs,head,return_later
+35-60,male,A,no,no,200-300 lbs,chest,normal
+Over 60,male,A,yes,no,150-200 lbs,stomach,normal
+18-34,male,W,no,yes,under 100 lbs,chest,priority
+18-34,female,W,yes,yes,150-200 lbs,head,priority
+Under 18,female,W,yes,yes,100-150 lbs,head,priority
+Over 60,male,A,no,yes,100-150 lbs,stomach,normal
+Over 60,female,BAM,yes,no,under 100 lbs,head,priority
+Under 18,female,BAM,yes,no,Over 300 lbs,head,return_later
+18-34,male,A,yes,no,150-200 lbs,chest,normal
+18-34,female,BAM,no,no,Over 300 lbs,head,return_later
+35-60,female,BAM,yes,no,200-300 lbs,head,normal
+18-34,female,A,no,yes,under 100 lbs,chest,priority
+Under 18,female,A,yes,no,200-300 lbs,head,return_later
+Under 18,female,W,yes,yes,100-150 lbs,stomach,normal
+35-60,male,BAM,no,yes,under 100 lbs,chest,priority
+18-34,female,BAM,no,no,150-200 lbs,chest,normal
+35-60,female,BAM,yes,yes,200-300 lbs,head,priority
+35-60,female,BAM,no,yes,100-150 lbs,head,normal
+Under 18,male,W,no,yes,under 100 lbs,stomach,normal
+18-34,female,W,yes,no,100-150 lbs,chest,normal
+Under 18,male,W,no,no,150-200 lbs,stomach,normal
+35-60,male,A,yes,yes,100-150 lbs,stomach,normal
+35-60,male,W,no,no,100-150 lbs,stomach,normal
+18-34,female,A,yes,yes,100-150 lbs,limb,normal
+18-34,female,W,no,no,150-200 lbs,head,normal
+Over 60,female,W,no,no,under 100 lbs,chest,return_later
+Over 60,female,W,yes,yes,150-200 lbs,head,priority
+Under 18,female,BAM,yes,yes,Over 300 lbs,head,priority
+35-60,female,A,no,no,Over 300 lbs,limb,normal
+18-34,female,BAM,yes,yes,100-150 lbs,stomach,normal
+Over 60,female,A,no,yes,150-200 lbs,limb,normal
+Over 60,female,BAM,yes,no,100-150 lbs,stomach,normal
+Over 60,male,A,yes,no,Over 300 lbs,stomach,normal
+Over 60,male,A,yes,no,150-200 lbs,stomach,normal
+18-34,female,BAM,yes,yes,100-150 lbs,chest,priority
+18-34,female,W,no,yes,100-150 lbs,stomach,normal
+Under 18,female,BAM,no,no,Over 300 lbs,limb,return_later
+18-34,male,BAM,yes,yes,150-200 lbs,stomach,normal
+18-34,male,W,no,no,200-300 lbs,chest,normal
+35-60,female,A,yes,yes,200-300 lbs,stomach,normal
+Under 18,female,BAM,yes,no,150-200 lbs,stomach,normal
+35-60,female,BAM,yes,no,200-300 lbs,limb,normal
+Under 18,female,W,no,yes,200-300 lbs,limb,normal
+18-34,female,BAM,no,yes,Over 300 lbs,limb,normal
+18-34,female,A,yes,no,100-150 lbs,head,normal
+35-60,male,BAM,yes,no,Over 300 lbs,limb,normal
+Over 60,male,A,no,no,150-200 lbs,head,priority
+Under 18,male,W,yes,yes,under 100 lbs,head,return_later
+35-60,male,A,yes,no,200-300 lbs,stomach,normal
+35-60,female,BAM,no,yes,150-200 lbs,chest,normal
+Over 60,male,BAM,no,no,100-150 lbs,limb,normal
+35-60,male,W,yes,yes,Over 300 lbs,limb,priority
+35-60,male,A,yes,no,Over 300 lbs,limb,normal
+18-34,female,W,yes,no,Over 300 lbs,chest,priority
+35-60,male,A,no,no,under 100 lbs,limb,normal
+18-34,female,BAM,no,no,150-200 lbs,limb,normal
+18-34,male,A,no,yes,100-150 lbs,limb,normal
+Under 18,male,W,yes,no,200-300 lbs,limb,normal
+18-34,male,BAM,yes,yes,100-150 lbs,head,priority
+Under 18,female,BAM,no,yes,under 100 lbs,chest,priority
+18-34,female,A,no,yes,under 100 lbs,limb,normal
+Over 60,male,W,yes,no,200-300 lbs,chest,normal
+18-34,female,A,yes,yes,Over 300 lbs,stomach,priority
+Under 18,female,W,yes,yes,Over 300 lbs,stomach,priority
+Under 18,female,A,no,no,150-200 lbs,limb,normal
+Under 18,male,A,no,no,100-150 lbs,limb,normal
+Under 18,female,BAM,no,yes,under 100 lbs,limb,normal
+35-60,female,W,no,yes,200-300 lbs,stomach,normal
+Under 18,female,W,yes,no,100-150 lbs,limb,normal
+35-60,female,W,yes,no,under 100 lbs,limb,normal
+18-34,female,A,yes,yes,under 100 lbs,stomach,priority
+Under 18,male,A,yes,no,100-150 lbs,head,normal
+Over 60,male,A,no,no,150-200 lbs,limb,normal
+35-60,male,W,yes,yes,150-200 lbs,stomach,normal
+35-60,male,A,yes,no,150-200 lbs,head,return_later
+35-60,male,BAM,no,no,200-300 lbs,head,normal
+Under 18,male,A,no,yes,Over 300 lbs,head,priority
+Under 18,female,W,no,no,150-200 lbs,stomach,normal
+Over 60,female,A,no,no,150-200 lbs,chest,priority
+18-34,male,W,no,no,100-150 lbs,chest,normal
+Over 60,female,BAM,no,yes,200-300 lbs,stomach,normal
+35-60,male,W,yes,yes,100-150 lbs,limb,normal
+35-60,female,W,yes,yes,under 100 lbs,stomach,priority
+Over 60,female,BAM,yes,yes,150-200 lbs,chest,priority
+Over 60,male,A,no,yes,under 100 lbs,stomach,normal
+Under 18,female,W,yes,no,Over 300 lbs,limb,normal
+Under 18,male,BAM,no,no,under 100 lbs,limb,normal
+18-34,male,BAM,yes,yes,Over 300 lbs,head,priority
+35-60,male,BAM,no,no,200-300 lbs,chest,normal
+35-60,female,W,yes,no,200-300 lbs,chest,normal
+Over 60,female,A,no,yes,200-300 lbs,limb,normal
+18-34,female,BAM,no,no,200-300 lbs,stomach,normal
+35-60,male,NHPI,no,no,200-300 lbs,head,return_later
+Under 18,male,W,no,yes,200-300 lbs,chest,normal
+35-60,male,W,yes,yes,under 100 lbs,stomach,priority
+18-34,male,W,yes,yes,under 100 lbs,limb,priority
+35-60,male,BAM,yes,no,100-150 lbs,chest,normal
+Under 18,female,AIAN,yes,no,100-150 lbs,head,return_later
+Under 18,male,W,no,yes,100-150 lbs,limb,normal
+35-60,female,W,no,no,100-150 lbs,head,normal
+Under 18,male,A,yes,no,200-300 lbs,limb,normal
+Over 60,female,BAM,no,no,Over 300 lbs,chest,return_later
+Under 18,female,A,yes,no,100-150 lbs,limb,normal
+Under 18,male,W,yes,no,Over 300 lbs,stomach,return_later
+18-34,female,W,no,no,150-200 lbs,chest,normal
+Over 60,male,AIAN,no,no,150-200 lbs,chest,return_later
+35-60,female,BAM,yes,yes,under 100 lbs,chest,priority
+18-34,male,W,no,yes,under 100 lbs,stomach,normal
+Over 60,female,BAM,no,no,100-150 lbs,chest,normal
+35-60,female,W,yes,no,150-200 lbs,limb,normal
+35-60,female,BAM,no,yes,200-300 lbs,chest,normal
+18-34,male,BAM,yes,yes,Over 300 lbs,chest,priority
+18-34,female,BAM,yes,no,Over 300 lbs,stomach,normal
+Under 18,male,A,no,yes,Over 300 lbs,limb,normal
+Over 60,male,A,no,yes,Over 300 lbs,chest,priority
+Under 18,male,BAM,no,yes,200-300 lbs,head,normal
+Over 60,female,W,no,yes,150-200 lbs,chest,normal
+Under 18,male,A,yes,yes,Over 300 lbs,chest,priority
+18-34,female,A,yes,yes,Over 300 lbs,head,priority
+18-34,male,BAM,no,no,under 100 lbs,limb,return_later
+Over 60,female,W,no,yes,200-300 lbs,limb,normal
+35-60,female,BAM,no,no,150-200 lbs,limb,normal
+Under 18,female,A,no,no,150-200 lbs,head,normal
+18-34,female,W,yes,yes,200-300 lbs,chest,priority
+18-34,male,BAM,no,no,200-300 lbs,chest,normal
+35-60,male,W,yes,yes,under 100 lbs,head,priority
+Under 18,female,W,no,no,Over 300 lbs,stomach,normal
+Under 18,male,BAM,yes,no,150-200 lbs,chest,normal
+35-60,male,AIAN,yes,yes,Over 300 lbs,stomach,return_later
+Under 18,male,BAM,yes,no,under 100 lbs,limb,return_later
+Over 60,male,BAM,no,yes,150-200 lbs,limb,normal
+Over 60,female,A,no,yes,150-200 lbs,stomach,normal
+18-34,female,W,yes,no,100-150 lbs,chest,normal
+35-60,female,AIAN,yes,no,under 100 lbs,limb,return_later
+18-34,female,BAM,yes,yes,200-300 lbs,chest,priority
+Under 18,female,W,no,no,200-300 lbs,limb,normal
+35-60,male,W,yes,yes,100-150 lbs,chest,priority
+18-34,female,A,no,yes,Over 300 lbs,head,priority
+18-34,female,A,no,no,Over 300 lbs,head,priority
+18-34,male,A,no,yes,200-300 lbs,head,normal
+Over 60,female,BAM,no,no,150-200 lbs,limb,normal
+Over 60,female,BAM,no,yes,150-200 lbs,stomach,normal
+Over 60,female,W,no,no,150-200 lbs,limb,normal
+35-60,male,A,no,yes,under 100 lbs,limb,normal
+Under 18,female,W,no,yes,under 100 lbs,limb,normal
+18-34,female,BAM,no,no,150-200 lbs,stomach,normal
+Over 60,female,BAM,no,no,200-300 lbs,head,normal
+18-34,female,A,no,no,200-300 lbs,chest,normal
+18-34,female,AIAN,no,yes,under 100 lbs,chest,return_later
+Over 60,female,BAM,yes,no,under 100 lbs,limb,normal
+35-60,female,A,yes,yes,Over 300 lbs,stomach,normal
+Over 60,male,W,yes,no,150-200 lbs,limb,normal
+Under 18,male,BAM,no,no,100-150 lbs,limb,normal
+Under 18,female,A,no,yes,200-300 lbs,limb,normal
+35-60,male,A,yes,no,200-300 lbs,head,normal
+18-34,male,W,no,no,Over 300 lbs,limb,normal
+18-34,male,A,no,no,100-150 lbs,limb,priority
+18-34,female,A,no,no,200-300 lbs,chest,normal
+35-60,female,W,no,no,Over 300 lbs,stomach,normal
+Over 60,female,A,no,no,150-200 lbs,limb,normal
+Under 18,female,W,no,yes,150-200 lbs,stomach,priority
+18-34,male,W,no,yes,under 100 lbs,stomach,normal
+18-34,female,BAM,yes,yes,200-300 lbs,head,priority
+Under 18,female,BAM,no,yes,under 100 lbs,limb,normal
+18-34,female,AIAN,yes,yes,100-150 lbs,chest,return_later
+18-34,male,W,no,yes,100-150 lbs,chest,normal
+35-60,male,BAM,yes,yes,under 100 lbs,chest,priority

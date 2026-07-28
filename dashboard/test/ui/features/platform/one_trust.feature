@@ -1,4 +1,5 @@
 @single_session
+@playwright
 Feature: OneTrust integration
   @eyes
   Scenario: User sees OneTrust cookie pop-up when self-hosting OneTrust libraries on code.org
@@ -7,7 +8,7 @@ Feature: OneTrust integration
     Given I am on "http://studio.code.org/home?otreset=true&otgeo=es"
     And I wait until current URL contains "otreset=false"
     And I wait for jquery to load
-    And I open my eyes to test "Code.org Onetrust pop up"
+    And I open my eyes to test "CodeAI Onetrust pop up"
     And I wait until element "#onetrust-banner-sdk" is visible
     And I see no difference for "Onetrust pop up: code.org" in the current viewport
     And I close my eyes

@@ -8,7 +8,6 @@ import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
-import color from '../../util/color';
 
 const PROJECT_INFO = {
   playlab: {
@@ -200,15 +199,15 @@ const styles = {
     marginBottom: 10,
   },
   tile: {
-    width: 214,
-    height: 70,
-    border: '1px solid ' + color.neutral_dark20,
+    width: 216,
+    height: 72,
+    border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 2,
     float: 'left',
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: color.neutral_light,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   tilePadding: {
     marginRight: 35,
@@ -225,14 +224,14 @@ const styles = {
   },
   label: {
     paddingRight: 5,
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
   },
   description: {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 14,
     ...fontConstants['main-font-semi-bold'],
-    color: color.neutral_dark,
+    color: 'var(--text-neutral-primary)',
   },
 };
 

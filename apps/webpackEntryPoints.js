@@ -43,6 +43,7 @@ const CODE_STUDIO_ENTRIES = {
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
   'ai_lessons/app': './src/sites/studio/pages/ai_lessons/app.js',
+  'experiments/index': './src/sites/studio/pages/experiments/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
@@ -110,10 +111,13 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
+  'scrapbook/show': './src/sites/studio/pages/scrapbook/show.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
+  'pyodide_sandbox/show': './src/sites/studio/pages/pyodide_sandbox/show.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
+  'routing': './src/sites/studio/pages/routing.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
   'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
   'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -131,6 +135,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
   'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
@@ -148,12 +153,16 @@ const INTERNAL_ENTRIES = {
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
   'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
   'lessons/generate': './src/sites/studio/pages/lessons/generate.js',
+  'lessons/slides/generate': './src/sites/studio/pages/lessons/slides/generate.js',
+  'lessons/slides/show': './src/sites/studio/pages/lessons/slides/show.js',
+  'lessons/slides/edit': './src/sites/studio/pages/lessons/slides/edit.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
   'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
-  'levels/editors/fields/_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_ai_tutor_prompt_settings.js',
+  'levels/editors/fields/_weblab2_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_weblab2_ai_tutor_prompt_settings.js',
+  'levels/editors/fields/_pythonlab_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_pythonlab_ai_tutor_prompt_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
@@ -196,6 +205,7 @@ const INTERNAL_ENTRIES = {
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
   'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+  'scripts/generate': './src/sites/studio/pages/scripts/generate.js',
   'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   'shared_blockly_functions/edit': './src/sites/studio/pages/shared_blockly_functions/edit.js',
@@ -249,8 +259,6 @@ const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
   statsigWebAnalytics: './src/metrics/statsigWebAnalytics.js',
-  'global_edition/region_switch_confirm':
-    './src/globalEdition/regionSwitchConfirm.js',
 };
 
 // prettier-ignore

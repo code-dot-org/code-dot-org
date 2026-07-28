@@ -8,7 +8,6 @@
 # component from the page.
 
 locales: [ar-SA]
-locale_lock: true
 countries:
   - BH # Bahrain
   - IQ # Iraq
@@ -44,7 +43,8 @@ header:
         url: /ar/global
       - title: hour_of_ai
         id: header-hoa
-        url: https://csforall.org/ar/hour-of-ai
+        domain: code.org
+        url: /hour-of-ai
 
     student:
       - title: my_dashboard
@@ -172,16 +172,16 @@ pages:
   - path: /my-professional-learning
     components:
       LandingPage:
-        hideMyFacilitatorCenterTab: true
+        hideMyFacilitatorCenterTab: false
         hideInstructorCenterTab: false
-        hideRPCenterTab: true
-        hideWorkshopOrganizerCenterTab: true
+        hideRPCenterTab: false
+        hideWorkshopOrganizerCenterTab: false
         hideMyPLWorkshopEnrollmentCelebrationDialog: true
         hideMyPLBanner: true
         hideMyPLSelfPacedPL: false
-        hideMyPLJoinSectionArea: true
-        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLJoinSectionArea: false
+        hideMyPLLandingPageWorkshopsTable: false
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /ar/global
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /ar/professional-learning/courses

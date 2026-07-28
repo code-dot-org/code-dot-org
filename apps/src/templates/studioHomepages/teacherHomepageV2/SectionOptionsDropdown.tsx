@@ -115,25 +115,33 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
           </Typography>
         </button>
       </li>,
-      <li key={'archive'}>
-        <button
-          id="ui-test-archive-section"
-          type="button"
-          className={styles.dropdownMenuItem}
-          onClick={() => onArchiveClick(dispatch, section)}
-        >
-          <FontAwesomeV6Icon
-            iconName={section.hidden ? 'window-restore' : 'box-archive'}
-            iconStyle="solid"
-          />
-          <Typography variant="body2" component="span">
-            {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
-          </Typography>
-        </button>
-      </li>,
     ];
 
-    if (section.studentCount === 0) {
+    // Demo sections can delete and don't archive.
+    const deleteWithoutArchive = !!section.demoType;
+
+    if (!deleteWithoutArchive) {
+      options.push(
+        <li key={'archive'}>
+          <button
+            id="ui-test-archive-section"
+            type="button"
+            className={styles.dropdownMenuItem}
+            onClick={() => onArchiveClick(dispatch, section)}
+          >
+            <FontAwesomeV6Icon
+              iconName={section.hidden ? 'window-restore' : 'box-archive'}
+              iconStyle="solid"
+            />
+            <Typography variant="body2" component="span">
+              {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
+            </Typography>
+          </button>
+        </li>
+      );
+    }
+
+    if (deleteWithoutArchive || section.studentCount === 0) {
       options.push(
         <li key={'delete'}>
           <button

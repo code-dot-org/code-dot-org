@@ -25,12 +25,12 @@ module UsersHelper
       # We don't want to destroy an account with progress. Log to Redshift and return false.
       firehose_params[:type] = "cancelled-#{takeover_type}"
       firehose_params[:error] = "Attempted takeover for account with progress."
-      log_account_takeover_to_firehose(firehose_params)
+      log_account_takeover_to_firehose(**firehose_params)
       return false
     end
 
     # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
-    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+    log_self_takeover_investigation_to_firehose(**firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
 
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
@@ -44,6 +44,10 @@ module UsersHelper
           si.update! instructor: destination_user
         end
         Section.where(user: source_user).each do |owned_section|
+          # Skip demo sections that would violate the (user_id, demo_type, deleted_at)
+          # uniqueness constraint — destination already owns an equivalent demo section.
+          next if owned_section.demo_type.present? &&
+            Section.exists?(user: destination_user, demo_type: owned_section.demo_type, deleted_at: owned_section.deleted_at)
           owned_section.update! user: destination_user
         end
       end
@@ -63,7 +67,7 @@ module UsersHelper
         provider: provider,
         error: "Type: #{exception.class} Message: #{exception.message}"
       }
-      log_self_takeover_investigation_to_firehose(firehose_params)
+      log_self_takeover_investigation_to_firehose(**firehose_params)
     end
     false
   end
@@ -417,12 +421,18 @@ module UsersHelper
             )
           end
         else
-          level_for_progress_id = level.get_level_for_progress.id
+          progress_level_ids = level.levels_for_progress.map(&:id)
           users.each do |user|
+            user_levels_for_user = user_levels_by_level[user.id]
+            # Prefer the most recent attempt across the levels, so a
+            # migrated predict level surfaces either its new (on-level) progress
+            # or legacy progress from its contained level.
+            user_level = progress_level_ids.filter_map {|id| user_levels_for_user[id]}.max_by(&:updated_at)
             level_progress = get_level_progress(
               user_id: user.id,
-              user_level: user_levels_by_level[user.id][level_for_progress_id],
-              teacher_feedback: teacher_feedback_by_level[user.id][level_for_progress_id],
+              user_level: user_level,
+              # Teacher feedback is always on the level, even for levels with contained levels.
+              teacher_feedback: teacher_feedback_by_level[user.id][level.id],
               script_level: sl,
               paired_user_levels: paired_user_levels[user.id],
               include_timestamp: include_timestamp
@@ -501,9 +511,10 @@ module UsersHelper
     include_timestamp:
   )
     sublevel_ids = sublevels.map(&:id)
-    sublevels_for_progress_ids = sublevels.map do |sublevel|
-      (sublevel.contained_levels.first || sublevel).id
+    progress_ids_by_sublevel = sublevels.to_h do |sublevel|
+      [sublevel.id, sublevel.levels_for_progress.map(&:id)]
     end
+    sublevels_for_progress_ids = progress_ids_by_sublevel.values.flatten
 
     # The progress we return for the parent level is cloned from a particular
     # sublevel (as determined by get_sublevel_for_progress), with the sum
@@ -518,10 +529,11 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     sublevels.each do |sublevel|
-      level_for_progress = sublevel.get_level_for_progress
+      progress_level_ids = progress_ids_by_sublevel[sublevel.id]
+      user_level = progress_level_ids.filter_map {|id| user_levels_by_level[id]}.max_by(&:updated_at)
       sublevel_progress = get_level_progress(
         user_id: user.id,
-        user_level: user_levels_by_level[level_for_progress.id],
+        user_level: user_level,
         teacher_feedback: teacher_feedback_by_level[sublevel.id],
         script_level: script_level,
         paired_user_levels: paired_user_levels,
@@ -531,7 +543,7 @@ module UsersHelper
 
       sublevel_progress.compact!
 
-      if sublevel.id == cloned_level_id || level_for_progress.id == cloned_level_id
+      if sublevel.id == cloned_level_id || progress_level_ids.include?(cloned_level_id)
         progress[level.id] = sublevel_progress.clone
       end
 

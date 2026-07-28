@@ -1,3 +1,8 @@
+import {
+  Button as MuiButton,
+  Stack as MuiStack,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -6,11 +11,14 @@ import React from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import msg from '@cdo/locale';
 
+import styles from './versionHistory.module.scss';
+
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
  */
 export default class VersionRow extends React.Component {
   static propTypes = {
+    rowIndex: PropTypes.number.isRequired,
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date).isRequired,
     isLatest: PropTypes.bool.isRequired,
@@ -49,60 +57,75 @@ export default class VersionRow extends React.Component {
 
   render() {
     let buttons = [];
+    const versionLabelId = `version-history-row-${this.props.rowIndex}-version-label`;
+    const restoreButtonId = `version-history-row-${this.props.rowIndex}-restore-button`;
+    const viewButtonId = `version-history-row-${this.props.rowIndex}-view-button`;
+    const versionLabel = msg.versionHistory_versionLabel({
+      timestamp: this.getLastModifiedTimestamp(),
+    });
     if (this.props.isLatest) {
       buttons.push(
-        <button
+        <MuiTypography
           key={'latest-version-message'}
-          type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', background: 'none', border: 'none'}}
+          component="span"
+          variant="body3"
         >
           {msg.latestVersion()}
-        </button>
+        </MuiTypography>
       );
     } else if (!this.props.isReadOnly) {
-      const className = this.props.isSelectedVersion
-        ? 'btn-info'
-        : 'img-upload';
+      const variant = this.props.isSelectedVersion ? 'contained' : 'outlined';
+      const color = this.props.isSelectedVersion ? 'primary' : 'tertiary';
       buttons.push(
-        <button
+        <MuiButton
           key={'restore-version-button'}
+          id={restoreButtonId}
           type="button"
-          className={className}
+          color={color}
+          size="small"
+          variant={variant}
+          aria-describedby={versionLabelId}
           onClick={this.props.onChoose}
         >
           {msg.restore()}
-        </button>
+        </MuiButton>
       );
     }
 
     if (!this.props.isSelectedVersion) {
       buttons.push(
-        <a
+        <MuiButton
           key={'not-selected-version-button'}
+          id={viewButtonId}
+          component="a"
           href={
             location.origin + location.pathname + '?' + this.getQueryParams()
           }
           target="_blank"
           rel="noopener noreferrer"
+          color="primary"
+          size="small"
+          variant="contained"
+          aria-describedby={versionLabelId}
+          className={styles.viewVersionButton}
         >
-          <button type="button" className="btn-info">
-            {msg.view()}
-          </button>
-        </a>
+          {msg.view()}
+        </MuiButton>
       );
     } else {
       buttons.push(
-        <button
+        <MuiButton
           key={'disabled-view-button'}
+          id={viewButtonId}
           type="button"
-          className="btn-default"
-          disabled="disabled"
-          style={{cursor: 'default', color: 'white'}}
+          color="primary"
+          size="small"
+          variant="contained"
+          disabled
+          aria-describedby={versionLabelId}
         >
           {msg.view()}
-        </button>
+        </MuiButton>
       );
     }
 
@@ -114,14 +137,20 @@ export default class VersionRow extends React.Component {
         })}
       >
         <td>
-          <p>
-            {msg.versionHistory_versionLabel({
-              timestamp: this.getLastModifiedTimestamp(),
-            })}
-          </p>
+          <MuiTypography id={versionLabelId} variant="body1">
+            {versionLabel}
+          </MuiTypography>
         </td>
-        <td width="275" height="52" style={{textAlign: 'right'}}>
-          {buttons}
+        <td width="275" height="52" className={styles.actionCell}>
+          <MuiStack
+            direction="row"
+            spacing={1}
+            justifyContent="flex-end"
+            alignItems="center"
+            useFlexGap
+          >
+            {buttons}
+          </MuiStack>
         </td>
       </tr>
     );

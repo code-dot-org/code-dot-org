@@ -113,7 +113,7 @@ export default class SoundLibrary extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.root}>
         <div style={styles.breadcrumbs}>
           <span onClick={this.clearCategories} style={styles.allCategoriesText}>
             All categories
@@ -160,6 +160,12 @@ export default class SoundLibrary extends React.Component {
 }
 
 const styles = {
+  // Contains the floated breadcrumbs/searchBarContainer/categoryArea below,
+  // so this component's rendered height (and its ancestors', up through
+  // .modal-content) isn't collapsed to zero.
+  root: {
+    display: 'flow-root',
+  },
   button: {
     float: 'right',
     margin: '20px 0px',

@@ -1,0 +1,51 @@
+{
+  "name": "basketball_shots",
+  "card": {
+    "description": "This dataset contains every 3-point attempt made during the NCAA 2017 tournament. With this data it's possible to predict whether the shot was made or missed.",
+    "source": "NCAA (https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=ncaa_basketball)",
+    "lastUpdated": "2019",
+    "context": {
+      "createdBy": "National Collegiate Athletic Association",
+      "potentialUses": "Predict whether a 3-point shot was made or missed.",
+      "potentialMisuses": ""
+    }
+  },
+  "defaultLabelColumn": "Made or miss",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Away team alias",
+      "description": "Abbreviation of the name of the away team."
+    },
+    {
+      "type": "categorical",
+      "id": "Home team alias",
+      "description": "Abbreviation of the name of the home team."
+    },
+    {
+      "type": "numerical",
+      "id": "Time in seconds",
+      "description": "Time elasped on the game clock, in seconds."
+    },
+    {
+      "type": "numerical",
+      "id": "Jersey number",
+      "description": "The number of the player who took the shot."
+    },
+    {
+      "type": "numerical",
+      "id": "Inches from left baseline",
+      "description": "Distance from the left baseline (the line behind a basket)."
+    },
+    {
+      "type": "numerical",
+      "id": "Inches from bottom sideline",
+      "description": "Distance from the bottom sideline (the line along the length of the court)."
+    },
+    {
+      "type": "categorical",
+      "id": "Made or miss",
+      "description": "Whether the 3-point shot was made or missed."
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import DemoSectionTooltip from '@cdo/apps/templates/DemoSectionTooltip';
 import i18n from '@cdo/locale';
 
 import {handleShareSetting} from './manageStudentsRedux';
@@ -14,6 +15,7 @@ const LEARN_MORE_URL =
 class SharingControlActionsHeaderCell extends Component {
   static propTypes = {
     handleShareSetting: PropTypes.func,
+    isDemoSection: PropTypes.bool,
   };
 
   onEnableAll = () => {
@@ -29,6 +31,7 @@ class SharingControlActionsHeaderCell extends Component {
   };
 
   render() {
+    const {isDemoSection} = this.props;
     const options = [
       {
         value: 'enable-all-sharing',
@@ -52,18 +55,24 @@ class SharingControlActionsHeaderCell extends Component {
 
     return (
       <div>
-        <ActionDropdown
-          name="sharing-control-actions"
-          labelText={i18n.actions()}
-          size="s"
-          menuPlacement="right"
-          options={options}
-          triggerButtonProps={{
-            color: 'tertiary',
-            variant: 'text',
-            children: <FontAwesomeV6Icon iconName="gear" />,
-          }}
-        />
+        <DemoSectionTooltip
+          isDemoSection={isDemoSection}
+          tooltipId="demo-sharing-header-tooltip"
+        >
+          <ActionDropdown
+            name="sharing-control-actions"
+            labelText={i18n.actions()}
+            size="s"
+            menuPlacement="right"
+            disabled={isDemoSection}
+            options={options}
+            triggerButtonProps={{
+              color: 'tertiary',
+              variant: 'text',
+              children: <FontAwesomeV6Icon iconName="gear" />,
+            }}
+          />
+        </DemoSectionTooltip>
       </div>
     );
   }

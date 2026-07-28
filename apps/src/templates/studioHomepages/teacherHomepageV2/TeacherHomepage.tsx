@@ -7,6 +7,7 @@ import DCDO from '@cdo/apps/dcdo';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
@@ -21,16 +22,22 @@ import {
   asyncLoadCoteacherInvite,
   fetchDemoPresets,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import {
+  DemoType,
+  Section,
+} from '../../teacherDashboard/types/teacherSectionTypes';
 import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import DemoSectionCard from './DemoSectionCard';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
+import LogoTransition from './LogoTransition';
 import OnboardingChecklist from './OnboardingChecklist';
+import {pickDemoType} from './pickDemoType';
 import {SectionList} from './SectionList';
 import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
-import useCreateSectionTour from './useCreateSectionTour';
+import {TempRebrandBanner} from './tempRebrandBanner/TempRebrandBanner';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -39,23 +46,59 @@ export type ArchivedToggleOption = 'teaching' | 'archived';
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
 interface TeacherHomepageProps {
   studioUrlPrefix: string;
+  logoTransitionEnabled?: boolean;
 }
 
 interface EssentialAiDependencyResponse {
   has_assigned_essential_ai_dependency: boolean;
 }
 
-const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
+const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+  logoTransitionEnabled,
+}) => {
   const isMiniTutorialEnabled =
     experiments.isEnabled(experiments.ONBOARDING) ||
     DCDO.get('onboarding-enabled', false);
-  // TODO: replace with real data once teacher grade level is stored on the platform
-  const isElementaryTeacher = true;
-  const tour = useCreateSectionTour(isElementaryTeacher);
+  const gradesTeaching = useAppSelector(
+    state => state.currentUser.gradesTeaching
+  );
+  const sections = useAppSelector(state => state.teacherSections.sections);
+  const demoPresetsAreLoaded = useAppSelector(
+    state => state.teacherSections.demoPresetsAreLoaded
+  );
+  const sectionsAreLoaded = useAppSelector(
+    state => state.teacherSections.sectionsAreLoaded
+  );
+
+  const demoSection = React.useMemo<Section | null>(() => {
+    return (
+      Object.values(sections).find(
+        s => s.demoType !== null && s.demoType !== undefined
+      ) ?? null
+    );
+  }, [sections]);
+  const demoSectionDemoType = demoSection?.demoType ?? null;
+
   const isDemoSectionEnabled = experiments.isEnabled('demo-section');
+
+  // When no real demo section exists yet but the DemoSectionCard is shown
+  // (isDemoSectionEnabled + no sections created), infer the demo type from
+  // the teacher's grades so the onboarding checklist appears.
+  const effectiveDemoType = React.useMemo<DemoType | null>(() => {
+    if (demoSectionDemoType !== null) {
+      return demoSectionDemoType;
+    }
+    if (isDemoSectionEnabled && Object.keys(sections).length === 0) {
+      return pickDemoType(gradesTeaching);
+    }
+    return null;
+  }, [demoSectionDemoType, isDemoSectionEnabled, sections, gradesTeaching]);
 
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
+
+  const showRebrandBanner = DCDO.get('codeai-rebrand-banner', false);
 
   const [personaData, setPersonaData] = React.useState<{
     hasMatchedPersona: boolean | null;
@@ -76,8 +119,22 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     hasAssignedEssentialAiDependency,
     setHasAssignedEssentialAiDependency,
   ] = React.useState<boolean>(false);
+  const [onboardingHidden, setOnboardingHidden] =
+    React.useState<boolean>(false);
+  const [isLoadingOnboardingHiddenStatus, setIsLoadingOnboardingHiddenStatus] =
+    React.useState<boolean>(true);
 
   const dispatch = useAppDispatch();
+
+  const handleHideOnboarding = React.useCallback(() => {
+    setOnboardingHidden(true);
+    new UserPreferences().setTeacherOnboardingHidden(true);
+  }, []);
+
+  const handleResumeOnboarding = React.useCallback(() => {
+    setOnboardingHidden(false);
+    new UserPreferences().setTeacherOnboardingHidden(false);
+  }, []);
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -86,27 +143,30 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     }
     dispatch(asyncLoadCoteacherInvite());
 
-    // Fetch personalization alert dismissal status
-    const fetchPersonalizationStatus = async () => {
+    // Fetch user preference statuses
+    const fetchUserPreferenceStatuses = async () => {
+      const userPreferences = new UserPreferences();
       try {
-        const userPreferences = new UserPreferences();
-        const hasDismissed =
-          await userPreferences.getHasDismissedPersonalizationAlert();
+        const [hasDismissed, hidden] = await Promise.all([
+          userPreferences.getHasDismissedPersonalizationAlert(),
+          userPreferences.getTeacherOnboardingHidden(),
+        ]);
         setHasDismissedPersonalizationAlert(hasDismissed);
-      } catch (error) {
-        console.error('Error fetching personalization alert status:', error);
-        setHasDismissedPersonalizationAlert(false);
+        setOnboardingHidden(hidden);
       } finally {
         setIsLoadingPersonalizationAlertStatus(false);
+        setIsLoadingOnboardingHiddenStatus(false);
       }
     };
 
-    fetchPersonalizationStatus();
+    fetchUserPreferenceStatuses();
 
     // Fetch teaching profile data
     const fetchTeachingProfileData = async () => {
       try {
-        const response = await fetch('/teaching_profile_data');
+        const response = await fetch('/teaching_profile_data', {
+          headers: {Accept: 'application/json'},
+        });
         const data = await response.json();
         setPersonaData({
           hasMatchedPersona: !!data.data.matchedPersona,
@@ -209,8 +269,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
     React.useState<ArchivedToggleOption>('teaching');
 
-  const sections = useAppSelector(state => state.teacherSections.sections);
-
   // The server uses hidden to mean the same thing as archived.
   const showHiddenOnly = selectedArchiveToggle === 'archived';
 
@@ -221,6 +279,43 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       ).length,
     [sections, showHiddenOnly]
   );
+
+  // Show the onboarding checklist at the exact moment section content becomes
+  // visible — either SectionList (real demo section) or DemoSectionCard (pre-creation).
+  const showOnboardingChecklist = React.useMemo(() => {
+    if (
+      !isMiniTutorialEnabled ||
+      !effectiveDemoType ||
+      isLoadingOnboardingHiddenStatus
+    ) {
+      return false;
+    }
+    // Case 1: a real demo section exists and the section list is on screen.
+    if (demoSectionDemoType !== null && numSections > 0) {
+      return true;
+    }
+    // Case 2: the DemoSectionCard is on screen (no real section yet).
+    if (
+      isDemoSectionEnabled &&
+      numSections === 0 &&
+      !showHiddenOnly &&
+      demoPresetsAreLoaded &&
+      sectionsAreLoaded
+    ) {
+      return true;
+    }
+    return false;
+  }, [
+    isMiniTutorialEnabled,
+    effectiveDemoType,
+    isLoadingOnboardingHiddenStatus,
+    demoSectionDemoType,
+    numSections,
+    isDemoSectionEnabled,
+    showHiddenOnly,
+    demoPresetsAreLoaded,
+    sectionsAreLoaded,
+  ]);
 
   const onArchiveToggleChange = (value: ArchivedToggleOption) => {
     const toggleEvent =
@@ -238,6 +333,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
 
   return (
     <div className={styles.teacherHomepage}>
+      {logoTransitionEnabled && <LogoTransition />}
       <div className={styles.teacherHomepageBody}>
         <Typography variant="h2" gutterBottom>
           {teacherName
@@ -246,6 +342,9 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
         </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {showRebrandBanner && (
+              <TempRebrandBanner showBanner={showRebrandBanner === true} />
+            )}
             {shouldShowPersonalizationAlert && (
               <Alert
                 aria-labelledby="feedback-banner-title"
@@ -279,31 +378,68 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
+              onResumeOnboarding={handleResumeOnboarding}
+              onboardingHidden={onboardingHidden}
             />
 
             <CoteacherInviteNotification
               isForPl={false}
               destructiveLoad={true}
             />
-            {!!isMiniTutorialEnabled && (
-              <OnboardingChecklist createSectionTour={tour} />
-            )}
             {!isDemoSectionEnabled ? (
               numSections === 0 ? (
                 <EmptyHomepage showHiddenOnly={showHiddenOnly} />
               ) : (
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      demoSection={demoSection}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <SectionList
+                    showHiddenOnly={showHiddenOnly}
+                    studioUrlPrefix={studioUrlPrefix}
+                  />
+                </>
+              )
+            ) : numSections === 0 ? (
+              showHiddenOnly ? (
+                <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              ) : isLoadingOnboardingHiddenStatus ||
+                !demoPresetsAreLoaded ||
+                !sectionsAreLoaded ? (
+                <Spinner size="large" />
+              ) : (
+                <>
+                  {showOnboardingChecklist && (
+                    <OnboardingChecklist
+                      demoSection={demoSection}
+                      demoType={effectiveDemoType!}
+                      isHidden={onboardingHidden}
+                      onHide={handleHideOnboarding}
+                    />
+                  )}
+                  <DemoSectionCard showHiddenOnly={showHiddenOnly} />
+                </>
+              )
+            ) : (
+              <>
+                {showOnboardingChecklist && (
+                  <OnboardingChecklist
+                    demoSection={demoSection}
+                    demoType={effectiveDemoType!}
+                    isHidden={onboardingHidden}
+                    onHide={handleHideOnboarding}
+                  />
+                )}
                 <SectionList
                   showHiddenOnly={showHiddenOnly}
                   studioUrlPrefix={studioUrlPrefix}
                 />
-              )
-            ) : numSections === 0 ? (
-              <DemoSectionCard showHiddenOnly={showHiddenOnly} />
-            ) : (
-              <SectionList
-                showHiddenOnly={showHiddenOnly}
-                studioUrlPrefix={studioUrlPrefix}
-              />
+              </>
             )}
           </div>
           <TeacherPromotions />

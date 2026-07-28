@@ -1,5 +1,7 @@
 import {defineConfig, devices} from 'playwright/test';
 
+import {visualProjects} from '@code-dot-org/playwright-support/visual';
+
 /**
  * Base URL of the standalone oceans dev server.
  * Override with TARGET_URL env var to target a different host.
@@ -23,6 +25,12 @@ export default defineConfig({
   workers: process.env.CI ? '100%' : undefined,
   reporter: process.env.CI ? 'github' : 'list',
   timeout: 60_000,
+  expect: {
+    toHaveScreenshot: {
+      animations: 'disabled',
+      maxDiffPixelRatio: 0.01,
+    },
+  },
   use: {
     baseURL: BASE_URL,
     trace: 'on-first-retry',
@@ -32,7 +40,22 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {...devices['Desktop Chrome']},
+      grepInvert: /@visual/,
     },
+    {
+      name: 'firefox',
+      use: {...devices['Desktop Firefox']},
+      grepInvert: /@visual/,
+    },
+    {
+      name: 'webkit',
+      use: {...devices['Desktop Safari']},
+      grepInvert: /@visual/,
+    },
+    // Visual projects register only when VISUAL_PROVIDER is set; `playwright
+    // test` (no args) runs the 3 e2e projects only. Oceans widens past the
+    // chromium-only default to cover all three browsers.
+    ...visualProjects({browsers: ['chromium', 'firefox', 'webkit']}),
   ],
   webServer: {
     command: 'yarn dev --port 5173',

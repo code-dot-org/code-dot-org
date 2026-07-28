@@ -1,7 +1,9 @@
 import {Typography} from '@mui/material';
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
+import {getStore} from '@cdo/apps/redux';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import {resumeCreateSectionOnboardingTour} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -21,18 +23,19 @@ $(document).ready(() => {
       <Typography variant="h1" gutterBottom>
         {i18n.setUpClassSectionsHeader()}
       </Typography>
-      <SectionsSetUpContainer
-        isUsersFirstSection={isUsersFirstSection}
-        userCountry={userCountry}
-        defaultRedirectUrl={defaultRedirectUrl}
-      />
+      <Provider store={getStore()}>
+        <SectionsSetUpContainer
+          isUsersFirstSection={isUsersFirstSection}
+          userCountry={userCountry}
+          defaultRedirectUrl={defaultRedirectUrl}
+        />
+      </Provider>
     </div>,
     document.getElementById('form'),
     {
       legacyReactDomRender: true,
     }
   );
-  // TODO: This is hardcoded for now, but will need to incorporate logic around grade level and pass this in as a parameter in the future once we have the grade sign up flow
-  resumeCreateSectionOnboardingTour(false);
+  resumeCreateSectionOnboardingTour();
   displayDifferentiationChat();
 });

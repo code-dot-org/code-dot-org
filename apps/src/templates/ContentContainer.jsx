@@ -1,13 +1,12 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
-
-import FontAwesome from '../legacySharedComponents/FontAwesome';
 import styleConstants from '../styleConstants';
-import color from '../util/color';
 
 import moduleStyles from './content-container.module.scss';
 
@@ -58,15 +57,23 @@ class ContentContainer extends Component {
             className={moduleStyles.contentContainerHeading}
             style={styles.headingBox}
           >
-            <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
+            <MuiTypography variant="h4" gutterBottom>
               {heading}
-            </h4>
+            </MuiTypography>
             {showLinkTop && (
-              <Link link={link} linkText={linkText} isRtl={isRtl} />
+              <ViewAllLink link={link} linkText={linkText} isRtl={isRtl} />
             )}
           </div>
         )}
-        {description && <div style={styles.description}>{description}</div>}
+        {description && (
+          <MuiTypography
+            variant="body3"
+            component="p"
+            style={styles.description}
+          >
+            {description}
+          </MuiTypography>
+        )}
         <div style={styles.children}>
           {React.Children.map(this.props.children, (child, index) => {
             return <div key={index}>{child}</div>;
@@ -74,7 +81,12 @@ class ContentContainer extends Component {
         </div>
         {showLinkBottom && (
           <div style={styles.standaloneLinkBox}>
-            <Link link={link} linkText={linkText} isRtl={isRtl} bottom={true} />
+            <ViewAllLink
+              link={link}
+              linkText={linkText}
+              isRtl={isRtl}
+              bottom={true}
+            />
           </div>
         )}
         <div style={styles.clear} />
@@ -83,7 +95,7 @@ class ContentContainer extends Component {
   }
 }
 
-class Link extends Component {
+class ViewAllLink extends Component {
   static propTypes = {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
@@ -99,19 +111,16 @@ class Link extends Component {
     } else {
       linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
     }
-    const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
       <div style={linkBoxStyle}>
-        <a style={styles.linkTag} href={link}>
-          <span style={{display: 'inline-block'}}>
-            {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
-          </span>
-          <div style={styles.linkToViewAll}>{linkText}</div>
-          <span style={{display: 'inline-block'}}>
-            {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
-          </span>
-        </a>
+        <Link href={link} size="s">
+          {linkText}
+          <FontAwesomeV6Icon
+            iconName={isRtl ? 'chevron-left' : 'chevron-right'}
+            iconStyle="solid"
+          />
+        </Link>
       </div>
     );
   }
@@ -134,20 +143,6 @@ const styles = {
     zIndex: 2,
     position: 'relative',
   },
-  headingText: {
-    fontSize: 24,
-    lineHeight: '26px',
-    color: color.neutral_dark,
-    float: 'left',
-    paddingRight: 20,
-  },
-  headingTextRtl: {
-    fontSize: 24,
-    lineHeight: '26px',
-    color: color.neutral_dark,
-    float: 'right',
-    paddingLeft: 20,
-  },
   standaloneLinkBox: {
     paddingTop: 10,
     position: 'relative',
@@ -155,9 +150,6 @@ const styles = {
   },
   linkBox: {
     display: 'inline',
-    position: 'absolute',
-    bottom: 20,
-    right: 0,
     lineHeight: linkBoxLineHeight,
   },
   linkBoxRtl: {
@@ -178,37 +170,10 @@ const styles = {
     right: 0,
   },
   description: {
-    fontSize: 14,
-    lineHeight: '22px',
-    ...fontConstants['main-font-regular'],
     zIndex: 2,
-    color: color.neutral_dark,
     width: '100%',
-    marginTop: -10,
     marginBottom: 10,
     clear: 'both',
-  },
-  linkTag: {
-    textDecoration: 'none',
-  },
-  linkToViewAll: {
-    fontSize: 14,
-    ...fontConstants['main-font-semi-bold'],
-    marginTop: -2,
-    display: 'inline',
-  },
-  chevron: {
-    display: 'inline',
-    fontSize: 10,
-    fontWeight: 'bold',
-    marginLeft: 15,
-  },
-  chevronRtl: {
-    display: 'inline',
-    color: color.neutral_dark,
-    fontSize: 10,
-    fontWeight: 'bold',
-    marginRight: 15,
   },
   children: {
     justifyContent: 'space-between',

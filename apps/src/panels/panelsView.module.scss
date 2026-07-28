@@ -88,18 +88,14 @@ $text-horizontal-padding: 2.6cqw;
       font-size: 1.6cqw;
       line-height: 1.4em;
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-      }
-
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
         font-size: 3cqw;
         line-height: 1.2em;
 
         &, em, strong {
-          font-family: var(--font-family-barlow-semi-condensed-semibold);
+          font-family: var(--font-family-main);
+          font-weight: var(--font-weight-semi-bold);
         }
       }
 
@@ -202,22 +198,14 @@ $text-horizontal-padding: 2.6cqw;
         transform: translate(-50%, -50%) scale(1.02);
       }
 
-      &Dark {
-        background-color: $neutral_dark;
-        color: $light_white;
-
-        &:hover, &:focus-visible {
-          filter: brightness(1.15);
-        }
-      }
-
       h1, h2, h3, h4 {
         margin: 0 0 1cqw 0;
         font-size: 2.4cqw;
         line-height: 1.2em;
 
         &, em, strong {
-          font-family: var(--font-family-barlow-semi-condensed-semibold);
+          font-family: var(--font-family-main);
+          font-weight: var(--font-weight-semi-bold);
         }
       }
 
@@ -292,4 +280,30 @@ $text-horizontal-padding: 2.6cqw;
       }
     }
   }
+}
+
+// Teacher-only note area shown below the bubble row in the panels
+// viewer. The block sits inside #panels-container and uses the same
+// `width` style as the panels themselves so the text column lines up
+// with the panel above. Renders only when the active panel has a
+// teacherNote (gating handled in the JSX).
+.teacherNote {
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border: 1px solid #e0d8c0;
+  background: #fffbe6;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.teacherNoteLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #846;
+  margin-bottom: 4px;
 }

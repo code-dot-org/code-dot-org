@@ -1,0 +1,38 @@
+{
+  "name": "@code-dot-org/e2e-tests",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Playwright end-to-end test suite for studio.code.org",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/e2e-tests/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/e2e-tests"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test:report": "playwright show-report playwright-report",
+    "test:ui": "playwright test --pass-with-no-tests",
+    "test:ui:local": "TARGET_URL=http://localhost-studio.code.org:3000 playwright test --project=chromium --pass-with-no-tests",
+    "test:visual:prove": "prove-visual",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

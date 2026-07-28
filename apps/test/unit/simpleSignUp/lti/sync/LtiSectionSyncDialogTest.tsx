@@ -48,7 +48,7 @@ const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
 
 const MOCK_UPDATED_SECTION_MAP: LtiSectionMap = {
   2: {
-    name: 'Section 2: Code.org fundamentals',
+    name: 'Section 2: CodeAI fundamentals',
     short_name: 'Section 2',
     size: 15,
     lti_section_id: 2,

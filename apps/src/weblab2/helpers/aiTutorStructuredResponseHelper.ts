@@ -1,6 +1,18 @@
 import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {JsonObjectSchema} from '@cdo/apps/aichat/types';
+import {
+  ANSWER_JSON_SCHEMA_PROPERTY_ORDERING,
+  ANSWER_JSON_SCHEMA_REQUIRED,
+  AiTutorModelCodeFile,
+  CODE_ITEM_SCHEMA,
+  EXAMPLE_PROPERTY,
+  EXPLANATION_PROPERTY,
+  GOAL_PROPERTY,
+  NEXT_STEPS_PROPERTY,
+  QUESTIONS_PROPERTY,
+  VIDEO_URL_PROPERTY,
+} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
@@ -18,10 +30,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
         type: 'string',
         enum: [...AI_TUTOR_ANSWER_TYPES],
       },
-      goal: {
-        type: 'string',
-        description: 'What we are achieving this turn, limit to 1 line of text',
-      },
+      goal: GOAL_PROPERTY,
       assumptions: {
         type: 'string',
         description:
@@ -29,69 +38,28 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
       },
       code: {
         type: 'array',
-        items: {
-          type: 'object',
-          properties: {
-            sourceCode: {
-              type: 'string',
-            },
-            filename: {type: 'string'},
-          },
-          required: ['sourceCode', 'filename'],
-          additionalProperties: false,
-        },
+        items: CODE_ITEM_SCHEMA,
         description:
           '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
       },
-      explanation: {
-        type: 'string',
-        description:
-          "1 paragraph or less explanation of the code or plain-text answer to the student's question. Use markdown.",
-      },
-      nextSteps: {
-        type: 'string',
-        description:
-          '1-2 concrete action(s) for student to achieve goal. Format as markdown bullets',
-      },
-      questions: {
-        type: 'string',
-        description:
-          'short list to confirm ambiguous details. Format as markdown bullets.',
-      },
+      explanation: EXPLANATION_PROPERTY,
+      nextSteps: NEXT_STEPS_PROPERTY,
+      questions: QUESTIONS_PROPERTY,
       pseudocode: {
         type: 'string',
         description:
           'Pseudocode in plain English only (no JS). Wrap the pseudocode in a markdown fenced code block with language tag `text` so newlines and indentation are preserved. Use markdown outside the block only if needed.',
       },
-      example: {
-        type: 'string',
-        description:
-          "1-2 concrete example(s) of the code or plain-text answer(s) to the student's question. Use markdown.",
-      },
-      videoUrl: {
-        type: 'string',
-        description:
-          'Optional. URL of a single tutorial video to share with the student, copied exactly from the available videos list. Omit if no video is relevant.',
-      },
+      example: EXAMPLE_PROPERTY,
+      videoUrl: VIDEO_URL_PROPERTY,
     },
     // We return answerType and goal but do not show them to the student.
     // These are used to help guide the AI's response.
-    required: ['answerType', 'nextSteps', 'code', 'explanation', 'goal'],
-    propertyOrdering: [
-      'answerType',
-      'goal',
-      'assumptions',
-      'code',
-      'explanation',
-      'pseudocode',
-      'example',
-      'nextSteps',
-      'questions',
-      'videoUrl',
-    ],
+    required: ANSWER_JSON_SCHEMA_REQUIRED,
+    propertyOrdering: ANSWER_JSON_SCHEMA_PROPERTY_ORDERING,
     additionalProperties: false,
   };
 };
@@ -134,42 +102,6 @@ export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   additionalProperties: false,
 };
 
-/**
- * Helper function to format a section with a title and optional content.
- * Returns an empty string if content is not provided.
- */
-const formatSection = (title: string, content?: string): string => {
-  return content ? `**${title}**\n\n${content}\n\n` : '';
-};
-
-// This is used when the AI Tutor response's answerType is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
-// Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const formatCopyPasteResponse = (response: any): string => {
-  let formattedResponse = '';
-  formattedResponse += formatSection('Assumptions', response.assumptions);
-
-  if (response.code && response.code.length > 0) {
-    formattedResponse += `**Code**\n\n`;
-    // Parsed json comes in as 'any'
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    response.code.forEach((code: any) => {
-      formattedResponse += `\`${code.filename}\`\n\`\`\`\n${code.sourceCode}\n\`\`\`\n\n`;
-    });
-  }
-
-  formattedResponse += formatSection('Explanation', response.explanation);
-  formattedResponse += formatSection('Pseudocode', response.pseudocode);
-  formattedResponse += formatSection('Example', response.example);
-  formattedResponse += formatSection('Next Steps', response.nextSteps);
-  formattedResponse += formatSection('Questions', response.questions);
-  if (response.videoUrl) {
-    formattedResponse += `\n[Watch this video](${response.videoUrl})\n`;
-  }
-
-  return formattedResponse;
-};
-
 type AiTutorCodeFile = {
   name: string;
   contents: string;
@@ -181,19 +113,28 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
-// Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
+export type AiTutorAcceptRejectResponse = {
+  explanation?: string;
+  videoUrl?: string;
+  code: AiTutorModelCodeFile[];
+  answerType: string;
+};
+
+const formatSection = (title: string, content?: string): string => {
+  return content ? `**${title}**\n\n${content}\n\n` : '';
+};
+
+// This is used when the AI Tutor response's answerType is 'buildHTML', 'buildCSS',
+// 'buildJavaScript', or 'buildJSON'.
 export const formatAcceptRejectResponse = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  response: any
+  response: AiTutorAcceptRejectResponse
 ): AcceptRejectFormattedResponse => {
   const explanation =
     formatSection('Explanation', response.explanation) +
     (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
     explanation,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    code: response.code.map((codeFile: any) => ({
+    code: response.code.map(codeFile => ({
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),

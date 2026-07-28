@@ -1,12 +1,9 @@
+import Modal from '@code-dot-org/component-library/modal';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';
 
@@ -24,43 +21,36 @@ class DeleteProjectDialog extends Component {
   delete = () => this.props.deleteProject(this.props.projectId);
 
   render() {
+    if (!this.props.isOpen) {
+      return null;
+    }
+
     return (
-      <BaseDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.close}
-        useUpdatedStyles
-        style={styles.dialog}
-      >
-        <h2 className="delete-dialog-title">{i18n.deleteProject()}</h2>
-        <div style={{marginBottom: 10}}>{i18n.deleteProjectConfirm()}</div>
-        <DialogFooter>
-          <Button
-            text={i18n.dialogCancel()}
-            onClick={this.close}
-            color={Button.ButtonColor.gray}
-            className="no-mc"
-          />
-          <Button
-            text={i18n.delete()}
-            onClick={this.delete}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            className="no-mc ui-confirm-project-delete-button"
-            isPending={this.props.isDeletePending}
-            pendingText={i18n.deleting()}
-          />
-        </DialogFooter>
-      </BaseDialog>
+      <Modal
+        onClose={this.close}
+        title={i18n.deleteProject()}
+        description={i18n.deleteProjectConfirm()}
+        secondaryButtonProps={{
+          onClick: this.close,
+          children: i18n.dialogCancel(),
+          size: 'small',
+          type: 'button',
+        }}
+        primaryButtonProps={{
+          onClick: this.delete,
+          color: 'error',
+          children: this.props.isDeletePending
+            ? i18n.deleting()
+            : i18n.delete(),
+          size: 'small',
+          disabled: this.props.isDeletePending,
+          className: 'ui-confirm-project-delete-button',
+          type: 'button',
+        }}
+      />
     );
   }
 }
-
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20,
-  },
-};
 
 export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
 

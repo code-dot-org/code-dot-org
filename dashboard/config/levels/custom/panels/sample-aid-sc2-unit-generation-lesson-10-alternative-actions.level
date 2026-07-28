@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:07:54.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions-fc7d16d3-d977-4f35-9db7-ec89b833bf85",
+        "text": "Remember how we made our AI ask for more information when it wasn't confident? That's a great first step to handling uncertainty!",
+        "imageUrl": "https://images.code.org/58199ef50f157d8c969625536a8626f7-sample-aid-sc2-unit-generation-lesson-10-alternative-actions-panel-1-23e4baed-3c26-47ea-9212-be1a7895f242.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions-f60b5224-f325-4991-b370-05e5734c43f1",
+        "text": "But sometimes, just saying 'I'm not sure' isn't enough. What if we could give the user *options* or *suggest* what kind of information might actually help?",
+        "imageUrl": "https://images.code.org/0fd4c9b5f419a64669c51de371ab00b7-sample-aid-sc2-unit-generation-lesson-10-alternative-actions-panel-2-1d2fda66-1aac-44d9-8222-78fa2359be2c.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions-0583d43e-6d78-446b-adda-3b4f32761e6c",
+        "text": "One powerful strategy is to offer *alternative actions*. If the AI can't decide on a direct answer, it can suggest other helpful things the user could do.",
+        "imageUrl": "https://images.code.org/77602a68f200e019c675ac6a1fbf5f03-sample-aid-sc2-unit-generation-lesson-10-alternative-actions-panel-3-d58e243b-5d93-4222-a06c-89f52f4f793c.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions-9f1d3f2d-f6b2-4c64-bbbe-ad18524397fa",
+        "text": "Another strategy is to prompt for *specific clarification*. Instead of a vague 'more info', ask for details that would actually help the AI narrow down its prediction.",
+        "imageUrl": "https://images.code.org/0fb9749e93547be26e722ed1d08e6500-sample-aid-sc2-unit-generation-lesson-10-alternative-actions-panel-4-809dd334-0289-4604-9f79-38a09e094ba0.png",
+        "layout": "text-bottom-right"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-10-alternative-actions-fff0e9d0-950f-4b40-b18b-542732e0d3ce",
+        "text": "These strategies dramatically improve the *user experience*. They turn a potential dead-end into a helpful, guided interaction, even when the AI isn't perfect.",
+        "imageUrl": "https://images.code.org/70cf16b085c0c8c12f893629e34e139c-sample-aid-sc2-unit-generation-lesson-10-alternative-actions-panel-5-4212d019-b8ed-4b98-8011-dbca7f609bc3.png",
+        "layout": "text-top-center"
+      }
+    ],
+    "generate_outline": "Introduce additional strategies for dealing with uncertain or potentially wrong AI predictions, such as offering alternative actions to the user or explicitly prompting for clarification. Discuss how these strategies improve user experience when the AI is not confident."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:08:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:08:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

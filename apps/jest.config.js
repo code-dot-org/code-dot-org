@@ -97,7 +97,11 @@ const config = {
   // globals: {},
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
-  // maxWorkers: '100%',
+  // On CI (process.env.CI=true set by prepare_ci_env.sh) the key is omitted so
+  // run-tests-in-parallel.sh's --maxWorkers flag wins. On dev machines, cap at
+  // 50% of cores to prevent OOM on low-RAM hosts (e.g. 8 GB MacBooks). Jest
+  // validates this key's type, so we must omit it rather than set undefined.
+  ...(process.env.CI ? {} : {maxWorkers: '50%'}),
 
   // An array of directory names to be searched recursively up from the requiring module's location
   // moduleDirectories: [
@@ -227,8 +231,32 @@ const config = {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
+        // Transpile only, no type-checking (mirrors ts-loader's transpileOnly
+        // in webpack.config.js). With type-checking on, every jest worker built
+        // a TS program spanning all of src/ and test/ (~3 GB heap, ~20s CPU per
+        // worker), pinning CI workers near the default ~4 GB V8 heap limit; the
+        // resulting GC stalls made unrelated async tests exceed their timeouts.
+        // Type errors are still caught by ForkTsCheckerWebpackPlugin in `yarn
+        // start` and `yarn build`, in development and CI alike.
+        //
+        // Transpile-only is enabled by isolatedModules in tsconfig.build.json.
+        // Do not remove it there, or performance problems may come back.
+
         tsconfig: {
           target: 'es6',
+
+          // Keeps dynamic import() working in jest: it compiles import() down
+          // to require, which jest's CJS runtime executes natively, so
+          // React.lazy(() => import(...)) components load in tests. (The
+          // inherited module: node16 would emit real import() calls, which
+          // jest's VM only supports behind --experimental-vm-modules.)
+          module: 'commonjs',
+
+          // The inherited moduleResolution: node16 is invalid next to
+          // module: commonjs (TS5110), so override it with a compatible
+          // value. No effect beyond satisfying validation, since jest
+          // resolves imports itself.
+          moduleResolution: 'node',
         },
       },
     ],

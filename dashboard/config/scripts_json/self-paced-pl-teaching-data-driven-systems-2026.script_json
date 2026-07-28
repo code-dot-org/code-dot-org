@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 02:49:39 UTC",
+    "serialized_at": "2026-07-08 20:19:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -66,8 +66,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n* #### Model core data-structure skills in Web Lab\n* #### Teach common array and object operations\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n#### **Suggested Time:** 75 minutes",
-        "student_overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n* #### Model core data-structure skills in Web Lab\n* #### Teach common array and object operations\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n#### **Suggested Time:** 75 minutes"
+        "overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n*  Model core data-structure skills in Web Lab\n* Teach common array and object operations\n*  Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n **Suggested time:** 75 minutes",
+        "student_overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n*  Model core data-structure skills in Web Lab\n* Teach common array and object operations\n*  Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n **Suggested time:** 75 minutes"
       },
       "seeding_key": {
         "lesson.key": "Teaching Data-Driven Systems",

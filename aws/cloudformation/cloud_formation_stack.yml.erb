@@ -117,6 +117,11 @@ Resources:
           - Effect: Allow
             Action: 'cloudwatch:PutMetricData'
             Resource: '*'
+          # Read on-demand list prices to publish modeled compute-cost metrics.
+          # The Price List Query API does not support resource-level permissions.
+          - Effect: Allow
+            Action: 'pricing:GetProducts'
+            Resource: '*'
           # Read EC2 tags to determine Auto Scaling Group in CloudWatch Monitoring Scripts.
           - Effect: Allow
             Action: 'ec2:DescribeTags'
@@ -535,11 +540,17 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${ClusterNamespace}/etl_client"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Legacy Database Migration Service exports Learning Platform tables to the `dashboard` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dashboard"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # Zero ETL exports Learning Platform tables to the `[environment type]_learningplatform_mysql_zeroetl` database.
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/<%=rack_env%>_learningplatform_mysql_zeroetl"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  # We provision Materialized Views on Zero ETL tables in the `dev` database.
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
 <% end -%>
 <% if rack_env?(:production) -%>

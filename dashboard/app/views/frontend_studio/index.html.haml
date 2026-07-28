@@ -1,9 +1,11 @@
 !!!
-%html
+%html{data: {brand: Cdo::Brand.current_brand_code(request)}}
   %head
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
     = csrf_meta_tags
     = csp_meta_tag
     %meta{name: 'app-config', content: observability_config(CDO.frontend_studio_sentry_dsn)}
+    = render_shared_haml 'onetrust_cookie_scripts', dashboard: true, domain: 'code.org'
     = vite_client_tag
     = vite_react_refresh_tag
 

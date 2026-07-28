@@ -18,8 +18,8 @@ import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes'
 import experiments from '@cdo/apps/util/experiments';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import color from '../../../util/color';
 import {canChangeLevelInPage} from '../../browserNavigation';
+import remeasureOnFontsReady from '../header/remeasureOnFontsReady';
 
 /**
  * Lesson progress component used in level header and course overview.
@@ -56,6 +56,13 @@ class LessonProgress extends Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -254,10 +261,10 @@ class LessonProgress extends Component {
 
 const styles = {
   container: {
-    backgroundColor: color.lightest_gray,
-    border: `1px solid ${color.lighter_gray}`,
+    backgroundColor: 'var(--background-neutral-secondary)',
+    border: '1px solid var(--borders-neutral-primary)',
     borderRadius: 5,
-    height: 40,
+    height: 42,
     position: 'relative',
     overflow: 'hidden',
   },
@@ -282,15 +289,15 @@ const styles = {
   },
   headerVignetteLeftRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   headerVignetteLeft: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 1) 0%, rgba(231, 232, 234, 0) 20px',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 0%, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) 20px)',
   },
   headerVignetteRight: {
     background:
-      'linear-gradient(to right, rgba(231, 232, 234, 0) calc(100% - 20px), rgba(231, 232, 234, 1) 100%)',
+      'linear-gradient(to right, color-mix(in srgb, var(--background-neutral-secondary) 0%, transparent) calc(100% - 20px), color-mix(in srgb, var(--background-neutral-secondary) 100%, transparent) 100%)',
   },
   spacer: {
     marginRight: 'auto',

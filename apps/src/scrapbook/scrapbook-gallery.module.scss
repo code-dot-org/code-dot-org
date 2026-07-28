@@ -1,0 +1,165 @@
+@import '@code-dot-org/component-library-styles/colors';
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.title {
+  // Type scale comes from the MUI Typography h3 variant; this only spaces it.
+  margin: 0 0 24px;
+}
+
+.empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-neutral-secondary);
+  border: 1px dashed var(--borders-neutral-strong);
+  border-radius: 8px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.loading,
+.error {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-neutral-secondary);
+}
+
+.error {
+  color: var(--text-error);
+}
+
+.entries {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  padding: 20px;
+  background:
+    linear-gradient(
+        var(--background-neutral-primary),
+        var(--background-neutral-primary)
+      )
+      padding-box,
+    linear-gradient(
+        90deg,
+        #e57373,
+        #ffb74d,
+        #fff176,
+        #81c784,
+        #64b5f6,
+        #9575cd,
+        #ba68c8
+      )
+      border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  resize: both;
+  overflow: auto;
+  flex: 1 1 400px;
+  min-width: 320px;
+  min-height: 200px;
+  max-width: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dragHandle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  color: var(--text-neutral-secondary);
+  user-select: none;
+  touch-action: none;
+
+  &:hover {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cardWide {
+  flex: 1 1 100%;
+}
+
+.cardScreenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.screenshotSlot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.screenshotLabel {
+  // Type scale comes from the MUI Typography overline3 variant; this only
+  // tints it to secondary.
+  color: var(--text-neutral-secondary);
+}
+
+.screenshotImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stemBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stemHeading {
+  // Type scale comes from the MUI Typography body4 variant.
+  font-style: italic;
+  color: var(--text-neutral-secondary);
+}
+
+.stemText {
+  // Type scale comes from the MUI Typography body3 variant.
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.stemEmpty {
+  // Type scale comes from the MUI Typography body3 variant.
+  font-style: italic;
+  color: var(--text-neutral-secondary);
+}
+
+.levelLink {
+  align-self: flex-start;
+}

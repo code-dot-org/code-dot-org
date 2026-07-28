@@ -11,7 +11,7 @@
 
 ## Technical Writing Style
 
-IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
+IMPORTANT PAY ATTENTION WHEN WRITING ENGLISH: language in comments, specs, plans and other md files, etc should read like linux kernel mailing list posts, or OpenBSD man pages, or Plan 9 / Bell Labs papers and docs, with SQLite exactness. Exact does not mean dense: write for a competent colleague outside the subsystem, and if a comment or PR description needs a spec citation or insider vocabulary to parse, rewrite it in plain words. Default to chatting with a similar vibe, but obviously, it's a chat not a doc. Take homedir AGENTS.md instructions as higher precedence for chat style.
 
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX. ALWAYS read @apps/README.md before working with frontend code.

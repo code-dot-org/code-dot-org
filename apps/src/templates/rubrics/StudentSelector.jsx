@@ -1,4 +1,5 @@
 import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -103,7 +104,9 @@ function StudentSelector({
         {!selectedUserId && (
           <li className={style.unselectableDropdownOption} key="select-student">
             <div className={style.dropdownOption}>
-              <span>{i18n.selectStudentOption()}</span>
+              <Typography variant="body3" component="span">
+                {i18n.selectStudentOption()}
+              </Typography>
             </div>
           </li>
         )}
@@ -114,7 +117,9 @@ function StudentSelector({
               onClick={() => handleOptionClick(student.id)}
               type="button"
             >
-              <span>{getStudentDisplayName(student)}</span>
+              <Typography variant="body3" component="span">
+                {getStudentDisplayName(student)}
+              </Typography>
               {!!levelsWithProgress && aiEvalStatusMap && (
                 <StudentProgressStatus
                   aiEvalStatus={aiEvalStatusMap[student.id]}
@@ -196,7 +201,11 @@ function StudentProgressStatus({status}) {
     style.statusBlob,
     bubbleColor
   );
-  return <span className={classes}>{bubbleText}</span>;
+  return (
+    <Typography variant="body3" component="span" className={classes}>
+      {bubbleText}
+    </Typography>
+  );
 }
 
 StudentProgressStatus.propTypes = {

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require File.expand_path('../../pegasus/src/env', __FILE__)
-require src_dir 'database'
+require File.expand_path('../../lib/cdo/pegasus/src/env', __FILE__)
+require 'cdo/pegasus/src/database'
 
 def main
   type = ARGV[0].downcase

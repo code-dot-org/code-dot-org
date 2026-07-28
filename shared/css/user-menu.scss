@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import 'font';
+@import 'brand-selectors';
 
 .user_menu, .create_menu, .help_button {
   user-select: none;
@@ -24,6 +25,18 @@
   .create_menu_arrow_up {
     font-size: 0.875rem;
     margin-inline-start: 5px;
+    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
+    // webfont: it collapses before the font loads, then expands, shifting the
+    // adjacent header buttons. Each width matches its glyph advance, so the
+    // loaded layout is unchanged.
+    display: inline-block;
+    text-align: center;
+    width: 14px;
+  }
+
+  .create_menu_arrow_down,
+  .create_menu_arrow_up {
+    width: 12.25px;
   }
 
   .user_options, .create_options {
@@ -38,32 +51,49 @@
     z-index: 100001;
     position: absolute;
     inset-inline-end: 0px;
-    background-color: $white;
-    border: 1px solid $light_gray_200;
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
     border-radius: 0.25rem;
     text-align: initial;
     padding: 0;
     min-width: 228px;
     max-width: 300px;
     padding: 0.375rem;
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+    box-shadow: 0 4px 6px -1px var(--neutral-black-alpha-10), 0 2px 4px -1px var(--neutral-black-alpha-5);
 
     a {
-      color: $light_black !important;
+      color: var(--text-neutral-primary) !important;
       transition: background-color 0.2s ease-in-out;
       text-decoration: none;
     }
 
     a:hover {
-      background-color: $lightest_gray;
+      background-color: var(--background-neutral-tertiary);
       text-decoration: none;
       border-radius: 4px;
     }
   }
 }
 
+// .header_button already sets 32px/6px under codeai-brand (see
+// application.scss); repeated here because this file's own
+// `.user_menu, .create_menu, .help_button { height: 38px }` above loads
+// after application.scss in the sprockets manifest and would otherwise
+// win the cascade tie.
+.user_menu, .create_menu {
+  @include codeai-brand($ancestor: true) {
+    height: 32px;
+  }
+}
+
 .user_menu {
   padding: 7px 14px;
+
+  .display_name {
+    @include codeai-brand($ancestor: true) {
+      font-weight: 600;
+    }
+  }
 
   .user_options {
 
@@ -72,8 +102,8 @@
     }
     .display_name {
       @include main-font-semi-bold;
-      background-color: $charcoal;
-      color: $white;
+      background-color: var(--background-neutral-octonary);
+      color: var(--text-neutral-white-fixed);
       padding: 10px;
       text-align: center;
       cursor: default;
@@ -118,11 +148,27 @@
   .help_icon {
     padding: 11px 0 16px 0;
     font-size: 22px;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     cursor: pointer;
+    // Reserve the glyph box. Otherwise the width comes from the Font Awesome
+    // webfont: zero until it loads, then 22px, shifting the adjacent user menu.
+    // 22px matches the glyph advance, so the layout holds across the font swap.
+    display: inline-block;
+    width: 22px;
+    text-align: center;
     height: 20px;
     vertical-align: middle;
     text-decoration: none;
+
+    // fa-circle-question's solid glyph is a single white-filled disc with
+    // the question mark cut out, so the header's own background already
+    // shows through as the "glyph" color per brand -- no color change
+    // needed here, just the mock's larger 24px disc. Width matches, same
+    // glyph-advance reasoning as above.
+    @include codeai-brand($ancestor: true) {
+      font-size: 24px;
+      width: 24px;
+    }
   }
 
   .help_contents {
@@ -153,6 +199,7 @@
       display: none;
     }
   }
+
 }
 
 .create_menu {
@@ -183,7 +230,7 @@
     }
     .text,
     #view_all_projects {
-      color: $light_black;
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -196,6 +243,24 @@
   @media screen and (max-width: 1120px) {
     &.hide-mobile {
       display: none;
+    }
+  }
+
+  // CodeAI's wider header logo eats ~100px of horizontal space, so the
+  // create menu has to collapse sooner to keep the inline nav from wrapping.
+  // Bump each threshold up; preserve the original ~97px gap between the
+  // signed-in (hide-mobile) and signed-out (show-small-desktop) variants.
+  @include codeai-family-brand($ancestor: true) {
+    @media screen and (max-width: 1103px) {
+      &.show-small-desktop {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      &.hide-mobile {
+        display: none;
+      }
     }
   }
 }

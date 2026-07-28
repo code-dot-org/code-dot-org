@@ -46,6 +46,37 @@ require 'cdo/safe_names'
 require 'policies/lti'
 
 class Section < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    name: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    code: :confidential,
+    script_id: :confidential,
+    course_id: :confidential,
+    grade: :confidential,
+    login_type: :confidential,
+    deleted_at: :confidential,
+    stage_extras: :confidential,
+    section_type: :confidential,
+    first_activity_at: :confidential,
+    pairing_allowed: :confidential,
+    sharing_disabled: :confidential,
+    hidden: :confidential,
+    tts_autoplay_enabled: :confidential,
+    restrict_section: :confidential,
+    properties: :confidential,
+    participant_type: :confidential,
+    lti_integration_id: :confidential,
+    avatar_color: :confidential,
+    avatar_emoji: :confidential,
+    ai_chat_access_level: :confidential,
+    demo_type: :confidential,
+  )
+
   include SerializedProperties
   include SharedConstants
   include Curriculum::SharedCourseConstants
@@ -194,13 +225,18 @@ class Section < ApplicationRecord
 
     last_completed_lesson = nil
     finished_unit = true
-    unit.lessons.each do |lesson|
+    numbered_lessons = unit.lessons.select(&:numbered_lesson?)
+    checked_last_lesson = false
+    threshold = [section_students.size / 2.0, 3].min
+
+    numbered_lessons.reverse_each do |lesson|
       required_sls = lesson.script_levels.reject(&:bonus)
       next if required_sls.empty?
 
-      completed_count = section_students.count do |student|
+      completed_count = 0
+      section_students.each do |student|
         passing_ids = passing_level_ids_by_student[student.id] || Set.new
-        required_sls.all? do |sl|
+        next unless required_sls.all? do |sl|
           level = sl.oldest_active_level
           if level.is_a?(BubbleChoice)
             level.sublevels.any? {|sub| passing_ids.include?(sub.id)}
@@ -208,17 +244,21 @@ class Section < ApplicationRecord
             passing_ids.include?(level.id)
           end
         end
+        completed_count += 1
+        break if completed_count >= threshold
       end
 
-      if completed_count >= section_students.size / 2.0
+      met = completed_count >= threshold
+      finished_unit = met unless checked_last_lesson
+      checked_last_lesson = true
+
+      if met
         last_completed_lesson = lesson
-        finished_unit = true
-      else
-        finished_unit = false
+        break
       end
     end
 
-    lessons = unit.lessons.to_a
+    lessons = numbered_lessons
     next_lesson = if last_completed_lesson
                     lessons[lessons.index(last_completed_lesson) + 1]
                   else
@@ -259,6 +299,10 @@ class Section < ApplicationRecord
     SharedConstants::PL_GRADE_VALUE
   ].flatten.freeze
 
+  # Native section codes are six letters. Google and Clever-based section codes
+  # are prefixed with "G-" and "C-" respectively.
+  SECTION_CODE_REGEX = /\A(?:[A-Z]{6}|[CG]-[A-Z0-9_-]+)\z/i
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -284,6 +328,10 @@ class Section < ApplicationRecord
   def self.valid_grades?(grades)
     return false if grades.empty?
     (grades - VALID_GRADES).empty?
+  end
+
+  def self.valid_code?(code)
+    code.to_s.match?(SECTION_CODE_REGEX)
   end
 
   # Override default script accessor to use our cache
@@ -317,8 +365,26 @@ class Section < ApplicationRecord
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  # Demo sections have a fixed roster of pre-enrolled demo students and no
+  # join code; rosters and join codes are managed only at creation.
+  def demo_section?
+    demo_type.present?
+  end
+
   def assign_code
+    # Demo sections have no join code — students are pre-enrolled at creation
+    # and no one else is permitted to join.
+    return if demo_section?
     self.code = unused_random_code unless code
+  end
+
+  before_save :clear_demo_section_code
+  # Demo sections never have a join code — students are pre-enrolled at
+  # creation and no one else is permitted to join. Normalize the invariant on
+  # every save rather than erroring, so the code is always nil regardless of
+  # caller; defense-in-depth against any path that might try to set one.
+  def clear_demo_section_code
+    self.code = nil if demo_section?
   end
 
   after_save :ensure_owner_is_active_instructor
@@ -397,6 +463,14 @@ class Section < ApplicationRecord
   #   already in the section or has now been added.
   def add_student(student, added_by = nil)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
+
+    # Demo sections only ever enroll demo students (done at creation by
+    # create_demo). Guard here, at the shared chokepoint, so every present
+    # and future enrollment path is covered. Uses the durable (uncached)
+    # demo-student check: this is a guard, and the table is small.
+    if demo_section? && !Policies::DemoSections.demo_student_durable?(student.id)
+      return ADD_STUDENT_FORBIDDEN
+    end
 
     return ADD_STUDENT_FAILURE if user_id == student.id
     return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
@@ -565,8 +639,12 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the student homepage.
   # This provides all information in `selected_section_summarize` and `concise_summarize` as well as additional fields.
-  def summarize(include_students: true)
-    ActiveRecord::Base.connected_to(role: :reading) do
+  #
+  # role: defaults to :reading (replica), but callers that just wrote data this same request
+  # (e.g. right after Section#add_student) should pass :writing to read their own write back
+  # from the primary, since the replica may not have caught up yet.
+  def summarize(include_students: true, role: :reading)
+    ActiveRecord::Base.connected_to(role: role) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
       course_version_name =

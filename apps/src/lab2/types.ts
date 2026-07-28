@@ -25,20 +25,24 @@ import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 import type {
+  GroupNodeData,
   ImageNodeData,
   LineAnchorNodeData,
   ShapeNodeData,
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
 
-export {Theme};
+export type {Theme};
 
 /// ------ USER APP OPTIONS ------ ///
 
 // Partial definition of the UserAppOptions structure, only defining the
 // pieces we need at the moment.
 export interface PartialUserAppOptions {
-  isInstructor: boolean;
+  isInstructor?: boolean;
+  isNavigator?: boolean;
+  pairingDriver?: string;
+  pairingChannelId?: string;
 }
 
 /// ------ PROJECTS ------ ///
@@ -109,6 +113,11 @@ interface SketchlabReactFlowNodeBase {
   width?: number;
   height?: number;
   style?: CSSProperties;
+  // Group support: child nodes reference their parent by ID; positions are
+  // then relative to the parent. zIndex controls manual stacking order.
+  parentId?: string;
+  expandParent?: boolean;
+  zIndex?: number;
 }
 
 export type SketchlabReactFlowNode =
@@ -118,7 +127,8 @@ export type SketchlabReactFlowNode =
   | (SketchlabReactFlowNodeBase & {
       type: 'lineAnchor';
       data: LineAnchorNodeData;
-    });
+    })
+  | (SketchlabReactFlowNodeBase & {type: 'group'; data: GroupNodeData});
 
 export interface SketchlabReactFlowEdge {
   id: string;
@@ -127,6 +137,8 @@ export interface SketchlabReactFlowEdge {
   style?: CSSProperties;
   data?: {
     locked?: boolean;
+    // rotation is in degrees, normalized 0-359.
+    rotation?: number;
     showHandles?: boolean;
   };
   sourceHandle?: string;
@@ -397,6 +409,10 @@ export interface Lab2EntryPoint {
    * An array of themes that the lab supports.
    */
   themes: Theme[];
+  /**
+   * The lab loads and saves its own project (via the useSources hook).
+   */
+  managesOwnProject?: boolean;
 }
 
 export type LevelData =

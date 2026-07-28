@@ -205,7 +205,7 @@ class DataTable extends React.Component {
     return (
       <div>
         <DataEntryError isVisible={this.state.showError} />
-        <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
+        <div style={{overflow: 'auto', height: 'calc(100vh - 450px)'}}>
           <table
             className={classNames(style.table, 'uitest-data-table-content')}
           >
@@ -283,7 +283,7 @@ class DataTable extends React.Component {
         </div>
 
         {numPages > 1 && (
-          <div>
+          <div className={style.pagination}>
             <PaginationWrapper
               totalPages={numPages}
               currentPage={this.state.currentPage + 1}

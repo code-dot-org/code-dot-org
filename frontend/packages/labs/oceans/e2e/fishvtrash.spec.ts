@@ -1,7 +1,6 @@
-import {expect, test} from 'playwright/test';
-
+import {expect, test} from './fixtures/visual';
 import {FishVTrashPage} from './poms/FishVTrashPage';
-import {OceansPage} from './poms/OceansPage';
+import {AppMode, OceansPage} from './poms/OceansPage';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FishVTrash — Training scene
@@ -162,10 +161,32 @@ test.describe('FishVTrash — pond scene', () => {
 test.describe('CreaturesVTrashDemo mode', () => {
   test('loads directly in predict scene with run button', async ({page}) => {
     const oceans = new OceansPage(page);
-    await oceans.goto('creaturesvtrashdemo');
+    await oceans.goto(AppMode.CreaturesVTrashDemo);
     await oceans.waitForPredictScene();
     await expect(oceans.runButton).toBeVisible();
     // No training scene — erase button should not be present
     await expect(oceans.eraseButton).not.toBeVisible();
+  });
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Visual regression
+// ─────────────────────────────────────────────────────────────────────────────
+
+test.describe('@visual', () => {
+  test('FishVTrash initial training scene', async ({page, visualCheck}) => {
+    const oceans = await FishVTrashPage.load(page, {freeze: true});
+    await expect(oceans.trainCount).toHaveText('0');
+    await visualCheck('fishvtrash-initial');
+  });
+
+  test('CreaturesVTrashDemo prediction scene', async ({page, visualCheck}) => {
+    const oceans = new OceansPage(page);
+    await oceans.goto(AppMode.CreaturesVTrashDemo, {freeze: true});
+    await oceans.waitForPredictScene();
+    // Mask media controls — their Pause/Play label flips with state.
+    await visualCheck('creaturesvtrashdemo-predict', {
+      mask: [page.locator('#uitest-media-ctrl')],
+    });
   });
 });

@@ -1,10 +1,9 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
@@ -72,7 +71,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
     <div>
       {aiFeedbackReceived && (
         <Typography className={style.aiFeedbackReceived} variant="em">
-          <FontAwesome icon="circle-check" />
+          <FontAwesomeV6Icon iconName="circle-check" />
           {i18n.aiFeedbackReceived()}
         </Typography>
       )}
@@ -137,18 +136,26 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
           )}
           <div className={style.submitFeedbackRow}>
             <div className={style.submitFeedbackButtons}>
-              <Button
-                text={i18n.aiFeedbackSubmit()}
-                color={Button.ButtonColor.brandSecondaryDefault}
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                type="button"
                 onClick={submitAiFeedbackCallback}
                 className={style.submitToStudentButton}
-              />
-              <Button
-                text={i18n.cancel()}
-                color={Button.ButtonColor.neutralDark}
+              >
+                {i18n.aiFeedbackSubmit()}
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                type="button"
                 onClick={cancelAiFeedbackCallback}
                 className={style.submitToStudentButton}
-              />
+              >
+                {i18n.cancel()}
+              </MuiButton>
             </div>
           </div>
         </div>

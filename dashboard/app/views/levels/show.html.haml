@@ -18,14 +18,26 @@
 - if @script_level
   - level_data = {redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.get_original_unit_group&.name, level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level}
   - ai_diff_data = {levelId: @level&.id, scriptId: @script_level.script&.id}
+  - scrapbook_data = {levelId: @level&.id, scriptId: @script_level.script&.id, isSignedIn: !current_user.nil?}
   %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
-  %script{ src: webpack_asset_path('js/levels/show.js'), data: { aiDiffData: ai_diff_data.to_json, level: level_data.to_json, rubricData: @rubric_data&.to_json }}
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { aiDiffData: ai_diff_data.to_json, level: level_data.to_json, rubricData: @rubric_data&.to_json, scrapbookData: scrapbook_data.to_json }}
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
   - if @script_level.view_as_instructor_in_training?(current_user)
     #instructor_in_training_tag= 'Viewing As Instructor'
     :javascript
       $("#instructor_in_training_tag").click(function() {$("#instructor_in_training_tag").hide();});
+- elsif @level
+  -# Standalone projects (no script_level): mount the scrapbook entrypoint and
+  -# key entries on channel_id. Direct /level/N views with neither script_level
+  -# nor channel will fall through with both ids absent — the button just won't
+  -# render in that case.
+  - level_data = {level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level}
+  -# Read channel off the struct ivar, not via view_options[:channel]: calling
+  -# view_options with no args freezes the struct, and _blockly writes to it later.
+  - scrapbook_data = {channelId: @view_options&.channel, isSignedIn: !current_user.nil?}
+  %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json, scrapbookData: scrapbook_data.to_json }}
 
 
 -#

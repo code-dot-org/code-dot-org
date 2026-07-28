@@ -1,11 +1,11 @@
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton, Typography} from '@mui/material';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -43,21 +43,24 @@ export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
           className={style.aiBotOutlineIcon}
           alt={i18n.rubricAiHeaderText()}
         />
-        <span>{i18n.rubricAiHeaderText()}</span>
+        <Typography variant="label2">{i18n.rubricAiHeaderText()}</Typography>
       </div>
       <div className={style.rubricHeaderRightSide}>
-        <button
+        <MuiIconButton
           type="button"
+          variant="text"
+          color="white"
+          aria-label={i18n.closeDialog()}
           onClick={_ => setIsOpen(!isOpen)}
           className={classnames(style.buttonStyle, style.closeButton)}
         >
-          <FontAwesome icon="xmark" />
-        </button>
+          <FontAwesomeV6Icon iconName="xmark" />
+        </MuiIconButton>
       </div>
     </div>
     <div className={classnames(style.fabBackground, style.fabErrorBackground)}>
       <div className={style.visibleRubricContent}>
-        <p>{i18n.rubricAiInternalError()}</p>
+        <Typography variant="body3">{i18n.rubricAiInternalError()}</Typography>
       </div>
     </div>
   </div>

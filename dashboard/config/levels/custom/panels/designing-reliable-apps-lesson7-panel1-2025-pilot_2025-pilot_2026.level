@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-04-01T21:44:18.000Z",
   "level_num": "custom",
@@ -9,26 +10,30 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "Scenario 1:\n\n> \"I clicked 'Buy', but the loading icon just spun forever.\" \n",
-        "imageUrl": "https://images.code.org/4b8c15d5dbd05eb034a6d22827c5948a-blackwheel.jpg",
-        "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-390e8e7c-f793-4b86-9970-dcd069d1a1ca"
+        "text": "#### Ticket #1001\n🔴  **Status**: Open\n\n---\n\n\n**User Report:**\n\n>\"I clicked Buy and it just kept spinning. Nothing happened and I never got a confirmation.\"\n\n**System Log:**\n\n>The request left the device but never reached the server. No response came back.",
+        "imageUrl": "https://images.code.org/8796b0378e87841bcaf069f8a07dd5bc-Gemini_Generated_Image_z3kjf2z3kjf2z3kj (1).png",
+        "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-390e8e7c-f793-4b86-9970-dcd069d1a1ca",
+        "layout": "text-bottom-left"
       },
       {
-        "text": "Scenario 2:\n\n> \"The page loaded, but the seat map is blank.\"\n",
-        "imageUrl": "https://images.code.org/0dbc238bf1dfe18ba083e1da6de9f198-Screenshot 2026-02-10 at 4.10.15 PM.png",
+        "text": "#### Ticket #1002\n\n🔴 **Status**: Open\n\n---\n\n**User Report:**\n\n>\"The seat map loaded but all the section names, row numbers, and prices are showing dashes. I can't tell what anything costs.\"\n\n**System Log:**\n\n>Seat data arrived from the server but was in the wrong format. The app expected seat names and prices but the values were empty or unreadable.",
+        "imageUrl": "https://images.code.org/532e2cf57db77e5d2ced905641a8ef18-Gemini_Generated_Image_s86w4ks86w4ks86w (1).png",
         "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-6573f734-9aec-4409-8ea6-9a5547388b73",
-        "layout": "text-top-left"
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "Scenario 3:\n\n> \"I clicked my profile and the whole app just crashed.\"",
-        "imageUrl": "https://images.code.org/ebd05083bb0b1bf1ba66da6b77bf7c73-Screenshot 2026-02-25 at 5.21.51 PM.png",
+        "text": "#### Ticket #1003\n\n🔴 **Status**: Open\n\n---\n**User Report:**\n\n>\"I clicked on my profile to check my tickets and the whole app crashed. It showed me an error and asked if I wanted to send a report.\"\n\n**System Log:**\n\n>The server received the request but could not finish processing it. The server stopped working before sending anything back.",
+        "imageUrl": "https://images.code.org/a294c64861ab427e448f27443e5424bd-ChatGPT Image Jun 16, 2026, 11_31_40 AM (1).png",
         "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-8d8f470a-3c65-4899-af9c-96e9017bcf8c",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
       }
     ],
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "display_name": "j.anderson@columbia.edu",
+    "use_links": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:18.623+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T21:44:18.623+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot\"},{\"changed_at\":\"2026-06-16 14:49:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 14:53:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:11:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:12:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:14:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:14:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:15:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:32:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 15:41:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:05:12 +0000\",\"changed\":[\"panels\",\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 18:26:31 +0000\",\"changed\":[\"panels\",\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Panels>

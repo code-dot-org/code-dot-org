@@ -26,6 +26,14 @@ module GitHub
     end
   end
 
+  # Triggers a workflow_dispatch event for `workflow_id` (e.g. 'dtt.yml') on `ref`.
+  # The workflow must declare any keys passed in `inputs`. Needs a token with
+  # actions:write (a classic repo PAT suffices; a fine-grained token does not by default).
+  def self.dispatch_workflow(workflow_id:, ref:, inputs: {})
+    configure_octokit
+    Octokit.workflow_dispatch(REPO, workflow_id, ref, inputs: inputs)
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_request_files-instance_method
   # @param pr_number [Integer] The PR number to query.
   # @return [Array[String]] The filenames part of the pull request living in the dashboard or
@@ -317,6 +325,8 @@ module GitHub
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
       set_dts_check_pass(pull)
+    rescue => exception
+      notify_dts_status_failure(pull, exception)
     end
   end
 
@@ -335,6 +345,8 @@ module GitHub
     Octokit.pulls(REPO, base: STAGING_BRANCH)
     paged_for_each(Octokit.last_response) do |pull|
       set_dts_check_fail(pull)
+    rescue => exception
+      notify_dts_status_failure(pull, exception)
     end
   end
 
@@ -350,5 +362,16 @@ module GitHub
 
   def self.get_date_for_commit(commit_sha)
     return Octokit.commit(REPO, commit_sha)[:commit][:author][:date]
+  end
+
+  # A single PR (e.g. one with an unreachable head sha, or a request that hits
+  # GitHub's secondary rate limit) must not abort the whole batch: with ~600
+  # open PRs against staging, that would leave most of them stuck on a stale
+  # DTS status until the next open/close flip.
+  private_class_method def self.notify_dts_status_failure(pull, exception)
+    Honeybadger.notify(
+      exception,
+      error_message: "Unable to set DTS status for PR ##{pull['number']}: #{exception.message.to_s.strip}"
+    )
   end
 end

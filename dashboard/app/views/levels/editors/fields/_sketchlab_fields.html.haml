@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#sketchlab_fields"}}
+  Sketch Lab Fields
+
+#sketchlab_fields.in.collapse
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :require_edit_to_continue, description: "Require student to edit the canvas before continuing"}

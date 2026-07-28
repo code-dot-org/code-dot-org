@@ -7,6 +7,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -69,6 +70,7 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: false,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
         act(() => {
@@ -121,6 +123,7 @@ describe('VersionHistory', () => {
         isProjectTemplateLevel: false,
         useFilesApi: true,
         isReadOnly: false,
+        onClose: () => {},
       },
       finishVersionHistoryLoad: () => {
         act(() => {
@@ -167,6 +170,18 @@ describe('VersionHistory', () => {
       wrapper.update();
     };
 
+    const findButtonByText = text =>
+      wrapper
+        .find('button')
+        .hostNodes()
+        .filterWhere(button => button.text() === text);
+
+    const findButtonById = id => wrapper.find(`button#${id}`).hostNodes();
+
+    const clickButtonByText = text => {
+      clickAndUpdate(findButtonByText(text).first());
+    };
+
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
       expect(
@@ -209,14 +224,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.toHaveBeenCalled();
 
-      clickAndUpdate(wrapper.find('.img-upload').first());
+      clickButtonByText(i18n.restore());
       expect(restoreSpy()).toHaveBeenCalledTimes(1);
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      clickAndUpdate(wrapper.find('.img-upload').first());
+      clickButtonByText(i18n.restore());
 
       failRestoreVersion();
       expect(wrapper.text()).toContain('An error occurred.');
@@ -225,7 +240,7 @@ describe('VersionHistory', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      clickAndUpdate(wrapper.find('.img-upload').first());
+      clickButtonByText(i18n.restore());
       expect(utils.reload).not.toHaveBeenCalled();
 
       finishRestoreVersion();
@@ -237,25 +252,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      clickAndUpdate(wrapper.find('.btn-danger'));
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
       // Expect confirmation to show
-      expect(
-        wrapper.containsMatchingElement(
-          <div>
-            <p>
-              Are you sure you want to restart this level? This will clear all
-              of your code.
-            </p>
-            <button type="button" id="start-over-button">
-              Start over
-            </button>
-            <button type="button" id="again-button">
-              Cancel
-            </button>
-          </div>
-        )
-      ).toBeTruthy();
+      expect(wrapper.text()).toContain(
+        i18n.versionHistory_clearProgress_prompt()
+      );
+      expect(findButtonById('start-over-button')).toHaveLength(1);
+      expect(findButtonById('again-button')).toHaveLength(1);
     });
 
     it('goes back to version list after cancelling Start Over', () => {
@@ -263,28 +267,17 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      clickAndUpdate(wrapper.find('.btn-danger'));
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
       // Expect confirmation to show
-      expect(
-        wrapper.containsMatchingElement(
-          <div>
-            <p>
-              Are you sure you want to restart this level? This will clear all
-              of your code.
-            </p>
-            <button type="button" id="start-over-button">
-              Start over
-            </button>
-            <button type="button" id="again-button">
-              Cancel
-            </button>
-          </div>
-        )
-      ).toBeTruthy();
+      expect(wrapper.text()).toContain(
+        i18n.versionHistory_clearProgress_prompt()
+      );
+      expect(findButtonById('start-over-button')).toHaveLength(1);
+      expect(findButtonById('again-button')).toHaveLength(1);
 
       // Click "Cancel"
-      clickAndUpdate(wrapper.find('#again-button'));
+      clickAndUpdate(findButtonById('again-button'));
 
       // Rendered two version rows
       expect(wrapper.find(VersionRow)).toHaveLength(2);
@@ -295,7 +288,7 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      clickAndUpdate(wrapper.find('.btn-danger'));
+      clickButtonByText(i18n.versionHistory_clearProgress_confirm());
 
       expect(wrapper.find('.template-level-warning')).toBeDefined();
     });
@@ -309,8 +302,8 @@ describe('VersionHistory', () => {
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
         finishVersionHistoryLoad();
-        clickAndUpdate(wrapper.find('.btn-danger'));
-        clickAndUpdate(wrapper.find('#start-over-button'));
+        clickButtonByText(i18n.versionHistory_clearProgress_confirm());
+        clickAndUpdate(findButtonById('start-over-button'));
       });
 
       afterEach(async () => {

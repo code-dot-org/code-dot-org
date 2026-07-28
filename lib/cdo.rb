@@ -74,10 +74,6 @@ module Cdo
       CDO_SHARED_CACHE
     end
 
-    def cache
-      CDO_CACHE
-    end
-
     def i18n_backend
       @i18n_backend ||=
         # Because loading i18n files is super-slow, lazy load them in development.
@@ -148,22 +144,21 @@ module Cdo
       MARKETING_SITES_HOSTS
     end
 
-    def site_url(domain, path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
-      path = '/' + path unless path.empty? || path[0] == '/'
-
-      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
-        path = Cdo::GlobalEdition.path(ge_region, path)
-      end
-
-      "#{scheme}//#{site_host(domain)}#{path}"
+    def normalize_path(path)
+      path.empty? || path[0] == '/' ? path : "/#{path}"
     end
 
-    def studio_url(path = '', scheme = '', ge_region: Cdo::GlobalEdition.current_region)
-      site_url('studio.code.org', path, scheme, ge_region:)
+    def site_url(domain, path = '', scheme = '')
+      "#{scheme}//#{site_host(domain)}#{normalize_path(path)}"
     end
 
-    def code_org_url(path = '', scheme = '', ge_region: nil)
-      site_url('code.org', path, scheme, ge_region: ge_region)
+    def studio_url(path = '', scheme = default_scheme, ge_region: Cdo::GlobalEdition.current_region)
+      path = Cdo::GlobalEdition.path(ge_region, normalize_path(path)) if ge_region
+      site_url('studio.code.org', path, scheme)
+    end
+
+    def code_org_url(path = '', scheme = '')
+      site_url('code.org', path, scheme)
     end
 
     def hourofcode_url(path = '', scheme = '', locale: nil)

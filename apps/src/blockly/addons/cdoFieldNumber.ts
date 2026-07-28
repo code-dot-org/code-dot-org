@@ -86,7 +86,6 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
       angle: parseInt(`${this.getValue()}`),
       enableBackgroundRotation: true,
     });
-    Blockly.WidgetDiv.createDom();
     const angleHelperDiv = this.createAngleHelperContainer();
     Blockly.WidgetDiv.getDiv()?.appendChild(angleHelperDiv);
     this.angleHelper.init(angleHelperDiv);
@@ -134,6 +133,9 @@ export default class CdoFieldNumber extends BlocklyCore.FieldNumber {
    */
   private createAngleHelperContainer(): HTMLDivElement {
     const div = document.createElement('div');
+    // Blockly v13 sets box-sizing: border-box globally; override so the
+    // inline width is the SVG width and the 5px padding sits around it.
+    div.style.boxSizing = 'content-box';
     if (this.angleHelper?.width_) {
       div.style.width = this.angleHelper.width_ + 'px';
     }

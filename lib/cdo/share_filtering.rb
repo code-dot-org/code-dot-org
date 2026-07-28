@@ -39,27 +39,40 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
-  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design].freeze
+  BLOCKLY_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  FILTERED_PROJECT_TYPES = %w[spritelab playlab poetry starwarsblocks game_design sketchlab].freeze
+  SKETCHLAB_TEXT_FIELDS = %w[label text altText].freeze
+  # Supported project types for filtering whose `source` is structured JSON
+  # rather than a blockly XML/JSON string.
+  STRUCTURED_SOURCE_EXTRACTORS = {'sketchlab' => :extract_text_sketchlab}.freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
+  # Returns nil if the program text or project type can't be filtered.
   #
   # May throw OpenURI::HTTPError, IO::EAGAINWaitReadable depending on
   # service availability.
   #
-  # @param [String] program the student's program text
+  # @param [String, Hash] program the student's program text.
   # @param [String] locale a two-character ISO 639-1 language code
   # @param [String] project_type
   def self.find_share_failure(program, locale, project_type, exceptions: false)
     # Filter projects geared for young students that accept user-generated text.
     return nil unless should_filter_program(program, project_type)
 
-    texts = extract_text_blockly(program)
+    extractor = STRUCTURED_SOURCE_EXTRACTORS.fetch(project_type, :extract_text_blockly)
+    texts = send(extractor, program)
     program_text = texts.join(" ")
+    return nil if program_text.strip.empty?
 
-    find_failure(program_text, locale, exceptions: exceptions)
+    # Email and phone: check concatenated text.
+    failure = find_email_or_phone_failure(program_text, exceptions: exceptions)
+    return failure if failure
+
+    # Temporarily disable address filtering to prevent false positives.
+    # TODO: re-enable this when we improve the user experience of the address filter. https://github.com/code-dot-org/code-dot-org/pull/73395
+    find_profanity_failure(program_text, locale, {}, exceptions: exceptions)
   end
 
   # Parses a Blockly program (XML or JSON) and returns an array of text entries.
@@ -94,6 +107,38 @@ module ShareFiltering
     texts.compact.uniq
   end
 
+  # Extracts user-entered text from a Sketch Lab (React Flow) source.
+  # The only user entered data appears in the node data fields 'text', 'label' and 'altText'.
+  # @param source [Hash, String] the parsed 'source' value from main.json,
+  #   or its JSON-serialized string form.
+  # @return [Array<String>] unique, non-blank user-entered strings. Returns
+  #   an empty array for malformed input or non-React-Flow shapes.
+  def self.extract_text_sketchlab(source)
+    if source.is_a?(String)
+      begin
+        source = JSON.parse(source, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+      rescue JSON::NestingError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: JSON too deep after #{JSON_MAX_DEPTH} levels"
+        return []
+      rescue JSON::ParserError
+        CDO.log.warn "ShareFiltering.extract_text_sketchlab: malformed JSON"
+        return []
+      end
+    end
+    return [] unless source.is_a?(Hash)
+
+    nodes = source['nodes']
+    return [] unless nodes.is_a?(Array)
+
+    nodes.flat_map do |node|
+      next [] unless node.is_a?(Hash) && node['data'].is_a?(Hash)
+      SKETCHLAB_TEXT_FIELDS.filter_map do |field|
+        value = node['data'][field]
+        value if value.is_a?(String) && !value.strip.empty?
+      end
+    end.uniq
+  end
+
   # Clean string values from XML-wrapped field values.
   def self.clean_text_value(value)
     return nil unless value.is_a?(String)
@@ -121,7 +166,7 @@ module ShareFiltering
     inputs = block["inputs"] || {}
 
     fields.each do |key, value|
-      if USER_ENTERED_TEXT_FIELDS.include?(key)
+      if BLOCKLY_TEXT_FIELDS.include?(key)
         cleaned = clean_text_value(value)
         texts << cleaned if cleaned && !cleaned.strip.empty?
       end
@@ -141,8 +186,15 @@ module ShareFiltering
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
+    # Structured sources have no field-name pre-check; extraction plus the
+    # empty-text bail in find_share_failure decide instead.
+    return true if STRUCTURED_SOURCE_EXTRACTORS.key?(project_type)
+
+    # Blockly sources are strings; anything else is unfilterable, not an error.
+    return false unless program.is_a?(String)
+
     # Only filter if program contains fields that accept user-entered strings.
-    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
+    return program.match?(/(?:#{BLOCKLY_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
@@ -174,25 +226,17 @@ module ShareFiltering
   # @param [String] text The text to search through.
   # @return [ShareFailure, nil]
   def self.find_pii_failure(text, exceptions: false)
-    email = RegexpUtils.find_potential_email(text)
-    share_failure = ShareFailure.new(FailureType::EMAIL, email) if email
-    raise PIIFilterException.new("Email PII Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
+    failure = find_email_or_phone_failure(text, exceptions: exceptions)
+    return failure if failure
 
-    phone_number = RegexpUtils.find_potential_phone_number(text)
-    share_failure = ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
-    raise PIIFilterException.new("Phone Number PII Filter Violation", share_failure) if share_failure && exceptions
-    return share_failure if share_failure
-
-    # TODO: Address filtering is disabled for now because the geocoder-based detector
-    # has too many false positives on student project text.
-    # See https://codedotorg.atlassian.net/browse/SL-1698.
-    #
-    # street_address = Geocoder.find_potential_street_address(text)
-    # share_failure = ShareFailure.new(FailureType::ADDRESS, street_address) if street_address
-    # raise PIIFilterException.new("Address PII Filter Violation", share_failure) if share_failure && exceptions
-
-    return share_failure if share_failure
+    candidate = Geocoder.extract_address_candidate(text)
+    return nil unless candidate
+    street_address = Geocoder.find_potential_street_address(candidate)
+    if street_address
+      failure = ShareFailure.new(FailureType::ADDRESS, street_address)
+      raise PIIFilterException.new("Address PII Filter Violation", failure) if exceptions
+      return failure
+    end
 
     nil
   end
@@ -337,6 +381,26 @@ module ShareFiltering
     # Search for profanity
     profanity_failure = find_profanity_failure(text, locale, profanity_filter_replace_text_list, exceptions: exceptions)
     return profanity_failure if profanity_failure
+
+    nil
+  end
+
+  # Checks text for email or phone number PII.
+  # @return [ShareFailure, nil]
+  private_class_method def self.find_email_or_phone_failure(text, exceptions: false)
+    email = RegexpUtils.find_potential_email(text)
+    if email
+      failure = ShareFailure.new(FailureType::EMAIL, email)
+      raise PIIFilterException.new("Email PII Filter Violation", failure) if exceptions
+      return failure
+    end
+
+    phone = RegexpUtils.find_potential_phone_number(text)
+    if phone
+      failure = ShareFailure.new(FailureType::PHONE, phone)
+      raise PIIFilterException.new("Phone Number PII Filter Violation", failure) if exceptions
+      return failure
+    end
 
     nil
   end

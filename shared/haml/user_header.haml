@@ -35,13 +35,25 @@
   cookie_key = environment_specific_cookie_name('_user_type')
   user_type = request.cookies[cookie_key]
 
+  # Signed-out create menu under the marketing nav is hidden outright
+  # (marketing-nav-no-create), not just below a breakpoint like the stock
+  # show-small-desktop class -- see application.scss.
+  create_menu_class =
+    if user_type
+      "hide-mobile"
+    elsif local_assigns[:marketing_nav]
+      "marketing-nav-no-create"
+    else
+      "show-small-desktop"
+    end
+
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
 
 = render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 
-- if show_create_menu && request.ge_region.blank?
-  .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
+- if show_create_menu && (request.ge_region.blank? || request.ge_region == Cdo::GlobalEdition::DEFAULT_REGION)
+  .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: create_menu_class}
     %span.create_button
       = I18n.t("#{loc_prefix}new_project_low_cap")
     &nbsp;
@@ -77,6 +89,10 @@
     %i.user_menu_arrow_up{class: "fa-solid fa-chevron-up", style: "display: none"}
     .user_options{style: 'display: none', dir: language_dir_class}
       %a.linktag#my-projects{href: CDO.studio_url('projects', ge_region: ge_region)}= I18n.t("#{loc_prefix}my_projects")
+      -# Gated on the 'student-scrapbook' frontend experiment; the inline JS
+      -# block below unhides this if the user has opted in via query param or
+      -# localStorage.
+      %a.linktag#my-scrapbook{href: CDO.studio_url('scrapbook', ge_region: ge_region), style: 'display: none'}= I18n.t("#{loc_prefix}my_scrapbook")
       -# rubocop:disable CustomCops/DashboardDbUsage
       - if current_user.can_pair?
         -# rubocop:enable CustomCops/DashboardDbUsage
@@ -112,6 +128,25 @@
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
   (function() {
+    // Unhide the 'My scrapbook' dropdown link if the student-scrapbook
+    // experiment is enabled. Mirrors the check in apps/src/util/experiments.js
+    // (query param, localStorage entry, or enableExperiments=) — kept inline
+    // because the header partial is loaded on every page and we want to avoid
+    // pulling in a webpack bundle just for this toggle.
+    var scrapbookLink = document.getElementById('my-scrapbook');
+    if (scrapbookLink) {
+      var enabled = false;
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('student-scrapbook')) enabled = true;
+        var enableList = (params.get('enableExperiments') || '').split(',');
+        if (enableList.indexOf('student-scrapbook') >= 0) enabled = true;
+        var stored = JSON.parse(localStorage.getItem('experimentsList') || '[]');
+        if (stored.some(function(e) { return e.key === 'student-scrapbook'; })) enabled = true;
+      } catch (e) {}
+      if (enabled) scrapbookLink.style.display = '';
+    }
+
     // Ideally would use environment_specific_cookie_name, but that's not currently
     // available to us in pegasus
     var cookieKey = '_shortName' + window.cookieEnvSuffix;

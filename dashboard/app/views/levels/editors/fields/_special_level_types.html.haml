@@ -1,6 +1,5 @@
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_special_level_types.js'),  data: {lessons: @level.summarize_lessons_for_special_level_types.to_json}}
-}
 
 %h1.control-legend{data: {toggle: "collapse", target: "#special-levels"}}
   Special Level Types
@@ -62,6 +61,9 @@
     .field
       = f.label :contained_level_names, 'Contained Level Names'
       %p The text area to add contained levels to create predict levels. Each level name referenced here will be embedded in the Instructions Pane (click the plus sign to add a contained level)
+      - if @level.is_a?(Javalab)
+        %p
+          %b If this level is set to use lab2, the contained level will not be used! Use predict level settings instead.
       %p
         Learn how to create predict levels
         =link_to 'here', 'https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5D-Making-a-Predict-Level', target: '_blank'

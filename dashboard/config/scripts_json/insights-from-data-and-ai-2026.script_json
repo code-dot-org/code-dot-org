@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 22:36:10 UTC",
+    "serialized_at": "2026-06-23 17:35:42 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6472,35 +6472,35 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/aif6-2025/resources",
-      "key": "all_resources_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/resources",
+      "key": "all_resources_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_4"
+        "resource.key": "all_resources_11"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/aif6-2025/standards",
-      "key": "all_standards_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/standards",
+      "key": "all_standards_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_4"
+        "resource.key": "all_standards_11"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/aif6-2025/vocab",
-      "key": "all_vocabulary_4",
+      "url": "/courses/ai-foundations-exploring-ai-and-cs-2026/units/5/vocab",
+      "key": "all_vocabulary_11",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary_4"
+        "resource.key": "all_vocabulary_11"
       }
     },
     {
@@ -7266,19 +7266,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources_4",
+        "resource.key": "all_resources_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_4",
+        "resource.key": "all_standards_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary_4",
+        "resource.key": "all_vocabulary_11",
         "script.name": "insights-from-data-and-ai-2026"
       }
     },
@@ -8096,9 +8096,65 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: More Visualization Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: More Visualization Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 10: More Visualization Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: Crafting Stories with Data Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Crafting Stories with Data Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Crafting Stories with Data Project",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Data Science",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Data Science",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-45"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Data Science",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-CE-46"
       }
     },
     {
@@ -8110,6 +8166,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 2: Making Sense of Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 2: Making Sense of Data",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 3: Ethical Data Collection",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
@@ -8124,6 +8194,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 3: Ethical Data Collection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Ethical Data Collection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 3: Ethical Data Collection",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 4: Data Rights",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
@@ -8134,6 +8225,27 @@
         "lesson.key": "Lesson 4: Data Rights",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Data Rights",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Data Rights",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Data Rights",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-SOC-HU-43"
       }
     },
     {
@@ -8155,6 +8267,34 @@
         "lesson.key": "Lesson 5: Effective Data Questions",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Effective Data Questions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 5: Effective Data Questions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-IM-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Data Storytelling",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Data Storytelling",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
       }
     },
     {
@@ -8173,6 +8313,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Introduction to Data Visualization",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Introduction to Data Visualization",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Data Cleaning and Analysis Techniques",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-10"
@@ -8187,6 +8341,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 8: Data Cleaning and Analysis Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Data Cleaning and Analysis Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Data Cleaning and Analysis Techniques",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 9: Data Interpretation",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-24"
@@ -8197,6 +8372,20 @@
         "lesson.key": "Lesson 9: Data Interpretation",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Data Interpretation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Data Interpretation",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-DAT-DI-26"
       }
     }
   ],

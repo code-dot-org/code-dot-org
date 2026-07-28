@@ -11,7 +11,9 @@ describe('InternationalOptInTest', () => {
       workshopCourse: ['workshopCourse'],
       emailOptIn: ['emailOptIn'],
       legalOptIn: ['legalOptIn'],
-      workshopOrganizer: ['workshopOrganizer'],
+      workshopOrganizer: {
+        afghanistan: ['CodeAI', 'My organizer is not listed'],
+      },
       colombianSchoolData: {
         department: {
           municipality: {
@@ -36,9 +38,9 @@ describe('InternationalOptInTest', () => {
       workshopOrganizer: 'Workshop Organizer',
       workshopCourse: 'Workshop Course',
       emailOptIn:
-        'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?',
+        'Can we email you about CodeAI’s international program, updates to our courses, or other computer science news?',
       legalOptIn:
-        'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.',
+        'By submitting this form, you are agreeing to allow CodeAI to share information on how you use CodeAI and the Professional Learning resources with the CodeAI International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as CodeAI.',
       colombianSchoolCity: 'School City',
       colombianChileanSchoolDepartment: 'School Department',
       colombianSchoolMunicipality: 'School Municipality',
@@ -47,6 +49,24 @@ describe('InternationalOptInTest', () => {
       chileanSchoolId: 'School ID',
     },
   };
+
+  describe('supported country interface', () => {
+    it('enables free-text school fields and includes CodeAI as an organizer', () => {
+      const wrapper = mount(<InternationalOptIn {...defaultProps} />);
+
+      act(() => {
+        wrapper.setState({data: {schoolCountry: 'Afghanistan'}});
+      });
+
+      expect(wrapper.find('input#schoolCity').prop('disabled')).toBe(false);
+      expect(wrapper.find('input#schoolName').prop('disabled')).toBe(false);
+      expect(
+        wrapper
+          .find('select#workshopOrganizer option')
+          .map(option => option.prop('value'))
+      ).toEqual(['', 'CodeAI', 'My organizer is not listed']);
+    });
+  });
 
   describe('Colombian school interface', () => {
     it('requires you to select a country before enabling school name and city inputs', () => {

@@ -143,14 +143,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'get_script_level_by_relative_position_and_puzzle_position returns nil when not found' do
-    artist = Unit.find_by_name('artist')
-    assert artist.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
+    unit = create(:unit, :with_levels)
+    assert unit.get_script_level_by_relative_position_and_puzzle_position(11, 1, false).nil?
   end
 
   test 'get_from_cache uses cache' do
     # We test the cache using name lookups...
-    flappy = Unit.find_by_name('flappy')
-    frozen = Unit.find_by_name('frozen')
+    flappy = create(:unit, name: 'flappy')
+    frozen = create(:unit, name: 'frozen')
     # ...and ID lookups.
     flappy_id = flappy.id
     frozen_id = frozen.id
@@ -464,13 +464,14 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'banner image' do
-    assert_nil Unit.find_by_name('flappy').banner_image
-    assert_nil Unit.find_by_name('csf1').banner_image
+    assert_nil create(:unit).banner_image
+    assert_nil @csf_unit.banner_image
   end
 
   test 'old_professional_learning_course?' do
-    refute Unit.find_by_name('flappy').old_professional_learning_course?
-    assert Unit.find_by_name('ECSPD').old_professional_learning_course?
+    refute create(:unit).old_professional_learning_course?
+    old_pl_course_unit = create(:plc_course_unit, :with_course_name).script
+    assert old_pl_course_unit.old_professional_learning_course?
   end
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
@@ -1026,6 +1027,48 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal resource_dropdown_only_resource.id, summary[:teacher_resources].first[:id]
   end
 
+  # A unit can be reused in more than one unit group. Rollup resources ("All
+  # Resources" etc.) store a single URL baked to the unit's original course, so
+  # when summarized in the context of a different unit group we rewrite that URL
+  # to the viewing course and position. Otherwise the resource page breadcrumb
+  # sends teachers back to the wrong course.
+  test 'summarize rewrites rollup resource urls to the viewing unit group' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(true)
+    unit = create(:unit)
+    # The first unit group created becomes the unit's original_unit_group; its
+    # position (3) is where the rollup url is baked.
+    original_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: original_group, script: unit, position: 3)
+    reused_group = create(:unit_group)
+    reused_ugu = create(:unit_group_unit, unit_group: reused_group, script: unit, position: 1)
+    unit.reload
+
+    rollup = create(
+      :resource,
+      name: 'All Resources',
+      url: "/courses/#{original_group.name}/units/3/resources",
+      is_rollup: true
+    )
+    plain = create(:resource, name: 'Plain Handout', url: 'https://example.com/handout')
+    unit.resources = [rollup, plain]
+
+    summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: reused_ugu)
+    resources = summary[:teacher_resources]
+
+    rewritten = resources.find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{reused_group.name}/units/1/resources", rewritten[:url]
+
+    # Non-rollup resources keep their url untouched.
+    untouched = resources.find {|r| r[:name] == 'Plain Handout'}
+    assert_equal 'https://example.com/handout', untouched[:url]
+
+    # Summarized in its original context, the rollup url is unchanged.
+    original_ugu = unit.unit_group_units.find {|ugu| ugu.unit_group == original_group}
+    original_summary = unit.summarize(true, nil, false, 'en-US', unit_group_unit: original_ugu)
+    original_rollup = original_summary[:teacher_resources].find {|r| r[:name] == 'All Resources'}
+    assert_equal "/courses/#{original_group.name}/units/3/resources", original_rollup[:url]
+  end
+
   test 'summarize defaults to original unit group when no unit group unit is provided' do
     unit = create(:course_version, :with_single_unit_course).content_root.first_unit
     secondary_course = create(:single_unit_course, unit: unit)
@@ -1345,6 +1388,25 @@ class UnitTest < ActiveSupport::TestCase
     create(:script_level, script: unit, lesson: lesson, levels: [level])
 
     assert_empty unit.text_response_levels
+  end
+
+  test 'migrated predict level lists both itself and its contained level in text_response_levels' do
+    unit = create(:script, :in_single_unit_course)
+    lesson_group = create(:lesson_group, script: unit)
+    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
+    contained_level = create(:free_response, name: 'Migrated Predict Contained Free Response')
+    level = create(
+      :javalab,
+      properties: {
+        predict_settings: {isPredictLevel: true, questionType: 'freeResponse'},
+        contained_level_names: [contained_level.name]
+      }
+    )
+    create(:script_level, script: unit, lesson: lesson, levels: [level])
+
+    # A response may live on the level itself (post-migration) or on the
+    # contained level (pre-migration), so both must be searched.
+    assert_equal [level, contained_level], unit.text_response_levels.first[:levels]
   end
 
   test 'logged_out_age_13_required?' do
@@ -1696,7 +1758,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
+      [@csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
@@ -2484,6 +2546,164 @@ class UnitTest < ActiveSupport::TestCase
     unit.reload
     assert_nil unit.md5
     refute File.exist?(Unit.script_json_filepath(unit.name))
+  end
+
+  # ---- summarize_for_unit_generate / update_lesson_outlines ----
+
+  test 'summarize_for_unit_generate returns id, name, lessons, and flag' do
+    unit = create(:script)
+    group = create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson, script: unit, lesson_group: group, name: 'L1', key: 'l-1')
+    create(:lesson, script: unit, lesson_group: group, name: 'L2', key: 'l-2')
+
+    summary = unit.summarize_for_unit_generate
+    assert_equal unit.id, summary[:id]
+    assert_equal unit.name, summary[:name]
+    assert_equal 2, summary[:lessons].length
+    assert_equal %w(l-1 l-2), summary[:lessons].pluck(:key)
+    refute summary[:multipleLessonGroups]
+  end
+
+  test 'summarize_for_unit_generate flags multiple user-facing lesson groups' do
+    unit = create(:script)
+    create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson_group, script: unit, user_facing: true)
+    assert unit.summarize_for_unit_generate[:multipleLessonGroups]
+  end
+
+  test 'summarize_for_unit_generate exposes generate_outline for round-trip' do
+    unit = create(:script)
+    unit.update!(properties: unit.properties.merge('generate_outline' => 'unit prompt'))
+    assert_equal 'unit prompt', unit.summarize_for_unit_generate[:generateOutline]
+  end
+
+  test 'update_lesson_outlines creates new lessons in the order given' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    unit.update_lesson_outlines([
+                                  {'key' => 'a', 'name' => 'Lesson A', 'generateOutline' => 'pa'},
+                                  {'key' => 'b', 'name' => 'Lesson B'},
+                                ]
+)
+
+    unit.reload
+    keys = unit.lessons.order(:absolute_position).pluck(:key)
+    assert_equal %w(a b), keys
+    assert_equal 'pa', unit.lessons.find_by(key: 'a').generate_outline
+    assert_nil unit.lessons.find_by(key: 'b').generate_outline
+  end
+
+  test 'update_lesson_outlines reorders existing lessons by id' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    a = create(:lesson, script: unit, lesson_group: group, name: 'A', key: 'a')
+    b = create(:lesson, script: unit, lesson_group: group, name: 'B', key: 'b')
+
+    unit.update_lesson_outlines([
+                                  {'id' => b.id, 'key' => b.key, 'name' => b.name},
+                                  {'id' => a.id, 'key' => a.key, 'name' => a.name},
+                                ]
+)
+
+    unit.reload
+    assert_equal %w(b a), unit.lessons.order(:absolute_position).pluck(:key)
+  end
+
+  test 'update_lesson_outlines destroys lessons missing from the payload' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    keep = create(:lesson, script: unit, lesson_group: group, name: 'Keep', key: 'keep')
+    drop = create(:lesson, script: unit, lesson_group: group, name: 'Drop', key: 'drop')
+
+    unit.update_lesson_outlines([
+                                  {'id' => keep.id, 'key' => keep.key, 'name' => keep.name},
+                                ]
+)
+
+    assert_nil Lesson.find_by(id: drop.id)
+    assert_equal [keep.id], unit.reload.lessons.pluck(:id)
+  end
+
+  test 'update_lesson_outlines persists supplied unit-level outline' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], 'overall prompt')
+    assert_equal 'overall prompt', unit.reload.generate_outline
+  end
+
+  test 'update_lesson_outlines leaves unit-level outline alone when nil' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    unit.update!(properties: unit.properties.merge('generate_outline' => 'pre'))
+    unit.update_lesson_outlines([{'key' => 'a', 'name' => 'A'}], nil)
+    assert_equal 'pre', unit.reload.generate_outline
+  end
+
+  test 'update_lesson_outlines refuses units with multiple user-facing lesson groups' do
+    unit = create(:script)
+    create(:lesson_group, script: unit, user_facing: true)
+    create(:lesson_group, script: unit, user_facing: true)
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([])}
+  end
+
+  test 'update_lesson_outlines destroys missing lessons before creating new ones (key reuse)' do
+    # Repro: a user deletes lesson "x" from the UI, then re-runs the AI
+    # outline which happens to suggest a new lesson with the same key "x"
+    # and a fresh prompt. If we created the new one before destroying the
+    # old, the unique (script_id, key) index would 422 the save.
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    group = create(:lesson_group, script: unit, user_facing: true)
+    old = create(:lesson, script: unit, lesson_group: group, name: 'Old', key: 'x')
+    old.update!(properties: old.properties.merge('generate_outline' => 'old prompt'))
+
+    unit.update_lesson_outlines([
+                                  {'key' => 'x', 'name' => 'New', 'generateOutline' => 'new prompt'}
+                                ]
+)
+
+    unit.reload
+    assert_equal 1, unit.lessons.count
+    fresh = unit.lessons.first
+    assert_equal 'New', fresh.name
+    # The new prompt lands on the freshly-created lesson — the old row
+    # (and its old prompt) is gone.
+    assert_equal 'new prompt', fresh.generate_outline
+    refute_equal old.id, fresh.id
+  end
+
+  test 'update_lesson_outlines requires key and name on new lesson entries' do
+    unit = create(:script)
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([{'name' => 'A'}])}
+    assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
+  end
+
+  test 'lesson_tutor_available? is true for AIF and AID student courses' do
+    %w[AIF AID].each_with_index do |initiative, i|
+      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
+      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
+    end
+  end
+
+  test 'lesson_tutor_available? is false for non-AI course offerings' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a unit with no course version' do
+    refute create(:unit).lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)

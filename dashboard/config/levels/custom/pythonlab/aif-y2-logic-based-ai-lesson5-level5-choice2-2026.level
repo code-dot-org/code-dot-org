@@ -1,0 +1,43 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T02:42:18.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Movie Recommendations",
+    "long_instructions": "You’re building a program that recommends movies for users to watch.\r\n\r\n**Do This**\r\n\r\n1. Update the definition of `print_recommendation` to print a movie recommendation that includes the `movie` parameter and the `genre` parameter.\r\n2. The program currently prints two movie recommendations. Add your own third movie to recommend! You can pick what movie and genre to recommend.",
+    "bubble_choice_description": "Build a program that recommends movies for users to watch.",
+    "thumbnail_url": "https://images.code.org/d9780ae1ca2f04ef8afb534d60f825cb-movie.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def print_recommendation(movie, genre):\n    # TODO 1: Fill in the message to let the user know the movie and genre\n    print(f\"\")\n\nprint_recommendation(\"Wonder Woman\", \"superhero\")\nprint_recommendation(\"Interstellar\", \"science fiction\")\n\n# TODO 2: Add a recommendation for a third movie.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:42:22 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

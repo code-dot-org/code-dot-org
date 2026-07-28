@@ -291,7 +291,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
   return (
     <>
-      <hr />
+      <hr className={commonStyles.sectionDivider} />
       <Typography
         className={commonStyles.sectionHeader}
         component="h2"

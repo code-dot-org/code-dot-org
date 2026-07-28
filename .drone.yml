@@ -18,6 +18,12 @@ services:
     image: redis
     ports:
       - 6379
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
 steps:
   - name: bin/drone/shell
@@ -43,7 +49,7 @@ steps:
   - name: get-cached-staging-build
     image: plugins/s3-cache
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
@@ -87,20 +93,15 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
+      # Fail fast on a .gitattributes/LFS mismatch in the post-merge tree.
+      - ./bin/drone/check-lfs-pointers
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -132,8 +133,7 @@ clone:
 services:
   - name: ci-tests-redis
     image: redis
-    ports:
-      - 6379
+    network_mode: host
 
 steps:
   - name: bin/drone/shell
@@ -164,11 +164,23 @@ steps:
       - name: mysql
         path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
+
+  # Implement mysql db as a detached step rather than a service, so that we can
+  # wait to start it up until we've finished restoring the cache.
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    detach: true
+    network_mode: host
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
 
   - name: checkout
     image: bitnamilegacy/git
@@ -212,18 +224,16 @@ steps:
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.24
     pull: always
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
+    # Share the worker's network namespace so puma on 0.0.0.0:3000 binds
+    # on the worker's primary ENI, reachable from Device Farm's Chrome via
+    # VPC peering.
+    network_mode: host
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
+      # Each Drone secret below must be explicitly passed to the corresponding
+      # config value in test.yml.erb.
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -232,18 +242,26 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
-      DEVICE_FARM_DESKTOP_PROJECT_ARN:
-        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
+      VISUAL_PROVIDER: 'applitools'
+      APPLITOOLS_API_KEY:
+        from_secret: APPLITOOLS_API_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      - sudo chown -R mysql:mysql /var/lib/mysql
+      # With network_mode: host on this step and on both services, the
+      # docker service-DNS names do not resolve. Point them at
+      # 127.0.0.1 where the daemons now bind on the host.
+      - echo "127.0.0.1 ci-tests-redis" | sudo tee -a /etc/hosts
+      - echo "127.0.0.1 ci-tests-mysql" | sudo tee -a /etc/hosts
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
+      - export APPLITOOLS_BATCH_ID=$DRONE_COMMIT
+      - export APPLITOOLS_BATCH_NAME="Drone PR Playwright Eyes Tests"
+      - export APPLITOOLS_BRANCH=$DRONE_SOURCE_BRANCH
       - EXIT_CODE=0
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -279,6 +297,17 @@ name: cache-staging-build
 clone:
   disable: true
 
+services:
+  - name: ci-tests-mysql
+    image: mysql:8.0
+    ports:
+      - 3306
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'not-a-secret'
+
 steps:
   - name: clone
     image: bitnamilegacy/git
@@ -297,7 +326,7 @@ steps:
   # snapshot of the fully-built project and resulting database, but don't
   # actually run the tests.
   - name: prepare-cacheable-build
-    image: codedotorg/cdo-ci:internal-mysql
+    image: codedotorg/cdo-ci:1.23
     pull: always
     environment:
       CI_JOB: 'prepare_cacheable_build'
@@ -305,9 +334,6 @@ steps:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_cacheable_build.sh
@@ -316,13 +342,13 @@ steps:
       - "find . -type f -not -path './.git/*' | wc -l > .cached-staging-build-file-count"
       - 'printf "Baseline file count: %s\n" "$(cat .cached-staging-build-file-count)"'
 
-  - name: cache-staging-ci-build-internal-mysql
+  - name: cache-staging-ci-build
     image: plugins/s3-cache
     volumes:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-ci-build-internal-mysql.tar.gz
+      filename: cache-staging-ci-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
@@ -344,6 +370,6 @@ trigger:
 
 ---
 kind: signature
-hmac: d4fe95d50e49ccfcc0c375aa5310f33a7a5d3b214077b266d52c2605eff98636
+hmac: 82e50b0b4fa996380cf9f79a8c9881e6b768471a94ac7ffbb45a45181a6b19d2
 
 ...

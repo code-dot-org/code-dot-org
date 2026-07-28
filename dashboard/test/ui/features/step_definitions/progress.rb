@@ -1,11 +1,28 @@
-# Get the SCSS color constant for a given status.
-def color_string(key)
+# Acceptable RGB values for the DSCO semantic tokens that paint progress
+# bubbles. The cdo brand theme resolves some tokens differently in the Light
+# vs Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any
+# bubble shown inside a Lab2 page paints with the Dark-theme values. Legacy
+# SCSS was theme-agnostic, so the matcher just compared one hex; with DSCO
+# tokens it has to accept either resolution.
+#
+# Sources (frontend/packages/component-library-styles):
+#   primitiveColors.css                — raw hex values
+#   colors.css `:root`                 — Light cdo mapping
+#   colors.css `[data-theme='Dark']`   — Dark cdo mapping
+def color_strings(key)
   {
-    perfect: 'rgb(14, 190, 14)',        # $level_perfect
-    passed: 'rgb(159, 212, 159)',       # $level_passed
-    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
-    lighter_gray: 'rgb(198, 202, 205)',
-    assessment: 'rgb(140, 82, 186)'
+    # --background-success-primary (success-50 in both themes) /
+    # --borders-success-primary (success-50 Light, success-40 Dark)
+    perfect: ['rgb(62, 163, 62)', 'rgb(102, 195, 101)'],
+    # --background-success-extra-light (success-10 Light, success-90 Dark)
+    passed: ['rgb(226, 246, 226)', 'rgb(31, 72, 32)'],
+    # --background-neutral-primary (white Light, neutral-base-black Dark)
+    not_tried: ['rgb(255, 255, 255)', 'rgb(41, 47, 54)'],
+    # --borders-neutral-primary (gray-20 Light, gray-80 Dark)
+    lighter_gray: ['rgb(212, 218, 225)', 'rgb(105, 120, 138)'],
+    # --background-brand-purple-primary (purple-50 both themes) /
+    # --borders-brand-purple-primary (purple-50 Light, purple-40 Dark)
+    assessment: ['rgb(150, 87, 199)', 'rgb(168, 108, 216)']
   }[key.to_sym]
 end
 
@@ -17,20 +34,20 @@ end
 def verify_progress(selector, test_result)
   case test_result
   when 'perfect'
-    background_color = color_string('perfect')
-    border_color = color_string('perfect')
+    background_colors = color_strings('perfect')
+    border_colors = color_strings('perfect')
   when 'attempted'
-    background_color = color_string('not_tried')
-    border_color = color_string('perfect')
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('perfect')
   when 'not_tried'
-    background_color = color_string('not_tried')
-    border_color = color_string('lighter_gray')
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('lighter_gray')
   when 'perfect_assessment'
-    background_color = color_string('assessment')
-    border_color = color_string('assessment')
+    background_colors = color_strings('assessment')
+    border_colors = color_strings('assessment')
   when 'attempted_assessment'
-    background_color = color_string('not_tried')
-    border_color = color_string('assessment')
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('assessment')
   end
 
   steps %{
@@ -38,11 +55,13 @@ def verify_progress(selector, test_result)
     And I wait until jQuery Ajax requests are finished
   }
 
-  # The data for progress bubbles can be loaded  asynchronously, so keep
+  # The data for progress bubbles can be loaded asynchronously, so keep
   # checking until progress is loaded and the bubble is the correct color.
+  # Each status accepts either the Light- or Dark-theme RGB resolution
+  # of its DSCO token (see `color_strings` above for why).
   wait_short_until do
-    element_css_value(selector, 'background-color') == background_color &&
-      element_css_value(selector, 'border-top-color') == border_color
+    background_colors.include?(element_css_value(selector, 'background-color')) &&
+      border_colors.include?(element_css_value(selector, 'border-top-color'))
   end
 end
 

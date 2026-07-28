@@ -1,14 +1,11 @@
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import ProjectNameFailureDialog from './ProjectNameFailureDialog';
@@ -61,32 +58,54 @@ export class PersonalProjectsTableActionsCell extends Component {
     this.props.unsetNameFailure(this.props.projectId);
   };
 
+  buildActionOptions = () => {
+    const {projectId, isFrozen} = this.props;
+    const options = [];
+    if (!isFrozen) {
+      options.push({
+        value: `rename-${projectId}`,
+        label: i18n.rename(),
+        icon: {iconName: 'pencil', iconStyle: 'solid'},
+        onClick: this.onRename,
+      });
+    }
+    options.push({
+      value: `remix-${projectId}`,
+      label: i18n.remix(),
+      icon: {iconName: 'clone', iconStyle: 'solid'},
+      onClick: this.onRemix,
+    });
+    if (!isFrozen) {
+      options.push({
+        value: `delete-${projectId}`,
+        label: i18n.delete(),
+        icon: {iconName: 'circle-xmark', iconStyle: 'solid'},
+        isOptionDestructive: true,
+        onClick: this.onDelete,
+      });
+    }
+    return options;
+  };
+
   render() {
-    const {isEditing, isSaving} = this.props;
+    const {isEditing, isSaving, projectId} = this.props;
 
     return (
       <div>
         {!isEditing && (
-          <QuickActionsCell>
-            {!this.props.isFrozen && (
-              <PopUpMenu.Item onClick={this.onRename}>
-                {i18n.rename()}
-              </PopUpMenu.Item>
-            )}
-            <PopUpMenu.Item onClick={this.onRemix}>
-              {i18n.remix()}
-            </PopUpMenu.Item>
-            {!this.props.isFrozen && <MenuBreak />}
-            {!this.props.isFrozen && (
-              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-                <FontAwesome
-                  icon="circle-xmark"
-                  className={moduleStyles.xIcon}
-                />
-                {i18n.delete()}
-              </PopUpMenu.Item>
-            )}
-          </QuickActionsCell>
+          <ActionDropdown
+            name={`project-actions-${projectId}`}
+            labelText={i18n.quickActions()}
+            size="s"
+            menuPlacement="right"
+            options={this.buildActionOptions()}
+            triggerButtonProps={{
+              className: 'ui-projects-table-dropdown',
+              variant: 'outlined',
+              color: 'secondary',
+              children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+            }}
+          />
         )}
         {isEditing && (
           <div>

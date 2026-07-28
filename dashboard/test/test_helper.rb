@@ -61,9 +61,9 @@ I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
-Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
-Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
-Devise.mailer.default_url_options = Dashboard::Application.config.action_mailer.default_url_options
+Dashboard::Application.routes.default_url_options = {protocol: 'https', host: CDO.dashboard_hostname, port: nil}
+Dashboard::Application.config.action_mailer.default_url_options = Dashboard::Application.routes.default_url_options
+Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_options
 
 require 'rails/test_help'
 
@@ -97,6 +97,9 @@ class ActiveSupport::TestCase
 
     CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
+
+    url_protocol = Dashboard::Application.routes.default_url_options[:protocol]
+    CDO.stubs(default_scheme: "#{url_protocol}:") if url_protocol.present?
 
     set_env :test
 
@@ -180,26 +183,13 @@ class ActiveSupport::TestCase
   include CaptureQueries
   include Curriculum::SharedCourseConstants
 
-  # Create the hourofcode unit and levels from factories, taking care to first
-  # delete any conflicting objects that may have already been created in test
-  # fixtures. This paves the way to remove this unit from the test fixtures
-  # without breaking tests which use this helper.
+  # Create the hourofcode unit and levels from factories.
   #
   # The hourofcode unit has some special properties, such as special routes for
   # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
   # with this exact name.
   def create_hourofcode_unit_and_levels
     unit_name = Unit::HOC_NAME
-
-    # remove any existing fixture-provided unit with this name.
-    # TODO: remove these lines once the hourofcode unit is no longer in fixtures.
-    Unit.find_by_name(unit_name)&.destroy
-    UnitGroup.find_by_name(unit_name)&.destroy
-    CourseOffering.find_by_key(unit_name)&.destroy
-
-    # clear the unit cache to ensure we don't have a stale reference to the
-    # deleted unit and unit group
-    UnitGroup.clear_cache
 
     # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
     unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
@@ -635,8 +625,9 @@ class ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    https!
-    host! CDO.canonical_hostname('studio.code.org')
+    app_url_options = Dashboard::Application.routes.default_url_options
+    host! app_url_options[:host]
+    https! if app_url_options[:protocol].to_s.include?('https')
   end
 
   def signed_in_user_id

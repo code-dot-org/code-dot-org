@@ -44,6 +44,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def config_dir(*dirs)
+  deploy_dir('config', *dirs)
+end
+
 def python_dir(*dirs)
   deploy_dir('python', *dirs)
 end
@@ -84,10 +88,6 @@ def shared_dir(*dirs)
   deploy_dir('shared', *dirs)
 end
 
-def shared_js_dir(*dirs)
-  deploy_dir('shared/js', *dirs)
-end
-
 def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
 end
@@ -102,4 +102,17 @@ end
 
 def shared_constants_file
   lib_dir('cdo', 'shared_constants.rb')
+end
+
+# List of paths that, if changed, should trigger an apps build.
+# This contains the apps source itself and any other dependency that affects the apps build,
+# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
+def apps_build_trigger_paths
+  [
+    apps_dir,
+    config_dir('global_editions'),
+    shared_constants_file,
+    shared_constants_dir,
+    frontend_dir
+  ]
 end

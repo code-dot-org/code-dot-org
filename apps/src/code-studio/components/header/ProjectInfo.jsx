@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 
 import {possibleHeaders} from '../../headerRedux';
 
-import headerVignetteStyles from './HeaderVignette';
 import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import ProjectHeader from './ProjectHeader';
+import remeasureOnFontsReady from './remeasureOnFontsReady';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
@@ -40,6 +40,13 @@ class ProjectInfo extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    this.cancelFontRemeasure = remeasureOnFontsReady(() =>
+      this.setDesiredWidth()
+    );
+  }
+
+  componentWillUnmount() {
+    this.cancelFontRemeasure?.();
   }
 
   componentDidUpdate() {
@@ -55,16 +62,6 @@ class ProjectInfo extends React.Component {
       return null;
     }
 
-    const fullWidth = this.getFullWidth();
-    const actualWidth = this.props.width;
-
-    const vignetteStyle =
-      actualWidth < fullWidth
-        ? this.props.isRtl
-          ? headerVignetteStyles.left
-          : headerVignetteStyles.right
-        : null;
-
     const HeaderComponent = headerComponents[this.props.currentHeader];
     return (
       <div style={styles.headerContainer}>
@@ -75,16 +72,19 @@ class ProjectInfo extends React.Component {
         >
           <HeaderComponent onChangedWidth={() => this.onChangedWidth()} />
         </div>
-        <div className="vignette" style={vignetteStyle} />
       </div>
     );
   }
 }
 
+// The nav-reskin focus ring paints 3px outside the buttons; the overflow
+// guard would clip it at the container edges.
+const navReskin = document.documentElement.classList.contains('nav-reskin');
+
 const styles = {
   headerContainer: {
     position: 'relative',
-    overflow: 'hidden',
+    ...(navReskin ? {} : {overflow: 'hidden'}),
     height: 38,
   },
   projectInfo: {

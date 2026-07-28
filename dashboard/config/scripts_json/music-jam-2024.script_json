@@ -5,12 +5,13 @@
     "login_required": false,
     "properties": {
       "content_area": "hoc",
-      "curriculum_umbrella": "HOC",
+      "curriculum_umbrella": "HOAI",
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "es-ES",
+        "es-LA",
         "es-MX",
         "de-DE",
         "fa-IR",
@@ -40,7 +41,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-26 18:09:20 UTC",
+    "serialized_at": "2026-06-30 14:31:08 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1138,6 +1139,9 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

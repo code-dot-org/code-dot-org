@@ -4,8 +4,20 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "c0159358-089a-4023-bbf8-34796662d7c6",
+          "notice": "Thinking Critically About AI Professional Development",
+          "details": "Before starting this course, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/courses/teaching-thinking-critically-about-ai-2026/units/1",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let's go!"
+        }
+      ],
       "content_area": "curriculum_6_8",
-      "curriculum_umbrella": "CSD",
+      "curriculum_umbrella": "AID",
       "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,11 +29,12 @@
       "topic_tags": [
         "ai"
       ],
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 01:51:28 UTC",
+    "serialized_at": "2026-07-24 13:30:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1275,7 +1288,7 @@
       "key": "6e11c1dc-e283-4e20-a722-816477127805",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They save a chat response to their Backpack to use as evidence and note their findings in their AI Audit Field Notes.\n- Level 3: Students import their saved chat from the Backpack into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to use the Backpack to save both an effective prompt and response, as well as an ineffective example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that when they use AI to build something toward their own purpose, that's AI-assisted creation.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 3, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use AI Chat to test using AI to assist with co-creation. They note their findings in their AI Audit Field Notes. Students should copy an outputs that show good and bad uses of AI for their purpose.\n- Level 3: Students paste their chat into Sketch Lab to use as a piece of evidence for their Generate and Judge project. They can use the shapes and formatting provided in the template to begin creating this section of their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students that are struggling to write effective prompts for the AI Chat. Ask students how changing their prompts affected the output of the AI Chat. As students experiment with prompting and examining the outputs, remind them to copy text that they want to use as an example. Check that students are completing the 'what this tells me' field — that's the one that requires actual analysis, not just observation. Ask: \"Which of your chats represents a good example of how to effectively use AI? Which uses of AI didn't quite work for your purpose?\" Ask students: \"Who is your audience and why would this tip matter to them?\" Listen for students who are connecting their experience to a specific person's needs rather than writing a generic tip. On Level 3, point out to students that there are resources on the template to help them format and visualize their information.",
         "progression_name": "AI-Assisted Creation",
         "tips": [
           {
@@ -2771,7 +2784,7 @@
       "chapter": 7,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "progression": "Try Prompting!"
       },
@@ -3937,24 +3950,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/aid-thinking-critically-about-ai-2025/units/1/resources",
-      "key": "all_resources",
+      "url": "/courses/ai-discoveries-2026/units/1/resources",
+      "key": "all_resources_9",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_9"
       }
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/aid-thinking-critically-about-ai-2025/units/1/vocab",
-      "key": "all_vocabulary",
+      "url": "/courses/ai-discoveries-2026/units/1/vocab",
+      "key": "all_vocabulary_9",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_9"
       }
     },
     {
@@ -3997,17 +4010,6 @@
       },
       "seeding_key": {
         "resource.key": "generate_judge_project_guide"
-      }
-    },
-    {
-      "name": "Guide to Project-Based Learning",
-      "url": "https://docs.google.com/document/d/1ieLxLxiCZQXHzvhXX6ebvlX2ce1KFeKE5NSrPzF9ff4/edit?usp=sharing",
-      "key": "guide_to_project-based_learning",
-      "properties": {
-        "embeddability_type": "embed_and_resource_dropdown"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_project-based_learning"
       }
     },
     {
@@ -4257,19 +4259,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_9",
         "script.name": "thinking-critically-about-ai-2026"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
-        "script.name": "thinking-critically-about-ai-2026"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_project-based_learning",
+        "resource.key": "all_vocabulary_9",
         "script.name": "thinking-critically-about-ai-2026"
       }
     }

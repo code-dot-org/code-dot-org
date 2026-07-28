@@ -2,38 +2,31 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Divider, IconButton, Paper, Tooltip} from '@mui/material';
 import React, {ChangeEvent, useCallback, useId} from 'react';
 
-import {
-  getAppOptionsEditingExemplar,
-  getIsStartMode,
-} from '@cdo/apps/lab2/projects/utils';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
 
-import {ASSET_PATH_PREFIX} from '../constants';
-import {AddNodeRequest, ShapeType} from '../types';
+import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
+import {uploadImageAsset} from '../utils/uploadImageAsset';
 
 import styles from './toolbar.module.scss';
 
 interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
   levelName: string;
-  onUndo: () => void;
-  canUndo: boolean;
-  onRedo: () => void;
-  canRedo: boolean;
+  canvasTool: CanvasTool;
+  onSetCanvasTool: (tool: CanvasTool) => void;
 }
 
 export default function Toolbar({
   onAddNode,
   levelName,
-  onUndo,
-  canUndo,
-  onRedo,
-  canRedo,
+  canvasTool,
+  onSetCanvasTool,
 }: ToolbarProps) {
-  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
+  // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge
+  // whiteboard), so guard the whole chain.
+  const channelId = useAppSelector(state => state.lab?.channel?.id) ?? '';
   // Use a stable ID prefix for accessibility.
   const uid = useId();
 
@@ -51,30 +44,11 @@ export default function Toolbar({
         return;
       }
 
-      const isStarterAssetOrExemplar = !!(
-        getIsStartMode() || getAppOptionsEditingExemplar()
-      );
-      if (!isStarterAssetOrExemplar && !channelId) {
-        return;
-      }
-
-      const extension = file.name.split('.').pop() ?? 'png';
-      const filename = `${createUuid()}.${extension}`;
-      const uploadUrl = isStarterAssetOrExemplar
-        ? `/level_starter_assets/${encodeURIComponent(
-            levelName
-          )}/uuid/${filename}`
-        : `${ASSET_PATH_PREFIX}/${channelId}/${filename}`;
-
       try {
-        if (isStarterAssetOrExemplar) {
-          const bodyData = new FormData();
-          bodyData.append('files[]', file);
-          await HttpClient.post(uploadUrl, bodyData, true);
-        } else {
-          await HttpClient.put(uploadUrl, file);
+        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
+        if (!uploadUrl) {
+          return;
         }
-
         onAddNode({
           type: 'image',
           data: {src: uploadUrl, altText: file.name.replace(/\.[^.]+$/, '')},
@@ -100,57 +74,99 @@ export default function Toolbar({
       aria-label="Canvas tools"
       aria-orientation="vertical"
     >
-      <Tooltip title="Add rectangle" placement="right">
-        <IconButton
-          aria-label="Add rectangle"
-          id={`${uid}-rect`}
-          onClick={() => addShape('rectangle')}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="square" />
-        </IconButton>
-      </Tooltip>
+      <div
+        className={styles.toolbarGroup}
+        role="group"
+        aria-label="Selection tools"
+        {...{[TOUR_GROUP_ATTR]: TOUR_GROUP.selectionTools}}
+      >
+        <Tooltip title="Select" placement="right">
+          <IconButton
+            aria-label="Select tool"
+            aria-pressed={canvasTool === 'cursor'}
+            onClick={() => onSetCanvasTool('cursor')}
+            size="small"
+            color={canvasTool === 'cursor' ? 'primary' : 'tertiary'}
+            variant={canvasTool === 'cursor' ? 'contained' : 'outlined'}
+          >
+            <FontAwesomeV6Icon iconName="arrow-pointer" />
+          </IconButton>
+        </Tooltip>
 
-      <Tooltip title="Add triangle" placement="right">
-        <IconButton
-          aria-label="Add triangle"
-          id={`${uid}-tri`}
-          onClick={() => addShape('triangle')}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="triangle" />
-        </IconButton>
-      </Tooltip>
+        <Tooltip title="Hand Tool" placement="right">
+          <IconButton
+            aria-label="Hand Tool"
+            aria-pressed={canvasTool === 'grab'}
+            onClick={() => onSetCanvasTool('grab')}
+            size="small"
+            color={canvasTool === 'grab' ? 'primary' : 'tertiary'}
+            variant={canvasTool === 'grab' ? 'contained' : 'outlined'}
+          >
+            <FontAwesomeV6Icon iconName="hand" />
+          </IconButton>
+        </Tooltip>
+      </div>
 
-      <Tooltip title="Add circle" placement="right">
-        <IconButton
-          aria-label="Add circle"
-          id={`${uid}-circle`}
-          onClick={() => addShape('circle')}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="circle" />
-        </IconButton>
-      </Tooltip>
+      <Divider className={styles.divider} />
 
-      <Tooltip title="Add diamond" placement="right">
-        <IconButton
-          aria-label="Add diamond"
-          id={`${uid}-diamond`}
-          onClick={() => addShape('diamond')}
-          size="small"
-          color="tertiary"
-          variant="outlined"
-        >
-          <FontAwesomeV6Icon iconName="diamond" />
-        </IconButton>
-      </Tooltip>
+      <div
+        className={styles.toolbarGroup}
+        role="group"
+        aria-label="Shape tools"
+        {...{[TOUR_GROUP_ATTR]: TOUR_GROUP.shapeTools}}
+      >
+        <Tooltip title="Add rectangle" placement="right">
+          <IconButton
+            aria-label="Add rectangle"
+            id={`${uid}-rect`}
+            onClick={() => addShape('rectangle')}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="square" />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Add triangle" placement="right">
+          <IconButton
+            aria-label="Add triangle"
+            id={`${uid}-tri`}
+            onClick={() => addShape('triangle')}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="triangle" />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Add circle" placement="right">
+          <IconButton
+            aria-label="Add circle"
+            id={`${uid}-circle`}
+            onClick={() => addShape('circle')}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="circle" />
+          </IconButton>
+        </Tooltip>
+
+        <Tooltip title="Add diamond" placement="right">
+          <IconButton
+            aria-label="Add diamond"
+            id={`${uid}-diamond`}
+            onClick={() => addShape('diamond')}
+            size="small"
+            color="tertiary"
+            variant="outlined"
+          >
+            <FontAwesomeV6Icon iconName="diamond" />
+          </IconButton>
+        </Tooltip>
+      </div>
 
       <Tooltip title="Add text" placement="right">
         <IconButton
@@ -191,36 +207,6 @@ export default function Toolbar({
         </IconButton>
       </Tooltip>
       <FileInput />
-      <Divider flexItem />
-      <Tooltip title="Undo" placement="right">
-        {/* span wrapper required so Tooltip receives pointer events when button is disabled */}
-        <span>
-          <IconButton
-            aria-label="Undo"
-            onClick={onUndo}
-            disabled={!canUndo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-left" />
-          </IconButton>
-        </span>
-      </Tooltip>
-      <Tooltip title="Redo" placement="right">
-        <span>
-          <IconButton
-            aria-label="Redo"
-            onClick={onRedo}
-            disabled={!canRedo}
-            size="small"
-            color="tertiary"
-            variant="outlined"
-          >
-            <FontAwesomeV6Icon iconName="rotate-right" />
-          </IconButton>
-        </span>
-      </Tooltip>
     </Paper>
   );
 }

@@ -24,6 +24,20 @@
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :public,
+    properties: :public,
+    created_at: :public,
+    updated_at: :public,
+    published_state: :public,
+    instruction_type: :public,
+    instructor_audience: :public,
+    participant_audience: :public,
+  )
+
   include Curriculum::SharedCourseConstants
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
@@ -387,9 +401,7 @@ class UnitGroup < ApplicationRecord
   # @param section_id [Integer, String, nil] The ID of the section to include in the query parameter. Defaults to nil.
   # @return [String] The URL for the course, which may include a section ID query parameter.
   def link(section_id: nil)
-    path = course_path(self)
-    path += "?section_id=#{section_id}" if section_id
-    path
+    course_path(self, section_id:)
   end
 
   def summarize_short

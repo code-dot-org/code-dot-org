@@ -1,9 +1,9 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
 import React from 'react';
 
 import {ModelDescription} from '@cdo/apps/aichat/types';
-import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
 
 import ModelDescriptionPanel from './ModelDescriptionPanel';
 
@@ -24,41 +24,33 @@ const CompareModelsDialog: React.FunctionComponent<{
     selectedModelId;
 
   return (
-    <AccessibleDialog
+    <Modal
+      className={styles.compareModelsModal}
+      title="Compare Models"
       onClose={onClose}
-      className={styles.modelComparisonDialog}
-    >
-      <div className={styles.headerContainer}>
-        <Typography variant="h3" gutterBottom>
-          Compare Models
-        </Typography>
-      </div>
-      <hr />
-      <div className={styles.modelComparisonContainer}>
-        <ModelDescriptionPanel
-          initialSelectedModelId={chosenModelLeft}
-          availableModels={availableModels}
-          dropdownName="choose-model-1"
-        />
-        <ModelDescriptionPanel
-          initialSelectedModelId={chosenModelRight}
-          availableModels={availableModels}
-          dropdownName="choose-model-2"
-        />
-      </div>
-      <hr />
-      <div className={styles.rightAlign}>
-        <MuiButton
-          variant="contained"
-          color="primary"
-          size="medium"
-          onClick={onClose}
-          type="button"
+      closeLabel={i18n.closeDialog()}
+      customContent={
+        <div
+          id="dsco-dialog-description"
+          className={styles.modelComparisonContainer}
         >
-          {'Finish'}
-        </MuiButton>
-      </div>
-    </AccessibleDialog>
+          <ModelDescriptionPanel
+            initialSelectedModelId={chosenModelLeft}
+            availableModels={availableModels}
+            dropdownName="choose-model-1"
+          />
+          <ModelDescriptionPanel
+            initialSelectedModelId={chosenModelRight}
+            availableModels={availableModels}
+            dropdownName="choose-model-2"
+          />
+        </div>
+      }
+      primaryButtonProps={{
+        children: 'Finish',
+        onClick: onClose,
+      }}
+    />
   );
 };
 

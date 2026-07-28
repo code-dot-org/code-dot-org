@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T23:50:37.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How Old Are You?",
+    "long_instructions": "You’re building a chatbot that asks how old the user is and tells them how old they’ll be next year, but the program has two bugs.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Try running the program and see what happens.\r\n2. The first bug is that we need to convert the user’s input to an `int` before saving it in a variable. Fix the bug by converting the input to an `int`!\r\n3. The second bug is that the program is printing the wrong number. Fix this bug too!\r\n\r\n**💻 Coding Tip**\r\n\r\nTo convert input to an integer, you can place the call to the `input` function inside the call to the `int` function. For example:\r\n\r\n```\r\nint(input(\"Pick a number: \"))\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO: Fix the two bugs in this program that prevent it from working.\nage = input(\"How old are you? \")\nnext_age = age + 1\n\nprint(f\"Next year, you'll be {age}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:50:42 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-27 23:50:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

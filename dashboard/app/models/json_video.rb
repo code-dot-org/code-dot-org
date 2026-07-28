@@ -34,7 +34,7 @@ class JSONVideo < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       seed_record(path)
     rescue => exception
-      CDO.log.error "Failed to seed json video #{path}: #{exception.message}"
+      raise "Failed to seed json video #{path}: #{exception.message}"
     end
   end
 
@@ -48,6 +48,21 @@ class JSONVideo < ApplicationRecord
       key: key,
       description: description,
       audience: audience,
+    }
+  end
+
+  # Shape consumed by the lesson editor's Tutor Deep Dive section. When a
+  # lesson is given, objectiveIds is scoped to that lesson's objectives so the
+  # editor only surfaces (and only mutates) associations it is responsible for.
+  def summarize_for_lesson_edit(lesson = nil)
+    scoped = lesson ? objectives.where(lesson_id: lesson.id) : objectives
+    {
+      id: id,
+      key: key,
+      description: description,
+      audience: audience,
+      s3Uri: s3_uri,
+      objectiveIds: scoped.pluck(:id),
     }
   end
 

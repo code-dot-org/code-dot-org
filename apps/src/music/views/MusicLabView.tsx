@@ -21,6 +21,7 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import PairingNavigatorAlert from '@cdo/apps/lab2/views/alerts/pairingNavigator';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import GuideInstructions from '@cdo/apps/lab2/views/components/guide/GuideInstructions';
@@ -437,6 +438,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               {teacherViewingStudent && (
                 <TeacherViewingStudentProjectAlert inWorkspaceContainer />
               )}
+              <PairingNavigatorAlert
+                inWorkspaceContainer
+                isTeacherViewingStudent={teacherViewingStudent}
+              />
               {viewingOldVersion && (
                 <div
                   id="viewingOldVersionBanner"
@@ -487,7 +492,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   appName="music"
                 />
               )}
-              <div role="application" id={blocklyDivId} />
+              <div role="application" id={blocklyDivId} data-theme="Dark" />
               {showAdvancedControls && (
                 <div className={moduleStyles.advancedControlsContainer}>
                   <AdvancedControls />

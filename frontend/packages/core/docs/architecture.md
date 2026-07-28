@@ -4,7 +4,7 @@ This package is intended for import in first-party Code.org web applications and
 
 ## Singletons instantiated at module load
 
-Three singletons are created the moment their module is first imported — not lazily:
+These singletons are created the moment their module is first imported — not lazily:
 
 **`CodeStudioConfig`** ([`src/config/SiteConfig.ts`](../src/config/SiteConfig.ts))
 
@@ -34,6 +34,15 @@ The `ky` instance — including `prefixUrl` and whether credentials are sent —
 
 EventEmitter-based singleton that integrates with the LocalizeJS third-party library. Emits `change` when the locale switches. `useLocalization()` subscribes to this event. Available via the `@code-dot-org/core/plugins/localization` sub-path export.
 
+**`consent`** ([`src/plugins/consent/store.ts`](../src/plugins/consent/store.ts))
+
+Module-level store holding the current cookie-consent state, starting at the
+strictly-necessary-only default (deny-until-known). `consentPlugin` connects
+the host page's OneTrust globals to it at `onCoreReady`; `useConsent()`
+subscribes via `useSyncExternalStore`. Unlike the config/api/localization
+singletons it does not read `window` at import time. Available via the
+`@code-dot-org/core/plugins/consent` sub-path export.
+
 **`observability`** ([`src/plugins/observability/index.ts`](../src/plugins/observability/index.ts))
 
 Module-level singleton API backed by a no-op client until `observabilityPlugin`
@@ -43,6 +52,14 @@ installs a deferred adapter synchronously so module-level calls made
 immediately after `initializeCore()` are buffered while the async factory
 dynamically imports the Sentry adapter. Log and metric sampling are
 session-based via an observability-owned session ID stored in `sessionStorage`.
+
+**`defaultStore`** ([`src/redux/store.ts`](../src/redux/store.ts))
+
+The global redux store, created with only a built-in bookkeeping slice.
+Feature packages own their slices and hosts inject them at runtime via
+`injectSlices`. Available via the `@code-dot-org/core/redux` sub-path export;
+the injection convention is documented in
+[`src/redux/README.md`](../src/redux/README.md).
 
 ## Plugin model
 
@@ -73,12 +90,12 @@ This is only needed for code that accesses `window.__CODE_STUDIO__` directly (e.
 
 ## Constraints and failure modes
 
-| Constraint                                           | What breaks                                                |
-| ---------------------------------------------------- | ---------------------------------------------------------- |
-| All three singletons read `window` at import time    | Throws in Node/SSR; do not import this package server-side |
-| `DashboardApiClient` environment is frozen at import | Changing hostname after load has no effect on API routing  |
-| `initializeCore()` is idempotent                     | Safe to call multiple times; subsequent calls are no-ops   |
-| Main `index.ts` must not re-export plugin sub-paths  | Re-exporting would defeat sub-path tree-shaking            |
+| Constraint                                                      | What breaks                                                |
+| --------------------------------------------------------------- | ---------------------------------------------------------- |
+| Config/api/localization singletons read `window` at import time | Throws in Node/SSR; do not import this package server-side |
+| `DashboardApiClient` environment is frozen at import            | Changing hostname after load has no effect on API routing  |
+| `initializeCore()` is idempotent                                | Safe to call multiple times; subsequent calls are no-ops   |
+| Main `index.ts` must not re-export plugin sub-paths             | Re-exporting would defeat sub-path tree-shaking            |
 
 ## What to update when the design changes
 

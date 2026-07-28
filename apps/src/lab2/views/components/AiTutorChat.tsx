@@ -11,6 +11,7 @@ import {
   ChatButtonData,
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
@@ -42,6 +43,9 @@ interface AiTutorChatProps {
   isLessonDeepDive?: boolean;
   lessonId?: number;
   disabledState?: AiChatDisabledState;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  initialWelcomeMessage?: string;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -58,6 +62,9 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   isLessonDeepDive = false,
   lessonId,
   disabledState,
+  onAssetUploaded,
+  onAssetRemoved,
+  initialWelcomeMessage,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -150,13 +157,18 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         multimodalEnabled={aiTutorMultimodalEnabled}
         levelName={levelName}
         channelId={channelId}
+        onAssetUploaded={onAssetUploaded}
+        onAssetRemoved={onAssetRemoved}
         hideModelChangeMessage={true}
-        responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
+        jsonSchemaResponseCallback={
+          aiTutorResponseSchemaSettings?.jsonSchemaResponseCallback
+        }
         hasInstructionsDrawer={hasInstructionsDrawer}
         lessonId={lessonId}
         disabledState={disabledState}
         renderLastMessagePostText={renderLastMessagePostText}
         disableSendingMessages={viewingOldVersion}
+        initialWelcomeMessage={initialWelcomeMessage}
       />
     </div>
   );

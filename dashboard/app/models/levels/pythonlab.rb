@@ -40,9 +40,11 @@ class Pythonlab < Level
     serialized_maze
     widget_view
     widget_view_allow_show_code
+    ai_tutor_prompt_settings
   )
 
   validate :has_correct_multiple_choice_answer?
+  validate :validate_ai_tutor_prompt_settings
   before_save :clean_up_predict_settings, :clean_up_mini_app_settings, :parse_maze
 
   def self.create_from_level_builder(params, level_params)
@@ -124,5 +126,18 @@ class Pythonlab < Level
       raise ArgumentError.new("Large mazes cannot have paint buckets")
     end
     self.serialized_maze = maze
+  end
+
+  private def validate_ai_tutor_prompt_settings
+    return if ai_tutor_prompt_settings.nil?
+
+    answer_types = ai_tutor_prompt_settings['answerTypes']
+    unless answer_types.is_a?(Array) && answer_types.all?(String)
+      errors.add(:ai_tutor_prompt_settings, 'answerTypes must be an array of strings.')
+    end
+    customizations = ai_tutor_prompt_settings['answerTypeCustomizations']
+    if customizations.present? && !(customizations.is_a?(Hash) && customizations.values.all?(String))
+      errors.add(:ai_tutor_prompt_settings, 'answerTypeCustomizations must be an object mapping answerType to string.')
+    end
   end
 end

@@ -3,6 +3,7 @@ import {StepOptions, Tour} from 'shepherd.js';
 
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
+import {recordOnboardingTourAbandonment} from './productTourHelpers';
 import {createShepherdTour} from './shepherdTourFactory';
 
 export interface UseOnboardingTourProps {
@@ -11,6 +12,8 @@ export interface UseOnboardingTourProps {
   // saved to sessionStorage under this key so the tour can pick up where it
   // left off when the new page loads.
   sessionStorageKey: string;
+  // Identifies the tour in analytics events (e.g. 'create_class_section').
+  tourName: string;
   onComplete?: () => void;
   additionalStepOptions?: Partial<StepOptions>;
 }
@@ -23,6 +26,7 @@ export interface UseOnboardingTourProps {
 const useOnboardingTour = ({
   getSteps,
   sessionStorageKey,
+  tourName,
   onComplete,
   additionalStepOptions,
 }: UseOnboardingTourProps) => {
@@ -46,11 +50,18 @@ const useOnboardingTour = ({
     });
 
     tour.on('cancel', () => {
+      recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName);
       trySetSessionStorage(sessionStorageKey, '');
     });
 
     return tour;
-  }, [additionalStepOptions, getSteps, onComplete, sessionStorageKey]);
+  }, [
+    additionalStepOptions,
+    getSteps,
+    onComplete,
+    sessionStorageKey,
+    tourName,
+  ]);
 
   return {tour};
 };

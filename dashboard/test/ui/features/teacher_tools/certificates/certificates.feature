@@ -3,6 +3,7 @@ Feature: Certificate page features
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
+  @contentful_key
   Scenario: share page preserves certificate when redirecting
   # Reset lesson data (otherwise it will pull a cached certificate from
   # other tests)
@@ -52,7 +53,8 @@ Feature: Certificate page features
     When I press the first "#uitest-certificate img" element to load a new page
     And I wait until current URL contains "/certificates/"
     Then I wait to see an image "/certificate_images/"
-    And I see no difference for "certificate page"
+    # This page is a pure image certificate with no FA icons.
+    And I see no difference for "certificate page" without waiting for Font Awesome to load
 
     When I press the first "#certificate-share img" element to load a new page
     And I wait until current URL contains "/print_certificates/"

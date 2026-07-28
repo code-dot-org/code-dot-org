@@ -46,7 +46,7 @@ export const prepareBlocklyForEmbedding = function (
   }
   Blockly.assetUrl = assetUrl;
   Blockly.typeHints = true;
-  Blockly.Css.inject(true, 'media');
+  Blockly.Css.inject(document.body, true, 'media');
 
   // Spritelab-specific logic but not harmful to other labs.
   registerReducers({

@@ -1,11 +1,16 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {useFlaggedImage, useZoomTracker} from '@codebridge/hooks';
+import {
+  useFlaggedImage,
+  useSyncValidationOverride,
+  useZoomTracker,
+} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
   LayoutProps,
@@ -15,7 +20,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
-import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
+import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -42,16 +47,21 @@ type CodebridgeProps = {
   onRun?: OnRunFunction;
   onStop?: () => void;
   sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorContextHelper?: AiTutorContextHelper<object>;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   tutorVideos?: JsonVideoFileMetadata[];
   secondaryBackpackAppNames?: AppName[];
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
+  aiTutorInitialWelcomeMessage?: string;
+  allowMultipleValidationFiles?: boolean;
+  enableUserAddedSelectionContext?: boolean;
   hideResourcePanel?: boolean;
 };
 
@@ -63,16 +73,21 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
     sendConsoleInput,
+    sendTypedInputMessage,
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
-    aiTutorContextHelper,
     aiTutorSystemPrompt,
     aiTutorResponseSchemaSettings,
     tutorVideos,
     secondaryBackpackAppNames,
+    onAssetUploaded,
+    onAssetRemoved,
+    aiTutorInitialWelcomeMessage,
+    allowMultipleValidationFiles,
+    enableUserAddedSelectionContext = false,
     hideResourcePanel,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
@@ -152,12 +167,12 @@ export const Codebridge = React.memo(
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
       }
-      // Since 'horizontal' is an optional layout (not all labs have it),
-      // we need to add a fallback to 'vertical' to avoid type errors.
-      return (
-        config.layoutComponents[currentLayout] ||
-        config.layoutComponents.vertical
-      );
+      // A lab supplies at least one of horizontal/vertical but not necessarily
+      // both, so fall back to whichever it does provide. The config type
+      // guarantees one is present, but the dynamic key access can't prove it.
+      return (config.layoutComponents[currentLayout] ||
+        config.layoutComponents.vertical ||
+        config.layoutComponents.horizontal)!;
     }, [
       appName,
       config.activeLayout,
@@ -190,6 +205,9 @@ export const Codebridge = React.memo(
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
+    // Keep the validation override in sync with the project's validation files.
+    useSyncValidationOverride();
+
     const dispatch = useAppDispatch();
 
     // Set view code to false if level is switched for any levels in widget view.
@@ -213,17 +231,22 @@ export const Codebridge = React.memo(
           onRun,
           onStop,
           sendConsoleInput,
+          sendTypedInputMessage,
           levelProperties,
           projectPickerSettings,
           hiddenContextCallback,
           onImageFlagged,
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
-          aiTutorContextHelper,
           aiTutorResponseSchemaSettings,
           aiTutorSystemPrompt,
           tutorVideos,
           aiTutorDisabled,
+          onAssetUploaded,
+          onAssetRemoved,
+          aiTutorInitialWelcomeMessage,
+          allowMultipleValidationFiles,
+          enableUserAddedSelectionContext,
         }}
       >
         <BackpackAPIContext.Provider value={backpackContext}>

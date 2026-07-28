@@ -1,19 +1,19 @@
-@import "color.scss";
-
-$thumbnail-size: 105px;
+$thumbnail-size: 115px;
 $thumbnail-border-width: 1px;
+$thumbnail-padding: 2px;
+$thumbnail-root-padding: 10px;
 $hover-plus-size: 24px;
+$thumbnail-margin-height: 10px;
 
-// Used for the width and height properties of AnimationPreview
 :export {
-  previewSize: calc(($thumbnail-size - 2 * $thumbnail-border-width) / 1px);
+  previewSize: $thumbnail-size - $thumbnail-root-padding - 2 * $thumbnail-border-width - 2 * $thumbnail-padding;
 }
 
 .root {
   float: left;
   width: $thumbnail-size;
   text-align: center;
-  margin: 1px 1px 10px 1px;
+  margin: 1px 1px $thumbnail-margin-height 1px;
   position: relative;
   border: 0;
   padding-right: 10px;
@@ -21,32 +21,37 @@ $hover-plus-size: 24px;
 }
 
 .thumbnail {
-  height: $thumbnail-size;
+  height: $thumbnail-size - $thumbnail-margin-height;
   width: 100%;
   border-style: solid;
-  border-color: $light_gray;
+  border-color: var(--borders-neutral-strong);
   border-width: $thumbnail-border-width;
   border-radius: 12px;
   padding: 2px;
   cursor: pointer;
-  background: none;
+  // Explicit transparent to override common.scss `button { background-color: #eee }`.
+  background-color: transparent;
+  background-image: none;
   box-shadow: none;
   margin: 0 0 0 0;
-  outline: none;
+  position: relative;
 }
 
 .thumbnailIcon {
-  color: $white;
-  background-color: $purple;
-  border-color: $purple;
-  font-size: calc($thumbnail-size / 2);
+  color: var(--text-neutral-white-fixed);
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+  font-size: calc(($thumbnail-size - $thumbnail-margin-height) / 2);
   &:hover {
-    background-color: $light_purple;
-    border-color: $light_purple;
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
   }
   &:focus {
-    background-color: $light_purple;
-    border-color: $light_purple;
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+  .label {
+    color: var(--text-neutral-white-fixed);
   }
 }
 
@@ -59,6 +64,7 @@ $hover-plus-size: 24px;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
+  color: var(--text-neutral-primary);
 }
 
 .noLabel {
@@ -81,20 +87,25 @@ $hover-plus-size: 24px;
   height: $hover-plus-size;
   width: $hover-plus-size;
   border-radius: 5px;
-  top: calc($thumbnail-size / 2 - $hover-plus-size / 2);
-  left: calc($thumbnail-size / 2 - $hover-plus-size / 2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .hoverIcon {
-  color: $purple;
-  background-color: $white;
-  border-color: $purple;
+  color: var(--text-brand-purple-primary);
+  background-color: var(--background-neutral-white-fixed);
+  border-color: var(--borders-brand-purple-primary);
 }
 
 .selectIcon {
-  color: $white;
-  background-color: $level_perfect;
-  border-color: $level_perfect;
+  color: var(--text-neutral-white-fixed);
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
 }
 
 .multiSelectBorder {
@@ -106,13 +117,13 @@ $hover-plus-size: 24px;
 }
 
 .hoverBorder {
-  border-color: $purple;
+  border-color: var(--borders-brand-purple-primary);
 }
 
 .selectBorder {
   border-width: 3px;
   padding: 0;
-  border-color: $level_perfect;
+  border-color: var(--borders-success-primary);
 }
 
 .block {

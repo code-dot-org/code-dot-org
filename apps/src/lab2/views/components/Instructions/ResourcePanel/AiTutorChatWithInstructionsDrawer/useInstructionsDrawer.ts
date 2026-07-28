@@ -2,24 +2,29 @@ import {throttle} from 'lodash';
 import {useState, useCallback, useMemo, useEffect, useRef} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 const MIN_CHAT_HEIGHT = 133; // Minimum so that user message editor is always visible + some chat.
 const MIN_INSTRUCTIONS_HEIGHT = 150;
 const DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT = 250; // Initial height needed before instructions content is measured.
-// Matches .instructionsDrawer padding (8px top + 8px bottom).
-const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 16;
+// The .instructionsScrollArea vertical padding (10px top + bottom); the drawer's
+// full height is the measured content height plus this.
+const INSTRUCTIONS_DRAWER_VERTICAL_PADDING_PX = 20;
 
 interface UseInstructionsDrawerOptions {
-  isCollapsedByDefault: boolean;
   isPredictLevel?: boolean;
+  // True when the AI Tutor tab is selected. When false (Instructions tab), the
+  // chat is hidden and the instructions fill the whole panel.
+  aiTutorActive: boolean;
 }
 
 export const useInstructionsDrawer = ({
-  isCollapsedByDefault,
   isPredictLevel,
+  aiTutorActive,
 }: UseInstructionsDrawerOptions) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const instructionsScrollAreaRef = useRef<HTMLDivElement>(null);
@@ -41,7 +46,7 @@ export const useInstructionsDrawer = ({
   const [maxInstructionsHeight, setMaxInstructionsHeight] = useState<
     number | undefined
   >(undefined);
-  const [isCollapsed, setIsCollapsed] = useState(isCollapsedByDefault);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [showScrollFade, setShowScrollFade] = useState(false);
 
   const {
@@ -59,6 +64,21 @@ export const useInstructionsDrawer = ({
       instructionsHeightAtDragStartRef.current = rawInstructionsHeight;
     },
   });
+
+  // Lab2 swaps levels without remounting this hook, so its height state would
+  // carry over: a stale rawInstructionsHeight makes the next expand size to the
+  // previous level's drawer. Reset on each level load so every level measures its
+  // own instructions.
+  const resetHeightForNewLevel = useCallback(() => {
+    hasSetInitialHeightFromContentRef.current = false;
+    hasUserManuallyResizedRef.current = false;
+    setMaxInstructionsHeight(undefined);
+    setRawInstructionsHeight(DEFAULT_INITIAL_INSTRUCTIONS_HEIGHT);
+  }, [setRawInstructionsHeight]);
+  useLifecycleNotifier(
+    LifecycleEvent.LevelLoadCompleted,
+    resetHeightForNewLevel
+  );
 
   // Report increase/decrease when drag ends; use effect so we read the final
   // position after state has updated (avoids stale closure in onResizeEnd).
@@ -88,6 +108,12 @@ export const useInstructionsDrawer = ({
     }
     const availableHeight = containerElement.clientHeight - RESIZE_BAR_SIZE_PX;
     setContainerAvailableHeight(availableHeight);
+    // Instructions tab (chat hidden): instructions fill the whole panel,
+    // regardless of the collapsed-drawer state which only applies to the chat tab.
+    if (!aiTutorActive) {
+      setInstructionsHeight(containerElement.clientHeight);
+      return;
+    }
     if (isCollapsed) {
       setInstructionsHeight(0);
       return;
@@ -95,7 +121,7 @@ export const useInstructionsDrawer = ({
     setInstructionsHeight(
       Math.min(rawInstructionsHeight, availableHeight - MIN_CHAT_HEIGHT)
     );
-  }, [isCollapsed, rawInstructionsHeight]);
+  }, [aiTutorActive, isCollapsed, rawInstructionsHeight]);
 
   const throttledAdjustInstructionsHeight = useMemo(
     () => throttle(adjustInstructionsHeight, 30),
@@ -165,10 +191,6 @@ export const useInstructionsDrawer = ({
     };
   }, [isCollapsed, isPredictLevel, setRawInstructionsHeight]);
 
-  useEffect(() => {
-    setIsCollapsed(isCollapsedByDefault);
-  }, [isCollapsedByDefault]);
-
   // Keep refs in sync with current values.
   useEffect(() => {
     rawInstructionsHeightRef.current = rawInstructionsHeight;
@@ -181,8 +203,8 @@ export const useInstructionsDrawer = ({
   // Measure the instructions content height on load and when it changes,
   // (e.g., details elements expanded/collapsed), and set the drawer height to match.
   useEffect(() => {
-    // Skip if instructions drawer is collapsed (unmounted).
-    // Reset the flag in cleanup so the next expand always restores to appropriate height.
+    // Skip while the drawer is collapsed; its content can't be measured then.
+    // Reset the flags in cleanup so the next expand re-measures from scratch.
     if (isCollapsed) {
       return () => {
         hasSetInitialHeightFromContentRef.current = false;
@@ -276,13 +298,34 @@ export const useInstructionsDrawer = ({
     setIsCollapsed(prev => !prev);
   }, [isCollapsed]);
 
-  const chatHeight =
+  // Whole-container height, derived synchronously (instructionsHeight lags a frame).
+  const fullHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : containerAvailableHeight + RESIZE_BAR_SIZE_PX;
+
+  // Open-drawer height, computed independent of the current tab so the chat below
+  // stays the same size across a tab switch.
+  const activeInstructionsHeight =
     containerAvailableHeight === undefined
       ? undefined
       : isCollapsed
-      ? containerAvailableHeight
+      ? 0
+      : Math.min(
+          rawInstructionsHeight,
+          containerAvailableHeight - MIN_CHAT_HEIGHT
+        );
+
+  // The visible chat area below the drawer. Sized to it (rather than full height
+  // behind the opaque drawer) so messages stay readable below the drawer instead
+  // of being occluded by it.
+  const chatContentHeight =
+    containerAvailableHeight === undefined
+      ? undefined
+      : isCollapsed
+      ? fullHeight
       : Math.max(
-          containerAvailableHeight - (instructionsHeight ?? 0),
+          containerAvailableHeight - (activeInstructionsHeight ?? 0),
           MIN_CHAT_HEIGHT
         );
 
@@ -291,7 +334,8 @@ export const useInstructionsDrawer = ({
     instructionsScrollAreaRef,
     instructionsContentRef,
     instructionsHeight,
-    chatHeight,
+    fullHeight,
+    chatContentHeight,
     isCollapsed,
     showScrollFade,
     separatorProps,
