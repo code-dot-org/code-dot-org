@@ -1,5 +1,6 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {CookieBannerComponent} from '../components/cookie-banner';
 import {FooterComponent} from '../components/footer';
 import {GdprDialogComponent} from '../components/gdpr-dialog';
 import {HeaderComponent} from '../components/header';
@@ -26,6 +27,9 @@ export class BasePage {
   /** OneTrust cookie-consent banner and SDK script tags. */
   readonly oneTrust: OneTrustComponent;
 
+  /** Legacy GDPR cookie-consent banner — a global overlay that can appear on any page. */
+  readonly cookieBanner: CookieBannerComponent;
+
   /** Site-wide CAP parental-permission nag modal — a global overlay that can appear on any page. */
   readonly parentalPermissionNagModal: ParentalPermissionNagModalComponent;
 
@@ -43,6 +47,7 @@ export class BasePage {
     this.gdprDialog = new GdprDialogComponent(page);
     this.studentInfoModal = new StudentInfoModalComponent(page);
     this.oneTrust = new OneTrustComponent(page);
+    this.cookieBanner = new CookieBannerComponent(page);
     this.parentalPermissionNagModal = new ParentalPermissionNagModalComponent(
       page,
     );
