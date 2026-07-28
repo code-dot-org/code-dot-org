@@ -1,5 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
+import {darken} from '@mui/material/styles';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -8,6 +9,10 @@ import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import SkipButton from './SkipButton';
+
+const RUN_BUTTON_BACKGROUND = 'var(--background-accent-orange-primary)';
+const RUN_BUTTON_BACKGROUND_HOVER = 'var(--background-accent-orange-strong)';
+const RUN_BUTTON_FOREGROUND = 'var(--text-neutral-white-fixed)';
 
 export const FinishButton = () => (
   <MuiButton
@@ -20,54 +25,66 @@ export const FinishButton = () => (
   </MuiButton>
 );
 
-export const RunButton = props => (
-  <MuiButton
-    id={props.id || 'runButton'}
-    variant="contained"
-    size="medium"
-    color="primary"
-    className={props.hidden ? 'hide' : ''}
-    sx={{
-      backgroundColor: 'var(--background-accent-orange-primary)',
-      color: 'var(--text-neutral-white-fixed)',
-      '&:hover, &.force-hover, &[data-force-hover="true"]': {
-        backgroundColor: 'var(--background-accent-orange-strong)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:focus, a&:focus': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:active, a&:active': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.Mui-disabled': {
-        backgroundColor: 'var(--background-neutral-octonary)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading': {
-        backgroundColor: 'var(--background-neutral-white-fixed)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
-        color: 'transparent',
-      },
-      '&.MuiButton-loading i': {
-        color: 'var(--text-neutral-primary)',
-      },
-    }}
-    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
-  >
-    {props.runButtonText || msg.runProgram()}
-  </MuiButton>
-);
+export const RunButton = props => {
+  const backgroundColor = props.setupBlockColor ?? RUN_BUTTON_BACKGROUND;
+  const hoverColor = props.setupBlockColor
+    ? darken(props.setupBlockColor, 0.12)
+    : RUN_BUTTON_BACKGROUND_HOVER;
+
+  return (
+    <MuiButton
+      id={props.id || 'runButton'}
+      variant="contained"
+      size="medium"
+      color="primary"
+      className={props.hidden ? 'hide' : ''}
+      sx={{
+        backgroundColor,
+        color: RUN_BUTTON_FOREGROUND,
+        '&:hover, &.force-hover, &[data-force-hover="true"]': {
+          backgroundColor: hoverColor,
+          color: RUN_BUTTON_FOREGROUND,
+        },
+        '&:focus, a&:focus': {
+          color: RUN_BUTTON_FOREGROUND,
+        },
+        '&:active, a&:active': {
+          color: RUN_BUTTON_FOREGROUND,
+        },
+        '&.Mui-disabled': {
+          backgroundColor: 'var(--background-neutral-octonary)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.MuiButton-loading': {
+          backgroundColor: 'var(--background-neutral-white-fixed)',
+          color: 'var(--text-neutral-white-fixed)',
+        },
+        '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
+          color: 'transparent',
+        },
+        '&.MuiButton-loading i': {
+          color: 'var(--text-neutral-primary)',
+        },
+      }}
+      startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
+    >
+      {props.runButtonText || msg.runProgram()}
+    </MuiButton>
+  );
+};
 RunButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
   style: PropTypes.object,
   runButtonText: PropTypes.string,
   icon: PropTypes.node,
+  setupBlockColor: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
+
+const ThemedRunButton = connect(state => ({
+  setupBlockColor: state.blockly?.setupBlockColor,
+}))(RunButton);
 
 // The reset button is hidden by default,
 // then shown either by passing in style props to override
@@ -104,7 +121,7 @@ export const UnconnectedGameButtons = props => (
     <ProtectedStatefulDiv id="gameButtons">
       {!props.noRunResetButton && (
         <>
-          <RunButton
+          <ThemedRunButton
             runButtonText={props.runButtonText}
             icon={props.runButtonIcon}
             hidden={props.hideRunButton}

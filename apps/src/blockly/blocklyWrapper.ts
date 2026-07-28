@@ -69,6 +69,7 @@ import {
   storeWorkspaceWidth,
   updateBlockLimits,
 } from './eventHandlers';
+import applyDscoThemeColors from './themes/applyDscoThemeColors';
 import {
   CdoDeuteranopiaDarkTheme,
   CdoProtanopiaDarkTheme,
@@ -100,6 +101,7 @@ import {
   initializeVariableLocalization,
   isDarkTheme,
   loadBlocksToWorkspace,
+  publishSetupBlockColor,
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
@@ -506,6 +508,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     xml,
     options = {}
   ) {
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme]);
     const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
@@ -566,6 +569,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    applyDscoThemeColors([CdoTheme, CdoDarkTheme]);
+
     // Ensure we do not translate content within the blockly workspace
     if (typeof container !== 'string') {
       (container as HTMLElement).classList.add('notranslate');
@@ -767,6 +772,12 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     trashcan.init();
 
     blocklyWrapper.setMainWorkspace(workspace);
+    publishSetupBlockColor(workspace.getTheme());
+    workspace.addChangeListener(event => {
+      if (event.type === BlocklyCore.Events.THEME_CHANGE) {
+        publishSetupBlockColor(workspace.getTheme());
+      }
+    });
 
     if (optOptionsExtended.useBlocklyDynamicCategories) {
       const originalVariableFlyoutCategory =
