@@ -23,7 +23,17 @@
   }
 
   & .modal-content {
-    all: unset;
+    // Bootstrap is @imported inside this block (above), so its own
+    // .modal-content rule compiles to this exact selector and specificity --
+    // only source order separates the two. `all: unset` used to sit here and
+    // win, which dropped bootstrap's white panel along with the chrome it was
+    // aimed at. Unset only the chrome; let the panel itself stand.
+    border: unset;
+    box-shadow: unset;
+
+    // Bootstrap carries no padding on .modal-content, and the header/body/
+    // footer rules below clear theirs, so the inset has to live here.
+    padding: var(--spacing-p-s);
 
     & form {
       all: unset;
