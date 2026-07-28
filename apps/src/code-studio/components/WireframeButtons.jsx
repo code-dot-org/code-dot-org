@@ -33,6 +33,8 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   playlab_legacy: '/s/playlab',
 };
 
+const SEND_TO_PHONE_PANEL_ID = 'send-to-phone-panel';
+
 /**
  * Shows buttons for wireframe version, including "View code", "Make my own app", and "Send to phone".
  */
@@ -49,7 +51,7 @@ export default class WireframeButtons extends React.Component {
   };
 
   handleClickSendToPhone = () => {
-    this.setState({clickedSendToPhone: !this.state.clickedSendToPhone});
+    this.setState(state => ({clickedSendToPhone: !state.clickedSendToPhone}));
   };
 
   render() {
@@ -109,16 +111,15 @@ NewProjectButton.propTypes = {
   url: PropTypes.string.isRequired,
 };
 
-// Toggles the send-to-phone form below. Switches to the outlined variant while
-// the form is open so the button reads as pressed.
 const SendToPhoneButton = ({active, onClick}) => (
   <MuiButton
-    variant={active ? 'outlined' : 'contained'}
+    variant="contained"
     color="primary"
     size="small"
     type="button"
     onClick={onClick}
     aria-expanded={active}
+    aria-controls={SEND_TO_PHONE_PANEL_ID}
     startIcon={<FontAwesomeV6Icon iconName="mobile-screen-button" />}
   >
     {i18n.sendToPhone()}
@@ -132,7 +133,7 @@ SendToPhoneButton.propTypes = {
 // ESLint doesn't seem to understand our inherited-proptypes pattern here
 /* eslint-disable react/prop-types */
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
-  <div className="WireframeButtons_active">
+  <div className="WireframeButtons_active" id={SEND_TO_PHONE_PANEL_ID}>
     <SendToPhone
       styles={styles.sendToPhone}
       channelId={channelId}
