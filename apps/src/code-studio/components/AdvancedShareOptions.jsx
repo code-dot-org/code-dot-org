@@ -136,6 +136,7 @@ class AdvancedShareOptions extends React.Component {
             href={exportSupportLink}
             text="our documentation"
             external
+            openInNewTab
             size="s"
           />
           .

@@ -117,8 +117,14 @@ export default class SendToPhone extends React.Component {
         </MuiButton>
         <MuiTypography variant="body4" className={moduleStyles.disclaimer}>
           A text message will be sent via{' '}
-          <Link href="http://twilio.com" text="Twilio" external size="s" />.
-          Charges may apply to the recipient.
+          <Link
+            href="http://twilio.com"
+            text="Twilio"
+            external
+            openInNewTab
+            size="xs"
+          />
+          . Charges may apply to the recipient.
         </MuiTypography>
       </div>
     );
