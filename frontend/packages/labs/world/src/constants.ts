@@ -72,10 +72,8 @@ const MAIN_SCENE = JSON.stringify(
           x: 20,
           y: 20,
           fields: {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
-          inputs: {
-            BODY: {
-              block: {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
-            },
+          next: {
+            block: {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
           },
         },
       ],
@@ -123,22 +121,20 @@ const PLATFORM_WORLD = JSON.stringify(
           x: 20,
           y: 20,
           fields: {ID: 'platform', NAME: 'Platform World'},
-          inputs: {
-            BODY: {
-              block: nextBlock(
-                {type: 'world_use_rule', fields: {RULE: 'GravityRule'}},
+          next: {
+            block: nextBlock(
+              {type: 'world_use_rule', fields: {RULE: 'GravityRule'}},
+              nextBlock(
+                {type: 'world_use_rule', fields: {RULE: 'InputRule'}},
                 nextBlock(
-                  {type: 'world_use_rule', fields: {RULE: 'InputRule'}},
-                  nextBlock(
-                    {type: 'world_use_rule', fields: {RULE: 'AnimationRule'}},
-                    {
-                      type: 'world_use_animations',
-                      fields: {FILE: 'animations/game'},
-                    },
-                  ),
+                  {type: 'world_use_rule', fields: {RULE: 'AnimationRule'}},
+                  {
+                    type: 'world_use_animations',
+                    fields: {FILE: 'animations/game'},
+                  },
                 ),
               ),
-            },
+            ),
           },
         },
       ],
@@ -157,37 +153,35 @@ const PLAYER_ACTOR = JSON.stringify(
           x: 20,
           y: 20,
           fields: {ID: 'player', NAME: 'Player'},
-          inputs: {
-            BODY: {
-              block: nextBlock(
+          next: {
+            block: nextBlock(
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'AffectedByGravityTrait'},
+              },
+              nextBlock(
                 {
                   type: 'world_use_trait',
-                  fields: {TRAIT: 'AffectedByGravityTrait'},
+                  fields: {TRAIT: 'ControlledByArrowsTrait'},
                 },
                 nextBlock(
+                  // Appearance is now explicit: `play animation` only sets the
+                  // animation, so the actor must elect the trait itself.
                   {
                     type: 'world_use_trait',
-                    fields: {TRAIT: 'ControlledByArrowsTrait'},
+                    fields: {TRAIT: 'AppearanceTrait'},
                   },
-                  nextBlock(
-                    // Appearance is now explicit: `play animation` only sets the
-                    // animation, so the actor must elect the trait itself.
-                    {
-                      type: 'world_use_trait',
-                      fields: {TRAIT: 'AppearanceTrait'},
-                    },
-                    // Plays a learner-authored animation (game.anim) — its id is
-                    // in the dropdown because the lab feeds the project's
-                    // animations to the block (Phase D). Position is set by the
-                    // Scene when it places this actor, not here.
-                    {
-                      type: 'world_play_animation',
-                      fields: {ANIMATION: 'playerBob'},
-                    },
-                  ),
+                  // Plays a learner-authored animation (game.anim) — its id is
+                  // in the dropdown because the lab feeds the project's
+                  // animations to the block (Phase D). Position is set by the
+                  // Scene when it places this actor, not here.
+                  {
+                    type: 'world_play_animation',
+                    fields: {ANIMATION: 'playerBob'},
+                  },
                 ),
               ),
-            },
+            ),
           },
         },
         onEvent('startsFalling', 20, 200, 'Player started falling'),

@@ -49,10 +49,14 @@ const emit = (
 
 describe('domain block generators', () => {
   it('world_actor builds the actor and its body, without the export', () => {
+    // The body (traits/behaviors) chains below the actor root, not in a `do`
+    // input — so it is fed via `next`.
     const code = emit(
       'world_actor',
       {ID: 'player', NAME: 'Player'},
-      {BODY: 'actor.useTraits([X]);\n'},
+      {},
+      {},
+      'actor.useTraits([X]);\n',
     );
     expect(code).toContain(`import * as WorldLab from 'world-lab';`);
     expect(code).toContain(
@@ -243,21 +247,31 @@ describe('domain block generators', () => {
 
 describe('scene block generators', () => {
   // The scene blocks read block.id and register imports on generator.definitions_
-  // (which Blockly's finish() hoists), so they need richer fakes than `emit`.
+  // (which Blockly's finish() hoists), so they need richer fakes than `emit`. The
+  // scene root reads its body from the next chain (`blockToCode(getNextBlock())`);
+  // `world_add_actor` still reads its `DO` input via `statementToCode` — the fake
+  // returns `body` for both.
   const run = (
     type: string,
     block: Record<string, unknown>,
     definitions: Record<string, string>,
     body: string,
-  ) =>
-    generatorFor(type)(
-      {getFieldValue: (n: string) => block[n], id: block.id} as never,
+  ) => {
+    const nextBlock = body ? {} : null;
+    return generatorFor(type)(
+      {
+        getFieldValue: (n: string) => block[n],
+        id: block.id,
+        getNextBlock: () => nextBlock,
+      } as never,
       {
         definitions_: definitions,
         statementToCode: () => body,
+        blockToCode: (b: unknown) => (b === nextBlock ? body : ''),
       } as never,
       {} as never,
     ) as string;
+  };
 
   it('world_scene builds the scene, imports the world, and hosts the body', () => {
     const defs: Record<string, string> = {};
@@ -294,17 +308,28 @@ describe('scene block generators', () => {
 });
 
 describe('world block generators', () => {
+  // The world root reads its body from the next chain, like the actor/scene root.
   const run = (
     type: string,
     block: Record<string, unknown>,
     definitions: Record<string, string>,
     body: string,
-  ) =>
-    generatorFor(type)(
-      {getFieldValue: (n: string) => block[n], id: block.id} as never,
-      {definitions_: definitions, statementToCode: () => body} as never,
+  ) => {
+    const nextBlock = body ? {} : null;
+    return generatorFor(type)(
+      {
+        getFieldValue: (n: string) => block[n],
+        id: block.id,
+        getNextBlock: () => nextBlock,
+      } as never,
+      {
+        definitions_: definitions,
+        statementToCode: () => body,
+        blockToCode: (b: unknown) => (b === nextBlock ? body : ''),
+      } as never,
       {} as never,
     ) as string;
+  };
 
   it('world_world builds the world and hosts its body', () => {
     const defs: Record<string, string> = {};

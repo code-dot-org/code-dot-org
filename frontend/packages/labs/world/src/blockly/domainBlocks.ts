@@ -113,22 +113,23 @@ const worldActor = defineBlock({
     {type: 'field_input', name: 'ID', text: 'actor'},
     {type: 'field_input', name: 'NAME', text: 'Actor'},
   ],
-  message1: '%1',
-  args1: [{type: 'input_statement', name: 'BODY'}],
+  // A definition root, like an event block: no previous connection, a NEXT
+  // connection — the actor's `use trait` / `set` / `play` body chains below it,
+  // not nested in a `do` input.
+  nextStatement: true,
   style: 'setup_blocks',
   tooltip: 'Define an actor: its traits, properties, and event handlers.',
   generator: {
     javascript(block, generator) {
       const id = block.getFieldValue('ID');
       const name = block.getFieldValue('NAME');
-      const body = generator.statementToCode(block, 'BODY');
       // The `export default actor;` and the floating event handlers are appended
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
       return (
         `import * as WorldLab from 'world-lab';\n` +
         `const actor = new WorldLab.ActorBuilder({id: ${str(id)}, name: ${str(name)}});\n` +
-        body
+        nextChainCode(block, generator)
       );
     },
   },
@@ -334,14 +335,17 @@ const EVENT_BLOCKS = ALL_RULES.flatMap(rule =>
 );
 
 /**
- * Event root block types — top-level roots that own their next chain as a
- * handler body. The generator must generate these with `thisOnly` so the body is
- * not also appended after the closure by the default `scrub_` (see
- * BlocklyGenerator).
+ * Root block types — top-level blocks that own the chain below them as a body
+ * (an event handler, or an actor/scene/world definition) and generate it
+ * themselves. The generator must generate these with `thisOnly` so the body is
+ * not also appended after them by the default `scrub_` (see BlocklyGenerator).
  */
-export const EVENT_ROOT_TYPES: ReadonlySet<string> = new Set(
-  EVENT_BLOCKS.map(block => block.type),
-);
+export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
+  ...EVENT_BLOCKS.map(block => block.type),
+  'world_actor',
+  'world_scene',
+  'world_world',
+]);
 
 const worldLog = defineBlock({
   type: 'world_log',
@@ -488,8 +492,9 @@ const worldScene = defineBlock({
   ],
   message1: 'world %1',
   args1: [{type: 'field_dropdown', name: 'WORLD', options: worldOptions()}],
-  message2: '%1',
-  args2: [{type: 'input_statement', name: 'BODY'}],
+  // A definition root: no previous connection, a NEXT connection — the `add
+  // actor` / `load map` body chains below it, not nested in a `do` input.
+  nextStatement: true,
   extensions: [worldOptionsExtension],
   style: 'setup_blocks',
   tooltip:
@@ -509,7 +514,7 @@ const worldScene = defineBlock({
         `mod:${world}`,
         `import ${importVar(world)} from ${str(world)};`,
       );
-      const body = generator.statementToCode(block, 'BODY');
+      const body = nextChainCode(block, generator);
       return (
         `const scene = new WorldLab.SceneBuilder({id: ${str(id)}, name: ${str(
           name,
@@ -601,8 +606,9 @@ const worldWorld = defineBlock({
     {type: 'field_input', name: 'ID', text: 'world'},
     {type: 'field_input', name: 'NAME', text: 'World'},
   ],
-  message1: '%1',
-  args1: [{type: 'input_statement', name: 'BODY'}],
+  // A definition root: no previous connection, a NEXT connection — the `use
+  // rule` / `use animations` body chains below it, not nested in a `do` input.
+  nextStatement: true,
   style: 'setup_blocks',
   tooltip: 'Define a world: the rules in play and the animations it registers.',
   generator: {
@@ -614,7 +620,7 @@ const worldWorld = defineBlock({
         'world_lab',
         `import * as WorldLab from 'world-lab';`,
       );
-      const body = generator.statementToCode(block, 'BODY');
+      const body = nextChainCode(block, generator);
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id)}, name: ${str(
           name,
