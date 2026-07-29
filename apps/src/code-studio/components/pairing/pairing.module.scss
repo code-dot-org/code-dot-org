@@ -1,0 +1,28 @@
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pairingList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+// Override the 1em margin-bottom DSCO chip labels inherit from
+// paragraph-common; !important beats DSCO's 3-class specificity.
+.studentChips label {
+  margin-bottom: 0 !important;
+}
+
+.student {
+  color: var(--text-neutral-primary);
+  padding: 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 5px;
+}
+
+.warning {
+  color: var(--text-error-primary);
+}
