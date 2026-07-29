@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {Component} from 'react';
 
@@ -20,7 +21,12 @@ export default class ActivitySection extends Component {
 
     return (
       <div>
-        <h3 id={`activity-section-${section.key}`}>
+        {/* Nested under the activity's h3, so h4 in the outline. */}
+        <Typography
+          variant="h4"
+          id={`activity-section-${section.key}`}
+          className={styles.activitySectionHeader}
+        >
           {section.displayName}
           {section.duration > 0 && (
             <span>
@@ -29,15 +35,15 @@ export default class ActivitySection extends Component {
               })}
             </span>
           )}
-        </h3>
+        </Typography>
         <div className="activity-section-text">
           <div className={styles.textAndProgression}>
             {section.remarks && (
               <div>
-                <h4 className={styles.remarksHeader}>
+                <Typography variant="h5">
                   <FontAwesome icon="microphone" />
                   <span className={styles.remarks}>{i18n.remarks()}</span>
-                </h4>
+                </Typography>
               </div>
             )}
             <div className={classNames(section.remarks && styles.remarksBody)}>
