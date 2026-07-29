@@ -113,7 +113,8 @@ class CoursesControllerTest < ActionController::TestCase
     get :show, params: {course_name: ug2019}
 
     assert_response :ok
-    assert_includes(@response.body, "<title>Computer Science Principles (&#39;19-&#39;20) - CodeAI [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Computer Science Principles (&#39;19-&#39;20) - #{brand_name} [test]</title>")
     assert_includes(@response.body, "<meta property=\"description\" content=\"Learn foundational computer science concepts.\" />")
     assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/csp-2019\" />")
   end
