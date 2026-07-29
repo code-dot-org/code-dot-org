@@ -155,11 +155,11 @@ export default class ImagePicker extends React.Component {
 
     let modeSwitch,
       title = this.props.assetChosen ? (
-        <MuiTypography variant="h3" gutterBottom>
+        <MuiTypography variant="h3" gutterBottom className="dialog-title">
           {i18n.chooseAssets()}
         </MuiTypography>
       ) : (
-        <MuiTypography variant="h3" gutterBottom>
+        <MuiTypography variant="h3" gutterBottom className="dialog-title">
           {i18n.manageAssets()}
         </MuiTypography>
       );

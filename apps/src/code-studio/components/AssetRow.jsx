@@ -116,6 +116,7 @@ export default class AssetRow extends React.Component {
               {flex}
               {!this.props.hideDelete && (
                 <MuiIconButton
+                  className="uitest-delete-asset"
                   variant="text"
                   color={usage > 0 ? 'secondary' : 'error'}
                   size="medium"
@@ -151,6 +152,7 @@ export default class AssetRow extends React.Component {
           >
             <span style={styles.actionGroup}>
               <MuiButton
+                className="uitest-confirm-delete-asset"
                 variant="contained"
                 color="error"
                 size="small"
