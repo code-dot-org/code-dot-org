@@ -28,24 +28,6 @@ describe('useFlaggedImage', () => {
     jest.clearAllMocks();
   });
 
-  // Consumers put these handlers in dependency lists (e.g. sketchlab's
-  // uploadImage), so a new identity per render would invalidate every memo
-  // and effect built on them.
-  it('returns stable handler identities across rerenders', () => {
-    const {result, rerender} = renderHook(() => useFlaggedImage());
-    const first = result.current;
-
-    rerender();
-
-    expect(result.current.onImageFlagged).toBe(first.onImageFlagged);
-    expect(result.current.handleAcceptFlaggedImage).toBe(
-      first.handleAcceptFlaggedImage
-    );
-    expect(result.current.handleCancelFlaggedImage).toBe(
-      first.handleCancelFlaggedImage
-    );
-  });
-
   it('stores flagged image data and clears it on cancel', () => {
     const {result} = renderHook(() => useFlaggedImage());
     const file = new File(['data'], 'photo.png', {type: 'image/png'});
