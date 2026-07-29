@@ -33,4 +33,13 @@ class ProjectStorage < ApplicationRecord
           foreign_key: :storage_id,
           inverse_of: :project_storage,
           dependent: :destroy
+
+  after_commit on: :create, unless: :user_id do
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'activerecord_anonymous_project_storage_created',
+      storage_id: id,
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ'),
+    )
+  end
 end
