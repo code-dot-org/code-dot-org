@@ -10,6 +10,7 @@ require 'highline'
 require 'io/console'
 require 'logger'
 require 'tmpdir'
+require 'cdo/aws/session_manager'
 require_relative '../lib/cdo/cdo_cli'
 require_relative '../lib/cdo/developers_topic'
 require_relative '../lib/cdo/infra_test_topic'
@@ -78,6 +79,23 @@ def puts_script_intro(dotd_name)
       #{dim 'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
   OUTPUT
+
+  puts_remote_access_mode
+end
+
+def puts_remote_access_mode
+  if Cdo::Aws::SessionManager.available?
+    puts dim 'Remote server commands will use AWS Systems Manager Session Manager.'
+    puts
+    return
+  end
+
+  puts <<~NOTICE.unindent
+    #{red 'Remote server commands will use gateway SSH.'}
+    Install AWS CLI v2 and the Session Manager plugin to use audited SSM sessions:
+    #{dim Cdo::Aws::SessionManager::INSTALL_PLUGIN_URL}
+
+  NOTICE
 end
 
 # Marks the most recent DTT red, updating Slack#deploy-status topic to allow a new
@@ -410,12 +428,22 @@ end
 #
 # @returns true if the command succeeds, false if it fails. See Kernel#system
 def run_on(server_name, command)
-  # Double-escape the command string, once for each remote shell we're passing
-  # through.
-  return true if system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
+  command_succeeded = if Cdo::Aws::SessionManager.available?
+                        Cdo::Aws::SessionManager.start_interactive_command(server_name, command)
+                      else
+                        ssh_run_on(server_name, command)
+                      end
+  return true if command_succeeded
+
   # Non-zero exit code from the command
   warn_and_confirm "There was an error running `#{command}` on #{server_name}"
   return false
+end
+
+def ssh_run_on(server_name, command)
+  # Double-escape the command string, once for each remote shell we're passing
+  # through.
+  system "ssh -t gateway.code.org ssh -t #{server_name} #{command.inspect.inspect}"
 end
 
 # Prints the DTP message, formatted based on its contents.
@@ -484,7 +512,8 @@ end
 # Performs a diagnostic self-check to make sure the local environment is
 # properly set up for all standard Dev of the Day operations.
 def perform_self_check
-  puts "Checking access to internal servers"
+  access_method = Cdo::Aws::SessionManager.available? ? 'SSM' : 'gateway SSH'
+  puts "Checking access to internal servers via #{access_method}"
   %w(staging test levelbuilder production-console).each do |environment|
     run_on(environment, "echo 'successfully connected to #{environment}'")
   end
