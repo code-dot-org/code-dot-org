@@ -426,12 +426,7 @@ export class LibraryManagerDialog extends React.Component {
                 value={sectionFilter}
                 displayEmpty
                 size="small"
-                sx={{
-                  '& .MuiSelect-select': {
-                    paddingTop: '4px',
-                    paddingBottom: '4px',
-                  },
-                }}
+                sx={{fontSize: '1rem'}}
                 onChange={event =>
                   this.setState({sectionFilter: event.target.value})
                 }
