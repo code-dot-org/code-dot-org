@@ -176,8 +176,9 @@ function fitView(w: number, h: number): View {
  * the running game updates. Snap-to-grid by default; hold Alt to place freely.
  * Middle-drag (or left-drag with no actor selected) pans; the wheel zooms toward
  * the cursor; a button resets the view. In select mode (no template), clicking a
- * placed actor selects it, dragging moves it, Delete removes it, and an inspector
- * panel edits its position.
+ * placed actor selects it, the arrow keys cycle the selection (panning it into
+ * view), dragging moves it, Delete removes it, and an inspector panel edits its
+ * position.
  */
 export const MapEditor = ({
   initialContents,
@@ -763,7 +764,61 @@ export const MapEditor = ({
     setHoveredId(null);
   };
 
+  // Pan the camera so `pos` is comfortably on-screen, centering it only when it
+  // sits within a margin of the pane edge (or off it); the zoom is untouched. Used
+  // when keyboard cycling lands on an actor that is scrolled out of view.
+  const ensureVisible = (pos: Vec) => {
+    if (!view || size.w === 0 || size.h === 0) {
+      return;
+    }
+    const sx = pos.x * view.scale + view.x;
+    const sy = pos.y * view.scale + view.y;
+    const mx = size.w * 0.15;
+    const my = size.h * 0.15;
+    if (sx >= mx && sx <= size.w - mx && sy >= my && sy <= size.h - my) {
+      return;
+    }
+    setView({
+      ...view,
+      x: size.w / 2 - pos.x * view.scale,
+      y: size.h / 2 - pos.y * view.scale,
+    });
+  };
+
+  // Move the selection to the next (`+1`) or previous (`-1`) placed actor, in
+  // placement order and wrapping around. With nothing selected, `+1` starts at the
+  // first actor and `-1` at the last. Only actors with a position participate.
+  const cycleSelection = (dir: 1 | -1) => {
+    const actors = mapRef.current.actors.filter(positionOf);
+    if (actors.length === 0) {
+      return;
+    }
+    const cur = actors.findIndex(a => a.id === selectedId);
+    const next =
+      cur === -1
+        ? dir === 1
+          ? 0
+          : actors.length - 1
+        : (cur + dir + actors.length) % actors.length;
+    setSelectedId(actors[next].id);
+    ensureVisible(positionOf(actors[next])!);
+  };
+
   const handleKeyDown = (event: ReactKeyboardEvent) => {
+    // Place mode is click-driven; the keyboard shortcuts are select-mode only.
+    if (selected) {
+      return;
+    }
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      event.preventDefault();
+      cycleSelection(1);
+      return;
+    }
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      cycleSelection(-1);
+      return;
+    }
     if (
       !isReadOnly &&
       selectedId &&
