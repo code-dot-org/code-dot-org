@@ -14,6 +14,7 @@ import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
+import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {label} from './label';
 import {
@@ -113,20 +114,27 @@ const worldUseTrait = defineBlock({
 
 const worldSetPosition = defineBlock({
   type: 'world_set_position',
-  message0: 'set position  x %1  y %2',
+  message0: 'set position of %1  x %2  y %3',
   args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
     {type: 'field_number', name: 'X', value: 0},
     {type: 'field_number', name: 'Y', value: 0},
   ],
+  inputsInline: true,
   previousStatement: true,
   nextStatement: true,
+  // The ACTOR socket defaults to a `myself` shadow (this actor); a loop's touched
+  // actor can be dropped in to move that one instead.
+  extensions: [actorInputExtension],
   style: 'location_blocks',
-  tooltip: "Set the actor's starting position.",
+  tooltip: "Set an actor's position.",
   generator: {
-    javascript(block) {
+    javascript(block, generator) {
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
       const x = Number(block.getFieldValue('X'));
       const y = Number(block.getFieldValue('Y'));
-      return `actor.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}));\n`;
+      return `${target}.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}));\n`;
     },
   },
 });
@@ -201,11 +209,12 @@ const worldOnEvent = defineBlock({
     javascript(block, generator) {
       const eventConst = EVENT_CONST[block.getFieldValue('EVENT')] ?? '';
       const handler = generator.statementToCode(block, 'HANDLER');
-      // Bind the handler args so a body block can read the event's value
-      // (`eventValue` — e.g. the animation frame). `_world`/`_actor` don't shadow
-      // the outer `actor` builder, so it stays reachable inside the handler.
+      // A handler runs at RUNTIME, so its args are the live `world` and `actor`
+      // (they shadow the outer `actor` builder): body blocks act on the instance,
+      // and a "for each … I'm touching" loop can query the world. `eventValue` is
+      // the event's detail (e.g. the animation frame).
       return (
-        `actor.on(WorldLab.${eventConst}, (_world, _actor, eventValue) => {\n` +
+        `actor.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
         `${handler}});\n`
       );
     },
@@ -257,6 +266,67 @@ const worldEventValue = defineBlock({
   generator: {
     javascript() {
       return ['eventValue', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+// ── Actor values & touching ──────────────────────────────────────────────────
+// Blocks that yield an Actor (output type "Actor") for an action block's `of …`
+// socket. `world_myself` is the principal actor (`this`) — the default shadow;
+// `world_touched_actor` is the actor a `for each … I'm touching` loop is on now.
+
+const worldMyself = defineBlock({
+  type: 'world_myself',
+  message0: 'myself',
+  output: 'Actor',
+  style: 'variable_blocks',
+  tooltip: 'This actor — the one these blocks belong to.',
+  generator: {
+    javascript() {
+      return ['actor', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+const worldTouchedActor = defineBlock({
+  type: 'world_touched_actor',
+  message0: "the actor I'm touching",
+  output: 'Actor',
+  style: 'variable_blocks',
+  tooltip: "Inside a “for each … I'm touching” loop, the actor it is on now.",
+  generator: {
+    javascript() {
+      return ['touched', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+const worldForEachTouching = defineBlock({
+  type: 'world_for_each_touching',
+  message0: "for each %1 I'm touching",
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions()}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  // The dropdown lists the project's actor templates (populated live), the same
+  // as `world_add_actor`.
+  extensions: [actorOptionsExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'Run blocks once for each actor of a type this actor is touching. Use ' +
+    "“the actor I'm touching” to act on each one. Only valid inside a " +
+    '“when” handler.',
+  generator: {
+    javascript(block, generator) {
+      // Dropdown values are module paths (`actors/coin`); an actor's runtime
+      // `type` is the template id — the module basename.
+      const modulePath = block.getFieldValue('ACTOR');
+      const type = modulePath.split('/').pop() ?? modulePath;
+      const body = generator.statementToCode(block, 'DO');
+      return `for (const touched of world.query(WorldLab.TouchingQuery, actor, ${str(
+        type,
+      )})) {\n${body}}\n`;
     },
   },
 });
@@ -505,6 +575,9 @@ export const DOMAIN_BLOCKS = [
   worldLog,
   worldPrint,
   worldEventValue,
+  worldMyself,
+  worldTouchedActor,
+  worldForEachTouching,
   worldScene,
   worldAddActor,
   worldLoadMap,
@@ -540,6 +613,10 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   {
     name: 'Events',
     blocks: ['world_on_event', 'world_log', 'world_print', 'world_event_value'],
+  },
+  {
+    name: 'Actors',
+    blocks: ['world_for_each_touching', 'world_touched_actor', 'world_myself'],
   },
   {
     name: 'Logic',

@@ -85,6 +85,18 @@ function liveDropdown(
       // @ts-expect-error protected — reflect the live project registry, not the
       // static fallback baked in at block definition.
       field.menuGenerator_ = () => options();
+      // A fresh block still holds the static "(none)" fallback; if that isn't one
+      // the live registry offers, default to the first real option so the block
+      // is usable without opening the menu. A saved block keeps its own value —
+      // it's already among the options.
+      const values = options().map(([, value]) => value);
+      const current = field.getValue();
+      if (
+        values.length > 0 &&
+        (current === null || !values.includes(current))
+      ) {
+        field.setValue(values[0]);
+      }
     },
   });
 }
