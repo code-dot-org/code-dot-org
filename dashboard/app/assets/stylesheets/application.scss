@@ -3492,11 +3492,6 @@ $modal-no-icon-gap: 22px;
       margin-left: $modal-no-icon-gap;
     }
 
-    // General body copy for LegacyDialog content (Clear Puzzle
-    // confirmation, showToggleBlocksError, submit dialogs, etc.).
-    // Tokenized replacement for the removed legacy 24px/$neutral_dark
-    // catch-all. Show Code panel (.generated-code-container) keeps its
-    // own typography via the override below.
     p, pre {
       font-family: var(--font-family-main);
       font-size: var(--font-size-body-lg);
