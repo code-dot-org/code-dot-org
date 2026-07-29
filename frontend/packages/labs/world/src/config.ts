@@ -71,4 +71,15 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     map: MapEditor,
     anim: AnimationEditor,
   },
+  // File-browser icons for World's own extensions (all FontAwesome solid). The
+  // built-in types (js/json/png/…) keep their defaults; these give each World
+  // file type a distinct, meaningful glyph.
+  fileIcons: {
+    world: {iconName: 'earth-americas', iconStyle: 'solid', isBrand: false},
+    scene: {iconName: 'clapperboard', iconStyle: 'solid', isBrand: false},
+    actor: {iconName: 'masks-theater', iconStyle: 'solid', isBrand: false},
+    rule: {iconName: 'scale-balanced', iconStyle: 'solid', isBrand: false},
+    map: {iconName: 'map', iconStyle: 'solid', isBrand: false},
+    anim: {iconName: 'film', iconStyle: 'solid', isBrand: false},
+  },
 };
