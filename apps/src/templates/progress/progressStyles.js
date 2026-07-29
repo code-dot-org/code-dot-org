@@ -106,6 +106,12 @@ const assessmentStatusStyle = {
   },
 };
 
+// A success border on a success-primary fill reads as a ring of a slightly
+// different green rather than as an outline, so the filled completed states
+// below set borderColor: 'transparent'. The border box stays, so bubble
+// geometry does not shift. LevelStatus.passed keeps its border: its
+// extra-light fill is near-white, and the border is what makes the bubble
+// visible at all.
 const levelStatusStyle = {
   [LevelStatus.attempted]: {
     borderColor: 'var(--borders-success-primary)',
@@ -121,7 +127,7 @@ const levelStatusStyle = {
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: 'transparent',
+    borderColor: 'var(--borders-success-primary)',
     backgroundColor: 'var(--background-success-extra-light)',
   },
   // Note: There are submittable levels that are not assessments.

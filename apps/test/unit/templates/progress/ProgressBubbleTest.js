@@ -153,14 +153,14 @@ describe('ProgressBubble', () => {
     expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
-  it('has a green background for review_accepted', () => {
+  it('has a green background and no border for review_accepted', () => {
     const style = styleForStatus(
       LevelStatus.review_accepted,
       {},
       {kind: LevelKind.peer_review}
     );
     expect(style.backgroundColor).to.equal('var(--background-success-primary)');
-    expect(style.borderColor).to.equal('var(--borders-success-primary)');
+    expect(style.borderColor).to.equal('transparent');
     expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
