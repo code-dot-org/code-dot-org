@@ -58,6 +58,14 @@ function JavalabEditorHeader({
         {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
         {editorHeaderText}
       </PaneSection>
+      {backpackEnabled && (
+        <Backpack
+          id={'javalab-editor-backpack'}
+          displayTheme={displayTheme}
+          isButtonDisabled={isReadOnlyWorkspace}
+          onImport={onBackpackImportFile}
+        />
+      )}
       <PaneButton
         id="javalab-editor-save"
         isLegacyStyles
@@ -78,16 +86,6 @@ function JavalabEditorHeader({
         onClick={() => openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)}
         isDisabled={isReadOnlyWorkspace}
       />
-      {backpackEnabled && (
-        <PaneSection style={styles.backpackSection}>
-          <Backpack
-            id={'javalab-editor-backpack'}
-            displayTheme={displayTheme}
-            isButtonDisabled={isReadOnlyWorkspace}
-            onImport={onBackpackImportFile}
-          />
-        </PaneSection>
-      )}
     </PaneHeader>
   );
 }
@@ -100,15 +98,6 @@ JavalabEditorHeader.propTypes = {
   backpackEnabled: PropTypes.bool.isRequired,
   displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
   showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
-};
-
-const styles = {
-  backpackSection: {
-    textAlign: 'left',
-    display: 'inline-block',
-    float: 'left',
-    overflow: 'visible',
-  },
 };
 
 export default connect(
