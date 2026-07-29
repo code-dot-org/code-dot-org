@@ -33,7 +33,7 @@ async function transcribeThroughGateway(
   const execute = async (): Promise<TranscriptionResult> => {
     try {
       const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
+        fetchAccessToken(modelString),
         fetchTurnstileTokenIfEnabled(),
       ]);
 

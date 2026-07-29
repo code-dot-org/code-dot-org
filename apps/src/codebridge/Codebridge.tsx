@@ -22,6 +22,7 @@ import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledSt
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -31,6 +32,7 @@ import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAP
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 
@@ -98,6 +100,8 @@ export const Codebridge = React.memo(
     );
     const {disabled: aiTutorDisabled} = useAiChatDisabledState({
       appName,
+      clientType: AiChatClientTypes.AI_TUTOR,
+      selectedModelId: aiTutorModelId,
       isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
       hasSubmittedPredictResponse,
     });

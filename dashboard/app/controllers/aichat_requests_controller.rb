@@ -7,6 +7,10 @@ class AichatRequestsController < ApplicationController
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
   DEFAULT_REQUEST_LIMIT_PER_MIN = 50
 
+  # Distinct error body so the client can tell a regional model block apart
+  # from a generic authorization failure.
+  MODEL_REGION_BLOCKED_ERROR = 'model_not_available_in_region'.freeze
+
   DEFAULT_POLLING_INTERVAL_MS = 1000
   DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
@@ -40,6 +44,9 @@ class AichatRequestsController < ApplicationController
     return head :too_many_requests if should_throttle_request_count?
 
     model_id = params[:modelParameters][:selectedModelId]
+    unless current_user.can_use_aichat_model?(model_id)
+      return render status: :forbidden, json: {error: MODEL_REGION_BLOCKED_ERROR}
+    end
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
       log_token_throttling(current_user.id)
 
@@ -96,6 +103,9 @@ class AichatRequestsController < ApplicationController
     end
     unless current_user.can_access_aichat_chat_completion?(params[:aichatContext][:clientType], params[:aichatContext][:currentLevelId])
       return render status: :forbidden, json: {user_type: current_user.user_type}
+    end
+    unless current_user.can_use_aichat_model?(params[:modelParameters][:selectedModelId])
+      return render status: :forbidden, json: {error: MODEL_REGION_BLOCKED_ERROR}
     end
 
     request = create_request

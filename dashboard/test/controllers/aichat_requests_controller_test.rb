@@ -41,6 +41,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
     DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
     DCDO.stubs(:get).with('throttle_time_default', anything).returns(60)
+    DCDO.stubs(:get).with('allow_international_aichat_usage', anything).returns(false)
   end
 
   # start_chat_completion tests
@@ -109,6 +110,25 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'student of authorized teacher has access to start_chat_completion test' do
     sign_in(@authorized_student1)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
+  test 'start_chat_completion returns region error for a gemini model when gemini models are blocked' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:gemini_models_blocked?).returns(true)
+    gemini_params = @valid_params_chat_completion.merge(
+      modelParameters: @default_model_customizations.merge('selectedModelId' => SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH])
+    )
+    post :start_chat_completion, params: gemini_params, as: :json
+    assert_response :forbidden
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
+  end
+
+  test 'start_chat_completion allows a non-gemini model when gemini models are blocked' do
+    sign_in(@authorized_teacher1)
+    User.any_instance.stubs(:gemini_models_blocked?).returns(true)
+    # @valid_params_chat_completion uses gpt-4o-mini.
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success
   end

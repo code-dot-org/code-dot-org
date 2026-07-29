@@ -860,6 +860,18 @@ module SharedConstants
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
+  # Models served via the Google Gemini API (includes LearnLM, which is built
+  # on Gemini and routed through the same client). These are unavailable to
+  # international users; see User::AiAccessible#can_use_aichat_model?.
+  AI_CHAT_GEMINI_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:LEARNLM],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+  ].freeze
+
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
     # AI Tutor in levels and on standalone projects.

@@ -40,6 +40,7 @@ export const CurrentUserResponseSignedInSchema = z.object({
 
   // AI gating
   ai_chat_access_level: z.union([z.string(), z.number()]),
+  ai_chat_gemini_models_blocked: z.boolean(),
   ai_rubrics_disabled: z.boolean().nullable(),
   ai_differentiation_enabled: z.boolean(),
   has_seen_ai_assessments_announcement: z.boolean(),

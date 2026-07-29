@@ -24,7 +24,20 @@ module User::AiAccessible
 
   def ai_chat_access_level
     return AI_CHAT_ACCESS_LEVELS[:ENABLED] if teacher_can_access_aichat? || levelbuilder?
-    return section_enabled_access_level
+    section_enabled_access_level
+  end
+
+  # Gemini-served models are blocked for international users
+  def gemini_models_blocked?
+    return false if levelbuilder?
+    international_ai_chat_user?
+  end
+
+  # Per-request model gate, enforced wherever a model id is known
+  # (aichat_requests_controller, ai_gateway_auth_controller).
+  def can_use_aichat_model?(model_id)
+    return true unless AI_CHAT_GEMINI_MODEL_IDS.include?(model_id)
+    !gemini_models_blocked?
   end
 
   # has essential or higher access to AI chat tools
@@ -64,5 +77,34 @@ module User::AiAccessible
 
   private def in_section_with_ai_chat_access_essential_only?
     sections_as_student.any? {|s| !s.hidden && s.ai_chat_access_level == AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]}
+  end
+
+  # A teacher is international when they (the teacher) are non-US. A student is
+  # international when they have teachers and all of them are non-US. Gemini
+  # models are blocked for international users by default; the
+  # allow_international_aichat_usage DCDO flag is an escape hatch to re-enable
+  # access without a deploy.
+  private def international_ai_chat_user?
+    return @international_ai_chat_user if defined?(@international_ai_chat_user)
+    @international_ai_chat_user =
+      if DCDO.get("allow_international_aichat_usage", false)
+        false
+      elsif teacher?
+        non_us_ai_chat_user?(self)
+      else
+        student_teachers = teachers
+        student_teachers.any? && student_teachers.all? {|teacher| non_us_ai_chat_user?(teacher)}
+      end
+  end
+
+  # True only when we can positively determine the user is outside the US, so we
+  # never block users whose location we can't establish. Prefer school_info, but
+  # only when it has a country (legacy rows may have only state/district data);
+  # otherwise fall back to the most recent geolocation, and fail open if neither
+  # is known.
+  private def non_us_ai_chat_user?(user)
+    return !user.school_info.usa? if user.school_info&.country.present?
+    geo_country = user.user_geos.first&.country
+    geo_country.present? && geo_country != 'United States'
   end
 end

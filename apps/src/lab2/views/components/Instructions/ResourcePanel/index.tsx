@@ -13,6 +13,7 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiChatHeaderButtons';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -43,6 +44,7 @@ import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
@@ -271,6 +273,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   });
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
+    clientType: AiChatClientTypes.AI_TUTOR,
+    selectedModelId: aiTutorModelId,
     isPredictLevel: !!isPredictLevel,
     hasSubmittedPredictResponse,
   });

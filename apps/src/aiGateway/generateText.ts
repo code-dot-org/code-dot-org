@@ -97,7 +97,7 @@ const generateTextThroughGateway = async <
       };
 
       const [token, turnstileToken] = await Promise.all([
-        fetchAccessToken(),
+        fetchAccessToken(modelString),
         fetchTurnstileTokenIfEnabled(),
       ]);
 

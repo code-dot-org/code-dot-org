@@ -4,8 +4,17 @@ import {
 } from '@cdo/apps/aichat/types/accessControls';
 import {
   AiChatAccessLevels,
+  AiChatGeminiModelIds,
   AiChatToolsDependency,
 } from '@cdo/generated-scripts/sharedConstants';
+
+/**
+ * Returns true if the model is served via the Google Gemini API (includes
+ * LearnLM). These models are blocked for international users; see
+ * currentUser.aiChatGeminiModelsBlocked and User::AiAccessible on the server.
+ */
+export const isGeminiModelId = (modelId: string): boolean =>
+  (AiChatGeminiModelIds as readonly string[]).includes(modelId);
 
 // A list of app names for which AI Chat tools (tutor or chat in ai chat lab) are considered essential to the app experience.
 // but can still be disabled by teachers through the access controls in the teacher dashboard (see ai_chat_access_level)
