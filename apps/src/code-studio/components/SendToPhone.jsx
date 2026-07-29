@@ -123,6 +123,7 @@ export default class SendToPhone extends React.Component {
             external
             openInNewTab
             size="xs"
+            className={moduleStyles.twilioLink}
           />
           . Charges may apply to the recipient.
         </MuiTypography>

@@ -16,22 +16,17 @@
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   width: 100%;
 }
 
-.abuseError {
-  border: 1px solid;
-  border-radius: 10px;
-  padding: 10px;
-  color: var(--text-error-primary);
-  font-size: 14px;
+.abuseAlert {
+  align-self: stretch;
 }
 
 .shareWarning {
   font-weight: bold;
-  text-align: center;
 }
 
 .thumbnailRow {
@@ -112,5 +107,4 @@
 
 .thumbnailWarning {
   font-weight: bold;
-  text-align: center;
 }

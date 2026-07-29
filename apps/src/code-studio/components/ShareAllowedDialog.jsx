@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
@@ -284,16 +285,21 @@ class ShareAllowedDialog extends React.Component {
               >
                 <div id="project-share" className={moduleStyles.content}>
                   {isAbusive && (
-                    <AbuseError
-                      i18n={{
-                        tos: i18n.tosLong({url: 'http://code.org/tos'}),
-                        contact_us: i18n.contactUs({
-                          url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
-                            `Abuse error for project at url: ${shareUrl}`
-                          )}`,
-                        }),
-                      }}
-                      className={moduleStyles.abuseError}
+                    <Alert
+                      type="danger"
+                      className={moduleStyles.abuseAlert}
+                      text={
+                        <AbuseError
+                          i18n={{
+                            tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                            contact_us: i18n.contactUs({
+                              url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+                                `Abuse error for project at url: ${shareUrl}`
+                              )}`,
+                            }),
+                          }}
+                        />
+                      }
                     />
                   )}
                   {showShareWarning && (

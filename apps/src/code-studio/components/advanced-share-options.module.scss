@@ -3,6 +3,10 @@
   margin-top: 20px;
 }
 
+.tabsContainer {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
 .tabContent {
   display: flex;
   flex-direction: column;

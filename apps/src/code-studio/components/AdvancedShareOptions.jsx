@@ -228,6 +228,7 @@ class AdvancedShareOptions extends React.Component {
           defaultSelectedTabValue={defaultTab}
           onChange={() => {}}
           size="s"
+          tabsContainerClassName={moduleStyles.tabsContainer}
         />
       </div>
     );
