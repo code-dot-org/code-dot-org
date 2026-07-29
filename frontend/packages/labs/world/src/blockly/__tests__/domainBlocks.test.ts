@@ -334,6 +334,34 @@ describe('domain block generators', () => {
     );
   });
 
+  it('generated world-action blocks run the action on the world', () => {
+    // A no-argument world action (gravity Invert) → `world.act(Action)`.
+    expect(emit('world_do_InvertAction', {})).toBe(
+      'world.act(WorldLab.InvertAction);\n',
+    );
+  });
+
+  it('generated actor-action blocks run the action on the ACTOR value', () => {
+    // A number-argument actor action (Rotate to). The argument is a value socket
+    // (a shadow number, or a slotted getter/math), and the actor is the `on …`
+    // socket (default `this actor`).
+    expect(emit('world_do_RotateAction', {}, {}, {VALUE: '45'})).toBe(
+      'actor.act(WorldLab.RotateAction, 45);\n',
+    );
+    // Plugged-in actor value runs it on that actor.
+    expect(
+      emit('world_do_RotateAction', {}, {}, {ACTOR: 'touched', VALUE: '90'}),
+    ).toBe('touched.act(WorldLab.RotateAction, 90);\n');
+    // Empty argument socket falls back to the param default (0 degrees).
+    expect(emit('world_do_RotateAction', {}, {}, {})).toBe(
+      'actor.act(WorldLab.RotateAction, 0);\n',
+    );
+    // A vector-argument actor action (Move to) → a Vector argument.
+    expect(emit('world_do_MoveAction', {}, {}, {X: '3', Y: '4'})).toBe(
+      'actor.act(WorldLab.MoveAction, new WorldLab.Vector(3, 4));\n',
+    );
+  });
+
   it('registers every world_ block the toolbox references', () => {
     // The rule categories reference generated event types (`world_on_<id>`); this
     // catches any drift between what the toolbox lists and what is registered.
@@ -390,6 +418,24 @@ describe('domain block generators', () => {
         'world_get_RotationProperty',
         'world_set_SkewProperty',
         'world_get_SkewProperty',
+      ]),
+    );
+  });
+
+  it('surfaces generated rule-action blocks in their rule categories', () => {
+    const category = (name: string) =>
+      (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
+        c => c.name === name,
+      )?.blocks ?? [];
+    // Gravity's world action, Motion's + Spatial's actor actions.
+    expect(category('Has Gravity')).toContain('world_do_InvertAction');
+    expect(category('Has Physics')).toContain('world_do_ApplyForceAction');
+    expect(category('Has Space')).toEqual(
+      expect.arrayContaining([
+        'world_do_MoveAction',
+        'world_do_RotateAction',
+        'world_do_ScaleAction',
+        'world_do_ResizeAction',
       ]),
     );
   });

@@ -28,7 +28,10 @@ export const ApplyForceAction = MovableTrait.addAction(
       VelocityProperty,
       actor.get(VelocityProperty).add(Vector.from(force as VectorLike)),
     ),
-  {name: 'Apply force'},
+  {
+    name: 'Apply force',
+    params: [{name: 'force', type: 'vector', default: new Vector(0, 0)}],
+  },
 );
 
 /** Integrate velocity into position: position += velocity * delta. */

@@ -5,7 +5,13 @@
 // are the same reference, so a learner can export and reuse either.
 
 import type {Actor} from './Actor';
-import type {ActorAction, Property, PropertyType, Query} from './types';
+import type {
+  ActionParam,
+  ActorAction,
+  Property,
+  PropertyType,
+  Query,
+} from './types';
 
 function frozenError(id: string): never {
   throw new Error(`Trait '${id}' is already built and cannot be modified`);
@@ -64,12 +70,18 @@ export class Trait {
   addAction(
     id: string,
     apply: (actor: Actor, ...args: unknown[]) => void,
-    opts: {name?: string} = {},
+    opts: {name?: string; params?: readonly ActionParam[]} = {},
   ): ActorAction {
     if (this.frozen) {
       frozenError(this.id);
     }
-    const action: ActorAction = {id, name: opts.name, ownerId: this.id, apply};
+    const action: ActorAction = {
+      id,
+      name: opts.name,
+      ownerId: this.id,
+      params: opts.params,
+      apply,
+    };
     this.actions[id] = action;
     return action;
   }
