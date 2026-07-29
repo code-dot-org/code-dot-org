@@ -69,6 +69,8 @@ interface Transform {
   pos: Vec;
   scale: Vec;
   rotation: number;
+  /** Vertical skew in degrees — a shear about the actor's center (0 = none). */
+  skew: number;
 }
 interface MapDoc {
   type: 'map';
@@ -134,6 +136,7 @@ const transformOf = (actor: Placement): Transform => ({
   pos: asVec(propValue(actor, 'positional', 'position')) ?? {x: 0, y: 0},
   scale: asVec(propValue(actor, 'positional', 'scale')) ?? {x: 1, y: 1},
   rotation: asNum(propValue(actor, 'positional', 'rotation')) ?? 0,
+  skew: asNum(propValue(actor, 'positional', 'skew')) ?? 0,
 });
 
 /** A copy of `actor` with `owner.prop` set to `value`. */
@@ -829,12 +832,18 @@ export const MapEditor = ({
     ctx.lineWidth = 2 / view.scale;
     ctx.strokeRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-    // Draw a sprite through its transform (translate → rotate → scale), centred
-    // on its position, so the editor shows the actor as the game will.
+    // Draw a sprite through its transform (translate → skew → rotate → scale),
+    // centred on its position, so the editor shows the actor as the game will.
+    // The skew is a vertical shear about the center (y' = y + tan(skew)·x),
+    // inserted after the translate so it matches the Phaser driver's
+    // T(pos)·shear·R·S ordering.
     const drawSprite = (type: string, t: Transform, alpha: number) => {
       ctx.save();
       ctx.globalAlpha = alpha;
       ctx.translate(t.pos.x, t.pos.y);
+      if (t.skew) {
+        ctx.transform(1, Math.tan(t.skew * DEG2RAD), 0, 1, 0, 0);
+      }
       ctx.rotate(t.rotation * DEG2RAD);
       ctx.scale(t.scale.x, t.scale.y);
       const image = images[type];
@@ -866,6 +875,8 @@ export const MapEditor = ({
     }
     // Outline the selected actor: a rotated box hugging the scaled sprite, with a
     // constant 2px screen stroke (the box size — not the stroke — carries scale).
+    // The box tracks position/scale/rotation but not skew, so it stays a simple
+    // grab affordance that matches the (un-sheared) hit region.
     if (selectedTransform) {
       const {pos, scale, rotation} = selectedTransform;
       ctx.save();
@@ -879,7 +890,11 @@ export const MapEditor = ({
       ctx.restore();
     }
     if (selected && hover) {
-      drawSprite(selected, {pos: hover, scale: {x: 1, y: 1}, rotation: 0}, 0.5);
+      drawSprite(
+        selected,
+        {pos: hover, scale: {x: 1, y: 1}, rotation: 0, skew: 0},
+        0.5,
+      );
     }
   }, [view, size, map, images, hover, selected, selectedId]);
 

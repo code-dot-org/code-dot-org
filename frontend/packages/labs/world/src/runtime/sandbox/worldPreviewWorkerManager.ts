@@ -29,9 +29,10 @@ import {
 } from '../messages';
 
 // Properties the engine models but the editor defers: applied by the engine yet
-// not by the Phaser driver, so a field would be inert. `positional.skew` has no
-// sprite-shear in Phaser (SANDBOX/PLAN skew note); drop it until the driver does.
-const DEFERRED_PROPS = new Set(['positional.skew']);
+// not by the Phaser driver, so a field would be inert. Empty now that the driver
+// renders every spatial property (skew shears via a per-image matrix); kept as
+// the hook for the next property whose editor support lands after its rendering.
+const DEFERRED_PROPS = new Set<string>([]);
 
 /**
  * Enumerable string properties → their allowed values, so the editor renders a
