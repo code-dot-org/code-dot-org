@@ -69,7 +69,7 @@ describe('domain block generators', () => {
 
   it('world_set_position sets a Vector from the numeric fields', () => {
     // No ACTOR value plugged in → defaults to the current actor (the shadow
-    // `myself` generates `actor`).
+    // `this actor` generates `actor`).
     expect(emit('world_set_position', {X: 200, Y: 20})).toBe(
       'actor.set(WorldLab.PositionProperty, new WorldLab.Vector(200, 20));\n',
     );
@@ -83,13 +83,13 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_myself / world_touched_actor yield actor expressions', () => {
-    const myself = generatorFor('world_myself')(
+  it('world_this_actor / world_touched_actor yield actor expressions', () => {
+    const thisActor = generatorFor('world_this_actor')(
       {} as never,
       {} as never,
       {} as never,
     );
-    expect(Array.isArray(myself) && myself[0]).toBe('actor');
+    expect(Array.isArray(thisActor) && thisActor[0]).toBe('actor');
     const touched = generatorFor('world_touched_actor')(
       {} as never,
       {} as never,
@@ -150,6 +150,41 @@ describe('domain block generators', () => {
       'actor.on(WorldLab.FrameChangedEvent, (world, actor, eventValue) => {\n' +
         'console.log(eventValue);\n});\n',
     );
+  });
+
+  it('event blocks register the handler on their ACTOR value', () => {
+    // Default (empty socket → `this actor` shadow) registers on `actor`.
+    expect(
+      emit('world_on_event', {EVENT: 'startsFalling'}, {HANDLER: ''}),
+    ).toBe(
+      'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
+    );
+    // A plugged-in actor value registers on it instead.
+    expect(
+      emit(
+        'world_on_event',
+        {EVENT: 'startsFalling'},
+        {HANDLER: ''},
+        {
+          ACTOR: 'other',
+        },
+      ),
+    ).toBe(
+      'other.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
+    );
+  });
+
+  it('world_on_key filters the pressed/released key event to the chosen key', () => {
+    expect(
+      emit('world_on_key', {KEY: ' ', STATE: 'keyPressed'}, {HANDLER: 'x;\n'}),
+    ).toBe(
+      'actor.on(WorldLab.KeyPressedEvent, (world, actor, eventValue) => {\n' +
+        'if (eventValue === " ") {\nx;\n}\n});\n',
+    );
+    // The STATE dropdown selects which event to hang off.
+    expect(
+      emit('world_on_key', {KEY: 'a', STATE: 'keyReleased'}, {HANDLER: ''}),
+    ).toContain('actor.on(WorldLab.KeyReleasedEvent');
   });
 
   it('world_log prints the text field', () => {

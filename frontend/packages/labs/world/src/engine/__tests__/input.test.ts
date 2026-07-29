@@ -4,6 +4,8 @@ import {
   ActorBuilder,
   ControlledByArrowsTrait,
   InputRule,
+  KeyPressedEvent,
+  KeyReleasedEvent,
   MoveSpeedProperty,
   MovableTrait,
   PositionProperty,
@@ -63,5 +65,29 @@ describe('the Input rule', () => {
     world.tick(0.5);
     // 300 px/s over 0.5s = 150: x 100 → 250.
     expect(player.get(PositionProperty).x).toBeCloseTo(250);
+  });
+});
+
+describe('key press / release events (edge-triggered)', () => {
+  it('fires on rising/falling edges, not while a key is held', () => {
+    const {world, player} = makeScene();
+    const pressed: unknown[] = [];
+    const released: unknown[] = [];
+    player.on(KeyPressedEvent, (_world, _actor, key) => pressed.push(key));
+    player.on(KeyReleasedEvent, (_world, _actor, key) => released.push(key));
+
+    world.setInput([' ']); // space goes down
+    world.tick(0.1);
+    expect(pressed).toEqual([' ']);
+    expect(released).toEqual([]);
+
+    world.setInput([' ']); // still held — no new press
+    world.tick(0.1);
+    expect(pressed).toEqual([' ']);
+
+    world.setInput([]); // released
+    world.tick(0.1);
+    expect(released).toEqual([' ']);
+    expect(pressed).toEqual([' ']);
   });
 });
