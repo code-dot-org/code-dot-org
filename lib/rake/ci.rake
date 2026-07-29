@@ -172,7 +172,7 @@ namespace :ci do
 
     # Runs here, before Cucumber, so its result doesn't depend on whether
     # Cucumber goes on to pass or fail.
-    ENV['TARGET_URL'] ||= 'http://localhost-studio.code.org:3000'
+    ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
     Rake::Task['test:playwright_ui'].invoke
 
     Dir.chdir('dashboard/test/ui') do

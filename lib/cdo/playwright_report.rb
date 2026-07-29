@@ -31,11 +31,12 @@ module Cdo
         url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
-        # Keep the ?versionId=: the key is overwritten every run, so this is the
-        # only permanent link to this run's report. The report embeds its own
-        # results, so it renders in full; only trace attachments 404, the
-        # version leaking onto the sibling data/ requests the SPA resolves
-        # against its own URL. index_url is the unversioned link for those.
+        # Keep the versionId param. On the DTT the key is overwritten every run,
+        # so a versioned link is what survives past the start of the next one.
+        # In Drone the output is namespaced per build and never overwritten, but
+        # a versioned link still lives longer than an unversioned one. See the
+        # cucumber-logs bucket lifecycle configuration in S3 for the current
+        # expiration policy.
         index_url = url if name == 'index.html'
       end
       index_url
