@@ -12,6 +12,7 @@ import {
   DEFAULT_NODE_WIDTH,
   MIN_NODE_HEIGHT,
   MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
 } from '../constants';
@@ -73,8 +74,10 @@ function resizeNodeByDelta(
     if (node.id !== nodeId) return node;
     const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
     const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
+    const minHeight =
+      node.type === 'text' ? MIN_TEXT_NODE_HEIGHT : MIN_NODE_HEIGHT;
     const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + deltaWidth);
-    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + deltaHeight);
+    const newHeight = Math.max(minHeight, currentHeight + deltaHeight);
     return {...node, width: newWidth, height: newHeight};
   });
 }
