@@ -30,7 +30,7 @@ export class ConfirmEnableMakerDialog extends Component {
         <div className={styles.content}>
           <MuiTypography id="dsco-dialog-description" variant="body2">
             {msg.enableMakerDialogDescription()}{' '}
-            <Link href="/maker/setup" openInNewTab external>
+            <Link href="/maker/setup" openInNewTab>
               {msg.enableMakerDialogSetupPageLinkText()}
             </Link>
           </MuiTypography>
@@ -39,6 +39,7 @@ export class ConfirmEnableMakerDialog extends Component {
             type="warning"
             size="xs"
             className={styles.warning}
+            showIcon={false}
           />
         </div>
         <div className={styles.actions}>
