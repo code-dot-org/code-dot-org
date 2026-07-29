@@ -204,12 +204,8 @@ class HeaderMiddle extends React.Component {
     const {scriptNameData, lessonData, scriptData, currentLevelId, isRtl} =
       this.props;
 
-    // The reskin header drops the finish link; the lesson is still
-    // finishable from the last progress bubble.
     const showFinish = !!(
-      this.props.lessonData &&
-      this.props.lessonData.finishLink &&
-      !document.documentElement.classList.contains('nav-reskin')
+      this.props.lessonData && this.props.lessonData.finishLink
     );
 
     const widths = HeaderMiddle.getWidths(
@@ -333,7 +329,7 @@ class HeaderMiddle extends React.Component {
             </div>
           )}
 
-          {showFinish && (
+          {this.props.lessonData && this.props.lessonData.finishLink && (
             <div
               id="finish_link_container"
               style={{
