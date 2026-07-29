@@ -3492,6 +3492,25 @@ $modal-no-icon-gap: 22px;
       margin-left: $modal-no-icon-gap;
     }
 
+    p, pre {
+      font-size: var(--font-size-body-lg);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .generated-code-container p {
+      font-family: inherit;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: inherit;
+    }
+    .generated-code-container pre {
+      font-family: monospace;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: normal;
+    }
+
     // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
     .congrats {
       font-family: var(--font-family-main);
