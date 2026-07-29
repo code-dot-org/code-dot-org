@@ -21,6 +21,7 @@ import {
   StartsFallingEvent,
   StopsFallingEvent,
   StrengthProperty,
+  TouchingQuery,
   Vector,
   VelocityProperty,
   WorldBuilder,
@@ -466,5 +467,44 @@ describe('SceneBuilder.addActor (instances)', () => {
     const b = scene.addActor(coin(), 'coin-a');
     const c = scene.addActor(coin(), 'coin-a');
     expect([a.id, b.id, c.id]).toEqual(['coin-a', 'coin-a#2', 'coin-a#3']);
+  });
+});
+
+describe('TouchingQuery (Collision rule, via world.query)', () => {
+  // Collidable actors with no explicit size get the default 32x32 box, so two
+  // whose centers are within 32px on both axes touch.
+  const at = (type: string, x: number, y: number) =>
+    new ActorBuilder({id: type, name: type})
+      .useTraits([CollidableTrait])
+      .set(PositionProperty, new Vector(x, y));
+
+  it('reports overlapping actors, excluding self and distant ones', () => {
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    const player = scene.addActor(at('player', 0, 0));
+    const nearCoin = scene.addActor(at('coin', 20, 0)); // overlaps
+    const nearBox = scene.addActor(at('box', -10, 8)); // overlaps
+    scene.addActor(at('coin', 200, 0)); // far coin — no overlap
+
+    const touching = world.query(TouchingQuery, player);
+    expect(new Set(touching)).toEqual(new Set([nearCoin, nearBox]));
+    expect(touching).not.toContain(player); // never itself
+  });
+
+  it('filters to a single actor type', () => {
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    const player = scene.addActor(at('player', 0, 0));
+    const coinA = scene.addActor(at('coin', 16, 0)); // overlaps, type coin
+    const coinB = scene.addActor(at('coin', 0, 16)); // overlaps, type coin
+    scene.addActor(at('box', 8, 8)); // overlaps but type box
+
+    const coins = world.query(TouchingQuery, player, 'coin');
+    expect(new Set(coins)).toEqual(new Set([coinA, coinB]));
+    expect(coins.every(a => a.type === 'coin')).toBe(true);
   });
 });

@@ -11,7 +11,14 @@ import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
-import type {GameEvent, Property, Rule, Step, WorldAction} from './types';
+import type {
+  GameEvent,
+  Property,
+  Rule,
+  Step,
+  WorldAction,
+  WorldQuery,
+} from './types';
 import {Vector} from './Vector';
 
 /**
@@ -159,6 +166,11 @@ export class World {
 
   act(action: WorldAction, ...args: unknown[]): void {
     action.apply(this, ...args);
+  }
+
+  /** Answer a rule's world-scoped query (e.g. Collision's `TouchingQuery`). */
+  query<T>(query: WorldQuery<T>, ...args: unknown[]): T {
+    return query.evaluate(this, ...args);
   }
 
   addActor(actor: Actor): void {
