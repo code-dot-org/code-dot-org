@@ -116,117 +116,149 @@ describe 'Cdo::ActiveJobBackend' do
   end
 
   describe 'worker_queues' do
-    let(:n_workers) {0}
-    let(:worker_queues) {Cdo::ActiveJobBackend.worker_queues(n_workers)}
-    let(:_worker_queues) {_(worker_queues)}
+    subject {Cdo::ActiveJobBackend.worker_queues(n_workers)}
+
+    let(:n_workers) {nil}
 
     it 'returns no queues when starting no workers' do
-      _worker_queues.must_equal([])
+      _(subject).must_equal([])
     end
 
-    context 'with one worker' do
+    describe 'with one worker' do
       let(:n_workers) {1}
 
       it 'does not assign a queue pool' do
-        _worker_queues.must_equal []
+        _(subject).must_equal []
       end
     end
 
-    context 'with two workers' do
+    describe 'with two workers' do
       let(:n_workers) {2}
 
       it 'splits workers one to one' do
-        _worker_queues.must_equal [
+        _(subject).must_equal [
           %w[default mailers mailjet],
           %w[low_priority],
         ]
       end
 
-      it 'runs all queues in the main pool when no dedicated pool is configured' do
-        CDO.stubs(:active_job_backend_worker_pool_percentages).returns({})
+      context 'when no dedicated pool is configured' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns({})
+        end
 
-        _worker_queues.must_equal [
-          %w[default mailers mailjet low_priority],
-          %w[default mailers mailjet low_priority],
-        ]
+        it 'does not assign queues' do
+          _(subject).must_equal []
+        end
       end
 
-      it 'keeps a configured queue in the main pool when it cannot receive a dedicated worker' do
-        CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
-          {
-            mailjet: 10,
-            low_priority: 10,
-          }
-        )
+      context 'when a configured queue cannot receive a dedicated worker' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              mailjet: 10,
+              low_priority: 10,
+            }
+          )
+        end
 
-        _worker_queues.must_equal [
-          %w[default mailers low_priority],
-          %w[mailjet],
-        ]
+        it 'keeps the queue in the main pool' do
+          _(subject).must_equal [
+            %w[default mailers low_priority],
+            %w[mailjet],
+          ]
+        end
       end
 
-      it 'keeps every queue served when dedicated pools outnumber workers' do
-        CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
-          {
-            default: 25,
-            mailers: 25,
-            mailjet: 25,
-            low_priority: 25,
-          }
-        )
+      context 'when dedicated pools outnumber workers' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              default: 25,
+              mailers: 25,
+              mailjet: 25,
+              low_priority: 25,
+            }
+          )
+        end
 
-        _worker_queues.must_equal [
-          %w[mailers mailjet low_priority],
-          %w[default],
-        ]
+        it 'keeps every queue served' do
+          _(subject).must_equal [
+            %w[mailers mailjet low_priority],
+            %w[default],
+          ]
+        end
       end
     end
 
-    context 'with 140 workers' do
+    describe 'with 140 workers' do
       let(:n_workers) {140}
 
       it 'allocates ten percent to low priority' do
-        _(worker_queues.count {|queues| queues == %w[default mailers mailjet]}).must_equal 126
-        _(worker_queues.count {|queues| queues == %w[low_priority]}).must_equal 14
+        _(subject.count {|queues| queues == %w[default mailers mailjet]}).must_equal 126
+        _(subject.count {|queues| queues == %w[low_priority]}).must_equal 14
       end
 
-      it 'creates configured queue pools and puts unconfigured queues in the main pool' do
-        CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
-          {
-            mailjet: 10,
-            low_priority: 10,
-          }
-        )
+      context 'when a dedicated pool requests all workers' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              low_priority: 100,
+            }
+          )
+        end
 
-        _(worker_queues.count {|queues| queues == %w[default mailers]}).must_equal 112
-        _(worker_queues.count {|queues| queues == %w[mailjet]}).must_equal 14
-        _(worker_queues.count {|queues| queues == %w[low_priority]}).must_equal 14
+        it 'reserves the first worker for unconfigured queues' do
+          _(subject.first).must_equal %w[default mailers mailjet]
+          _(subject.drop(1)).must_equal Array.new(139, %w[low_priority])
+        end
+      end
+
+      context 'when multiple dedicated pools are configured' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              mailjet: 10,
+              low_priority: 10,
+            }
+          )
+        end
+
+        it 'puts unconfigured queues in the main pool' do
+          _(subject.count {|queues| queues == %w[default mailers]}).must_equal 112
+          _(subject.count {|queues| queues == %w[mailjet]}).must_equal 14
+          _(subject.count {|queues| queues == %w[low_priority]}).must_equal 14
+        end
       end
     end
 
-    context 'with four workers' do
+    describe 'with four workers' do
       let(:n_workers) {4}
 
-      it 'does not reserve a main worker when every queue has a dedicated pool' do
-        CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
-          {
-            default: 25,
-            mailers: 25,
-            mailjet: 25,
-            low_priority: 25,
-          }
-        )
+      context 'when every queue has a dedicated pool' do
+        before do
+          CDO.stubs(:active_job_backend_worker_pool_percentages).returns(
+            {
+              default: 25,
+              mailers: 25,
+              mailjet: 25,
+              low_priority: 25,
+            }
+          )
+        end
 
-        _worker_queues.must_equal [
-          %w[default],
-          %w[mailers],
-          %w[mailjet],
-          %w[low_priority],
-        ]
+        it 'does not reserve a main worker' do
+          _(subject).must_equal [
+            %w[default],
+            %w[mailers],
+            %w[mailjet],
+            %w[low_priority],
+          ]
+        end
       end
 
       it 'keeps at least one low priority worker' do
-        _worker_queues.must_equal [
+        _(subject).must_equal [
           %w[default mailers mailjet],
           %w[default mailers mailjet],
           %w[default mailers mailjet],

@@ -77,12 +77,13 @@ module Cdo
     # Dedicated pools come from `CDO.active_job_backend_worker_pool_percentages`.
     # Each percentage is rounded up, and each configured pool receives one worker while capacity remains.
     # Unconfigured queues and configured queues without a dedicated worker run in the main pool.
-    # Without configured pools, every worker serves every queue.
+    # The main pool is assigned first and keeps at least one worker when unconfigured queues exist.
+    # Without configured pools, delayed_job applies no queue filter.
     #
     # @param n_workers [Integer] Total number of workers to assign.
     # @return [Array<Array<String>>] Queue names indexed by worker number.
-    #   Returns an empty array for zero or one worker so delayed_job applies no
-    #   queue filter and serves every queue.
+    #   Returns an empty array when no queue assignment is needed, so delayed_job
+    #   applies no queue filter and serves every queue.
     #
     # @note Workers in the same pool share one queue-name array.
     #   Treat the returned inner arrays as immutable.
@@ -122,7 +123,7 @@ module Cdo
 
         percentages[queue] = percentage.to_i
       end
-      return Array.new(n_workers, queues) if pool_percentages.empty?
+      return [] if pool_percentages.empty?
 
       main_queues = queues - pool_percentages.keys
 
