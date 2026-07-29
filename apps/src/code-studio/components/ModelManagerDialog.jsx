@@ -1,14 +1,15 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import ModelCard from './ModelCard';
+
+import moduleStyles from './ModelManagerDialog.module.scss';
 
 const DEFAULT_MARGIN = 7;
 
@@ -77,8 +78,7 @@ export default class ModelManagerDialog extends React.Component {
 
   importMLModel = async () => {
     this.setState({isImportPending: true});
-    const modelId = this.root.value;
-    await this.props.autogenerateML(modelId);
+    await this.props.autogenerateML(this.state.selectedModel?.id);
     this.setState({isImportPending: false});
     this.closeModelManager();
   };
@@ -117,136 +117,108 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   render() {
-    const {isOpen} = this.props;
+    if (!this.props.isOpen) {
+      return null;
+    }
     const noModels =
       !this.state.isModelListPending && this.state.models.length === 0;
     const showDeleteButton =
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
-      <div className="ml-modal">
-        <BaseDialog
-          isOpen={isOpen}
-          handleClose={this.closeModelManager}
-          useUpdatedStyles
-          style={styles.dialog}
-        >
-          <h1 style={styles.header}>{i18n.aiTrainedModels()}</h1>
-          {this.state.isModelListPending && (
-            <div style={styles.spinner}>
-              <Spinner />
-            </div>
-          )}
-          {!this.state.isModelListPending && (
+      <>
+        <Modal
+          className={moduleStyles.mlModal}
+          title={i18n.aiTrainedModels()}
+          onClose={this.closeModelManager}
+          customContent={
             <div>
-              <div style={styles.left}>
-                <select
-                  name="model"
-                  ref={element => (this.root = element)}
-                  onChange={this.handleChange}
-                  style={{marginBottom: 0}}
-                >
-                  {this.state.models.map(model => (
-                    <option key={model.id} value={model.id}>
-                      {model.name}
-                    </option>
-                  ))}
-                </select>
-                {noModels && (
-                  <div style={styles.message}>
-                    {i18n.aiTrainedModelsNoModels()}
-                  </div>
-                )}
-                <br />
-                <Button
-                  text={i18n.import()}
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  onClick={this.importMLModel}
-                  disabled={noModels}
-                  isPending={this.state.isImportPending}
-                  pendingText={i18n.importingWithEllipsis()}
-                />
-                {showDeleteButton && (
-                  <Button
-                    text={i18n.delete()}
-                    color={Button.ButtonColor.red}
-                    onClick={this.showDeleteConfirmation}
-                    disabled={noModels}
-                    icon={'trash'}
-                    iconClassName={'fa-trash'}
+              {this.state.isModelListPending && (
+                <div style={styles.spinner}>
+                  <Spinner />
+                </div>
+              )}
+              {!this.state.isModelListPending && (
+                <div className={moduleStyles.mlModalContent}>
+                  <SimpleDropdown
+                    name="model"
+                    labelText={i18n.aiTrainedModels()}
+                    isLabelVisible={false}
+                    items={this.state.models.map(model => ({
+                      value: model.id,
+                      text: model.name,
+                    }))}
+                    selectedValue={this.state.selectedModel?.id}
+                    onChange={this.handleChange}
                   />
+                  {noModels && (
+                    <div style={styles.message}>
+                      {i18n.aiTrainedModelsNoModels()}
+                    </div>
+                  )}
+                  <div className={moduleStyles.modelCardScroll}>
+                    <ModelCard model={this.state.selectedModel} />
+                  </div>
+                </div>
+              )}
+            </div>
+          }
+          primaryButtonProps={{
+            children: this.state.isImportPending
+              ? i18n.importingWithEllipsis()
+              : i18n.import(),
+            onClick: this.importMLModel,
+            disabled: noModels || this.state.isImportPending,
+          }}
+          secondaryButtonProps={
+            showDeleteButton
+              ? {
+                  children: i18n.delete(),
+                  onClick: this.showDeleteConfirmation,
+                  color: 'error',
+                  disabled: noModels,
+                }
+              : undefined
+          }
+        />
+        {this.state.confirmDialogOpen && (
+          <Modal
+            className={moduleStyles.mlModal}
+            title={i18n.aiTrainedModelsDeleteModelConfirm()}
+            description={i18n.aiTrainedModelsDeleteModelMessage()}
+            onClose={this.closeConfirmDialog}
+            customContent={
+              <div className={moduleStyles.mlModalContent}>
+                <div className={moduleStyles.modelCardScroll}>
+                  <ModelCard model={this.state.selectedModel} />
+                </div>
+                {this.state.deletionStatus && (
+                  <p style={styles.message}>{this.state.deletionStatus}</p>
                 )}
               </div>
-              <div style={styles.right}>
-                <ModelCard model={this.state.selectedModel} />
-              </div>
-            </div>
-          )}
-        </BaseDialog>
-        <BaseDialog
-          isOpen={this.state.confirmDialogOpen}
-          handleClose={this.closeConfirmDialog}
-          useUpdatedStyles
-          style={styles.dialog}
-        >
-          <h1 style={styles.header}>
-            {i18n.aiTrainedModelsDeleteModelConfirm()}
-          </h1>
-          <div style={styles.left}>
-            <p style={styles.message}>
-              {i18n.aiTrainedModelsDeleteModelMessage()}
-            </p>
-            <div>
-              <Button
-                text={i18n.no()}
-                color={Button.ButtonColor.brandSecondaryDefault}
-                onClick={this.closeConfirmDialog}
-              />
-              <Button
-                text={i18n.delete()}
-                color={Button.ButtonColor.red}
-                onClick={this.deleteModel}
-                icon={'trash'}
-                iconClassName={'fa-trash'}
-                pendingText={i18n.deletingWithEllipsis()}
-                isPending={this.state.isDeletePending}
-              />
-            </div>
-            <p style={styles.message}>{this.state.deletionStatus}</p>
-          </div>
-          <div style={styles.right}>
-            <ModelCard model={this.state.selectedModel} />
-          </div>
-        </BaseDialog>
-      </div>
+            }
+            primaryButtonProps={{
+              children: this.state.isDeletePending
+                ? i18n.deletingWithEllipsis()
+                : i18n.delete(),
+              onClick: this.deleteModel,
+              color: 'error',
+              disabled: this.state.isDeletePending,
+            }}
+            secondaryButtonProps={{
+              children: i18n.no(),
+              onClick: this.closeConfirmDialog,
+            }}
+          />
+        )}
+      </>
     );
   }
 }
 
 const styles = {
-  dialog: {
-    padding: '0 15px',
-    cursor: 'default',
-  },
-  left: {
-    float: 'left',
-    width: '40%',
-    padding: 20,
-    boxSizing: 'border-box',
-  },
-  right: {
-    float: 'left',
-    width: '60%',
-    padding: 20,
-    boxSizing: 'border-box',
-  },
-  header: {
-    textAlign: 'center',
-    fontSize: 24,
-    marginTop: 20,
-  },
   message: {
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-secondary)',
     textAlign: 'left',
     margin: DEFAULT_MARGIN,
     overflow: 'hidden',
@@ -255,6 +227,6 @@ const styles = {
   },
   spinner: {
     height: 'calc(80vh - 140px)',
-    color: color.dark_charcoal,
+    color: 'var(--text-neutral-secondary)',
   },
 };
