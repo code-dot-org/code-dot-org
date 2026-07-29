@@ -1,9 +1,11 @@
 require 'minitest/autorun'
 require 'mocha/mini_test'
 require 'aws-sdk-ec2'
+require 'aws-sdk-secretsmanager'
 
 $LOAD_PATH.unshift File.expand_path('../../..', __dir__)
 require 'cdo/aws/session_manager'
+require 'cdo/secrets'
 
 class CdoAwsSessionManagerTest < Minitest::Test
   Status = Struct.new(:success) do
@@ -37,6 +39,13 @@ class CdoAwsSessionManagerTest < Minitest::Test
     Cdo::Aws::SessionManager.ec2_client = ec2_client
 
     assert_equal 'i-staging', Cdo::Aws::SessionManager.instance_id_for('i-staging')
+  end
+
+  def test_cdo_aws_namespace_does_not_shadow_aws_sdk_secrets_manager
+    assert_equal(
+      ::Aws::SecretsManager::Errors::ResourceNotFoundException,
+      Cdo::Secrets::NOT_FOUND
+    )
   end
 
   def test_instance_id_for_returns_first_instance_matching_name_tag
