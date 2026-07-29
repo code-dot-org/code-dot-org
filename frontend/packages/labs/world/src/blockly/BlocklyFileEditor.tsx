@@ -6,6 +6,7 @@ import {
   BlocklyWorkspace,
   ScrollBlockDragger,
   TopLeftMetricsManager,
+  TriangleInputPlugin,
   type BlocklySerialization,
 } from '@code-dot-org/blockly';
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
@@ -21,7 +22,14 @@ import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
-const plugins = [ToolboxTrashcanPlugin, ScrollOptionsPlugin];
+// Actor values (`this actor`, `the actor I'm touching`, and every `of …` socket)
+// carry the unique `Actor` output/check type. Give that type a distinct triangle
+// nub so an actor connection reads apart from the puzzle-tab of numbers/strings.
+const plugins = [
+  ToolboxTrashcanPlugin,
+  ScrollOptionsPlugin,
+  TriangleInputPlugin('Actor'),
+];
 
 // A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON
 // (INTERFACE.md). This is the editor Codebridge mounts for those languages via
