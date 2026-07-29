@@ -60,24 +60,30 @@ export const IntrinsicSizeProperty = PositionalTrait.addProperty(
 export const MoveAction = PositionalTrait.addAction(
   'move',
   (actor, to) => actor.set(PositionProperty, Vector.from(to as VectorLike)),
-  {name: 'Move to'},
+  {
+    name: 'Move to',
+    params: [{name: 'to', type: 'vector', default: new Vector(0, 0)}],
+  },
 );
 export const RotateAction = PositionalTrait.addAction(
   'rotate',
   (actor, degrees) => actor.set(RotationProperty, degrees as number),
-  {name: 'Rotate to'},
+  {name: 'Rotate to', params: [{name: 'degrees', type: 'number', default: 0}]},
 );
 export const ScaleAction = PositionalTrait.addAction(
   'scaleTo',
   (actor, to) => actor.set(ScaleProperty, Vector.from(to as VectorLike)),
-  {name: 'Scale to'},
+  {
+    name: 'Scale to',
+    params: [{name: 'to', type: 'vector', default: new Vector(1, 1)}],
+  },
 );
 /** Helper that sets both scale components to the same value (DESIGN.md). */
 export const ResizeAction = PositionalTrait.addAction(
   'resize',
   (actor, factor) =>
     actor.set(ScaleProperty, new Vector(factor as number, factor as number)),
-  {name: 'Resize to'},
+  {name: 'Resize to', params: [{name: 'factor', type: 'number', default: 1}]},
 );
 
 export const SpatialRule = rule.build();

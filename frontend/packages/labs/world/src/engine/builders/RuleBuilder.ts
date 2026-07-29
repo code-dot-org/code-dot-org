@@ -6,6 +6,7 @@
 import type {AnimationDef} from '../core/animationTypes';
 import {Trait} from '../core/Trait';
 import type {
+  ActionParam,
   GameEvent,
   Property,
   PropertyType,
@@ -73,10 +74,16 @@ export class RuleBuilder {
   addAction(
     id: string,
     apply: (world: World, ...args: unknown[]) => void,
-    opts: {name?: string} = {},
+    opts: {name?: string; params?: readonly ActionParam[]} = {},
   ): WorldAction {
     this.assertMutable();
-    const action: WorldAction = {id, name: opts.name, ownerId: this.id, apply};
+    const action: WorldAction = {
+      id,
+      name: opts.name,
+      ownerId: this.id,
+      params: opts.params,
+      apply,
+    };
     this.actions[id] = action;
     return action;
   }

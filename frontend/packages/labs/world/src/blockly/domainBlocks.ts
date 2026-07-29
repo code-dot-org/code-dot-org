@@ -29,7 +29,14 @@ import {
   SpatialRule,
   SpriteProperty,
 } from '../engine';
-import type {GameEvent, Property, Rule} from '../engine';
+import type {
+  ActorAction,
+  GameEvent,
+  Property,
+  PropertyType,
+  Rule,
+  WorldAction,
+} from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
@@ -183,7 +190,7 @@ const worldSetPosition = defineBlock({
   // can be dropped in to move that one instead. X/Y are value sockets seeded with
   // `math_number` shadows, so a learner can type a number or slot in a getter.
   extensions: [actorInputExtension, valueShadowExtension],
-  style: 'location_blocks',
+  style: 'default',
   tooltip: "Set an actor's position.",
   generator: {
     javascript(block, generator) {
@@ -211,7 +218,7 @@ const worldSetSprite = defineBlock({
   extensions: [actorInputExtension],
   previousStatement: true,
   nextStatement: true,
-  style: 'sprite_blocks',
+  style: 'default',
   // Like `play animation`, this only sets the property; the actor must already
   // have the appearance trait (`use trait Has Appearance`). The ACTOR socket
   // defaults to a `this actor` shadow, or take another actor.
@@ -237,7 +244,9 @@ const worldPlayAnimation = defineBlock({
   extensions: [animationOptionsExtension, actorInputExtension],
   previousStatement: true,
   nextStatement: true,
-  style: 'sprite_blocks',
+  // `play animation` is an action of the appearance rule → the action (default)
+  // style, like the generated rule-action blocks.
+  style: 'default',
   // This only selects which animation plays; the actor must already have the
   // appearance trait (add `use trait Has Appearance`). `playAnimation` restarts
   // it from the first frame — so replaying a finished non-looping animation (a
@@ -410,75 +419,92 @@ const isSettable = (property: Property): boolean =>
   !COVERED_PROPERTIES.has(property) &&
   PROPERTY_EXPORT_NAME.has(property);
 
+/** A typed value slot — the shared shape of a property and an action parameter. */
+interface TypedValue {
+  type: PropertyType;
+  default?: unknown;
+}
+
+/** The input names a {@link TypedValue} occupies (a vector uses `x`/`y`). */
+interface ValueNames {
+  value: string;
+  x: string;
+  y: string;
+}
+
+const DEFAULT_VALUE_NAMES: ValueNames = {value: 'VALUE', x: 'X', y: 'Y'};
+
 /**
- * The JS value expression a set block emits for `property`. Each value comes from
- * a socket (`valueToCode`), so a getter or math block can be slotted in; the
- * property's default is the fallback if the socket is emptied of its shadow.
+ * The JS value expression a block emits for a typed value, read from its
+ * socket(s) via `valueToCode` (so a getter or math block can be slotted in); the
+ * value's default is the fallback if a socket is emptied of its shadow.
  */
-const propertyValueCode = (
-  property: Property,
+const typedValueCode = (
+  value: TypedValue,
   block: Block,
   generator: JavascriptGenerator,
+  names: ValueNames = DEFAULT_VALUE_NAMES,
 ): string => {
-  const d = property.default;
+  const d = value.default;
   const read = (name: string): string =>
     generator.valueToCode(block, name, Order.NONE);
-  switch (property.type) {
+  switch (value.type) {
     case 'vector': {
       const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
-      return `new WorldLab.Vector(${read('X') || String(v.x)}, ${
-        read('Y') || String(v.y)
+      return `new WorldLab.Vector(${read(names.x) || String(v.x)}, ${
+        read(names.y) || String(v.y)
       })`;
     }
     case 'boolean':
-      return read('VALUE') || (d ? 'true' : 'false');
+      return read(names.value) || (d ? 'true' : 'false');
     case 'string':
-      return read('VALUE') || str(String(d ?? ''));
+      return read(names.value) || str(String(d ?? ''));
     case 'number':
     default:
-      return read('VALUE') || String(Number(d ?? 0));
+      return read(names.value) || String(Number(d ?? 0));
   }
 };
 
 /**
- * The value input(s) for a set block: a `%n`-numbered message fragment, the
+ * The value input(s) for a typed value: a `%n`-numbered message fragment, the
  * `input_value` args, and the default shadow to seed each (a `math_number` for
  * numbers/vector components, `logic_boolean`/`text` for the other kinds).
  */
-const propertyValueInputs = (
-  property: Property,
+const typedValueInputs = (
+  value: TypedValue,
   slot: number,
+  names: ValueNames = DEFAULT_VALUE_NAMES,
 ): {
   message: string;
   args: BlockArgDefinition[];
   shadows: Array<{name: string; shadow: ShadowSpec}>;
 } => {
-  const d = property.default;
+  const d = value.default;
   const numberInput = (name: string): BlockArgDefinition => ({
     type: 'input_value',
     name,
     check: 'Number',
   });
-  const numberShadow = (name: string, value: number) => ({
+  const numberShadow = (name: string, num: number) => ({
     name,
-    shadow: {type: 'math_number', fields: {NUM: value}},
+    shadow: {type: 'math_number', fields: {NUM: num}},
   });
-  switch (property.type) {
+  switch (value.type) {
     case 'vector': {
       const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
       return {
         message: `x %${slot}  y %${slot + 1}`,
-        args: [numberInput('X'), numberInput('Y')],
-        shadows: [numberShadow('X', v.x), numberShadow('Y', v.y)],
+        args: [numberInput(names.x), numberInput(names.y)],
+        shadows: [numberShadow(names.x, v.x), numberShadow(names.y, v.y)],
       };
     }
     case 'boolean':
       return {
         message: `%${slot}`,
-        args: [{type: 'input_value', name: 'VALUE', check: 'Boolean'}],
+        args: [{type: 'input_value', name: names.value, check: 'Boolean'}],
         shadows: [
           {
-            name: 'VALUE',
+            name: names.value,
             shadow: {
               type: 'logic_boolean',
               fields: {BOOL: d ? 'TRUE' : 'FALSE'},
@@ -489,10 +515,10 @@ const propertyValueInputs = (
     case 'string':
       return {
         message: `%${slot}`,
-        args: [{type: 'input_value', name: 'VALUE', check: 'String'}],
+        args: [{type: 'input_value', name: names.value, check: 'String'}],
         shadows: [
           {
-            name: 'VALUE',
+            name: names.value,
             shadow: {type: 'text', fields: {TEXT: String(d ?? '')}},
           },
         ],
@@ -501,8 +527,8 @@ const propertyValueInputs = (
     default:
       return {
         message: `%${slot}`,
-        args: [numberInput('VALUE')],
-        shadows: [numberShadow('VALUE', Number(d ?? 0))],
+        args: [numberInput(names.value)],
+        shadows: [numberShadow(names.value, Number(d ?? 0))],
       };
   }
 };
@@ -532,7 +558,7 @@ const defineSetPropertyBlock = (property: Property) => {
   const name = property.name ?? property.id;
   const actorScoped = property.scope === 'actor';
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
-  const value = propertyValueInputs(property, actorScoped ? 2 : 1);
+  const value = typedValueInputs(property, actorScoped ? 2 : 1);
   const message0 = actorScoped
     ? `set ${name} of %1 to ${value.message}`
     : `set world ${name} to ${value.message}`;
@@ -552,7 +578,7 @@ const defineSetPropertyBlock = (property: Property) => {
     extensions: actorScoped
       ? [actorInputExtension, valueShadowExtension]
       : [valueShadowExtension],
-    style: 'behavior_blocks',
+    style: 'default',
     tooltip: actorScoped
       ? `Set an actor's ${name}.`
       : `Set the world's ${name}.`,
@@ -561,7 +587,7 @@ const defineSetPropertyBlock = (property: Property) => {
         const target = actorScoped
           ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
           : 'world';
-        return `${target}.set(WorldLab.${exportName}, ${propertyValueCode(
+        return `${target}.set(WorldLab.${exportName}, ${typedValueCode(
           property,
           block,
           generator,
@@ -617,7 +643,9 @@ const defineGetPropertyBlock = (property: Property) => {
     inputsInline: true,
     output: getPropertyOutput(property),
     extensions: actorScoped ? [actorInputExtension] : [],
-    style: 'variable_blocks',
+    // Style by the value it reports: a boolean reads as logic, a number/vector
+    // component as math.
+    style: property.type === 'boolean' ? 'logic_blocks' : 'math_blocks',
     tooltip: actorScoped
       ? `Get an actor's ${name}.`
       : `Get the world's ${name}.`,
@@ -666,6 +694,118 @@ for (const rule of ALL_RULES) {
     }
   }
   PROPERTY_BLOCK_TYPES_BY_RULE.set(rule, types);
+}
+
+// ── Rule action blocks ───────────────────────────────────────────────────────
+// Every action a rule exposes becomes a "do it" block, generated from the action
+// definition — a world action (a rule's own, e.g. gravity's Invert) runs on
+// `world`; an actor action (a trait's, e.g. Move to / Apply force) runs on an
+// actor value via an `on …` socket, like `play animation`. The value inputs come
+// from the action's `params` (the action analogue of a property's type).
+
+// Every Action object → its `world-lab` export name, by reference (same tack as
+// the property/event maps).
+type Action = WorldAction | ActorAction;
+const ACTION_EXPORT_NAME = new Map<Action, string>();
+{
+  const actions = new Set<Action>();
+  for (const rule of ALL_RULES) {
+    for (const action of Object.values(rule.actions)) {
+      actions.add(action);
+    }
+    for (const trait of Object.values(rule.traits)) {
+      for (const action of Object.values(trait.actions)) {
+        actions.add(action);
+      }
+    }
+  }
+  for (const [name, value] of Object.entries(WorldLab)) {
+    if (actions.has(value as Action)) {
+      ACTION_EXPORT_NAME.set(value as Action, name);
+    }
+  }
+}
+
+/** The registry/toolbox type for the block that runs `action`. */
+const actionBlockType = (exportName: string): string =>
+  `world_do_${exportName}`;
+
+/**
+ * A "do this action" block for one rule action, generated from its definition.
+ * A world action runs on `world`; an actor action takes an `on …` ACTOR socket
+ * (default `this actor`) and runs on it. The single argument (actions take zero
+ * or one) is a typed value socket, like a setter's — a getter/math can slot in.
+ */
+const defineActionBlock = (action: Action, actorScoped: boolean) => {
+  const exportName = ACTION_EXPORT_NAME.get(action) ?? '';
+  const name = action.name ?? action.id;
+  const param = action.params?.[0]; // actions take zero or one argument
+  const value = param
+    ? typedValueInputs(param, 1)
+    : {message: '', args: [] as BlockArgDefinition[], shadows: []};
+
+  const args0: BlockArgDefinition[] = [...value.args];
+  let message0 = value.message ? `${name} ${value.message}` : name;
+  if (actorScoped) {
+    // Target socket last, like `play animation … on …`.
+    args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+    message0 = `${message0} on %${args0.length}`;
+  }
+
+  const type = actionBlockType(exportName);
+  if (value.shadows.length) {
+    registerValueShadows(type, value.shadows);
+  }
+  return defineBlock({
+    type,
+    message0,
+    args0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [
+      ...(actorScoped ? [actorInputExtension] : []),
+      ...(value.shadows.length ? [valueShadowExtension] : []),
+    ],
+    style: 'default',
+    tooltip: actorScoped ? `${name} — for an actor.` : name,
+    generator: {
+      javascript(block, generator) {
+        const target = actorScoped
+          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
+          : 'world';
+        const argCode = param
+          ? `, ${typedValueCode(param, block, generator)}`
+          : '';
+        return `${target}.act(WorldLab.${exportName}${argCode});\n`;
+      },
+    },
+  });
+};
+
+// Generate a block for every rule action (world actions first, then each trait's
+// actor actions), recording which belong to each rule's toolbox category.
+const ACTION_BLOCKS: ReturnType<typeof defineActionBlock>[] = [];
+const ACTION_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
+for (const rule of ALL_RULES) {
+  const types: string[] = [];
+  const add = (action: Action, actorScoped: boolean): void => {
+    if (!ACTION_EXPORT_NAME.has(action)) {
+      return;
+    }
+    const block = defineActionBlock(action, actorScoped);
+    ACTION_BLOCKS.push(block);
+    types.push(block.type);
+  };
+  for (const action of Object.values(rule.actions)) {
+    add(action, false);
+  }
+  for (const trait of Object.values(rule.traits)) {
+    for (const action of Object.values(trait.actions)) {
+      add(action, true);
+    }
+  }
+  ACTION_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
 
 const worldLog = defineBlock({
@@ -726,7 +866,8 @@ const worldThisActor = defineBlock({
   type: 'world_this_actor',
   message0: 'this actor',
   output: 'Actor',
-  style: 'variable_blocks',
+  // Actor values share the sprite style — the color that groups the actors.
+  style: 'sprite_blocks',
   tooltip: 'This actor — the one these blocks belong to.',
   generator: {
     javascript() {
@@ -739,7 +880,7 @@ const worldTouchedActor = defineBlock({
   type: 'world_touched_actor',
   message0: "the actor I'm touching",
   output: 'Actor',
-  style: 'variable_blocks',
+  style: 'sprite_blocks',
   tooltip: "Inside a “for each … I'm touching” loop, the actor it is on now.",
   generator: {
     javascript() {
@@ -759,7 +900,8 @@ const worldForEachTouching = defineBlock({
   // The dropdown lists the project's actor templates (populated live), the same
   // as `world_add_actor`.
   extensions: [actorOptionsExtension],
-  style: 'behavior_blocks',
+  // A loop over the touching actors → the loop style.
+  style: 'loop_blocks',
   tooltip:
     'Run blocks once for each actor of a type this actor is touching. Use ' +
     "“the actor I'm touching” to act on each one. Only valid inside a " +
@@ -1015,6 +1157,7 @@ export const DOMAIN_BLOCKS = [
   worldSetSprite,
   worldPlayAnimation,
   ...PROPERTY_BLOCKS,
+  ...ACTION_BLOCKS,
   ...EVENT_BLOCKS,
   worldLog,
   worldPrint,
@@ -1039,13 +1182,15 @@ const RULE_HAND_BLOCKS = new Map<Rule, string[]>([
   [AnimationRule, ['world_set_sprite', 'world_play_animation']],
 ]);
 
-// A rule's category: its hand-authored blocks, then the generated "set property"
-// blocks, then the generated event hats. A rule with none of these is dropped.
+// A rule's category: its hand-authored blocks, the generated set/get property
+// blocks, the generated action blocks, then the generated event hats. A rule with
+// none of these is dropped.
 const ruleCategory = (rule: Rule) => ({
   name: rule.name,
   blocks: [
     ...(RULE_HAND_BLOCKS.get(rule) ?? []),
     ...(PROPERTY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
+    ...(ACTION_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
     ...Object.values(rule.events).map(eventBlockType),
   ],
 });

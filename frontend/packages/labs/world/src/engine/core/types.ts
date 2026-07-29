@@ -29,11 +29,25 @@ export interface Property<T = unknown> {
   readonly ownerId: string;
 }
 
+/**
+ * One argument an Action takes, described so the Blockly surface can generate a
+ * typed value input for it (the action-block analogue of a {@link Property}'s
+ * type). `apply`'s positional args line up with this list in order.
+ */
+export interface ActionParam {
+  readonly name: string;
+  readonly type: PropertyType;
+  /** Seed value for the block's input; falls back to a type zero when absent. */
+  readonly default?: unknown;
+}
+
 /** A world-scoped method that mutates world state and returns nothing. */
 export interface WorldAction {
   readonly id: string;
   readonly name?: string;
   readonly ownerId: string;
+  /** The action's arguments, in `apply` order (empty/absent = no arguments). */
+  readonly params?: readonly ActionParam[];
   readonly apply: (world: World, ...args: unknown[]) => void;
 }
 
@@ -42,6 +56,8 @@ export interface ActorAction {
   readonly id: string;
   readonly name?: string;
   readonly ownerId: string;
+  /** The action's arguments, in `apply` order (empty/absent = no arguments). */
+  readonly params?: readonly ActionParam[];
   readonly apply: (actor: Actor, ...args: unknown[]) => void;
 }
 
