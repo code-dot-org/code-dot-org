@@ -32,6 +32,16 @@
         max-width: 100%;
         max-height: 100%;
       }
+      /* The game is focusable (PhaserBinding sets tabindex + targets its keyboard
+         here), so it only responds to keys while focused. Ring it whenever it is
+         focused — by click or tab — in the editor's teal (component-library
+         focus-styles), so "ring shown" reads as "key presses go to the game, not
+         the editor." Offset inward: the body clips anything past its edges, so an
+         outward ring would be cut. */
+      #game:focus {
+        outline: 2px solid #0093a4;
+        outline-offset: -2px;
+      }
     </style>
   </head>
   <body>
