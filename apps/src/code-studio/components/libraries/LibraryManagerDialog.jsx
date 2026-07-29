@@ -80,31 +80,6 @@ export class LibraryManagerDialog extends React.Component {
     let libraryClient = new LibraryClientApi();
     libraryClient.getClassLibraries(
       classLibraries => {
-        // TEMP: fake data for local visual QA of the class-libraries list —
-        // remove before committing.
-        classLibraries = [
-          {
-            channel: 'fake-1',
-            name: 'ListHelper',
-            description: 'Has functions that are useful for lists',
-            userName: "Kaitie O'Bryan",
-            sectionName: 'Code.org Employees',
-          },
-          {
-            channel: 'fake-2',
-            name: 'U7LibrariesProjectPart32022',
-            description: '',
-            userName: 'Emily Eastlake',
-            sectionName: 'Ctrl-Alt-Retreat AIF Activity',
-          },
-          {
-            channel: 'fake-3',
-            name: 'U7LibrariesProjectPart32022b',
-            description: 'a',
-            userName: 'Emily Eastlake',
-            sectionName: 'Code.org Employees',
-          },
-        ];
         projectLibraries = mapUserNameToProjectLibraries(
           projectLibraries,
           classLibraries
