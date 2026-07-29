@@ -3,6 +3,8 @@ import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import confirmDemoSectionSettings from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/confirmDemoSectionSettings';
 import OnboardingChecklist from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/OnboardingChecklist';
 import useCreateSectionTour from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/useCreateSectionTour';
@@ -77,6 +79,9 @@ const makeJsonResponse = (body: unknown) =>
     headers: {'Content-Type': 'application/json'},
   });
 
+const makeToursResponse = (completed: string[], started: string[] = []) =>
+  makeJsonResponse({completed, started});
+
 // A Tour exposes many methods; the checklist only ever calls start()/cancel(),
 // so we stub just those and cast through unknown.
 const fakeTour = () =>
@@ -87,11 +92,15 @@ describe('OnboardingChecklist', () => {
   let reviewSyllabusTour: Tour;
   let learnHowToEvaluateTour: Tour;
   let mockDispatch: jest.Mock;
+  let sendEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.clearAllMocks();
-    mockGet.mockResolvedValue(makeJsonResponse([]));
+    mockGet.mockResolvedValue(makeToursResponse([]));
     mockPost.mockResolvedValue(new Response());
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
 
     createSectionTour = fakeTour();
     reviewSyllabusTour = fakeTour();
@@ -200,6 +209,60 @@ describe('OnboardingChecklist', () => {
     );
   });
 
+  it('reports previously_started_not_finished as false for a fresh tour start', async () => {
+    renderComponent({demoType: 'elementary'});
+
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: false,
+        }
+      )
+    );
+  });
+
+  it('reports previously_started_not_finished as true when the tour was started but not completed', async () => {
+    mockGet.mockResolvedValue(makeToursResponse([], ['create_class_section']));
+    renderComponent({demoType: 'elementary'});
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: true,
+        }
+      )
+    );
+  });
+
+  it('reports previously_started_not_finished as false when the tour is already completed', async () => {
+    mockGet.mockResolvedValue(
+      makeToursResponse(['create_class_section'], ['create_class_section'])
+    );
+    renderComponent({demoType: 'elementary'});
+
+    await waitFor(() => expect(mockGet).toHaveBeenCalled());
+    fireEvent.click(screen.getByText('Create a class section'));
+
+    await waitFor(() =>
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.ONBOARDING_TOUR_STARTED,
+        {
+          tour_name: 'create_class_section',
+          previously_started_not_finished: false,
+        }
+      )
+    );
+  });
+
   it('starts the correct tour after recording', async () => {
     renderComponent({demoType: 'high'});
 
@@ -254,7 +317,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('shows no check icons when no tours are completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse([]));
+    mockGet.mockResolvedValue(makeToursResponse([]));
 
     renderComponent();
 
@@ -269,7 +332,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('shows a check icon only for tours that are completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+    mockGet.mockResolvedValue(makeToursResponse(['create_class_section']));
 
     renderComponent();
 
@@ -286,7 +349,7 @@ describe('OnboardingChecklist', () => {
   });
 
   it('does not show a check icon for tours that are not completed', async () => {
-    mockGet.mockResolvedValue(makeJsonResponse(['create_class_section']));
+    mockGet.mockResolvedValue(makeToursResponse(['create_class_section']));
 
     renderComponent();
 
@@ -306,7 +369,7 @@ describe('OnboardingChecklist', () => {
     ];
 
     it('shows the celebration state instead of the checklist', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
 
       renderComponent();
 
@@ -318,7 +381,7 @@ describe('OnboardingChecklist', () => {
     });
 
     it('calls onHide when "Complete onboarding" is clicked', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
       const {props} = renderComponent();
 
       await waitFor(() =>
@@ -330,7 +393,7 @@ describe('OnboardingChecklist', () => {
     });
 
     it('hides the "Hide onboarding" button in the celebration state', async () => {
-      mockGet.mockResolvedValue(makeJsonResponse(ALL_TOURS));
+      mockGet.mockResolvedValue(makeToursResponse(ALL_TOURS));
 
       renderComponent();
 
@@ -343,7 +406,7 @@ describe('OnboardingChecklist', () => {
 
   it('does not show the celebration state when only some tours are completed', async () => {
     mockGet.mockResolvedValue(
-      makeJsonResponse(['view_syllabus', 'learn_to_evaluate'])
+      makeToursResponse(['view_syllabus', 'learn_to_evaluate'])
     );
 
     renderComponent();

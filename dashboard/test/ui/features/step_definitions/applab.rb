@@ -337,7 +337,7 @@ And /^I drag element "([^"]*)" ([\d]+) horizontally and ([\d]+) vertically$/ do 
 end
 
 And /^I open the debug console$/ do
-  steps 'And I click selector "#debug-area-header .fa-circle-chevron-up" if it exists'
+  steps 'And I click selector "#show-debug-icon" if it exists'
 end
 
 Then(/^the share link includes "([^"]*)"$/) do |expected_text|

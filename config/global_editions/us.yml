@@ -149,8 +149,9 @@ header:
           - title: educate_high
             domain: code.org
             url: /educate/curriculum/high-school
-          - title: educate_hoc
-            url: https://hourofcode.com
+          - title: hour_of_ai
+            domain: code.org
+            url: /hour-of-ai
           - title: educate_beyond
             domain: code.org
             url: /educate/curriculum/3rd-party
@@ -250,8 +251,9 @@ header:
           - title: educate_high
             domain: code.org
             url: /educate/curriculum/high-school
-          - title: educate_hoc
-            url: https://hourofcode.com
+          - title: hour_of_ai
+            domain: code.org
+            url: /hour-of-ai
           - title: educate_beyond
             domain: code.org
             url: /educate/curriculum/3rd-party

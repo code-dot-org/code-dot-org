@@ -29,6 +29,7 @@ import {ICON_PREFIX_REGEX} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
+import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -217,7 +218,7 @@ applabCommands.image = function (opts) {
     newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
     newImage.width = newImage.height = 200;
   } else {
-    newImage.src = assetPrefix.fixPath(opts.src);
+    newImage.src = resolveAppLabImagePath(opts.src);
   }
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
@@ -793,7 +794,7 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
-  image.src = assetPrefix.fixPath(opts.url);
+  image.src = resolveAppLabImagePath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
     if (!ctx) {
@@ -1209,7 +1210,7 @@ applabCommands.setImageURL = function (opts) {
     if (ICON_PREFIX_REGEX.test(opts.src)) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
     } else {
-      element.src = assetPrefix.fixPath(opts.src);
+      element.src = resolveAppLabImagePath(opts.src);
     }
     element.setAttribute('data-canonical-image-url', opts.src);
 

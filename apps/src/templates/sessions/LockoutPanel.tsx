@@ -361,6 +361,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
                       ? i18n.sessionLockoutUpdateSubmit()
                       : i18n.sessionLockoutSubmit()
                   }
+                  color={Button.ButtonColor.brandSecondaryDefault}
                   disabled={disabled}
                   onClick={() => {}}
                 />
