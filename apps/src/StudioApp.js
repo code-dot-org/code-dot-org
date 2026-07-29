@@ -1669,6 +1669,20 @@ StudioApp.prototype.resizeToolboxHeader = function () {
   if (toolboxWidth < 2) {
     // Effectively hidden
     document.getElementById('toolbox-header').style.display = 'none';
+    if (this.editor && this.editor.session) {
+      const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
+      const showToolboxHeader = document.getElementById('show-toolbox-header');
+      if (showToolboxHeader) {
+        showToolboxHeader.style.display = this.editor.session.paletteEnabled
+          ? 'none'
+          : 'flex';
+      }
+      if (hideToolboxIcon) {
+        hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
+          ? 'none'
+          : 'flex';
+      }
+    }
   } else {
     document.getElementById('toolbox-header').style.display = 'flex';
     document.getElementById('toolbox-header').style.width = `${
