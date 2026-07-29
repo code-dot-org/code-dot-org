@@ -22,7 +22,6 @@ export interface ModeratedImageUploadRequest {
   // `flagged` means the user accepted a flagged moderation verdict; record it
   // on the node so deleting the node can lift the abuse block.
   onUploaded: (uploadUrl: string, flagged: boolean) => void;
-  // Not called when the user cancels a flagged upload.
   onError: () => void;
 }
 
@@ -131,8 +130,7 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
   );
 
   // Hard-delete flagged assets so undo/version restore can't resurrect them,
-  // then unflag the channel. The isBlockedAbuse guard prevents double-
-  // unflagging when a stale undo-restored copy of the node is re-deleted.
+  // then unflag the channel.
   const handleImageNodesDeleted = useCallback(
     async (deletedNodes: SketchLabNode[]) => {
       const flaggedImageNodes = deletedNodes.filter(
@@ -142,6 +140,8 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
       for (const node of flaggedImageNodes) {
         try {
           await HttpClient.delete(node.data.src);
+          // Only unflag if project is blocked for abuse, otherwise we are likely
+          // working off a stale copy of the node.
           if (isBlockedAbuse && channelId) {
             await unflagProjectChannel(channelId, dispatch);
           }

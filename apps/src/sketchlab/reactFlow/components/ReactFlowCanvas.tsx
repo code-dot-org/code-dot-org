@@ -140,8 +140,6 @@ export interface ReactFlowCanvasProps {
   >['updateSources'];
   // When absent, image uploads report an error.
   uploadImage?: ModeratedImageUploader;
-  // Receives the nodes removed by a delete or cut, so the host can clean up
-  // flagged image assets.
   onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
@@ -483,9 +481,7 @@ export default function ReactFlowCanvas({
       );
       if (removedIds.size > 0) {
         // Deleting a flagged image hard-deletes its asset, so wipe history
-        // instead of snapshotting. Must happen here: React Flow fires
-        // onNodesDelete before these remove changes, so a clear there would
-        // be overwritten by the snapshot.
+        // instead of snapshotting.
         const deletesFlaggedImage = nodes.some(
           node =>
             removedIds.has(node.id) &&
