@@ -41,6 +41,9 @@ export interface RenderState {
   scaleY: number;
   /** Degrees. */
   rotation: number;
+  /** Vertical skew in degrees — a shear the driver applies about the actor's
+   * center (0 = none). */
+  skew: number;
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
 }
@@ -235,6 +238,11 @@ export class World {
     const rotationProp = positional.properties[SPATIAL.rotation] as
       | Property<number>
       | undefined;
+    // Skew is optional: a world built before the property existed still renders,
+    // just without shear.
+    const skewProp = positional.properties[SPATIAL.skew] as
+      | Property<number>
+      | undefined;
     if (!positionProp || !scaleProp || !rotationProp) {
       return [];
     }
@@ -294,6 +302,7 @@ export class World {
         scaleX: scale.x,
         scaleY: scale.y,
         rotation: actor.get(rotationProp),
+        skew: skewProp ? actor.get(skewProp) : 0,
         frame: frameFor(actor),
       });
     }

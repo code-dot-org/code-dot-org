@@ -16,6 +16,7 @@ import {
   ScaleProperty,
   SceneBuilder,
   SizeProperty,
+  SkewProperty,
   SolidTrait,
   StartsFallingEvent,
   StopsFallingEvent,
@@ -349,12 +350,26 @@ describe('renderSnapshot (driver view)', () => {
     // Both the player and the ground carry the positional trait.
     expect(before).toHaveLength(2);
     const playerState = before.find(s => s.actor === player);
-    expect(playerState).toMatchObject({x: 10, y: 0, scaleX: 1, scaleY: 1});
+    // Defaults come through, including a zero skew (no shear).
+    expect(playerState).toMatchObject({
+      x: 10,
+      y: 0,
+      scaleX: 1,
+      scaleY: 1,
+      rotation: 0,
+      skew: 0,
+    });
 
     world.tick(0.1); // player falls to y≈9
     const after = world.renderSnapshot().find(s => s.actor === player);
     expect(after?.y).toBeCloseTo(9);
     expect(after?.x).toBe(10);
+  });
+
+  it('reports an actor’s vertical skew', () => {
+    const {world, player} = makeScene(new Vector(0, 0), 120);
+    player.set(SkewProperty, 30);
+    expect(world.renderSnapshot().find(s => s.actor === player)?.skew).toBe(30);
   });
 
   it('is empty for a world without the Spatial rule', () => {
