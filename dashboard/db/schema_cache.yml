@@ -9138,7 +9138,9 @@ primary_keys:
   level_sources: id
   level_sources_multi_types: id
   levels: id
-  levels_script_levels: 
+  levels_script_levels:
+  - script_level_id
+  - level_id
   levels_skills: 
   libraries: id
   lti_courses: id
@@ -9223,7 +9225,7 @@ primary_keys:
   school_stats_by_years:
   - school_id
   - school_year
-  schools: 
+  schools: id
   scrapbook_entries: id
   script_levels: id
   scripts: id
@@ -12071,20 +12073,6 @@ indexes:
   levels_script_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels_script_levels
-    name: index_levels_script_levels_on_script_level_id_and_level_id
-    unique: true
-    columns:
-    - script_level_id
-    - level_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: levels_script_levels
     name: index_levels_script_levels_on_level_id
     unique: false
     columns:
@@ -14564,19 +14552,6 @@ indexes:
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
-    name: index_schools_on_id
-    unique: true
-    columns:
-    - id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: schools
     name: index_schools_on_school_district_id
     unique: false
     columns:
@@ -16376,7 +16351,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260626143947
+version: 20260722124043
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

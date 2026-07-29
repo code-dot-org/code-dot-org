@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-28T15:14:47.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Simulating Growth",
+    "long_instructions": "**In nature, many animals and plants spread by multiplying—much like the viral social media post you saw in class.**\r\n\r\n**☑️ Do This:**\r\n- Choose an animal or plant whose population growth you’d like to simulate\r\n- Complete `simulate` to simulate the population growing over any number of days.\r\n- Ensure that, for each day, `simulate` prints a message in the format: `\"Day {day}: population of {population}\"`. Start with day 0.\r\n- Choose the starting conditions for your population and call `simulate`.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that Python’s `for` loop can repeat code a certain number of times. For example:\r\n\r\n```\r\niterations = 10\r\nfor i in range(iterations):\r\n    print(i)\r\n```",
+    "bubble_choice_description": "Simulate the growth of a population of animals or plants.",
+    "thumbnail_url": "https://images.code.org/3c9d7330006fc5682cb3d6e0b165fbdf-plant-growth.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def simulate(population, growth, days):\n    print(f\"Day 0: population of {population}\")\n    population = population + population * growth\n    \n    print(f\"Day 1: population of {population}\")\n    population = population + population * growth\n\n    print(f\"Day 2: population of {population}\")\n    population = population + population * growth\n\n\nsimulate(100, 1, 3)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-28 15:26:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 15:27:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 15:27:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 15:33:45 +0000\",\"changed\":[\"display_name\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

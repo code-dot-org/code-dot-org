@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T20:56:58.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Going Shopping",
+    "long_instructions": "**Just because you want something doesn’t mean you should buy it.**\r\n\r\n**☑️ Do This:**\r\n\r\n- Fix the `decide` function to help someone decide whether they should buy something:\r\n  - If they want it and can afford it, they should \"Buy it.\"\r\n  - If they want it but can’t afford it, they should \"Save for it.\"\r\n  - If they don’t want it but can afford it, they should \"Skip it.\"\r\n  - If they don’t want it and can’t afford it, they should \"Ignore it.\"\r\n- If you finish with time to spare, expand your decision tree with more questions.\r\n",
+    "bubble_choice_description": "Build a decision tree to go shopping.",
+    "thumbnail_url": "https://images.code.org/15db47e2166f771d4cb87e554fa1af2c-shopping.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def decide(want_it, can_afford_it):\n    if want_it:\n        return \"Buy it\"\n    else:\n        return \"Skip it\"\n\n\ndef main():\n    want_it = True\n    can_afford_it = False\n    decision = decide(want_it, can_afford_it)\n    print(f\"You should: {decision}\")\n\n\nmain()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:58:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:58:52 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

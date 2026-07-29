@@ -1,0 +1,15 @@
+// Excalidraw sizes itself to its parent, so the pane needs an
+// explicit height.
+.whiteboardPane {
+  height: 55vh;
+  min-height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.submitError {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #f28b82;
+}

@@ -70,6 +70,13 @@ export class SketchLab extends LessonLevelPage {
 
   /** Navigate to the empty Sketch Lab level and wait for the canvas. */
   async gotoLevel(params: LabLevelUrlParams = SKETCH_LAB_LEVEL): Promise<void> {
+    // Mark the intro product tour as seen before any page script runs: its
+    // Shepherd overlay covers the canvas toolbar and intercepts clicks (see
+    // apps/src/sketchlab/reactFlow/introTour/useReactFlowSketchLabTour.ts).
+    await this.page.addInitScript(() => {
+      localStorage.setItem('sketchlabReactFlowOnboardingTourSeen', 'yes');
+      localStorage.setItem('sketchlabOnboardingTourSeen', 'yes');
+    });
     await this.page.goto(labLevelUrl(params), {waitUntil: 'domcontentloaded'});
     await this.waitForReady();
   }

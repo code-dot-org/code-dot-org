@@ -7,18 +7,28 @@ import {
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
   generateImage,
   SpriteLab2ItemStyle,
   SpriteLab2ItemType,
-  uploadAssetToProject,
+  UploadImageFunction,
 } from '../ai/items/itemGeneration';
-import {BACKGROUNDS_CATEGORY} from '../types';
+import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+// Sanitize names as typed (drop double quotes, collapse whitespace) so they
+// stay reliable references in AI-generated code, which matches names as tokens.
+const NAME_MAX_LENGTH = 40;
+const sanitizeName = (raw: string) =>
+  raw
+    .replace(/"/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/^\s+/, '')
+    .slice(0, NAME_MAX_LENGTH);
 
 // Read an image's pixel dimensions so the animation's frameSize matches the
 // generated PNG (single frame).
@@ -41,18 +51,13 @@ function getImageSize(
 
 /**
  * The image-generation form, hosted in the Guide (see GenerateSpriteLab).
- * Generates a sprite or background from a text prompt, uploads it to the
- * project's asset bucket, and bridges it into the animation list so it
- * becomes an ordinary costume/background.
+ * Generates a sprite or background from a text prompt, uploads it via
+ * uploadImage, and bridges it into the animation list so it becomes an
+ * ordinary costume/background.
  */
-interface GenerateImageFormProps {
-  // The project channel generated assets upload to.
-  channelId?: string;
-}
-
-const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
-  channelId,
-}) => {
+const GenerateImageForm: React.FunctionComponent<{
+  uploadImage?: UploadImageFunction;
+}> = ({uploadImage}) => {
   const dispatch = useAppDispatch();
 
   const [name, setName] = useState('');
@@ -62,30 +67,34 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
   const [status, setStatus] = useState<'idle' | 'generating'>('idle');
   const [error, setError] = useState<string | null>(null);
 
+  const generating = status === 'generating';
+  const trimmedName = name.trim();
+  const trimmedPrompt = prompt.trim();
+  // Names must be unique — the runtime and block dropdowns identify a costume by name.
+  const existingNames = useAppSelector(state =>
+    Object.values(state.animationList.propsByKey).map(p => p.name)
+  );
+  const nameTaken = !!trimmedName && existingNames.includes(trimmedName);
+  // Both fields are required, and the name must be free.
+  const canGenerate =
+    !generating && !!trimmedName && !!trimmedPrompt && !nameTaken;
+
   const handleGenerate = useCallback(async () => {
-    if (!prompt.trim()) {
-      setError('Enter a description first.');
+    if (!canGenerate) {
       return;
     }
-    if (!channelId) {
-      setError(
-        'This project has no channel yet, so generated images can’t be saved.'
-      );
+    // Don't generate if we can't upload.
+    if (!uploadImage) {
+      setError("Images can't be saved right now.");
       return;
     }
     setStatus('generating');
     setError(null);
     try {
       const {filename, uint8Array, mediaType, pixelGridSize} =
-        await generateImage(prompt, itemType, style);
-      const url = await uploadAssetToProject(
-        channelId,
-        filename,
-        uint8Array,
-        mediaType
-      );
+        await generateImage(trimmedPrompt, itemType, style);
+      const url = await uploadImage(filename, uint8Array, mediaType);
       const frameSize = await getImageSize(uint8Array, mediaType);
-      const desiredName = name.trim() || prompt.trim().slice(0, 20);
       const key = createUuid();
       // Bridge into the animation list: addAnimation fetches sourceUrl, builds
       // the dataURI, and (for Sprite Lab) inserts at the top of the list.
@@ -93,29 +102,34 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
         // addAnimation is an untyped JS thunk (inferred as Function); cast so
         // the dispatch overloads accept it. redux-thunk runs the function.
         addAnimation(key, {
-          name: desiredName,
+          name: trimmedName,
           sourceUrl: url,
           frameSize,
           frameCount: 1,
           frameDelay: 2,
           looping: true,
-          categories: itemType === 'background' ? [BACKGROUNDS_CATEGORY] : [],
+          categories:
+            itemType === 'background'
+              ? [BACKGROUNDS_CATEGORY]
+              : itemType === 'block'
+              ? [BLOCKS_CATEGORY]
+              : [],
           // Recorded once here; the pixel editor trusts this instead of
           // re-detecting the grid on every open.
           pixelGridSize,
         }) as unknown as AnyAction
       );
       // The classic thunk unconditionally renames to name_N; take the plain
-      // name back when nothing else uses it (this animation currently holds
-      // the _N name, so the uniqueness check is against the others).
+      // name back (we required it free above, so it's still available).
       if (
         isNameUnique(
-          desiredName,
+          trimmedName,
           getStore().getState().animationList.propsByKey
         )
       ) {
-        dispatch(setAnimationName(key, desiredName) as unknown as AnyAction);
+        dispatch(setAnimationName(key, trimmedName) as unknown as AnyAction);
       }
+      // Clear both fields so a stale description can't pair with a new name.
       setName('');
       setPrompt('');
     } catch (e) {
@@ -123,9 +137,15 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
     } finally {
       setStatus('idle');
     }
-  }, [prompt, name, itemType, style, channelId, dispatch]);
-
-  const generating = status === 'generating';
+  }, [
+    canGenerate,
+    trimmedName,
+    trimmedPrompt,
+    itemType,
+    style,
+    uploadImage,
+    dispatch,
+  ]);
 
   return (
     <div className={moduleStyles.guideForm}>
@@ -137,7 +157,8 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
             type="text"
             value={name}
             placeholder="e.g. hero"
-            onChange={e => setName(e.target.value)}
+            maxLength={NAME_MAX_LENGTH}
+            onChange={e => setName(sanitizeName(e.target.value))}
             disabled={generating}
           />
         </label>
@@ -150,6 +171,7 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           >
             <option value="sprite">Sprite (costume)</option>
             <option value="background">Background</option>
+            <option value="block">Block (platform tile)</option>
           </select>
         </label>
         <label>
@@ -172,10 +194,15 @@ const GenerateImageForm: React.FunctionComponent<GenerateImageFormProps> = ({
           onChange={e => setPrompt(e.target.value)}
           disabled={generating}
         />
-        <button type="button" onClick={handleGenerate} disabled={generating}>
+        <button type="button" onClick={handleGenerate} disabled={!canGenerate}>
           {generating ? 'Generating…' : 'Generate'}
         </button>
       </div>
+      {nameTaken && (
+        <div className={moduleStyles.generateError}>
+          That name is already used. Choose a new name.
+        </div>
+      )}
       {error && <div className={moduleStyles.generateError}>{error}</div>}
     </div>
   );

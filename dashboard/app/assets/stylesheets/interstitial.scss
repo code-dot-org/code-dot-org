@@ -5,14 +5,14 @@
 #school-info-modal,
 #race-modal {
   text-align: left;
-  top: 20px;
+  top: -10px;
 }
 #terms-modal .modal-content,
 #school-info-modal .modal-content,
 #race-modal .modal-content,
 #student-information-modal .modal-content {
   margin: 0 20px;
-  padding: 0 15px;
+  padding: 0 35px;
 }
 #terms-modal .modal-content p,
 #school-info-modal .modal-content p,
@@ -67,6 +67,10 @@
 }
 #terms-modal .terms-text {
   overflow: hidden;
+}
+
+#race-modal .form-group {
+  margin-bottom: 0;
 }
 
 #terms-modal .terms-checkbox {
@@ -197,8 +201,8 @@ $almost_white: #eee;
   justify-content: space-between;
 }
 
-#student-information-modal {
-  width: 450px;
+#student-information-modal .modal-dialog {
+  width: 490px;
 }
 
 #student-information-modal .header-divider {

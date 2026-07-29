@@ -34,6 +34,13 @@ export interface HeaderProps {
   globalNavItems?: GlobalNavItem[];
   /** Help/support links shown in the help menu and hamburger drawer. */
   supportLinks?: MenuItem[];
+  /**
+   * Marks `globalNavItems` as the signed-out marketing item set: applies the
+   * marketing nav's staged collapse on the top bar. Its `alignEnd` items
+   * (e.g. About, Donate) still reach the hamburger via the always-shown
+   * global nav section — no separate wiring needed.
+   */
+  marketingNav?: boolean;
 }
 
 /** Primary site navigation bar. Renders logo, nav menu, and user auth area. */
@@ -45,6 +52,7 @@ const Header: FunctionComponent<HeaderProps> = ({
   createMenuItems,
   globalNavItems = [],
   supportLinks = [],
+  marketingNav = false,
 }) => {
   // Top bar nav: the app nav when signed in; when there's no app nav (signed
   // out), the site nav flattened to links — a group links to its overview (its
@@ -57,7 +65,9 @@ const Header: FunctionComponent<HeaderProps> = ({
           // A group links to its overview (first sub-item's href). Drop entries
           // that resolve to no real href rather than render a broken '#' link.
           const href = item.href ?? item.subItems?.[0]?.href;
-          return href ? [{label: item.label, href}] : [];
+          return href
+            ? [{label: item.label, href, alignEnd: item.alignEnd}]
+            : [];
         });
 
   return (
@@ -75,10 +85,12 @@ const Header: FunctionComponent<HeaderProps> = ({
           className={moduleStyles.toolbar}
         >
           <NavLogo logoImageUrl={logoImageUrl} brandName={brandName} />
-          <NavMenu menuItems={barNavItems} />
+          <NavMenu menuItems={barNavItems} marketingNav={marketingNav} />
 
-          {/* Flex spacer pushes right items to the edge */}
-          <Box className={moduleStyles.spacer} />
+          {/* Flex spacer pushes right items to the edge. Marketing nav grows
+              itself instead (see NavMenu.module.scss), so its alignEnd items'
+              auto margin reaches this same edge. */}
+          {!marketingNav && <Box className={moduleStyles.spacer} />}
 
           {/* Right cluster: create → auth → help → hamburger (matches prod order) */}
           <Box className={moduleStyles.rightCluster}>

@@ -133,7 +133,7 @@ export const LegacyStartOverDialog = () => (
     <div className="modal-content no-modal-icon scrollable-element">
       <p className="dialog-title">{i18n.startOverTitle()}</p>
       <p>{i18n.startOverBody()}</p>
-      <div id="buttons">
+      <div id="buttons" className="clearfix">
         <button type="button" id="cancel-button">
           {i18n.cancel()}
         </button>
@@ -158,7 +158,7 @@ export const LegacyInstructionsDialog = ({title, markdown}) => (
       <div className="instructions-markdown scrollable-element">
         <SafeMarkdown markdown={markdown} />
       </div>
-      <div id="buttons">
+      <div id="buttons" className="clearfix">
         <button type="button" id="ok-button" style={{float: 'right'}}>
           {i18n.ok()}
         </button>

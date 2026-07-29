@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T20:59:01.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Finding Paradise",
+    "long_instructions": "**\"A city\" and \"Somewhere far away\" aren’t very specific. More questions narrow it down.**\r\n\r\n**☑️ Do This:**\r\n- Fix the `decide` function to help someone decide where their paradise might be:\r\n  - If they want people around and warm weather, they should look for \"A beach city.\"\r\n  - If they want people around but not warm weather, they should look for \"A big city.\"\r\n  - If they don’t want people around but do want warm weather, they should look for \"A remote island.\"\r\n  - If they don’t want people around and don’t want warm weather, they should look for \"A cabin in the mountains.\"\r\n- If you finish with time to spare, expand your decision tree with more questions.\r\n",
+    "bubble_choice_description": "Build a decision tree to find someone's paradise.",
+    "thumbnail_url": "https://images.code.org/acc5683be3a3b40c65d4ff0db9776b93-paradise.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def decide(wants_people_around, wants_warm_weather):\n    if wants_people_around:\n        return \"A city\"\n    else:\n        return \"Somewhere far away\"\n\n\ndef main():\n    wants_people_around = True\n    wants_warm_weather = False\n    decision = decide(wants_people_around, wants_warm_weather)\n    print(f\"You should look for: {decision}\")\n\n\nmain()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 21:00:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 21:00:42 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

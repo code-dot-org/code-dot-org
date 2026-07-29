@@ -1,5 +1,8 @@
 import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import {
   resumeCreateSectionOnboardingTour,
@@ -18,6 +21,12 @@ const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
 >;
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+  ),
+  recordOnboardingTourAbandonment: jest.fn(),
+}));
 jest.mock(
   '@cdo/apps/templates/studioHomepages/teacherHomepageV2/createSectionOnboarding',
   () => ({
@@ -40,6 +49,10 @@ const mockTryGetSessionStorage = tryGetSessionStorage as jest.MockedFunction<
 const mockTrySetSessionStorage = trySetSessionStorage as jest.MockedFunction<
   typeof trySetSessionStorage
 >;
+const mockRecordTourAbandonment =
+  recordOnboardingTourAbandonment as jest.MockedFunction<
+    typeof recordOnboardingTourAbandonment
+  >;
 
 const makeMockTour = () => {
   const handlers: Record<string, (() => void)[]> = {};
@@ -61,8 +74,13 @@ const makeMockTour = () => {
 };
 
 describe('recordTourCompletion', () => {
+  let sendEventSpy: jest.SpyInstance;
+
   beforeEach(() => {
     jest.clearAllMocks();
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
   });
 
   it('calls HttpClient.post with correct args', () => {
@@ -75,6 +93,19 @@ describe('recordTourCompletion', () => {
       JSON.stringify({tour_name: 'create_class_section'}),
       true,
       {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('sends an ONBOARDING_TOUR_COMPLETED analytics event with the tour name', () => {
+    mockHttpClientPost.mockResolvedValue(new Response());
+
+    recordTourCompletion();
+
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_COMPLETED,
+      {
+        tour_name: 'create_class_section',
+      }
     );
   });
 
@@ -195,5 +226,25 @@ describe('resumeCreateSectionOnboardingTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('reports abandonment before clearing sessionStorage on cancel', () => {
+    const savedStepId = 'name-section';
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+    mockTryGetSessionStorage.mockReturnValue(savedStepId);
+
+    resumeCreateSectionOnboardingTour();
+    (mockTour as unknown as {_trigger: (event: string) => void})._trigger(
+      'cancel'
+    );
+
+    expect(mockRecordTourAbandonment).toHaveBeenCalledWith(
+      mockTour,
+      CREATE_SECTION_ONBOARDING_STEP_KEY,
+      'create_class_section'
+    );
+    expect(mockRecordTourAbandonment.mock.invocationCallOrder[0]).toBeLessThan(
+      mockTrySetSessionStorage.mock.invocationCallOrder[0]
+    );
   });
 });

@@ -71,6 +71,41 @@ brandCodeAiAudit.css         All-pink tokens for [data-brand='codeai-audit']
 
 Components should use **semantic** variables (e.g. `var(--background-neutral-primary)`) instead of primitive ones. The correct value is resolved automatically based on the active `data-theme` and `data-brand` attributes. Note that the `code` and `codeai` brands both resolve to the legacy (colors.css) ramp; only `codeai-next` carries the CADS ramp until cutover.
 
+### Component-level brand overrides
+
+The token bridge substitutes values token-for-token, so a component whose
+legacy tokens map cleanly onto CADS ones needs no changes. When the CADS
+design for a component diverges structurally — different shape, border,
+typography treatment, or a different token than the bridge's global mapping
+picks — add a brand-scoped block at the bottom of the component's SCSS
+module (see `tags/tags.module.scss` for the reference example):
+
+```scss
+[data-brand='codeai-next'] {
+  .myComponent {
+    background: var(--background-brand-light);
+    border: 1px solid var(--border-brand-mid);
+  }
+}
+```
+
+Rules for these blocks:
+
+- Scope on `[data-brand='codeai-next']` so every legacy brand renders
+  byte-identically until cutover. At cutover the selector is deleted, not
+  the declarations.
+- Reference **CADS semantic tokens** only (the names in
+  `colors_codeAi.css`). They are theme-aware under `codeai-next`, so Dark
+  mode needs no extra rules; do not hardcode hex values or reach for
+  primitives.
+- `[data-brand]` sits on `<html>`, above any CSS module, so the attribute
+  selector composes with local class names without `:global`.
+- The CADS shape (`--shape-*`) and spacing (`--spacing-p-*`) ramps are the
+  exception to brand scoping: they are brand- and mode-invariant, defined
+  at `:root` in `component-library-styles/shapeAndSpacingVariables.css`.
+  Reference them with a fallback (e.g. `var(--shape-sm, 0.375rem)`) for
+  surfaces that don't load the token entry points.
+
 ---
 
 ## Brand System
@@ -124,6 +159,8 @@ document.documentElement.dataset.brand; // 'code' | 'codeai' | 'codeai-next' | '
 | `CodeaiAuditTheme` | `./codeai-audit/index.ts` | Hot-pink palette pairing with the pink audit CSS ramp |
 
 `CodeaiTheme` and `CodeaiAuditTheme` inherit all typography and component style overrides from `CdoTheme` via `createTheme(CdoTheme, { palette: ... })`. Only the palette differs.
+
+Entry points under `frontend/` (which cannot import `apps/src/util/brand.ts`) select the MUI theme with `getMuiThemeForBrand(document.documentElement.dataset.brand)`, exported from this package. Every entry point that loads `brandOverrides.css` should also call this, so CSS tokens and MUI palette-driven components stay in sync under the same brand — see `frontend/apps/studio/src/routes/__root.tsx` and `frontend/packages/markdown/demo/main.tsx`.
 
 MUI components access theme values via the standard `useTheme()` hook from `@mui/material/styles`.
 

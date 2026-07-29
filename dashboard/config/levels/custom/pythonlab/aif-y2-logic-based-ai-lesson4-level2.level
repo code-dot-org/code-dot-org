@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T23:41:59.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Hello to You",
+    "long_instructions": "You’re building your chatbot and want it to say hello to the user by name. For example, if your name is “Grace,” the chatbot might say “Hello, Grace!”\r\n\r\n**☑️ Do This:**\r\n1. Set the value of the `name` variable to someone’s name.\r\n2. Print a message that greets the user and mentions their name.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo print text that includes a variable, you can use a Python formatted string. A formatted string starts with the letter `f` and can print a variable by surrounding it in curly braces.\r\n\r\nFor example, the following Python code will print “My name is” followed by the value of the `first_name` variable:\r\n\r\n```\r\nprint(f\"My name is {first_name}\")\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Fill in the variable with someone's name\nname = \"\"\n\n# TODO 2: Print a message that greets the user by name\nprint(\"\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:42:04 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

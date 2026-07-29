@@ -12,7 +12,10 @@ import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import type {
   BlocklyLevelProperties,
   Channel,
@@ -28,7 +31,8 @@ import setProjectCallbacks from './setProjectCallbacks';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
-const isLevelEditMode = isStartMode || isToolboxMode;
+const isLevelEditMode =
+  isStartMode || isToolboxMode || !!getAppOptionsEditingExemplar();
 
 export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
@@ -44,7 +48,7 @@ export interface UseSourcesInput<T extends ProjectSources> {
   /** Optional callback called when sources are reinitialized (i.e. start over, restoring a version), as opposed to edited directly. */
   onReinitialize?: () => void;
   /** Optionally decide whether an update counts as a user edit for hasEdited */
-  computeHasEdited?: (prev: T | undefined, next: T) => boolean;
+  computeHasEdited?: (prev: T, next: T) => boolean;
   /** Whether to include version history functionality (previewing, restoring, committing versions) */
   includeVersionHistory?: boolean;
 }
@@ -65,9 +69,12 @@ export interface UseSourcesOutput<T extends ProjectSources> {
    * This is primarily exposed so a consumer may register it with the Lab2Registry if needed.
    */
   projectManager: ProjectManager | null;
-  /** Update the current project sources. Accepts the new sources, or an updater function. */
+  /**
+   * Update the current project sources. Accepts the new sources, or an updater function.
+   * Throws if called before sources have loaded.
+   */
   updateSources: (
-    newSourcesOrUpdater: T | ((prev: T | undefined) => T),
+    newSourcesOrUpdater: T | ((prev: T) => T),
     forceSave?: boolean
   ) => void;
   /** Shallow-merge a patch into the latest sources. */
@@ -251,15 +258,15 @@ export default function useSources<T extends ProjectSources>({
   );
 
   const updateSources = useCallback(
-    (
-      newSourcesOrUpdater: T | ((prev: T | undefined) => T),
-      forceSave = false
-    ) => {
+    (newSourcesOrUpdater: T | ((prev: T) => T), forceSave = false) => {
       if (!isEditable) return;
       // Resolve updaters against the ref, not state: state lags a render, so
       // two quick partial updates would build on the same stale base and
       // drop each other's fields.
       const prevSources = currentSourcesRef.current;
+      if (prevSources === undefined) {
+        throw new Error('updateSources called before sources loaded');
+      }
       const newSources =
         typeof newSourcesOrUpdater === 'function'
           ? newSourcesOrUpdater(prevSources)
@@ -279,7 +286,7 @@ export default function useSources<T extends ProjectSources>({
 
   const patchSources = useCallback(
     (patch: Partial<T>, forceSave = false) => {
-      updateSources(prev => ({...prev, ...patch} as T), forceSave);
+      updateSources(prev => ({...prev, ...patch}), forceSave);
     },
     [updateSources]
   );
@@ -377,6 +384,9 @@ export default function useSources<T extends ProjectSources>({
   );
 
   useEffect(() => {
+    if (isLevelEditMode) {
+      return;
+    }
     dispatch(clearHeader());
     if (projectManagerRef.current && !isLoading) {
       configureHeader(isOwner || false, levelProperties);
