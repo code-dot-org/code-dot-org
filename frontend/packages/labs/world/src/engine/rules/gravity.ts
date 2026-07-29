@@ -70,8 +70,12 @@ export const GroundTrait = rule.addTrait({
 });
 GroundTrait.requires([CollidableTrait]);
 
-export const StartsFallingEvent = rule.addEvent('startsFalling');
-export const StopsFallingEvent = rule.addEvent('stopsFalling');
+export const StartsFallingEvent = rule.addEvent('startsFalling', {
+  name: 'starts falling',
+});
+export const StopsFallingEvent = rule.addEvent('stopsFalling', {
+  name: 'stops falling',
+});
 
 // Before Motion integrates: add this tick's gravity to each affected velocity.
 export const ApplyVelocityStep = rule.addStepBefore(

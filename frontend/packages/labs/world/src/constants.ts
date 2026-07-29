@@ -52,11 +52,12 @@ export default new ActorBuilder({id: 'ball', name: 'Ball'})
 const nextBlock = (block: object, next?: object) =>
   next ? {...block, next: {block: next}} : block;
 
+// Each event now has its own block (`world_on_<event>`), so the handler names
+// the event in its type rather than a shared dropdown field.
 const onEvent = (event: string, x: number, y: number, message: string) => ({
-  type: 'world_on_event',
+  type: `world_on_${event}`,
   x,
   y,
-  fields: {EVENT: event},
   inputs: {
     HANDLER: {block: {type: 'world_log', fields: {TEXT: message}}},
   },
