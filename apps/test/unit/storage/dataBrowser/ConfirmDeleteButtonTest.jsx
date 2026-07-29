@@ -1,3 +1,4 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -6,8 +7,8 @@ import commonI18n from '@cdo/locale';
 
 describe('ConfirmDeleteButton', () => {
   describe('localization', () => {
-    function createConfirmDeleteButton() {
-      return shallow(
+    function createOpenConfirmDeleteButton() {
+      const wrapper = shallow(
         <ConfirmDeleteButton
           title="confirm"
           body="body"
@@ -17,6 +18,8 @@ describe('ConfirmDeleteButton', () => {
           onConfirmDelete={() => {}}
         />
       );
+      wrapper.setState({open: true});
+      return wrapper;
     }
 
     afterEach(() => {
@@ -29,10 +32,12 @@ describe('ConfirmDeleteButton', () => {
         .mockClear()
         .mockReturnValue('i18n-cancel');
 
-      const wrapper = createConfirmDeleteButton();
+      const wrapper = createOpenConfirmDeleteButton();
 
-      let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('cancelText')).toContain('i18n-cancel');
+      const dialog = wrapper.find(Dialog).at(0);
+      expect(dialog.prop('secondaryButtonProps').children).toContain(
+        'i18n-cancel'
+      );
     });
 
     it('should render a default localized string for "Delete" as the confirmation text', () => {
@@ -41,10 +46,12 @@ describe('ConfirmDeleteButton', () => {
         .mockClear()
         .mockReturnValue('i18n-delete');
 
-      const wrapper = createConfirmDeleteButton();
+      const wrapper = createOpenConfirmDeleteButton();
 
-      let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('confirmText')).toContain('i18n-delete');
+      const dialog = wrapper.find(Dialog).at(0);
+      expect(dialog.prop('primaryButtonProps').children).toContain(
+        'i18n-delete'
+      );
     });
   });
 });
