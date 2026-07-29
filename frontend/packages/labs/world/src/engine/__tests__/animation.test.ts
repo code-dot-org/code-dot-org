@@ -14,6 +14,7 @@ import {
   SpriteProperty,
   Vector,
   WorldBuilder,
+  playAnimation,
   type AnimationDef,
 } from '../index';
 
@@ -112,6 +113,61 @@ describe('the Animation rule', () => {
     }
     expect(actor.get(FrameProperty)).toBe(1); // holds the last frame
     expect(ends).toBe(1); // fires exactly once
+  });
+
+  it('restarts a finished non-looping animation when it is replayed', () => {
+    const oneShot: AnimationDef = {
+      loop: false,
+      frames: [
+        {sprite: 's', delay: 100},
+        {sprite: 's', delay: 100},
+      ],
+    };
+    const scene = new SceneBuilder({id: 'gr', name: 'GR'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'wr', name: 'WR'})
+        .useRules([AnimationRule])
+        .useAnimations({oneShot}),
+    );
+    const actor = scene.addActor(
+      new ActorBuilder({id: 'ar', name: 'AR'})
+        .useTraits([AppearanceTrait])
+        .set(PositionProperty, new Vector(0, 0))
+        .set(AnimationProperty, 'oneShot'),
+    );
+
+    let ends = 0;
+    actor.on(AnimationEndedEvent, () => {
+      ends += 1;
+    });
+    // Run it to completion: it holds the last frame and fires once.
+    for (let i = 0; i < 5; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBe(1);
+    expect(ends).toBe(1);
+
+    // Replaying the *same* animation restarts it from frame 0…
+    playAnimation(actor, 'oneShot');
+    world.tick(0); // the step consumes the request and resets
+    expect(actor.get(FrameProperty)).toBe(0);
+    // …and it plays through and ends again.
+    for (let i = 0; i < 5; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBe(1);
+    expect(ends).toBe(2);
+  });
+
+  it('leaves a looping animation cycling when it is replayed (no hitch)', () => {
+    const {world, actor} = makeScene('coinSpin');
+    world.tick(0.3); // advance a few frames into the loop
+    const frame = actor.get(FrameProperty);
+    expect(frame).toBeGreaterThan(0);
+    // Replaying the same looping animation must not snap it back to frame 0.
+    playAnimation(actor, 'coinSpin');
+    world.tick(0);
+    expect(actor.get(FrameProperty)).toBe(frame);
   });
 
   it('emits FrameChangedEvent with the new frame index on each advance', () => {

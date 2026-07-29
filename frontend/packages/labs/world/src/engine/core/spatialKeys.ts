@@ -28,4 +28,5 @@ export const APPEARANCE = {
   elapsed: 'elapsed',
   done: 'done',
   playing: 'playing',
+  restart: 'restart',
 } as const;

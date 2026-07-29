@@ -13,6 +13,7 @@ import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
 import {APPEARANCE} from '../core/spatialKeys';
+import type {Property} from '../core/types';
 import {Vector} from '../core/Vector';
 
 import {IntrinsicSizeProperty, PositionalTrait, SpatialRule} from './spatial';
@@ -72,6 +73,15 @@ const PlayingProperty = AppearanceTrait.addProperty(
   '',
   {readonly: true},
 );
+// A pending "play this animation now" request, raised by `playAnimation` and
+// consumed by the step. It lets a replay of the *same* animation restart it —
+// a selection change alone (`id !== PlayingProperty`) cannot express that.
+const RestartRequestedProperty = AppearanceTrait.addProperty(
+  APPEARANCE.restart,
+  'boolean',
+  false,
+  {readonly: true},
+);
 
 /** Emitted once when a non-looping animation reaches its last frame. */
 export const AnimationEndedEvent = rule.addEvent('animationEnded', {
@@ -112,8 +122,21 @@ export const AdvanceAnimationStep = rule.addStep(
   (world, delta) => {
     for (const actor of world.actors.with(AppearanceTrait)) {
       const id = actor.get(AnimationProperty);
-      // Selecting a different animation (or clearing it) restarts frame state.
-      if (id !== actor.get(PlayingProperty)) {
+      const def = id ? world.animation(id) : undefined;
+      // A replay was requested via `playAnimation` (consume it either way).
+      const requested = actor.get(RestartRequestedProperty);
+      if (requested) {
+        actor.set(RestartRequestedProperty, false);
+      }
+      // Restart frame state when the selection changed — or when a replay of the
+      // *same* animation was requested and that animation is non-looping. A
+      // looping animation is already cycling, so replaying it leaves it be
+      // (avoids a visible hitch); a non-looping one has stopped, so replaying it
+      // starts it over. `world.animation` is missing until the id resolves, so
+      // treat unknown ids as looping (the default) and let the guards below skip.
+      const looping = def ? (def.loop ?? true) : true;
+      const changed = id !== actor.get(PlayingProperty);
+      if (changed || (requested && !looping)) {
         actor.set(PlayingProperty, id);
         actor.set(FrameProperty, 0);
         actor.set(ElapsedProperty, 0);
@@ -122,7 +145,6 @@ export const AdvanceAnimationStep = rule.addStep(
       if (!id || actor.get(DoneProperty)) {
         continue;
       }
-      const def = world.animation(id);
       if (!def || def.frames.length === 0) {
         continue;
       }
@@ -162,6 +184,26 @@ export const AdvanceAnimationStep = rule.addStep(
     }
   },
 );
+
+/** Anything the `playAnimation` routine can drive: an Actor or its ActorBuilder. */
+interface AnimationTarget {
+  set<T>(property: Property<T>, value: T): unknown;
+}
+
+/**
+ * Play an animation on an actor, restarting it from the first frame. Selecting a
+ * different animation restarts it anyway (the step notices the change); this
+ * also restarts a *replay* of the same, non-looping animation — one that has run
+ * to its held last frame plays again. (Written by the `play animation` block.)
+ *
+ * Works on a live Actor (in an event handler) and on an ActorBuilder (in an
+ * `.actor` setup body): both `set` the same properties, so the initial play and
+ * a runtime replay share one routine.
+ */
+export function playAnimation(target: AnimationTarget, id: string): void {
+  target.set(AnimationProperty, id);
+  target.set(RestartRequestedProperty, true);
+}
 
 // ── Stock animations ─────────────────────────────────────────────────────────
 // Backed by the self-hosted vendor spritesheets (`public/vendor/sprites/`); the
