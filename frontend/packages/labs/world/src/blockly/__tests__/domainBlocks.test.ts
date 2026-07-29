@@ -94,17 +94,33 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_set_position sets a Vector from the numeric fields', () => {
-    // No ACTOR value plugged in → defaults to the current actor (the shadow
-    // `this actor` generates `actor`).
-    expect(emit('world_set_position', {X: 200, Y: 20})).toBe(
+  it('world_set_position reads a Vector from the x/y value sockets', () => {
+    // X/Y are value sockets: their code comes from `valueToCode` (a shadow
+    // math_number, or a plugged getter/math block). No ACTOR value → `actor`.
+    expect(emit('world_set_position', {}, {}, {X: '200', Y: '20'})).toBe(
       'actor.set(WorldLab.PositionProperty, new WorldLab.Vector(200, 20));\n',
+    );
+    // A getter slotted into X composes into the Vector.
+    expect(
+      emit(
+        'world_set_position',
+        {},
+        {},
+        {X: 'actor.get(WorldLab.PositionProperty).x', Y: '20'},
+      ),
+    ).toBe(
+      'actor.set(WorldLab.PositionProperty, ' +
+        'new WorldLab.Vector(actor.get(WorldLab.PositionProperty).x, 20));\n',
+    );
+    // Empty sockets fall back to the block's defaults (0, 0).
+    expect(emit('world_set_position', {}, {}, {})).toBe(
+      'actor.set(WorldLab.PositionProperty, new WorldLab.Vector(0, 0));\n',
     );
   });
 
   it('world_set_position targets the ACTOR value when one is plugged in', () => {
     expect(
-      emit('world_set_position', {X: 0, Y: 0}, {}, {ACTOR: 'touched'}),
+      emit('world_set_position', {}, {}, {ACTOR: 'touched', X: '0', Y: '0'}),
     ).toBe(
       'touched.set(WorldLab.PositionProperty, new WorldLab.Vector(0, 0));\n',
     );
@@ -241,28 +257,56 @@ describe('domain block generators', () => {
   });
 
   it('generated actor-property set blocks set the property on the ACTOR value', () => {
-    // A number actor property (spatial rotation): `set rotation of [actor] to n`.
-    expect(emit('world_set_RotationProperty', {VALUE: 45})).toBe(
+    // The value comes from a socket (`valueToCode`) — a shadow number, or a
+    // slotted getter/math block. A number actor property (spatial rotation):
+    expect(emit('world_set_RotationProperty', {}, {}, {VALUE: '45'})).toBe(
       'actor.set(WorldLab.RotationProperty, 45);\n',
     );
     // Plugged-in actor value targets it instead.
     expect(
-      emit('world_set_RotationProperty', {VALUE: 90}, {}, {ACTOR: 'touched'}),
+      emit(
+        'world_set_RotationProperty',
+        {},
+        {},
+        {ACTOR: 'touched', VALUE: '90'},
+      ),
     ).toBe('touched.set(WorldLab.RotationProperty, 90);\n');
-    // A vector actor property (spatial scale): x/y fields → a Vector.
-    expect(emit('world_set_ScaleProperty', {X: 2, Y: 3})).toBe(
+    // A getter slotted into the value composes through.
+    expect(
+      emit(
+        'world_set_RotationProperty',
+        {},
+        {},
+        {VALUE: 'actor.get(WorldLab.RotationProperty)'},
+      ),
+    ).toBe(
+      'actor.set(WorldLab.RotationProperty, actor.get(WorldLab.RotationProperty));\n',
+    );
+    // An empty socket falls back to the property default (rotation 0).
+    expect(emit('world_set_RotationProperty', {}, {}, {})).toBe(
+      'actor.set(WorldLab.RotationProperty, 0);\n',
+    );
+    // A vector actor property (spatial scale): x/y sockets → a Vector.
+    expect(emit('world_set_ScaleProperty', {}, {}, {X: '2', Y: '3'})).toBe(
       'actor.set(WorldLab.ScaleProperty, new WorldLab.Vector(2, 3));\n',
     );
   });
 
   it('generated world-property set blocks set the property on the world', () => {
     // A number world property (gravity strength) — no ACTOR input, targets world.
-    expect(emit('world_set_StrengthProperty', {VALUE: 500})).toBe(
+    expect(emit('world_set_StrengthProperty', {}, {}, {VALUE: '500'})).toBe(
       'world.set(WorldLab.StrengthProperty, 500);\n',
     );
-    // A vector world property (gravity direction).
-    expect(emit('world_set_DirectionProperty', {X: 0, Y: -1})).toBe(
+    // Empty socket → the property default (strength 900).
+    expect(emit('world_set_StrengthProperty', {}, {}, {})).toBe(
+      'world.set(WorldLab.StrengthProperty, 900);\n',
+    );
+    // A vector world property (gravity direction); empty y → its default (1).
+    expect(emit('world_set_DirectionProperty', {}, {}, {X: '0', Y: '-1'})).toBe(
       'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, -1));\n',
+    );
+    expect(emit('world_set_DirectionProperty', {}, {}, {})).toBe(
+      'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, 1));\n',
     );
   });
 

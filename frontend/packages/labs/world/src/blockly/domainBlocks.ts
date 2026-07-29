@@ -47,6 +47,11 @@ import {
   worldOptionsExtension,
 } from './moduleOptions';
 import {traitOptions, traitOptionsExtension} from './traitOptions';
+import {
+  registerValueShadows,
+  valueShadowExtension,
+  type ShadowSpec,
+} from './valueShadow';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -168,27 +173,32 @@ const worldSetPosition = defineBlock({
   message0: 'set position of %1  x %2  y %3',
   args0: [
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'field_number', name: 'X', value: 0},
-    {type: 'field_number', name: 'Y', value: 0},
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
   ],
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
   // The ACTOR socket defaults to a `this actor` shadow; a loop's touched actor
-  // can be dropped in to move that one instead.
-  extensions: [actorInputExtension],
+  // can be dropped in to move that one instead. X/Y are value sockets seeded with
+  // `math_number` shadows, so a learner can type a number or slot in a getter.
+  extensions: [actorInputExtension, valueShadowExtension],
   style: 'location_blocks',
   tooltip: "Set an actor's position.",
   generator: {
     javascript(block, generator) {
       const target =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const x = Number(block.getFieldValue('X'));
-      const y = Number(block.getFieldValue('Y'));
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
       return `${target}.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}));\n`;
     },
   },
 });
+registerValueShadows('world_set_position', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
 
 const worldSetSprite = defineBlock({
   type: 'world_set_sprite',
@@ -400,66 +410,99 @@ const isSettable = (property: Property): boolean =>
   !COVERED_PROPERTIES.has(property) &&
   PROPERTY_EXPORT_NAME.has(property);
 
-/** The JS value expression a set block emits for `property`, read from `block`. */
-const propertyValueCode = (property: Property, block: Block): string => {
+/**
+ * The JS value expression a set block emits for `property`. Each value comes from
+ * a socket (`valueToCode`), so a getter or math block can be slotted in; the
+ * property's default is the fallback if the socket is emptied of its shadow.
+ */
+const propertyValueCode = (
+  property: Property,
+  block: Block,
+  generator: JavascriptGenerator,
+): string => {
+  const d = property.default;
+  const read = (name: string): string =>
+    generator.valueToCode(block, name, Order.NONE);
   switch (property.type) {
-    case 'vector':
-      return `new WorldLab.Vector(${Number(block.getFieldValue('X'))}, ${Number(
-        block.getFieldValue('Y'),
-      )})`;
+    case 'vector': {
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return `new WorldLab.Vector(${read('X') || String(v.x)}, ${
+        read('Y') || String(v.y)
+      })`;
+    }
     case 'boolean':
-      return block.getFieldValue('VALUE') === 'true' ? 'true' : 'false';
+      return read('VALUE') || (d ? 'true' : 'false');
     case 'string':
-      return str(block.getFieldValue('VALUE'));
+      return read('VALUE') || str(String(d ?? ''));
     case 'number':
     default:
-      return String(Number(block.getFieldValue('VALUE')));
+      return read('VALUE') || String(Number(d ?? 0));
   }
 };
 
-/** The value field(s) for a property, plus a `%n`-numbered message fragment. */
-const propertyValueField = (
+/**
+ * The value input(s) for a set block: a `%n`-numbered message fragment, the
+ * `input_value` args, and the default shadow to seed each (a `math_number` for
+ * numbers/vector components, `logic_boolean`/`text` for the other kinds).
+ */
+const propertyValueInputs = (
   property: Property,
   slot: number,
-): {message: string; args: BlockArgDefinition[]} => {
+): {
+  message: string;
+  args: BlockArgDefinition[];
+  shadows: Array<{name: string; shadow: ShadowSpec}>;
+} => {
   const d = property.default;
+  const numberInput = (name: string): BlockArgDefinition => ({
+    type: 'input_value',
+    name,
+    check: 'Number',
+  });
+  const numberShadow = (name: string, value: number) => ({
+    name,
+    shadow: {type: 'math_number', fields: {NUM: value}},
+  });
   switch (property.type) {
     case 'vector': {
       const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
       return {
         message: `x %${slot}  y %${slot + 1}`,
-        args: [
-          {type: 'field_number', name: 'X', value: v.x},
-          {type: 'field_number', name: 'Y', value: v.y},
-        ],
+        args: [numberInput('X'), numberInput('Y')],
+        shadows: [numberShadow('X', v.x), numberShadow('Y', v.y)],
       };
     }
-    case 'boolean': {
-      // No `field_checkbox` in the design system; a two-option dropdown stands
-      // in, ordered so the property's default value is preselected (first).
-      const on: [string, string] = ['true', 'true'];
-      const off: [string, string] = ['false', 'false'];
+    case 'boolean':
       return {
         message: `%${slot}`,
-        args: [
+        args: [{type: 'input_value', name: 'VALUE', check: 'Boolean'}],
+        shadows: [
           {
-            type: 'field_dropdown',
             name: 'VALUE',
-            options: d ? [on, off] : [off, on],
+            shadow: {
+              type: 'logic_boolean',
+              fields: {BOOL: d ? 'TRUE' : 'FALSE'},
+            },
           },
         ],
       };
-    }
     case 'string':
       return {
         message: `%${slot}`,
-        args: [{type: 'field_input', name: 'VALUE', text: String(d ?? '')}],
+        args: [{type: 'input_value', name: 'VALUE', check: 'String'}],
+        shadows: [
+          {
+            name: 'VALUE',
+            shadow: {type: 'text', fields: {TEXT: String(d ?? '')}},
+          },
+        ],
       };
     case 'number':
     default:
       return {
         message: `%${slot}`,
-        args: [{type: 'field_number', name: 'VALUE', value: Number(d ?? 0)}],
+        args: [numberInput('VALUE')],
+        shadows: [numberShadow('VALUE', Number(d ?? 0))],
       };
   }
 };
@@ -488,22 +531,27 @@ const defineSetPropertyBlock = (property: Property) => {
   const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
   const name = property.name ?? property.id;
   const actorScoped = property.scope === 'actor';
-  // The value fields start at %2 after the ACTOR input (%1), else at %1.
-  const value = propertyValueField(property, actorScoped ? 2 : 1);
+  // The value inputs start at %2 after the ACTOR input (%1), else at %1.
+  const value = propertyValueInputs(property, actorScoped ? 2 : 1);
   const message0 = actorScoped
     ? `set ${name} of %1 to ${value.message}`
     : `set world ${name} to ${value.message}`;
   const args0: BlockArgDefinition[] = actorScoped
     ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
     : value.args;
+  const type = setPropertyBlockType(exportName);
+  // Seed the value sockets with their default shadow blocks (attached on init).
+  registerValueShadows(type, value.shadows);
   return defineBlock({
-    type: setPropertyBlockType(exportName),
+    type,
     message0,
     args0,
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
-    extensions: actorScoped ? [actorInputExtension] : [],
+    extensions: actorScoped
+      ? [actorInputExtension, valueShadowExtension]
+      : [valueShadowExtension],
     style: 'behavior_blocks',
     tooltip: actorScoped
       ? `Set an actor's ${name}.`
@@ -516,6 +564,7 @@ const defineSetPropertyBlock = (property: Property) => {
         return `${target}.set(WorldLab.${exportName}, ${propertyValueCode(
           property,
           block,
+          generator,
         )});\n`;
       },
     },
