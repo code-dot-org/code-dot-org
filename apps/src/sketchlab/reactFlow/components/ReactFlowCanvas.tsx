@@ -465,18 +465,10 @@ export default function ReactFlowCanvas({
 
   const handleNodesDeleted = useCallback(
     (deletedNodes: SketchLabNode[]) => {
-      // Deleting a flagged image hard-deletes its asset, so undoing the
-      // delete would restore a node whose image no longer exists. Wipe the
-      // undo/redo stacks so the deletion is final.
-      if (
-        deletedNodes.some(node => node.type === 'image' && node.data.flagged)
-      ) {
-        clearHistory();
-      }
       onNodesDeleted?.(deletedNodes);
       handleElementsDeleted();
     },
-    [onNodesDeleted, handleElementsDeleted, clearHistory]
+    [onNodesDeleted, handleElementsDeleted]
   );
 
   // Intercept React Flow's change callbacks to push undo snapshots before
@@ -485,11 +477,32 @@ export default function ReactFlowCanvas({
   // are handled at their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
-      const hasDelete = changes.some(change => change.type === 'remove');
-      if (hasDelete) pushSnapshot();
+      const removedIds = new Set(
+        changes
+          .filter(change => change.type === 'remove')
+          .map(change => change.id)
+      );
+      if (removedIds.size > 0) {
+        // Deleting a flagged image hard-deletes its asset, so the deletion
+        // must not be undoable. This decision has to live here, not in
+        // onNodesDelete: React Flow fires onNodesDelete before it emits the
+        // remove changes, so a clear there would be overwritten by the
+        // snapshot pushed for the remove.
+        const deletesFlaggedImage = nodes.some(
+          node =>
+            removedIds.has(node.id) &&
+            node.type === 'image' &&
+            node.data.flagged
+        );
+        if (deletesFlaggedImage) {
+          clearHistory();
+        } else {
+          pushSnapshot();
+        }
+      }
       onNodesChange(changes);
     },
-    [onNodesChange, pushSnapshot]
+    [nodes, onNodesChange, pushSnapshot, clearHistory]
   );
 
   const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(
