@@ -60,7 +60,7 @@ export class ConfirmEnableMakerDialog extends Component {
           </div>
           <MuiButton
             variant="text"
-            color="secondary"
+            color="primary"
             onClick={this.props.handleCancel}
           >
             {msg.dialogCancel()}
