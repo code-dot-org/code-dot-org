@@ -38,7 +38,7 @@ export default new ActorBuilder({id: 'coin', name: 'Coin'})
 
 const BALL_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
 
-// A ball playing "pulse" — the animation authored in animations/game.json.
+// A ball playing "pulse" — the animation authored in animations/game.anim.
 export default new ActorBuilder({id: 'ball', name: 'Ball'})
   .useTraits([PositionalTrait, AppearanceTrait])
   .set(AnimationProperty, 'pulse');
@@ -164,7 +164,7 @@ const PLAYER_ACTOR = JSON.stringify(
                 {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
                 nextBlock(
                   {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
-                  // Plays a learner-authored animation (game.json) — its id is
+                  // Plays a learner-authored animation (game.anim) — its id is
                   // in the dropdown because the lab feeds the project's
                   // animations to the block (Phase D). Position is set by the
                   // Scene when it places this actor, not here.
@@ -186,7 +186,7 @@ const PLAYER_ACTOR = JSON.stringify(
   2,
 );
 
-// Learner-authored animations — plain JSON, discriminated by `type: 'animation'`
+// Learner-authored animations — a `.anim` file (JSON on disk), discriminated by `type: 'animation'`
 // (INTERFACE.md §Animations). The world imports and registers them
 // (`useAnimations(parseAnimationFile(...))`). Both scale a built-in sprite per
 // frame, showing the per-frame `scale` the stock strip animations don't use, and
@@ -269,8 +269,8 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       },
       gameAnimations: {
         id: 'gameAnimations',
-        name: 'game.json',
-        language: 'json',
+        name: 'game.anim',
+        language: 'anim',
         contents: GAME_ANIMATIONS,
         folderId: 'animations',
       },

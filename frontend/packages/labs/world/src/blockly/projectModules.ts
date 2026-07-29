@@ -78,7 +78,7 @@ export function projectWorldOptions(
 }
 
 /**
- * `[label, path]` options for the project's animation files (JSON under
+ * `[label, path]` options for the project's animation files (`.anim` under
  * `animations/`) — the `world_use_animations` dropdown. The value is the
  * extension-less path the world imports (`animations/game`).
  */
@@ -87,8 +87,8 @@ export function projectAnimationFileOptions(
 ): Array<[string, string]> {
   const options: Array<[string, string]> = [];
   for (const path of Object.keys(files)) {
-    if (path.startsWith('animations/') && path.endsWith('.json')) {
-      const modulePath = path.replace(/\.json$/, '');
+    if (path.startsWith('animations/') && path.endsWith('.anim')) {
+      const modulePath = path.replace(/\.anim$/, '');
       options.push([
         label(modulePath.split('/').pop() ?? modulePath),
         modulePath,

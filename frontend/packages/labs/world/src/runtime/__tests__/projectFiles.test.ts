@@ -13,7 +13,7 @@ describe('projectFiles', () => {
       'actors/coin.js',
       'actors/ground.js',
       'actors/player.actor',
-      'animations/game.json',
+      'animations/game.anim',
       'maps/level1.map',
       'scenes/main.scene',
       'worlds/platform.world',
