@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -27,8 +26,14 @@ class ProjectInfo extends React.Component {
   };
 
   getFullWidth() {
-    const component = $(this.refs.projectInfo);
-    return component.length > 0 ? component.width() : 0;
+    const el = this.refs.projectInfo;
+    if (!el) {
+      return 0;
+    }
+    // getBoundingClientRect + ceil: jQuery .width() can under-report by a
+    // subpixel, and overflow:hidden then clips the remix button's right border.
+    // That hairline is obvious on 1x external displays, often invisible on Retina.
+    return Math.ceil(el.getBoundingClientRect().width);
   }
 
   setDesiredWidth() {

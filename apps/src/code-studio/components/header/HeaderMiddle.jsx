@@ -140,8 +140,12 @@ class HeaderMiddle extends React.Component {
       lessonProgressDesiredWidth + lessonProgressExtraWidth;
 
     // Project info gets no more than 30% of the entire width.
-    const projectInfoWidth = Math.floor(
-      Math.min(projectInfoDesiredWidth, width * 0.3)
+    // Keep desired width exact when it fits; only floor the 30% cap. Flooring
+    // the min() used to shave a pixel off an already-ceiled desired width and
+    // clip the remix button border under overflow:hidden.
+    const projectInfoWidth = Math.min(
+      projectInfoDesiredWidth,
+      Math.floor(width * 0.3)
     );
 
     let remainingWidth = width - projectInfoWidth;
