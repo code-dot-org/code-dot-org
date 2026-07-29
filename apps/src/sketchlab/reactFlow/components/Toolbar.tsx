@@ -6,6 +6,7 @@ import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
 import {uploadImageAsset} from '../utils/uploadImageAsset';
 
@@ -172,7 +173,12 @@ export default function Toolbar({
         <IconButton
           aria-label="Add text"
           id={`${uid}-text`}
-          onClick={() => onAddNode({type: 'text', data: {text: ''}})}
+          onClick={() =>
+            onAddNode({
+              type: 'text',
+              data: {text: '', strokeColor: DEFAULT_STROKE_COLOR},
+            })
+          }
           size="small"
           color="tertiary"
           variant="outlined"
