@@ -1,5 +1,6 @@
-import {renderHook} from '@testing-library/react-hooks';
+import {act, renderHook} from '@testing-library/react-hooks';
 
+import type {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import {
   INTERNAL_CLIPBOARD_MARKER,
   INTERNAL_CLIPBOARD_MIME,
@@ -8,9 +9,10 @@ import {useCopyPaste} from '@cdo/apps/sketchlab/reactFlow/hooks/useCopyPaste';
 
 // Stub useReactFlow so the hook runs without a mounted ReactFlow. The paste
 // path only needs screenToFlowPosition (identity here) and deleteElements.
+const mockDeleteElements = jest.fn();
 jest.mock('@xyflow/react', () => ({
   useReactFlow: () => ({
-    deleteElements: jest.fn(),
+    deleteElements: mockDeleteElements,
     screenToFlowPosition: (point: {x: number; y: number}) => point,
   }),
 }));
@@ -45,6 +47,7 @@ describe('useCopyPaste paste handling', () => {
   let clearHistory: jest.Mock;
   let uploadImage: jest.Mock;
   let onImageUploadError: jest.Mock;
+  let onFlaggedImageCopyBlocked: jest.Mock;
 
   beforeEach(() => {
     // Successful moderated upload: hand the asset URL to the continuation.
@@ -62,6 +65,8 @@ describe('useCopyPaste paste handling', () => {
     pushSnapshot = jest.fn();
     clearHistory = jest.fn();
     onImageUploadError = jest.fn();
+    onFlaggedImageCopyBlocked = jest.fn();
+    mockDeleteElements.mockClear();
   });
 
   afterEach(() => {
@@ -69,11 +74,14 @@ describe('useCopyPaste paste handling', () => {
     jest.restoreAllMocks();
   });
 
-  function renderCopyPaste(readOnly = false) {
+  function renderCopyPaste(
+    readOnly = false,
+    nodes: SketchlabReactFlowNode[] = []
+  ) {
     const canvasContainerRef = {current: container};
     return renderHook(() =>
       useCopyPaste({
-        nodes: [],
+        nodes,
         edges: [],
         setNodes,
         setEdges,
@@ -83,6 +91,7 @@ describe('useCopyPaste paste handling', () => {
         readOnly,
         uploadImage,
         onImageUploadError,
+        onFlaggedImageCopyBlocked,
       })
     );
   }
@@ -212,5 +221,92 @@ describe('useCopyPaste paste handling', () => {
 
     expect(uploadImage).not.toHaveBeenCalled();
     expect(setNodes).not.toHaveBeenCalled();
+  });
+
+  // Copies of a flagged image would share its asset URL, so deleting any one
+  // copy would hard-delete the asset backing the others. Copy, cut, and
+  // duplicate are blocked for flagged images instead.
+  describe('flagged image copy blocking', () => {
+    const flaggedImageNode: SketchlabReactFlowNode = {
+      id: 'flagged-image',
+      type: 'image',
+      position: {x: 0, y: 0},
+      data: {src: '/v3/assets/channel-1/bad.png', altText: '', flagged: true},
+    };
+    const plainImageNode: SketchlabReactFlowNode = {
+      id: 'plain-image',
+      type: 'image',
+      position: {x: 100, y: 0},
+      data: {src: '/v3/assets/channel-1/ok.png', altText: ''},
+    };
+    const groupNode: SketchlabReactFlowNode = {
+      id: 'group-1',
+      type: 'group',
+      position: {x: 0, y: 0},
+      data: {},
+    };
+    const flaggedChildNode: SketchlabReactFlowNode = {
+      ...flaggedImageNode,
+      id: 'flagged-child',
+      parentId: 'group-1',
+    };
+
+    it('blocks copying a flagged image and reports it', () => {
+      const {result} = renderCopyPaste(false, [flaggedImageNode]);
+
+      act(() => {
+        result.current.copyEntry({type: 'node', id: 'flagged-image'});
+      });
+
+      expect(onFlaggedImageCopyBlocked).toHaveBeenCalledTimes(1);
+      expect(result.current.hasClipboard).toBe(false);
+    });
+
+    it('still copies an unflagged image', () => {
+      const {result} = renderCopyPaste(false, [plainImageNode]);
+
+      act(() => {
+        result.current.copyEntry({type: 'node', id: 'plain-image'});
+      });
+
+      expect(onFlaggedImageCopyBlocked).not.toHaveBeenCalled();
+      expect(result.current.hasClipboard).toBe(true);
+    });
+
+    it('blocks cutting a flagged image without deleting it', () => {
+      const {result} = renderCopyPaste(false, [flaggedImageNode]);
+
+      act(() => {
+        result.current.cutEntry({type: 'node', id: 'flagged-image'});
+      });
+
+      expect(onFlaggedImageCopyBlocked).toHaveBeenCalledTimes(1);
+      expect(result.current.hasClipboard).toBe(false);
+      expect(mockDeleteElements).not.toHaveBeenCalled();
+    });
+
+    it('blocks cutting a group that contains a flagged image', () => {
+      const {result} = renderCopyPaste(false, [groupNode, flaggedChildNode]);
+
+      act(() => {
+        result.current.cutEntry({type: 'node', id: 'group-1'});
+      });
+
+      expect(onFlaggedImageCopyBlocked).toHaveBeenCalledTimes(1);
+      expect(result.current.hasClipboard).toBe(false);
+      expect(mockDeleteElements).not.toHaveBeenCalled();
+    });
+
+    it('blocks duplicating a flagged image', () => {
+      const {result} = renderCopyPaste(false, [flaggedImageNode]);
+
+      act(() => {
+        result.current.duplicateNode('flagged-image');
+      });
+
+      expect(onFlaggedImageCopyBlocked).toHaveBeenCalledTimes(1);
+      expect(setNodes).not.toHaveBeenCalled();
+      expect(pushSnapshot).not.toHaveBeenCalled();
+    });
   });
 });

@@ -41,6 +41,16 @@ interface UseCopyPasteOptions {
   readOnly: boolean;
   uploadImage: ModeratedImageUploader;
   onImageUploadError: () => void;
+  onFlaggedImageCopyBlocked: () => void;
+}
+
+// Flagged images must not be copied: clones share the original's asset URL,
+// so deleting any one copy would hard-delete the asset out from under the
+// others and lift the abuse block while flagged copies remain.
+function containsFlaggedImage(contents: ClipboardContents): boolean {
+  return contents.nodes.some(
+    node => node.type === 'image' && node.data.flagged
+  );
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -68,6 +78,7 @@ export function useCopyPaste({
   readOnly,
   uploadImage,
   onImageUploadError,
+  onFlaggedImageCopyBlocked,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
@@ -241,6 +252,10 @@ export function useCopyPaste({
           ? lastDuplicateRef.current
           : buildNodeClipboard(nodeId);
       if (!source) return;
+      if (containsFlaggedImage(source)) {
+        onFlaggedImageCopyBlocked();
+        return;
+      }
 
       const newNodes = source.nodes.map(node => ({
         ...node,
@@ -257,7 +272,7 @@ export function useCopyPaste({
       pushSnapshot();
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
-    [buildNodeClipboard, pushSnapshot, setNodes]
+    [buildNodeClipboard, pushSnapshot, setNodes, onFlaggedImageCopyBlocked]
   );
 
   // Toolbar action: duplicate a line.
@@ -316,7 +331,12 @@ export function useCopyPaste({
           node?.type === 'group'
             ? buildGroupClipboard(entry.id)
             : buildNodeClipboard(entry.id);
-        if (contents) writeClipboard(contents);
+        if (!contents) return;
+        if (containsFlaggedImage(contents)) {
+          onFlaggedImageCopyBlocked();
+          return;
+        }
+        writeClipboard(contents);
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (contents) writeClipboard(contents);
@@ -328,6 +348,7 @@ export function useCopyPaste({
       buildNodeClipboard,
       buildLineEdgeClipboard,
       writeClipboard,
+      onFlaggedImageCopyBlocked,
     ]
   );
 
@@ -338,6 +359,10 @@ export function useCopyPaste({
         if (node?.type === 'group') {
           const contents = buildGroupClipboard(entry.id);
           if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
           writeClipboard(contents);
           // The canvas's onBeforeDelete handler expands this to the group's
           // children.
@@ -345,6 +370,10 @@ export function useCopyPaste({
         } else {
           const contents = buildNodeClipboard(entry.id);
           if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
           writeClipboard(contents);
           deleteElements({nodes: [{id: entry.id}]});
         }
@@ -376,6 +405,7 @@ export function useCopyPaste({
       deleteElements,
       buildLineEdgeClipboard,
       edges,
+      onFlaggedImageCopyBlocked,
     ]
   );
 

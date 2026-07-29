@@ -345,14 +345,19 @@ export default function ReactFlowCanvas({
     [announceGroupMode, showGroupModeError]
   );
 
-  const [imageUploadError, showImageUploadError] = useTransientMessage(
+  const [imageError, showImageError] = useTransientMessage(
     TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleImageUploadError = useCallback(() => {
     const message = 'Could not upload image. Please try again.';
     announceGroupMode(message);
-    showImageUploadError(message);
-  }, [announceGroupMode, showImageUploadError]);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
+  const handleFlaggedImageCopyBlocked = useCallback(() => {
+    const message = 'Flagged images cannot be copied.';
+    announceGroupMode(message);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
 
   // One banner at a time, highest priority first: an upload error, then a
   // group-mode error, the group-mode hint while group mode is active, and
@@ -361,8 +366,8 @@ export default function ReactFlowCanvas({
     message: string;
     variant: 'info' | 'error';
   } | null>(() => {
-    if (imageUploadError) {
-      return {message: imageUploadError, variant: 'error'};
+    if (imageError) {
+      return {message: imageError, variant: 'error'};
     }
     if (groupModeError) {
       return {message: groupModeError, variant: 'info'};
@@ -378,7 +383,7 @@ export default function ReactFlowCanvas({
     }
     return null;
   }, [
-    imageUploadError,
+    imageError,
     groupModeError,
     isGroupMode,
     readOnly,
@@ -529,6 +534,7 @@ export default function ReactFlowCanvas({
     readOnly,
     uploadImage,
     onImageUploadError: handleImageUploadError,
+    onFlaggedImageCopyBlocked: handleFlaggedImageCopyBlocked,
   });
 
   const clipboardContextValue = useMemo(
