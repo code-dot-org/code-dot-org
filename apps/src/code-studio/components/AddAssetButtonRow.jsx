@@ -23,6 +23,12 @@ export const assetButtonStyles = {
     alignItems: 'center',
     gap: 10,
   },
+  buttons: {
+    display: 'flex',
+    flexShrink: 0,
+    alignItems: 'center',
+    gap: 10,
+  },
 };
 
 const RecordButton = ({onSelectRecord, disabled}) => (
@@ -69,25 +75,28 @@ export default class AddAssetButtonRow extends React.Component {
     }
     return (
       <div style={assetButtonStyles.buttonRow}>
-        <AssetUploader
-          uploadsEnabled={this.props.uploadsEnabled}
-          allowedExtensions={this.props.allowedExtensions}
-          api={this.props.api}
-          onUploadStart={this.props.onUploadStart}
-          onUploadDone={this.props.onUploadDone}
-          onUploadError={this.props.onUploadError}
-          projectType={this.props.projectType}
-        />
-        {shouldShowRecordButton && (
-          <RecordButton
-            onSelectRecord={this.props.onSelectRecord}
-            disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+        <span style={assetButtonStyles.buttons}>
+          <AssetUploader
+            uploadsEnabled={this.props.uploadsEnabled}
+            allowedExtensions={this.props.allowedExtensions}
+            api={this.props.api}
+            onUploadStart={this.props.onUploadStart}
+            onUploadDone={this.props.onUploadDone}
+            onUploadError={this.props.onUploadError}
+            projectType={this.props.projectType}
           />
-        )}
+          {shouldShowRecordButton && (
+            <RecordButton
+              onSelectRecord={this.props.onSelectRecord}
+              disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+            />
+          )}
+        </span>
         <MuiTypography
           id="manage-asset-status"
           variant="body2"
           component="span"
+          sx={{flex: '1 1 auto', minWidth: 0}}
         >
           {this.props.statusMessage}
         </MuiTypography>
