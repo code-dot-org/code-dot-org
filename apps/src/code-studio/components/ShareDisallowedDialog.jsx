@@ -7,11 +7,7 @@ import i18n from '@cdo/locale';
 
 import {hideShareDialog} from './shareDialogRedux';
 
-// DSCO Dialog centers its flex container but leaves the Typography
-// text-align at start. Force the title and description to center via a
-// scoped selector on this dialog only.
-const CENTER_TEXT_STYLE =
-  '.share-disallowed-dialog h2, .share-disallowed-dialog p { text-align: center; }';
+import moduleStyles from './share-disallowed-dialog.module.scss';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {
@@ -24,24 +20,21 @@ class ShareDisallowedDialog extends Component {
       return null;
     }
     return (
-      <>
-        <style>{CENTER_TEXT_STYLE}</style>
-        <Dialog
-          className="share-disallowed-dialog"
-          title={i18n.createAccountToShare()}
-          description={i18n.createAccountToShareDescription()}
-          onClose={this.props.hideShareDialog}
-          closeLabel={i18n.closeDialog()}
-          primaryButtonProps={{
-            children: i18n.createAccount(),
-            href: `/users/sign_up/account_type?user_return_to=${location.pathname}`,
-          }}
-          secondaryButtonProps={{
-            children: i18n.cancel(),
-            onClick: this.props.hideShareDialog,
-          }}
-        />
-      </>
+      <Dialog
+        className={moduleStyles.dialog}
+        title={i18n.createAccountToShare()}
+        description={i18n.createAccountToShareDescription()}
+        onClose={this.props.hideShareDialog}
+        closeLabel={i18n.closeDialog()}
+        primaryButtonProps={{
+          children: i18n.createAccount(),
+          href: `/users/sign_up/account_type?user_return_to=${location.pathname}`,
+        }}
+        secondaryButtonProps={{
+          children: i18n.cancel(),
+          onClick: this.props.hideShareDialog,
+        }}
+      />
     );
   }
 }
