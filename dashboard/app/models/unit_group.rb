@@ -715,6 +715,10 @@ class UnitGroup < ApplicationRecord
     default_units.with_essential_ai_chat_tools.exists?
   end
 
+  def uses_us_only_ai_models?
+    default_units.with_us_only_ai_models.exists?
+  end
+
   def ai_chat_tools_dependency
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if requires_ai_chat_tools?
     return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if has_ai_chat_tools?
