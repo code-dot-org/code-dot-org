@@ -53,6 +53,10 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobMetrics
   end
 
+  test 'includes ActiveJobMetrics' do
+    assert_includes ApplicationJob.ancestors, ActiveJobEnqueueRetry
+  end
+
   test 'oldest_pending_job_age_s' do
     assert_in_delta 10.0, ActiveJobMetrics.oldest_pending_job_age_s, 0.01
     assert_in_delta 10.0, ApplicationJob.new.oldest_pending_job_age_s, 0.01
