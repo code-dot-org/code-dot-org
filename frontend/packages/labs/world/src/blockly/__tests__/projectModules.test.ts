@@ -78,8 +78,8 @@ describe('projectMapActorTypes', () => {
 });
 
 describe('projectWorldRules', () => {
-  // A `.world` is a Blockly workspace: a `world_world` root whose BODY chains
-  // `world_use_rule` blocks (each with a RULE field) via `next`.
+  // A `.world` is a Blockly workspace: a `world_world` root that chains
+  // `world_use_rule` blocks (each with a RULE field) below it via `next`.
   const worldFile = (...rules: string[]) => {
     const chain = rules.reduceRight<object | undefined>(
       (next, rule) => ({
@@ -91,7 +91,7 @@ describe('projectWorldRules', () => {
     );
     return JSON.stringify({
       blocks: {
-        blocks: [{type: 'world_world', inputs: {BODY: {block: chain}}}],
+        blocks: [{type: 'world_world', next: {block: chain}}],
       },
     });
   };
