@@ -222,6 +222,32 @@ describe('domain block generators', () => {
     }
   });
 
+  it('generated actor-property set blocks set the property on the ACTOR value', () => {
+    // A number actor property (spatial rotation): `set rotation of [actor] to n`.
+    expect(emit('world_set_RotationProperty', {VALUE: 45})).toBe(
+      'actor.set(WorldLab.RotationProperty, 45);\n',
+    );
+    // Plugged-in actor value targets it instead.
+    expect(
+      emit('world_set_RotationProperty', {VALUE: 90}, {}, {ACTOR: 'touched'}),
+    ).toBe('touched.set(WorldLab.RotationProperty, 90);\n');
+    // A vector actor property (spatial scale): x/y fields → a Vector.
+    expect(emit('world_set_ScaleProperty', {X: 2, Y: 3})).toBe(
+      'actor.set(WorldLab.ScaleProperty, new WorldLab.Vector(2, 3));\n',
+    );
+  });
+
+  it('generated world-property set blocks set the property on the world', () => {
+    // A number world property (gravity strength) — no ACTOR input, targets world.
+    expect(emit('world_set_StrengthProperty', {VALUE: 500})).toBe(
+      'world.set(WorldLab.StrengthProperty, 500);\n',
+    );
+    // A vector world property (gravity direction).
+    expect(emit('world_set_DirectionProperty', {X: 0, Y: -1})).toBe(
+      'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, -1));\n',
+    );
+  });
+
   it('registers every world_ block the toolbox references', () => {
     // The rule categories reference generated event types (`world_on_<id>`); this
     // catches any drift between what the toolbox lists and what is registered.
@@ -243,6 +269,32 @@ describe('domain block generators', () => {
     ]) {
       expect(toolboxTypes).toContain(t);
     }
+  });
+
+  it('surfaces generated property setters in their rule categories', () => {
+    const category = (name: string) =>
+      (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
+        c => c.name === name,
+      )?.blocks ?? [];
+    // Motion had no blocks before; its velocity setter now populates it.
+    expect(category('Has Physics')).toContain('world_set_VelocityProperty');
+    // Gravity gains its world properties and its actor property.
+    expect(category('Has Gravity')).toEqual(
+      expect.arrayContaining([
+        'world_set_StrengthProperty',
+        'world_set_DirectionProperty',
+        'world_set_GravityScaleProperty',
+      ]),
+    );
+    // Spatial keeps the bespoke set-position and gains scale/rotation/skew.
+    expect(category('Has Space')).toEqual(
+      expect.arrayContaining([
+        'world_set_position',
+        'world_set_ScaleProperty',
+        'world_set_RotationProperty',
+        'world_set_SkewProperty',
+      ]),
+    );
   });
 });
 
