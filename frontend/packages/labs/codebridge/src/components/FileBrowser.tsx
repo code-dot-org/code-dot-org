@@ -36,7 +36,7 @@ import {
   fileBrowserCollisionDetector,
   fileBrowserKeyboardCoordinateGetter,
 } from '../utils/dragAndDrop';
-import {getFileIcon} from '../utils/fileIcons';
+import {getFileIcon, type FileIcon} from '../utils/fileIcons';
 import {getFileExtension, shouldShowFile} from '../utils/multiFileSource';
 
 import {Draggable, NotDraggable} from './dnd/Draggable';
@@ -67,6 +67,7 @@ const FileTree = ({
   parentId,
   handlers,
   hideNewFolderButton,
+  fileIcons,
   isReadOnly,
   dragActive,
 }: {
@@ -74,6 +75,8 @@ const FileTree = ({
   parentId: FolderId;
   handlers: RowHandlers;
   hideNewFolderButton?: boolean;
+  /** Lab-supplied extension -> icon overrides (`config.fileIcons`). */
+  fileIcons?: {[extension: string]: FileIcon};
   /** Hides the per-row edit menus (legacy `enableMenu={!isReadOnly}`). */
   isReadOnly?: boolean;
   /** While a drag is in progress, hide the row menus (matches the legacy). */
@@ -158,6 +161,7 @@ const FileTree = ({
               parentId={folder.id}
               handlers={handlers}
               hideNewFolderButton={hideNewFolderButton}
+              fileIcons={fileIcons}
               isReadOnly={isReadOnly}
               dragActive={dragActive}
             />
@@ -165,7 +169,10 @@ const FileTree = ({
         </li>
       ))}
       {files.map(file => {
-        const {iconName, iconStyle, isBrand} = getFileIcon(file.name);
+        const {iconName, iconStyle, isBrand} = getFileIcon(
+          file.name,
+          fileIcons,
+        );
         return (
           <li key={file.id}>
             <MaybeDraggable
@@ -511,6 +518,7 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
                 parentId={DEFAULT_FOLDER_ID}
                 handlers={handlers}
                 hideNewFolderButton={config.hideNewFolderButton}
+                fileIcons={config.fileIcons}
                 isReadOnly={isReadOnly}
                 dragActive={dragActive}
               />
