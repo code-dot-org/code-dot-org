@@ -1732,10 +1732,11 @@ body.iframe_embed_app_and_code {
 }
 
 .qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: $neutral_dark;
-  @include main-font-semi-bold;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.48;
+  color: var(--text-neutral-primary);
   padding-right: 25px;
 }
 
@@ -1747,9 +1748,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: $white;
-  color: $charcoal;
-  border: 1px solid $charcoal;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
@@ -1764,7 +1765,32 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -20px);
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 a.download-video {
