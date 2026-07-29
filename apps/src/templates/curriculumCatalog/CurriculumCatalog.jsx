@@ -25,7 +25,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
