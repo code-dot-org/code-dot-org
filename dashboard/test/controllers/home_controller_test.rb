@@ -12,6 +12,16 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/teacher_dashboard/home'
   end
 
+  test "student home has CodeAI sharing metadata" do
+    sign_in create(:student)
+
+    get :home
+
+    assert_response :success
+    assert_select 'meta[property="og:site_name"][content="CodeAI"]'
+    assert_select 'meta[property="og:title"][content="Learn on CodeAI"]'
+  end
+
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create(:teacher)
     sign_in teacher

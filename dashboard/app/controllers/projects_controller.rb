@@ -452,6 +452,7 @@ class ProjectsController < ApplicationController
     # for sharing pages, the app will display the footer inside the playspace instead
     # if the game doesn't own the sharing footer, treat it as a legacy share
     @legacy_share_style = sharing && !@game.owns_footer_for_share?
+    legal_name = Cdo::Brand.legal_name(request)
     view_options(
       readonly_workspace: sharing || readonly,
       full_width: true,
@@ -463,7 +464,7 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
+      app_name: Rails.env.production? ? legal_name : "#{legal_name} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags,
       disallowed_html_attrs: disallowed_html_attrs

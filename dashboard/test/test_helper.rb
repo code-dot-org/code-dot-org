@@ -563,14 +563,14 @@ class ActionController::TestCase
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />
-    # <meta content="Code.org" property="og:site_name" />
+    # <meta content="CodeAI" property="og:site_name" />
     # <meta content="Check out what I made" property="og:title" />
-    # <meta content="I wrote the code myself with Code.org" property="og:description" />
+    # <meta content="I wrote the code myself with CodeAI" property="og:description" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" property="og:image" />
     # <meta content="https://www.facebook.com/Code.org" property="article:publisher" />
     # <meta content="http://localhost:3000/p/artist" property="og:url" />
     # <meta content="Check out what I made" name="twitter:title" />
-    # <meta content="I wrote the code myself with Code.org" name="twitter:description" />
+    # <meta content="I wrote the code myself with CodeAI" name="twitter:description" />
     # <meta content="@codeorg" name="twitter:site" />
     # <meta content="photo" name="twitter:card" />
     # <meta content="http://localhost:3000/assets/sharing_drawing.png" name="twitter:image" />
@@ -587,7 +587,7 @@ class ActionController::TestCase
 
     # constants
     assert_select 'meta[property="fb:app_id"][content="500177453358606"]'
-    assert_select 'meta[content="Code.org"][property="og:site_name"]'
+    assert_select 'meta[content="CodeAI"][property="og:site_name"]'
     assert_select 'meta[content="article"][property="og:type"]'
     assert_select 'meta[content="https://www.facebook.com/Code.org"][property="article:publisher"]'
 
@@ -596,6 +596,7 @@ class ActionController::TestCase
     {og: 'property', twitter: 'name'}.each do |namespace, attr|
       # descriptions
       assert_select "meta[content='Check out what I made'][#{attr}='#{namespace}:title']"
+      assert_select "meta[content='I wrote the code myself with CodeAI'][#{attr}='#{namespace}:description']"
 
       # url
       assert_select "meta[content='#{opts[:url]}'][#{attr}='#{namespace}:url']" if opts[:url]

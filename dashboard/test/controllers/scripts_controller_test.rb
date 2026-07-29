@@ -102,7 +102,9 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - CodeAI [test]</title>")
+    assert_select 'meta[property="og:site_name"][content="CodeAI"]'
+    assert_select 'meta[property="og:title"][content="Unit: All The Lesson Plans - CodeAI [test]"]'
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
