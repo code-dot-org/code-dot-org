@@ -132,3 +132,46 @@ export function projectMapActorTypes(
   }
   return maps;
 }
+
+/**
+ * The rule names every `.world` file attaches — the `RULE` field of each of its
+ * `world_use_rule` blocks, deduped across all worlds. Values are `world-lab`
+ * exports (`GravityRule`, …), matching the `world_use_rule` dropdown; the trait
+ * dropdown resolves these against the engine to list the traits in play.
+ */
+export function projectWorldRules(files: Record<string, string>): string[] {
+  const names = new Set<string>();
+  interface Block {
+    type?: string;
+    fields?: {RULE?: string};
+    inputs?: Record<string, {block?: Block}>;
+    next?: {block?: Block};
+  }
+  const visit = (block: Block | undefined): void => {
+    if (!block) {
+      return;
+    }
+    if (block.type === 'world_use_rule' && block.fields?.RULE) {
+      names.add(block.fields.RULE);
+    }
+    for (const input of Object.values(block.inputs ?? {})) {
+      visit(input?.block);
+    }
+    visit(block.next?.block);
+  };
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.endsWith('.world')) {
+      continue;
+    }
+    try {
+      const roots = (JSON.parse(contents) as {blocks?: {blocks?: Block[]}})
+        .blocks?.blocks;
+      for (const root of roots ?? []) {
+        visit(root);
+      }
+    } catch {
+      // Not valid JSON yet (mid-edit); skip this world.
+    }
+  }
+  return [...names];
+}

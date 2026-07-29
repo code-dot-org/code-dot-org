@@ -55,14 +55,11 @@ describe('domain block generators', () => {
     expect(code).not.toContain('export default');
   });
 
-  it('world_use_trait maps the dropdown to a trait', () => {
-    expect(emit('world_use_trait', {TRAIT: 'affected'})).toBe(
-      'actor.useTraits([WorldLab.AffectedByGravityTrait]);\n',
+  it('world_use_trait uses the dropdown value (a trait export name) directly', () => {
+    expect(emit('world_use_trait', {TRAIT: 'CollidableTrait'})).toBe(
+      'actor.useTraits([WorldLab.CollidableTrait]);\n',
     );
-    expect(emit('world_use_trait', {TRAIT: 'ground'})).toBe(
-      'actor.useTraits([WorldLab.GroundTrait]);\n',
-    );
-    expect(emit('world_use_trait', {TRAIT: 'controlled'})).toBe(
+    expect(emit('world_use_trait', {TRAIT: 'ControlledByArrowsTrait'})).toBe(
       'actor.useTraits([WorldLab.ControlledByArrowsTrait]);\n',
     );
   });

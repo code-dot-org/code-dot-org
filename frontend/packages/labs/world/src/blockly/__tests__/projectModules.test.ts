@@ -5,6 +5,7 @@ import {
   projectAnimationFileOptions,
   projectMapActorTypes,
   projectWorldOptions,
+  projectWorldRules,
 } from '../projectModules';
 
 const FILES = {
@@ -73,5 +74,37 @@ describe('projectMapActorTypes', () => {
     expect(maps['maps/level1']).toEqual(['actors/player', 'actors/coin']);
     expect(maps['maps/empty']).toEqual([]); // invalid JSON → no types
     expect(maps['actors/player']).toBeUndefined(); // not under maps/
+  });
+});
+
+describe('projectWorldRules', () => {
+  // A `.world` is a Blockly workspace: a `world_world` root whose BODY chains
+  // `world_use_rule` blocks (each with a RULE field) via `next`.
+  const worldFile = (...rules: string[]) => {
+    const chain = rules.reduceRight<object | undefined>(
+      (next, rule) => ({
+        type: 'world_use_rule',
+        fields: {RULE: rule},
+        ...(next ? {next: {block: next}} : {}),
+      }),
+      undefined,
+    );
+    return JSON.stringify({
+      blocks: {
+        blocks: [{type: 'world_world', inputs: {BODY: {block: chain}}}],
+      },
+    });
+  };
+
+  it('collects the RULE of every use-rule block, deduped across worlds', () => {
+    const rules = projectWorldRules({
+      'worlds/a.world': worldFile('GravityRule', 'InputRule'),
+      'worlds/b.world': worldFile('InputRule', 'AnimationRule'), // Input deduped
+      'scenes/main.scene': worldFile('CollisionRule'), // not a .world — ignored
+      'worlds/broken.world': 'not json yet', // mid-edit — skipped
+    });
+    expect(new Set(rules)).toEqual(
+      new Set(['GravityRule', 'InputRule', 'AnimationRule']),
+    );
   });
 });

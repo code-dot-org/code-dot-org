@@ -161,9 +161,15 @@ const PLAYER_ACTOR = JSON.stringify(
           inputs: {
             BODY: {
               block: nextBlock(
-                {type: 'world_use_trait', fields: {TRAIT: 'affected'}},
+                {
+                  type: 'world_use_trait',
+                  fields: {TRAIT: 'AffectedByGravityTrait'},
+                },
                 nextBlock(
-                  {type: 'world_use_trait', fields: {TRAIT: 'controlled'}},
+                  {
+                    type: 'world_use_trait',
+                    fields: {TRAIT: 'ControlledByArrowsTrait'},
+                  },
                   // Plays a learner-authored animation (game.anim) — its id is
                   // in the dropdown because the lab feeds the project's
                   // animations to the block (Phase D). Position is set by the
