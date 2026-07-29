@@ -507,4 +507,28 @@ describe('TouchingQuery (Collision rule, via world.query)', () => {
     expect(new Set(coins)).toEqual(new Set([coinA, coinB]));
     expect(coins.every(a => a.type === 'coin')).toBe(true);
   });
+
+  it('filters by the placed type, not the builder id (renamed template)', () => {
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    // A template whose builder id ("Coin", e.g. derived from an authored name)
+    // is NOT the module path the scene places it under.
+    const coinTemplate = new ActorBuilder({id: 'Coin', name: 'Coin'})
+      .useTraits([CollidableTrait])
+      .set(PositionProperty, new Vector(16, 0));
+    const player = scene.addActor(
+      at('player', 0, 0),
+      undefined,
+      'actors/player',
+    );
+    const coin = scene.addActor(coinTemplate, 'coin-1', 'actors/coin');
+    expect(coin.type).toBe('actors/coin'); // the placed type, not 'Coin'
+
+    // The loop filters by the module path and still finds the renamed coin.
+    expect(world.query(TouchingQuery, player, 'actors/coin')).toEqual([coin]);
+    // The stale builder id no longer matches anything.
+    expect(world.query(TouchingQuery, player, 'Coin')).toEqual([]);
+  });
 });

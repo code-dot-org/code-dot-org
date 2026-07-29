@@ -636,13 +636,13 @@ const worldForEachTouching = defineBlock({
     '“when” handler.',
   generator: {
     javascript(block, generator) {
-      // Dropdown values are module paths (`actors/coin`); an actor's runtime
-      // `type` is the template id — the module basename.
+      // The dropdown value is the module path (`actors/coin`), which the scene
+      // stamps as each placed actor's `type` (see world_add_actor / the map). So
+      // the touching filter matches on the module path directly.
       const modulePath = block.getFieldValue('ACTOR');
-      const type = modulePath.split('/').pop() ?? modulePath;
       const body = generator.statementToCode(block, 'DO');
       return `for (const touched of world.query(WorldLab.TouchingQuery, actor, ${str(
-        type,
+        modulePath,
       )})) {\n${body}}\n`;
     },
   },
@@ -735,11 +735,13 @@ const worldAddActor = defineBlock({
       const body = generator.statementToCode(block, 'DO');
       // Block scope: each add's `actor` binding is independent, so several adds
       // in one scene don't collide, and the DO body's `actor.set(...)` blocks
-      // (e.g. set position) target it. The block id is the stable instance id.
+      // (e.g. set position) target it. The block id is the stable instance id;
+      // the module path is the actor's kind (its `type`), so "for each … I'm
+      // touching" matches it regardless of the template's authored name.
       return (
         `{\nconst actor = scene.addActor(${importVar(actor)}, ${str(
           block.id,
-        )});\n` + `${body}}\n`
+        )}, ${str(actor)});\n` + `${body}}\n`
       );
     },
   },
