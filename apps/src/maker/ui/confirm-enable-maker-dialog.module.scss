@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 39.375rem;
-  max-width: 50rem;
-  padding: 2.25rem 3.5rem 2.5rem 3.5rem;
+  max-width: 35rem;
+  padding: 2.25rem 2.5rem 1.5rem 2.5rem;
   gap: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
@@ -24,12 +23,14 @@
   padding: 10px;
 }
 
-.footerButtons {
+.actions {
   display: flex;
-  justify-content: space-between;
-  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.buttonGroupSpacing {
-  margin-left: 15px;
+.confirmButtons {
+  display: flex;
+  gap: 0.5rem;
 }

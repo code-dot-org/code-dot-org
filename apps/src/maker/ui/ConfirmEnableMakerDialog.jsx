@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
@@ -33,19 +34,15 @@ export class ConfirmEnableMakerDialog extends Component {
               {msg.enableMakerDialogSetupPageLinkText()}
             </Link>
           </MuiTypography>
-          <MuiTypography variant="body2" className={styles.warning}>
-            {msg.enableMakerDialogWarning()}
-          </MuiTypography>
+          <Alert
+            text={msg.enableMakerDialogWarning()}
+            type="warning"
+            size="xs"
+            className={styles.warning}
+          />
         </div>
-        <div className={styles.footerButtons}>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            onClick={this.props.handleCancel}
-          >
-            {msg.dialogCancel()}
-          </MuiButton>
-          <div>
+        <div className={styles.actions}>
+          <div className={styles.confirmButtons}>
             <MuiButton
               variant="contained"
               color="primary"
@@ -57,11 +54,17 @@ export class ConfirmEnableMakerDialog extends Component {
               variant="contained"
               color="primary"
               onClick={() => this.props.handleConfirm('circuitPlayground')}
-              className={styles.buttonGroupSpacing}
             >
               {msg.useCircuitPlayground()}
             </MuiButton>
           </div>
+          <MuiButton
+            variant="text"
+            color="secondary"
+            onClick={this.props.handleCancel}
+          >
+            {msg.dialogCancel()}
+          </MuiButton>
         </div>
       </CustomDialog>
     );
