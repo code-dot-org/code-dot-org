@@ -19,7 +19,7 @@ import {
   assembleWorldModule,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
-import {DOMAIN_BLOCKS} from './domainBlocks';
+import {DOMAIN_BLOCKS, EVENT_ROOT_TYPES} from './domainBlocks';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
 // (INTERFACE.md). Blockly's generator lives on a workspace, exposed via the
@@ -63,9 +63,14 @@ export const BlocklyGenerator = forwardRef<
         const asString = (code: string | [string, number]): string =>
           Array.isArray(code) ? code[0] : code;
         generator.init(workspace);
+        // An event root block owns the blocks chained below it as its handler
+        // body, wrapping them in a closure itself — so generate it `thisOnly` to
+        // stop `scrub_` from also appending that chain after the closure.
         const generated = workspace.getTopBlocks(true).map(block => ({
           type: block.type,
-          code: asString(generator.blockToCode(block)),
+          code: asString(
+            generator.blockToCode(block, EVENT_ROOT_TYPES.has(block.type)),
+          ),
         }));
         // Route by the root block: `world_scene` → scene, `world_world` →
         // world, otherwise an actor.
