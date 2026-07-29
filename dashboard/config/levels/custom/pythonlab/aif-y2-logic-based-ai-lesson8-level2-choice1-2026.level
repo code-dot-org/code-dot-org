@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T16:13:28.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Simulating a Viral Post",
+    "long_instructions": "**Now, you’ll fix the program you saw in the previous level.**\r\n\r\nIt should simulate a post growing in views until it reaches a target number.\r\n\r\n**☑️ Do This:**\r\n\r\n- Update `simulate` so that it simulates how many days it will take for a viral post’s `views` to reach `target`.\r\n- Ensure that, for each day, `simulate` prints a message in the format: `\"Day {day}: {views} views\"`.\r\n- Choose and experiment with different arguments to `simulate`. Pay attention to how they change your simulation’s outcome.\r\n\r\n**🖥️ Coding Tip:**\r\n\r\nRemember that Python’s `while` loop can repeat code while a condition is true. For example:\r\n\r\n```\r\ni = 1\r\nwhile i < 5:\r\n    print(i)\r\n    i += 1\r\n```",
+    "bubble_choice_description": "Simulate a post reaching a target number of views.",
+    "thumbnail_url": "https://images.code.org/1dfb3738e153bd397ad6efd87bed820e-post.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def simulate(views, growth, target):\n    days = 0\n    print(f\"Day {days}: {views} views\")\n\n    views += views * growth\n    days += 1\n    print(f\"Day {days}: {views} views\")\n\n    views += views * growth\n    days += 1\n    print(f\"Day {days}: {views} views\")\n\n\nsimulate(10, 10, 1000)\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 16:15:07 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:15:49 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 16:16:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 17:01:33 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>
