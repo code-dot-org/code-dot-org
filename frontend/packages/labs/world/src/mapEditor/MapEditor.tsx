@@ -45,6 +45,7 @@ const MAP_BG = '#151521'; // the map region itself
 const GRID = 'rgba(255, 255, 255, 0.07)';
 const BORDER = 'rgba(255, 255, 255, 0.6)'; // outlines the placeable map space
 const SELECT = '#4d9fff'; // highlights the selected placed actor
+const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered actor
 const DEG2RAD = Math.PI / 180;
 
 const clamp = (n: number, lo: number, hi: number) =>
@@ -204,6 +205,9 @@ export const MapEditor = ({
   // select mode, where `selectedId` is the placed instance under edit.
   const [selected, setSelected] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  // The placed actor under the cursor in select mode, highlighted so a heavily
+  // skewed sprite (drawn far from a naive center point) is easy to find and grab.
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [hover, setHover] = useState<Vec | null>(null);
   const [size, setSize] = useState<Size>({w: 0, h: 0});
   const [view, setView] = useState<View | null>(null);
@@ -370,12 +374,16 @@ export const MapEditor = ({
         continue;
       }
       const t = transformOf(actors[i]);
-      // The world point in the actor's local (un-rotated, un-scaled) frame.
+      // Invert the draw transform (translate → skew → rotate → scale) to land the
+      // world point in the sprite's local frame: un-shift, then un-shear (y -=
+      // tan(skew)·x), then un-rotate, then un-scale. So the hit area tracks the
+      // skewed sprite, not a box where it would sit unskewed.
+      const dx = world.x - t.pos.x;
+      const dy =
+        world.y - t.pos.y - Math.tan(t.skew * DEG2RAD) * (world.x - t.pos.x);
       const a = t.rotation * DEG2RAD;
       const cos = Math.cos(a);
       const sin = Math.sin(a);
-      const dx = world.x - t.pos.x;
-      const dy = world.y - t.pos.y;
       const lx = (dx * cos + dy * sin) / (t.scale.x || 1);
       const ly = (-dx * sin + dy * cos) / (t.scale.y || 1);
       if (Math.abs(lx) <= DRAW_SIZE / 2 && Math.abs(ly) <= DRAW_SIZE / 2) {
@@ -735,14 +743,24 @@ export const MapEditor = ({
       setView(v => v && {...v, x: pan.ox + dx, y: pan.oy + dy});
       return;
     }
+    // Idle: in place mode track the placement ghost; in select mode track which
+    // placed actor sits under the cursor, so the render highlights it.
     if (selected && view) {
       setHover(snap(screenToWorld(event.clientX, event.clientY), event.altKey));
+      return;
+    }
+    if (view) {
+      const hit = isReadOnly
+        ? undefined
+        : hitTest(screenToWorld(event.clientX, event.clientY));
+      setHoveredId(hit ? hit.id : null);
     }
   };
 
   const handlePointerLeave = () => {
     endGesture();
     setHover(null);
+    setHoveredId(null);
   };
 
   const handleKeyDown = (event: ReactKeyboardEvent) => {
@@ -862,7 +880,26 @@ export const MapEditor = ({
       ctx.restore();
       ctx.globalAlpha = 1;
     };
+    // Outline an actor: a box hugging its sprite through the same transform the
+    // sprite uses (translate → skew → rotate), so it tracks the visible shape.
+    // Scale is folded into the box size, not the context, so the stroke stays a
+    // constant 2 screen px at any zoom.
+    const strokeActorBox = (t: Transform, color: string) => {
+      ctx.save();
+      ctx.translate(t.pos.x, t.pos.y);
+      if (t.skew) {
+        ctx.transform(1, Math.tan(t.skew * DEG2RAD), 0, 1, 0, 0);
+      }
+      ctx.rotate(t.rotation * DEG2RAD);
+      const hw = (DRAW_SIZE * Math.abs(t.scale.x)) / 2 + 3 / view.scale;
+      const hh = (DRAW_SIZE * Math.abs(t.scale.y)) / 2 + 3 / view.scale;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 2 / view.scale;
+      ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
+      ctx.restore();
+    };
     let selectedTransform: Transform | null = null;
+    let hoveredTransform: Transform | null = null;
     for (const actor of map.actors) {
       if (!positionOf(actor)) {
         continue;
@@ -872,22 +909,17 @@ export const MapEditor = ({
       if (actor.id === selectedId) {
         selectedTransform = t;
       }
+      if (actor.id === hoveredId) {
+        hoveredTransform = t;
+      }
     }
-    // Outline the selected actor: a rotated box hugging the scaled sprite, with a
-    // constant 2px screen stroke (the box size — not the stroke — carries scale).
-    // The box tracks position/scale/rotation but not skew, so it stays a simple
-    // grab affordance that matches the (un-sheared) hit region.
+    // Hover highlight (a lighter outline), drawn under the selection outline and
+    // skipped when the hovered actor is already the selected one.
+    if (hoveredTransform && hoveredId !== selectedId) {
+      strokeActorBox(hoveredTransform, HOVER);
+    }
     if (selectedTransform) {
-      const {pos, scale, rotation} = selectedTransform;
-      ctx.save();
-      ctx.translate(pos.x, pos.y);
-      ctx.rotate(rotation * DEG2RAD);
-      const hw = (DRAW_SIZE * Math.abs(scale.x)) / 2 + 3 / view.scale;
-      const hh = (DRAW_SIZE * Math.abs(scale.y)) / 2 + 3 / view.scale;
-      ctx.strokeStyle = SELECT;
-      ctx.lineWidth = 2 / view.scale;
-      ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
-      ctx.restore();
+      strokeActorBox(selectedTransform, SELECT);
     }
     if (selected && hover) {
       drawSprite(
@@ -896,11 +928,17 @@ export const MapEditor = ({
         0.5,
       );
     }
-  }, [view, size, map, images, hover, selected, selectedId]);
+  }, [view, size, map, images, hover, selected, selectedId, hoveredId]);
 
   const canvasClass = [
     styles.canvas,
-    panning ? styles.panning : selected ? styles.placing : '',
+    panning
+      ? styles.panning
+      : selected
+        ? styles.placing
+        : hoveredId
+          ? styles.hovering
+          : '',
   ]
     .filter(Boolean)
     .join(' ');
