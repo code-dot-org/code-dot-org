@@ -47,6 +47,23 @@ const emit = (
   ) as string;
 };
 
+/** Run a value (reporter) block's generator; returns its `[code, order]` tuple. */
+const emitValue = (
+  type: string,
+  fields: Record<string, string | number> = {},
+  values: Record<string, string> = {},
+): [string, number] => {
+  const block = {getFieldValue: (name: string) => fields[name]};
+  const generator = {
+    valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+  };
+  return generatorFor(type)(
+    block as never,
+    generator as never,
+    {} as never,
+  ) as [string, number];
+};
+
 describe('domain block generators', () => {
   it('world_actor builds the actor and its body, without the export', () => {
     // The body (traits/behaviors) chains below the actor root, not in a `do`
@@ -249,6 +266,30 @@ describe('domain block generators', () => {
     );
   });
 
+  it('generated actor-property get blocks read the property off the ACTOR value', () => {
+    // A number actor property reports the value directly.
+    expect(emitValue('world_get_RotationProperty')[0]).toBe(
+      'actor.get(WorldLab.RotationProperty)',
+    );
+    // Plugged-in actor value is read instead.
+    expect(
+      emitValue('world_get_RotationProperty', {}, {ACTOR: 'touched'})[0],
+    ).toBe('touched.get(WorldLab.RotationProperty)');
+    // A vector actor property reads one component via the x/y dropdown.
+    expect(emitValue('world_get_ScaleProperty', {COMPONENT: 'y'})[0]).toBe(
+      'actor.get(WorldLab.ScaleProperty).y',
+    );
+  });
+
+  it('generated world-property get blocks read the property off the world', () => {
+    expect(emitValue('world_get_StrengthProperty')[0]).toBe(
+      'world.get(WorldLab.StrengthProperty)',
+    );
+    expect(emitValue('world_get_DirectionProperty', {COMPONENT: 'x'})[0]).toBe(
+      'world.get(WorldLab.DirectionProperty).x',
+    );
+  });
+
   it('registers every world_ block the toolbox references', () => {
     // The rule categories reference generated event types (`world_on_<id>`); this
     // catches any drift between what the toolbox lists and what is registered.
@@ -277,14 +318,22 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === name,
       )?.blocks ?? [];
-    // Motion had no blocks before; its velocity setter now populates it.
-    expect(category('Has Physics')).toContain('world_set_VelocityProperty');
-    // Gravity gains its world properties and its actor property.
+    // Motion had no blocks before; its velocity set + get now populate it.
+    expect(category('Has Physics')).toEqual(
+      expect.arrayContaining([
+        'world_set_VelocityProperty',
+        'world_get_VelocityProperty',
+      ]),
+    );
+    // Gravity gains its world properties and its actor property, set and get.
     expect(category('Has Gravity')).toEqual(
       expect.arrayContaining([
         'world_set_StrengthProperty',
+        'world_get_StrengthProperty',
         'world_set_DirectionProperty',
+        'world_get_DirectionProperty',
         'world_set_GravityScaleProperty',
+        'world_get_GravityScaleProperty',
       ]),
     );
     // Spatial keeps the bespoke set-position and gains scale/rotation/skew.
@@ -292,8 +341,11 @@ describe('domain block generators', () => {
       expect.arrayContaining([
         'world_set_position',
         'world_set_ScaleProperty',
+        'world_get_ScaleProperty',
         'world_set_RotationProperty',
+        'world_get_RotationProperty',
         'world_set_SkewProperty',
+        'world_get_SkewProperty',
       ]),
     );
   });

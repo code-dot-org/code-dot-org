@@ -464,9 +464,19 @@ const propertyValueField = (
   }
 };
 
-/** The registry/toolbox type for the block that sets `property`. */
+/** The registry/toolbox types for the blocks that set / get `property`. */
 const setPropertyBlockType = (exportName: string): string =>
   `world_set_${exportName}`;
+const getPropertyBlockType = (exportName: string): string =>
+  `world_get_${exportName}`;
+
+/** A value block's `output` check for a property (a vector reads one component). */
+const getPropertyOutput = (property: Property): string =>
+  property.type === 'boolean'
+    ? 'Boolean'
+    : property.type === 'string'
+      ? 'String'
+      : 'Number'; // a number, or one component of a vector
 
 /**
  * A "set …" block for one settable property, generated from its definition. An
@@ -512,10 +522,80 @@ const defineSetPropertyBlock = (property: Property) => {
   });
 };
 
-// Generate a set block for every settable property, in rule/trait declaration
-// order, and record which belong to each rule's toolbox category: a rule's own
-// (world) properties, then those of every trait it defines (actor).
-const PROPERTY_BLOCKS: ReturnType<typeof defineSetPropertyBlock>[] = [];
+/**
+ * A "get …" reporter for one settable property — the read counterpart of the set
+ * block. An actor property takes an ACTOR value input (defaulting to a `this
+ * actor` shadow); a world property reads `world`. It outputs a Number (a vector
+ * reads one component via an x/y dropdown), so a value plugs into logic/math.
+ */
+const defineGetPropertyBlock = (property: Property) => {
+  const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
+  const name = property.name ?? property.id;
+  const actorScoped = property.scope === 'actor';
+  const isVector = property.type === 'vector';
+
+  // Build message + args left-to-right: an optional x/y component dropdown (for
+  // vectors), then the ACTOR input (for actor properties).
+  const args0: BlockArgDefinition[] = [];
+  const slot = (arg: BlockArgDefinition): string => {
+    args0.push(arg);
+    return `%${args0.length}`;
+  };
+  const component = (): string =>
+    slot({
+      type: 'field_dropdown',
+      name: 'COMPONENT',
+      options: [
+        ['x', 'x'],
+        ['y', 'y'],
+      ],
+    });
+  const actorSocket = (): string =>
+    slot({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+
+  const message0 = actorScoped
+    ? isVector
+      ? `get ${name} ${component()} of ${actorSocket()}`
+      : `get ${name} of ${actorSocket()}`
+    : isVector
+      ? `get world ${name} ${component()}`
+      : `get world ${name}`;
+
+  return defineBlock({
+    type: getPropertyBlockType(exportName),
+    message0,
+    args0,
+    inputsInline: true,
+    output: getPropertyOutput(property),
+    extensions: actorScoped ? [actorInputExtension] : [],
+    style: 'variable_blocks',
+    tooltip: actorScoped
+      ? `Get an actor's ${name}.`
+      : `Get the world's ${name}.`,
+    generator: {
+      javascript(block, generator) {
+        const target = actorScoped
+          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
+          : 'world';
+        const component = isVector
+          ? `.${block.getFieldValue('COMPONENT')}`
+          : '';
+        return [
+          `${target}.get(WorldLab.${exportName})${component}`,
+          Order.ATOMIC,
+        ] as [string, number];
+      },
+    },
+  });
+};
+
+// Generate a set + get block for every settable property, in rule/trait
+// declaration order, and record which belong to each rule's toolbox category: a
+// rule's own (world) properties, then those of every trait it defines (actor).
+type PropertyBlock =
+  | ReturnType<typeof defineSetPropertyBlock>
+  | ReturnType<typeof defineGetPropertyBlock>;
+const PROPERTY_BLOCKS: PropertyBlock[] = [];
 const PROPERTY_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
 for (const rule of ALL_RULES) {
   const types: string[] = [];
@@ -523,9 +603,10 @@ for (const rule of ALL_RULES) {
     if (!isSettable(property)) {
       return;
     }
-    const block = defineSetPropertyBlock(property);
-    PROPERTY_BLOCKS.push(block);
-    types.push(block.type);
+    const setBlock = defineSetPropertyBlock(property);
+    const getBlock = defineGetPropertyBlock(property);
+    PROPERTY_BLOCKS.push(setBlock, getBlock);
+    types.push(setBlock.type, getBlock.type);
   };
   for (const property of Object.values(rule.properties)) {
     add(property);
