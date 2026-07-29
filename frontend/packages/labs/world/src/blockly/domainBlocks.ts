@@ -106,13 +106,16 @@ const KEY_OPTIONS: Array<[string, string]> = [
     .map(c => [c.toUpperCase(), c] as [string, string]),
 ];
 
+// Derive a module/instance id from an authored name: spaces (and any other
+// non-identifier character) become underscores, so "Platform World" → the id
+// "Platform_World".
+const id_from_name = (name: string): string =>
+  name.replaceAll(/[^A-Za-z0-9_]/g, '_');
+
 const worldActor = defineBlock({
   type: 'world_actor',
-  message0: 'actor  id %1  name %2',
-  args0: [
-    {type: 'field_input', name: 'ID', text: 'actor'},
-    {type: 'field_input', name: 'NAME', text: 'Actor'},
-  ],
+  message0: 'define actor named %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Actor'}],
   // A definition root, like an event block: no previous connection, a NEXT
   // connection — the actor's `use trait` / `set` / `play` body chains below it,
   // not nested in a `do` input.
@@ -121,14 +124,13 @@ const worldActor = defineBlock({
   tooltip: 'Define an actor: its traits, properties, and event handlers.',
   generator: {
     javascript(block, generator) {
-      const id = block.getFieldValue('ID');
       const name = block.getFieldValue('NAME');
       // The `export default actor;` and the floating event handlers are appended
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
       return (
         `import * as WorldLab from 'world-lab';\n` +
-        `const actor = new WorldLab.ActorBuilder({id: ${str(id)}, name: ${str(name)}});\n` +
+        `const actor = new WorldLab.ActorBuilder({id: ${str(id_from_name(name))}, name: ${str(name)}});\n` +
         nextChainCode(block, generator)
       );
     },
@@ -485,11 +487,8 @@ const addImport = (generator: unknown, key: string, code: string): void => {
 
 const worldScene = defineBlock({
   type: 'world_scene',
-  message0: 'scene  id %1  name %2',
-  args0: [
-    {type: 'field_input', name: 'ID', text: 'game'},
-    {type: 'field_input', name: 'NAME', text: 'Game'},
-  ],
+  message0: 'define scene named %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Game'}],
   message1: 'world %1',
   args1: [{type: 'field_dropdown', name: 'WORLD', options: worldOptions()}],
   // A definition root: no previous connection, a NEXT connection — the `add
@@ -501,7 +500,6 @@ const worldScene = defineBlock({
     'Define a scene: the world its actors live in, and the actors in it.',
   generator: {
     javascript(block, generator) {
-      const id = block.getFieldValue('ID');
       const name = block.getFieldValue('NAME');
       const world = block.getFieldValue('WORLD');
       addImport(
@@ -516,7 +514,7 @@ const worldScene = defineBlock({
       );
       const body = nextChainCode(block, generator);
       return (
-        `const scene = new WorldLab.SceneBuilder({id: ${str(id)}, name: ${str(
+        `const scene = new WorldLab.SceneBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
         `scene.useWorld(${importVar(world)});\n` +
@@ -601,11 +599,8 @@ const worldLoadMap = defineBlock({
 
 const worldWorld = defineBlock({
   type: 'world_world',
-  message0: 'world  id %1  name %2',
-  args0: [
-    {type: 'field_input', name: 'ID', text: 'world'},
-    {type: 'field_input', name: 'NAME', text: 'World'},
-  ],
+  message0: 'define world named %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'World'}],
   // A definition root: no previous connection, a NEXT connection — the `use
   // rule` / `use animations` body chains below it, not nested in a `do` input.
   nextStatement: true,
@@ -613,7 +608,6 @@ const worldWorld = defineBlock({
   tooltip: 'Define a world: the rules in play and the animations it registers.',
   generator: {
     javascript(block, generator) {
-      const id = block.getFieldValue('ID');
       const name = block.getFieldValue('NAME');
       addImport(
         generator,
@@ -622,7 +616,7 @@ const worldWorld = defineBlock({
       );
       const body = nextChainCode(block, generator);
       return (
-        `const world = new WorldLab.WorldBuilder({id: ${str(id)}, name: ${str(
+        `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` + body
       );

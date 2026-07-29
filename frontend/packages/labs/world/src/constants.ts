@@ -71,7 +71,7 @@ const MAIN_SCENE = JSON.stringify(
           type: 'world_scene',
           x: 20,
           y: 20,
-          fields: {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
+          fields: {NAME: 'Game', WORLD: 'worlds/platform'},
           next: {
             block: {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
           },
@@ -98,10 +98,10 @@ const LEVEL1_MAP = JSON.stringify(
     type: 'map',
     tile: {width: 32, height: 32},
     actors: [
-      place('actors/player', 'player', 480, 80),
-      place('actors/ground', 'ground', 480, 440),
-      place('actors/coin', 'coin', 660, 220),
-      place('actors/ball', 'ball', 300, 220),
+      place('actors/player', 'Player', 480, 80),
+      place('actors/ground', 'Ground', 480, 440),
+      place('actors/coin', 'Coin', 660, 220),
+      place('actors/ball', 'Ball', 300, 220),
     ],
   },
   null,
@@ -120,7 +120,7 @@ const PLATFORM_WORLD = JSON.stringify(
           type: 'world_world',
           x: 20,
           y: 20,
-          fields: {ID: 'platform', NAME: 'Platform World'},
+          fields: {NAME: 'Platform World'},
           next: {
             block: nextBlock(
               {type: 'world_use_rule', fields: {RULE: 'GravityRule'}},
@@ -152,7 +152,7 @@ const PLAYER_ACTOR = JSON.stringify(
           type: 'world_actor',
           x: 20,
           y: 20,
-          fields: {ID: 'player', NAME: 'Player'},
+          fields: {NAME: 'Player'},
           next: {
             block: nextBlock(
               {
