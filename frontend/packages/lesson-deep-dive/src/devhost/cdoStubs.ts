@@ -184,24 +184,6 @@ export async function postAichatCompletionMessage(
 }
 
 // --------------------------------------------------------------------------
-// @cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob
-// --------------------------------------------------------------------------
-
-// 1x1 transparent PNG.
-const TINY_PNG = Uint8Array.from(
-  atob(
-    'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==',
-  ),
-  c => c.charCodeAt(0),
-);
-
-export async function createSketchSnapshotBlob(
-  _reactFlow: unknown,
-): Promise<{blob: Blob | null; error: string | null}> {
-  return {blob: new Blob([TINY_PNG], {type: 'image/png'}), error: null};
-}
-
-// --------------------------------------------------------------------------
 // Dev-host Redux store: the currentUser slice the Studio page chrome would
 // normally register and populate (header.js dispatches setInitialData from
 // /api/v1/users/current).

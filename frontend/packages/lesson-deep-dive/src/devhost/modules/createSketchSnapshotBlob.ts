@@ -1,1 +1,0 @@
-export {createSketchSnapshotBlob} from '../cdoStubs';

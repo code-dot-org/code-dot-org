@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     // Typecheck @cdo/* imports against the same files the dev-host resolver
     // serves at runtime (src/devhost/cdoResolverPlugin.ts). The stubs carry
-    // the shapes the Studio host provides.
+    // the shapes the Studio host provides. Exception: the sketchlab canvas
+    // entries stay on the stubs here while the resolver serves the real
+    // apps/src/sketchlab files, so tsc never crawls into apps/.
     "paths": {
       "@/*": ["./src/*"],
       "@cdo/generated-scripts/sharedConstants": [
@@ -48,9 +50,16 @@
       ],
       "@cdo/apps/aichat/aichatApi": ["./src/devhost/modules/aichatApi.ts"],
       "@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob": [
-        "./src/devhost/modules/createSketchSnapshotBlob.ts"
+        "./src/devhost/modules/createSketchSnapshotBlob.d.ts"
       ],
       "@cdo/apps/sketchlab/reactFlow/types": ["./src/devhost/hostTypes.ts"],
+      "@cdo/apps/lab2/types": ["./src/devhost/hostTypes.ts"],
+      "@cdo/apps/lab2/views/SourcesContainer": [
+        "./src/devhost/modules/sourcesContainer.ts"
+      ],
+      "@cdo/apps/lab2/projects/utils": [
+        "./src/devhost/modules/lab2ProjectUtils.ts"
+      ],
       "@cdo/apps/aichat/types": ["./src/devhost/hostTypes.ts"],
       "@cdo/apps/templates/SafeMarkdown": [
         "./src/devhost/modules/safeMarkdown.ts"
@@ -66,7 +75,7 @@
         "./src/devhost/modules/droppable.ts"
       ],
       "@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas": [
-        "./src/devhost/modules/reactFlowCanvas.ts"
+        "./src/devhost/modules/reactFlowCanvas.d.ts"
       ]
     }
   },

@@ -6,8 +6,6 @@
 import {useDroppable} from '@dnd-kit/core';
 import React, {useCallback, useRef, useState} from 'react';
 
-import type {ReactFlowSketchLabSources} from './hostTypes';
-
 // --------------------------------------------------------------------------
 // @cdo/apps/templates/SafeMarkdown — plain-text rendering with bold support.
 // The real component pipes through remark + rehype sanitization.
@@ -200,94 +198,5 @@ export default function AiTutorChat({
         </button>
       </form>
     </div>
-  );
-}
-
-// --------------------------------------------------------------------------
-// @cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas — click-to-stamp
-// stand-in that honors the updateSources contract so the whiteboard submit
-// gate (nodes.length > 0) and snapshot upload flow are exercisable.
-// --------------------------------------------------------------------------
-
-interface StampedDot {
-  x: number;
-  y: number;
-}
-
-export function ReactFlowCanvas({
-  updateSources,
-  readOnly,
-}: {
-  updateSources: (sources: ReactFlowSketchLabSources) => void;
-  levelName?: string;
-  initialNodes?: unknown[];
-  initialEdges?: unknown[];
-  initialViewport?: unknown;
-  colorMode?: string;
-  readOnly?: boolean;
-}) {
-  const [dots, setDots] = useState<StampedDot[]>([]);
-
-  const stamp = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (readOnly) return;
-      const rect = e.currentTarget.getBoundingClientRect();
-      const next = [
-        ...dots,
-        {x: e.clientX - rect.left, y: e.clientY - rect.top},
-      ];
-      setDots(next);
-      updateSources({source: {nodes: next, edges: []}});
-    },
-    [dots, readOnly, updateSources],
-  );
-
-  return (
-    <button
-      type="button"
-      onClick={stamp}
-      aria-label="Whiteboard canvas (dev-host stand-in — click to draw)"
-      style={{
-        position: 'relative',
-        display: 'block',
-        width: '100%',
-        height: '100%',
-        minHeight: 280,
-        background: '#1e2329',
-        border: '1px dashed #4a5058',
-        borderRadius: 8,
-        cursor: readOnly ? 'default' : 'crosshair',
-        overflow: 'hidden',
-        padding: 0,
-      }}
-    >
-      {dots.length === 0 && (
-        <span
-          style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'grid',
-            placeItems: 'center',
-            color: '#8a9199',
-          }}
-        >
-          Click to draw (ReactFlowCanvas stand-in)
-        </span>
-      )}
-      {dots.map((d, i) => (
-        <span
-          key={i}
-          style={{
-            position: 'absolute',
-            left: d.x - 6,
-            top: d.y - 6,
-            width: 12,
-            height: 12,
-            borderRadius: '50%',
-            background: '#a374d6',
-          }}
-        />
-      ))}
-    </button>
   );
 }

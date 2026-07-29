@@ -9,6 +9,10 @@
 // tsconfig.app.json "paths" points at the same files, so runtime resolution
 // and typechecking agree. In build (library) mode this plugin is not applied;
 // @cdo/* stays external and the Studio host resolves it.
+//
+// Exception: the sketchlab whiteboard canvas entries below are served from
+// apps/ at runtime but stay pointed at the devhost contract stubs in
+// tsconfig.app.json, so tsc never crawls into apps/src/sketchlab.
 
 import path from 'node:path';
 import type {Plugin} from 'vite';
@@ -53,6 +57,46 @@ const FILE_MAP: Record<string, string> = {
     'types.ts',
   ),
 
+  // -- Real sketchlab whiteboard canvas --------------------------------------
+  // The canvas and its snapshot util are served from apps/ so the dev host
+  // draws on the real ReactFlow surface. Relative imports inside these files
+  // resolve naturally; the entries below cover the ones written as @cdo paths.
+  '@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas': apps(
+    'src/sketchlab/reactFlow/components/ReactFlowCanvas.tsx',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob': apps(
+    'src/sketchlab/reactFlow/utils/createSketchSnapshotBlob.ts',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/constants': apps(
+    'src/sketchlab/reactFlow/constants.ts',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/context': apps(
+    'src/sketchlab/reactFlow/context.ts',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/reactFlowSelectors': apps(
+    'src/sketchlab/reactFlow/reactFlowSelectors.ts',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/hooks/useLineToolbar': apps(
+    'src/sketchlab/reactFlow/hooks/useLineToolbar.ts',
+  ),
+  '@cdo/apps/sketchlab/reactFlow/utils/stacking': apps(
+    'src/sketchlab/reactFlow/utils/stacking.ts',
+  ),
+  // Leaves the canvas closure pulls in; each imports nothing but react (or,
+  // for activeTourTracker, a type-only shepherd.js import).
+  '@cdo/apps/util/isTargetEditable': apps('src/util/isTargetEditable.ts'),
+  '@cdo/apps/util/hooks/useHiddenFileInput': apps(
+    'src/util/hooks/useHiddenFileInput.tsx',
+  ),
+  '@cdo/apps/sharedComponents/productTour/activeTourTracker': apps(
+    'src/sharedComponents/productTour/activeTourTracker.ts',
+  ),
+  // lab2 seams the canvas reaches for. The whiteboard drives the canvas
+  // through the updateSources prop, so the sources context is inert here, and
+  // the dev host is never in levelbuilder start/exemplar mode.
+  '@cdo/apps/lab2/views/SourcesContainer': stub('sourcesContainer.ts'),
+  '@cdo/apps/lab2/projects/utils': stub('lab2ProjectUtils.ts'),
+
   // -- Utility stubs ---------------------------------------------------------
   '@cdo/apps/util/HttpClient': stub('httpClient.ts'),
   '@cdo/apps/util/experiments': stub('experiments.ts'),
@@ -67,9 +111,6 @@ const FILE_MAP: Record<string, string> = {
     'useAiTutorModelParameters.ts',
   ),
   '@cdo/apps/aichat/aichatApi': stub('aichatApi.ts'),
-  '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob': stub(
-    'createSketchSnapshotBlob.ts',
-  ),
 
   // -- Type-only modules (imports erased at runtime; mapped so Vitest/Vite
   // resolution never falls through to apps/) --------------------------------
@@ -77,6 +118,7 @@ const FILE_MAP: Record<string, string> = {
     devhostDir,
     'hostTypes.ts',
   ),
+  '@cdo/apps/lab2/types': path.resolve(devhostDir, 'hostTypes.ts'),
   '@cdo/apps/aichat/types': path.resolve(devhostDir, 'hostTypes.ts'),
 
   // -- Component stubs -------------------------------------------------------
@@ -85,8 +127,6 @@ const FILE_MAP: Record<string, string> = {
   '@cdo/apps/lab2/views/components/AiTutorChat': stub('aiTutorChat.ts'),
   '@cdo/apps/jsonVideo/TutorVideo': stub('tutorVideo.ts'),
   '@cdo/apps/codebridge/FileBrowser/Droppable': stub('droppable.ts'),
-  '@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas':
-    stub('reactFlowCanvas.ts'),
 };
 
 export function cdoResolverPlugin(): Plugin {

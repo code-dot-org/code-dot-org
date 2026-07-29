@@ -10,6 +10,12 @@ import {Provider} from 'react-redux';
 
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
+// Design-system color custom properties, which the Studio host loads
+// globally. The sketchlab canvas draws its shape strokes from them; without
+// these sheets the border shorthand is invalid and shapes get no outline.
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+
 import {currentUserSlice} from './devhost/cdoStubs';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
 import {startMockWorker} from './mocks/browser';
