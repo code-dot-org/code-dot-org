@@ -2,10 +2,11 @@ import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React, {useState} from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
-import {getLabViewPageAction} from '@cdo/apps/lab2/utils';
+import {getLabViewPageAction, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import Lab2Registry from '../Lab2Registry';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
@@ -40,6 +41,11 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const pageAction = getLabViewPageAction() || '';
   const hasViewOrEditAccess =
     isProjectValidator || isOwner || isTeacherOfProjectOwner;
+
+  // Reset show alert flag on level change.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    setShowAlert(true);
+  });
 
   const alertText =
     blockedType === 'projectAbuse'

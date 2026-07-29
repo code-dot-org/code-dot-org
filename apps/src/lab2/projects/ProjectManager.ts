@@ -121,7 +121,7 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     await this.initializeForceNewVersionState();
-    // These are independent per-channel lookups; fetch them concurrently so
+    // These are independent lookups; fetch them concurrently so
     // project load waits for the slowest one instead of the sum of all four.
     const [abuseScore, sharingDisabled, shareFailure, isTeacherOfProjectOwner] =
       await Promise.all([
