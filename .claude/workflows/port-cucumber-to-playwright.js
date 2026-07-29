@@ -271,7 +271,7 @@ phase('Dry Run')
 
 const READINESS_SCHEMA = {
   type: 'object',
-  required: ['transitions', 'autonomousContent', 'loadNotes'],
+  required: ['transitions', 'autonomousContent', 'loadNotes', 'a11yTree'],
   properties: {
     transitions: {
       type: 'array',
@@ -353,10 +353,38 @@ const READINESS_SCHEMA = {
       },
     },
     a11yTree: {
-      type: 'string',
+      type: 'array',
       description:
-        'Page accessibility tree snapshot serialized as a readable string. Gives Generate ' +
-        'semantic understanding of the page structure for choosing locators by role/name.',
+        'One aria snapshot per DISTINCT surface the port loads (initial load, each modal ' +
+        'or post-action state). Reports the role and accessible name of every element, so ' +
+        'Generate can write getByRole locators instead of falling back to CSS.',
+      items: {
+        type: 'object',
+        required: ['surface', 'snapshot', 'unnamed'],
+        properties: {
+          surface: {
+            type: 'string',
+            description: 'The state it was captured in, e.g. "initial load", "win modal open"',
+          },
+          scope: {
+            type: 'string',
+            description: 'Selector the snapshot was scoped to, or "" if the whole page',
+          },
+          snapshot: {
+            type: 'string',
+            description:
+              'VERBATIM ariaSnapshot() YAML — never paraphrased, summarized, or trimmed. ' +
+              'Its whole value is the exact accessible names.',
+          },
+          unnamed: {
+            type: 'array', items: {type: 'string'},
+            description:
+              'Interactive or meaningful elements the snapshot shows with a role but NO ' +
+              'accessible name (a bare `img`, an unnamed `button`). These cannot be reached ' +
+              'by role+name, and are the same gaps the axe baseline records.',
+          },
+        },
+      },
     },
   },
 }
@@ -367,6 +395,9 @@ readiness intelligence: when each transition is "done", what must NOT be waited 
 what content changes autonomously. Do NOT emit locators, selectors, or code, and do NOT
 prescribe how the test is implemented — a separate Generate phase authors the test
 independently and consumes only your wait-strategy guidance.
+The single exception is the aria snapshot of STEP 2c, which records the roles and
+accessible names the APP exposes. That is observed fact about the page, not an
+implementation you are choosing for Generate — capture it verbatim.
 
 MECHANISM: drive a THROWAWAY probe that BOTH (a) captures a vanilla Playwright trace and
 (b) polls DOM state via page.evaluate at each transition. Combine them: the TRACE gives
@@ -426,12 +457,30 @@ INPUTS (from Scout):
   If Eyes feature is false, return empty arrays for domDiffs, screenshotDiffs,
   and reasonedRisks.
 
-─── STEP 2c — Accessibility tree capture ──────────────────────────────────────
-  Capture the page's accessibility tree:
-    const a11yTree = await page.accessibility.snapshot();
-  Serialize it as a readable string for downstream consumption. This is always
-  captured regardless of isEyes — it helps Generate choose locators by
-  accessible role/name.
+─── STEP 2c — Accessibility tree capture (once per surface) ───────────────────
+  Capture an aria snapshot at EACH distinct surface you walked in STEP 1 — the
+  initial load and every modal / post-action state — not one snapshot for the
+  whole port. A modal's contents are absent from the load-time tree, and that is
+  exactly where Generate would otherwise guess at CSS.
+    const snapshot = await page.locator('#main_content').ariaSnapshot();
+  Scope each snapshot to the feature's own mount when one exists (the <main>
+  landmark #main_content, or a dialog root for a modal); unscoped, the output is
+  mostly shared header and footer. Record the scope you used. Fall back to
+  page.ariaSnapshot() only when no mount is identifiable.
+  Use ariaSnapshot(). page.accessibility.snapshot() does NOT exist in the pinned
+  Playwright (1.59) — the API was removed, and reading it throws
+  "Cannot read properties of undefined". Do not reach for it, and do not use
+  mode: 'ai' (its [ref=eN] handles are meaningless outside the capturing session).
+  Record each snapshot VERBATIM — do not paraphrase, summarize, or trim it. Its
+  entire value downstream is the exact accessible names, in the form
+  \`button "Run Program"\` / \`heading "Puzzle 3" [level=1]\`.
+  Then list, per surface, every interactive or meaningful element the snapshot
+  shows with a role but no accessible name (a bare \`img\`, an unnamed \`button\`).
+  Those are the elements Generate cannot reach by role+name.
+  This capture is the one exception to "no locators": it reports the accessible
+  names the APP exposes, which is observed fact, not an implementation you are
+  prescribing. Everything else in your output stays semantic.
+  Always captured, regardless of isEyes.
 
 ─── STEP 3 — Analyze: combine three evidence sources ──────────────────────────
   - PROBE DOM POLLS  -> DOM ground-truth (element presence, workspace interactivity,
@@ -451,7 +500,8 @@ INPUTS (from Scout):
   throwaway). Leave the working tree exactly as you found it — the readiness table is the
   only survivor.
 
-Return the structured readiness intelligence. SEMANTIC ONLY — no selectors, no code.`,
+Return the structured readiness intelligence. SEMANTIC ONLY — no selectors, no code,
+apart from the verbatim aria snapshots of STEP 2c.`,
   {schema: READINESS_SCHEMA, label: 'dry-run', phase: 'Dry Run', model: 'sonnet'},
 )
 
@@ -463,6 +513,39 @@ log(`Dry Run: ${readiness.transitions.length} transition(s) characterized`)
 // Run readiness table (wait-strategy guidance only). Durable conventions live in the
 // agent definition; this is the per-port brief.
 phase('Generate')
+
+// The Dry Run's aria snapshots are the one part of its output that is legitimately
+// locator material: they report the accessible names the APP exposes, not an
+// implementation choice. Passed separately from the readiness blob below, whose
+// "wait-strategy only — never implementation" label would otherwise suppress them.
+const A11Y_SELECTOR_GUIDANCE = `
+A11Y SELECTORS (work from the ACCESSIBILITY TREE below)
+  Selector priority is getByRole > getByLabel > getByText > getByPlaceholder >
+  getByTestId, and CSS last. The aria snapshot is HOW you honour that priority instead
+  of defaulting to CSS: every line names an element's role and accessible name, which
+  maps straight onto a locator —
+    button "Run Program"          -> getByRole('button', {name: 'Run Program'})
+    heading "Puzzle 3" [level=1]  -> getByRole('heading', {name: 'Puzzle 3', level: 1})
+    textbox "Project name"        -> getByRole('textbox', {name: 'Project name'})
+  Read the snapshot for the surface you are on, and derive locators from it FIRST.
+  Before you write any CSS selector, look the element up there: if it appears with a
+  role and a name, the role locator is the correct one and CSS is a defect, not a
+  shortcut. A role locator survives the markup churn that breaks a CSS class, which is
+  most of what makes these ports flake later.
+  These names come from the live app, so they are still verified like every other
+  locator — confirm each one in the browser before you keep it. If a name in the
+  snapshot no longer matches what you observe, trust the browser and say so.
+
+  CSS is legitimate ONLY when, and each use carries an inline comment saying which:
+    - Blockly internals or a canvas/SVG game surface, which expose no useful roles.
+    - The element is on that surface's \`unnamed\` list — it has no accessible name to
+      select by. That is an accessibility GAP, so name it as one, e.g.
+      // no accessible name (a11y gap); axe records this as image-alt
+    - The accessible name is user-, locale-, or run-dependent, so a name locator would
+      be unstable. Prefer a role locator without a name over CSS where the role alone
+      is unique.
+  "The snapshot was long" and "CSS was quicker" are not reasons.
+`
 
 // Every port carries a WCAG AA baseline for the surfaces it loads. Cucumber never
 // asserted accessibility, so this is additive to the feature contract, not a port of
@@ -529,10 +612,30 @@ const eyesGuidance = plan.isEyes
     "I see no difference for X in the current viewport" -> await visualCheck('x-kebab-name', {fully: false})
     "I close my eyes" -> (implicit — fixture handles teardown)
   - Use dynamicContent from the dry run to add mask options for elements that change
-    between loads. The reasonedRisks should also inform masking decisions.
-  - The a11yTree is available for understanding page structure and choosing locators by
-    accessible role/name.\n`
+    between loads. The reasonedRisks should also inform masking decisions.\n`
   : ''
+
+// The readiness table is labelled "never implementation", so the aria snapshots ride
+// separately — inside that blob the label would tell Generate to ignore exactly the
+// thing it is supposed to write locators from.
+const {a11yTree = [], ...waitGuidance} = readiness
+
+// Rendered as text, not JSON: the snapshots are indentation-significant YAML, and
+// JSON.stringify would hand the agent one line of escaped \n — the accessible names
+// are the payload, so they have to stay legible.
+const formatA11yTree = tree =>
+  tree.length === 0
+    ? '  (none captured — fall back to live discovery for every locator)'
+    : tree
+        .map(s =>
+          `  ── ${s.surface}${s.scope ? `   [scope: ${s.scope}]` : ''}\n` +
+          s.snapshot.replace(/^/gm, '    ') +
+          (s.unnamed.length
+            ? `\n    no accessible name:\n` +
+              s.unnamed.map(u => `      - ${u}`).join('\n')
+            : ''),
+        )
+        .join('\n\n')
 
 const generated = await agent(
   `Port "${featureFile}" to Playwright. Follow your agent instructions (the Code.org
@@ -550,14 +653,19 @@ SCOUT PLAN
   isEyes:             ${plan.isEyes}
   scenarios:          ${JSON.stringify(plan.scenarios)}
   stepResolution:     ${JSON.stringify(plan.stepResolution)}
-${A11Y_GUIDANCE}${eyesGuidance}
+${A11Y_SELECTOR_GUIDANCE}${A11Y_GUIDANCE}${eyesGuidance}
+ACCESSIBILITY TREE (one aria snapshot per surface — derive locators from this)
+${formatA11yTree(a11yTree)}
+
 DRY RUN READINESS (wait-strategy guidance only — never implementation)
-  ${JSON.stringify(readiness)}
+  ${JSON.stringify(waitGuidance)}
 
 AUTHORITATIVE SOURCE: ${featureFile} and its step definitions. Re-read them — the Scout
 plan guides, the Cucumber is the contract. Author the spec, POM, blocks, and any NEW
-shared helpers per your instructions. Drive test-studio.code.org live to verify EVERY
-locator. Wire waits from the readiness guidance (never networkidle, never waitForTimeout;
+shared helpers per your instructions. Derive locators from the accessibility tree first
+and drop to CSS only for the reasons listed above; drive test-studio.code.org live to
+verify EVERY locator, whatever its source.
+Wire waits from the readiness guidance (never networkidle, never waitForTimeout;
 respect the descendant-vs-container notes). Reuse shared/ and existing POMs per
 stepResolution; add NEW helpers to shared/. If foundationPresent is false, materialize
 the shared helpers/POM bases you import from the reference branch first (inside
@@ -581,7 +689,22 @@ GENERATED FILES: under frontend/packages/e2e-tests/tests/${plan.featureGroup} (s
 SCOUT step-resolution (for the DRY check): ${JSON.stringify(plan.stepResolution)}
 POM base / reuse target: ${plan.existingPomToReuseOrExtend || '(none)'}
 
-Run your four dimensions (fidelity, best-practices, DRY-vs-shared, TS smell), plus a fifth:
+Run your four dimensions (fidelity, best-practices, DRY-vs-shared, TS smell), plus two more:
+
+A11Y SELECTORS. Your best-practices dimension already puts getByRole first and requires a
+documented reason for every CSS selector. The tree below is the EVIDENCE that lets you
+audit that rather than accept the generator's word for it — it is the roles and accessible
+names the live app exposed, one snapshot per surface. For EVERY CSS selector in the spec
+and the POM, find that element in the snapshot for its surface. If it is there with a role
+and an accessible name, the CSS is a finding: replace it with the role locator. CSS stands
+only for Blockly/canvas internals, for an element on that surface's \`unnamed\` list (and
+then the comment must name it as the accessibility gap it is), or for a name that is user-,
+locale-, or run-dependent. An undocumented CSS selector is a finding regardless of whether
+you can justify it yourself — the comment is what the next reader needs. Do not go the
+other way and replace a working role locator with CSS.
+
+ACCESSIBILITY TREE (per surface — the evidence for the audit above)
+${formatA11yTree(a11yTree)}
 
 A11Y BASELINE. These scans are house policy layered on a faithful port, not scenarios
 inherited from a sibling feature — the Authority rule fixes which BEHAVIOUR is ported and
@@ -719,6 +842,12 @@ while (!result.passed && attempt < 3) {
       `\nDiagnose the ROOT CAUSE from the traces and fix it within e2e-tests only, per ` +
       `your instructions. Do NOT loosen assertions to force a pass — fix the real ` +
       `timing/selector/state cause.\n` +
+      `Do NOT rewrite a getByRole locator as CSS to make it pass. A role locator that ` +
+      `misses is nearly always a READINESS bug — the element is not in the tree yet — so ` +
+      `fix the wait. It is a genuine locator bug only when the accessible name differs ` +
+      `from what the spec expects (check the trace's aria snapshot); then correct the ` +
+      `NAME and keep the role locator. Falling back to CSS is a last resort that needs an ` +
+      `inline comment saying why the role locator could not work.\n` +
       `A failing EXPECTED_VIOLATIONS map is the ONE case where correcting the expected ` +
       `value is the right fix, and only when the observed axe counts are IDENTICAL across ` +
       `every repeat and browser: the baseline was mis-measured, so write the measured ` +
