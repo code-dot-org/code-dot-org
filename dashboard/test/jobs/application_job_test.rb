@@ -53,7 +53,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobMetrics
   end
 
-  test 'includes ActiveJobMetrics' do
+  test 'includes ActiveJobEnqueueRetry' do
     assert_includes ApplicationJob.ancestors, ActiveJobEnqueueRetry
   end
 
