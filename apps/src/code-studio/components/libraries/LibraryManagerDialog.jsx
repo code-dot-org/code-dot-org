@@ -1,11 +1,7 @@
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  Button as MuiButton,
-  MenuItem as MuiMenuItem,
-  Select as MuiSelect,
-  Typography as MuiTypography,
-} from '@mui/material';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
 import classNames from 'classnames';
 import $ from 'jquery';
@@ -431,23 +427,23 @@ export class LibraryManagerDialog extends React.Component {
             >
               {i18n.showingLibrariesFromSection()}
             </MuiTypography>
-            <MuiSelect
-              variant="standard"
-              value={sectionFilter}
-              displayEmpty
-              size="small"
-              sx={{fontSize: '1rem'}}
+            <SimpleDropdown
+              name="sectionFilter"
+              labelText={i18n.showingLibrariesFromSection()}
+              isLabelVisible={false}
+              size="s"
+              selectedValue={sectionFilter}
+              items={[
+                {value: '', text: i18n.all()},
+                ...sections.map(section => ({
+                  value: section,
+                  text: section,
+                })),
+              ]}
               onChange={event =>
                 this.setState({sectionFilter: event.target.value})
               }
-            >
-              <MuiMenuItem value="">{i18n.all()}</MuiMenuItem>
-              {sections.map(section => (
-                <MuiMenuItem key={section} value={section}>
-                  {section}
-                </MuiMenuItem>
-              ))}
-            </MuiSelect>
+            />
           </div>
           <div className={styles.libraryList}>
             {this.displayClassLibraries()}
