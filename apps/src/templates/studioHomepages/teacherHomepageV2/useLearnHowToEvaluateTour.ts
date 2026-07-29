@@ -3,7 +3,7 @@ import Shepherd, {Tour} from 'shepherd.js';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -65,12 +65,18 @@ export const resumeLearnHowToEvaluateTour = () => {
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
-  tour.addSteps(createLearnHowToEvaluateProgressSteps(tour));
+  tour.addSteps(createLearnHowToEvaluateProgressSteps(tour, TOUR_NAME));
 
   if (tour.steps.length === 0) {
     trySetSessionStorage(LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY, '');
     return;
   }
+
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+  );
 
   const clearStep = () =>
     trySetSessionStorage(LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY, '');
@@ -79,11 +85,6 @@ export const resumeLearnHowToEvaluateTour = () => {
     recordLearnToEvaluateCompletion();
   });
   tour.on('cancel', () => {
-    recordOnboardingTourAbandonment(
-      tour,
-      LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
-      TOUR_NAME
-    );
     clearStep();
   });
 
@@ -97,7 +98,8 @@ const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
       demoType
         ? createLearnHowToEvaluateHomepageSteps(
             tour,
-            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+            TOUR_NAME
           )
         : [],
     [demoType]
