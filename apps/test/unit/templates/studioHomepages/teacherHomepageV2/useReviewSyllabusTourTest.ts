@@ -3,12 +3,15 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import {COURSE_HEADER_STEP_ID} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/reviewSyllabusOnboarding';
 import useReviewSyllabusTour, {
@@ -29,6 +32,12 @@ const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
 >;
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+  ),
+  recordOnboardingTourAbandonment: jest.fn(),
+}));
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
   jest.fn(({getSteps}: {getSteps: (t: Tour) => unknown}) => {
     const tour = (
@@ -50,6 +59,10 @@ const mockCreateShepherdTour = createShepherdTour as jest.MockedFunction<
 const mockTryGetSessionStorage = tryGetSessionStorage as jest.MockedFunction<
   typeof tryGetSessionStorage
 >;
+const mockRecordTourAbandonment =
+  recordOnboardingTourAbandonment as jest.MockedFunction<
+    typeof recordOnboardingTourAbandonment
+  >;
 const mockTrySetSessionStorage = trySetSessionStorage as jest.MockedFunction<
   typeof trySetSessionStorage
 >;
@@ -69,9 +82,14 @@ const makeMockTour = () => {
 };
 
 describe('recordViewSyllabusCompletion', () => {
+  let sendEventSpy: jest.SpyInstance;
+
   beforeEach(() => {
     jest.clearAllMocks();
     mockHttpClientPost.mockResolvedValue(new Response());
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
   });
 
   it('calls HttpClient.post with correct args', () => {
@@ -81,6 +99,16 @@ describe('recordViewSyllabusCompletion', () => {
       JSON.stringify({tour_name: 'view_syllabus'}),
       true,
       {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('sends an ONBOARDING_TOUR_COMPLETED analytics event with the tour name', () => {
+    recordViewSyllabusCompletion();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_COMPLETED,
+      {
+        tour_name: 'view_syllabus',
+      }
     );
   });
 
@@ -211,6 +239,31 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('reports abandonment before clearing sessionStorage on cancel', () => {
+    const savedStepId = COURSE_HEADER_STEP_ID;
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+
+    mockTryGetSessionStorage
+      .mockReturnValueOnce(savedStepId)
+      .mockReturnValueOnce('high');
+
+    resumeReviewSyllabusOnboardingTour();
+
+    const handlers = (
+      mockTour as unknown as {_handlers: Record<string, () => void>}
+    )._handlers;
+    handlers['cancel']();
+
+    expect(mockRecordTourAbandonment).toHaveBeenCalledWith(
+      mockTour,
+      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+      'view_syllabus'
+    );
+    expect(mockRecordTourAbandonment.mock.invocationCallOrder[0]).toBeLessThan(
+      mockTrySetSessionStorage.mock.invocationCallOrder[0]
+    );
   });
 
   it('cancels any active Shepherd tour before creating the resumed tour', () => {

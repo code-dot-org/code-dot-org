@@ -1,0 +1,189 @@
+{
+  "script": {
+    "name": "pl-aif-intro-programming-js",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-07-28 18:29:09 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-aif-intro-programming-js"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Teaching Intro to Programming",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "3bc41f1d-24c6-4277-8051-2f81126d1117",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3bc41f1d-24c6-4277-8051-2f81126d1117",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "896d646e-1578-4413-b21a-bec5bcf9de96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "896d646e-1578-4413-b21a-bec5bcf9de96",
+        "lesson_activity.key": "3bc41f1d-24c6-4277-8051-2f81126d1117"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-what-is-a-webapp"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "896d646e-1578-4413-b21a-bec5bcf9de96"
+      },
+      "level_keys": [
+        "pl-aif1-what-is-a-webapp"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-spot the-pattern-web-parts"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "896d646e-1578-4413-b21a-bec5bcf9de96"
+      },
+      "level_keys": [
+        "pl-aif1-spot the-pattern-web-parts"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-what-is-a-webapp",
+        "script_level.level_keys": [
+          "pl-aif1-what-is-a-webapp"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "896d646e-1578-4413-b21a-bec5bcf9de96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-spot the-pattern-web-parts",
+        "script_level.level_keys": [
+          "pl-aif1-spot the-pattern-web-parts"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "896d646e-1578-4413-b21a-bec5bcf9de96"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

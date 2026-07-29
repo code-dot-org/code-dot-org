@@ -47,6 +47,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     @controller.stubs(:restrict_reporting_to_verified_teachers).returns(false)
     DCDO.stubs(:get).with('restrict_reporting_to_verified_teachers', false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
+    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(false)
 
     user = create(:student)
     sign_in user
