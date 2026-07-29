@@ -11,18 +11,25 @@
 import type {Block} from 'blockly';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
-import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
+import {
+  defineBlock,
+  type BlockArgDefinition,
+  type Toolbox,
+} from '@code-dot-org/blockly';
 
 import * as WorldLab from '../engine';
 import {
+  AnimationProperty,
   AnimationRule,
   CollisionRule,
   GravityRule,
   InputRule,
   MotionRule,
+  PositionProperty,
   SpatialRule,
+  SpriteProperty,
 } from '../engine';
-import type {GameEvent, Rule} from '../engine';
+import type {GameEvent, Property, Rule} from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
@@ -348,6 +355,188 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_scene',
   'world_world',
 ]);
+
+// ── Property-driven "set" blocks ─────────────────────────────────────────────
+// Every settable property a rule declares becomes a "set …" block, generated
+// from the property definition — world-scoped properties (a rule's own, e.g.
+// gravity's strength/direction) set on `world`; actor-scoped properties (a
+// trait's, e.g. an actor's scale or gravity scale) set on an actor value, like
+// the hand-authored `set position`. Reading the engine's Property objects keeps
+// these in step with the rule library, the same tack as the trait/event blocks.
+
+// Every Property object → its `world-lab` export name (for `WorldLab.<name>` in
+// generated code), by reference: a rule's `properties`/a trait's `properties`
+// entry and its `export const …Property` are the same object.
+const PROPERTY_EXPORT_NAME = new Map<Property, string>();
+{
+  const properties = new Set<Property>();
+  for (const rule of ALL_RULES) {
+    for (const property of Object.values(rule.properties)) {
+      properties.add(property); // world-scoped
+    }
+    for (const trait of Object.values(rule.traits)) {
+      for (const property of Object.values(trait.properties)) {
+        properties.add(property); // actor-scoped
+      }
+    }
+  }
+  for (const [name, value] of Object.entries(WorldLab)) {
+    if (properties.has(value as Property)) {
+      PROPERTY_EXPORT_NAME.set(value as Property, name);
+    }
+  }
+}
+
+// Properties a bespoke block already sets — skip them so we don't offer two.
+const COVERED_PROPERTIES: ReadonlySet<Property> = new Set([
+  PositionProperty, // world_set_position
+  SpriteProperty, // world_set_sprite
+  AnimationProperty, // world_play_animation
+]);
+
+/** A property gets a generated block unless it is read-only or bespoke-covered. */
+const isSettable = (property: Property): boolean =>
+  !property.readonly &&
+  !COVERED_PROPERTIES.has(property) &&
+  PROPERTY_EXPORT_NAME.has(property);
+
+/** The JS value expression a set block emits for `property`, read from `block`. */
+const propertyValueCode = (property: Property, block: Block): string => {
+  switch (property.type) {
+    case 'vector':
+      return `new WorldLab.Vector(${Number(block.getFieldValue('X'))}, ${Number(
+        block.getFieldValue('Y'),
+      )})`;
+    case 'boolean':
+      return block.getFieldValue('VALUE') === 'true' ? 'true' : 'false';
+    case 'string':
+      return str(block.getFieldValue('VALUE'));
+    case 'number':
+    default:
+      return String(Number(block.getFieldValue('VALUE')));
+  }
+};
+
+/** The value field(s) for a property, plus a `%n`-numbered message fragment. */
+const propertyValueField = (
+  property: Property,
+  slot: number,
+): {message: string; args: BlockArgDefinition[]} => {
+  const d = property.default;
+  switch (property.type) {
+    case 'vector': {
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return {
+        message: `x %${slot}  y %${slot + 1}`,
+        args: [
+          {type: 'field_number', name: 'X', value: v.x},
+          {type: 'field_number', name: 'Y', value: v.y},
+        ],
+      };
+    }
+    case 'boolean': {
+      // No `field_checkbox` in the design system; a two-option dropdown stands
+      // in, ordered so the property's default value is preselected (first).
+      const on: [string, string] = ['true', 'true'];
+      const off: [string, string] = ['false', 'false'];
+      return {
+        message: `%${slot}`,
+        args: [
+          {
+            type: 'field_dropdown',
+            name: 'VALUE',
+            options: d ? [on, off] : [off, on],
+          },
+        ],
+      };
+    }
+    case 'string':
+      return {
+        message: `%${slot}`,
+        args: [{type: 'field_input', name: 'VALUE', text: String(d ?? '')}],
+      };
+    case 'number':
+    default:
+      return {
+        message: `%${slot}`,
+        args: [{type: 'field_number', name: 'VALUE', value: Number(d ?? 0)}],
+      };
+  }
+};
+
+/** The registry/toolbox type for the block that sets `property`. */
+const setPropertyBlockType = (exportName: string): string =>
+  `world_set_${exportName}`;
+
+/**
+ * A "set …" block for one settable property, generated from its definition. An
+ * actor property (a trait's) takes an ACTOR value input defaulting to a `this
+ * actor` shadow and sets it on that actor; a world property (a rule's own) sets
+ * it on `world`. The value input(s) match the property's type.
+ */
+const defineSetPropertyBlock = (property: Property) => {
+  const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
+  const name = property.name ?? property.id;
+  const actorScoped = property.scope === 'actor';
+  // The value fields start at %2 after the ACTOR input (%1), else at %1.
+  const value = propertyValueField(property, actorScoped ? 2 : 1);
+  const message0 = actorScoped
+    ? `set ${name} of %1 to ${value.message}`
+    : `set world ${name} to ${value.message}`;
+  const args0: BlockArgDefinition[] = actorScoped
+    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
+    : value.args;
+  return defineBlock({
+    type: setPropertyBlockType(exportName),
+    message0,
+    args0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: actorScoped ? [actorInputExtension] : [],
+    style: 'behavior_blocks',
+    tooltip: actorScoped
+      ? `Set an actor's ${name}.`
+      : `Set the world's ${name}.`,
+    generator: {
+      javascript(block, generator) {
+        const target = actorScoped
+          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
+          : 'world';
+        return `${target}.set(WorldLab.${exportName}, ${propertyValueCode(
+          property,
+          block,
+        )});\n`;
+      },
+    },
+  });
+};
+
+// Generate a set block for every settable property, in rule/trait declaration
+// order, and record which belong to each rule's toolbox category: a rule's own
+// (world) properties, then those of every trait it defines (actor).
+const PROPERTY_BLOCKS: ReturnType<typeof defineSetPropertyBlock>[] = [];
+const PROPERTY_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
+for (const rule of ALL_RULES) {
+  const types: string[] = [];
+  const add = (property: Property): void => {
+    if (!isSettable(property)) {
+      return;
+    }
+    const block = defineSetPropertyBlock(property);
+    PROPERTY_BLOCKS.push(block);
+    types.push(block.type);
+  };
+  for (const property of Object.values(rule.properties)) {
+    add(property);
+  }
+  for (const trait of Object.values(rule.traits)) {
+    for (const property of Object.values(trait.properties)) {
+      add(property);
+    }
+  }
+  PROPERTY_BLOCK_TYPES_BY_RULE.set(rule, types);
+}
 
 const worldLog = defineBlock({
   type: 'world_log',
@@ -693,6 +882,7 @@ export const DOMAIN_BLOCKS = [
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
+  ...PROPERTY_BLOCKS,
   ...EVENT_BLOCKS,
   worldLog,
   worldPrint,
@@ -708,28 +898,31 @@ export const DOMAIN_BLOCKS = [
   worldUseAnimations,
 ];
 
-// Each rule owns a toolbox category: its name is the rule's, and its blocks are
-// the hand-authored blocks that act on that rule's traits/queries, followed by
-// the generated event hats for that rule's events. A rule with neither (Motion)
-// is omitted. `use trait`/`use rule` span every rule, so they live with the
+// The hand-authored (non-generated) blocks that act on each rule's
+// traits/queries. `use trait`/`use rule` span every rule, so they live with the
 // Actor/World they build, not in any one rule category.
-const RULE_CATEGORY_BLOCKS = new Map<Rule, string[]>([
+const RULE_HAND_BLOCKS = new Map<Rule, string[]>([
   [SpatialRule, ['world_set_position']],
   [CollisionRule, ['world_for_each_touching', 'world_touched_actor']],
-  [GravityRule, []],
-  [InputRule, []],
   [AnimationRule, ['world_set_sprite', 'world_play_animation']],
 ]);
 
-const ruleCategory = (rule: Rule, blocks: string[]) => ({
+// A rule's category: its hand-authored blocks, then the generated "set property"
+// blocks, then the generated event hats. A rule with none of these is dropped.
+const ruleCategory = (rule: Rule) => ({
   name: rule.name,
-  blocks: [...blocks, ...Object.values(rule.events).map(eventBlockType)],
+  blocks: [
+    ...(RULE_HAND_BLOCKS.get(rule) ?? []),
+    ...(PROPERTY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
+    ...Object.values(rule.events).map(eventBlockType),
+  ],
 });
 
 /**
  * The toolbox for the Blockly editor. Structural categories (Actor, Scene,
- * World) come first, then one category per rule holding that rule's blocks and
- * events, then the general-purpose blocks (Console output, Logic, Math, Text).
+ * World) come first, then one category per rule (in dependency order) holding
+ * that rule's blocks, generated property setters, and events, then the
+ * general-purpose blocks (Console output, Logic, Math, Text).
  */
 export const DOMAIN_TOOLBOX: Toolbox = [
   {
@@ -741,9 +934,7 @@ export const DOMAIN_TOOLBOX: Toolbox = [
     name: 'World',
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
-  ...[...RULE_CATEGORY_BLOCKS].map(([rule, blocks]) =>
-    ruleCategory(rule, blocks),
-  ),
+  ...ALL_RULES.map(ruleCategory).filter(category => category.blocks.length > 0),
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',
