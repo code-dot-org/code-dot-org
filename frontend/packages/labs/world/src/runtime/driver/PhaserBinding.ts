@@ -18,8 +18,10 @@
 //
 // Input: each frame we read Phaser's cursor keys and hand the pressed set to the
 // World (`setInput`) before ticking, so the engine's Input rule can drive
-// controlled actors. Phaser attaches its keyboard listeners to the game canvas,
-// so the preview iframe must have focus for keys to register.
+// controlled actors. Phaser's keyboard listens on the focusable `#game` parent
+// (not the whole window) and `autoFocus` is off, so the game responds to keys
+// only while the learner has focused it (click or tab) — and a hot restart never
+// steals focus back from the editor. preview.html rings `#game` while it is focused.
 
 import Phaser from 'phaser';
 
@@ -75,6 +77,8 @@ function pressedKeys(
 
 export class PhaserBinding {
   private readonly game: Phaser.Game;
+  private readonly parent: HTMLElement;
+  private readonly focusOnPointerDown: () => void;
 
   constructor(
     world: World,
@@ -204,9 +208,26 @@ export class PhaserBinding {
       }
     };
 
+    // The game must never steal focus: it runs in the preview iframe, and Phaser's
+    // default `autoFocus` calls window.focus() on every boot — so each hot restart
+    // would yank focus out of the editor mid-edit. With it off, the game only takes
+    // focus when the learner clicks/tabs to it (parent is a focusable `#game`, see
+    // preview.html), and its keyboard listens on that element, so keys reach the
+    // game only while it is focused.
+    parent.tabIndex = parent.tabIndex < 0 ? 0 : parent.tabIndex;
+    // Focus the game on click. Phaser preventDefaults the canvas pointerdown, which
+    // suppresses the browser's focus-on-click, so we focus the parent ourselves —
+    // a click starts play by routing the keyboard to the game, and the focus ring
+    // (preview.html) then signals it. Removed in stop() so a hot restart doesn't
+    // stack listeners.
+    this.parent = parent;
+    this.focusOnPointerDown = () => parent.focus();
+    parent.addEventListener('pointerdown', this.focusOnPointerDown);
     this.game = new Phaser.Game({
       type: Phaser.CANVAS,
       parent,
+      autoFocus: false,
+      input: {keyboard: {target: parent}},
       scale: {
         // FIT sizes the canvas to the (CSS-sized, exactly 16:9) `#game` box, so
         // its scale — and thus input mapping — stays correct. No autoCenter: CSS
@@ -252,6 +273,7 @@ export class PhaserBinding {
 
   /** Tear the game down: stops the loop and releases the canvas. */
   stop(): void {
+    this.parent.removeEventListener('pointerdown', this.focusOnPointerDown);
     this.game.destroy(true);
   }
 }
