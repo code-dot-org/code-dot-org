@@ -108,8 +108,9 @@ describe('domain block generators', () => {
     expect(Array.isArray(touched) && touched[0]).toBe('touched');
   });
 
-  it('world_for_each_touching loops the touching query, by template id', () => {
-    // The dropdown value is the module path; the runtime type is its basename.
+  it('world_for_each_touching loops the touching query, by module path', () => {
+    // The dropdown value is the module path, which the scene stamps as the placed
+    // actor's `type`, so the filter matches on that path directly.
     expect(
       emit(
         'world_for_each_touching',
@@ -117,7 +118,7 @@ describe('domain block generators', () => {
         {DO: 'touched.set(X, Y);\n'},
       ),
     ).toBe(
-      'for (const touched of world.query(WorldLab.TouchingQuery, actor, "coin")) {\n' +
+      'for (const touched of world.query(WorldLab.TouchingQuery, actor, "actors/coin")) {\n' +
         'touched.set(X, Y);\n}\n',
     );
   });
@@ -355,7 +356,8 @@ describe('scene block generators', () => {
       'actor.set(X);\n',
     );
     expect(code).toBe(
-      '{\nconst actor = scene.addActor(Coin, "add-coin");\nactor.set(X);\n}\n',
+      '{\nconst actor = scene.addActor(Coin, "add-coin", "actors/coin");\n' +
+        'actor.set(X);\n}\n',
     );
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
   });

@@ -70,11 +70,16 @@ export class SceneBuilder {
    * readable id (a scene rebuild reconciles it live), while repeated spawns of
    * one template each get their own id and simply restart the scene. Scene tools
    * (map editors, the Blockly scene editor) pass explicit ids to pin identity.
+   *
+   * `type` is the actor's kind for "actors of a type" lookups (e.g. touching);
+   * scene tools pass the module the actor came from (`actors/coin`). It defaults
+   * to the builder's id.
    */
-  addActor(builder: ActorBuilder, id?: string): Actor {
+  addActor(builder: ActorBuilder, id?: string, type?: string): Actor {
     const world = this.requireWorld();
     const actor = builder.instantiate(
       this.resolveInstanceId(world, builder, id),
+      type,
     );
     world.addActor(actor);
     return actor;
@@ -130,8 +135,11 @@ export class SceneBuilder {
             `'${entry.type}' (register it with define())`,
         );
       }
+      // Stamp the actor's kind with the map's registered type (the module), so
+      // "actors of a type" lookups match it regardless of the template's id/name.
       const actor = builder.instantiate(
         this.resolveInstanceId(world, builder, entry.id),
+        entry.type,
       );
       for (const [ownerId, props] of Object.entries(entry.properties ?? {})) {
         for (const [propId, value] of Object.entries(props)) {

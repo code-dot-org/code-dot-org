@@ -39,14 +39,18 @@ export class ActorBuilder {
 
   /**
    * Create a live Actor from this description. `instanceId` is the unique id the
-   * Scene assigns (defaulting to this template's id); this builder's id becomes
-   * the actor's `type`. The builder is reusable — each call yields an
-   * independent actor, so one template can be spawned many times.
+   * Scene assigns (defaulting to this template's id). `type` is the actor's kind
+   * — the identity `TouchingQuery` and other "actors of a type" lookups match on;
+   * the Scene passes the module the actor was registered under (`actors/coin`),
+   * so a template renamed via its `name` still matches. It defaults to the
+   * builder's id when the caller gives none (engine tests, ad-hoc instances). The
+   * builder is reusable — each call yields an independent actor, so one template
+   * can be spawned many times.
    */
-  instantiate(instanceId?: string): Actor {
+  instantiate(instanceId?: string, type?: string): Actor {
     return new Actor({
       id: instanceId ?? this.id,
-      type: this.id,
+      type: type ?? this.id,
       name: this.name,
       traits: [...this.traits],
       overrides: [...this.overrides],
