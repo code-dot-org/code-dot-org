@@ -109,18 +109,31 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_set_sprite elects the appearance trait and sets the sprite', () => {
+  it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {
+    // Default (empty socket → `this actor`) sets it on the current actor.
     expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
-      'actor.useTraits([WorldLab.AppearanceTrait]);\n' +
-        'actor.set(WorldLab.SpriteProperty, "player");\n',
+      'actor.set(WorldLab.SpriteProperty, "player");\n',
     );
+    // A plugged-in actor (e.g. a loop's touched actor) is set instead.
+    expect(
+      emit('world_set_sprite', {SPRITE: 'switch'}, {}, {ACTOR: 'touched'}),
+    ).toBe('touched.set(WorldLab.SpriteProperty, "switch");\n');
   });
 
-  it('world_play_animation elects the appearance trait and sets the animation', () => {
+  it('world_play_animation plays the animation on the ACTOR value (restarting it)', () => {
+    // Default (empty socket → `this actor`) plays it on the current actor.
     expect(emit('world_play_animation', {ANIMATION: 'coinSpin'})).toBe(
-      'actor.useTraits([WorldLab.AppearanceTrait]);\n' +
-        'actor.set(WorldLab.AnimationProperty, "coinSpin");\n',
+      'WorldLab.playAnimation(actor, "coinSpin");\n',
     );
+    // A plugged-in actor (e.g. a loop's touched actor) is played instead.
+    expect(
+      emit(
+        'world_play_animation',
+        {ANIMATION: 'switch'},
+        {},
+        {ACTOR: 'touched'},
+      ),
+    ).toBe('WorldLab.playAnimation(touched, "switch");\n');
   });
 
   it('world_on_event registers a handler binding the event value', () => {

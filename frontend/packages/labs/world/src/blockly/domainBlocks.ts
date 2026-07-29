@@ -144,43 +144,54 @@ const worldSetPosition = defineBlock({
 
 const worldSetSprite = defineBlock({
   type: 'world_set_sprite',
-  message0: 'set sprite %1',
-  args0: [{type: 'field_dropdown', name: 'SPRITE', options: SPRITE_OPTIONS}],
+  message0: 'set sprite %1 on %2',
+  args0: [
+    {type: 'field_dropdown', name: 'SPRITE', options: SPRITE_OPTIONS},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  extensions: [actorInputExtension],
   previousStatement: true,
   nextStatement: true,
   style: 'sprite_blocks',
-  tooltip: 'Draw the actor with a built-in sprite instead of a plain square.',
+  // Like `play animation`, this only sets the property; the actor must already
+  // have the appearance trait (`use trait Has Appearance`). The ACTOR socket
+  // defaults to a `this actor` shadow, or take another actor.
+  tooltip: "Set an actor's sprite (it must have the appearance trait).",
   generator: {
-    javascript(block) {
+    javascript(block, generator) {
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
       const sprite = block.getFieldValue('SPRITE');
-      // Drawing a sprite needs the appearance trait; elect it here so the block
-      // "just works" on its own.
-      return (
-        `actor.useTraits([WorldLab.AppearanceTrait]);\n` +
-        `actor.set(WorldLab.SpriteProperty, ${str(sprite)});\n`
-      );
+      return `${target}.set(WorldLab.SpriteProperty, ${str(sprite)});\n`;
     },
   },
 });
 
 const worldPlayAnimation = defineBlock({
   type: 'world_play_animation',
-  message0: 'play animation %1',
+  message0: 'play animation %1 on %2',
   args0: [
     {type: 'field_dropdown', name: 'ANIMATION', options: ANIMATION_OPTIONS},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
-  extensions: [animationOptionsExtension],
+  inputsInline: true,
+  extensions: [animationOptionsExtension, actorInputExtension],
   previousStatement: true,
   nextStatement: true,
   style: 'sprite_blocks',
-  tooltip: 'Draw the actor with a looping animation.',
+  // This only selects which animation plays; the actor must already have the
+  // appearance trait (add `use trait Has Appearance`). `playAnimation` restarts
+  // it from the first frame — so replaying a finished non-looping animation (a
+  // switch) plays it again. It works at runtime on another actor too: the ACTOR
+  // socket defaults to a `this actor` shadow, or take a loop's touched actor.
+  tooltip: "Play an actor's animation (it must have the appearance trait).",
   generator: {
-    javascript(block) {
+    javascript(block, generator) {
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
       const animation = block.getFieldValue('ANIMATION');
-      return (
-        `actor.useTraits([WorldLab.AppearanceTrait]);\n` +
-        `actor.set(WorldLab.AnimationProperty, ${str(animation)});\n`
-      );
+      return `WorldLab.playAnimation(${target}, ${str(animation)});\n`;
     },
   },
 });

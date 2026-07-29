@@ -170,14 +170,22 @@ const PLAYER_ACTOR = JSON.stringify(
                     type: 'world_use_trait',
                     fields: {TRAIT: 'ControlledByArrowsTrait'},
                   },
-                  // Plays a learner-authored animation (game.anim) — its id is
-                  // in the dropdown because the lab feeds the project's
-                  // animations to the block (Phase D). Position is set by the
-                  // Scene when it places this actor, not here.
-                  {
-                    type: 'world_play_animation',
-                    fields: {ANIMATION: 'playerBob'},
-                  },
+                  nextBlock(
+                    // Appearance is now explicit: `play animation` only sets the
+                    // animation, so the actor must elect the trait itself.
+                    {
+                      type: 'world_use_trait',
+                      fields: {TRAIT: 'AppearanceTrait'},
+                    },
+                    // Plays a learner-authored animation (game.anim) — its id is
+                    // in the dropdown because the lab feeds the project's
+                    // animations to the block (Phase D). Position is set by the
+                    // Scene when it places this actor, not here.
+                    {
+                      type: 'world_play_animation',
+                      fields: {ANIMATION: 'playerBob'},
+                    },
+                  ),
                 ),
               ),
             },
