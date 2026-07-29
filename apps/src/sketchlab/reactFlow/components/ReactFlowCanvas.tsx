@@ -177,7 +177,7 @@ export default function ReactFlowCanvas({
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
-  const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
+  const {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo} =
     useUndoHistory();
   // Keep undo history refs in sync with current canvas state.
   useEffect(() => {
@@ -465,10 +465,18 @@ export default function ReactFlowCanvas({
 
   const handleNodesDeleted = useCallback(
     (deletedNodes: SketchLabNode[]) => {
+      // Deleting a flagged image hard-deletes its asset, so undoing the
+      // delete would restore a node whose image no longer exists. Wipe the
+      // undo/redo stacks so the deletion is final.
+      if (
+        deletedNodes.some(node => node.type === 'image' && node.data.flagged)
+      ) {
+        clearHistory();
+      }
       onNodesDeleted?.(deletedNodes);
       handleElementsDeleted();
     },
-    [onNodesDeleted, handleElementsDeleted]
+    [onNodesDeleted, handleElementsDeleted, clearHistory]
   );
 
   // Intercept React Flow's change callbacks to push undo snapshots before
@@ -509,6 +517,7 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     pushSnapshot,
+    clearHistory,
     canvasContainerRef,
     readOnly,
     uploadImage,
@@ -821,7 +830,14 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
-      pushSnapshot();
+      // A flagged image blocks the project until the node is deleted, so
+      // undoing its addition would strand the block with nothing visible to
+      // delete. Wipe the undo/redo stacks instead of making it undoable.
+      if (request.type === 'image' && request.data.flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setCanvasTool('cursor');
       const {type} = request;
 
@@ -902,6 +918,7 @@ export default function ReactFlowCanvas({
       }, FOCUS_DELAY_MS);
     },
     [
+      clearHistory,
       focusEntry,
       openToolbar,
       pushSnapshot,

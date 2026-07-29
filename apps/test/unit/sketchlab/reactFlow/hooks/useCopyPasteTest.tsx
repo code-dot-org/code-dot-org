@@ -41,6 +41,8 @@ describe('useCopyPaste paste handling', () => {
   let container: HTMLDivElement;
   let setNodes: jest.Mock;
   let setEdges: jest.Mock;
+  let pushSnapshot: jest.Mock;
+  let clearHistory: jest.Mock;
   let uploadImage: jest.Mock;
   let onImageUploadError: jest.Mock;
 
@@ -57,6 +59,8 @@ describe('useCopyPaste paste handling', () => {
 
     setNodes = jest.fn();
     setEdges = jest.fn();
+    pushSnapshot = jest.fn();
+    clearHistory = jest.fn();
     onImageUploadError = jest.fn();
   });
 
@@ -73,7 +77,8 @@ describe('useCopyPaste paste handling', () => {
         edges: [],
         setNodes,
         setEdges,
-        pushSnapshot: jest.fn(),
+        pushSnapshot,
+        clearHistory,
         canvasContainerRef,
         readOnly,
         uploadImage,
@@ -99,10 +104,12 @@ describe('useCopyPaste paste handling', () => {
     expect(addedNodes[0].type).toBe('image');
     expect(addedNodes[0].data.src).toBe('/v3/assets/channel-1/pasted.png');
     expect(addedNodes[0].data.flagged).toBeUndefined();
+    expect(pushSnapshot).toHaveBeenCalledTimes(1);
+    expect(clearHistory).not.toHaveBeenCalled();
     expect(onImageUploadError).not.toHaveBeenCalled();
   });
 
-  it('marks the pasted node when the upload was accepted despite a flag', async () => {
+  it('marks the pasted node and resets undo history for a flagged upload', async () => {
     uploadImage.mockImplementation(async ({onUploaded}) =>
       onUploaded('/v3/assets/channel-1/pasted.png', true)
     );
@@ -115,6 +122,9 @@ describe('useCopyPaste paste handling', () => {
 
     const addedNodes = setNodes.mock.calls[0][0]([]);
     expect(addedNodes[0].data.flagged).toBe(true);
+    // The paste of a flagged image must not be undoable.
+    expect(clearHistory).toHaveBeenCalledTimes(1);
+    expect(pushSnapshot).not.toHaveBeenCalled();
   });
 
   it('reports an error and adds no node when the upload fails', async () => {

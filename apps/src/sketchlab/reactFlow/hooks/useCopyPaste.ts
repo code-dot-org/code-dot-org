@@ -36,6 +36,10 @@ interface UseCopyPasteOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  // Wipes the undo/redo stacks; pasting a flagged image calls this instead of
+  // pushSnapshot so the paste can't be undone (see handleAddNode in
+  // ReactFlowCanvas for the rationale).
+  clearHistory: () => void;
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
   uploadImage: ModeratedImageUploader;
@@ -62,6 +66,7 @@ export function useCopyPaste({
   setNodes,
   setEdges,
   pushSnapshot,
+  clearHistory,
   canvasContainerRef,
   readOnly,
   uploadImage,
@@ -139,10 +144,14 @@ export function useCopyPaste({
         width: DEFAULT_NODE_WIDTH,
         height: DEFAULT_NODE_HEIGHT,
       } as SketchlabReactFlowNode;
-      pushSnapshot();
+      if (flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setNodes(currentNodes => [...currentNodes, newImageNode]);
     },
-    [screenToFlowPosition, pushSnapshot, setNodes]
+    [screenToFlowPosition, pushSnapshot, clearHistory, setNodes]
   );
 
   const buildNodeClipboard = useCallback(
