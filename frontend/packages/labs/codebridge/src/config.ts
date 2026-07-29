@@ -130,6 +130,22 @@ export const validateFileName = (
   return undefined;
 };
 
+/**
+ * Validate MOVING an existing file into `folderId`: only that its name doesn't
+ * collide with a sibling there. Unlike {@link validateFileName} this does NOT
+ * enforce editable file types — an already-uploaded binary (a `.png` sprite,
+ * say) keeps its type when moved. `excludeId` skips the file being moved.
+ */
+export const validateFileMove = (
+  source: MultiFileSource,
+  folderId: FolderId,
+  name: string,
+  excludeId?: FileId,
+): string | undefined =>
+  siblingFileNames(source, folderId, excludeId).includes(name.trim())
+    ? 'A file with that name already exists here.'
+    : undefined;
+
 /** Validate a proposed folder name under `parentId`. See {@link validateFileName}. */
 export const validateFolderName = (
   source: MultiFileSource,

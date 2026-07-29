@@ -59,5 +59,16 @@ export const usePrompts = () => {
     [dialogControl],
   );
 
-  return {promptForName, confirm};
+  const alert = useCallback(
+    async (options: {title: string; message?: string}): Promise<void> => {
+      await dialogControl.showDialog({
+        type: DialogType.GenericAlert,
+        title: options.title,
+        message: options.message,
+      });
+    },
+    [dialogControl],
+  );
+
+  return {promptForName, confirm, alert};
 };
