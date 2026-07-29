@@ -176,8 +176,12 @@ export default function ReactFlowCanvas({
   const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
   const {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo} =
     useUndoHistory();
-  // Keep undo history refs in sync with current canvas state.
+  // Keep undo history refs in sync with current canvas state. nodesRef lets
+  // event callbacks read current nodes without depending on the nodes array,
+  // which changes every drag frame.
+  const nodesRef = useRef(nodes);
   useEffect(() => {
+    nodesRef.current = nodes;
     syncRefs(nodes, edges);
   }, [nodes, edges, syncRefs]);
 
@@ -487,7 +491,7 @@ export default function ReactFlowCanvas({
       if (removedIds.size > 0) {
         // Deleting a flagged image hard-deletes its asset, so wipe history
         // instead of snapshotting.
-        const deletesFlaggedImage = nodes.some(
+        const deletesFlaggedImage = nodesRef.current.some(
           node =>
             removedIds.has(node.id) &&
             node.type === 'image' &&
@@ -501,7 +505,7 @@ export default function ReactFlowCanvas({
       }
       onNodesChange(changes);
     },
-    [nodes, onNodesChange, pushSnapshot, clearHistory]
+    [onNodesChange, pushSnapshot, clearHistory]
   );
 
   const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(

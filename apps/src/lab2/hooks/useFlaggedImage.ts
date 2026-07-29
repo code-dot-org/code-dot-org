@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useCallback, useState} from 'react';
 
 import {setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -22,58 +22,63 @@ export const useFlaggedImage = (
   const [flaggedImageData, setFlaggedImageData] =
     useState<FlaggedImageData | null>(null);
 
-  const onImageFlagged = (
-    file: File,
-    fileType: string,
-    uploadFunction: () => Promise<void>
-  ) => {
-    setFlaggedImageData({file, fileType, uploadFunction});
-  };
+  const onImageFlagged = useCallback(
+    (file: File, fileType: string, uploadFunction: () => Promise<void>) => {
+      setFlaggedImageData({file, fileType, uploadFunction});
+    },
+    []
+  );
 
-  const handleAcceptFlaggedImage = async (appName: string) => {
-    if (!flaggedImageData) return;
+  const handleAcceptFlaggedImage = useCallback(
+    async (appName: string) => {
+      if (!flaggedImageData) return;
 
-    try {
-      await flaggedImageData.uploadFunction();
-      setFlaggedImageData(null);
-      const body = JSON.stringify({type: 'flag'});
-      if (channelId) {
-        try {
-          await HttpClient.post(
-            `/v3/channels/${channelId}/abuse/image`,
-            body,
-            true,
-            {'Content-Type': 'application/json; charset=UTF-8'}
-          );
-          dispatch(setIsBlockedAbuse(true));
-          analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
-            UploaderType: uploaderType,
-            ProjectType: appName,
-          });
-        } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError(
-              'Error flagging channel due to flagged image',
-              error as Error
+      try {
+        await flaggedImageData.uploadFunction();
+        setFlaggedImageData(null);
+        const body = JSON.stringify({type: 'flag'});
+        if (channelId) {
+          try {
+            await HttpClient.post(
+              `/v3/channels/${channelId}/abuse/image`,
+              body,
+              true,
+              {'Content-Type': 'application/json; charset=UTF-8'}
             );
+            dispatch(setIsBlockedAbuse(true));
+            analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+              UploaderType: uploaderType,
+              ProjectType: appName,
+            });
+          } catch (error) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Error flagging channel due to flagged image',
+                error as Error
+              );
+          }
         }
+      } catch (error) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error uploading flagged image asset', error as Error);
+        setFlaggedImageData(null);
       }
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error uploading flagged image asset', error as Error);
-      setFlaggedImageData(null);
-    }
-  };
+    },
+    [flaggedImageData, channelId, dispatch, uploaderType]
+  );
 
-  const handleCancelFlaggedImage = (appName: string) => {
-    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-      UploaderType: uploaderType,
-      ProjectType: appName,
-    });
-    setFlaggedImageData(null);
-  };
+  const handleCancelFlaggedImage = useCallback(
+    (appName: string) => {
+      analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+        UploaderType: uploaderType,
+        ProjectType: appName,
+      });
+      setFlaggedImageData(null);
+    },
+    [uploaderType]
+  );
 
   return {
     flaggedImageData,
