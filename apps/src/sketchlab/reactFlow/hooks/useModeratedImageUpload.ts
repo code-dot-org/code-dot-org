@@ -35,8 +35,7 @@ export type ModeratedImageUploader = (
  * the two modals from the returned state.
  *
  * Start-mode and exemplar uploads (levelbuilder-authored) skip moderation.
- * A moderation service error fails open and uploads anyway, matching the
- * other labs.
+ * A moderation service error fails open and uploads anyway.
  */
 export function useModeratedImageUpload({levelName}: {levelName: string}) {
   // The lab slice is absent outside lab2 (e.g. the AI Tutor challenge

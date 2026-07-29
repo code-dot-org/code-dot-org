@@ -139,10 +139,8 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  // Moderated image upload from useModeratedImageUpload. Optional because the
-  // canvas is also hosted outside lab2 (AI Tutor whiteboard), where there is
-  // no channel to upload to; the default reports an error, matching the old
-  // no-channel behavior there.
+  // Image upload handler. If not provided, uploads will be reported as errors.
+  // Optional to support use of canvas without a channel id (e.g., AI Tutor whiteboard).
   uploadImage?: ModeratedImageUploader;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
