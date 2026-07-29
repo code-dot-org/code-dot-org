@@ -52,15 +52,13 @@ export default new ActorBuilder({id: 'ball', name: 'Ball'})
 const nextBlock = (block: object, next?: object) =>
   next ? {...block, next: {block: next}} : block;
 
-// Each event now has its own block (`world_on_<event>`), so the handler names
-// the event in its type rather than a shared dropdown field.
+// Each event has its own cap-hat block (`world_on_<event>`); the handler body
+// attaches below it as the next statement, not nested in a `do` input.
 const onEvent = (event: string, x: number, y: number, message: string) => ({
   type: `world_on_${event}`,
   x,
   y,
-  inputs: {
-    HANDLER: {block: {type: 'world_log', fields: {TEXT: message}}},
-  },
+  next: {block: {type: 'world_log', fields: {TEXT: message}}},
 });
 
 // The scene, authored in Blockly (`main.scene`): a `world_scene` root naming the

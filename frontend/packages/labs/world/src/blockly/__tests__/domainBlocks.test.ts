@@ -26,11 +26,19 @@ const emit = (
   fields: Record<string, string | number>,
   statements: Record<string, string> = {},
   values: Record<string, string> = {},
+  next = '',
 ): string => {
-  const block = {getFieldValue: (name: string) => fields[name]};
+  // Cap-hat blocks (events) read their body from the next-connected chain via
+  // `blockToCode(getNextBlock())`; stand that in with a sentinel + `next` string.
+  const nextBlock = next ? {} : null;
+  const block = {
+    getFieldValue: (name: string) => fields[name],
+    getNextBlock: () => nextBlock,
+  };
   const generator = {
     statementToCode: (_block: unknown, name: string) => statements[name] ?? '',
     valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+    blockToCode: (b: unknown) => (b === nextBlock && next ? next : ''),
   };
   return generatorFor(type)(
     block as never,
@@ -136,21 +144,17 @@ describe('domain block generators', () => {
     ).toBe('WorldLab.playAnimation(touched, "switch");\n');
   });
 
-  it('per-event blocks register a handler on the named event', () => {
-    // Each engine event has its own `world_on_<id>` block (no EVENT dropdown),
-    // emitting a `.on(WorldLab.<Export>, …)` for that event.
+  it('per-event blocks wrap the body chained below them (next), by event', () => {
+    // Each engine event has its own `world_on_<id>` cap hat; the handler body is
+    // the blocks connected below it (the next chain), wrapped in `.on(...)`.
     expect(
-      emit('world_on_startsFalling', {}, {HANDLER: 'console.log("hi");\n'}),
+      emit('world_on_startsFalling', {}, {}, {}, 'console.log("hi");\n'),
     ).toBe(
       'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n' +
         'console.log("hi");\n});\n',
     );
     expect(
-      emit(
-        'world_on_frameChanged',
-        {},
-        {HANDLER: 'console.log(eventValue);\n'},
-      ),
+      emit('world_on_frameChanged', {}, {}, {}, 'console.log(eventValue);\n'),
     ).toBe(
       'actor.on(WorldLab.FrameChangedEvent, (world, actor, eventValue) => {\n' +
         'console.log(eventValue);\n});\n',
@@ -158,26 +162,25 @@ describe('domain block generators', () => {
   });
 
   it('event blocks register the handler on their ACTOR value', () => {
-    // Default (empty socket → `this actor` shadow) registers on `actor`.
-    expect(emit('world_on_startsFalling', {}, {HANDLER: ''})).toBe(
+    // Default (empty socket → `this actor` shadow) registers on `actor`; an
+    // empty next chain yields an empty handler body.
+    expect(emit('world_on_startsFalling', {}, {}, {})).toBe(
       'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
     );
     // A plugged-in actor value registers on it instead.
-    expect(
-      emit('world_on_startsFalling', {}, {HANDLER: ''}, {ACTOR: 'other'}),
-    ).toBe(
+    expect(emit('world_on_startsFalling', {}, {}, {ACTOR: 'other'})).toBe(
       'other.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
     );
   });
 
   it('key event blocks filter the chosen key, one block per event', () => {
-    // `presses` and `releases` are now distinct blocks (no STATE dropdown), each
-    // hung off its own Input event, keeping the KEY dropdown filter.
-    expect(emit('world_on_keyPressed', {KEY: ' '}, {HANDLER: 'x;\n'})).toBe(
+    // `presses` and `releases` are distinct blocks (no STATE dropdown), each hung
+    // off its own Input event, keeping the KEY dropdown filter; body is the chain.
+    expect(emit('world_on_keyPressed', {KEY: ' '}, {}, {}, 'x;\n')).toBe(
       'actor.on(WorldLab.KeyPressedEvent, (world, actor, eventValue) => {\n' +
         'if (eventValue === " ") {\nx;\n}\n});\n',
     );
-    expect(emit('world_on_keyReleased', {KEY: 'a'}, {HANDLER: ''})).toContain(
+    expect(emit('world_on_keyReleased', {KEY: 'a'}, {}, {})).toContain(
       'actor.on(WorldLab.KeyReleasedEvent',
     );
   });

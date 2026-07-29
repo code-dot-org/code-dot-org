@@ -8,7 +8,8 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import {Order} from 'blockly/javascript';
+import type {Block} from 'blockly';
+import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
@@ -234,42 +235,51 @@ const worldPlayAnimation = defineBlock({
 });
 
 // Event blocks are generated one-per-event from the rule library, not authored
-// by hand: each engine event becomes a `world_on_<id>` "when …" hat, filed under
-// its rule's toolbox category. An event is a free-floating starting block (its
-// own workspace root), like `when_run` / Music Lab's trigger blocks — no
-// previous/next connection. The ACTOR socket is whose handler this is; it
-// defaults to a `this actor` shadow (on an `.actor` file the subject is obvious).
-// A handler runs at RUNTIME, so its args are the live `world` and `actor` (they
-// shadow the outer `actor` builder) and `eventValue` (the event's detail, e.g.
-// the animation frame or the key pressed).
+// by hand: each engine event becomes a `world_on_<id>` "when …" block, filed
+// under its rule's toolbox category. Like `when_run`, an event is a top-level
+// root: no previous connection, but a NEXT connection — the handler body
+// attaches below as the next statement, not nested in a `do` input. The ACTOR
+// socket is whose handler this is; it defaults to a `this actor` shadow (on an
+// `.actor` file the subject is obvious). A handler runs at RUNTIME, so its args
+// are the live `world` and `actor` (they shadow the outer `actor` builder) and
+// `eventValue` (the event's detail — the animation frame, the key pressed).
 
 /** Wrap a handler body as the runtime `.on` registration on the target actor. */
 const onHandler = (target: string, exportName: string, body: string): string =>
   `${target}.on(WorldLab.${exportName}, (world, actor, eventValue) => {\n` +
   `${body}});\n`;
 
-/** A plain event hat: `when <actor> <event name>` / `do …`. */
+/**
+ * The generated code of the blocks chained below `block` — its handler body.
+ * The top-level generation pass (BlocklyGenerator) generates these roots with
+ * `thisOnly`, so the block owns its next chain here rather than having it
+ * appended after the closure by the generator's default `scrub_`.
+ */
+const nextChainCode = (
+  block: Block,
+  generator: JavascriptGenerator,
+): string => {
+  const code = generator.blockToCode(block.getNextBlock());
+  return Array.isArray(code) ? code[0] : code;
+};
+
+/** A plain event block: `when <actor> <event name>`, body chained below. */
 const defineEventBlock = (event: GameEvent) => {
   const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
   return defineBlock({
     type: eventBlockType(event),
     message0: `when %1 ${event.name ?? event.id}`,
     args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
-    message1: 'do %1',
-    args1: [{type: 'input_statement', name: 'HANDLER'}],
+    nextStatement: true,
     inputsInline: true,
     extensions: [actorInputExtension],
     style: 'event_blocks',
-    tooltip: `Run blocks when this actor ${event.name ?? event.id}.`,
+    tooltip: `Run the blocks below when this actor ${event.name ?? event.id}.`,
     generator: {
       javascript(block, generator) {
         const target =
           generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-        return onHandler(
-          target,
-          exportName,
-          generator.statementToCode(block, 'HANDLER'),
-        );
+        return onHandler(target, exportName, nextChainCode(block, generator));
       },
     },
   });
@@ -283,7 +293,7 @@ const KEY_VERB: Record<string, string> = {
   keyReleased: 'releases',
 };
 
-/** A key event hat: `when <actor> presses/releases key <key>` / `do …`. */
+/** A key event block: `when <actor> presses/releases key <key>`, body below. */
 const defineKeyEventBlock = (event: GameEvent) => {
   const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
   const verb = KEY_VERB[event.id] ?? 'presses';
@@ -294,21 +304,20 @@ const defineKeyEventBlock = (event: GameEvent) => {
       {type: 'input_value', name: 'ACTOR', check: 'Actor'},
       {type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS},
     ],
-    message1: 'do %1',
-    args1: [{type: 'input_statement', name: 'HANDLER'}],
+    nextStatement: true,
     inputsInline: true,
     extensions: [actorInputExtension],
     style: 'event_blocks',
-    tooltip: `Run blocks when an actor ${verb} a key (while the game is focused).`,
+    tooltip: `Run the blocks below when an actor ${verb} a key (while the game is focused).`,
     generator: {
       javascript(block, generator) {
         const target =
           generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
         const key = block.getFieldValue('KEY');
         // `eventValue` is the key that fired; act only for the chosen key.
-        const body = `if (eventValue === ${str(key)}) {\n${generator.statementToCode(
+        const body = `if (eventValue === ${str(key)}) {\n${nextChainCode(
           block,
-          'HANDLER',
+          generator,
         )}}\n`;
         return onHandler(target, exportName, body);
       },
@@ -322,6 +331,16 @@ const EVENT_BLOCKS = ALL_RULES.flatMap(rule =>
   Object.values(rule.events).map(event =>
     rule === InputRule ? defineKeyEventBlock(event) : defineEventBlock(event),
   ),
+);
+
+/**
+ * Event root block types — top-level roots that own their next chain as a
+ * handler body. The generator must generate these with `thisOnly` so the body is
+ * not also appended after the closure by the default `scrub_` (see
+ * BlocklyGenerator).
+ */
+export const EVENT_ROOT_TYPES: ReadonlySet<string> = new Set(
+  EVENT_BLOCKS.map(block => block.type),
 );
 
 const worldLog = defineBlock({
