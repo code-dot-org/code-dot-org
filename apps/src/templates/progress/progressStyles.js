@@ -111,17 +111,17 @@ const levelStatusStyle = {
     borderColor: 'var(--borders-success-primary)',
   },
   [LevelStatus.perfect]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: 'transparent',
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.free_play_complete]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: 'transparent',
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: 'transparent',
     backgroundColor: 'var(--background-success-extra-light)',
   },
   // Note: There are submittable levels that are not assessments.
@@ -143,7 +143,7 @@ const levelStatusStyle = {
   },
   [LevelStatus.review_accepted]: {
     color: 'var(--text-neutral-inverse)',
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: 'transparent',
     backgroundColor: 'var(--background-success-primary)',
   },
 };
