@@ -23,4 +23,4 @@ export type SpriteName = (typeof SPRITE_NAMES)[number];
  * Spritesheet names (loaded via `load.spritesheet`, `frameWidth = SPRITE_SIZE`).
  * Each also names a stock animation the engine ships under the same id.
  */
-export const SPRITESHEET_NAMES = ['coinSpin', 'playerWalk'] as const;
+export const SPRITESHEET_NAMES = ['coinSpin', 'playerWalk', 'switch'] as const;

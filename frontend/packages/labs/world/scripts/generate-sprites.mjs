@@ -16,6 +16,7 @@ export const SPRITE_NAMES = ['player', 'ground', 'coin', 'box', 'ball'];
 export const ANIMATION_SPECS = {
   coinSpin: {frames: 6, frameRate: 12},
   playerWalk: {frames: 4, frameRate: 8},
+  switch: {frames: 6, frameRate: 12},
 };
 
 // ── A tiny RGBA canvas (w × h, h defaults to w) ──────────────────────────────
@@ -124,6 +125,31 @@ const ANIMATION_FRAME = {
     ][t];
     c.rect(11, 27, 4, 5 - lift[0], [40, 78, 150]); // left leg
     c.rect(17, 27, 4, 5 - lift[1], [40, 78, 150]); // right leg
+  },
+  // A tile-mounted switch: a lever on a base that sweeps from one side (frame 0)
+  // to the other (last frame). The engine plays it non-looping, so it flips once
+  // and holds; the knob shifts red (off) -> green (on) as it crosses.
+  switch(c, t, frames) {
+    c.roundRect(6, 21, 20, 9, 3, [78, 84, 94]); // housing on the tile
+    c.roundRect(6, 21, 20, 3, 3, [120, 128, 140]); // top highlight
+    c.disc(16, 22, 2.5, [40, 44, 52]); // pivot
+    const denom = Math.max(1, frames - 1);
+    const rad = ((135 - (90 * t) / denom) * Math.PI) / 180; // 135deg -> 45deg
+    const L = 11;
+    const tipX = 16 + L * Math.cos(rad);
+    const tipY = 22 - L * Math.sin(rad);
+    for (let s = 0; s <= 16; s++) {
+      // The lever arm: a thick metal line from the pivot to the knob.
+      const x = 16 + ((tipX - 16) * s) / 16;
+      const y = 22 + ((tipY - 22) * s) / 16;
+      c.disc(x, y, 1.4, [176, 182, 190]);
+    }
+    const f = t / denom;
+    c.disc(tipX, tipY, 3.5, [
+      Math.round(220 + (90 - 220) * f),
+      Math.round(72 + (200 - 72) * f),
+      Math.round(62 + (90 - 62) * f),
+    ]); // knob: red (off) -> green (on)
   },
 };
 

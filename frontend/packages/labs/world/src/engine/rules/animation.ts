@@ -170,16 +170,21 @@ export const AdvanceAnimationStep = rule.addStep(
 // keeps them in sync.
 const CELL = 32;
 
-/** A looping animation over a uniform horizontal spritesheet strip. */
+/**
+ * An animation over a uniform horizontal spritesheet strip. Loops by default; a
+ * non-looping strip (e.g. a switch) plays once, holds its last frame, and emits
+ * `AnimationEnded`.
+ */
 function strip(
   sprite: string,
   frames: number,
   frameRate: number,
   name: string,
+  loop = true,
 ): AnimationDef {
   return {
     name,
-    loop: true,
+    loop,
     frames: Array.from({length: frames}, (_unused, i) => ({
       sprite,
       position: {x: i * CELL, y: 0, width: CELL, height: CELL},
@@ -190,5 +195,8 @@ function strip(
 
 rule.addAnimation('coinSpin', strip('coinSpin', 6, 12, 'Coin Spin'));
 rule.addAnimation('playerWalk', strip('playerWalk', 4, 8, 'Player Walk'));
+// A switch flips from one side to the other on activation, then holds — so it
+// plays once (loop = false) rather than cycling.
+rule.addAnimation('switch', strip('switch', 6, 12, 'Switch', false));
 
 export const AnimationRule = rule.build();
