@@ -34,8 +34,10 @@ import type {
   GameEvent,
   Property,
   PropertyType,
+  Query,
   Rule,
   WorldAction,
+  WorldQuery,
 } from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
@@ -540,13 +542,13 @@ const setPropertyBlockType = (exportName: string): string =>
 const getPropertyBlockType = (exportName: string): string =>
   `world_get_${exportName}`;
 
-/** A value block's `output` check for a property (a vector reads one component). */
-const getPropertyOutput = (property: Property): string =>
-  property.type === 'boolean'
-    ? 'Boolean'
-    : property.type === 'string'
-      ? 'String'
-      : 'Number'; // a number, or one component of a vector
+/** A value block's `output` check for a value kind (a vector reads one component). */
+const outputForType = (type: PropertyType): string =>
+  type === 'boolean' ? 'Boolean' : type === 'string' ? 'String' : 'Number';
+
+/** A value block's style by the kind it reports: a boolean is logic, else math. */
+const valueStyle = (type: PropertyType): string =>
+  type === 'boolean' ? 'logic_blocks' : 'math_blocks';
 
 /**
  * A "set …" block for one settable property, generated from its definition. An
@@ -643,12 +645,12 @@ const defineGetPropertyBlock = (property: Property) => {
     message0,
     args0,
     inputsInline: true,
-    output: getPropertyOutput(property),
+    output: outputForType(property.type),
     // A world property reads from `world`; warn if placed where it is unbound.
     extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
     // Style by the value it reports: a boolean reads as logic, a number/vector
     // component as math.
-    style: property.type === 'boolean' ? 'logic_blocks' : 'math_blocks',
+    style: valueStyle(property.type),
     tooltip: actorScoped
       ? `Get an actor's ${name}.`
       : `Get the world's ${name}.`,
@@ -810,6 +812,102 @@ for (const rule of ALL_RULES) {
     }
   }
   ACTION_BLOCK_TYPES_BY_RULE.set(rule, types);
+}
+
+// ── Rule query blocks ────────────────────────────────────────────────────────
+// A query that declares a scalar return (`returns`) becomes a reporter block — a
+// read like a getter, but computed by the rule (e.g. gravity's "is on the
+// ground?"). An actor query (a trait's) reads an actor value; a world query (a
+// rule's own) reads `world`. Styled by the value it reports — a boolean as logic.
+// A query with no `returns` (e.g. Collision's `TouchingQuery`, which returns an
+// actor list surfaced as the `for each … touching` loop) gets no block.
+
+type AnyQuery = Query | WorldQuery;
+const QUERY_EXPORT_NAME = new Map<AnyQuery, string>();
+{
+  const queries = new Set<AnyQuery>();
+  for (const rule of ALL_RULES) {
+    for (const query of Object.values(rule.queries)) {
+      queries.add(query);
+    }
+    for (const trait of Object.values(rule.traits)) {
+      for (const query of Object.values(trait.queries)) {
+        queries.add(query);
+      }
+    }
+  }
+  for (const [name, value] of Object.entries(WorldLab)) {
+    if (queries.has(value as AnyQuery)) {
+      QUERY_EXPORT_NAME.set(value as AnyQuery, name);
+    }
+  }
+}
+
+/** The registry/toolbox type for the block that reads `query`. */
+const queryBlockType = (exportName: string): string =>
+  `world_query_${exportName}`;
+
+/**
+ * A reporter for one rule query. An actor query takes an ACTOR value input
+ * (default `this actor`) and reads it — `actor.query(WorldLab.X)`; a world query
+ * reads `world`. Its output/style match the value it returns (a boolean → logic).
+ */
+const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
+  const exportName = QUERY_EXPORT_NAME.get(query) ?? '';
+  const name = query.name ?? query.id;
+  const returns = query.returns ?? 'boolean';
+  // The name reads as a predicate ("is on the ground?"), so the subject leads:
+  // "this actor is on the ground?". A world query stands alone.
+  const message0 = actorScoped ? `%1 ${name}` : name;
+  const args0: BlockArgDefinition[] = actorScoped
+    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}]
+    : [];
+  return defineBlock({
+    type: queryBlockType(exportName),
+    message0,
+    args0,
+    inputsInline: true,
+    output: outputForType(returns),
+    extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
+    style: valueStyle(returns),
+    tooltip: actorScoped ? `Whether an actor ${name}` : `The world's ${name}`,
+    generator: {
+      javascript(block, generator) {
+        const target = actorScoped
+          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
+          : 'world';
+        return [`${target}.query(WorldLab.${exportName})`, Order.ATOMIC] as [
+          string,
+          number,
+        ];
+      },
+    },
+  });
+};
+
+// Generate a reporter for every query that declares a return type — a rule's own
+// (world) queries, then those of every trait it defines (actor).
+const QUERY_BLOCKS: ReturnType<typeof defineQueryBlock>[] = [];
+const QUERY_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
+for (const rule of ALL_RULES) {
+  const types: string[] = [];
+  const add = (query: AnyQuery, actorScoped: boolean): void => {
+    if (!query.returns || !QUERY_EXPORT_NAME.has(query)) {
+      return;
+    }
+    const block = defineQueryBlock(query, actorScoped);
+    QUERY_BLOCKS.push(block);
+    types.push(block.type);
+  };
+  for (const query of Object.values(rule.queries)) {
+    add(query, false);
+  }
+  for (const trait of Object.values(rule.traits)) {
+    for (const query of Object.values(trait.queries)) {
+      add(query, true);
+    }
+  }
+  QUERY_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
 
 const worldLog = defineBlock({
@@ -1162,6 +1260,7 @@ export const DOMAIN_BLOCKS = [
   worldPlayAnimation,
   ...PROPERTY_BLOCKS,
   ...ACTION_BLOCKS,
+  ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
   worldLog,
   worldPrint,
@@ -1187,13 +1286,14 @@ const RULE_HAND_BLOCKS = new Map<Rule, string[]>([
 ]);
 
 // A rule's category: its hand-authored blocks, the generated set/get property
-// blocks, the generated action blocks, then the generated event hats. A rule with
-// none of these is dropped.
+// blocks, the generated query reporters, the generated action blocks, then the
+// generated event hats. A rule with none of these is dropped.
 const ruleCategory = (rule: Rule) => ({
   name: rule.name,
   blocks: [
     ...(RULE_HAND_BLOCKS.get(rule) ?? []),
     ...(PROPERTY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
+    ...(QUERY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
     ...(ACTION_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
     ...Object.values(rule.events).map(eventBlockType),
   ],

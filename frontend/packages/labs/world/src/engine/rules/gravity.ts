@@ -61,7 +61,7 @@ export const FallingProperty = AffectedByGravityTrait.addProperty(
 export const IsOnGroundQuery = AffectedByGravityTrait.addQuery(
   'isOnGround',
   actor => !actor.get(FallingProperty),
-  {name: 'is on the ground?'},
+  {name: 'is on the ground?', returns: 'boolean'},
 );
 
 export const GroundTrait = rule.addTrait({

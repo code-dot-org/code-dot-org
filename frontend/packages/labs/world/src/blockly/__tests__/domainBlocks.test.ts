@@ -362,6 +362,22 @@ describe('domain block generators', () => {
     );
   });
 
+  it('generated query blocks read the query as a boolean reporter', () => {
+    // Gravity's "is on the ground?" — reads the ACTOR value (default `this actor`).
+    expect(emitValue('world_query_IsOnGroundQuery')[0]).toBe(
+      'actor.query(WorldLab.IsOnGroundQuery)',
+    );
+    expect(
+      emitValue('world_query_IsOnGroundQuery', {}, {ACTOR: 'touched'})[0],
+    ).toBe('touched.query(WorldLab.IsOnGroundQuery)');
+    // It is a Boolean reporter styled as logic, so it plugs into `if`/comparisons.
+    const block = DOMAIN_BLOCKS.find(
+      b => b.type === 'world_query_IsOnGroundQuery',
+    ) as {output?: string; style?: string};
+    expect(block.output).toBe('Boolean');
+    expect(block.style).toBe('logic_blocks');
+  });
+
   it('registers every world_ block the toolbox references', () => {
     // The rule categories reference generated event types (`world_on_<id>`); this
     // catches any drift between what the toolbox lists and what is registered.
@@ -438,6 +454,21 @@ describe('domain block generators', () => {
         'world_do_ResizeAction',
       ]),
     );
+  });
+
+  it('surfaces generated query reporters in their rule categories', () => {
+    const category = (name: string) =>
+      (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
+        c => c.name === name,
+      )?.blocks ?? [];
+    // Gravity's "is on the ground?" query. (Collision's TouchingQuery returns an
+    // actor list — no return type — so it gets no query block; it is the loop.)
+    expect(category('Has Gravity')).toContain('world_query_IsOnGroundQuery');
+    expect(
+      (DOMAIN_TOOLBOX as Array<{blocks: string[]}>)
+        .flatMap(c => c.blocks)
+        .filter(t => t.startsWith('world_query_')),
+    ).toEqual(['world_query_IsOnGroundQuery']);
   });
 });
 

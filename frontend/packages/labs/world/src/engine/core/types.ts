@@ -66,6 +66,9 @@ export interface Query<T = unknown> {
   readonly id: string;
   readonly name?: string;
   readonly ownerId: string;
+  /** The value kind this returns, so the Blockly surface can offer a block for
+   * it (the query analogue of a {@link Property}'s type); absent = not surfaced. */
+  readonly returns?: PropertyType;
   readonly evaluate: (actor: Actor) => T;
 }
 
@@ -79,6 +82,9 @@ export interface WorldQuery<T = unknown> {
   readonly id: string;
   readonly name?: string;
   readonly ownerId: string;
+  /** The value kind this returns, for the Blockly surface (absent = not
+   * surfaced, e.g. Collision's `TouchingQuery` returns an actor list). */
+  readonly returns?: PropertyType;
   readonly evaluate: (world: World, ...args: unknown[]) => T;
 }
 

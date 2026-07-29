@@ -90,12 +90,18 @@ export class Trait {
   addQuery<T>(
     id: string,
     evaluate: (actor: Actor) => T,
-    opts: {name?: string} = {},
+    opts: {name?: string; returns?: PropertyType} = {},
   ): Query<T> {
     if (this.frozen) {
       frozenError(this.id);
     }
-    const query: Query<T> = {id, name: opts.name, ownerId: this.id, evaluate};
+    const query: Query<T> = {
+      id,
+      name: opts.name,
+      ownerId: this.id,
+      returns: opts.returns,
+      evaluate,
+    };
     this.queries[id] = query as Query;
     return query;
   }

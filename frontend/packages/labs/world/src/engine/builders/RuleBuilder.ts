@@ -92,13 +92,14 @@ export class RuleBuilder {
   addQuery<T>(
     id: string,
     evaluate: (world: World, ...args: unknown[]) => T,
-    opts: {name?: string} = {},
+    opts: {name?: string; returns?: PropertyType} = {},
   ): WorldQuery<T> {
     this.assertMutable();
     const query: WorldQuery<T> = {
       id,
       name: opts.name,
       ownerId: this.id,
+      returns: opts.returns,
       evaluate,
     };
     this.queries[id] = query as WorldQuery;
