@@ -43,12 +43,15 @@ type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
 /**
  * Phaser's per-instance canvas render hook — the method the renderer calls to
  * draw one object (`child.renderCanvas(renderer, child, camera, parentMatrix)`).
- * Swapping it per object is a supported extension point but is not in the public
- * types, so we describe its shape here and attach it through a structural cast.
+ * Both the Image and Rectangle canvas renderers thread their fourth argument (the
+ * parent matrix) into the object's transform, so wrapping this method and swapping
+ * that argument is how we inject skew. It is a supported extension point but is
+ * not in the public types, so we describe its shape here and attach it through a
+ * structural cast.
  */
 type CanvasRenderHook = (
   renderer: Phaser.Renderer.Canvas.CanvasRenderer,
-  src: Phaser.GameObjects.Image,
+  src: GameObject,
   camera: Phaser.Cameras.Scene2D.Camera,
   parentMatrix?: Phaser.GameObjects.Components.TransformMatrix,
 ) => void;
@@ -86,30 +89,55 @@ export class PhaserBinding {
 
     // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
     // not model natively (its per-object matrix is position·rotation·scale only).
-    // We inject it per image by swapping the object's canvas render hook for one
-    // that hands `batchSprite` a parent matrix M = T(c)·shear·T(-c) — a shear
-    // about the actor's center c. batchSprite composes calc = camera·parent·sprite
-    // and the sprite matrix still carries the object's own position/rotation/scale,
-    // so M shears the drawn sprite about its center while leaving those untouched.
-    // Each skewed image owns a matrix, rebuilt every frame in `sync`; an unskewed
-    // image has no entry and renders through the normal (no parent matrix) path.
+    // We inject it by wrapping each object's own canvas render hook: the wrapper
+    // hands the object's renderer a parent matrix M = T(c)·shear·T(-c) — a shear
+    // about the actor's center c — in place of the (null) matrix it would get as a
+    // top-level object. The renderer composes calc = camera·parent·sprite and the
+    // sprite matrix still carries the object's own position/rotation/scale, so M
+    // shears what is drawn about its center while leaving those untouched. This is
+    // renderer-agnostic within canvas: both textured Images and the fallback
+    // Rectangle thread the parent matrix through their transform the same way. Each
+    // skewed object owns a matrix, rebuilt every frame in `sync`; an unskewed one
+    // has no entry and renders through the normal (no parent matrix) path.
     const skewMatrices = new WeakMap<
-      Phaser.GameObjects.Image,
+      GameObject,
       Phaser.GameObjects.Components.TransformMatrix
     >();
     const shear = new Phaser.GameObjects.Components.TransformMatrix();
-    const installSkewHook = (image: Phaser.GameObjects.Image) => {
-      const hook: CanvasRenderHook = (renderer, src, camera, parentMatrix) => {
-        camera.addToRenderList(src);
-        renderer.batchSprite(
+    const installSkewHook = (object: GameObject) => {
+      const target = object as unknown as {renderCanvas: CanvasRenderHook};
+      const original = target.renderCanvas;
+      target.renderCanvas = (renderer, src, camera, parentMatrix) => {
+        original.call(
           src,
-          src.frame,
+          renderer,
+          src,
           camera,
-          skewMatrices.get(src) ?? parentMatrix,
+          skewMatrices.get(object) ?? parentMatrix,
         );
       };
-      (image as unknown as {renderCanvas: CanvasRenderHook}).renderCanvas =
-        hook;
+    };
+    // Build (or clear) an object's shear matrix M = T(c)·shear·T(-c) about its
+    // drawn center c; the render hook feeds M to the object's canvas renderer.
+    const applySkew = (
+      object: GameObject,
+      cx: number,
+      cy: number,
+      degrees: number,
+    ) => {
+      if (!degrees) {
+        skewMatrices.delete(object);
+        return;
+      }
+      let matrix = skewMatrices.get(object);
+      if (!matrix) {
+        matrix = new Phaser.GameObjects.Components.TransformMatrix();
+        skewMatrices.set(object, matrix);
+      }
+      const b = Math.tan(degrees * DEGREES_TO_RADIANS);
+      matrix.applyITRS(cx, cy, 0, 1, 1); // T(center)
+      matrix.multiply(shear.setTransform(1, b, 0, 1, 0, 0)); // ·shear
+      matrix.translate(-cx, -cy); // ·T(-center)
     };
 
     // The engine resolves each actor's current appearance frame; the driver just
@@ -118,22 +146,21 @@ export class PhaserBinding {
     // refreshed every tick, so an animation's frames — same spritesheet, changing
     // cell — update in place.
     const create = (scene: Phaser.Scene, state: RenderState): GameObject => {
-      if (state.frame && scene.textures.exists(state.frame.sprite)) {
-        const image = scene.add.image(state.x, state.y, state.frame.sprite);
-        // Give the image a skew-aware render hook up front; it is a no-op cost
-        // until the actor actually carries a non-zero skew.
-        installSkewHook(image);
-        return image;
-      }
-      // The appearance-less fallback rectangle uses a different renderer and is a
-      // placeholder, so skew does not apply to it.
-      return scene.add.rectangle(
-        state.x,
-        state.y,
-        ACTOR_SIZE,
-        ACTOR_SIZE,
-        0x33cc66,
-      );
+      const object =
+        state.frame && scene.textures.exists(state.frame.sprite)
+          ? scene.add.image(state.x, state.y, state.frame.sprite)
+          : // The appearance-less fallback: a plain rectangle placeholder.
+            scene.add.rectangle(
+              state.x,
+              state.y,
+              ACTOR_SIZE,
+              ACTOR_SIZE,
+              0x33cc66,
+            );
+      // Give either object kind a skew-aware render hook up front; it is a no-op
+      // cost until the actor actually carries a non-zero skew.
+      installSkewHook(object);
+      return object;
     };
 
     const sync = (scene: Phaser.Scene) => {
@@ -160,26 +187,19 @@ export class PhaserBinding {
             state.scaleY * frame.scale,
           );
           object.setRotation(state.rotation * DEGREES_TO_RADIANS);
-          // Rebuild (or clear) this image's shear matrix about its drawn center.
-          if (state.skew) {
-            const cx = state.x + frame.offset.x;
-            const cy = state.y + frame.offset.y;
-            let matrix = skewMatrices.get(object);
-            if (!matrix) {
-              matrix = new Phaser.GameObjects.Components.TransformMatrix();
-              skewMatrices.set(object, matrix);
-            }
-            const b = Math.tan(state.skew * DEGREES_TO_RADIANS);
-            matrix.applyITRS(cx, cy, 0, 1, 1); // T(center)
-            matrix.multiply(shear.setTransform(1, b, 0, 1, 0, 0)); // ·shear
-            matrix.translate(-cx, -cy); // ·T(-center)
-          } else {
-            skewMatrices.delete(object);
-          }
+          // Shear about the drawn center (position plus the frame's offset).
+          applySkew(
+            object,
+            state.x + frame.offset.x,
+            state.y + frame.offset.y,
+            state.skew,
+          );
         } else {
           object.setPosition(state.x, state.y);
           object.setScale(state.scaleX, state.scaleY);
           object.setRotation(state.rotation * DEGREES_TO_RADIANS);
+          // The rectangle is centered on its position; shear about that point.
+          applySkew(object, state.x, state.y, state.skew);
         }
       }
     };
