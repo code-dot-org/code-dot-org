@@ -1,6 +1,5 @@
 import type {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {
-  faBrain,
   faChartLine,
   faSpinner,
   faTable,
@@ -24,7 +23,6 @@ import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import type {
   InstructionsKey,
   NavigationTab,
-  NavigationTabId,
   Panel,
   PrevNextButtons,
   SaveResponseData,
@@ -179,8 +177,7 @@ function navigationTabId(tab: NavigationTab): string {
   return `ailab-${tab.id}-tab`;
 }
 
-const navigationTabIcons: Record<NavigationTabId, IconDefinition> = {
-  algorithm: faBrain,
+const navigationTabIcons: Record<NavigationTab['id'], IconDefinition> = {
   dataset: faTable,
   train: faChartLine,
   test: faVial,

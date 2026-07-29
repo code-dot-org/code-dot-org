@@ -285,6 +285,15 @@ const ailabSlice = createSlice({
         return {payload: {feature, value}};
       },
     },
+    setTestDataFromExample(
+      state,
+      action: PayloadAction<{features: string[]; example: (string | number)[]}>,
+    ) {
+      action.payload.features.forEach((feature, index) => {
+        state.testData[feature] = action.payload.example[index];
+      });
+      state.prediction = undefined;
+    },
     setPrediction(state, action: PayloadAction<number | string>) {
       state.prediction = action.payload;
     },
@@ -503,6 +512,7 @@ export const {
   setTrainingExamples,
   setTrainingLabels,
   setTestData,
+  setTestDataFromExample,
   setPrediction,
   resetState,
   resetDatasetState,

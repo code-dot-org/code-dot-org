@@ -1,12 +1,12 @@
 /* React component to handle displaying test data and A.I. Bot's guesses. */
-import {useCallback} from 'react';
+import {type KeyboardEvent, useCallback} from 'react';
 
 import {styles, colors, REGRESSION_ERROR_TOLERANCE} from '../constants';
 import {getLocalizedColumnName, isRegression} from '../helpers/columnDetails';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {setResultsHighlightRow} from '../redux';
+import {setResultsHighlightRow, setTestDataFromExample} from '../redux';
 import type {ResultsData} from '../types';
 
 interface ResultsTableProps {
@@ -25,6 +25,20 @@ const ResultsTable = ({results}: ResultsTableProps) => {
 
   const highlightRow = (row: number | undefined) =>
     dispatch(setResultsHighlightRow(row as number));
+
+  const populateTestData = (example: (string | number)[]) => {
+    dispatch(setTestDataFromExample({features: selectedFeatures, example}));
+  };
+
+  const onRowKeyDown = (
+    event: KeyboardEvent<HTMLTableRowElement>,
+    example: (string | number)[],
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      populateTestData(example);
+    }
+  };
 
   const getRowCellStyle = useCallback(
     (index: number) => {
@@ -120,6 +134,14 @@ const ResultsTable = ({results}: ResultsTableProps) => {
                   key={index}
                   onMouseEnter={() => highlightRow(index)}
                   onMouseLeave={() => highlightRow(undefined)}
+                  onClick={() => populateTestData(examples)}
+                  onKeyDown={event => onRowKeyDown(event, examples)}
+                  aria-label={I18n.t('resultsTablePopulateTestData', {
+                    rowNumber: index + 1,
+                  })}
+                  role="button"
+                  tabIndex={0}
+                  style={styles.resultsTableRow}
                 >
                   {examples.map((example, i) => {
                     return (

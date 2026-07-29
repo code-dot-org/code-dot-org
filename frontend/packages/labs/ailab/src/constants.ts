@@ -804,6 +804,10 @@ export const styles = {
     height: 15,
   },
 
+  resultsTableRow: {
+    cursor: 'pointer',
+  },
+
   resultsCellHighlight: {
     backgroundColor: colors.background,
   },

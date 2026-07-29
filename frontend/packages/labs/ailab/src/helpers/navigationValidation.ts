@@ -17,7 +17,6 @@ action for a given panel.
 
 /*
 const panelList = [
-  { id: "selectAlgorithm", label: "Algorithm" },
   { id: "selectDataset", label: "Import" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
@@ -169,7 +168,6 @@ export function shouldDisplaySaveStatus(saveStatus: string): boolean {
 }
 
 const navigationTabPanels: Record<NavigationTabId, ContentPanel[]> = {
-  algorithm: ['selectAlgorithm'],
   dataset: ['selectDataset', 'dataDisplayLabel', 'dataDisplayFeatures'],
   train: ['trainModel'],
   test: ['generateResults', 'results'],
@@ -177,7 +175,6 @@ const navigationTabPanels: Record<NavigationTabId, ContentPanel[]> = {
 };
 
 const navigationTabLabelKeys: Record<NavigationTabId, string> = {
-  algorithm: 'navigationTabAlgorithm',
   dataset: 'navigationTabDataset',
   train: 'navigationTabTrain',
   test: 'navigationTabTest',

@@ -219,7 +219,6 @@ export type ContentPanel =
   | 'modelSummary';
 
 export type NavigationTabId =
-  | 'algorithm'
   | 'dataset'
   | 'train'
   | 'test'

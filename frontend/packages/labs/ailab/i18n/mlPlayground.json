@@ -105,6 +105,7 @@
   "resultsTableActualValueHeader": "Actual",
   "resultsTablePredictedValueHeader": "A.I. Prediction",
   "resultsTablePredictionRange": "Predictions are +/- {percentage}% of range",
+  "resultsTablePopulateTestData": "Use prediction row {rowNumber} in Try it out",
   "decisionTreeVisualizationHeading": "Decision Tree",
   "decisionTreeSvgLabel": "Decision tree diagram",
   "decisionTreeLeafLabel": "Prediction",

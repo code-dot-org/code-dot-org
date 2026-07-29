@@ -8,6 +8,7 @@ import reducer, {
   setInstructionsEnabled,
   addSelectedFeature,
   setTestData,
+  setTestDataFromExample,
   setPrediction,
   setMode,
   setReserveLocation,
@@ -154,6 +155,23 @@ describe('ailab reducer', () => {
         testData: {a: 0},
       };
       expect(getPredictAvailable(state)).toBe(true);
+    });
+
+    test('loads an example row into test data and clears any stale prediction', () => {
+      const predicted = {
+        ...initialState,
+        selectedFeatures: ['weather', 'temp'],
+        prediction: 'yes',
+      };
+      const next = reducer(
+        predicted,
+        setTestDataFromExample({
+          features: ['weather', 'temp'],
+          example: ['sunny', 'hot'],
+        }),
+      );
+      expect(next.testData).toEqual({weather: 'sunny', temp: 'hot'});
+      expect(next.prediction).toBeUndefined();
     });
   });
 

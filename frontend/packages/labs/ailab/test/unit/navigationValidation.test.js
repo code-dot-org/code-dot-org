@@ -189,20 +189,13 @@ describe('getNavigationTabs', () => {
     I18n.initI18n();
   });
 
-  test('selects Algorithm and disables the rest before an algorithm is selected', () => {
+  test('starts with the dataset tab disabled before an algorithm is selected', () => {
     const tabs = getNavigationTabs({
       ...initialState,
       currentPanel: 'selectAlgorithm',
     });
 
     expect(tabs).toEqual([
-      {
-        id: 'algorithm',
-        text: 'Algorithm',
-        panel: 'selectAlgorithm',
-        enabled: true,
-        selected: true,
-      },
       {
         id: 'dataset',
         text: 'Dataset',
@@ -334,8 +327,8 @@ describe('getNavigationTabs', () => {
 });
 
 describe('shouldShowNavigationTabs', () => {
-  test('shows tabs for algorithm, data, train, test, and export panels', () => {
-    expect(shouldShowNavigationTabs('selectAlgorithm')).toBe(true);
+  test('shows tabs for data, train, test, and export panels', () => {
+    expect(shouldShowNavigationTabs('selectAlgorithm')).toBe(false);
     expect(shouldShowNavigationTabs('selectDataset')).toBe(true);
     expect(shouldShowNavigationTabs('trainModel')).toBe(true);
     expect(shouldShowNavigationTabs('results')).toBe(true);
