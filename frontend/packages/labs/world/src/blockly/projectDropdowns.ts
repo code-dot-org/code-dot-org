@@ -18,7 +18,9 @@ import {
   projectAnimationFileOptions,
   projectMapActorTypes,
   projectWorldOptions,
+  projectWorldRules,
 } from './projectModules';
+import {setProjectRules} from './traitOptions';
 
 export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectAnimations(projectAnimationIds(files));
@@ -26,4 +28,6 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
   setProjectMaps(projectMapActorTypes(files));
+  // The traits an actor may take come from the rules the project's worlds attach.
+  setProjectRules(projectWorldRules(files));
 }

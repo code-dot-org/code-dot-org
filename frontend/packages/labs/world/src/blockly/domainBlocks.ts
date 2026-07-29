@@ -28,6 +28,7 @@ import {
   worldOptions,
   worldOptionsExtension,
 } from './moduleOptions';
+import {traitOptions, traitOptionsExtension} from './traitOptions';
 
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
@@ -46,11 +47,6 @@ const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
 );
 
 // Dropdown value -> the `world-lab` export name.
-const TRAIT_CONST: Record<string, string> = {
-  affected: 'AffectedByGravityTrait',
-  ground: 'GroundTrait',
-  controlled: 'ControlledByArrowsTrait',
-};
 const EVENT_CONST: Record<string, string> = {
   startsFalling: 'StartsFallingEvent',
   stopsFalling: 'StopsFallingEvent',
@@ -103,25 +99,18 @@ const worldActor = defineBlock({
 const worldUseTrait = defineBlock({
   type: 'world_use_trait',
   message0: 'use trait %1',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'TRAIT',
-      options: [
-        ['Affected by Gravity', 'affected'],
-        ['Acts as Ground', 'ground'],
-        ['Controlled by Arrow Keys', 'controlled'],
-      ],
-    },
-  ],
+  // The options are the traits in play — those a rule the project's worlds attach
+  // provides (populated live by the extension); the value is the trait's export.
+  args0: [{type: 'field_dropdown', name: 'TRAIT', options: traitOptions()}],
   previousStatement: true,
   nextStatement: true,
+  extensions: [traitOptionsExtension],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
     javascript(block) {
-      const constName = TRAIT_CONST[block.getFieldValue('TRAIT')] ?? '';
-      return `actor.useTraits([WorldLab.${constName}]);\n`;
+      const traitExport = block.getFieldValue('TRAIT');
+      return `actor.useTraits([WorldLab.${traitExport}]);\n`;
     },
   },
 });

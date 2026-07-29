@@ -71,7 +71,7 @@ export function mapOptions(): Array<[string, string]> {
 }
 
 /** An extension that points `fieldName`'s dropdown at a live options function. */
-function liveDropdown(
+export function liveDropdown(
   extensionName: string,
   fieldName: string,
   options: () => Array<[string, string]>,
