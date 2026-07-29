@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
@@ -21,7 +22,6 @@ import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import * as applabConstants from '../../applab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
 
-import AbuseError from './AbuseError';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import SendToPhone from './SendToPhone';
@@ -287,18 +287,36 @@ class ShareAllowedDialog extends React.Component {
                   {isAbusive && (
                     <Alert
                       type="danger"
+                      size="xs"
                       className={moduleStyles.abuseAlert}
                       text={
-                        <AbuseError
-                          i18n={{
-                            tos: i18n.tosLong({url: 'http://code.org/tos'}),
-                            contact_us: i18n.contactUs({
-                              url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
+                        <>
+                          <div>
+                            This project has been reported for violating
+                            CodeAI's{' '}
+                            <Link
+                              href="http://code.org/tos"
+                              text="Terms of Service"
+                              external
+                              openInNewTab
+                              size="xs"
+                            />{' '}
+                            and cannot be shared with others.
+                          </div>
+                          <div>
+                            If you believe this to be an error, please{' '}
+                            <Link
+                              href={`https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
                                 `Abuse error for project at url: ${shareUrl}`
-                              )}`,
-                            }),
-                          }}
-                        />
+                              )}`}
+                              text="contact us"
+                              external
+                              openInNewTab
+                              size="xs"
+                            />
+                            .
+                          </div>
+                        </>
                       }
                     />
                   )}
