@@ -1606,6 +1606,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: rubric
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   channel_tokens:
   - *5
   - *38
@@ -16351,7 +16359,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260722124043
+version: 20260729193550
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
