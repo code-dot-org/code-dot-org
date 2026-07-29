@@ -24,7 +24,7 @@ describe('makeBackpackImageImportHandler', () => {
   beforeEach(() => {
     // Successful moderated upload: hand the asset URL to the continuation.
     uploadImage = jest.fn(async ({onUploaded}) =>
-      onUploaded('/v3/assets/channel-1/abc.png')
+      onUploaded('/v3/assets/channel-1/abc.png', false)
     );
     addImageNode = jest.fn();
     getFile = jest.fn().mockResolvedValue(file);
@@ -43,6 +43,20 @@ describe('makeBackpackImageImportHandler', () => {
     });
     expect(notifySuccess).toHaveBeenCalledWith('new', expect.any(String));
     expect(notifyError).not.toHaveBeenCalled();
+  });
+
+  it('marks the node when the upload was accepted despite a flag', async () => {
+    uploadImage.mockImplementation(async ({onUploaded}) =>
+      onUploaded('/v3/assets/channel-1/abc.png', true)
+    );
+
+    await runImport();
+
+    expect(addImageNode).toHaveBeenCalledWith({
+      src: '/v3/assets/channel-1/abc.png',
+      altText: 'my-sketch',
+      flagged: true,
+    });
   });
 
   it('reports an error and adds nothing when the upload cannot proceed', async () => {

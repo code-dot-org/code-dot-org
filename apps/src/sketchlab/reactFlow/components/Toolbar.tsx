@@ -46,10 +46,14 @@ export default function Toolbar({
 
       await uploadImage({
         file,
-        onUploaded: src =>
+        onUploaded: (src, flagged) =>
           onAddNode({
             type: 'image',
-            data: {src, altText: file.name.replace(/\.[^.]+$/, '')},
+            data: {
+              src,
+              altText: file.name.replace(/\.[^.]+$/, ''),
+              ...(flagged && {flagged}),
+            },
           }),
         onError: onImageUploadError,
       });

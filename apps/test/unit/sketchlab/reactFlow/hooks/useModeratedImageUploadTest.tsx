@@ -1,16 +1,33 @@
 import {renderHook, act} from '@testing-library/react-hooks';
 
 import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
+import {unflagProjectChannel} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {useModeratedImageUpload} from '@cdo/apps/sketchlab/reactFlow/hooks/useModeratedImageUpload';
+import {SketchLabNode} from '@cdo/apps/sketchlab/reactFlow/types';
 import {
   generateImageAssetUploadUrl,
   isStarterAssetOrExemplarUpload,
   uploadImageAsset,
 } from '@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 
 jest.mock('@cdo/apps/util/moderateImage', () => ({
   moderateImage: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  delete: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
+  unflagProjectChannel: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  getInstance: () => ({
+    getMetricsReporter: () => ({logError: jest.fn()}),
+  }),
 }));
 
 jest.mock('@cdo/apps/sketchlab/reactFlow/utils/uploadImageAsset', () => ({
@@ -37,9 +54,11 @@ jest.mock('@cdo/apps/lab2/hooks/useFlaggedImage', () => ({
 let mockState: {
   lab?: {channel?: {id: string}; isBlockedAbuse?: boolean};
 };
+const mockDispatch = jest.fn();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (selector: (state: unknown) => unknown) =>
     selector(mockState),
+  useAppDispatch: () => mockDispatch,
 }));
 
 const mockModerateImage = moderateImage as jest.MockedFunction<
@@ -58,6 +77,12 @@ const mockIsStarterAssetOrExemplar =
   >;
 const mockUseFlaggedImage = useFlaggedImage as jest.MockedFunction<
   typeof useFlaggedImage
+>;
+const mockHttpDelete = HttpClient.delete as jest.MockedFunction<
+  typeof HttpClient.delete
+>;
+const mockUnflagProjectChannel = unflagProjectChannel as jest.MockedFunction<
+  typeof unflagProjectChannel
 >;
 
 const LEVEL_NAME = 'test-level';
@@ -78,6 +103,7 @@ describe('useModeratedImageUpload', () => {
     mockGenerateUploadUrl.mockReturnValue(UPLOAD_URL);
     mockUploadImageAsset.mockResolvedValue(UPLOAD_URL);
     mockModerateImage.mockResolvedValue('safe');
+    mockHttpDelete.mockResolvedValue({} as Response);
     onUploaded = jest.fn();
     onError = jest.fn();
   });
@@ -110,7 +136,7 @@ describe('useModeratedImageUpload', () => {
       channelId: CHANNEL_ID,
       precomputedUploadUrl: UPLOAD_URL,
     });
-    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL);
+    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL, false);
     expect(onError).not.toHaveBeenCalled();
   });
 
@@ -121,7 +147,7 @@ describe('useModeratedImageUpload', () => {
     await upload(result);
 
     expect(mockUploadImageAsset).toHaveBeenCalled();
-    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL);
+    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL, false);
   });
 
   it('defers a flagged upload to the consent flow', async () => {
@@ -139,7 +165,8 @@ describe('useModeratedImageUpload', () => {
       expect.any(Function)
     );
 
-    // Accepting in the modal runs the deferred upload at the same URL.
+    // Accepting in the modal runs the deferred upload at the same URL; the
+    // node is marked flagged so deleting it later can lift the block.
     const deferredUpload = mockOnImageFlagged.mock.calls[0][2];
     await deferredUpload();
     expect(mockUploadImageAsset).toHaveBeenCalledWith(file, {
@@ -147,7 +174,7 @@ describe('useModeratedImageUpload', () => {
       channelId: CHANNEL_ID,
       precomputedUploadUrl: UPLOAD_URL,
     });
-    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL);
+    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL, true);
   });
 
   it('reports an error and rethrows when the deferred upload fails', async () => {
@@ -192,7 +219,7 @@ describe('useModeratedImageUpload', () => {
       levelName: LEVEL_NAME,
       channelId: CHANNEL_ID,
     });
-    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL);
+    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL, false);
   });
 
   it('rejects file types the moderation service cannot check', async () => {
@@ -234,5 +261,69 @@ describe('useModeratedImageUpload', () => {
   it('passes the SketchLab uploader type to the consent flow', () => {
     renderModeratedUpload();
     expect(mockUseFlaggedImage).toHaveBeenCalledWith('SketchLab');
+  });
+
+  describe('handleImageNodesDeleted', () => {
+    const flaggedImageNode = {
+      id: 'node-1',
+      type: 'image',
+      position: {x: 0, y: 0},
+      data: {src: UPLOAD_URL, altText: 'photo', flagged: true},
+    } as SketchLabNode;
+    const safeImageNode = {
+      id: 'node-2',
+      type: 'image',
+      position: {x: 0, y: 0},
+      data: {src: '/v3/assets/channel-1/safe.png', altText: 'safe'},
+    } as SketchLabNode;
+    const textNode = {
+      id: 'node-3',
+      type: 'text',
+      position: {x: 0, y: 0},
+      data: {text: 'hello'},
+    } as SketchLabNode;
+
+    async function deleteNodes(nodes: SketchLabNode[]) {
+      const {result} = renderModeratedUpload();
+      await act(async () => {
+        await result.current.handleImageNodesDeleted(nodes);
+      });
+    }
+
+    it('hard-deletes a flagged image asset and unflags a blocked project', async () => {
+      mockState = {lab: {channel: {id: CHANNEL_ID}, isBlockedAbuse: true}};
+
+      await deleteNodes([flaggedImageNode, safeImageNode, textNode]);
+
+      expect(mockHttpDelete).toHaveBeenCalledTimes(1);
+      expect(mockHttpDelete).toHaveBeenCalledWith(UPLOAD_URL);
+      expect(mockUnflagProjectChannel).toHaveBeenCalledWith(
+        CHANNEL_ID,
+        mockDispatch
+      );
+    });
+
+    it('leaves unflagged image assets in storage', async () => {
+      await deleteNodes([safeImageNode, textNode]);
+
+      expect(mockHttpDelete).not.toHaveBeenCalled();
+      expect(mockUnflagProjectChannel).not.toHaveBeenCalled();
+    });
+
+    it('deletes the asset but does not unflag when the project is not blocked', async () => {
+      await deleteNodes([flaggedImageNode]);
+
+      expect(mockHttpDelete).toHaveBeenCalledWith(UPLOAD_URL);
+      expect(mockUnflagProjectChannel).not.toHaveBeenCalled();
+    });
+
+    it('does not unflag when the asset delete fails', async () => {
+      mockState = {lab: {channel: {id: CHANNEL_ID}, isBlockedAbuse: true}};
+      mockHttpDelete.mockRejectedValue(new Error('network down'));
+
+      await deleteNodes([flaggedImageNode]);
+
+      expect(mockUnflagProjectChannel).not.toHaveBeenCalled();
+    });
   });
 });

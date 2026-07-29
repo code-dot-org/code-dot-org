@@ -141,6 +141,9 @@ export interface ReactFlowCanvasProps {
   // Image upload handler. If not provided, uploads will be reported as errors.
   // Optional to support use of canvas without a channel id (e.g., AI Tutor whiteboard).
   uploadImage?: ModeratedImageUploader;
+  // Called with the nodes removed by a delete or cut, so the host can clean
+  // up flagged image assets (hard-delete + unflag the channel).
+  onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -161,6 +164,7 @@ const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
 export default function ReactFlowCanvas({
   updateSources,
   uploadImage = uploadImageUnavailable,
+  onNodesDeleted,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -458,6 +462,14 @@ export default function ReactFlowCanvas({
   const handleElementsDeleted = useCallback(() => {
     canvasContainerRef.current?.focus();
   }, []);
+
+  const handleNodesDeleted = useCallback(
+    (deletedNodes: SketchLabNode[]) => {
+      onNodesDeleted?.(deletedNodes);
+      handleElementsDeleted();
+    },
+    [onNodesDeleted, handleElementsDeleted]
+  );
 
   // Intercept React Flow's change callbacks to push undo snapshots before
   // delete. Drag is handled by handleNodeDragStart, and resize by
@@ -1020,7 +1032,7 @@ export default function ReactFlowCanvas({
                       onPaneClick={handlePaneClick}
                       onConnect={onConnect}
                       onBeforeDelete={handleBeforeDelete}
-                      onNodesDelete={handleElementsDeleted}
+                      onNodesDelete={handleNodesDeleted}
                       onEdgesDelete={handleElementsDeleted}
                       onNodeDragStart={handleNodeDragStart}
                       onNodeDrag={handleNodeDrag}

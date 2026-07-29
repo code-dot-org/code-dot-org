@@ -25,10 +25,11 @@ export function makeBackpackImageImportHandler({
       const file = await getFile();
       await uploadImage({
         file,
-        onUploaded: uploadUrl => {
+        onUploaded: (uploadUrl, flagged) => {
           addImageNode({
             src: uploadUrl,
             altText: fileName.replace(/\.[^.]+$/, ''),
+            ...(flagged && {flagged}),
           });
           notifySuccess('new', `${fileName} added to your sketch!`);
         },

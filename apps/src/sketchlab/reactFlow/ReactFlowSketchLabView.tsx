@@ -102,6 +102,7 @@ function ReactFlowSketchLabViewInner({
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
   const {
     uploadImage,
+    handleImageNodesDeleted,
     flaggedImageData,
     handleAcceptFlaggedImage,
     handleCancelFlaggedImage,
@@ -376,6 +377,7 @@ function ReactFlowSketchLabViewInner({
               key={mountKey}
               updateSources={updateSources}
               uploadImage={uploadImage}
+              onNodesDeleted={handleImageNodesDeleted}
               initialNodes={initialNodes}
               initialEdges={initialEdges}
               initialViewport={initialViewport}

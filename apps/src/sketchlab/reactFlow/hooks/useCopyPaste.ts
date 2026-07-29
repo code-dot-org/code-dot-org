@@ -123,7 +123,7 @@ export function useCopyPaste({
   // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
   // top-left at the cursor when it's over the canvas, else centered in the viewport.
   const pasteImage = useCallback(
-    (src: string) => {
+    (src: string, flagged: boolean) => {
       const mousePos = mousePositionRef.current;
       const position =
         mousePos ??
@@ -134,7 +134,7 @@ export function useCopyPaste({
       const newImageNode = {
         id: createUuid(),
         type: 'image',
-        data: {src, altText: ''},
+        data: {src, altText: '', ...(flagged && {flagged})},
         position,
         width: DEFAULT_NODE_WIDTH,
         height: DEFAULT_NODE_HEIGHT,

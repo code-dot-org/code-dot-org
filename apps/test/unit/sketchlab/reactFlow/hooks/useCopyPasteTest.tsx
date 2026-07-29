@@ -47,7 +47,7 @@ describe('useCopyPaste paste handling', () => {
   beforeEach(() => {
     // Successful moderated upload: hand the asset URL to the continuation.
     uploadImage = jest.fn(async ({onUploaded}) =>
-      onUploaded('/v3/assets/channel-1/pasted.png')
+      onUploaded('/v3/assets/channel-1/pasted.png', false)
     );
 
     container = document.createElement('div');
@@ -98,7 +98,23 @@ describe('useCopyPaste paste handling', () => {
     expect(addedNodes).toHaveLength(1);
     expect(addedNodes[0].type).toBe('image');
     expect(addedNodes[0].data.src).toBe('/v3/assets/channel-1/pasted.png');
+    expect(addedNodes[0].data.flagged).toBeUndefined();
     expect(onImageUploadError).not.toHaveBeenCalled();
+  });
+
+  it('marks the pasted node when the upload was accepted despite a flag', async () => {
+    uploadImage.mockImplementation(async ({onUploaded}) =>
+      onUploaded('/v3/assets/channel-1/pasted.png', true)
+    );
+    renderCopyPaste();
+    const file = new File(['x'], 'pasted.png', {type: 'image/png'});
+    const event = buildPasteEvent([{type: 'image/png', getAsFile: () => file}]);
+
+    container.dispatchEvent(event);
+    await flushPromises();
+
+    const addedNodes = setNodes.mock.calls[0][0]([]);
+    expect(addedNodes[0].data.flagged).toBe(true);
   });
 
   it('reports an error and adds no node when the upload fails', async () => {
