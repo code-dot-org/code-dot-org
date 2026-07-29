@@ -104,13 +104,7 @@ describe Rack::RequestLogger do
     let(:boom) {RuntimeError.new('kaboom')}
     let(:downstream) {->(_env) {raise boom}}
 
-    it 'logs an error with a backtrace and re-raises' do
-      begin
-        raise boom # give the exception a real backtrace
-      rescue RuntimeError
-        nil
-      end
-
+    it 'logs the error and re-raises, without a backtrace' do
       error = assert_raises(RuntimeError) {middleware.call(env_for)}
       _(error).must_equal boom
 
@@ -118,33 +112,17 @@ describe Rack::RequestLogger do
       _(severity).must_equal :error
       _(data['status']).must_equal 500
       _(data['error']).must_equal 'RuntimeError: kaboom'
-      _(data['backtrace']).must_be_kind_of String
-    end
-
-    it 'does not mutate the exception backtrace shared with error reporters' do
-      begin
-        raise boom
-      rescue RuntimeError
-        nil
-      end
-      original = boom.backtrace.dup
-
-      assert_raises(RuntimeError) {middleware.call(env_for)}
-      _(boom.backtrace).must_equal original
+      _(data).wont_include 'backtrace'
     end
   end
 
-  it 'uses a Sinatra-rescued exception for the backtrace on a 5xx response' do
-    error = begin
-      raise 'sinatra failed'
-    rescue RuntimeError => exception
-      exception
-    end
+  it 'records a Sinatra-rescued exception in the error field on a 5xx response' do
+    error = RuntimeError.new('sinatra failed')
     app = Rack::RequestLogger.new(->(env) {env['sinatra.error'] = error; [500, {}, ['err']]})
     app.call(env_for)
     severity, data = logged
     _(severity).must_equal :error
     _(data['error']).must_equal 'RuntimeError: sinatra failed'
-    _(data['backtrace']).must_be_kind_of String
+    _(data).wont_include 'backtrace'
   end
 end

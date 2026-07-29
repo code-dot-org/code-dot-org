@@ -55,14 +55,10 @@ module Rack
       }.compact
 
       # Prefer the raised exception; otherwise fall back to one a Sinatra app
-      # rescued internally and stashed in env['sinatra.error'].
+      # rescued internally and stashed in env['sinatra.error']. Record only the
+      # class and message; Sentry and Honeybadger already capture backtraces.
       exception ||= env['sinatra.error']
-      if severity == :error && exception
-        data[:error] = "#{exception.class}: #{exception.message}"
-        # Copy before filtering: CDO.filter_backtrace mutates in place, and this
-        # exception object is also handed to Sentry/HoneyBadger.
-        data[:backtrace] = CDO.filter_backtrace(exception.backtrace.map(&:dup)) if exception.backtrace
-      end
+      data[:error] = "#{exception.class}: #{exception.message}" if severity == :error && exception
 
       CDO.log.public_send(severity, "@cee: #{JSON.dump(data)}")
     end
