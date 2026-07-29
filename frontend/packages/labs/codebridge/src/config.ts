@@ -3,6 +3,7 @@ import type {ComponentType} from 'react';
 
 import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
 
+import type {FileIcon} from './utils/fileIcons';
 import {getFileExtension} from './utils/multiFileSource';
 
 /**
@@ -56,6 +57,14 @@ export interface CodebridgeConfig {
    * receives the active file via {@link CustomEditorProps}.
    */
   editorComponents?: {[languageId: string]: ComponentType<CustomEditorProps>};
+  /**
+   * Extension -> FontAwesome icon for the file browser, letting a lab give its
+   * own file types (e.g. `.actor`, `.scene`) meaningful icons. Merged over the
+   * built-in types (JS/JSON/PNG/…); an extension with no entry falls back to the
+   * built-in map, then a generic file icon. Keyed by extension, like
+   * `languageMapping`.
+   */
+  fileIcons?: {[extension: string]: FileIcon};
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
   /**

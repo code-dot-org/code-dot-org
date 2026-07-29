@@ -4,7 +4,7 @@
 // start-mode / ProjectFileType branch (validation/support/locked-starter icons)
 // is levelbuilder-only and deferred with the rest of levelbuilder support.
 
-interface FileIcon {
+export interface FileIcon {
   iconName: string;
   iconStyle: 'solid' | 'regular';
   /** FontAwesome brand icon (rendered with `iconFamily="brands"`). */
@@ -32,8 +32,17 @@ const DEFAULT_ICON: FileIcon = {
   isBrand: false,
 };
 
-/** The icon for a file, keyed on its extension; a generic file icon otherwise. */
-export function getFileIcon(fileName: string): FileIcon {
+/**
+ * The icon for a file, keyed on its extension; a generic file icon otherwise.
+ * `overrides` (a lab's `config.fileIcons`) take precedence over the built-in
+ * types, so a lab can give its own extensions (e.g. `.actor`, `.scene`) icons.
+ */
+export function getFileIcon(
+  fileName: string,
+  overrides?: {[extension: string]: FileIcon},
+): FileIcon {
   const extension = fileName.split('.').pop()?.toLowerCase() ?? '';
-  return FILE_TYPE_ICON_MAP[extension] ?? DEFAULT_ICON;
+  return (
+    overrides?.[extension] ?? FILE_TYPE_ICON_MAP[extension] ?? DEFAULT_ICON
+  );
 }
