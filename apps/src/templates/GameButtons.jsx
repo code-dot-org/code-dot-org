@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {useSetupBlockColor} from '@cdo/apps/blockly/utils/useSetupBlockColor';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import {getRunButtonSx} from './runButtonSx';
 import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
@@ -20,46 +22,22 @@ export const FinishButton = () => (
   </MuiButton>
 );
 
-export const RunButton = props => (
-  <MuiButton
-    id={props.id || 'runButton'}
-    variant="contained"
-    size="medium"
-    color="primary"
-    className={props.hidden ? 'hide' : ''}
-    sx={{
-      backgroundColor: 'var(--background-accent-orange-primary)',
-      color: 'var(--text-neutral-white-fixed)',
-      '&:hover, &.force-hover, &[data-force-hover="true"]': {
-        backgroundColor: 'var(--background-accent-orange-strong)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:focus, a&:focus': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&:active, a&:active': {
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.Mui-disabled': {
-        backgroundColor: 'var(--background-neutral-octonary)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading': {
-        backgroundColor: 'var(--background-neutral-white-fixed)',
-        color: 'var(--text-neutral-white-fixed)',
-      },
-      '&.MuiButton-loading:not(:has(.MuiButton-icon))': {
-        color: 'transparent',
-      },
-      '&.MuiButton-loading i': {
-        color: 'var(--text-neutral-primary)',
-      },
-    }}
-    startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
-  >
-    {props.runButtonText || msg.runProgram()}
-  </MuiButton>
-);
+export const RunButton = props => {
+  const setupBlockColor = useSetupBlockColor();
+  return (
+    <MuiButton
+      id={props.id || 'runButton'}
+      variant="contained"
+      size="medium"
+      color="primary"
+      className={props.hidden ? 'hide' : ''}
+      sx={getRunButtonSx(setupBlockColor)}
+      startIcon={props.icon ?? <FontAwesomeV6Icon iconName="play" />}
+    >
+      {props.runButtonText || msg.runProgram()}
+    </MuiButton>
+  );
+};
 RunButton.propTypes = {
   id: PropTypes.string,
   hidden: PropTypes.bool,
