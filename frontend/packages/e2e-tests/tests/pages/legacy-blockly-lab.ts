@@ -57,6 +57,13 @@ export class LegacyBlocklyLab extends LessonLevelPage {
   /** Continue button on the shared feedback/congrats dialog, rendered for all legacy Blockly labs. */
   readonly continueButton: Locator;
 
+  /**
+   * Read-only Blockly workspaces embedded inline in markdown instructions
+   * (see convertXmlToBlockly() in apps/src/templates/instructions/utils.js).
+   * Empty if this level's instructions have no embedded blocks.
+   */
+  readonly embeddedInstructionBlocks: Locator;
+
   constructor(page: Page) {
     super(page);
     this.instructionsTab = page.locator('.uitest-instructionsTab');
@@ -76,6 +83,9 @@ export class LegacyBlocklyLab extends LessonLevelPage {
     this.congratsMessage = page.locator('.congrats');
     this.visualization = page.locator('#visualization');
     this.continueButton = page.locator('#continue-button');
+    this.embeddedInstructionBlocks = page.locator(
+      '.readonly-block-space-container',
+    );
   }
 
   /**
@@ -155,6 +165,30 @@ export class LegacyBlocklyLab extends LessonLevelPage {
       'opacity',
       '1',
     );
+  }
+
+  /**
+   * Wait for embedded Blockly workspaces in markdown instructions to render
+   * and settle. Creation is gated on a GET /user_preference/theme
+   * round-trip that MarkdownInstructions never awaits, so a container can
+   * still be 0x0 well after waitForReady()/waitForVisualStability resolve;
+   * a FieldImage inside (e.g. a K1 harvester block) can also resize again
+   * once its icon loads. No-op if this level's instructions have no
+   * embedded blocks.
+   */
+  async waitForEmbeddedInstructionsStable(): Promise<void> {
+    const count = await this.embeddedInstructionBlocks.count();
+    for (let i = 0; i < count; i++) {
+      const block = this.embeddedInstructionBlocks.nth(i);
+      await expect(async () => {
+        const box = await block.boundingBox();
+        expect(
+          box?.width,
+          'embedded Blockly workspace has not rendered yet',
+        ).toBeGreaterThan(0);
+      }).toPass({intervals: [120], timeout: 15_000});
+      await waitUntilStable(block);
+    }
   }
 
   /** Clear the workspace, then arrange and load the given blocks XML via the lab's test-only interface. */
