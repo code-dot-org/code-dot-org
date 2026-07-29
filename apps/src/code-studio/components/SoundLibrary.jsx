@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,7 +7,6 @@ import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
 import Sounds from '../../Sounds';
-import * as color from '../../util/color';
 
 import SoundCategory from './SoundCategory';
 import SoundList from './SoundList';
@@ -144,14 +144,14 @@ export default class SoundLibrary extends React.Component {
               selectedSound={this.state.selectedSound}
               soundsRegistry={this.sounds}
             />
-            <button
-              type="button"
-              className={'primary'}
+            <MuiButton
+              variant="contained"
+              color="primary"
               onClick={this.onClickChoose}
-              style={styles.button}
+              sx={{float: 'right', margin: '20px 0px'}}
             >
               Choose
-            </button>
+            </MuiButton>
           </div>
         )}
       </div>
@@ -166,10 +166,6 @@ const styles = {
   root: {
     display: 'flow-root',
   },
-  button: {
-    float: 'right',
-    margin: '20px 0px',
-  },
   categoryArea: {
     float: 'left',
     marginBottom: 20,
@@ -178,7 +174,7 @@ const styles = {
   },
   allCategoriesText: {
     fontSize: 16,
-    color: color.purple,
+    color: 'var(--text-brand-purple-primary)',
     ...fontConstants['main-font-semi-bold'],
     paddingRight: 5,
     cursor: 'pointer',
@@ -189,6 +185,7 @@ const styles = {
   },
   categoryText: {
     fontSize: 14,
+    color: 'var(--text-neutral-primary)',
   },
   searchBarContainer: {
     width: '300px',
