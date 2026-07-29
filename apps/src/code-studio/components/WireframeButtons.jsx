@@ -122,7 +122,6 @@ SendToPhoneButton.propTypes = {
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
   <div className="WireframeButtons_active">
     <SendToPhone
-      styles={styles.sendToPhone}
       channelId={channelId}
       appType={appType}
       isLegacyShare={isLegacyShare}
@@ -140,17 +139,5 @@ const styles = {
   main: {
     fontSize: '12pt',
     ...fontConstants['main-font-semi-bold'],
-  },
-  sendToPhone: {
-    label: {
-      fontSize: '12pt',
-      ...fontConstants['main-font-semi-bold'],
-      lineHeight: 'normal',
-      cursor: 'default',
-    },
-    div: {
-      margin: 0,
-      lineHeight: 'normal',
-    },
   },
 };
