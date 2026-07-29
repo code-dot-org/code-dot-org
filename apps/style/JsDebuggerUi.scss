@@ -72,7 +72,7 @@ $debug-watch-max-column-width: 200px;
 .debug-console,
 .debug-watch {
   display: block;
-  background-color: $white;
+  background-color: var(--background-neutral-primary);
   border: 1px solid #ddd;
   position: absolute;
   top: $resize-bar-width + $workspace-headers-height;
@@ -132,9 +132,8 @@ $debug-watch-max-column-width: 200px;
   font-size: 12px;
 }
 
-#slider-cell {
-  float: left;
-  cursor: default;
+.debug-console input {
+  background-color: inherit;
 }
 
 /* Slider. */

@@ -24,6 +24,9 @@ const MARGIN = 12;
 // separated.
 const PREVIEW_MARGIN = 24;
 const PREVIEW_SCALE = 0.64;
+// The preview's full horizontal footprint, for siblings that must keep their
+// content clear of it (it floats over the active tab's top-right corner).
+export const PREVIEW_CLEARANCE = CANVAS * PREVIEW_SCALE + 2 * PREVIEW_MARGIN;
 
 interface PlayspaceProps {
   mode: PlayspaceMode;
@@ -42,6 +45,8 @@ interface PlayspaceProps {
   getDefaultSpriteSize?: () => number;
   // Clicking the live preview (Code tab) opens Play on the previewed scene.
   onPreviewClick?: () => void;
+  // The play-mode game region, for handing keyboard focus to the game.
+  boxRef?: React.RefObject<HTMLDivElement>;
 }
 
 /**
@@ -56,6 +61,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   fadeTrigger = 0,
   covered = false,
   loading = false,
+  boxRef,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -234,7 +240,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       style={{visibility: mode === 'hidden' ? 'hidden' : 'visible'}}
     >
       <div
+        ref={boxRef}
         className={moduleStyles.playspaceBox}
+        // A keyboard stop for players: game keys arrive via window listeners
+        // regardless of focus, but focus needs somewhere harmless to rest
+        // after the tab-bar buttons (a focused button turns Space into its
+        // activator). role="application" also makes screen readers pass
+        // keystrokes through to the game.
+        role={mode === 'play' ? 'application' : undefined}
+        aria-label={mode === 'play' ? 'Game playspace' : undefined}
+        tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);

@@ -62,7 +62,10 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+// and shows the review path for AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
+// Show the challenge path for AI Tutor+
+experiments.LESSON_TUTOR_CHALLENGE = 'lesson-tutor-challenge';
 // Enable Onboarding experiments
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer

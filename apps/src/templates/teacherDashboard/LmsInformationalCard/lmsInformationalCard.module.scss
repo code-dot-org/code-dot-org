@@ -1,8 +1,9 @@
 @import 'color';
 
 .card {
+  box-sizing: content-box;
   display: flex;
-  width: 290px;
+  width: auto;
   height: 56px;
   overflow: hidden;
   padding: 10px;
@@ -21,6 +22,7 @@
   margin-left: auto;
   margin-top: auto;
   margin-bottom: auto;
+  background: transparent;
 }
 
 .lmsInstructionsLink {
