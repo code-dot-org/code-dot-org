@@ -138,11 +138,10 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  // Image upload handler. If not provided, uploads will be reported as errors.
-  // Optional to support use of canvas without a channel id (e.g., AI Tutor whiteboard).
+  // When absent, image uploads report an error.
   uploadImage?: ModeratedImageUploader;
-  // Called with the nodes removed by a delete or cut, so the host can clean
-  // up flagged image assets (hard-delete + unflag the channel).
+  // Receives the nodes removed by a delete or cut, so the host can clean up
+  // flagged image assets.
   onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
@@ -483,11 +482,10 @@ export default function ReactFlowCanvas({
           .map(change => change.id)
       );
       if (removedIds.size > 0) {
-        // Deleting a flagged image hard-deletes its asset, so the deletion
-        // must not be undoable. This decision has to live here, not in
-        // onNodesDelete: React Flow fires onNodesDelete before it emits the
-        // remove changes, so a clear there would be overwritten by the
-        // snapshot pushed for the remove.
+        // Deleting a flagged image hard-deletes its asset, so wipe history
+        // instead of snapshotting. Must happen here: React Flow fires
+        // onNodesDelete before these remove changes, so a clear there would
+        // be overwritten by the snapshot.
         const deletesFlaggedImage = nodes.some(
           node =>
             removedIds.has(node.id) &&
@@ -843,9 +841,8 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
-      // A flagged image blocks the project until the node is deleted, so
-      // undoing its addition would strand the block with nothing visible to
-      // delete. Wipe the undo/redo stacks instead of making it undoable.
+      // Undoing a flagged image's addition would strand the abuse block with
+      // nothing visible to delete, so wipe history instead.
       if (request.type === 'image' && request.data.flagged) {
         clearHistory();
       } else {

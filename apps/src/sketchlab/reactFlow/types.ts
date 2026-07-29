@@ -49,9 +49,8 @@ export type TextNodeData = NodeDataBase & {
 export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
-  // The user uploaded this image despite a flagged moderation verdict, which
-  // put the project's abuse score at the blocking threshold. Deleting the
-  // node hard-deletes the asset and lifts the block.
+  // Uploaded despite a flagged moderation verdict; deleting the node
+  // hard-deletes the asset and lifts the abuse block.
   flagged?: boolean;
 };
 

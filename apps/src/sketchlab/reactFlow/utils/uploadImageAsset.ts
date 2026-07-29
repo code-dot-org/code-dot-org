@@ -25,16 +25,12 @@ export function isStarterAssetOrExemplarUpload(): boolean {
 interface UploadImageAssetOptions {
   levelName: string;
   channelId: string;
-  // Use this URL instead of generating a fresh one. Lets callers compute the
-  // destination before moderation and upload to that same URL afterward.
+  // Lets callers compute the destination before moderation and upload to that
+  // same URL afterward.
   precomputedUploadUrl?: string;
 }
 
-/**
- * Computes the URL an image file would upload to, without uploading. Starter
- * assets and exemplars target the level's starter-asset path; everything else
- * targets the project's channel.
- */
+/** Computes the URL an image file would upload to, without uploading. */
 export function generateImageAssetUploadUrl(
   file: File,
   {levelName, channelId}: {levelName: string; channelId: string}

@@ -10,9 +10,8 @@ interface BackpackImageImportOptions {
 
 /**
  * Builds the Backpack panel's addFileHandler for Sketch Lab. Re-uploads the
- * chosen Backpack image as a project asset (moderated, like any other upload),
- * then adds it to the canvas as an image node. When the user cancels a flagged
- * upload, neither callback fires — they already answered the modal.
+ * chosen Backpack image as a moderated project asset, then adds it to the
+ * canvas as an image node.
  */
 export function makeBackpackImageImportHandler({
   uploadImage,
