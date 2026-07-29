@@ -1,16 +1,13 @@
 .dialog {
-  padding: 0 15px;
+  padding: 20px 24px;
+  max-height: 85vh;
+  overflow-y: auto;
   cursor: default;
   color-scheme: light;
 }
 
 .hidden {
   visibility: hidden;
-}
-
-.marginSides {
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .header {
