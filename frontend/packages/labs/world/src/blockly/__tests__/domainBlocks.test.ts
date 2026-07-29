@@ -68,8 +68,47 @@ describe('domain block generators', () => {
   });
 
   it('world_set_position sets a Vector from the numeric fields', () => {
+    // No ACTOR value plugged in → defaults to the current actor (the shadow
+    // `myself` generates `actor`).
     expect(emit('world_set_position', {X: 200, Y: 20})).toBe(
       'actor.set(WorldLab.PositionProperty, new WorldLab.Vector(200, 20));\n',
+    );
+  });
+
+  it('world_set_position targets the ACTOR value when one is plugged in', () => {
+    expect(
+      emit('world_set_position', {X: 0, Y: 0}, {}, {ACTOR: 'touched'}),
+    ).toBe(
+      'touched.set(WorldLab.PositionProperty, new WorldLab.Vector(0, 0));\n',
+    );
+  });
+
+  it('world_myself / world_touched_actor yield actor expressions', () => {
+    const myself = generatorFor('world_myself')(
+      {} as never,
+      {} as never,
+      {} as never,
+    );
+    expect(Array.isArray(myself) && myself[0]).toBe('actor');
+    const touched = generatorFor('world_touched_actor')(
+      {} as never,
+      {} as never,
+      {} as never,
+    );
+    expect(Array.isArray(touched) && touched[0]).toBe('touched');
+  });
+
+  it('world_for_each_touching loops the touching query, by template id', () => {
+    // The dropdown value is the module path; the runtime type is its basename.
+    expect(
+      emit(
+        'world_for_each_touching',
+        {ACTOR: 'actors/coin'},
+        {DO: 'touched.set(X, Y);\n'},
+      ),
+    ).toBe(
+      'for (const touched of world.query(WorldLab.TouchingQuery, actor, "coin")) {\n' +
+        'touched.set(X, Y);\n}\n',
     );
   });
 
@@ -95,7 +134,7 @@ describe('domain block generators', () => {
         {HANDLER: 'console.log("hi");\n'},
       ),
     ).toBe(
-      'actor.on(WorldLab.StartsFallingEvent, (_world, _actor, eventValue) => {\n' +
+      'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n' +
         'console.log("hi");\n});\n',
     );
   });
@@ -108,7 +147,7 @@ describe('domain block generators', () => {
         {HANDLER: 'console.log(eventValue);\n'},
       ),
     ).toBe(
-      'actor.on(WorldLab.FrameChangedEvent, (_world, _actor, eventValue) => {\n' +
+      'actor.on(WorldLab.FrameChangedEvent, (world, actor, eventValue) => {\n' +
         'console.log(eventValue);\n});\n',
     );
   });
