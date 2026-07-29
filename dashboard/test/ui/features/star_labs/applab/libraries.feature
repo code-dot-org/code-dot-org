@@ -30,7 +30,7 @@ Feature: Libraries
     And I wait for the lab page to fully load
     Then I open the Manage Libraries dialog
     And I wait until element "#ui-test-import-library-header:contains('Import library from ID')" is visible
-    And I type the saved channel id into element "#ui-test-import-library > input"
+    And I type the saved channel id into element "#ui-test-import-library input"
     And I click selector "#ui-test-import-library > button" to load a new page
 
     # Confirm Student1's library is in Student2's project
