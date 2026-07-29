@@ -1,4 +1,10 @@
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import TextField from '@code-dot-org/component-library/textField';
+import {
+  Button as MuiButton,
+  MenuItem as MuiMenuItem,
+  Select as MuiSelect,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -205,7 +211,7 @@ export class LibraryManagerDialog extends React.Component {
     if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
       return (
         <MuiTypography
-          variant="body2"
+          variant="body3"
           component="div"
           className={styles.message}
         >
@@ -244,7 +250,7 @@ export class LibraryManagerDialog extends React.Component {
     if (errorMessages.loadClassLibraries) {
       return (
         <MuiTypography
-          variant="body2"
+          variant="body3"
           component="div"
           className={styles.error}
           sx={{color: 'var(--text-error-primary)'}}
@@ -256,7 +262,7 @@ export class LibraryManagerDialog extends React.Component {
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
       return (
         <MuiTypography
-          variant="body2"
+          variant="body3"
           component="div"
           className={styles.message}
         >
@@ -377,6 +383,7 @@ export class LibraryManagerDialog extends React.Component {
       isLoading,
       errorMessages,
       classLibraries,
+      sectionFilter,
     } = this.state;
 
     if (!isOpen) {
@@ -415,18 +422,27 @@ export class LibraryManagerDialog extends React.Component {
               >
                 {i18n.showingLibrariesFromSection()}
               </MuiTypography>
-              <select
+              <MuiSelect
+                value={sectionFilter}
+                displayEmpty
+                size="small"
+                sx={{
+                  '& .MuiSelect-select': {
+                    paddingTop: '4px',
+                    paddingBottom: '4px',
+                  },
+                }}
                 onChange={event =>
                   this.setState({sectionFilter: event.target.value})
                 }
               >
-                <option value="">{i18n.all()}</option>
+                <MuiMenuItem value="">{i18n.all()}</MuiMenuItem>
                 {sections.map(section => (
-                  <option key={section} value={section}>
+                  <MuiMenuItem key={section} value={section}>
                     {section}
-                  </option>
+                  </MuiMenuItem>
                 ))}
-              </select>
+              </MuiSelect>
             </div>
             <div className={styles.libraryList}>
               {this.displayClassLibraries()}
@@ -439,9 +455,10 @@ export class LibraryManagerDialog extends React.Component {
               {i18n.libraryIdImport()}
             </MuiTypography>
             <div className={styles.inputParent} id="ui-test-import-library">
-              <input
+              <TextField
                 className={styles.linkBox}
-                type="text"
+                name="libraryId"
+                size="s"
                 value={importLibraryId}
                 onChange={this.setLibraryToImport}
               />
@@ -465,7 +482,7 @@ export class LibraryManagerDialog extends React.Component {
               </MuiButton>
             </div>
             <MuiTypography
-              variant="body2"
+              variant="body3"
               component="div"
               className={styles.error}
               sx={{color: 'var(--text-error-primary)'}}

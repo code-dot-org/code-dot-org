@@ -1,6 +1,7 @@
 .dialog {
   padding: 0 15px;
   cursor: default;
+  color-scheme: light;
 }
 
 .hidden {
@@ -19,7 +20,7 @@
 
 .subHeader {
   text-align: left;
-  margin: 7px;
+  margin: 7px 0;
 }
 
 .libraryList {
@@ -30,9 +31,7 @@
 
 .message {
   text-align: left;
-  margin: 7px;
-  overflow: hidden;
-  line-height: 15px;
+  margin: 7px 0;
   white-space: pre-wrap;
 }
 
@@ -43,23 +42,24 @@
 .inputParent {
   display: flex;
   align-items: baseline;
+  justify-content: flex-start;
   gap: 7px;
 }
 
 .linkBox {
-  cursor: auto;
-  height: 22px;
-  margin-bottom: 0;
-  flex: 1;
-  max-width: 400px;
+  width: 400px;
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .error {
   text-align: left;
-  margin: 7px;
+  margin: 7px 0;
   min-height: 18px;
   white-space: pre-wrap;
-  line-height: 1;
 }
 
 .updateButtons {
