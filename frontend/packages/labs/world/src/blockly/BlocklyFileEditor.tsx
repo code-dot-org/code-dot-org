@@ -9,6 +9,7 @@ import {
   TriangleInputPlugin,
   type BlocklySerialization,
 } from '@code-dot-org/blockly';
+import DisableOrphansPlugin from '@code-dot-org/blockly/plugins/disableOrphans';
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
@@ -28,6 +29,7 @@ import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 const plugins = [
   ToolboxTrashcanPlugin,
   ScrollOptionsPlugin,
+  DisableOrphansPlugin,
   TriangleInputPlugin('Actor'),
 ];
 

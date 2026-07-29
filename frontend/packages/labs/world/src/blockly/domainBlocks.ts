@@ -41,6 +41,7 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
+import {worldContextExtension} from './extensions/worldContext';
 import {label} from './label';
 import {
   actorOptions,
@@ -575,9 +576,10 @@ const defineSetPropertyBlock = (property: Property) => {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
+    // A world property sets on `world`; warn if placed where `world` is unbound.
     extensions: actorScoped
       ? [actorInputExtension, valueShadowExtension]
-      : [valueShadowExtension],
+      : [valueShadowExtension, worldContextExtension],
     style: 'default',
     tooltip: actorScoped
       ? `Set an actor's ${name}.`
@@ -642,7 +644,8 @@ const defineGetPropertyBlock = (property: Property) => {
     args0,
     inputsInline: true,
     output: getPropertyOutput(property),
-    extensions: actorScoped ? [actorInputExtension] : [],
+    // A world property reads from `world`; warn if placed where it is unbound.
+    extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
     // Style by the value it reports: a boolean reads as logic, a number/vector
     // component as math.
     style: property.type === 'boolean' ? 'logic_blocks' : 'math_blocks',
@@ -763,8 +766,9 @@ const defineActionBlock = (action: Action, actorScoped: boolean) => {
     inputsInline: true,
     previousStatement: true,
     nextStatement: true,
+    // A world action runs on `world`; warn if placed where `world` is unbound.
     extensions: [
-      ...(actorScoped ? [actorInputExtension] : []),
+      ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
       ...(value.shadows.length ? [valueShadowExtension] : []),
     ],
     style: 'default',
@@ -898,8 +902,8 @@ const worldForEachTouching = defineBlock({
   previousStatement: true,
   nextStatement: true,
   // The dropdown lists the project's actor templates (populated live), the same
-  // as `world_add_actor`.
-  extensions: [actorOptionsExtension],
+  // as `world_add_actor`. The loop queries `world`, so warn where it is unbound.
+  extensions: [actorOptionsExtension, worldContextExtension],
   // A loop over the touching actors → the loop style.
   style: 'loop_blocks',
   tooltip:
