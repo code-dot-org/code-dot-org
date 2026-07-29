@@ -1,0 +1,32 @@
+name 'pl-aif1-what-is-a-webapp'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h2 >What Is a Web App?</h2>
+
+<p >A web app is a program that runs inside a browser like Chrome, Safari, or Edge, rather than being installed on a device. That is exactly what your students will be building in Web Lab: pages that live in the browser and respond to what a user does, instead of static pages that just display information.</p>
+
+<p >Website and web app get used interchangeably a lot, and it is worth drawing the line for your students early. A website, like an online brochure, mostly displays information. A web app lets someone do something: submit a form, play a game, generate text with AI, or draw on a canvas. When a student's project responds to a click instead of just displaying text, that is the shift you are looking for.</p>
+
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20px auto; padding: 0 5px;">
+  <img src="https://images.code.org/f717660937a4dfe9e5ee5c26c2559e84-image-1760984133668.png" alt="Gmail logo" style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/1c777228b8b20369dbbd4bdc9c541b32-image-1760984038365.png" alt="Netflix logo" style="border-radius: 10px; width: 32%;">
+  <img src="https://images.code.org/ddaccf7331f24af662dd70608194f8ae-image-1760984217033.png" alt="Amazon logo" style="border-radius: 10px; width: 32%;">
+</div>
+<p style="font-size:14px; line-height:1.5; color:#555555; text-align:center; margin-top:-10px;">Gmail, Netflix, and Amazon are web apps your students already use daily, even if they've never thought about them that way.</p>
+
+<hr style="border:none; border-top:1px solid #E4E2F8; margin:24px 0;">
+
+<h2 >Key Components You'll See in Student Code</h2>
+
+<p>Every web app your students build this unit rests on the same three technologies, plus one new collaborator. HTML gives a page its structure, the way framing gives a house its shape. CSS handles the style: colors, fonts, and layout, the finishes that make the house look like something. JavaScript adds interactivity and logic, the doors that open and the lights that turn on. AI now sits alongside all three as a creative assistant, suggesting, refining, and debugging code while your students stay in the driver's seat on every decision.</p>
+
+<img src="https://images.code.org/5a14dc8bdef7c9c9b5c4d8736c451265-image-1759348130243.png" alt="HTML is the structure of a webpage, like the frame of a house. CSS is the style and design, how the house looks. JavaScript is the interactivity and logic, like doors opening or lights turning on. AI is a creative assistant that helps suggest, refine, and debug code while students stay in control of decisions." width="100%" style="display:block; max-width:600px; margin:16px auto; border-radius:10px;">
+
+
+
+<h2>Why This Matters in Your Classroom</h2>
+
+<p>Once students can name these components, they start noticing them everywhere, in the apps on their own phones, and eventually in the patterns AI keeps reusing when it generates a page. That pattern recognition, spotting the nav bar, the hero section, the gallery of cards, the footer that shows up again and again, is exactly what the next level asks you to practice yourself before you're asked to teach it.</p>
+MARKDOWN
