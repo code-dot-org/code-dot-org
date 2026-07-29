@@ -60,7 +60,7 @@ export default class Pairing extends React.Component {
     this.setState({
       pairings: [],
       sections: this.state.sections,
-      selectedSectionId: +event.target.value,
+      selectedSectionId: event.target.value ? +event.target.value : null,
       selectedStudentIds: [],
     });
   };
