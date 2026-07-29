@@ -9,6 +9,8 @@ export interface LabLevelUrlParams {
   showCallouts?: boolean;
   /** Suppress first-run product-tour overlays. Emitted as ?hideProductTours=true. */
   hideProductTours?: boolean;
+  /** Force the level's video into its non-YouTube-API HTML5 fallback player. Emitted as ?force_youtube_fallback=1. */
+  forceYoutubeFallback?: boolean;
   /** Force a UI locale. Emitted as a /lang/<code> path segment, which Rails rewrites to ?lang=<code>. */
   lang?: string;
 }
@@ -27,6 +29,7 @@ export function labLevelUrl({
   noautoplay = true,
   showCallouts = false,
   hideProductTours = false,
+  forceYoutubeFallback = false,
   lang,
 }: LabLevelUrlParams): string {
   const query = new URLSearchParams();
@@ -38,6 +41,9 @@ export function labLevelUrl({
   }
   if (hideProductTours) {
     query.set('hideProductTours', 'true');
+  }
+  if (forceYoutubeFallback) {
+    query.set('force_youtube_fallback', '1');
   }
   const queryString = query.toString();
   const langSegment = lang ? `/lang/${lang}` : '';
