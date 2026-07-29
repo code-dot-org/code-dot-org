@@ -53,14 +53,15 @@ describe('domain block generators', () => {
     // input — so it is fed via `next`.
     const code = emit(
       'world_actor',
-      {ID: 'player', NAME: 'Player'},
+      {NAME: 'Player'},
       {},
       {},
       'actor.useTraits([X]);\n',
     );
     expect(code).toContain(`import * as WorldLab from 'world-lab';`);
+    // The id is derived from the name (spaces → underscores).
     expect(code).toContain(
-      `const actor = new WorldLab.ActorBuilder({id: "player", name: "Player"});`,
+      `const actor = new WorldLab.ActorBuilder({id: "Player", name: "Player"});`,
     );
     expect(code).toContain('actor.useTraits([X]);');
     // The export is the assembly's job, not this block's.
@@ -277,12 +278,13 @@ describe('scene block generators', () => {
     const defs: Record<string, string> = {};
     const code = run(
       'world_scene',
-      {ID: 'game', NAME: 'Game', WORLD: 'worlds/platform'},
+      {NAME: 'Game', WORLD: 'worlds/platform'},
       defs,
       '{ /* add */ }\n',
     );
+    // The id is derived from the name.
     expect(code).toContain(
-      'const scene = new WorldLab.SceneBuilder({id: "game", name: "Game"});',
+      'const scene = new WorldLab.SceneBuilder({id: "Game", name: "Game"});',
     );
     expect(code).toContain('scene.useWorld(Platform);');
     expect(code).toContain('{ /* add */ }');
@@ -335,12 +337,13 @@ describe('world block generators', () => {
     const defs: Record<string, string> = {};
     const code = run(
       'world_world',
-      {ID: 'platform', NAME: 'Platform World'},
+      {NAME: 'Platform World'},
       defs,
       'world.useRules([X]);\n',
     );
+    // The id is derived from the name: spaces become underscores.
     expect(code).toBe(
-      'const world = new WorldLab.WorldBuilder({id: "platform", name: "Platform World"});\n' +
+      'const world = new WorldLab.WorldBuilder({id: "Platform_World", name: "Platform World"});\n' +
         'world.useRules([X]);\n',
     );
     expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
