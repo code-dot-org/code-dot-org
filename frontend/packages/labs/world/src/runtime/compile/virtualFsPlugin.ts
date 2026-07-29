@@ -17,6 +17,7 @@ const EXT_ORDER = [
   '.js',
   '.json',
   '.map',
+  '.anim',
   '.rule',
   '.actor',
   '.scene',
@@ -66,9 +67,14 @@ function loaderFor(path: string): Loader {
   if (path.endsWith('.ts')) {
     return 'ts';
   }
-  if (path.endsWith('.json') || path.endsWith('.map')) {
-    // A `.map` is a raw scene-instantiation document (JSON), imported by the
-    // scene's `load map` block and handed to `scene.populate`.
+  if (
+    path.endsWith('.json') ||
+    path.endsWith('.map') ||
+    path.endsWith('.anim')
+  ) {
+    // `.map` (a scene-instantiation document) and `.anim` (an animation file)
+    // are both raw JSON on disk, imported like `.json` — a `.map` by the scene's
+    // `load map` block, an `.anim` by the world's `use animations` block.
     return 'json';
   }
   if (path.endsWith('.png')) {

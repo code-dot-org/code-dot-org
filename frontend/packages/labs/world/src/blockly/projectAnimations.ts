@@ -1,12 +1,13 @@
-// Scans the flattened project for animation files — plain `.json` discriminated
-// by `type: "animation"` (INTERFACE.md §Animations) — and returns the animation
-// ids defined across them. Feeds the `world_play_animation` dropdown so a learner
-// can pick an animation they authored, not just the stock ones.
+// Scans the flattened project for animation files — `.anim` (JSON on disk)
+// discriminated by `type: "animation"` (INTERFACE.md §Animations) — and returns
+// the animation ids defined across them. Feeds the `world_play_animation`
+// dropdown so a learner can pick an animation they authored, not just the stock
+// ones.
 
 export function projectAnimationIds(files: Record<string, string>): string[] {
   const ids: string[] = [];
   for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.json')) {
+    if (!path.endsWith('.anim')) {
       continue;
     }
     try {

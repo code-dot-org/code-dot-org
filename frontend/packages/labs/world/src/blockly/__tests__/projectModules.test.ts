@@ -23,7 +23,7 @@ const FILES = {
   }),
   'actors/ground.js': `export default new ActorBuilder({id: 'ground', name: 'Ground'});`,
   'actors/blob.js': `export default 42;`, // no builder → basename fallback
-  'animations/game.json': '{"type":"animation"}',
+  'animations/game.anim': '{"type":"animation"}',
 };
 
 describe('projectModules', () => {
