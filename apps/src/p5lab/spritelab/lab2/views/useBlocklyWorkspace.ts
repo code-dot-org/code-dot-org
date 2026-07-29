@@ -5,7 +5,11 @@ import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 import cdoTheme from '@cdo/apps/blockly/themes/cdoTheme';
 import {BlockDefinition, WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils/workspace/loadBlocks';
-import {setThemeAndRenderBlocks} from '@cdo/apps/blockly/utils/workspace/themes';
+import {
+  getUserTheme,
+  setThemeAndRenderBlocks,
+} from '@cdo/apps/blockly/utils/workspace/themes';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 
 import {
   ensureInjectedCategories,
@@ -119,6 +123,7 @@ export default function useBlocklyWorkspace({
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       customSimpleDialog,
+      editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
 
     // CDO Blockly shrinks the container by the workspace-header height to
@@ -171,15 +176,18 @@ export default function useBlocklyWorkspace({
     };
   }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
 
-  // Update workspace theme on theme change.
+  // Update workspace theme on display-theme change. Resolve through
+  // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
+  // with a persisted accessibility theme (e.g. high contrast) must get
+  // that theme's dark/light variant, not the modern palette.
   useEffect(() => {
     const workspace = workspaceRef.current;
     if (workspace) {
-      setThemeAndRenderBlocks(
-        workspace,
-        theme === 'Dark' ? cdoDark : cdoTheme,
-        workspace.getTheme()
-      );
+      const previousTheme = workspace.getTheme();
+      Blockly.isDarkTheme = theme === 'Dark';
+      getUserTheme(theme === 'Dark' ? cdoDark : cdoTheme).then(userTheme => {
+        setThemeAndRenderBlocks(workspace, userTheme, previousTheme);
+      });
     }
   }, [theme]);
 

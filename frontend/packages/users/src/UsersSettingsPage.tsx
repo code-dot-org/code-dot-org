@@ -97,9 +97,10 @@ export default function UsersSettingsPage({
             username: settings.data.username ?? '',
             age: settings.data.age != null ? String(settings.data.age) : '',
             us_state: settings.data.usState ?? '',
+            gender: settings.data.gender ?? '',
           }}
         >
-          <UsersDetailsForm />
+          <UsersDetailsForm settings={settings.data} />
         </FormProvider>
       ) : null,
   }));

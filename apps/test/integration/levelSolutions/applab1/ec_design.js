@@ -25,7 +25,7 @@ var tickWrapper = require('../../util/tickWrapper');
 function assertPropertyRowValue(index, label, value, assert) {
   assertPropertyRowExists(index, label, assert);
 
-  // second col has an input with val screen 2
+  // DSCO form fields render the value in the row's input/textarea/select.
   var propertyRow = $('#propertyRowContainer > div').eq(index);
   var msg =
     'property row ' +
@@ -35,7 +35,11 @@ function assertPropertyRowValue(index, label, value, assert) {
     "' and value '" +
     value +
     "'";
-  assert.equal(propertyRow.children(1).children(0).val(), value, msg);
+  assert.equal(
+    propertyRow.find('input, textarea, select').first().val(),
+    value,
+    msg
+  );
 }
 
 /**
@@ -51,7 +55,9 @@ function assertPropertyRowExists(index, label, assert) {
 
   var propertyRow = $('#propertyRowContainer > div').eq(index);
   var msg = 'property row ' + index + " has label '" + label + "'";
-  assert.equal($(propertyRow.children(0)[0]).text(), label, msg);
+  // DSCO form fields (and the z-order Typography) render the description in the
+  // row's first <span>, ahead of any control, option, or button text.
+  assert.equal(propertyRow.find('span').first().text(), label, msg);
 }
 
 // We don't load our style sheets in integration tests, so we instead depend
@@ -141,7 +147,7 @@ module.exports = {
 
         var assetUrl = '/blockly/media/skins/studio/small_static_avatar.png';
         var encodedAssetUrl = assetUrl;
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -175,9 +181,7 @@ module.exports = {
 
         var assetUrl =
           'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
-        var encodedAssetUrl =
-          '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
 
@@ -187,8 +191,8 @@ module.exports = {
 
         assert.include(
           buttonElement.style.backgroundImage,
-          encodedAssetUrl,
-          'Button background image should contain proxied, escaped url'
+          assetUrl,
+          'Button background image should contain original url'
         );
         Applab.onPuzzleComplete();
       },
@@ -216,7 +220,7 @@ module.exports = {
         var assetUrl = 'flappy (1).png';
         var encodedAssetUrl =
           '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
-        var imageInput = $('.imagePickerInput')[0];
+        var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
         var originalButtonWidth = buttonElement.style.width;
@@ -418,14 +422,14 @@ module.exports = {
         $('#designModeButton').click();
         testUtils.dragToVisualization('BUTTON', 10, 10);
         assertPropertyRowValue(0, 'id', 'button1', assert);
-        var toggleHidden = $('.custom-checkbox')[0];
+        var toggleHidden = $('#propertyRowContainer input[type="checkbox"]')[0];
 
         assert.equal(isFaded('#design_button1'), false);
         assert.equal(isHidden('#button1'), false);
 
-        ReactTestUtils.Simulate.click(toggleHidden);
+        ReactTestUtils.Simulate.change(toggleHidden);
 
-        assert.equal($(toggleHidden).hasClass('fa-square-check'), true);
+        assert.equal(toggleHidden.checked, true);
         assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
@@ -610,15 +614,15 @@ module.exports = {
         );
 
         // Hide/show the chart
-        var toggleHidden = $('.custom-checkbox')[0];
+        var toggleHidden = $('#propertyRowContainer input[type="checkbox"]')[0];
         assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
-        ReactTestUtils.Simulate.click(toggleHidden);
+        ReactTestUtils.Simulate.change(toggleHidden);
         assert.isTrue(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
-        ReactTestUtils.Simulate.click(toggleHidden);
+        ReactTestUtils.Simulate.change(toggleHidden);
         assert.isFalse(isFaded('#design_chart1'));
         assert.isFalse(isHidden('#chart1'));
 
@@ -794,15 +798,15 @@ module.exports = {
         );
 
         // Hide/show the image
-        var toggleHidden = $('.custom-checkbox')[0];
+        var toggleHidden = $('#propertyRowContainer input[type="checkbox"]')[0];
         assert.isFalse(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
-        ReactTestUtils.Simulate.click(toggleHidden);
+        ReactTestUtils.Simulate.change(toggleHidden);
         assert.isTrue(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
-        ReactTestUtils.Simulate.click(toggleHidden);
+        ReactTestUtils.Simulate.change(toggleHidden);
         assert.isFalse(isFaded('#design_image1'));
         assert.isFalse(isHidden('#image1'));
 
@@ -1195,7 +1199,7 @@ module.exports = {
 
         assertPropertyRowExists(5, 'image', assert);
 
-        var input = $('.imagePickerInput')[0];
+        var input = $('#imagePickerInput')[0];
         var designImage = $('#design_image1')[0];
         assert.equal(designImage.style.width, '110px');
         assert.equal(designImage.style.height, '105px');
@@ -1427,8 +1431,8 @@ module.exports = {
           "target button has id 'design_button'"
         );
         assert(
-          !idInput.style.backgroundColor,
-          "id input 'button' has no background color"
+          idInput.getAttribute('aria-invalid') !== 'true',
+          "id input 'button' is not marked invalid"
         );
 
         // Renaming to button3 succeeds.
@@ -1439,8 +1443,8 @@ module.exports = {
           "target button has id 'design_button3'"
         );
         assert(
-          !idInput.style.backgroundColor,
-          "id input 'button3' has no background color"
+          idInput.getAttribute('aria-invalid') !== 'true',
+          "id input 'button3' is not marked invalid"
         );
 
         // Renaming to button2 succeeds, even though button2 exists inside divApplab.
@@ -1455,8 +1459,8 @@ module.exports = {
           "target button has id 'design_button2'"
         );
         assert(
-          !idInput.style.backgroundColor,
-          "id input 'button2' has no background color"
+          idInput.getAttribute('aria-invalid') !== 'true',
+          "id input 'button2' is not marked invalid"
         );
 
         // Renaming to duplicate id 'button1' fails.
@@ -1467,17 +1471,17 @@ module.exports = {
           "target button still has id 'design_button2'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "duplicate id input 'button1' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "duplicate id input 'button1' is marked invalid"
         );
 
         // idInput reverts to previous value on blur.
         ReactTestUtils.Simulate.blur(idInput);
         assert.equal(idInput.value, 'button2', "id input reverts to 'button2'");
         assert(
-          !idInput.style.backgroundColor,
-          'id input has no background color after losing focus'
+          idInput.getAttribute('aria-invalid') !== 'true',
+          'id input is not marked invalid after losing focus'
         );
 
         // Renaming to button4 succeeds.
@@ -1488,8 +1492,8 @@ module.exports = {
           "target button has id 'design_button4'"
         );
         assert(
-          !idInput.style.backgroundColor,
-          "id input 'button4' has no background color"
+          idInput.getAttribute('aria-invalid') !== 'true',
+          "id input 'button4' is not marked invalid"
         );
 
         // Renaming to divApplab fails.
@@ -1500,9 +1504,9 @@ module.exports = {
           "target button still has id 'design_button4'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "invalid id input 'divApplab' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "invalid id input 'divApplab' is marked invalid"
         );
 
         // Renaming to button5 succeeds.
@@ -1513,8 +1517,8 @@ module.exports = {
           "target button has id 'design_button4'"
         );
         assert(
-          !idInput.style.backgroundColor,
-          "id input 'button5' has no background color"
+          idInput.getAttribute('aria-invalid') !== 'true',
+          "id input 'button5' is not marked invalid"
         );
 
         // Renaming to runButton fails.
@@ -1525,9 +1529,9 @@ module.exports = {
           "target button still has id 'design_button5, not runButton'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "invalid id input 'runButton' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "invalid id input 'runButton' is marked invalid"
         );
 
         // Renaming to something with the 'design_' prefix fails.
@@ -1540,9 +1544,9 @@ module.exports = {
           "target button still has id 'design_button5, not design_button'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "invalid id input 'design_button' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "invalid id input 'design_button' is marked invalid"
         );
 
         // Renaming to a blacklisted element id fails.
@@ -1555,9 +1559,9 @@ module.exports = {
           "target button still has id 'design_button5, not submitButton'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "invalid id input 'submitButton' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "invalid id input 'submitButton' is marked invalid"
         );
 
         // Make sure it works for screens too.
@@ -1586,9 +1590,9 @@ module.exports = {
           "target screen still has id 'design_screen2'"
         );
         assert.equal(
-          idInput.style.backgroundColor,
-          'rgb(255, 204, 204)',
-          "duplicate id input 'screen1' has light red background color"
+          idInput.getAttribute('aria-invalid'),
+          'true',
+          "duplicate id input 'screen1' is marked invalid"
         );
 
         Applab.onPuzzleComplete();

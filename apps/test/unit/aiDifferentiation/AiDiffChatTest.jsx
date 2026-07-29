@@ -264,7 +264,7 @@ describe('AiDiffChat', () => {
     expect(message).toHaveTextContent("Beep boop I'm a bot");
   });
 
-  it.skip('Selecting a 2-stage APCSP suggested prompt gives response and adds second set of prompts to thread messages', async () => {
+  it('Selecting a 2-stage APCSP suggested prompt gives response and adds second set of prompts to thread messages', async () => {
     const overrideThreadMessages = [
       {
         role: Role.ASSISTANT,
@@ -374,7 +374,7 @@ describe('AiDiffChat', () => {
     });
   });
 
-  it.skip('Selecting a 2-stage AIF suggested prompt gives response and adds second set of prompts to thread messages', async () => {
+  it('Selecting a 2-stage AIF suggested prompt gives response and adds second set of prompts to thread messages', async () => {
     const overrideThreadMessages = [
       {
         role: Role.ASSISTANT,

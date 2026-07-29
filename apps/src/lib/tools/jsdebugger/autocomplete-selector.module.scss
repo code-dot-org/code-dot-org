@@ -1,0 +1,24 @@
+.panel {
+  width: 100%;
+  min-width: 163px;
+  height: initial;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-tertiary);
+  border: 1px var(--border-neutral-primary) solid;
+  padding: 0;
+  margin-top: -2px;
+  margin-left: -1px;
+  border-radius: 6px;
+}
+
+.option {
+  cursor: pointer;
+  margin: 0;
+  padding: 4px;
+
+  &:hover,
+  &.selected {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-neutral-primary);
+  }
+}

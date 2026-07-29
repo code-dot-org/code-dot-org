@@ -66,6 +66,10 @@ export default defineConfig({
       grepInvert: functionalGrepInvert,
     },
     // Applitools/native-screenshot lane for @visual tests; [] unless VISUAL_PROVIDER is set.
-    ...visualProjects(),
+    // The @no_ci skip applies to this lane too — visualProjects() only sets
+    // grep, so Drone must exclude deployed-env-only visual tests itself.
+    ...visualProjects().map(project =>
+      provider === 'drone' ? {...project, grepInvert: /@no_ci/} : project,
+    ),
   ],
 });

@@ -14,11 +14,15 @@ export type PixelTool =
 // Each tool has a single-key shortcut; the hover tooltip reads
 // "<label> (<KEY>)". Order matters: the toolbar lays these out two per row
 // (pen/fill, erase/eyedrop, circles, rectangles). The regular (outline) vs
-// solid FontAwesome style distinguishes the hollow/filled shape pairs.
+// solid FontAwesome style distinguishes the hollow/filled shape pairs. A
+// shape's outline and solid variants share one letter (Shift = solid), so
+// the pair is one thing to remember rather than two arbitrary keys.
 export const TOOLS: {
   id: PixelTool;
   label: string;
   shortcut: string;
+  // Solid shape variants: same letter as the outline, held with Shift.
+  requiresShift?: boolean;
   icon: React.ReactNode;
 }[] = [
   {
@@ -48,13 +52,15 @@ export const TOOLS: {
   {
     id: 'circle',
     label: 'Circle outline',
-    shortcut: 'c',
+    // O, not C: the glyph resembles a circle, and it frees C for Color.
+    shortcut: 'o',
     icon: <FontAwesomeV6Icon iconName="circle" iconStyle="regular" />,
   },
   {
     id: 'filledCircle',
     label: 'Solid circle',
-    shortcut: 's',
+    shortcut: 'o',
+    requiresShift: true,
     icon: <FontAwesomeV6Icon iconName="circle" iconStyle="solid" />,
   },
   {
@@ -66,11 +72,15 @@ export const TOOLS: {
   {
     id: 'filledRect',
     label: 'Solid rectangle',
-    shortcut: 'b',
+    shortcut: 'r',
+    requiresShift: true,
     icon: <FontAwesomeV6Icon iconName="square" iconStyle="solid" />,
   },
 ];
 
 export function toolTitle(tool: (typeof TOOLS)[number]): string {
-  return `${tool.label} (${tool.shortcut.toUpperCase()})`;
+  const combo = `${
+    tool.requiresShift ? 'Shift+' : ''
+  }${tool.shortcut.toUpperCase()}`;
+  return `${tool.label} (${combo})`;
 }

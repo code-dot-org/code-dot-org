@@ -37,6 +37,39 @@
       "seeding_key": {
         "resource.key": "ai_foundations_syllabus_1"
       }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/ai-foundations-year1-2026/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-year1-2026/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-foundations-year1-2026/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
     }
   ],
   "student_resources": [

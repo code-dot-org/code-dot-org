@@ -10566,6 +10566,8 @@ en:
               name: Career Journeys B
             lesson-18:
               name: AID Playground
+            lesson-19:
+              name: HoAI26 Sandbox
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -22195,32 +22197,32 @@ en:
               name: Navigating Support
           lesson_groups: {}
           name: self-paced-pl-getting-started-2024
-          title: Getting Started with Code.org
+          title: Getting Started with CodeAI
           description_audience: ''
           description_short: ''
           description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
           student_description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
@@ -29231,6 +29233,8 @@ en:
               name: Lesson 11
             lesson-12:
               name: Lesson 12
+            lesson-13:
+              name: Lesson 13
           lesson_groups: {}
           name: aif-year2-semester1-unit1
           title: Logic-Based AI
@@ -29239,33 +29243,29 @@ en:
           description: |-
             This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
 
-            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
           student_description: |-
             In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
 
-            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. YAs you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
         aif-year2-semester1-unit2:
@@ -29682,6 +29682,32 @@ en:
               display_name: Dev Stuff
           name: cody-playground
           title: Cody's Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        data-science-with-python-unit-2026:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          title: Data Science with Python
+          description: "In this unit, students dive into data analysis using the Python programming language. They start by learning the basics of Python syntax and then progress to using data science libraries such as Pandas and Matplotlib to explore, manipulate, and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis, using these tools to answer data-driven questions. The unit includes a strong emphasis on creating custom visualizations and communicating insights effectively. By the end of this unit, students will have experience in using Python to transform raw data into actionable insights, culminating in a project that addresses a community or school-based issue through a data-driven approach.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
+          student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
+          description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
+          description_audience: ''
+          lessons: {}
+          name: data-science-with-python-unit-2026
+        pl-aif-intro-programming-js:
+          lessons:
+            lesson-1:
+              name: Teaching Intro to Programming
+          lesson_groups: {}
+          name: pl-aif-intro-programming-js
+          title: Teaching Introduction to Programming [JavaScript]
           description_audience: ''
           description_short: ''
           description: ''

@@ -4,7 +4,8 @@
 # ref: test) at the end of test:ui_all, moving e2e browser execution off the single
 # daemon and onto GitHub Actions runners. It runs the same suite as the PR lane,
 # against the deployed test-studio. Fire-and-forget: the daemon does not wait for
-# or gate on the result.
+# or gate on the result. Note, all browsers are executed on DTT instead of just 
+# chromium.
 #
 # workflow_dispatch only becomes dispatchable once this file (with the trigger)
 # lands on the default branch (staging); after that, any ref can be dispatched.
@@ -20,4 +21,7 @@ jobs:
       # Literal, not ${{ env.* }}: the env context is unavailable in a reusable
       # workflow's `with:`. Keep in lockstep with frontend-ci.yml's pin.
       playwright-image-tag: 'v1.59.1-noble'
+      # DTT is post-deploy and fire-and-forget, off the PR critical path, so it
+      # runs the full engine matrix. The PR lane keeps the Chromium-only default.
+      playwright-projects: '--project=chromium --project=firefox --project=webkit'
     secrets: inherit

@@ -4319,7 +4319,7 @@ en:
           description_teacher: ''
           version_title: ''
         getting-started-2025:
-          title: Getting Started with Code.org
+          title: Getting Started with CodeAI
           description_short: ''
           description_student: |-
             ##Welcome
@@ -7530,4 +7530,10 @@ en:
           description_short: UI Test Oceans Course Short Description
           description_student: UI Test Oceans Course Student Description
           description_teacher: UI Test Oceans Course Teacher Description
+          version_title: ''
+        data-science-with-python-2026:
+          title: data-science-with-python-2026
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
           version_title: ''

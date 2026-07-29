@@ -10,6 +10,13 @@ $border-subtle: rgb(255 255 255 / 12%);
   display: contents;
 }
 
+// One high-contrast keyboard focus ring for everything in the dark modal;
+// UA defaults are hard to see against #333a47.
+.dialogHost .modal :focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 .dialogHost .modal {
   display: flex;
   flex-direction: column;
@@ -180,6 +187,13 @@ $border-subtle: rgb(255 255 255 / 12%);
   background-color: #2b313d;
 }
 
+// Shrink-wraps the canvas so the keyboard-cursor overlay positions against
+// the canvas's own box.
+.canvasWrap {
+  display: flex;
+  position: relative;
+}
+
 .displayCanvas {
   display: block;
   // Rendered size is set in JS (fills the modal's available vertical space,
@@ -189,6 +203,69 @@ $border-subtle: rgb(255 255 255 / 12%);
   image-rendering: pixelated;
   cursor: crosshair;
   touch-action: none;
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+}
+
+// Keyboard paint cursor, pixel mode: the exact brush footprint. White core
+// with a black halo inside and out, so it reads against any artwork.
+.kbCursorRect {
+  position: absolute;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 80%),
+    inset 0 0 0 1px rgb(0 0 0 / 80%);
+  pointer-events: none;
+}
+
+// Keyboard paint cursor, smooth mode: a crosshair with an open center. The
+// container is a zero-size point at the cursor; the four arms hang off it,
+// with --stroke thickness and --gap center clearance set inline from the
+// brush size.
+.kbCursorCross {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 80%);
+  }
+
+  // Up, down, left, right arms.
+  span:nth-child(1) {
+    bottom: var(--gap);
+    left: calc(var(--stroke) / -2);
+    width: var(--stroke);
+    height: 12px;
+  }
+
+  span:nth-child(2) {
+    top: var(--gap);
+    left: calc(var(--stroke) / -2);
+    width: var(--stroke);
+    height: 12px;
+  }
+
+  span:nth-child(3) {
+    top: calc(var(--stroke) / -2);
+    right: var(--gap);
+    width: 12px;
+    height: var(--stroke);
+  }
+
+  span:nth-child(4) {
+    top: calc(var(--stroke) / -2);
+    left: var(--gap);
+    width: 12px;
+    height: var(--stroke);
+  }
 }
 
 .loadError {
@@ -322,5 +399,32 @@ $border-subtle: rgb(255 255 255 / 12%);
     border-radius: 4px;
     cursor: crosshair;
     touch-action: none;
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
   }
+}
+
+// Shrink-wraps the spectrum so the sample cursor positions against it.
+.spectrumWrap {
+  display: flex;
+  position: relative;
+}
+
+// Where the current color was sampled from. White ring with a black halo,
+// so it reads anywhere on the spectrum.
+.spectrumCursor {
+  position: absolute;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 70%),
+    inset 0 0 0 1px rgb(0 0 0 / 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
