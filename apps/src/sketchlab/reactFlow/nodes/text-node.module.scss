@@ -15,11 +15,11 @@
 
 // Rotatable layer holding the visible text, the hover border, the selection
 // box + resize handles, and the connection handles, so all of them rotate
-// together. Filling the node absolutely (with the text padding applied here)
-// keeps the border and selection box at the node boundary.
+// together.
 .rotatable {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
   padding: 8px;
   box-sizing: border-box;
   display: flex;

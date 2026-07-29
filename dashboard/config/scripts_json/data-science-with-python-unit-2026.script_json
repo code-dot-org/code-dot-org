@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
       "pilot_experiment": "data-science-with-python-pilot-2024",
       "show_calendar": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-24 12:40:53 UTC",
+    "serialized_at": "2026-07-28 20:11:38 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

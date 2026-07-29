@@ -1,0 +1,54 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-29T00:34:52.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Variables, Expressions, and Output\r\n\r\n### Do This:\r\n\r\n1. Ask AI Tutor to write a program that:\r\n\r\n   * Stores the number of pizza slices and the number of people in variables\r\n   * Uses an expression to calculate the number of slices per person\r\n   * Builds and prints a message with the result\r\n\r\n2. Run the program and examine AI Tutor’s code.\r\n\r\n3. Use AI Tutor’s code as a model to create your own calculation program. Choose what your program will calculate.\r\n\r\n   Your program must:\r\n\r\n   * Store at least two starting values in variables\r\n   * Use an expression to calculate a result\r\n   * Store the result in a variable\r\n   * Build and print a message that includes the result\r\n\r\n   Your program could calculate a price, distance, time, score, measurement, or something else you choose.\r\n\r\n4. Run your program and fix any errors. You may ask AI Tutor for hints, but do not ask it to write your program for you.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+        "buildPython": "buildPython\nGuarantee: Provide a complete runnable solution for the assigned pizza-slices example.\nWhen the learner creates their own calculation program, provide hints and feedback but never output a complete solution.\nOutput runnable Python files in a python fence with the file name.\nDefault to main.py when making a new file.\nNever use f-strings. Build messages using string concatenation and str()."
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T00:34:52.752+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L2_2024-pilot_pilot_2026\\\"\"],\"cloned_from\":\"datascience-U2L2-L2_2024-pilot_pilot_2026\"},{\"changed_at\":\"2026-07-29 00:39:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:40:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:40:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:51:30 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>
