@@ -58,6 +58,20 @@ const EVENT_CONST: Record<string, string> = {
   frameChanged: 'FrameChangedEvent',
 };
 
+// `when key … is pressed/released` dropdown: friendly label -> the DOM
+// `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
+const KEY_OPTIONS: Array<[string, string]> = [
+  ['space', ' '],
+  ['up arrow', 'ArrowUp'],
+  ['down arrow', 'ArrowDown'],
+  ['left arrow', 'ArrowLeft'],
+  ['right arrow', 'ArrowRight'],
+  ['enter', 'Enter'],
+  ...'abcdefghijklmnopqrstuvwxyz'
+    .split('')
+    .map(c => [c.toUpperCase(), c] as [string, string]),
+];
+
 const worldActor = defineBlock({
   type: 'world_actor',
   message0: 'actor  id %1  name %2',
@@ -123,8 +137,8 @@ const worldSetPosition = defineBlock({
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  // The ACTOR socket defaults to a `myself` shadow (this actor); a loop's touched
-  // actor can be dropped in to move that one instead.
+  // The ACTOR socket defaults to a `this actor` shadow; a loop's touched actor
+  // can be dropped in to move that one instead.
   extensions: [actorInputExtension],
   style: 'location_blocks',
   tooltip: "Set an actor's position.",
@@ -184,8 +198,9 @@ const worldPlayAnimation = defineBlock({
 
 const worldOnEvent = defineBlock({
   type: 'world_on_event',
-  message0: 'when %1',
+  message0: 'when %1 %2',
   args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
     {
       type: 'field_dropdown',
       name: 'EVENT',
@@ -199,14 +214,18 @@ const worldOnEvent = defineBlock({
   ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'HANDLER'}],
+  inputsInline: true,
   // An event is a free-floating starting block (its own root in the workspace),
-  // like `when_run` / Music Lab's trigger blocks — no previous/next connection,
-  // so it can't chain into the actor or another event. Its `HANDLER` body is
-  // enclosed, matching the `actor.on(evt, () => {...})` it generates.
+  // like `when_run` / Music Lab's trigger blocks — no previous/next connection.
+  // The ACTOR socket is which actor's handler this is; it defaults to a `this
+  // actor` shadow (on an `.actor` file the subject is obvious).
+  extensions: [actorInputExtension],
   style: 'event_blocks',
-  tooltip: 'Run blocks when an event happens to this actor.',
+  tooltip: 'Run blocks when an event happens to an actor.',
   generator: {
     javascript(block, generator) {
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
       const eventConst = EVENT_CONST[block.getFieldValue('EVENT')] ?? '';
       const handler = generator.statementToCode(block, 'HANDLER');
       // A handler runs at RUNTIME, so its args are the live `world` and `actor`
@@ -214,8 +233,55 @@ const worldOnEvent = defineBlock({
       // and a "for each … I'm touching" loop can query the world. `eventValue` is
       // the event's detail (e.g. the animation frame).
       return (
-        `actor.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
+        `${target}.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
         `${handler}});\n`
+      );
+    },
+  },
+});
+
+// "when [this actor] presses/releases key [x]" — a free-floating handler on the
+// Input rule's key events. The event fires for every key (its detail is the key
+// name), so the handler filters for the chosen one. Like `world_on_event`, the
+// ACTOR socket is whose handler this is (default `this actor` shadow), and the
+// handler binds the live `world`/`actor` so a "for each … touching" loop inside
+// can query the world.
+const worldOnKey = defineBlock({
+  type: 'world_on_key',
+  message0: 'when %1 %2 key %3',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {
+      type: 'field_dropdown',
+      name: 'STATE',
+      options: [
+        ['presses', 'keyPressed'],
+        ['releases', 'keyReleased'],
+      ],
+    },
+    {type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS},
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'HANDLER'}],
+  inputsInline: true,
+  extensions: [actorInputExtension],
+  style: 'event_blocks',
+  tooltip:
+    'Run blocks when an actor presses or releases a key (while the game is focused).',
+  generator: {
+    javascript(block, generator) {
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const eventConst =
+        block.getFieldValue('STATE') === 'keyReleased'
+          ? 'KeyReleasedEvent'
+          : 'KeyPressedEvent';
+      const key = block.getFieldValue('KEY');
+      const handler = generator.statementToCode(block, 'HANDLER');
+      // `eventValue` is the key that fired; act only for the chosen key.
+      return (
+        `${target}.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
+        `if (eventValue === ${str(key)}) {\n${handler}}\n});\n`
       );
     },
   },
@@ -272,12 +338,12 @@ const worldEventValue = defineBlock({
 
 // ── Actor values & touching ──────────────────────────────────────────────────
 // Blocks that yield an Actor (output type "Actor") for an action block's `of …`
-// socket. `world_myself` is the principal actor (`this`) — the default shadow;
+// socket. `world_this_actor` is the principal actor (`this`) — the default shadow;
 // `world_touched_actor` is the actor a `for each … I'm touching` loop is on now.
 
-const worldMyself = defineBlock({
-  type: 'world_myself',
-  message0: 'myself',
+const worldThisActor = defineBlock({
+  type: 'world_this_actor',
+  message0: 'this actor',
   output: 'Actor',
   style: 'variable_blocks',
   tooltip: 'This actor — the one these blocks belong to.',
@@ -572,10 +638,11 @@ export const DOMAIN_BLOCKS = [
   worldSetSprite,
   worldPlayAnimation,
   worldOnEvent,
+  worldOnKey,
   worldLog,
   worldPrint,
   worldEventValue,
-  worldMyself,
+  worldThisActor,
   worldTouchedActor,
   worldForEachTouching,
   worldScene,
@@ -612,11 +679,21 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   },
   {
     name: 'Events',
-    blocks: ['world_on_event', 'world_log', 'world_print', 'world_event_value'],
+    blocks: [
+      'world_on_event',
+      'world_on_key',
+      'world_log',
+      'world_print',
+      'world_event_value',
+    ],
   },
   {
     name: 'Actors',
-    blocks: ['world_for_each_touching', 'world_touched_actor', 'world_myself'],
+    blocks: [
+      'world_for_each_touching',
+      'world_touched_actor',
+      'world_this_actor',
+    ],
   },
   {
     name: 'Logic',

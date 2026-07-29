@@ -16,12 +16,13 @@
 // an actor with no appearance. Phaser is a renderer, not the animator. All
 // textures/spritesheets are preloaded from the self-hosted `${assetBase}sprites/`.
 //
-// Input: each frame we read Phaser's cursor keys and hand the pressed set to the
-// World (`setInput`) before ticking, so the engine's Input rule can drive
-// controlled actors. Phaser's keyboard listens on the focusable `#game` parent
-// (not the whole window) and `autoFocus` is off, so the game responds to keys
-// only while the learner has focused it (click or tab) — and a hot restart never
-// steals focus back from the editor. preview.html rings `#game` while it is focused.
+// Input: DOM key listeners on the focusable `#game` parent keep a live set of
+// held keys (by name — every key, not just arrows), handed to the World each
+// frame (`setInput`) before ticking, so the Input rule can move controlled actors
+// and raise its key-pressed/released events. Listening on `#game` (not the window)
+// with `autoFocus` off means the game responds to keys only while the learner has
+// focused it (click or tab) — and a hot restart never steals focus back from the
+// editor. preview.html rings `#game` while it is focused.
 
 import Phaser from 'phaser';
 
@@ -58,27 +59,26 @@ type CanvasRenderHook = (
   parentMatrix?: Phaser.GameObjects.Components.TransformMatrix,
 ) => void;
 
-/** Phaser cursor keys → the DOM `KeyboardEvent.key` names the engine expects. */
-function pressedKeys(
-  cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined,
-): string[] {
-  if (!cursors) {
-    return [];
-  }
-  const map: Array<[Phaser.Input.Keyboard.Key | undefined, string]> = [
-    [cursors.left, 'ArrowLeft'],
-    [cursors.right, 'ArrowRight'],
-    [cursors.up, 'ArrowUp'],
-    [cursors.down, 'ArrowDown'],
-    [cursors.space, ' '],
-  ];
-  return map.filter(([key]) => key?.isDown).map(([, name]) => name);
-}
+// Keys whose browser default (scrolling the page) we suppress while the game
+// has focus, so arrows/space drive the game instead of the page.
+const SCROLL_KEYS = new Set([
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  ' ',
+]);
 
 export class PhaserBinding {
   private readonly game: Phaser.Game;
   private readonly parent: HTMLElement;
   private readonly focusOnPointerDown: () => void;
+  // Broad keyboard capture: DOM listeners on the (focusable) `#game` parent keep
+  // a live set of pressed DOM key names. Attached to the parent — not window — so
+  // keys only register while the game is focused, and removed in stop().
+  private readonly onKeyDown: (event: KeyboardEvent) => void;
+  private readonly onKeyUp: (event: KeyboardEvent) => void;
+  private readonly onBlur: () => void;
 
   constructor(
     world: World,
@@ -89,7 +89,9 @@ export class PhaserBinding {
     uploadedAssets: Record<string, string> = {},
   ) {
     const objects = new Map<Actor, GameObject>();
-    let cursors: Phaser.Types.Input.Keyboard.CursorKeys | undefined;
+    // Every DOM key currently held (by `KeyboardEvent.key` name); fed to the
+    // engine each frame. `update` reads it; the listeners below keep it current.
+    const downKeys = new Set<string>();
 
     // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
     // not model natively (its per-object matrix is position·rotation·scale only).
@@ -223,11 +225,27 @@ export class PhaserBinding {
     this.parent = parent;
     this.focusOnPointerDown = () => parent.focus();
     parent.addEventListener('pointerdown', this.focusOnPointerDown);
+    // Read the keyboard ourselves (Phaser's keyboard is disabled below): capture
+    // every key by DOM name into `downKeys` while `#game` is focused.
+    this.onKeyDown = (event: KeyboardEvent) => {
+      downKeys.add(event.key);
+      if (SCROLL_KEYS.has(event.key)) {
+        event.preventDefault();
+      }
+    };
+    this.onKeyUp = (event: KeyboardEvent) => downKeys.delete(event.key);
+    // A blur mid-press never sees the keyup; clear so keys don't stick down.
+    this.onBlur = () => downKeys.clear();
+    parent.addEventListener('keydown', this.onKeyDown);
+    parent.addEventListener('keyup', this.onKeyUp);
+    parent.addEventListener('blur', this.onBlur);
     this.game = new Phaser.Game({
       type: Phaser.CANVAS,
       parent,
       autoFocus: false,
-      input: {keyboard: {target: parent}},
+      // Keyboard comes from the DOM listeners above (all keys); Phaser's own
+      // keyboard input is off so it neither double-handles nor preventDefaults.
+      input: {keyboard: false},
       scale: {
         // FIT sizes the canvas to the (CSS-sized, exactly 16:9) `#game` box, so
         // its scale — and thus input mapping — stays correct. No autoCenter: CSS
@@ -257,12 +275,11 @@ export class PhaserBinding {
           }
         },
         create(this: Phaser.Scene) {
-          cursors = this.input.keyboard?.createCursorKeys();
           sync(this);
         },
         update(this: Phaser.Scene, _time: number, delta: number) {
-          // Feed this frame's keys in before advancing the simulation.
-          world.setInput(pressedKeys(cursors));
+          // Feed this frame's held keys in before advancing the simulation.
+          world.setInput(downKeys);
           // Phaser's delta is milliseconds; the engine ticks in seconds.
           world.tick(delta / 1000);
           sync(this);
@@ -274,6 +291,9 @@ export class PhaserBinding {
   /** Tear the game down: stops the loop and releases the canvas. */
   stop(): void {
     this.parent.removeEventListener('pointerdown', this.focusOnPointerDown);
+    this.parent.removeEventListener('keydown', this.onKeyDown);
+    this.parent.removeEventListener('keyup', this.onKeyUp);
+    this.parent.removeEventListener('blur', this.onBlur);
     this.game.destroy(true);
   }
 }

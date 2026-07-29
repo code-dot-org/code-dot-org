@@ -109,6 +109,10 @@ export class World {
   // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
   // names ('ArrowLeft', 'a', ' ').
   private keys: ReadonlySet<string> = new Set();
+  // The previous tick's pressed set, so a rule step can detect rising/falling
+  // edges (a key *just* pressed or released) rather than only the held state.
+  // Advanced at the end of each `tick`.
+  private previousKeys: ReadonlySet<string> = new Set();
 
   constructor(init: WorldInit) {
     this.id = init.id;
@@ -197,6 +201,16 @@ export class World {
     return this.keys.has(key);
   }
 
+  /** Keys pressed this tick that were not pressed last tick (rising edges). */
+  newlyPressedKeys(): string[] {
+    return [...this.keys].filter(key => !this.previousKeys.has(key));
+  }
+
+  /** Keys released this tick that were pressed last tick (falling edges). */
+  newlyReleasedKeys(): string[] {
+    return [...this.previousKeys].filter(key => !this.keys.has(key));
+  }
+
   /** The definition of a known animation, or undefined. */
   animation(id: string): AnimationDef | undefined {
     return this.animationDefs.get(id);
@@ -211,6 +225,9 @@ export class World {
   tick(delta: number): void {
     this.scheduler.run(this, delta);
     this.events.flush(this);
+    // The keys this tick become "previous" for the next, so edge detection
+    // (newlyPressed/Released) compares against exactly one frame back.
+    this.previousKeys = this.keys;
   }
 
   /** The resolved step order — for inspection and tests. */

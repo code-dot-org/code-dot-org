@@ -57,4 +57,34 @@ export const ControlStep = rule.addStepBefore(
   },
 );
 
+// Key events — the edge-triggered side of input. Polling (`isKeyDown`, above)
+// answers "is it held now?"; these answer "did it just go down / come up?", so a
+// handler runs once per press rather than every frame the key is held.
+export const KeyPressedEvent = rule.addEvent('keyPressed', {
+  name: 'a key is pressed',
+});
+export const KeyReleasedEvent = rule.addEvent('keyReleased', {
+  name: 'a key is released',
+});
+
+// Diff the driver's per-frame key set against the previous frame's and raise an
+// event on each rising/falling edge. The detail is the key name; the event is
+// broadcast to every actor (a key press isn't owned by one actor), and each
+// actor's handler filters for the key it cares about.
+export const KeyEventStep = rule.addStep('keyEvents', world => {
+  const pressed = world.newlyPressedKeys();
+  const released = world.newlyReleasedKeys();
+  if (pressed.length === 0 && released.length === 0) {
+    return;
+  }
+  for (const actor of world.actors) {
+    for (const key of pressed) {
+      world.emit(KeyPressedEvent, actor, key);
+    }
+    for (const key of released) {
+      world.emit(KeyReleasedEvent, actor, key);
+    }
+  }
+});
+
 export const InputRule = rule.build();
