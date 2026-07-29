@@ -3500,13 +3500,13 @@ $modal-no-icon-gap: 22px;
 
     .generated-code-container p {
       font-family: inherit;
-      font-size: 14px;
+      font-size: var(--font-size-body-sm);
       font-weight: normal;
       line-height: inherit;
     }
     .generated-code-container pre {
       font-family: monospace;
-      font-size: 14px;
+      font-size: var(--font-size-body-sm);
       font-weight: normal;
       line-height: normal;
     }
