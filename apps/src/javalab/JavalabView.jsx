@@ -17,6 +17,7 @@ import styleConstants from '../styleConstants';
 import {CsaViewMode} from './constants';
 import ControlButtons from './ControlButtons';
 import {DisplayTheme} from './DisplayTheme';
+import moduleStyles from './javalab.module.css';
 import JavalabCaptchaDialog from './JavalabCaptchaDialog';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
@@ -217,6 +218,7 @@ class JavalabView extends React.Component {
           style={{
             ...styles.javalab,
           }}
+          className={moduleStyles.wrapper}
         >
           <JavalabCaptchaDialog
             onVerify={this.onCaptchaVerify}
@@ -229,7 +231,6 @@ class JavalabView extends React.Component {
             topLeftPanel={height => (
               <TopInstructions
                 mainStyle={styles.instructions}
-                isOldPurpleColorHeader
                 standalone
                 displayDocumentationTab
                 displayReviewTab

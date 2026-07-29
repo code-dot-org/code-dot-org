@@ -6,6 +6,7 @@ import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {TOUR_GROUP, TOUR_GROUP_ATTR} from '../constants';
+import {DEFAULT_STROKE_COLOR} from '../elementToolbars/toolbarPalettes';
 import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {AddNodeRequest, CanvasTool, ShapeType} from '../types';
 
@@ -168,7 +169,12 @@ export default function Toolbar({
         <IconButton
           aria-label="Add text"
           id={`${uid}-text`}
-          onClick={() => onAddNode({type: 'text', data: {text: ''}})}
+          onClick={() =>
+            onAddNode({
+              type: 'text',
+              data: {text: '', strokeColor: DEFAULT_STROKE_COLOR},
+            })
+          }
           size="small"
           color="tertiary"
           variant="outlined"

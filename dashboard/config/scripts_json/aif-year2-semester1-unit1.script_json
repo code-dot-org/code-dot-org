@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-28 01:23:23 UTC",
+    "serialized_at": "2026-07-28 21:02:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -112,12 +112,14 @@
     },
     {
       "key": "lesson-5",
-      "name": "Lesson 5",
+      "name": "Defining Functions",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can writing reusable code be useful in designing programs?**\n\nIn this lesson, students learn to write functions in Python that define intelligent behavior and that can be reused in their programs. Students learn the syntax for defining a new function in Python and explore how functions can accept inputs and produce outputs. In the process, students practice printing formatted strings and manipulating values with mathematical operators.",
+        "student_overview": "**How can writing reusable code be useful in designing programs?**\n\nIn this lesson, you'll learn to write functions in Python that define intelligent behavior and that can be reused in their programs. You'll learn the syntax for defining a new function in Python and explore how functions can accept inputs and produce outputs. "
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -163,12 +165,14 @@
     },
     {
       "key": "lesson-8",
-      "name": "Lesson 8",
+      "name": "Simulation (Part 2)",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**If simulations aren’t reality, why are they still useful?**\n\nStudents extend their exploration of simulations. They choose between simulating a social media post reaching a target number of views, a business reaching a target number of customers, or a colony of bacteria reaching a target size. Implementing such a simulation motivates students to learn about `while` loops in Python.",
+        "student_overview": "**If simulations aren’t reality, why are they still useful?**\n\nExtend your exploration of simulations. You'll choose between simulating a social media post reaching a target number of views, a business reaching a target number of customers, or a colony of bacteria reaching a target size. As you implement such a simulation, you'll learn about `while` loops in Python."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -178,12 +182,15 @@
     },
     {
       "key": "lesson-9",
-      "name": "Lesson 9",
+      "name": "Debugging Intelligent Systems",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**How can I find and fix errors in my code?**\n\nIn this lesson, students learn strategies for finding and fixing bugs. Students start by looking at pseudocode and evaluating it for logical errors. They then get practice with software testing by looking at sample inputs and outputs for buggy programs and identifying the circumstances that cause programs to make mistakes. Students also get hands-on practice with debugging in Python, troubleshooting and fixing a variety of different errors that can arise in Python code.",
+        "preparation": "- Print copies of the Finding Bugs Activity Guide (one for each pair of students)",
+        "student_overview": "**How can I find and fix errors in my code?**\n\nIn this lesson, you'll learn strategies for finding and fixing bugs. You'll evaluate pseudocode for logical errors, get practice with software testing, and get hands-on practice with debugging in Python."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -193,12 +200,14 @@
     },
     {
       "key": "lesson-10",
-      "name": "Lesson 10",
+      "name": "Autocomplete",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How does a computer know what you meant to type?**\n\nIn this lesson, students investigate autocomplete as an everyday example of a rule-based AI system: to decide which words to suggest, autocomplete needs a rule to follow. Students look at one such rule—prefix matching—before implementing this rule in Python themselves. Along the way, students are introduced to objects and the methods that act on them, using Python's string methods to refine their solution.",
+        "student_overview": "**How does a computer know what you meant to type?**\n\nIn this lesson, you'll investigate *autocomplete* as an everyday example of a rule-based AI system: to decide which words to suggest, autocomplete needs a rule to follow. You'll learn one such rule—prefix matching—before implementing this rule in Python yourself. Along the way, you'll learn about *objects* and the *methods* that act on them."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -208,12 +217,14 @@
     },
     {
       "key": "lesson-11",
-      "name": "Lesson 11",
+      "name": "Decision Trees",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How can AI use questions to make decisions?**\n\nIn this lesson, students meet decision trees—simple, branching structures that help computers make intelligent decisions. Students explore the kinds of problems decision trees solve, trace through example decision trees to see how they work, and finally build their own in Python, putting conditionals to work along the way.",
+        "student_overview": "**How can AI use questions to make decisions?**\n\nIn this lesson, you'll meet decision trees—simple, branching structures that help computers make intelligent decisions. You'll explore the kinds of problems decision trees solve, trace through example decision trees to see how they work, and finally build your own in Python, putting conditionals to work along the way."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -232,6 +243,24 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Conversational AI Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "In this project, students implement a rule-based conversational AI program that asks questions of a user to make a decision. They brainstorm possible scenarios where conversational AI can be helpful and they use conditional logic to plan how their program will respond to user inputs. Then, students implement their conversational logic in Python and test their program’s ability to help people make decisions, evaluating the strengths and limits of their design.",
+        "purpose": "- Print copies of the Conversational AI Project Planning Guide (one for each student)",
+        "student_overview": "In this project, you'll implement a rule-based conversational AI program that asks questions of a user to make a decision. You'll implement your conversational logic in Python and test your program’s ability to help people make decisions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1"
       }
@@ -407,6 +436,48 @@
       }
     },
     {
+      "key": "b9fc5a45-6398-4c7c-904a-cf60a344bcf8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9fc5a45-6398-4c7c-904a-cf60a344bcf8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "5e290cf6-768b-4990-a3ac-67265b50ecc7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "26671980-da68-4ada-b048-51640ac33faf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26671980-da68-4ada-b048-51640ac33faf",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
       "key": "f89b1dff-a603-498c-bac3-430ea485cac4",
       "position": 1,
       "properties": {
@@ -486,6 +557,216 @@
       "seeding_key": {
         "lesson_activity.key": "7b9533d5-91f7-46d2-a7f9-1f22d7756efc",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "55d8ee0b-99ea-4dbc-9c5b-26b2f938ec6d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55d8ee0b-99ea-4dbc-9c5b-26b2f938ec6d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "6add7323-e5f1-4562-af85-da6814fd0186",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "95488c5d-b960-425d-bf5d-23ad0f67ce03",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95488c5d-b960-425d-bf5d-23ad0f67ce03",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "3ce34984-d7f0-4420-a951-34e32eaf6056",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "6bcee4cd-4cb8-460e-afab-ef689f7e7abf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bcee4cd-4cb8-460e-afab-ef689f7e7abf",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "ef1f1b16-1ee0-4aaa-881f-50b2f42496e9",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef1f1b16-1ee0-4aaa-881f-50b2f42496e9",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "3eca9b19-c721-466c-a132-d0e7d02ba7c6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3eca9b19-c721-466c-a132-d0e7d02ba7c6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "7d937d15-1457-4a58-bf4a-f5d15f00a31b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d937d15-1457-4a58-bf4a-f5d15f00a31b",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "d0006894-a330-45ac-9ddc-30795bd9e7c5",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "f7440683-65cb-4029-b22a-503064c720da",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1"
+      }
+    },
+    {
+      "key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1"
       }
@@ -1687,8 +1968,19 @@
       }
     },
     {
-      "key": "2c4933a4-5d90-4c96-889a-1eae0e6cff7e",
+      "key": "c1ebabfa-8fda-4ae9-8a16-4b994dce507a",
       "position": 31,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1ebabfa-8fda-4ae9-8a16-4b994dce507a",
+        "lesson_activity.key": "8b475d6c-0b29-4aef-9731-2a07f78895d6"
+      }
+    },
+    {
+      "key": "2c4933a4-5d90-4c96-889a-1eae0e6cff7e",
+      "position": 32,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 4-6.\n- Level 4: Students prompt the user for their name and print a greeting with the name.\n- Level 5: Students fix bugs in a program that prompts the user for their age.\n- Level 6: Students complete a Check Your Understanding about reading a Python program that uses inputs and variables.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check on how they are implementing each chatbot. Students might struggle with the syntax of f-strings (Python formatted strings). Remind these students about the syntax for f-strings: using an `f` before the first quotation mark and surrounding variable names in curly braces. Students might also have trouble converting inputs to integers. For these students, show them how functions can be called inside of other functions, so that the `input` function can be inside of the call to the `int` function.",
         "tips": [
@@ -1712,6 +2004,267 @@
       "seeding_key": {
         "activity_section.key": "6b967041-2fee-4bfa-a183-11ffeee5e9f8",
         "lesson_activity.key": "bf31cf78-7621-4559-ae26-5be188699b78"
+      }
+    },
+    {
+      "key": "4dfbfa9f-d861-4b56-bbeb-5b7242841b8b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite students to look at these lines of code and describe what the code does.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What patterns do you see in this code?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the code consists of the same three steps repeated multiple times. In each instance, a city is defined, a temperature is defined, and an identically-formatted message is printed. If students aren’t sure how to think about patterns in code, ask them to look for lines of code that look similar to each other, or lines of code that are serving a similar purpose. End the discussion once students have identified some similarities across multiple lines of code."
+      },
+      "seeding_key": {
+        "activity_section.key": "4dfbfa9f-d861-4b56-bbeb-5b7242841b8b",
+        "lesson_activity.key": "b9fc5a45-6398-4c7c-904a-cf60a344bcf8"
+      }
+    },
+    {
+      "key": "7ae397c0-caf2-4c1b-805e-61b68c12bebe",
+      "position": 2,
+      "properties": {
+        "description": "“When writing code, it can get repetitive if we have to keep writing the same lines every time we want the computer to do something similar. Today, we’ll be looking at strategies to make this easier.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ae397c0-caf2-4c1b-805e-61b68c12bebe",
+        "lesson_activity.key": "b9fc5a45-6398-4c7c-904a-cf60a344bcf8"
+      }
+    },
+    {
+      "key": "17ca02e9-11c5-498b-aba4-d9b082270f57",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "17ca02e9-11c5-498b-aba4-d9b082270f57",
+        "lesson_activity.key": "b9fc5a45-6398-4c7c-904a-cf60a344bcf8"
+      }
+    },
+    {
+      "key": "420cc2b3-7cfb-40b6-be59-d6bb26ebd25a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students learn to read function definitions and predict what their output will be.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _abstraction_. Explain that when building a complex software system, it’s helpful to split up some of the details so that you don’t have to think about all the details all the time.",
+        "duration": "15",
+        "name": "Fitness Tracking Functions "
+      },
+      "seeding_key": {
+        "activity_section.key": "420cc2b3-7cfb-40b6-be59-d6bb26ebd25a",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "fbcb46d3-fce3-4a77-9ebe-d9a60e219a4e",
+      "position": 2,
+      "properties": {
+        "description": "“There’s lots of examples of technologies we interact with without knowing all the details. For example, when you get a snack from a vending machine, you might know how to press the buttons to get the snack you want. But you don’t need to know the details of how the vending machine parts move to give you your snack.”",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Abstraction can be a difficult topic for students to understand, so giving additional concrete examples can be helpful. For example, a microwave has complex internal mechanisms for heating up food. But those details are separate from the interface for using a microwave (entering a time and pressing a button). Separating the microwave’s button interface from its internal details makes it easy to use a microwave without needing to know exactly how it works."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fbcb46d3-fce3-4a77-9ebe-d9a60e219a4e",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "7ab2e584-58a7-4245-bf81-20e09e8aea85",
+      "position": 3,
+      "properties": {
+        "description": "“Functions are examples of abstractions. You’ve used built-in functions like print and input to build programs, but you don’t need to know exactly what code is running inside of those functions. In this activity, you’ll learn to write your own functions to define code that you can reuse later.”\n\n“Let’s take a look at some examples of how functions are defined in Python so we can understand how to write our own functions too.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7ab2e584-58a7-4245-bf81-20e09e8aea85",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41",
+      "position": 4,
+      "properties": {
+        "progression_name": "Predict the Workouts"
+      },
+      "seeding_key": {
+        "activity_section.key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "b87aa59e-9c1a-4946-b2c2-cdcc379f680c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-2.\n- Level 1: Students predict the output of a function.\n- Level 2: Students predict the output of a function that accepts a parameter.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, keep an eye out for common challenges students might encounter when predicting.\n- Students haven’t yet been formally introduced to the syntax for defining functions and parameters, so they might be confused by syntax like the def keyword. You can tell them that this keyword is used to define what will happen when a function is called.\n- For students that are struggling with where to get started, encourage them to look for lines that include a call to print, drawing their attention to the likely form that the program’s output will take.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example to show the steps for defining a function."
+      },
+      "seeding_key": {
+        "activity_section.key": "b87aa59e-9c1a-4946-b2c2-cdcc379f680c",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "ff2417a5-e13c-402a-a7d8-6f89b23eebdb",
+      "position": 6,
+      "properties": {
+        "description": "“To create your own function in Python, we start with the keyword `def`—short for ‘define’. Then, we pick a name for our function that describes what it does.”\n\n“Inside the function, we can write more Python code. All the code that’s part of a function needs to be indented. That’s how Python knows what code is part of the function.”",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students haven’t seen indentation in code before, explain that indentation is extra space added to the beginning of a line. Students can press the Tab key on their keyboard to indent a line. In Python, appropriate indentation is a required part of the language."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2417a5-e13c-402a-a7d8-6f89b23eebdb",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "7899cc85-2ca3-4fb3-9ac6-df8f6acca54e",
+      "position": 7,
+      "properties": {
+        "description": "“Functions can also have variables that act as inputs to the function, like the `steps` variable here.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7899cc85-2ca3-4fb3-9ac6-df8f6acca54e",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "e4e9fcc4-da49-495c-bb4b-b2d98279fa85",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _parameter_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example function. Explain that `greet` has a parameter called `name`. `name` is a variable that can be used inside the function so that the function behaves differently depending on its input."
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e9fcc4-da49-495c-bb4b-b2d98279fa85",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "7ca9c438-90f1-4105-9f27-1cf408aa34ca",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students define their own functions, including functions with parameters and with return values. In the process, students practice working with Python operators to manipulate numbers.",
+        "duration": "20",
+        "name": "Define Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ca9c438-90f1-4105-9f27-1cf408aa34ca",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "b302806e-0429-4c44-aaff-fbbb1162f56e",
+      "position": 10,
+      "properties": {
+        "description": "“We’ve seen examples of functions that can accept input. Functions in Python can also produce output.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b302806e-0429-4c44-aaff-fbbb1162f56e",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "e946aff9-ce85-4971-883c-4b50b727140b",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _return value_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example function. Explain that a function can produce output by using the word `return` followed by the output value. When a function returns a value, that value can then be used or saved in a variable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through an example of defining and using a function that accepts input and produces output."
+      },
+      "seeding_key": {
+        "activity_section.key": "e946aff9-ce85-4971-883c-4b50b727140b",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "c67a83bc-731b-494d-a9fa-c0656ea20f2e",
+      "position": 12,
+      "properties": {
+        "description": "“This program defines a variable called age and prints its value in a message.”\n\n“Then, we use age as the input to the `next_number` function and save its return value in a new variable called `next_age`.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c67a83bc-731b-494d-a9fa-c0656ea20f2e",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "f2439c16-ec0b-4e0b-81a2-37d0aee8b11a",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what value they think is stored in the variable `next_age`. Help students see that the value should be `16`, the result of taking the `age` variable and adding one."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2439c16-ec0b-4e0b-81a2-37d0aee8b11a",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "82c12cbb-0f6d-4923-96de-250804692cc8",
+      "position": 14,
+      "properties": {
+        "description": "“Since we saved the return value in a variable, we can use that variable in the rest of our program.”\n\n“Now, you’ll have a chance to write your own functions to define logic that programs can reuse.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "82c12cbb-0f6d-4923-96de-250804692cc8",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc",
+      "position": 15,
+      "properties": {
+        "progression_name": "Writing Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "1f183f58-7438-4c31-947b-8dbc2758ebae",
+      "position": 16,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f183f58-7438-4c31-947b-8dbc2758ebae",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "5dbb1fdd-1268-4475-aee5-14dd689d7272",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 3-7.\n- Level 3: Students write a function that prints a message.\n- Level 4: Students write a function that accepts input via a parameter.\n- Level 5: Students write a function that accepts multiple parameters.\n- Level 6: Students write a function that returns a value.\n- Level 7: Students complete a Check Your Understanding about reading a buggy Python program and identifying the problem.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, keep an eye out for common errors students might make when writing their first functions.\n- Some students might not indent lines of code inside a function, or they might have inconsistent indentation. Remind students that Python requires code inside a function to be indented—you can prompt them with the question “Is this line a part of your function?” to help students decide whether the line needs to be indented. Help students with inconsistent indentation visually align lines of code that belong to the same function.\n- Some students might try to use parameter variables names outside of the function. Explain to students that since parameters are inputs to functions, those variables are only available inside the function itself (in the function’s “body”).\n- Some students might struggle with following the control flow of the program, especially when working with return values. Help walk these students through the steps that a computer would follow to run the code: point out when a function is being called, what values are provided as inputs, where to use those inputs, and where the return value can be saved in a variable. Students might also need to be reminded of the syntax for returning a value: the starter code already includes the return keyword, but students will need to provide the specific value that is produced as output to complete each return line.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 7 as an assessment opportunity to evaluate how well students understand functions, parameters, and arguments. If students have trouble identifying the bug, ask them to look at the function and identify how many inputs the function needs. Help students compare that to the number of values that are provided as arguments each time the function is called.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5dbb1fdd-1268-4475-aee5-14dd689d7272",
+        "lesson_activity.key": "5e290cf6-768b-4990-a3ac-67265b50ecc7"
+      }
+    },
+    {
+      "key": "502ced24-4591-4230-baa3-afa0866bbc8b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "502ced24-4591-4230-baa3-afa0866bbc8b",
+        "lesson_activity.key": "26671980-da68-4ada-b048-51640ac33faf"
       }
     },
     {
@@ -2149,7 +2702,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Optionally use these timestamps to jump to key sections of the video:\n- `0:00–0:48` - Fallon introduces the Ice Bucket Challenge\n- `0:49–1:06` - Justin Timberlake challenges Fallon to take the Ice Bucket Challenge\n- `1:06–2:58` - Fallon and cast get ready to take the Ice Bucket Challenge\n- `2:58–3:30` - Fallon and cast take the Ice Bucket Challenge"
+            "markdown": "Optionally use these timestamps to jump to key sections of the video:\n- 0:00–0:48 - Fallon introduces the Ice Bucket Challenge\n- 0:49–1:06 - Justin Timberlake challenges Fallon to take the Ice Bucket Challenge\n- 1:06–2:58 - Fallon and cast get ready to take the Ice Bucket Challenge\n- 2:58–3:30 - Fallon and cast take the Ice Bucket Challenge"
           }
         ]
       },
@@ -2261,10 +2814,21 @@
       }
     },
     {
-      "key": "a174a910-fd6a-40af-a1e1-528c7db25f63",
+      "key": "f11088c8-2e41-491c-b778-6d61cdc9a2ab",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 3.\n- Level 1: Predicting. Students read a simulate function that's been \"unrolled\" (the same calculation written out three times) and predict what it prints.\n- Level 2: Simulating. Students rewrite simulate using a for loop so it works for any number of days, not just three. They have a choice of continuing with the social media example, simulating an infectious disease, or simulating population growth.\n- Level 3: Check Your Understanding. Students answer a free response question about when to use for loops.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, watch for students who finish quickly. Prompt them to experiment with different start, growth, and target values to see how the simulation behaves. Or, prompt them to choose another scenario in the Level 2 choice level."
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f11088c8-2e41-491c-b778-6d61cdc9a2ab",
+        "lesson_activity.key": "80b36976-e283-46ce-8de7-b4000900ef3e"
+      }
+    },
+    {
+      "key": "a174a910-fd6a-40af-a1e1-528c7db25f63",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 3.\n- **Level 1:** Students read a `simulate` function that's been \"unrolled\" (the same calculation written out three times) and predict what it prints.\n- **Level 2:** Students rewrite `simulate` using a `for` loop so it works for any number of days, not just three. They have a choice of continuing with the social media example, simulating an infectious disease, or simulating population growth.\n- **Level 3:** Students answer a free response question about when to use `for` loops.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, watch for students who finish quickly. Prompt them to experiment with different start, growth, and target values to see how the simulation behaves. Or, prompt them to choose another scenario in the Level 2 choice level."
       },
       "seeding_key": {
         "activity_section.key": "a174a910-fd6a-40af-a1e1-528c7db25f63",
@@ -2280,6 +2844,1270 @@
       "seeding_key": {
         "activity_section.key": "a9fab881-298a-4a7e-a0a2-40b030289fa8",
         "lesson_activity.key": "7b9533d5-91f7-46d2-a7f9-1f22d7756efc"
+      }
+    },
+    {
+      "key": "e9e811a2-33b6-4f8d-9ff6-5e0d4bbb9256",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In 2022, Lionel Messi—a famous soccer player—made a post after winning the World Cup. How long do you think it took for the post to reach 10 million likes?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to think about virality in a different way: how quickly does a post reach a target number of views? Get students’ guesses from around the room, drumming up tension before the reveal.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you’d like to add a little competition to the warm up, you could log students’ predictions on the board and play a game where the student whose guess is closest to the actual time—without going over—is the winner."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e9e811a2-33b6-4f8d-9ff6-5e0d4bbb9256",
+        "lesson_activity.key": "55d8ee0b-99ea-4dbc-9c5b-26b2f938ec6d"
+      }
+    },
+    {
+      "key": "b4015926-7607-4123-b10d-57cb205e700c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal that the answer is 39 minutes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the theme of today’s lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b4015926-7607-4123-b10d-57cb205e700c",
+        "lesson_activity.key": "55d8ee0b-99ea-4dbc-9c5b-26b2f938ec6d"
+      }
+    },
+    {
+      "key": "b241fb3e-27f1-4724-a058-ba7f24ee7e84",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce students, by example, to a new form of simulation that continues until a goal is reached.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Time to 10 Million example.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pause to take student input on how many minutes they think it will take for the post to reach 10 million likes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Step through the simulation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out the difference between the simulation students just saw and the ones they created in the previous lesson.\n",
+        "duration": "5",
+        "name": "Time to 10 Million"
+      },
+      "seeding_key": {
+        "activity_section.key": "b241fb3e-27f1-4724-a058-ba7f24ee7e84",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "42ea2f97-2cfe-4646-aca3-336109b0fbcc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Teach students about while loops before they use them to implement a simulation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *`while` loop*.",
+        "duration": "10",
+        "name": "While Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "42ea2f97-2cfe-4646-aca3-336109b0fbcc",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "fa67da51-a944-4cab-85fc-67039011e153",
+      "position": 3,
+      "properties": {
+        "description": "A `while` loop is exactly the kind of loop that could be used to simulate a situation like the one we just saw. With a `while` loop, you can describe when the loop should keep repeating and when it should stop. Let’s look at a simple while loop to get our bearings.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa67da51-a944-4cab-85fc-67039011e153",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "c2106168-5437-4891-9f58-d410343f9916",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the example while loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2106168-5437-4891-9f58-d410343f9916",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "14edf1be-eeb9-4170-a8e6-b361684ff5c5",
+      "position": 5,
+      "properties": {
+        "description": "`while` loops often use a condition involving the value of a variable. In this `while` loop, the condition is `i < 3`. So, we can expect this loop to iterate while `i` is less than three.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14edf1be-eeb9-4170-a8e6-b361684ff5c5",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "da70fb70-2c0b-401b-9d89-e67ae5a919d2",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Step through the example while loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "da70fb70-2c0b-401b-9d89-e67ae5a919d2",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "06ecdae1-5e4f-4c05-be9f-e4bef8002480",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students apply what they’ve learned about while loops by implementing a simulation of a post going viral.",
+        "duration": "20",
+        "name": "Going Viral in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "06ecdae1-5e4f-4c05-be9f-e4bef8002480",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "90664874-d9bd-4133-bb64-bd3d9df1db53",
+      "position": 8,
+      "properties": {
+        "progression_name": "Going Viral in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "00b65665-d425-4830-90bf-1d79a3c97fe5",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "00b65665-d425-4830-90bf-1d79a3c97fe5",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "773d546f-7c50-4b2c-91d3-b20a7fb493bd",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 5.\n- **Level 1:** Students read a simulate function that's been \"unrolled\" (the same calculation written out three times) and predict what it prints.\n- **Level 2:** Students rewrite simulate using a `while` loop to implement one of three simulations of their choice.\n- **Level 3:** Students learn about logistic growth, a more realistic way to simulate growth.\n- **Level 4:** Students prompt AI to update their simulation so that it uses logistic growth.\n- **Level 5:** Students reflect on when to use `while` loops.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, watch for these scenarios:\n- **Level 2:** Students may write a condition that's off by one (e.g., `views <= target` instead of `views < target`) or forget to update views inside the loop, creating an infinite loop. If a student's program seems frozen, ask them to trace what changes (and doesn't change) inside the loop. You can also point students to the “Stop” button, which can end a program that’s stuck in an infinite loop.\n- Listen for students who finish quickly. Prompt them to experiment with different start, growth, and target values to see how the simulation behaves."
+      },
+      "seeding_key": {
+        "activity_section.key": "773d546f-7c50-4b2c-91d3-b20a7fb493bd",
+        "lesson_activity.key": "6add7323-e5f1-4562-af85-da6814fd0186"
+      }
+    },
+    {
+      "key": "8011a161-d3d6-48cd-a492-149abcf9d7f6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "8011a161-d3d6-48cd-a492-149abcf9d7f6",
+        "lesson_activity.key": "95488c5d-b960-425d-bf5d-23ad0f67ce03"
+      }
+    },
+    {
+      "key": "63df12d3-df2c-43d5-969f-d77ba256b32c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students connect the role of a QA engineer to finding bugs in algorithms and code, exploring skills that QA engineers use to troubleshoot software.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _debugging_."
+      },
+      "seeding_key": {
+        "activity_section.key": "63df12d3-df2c-43d5-969f-d77ba256b32c",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "0659290e-b556-4c93-ae39-c15b0d1a2621",
+      "position": 2,
+      "properties": {
+        "description": "“When you’re writing a program, it’s normal if the program doesn’t work perfectly the first time! Debugging is how we find problems in our programs and figure out how to fix them.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0659290e-b556-4c93-ae39-c15b0d1a2621",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "f75ae2dc-e74d-4ca0-90a6-48e383382726",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Spotlight the role of a QA Engineer. Explain that QA engineers are responsible for testing software products and making sure they work. QA engineers can help find bugs in computer software and identify when and why those bugs happen.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the “Role of a QA engineer” video, which introduces students to a real QA engineer talking about their responsibilities and priorities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the warm-up activity. Students will see the pseudocode for a buggy algorithm and will work with their partner to identify the bug."
+      },
+      "seeding_key": {
+        "activity_section.key": "f75ae2dc-e74d-4ca0-90a6-48e383382726",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "81526258-1ce2-459b-829d-17e0103a3f33",
+      "position": 4,
+      "properties": {
+        "description": "“In a moment, you’ll see the pseudocode for an algorithm for a music app. The algorithm should player the user’s favorite songs: playing all the 4-star and 5-star songs and skipping the 1-star, 2-star, and 3-star songs.”",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may need to be reminded that pseudocode is a way to plan out code using plain language. The structure of pseudocode can look like a programming language like Python, but is written to make it easier to focus on the logic rather than the language.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81526258-1ce2-459b-829d-17e0103a3f33",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "6e6fc7ff-27dd-4911-80db-ba6c33e5d912",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Help students find a partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to take the role of QA engineers by reading the pseudocode, discussing the logic, and identifying the bug.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students discuss, check in with pairs as they work through the pseudocode. For pairs that are having trouble finding the bug, suggest some debugging strategies:\n- Encourage students to read the code out loud.\n- Prompt students to trace the code one line at a time. For each line, they can consider what the computer will do with that line and whether that makes sense.\n- Have students imagine some sample inputs to the program (for example, a list of 5-star songs, or a list of 2-star songs). Ask them to run through the pseudocode and see how the program would behave for the sample input.\n- Ask students how they would have written the code so that they can evaluate whether their logic matches the pseudocode.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also point students to the debugging strategies in their Unit Guide if they need help getting started with finding the bug.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6e6fc7ff-27dd-4911-80db-ba6c33e5d912",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "56251076-7e4e-4332-955e-053ef2606883",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once most pairs have had a chance to discuss the pseudocode, invite one or more pairs to share with the class what bug they identified. Once the class has identified the bug (rating >= 4 or rating <= 5 will play all songs, not just the 4-star and 5-star songs), move on."
+      },
+      "seeding_key": {
+        "activity_section.key": "56251076-7e4e-4332-955e-053ef2606883",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "a28ca45c-d9af-4b01-9f09-7a025af643d1",
+      "position": 7,
+      "properties": {
+        "description": "“Today, we’ll be exploring strategies we can use to help find and fix bugs in our programs.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a28ca45c-d9af-4b01-9f09-7a025af643d1",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "fed58d8c-cef6-47c1-ac7e-e914a9c0ac6c",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "fed58d8c-cef6-47c1-ac7e-e914a9c0ac6c",
+        "lesson_activity.key": "a8fa15db-d14f-42b0-93b3-febfcd0ac48c"
+      }
+    },
+    {
+      "key": "373b25da-5016-4d82-96f7-e2206d088790",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students look at a program description and some sample input/output pairs and identify bugs. Through this activity, students learn to critically evaluate the results of running a program multiple times and to use those results to consider where possible bugs in programs might be.\n",
+        "duration": "15",
+        "name": "Finding Bugs"
+      },
+      "seeding_key": {
+        "activity_section.key": "373b25da-5016-4d82-96f7-e2206d088790",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "1d0eae5e-4224-4fa3-abfc-2ec04a18a04f",
+      "position": 2,
+      "properties": {
+        "description": "“In order to fix bugs in our programs, we have to find those bugs first! A great way to find bugs is by testing our code. We can run our code multiple times and see what happens.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d0eae5e-4224-4fa3-abfc-2ec04a18a04f",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "c31c81e1-8cc1-411f-91a4-9e8973fc2005",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure each student has a partner. You can re-use the partner groups from the warm-up activity or help students find new partners.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c31c81e1-8cc1-411f-91a4-9e8973fc2005",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "558715b1-4785-4327-b3d1-8a4f36114813",
+      "position": 4,
+      "properties": {
+        "description": "“In this activity, you’ll see a description of three different programs. Then, you’ll see some inputs and outputs for that program, but the output won’t always match what the program is supposed to do. You and your partner should look at the inputs and outputs and discuss together what the bug in each program is.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "558715b1-4785-4327-b3d1-8a4f36114813",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "9f2f9f9d-ae87-4831-8471-a22879b99620",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each pair a copy of the Finding Bugs Activity Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the activity guide in pairs. The activity guide describes three different programs, each of which has been implemented with a logical bug. Students should evaluate the inputs and outputs to identify the mistakes and suggest where the bug might be.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around as pairs work through the activity guide. If students are struggling, suggest strategies to help them first identify which outputs are incorrect. For example, you might have students read the program description and then predict what the outputs should be by looking only at the input column. Then, they can compare their predicted output to the actual output produced by the program. Once students have identified which outputs are wrong, encourage them to think about what kinds of inputs lead to the program making mistakes.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What strategies are helpful for finding and fixing bugs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how they approached the process of debugging, with the goal of identifying general strategies that QA engineers and other software developers can use for debugging their programs. Strong responses will identify problem-solving techniques that can be used to identify errors, such as “we walked through the inputs one at a time” or “we tried to find patterns in the mistakes the program makes”. If students jump straight to describing their solution, follow up by asking them how they identified that problem. Once students have brainstormed a few strategies, you can move on.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to add to the debugging strategies list in their Unit Guide as they share their debugging strategies.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f2f9f9d-ae87-4831-8471-a22879b99620",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "7d099226-2bc5-42ce-b3da-2477b06cc63a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students get practice debugging real Python programs by reading code, running code, reading error messages, and fixing errors in code. Through the process, students are also exposed to smart home devices as possible applications of programming logic.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the idea of “smart” devices in the home. Over time, companies that make thermostats, door locks, lightbulbs, vacuum cleaners, and other home products have been building more intelligent features into those products.",
+        "duration": "15",
+        "name": "Debugging a Smart Home"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d099226-2bc5-42ce-b3da-2477b06cc63a",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "7f5d36b5-0386-429e-98da-ff3373cd5593",
+      "position": 7,
+      "properties": {
+        "description": "“In order for smart home devices to work, they need to be programmed to know what to do, and someone needs to verify that they work correctly. In this activity, we’ll act as QA engineers identifying and fixing bugs in these kinds of programs.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7f5d36b5-0386-429e-98da-ff3373cd5593",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02",
+      "position": 8,
+      "properties": {
+        "progression_name": "Debug a Smart Home"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "350f091e-e3a4-4012-bc39-3436515e45d1",
+      "position": 9,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "350f091e-e3a4-4012-bc39-3436515e45d1",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "6c48b3d0-1f70-49ef-94c3-9880cf865fa8",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 4.\n- Level 1: Students find and fix a syntax error in a smart speaker program.\n- Level 2: Students find and fix a type error in a robot vacuum program.\n- Level 3: Students find and fix a logical error in a smart lightbulb program.\n- Level 4: Students answer a free-response question that involves reading and understanding a Python error message.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For each level, encourage students to start by running the program and seeing what happens. For students that are having trouble reading error messages, point them towards the parts of the error message where Python identifies the line number and the piece of code that is causing the problem. You can also encourage students to talk through the code with a classmate or talk to the AI Tutor to help them identify and fix bugs.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each level focuses on a different type of error. Syntax errors are mistakes in words and symbols in the code that prevent the computer from understanding the program. Type errors are mistakes where the computer expects one type but gets another (like using an integer where a string should be). Logical errors are mistakes where the instructions defined by the program cause an incorrect result. Students don’t need to know the names for each of these types of errors, but consider introducing them if it helps students understand the error messages they see or how errors differ from one another."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 4 as formative assessment of whether students are able to extract relevant information from a Python-generated error. If students are having trouble interpreting the error message, prompt them with questions that help them identify relevant parts of the error message that can help with debugging. For example, you might ask “What’s the name of the variable that Python is complaining about?”, “What line of code is causing the problem?”, or “What does it mean for a variable to be defined?”\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c48b3d0-1f70-49ef-94c3-9880cf865fa8",
+        "lesson_activity.key": "3ce34984-d7f0-4420-a951-34e32eaf6056"
+      }
+    },
+    {
+      "key": "c99be40e-fec5-4083-9080-7d590d8158b6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "c99be40e-fec5-4083-9080-7d590d8158b6",
+        "lesson_activity.key": "6bcee4cd-4cb8-460e-afab-ef689f7e7abf"
+      }
+    },
+    {
+      "key": "9398c076-8dff-420a-96aa-593c374485d4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce autocomplete."
+      },
+      "seeding_key": {
+        "activity_section.key": "9398c076-8dff-420a-96aa-593c374485d4",
+        "lesson_activity.key": "ef1f1b16-1ee0-4aaa-881f-50b2f42496e9"
+      }
+    },
+    {
+      "key": "8bf5c980-041e-494d-91a2-05a86a73a22a",
+      "position": 2,
+      "properties": {
+        "description": "You've probably used autocomplete more times than you can count: every time your phone suggested the next word in a text or every time a search box guessed what you were looking for, you were using autocomplete. Autocomplete is everywhere, but most people never stop to ask: how does a computer know what I'm trying to type?",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to imagine using a phone or computer with autocomplete completely turned off. Students may recognize how much they rely on it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8bf5c980-041e-494d-91a2-05a86a73a22a",
+        "lesson_activity.key": "ef1f1b16-1ee0-4aaa-881f-50b2f42496e9"
+      }
+    },
+    {
+      "key": "6a86bfcc-776e-4ca4-9652-aea1a7f8573b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do you think a computer finds the words a user meant to type?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface students' ideas and intuitions about how autocomplete might work—there are no wrong answers yet. Listen for ideas that hint at the strategy students will explore: finding words that begin with what a user has already typed. Students may also raise ideas like \"the computer guesses what's most common\" or \"it learns from what you usually type.” These are considerations in today’s autocomplete systems, though they go beyond what students will explore in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a86bfcc-776e-4ca4-9652-aea1a7f8573b",
+        "lesson_activity.key": "ef1f1b16-1ee0-4aaa-881f-50b2f42496e9"
+      }
+    },
+    {
+      "key": "f9495948-f405-4ff6-b539-14695d6afa87",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students will learn about prefix matching—a rule autocomplete can follow to predict the words a user might mean to type.",
+        "duration": "5",
+        "name": "Matching Words"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9495948-f405-4ff6-b539-14695d6afa87",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "5a9d16b0-4295-442f-9425-240f113ba753",
+      "position": 2,
+      "properties": {
+        "description": "To decide which words to suggest, autocomplete needs a rule to follow.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5a9d16b0-4295-442f-9425-240f113ba753",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "84af0315-5bc9-4b9d-b140-309fefd656c6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to prefix matching."
+      },
+      "seeding_key": {
+        "activity_section.key": "84af0315-5bc9-4b9d-b140-309fefd656c6",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "a8d9d05c-bbc1-40ca-a029-d48e6ca977e0",
+      "position": 4,
+      "properties": {
+        "description": "Autocomplete often finds words that begin with what a user has already typed. This is called prefix matching.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a8d9d05c-bbc1-40ca-a029-d48e6ca977e0",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "2c392d84-d3f0-4b61-a641-5033b8a04b30",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Suppose a user typed the letters “th.” What words could autocomplete suggest?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Check for students’ understanding of prefix matching. Prompt students to shout out examples, or call on students as they raise their hands. Valid words begin with “th.” Once students have named 3–4 valid words, you can move on."
+      },
+      "seeding_key": {
+        "activity_section.key": "2c392d84-d3f0-4b61-a641-5033b8a04b30",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "46268223-2a44-40cb-a3c4-9b1b2cdd1e0e",
+      "position": 6,
+      "properties": {
+        "description": "Today, you’ll write your own simple version of autocomplete in Python.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "46268223-2a44-40cb-a3c4-9b1b2cdd1e0e",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "cfe70676-b7a5-4e34-9be8-935d4a9e094e",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the program students will write."
+      },
+      "seeding_key": {
+        "activity_section.key": "cfe70676-b7a5-4e34-9be8-935d4a9e094e",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "8d0eebc0-53e6-4d67-860f-8b5692e42df1",
+      "position": 8,
+      "properties": {
+        "description": "The program you’ll write will first ask you for a ‘fragment.’ A fragment is part of a word that a user has already typed, like ‘re.’ Next, the program prompts you for a prediction. This is the word the user may have meant to type. Let’s say you type in ‘read.’ If the prediction matches the fragment, the program will say ‘Could be!’ Otherwise, it will say ‘Probably not.’",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d0eebc0-53e6-4d67-860f-8b5692e42df1",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "5a70d86d-c7cc-42b8-b5b6-2387979f8f1b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students create a simple autocomplete program that uses prefix matching in Python.",
+        "duration": "10",
+        "name": "Autocomplete in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a70d86d-c7cc-42b8-b5b6-2387979f8f1b",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc",
+      "position": 10,
+      "properties": {
+        "progression_name": "Autocomplete in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "b54733d3-981c-47aa-884d-c3fdb758a00f",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to begin Autocomplete in Code.\n- **Level 1:** Students explore their starter code and predict what it will do.\n- **Level 2:** Students use AI to learn how to implement prefix matching in Python."
+      },
+      "seeding_key": {
+        "activity_section.key": "b54733d3-981c-47aa-884d-c3fdb758a00f",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "822c0f05-13af-400f-82d6-5cf29cc4ed9c",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Prompt students to see a limitation of their autocomplete program, motivating them to learn about objects and string methods in order to address the limitation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to run their program and notice that it doesn’t consider \"Read\" to be a valid prediction when a user enters \"re.\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think your program doesn’t treat \"Read\" as a valid prediction when a user types \"re\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to consider why a seemingly valid prediction isn’t valid according to their program. Look for students to suggest that it could be due to the strings’ mixed capitalization: the \"r\" in \"re\" is lowercase, while the \"r\" in \"Read\" is uppercase. If students don’t discuss capitalization, consider prompting students to look beyond the letters and to consider capitalization explicitly. Reinforce students’ observations about capitalization by revealing to them that Python compares strings case-sensitively: that is, uppercase and lowercase letters are treated differently.",
+        "duration": "10",
+        "name": "Introducing Objects and Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "822c0f05-13af-400f-82d6-5cf29cc4ed9c",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "a850b2e8-54e3-4b95-8b01-c64395a4548d",
+      "position": 13,
+      "properties": {
+        "description": "To make Python compare strings case-insensitively, we need to learn about what strings actually are. A string is, in fact, something called an object.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a850b2e8-54e3-4b95-8b01-c64395a4548d",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "c9d55b60-4d69-4ca8-9988-16f736135391",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *object*."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9d55b60-4d69-4ca8-9988-16f736135391",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "14968058-d891-415a-9efa-646bbd902e76",
+      "position": 15,
+      "properties": {
+        "description": "In Python, all values—like strings—are really objects. This fact will come in handy today, as you’ll get to use some of the functions that come with strings. There’s actually a special name for the functions that belong to an object. Let’s see that next.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14968058-d891-415a-9efa-646bbd902e76",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "9fba4f19-be88-44d8-a142-94d2b2c14feb",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *method*."
+      },
+      "seeding_key": {
+        "activity_section.key": "9fba4f19-be88-44d8-a142-94d2b2c14feb",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "6fa7627c-f1a0-41c3-9d7e-ef1bf0fc1801",
+      "position": 17,
+      "properties": {
+        "description": "You’ll get to use string methods today: methods that operate on strings. Let’s look more closely at a few methods you might use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6fa7627c-f1a0-41c3-9d7e-ef1bf0fc1801",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "88ee0d8c-8845-4fbb-ac43-6c3802c1416c",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to the `upper` method.\n- Point out that, in Python, programmers call methods via dot notation: that is, one writes the name of the object, followed by a dot, followed by the method one wishes to call.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to the `lower` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "88ee0d8c-8845-4fbb-ac43-6c3802c1416c",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "8a4f0c19-ce8c-4940-b8bb-af73871484ca",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students improve their autocomplete program to find words case-insensitively.",
+        "duration": "10",
+        "name": "Improving Autocomplete"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a4f0c19-ce8c-4940-b8bb-af73871484ca",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "ce3e4719-5fb3-4071-ada2-f3e95fedad97",
+      "position": 20,
+      "properties": {
+        "progression_name": "Improving Autocomplete"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce3e4719-5fb3-4071-ada2-f3e95fedad97",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "737239d8-5c24-450e-ba5b-db4251594b1d",
+      "position": 21,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "737239d8-5c24-450e-ba5b-db4251594b1d",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "c9c8d8db-29b3-4626-9e8a-7933ecc51de6",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3.\n- **Level 3:** Students use AI to learn how to implement case-insensitive prefix matching in Python.\n- **Level 4:** Students complete a Check Your Understanding, answering the Question of the Day on the platform."
+      },
+      "seeding_key": {
+        "activity_section.key": "c9c8d8db-29b3-4626-9e8a-7933ecc51de6",
+        "lesson_activity.key": "5adfefa7-f239-4a4c-a8ce-e2543ec8f01a"
+      }
+    },
+    {
+      "key": "991c8a71-a9b2-4aac-9e65-f94c0cae7b78",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "991c8a71-a9b2-4aac-9e65-f94c0cae7b78",
+        "lesson_activity.key": "3eca9b19-c721-466c-a132-d0e7d02ba7c6"
+      }
+    },
+    {
+      "key": "c20a7d32-0e3e-4375-b83d-517f367d6e2b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Help students experience how a series of well-chosen yes-or-no questions can quickly narrow a large set of possibilities down to a single answer. This is the core idea behind a decision tree.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up and explain the rules of 10 Questions:\n- One partner thinks of an item from around the classroom.\n- The other partner asks up to 10 yes-or-no questions to figure out what the item is.\n- After one round, partners switch roles.",
+        "duration": "10",
+        "name": "10 Questions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Shorten to 5 questions per round if time is tight. If students fall into pure guessing (\"Is it a pencil? Is it an eraser?\"), nudge them toward broader category questions like \"Is it bigger than a phone?\" or \"Is it made of metal?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c20a7d32-0e3e-4375-b83d-517f367d6e2b",
+        "lesson_activity.key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0"
+      }
+    },
+    {
+      "key": "0ae63c3f-1a7f-4841-b853-aedcd6bb770a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for the kinds of questions students are asking. Note pairs who ask category-splitting questions early (\"Is it something you write with?\")—you may want to call on them in the following discussion. If a pair is stuck only guessing, ask: \"What's a question whose answer would rule out a lot of items at once?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What kinds of questions worked best?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to reflect on questions that can quickly identify an unknown object from a large set of objects. Encourage students to recognize that broad, category-splitting questions (e.g., \"Is it metal?\") rule out many possibilities at once, while specific guesses (\"Is it the stapler?\") rule out only one item. A smart sequence of yes/no questions can reach a specific answer surprisingly fast. If students don't arrive there on their own, call on a pair you noticed asking strong questions and walk through their sequence. Or, follow up with another question: “Did some questions quickly narrow down possibilities? What were they?” End the discussion once the class has generally arrived at the insight that, in this context, some questions are better than others because they rule out many possibilities."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ae63c3f-1a7f-4841-b853-aedcd6bb770a",
+        "lesson_activity.key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0"
+      }
+    },
+    {
+      "key": "fbab898e-c0b2-47c8-bc33-5bc6b30652ca",
+      "position": 3,
+      "properties": {
+        "description": "The game you just played—asking yes-or-no questions to narrow things down to one answer—is exactly how something called a decision tree works. Decision trees use the same strategy you just used: to identify a snack, to sort an email, even to help a doctor narrow down a diagnosis. Today you'll learn how decision trees work, and then build some of your own in Python.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fbab898e-c0b2-47c8-bc33-5bc6b30652ca",
+        "lesson_activity.key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0"
+      }
+    },
+    {
+      "key": "027379f2-fa62-45ba-910c-9cdb08452596",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "027379f2-fa62-45ba-910c-9cdb08452596",
+        "lesson_activity.key": "799aa3bd-240b-42c1-a618-cf82e10fa1e0"
+      }
+    },
+    {
+      "key": "e3ba542a-d109-4390-b25d-be647818859c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce the vocabulary of decision trees and walk the class through tracing an example tree as a group. By the end, students should be confident reading a decision tree. They'll apply this skill to code in the next activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the context this section’s examples will use.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pose a question about the scenario to motivate the introduction of decision trees: \"Could AI do the same?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decision tree*. Explain that a decision tree is like a visual version of the 10 Questions game: a diagram where each branching point is a question and the bottom of each branch is a final answer.",
+        "duration": "10",
+        "name": "Tracing Decision Trees Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3ba542a-d109-4390-b25d-be647818859c",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "5e6f288f-8acb-412a-8514-ee90b9540927",
+      "position": 2,
+      "properties": {
+        "description": "Let’s look at a few examples of decision trees and learn how to read them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5e6f288f-8acb-412a-8514-ee90b9540927",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "f2ec342a-94e3-48a1-bd28-a1ecdd39d8d4",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce an example decision tree."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2ec342a-94e3-48a1-bd28-a1ecdd39d8d4",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "6a16fbd7-4710-4a99-ad77-b9434f3b7011",
+      "position": 4,
+      "properties": {
+        "description": "This decision tree helps a person know what to do when they feel sick. Let’s see how it works by looking at multiple people.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6a16fbd7-4710-4a99-ad77-b9434f3b7011",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "8ced196b-8d0a-4834-a7e4-5832952917d3",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Trace the tree together by calling on students at each step:\n- “What question does the tree ask first?”\n- “Based on our scenario, which branch do we follow?”\n- “Now what does the tree ask?”\n- “Where do we end up?”\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat with a different example."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ced196b-8d0a-4834-a7e4-5832952917d3",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "5d6d901f-745e-44b4-babe-705d904f1706",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Move from tracing decision trees on slides to building them in Python using nested conditional statements. Students predict what a tree does then implement one step by step.",
+        "duration": "20",
+        "name": "Decision Trees in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d6d901f-745e-44b4-babe-705d904f1706",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "6917d157-b4d3-4a86-862c-c7d2d165184d",
+      "position": 7,
+      "properties": {
+        "description": "We just traced decision trees together. Now you'll see what the same structure can look like in code. The questions in a decision tree are really just conditional statements.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6917d157-b4d3-4a86-862c-c7d2d165184d",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "bbcb49ed-ed2a-401d-bc72-4146aa015875",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Illustrate how the previous decision tree’s logic is now implemented via conditional statements in Python. Emphasize how to read nested conditionals."
+      },
+      "seeding_key": {
+        "activity_section.key": "bbcb49ed-ed2a-401d-bc72-4146aa015875",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "20611278-979a-40b9-b68c-4ed20632a2af",
+      "position": 9,
+      "properties": {
+        "progression_name": "Decision Trees in Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "8c20aac1-77b0-4837-8bc3-761b5d23a388",
+      "position": 10,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c20aac1-77b0-4837-8bc3-761b5d23a388",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "7a247298-5593-48c0-96af-a7fa8b5c3b46",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to complete Levels 1 through 4.\n- Level 1: Students read a decision tree written in Python and predict the decision it will make for a given input.\n- Level 2: Students choose between two contexts, implementing a decision tree that asks one question.\n- Level 3: Students extend the previous decision tree to ask two questions.\n- Level 4: Students complete a Check Your Understanding that asks them to describe a decision tree in words.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who:\n- Get tangled in nested conditional statements. Walk them through the indentation as a tree shape. Consider having them write comments to make the structure clearer.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For students who finish early, challenge them to extend their Level 3 tree with a third, fourth, or fifth level of nesting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7a247298-5593-48c0-96af-a7fa8b5c3b46",
+        "lesson_activity.key": "20e54dae-b4da-4bd6-ab93-e791111fb7e0"
+      }
+    },
+    {
+      "key": "56bbd949-da95-4165-bb18-f3e95e2bd756",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Now that you’ve seen decision trees, what kinds of problems do you think they can solve?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to imagine the kinds of problems that could be solved by decision trees. Strong answers will identify problems that suit a decision tree’s structure: generally, problems that have known \"inputs” and that can be solved by asking a series of questions about those inputs. For instance, the problem of figuring out what to wear in the morning is a good example of a problem a decision tree could solve: the problem’s inputs (e.g., the weather forecast, where you’ll be that day) are known, and it’s possible to ask questions about those inputs to arrive at a conclusion. Weaker answers may identify problems that suit only a decision tree’s goals: generally, any problem for which it’s helpful to reach a “decision.” Encourage students to propose specific problems. As they propose these problems, reason with them about whether the structure a decision tree offers is truly a good fit for the problem: is it, in fact, possible to know the problem’s inputs and to ask questions about those inputs that would lead to a good decision? Once the class has identified a few problems, continue with the Wrap Up.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the Question of the Day in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "56bbd949-da95-4165-bb18-f3e95e2bd756",
+        "lesson_activity.key": "7d937d15-1457-4a58-bf4a-f5d15f00a31b"
+      }
+    },
+    {
+      "key": "51222e68-7312-4146-b105-2fd3811847d2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a new student at school wants your advice about what classes to take. What questions would you ask them first to help you come up with good advice?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should suggest questions that uncover information about a student that might indicate what classes they would be interested in. Some questions might be about the student’s prior course experiences (e.g. “What was your favorite class last year?”, “What math classes have you taken already?”) and other questions might be about the student’s interests (e.g. “Do you like history?”, “What do you want to do after high school?”, “What do you like to do for fun?”). If students struggle to think of questions, you can prompt them to think about why a class might be a better fit for one student than another. Once students have suggested a variety of different questions, end the discussion.",
+        "duration": "10",
+        "name": "Warm-Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To give students more opportunities to brainstorm possibilities, consider having students talk to each other in pairs before students share ideas in the whole-class discussion.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "51222e68-7312-4146-b105-2fd3811847d2",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "3fb5e4d9-007f-4541-b745-f07b6eb4da29",
+      "position": 2,
+      "properties": {
+        "description": "“When helping someone make a decision, it’s often useful to have a conversation with them first, asking questions that can help make a better decision.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3fb5e4d9-007f-4541-b745-f07b6eb4da29",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "613a6ef7-d1e0-41af-93a7-777f28c17cab",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "613a6ef7-d1e0-41af-93a7-777f28c17cab",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "f9fe29f6-55b9-4486-9531-626a49a66cd5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students start brainstorming possible real-world use cases for conversational AI that are of personal interest to them. They begin to plan the specific decisions that their conversational AI might suggest.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define conversational AI.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students for examples of conversational AI they might already know about or use.",
+        "duration": "15",
+        "name": "Brainstorming Conversational AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9fe29f6-55b9-4486-9531-626a49a66cd5",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "20ce9734-23a3-45de-882e-5abfbfbd6dff",
+      "position": 5,
+      "properties": {
+        "description": "“A common way that people interact with AI is through conversations. People can talk back and forth with AI, and AI can provide answers based on what it hears. For the next few days, you’ll be implementing your own conversational AI that can help users make a decision.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "20ce9734-23a3-45de-882e-5abfbfbd6dff",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "05631d69-d536-4cc2-b4d1-fd54444d0b10",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give some examples of types of decisions that an AI could help with by asking questions of a user. For example, a conversational AI might help a user decide where to eat, what movies to watch or books to read, or what to do this weekend. Tell students that they can decide what kind of decision they want their AI to help with."
+      },
+      "seeding_key": {
+        "activity_section.key": "05631d69-d536-4cc2-b4d1-fd54444d0b10",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "a112cd5a-7b01-461a-aec0-22ab29b259a5",
+      "position": 7,
+      "properties": {
+        "description": "“Modern conversational AI can understand open-ended language; today, you’ll build a rule-based version that keeps it simple with yes/no questions.”\n\n“The project you’ll create will ask the user questions. Based on the answers to those questions, your program will ask more follow-up questions, and eventually suggest a decision.”",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a112cd5a-7b01-461a-aec0-22ab29b259a5",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "d3864bcd-2377-4a63-b4a3-266e1a30c2cb",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example decision tree on the slide. Explain that the decision tree branches based on the answer to the AI’s question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out that the decision tree shown on the slide branches just once, but decision trees can branch multiple times by asking follow-up questions. For example, if a user says they like music, a follow-up question might be “Do you like to sing?”\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the Conversational AI Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Step 1 of the Project Planning Guide. Students will brainstorm possible topics that their conversational AI could help with and brainstorm a list of specific decisions the AI could suggest.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the activity, check in with students about their brainstorming process. For students who need help brainstorming, encourage them to think about what they know a lot about and topics for which they would be able to provide good advice. As students brainstorm specific decisions, encourage students not to worry yet about what particular questions will lead to their AI recommending those decisions: for now, the focus is on generating ideas first.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To help students generate ideas, encourage them to share their brainstorming with their neighbors and to suggest ideas to one another.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d3864bcd-2377-4a63-b4a3-266e1a30c2cb",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "2b4da61d-e998-4be5-be69-3dc49f5826cf",
+      "position": 9,
+      "properties": {
+        "progression_name": "Brainstorming Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b4da61d-e998-4be5-be69-3dc49f5826cf",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "41b96b57-26bd-4fae-83e2-5cbe8915e38b",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 use AI Chat to brainstorm more decisions for their conversational AI.\n- Level 1: Students brainstorm more possible decisions for their conversational AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look and listen for the following:\n- Students who don't know what to ask the AI Chat. Help students write a prompt that describes their idea for their project and any possible decisions they’ve already brainstormed in Step 1 of their Project Planning Guide. As students read the responses from AI Chat, encourage them to think about which ones make sense for their project, and have students add any new ideas they like to their Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "41b96b57-26bd-4fae-83e2-5cbe8915e38b",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "cadc5953-afd6-4c01-a930-59dc1423f703",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students will draw a first draft of their decision tree, planning the questions and answers that will be asked to help lead the conversational AI to make a decision.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the project requirements and project rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Step 2 of the Project Planning Guide, where they will draft the logic their conversational AI will follow by drawing a decision tree.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they draw their decision trees.\n- Students can represent the decision tree however they’d like, as long as it’s visually clear how questions branch into other questions or decisions. For students looking for how to get started, encourage them to write a first question at the top of the tree and draw lines representing each possible answer.\n- Remind students that this is just a draft! They’ll have opportunity to revise and iterate on their decision tree throughout the project.\n- Some students might struggle to come up with questions to ask. In that case, you can point students back to their list of specific decisions they brainstormed in Step 1 and ask them to think about how they’d categorize those suggestions into groups. For example, if a student is creating a conversational AI to recommend weekend activities, they might notice that some of their decisions are “outdoor” activities and others are “indoor” activities, which could be then be turned into a question (“Do you prefer outdoor activities?”)\n- For students who are concerned, let them know that not all conversations need to have the same number of questions. For example, it’s okay if one path through the decision tree only involves two questions while another path involves three.",
+        "duration": "15",
+        "name": "Draft a Decision Tree",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use pencil, so that they can erase and revise parts of their decision tree as they iterate on their design.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cadc5953-afd6-4c01-a930-59dc1423f703",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "78540ded-15a8-49aa-82c2-9c4e99e5d3ce",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to complete the Day 1 Reflection section in their Project Planning Guide.",
+        "duration": "5",
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "78540ded-15a8-49aa-82c2-9c4e99e5d3ce",
+        "lesson_activity.key": "d0006894-a330-45ac-9ddc-30795bd9e7c5"
+      }
+    },
+    {
+      "key": "e894c444-6e17-45f0-97ec-01dd7dbc642d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to pull out their Project Planning Guide from Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take turns sharing their decision tree diagram with their partner. Partners should make suggestions for each other’s decision trees.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share their decision trees with each other, ask them to offer suggestions to help their partner iterate on their decision tree. If students struggle to provide feedback, prompt them with questions like “What other decisions could you imagine the AI making?” or “What other questions might be useful to help the AI make a good decision?”",
+        "duration": "10",
+        "name": "Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e894c444-6e17-45f0-97ec-01dd7dbc642d",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "411cb054-e3cc-4340-85ec-e3b058861500",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students revise their decision tree by iterating on their own logic and responding to feedback provided by their partner during the warm-up activity.\n",
+        "duration": "10",
+        "name": "Revise Your Decision Tree"
+      },
+      "seeding_key": {
+        "activity_section.key": "411cb054-e3cc-4340-85ec-e3b058861500",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "9ff92a15-1e81-4ff7-a630-f2d2e193daf1",
+      "position": 3,
+      "properties": {
+        "description": "“Before we start writing code, it’s helpful to think through the logic first. As you look at the draft of your decision tree, think about how you might improve it. Do you want to add or remove any decisions? Do you want to change any questions or change the order in which they’re asked? Now, you’ll have a chance to revise your decision tree based on your own ideas and your partner’s feedback.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ff92a15-1e81-4ff7-a630-f2d2e193daf1",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "9b6eacb3-c7eb-4406-b6c4-0958296ffa62",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete Step 3 in their Project Planning Guide. Students will revise their decision trees by thinking about their partner’s feedback and by considering how they want their conversational AI to behave.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in on students as they revise their decision trees. For students who aren’t sure what to change, ask them whether there are other questions they could ask to help make a good decision. You can also encourage students to check their logic for their decision tree to make sure that each decision matches the questions that led to that decision. If any decision is in the wrong place, students might move that decision to somewhere else in the tree."
+      },
+      "seeding_key": {
+        "activity_section.key": "9b6eacb3-c7eb-4406-b6c4-0958296ffa62",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "be36414e-3d74-4de2-a660-1eb479981d1c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students begin translating their logical ideas for their decision tree into Python code, using functions, variables, and conditional statements.\n",
+        "duration": "20",
+        "name": "Start Building Conversational AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "be36414e-3d74-4de2-a660-1eb479981d1c",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "7a2e1284-4617-4221-893f-5558c40a8718",
+      "position": 6,
+      "properties": {
+        "description": "“In a moment, you’re going to take the decision tree you’ve designed and turn it into a Python program that you can talk to. You’ll use if statements to let your program branch in different directions, just like the decision tree you drew branched in different directions based on answers to questions.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7a2e1284-4617-4221-893f-5558c40a8718",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194",
+      "position": 7,
+      "properties": {
+        "progression_name": "Build Conversational AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "e8bec806-1d72-42f1-8f0d-b597a66299b7",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the code example on the slide. In this activity, students will have access to a pre-written function called `ask`, which asks a question to the user and prompts them for a yes/no answer. Explain that the function will also check to make sure that the user’s response is valid: if it’s not valid, the user will be prompted to try again.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the `ask` function returns `True` if the user types “yes” and `False` if the user types “no”. The output of the function can then be used in an if statement to decide what logic to run.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to begin implementation of the Conversational AI Project.\n- Level 2: Students practice using the ask function in preparation for building their own conversational AI.\n- Level 3: Students implement their decision tree as a Python program to build conversational AI.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that they’ll have opportunity the next day to work on this program, so they don’t need to finish it today.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look and listen for the following:\n- Students who don't know where to start. Point them towards their decision tree (e.g. by asking “What’s the first question you should ask the user in your program?”) Encourage students to implement and test their code one step at a time, rather than trying to build the entire program first and then run it.\n- Students who aren’t sure how to ask follow-up questions. Remind students that if statements can be nested inside of other if statements, as long as each additional block of code is indented more. Some students might struggle with the nested indentation, so help those students identify what lines of code should only run if a particular condition is true or false, and then help those students indent those lines appropriately.\n- Students who finish early. Encourage students to test their program by running it a few times and providing different answers. Students can continue iterating on their program so that it can ask more questions and make better decisions.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Level 2 as an opportunity to assess students’ comfort with function calls, storing using return values from functions, and using conditional logic. If there are parts of Level 2 that students struggle with, help students walk through the code step by step so that they can identify the role of each part of the program, helping to prepare students to write that logic themselves in Level 3.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Students may be curious about the implementation of the ask function. Students don’t need to know how the function itself is implemented, but they’re welcome to explore it if they’re interested!\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e8bec806-1d72-42f1-8f0d-b597a66299b7",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "ef36f9f1-e152-4bb5-bf78-79b586a68153",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to complete the Day 2 Reflection section in their Project Planning Guide.\n",
+        "duration": "5",
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef36f9f1-e152-4bb5-bf78-79b586a68153",
+        "lesson_activity.key": "f7440683-65cb-4029-b22a-503064c720da"
+      }
+    },
+    {
+      "key": "aea14358-20b2-4307-b84f-07e863746e7d",
+      "position": 1,
+      "properties": {
+        "description": "“Take a look at this code. There are two bugs that will prevent this program from working. What bugs do you see?”\n",
+        "duration": "10",
+        "name": "Warm-Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aea14358-20b2-4307-b84f-07e863746e7d",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
+      }
+    },
+    {
+      "key": "6afc7a32-28e9-4885-be67-f09b3a91c0de",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss with their neighbors what bugs they see, then invite students to share answers with the class for what bugs they see and how to fix them. There are two bugs: missing quotation marks around the string in the argument to ask, and extra indentation of the else block.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6afc7a32-28e9-4885-be67-f09b3a91c0de",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
+      }
+    },
+    {
+      "key": "0caafee5-0ef9-4cc8-9a99-5a1319fcf07f",
+      "position": 3,
+      "properties": {
+        "description": "“Remember, it’s normal to run into bugs in your code, especially as we’re starting to write longer programs. It’s often helpful to test your code as you go, so that you can catch bugs earlier in the development process.”\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0caafee5-0ef9-4cc8-9a99-5a1319fcf07f",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
+      }
+    },
+    {
+      "key": "f367e2ea-c014-4155-953d-d402b0905c6e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students complete the implementation of their conversational AI projects in Python.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to continue implementation of the Conversational AI Project.\n- Level 3: Students implement their decision tree as a Python program to build conversational AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look and listen for the following:\n- Students who don't know where to start. Point them towards their decision tree (e.g. by asking “What’s the first question you should ask the user in your program?”) Encourage students to implement and test their code one step at a time, rather than trying to build the entire program first and then run it.\n- Students who aren’t sure how to ask follow-up questions. Remind students that if statements can be nested inside of other if statements, as long as each additional block of code is indented more. Some students might struggle with the nested indentation, so help those students identify what lines of code should only run if a particular condition is true or false, and then help those students indent those lines appropriately.\n- Students who finish early. Encourage students to test their program by running it a few times and providing different answers. Students can continue iterating on their program so that it can ask more questions and make better decisions. Students can also help a classmate if they finish early.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students try each other’s conversational AI projects and provide feedback. Students can comment on what worked well and on what suggestions they might have for possible future additions.",
+        "duration": "30",
+        "name": "Build Conversational AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "f367e2ea-c014-4155-953d-d402b0905c6e",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
+      }
+    },
+    {
+      "key": "a94f82ea-c20a-43c6-948c-f66c2c714a8e",
+      "position": 5,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap-Up",
+        "progression_name": "End-of-Project Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "a94f82ea-c20a-43c6-948c-f66c2c714a8e",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
+      }
+    },
+    {
+      "key": "152357b6-57df-40bb-92df-1f6435271ea6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to complete the End-of-Project Reflection in Level 4."
+      },
+      "seeding_key": {
+        "activity_section.key": "152357b6-57df-40bb-92df-1f6435271ea6",
+        "lesson_activity.key": "6b028c1a-7a4e-4962-bb25-4c6b3646490e"
       }
     }
   ],
@@ -2529,10 +4357,10 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Asking Questions"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -2542,7 +4370,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1",
-        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+        "activity_section.key": "c1ebabfa-8fda-4ae9-8a16-4b994dce507a"
       },
       "level_keys": [
         "aif-y2-logic-based-ai-lesson4-level6-2026"
@@ -2550,6 +4378,160 @@
     },
     {
       "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict the Workouts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level1-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level1-2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict the Workouts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level2-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level2-2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level3-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level3-2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level4-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level4-2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level5-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level5-2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Writing Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level6-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level6-2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level7-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "1f183f58-7438-4c31-947b-8dbc2758ebae"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson5-level7-2026"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2571,7 +4553,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2593,7 +4575,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2615,7 +4597,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2637,7 +4619,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2659,7 +4641,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2681,7 +4663,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2703,7 +4685,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2713,7 +4695,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aif-y2-logic-based-ai-lesson7-level2-2026"
+          "aif-y2-logic-based-ai-lesson7-level2-v2-2026"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2721,11 +4703,77 @@
         "activity_section.key": "b251bbd1-0bc2-4340-8c6b-b8fba22c3afc"
       },
       "level_keys": [
-        "aif-y2-logic-based-ai-lesson7-level2-2026"
+        "aif-y2-logic-based-ai-lesson7-level2-v2-2026"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson7-level3-2026"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "f11088c8-2e41-491c-b778-6d61cdc9a2ab"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson7-level3-2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Going Viral in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson8-level1-2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Going Viral in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson8-level2-2026"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2735,15 +4783,411 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aif-y2-logic-based-ai-lesson7-level2-choice1-2026"
+          "aif-y2-logic-based-ai-lesson8-level3-2026"
         ],
-        "lesson.key": "lesson-7",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1",
-        "activity_section.key": "b251bbd1-0bc2-4340-8c6b-b8fba22c3afc"
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
       },
       "level_keys": [
-        "aif-y2-logic-based-ai-lesson7-level2-choice1-2026"
+        "aif-y2-logic-based-ai-lesson8-level3-2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Going Viral in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level4-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson8-level4-2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level5-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00b65665-d425-4830-90bf-1d79a3c97fe5"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson8-level5-2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debug a Smart Home"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson9-level1-2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debug a Smart Home"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson9-level2-2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debug a Smart Home"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level3-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson9-level3-2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level4-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "350f091e-e3a4-4012-bc39-3436515e45d1"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson9-level4-2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Autocomplete in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson10-level1-2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Autocomplete in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson10-level2-2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Improving Autocomplete"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level3-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "ce3e4719-5fb3-4071-ada2-f3e95fedad97"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson10-level3-2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level4-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "737239d8-5c24-450e-ba5b-db4251594b1d"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson10-level4-2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Decision Trees in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level1-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson11-level1-2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Decision Trees in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level2-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson11-level2-2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Decision Trees in Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level3-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson11-level3-2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level4-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8c20aac1-77b0-4837-8bc3-761b5d23a388"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson11-level4-2026"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Brainstorming Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level1-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2b4da61d-e998-4be5-be69-3dc49f5826cf"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson13-level1-2026"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Conversational AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level2-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson13-level2-2026"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Conversational AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level3-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson13-level3-2026"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-of-Project Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level4-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "a94f82ea-c20a-43c6-948c-f66c2c714a8e"
+      },
+      "level_keys": [
+        "aif-y2-logic-based-ai-lesson13-level4-2026"
       ]
     }
   ],
@@ -2889,7 +5333,91 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1",
-        "activity_section.key": "cd8fcc61-a6d2-41b5-b159-aadd1db1084d"
+        "activity_section.key": "c1ebabfa-8fda-4ae9-8a16-4b994dce507a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level1-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level2-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00eca889-8911-4fd5-b1a1-1ad058b7dc41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level3-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level4-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level5-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level5-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level6-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level6-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "df8acc7b-7afe-4c02-a12c-42fad14f7efc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson5-level7-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson5-level7-2026"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "1f183f58-7438-4c31-947b-8dbc2758ebae"
       }
     },
     {
@@ -2978,9 +5506,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aif-y2-logic-based-ai-lesson7-level2-2026",
+        "level.key": "aif-y2-logic-based-ai-lesson7-level2-v2-2026",
         "script_level.level_keys": [
-          "aif-y2-logic-based-ai-lesson7-level2-2026"
+          "aif-y2-logic-based-ai-lesson7-level2-v2-2026"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2990,14 +5518,266 @@
     },
     {
       "seeding_key": {
-        "level.key": "aif-y2-logic-based-ai-lesson7-level2-choice1-2026",
+        "level.key": "aif-y2-logic-based-ai-lesson7-level3-2026",
         "script_level.level_keys": [
-          "aif-y2-logic-based-ai-lesson7-level2-choice1-2026"
+          "aif-y2-logic-based-ai-lesson7-level3-2026"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "aif-year2-semester1-unit1",
-        "activity_section.key": "b251bbd1-0bc2-4340-8c6b-b8fba22c3afc"
+        "activity_section.key": "f11088c8-2e41-491c-b778-6d61cdc9a2ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson8-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level1-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson8-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level2-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson8-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level3-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson8-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level4-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "90664874-d9bd-4133-bb64-bd3d9df1db53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson8-level5-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson8-level5-2026"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "00b65665-d425-4830-90bf-1d79a3c97fe5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson9-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level1-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson9-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level2-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson9-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level3-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "6cc0ae22-6c2e-425f-b12e-f7dc933ffc02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson9-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson9-level4-2026"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "350f091e-e3a4-4012-bc39-3436515e45d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson10-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level1-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson10-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level2-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "79b0e7db-6607-4ccf-8031-4a3de5c09ddc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson10-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level3-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "ce3e4719-5fb3-4071-ada2-f3e95fedad97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson10-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson10-level4-2026"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "737239d8-5c24-450e-ba5b-db4251594b1d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson11-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level1-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson11-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level2-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson11-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level3-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "20611278-979a-40b9-b68c-4ed20632a2af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson11-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson11-level4-2026"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8c20aac1-77b0-4837-8bc3-761b5d23a388"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson13-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level1-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "2b4da61d-e998-4be5-be69-3dc49f5826cf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson13-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level2-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson13-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level3-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "8a29f7ad-8603-4f3d-8bed-c7a85d8d2194"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-logic-based-ai-lesson13-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-logic-based-ai-lesson13-level4-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "aif-year2-semester1-unit1",
+        "activity_section.key": "a94f82ea-c20a-43c6-948c-f66c2c714a8e"
       }
     }
   ],
@@ -3013,6 +5793,34 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_ai_innovations_activity_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Conversational AI Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1ZbIN8ip0GGDW1qXw9J1CooB2M9cUDiE5lgW5tAMnVX4/edit?usp=sharing",
+      "key": "_exemplar_conversational_ai_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_conversational_ai_project_planning_guide"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Finding Bugs",
+      "url": "https://docs.google.com/document/d/1cqQKhz3iYqTbZYiwJcaYc-yp_O4A_vW0bu3Nfp97pOo/edit?usp=sharing",
+      "key": "_exemplar_finding_bugs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_finding_bugs"
       }
     },
     {
@@ -3112,6 +5920,104 @@
       }
     },
     {
+      "name": "Autocomplete",
+      "url": "https://docs.google.com/presentation/d/1JIoTQG0H2d1vgD9iRDmMqdCn_fExeMu7EC0DmUpVjKg/edit?usp=sharing",
+      "key": "autocomplete",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "autocomplete"
+      }
+    },
+    {
+      "name": "Autocomplete",
+      "url": "https://docs.google.com/presentation/d/1nO0AR1INWCU-kWyvW8YAD6vPcihnzHxleCVwZVHr0GY/edit?usp=sharing",
+      "key": "autocomplete_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "autocomplete_1"
+      }
+    },
+    {
+      "name": "Conversational AI Project",
+      "url": "https://docs.google.com/presentation/d/1tQzxVcsdIa-AmlkShz698DgSoDn9IGbrwBU5H8g_hIU/edit?usp=sharing",
+      "key": "conversational_ai_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conversational_ai_project"
+      }
+    },
+    {
+      "name": "Conversational AI Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1AApc-5do_AYaKAswuJfPNfasmeNeTsQrxDKikkZ54Qk/edit?usp=sharing",
+      "key": "conversational_ai_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "conversational_ai_project_planning_guide"
+      }
+    },
+    {
+      "name": "Debugging Intelligent Systems",
+      "url": "https://docs.google.com/presentation/d/18KkrJFJjvQIk5qNDASWm9hMREqtCvkSufOmjQT6SLDk/edit?slide=id.g3da8e719530_0_6#slide=id.g3da8e719530_0_6",
+      "key": "debugging_intelligent_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_intelligent_systems"
+      }
+    },
+    {
+      "name": "Defining Functions",
+      "url": "https://docs.google.com/presentation/d/1cKtk2cYln9Zhi9RZ2MLllqqvuBdBoO0im7rKa4PN-9w/edit?usp=sharing",
+      "key": "defining_functions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "defining_functions"
+      }
+    },
+    {
+      "name": "Finding Bugs",
+      "url": "https://docs.google.com/document/d/1-NBL1ln6cX7PmROZ2J-IO00n8hqkeoxSbWo_gYbPUTM/edit?usp=sharing",
+      "key": "finding_bugs",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "finding_bugs"
+      }
+    },
+    {
       "name": "Going Viral",
       "url": "https://docs.google.com/document/d/1FHUoBLQcAwjr-wHuhndM2YR6iw9PJ1y3ZLWaG4eujJs/edit?usp=sharing",
       "key": "going_viral",
@@ -3197,6 +6103,20 @@
       }
     },
     {
+      "name": "Simulation (Part 2)",
+      "url": "https://docs.google.com/presentation/d/1SuK3cBHSUeZTthiMMolXyR3JtvGeeNKtRhn6tWwVHCQ/edit?usp=sharing",
+      "key": "simulation_part_2_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "simulation_part_2_"
+      }
+    },
+    {
       "name": "Smart Thermostat",
       "url": "https://docs.google.com/document/d/1-p-EfHp_ThTYd8OzkXl7qclMjSXBUWXVUlI_rl0sGYs/edit",
       "key": "smart_thermostat",
@@ -3266,6 +6186,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "autocomplete"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "autocomplete_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_exemplar_conversational_ai_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "conversational_ai_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "conversational_ai_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_exemplar_ai_innovations_activity_guide"
       }
@@ -3308,6 +6258,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "defining_functions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_exemplar_smart_thermostat"
       }
@@ -3341,6 +6297,30 @@
         "lesson.key": "lesson-7",
         "resource.key": "simulation_part_1_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "simulation_part_2_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_finding_bugs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "debugging_intelligent_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "finding_bugs"
+      }
     }
   ],
   "scripts_resources": [
@@ -3350,6 +6330,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "separating a problem’s key ideas from its details to make it easier to focus on what matters most",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
     {
       "key": "algorithm",
       "word": "algorithm",
@@ -3401,6 +6391,16 @@
       }
     },
     {
+      "key": "conversational_ai",
+      "word": "conversational AI",
+      "definition": "technology that lets users communicate with software through natural language",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conversational_ai"
+      }
+    },
+    {
       "key": "data_type",
       "word": "data type",
       "definition": "the format of the data that can be stored in a variable",
@@ -3408,6 +6408,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "debug",
+      "word": "debug",
+      "definition": "to find out why your code isn't working and fix the problem so your program runs the way you expect",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debug"
+      }
+    },
+    {
+      "key": "decision_tree",
+      "word": "decision tree",
+      "definition": "a branching series of questions that leads to a conclusion",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decision_tree"
       }
     },
     {
@@ -3481,6 +6501,26 @@
       }
     },
     {
+      "key": "method",
+      "word": "method",
+      "definition": "a function that belongs to an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "object",
+      "word": "object",
+      "definition": "a value that bundles data with functions that act on it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
       "key": "optimization",
       "word": "optimization",
       "definition": "finding the best solution to a problem",
@@ -3491,6 +6531,16 @@
       }
     },
     {
+      "key": "parameter",
+      "word": "parameter",
+      "definition": "a variable that holds a function’s input",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
       "key": "pseudocode",
       "word": "pseudocode",
       "definition": "a step-by-step algorithm described in plain language",
@@ -3498,6 +6548,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "key": "return_value",
+      "word": "return value",
+      "definition": "the output of a function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return_value"
       }
     },
     {
@@ -3549,6 +6609,16 @@
       "seeding_key": {
         "vocabulary.key": "variable"
       }
+    },
+    {
+      "key": "while_loop",
+      "word": "while loop",
+      "definition": "a loop that can repeat code while a condition is true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "while_loop"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -3562,6 +6632,30 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "turing_test"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "decision_tree"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "vocabulary.key": "conversational_ai"
       }
     },
     {
@@ -3620,6 +6714,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "return_value"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "boolean_expression"
       }
@@ -3671,6 +6783,18 @@
         "lesson.key": "lesson-7",
         "vocabulary.key": "simulation"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "vocabulary.key": "while_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "debug"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -3685,6 +6809,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "005b0638-5d7f-4b67-ab15-71019a6880af"
+      }
+    },
+    {
+      "key": "0f412285-1d07-4d96-9ba9-5563a89a2638",
+      "properties": {
+        "description": "Trace a decision tree."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "0f412285-1d07-4d96-9ba9-5563a89a2638"
       }
     },
     {
@@ -3718,6 +6852,16 @@
       }
     },
     {
+      "key": "57a73c68-132a-4bc9-8238-93e11f8b9552",
+      "properties": {
+        "description": "Implement a simple version of autocomplete in Python"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "57a73c68-132a-4bc9-8238-93e11f8b9552"
+      }
+    },
+    {
       "key": "6836aca4-7163-4003-a512-e2948de1995a",
       "properties": {
         "description": "Use conditional statements in a Python program."
@@ -3748,6 +6892,16 @@
       }
     },
     {
+      "key": "7f851d9e-afff-4031-94fd-5bae87635e4c",
+      "properties": {
+        "description": "Identify bugs in logic and code."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7f851d9e-afff-4031-94fd-5bae87635e4c"
+      }
+    },
+    {
       "key": "87e5012a-0b0b-4505-a56e-ed1941b874ed",
       "properties": {
         "description": "Develop predictions for future directions and capabilities of AI."
@@ -3765,6 +6919,26 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "9e9c6dd4-d9d5-4742-a180-282c2f64e245"
+      }
+    },
+    {
+      "key": "a3ea8c18-56df-4e92-9dc2-f70047c2d847",
+      "properties": {
+        "description": "Define functions with return values in a Python program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "a3ea8c18-56df-4e92-9dc2-f70047c2d847"
+      }
+    },
+    {
+      "key": "a518eb36-4c5f-48d9-92bf-f3aa90752cb1",
+      "properties": {
+        "description": "Implement a decision tree."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "a518eb36-4c5f-48d9-92bf-f3aa90752cb1"
       }
     },
     {
@@ -3798,6 +6972,16 @@
       }
     },
     {
+      "key": "b08097eb-1d57-4559-a162-7716cadcdaff",
+      "properties": {
+        "description": "Fix bugs in a Python program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "b08097eb-1d57-4559-a162-7716cadcdaff"
+      }
+    },
+    {
       "key": "bc492531-a758-4093-9258-1b179c249102",
       "properties": {
         "description": "Revise algorithms to improve them."
@@ -3808,6 +6992,26 @@
       }
     },
     {
+      "key": "be932cf6-dc1c-4770-b544-f245ddc2b9a7",
+      "properties": {
+        "description": "Define functions with parameters in a Python program."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "be932cf6-dc1c-4770-b544-f245ddc2b9a7"
+      }
+    },
+    {
+      "key": "c023aa97-dc96-4784-b2af-b261e53680a1",
+      "properties": {
+        "description": "Identify problems that can be solved by decision trees."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c023aa97-dc96-4784-b2af-b261e53680a1"
+      }
+    },
+    {
       "key": "c2b49d2d-10ee-4cb8-802d-2baac7586e0e",
       "properties": {
         "description": "Write Python programs that accept input and produce output."
@@ -3815,6 +7019,56 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "c2b49d2d-10ee-4cb8-802d-2baac7586e0e"
+      }
+    },
+    {
+      "key": "d3a13534-ff0a-4f07-8806-862353848d03",
+      "properties": {
+        "description": "Describe applications of conversational AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "d3a13534-ff0a-4f07-8806-862353848d03"
+      }
+    },
+    {
+      "key": "e38fd017-4769-4140-8533-dd2faec207bc",
+      "properties": {
+        "description": "Translate a sequence of logical rules to Python code."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "e38fd017-4769-4140-8533-dd2faec207bc"
+      }
+    },
+    {
+      "key": "e96bbde9-3b89-48bf-9705-bf184aae82ce",
+      "properties": {
+        "description": "Use conditional logic to construct a decision tree."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "e96bbde9-3b89-48bf-9705-bf184aae82ce"
+      }
+    },
+    {
+      "key": "ef8026be-e61d-4f19-b8d9-e041f5602b98",
+      "properties": {
+        "description": "Explain why abstraction can make programs easier to write and maintain."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "ef8026be-e61d-4f19-b8d9-e041f5602b98"
+      }
+    },
+    {
+      "key": "f54b88fa-5bd1-43d0-ae34-438b488fb3fd",
+      "properties": {
+        "description": "Explain how autocomplete can predict what a user might type"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "f54b88fa-5bd1-43d0-ae34-438b488fb3fd"
       }
     }
   ],

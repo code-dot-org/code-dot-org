@@ -39,12 +39,14 @@ test.describe('Markdown rendering across the website', () => {
       // bubbles vary between runs but carry no signal for this check
       // (blockly-in-instructions rendering).
       await lab.gotoLevel({lesson: 21, level: 2});
+      await lab.waitForEmbeddedInstructionsStable();
       await waitForVisualStability(page);
       await visualCheck('basic embedded blockly', {
         mask: [lab.lessonHeaderInfo],
       });
 
       await lab.gotoLevel({lesson: 21, level: 3});
+      await lab.waitForEmbeddedInstructionsStable();
       await waitForVisualStability(page);
       // Mask the maze playfield too: this level's sprite art idle-animates,
       // so its rendered frame is not deterministic across runs (see
