@@ -140,15 +140,7 @@ export default class AssetRow extends React.Component {
         break;
       case 'confirming delete':
         actions = (
-          <td
-            width="250"
-            style={{
-              textAlign: 'right',
-              paddingRight: 16,
-              paddingTop: 16,
-              paddingBottom: 16,
-            }}
-          >
+          <td width="250" className={rowStyles.confirmDeleteCell}>
             <span style={styles.actionGroup}>
               <MuiButton
                 className="uitest-confirm-delete-asset"
