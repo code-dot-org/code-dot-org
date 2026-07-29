@@ -1,5 +1,13 @@
+import {
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from '@dnd-kit/core';
+import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import {Typography} from '@mui/material';
-import {useCallback, useRef, type ChangeEvent} from 'react';
+import {useCallback, useMemo, useRef, useState, type ChangeEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import type {
@@ -20,11 +28,20 @@ import {
 import {DEFAULT_FOLDER_ID} from '../constants';
 import {useCodebridgeConfig} from '../contexts';
 import {useFileOperations} from '../hooks/useFileOperations';
+import {useHandleDragEnd} from '../hooks/useHandleDragEnd';
 import {usePrompts} from '../hooks/usePrompts';
 import {useAppSelector} from '../redux/store';
+import {
+  dragAndDropKeyboardCodes,
+  fileBrowserCollisionDetector,
+  fileBrowserKeyboardCoordinateGetter,
+} from '../utils/dragAndDrop';
 import {getFileIcon} from '../utils/fileIcons';
 import {getFileExtension, shouldShowFile} from '../utils/multiFileSource';
 
+import {Draggable, NotDraggable} from './dnd/Draggable';
+import {Droppable} from './dnd/Droppable';
+import {DragType} from './dnd/types';
 import styles from './fileBrowser.module.css';
 import {FileBrowserToggleButton} from './FileBrowserToggleButton';
 import {PopUpButton} from './PopUpButton';
@@ -51,6 +68,7 @@ const FileTree = ({
   handlers,
   hideNewFolderButton,
   isReadOnly,
+  dragActive,
 }: {
   source: MultiFileSource;
   parentId: FolderId;
@@ -58,6 +76,8 @@ const FileTree = ({
   hideNewFolderButton?: boolean;
   /** Hides the per-row edit menus (legacy `enableMenu={!isReadOnly}`). */
   isReadOnly?: boolean;
+  /** While a drag is in progress, hide the row menus (matches the legacy). */
+  dragActive?: boolean;
 }) => {
   const folders = Object.values(source.folders)
     .filter(f => f.parentId === parentId)
@@ -66,59 +86,72 @@ const FileTree = ({
     .filter(f => f.folderId === parentId && shouldShowFile(f))
     .sort(byName);
 
+  // Rows drag to move (a folder is also a drop target); read-only workspaces get
+  // a plain, non-draggable row.
+  const MaybeDraggable = isReadOnly ? NotDraggable : Draggable;
+
   return (
     // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style:none strips list semantics
     <ol className={styles.folderChildren} role="list">
       {folders.map(folder => (
         <li key={folder.id}>
-          <div className={styles.row}>
-            <button
-              type="button"
-              className={styles.rowLabel}
-              aria-expanded={Boolean(folder.open)}
-              onClick={() => handlers.toggleFolder(folder.id)}
+          <Droppable data={{id: folder.id}} overClassName={styles.dropTarget}>
+            <MaybeDraggable
+              data={{
+                id: folder.id,
+                type: DragType.FOLDER,
+                parentId: folder.parentId,
+              }}
+              className={styles.row}
             >
-              {/* Legacy signals open/closed by swapping the folder icon rather
+              <button
+                type="button"
+                className={styles.rowLabel}
+                aria-expanded={Boolean(folder.open)}
+                onClick={() => handlers.toggleFolder(folder.id)}
+              >
+                {/* Legacy signals open/closed by swapping the folder icon rather
                   than showing a caret; `aria-expanded` keeps the a11y state. */}
-              <FontAwesomeV6Icon
-                iconName={folder.open ? 'folder-open' : 'folder'}
-                iconStyle="solid"
-              />
-              <Typography variant="body4">{folder.name}</Typography>
-            </button>
-            <span className={styles.rowActions}>
-              {!isReadOnly && (
-                <PopUpButton
-                  iconName="ellipsis-v"
-                  ariaLabel={`Options for ${folder.name}`}
-                  alignment="left"
-                >
-                  <PopUpButtonOption
-                    iconName="plus"
-                    labelText="New File"
-                    clickHandler={() => handlers.newFileIn(folder.id)}
-                  />
-                  {!hideNewFolderButton && (
+                <FontAwesomeV6Icon
+                  iconName={folder.open ? 'folder-open' : 'folder'}
+                  iconStyle="solid"
+                />
+                <Typography variant="body4">{folder.name}</Typography>
+              </button>
+              <span className={styles.rowActions}>
+                {!isReadOnly && !dragActive && (
+                  <PopUpButton
+                    iconName="ellipsis-v"
+                    ariaLabel={`Options for ${folder.name}`}
+                    alignment="left"
+                  >
                     <PopUpButtonOption
-                      iconName="folder-plus"
-                      labelText="Add sub-folder"
-                      clickHandler={() => handlers.newFolderIn(folder.id)}
+                      iconName="plus"
+                      labelText="New File"
+                      clickHandler={() => handlers.newFileIn(folder.id)}
                     />
-                  )}
-                  <PopUpButtonOption
-                    iconName="pencil"
-                    labelText="Rename"
-                    clickHandler={() => handlers.renameFolder(folder)}
-                  />
-                  <PopUpButtonOption
-                    iconName="trash"
-                    labelText="Delete"
-                    clickHandler={() => handlers.deleteFolder(folder)}
-                  />
-                </PopUpButton>
-              )}
-            </span>
-          </div>
+                    {!hideNewFolderButton && (
+                      <PopUpButtonOption
+                        iconName="folder-plus"
+                        labelText="Add sub-folder"
+                        clickHandler={() => handlers.newFolderIn(folder.id)}
+                      />
+                    )}
+                    <PopUpButtonOption
+                      iconName="pencil"
+                      labelText="Rename"
+                      clickHandler={() => handlers.renameFolder(folder)}
+                    />
+                    <PopUpButtonOption
+                      iconName="trash"
+                      labelText="Delete"
+                      clickHandler={() => handlers.deleteFolder(folder)}
+                    />
+                  </PopUpButton>
+                )}
+              </span>
+            </MaybeDraggable>
+          </Droppable>
           {folder.open && (
             <FileTree
               source={source}
@@ -126,6 +159,7 @@ const FileTree = ({
               handlers={handlers}
               hideNewFolderButton={hideNewFolderButton}
               isReadOnly={isReadOnly}
+              dragActive={dragActive}
             />
           )}
         </li>
@@ -134,7 +168,14 @@ const FileTree = ({
         const {iconName, iconStyle, isBrand} = getFileIcon(file.name);
         return (
           <li key={file.id}>
-            <div className={styles.row}>
+            <MaybeDraggable
+              data={{
+                id: file.id,
+                type: DragType.FILE,
+                parentId: file.folderId,
+              }}
+              className={styles.row}
+            >
               <button
                 type="button"
                 className={
@@ -152,7 +193,7 @@ const FileTree = ({
                 <Typography variant="body4">{file.name}</Typography>
               </button>
               <span className={styles.rowActions}>
-                {!isReadOnly && (
+                {!isReadOnly && !dragActive && (
                   <PopUpButton
                     iconName="ellipsis-v"
                     ariaLabel={`Options for ${file.name}`}
@@ -171,7 +212,7 @@ const FileTree = ({
                   </PopUpButton>
                 )}
               </span>
-            </div>
+            </MaybeDraggable>
           </li>
         );
       })}
@@ -367,6 +408,24 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
     Object.values(source.files).filter(shouldShowFile).length === 0 &&
     Object.keys(source.folders).length === 0;
 
+  // Drag-and-drop to move files/folders. Pointer drag past a 2px threshold (so a
+  // plain click still activates a file); keyboard drag with 'm' to pick up. The
+  // collision detector resolves nested folders (see dragAndDrop utils).
+  // `dragActive` hides the row menus mid-drag, as the legacy does.
+  const [dragActive, setDragActive] = useState(false);
+  const handleDragEnd = useHandleDragEnd();
+  const sensors = useSensors(
+    useSensor(PointerSensor, {activationConstraint: {distance: 2}}),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: fileBrowserKeyboardCoordinateGetter(source.folders),
+      keyboardCodes: dragAndDropKeyboardCodes,
+    }),
+  );
+  const collisionDetection = useMemo(
+    () => fileBrowserCollisionDetector(source.folders),
+    [source.folders],
+  );
+
   return (
     <div className={styles.fileBrowser}>
       <div className={styles.header}>
@@ -429,13 +488,34 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
         {isEmpty ? (
           <div className={styles.empty}>No files yet.</div>
         ) : (
-          <FileTree
-            source={source}
-            parentId={DEFAULT_FOLDER_ID}
-            handlers={handlers}
-            hideNewFolderButton={config.hideNewFolderButton}
-            isReadOnly={isReadOnly}
-          />
+          <DndContext
+            sensors={sensors}
+            collisionDetection={collisionDetection}
+            onDragStart={() => setDragActive(true)}
+            onDragCancel={() => setDragActive(false)}
+            onDragEnd={event => {
+              setDragActive(false);
+              handleDragEnd(event);
+            }}
+            modifiers={[restrictToVerticalAxis]}
+          >
+            {/* Root drop zone: fills the body so a drop onto empty space (or
+                out of a folder) lands in the top-level folder. */}
+            <Droppable
+              data={{id: DEFAULT_FOLDER_ID}}
+              className={styles.rootDropZone}
+              overClassName={styles.rootDropTarget}
+            >
+              <FileTree
+                source={source}
+                parentId={DEFAULT_FOLDER_ID}
+                handlers={handlers}
+                hideNewFolderButton={config.hideNewFolderButton}
+                isReadOnly={isReadOnly}
+                dragActive={dragActive}
+              />
+            </Droppable>
+          </DndContext>
         )}
       </div>
     </div>
