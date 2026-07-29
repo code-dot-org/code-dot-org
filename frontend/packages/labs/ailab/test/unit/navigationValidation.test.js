@@ -2,6 +2,7 @@ import {Algorithms} from '../../src/constants';
 import {
   getNavigationTabs,
   isPanelEnabled,
+  prevNextButtons,
   shouldShowNavigationTabs,
 } from '../../src/helpers/navigationValidation';
 import I18n from '../../src/i18n';
@@ -101,6 +102,19 @@ describe('isPanelEnabled', () => {
   test('dataDisplayLabel - disabled', async () => {
     const result = isPanelEnabled(algorithmSelectedState, 'dataDisplayLabel');
     expect(result).toBe(false);
+  });
+
+  test('dataDisplayDataset - disabled', async () => {
+    const result = isPanelEnabled(
+      algorithmSelectedState,
+      'dataDisplayDataset',
+    );
+    expect(result).toBe(false);
+  });
+
+  test('dataDisplayDataset - enabled', async () => {
+    const result = isPanelEnabled(dataUploadedState, 'dataDisplayDataset');
+    expect(result).toBe(true);
   });
 
   test('dataDisplayLabel - enabled', async () => {
@@ -206,7 +220,7 @@ describe('getNavigationTabs', () => {
       {
         id: 'train',
         text: 'Train',
-        panel: 'trainModel',
+        panel: 'dataDisplayLabel',
         enabled: false,
         selected: false,
       },
@@ -240,6 +254,24 @@ describe('getNavigationTabs', () => {
     });
   });
 
+  test('opens Dataset to data review after data is selected', () => {
+    const tabs = getNavigationTabs({
+      ...dataUploadedState,
+      currentPanel: 'dataDisplayDataset',
+    });
+
+    expect(tabs.find(tab => tab.id === 'dataset')).toMatchObject({
+      panel: 'dataDisplayDataset',
+      enabled: true,
+      selected: true,
+    });
+    expect(tabs.find(tab => tab.id === 'train')).toMatchObject({
+      panel: 'dataDisplayLabel',
+      enabled: true,
+      selected: false,
+    });
+  });
+
   test('enables Train after label and features are selected', () => {
     const tabs = getNavigationTabs({
       ...selectedFeaturesState,
@@ -247,12 +279,14 @@ describe('getNavigationTabs', () => {
     });
 
     expect(tabs.find(tab => tab.id === 'dataset')).toMatchObject({
-      selected: true,
-    });
-    expect(tabs.find(tab => tab.id === 'train')).toMatchObject({
-      panel: 'trainModel',
+      panel: 'dataDisplayDataset',
       enabled: true,
       selected: false,
+    });
+    expect(tabs.find(tab => tab.id === 'train')).toMatchObject({
+      panel: 'dataDisplayFeatures',
+      enabled: true,
+      selected: true,
     });
     expect(tabs.find(tab => tab.id === 'test')).toMatchObject({
       enabled: false,
@@ -319,6 +353,11 @@ describe('getNavigationTabs', () => {
     });
 
     expect(tabs.find(tab => tab.id === 'dataset')).toMatchObject({
+      panel: 'dataDisplayDataset',
+      enabled: true,
+      selected: false,
+    });
+    expect(tabs.find(tab => tab.id === 'train')).toMatchObject({
       panel: 'dataDisplayFeatures',
       enabled: true,
       selected: true,
@@ -330,6 +369,7 @@ describe('shouldShowNavigationTabs', () => {
   test('shows tabs for data, train, test, and export panels', () => {
     expect(shouldShowNavigationTabs('selectAlgorithm')).toBe(false);
     expect(shouldShowNavigationTabs('selectDataset')).toBe(true);
+    expect(shouldShowNavigationTabs('dataDisplayDataset')).toBe(true);
     expect(shouldShowNavigationTabs('trainModel')).toBe(true);
     expect(shouldShowNavigationTabs('results')).toBe(true);
     expect(shouldShowNavigationTabs('exportModel')).toBe(true);
@@ -337,5 +377,63 @@ describe('shouldShowNavigationTabs', () => {
 
   test('hides tabs outside the data/train/test/export flow', () => {
     expect(shouldShowNavigationTabs('modelSummary')).toBe(false);
+  });
+});
+
+describe('prevNextButtons', () => {
+  beforeEach(() => {
+    I18n.initI18n();
+  });
+
+  test('continues from dataset selection to dataset review', () => {
+    expect(
+      prevNextButtons({
+        ...dataUploadedState,
+        currentPanel: 'selectDataset',
+      }).next,
+    ).toMatchObject({
+      panel: 'dataDisplayDataset',
+      text: 'Continue',
+      enabled: true,
+    });
+  });
+
+  test('continues from dataset review to label selection in Train', () => {
+    expect(
+      prevNextButtons({
+        ...dataUploadedState,
+        currentPanel: 'dataDisplayDataset',
+      }).next,
+    ).toMatchObject({
+      panel: 'dataDisplayLabel',
+      text: 'Continue',
+      enabled: true,
+    });
+  });
+
+  test('continues from feature selection to the training animation', () => {
+    expect(
+      prevNextButtons({
+        ...selectedFeaturesState,
+        currentPanel: 'dataDisplayFeatures',
+      }).next,
+    ).toMatchObject({
+      panel: 'trainModel',
+      text: 'Continue',
+      enabled: true,
+    });
+  });
+
+  test('continues from the training animation to Test', () => {
+    expect(
+      prevNextButtons({
+        ...resultsState,
+        currentPanel: 'trainModel',
+      }).next,
+    ).toMatchObject({
+      panel: 'generateResults',
+      text: 'Continue',
+      enabled: true,
+    });
   });
 });

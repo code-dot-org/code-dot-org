@@ -6,7 +6,11 @@ import I18n from '../i18n';
 import DataTable from './DataTable';
 import Statement from './Statement';
 
-const DataDisplay = () => {
+interface DataDisplayProps {
+  showStatement?: boolean;
+}
+
+const DataDisplay = ({showStatement = true}: DataDisplayProps) => {
   const data = useAppSelector(state => state.data);
 
   if (data.length === 0) {
@@ -24,7 +28,7 @@ const DataDisplay = () => {
         });
   return (
     <div id="data-display" style={styles.panel}>
-      <Statement />
+      {showStatement && <Statement />}
       <div style={styles.tableParent}>
         <DataTable />
       </div>

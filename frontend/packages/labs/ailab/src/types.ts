@@ -210,6 +210,7 @@ export interface PrevNextButtons {
 export type ContentPanel =
   | 'selectAlgorithm'
   | 'selectDataset'
+  | 'dataDisplayDataset'
   | 'dataDisplayLabel'
   | 'dataDisplayFeatures'
   | 'trainModel'

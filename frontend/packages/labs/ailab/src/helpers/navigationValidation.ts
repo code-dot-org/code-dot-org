@@ -18,6 +18,7 @@ action for a given panel.
 /*
 const panelList = [
   { id: "selectDataset", label: "Import" },
+  { id: "dataDisplayDataset", label: "Data" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
   { id: "trainModel", label: "Train" },
@@ -37,6 +38,12 @@ export function isPanelEnabled(state: RootState, panelId: string): boolean {
   }
 
   if (panelId === 'dataDisplayLabel') {
+    if (!isDataUploaded(state)) {
+      return false;
+    }
+  }
+
+  if (panelId === 'dataDisplayDataset') {
     if (!isDataUploaded(state)) {
       return false;
     }
@@ -168,8 +175,8 @@ export function shouldDisplaySaveStatus(saveStatus: string): boolean {
 }
 
 const navigationTabPanels: Record<NavigationTabId, ContentPanel[]> = {
-  dataset: ['selectDataset', 'dataDisplayLabel', 'dataDisplayFeatures'],
-  train: ['trainModel'],
+  dataset: ['selectDataset', 'dataDisplayDataset'],
+  train: ['dataDisplayLabel', 'dataDisplayFeatures', 'trainModel'],
   test: ['generateResults', 'results'],
   export: ['exportModel'],
 };
@@ -202,6 +209,21 @@ function getNavigationTabPanel(
   state: RootState,
   tabId: NavigationTabId,
 ): ContentPanel | undefined {
+  if (tabId === 'dataset') {
+    return isDataUploaded(state)
+      ? 'dataDisplayDataset'
+      : firstAvailablePanel(state, navigationTabPanels.dataset);
+  }
+
+  if (tabId === 'train') {
+    if (state.currentPanel === 'trainModel') {
+      return 'trainModel';
+    }
+    if (labelSelected(state) && isPanelAvailable(state, 'dataDisplayFeatures')) {
+      return 'dataDisplayFeatures';
+    }
+  }
+
   if (tabId === 'test') {
     return resultsAvailable(state) && state.currentPanel !== 'trainModel'
       ? 'results'
@@ -256,26 +278,29 @@ export function prevNextButtons(state: RootState): PrevNextButtons {
     next = panel ? {panel, text: I18n.t('navigateForward')} : undefined;
   } else if (state.currentPanel === 'selectDataset') {
     prev = {panel: 'selectAlgorithm', text: I18n.t('navigateBack')};
+    next = isPanelAvailable(state, 'dataDisplayDataset')
+      ? {panel: 'dataDisplayDataset', text: I18n.t('navigateForward')}
+      : undefined;
+  } else if (state.currentPanel === 'dataDisplayDataset') {
+    prev = isPanelAvailable(state, 'selectDataset')
+      ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
+      : {panel: 'selectAlgorithm', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'dataDisplayLabel')
       ? {panel: 'dataDisplayLabel', text: I18n.t('navigateForward')}
       : isPanelAvailable(state, 'dataDisplayFeatures')
         ? {panel: 'dataDisplayFeatures', text: I18n.t('navigateForward')}
         : undefined;
   } else if (state.currentPanel === 'dataDisplayLabel') {
-    prev = isPanelAvailable(state, 'selectDataset')
-      ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
-      : {panel: 'selectAlgorithm', text: I18n.t('navigateBack')};
+    prev = {panel: 'dataDisplayDataset', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'dataDisplayFeatures')
       ? {panel: 'dataDisplayFeatures', text: I18n.t('navigateForward')}
       : undefined;
   } else if (state.currentPanel === 'dataDisplayFeatures') {
     prev = isPanelAvailable(state, 'dataDisplayLabel')
       ? {panel: 'dataDisplayLabel', text: I18n.t('navigateBack')}
-      : isPanelAvailable(state, 'selectDataset')
-        ? {panel: 'selectDataset', text: I18n.t('navigateBack')}
-        : {panel: 'selectAlgorithm', text: I18n.t('navigateBack')};
+      : {panel: 'dataDisplayDataset', text: I18n.t('navigateBack')};
     next = isPanelAvailable(state, 'trainModel')
-      ? {panel: 'trainModel', text: I18n.t('trainModelButtonText')}
+      ? {panel: 'trainModel', text: I18n.t('navigateForward')}
       : undefined;
   } else if (state.currentPanel === 'trainModel') {
     if (state.trainedModel) {

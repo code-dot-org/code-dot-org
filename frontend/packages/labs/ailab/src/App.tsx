@@ -418,10 +418,14 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {['dataDisplayLabel', 'dataDisplayFeatures'].includes(currentPanel) && (
+      {[
+        'dataDisplayDataset',
+        'dataDisplayLabel',
+        'dataDisplayFeatures',
+      ].includes(currentPanel) && (
         <BodyContainer {...bodyContainerProps}>
           <ContainerLeft>
-            <DataDisplay />
+            <DataDisplay showStatement={currentPanel !== 'dataDisplayDataset'} />
           </ContainerLeft>
 
           <ContainerRight>
