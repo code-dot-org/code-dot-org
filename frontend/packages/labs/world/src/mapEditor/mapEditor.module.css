@@ -92,6 +92,11 @@
   cursor: crosshair;
 }
 
+/* An actor sits under the cursor (select mode): a hand signals it is grabbable. */
+.canvas.hovering {
+  cursor: pointer;
+}
+
 .canvas.panning {
   cursor: grabbing;
 }
