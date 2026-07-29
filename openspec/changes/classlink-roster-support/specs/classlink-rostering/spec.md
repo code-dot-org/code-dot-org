@@ -1,10 +1,10 @@
 ## ADDED Requirements
 
 ### Requirement: Teacher can view available ClassLink classes
-A teacher with a migrated ClassLink account (new-format `authentication_id`) SHALL be able to retrieve a list of their One Roster classes to import as sections.
+A teacher with a v2 ClassLink auth option (`authentication_id = <TenantId>|<SourceId>`, `version = 'v2'`) SHALL be able to retrieve a list of their One Roster classes to import as sections.
 
 #### Scenario: Teacher lists available classes
-- **WHEN** a teacher with a valid `<TenantId>|<SourceId>` authentication_id requests their ClassLink class list
+- **WHEN** a teacher with a v2 ClassLink auth option requests their ClassLink class list
 - **THEN** the system resolves the district application (bearer token and `oneroster_application_id`) for the teacher's `TenantId` via the cache-aside lookup, then calls the One Roster `/teachers/<SourceId>/classes` endpoint, and returns the list of active classes
 
 #### Scenario: Teacher has no matching district application
@@ -12,15 +12,30 @@ A teacher with a migrated ClassLink account (new-format `authentication_id`) SHA
 - **THEN** the system returns an appropriate error and the teacher sees a message indicating ClassLink rostering is unavailable for their district
 
 #### Scenario: Teacher has not yet been migrated
-- **WHEN** a teacher with a legacy `UserId` authentication_id attempts to access ClassLink rostering
-- **THEN** the system returns an error prompting the teacher to sign out and sign back in to enable rostering
+- **WHEN** a teacher without a v2 ClassLink auth option (legacy v1 record only) attempts to access ClassLink rostering
+- **THEN** the system returns an error prompting the teacher to sign out and sign back in to enable rostering (login-time migration creates their v2 record)
+
+### Requirement: Rostering identity is derived server-side
+Because ClassLink rostering uses a central partner credential (not a user-scoped token), the system SHALL derive `TenantId` and teacher `SourceId` exclusively from the authenticated user's v2 ClassLink auth option. Client-supplied tenant, application, or teacher identifiers SHALL never be used to select the district application or identify the requester.
+
+#### Scenario: District application is selected by the requester's own TenantId
+- **WHEN** any rostering endpoint resolves district credentials
+- **THEN** the application is selected by the `TenantId` parsed from `current_user`'s v2 auth option, so a supplied `courseId` is only ever resolved within the requester's own district
+
+#### Scenario: Forged identity parameters are ignored
+- **WHEN** a request to a rostering endpoint includes tenant, application, or teacher-SourceId parameters that differ from the authenticated user's own values
+- **THEN** the system ignores the supplied values and uses only the server-derived identity
 
 ### Requirement: Teacher can import a ClassLink class as a section
-A teacher SHALL be able to import a selected One Roster class, creating a new code.org section populated with the class's current student roster.
+A teacher SHALL be able to import a One Roster class they teach, creating a new code.org section populated with the class's current student roster. Because the partner credential itself grants no per-user scoping, the system SHALL verify via the One Roster `/classes/<classSourceId>/teachers` endpoint that the requester teaches the class before creating a section.
 
 #### Scenario: Successful class import
-- **WHEN** a teacher selects a class to import
+- **WHEN** a teacher selects a class to import and their `SourceId` appears in the One Roster `/classes/<classSourceId>/teachers` response
 - **THEN** the system resolves the district bearer token via the cache-aside lookup, calls `/classes/<classSourceId>/students`, filters for users with `role == "student"`, creates or finds each student's account using `<TenantId>|<studentSourceId>` as the authentication_id, creates a `ClasslinkSection` with `code = CL-<oneroster_application_id>|<classSourceId>`, and enrolls all rostered students
+
+#### Scenario: Teacher cannot import a class they do not teach
+- **WHEN** an authenticated ClassLink user requests import of a `courseId` in their district and their `SourceId` does not appear in the One Roster `/classes/<classSourceId>/teachers` response
+- **THEN** the system returns 403 Forbidden, creates no section, and enrolls no students
 
 #### Scenario: Student already has a code.org account via ClassLink SSO
 - **WHEN** a student being imported already has a `AuthenticationOption` with `authentication_id = <TenantId>|<studentSourceId>`
@@ -46,11 +61,15 @@ When a teacher imports a class whose section already exists and they are not yet
 - **THEN** the system returns 403 Forbidden and does not modify the section
 
 ### Requirement: Teacher can sync an existing ClassLink section
-A teacher SHALL be able to re-sync a previously imported ClassLink section to reflect the current student roster in One Roster.
+A teacher who is an instructor (owner or co-teacher) of a ClassLink section in our system SHALL be able to re-sync it to reflect the current student roster in One Roster. Requesters who are not instructors of the section SHALL be denied unless they pass the co-teacher verification.
 
 #### Scenario: Successful section sync
-- **WHEN** a teacher triggers a sync on an existing ClassLink section
+- **WHEN** a section instructor triggers a sync on an existing ClassLink section
 - **THEN** the system parses the section's `code` to extract `oneroster_application_id` and `classSourceId`, resolves the district bearer token via the cache-aside lookup, calls `/classes/<classSourceId>/students`, and updates the section's student roster to exactly match (adding new students, removing departed ones)
+
+#### Scenario: Non-instructor cannot sync a section
+- **WHEN** an authenticated ClassLink user who is not an instructor of an existing ClassLink section requests a sync of that section and fails the One Roster co-teacher verification
+- **THEN** the system returns 403 Forbidden and does not modify the section or its roster
 
 #### Scenario: Section sync adds a new student
 - **WHEN** a student has been added to the class in One Roster since the last sync
@@ -70,6 +89,44 @@ The system SHALL cache the `/applications` lookup result (bearer token and `oner
 #### Scenario: Cache miss
 - **WHEN** a rostering operation needs district credentials and no cache entry exists for the teacher's `tenant_id` (or the entry has expired)
 - **THEN** the system calls `/applications` with the partner API key, locates the enabled application matching the `tenant_id`, writes it to the cache with the configured TTL, and proceeds with the request
+
+### Requirement: One Roster collection fetches retrieve all pages
+The system SHALL paginate all One Roster collection endpoints (`/teachers/<SourceId>/classes`, `/classes/<classSourceId>/students`, `/classes/<classSourceId>/teachers`) using `limit`/`offset` query parameters and the `x-count`/`x-total-count` response headers, so that results are never silently truncated at one page.
+
+#### Scenario: Collection fits in a single page
+- **WHEN** a collection fetch returns a first page whose record count is greater than or equal to the `x-total-count` header
+- **THEN** the system makes no further requests and returns the full result set
+
+#### Scenario: Collection spans multiple pages
+- **WHEN** a collection fetch's `x-total-count` header exceeds the records received so far
+- **THEN** the system requests subsequent pages, incrementing `offset` by `limit` each time and accumulating a running total, until the running total reaches `x-total-count`, and returns all records combined
+
+#### Scenario: Empty page breaks the loop
+- **WHEN** a subsequent page returns zero records even though the running total has not reached `x-total-count`
+- **THEN** the system stops paginating and returns the records accumulated so far (guarding against miscounted headers causing an infinite loop)
+
+#### Scenario: Large class roster is fully imported
+- **WHEN** a teacher imports or syncs a class whose student count exceeds the page limit
+- **THEN** the section roster reflects every student across all pages, not just the first page
+
+### Requirement: One Roster 429 responses are propagated and retried from the browser
+When a One Roster API call fails with HTTP 429, the backend SHALL immediately return 429 to the browser without sleeping or retrying in-process. The frontend SHALL retry the request with automatic exponential backoff — 3 attempts total, with increasing waits between them — using a shared retry helper for both the class-list and import/sync requests, and SHALL surface an error to the user only after all attempts fail.
+
+#### Scenario: Backend propagates 429 without holding the request
+- **WHEN** a One Roster API call made during a rostering request returns 429
+- **THEN** the backend responds 429 to the browser immediately, without sleeping or retrying in-process
+
+#### Scenario: Frontend retry succeeds
+- **WHEN** a rostering request returns 429 and a subsequent backoff attempt (within 3 total) succeeds
+- **THEN** the operation completes normally and no error is shown to the user
+
+#### Scenario: Retries exhausted
+- **WHEN** all 3 attempts of a rostering request return 429
+- **THEN** the frontend surfaces an error to the user through the existing roster-import failure path
+
+#### Scenario: Class-list and import requests share the retry behavior
+- **WHEN** either the class-list fetch or the import/sync request receives a 429
+- **THEN** the same retry helper applies the same backoff policy to both
 
 ### Requirement: One Roster 401 responses trigger token refresh with single retry
 When a One Roster API call fails with HTTP 401, the system SHALL re-fetch the district credentials from `/applications` and compare the fresh bearer token to the cached one to distinguish token expiry from authorization failure.
