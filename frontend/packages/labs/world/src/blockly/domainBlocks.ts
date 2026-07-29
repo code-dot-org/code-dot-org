@@ -12,6 +12,16 @@ import {Order} from 'blockly/javascript';
 
 import {defineBlock, type Toolbox} from '@code-dot-org/blockly';
 
+import * as WorldLab from '../engine';
+import {
+  AnimationRule,
+  CollisionRule,
+  GravityRule,
+  InputRule,
+  MotionRule,
+  SpatialRule,
+} from '../engine';
+import type {GameEvent, Rule} from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
@@ -46,13 +56,40 @@ const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
   name => [label(name), name],
 );
 
-// Dropdown value -> the `world-lab` export name.
-const EVENT_CONST: Record<string, string> = {
-  startsFalling: 'StartsFallingEvent',
-  stopsFalling: 'StopsFallingEvent',
-  animationEnded: 'AnimationEndedEvent',
-  frameChanged: 'FrameChangedEvent',
-};
+// The standard rules, in dependency order — the toolbox lists one category per
+// rule, and the event blocks are generated from each rule's events. Reading the
+// engine objects (not a mirror) keeps the editor in step with the rule library:
+// add a rule or an event and its block/category follow. (Same tack as
+// traitOptions.)
+const ALL_RULES: readonly Rule[] = [
+  SpatialRule,
+  MotionRule,
+  CollisionRule,
+  GravityRule,
+  InputRule,
+  AnimationRule,
+];
+
+// Every GameEvent object → the name it is exported under (for `WorldLab.<name>`
+// in generated code), discovered once from the engine namespace by reference
+// (a rule's `events` entry and its `export const …Event` are the same object).
+const EVENT_EXPORT_NAME = new Map<GameEvent, string>();
+{
+  const events = new Set<GameEvent>();
+  for (const rule of ALL_RULES) {
+    for (const event of Object.values(rule.events)) {
+      events.add(event);
+    }
+  }
+  for (const [name, value] of Object.entries(WorldLab)) {
+    if (events.has(value as GameEvent)) {
+      EVENT_EXPORT_NAME.set(value as GameEvent, name);
+    }
+  }
+}
+
+/** The toolbox/registry type for the block that handles `event`. */
+const eventBlockType = (event: GameEvent): string => `world_on_${event.id}`;
 
 // `when key … is pressed/released` dropdown: friendly label -> the DOM
 // `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
@@ -196,96 +233,96 @@ const worldPlayAnimation = defineBlock({
   },
 });
 
-const worldOnEvent = defineBlock({
-  type: 'world_on_event',
-  message0: 'when %1 %2',
-  args0: [
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {
-      type: 'field_dropdown',
-      name: 'EVENT',
-      options: [
-        ['starts falling', 'startsFalling'],
-        ['stops falling', 'stopsFalling'],
-        ['animation ends', 'animationEnded'],
-        ['animation frame changes', 'frameChanged'],
-      ],
-    },
-  ],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'HANDLER'}],
-  inputsInline: true,
-  // An event is a free-floating starting block (its own root in the workspace),
-  // like `when_run` / Music Lab's trigger blocks — no previous/next connection.
-  // The ACTOR socket is which actor's handler this is; it defaults to a `this
-  // actor` shadow (on an `.actor` file the subject is obvious).
-  extensions: [actorInputExtension],
-  style: 'event_blocks',
-  tooltip: 'Run blocks when an event happens to an actor.',
-  generator: {
-    javascript(block, generator) {
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const eventConst = EVENT_CONST[block.getFieldValue('EVENT')] ?? '';
-      const handler = generator.statementToCode(block, 'HANDLER');
-      // A handler runs at RUNTIME, so its args are the live `world` and `actor`
-      // (they shadow the outer `actor` builder): body blocks act on the instance,
-      // and a "for each … I'm touching" loop can query the world. `eventValue` is
-      // the event's detail (e.g. the animation frame).
-      return (
-        `${target}.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
-        `${handler}});\n`
-      );
-    },
-  },
-});
+// Event blocks are generated one-per-event from the rule library, not authored
+// by hand: each engine event becomes a `world_on_<id>` "when …" hat, filed under
+// its rule's toolbox category. An event is a free-floating starting block (its
+// own workspace root), like `when_run` / Music Lab's trigger blocks — no
+// previous/next connection. The ACTOR socket is whose handler this is; it
+// defaults to a `this actor` shadow (on an `.actor` file the subject is obvious).
+// A handler runs at RUNTIME, so its args are the live `world` and `actor` (they
+// shadow the outer `actor` builder) and `eventValue` (the event's detail, e.g.
+// the animation frame or the key pressed).
 
-// "when [this actor] presses/releases key [x]" — a free-floating handler on the
-// Input rule's key events. The event fires for every key (its detail is the key
-// name), so the handler filters for the chosen one. Like `world_on_event`, the
-// ACTOR socket is whose handler this is (default `this actor` shadow), and the
-// handler binds the live `world`/`actor` so a "for each … touching" loop inside
-// can query the world.
-const worldOnKey = defineBlock({
-  type: 'world_on_key',
-  message0: 'when %1 %2 key %3',
-  args0: [
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {
-      type: 'field_dropdown',
-      name: 'STATE',
-      options: [
-        ['presses', 'keyPressed'],
-        ['releases', 'keyReleased'],
-      ],
+/** Wrap a handler body as the runtime `.on` registration on the target actor. */
+const onHandler = (target: string, exportName: string, body: string): string =>
+  `${target}.on(WorldLab.${exportName}, (world, actor, eventValue) => {\n` +
+  `${body}});\n`;
+
+/** A plain event hat: `when <actor> <event name>` / `do …`. */
+const defineEventBlock = (event: GameEvent) => {
+  const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
+  return defineBlock({
+    type: eventBlockType(event),
+    message0: `when %1 ${event.name ?? event.id}`,
+    args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+    message1: 'do %1',
+    args1: [{type: 'input_statement', name: 'HANDLER'}],
+    inputsInline: true,
+    extensions: [actorInputExtension],
+    style: 'event_blocks',
+    tooltip: `Run blocks when this actor ${event.name ?? event.id}.`,
+    generator: {
+      javascript(block, generator) {
+        const target =
+          generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+        return onHandler(
+          target,
+          exportName,
+          generator.statementToCode(block, 'HANDLER'),
+        );
+      },
     },
-    {type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS},
-  ],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'HANDLER'}],
-  inputsInline: true,
-  extensions: [actorInputExtension],
-  style: 'event_blocks',
-  tooltip:
-    'Run blocks when an actor presses or releases a key (while the game is focused).',
-  generator: {
-    javascript(block, generator) {
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const eventConst =
-        block.getFieldValue('STATE') === 'keyReleased'
-          ? 'KeyReleasedEvent'
-          : 'KeyPressedEvent';
-      const key = block.getFieldValue('KEY');
-      const handler = generator.statementToCode(block, 'HANDLER');
-      // `eventValue` is the key that fired; act only for the chosen key.
-      return (
-        `${target}.on(WorldLab.${eventConst}, (world, actor, eventValue) => {\n` +
-        `if (eventValue === ${str(key)}) {\n${handler}}\n});\n`
-      );
+  });
+};
+
+// The Input rule's key events carry a per-key detail, so their blocks add a KEY
+// dropdown and the handler filters for the chosen key. "presses"/"releases" is
+// which event this block hangs off — one block per event, no state dropdown.
+const KEY_VERB: Record<string, string> = {
+  keyPressed: 'presses',
+  keyReleased: 'releases',
+};
+
+/** A key event hat: `when <actor> presses/releases key <key>` / `do …`. */
+const defineKeyEventBlock = (event: GameEvent) => {
+  const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
+  const verb = KEY_VERB[event.id] ?? 'presses';
+  return defineBlock({
+    type: eventBlockType(event),
+    message0: `when %1 ${verb} key %2`,
+    args0: [
+      {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+      {type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS},
+    ],
+    message1: 'do %1',
+    args1: [{type: 'input_statement', name: 'HANDLER'}],
+    inputsInline: true,
+    extensions: [actorInputExtension],
+    style: 'event_blocks',
+    tooltip: `Run blocks when an actor ${verb} a key (while the game is focused).`,
+    generator: {
+      javascript(block, generator) {
+        const target =
+          generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+        const key = block.getFieldValue('KEY');
+        // `eventValue` is the key that fired; act only for the chosen key.
+        const body = `if (eventValue === ${str(key)}) {\n${generator.statementToCode(
+          block,
+          'HANDLER',
+        )}}\n`;
+        return onHandler(target, exportName, body);
+      },
     },
-  },
-});
+  });
+};
+
+// Build a block for every event the rule library declares. Input's key events
+// take the KEY-filtered shape; the rest take the plain shape.
+const EVENT_BLOCKS = ALL_RULES.flatMap(rule =>
+  Object.values(rule.events).map(event =>
+    rule === InputRule ? defineKeyEventBlock(event) : defineEventBlock(event),
+  ),
+);
 
 const worldLog = defineBlock({
   type: 'world_log',
@@ -637,8 +674,7 @@ export const DOMAIN_BLOCKS = [
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
-  worldOnEvent,
-  worldOnKey,
+  ...EVENT_BLOCKS,
   worldLog,
   worldPrint,
   worldEventValue,
@@ -653,48 +689,43 @@ export const DOMAIN_BLOCKS = [
   worldUseAnimations,
 ];
 
-/** The toolbox for the Blockly editor: the domain blocks, grouped. */
+// Each rule owns a toolbox category: its name is the rule's, and its blocks are
+// the hand-authored blocks that act on that rule's traits/queries, followed by
+// the generated event hats for that rule's events. A rule with neither (Motion)
+// is omitted. `use trait`/`use rule` span every rule, so they live with the
+// Actor/World they build, not in any one rule category.
+const RULE_CATEGORY_BLOCKS = new Map<Rule, string[]>([
+  [SpatialRule, ['world_set_position']],
+  [CollisionRule, ['world_for_each_touching', 'world_touched_actor']],
+  [GravityRule, []],
+  [InputRule, []],
+  [AnimationRule, ['world_set_sprite', 'world_play_animation']],
+]);
+
+const ruleCategory = (rule: Rule, blocks: string[]) => ({
+  name: rule.name,
+  blocks: [...blocks, ...Object.values(rule.events).map(eventBlockType)],
+});
+
+/**
+ * The toolbox for the Blockly editor. Structural categories (Actor, Scene,
+ * World) come first, then one category per rule holding that rule's blocks and
+ * events, then the general-purpose blocks (Console output, Logic, Math, Text).
+ */
 export const DOMAIN_TOOLBOX: Toolbox = [
   {
-    name: 'Scene',
-    blocks: [
-      'world_scene',
-      'world_add_actor',
-      'world_load_map',
-      'world_set_position',
-    ],
+    name: 'Actor',
+    blocks: ['world_actor', 'world_use_trait', 'world_this_actor'],
   },
+  {name: 'Scene', blocks: ['world_scene', 'world_add_actor', 'world_load_map']},
   {
     name: 'World',
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
-  {name: 'Actor', blocks: ['world_actor']},
-  {
-    name: 'Traits',
-    blocks: ['world_use_trait', 'world_set_position'],
-  },
-  {
-    name: 'Looks',
-    blocks: ['world_set_sprite', 'world_play_animation'],
-  },
-  {
-    name: 'Events',
-    blocks: [
-      'world_on_event',
-      'world_on_key',
-      'world_log',
-      'world_print',
-      'world_event_value',
-    ],
-  },
-  {
-    name: 'Actors',
-    blocks: [
-      'world_for_each_touching',
-      'world_touched_actor',
-      'world_this_actor',
-    ],
-  },
+  ...[...RULE_CATEGORY_BLOCKS].map(([rule, blocks]) =>
+    ruleCategory(rule, blocks),
+  ),
+  {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',
     blocks: [

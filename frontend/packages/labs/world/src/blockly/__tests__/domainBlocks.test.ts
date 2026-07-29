@@ -136,24 +136,19 @@ describe('domain block generators', () => {
     ).toBe('WorldLab.playAnimation(touched, "switch");\n');
   });
 
-  it('world_on_event registers a handler binding the event value', () => {
+  it('per-event blocks register a handler on the named event', () => {
+    // Each engine event has its own `world_on_<id>` block (no EVENT dropdown),
+    // emitting a `.on(WorldLab.<Export>, …)` for that event.
     expect(
-      emit(
-        'world_on_event',
-        {EVENT: 'startsFalling'},
-        {HANDLER: 'console.log("hi");\n'},
-      ),
+      emit('world_on_startsFalling', {}, {HANDLER: 'console.log("hi");\n'}),
     ).toBe(
       'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n' +
         'console.log("hi");\n});\n',
     );
-  });
-
-  it('world_on_event handles the frameChanged event', () => {
     expect(
       emit(
-        'world_on_event',
-        {EVENT: 'frameChanged'},
+        'world_on_frameChanged',
+        {},
         {HANDLER: 'console.log(eventValue);\n'},
       ),
     ).toBe(
@@ -164,37 +159,27 @@ describe('domain block generators', () => {
 
   it('event blocks register the handler on their ACTOR value', () => {
     // Default (empty socket → `this actor` shadow) registers on `actor`.
-    expect(
-      emit('world_on_event', {EVENT: 'startsFalling'}, {HANDLER: ''}),
-    ).toBe(
+    expect(emit('world_on_startsFalling', {}, {HANDLER: ''})).toBe(
       'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
     );
     // A plugged-in actor value registers on it instead.
     expect(
-      emit(
-        'world_on_event',
-        {EVENT: 'startsFalling'},
-        {HANDLER: ''},
-        {
-          ACTOR: 'other',
-        },
-      ),
+      emit('world_on_startsFalling', {}, {HANDLER: ''}, {ACTOR: 'other'}),
     ).toBe(
       'other.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
     );
   });
 
-  it('world_on_key filters the pressed/released key event to the chosen key', () => {
-    expect(
-      emit('world_on_key', {KEY: ' ', STATE: 'keyPressed'}, {HANDLER: 'x;\n'}),
-    ).toBe(
+  it('key event blocks filter the chosen key, one block per event', () => {
+    // `presses` and `releases` are now distinct blocks (no STATE dropdown), each
+    // hung off its own Input event, keeping the KEY dropdown filter.
+    expect(emit('world_on_keyPressed', {KEY: ' '}, {HANDLER: 'x;\n'})).toBe(
       'actor.on(WorldLab.KeyPressedEvent, (world, actor, eventValue) => {\n' +
         'if (eventValue === " ") {\nx;\n}\n});\n',
     );
-    // The STATE dropdown selects which event to hang off.
-    expect(
-      emit('world_on_key', {KEY: 'a', STATE: 'keyReleased'}, {HANDLER: ''}),
-    ).toContain('actor.on(WorldLab.KeyReleasedEvent');
+    expect(emit('world_on_keyReleased', {KEY: 'a'}, {HANDLER: ''})).toContain(
+      'actor.on(WorldLab.KeyReleasedEvent',
+    );
   });
 
   it('world_log prints the text field', () => {
@@ -225,6 +210,29 @@ describe('domain block generators', () => {
       c => c.blocks,
     );
     for (const t of ['controls_if', 'logic_compare', 'math_number', 'text']) {
+      expect(toolboxTypes).toContain(t);
+    }
+  });
+
+  it('registers every world_ block the toolbox references', () => {
+    // The rule categories reference generated event types (`world_on_<id>`); this
+    // catches any drift between what the toolbox lists and what is registered.
+    const registered = new Set(DOMAIN_BLOCKS.map(b => b.type));
+    const toolboxTypes = (DOMAIN_TOOLBOX as Array<{blocks: string[]}>).flatMap(
+      c => c.blocks,
+    );
+    for (const t of toolboxTypes.filter(t => t.startsWith('world_'))) {
+      expect(registered).toContain(t);
+    }
+    // Each rule's events are surfaced: the gravity, input, and animation hats.
+    for (const t of [
+      'world_on_startsFalling',
+      'world_on_stopsFalling',
+      'world_on_keyPressed',
+      'world_on_keyReleased',
+      'world_on_animationEnded',
+      'world_on_frameChanged',
+    ]) {
       expect(toolboxTypes).toContain(t);
     }
   });
