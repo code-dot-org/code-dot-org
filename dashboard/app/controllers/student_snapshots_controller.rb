@@ -19,7 +19,8 @@ class StudentSnapshotsController < ApplicationController
         name: lesson.localized_name,
         hasLessonPlan: lesson.has_lesson_plan,
         isLockable: lesson.lockable,
-        position: lesson.relative_position
+        position: lesson.relative_position,
+        hasCodeLevel: Queries::Lessons.get_assessment_level_for_lesson(lesson).present?
       }
     end
 
@@ -224,8 +225,7 @@ class StudentSnapshotsController < ApplicationController
       return render json: {error: "Unauthorized access to student data"}, status: :forbidden
     end
 
-    # Get the last Pythonlab level for this lesson
-    level = lesson.levels.where(type: 'Pythonlab').last
+    level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
@@ -250,7 +250,7 @@ class StudentSnapshotsController < ApplicationController
       return render json: {error: "Lesson not found"}, status: :not_found
     end
 
-    level = lesson.levels.where(type: 'Pythonlab').last
+    level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
 
     unless level
       return render json: {id: nil, name: nil, exemplarSources: nil}

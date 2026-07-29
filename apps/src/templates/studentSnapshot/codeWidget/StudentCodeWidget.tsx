@@ -11,6 +11,10 @@ interface StudentCodeWidgetProps {
   selectedUnitId: number;
   selectedLessonId: number | null;
   selectedStudentId: number | null;
+  // Whether the lesson has a level that could produce student code. Hide the
+  // widget only when this is false, not merely because the student hasn't
+  // written any code yet.
+  hasCodeLevel: boolean;
 }
 
 interface StudentCodeData {
@@ -33,9 +37,10 @@ const StudentCodeWidget = ({
   selectedUnitId,
   selectedLessonId,
   selectedStudentId,
+  hasCodeLevel,
 }: StudentCodeWidgetProps) => {
   const [studentCode, setStudentCode] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
       setIsLoading(true);
@@ -89,6 +94,10 @@ const StudentCodeWidget = ({
       openFiles: fileIds.slice(0, 1), // Open the first file by default
     } as MultiFileSource;
   }, [studentCode]);
+
+  if (!hasCodeLevel && !isLoading) {
+    return null;
+  }
 
   return (
     <CodeWidget
