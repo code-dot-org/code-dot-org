@@ -587,6 +587,12 @@ img.video_thumbnail {
       }
     }
   }
+
+  // The finish link is dropped from the header; the lesson is still
+  // finishable from the last progress bubble.
+  #finish_link_container {
+    display: none;
+  }
 }
 
 .levelbuilder-header {
