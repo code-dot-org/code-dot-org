@@ -1,0 +1,57 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-29T00:55:53.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Pizza Party Planner\r\n\r\nYou are creating a program to help plan a pizza party. Decide how many people are attending, how many slices each pizza has, and what useful information your program will calculate.\r\n\r\n### Build Your Program\r\n\r\nYour program must:\r\n\r\n* Store information in variables and a numeric list\r\n* Access at least two list elements and use them in an expression\r\n* Build and print a message that includes the result\r\n\r\nRun your program and fix any errors. Then ask AI Tutor to review it against the requirements and make any final changes yourself.\r\n\r\n::: details [Need help? Ask AI Tutor]\r\n\r\nYou can ask AI Tutor to help you:\r\n\r\n* Brainstorm what your program could calculate\r\n* Decide what information to store in variables and a list\r\n* Check whether your plan meets the requirements\r\n* Give you a hint about a specific part of your code\r\n* Explain an error message\r\n\r\nAsk for guidance or hints, but write the program yourself.\r\n\r\n:::",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "display_name": "Sharing is Caring!",
+    "bubble_choice_description": "Practice python by splitting a pizza amongst friends.",
+    "thumbnail_url": "https://images.code.org/7cd76fc2d6e13d5c752681678157c536-pizza.png",
+    "name_suffix": "_pilot-2024",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T00:55:53.559+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 00:57:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:57:53 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:58:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>
