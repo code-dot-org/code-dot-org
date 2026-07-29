@@ -19,6 +19,7 @@ const UPLOADER_TYPE = 'SketchLab';
 
 export interface ModeratedImageUploadRequest {
   file: File;
+  skipModeration?: boolean;
   // `flagged` means the user accepted a flagged moderation verdict; record it
   // on the node so deleting the node can lift the abuse block.
   onUploaded: (uploadUrl: string, flagged: boolean) => void;
@@ -52,7 +53,7 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
   } = useFlaggedImage(UPLOADER_TYPE);
 
   const uploadImage: ModeratedImageUploader = useCallback(
-    async ({file, onUploaded, onError}) => {
+    async ({file, skipModeration, onUploaded, onError}) => {
       const uploadToUrl = async (
         flagged: boolean,
         precomputedUploadUrl?: string
@@ -83,6 +84,11 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
 
         if (isBlockedAbuse) {
           setShowUploadsDisabledModal(true);
+          return;
+        }
+
+        if (skipModeration) {
+          await uploadToUrl(false);
           return;
         }
 

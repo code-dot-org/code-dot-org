@@ -22,7 +22,7 @@ describe('makeBackpackImageImportHandler', () => {
   }
 
   beforeEach(() => {
-    // Successful moderated upload: hand the asset URL to the continuation.
+    // Successful upload: hand the asset URL to the continuation.
     uploadImage = jest.fn(async ({onUploaded}) =>
       onUploaded('/v3/assets/channel-1/abc.png', false)
     );
@@ -35,7 +35,11 @@ describe('makeBackpackImageImportHandler', () => {
   it('uploads the file as a project asset and adds an image node', async () => {
     await runImport();
 
-    expect(uploadImage).toHaveBeenCalledWith(expect.objectContaining({file}));
+    // Backpack images were moderated when saved to the Backpack, so the
+    // re-upload skips moderation.
+    expect(uploadImage).toHaveBeenCalledWith(
+      expect.objectContaining({file, skipModeration: true})
+    );
     // altText drops the file extension.
     expect(addImageNode).toHaveBeenCalledWith({
       src: '/v3/assets/channel-1/abc.png',
@@ -43,20 +47,6 @@ describe('makeBackpackImageImportHandler', () => {
     });
     expect(notifySuccess).toHaveBeenCalledWith('new', expect.any(String));
     expect(notifyError).not.toHaveBeenCalled();
-  });
-
-  it('marks the node when the upload was accepted despite a flag', async () => {
-    uploadImage.mockImplementation(async ({onUploaded}) =>
-      onUploaded('/v3/assets/channel-1/abc.png', true)
-    );
-
-    await runImport();
-
-    expect(addImageNode).toHaveBeenCalledWith({
-      src: '/v3/assets/channel-1/abc.png',
-      altText: 'my-sketch',
-      flagged: true,
-    });
   });
 
   it('reports an error and adds nothing when the upload cannot proceed', async () => {
@@ -67,18 +57,6 @@ describe('makeBackpackImageImportHandler', () => {
     expect(addImageNode).not.toHaveBeenCalled();
     expect(notifySuccess).not.toHaveBeenCalled();
     expect(notifyError).toHaveBeenCalledWith(expect.any(String));
-  });
-
-  it('notifies nothing when a flagged upload is left pending', async () => {
-    // A flagged verdict defers the upload until the user answers the modal;
-    // uploadImage resolves without invoking either callback.
-    uploadImage.mockImplementation(async () => {});
-
-    await runImport();
-
-    expect(addImageNode).not.toHaveBeenCalled();
-    expect(notifySuccess).not.toHaveBeenCalled();
-    expect(notifyError).not.toHaveBeenCalled();
   });
 
   it('reports an error when fetching the file throws', async () => {

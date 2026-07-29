@@ -208,6 +208,41 @@ describe('useModeratedImageUpload', () => {
     expect(result.current.showUploadsDisabledModal).toBe(false);
   });
 
+  it('skips moderation when the request says the image was already moderated', async () => {
+    const {result} = renderModeratedUpload();
+
+    await act(async () => {
+      await result.current.uploadImage({
+        file,
+        skipModeration: true,
+        onUploaded,
+        onError,
+      });
+    });
+
+    expect(mockModerateImage).not.toHaveBeenCalled();
+    expect(onUploaded).toHaveBeenCalledWith(UPLOAD_URL, false);
+  });
+
+  it('still blocks skip-moderation uploads when the project is blocked', async () => {
+    mockState = {
+      lab: {channel: {id: CHANNEL_ID}, isBlockedAbuse: true},
+    };
+    const {result} = renderModeratedUpload();
+
+    await act(async () => {
+      await result.current.uploadImage({
+        file,
+        skipModeration: true,
+        onUploaded,
+        onError,
+      });
+    });
+
+    expect(result.current.showUploadsDisabledModal).toBe(true);
+    expect(mockUploadImageAsset).not.toHaveBeenCalled();
+  });
+
   it('skips moderation for starter-asset and exemplar uploads', async () => {
     mockIsStarterAssetOrExemplar.mockReturnValue(true);
     const {result} = renderModeratedUpload();

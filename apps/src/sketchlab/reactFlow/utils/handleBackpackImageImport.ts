@@ -10,8 +10,9 @@ interface BackpackImageImportOptions {
 
 /**
  * Builds the Backpack panel's addFileHandler for Sketch Lab. Re-uploads the
- * chosen Backpack image as a moderated project asset, then adds it to the
- * canvas as an image node.
+ * chosen Backpack image as a project asset, then adds it to the canvas as an
+ * image node. Backpack images were already moderated when they were saved to
+ * the Backpack, so the re-upload skips moderation.
  */
 export function makeBackpackImageImportHandler({
   uploadImage,
@@ -24,11 +25,11 @@ export function makeBackpackImageImportHandler({
       const file = await getFile();
       await uploadImage({
         file,
-        onUploaded: (uploadUrl, flagged) => {
+        skipModeration: true,
+        onUploaded: uploadUrl => {
           addImageNode({
             src: uploadUrl,
             altText: fileName.replace(/\.[^.]+$/, ''),
-            ...(flagged && {flagged}),
           });
           notifySuccess('new', `${fileName} added to your sketch!`);
         },
