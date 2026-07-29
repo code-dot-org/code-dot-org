@@ -31,6 +31,7 @@ export type {
   WorldAction,
   ActorAction,
   Query,
+  WorldQuery,
   GameEvent,
   EventHandler,
   Step,
