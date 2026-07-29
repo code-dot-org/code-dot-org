@@ -68,6 +68,14 @@ export interface Channel {
 
 export type DefaultChannel = Pick<Channel, 'name'>;
 
+export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
+
+/** A share-filtering failure (profanity or PII) found in project content. */
+export interface ShareFailure {
+  type: ShareFailureType;
+  content?: string;
+}
+
 /** A project and its corresponding sources if present, fetched together when loading a level. */
 export interface ProjectAndSources {
   // When projects are loaded for the first time, sources may not be present
@@ -75,6 +83,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  shareFailure?: ShareFailure | null;
   isTeacherOfProjectOwner?: boolean;
 }
 
