@@ -8,7 +8,7 @@ module Cdo
   # configurable threshold are dropped so we do not pay to ship 2xx/3xx request
   # logs to CloudWatch in production.
   #
-  #   5xx  -> :error  (a filtered backtrace is attached when available)
+  #   5xx  -> :error
   #   4xx  -> :warn
   #   else -> :info
   #
@@ -21,14 +21,10 @@ module Cdo
   module HttpRequestLogging
     DCDO_KEY = 'http_request_log_level'.freeze
 
-    # Per-request RequestStore keys. LOGGED_KEY guards against logging a request
-    # twice: a raising action delivers both process_action (with the exception)
-    # and, via the lograge fork's DebugExceptions hook, process_exception.
-    # EXCEPTION_KEY holds the exception object that hook stashes so the exception
-    # path can attach a backtrace (its notification payload carries only the
-    # exception class and message).
+    # Guards against logging a request twice: a raising action delivers both
+    # process_action (with the exception) and, via the lograge fork's
+    # DebugExceptions hook, process_exception.
     LOGGED_KEY = :http_request_logged
-    EXCEPTION_KEY = :http_request_exception
 
     # Ordered lowest-to-highest so a threshold comparison is a simple >=.
     SEVERITY = {info: Logger::INFO, warn: Logger::WARN, error: Logger::ERROR}.freeze

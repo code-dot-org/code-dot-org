@@ -36,7 +36,7 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
     RequestStore.clear!
   end
 
-  def event(status:, exception_object: nil)
+  def event(status:)
     payload = {
       method: 'GET',
       path: '/dashboardapi/x',
@@ -47,8 +47,22 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
       view_runtime: 1.0,
       db_runtime: 2.0,
     }
-    payload[:exception_object] = exception_object if exception_object
     Struct.new(:payload, :duration).new(payload, 12.34)
+  end
+
+  # Mirrors the payload lograge's process_exception path delivers: no :status,
+  # an :exception [class, message] pair from which lograge derives the status
+  # and its own `error` field.
+  def exception_event(exception_class: 'RuntimeError', message: 'boom')
+    payload = {
+      method: 'POST',
+      path: '/dashboardapi/x',
+      format: :json,
+      controller: nil,
+      action: nil,
+      exception: [exception_class, message],
+    }
+    Struct.new(:payload, :duration).new(payload, 0.0)
   end
 
   def only_entry
@@ -72,27 +86,21 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
     assert_equal :warn, severity
   end
 
-  test 'logs 5xx at error with a backtrace when an exception is available' do
-    exception = begin
-      raise 'boom'
-    rescue RuntimeError => exception
-      exception
-    end
-    @subscriber.process_action(event(status: 500, exception_object: exception))
+  test 'logs 5xx at error without a backtrace' do
+    @subscriber.process_action(event(status: 500))
     severity, data = only_entry
     assert_equal :error, severity
-    assert data['backtrace'].is_a?(String)
+    assert_equal 500, data['status']
+    refute data.key?('backtrace')
   end
 
-  test 'does not mutate the exception backtrace shared with error reporters' do
-    exception = begin
-      raise 'boom'
-    rescue RuntimeError => exception
-      exception
-    end
-    original = exception.backtrace.dup
-    @subscriber.process_action(event(status: 500, exception_object: exception))
-    assert_equal original, exception.backtrace
+  test "keeps lograge's error field on the exception path and adds no backtrace" do
+    @subscriber.process_action(exception_event(message: "Can't verify CSRF token authenticity."))
+    severity, data = only_entry
+    assert_equal :error, severity
+    assert_equal 500, data['status']
+    assert_equal "RuntimeError: Can't verify CSRF token authenticity.", data['error']
+    refute data.key?('backtrace')
   end
 
   test 'drops sub-threshold lines but still claims the request' do
@@ -108,10 +116,5 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
     # must not produce a second line.
     @subscriber.process_action(event(status: 500))
     assert_equal 1, @logger.entries.size
-  end
-
-  test 'marks the request logged so Rack::RequestLogger skips it' do
-    @subscriber.process_action(event(status: 200))
-    assert RequestStore.store[Cdo::HttpRequestLogging::LOGGED_KEY]
   end
 end

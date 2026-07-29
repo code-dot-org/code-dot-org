@@ -274,7 +274,7 @@ Rails Lograge logs typically include the core keys shown in the examples above:
 - `user_id` - The ID of the current logged in user (optional)
 - `admin_id` - Present if this is an admin assuming this user's identity
 
-Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`. For 5xx responses a `backtrace` key carries the filtered exception backtrace (the same exception is also reported to Sentry and Honeybadger).
+Depending on the route and Lograge hooks, optional keys may also appear—for example `ip`, `user_id`, `params`, `request_id`, `timestamp`, `location` (for redirects), or error metadata like `error` and `exception`. Exception backtraces are not logged here—Sentry and Honeybadger already capture them.
 
 **Note:** The `@cee:` prefix is followed by a space and then the JSON object. Parsers should filter for lines beginning with `@cee:` when extracting structured entries.
 
