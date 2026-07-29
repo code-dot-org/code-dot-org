@@ -1,10 +1,22 @@
 {
   "name": "aif-pl-playground",
   "script_names": [
-
+    "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+    "self-paced-pl-teaching-ps-with-ai-s1-2026-dev",
+    "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+    "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
+    "self-paced-pl-teaching-fabric-of-internet-and-ai-s1-2026-dev",
+    "self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026-dev",
+    "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
   ],
   "original_script_names": [
-
+    "self-paced-pl-teaching-aif-s1-overview-2026-dev",
+    "self-paced-pl-teaching-ps-with-ai-s1-2026-dev",
+    "self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev",
+    "self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev",
+    "self-paced-pl-teaching-fabric-of-internet-and-ai-s1-2026-dev",
+    "self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026-dev",
+    "self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
