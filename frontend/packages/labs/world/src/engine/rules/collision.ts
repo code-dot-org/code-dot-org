@@ -162,4 +162,48 @@ export const ResolveStep = rule.addStepAfter(
   },
 );
 
+/**
+ * Every collidable actor whose box currently overlaps `actor`'s — the actors it
+ * is "touching" — optionally narrowed to one actor `type` (the template id).
+ * "Touching" is a collision fact, so only `collidable` actors have a box and can
+ * take part: `actor` and each candidate must carry {@link CollidableTrait} (a
+ * non-collidable subject touches nothing). Excludes `actor` itself. Reuses
+ * `resolve`'s AABB test (`collisionSize` + center overlap) but *reports* contacts
+ * instead of pushing bodies apart, and needs the whole actor list — so it is a
+ * world-scoped query the Collision rule answers:
+ * `world.query(TouchingQuery, actor, type?)`.
+ */
+export const TouchingQuery = rule.addQuery(
+  'touching',
+  (world, actorArg, typeArg): Actor[] => {
+    const actor = actorArg as Actor;
+    const type = typeArg as string | undefined;
+    if (!actor.has(CollidableTrait)) {
+      return [];
+    }
+    const position = actor.get(PositionProperty);
+    const size = collisionSize(actor);
+    const touching: Actor[] = [];
+    for (const other of world.actors) {
+      if (other === actor || !other.has(CollidableTrait)) {
+        continue;
+      }
+      if (type !== undefined && other.type !== type) {
+        continue;
+      }
+      const otherPosition = other.get(PositionProperty);
+      const otherSize = collisionSize(other);
+      const overlapX =
+        (size.x + otherSize.x) / 2 - Math.abs(position.x - otherPosition.x);
+      const overlapY =
+        (size.y + otherSize.y) / 2 - Math.abs(position.y - otherPosition.y);
+      if (overlapX > 0 && overlapY > 0) {
+        touching.push(other);
+      }
+    }
+    return touching;
+  },
+  {name: 'actors touching'},
+);
+
 export const CollisionRule = rule.build();

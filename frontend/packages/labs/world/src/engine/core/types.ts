@@ -54,6 +54,19 @@ export interface Query<T = unknown> {
 }
 
 /**
+ * A world-scoped read a rule answers over the whole world — the query analogue
+ * of {@link WorldAction}. Invoked via `world.query(query, ...args)`; e.g. the
+ * Collision rule's "which actors is this one touching?" scans every actor and so
+ * needs the world, which an actor-scoped {@link Query} does not receive.
+ */
+export interface WorldQuery<T = unknown> {
+  readonly id: string;
+  readonly name?: string;
+  readonly ownerId: string;
+  readonly evaluate: (world: World, ...args: unknown[]) => T;
+}
+
+/**
  * A signal a Step can raise; an Actor elects to respond via `actor.on`. Named
  * `GameEvent` to avoid colliding with the DOM `Event` in engine code and in the
  * generated `.d.ts`. Learners reference the value, not this type name.
@@ -101,6 +114,7 @@ export interface Rule {
   readonly requires: readonly Rule[];
   readonly properties: Readonly<Record<string, Property>>;
   readonly actions: Readonly<Record<string, WorldAction>>;
+  readonly queries: Readonly<Record<string, WorldQuery>>;
   readonly events: Readonly<Record<string, GameEvent>>;
   readonly traits: Readonly<Record<string, Trait>>;
   readonly steps: Readonly<Record<string, Step>>;

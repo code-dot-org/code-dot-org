@@ -13,6 +13,7 @@ import type {
   Step,
   StepFn,
   WorldAction,
+  WorldQuery,
 } from '../core/types';
 import type {World} from '../core/World';
 
@@ -22,6 +23,7 @@ export class RuleBuilder {
   private requiredRules: Rule[] = [];
   private readonly properties: Record<string, Property> = {};
   private readonly actions: Record<string, WorldAction> = {};
+  private readonly queries: Record<string, WorldQuery> = {};
   private readonly events: Record<string, GameEvent> = {};
   private readonly traitMap: Record<string, Trait> = {};
   private readonly steps: Record<string, Step> = {};
@@ -77,6 +79,23 @@ export class RuleBuilder {
     const action: WorldAction = {id, name: opts.name, ownerId: this.id, apply};
     this.actions[id] = action;
     return action;
+  }
+
+  /** Add a world-scoped query (a read over the world, invoked via `world.query`). */
+  addQuery<T>(
+    id: string,
+    evaluate: (world: World, ...args: unknown[]) => T,
+    opts: {name?: string} = {},
+  ): WorldQuery<T> {
+    this.assertMutable();
+    const query: WorldQuery<T> = {
+      id,
+      name: opts.name,
+      ownerId: this.id,
+      evaluate,
+    };
+    this.queries[id] = query as WorldQuery;
+    return query;
   }
 
   /** Create a trait this rule maintains; describe it further on the return. */
@@ -136,6 +155,7 @@ export class RuleBuilder {
       requires: Object.freeze([...this.requiredRules]),
       properties: Object.freeze({...this.properties}),
       actions: Object.freeze({...this.actions}),
+      queries: Object.freeze({...this.queries}),
       events: Object.freeze({...this.events}),
       traits: Object.freeze({...this.traitMap}),
       steps: Object.freeze({...this.steps}),
