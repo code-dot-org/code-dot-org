@@ -30,11 +30,9 @@ module Cdo
       n_workers_to_restart_per_batch = (pids.size.to_f / n_batches).ceil
       n_workers_to_restart_per_batch = 1 if n_workers_to_restart_per_batch < 1
       worker_queues = self.worker_queues(n_workers_to_start)
-      worker_pools = worker_queues.values.tally.map do |queues, worker_count|
-        "#{queues.join(',')}:#{worker_count}"
-      end.join('; ')
+      worker_queues_log = worker_queues.tally.map {|queues, worker_count| "#{queues.join(',')}:#{worker_count}"}.join('; ')
 
-      chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}; worker pools: #{worker_pools}")
+      chat_client_log("delayed_job: starting #{n_workers_to_start} workers, replacing #{pids.size} existing workers with a rolling restart in #{n_batches} batches of #{n_workers_to_restart_per_batch}; worker pools: #{worker_queues_log}")
 
       # We delete ALL existing delayed_job pid_files in pid_dir (dashboard/tmp/pids)
       # before we even start in order to work around a horrible bug in delayed_job:
@@ -74,60 +72,83 @@ module Cdo
       n_workers_running
     end
 
-    # Map each delayed_job.N process to the queues served by its single worker.
+    # Builds the queue assignment for each indexed delayed_job worker.
     #
-    # With `low_priority` configured for 10% and `default`, `mailers`, and `mailjet` in the main pool:
-    # - 1 worker serves every queue, because splitting is not possible.
-    # - 2 workers assign delayed_job.0 to the main pool and `delayed_job.1` to `low_priority`.
-    # - 4 workers assign 3 to the main pool and 1 to `low_priority`.
-    # - 140 workers assign 126 to the main pool and 14 to `low_priority`.
-    #
-    # Configured percentages are rounded up.
-    # Each configured pool gets one worker while capacity remains,
-    # and at least one worker remains available for unconfigured queues.
-    # A configured queue without a dedicated worker remains in the main pool.
+    # Dedicated pools come from `CDO.active_job_backend_worker_pool_percentages`.
+    # Each percentage is rounded up, and each configured pool receives one worker while capacity remains.
+    # Unconfigured queues and configured queues without a dedicated worker run in the main pool.
     # Without configured pools, every worker serves every queue.
+    #
+    # @param n_workers [Integer] Total number of workers to assign.
+    # @return [Array<Array<String>>] Queue names indexed by worker number.
+    #   Returns an empty array for zero or one worker so delayed_job applies no
+    #   queue filter and serves every queue.
+    #
+    # @note Workers in the same pool share one queue-name array.
+    #   Treat the returned inner arrays as immutable.
+    #
+    # @example Allocate a 10% `low_priority` pool
+    #   # Given main queues: default, mailers, mailjet
+    #   # And active_job_backend_worker_pool_percentages: {low_priority: 10}
+    #   worker_queues(1)
+    #   # => []
+    #
+    #   worker_queues(2)
+    #   # => [["default", "mailers", "mailjet"], ["low_priority"]]
+    #
+    #   worker_queues(4)
+    #   # => [
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["default", "mailers", "mailjet"],
+    #   #      ["low_priority"]
+    #   #    ]
+    #
+    #   worker_queues(140).tally
+    #   # => {
+    #   #      ["default", "mailers", "mailjet"] => 126,
+    #   #      ["low_priority"] => 14
+    #   #    }
     def self.worker_queues(n_workers)
-      return {} unless n_workers.positive?
+      return [] if n_workers.to_i <= 1
 
-      queue_names = CDO.active_job_queues.values.map(&:to_s).uniq
-      return {0 => queue_names} if n_workers == 1
+      queues = CDO.active_job_queues.values.map(&:to_s).uniq
 
       pool_percentages = (CDO.active_job_backend_worker_pool_percentages || {}).each_with_object({}) do |(queue_key, percentage), percentages|
-        queue_name = CDO.active_job_queues[queue_key.to_sym] || queue_key
-        queue_name = queue_name.to_s
-        next unless queue_names.include?(queue_name)
+        queue = CDO.active_job_queues[queue_key.to_sym] || queue_key
+        queue = queue.to_s
+        next unless queues.include?(queue)
         next unless percentage.to_i.positive?
 
-        percentages[queue_name] = percentage.to_i
+        percentages[queue] = percentage.to_i
       end
-      return n_workers.times.to_h {|worker_index| [worker_index, queue_names]} if pool_percentages.empty?
+      return Array.new(n_workers, queues) if pool_percentages.empty?
 
-      main_queues = queue_names - pool_percentages.keys
+      main_queues = queues - pool_percentages.keys
 
       desired_worker_counts = pool_percentages.transform_values do |percentage|
         (n_workers * percentage / 100.0).ceil
       end
-      reserved_worker_counts = pool_percentages.keys.to_h {|queue_name| [queue_name, 0]}
+      reserved_worker_counts = pool_percentages.keys.to_h {|queue| [queue, 0]}
       main_worker_required = main_queues.any? || pool_percentages.size > n_workers
       available_worker_count = n_workers - (main_worker_required ? 1 : 0)
 
       # Give each configured pool one worker before distributing its remaining share.
-      reserved_worker_counts.each_key do |queue_name|
+      reserved_worker_counts.each_key do |queue|
         break unless available_worker_count.positive?
 
-        reserved_worker_counts[queue_name] = 1
+        reserved_worker_counts[queue] = 1
         available_worker_count -= 1
       end
 
       while available_worker_count.positive?
-        queue_name = reserved_worker_counts.
-          select {|queue, worker_count| worker_count < desired_worker_counts[queue]}.
-          max_by {|queue, worker_count| desired_worker_counts[queue] - worker_count}&.
+        queue = reserved_worker_counts.
+          select {|pool_queue, worker_count| worker_count < desired_worker_counts[pool_queue]}.
+          max_by {|pool_queue, worker_count| desired_worker_counts[pool_queue] - worker_count}&.
           first
-        break unless queue_name
+        break unless queue
 
-        reserved_worker_counts[queue_name] += 1
+        reserved_worker_counts[queue] += 1
         available_worker_count -= 1
       end
 
@@ -136,19 +157,12 @@ module Cdo
       end
       main_queues |= unallocated_queues
       main_worker_count = n_workers - reserved_worker_counts.values.sum
-      main_queues = queue_names if main_worker_count.positive? && main_queues.empty?
+      main_queues = queues if main_worker_count.positive? && main_queues.empty?
 
-      worker_queues = Hash.new(main_queues.empty? ? queue_names : main_queues)
-      worker_index = 0
-      main_worker_count.times do
-        worker_queues[worker_index] = main_queues
-        worker_index += 1
-      end
+      worker_queues = Array.new(main_worker_count, main_queues)
       reserved_worker_counts.each do |reserved_queue, worker_count|
-        worker_count.times do
-          worker_queues[worker_index] = [reserved_queue]
-          worker_index += 1
-        end
+        queues = [reserved_queue]
+        worker_queues.concat(Array.new(worker_count, queues))
       end
       worker_queues
     end
