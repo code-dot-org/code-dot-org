@@ -11,6 +11,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'spritelab',
   'poetry',
   'game_design',
+  'applab',
 ];
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
@@ -60,7 +61,11 @@ export const getImageModerationVerdict = (
 };
 
 interface AnalyticsData {
-  uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
+  uploaderType?:
+    | 'Lab2FileUploader'
+    | 'AnimationPicker'
+    | 'ImageURLInput'
+    | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
   assetUrl?: string;
@@ -124,6 +129,81 @@ export const moderateImage = async (
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
+    return 'error';
+  }
+};
+
+export const moderateImageUrl = async (
+  imageUrl: string,
+  appName: string,
+  {
+    uploaderType = 'n/a',
+    moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
+    flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
+    assetUrl,
+  }: AnalyticsData,
+  overrideSeverityThresholds?: SeverityThresholds
+): Promise<'safe' | 'flagged' | 'error'> => {
+  if (!LABS_WITH_IMAGE_MODERATION.includes(appName ?? '')) {
+    return 'error';
+  }
+
+  const dimensions = [
+    {name: 'UploaderType', value: uploaderType},
+    {name: 'AppName', value: appName},
+  ];
+  MetricsReporter.incrementCounter(
+    'ModerateCustomImageUrl.Attempt',
+    dimensions
+  );
+  analyticsReporter.sendEvent(moderateEvent, {
+    UploaderType: uploaderType,
+    appName,
+    levelPath: window.location.pathname,
+  });
+
+  try {
+    const response = await HttpClient.post(
+      '/v3/images/moderate_url',
+      JSON.stringify({url: imageUrl}),
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    );
+    const json = await response.json();
+    if (json === null) {
+      return 'error';
+    }
+
+    MetricsReporter.incrementCounter(
+      'ModerateCustomImageUrl.Success',
+      dimensions
+    );
+
+    if (
+      getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
+    ) {
+      return 'safe';
+    }
+
+    MetricsReporter.incrementCounter(
+      'ModerateCustomImageUrl.Flagged',
+      dimensions
+    );
+    analyticsReporter.sendEvent(flaggedEvent, {
+      UploaderType: uploaderType,
+      appName,
+      levelPath: window.location.pathname,
+      moderationService: 'AI Content Safety',
+      moderationResult: JSON.stringify(json),
+      assetUrl: assetUrl || undefined,
+    });
+    return 'flagged';
+  } catch (error) {
+    MetricsReporter.logError('Error with image URL moderation: ' + error);
+    MetricsReporter.incrementCounter(
+      'ModerateCustomImageUrl.Error',
+      dimensions
+    );
     return 'error';
   }
 };
