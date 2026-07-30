@@ -145,11 +145,39 @@ export function projectMapActorTypes(
   return maps;
 }
 
+// A world's `use rule` names either a built-in (its `world-lab` export) or a
+// project rule module (a path). The trait dropdown needs the built-in export
+// name; a project rule that RE-EXPORTS a built-in (a shim, e.g.
+// `export {GravityRule as default} from 'world-lab'`) is resolved to it here, by
+// reading the shim. A genuinely project-defined rule can't be introspected
+// statically, so it contributes no traits until block generation reads rule
+// metadata from the built modules — STOPGAP, removed then.
+const RULE_SHIM_RE =
+  /export\s*\{\s*(\w+)\s+as\s+default\s*\}\s*from\s*['"]world-lab['"]/;
+const RULE_MODULE_EXTS = ['.js', '.ts', '.rule'];
+
+function resolveRuleExport(
+  rule: string,
+  files: Record<string, string>,
+): string | undefined {
+  if (!rule.includes('/')) {
+    return rule; // already a built-in export name
+  }
+  for (const ext of RULE_MODULE_EXTS) {
+    const contents = files[rule + ext];
+    if (contents !== undefined) {
+      return contents.match(RULE_SHIM_RE)?.[1];
+    }
+  }
+  return undefined;
+}
+
 /**
- * The rule names every `.world` file attaches — the `RULE` field of each of its
- * `world_use_rule` blocks, deduped across all worlds. Values are `world-lab`
- * exports (`GravityRule`, …), matching the `world_use_rule` dropdown; the trait
- * dropdown resolves these against the engine to list the traits in play.
+ * The built-in rule names every `.world` file puts in play — the `RULE` field of
+ * each `world_use_rule` block, deduped across all worlds, resolved to `world-lab`
+ * export names (a project rule that shims a built-in resolves through
+ * {@link resolveRuleExport}). The trait dropdown resolves these against the
+ * engine to list the traits in play.
  */
 export function projectWorldRules(files: Record<string, string>): string[] {
   const names = new Set<string>();
@@ -164,7 +192,10 @@ export function projectWorldRules(files: Record<string, string>): string[] {
       return;
     }
     if (block.type === 'world_use_rule' && block.fields?.RULE) {
-      names.add(block.fields.RULE);
+      const resolved = resolveRuleExport(block.fields.RULE, files);
+      if (resolved) {
+        names.add(resolved);
+      }
     }
     for (const input of Object.values(block.inputs ?? {})) {
       visit(input?.block);

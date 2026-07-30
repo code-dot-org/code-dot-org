@@ -108,10 +108,21 @@ const LEVEL1_MAP = JSON.stringify(
   2,
 );
 
+// The standard rules, shipped as project source under `rules/` rather than
+// referenced from the engine bundle. Each is a re-export shim of the built-in
+// rule — identical behavior and OBJECT IDENTITY (so an actor's `WorldLab.<Trait>`
+// still matches the rule the world runs), but authored in the project: the
+// world's `use rule` blocks import these, and a learner can later "eject" a shim
+// to a full `RuleBuilder` source to modify a mechanic. (Only the rules the world
+// names need a shim; their dependencies are pulled in transitively.)
+const ruleShim = (exportName: string): string =>
+  `export {${exportName} as default} from 'world-lab';\n`;
+
 // The world, authored in Blockly (`platform.world`): a `world_world` root with
 // the rules in play and the animation file it registers. "Has Gravity" pulls in
 // motion and collision; "Responds to Input" moves arrow-controlled actors; "Has
-// Appearance" draws sprites and animations.
+// Appearance" draws sprites and animations. The rules are project modules
+// (`rules/*`), imported by the generated world.
 const PLATFORM_WORLD = JSON.stringify(
   {
     blocks: {
@@ -123,11 +134,11 @@ const PLATFORM_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: nextBlock(
-              {type: 'world_use_rule', fields: {RULE: 'GravityRule'}},
+              {type: 'world_use_rule', fields: {RULE: 'rules/gravity'}},
               nextBlock(
-                {type: 'world_use_rule', fields: {RULE: 'InputRule'}},
+                {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
                 nextBlock(
-                  {type: 'world_use_rule', fields: {RULE: 'AnimationRule'}},
+                  {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
                   {
                     type: 'world_use_animations',
                     fields: {FILE: 'animations/game'},
@@ -288,8 +299,30 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: LEVEL1_MAP,
         folderId: 'maps',
       },
+      gravityRule: {
+        id: 'gravityRule',
+        name: 'gravity.js',
+        language: 'javascript',
+        contents: ruleShim('GravityRule'),
+        folderId: 'rules',
+      },
+      inputRule: {
+        id: 'inputRule',
+        name: 'input.js',
+        language: 'javascript',
+        contents: ruleShim('InputRule'),
+        folderId: 'rules',
+      },
+      animationRule: {
+        id: 'animationRule',
+        name: 'animation.js',
+        language: 'javascript',
+        contents: ruleShim('AnimationRule'),
+        folderId: 'rules',
+      },
     },
     folders: {
+      rules: {id: 'rules', name: 'rules', parentId: '0'},
       scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
