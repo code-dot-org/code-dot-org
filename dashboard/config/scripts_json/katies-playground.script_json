@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-28 19:01:54 UTC",
+    "serialized_at": "2026-07-29 21:09:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5436,6 +5436,48 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "IntroHoAI26Playtest"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      },
+      "level_keys": [
+        "IntroHoAI26Playtest"
+      ]
+    },
+    {
+      "chapter": 165,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AboutTheCode"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      },
+      "level_keys": [
+        "AboutTheCode"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "HoAI26-sandbox-1"
         ],
         "lesson.key": "lesson-19",
@@ -5448,9 +5490,9 @@
       ]
     },
     {
-      "chapter": 165,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 167,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
       },
@@ -5469,16 +5511,16 @@
       ]
     },
     {
-      "chapter": 166,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 168,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "HoAI26-sandbox-3"
+          "HoAI26imagegen"
         ],
         "lesson.key": "lesson-19",
         "lesson_group.key": "",
@@ -5486,7 +5528,70 @@
         "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
       },
       "level_keys": [
-        "HoAI26-sandbox-3"
+        "HoAI26imagegen"
+      ]
+    },
+    {
+      "chapter": 169,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OpenQ1"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      },
+      "level_keys": [
+        "OpenQ1"
+      ]
+    },
+    {
+      "chapter": 170,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OpenQ2"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      },
+      "level_keys": [
+        "OpenQ2"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OpenQ3"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      },
+      "level_keys": [
+        "OpenQ3"
       ]
     }
   ],
@@ -7449,6 +7554,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "IntroHoAI26Playtest",
+        "script_level.level_keys": [
+          "IntroHoAI26Playtest"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AboutTheCode",
+        "script_level.level_keys": [
+          "AboutTheCode"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "HoAI26-sandbox-1",
         "script_level.level_keys": [
           "HoAI26-sandbox-1"
@@ -7473,9 +7602,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "HoAI26-sandbox-3",
+        "level.key": "HoAI26imagegen",
         "script_level.level_keys": [
-          "HoAI26-sandbox-3"
+          "HoAI26imagegen"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OpenQ1",
+        "script_level.level_keys": [
+          "OpenQ1"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OpenQ2",
+        "script_level.level_keys": [
+          "OpenQ2"
+        ],
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "92745e5c-685a-4ecd-8db6-fe8a9bf80fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OpenQ3",
+        "script_level.level_keys": [
+          "OpenQ3"
         ],
         "lesson.key": "lesson-19",
         "lesson_group.key": "",

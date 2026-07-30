@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-29T22:01:15.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build a Basketball Basics Bot\r\n\r\nThe Rec League Coordinator set up this bot to help those who are new to basketball — but they weren't careful about what information they gave it.\r\n\r\n##### Do This:\r\n\r\n1. Ask your bot a few questions someone new to the sport would ask. Something's off. What is it?\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Fix the context. You can delete cards or edit them to fix them. Some cards are a judgement call - decide what you would trust.\r\n4. Click Update, then ask your questions again. Keep going until you would trust this bot.\r\n5. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you keep or edit the same things? Does having context mean the bot is always right?\r\n\r\n::: details [**Have Time To Make It Better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated September 2026] Players should bring water, indoor court shoes, and their\r\njersey to every game.\r\n- [Updated September 2026] Games are played in the Main Street Rec Center gym. Families\r\ncan watch from the bleachers.\r\n- [Updated September 2026] A player who has been substituted out may re-enter the game\r\nat any later stoppage in play.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nFind one more fact this bot should know. Write it as a new context entry — include the date and where you found it, just like the other cards do. Then test whether your bot uses it.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a basketball helper for the Main Street Rec Center youth league. A rec league coordinator built you to explain the game to families who are new to basketball.",
+        "retrievalContexts": [
+          "[Updated September 2026] A rec league game has four quarters. Each quarter is\n8 minutes long, with a longer break at halftime.",
+          "Practices are usually held twice a week, though the exact schedule depends on gym\navailability.",
+          "[Updated September 2026] The rec center also offers adult volleyball leagues on\nThursday evenings. Registration opens in August.",
+          "[Updated September 2026] Scoring: a regular basket is 2 points, a shot from behind\nthe three-point line is 3 points, and each free throw is 1 point.",
+          "[Updated September 2026] A player fouls out of the game after 5 personal fouls and\nhas to sit for the rest of the game.",
+          "[Updated September 2026] Rec league games follow standard basketball rules with some\nmodifications for youth play.",
+          "[Updated 2019] Traveling is when a player moves their feet without dribbling. When\nit happens, the other team gets the ball. Rec league games are officiated by three\nreferees and use a 24-second shot clock.",
+          "[Updated 2017] Rec league games are played as two 20-minute halves with a break in\nbetween."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given. \n2. If the information you have been given does not cover a question, say plainly that you do not have that information. Do NOT use general knowledge to fill the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other, report both and say that they disagree. Do not quietly pick one.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say\n  that is not what you are built for.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T22:01:15.653+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-a-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-a-2026\"},{\"changed_at\":\"2026-07-29 22:01:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 00:55:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:35:36 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:56:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 03:02:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

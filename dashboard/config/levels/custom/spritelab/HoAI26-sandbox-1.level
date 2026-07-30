@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-07-28T19:01:12.000Z",
   "level_num": "custom",
@@ -17,7 +18,7 @@
     "standalone_app_name": "spritelab",
     "hide_custom_blocks": true,
     "guide_mode": "aiCodeGenerate",
-    "long_instructions": "#Create a game! \r\n##Images: Make the art | ★ Code: Build logic | Play: Test it\r\n- Describe your game idea below. AI can get the code started for you!\r\n\r\n\r\ne.g. A cat explores a haunted house, finds 5 keys, and escapes.",
+    "long_instructions": "#Play the game! \r\n",
     "start_sources": {
       "animations": {
         "orderedKeys": [
@@ -167,10 +168,12 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:01:12.907+00:00\",\"changed\":[\"cloned from \\\"Sprite Lab in Lab2 showcase 0\\\"\"],\"cloned_from\":\"Sprite Lab in Lab2 showcase 0\"},{\"changed_at\":\"2026-07-28 19:05:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"uses_lab2\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-28 19:07:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-28 19:07:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:01:12.907+00:00\",\"changed\":[\"cloned from \\\"Sprite Lab in Lab2 showcase 0\\\"\"],\"cloned_from\":\"Sprite Lab in Lab2 showcase 0\"},{\"changed_at\":\"2026-07-28 19:05:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"uses_lab2\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-28 19:07:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-28 19:07:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 20:08:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 20:10:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 20:12:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 21:05:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

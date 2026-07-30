@@ -1,11 +1,12 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-07-28T19:01:41.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "uses_lab2": true,
+    "uses_lab2": "true",
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -17,7 +18,7 @@
     "standalone_app_name": "spritelab",
     "hide_custom_blocks": true,
     "guide_mode": "aiCodeGenerate",
-    "long_instructions": "Build a game across scenes! Generate images in the **Images** tab, then code each scene in the **Code** tab — or *describe a game* and let AI build the blocks for you. Press **Play** to try it.",
+    "long_instructions": "#Create a game! \r\n##AI can get the code started for you!\r\n\r\n\r\n<details style=\"background-color: black; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: .9em; font-weight: bold;\">🔎 Get at hint!</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    <p>Write a descriptive prompt. <br> For Example --> A cat explores a haunted house, finds 5 keys, and escapes. </p></div>\r\n</details>\r\n",
     "start_sources": {
       "animations": {
         "orderedKeys": [
@@ -144,10 +145,37 @@
         }
       ]
     },
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "skin": "gamelab",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:01:41.335+00:00\",\"changed\":[\"cloned from \\\"HoAI26-sandbox-1\\\"\"],\"cloned_from\":\"HoAI26-sandbox-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:01:41.335+00:00\",\"changed\":[\"cloned from \\\"HoAI26-sandbox-1\\\"\"],\"cloned_from\":\"HoAI26-sandbox-1\"},{\"changed_at\":\"2026-07-29 21:06:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"uses_lab2\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-07-29 21:07:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>
