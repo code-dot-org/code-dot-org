@@ -189,9 +189,60 @@ export const styles = {
     backgroundColor: '#fbf7fb',
     borderBottom: 'solid 1px #e1dce2',
     padding: '6px 8px',
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: 'minmax(170px, 260px) minmax(0, 1fr) minmax(170px, 260px)',
+    gap: 8,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  navigationAlgorithmContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    minWidth: 0,
+  },
+
+  navigationAlgorithmButton: {
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    border: 'solid 1px transparent',
+    borderRadius: 20,
+    boxSizing: 'border-box',
+    color: '#3f3348',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    flexDirection: 'column',
+    gap: 1,
+    minHeight: 44,
+    maxWidth: '100%',
+    margin: 0,
+    padding: '5px 12px',
+    textAlign: 'left',
+  },
+
+  navigationAlgorithmPrefix: {
+    display: 'block',
+    fontSize: 11,
+    lineHeight: 1.1,
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+
+  navigationAlgorithmName: {
+    display: 'block',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    lineHeight: 1.2,
+    maxWidth: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+  },
+
+  navigationTabsRailSpacer: {
+    minWidth: 0,
   },
 
   navigationTabs: {
@@ -260,6 +311,73 @@ export const styles = {
 
   navigationTabLabelSelected: {
     fontFamily: '"Gotham 5r", sans-serif',
+  },
+
+  dialogScrim: {
+    position: 'fixed',
+    inset: 0,
+    zIndex: 2000,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    padding: 20,
+    boxSizing: 'border-box',
+  },
+
+  confirmDialog: {
+    width: 'min(430px, 100%)',
+    backgroundColor: 'white',
+    border: 'solid 1px #3f3348',
+    borderRadius: 8,
+    boxShadow: '0 18px 40px rgba(0, 0, 0, 0.28)',
+    boxSizing: 'border-box',
+    padding: 20,
+  },
+
+  confirmDialogTitle: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 20,
+    lineHeight: 1.25,
+    marginBottom: 10,
+  },
+
+  confirmDialogText: {
+    fontSize: 14,
+    lineHeight: 1.45,
+    margin: '0 0 20px',
+  },
+
+  confirmDialogActions: {
+    display: 'flex',
+    gap: 10,
+    justifyContent: 'flex-end',
+  },
+
+  confirmDialogCancelButton: {
+    backgroundColor: 'white',
+    border: 'solid 1px #4d575f',
+    borderRadius: 5,
+    color: '#4d575f',
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    lineHeight: 1.2,
+    minHeight: 34,
+    padding: '8px 14px',
+  },
+
+  confirmDialogConfirmButton: {
+    backgroundColor: colors.teal,
+    border: 'solid 1px transparent',
+    borderRadius: 5,
+    color: 'white',
+    cursor: 'pointer',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+    lineHeight: 1.2,
+    minHeight: 34,
+    padding: '8px 14px',
   },
 
   largeText: {

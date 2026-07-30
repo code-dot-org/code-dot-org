@@ -7,9 +7,15 @@ import {
   faVial,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {type KeyboardEvent, type ReactNode, useEffect, useState} from 'react';
+import {
+  type KeyboardEvent,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import {styles} from './constants';
+import {Algorithms, styles} from './constants';
 import {reportPanelView} from './helpers/metrics';
 import {
   getNavigationTabs,
@@ -19,8 +25,14 @@ import {
 } from './helpers/navigationValidation';
 import {deepEqual, shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
-import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
+import {
+  getPanelButtons,
+  resetToAlgorithmSelection,
+  saveModel,
+  setCurrentPanel,
+} from './redux';
 import type {
+  AlgorithmId,
   DataDisplayView,
   InstructionsKey,
   NavigationTab,
@@ -171,6 +183,8 @@ const PanelButtons = ({
 interface NavigationTabsProps {
   navigationTabs: NavigationTab[];
   currentPanel: Panel;
+  selectedAlgorithm: AlgorithmId | undefined;
+  onClickAlgorithm: () => void;
   setCurrentPanel: (panel: Panel) => void;
 }
 
@@ -185,11 +199,22 @@ const navigationTabIcons: Record<NavigationTab['id'], IconDefinition> = {
   export: faUpload,
 };
 
+const algorithmNameKeys: Record<AlgorithmId, string> = {
+  [Algorithms.KNN]: 'algorithmKnnName',
+  [Algorithms.DECISION_TREE]: 'algorithmDecisionTreeName',
+};
+
 const NavigationTabs = ({
   navigationTabs,
   currentPanel,
+  selectedAlgorithm,
+  onClickAlgorithm,
   setCurrentPanel,
 }: NavigationTabsProps) => {
+  const selectedAlgorithmName = selectedAlgorithm
+    ? I18n.t(algorithmNameKeys[selectedAlgorithm])
+    : undefined;
+
   const onClickTab = (tab: NavigationTab) => {
     if (tab.enabled && tab.panel && tab.panel !== currentPanel) {
       setCurrentPanel(tab.panel);
@@ -237,6 +262,25 @@ const NavigationTabs = ({
       aria-label={I18n.t('navigationTabsAriaLabel')}
       style={styles.navigationTabsRail}
     >
+      <div style={styles.navigationAlgorithmContainer}>
+        {selectedAlgorithmName && (
+          <button
+            type="button"
+            style={styles.navigationAlgorithmButton}
+            onClick={onClickAlgorithm}
+            aria-label={I18n.t('navigationAlgorithmRestartAriaLabel', {
+              algorithm: selectedAlgorithmName,
+            })}
+          >
+            <span style={styles.navigationAlgorithmPrefix}>
+              {I18n.t('navigationAlgorithmLabel')}
+            </span>
+            <span style={styles.navigationAlgorithmName}>
+              {selectedAlgorithmName}
+            </span>
+          </button>
+        )}
+      </div>
       <div role="tablist" style={styles.navigationTabs}>
         {navigationTabs.map(tab => (
           <button
@@ -278,7 +322,97 @@ const NavigationTabs = ({
           </button>
         ))}
       </div>
+      <div aria-hidden="true" style={styles.navigationTabsRailSpacer} />
     </nav>
+  );
+};
+
+interface AlgorithmResetDialogProps {
+  algorithmName: string;
+  onCancel: () => void;
+  onConfirm: () => void;
+}
+
+const AlgorithmResetDialog = ({
+  algorithmName,
+  onCancel,
+  onConfirm,
+}: AlgorithmResetDialogProps) => {
+  const cancelButtonRef = useRef<HTMLButtonElement>(null);
+  const confirmButtonRef = useRef<HTMLButtonElement>(null);
+  const titleId = 'algorithm-reset-dialog-title';
+  const descriptionId = 'algorithm-reset-dialog-description';
+
+  useEffect(() => {
+    cancelButtonRef.current?.focus();
+
+    const onKeyDownDialog = (event: globalThis.KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onCancel();
+        return;
+      }
+
+      if (event.key !== 'Tab') {
+        return;
+      }
+
+      const focusable = [
+        cancelButtonRef.current,
+        confirmButtonRef.current,
+      ].filter((button): button is HTMLButtonElement => !!button);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDownDialog);
+    return () => document.removeEventListener('keydown', onKeyDownDialog);
+  }, [onCancel]);
+
+  return (
+    <div style={styles.dialogScrim}>
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={descriptionId}
+        tabIndex={-1}
+        style={styles.confirmDialog}
+      >
+        <div id={titleId} style={styles.confirmDialogTitle}>
+          {I18n.t('algorithmResetDialogTitle')}
+        </div>
+        <p id={descriptionId} style={styles.confirmDialogText}>
+          {I18n.t('algorithmResetDialogMessage', {algorithm: algorithmName})}
+        </p>
+        <div style={styles.confirmDialogActions}>
+          <button
+            type="button"
+            ref={cancelButtonRef}
+            style={styles.confirmDialogCancelButton}
+            onClick={onCancel}
+          >
+            {I18n.t('algorithmResetDialogCancel')}
+          </button>
+          <button
+            type="button"
+            ref={confirmButtonRef}
+            style={styles.confirmDialogConfirmButton}
+            onClick={onConfirm}
+          >
+            {I18n.t('algorithmResetDialogConfirm')}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -363,9 +497,12 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
   const [datasetViewMode, setDatasetViewMode] =
     useState<DataDisplayView>('table');
+  const [showAlgorithmResetDialog, setShowAlgorithmResetDialog] =
+    useState(false);
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const navigationTabs = useAppSelector(getNavigationTabs, deepEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
+  const selectedAlgorithm = useAppSelector(state => state.selectedAlgorithm);
   const resultsPhase = useAppSelector(state => state.resultsPhase);
   const saveStatus = useAppSelector(state => state.saveStatus);
   const saveResponseData = useAppSelector(state => state.saveResponseData);
@@ -386,6 +523,15 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   ].includes(currentPanel);
   const datasetCardViewOpen =
     currentPanel === 'dataDisplayDataset' && datasetViewMode === 'cards';
+  const selectedAlgorithmName = selectedAlgorithm
+    ? I18n.t(algorithmNameKeys[selectedAlgorithm])
+    : undefined;
+
+  const confirmAlgorithmReset = () => {
+    setShowAlgorithmResetDialog(false);
+    setDatasetViewMode('table');
+    dispatch(resetToAlgorithmSelection());
+  };
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -405,7 +551,17 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         <NavigationTabs
           navigationTabs={navigationTabs}
           currentPanel={currentPanel}
+          selectedAlgorithm={selectedAlgorithm}
+          onClickAlgorithm={() => setShowAlgorithmResetDialog(true)}
           setCurrentPanel={panel => dispatch(setCurrentPanel(panel))}
+        />
+      )}
+
+      {showAlgorithmResetDialog && selectedAlgorithmName && (
+        <AlgorithmResetDialog
+          algorithmName={selectedAlgorithmName}
+          onCancel={() => setShowAlgorithmResetDialog(false)}
+          onConfirm={confirmAlgorithmReset}
         />
       )}
 

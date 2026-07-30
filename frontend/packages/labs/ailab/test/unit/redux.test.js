@@ -16,6 +16,7 @@ import reducer, {
   setImportedData,
   resetState,
   resetDatasetState,
+  resetToAlgorithmSelection,
   setSaveStatus,
   setSelectedAlgorithm,
   getPredictAvailable,
@@ -209,6 +210,42 @@ describe('ailab reducer', () => {
       expect(next.currentPanel).toBe('selectDataset');
       expect(next.data).toEqual([]);
       expect(next.labelColumn).toBeUndefined();
+    });
+  });
+
+  describe('resetToAlgorithmSelection', () => {
+    test('preserves algorithm and settings while clearing model setup', () => {
+      let state = reducer(
+        initialState,
+        setSelectedAlgorithm(Algorithms.DECISION_TREE),
+      );
+      state = reducer(state, setMode({datasets: ['d1']}));
+      state = reducer(state, setReserveLocation('random'));
+      state = reducer(state, setInstructionsEnabled(true));
+      state = reducer(state, setCurrentPanel('results'));
+      state = reducer(state, setImportedData([{a: 1}], false));
+      state = reducer(state, setLabelColumn('a'));
+      state = reducer(state, addSelectedFeature('b'));
+      state = {
+        ...state,
+        trainedModel: {},
+        accuracyCheckExamples: [[1]],
+        accuracyCheckPredictedLabels: [1],
+      };
+
+      const next = reducer(state, resetToAlgorithmSelection());
+      expect(next.selectedAlgorithm).toBe(Algorithms.DECISION_TREE);
+      expect(next.mode).toEqual({datasets: ['d1']});
+      expect(next.reserveLocation).toBe('random');
+      expect(next.instructionsEnabled).toBe(true);
+      expect(next.currentPanel).toBe('selectAlgorithm');
+      expect(next.instructionsKey).toBe('selectAlgorithm');
+      expect(next.data).toEqual([]);
+      expect(next.labelColumn).toBeUndefined();
+      expect(next.selectedFeatures).toEqual([]);
+      expect(next.trainedModel).toBeUndefined();
+      expect(next.accuracyCheckExamples).toEqual([]);
+      expect(next.accuracyCheckPredictedLabels).toEqual([]);
     });
   });
 

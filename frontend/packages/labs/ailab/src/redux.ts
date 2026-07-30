@@ -315,6 +315,17 @@ const ailabSlice = createSlice({
         currentPanel: state.currentPanel,
       };
     },
+    resetToAlgorithmSelection(state) {
+      return {
+        ...initialState,
+        selectedAlgorithm: state.selectedAlgorithm,
+        mode: state.mode,
+        reserveLocation: state.reserveLocation,
+        instructionsEnabled: state.instructionsEnabled,
+        currentPanel: 'selectAlgorithm',
+        instructionsKey: 'selectAlgorithm',
+      };
+    },
     setTrainedModel(state, action: PayloadAction<PredictionModel>) {
       state.trainedModel = action.payload;
     },
@@ -516,6 +527,7 @@ export const {
   setPrediction,
   resetState,
   resetDatasetState,
+  resetToAlgorithmSelection,
   setTrainedModel,
   setTrainedModelDetail,
   setCurrentPanel,
