@@ -829,6 +829,96 @@ describe('buildDomainPalette (project rule blocks)', () => {
       'import {StrengthProperty} from "rules/wind";',
     );
   });
+
+  // A project rule whose members take parameters (declared via the params
+  // mutator's `extraState`): a world action `Nudge(number amount, vector push)`
+  // and an actor query `Near(actor other)`.
+  const pushRule = parseRuleMeta(
+    'rules/push',
+    JSON.stringify({
+      variables: [
+        {id: 'a', name: 'amount', type: 'Number'},
+        {id: 'b', name: 'push', type: 'Vector'},
+        {id: 'c', name: 'other', type: 'Actor'},
+      ],
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Pushes'},
+            next: {
+              block: {
+                type: 'world_rule_action',
+                fields: {NAME: 'Nudge'},
+                extraState: {
+                  params: [
+                    {type: 'number', var: 'a'},
+                    {type: 'vector', var: 'b'},
+                  ],
+                },
+                next: {
+                  block: {
+                    type: 'world_rule_trait',
+                    fields: {NAME: 'Pushable'},
+                    inputs: {
+                      DO: {
+                        block: {
+                          type: 'world_rule_query',
+                          fields: {TYPE: 'boolean', NAME: 'Near'},
+                          extraState: {params: [{type: 'actor', var: 'c'}]},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+    }),
+  )!;
+
+  it('a project action’s call-site block passes all its params positionally', () => {
+    const {blocks} = buildDomainPalette([pushRule]);
+    const nudge = blocks.find(
+      b => b.type === 'world_do_rules_push_NudgeAction',
+    )!;
+    // Two params → two labelled sockets (AMOUNT, PUSH); both passed to `act`.
+    const code = nudge.generator.javascript(
+      {getFieldValue: () => ''} as never,
+      {
+        valueToCode: (_b: unknown, name: string) =>
+          name === 'AMOUNT'
+            ? '5'
+            : name === 'PUSH'
+              ? 'new WorldLab.Vector(1, 0)'
+              : '',
+        definitions_: {},
+      } as never,
+      {} as never,
+    );
+    expect(code).toBe(
+      'world.act(NudgeAction, 5, new WorldLab.Vector(1, 0));\n',
+    );
+  });
+
+  it('a project actor-query block takes its param after the actor', () => {
+    const {blocks} = buildDomainPalette([pushRule]);
+    const near = blocks.find(
+      b => b.type === 'world_query_rules_push_NearQuery',
+    )!;
+    const [code] = near.generator.javascript(
+      {getFieldValue: () => ''} as never,
+      {
+        valueToCode: (_b: unknown, name: string) =>
+          name === 'ACTOR' ? 'actor' : name === 'OTHER' ? 'other' : '',
+        definitions_: {},
+      } as never,
+      {} as never,
+    ) as [string, number];
+    expect(code).toBe('actor.query(NearQuery, other)');
+  });
 });
 
 describe('rule authoring blocks (`.rule` files)', () => {
@@ -865,6 +955,13 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_action',
       'world_rule_query',
       'world_return',
+      // Parameters are declared via the +/− mutator (no toolbox block); only the
+      // getters that read a parameter in the body appear here.
+      'variables_get_Number',
+      'variables_get_Boolean',
+      'variables_get_String',
+      'variables_get_Vector',
+      'variables_get_Actor',
     ]);
   });
 

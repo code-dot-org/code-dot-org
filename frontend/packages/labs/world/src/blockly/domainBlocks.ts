@@ -12,7 +12,6 @@ import type {Block} from 'blockly';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
-  createTypedVariable,
   defineBlock,
   type BlockArgDefinition,
   type Toolbox,
@@ -25,6 +24,10 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {
+  ruleParamsInitExtension,
+  ruleParamsMutator,
+} from './extensions/ruleParamsMutator';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {label} from './label';
@@ -50,6 +53,11 @@ import type {
   RuleMeta,
 } from './ruleMeta';
 import {traitOptions, traitOptionsExtension} from './traitOptions';
+import {
+  ActorVariable,
+  PARAM_GETTER_BLOCKS,
+  PARAM_GETTER_TYPES,
+} from './typedVariables';
 import {
   registerValueShadows,
   valueShadowExtension,
@@ -758,22 +766,46 @@ for (const rule of AUTHORING_RULES) {
 const actionBlockType = (exportName: string): string =>
   `world_do_${exportName}`;
 
+/** The input names a typed argument (an action/query param) occupies, derived
+ * from its declared name (a vector uses `<NAME>_X`/`<NAME>_Y`). */
+const paramValueNames = (name: string): ValueNames => {
+  const upper = name.toUpperCase();
+  return {value: upper, x: `${upper}_X`, y: `${upper}_Y`};
+};
+
 /**
  * A "do this action" block for one rule action, generated from its definition.
  * A world action runs on `world`; an actor action takes an `on …` ACTOR socket
- * (default `this actor`) and runs on it. The single argument (actions take zero
- * or one) is a typed value socket, like a setter's — a getter/math can slot in.
+ * (default `this actor`) and runs on it. Each of the action's params is a typed
+ * value socket (a getter/math slots in), passed positionally to `act`. A single
+ * param trails the name bare ("apply force %1"); two or more are each labelled
+ * by name ("nudge amount %1 direction %2") to keep them apart.
  */
 const defineActionBlock = (action: ActionMeta) => {
   const actorScoped = action.scope === 'actor';
   const name = action.name;
-  const param = action.params[0]; // actions take zero or one argument
-  const value = param
-    ? typedValueInputs(param, 1)
-    : {message: '', args: [] as BlockArgDefinition[], shadows: []};
+  const params = action.params;
+  const labelled = params.length > 1;
+  // A lone argument keeps the default `VALUE`/`X`/`Y` sockets (so built-in
+  // single-arg action blocks are unchanged); several need per-name sockets to
+  // stay distinct.
+  const paramNames = params.map(param =>
+    labelled ? paramValueNames(param.name) : DEFAULT_VALUE_NAMES,
+  );
 
-  const args0: BlockArgDefinition[] = [...value.args];
-  let message0 = value.message ? `${name} ${value.message}` : name;
+  const args0: BlockArgDefinition[] = [];
+  const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
+  let message0 = name;
+  params.forEach((param, i) => {
+    const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
+    args0.push(...built.args);
+    shadows.push(...built.shadows);
+    // Label each socket by param name only when there are several; a lone param
+    // trails the verb bare, preserving the built-in single-arg blocks' look.
+    message0 += labelled
+      ? ` ${param.name} ${built.message}`
+      : ` ${built.message}`;
+  });
   if (actorScoped) {
     // Target socket last, like `play animation … on …`.
     args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
@@ -781,8 +813,8 @@ const defineActionBlock = (action: ActionMeta) => {
   }
 
   const type = actionBlockType(memberKey(action.ref));
-  if (value.shadows.length) {
-    registerValueShadows(type, value.shadows);
+  if (shadows.length) {
+    registerValueShadows(type, shadows);
   }
   return defineBlock({
     type,
@@ -794,7 +826,7 @@ const defineActionBlock = (action: ActionMeta) => {
     // A world action runs on `world`; warn if placed where `world` is unbound.
     extensions: [
       ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
-      ...(value.shadows.length ? [valueShadowExtension] : []),
+      ...(shadows.length ? [valueShadowExtension] : []),
     ],
     style: 'default',
     tooltip: actorScoped ? `${name} — for an actor.` : name,
@@ -803,9 +835,12 @@ const defineActionBlock = (action: ActionMeta) => {
         const target = actorScoped
           ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
           : 'world';
-        const argCode = param
-          ? `, ${typedValueCode(param, block, generator)}`
-          : '';
+        const argCode = params
+          .map(
+            (param, i) =>
+              `, ${typedValueCode(param, block, generator, paramNames[i])}`,
+          )
+          .join('');
         return `${target}.act(${refCode(action.ref, generator)}${argCode});\n`;
       },
     },
@@ -847,21 +882,15 @@ const queryBlockType = (exportName: string): string =>
  * A reporter for one rule query. An actor query takes an ACTOR value input
  * (default `this actor`) and reads it — `actor.query(WorldLab.X)`; a world query
  * reads `world`. Its output/style match the value it returns (a boolean → logic).
+ * A query's `params` (built-in or authored) become value sockets after the
+ * subject, passed positionally to `query`.
  */
-/** The input names a query param occupies, derived from its declared name. */
-const paramValueNames = (name: string): ValueNames => {
-  const upper = name.toUpperCase();
-  return {value: upper, x: `${upper}_X`, y: `${upper}_Y`};
-};
-
 const defineQueryBlock = (query: QueryMeta) => {
   const actorScoped = query.scope === 'actor';
   const name = query.name;
   const returns = query.returns ?? 'boolean';
   const type = queryBlockType(memberKey(query.ref));
-  // A world query may take typed arguments (its `params`), each a value socket;
-  // an actor query reads the actor it is called on.
-  const params = actorScoped ? [] : query.params;
+  const params = query.params;
   const paramNames = params.map(param => paramValueNames(param.name));
 
   const args0: BlockArgDefinition[] = [];
@@ -869,9 +898,15 @@ const defineQueryBlock = (query: QueryMeta) => {
   let message0: string;
   if (actorScoped) {
     // The name reads as a predicate ("is on the ground?"), so the subject leads:
-    // "this actor is on the ground?".
+    // "this actor is on the ground?"; any params trail, each labelled by name.
     message0 = `%1 ${name}`;
     args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+    params.forEach((param, i) => {
+      const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
+      args0.push(...built.args);
+      shadows.push(...built.shadows);
+      message0 += ` ${param.name} ${built.message}`;
+    });
   } else if (params.length > 0) {
     // A predicate over its arguments — the first argument leads, the name
     // follows, the rest trail: "%1 is touching %2".
@@ -900,30 +935,28 @@ const defineQueryBlock = (query: QueryMeta) => {
     args0,
     inputsInline: true,
     output: outputForType(returns),
-    extensions: actorScoped
-      ? [actorInputExtension]
-      : [
-          worldContextExtension,
-          ...(shadows.length ? [valueShadowExtension] : []),
-        ],
+    extensions: [
+      ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
+      ...(shadows.length ? [valueShadowExtension] : []),
+    ],
     style: valueStyle(returns),
     tooltip: actorScoped ? `Whether an actor ${name}` : `The world's ${name}`,
     generator: {
       javascript(block, generator) {
-        if (actorScoped) {
-          const target =
-            generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-          return [
-            `${target}.query(${refCode(query.ref, generator)})`,
-            Order.ATOMIC,
-          ] as [string, number];
-        }
         const argCode = params
           .map(
             (param, i) =>
               `, ${typedValueCode(param, block, generator, paramNames[i])}`,
           )
           .join('');
+        if (actorScoped) {
+          const target =
+            generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+          return [
+            `${target}.query(${refCode(query.ref, generator)}${argCode})`,
+            Order.ATOMIC,
+          ] as [string, number];
+        }
         return [
           `world.query(${refCode(query.ref, generator)}${argCode})`,
           Order.ATOMIC,
@@ -1086,14 +1119,6 @@ const worldThisActor = defineBlock({
 // bare identifier `actor`, so a loop variable named `actor` would shadow it
 // (`for (const actor of world.actors)`) and break "this actor is touching it".
 // The generator also reserves `actor` (see BlocklyGenerator) against a rename.
-const ActorVariable = createTypedVariable({
-  type: 'Actor',
-  style: 'sprite_blocks',
-  defaultName: 'other',
-  tooltip:
-    'An actor held in a variable — e.g. the one a “for each” loop is on.',
-});
-
 const worldForEach = defineBlock({
   type: 'world_for_each',
   message0: 'for each actor %1 where %2',
@@ -1493,6 +1518,12 @@ const worldRuleEvent = defineBlock({
 // An action/query is world-scoped at the rule level, actor-scoped inside a
 // `define trait` — the same scope-by-nesting the property block uses.
 
+// Parameters are authored with a plus/minus MUTATOR (the `+`/`−` on the block),
+// not a nested input — a `+` grows a `parameter <name> <type>` row, so no
+// parameter block pollutes the toolbox. Each param is a typed variable the
+// mutator manages; the body reads it with the matching typed getter, and the
+// closure's signature is built from the same variables (extractRuleBodies), so
+// the identifiers agree.
 const worldRuleAction = defineBlock({
   type: 'world_rule_action',
   message0: 'define action %1',
@@ -1501,6 +1532,8 @@ const worldRuleAction = defineBlock({
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
+  mutator: ruleParamsMutator,
+  extensions: [ruleParamsInitExtension],
   style: 'default',
   tooltip:
     'Define an action — a command that changes the world (at the rule level) ' +
@@ -1522,6 +1555,8 @@ const worldRuleQuery = defineBlock({
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
+  mutator: ruleParamsMutator,
+  extensions: [ruleParamsInitExtension],
   style: 'default',
   tooltip:
     'Define a query — a question answered by a value. Put steps in "do" and ' +
@@ -1580,6 +1615,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleAction,
   worldRuleQuery,
   worldReturn,
+  ...PARAM_GETTER_BLOCKS,
 ];
 
 // Keyed by rule id: the hand-authored (non-generated) blocks that act on a
@@ -1640,6 +1676,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_action',
       'world_rule_query',
       'world_return', // ends a query's body
+      ...PARAM_GETTER_TYPES, // read a parameter in the body (params via the +/− mutator)
     ],
   },
 ];
