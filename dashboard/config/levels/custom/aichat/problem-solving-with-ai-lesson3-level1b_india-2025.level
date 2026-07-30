@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-06-26T19:32:49.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Video Game Developer - Minimal Context Given\r\n\r\nPractice prompting through the career of a video game developer by giving a simple, unstructured prompt to see how AI creates dialogue without any examples or guidance.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to character conversations.\r\n\r\n>Write a conversation between a superhero and their sidekick.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how interesting, creative, or repetitive the dialogue is.",
+    "long_instructions": "## Video Game Developer - Minimal Context Given\r\n\r\nPractice prompting through the career of a video game developer by giving a simple, unstructured prompt to see how AI creates dialogue without any examples or guidance.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to character conversations.\r\n\r\n>Write a conversation between a superhero and their young helper as they work together to solve a problem in their neighbourhood.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how interesting, creative, or repetitive the dialogue is.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:49.145+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-06-26T19:32:49.145+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1b_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1b_2025\"},{\"changed_at\":\"2026-07-30 05:45:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22599,\"changed_by_email\":\"doyeon.kim@code.org\"}]"
 }]]></config>
 </Aichat>

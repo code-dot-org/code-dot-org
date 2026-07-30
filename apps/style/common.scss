@@ -1453,35 +1453,20 @@ $see-examples-thick-underline-color: $yellow;
   }
 }
 
-a.WireframeButtons_button {
-  background-color: $purple;
-  border-radius: 5px;
-  color: $white;
-  cursor: pointer;
-  font-size: 0.8em;
-  line-height: 3;
+.WireframeButtons_buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
   margin: 5px;
-  padding: 8px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-a.WireframeButtons_active {
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 div.WireframeButtons_active {
+  background-color: var(--background-brand-purple-extra-light);
+  border-radius: 5px;
+  color: var(--text-neutral-primary);
   cursor: default;
   display: inline-block;
-}
-
-a.WireframeButtons_active,
-div.WireframeButtons_active {
-  background-color: $lightest-purple;
-  border-radius: 5px;
-  color: $dark-charcoal;
   font-size: 0.8em;
   line-height: 3em;
   margin: 5px;

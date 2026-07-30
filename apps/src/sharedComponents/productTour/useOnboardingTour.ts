@@ -3,7 +3,7 @@ import {StepOptions, Tour} from 'shepherd.js';
 
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
-import {recordOnboardingTourAbandonment} from './productTourHelpers';
+import {attachOnboardingAnalytics} from './productTourHelpers';
 import {createShepherdTour} from './shepherdTourFactory';
 
 export interface UseOnboardingTourProps {
@@ -36,6 +36,7 @@ const useOnboardingTour = ({
       additionalStepOptions,
     });
     tour.addSteps(getSteps(tour));
+    attachOnboardingAnalytics(tour, tourName, sessionStorageKey);
 
     tour.on('show', () => {
       if (!tour.currentStep) return;
@@ -50,7 +51,6 @@ const useOnboardingTour = ({
     });
 
     tour.on('cancel', () => {
-      recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName);
       trySetSessionStorage(sessionStorageKey, '');
     });
 

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:38:24 UTC",
+    "serialized_at": "2026-07-29 16:30:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -279,7 +279,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nAcross five days, students design, build, and refine a data-driven web app that explores a value of personal importance. They move through four milestones: planning a schema and dataset, building the interface with `.map()`, adding interactive features (search, filter, or sort), and polishing the final app. Peer feedback (TAG protocol), AI Tutor support, and structured reflections push students to take responsibility for their data choices, their use of AI scaffolds, and the fairness and accessibility of their final product.",
-        "preparation": "- Print copies of the Values Explorer Project Planning Guide to students (one for each student)",
+        "preparation": "- Print copies of the Values Explorer Project Rubric to students (one for each student)",
         "student_overview": "**How can we design, build, and refine a data-driven web app that is usable, inclusive, and trustworthy, while taking responsibility for our data choices and our use of AI scaffolds?**\n\nTime to put it all together. Over the next five days, you design and build a real web app that explores something you actually care about, maybe music, sustainability, mental health, fairness in sports, anything that matters to you. You plan the data, design the interface, add features that let users search, filter, or sort, and polish it until it's something you'd actually want to share. Along the way, you give and get peer feedback, work with AI as a coding partner (not a replacement), and reflect on the choices you made and who they affect. This is your chance to build something that's truly yours."
       },
       "seeding_key": {

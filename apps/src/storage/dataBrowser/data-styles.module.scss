@@ -43,6 +43,10 @@ $max-cell-width: 350px;
   @include main-font-bold;
   color: var(--text-brand-purple-primary);
   cursor: pointer;
+
+  &:hover {
+    color: var(--text-brand-purple-secondary);
+  }
 }
 
 .button {
