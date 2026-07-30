@@ -10,6 +10,7 @@
 import type {
   ActionParam,
   ActorAction,
+  ArgType,
   GameEvent,
   Property,
   PropertyType,
@@ -274,11 +275,13 @@ const parseDefault = (text: string, type: PropertyType): unknown => {
 };
 
 // One block in a `.rule` workspace: a `world_rule` chain, or a `define trait`'s
-// `do` body (its `inputs.DO`).
+// `do` body (its `inputs.DO`). An action/query block also carries the params
+// mutator's `extraState` (its parameter list).
 interface RuleBlock {
   type?: string;
   fields?: Record<string, unknown>;
   inputs?: Record<string, {block?: RuleBlock}>;
+  extraState?: {params?: ReadonlyArray<{type?: string; var?: string}>};
   next?: {block?: RuleBlock};
 }
 
@@ -293,10 +296,20 @@ export function parseRuleMeta(
   contents: string,
 ): RuleMeta | undefined {
   let root: RuleBlock | undefined;
+  // A `.rule`'s parameter names live in the workspace variable map (a param
+  // block's VAR field is a variable id); resolve id → name to label params.
+  const variableNames = new Map<string, string>();
   try {
-    const blocks = (JSON.parse(contents) as {blocks?: {blocks?: RuleBlock[]}})
-      .blocks?.blocks;
-    root = blocks?.find(b => b?.type === 'world_rule');
+    const parsed = JSON.parse(contents) as {
+      blocks?: {blocks?: RuleBlock[]};
+      variables?: ReadonlyArray<{id?: string; name?: string}>;
+    };
+    for (const variable of parsed.variables ?? []) {
+      if (variable.id) {
+        variableNames.set(variable.id, variable.name ?? variable.id);
+      }
+    }
+    root = parsed.blocks?.blocks?.find(b => b?.type === 'world_rule');
   } catch {
     return undefined; // mid-edit / not JSON
   }
@@ -308,6 +321,17 @@ export function parseRuleMeta(
     typeof block.fields?.[name] === 'string'
       ? (block.fields[name] as string)
       : '';
+
+  // The typed parameters a `define action`/`define query` takes come from its
+  // params mutator's `extraState` — `{params: [{type, var}]}`, in order. The type
+  // is the authored value type; the name is the bound variable's name (resolved
+  // via the workspace variable map). The call-site block reads these to build its
+  // arg sockets; the runtime signature is built separately (extractRuleBodies).
+  const parseParams = (block: RuleBlock): ActionParam[] =>
+    (block.extraState?.params ?? []).map(param => ({
+      name: (param.var && variableNames.get(param.var)) || 'param',
+      type: (param.type ?? 'number') as ArgType,
+    }));
   const ruleName = field(root, 'NAME') || 'Rule';
   const ref = (exportName: string): MemberRef => ({
     source: 'project',
@@ -351,7 +375,8 @@ export function parseRuleMeta(
   // A `define action` block → an ActionMeta (world at the rule level, actor
   // inside a trait). The imperative body is not read here — metadata is static;
   // the body is generated separately by the Blockly generator (extractRuleBodies)
-  // and keyed back by {@link ruleBodyKey}. Params come in a later step (`[]` now).
+  // and keyed back by {@link ruleBodyKey}. Its params (name + type) drive the
+  // call-site block's arg sockets.
   const addAction = (block: RuleBlock, ownerTraitId?: string): void => {
     const name = field(block, 'NAME');
     if (!name) {
@@ -360,7 +385,7 @@ export function parseRuleMeta(
     actions.push({
       id: slug(name),
       name,
-      params: [],
+      params: parseParams(block),
       scope: ownerTraitId ? 'actor' : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Action`),
@@ -383,7 +408,7 @@ export function parseRuleMeta(
       id: slug(name),
       name,
       returns,
-      params: [],
+      params: parseParams(block),
       scope: ownerTraitId ? 'actor' : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Query`),
@@ -491,20 +516,50 @@ interface LiveBlock {
   getInputTargetBlock(name: string): LiveBlock | null;
 }
 
-/** Generates the JS body for one action/query block (its `DO` statement input). */
-type BodyGen = (block: LiveBlock) => string;
+/** The generated closure of one action/query: its parameter identifiers (in
+ * order, after the `world`/`actor` subject) and its statement body. */
+export interface RuleBody {
+  readonly params: readonly string[];
+  readonly body: string;
+}
 
 /**
- * Walk a loaded `.rule` workspace's `world_rule` root and generate the body of
- * every `define action` / `define query`, keyed by {@link ruleBodyKey}. Mirrors
- * `parseRuleMeta`'s structural walk (scope by trait nesting) but over live
- * blocks, so `genBody` can run `statementToCode` on each member's `DO` input.
+ * How {@link extractRuleBodies} turns a member's live blocks into code. `body`
+ * generates the `DO` statement input; `signature` returns the member's parameter
+ * identifiers, in order (its mutator's variables mapped through `getVariableName`),
+ * so the closure signature and the body's getters agree.
+ */
+export interface RuleBodyGen {
+  body: (block: LiveBlock) => string;
+  signature: (block: LiveBlock) => readonly string[];
+}
+
+/**
+ * Walk a loaded `.rule` workspace's `world_rule` root and generate the body and
+ * parameter signature of every `define action` / `define query`, keyed by {@link
+ * ruleBodyKey}. Mirrors `parseRuleMeta`'s structural walk (scope by trait
+ * nesting) but over live blocks, so `gen` can run `statementToCode` on each
+ * member's `DO` input and read its params from the mutator.
  */
 export function extractRuleBodies(
   ruleRoot: LiveBlock,
-  genBody: BodyGen,
-): Map<string, string> {
-  const bodies = new Map<string, string>();
+  gen: RuleBodyGen,
+): Map<string, RuleBody> {
+  const bodies = new Map<string, RuleBody>();
+  const record = (
+    kind: 'action' | 'query',
+    scope: 'world' | 'actor',
+    ownerTraitId: string | undefined,
+    member: LiveBlock,
+  ): void => {
+    const id = slug(member.getFieldValue('NAME') ?? '');
+    if (id) {
+      bodies.set(ruleBodyKey(kind, scope, ownerTraitId, id), {
+        params: [...gen.signature(member)],
+        body: gen.body(member),
+      });
+    }
+  };
   const visit = (
     first: LiveBlock | null,
     scope: 'world' | 'actor',
@@ -512,21 +567,9 @@ export function extractRuleBodies(
   ): void => {
     for (let block = first; block; block = block.getNextBlock()) {
       if (block.type === 'world_rule_action') {
-        const id = slug(block.getFieldValue('NAME') ?? '');
-        if (id) {
-          bodies.set(
-            ruleBodyKey('action', scope, ownerTraitId, id),
-            genBody(block),
-          );
-        }
+        record('action', scope, ownerTraitId, block);
       } else if (block.type === 'world_rule_query') {
-        const id = slug(block.getFieldValue('NAME') ?? '');
-        if (id) {
-          bodies.set(
-            ruleBodyKey('query', scope, ownerTraitId, id),
-            genBody(block),
-          );
-        }
+        record('query', scope, ownerTraitId, block);
       } else if (block.type === 'world_rule_trait') {
         const traitId = slug(block.getFieldValue('NAME') ?? '');
         // Actions/queries in a trait's `do` are actor-scoped, owned by the trait.
@@ -574,7 +617,7 @@ const defaultLiteral = (property: PropertyMeta): string => {
  */
 export function ruleMetaToModule(
   meta: RuleMeta,
-  bodies: ReadonlyMap<string, string> = new Map(),
+  bodies: ReadonlyMap<string, RuleBody> = new Map(),
 ): string {
   const q = (value: string): string => JSON.stringify(value);
   const hasBehavior = meta.actions.length > 0 || meta.queries.length > 0;
@@ -665,7 +708,9 @@ export function ruleMetaToModule(
   // Actions and queries carry an imperative body (from `bodies`, else empty). An
   // actor-scoped member is added to its owning trait and its closure takes the
   // `actor`; a world-scoped one is added to the rule and takes the `world`. The
-  // body is a real function body — its `return` (queries) works as written.
+  // body is a real function body — its `return` (queries) works as written. Any
+  // parameters follow the subject in the signature — the body extractor resolved
+  // them to the same identifiers the body's getters read.
   const memberTarget = (member: {
     scope: 'world' | 'actor';
     ownerTraitId?: string;
@@ -675,13 +720,16 @@ export function ruleMetaToModule(
       : undefined) ?? 'rule';
   const subject = (member: {scope: 'world' | 'actor'}): string =>
     member.scope === 'actor' ? 'actor' : 'world';
+  // The closure's argument list: the subject, then each parameter identifier.
+  const signature = (member: {scope: 'world' | 'actor'}, code?: RuleBody) =>
+    [subject(member), ...(code?.params ?? [])].join(', ');
 
   for (const action of meta.actions) {
     const code = bodies.get(
       ruleBodyKey('action', action.scope, action.ownerTraitId, action.id),
     );
     body.push(
-      `export const ${action.ref.exportName} = ${memberTarget(action)}.addAction(${q(action.id)}, (${subject(action)}) => {\n${code ?? ''}}, {name: ${q(action.name)}});`,
+      `export const ${action.ref.exportName} = ${memberTarget(action)}.addAction(${q(action.id)}, (${signature(action, code)}) => {\n${code?.body ?? ''}}, {name: ${q(action.name)}});`,
     );
   }
 
@@ -690,7 +738,7 @@ export function ruleMetaToModule(
       ruleBodyKey('query', query.scope, query.ownerTraitId, query.id),
     );
     body.push(
-      `export const ${query.ref.exportName} = ${memberTarget(query)}.addQuery(${q(query.id)}, (${subject(query)}) => {\n${code ?? ''}}, {name: ${q(query.name)}, returns: ${q(query.returns ?? 'boolean')}});`,
+      `export const ${query.ref.exportName} = ${memberTarget(query)}.addQuery(${q(query.id)}, (${signature(query, code)}) => {\n${code?.body ?? ''}}, {name: ${q(query.name)}, returns: ${q(query.returns ?? 'boolean')}});`,
     );
   }
 

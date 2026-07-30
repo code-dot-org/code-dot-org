@@ -73,6 +73,11 @@ export const BlocklyGenerator = forwardRef<
         if (!workspace || !generator) {
           throw new Error('Blockly generator is not ready');
         }
+        // Tag this offscreen workspace so a renderer-dependent mutator (the
+        // params `+`/`−`) skips its visual rebuild here — it can't draw fields,
+        // and only the serialized state / generated body is read. Set on every
+        // call (inject timing can't be relied on) before any block loads.
+        (workspace as {isRuleGenerator?: boolean}).isRuleGenerator = true;
         workspace.clear();
         const state = contents.trim() ? JSON.parse(contents) : {};
         Blockly.serialization.workspaces.load(state, workspace);
@@ -106,9 +111,23 @@ export const BlocklyGenerator = forwardRef<
             return generator.finish('export {};\n');
           }
           (generator as {__ruleModule?: string}).__ruleModule = modulePath;
-          const bodies = extractRuleBodies(ruleRoot, block =>
-            generator.statementToCode(block as Blockly.Block, 'DO'),
-          );
+          const bodies = extractRuleBodies(ruleRoot, {
+            body: block =>
+              generator.statementToCode(block as Blockly.Block, 'DO'),
+            // The params mutator stores each param's variable id in extraState;
+            // map them to the safe JS identifiers the body's getters resolve to,
+            // so the closure signature and the getters agree.
+            signature: block => {
+              const state = (
+                block as {
+                  saveExtraState?: () => {params?: Array<{var: string}>};
+                }
+              ).saveExtraState?.();
+              return (state?.params ?? []).map(param =>
+                generator.getVariableName(param.var),
+              );
+            },
+          });
           (generator as {__ruleModule?: string}).__ruleModule = undefined;
           return generator.finish(ruleMetaToModule(meta, bodies));
         }

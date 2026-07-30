@@ -89,8 +89,12 @@ export class Trait {
   /** Add an actor-scoped query (a read that returns a value). */
   addQuery<T>(
     id: string,
-    evaluate: (actor: Actor) => T,
-    opts: {name?: string; returns?: PropertyType} = {},
+    evaluate: (actor: Actor, ...args: unknown[]) => T,
+    opts: {
+      name?: string;
+      returns?: PropertyType;
+      params?: readonly ActionParam[];
+    } = {},
   ): Query<T> {
     if (this.frozen) {
       frozenError(this.id);
@@ -100,6 +104,7 @@ export class Trait {
       name: opts.name,
       ownerId: this.id,
       returns: opts.returns,
+      params: opts.params,
       evaluate,
     };
     this.queries[id] = query as Query;

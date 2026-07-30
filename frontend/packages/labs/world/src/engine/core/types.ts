@@ -83,7 +83,11 @@ export interface Query<T = unknown> {
   /** The value kind this returns, so the Blockly surface can offer a block for
    * it (the query analogue of a {@link Property}'s type); absent = not surfaced. */
   readonly returns?: PropertyType;
-  readonly evaluate: (actor: Actor) => T;
+  /** The arguments this query takes, in `evaluate` order (after `actor`) — the
+   * actor-scoped analogue of a {@link WorldQuery}'s params. Absent/empty =
+   * nullary. */
+  readonly params?: readonly ActionParam[];
+  readonly evaluate: (actor: Actor, ...args: unknown[]) => T;
 }
 
 /**

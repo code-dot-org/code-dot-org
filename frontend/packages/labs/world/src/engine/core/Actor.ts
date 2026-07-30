@@ -92,8 +92,8 @@ export class Actor {
     return this.membership.has(trait);
   }
 
-  query<T>(query: Query<T>): T {
-    return query.evaluate(this);
+  query<T>(query: Query<T>, ...args: unknown[]): T {
+    return query.evaluate(this, ...args);
   }
 
   act(action: ActorAction, ...args: unknown[]): void {

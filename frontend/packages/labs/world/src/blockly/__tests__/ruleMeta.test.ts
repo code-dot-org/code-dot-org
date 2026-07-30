@@ -415,11 +415,11 @@ describe('actions and queries (imperative members)', () => {
     const bodies = new Map([
       [
         ruleBodyKey('action', 'world', undefined, 'Invert'),
-        'world.set(WorldLab.DirectionProperty, 1);\n',
+        {params: [], body: 'world.set(WorldLab.DirectionProperty, 1);\n'},
       ],
       [
         ruleBodyKey('query', 'actor', 'Windblown', 'Is_Gusting'),
-        'return actor.get(WorldLab.FallingProperty);\n',
+        {params: [], body: 'return actor.get(WorldLab.FallingProperty);\n'},
       ],
     ]);
     const code = ruleMetaToModule(meta, bodies);
@@ -446,27 +446,28 @@ describe('actions and queries (imperative members)', () => {
 });
 
 describe('extractRuleBodies', () => {
-  // A minimal live-block stand-in: the surface the extractor walks.
+  // A minimal live-block stand-in: the surface the extractor walks (the `DO` and
+  // `PARAMS` statement inputs, the next chain, and the fields).
   const live = (
     type: string,
     fields: Record<string, string>,
-    opts: {do?: unknown; next?: unknown} = {},
+    opts: {do?: unknown; params?: unknown; next?: unknown} = {},
   ) => ({
     type,
     getFieldValue: (name: string) => fields[name] ?? null,
-    getInputTargetBlock: (name: string) => (name === 'DO' ? opts.do : null),
+    getInputTargetBlock: (name: string) =>
+      name === 'DO' ? opts.do : name === 'PARAMS' ? opts.params : null,
     getNextBlock: () => opts.next ?? null,
   });
-
-  it('generates each action/query body, keyed by scope/owner/id', () => {
-    // rule → action Invert → trait Windblown(do: query Is Gusting).
+  it('generates each action/query body + signature, keyed by scope/owner/id', () => {
+    // rule → action Nudge(params: number amount) → trait Windblown(do: query Is Gusting).
     const root = live(
       'world_rule',
       {NAME: 'Has Wind'},
       {
         next: live(
           'world_rule_action',
-          {NAME: 'Invert'},
+          {NAME: 'Nudge'},
           {
             next: live(
               'world_rule_trait',
@@ -482,16 +483,78 @@ describe('extractRuleBodies', () => {
         ),
       },
     );
-    // The stand-in generator just tags each body by the block's NAME.
-    const bodies = extractRuleBodies(
-      root as never,
-      block => `BODY(${block.getFieldValue('NAME')})\n`,
-    );
+    // The stand-in generator tags each body by NAME; the signature is read from
+    // the member's params mutator (here, Nudge takes one param, the query none).
+    const bodies = extractRuleBodies(root as never, {
+      body: block => `BODY(${block.getFieldValue('NAME')})\n`,
+      signature: block =>
+        block.getFieldValue('NAME') === 'Nudge' ? ['amount'] : [],
+    });
     expect(
-      bodies.get(ruleBodyKey('action', 'world', undefined, 'Invert')),
-    ).toBe('BODY(Invert)\n');
+      bodies.get(ruleBodyKey('action', 'world', undefined, 'Nudge')),
+    ).toEqual({params: ['amount'], body: 'BODY(Nudge)\n'});
     expect(
       bodies.get(ruleBodyKey('query', 'actor', 'Windblown', 'Is_Gusting')),
-    ).toBe('BODY(Is Gusting)\n');
+    ).toEqual({params: [], body: 'BODY(Is Gusting)\n'});
+  });
+});
+
+describe('action / query parameters', () => {
+  // The params mutator stores its list in the block's `extraState`
+  // (`{params: [{type, var}]}`); each `var` is a variable id whose name the
+  // variable map carries. A rule with one action taking (number amount, actor
+  // target).
+  const ruleWithParams = JSON.stringify({
+    variables: [
+      {id: 'v1', name: 'amount', type: 'Number'},
+      {id: 'v2', name: 'target', type: 'Actor'},
+    ],
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          fields: {NAME: 'Has Wind'},
+          next: {
+            block: {
+              type: 'world_rule_action',
+              fields: {NAME: 'Nudge'},
+              extraState: {
+                params: [
+                  {type: 'number', var: 'v1'},
+                  {type: 'actor', var: 'v2'},
+                ],
+              },
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  it('parses params (name from the variable map, type from the block)', () => {
+    const meta = parseRuleMeta('rules/wind', ruleWithParams)!;
+    const nudge = meta.actions.find(a => a.id === 'Nudge')!;
+    expect(nudge.params).toEqual([
+      {name: 'amount', type: 'number'},
+      {name: 'target', type: 'actor'},
+    ]);
+  });
+
+  it('emits the params after the subject in the closure signature', () => {
+    const meta = parseRuleMeta('rules/wind', ruleWithParams)!;
+    // extractRuleBodies would resolve the VARs to these identifiers.
+    const bodies = new Map([
+      [
+        ruleBodyKey('action', 'world', undefined, 'Nudge'),
+        {
+          params: ['amount', 'target'],
+          body: 'world.act(WorldLab.X, amount);\n',
+        },
+      ],
+    ]);
+    const code = ruleMetaToModule(meta, bodies);
+    expect(code).toContain(
+      'rule.addAction("Nudge", (world, amount, target) => {',
+    );
   });
 });
