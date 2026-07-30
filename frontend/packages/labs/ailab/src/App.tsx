@@ -7,7 +7,7 @@ import {
   faVial,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {type KeyboardEvent, type ReactNode, useEffect} from 'react';
+import {type KeyboardEvent, type ReactNode, useEffect, useState} from 'react';
 
 import {styles} from './constants';
 import {reportPanelView} from './helpers/metrics';
@@ -21,6 +21,7 @@ import {deepEqual, shallowEqual, useAppDispatch, useAppSelector} from './hooks';
 import I18n from './i18n';
 import {getPanelButtons, saveModel, setCurrentPanel} from './redux';
 import type {
+  DataDisplayView,
   InstructionsKey,
   NavigationTab,
   Panel,
@@ -360,6 +361,8 @@ const panelButtonsEqual = (a: PrevNextButtons, b: PrevNextButtons) =>
 
 const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
   const dispatch = useAppDispatch();
+  const [datasetViewMode, setDatasetViewMode] =
+    useState<DataDisplayView>('table');
   const panelButtons = useAppSelector(getPanelButtons, panelButtonsEqual);
   const navigationTabs = useAppSelector(getNavigationTabs, deepEqual);
   const currentPanel = useAppSelector(state => state.currentPanel);
@@ -376,6 +379,13 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
       ? navigationTabId(selectedNavigationTab)
       : undefined,
   };
+  const dataDisplayPanelOpen = [
+    'dataDisplayDataset',
+    'dataDisplayLabel',
+    'dataDisplayFeatures',
+  ].includes(currentPanel);
+  const datasetCardViewOpen =
+    currentPanel === 'dataDisplayDataset' && datasetViewMode === 'cards';
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -418,19 +428,37 @@ const App = ({onContinue, saveTrainedModel, setInstructionsKey}: AppProps) => {
         </BodyContainer>
       )}
 
-      {[
-        'dataDisplayDataset',
-        'dataDisplayLabel',
-        'dataDisplayFeatures',
-      ].includes(currentPanel) && (
+      {dataDisplayPanelOpen && (
         <BodyContainer {...bodyContainerProps}>
-          <ContainerLeft>
-            <DataDisplay showStatement={currentPanel !== 'dataDisplayDataset'} />
-          </ContainerLeft>
+          {datasetCardViewOpen ? (
+            <ContainerFullWidth>
+              <DataDisplay
+                showStatement={false}
+                showViewToggle={true}
+                viewMode={datasetViewMode}
+                setViewMode={setDatasetViewMode}
+              />
+            </ContainerFullWidth>
+          ) : (
+            <>
+              <ContainerLeft>
+                <DataDisplay
+                  showStatement={currentPanel !== 'dataDisplayDataset'}
+                  showViewToggle={currentPanel === 'dataDisplayDataset'}
+                  viewMode={
+                    currentPanel === 'dataDisplayDataset'
+                      ? datasetViewMode
+                      : 'table'
+                  }
+                  setViewMode={setDatasetViewMode}
+                />
+              </ContainerLeft>
 
-          <ContainerRight>
-            <ColumnInspector />
-          </ContainerRight>
+              <ContainerRight>
+                <ColumnInspector />
+              </ContainerRight>
+            </>
+          )}
         </BodyContainer>
       )}
 

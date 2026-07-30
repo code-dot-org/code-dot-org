@@ -2,6 +2,8 @@ export type DataRow = Record<string, string | number>;
 
 export type AlgorithmId = 'knn' | 'decisionTree';
 
+export type DataDisplayView = 'table' | 'cards';
+
 export interface Mode {
   datasets?: string[];
   hideSelectLabel?: boolean;

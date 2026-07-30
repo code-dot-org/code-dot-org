@@ -490,6 +490,168 @@ export const styles = {
     backgroundColor: 'white',
   },
 
+  dataDisplayViewToggle: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    gap: 4,
+    marginBottom: 10,
+  },
+
+  dataDisplayViewToggleButton: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 6,
+    padding: '6px 12px',
+    border: 'solid 1px #4d575f',
+    borderRadius: 5,
+    backgroundColor: 'white',
+    color: '#4d575f',
+    cursor: 'pointer',
+    fontSize: 14,
+    lineHeight: 1.2,
+  },
+
+  dataDisplayViewToggleButtonSelected: {
+    borderColor: colors.teal,
+    backgroundColor: colors.teal,
+    color: 'white',
+  },
+
+  dataCardsDeck: {
+    flex: '1 1 auto',
+    minHeight: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    boxSizing: 'border-box',
+  },
+
+  dataCardsDeckControls: {
+    width: '100%',
+    display: 'grid',
+    gridTemplateColumns: 'minmax(120px, 1fr) auto minmax(120px, 1fr)',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 12,
+  },
+
+  dataCardsDeckButton: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    minHeight: 32,
+    padding: '6px 12px',
+    border: 'none',
+    borderRadius: 5,
+    backgroundColor: colors.teal,
+    color: 'white',
+    cursor: 'pointer',
+    fontSize: 14,
+    lineHeight: 1.2,
+  },
+
+  dataCardsDeckProgress: {
+    fontSize: 16,
+    color: '#4d575f',
+    textAlign: 'center',
+  },
+
+  dataCardsDeckStage: {
+    position: 'relative',
+    flex: '1 1 auto',
+    minHeight: 0,
+    width: '100%',
+    maxWidth: 700,
+  },
+
+  dataCardsDeckBackCardFar: {
+    position: 'absolute',
+    top: 24,
+    left: '50%',
+    width: '78%',
+    height: 'calc(100% - 64px)',
+    maxHeight: 500,
+    borderRadius: 8,
+    backgroundColor: '#f7e6ca',
+    border: 'solid 2px #d9c49d',
+    transform: 'translateX(-50%) rotate(-3deg)',
+  },
+
+  dataCardsDeckBackCardNear: {
+    position: 'absolute',
+    top: 18,
+    left: '50%',
+    width: '80%',
+    height: 'calc(100% - 56px)',
+    maxHeight: 510,
+    borderRadius: 8,
+    backgroundColor: '#d6f2fa',
+    border: 'solid 2px rgba(89, 202, 211, 0.8)',
+    transform: 'translateX(-50%) rotate(2deg)',
+  },
+
+  dataCardsDeckCard: {
+    position: 'relative',
+    zIndex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    width: '82%',
+    maxWidth: 600,
+    height: 'calc(100% - 32px)',
+    maxHeight: 520,
+    minHeight: 280,
+    margin: '16px auto 0',
+    padding: 20,
+    boxSizing: 'border-box',
+    borderRadius: 8,
+    backgroundColor: 'white',
+    border: `solid 2px ${colors.teal}`,
+    boxShadow: '0 10px 24px rgba(0, 0, 0, 0.18)',
+    overflow: 'hidden',
+  },
+
+  dataCardsDeckCardHeader: {
+    fontSize: 24,
+    color: '#4d575f',
+    paddingBottom: 12,
+    marginBottom: 12,
+    borderBottom: 'solid 1px #d8d8d8',
+  },
+
+  dataCardsDeckFieldsScroll: {
+    flex: '1 1 auto',
+    minHeight: 0,
+    overflow: 'auto',
+  },
+
+  dataCardsDeckFields: {
+    margin: 0,
+  },
+
+  dataCardsDeckField: {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(140px, 35%) 1fr',
+    gap: 16,
+    padding: '10px 0',
+    borderBottom: 'solid 1px #eeeeee',
+    alignItems: 'start',
+  },
+
+  dataCardsDeckFieldLabel: {
+    margin: 0,
+    color: '#4d575f',
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 14,
+  },
+
+  dataCardsDeckFieldValue: {
+    margin: 0,
+    color: '#1f1f1f',
+    fontSize: 16,
+    overflowWrap: 'anywhere',
+  },
+
   tableHeader: {
     paddingLeft: 20,
     textAlign: 'right',
