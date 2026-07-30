@@ -123,7 +123,7 @@
     width: 20px;
     height: 20px;
     pointer-events: none;
-    background-color: var(--background-brand-purple-primary);
+    background-color: var(--background-accent-orange-primary);
 
     $triangle: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='black' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
 
@@ -137,10 +137,6 @@
     -webkit-mask-position: top right;
     mask-position: top right;
   }
-}
-
-[data-brand='codeai-next'] .needsFeedback::after {
-  background-color: var(--background-accent-orange-primary);
 }
 
 .feedbackGiven {
