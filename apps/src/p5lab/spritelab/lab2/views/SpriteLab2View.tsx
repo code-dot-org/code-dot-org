@@ -39,7 +39,15 @@ import {
   UploadImageFunction,
 } from '../ai/items/itemGeneration';
 import {compileBehavior2Sources} from '../blockly/behavior2';
-import {DEFAULT_BEHAVIOR2S} from '../blockly/defaultBehavior2s';
+import {
+  BEHAVIOR2_SYSTEMS,
+  customBehavior2Meta,
+  setBehavior2Registry,
+} from '../blockly/behavior2Meta';
+import {
+  DEFAULT_BEHAVIOR2S,
+  emptySystemSource,
+} from '../blockly/defaultBehavior2s';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
@@ -568,6 +576,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSystem =
     behavior2s.find(b => b.name === activeSystemName) ?? behavior2s[0];
 
+  // Keep the system dropdowns' registry in step with this project's systems
+  // (built-in meta for the built-ins, generic strength meta for created
+  // ones), so a new system appears in every system dropdown.
+  useEffect(() => {
+    setBehavior2Registry(
+      behavior2s.map(
+        b =>
+          BEHAVIOR2_SYSTEMS.find(meta => meta.name === b.name) ??
+          customBehavior2Meta(b.name)
+      )
+    );
+  }, [behavior2s]);
+
   // The systems composed ahead of every run. Compiled at run time, not
   // memoized — the block types register when the workspace injects, so an
   // early compile would fail and stick. Read through a ref: the debounced
@@ -999,6 +1020,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, scheduleRun]
   );
 
+  // Create a named system with the bare-loop starter and show it. Both
+  // updates land in one commit, so the selector sees the new entry.
+  const handleCreateSystem = useCallback(
+    (name: string) => {
+      updateSources(prev => ({
+        ...prev,
+        behavior2s: [
+          ...(prev.behavior2s?.length ? prev.behavior2s : DEFAULT_BEHAVIOR2S),
+          {name, source: emptySystemSource()},
+        ],
+      }));
+      setActiveSystemName(name);
+    },
+    [updateSources]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1177,6 +1214,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               activeName={activeSystem.name}
               disabled={activeTab !== 'Systems'}
               onSelect={setActiveSystemName}
+              onCreate={handleCreateSystem}
             />
           ) : undefined
         }

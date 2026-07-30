@@ -248,3 +248,11 @@ export const DEFAULT_BEHAVIOR2S: SpriteLab2Behavior2[] = [
   {name: 'platformer', source: platformerSource},
   {name: 'walk', source: walkSource},
 ];
+
+// A new student-created system: the bare loop, ready to fill in.
+export function emptySystemSource(): WorkspaceSerialization {
+  return workspace({
+    type: 'spritelab2_forEachSpriteOfType',
+    id: 'loop',
+  });
+}

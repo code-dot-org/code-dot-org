@@ -9,6 +9,7 @@ import {
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
+import {FIELD_SYSTEM_DROPDOWN_TYPE, SystemDropdown} from './behavior2Fields';
 import labBlockDefinitions from './blockDefinitions';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
 import {
@@ -72,6 +73,7 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  Blockly.fieldRegistry.register(FIELD_SYSTEM_DROPDOWN_TYPE, SystemDropdown);
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {

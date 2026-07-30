@@ -47,10 +47,43 @@ export const BEHAVIOR2_SYSTEMS: Behavior2SystemMeta[] = [
   },
 ];
 
-export function getBehavior2System(
-  name: string
-): Behavior2SystemMeta | undefined {
-  return BEHAVIOR2_SYSTEMS.find(system => system.name === name);
+// Meta for a student-created system: the setting is a plain strength the
+// implementation interprets via "the chosen setting".
+export function customBehavior2Meta(name: string): Behavior2SystemMeta {
+  return {
+    name,
+    label: name,
+    optionLabel: 'strength',
+    options: [
+      {key: 'low', label: 'low', value: 1},
+      {key: 'medium', label: 'medium', value: 2},
+      {key: 'high', label: 'high', value: 3},
+    ],
+  };
+}
+
+// The live system list: the built-ins until the view syncs the project's
+// stored systems in (see SpriteLab2View). System dropdowns and generators
+// resolve against this, so student-created systems appear everywhere.
+let registry: Behavior2SystemMeta[] = BEHAVIOR2_SYSTEMS;
+
+export function setBehavior2Registry(systems: Behavior2SystemMeta[]): void {
+  registry = systems.length ? systems : BEHAVIOR2_SYSTEMS;
+}
+
+export function getBehavior2Registry(): Behavior2SystemMeta[] {
+  return registry;
+}
+
+// Meta by name — a saved block can reference a system missing from the
+// registry (deleted, or another project's); custom meta keeps its code
+// generating instead of crashing.
+export function getBehavior2System(name: string): Behavior2SystemMeta {
+  return (
+    registry.find(system => system.name === name) ??
+    BEHAVIOR2_SYSTEMS.find(system => system.name === name) ??
+    customBehavior2Meta(name)
+  );
 }
 
 // The sprite types Platform2 blocks tag sprites with. Values are runtime

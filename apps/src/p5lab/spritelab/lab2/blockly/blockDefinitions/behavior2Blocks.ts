@@ -4,11 +4,8 @@ import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {behavior2StateKey, getCurrentBehavior2Name} from '../behavior2Compile';
-import {
-  BEHAVIOR2_SYSTEMS,
-  BEHAVIOR2_TYPE_OPTIONS,
-  getBehavior2System,
-} from '../behavior2Meta';
+import {FIELD_SYSTEM_DROPDOWN_TYPE} from '../behavior2Fields';
+import {BEHAVIOR2_TYPE_OPTIONS, getBehavior2System} from '../behavior2Meta';
 import {FIELD_GRID_TYPE} from '../gridFields';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
@@ -70,15 +67,9 @@ const makeTypedSpritesGenerator: GeneratorFunction = block =>
 
 const startSystem: BlockJson = {
   type: 'spritelab2_startSystem',
-  message0: 'start %1 system for type %2 with %3',
+  message0: 'start %1 system for type %2 with %3 %4',
   args0: [
-    dropdown(
-      'SYSTEM',
-      BEHAVIOR2_SYSTEMS.map((system): [string, string] => [
-        system.label,
-        system.name,
-      ])
-    ),
+    {type: FIELD_SYSTEM_DROPDOWN_TYPE, name: 'SYSTEM'},
     dropdown(
       'TYPE',
       BEHAVIOR2_TYPE_OPTIONS.map(([label, group]): [string, string] => [
@@ -88,12 +79,15 @@ const startSystem: BlockJson = {
     ),
     // low/medium/high resolve to a per-system number at codegen (see
     // behavior2Meta options); the labels are shared so switching systems
-    // can't strand an invalid dropdown value.
+    // can't strand an invalid dropdown value. The UNIT label names what
+    // the setting means for the chosen system (SystemDropdown keeps it
+    // current).
     dropdown('OPTION', [
       ['low', 'low'],
       ['medium', 'medium'],
       ['high', 'high'],
     ]),
+    {type: 'field_label', name: 'UNIT', text: 'gravity'},
   ],
   inputsInline: true,
   previousStatement: null,
@@ -102,13 +96,13 @@ const startSystem: BlockJson = {
 };
 
 const startSystemGenerator: GeneratorFunction = block => {
-  const system = getBehavior2System(block.getFieldValue('SYSTEM'));
-  const option = system?.options.find(
+  const name = block.getFieldValue('SYSTEM');
+  const option = getBehavior2System(name).options.find(
     o => o.key === block.getFieldValue('OPTION')
   );
   return (
     `startBehavior2('${block.getFieldValue('TYPE')}', ` +
-    `'${system?.name}', ${option?.value ?? 0});\n`
+    `${JSON.stringify(name)}, ${option?.value ?? 0});\n`
   );
 };
 
@@ -156,13 +150,7 @@ const makeSpritesWithSystem: BlockJson = {
   message0: 'make %1 sprites with system %2 %3 using grid: %4',
   args0: [
     {type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'},
-    dropdown(
-      'SYSTEM',
-      BEHAVIOR2_SYSTEMS.map((system): [string, string] => [
-        system.label,
-        system.name,
-      ])
-    ),
+    {type: FIELD_SYSTEM_DROPDOWN_TYPE, name: 'SYSTEM'},
     // Row break: picker and system on the first row, grid on its own below.
     {type: 'input_dummy', name: 'ROW_BREAK'},
     {type: FIELD_GRID_TYPE, name: 'GRID'},
@@ -174,11 +162,12 @@ const makeSpritesWithSystem: BlockJson = {
 };
 
 const makeSpritesWithSystemGenerator: GeneratorFunction = block => {
-  const system = getBehavior2System(block.getFieldValue('SYSTEM'));
-  const middle = system?.options[Math.floor((system.options.length - 1) / 2)];
+  const name = block.getFieldValue('SYSTEM');
+  const options = getBehavior2System(name).options;
+  const middle = options[Math.floor((options.length - 1) / 2)];
   return (
     `makeSpritesWithSystem(${block.getFieldValue('ANIMATION_NAME')}, ` +
-    `'${system?.name}', ` +
+    `${JSON.stringify(name)}, ` +
     `${JSON.stringify(block.getFieldValue('GRID'))}, ${middle?.value ?? 0});\n`
   );
 };
@@ -199,13 +188,7 @@ const whenSystemReports: BlockJson = {
   type: 'spritelab2_whenSystemReports',
   message0: 'when %1 system reports %2 %3 %4',
   args0: [
-    dropdown(
-      'SYSTEM',
-      BEHAVIOR2_SYSTEMS.map((system): [string, string] => [
-        system.label,
-        system.name,
-      ])
-    ),
+    {type: FIELD_SYSTEM_DROPDOWN_TYPE, name: 'SYSTEM'},
     {type: 'field_input', name: 'EVENT', text: 'landed', spellcheck: false},
     {type: 'input_dummy', name: 'ROW_BREAK'},
     {type: 'input_statement', name: 'DO'},
@@ -217,7 +200,7 @@ const whenSystemReports: BlockJson = {
 const whenSystemReportsGenerator: GeneratorFunction = (block, generator) => {
   const body = generator.statementToCode(block, 'DO');
   return (
-    `whenSystemReports('${block.getFieldValue('SYSTEM')}', ` +
+    `whenSystemReports(${JSON.stringify(block.getFieldValue('SYSTEM'))}, ` +
     `${JSON.stringify(block.getFieldValue('EVENT'))}, ` +
     `function (extraArgs) {\n${body}});\n`
   );

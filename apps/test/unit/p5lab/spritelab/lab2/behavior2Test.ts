@@ -50,7 +50,7 @@ describe('behavior2 codegen', () => {
       fakeBlock({SYSTEM: 'platformer', TYPE: 'players', OPTION: 'medium'}),
       fakeGenerator()
     );
-    expect(code).toBe("startBehavior2('players', 'platformer', -0.5);\n");
+    expect(code).toBe('startBehavior2(\'players\', "platformer", -0.5);\n');
   });
 
   it('start-system resolves walk speeds independently', () => {
@@ -58,7 +58,15 @@ describe('behavior2 codegen', () => {
       fakeBlock({SYSTEM: 'walk', TYPE: 'sprites', OPTION: 'high'}),
       fakeGenerator()
     );
-    expect(code).toBe("startBehavior2('sprites', 'walk', 6);\n");
+    expect(code).toBe('startBehavior2(\'sprites\', "walk", 6);\n');
+  });
+
+  it('a system missing from the registry still generates, with strength meta', () => {
+    const code = generatorFor('spritelab2_startSystem')(
+      fakeBlock({SYSTEM: 'my wind', TYPE: 'sprites', OPTION: 'high'}),
+      fakeGenerator()
+    );
+    expect(code).toBe('startBehavior2(\'sprites\', "my wind", 3);\n');
   });
 
   it('for-each wraps its body in the per-sprite callback', () => {
@@ -106,9 +114,19 @@ describe('behavior2 codegen', () => {
       fakeGenerator()
     );
     expect(code).toBe(
-      'whenSystemReports(\'platformer\', "landed", ' +
+      'whenSystemReports("platformer", "landed", ' +
         'function (extraArgs) {\n  body();\n});\n'
     );
+  });
+
+  it('system names sanitize to word shape', () => {
+    // Late require dodges the component-library imports at module scope.
+    const {sanitizeSystemName} =
+      require('@cdo/apps/p5lab/spritelab/lab2/views/Behavior2Selector') as {
+        sanitizeSystemName: (raw: string) => string;
+      };
+    expect(sanitizeSystemName('  my  wind!! ')).toBe('my wind');
+    expect(sanitizeSystemName('$$$')).toBe('');
   });
 
   it('the reported sprite resolves from extraArgs', () => {
@@ -129,7 +147,7 @@ describe('behavior2 codegen', () => {
       fakeGenerator()
     );
     expect(code).toBe(
-      'makeSpritesWithSystem("bee", \'platformer\', [[1]], -0.5);\n'
+      'makeSpritesWithSystem("bee", "platformer", [[1]], -0.5);\n'
     );
   });
 
