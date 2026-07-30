@@ -1287,6 +1287,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               enabled={animationsSeeded}
               theme={theme}
               system={activeSystem}
+              sourcesReinitializedCount={sourcesReinitializedCount}
               onSourceChange={handleSystemSourceChange}
             />
           </div>

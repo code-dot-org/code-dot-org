@@ -67,6 +67,10 @@ interface Behavior2TabProps {
   theme: 'Light' | 'Dark';
   // The system currently selected in the tab-bar dropdown.
   system: SpriteLab2Behavior2;
+  // Bumped when sources reinitialize (Start Over): the workspace must
+  // reload from the restored source even if the system prop's identity
+  // happens not to change.
+  sourcesReinitializedCount: number;
   onSourceChange: (name: string, source: WorkspaceSerialization) => void;
 }
 
@@ -79,6 +83,7 @@ const Behavior2Tab: React.FunctionComponent<Behavior2TabProps> = ({
   enabled,
   theme,
   system,
+  sourcesReinitializedCount,
   onSourceChange,
 }) => {
   const {getCurrentBlocks, loadCode, subscribeToChanges} = useBlocklyWorkspace({
@@ -101,7 +106,7 @@ const Behavior2Tab: React.FunctionComponent<Behavior2TabProps> = ({
       return;
     }
     loadCode(source);
-  }, [enabled, system, getCurrentBlocks, loadCode]);
+  }, [enabled, system, sourcesReinitializedCount, getCurrentBlocks, loadCode]);
 
   // Persist edits. By-ref so the one subscription reads the current
   // selection and handler at edit time.
