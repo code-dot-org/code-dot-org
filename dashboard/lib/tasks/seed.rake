@@ -219,10 +219,9 @@ namespace :seed do
   # because the regular course offerings seed task removes any course_offerings records
   # left in the database that do not have a corresponding json file in config/course_offerings.
   # The ui test course offerings must be seeded after so they are not accidentally removed.
-  # UI test scripts also need the "UI Test " levels from test/ui/config,
-  # seeded after the normal level tasks in SCRIPTS_DEPENDENCIES (ui-test
-  # levels may still reference normal levels during the migration off prod
-  # levels, never the reverse).
+  # UI test scripts also need the "UI Test " levels, seeded after the normal
+  # level tasks in SCRIPTS_DEPENDENCIES; see
+  # dashboard/test/ui/config/README.md.
   UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
     :child_dsls_ui_tests,
     :custom_levels_ui_tests,
@@ -306,10 +305,10 @@ namespace :seed do
     end
   end
 
-  # "UI Test " levels live under test/ui/config and are seeded only for UI
-  # tests, after the normal level tasks (they may reference normal levels
-  # during the transition off prod levels; the reverse is forbidden by
-  # validation). Same child -> custom -> parent ordering as above.
+  # "UI Test " levels are seeded only for UI tests, after the normal level
+  # tasks, so a not-yet-migrated ui-test-* unit can still resolve normal
+  # levels; see dashboard/test/ui/config/README.md. Same child -> custom ->
+  # parent ordering as above.
   UI_TEST_CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
   UI_TEST_PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 

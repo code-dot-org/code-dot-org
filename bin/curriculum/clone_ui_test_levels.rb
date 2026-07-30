@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 # Clone the levels referenced by ui-test-* units into "UI Test "-prefixed
-# copies stored under dashboard/test/ui/config, and repoint the units'
-# script_levels at the copies.
+# copies, and repoint the units' script_levels at the copies. For what that
+# partition is, see dashboard/test/ui/config/README.md.
 #
 # For each script_level of each given unit, get-or-create the level named
 # "UI Test <original name>", recursively cloning contained levels, project

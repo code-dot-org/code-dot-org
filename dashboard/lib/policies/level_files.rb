@@ -1,9 +1,8 @@
 module Policies
   module LevelFiles
-    # Levels whose names carry the "UI Test " prefix (Level.ui_test_name?) are
-    # stored under test/ui/config, everything else under config. The two trees
-    # never overlap: a UI Test level never resolves to config/levels/**, and
-    # vice versa.
+    # The two level trees never overlap: a "UI Test " level never resolves to
+    # config/levels/**, and vice versa. See
+    # dashboard/test/ui/config/README.md.
     LEVELS_SUBDIR = {
       production: 'config/levels',
       ui_test: 'test/ui/config/levels',

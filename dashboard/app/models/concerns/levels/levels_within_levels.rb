@@ -200,9 +200,7 @@ module Levels
     end
 
     # A parent level and its children must be on the same side of the
-    # "UI Test " partition (Level.ui_test_name?): each side is seeded in
-    # environments where the other side's definition files are never loaded, so
-    # a cross-partition child would not resolve there.
+    # "UI Test " partition; see dashboard/test/ui/config/README.md.
     #
     # This validation covers the two relationships whose child names live in
     # properties, contained levels and project templates. The BubbleChoice and

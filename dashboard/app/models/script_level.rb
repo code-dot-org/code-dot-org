@@ -94,13 +94,12 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  # "UI Test " levels (Level.ui_test_name?) may only be referenced by
-  # ui-test-* units: their definition files live under test/ui/config, which
-  # the production seed never loads, so any other reference would fail that
-  # seed with "No level found". Checked against the serialized level_keys
-  # property because ScriptSeed's import! runs validations before the HABTM
-  # join rows are imported. The levelbuilder attach path (update_levels)
-  # bypasses validations and carries its own check.
+  # "UI Test " levels may only be referenced by ui-test-* units, or the
+  # production seed fails with "No level found"; see
+  # dashboard/test/ui/config/README.md. Checked against the serialized
+  # level_keys property because ScriptSeed's import! runs validations before
+  # the HABTM join rows are imported. The levelbuilder attach path
+  # (update_levels) bypasses validations and carries its own check.
   def ui_test_levels_only_in_ui_test_scripts
     # check level_keys first: it is in-memory, while ui_test_script? may load
     # the unit, and this validation runs for every script_level of every seed.

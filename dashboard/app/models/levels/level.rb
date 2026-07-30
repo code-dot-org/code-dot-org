@@ -234,11 +234,10 @@ class Level < ApplicationRecord
 
   UI_TEST_NAME_PREFIX = 'ui test '.freeze
 
-  # "UI Test "-prefixed levels exist only for UI tests. Their definition files
-  # live under test/ui/config rather than config, and they may only be
-  # referenced by ui-test-* units. Detection is by name, never by filename:
-  # the DSL file for "UI Test Foo" is ui_test_foo.<type>. Mirrors the
-  # ui-test- partitioning of course offerings, courses, and units.
+  # Levels named "UI Test ..." exist only for UI tests and are stored apart
+  # from production levels; see dashboard/test/ui/config/README.md. Match on
+  # the level name, never the filename: the DSL file for "UI Test Foo" is
+  # ui_test_foo.<type>.
   def self.ui_test_name?(name)
     name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
   end
@@ -471,10 +470,9 @@ class Level < ApplicationRecord
     end
   end
 
-  # A level may not be renamed across the "UI Test " boundary while any
-  # script references it: its definition file would move between config and
-  # test/ui/config, changing which environments seed it out from under the
-  # script.
+  # Renaming across the "UI Test " boundary moves the level's definition file
+  # between the two trees, changing which environments seed it. Refuse while a
+  # script still references it. See dashboard/test/ui/config/README.md.
   def name_change_stays_within_ui_test_partition
     return unless name_changed?
     return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)

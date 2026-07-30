@@ -148,8 +148,7 @@ class DSLDefined < Level
     existing_filename.presence || canonical_filename
   end
 
-  # DSL files for UI Test levels (Level.ui_test_name?) live under
-  # test/ui/config/scripts; everything else under config/scripts.
+  # See dashboard/test/ui/config/README.md.
   def scripts_dir
     ui_test? ? 'test/ui/config/scripts' : 'config/scripts'
   end
