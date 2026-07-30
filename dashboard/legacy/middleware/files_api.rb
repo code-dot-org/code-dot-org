@@ -5,7 +5,11 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'ipaddr'
+require 'net/http'
+require 'socket'
 require 'stringio'
+require 'uri'
 require 'nokogiri'
 
 # Rack's built-in mime type table doesn't include some extensions we serve.
@@ -22,6 +26,79 @@ class FilesApi < Sinatra::Base
 
   def max_app_size
     2_000_000_000 # 2 GB
+  end
+
+  def public_ip_address?(ip_address)
+    return (
+      !ip_address.link_local? &&
+      !ip_address.loopback? &&
+      !ip_address.private? &&
+      !IPAddr.new('0.0.0.0/8').include?(ip_address)
+    )
+  end
+
+  def resolved_public_ip_address(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    return host_ip_address.to_s if public_ip_address?(host_ip_address)
+
+    nil
+  rescue SocketError
+    nil
+  end
+
+  def fetch_image_for_moderation(location, redirect_limit = 5)
+    raise URI::InvalidURIError.new if redirect_limit < 0
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
+
+    resolved_ip_address = resolved_public_ip_address(url.host)
+    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
+
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = url.scheme == 'https'
+
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+
+    path = url.path.empty? ? '/' : url.path
+    query = url.query || ''
+    query_string = query.empty? ? '' : "?#{query}"
+    http.open_timeout = 3
+    http.read_timeout = 3
+
+    response = http.request_get(path + query_string)
+    if response.is_a?(Net::HTTPRedirection)
+      redirect_target = response['location']
+      raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+      redirect_url = URI.join(url.to_s, redirect_target).to_s
+      return fetch_image_for_moderation(redirect_url, redirect_limit - 1)
+    end
+
+    unless response.is_a?(Net::HTTPSuccess)
+      raise StandardError.new("Image URL request failed with status #{response.code}.")
+    end
+
+    content_type = response.content_type
+    unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+      raise AzureAiContentSafety::UnsupportedContentType
+    end
+
+    content_length = response['content-length']&.to_i
+    if content_length && content_length > max_file_size
+      raise StandardError.new('Image URL content exceeds maximum file size.')
+    end
+
+    body = response.body
+    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
+    if body.bytesize > max_file_size
+      raise StandardError.new('Image URL content exceeds maximum file size.')
+    end
+
+    [body, content_type]
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
@@ -1086,6 +1163,54 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  #
+  # POST /v3/images/moderate_url
+  #
+  # Moderate an image URL by fetching bytes server-side and passing them to
+  # ImageModeration (Azure AI Content Safety). Returns null if the moderation
+  # service is unavailable.
+  #
+  post %r{/v3/images/moderate_url$} do
+    content_type :json
+    dont_cache
+
+    payload = JSON.parse(request.body.read)
+    image_url = payload['url']
+    unless image_url.is_a?(String) && !image_url.empty?
+      status 400
+      return {error: 'No image URL provided.'}.to_json
+    end
+
+    raw, fetched_content_type = fetch_image_for_moderation(image_url)
+    result = ImageModeration.moderate_image(StringIO.new(raw), fetched_content_type)
+    result.to_json
+  rescue JSON::ParserError
+    status 400
+    {error: 'Invalid request body.'}.to_json
+  rescue URI::InvalidURIError
+    status 400
+    {error: 'Invalid image URL.'}.to_json
+  rescue SecurityError
+    status 400
+    {error: 'Image URL host is not allowed.'}.to_json
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
+    status 400
+    {error: 'Unable to fetch image URL.'}.to_json
+  rescue OpenSSL::SSL::SSLError
+    status 400
+    {error: 'Remote host SSL certificate error'}.to_json
+  rescue EOFError
+    status 400
+    {error: 'Remote host closed the connection before sending all data'}.to_json
+  rescue AzureAiContentSafety::UnsupportedContentType
+    status 400
+    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
+    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  rescue StandardError => exception
+    status 400
+    {error: exception.message}.to_json
   end
 
   #
