@@ -18,6 +18,6 @@ Scenario: Can write and submit a prediction
   And I wait to see "#uitest-codebridge-run"
   Then I open my eyes to test "write and submit prediction for a Python program"
   And I see no difference for "initial load"
-  And I type "this is a prediction" into "#instructions-text textarea"
+  And I type "this is a prediction" into "#uitest-predict-response"
   And I see no difference for "written prediction"
   And I close my eyes

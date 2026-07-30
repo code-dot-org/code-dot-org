@@ -105,6 +105,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       <div className={moduleStyles.predictQuestionContainer}>
         {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
           <textarea
+            id="uitest-predict-response"
             value={predictResponse}
             placeholder={predictSettings.placeholderText}
             onChange={e => dispatch(setPredictResponse(e.target.value))}
