@@ -2,7 +2,12 @@ import {describe, expect, it} from 'vitest';
 
 import * as WorldLab from '../../engine';
 import {CollisionRule, GravityRule} from '../../engine';
-import {builtinRuleMeta, parseRuleMeta, type RuleMeta} from '../ruleMeta';
+import {
+  builtinRuleMeta,
+  parseRuleMeta,
+  ruleMetaToModule,
+  type RuleMeta,
+} from '../ruleMeta';
 
 // Derive metadata for a couple of the real built-in rules and assert it mirrors
 // them — the shape the editor (trait dropdown, block generator) will consume,
@@ -196,5 +201,68 @@ describe('parseRuleMeta', () => {
     expect(
       parseRuleMeta('rules/x', JSON.stringify({blocks: {blocks: []}})),
     ).toBeUndefined();
+  });
+});
+
+describe('ruleMetaToModule', () => {
+  it('emits a RuleBuilder module declaring the parsed rule (no steps)', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        {
+          type: 'world_rule_trait',
+          fields: {ID: 'windblown', NAME: 'Blown by Wind'},
+        },
+        {
+          type: 'world_rule_property',
+          fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
+        },
+        {
+          // actor-scoped: attaches to the trait above, not the rule.
+          type: 'world_rule_property',
+          fields: {
+            ID: 'drag',
+            NAME: 'drag',
+            TYPE: 'number',
+            TRAIT: 'windblown',
+          },
+        },
+        {type: 'world_rule_event', fields: {ID: 'gusted', NAME: 'is gusted'}},
+      ),
+    )!;
+    const code = ruleMetaToModule(meta);
+    expect(code).toContain(`import {RuleBuilder} from 'world-lab';`);
+    expect(code).toContain(
+      `const rule = new RuleBuilder({id: "Has_Wind", name: "Has Wind"});`,
+    );
+    expect(code).toContain(
+      `export const WindblownTrait = rule.addTrait({id: "windblown", name: "Blown by Wind"});`,
+    );
+    // World-scoped property on the rule.
+    expect(code).toContain(
+      `export const StrengthProperty = rule.addProperty("strength", "number", 0, {name: "wind strength"});`,
+    );
+    // Actor-scoped property on its trait.
+    expect(code).toContain(
+      `export const DragProperty = WindblownTrait.addProperty("drag", "number", 0, {name: "drag"});`,
+    );
+    expect(code).toContain(
+      `export const GustedEvent = rule.addEvent("gusted", {name: "is gusted"});`,
+    );
+    expect(code.trimEnd().endsWith('export default rule.build();')).toBe(true);
+  });
+
+  it('imports Vector only when a property needs it', () => {
+    const withVec = parseRuleMeta(
+      'rules/x',
+      ruleFile({
+        type: 'world_rule_property',
+        fields: {ID: 'gustDir', NAME: 'gust direction', TYPE: 'vector'},
+      }),
+    )!;
+    expect(ruleMetaToModule(withVec)).toContain(
+      `import {RuleBuilder, Vector} from 'world-lab';`,
+    );
+    expect(ruleMetaToModule(withVec)).toContain('new Vector(0, 0)');
   });
 });

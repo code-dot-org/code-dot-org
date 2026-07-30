@@ -67,11 +67,13 @@ describe('traitOptions (traits from the rules in play)', () => {
     );
     setProjectRuleMeta([wind!]);
     setProjectRules(['rules/wind', 'GravityRule']);
-    const byExport = new Map(
-      traitOptions().map(([label, exp]) => [exp, label]),
+    const byValue = new Map(
+      traitOptions().map(([label, value]) => [value, label]),
     );
-    expect(byExport.get('WindblownTrait')).toBe('Blown by Wind'); // project rule
-    expect(byExport.get('AffectedByGravityTrait')).toBe('Affected by Gravity'); // built-in still works
+    // A project trait's value carries its module, so `use trait` imports it.
+    expect(byValue.get('rules/wind#WindblownTrait')).toBe('Blown by Wind');
+    // A built-in trait is still valued by its bare export name.
+    expect(byValue.get('AffectedByGravityTrait')).toBe('Affected by Gravity');
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {

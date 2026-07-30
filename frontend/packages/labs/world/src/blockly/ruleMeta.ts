@@ -339,3 +339,72 @@ export function parseRuleMeta(
     events,
   };
 }
+
+// ── `.rule` → RuleBuilder module ─────────────────────────────────────────────
+// The runtime side of a declarative rule: the same `RuleMeta` the editor reads
+// is emitted as a `world-lab` module that DECLARES the rule — its traits,
+// properties and events, via `RuleBuilder`. It has no Steps yet (imperative
+// behavior is the deferred hard part), so the rule is inert at runtime, but its
+// members exist: an actor can carry its traits, and get/set its properties. The
+// export names match the parser's convention, so a world's `import Rule from
+// 'rules/x'` and an actor's `import {XTrait} from 'rules/x'` resolve.
+
+/** A JS literal for a property's default, by type. */
+const defaultLiteral = (property: PropertyMeta): string => {
+  const value = property.default;
+  switch (property.type) {
+    case 'boolean':
+      return value ? 'true' : 'false';
+    case 'string':
+      return JSON.stringify(String(value ?? ''));
+    case 'vector':
+    case 'point': {
+      const v = (value ?? {x: 0, y: 0}) as {x: number; y: number};
+      return `new Vector(${Number(v.x)}, ${Number(v.y)})`;
+    }
+    default:
+      return String(Number(value ?? 0));
+  }
+};
+
+/** Generate the `world-lab` RuleBuilder module for a project rule's metadata. */
+export function ruleMetaToModule(meta: RuleMeta): string {
+  const q = (value: string): string => JSON.stringify(value);
+  const needsVector = meta.properties.some(
+    p => p.type === 'vector' || p.type === 'point',
+  );
+  const lines: string[] = [
+    `import {RuleBuilder${needsVector ? ', Vector' : ''}} from 'world-lab';`,
+    '',
+    `const rule = new RuleBuilder({id: ${q(meta.id)}, name: ${q(meta.name)}});`,
+  ];
+
+  // Traits first, so an actor-scoped property can attach to its trait below.
+  const traitExportById = new Map<string, string>();
+  for (const trait of meta.traits) {
+    traitExportById.set(trait.id, trait.ref.exportName);
+    lines.push(
+      `export const ${trait.ref.exportName} = rule.addTrait({id: ${q(trait.id)}, name: ${q(trait.name)}});`,
+    );
+  }
+
+  for (const property of meta.properties) {
+    const owner =
+      property.scope === 'actor' && property.ownerTraitId
+        ? traitExportById.get(property.ownerTraitId)
+        : undefined;
+    const target = owner ?? 'rule';
+    lines.push(
+      `export const ${property.ref.exportName} = ${target}.addProperty(${q(property.id)}, ${q(property.type)}, ${defaultLiteral(property)}, {name: ${q(property.name)}});`,
+    );
+  }
+
+  for (const event of meta.events) {
+    lines.push(
+      `export const ${event.ref.exportName} = rule.addEvent(${q(event.id)}, {name: ${q(event.name)}});`,
+    );
+  }
+
+  lines.push('', 'export default rule.build();', '');
+  return lines.join('\n');
+}

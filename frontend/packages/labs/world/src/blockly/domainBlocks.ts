@@ -95,6 +95,20 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
   return `WorldLab.${ref.exportName}`;
 };
 
+// The inverse of `traitValue` (traitOptions): a `TRAIT` dropdown value back to a
+// member ref. A `<module>#<export>` value is a project trait (imported from the
+// module); a bare name is a built-in (`WorldLab.<name>`).
+const refFromTraitValue = (value: string): MemberRef => {
+  const hash = value.indexOf('#');
+  return hash >= 0
+    ? {
+        source: 'project',
+        modulePath: value.slice(0, hash),
+        exportName: value.slice(hash + 1),
+      }
+    : {source: 'builtin', exportName: value};
+};
+
 // A globally-unique key for a member's block TYPE (registry + toolbox name),
 // distinct from its codegen reference (`refCode`). Built-in export names are
 // unique; a project member is namespaced by its module, so two rules' same-named
@@ -165,9 +179,9 @@ const worldUseTrait = defineBlock({
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
-    javascript(block) {
-      const traitExport = block.getFieldValue('TRAIT');
-      return `actor.useTraits([WorldLab.${traitExport}]);\n`;
+    javascript(block, generator) {
+      const ref = refFromTraitValue(block.getFieldValue('TRAIT'));
+      return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
   },
 });
