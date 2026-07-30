@@ -329,8 +329,6 @@ class SourcesTest < FilesApiTestBase
   end
 
   def test_replace_version
-    CDO.expects(:log).never
-
     # Upload a source file.
     filename = MAIN_JSON
     file_data = '{"source":"version 1"}'
@@ -380,6 +378,7 @@ class SourcesTest < FilesApiTestBase
 
     Timecop.travel 1
 
+    CDO.log.stubs(:info)
     # log when replacing non-current version.
     CDO.log.expects(:info).with do |data|
       data = JSON.parse(data)
