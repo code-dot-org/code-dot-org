@@ -9,6 +9,7 @@ import {
   challengeResponseValidator,
 } from '../types';
 
+import {requestEvaluation} from './requestEvaluation';
 import VideoRecorder from './VideoRecorder';
 
 // import freeResponseStyles from './free-response.module.scss';
@@ -57,7 +58,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     setIsUploading(true);
     try {
       const challengeResponse = await createChallengeResponse();
-      const assetId = challengeResponse?.assets[0]?.id;
+      if (!challengeResponse) {
+        throw new Error('The server did not create a challenge response.');
+      }
+      const assetId = challengeResponse.assets[0]?.id;
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
       }
@@ -68,10 +72,17 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         true, // useAuthenticityToken
         {'Content-Type': 'video/webm'}
       );
+
+      // Fire-and-forget: the evaluation result goes to the teacher, not the
+      // student, so the submission flow does not wait on it.
+      requestEvaluation(challengeResponse.id);
+
+      // Only confirm once the upload actually succeeded; the confirmation
+      // dialog in ChallengeBox keys off this.
+      submitCallback(true);
     } catch (error) {
       console.log(error);
     } finally {
-      submitCallback(true);
       setIsUploading(false);
     }
   };
@@ -89,9 +100,6 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         setRecordedUrl={setRecordedUrl}
       />
       {isUploading && <WaitingAnimation shouldDisplay={isUploading} />}
-      {submitted && !isUploading && (
-        <div className={styles.questionText}>Submitted!</div>
-      )}
       {!submitted && (
         <button
           type="button"
