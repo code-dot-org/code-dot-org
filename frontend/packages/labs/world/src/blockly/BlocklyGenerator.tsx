@@ -21,7 +21,12 @@ import {
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
-import type {RuleMeta} from './ruleMeta';
+import {
+  extractRuleBodies,
+  parseRuleMeta,
+  ruleMetaToModule,
+  type RuleMeta,
+} from './ruleMeta';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
 // (INTERFACE.md). Blockly's generator lives on a workspace, exposed via the
@@ -32,8 +37,12 @@ import type {RuleMeta} from './ruleMeta';
 // source transform before compiling.
 
 export interface BlocklyGeneratorHandle {
-  /** Generate the JavaScript module for a Blockly file's JSON. */
-  generate: (contents: string) => string;
+  /**
+   * Generate the JavaScript module for a Blockly file's JSON. `path` is the
+   * file's project path — needed for a `.rule` (its module path names where its
+   * own members are imported from, and marks self-references as local).
+   */
+  generate: (contents: string, path?: string) => string;
 }
 
 export const BlocklyGenerator = forwardRef<
@@ -58,7 +67,7 @@ export const BlocklyGenerator = forwardRef<
   useImperativeHandle(
     ref,
     () => ({
-      generate(contents) {
+      generate(contents, path) {
         const workspace = workspaceRef.current;
         const generator = generatorRef.current;
         if (!workspace || !generator) {
@@ -81,6 +90,29 @@ export const BlocklyGenerator = forwardRef<
         // it gets a numbered suffix instead of shadowing the identifier.
         generator.addReservedWords('actor,world,scene,eventValue');
         generator.init(workspace);
+
+        // A `.rule` file: the declarative scaffolding comes from its metadata
+        // (parsed statically), but each action/query has an imperative body that
+        // IS real code, generated from its `do` blocks here. `__ruleModule` marks
+        // this module so a body referencing the rule's own member uses the local
+        // `export const`, not an import of the module into itself.
+        const ruleRoot = workspace
+          .getTopBlocks(true)
+          .find(block => block.type === 'world_rule');
+        if (ruleRoot) {
+          const modulePath = (path ?? '').replace(/\.rule$/, '');
+          const meta = parseRuleMeta(modulePath, contents);
+          if (!meta) {
+            return generator.finish('export {};\n');
+          }
+          (generator as {__ruleModule?: string}).__ruleModule = modulePath;
+          const bodies = extractRuleBodies(ruleRoot, block =>
+            generator.statementToCode(block as Blockly.Block, 'DO'),
+          );
+          (generator as {__ruleModule?: string}).__ruleModule = undefined;
+          return generator.finish(ruleMetaToModule(meta, bodies));
+        }
+
         // A root block (an event handler, or an actor/scene/world definition)
         // owns the blocks chained below it as its body and generates that chain
         // itself — so generate it `thisOnly` to stop `scrub_` from also appending
