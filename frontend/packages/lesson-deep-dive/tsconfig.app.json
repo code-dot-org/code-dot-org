@@ -20,7 +20,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@cdo/generated-scripts/sharedConstants": [
-        "../../../apps/generated-scripts/sharedConstants.ts"
+        "./src/devhost/modules/sharedConstants.ts"
       ],
       "@cdo/apps/aiComponentLibrary/chatMessage/types": [
         "../../../apps/src/aiComponentLibrary/chatMessage/types.ts"
