@@ -19,7 +19,13 @@
     "6-12-aid-thinking-critically-about-ai-2026",
     "sample-aid-sc2-unit-generation",
     "ai-history",
-    "foundations-of-ai-programming-js"
+    "foundations-of-ai-programming-js",
+    "problem-solving-with-ai-2026-dev",
+    "ai-and-the-systems-that-power-it-2026-dev",
+    "the-fabric-of-the-internet-and-ai-2026-dev",
+    "ai-powered-threats-and-defenses-2026-dev",
+    "insights-from-data-and-ai-2026-dev",
+    "foundations-of-ai-programming-2026-dev"
   ],
   "original_script_names": [
     "6-12-intro-to-programming-python",
@@ -40,7 +46,13 @@
     "6-12-aid-thinking-critically-about-ai-2026",
     "sample-aid-sc2-unit-generation",
     "ai-history",
-    "foundations-of-ai-programming-js"
+    "foundations-of-ai-programming-js",
+    "problem-solving-with-ai-2026-dev",
+    "ai-and-the-systems-that-power-it-2026-dev",
+    "the-fabric-of-the-internet-and-ai-2026-dev",
+    "ai-powered-threats-and-defenses-2026-dev",
+    "insights-from-data-and-ai-2026-dev",
+    "foundations-of-ai-programming-2026-dev"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",

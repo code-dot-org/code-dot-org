@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-29T22:01:44.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build a Phone Help Bot\r\n\r\nA Library Technology Assistant set up this bot to help patrons who need help figuring out the settings on their iPhone — but they weren't careful about what information they gave it.\r\n\r\n##### Do This:\r\n\r\n1. Ask your bot a few questions someone who wants figure out how to work their smart phone would ask. Something's off. What is it?\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Fix the context. You can delete cards or edit them to fix them. Some cards are a judgement call - decide what you would trust.\r\n4. Click Update, then ask your questions again. Keep going until you would trust this bot.\r\n5. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you keep or edit the same things? Does having context mean the bot is always right?\r\n\r\n::: details [**Have Time To Make It Better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated May 2026] To zoom in on the screen: open Settings, tap Accessibility, then\r\ntap Zoom.\r\n- [Updated May 2026] To connect to library WiFi: open Settings, tap Wi-Fi, and select\r\n\"Library-Guest.\" No password is needed.\r\n- [Updated May 2026] Battery health can be checked at Settings, then Battery, then\r\nBattery Health & Charging.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nFind one more fact this bot should know. Write it as a new context entry — include the date and where you found it, just like the other cards do. Then test whether your bot uses it.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a phone help assistant at the public library. A library technology assistant built you to help patrons — many of them older adults — figure out settings on their iPhones.",
+        "retrievalContexts": [
+          "[Updated May 2026] To make text larger: open Settings, tap Display & Brightness,\nthen tap Text Size and use the slider.",
+          "[Updated 2016] To open Control Center, swipe up from the bottom edge of the screen.",
+          "[Updated May 2026] Settings locations may differ depending on which iPhone model and\niOS version the patron has.",
+          "If a patron forgets their Apple ID password, they can reset it at iforgot.apple.com\nor on the device through Settings.",
+          "[Updated May 2026] On newer iPhones, Control Center opens by swiping down from the\ntop-right corner of the screen.",
+          "[Updated May 2026] To turn on Do Not Disturb: open Control Center, tap the Focus\nbutton, then choose Do Not Disturb.",
+          "[Updated 2019] To take a screenshot, press the side button and the volume up button\nat the same time. To force an app to close, press the Home button twice quickly.",
+          "[Updated May 2026] The library's 3D printer is available to patrons for 10 cents per\ngram of filament. Reserve time at the front desk."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given. \n2. If the information you have been given does not cover a question, say plainly\n   that you do not have that information. Do NOT use general knowledge to fill\n   the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other,\n   report both and say that they disagree. Do not quietly pick one.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say\n  that is not what you are built for.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T22:01:44.253+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-c-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-c-2026\"},{\"changed_at\":\"2026-07-29 22:01:47 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:47:30 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 03:00:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

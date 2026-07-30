@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-07-28T19:02:19.000Z",
   "level_num": "custom",
@@ -8,8 +7,464 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "##Template Level\r\n\r\n\r\n\r\n\r\n",
-    "require_edit_to_continue": "true"
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "e758fecc-416e-4aee-85e0-a9febcc4cd03",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/094ca648-ecc7-45f1-90be-68271dbfa732.png",
+              "altText": "document-gavel"
+            },
+            "position": {
+              "x": 70.89398008760662,
+              "y": 936.6667543287417
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "5efe294b-a491-4ea7-a6c3-dd989c78174b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/2b0da35a-3b3b-4d12-a1dc-e823013ce564.png",
+              "altText": "member-search"
+            },
+            "position": {
+              "x": -1168.1095471976162,
+              "y": -206.9108940720762
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "f3e9a7b4-f6b2-4890-8b38-a53abb28ae65",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/9028a109-c128-4e1d-afc0-ffd1431e5cb1.png",
+              "altText": "analytics-magnifying-glass"
+            },
+            "position": {
+              "x": 1287.082710378844,
+              "y": -214.5592693521819
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "25b03342-87a3-43f4-9a26-3643240ffa5f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/3a23b425-fc7e-44b2-9aa6-0e7a3a7997e7.png",
+              "altText": "box-open"
+            },
+            "position": {
+              "x": 2533.9074286513287,
+              "y": 938.3450976777019
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "7af2612f-19b0-4e2b-8f18-cf946149c0bd",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#aca8ea",
+              "strokeColor": "#ffffff"
+            },
+            "position": {
+              "x": -1201.1196685927393,
+              "y": -249.85816443228256
+            },
+            "width": 218.53822626561657,
+            "height": 214.0138856215389,
+            "measured": {
+              "width": 219,
+              "height": 214
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "377484c8-28ff-41bc-9999-c78a7e06ffe7",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#6fcaff",
+              "strokeColor": "#ffffff"
+            },
+            "position": {
+              "x": 27.257211096381383,
+              "y": 895.786376865417
+            },
+            "width": 218.53822626561657,
+            "height": 214.0138856215389,
+            "measured": {
+              "width": 219,
+              "height": 214
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "d658ebae-be55-4bbf-b55f-00cda9f5198c",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#7cdb87",
+              "strokeColor": "#ffffff"
+            },
+            "position": {
+              "x": 1262.5984952918711,
+              "y": -263.7869734450205
+            },
+            "width": 218.53822626561657,
+            "height": 214.0138856215389,
+            "measured": {
+              "width": 219,
+              "height": 214
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "d1ce590d-ddf3-43d5-8c1c-e167b48faaf1",
+            "type": "shape",
+            "data": {
+              "shapeType": "circle",
+              "label": "",
+              "backgroundColor": "#faa868",
+              "strokeColor": "#ffffff"
+            },
+            "position": {
+              "x": 2504.90418399373,
+              "y": 888.8219723590479
+            },
+            "width": 218.53822626561657,
+            "height": 214.0138856215389,
+            "measured": {
+              "width": 219,
+              "height": 214
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "04d03fef-c65d-4988-b773-6187096aded3",
+            "type": "text",
+            "data": {
+              "text": "Define",
+              "fontFamily": "draw",
+              "textAlign": "center",
+              "fontSize": 50
+            },
+            "position": {
+              "x": -1215.0749299779102,
+              "y": -54.65362201360663
+            },
+            "width": 247.08752211101097,
+            "height": 120,
+            "measured": {
+              "width": 247,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ee4cbbd6-f991-4de0-be5e-5dd6079b857e",
+            "type": "text",
+            "data": {
+              "text": "Build",
+              "fontFamily": "draw",
+              "textAlign": "center",
+              "fontSize": 50
+            },
+            "position": {
+              "x": 18.08378312036183,
+              "y": 1096.4531644672852
+            },
+            "width": 247.08752211101097,
+            "height": 120,
+            "measured": {
+              "width": 247,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "0beea9d1-6b1c-4474-831f-d2264b9a2ce8",
+            "type": "text",
+            "data": {
+              "text": "Test",
+              "fontFamily": "draw",
+              "textAlign": "center",
+              "fontSize": 50
+            },
+            "position": {
+              "x": 1248.1357097377409,
+              "y": -63.029037785898105
+            },
+            "width": 247.08752211101097,
+            "height": 120,
+            "measured": {
+              "width": 247,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "f1c32776-4b8f-45f1-9430-30e6670f2e54",
+            "type": "text",
+            "data": {
+              "text": "Ship",
+              "fontFamily": "draw",
+              "textAlign": "center",
+              "fontSize": 50
+            },
+            "position": {
+              "x": 2495.223231848751,
+              "y": 1097.8641757332077
+            },
+            "width": 247.08752211101097,
+            "height": 120,
+            "measured": {
+              "width": 247,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2736cb15-e01f-4f36-a8da-a29b6215b5bf",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/f6c4073b-e30b-4b68-bfb0-3c4e86404b1b.png",
+              "altText": "project-icon-1"
+            },
+            "position": {
+              "x": -1199.2238480842798,
+              "y": -1040.7639159961068
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d1566e32-013b-4f73-81ac-2a5dcc1d787b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/c17b4c9d-8de2-4a20-a1a2-72f6cce54829.png",
+              "altText": "project-icon-2"
+            },
+            "position": {
+              "x": -1077.793351330007,
+              "y": -890.5844877884499
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2fe2a0bb-af46-426d-8d67-7c77dc32a31b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/42491ea0-84a3-4fd5-908e-6e535d10682e.png",
+              "altText": "project-icon-3",
+              "locked": false
+            },
+            "position": {
+              "x": -1077.8177695496765,
+              "y": -1034.946483120058
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a7cc6ee2-d287-43aa-9a8f-a6ed7707e6f4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/b78712a4-8bf6-4eed-a876-a413eccc4f21.png",
+              "altText": "project-icon-4"
+            },
+            "position": {
+              "x": -1200.8041613600997,
+              "y": -886.1273127874376
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "ce7aba7d-224f-4ce6-86b9-c8059e05cc76",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "#fcfcfc",
+              "locked": true
+            },
+            "position": {
+              "x": -1213.593811327254,
+              "y": -1079.574246836161
+            },
+            "width": 440.1931393031995,
+            "height": 368.15981789671343,
+            "measured": {
+              "width": 440,
+              "height": 368
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "5b334a5a-00d6-4b53-b88a-4f5d6233eede",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/ea8297f9-33e2-40c5-abdd-8ba07a7bf9f4.png",
+              "altText": "project-icon-5"
+            },
+            "position": {
+              "x": -957.7324119946451,
+              "y": -889.7520177872365
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a0dd5512-77c0-4e60-9d71-6943392b3f6f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/1e009a9e-e9d9-4b00-af17-fa90554eb895.png",
+              "altText": "project-icon-6"
+            },
+            "position": {
+              "x": -960.7649734264995,
+              "y": -1035.31496651625
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "389a3508-83cc-46f3-9b0a-81a8549368e7",
+            "source": "7af2612f-19b0-4e2b-8f18-cf946149c0bd",
+            "target": "377484c8-28ff-41bc-9999-c78a7e06ffe7",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          },
+          {
+            "id": "17259d0e-6df7-4937-aa10-4509315aabc2",
+            "source": "377484c8-28ff-41bc-9999-c78a7e06ffe7",
+            "target": "d658ebae-be55-4bbf-b55f-00cda9f5198c",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          },
+          {
+            "id": "acf735e4-b3c5-47dc-8478-d4de6bae628f",
+            "source": "d658ebae-be55-4bbf-b55f-00cda9f5198c",
+            "target": "d1ce590d-ddf3-43d5-8c1c-e167b48faaf1",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "sourceHandle": "right-source",
+            "targetHandle": "left-target"
+          }
+        ],
+        "viewport": {
+          "x": 639.7379951606083,
+          "y": 330.9583530313398,
+          "zoom": 0.28706774219039377
+        }
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
