@@ -52,7 +52,12 @@ import type {
   QueryMeta,
   RuleMeta,
 } from './ruleMeta';
-import {traitOptions, traitOptionsExtension} from './traitOptions';
+import {
+  stepOptions,
+  stepOptionsExtension,
+  traitOptions,
+  traitOptionsExtension,
+} from './traitOptions';
 import {
   ActorVariable,
   PARAM_GETTER_BLOCKS,
@@ -1583,6 +1588,84 @@ const worldReturn = defineBlock({
   },
 });
 
+// ── Steps: per-tick behavior ─────────────────────────────────────────────────
+// A `define step` runs its `do` body every tick, with `world` bound (it acts on
+// the world) and the frame `delta` available (`step delta`). Ordering (the ORDER
+// dropdown + STEP anchor) places it relative to another rule's step — the whole
+// point for physics: gravity's step runs BEFORE Motion integrates. Read
+// statically for its ordering + as an anchor target; its body is generated like
+// an action's (so it carries no generator here).
+
+const STEP_ORDER_OPTIONS: Array<[string, string]> = [
+  ['unordered', 'free'],
+  ['before', 'before'],
+  ['after', 'after'],
+];
+
+const worldRuleStep = defineBlock({
+  type: 'world_rule_step',
+  message0: 'define step %1 %2 %3',
+  args0: [
+    {type: 'field_input', name: 'NAME', text: 'each tick'},
+    {type: 'field_dropdown', name: 'ORDER', options: STEP_ORDER_OPTIONS},
+    {type: 'field_dropdown', name: 'STEP', options: stepOptions()},
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [stepOptionsExtension],
+  style: 'default',
+  tooltip:
+    'Define a step — behavior that runs every tick (the world is in scope, ' +
+    'with the frame “delta”). Order it before/after another rule’s step.',
+  generator: noGenerator,
+});
+
+// The frame time (seconds since the last tick) — bound as `delta` in a step
+// closure, so this reporter is only meaningful inside a `define step` body.
+const worldStepDelta = defineBlock({
+  type: 'world_step_delta',
+  message0: 'delta',
+  output: 'Number',
+  style: 'variable_blocks',
+  tooltip:
+    'The time since the last frame, in seconds — usable inside a “define step”.',
+  generator: {
+    javascript() {
+      return ['delta', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+// `<actor> has trait <trait>` — a boolean predicate, so a step's `for each actor
+// where …` can select actors by trait (mirroring the engine's
+// `world.actors.with(Trait)`). The TRAIT dropdown reuses the traits in play.
+const worldHasTrait = defineBlock({
+  type: 'world_has_trait',
+  message0: '%1 has trait %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'field_dropdown', name: 'TRAIT', options: traitOptions()},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [actorInputExtension, traitOptionsExtension],
+  style: 'logic_blocks',
+  tooltip: 'Whether an actor has a given trait.',
+  generator: {
+    javascript(block, generator) {
+      const actor =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const ref = refFromTraitValue(block.getFieldValue('TRAIT'));
+      return [`${actor}.has(${refCode(ref, generator)})`, Order.MEMBER] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
@@ -1615,6 +1698,9 @@ export const DOMAIN_BLOCKS = [
   worldRuleAction,
   worldRuleQuery,
   worldReturn,
+  worldRuleStep,
+  worldStepDelta,
+  worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
 ];
 
@@ -1676,6 +1762,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_action',
       'world_rule_query',
       'world_return', // ends a query's body
+      'world_rule_step', // per-tick behavior (+ ordering)
+      'world_step_delta', // the frame time, inside a step
       ...PARAM_GETTER_TYPES, // read a parameter in the body (params via the +/− mutator)
     ],
   },
@@ -1694,6 +1782,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'logic_operation',
       'logic_negate',
       'logic_boolean',
+      'world_has_trait', // whether an actor has a trait
     ],
   },
   {

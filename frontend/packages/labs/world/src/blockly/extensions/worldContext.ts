@@ -23,7 +23,11 @@ const WARNING_ID = 'worldContext';
  */
 export function inWorldContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
-    if (parent.type === 'world_world' || parent.type.startsWith('world_on_')) {
+    if (
+      parent.type === 'world_world' ||
+      parent.type === 'world_rule_step' || // a step's body binds `world`
+      parent.type.startsWith('world_on_')
+    ) {
       return true;
     }
   }
