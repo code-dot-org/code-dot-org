@@ -94,11 +94,17 @@ experiments.getLocalStorageExperiments_ = function () {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
     const now = Date.now();
+    // Storage may contain duplicate keys; keep the first live entry for each.
+    const seenKeys = new Set();
     const enabledExperiments = storedExperiments.filter(experiment => {
-      return (
+      const enabled =
         experiment.key &&
-        (experiment.expiration === undefined || experiment.expiration > now)
-      );
+        !seenKeys.has(experiment.key) &&
+        (experiment.expiration === undefined || experiment.expiration > now);
+      if (enabled) {
+        seenKeys.add(experiment.key);
+      }
+      return enabled;
     });
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));

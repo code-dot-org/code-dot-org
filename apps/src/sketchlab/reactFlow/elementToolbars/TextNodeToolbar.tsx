@@ -17,7 +17,9 @@ import {
   DEFAULT_FONT_FAMILY,
   DEFAULT_FONT_SIZE,
   DEFAULT_TEXT_ALIGN,
+  DEFAULT_TEXT_BORDER_COLOR,
   STROKE_FONT_PALETTE,
+  TEXT_BORDER_PALETTE,
 } from './toolbarPalettes';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -27,7 +29,7 @@ interface TextNodeToolbarProps {
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
-  const {fontSize, fontFamily, fontColor, textAlign} = data;
+  const {fontSize, fontFamily, fontColor, textAlign, strokeColor} = data;
 
   return (
     <ToolbarShell
@@ -57,6 +59,12 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
               swatches={STROKE_FONT_PALETTE}
               value={fontColor ?? DEFAULT_FONT_COLOR}
               onSelect={next => patchNodeData({fontColor: next})}
+            />
+            <ColorDropdownRow
+              label="Border"
+              swatches={TEXT_BORDER_PALETTE}
+              value={strokeColor ?? DEFAULT_TEXT_BORDER_COLOR}
+              onSelect={next => patchNodeData({strokeColor: next})}
             />
           </ToolbarSection>
           <RotationGroup
