@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -205,10 +206,11 @@ describe('ModelManagerDialog', () => {
         commonI18n.aiTrainedModelsDeleteModelFailed
       ).to.have.been.calledWith(sinon.match.has('id', '0'));
 
-      // The failure message renders inside the dialog's customContent.
+      // The failure message renders inside the dialog's customContent as an Alert.
       const updatedDialog = wrapper.find(Modal).at(1);
-      const failureMessage = shallow(updatedDialog.prop('customContent'));
-      expect(failureMessage.text()).to.contain('i18n-delete-fail');
+      const alert = shallow(updatedDialog.prop('customContent')).find(Alert);
+      expect(alert.prop('text')).to.contain('i18n-delete-fail');
+      expect(alert.prop('type')).to.equal('danger');
     });
   });
 });

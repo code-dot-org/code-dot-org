@@ -1,5 +1,7 @@
+import Alert from '@code-dot-org/component-library/alert';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Modal from '@code-dot-org/component-library/modal';
+import Typography from '@mui/material/Typography';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -131,36 +133,34 @@ export default class ModelManagerDialog extends React.Component {
           title={i18n.aiTrainedModels()}
           onClose={this.closeModelManager}
           customContent={
-            <div>
-              {isModelListPending && (
-                <div className={moduleStyles.spinner}>
-                  <Spinner />
+            isModelListPending ? (
+              <div className={moduleStyles.spinner}>
+                <Spinner />
+              </div>
+            ) : noModels ? (
+              <div className={moduleStyles.mlModalContent}>
+                <Typography variant="body1" className={moduleStyles.emptyState}>
+                  {i18n.aiTrainedModelsNoModels()}
+                </Typography>
+              </div>
+            ) : (
+              <div className={moduleStyles.mlModalContent}>
+                <SimpleDropdown
+                  name="model"
+                  labelText={i18n.aiTrainedModels()}
+                  isLabelVisible={false}
+                  items={this.state.models.map(model => ({
+                    value: model.id,
+                    text: model.name,
+                  }))}
+                  selectedValue={this.state.selectedModel?.id}
+                  onChange={this.handleChange}
+                />
+                <div className={moduleStyles.modelCardScroll}>
+                  <ModelCard model={this.state.selectedModel} />
                 </div>
-              )}
-              {!isModelListPending && (
-                <div className={moduleStyles.mlModalContent}>
-                  <SimpleDropdown
-                    name="model"
-                    labelText={i18n.aiTrainedModels()}
-                    isLabelVisible={false}
-                    items={this.state.models.map(model => ({
-                      value: model.id,
-                      text: model.name,
-                    }))}
-                    selectedValue={this.state.selectedModel?.id}
-                    onChange={this.handleChange}
-                  />
-                  {noModels && (
-                    <div className={moduleStyles.message}>
-                      {i18n.aiTrainedModelsNoModels()}
-                    </div>
-                  )}
-                  <div className={moduleStyles.modelCardScroll}>
-                    <ModelCard model={this.state.selectedModel} />
-                  </div>
-                </div>
-              )}
-            </div>
+              </div>
+            )
           }
           primaryButtonProps={{
             children: isImportPending
@@ -192,9 +192,11 @@ export default class ModelManagerDialog extends React.Component {
                   <ModelCard model={this.state.selectedModel} />
                 </div>
                 {this.state.deletionStatus && (
-                  <p className={moduleStyles.message}>
-                    {this.state.deletionStatus}
-                  </p>
+                  <Alert
+                    text={this.state.deletionStatus}
+                    type="danger"
+                    size="s"
+                  />
                 )}
               </div>
             }
