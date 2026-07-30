@@ -1,9 +1,9 @@
 // A default `this actor` shadow for a block's `ACTOR` value input, so an action
 // block reads "… of [this actor]" and works on the principal actor with nothing
-// plugged in — dropping another actor value (e.g. the touched actor from a
-// "for each … I'm touching" loop) into the socket retargets it. Attached as a
-// block extension because the simplified toolbox lists blocks by type only and
-// can't carry per-input shadow specs.
+// plugged in — dropping another actor value (e.g. a `for each` loop's actor
+// variable) into the socket retargets it. Attached as a block extension because
+// the simplified toolbox lists blocks by type only and can't carry per-input
+// shadow specs.
 
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 

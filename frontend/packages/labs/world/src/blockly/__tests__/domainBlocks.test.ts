@@ -128,34 +128,71 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_this_actor / world_touched_actor yield actor expressions', () => {
+  it('world_this_actor yields the principal actor expression', () => {
     const thisActor = generatorFor('world_this_actor')(
       {} as never,
       {} as never,
       {} as never,
     );
     expect(Array.isArray(thisActor) && thisActor[0]).toBe('actor');
-    const touched = generatorFor('world_touched_actor')(
-      {} as never,
-      {} as never,
-      {} as never,
-    );
-    expect(Array.isArray(touched) && touched[0]).toBe('touched');
   });
 
-  it('world_for_each_touching loops the touching query, by module path', () => {
-    // The dropdown value is the module path, which the scene stamps as the placed
-    // actor's `type`, so the filter matches on that path directly.
-    expect(
-      emit(
-        'world_for_each_touching',
-        {ACTOR: 'actors/coin'},
-        {DO: 'touched.set(X, Y);\n'},
-      ),
-    ).toBe(
-      'for (const touched of world.query(WorldLab.TouchingQuery, actor, "actors/coin")) {\n' +
-        'touched.set(X, Y);\n}\n',
+  it('variables_get_Actor reads its bound variable name', () => {
+    const block = {
+      getFieldValue: (name: string) => (name === 'VAR' ? 'id7' : ''),
+    };
+    const generator = {getVariableName: (id: string) => `v_${id}`};
+    const code = generatorFor('variables_get_Actor')(
+      block as never,
+      generator as never,
+      {} as never,
     );
+    expect(Array.isArray(code) && code[0]).toBe('v_id7');
+  });
+
+  it('world_is_a tests an actor value against a module path', () => {
+    // Default (empty ACTOR socket → `this actor`).
+    expect(emitValue('world_is_a', {TYPE: 'actors/coin'})[0]).toBe(
+      'actor.type === "actors/coin"',
+    );
+    // A plugged-in actor (e.g. a loop variable) is tested instead.
+    expect(
+      emitValue('world_is_a', {TYPE: 'actors/coin'}, {ACTOR: 'each'})[0],
+    ).toBe('each.type === "actors/coin"');
+  });
+
+  it('world_for_each iterates world.actors, guarded by its where predicate', () => {
+    const block = {
+      getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
+    };
+    const generator = {
+      getVariableName: (id: string) => (id === 'vid' ? 'each' : id),
+      valueToCode: (_b: unknown, name: string) =>
+        name === 'WHERE' ? 'each.type === "actors/coin"' : '',
+      statementToCode: (_b: unknown, name: string) =>
+        name === 'DO' ? 'each.set(X, Y);\n' : '',
+    };
+    const code = generatorFor('world_for_each')(
+      block as never,
+      generator as never,
+      {} as never,
+    );
+    expect(code).toBe(
+      'for (const each of world.actors) {\n' +
+        'if (each.type === "actors/coin") {\n' +
+        'each.set(X, Y);\n}\n}\n',
+    );
+  });
+
+  it('world_query_IsTouchingQuery reads its two actor sockets', () => {
+    // Empty sockets default to `this actor` on both sides.
+    expect(emitValue('world_query_IsTouchingQuery')[0]).toBe(
+      'world.query(WorldLab.IsTouchingQuery, actor, actor)',
+    );
+    // A subject and a candidate plugged in (e.g. this actor vs a loop variable).
+    expect(
+      emitValue('world_query_IsTouchingQuery', {}, {A: 'actor', B: 'each'})[0],
+    ).toBe('world.query(WorldLab.IsTouchingQuery, actor, each)');
   });
 
   it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {
@@ -506,14 +543,17 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === name,
       )?.blocks ?? [];
-    // Gravity's "is on the ground?" query. (Collision's TouchingQuery returns an
-    // actor list — no return type — so it gets no query block; it is the loop.)
+    // Gravity's "is on the ground?" query and Collision's "is touching?" predicate
+    // (a boolean query with two actor params — the hoisted heart of the touching
+    // filter). Collision's list `TouchingQuery` has no return type, so it gets no
+    // block; the `for each … where` loop rebuilds the list from the predicate.
     expect(category('Has Gravity')).toContain('world_query_IsOnGroundQuery');
+    expect(category('Has Collisions')).toContain('world_query_IsTouchingQuery');
     expect(
       (DOMAIN_TOOLBOX as Array<{blocks: string[]}>)
         .flatMap(c => c.blocks)
         .filter(t => t.startsWith('world_query_')),
-    ).toEqual(['world_query_IsOnGroundQuery']);
+    ).toEqual(['world_query_IsTouchingQuery', 'world_query_IsOnGroundQuery']);
   });
 });
 

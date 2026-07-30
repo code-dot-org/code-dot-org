@@ -12,6 +12,7 @@ import type {Block} from 'blockly';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
+  createTypedVariable,
   defineBlock,
   type BlockArgDefinition,
   type Toolbox,
@@ -31,6 +32,7 @@ import {
 } from '../engine';
 import type {
   ActorAction,
+  ArgType,
   GameEvent,
   Property,
   PropertyType,
@@ -423,9 +425,11 @@ const isSettable = (property: Property): boolean =>
   !COVERED_PROPERTIES.has(property) &&
   PROPERTY_EXPORT_NAME.has(property);
 
-/** A typed value slot — the shared shape of a property and an action parameter. */
+/** A typed value slot — the shared shape of a property, an action parameter, and
+ * a query argument. Uses the wider {@link ArgType} so an `actor` socket (a query
+ * argument) is expressible; properties only ever carry a {@link PropertyType}. */
 interface TypedValue {
-  type: PropertyType;
+  type: ArgType;
   default?: unknown;
 }
 
@@ -468,6 +472,9 @@ const typedValueCode = (
         read(names.y) || String(v.y)
       })`;
     }
+    case 'actor':
+      // An Actor socket (default `this actor`); a plugged actor value replaces it.
+      return read(names.value) || 'actor';
     case 'boolean':
       return read(names.value) || (d ? 'true' : 'false');
     case 'string':
@@ -503,6 +510,14 @@ const typedValueInputs = (
     shadow: {type: 'math_number', fields: {NUM: num}},
   });
   switch (value.type) {
+    case 'actor':
+      // One `Actor` socket, seeded with a `this actor` shadow — a plugged actor
+      // value (a loop variable, a getter) replaces it.
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: 'Actor'}],
+        shadows: [{name: names.value, shadow: {type: 'world_this_actor'}}],
+      };
     case 'vector': {
       // One `Vector` socket, seeded with a `world_vector` literal (the arrow-grid
       // field) — so you get inline editing and can drop another vector block in.
@@ -896,34 +911,86 @@ const queryBlockType = (exportName: string): string =>
  * (default `this actor`) and reads it — `actor.query(WorldLab.X)`; a world query
  * reads `world`. Its output/style match the value it returns (a boolean → logic).
  */
+/** The input names a query param occupies, derived from its declared name. */
+const paramValueNames = (name: string): ValueNames => {
+  const upper = name.toUpperCase();
+  return {value: upper, x: `${upper}_X`, y: `${upper}_Y`};
+};
+
 const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
   const exportName = QUERY_EXPORT_NAME.get(query) ?? '';
   const name = query.name ?? query.id;
   const returns = query.returns ?? 'boolean';
-  // The name reads as a predicate ("is on the ground?"), so the subject leads:
-  // "this actor is on the ground?". A world query stands alone.
-  const message0 = actorScoped ? `%1 ${name}` : name;
-  const args0: BlockArgDefinition[] = actorScoped
-    ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}]
-    : [];
+  const type = queryBlockType(exportName);
+  // A world query may take typed arguments (its `params`), each a value socket;
+  // an actor query reads the actor it is called on.
+  const params = actorScoped ? [] : ((query as WorldQuery).params ?? []);
+  const paramNames = params.map(param => paramValueNames(param.name));
+
+  const args0: BlockArgDefinition[] = [];
+  const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
+  let message0: string;
+  if (actorScoped) {
+    // The name reads as a predicate ("is on the ground?"), so the subject leads:
+    // "this actor is on the ground?".
+    message0 = `%1 ${name}`;
+    args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+  } else if (params.length > 0) {
+    // A predicate over its arguments — the first argument leads, the name
+    // follows, the rest trail: "%1 is touching %2".
+    const frags = params.map((param, i) => {
+      const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
+      args0.push(...built.args);
+      shadows.push(...built.shadows);
+      return built.message;
+    });
+    message0 = `${frags[0]} ${name}${frags
+      .slice(1)
+      .map(f => ` ${f}`)
+      .join('')}`;
+  } else {
+    // A nullary world query — stands alone.
+    message0 = name;
+  }
+
+  if (shadows.length) {
+    registerValueShadows(type, shadows);
+  }
+
   return defineBlock({
-    type: queryBlockType(exportName),
+    type,
     message0,
     args0,
     inputsInline: true,
     output: outputForType(returns),
-    extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
+    extensions: actorScoped
+      ? [actorInputExtension]
+      : [
+          worldContextExtension,
+          ...(shadows.length ? [valueShadowExtension] : []),
+        ],
     style: valueStyle(returns),
     tooltip: actorScoped ? `Whether an actor ${name}` : `The world's ${name}`,
     generator: {
       javascript(block, generator) {
-        const target = actorScoped
-          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
-          : 'world';
-        return [`${target}.query(WorldLab.${exportName})`, Order.ATOMIC] as [
-          string,
-          number,
-        ];
+        if (actorScoped) {
+          const target =
+            generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+          return [`${target}.query(WorldLab.${exportName})`, Order.ATOMIC] as [
+            string,
+            number,
+          ];
+        }
+        const argCode = params
+          .map(
+            (param, i) =>
+              `, ${typedValueCode(param, block, generator, paramNames[i])}`,
+          )
+          .join('');
+        return [
+          `world.query(WorldLab.${exportName}${argCode})`,
+          Order.ATOMIC,
+        ] as [string, number];
       },
     },
   });
@@ -1059,10 +1126,14 @@ registerValueShadows('world_vector_component', [
   {name: 'VEC', shadow: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}}},
 ]);
 
-// ── Actor values & touching ──────────────────────────────────────────────────
-// Blocks that yield an Actor (output type "Actor") for an action block's `of …`
-// socket. `world_this_actor` is the principal actor (`this`) — the default shadow;
-// `world_touched_actor` is the actor a `for each … I'm touching` loop is on now.
+// ── Actor values, variables & filtering ──────────────────────────────────────
+// Blocks that yield an Actor (output type "Actor") for a block's `of …`/socket.
+// `world_this_actor` is the principal actor (`this`); `ActorVariable` is a
+// reusable typed variable (its getter reads a bound actor, e.g. a loop's), built
+// on the shared `createTypedVariable` facility. `world_for_each` iterates the
+// world's actors, filtered by a `where` predicate; `world_is_a` tests an actor's
+// kind — together they replace the old bespoke `for each … touching` loop,
+// composing with the generated `is touching` predicate instead.
 
 const worldThisActor = defineBlock({
   type: 'world_this_actor',
@@ -1078,46 +1149,78 @@ const worldThisActor = defineBlock({
   },
 });
 
-const worldTouchedActor = defineBlock({
-  type: 'world_touched_actor',
-  message0: "the actor I'm touching",
-  output: 'Actor',
+// The `Actor` typed variable: a getter (`variables_get_Actor`, output `Actor`)
+// and a `field(name)` helper for binding one (the for-each loop variable). An
+// Actor variable only plugs into Actor sockets, and reads with the sprite style.
+// `defaultName` is `other`, not `actor`: the principal actor generates as the
+// bare identifier `actor`, so a loop variable named `actor` would shadow it
+// (`for (const actor of world.actors)`) and break "this actor is touching it".
+// The generator also reserves `actor` (see BlocklyGenerator) against a rename.
+const ActorVariable = createTypedVariable({
+  type: 'Actor',
   style: 'sprite_blocks',
-  tooltip: "Inside a “for each … I'm touching” loop, the actor it is on now.",
-  generator: {
-    javascript() {
-      return ['touched', Order.ATOMIC] as [string, number];
-    },
-  },
+  defaultName: 'other',
+  tooltip:
+    'An actor held in a variable — e.g. the one a “for each” loop is on.',
 });
 
-const worldForEachTouching = defineBlock({
-  type: 'world_for_each_touching',
-  message0: "for each %1 I'm touching",
-  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions()}],
+const worldForEach = defineBlock({
+  type: 'world_for_each',
+  message0: 'for each actor %1 where %2',
+  args0: [
+    ActorVariable.field('VAR'),
+    {type: 'input_value', name: 'WHERE', check: 'Boolean'},
+  ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  // The dropdown lists the project's actor templates (populated live), the same
-  // as `world_add_actor`. The loop queries `world`, so warn where it is unbound.
-  extensions: [actorOptionsExtension, worldContextExtension],
-  // A loop over the touching actors → the loop style.
+  // Iterates `world.actors`, so warn where `world` is unbound; the WHERE socket
+  // seeds a `true` shadow (run for every actor until a predicate is dropped in).
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'loop_blocks',
   tooltip:
-    'Run blocks once for each actor of a type this actor is touching. Use ' +
-    "“the actor I'm touching” to act on each one. Only valid inside a " +
-    '“when” handler.',
+    'Run the blocks once for each actor the “where” test accepts. Bind the ' +
+    'loop variable to read the current actor. Only valid where a world is known.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const where = generator.valueToCode(block, 'WHERE', Order.NONE) || 'true';
+      const body = generator.statementToCode(block, 'DO');
+      return `for (const ${variable} of world.actors) {\nif (${where}) {\n${body}}\n}\n`;
+    },
+  },
+});
+registerValueShadows('world_for_each', [
+  {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+]);
+
+const worldIsA = defineBlock({
+  type: 'world_is_a',
+  message0: '%1 is a %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'field_dropdown', name: 'TYPE', options: actorOptions()},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  // ACTOR defaults to a `this actor` shadow; the dropdown lists the project's
+  // actor templates (populated live), the same as `world_add_actor`.
+  extensions: [actorInputExtension, actorOptionsExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Whether an actor is of a given kind (the map places it by its type).',
   generator: {
     javascript(block, generator) {
       // The dropdown value is the module path (`actors/coin`), which the scene
-      // stamps as each placed actor's `type` (see world_add_actor / the map). So
-      // the touching filter matches on the module path directly.
-      const modulePath = block.getFieldValue('ACTOR');
-      const body = generator.statementToCode(block, 'DO');
-      return `for (const touched of world.query(WorldLab.TouchingQuery, actor, ${str(
-        modulePath,
-      )})) {\n${body}}\n`;
+      // stamps as each placed actor's `type` — so an actor's kind is its `.type`.
+      const actor =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const modulePath = block.getFieldValue('TYPE');
+      return [`${actor}.type === ${str(modulePath)}`, Order.EQUALITY] as [
+        string,
+        number,
+      ];
     },
   },
 });
@@ -1368,8 +1471,9 @@ export const DOMAIN_BLOCKS = [
   worldVector,
   worldVectorComponent,
   worldThisActor,
-  worldTouchedActor,
-  worldForEachTouching,
+  ActorVariable.getterBlock,
+  worldForEach,
+  worldIsA,
   worldScene,
   worldAddActor,
   worldLoadMap,
@@ -1383,7 +1487,6 @@ export const DOMAIN_BLOCKS = [
 // Actor/World they build, not in any one rule category.
 const RULE_HAND_BLOCKS = new Map<Rule, string[]>([
   [SpatialRule, ['world_set_position']],
-  [CollisionRule, ['world_for_each_touching', 'world_touched_actor']],
   [AnimationRule, ['world_set_sprite', 'world_play_animation']],
 ]);
 
@@ -1410,7 +1513,13 @@ const ruleCategory = (rule: Rule) => ({
 export const DOMAIN_TOOLBOX: Toolbox = [
   {
     name: 'Actor',
-    blocks: ['world_actor', 'world_use_trait', 'world_this_actor'],
+    blocks: [
+      'world_actor',
+      'world_use_trait',
+      'world_this_actor',
+      ActorVariable.getterType,
+      'world_is_a',
+    ],
   },
   {name: 'Scene', blocks: ['world_scene', 'world_add_actor', 'world_load_map']},
   {
@@ -1418,6 +1527,7 @@ export const DOMAIN_TOOLBOX: Toolbox = [
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
   ...ALL_RULES.map(ruleCategory).filter(category => category.blocks.length > 0),
+  {name: 'Loops', blocks: ['world_for_each']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',
