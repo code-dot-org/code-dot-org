@@ -4,6 +4,7 @@
 # argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
 image: code-dot-org:latest
+imagePullPolicy: IfNotPresent
 command: ["bin/dashboard-server"]
 args:
 
@@ -18,6 +19,8 @@ locals.yml:
   # build_apps: false
   # ...etc...
 
+extraEnv: {}
+
 # Require the k8s secret `cdo-external-secrets` to exist before bootup
 # Aka: "Require AWS Secrets Manager access to boot" mode
 require_external_secrets: false
@@ -26,6 +29,8 @@ healthChecks:
   enabled: false
 
 resources:
+  cpu:
+  memory:
   ephemeralStorage: 30Gi
 
 autoscaling:
@@ -42,6 +47,13 @@ dashboardJob:
   restartPolicy: Never
   backoffLimit: 1
   ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
+
+activeJobWorker:
+  enabled: false
+  replicas: 1
+  command: ["zsh", "-c"]
+  args:
+    - cd dashboard && bundle exec bin/delayed_job run
 
 services:
   redis:

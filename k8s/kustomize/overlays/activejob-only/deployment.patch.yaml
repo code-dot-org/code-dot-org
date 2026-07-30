@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          imagePullPolicy: Never
+          command:
+            - zsh
+            - -c
+          args:
+            - sleep infinity
+          env:
+            - name: RAILS_ENV
+              value: adhoc
+            - name: RACK_ENV
+              value: adhoc
+            - name: AWS_EC2_METADATA_DISABLED
+              value: "true"
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+            limits:
+              cpu: 1
+              memory: 2Gi
+              ephemeral-storage: 30Gi
+          startupProbe: null
+          readinessProbe: null
+          livenessProbe: null

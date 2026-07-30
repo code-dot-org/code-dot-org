@@ -7,6 +7,10 @@
 # Lets you do guard blocks to skip elements that aren't valid for Jobs:
 {{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
 {{- $isJob := eq (.kind | default "Deployment") "Job" }}
+{{- $portsEnabled := true }}
+{{- if hasKey . "portsEnabled" }}
+{{- $portsEnabled = .portsEnabled }}
+{{- end }}
 
 # Calculate CPU and memory resources from the original environment sizing table.
 # Weighted across all environments, floored to 2 decimal places:
@@ -33,7 +37,7 @@ metadata:
 spec:
 
   {{- if $isDeployment }}
-  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
+  replicas: {{ .replicas | default .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
   selector:
     matchLabels:
       {{ .selectorLabels | nindent 6 }}
@@ -52,6 +56,7 @@ spec:
       containers:
       - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
 
         command: {{ (.command | default .Values.command) | toJson }}
         args: {{ (.args | default .Values.args) | toJson }}
@@ -64,6 +69,10 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
             value: "1"
+          {{- range $name, $value := .Values.extraEnv }}
+          - name: {{ $name }}
+            value: {{ $value | quote }}
+          {{- end }}
           {{- if .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
@@ -105,22 +114,24 @@ spec:
         {{- if $isDeployment }}
         resources:
           requests:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
+            cpu: {{ .Values.resources.cpu | default $cpu }}
+            memory: {{ .Values.resources.memory | default $memory }}
             {{- if .Values.resources.ephemeralStorage }}
             ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
             {{- end }}
           limits:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
+            cpu: {{ .Values.resources.cpu | default $cpu }}
+            memory: {{ .Values.resources.memory | default $memory }}
             {{- if .Values.resources.ephemeralStorage }}
             ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
             {{- end }}
+        {{- if $portsEnabled }}
         ports:
         - name: http
           containerPort: 3000
         - name: http-hmr
           containerPort: 9000
+        {{- end }}
         {{- end }}
 
         {{- if and $isDeployment (.healthChecksEnabled | default .Values.healthChecks.enabled) }}

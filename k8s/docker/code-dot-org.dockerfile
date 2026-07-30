@@ -11,6 +11,9 @@ ARG CODE_DOT_ORG_PEGASUS
 ARG CODE_DOT_ORG_STATIC
 ARG CODE_DOT_ORG_DB_SEED
 ARG CODE_DOT_ORG_CORE
+ARG BUNDLE_JOBS=8
+ARG BUNDLE_WITHOUT
+ARG SKIP_FRONTEND_BUILD=0
 
 FROM $CODE_DOT_ORG_PEGASUS AS code-dot-org-pegasus
 FROM $CODE_DOT_ORG_STATIC AS code-dot-org-static
@@ -20,6 +23,9 @@ FROM $CODE_DOT_ORG_CORE AS code-dot-org-core
 ################################################################################
 FROM code-dot-org-core AS code-dot-org-bundle-install
 ################################################################################
+
+ARG BUNDLE_JOBS
+ARG BUNDLE_WITHOUT
 
 COPY --chown=${UID} \
   .ruby-version \
@@ -39,8 +45,14 @@ COPY --chown=${UID} \
   ./dashboard/engines/*/lib/*/version.rb \
   ./
 
-RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.0.5/lib/ruby/gems/3.0.0/cache <<EOF
-  bundle install --jobs 8 --quiet
+# NOTE: the gem cache path must track .ruby-version: versions/<full> and
+# gems/<major.minor.0>. Update both when bumping Ruby or the mount silently
+# stops caching (it mounts at a dead path, bundle install still works, just slow).
+RUN --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${HOME}/.rbenv/versions/3.2.11/lib/ruby/gems/3.2.0/cache <<EOF
+  if [ -n "${BUNDLE_WITHOUT}" ]; then
+    bundle config set without "${BUNDLE_WITHOUT}"
+  fi
+  bundle install --jobs "${BUNDLE_JOBS}" --quiet
 EOF
 
 ################################################################################
@@ -73,6 +85,8 @@ EOF
 FROM code-dot-org-core AS code-dot-org-node_modules
 ################################################################################
 
+ARG SKIP_FRONTEND_BUILD=0
+
 COPY --chown=${UID} \
   ./apps/package.json \
   ./apps/yarn.lock \
@@ -101,13 +115,19 @@ RUN \
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
   <<EOF
   # yarn install
-  cd apps
-  CI=true yarn install --immutable --silent
+  if [ "${SKIP_FRONTEND_BUILD}" = "1" ]; then
+    mkdir -p apps/build/package/js apps/build/package/css
+  else
+    cd apps
+    CI=true yarn install --immutable --silent
+  fi
 EOF
 
 ################################################################################
 FROM code-dot-org-node_modules AS code-dot-org-yarn-build
 ################################################################################
+
+ARG SKIP_FRONTEND_BUILD=0
 
 # Its sad, but we have to have our `yarn build` depend on installing ruby
 # just for bundle exec. Maybe we could decouple? NOTE, this link of rbenv
@@ -132,6 +152,10 @@ COPY --chown=${UID} --link \
 # grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb => (lib/cdo/shared_constants.rb, lib/cdo/shared_constants/**)
 # grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb => (lib/cdo.rb, lib/cdo/global_edition.rb)
 COPY --chown=${UID} ./lib/ ./lib/
+
+# shared_constants.rb requires the repo-root deployment.rb to bootstrap CDO and
+# $LOAD_PATH before requiring cdo/i18n (PR #72278).
+COPY --chown=${UID} ./deployment.rb ./
 
 # grunt exec:convertScssVars => ./script/convert-scss-variables.js
 COPY --chown=${UID} ./shared/css/ ./shared/css/
@@ -167,7 +191,40 @@ RUN \
   --mount=type=cache,sharing=locked,uid=${UID},gid=${GID},target=${SRC}/apps/.yarn/cache \
   <<EOF
   cd apps
-  CI=true yarn build
+  if [ "${SKIP_FRONTEND_BUILD}" = "1" ]; then
+    mkdir -p build/package/js build/package/css
+  else
+    CI=true yarn build
+  fi
+EOF
+
+################################################################################
+FROM code-dot-org-core AS code-dot-org-activejob-only
+################################################################################
+
+ARG BUNDLE_WITHOUT
+
+ENV BUNDLE_WITHOUT=${BUNDLE_WITHOUT}
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${HOME}/.rbenv \
+  ${HOME}/.rbenv
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-uv-sync ${SRC}/.venv \
+  ${SRC}/.venv
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
+  ${HOME}/.local/share/uv
+
+COPY --chown=${UID} --link ./ ./
+
+RUN <<EOF
+  mkdir -p ${SRC}/apps/build/package/js ${SRC}/apps/build/package/css
+  mkdir -p ${SRC}/dashboard/public
+  ln -sfn ${SRC}/apps/build/package ${SRC}/dashboard/public/blockly
+  ln -sfn ${SRC}/dashboard/test/ui ${SRC}/dashboard/public/ui_test
 EOF
 
 # ################################################################################
@@ -227,17 +284,20 @@ COPY --chown=${UID} --link \
   --from=code-dot-org-uv-sync ${HOME}/.local/share/uv \
   ${HOME}/.local/share/uv
 
-# Link in the full JS build layer, includes:
-# - `yarn build` output
+# Link in the JS build layer from ${SRC}, includes:
+# - `yarn build` output (apps/build/package, served via the public/blockly symlink)
 # - installed npm / yarn packages (node_modules)
-# - weirdly, rbenv gets added here because its required by this step, and more perf to link once
+#
+# Copy ${SRC}/ (not /): `COPY <dir> <dest>` copies the CONTENTS of <dir>, so
+# `COPY / ./` would place the `code-dot-org` dir *inside* ${SRC}, nesting the
+# whole tree at ${SRC}/code-dot-org and leaving the blockly symlink dangling.
 COPY --chown=${UID} --link \
-  --from=code-dot-org-yarn-build / \
+  --from=code-dot-org-yarn-build ${SRC}/ \
   ./
 
-# Re-apply the bundle-install rbenv tree directly for runtime.
-# Copying the full yarn-build filesystem is not preserving the installed bundle
-# correctly in the final image, which breaks `bundle exec rails` in mimic.
+# rbenv lives outside ${SRC} (under ${HOME}), so the copy above does not include
+# it. Re-apply the bundle-install rbenv tree directly for runtime; this is also
+# what makes `bundle exec rails` work in mimic.
 COPY --chown=${UID} --link \
   --from=code-dot-org-bundle-install ${HOME}/.rbenv \
   ${HOME}/.rbenv
