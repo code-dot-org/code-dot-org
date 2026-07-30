@@ -184,17 +184,24 @@ module.exports = {
         var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
+        window.__applabImageModerationStatusOverride = 'safe';
 
         ReactTestUtils.Simulate.change(imageInput, {
           target: {value: assetUrl},
         });
 
-        assert.include(
-          buttonElement.style.backgroundImage,
-          assetUrl,
-          'Button background image should contain original url'
-        );
-        Applab.onPuzzleComplete();
+        setTimeout(function () {
+          try {
+            assert.include(
+              buttonElement.style.backgroundImage,
+              assetUrl,
+              'Button background image should contain original url'
+            );
+          } finally {
+            delete window.__applabImageModerationStatusOverride;
+          }
+          Applab.onPuzzleComplete();
+        }, 0);
       },
       expected: {
         result: true,

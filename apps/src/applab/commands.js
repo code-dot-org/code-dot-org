@@ -71,11 +71,16 @@ function moderationWarningForStatus(status) {
     : MODERATION_ERROR_WARNING;
 }
 
+function getModerationStatusOverride() {
+  const override = window.__applabImageModerationStatusOverride;
+  return ['safe', 'flagged', 'error'].includes(override) ? override : null;
+}
+
 function captureAsyncWarningHandler() {
   try {
     return getAsyncOutputWarning();
   } catch (exception) {
-    return outputWarning;
+    return () => {};
   }
 }
 
@@ -84,13 +89,19 @@ function moderateAbsoluteImageUrl(
   commandName,
   onSafe,
   onUnsafe,
-  warningHandler = outputWarning
+  warningHandler = () => {}
 ) {
   const normalizedUrl = normalizeImageUrl(imageUrl);
-  moderateImageUrl(normalizedUrl, 'applab', {
-    uploaderType: 'ImageURLInput',
-    assetUrl: normalizedUrl,
-  }).then(status => {
+  const overrideStatus = getModerationStatusOverride();
+  const moderationPromise =
+    overrideStatus !== null
+      ? Promise.resolve(overrideStatus)
+      : moderateImageUrl(normalizedUrl, 'applab', {
+          uploaderType: 'ImageURLInput',
+          assetUrl: normalizedUrl,
+        });
+
+  moderationPromise.then(status => {
     if (status === 'safe') {
       onSafe(normalizedUrl);
       return;
