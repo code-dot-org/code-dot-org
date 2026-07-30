@@ -508,113 +508,6 @@ $height-to-width: math.div(434, 477);
   }
 }
 
-#craft-popup-player-selection {
-  @include craft-popup;
-  @include popup-width-height(540px, 516px);
-
-  @media screen and (max-height: 630px) {
-    @include popup-width-height(540px, 400px);
-  }
-
-  // TODO: Overriding .x-close visibility can be removed once all Minecraft dialogs
-  // use <CraftDialog/> instead of EJS templates.
-  .x-close {
-    visibility: visible;
-  }
-
-  #select-character-text {
-    line-height: 50px;
-    font-size: 22px;
-    color: $lightest_gray;
-  }
-
-  .minecraft-character {
-    float: left;
-    width: 150px;
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    @media screen and (max-height: 630px) {
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-    margin-top: 8px;
-  }
-
-  .character-portrait {
-    margin: 0 auto 10px auto;
-    background-size: 100% auto;
-    background-position-x: 0; // 50% for smaller screens
-    background-position-y: 0;
-    background-repeat: no-repeat;
-  }
-
-  #steve-portrait {
-    $width: 144px;
-    $height: 268px;
-    background-image: url("#{$root}Sliced_Parts/Steve_Character_Select.png");
-    .minecraft-events & {
-      background-image: url("#{$root}Events/Steve_Character_Select.png");
-    }
-    width: $width;
-    height: $height;
-    margin-top: 13px; // matches bottom with Alex
-
-    @media screen and (max-height: 630px) {
-      width: $width * 0.5;
-      height: $height * 0.5;
-      margin-top: 0;
-    }
-  }
-
-  #alex-portrait {
-    $width: 136px;
-    $height: 271px;
-    background-image: url("#{$root}Sliced_Parts/Alex_Character_Select.png");
-    .minecraft-events & {
-      background-image: url("#{$root}Events/Alex_Character_Select.png");
-    }
-    width: $width;
-    height: $height;
-
-    @media screen and (max-height: 630px) {
-      width: $width * 0.5;
-      height: $height * 0.5;
-    }
-  }
-
-  #choose-character-container {
-    // center content (IE8+)
-    display: table;
-    margin: 0 auto;
-
-    cursor: pointer;
-
-    @media screen and (max-height: 630px) {
-      margin-top: -18px;
-    }
-  }
-
-  .choose-character-button {
-    border-style: solid !important;
-    border-width: 4px 5px 6px !important;
-
-    @include pixelated;
-    @include gray-button;
-    @include mc-text-shadow;
-    @include main-font-semi-bold;
-
-    font-family: var(--font-family-main) !important;
-    color: $button-text-white !important;
-    font-size: 26px;
-    line-height: 26px;
-
-    display: inline-block;
-    padding: 5px;
-  }
-}
-
 #craft-popup-house-selection {
   @include craft-popup;
 
@@ -894,7 +787,7 @@ $height-to-width: math.div(434, 477);
   width: 100%;
 }
 
-.minecraft .dash_modal {
+.mmminecraft .dash_modal {
   top: 80px;
   margin-left: -340px;
 
