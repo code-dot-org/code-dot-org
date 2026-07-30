@@ -56,6 +56,9 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       role="tab"
       aria-selected={activeTab === tab}
       disabled={!enabledTabs.includes(tab)}
+      // The stylesheet reserves the bold (active) width from this copy of
+      // the label, so activating a tab can't widen it and shift the bar.
+      data-text={tab}
       className={classNames(
         moduleStyles.tab,
         activeTab === tab && moduleStyles.tabActive

@@ -67,6 +67,18 @@ $tab-item-height: 34px;
   cursor: pointer;
   font-size: 14px;
 
+  // Width comes from an invisible bold copy of the label (data-text), so
+  // the active state's font-weight: 600 can't change the tab's size and
+  // shift its neighbors.
+  &::after {
+    content: attr(data-text);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 600;
+  }
+
   &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
   }
