@@ -1,54 +1,23 @@
-#!/usr/bin/env ruby
+#!/bin/bash
 
-# Starts an SSM Session Manager session to the EC2 instance, specified by Name
-# tag or instance ID.
+# Starts an SSM Session Manager session to the EC2 instance, specified by Name (tag) or ID.
 
-repo_root = File.expand_path('..', __dir__)
-$LOAD_PATH.unshift File.join(repo_root, 'lib')
-ENV['BUNDLE_GEMFILE'] ||= File.join(repo_root, 'Gemfile')
-require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
-require 'cdo/aws/session_manager'
+INSTANCE_NAME="${1?
+Usage: $0 INSTANCE_NAME [OPTION]...}"
 
-CUSTOM_SESSION_DOCUMENT_OPTIONS = %w[
-  --document-name
-  --parameters
-].freeze
-
-def usage
-  "Usage: #{$0} INSTANCE_NAME [OPTION]..."
-end
-
-def puts_completion_candidates
-  puts Cdo::Aws::SessionManager.running_instance_completion_candidates
-end
-
-def custom_session_document_options?(args)
-  args.any? do |arg|
-    CUSTOM_SESSION_DOCUMENT_OPTIONS.include?(arg) ||
-      arg.start_with?('--document-name=') ||
-      arg.start_with?('--parameters=')
-  end
-end
-
-if ARGV.first == '--completion-candidates'
-  puts_completion_candidates
-  exit
-end
-
-instance_name = ARGV.shift
-unless instance_name
-  warn usage
-  exit 1
-end
-
-instance_id = Cdo::Aws::SessionManager.instance_id_for(instance_name)
-unless instance_id
-  warn "Instance '#{instance_name}' not found."
-  exit 1
-end
-
-if custom_session_document_options?(ARGV)
-  exec(*Cdo::Aws::SessionManager.start_session_argv(instance_id, extra_args: ARGV))
+if [[ "$INSTANCE_NAME" =~ ^i-.* ]]; then
+  INSTANCE_ID="$INSTANCE_NAME"
 else
-  exec(*Cdo::Aws::SessionManager.start_interactive_shell_argv(instance_id, extra_args: ARGV))
-end
+  INSTANCE_ID=$(aws ec2 describe-instances \
+    --filters "Name=tag:Name,Values=$INSTANCE_NAME" \
+    --query Reservations[].Instances[].[InstanceId] \
+    --output text \
+    | head -n1
+  )
+fi
+if [ -z "$INSTANCE_ID" ]; then
+  echo "Instance '$INSTANCE_NAME' not found."
+  exit 1
+fi
+
+aws ssm start-session --target "$INSTANCE_ID" "${@:2}"
