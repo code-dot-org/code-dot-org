@@ -463,10 +463,14 @@ INPUTS (from Scout):
   whole port. A modal's contents are absent from the load-time tree, and that is
   exactly where Generate would otherwise guess at CSS.
     const snapshot = await page.locator('#main_content').ariaSnapshot();
+  Capture each surface BEFORE anything dismisses it. A cookie banner, callout, or
+  first-run overlay IS the feature under test in some ports, and a snapshot taken
+  after it was dismissed describes a page the scenario never asserts on.
   Scope each snapshot to the feature's own mount when one exists (the <main>
   landmark #main_content, or a dialog root for a modal); unscoped, the output is
-  mostly shared header and footer. Record the scope you used. Fall back to
-  page.ariaSnapshot() only when no mount is identifiable.
+  mostly shared header and footer. Record the scope you used. Do NOT settle for
+  locator('body') — it buries the handful of elements the port actually drives.
+  Fall back to page.ariaSnapshot() only when no mount is identifiable.
   Use ariaSnapshot(). page.accessibility.snapshot() does NOT exist in the pinned
   Playwright (1.59) — the API was removed, and reading it throws
   "Cannot read properties of undefined". Do not reach for it, and do not use
@@ -593,9 +597,25 @@ A11Y BASELINE (required — every port, not just Eyes)
   ratio and colors, e.g. "#cacbcd on #f0f2f5 = 1.44:1, needs 4.5:1"). A baseline
   nobody can audit is worse than none.
 
-  Counts must be identical across chromium/firefox/webkit; the stress gate runs all
-  three. If a rule's count differs by browser, that is a genuine finding — report it
-  rather than picking one browser's number.
+  CROSS-BROWSER: the gate runs chromium, firefox and webkit at retries=0, so a count
+  that is right for one engine and wrong for another fails every single run. Measure on
+  all three. When one engine disagrees, re-scan the SAME state several times per engine
+  before concluding anything:
+    - varies WITHIN an engine -> not an engine difference. The scan is racing the page,
+      or \`include\` is too wide and catches shared chrome. Fix the wait or the scope;
+      never encode the variance.
+    - stable within each engine but different ACROSS engines -> a genuine engine
+      difference. Encode it as a per-browser override; do not just report it and leave
+      the spec red on that engine. Take \`browserName\` from the test fixture:
+        const WEBKIT_OVERRIDES: Record<string, Record<string, number>> = {dialogOpen: {}};
+        function expectedViolations(key: string, browserName: string) {
+          return browserName === 'webkit' && key in WEBKIT_OVERRIDES
+            ? WEBKIT_OVERRIDES[key]
+            : EXPECTED_VIOLATIONS[key];
+        }
+      Comment WHICH engine differs and on what — e.g. WebKit's axe judges a link
+      obscured by a modal backdrop opposite to Chromium/Firefox. An override without
+      that note is indistinguishable from a fudge.
 `
 
 const eyesGuidance = plan.isEyes
@@ -746,6 +766,10 @@ const PROVE_VISUAL_SCHEMA = {
   },
 }
 
+// Tracked outside the block: when a spec is entirely @visual the functional stress gate
+// below matches no tests at all, and prove-visual is the only gate it ever had.
+let visualGatePassed = false
+
 if (plan.isEyes) {
   log('Running prove-visual stability gate for @visual tests')
   const proveResult = await agent(
@@ -766,13 +790,20 @@ After fixing, re-run prove-visual to confirm. Report passed=true only if it exit
   if (proveResult.fixesApplied?.length) {
     log(`prove-visual fixes: ${proveResult.fixesApplied.join('; ')}`)
   }
+  visualGatePassed = proveResult.passed
 }
 
 const STRESS_SCHEMA = {
   type: 'object',
-  required: ['passed', 'totalRuns', 'failures', 'infraSuspected'],
+  required: ['passed', 'totalRuns', 'failures', 'infraSuspected', 'zeroTestsMatched'],
   properties: {
     passed: {type: 'boolean', description: 'true ONLY if every run passed (0 failed, 0 flaky)'},
+    zeroTestsMatched: {
+      type: 'boolean',
+      description:
+        'true if the runner exited "No tests found" / matched 0 tests, so nothing ever ' +
+        'ran. Not a failure and not flake — the spec is filtered out of these projects.',
+    },
     totalRuns: {type: 'number', description: '5 repeats x project count'},
     failures: {
       type: 'array',
@@ -816,12 +847,28 @@ const stress = tag =>
       `5 repeats x 3 browsers; retries=0, so any single failure is a real signal. Wait for ` +
       `completion. passed=true ONLY if the runner reports 0 failed and 0 flaky. Set ` +
       `infraSuspected if failures are test-studio 5xx / net::ERR / asset-fetch timeouts ` +
-      `rather than assertion/locator/timing.`,
+      `rather than assertion/locator/timing. Set zeroTestsMatched if the runner printed ` +
+      `"No tests found" or otherwise matched 0 tests: nothing ran, which is a filtering ` +
+      `condition rather than a failure. Report it; do not try to fix it by editing tags.`,
     {schema: STRESS_SCHEMA, label: `stress-${tag}`, phase: 'Heal', model: 'sonnet'},
   )
 
 let result = await stress('gate')
 if (!result) throw new Error('stress gate agent was skipped — cannot continue without a pass/fail result')
+
+// An all-@visual spec matches nothing here: playwright.config.ts applies
+// grepInvert [/@visual/] to the chromium/firefox/webkit projects, and the visual-*
+// projects are empty unless VISUAL_PROVIDER is set. That is the expected shape of an
+// @eyes port, and prove-visual above already gated it — so accept it rather than
+// spending the heal budget stabilizing a spec that never ran. Any other zero-match is
+// a real wiring problem, and falls through to the healer with the runner output.
+if (result.zeroTestsMatched && plan.isEyes && visualGatePassed) {
+  log('Stress gate matched 0 tests — spec is entirely @visual; prove-visual is its gate')
+  result = {...result, passed: true}
+} else if (result.zeroTestsMatched) {
+  log('Stress gate matched 0 tests — spec tags or path exclude it from the functional projects')
+}
+
 if (!result.passed && result.infraSuspected) {
   log('Gate failure looks like a test-studio infra blip — re-running once before healing')
   const retry = await stress('gate-retry') // does not consume a heal attempt
@@ -849,13 +896,18 @@ while (!result.passed && attempt < 3) {
       `NAME and keep the role locator. Falling back to CSS is a last resort that needs an ` +
       `inline comment saying why the role locator could not work.\n` +
       `A failing EXPECTED_VIOLATIONS map is the ONE case where correcting the expected ` +
-      `value is the right fix, and only when the observed axe counts are IDENTICAL across ` +
-      `every repeat and browser: the baseline was mis-measured, so write the measured ` +
-      `counts and update the comment explaining each one. If the counts VARY between runs ` +
-      `or browsers the baseline is not the bug — the scan is racing the page or its ` +
-      `\`include\` scope is too wide, catching shared chrome. Fix the scope or the ` +
-      `readiness wait. Never delete an a11y scan, widen it to {}, or drop \`include\` to ` +
-      `make it pass.`,
+      `value is the right fix. WHICH correction depends on how the counts behave, so ` +
+      `re-scan the same state several times per engine before deciding:\n` +
+      `  - identical across every repeat AND every engine: the baseline was mis-measured. ` +
+      `Write the measured counts and update the comment explaining each one.\n` +
+      `  - varies BETWEEN REPEATS within one engine: the baseline is not the bug. The scan ` +
+      `is racing the page, or its \`include\` scope is too wide and catches shared chrome. ` +
+      `Fix the wait or the scope.\n` +
+      `  - stable within each engine but DIFFERENT ACROSS engines: a genuine engine ` +
+      `difference, not a race — WebKit's axe judges backdrop-obscured elements differently ` +
+      `from Chromium/Firefox, for one. Key the expectation off the \`browserName\` fixture ` +
+      `with a per-browser override map, and comment which engine differs and why.\n` +
+      `Never delete an a11y scan, widen it to {}, or drop \`include\` to make it pass.`,
     {agentType: 'playwright-test-healer', label: `heal-${attempt}`, phase: 'Heal', model: 'sonnet'},
   )
   const reverify = await stress(`reverify-${attempt}`)
