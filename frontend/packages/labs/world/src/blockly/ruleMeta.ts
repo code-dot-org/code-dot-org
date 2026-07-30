@@ -754,11 +754,25 @@ export function ruleMetaToModule(
     return dep;
   };
 
-  // A step-ordering ANCHOR → the code that names that step: a built-in rule's is
-  // `WorldLab.<Rule>.steps[<id>]`; a project rule's default-imports the module and
-  // reads `<Rule>.steps[<id>]`. (The anchored rule must be in play — the learner's
-  // `use rule` ensures it — for the constraint to take effect.)
+  // The `export const` a step is captured in (`<PascalName>Step`). Derivable from
+  // either its name or its id — `pascal` collapses the slug's `_` the same way.
+  const stepExport = (nameOrId: string): string => `${pascal(nameOrId)}Step`;
+
+  // Whether an anchor refers to a step in THIS rule (same module).
+  const isSelfAnchor = (anchor: StepAnchor): boolean =>
+    anchor.ownerRef.source === 'project' &&
+    anchor.ownerRef.modulePath === meta.modulePath;
+
+  // A step-ordering ANCHOR → the code that names that step. A step in THIS rule is
+  // the local `export const` (self-importing the module's default would read
+  // `.steps` before `build()` runs — undefined). A built-in's is
+  // `WorldLab.<Rule>.steps[<id>]`; another project rule's default-imports the
+  // module and reads `<Rule>.steps[<id>]`. (The anchored rule must be in play —
+  // the learner's `use rule` ensures it — for the constraint to take effect.)
   const stepAnchorRef = (anchor: StepAnchor): string => {
+    if (isSelfAnchor(anchor)) {
+      return stepExport(anchor.stepId);
+    }
     const owner = anchor.ownerRef;
     const at = `.steps[${q(anchor.stepId)}]`;
     if (owner.source === 'project' && owner.modulePath) {
@@ -770,6 +784,34 @@ export function ruleMetaToModule(
       return `${varName}${at}`;
     }
     return `WorldLab.${owner.exportName}${at}`;
+  };
+
+  // Emit steps so a self-anchor's target is declared before the step that names
+  // it (its local `const` must already exist). A simple worklist: repeatedly take
+  // any step whose self-anchor is already emitted; anything left (a cycle, or an
+  // anchor to a missing step — both authoring errors the scheduler also rejects)
+  // trails in declaration order.
+  const orderedSteps = (): readonly StepMeta[] => {
+    const done = new Set<string>();
+    const ordered: StepMeta[] = [];
+    const pending = [...meta.steps];
+    for (let progress = true; progress && pending.length > 0; ) {
+      progress = false;
+      for (let i = 0; i < pending.length; ) {
+        const anchor = pending[i].order.anchor;
+        const waitsFor =
+          anchor && isSelfAnchor(anchor) ? anchor.stepId : undefined;
+        if (!waitsFor || done.has(waitsFor)) {
+          done.add(pending[i].id);
+          ordered.push(pending[i]);
+          pending.splice(i, 1);
+          progress = true;
+        } else {
+          i++;
+        }
+      }
+    }
+    return [...ordered, ...pending];
   };
 
   // Resolve dependency refs first, so the imports above are populated.
@@ -855,7 +897,8 @@ export function ruleMetaToModule(
 
   // Steps — the rule's per-tick behavior. Each runs with `(world, delta)` bound;
   // ordering picks the builder method (free / before / after an anchor step).
-  for (const step of meta.steps) {
+  // Emitted in self-anchor dependency order so a local anchor const exists first.
+  for (const step of orderedSteps()) {
     const code = bodies.get(ruleBodyKey('step', 'world', undefined, step.id));
     const closure = `(world, delta) => {\n${code?.body ?? ''}}`;
     const {kind, anchor} = step.order;
@@ -863,7 +906,7 @@ export function ruleMetaToModule(
       (kind === 'before' || kind === 'after') && anchor
         ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
         : `rule.addStep(${q(step.id)}, ${closure})`;
-    body.push(`export const ${pascal(step.name)}Step = ${call};`);
+    body.push(`export const ${stepExport(step.name)} = ${call};`);
   }
 
   return [
