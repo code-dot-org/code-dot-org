@@ -5,6 +5,8 @@ import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
   AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+  AI_CHAT_LAB_FAQ_LINK,
   AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
@@ -168,7 +170,7 @@ describe('useAiChatDisabledState', () => {
     });
   });
 
-  it('returns the region message with the client-specific FAQ link for teachers when a gemini model is blocked', () => {
+  it('returns the tutor-specific region message and FAQ link for blocked teachers in ai tutor', () => {
     mockState.currentUser.isTeacher = true;
     mockState.currentUser.aiChatGeminiModelsBlocked = true;
 
@@ -180,11 +182,36 @@ describe('useAiChatDisabledState', () => {
       })
     );
 
+    // AI Tutor's model is the same on every level, so its copy must not blame
+    // "this level" for the block.
+    expect(result.current).toEqual({
+      disabled: true,
+      disabledMessage: AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+      disabledLink: {
+        href: AI_TUTOR_FAQ_LINK,
+        openInNewTab: true,
+        text: 'Learn more',
+      },
+    });
+  });
+
+  it('returns the level-scoped region message and FAQ link for blocked teachers in the aichat lab', () => {
+    mockState.currentUser.isTeacher = true;
+    mockState.currentUser.aiChatGeminiModelsBlocked = true;
+
+    const {result} = renderHook(() =>
+      useAiChatDisabledState({
+        appName: 'aichat',
+        clientType: AiChatClientTypes.AI_CHAT_LAB,
+        selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
+      })
+    );
+
     expect(result.current).toEqual({
       disabled: true,
       disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
       disabledLink: {
-        href: AI_TUTOR_FAQ_LINK,
+        href: AI_CHAT_LAB_FAQ_LINK,
         openInNewTab: true,
         text: 'Learn more',
       },

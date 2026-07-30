@@ -5,6 +5,7 @@ import {
   AI_CHAT_NOT_AUTHORIZED_STUDENT,
   AI_CHAT_NOT_AUTHORIZED_TEACHER,
   AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+  AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
   AI_CHAT_LAB_FAQ_LINK,
   AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
@@ -21,11 +22,21 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-// FAQ article shown with the region-blocked message, keyed by client type.
-// Client types without a dedicated article get no link.
-const FAQ_LINK_BY_CLIENT_TYPE: Partial<Record<AiChatClientType, string>> = {
-  [AiChatClientTypes.AI_CHAT_LAB]: AI_CHAT_LAB_FAQ_LINK,
-  [AiChatClientTypes.AI_TUTOR]: AI_TUTOR_FAQ_LINK,
+// Message and FAQ article for the region-blocked state, keyed by client type.
+// The copy differs because AI Tutor's model is the same on every level, while
+// the aichat lab's is chosen per level. Client types not listed here fall back
+// to the level-scoped message with no link.
+const REGION_BLOCKED_COPY: Partial<
+  Record<AiChatClientType, {message: string; faqLink: string}>
+> = {
+  [AiChatClientTypes.AI_CHAT_LAB]: {
+    message: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_CHAT_LAB_FAQ_LINK,
+  },
+  [AiChatClientTypes.AI_TUTOR]: {
+    message: AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL,
+    faqLink: AI_TUTOR_FAQ_LINK,
+  },
 };
 
 interface UseAiChatDisabledStateParams {
@@ -102,13 +113,13 @@ export function useAiChatDisabledState({
           disabledMessage: AI_CHAT_NOT_AUTHORIZED_STUDENT,
         };
       }
-      const faqLink = clientType && FAQ_LINK_BY_CLIENT_TYPE[clientType];
+      const copy = clientType && REGION_BLOCKED_COPY[clientType];
       return {
         disabled: true,
-        disabledMessage: AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
-        ...(faqLink && {
+        disabledMessage: copy?.message ?? AI_CHAT_NOT_AVAILABLE_INTERNATIONAL,
+        ...(copy && {
           disabledLink: {
-            href: faqLink,
+            href: copy.faqLink,
             openInNewTab: true,
             text: 'Learn more',
           },

@@ -44,6 +44,8 @@ export const AI_CHAT_NOT_AUTHORIZED_STUDENT =
   'Your teacher has not enabled this tool. Check with your teacher if you think this is an error.';
 export const AI_CHAT_NOT_AVAILABLE_INTERNATIONAL =
   'The AI model used by this level is not available in your region.';
+export const AI_TUTOR_NOT_AVAILABLE_INTERNATIONAL =
+  'AI Tutor is not available in your region.';
 
 export const MODEL_PARAMETER_LABELS: {
   [key in keyof ModelParameters]: string;
