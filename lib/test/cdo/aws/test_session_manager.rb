@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require 'mocha/mini_test'
 require 'aws-sdk-ec2'
 require 'aws-sdk-secretsmanager'
+require 'json'
+require 'shellwords'
 
 $LOAD_PATH.unshift File.expand_path('../../..', __dir__)
 require 'cdo/aws/session_manager'
@@ -203,6 +205,11 @@ class CdoAwsSessionManagerTest < Minitest::Test
   end
 
   def test_start_interactive_command_argv_uses_command_parameter_json
+    argv = Cdo::Aws::SessionManager.start_interactive_command_argv(
+      'i-aaaaaaaaaaaaaaaaa',
+      'test/bin/terminate_build'
+    )
+
     assert_equal(
       %w[
         aws
@@ -213,12 +220,63 @@ class CdoAwsSessionManagerTest < Minitest::Test
         --document-name
         AWS-StartInteractiveCommand
         --parameters
-        {"command":["test/bin/terminate_build"]}
       ],
-      Cdo::Aws::SessionManager.start_interactive_command_argv(
-        'i-aaaaaaaaaaaaaaaaa',
-        'test/bin/terminate_build'
-      )
+      argv.first(8)
+    )
+    assert_equal(
+      wrapped_command('test/bin/terminate_build'),
+      command_parameter(argv)
+    )
+  end
+
+  def test_start_interactive_command_argv_can_override_user_and_working_directory
+    argv = Cdo::Aws::SessionManager.start_interactive_command_argv(
+      'i-aaaaaaaaaaaaaaaaa',
+      'test/bin/terminate_build',
+      instance_os_user: 'deploy',
+      working_directory: '/srv/deploy'
+    )
+
+    assert_equal(
+      wrapped_command(
+        'test/bin/terminate_build',
+        instance_os_user: 'deploy',
+        working_directory: '/srv/deploy'
+      ),
+      command_parameter(argv)
+    )
+  end
+
+  def test_start_interactive_command_argv_can_skip_remote_shell_context
+    argv = Cdo::Aws::SessionManager.start_interactive_command_argv(
+      'i-aaaaaaaaaaaaaaaaa',
+      'uptime',
+      instance_os_user: nil,
+      working_directory: nil
+    )
+
+    assert_equal 'uptime', command_parameter(argv)
+  end
+
+  def test_start_interactive_shell_argv_starts_ubuntu_login_shell_from_home
+    argv = Cdo::Aws::SessionManager.start_interactive_shell_argv(
+      'i-aaaaaaaaaaaaaaaaa',
+      extra_args: %w[
+        --reason
+        debugging
+      ]
+    )
+
+    assert_equal(
+      wrapped_command('exec bash -l'),
+      command_parameter(argv)
+    )
+    assert_equal(
+      %w[
+        --reason
+        debugging
+      ],
+      argv.last(2)
     )
   end
 
@@ -286,25 +344,70 @@ class CdoAwsSessionManagerTest < Minitest::Test
     )
     runner = mock
     runner.expects(:system).with(
-      *%w[
-        aws
-        ssm
-        start-session
-        --target
-        i-aaaaaaaaaaaaaaaaa
-        --document-name
-        AWS-StartInteractiveCommand
-        --parameters
-        {"command":["uptime"]}
-      ]
+      *Cdo::Aws::SessionManager.start_interactive_command_argv('i-aaaaaaaaaaaaaaaaa', 'uptime')
     ).returns(true)
 
     assert Cdo::Aws::SessionManager.start_interactive_command('staging', 'uptime', runner: runner)
+  end
+
+  def test_start_interactive_shell_runs_resolved_shell_argv
+    Cdo::Aws::SessionManager.ec2_client = stubbed_ec2_client(
+      reservations: [
+        {
+          instances: [
+            {instance_id: 'i-aaaaaaaaaaaaaaaaa'}
+          ]
+        }
+      ]
+    )
+    runner = mock
+    runner.expects(:system).with(
+      *Cdo::Aws::SessionManager.start_interactive_shell_argv(
+        'i-aaaaaaaaaaaaaaaaa',
+        extra_args: %w[
+          --reason
+          debugging
+        ]
+      )
+    ).returns(true)
+
+    assert(
+      Cdo::Aws::SessionManager.start_interactive_shell(
+        'staging',
+        extra_args: %w[
+          --reason
+          debugging
+        ],
+        runner: runner
+      )
+    )
   end
 
   private def stubbed_ec2_client(describe_instances_response)
     client = Aws::EC2::Client.new(stub_responses: true)
     client.stub_responses(:describe_instances, describe_instances_response)
     client
+  end
+
+  private def command_parameter(argv)
+    parameters_index = argv.index('--parameters')
+    JSON.parse(argv.fetch(parameters_index + 1)).fetch('command').first
+  end
+
+  private def wrapped_command(
+    command,
+    instance_os_user: Cdo::Aws::SessionManager::DEFAULT_INSTANCE_OS_USER,
+    working_directory: Cdo::Aws::SessionManager::DEFAULT_WORKING_DIRECTORY
+  )
+    Shellwords.join(
+      [
+        'sudo',
+        '-Hu',
+        instance_os_user,
+        'bash',
+        '-lc',
+        "cd #{Shellwords.escape(working_directory)} && #{command}"
+      ]
+    )
   end
 end
