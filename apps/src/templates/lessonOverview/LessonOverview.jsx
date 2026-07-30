@@ -183,17 +183,21 @@ class LessonOverview extends Component {
         {displayVerifiedResourcesNotification && (
           <VerifiedResourcesNotification inLesson={true} />
         )}
-        <Typography variant="h1" className="uitest-lesson-title">
+        <Typography variant="h2" component="h1" className="uitest-lesson-title">
           {lesson.title}
         </Typography>
-        <Typography variant="h2">
+        <Typography variant="h4" component="h2">
           {i18n.minutesLabel({number: lesson.duration})}
         </Typography>
         <div className={styles.frontPage}>
           <div className={styles.left}>
             {lesson.overview && (
               <div>
-                <Typography variant="h2" className={styles.titleNoTopMargin}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
                   {i18n.overview()}
                 </Typography>
                 <EnhancedSafeMarkdown
@@ -204,7 +208,9 @@ class LessonOverview extends Component {
             )}
             {lesson.purpose && (
               <div>
-                <Typography variant="h2">{i18n.purpose()}</Typography>
+                <Typography variant="h4" component="h2">
+                  {i18n.purpose()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.purpose}
                   expandableImages
@@ -213,7 +219,7 @@ class LessonOverview extends Component {
             )}
             {lesson.assessmentOpportunities && (
               <div>
-                <Typography variant="h2">
+                <Typography variant="h4" component="h2">
                   {i18n.assessmentOpportunities()}
                 </Typography>
                 <EnhancedSafeMarkdown
@@ -225,7 +231,9 @@ class LessonOverview extends Component {
             {lesson.standards.length > 0 && (
               <div>
                 <div className={styles.standardsHeaderAndButton}>
-                  <Typography variant="h2">{i18n.standards()}</Typography>
+                  <Typography variant="h4" component="h2">
+                    {i18n.standards()}
+                  </Typography>
                   {lesson.courseVersionStandardsUrl && (
                     <Button
                       __useDeprecatedTag
@@ -242,19 +250,25 @@ class LessonOverview extends Component {
             )}
             {lesson.opportunityStandards.length > 0 && (
               <div>
-                <Typography variant="h2">
+                <Typography variant="h4" component="h2">
                   {i18n.crossCurricularOpportunities()}
                 </Typography>
                 <LessonStandards standards={lesson.opportunityStandards} />
               </div>
             )}
-            <Typography variant="h2">{i18n.agenda()}</Typography>
+            <Typography variant="h4" component="h2">
+              {i18n.agenda()}
+            </Typography>
             <LessonAgenda activities={this.props.activities} />
           </div>
           <div className={styles.right}>
             {lesson.objectives.length > 0 && (
               <div>
-                <Typography variant="h2" className={styles.titleNoTopMargin}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
                   {i18n.objectives()}
                 </Typography>
                 <Typography variant="h5" component="h3">
@@ -271,7 +285,9 @@ class LessonOverview extends Component {
             )}
             {lesson.preparation && (
               <div>
-                <Typography variant="h2">{i18n.preparation()}</Typography>
+                <Typography variant="h4" component="h2">
+                  {i18n.preparation()}
+                </Typography>
                 <EnhancedSafeMarkdown
                   markdown={lesson.preparation}
                   expandableImages
@@ -280,7 +296,9 @@ class LessonOverview extends Component {
             )}
             {Object.keys(lesson.resources).length > 0 && (
               <div id="resource-section">
-                <Typography variant="h2">{i18n.links()}</Typography>
+                <Typography variant="h4" component="h2">
+                  {i18n.links()}
+                </Typography>
                 <div className={styles.copyResourceWarningArea}>
                   <SafeMarkdown markdown={i18n.copyResourcesWarning()} />
                 </div>
@@ -322,7 +340,11 @@ class LessonOverview extends Component {
 
             {lesson.vocabularies.length > 0 && (
               <div>
-                <Typography variant="h2" className={styles.titleNoTopMargin}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
                   {i18n.vocabulary()}
                 </Typography>
                 <ul>
@@ -338,7 +360,11 @@ class LessonOverview extends Component {
             )}
             {lesson.programmingExpressions.length > 0 && (
               <div id="unit-test-introduced-code">
-                <Typography variant="h2" className={styles.titleNoTopMargin}>
+                <Typography
+                  variant="h4"
+                  component="h2"
+                  className={styles.titleNoTopMargin}
+                >
                   {i18n.introducedCode()}
                 </Typography>
                 <ul>

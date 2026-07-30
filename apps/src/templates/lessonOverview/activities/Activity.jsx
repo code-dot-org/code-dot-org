@@ -20,7 +20,8 @@ export default class Activity extends Component {
       <div>
         {/* An activity is a subsection of the "Teaching Guide" h2, so h3. */}
         <Typography
-          variant="h3"
+          variant="h4"
+          component="h3"
           className={classNames(
             styles.activityHeader,
             styles.headingWithMargins

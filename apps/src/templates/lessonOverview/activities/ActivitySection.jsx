@@ -23,7 +23,8 @@ export default class ActivitySection extends Component {
       <div>
         {/* Nested under the activity's h3, so h4 in the outline. */}
         <Typography
-          variant="h4"
+          variant="h5"
+          component="h4"
           id={`activity-section-${section.key}`}
           className={styles.activitySectionHeader}
         >
@@ -40,7 +41,7 @@ export default class ActivitySection extends Component {
           <div className={styles.textAndProgression}>
             {section.remarks && (
               <div>
-                <Typography variant="h5">
+                <Typography variant="h6" component="h5">
                   <FontAwesome icon="microphone" />
                   <span className={styles.remarks}>{i18n.remarks()}</span>
                 </Typography>
