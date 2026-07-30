@@ -309,6 +309,25 @@ describe('domain block generators', () => {
     expect(emit('world_return', {})).toBe('return undefined;\n');
   });
 
+  it('world_step_delta yields the frame delta (bound in a step closure)', () => {
+    expect(emitValue('world_step_delta')[0]).toBe('delta');
+  });
+
+  it('world_has_trait tests actor.has(trait)', () => {
+    // A built-in trait reads `WorldLab.<Trait>`; the actor comes from its socket.
+    expect(
+      emitValue(
+        'world_has_trait',
+        {TRAIT: 'AffectedByGravityTrait'},
+        {ACTOR: 'each'},
+      )[0],
+    ).toBe('each.has(WorldLab.AffectedByGravityTrait)');
+    // Empty socket → the principal `actor`.
+    expect(emitValue('world_has_trait', {TRAIT: 'GroundTrait'})[0]).toBe(
+      'actor.has(WorldLab.GroundTrait)',
+    );
+  });
+
   it('world_event_value yields the handler event value as an expression', () => {
     const result = generatorFor('world_event_value')(
       {} as never,
@@ -955,6 +974,8 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_action',
       'world_rule_query',
       'world_return',
+      'world_rule_step',
+      'world_step_delta',
       // Parameters are declared via the +/− mutator (no toolbox block); only the
       // getters that read a parameter in the body appear here.
       'variables_get_Number',

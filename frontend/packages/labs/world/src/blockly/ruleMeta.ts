@@ -16,6 +16,7 @@ import type {
   PropertyType,
   Query,
   Rule,
+  Step,
   Trait,
   WorldAction,
   WorldQuery,
@@ -85,6 +86,34 @@ export interface EventMeta {
   readonly ref: MemberRef;
 }
 
+/** A reference to another Step, for ordering — its owning rule and its id, so
+ * generated code can name it `<Rule>.steps.<stepId>`. */
+export interface StepAnchor {
+  readonly ownerRef: MemberRef;
+  readonly stepId: string;
+}
+
+/** Where a step sits in the per-tick order (the authorable subset of the
+ * engine's `StepOrder`): unordered, or before/after another step. */
+export interface StepOrderMeta {
+  readonly kind: 'free' | 'before' | 'after';
+  readonly anchor?: StepAnchor;
+}
+
+/**
+ * A per-tick Step — a rule's autonomous behavior, run every frame with the
+ * `world` and the frame `delta`. Unlike actions/queries it is not called from
+ * elsewhere, so it contributes no palette block; the editor needs it only as an
+ * ordering ANCHOR (another step may run before/after it) and the generator needs
+ * its body + order. `ownerRef` is the rule it belongs to (for `<Rule>.steps.<id>`).
+ */
+export interface StepMeta {
+  readonly id: string;
+  readonly name: string;
+  readonly ownerRef: MemberRef;
+  readonly order: StepOrderMeta;
+}
+
 /**
  * Everything the editor needs about one rule. `properties`/`actions`/`queries`
  * are flattened across scopes: a world-scoped member (the rule's own) has
@@ -110,6 +139,7 @@ export interface RuleMeta {
   readonly actions: readonly ActionMeta[];
   readonly queries: readonly QueryMeta[];
   readonly events: readonly EventMeta[];
+  readonly steps: readonly StepMeta[];
 }
 
 /**
@@ -201,11 +231,21 @@ export function builtinRuleMeta(
     const events: EventMeta[] = Object.values(rule.events).map(
       (e: GameEvent) => ({id: e.id, name: e.name ?? e.id, ref: ref(e)}),
     );
+    // Steps are surfaced only as ordering anchors — a project step may run
+    // before/after a built-in one (gravity before Motion's reposition). Their own
+    // order isn't re-emitted (they live in the engine), so it's a placeholder.
+    const ownerRef = ref(rule);
+    const steps: StepMeta[] = Object.values(rule.steps).map((s: Step) => ({
+      id: s.id,
+      name: s.id,
+      ownerRef,
+      order: {kind: 'free' as const},
+    }));
     return {
       id: rule.id,
       name: rule.name,
       source: 'builtin' as const,
-      ref: ref(rule),
+      ref: ownerRef,
       // A rule's dependencies as their `world-lab` export names (what a `use
       // rule` names), so built-in and project requires resolve the same way.
       requires: rule.requires.map(r => ref(r).exportName).filter(name => name),
@@ -214,6 +254,7 @@ export function builtinRuleMeta(
       actions,
       queries,
       events,
+      steps,
     };
   });
 }
@@ -338,12 +379,15 @@ export function parseRuleMeta(
     exportName,
     modulePath,
   });
+  // This rule's own ref — the owner of steps it declares (an anchor target).
+  const selfRef: MemberRef = ref(`${pascal(ruleName)}Rule`);
 
   const traits: TraitMeta[] = [];
   const properties: PropertyMeta[] = [];
   const actions: ActionMeta[] = [];
   const queries: QueryMeta[] = [];
   const events: EventMeta[] = [];
+  const steps: StepMeta[] = [];
   // Dependencies: `use rule` blocks in the rule body name the rules this one
   // requires — a built-in export name or a project module path, exactly as a
   // world's `use rule` names them (resolved by the same seam).
@@ -415,6 +459,41 @@ export function parseRuleMeta(
     });
   };
 
+  // A `define step` block → a StepMeta. Its ordering: the `ORDER` dropdown
+  // (unordered/before/after) and, when anchored, the `STEP` dropdown's value —
+  // an anchor `<owner>#<stepId>` where `owner` is a built-in rule export name or
+  // a project rule module path (matching the trait dropdown's encoding).
+  const stepAnchor = (value: string): StepAnchor | undefined => {
+    const hash = value.lastIndexOf('#');
+    if (hash < 0) {
+      return undefined;
+    }
+    const owner = value.slice(0, hash);
+    const stepId = value.slice(hash + 1);
+    if (!owner || !stepId) {
+      return undefined;
+    }
+    const ownerRef: MemberRef = owner.includes('/')
+      ? {source: 'project', exportName: '', modulePath: owner}
+      : {source: 'builtin', exportName: owner};
+    return {ownerRef, stepId};
+  };
+  const addStep = (block: RuleBlock): void => {
+    const name = field(block, 'NAME');
+    if (!name) {
+      return;
+    }
+    const kind = field(block, 'ORDER'); // 'free' | 'before' | 'after'
+    const anchor =
+      kind === 'before' || kind === 'after'
+        ? stepAnchor(field(block, 'STEP'))
+        : undefined;
+    const order: StepOrderMeta = anchor
+      ? {kind: kind as 'before' | 'after', anchor}
+      : {kind: 'free'};
+    steps.push({id: slug(name), name, ownerRef: selfRef, order});
+  };
+
   // The rule's top-level chain: `use rule` dependencies, world properties, traits.
   for (
     let block: RuleBlock | undefined = root.next?.block;
@@ -432,6 +511,8 @@ export function parseRuleMeta(
       addAction(block);
     } else if (block.type === 'world_rule_query') {
       addQuery(block);
+    } else if (block.type === 'world_rule_step') {
+      addStep(block);
     } else if (block.type === 'world_rule_trait') {
       const name = field(block, 'NAME');
       if (!name) {
@@ -481,13 +562,14 @@ export function parseRuleMeta(
     name: ruleName,
     source: 'project',
     modulePath,
-    ref: {source: 'project', exportName: `${pascal(ruleName)}Rule`, modulePath},
+    ref: selfRef,
     requires,
     traits,
     properties,
     actions,
     queries,
     events,
+    steps,
   };
 }
 
@@ -502,7 +584,7 @@ export function parseRuleMeta(
 
 /** A member's body key: the scope, owning trait (if any), kind, and id. */
 export const ruleBodyKey = (
-  kind: 'action' | 'query',
+  kind: 'action' | 'query' | 'step',
   scope: 'world' | 'actor',
   ownerTraitId: string | undefined,
   id: string,
@@ -547,7 +629,7 @@ export function extractRuleBodies(
 ): Map<string, RuleBody> {
   const bodies = new Map<string, RuleBody>();
   const record = (
-    kind: 'action' | 'query',
+    kind: 'action' | 'query' | 'step',
     scope: 'world' | 'actor',
     ownerTraitId: string | undefined,
     member: LiveBlock,
@@ -555,7 +637,8 @@ export function extractRuleBodies(
     const id = slug(member.getFieldValue('NAME') ?? '');
     if (id) {
       bodies.set(ruleBodyKey(kind, scope, ownerTraitId, id), {
-        params: [...gen.signature(member)],
+        // A step takes no user params (its closure is `(world, delta)`).
+        params: kind === 'step' ? [] : [...gen.signature(member)],
         body: gen.body(member),
       });
     }
@@ -570,6 +653,9 @@ export function extractRuleBodies(
         record('action', scope, ownerTraitId, block);
       } else if (block.type === 'world_rule_query') {
         record('query', scope, ownerTraitId, block);
+      } else if (block.type === 'world_rule_step') {
+        // Steps are world-scoped (rule level), run per tick.
+        record('step', 'world', undefined, block);
       } else if (block.type === 'world_rule_trait') {
         const traitId = slug(block.getFieldValue('NAME') ?? '');
         // Actions/queries in a trait's `do` are actor-scoped, owned by the trait.
@@ -620,7 +706,8 @@ export function ruleMetaToModule(
   bodies: ReadonlyMap<string, RuleBody> = new Map(),
 ): string {
   const q = (value: string): string => JSON.stringify(value);
-  const hasBehavior = meta.actions.length > 0 || meta.queries.length > 0;
+  const hasBehavior =
+    meta.actions.length > 0 || meta.queries.length > 0 || meta.steps.length > 0;
 
   // Imports are collected as dependency references are resolved.
   const worldLabNames: string[] = ['RuleBuilder'];
@@ -665,6 +752,24 @@ export function ruleMetaToModule(
     }
     addWorldLab(dep);
     return dep;
+  };
+
+  // A step-ordering ANCHOR → the code that names that step: a built-in rule's is
+  // `WorldLab.<Rule>.steps[<id>]`; a project rule's default-imports the module and
+  // reads `<Rule>.steps[<id>]`. (The anchored rule must be in play — the learner's
+  // `use rule` ensures it — for the constraint to take effect.)
+  const stepAnchorRef = (anchor: StepAnchor): string => {
+    const owner = anchor.ownerRef;
+    const at = `.steps[${q(anchor.stepId)}]`;
+    if (owner.source === 'project' && owner.modulePath) {
+      const varName = moduleVar(owner.modulePath);
+      projectImports.set(
+        `default:${owner.modulePath}`,
+        `import ${varName} from ${q(owner.modulePath)};`,
+      );
+      return `${varName}${at}`;
+    }
+    return `WorldLab.${owner.exportName}${at}`;
   };
 
   // Resolve dependency refs first, so the imports above are populated.
@@ -746,6 +851,19 @@ export function ruleMetaToModule(
     body.push(
       `export const ${event.ref.exportName} = rule.addEvent(${q(event.id)}, {name: ${q(event.name)}});`,
     );
+  }
+
+  // Steps — the rule's per-tick behavior. Each runs with `(world, delta)` bound;
+  // ordering picks the builder method (free / before / after an anchor step).
+  for (const step of meta.steps) {
+    const code = bodies.get(ruleBodyKey('step', 'world', undefined, step.id));
+    const closure = `(world, delta) => {\n${code?.body ?? ''}}`;
+    const {kind, anchor} = step.order;
+    const call =
+      (kind === 'before' || kind === 'after') && anchor
+        ? `rule.addStep${kind === 'before' ? 'Before' : 'After'}(${q(step.id)}, ${stepAnchorRef(anchor)}, ${closure})`
+        : `rule.addStep(${q(step.id)}, ${closure})`;
+    body.push(`export const ${pascal(step.name)}Step = ${call};`);
   }
 
   return [

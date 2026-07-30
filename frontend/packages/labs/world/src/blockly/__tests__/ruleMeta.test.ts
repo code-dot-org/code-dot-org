@@ -1,7 +1,7 @@
 import {describe, expect, it} from 'vitest';
 
 import * as WorldLab from '../../engine';
-import {CollisionRule, GravityRule} from '../../engine';
+import {CollisionRule, GravityRule, MotionRule} from '../../engine';
 import {
   builtinRuleMeta,
   extractRuleBodies,
@@ -151,6 +151,12 @@ const action = (name: string): object => ({
 const query = (type: string, name: string): object => ({
   type: 'world_rule_query',
   fields: {TYPE: type, NAME: name},
+});
+// `define step`: NAME, ORDER (free/before/after), and STEP (the anchor value,
+// `<owner>#<stepId>`) when ordered.
+const step = (name: string, order = 'free', anchor = ''): object => ({
+  type: 'world_rule_step',
+  fields: {NAME: name, ORDER: order, STEP: anchor},
 });
 
 describe('parseRuleMeta', () => {
@@ -555,6 +561,100 @@ describe('action / query parameters', () => {
     const code = ruleMetaToModule(meta, bodies);
     expect(code).toContain(
       'rule.addAction("Nudge", (world, amount, target) => {',
+    );
+  });
+});
+
+describe('steps (per-tick behavior + ordering)', () => {
+  it('builtinRuleMeta exposes a rule’s steps as anchor targets', () => {
+    const motion = builtinRuleMeta(
+      [MotionRule as never],
+      WorldLab as Record<string, unknown>,
+    )[0];
+    const reposition = motion.steps.find(s => s.id === 'reposition');
+    expect(reposition).toBeDefined();
+    expect(reposition?.ownerRef).toEqual({
+      source: 'builtin',
+      exportName: 'MotionRule',
+    });
+  });
+
+  it('parses steps and their ordering (free, before, after)', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        'Has Wind',
+        step('gust', 'before', 'MotionRule#reposition'), // anchor a built-in
+        step('land', 'after', 'rules/other#resolve'), // anchor a project rule
+        step('settle'), // unordered
+      ),
+    )!;
+    expect(meta.steps).toEqual([
+      {
+        id: 'gust',
+        name: 'gust',
+        ownerRef: {
+          source: 'project',
+          exportName: 'HasWindRule',
+          modulePath: 'rules/wind',
+        },
+        order: {
+          kind: 'before',
+          anchor: {
+            ownerRef: {source: 'builtin', exportName: 'MotionRule'},
+            stepId: 'reposition',
+          },
+        },
+      },
+      expect.objectContaining({
+        id: 'land',
+        order: {
+          kind: 'after',
+          anchor: {
+            ownerRef: {
+              source: 'project',
+              exportName: '',
+              modulePath: 'rules/other',
+            },
+            stepId: 'resolve',
+          },
+        },
+      }),
+      expect.objectContaining({id: 'settle', order: {kind: 'free'}}),
+    ]);
+  });
+
+  it('emits addStep / addStepBefore with anchor refs and (world, delta)', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        'Has Wind',
+        step('gust', 'before', 'MotionRule#reposition'),
+        step('land', 'after', 'rules/other#resolve'),
+        step('settle'),
+      ),
+    )!;
+    const bodies = new Map([
+      [
+        ruleBodyKey('step', 'world', undefined, 'gust'),
+        {params: [], body: 'world.set(WorldLab.DirectionProperty, 1);\n'},
+      ],
+    ]);
+    const code = ruleMetaToModule(meta, bodies);
+    // A step's body references `WorldLab.*`, so the namespace import is present.
+    expect(code).toContain(`import * as WorldLab from 'world-lab';`);
+    // Before a built-in step → `WorldLab.<Rule>.steps[<id>]`, closure (world, delta).
+    expect(code).toContain(
+      `export const GustStep = rule.addStepBefore("gust", WorldLab.MotionRule.steps["reposition"], (world, delta) => {\nworld.set(WorldLab.DirectionProperty, 1);\n});`,
+    );
+    // After a project step → default-import the module, read its `.steps[...]`.
+    expect(code).toContain(`import Other from "rules/other";`);
+    expect(code).toContain(
+      `export const LandStep = rule.addStepAfter("land", Other.steps["resolve"], (world, delta) => {\n});`,
+    );
+    // Unordered → plain addStep.
+    expect(code).toContain(
+      `export const SettleStep = rule.addStep("settle", (world, delta) => {\n});`,
     );
   });
 });
