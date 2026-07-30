@@ -113,13 +113,20 @@ jobs:
       - name: Smoke test
         run: ./docker/gems/smoke-test.sh cdo-gems:smoke ${{ matrix.engine }}
 
-  # Plain `docker build` rather than buildx: a container builder cannot see the
-  # cdo-build image this job just built, and would try to pull the tag instead.
+  # cdo-build exists only in this job's local image store, which is why nothing
+  # sets up a container builder: it would try to pull the tag from a registry.
   build-push:
     name: build and push
     if: github.event_name != 'pull_request'
     needs: [resolve-base, smoke-test]
     runs-on: ubuntu-24.04
+    # Inert until its deployment-branch policy is set; see docker/gems/README.md.
+    environment: ghcr-publish
+    # Shared across refs so two publishes cannot interleave. Safe to cancel:
+    # nothing resolves `latest` programmatically.
+    concurrency:
+      group: cdo-gems-publish
+      cancel-in-progress: true
     permissions:
       contents: read
       packages: write
@@ -147,14 +154,18 @@ jobs:
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
             -t cdo-build:ci docker/build/
 
-      # lock- is the tag downstream builds ask for. The date tag is the only
-      # immutable one: lock- and git- are re-pushed when a new base ships.
+      # Tag contract and the key's inputs: docker/gems/README.md.
       - name: Compute tags
-        run: |
-          {
-            echo "LOCK_TAG=lock-$(sha256sum Gemfile.lock | cut -c1-12)"
-            echo "DATE_TAG=$(date -u +%F)"
-          } >> "$GITHUB_ENV"
+        id: meta
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          # latest=auto produces nothing for raw and sha tags, so declare it.
+          tags: |
+            type=raw,value=bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile', 'dashboard/engines/*/*.gemspec', 'dashboard/engines/*/lib/*/version.rb') }},enable={{is_default_branch}}
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
       - name: Build cdo-gems
         run: |
@@ -162,10 +173,7 @@ jobs:
             -f docker/gems/Dockerfile \
             --build-arg BUILD_IMAGE=cdo-build:ci \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
-            -t "$IMAGE:git-${{ github.sha }}" \
-            -t "$IMAGE:latest" \
-            -t "$IMAGE:$LOCK_TAG" \
-            -t "$IMAGE:$DATE_TAG" \
+            -t cdo-gems:publish \
             .
 
       # The matrix tested images built on other runners. These test the one
@@ -174,16 +182,16 @@ jobs:
         run: ./docker/build/smoke-test.sh cdo-build:ci docker
 
       - name: Smoke test cdo-gems
-        run: ./docker/gems/smoke-test.sh "$IMAGE:git-${{ github.sha }}" docker
+        run: ./docker/gems/smoke-test.sh cdo-gems:publish docker
 
-      # lock- first and latest last, so a publish that dies halfway never
-      # advertises a build downstream cannot resolve.
+      # Not build-push-action with push: true — that publishes in the step that
+      # builds, before the smoke suites can fail the job.
       - name: Push cdo-gems
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
         run: |
-          docker push "$IMAGE:$LOCK_TAG"
-          docker push "$IMAGE:git-${{ github.sha }}"
-          docker push "$IMAGE:$DATE_TAG"
-          docker push "$IMAGE:latest"
-
-      - name: Inspect published image
-        run: docker buildx imagetools inspect "$IMAGE:latest"
+          set -euxo pipefail
+          for ref in $TAGS; do
+            docker tag cdo-gems:publish "$ref"
+            docker push "$ref"
+          done

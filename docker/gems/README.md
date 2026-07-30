@@ -176,18 +176,28 @@ touching those paths, and on every successful `cdo-base-image` publish, it
 publishes:
 
 ```
-ghcr.io/code-dot-org/cdo-gems:latest
+ghcr.io/code-dot-org/cdo-gems:bundle-<sha256 of the bundle inputs>
 ghcr.io/code-dot-org/cdo-gems:git-<sha>
-ghcr.io/code-dot-org/cdo-gems:lock-<first 12 of sha256(Gemfile.lock)>
-ghcr.io/code-dot-org/cdo-gems:<YYYY-MM-DD>
+ghcr.io/code-dot-org/cdo-gems:latest
 ```
 
-The `lock-` tag is the content key: a downstream build can ask for the gem
-layer matching its own lockfile and get it whenever the lockfile has not moved,
-regardless of which commit built it. It is not immutable — `lock-` and `git-`
-are re-pushed onto a refreshed cdo-base every time a base publish triggers this
-workflow, which is the point of the chain. Only the date tag is a stable name
-for a particular set of bytes.
+The `bundle-` tag is the content key: a downstream build asks for the gem layer
+matching its own inputs and gets it whenever those inputs have not moved,
+regardless of which commit built it. It keys on everything that decides what
+lands in the bundle — `.ruby-version`, `Gemfile`, `Gemfile.lock`, both
+Dockerfiles, and the engine gemspecs and version files — rather than on the
+lockfile alone. Group membership and `install_if` conditions live only in the
+Gemfile, since the lockfile records names and versions but not which groups
+they belong to. Moving a gem into `:test` therefore changes what
+`BUNDLE_WITHOUT` installs while leaving `Gemfile.lock` byte-identical, and a
+key over the lockfile alone would republish different contents under a name
+something else had already resolved.
+
+`git-<sha>` keeps that prefix and its full length to match cdo-base, rather
+than the ecosystem default of `sha-<7chars>`.
+
+`bundle-` and `git-` are both re-pushed onto a refreshed cdo-base every time a
+base publish triggers this workflow, which is the point of the chain.
 
 That chain is a `workflow_run` trigger on `cdo-base-image`, not a cron of this
 workflow's own. The weekly cadence is inherited: cdo-base's cron publishes a
@@ -206,30 +216,89 @@ base rebuild landing mid-run can leave extensions compiled against one base's
 dev headers running on another base's runtime libraries, and the base the
 smoke matrix validated is not provably the one under the published image.
 
-The publish leg re-runs both smoke suites against the images it built, then
-pushes `lock-` first and `latest` last, so a failed publish never leaves
-`latest` pointing past the content key downstream builds ask for.
+The publish leg re-runs both smoke suites against the images it built itself,
+rather than trusting the matrix legs, which built the same Dockerfiles on other
+runners.
 
-The publish leg uses plain `docker build` rather than buildx with registry
-cache, because a docker-container buildx builder cannot see the locally built
-cdo-build image and would try to pull the tag from a registry. The cost is no
-registry build cache, which is minor here: the image rebuilds when the
-lockfile moves, and a moved lockfile invalidates the gem layer anyway, so a
-cold build is the expected case.
+## No tag here is immutable
+
+All three float. `bundle-` and `git-` are re-pushed onto a refreshed cdo-base on
+every base publish, and `latest` follows every publish of any kind. A given tag
+therefore names different bytes over its life, `git-<sha>` included: a base
+refresh rebuilds an unchanged commit.
+
+That is the normal arrangement for a continuously rebuilt image — upstream
+re-pushes `ruby:3.2.11-slim-bookworm` on every Debian or Ruby security fix — and
+the answer is the same here as there: immutability is a digest's job, not a
+tag's. Nothing prunes untagged versions of this package, so a digest stays
+resolvable indefinitely, and this workflow already consumes its own base that
+way, resolving `cdo-base:latest` to a digest once per run.
+
+cdo-gems is a build input rather than a deployed artifact, so there is little to
+pin it for: a rollback names the image that shipped, meaning web or worker, and
+those record their own base by digest.
+
+## Who may publish
+
+Only staging publishes the tags above. A dispatch on any other ref publishes
+`dev-<sha>` and nothing else, which keeps the publish leg verifiable from a
+branch — how cdo-base's was proven before it merged — without an unreviewed ref
+overwriting what downstream resolves.
+
+That split is declared in the tag list, but it is not what enforces it. A
+`workflow_dispatch` runs the workflow file belonging to the ref it was
+dispatched on, so a check written in this file is editable by the ref it is
+meant to restrain, and so is the `if:` that decides whether the publish job
+runs at all. Enforcement has to live outside the file:
+
+- the `build-push` job declares `environment: ghcr-publish`. A referenced
+  environment is auto-created without protection rules, so that line is inert
+  until someone restricts the environment's deployment branches to `staging` in
+  repository settings. It is the hook, not the guarantee
+- for the policy to bind rather than advise, the credential the push needs has
+  to be an environment secret. While the login uses `secrets.GITHUB_TOKEN`, a
+  ref that deletes the `environment:` line keeps its ability to push, so what
+  is in place stops mistakes rather than a determined write-capable actor
+
+Publishes also serialize on one `cdo-gems-publish` concurrency group shared by
+every ref, so two runs cannot interleave and half-overwrite the tag set. The
+group cancels in progress: a cancelled publish can leave tags pointing at
+different builds, and nothing resolves `latest` programmatically.
+
+The publish leg builds with plain `docker build` on the default docker-driver
+builder, because cdo-build exists only in the job's local image store and a
+docker-container builder would try to pull the tag from a registry. The cost is
+no registry build cache, which is minor here: the image rebuilds when its inputs
+move, and moved inputs invalidate the gem layer anyway, so a cold build is the
+expected case.
+
+Tagging and pushing is a step of its own rather than `docker/build-push-action`
+with `push: true`. The docker driver does support pushing; the problem is that
+the action publishes in the same step that builds, which would put the image in
+the registry before the smoke suites ran. A failing smoke test has to be able to
+stop the publish.
 
 ## What downstream images pin
 
-Consumers compute the key from their own checkout:
+Consumers compute the key from their own checkout, with the same pattern list
+the publish leg uses:
 
-```sh
-GEMS_IMAGE=ghcr.io/code-dot-org/cdo-gems:lock-$(sha256sum Gemfile.lock | cut -c1-12)
+```yaml
+GEMS_IMAGE: ghcr.io/code-dot-org/cdo-gems:bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile', 'dashboard/engines/*/*.gemspec', 'dashboard/engines/*/lib/*/version.rb') }}
 ```
 
-That way a lockfile with no published gem layer is a hard build failure
-instead of a silent hit on a stale `:latest`. `latest` is for humans reading
-the package page. The date tag is the immutable name; `git-<sha>` and `lock-`
-are mutable, being re-pushed on each base publish. Pin the digest where byte
-stability matters.
+That way inputs with no published gem layer are a hard build failure instead of
+a silent hit on a stale `:latest`.
+
+`hashFiles` is a GitHub Actions expression, so the key is computable in a
+workflow and not from a shell. That is the deliberate cost of not carrying our
+own hashing script: downstream images are built in CI, and a developer building
+locally uses `:latest` or pins a digest. The first consumer duplicates the
+pattern list, which is the point at which it should move into a composite action
+instead of being copied again.
+
+`latest` is for humans reading the package page. Pin a digest where byte
+stability matters — see the section above on why no tag here provides it.
 
 ## Gem tree ownership
 
