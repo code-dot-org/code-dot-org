@@ -212,7 +212,7 @@ namespace :test do
 
     ChatClient.log ui_all_rollup(failures), color: (failures.empty? ? 'green' : 'red')
 
-    # aws/ci_build turns the DTT red off this raise. Which exception surfaces 
+    # aws/ci_build turns the DTT red off this raise. Which exception surfaces
     # is arbitrary.
     raise failures.values.first unless failures.empty?
   end
