@@ -28,6 +28,7 @@ import {
   ruleParamsInitExtension,
   ruleParamsMutator,
 } from './extensions/ruleParamsMutator';
+import {stepOrderExtension} from './extensions/stepOrder';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {label} from './label';
@@ -1604,17 +1605,23 @@ const STEP_ORDER_OPTIONS: Array<[string, string]> = [
 
 const worldRuleStep = defineBlock({
   type: 'world_rule_step',
-  message0: 'define step %1 %2 %3',
+  message0: 'define step %1 %2',
   args0: [
     {type: 'field_input', name: 'NAME', text: 'each tick'},
     {type: 'field_dropdown', name: 'ORDER', options: STEP_ORDER_OPTIONS},
-    {type: 'field_dropdown', name: 'STEP', options: stepOptions()},
   ],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
+  // The anchor dropdown lives on its own `ANCHOR` input, so it can be hidden as a
+  // whole (reflowing cleanly) when ORDER is "unordered" (see stepOrderExtension).
+  message1: '%1 %2',
+  args1: [
+    {type: 'field_dropdown', name: 'STEP', options: stepOptions()},
+    {type: 'input_dummy', name: 'ANCHOR'},
+  ],
+  message2: 'do %1',
+  args2: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [stepOptionsExtension],
+  extensions: [stepOptionsExtension, stepOrderExtension],
   style: 'default',
   tooltip:
     'Define a step — behavior that runs every tick (the world is in scope, ' +

@@ -657,4 +657,30 @@ describe('steps (per-tick behavior + ordering)', () => {
       `export const SettleStep = rule.addStep("settle", (world, delta) => {\n});`,
     );
   });
+
+  it('anchors a step to another step in the SAME rule via the local const', () => {
+    // `finish` runs AFTER this rule's own `start` step. The anchor is the local
+    // export const, not a self-import (which would read `.steps` pre-build), and
+    // the target is emitted first even though it is declared second.
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        'Has Wind',
+        step('finish', 'after', 'rules/wind#start'), // self-anchor, declared first
+        step('start'), // the anchor target, declared second
+      ),
+    )!;
+    const code = ruleMetaToModule(meta);
+    // No self-import of `rules/wind`.
+    expect(code).not.toContain(`from "rules/wind"`);
+    // The anchor target is emitted before the step that names it.
+    const startAt = code.indexOf('export const StartStep');
+    const finishAt = code.indexOf('export const FinishStep');
+    expect(startAt).toBeGreaterThanOrEqual(0);
+    expect(startAt).toBeLessThan(finishAt);
+    // The anchor is the local const, not `Wind.steps[...]`.
+    expect(code).toContain(
+      `export const FinishStep = rule.addStepAfter("finish", StartStep, (world, delta) => {\n});`,
+    );
+  });
 });
