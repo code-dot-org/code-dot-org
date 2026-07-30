@@ -18,7 +18,11 @@ describe('requestEvaluation', () => {
 
     await requestEvaluation(7);
 
-    expect(post).toHaveBeenCalledWith('/challenge_responses/7/evaluate', '', true);
+    expect(post).toHaveBeenCalledWith(
+      '/challenge_responses/7/evaluate',
+      '',
+      true
+    );
   });
 
   it('swallows request failures (fire-and-forget)', async () => {

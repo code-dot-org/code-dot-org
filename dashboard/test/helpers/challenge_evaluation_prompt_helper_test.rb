@@ -27,7 +27,7 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
     it 'includes labeled text parts for student_text and transcript' do
       content = ChallengeEvaluationPromptHelper.user_content(challenge_response)
 
-      texts = content.select {|part| part[:type] == 'text'}.map {|part| part[:text]}
+      texts = content.select {|part| part[:type] == 'text'}.pluck(:text)
       _(texts.length).must_equal 2
       _(texts.first).must_include 'It equals 4'
       _(texts.last).must_include 'I counted on my fingers'

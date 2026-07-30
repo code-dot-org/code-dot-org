@@ -170,7 +170,11 @@ describe('VideoChallenge', () => {
       {'Content-Type': 'video/webm'}
     );
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith('/challenge_responses/7/evaluate', '', true);
+    expect(post).toHaveBeenCalledWith(
+      '/challenge_responses/7/evaluate',
+      '',
+      true
+    );
   });
 
   it('disables submit while upload is in progress', async () => {

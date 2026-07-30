@@ -124,7 +124,11 @@ describe('WhiteboardChallenge', () => {
       {'Content-Type': 'image/png'}
     );
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith('/challenge_responses/7/evaluate', '', true);
+    expect(post).toHaveBeenCalledWith(
+      '/challenge_responses/7/evaluate',
+      '',
+      true
+    );
   });
 
   it('shows an error and stays submittable when the capture fails', async () => {
