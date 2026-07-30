@@ -1,0 +1,1 @@
+../../../../../../dashboard/engines/observability/observability.gemspec
