@@ -15,6 +15,13 @@
 # new definition files (under dashboard/test/ui/config); commit the result.
 # Idempotent: clones are found by name on re-run.
 #
+# The existing clone helpers (Unit#clone_migrated_unit, Level#clone_with_name,
+# Level#clone_with_suffix and its LevelGroup/BubbleChoice overrides) are too
+# tightly coupled to copying a whole unit, or to naming copies by suffix, to
+# be used for a prefix-keyed repartitioning of existing units' levels.
+# Refactoring them for shared use is not worth it for a script that will be
+# deleted once the partition is in place.
+#
 # Usage: bin/curriculum/clone_ui_test_levels.rb -u ui-test-csf,ui-test-shared-unit
 
 require 'optparse'
