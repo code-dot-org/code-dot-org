@@ -309,13 +309,10 @@ class BubbleChoice < DSLDefined
   end
 
   def setup_sublevels(sublevel_names)
-    # This path creates the parent-child rows directly, bypassing the Level
-    # validation which enforces the UI Test partition elsewhere.
-    offending = Array(sublevel_names).reject {|sublevel_name| Level.ui_test_name?(sublevel_name) == ui_test?}
-    if offending.any?
-      raise "level \"#{name}\" and its child levels must be on the same side " \
-        "of the \"UI Test \" partition; offending children: #{offending.join(', ')}"
-    end
+    # This path creates the parent-child rows directly, bypassing the
+    # children_stay_within_ui_test_partition validation.
+    offending = cross_partition_child_names(Array(sublevel_names))
+    raise cross_partition_children_message(offending) if offending.any?
 
     # if our existing sublevels already match the given names, do nothing
     return if sublevels.map(&:name) == sublevel_names

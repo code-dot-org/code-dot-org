@@ -89,7 +89,6 @@ class Level < ApplicationRecord
 
   validate :validate_game, on: [:create, :update]
   validate :name_change_stays_within_ui_test_partition, on: :update
-  validate :children_stay_within_ui_test_partition
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -481,21 +480,6 @@ class Level < ApplicationRecord
     return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
     return unless script_levels.exists?
     errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script")
-  end
-
-  # A parent level and its children must be on the same side of the
-  # "UI Test " partition: each side is seeded in environments where the other
-  # side's definition files are never loaded, so a cross-partition child
-  # would not resolve there.
-  def children_stay_within_ui_test_partition
-    child_names = Array(contained_level_names) + [try(:project_template_level_name)].compact
-    offending = child_names.reject {|child_name| Level.ui_test_name?(child_name) == ui_test?}
-    return if offending.empty?
-    errors.add(
-      :base,
-      "level \"#{name}\" and its child levels must be on the same side " \
-      "of the \"UI Test \" partition; offending children: #{offending.join(', ')}"
-    )
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of

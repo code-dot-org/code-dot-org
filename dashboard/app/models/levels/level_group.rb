@@ -140,13 +140,11 @@ class LevelGroup < DSLDefined
     self.child_levels = []
     new_levels = new_levels_and_texts_by_page.flatten
 
-    # This path creates the parent-child rows directly, bypassing the Level
-    # validation which enforces the UI Test partition elsewhere.
-    offending = new_levels.select {|level| level.is_a?(Level) && level.ui_test? != ui_test?}
-    if offending.any?
-      raise "level \"#{name}\" and its child levels must be on the same side " \
-        "of the \"UI Test \" partition; offending children: #{offending.map(&:name).join(', ')}"
-    end
+    # This path creates the parent-child rows directly, bypassing the
+    # children_stay_within_ui_test_partition validation. new_levels mixes
+    # Levels with page text, so pick out the Levels before checking names.
+    offending = cross_partition_child_names(new_levels.grep(Level).map(&:name))
+    raise cross_partition_children_message(offending) if offending.any?
 
     new_levels.each_with_index do |level, level_index|
       ParentLevelsChildLevel.find_or_create_by!(
