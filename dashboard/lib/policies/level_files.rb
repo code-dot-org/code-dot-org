@@ -1,8 +1,7 @@
 module Policies
   module LevelFiles
     # The two level trees never overlap: a "UI Test " level never resolves to
-    # config/levels/**, and vice versa. See
-    # dashboard/test/ui/config/README.md.
+    # config/levels/**, and vice versa. See dashboard/test/ui/config/README.md.
     LEVELS_SUBDIR = {
       production: 'config/levels',
       ui_test: 'test/ui/config/levels',

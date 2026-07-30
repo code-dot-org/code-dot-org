@@ -220,8 +220,7 @@ namespace :seed do
   # left in the database that do not have a corresponding json file in config/course_offerings.
   # The ui test course offerings must be seeded after so they are not accidentally removed.
   # UI test scripts also need the "UI Test " levels, seeded after the normal
-  # level tasks in SCRIPTS_DEPENDENCIES; see
-  # dashboard/test/ui/config/README.md.
+  # level tasks in SCRIPTS_DEPENDENCIES; see dashboard/test/ui/config/README.md.
   UI_TEST_SCRIPTS_DEPENDENCIES = SCRIPTS_DEPENDENCIES + [
     :child_dsls_ui_tests,
     :custom_levels_ui_tests,
