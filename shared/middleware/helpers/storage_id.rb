@@ -134,7 +134,7 @@ def get_storage_id
       event: 'existing_storage_id',
       storage_id: @get_storage_id,
       caller: caller_locations(1, 1).first.to_s,
-      request_url: defined?(request) ? request.url : nil,
+      request_url: defined?(request) ? request.base_url + request.path : nil,
       dashboard_defined: !!defined?(Dashboard::Application),
       created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
     )
@@ -148,7 +148,7 @@ def get_storage_id
       event: 'current_user_storage_id',
       storage_id: @get_storage_id,
       caller: caller_locations(1, 1).first.to_s,
-      request_url: request.url,
+      request_url: request.base_url + request.path,
       dashboard_defined: !!defined?(Dashboard::Application),
       created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
     )
@@ -162,7 +162,7 @@ def get_storage_id
       event: 'existing_cookie_storage_id',
       storage_id: @get_storage_id,
       caller: caller_locations(1, 1).first.to_s,
-      request_url: request.url,
+      request_url: request.base_url + request.path,
       dashboard_defined: !!defined?(Dashboard::Application),
       created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
     )
@@ -176,7 +176,7 @@ def get_storage_id
       event: 'created_cookie_storage_id',
       storage_id: @get_storage_id,
       caller: caller_locations(1, 1).first.to_s,
-      request_url: request.url,
+      request_url: request.base_url + request.path,
       dashboard_defined: !!defined?(Dashboard::Application),
       created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
     )
