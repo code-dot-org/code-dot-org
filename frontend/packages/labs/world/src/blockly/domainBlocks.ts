@@ -18,33 +18,12 @@ import {
   type Toolbox,
 } from '@code-dot-org/blockly';
 
-import * as WorldLab from '../engine';
-import {
-  AnimationProperty,
-  AnimationRule,
-  CollisionRule,
-  GravityRule,
-  InputRule,
-  MotionRule,
-  PositionProperty,
-  SpatialRule,
-  SpriteProperty,
-} from '../engine';
-import type {
-  ActorAction,
-  ArgType,
-  GameEvent,
-  Property,
-  PropertyType,
-  Query,
-  Rule,
-  WorldAction,
-  WorldQuery,
-} from '../engine';
+import type {ArgType, PropertyType} from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
+import {BUILTIN_RULE_META} from './builtinMeta';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {label} from './label';
@@ -61,6 +40,14 @@ import {
   worldOptions,
   worldOptionsExtension,
 } from './moduleOptions';
+import type {
+  ActionMeta,
+  EventMeta,
+  MemberRef,
+  PropertyMeta,
+  QueryMeta,
+  RuleMeta,
+} from './ruleMeta';
 import {traitOptions, traitOptionsExtension} from './traitOptions';
 import {
   registerValueShadows,
@@ -84,52 +71,31 @@ const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
   name => [label(name), name],
 );
 
-// The standard rules, in dependency order — the toolbox lists one category per
-// rule, and the event blocks are generated from each rule's events. Reading the
-// engine objects (not a mirror) keeps the editor in step with the rule library:
-// add a rule or an event and its block/category follow. (Same tack as
-// traitOptions.)
-const ALL_RULES: readonly Rule[] = [
-  SpatialRule,
-  MotionRule,
-  CollisionRule,
-  GravityRule,
-  InputRule,
-  AnimationRule,
-];
+// The rules whose members drive the block palette: the built-in library as
+// `RuleMeta` (dependency order — the toolbox lists one category per rule and the
+// generators walk them in order). Project `.rule` metadata will join this list
+// so a project rule contributes blocks the same way (a later step).
+const AUTHORING_RULES: readonly RuleMeta[] = BUILTIN_RULE_META;
 
-// Every built-in Rule object → its `world-lab` export name (for `WorldLab.<name>`
-// in generated code), by reference — the same tack as the property/event maps.
-const RULE_EXPORT_NAME = new Map<Rule, string>();
-{
-  const rules = new Set<Rule>(ALL_RULES);
-  for (const [name, value] of Object.entries(WorldLab)) {
-    if (rules.has(value as Rule)) {
-      RULE_EXPORT_NAME.set(value as Rule, name);
+// How generated code names a rule member: `WorldLab.<name>` for a built-in; for
+// a project rule, the bare export with a hoisted `import {<name>} from
+// '<module>'`. One helper so a single generator emits code for either source.
+const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
+  if (ref.source === 'project' && ref.modulePath) {
+    if (generator) {
+      addImport(
+        generator,
+        `named:${ref.modulePath}:${ref.exportName}`,
+        `import {${ref.exportName}} from ${str(ref.modulePath)};`,
+      );
     }
+    return ref.exportName;
   }
-}
-
-// Every GameEvent object → the name it is exported under (for `WorldLab.<name>`
-// in generated code), discovered once from the engine namespace by reference
-// (a rule's `events` entry and its `export const …Event` are the same object).
-const EVENT_EXPORT_NAME = new Map<GameEvent, string>();
-{
-  const events = new Set<GameEvent>();
-  for (const rule of ALL_RULES) {
-    for (const event of Object.values(rule.events)) {
-      events.add(event);
-    }
-  }
-  for (const [name, value] of Object.entries(WorldLab)) {
-    if (events.has(value as GameEvent)) {
-      EVENT_EXPORT_NAME.set(value as GameEvent, name);
-    }
-  }
-}
+  return `WorldLab.${ref.exportName}`;
+};
 
 /** The toolbox/registry type for the block that handles `event`. */
-const eventBlockType = (event: GameEvent): string => `world_on_${event.id}`;
+const eventBlockType = (event: EventMeta): string => `world_on_${event.id}`;
 
 // `when key … is pressed/released` dropdown: friendly label -> the DOM
 // `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
@@ -294,8 +260,8 @@ const worldPlayAnimation = defineBlock({
 // `eventValue` (the event's detail — the animation frame, the key pressed).
 
 /** Wrap a handler body as the runtime `.on` registration on the target actor. */
-const onHandler = (target: string, exportName: string, body: string): string =>
-  `${target}.on(WorldLab.${exportName}, (world, actor, eventValue) => {\n` +
+const onHandler = (target: string, eventRef: string, body: string): string =>
+  `${target}.on(${eventRef}, (world, actor, eventValue) => {\n` +
   `${body}});\n`;
 
 /**
@@ -313,22 +279,25 @@ const nextChainCode = (
 };
 
 /** A plain event block: `when <actor> <event name>`, body chained below. */
-const defineEventBlock = (event: GameEvent) => {
-  const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
+const defineEventBlock = (event: EventMeta) => {
   return defineBlock({
     type: eventBlockType(event),
-    message0: `when %1 ${event.name ?? event.id}`,
+    message0: `when %1 ${event.name}`,
     args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
     nextStatement: true,
     inputsInline: true,
     extensions: [actorInputExtension],
     style: 'event_blocks',
-    tooltip: `Run the blocks below when this actor ${event.name ?? event.id}.`,
+    tooltip: `Run the blocks below when this actor ${event.name}.`,
     generator: {
       javascript(block, generator) {
         const target =
           generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-        return onHandler(target, exportName, nextChainCode(block, generator));
+        return onHandler(
+          target,
+          refCode(event.ref, generator),
+          nextChainCode(block, generator),
+        );
       },
     },
   });
@@ -343,8 +312,7 @@ const KEY_VERB: Record<string, string> = {
 };
 
 /** A key event block: `when <actor> presses/releases key <key>`, body below. */
-const defineKeyEventBlock = (event: GameEvent) => {
-  const exportName = EVENT_EXPORT_NAME.get(event) ?? '';
+const defineKeyEventBlock = (event: EventMeta) => {
   const verb = KEY_VERB[event.id] ?? 'presses';
   return defineBlock({
     type: eventBlockType(event),
@@ -368,7 +336,7 @@ const defineKeyEventBlock = (event: GameEvent) => {
           block,
           generator,
         )}}\n`;
-        return onHandler(target, exportName, body);
+        return onHandler(target, refCode(event.ref, generator), body);
       },
     },
   });
@@ -376,9 +344,9 @@ const defineKeyEventBlock = (event: GameEvent) => {
 
 // Build a block for every event the rule library declares. Input's key events
 // take the KEY-filtered shape; the rest take the plain shape.
-const EVENT_BLOCKS = ALL_RULES.flatMap(rule =>
-  Object.values(rule.events).map(event =>
-    rule === InputRule ? defineKeyEventBlock(event) : defineEventBlock(event),
+const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
+  rule.events.map(event =>
+    rule.id === 'input' ? defineKeyEventBlock(event) : defineEventBlock(event),
   ),
 );
 
@@ -403,41 +371,19 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
 // the hand-authored `set position`. Reading the engine's Property objects keeps
 // these in step with the rule library, the same tack as the trait/event blocks.
 
-// Every Property object → its `world-lab` export name (for `WorldLab.<name>` in
-// generated code), by reference: a rule's `properties`/a trait's `properties`
-// entry and its `export const …Property` are the same object.
-const PROPERTY_EXPORT_NAME = new Map<Property, string>();
-{
-  const properties = new Set<Property>();
-  for (const rule of ALL_RULES) {
-    for (const property of Object.values(rule.properties)) {
-      properties.add(property); // world-scoped
-    }
-    for (const trait of Object.values(rule.traits)) {
-      for (const property of Object.values(trait.properties)) {
-        properties.add(property); // actor-scoped
-      }
-    }
-  }
-  for (const [name, value] of Object.entries(WorldLab)) {
-    if (properties.has(value as Property)) {
-      PROPERTY_EXPORT_NAME.set(value as Property, name);
-    }
-  }
-}
-
-// Properties a bespoke block already sets — skip them so we don't offer two.
-const COVERED_PROPERTIES: ReadonlySet<Property> = new Set([
-  PositionProperty, // world_set_position
-  SpriteProperty, // world_set_sprite
-  AnimationProperty, // world_play_animation
+// Properties a bespoke block already sets — skip them (by export name) so we
+// don't offer two blocks for the same property.
+const COVERED_PROPERTY_EXPORTS: ReadonlySet<string> = new Set([
+  'PositionProperty', // world_set_position
+  'SpriteProperty', // world_set_sprite
+  'AnimationProperty', // world_play_animation
 ]);
 
 /** A property gets a generated block unless it is read-only or bespoke-covered. */
-const isSettable = (property: Property): boolean =>
+const isSettable = (property: PropertyMeta): boolean =>
   !property.readonly &&
-  !COVERED_PROPERTIES.has(property) &&
-  PROPERTY_EXPORT_NAME.has(property);
+  !COVERED_PROPERTY_EXPORTS.has(property.ref.exportName) &&
+  property.ref.exportName !== '';
 
 /** A typed value slot — the shared shape of a property, an action parameter, and
  * a query argument. Uses the wider {@link ArgType} so an `actor` socket (a query
@@ -626,9 +572,8 @@ const valueStyle = (type: PropertyType): string =>
  * actor` shadow and sets it on that actor; a world property (a rule's own) sets
  * it on `world`. The value input(s) match the property's type.
  */
-const defineSetPropertyBlock = (property: Property) => {
-  const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
-  const name = property.name ?? property.id;
+const defineSetPropertyBlock = (property: PropertyMeta) => {
+  const name = property.name;
   const actorScoped = property.scope === 'actor';
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
   const value = typedValueInputs(property, actorScoped ? 2 : 1);
@@ -638,7 +583,7 @@ const defineSetPropertyBlock = (property: Property) => {
   const args0: BlockArgDefinition[] = actorScoped
     ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
     : value.args;
-  const type = setPropertyBlockType(exportName);
+  const type = setPropertyBlockType(property.ref.exportName);
   // Seed the value sockets with their default shadow blocks (attached on init).
   registerValueShadows(type, value.shadows);
   return defineBlock({
@@ -661,7 +606,7 @@ const defineSetPropertyBlock = (property: Property) => {
         const target = actorScoped
           ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
           : 'world';
-        return `${target}.set(WorldLab.${exportName}, ${typedValueCode(
+        return `${target}.set(${refCode(property.ref, generator)}, ${typedValueCode(
           property,
           block,
           generator,
@@ -678,9 +623,8 @@ const defineSetPropertyBlock = (property: Property) => {
  * whole Vector; a `point` reads one axis via an x/y dropdown (a Number); scalars
  * read directly — so a value plugs into logic/math/vector sockets.
  */
-const defineGetPropertyBlock = (property: Property) => {
-  const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
-  const name = property.name ?? property.id;
+const defineGetPropertyBlock = (property: PropertyMeta) => {
+  const name = property.name;
   const actorScoped = property.scope === 'actor';
   // A point is read one axis at a time (an x/y dropdown → a Number); a vector is
   // read whole. Everything else is a plain scalar read.
@@ -714,7 +658,7 @@ const defineGetPropertyBlock = (property: Property) => {
       : `get world ${name}`;
 
   return defineBlock({
-    type: getPropertyBlockType(exportName),
+    type: getPropertyBlockType(property.ref.exportName),
     message0,
     args0,
     inputsInline: true,
@@ -736,7 +680,7 @@ const defineGetPropertyBlock = (property: Property) => {
           ? `.${block.getFieldValue('COMPONENT')}`
           : '';
         return [
-          `${target}.get(WorldLab.${exportName})${component}`,
+          `${target}.get(${refCode(property.ref, generator)})${component}`,
           Order.ATOMIC,
         ] as [string, number];
       },
@@ -751,25 +695,19 @@ type PropertyBlock =
   | ReturnType<typeof defineSetPropertyBlock>
   | ReturnType<typeof defineGetPropertyBlock>;
 const PROPERTY_BLOCKS: PropertyBlock[] = [];
-const PROPERTY_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
-for (const rule of ALL_RULES) {
+const PROPERTY_BLOCK_TYPES_BY_RULE = new Map<RuleMeta, string[]>();
+for (const rule of AUTHORING_RULES) {
   const types: string[] = [];
-  const add = (property: Property): void => {
+  // `rule.properties` is already world-scoped members then each trait's — the
+  // same order the two nested loops walked.
+  for (const property of rule.properties) {
     if (!isSettable(property)) {
-      return;
+      continue;
     }
     const setBlock = defineSetPropertyBlock(property);
     const getBlock = defineGetPropertyBlock(property);
     PROPERTY_BLOCKS.push(setBlock, getBlock);
     types.push(setBlock.type, getBlock.type);
-  };
-  for (const property of Object.values(rule.properties)) {
-    add(property);
-  }
-  for (const trait of Object.values(rule.traits)) {
-    for (const property of Object.values(trait.properties)) {
-      add(property);
-    }
   }
   PROPERTY_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
@@ -781,29 +719,6 @@ for (const rule of ALL_RULES) {
 // actor value via an `on …` socket, like `play animation`. The value inputs come
 // from the action's `params` (the action analogue of a property's type).
 
-// Every Action object → its `world-lab` export name, by reference (same tack as
-// the property/event maps).
-type Action = WorldAction | ActorAction;
-const ACTION_EXPORT_NAME = new Map<Action, string>();
-{
-  const actions = new Set<Action>();
-  for (const rule of ALL_RULES) {
-    for (const action of Object.values(rule.actions)) {
-      actions.add(action);
-    }
-    for (const trait of Object.values(rule.traits)) {
-      for (const action of Object.values(trait.actions)) {
-        actions.add(action);
-      }
-    }
-  }
-  for (const [name, value] of Object.entries(WorldLab)) {
-    if (actions.has(value as Action)) {
-      ACTION_EXPORT_NAME.set(value as Action, name);
-    }
-  }
-}
-
 /** The registry/toolbox type for the block that runs `action`. */
 const actionBlockType = (exportName: string): string =>
   `world_do_${exportName}`;
@@ -814,10 +729,10 @@ const actionBlockType = (exportName: string): string =>
  * (default `this actor`) and runs on it. The single argument (actions take zero
  * or one) is a typed value socket, like a setter's — a getter/math can slot in.
  */
-const defineActionBlock = (action: Action, actorScoped: boolean) => {
-  const exportName = ACTION_EXPORT_NAME.get(action) ?? '';
-  const name = action.name ?? action.id;
-  const param = action.params?.[0]; // actions take zero or one argument
+const defineActionBlock = (action: ActionMeta) => {
+  const actorScoped = action.scope === 'actor';
+  const name = action.name;
+  const param = action.params[0]; // actions take zero or one argument
   const value = param
     ? typedValueInputs(param, 1)
     : {message: '', args: [] as BlockArgDefinition[], shadows: []};
@@ -830,7 +745,7 @@ const defineActionBlock = (action: Action, actorScoped: boolean) => {
     message0 = `${message0} on %${args0.length}`;
   }
 
-  const type = actionBlockType(exportName);
+  const type = actionBlockType(action.ref.exportName);
   if (value.shadows.length) {
     registerValueShadows(type, value.shadows);
   }
@@ -856,7 +771,7 @@ const defineActionBlock = (action: Action, actorScoped: boolean) => {
         const argCode = param
           ? `, ${typedValueCode(param, block, generator)}`
           : '';
-        return `${target}.act(WorldLab.${exportName}${argCode});\n`;
+        return `${target}.act(${refCode(action.ref, generator)}${argCode});\n`;
       },
     },
   });
@@ -865,24 +780,18 @@ const defineActionBlock = (action: Action, actorScoped: boolean) => {
 // Generate a block for every rule action (world actions first, then each trait's
 // actor actions), recording which belong to each rule's toolbox category.
 const ACTION_BLOCKS: ReturnType<typeof defineActionBlock>[] = [];
-const ACTION_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
-for (const rule of ALL_RULES) {
+const ACTION_BLOCK_TYPES_BY_RULE = new Map<RuleMeta, string[]>();
+for (const rule of AUTHORING_RULES) {
   const types: string[] = [];
-  const add = (action: Action, actorScoped: boolean): void => {
-    if (!ACTION_EXPORT_NAME.has(action)) {
-      return;
+  // `rule.actions` is the rule's own (world) actions then each trait's (actor),
+  // in the same order the two nested loops walked.
+  for (const action of rule.actions) {
+    if (action.ref.exportName === '') {
+      continue;
     }
-    const block = defineActionBlock(action, actorScoped);
+    const block = defineActionBlock(action);
     ACTION_BLOCKS.push(block);
     types.push(block.type);
-  };
-  for (const action of Object.values(rule.actions)) {
-    add(action, false);
-  }
-  for (const trait of Object.values(rule.traits)) {
-    for (const action of Object.values(trait.actions)) {
-      add(action, true);
-    }
   }
   ACTION_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
@@ -894,27 +803,6 @@ for (const rule of ALL_RULES) {
 // rule's own) reads `world`. Styled by the value it reports — a boolean as logic.
 // A query with no `returns` (e.g. Collision's `TouchingQuery`, which returns an
 // actor list surfaced as the `for each … touching` loop) gets no block.
-
-type AnyQuery = Query | WorldQuery;
-const QUERY_EXPORT_NAME = new Map<AnyQuery, string>();
-{
-  const queries = new Set<AnyQuery>();
-  for (const rule of ALL_RULES) {
-    for (const query of Object.values(rule.queries)) {
-      queries.add(query);
-    }
-    for (const trait of Object.values(rule.traits)) {
-      for (const query of Object.values(trait.queries)) {
-        queries.add(query);
-      }
-    }
-  }
-  for (const [name, value] of Object.entries(WorldLab)) {
-    if (queries.has(value as AnyQuery)) {
-      QUERY_EXPORT_NAME.set(value as AnyQuery, name);
-    }
-  }
-}
 
 /** The registry/toolbox type for the block that reads `query`. */
 const queryBlockType = (exportName: string): string =>
@@ -931,14 +819,14 @@ const paramValueNames = (name: string): ValueNames => {
   return {value: upper, x: `${upper}_X`, y: `${upper}_Y`};
 };
 
-const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
-  const exportName = QUERY_EXPORT_NAME.get(query) ?? '';
-  const name = query.name ?? query.id;
+const defineQueryBlock = (query: QueryMeta) => {
+  const actorScoped = query.scope === 'actor';
+  const name = query.name;
   const returns = query.returns ?? 'boolean';
-  const type = queryBlockType(exportName);
+  const type = queryBlockType(query.ref.exportName);
   // A world query may take typed arguments (its `params`), each a value socket;
   // an actor query reads the actor it is called on.
-  const params = actorScoped ? [] : ((query as WorldQuery).params ?? []);
+  const params = actorScoped ? [] : query.params;
   const paramNames = params.map(param => paramValueNames(param.name));
 
   const args0: BlockArgDefinition[] = [];
@@ -990,10 +878,10 @@ const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
         if (actorScoped) {
           const target =
             generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-          return [`${target}.query(WorldLab.${exportName})`, Order.ATOMIC] as [
-            string,
-            number,
-          ];
+          return [
+            `${target}.query(${refCode(query.ref, generator)})`,
+            Order.ATOMIC,
+          ] as [string, number];
         }
         const argCode = params
           .map(
@@ -1002,7 +890,7 @@ const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
           )
           .join('');
         return [
-          `world.query(WorldLab.${exportName}${argCode})`,
+          `world.query(${refCode(query.ref, generator)}${argCode})`,
           Order.ATOMIC,
         ] as [string, number];
       },
@@ -1013,24 +901,17 @@ const defineQueryBlock = (query: AnyQuery, actorScoped: boolean) => {
 // Generate a reporter for every query that declares a return type — a rule's own
 // (world) queries, then those of every trait it defines (actor).
 const QUERY_BLOCKS: ReturnType<typeof defineQueryBlock>[] = [];
-const QUERY_BLOCK_TYPES_BY_RULE = new Map<Rule, string[]>();
-for (const rule of ALL_RULES) {
+const QUERY_BLOCK_TYPES_BY_RULE = new Map<RuleMeta, string[]>();
+for (const rule of AUTHORING_RULES) {
   const types: string[] = [];
-  const add = (query: AnyQuery, actorScoped: boolean): void => {
-    if (!query.returns || !QUERY_EXPORT_NAME.has(query)) {
-      return;
+  // World queries then each trait's, in declaration order (as `rule.queries`).
+  for (const query of rule.queries) {
+    if (!query.returns || query.ref.exportName === '') {
+      continue;
     }
-    const block = defineQueryBlock(query, actorScoped);
+    const block = defineQueryBlock(query);
     QUERY_BLOCKS.push(block);
     types.push(block.type);
-  };
-  for (const query of Object.values(rule.queries)) {
-    add(query, false);
-  }
-  for (const trait of Object.values(rule.traits)) {
-    for (const query of Object.values(trait.queries)) {
-      add(query, true);
-    }
   }
   QUERY_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
@@ -1411,10 +1292,9 @@ const worldWorld = defineBlock({
 // project rule's is its module path — the generator branches on the `/` a path
 // carries, importing the module rather than reading `WorldLab`. This is the
 // first seam toward rules living in the project rather than the engine bundle.
-const BUILTIN_RULE_OPTIONS: Array<[string, string]> = ALL_RULES.map(rule => [
-  rule.name,
-  RULE_EXPORT_NAME.get(rule) ?? '',
-]);
+const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
+  rule => [rule.name, rule.ref.exportName],
+);
 const useRuleOptions = (): Array<[string, string]> => [
   ...BUILTIN_RULE_OPTIONS,
   ...ruleModuleOptions(),
@@ -1515,25 +1395,25 @@ export const DOMAIN_BLOCKS = [
   worldUseAnimations,
 ];
 
-// The hand-authored (non-generated) blocks that act on each rule's
-// traits/queries. `use trait`/`use rule` span every rule, so they live with the
-// Actor/World they build, not in any one rule category.
-const RULE_HAND_BLOCKS = new Map<Rule, string[]>([
-  [SpatialRule, ['world_set_position']],
-  [AnimationRule, ['world_set_sprite', 'world_play_animation']],
+// Keyed by rule id: the hand-authored (non-generated) blocks that act on a
+// rule's traits/queries. `use trait`/`use rule` span every rule, so they live
+// with the Actor/World they build, not in any one rule category.
+const RULE_HAND_BLOCKS = new Map<string, string[]>([
+  ['spatial', ['world_set_position']],
+  ['animation', ['world_set_sprite', 'world_play_animation']],
 ]);
 
 // A rule's category: its hand-authored blocks, the generated set/get property
 // blocks, the generated query reporters, the generated action blocks, then the
 // generated event hats. A rule with none of these is dropped.
-const ruleCategory = (rule: Rule) => ({
+const ruleCategory = (rule: RuleMeta) => ({
   name: rule.name,
   blocks: [
-    ...(RULE_HAND_BLOCKS.get(rule) ?? []),
+    ...(RULE_HAND_BLOCKS.get(rule.id) ?? []),
     ...(PROPERTY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
     ...(QUERY_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
     ...(ACTION_BLOCK_TYPES_BY_RULE.get(rule) ?? []),
-    ...Object.values(rule.events).map(eventBlockType),
+    ...rule.events.map(eventBlockType),
   ],
 });
 
@@ -1559,7 +1439,9 @@ export const DOMAIN_TOOLBOX: Toolbox = [
     name: 'World',
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
-  ...ALL_RULES.map(ruleCategory).filter(category => category.blocks.length > 0),
+  ...AUTHORING_RULES.map(ruleCategory).filter(
+    category => category.blocks.length > 0,
+  ),
   {name: 'Loops', blocks: ['world_for_each']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {

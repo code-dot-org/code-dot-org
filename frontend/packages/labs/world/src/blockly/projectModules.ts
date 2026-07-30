@@ -7,6 +7,7 @@
 // extension-less module path the generated scene imports (`worlds/platform`).
 
 import {label} from './label';
+import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 
 // Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
 const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
@@ -145,31 +146,50 @@ export function projectMapActorTypes(
   return maps;
 }
 
-// A world's `use rule` names either a built-in (its `world-lab` export) or a
-// project rule module (a path). The trait dropdown needs the built-in export
-// name; a project rule that RE-EXPORTS a built-in (a shim, e.g.
-// `export {GravityRule as default} from 'world-lab'`) is resolved to it here, by
-// reading the shim. A genuinely project-defined rule can't be introspected
-// statically, so it contributes no traits until block generation reads rule
-// metadata from the built modules — STOPGAP, removed then.
+// A world's `use rule` names either a built-in (its `world-lab` export name) or a
+// project rule module (a path). `traitOptions` resolves a ref to its `RuleMeta`;
+// this maps a project reference to the key it resolves under:
+//   - a declarative `.rule` module → its path (parsed to project `RuleMeta`);
+//   - a `.js`/`.ts` shim re-exporting a built-in → that built-in's export name;
+//   - a genuinely project-defined `.js` rule → undefined (no static metadata
+//     until it is authored as a `.rule`).
 const RULE_SHIM_RE =
   /export\s*\{\s*(\w+)\s+as\s+default\s*\}\s*from\s*['"]world-lab['"]/;
-const RULE_MODULE_EXTS = ['.js', '.ts', '.rule'];
 
-function resolveRuleExport(
+function resolveRuleRef(
   rule: string,
   files: Record<string, string>,
 ): string | undefined {
   if (!rule.includes('/')) {
     return rule; // already a built-in export name
   }
-  for (const ext of RULE_MODULE_EXTS) {
-    const contents = files[rule + ext];
+  // A declarative `.rule` module: keep the path — `traitOptions` resolves it to
+  // the parsed project rule.
+  if (files[`${rule}.rule`] !== undefined) {
+    return rule;
+  }
+  // A `.js`/`.ts` shim re-exporting a built-in → that built-in's export name.
+  for (const ext of ['.js', '.ts']) {
+    const contents = files[`${rule}${ext}`];
     if (contents !== undefined) {
       return contents.match(RULE_SHIM_RE)?.[1];
     }
   }
   return undefined;
+}
+
+/** Parse the project's declarative `.rule` files (under `rules/`) into RuleMeta. */
+export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
+  const metas: RuleMeta[] = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (path.startsWith('rules/') && path.endsWith('.rule')) {
+      const meta = parseRuleMeta(path.replace(/\.rule$/, ''), contents);
+      if (meta) {
+        metas.push(meta);
+      }
+    }
+  }
+  return metas;
 }
 
 /**
@@ -192,7 +212,7 @@ export function projectWorldRules(files: Record<string, string>): string[] {
       return;
     }
     if (block.type === 'world_use_rule' && block.fields?.RULE) {
-      const resolved = resolveRuleExport(block.fields.RULE, files);
+      const resolved = resolveRuleRef(block.fields.RULE, files);
       if (resolved) {
         names.add(resolved);
       }

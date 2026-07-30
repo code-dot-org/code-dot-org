@@ -197,3 +197,145 @@ export function builtinRuleMeta(
     };
   });
 }
+
+// ── Declarative `.rule` files ────────────────────────────────────────────────
+// A `.rule` file is a Blockly workspace (JSON): a `world_rule` root naming the
+// rule, chaining member-declaration blocks. We read it STATICALLY — the same way
+// `.actor`/`.world` files are read for their names — never executing it, to
+// learn the traits/properties/events it declares (its metadata). A project
+// rule's members are named in generated code by a fixed convention (PascalCase
+// id + kind) that the rule's own module codegen mirrors, so `import`s line up.
+
+/** An identifier from an authored name/id: non-alphanumerics become `_`. */
+const slug = (text: string): string => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
+
+/** PascalCase an id for a generated export name (`gravity scale` → `GravityScale`). */
+const pascal = (id: string): string =>
+  id
+    .split(/[^A-Za-z0-9]+/)
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
+
+/** The type-zero default for a property with no declared default. */
+const zeroFor = (type: PropertyType): unknown => {
+  switch (type) {
+    case 'boolean':
+      return false;
+    case 'string':
+      return '';
+    case 'vector':
+    case 'point':
+      return {x: 0, y: 0};
+    default:
+      return 0;
+  }
+};
+
+const PROPERTY_TYPES: ReadonlySet<string> = new Set([
+  'number',
+  'boolean',
+  'string',
+  'vector',
+  'point',
+]);
+
+// One block in a `.rule` workspace's `world_rule` chain.
+interface RuleBlock {
+  type?: string;
+  fields?: Record<string, unknown>;
+  next?: {block?: RuleBlock};
+}
+
+/**
+ * Parse a `.rule` workspace JSON into {@link RuleMeta} (or `undefined` if it is
+ * not a `world_rule` workspace / not valid JSON yet). `modulePath` is the
+ * extension-less path the generated code imports the rule and its members from
+ * (`rules/wind`). The declared members become `project` refs into that module.
+ */
+export function parseRuleMeta(
+  modulePath: string,
+  contents: string,
+): RuleMeta | undefined {
+  let root: RuleBlock | undefined;
+  try {
+    const blocks = (JSON.parse(contents) as {blocks?: {blocks?: RuleBlock[]}})
+      .blocks?.blocks;
+    root = blocks?.find(b => b?.type === 'world_rule');
+  } catch {
+    return undefined; // mid-edit / not JSON
+  }
+  if (!root) {
+    return undefined;
+  }
+
+  const field = (block: RuleBlock, name: string): string =>
+    typeof block.fields?.[name] === 'string'
+      ? (block.fields[name] as string)
+      : '';
+  const ruleName = field(root, 'NAME') || 'Rule';
+  const ruleId = slug(field(root, 'ID') || ruleName);
+  const ref = (exportName: string): MemberRef => ({
+    source: 'project',
+    exportName,
+    modulePath,
+  });
+
+  const traits: TraitMeta[] = [];
+  const properties: PropertyMeta[] = [];
+  const events: EventMeta[] = [];
+
+  for (
+    let block: RuleBlock | undefined = root.next?.block;
+    block;
+    block = block.next?.block
+  ) {
+    const id = field(block, 'ID');
+    const name = field(block, 'NAME') || id;
+    if (!id) {
+      continue;
+    }
+    switch (block.type) {
+      case 'world_rule_trait':
+        traits.push({id, name, ref: ref(`${pascal(id)}Trait`)});
+        break;
+      case 'world_rule_property': {
+        const declared = field(block, 'TYPE');
+        const type = (
+          PROPERTY_TYPES.has(declared) ? declared : 'number'
+        ) as PropertyType;
+        const traitId = field(block, 'TRAIT');
+        properties.push({
+          id,
+          name,
+          type,
+          default: zeroFor(type),
+          readonly: false,
+          scope: traitId ? 'actor' : 'world',
+          ownerTraitId: traitId || undefined,
+          ref: ref(`${pascal(id)}Property`),
+        });
+        break;
+      }
+      case 'world_rule_event':
+        events.push({id, name, ref: ref(`${pascal(id)}Event`)});
+        break;
+      default:
+        break;
+    }
+  }
+
+  return {
+    id: ruleId,
+    name: ruleName,
+    source: 'project',
+    modulePath,
+    ref: {source: 'project', exportName: `${pascal(ruleId)}Rule`, modulePath},
+    requires: [],
+    traits,
+    properties,
+    actions: [],
+    queries: [],
+    events,
+  };
+}
