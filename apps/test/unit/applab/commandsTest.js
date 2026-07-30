@@ -1,7 +1,72 @@
 import $ from 'jquery';
 
-import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImageUrl: jest.fn(),
+}));
+
+import applabCommands, {
+  rgb,
+  setSelectionRange,
+  openUrl,
+} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
+
+describe('setProperty image URL moderation', () => {
+  const mockModerateImageUrl = moderateImageUrl;
+  let errorHandler;
+  let originalApplab;
+  let testDivApplab;
+  let testImage;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockModerateImageUrl.mockResolvedValue('flagged');
+    errorHandler = {
+      outputWarning: jest.fn(),
+    };
+    injectErrorHandler(errorHandler);
+
+    originalApplab = global.Applab;
+    global.Applab = {
+      updateProperty: jest.fn(),
+    };
+
+    testDivApplab = document.createElement('div');
+    testDivApplab.setAttribute('id', 'divApplab');
+    document.body.appendChild(testDivApplab);
+
+    testImage = document.createElement('img');
+    testImage.setAttribute('id', 'test-image');
+    testDivApplab.appendChild(testImage);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(testDivApplab);
+    global.Applab = originalApplab;
+    injectErrorHandler(null);
+  });
+
+  it('does not update property when absolute image URL is flagged', async () => {
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await Promise.resolve();
+
+    expect(mockModerateImageUrl).toHaveBeenCalledWith(
+      'https://example.com/image.png',
+      'applab',
+      {
+        uploaderType: 'ImageURLInput',
+        assetUrl: 'https://example.com/image.png',
+      }
+    );
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
+});
 
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {
