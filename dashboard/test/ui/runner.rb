@@ -27,6 +27,7 @@ require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/ci_utils'
+require 'cdo/playwright_report'
 
 require 'haml'
 require 'json'
@@ -519,7 +520,8 @@ end
 # cross-page navigation row at the top of each status page. Each entry's
 # :filename must equal the value status_page_filename returns when that
 # page is being generated, so the active entry can be rendered unlinked.
-# The four entries are the four suites rake test:ui_all dispatches.
+# These three are the Selenium suites rake test:ui_all dispatches; Playwright,
+# the fourth, is appended in status_pages_navigation.
 STATUS_PAGES_NAVIGATION = [
   {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
   {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
@@ -531,11 +533,17 @@ def status_pages_navigation
   # so that the oncall engineer can quickly find all the pages they need to
   # check for UI test failures.
   return nil unless GIT_BRANCH == 'test'
-  STATUS_PAGES_NAVIGATION.map do |page|
+  pages = STATUS_PAGES_NAVIGATION.map do |page|
     page.merge(
       url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
     )
   end
+  # Appended here, not baked into the frozen constant, so that loading this file
+  # runs no S3 code. Playwright publishes its own report, so this entry carries
+  # a url and no :filename; the key is stable and always serves the latest run.
+  playwright_url = Cdo::PlaywrightReport.index_url
+  pages << {display_name: 'Playwright (latest run)', url: playwright_url} if playwright_url
+  pages
 end
 
 # Status page filename per suite. Eyes keeps a stable name across providers.
