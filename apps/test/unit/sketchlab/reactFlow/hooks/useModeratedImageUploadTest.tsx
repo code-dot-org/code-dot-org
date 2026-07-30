@@ -109,9 +109,7 @@ describe('useModeratedImageUpload', () => {
   });
 
   function renderModeratedUpload() {
-    return renderHook(() =>
-      useModeratedImageUpload({levelName: LEVEL_NAME})
-    );
+    return renderHook(() => useModeratedImageUpload({levelName: LEVEL_NAME}));
   }
 
   async function upload(result: {
