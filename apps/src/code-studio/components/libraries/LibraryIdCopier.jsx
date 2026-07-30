@@ -1,7 +1,8 @@
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 export default class LibraryIdCopier extends React.Component {
@@ -17,33 +18,38 @@ export default class LibraryIdCopier extends React.Component {
   render() {
     const {channelId} = this.props;
     return (
-      <div>
-        <input
-          type="text"
+      <div style={styles.container}>
+        <TextField
+          name="libraryChannelId"
           ref={channelId => (this.channelId = channelId)}
           onClick={event => event.target.select()}
+          onChange={() => {}}
           readOnly
           value={channelId}
+          size="s"
           style={styles.copy}
         />
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={this.copyChannelId}
-          text={i18n.copyId()}
-          style={styles.button}
-        />
+          sx={{marginLeft: '10px'}}
+        >
+          {i18n.copyId()}
+        </MuiButton>
       </div>
     );
   }
 }
 
 const styles = {
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   copy: {
     cursor: 'copy',
     width: 250,
-    height: 25,
-    marginBottom: 0,
-  },
-  button: {
-    marginLeft: 10,
   },
 };
