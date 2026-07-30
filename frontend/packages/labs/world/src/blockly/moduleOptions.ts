@@ -14,6 +14,10 @@ import {label} from './label';
 let projectActors: Array<[string, string]> = [];
 let projectWorlds: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
+// `[label, path]` for the project's own rule modules under `rules/` — the
+// `world_use_rule` dropdown offers these ALONGSIDE the built-in rules, and its
+// generator imports the module (a path value) rather than reading `WorldLab`.
+let projectRuleModules: Array<[string, string]> = [];
 // Map path -> the actor module paths it places (for the load-map generator).
 let projectMaps: Record<string, string[]> = {};
 
@@ -32,6 +36,16 @@ export function setProjectAnimationFiles(
   options: Array<[string, string]>,
 ): void {
   projectAnimationFiles = options;
+}
+
+/** Replace the project rule modules the `use rule` dropdown offers (paths). */
+export function setProjectRuleModules(options: Array<[string, string]>): void {
+  projectRuleModules = options;
+}
+
+/** The project's own rule modules (`[label, path]`), for `world_use_rule`. */
+export function ruleModuleOptions(): Array<[string, string]> {
+  return projectRuleModules;
 }
 
 /** Replace the map registry (path -> the actor modules each map places). */

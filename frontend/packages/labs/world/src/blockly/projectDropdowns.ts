@@ -10,6 +10,7 @@ import {
   setProjectActors,
   setProjectAnimationFiles,
   setProjectMaps,
+  setProjectRuleModules,
   setProjectWorlds,
 } from './moduleOptions';
 import {projectAnimationIds} from './projectAnimations';
@@ -17,6 +18,7 @@ import {
   projectActorOptions,
   projectAnimationFileOptions,
   projectMapActorTypes,
+  projectRuleOptions,
   projectWorldOptions,
   projectWorldRules,
 } from './projectModules';
@@ -28,6 +30,9 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
   setProjectMaps(projectMapActorTypes(files));
+  // The `use rule` dropdown offers the project's own rule modules (under
+  // `rules/`) alongside the built-ins.
+  setProjectRuleModules(projectRuleOptions(files));
   // The traits an actor may take come from the rules the project's worlds attach.
   setProjectRules(projectWorldRules(files));
 }

@@ -661,9 +661,19 @@ describe('world block generators', () => {
     expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
   });
 
-  it('world_use_rule adds a rule by its world-lab export name', () => {
+  it('world_use_rule adds a built-in rule by its world-lab export name', () => {
     expect(run('world_use_rule', {RULE: 'GravityRule'}, {}, '')).toBe(
       'world.useRules([WorldLab.GravityRule]);\n',
+    );
+  });
+
+  it('world_use_rule imports a project rule module (a path) and uses it', () => {
+    const defs: Record<string, string> = {};
+    expect(run('world_use_rule', {RULE: 'rules/gravity'}, defs, '')).toBe(
+      'world.useRules([Gravity]);\n',
+    );
+    expect(defs['mod:rules/gravity']).toBe(
+      'import Gravity from "rules/gravity";',
     );
   });
 
