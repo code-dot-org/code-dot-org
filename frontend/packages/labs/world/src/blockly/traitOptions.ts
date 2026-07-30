@@ -19,33 +19,28 @@ const traitValue = (ref: MemberRef): string =>
     ? `${ref.modulePath}#${ref.exportName}`
     : ref.exportName;
 
-// The rules the editor knows, indexed for resolution: by `world-lab` export name
-// (what a `.world`'s `use rule` block names) and by rule id (what `requires`
-// lists). Built-ins now; project `.rule` metadata will extend these.
+// Built-in rules indexed by `world-lab` export name — what a `.world`'s `use
+// rule` block names, and what a rule's `requires` lists (a built-in export name
+// or a project module path, uniformly).
 const metaByExport = new Map<string, RuleMeta>();
-const metaById = new Map<string, RuleMeta>();
 for (const rule of BUILTIN_RULE_META) {
   if (rule.ref.exportName) {
     metaByExport.set(rule.ref.exportName, rule);
   }
-  metaById.set(rule.id, rule);
 }
 
 // The project's declarative `.rule` rules, indexed by module path (what a world's
-// `use rule` names) and id (what `requires` lists). Refreshed per project.
+// or another rule's `use rule` names). Refreshed per project.
 let projectByModule = new Map<string, RuleMeta>();
-let projectById = new Map<string, RuleMeta>();
 
 /** Register the project's parsed `.rule` metadata (for resolving project rules
  *  a world attaches, and their transitive requires). */
 export function setProjectRuleMeta(metas: RuleMeta[]): void {
   projectByModule = new Map();
-  projectById = new Map();
   for (const meta of metas) {
     if (meta.modulePath) {
       projectByModule.set(meta.modulePath, meta);
     }
-    projectById.set(meta.id, meta);
   }
 }
 
@@ -58,12 +53,12 @@ export function setProjectRules(refs: string[]): void {
   projectRuleRefs = refs;
 }
 
-// A ref resolves to a built-in (by export name) or a project rule (by module
-// path); a rule's `requires` lists ids across both sets.
+// A rule reference resolves to a built-in (by export name) or a project `.rule`
+// (by module path). `requires` uses the same reference form, so the transitive
+// closure is one resolver. (A `.js` shim dependency resolves at runtime but not
+// here — it is not a parsed `.rule` — so its traits aren't surfaced.)
 const resolveRef = (ref: string): RuleMeta | undefined =>
   metaByExport.get(ref) ?? projectByModule.get(ref);
-const resolveId = (id: string): RuleMeta | undefined =>
-  metaById.get(id) ?? projectById.get(id);
 
 /** The transitive closure of the referenced rules (each plus what it requires). */
 function rulesInPlay(refs: string[]): Set<RuleMeta> {
@@ -73,8 +68,8 @@ function rulesInPlay(refs: string[]): Set<RuleMeta> {
       return;
     }
     rules.add(rule);
-    for (const id of rule.requires) {
-      add(resolveId(id));
+    for (const dep of rule.requires) {
+      add(resolveRef(dep));
     }
   };
   for (const ref of refs) {

@@ -42,6 +42,43 @@ describe('traitOptions (traits from the rules in play)', () => {
     expect(exports).not.toContain('CollidableTrait'); // neither pulls Collision
   });
 
+  it('follows a project rule’s `use rule` dependency to the required rule’s traits', () => {
+    // Has Wind requires GravityRule (a `use rule` in its body) and provides a
+    // Windblown trait. Attaching it should surface both its own trait and the
+    // required rule's (transitively, Gravity → Motion → Collision → Space).
+    const wind = parseRuleMeta(
+      'rules/wind',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_rule',
+              fields: {NAME: 'Has Wind'},
+              next: {
+                block: {
+                  type: 'world_use_rule',
+                  fields: {RULE: 'GravityRule'},
+                  next: {
+                    block: {
+                      type: 'world_rule_trait',
+                      fields: {NAME: 'Windblown'},
+                    },
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    );
+    setProjectRuleMeta([wind!]);
+    setProjectRules(['rules/wind']);
+    const values = traitOptions().map(([, value]) => value);
+    expect(values).toContain('rules/wind#WindblownTrait'); // its own trait
+    expect(values).toContain('AffectedByGravityTrait'); // via the required GravityRule
+    expect(values).toContain('MovableTrait'); // Gravity → Motion, transitively
+  });
+
   it('offers a project `.rule`’s traits when a world attaches it (by module path)', () => {
     // A declarative project rule, referenced by its module path (as a world's
     // `use rule` names it) — its traits join the dropdown, valued by the project

@@ -38,6 +38,13 @@ export interface TraitMeta {
   readonly id: string;
   readonly name: string;
   readonly ref: MemberRef;
+  /**
+   * Traits this trait requires (an actor taking it takes them too), as `use
+   * trait` references — a built-in export name or `<module>#<export>` for a
+   * project trait. Built-in traits carry `[]` (their requires live in the engine
+   * and are not surfaced for authoring).
+   */
+  readonly requires: readonly string[];
 }
 
 export interface PropertyMeta {
@@ -91,7 +98,11 @@ export interface RuleMeta {
   /** The project module this rule is defined in (absent for built-ins). */
   readonly modulePath?: string;
   readonly ref: MemberRef;
-  /** Rule ids this rule depends on (`requires`). */
+  /**
+   * Rules this one requires, as `use rule` references — a built-in export name
+   * (`GravityRule`) or a project module path (`rules/wind`) — resolved by the
+   * same seam a world's `use rule` is.
+   */
   readonly requires: readonly string[];
   readonly traits: readonly TraitMeta[];
   readonly properties: readonly PropertyMeta[];
@@ -169,7 +180,13 @@ export function builtinRuleMeta(
     );
     const traits: TraitMeta[] = [];
     for (const trait of Object.values(rule.traits) as Trait[]) {
-      traits.push({id: trait.id, name: trait.name, ref: ref(trait)});
+      // Built-in trait requires live in the engine; not surfaced for authoring.
+      traits.push({
+        id: trait.id,
+        name: trait.name,
+        ref: ref(trait),
+        requires: [],
+      });
       for (const p of Object.values(trait.properties)) {
         properties.push(prop(p, trait.id));
       }
@@ -188,7 +205,9 @@ export function builtinRuleMeta(
       name: rule.name,
       source: 'builtin' as const,
       ref: ref(rule),
-      requires: rule.requires.map(r => r.id),
+      // A rule's dependencies as their `world-lab` export names (what a `use
+      // rule` names), so built-in and project requires resolve the same way.
+      requires: rule.requires.map(r => ref(r).exportName).filter(name => name),
       traits,
       properties,
       actions,
@@ -289,6 +308,10 @@ export function parseRuleMeta(
   const traits: TraitMeta[] = [];
   const properties: PropertyMeta[] = [];
   const events: EventMeta[] = [];
+  // Dependencies: `use rule` blocks in the rule body name the rules this one
+  // requires — a built-in export name or a project module path, exactly as a
+  // world's `use rule` names them (resolved by the same seam).
+  const requires: string[] = [];
 
   // A `define property` block → a PropertyMeta. World-scoped at the rule level;
   // actor-scoped (owned by `ownerTraitId`) inside a `define trait`'s `do`.
@@ -313,13 +336,18 @@ export function parseRuleMeta(
     });
   };
 
-  // The rule's top-level chain: world properties and traits.
+  // The rule's top-level chain: `use rule` dependencies, world properties, traits.
   for (
     let block: RuleBlock | undefined = root.next?.block;
     block;
     block = block.next?.block
   ) {
-    if (block.type === 'world_rule_property') {
+    if (block.type === 'world_use_rule') {
+      const dep = field(block, 'RULE');
+      if (dep) {
+        requires.push(dep);
+      }
+    } else if (block.type === 'world_rule_property') {
       addProperty(block);
     } else if (block.type === 'world_rule_trait') {
       const name = field(block, 'NAME');
@@ -327,14 +355,19 @@ export function parseRuleMeta(
         continue;
       }
       const traitId = slug(name);
-      traits.push({id: traitId, name, ref: ref(`${pascal(name)}Trait`)});
-      // The trait's `do` body: its actor properties and events.
+      // The trait's `do` body: `use trait` dependencies, actor properties, events.
+      const traitRequires: string[] = [];
       for (
         let member: RuleBlock | undefined = block.inputs?.DO?.block;
         member;
         member = member.next?.block
       ) {
-        if (member.type === 'world_rule_property') {
+        if (member.type === 'world_use_trait') {
+          const dep = field(member, 'TRAIT');
+          if (dep) {
+            traitRequires.push(dep);
+          }
+        } else if (member.type === 'world_rule_property') {
           addProperty(member, traitId);
         } else if (member.type === 'world_rule_event') {
           const eventName = field(member, 'NAME');
@@ -347,6 +380,12 @@ export function parseRuleMeta(
           }
         }
       }
+      traits.push({
+        id: traitId,
+        name,
+        ref: ref(`${pascal(name)}Trait`),
+        requires: traitRequires,
+      });
     }
   }
 
@@ -356,7 +395,7 @@ export function parseRuleMeta(
     source: 'project',
     modulePath,
     ref: {source: 'project', exportName: `${pascal(ruleName)}Rule`, modulePath},
-    requires: [],
+    requires,
     traits,
     properties,
     actions: [],
@@ -395,23 +434,78 @@ const defaultLiteral = (property: PropertyMeta): string => {
 /** Generate the `world-lab` RuleBuilder module for a project rule's metadata. */
 export function ruleMetaToModule(meta: RuleMeta): string {
   const q = (value: string): string => JSON.stringify(value);
-  const needsVector = meta.properties.some(
-    p => p.type === 'vector' || p.type === 'point',
+
+  // Imports are collected as dependency references are resolved.
+  const worldLabNames: string[] = ['RuleBuilder'];
+  const addWorldLab = (name: string): void => {
+    if (!worldLabNames.includes(name)) {
+      worldLabNames.push(name);
+    }
+  };
+  if (meta.properties.some(p => p.type === 'vector' || p.type === 'point')) {
+    addWorldLab('Vector');
+  }
+  const projectImports = new Map<string, string>(); // dedupe key → import line
+
+  // A default-import identifier for a project rule module (`rules/wind` → `Wind`).
+  const moduleVar = (path: string): string =>
+    pascal(path.split('/').pop() ?? path) || 'Rule';
+
+  // A rule dependency (`use rule` value) → its code reference: a built-in export
+  // (named from `world-lab`) or a project rule (default import from its module).
+  const ruleDepRef = (dep: string): string => {
+    if (dep.includes('/')) {
+      const varName = moduleVar(dep);
+      projectImports.set(`default:${dep}`, `import ${varName} from ${q(dep)};`);
+      return varName;
+    }
+    addWorldLab(dep);
+    return dep;
+  };
+
+  // A trait dependency (`use trait` value) → its code reference: a built-in trait
+  // (named from `world-lab`) or a project trait (`<module>#<export>`, named).
+  const traitDepRef = (dep: string): string => {
+    const hash = dep.indexOf('#');
+    if (hash >= 0) {
+      const modulePath = dep.slice(0, hash);
+      const exportName = dep.slice(hash + 1);
+      projectImports.set(
+        `named:${modulePath}:${exportName}`,
+        `import {${exportName}} from ${q(modulePath)};`,
+      );
+      return exportName;
+    }
+    addWorldLab(dep);
+    return dep;
+  };
+
+  // Resolve dependency refs first, so the imports above are populated.
+  const ruleRequires = meta.requires.map(ruleDepRef);
+  const traitRequires = meta.traits.map(trait =>
+    trait.requires.map(traitDepRef),
   );
-  const lines: string[] = [
-    `import {RuleBuilder${needsVector ? ', Vector' : ''}} from 'world-lab';`,
-    '',
+
+  const body: string[] = [
     `const rule = new RuleBuilder({id: ${q(meta.id)}, name: ${q(meta.name)}});`,
   ];
+  if (ruleRequires.length > 0) {
+    body.push(`rule.requires([${ruleRequires.join(', ')}]);`);
+  }
 
   // Traits first, so an actor-scoped property can attach to its trait below.
   const traitExportById = new Map<string, string>();
-  for (const trait of meta.traits) {
+  meta.traits.forEach((trait, i) => {
     traitExportById.set(trait.id, trait.ref.exportName);
-    lines.push(
+    body.push(
       `export const ${trait.ref.exportName} = rule.addTrait({id: ${q(trait.id)}, name: ${q(trait.name)}});`,
     );
-  }
+    if (traitRequires[i].length > 0) {
+      body.push(
+        `${trait.ref.exportName}.requires([${traitRequires[i].join(', ')}]);`,
+      );
+    }
+  });
 
   for (const property of meta.properties) {
     const owner =
@@ -419,17 +513,24 @@ export function ruleMetaToModule(meta: RuleMeta): string {
         ? traitExportById.get(property.ownerTraitId)
         : undefined;
     const target = owner ?? 'rule';
-    lines.push(
+    body.push(
       `export const ${property.ref.exportName} = ${target}.addProperty(${q(property.id)}, ${q(property.type)}, ${defaultLiteral(property)}, {name: ${q(property.name)}});`,
     );
   }
 
   for (const event of meta.events) {
-    lines.push(
+    body.push(
       `export const ${event.ref.exportName} = rule.addEvent(${q(event.id)}, {name: ${q(event.name)}});`,
     );
   }
 
-  lines.push('', 'export default rule.build();', '');
-  return lines.join('\n');
+  return [
+    `import {${worldLabNames.join(', ')}} from 'world-lab';`,
+    ...projectImports.values(),
+    '',
+    ...body,
+    '',
+    'export default rule.build();',
+    '',
+  ].join('\n');
 }

@@ -1548,7 +1548,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     name: 'Rule',
     blocks: [
       'world_rule',
+      'world_use_rule', // a rule's dependencies (requires)
       'world_rule_trait',
+      'world_use_trait', // a trait's dependencies (requires), inside a trait
       'world_rule_property',
       'world_rule_event',
     ],
