@@ -56,6 +56,15 @@ export interface SpriteLab2ItemEntry {
   itemType?: 'sprite' | 'background';
 }
 
+// A behavior2 system implementation (student-facing word: "system"): the
+// name keys the generated-code registry (see blockly/behavior2Meta), the
+// source is the Systems-tab workspace. Projects without stored behavior2s
+// fall back to the defaults in blockly/defaultBehavior2s.
+export interface SpriteLab2Behavior2 {
+  name: string;
+  source?: WorkspaceSerialization;
+}
+
 // A named code workspace. The id is the source of truth (the go-to-scene
 // block stores it); scenes[0] is the default scene Play starts at.
 export interface SpriteLab2Scene {
@@ -77,6 +86,8 @@ export interface SpriteLab2Source extends ProjectSources {
   scenes?: SpriteLab2Scene[];
   // Items tab gallery metadata.
   items?: SpriteLab2ItemEntry[];
+  // Behavior2 prototype: this project's system implementations.
+  behavior2s?: SpriteLab2Behavior2[];
 }
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
