@@ -5,6 +5,10 @@ import {
   compileBehavior2Sources,
   sanitizeBehavior2Source,
 } from '@cdo/apps/p5lab/spritelab/lab2/blockly/behavior2';
+import {
+  clearCurrentBehavior2Name,
+  setCurrentBehavior2Name,
+} from '@cdo/apps/p5lab/spritelab/lab2/blockly/behavior2Compile';
 import behavior2Blocks from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/behavior2Blocks';
 import {DEFAULT_BEHAVIOR2S} from '@cdo/apps/p5lab/spritelab/lab2/blockly/defaultBehavior2s';
 
@@ -79,6 +83,40 @@ describe('behavior2 codegen', () => {
     ) as [string, number];
     expect(set).toBe("setProp(__current, '__b2__jump_count', 3);\n");
     expect(get[0]).toBe("(getProp(__current, '__b2__jump_count') || 0)");
+  });
+
+  it('report stamps the event with the system being compiled', () => {
+    setCurrentBehavior2Name('platformer');
+    try {
+      const code = generatorFor('spritelab2_reportForThisSprite')(
+        fakeBlock({EVENT: 'landed'}),
+        fakeGenerator()
+      );
+      expect(code).toBe(
+        'raiseSystemEvent("platformer", "landed", __current);\n'
+      );
+    } finally {
+      clearCurrentBehavior2Name();
+    }
+  });
+
+  it('when-reports wraps its body in an extraArgs callback', () => {
+    const code = generatorFor('spritelab2_whenSystemReports')(
+      fakeBlock({SYSTEM: 'platformer', EVENT: 'landed'}),
+      fakeGenerator()
+    );
+    expect(code).toBe(
+      'whenSystemReports(\'platformer\', "landed", ' +
+        'function (extraArgs) {\n  body();\n});\n'
+    );
+  });
+
+  it('the reported sprite resolves from extraArgs', () => {
+    const result = generatorFor('spritelab2_reportedSprite')(
+      fakeBlock({}),
+      fakeGenerator()
+    ) as [string, number];
+    expect(result[0]).toBe('{id: extraArgs.subjectSprite}');
   });
 
   it('make-with-system tags the group with the system name and starts it once with the middle setting', () => {
@@ -205,6 +243,13 @@ describe('default behavior2 sources', () => {
       // And it actually is a per-sprite system, not an empty workspace.
       expect(used).toContain('spritelab2_forEachSpriteOfType');
     });
+  });
+
+  it('the platformer reports landed (the composability demo)', () => {
+    const platformer = DEFAULT_BEHAVIOR2S.find(b => b.name === 'platformer');
+    expect(JSON.stringify(platformer?.source)).toContain(
+      'spritelab2_reportForThisSprite'
+    );
   });
 
   it('default ids are unique within each workspace', () => {

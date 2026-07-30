@@ -14,6 +14,11 @@ export function clearCurrentBehavior2Name(): void {
   currentBehavior2Name = '';
 }
 
+// The system being compiled — the report block stamps its events with it.
+export function getCurrentBehavior2Name(): string {
+  return currentBehavior2Name;
+}
+
 function sanitize(part: string): string {
   return part.replace(/[^a-zA-Z0-9]/g, '_');
 }

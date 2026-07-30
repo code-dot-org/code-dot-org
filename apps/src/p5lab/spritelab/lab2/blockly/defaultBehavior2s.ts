@@ -16,6 +16,8 @@ interface BlockNode {
   type: string;
   id: string;
   fields?: {[name: string]: unknown};
+  // controls_if's else arm rides serialized mutator state.
+  extraState?: {[name: string]: unknown};
   inputs?: {[name: string]: {block: BlockNode}};
   next?: {block: BlockNode};
 }
@@ -57,6 +59,43 @@ const ifBlock = (
   ...(next ? {next: {block: next}} : {}),
 });
 
+const ifElseBlock = (
+  id: string,
+  condition: BlockNode,
+  then: BlockNode,
+  otherwise: BlockNode,
+  next?: BlockNode
+): BlockNode => ({
+  type: 'controls_if',
+  id,
+  extraState: {hasElse: true},
+  inputs: {
+    IF0: {block: condition},
+    DO0: {block: then},
+    ELSE: {block: otherwise},
+  },
+  ...(next ? {next: {block: next}} : {}),
+});
+
+const getState = (id: string, name: string): BlockNode => ({
+  type: 'spritelab2_getStateForThisSprite',
+  id,
+  fields: {NAME: name},
+});
+
+const setState = (
+  id: string,
+  name: string,
+  value: BlockNode,
+  next?: BlockNode
+): BlockNode => ({
+  type: 'spritelab2_setStateForThisSprite',
+  id,
+  fields: {NAME: name},
+  inputs: {VALUE: {block: value}},
+  ...(next ? {next: {block: next}} : {}),
+});
+
 const workspace = (top: BlockNode): WorkspaceSerialization =>
   ({
     blocks: {languageVersion: 0, blocks: [top]},
@@ -76,8 +115,9 @@ const negSetting = (id: string): BlockNode => ({
 });
 
 // platformer: gravity pulls every frame (the setting, negative = downward);
-// standing on a platform block stops a fall and allows a space jump; arrows
-// set walking speed directly.
+// standing on a platform block stops a fall, reports "landed" (once — the
+// airborne state marks the fall), and allows a space jump; arrows set
+// walking speed directly.
 const platformerSource = workspace({
   type: 'spritelab2_forEachSpriteOfType',
   id: 'pf_loop',
@@ -89,7 +129,7 @@ const platformerSource = workspace({
         fields: {PROPERTY: 'velocityY'},
         inputs: {VALUE: {block: setting('pf_gravity_s')}},
         next: {
-          block: ifBlock(
+          block: ifElseBlock(
             'pf_grounded',
             {
               type: 'spritelab2_standingOnType',
@@ -115,11 +155,29 @@ const platformerSource = workspace({
               },
               setVelocity('pf_stop', 'velocityY', num('pf_stop_n', 0)),
               ifBlock(
-                'pf_jump',
-                keyHeld('pf_space', 'space'),
-                setVelocity('pf_jump_set', 'velocityY', num('pf_jump_n', 13))
+                'pf_landed',
+                {
+                  type: 'logic_compare',
+                  id: 'pf_was_airborne',
+                  fields: {OP: 'EQ'},
+                  inputs: {
+                    A: {block: getState('pf_airborne_get', 'airborne')},
+                    B: {block: num('pf_one', 1)},
+                  },
+                },
+                setState('pf_airborne_clear', 'airborne', num('pf_zero2', 0), {
+                  type: 'spritelab2_reportForThisSprite',
+                  id: 'pf_report',
+                  fields: {EVENT: 'landed'},
+                }),
+                ifBlock(
+                  'pf_jump',
+                  keyHeld('pf_space', 'space'),
+                  setVelocity('pf_jump_set', 'velocityY', num('pf_jump_n', 13))
+                )
               )
             ),
+            setState('pf_airborne_set', 'airborne', num('pf_one2', 1)),
             setVelocity(
               'pf_walk_reset',
               'velocityX',

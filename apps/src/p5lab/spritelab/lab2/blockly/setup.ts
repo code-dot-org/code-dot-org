@@ -175,6 +175,8 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'spritelab2_makeTypedSprites',
       'spritelab2_makeSpritesWithSystem',
       'spritelab2_startSystem',
+      'spritelab2_whenSystemReports',
+      'spritelab2_reportedSprite',
     ],
   },
   {

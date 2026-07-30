@@ -49,6 +49,7 @@ const SYSTEMS_TOOLBOX = {
       inputs: {VALUE: numberShadow(0)},
     },
     {kind: 'block', type: 'spritelab2_getStateForThisSprite'},
+    {kind: 'block', type: 'spritelab2_reportForThisSprite'},
     {kind: 'block', type: 'spritelab2_thisSprite'},
     {kind: 'block', type: 'math_number'},
     {

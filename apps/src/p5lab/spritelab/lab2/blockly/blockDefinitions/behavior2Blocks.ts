@@ -3,7 +3,7 @@ import {Order} from 'blockly/javascript';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {behavior2StateKey} from '../behavior2Compile';
+import {behavior2StateKey, getCurrentBehavior2Name} from '../behavior2Compile';
 import {
   BEHAVIOR2_SYSTEMS,
   BEHAVIOR2_TYPE_OPTIONS,
@@ -191,7 +191,94 @@ const makeSpritesWithSystemHelperCode = [
 ].join('\n');
 
 // ---------------------------------------------------------------------------
+// System events: a system reports a named moment for a sprite; the Code tab
+// listens. This is what lets student game logic compose with a system —
+// sounds, scores, win conditions — without re-deriving its facts per frame.
+
+const whenSystemReports: BlockJson = {
+  type: 'spritelab2_whenSystemReports',
+  message0: 'when %1 system reports %2 %3 %4',
+  args0: [
+    dropdown(
+      'SYSTEM',
+      BEHAVIOR2_SYSTEMS.map((system): [string, string] => [
+        system.label,
+        system.name,
+      ])
+    ),
+    {type: 'field_input', name: 'EVENT', text: 'landed', spellcheck: false},
+    {type: 'input_dummy', name: 'ROW_BREAK'},
+    {type: 'input_statement', name: 'DO'},
+  ],
+  inputsInline: true,
+  style: BlockStyles.EVENT,
+};
+
+const whenSystemReportsGenerator: GeneratorFunction = (block, generator) => {
+  const body = generator.statementToCode(block, 'DO');
+  return (
+    `whenSystemReports('${block.getFieldValue('SYSTEM')}', ` +
+    `${JSON.stringify(block.getFieldValue('EVENT'))}, ` +
+    `function (extraArgs) {\n${body}});\n`
+  );
+};
+
+// Handlers register at program start; a system raises during its per-frame
+// pass and the handlers run right then, like the stock event callbacks.
+const whenSystemReportsHelperCode = [
+  'var __b2EventHandlers = {};',
+  'function whenSystemReports(systemName, eventName, callback) {',
+  '  var key = systemName + ":" + eventName;',
+  '  if (!__b2EventHandlers[key]) {',
+  '    __b2EventHandlers[key] = [];',
+  '  }',
+  '  __b2EventHandlers[key].push(callback);',
+  '}',
+  'function raiseSystemEvent(systemName, eventName, sprite) {',
+  '  var handlers = __b2EventHandlers[systemName + ":" + eventName];',
+  '  if (!handlers) {',
+  '    return;',
+  '  }',
+  '  for (var i = 0; i < handlers.length; i++) {',
+  '    handlers[i]({subjectSprite: sprite.id});',
+  '  }',
+  '}',
+].join('\n');
+
+// The sprite a system reported for, inside the when-reports callback.
+const reportedSprite: BlockJson = {
+  type: 'spritelab2_reportedSprite',
+  message0: 'the reported sprite',
+  output: 'Sprite',
+  style: BlockStyles.SPRITE,
+};
+
+const reportedSpriteGenerator: GeneratorFunction = () => [
+  '{id: extraArgs.subjectSprite}',
+  Order.ATOMIC,
+];
+
+// ---------------------------------------------------------------------------
 // Systems tab: the implementation language.
+
+// Raise an event from inside a system, stamped with the system being
+// compiled (the compile context), for the current sprite.
+const reportForThisSprite: BlockJson = {
+  type: 'spritelab2_reportForThisSprite',
+  message0: 'report %1 for this sprite',
+  args0: [
+    {type: 'field_input', name: 'EVENT', text: 'landed', spellcheck: false},
+  ],
+  previousStatement: null,
+  nextStatement: null,
+  style: BlockStyles.EVENT,
+};
+
+const reportForThisSpriteGenerator: GeneratorFunction = block => {
+  const system = JSON.stringify(getCurrentBehavior2Name());
+  const event = JSON.stringify(block.getFieldValue('EVENT'));
+  return `raiseSystemEvent(${system}, ${event}, __current);\n`;
+};
 
 // No previous/next connections: the loop is the system's top-level
 // construct, like an event hat. This also keeps the disable-orphans
@@ -404,6 +491,13 @@ const behavior2BlockDefinitions: {
     generator: makeSpritesWithSystemGenerator,
     helperCode: makeSpritesWithSystemHelperCode,
   },
+  {
+    definition: whenSystemReports,
+    generator: whenSystemReportsGenerator,
+    helperCode: whenSystemReportsHelperCode,
+  },
+  {definition: reportedSprite, generator: reportedSpriteGenerator},
+  {definition: reportForThisSprite, generator: reportForThisSpriteGenerator},
   {definition: forEachSpriteOfType, generator: forEachSpriteOfTypeGenerator},
   {definition: thisSprite, generator: thisSpriteGenerator},
   {definition: systemSetting, generator: systemSettingGenerator},
