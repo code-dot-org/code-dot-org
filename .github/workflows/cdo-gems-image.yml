@@ -36,7 +36,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  # Cancelling a publish would leave the tag set half-written.
+  # Publishes are not governed here; build-push has its own group.
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
@@ -196,6 +196,8 @@ jobs:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
           set -euxo pipefail
+          # An empty list would make this step a green no-op.
+          test -n "$TAGS"
           for ref in $TAGS; do
             docker tag cdo-gems:publish "$ref"
             docker push "$ref"
