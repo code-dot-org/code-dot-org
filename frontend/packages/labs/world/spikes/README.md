@@ -62,3 +62,17 @@ others it drives the real dev servers rather than self-serving.
   `yarn dev:isolated` (separately), then `node spikes/milestone-5/verify.mjs`.
   (Reload once on the first run — Vite optimizes `phaser`/`esbuild-wasm` and
   reloads the sandbox iframes.)
+
+## project-rules/
+
+De-risks relocating the standard rule library from the engine bundle into the
+learner's project as source (the "rules as `.rule`/`.js` files" direction;
+`specs/PLAN.md:249`, `specs/INTERFACE.md`). Answers whether a `RuleBuilder` rule
+authored in a project file compiles and runs in the preview. See
+`project-rules/FINDINGS.md` for results — the runtime half works; the editor half
+(project-driven block generation) is next.
+
+- `rules/gravity.js` — a from-scratch project port of the built-in Gravity rule.
+- `scenes/spike.js` — a JS scene running it end to end (player falls and lands).
+  Verified by adding both to `DEFAULT_PROJECT`, pointing `ENTRY_FILE` at the
+  spike, driving the preview headless, then reverting.
