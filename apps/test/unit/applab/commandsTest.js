@@ -66,6 +66,19 @@ describe('setProperty image URL moderation', () => {
     expect(global.Applab.updateProperty).not.toHaveBeenCalled();
     expect(errorHandler.outputWarning).toHaveBeenCalled();
   });
+
+  it('does not update property when moderation is unavailable', async () => {
+    mockModerateImageUrl.mockResolvedValue('error');
+    applabCommands.setProperty({
+      elementId: 'test-image',
+      property: 'image',
+      value: 'http://example.com/image.png',
+    });
+    await Promise.resolve();
+
+    expect(global.Applab.updateProperty).not.toHaveBeenCalled();
+    expect(errorHandler.outputWarning).toHaveBeenCalled();
+  });
 });
 
 describe('rgb command', () => {
