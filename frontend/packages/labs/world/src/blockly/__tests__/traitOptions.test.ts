@@ -1,10 +1,18 @@
 import {afterEach, describe, expect, it} from 'vitest';
 
-import {setProjectRules, traitOptions} from '../traitOptions';
+import {parseRuleMeta} from '../ruleMeta';
+import {
+  setProjectRuleMeta,
+  setProjectRules,
+  traitOptions,
+} from '../traitOptions';
 
-// `traitOptions` reads the engine's real rule/trait objects, so this exercises
-// the actual `requires` graph, not a mirror.
-afterEach(() => setProjectRules([]));
+// `traitOptions` reads rule metadata (built-ins derived from the engine's real
+// rule graph, so this exercises the actual `requires` graph, not a mirror).
+afterEach(() => {
+  setProjectRules([]);
+  setProjectRuleMeta([]);
+});
 
 describe('traitOptions (traits from the rules in play)', () => {
   it('lists a rule’s traits plus those of every rule it requires', () => {
@@ -32,6 +40,38 @@ describe('traitOptions (traits from the rules in play)', () => {
     expect(exports).toContain('AppearanceTrait'); // Animation
     expect(exports).toContain('MovableTrait'); // Input requires Motion
     expect(exports).not.toContain('CollidableTrait'); // neither pulls Collision
+  });
+
+  it('offers a project `.rule`’s traits when a world attaches it (by module path)', () => {
+    // A declarative project rule, referenced by its module path (as a world's
+    // `use rule` names it) — its traits join the dropdown, valued by the project
+    // export the generator will write.
+    const wind = parseRuleMeta(
+      'rules/wind',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_rule',
+              fields: {NAME: 'Has Wind'},
+              next: {
+                block: {
+                  type: 'world_rule_trait',
+                  fields: {ID: 'windblown', NAME: 'Blown by Wind'},
+                },
+              },
+            },
+          ],
+        },
+      }),
+    );
+    setProjectRuleMeta([wind!]);
+    setProjectRules(['rules/wind', 'GravityRule']);
+    const byExport = new Map(
+      traitOptions().map(([label, exp]) => [exp, label]),
+    );
+    expect(byExport.get('WindblownTrait')).toBe('Blown by Wind'); // project rule
+    expect(byExport.get('AffectedByGravityTrait')).toBe('Affected by Gravity'); // built-in still works
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {

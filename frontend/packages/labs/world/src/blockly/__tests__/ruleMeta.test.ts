@@ -2,7 +2,7 @@ import {describe, expect, it} from 'vitest';
 
 import * as WorldLab from '../../engine';
 import {CollisionRule, GravityRule} from '../../engine';
-import {builtinRuleMeta, type RuleMeta} from '../ruleMeta';
+import {builtinRuleMeta, parseRuleMeta, type RuleMeta} from '../ruleMeta';
 
 // Derive metadata for a couple of the real built-in rules and assert it mirrors
 // them — the shape the editor (trait dropdown, block generator) will consume,
@@ -89,5 +89,112 @@ describe('builtinRuleMeta', () => {
     expect(isTouching?.returns).toBe('boolean');
     expect(isTouching?.params.map(p => p.type)).toEqual(['actor', 'actor']);
     expect(isTouching?.ref.exportName).toBe('IsTouchingQuery');
+  });
+});
+
+// A hand-authored `.rule` workspace: a `world_rule` root chaining member
+// declarations. Same JSON shape as `.actor`/`.world` files (a Blockly workspace).
+const ruleFile = (...members: object[]): string => {
+  const chain = members.reduceRight<object | undefined>(
+    (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
+    undefined,
+  );
+  return JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          fields: {NAME: 'Has Wind'},
+          next: chain && {block: chain},
+        },
+      ],
+    },
+  });
+};
+
+describe('parseRuleMeta', () => {
+  it('reads a declarative `.rule` workspace into RuleMeta (project refs)', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        {
+          type: 'world_rule_trait',
+          fields: {ID: 'windblown', NAME: 'Blown by Wind'},
+        },
+        {
+          type: 'world_rule_property',
+          fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
+        },
+        {
+          // An actor-scoped property (owned by a trait).
+          type: 'world_rule_property',
+          fields: {
+            ID: 'drag',
+            NAME: 'drag',
+            TYPE: 'number',
+            TRAIT: 'windblown',
+          },
+        },
+        {type: 'world_rule_event', fields: {ID: 'gusted', NAME: 'is gusted'}},
+      ),
+    );
+    expect(meta).toBeDefined();
+    expect(meta).toMatchObject({
+      id: 'Has_Wind',
+      name: 'Has Wind',
+      source: 'project',
+      modulePath: 'rules/wind',
+    });
+    // Members are `project` refs into the module, named by the id convention.
+    expect(meta?.traits).toEqual([
+      {
+        id: 'windblown',
+        name: 'Blown by Wind',
+        ref: {
+          source: 'project',
+          exportName: 'WindblownTrait',
+          modulePath: 'rules/wind',
+        },
+      },
+    ]);
+    expect(meta?.properties).toContainEqual(
+      expect.objectContaining({
+        id: 'strength',
+        scope: 'world',
+        type: 'number',
+        default: 0,
+        ref: expect.objectContaining({
+          source: 'project',
+          exportName: 'StrengthProperty',
+          modulePath: 'rules/wind',
+        }),
+      }),
+    );
+    // The actor-scoped one carries its owning trait id.
+    expect(meta?.properties).toContainEqual(
+      expect.objectContaining({
+        id: 'drag',
+        scope: 'actor',
+        ownerTraitId: 'windblown',
+      }),
+    );
+    expect(meta?.events).toEqual([
+      {
+        id: 'gusted',
+        name: 'is gusted',
+        ref: {
+          source: 'project',
+          exportName: 'GustedEvent',
+          modulePath: 'rules/wind',
+        },
+      },
+    ]);
+  });
+
+  it('returns undefined for non-rule or mid-edit content', () => {
+    expect(parseRuleMeta('rules/x', 'not json yet')).toBeUndefined();
+    expect(
+      parseRuleMeta('rules/x', JSON.stringify({blocks: {blocks: []}})),
+    ).toBeUndefined();
   });
 });

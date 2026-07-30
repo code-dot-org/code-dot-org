@@ -1,53 +1,74 @@
-// The `world_use_trait` dropdown lists the traits an actor may take — and a
-// trait is available only when a rule that provides it is in play. "In play"
-// means: attached to some `.world` file in the project, OR required (transitively)
-// by one that is. Rather than mirror the engine's rule/trait structure here, we
-// read it straight off the engine objects — the single source of truth — since a
-// `.world`'s `use rule` blocks name rules by their `world-lab` export. (This
-// imports the engine into the editor; that is deliberate — rules are headed
-// toward being importable, inspectable project sources.)
+// The `world_use_trait` dropdown lists the traits an actor may take — a trait is
+// available only when a rule that provides it is in play: attached to some
+// `.world` file in the project, or required (transitively) by one. The rules are
+// described as `RuleMeta` (the built-in library now; project `.rule` files join
+// the same set later), so this reads metadata rather than the engine's rule
+// objects directly — the seam that lets project rules contribute traits.
 
-import * as WorldLab from '../engine';
-import {Trait} from '../engine';
-
+import {BUILTIN_RULE_META} from './builtinMeta';
 import {liveDropdown} from './moduleOptions';
+import type {RuleMeta} from './ruleMeta';
 
-// A rule is a frozen record; we only need its trait set and dependencies.
-interface RuleLike {
-  readonly requires: readonly RuleLike[];
-  readonly traits: Readonly<Record<string, Trait>>;
+// The rules the editor knows, indexed for resolution: by `world-lab` export name
+// (what a `.world`'s `use rule` block names) and by rule id (what `requires`
+// lists). Built-ins now; project `.rule` metadata will extend these.
+const metaByExport = new Map<string, RuleMeta>();
+const metaById = new Map<string, RuleMeta>();
+for (const rule of BUILTIN_RULE_META) {
+  if (rule.ref.exportName) {
+    metaByExport.set(rule.ref.exportName, rule);
+  }
+  metaById.set(rule.id, rule);
 }
 
-// Every Trait object → the name it's exported under (for `WorldLab.<name>` in
-// generated code), discovered once from the engine namespace.
-const TRAIT_EXPORT_NAME = new Map<Trait, string>();
-for (const [name, value] of Object.entries(WorldLab)) {
-  if (value instanceof Trait) {
-    TRAIT_EXPORT_NAME.set(value, name);
+// The project's declarative `.rule` rules, indexed by module path (what a world's
+// `use rule` names) and id (what `requires` lists). Refreshed per project.
+let projectByModule = new Map<string, RuleMeta>();
+let projectById = new Map<string, RuleMeta>();
+
+/** Register the project's parsed `.rule` metadata (for resolving project rules
+ *  a world attaches, and their transitive requires). */
+export function setProjectRuleMeta(metas: RuleMeta[]): void {
+  projectByModule = new Map();
+  projectById = new Map();
+  for (const meta of metas) {
+    if (meta.modulePath) {
+      projectByModule.set(meta.modulePath, meta);
+    }
+    projectById.set(meta.id, meta);
   }
 }
 
-// The rules the project's worlds attach (their export names), refreshed from the
-// project sources before the editor loads or the generator runs.
-let projectRuleNames: string[] = [];
+// The rules the project's worlds attach — a built-in export name or a project
+// `.rule` module path — refreshed before the editor loads or the generator runs.
+let projectRuleRefs: string[] = [];
 
-/** Replace the rule names the trait dropdown derives its traits from. */
-export function setProjectRules(names: string[]): void {
-  projectRuleNames = names;
+/** Replace the rule references the trait dropdown derives its traits from. */
+export function setProjectRules(refs: string[]): void {
+  projectRuleRefs = refs;
 }
 
-/** The transitive closure of the named rules (each rule plus what it requires). */
-function rulesInPlay(names: string[]): Set<RuleLike> {
-  const rules = new Set<RuleLike>();
-  const add = (rule: RuleLike | undefined): void => {
+// A ref resolves to a built-in (by export name) or a project rule (by module
+// path); a rule's `requires` lists ids across both sets.
+const resolveRef = (ref: string): RuleMeta | undefined =>
+  metaByExport.get(ref) ?? projectByModule.get(ref);
+const resolveId = (id: string): RuleMeta | undefined =>
+  metaById.get(id) ?? projectById.get(id);
+
+/** The transitive closure of the referenced rules (each plus what it requires). */
+function rulesInPlay(refs: string[]): Set<RuleMeta> {
+  const rules = new Set<RuleMeta>();
+  const add = (rule: RuleMeta | undefined): void => {
     if (!rule || rules.has(rule)) {
       return;
     }
     rules.add(rule);
-    rule.requires.forEach(add);
+    for (const id of rule.requires) {
+      add(resolveId(id));
+    }
   };
-  for (const name of names) {
-    add((WorldLab as Record<string, unknown>)[name] as RuleLike | undefined);
+  for (const ref of refs) {
+    add(resolveRef(ref));
   }
   return rules;
 }
@@ -55,22 +76,21 @@ function rulesInPlay(names: string[]): Set<RuleLike> {
 /**
  * Current `[label, exportName]` options: every trait provided by a rule in play,
  * labelled by its display name, valued by its `world-lab` export (what the
- * generator writes). Sorted by label for a stable dropdown.
+ * generator writes). Deduped by export, sorted by label for a stable dropdown.
  */
 export function traitOptions(): Array<[string, string]> {
-  const traits = new Set<Trait>();
-  for (const rule of rulesInPlay(projectRuleNames)) {
-    for (const trait of Object.values(rule.traits)) {
-      traits.add(trait);
+  const seen = new Set<string>();
+  const options: Array<[string, string]> = [];
+  for (const rule of rulesInPlay(projectRuleRefs)) {
+    for (const trait of rule.traits) {
+      const {exportName} = trait.ref;
+      if (exportName && !seen.has(exportName)) {
+        seen.add(exportName);
+        options.push([trait.name, exportName]);
+      }
     }
   }
-  const options = [...traits]
-    .map(
-      trait =>
-        [trait.name, TRAIT_EXPORT_NAME.get(trait) ?? ''] as [string, string],
-    )
-    .filter(([, exportName]) => exportName !== '')
-    .sort((a, b) => a[0].localeCompare(b[0]));
+  options.sort((a, b) => a[0].localeCompare(b[0]));
   return options.length ? options : [['(none)', '']];
 }
 
