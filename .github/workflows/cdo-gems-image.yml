@@ -161,8 +161,13 @@ jobs:
         with:
           images: ${{ env.IMAGE }}
           # latest=auto produces nothing for raw and sha tags, so declare it.
+          #
+          # Literal paths, no globs: hashFiles digests files in glob order and
+          # @actions/glob documents that order as not guaranteed. Engine
+          # gemspecs need no entry — Gemfile.lock's PATH section records every
+          # one, its version, and its dependencies.
           tags: |
-            type=raw,value=bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile', 'dashboard/engines/*/*.gemspec', 'dashboard/engines/*/lib/*/version.rb') }},enable={{is_default_branch}}
+            type=raw,value=bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile') }},enable={{is_default_branch}}
             type=sha,prefix=git-,format=long,enable={{is_default_branch}}
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}

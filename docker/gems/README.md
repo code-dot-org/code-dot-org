@@ -184,14 +184,20 @@ ghcr.io/code-dot-org/cdo-gems:latest
 The `bundle-` tag is the content key: a downstream build asks for the gem layer
 matching its own inputs and gets it whenever those inputs have not moved,
 regardless of which commit built it. It keys on everything that decides what
-lands in the bundle — `.ruby-version`, `Gemfile`, `Gemfile.lock`, both
-Dockerfiles, and the engine gemspecs and version files — rather than on the
-lockfile alone. Group membership and `install_if` conditions live only in the
-Gemfile, since the lockfile records names and versions but not which groups
-they belong to. Moving a gem into `:test` therefore changes what
-`BUNDLE_WITHOUT` installs while leaving `Gemfile.lock` byte-identical, and a
-key over the lockfile alone would republish different contents under a name
-something else had already resolved.
+lands in the bundle — `.ruby-version`, `Gemfile`, `Gemfile.lock` and both
+Dockerfiles — rather than on the lockfile alone. Group membership and
+`install_if` conditions live only in the Gemfile, since the lockfile records
+names and versions but not which groups they belong to. Moving a gem into
+`:test` therefore changes what `BUNDLE_WITHOUT` installs while leaving
+`Gemfile.lock` byte-identical, and a key over the lockfile alone would republish
+different contents under a name something else had already resolved.
+
+Those five are literal paths rather than globs, because `hashFiles` digests
+files in glob order and `@actions/glob` documents its order as not guaranteed —
+a glob matching more than one file would leave the key depending on `readdir`.
+The engine gemspecs are not listed and do not need to be: `Gemfile.lock` carries
+a `PATH` section naming every engine, its version, and its dependencies, so
+adding an engine or bumping one moves the lockfile and therefore the key.
 
 `git-<sha>` keeps that prefix and its full length to match cdo-base, rather
 than the ecosystem default of `sha-<7chars>`.
@@ -284,7 +290,7 @@ Consumers compute the key from their own checkout, with the same pattern list
 the publish leg uses:
 
 ```yaml
-GEMS_IMAGE: ghcr.io/code-dot-org/cdo-gems:bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile', 'dashboard/engines/*/*.gemspec', 'dashboard/engines/*/lib/*/version.rb') }}
+GEMS_IMAGE: ghcr.io/code-dot-org/cdo-gems:bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile') }}
 ```
 
 That way inputs with no published gem layer are a hard build failure instead of
