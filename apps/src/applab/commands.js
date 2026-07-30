@@ -71,7 +71,21 @@ function moderationWarningForStatus(status) {
     : MODERATION_ERROR_WARNING;
 }
 
-function moderateAbsoluteImageUrl(imageUrl, commandName, onSafe, onUnsafe) {
+function captureAsyncWarningHandler() {
+  try {
+    return getAsyncOutputWarning();
+  } catch (exception) {
+    return outputWarning;
+  }
+}
+
+function moderateAbsoluteImageUrl(
+  imageUrl,
+  commandName,
+  onSafe,
+  onUnsafe,
+  warningHandler = outputWarning
+) {
   const normalizedUrl = normalizeImageUrl(imageUrl);
   moderateImageUrl(normalizedUrl, 'applab', {
     uploaderType: 'ImageURLInput',
@@ -81,7 +95,7 @@ function moderateAbsoluteImageUrl(imageUrl, commandName, onSafe, onUnsafe) {
       onSafe(normalizedUrl);
       return;
     }
-    outputWarning(`${commandName}(): ${moderationWarningForStatus(status)}`);
+    warningHandler(`${commandName}(): ${moderationWarningForStatus(status)}`);
     if (onUnsafe) {
       onUnsafe();
     }
@@ -252,10 +266,17 @@ applabCommands.image = function (opts) {
     newImage.width = newImage.height = 200;
     newImage.setAttribute('data-canonical-image-url', opts.src);
   } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
-    moderateAbsoluteImageUrl(opts.src, 'image', normalizedSrc => {
-      newImage.src = resolveAppLabImagePath(normalizedSrc);
-      newImage.setAttribute('data-canonical-image-url', normalizedSrc);
-    });
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      opts.src,
+      'image',
+      normalizedSrc => {
+        newImage.src = resolveAppLabImagePath(normalizedSrc);
+        newImage.setAttribute('data-canonical-image-url', normalizedSrc);
+      },
+      undefined,
+      warningHandler
+    );
   } else {
     newImage.src = resolveAppLabImagePath(opts.src);
     newImage.setAttribute('data-canonical-image-url', opts.src);
@@ -880,13 +901,15 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   if (assetPrefix.ABSOLUTE_REGEXP.test(opts.url)) {
+    const warningHandler = captureAsyncWarningHandler();
     moderateAbsoluteImageUrl(
       opts.url,
       'drawImageURL',
       normalizedUrl => {
         drawLoadedImage(normalizedUrl);
       },
-      () => callback(false)
+      () => callback(false),
+      warningHandler
     );
     return;
   }
@@ -1265,15 +1288,22 @@ applabCommands.setImageURL = function (opts) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
       element.setAttribute('data-canonical-image-url', opts.src);
     } else if (assetPrefix.ABSOLUTE_REGEXP.test(opts.src)) {
-      moderateAbsoluteImageUrl(opts.src, 'setImageURL', normalizedSrc => {
-        element.src = resolveAppLabImagePath(normalizedSrc);
-        element.setAttribute('data-canonical-image-url', normalizedSrc);
-        if (!toBeCached[element.src]) {
-          var moderatedImage = new Image();
-          moderatedImage.src = element.src;
-          toBeCached[element.src] = true;
-        }
-      });
+      const warningHandler = captureAsyncWarningHandler();
+      moderateAbsoluteImageUrl(
+        opts.src,
+        'setImageURL',
+        normalizedSrc => {
+          element.src = resolveAppLabImagePath(normalizedSrc);
+          element.setAttribute('data-canonical-image-url', normalizedSrc);
+          if (!toBeCached[element.src]) {
+            var moderatedImage = new Image();
+            moderatedImage.src = element.src;
+            toBeCached[element.src] = true;
+          }
+        },
+        undefined,
+        warningHandler
+      );
       return true;
     } else {
       element.src = resolveAppLabImagePath(opts.src);
@@ -1477,9 +1507,16 @@ applabCommands.setProperty = function (opts) {
     typeof value === 'string' &&
     assetPrefix.ABSOLUTE_REGEXP.test(value)
   ) {
-    moderateAbsoluteImageUrl(value, 'setProperty', normalizedValue => {
-      Applab.updateProperty(element, info.internalName, normalizedValue);
-    });
+    const warningHandler = captureAsyncWarningHandler();
+    moderateAbsoluteImageUrl(
+      value,
+      'setProperty',
+      normalizedValue => {
+        Applab.updateProperty(element, info.internalName, normalizedValue);
+      },
+      undefined,
+      warningHandler
+    );
     return;
   }
 
