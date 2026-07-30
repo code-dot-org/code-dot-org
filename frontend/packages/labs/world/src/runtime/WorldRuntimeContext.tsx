@@ -26,7 +26,6 @@ import {
 } from '../blockly/BlocklyGenerator';
 import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
 import {projectRuleMetas} from '../blockly/projectModules';
-import {parseRuleMeta, ruleMetaToModule} from '../blockly/ruleMeta';
 import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
@@ -120,14 +119,12 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     const generator = blocklyGenerator.current;
     const out: Record<string, string> = {};
     for (const [path, contents] of Object.entries(files)) {
-      if (path.endsWith('.rule')) {
-        // A `.rule` is declarative metadata (read statically for the editor); at
-        // runtime it emits a `RuleBuilder` module declaring its traits/props/
-        // events (no Steps yet), so a world/actor that imports it resolves.
-        const meta = parseRuleMeta(path.replace(/\.rule$/, ''), contents);
-        out[path] = meta ? ruleMetaToModule(meta) : 'export {};\n';
-      } else if (isBlocklyPath(path) && generator) {
-        out[path] = generator.generate(contents);
+      if (isBlocklyPath(path) && generator) {
+        // Every Blockly file — including a `.rule`, whose declarative scaffolding
+        // is emitted from its metadata and whose action/query bodies are real
+        // generated code — is turned into a world-lab module by the headless
+        // generator (which needs the file's path for a `.rule`'s own imports).
+        out[path] = generator.generate(contents, path);
       } else {
         out[path] = contents;
       }

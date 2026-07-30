@@ -244,6 +244,16 @@ const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'point',
 ]);
 
+// The types an authored query may return (its `TYPE` dropdown → the reporter's
+// output socket). A query reports a single value; `point` isn't offered (a whole
+// vector covers 2D, and a point is two scalars, not one report).
+const QUERY_RETURN_TYPES: ReadonlySet<string> = new Set([
+  'number',
+  'boolean',
+  'string',
+  'vector',
+]);
+
 /** Parse an authored default (a text field) into a value of the property's type. */
 const parseDefault = (text: string, type: PropertyType): unknown => {
   switch (type) {
@@ -307,6 +317,8 @@ export function parseRuleMeta(
 
   const traits: TraitMeta[] = [];
   const properties: PropertyMeta[] = [];
+  const actions: ActionMeta[] = [];
+  const queries: QueryMeta[] = [];
   const events: EventMeta[] = [];
   // Dependencies: `use rule` blocks in the rule body name the rules this one
   // requires — a built-in export name or a project module path, exactly as a
@@ -336,6 +348,48 @@ export function parseRuleMeta(
     });
   };
 
+  // A `define action` block → an ActionMeta (world at the rule level, actor
+  // inside a trait). The imperative body is not read here — metadata is static;
+  // the body is generated separately by the Blockly generator (extractRuleBodies)
+  // and keyed back by {@link ruleBodyKey}. Params come in a later step (`[]` now).
+  const addAction = (block: RuleBlock, ownerTraitId?: string): void => {
+    const name = field(block, 'NAME');
+    if (!name) {
+      return;
+    }
+    actions.push({
+      id: slug(name),
+      name,
+      params: [],
+      scope: ownerTraitId ? 'actor' : 'world',
+      ownerTraitId,
+      ref: ref(`${pascal(name)}Action`),
+    });
+  };
+
+  // A `define query` block → a QueryMeta. Its `TYPE` field is the value it
+  // reports (the reporter block's output socket); the body (a `return`) is
+  // generated separately, like an action's.
+  const addQuery = (block: RuleBlock, ownerTraitId?: string): void => {
+    const name = field(block, 'NAME');
+    if (!name) {
+      return;
+    }
+    const declared = field(block, 'TYPE');
+    const returns = (
+      QUERY_RETURN_TYPES.has(declared) ? declared : 'boolean'
+    ) as PropertyType;
+    queries.push({
+      id: slug(name),
+      name,
+      returns,
+      params: [],
+      scope: ownerTraitId ? 'actor' : 'world',
+      ownerTraitId,
+      ref: ref(`${pascal(name)}Query`),
+    });
+  };
+
   // The rule's top-level chain: `use rule` dependencies, world properties, traits.
   for (
     let block: RuleBlock | undefined = root.next?.block;
@@ -349,6 +403,10 @@ export function parseRuleMeta(
       }
     } else if (block.type === 'world_rule_property') {
       addProperty(block);
+    } else if (block.type === 'world_rule_action') {
+      addAction(block);
+    } else if (block.type === 'world_rule_query') {
+      addQuery(block);
     } else if (block.type === 'world_rule_trait') {
       const name = field(block, 'NAME');
       if (!name) {
@@ -369,6 +427,10 @@ export function parseRuleMeta(
           }
         } else if (member.type === 'world_rule_property') {
           addProperty(member, traitId);
+        } else if (member.type === 'world_rule_action') {
+          addAction(member, traitId);
+        } else if (member.type === 'world_rule_query') {
+          addQuery(member, traitId);
         } else if (member.type === 'world_rule_event') {
           const eventName = field(member, 'NAME');
           if (eventName) {
@@ -398,10 +460,82 @@ export function parseRuleMeta(
     requires,
     traits,
     properties,
-    actions: [],
-    queries: [],
+    actions,
+    queries,
     events,
   };
+}
+
+// ── Action / query bodies ────────────────────────────────────────────────────
+// The metadata above is static (no execution), but an action's `do` and a
+// query's `do` (ending in a `return`) are IMPERATIVE — real code, generated from
+// the body blocks the same way an event handler's body is. That needs a live
+// Blockly generator, which `parseRuleMeta` deliberately avoids, so body codegen
+// lives here as a separate pass ({@link extractRuleBodies}) run by the headless
+// generator. Each body is keyed by the member it belongs to ({@link ruleBodyKey})
+// so `ruleMetaToModule` can splice it into that member's `addAction`/`addQuery`.
+
+/** A member's body key: the scope, owning trait (if any), kind, and id. */
+export const ruleBodyKey = (
+  kind: 'action' | 'query',
+  scope: 'world' | 'actor',
+  ownerTraitId: string | undefined,
+  id: string,
+): string => `${kind}:${scope}:${ownerTraitId ?? ''}:${id}`;
+
+/** The minimal live-block surface {@link extractRuleBodies} walks. */
+interface LiveBlock {
+  type: string;
+  getFieldValue(name: string): string | null;
+  getNextBlock(): LiveBlock | null;
+  getInputTargetBlock(name: string): LiveBlock | null;
+}
+
+/** Generates the JS body for one action/query block (its `DO` statement input). */
+type BodyGen = (block: LiveBlock) => string;
+
+/**
+ * Walk a loaded `.rule` workspace's `world_rule` root and generate the body of
+ * every `define action` / `define query`, keyed by {@link ruleBodyKey}. Mirrors
+ * `parseRuleMeta`'s structural walk (scope by trait nesting) but over live
+ * blocks, so `genBody` can run `statementToCode` on each member's `DO` input.
+ */
+export function extractRuleBodies(
+  ruleRoot: LiveBlock,
+  genBody: BodyGen,
+): Map<string, string> {
+  const bodies = new Map<string, string>();
+  const visit = (
+    first: LiveBlock | null,
+    scope: 'world' | 'actor',
+    ownerTraitId: string | undefined,
+  ): void => {
+    for (let block = first; block; block = block.getNextBlock()) {
+      if (block.type === 'world_rule_action') {
+        const id = slug(block.getFieldValue('NAME') ?? '');
+        if (id) {
+          bodies.set(
+            ruleBodyKey('action', scope, ownerTraitId, id),
+            genBody(block),
+          );
+        }
+      } else if (block.type === 'world_rule_query') {
+        const id = slug(block.getFieldValue('NAME') ?? '');
+        if (id) {
+          bodies.set(
+            ruleBodyKey('query', scope, ownerTraitId, id),
+            genBody(block),
+          );
+        }
+      } else if (block.type === 'world_rule_trait') {
+        const traitId = slug(block.getFieldValue('NAME') ?? '');
+        // Actions/queries in a trait's `do` are actor-scoped, owned by the trait.
+        visit(block.getInputTargetBlock('DO'), 'actor', traitId);
+      }
+    }
+  };
+  visit(ruleRoot.getNextBlock(), 'world', undefined);
+  return bodies;
 }
 
 // ── `.rule` → RuleBuilder module ─────────────────────────────────────────────
@@ -431,9 +565,19 @@ const defaultLiteral = (property: PropertyMeta): string => {
   }
 };
 
-/** Generate the `world-lab` RuleBuilder module for a project rule's metadata. */
-export function ruleMetaToModule(meta: RuleMeta): string {
+/**
+ * Generate the `world-lab` RuleBuilder module for a project rule's metadata.
+ * `bodies` supplies the generated JS for each action/query (keyed by {@link
+ * ruleBodyKey}); with none (a declarative-only rule), those members get empty
+ * bodies. The action/query bodies reference `WorldLab.*` (built-in members) and
+ * the rule's own `export const`s, so a namespace import is added when any exist.
+ */
+export function ruleMetaToModule(
+  meta: RuleMeta,
+  bodies: ReadonlyMap<string, string> = new Map(),
+): string {
   const q = (value: string): string => JSON.stringify(value);
+  const hasBehavior = meta.actions.length > 0 || meta.queries.length > 0;
 
   // Imports are collected as dependency references are resolved.
   const worldLabNames: string[] = ['RuleBuilder'];
@@ -518,6 +662,38 @@ export function ruleMetaToModule(meta: RuleMeta): string {
     );
   }
 
+  // Actions and queries carry an imperative body (from `bodies`, else empty). An
+  // actor-scoped member is added to its owning trait and its closure takes the
+  // `actor`; a world-scoped one is added to the rule and takes the `world`. The
+  // body is a real function body — its `return` (queries) works as written.
+  const memberTarget = (member: {
+    scope: 'world' | 'actor';
+    ownerTraitId?: string;
+  }): string =>
+    (member.scope === 'actor' && member.ownerTraitId
+      ? traitExportById.get(member.ownerTraitId)
+      : undefined) ?? 'rule';
+  const subject = (member: {scope: 'world' | 'actor'}): string =>
+    member.scope === 'actor' ? 'actor' : 'world';
+
+  for (const action of meta.actions) {
+    const code = bodies.get(
+      ruleBodyKey('action', action.scope, action.ownerTraitId, action.id),
+    );
+    body.push(
+      `export const ${action.ref.exportName} = ${memberTarget(action)}.addAction(${q(action.id)}, (${subject(action)}) => {\n${code ?? ''}}, {name: ${q(action.name)}});`,
+    );
+  }
+
+  for (const query of meta.queries) {
+    const code = bodies.get(
+      ruleBodyKey('query', query.scope, query.ownerTraitId, query.id),
+    );
+    body.push(
+      `export const ${query.ref.exportName} = ${memberTarget(query)}.addQuery(${q(query.id)}, (${subject(query)}) => {\n${code ?? ''}}, {name: ${q(query.name)}, returns: ${q(query.returns ?? 'boolean')}});`,
+    );
+  }
+
   for (const event of meta.events) {
     body.push(
       `export const ${event.ref.exportName} = rule.addEvent(${q(event.id)}, {name: ${q(event.name)}});`,
@@ -526,6 +702,10 @@ export function ruleMetaToModule(meta: RuleMeta): string {
 
   return [
     `import {${worldLabNames.join(', ')}} from 'world-lab';`,
+    // Action/query bodies reference members as `WorldLab.<X>` (the same code the
+    // domain block generators emit everywhere else), so a namespace import backs
+    // them; a purely declarative rule needs only the named imports above.
+    ...(hasBehavior ? [`import * as WorldLab from 'world-lab';`] : []),
     ...projectImports.values(),
     '',
     ...body,

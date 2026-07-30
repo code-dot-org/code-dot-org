@@ -4,7 +4,9 @@ import * as WorldLab from '../../engine';
 import {CollisionRule, GravityRule} from '../../engine';
 import {
   builtinRuleMeta,
+  extractRuleBodies,
   parseRuleMeta,
+  ruleBodyKey,
   ruleMetaToModule,
   type RuleMeta,
 } from '../ruleMeta';
@@ -139,6 +141,17 @@ const trait = (name: string, ...body: object[]): object => {
     ...(inner ? {inputs: {DO: {block: inner}}} : {}),
   };
 };
+// `define action`/`define query`: the imperative-body blocks. Their `do` body is
+// not read by `parseRuleMeta` (metadata is static), so these fixtures leave it
+// empty — the body is exercised through `extractRuleBodies` below.
+const action = (name: string): object => ({
+  type: 'world_rule_action',
+  fields: {NAME: name},
+});
+const query = (type: string, name: string): object => ({
+  type: 'world_rule_query',
+  fields: {TYPE: type, NAME: name},
+});
 
 describe('parseRuleMeta', () => {
   it('reads a nested `.rule` workspace into RuleMeta (scope by nesting)', () => {
@@ -326,5 +339,159 @@ describe('rule + trait dependencies (use rule / use trait)', () => {
     expect(code).toContain(
       'WindblownTrait.requires([MovableTrait, SomeTrait]);',
     );
+  });
+});
+
+describe('actions and queries (imperative members)', () => {
+  it('parses actions/queries into metadata, scope by nesting', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        'Has Wind',
+        action('Invert'), // world action (rule level)
+        query('vector', 'Gust'), // world query
+        trait(
+          'Windblown',
+          action('Flap'), // actor action (inside the trait)
+          query('boolean', 'Is Gusting'), // actor query
+        ),
+      ),
+    )!;
+    // Ids/exports derive from the NAME; params are empty (a later step).
+    expect(meta.actions).toContainEqual(
+      expect.objectContaining({
+        id: 'Invert',
+        scope: 'world',
+        ownerTraitId: undefined,
+        params: [],
+        ref: expect.objectContaining({exportName: 'InvertAction'}),
+      }),
+    );
+    expect(meta.queries).toContainEqual(
+      expect.objectContaining({
+        id: 'Gust',
+        scope: 'world',
+        returns: 'vector',
+        ref: expect.objectContaining({exportName: 'GustQuery'}),
+      }),
+    );
+    expect(meta.actions).toContainEqual(
+      expect.objectContaining({
+        id: 'Flap',
+        scope: 'actor',
+        ownerTraitId: 'Windblown',
+        ref: expect.objectContaining({exportName: 'FlapAction'}),
+      }),
+    );
+    expect(meta.queries).toContainEqual(
+      expect.objectContaining({
+        id: 'Is_Gusting',
+        scope: 'actor',
+        ownerTraitId: 'Windblown',
+        returns: 'boolean',
+        ref: expect.objectContaining({exportName: 'IsGustingQuery'}),
+      }),
+    );
+  });
+
+  it('an unknown query return type falls back to boolean', () => {
+    const meta = parseRuleMeta(
+      'rules/x',
+      ruleFile('X', query('nonsense', 'Q')),
+    )!;
+    expect(meta.queries[0].returns).toBe('boolean');
+  });
+
+  it('emits addAction/addQuery closures with their generated bodies', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile(
+        'Has Wind',
+        action('Invert'),
+        trait('Windblown', query('boolean', 'Is Gusting')),
+      ),
+    )!;
+    // The bodies are what `extractRuleBodies` would produce, keyed the same way.
+    const bodies = new Map([
+      [
+        ruleBodyKey('action', 'world', undefined, 'Invert'),
+        'world.set(WorldLab.DirectionProperty, 1);\n',
+      ],
+      [
+        ruleBodyKey('query', 'actor', 'Windblown', 'Is_Gusting'),
+        'return actor.get(WorldLab.FallingProperty);\n',
+      ],
+    ]);
+    const code = ruleMetaToModule(meta, bodies);
+    // Bodies reference members as `WorldLab.<X>`, so a namespace import backs them.
+    expect(code).toContain(`import * as WorldLab from 'world-lab';`);
+    // A world action runs on `world`; the body is spliced verbatim.
+    expect(code).toContain(
+      `export const InvertAction = rule.addAction("Invert", (world) => {\nworld.set(WorldLab.DirectionProperty, 1);\n}, {name: "Invert"});`,
+    );
+    // An actor query is added to its trait, runs on `actor`, and declares its
+    // return type.
+    expect(code).toContain(
+      `export const IsGustingQuery = WindblownTrait.addQuery("Is_Gusting", (actor) => {\nreturn actor.get(WorldLab.FallingProperty);\n}, {name: "Is Gusting", returns: "boolean"});`,
+    );
+  });
+
+  it('adds no namespace import for a purely declarative rule', () => {
+    const meta = parseRuleMeta(
+      'rules/x',
+      ruleFile('X', prop('number', 'strength', '5')),
+    )!;
+    expect(ruleMetaToModule(meta)).not.toContain('import * as WorldLab');
+  });
+});
+
+describe('extractRuleBodies', () => {
+  // A minimal live-block stand-in: the surface the extractor walks.
+  const live = (
+    type: string,
+    fields: Record<string, string>,
+    opts: {do?: unknown; next?: unknown} = {},
+  ) => ({
+    type,
+    getFieldValue: (name: string) => fields[name] ?? null,
+    getInputTargetBlock: (name: string) => (name === 'DO' ? opts.do : null),
+    getNextBlock: () => opts.next ?? null,
+  });
+
+  it('generates each action/query body, keyed by scope/owner/id', () => {
+    // rule → action Invert → trait Windblown(do: query Is Gusting).
+    const root = live(
+      'world_rule',
+      {NAME: 'Has Wind'},
+      {
+        next: live(
+          'world_rule_action',
+          {NAME: 'Invert'},
+          {
+            next: live(
+              'world_rule_trait',
+              {NAME: 'Windblown'},
+              {
+                do: live('world_rule_query', {
+                  TYPE: 'boolean',
+                  NAME: 'Is Gusting',
+                }),
+              },
+            ),
+          },
+        ),
+      },
+    );
+    // The stand-in generator just tags each body by the block's NAME.
+    const bodies = extractRuleBodies(
+      root as never,
+      block => `BODY(${block.getFieldValue('NAME')})\n`,
+    );
+    expect(
+      bodies.get(ruleBodyKey('action', 'world', undefined, 'Invert')),
+    ).toBe('BODY(Invert)\n');
+    expect(
+      bodies.get(ruleBodyKey('query', 'actor', 'Windblown', 'Is_Gusting')),
+    ).toBe('BODY(Is Gusting)\n');
   });
 });

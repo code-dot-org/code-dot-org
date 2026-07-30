@@ -296,6 +296,19 @@ describe('domain block generators', () => {
     expect(emit('world_print', {})).toBe("console.log('');\n");
   });
 
+  it('world_return reports its value (a query body ends in one)', () => {
+    expect(
+      emit(
+        'world_return',
+        {},
+        {},
+        {VALUE: 'actor.get(WorldLab.SpeedProperty)'},
+      ),
+    ).toBe('return actor.get(WorldLab.SpeedProperty);\n');
+    // No value connected → returns `undefined`, not an empty statement.
+    expect(emit('world_return', {})).toBe('return undefined;\n');
+  });
+
   it('world_event_value yields the handler event value as an expression', () => {
     const result = generatorFor('world_event_value')(
       {} as never,
@@ -840,7 +853,8 @@ describe('rule authoring blocks (`.rule` files)', () => {
 
   it('offers a Rule toolbox category (with the dependency blocks)', () => {
     const cats = DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>;
-    // The authoring blocks plus `use rule` / `use trait` for declaring deps.
+    // The declarative authoring blocks, `use rule` / `use trait` for deps, and
+    // the imperative `define action` / `define query` (+ its `return`).
     expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual([
       'world_rule',
       'world_use_rule',
@@ -848,6 +862,9 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_use_trait',
       'world_rule_property',
       'world_rule_event',
+      'world_rule_action',
+      'world_rule_query',
+      'world_return',
     ]);
   });
 
