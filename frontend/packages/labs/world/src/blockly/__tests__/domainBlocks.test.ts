@@ -50,7 +50,9 @@ const emit = (
 /** Run a value (reporter) block's generator; returns its `[code, order]` tuple. */
 const emitValue = (
   type: string,
-  fields: Record<string, string | number> = {},
+  // A field value is usually a scalar, but a custom field (the vector field)
+  // holds a structured `{x, y}`.
+  fields: Record<string, unknown> = {},
   values: Record<string, string> = {},
 ): [string, number] => {
   const block = {getFieldValue: (name: string) => fields[name]};
@@ -286,7 +288,7 @@ describe('domain block generators', () => {
     expect(emit('world_set_RotationProperty', {}, {}, {})).toBe(
       'actor.set(WorldLab.RotationProperty, 0);\n',
     );
-    // A vector actor property (spatial scale): x/y sockets → a Vector.
+    // A point actor property (spatial scale): two number x/y sockets → a Vector.
     expect(emit('world_set_ScaleProperty', {}, {}, {X: '2', Y: '3'})).toBe(
       'actor.set(WorldLab.ScaleProperty, new WorldLab.Vector(2, 3));\n',
     );
@@ -301,10 +303,21 @@ describe('domain block generators', () => {
     expect(emit('world_set_StrengthProperty', {}, {}, {})).toBe(
       'world.set(WorldLab.StrengthProperty, 900);\n',
     );
-    // A vector world property (gravity direction); empty y → its default (1).
-    expect(emit('world_set_DirectionProperty', {}, {}, {X: '0', Y: '-1'})).toBe(
+    // A vector world property (gravity direction) is a single Vector socket — a
+    // world_vector literal, or another Vector block, slots straight in.
+    expect(
+      emit(
+        'world_set_DirectionProperty',
+        {},
+        {},
+        {
+          VALUE: 'new WorldLab.Vector(0, -1)',
+        },
+      ),
+    ).toBe(
       'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, -1));\n',
     );
+    // Empty socket → the property default (0, 1).
     expect(emit('world_set_DirectionProperty', {}, {}, {})).toBe(
       'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, 1));\n',
     );
@@ -319,7 +332,7 @@ describe('domain block generators', () => {
     expect(
       emitValue('world_get_RotationProperty', {}, {ACTOR: 'touched'})[0],
     ).toBe('touched.get(WorldLab.RotationProperty)');
-    // A vector actor property reads one component via the x/y dropdown.
+    // A point actor property reads one axis via the x/y dropdown.
     expect(emitValue('world_get_ScaleProperty', {COMPONENT: 'y'})[0]).toBe(
       'actor.get(WorldLab.ScaleProperty).y',
     );
@@ -329,9 +342,41 @@ describe('domain block generators', () => {
     expect(emitValue('world_get_StrengthProperty')[0]).toBe(
       'world.get(WorldLab.StrengthProperty)',
     );
-    expect(emitValue('world_get_DirectionProperty', {COMPONENT: 'x'})[0]).toBe(
-      'world.get(WorldLab.DirectionProperty).x',
+    // A vector property reads the whole Vector (no axis dropdown).
+    expect(emitValue('world_get_DirectionProperty')[0]).toBe(
+      'world.get(WorldLab.DirectionProperty)',
     );
+  });
+
+  it('world_vector builds a Vector literal from its field', () => {
+    // The field holds a structured {x, y}; the block emits a Vector.
+    expect(emitValue('world_vector', {VECTOR: {x: 3, y: -2}})[0]).toBe(
+      'new WorldLab.Vector(3, -2)',
+    );
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_vector') as {
+      output?: string;
+      style?: string;
+    };
+    expect(block.output).toBe('Vector'); // plugs into vector sockets
+    expect(block.style).toBe('location_blocks');
+  });
+
+  it('world_vector_component reads one axis of a Vector as a Number', () => {
+    expect(
+      emitValue('world_vector_component', {COMPONENT: 'y'}, {VEC: 'v'})[0],
+    ).toBe('v.y');
+    // Empty socket falls back to a zero vector.
+    expect(emitValue('world_vector_component', {COMPONENT: 'x'})[0]).toBe(
+      'new WorldLab.Vector(0, 0).x',
+    );
+  });
+
+  it('a vector getter/property outputs a Vector styled as a location', () => {
+    const dir = DOMAIN_BLOCKS.find(
+      b => b.type === 'world_get_DirectionProperty',
+    ) as {output?: string; style?: string};
+    expect(dir.output).toBe('Vector');
+    expect(dir.style).toBe('location_blocks');
   });
 
   it('generated world-action blocks run the action on the world', () => {

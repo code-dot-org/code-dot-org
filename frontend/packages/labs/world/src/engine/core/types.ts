@@ -7,8 +7,13 @@ import type {AnimationDef} from './animationTypes';
 import type {Trait} from './Trait';
 import type {World} from './World';
 
-/** The kinds a Property can hold. Vectors are stored as `Vector` instances. */
-export type PropertyType = 'number' | 'boolean' | 'string' | 'vector';
+/**
+ * The kinds a Property can hold. A `vector` (directional — velocity, force,
+ * gravity's direction) and a `point` (an independent x/y pair — a scale, a size,
+ * a position) are both stored as `Vector` instances; they differ only in how the
+ * Blockly editor presents them (an arrow-grid field vs. two plain number inputs).
+ */
+export type PropertyType = 'number' | 'boolean' | 'string' | 'vector' | 'point';
 
 /**
  * A typed slot of state on the World (scope 'world') or an Actor (scope

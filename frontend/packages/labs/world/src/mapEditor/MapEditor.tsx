@@ -450,7 +450,7 @@ export const MapEditor = ({
     for (const group of schemas[actor.type] ?? []) {
       for (const prop of group.props) {
         const value = valueOf(actor, prop);
-        if (prop.type === 'vector') {
+        if (prop.type === 'vector' || prop.type === 'point') {
           const v = asVec(value) ?? {x: 0, y: 0};
           next[fieldKey(prop, 'x')] = String(v.x);
           next[fieldKey(prop, 'y')] = String(v.y);
@@ -612,7 +612,7 @@ export const MapEditor = ({
         />
       );
     }
-    if (prop.type === 'vector') {
+    if (prop.type === 'vector' || prop.type === 'point') {
       return (
         <div key={fieldKey(prop)} className={styles.inspectorGrid}>
           {(['x', 'y'] as const).map(axis => (
