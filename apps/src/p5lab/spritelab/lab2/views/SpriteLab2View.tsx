@@ -561,15 +561,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
 
-  // Behavior2 prototype: the system implementations (stored, else the
-  // defaults) — what the Systems tab shows and every run composes in.
-  const behavior2s = useMemo(
-    () =>
-      currentSources.behavior2s?.length
-        ? currentSources.behavior2s
-        : DEFAULT_BEHAVIOR2S,
-    [currentSources.behavior2s]
-  );
+  // Behavior2 prototype: the system implementations — what the Systems tab
+  // shows and every run composes in. Stored systems merge over the defaults
+  // BY NAME: an edited system shadows its default, an untouched one keeps
+  // tracking the bundle (so built-in improvements reach old projects), and
+  // student-created systems follow.
+  const behavior2s = useMemo(() => {
+    const stored = currentSources.behavior2s ?? [];
+    return [
+      ...DEFAULT_BEHAVIOR2S.map(d => stored.find(b => b.name === d.name) ?? d),
+      ...stored.filter(b => !DEFAULT_BEHAVIOR2S.some(d => d.name === b.name)),
+    ];
+  }, [currentSources.behavior2s]);
   // Which system the Systems tab shows.
   const [activeSystemName, setActiveSystemName] = useState(
     DEFAULT_BEHAVIOR2S[0].name
@@ -1004,18 +1007,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun]
   );
 
-  // Save a Systems-tab edit and refresh the preview. Writing materializes
-  // the defaults into sources (first edit copies both systems in), so the
-  // untouched system keeps its default by value, not by fallback.
+  // Save a Systems-tab edit and refresh the preview. Only the edited system
+  // is stored — untouched systems stay on the bundle defaults through the
+  // per-name merge above.
   const handleSystemSourceChange = useCallback(
     (name: string, source: WorkspaceSerialization) => {
-      updateSources(prev => ({
-        ...prev,
-        behavior2s: (prev.behavior2s?.length
-          ? prev.behavior2s
-          : DEFAULT_BEHAVIOR2S
-        ).map(b => (b.name === name ? {...b, source} : b)),
-      }));
+      updateSources(prev => {
+        const stored = prev.behavior2s ?? [];
+        return {
+          ...prev,
+          behavior2s: stored.some(b => b.name === name)
+            ? stored.map(b => (b.name === name ? {...b, source} : b))
+            : [...stored, {name, source}],
+        };
+      });
       scheduleRun();
     },
     [updateSources, scheduleRun]
@@ -1028,7 +1033,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       updateSources(prev => ({
         ...prev,
         behavior2s: [
-          ...(prev.behavior2s?.length ? prev.behavior2s : DEFAULT_BEHAVIOR2S),
+          ...(prev.behavior2s ?? []),
           {name, source: emptySystemSource()},
         ],
       }));
