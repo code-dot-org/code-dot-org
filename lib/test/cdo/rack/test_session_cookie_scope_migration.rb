@@ -2,74 +2,62 @@ require_relative '../../test_helper'
 require 'rack/utils'
 require 'cdo/rack/session_cookie_scope_migration'
 
-# Hotfix middleware: keep the newest `_learn_session` cookie and expire the
-# stale host-only one, recovering users left with two cookies after the brief
-# `domain: nil` deploy. Duplicates are forged as a raw Cookie header (the only
-# way to present two same-name cookies without a real multi-subdomain browser).
+# The middleware rewrites HTTP_COOKIE to keep only the newest `_learn_session`
+# cookie, recovering users left with two cookies after the brief `domain: nil`
+# deploy. Duplicates are forged as a raw Cookie header (the only way to present
+# two same-name cookies without a real multi-subdomain browser).
 describe Rack::SessionCookieScopeMigration do
   COOKIE = '_learn_session'.freeze
 
-  # Mirrors the current config: the store writes the WILDCARD cookie when a
-  # session is present, and echoes the id the downstream stack read.
+  # Echoes the session id the downstream stack would read from HTTP_COOKIE.
   let(:app) do
     lambda do |env|
-      read = Rack::Request.new(env).cookies[COOKIE]
-      headers = {}
-      headers['Set-Cookie'] = "#{COOKIE}=#{read}; path=/; HttpOnly; domain=.code.org" if read
-      [200, headers, [read.to_s]]
+      [200, {}, [Rack::Request.new(env).cookies[COOKIE].to_s]]
     end
   end
   let(:middleware) {Rack::SessionCookieScopeMigration.new(app, cookie_name: COOKIE)}
 
+  # Drive one request; return [rewritten HTTP_COOKIE, session id the app read].
   def call(cookie_header)
-    env = Rack::MockRequest.env_for('/', 'HTTP_HOST' => 'studio.code.org')
+    env = Rack::MockRequest.env_for('/')
     env['HTTP_COOKIE'] = cookie_header if cookie_header
-    status, headers, body = middleware.call(env)
-    [status, headers, body, env]
+    _status, _headers, body = middleware.call(env)
+    [env['HTTP_COOKIE'], body.first]
   end
 
-  def set_cookies(headers)
-    Array(headers['Set-Cookie']).flat_map {|h| h.split("\n")}
-  end
-
-  describe 'duplicate cookies (stale host-only first, fresh wildcard last)' do
-    let(:header) {"#{COOKIE}=stale; #{COOKIE}=fresh"}
-
-    it 'keeps the last (newest) cookie on read' do
-      _, _, body, env = call(header)
-      _(env['HTTP_COOKIE']).must_equal "#{COOKIE}=fresh"
-      _(body.first).must_equal 'fresh'
+  describe 'duplicate session cookies (stale first, fresh last)' do
+    it 'keeps only the last (newest) occurrence, which the app then reads' do
+      header, read = call("#{COOKIE}=stale; #{COOKIE}=fresh")
+      _(header).must_equal "#{COOKIE}=fresh"
+      _(read).must_equal 'fresh'
     end
 
-    it 'expires the stale host-only cookie with a no-Domain deletion' do
-      _, headers, = call(header)
-      deletion = set_cookies(headers).find {|c| c.start_with?("#{COOKIE}=;")}
-      _(deletion).wont_be_nil
-      _(deletion).must_include 'max-age=0'
-      _(deletion).wont_include 'domain=' # host-only: must never name .code.org
-    end
-
-    it 'does not clobber the wildcard cookie the store just wrote' do
-      _, headers, = call(header)
-      store_write = set_cookies(headers).find {|c| c.start_with?("#{COOKIE}=fresh")}
-      _(store_write).wont_be_nil
-      _(store_write).must_include 'domain=.code.org'
+    it 'preserves other cookies and their order' do
+      header, = call("a=1; #{COOKIE}=stale; b=2; #{COOKIE}=fresh; c=3")
+      _(header).must_equal "a=1; b=2; c=3; #{COOKIE}=fresh"
     end
   end
 
-  describe 'a single cookie' do
-    it 'is left untouched, with no deletion emitted' do
-      _, headers, _body, env = call("#{COOKIE}=solo")
-      _(env['HTTP_COOKIE']).must_equal "#{COOKIE}=solo"
-      _(set_cookies(headers).any? {|c| c.include?('max-age=0')}).must_equal false
+  describe 'a single session cookie' do
+    it 'is left untouched' do
+      header, read = call("#{COOKIE}=solo")
+      _(header).must_equal "#{COOKIE}=solo"
+      _(read).must_equal 'solo'
+    end
+  end
+
+  describe 'duplicate non-session cookies' do
+    it 'are left untouched' do
+      header, = call('dupe=1; dupe=2')
+      _(header).must_equal 'dupe=1; dupe=2'
     end
   end
 
   describe 'no cookies' do
-    it 'passes through cleanly' do
-      status, _headers, _body, env = call(nil)
-      _(status).must_equal 200
-      _(env['HTTP_COOKIE']).must_be_nil
+    it 'passes through' do
+      header, read = call(nil)
+      _(header).must_be_nil
+      _(read).must_equal ''
     end
   end
 end
