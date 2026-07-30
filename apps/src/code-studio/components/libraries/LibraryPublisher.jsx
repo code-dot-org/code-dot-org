@@ -1,5 +1,6 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, Typography} from '@mui/material';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -153,9 +154,8 @@ export default class LibraryPublisher extends React.Component {
     const {libraryName} = this.state;
     return (
       <div>
-        <input
-          style={styles.textInput}
-          type="text"
+        <TextField
+          name="libraryName"
           value={libraryName}
           onChange={this.setLibraryName}
           onBlur={event =>
@@ -189,7 +189,7 @@ export default class LibraryPublisher extends React.Component {
         id="ui-test-library-description"
         rows="2"
         cols="200"
-        style={{...styles.textInput, ...styles.description}}
+        style={styles.description}
         placeholder={i18n.libraryDescriptionPlaceholder()}
         value={libraryDescription}
         onChange={event => {
@@ -240,24 +240,17 @@ export default class LibraryPublisher extends React.Component {
     return sourceFunctionList.map(sourceFunction => {
       const {functionName, comment} = sourceFunction;
       const checked = selectedFunctions[functionName] || false;
-      const functionId = _.uniqueId(`${functionName}-`);
 
       return (
-        <div key={functionName}>
-          <div style={styles.functionSelector}>
-            <input
-              style={styles.largerCheckbox}
-              type="checkbox"
-              id={functionId}
-              disabled={!this.isFunctionValid(sourceFunction)}
-              name={functionName}
-              checked={checked}
-              onChange={() => this.boxChecked(sourceFunction)}
-            />
-            <Typography variant="body1" component="label" htmlFor={functionId}>
-              {functionName}
-            </Typography>
-          </div>
+        <div key={functionName} style={styles.functionBlock}>
+          <Checkbox
+            name={functionName}
+            label={functionName}
+            size="l"
+            disabled={!this.isFunctionValid(sourceFunction)}
+            checked={checked}
+            onChange={() => this.boxChecked(sourceFunction)}
+          />
           {!this.hasComment(sourceFunction) && (
             <Typography
               variant="body3"
@@ -375,37 +368,28 @@ export default class LibraryPublisher extends React.Component {
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
     const {onShareTeacherLibrary} = this.props;
-    const selectAllCheckboxId = _.uniqueId('func-select-all-');
 
     return (
       <div>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
           {i18n.libraryName()}
         </Typography>
         {this.displayNameInput()}
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
           {i18n.description()}
         </Typography>
         {this.displayDescription()}
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
           {i18n.catProcedures()}
         </Typography>
-        <div style={styles.functionSelector}>
-          <input
-            style={styles.largerCheckbox}
-            type="checkbox"
-            id={selectAllCheckboxId}
-            checked={this.allFunctionsSelected()}
-            onChange={this.toggleAllFunctionsSelected}
-          />
-          <Typography
-            variant="h6"
-            component="label"
-            htmlFor={selectAllCheckboxId}
-          >
-            {i18n.selectAllFunctions()}
-          </Typography>
-        </div>
+        <Checkbox
+          name="selectAllFunctions"
+          label={i18n.selectAllFunctions()}
+          size="l"
+          textThickness="thick"
+          checked={this.allFunctionsSelected()}
+          onChange={this.toggleAllFunctionsSelected}
+        />
         {this.displayFunctions()}
         <Typography variant="body3" component="div">
           {i18n.libraryFunctionRequirements()}
@@ -450,14 +434,11 @@ export default class LibraryPublisher extends React.Component {
 }
 
 const styles = {
-  functionSelector: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '10px 10px 10px 0',
+  sectionHeader: {
+    marginTop: '24px',
   },
-  largerCheckbox: {
-    width: 20,
-    height: 20,
+  functionBlock: {
+    margin: '10px 10px 10px 0',
   },
   textInput: {
     fontSize: 14,
@@ -467,5 +448,12 @@ const styles = {
   description: {
     width: '98%',
     resize: 'vertical',
+    fontFamily: 'inherit',
+    fontSize: '1rem',
+    padding: '0.5rem 0.75rem',
+    color: 'var(--text-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
+    border: '1px solid var(--borders-neutral-solid)',
+    borderRadius: '0.25rem',
   },
 };
