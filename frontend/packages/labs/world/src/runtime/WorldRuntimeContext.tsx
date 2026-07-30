@@ -25,6 +25,8 @@ import {
   type BlocklyGeneratorHandle,
 } from '../blockly/BlocklyGenerator';
 import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
+import {projectRuleMetas} from '../blockly/projectModules';
+import {parseRuleMeta, ruleMetaToModule} from '../blockly/ruleMeta';
 import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
@@ -79,6 +81,13 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   const sandboxUrl = useMemo(() => getSandboxUrl(), []);
   const {currentSources} = useSources<MultiFileSource>();
 
+  // The project's own `.rule` rules, so the headless generator can register their
+  // blocks (an actor using a project rule's set/get block then compiles).
+  const projectRules = useMemo(
+    () => projectRuleMetas(projectFiles(currentSources.source)),
+    [currentSources],
+  );
+
   const [consoleLog, setConsoleLog] = useState<ConsoleLine[]>([]);
   const [status, setStatus] = useState<RuntimeStatus>('idle');
   // True once the project has compiled at least once — esbuild is warm and the
@@ -112,11 +121,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     const out: Record<string, string> = {};
     for (const [path, contents] of Object.entries(files)) {
       if (path.endsWith('.rule')) {
-        // A `.rule` file is declarative metadata the editor reads statically; its
-        // runtime `RuleBuilder` module is generated later (the `.rule` codegen
-        // step). For now emit an inert module so a project with a `.rule` still
-        // compiles (nothing imports it until that step lands).
-        out[path] = 'export {};\n';
+        // A `.rule` is declarative metadata (read statically for the editor); at
+        // runtime it emits a `RuleBuilder` module declaring its traits/props/
+        // events (no Steps yet), so a world/actor that imports it resolves.
+        const meta = parseRuleMeta(path.replace(/\.rule$/, ''), contents);
+        out[path] = meta ? ruleMetaToModule(meta) : 'export {};\n';
       } else if (isBlocklyPath(path) && generator) {
         out[path] = generator.generate(contents);
       } else {
@@ -321,6 +330,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
         <BlocklyGenerator
           ref={blocklyGenerator}
           onReady={() => setGeneratorReady(true)}
+          projectRules={projectRules}
         />
       )}
       {children}

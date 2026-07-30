@@ -7,7 +7,17 @@
 
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {liveDropdown} from './moduleOptions';
-import type {RuleMeta} from './ruleMeta';
+import type {MemberRef, RuleMeta} from './ruleMeta';
+
+// The `TRAIT` dropdown value encodes how the generator names the trait: a
+// built-in is its `world-lab` export name; a project trait is
+// `<modulePath>#<exportName>` so `use trait` can import it from the rule module
+// (see `refFromTraitValue` in domainBlocks). Built-in values are unchanged, so
+// saved actors keep working.
+const traitValue = (ref: MemberRef): string =>
+  ref.source === 'project' && ref.modulePath
+    ? `${ref.modulePath}#${ref.exportName}`
+    : ref.exportName;
 
 // The rules the editor knows, indexed for resolution: by `world-lab` export name
 // (what a `.world`'s `use rule` block names) and by rule id (what `requires`
@@ -83,10 +93,13 @@ export function traitOptions(): Array<[string, string]> {
   const options: Array<[string, string]> = [];
   for (const rule of rulesInPlay(projectRuleRefs)) {
     for (const trait of rule.traits) {
-      const {exportName} = trait.ref;
-      if (exportName && !seen.has(exportName)) {
-        seen.add(exportName);
-        options.push([trait.name, exportName]);
+      if (!trait.ref.exportName) {
+        continue;
+      }
+      const value = traitValue(trait.ref);
+      if (!seen.has(value)) {
+        seen.add(value);
+        options.push([trait.name, value]);
       }
     }
   }

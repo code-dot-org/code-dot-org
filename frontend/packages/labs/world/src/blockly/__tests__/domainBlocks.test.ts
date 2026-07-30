@@ -93,12 +93,25 @@ describe('domain block generators', () => {
     expect(code).not.toContain('export default');
   });
 
-  it('world_use_trait uses the dropdown value (a trait export name) directly', () => {
+  it('world_use_trait references a built-in trait via WorldLab', () => {
     expect(emit('world_use_trait', {TRAIT: 'CollidableTrait'})).toBe(
       'actor.useTraits([WorldLab.CollidableTrait]);\n',
     );
     expect(emit('world_use_trait', {TRAIT: 'ControlledByArrowsTrait'})).toBe(
       'actor.useTraits([WorldLab.ControlledByArrowsTrait]);\n',
+    );
+  });
+
+  it('world_use_trait imports a project trait (module#export) from its module', () => {
+    const defs: Record<string, string> = {};
+    const code = generatorFor('world_use_trait')(
+      {getFieldValue: () => 'rules/wind#WindblownTrait'} as never,
+      {definitions_: defs} as never,
+      {} as never,
+    );
+    expect(code).toBe('actor.useTraits([WindblownTrait]);\n');
+    expect(defs['named:rules/wind:WindblownTrait']).toBe(
+      'import {WindblownTrait} from "rules/wind";',
     );
   });
 
