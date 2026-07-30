@@ -1,19 +1,25 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-07-29T13:21:48.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI as a Creative Writer\r\n\r\nUse AI Chat to respond to a creative or nonsensical question.\r\n\r\n### Do This:\r\n1. Find the section in your **Unit Guide** labeled \"Answering a creative question\". \r\n2. Choose one of the questions below and rank how well you think a human would do.\r\n3. **Write** a prompt asking AI Chat to answer one of the questions or something similar.\r\n4. Press **Send**.\r\n5. Then read **AI Chat's response**. \r\n6. Rank how well AI did and complete the table in your **Unit Guide**.\r\n\r\n**Try it out!**\r\n\r\n---\r\n\r\nChoose one of the questions below. Click to expand:\r\n\r\n::: details [**Common-Sense Question**] \r\n>Can a bicycle eat an apple? Why or why not?\r\n:::\r\n\r\n::: details [**Nonsense Question**]\r\n>What does the number 8 smell like?\r\n:::\r\n\r\n::: details [**Ambiguous Question**]\r\n>If you drop a book and a feather at the same time, which one hits the ground first?\r\n:::\r\n\r\n::: details [**Confusing Wordplay**]\r\n>If a rooster lays an egg on a slanted roof, which way does it roll?\r\n:::\r\n\r\n::: details [**Unrealistic Scenario**]\r\n>What would happen if you jumped into a pool filled with Jell-O?\r\n:::\r\n",
+    "long_instructions": "## Build a Bot That Actually Knows Something\r\n\r\nSomeone set up this bot to help new students — but they weren't careful about what information they gave it.\r\n\r\n##### Do This:\r\n\r\n1. Ask your bot a few questions a new student would ask. Something's off. What is it?\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Remove anything that shouldn't be there. Click Update, then ask your questions again.\r\n4. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you remove the same things? Does having context mean the bot is always right?\r\n\r\n::: details [**Want to make it better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated August 2026] The library is open until 5:00 pm on school days for homework help.\r\n- [Updated August 2026] Students who need a schedule change should see their counselor in Building A within the first two weeks.\r\n- [Updated August 2026] Bus routes and pickup zones are posted by the gym entrance each morning.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nWrite your own context entry about something a new student would want to know. Test whether your bot uses it.\r\n:::\r\n",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.7,
-        "systemPrompt": "",
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a friendly guide for new students at Riverside High School. You help them figure out how school works.",
         "retrievalContexts": [
-
+          "[Updated August 2026] Main office is in Building A, just inside the front entrance. New students check in there first.",
+          "[Updated August 2026] Bell schedule: first period starts 8:15, dismissal 3:30, six periods with passing time between.",
+          "[Updated August 2026] Two lunch periods, assigned by last name. Cafeteria and courtyard both open.",
+          "[Updated August 2026] Clubs meet after school Tuesday through Thursday. Current clubs: robotics, drama, esports, art.",
+          "[Updated September 2019] All school clubs meet on Friday afternoons. ← stale, contradicts #4",
+          "[Updated August 2026] Riverside hosts the state's largest sunflower festival every July. ← true but irrelevant"
         ],
         "modelCardInfo": {
           "botName": "",
@@ -30,20 +36,22 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "hidden",
-        "retrievalContexts": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given. \n2. If the information you have been given does not cover a question, say plainly\n   that you do not have that information. Do NOT use general knowledge to fill\n   the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other,\n   report both and say that they disagree. Do not quietly pick one.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say\n  that is not what you are built for.\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gpt-4o-mini"
+        "gemini-2.5-flash"
       ]
     },
     "name_suffix": "_2026_dev",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:21:48.713+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:21:48.713+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_v2_2026\"},{\"changed_at\":\"2026-07-29 21:56:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

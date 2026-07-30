@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-28T02:44:38.000Z",
   "level_num": "custom",
@@ -27,8 +26,25 @@
       ],
       "answerTypeCustomizations": {
       }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def get_average_length(length1, length2):\n    # TODO 1: Return the average length\n    return\n\nlength1 = 3\nlength2 = 5\n\nprint(f\"The first song in your playlist is {length1} minutes long.\")\nprint(f\"The second song in your playlist is {length2} minutes long.\")\n\n# TODO 2: Call get_average_length and save the result in a variable\n\n# TODO 3: Print a message that tells the user the average length\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 02:45:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-07-29 19:14:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>
