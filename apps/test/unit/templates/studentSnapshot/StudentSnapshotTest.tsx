@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
+import {MemoryRouter, useLocation} from 'react-router-dom';
 
 import DCDO from '@cdo/apps/dcdo';
 import StudentSnapshot from '@cdo/apps/templates/studentSnapshot/StudentSnapshot';
@@ -61,6 +62,18 @@ const makeStore = () =>
     },
   }));
 
+const LocationSearch = () => <>{useLocation().search}</>;
+
+const renderSnapshot = (initialRoute = '/') =>
+  render(
+    <Provider store={makeStore()}>
+      <MemoryRouter initialEntries={[initialRoute]}>
+        <StudentSnapshot />
+        <LocationSearch />
+      </MemoryRouter>
+    </Provider>
+  );
+
 describe('StudentSnapshot', () => {
   beforeEach(() => {
     DCDO.reset();
@@ -69,11 +82,7 @@ describe('StudentSnapshot', () => {
 
   it('renders without errors', async () => {
     await act(async () => {
-      render(
-        <Provider store={makeStore()}>
-          <StudentSnapshot />
-        </Provider>
-      );
+      renderSnapshot();
     });
 
     screen.getAllByText('Next');
@@ -89,11 +98,7 @@ describe('StudentSnapshot', () => {
     );
 
     await act(async () => {
-      render(
-        <Provider store={makeStore()}>
-          <StudentSnapshot />
-        </Provider>
-      );
+      renderSnapshot();
     });
 
     screen.getByText(
@@ -104,11 +109,7 @@ describe('StudentSnapshot', () => {
 
   it('does not display the feedback alert when DCDO flag is not set', async () => {
     await act(async () => {
-      render(
-        <Provider store={makeStore()}>
-          <StudentSnapshot />
-        </Provider>
-      );
+      renderSnapshot();
     });
 
     expect(
@@ -116,5 +117,29 @@ describe('StudentSnapshot', () => {
         "We'd love your feedback on the new Student Snapshot page. Just a few minutes will help us improve!"
       )
     ).not.toBeInTheDocument();
+  });
+
+  it('initializes from the studentId search param instead of the default student', async () => {
+    await act(async () => {
+      renderSnapshot('/?studentId=1');
+    });
+
+    screen.getByRole('heading', {level: 4, name: 'Student1 Test'});
+  });
+
+  it('falls back to the default student when studentId in the URL is not a number', async () => {
+    await act(async () => {
+      renderSnapshot('/?studentId=not-a-number');
+    });
+
+    screen.getByRole('heading', {level: 4, name: 'Student1 Test'});
+  });
+
+  it('writes the selected student id back into the URL', async () => {
+    await act(async () => {
+      renderSnapshot();
+    });
+
+    screen.getByText('?studentId=1');
   });
 });
