@@ -486,10 +486,7 @@ class Level < ApplicationRecord
   # A parent level and its children must be on the same side of the
   # "UI Test " partition: each side is seeded in environments where the other
   # side's definition files are never loaded, so a cross-partition child
-  # would not resolve there. (The UI Test parent -> prod child direction is
-  # not strictly unresolvable today, since the ui-test seed still loads both
-  # trees, but the migration helper always clones children, so any mix marks
-  # a half-migrated level.)
+  # would not resolve there.
   def children_stay_within_ui_test_partition
     child_names = Array(contained_level_names) + [try(:project_template_level_name)].compact
     offending = child_names.reject {|child_name| Level.ui_test_name?(child_name) == ui_test?}
