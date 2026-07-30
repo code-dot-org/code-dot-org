@@ -111,10 +111,17 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     const generator = blocklyGenerator.current;
     const out: Record<string, string> = {};
     for (const [path, contents] of Object.entries(files)) {
-      out[path] =
-        isBlocklyPath(path) && generator
-          ? generator.generate(contents)
-          : contents;
+      if (path.endsWith('.rule')) {
+        // A `.rule` file is declarative metadata the editor reads statically; its
+        // runtime `RuleBuilder` module is generated later (the `.rule` codegen
+        // step). For now emit an inert module so a project with a `.rule` still
+        // compiles (nothing imports it until that step lands).
+        out[path] = 'export {};\n';
+      } else if (isBlocklyPath(path) && generator) {
+        out[path] = generator.generate(contents);
+      } else {
+        out[path] = contents;
+      }
     }
     return out;
   };

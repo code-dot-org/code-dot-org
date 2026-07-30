@@ -20,8 +20,9 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
-import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
+import {buildDomainPalette} from './domainBlocks';
 import {refreshProjectDropdowns} from './projectDropdowns';
+import {projectRuleMetas} from './projectModules';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -71,9 +72,18 @@ export const BlocklyFileEditor = ({
   // render, ahead of the workspace's load effect. (WorldRuntimeContext also
   // refreshes these for the generator; the calls are idempotent.)
   const {currentSources} = useSources<MultiFileSource>();
-  useMemo(
-    () => refreshProjectDropdowns(projectFiles(currentSources.source)),
+  const files = useMemo(
+    () => projectFiles(currentSources.source),
     [currentSources],
+  );
+  useMemo(() => refreshProjectDropdowns(files), [files]);
+
+  // The block palette + toolbox for this project: the built-ins, extended with
+  // the project's own declarative `.rule` rules (their blocks and categories).
+  // Keyed per file, so switching to this editor picks up rules edited elsewhere.
+  const {blocks, toolbox} = useMemo(
+    () => buildDomainPalette(projectRuleMetas(files)),
+    [files],
   );
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
@@ -114,11 +124,11 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
-      <BlocklyProvider blocks={DOMAIN_BLOCKS} plugins={plugins} theme={theme}>
+      <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
         <BlocklyWorkspace
           className={styles.workspace}
           startBlocks={startBlocks}
-          toolbox={DOMAIN_TOOLBOX}
+          toolbox={toolbox}
           options={options}
           theme={theme}
           workspaceRef={workspaceRef}
