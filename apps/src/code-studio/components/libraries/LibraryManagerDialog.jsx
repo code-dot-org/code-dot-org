@@ -465,6 +465,9 @@ export class LibraryManagerDialog extends React.Component {
               name="libraryId"
               size="s"
               value={importLibraryId}
+              aria-labelledby="ui-test-import-library-header"
+              aria-describedby="import-library-id-error"
+              aria-invalid={!!errorMessages.importFromId}
               onChange={this.setLibraryToImport}
             />
             <MuiButton
