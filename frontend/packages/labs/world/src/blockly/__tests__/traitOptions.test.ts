@@ -57,7 +57,7 @@ describe('traitOptions (traits from the rules in play)', () => {
               next: {
                 block: {
                   type: 'world_rule_trait',
-                  fields: {ID: 'windblown', NAME: 'Blown by Wind'},
+                  fields: {NAME: 'Windblown'},
                 },
               },
             },
@@ -71,7 +71,7 @@ describe('traitOptions (traits from the rules in play)', () => {
       traitOptions().map(([label, value]) => [value, label]),
     );
     // A project trait's value carries its module, so `use trait` imports it.
-    expect(byValue.get('rules/wind#WindblownTrait')).toBe('Blown by Wind');
+    expect(byValue.get('rules/wind#WindblownTrait')).toBe('Windblown');
     // A built-in trait is still valued by its bare export name.
     expect(byValue.get('AffectedByGravityTrait')).toBe('Affected by Gravity');
   });
