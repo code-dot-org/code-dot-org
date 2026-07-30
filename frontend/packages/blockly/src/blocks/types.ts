@@ -95,10 +95,19 @@ export interface BlockStatementArgDefinition extends BlockBaseArgDefinition {
 }
 
 export interface BlockVariableArgDefinition extends BlockBaseArgDefinition {
-  /** Explicitly a statement section */
+  /** Explicitly a variable field */
   type: 'field_variable';
-  /** The name of the variable */
+  /** The default name of the variable this field binds or creates */
   variable: string;
+  /**
+   * The variable *type tags* this field may list and create. Restricts the
+   * field to one flavour of typed variable (see `createTypedVariable`); omit for
+   * an untyped variable (Blockly's default). Passed through to Blockly's
+   * `FieldVariable` JSON.
+   */
+  variableTypes?: string[];
+  /** The type tag a freshly-created variable is given (one of `variableTypes`). */
+  defaultType?: string;
 }
 
 export interface BlockNumberArgDefinition extends BlockBaseArgDefinition {
