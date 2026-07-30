@@ -1,7 +1,10 @@
 import {parse} from 'acorn';
 import {Block, CodeGenerator} from 'blockly/core';
 
-import {compileBehavior2Sources} from '@cdo/apps/p5lab/spritelab/lab2/blockly/behavior2';
+import {
+  compileBehavior2Sources,
+  sanitizeBehavior2Source,
+} from '@cdo/apps/p5lab/spritelab/lab2/blockly/behavior2';
 import behavior2Blocks from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/behavior2Blocks';
 import {DEFAULT_BEHAVIOR2S} from '@cdo/apps/p5lab/spritelab/lab2/blockly/defaultBehavior2s';
 
@@ -78,6 +81,20 @@ describe('behavior2 codegen', () => {
     expect(get[0]).toBe("(getProp(__current, '__b2__jump_count') || 0)");
   });
 
+  it('make-with-system tags the group with the system name and starts it once with the middle setting', () => {
+    const code = generatorFor('spritelab2_makeSpritesWithSystem')(
+      fakeBlock({
+        ANIMATION_NAME: '"bee"',
+        SYSTEM: 'platformer',
+        GRID: [[1]] as unknown as string,
+      }),
+      fakeGenerator()
+    );
+    expect(code).toBe(
+      'makeSpritesWithSystem("bee", \'platformer\', [[1]], -0.5);\n'
+    );
+  });
+
   it('typed-sprite maker tags the group', () => {
     const code = generatorFor('spritelab2_makeTypedSprites')(
       fakeBlock({
@@ -104,6 +121,50 @@ describe('compileBehavior2Sources', () => {
 
   it('is empty with no systems (flag-off composition stays byte-identical)', () => {
     expect(compileBehavior2Sources([])).toBe('');
+  });
+});
+
+describe('sanitizeBehavior2Source', () => {
+  // The disable-orphans listener wrote ORPHANED onto stored stacks before
+  // the for-each block lost its statement connections; a disabled block
+  // compiles to nothing, i.e. an empty system.
+  it('strips ORPHANED disable flags, keeps deliberate ones', () => {
+    const source = {
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {
+            type: 'spritelab2_forEachSpriteOfType',
+            id: 'loop',
+            disabledReasons: ['ORPHANED'],
+            inputs: {
+              DO: {
+                block: {
+                  type: 'spritelab2_setThisSprite',
+                  id: 'inner',
+                  disabledReasons: ['ORPHANED', 'MANUALLY_DISABLED'],
+                },
+              },
+            },
+          },
+        ],
+      },
+    } as never;
+    const out = sanitizeBehavior2Source(source) as never as {
+      blocks: {
+        blocks: {
+          disabledReasons?: string[];
+          inputs: {DO: {block: {disabledReasons?: string[]}}};
+        }[];
+      };
+    };
+    const loop = out.blocks.blocks[0];
+    expect(loop.disabledReasons).toBeUndefined();
+    expect(loop.inputs.DO.block.disabledReasons).toEqual(['MANUALLY_DISABLED']);
+  });
+
+  it('passes undefined through', () => {
+    expect(sanitizeBehavior2Source(undefined)).toBeUndefined();
   });
 });
 

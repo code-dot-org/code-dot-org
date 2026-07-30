@@ -118,12 +118,24 @@ const startSystemGenerator: GeneratorFunction = block => {
 // system with no implementation are silent no-ops rather than crashes.
 const startSystemHelperCode = [
   'var __behavior2s = {};',
+  'var __b2Started = {};',
   'function startBehavior2(group, name, option) {',
   '  repeatForever(function () {',
   '    if (__behavior2s[name]) {',
   '      __behavior2s[name](group, option);',
   '    }',
   '  });',
+  '}',
+  // Once per (group, system): several make-with-system blocks sharing a
+  // system pool their sprites into one per-frame pass instead of running
+  // the system once per block.
+  'function startBehavior2Once(group, name, option) {',
+  '  var key = group + ":" + name;',
+  '  if (__b2Started[key]) {',
+  '    return;',
+  '  }',
+  '  __b2Started[key] = true;',
+  '  startBehavior2(group, name, option);',
   '}',
   'function forEachSpriteOfType(group, callback) {',
   '  var ids = getSpriteIdsByGroup(group);',
@@ -134,8 +146,58 @@ const startSystemHelperCode = [
 ].join('\n');
 
 // ---------------------------------------------------------------------------
+// Code tab: make sprites and attach a system, one block. The sprites'
+// group IS the system name, so every such block for one system feeds the
+// same per-frame pass. The system runs with its middle (default) setting —
+// the start-system block is the way to choose one.
+
+const makeSpritesWithSystem: BlockJson = {
+  type: 'spritelab2_makeSpritesWithSystem',
+  message0: 'make %1 sprites with system %2 %3 using grid: %4',
+  args0: [
+    {type: FIELD_COSTUME_TYPE, name: 'ANIMATION_NAME'},
+    dropdown(
+      'SYSTEM',
+      BEHAVIOR2_SYSTEMS.map((system): [string, string] => [
+        system.label,
+        system.name,
+      ])
+    ),
+    // Row break: picker and system on the first row, grid on its own below.
+    {type: 'input_dummy', name: 'ROW_BREAK'},
+    {type: FIELD_GRID_TYPE, name: 'GRID'},
+  ],
+  inputsInline: false,
+  previousStatement: null,
+  nextStatement: null,
+  style: BlockStyles.SPRITE,
+};
+
+const makeSpritesWithSystemGenerator: GeneratorFunction = block => {
+  const system = getBehavior2System(block.getFieldValue('SYSTEM'));
+  const middle = system?.options[Math.floor((system.options.length - 1) / 2)];
+  return (
+    `makeSpritesWithSystem(${block.getFieldValue('ANIMATION_NAME')}, ` +
+    `'${system?.name}', ` +
+    `${JSON.stringify(block.getFieldValue('GRID'))}, ${middle?.value ?? 0});\n`
+  );
+};
+
+const makeSpritesWithSystemHelperCode = [
+  'function makeSpritesWithSystem(animation, systemName, layout, option) {',
+  '  makeEnvironmentSprites(animation, systemName, layout);',
+  '  startBehavior2Once(systemName, systemName, option);',
+  '}',
+].join('\n');
+
+// ---------------------------------------------------------------------------
 // Systems tab: the implementation language.
 
+// No previous/next connections: the loop is the system's top-level
+// construct, like an event hat. This also keeps the disable-orphans
+// listener from disabling it (an unconnected statement block is an orphan;
+// a connectionless block is not), which would otherwise compile the system
+// to an empty function.
 const forEachSpriteOfType: BlockJson = {
   type: 'spritelab2_forEachSpriteOfType',
   message0: 'for each sprite of this type %1 %2',
@@ -143,8 +205,6 @@ const forEachSpriteOfType: BlockJson = {
     {type: 'input_dummy', name: 'ROW_BREAK'},
     {type: 'input_statement', name: 'DO'},
   ],
-  previousStatement: null,
-  nextStatement: null,
   style: BlockStyles.LOOP,
 };
 
@@ -338,6 +398,11 @@ const behavior2BlockDefinitions: {
     definition: startSystem,
     generator: startSystemGenerator,
     helperCode: startSystemHelperCode,
+  },
+  {
+    definition: makeSpritesWithSystem,
+    generator: makeSpritesWithSystemGenerator,
+    helperCode: makeSpritesWithSystemHelperCode,
   },
   {definition: forEachSpriteOfType, generator: forEachSpriteOfTypeGenerator},
   {definition: thisSprite, generator: thisSpriteGenerator},

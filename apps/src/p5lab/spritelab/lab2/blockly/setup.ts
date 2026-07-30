@@ -155,6 +155,10 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
     'spritelab2_makeTypedSprites',
     platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
   ],
+  [
+    'spritelab2_makeSpritesWithSystem',
+    platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
+  ],
 ]);
 
 // Lab-injected toolbox categories, inserted at the top of every level's
@@ -169,6 +173,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     types: [
       'gamelab_setBackgroundImageAs',
       'spritelab2_makeTypedSprites',
+      'spritelab2_makeSpritesWithSystem',
       'spritelab2_startSystem',
     ],
   },
