@@ -61,6 +61,14 @@ describe('behavior2 codegen', () => {
     expect(code).toBe('startBehavior2(\'sprites\', "walk", 6);\n');
   });
 
+  it('set-system resolves like start-system and targets the system', () => {
+    const code = generatorFor('spritelab2_setSystem')(
+      fakeBlock({SYSTEM: 'platformer', OPTION: 'high'}),
+      fakeGenerator()
+    );
+    expect(code).toBe('setSystemOption("platformer", -1);\n');
+  });
+
   it('a system missing from the registry still generates, with strength meta', () => {
     const code = generatorFor('spritelab2_startSystem')(
       fakeBlock({SYSTEM: 'my wind', TYPE: 'sprites', OPTION: 'high'}),

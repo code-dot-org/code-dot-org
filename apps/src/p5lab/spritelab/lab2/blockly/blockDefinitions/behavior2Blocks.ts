@@ -113,12 +113,25 @@ const startSystemGenerator: GeneratorFunction = block => {
 const startSystemHelperCode = [
   'var __behavior2s = {};',
   'var __b2Started = {};',
+  // The live settings, keyed group:system — read fresh every frame so the
+  // set-system block changes a running system.
+  'var __b2Options = {};',
   'function startBehavior2(group, name, option) {',
+  '  var key = group + ":" + name;',
+  '  __b2Options[key] = option;',
   '  repeatForever(function () {',
   '    if (__behavior2s[name]) {',
-  '      __behavior2s[name](group, option);',
+  '      __behavior2s[name](group, __b2Options[key]);',
   '    }',
   '  });',
+  '}',
+  // Update every group running the system (group names never contain ":").
+  'function setSystemOption(name, option) {',
+  '  for (var key in __b2Options) {',
+  '    if (key.substring(key.indexOf(":") + 1) === name) {',
+  '      __b2Options[key] = option;',
+  '    }',
+  '  }',
   '}',
   // Once per (group, system): several make-with-system blocks sharing a
   // system pool their sprites into one per-frame pass instead of running
@@ -138,6 +151,38 @@ const startSystemHelperCode = [
   '  }',
   '}',
 ].join('\n');
+
+// ---------------------------------------------------------------------------
+// Code tab: change a running system's setting. Scoped by system, not type:
+// a type can run several systems (which gravity?), and the combined block's
+// sprites live in a group named for the system, which the type dropdown
+// couldn't target. Every group running the system gets the new setting.
+
+const setSystem: BlockJson = {
+  type: 'spritelab2_setSystem',
+  message0: 'set %1 system to %2 %3',
+  args0: [
+    {type: FIELD_SYSTEM_DROPDOWN_TYPE, name: 'SYSTEM'},
+    dropdown('OPTION', [
+      ['low', 'low'],
+      ['medium', 'medium'],
+      ['high', 'high'],
+    ]),
+    {type: 'field_label', name: 'UNIT', text: 'gravity'},
+  ],
+  inputsInline: true,
+  previousStatement: null,
+  nextStatement: null,
+  style: BlockStyles.EVENT,
+};
+
+const setSystemGenerator: GeneratorFunction = block => {
+  const name = block.getFieldValue('SYSTEM');
+  const option = getBehavior2System(name).options.find(
+    o => o.key === block.getFieldValue('OPTION')
+  );
+  return `setSystemOption(${JSON.stringify(name)}, ${option?.value ?? 0});\n`;
+};
 
 // ---------------------------------------------------------------------------
 // Code tab: make sprites and attach a system, one block. The sprites'
@@ -469,6 +514,7 @@ const behavior2BlockDefinitions: {
     generator: startSystemGenerator,
     helperCode: startSystemHelperCode,
   },
+  {definition: setSystem, generator: setSystemGenerator},
   {
     definition: makeSpritesWithSystem,
     generator: makeSpritesWithSystemGenerator,
