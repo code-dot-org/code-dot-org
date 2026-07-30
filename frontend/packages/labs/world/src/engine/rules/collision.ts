@@ -173,37 +173,64 @@ export const ResolveStep = rule.addStepAfter(
  * world-scoped query the Collision rule answers:
  * `world.query(TouchingQuery, actor, type?)`.
  */
+/**
+ * Whether two collidable actors' boxes currently overlap — the AABB center test
+ * `resolve` uses, distilled to a pure yes/no. False when either actor lacks a
+ * collision box ({@link CollidableTrait}) or they are the same actor: an actor
+ * never touches itself, and a non-collidable actor touches nothing. This is the
+ * shared heart of {@link TouchingQuery} (the list) and {@link IsTouchingQuery}
+ * (the predicate).
+ */
+export function overlaps(a: Actor, b: Actor): boolean {
+  if (a === b || !a.has(CollidableTrait) || !b.has(CollidableTrait)) {
+    return false;
+  }
+  const pa = a.get(PositionProperty);
+  const pb = b.get(PositionProperty);
+  const sa = collisionSize(a);
+  const sb = collisionSize(b);
+  const overlapX = (sa.x + sb.x) / 2 - Math.abs(pa.x - pb.x);
+  const overlapY = (sa.y + sb.y) / 2 - Math.abs(pa.y - pb.y);
+  return overlapX > 0 && overlapY > 0;
+}
+
 export const TouchingQuery = rule.addQuery(
   'touching',
   (world, actorArg, typeArg): Actor[] => {
     const actor = actorArg as Actor;
     const type = typeArg as string | undefined;
-    if (!actor.has(CollidableTrait)) {
-      return [];
-    }
-    const position = actor.get(PositionProperty);
-    const size = collisionSize(actor);
     const touching: Actor[] = [];
     for (const other of world.actors) {
-      if (other === actor || !other.has(CollidableTrait)) {
-        continue;
-      }
       if (type !== undefined && other.type !== type) {
         continue;
       }
-      const otherPosition = other.get(PositionProperty);
-      const otherSize = collisionSize(other);
-      const overlapX =
-        (size.x + otherSize.x) / 2 - Math.abs(position.x - otherPosition.x);
-      const overlapY =
-        (size.y + otherSize.y) / 2 - Math.abs(position.y - otherPosition.y);
-      if (overlapX > 0 && overlapY > 0) {
+      if (overlaps(actor, other)) {
         touching.push(other);
       }
     }
     return touching;
   },
   {name: 'actors touching'},
+);
+
+/**
+ * Whether `a` is touching `b` — {@link overlaps} surfaced as a boolean predicate
+ * over two actors. This is the hoistable heart of {@link TouchingQuery}: a
+ * `for each Actor … where (a is touching it)` loop rebuilds the touching list by
+ * filtering the world's actors through this predicate, so the loop needs no
+ * bespoke list query.
+ */
+export const IsTouchingQuery = rule.addQuery(
+  'isTouching',
+  (_world, a, b): boolean => overlaps(a as Actor, b as Actor),
+  {
+    name: 'is touching',
+    returns: 'boolean',
+    params: [
+      {name: 'a', type: 'actor'},
+      {name: 'b', type: 'actor'},
+    ],
+  },
 );
 
 export const CollisionRule = rule.build();

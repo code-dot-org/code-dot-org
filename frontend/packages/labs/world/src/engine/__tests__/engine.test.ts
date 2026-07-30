@@ -10,6 +10,7 @@ import {
   GravityScaleProperty,
   GroundTrait,
   IsOnGroundQuery,
+  IsTouchingQuery,
   MovableTrait,
   PositionProperty,
   PositionalTrait,
@@ -530,5 +531,46 @@ describe('TouchingQuery (Collision rule, via world.query)', () => {
     expect(world.query(TouchingQuery, player, 'actors/coin')).toEqual([coin]);
     // The stale builder id no longer matches anything.
     expect(world.query(TouchingQuery, player, 'Coin')).toEqual([]);
+  });
+});
+
+describe('IsTouchingQuery (Collision predicate)', () => {
+  const at = (type: string, x: number, y: number) =>
+    new ActorBuilder({id: type, name: type})
+      .useTraits([CollidableTrait])
+      .set(PositionProperty, new Vector(x, y));
+
+  it('is a boolean over two actors — overlap, excluding identity', () => {
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    const player = scene.addActor(at('player', 0, 0));
+    const near = scene.addActor(at('coin', 20, 0)); // overlaps
+    const far = scene.addActor(at('coin', 200, 0)); // does not
+
+    expect(world.query(IsTouchingQuery, player, near)).toBe(true);
+    expect(world.query(IsTouchingQuery, player, far)).toBe(false);
+    expect(world.query(IsTouchingQuery, player, player)).toBe(false); // never itself
+  });
+
+  it('filtering world.actors through the predicate rebuilds TouchingQuery', () => {
+    // This is exactly what the generic `for each Actor … where (a is touching it)`
+    // loop does — the predicate hoisted over the actor list equals the list query.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    const world = scene.useWorld(
+      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
+    );
+    const player = scene.addActor(at('player', 0, 0));
+    scene.addActor(at('coin', 20, 0)); // overlaps
+    scene.addActor(at('box', -10, 8)); // overlaps
+    scene.addActor(at('coin', 200, 0)); // far
+
+    const filtered = [...world.actors].filter(other =>
+      world.query(IsTouchingQuery, player, other),
+    );
+    expect(new Set(filtered)).toEqual(
+      new Set(world.query(TouchingQuery, player)),
+    );
   });
 });

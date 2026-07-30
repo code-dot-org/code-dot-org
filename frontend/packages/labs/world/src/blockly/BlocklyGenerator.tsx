@@ -62,6 +62,11 @@ export const BlocklyGenerator = forwardRef<
         // then the default export.
         const asString = (code: string | [string, number]): string =>
           Array.isArray(code) ? code[0] : code;
+        // The domain blocks emit these bare identifiers (the principal actor, the
+        // world, a scene, an event's value). Reserve them so a Blockly variable
+        // (e.g. a `for each` loop's actor variable) is never named to collide —
+        // it gets a numbered suffix instead of shadowing the identifier.
+        generator.addReservedWords('actor,world,scene,eventValue');
         generator.init(workspace);
         // A root block (an event handler, or an actor/scene/world definition)
         // owns the blocks chained below it as its body and generates that chain

@@ -30,11 +30,11 @@ const renderVectorPreview = ({
   width,
   height,
 }: ReactFieldPreviewContext<VectorValue>) => {
-  const svg = (
-    tag: string,
-    attrs: Record<string, string | number>,
-    parent = element,
-  ) => Blockly.utils.dom.createSvgElement(tag, attrs, parent);
+  const svg = <T extends SVGElement>(
+    tag: string | Blockly.utils.Svg<T>,
+    attrs: Record<string, string | number> = {},
+    parent: Element = element,
+  ) => Blockly.utils.dom.createSvgElement<T>(tag, attrs, parent);
   const cx = DIAL_RADIUS + 2;
   const cy = height / 2 + 1;
   const surface = getCSSVariable('background-neutral-tertiary') || '#e8eaed';

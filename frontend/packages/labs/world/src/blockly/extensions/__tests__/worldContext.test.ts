@@ -31,7 +31,7 @@ describe('inWorldContext', () => {
   it('is true when nested deeper (loop inside an event)', () => {
     const block = chain(
       'world_do_InvertAction',
-      'world_for_each_touching',
+      'world_for_each',
       'world_on_keyPressed',
     );
     expect(inWorldContext(block as never)).toBe(true);

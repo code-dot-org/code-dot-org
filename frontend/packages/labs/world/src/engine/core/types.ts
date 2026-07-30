@@ -16,6 +16,15 @@ import type {World} from './World';
 export type PropertyType = 'number' | 'boolean' | 'string' | 'vector' | 'point';
 
 /**
+ * The kinds an Action parameter or query argument can take. A superset of
+ * {@link PropertyType}: it also admits `'actor'`, so a rule can declare a query
+ * (or action) whose argument is another actor — e.g. Collision's "is a touching
+ * b?" predicate. Properties never hold an actor, so {@link PropertyType} stays
+ * the narrower kind for stored state.
+ */
+export type ArgType = PropertyType | 'actor';
+
+/**
  * A typed slot of state on the World (scope 'world') or an Actor (scope
  * 'actor'). Identity is the object itself: the property store is keyed by the
  * Property reference, so `world.get(StrengthProperty)` needs no string lookup.
@@ -41,7 +50,7 @@ export interface Property<T = unknown> {
  */
 export interface ActionParam {
   readonly name: string;
-  readonly type: PropertyType;
+  readonly type: ArgType;
   /** Seed value for the block's input; falls back to a type zero when absent. */
   readonly default?: unknown;
 }
@@ -90,6 +99,13 @@ export interface WorldQuery<T = unknown> {
   /** The value kind this returns, for the Blockly surface (absent = not
    * surfaced, e.g. Collision's `TouchingQuery` returns an actor list). */
   readonly returns?: PropertyType;
+  /**
+   * The arguments this query takes, in `evaluate` order (after `world`) — the
+   * query analogue of a {@link WorldAction}'s params. Lets the Blockly surface
+   * generate a typed socket per argument: e.g. the "is %1 touching %2?"
+   * predicate declares two `actor` params. Absent/empty = a nullary query.
+   */
+  readonly params?: readonly ActionParam[];
   readonly evaluate: (world: World, ...args: unknown[]) => T;
 }
 
