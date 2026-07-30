@@ -487,6 +487,8 @@ export class LibraryManagerDialog extends React.Component {
             </MuiButton>
           </div>
           <MuiTypography
+            id="import-library-id-error"
+            role="alert"
             variant="body3"
             component="div"
             className={styles.error}
