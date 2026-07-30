@@ -12,7 +12,7 @@ Feature: App Lab Scenarios 3
     And I append text to droplet "window.__applabImageModerationStatusOverride='safe'; image('test123', 'https://example.com/image.png')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
-    And element "#divApplab > .screen > img#test123" has attribute "src" equal to "https://example.com/image.png"
+    And I wait until element "#divApplab > .screen > img#test123" is an img with src "https://example.com/image.png"
 
   Scenario: App Lab Clear Puzzle and Design Mode
     # Create an app with a design mode button, then clear the puzzle.
