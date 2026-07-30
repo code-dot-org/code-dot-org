@@ -106,36 +106,34 @@
   border-color: var(--borders-neutral-strong);
 }
 
-// The corner triangle is drawn as a masked pseudo-element rather than a
-// background-image so its color can come from a token: a var() cannot be
-// interpolated into the url() of an SVG data URI. The mask must live on a
-// pseudo-element, not on the element itself — this class is applied to
-// `.cornerBox` and to progress-table `.gridBox` cells, whose own borders a
-// mask on the element would clip away.
 .needsFeedback {
   position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-    background-color: var(--background-accent-orange-primary);
+  // Without the mask the pseudo-element is an opaque square, so draw nothing
+  // at all where masks are unsupported.
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    // A mask on the element itself would also clip the borders it paints.
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+      background-color: var(--background-accent-orange-primary);
 
-    $triangle: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='black' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
+      $triangle: url("data:image/svg+xml,%3Csvg viewBox='-1 1 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Polygon 1' d='M7.4152 2L18 2L18 12.5858L7.4152 2Z' stroke='black' stroke-width='2'%3E%3C/path%3E%3C/svg%3E");
 
-    // Prefixed properties are for Safari < 15.4, which lacks unprefixed mask.
-    -webkit-mask-image: $triangle;
-    mask-image: $triangle;
-    -webkit-mask-size: 20px;
-    mask-size: 20px;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: top right;
-    mask-position: top right;
+      -webkit-mask-image: $triangle;
+      mask-image: $triangle;
+      -webkit-mask-size: 20px;
+      mask-size: 20px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: top right;
+      mask-position: top right;
+    }
   }
 }
 
