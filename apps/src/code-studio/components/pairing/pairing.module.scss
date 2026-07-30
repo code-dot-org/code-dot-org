@@ -23,6 +23,7 @@
   border-radius: 5px;
 }
 
+// !important beats CdoTheme's MuiTypography root color.
 .warning {
-  color: var(--text-error-primary);
+  color: var(--text-error-primary-fixed) !important;
 }
