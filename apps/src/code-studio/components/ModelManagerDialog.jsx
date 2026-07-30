@@ -11,8 +11,6 @@ import ModelCard from './ModelCard';
 
 import moduleStyles from './ModelManagerDialog.module.scss';
 
-const DEFAULT_MARGIN = 7;
-
 export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -120,8 +118,9 @@ export default class ModelManagerDialog extends React.Component {
     if (!this.props.isOpen) {
       return null;
     }
-    const noModels =
-      !this.state.isModelListPending && this.state.models.length === 0;
+    const {isModelListPending, isImportPending, isDeletePending} = this.state;
+    const noModels = this.state.models.length === 0;
+    const disableActions = isModelListPending || noModels;
     const showDeleteButton =
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
@@ -133,12 +132,12 @@ export default class ModelManagerDialog extends React.Component {
           onClose={this.closeModelManager}
           customContent={
             <div>
-              {this.state.isModelListPending && (
-                <div style={styles.spinner}>
+              {isModelListPending && (
+                <div className={moduleStyles.spinner}>
                   <Spinner />
                 </div>
               )}
-              {!this.state.isModelListPending && (
+              {!isModelListPending && (
                 <div className={moduleStyles.mlModalContent}>
                   <SimpleDropdown
                     name="model"
@@ -152,7 +151,7 @@ export default class ModelManagerDialog extends React.Component {
                     onChange={this.handleChange}
                   />
                   {noModels && (
-                    <div style={styles.message}>
+                    <div className={moduleStyles.message}>
                       {i18n.aiTrainedModelsNoModels()}
                     </div>
                   )}
@@ -164,11 +163,11 @@ export default class ModelManagerDialog extends React.Component {
             </div>
           }
           primaryButtonProps={{
-            children: this.state.isImportPending
+            children: isImportPending
               ? i18n.importingWithEllipsis()
               : i18n.import(),
             onClick: this.importMLModel,
-            disabled: noModels || this.state.isImportPending,
+            disabled: disableActions || isImportPending,
           }}
           secondaryButtonProps={
             showDeleteButton
@@ -176,7 +175,7 @@ export default class ModelManagerDialog extends React.Component {
                   children: i18n.delete(),
                   onClick: this.showDeleteConfirmation,
                   color: 'error',
-                  disabled: noModels,
+                  disabled: disableActions,
                 }
               : undefined
           }
@@ -193,17 +192,19 @@ export default class ModelManagerDialog extends React.Component {
                   <ModelCard model={this.state.selectedModel} />
                 </div>
                 {this.state.deletionStatus && (
-                  <p style={styles.message}>{this.state.deletionStatus}</p>
+                  <p className={moduleStyles.message}>
+                    {this.state.deletionStatus}
+                  </p>
                 )}
               </div>
             }
             primaryButtonProps={{
-              children: this.state.isDeletePending
+              children: isDeletePending
                 ? i18n.deletingWithEllipsis()
                 : i18n.delete(),
               onClick: this.deleteModel,
               color: 'error',
-              disabled: this.state.isDeletePending,
+              disabled: isDeletePending,
             }}
             secondaryButtonProps={{
               children: i18n.no(),
@@ -215,18 +216,3 @@ export default class ModelManagerDialog extends React.Component {
     );
   }
 }
-
-const styles = {
-  message: {
-    color: 'var(--text-neutral-secondary)',
-    textAlign: 'left',
-    margin: DEFAULT_MARGIN,
-    overflow: 'hidden',
-    lineHeight: '15px',
-    whiteSpace: 'pre-wrap',
-  },
-  spinner: {
-    height: 'calc(80vh - 140px)',
-    color: 'var(--text-neutral-secondary)',
-  },
-};

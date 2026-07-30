@@ -13,6 +13,22 @@
   gap: 10px;
 }
 
+.spinner {
+  height: calc(80vh - 140px);
+  color: var(--text-neutral-secondary);
+}
+
+// Scoped under .mlModal so this wins over the DS `.modalContentSection p`
+// selector (which would otherwise reset margin and color on the failure <p>).
+.mlModal .message {
+  color: var(--text-neutral-secondary);
+  text-align: left;
+  margin: 7px;
+  overflow: hidden;
+  line-height: 15px;
+  white-space: pre-wrap;
+}
+
 .modelCardScroll {
   max-height: calc(80vh - 250px);
   overflow-y: auto;
