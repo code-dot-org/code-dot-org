@@ -156,7 +156,9 @@ describe('LessonOverview', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <Typography variant="h2">Standards</Typography>
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
       )
     ).to.be.false;
   });
@@ -273,7 +275,9 @@ describe('LessonOverview', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <Typography variant="h2">Standards</Typography>
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
       )
     ).to.be.true;
     expect(
@@ -286,7 +290,9 @@ describe('LessonOverview', () => {
     ).to.be.true;
     expect(
       wrapper.containsMatchingElement(
-        <Typography variant="h2">Cross-Curricular Opportunities</Typography>
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
       )
     ).to.be.false;
   });
@@ -314,12 +320,16 @@ describe('LessonOverview', () => {
 
     expect(
       wrapper.containsMatchingElement(
-        <Typography variant="h2">Standards</Typography>
+        <Typography variant="h4" component="h2">
+          Standards
+        </Typography>
       )
     ).to.be.false;
     expect(
       wrapper.containsMatchingElement(
-        <Typography variant="h2">Cross-Curricular Opportunities</Typography>
+        <Typography variant="h4" component="h2">
+          Cross-Curricular Opportunities
+        </Typography>
       )
     ).to.be.true;
   });
