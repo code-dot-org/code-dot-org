@@ -410,9 +410,13 @@ export class LibraryManagerDialog extends React.Component {
           >
             {i18n.libraryManage()}
           </MuiTypography>
-          <span id="manage-libraries-dialog-description" style={visuallyHidden}>
+          <MuiTypography
+            component="span"
+            id="dsco-dialog-description"
+            sx={visuallyHidden}
+          >
             Add, remove, and update code libraries used in this project.
-          </span>
+          </MuiTypography>
           <div className={styles.libraryList}>
             {this.displayProjectLibraries()}
           </div>
