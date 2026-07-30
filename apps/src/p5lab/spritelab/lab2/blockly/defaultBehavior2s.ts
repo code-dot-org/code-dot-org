@@ -96,6 +96,36 @@ const setState = (
   ...(next ? {next: {block: next}} : {}),
 });
 
+// NOT bumping a platform block on this side — the walk gate.
+const notBumping = (id: string, side: 'left' | 'right'): BlockNode => ({
+  type: 'logic_negate',
+  id,
+  inputs: {
+    BOOL: {
+      block: {
+        type: 'spritelab2_bumpingSide',
+        id: id + '_b',
+        fields: {TYPE: 'walls', SIDE: side},
+      },
+    },
+  },
+});
+
+// key held AND clear of walls that way.
+const canWalk = (
+  id: string,
+  key: string,
+  side: 'left' | 'right'
+): BlockNode => ({
+  type: 'logic_operation',
+  id,
+  fields: {OP: 'AND'},
+  inputs: {
+    A: {block: keyHeld(id + '_k', key)},
+    B: {block: notBumping(id + '_n', side)},
+  },
+});
+
 const workspace = (top: BlockNode): WorkspaceSerialization =>
   ({
     blocks: {languageVersion: 0, blocks: [top]},
@@ -184,11 +214,11 @@ const platformerSource = workspace({
               num('pf_walk_reset_n', 0),
               ifBlock(
                 'pf_left',
-                keyHeld('pf_left_key', 'left'),
+                canWalk('pf_left_can', 'left', 'left'),
                 setVelocity('pf_left_set', 'velocityX', num('pf_left_n', -4)),
                 ifBlock(
                   'pf_right',
-                  keyHeld('pf_right_key', 'right'),
+                  canWalk('pf_right_can', 'right', 'right'),
                   setVelocity('pf_right_set', 'velocityX', num('pf_right_n', 4))
                 )
               )

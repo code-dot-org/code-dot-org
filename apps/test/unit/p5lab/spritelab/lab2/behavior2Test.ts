@@ -239,6 +239,8 @@ describe('default behavior2 sources', () => {
     ...behavior2Blocks.map(b => b.definition.type),
     'controls_if',
     'logic_compare',
+    'logic_operation',
+    'logic_negate',
     'math_number',
     'math_arithmetic',
   ]);
@@ -269,6 +271,13 @@ describe('default behavior2 sources', () => {
       // And it actually is a per-sprite system, not an empty workspace.
       expect(used).toContain('spritelab2_forEachSpriteOfType');
     });
+  });
+
+  it('the platformer gates walking on side contact', () => {
+    const platformer = DEFAULT_BEHAVIOR2S.find(b => b.name === 'platformer');
+    expect(JSON.stringify(platformer?.source)).toContain(
+      'spritelab2_bumpingSide'
+    );
   });
 
   it('the platformer reports landed (the composability demo)', () => {

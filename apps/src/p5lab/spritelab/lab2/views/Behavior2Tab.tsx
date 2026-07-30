@@ -25,6 +25,7 @@ const SYSTEMS_TOOLBOX = {
     {kind: 'block', type: 'spritelab2_forEachSpriteOfType'},
     {kind: 'block', type: 'controls_if'},
     {kind: 'block', type: 'spritelab2_standingOnType'},
+    {kind: 'block', type: 'spritelab2_bumpingSide'},
     {kind: 'block', type: 'spritelab2_keyIsHeld'},
     {
       kind: 'block',
@@ -109,16 +110,23 @@ const Behavior2Tab: React.FunctionComponent<Behavior2TabProps> = ({
   }, [enabled, system, sourcesReinitializedCount, getCurrentBlocks, loadCode]);
 
   // Persist edits. By-ref so the one subscription reads the current
-  // selection and handler at edit time.
-  const systemNameRef = useRef(system.name);
-  systemNameRef.current = system.name;
+  // selection and handler at edit time. Changes that serialize back to the
+  // loaded source (post-load layout echoes) are not edits — saving them
+  // would pin the bundle default into sources.
+  const systemRef = useRef(system);
+  systemRef.current = system;
   const onSourceChangeRef = useRef(onSourceChange);
   onSourceChangeRef.current = onSourceChange;
   useEffect(
     () =>
-      subscribeToChanges(source =>
-        onSourceChangeRef.current(systemNameRef.current, source)
-      ),
+      subscribeToChanges(source => {
+        if (
+          isEqual(sanitizeBehavior2Source(systemRef.current.source), source)
+        ) {
+          return;
+        }
+        onSourceChangeRef.current(systemRef.current.name, source);
+      }),
     [subscribeToChanges]
   );
 

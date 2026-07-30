@@ -270,6 +270,42 @@ export const commands = {
     return standing;
   },
 
+  // isStandingOn's horizontal sibling: is a target's face at the sprite's
+  // side? Same whole-frame-step reasoning — a walker closes up to a frame's
+  // travel before any check can see contact, so the band accepts a near or
+  // shallowly-overlapped face. The vertical-overlap floor keeps the tile a
+  // sprite merely stands on from reading as a side block.
+  isBumpingSide(spriteArg, targetArg, side) {
+    const SIDE_TOLERANCE = 8;
+    const MIN_VERTICAL_OVERLAP = 12;
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let bumping = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      for (const target of targets) {
+        const targetCollider = createSpriteCollider(target);
+        const verticalOverlap =
+          Math.min(spriteCollider.bottom, targetCollider.bottom) -
+          Math.max(spriteCollider.top, targetCollider.top);
+        if (verticalOverlap <= MIN_VERTICAL_OVERLAP) {
+          continue;
+        }
+        const blockedRight =
+          spriteCollider.left < targetCollider.left &&
+          spriteCollider.right >= targetCollider.left - SIDE_TOLERANCE;
+        const blockedLeft =
+          spriteCollider.right > targetCollider.right &&
+          spriteCollider.left <= targetCollider.right + SIDE_TOLERANCE;
+        if (side === 'right' ? blockedRight : blockedLeft) {
+          bumping = true;
+          break;
+        }
+      }
+    });
+    return bumping;
+  },
+
   jumpTo(spriteArg, location) {
     if (!location) {
       return;

@@ -501,6 +501,32 @@ const standingOnTypeGenerator: GeneratorFunction = block => [
   Order.FUNCTION_CALL,
 ];
 
+const bumpingSide: BlockJson = {
+  type: 'spritelab2_bumpingSide',
+  message0: 'this sprite is bumping %1 on the %2',
+  args0: [
+    dropdown(
+      'TYPE',
+      BEHAVIOR2_TYPE_OPTIONS.map(([label, group]): [string, string] => [
+        label,
+        group,
+      ])
+    ),
+    dropdown('SIDE', [
+      ['left', 'left'],
+      ['right', 'right'],
+    ]),
+  ],
+  output: 'Boolean',
+  style: BlockStyles.LOGIC,
+};
+
+const bumpingSideGenerator: GeneratorFunction = block => [
+  `isBumpingSide(__current, {group: '${block.getFieldValue('TYPE')}'}, ` +
+    `'${block.getFieldValue('SIDE')}')`,
+  Order.FUNCTION_CALL,
+];
+
 // ---------------------------------------------------------------------------
 
 const behavior2BlockDefinitions: {
@@ -543,6 +569,7 @@ const behavior2BlockDefinitions: {
   },
   {definition: keyIsHeld, generator: keyIsHeldGenerator},
   {definition: standingOnType, generator: standingOnTypeGenerator},
+  {definition: bumpingSide, generator: bumpingSideGenerator},
 ];
 
 export default behavior2BlockDefinitions;
