@@ -109,8 +109,9 @@ body.pin_bottom {
   left: 0;
 }
 
-// Brand-aware lab shell background for legacy labs. Excludes Minecraft labs
-body.pin_bottom:not(.minecraft) {
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft
+// (own theming) and AI for Oceans (needs the deep-blue underwater scene).
+body.pin_bottom:not(.minecraft):not(.oceans-blue) {
   background-color: var(--background-neutral-secondary);
 }
 
