@@ -38,6 +38,8 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/items/itemGeneration';
+import {compileBehavior2Sources} from '../blockly/behavior2';
+import {DEFAULT_BEHAVIOR2S} from '../blockly/defaultBehavior2s';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
@@ -119,6 +121,9 @@ function getWorldTabParams() {
   return {
     enabled: params.get('world-tab') === 'true',
     large: params.get('world') === 'large',
+    // Behavior2 prototype: compose the project's system implementations into
+    // every run (Platform2's start-system block dispatches into them).
+    behavior2: params.get('behavior2') === 'true',
   };
 }
 
@@ -537,6 +542,27 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
 
+  // Behavior2 prototype: the system implementations composed ahead of every
+  // run. Compiled at run time, not memoized — the block types register when
+  // the workspace injects, so an early compile would fail and stick.
+  const behavior2Enabled = worldTabParams.behavior2;
+  const getBehavior2Code = useCallback(() => {
+    if (!behavior2Enabled) {
+      return '';
+    }
+    const behavior2s = currentSources.behavior2s?.length
+      ? currentSources.behavior2s
+      : DEFAULT_BEHAVIOR2S;
+    try {
+      return compileBehavior2Sources(behavior2s);
+    } catch (e) {
+      // A system that fails to compile shouldn't take the scene down; the
+      // start block dispatches through the registry and skips it.
+      console.error('Failed to compile behavior2 systems', e);
+      return '';
+    }
+  }, [behavior2Enabled, currentSources.behavior2s]);
+
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
@@ -545,9 +571,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+      getBehavior2Code() +
+        compileWorldPrelude(activeWorldRef.current) +
+        (getCode() ?? '')
     );
-  }, [dispatch, getCode]);
+  }, [dispatch, getCode, getBehavior2Code]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -583,9 +611,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         console.error('Failed to compile scene', scene.id, e);
       }
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(getBehavior2Code() + prelude + code);
     },
-    [dispatch, activeSceneId, getCode]
+    [dispatch, activeSceneId, getCode, getBehavior2Code]
   );
 
   const runScene = useCallback(
@@ -686,9 +714,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      // The local project's systems, not the external one's: behavior2s
+      // aren't part of the external fetch (prototype simplification).
+      engine.runProgram(getBehavior2Code() + prelude + code);
     },
-    [dispatch, compileExternalScene]
+    [dispatch, compileExternalScene, getBehavior2Code]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
