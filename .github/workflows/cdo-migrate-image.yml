@@ -1,0 +1,191 @@
+# Build, smoke-test, and publish the cdo-migrate image (docker/migrate/), and
+# from it the seeded cdo-dev-db image the devcontainer runs.
+#
+# Smoke test: the same Dockerfile must build on docker AND podman
+# (dual-engine policy, see docker/base/README.md); smoke-test.sh asserts the
+# curriculum is present and that Rails loads its rake tasks without a
+# database. Runs on PRs and pushes nothing.
+#
+# Triggers are docker/migrate/** only, NOT the source tree the image bakes.
+# The image is keyed on the whole tree — every commit changes it — so
+# tree-path triggers would rebuild a 3 GB image on every push. Nothing needs
+# that: k8s deploys build their own migrate per deploy, and a devcontainer
+# sandbox tolerates a stale schema because syncing it is an operator action
+# (`rake dashboard:setup_db`), not something that happens on container start.
+# The weekly cron sets the freshness floor for both published images and
+# picks up refreshed layers underneath.
+#
+# First publish: this build is FROM the published cdo-gems:latest, so it
+# cannot succeed until cdo-gems has published at least once. When both
+# workflows land in the same push, this one may lose that race — re-run it
+# via workflow_dispatch.
+#
+# amd64 only, inherited from cdo-gems — see docker/gems/README.md.
+
+name: cdo-migrate-image
+
+# The path lists below are duplicated between pull_request and push on
+# purpose: the workflow parser does not support YAML anchors.
+on:
+  pull_request:
+    paths:
+      - 'docker/migrate/**'
+      - '.github/workflows/cdo-migrate-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/migrate/**'
+      - '.github/workflows/cdo-migrate-image.yml'
+  schedule:
+    - cron: '0 9 * * 0' # weekly, Sunday 9am UTC — after cdo-gems at 8am
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-migrate
+  DB_IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev-db
+
+jobs:
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }})
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [docker, podman]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      # The build context is most of the repo (the image bakes the Rails
+      # source and curriculum), so this checkout is the expensive step:
+      # dashboard/ alone is ~2.5 GB. blob:none keeps the fetch to the blobs
+      # the sparse paths actually need. Cone-mode sparse checkout also brings
+      # every file in the repo root (Gemfile, deployment.rb, uv.lock, ...).
+      - name: Checkout image inputs
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            docker/migrate
+            config
+            lib
+            shared
+            dashboard
+            python
+
+      - name: Build cdo-migrate with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            -f docker/migrate/Dockerfile \
+            -t cdo-migrate:smoke .
+
+      - name: Smoke test
+        run: ./docker/migrate/smoke-test.sh cdo-migrate:smoke ${{ matrix.engine }}
+
+  # Plain `docker build` + `docker push`, matching cdo-gems: no registry
+  # build cache, because the source layers this image is made of change with
+  # every commit, so a cold build is the expected case.
+  build-push:
+    name: build and push
+    if: github.event_name != 'pull_request'
+    needs: smoke-test
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout image inputs
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            docker/migrate
+            config
+            lib
+            shared
+            dashboard
+            python
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # No lock- tag: unlike the gem layer there is no narrow input to key
+      # on — the content key for baked source is the commit itself.
+      - name: Build and push cdo-migrate
+        run: |
+          docker build \
+            -f docker/migrate/Dockerfile \
+            -t "$IMAGE:git-${{ github.sha }}" \
+            -t "$IMAGE:latest" \
+            .
+          docker push "$IMAGE:git-${{ github.sha }}"
+          docker push "$IMAGE:latest"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$IMAGE:latest"
+
+  # cdo-dev-db: the seeded MySQL image the devcontainer runs, baked by
+  # running the migrate image published above against a mysql:8.0 sidecar.
+  # Pinned to git-<sha>, not :latest, so the datadir and the code that
+  # produced it are one lineage rather than whatever won a race.
+  #
+  # Non-PR only: a ~20 minute bake with nothing to push is not worth a PR
+  # gate, and the weekly cron is what sets the devcontainer freshness floor.
+  #
+  # Like cdo-base, GHCR creates the package private on first publish. It
+  # needs a one-time manual flip to public in the package settings before
+  # anyone can pull it without a token.
+  bake-and-publish-db:
+    name: bake and publish cdo-dev-db
+    if: github.event_name != 'pull_request'
+    needs: build-push
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      # Only .devcontainer/ — the bake reads the seed code out of the migrate
+      # image, never out of the repo, so the source tree is dead weight here.
+      - name: Checkout bake inputs
+        uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: .devcontainer
+
+      # Peak is ~13 GB: the migrate image, mysql:8.0, the exported datadir
+      # twice (host dir plus tar), and the image built from it. A stock
+      # ubuntu-24.04 runner does not have that spare.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
+          df -h /
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bake the seeded datadir
+        run: CDO_MIGRATE_IMAGE=$IMAGE:git-${{ github.sha }} .devcontainer/scripts/bake-db.sh
+
+      - name: Build and push cdo-dev-db
+        run: |
+          docker build \
+            -f .devcontainer/Dockerfile.db \
+            -t "$DB_IMAGE:git-${{ github.sha }}" \
+            -t "$DB_IMAGE:latest" \
+            .devcontainer
+          docker push "$DB_IMAGE:git-${{ github.sha }}"
+          docker push "$DB_IMAGE:latest"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$DB_IMAGE:latest"

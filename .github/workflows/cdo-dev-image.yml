@@ -1,0 +1,128 @@
+# Build, smoke-test, and publish the cdo-dev image (docker/dev/).
+#
+# Smoke test: the same Dockerfile must build on docker AND podman
+# (dual-engine policy, see docker/dev/README.md); smoke-test.sh asserts the
+# dev/test gem delta installed and that nothing inherited from cdo-gems was
+# lost. Runs on PRs and pushes nothing.
+#
+# Unlike cdo-gems, this builds FROM the published cdo-gems:latest rather than
+# building the whole chain per job: cdo-gems is a published image, so there is
+# nothing to materialize locally first.
+#
+# amd64 only, inherited from cdo-gems — see docker/gems/README.md. On Apple
+# Silicon this image runs under linux/amd64 emulation.
+#
+# The weekly cron picks up a refreshed cdo-gems, and through it a refreshed
+# cdo-base. Without it a security rebuild upstream would not reach developers
+# until the next lockfile change.
+
+name: cdo-dev-image
+
+# The path lists below are duplicated between pull_request and push on
+# purpose: the workflow parser does not support YAML anchors.
+on:
+  pull_request:
+    paths:
+      - 'docker/dev/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
+      - '.github/workflows/cdo-dev-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/dev/**'
+      - 'Gemfile'
+      - 'Gemfile.lock'
+      - '.ruby-version'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - '.python-version'
+      - '.github/workflows/cdo-dev-image.yml'
+  schedule:
+    - cron: '0 10 * * 0' # weekly, Sunday 10am UTC — after cdo-gems at 8am
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dev
+
+jobs:
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }})
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [docker, podman]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      # Cone-mode sparse checkout also brings every file in the repo root,
+      # which is where the Gemfile and python lockfiles live.
+      - name: Checkout build inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/dev
+            python
+
+      - name: Build cdo-dev with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            -f docker/dev/Dockerfile \
+            -t cdo-dev:smoke .
+
+      - name: Smoke test
+        run: ./docker/dev/smoke-test.sh cdo-dev:smoke ${{ matrix.engine }}
+
+  # Plain `docker build` + `docker push`, matching cdo-gems: no registry build
+  # cache, because the layers that dominate here (the gem delta, Playwright's
+  # browser download) are invalidated by exactly the lockfile changes that
+  # trigger this workflow, so a cold build is the expected case.
+  build-push:
+    name: build and push
+    if: github.event_name != 'pull_request'
+    needs: smoke-test
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout build inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docker/dev
+            python
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # The lock- tag keys on both lockfiles, since either moving changes what
+      # this image contains.
+      - name: Build and push cdo-dev
+        run: |
+          lock="lock-$(cat Gemfile.lock uv.lock | sha256sum | cut -c1-12)"
+          docker build \
+            -f docker/dev/Dockerfile \
+            -t "$IMAGE:git-${{ github.sha }}" \
+            -t "$IMAGE:latest" \
+            -t "$IMAGE:$lock" \
+            .
+          docker push "$IMAGE:git-${{ github.sha }}"
+          docker push "$IMAGE:latest"
+          docker push "$IMAGE:$lock"
+
+      - name: Inspect published image
+        run: docker buildx imagetools inspect "$IMAGE:latest"

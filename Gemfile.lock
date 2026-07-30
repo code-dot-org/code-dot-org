@@ -597,9 +597,6 @@ GEM
     launchy (3.0.1)
       addressable (~> 2.8)
       childprocess (~> 5.0)
-    libv8-node (18.16.0.0)
-    libv8-node (18.16.0.0-arm64-darwin)
-    libv8-node (18.16.0.0-x86_64-linux)
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -633,8 +630,6 @@ GEM
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.9)
-    mini_racer (0.8.0)
-      libv8-node (~> 18.16.0.0)
     minitest (5.18.0)
     minitest-around (0.5.0)
       minitest (~> 5.0)
@@ -1326,7 +1321,6 @@ DEPENDENCIES
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
-  mini_racer
   minitest (~> 5.15)
   minitest-around
   minitest-rails (~> 7.0)

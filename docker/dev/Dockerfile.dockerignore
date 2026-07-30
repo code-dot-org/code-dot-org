@@ -1,0 +1,15 @@
+# Allowlist, deliberately all top-level. The context is the repo root
+# (6.7 GB); this keeps only the lockfiles and the entrypoint the build reads.
+# The repo itself arrives at runtime as a volume, so no source belongs here.
+#
+# Every rule is a whole top-level entry on purpose. Nested re-inclusion
+# (`!a/b/*.json` after `a/b/*`) is NOT portable: docker re-includes at depth,
+# podman does so inconsistently — measured, with both builds succeeding and
+# only the file list differing. docker/ and python/ are small enough to admit
+# whole, which avoids the question entirely.
+*
+!.python-version
+!pyproject.toml
+!uv.lock
+!python
+!docker
