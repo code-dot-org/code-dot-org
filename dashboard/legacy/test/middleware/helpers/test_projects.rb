@@ -15,7 +15,6 @@ class ProjectsTest < Minitest::Test
 
     # If DCDO flag is enabled, create should return a uuid
     DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
     channel_id = Projects.new(signedout_storage_id).create({projectType: 'artist'}, ip: 123)
     assert uuid_format.match?(channel_id)
   end
