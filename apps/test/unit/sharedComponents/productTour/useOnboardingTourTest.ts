@@ -7,12 +7,28 @@ import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboard
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
-jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => ({
-  ...jest.requireActual(
-    '@cdo/apps/sharedComponents/productTour/productTourHelpers'
-  ),
-  recordOnboardingTourAbandonment: jest.fn(),
-}));
+// attachOnboardingAnalytics is stubbed with a minimal fake that wires the
+// mocked recordOnboardingTourAbandonment into 'cancel' itself: the real
+// attachOnboardingAnalytics calls recordOnboardingTourAbandonment via a
+// same-module local reference (a TS/babel compilation artifact), which
+// bypasses this jest.mock override entirely, so the real implementation
+// would never touch our mock.
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => {
+  const recordOnboardingTourAbandonment = jest.fn();
+  return {
+    ...jest.requireActual(
+      '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+    ),
+    recordOnboardingTourAbandonment,
+    attachOnboardingAnalytics: jest.fn(
+      (tour: Tour, tourName: string, sessionStorageKey: string) => {
+        tour.on('cancel', () =>
+          recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName)
+        );
+      }
+    ),
+  };
+});
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
   trySetSessionStorage: jest.fn(),
@@ -46,8 +62,17 @@ describe('useOnboardingTour', () => {
     jest.clearAllMocks();
     eventHandlers = {};
     mockTour = {
+      // Shepherd supports multiple listeners per event; chain rather than
+      // overwrite so both attachOnboardingAnalytics's wiring and the hook's
+      // own handler fire on the same event.
       on: jest.fn((event: string, cb: () => void) => {
-        eventHandlers[event] = cb;
+        const existing = eventHandlers[event];
+        eventHandlers[event] = existing
+          ? () => {
+              existing();
+              cb();
+            }
+          : cb;
       }),
       addSteps: jest.fn(),
       currentStep: null,

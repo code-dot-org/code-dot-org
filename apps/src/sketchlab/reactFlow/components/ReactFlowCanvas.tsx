@@ -38,6 +38,7 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  DEFAULT_TEXT_NODE_HEIGHT,
   KEYBOARD_PAN_STEP,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
@@ -102,8 +103,6 @@ const NODE_TYPES = {
   group: GroupNode,
 };
 
-// Offset added per new node so they don't stack exactly on top of each other.
-const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
 const GROUP_MODE_HINT =
@@ -251,7 +250,6 @@ export default function ReactFlowCanvas({
     getViewport,
     setViewport: setReactFlowViewport,
   } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
-  const addedNodeCountRef = useRef(0);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
 
   const {
@@ -808,12 +806,10 @@ export default function ReactFlowCanvas({
       pushSnapshot();
       setCanvasTool('cursor');
       const {type} = request;
-      const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
-      addedNodeCountRef.current += 1;
 
       const centerPosition = screenToFlowPosition({
-        x: window.innerWidth / 2 + stagger,
-        y: window.innerHeight / 2 + stagger,
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
       });
 
       // For lines, create two hidden anchor nodes and connect them.
@@ -854,10 +850,12 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
-      });
+      const defaultHeight =
+        type === 'text' ? DEFAULT_TEXT_NODE_HEIGHT : DEFAULT_NODE_HEIGHT;
+      const position = {
+        x: centerPosition.x - DEFAULT_NODE_WIDTH / 2,
+        y: centerPosition.y - defaultHeight / 2,
+      };
 
       const newNodeId = createUuid();
       // width/height are the React Flow fields NodeResizer also writes on drag,
@@ -870,7 +868,7 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         width: DEFAULT_NODE_WIDTH,
-        height: DEFAULT_NODE_HEIGHT,
+        height: defaultHeight,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);

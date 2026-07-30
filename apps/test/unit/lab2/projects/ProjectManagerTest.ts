@@ -5,7 +5,7 @@ import {ChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
-import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
+import {ProjectSources, Channel, ShareFailure} from '@cdo/apps/lab2/types';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
@@ -67,6 +67,60 @@ describe('ProjectManager', () => {
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
     expect(channel).to.deep.equal(FAKE_CHANNEL);
+  });
+
+  it('fetches the share failure for share-filtered project types', async () => {
+    const sketchlabChannel: Channel = {
+      ...FAKE_CHANNEL,
+      projectType: 'sketchlab',
+    };
+    const failure: ShareFailure = {type: 'profanity'};
+    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
+    channelsStore.getShareFailure.returns(Promise.resolve(failure));
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    const {shareFailure} = await projectManager.load();
+    expect(shareFailure).to.deep.equal(failure);
+  });
+
+  it('does not check the share failure for non-filtered project types', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    // FAKE_CHANNEL is a music project, which is not share-filtered.
+    const {shareFailure} = await projectManager.load();
+    assert.isNull(shareFailure);
+    assert.isTrue(channelsStore.getShareFailure.notCalled);
+  });
+
+  it('defaults to no share failure if the check fails', async () => {
+    const sketchlabChannel: Channel = {
+      ...FAKE_CHANNEL,
+      projectType: 'sketchlab',
+    };
+    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
+    channelsStore.getShareFailure.throws(new Error('network error'));
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    const {shareFailure} = await projectManager.load();
+    assert.isNull(shareFailure);
   });
 
   it('triggers save immediately on first save', async () => {

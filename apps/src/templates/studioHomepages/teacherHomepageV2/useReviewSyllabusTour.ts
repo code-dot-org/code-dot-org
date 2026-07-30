@@ -3,7 +3,7 @@ import Shepherd, {Tour} from 'shepherd.js';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -76,13 +76,19 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     stepClass: 'custom-shepherd-onboarding-container',
   });
   tour.addSteps(
-    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig)
+    createReviewSyllabusUnitOverviewSteps(tour, demoType, quizConfig, TOUR_NAME)
   );
 
   if (tour.steps.length === 0) {
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
     return;
   }
+
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    REVIEW_SYLLABUS_ONBOARDING_STEP_KEY
+  );
 
   const clearStep = () =>
     trySetSessionStorage(REVIEW_SYLLABUS_ONBOARDING_STEP_KEY, '');
@@ -91,11 +97,6 @@ export const resumeReviewSyllabusOnboardingTour = () => {
     recordViewSyllabusCompletion();
   });
   tour.on('cancel', () => {
-    recordOnboardingTourAbandonment(
-      tour,
-      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      TOUR_NAME
-    );
     clearStep();
   });
 
@@ -141,7 +142,8 @@ const useReviewSyllabusTour = (demoType: DemoType | null) => {
         ? createReviewSyllabusHomepageSteps(
             tour,
             REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-            demoType
+            demoType,
+            TOUR_NAME
           )
         : [],
     [demoType]

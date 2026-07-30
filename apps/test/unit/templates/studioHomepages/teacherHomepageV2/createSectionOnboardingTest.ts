@@ -72,7 +72,8 @@ describe('createHomepageSteps — picture-login dialog dismissal', () => {
     const steps = createHomepageSteps(
       mockTour as unknown as Tour,
       gradesTeaching,
-      'test-session-key'
+      'test-session-key',
+      'test_tour'
     );
     const loginStep = steps.find(s => s.id === 'picture-login')!;
     return loginStep.when as unknown as WhenHandlers;
