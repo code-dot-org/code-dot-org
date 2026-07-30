@@ -838,9 +838,17 @@ describe('rule authoring blocks (`.rule` files)', () => {
     }
   });
 
-  it('offers a Rule toolbox category with them', () => {
+  it('offers a Rule toolbox category (with the dependency blocks)', () => {
     const cats = DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>;
-    expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual(AUTHORING);
+    // The authoring blocks plus `use rule` / `use trait` for declaring deps.
+    expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual([
+      'world_rule',
+      'world_use_rule',
+      'world_rule_trait',
+      'world_use_trait',
+      'world_rule_property',
+      'world_rule_event',
+    ]);
   });
 
   it('is a root block type (owns its declaration chain)', () => {

@@ -22,21 +22,26 @@ describe('builtinRuleMeta', () => {
     expect(gravity.name).toBe('Has Gravity');
     expect(gravity.source).toBe('builtin');
     expect(gravity.ref).toEqual({source: 'builtin', exportName: 'GravityRule'});
-    // Dependencies, by rule id.
-    expect(new Set(gravity.requires)).toEqual(new Set(['motion', 'collision']));
+    // Dependencies, as the world-lab export names a `use rule` would name.
+    expect(new Set(gravity.requires)).toEqual(
+      new Set(['MotionRule', 'CollisionRule']),
+    );
 
-    // Traits, valued by their world-lab export.
+    // Traits, valued by their world-lab export (built-in requires aren't
+    // surfaced for authoring).
     expect(gravity.traits).toEqual(
       expect.arrayContaining([
         {
           id: 'affected',
           name: 'Affected by Gravity',
           ref: {source: 'builtin', exportName: 'AffectedByGravityTrait'},
+          requires: [],
         },
         {
           id: 'ground',
           name: 'Acts as Ground',
           ref: {source: 'builtin', exportName: 'GroundTrait'},
+          requires: [],
         },
       ]),
     );
@@ -170,6 +175,7 @@ describe('parseRuleMeta', () => {
           exportName: 'WindblownTrait',
           modulePath: 'rules/wind',
         },
+        requires: [],
       },
     ]);
     // The rule-level property is world-scoped, with its authored default.
@@ -269,5 +275,56 @@ describe('ruleMetaToModule', () => {
     const code = ruleMetaToModule(withVec);
     expect(code).toContain(`import {RuleBuilder, Vector} from 'world-lab';`);
     expect(code).toContain('new Vector(0, 1)');
+  });
+});
+
+describe('rule + trait dependencies (use rule / use trait)', () => {
+  const useRule = (value: string): object => ({
+    type: 'world_use_rule',
+    fields: {RULE: value},
+  });
+  const useTrait = (value: string): object => ({
+    type: 'world_use_trait',
+    fields: {TRAIT: value},
+  });
+
+  // `use rule` blocks at the rule level → rule requires; `use trait` inside a
+  // `define trait`'s `do` → that trait's requires. Built-in (bare name) and
+  // project (`module`/`module#export`) refs mix freely.
+  const meta = parseRuleMeta(
+    'rules/wind',
+    ruleFile(
+      'Has Wind',
+      useRule('GravityRule'), // built-in rule dep
+      useRule('rules/motion'), // project rule dep
+      trait(
+        'Windblown',
+        useTrait('MovableTrait'), // built-in trait dep
+        useTrait('rules/other#SomeTrait'), // project trait dep
+        prop('number', 'drag', '2'),
+      ),
+    ),
+  )!;
+
+  it('parses use rule / use trait into rule + trait requires', () => {
+    expect(meta.requires).toEqual(['GravityRule', 'rules/motion']);
+    expect(meta.traits[0].requires).toEqual([
+      'MovableTrait',
+      'rules/other#SomeTrait',
+    ]);
+  });
+
+  it('emits requires with the right imports in the module', () => {
+    const code = ruleMetaToModule(meta);
+    // Built-in deps join the world-lab import; project deps get their own.
+    expect(code).toContain(
+      `import {RuleBuilder, GravityRule, MovableTrait} from 'world-lab';`,
+    );
+    expect(code).toContain(`import Motion from "rules/motion";`); // rule (default)
+    expect(code).toContain(`import {SomeTrait} from "rules/other";`); // trait (named)
+    expect(code).toContain('rule.requires([GravityRule, Motion]);');
+    expect(code).toContain(
+      'WindblownTrait.requires([MovableTrait, SomeTrait]);',
+    );
   });
 });
