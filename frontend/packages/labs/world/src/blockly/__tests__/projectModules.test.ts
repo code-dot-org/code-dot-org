@@ -124,4 +124,17 @@ describe('projectWorldRules', () => {
       new Set(['GravityRule', 'InputRule', 'AnimationRule']),
     );
   });
+
+  it('resolves a project rule shim (path) to the built-in it re-exports', () => {
+    const rules = projectWorldRules({
+      'worlds/a.world': worldFile('rules/gravity', 'rules/mine', 'InputRule'),
+      'rules/gravity.js': `export {GravityRule as default} from 'world-lab';\n`,
+      // A genuinely project-defined rule (no built-in re-export) → no trait
+      // contribution yet, so it resolves to nothing.
+      'rules/mine.js': `const rule = new RuleBuilder({id: 'mine', name: 'Mine'});\nexport default rule.build();`,
+    });
+    // The gravity shim resolves to GravityRule; the built-in passes through; the
+    // real project rule contributes no built-in trait name.
+    expect(new Set(rules)).toEqual(new Set(['GravityRule', 'InputRule']));
+  });
 });

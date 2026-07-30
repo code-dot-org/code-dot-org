@@ -15,6 +15,9 @@ describe('projectFiles', () => {
       'actors/player.actor',
       'animations/game.anim',
       'maps/level1.map',
+      'rules/animation.js',
+      'rules/gravity.js',
+      'rules/input.js',
       'scenes/main.scene',
       'worlds/platform.world',
     ]);
