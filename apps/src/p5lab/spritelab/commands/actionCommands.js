@@ -238,6 +238,38 @@ export const commands = {
     return touching;
   },
 
+  // Like isDirectlyAbove, but with a tolerance band below the target's top.
+  // Block-implemented gravity (behavior2 systems) moves sprites in whole-
+  // frame steps, so a falling sprite's feet land up to one frame's fall past
+  // the surface; the exact-equality check never sees them. The band accepts
+  // feet within [top, top + STANDING_TOLERANCE].
+  isStandingOn(spriteArg, targetArg) {
+    const STANDING_TOLERANCE = 16;
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let standing = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      if (spriteCollider.bottom >= APP_HEIGHT) {
+        standing = true;
+        return;
+      }
+      for (const target of targets) {
+        const targetCollider = createSpriteCollider(target);
+        if (
+          spriteCollider.bottom >= targetCollider.top &&
+          spriteCollider.bottom <= targetCollider.top + STANDING_TOLERANCE &&
+          spriteCollider.left <= targetCollider.right &&
+          spriteCollider.right >= targetCollider.left
+        ) {
+          standing = true;
+          break;
+        }
+      }
+    });
+    return standing;
+  },
+
   jumpTo(spriteArg, location) {
     if (!location) {
       return;
