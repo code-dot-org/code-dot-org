@@ -15,7 +15,9 @@ export const VALUE_SHADOW_EXTENSION = 'world_value_shadow';
 /** A shadow block spec: the block type and its field values (e.g. math_number NUM). */
 export interface ShadowSpec {
   type: string;
-  fields?: Record<string, string | number | boolean>;
+  // A field's serialized state — usually a scalar, but a custom field (e.g. the
+  // vector field) saves a structured value like `{x, y}`.
+  fields?: Record<string, unknown>;
 }
 
 // block type -> the input names to seed and the shadow to seed each with.

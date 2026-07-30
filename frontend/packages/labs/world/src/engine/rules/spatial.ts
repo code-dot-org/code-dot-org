@@ -17,13 +17,13 @@ export const PositionalTrait = rule.addTrait({
 
 export const PositionProperty = PositionalTrait.addProperty(
   SPATIAL.position,
-  'vector',
+  'point',
   new Vector(0, 0),
   {name: 'position'},
 );
 export const ScaleProperty = PositionalTrait.addProperty(
   SPATIAL.scale,
-  'vector',
+  'point',
   new Vector(1, 1),
   {name: 'scale'},
 );
@@ -52,7 +52,7 @@ export const SkewProperty = PositionalTrait.addProperty(
  */
 export const IntrinsicSizeProperty = PositionalTrait.addProperty(
   SPATIAL.intrinsicSize,
-  'vector',
+  'point',
   new Vector(0, 0),
   {readonly: true, name: 'intrinsic size'},
 );
@@ -62,7 +62,7 @@ export const MoveAction = PositionalTrait.addAction(
   (actor, to) => actor.set(PositionProperty, Vector.from(to as VectorLike)),
   {
     name: 'Move to',
-    params: [{name: 'to', type: 'vector', default: new Vector(0, 0)}],
+    params: [{name: 'to', type: 'point', default: new Vector(0, 0)}],
   },
 );
 export const RotateAction = PositionalTrait.addAction(
@@ -75,7 +75,7 @@ export const ScaleAction = PositionalTrait.addAction(
   (actor, to) => actor.set(ScaleProperty, Vector.from(to as VectorLike)),
   {
     name: 'Scale to',
-    params: [{name: 'to', type: 'vector', default: new Vector(1, 1)}],
+    params: [{name: 'to', type: 'point', default: new Vector(1, 1)}],
   },
 );
 /** Helper that sets both scale components to the same value (DESIGN.md). */

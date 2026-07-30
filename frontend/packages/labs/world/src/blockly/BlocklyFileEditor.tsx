@@ -4,6 +4,7 @@ import {
   Blockly,
   BlocklyProvider,
   BlocklyWorkspace,
+  RectangleInputPlugin,
   ScrollBlockDragger,
   TopLeftMetricsManager,
   TriangleInputPlugin,
@@ -23,14 +24,16 @@ import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from './domainBlocks';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
-// Actor values (`this actor`, `the actor I'm touching`, and every `of …` socket)
-// carry the unique `Actor` output/check type. Give that type a distinct triangle
-// nub so an actor connection reads apart from the puzzle-tab of numbers/strings.
+// Distinct connector nubs for the lab's own value types, so they read apart from
+// the puzzle-tab of numbers/strings: a triangle for `Actor` (`this actor`, every
+// `of …` socket) and a square for `Vector` (directional values — velocity, a
+// force, gravity's direction).
 const plugins = [
   ToolboxTrashcanPlugin,
   ScrollOptionsPlugin,
   DisableOrphansPlugin,
   TriangleInputPlugin('Actor'),
+  RectangleInputPlugin('Vector'),
 ];
 
 // A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON

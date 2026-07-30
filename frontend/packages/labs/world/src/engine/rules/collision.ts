@@ -58,7 +58,7 @@ SolidTrait.requires([CollidableTrait]);
  */
 export const SizeProperty = CollidableTrait.addProperty(
   'size',
-  'vector',
+  'point',
   new Vector(0, 0),
   {name: 'size'},
 );

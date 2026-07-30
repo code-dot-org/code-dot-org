@@ -192,8 +192,8 @@ export interface PropertySchema {
   propId: string;
   /** Localizable label. */
   name: string;
-  type: 'number' | 'boolean' | 'string' | 'vector';
-  /** Default value; a vector is `{x, y}`. */
+  type: 'number' | 'boolean' | 'string' | 'vector' | 'point';
+  /** Default value; a vector/point is `{x, y}`. */
   default: unknown;
   /**
    * For an enum-like string property (sprite / animation): the allowed values.

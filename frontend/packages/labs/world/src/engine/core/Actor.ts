@@ -30,8 +30,10 @@ export interface ActorInit {
   handlers: Array<[GameEvent, EventHandler]>;
 }
 
+// A `vector` (directional) and a `point` (an x/y pair, e.g. scale) are both
+// stored as a `Vector`; they differ only in how the editor presents them.
 const coerce = <T>(property: Property<T>, value: unknown): T =>
-  property.type === 'vector'
+  property.type === 'vector' || property.type === 'point'
     ? (Vector.from(value as Vector) as unknown as T)
     : (value as T);
 

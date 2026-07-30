@@ -91,7 +91,7 @@ function describeActor(
           name: property.name ?? property.id,
           type: property.type,
           default:
-            property.type === 'vector'
+            property.type === 'vector' || property.type === 'point'
               ? {x: (base as {x: number}).x, y: (base as {y: number}).y}
               : base,
           ...(options ? {options} : {}),

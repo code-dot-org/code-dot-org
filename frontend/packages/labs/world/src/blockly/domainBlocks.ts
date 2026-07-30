@@ -44,6 +44,7 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {worldContextExtension} from './extensions/worldContext';
+import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {label} from './label';
 import {
   actorOptions,
@@ -453,6 +454,15 @@ const typedValueCode = (
     generator.valueToCode(block, name, Order.NONE);
   switch (value.type) {
     case 'vector': {
+      // A single `Vector` socket (a `world_vector` literal, or a plugged getter).
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return (
+        read(names.value) ||
+        `new WorldLab.Vector(${Number(v.x)}, ${Number(v.y)})`
+      );
+    }
+    case 'point': {
+      // Two independent number axes (a scale, a size, a position).
       const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
       return `new WorldLab.Vector(${read(names.x) || String(v.x)}, ${
         read(names.y) || String(v.y)
@@ -494,6 +504,25 @@ const typedValueInputs = (
   });
   switch (value.type) {
     case 'vector': {
+      // One `Vector` socket, seeded with a `world_vector` literal (the arrow-grid
+      // field) — so you get inline editing and can drop another vector block in.
+      const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: 'Vector'}],
+        shadows: [
+          {
+            name: names.value,
+            shadow: {
+              type: 'world_vector',
+              fields: {VECTOR: {x: v.x, y: v.y}},
+            },
+          },
+        ],
+      };
+    }
+    case 'point': {
+      // Two independent number axes (each a `math_number`-seeded Number socket).
       const v = (d ?? {x: 0, y: 0}) as {x: number; y: number};
       return {
         message: `x %${slot}  y %${slot + 1}`,
@@ -542,13 +571,25 @@ const setPropertyBlockType = (exportName: string): string =>
 const getPropertyBlockType = (exportName: string): string =>
   `world_get_${exportName}`;
 
-/** A value block's `output` check for a value kind (a vector reads one component). */
+// The `output` check for a value kind. A `vector` reports a whole `Vector`; a
+// `point` getter reports one axis (a Number, chosen by a dropdown).
 const outputForType = (type: PropertyType): string =>
-  type === 'boolean' ? 'Boolean' : type === 'string' ? 'String' : 'Number';
+  type === 'boolean'
+    ? 'Boolean'
+    : type === 'string'
+      ? 'String'
+      : type === 'vector'
+        ? 'Vector'
+        : 'Number';
 
-/** A value block's style by the kind it reports: a boolean is logic, else math. */
+// A value block's style by the kind it reports: a boolean is logic, a whole
+// vector is a location, everything else (numbers, point axes) is math.
 const valueStyle = (type: PropertyType): string =>
-  type === 'boolean' ? 'logic_blocks' : 'math_blocks';
+  type === 'boolean'
+    ? 'logic_blocks'
+    : type === 'vector'
+      ? 'location_blocks'
+      : 'math_blocks';
 
 /**
  * A "set …" block for one settable property, generated from its definition. An
@@ -604,17 +645,20 @@ const defineSetPropertyBlock = (property: Property) => {
 /**
  * A "get …" reporter for one settable property — the read counterpart of the set
  * block. An actor property takes an ACTOR value input (defaulting to a `this
- * actor` shadow); a world property reads `world`. It outputs a Number (a vector
- * reads one component via an x/y dropdown), so a value plugs into logic/math.
+ * actor` shadow); a world property reads `world`. A `vector` property reads the
+ * whole Vector; a `point` reads one axis via an x/y dropdown (a Number); scalars
+ * read directly — so a value plugs into logic/math/vector sockets.
  */
 const defineGetPropertyBlock = (property: Property) => {
   const exportName = PROPERTY_EXPORT_NAME.get(property) ?? '';
   const name = property.name ?? property.id;
   const actorScoped = property.scope === 'actor';
-  const isVector = property.type === 'vector';
+  // A point is read one axis at a time (an x/y dropdown → a Number); a vector is
+  // read whole. Everything else is a plain scalar read.
+  const hasComponent = property.type === 'point';
 
   // Build message + args left-to-right: an optional x/y component dropdown (for
-  // vectors), then the ACTOR input (for actor properties).
+  // points), then the ACTOR input (for actor properties).
   const args0: BlockArgDefinition[] = [];
   const slot = (arg: BlockArgDefinition): string => {
     args0.push(arg);
@@ -633,10 +677,10 @@ const defineGetPropertyBlock = (property: Property) => {
     slot({type: 'input_value', name: 'ACTOR', check: 'Actor'});
 
   const message0 = actorScoped
-    ? isVector
+    ? hasComponent
       ? `get ${name} ${component()} of ${actorSocket()}`
       : `get ${name} of ${actorSocket()}`
-    : isVector
+    : hasComponent
       ? `get world ${name} ${component()}`
       : `get world ${name}`;
 
@@ -648,8 +692,8 @@ const defineGetPropertyBlock = (property: Property) => {
     output: outputForType(property.type),
     // A world property reads from `world`; warn if placed where it is unbound.
     extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
-    // Style by the value it reports: a boolean reads as logic, a number/vector
-    // component as math.
+    // Style by the value it reports: a boolean reads as logic, a whole vector as
+    // a location, a number/point axis as math.
     style: valueStyle(property.type),
     tooltip: actorScoped
       ? `Get an actor's ${name}.`
@@ -659,7 +703,7 @@ const defineGetPropertyBlock = (property: Property) => {
         const target = actorScoped
           ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
           : 'world';
-        const component = isVector
+        const component = hasComponent
           ? `.${block.getFieldValue('COMPONENT')}`
           : '';
         return [
@@ -958,6 +1002,62 @@ const worldEventValue = defineBlock({
     },
   },
 });
+
+// ── Vector values ────────────────────────────────────────────────────────────
+// A `Vector` value block — the literal that seeds every `vector` socket (the
+// analogue of `math_number` for `Number`). Its `field_vector` opens the arrow-
+// grid editor; it outputs a `Vector`. `world_vector_component` reads one axis of
+// a Vector back out as a Number.
+
+const worldVector = defineBlock({
+  type: 'world_vector',
+  message0: '%1',
+  args0: [fieldVectorArg('VECTOR', {x: 0, y: 0})],
+  output: 'Vector',
+  style: 'location_blocks',
+  tooltip: 'A 2D vector (x, y) — click to edit it on an arrow grid.',
+  generator: {
+    javascript(block) {
+      const v = (block.getFieldValue('VECTOR') ?? {x: 0, y: 0}) as VectorValue;
+      return [
+        `new WorldLab.Vector(${Number(v.x)}, ${Number(v.y)})`,
+        Order.ATOMIC,
+      ] as [string, number];
+    },
+  },
+});
+
+const worldVectorComponent = defineBlock({
+  type: 'world_vector_component',
+  message0: '%1 of %2',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'COMPONENT',
+      options: [
+        ['x', 'x'],
+        ['y', 'y'],
+      ],
+    },
+    {type: 'input_value', name: 'VEC', check: 'Vector'},
+  ],
+  inputsInline: true,
+  output: 'Number',
+  style: 'math_blocks',
+  tooltip: 'Read one axis (x or y) of a vector as a number.',
+  generator: {
+    javascript(block, generator) {
+      const component = block.getFieldValue('COMPONENT');
+      const vec =
+        generator.valueToCode(block, 'VEC', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      return [`${vec}.${component}`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_vector_component', [
+  {name: 'VEC', shadow: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}}},
+]);
 
 // ── Actor values & touching ──────────────────────────────────────────────────
 // Blocks that yield an Actor (output type "Actor") for an action block's `of …`
@@ -1265,6 +1365,8 @@ export const DOMAIN_BLOCKS = [
   worldLog,
   worldPrint,
   worldEventValue,
+  worldVector,
+  worldVectorComponent,
   worldThisActor,
   worldTouchedActor,
   worldForEachTouching,
@@ -1327,6 +1429,15 @@ export const DOMAIN_TOOLBOX: Toolbox = [
       'logic_boolean',
     ],
   },
-  {name: 'Math', blocks: ['math_number', 'math_arithmetic', 'math_modulo']},
+  {
+    name: 'Math',
+    blocks: [
+      'math_number',
+      'math_arithmetic',
+      'math_modulo',
+      'world_vector',
+      'world_vector_component',
+    ],
+  },
   {name: 'Text', blocks: ['text']},
 ];

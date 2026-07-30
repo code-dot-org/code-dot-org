@@ -67,8 +67,9 @@ export interface WorldInit {
   animations?: Array<[string, AnimationDef]>;
 }
 
+// `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
 const coerce = <T>(property: Property<T>, value: unknown): T =>
-  property.type === 'vector'
+  property.type === 'vector' || property.type === 'point'
     ? (Vector.from(value as Vector) as unknown as T)
     : (value as T);
 
