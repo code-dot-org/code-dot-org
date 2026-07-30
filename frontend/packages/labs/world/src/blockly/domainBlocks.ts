@@ -386,6 +386,7 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_actor',
   'world_scene',
   'world_world',
+  'world_rule',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -1393,6 +1394,79 @@ const worldUseAnimations = defineBlock({
  * connections. The toolbox references them by type; the workspace resolves them
  * from the native registry.
  */
+// ── Rule authoring (`.rule` files) ───────────────────────────────────────────
+// A `.rule` is a Blockly workspace declaring a rule's metadata: a `define rule`
+// root chaining `define property`/`define trait` blocks; a `define trait` nests
+// its own `define property`/`define event` in a `do` input. A property is a
+// WORLD property at the rule level and an ACTOR property inside a trait — the
+// same block, scope by nesting. Ids are derived from the NAME (slug + PascalCase
+// export). These blocks are read STATICALLY — parsed into `RuleMeta` for the
+// editor and into a `RuleBuilder` module for the runtime (ruleMeta.ts) — so they
+// carry no JavaScript generator of their own (a `.rule` never hits `blockToCode`).
+const noGenerator = {javascript: () => ''};
+
+const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
+  ['number', 'number'],
+  ['boolean', 'boolean'],
+  ['string', 'string'],
+  ['vector', 'vector'],
+  ['point', 'point'],
+];
+
+const worldRule = defineBlock({
+  type: 'world_rule',
+  message0: 'define rule %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'My Rule'}],
+  // A definition root: no previous connection; its declarations chain below.
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip: 'Define a rule: its world properties, traits, and events.',
+  generator: noGenerator,
+});
+
+const worldRuleTrait = defineBlock({
+  type: 'world_rule_trait',
+  message0: 'define trait %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'My Trait'}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'behavior_blocks',
+  tooltip:
+    'Define a trait an actor may take. Its actor properties and events go in "do".',
+  generator: noGenerator,
+});
+
+const worldRuleProperty = defineBlock({
+  type: 'world_rule_property',
+  message0: 'define %1 property %2 with default %3',
+  args0: [
+    {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
+    {type: 'field_input', name: 'NAME', text: 'strength'},
+    {type: 'field_input', name: 'DEFAULT', text: '0'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  style: 'default',
+  tooltip:
+    'Define a property — a world property at the rule level, an actor property ' +
+    'inside a "define trait".',
+  generator: noGenerator,
+});
+
+const worldRuleEvent = defineBlock({
+  type: 'world_rule_event',
+  message0: 'define event %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'gusted'}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'event_blocks',
+  tooltip: 'Define an event a rule can raise (inside a "define trait").',
+  generator: noGenerator,
+});
+
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
@@ -1418,6 +1492,10 @@ export const DOMAIN_BLOCKS = [
   worldWorld,
   worldUseRule,
   worldUseAnimations,
+  worldRule,
+  worldRuleTrait,
+  worldRuleProperty,
+  worldRuleEvent,
 ];
 
 // Keyed by rule id: the hand-authored (non-generated) blocks that act on a
@@ -1465,6 +1543,15 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'World',
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
+  },
+  {
+    name: 'Rule',
+    blocks: [
+      'world_rule',
+      'world_rule_trait',
+      'world_rule_property',
+      'world_rule_event',
+    ],
   },
 ];
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(

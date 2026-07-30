@@ -97,64 +97,74 @@ describe('builtinRuleMeta', () => {
   });
 });
 
-// A hand-authored `.rule` workspace: a `world_rule` root chaining member
-// declarations. Same JSON shape as `.actor`/`.world` files (a Blockly workspace).
-const ruleFile = (...members: object[]): string => {
-  const chain = members.reduceRight<object | undefined>(
+// Build a `.rule` workspace (Blockly JSON): a `define rule` root chaining
+// members; a `define trait`'s properties/events nest in its `do` input.
+const chain = (blocks: object[]): object | undefined =>
+  blocks.reduceRight<object | undefined>(
     (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
     undefined,
   );
+const ruleFile = (name: string, ...members: object[]): string => {
+  const body = chain(members);
   return JSON.stringify({
     blocks: {
       blocks: [
         {
           type: 'world_rule',
-          fields: {NAME: 'Has Wind'},
-          next: chain && {block: chain},
+          fields: {NAME: name},
+          ...(body ? {next: {block: body}} : {}),
         },
       ],
     },
   });
 };
+const prop = (type: string, name: string, def: string): object => ({
+  type: 'world_rule_property',
+  fields: {TYPE: type, NAME: name, DEFAULT: def},
+});
+const event = (name: string): object => ({
+  type: 'world_rule_event',
+  fields: {NAME: name},
+});
+const trait = (name: string, ...body: object[]): object => {
+  const inner = chain(body);
+  return {
+    type: 'world_rule_trait',
+    fields: {NAME: name},
+    ...(inner ? {inputs: {DO: {block: inner}}} : {}),
+  };
+};
 
 describe('parseRuleMeta', () => {
-  it('reads a declarative `.rule` workspace into RuleMeta (project refs)', () => {
+  it('reads a nested `.rule` workspace into RuleMeta (scope by nesting)', () => {
     const meta = parseRuleMeta(
       'rules/wind',
       ruleFile(
-        {
-          type: 'world_rule_trait',
-          fields: {ID: 'windblown', NAME: 'Blown by Wind'},
-        },
-        {
-          type: 'world_rule_property',
-          fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
-        },
-        {
-          // An actor-scoped property (owned by a trait).
-          type: 'world_rule_property',
-          fields: {
-            ID: 'drag',
-            NAME: 'drag',
-            TYPE: 'number',
-            TRAIT: 'windblown',
-          },
-        },
-        {type: 'world_rule_event', fields: {ID: 'gusted', NAME: 'is gusted'}},
+        'Has Wind',
+        prop('number', 'strength', '5'), // world property (rule level)
+        trait(
+          'Windblown',
+          prop('number', 'drag', '2'), // actor property (inside the trait)
+          event('gusted'),
+        ),
       ),
     );
-    expect(meta).toBeDefined();
     expect(meta).toMatchObject({
-      id: 'Has_Wind',
+      id: 'Has_Wind', // slug(NAME)
       name: 'Has Wind',
       source: 'project',
       modulePath: 'rules/wind',
+      ref: {
+        source: 'project',
+        exportName: 'HasWindRule',
+        modulePath: 'rules/wind',
+      },
     });
-    // Members are `project` refs into the module, named by the id convention.
+    // Ids/exports are derived from the NAME (slug + PascalCase).
     expect(meta?.traits).toEqual([
       {
-        id: 'windblown',
-        name: 'Blown by Wind',
+        id: 'Windblown',
+        name: 'Windblown',
         ref: {
           source: 'project',
           exportName: 'WindblownTrait',
@@ -162,31 +172,32 @@ describe('parseRuleMeta', () => {
         },
       },
     ]);
+    // The rule-level property is world-scoped, with its authored default.
     expect(meta?.properties).toContainEqual(
       expect.objectContaining({
         id: 'strength',
-        scope: 'world',
+        name: 'strength',
         type: 'number',
-        default: 0,
-        ref: expect.objectContaining({
-          source: 'project',
-          exportName: 'StrengthProperty',
-          modulePath: 'rules/wind',
-        }),
+        default: 5,
+        scope: 'world',
+        ownerTraitId: undefined,
+        ref: expect.objectContaining({exportName: 'StrengthProperty'}),
       }),
     );
-    // The actor-scoped one carries its owning trait id.
+    // The trait-nested property is actor-scoped, owned by the trait, default 2.
     expect(meta?.properties).toContainEqual(
       expect.objectContaining({
         id: 'drag',
         scope: 'actor',
-        ownerTraitId: 'windblown',
+        ownerTraitId: 'Windblown',
+        default: 2,
+        ref: expect.objectContaining({exportName: 'DragProperty'}),
       }),
     );
     expect(meta?.events).toEqual([
       {
         id: 'gusted',
-        name: 'is gusted',
+        name: 'gusted',
         ref: {
           source: 'project',
           exportName: 'GustedEvent',
@@ -196,7 +207,21 @@ describe('parseRuleMeta', () => {
     ]);
   });
 
-  it('returns undefined for non-rule or mid-edit content', () => {
+  it('parses defaults by type, and rejects non-rule content', () => {
+    const meta = parseRuleMeta(
+      'rules/x',
+      ruleFile(
+        'X',
+        prop('boolean', 'active', 'true'),
+        prop('vector', 'gust', '3, 4'),
+        prop('string', 'label', 'windy'),
+      ),
+    );
+    const byId = new Map(meta!.properties.map(p => [p.id, p]));
+    expect(byId.get('active')?.default).toBe(true);
+    expect(byId.get('gust')?.default).toEqual({x: 3, y: 4});
+    expect(byId.get('label')?.default).toBe('windy');
+
     expect(parseRuleMeta('rules/x', 'not json yet')).toBeUndefined();
     expect(
       parseRuleMeta('rules/x', JSON.stringify({blocks: {blocks: []}})),
@@ -209,25 +234,9 @@ describe('ruleMetaToModule', () => {
     const meta = parseRuleMeta(
       'rules/wind',
       ruleFile(
-        {
-          type: 'world_rule_trait',
-          fields: {ID: 'windblown', NAME: 'Blown by Wind'},
-        },
-        {
-          type: 'world_rule_property',
-          fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
-        },
-        {
-          // actor-scoped: attaches to the trait above, not the rule.
-          type: 'world_rule_property',
-          fields: {
-            ID: 'drag',
-            NAME: 'drag',
-            TYPE: 'number',
-            TRAIT: 'windblown',
-          },
-        },
-        {type: 'world_rule_event', fields: {ID: 'gusted', NAME: 'is gusted'}},
+        'Has Wind',
+        prop('number', 'strength', '5'),
+        trait('Windblown', prop('number', 'drag', '2'), event('gusted')),
       ),
     )!;
     const code = ruleMetaToModule(meta);
@@ -236,18 +245,18 @@ describe('ruleMetaToModule', () => {
       `const rule = new RuleBuilder({id: "Has_Wind", name: "Has Wind"});`,
     );
     expect(code).toContain(
-      `export const WindblownTrait = rule.addTrait({id: "windblown", name: "Blown by Wind"});`,
+      `export const WindblownTrait = rule.addTrait({id: "Windblown", name: "Windblown"});`,
     );
-    // World-scoped property on the rule.
+    // World-scoped property on the rule, with its default.
     expect(code).toContain(
-      `export const StrengthProperty = rule.addProperty("strength", "number", 0, {name: "wind strength"});`,
+      `export const StrengthProperty = rule.addProperty("strength", "number", 5, {name: "strength"});`,
     );
     // Actor-scoped property on its trait.
     expect(code).toContain(
-      `export const DragProperty = WindblownTrait.addProperty("drag", "number", 0, {name: "drag"});`,
+      `export const DragProperty = WindblownTrait.addProperty("drag", "number", 2, {name: "drag"});`,
     );
     expect(code).toContain(
-      `export const GustedEvent = rule.addEvent("gusted", {name: "is gusted"});`,
+      `export const GustedEvent = rule.addEvent("gusted", {name: "gusted"});`,
     );
     expect(code.trimEnd().endsWith('export default rule.build();')).toBe(true);
   });
@@ -255,14 +264,10 @@ describe('ruleMetaToModule', () => {
   it('imports Vector only when a property needs it', () => {
     const withVec = parseRuleMeta(
       'rules/x',
-      ruleFile({
-        type: 'world_rule_property',
-        fields: {ID: 'gustDir', NAME: 'gust direction', TYPE: 'vector'},
-      }),
+      ruleFile('X', prop('vector', 'gust direction', '0, 1')),
     )!;
-    expect(ruleMetaToModule(withVec)).toContain(
-      `import {RuleBuilder, Vector} from 'world-lab';`,
-    );
-    expect(ruleMetaToModule(withVec)).toContain('new Vector(0, 0)');
+    const code = ruleMetaToModule(withVec);
+    expect(code).toContain(`import {RuleBuilder, Vector} from 'world-lab';`);
+    expect(code).toContain('new Vector(0, 1)');
   });
 });

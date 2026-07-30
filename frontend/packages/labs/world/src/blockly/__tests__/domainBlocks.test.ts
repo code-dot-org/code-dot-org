@@ -739,6 +739,8 @@ describe('world_load_map generator', () => {
 
 describe('buildDomainPalette (project rule blocks)', () => {
   // A declarative project rule: a world `strength` property + a `gusted` event.
+  // define rule Has Wind → world property `strength`; a `Windblown` trait whose
+  // `do` holds an event. (Events nest inside a trait.)
   const wind = parseRuleMeta(
     'rules/wind',
     JSON.stringify({
@@ -750,11 +752,19 @@ describe('buildDomainPalette (project rule blocks)', () => {
             next: {
               block: {
                 type: 'world_rule_property',
-                fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
+                fields: {TYPE: 'number', NAME: 'strength', DEFAULT: '0'},
                 next: {
                   block: {
-                    type: 'world_rule_event',
-                    fields: {ID: 'gusted', NAME: 'is gusted'},
+                    type: 'world_rule_trait',
+                    fields: {NAME: 'Windblown'},
+                    inputs: {
+                      DO: {
+                        block: {
+                          type: 'world_rule_event',
+                          fields: {NAME: 'gusted'},
+                        },
+                      },
+                    },
                   },
                 },
               },
@@ -805,5 +815,35 @@ describe('buildDomainPalette (project rule blocks)', () => {
     expect(defs['named:rules/wind:StrengthProperty']).toBe(
       'import {StrengthProperty} from "rules/wind";',
     );
+  });
+});
+
+describe('rule authoring blocks (`.rule` files)', () => {
+  const AUTHORING = [
+    'world_rule',
+    'world_rule_trait',
+    'world_rule_property',
+    'world_rule_event',
+  ];
+
+  it('registers the declaration blocks with no-op generators', () => {
+    for (const type of AUTHORING) {
+      const block = DOMAIN_BLOCKS.find(b => b.type === type);
+      expect(block, type).toBeDefined();
+      // No JavaScript generator of their own — a `.rule` is codegen'd from its
+      // parsed metadata (ruleMetaToModule), not block-by-block.
+      expect(
+        block!.generator.javascript({} as never, {} as never, {} as never),
+      ).toBe('');
+    }
+  });
+
+  it('offers a Rule toolbox category with them', () => {
+    const cats = DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>;
+    expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual(AUTHORING);
+  });
+
+  it('is a root block type (owns its declaration chain)', () => {
+    expect(ROOT_BLOCK_TYPES.has('world_rule')).toBe(true);
   });
 });
