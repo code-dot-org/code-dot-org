@@ -33,6 +33,7 @@ jobs:
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
       markdown-changed: ${{ steps.changes.outputs.markdown }}
+      users-changed: ${{ steps.changes.outputs.users }}
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
       # paths-filter needs a local git repo to diff push events (PRs use the API).
@@ -62,6 +63,15 @@ jobs:
               - 'frontend/packages/core/**'
               - 'frontend/packages/lint-config/**'
               - 'frontend/packages/playwright-support/**'
+              - 'frontend/*'
+              - '.github/**'
+            users:
+              - 'frontend/packages/users/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/component-library-styles/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/fonts/**'
+              - 'frontend/packages/lint-config/**'
               - 'frontend/*'
               - '.github/**'
             markdown:
@@ -105,6 +115,15 @@ jobs:
     if: ${{ needs.setup.outputs.markdown-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/markdown-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
+    secrets: inherit
+
+  # Start the users package CI workflow
+  users:
+    if: ${{ needs.setup.outputs.users-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/users-ci.yml
     with:
       playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
