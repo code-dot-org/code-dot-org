@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-29T01:03:32.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Shopping Cart\r\n\r\n::: details [**✅ Step 1**]\r\nCreate a list named `item_costs` that contains the prices of the items that might be within an online shopping cart.\r\n:::\r\n\r\n::: details [**✅ Step 2**]\r\nCreate an expression that calculates `total_cost` which sums the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 3**]\r\nCreate an expression that calculates `average_cost` which determines the average cost from the elements within the `item_costs` list.\r\n:::\r\n\r\n::: details [**✅ Step 4**]\r\nCreate and print a message variable that will concatenate both the `total_cost` and `average_cost` variables. For example: *“Total cost: $36.48 | Average cost: $12.16”*\r\n:::\r\n\r\n",
+    "long_instructions": "## Shopping Cart Calculator\r\n\r\nCreate a program that helps a shopper understand the cost of items in their cart. Choose the items, their prices, and what useful cost information your program will calculate.\r\n\r\n### Build Your Program\r\n\r\nYour program must:\r\n\r\n* Store shopping information in variables and a numeric list\r\n* Access at least two list elements and use them in an expression\r\n* Calculate information about the cost of the cart\r\n* Build and print a message that includes the result\r\n\r\nRun your program and fix any errors. Then ask AI Tutor to review it against the requirements and make any final changes yourself.\r\n\r\n::: details [Need help? Ask AI Tutor]\r\n\r\nYou can ask AI Tutor to help you:\r\n\r\n* Decide what shopping information to store\r\n* Brainstorm useful cost information to calculate\r\n* Check whether your plan meets the requirements\r\n* Give you a hint about a specific part of your code\r\n* Explain an error message\r\n\r\nAsk for guidance or hints, but write the program yourself.\r\n\r\n:::",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -45,9 +46,22 @@
       "open": false,
       "type": "validation"
     },
-    "name_suffix": "_pilot-2024"
+    "name_suffix": "_pilot-2024",
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T01:03:32.966+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9b_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L9b_2024-pilot_pilot-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T01:03:32.966+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9b_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L9b_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 14:38:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Pythonlab>

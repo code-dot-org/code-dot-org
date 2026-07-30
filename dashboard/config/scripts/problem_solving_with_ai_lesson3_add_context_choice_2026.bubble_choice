@@ -1,0 +1,11 @@
+name 'problem-solving-with-ai-lesson3-add-context-choice-2026'
+display_name 'Build a Bot That Actually Knows Something'
+description 'Pick one of the levels below.'
+
+sublevels
+level 'problem-solving-with-ai-lesson3-add-context-a-2026'
+level 'problem-solving-with-ai-lesson3-add-context-b-2026'
+level 'problem-solving-with-ai-lesson3-add-context-c-2026'
+level 'problem-solving-with-ai-lesson3-add-context-d-2026'
+
+uses_lab2

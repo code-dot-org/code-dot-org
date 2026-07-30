@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-29T22:00:31.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build a Grand Canyon Visitor Bot\r\n\r\nPark Rangers set up this bot to help visitors get their questions answered — but they weren't careful about what information they gave it.\r\n\r\n##### Do This:\r\n\r\n1. Ask your bot a few questions a park visitor might ask. Something's off. What is it?\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Fix the context. You can delete cards or edit them to fix them. Some cards are a judgement call - decide what you would trust.\r\n4. Click Update, then ask your questions again. Keep going until you would trust this bot.\r\n5. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you keep or edit the same context? Does having context mean the bot is always right?\r\n\r\n::: details [**Have Time to Make It Better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated March 2026] Rangers offer free daily programs at the visitor center. The schedule is posted each morning.\r\n- [Updated March 2026] Pets are allowed on paved rim trails but not below the rim and not on shuttle buses.\r\n- [Updated March 2026] Summer temperatures inside the canyon regularly exceed 100°F. Hikers should carry about one liter of water for every hour of hiking.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nFind one more fact this bot should know. Write it as a new context entry — include the date and where you found it, just like the other cards do. Then test whether your bot uses it.\r\n\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a visitor information assistant for Grand Canyon National Park. A park ranger built you to answer the questions visitors ask most often at the visitor center and on the park website.",
+        "retrievalContexts": [
+          "[Updated March 2026] The South Rim is open year-round, 24 hours a day. The main\nvisitor center is open 8:00 am to 5:00 pm daily.",
+          "The Bright Angel Trail has water stations at the 1.5 mile and 3 mile rest houses,\nbut they are sometimes shut off during winter.",
+          "[Updated March 2026] The North Rim is seasonal. It opens in mid-May and closes in\nmid-October. Roads to the North Rim are closed by snow the rest of the year.",
+          "[Updated March 2026] Petrified Forest National Park is about three and a half hours east and features fossilized wood and painted desert viewpoints.",
+          "[Updated March 2026] Free shuttle buses run on the South Rim: the Village Route,\nthe Kaibab Rim Route, and the Hermit Road Route. Hermit Road is closed to private\nvehicles from March through November, so the shuttle is the only way to reach those\nviewpoints.",
+          "[Updated March 2026] Hours and services vary depending on the season and current\nconditions. Visitors should check ahead before making plans.",
+          "[Updated November 2018] The North Rim is open all year. Visitors can drive to North\nRim viewpoints in any season.",
+          "[Updated June 2021] The entrance fee is $35 per vehicle and is valid for 7 days.\nAll visitors must reserve a timed-entry permit online before arriving at the park."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given.\n2. If the information you have been given does not cover a question, say plainly\n   that you do not have that information. Do NOT use general knowledge to fill\n   the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other,\n   report both and say that they disagree. Do not quietly pick one.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say\n  that is not what you are built for.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T22:00:31.178+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson4-level2_v2_2026_dev\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson4-level2_v2_2026_dev\"},{\"changed_at\":\"2026-07-29 22:00:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 00:49:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 00:52:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:55:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>
