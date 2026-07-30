@@ -7,7 +7,14 @@ import React from 'react';
 import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 import i18n from '@cdo/locale';
+
+const HTTP_PREFIX_REGEX = /^http:\/\//i;
+const FLAGGED_IMAGE_URL_ERROR =
+  'This image URL cannot be used because it may contain inappropriate content.';
+const MODERATION_ERROR =
+  "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
 export default class ImageURLInput extends React.Component {
   static propTypes = {
@@ -15,7 +22,11 @@ export default class ImageURLInput extends React.Component {
     allowedExtensions: PropTypes.string,
     currentValue: PropTypes.string,
   };
-  state = {showError: false, value: this.props.currentValue || ''};
+  state = {
+    errorType: null,
+    isSubmitting: false,
+    value: this.props.currentValue || '',
+  };
 
   inputRef = React.createRef();
 
@@ -24,7 +35,7 @@ export default class ImageURLInput extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({value: event.target.value});
+    this.setState({errorType: null, value: event.target.value});
   };
 
   handleSubmit = event => {
@@ -32,13 +43,41 @@ export default class ImageURLInput extends React.Component {
     this.handleSubmitWrapper(this.state.value);
   };
 
-  handleSubmitWrapper = url => {
+  handleSubmitWrapper = async url => {
     if (ABSOLUTE_REGEXP.test(url)) {
-      this.props.assetChosen(url, moment());
       analyticsReporter.sendEvent(EVENTS.SUBMIT_IMAGE_URL, {LabType: 'applab'});
+      const normalizedUrl = url.replace(HTTP_PREFIX_REGEX, 'https://');
+      this.setState({isSubmitting: true});
+      const moderationStatus = await moderateImageUrl(normalizedUrl, 'applab', {
+        uploaderType: 'ImageURLInput',
+        assetUrl: normalizedUrl,
+      });
+      this.setState({isSubmitting: false});
+
+      if (moderationStatus === 'safe') {
+        this.props.assetChosen(normalizedUrl, moment());
+      } else if (moderationStatus === 'flagged') {
+        this.setState({errorType: 'flagged'});
+      } else {
+        this.setState({errorType: 'moderation-error'});
+      }
     } else {
-      this.setState({showError: true});
+      this.setState({errorType: 'invalid-url'});
     }
+  };
+
+  getErrorText = () => {
+    const {errorType} = this.state;
+    if (errorType === 'invalid-url') {
+      return i18n.imageURLInputInvalid();
+    }
+    if (errorType === 'flagged') {
+      return FLAGGED_IMAGE_URL_ERROR;
+    }
+    if (errorType === 'moderation-error') {
+      return MODERATION_ERROR;
+    }
+    return null;
   };
 
   render() {
@@ -69,18 +108,19 @@ export default class ImageURLInput extends React.Component {
             variant="contained"
             color="primary"
             size="small"
+            disabled={this.state.isSubmitting}
             sx={{alignSelf: 'flex-start'}}
           >
             Submit
           </MuiButton>
         </form>
-        {this.state.showError && (
+        {this.getErrorText() && (
           <MuiTypography
             variant="body2"
             component="div"
             sx={{color: 'var(--text-error-primary)'}}
           >
-            {i18n.imageURLInputInvalid()}
+            {this.getErrorText()}
           </MuiTypography>
         )}
         <MuiTypography variant="body2" component="div" gutterBottom>
