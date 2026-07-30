@@ -551,6 +551,20 @@ img.video_thumbnail {
     }
   }
 
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
+    }
+  }
+
   // Stock markup only shows the UA outline while `.user-is-tabbing` is set
   // (hamburger.js), which is invisible on teal; give these the same ring as
   // the pills/buttons above for a consistent focus treatment.
