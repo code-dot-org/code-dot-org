@@ -8,8 +8,8 @@
 
 import {label} from './label';
 
-// Code files that define a module: a Blockly actor/world, or plain JS/TS.
-const CODE_EXT = /\.(actor|world|ts|js)$/;
+// Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
+const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
 
 // The root blocks whose NAME field names a Blockly-authored module.
 const NAMED_ROOTS = ['world_actor', 'world_world'];
@@ -33,9 +33,10 @@ function authoredName(contents: string): string | undefined {
       // Not Blockly JSON — fall through to the source scan.
     }
   }
-  // `new WorldBuilder({id: 'platform', name: 'Platform World'})` and friends.
+  // `new WorldBuilder({id: 'platform', name: 'Platform World'})` and friends
+  // (RuleBuilder too, so a project rule shows its authored name).
   const match = contents.match(
-    /\b(?:World|Actor)Builder\s*\(\s*\{[^}]*?\bname:\s*['"]([^'"]+)['"]/,
+    /\b(?:World|Actor|Rule)Builder\s*\(\s*\{[^}]*?\bname:\s*['"]([^'"]+)['"]/,
   );
   return match?.[1];
 }
@@ -75,6 +76,17 @@ export function projectWorldOptions(
   files: Record<string, string>,
 ): Array<[string, string]> {
   return modulesUnder(files, 'worlds/');
+}
+
+/**
+ * `[name, path]` options for the project's own rule modules under `rules/` — the
+ * `world_use_rule` dropdown offers these alongside the built-in rules. The value
+ * is the extension-less path the generated world imports (`rules/gravity`).
+ */
+export function projectRuleOptions(
+  files: Record<string, string>,
+): Array<[string, string]> {
+  return modulesUnder(files, 'rules/');
 }
 
 /**

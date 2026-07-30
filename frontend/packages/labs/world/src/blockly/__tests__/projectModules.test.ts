@@ -4,6 +4,7 @@ import {
   projectActorOptions,
   projectAnimationFileOptions,
   projectMapActorTypes,
+  projectRuleOptions,
   projectWorldOptions,
   projectWorldRules,
 } from '../projectModules';
@@ -47,6 +48,22 @@ describe('projectModules', () => {
     expect(projectAnimationFileOptions(FILES)).toEqual([
       ['Game', 'animations/game'],
     ]);
+  });
+
+  it('lists rule modules under rules/, labelled by their RuleBuilder name', () => {
+    const files = {
+      ...FILES,
+      'rules/gravity.js': `const rule = new RuleBuilder({id: 'gravity', name: 'Has Gravity'});\nexport default rule.build();`,
+      'rules/shim.js': `export {InputRule as default} from 'world-lab';`, // no name → stem
+    };
+    expect(projectRuleOptions(files).sort()).toEqual([
+      ['Has Gravity', 'rules/gravity'], // from the RuleBuilder `name`
+      ['Shim', 'rules/shim'], // fallback: Title-cased basename
+    ]);
+    // Rules are not mistaken for actors/worlds.
+    expect(projectActorOptions(files).map(([, p]) => p)).not.toContain(
+      'rules/gravity',
+    );
   });
 
   it('ignores non-code files and other directories', () => {

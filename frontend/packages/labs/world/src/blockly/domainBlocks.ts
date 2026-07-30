@@ -53,9 +53,11 @@ import {
   actorOptionsExtension,
   animationFileOptions,
   animationFileOptionsExtension,
+  liveDropdown,
   mapActorTypes,
   mapOptions,
   mapOptionsExtension,
+  ruleModuleOptions,
   worldOptions,
   worldOptionsExtension,
 } from './moduleOptions';
@@ -95,6 +97,18 @@ const ALL_RULES: readonly Rule[] = [
   InputRule,
   AnimationRule,
 ];
+
+// Every built-in Rule object → its `world-lab` export name (for `WorldLab.<name>`
+// in generated code), by reference — the same tack as the property/event maps.
+const RULE_EXPORT_NAME = new Map<Rule, string>();
+{
+  const rules = new Set<Rule>(ALL_RULES);
+  for (const [name, value] of Object.entries(WorldLab)) {
+    if (rules.has(value as Rule)) {
+      RULE_EXPORT_NAME.set(value as Rule, name);
+    }
+  }
+}
 
 // Every GameEvent object → the name it is exported under (for `WorldLab.<name>`
 // in generated code), discovered once from the engine namespace by reference
@@ -1392,30 +1406,49 @@ const worldWorld = defineBlock({
   },
 });
 
+// The `use rule` dropdown offers the built-in rules AND the project's own rule
+// modules (under `rules/`). A built-in's value is its `world-lab` export name; a
+// project rule's is its module path — the generator branches on the `/` a path
+// carries, importing the module rather than reading `WorldLab`. This is the
+// first seam toward rules living in the project rather than the engine bundle.
+const BUILTIN_RULE_OPTIONS: Array<[string, string]> = ALL_RULES.map(rule => [
+  rule.name,
+  RULE_EXPORT_NAME.get(rule) ?? '',
+]);
+const useRuleOptions = (): Array<[string, string]> => [
+  ...BUILTIN_RULE_OPTIONS,
+  ...ruleModuleOptions(),
+];
+const useRuleOptionsExtension = liveDropdown(
+  'world_use_rule_options',
+  'RULE',
+  useRuleOptions,
+);
+
 const worldUseRule = defineBlock({
   type: 'world_use_rule',
   message0: 'use rule %1',
   args0: [
-    {
-      type: 'field_dropdown',
-      name: 'RULE',
-      options: [
-        ['Has Gravity', 'GravityRule'],
-        ['Responds to Input', 'InputRule'],
-        ['Has Appearance', 'AnimationRule'],
-        ['Has Collisions', 'CollisionRule'],
-        ['Has Motion', 'MotionRule'],
-        ['Has Space', 'SpatialRule'],
-      ],
-    },
+    {type: 'field_dropdown', name: 'RULE', options: BUILTIN_RULE_OPTIONS},
   ],
   previousStatement: true,
   nextStatement: true,
+  extensions: [useRuleOptionsExtension],
   style: 'behavior_blocks',
   tooltip: 'Put a rule (a game mechanic) in play for this world.',
   generator: {
-    javascript(block) {
-      return `world.useRules([WorldLab.${block.getFieldValue('RULE')}]);\n`;
+    javascript(block, generator) {
+      const rule = block.getFieldValue('RULE');
+      // A project rule module (a path) is imported; a built-in reads `WorldLab`.
+      if (rule.includes('/')) {
+        addImport(
+          generator,
+          `mod:${rule}`,
+          `import ${importVar(rule)} from ${str(rule)};`,
+        );
+        return `world.useRules([${importVar(rule)}]);\n`;
+      }
+      return `world.useRules([WorldLab.${rule}]);\n`;
     },
   },
 });
