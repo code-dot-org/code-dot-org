@@ -79,6 +79,8 @@ import {
   WorldCell,
 } from '../world';
 
+import Behavior2Selector from './Behavior2Selector';
+import Behavior2Tab from './Behavior2Tab';
 import {isPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
@@ -203,7 +205,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
+  const behavior2Enabled = worldTabParams.behavior2;
+  const tabs = useMemo(() => {
+    const base = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
+    if (!behavior2Enabled) {
+      return base;
+    }
+    // Systems sits between Images and the scene-editing group.
+    return ['Images' as const, 'Systems' as const, ...base.slice(1)];
+  }, [worldTab.enabled, behavior2Enabled]);
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -542,26 +552,44 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
 
-  // Behavior2 prototype: the system implementations composed ahead of every
-  // run. Compiled at run time, not memoized — the block types register when
-  // the workspace injects, so an early compile would fail and stick.
-  const behavior2Enabled = worldTabParams.behavior2;
+  // Behavior2 prototype: the system implementations (stored, else the
+  // defaults) — what the Systems tab shows and every run composes in.
+  const behavior2s = useMemo(
+    () =>
+      currentSources.behavior2s?.length
+        ? currentSources.behavior2s
+        : DEFAULT_BEHAVIOR2S,
+    [currentSources.behavior2s]
+  );
+  // Which system the Systems tab shows.
+  const [activeSystemName, setActiveSystemName] = useState(
+    DEFAULT_BEHAVIOR2S[0].name
+  );
+  const activeSystem =
+    behavior2s.find(b => b.name === activeSystemName) ?? behavior2s[0];
+
+  // The systems composed ahead of every run. Compiled at run time, not
+  // memoized — the block types register when the workspace injects, so an
+  // early compile would fail and stick. Read through a ref: the debounced
+  // preview fires with the runProgram closure it was scheduled under, and
+  // must still see edits saved since.
+  const behavior2sRef = useRef(behavior2s);
+  useEffect(() => {
+    behavior2sRef.current = behavior2s;
+  }, [behavior2s]);
   const getBehavior2Code = useCallback(() => {
     if (!behavior2Enabled) {
       return '';
     }
-    const behavior2s = currentSources.behavior2s?.length
-      ? currentSources.behavior2s
-      : DEFAULT_BEHAVIOR2S;
     try {
-      return compileBehavior2Sources(behavior2s);
+      return compileBehavior2Sources(behavior2sRef.current);
     } catch (e) {
       // A system that fails to compile shouldn't take the scene down; the
       // start block dispatches through the registry and skips it.
       console.error('Failed to compile behavior2 systems', e);
       return '';
     }
-  }, [behavior2Enabled, currentSources.behavior2s]);
+  }, [behavior2Enabled]);
 
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
@@ -954,6 +982,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun]
   );
 
+  // Save a Systems-tab edit and refresh the preview. Writing materializes
+  // the defaults into sources (first edit copies both systems in), so the
+  // untouched system keeps its default by value, not by fallback.
+  const handleSystemSourceChange = useCallback(
+    (name: string, source: WorkspaceSerialization) => {
+      updateSources(prev => ({
+        ...prev,
+        behavior2s: (prev.behavior2s?.length
+          ? prev.behavior2s
+          : DEFAULT_BEHAVIOR2S
+        ).map(b => (b.name === name ? {...b, source} : b)),
+      }));
+      scheduleRun();
+    },
+    [updateSources, scheduleRun]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1125,6 +1170,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={tabs}
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
+        systemsTabExtra={
+          behavior2Enabled && animationsSeeded ? (
+            <Behavior2Selector
+              behavior2s={behavior2s}
+              activeName={activeSystem.name}
+              disabled={activeTab !== 'Systems'}
+              onSelect={setActiveSystemName}
+            />
+          ) : undefined
+        }
         codeTabExtra={
           animationsSeeded ? (
             <SceneSelector
@@ -1178,6 +1233,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
           )}
         </div>
+
+        {/* Kept mounted (clipped) like the Code tab, so the systems workspace
+          survives tab switches. */}
+        {behavior2Enabled && animationsSeeded && (
+          <div
+            className={moduleStyles.codeTabWrapper}
+            style={{
+              clipPath: activeTab === 'Systems' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Systems' ? 'auto' : 'none',
+            }}
+          >
+            <Behavior2Tab
+              enabled={animationsSeeded}
+              theme={theme}
+              system={activeSystem}
+              onSourceChange={handleSystemSourceChange}
+            />
+          </div>
+        )}
 
         {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
           the guide's transition frames, and remounting loses gallery state. */}

@@ -29,6 +29,10 @@ interface UseBlocklyWorkspaceOptions {
   toolboxXml?: string;
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
+  // The div to inject into; defaults to the Code tab's. A second hook
+  // instance with its own div is a second, independent workspace (the
+  // Systems tab).
+  divId?: string;
 }
 
 interface UseBlocklyWorkspaceResult {
@@ -59,6 +63,7 @@ export default function useBlocklyWorkspace({
   toolboxXml,
   sharedBlocks,
   theme,
+  divId = BLOCKLY_DIV_ID,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   // Store initial theme as a ref to prevent theme changes from re-injecting the workspace.
@@ -80,7 +85,7 @@ export default function useBlocklyWorkspace({
     setupSpriteLab2BlocklyEnvironment();
     installSharedBlocks(sharedBlocks || []);
 
-    const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
+    const blocklyDiv = document.getElementById(divId);
     if (!blocklyDiv) {
       return;
     }
@@ -174,7 +179,7 @@ export default function useBlocklyWorkspace({
       workspaceRef.current = null;
       currentBlocksRef.current = null;
     };
-  }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml]);
+  }, [enabled, sharedBlocks, toolboxDefinition, toolboxXml, divId]);
 
   // Update workspace theme on display-theme change. Resolve through
   // getUserTheme rather than applying cdoDark/cdoTheme directly: a user
