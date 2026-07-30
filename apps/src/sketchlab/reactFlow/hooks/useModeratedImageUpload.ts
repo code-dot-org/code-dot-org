@@ -112,7 +112,7 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
         });
 
         if (verdict === 'flagged') {
-          const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
+          const fileExtension = uploadUrl.split('.').pop()?.toLowerCase() || '';
           // Rethrow so useFlaggedImage skips flagging the channel when the
           // upload fails.
           onImageFlagged(file, fileExtension, async () => {
