@@ -174,6 +174,9 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
     name: 'Platform2',
     types: [
       'gamelab_setBackgroundImageAs',
+      // The classic platform-tile block: block-image picker, walls group —
+      // what players land on.
+      'spritelab2_makePlatformBlocks',
       'spritelab2_makeTypedSprites',
       'spritelab2_makeSpritesWithSystem',
       'spritelab2_startSystem',
