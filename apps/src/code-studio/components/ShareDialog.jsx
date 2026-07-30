@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import ShareAllowedDialog from './ShareAllowedDialog';
@@ -22,7 +21,6 @@ class ShareDialog extends Component {
     channelId: PropTypes.string,
     appType: PropTypes.string,
     onClickPopup: PropTypes.func,
-    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool,
     userSharingDisabled: PropTypes.bool,
   };

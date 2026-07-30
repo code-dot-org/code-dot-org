@@ -703,7 +703,7 @@
   "copyright_codeLicense": "Code.org uses p5.play, which is licensed under [the GNU LGPL 2.1]({gnu_license_link}).",
   "copyright_poweredByAws": "Amazon Web Services and the “Powered by AWS” logo are trademarks of Amazon.com, Inc. or its affiliates in the United States and/or other countries.",
   "copyright_builtOnGithub": "Built on GitHub from Microsoft",
-  "copyright_trademark": "&copy; Code.org, {current_year}. Code.org&reg;, the CODE logo, Hour of Code&reg; and {cs_discoveries} are trademarks of Code.org.",
+  "copyright_trademark": "&copy; CodeAI, {current_year}. CodeAI, the CodeAI logo, Hour of AI, and {cs_discoveries} are trademarks of CodeAI. \"Code.org\" is a former trademark of CodeAI.",
   "correct": "Correct",
   "correctAnswer": "That is the correct answer.",
   "costume": "costume",

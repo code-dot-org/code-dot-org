@@ -1,0 +1,59 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-07-29T22:01:29.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Build a Recycling Helper Bot\r\n\r\nThe City Sustainability Coordinator set up this bot to help those who are trying to better understand how to recycle — but they weren't careful about what information they gave it.\r\n\r\n##### Do This:\r\n\r\n1. Ask your bot a few questions someone who wants to recycle properly would ask. Something's off. What is it?\r\n2. Open the Retrieval Contexts panel. That's everything your bot knows. Read through it.\r\n3. Fix the context. You can delete cards or edit them to fix them. Some cards are a judgement call - decide what you would trust.\r\n4. Click Update, then ask your questions again. Keep going until you would trust this bot.\r\n5. Try asking something your bot has no information about. What does it say now?\r\n\r\n##### Talk with your partner:\r\nCompare bots — did you keep or edit the same things? Does having context mean the bot is always right?\r\n\r\n::: details [**Have Time To Make It Better?**]\r\nAdd any of these to your bot's context, then test whether it helps:\r\n\r\n- [Updated January 2026] Cartons — milk, juice, and broth cartons — are accepted in\r\ncurbside bins.\r\n- [Updated January 2026] Styrofoam and plastic takeout containers are not accepted\r\ncurbside.\r\n- [Updated January 2026] Residents can request a larger recycling bin at no charge\r\nthrough the city website.\r\n\r\n:::\r\n\r\n::: details [**Ready for a challenge?**]\r\nFind one more fact this bot should know. Write it as a new context entry — include the date and where you found it, just like the other cards do. Then test whether your bot uses it.\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "You are a recycling assistant for the city. A city sustainability coordinator built you for the city website to help residents figure out what actually goes in their recycling bin.",
+        "retrievalContexts": [
+          "[Updated January 2026] Curbside bins accept paper, cardboard, metal cans, glass\nbottles and jars, and plastic bottles and jugs that have a neck.",
+          "[Updated January 2026] Rinse containers before recycling them and leave the lids on.\nItems don't need to be spotless, but they should be free of food.",
+          "[Updated 2020] Cardboard boxes should be flattened before they go in the bin. Glass\nmust be sorted into a separate bin from paper and plastic.",
+          "[Updated January 2026] The city water treatment plant offers free tours to school\ngroups by request.",
+          "[Updated January 2026] Plastic bags, plastic film, and plastic wrap do NOT go in\ncurbside bins. Many grocery stores have collection bins for them.",
+          "[Updated 2018] Plastic shopping bags can be placed loose in your curbside recycling\nbin along with everything else.",
+          "[Updated January 2026] Accepted materials may change over time. Residents should\ncontact the city for the current list.",
+          "Electronics and batteries should not go in curbside bins. The county holds special\ncollection events for them a few times a year."
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a helpful assistant chatbot with a specific purpose.\n\nANSWERING RULES — THESE ARE THE MOST IMPORTANT RULES:\n1. Answer using ONLY the information you have been given. \n2. If the information you have been given does not cover a question, say plainly\n   that you do not have that information. Do NOT use general knowledge to fill\n   the gap. Do NOT guess, invent, or estimate.\n3. If two pieces of the information you have been given conflict with each other,\n   report both and say that they disagree. Do not quietly pick one.\n4. Keep answers short — a few sentences.\n\nALWAYS:\n- Stay in your assigned role. If asked about something outside your purpose, say\n  that is not what you are built for.\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "name_suffix": "_2026_dev",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-29T22:01:29.019+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-add-context-b-2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-add-context-b-2026\"},{\"changed_at\":\"2026-07-29 22:01:31 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:40:19 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:40:39 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 02:57:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 03:00:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

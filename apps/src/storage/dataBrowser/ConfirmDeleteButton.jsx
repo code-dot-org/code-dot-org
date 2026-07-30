@@ -1,10 +1,9 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import msg from '@cdo/locale';
-
-import Dialog from '../../legacySharedComponents/Dialog';
 
 import dataStyles from './data-styles.module.scss';
 
@@ -31,21 +30,26 @@ class ConfirmDeleteButton extends React.Component {
   };
 
   render() {
-    let {confirmText, ...otherProps} = this.props;
-    confirmText = confirmText || msg.delete();
+    const confirmText = this.props.confirmText || msg.delete();
     return (
-      <div style={{...{display: 'inline-block'}, ...this.props.containerStyle}}>
-        <Dialog
-          cancelText={msg.cancel()}
-          confirmText={confirmText}
-          confirmType="danger"
-          isOpen={!!this.state && this.state.open}
-          handleClose={this.handleClose}
-          onCancel={this.handleClose}
-          onConfirm={this.handleConfirm}
-          style={{width: '560px'}}
-          {...otherProps}
-        />
+      <div style={{display: 'inline-block', ...this.props.containerStyle}}>
+        {this.state.open && (
+          <Dialog
+            title={this.props.title}
+            description={this.props.body}
+            onClose={this.handleClose}
+            closeLabel={msg.cancel()}
+            primaryButtonProps={{
+              children: confirmText,
+              onClick: this.handleConfirm,
+              color: 'error',
+            }}
+            secondaryButtonProps={{
+              children: msg.cancel(),
+              onClick: this.handleClose,
+            }}
+          />
+        )}
         <button
           type="button"
           id={this.props.buttonId}

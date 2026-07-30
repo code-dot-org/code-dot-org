@@ -352,13 +352,14 @@ const longStrings: UsersScenario = {
   description: 'Very long + emoji names — overflow / truncation probe.',
 };
 
-// Student who CAN change type: exercises the student->teacher upgrade path,
-// where the confirm modal additionally prompts for a (required) email address.
+// Student who CAN change type: exercises the student -> educator path, where
+// the confirm modal additionally prompts for a (required) email address.
 const studentCanSwitch: UsersScenario = {
   ...student,
   currentUser: {...student.currentUser, id: 11},
   settings: {...student.settings, can_change_user_type: true},
-  description: 'Student who can upgrade — type change prompts for email.',
+  description:
+    'Student who can change type — becoming an educator needs an email.',
 };
 
 export const ACCOUNT_SCENARIOS: Record<UsersScenarioTag, UsersScenario> = {
