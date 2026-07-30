@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Bash tab-completion script for `ssm`, calls `ssm --completion-candidates`
-# to find running EC2 instances by InstanceId or Name (tag).
+# Bash tab-completion script for `ssm`, calls ec2.DescribeInstances using the AWS CLI to find
+# running EC2 instances by InstanceId or Name (tag).
 # Caches results of the API call locally for 1 minute, for quicker repeat completions.
 
 # To install, copy this script into `/etc/bash_completion.d/`.
@@ -17,14 +17,12 @@ _ssm() {
   CACHE_FILE="$CACHE_DIR/ssm.cache"
 
   if [ ! "$(find "$CACHE_FILE" -mmin -1 2>/dev/null)" ]; then
-    : > "$CACHE_FILE"
-    SSM_CMD="${COMP_WORDS[0]}"
-    if [[ "$SSM_CMD" != */* ]]; then
-      SSM_CMD="$(command -v "$SSM_CMD" 2>/dev/null)"
-    fi
-    if [ -x "$SSM_CMD" ]; then
-      "$SSM_CMD" --completion-candidates > "$CACHE_FILE"
-    fi
+    aws ec2 describe-instances \
+      --filters Name=tag-key,Values=Name \
+                Name=instance-state-name,Values=running \
+      --query "Reservations[].Instances[].[[InstanceId], Tags[?Key == 'Name'].[Value]]" \
+      --output text \
+      > "$CACHE_FILE"
   fi
   mapfile -t COMPREPLY < <(IFS=$'\n' compgen -W "$(cat "$CACHE_FILE")" -- "${COMP_WORDS[1]}")
 }
