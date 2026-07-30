@@ -1551,8 +1551,6 @@ $see-examples-thick-underline-color: $yellow;
   }
 }
 
-// The buttons themselves are MUI Buttons, styled by the design system theme;
-// this row only positions them. See WireframeButtons.jsx.
 .WireframeButtons_buttonRow {
   display: flex;
   flex-wrap: wrap;
