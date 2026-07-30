@@ -24,7 +24,11 @@ describe('setProperty image URL moderation', () => {
     mockModerateImageUrl.mockResolvedValue('flagged');
     errorHandler = {
       outputWarning: jest.fn(),
+      getAsyncOutputWarning: jest.fn(),
     };
+    errorHandler.getAsyncOutputWarning.mockReturnValue(
+      errorHandler.outputWarning
+    );
     injectErrorHandler(errorHandler);
 
     originalApplab = global.Applab;
