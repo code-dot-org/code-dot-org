@@ -73,13 +73,13 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   FEEDBACK_PROMPT
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    template = fetch_prompt_template("teaching-assistant/lesson-insight", LESSON_INSIGHT_PROMPT_FALLBACK)
+    template = fetch_prompt_template("teaching-assistant/student-snapshot/lesson-insight", LESSON_INSIGHT_PROMPT_FALLBACK)
     variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
     compile_prompt(template, variables)
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    template = fetch_prompt_template("teaching-assistant/lesson-feedback", LESSON_FEEDBACK_PROMPT_FALLBACK)
+    template = fetch_prompt_template("teaching-assistant/student-snapshot/lesson-feedback", LESSON_FEEDBACK_PROMPT_FALLBACK)
     variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
     compile_prompt(template, variables)
   end
@@ -89,8 +89,9 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.fetch_prompt_template(langfuse_prompt_name, fallback)
-    Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development? || ENV.fetch('CI', nil)) do
-      response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name)
+    label = Rails.env.development? ? 'development' : nil
+    Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}/#{label}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development?) do
+      response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name, label: label)
       response[:status] == :ok ? response[:json]['prompt'] : nil
     end || fallback
   rescue => exception

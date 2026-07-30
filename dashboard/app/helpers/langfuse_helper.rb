@@ -5,8 +5,8 @@ module LangfuseHelper
     wrap_response(tutor_client.fetch_prompt(prompt_name))
   end
 
-  def self.fetch_ta_prompt(prompt_name)
-    wrap_response(ta_client.fetch_prompt(prompt_name))
+  def self.fetch_ta_prompt(prompt_name, label: nil)
+    wrap_response(ta_client.fetch_prompt(prompt_name, label: label))
   end
 
   def self.tutor_add_dataset_item(dataset_item)

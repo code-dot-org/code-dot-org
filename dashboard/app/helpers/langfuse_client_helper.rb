@@ -12,7 +12,7 @@ module LangfuseClientHelper
       @public_key = public_key
     end
 
-    def fetch_prompt(prompt_name)
+    def fetch_prompt(prompt_name, label: nil)
       headers = {
         "Content-Type" => "application/json",
       }
@@ -23,6 +23,7 @@ module LangfuseClientHelper
           password: @secret_key
         },
         headers: headers,
+        query: label ? {label: label} : {},
       )
       response
     end
