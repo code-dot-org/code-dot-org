@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -32,6 +33,8 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
   playlab_legacy: '/s/playlab',
 };
 
+const SEND_TO_PHONE_PANEL_ID = 'send-to-phone-panel';
+
 /**
  * Shows buttons for wireframe version, including "View code", "Make my own app", and "Send to phone".
  */
@@ -48,8 +51,7 @@ export default class WireframeButtons extends React.Component {
   };
 
   handleClickSendToPhone = () => {
-    this.setState({clickedSendToPhone: !this.state.clickedSendToPhone});
-    return false; // so the # link doesn't go anywhere.
+    this.setState(state => ({clickedSendToPhone: !state.clickedSendToPhone}));
   };
 
   render() {
@@ -60,13 +62,14 @@ export default class WireframeButtons extends React.Component {
     const newProjectUrl = APP_TYPE_TO_NEW_PROJECT_URL[appTypeAndLegacy];
     return (
       <div style={styles.main}>
-        {showViewCode && <ViewCodeButton />}
-        {newProjectUrl && <NewProjectButton url={newProjectUrl} />}
-        <SendToPhoneButton
-          active={clickedSendToPhone}
-          onClick={this.handleClickSendToPhone}
-        />
-        <br />
+        <div className="WireframeButtons_buttonRow">
+          {showViewCode && <ViewCodeButton />}
+          {newProjectUrl && <NewProjectButton url={newProjectUrl} />}
+          <SendToPhoneButton
+            active={clickedSendToPhone}
+            onClick={this.handleClickSendToPhone}
+          />
+        </div>
         {clickedSendToPhone && (
           <SendToPhoneControls
             appType={appType}
@@ -80,37 +83,47 @@ export default class WireframeButtons extends React.Component {
 }
 
 const ViewCodeButton = () => (
-  <span style={{display: 'inline-block'}}>
-    <a
-      className="WireframeButtons_button"
-      href={project.getProjectUrl('/view')}
-    >
-      <FontAwesomeV6Icon iconName="code" /> {i18n.viewCode()}
-    </a>
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="small"
+    href={project.getProjectUrl('/view')}
+    startIcon={<FontAwesomeV6Icon iconName="code" />}
+  >
+    {i18n.viewCode()}
+  </MuiButton>
 );
 
 const NewProjectButton = ({url}) => (
-  <span style={{display: 'inline-block'}}>
-    <a className="WireframeButtons_button" href={url}>
-      <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-      {i18n.makeMyOwn()}
-    </a>
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="small"
+    href={url}
+    startIcon={
+      <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />
+    }
+  >
+    {i18n.makeMyOwn()}
+  </MuiButton>
 );
 NewProjectButton.propTypes = {
   url: PropTypes.string.isRequired,
 };
 
 const SendToPhoneButton = ({active, onClick}) => (
-  <span style={{display: 'inline-block'}}>
-    <a
-      className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
-      onClick={onClick}
-    >
-      <FontAwesomeV6Icon iconName="mobile-screen-button" /> {i18n.sendToPhone()}
-    </a>
-  </span>
+  <MuiButton
+    variant="contained"
+    color="primary"
+    size="small"
+    type="button"
+    onClick={onClick}
+    aria-expanded={active}
+    aria-controls={SEND_TO_PHONE_PANEL_ID}
+    startIcon={<FontAwesomeV6Icon iconName="mobile-screen-button" />}
+  >
+    {i18n.sendToPhone()}
+  </MuiButton>
 );
 SendToPhoneButton.propTypes = {
   active: PropTypes.bool,
@@ -120,7 +133,7 @@ SendToPhoneButton.propTypes = {
 // ESLint doesn't seem to understand our inherited-proptypes pattern here
 /* eslint-disable react/prop-types */
 const SendToPhoneControls = ({appType, channelId, isLegacyShare}) => (
-  <div className="WireframeButtons_active">
+  <div className="WireframeButtons_active" id={SEND_TO_PHONE_PANEL_ID}>
     <SendToPhone
       channelId={channelId}
       appType={appType}
