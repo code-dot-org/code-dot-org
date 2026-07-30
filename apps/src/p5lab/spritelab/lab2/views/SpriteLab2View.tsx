@@ -213,7 +213,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  const behavior2Enabled = worldTabParams.behavior2;
+  const behavior2Enabled =
+    worldTabParams.behavior2 || !!levelProperties.showBehavior2Tab;
   const tabs = useMemo(() => {
     const base = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
     if (!behavior2Enabled) {
