@@ -71,8 +71,29 @@ interface AnalyticsData {
   assetUrl?: string;
 }
 
-export const moderateImage = async (
-  file: File,
+interface ModerationConfig {
+  request: () => Promise<Response>;
+  formatAssetUrl: (assetUrl?: string) => string | undefined;
+}
+
+const buildDimensions = (uploaderType: string, appName: string) => [
+  {name: 'UploaderType', value: uploaderType},
+  {name: 'AppName', value: appName},
+];
+
+const sendModerationEvent = (
+  uploaderType: string,
+  appName: string,
+  moderateEvent: string
+) => {
+  analyticsReporter.sendEvent(moderateEvent, {
+    UploaderType: uploaderType,
+    appName,
+    levelPath: window.location.pathname,
+  });
+};
+
+const runModeration = async (
   appName: string,
   {
     uploaderType = 'n/a',
@@ -80,29 +101,15 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
     assetUrl,
   }: AnalyticsData,
-  overrideSeverityThresholds?: SeverityThresholds
+  overrideSeverityThresholds: SeverityThresholds | undefined,
+  moderationConfig: ModerationConfig
 ): Promise<'safe' | 'flagged' | 'error'> => {
-  const imageType = file.type || '';
-  if (
-    !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
-    !(SafeAndSupportedImageTypes as readonly string[]).includes(imageType)
-  ) {
-    return 'error';
-  }
-  const dimensions = [
-    {name: 'UploaderType', value: uploaderType},
-    {name: 'AppName', value: appName},
-  ];
+  const dimensions = buildDimensions(uploaderType, appName);
   MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
-  analyticsReporter.sendEvent(moderateEvent, {
-    UploaderType: uploaderType,
-    appName,
-    levelPath: window.location.pathname,
-  });
+  sendModerationEvent(uploaderType, appName, moderateEvent);
+
   try {
-    const response = await HttpClient.post('/v3/images/moderate', file, true, {
-      'Content-Type': file.type || 'application/octet-stream',
-    });
+    const response = await moderationConfig.request();
     const json = await response.json();
     if (json === null) {
       return 'error';
@@ -123,7 +130,7 @@ export const moderateImage = async (
       levelPath: window.location.pathname,
       moderationService: 'AI Content Safety',
       moderationResult: JSON.stringify(json),
-      assetUrl: assetUrl ? `${window.location.origin}${assetUrl}` : undefined,
+      assetUrl: moderationConfig.formatAssetUrl(assetUrl),
     });
     return 'flagged';
   } catch (error) {
@@ -131,6 +138,39 @@ export const moderateImage = async (
     MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
     return 'error';
   }
+};
+
+export const moderateImage = async (
+  file: File,
+  appName: string,
+  {
+    uploaderType = 'n/a',
+    moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
+    flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
+    assetUrl,
+  }: AnalyticsData,
+  overrideSeverityThresholds?: SeverityThresholds
+): Promise<'safe' | 'flagged' | 'error'> => {
+  const imageType = file.type || '';
+  if (
+    !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
+    !(SafeAndSupportedImageTypes as readonly string[]).includes(imageType)
+  ) {
+    return 'error';
+  }
+  return runModeration(
+    appName,
+    {uploaderType, moderateEvent, flaggedEvent, assetUrl},
+    overrideSeverityThresholds,
+    {
+      request: () =>
+        HttpClient.post('/v3/images/moderate', file, true, {
+          'Content-Type': file.type || 'application/octet-stream',
+        }),
+      formatAssetUrl: url =>
+        url ? `${window.location.origin}${url}` : undefined,
+    }
+  );
 };
 
 export const moderateImageUrl = async (
@@ -147,63 +187,19 @@ export const moderateImageUrl = async (
   if (!LABS_WITH_IMAGE_MODERATION.includes(appName ?? '')) {
     return 'error';
   }
-
-  const dimensions = [
-    {name: 'UploaderType', value: uploaderType},
-    {name: 'AppName', value: appName},
-  ];
-  MetricsReporter.incrementCounter(
-    'ModerateCustomImageUrl.Attempt',
-    dimensions
-  );
-  analyticsReporter.sendEvent(moderateEvent, {
-    UploaderType: uploaderType,
+  return runModeration(
     appName,
-    levelPath: window.location.pathname,
-  });
-
-  try {
-    const response = await HttpClient.post(
-      '/v3/images/moderate_url',
-      JSON.stringify({url: imageUrl}),
-      true,
-      {'Content-Type': 'application/json; charset=UTF-8'}
-    );
-    const json = await response.json();
-    if (json === null) {
-      return 'error';
+    {uploaderType, moderateEvent, flaggedEvent, assetUrl},
+    overrideSeverityThresholds,
+    {
+      request: () =>
+        HttpClient.post(
+          '/v3/images/moderate_url',
+          JSON.stringify({url: imageUrl}),
+          true,
+          {'Content-Type': 'application/json; charset=UTF-8'}
+        ),
+      formatAssetUrl: url => url || undefined,
     }
-
-    MetricsReporter.incrementCounter(
-      'ModerateCustomImageUrl.Success',
-      dimensions
-    );
-
-    if (
-      getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
-    ) {
-      return 'safe';
-    }
-
-    MetricsReporter.incrementCounter(
-      'ModerateCustomImageUrl.Flagged',
-      dimensions
-    );
-    analyticsReporter.sendEvent(flaggedEvent, {
-      UploaderType: uploaderType,
-      appName,
-      levelPath: window.location.pathname,
-      moderationService: 'AI Content Safety',
-      moderationResult: JSON.stringify(json),
-      assetUrl: assetUrl || undefined,
-    });
-    return 'flagged';
-  } catch (error) {
-    MetricsReporter.logError('Error with image URL moderation: ' + error);
-    MetricsReporter.incrementCounter(
-      'ModerateCustomImageUrl.Error',
-      dimensions
-    );
-    return 'error';
-  }
+  );
 };
