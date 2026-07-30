@@ -106,7 +106,9 @@ function ReactFlowSketchLabViewInner({
     flaggedImageData,
     handleAcceptFlaggedImage,
     handleCancelFlaggedImage,
+    uploadsDisabled,
     showUploadsDisabledModal,
+    openUploadsDisabledModal,
     closeUploadsDisabledModal,
   } = useModeratedImageUpload({levelName: levelProperties.name});
   // The Backpack API redirects to sign-in for signed-out users, so we only
@@ -377,6 +379,8 @@ function ReactFlowSketchLabViewInner({
               key={mountKey}
               updateSources={updateSources}
               uploadImage={uploadImage}
+              uploadsDisabled={uploadsDisabled}
+              openUploadsDisabledModal={openUploadsDisabledModal}
               onNodesDeleted={handleImageNodesDeleted}
               initialNodes={initialNodes}
               initialEdges={initialEdges}

@@ -258,8 +258,6 @@ function parseDataUrlMimeType(dataUrl: string): string | null {
 // new asset URL, or null on failure / unsupported mime type. Mirrors
 // Excalidraw's externalFiles upload path so a converted project produces
 // URLs of the same shape a natively-saved one would.
-// Skips moderation: these are legacy levelbuilder-authored sources, and the
-// passive re-upload on load has no user gesture for the consent modal.
 async function uploadDataUrlImage(
   dataUrl: string,
   channelId: string,

@@ -16,6 +16,8 @@ interface ToolbarProps {
   onAddNode: (request: AddNodeRequest) => void;
   uploadImage: ModeratedImageUploader;
   onImageUploadError: () => void;
+  uploadsDisabled?: boolean;
+  openUploadsDisabledModal?: () => void;
   canvasTool: CanvasTool;
   onSetCanvasTool: (tool: CanvasTool) => void;
 }
@@ -24,6 +26,8 @@ export default function Toolbar({
   onAddNode,
   uploadImage,
   onImageUploadError,
+  uploadsDisabled = false,
+  openUploadsDisabledModal,
   canvasTool,
   onSetCanvasTool,
 }: ToolbarProps) {
@@ -66,6 +70,14 @@ export default function Toolbar({
     SafeAndSupportedImageTypes.join(','),
     false
   );
+
+  const onAddImageClick = useCallback(() => {
+    if (uploadsDisabled) {
+      openUploadsDisabledModal?.();
+      return;
+    }
+    openFileInput();
+  }, [uploadsDisabled, openUploadsDisabledModal, openFileInput]);
 
   return (
     <Paper
@@ -204,7 +216,7 @@ export default function Toolbar({
         <IconButton
           aria-label="Add image"
           id={`${uid}-image`}
-          onClick={openFileInput}
+          onClick={onAddImageClick}
           size="small"
           color="tertiary"
           variant="outlined"

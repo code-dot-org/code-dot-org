@@ -49,8 +49,7 @@ export type TextNodeData = NodeDataBase & {
 export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
-  // Uploaded despite a flagged moderation verdict; deleting the node
-  // hard-deletes the asset and lifts the abuse block.
+  // Image has been flagged by the moderation service.
   flagged?: boolean;
 };
 

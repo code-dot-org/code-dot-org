@@ -165,10 +165,16 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
     [channelId, dispatch, isBlockedAbuse]
   );
 
+  const openUploadsDisabledModal = useCallback(
+    () => setShowUploadsDisabledModal(true),
+    []
+  );
   const closeUploadsDisabledModal = useCallback(
     () => setShowUploadsDisabledModal(false),
     []
   );
+
+  const uploadsDisabled = isBlockedAbuse && !isStarterAssetOrExemplarUpload();
 
   return useMemo(
     () => ({
@@ -177,7 +183,9 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
       flaggedImageData,
       handleAcceptFlaggedImage,
       handleCancelFlaggedImage,
+      uploadsDisabled,
       showUploadsDisabledModal,
+      openUploadsDisabledModal,
       closeUploadsDisabledModal,
     }),
     [
@@ -186,7 +194,9 @@ export function useModeratedImageUpload({levelName}: {levelName: string}) {
       flaggedImageData,
       handleAcceptFlaggedImage,
       handleCancelFlaggedImage,
+      uploadsDisabled,
       showUploadsDisabledModal,
+      openUploadsDisabledModal,
       closeUploadsDisabledModal,
     ]
   );

@@ -208,6 +208,28 @@ describe('useModeratedImageUpload', () => {
     expect(result.current.showUploadsDisabledModal).toBe(false);
   });
 
+  it('reports uploads as disabled when the project is blocked', () => {
+    mockState = {
+      lab: {channel: {id: CHANNEL_ID}, isBlockedAbuse: true},
+    };
+    const {result} = renderModeratedUpload();
+
+    expect(result.current.uploadsDisabled).toBe(true);
+
+    act(() => result.current.openUploadsDisabledModal());
+    expect(result.current.showUploadsDisabledModal).toBe(true);
+  });
+
+  it('reports uploads as enabled for levelbuilder uploads even when blocked', () => {
+    mockState = {
+      lab: {channel: {id: CHANNEL_ID}, isBlockedAbuse: true},
+    };
+    mockIsStarterAssetOrExemplar.mockReturnValue(true);
+    const {result} = renderModeratedUpload();
+
+    expect(result.current.uploadsDisabled).toBe(false);
+  });
+
   it('skips moderation when the request says the image was already moderated', async () => {
     const {result} = renderModeratedUpload();
 

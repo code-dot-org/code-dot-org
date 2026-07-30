@@ -140,6 +140,8 @@ export interface ReactFlowCanvasProps {
   >['updateSources'];
   // When absent, image uploads report an error.
   uploadImage?: ModeratedImageUploader;
+  uploadsDisabled?: boolean;
+  openUploadsDisabledModal?: () => void;
   onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
@@ -161,6 +163,8 @@ const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
 export default function ReactFlowCanvas({
   updateSources,
   uploadImage = uploadImageUnavailable,
+  uploadsDisabled = false,
+  openUploadsDisabledModal,
   onNodesDeleted,
   initialNodes,
   initialEdges,
@@ -1022,6 +1026,8 @@ export default function ReactFlowCanvas({
                       onAddNode={handleAddNode}
                       uploadImage={uploadImage}
                       onImageUploadError={handleImageUploadError}
+                      uploadsDisabled={uploadsDisabled}
+                      openUploadsDisabledModal={openUploadsDisabledModal}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />
