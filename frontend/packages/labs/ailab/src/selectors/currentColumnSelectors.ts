@@ -9,6 +9,8 @@ import {
   getColumnDescription,
   tooManyUniqueOptions,
   containsOnlyNumbers,
+  getHistogramBins,
+  getBoxPlotStats,
 } from '../helpers/columnDetails';
 import type {RootState} from '../redux';
 import {
@@ -111,12 +113,16 @@ export const getNumericalColumnDetails = createSelector(
     (state: RootState) => currentColumnIsNumerical(state),
     (state: RootState) => getExtremaCurrentColumn(state),
     (state: RootState) => currentColumnContainsOnlyNumbers(state),
+    (state: RootState) => getHistogramBinsCurrentColumn(state),
+    (state: RootState) => getBoxPlotStatsCurrentColumn(state),
   ],
   (
     currentColumn: string | undefined,
     isNumerical: boolean,
     extrema: Extrema,
     containsOnlyNumbers: boolean,
+    histogram,
+    boxPlot,
   ): NumericalColumnDetails => {
     const numericalColumnDetails: Partial<NumericalColumnDetails> & {
       id?: string;
@@ -125,6 +131,8 @@ export const getNumericalColumnDetails = createSelector(
     numericalColumnDetails.containsOnlyNumbers = containsOnlyNumbers;
     if (isNumerical) {
       numericalColumnDetails.extrema = extrema;
+      numericalColumnDetails.histogram = histogram;
+      numericalColumnDetails.boxPlot = boxPlot;
     }
     return numericalColumnDetails as NumericalColumnDetails;
   },
@@ -144,6 +152,20 @@ export const getExtremaCurrentColumn = createSelector(
   [getCurrentColumn, getData],
   (currentColumn: string | undefined, data: DataRow[]): Extrema => {
     return getExtrema(data, currentColumn!);
+  },
+);
+
+export const getHistogramBinsCurrentColumn = createSelector(
+  [getCurrentColumn, getData],
+  (currentColumn: string | undefined, data: DataRow[]) => {
+    return getHistogramBins(data, currentColumn!);
+  },
+);
+
+export const getBoxPlotStatsCurrentColumn = createSelector(
+  [getCurrentColumn, getData],
+  (currentColumn: string | undefined, data: DataRow[]) => {
+    return getBoxPlotStats(data, currentColumn!);
   },
 );
 

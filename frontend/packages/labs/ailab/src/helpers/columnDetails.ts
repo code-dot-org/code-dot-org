@@ -5,6 +5,8 @@ import I18n from '../i18n';
 import type {RootState} from '../redux';
 import type {
   DataRow,
+  BoxPlotStats,
+  HistogramBin,
   Metadata,
   MetadataField,
   TrainedModelDetailsSave,
@@ -71,9 +73,20 @@ function getColumnData(data: DataRow[], column: string): (string | number)[] {
   return data.map(row => row[column]);
 }
 
+function formatChartNumber(value: number): string {
+  if (Number.isInteger(value)) {
+    return String(value);
+  }
+
+  return String(Number(value.toFixed(2)));
+}
+
+export function getNumericalValues(data: DataRow[], column: string): number[] {
+  return getColumnData(data, column).map(Number);
+}
+
 export function getExtrema(data: DataRow[], column: string): Extrema {
-  const columnData = getColumnData(data, column);
-  const numericData = columnData.map(Number);
+  const numericData = getNumericalValues(data, column);
   const extrema: Extrema = {
     max: Math.max(...numericData),
     min: Math.min(...numericData),
@@ -87,6 +100,88 @@ export function getExtrema(data: DataRow[], column: string): Extrema {
 export function containsOnlyNumbers(data: DataRow[], column: string): boolean {
   const columnData = getColumnData(data, column);
   return columnData.every(cell => !isNaN(Number(cell)));
+}
+
+function getQuantile(sortedValues: number[], quantile: number): number {
+  if (sortedValues.length === 0) {
+    return NaN;
+  }
+
+  const index = (sortedValues.length - 1) * quantile;
+  const lowerIndex = Math.floor(index);
+  const upperIndex = Math.ceil(index);
+  const weight = index - lowerIndex;
+
+  return (
+    sortedValues[lowerIndex] * (1 - weight) + sortedValues[upperIndex] * weight
+  );
+}
+
+export function getBoxPlotStats(
+  data: DataRow[],
+  column: string,
+): BoxPlotStats | undefined {
+  const sortedValues = getNumericalValues(data, column).sort((a, b) => a - b);
+  if (sortedValues.length === 0 || sortedValues.some(value => isNaN(value))) {
+    return undefined;
+  }
+
+  return {
+    min: sortedValues[0],
+    q1: getQuantile(sortedValues, 0.25),
+    median: getQuantile(sortedValues, 0.5),
+    q3: getQuantile(sortedValues, 0.75),
+    max: sortedValues[sortedValues.length - 1],
+  };
+}
+
+export function getHistogramBins(
+  data: DataRow[],
+  column: string,
+  binCount = 6,
+): HistogramBin[] {
+  const numericData = getNumericalValues(data, column);
+  if (
+    numericData.length === 0 ||
+    binCount <= 0 ||
+    numericData.some(value => isNaN(value))
+  ) {
+    return [];
+  }
+
+  const min = Math.min(...numericData);
+  const max = Math.max(...numericData);
+  if (min === max) {
+    return [
+      {
+        label: formatChartNumber(min),
+        min,
+        max,
+        count: numericData.length,
+      },
+    ];
+  }
+
+  const bucketCount = Math.min(binCount, numericData.length);
+  const binSize = (max - min) / bucketCount;
+  const bins: HistogramBin[] = Array.from({length: bucketCount}, (_, index) => {
+    const binMin = min + index * binSize;
+    const binMax = index === bucketCount - 1 ? max : binMin + binSize;
+    return {
+      label: `${formatChartNumber(binMin)}-${formatChartNumber(binMax)}`,
+      min: binMin,
+      max: binMax,
+      count: 0,
+    };
+  });
+
+  for (const value of numericData) {
+    const binIndex =
+      value === max ? bucketCount - 1 : Math.floor((value - min) / binSize);
+    bins[binIndex].count++;
+  }
+
+  return bins;
 }
 
 export function getColumnDescription(

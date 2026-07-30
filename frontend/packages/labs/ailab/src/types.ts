@@ -30,6 +30,8 @@ export interface NumericalColumnDetails {
   id: string;
   extrema?: {min: number; max: number; range: number};
   containsOnlyNumbers: boolean;
+  histogram?: HistogramBin[];
+  boxPlot?: BoxPlotStats;
 }
 
 export interface CurrentColumnInspector {
@@ -58,9 +60,33 @@ export interface Coordinate {
   y: number;
 }
 
+export interface HistogramBin {
+  label: string;
+  min: number;
+  max: number;
+  count: number;
+}
+
+export interface BoxPlotStats {
+  min: number;
+  q1: number;
+  median: number;
+  q3: number;
+  max: number;
+}
+
 export interface ScatterPlotData {
   label: string;
   feature: string;
+  coordinates: Coordinate[];
+}
+
+export interface MixedRelationshipPlotData {
+  label: string;
+  feature: string;
+  xAxisLabel: string;
+  yAxisLabel: string;
+  xCategories: string[];
   coordinates: Coordinate[];
 }
 

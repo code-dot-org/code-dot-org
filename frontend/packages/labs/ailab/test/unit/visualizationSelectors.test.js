@@ -6,12 +6,13 @@ import {
 import {
   getScatterPlotData,
   getCrossTabData,
+  getMixedRelationshipPlotData,
   labelColumnIsNumerical,
   labelColumnIsCategorical,
   getUniqueOptionsLabelColumn,
 } from '../../src/selectors/visualizationSelectors';
 
-import {allNumericalState, classificationState} from './testData';
+import {allNumericalState, classificationState, regressionState} from './testData';
 
 beforeEach(() => {
   I18n.initI18n();
@@ -65,6 +66,75 @@ describe('getCrossTabData', () => {
     expect(crossTabData.labelName).toEqual('play');
     expect(crossTabData.featureNames).toEqual(['temp']);
     expect(crossTabData.results[0]).toEqual(sampleExpectedResult);
+  });
+});
+
+describe('getMixedRelationshipPlotData', () => {
+  test('gets categorical feature and numerical label data', async () => {
+    const mixedRelationshipPlotData = getMixedRelationshipPlotData.resultFunc(
+      regressionState.labelColumn,
+      true,
+      false,
+      'sun',
+      false,
+      true,
+      regressionState.data,
+    );
+
+    expect(mixedRelationshipPlotData.xAxisLabel).toEqual('sun');
+    expect(mixedRelationshipPlotData.yAxisLabel).toEqual('height');
+    expect(mixedRelationshipPlotData.xCategories).toEqual([
+      'high',
+      'low',
+      'medium',
+    ]);
+    expect(mixedRelationshipPlotData.coordinates).toEqual([
+      {x: -0.08, y: 3.8},
+      {x: -0.04, y: 3.9},
+      {x: 2, y: 2.6},
+      {x: 2.04, y: 2.5},
+      {x: 1.08, y: 0.9},
+      {x: 0.92, y: 1.6},
+    ]);
+  });
+
+  test('gets numerical feature and categorical label data', async () => {
+    const mixedRelationshipPlotData = getMixedRelationshipPlotData.resultFunc(
+      'pet',
+      false,
+      true,
+      'age',
+      true,
+      false,
+      [
+        {age: 10, pet: 'cat'},
+        {age: 12, pet: 'dog'},
+        {age: 13, pet: 'cat'},
+      ],
+    );
+
+    expect(mixedRelationshipPlotData.xAxisLabel).toEqual('pet');
+    expect(mixedRelationshipPlotData.yAxisLabel).toEqual('age');
+    expect(mixedRelationshipPlotData.xCategories).toEqual(['cat', 'dog']);
+    expect(mixedRelationshipPlotData.coordinates).toEqual([
+      {x: -0.08, y: 10},
+      {x: 0.96, y: 12},
+      {x: 0, y: 13},
+    ]);
+  });
+
+  test('returns null for same-type columns', async () => {
+    const mixedRelationshipPlotData = getMixedRelationshipPlotData.resultFunc(
+      allNumericalState.labelColumn,
+      true,
+      false,
+      allNumericalState.currentColumn,
+      true,
+      false,
+      allNumericalState.data,
+    );
+
+    expect(mixedRelationshipPlotData).toBeNull();
   });
 });
 

@@ -755,9 +755,29 @@ export const styles = {
     marginBottom: 10,
   },
 
+  columnDetailsChartHeading: {
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontSize: 13,
+    marginTop: 12,
+  },
+
+  histogramChart: {
+    height: 150,
+    marginTop: 8,
+    marginBottom: 10,
+  },
+
+  boxPlotChart: {
+    backgroundColor: colors.background,
+    marginTop: 8,
+    marginBottom: 10,
+    padding: 8,
+  },
+
   scatterPlot: {
     marginTop: 10,
     marginBottom: 10,
+    height: 170,
   },
 
   crossTabTable: {

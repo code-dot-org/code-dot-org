@@ -57,32 +57,58 @@ const chartOptionsBase = {
 const ScatterPlot = () => {
   const scatterPlotData = useAppSelector(getScatterPlotData);
 
+  if (!scatterPlotData) {
+    return null;
+  }
+
   const scatterDataCombined = {
     ...scatterDataBase,
+    datasets: [
+      {
+        ...scatterDataBase.datasets[0],
+        data: scatterPlotData.coordinates,
+      },
+    ],
   };
 
   const chartOptionsCombined = {
     ...chartOptionsBase,
+    scales: {
+      xAxes: [
+        {
+          ...chartOptionsBase.scales.xAxes[0],
+          scaleLabel: {
+            ...chartOptionsBase.scales.xAxes[0].scaleLabel,
+            labelString: scatterPlotData.feature,
+          },
+        },
+      ],
+      yAxes: [
+        {
+          ...chartOptionsBase.scales.yAxes[0],
+          scaleLabel: {
+            ...chartOptionsBase.scales.yAxes[0].scaleLabel,
+            labelString: scatterPlotData.label,
+          },
+        },
+      ],
+    },
   };
 
-  if (scatterPlotData) {
-    scatterDataCombined.datasets[0].data = scatterPlotData.coordinates;
-
-    chartOptionsCombined.scales.xAxes[0].scaleLabel.labelString =
-      scatterPlotData.feature;
-    chartOptionsCombined.scales.yAxes[0].scaleLabel.labelString =
-      scatterPlotData.label;
-  }
-
   return (
-    scatterPlotData && (
-      <div id="scatter-plot">
-        <div style={styles.bold}>{I18n.t('scatterPlotLabel')}</div>
-        <div style={styles.scatterPlot}>
-          <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
-        </div>
+    <div id="scatter-plot">
+      <div style={styles.bold}>{I18n.t('scatterPlotLabel')}</div>
+      <div
+        style={styles.scatterPlot}
+        role="img"
+        aria-label={I18n.t('mixedRelationshipPlotAriaLabel', {
+          feature: scatterPlotData.feature,
+          label: scatterPlotData.label,
+        })}
+      >
+        <Scatter data={scatterDataCombined} options={chartOptionsCombined} />
       </div>
-    )
+    </div>
   );
 };
 
