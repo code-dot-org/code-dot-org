@@ -72,6 +72,8 @@ function ReactFlowSketchLabViewInner({
     state => state.lab2View.isStandaloneCollapsed
   );
   const isShareView = useAppSelector(state => state.lab.isShareView);
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const shareFailure = useAppSelector(state => state.lab.shareFailure);
   const themeSetting = useThemeSetting('sketchlab');
 
   useReactFlowSketchLabTour({levelProperties, enabled: !isShareView});
@@ -200,7 +202,8 @@ function ReactFlowSketchLabViewInner({
             backpackContext?.primaryApi,
             dialogControl,
             fileList,
-            errorCallback
+            errorCallback,
+            {isBlockedAbuse, shareFailure}
           ),
         text: 'Save Sketch to Backpack',
       },
@@ -212,7 +215,15 @@ function ReactFlowSketchLabViewInner({
         addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
-    [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
+    [
+      reactFlow,
+      backpackContext,
+      dialogControl,
+      channelId,
+      levelProperties.name,
+      isBlockedAbuse,
+      shareFailure,
+    ]
   );
 
   // Read sources, converting from Excalidraw if this project was last
