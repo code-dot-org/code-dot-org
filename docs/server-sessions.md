@@ -10,7 +10,7 @@ You can connect to a server from your browser through the [Amazon EC2 console](h
 
 In order to connect to a Session Manager Session using the AWS Command Line Interface, you need to first [install the plugin](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html). (You may also need to [install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html), or upgrade to v1.16.12 or later.)
 
-To connect to an named EC2 instance using the CLI, you can use the [`ssm`](../bin/ssm) helper script, which will help start a running instance by Name (tag).
+To connect to a named EC2 instance using the CLI, you can use the [`ssm`](../bin/ssm) helper script, which will help start a running instance by Name (tag). By default, the helper starts an `ubuntu` login shell in `/home/ubuntu`.
 
 (Optional) You may also install the [`ssm-completion`](../bin/ssm-completion) bash completion script by copying it into the [`bash-completion`]() config directory (e.g., `/etc/bash_completion.d/`). The script will enable tab-completion on `ssm` for all running EC2 instance-ids and Name (tag) values.
 
