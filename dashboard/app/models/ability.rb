@@ -346,6 +346,8 @@ class Ability
       can :read, ChallengeResponse do |challenge_response|
         challenge_response.user_id == user.id || user.students.exists?(id: challenge_response.user_id)
       end
+      # Only the response's owner triggers AI evaluation of it.
+      can :evaluate, ChallengeResponse, user_id: user.id
       can :read, ChallengeResponseAsset do |asset|
         response = asset.challenge_response
         response.user_id == user.id || user.students.exists?(id: response.user_id)

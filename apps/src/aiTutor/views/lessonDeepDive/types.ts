@@ -103,25 +103,28 @@ export const userPracticeProblemAttemptValidator: ResponseValidator<
 export type ChallengeResponseAsset = {
   id: number;
   asset_type: 'whiteboard_image' | 'video' | 'audio';
-  upload_url: string;
+  // Presigned S3 URL. Absent right after create, when the bytes have not
+  // been uploaded yet.
+  download_url: string | null;
 };
 
 type ServerChallengeResponseAsset = {
   id: number;
   asset_type: string;
-  upload_url: string;
+  download_url?: string;
 };
 
+// The student-facing shape of a response. The AI evaluation fields
+// (evaluation_result, evaluation_status, student_feedback, evaluated_at) are
+// server-side only for students: they see their evaluation only after a
+// teacher has reviewed it, so the server omits those fields here.
 export type ChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
   student_text: string | null;
   transcript: string | null;
-  student_feedback: string | null;
-  evaluation_result: Record<string, unknown> | null;
   is_final: boolean;
-  evaluated_at: string | null;
   created_at: string;
   assets: ChallengeResponseAsset[];
 };
@@ -132,10 +135,7 @@ type ServerChallengeResponse = {
   user_id: number;
   student_text: string | null;
   transcript: string | null;
-  student_feedback: string | null;
-  evaluation_result: Record<string, unknown> | null;
   is_final: boolean;
-  evaluated_at: string | null;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
 };
@@ -153,15 +153,12 @@ export const challengeResponseValidator: ResponseValidator<
     user_id: r.user_id,
     student_text: r.student_text ?? null,
     transcript: r.transcript ?? null,
-    student_feedback: r.student_feedback ?? null,
-    evaluation_result: r.evaluation_result ?? null,
     is_final: r.is_final,
-    evaluated_at: r.evaluated_at ?? null,
     created_at: r.created_at,
     assets: r.assets.map(a => ({
       id: a.id,
       asset_type: a.asset_type as ChallengeResponseAsset['asset_type'],
-      upload_url: a.upload_url,
+      download_url: a.download_url ?? null,
     })),
   };
 };

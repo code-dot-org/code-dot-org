@@ -25,8 +25,33 @@ class ChallengeResponsesController < ApplicationController
   end
 
   # GET /challenge_responses/:id
+  #
+  # Students do not see their AI evaluation until a teacher has reviewed it,
+  # so the evaluation fields are only included for non-owner readers (i.e.
+  # the student's teachers, per the :read ability).
   def show
-    render json: @challenge_response.summarize
+    include_evaluation = @challenge_response.user_id != current_user.id
+    render json: @challenge_response.summarize(include_evaluation: include_evaluation)
+  end
+
+  # POST /challenge_responses/:id/evaluate
+  #
+  # Enqueues asynchronous AI evaluation of this response. Fire-and-forget
+  # from the client's perspective: the result is stored server-side for
+  # later teacher review, so a 202 is all the client needs. A failed
+  # evaluation may be requested again; queued/running/finished ones may not.
+  def evaluate
+    if @challenge_response.challenge.rubric.blank?
+      return render status: :unprocessable_entity, json: {error: 'Challenge has no rubric'}
+    end
+    unless @challenge_response.ready_for_evaluation?
+      return render status: :unprocessable_entity, json: {error: 'Response is not a final submission with all assets uploaded'}
+    end
+    if @challenge_response.evaluation_status.present? && !@challenge_response.evaluation_failure?
+      return render status: :conflict, json: {error: 'Evaluation already requested'}
+    end
+    EvaluateChallengeResponseJob.perform_later(challenge_response_id: @challenge_response.id)
+    render json: @challenge_response.summarize, status: :accepted
   end
 
   private def authorize_create!
