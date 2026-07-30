@@ -25,6 +25,10 @@ export type {
 // supply them via the workspace/provider `plugins` prop.
 export * from './inputs';
 
+// Typed variables: a reusable variable flavour (a type-tagged variable + a
+// type-checked getter block) any lab can create.
+export * from './variables';
+
 export * from './components';
 export * from './contexts';
 export * from './fields';
