@@ -4,25 +4,7 @@ import {FallbackPlayerCaptionDialogLinkComponent} from '../components/fallback-p
 import {LessonLevelPage} from '../pages/lesson-level-page';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 
-// Expected violations per surface/state: rule id -> failing node count,
-// scoped to the component's own root (see rootSelector). Measured against
-// test-studio.
-//   standaloneInitialLoad color-contrast: the "Closed Captioning and
-//   Translations" trigger link, rgb(5, 150, 206) on white = 3.35:1, needs
-//   4.5:1 for this 13px/400-weight (non-large) text.
-//   standaloneDialogOpen: same trigger link/violation persists once the
-//   dialog mounts alongside it.
-//   The Maze surface's caption link sits inside the video/notes tab strip
-//   with a different (passing) background, hence no violation there.
-// CROSS-BROWSER FINDING (confirmed, not a scan race): once the dialog opens,
-// its modal-backdrop visually covers the trigger link (verified via
-// elementFromPoint — stable immediately after click, no scroll/layout drift
-// over time). Chromium and Firefox agree on the counts below; WebKit's axe
-// build resolves color-contrast for that obscured link the opposite way on
-// both surfaces. Reproduced deterministically: 5/5 full-spec repeats and 3/3
-// direct AxeBuilder re-scans of the same already-open dialog gave identical,
-// stable per-browser results — i.e. the value depends on the browser engine,
-// not on scan timing. See webkitDialogOpenOverrides below.
+// Trigger link contrast is 3.35:1, needs 4.5:1; Maze's link sits on a passing background.
 const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
   standaloneInitialLoad: {'color-contrast': 1},
   standaloneDialogOpen: {'color-contrast': 1},
@@ -30,8 +12,7 @@ const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
   mazeDialogOpen: {},
 };
 
-// WebKit-measured counts for the two *DialogOpen states, inverted from
-// EXPECTED_VIOLATIONS (see finding above).
+// WebKit's axe judges the backdrop-obscured link opposite to Chromium/Firefox.
 const WEBKIT_DIALOG_OPEN_OVERRIDES: Record<string, Record<string, number>> = {
   standaloneDialogOpen: {},
   mazeDialogOpen: {'color-contrast': 1},

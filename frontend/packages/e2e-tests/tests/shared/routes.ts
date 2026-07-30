@@ -9,7 +9,7 @@ export interface LabLevelUrlParams {
   showCallouts?: boolean;
   /** Suppress first-run product-tour overlays. Emitted as ?hideProductTours=true. */
   hideProductTours?: boolean;
-  /** Force the level's video into its non-YouTube-API HTML5 fallback player. Emitted as ?force_youtube_fallback=1. */
+  /** Force the HTML5 fallback video player. Emitted as ?force_youtube_fallback=1. */
   forceYoutubeFallback?: boolean;
   /** Force a UI locale. Emitted as a /lang/<code> path segment, which Rails rewrites to ?lang=<code>. */
   lang?: string;
