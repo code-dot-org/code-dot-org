@@ -1,5 +1,12 @@
+// Button cell. Fixed height spaces every row the same.
 .actionCell {
   padding-right: 16px;
+  height: 52px;
+}
+
+// Label cell. Keeps text off the left edge.
+.labelCell {
+  padding-left: var(--spacing-p-xs);
 }
 
 // The DSCO Modal content section is a flex child with align-items: flex-start,
