@@ -1,7 +1,13 @@
 import {afterEach, describe, expect, it} from 'vitest';
 
-import {DOMAIN_BLOCKS, DOMAIN_TOOLBOX} from '../domainBlocks';
+import {
+  buildDomainPalette,
+  DOMAIN_BLOCKS,
+  DOMAIN_TOOLBOX,
+  ROOT_BLOCK_TYPES,
+} from '../domainBlocks';
 import {setProjectMaps} from '../moduleOptions';
+import {parseRuleMeta} from '../ruleMeta';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -715,5 +721,76 @@ describe('world_load_map generator', () => {
     );
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
     expect(defs['map:maps/level1']).toBe('import Level1 from "maps/level1";');
+  });
+});
+
+describe('buildDomainPalette (project rule blocks)', () => {
+  // A declarative project rule: a world `strength` property + a `gusted` event.
+  const wind = parseRuleMeta(
+    'rules/wind',
+    JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Has Wind'},
+            next: {
+              block: {
+                type: 'world_rule_property',
+                fields: {ID: 'strength', NAME: 'wind strength', TYPE: 'number'},
+                next: {
+                  block: {
+                    type: 'world_rule_event',
+                    fields: {ID: 'gusted', NAME: 'is gusted'},
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+    }),
+  )!;
+
+  it('returns the built-in palette unchanged with no project rules', () => {
+    const p = buildDomainPalette([]);
+    expect(p.blocks).toBe(DOMAIN_BLOCKS);
+    expect(p.toolbox).toBe(DOMAIN_TOOLBOX);
+    expect(p.rootTypes).toBe(ROOT_BLOCK_TYPES);
+  });
+
+  it('extends the palette with a project rule’s blocks (collision-safe types)', () => {
+    const {blocks, toolbox, rootTypes} = buildDomainPalette([wind]);
+    const types = blocks.map(b => b.type);
+    // Namespaced by module, so it can't collide with gravity's `StrengthProperty`.
+    expect(types).toContain('world_set_rules_wind_StrengthProperty');
+    expect(types).toContain('world_get_rules_wind_StrengthProperty');
+    expect(types).toContain('world_on_rules_wind_GustedEvent'); // project event hat
+    // Built-ins are still present, un-namespaced.
+    expect(types).toContain('world_set_StrengthProperty'); // gravity's
+    // A toolbox category for the project rule, carrying its blocks.
+    const cats = toolbox as Array<{name: string; blocks: string[]}>;
+    expect(cats.find(c => c.name === 'Has Wind')?.blocks).toContain(
+      'world_set_rules_wind_StrengthProperty',
+    );
+    // The project event hat is a root (so the generator owns its next chain).
+    expect(rootTypes.has('world_on_rules_wind_GustedEvent')).toBe(true);
+  });
+
+  it('generates a project member’s codegen as an import from its module', () => {
+    const {blocks} = buildDomainPalette([wind]);
+    const setBlock = blocks.find(
+      b => b.type === 'world_set_rules_wind_StrengthProperty',
+    )!;
+    const defs: Record<string, string> = {};
+    const code = setBlock.generator.javascript(
+      {getFieldValue: () => ''} as never,
+      {valueToCode: () => '5', definitions_: defs} as never,
+      {} as never,
+    );
+    expect(code).toBe('world.set(StrengthProperty, 5);\n');
+    expect(defs['named:rules/wind:StrengthProperty']).toBe(
+      'import {StrengthProperty} from "rules/wind";',
+    );
   });
 });

@@ -16,6 +16,7 @@ import {
   defineBlock,
   type BlockArgDefinition,
   type Toolbox,
+  type ToolboxCategory,
 } from '@code-dot-org/blockly';
 
 import type {ArgType, PropertyType} from '../engine';
@@ -94,8 +95,18 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
   return `WorldLab.${ref.exportName}`;
 };
 
+// A globally-unique key for a member's block TYPE (registry + toolbox name),
+// distinct from its codegen reference (`refCode`). Built-in export names are
+// unique; a project member is namespaced by its module, so two rules' same-named
+// members (e.g. both a `strength`) don't collide on one block type.
+const memberKey = (ref: MemberRef): string =>
+  ref.source === 'project' && ref.modulePath
+    ? `${ref.modulePath.replaceAll('/', '_')}_${ref.exportName}`
+    : ref.exportName;
+
 /** The toolbox/registry type for the block that handles `event`. */
-const eventBlockType = (event: EventMeta): string => `world_on_${event.id}`;
+const eventBlockType = (event: EventMeta): string =>
+  `world_on_${event.ref.source === 'builtin' ? event.id : memberKey(event.ref)}`;
 
 // `when key … is pressed/released` dropdown: friendly label -> the DOM
 // `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
@@ -583,7 +594,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   const args0: BlockArgDefinition[] = actorScoped
     ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
     : value.args;
-  const type = setPropertyBlockType(property.ref.exportName);
+  const type = setPropertyBlockType(memberKey(property.ref));
   // Seed the value sockets with their default shadow blocks (attached on init).
   registerValueShadows(type, value.shadows);
   return defineBlock({
@@ -658,7 +669,7 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
       : `get world ${name}`;
 
   return defineBlock({
-    type: getPropertyBlockType(property.ref.exportName),
+    type: getPropertyBlockType(memberKey(property.ref)),
     message0,
     args0,
     inputsInline: true,
@@ -745,7 +756,7 @@ const defineActionBlock = (action: ActionMeta) => {
     message0 = `${message0} on %${args0.length}`;
   }
 
-  const type = actionBlockType(action.ref.exportName);
+  const type = actionBlockType(memberKey(action.ref));
   if (value.shadows.length) {
     registerValueShadows(type, value.shadows);
   }
@@ -823,7 +834,7 @@ const defineQueryBlock = (query: QueryMeta) => {
   const actorScoped = query.scope === 'actor';
   const name = query.name;
   const returns = query.returns ?? 'boolean';
-  const type = queryBlockType(query.ref.exportName);
+  const type = queryBlockType(memberKey(query.ref));
   // A world query may take typed arguments (its `params`), each a value socket;
   // an actor query reads the actor it is called on.
   const params = actorScoped ? [] : query.params;
@@ -1423,7 +1434,9 @@ const ruleCategory = (rule: RuleMeta) => ({
  * that rule's blocks, generated property setters, and events, then the
  * general-purpose blocks (Console output, Logic, Math, Text).
  */
-export const DOMAIN_TOOLBOX: Toolbox = [
+// The toolbox in three segments so the per-project builder can splice project
+// rule categories between the built-in rule categories and the general blocks.
+const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'Actor',
     blocks: [
@@ -1439,9 +1452,11 @@ export const DOMAIN_TOOLBOX: Toolbox = [
     name: 'World',
     blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
   },
-  ...AUTHORING_RULES.map(ruleCategory).filter(
-    category => category.blocks.length > 0,
-  ),
+];
+const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
+  ruleCategory,
+).filter(category => category.blocks.length > 0);
+const TOOLBOX_TAIL: ToolboxCategory[] = [
   {name: 'Loops', blocks: ['world_for_each']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
@@ -1466,3 +1481,111 @@ export const DOMAIN_TOOLBOX: Toolbox = [
   },
   {name: 'Text', blocks: ['text']},
 ];
+
+export const DOMAIN_TOOLBOX: Toolbox = [
+  ...TOOLBOX_HEAD,
+  ...BUILTIN_RULE_CATEGORIES,
+  ...TOOLBOX_TAIL,
+];
+
+// ── Per-project rule palette ─────────────────────────────────────────────────
+// Generate the blocks + toolbox category for a set of rules — the project's own
+// `.rule` rules (their `RuleMeta`). Reuses the same generators as the built-ins
+// (which are generated once above); a project member's block type is namespaced
+// (`memberKey`) and its codegen imports from the rule's module (`refCode`), so a
+// project rule contributes set/get/action/query/event blocks exactly like a
+// built-in. `buildDomainPalette` splices these onto the built-in palette; the
+// editor and headless generator call it with the current project's rules.
+
+type DomainBlock = (typeof DOMAIN_BLOCKS)[number];
+
+function generateRulePalette(rules: readonly RuleMeta[]): {
+  blocks: DomainBlock[];
+  categories: ToolboxCategory[];
+  eventTypes: string[];
+} {
+  const blocks: DomainBlock[] = [];
+  const categories: ToolboxCategory[] = [];
+  const eventTypes: string[] = [];
+  for (const rule of rules) {
+    const propTypes: string[] = [];
+    const queryTypes: string[] = [];
+    const actionTypes: string[] = [];
+    const ruleEventTypes: string[] = [];
+    for (const property of rule.properties) {
+      if (!isSettable(property)) {
+        continue;
+      }
+      const setBlock = defineSetPropertyBlock(property);
+      const getBlock = defineGetPropertyBlock(property);
+      blocks.push(setBlock, getBlock);
+      propTypes.push(setBlock.type, getBlock.type);
+    }
+    for (const query of rule.queries) {
+      if (!query.returns || query.ref.exportName === '') {
+        continue;
+      }
+      const block = defineQueryBlock(query);
+      blocks.push(block);
+      queryTypes.push(block.type);
+    }
+    for (const action of rule.actions) {
+      if (action.ref.exportName === '') {
+        continue;
+      }
+      const block = defineActionBlock(action);
+      blocks.push(block);
+      actionTypes.push(block.type);
+    }
+    for (const event of rule.events) {
+      const block =
+        rule.id === 'input'
+          ? defineKeyEventBlock(event)
+          : defineEventBlock(event);
+      blocks.push(block);
+      ruleEventTypes.push(block.type);
+      eventTypes.push(block.type);
+    }
+    const categoryBlocks = [
+      ...propTypes,
+      ...queryTypes,
+      ...actionTypes,
+      ...ruleEventTypes,
+    ];
+    if (categoryBlocks.length > 0) {
+      categories.push({name: rule.name, blocks: categoryBlocks});
+    }
+  }
+  return {blocks, categories, eventTypes};
+}
+
+/**
+ * The block palette for a project: the built-in blocks/toolbox/root-types
+ * extended with the project's own `.rule` rules. With no project rules it is the
+ * static built-in palette. Callers (BlocklyFileEditor, BlocklyGenerator) pass the
+ * project's parsed rule `RuleMeta`.
+ */
+export function buildDomainPalette(projectRules: readonly RuleMeta[]): {
+  blocks: DomainBlock[];
+  toolbox: Toolbox;
+  rootTypes: ReadonlySet<string>;
+} {
+  if (projectRules.length === 0) {
+    return {
+      blocks: DOMAIN_BLOCKS,
+      toolbox: DOMAIN_TOOLBOX,
+      rootTypes: ROOT_BLOCK_TYPES,
+    };
+  }
+  const palette = generateRulePalette(projectRules);
+  return {
+    blocks: [...DOMAIN_BLOCKS, ...palette.blocks],
+    toolbox: [
+      ...TOOLBOX_HEAD,
+      ...BUILTIN_RULE_CATEGORIES,
+      ...palette.categories,
+      ...TOOLBOX_TAIL,
+    ],
+    rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
+  };
+}
