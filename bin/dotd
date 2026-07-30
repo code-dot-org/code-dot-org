@@ -131,16 +131,16 @@ def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
   warn_if_old_commit test_green_commit
 
-  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
-
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtp_candidate_#{test_green_commit}"
   if GitHub.branch_exists?(branch_name, at_commit: test_green_commit)
     puts "Up-to-date DTP Candidate Branch #{branch_name.inspect} already exists; reusing."
-  else
-    create_branch_from_commit(branch_name, test_green_commit)
+  elsif !create_branch_from_commit(branch_name, test_green_commit)
+    puts red "Skipping DTP PR creation because #{branch_name.inspect} was not pushed."
+    return
   end
+  DevelopersTopic.set_dtp "pending confirmation (@#{dotd_name})"
   production_pr_number = GitHub.find_or_create_pull_request(
     base: 'production',
     head: branch_name,
@@ -163,12 +163,15 @@ end
 # @param [String] dotd_name The name of the DOTD running this script.
 def do_dtl(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
-  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
 
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtl_candidate_#{test_green_commit}"
-  create_branch_from_commit branch_name, test_green_commit
+  unless create_branch_from_commit(branch_name, test_green_commit)
+    puts red "Skipping DTL PR creation because #{branch_name.inspect} was not pushed."
+    return
+  end
+  DevelopersTopic.set_dtl "in progress (@#{dotd_name})"
   levelbuilder_pr_number = GitHub.create_and_merge_pull_request(
     base: 'levelbuilder',
     head: branch_name,

@@ -1,6 +1,7 @@
 require 'aws-sdk-ec2'
 require 'json'
 require 'open3'
+require 'shellwords'
 
 module Cdo
   module Aws
@@ -17,6 +18,9 @@ module Cdo
       ).freeze
       START_INTERACTIVE_COMMAND_DOCUMENT = 'AWS-StartInteractiveCommand'.freeze
       START_SSH_SESSION_DOCUMENT = 'AWS-StartSSHSession'.freeze
+      DEFAULT_INSTANCE_OS_USER = 'ubuntu'.freeze
+      DEFAULT_WORKING_DIRECTORY = "/home/#{DEFAULT_INSTANCE_OS_USER}".freeze
+      LOGIN_SHELL_COMMAND = 'exec bash -l'.freeze
 
       class << self
         attr_writer :ec2_client
@@ -92,11 +96,46 @@ module Cdo
         runner.system(*start_session_argv(instance_id, extra_args: extra_args))
       end
 
-      def self.start_interactive_command(name_or_id, command, runner: Kernel)
+      def self.start_interactive_shell(
+        name_or_id,
+        instance_os_user: DEFAULT_INSTANCE_OS_USER,
+        working_directory: DEFAULT_WORKING_DIRECTORY,
+        extra_args: [],
+        runner: Kernel
+      )
         instance_id = instance_id_for(name_or_id)
         return false unless instance_id
 
-        runner.system(*start_interactive_command_argv(instance_id, command))
+        runner.system(
+          *start_interactive_shell_argv(
+            instance_id,
+            instance_os_user: instance_os_user,
+            working_directory: working_directory,
+            extra_args: extra_args
+          )
+        )
+      end
+
+      def self.start_interactive_command(
+        name_or_id,
+        command,
+        instance_os_user: DEFAULT_INSTANCE_OS_USER,
+        working_directory: DEFAULT_WORKING_DIRECTORY,
+        extra_args: [],
+        runner: Kernel
+      )
+        instance_id = instance_id_for(name_or_id)
+        return false unless instance_id
+
+        runner.system(
+          *start_interactive_command_argv(
+            instance_id,
+            command,
+            instance_os_user: instance_os_user,
+            working_directory: working_directory,
+            extra_args: extra_args
+          )
+        )
       end
 
       def self.send_ssh_public_key(
@@ -120,14 +159,44 @@ module Cdo
         ['aws', 'ssm', 'start-session', '--target', instance_id, *extra_args]
       end
 
-      def self.start_interactive_command_argv(instance_id, command)
+      def self.start_interactive_shell_argv(
+        instance_id,
+        instance_os_user: DEFAULT_INSTANCE_OS_USER,
+        working_directory: DEFAULT_WORKING_DIRECTORY,
+        extra_args: []
+      )
+        start_interactive_command_argv(
+          instance_id,
+          LOGIN_SHELL_COMMAND,
+          instance_os_user: instance_os_user,
+          working_directory: working_directory,
+          extra_args: extra_args
+        )
+      end
+
+      def self.start_interactive_command_argv(
+        instance_id,
+        command,
+        instance_os_user: DEFAULT_INSTANCE_OS_USER,
+        working_directory: DEFAULT_WORKING_DIRECTORY,
+        extra_args: []
+      )
         start_session_argv(
           instance_id,
           extra_args: [
             '--document-name',
             START_INTERACTIVE_COMMAND_DOCUMENT,
             '--parameters',
-            JSON.dump(command: [command])
+            JSON.dump(
+              command: [
+                interactive_command(
+                  command,
+                  instance_os_user: instance_os_user,
+                  working_directory: working_directory
+                )
+              ]
+            ),
+            *extra_args
           ]
         )
       end
@@ -168,7 +237,15 @@ module Cdo
       def self.describe_instances(**params)
         ec2_client.describe_instances(params).reservations.flat_map(&:instances)
       end
-      private_class_method :describe_instances
+
+      def self.interactive_command(command, instance_os_user: nil, working_directory: nil)
+        command = "cd #{Shellwords.escape(working_directory)} && #{command}" if working_directory
+        return command unless instance_os_user
+
+        Shellwords.join(['sudo', '-Hu', instance_os_user, 'bash', '-lc', command])
+      end
+
+      private_class_method :describe_instances, :interactive_command
     end
   end
 end
