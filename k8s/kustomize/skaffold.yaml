@@ -34,10 +34,12 @@ build:
           K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
         fi
         "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target runtime \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
-          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg BUNDLE_WITHOUT=test:production:staging:levelbuilder
       dependencies:
         dockerfile:
           path: ../docker/code-dot-org.dockerfile
@@ -53,18 +55,13 @@ build:
   - image: code-dot-org-core
     context: ../..
     custom:
-      # skaffold sync only works when the user is root 😤:
-      # https://github.com/GoogleContainerTools/skaffold/issues/2479
-      # If we find a solution, we can drop this override:
       buildCommand: |
         K8S_DIR="$BUILD_CONTEXT/k8s"
         if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
           K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
         fi
         "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-core.dockerfile" \
-          --build-arg USERNAME=root \
-          --build-arg UID=0 \
-          --build-arg GID=0
+          --target code-dot-org-core
       dependencies:
         dockerfile:
           path: ../docker/code-dot-org-core.dockerfile
@@ -112,6 +109,9 @@ manifests:
 
 deploy:
   kubectl: {}
+  # Rails takes long enough to boot that the startup probe can fail transiently.
+  # Let Kubernetes enforce the probe threshold instead of failing on its first event.
+  tolerateFailuresUntilDeadline: true
 
 profiles:
 
@@ -123,6 +123,29 @@ profiles:
       path: /manifests/kustomize/paths/-
       value: overlays/skaffold-local-dev
 
+# Build the runtime image with a minimal frontend package for ActiveJob experiments.
+- name: activejob-only
+  patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        IMPORT_IMAGE_TO_K8S_NODE=true "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg BUNDLE_JOBS=1 \
+          --build-arg BUNDLE_WITHOUT=development:test:production:adhoc:staging:levelbuilder:integration \
+          --build-arg SKIP_FRONTEND_BUILD=1
+    - op: add
+      path: /manifests/kustomize/paths/-
+      value: overlays/activejob-only
+
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
@@ -130,6 +153,14 @@ profiles:
       - op: add
         path: /manifests/kustomize/paths/-
         value: overlays/setup-db
+
+# Creates or migrates the Dashboard DB without seeding curriculum data.
+# Run: skaffold dev --trigger=manual -p activejob-only -p setup-db-minimal
+- name: setup-db-minimal
+  patches:
+      - op: add
+        path: /manifests/kustomize/paths/-
+        value: overlays/setup-db-minimal
 
 # Create standard cdo-v3-* S3 buckets in minio.
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
@@ -149,6 +180,20 @@ profiles:
 # For details, see: ../mimic/README.md
 - name: mimic
   patches:
+    - op: replace
+      path: /build/artifacts/0/custom/buildCommand
+      value: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
+          --target runtime \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC" \
+          --build-arg SKIP_FRONTEND_BUILD=1
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
     # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
     # have been replaced by copies of the real files, because docker doesn't follow

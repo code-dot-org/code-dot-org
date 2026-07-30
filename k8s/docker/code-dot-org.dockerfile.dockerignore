@@ -29,8 +29,14 @@ dashboard/config/levels
 ##########################################################################
 
 
-# We have disabled pegasus, its just too large, and makes skaffold unwieldy
+# We have disabled pegasus, its just too large, and makes skaffold unwieldy.
+# Keep static_models.rb because lib/cdo/db.rb requires it during Rails boot.
 pegasus/
+!pegasus/
+pegasus/*
+!pegasus/data/
+pegasus/data/*
+!pegasus/data/static_models.rb
 
 # We have disabled /i18n
 i18n/

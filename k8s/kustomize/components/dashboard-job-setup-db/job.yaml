@@ -16,7 +16,7 @@ spec:
         - name: setup-db
           image: code-dot-org:latest
           command:
-            - zsh
+            - sh
             - -c
           args:
             - cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'

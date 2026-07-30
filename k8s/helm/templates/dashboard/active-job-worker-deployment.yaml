@@ -1,0 +1,18 @@
+{{- if .Values.activeJobWorker.enabled -}}
+# See _dashboard.yaml for shared Deployment details.
+{{- include "dashboard"
+  (merge (dict
+    "apiVersion" "apps/v1"
+    "kind" "Deployment"
+    "name" (include "cdo.fullname" (merge (dict "component" "active-job-worker") .))
+    "shortName" "active-job-worker"
+    "labels" (include "cdo.labels" (merge (dict "component" "active-job-worker") .))
+    "selectorLabels" (include "cdo.selectorLabels" (merge (dict "component" "active-job-worker") .))
+    "replicas" .Values.activeJobWorker.replicas
+    "command" .Values.activeJobWorker.command
+    "args" .Values.activeJobWorker.args
+    "healthChecksEnabled" false
+    "portsEnabled" false
+  ) .)
+}}
+{{- end }}

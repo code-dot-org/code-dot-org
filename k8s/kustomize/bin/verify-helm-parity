@@ -94,7 +94,7 @@ module DashboardKustomize
       helm_set: [
         ['--set', 'dashboardJob.enabled=true'],
         ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
+        ['--set-json', 'dashboardJob.command=["sh","-c"]'],
         ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}]
       ],
       kustomize_paths: [
@@ -121,7 +121,7 @@ module DashboardKustomize
       helm_set: [
         ['--set', 'dashboardJob.enabled=true'],
         ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
+        ['--set-json', 'dashboardJob.command=["sh","-c"]'],
         ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}],
         ['--set', 'services.minio.runSetupS3Job=true']
       ],

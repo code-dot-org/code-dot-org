@@ -79,6 +79,8 @@ Dashboard::Application.configure do
   config.experiment_cache_time_seconds = 0
 
   config.after_initialize do
+    next unless Gem.loaded_specs.key?('prosopite')
+
     # Writes to dashboard/log/development.log
     # Prosopite.rails_logger = true
 
