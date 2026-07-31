@@ -22,7 +22,7 @@
   margin: 0 0 6px;
   font-size: 11px;
   line-height: 1.35;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }
 
 .wireDot {
@@ -45,17 +45,17 @@
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   text-align: center;
-  background: var(--effect-editor-field, #1b1f30);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-field);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 4px;
 }
 
 /* The slot the next click fills. */
 .slotActive {
-  color: var(--effect-editor-accent, #8ab4f8);
-  border-color: var(--effect-editor-accent, #8ab4f8);
+  color: var(--effect-editor-accent);
+  border-color: var(--effect-editor-accent);
 }
 
 .options {

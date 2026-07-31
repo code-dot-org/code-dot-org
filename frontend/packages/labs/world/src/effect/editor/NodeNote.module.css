@@ -17,14 +17,14 @@
   font-size: 12px;
   line-height: 1.2;
   cursor: pointer;
-  background: var(--effect-editor-surface, #262b40);
-  border: 1px dashed var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-surface);
+  border: 1px dashed var(--effect-editor-border);
   border-radius: 10px;
   opacity: 0.75;
 }
 
 .add:hover {
-  border-color: var(--effect-editor-accent, #8ab4f8);
+  border-color: var(--effect-editor-accent);
   border-style: solid;
   opacity: 1;
 }
@@ -38,11 +38,11 @@
   font-family: inherit;
   font-size: 10px;
   line-height: 1.45;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   text-align: left;
   white-space: pre-wrap;
-  background: var(--effect-editor-field, #1b1f30);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-field);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 8px 8px 2px 8px;
   box-shadow: 0 2px 6px rgb(0 0 0 / 35%);
 }
@@ -53,11 +53,11 @@
 }
 
 .bubble:hover {
-  border-color: var(--effect-editor-accent, #8ab4f8);
+  border-color: var(--effect-editor-accent);
 }
 
 .editor {
   resize: none;
-  border-color: var(--effect-editor-accent, #8ab4f8);
+  border-color: var(--effect-editor-accent);
   outline: none;
 }

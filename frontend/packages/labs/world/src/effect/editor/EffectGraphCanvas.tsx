@@ -18,6 +18,8 @@ import {
 } from '@xyflow/react';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+
 import {translate} from '../localization';
 import {isGhostNodeId} from '../model/constants';
 import type {
@@ -78,7 +80,9 @@ function minimapNodeColor(node: {type?: string}): string {
   if (node.type === FLOW_GHOST_TYPE) {
     return 'transparent';
   }
-  return node.type === FLOW_COMMENT_TYPE ? '#4a4463' : '#39415f';
+  return node.type === FLOW_COMMENT_TYPE
+    ? 'var(--effect-editor-border-light)'
+    : 'var(--effect-editor-raised)';
 }
 
 /** The existing end of a dangling wire, as handed to `onAddConnectedNode`. */
@@ -209,6 +213,14 @@ export function EffectGraphCanvas({
   onSelectedNodesChange,
   readOnly = false,
 }: EffectGraphCanvasProps) {
+  // React Flow paints its own chrome — the dot grid, the controls, the minimap
+  // — from this prop rather than from our stylesheets, so it has to be told the
+  // theme separately from the semantic colors the rest of the editor reads.
+  // Optional on purpose: `useTheme(true)` yields `{}` outside a ThemeProvider,
+  // which is the standalone case, and Light is the design system's default.
+  const {theme} = useTheme(true);
+  const colorMode = theme === 'Dark' ? 'dark' : 'light';
+
   const [selectedEdgeIds, setSelectedEdgeIds] = useState<ReadonlySet<string>>(
     () => new Set(),
   );
@@ -535,7 +547,7 @@ export function EffectGraphCanvas({
       onDrop={handleDrop}
     >
       <ReactFlow
-        colorMode="dark"
+        colorMode={colorMode}
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
@@ -579,7 +591,7 @@ export function EffectGraphCanvas({
           pannable
           zoomable
           ariaLabel={translate('Graph overview')}
-          bgColor="var(--effect-editor-canvas, #1b1f30)"
+          bgColor="var(--effect-editor-canvas)"
           maskColor="rgb(14 17 30 / 65%)"
           nodeColor={minimapNodeColor}
           nodeStrokeColor="transparent"

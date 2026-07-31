@@ -1,15 +1,59 @@
+/* The editor's palette, declared once and derived from the design system's
+   semantic colors (@code-dot-org/component-library-styles/colors.css).
+   Everything else in these stylesheets — and the few style overrides in
+   theme.ts — reads `--effect-editor-*` and never a literal color, so this block
+   is the whole surface to change.
+
+   No `data-theme` is set here on purpose. These tokens resolve against
+   whichever ancestor carries the attribute, which is the lab's own
+   `div[data-theme]`, so the editor follows the Light/Dark setting the learner
+   chose rather than overriding it. The MUI chrome follows the same way, by
+   composing with `CdoTheme` instead of replacing it (see theme.ts).
+
+   The fallbacks are the LIGHT values, because `:root` is the Light theme in
+   colors.css: if a host ever mounts the editor without the design system's
+   stylesheets, it should degrade to the default theme rather than to one nobody
+   picked. They are the only literals in the editor's styles. */
 .editor {
+  --effect-editor-canvas: var(--background-neutral-primary, #fff);
+  --effect-editor-surface: var(--background-neutral-secondary, #f0f2f5);
+  --effect-editor-raised: var(--background-neutral-tertiary, #dfe3e9);
+  --effect-editor-field: var(--background-neutral-primary, #fff);
+  --effect-editor-border: var(--borders-neutral-primary, #d4dae1);
+  --effect-editor-border-light: var(--borders-neutral-light, #dfe3e9);
+  --effect-editor-text: var(--text-neutral-primary, #292f36);
+  --effect-editor-muted: var(--text-neutral-tertiary, #576575);
+  --effect-editor-accent: var(--borders-brand-teal-primary, #0093a4);
+  --effect-editor-error: var(--borders-error-primary, #e02d16);
+  --effect-editor-warning: var(--borders-warning-primary, #f9cb28);
+
+  /* Wire/port colors by GLSL type — see portTypes.ts for why these are the one
+     palette not taken from the design system. Light values here, dark ones
+     below: a hue readable on white is not readable on near-black, and type is
+     the thing a learner has to read at a glance. */
+  --effect-port-float: #1a6fc4;
+  --effect-port-vec2: #0f7a55;
+  --effect-port-vec3: #8a5d00;
+  --effect-port-vec4: #b4165a;
+  --effect-port-sampler: #6f34b0;
+
   display: flex;
   width: 100%;
   height: 100%;
   min-height: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    'Segoe UI',
-    sans-serif;
-  color: var(--effect-editor-text, #e8ebf5);
-  background: var(--effect-editor-canvas, #1b1f30);
+  font-family: var(--font-family-main, sans-serif);
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-canvas);
+}
+
+/* The dark set. `:global()` because the attribute is on the lab's container,
+   not on anything this stylesheet owns. */
+:global([data-theme='Dark']) .editor {
+  --effect-port-float: #8ab4f8;
+  --effect-port-vec2: #7ee0b8;
+  --effect-port-vec3: #ffd166;
+  --effect-port-vec4: #ff8fa3;
+  --effect-port-sampler: #c792ea;
 }
 
 /* Input row, workspace, output row. Only the middle one grows, which is what
@@ -37,8 +81,8 @@
   flex: 0 0 340px;
   min-width: 0;
   overflow: auto;
-  background: var(--effect-editor-field, #1b1f30);
-  border-inline-start: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-field);
+  border-inline-start: 1px solid var(--effect-editor-border);
 }
 
 .code {
@@ -47,7 +91,7 @@
   font-family: ui-monospace, 'SF Mono', Menlo, monospace;
   font-size: 11px;
   line-height: 1.5;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   white-space: pre;
 }
 
@@ -65,8 +109,8 @@
   width: 28px;
   height: 28px;
   font-size: 15px;
-  background: var(--effect-editor-surface, #262b40);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-surface);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 6px;
 }
 
@@ -83,13 +127,13 @@
   align-items: center;
   padding: 7px 16px;
   font-size: 12px;
-  color: var(--effect-editor-text, #e8ebf5);
-  background: var(--effect-editor-field, #1b1f30);
-  border-block-end: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-field);
+  border-block-end: 1px solid var(--effect-editor-border);
 }
 
 .functionCrumb {
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }
 
 .functionName {
@@ -100,7 +144,7 @@
   display: flex;
   gap: 6px;
   align-items: center;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }
 
 .functionDelete {
@@ -114,16 +158,16 @@
   padding: 6px 12px;
   font: inherit;
   font-size: 10px;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
   text-align: left;
   cursor: pointer;
   background: none;
   border: none;
-  border-block-end: 1px solid var(--effect-editor-border, #3a4160);
+  border-block-end: 1px solid var(--effect-editor-border);
 }
 
 .setupToggle:hover {
-  color: var(--effect-editor-accent, #8ab4f8);
+  color: var(--effect-editor-accent);
 }
 
 .effectName {

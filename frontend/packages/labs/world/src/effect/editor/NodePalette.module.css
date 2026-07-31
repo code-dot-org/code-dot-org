@@ -12,9 +12,9 @@
   padding: 0 12px 12px;
   overflow-y: auto;
   font-size: 12px;
-  color: var(--effect-editor-text, #e8ebf5);
-  background: var(--effect-editor-surface, #262b40);
-  border-inline-end: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-surface);
+  border-inline-end: 1px solid var(--effect-editor-border);
 }
 
 .search.search {
@@ -42,7 +42,7 @@
 
 .empty {
   margin: 0;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }
 
 .itemRow {

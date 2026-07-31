@@ -174,7 +174,7 @@ export function reconcileFlowNodes(
  * healthy, and the error wire must not read as one. The dash pattern carries
  * the same signal without relying on color at all.
  */
-export const ERROR_EDGE_STROKE = '#e5484d';
+export const ERROR_EDGE_STROKE = 'var(--effect-editor-error)';
 
 export interface EdgeViewState {
   /** Edges the learner has clicked. Selected edges answer to the delete key. */
@@ -229,7 +229,7 @@ export function toFlowEdges(
       : typeColor !== undefined
         ? portColor(typeColor)
         : active
-          ? 'var(--effect-editor-accent, #8ab4f8)'
+          ? 'var(--effect-editor-accent)'
           : undefined;
 
     return {

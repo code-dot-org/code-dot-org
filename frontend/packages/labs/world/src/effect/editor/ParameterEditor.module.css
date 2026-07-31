@@ -18,7 +18,7 @@
   gap: 12px;
   width: 250px;
   padding: 14px 12px 10px;
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  border: 1px solid var(--effect-editor-border);
 }
 
 .field {
@@ -31,7 +31,7 @@
 .fieldLabel {
   flex: 0 0 auto;
   font-size: 11px;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }
 
 .rangeRow {

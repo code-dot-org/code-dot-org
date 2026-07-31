@@ -11,10 +11,10 @@
   padding: 7px 10px;
   font-size: 11px;
   line-height: 1.45;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   pointer-events: none;
-  background: var(--effect-editor-surface, #262b40);
-  border: 1px solid #b3863a;
+  background: var(--effect-editor-surface);
+  border: 1px solid var(--effect-editor-warning);
   border-radius: 6px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 45%);
 }

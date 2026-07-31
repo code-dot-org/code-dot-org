@@ -11,9 +11,9 @@
   align-items: stretch;
   min-width: 0;
   padding: 10px 16px;
-  color: var(--effect-editor-text, #e8ebf5);
-  background: var(--effect-editor-surface, #262b40);
-  border-block: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-surface);
+  border-block: 1px solid var(--effect-editor-border);
 }
 
 .textureColumn {
@@ -28,8 +28,8 @@
 
 .textureBox {
   overflow: hidden;
-  background: #1b1f30;
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-canvas);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 6px;
 }
 
@@ -49,14 +49,14 @@
 .textureButton {
   font-size: 14px;
   line-height: 1;
-  color: var(--effect-editor-text, #e8ebf5);
-  background: var(--effect-editor-surface, #262b40);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-surface);
+  border: 1px solid var(--effect-editor-border);
 }
 
 .textureButton:hover {
-  color: var(--effect-editor-accent, #8ab4f8);
-  background: #313754;
+  color: var(--effect-editor-accent);
+  background: var(--effect-editor-raised);
 }
 
 /* Knobs hug the canvas: the bottom of the input row, the top of the output
@@ -90,7 +90,7 @@
 
 .knobLabel {
   font-size: 11px;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
   white-space: nowrap;
 }
 
@@ -102,7 +102,7 @@
   padding: 0 3px;
   font: inherit;
   font-size: 11px;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
   white-space: nowrap;
   cursor: pointer;
   background: none;
@@ -111,19 +111,19 @@
 }
 
 .knobLabelButton:hover {
-  color: var(--effect-editor-accent, #8ab4f8);
+  color: var(--effect-editor-accent);
 }
 
 .restartButton {
   margin-bottom: 2px;
   font-size: 14px;
   line-height: 1;
-  color: var(--effect-editor-muted, #9aa4c4);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-muted);
+  border: 1px solid var(--effect-editor-border);
 }
 
 .restartButton:hover {
-  color: var(--effect-editor-accent, #8ab4f8);
+  color: var(--effect-editor-accent);
 }
 
 .editGlyph {
@@ -140,7 +140,7 @@
   margin: 0;
   font-size: 12px;
   line-height: 1.4;
-  color: #ff8fa3;
+  color: var(--effect-editor-error);
 }
 
 .visuallyHidden {

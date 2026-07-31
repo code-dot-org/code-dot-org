@@ -444,20 +444,78 @@ Two traps in doing that comparison, both worth knowing again:
   on. The two runs differed only in animation phase. A control has to remove the
   block.
 
-## 9. Phase 5 — Design system
+## 9. Phase 5 — Design system — DONE
 
-A verification pass, not a rewrite:
+Planned as a verification pass. It became a real retheme, because the first two
+things checked were both false.
 
-- the editor's nested dark `ThemeProvider` (`src/effect/editor/theme.ts`)
-  composes under the host's `CdoTheme`, inside a Codebridge pane;
-- the no-portal rule still holds under Codebridge's own layout (portals mount
-  on `document.body`, outside the `data-notranslate` container);
-- take what is cheap from `component-library-styles` tokens.
+**The theme did not compose.** `theme.ts` built its palette with
+`createTheme({...})` and the comment claimed nesting composed with the host's
+`CdoTheme`. It does not: `<ThemeProvider theme={object}>` _replaces_ the parent
+theme for its subtree — only a _function_ composes. So the editor was running
+an invented dark palette with the design system switched off inside it. It is
+now `theme={outer => createTheme(outer, overrides)}`, and the palette block is
+gone entirely: `CdoTheme` sets `cssVariables: true` and writes its component
+overrides in semantic colors, so MUI chrome in the editor follows the lab's
+theme by itself. What is left in `theme.ts` is density (`size="small"`
+everywhere) and the no-portal defaults — the two things true of this surface
+and not of a page.
+
+**The editor was not themed at all.** 100 color literals across 15 stylesheets,
+plus a `system-ui` font stack. The `--effect-editor-*` variables existed but
+were referenced-with-fallback and never _defined_, so every fallback was the
+real value. They are now declared once on `.editor`, each from a semantic token
+(`--background-neutral-primary`, `--borders-brand-teal-primary`, …), and every
+stylesheet and style override reads them. `--font-family-main` replaces the
+hand-rolled stack. The literals that remain are the Light-theme fallbacks in
+that one block, for a host that mounts the editor without the design system's
+stylesheets — Light because `:root` is Light in `colors.css`, so a missing
+stylesheet degrades to the default theme rather than one nobody chose.
+
+**The editor follows the lab's Light/Dark setting; it does not pin one.** An
+earlier revision set `data-theme="Dark"` on the container, reasoning that a
+canvas tool should be dark whatever the app is. That is the editor overriding a
+choice that belongs to the learner, so it was removed: the tokens now resolve
+against the lab's own `div[data-theme]`. Two consequences had to be chased:
+
+- **React Flow paints its own chrome** — dot grid, controls, minimap — from a
+  `colorMode` prop rather than from CSS, and it was hard-coded `"dark"`. A
+  light canvas kept a black dot grid. It now reads
+  `useTheme(true)` from the component-library context, which is the _same
+  state_ the attribute comes from (`ThemeProvider` renders
+  `<div data-theme={theme}>` around its own provider), so the two halves cannot
+  disagree. `useTheme(true)` rather than `useTheme()` because the editor must
+  still render outside a provider, where Light is the right default.
+- **The wire colors are theme-aware.** Five hues tuned against a dark canvas
+  wash out on white, and type is the one thing a learner must read at a glance.
+  These are the one palette _not_ taken from the design system, and
+  deliberately: five mutually-distinguishable hues is a syntax-highlighting
+  problem, while brand families are chosen to sit together — the opposite
+  requirement. So they stay hand-picked, but now as `--effect-port-*` with a
+  Light set and a Dark set selected by `data-theme`.
 
 Canvas internals — nodes, wires, handles, knobs — stay purpose-built CSS. They
 are dense, zoom-scaled, and geometry-bound to React Flow in ways design-system
 components are not. A full DSCO alignment and an accessibility pass over a
 node-graph editor are each their own effort and are not in this plan.
+
+The switch itself needs nothing from this lab: `WorldLayout` renders
+Codebridge's `InfoPanel`, which defaults `supportedThemes = ['Light', 'Dark']`,
+so the settings menu already carries a Theme picker. Both modes have been
+exercised through it.
+
+**Verified** in Chromium against `dev:isolated`, by measuring computed styles
+rather than reading screenshots — twice a downscaled crop suggested something
+the computed values contradicted. Light: canvas `#fff`, nodes `#dfe3e9`, text
+`#292f36`, wires the darker set. Dark: canvas `#292f36`, palette `#424d59`,
+nodes `#576575`, fields `#292f36`, text white, wires the lighter set. Geist
+throughout, no MUI portal roots escaping to `document.body`.
+
+Tests: `theming.test.tsx` (the container pins no theme of its own and keeps
+`data-notranslate`) and `colorMode.test.tsx` (React Flow follows the provider
+into dark, into light, and defaults light with no provider). The latter caught
+a wiring bug while being written — the first version passed a `theme` prop
+`ThemeProvider` does not accept, so the assertion failed and was right to.
 
 ## 10. Testing
 
