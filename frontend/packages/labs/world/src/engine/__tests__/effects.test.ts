@@ -130,15 +130,32 @@ describe('Actor.addEffect / removeEffect', () => {
     expect(actor.effects()).toHaveLength(1);
   });
 
-  it('keeps the first values when adding a path it already has', () => {
-    // Idempotent means idempotent: the second call is not a way to retune a
-    // running effect. Changing values while attached is separate work.
+  it('retunes an effect it already has, rather than ignoring the call', () => {
+    // Not stacking is the point of the one-per-path rule; ignoring the new
+    // values is not. `add effect Ripple` with a computed strength means a new
+    // strength each time the handler runs, and keeping the first would freeze
+    // it there with nothing to show why.
     const actor = positional('fish').instantiate();
 
     actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.1});
     actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.9});
 
-    expect(actor.effects()[0].values).toEqual({strength: 0.1});
+    expect(actor.effects()).toHaveLength(1);
+    expect(actor.effects()[0].values).toEqual({strength: 0.9});
+  });
+
+  it('keeps its place in the application order when retuned', () => {
+    // Effects compose in order; retuning one should not move it past another.
+    const actor = positional('fish').instantiate();
+    actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.1});
+    actor.addEffect('effects/glow', doc('Glow'));
+
+    actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.9});
+
+    expect(actor.effects().map(effect => effect.path)).toEqual([
+      'effects/ripple',
+      'effects/glow',
+    ]);
   });
 
   it('stops an effect', () => {

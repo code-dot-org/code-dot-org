@@ -133,12 +133,18 @@ export class Actor {
   }
 
   /**
-   * Start playing an effect on this actor, now.
+   * Start playing an effect on this actor, now — or retune one already playing.
    *
-   * Idempotent by path: an actor either wears an effect or it does not, so
-   * adding one it already has changes nothing. That is what makes this safe in
-   * an event that fires every frame while a condition holds — "while hurt, glow"
-   * would otherwise stack a new filter per frame until the frame rate died.
+   * One entry per path, always: an actor either wears an effect or it does not,
+   * so this never stacks. That is what makes it safe in an event that fires
+   * every frame while a condition holds — "while hurt, glow" would otherwise
+   * add a filter per frame until the frame rate died.
+   *
+   * But adding an effect already present is NOT a no-op, because the values may
+   * differ. `add effect Tint` with a random color behind it means a new color
+   * each time the handler runs, and returning early there would leave the first
+   * color on screen forever with nothing to show why. Same effect, same single
+   * filter, new settings.
    *
    * The driver notices on its next frame (it reconciles this list against what
    * is attached to the Game Object), so nothing here touches Phaser.
@@ -148,12 +154,15 @@ export class Actor {
     document: AppliedEffectSpec['document'],
     values?: AppliedEffectSpec['values'],
   ): this {
-    if (this.appliedEffects.some(effect => effect.path === path)) {
+    const spec = values ? {path, document, values} : {path, document};
+    const index = this.appliedEffects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      // In place, so the effect keeps its position in the application order —
+      // retuning one should not move it above or below the others.
+      this.appliedEffects[index] = spec;
       return this;
     }
-    this.appliedEffects.push(
-      values ? {path, document, values} : {path, document},
-    );
+    this.appliedEffects.push(spec);
     return this;
   }
 

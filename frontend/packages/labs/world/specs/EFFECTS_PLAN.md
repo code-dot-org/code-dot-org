@@ -1085,3 +1085,41 @@ forward to it. `useRules` and `useAnimations` do not — rules decide trait
 membership for every actor, and the animation registry is seeded once at
 construction — so those still throw. `set` had the same latent bug for the same
 reason and is fixed with it.
+
+## 15. Values that change while the game runs — FIXED
+
+Reported: a handler that removes an effect and adds it back with a random color
+shows the same color every time.
+
+**Two things, both from the same stale assumption.** `effectSnapshotId` said it
+outright — "the driver reads values once, when it attaches" — and that was true
+when a block's values were fixed at authoring time, where a rebuild carries them
+and a restart applies them. It stopped being true the moment a value could be
+computed: `colour_random` behind a color socket, or any expression.
+
+1. **`Actor.addEffect` / `World.addEffect` ignored the new values** when the
+   path was already present. The one-entry-per-path rule exists so a handler
+   firing every frame cannot stack filters; it was implemented as "return early
+   if present", which also discarded the settings. Now the entry is replaced in
+   place — same single filter, same position in the application order, new
+   values.
+
+2. **The driver skipped anything already attached.** `live.has(path)` →
+   `continue`, so even a changed spec never reached the filter. It now keeps
+   each attached effect's `effectSnapshotId` and calls `setValues` when it
+   moves. `AppliedEffect.setValues` already existed for exactly this and had no
+   callers.
+
+Note that (2) alone is what the reported case needed: removing and re-adding
+within one handler never shows the driver an empty list, so the removal and the
+re-add cancel out and the values are the only evidence anything happened.
+
+**Measured**, sampling the player across four presses: `37,59,95` untinted, then
+`25,18,40`, `24,39,28`, `33,23,76`, `22,16,48`. Four presses, four colors.
+
+**What is still not right.** A remove-then-add does not restart the effect's
+clock, so a time-based effect continues from where it was rather than replaying.
+`AppliedEffect.restart()` exists, but tying it to a values change would restart
+every frame for any effect whose values are computed per frame. Telling a
+genuine re-add from a retune needs the engine to record that the path went away
+and came back, which it currently does not.

@@ -27,10 +27,12 @@ vi.mock('../../../effect/runtime', () => ({
   })),
   applyEffectToActor: vi.fn(() => ({
     remove: vi.fn(),
+    setValues: vi.fn(),
     controller: {uniformValues: null},
   })),
   applyEffectToWorld: vi.fn(() => ({
     remove: vi.fn(),
+    setValues: vi.fn(),
     controller: {uniformValues: null},
   })),
   updateEffect: vi.fn(),
@@ -61,9 +63,17 @@ const spec = (path: string, name = 'Ripple'): AppliedEffectSpec => {
   return {path, document: documents.get(name)} as unknown as AppliedEffectSpec;
 };
 
+/** The same, with knob settings — what a block computes and can recompute. */
+const tuned = (
+  path: string,
+  values: Record<string, number>,
+  name = 'Ripple',
+): AppliedEffectSpec => ({...spec(path, name), values}) as AppliedEffectSpec;
+
 const scene = {} as Phaser.Scene;
 const phaser = {} as never;
 const gameObject = () => ({}) as never;
+const camera = () => ({}) as never;
 
 /** The `remove` of the nth `applyEffectToActor` call. */
 const removeOf = (call: number) =>
@@ -81,6 +91,53 @@ describe('EffectRegistry.reconcile', () => {
     vi.mocked(buildUniformValues).mockClear();
     errors = [];
     registry = new EffectRegistry(phaser, message => errors.push(message));
+  });
+
+  it('pushes changed values onto an effect already attached', () => {
+    // The reported bug. `remove effect Tint` then `add effect Tint` with a
+    // random color, in one handler, never shows the driver an empty list — so
+    // the only evidence anything happened is the values. Keyed on the path
+    // alone, this was a no-op and the first color stayed on screen forever.
+    const object = gameObject();
+    registry.reconcile(scene, object, [tuned('effects/ripple', {a: 0.1})]);
+    const applied = vi.mocked(applyEffectToActor).mock.results[0].value;
+
+    registry.reconcile(scene, object, [tuned('effects/ripple', {a: 0.9})]);
+
+    expect(applied.setValues).toHaveBeenCalledWith({a: 0.9});
+    // Retuned in place, not re-attached: a second filter would stack.
+    expect(applyEffectToActor).toHaveBeenCalledTimes(1);
+    expect(applied.remove).not.toHaveBeenCalled();
+  });
+
+  it('leaves an unchanged effect alone, frame after frame', () => {
+    // The common case, and it must stay cheap: values that have not moved must
+    // not rewrite uniforms sixty times a second.
+    const object = gameObject();
+    const values = {a: 0.1};
+    registry.reconcile(scene, object, [tuned('effects/ripple', values)]);
+    const applied = vi.mocked(applyEffectToActor).mock.results[0].value;
+
+    registry.reconcile(scene, object, [tuned('effects/ripple', {...values})]);
+    registry.reconcile(scene, object, [tuned('effects/ripple', {...values})]);
+
+    expect(applied.setValues).not.toHaveBeenCalled();
+  });
+
+  it('pushes changed values onto a world effect too', () => {
+    // Which is where the bug was actually seen — `add effect … to the world`.
+    const view = camera();
+    registry.reconcileCamera(scene, view, [
+      tuned('effects/underwater', {a: 1}),
+    ]);
+    const applied = vi.mocked(applyEffectToWorld).mock.results[0].value;
+
+    registry.reconcileCamera(scene, view, [
+      tuned('effects/underwater', {a: 2}),
+    ]);
+
+    expect(applied.setValues).toHaveBeenCalledWith({a: 2});
+    expect(applyEffectToWorld).toHaveBeenCalledTimes(1);
   });
 
   it('attaches an effect the actor has gained', () => {
