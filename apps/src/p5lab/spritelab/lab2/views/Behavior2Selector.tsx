@@ -6,9 +6,8 @@ import {SpriteLab2Behavior2} from '../types';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-// Sentinel option value for "create a new system". System names are
-// student-entered but this shape is not creatable through the dialog (the
-// name is sanitized), so no collision.
+// Sentinel for "create a new system" — sanitizeSystemName can't produce
+// this shape, so no collision with a student-entered name.
 const NEW_SYSTEM_VALUE = '__new_system__';
 
 // System names key the generated-code registry and the sprite groups, so

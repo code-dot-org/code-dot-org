@@ -17,8 +17,8 @@ export interface Behavior2SystemOption {
 export interface Behavior2SystemMeta {
   name: string;
   label: string;
-  // What the setting means for this system, e.g. 'gravity'. Currently only
-  // documentation and the future per-system dropdown label.
+  // What the setting means for this system — the UNIT label on the start
+  // and set blocks (gravity, speed).
   optionLabel: string;
   options: Behavior2SystemOption[];
 }

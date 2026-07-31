@@ -28,10 +28,8 @@ export const commands = {
     }
   },
 
-  // Poll a key's held state. The keyPressed events register callbacks at
-  // program start; code that runs every frame anyway (behavior2 systems)
-  // needs the immediate answer instead. Key names match the keyPressed
-  // block's: 'up', 'down', 'left', 'right', 'space', letters.
+  // Polls a key (names match the keyPressed block's), for code that runs
+  // every frame anyway and can't use the registration-based events.
   isKeyHeld(key) {
     return this.p5.keyDown(key);
   },

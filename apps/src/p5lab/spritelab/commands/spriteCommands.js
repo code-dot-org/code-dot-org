@@ -74,9 +74,8 @@ export const commands = {
     return this.addSprite({animation, group, location});
   },
 
-  // Sprite ids in a group, for interpreted code that iterates a group
-  // (behavior2 systems). getSpriteArray is engine-side only, and events
-  // marshal single ids; this is the enumeration the interpreter lacks.
+  // The group enumeration interpreted code lacks: getSpriteArray is
+  // engine-side, and events marshal single ids.
   getSpriteIdsByGroup(group) {
     return this.getSpriteArray({group}).map(sprite => sprite.id);
   },

@@ -2,14 +2,10 @@ import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 
 import {SpriteLab2Behavior2} from '../types';
 
-// The built-in system implementations, as block workspaces — the whole point
-// of the prototype is that a student can open these on the Systems tab, read
-// them, and change them. Projects without stored behavior2s get these.
-//
-// Deliberately naive physics (a per-frame gravity nudge, a tolerant standing
-// check, no collision resolution): readable over feel-correct. The sealed
-// zGameDev solver is the opposite trade; a behavior2 level should not load
-// it, or the two gravities fight.
+// The built-in system implementations, as block workspaces students open on
+// the Systems tab. The physics is deliberately naive — readable over
+// feel-correct. A behavior2 level must not load zGameDev, or the two
+// gravities fight.
 
 // A minimal serialized block: Blockly fills in the rest on load.
 interface BlockNode {
@@ -96,7 +92,6 @@ const setState = (
   ...(next ? {next: {block: next}} : {}),
 });
 
-// NOT bumping a platform block on this side — the walk gate.
 const notBumping = (id: string, side: 'left' | 'right'): BlockNode => ({
   type: 'logic_negate',
   id,
@@ -111,7 +106,6 @@ const notBumping = (id: string, side: 'left' | 'right'): BlockNode => ({
   },
 });
 
-// key held AND clear of walls that way.
 const canWalk = (
   id: string,
   key: string,
@@ -144,10 +138,9 @@ const negSetting = (id: string): BlockNode => ({
   inputs: {A: {block: num(id + '_zero', 0)}, B: {block: setting(id + '_s')}},
 });
 
-// platformer: gravity pulls every frame (the setting, negative = downward);
-// standing on a platform block stops a fall, reports "landed" (once — the
-// airborne state marks the fall), and allows a space jump; arrows set
-// walking speed directly.
+// platformer: gravity pulls every frame (the setting, negative = down);
+// standing stops a fall, reports "landed" once (the airborne state marks
+// the fall), and allows a space jump; arrows walk unless bumping a wall.
 const platformerSource = workspace({
   type: 'spritelab2_forEachSpriteOfType',
   id: 'pf_loop',

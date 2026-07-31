@@ -9,20 +9,11 @@ import {BEHAVIOR2_TYPE_OPTIONS, getBehavior2System} from '../behavior2Meta';
 import {FIELD_GRID_TYPE} from '../gridFields';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
-// The behavior2 prototype's blocks (student-facing word: "system").
-//
-// Two surfaces share this file:
-// - Platform2 blocks for the Code tab: make typed sprites on a grid, and
-//   start a system for a type.
-// - The system implementation language for the Systems tab: a visible
-//   per-sprite loop and blocks that read/write the current sprite. These
-//   compile against identifiers bound by compileBehavior2Sources' function
-//   wrapper (__group, __option) and the loop (__current); they are reserved
-//   words, see installLabBlocks.
-//
-// Per-sprite state rides the sprite-prop fall-through (getProp/setProp),
-// namespaced per system by behavior2StateKey. Numeric state only: the getter
-// defaults undefined to 0, so implementations need no init preamble.
+// The behavior2 prototype's blocks (student-facing word: "system"): the
+// Platform2 category for the Code tab, and the implementation language for
+// the Systems tab. The language blocks compile against __group, __option
+// (bound by compileBehavior2Sources' wrapper) and __current (bound by the
+// loop) — reserved words, see installLabBlocks.
 
 const dropdown = (name: string, options: [string, string][]) => ({
   type: 'field_dropdown',
@@ -77,11 +68,9 @@ const startSystem: BlockJson = {
         group,
       ])
     ),
-    // low/medium/high resolve to a per-system number at codegen (see
-    // behavior2Meta options); the labels are shared so switching systems
-    // can't strand an invalid dropdown value. The UNIT label names what
-    // the setting means for the chosen system (SystemDropdown keeps it
-    // current).
+    // Shared low/medium/high values (per-system numbers resolve at codegen)
+    // so switching systems can't strand an invalid dropdown value; the UNIT
+    // label names the setting's meaning (SystemDropdown keeps it current).
     dropdown('OPTION', [
       ['low', 'low'],
       ['medium', 'medium'],
@@ -106,15 +95,13 @@ const startSystemGenerator: GeneratorFunction = block => {
   );
 };
 
-// The interpreted runtime half. Implementations register under their system
-// name (see compileBehavior2Sources); startBehavior2 runs one every frame.
-// The indirection through __behavior2s means start blocks referencing a
-// system with no implementation are silent no-ops rather than crashes.
+// The interpreted runtime half. The __behavior2s indirection makes a start
+// block for a system with no implementation a silent no-op, not a crash.
 const startSystemHelperCode = [
   'var __behavior2s = {};',
   'var __b2Started = {};',
-  // The live settings, keyed group:system — read fresh every frame so the
-  // set-system block changes a running system.
+  // Live settings, read every frame so the set-system block affects a
+  // running system.
   'var __b2Options = {};',
   'function startBehavior2(group, name, option) {',
   '  var key = group + ":" + name;',
@@ -133,9 +120,8 @@ const startSystemHelperCode = [
   '    }',
   '  }',
   '}',
-  // Once per (group, system): several make-with-system blocks sharing a
-  // system pool their sprites into one per-frame pass instead of running
-  // the system once per block.
+  // Several make-with-system blocks sharing a system must not run it once
+  // per block.
   'function startBehavior2Once(group, name, option) {',
   '  var key = group + ":" + name;',
   '  if (__b2Started[key]) {',
@@ -153,10 +139,9 @@ const startSystemHelperCode = [
 ].join('\n');
 
 // ---------------------------------------------------------------------------
-// Code tab: change a running system's setting. Scoped by system, not type:
-// a type can run several systems (which gravity?), and the combined block's
-// sprites live in a group named for the system, which the type dropdown
-// couldn't target. Every group running the system gets the new setting.
+// Code tab: change a running system's setting. Scoped by system, not type —
+// a type can run several systems, and the combined block's groups aren't in
+// the type dropdown.
 
 const setSystem: BlockJson = {
   type: 'spritelab2_setSystem',
@@ -185,10 +170,9 @@ const setSystemGenerator: GeneratorFunction = block => {
 };
 
 // ---------------------------------------------------------------------------
-// Code tab: make sprites and attach a system, one block. The sprites'
-// group IS the system name, so every such block for one system feeds the
-// same per-frame pass. The system runs with its middle (default) setting —
-// the start-system block is the way to choose one.
+// Code tab: make sprites and attach a system, one block. The sprites' group
+// IS the system name; the system runs with its middle setting (the
+// start-system block is the way to choose one).
 
 const makeSpritesWithSystem: BlockJson = {
   type: 'spritelab2_makeSpritesWithSystem',
@@ -226,8 +210,7 @@ const makeSpritesWithSystemHelperCode = [
 
 // ---------------------------------------------------------------------------
 // System events: a system reports a named moment for a sprite; the Code tab
-// listens. This is what lets student game logic compose with a system —
-// sounds, scores, win conditions — without re-deriving its facts per frame.
+// listens.
 
 const whenSystemReports: BlockJson = {
   type: 'spritelab2_whenSystemReports',
@@ -251,8 +234,8 @@ const whenSystemReportsGenerator: GeneratorFunction = (block, generator) => {
   );
 };
 
-// Handlers register at program start; a system raises during its per-frame
-// pass and the handlers run right then, like the stock event callbacks.
+// Handlers run synchronously when a system raises, like the stock event
+// callbacks.
 const whenSystemReportsHelperCode = [
   'var __b2EventHandlers = {};',
   'function whenSystemReports(systemName, eventName, callback) {',
@@ -289,8 +272,7 @@ const reportedSpriteGenerator: GeneratorFunction = () => [
 // ---------------------------------------------------------------------------
 // Systems tab: the implementation language.
 
-// Raise an event from inside a system, stamped with the system being
-// compiled (the compile context), for the current sprite.
+// Raises an event stamped with the system being compiled.
 const reportForThisSprite: BlockJson = {
   type: 'spritelab2_reportForThisSprite',
   message0: 'report %1 for this sprite',
@@ -309,10 +291,8 @@ const reportForThisSpriteGenerator: GeneratorFunction = block => {
 };
 
 // No previous/next connections: the loop is the system's top-level
-// construct, like an event hat. This also keeps the disable-orphans
-// listener from disabling it (an unconnected statement block is an orphan;
-// a connectionless block is not), which would otherwise compile the system
-// to an empty function.
+// construct, and a connectionless block can't be ORPHANED-disabled (a
+// disabled block compiles to nothing — an empty system).
 const forEachSpriteOfType: BlockJson = {
   type: 'spritelab2_forEachSpriteOfType',
   message0: 'for each sprite of this type %1 %2',
@@ -352,9 +332,8 @@ const systemSettingGenerator: GeneratorFunction = () => [
   Order.ATOMIC,
 ];
 
-// Real sprite props the movement blocks touch. Values are getProp/setProp
-// prop names; those commands own the y-up sign convention, so generated code
-// stays in student coordinates throughout.
+// getProp/setProp prop names — those commands own the y-up sign convention,
+// so generated code stays in student coordinates.
 const PROP_OPTIONS: [string, string][] = [
   ['x position', 'x'],
   ['y position', 'y'],
@@ -416,7 +395,8 @@ const getThisSpritePropGenerator: GeneratorFunction = block => [
   Order.FUNCTION_CALL,
 ];
 
-// Per-sprite system state: free-named, numeric, namespaced per system.
+// Per-sprite system state: sprite props namespaced per system (see
+// behavior2StateKey), numeric only.
 
 const setStateForThisSprite: BlockJson = {
   type: 'spritelab2_setStateForThisSprite',
@@ -450,8 +430,8 @@ const getStateForThisSprite: BlockJson = {
   style: BlockStyles.VARIABLE,
 };
 
-// `|| 0` gives fresh sprites a starting value, so implementations skip the
-// is-it-undefined init preamble the old prop-based behaviors all carry.
+// `|| 0` gives fresh sprites a starting value, so implementations need no
+// is-it-undefined init preamble.
 const getStateForThisSpriteGenerator: GeneratorFunction = block => [
   `(getProp(__current, '${behavior2StateKey(
     block.getFieldValue('NAME')

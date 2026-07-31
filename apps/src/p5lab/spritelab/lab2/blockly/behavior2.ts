@@ -8,11 +8,9 @@ import {
 } from './behavior2Compile';
 import {compileWorkspaceSource} from './setup';
 
-// Remove stale ORPHANED disable flags from a stored system source. Sources
-// saved before the for-each block lost its statement connections carry
-// disabledReasons: ['ORPHANED'] on the whole stack, and a disabled block
-// compiles to nothing — an empty system. A student's deliberate disable
-// (any other reason) is kept.
+// Strip ORPHANED disable flags from a stored system source: a disabled
+// block compiles to nothing — an empty system — and orphan-ness is a UI
+// artifact, not content. Deliberate disables (any other reason) are kept.
 export function sanitizeBehavior2Source(
   source: WorkspaceSerialization | undefined
 ): WorkspaceSerialization | undefined {

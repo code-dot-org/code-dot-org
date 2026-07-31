@@ -561,11 +561,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
 
-  // Behavior2 prototype: the system implementations — what the Systems tab
-  // shows and every run composes in. Stored systems merge over the defaults
-  // BY NAME: an edited system shadows its default, an untouched one keeps
-  // tracking the bundle (so built-in improvements reach old projects), and
-  // student-created systems follow.
+  // The system implementations, stored merged over defaults by name: an
+  // edited system shadows its default, an untouched one keeps tracking the
+  // bundle, created systems follow.
   const behavior2s = useMemo(() => {
     const stored = currentSources.behavior2s ?? [];
     return [
@@ -593,11 +591,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     );
   }, [behavior2s]);
 
-  // The systems composed ahead of every run. Compiled at run time, not
-  // memoized — the block types register when the workspace injects, so an
-  // early compile would fail and stick. Read through a ref: the debounced
-  // preview fires with the runProgram closure it was scheduled under, and
-  // must still see edits saved since.
+  // Composed ahead of every run. Compiled at run time (block types register
+  // when the workspace injects — an early compile would fail and stick) and
+  // read through a ref (the debounced preview fires with a stale runProgram
+  // closure but must see edits saved since).
   const behavior2sRef = useRef(behavior2s);
   useEffect(() => {
     behavior2sRef.current = behavior2s;

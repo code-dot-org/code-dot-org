@@ -238,11 +238,9 @@ export const commands = {
     return touching;
   },
 
-  // Like isDirectlyAbove, but with a tolerance band below the target's top.
-  // Block-implemented gravity (behavior2 systems) moves sprites in whole-
-  // frame steps, so a falling sprite's feet land up to one frame's fall past
-  // the surface; the exact-equality check never sees them. The band accepts
-  // feet within [top, top + STANDING_TOLERANCE].
+  // isDirectlyAbove with a tolerance band: block-implemented gravity moves
+  // in whole-frame steps, so a landing's feet end up to one frame's fall
+  // past the surface, where the exact-equality check never sees them.
   isStandingOn(spriteArg, targetArg) {
     const STANDING_TOLERANCE = 16;
     let sprites = this.getSpriteArray(spriteArg);
@@ -270,11 +268,9 @@ export const commands = {
     return standing;
   },
 
-  // isStandingOn's horizontal sibling: is a target's face at the sprite's
-  // side? Same whole-frame-step reasoning — a walker closes up to a frame's
-  // travel before any check can see contact, so the band accepts a near or
-  // shallowly-overlapped face. The vertical-overlap floor keeps the tile a
-  // sprite merely stands on from reading as a side block.
+  // isStandingOn's horizontal sibling, with the same whole-frame-step band.
+  // The vertical-overlap floor keeps the tile a sprite merely stands on from
+  // reading as a side block.
   isBumpingSide(spriteArg, targetArg, side) {
     const SIDE_TOLERANCE = 8;
     const MIN_VERTICAL_OVERLAP = 12;
