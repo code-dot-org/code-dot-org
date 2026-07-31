@@ -6,6 +6,10 @@ import {
   DOMAIN_TOOLBOX,
   ROOT_BLOCK_TYPES,
 } from '../domainBlocks';
+import {
+  ACTOR_DEFINITION_EXTENSION,
+  TRAIT_CONTEXT_EXTENSION,
+} from '../extensions/actorContext';
 import {setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 
@@ -679,6 +683,12 @@ describe('world block generators', () => {
     block: Record<string, unknown>,
     definitions: Record<string, string>,
     body: string,
+    // Value sockets, by input name — what `valueToCode` would return. An input
+    // with no entry reads as '' (a socket emptied of its shadow).
+    sockets: Record<string, string> = {},
+    // `use effect`'s serialized parameter list, which its generator reads off
+    // the block to know which sockets exist.
+    effectParams?: unknown[],
   ) => {
     const nextBlock = body ? {} : null;
     return generatorFor(type)(
@@ -686,11 +696,13 @@ describe('world block generators', () => {
         getFieldValue: (n: string) => block[n],
         id: block.id,
         getNextBlock: () => nextBlock,
+        effectParams_: effectParams,
       } as never,
       {
         definitions_: definitions,
         statementToCode: () => body,
         blockToCode: (b: unknown) => (b === nextBlock ? body : ''),
+        valueToCode: (_block: unknown, name: string) => sockets[name] ?? '',
       } as never,
       {} as never,
     ) as string;
@@ -738,6 +750,64 @@ describe('world block generators', () => {
     expect(defs['mod:effects/ripple']).toBe(
       'import Ripple from "effects/ripple";',
     );
+  });
+
+  it('world_use_effect passes parameter values by parameter id', () => {
+    // The sockets are built from the block's own serialized parameter list, so
+    // the generator reads that same list to know what to emit.
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_use_effect',
+      {EFFECT: 'effects/ripple'},
+      defs,
+      '',
+      {EPARAM_0_0: '0.05'},
+      [{id: 'strength', name: 'strength', type: 'float', defaultValue: 0.02}],
+    );
+    expect(code).toBe(
+      'actor.useEffect("effects/ripple", Ripple, {"strength": 0.05});\n',
+    );
+  });
+
+  it('world_use_effect falls back to a parameter default for an empty socket', () => {
+    // A socket emptied of its shadow reads as '' — the declared default is what
+    // the effect would have used anyway, so emit that rather than 0.
+    const code = run(
+      'world_use_effect',
+      {EFFECT: 'effects/ripple'},
+      {},
+      '',
+      {},
+      [{id: 'strength', name: 'strength', type: 'float', defaultValue: 0.02}],
+    );
+    expect(code).toContain('{"strength": 0.02}');
+  });
+
+  it('world_use_effect gathers a vector parameter into an array', () => {
+    const code = run(
+      'world_use_effect',
+      {EFFECT: 'effects/tint'},
+      {},
+      '',
+      {
+        EPARAM_0_0: '1',
+        EPARAM_0_2: '0.5',
+      },
+      [{id: 'color', name: 'color', type: 'vec3', defaultValue: [0, 0, 0]}],
+    );
+    expect(code).toContain('{"color": [1, 0, 0.5]}');
+  });
+
+  it('world_use_effect emits a boolean parameter as true/false', () => {
+    const code = run('world_use_effect', {EFFECT: 'effects/glow'}, {}, '', {}, [
+      {id: 'on', name: 'on', type: 'bool', defaultValue: 1},
+    ]);
+    expect(code).toContain('{"on": true}');
+  });
+
+  it('world_use_effect omits the argument when the effect has no parameters', () => {
+    const code = run('world_use_effect', {EFFECT: 'effects/ripple'}, {}, '');
+    expect(code).toBe('actor.useEffect("effects/ripple", Ripple);\n');
   });
 
   it('world_use_effect emits nothing when the project has no effects', () => {
@@ -1009,5 +1079,44 @@ describe('rule authoring blocks (`.rule` files)', () => {
 
   it('is a root block type (owns its declaration chain)', () => {
     expect(ROOT_BLOCK_TYPES.has('world_rule')).toBe(true);
+  });
+});
+
+// Blocks that call a method only `ActorBuilder` has must warn when they are
+// placed where `actor` is the live instance instead — an event handler. The
+// predicate is covered in extensions/__tests__/actorContext.test.ts; what is
+// checked here is that the extension is actually attached to the blocks that
+// need it, and to no others.
+describe('builder-context warnings', () => {
+  const extensionsOf = (type: string): string[] => {
+    const block = DOMAIN_BLOCKS.find(b => b.type === type);
+    if (!block) {
+      throw new Error(`no domain block '${type}'`);
+    }
+    return (block.extensions ?? []).map(extension =>
+      typeof extension === 'string' ? extension : extension.name,
+    );
+  };
+
+  it('guards `use effect`, whose `useEffect` is builder-only', () => {
+    expect(extensionsOf('world_use_effect')).toContain(
+      ACTOR_DEFINITION_EXTENSION,
+    );
+  });
+
+  it('guards `use trait`, whose `useTraits` is builder-only', () => {
+    expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
+  });
+
+  it('leaves the `set` blocks alone, because `set` exists on both', () => {
+    // `set sprite` and `set position` emit `target.set(Property, value)`, and
+    // both `ActorBuilder` and `Actor` have `set`. They are legitimately valid
+    // as a template default AND at runtime, so a guard here would warn about
+    // correct programs.
+    for (const type of ['world_set_sprite', 'world_set_position']) {
+      const names = extensionsOf(type);
+      expect(names).not.toContain(ACTOR_DEFINITION_EXTENSION);
+      expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
+    }
   });
 });

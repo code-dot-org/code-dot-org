@@ -83,7 +83,10 @@ export class EffectRegistry {
         continue;
       }
       try {
-        applyEffectToActor(this.phaser, object, registered);
+        // Values are the learner's knob settings from the `use effect` block;
+        // `buildUniformValues` fills in each parameter's own default for
+        // anything absent, so a partial map is fine.
+        applyEffectToActor(this.phaser, object, registered, effect.values);
       } catch (error) {
         this.report(effect.path, error);
       }

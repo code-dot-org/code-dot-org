@@ -32,8 +32,13 @@ const MINUS_IMAGE =
   'JNMTggMTFoLTEyYy0xLjEwNCAwLTIgLjg5Ni0yIDJzLjg5NiAyIDIgMmgxMmMxLjEwNCAw' +
   'IDItLjg5NiAyLTJzLS44OTYtMi0yLTJ6IiBmaWxsPSJ3aGl0ZSIgLz48L3N2Zz4K';
 
-/** One parameter's serialized state: its value type and the variable it binds. */
-interface ParamState {
+/**
+ * One parameter's serialized state: its value type and the variable it binds.
+ *
+ * Exported because it reaches the declaration emit of `DOMAIN_BLOCKS`, whose
+ * inferred type includes this mutator's.
+ */
+export interface ParamState {
   type: string;
   var: string;
 }

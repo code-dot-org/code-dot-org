@@ -8,6 +8,8 @@
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import type {EffectParameter} from '../effect/model/types';
+
 import {label} from './label';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
@@ -22,6 +24,9 @@ let projectEffectFiles: Array<[string, string]> = [];
 let projectRuleModules: Array<[string, string]> = [];
 // Map path -> the actor module paths it places (for the load-map generator).
 let projectMaps: Record<string, string[]> = {};
+// Effect path -> the parameters that effect declares (for the use-effect
+// mutator, which builds one socket row per parameter).
+let projectEffectParams: Record<string, EffectParameter[]> = {};
 
 /** Replace the actor options the ACTOR dropdown offers. */
 export function setProjectActors(options: Array<[string, string]>): void {
@@ -58,6 +63,18 @@ export function ruleModuleOptions(): Array<[string, string]> {
 /** Replace the map registry (path -> the actor modules each map places). */
 export function setProjectMaps(maps: Record<string, string[]>): void {
   projectMaps = maps;
+}
+
+/** Replace the per-effect parameter registry. */
+export function setProjectEffectParameters(
+  parameters: Record<string, EffectParameter[]>,
+): void {
+  projectEffectParams = parameters;
+}
+
+/** The parameters an effect declares — read by the use-effect mutator. */
+export function effectParameters(path: string): EffectParameter[] {
+  return projectEffectParams[path] ?? [];
 }
 
 /** The actor module paths a map file places — read by the load-map generator. */

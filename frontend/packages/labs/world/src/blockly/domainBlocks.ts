@@ -24,7 +24,15 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
-import {actorDefinitionExtension} from './extensions/actorContext';
+import {
+  actorDefinitionExtension,
+  traitContextExtension,
+} from './extensions/actorContext';
+import {
+  effectParamsInitExtension,
+  effectParamsMutator,
+  type EffectParamState,
+} from './extensions/effectParamsMutator';
 import {
   ruleParamsInitExtension,
   ruleParamsMutator,
@@ -201,7 +209,12 @@ const worldUseTrait = defineBlock({
   args0: [{type: 'field_dropdown', name: 'TRAIT', options: traitOptions()}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [traitOptionsExtension],
+  // `useTraits` is a builder method, so this belongs under `define actor` — or
+  // inside `define trait`, where it declares that trait's own dependencies and
+  // is read statically rather than generated. In an event handler `actor` is
+  // the live instance and the call would throw; the extension warns in the
+  // editor instead.
+  extensions: [traitOptionsExtension, traitContextExtension],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
@@ -211,6 +224,55 @@ const worldUseTrait = defineBlock({
     },
   },
 });
+
+/** How many number sockets each effect parameter type occupies. */
+const EFFECT_PARAM_WIDTHS: Record<string, number> = {
+  float: 1,
+  int: 1,
+  bool: 1,
+  vec2: 2,
+  vec3: 3,
+  vec4: 4,
+};
+
+/**
+ * The `{id: value}` object literal for an effect's parameters, or `''` when the
+ * effect declares none — in which case the call omits the argument rather than
+ * passing an empty object.
+ *
+ * Read off the block's OWN serialized parameter list, not the project registry:
+ * the sockets were built from that list, so it is what matches the sockets
+ * being read here. Reconciling a project edited since the block was saved is
+ * the mutator's job, and it happens before generation.
+ */
+const effectParamValuesCode = (
+  block: Block,
+  generator: JavascriptGenerator,
+): string => {
+  const params =
+    (block as unknown as {effectParams_?: EffectParamState[]}).effectParams_ ??
+    [];
+  const entries = params.map((parameter, index) => {
+    const socket = (component: number) =>
+      generator.valueToCode(block, `EPARAM_${index}_${component}`, Order.NONE);
+    // The declared default is the fallback for a socket emptied of its shadow.
+    const fallback = (component: number): string => {
+      const value = parameter.defaultValue;
+      const scalar = Array.isArray(value) ? (value[component] ?? 0) : value;
+      if (parameter.type === 'bool') {
+        return scalar ? 'true' : 'false';
+      }
+      return String(Number(scalar ?? 0));
+    };
+    const width = EFFECT_PARAM_WIDTHS[parameter.type] ?? 1;
+    const value =
+      width === 1
+        ? socket(0) || fallback(0)
+        : `[${Array.from({length: width}, (_unused, i) => socket(i) || fallback(i)).join(', ')}]`;
+    return `${str(parameter.id)}: ${value}`;
+  });
+  return entries.length ? `{${entries.join(', ')}}` : '';
+};
 
 const worldUseEffect = defineBlock({
   type: 'world_use_effect',
@@ -226,7 +288,14 @@ const worldUseEffect = defineBlock({
   // `useEffect` is a builder method: this configures the actor TEMPLATE, so it
   // belongs under `define actor`. Inside an event handler `actor` is the live
   // instance and the call would throw — the extension warns in the editor.
-  extensions: [effectFileOptionsExtension, actorDefinitionExtension],
+  // The effect's own parameters become value sockets on this block, one row per
+  // knob, rebuilt whenever the dropdown changes (effectParamsMutator).
+  mutator: effectParamsMutator,
+  extensions: [
+    effectFileOptionsExtension,
+    actorDefinitionExtension,
+    effectParamsInitExtension,
+  ],
   // An effect changes how the actor is DRAWN, so it reads with the appearance
   // blocks (`set sprite`, `play animation`) rather than with traits.
   style: 'sprite_blocks',
@@ -247,7 +316,10 @@ const worldUseEffect = defineBlock({
         `mod:${path}`,
         `import ${importVar(path)} from ${str(path)};`,
       );
-      return `actor.useEffect(${str(path)}, ${importVar(path)});\n`;
+      const values = effectParamValuesCode(block, generator);
+      return values
+        ? `actor.useEffect(${str(path)}, ${importVar(path)}, ${values});\n`
+        : `actor.useEffect(${str(path)}, ${importVar(path)});\n`;
     },
   },
 });

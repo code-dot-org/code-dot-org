@@ -6,6 +6,8 @@
 // learner sees "Platform World", not the file stem "platform"; the value is the
 // extension-less module path the generated scene imports (`worlds/platform`).
 
+import type {EffectParameter} from '../effect/model/types';
+
 import {label} from './label';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 
@@ -142,6 +144,44 @@ export function projectEffectFileOptions(
     options.push([name ?? label(stem), modulePath]);
   }
   return options;
+}
+
+/**
+ * The parameters each effect declares, keyed by its extension-less module path.
+ *
+ * Read straight off the `.effect` document rather than from `compileEffect`.
+ * The compiler would also report which parameters the graph actually *reads*
+ * (`used`), but it costs a full compile per dropdown refresh and refuses a graph
+ * that does not yet build — and a learner wiring an effect up should still see
+ * its knobs. Declared parameters are what the block offers.
+ */
+export function projectEffectParameters(
+  files: Record<string, string>,
+): Record<string, EffectParameter[]> {
+  const parameters: Record<string, EffectParameter[]> = {};
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.startsWith('effects/') || !path.endsWith('.effect')) {
+      continue;
+    }
+    let declared: EffectParameter[] = [];
+    try {
+      const parsed = JSON.parse(contents) as {parameters?: unknown};
+      if (Array.isArray(parsed.parameters)) {
+        // Keep only entries shaped like a parameter: the file is learner-owned
+        // and may be mid-edit, and a malformed entry would build a broken row.
+        declared = parsed.parameters.filter(
+          (entry): entry is EffectParameter =>
+            !!entry &&
+            typeof (entry as EffectParameter).id === 'string' &&
+            typeof (entry as EffectParameter).type === 'string',
+        );
+      }
+    } catch {
+      // Not valid JSON yet (mid-edit); this effect offers no parameters.
+    }
+    parameters[path.replace(/\.effect$/, '')] = declared;
+  }
+  return parameters;
 }
 
 /**

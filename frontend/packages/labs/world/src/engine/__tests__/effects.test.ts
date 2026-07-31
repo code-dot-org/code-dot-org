@@ -59,6 +59,25 @@ describe('ActorBuilder.useEffect', () => {
     ]);
   });
 
+  it('carries parameter values when given', () => {
+    const actor = positional('fish')
+      .useEffect('effects/ripple', doc('Ripple'), {strength: 0.05})
+      .instantiate();
+
+    expect(actor.effects()[0].values).toEqual({strength: 0.05});
+  });
+
+  it('omits values entirely when none are given', () => {
+    // Absent rather than `{}`: the driver fills every parameter from its own
+    // default, so an empty map and no map mean the same thing — and the
+    // snapshot id hashes this, so they must not look like different effects.
+    const actor = positional('fish')
+      .useEffect('effects/ripple', doc('Ripple'))
+      .instantiate();
+
+    expect(actor.effects()[0]).not.toHaveProperty('values');
+  });
+
   it('gives an actor with no effects an empty list, not undefined', () => {
     expect(positional('rock').instantiate().effects()).toEqual([]);
   });
@@ -124,6 +143,23 @@ describe('snapshot().effectIds', () => {
     ).snapshot().effectIds;
     const after = worldWith(
       positional('fish').useEffect('effects/ripple', doc('Ripple', 'sine-9')),
+    ).snapshot().effectIds;
+
+    expect(after).not.toEqual(before);
+  });
+
+  it('changes when a parameter value changes', () => {
+    // Values are read once, when the filter is attached to the Game Object, so
+    // turning a knob only reaches the screen on a restart — which means the
+    // reconciler has to see it, which means the id has to hash it.
+    const document = doc('Ripple');
+    const before = worldWith(
+      positional('fish').useEffect('effects/ripple', document, {
+        strength: 0.02,
+      }),
+    ).snapshot().effectIds;
+    const after = worldWith(
+      positional('fish').useEffect('effects/ripple', document, {strength: 0.5}),
     ).snapshot().effectIds;
 
     expect(after).not.toEqual(before);
