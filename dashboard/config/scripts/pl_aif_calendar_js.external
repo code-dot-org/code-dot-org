@@ -1,0 +1,152 @@
+name 'pl-aif-calendar-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Foundations of AI Programming Curriculum Overview
+
+The **Foundations of AI Programming** curriculum unit introduces students to web app development, JavaScript programming, and user-centered design.
+
+They learn how to plan, build, and style a web app, how to use AI as a coding partner, and how JavaScript brings a page to life through events, variables, functions, and logic.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <div>Students will:</div>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li>Design and structure a web app, using layout patterns that guide how users think and move through a page.</li>
+      <li>Use CSS and the POUR principles to style a page and make it usable for everyone.</li>
+      <li>Use JavaScript event listeners and handlers to make a web app respond to user actions through the DOM.</li>
+      <li>Use variables, conditionals, loops, and functions to create, test, and refine a working program.</li>
+      <li>Evaluate AI-generated code for correctness and fit, rather than accepting it by default.</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/db73fbca8ae8ad9c2f2b36aba4b6f423-image-1740587515537.png" 
+         alt="Icon with computer and code brackets" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+---
+
+<div style="clear:both;"></div>
+
+## Unit Calendar 
+
+Take a quick look at the lessons included in this unit using the calendar tool.
+
+This version of the calendar assumes 5 lessons per week and can be customized using the drop-down menu to accommodate your schedule. 
+
+Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
+<!-- Unit Lesson Calendar -->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
+
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Introduction to Web Apps
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Build Your First Web Page with AI
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        Intro to CSS
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Accessibility in Design
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Wireframes
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Interactivity in Web Apps
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Making a Button Respond
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Variables and Live Updates
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Writing Reusable Functions
+      </div>
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Making Decisions with If/Else
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #ACA8EA; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 11</span>
+        Loops and Counted Repetition
+      </div>
+      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Capstone Day 1</span>
+        Reactive Logic Project
+      </div>
+      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Capstone Day 2</span>
+        Reactive Logic Project
+      </div>
+      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Capstone Day 3</span>
+        Reactive Logic Project
+      </div>
+      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; font-weight: 600;">
+        <span style="display:block; font-size:10px; font-weight:700; color:#4C42CF; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Capstone Day 4</span>
+        Reactive Logic Project
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 4 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #4C42CF; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 4
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #E4E2F8; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 2px solid #4C42CF; border-radius: 6px; padding: 10px; flex: 2 1 240px; min-width: 220px; font-size: 12.5px; color: #1F1976; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#4C42CF; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Capstone Day 5</span>
+        Reactive Logic Project
+      </div>
+    </div>
+  </div>
+
+</div>
+<br>
+
+<div style="font-size: 14px; font-weight: bold; background-color: #f7f8fa; padding: 10px; border-left: 5px solid #4c42cf; display: inline-block; color: #000;">
+    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/s/aif2-2026' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold; color: #1F1976;'>here</a>.
+</div>
+MARKDOWN
