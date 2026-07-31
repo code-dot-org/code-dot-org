@@ -1,5 +1,10 @@
+import {installAllBlocks} from '@blockly/field-colour';
 import {afterEach, describe, expect, it} from 'vitest';
 
+import {Blockly} from '@code-dot-org/blockly';
+
+import {COLOUR_CHECK} from '../colorCheck';
+import {installColorMessages} from '../colorMessages';
 import {
   buildDomainPalette,
   DOMAIN_BLOCKS,
@@ -11,6 +16,7 @@ import {
   RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
 } from '../extensions/actorContext';
+import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectMaps} from '../moduleOptions';
@@ -94,7 +100,7 @@ describe('domain block generators', () => {
       {},
       'actor.useTraits([X]);\n',
     );
-    // Registered for hoisting, not emitted inline: an effect's colour
+    // Registered for hoisting, not emitted inline: an effect's color
     // parameter registers the same import, and two inline copies is a
     // duplicate declaration at compile.
     expect(code).not.toContain('import ');
@@ -694,6 +700,46 @@ describe('world_rgba', () => {
   });
 });
 
+describe('color spelling', () => {
+  // The lab is US English throughout — the effect editor calls a vec3
+  // "color (RGB)", the stock effects name the parameter `color` — and the
+  // stock Blockly blocks in this category ship British text. This pins the
+  // replacement so a Blockly upgrade re-introducing "colour" is caught here
+  // rather than by someone reading the toolbox.
+  it('replaces the British text on the stock color blocks', () => {
+    installColorMessages();
+
+    for (const key of [
+      'COLOUR_PICKER_TOOLTIP',
+      'COLOUR_RANDOM_TITLE',
+      'COLOUR_RANDOM_TOOLTIP',
+      'COLOUR_BLEND_COLOUR1',
+      'COLOUR_BLEND_TOOLTIP',
+      'COLOUR_RGB_TITLE',
+      'COLOUR_RGB_TOOLTIP',
+    ]) {
+      expect(Blockly.Msg[key]).not.toMatch(/colour/i);
+      expect(Blockly.Msg[key]).toMatch(/color/i);
+    }
+  });
+
+  it('leaves the rest of the locale intact', () => {
+    // The trap this hit: `Agent.inject` loads English only when `Blockly.Msg`
+    // is empty, so assigning a single override skips the whole locale and
+    // every other message reads undefined.
+    installColorMessages();
+
+    expect(Blockly.Msg.WORKSPACE_LABEL_MANY_STACKS).toBeTruthy();
+    expect(Object.keys(Blockly.Msg).length).toBeGreaterThan(100);
+  });
+
+  it('names the category in US spelling', () => {
+    const names = (DOMAIN_TOOLBOX as Array<{name: string}>).map(c => c.name);
+    expect(names).toContain('Color');
+    expect(names).not.toContain('Colour');
+  });
+});
+
 describe('world_rgba block shape', () => {
   const rgbaBlock = () => {
     const block = DOMAIN_BLOCKS.find(b => b.type === 'world_rgba');
@@ -703,7 +749,7 @@ describe('world_rgba block shape', () => {
     return block;
   };
 
-  it('leads with a colour swatch, then the four channels', () => {
+  it('leads with a color swatch, then the four channels', () => {
     // The swatch is what the channels are working toward; reading it first is
     // the point. It is also where the presets live (rgbaPreview).
     const args = (rgbaBlock().args0 ?? []) as Array<{name?: string}>;
@@ -719,9 +765,27 @@ describe('world_rgba block shape', () => {
     expect(names).toContain(VALUE_SHADOW_EXTENSION);
   });
 
-  it('outputs Colour, so it drops onto an effect’s colour socket', () => {
-    // The whole reason it can replace the picker.
-    expect(rgbaBlock().output).toBe('Colour');
+  it('outputs what the stock color blocks actually output', () => {
+    // Built and asked, rather than compared against a literal. A connection
+    // check is a string equality, and asserting a literal is precisely what
+    // failed to catch it when a spelling sweep changed our side and the test
+    // together, leaving the picker unable to plug into its own socket:
+    //
+    //   Output Connection of "colour_picker" expected Colour, found Color
+    //
+    // Reading it off the block we have to connect to cannot drift that way.
+    installAllBlocks({});
+    const workspace = new Blockly.Workspace();
+    const picker = workspace.newBlock('colour_picker');
+
+    expect(picker.outputConnection?.getCheck()).toEqual([rgbaBlock().output]);
+  });
+
+  it('offers exactly what an effect’s color socket checks for', () => {
+    // The other half of the same equality. Both sides read one constant now,
+    // and this is the assertion that says so.
+    expect(rgbaBlock().output).toBe(COLOUR_CHECK);
+    expect(paramSockets('vec3')[0].kind).toBe('color');
   });
 });
 
@@ -880,7 +944,7 @@ describe('world block generators', () => {
   });
 
   it('world_add_effect gathers a vec2 into an array', () => {
-    // A vec2 is a direction or an offset, not a colour — it keeps its pair of
+    // A vec2 is a direction or an offset, not a color — it keeps its pair of
     // number sockets.
     const code = run(
       'world_add_effect',
@@ -893,10 +957,10 @@ describe('world block generators', () => {
     expect(code).toContain('{"offset": [1, 0.5]}');
   });
 
-  it('world_add_effect converts a vec3 colour socket to shader floats', () => {
-    // The socket holds a colour block, which speaks `#rrggbb`; the uniform
+  it('world_add_effect converts a vec3 color socket to shader floats', () => {
+    // The socket holds a color block, which speaks `#rrggbb`; the uniform
     // wants three 0–1 floats. Converting in the generated code rather than in
-    // the block is what lets any colour block feed the socket.
+    // the block is what lets any color block feed the socket.
     const defs: Record<string, string> = {};
     const code = run(
       'world_add_effect',
@@ -911,7 +975,7 @@ describe('world block generators', () => {
     expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
   });
 
-  it('world_add_effect takes a vec4 from the same single colour socket', () => {
+  it('world_add_effect takes a vec4 from the same single color socket', () => {
     // No separate opacity socket: alpha rides in the value, whether that is an
     // eight-digit hex or the float array `r g b a` produces.
     const code = run(
@@ -925,8 +989,8 @@ describe('world block generators', () => {
     expect(code).toContain(`{"color": WorldLab.rgba([1, 0.5, 0, 0.25])}`);
   });
 
-  it('world_add_effect falls back to the declared colour as floats', () => {
-    // An emptied colour socket still has to produce the effect's own default.
+  it('world_add_effect falls back to the declared color as floats', () => {
+    // An emptied color socket still has to produce the effect's own default.
     // Handed over as floats, not hex: `rgb`/`rgba` take either, and hex would
     // drop a vec4's alpha and quantize the rest for nothing.
     const code = run('world_add_effect', {EFFECT: 'effects/tint'}, {}, '', {}, [

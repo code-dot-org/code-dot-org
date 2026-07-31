@@ -11,6 +11,7 @@ import type {EffectParameter} from '../../../effect/model/types';
 import {
   numberShadowFor,
   paramSockets,
+  socketShadow,
   toParamState,
 } from '../effectParamsMutator';
 
@@ -106,7 +107,7 @@ describe('paramSockets', () => {
   });
 
   it('keeps vec2 a pair of numbers', () => {
-    // A vec2 is a direction or an offset. Handing it a colour picker would be
+    // A vec2 is a direction or an offset. Handing it a color picker would be
     // a category error the learner cannot undo.
     expect(paramSockets('vec2')).toEqual([
       {kind: 'number', label: 'x'},
@@ -114,16 +115,49 @@ describe('paramSockets', () => {
     ]);
   });
 
-  it('gives vec3 one colour socket, not three number boxes', () => {
-    // Nobody picks a colour by typing three floats, and "0.53, 0.27, 0.08"
+  it('gives vec3 one color socket, not three number boxes', () => {
+    // Nobody picks a color by typing three floats, and "0.53, 0.27, 0.08"
     // says nothing about what it looks like.
-    expect(paramSockets('vec3')).toEqual([{kind: 'colour'}]);
+    expect(paramSockets('vec3')).toEqual([{kind: 'color'}]);
   });
 
-  it('gives vec4 the same single colour socket', () => {
+  it('gives vec4 the same single color socket', () => {
     // Alpha rides in the value rather than getting a socket of its own: the
     // picker's shadow means opaque, and reaching the fourth channel means
     // swapping in the `r g b a` block, which has a slider for it.
-    expect(paramSockets('vec4')).toEqual([{kind: 'colour'}]);
+    expect(paramSockets('vec4')).toEqual([{kind: 'color'}]);
+  });
+});
+
+describe('socketShadow, for a color socket', () => {
+  const colorShadow = (defaultValue: number[]) =>
+    socketShadow(
+      toParamState(parameter({type: 'vec3', defaultValue})),
+      {kind: 'color'},
+      0,
+    );
+
+  it('seeds the picker with the effect’s declared default', () => {
+    // Tint declares a salmon; the socket must open showing that, not the
+    // picker's own built-in red.
+    expect(colorShadow([1, 0.6, 0.6])).toEqual({
+      type: 'colour_picker',
+      fields: {COLOUR: '#ff9999'},
+    });
+  });
+
+  it('uses the picker’s own field name, not our spelling of it', () => {
+    // `COLOUR` is Blockly's field name. Writing `COLOR` is SILENT — the shadow
+    // still appears, holding the picker's default red, and nothing anywhere
+    // says the declared default was dropped. Exactly what a spelling sweep did.
+    expect(Object.keys(colorShadow([0, 0, 1]).fields ?? {})).toEqual([
+      'COLOUR',
+    ]);
+  });
+
+  it('uses the block type the color socket accepts', () => {
+    // `colour_picker` is Blockly's type id, and the socket checks for what it
+    // outputs. Renaming either half leaves the socket unfillable.
+    expect(colorShadow([0, 0, 0]).type).toBe('colour_picker');
   });
 });

@@ -28,6 +28,7 @@ import type {
   EffectParameterType,
 } from '../../effect/model/types';
 import {toHex} from '../../engine';
+import {COLOUR_CHECK} from '../colorCheck';
 import {effectParameters} from '../moduleOptions';
 
 export const EFFECT_PARAMS_MUTATOR = 'effect_params_mutator';
@@ -67,19 +68,19 @@ const PARAM_INPUT = 'EPARAM_';
  *
  * A scalar is one unlabelled socket. `vec2` is a pair of numbers, because it is
  * a direction or an offset — the effect editor names it x/y. `vec3` and `vec4`
- * are colours by the model's own convention (the editor calls a vec3 "color
- * (RGB)"), so they take a colour socket rather than three number boxes: nobody
- * picks a colour by typing three floats, and 0.53, 0.27, 0.08 tells a learner
+ * are colors by the model's own convention (the editor calls a vec3 "color
+ * (RGB)"), so they take a color socket rather than three number boxes: nobody
+ * picks a color by typing three floats, and 0.53, 0.27, 0.08 tells a learner
  * nothing about what it looks like.
  *
- * `vec4` takes the SAME single colour socket. A picker cannot express alpha, so
+ * `vec4` takes the SAME single color socket. A picker cannot express alpha, so
  * the shadow it seeds simply means opaque — which is what a learner choosing a
- * colour from a swatch expects. Reaching the fourth channel means swapping the
+ * color from a swatch expects. Reaching the fourth channel means swapping the
  * picker for the `r g b a` block, which has a slider per channel. That is one
  * socket to understand instead of two, and it keeps alpha where the other
  * channels are rather than orphaned beside them.
  */
-export type ParamSocketKind = 'number' | 'boolean' | 'colour';
+export type ParamSocketKind = 'number' | 'boolean' | 'color';
 
 export interface ParamSocket {
   kind: ParamSocketKind;
@@ -95,8 +96,8 @@ const SOCKETS: Record<EffectParameterType, readonly ParamSocket[]> = {
     {kind: 'number', label: 'x'},
     {kind: 'number', label: 'y'},
   ],
-  vec3: [{kind: 'colour'}],
-  vec4: [{kind: 'colour'}],
+  vec3: [{kind: 'color'}],
+  vec4: [{kind: 'color'}],
 };
 
 /** The sockets a parameter of this type occupies. */
@@ -147,15 +148,15 @@ export const toParamState = (parameter: EffectParameter): EffectParamState => ({
 const SOCKET_CHECK: Record<ParamSocketKind, string> = {
   number: 'Number',
   boolean: 'Boolean',
-  colour: 'Colour',
+  color: COLOUR_CHECK,
 };
 
 /**
  * The shadow one socket of a parameter starts life with.
  *
- * A colour socket gets Blockly's own `colour_picker`, seeded with the
+ * A color socket gets Blockly's own `colour_picker`, seeded with the
  * parameter's default converted to hex. Deliberately the stock block rather
- * than one of ours: it outputs `Colour`, as do `colour_random` and
+ * than one of ours: it outputs `Color`, as do `colour_random` and
  * `colour_blend`, so all of them drop into this socket and the generated call
  * converts whatever arrives (see `WorldLab.rgb`). A bespoke block would have
  * shut that door for no gain.
@@ -164,14 +165,18 @@ const SOCKET_CHECK: Record<ParamSocketKind, string> = {
  * that is what the fourth channel means — it is not the effect author's to
  * bound.
  */
-const socketShadow = (
+export const socketShadow = (
   parameter: EffectParamState,
   socket: ParamSocket,
   socketIndex: number,
 ): Blockly.serialization.blocks.State => {
-  if (socket.kind === 'colour') {
+  if (socket.kind === 'color') {
     return {
       type: 'colour_picker',
+      // `COLOUR` is the picker's own field name — Blockly's, like the block
+      // type and the connection check. Setting `COLOR` is silent: the shadow
+      // appears holding the picker's built-in red instead of the effect's
+      // declared default.
       fields: {COLOUR: toHex(componentsOf(parameter.defaultValue, 3))},
     };
   }
@@ -349,7 +354,7 @@ export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
       sockets.forEach((socket, socketIndex) => {
         const input = this.appendValueInput(socketName(index, socketIndex));
         // The parameter's own name leads its first row, so a multi-socket knob
-        // (a vec2's x/y, a colour's swatch and opacity) reads as one group.
+        // (a vec2's x/y, a color's swatch and opacity) reads as one group.
         if (socketIndex === 0) {
           input.appendField(parameter.name);
         }

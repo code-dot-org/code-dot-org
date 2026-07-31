@@ -184,7 +184,7 @@ export class FieldSlider extends Blockly.FieldNumber {
     this.fill.setAttribute('width', String(THUMB_RADIUS + filled));
     this.thumb.setAttribute('cx', String(left + THUMB_RADIUS + filled));
     this.thumb.setAttribute('cy', String(midline));
-    this.applySliderColour();
+    this.applySliderColor();
   }
 
   /** Where the value sits in its range, 0..1. */
@@ -199,13 +199,13 @@ export class FieldSlider extends Blockly.FieldNumber {
   }
 
   /**
-   * Colour the slider from the design system rather than the block.
+   * Color the slider from the design system rather than the block.
    *
-   * A shadow block takes the colour of whatever it is plugged into, so a track
+   * A shadow block takes the color of whatever it is plugged into, so a track
    * tinted from the block would change hue between an actor effect and a world
    * effect for no reason a learner could name.
    */
-  private applySliderColour(): void {
+  private applySliderColor(): void {
     const track = getCSSVariable('background-neutral-tertiary') || '#e8eaed';
     const fill = getCSSVariable('background-brand-purple-primary') || '#9657c7';
     const edge = getCSSVariable('borders-neutral-strong') || '#9aa0a6';
@@ -218,7 +218,7 @@ export class FieldSlider extends Blockly.FieldNumber {
 
   override applyColour(): void {
     super.applyColour();
-    this.applySliderColour();
+    this.applySliderColor();
   }
 
   protected override render_(): void {

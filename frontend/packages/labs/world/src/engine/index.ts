@@ -59,6 +59,6 @@ export type {
 } from './core/animationTypes';
 export {parseAnimationFile, type AnimationFile} from './core/animationFile';
 
-// Colour conversion for effect parameters: the generated `add effect` call
-// wraps whatever a colour block produced, so any of them can drive a uniform.
-export {rgb, rgba, toHex, type Rgb, type Rgba} from './core/colour';
+// Color conversion for effect parameters: the generated `add effect` call
+// wraps whatever a color block produced, so any of them can drive a uniform.
+export {rgb, rgba, toHex, type Rgb, type Rgba} from './core/color';

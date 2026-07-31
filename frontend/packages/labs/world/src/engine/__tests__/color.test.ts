@@ -1,12 +1,12 @@
 // Hex in, shader floats out.
 //
-// This runs on a value a learner picked in a colour swatch and hands the result
-// to a GPU uniform, where a wrong number is a wrong colour with no error and a
+// This runs on a value a learner picked in a color swatch and hands the result
+// to a GPU uniform, where a wrong number is a wrong color with no error and a
 // NaN is an invisible sprite with no message. Worth pinning exactly.
 
 import {describe, expect, it} from 'vitest';
 
-import {rgb, rgba, toHex} from '../core/colour';
+import {rgb, rgba, toHex} from '../core/color';
 
 describe('rgb', () => {
   it('maps each byte onto 0–1', () => {
@@ -52,8 +52,8 @@ describe('rgba', () => {
     expect(rgba('#ff880040')).toEqual([1, 0x88 / 255, 0, 0x40 / 255]);
   });
 
-  it('is opaque when the colour does not say otherwise', () => {
-    // A picker has no way to express alpha, and a colour a learner chose from
+  it('is opaque when the color does not say otherwise', () => {
+    // A picker has no way to express alpha, and a color a learner chose from
     // a swatch is one they expect to see.
     expect(rgba('#000000')[3]).toBe(1);
     expect(rgba('#abc')[3]).toBe(1);
@@ -61,11 +61,11 @@ describe('rgba', () => {
   });
 
   it('is opaque black for anything unreadable', () => {
-    expect(rgba('not a colour')).toEqual([0, 0, 0, 1]);
+    expect(rgba('not a color')).toEqual([0, 0, 0, 1]);
   });
 });
 
-describe('colours given as floats', () => {
+describe('colors given as floats', () => {
   // What the `r g b a` block produces. It hands over numbers rather than hex
   // so an alpha survives and the channels are not quantized to 8 bits on the
   // way through — a learner dragging a slider to 0.337 gets 0.337.
@@ -92,9 +92,9 @@ describe('colours given as floats', () => {
 });
 
 describe('toHex', () => {
-  it('round-trips a colour back to the picker', () => {
+  it('round-trips a color back to the picker', () => {
     // The seeded swatch on the block comes from the effect's declared default,
-    // so this runs on every bounded colour parameter.
+    // so this runs on every bounded color parameter.
     for (const hex of ['#000000', '#ffffff', '#ff8800', '#102030']) {
       expect(toHex(rgb(hex))).toBe(hex);
     }

@@ -14,7 +14,7 @@ describe('niceStep', () => {
     // The four shapes that actually occur, so a regression here shows up as a
     // value a learner would notice rather than an abstract off-by-one.
     expect(niceStep(0, 0.1)).toBeCloseTo(0.001); // ripple.strength
-    expect(niceStep(0, 1)).toBeCloseTo(0.01); // fade.amount, tint colours
+    expect(niceStep(0, 1)).toBeCloseTo(0.01); // fade.amount, tint colors
     expect(niceStep(0, 12)).toBeCloseTo(0.2); // pulse.speed
     expect(niceStep(2, 128)).toBeCloseTo(2); // pixelate.size
   });
