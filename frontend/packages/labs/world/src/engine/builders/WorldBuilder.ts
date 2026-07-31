@@ -7,11 +7,18 @@
 // of world operations rather than an abstraction. What it really owned was the
 // actor-type registry that `loadMap` needs, which lives here now.
 //
-// The two halves run in order, and the boundary is real. Everything declarative
-// — rules, property values, animations, effects — describes a world that does
-// not exist yet. The first call that needs actors (`loadMap`, `addActor`,
-// `clear`, `getWorld`) builds it, and after that the declarative half is closed:
-// calling it then would silently do nothing, so it throws instead.
+// The first call that needs actors (`loadMap`, `addActor`, `clear`, `getWorld`)
+// builds the World. What that means for a call arriving afterwards depends on
+// the call, and the test is whether the live World can still answer it:
+//
+//   - `set` and `addEffect` have exact counterparts on `World`, so they FORWARD.
+//     Both are also blocks that a learner can place in an event handler, where
+//     they land on the live world and mean the same thing; making them care
+//     where they sit inside a `.world` file would be an arbitrary rule.
+//   - `useRules` and `useAnimations` have none. Rules decide trait membership
+//     for every actor, and the animation registry is seeded once at
+//     construction, so neither can be applied to a world that already exists.
+//     They THROW, because silently doing nothing is worse.
 
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
@@ -55,11 +62,13 @@ export class WorldBuilder {
   }
 
   /**
-   * Refuse a declaration that arrives after the world exists.
+   * Refuse a declaration the live world could not be given after the fact.
    *
-   * Blocks can be reordered in the workspace, so `use rule` below `load map` is
-   * a mistake a learner can make by dragging. Silently ignoring it would give
-   * them a world missing a rule they can plainly see they asked for.
+   * Only for the two that have no counterpart on `World` — see the note at the
+   * top. Blocks can be reordered in the workspace, so `use rule` below
+   * `load map` is a mistake a learner can make by dragging, and silently
+   * ignoring it would give them a world missing a rule they can plainly see
+   * they asked for.
    */
   private requireUnbuilt(what: string): void {
     if (this.built) {
@@ -87,9 +96,20 @@ export class WorldBuilder {
     return this.hidden.has(rule);
   }
 
-  /** Override a world-scoped property's initial value. */
+  /**
+   * Set a world-scoped property.
+   *
+   * Before the world is built this is its initial value; after, it is a plain
+   * assignment on the live world, which is what `World.set` does anyway. The
+   * generated `set …` blocks emit `world.set(…)` in a `.world` body and in an
+   * event handler alike, so the two must agree — the same reason `set position`
+   * works on an actor template and a live actor both.
+   */
   set<T>(property: Property<T>, value: T): this {
-    this.requireUnbuilt(`setting ${property.id}`);
+    if (this.built) {
+      this.built.set(property, value);
+      return this;
+    }
     this.overrides.push([property, value]);
     return this;
   }
@@ -114,7 +134,10 @@ export class WorldBuilder {
    *
    * Named to match `World.addEffect` so one Blockly block covers both: in a
    * `.world` file `world` is this builder, in an event handler it is the live
-   * World, and `world.addEffect(…)` is right in both places.
+   * World, and `world.addEffect(…)` is right in both places. Once the world
+   * exists this forwards to it, for the same reason — a viewport filter has no
+   * relationship to the actors, so where the block sits relative to `load map`
+   * must not decide whether it works.
    *
    * @param path     the effect's module path (`effects/underwater`)
    * @param document the parsed `.effect` file, imported as JSON by the bundler
@@ -125,7 +148,10 @@ export class WorldBuilder {
     document: EffectDocument,
     values?: AppliedEffectSpec['values'],
   ): this {
-    this.requireUnbuilt('add effect');
+    if (this.built) {
+      this.built.addEffect(path, document, values);
+      return this;
+    }
     // Idempotent by path, matching the live World — see ActorBuilder.addEffect.
     if (this.effects.some(effect => effect.path === path)) {
       return this;
