@@ -8,6 +8,7 @@ import {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
   ActorAction,
+  AppliedEffectSpec,
   EventHandler,
   GameEvent,
   Property,
@@ -28,6 +29,8 @@ export interface ActorInit {
   overrides: Array<[Property, unknown]>;
   /** Event handlers the actor registered. */
   handlers: Array<[GameEvent, EventHandler]>;
+  /** Effects played on this actor's image, in application order. */
+  effects?: AppliedEffectSpec[];
 }
 
 // A `vector` (directional) and a `point` (an x/y pair, e.g. scale) are both
@@ -48,6 +51,8 @@ export class Actor {
   );
   private readonly store = new Map<Property, unknown>();
   private readonly handlers = new Map<GameEvent, EventHandler[]>();
+  // Held, not interpreted: the engine never looks inside an effect document.
+  private readonly appliedEffects: readonly AppliedEffectSpec[];
 
   constructor(init: ActorInit) {
     this.id = init.id;
@@ -69,6 +74,7 @@ export class Actor {
     for (const [event, handler] of init.handlers) {
       this.on(event, handler);
     }
+    this.appliedEffects = init.effects ? [...init.effects] : [];
   }
 
   get<T>(property: Property<T>): T {
@@ -117,6 +123,11 @@ export class Actor {
   /** The traits present on this actor, in application order. */
   traits(): readonly Trait[] {
     return this.membership.items();
+  }
+
+  /** The effects played on this actor's image, in application order. */
+  effects(): readonly AppliedEffectSpec[] {
+    return this.appliedEffects;
   }
 
   /** Whether this actor carries `property` (seeded by one of its traits). */

@@ -26,6 +26,7 @@ export {DependencySet} from './core/traits';
 // Value-object shapes.
 export type {
   ActionParam,
+  AppliedEffectSpec,
   ArgType,
   Property,
   PropertyType,

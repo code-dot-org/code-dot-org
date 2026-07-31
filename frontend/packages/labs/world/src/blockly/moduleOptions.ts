@@ -14,6 +14,8 @@ import {label} from './label';
 let projectActors: Array<[string, string]> = [];
 let projectWorlds: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
+// `[label, path]` for the project's `.effect` files — the `use effect` dropdown.
+let projectEffectFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
 // `world_use_rule` dropdown offers these ALONGSIDE the built-in rules, and its
 // generator imports the module (a path value) rather than reading `WorldLab`.
@@ -36,6 +38,11 @@ export function setProjectAnimationFiles(
   options: Array<[string, string]>,
 ): void {
   projectAnimationFiles = options;
+}
+
+/** Replace the effect-file options the EFFECT dropdown offers. */
+export function setProjectEffectFiles(options: Array<[string, string]>): void {
+  projectEffectFiles = options;
 }
 
 /** Replace the project rule modules the `use rule` dropdown offers (paths). */
@@ -74,6 +81,11 @@ export function worldOptions(): Array<[string, string]> {
 /** Current FILE dropdown options (the project's animation files). */
 export function animationFileOptions(): Array<[string, string]> {
   return orNone(projectAnimationFiles);
+}
+
+/** Current EFFECT dropdown options (the project's effect files). */
+export function effectFileOptions(): Array<[string, string]> {
+  return orNone(projectEffectFiles);
 }
 
 /** Current MAP dropdown options (the project's map files). */
@@ -129,6 +141,11 @@ export const animationFileOptionsExtension = liveDropdown(
   'world_animation_file_options',
   'FILE',
   animationFileOptions,
+);
+export const effectFileOptionsExtension = liveDropdown(
+  'world_effect_file_options',
+  'EFFECT',
+  effectFileOptions,
 );
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',

@@ -6,12 +6,14 @@
 
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
+import {effectSnapshotId} from './effectIds';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
+  AppliedEffectSpec,
   GameEvent,
   Property,
   Rule,
@@ -30,6 +32,15 @@ import {Vector} from './Vector';
 export interface WorldSnapshot {
   ruleIds: string[];
   actorIds: string[];
+  /**
+   * `<path>@<hash>` per applied effect, across every actor (see `effectIds.ts`).
+   *
+   * Structural, not a value: the reconciler compares it alongside rule and
+   * actor ids, so adding, removing, swapping, or *editing* an effect restarts
+   * the game. Without it an edited `.effect` would rebuild and change nothing
+   * on screen.
+   */
+  effectIds: string[];
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
@@ -51,6 +62,8 @@ export interface RenderState {
   /** Vertical skew in degrees — a shear the driver applies about the actor's
    * center (0 = none). */
   skew: number;
+  /** Effects to play on this actor's image; empty for most actors. */
+  effects: readonly AppliedEffectSpec[];
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
 }
@@ -334,6 +347,7 @@ export class World {
         rotation: actor.get(rotationProp),
         skew: skewProp ? actor.get(skewProp) : 0,
         frame: frameFor(actor),
+        effects: actor.effects(),
       });
     }
     return states;
@@ -379,6 +393,11 @@ export class World {
     return {
       ruleIds: rules.map(rule => rule.id).sort(),
       actorIds: this.actorList.map(actor => actor.id).sort(),
+      // Sorted, like the id lists: the snapshot is compared by stringifying it,
+      // so a stable order is what keeps an unchanged world comparing equal.
+      effectIds: this.actorList
+        .flatMap(actor => actor.effects().map(effectSnapshotId))
+        .sort(),
       world,
       actors,
     };

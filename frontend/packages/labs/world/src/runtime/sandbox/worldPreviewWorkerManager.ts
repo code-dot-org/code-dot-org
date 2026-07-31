@@ -225,6 +225,22 @@ export async function start(): Promise<void> {
     post({type: FromPreviewMessage.THUMBNAILS, id, thumbnails, schemas});
   }
 
+  /**
+   * An effect that will not compile, reported from inside the render loop.
+   *
+   * `phase: 'tick'` rather than `'construct'`: the game is up and drawing, and
+   * the actor wearing the broken effect is on screen without it. The message
+   * names the `.effect` file, which is what makes the compiler's sentence about
+   * a graph actionable.
+   */
+  function reportEffectError(message: string) {
+    post({
+      type: FromPreviewMessage.ENGINE_ERROR,
+      message,
+      phase: 'tick',
+    });
+  }
+
   async function load({id, moduleUrl, assets}: LoadMessage) {
     lastAssets = assets ?? {};
     try {
@@ -242,7 +258,13 @@ export async function start(): Promise<void> {
       if (!binding || !runningWorld) {
         // First load: start fresh.
         runningWorld = incoming;
-        binding = new PhaserBinding(incoming, parent, assetBase, assets);
+        binding = new PhaserBinding(
+          incoming,
+          parent,
+          assetBase,
+          assets,
+          reportEffectError,
+        );
         baseline = incoming.snapshot();
         mode = 'built';
       } else {
@@ -253,7 +275,13 @@ export async function start(): Promise<void> {
         if (result.mode === 'restarted') {
           binding.stop();
           runningWorld = incoming;
-          binding = new PhaserBinding(incoming, parent, assetBase, assets);
+          binding = new PhaserBinding(
+            incoming,
+            parent,
+            assetBase,
+            assets,
+            reportEffectError,
+          );
         }
         // 'reconciled': reconcile() already patched runningWorld; keep the game.
       }

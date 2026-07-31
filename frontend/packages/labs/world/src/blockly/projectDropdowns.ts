@@ -1,5 +1,5 @@
 // Refreshes every project-derived Blockly dropdown registry (animations, actor
-// templates, worlds) from the flattened project files. Called both before the
+// templates, worlds, effects) from the flattened project files. Called both before the
 // generator runs (WorldRuntimeContext) AND before the visible editor loads a
 // workspace (BlocklyFileEditor) — a dropdown drops a serialized value that is
 // not among its options, so the registry must be populated before Blockly
@@ -9,6 +9,7 @@ import {setProjectAnimations} from './animationOptions';
 import {
   setProjectActors,
   setProjectAnimationFiles,
+  setProjectEffectFiles,
   setProjectMaps,
   setProjectRuleModules,
   setProjectWorlds,
@@ -17,6 +18,7 @@ import {projectAnimationIds} from './projectAnimations';
 import {
   projectActorOptions,
   projectAnimationFileOptions,
+  projectEffectFileOptions,
   projectMapActorTypes,
   projectRuleMetas,
   projectRuleOptions,
@@ -30,6 +32,7 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectActors(projectActorOptions(files));
   setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
+  setProjectEffectFiles(projectEffectFileOptions(files));
   setProjectMaps(projectMapActorTypes(files));
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.

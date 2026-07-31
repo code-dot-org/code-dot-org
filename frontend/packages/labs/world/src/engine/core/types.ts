@@ -2,10 +2,34 @@
 // references, no behavior — the behavior lives on the World/Actor/Trait classes.
 // Type-only imports keep this module free of runtime cycles.
 
+import type {EffectDocument} from '../../effect/model/types';
+
 import type {Actor} from './Actor';
 import type {AnimationDef} from './animationTypes';
 import type {Trait} from './Trait';
 import type {World} from './World';
+
+/**
+ * An effect applied to something that is drawn (specs/EFFECTS_PLAN.md §3).
+ *
+ * The engine carries this from the builder to `renderSnapshot` and does nothing
+ * else with it: an effect declares no property, runs no step, and reads nothing
+ * from the world. It is appearance-of-the-drawing, which is why it lives here
+ * rather than as a Trait. Turning the graph into a shader happens in the driver,
+ * where Phaser is — the `EffectDocument` import above is type-only and erased,
+ * so the bundled engine never pulls in the compiler.
+ */
+export interface AppliedEffectSpec {
+  /**
+   * The effect's module path (`effects/ripple`), which is its identity.
+   *
+   * The driver registers one shader render node per path, so twenty actors
+   * sharing an effect compile and upload one program. The document's `name` is
+   * the learner's label and is not unique; the path is.
+   */
+  readonly path: string;
+  readonly document: EffectDocument;
+}
 
 /**
  * The kinds a Property can hold. A `vector` (directional — velocity, force,
