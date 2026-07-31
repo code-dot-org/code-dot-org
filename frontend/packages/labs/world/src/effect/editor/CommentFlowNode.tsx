@@ -27,7 +27,7 @@ const MIN_HEIGHT = 56;
  */
 export function CommentFlowNode({id, data, selected}: NodeProps) {
   const {node} = data as unknown as EffectCommentNodeData;
-  const {setNote, resizeNode} = useEffectEditorContext();
+  const {setNote, resizeNode, readOnly} = useEffectEditorContext();
   const {draft, editing, inputRef, begin, setDraft, commit} = useNoteDraft(
     node.note,
     value => setNote(id, value),
@@ -42,7 +42,7 @@ export function CommentFlowNode({id, data, selected}: NodeProps) {
           rectangle of text. Position travels with the size: dragging a top or
           left handle moves the origin too. */}
       <NodeResizer
-        isVisible={selected}
+        isVisible={selected && !readOnly}
         minWidth={MIN_WIDTH}
         minHeight={MIN_HEIGHT}
         color="var(--effect-editor-accent, #8ab4f8)"
@@ -51,7 +51,7 @@ export function CommentFlowNode({id, data, selected}: NodeProps) {
         }
       />
 
-      {editing ? (
+      {editing && !readOnly ? (
         <textarea
           ref={inputRef}
           className={`${styles.editor} nodrag nopan nowheel`}
@@ -80,8 +80,13 @@ export function CommentFlowNode({id, data, selected}: NodeProps) {
           // A press that does not move still delivers its click, so dragging
           // moves the note and clicking opens it for editing.
           className={styles.body}
-          aria-label={translate('Edit this comment')}
-          title={translate('Click to edit, drag to move')}
+          disabled={readOnly}
+          aria-label={
+            readOnly ? translate('Comment') : translate('Edit this comment')
+          }
+          title={
+            readOnly ? undefined : translate('Click to edit, drag to move')
+          }
           onClick={begin}
         >
           {node.note ?? (

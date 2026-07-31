@@ -52,6 +52,7 @@ export function EffectFlowNode({id, data, selected}: NodeProps) {
     setLiteral,
     setLiterals,
     setNote,
+    readOnly,
   } = useEffectEditorContext();
 
   const firstOutput = definition.outputs[0];
@@ -108,6 +109,7 @@ export function EffectFlowNode({id, data, selected}: NodeProps) {
           note={node.note}
           nodeLabel={nodeDisplayLabel(definition)}
           onChange={value => setNote(id, value)}
+          readOnly={readOnly}
         />
       )}
 
@@ -146,6 +148,7 @@ export function EffectFlowNode({id, data, selected}: NodeProps) {
           definition={definition}
           node={node}
           onPick={values => setLiterals(id, values)}
+          readOnly={readOnly}
         />
       )}
 
@@ -161,6 +164,7 @@ export function EffectFlowNode({id, data, selected}: NodeProps) {
               port={input}
               onChange={value => setLiteral(id, input.id, value)}
               literal={node.params?.[input.id]}
+              readOnly={readOnly}
             />
           ))}
         </ul>
@@ -282,6 +286,7 @@ interface PortRowProps {
   port: EffectPortDefinition;
   literal: EffectLiteral | undefined;
   onChange: (value: EffectLiteral) => void;
+  readOnly: boolean;
 }
 
 /**
@@ -348,6 +353,7 @@ interface ColorSwatchRowProps {
   definition: EffectNodeDefinition;
   node: EffectGraphNode;
   onPick: (values: Record<string, number>) => void;
+  readOnly: boolean;
 }
 
 /**
@@ -361,6 +367,7 @@ function ColorSwatchRow({
   definition,
   node,
   onPick,
+  readOnly,
 }: ColorSwatchRowProps) {
   const commitPick = useThrottled((hex: string) => {
     const picked = hexToRgb(hex);
@@ -391,8 +398,13 @@ function ColorSwatchRow({
         // swatch starts a node drag.
         className={`${styles.swatch} nodrag`}
         value={rgbToHex(rgb.r, rgb.g, rgb.b)}
-        aria-label={translate('Pick a color')}
-        title={translate('Pick this color with a color picker')}
+        disabled={readOnly}
+        aria-label={readOnly ? translate('Color') : translate('Pick a color')}
+        title={
+          readOnly
+            ? undefined
+            : translate('Pick this color with a color picker')
+        }
         onChange={event => commitPick(event.target.value)}
       />
     </div>
@@ -400,7 +412,13 @@ function ColorSwatchRow({
 }
 
 /** The number field shown for an input port with nothing wired into it. */
-function PortRow({displayLabel, port, literal, onChange}: PortRowProps) {
+function PortRow({
+  displayLabel,
+  port,
+  literal,
+  onChange,
+  readOnly,
+}: PortRowProps) {
   // A generic port has no concrete type until the graph is compiled; `float`
   // is the same fallback the compiler uses for an unwired generic.
   const type: EffectValueType = port.type === 'generic' ? 'float' : port.type;
@@ -413,6 +431,7 @@ function PortRow({displayLabel, port, literal, onChange}: PortRowProps) {
         type={type}
         value={literal ?? port.defaultValue ?? defaultLiteral(type)}
         onChange={onChange}
+        readOnly={readOnly}
       />
     </li>
   );

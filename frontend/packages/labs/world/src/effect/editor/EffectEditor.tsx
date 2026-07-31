@@ -76,6 +76,15 @@ export interface EffectEditorProps {
   registry?: EffectNodeRegistry;
   /** Called after every edit, for the host to persist the `.effect` file. */
   onChange?: (document: EffectDocument) => void;
+  /**
+   * Open the effect for reading only — the host mounted a workspace nobody may
+   * edit. Every editing affordance is withdrawn and no edit can reach the
+   * document (`useEffectDocument` refuses them at source), while everything
+   * that only *reads* the graph stays live: panning, zooming, selection, the
+   * per-node eye previews, the GLSL panel, the test-texture picker, and the
+   * parameter try-out sliders. None of those touch the file.
+   */
+  readOnly?: boolean;
   className?: string;
 }
 
@@ -111,11 +120,14 @@ function EffectEditorContent({
   initialDocument,
   registry = defaultNodeRegistry,
   onChange,
+  readOnly = false,
   className,
 }: EffectEditorProps) {
   const [initial] = useState(() => initialDocument ?? createEffectDocument());
-  const {document, update, undo, redo, canUndo, canRedo} =
-    useEffectDocument(initial);
+  const {document, update, undo, redo, canUndo, canRedo} = useEffectDocument(
+    initial,
+    {readOnly},
+  );
 
   const [selectedNodeIds, setSelectedNodeIds] = useState<string[]>([]);
 
@@ -434,7 +446,23 @@ function EffectEditorContent({
     return types;
   }, [scope, scopeRegistry, resolvedTypes]);
 
+  /**
+   * The last document the host was told about — the one it opened, until an
+   * edit happens.
+   *
+   * Notifying on mount would report a change that nobody made: a host that
+   * persists `onChange` (the World lab writes the `.effect` file) would rewrite
+   * the file the moment it was opened, marking a project dirty and churning the
+   * stored text through a re-serialize for a document identical to the one on
+   * disk. `useEffectDocument`'s reducer returns the same object when a change
+   * is a no-op, so identity is the right comparison here.
+   */
+  const notifiedRef = useRef(initial);
   useEffect(() => {
+    if (document === notifiedRef.current) {
+      return;
+    }
+    notifiedRef.current = document;
     onChange?.(document);
   }, [document, onChange]);
 
@@ -810,6 +838,7 @@ function EffectEditorContent({
       setNote: handleSetNote,
       resizeNode: handleResizeNode,
       disconnect: handleDisconnect,
+      readOnly,
     }),
     [
       scope,
@@ -824,6 +853,7 @@ function EffectEditorContent({
       handleSetNote,
       handleResizeNode,
       handleDisconnect,
+      readOnly,
     ],
   );
 
@@ -841,12 +871,18 @@ function EffectEditorContent({
           // fight React's reconciliation).
           data-notranslate="true"
         >
-          <NodePalette
-            registry={scopeRegistry}
-            onAddNode={handleAddNode}
-            onEditFunction={enterFunction}
-            onCreateFunction={handleCreateFunction}
-          />
+          {/* The palette exists to place nodes. Read-only, it would be a
+              column of controls that do nothing, so it is not rendered — the
+              canvas takes the width instead. Functions are still reachable by
+              their nodes in the graph. */}
+          {!readOnly && (
+            <NodePalette
+              registry={scopeRegistry}
+              onAddNode={handleAddNode}
+              onEditFunction={enterFunction}
+              onCreateFunction={handleCreateFunction}
+            />
+          )}
 
           <div className={styles.stack}>
             {editingFunction ? (
@@ -861,12 +897,14 @@ function EffectEditorContent({
                   handleFunctionOutputType(editingFunction.id, type)
                 }
                 onDelete={() => handleDeleteFunction(editingFunction.id)}
+                readOnly={readOnly}
               />
             ) : (
               <EffectBar
                 document={document}
                 onRename={handleRenameEffect}
                 onDescribe={handleDescribeEffect}
+                readOnly={readOnly}
               />
             )}
 
@@ -885,6 +923,7 @@ function EffectEditorContent({
               addButtonLabel={translate(
                 editingFunctionId ? '+ Input' : '+ Parameter',
               )}
+              readOnly={readOnly}
             />
 
             <div className={styles.canvasHolder}>
@@ -904,6 +943,7 @@ function EffectEditorContent({
                 resolveSourceType={resolveSourceType}
                 errorEdgeId={errorEdgeId}
                 onSelectedNodesChange={setSelectedNodeIds}
+                readOnly={readOnly}
               />
 
               <div className={styles.history}>
@@ -1020,6 +1060,7 @@ interface EffectBarProps {
   document: EffectDocument;
   onRename: (name: string) => void;
   onDescribe: (description: string) => void;
+  readOnly: boolean;
 }
 
 /**
@@ -1032,7 +1073,7 @@ interface EffectBarProps {
  * effect in a gallery, not the place to explain the graph. That job belongs to
  * the notes and Comment nodes in the workspace itself.
  */
-function EffectBar({document, onRename, onDescribe}: EffectBarProps) {
+function EffectBar({document, onRename, onDescribe, readOnly}: EffectBarProps) {
   // Same non-empty-name discipline as functions and parameters: a nameless
   // effect is an unlabelled entry in whatever list a host shows.
   const [nameDraft, setNameDraft] = useState(document.name);
@@ -1041,6 +1082,7 @@ function EffectBar({document, onRename, onDescribe}: EffectBarProps) {
     <div className={styles.functionBar}>
       <TextField
         className={styles.effectName}
+        disabled={readOnly}
         slotProps={{htmlInput: {'aria-label': translate('Effect name')}}}
         value={nameDraft}
         onChange={event => {
@@ -1054,6 +1096,7 @@ function EffectBar({document, onRename, onDescribe}: EffectBarProps) {
       />
       <TextField
         className={styles.effectDescription}
+        disabled={readOnly}
         placeholder={translate('What does this effect do?')}
         slotProps={{htmlInput: {'aria-label': translate('Effect description')}}}
         value={document.description ?? ''}
@@ -1069,6 +1112,7 @@ interface FunctionBarProps {
   onRename: (name: string) => void;
   onOutputTypeChange: (type: EffectFunctionOutputType) => void;
   onDelete: () => void;
+  readOnly: boolean;
 }
 
 /** The strip above a function's workspace: identity, return type, exit. */
@@ -1078,6 +1122,7 @@ function FunctionBar({
   onRename,
   onOutputTypeChange,
   onDelete,
+  readOnly,
 }: FunctionBarProps) {
   // Same non-empty-name discipline as parameters: the name is the node label,
   // and a blank one would be an unfindable palette entry.
@@ -1093,6 +1138,7 @@ function FunctionBar({
       </span>
       <TextField
         className={styles.functionName}
+        disabled={readOnly}
         slotProps={{htmlInput: {'aria-label': translate('Function name')}}}
         value={nameDraft}
         onChange={event => {
@@ -1108,6 +1154,7 @@ function FunctionBar({
         {translate('returns')}
         <TextField
           select
+          disabled={readOnly}
           slotProps={{
             select: {
               native: true,
@@ -1128,14 +1175,16 @@ function FunctionBar({
           ))}
         </TextField>
       </label>
-      <Button
-        color="error"
-        className={styles.functionDelete}
-        onClick={onDelete}
-        title={translate('Delete this function and every node that uses it')}
-      >
-        {translate('Delete function')}
-      </Button>
+      {!readOnly && (
+        <Button
+          color="error"
+          className={styles.functionDelete}
+          onClick={onDelete}
+          title={translate('Delete this function and every node that uses it')}
+        >
+          {translate('Delete function')}
+        </Button>
+      )}
     </div>
   );
 }

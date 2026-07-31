@@ -63,6 +63,12 @@ export interface InputRowProps {
   showStockInputs?: boolean;
   /** "Parameter" in the main workspace, "Input" inside a function. */
   addButtonLabel?: string;
+  /**
+   * Read-only: no adding, renaming, retyping, or removing a parameter. The
+   * try-out sliders stay live — they drive the previews and are never written
+   * to the document, so trying values out is reading, not editing.
+   */
+  readOnly?: boolean;
 }
 
 /**
@@ -87,6 +93,7 @@ export function InputRow({
   onParameterValueChange,
   showStockInputs = true,
   addButtonLabel = '+ Parameter',
+  readOnly = false,
 }: InputRowProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [editing, setEditing] = useState<{id: string; left: number} | null>(
@@ -192,7 +199,7 @@ export function InputRow({
                 ) : undefined
               }
               onEdit={
-                parameterId !== null
+                parameterId !== null && !readOnly
                   ? event =>
                       setEditing({
                         id: parameterId,
@@ -203,11 +210,13 @@ export function InputRow({
             />
           );
         })}
-        <li className={styles.knobItem}>
-          <Button className={styles.addParameter} onClick={handleAdd}>
-            {addButtonLabel}
-          </Button>
-        </li>
+        {!readOnly && (
+          <li className={styles.knobItem}>
+            <Button className={styles.addParameter} onClick={handleAdd}>
+              {addButtonLabel}
+            </Button>
+          </li>
+        )}
       </ul>
 
       {editing && editingParameter && (

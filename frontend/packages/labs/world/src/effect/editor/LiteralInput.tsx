@@ -13,6 +13,8 @@ export interface LiteralInputProps {
   max?: number;
   /** Spinner increment. Whole-number parameters pass 1. */
   step?: number;
+  /** Show the value but refuse edits (a read-only workspace). */
+  readOnly?: boolean;
 }
 
 const COMPONENT_LABELS = ['X', 'Y', 'Z', 'W'];
@@ -32,6 +34,7 @@ export function LiteralInput({
   min,
   max,
   step = 0.1,
+  readOnly = false,
 }: LiteralInputProps) {
   const count = componentCount(type);
   const components =
@@ -63,6 +66,7 @@ export function LiteralInput({
           min={min}
           max={max}
           value={components[index] ?? 0}
+          disabled={readOnly}
           aria-label={
             count === 1 ? label : `${label} ${COMPONENT_LABELS[index]}`
           }

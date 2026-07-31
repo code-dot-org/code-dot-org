@@ -225,29 +225,72 @@ The trade accepted here: no independent versioning, and no structural
 guarantee against the preview surface pulling in the editor — that becomes an
 import-hygiene rule with a build-output check behind it (§11).
 
-## 6. Phase 2 — `.effect` as a project file
+## 6. Phase 2 — `.effect` as a project file — DONE
 
-`src/config.ts`:
+`src/config.ts`: `effect` joined `WORLD_EDITABLE_FILE_TYPES` and
+`languageMapping`, and `editorComponents.effect` routes to the new
+`src/effect/EffectFileEditor.tsx`. The `fileIcons.effect` entry was already
+there.
 
-- `effect` joins `WORLD_EDITABLE_FILE_TYPES` and `languageMapping`.
-- `editorComponents.effect` → a new `src/effect/EffectFileEditor.tsx`, a thin
-  adapter from Codebridge's `CustomEditorProps`
-  (`initialContents` / `isReadOnly` / `onChange`) to `<EffectEditor>`'s
-  `initialDocument` / `onChange`, parsing with `parseEffectDocument` and
-  writing back with `serializeEffectDocument` (both from
-  `./model`). It mirrors
-  `BlocklyFileEditor.tsx`: Codebridge keys the component by file id, so
-  `initialContents` is read once into a ref and the component remounts when the
-  active file changes.
-- The `fileIcons.effect` entry is already there.
+`src/runtime/compile/virtualFsPlugin.ts`: `.effect` joined `EXT_ORDER` and the
+JSON branch of `loaderFor`, beside `.map` and `.anim`.
 
-`src/runtime/compile/virtualFsPlugin.ts`:
+`src/effect/examples.ts` holds the annotated Ripple graph (promoted from the
+standalone playground's `src/dev/examples.ts`, the one file worth keeping from
+it). It imports `model` and nothing else, so `src/constants.ts` can seed
+`effects/ripple.effect` into `DEFAULT_PROJECT` without reaching into the
+editor.
 
-- `.effect` joins `EXT_ORDER` and the JSON branch of `loaderFor`, beside
-  `.map` and `.anim`.
+**The adapter is thin, but not trivial.** Two things had to be decided rather
+than plumbed:
 
-`src/constants.ts`: `DEFAULT_PROJECT` gains one `effects/*.effect` so the slice
-is demonstrable on a fresh project without the learner authoring a graph first.
+- **An empty file is a new file, not a broken one.** Codebridge creates a file
+  with no contents; that gets a fresh passthrough effect. Anything else that
+  will not parse is _reported_, with the raw text shown — silently replacing a
+  learner's broken file with a blank one destroys the only copy of what went
+  wrong. The error view is deliberately not editable: a graph editor is the
+  wrong tool for repairing JSON by hand.
+
+**Two bugs found by wiring it up:**
+
+- **`EffectEditor` called `onChange` on mount**, with the document it had just
+  been given. Harmless in the standalone playground; in Codebridge it means
+  merely _opening_ a `.effect` writes the file back — dirtying the project and
+  churning stored text through a re-serialize for a document identical to the
+  one on disk. Now compared by identity against the opened document
+  (`useEffectDocument`'s reducer returns the same object for a no-op change),
+  so the first notification is a real edit.
+- **Read-only was not implemented at all.** Every other custom editor in the
+  lab honours Codebridge's `isReadOnly` (`isReadOnlyWorkspace` — someone else's
+  project, a frozen one); the effect editor had no such mode. Added in two
+  layers, deliberately independent:
+
+  1. **The guarantee.** `useEffectDocument(initial, {readOnly})` refuses every
+     update at source, so no control — present, forgotten, or added later —
+     can change the file. History reports empty, which disables undo/redo for
+     free.
+  2. **The manners.** `EffectEditorContextValue.readOnly` reaches the canvas
+     internals (literal fields, notes, comments, the wire delete button, the
+     color swatch, node resize) without prop-threading, and the top level
+     withdraws the palette and the add-parameter button and disables the
+     identity bars. React Flow gets `nodesDraggable`/`nodesConnectable` off
+     and `deleteKeyCode` unbound.
+
+  Reading stays fully live: panning, zooming, selection, the per-node eye
+  previews, the GLSL panel, the test-texture picker, and the parameter try-out
+  sliders all work, because none of them touch the document.
+
+**Verified in Chromium** against the running `dev:isolated` servers:
+`effects/ripple.effect` opens from the file tree into the graph editor (9
+nodes, 13 wires, the palette, the input/output rows, the parameter slider);
+editing the description and switching files and back shows the change
+round-tripped through the stored file; no MUI portal roots escaped to
+`document.body`; no console errors. The game preview kept running beside it.
+
+Tests: `EffectFileEditor.test.tsx` (6) covers parse/serialize/empty/broken/
+no-write-on-open/read-only pass-through, `editor/__tests__/readOnly.test.tsx`
+(9) covers both read-only layers, and `esbuildCompiler.test.ts` gained a case
+asserting an imported `.effect` arrives in the bundle as data. Suite: 418.
 
 ## 7. Phase 3 — Runtime
 

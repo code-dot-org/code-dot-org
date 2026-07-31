@@ -14,6 +14,7 @@ describe('projectFiles', () => {
       'actors/ground.js',
       'actors/player.actor',
       'animations/game.anim',
+      'effects/ripple.effect',
       'maps/level1.map',
       'rules/animation.js',
       'rules/gravity.js',

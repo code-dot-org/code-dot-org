@@ -6,6 +6,7 @@ import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
 import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
+import {EffectFileEditor} from './effect/EffectFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 
 /**
@@ -15,11 +16,12 @@ import {MapEditor} from './mapEditor/MapEditor';
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
  * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, `scene`,
- * and `world` are Blockly-authored; `map` is a scene-instantiation document and
- * `anim` an animation file — both JSON on disk with no CodeMirror language.
- * `editorComponents` routes each to its custom editor (the Blockly workspace
- * editor, the visual map editor, or the animation editor). Images (`png`) are
- * supported (shown in the tree, handed to the game) but not edited.
+ * and `world` are Blockly-authored; `map` is a scene-instantiation document,
+ * `anim` an animation file, and `effect` a shader graph — all JSON on disk with
+ * no CodeMirror language. `editorComponents` routes each to its custom editor
+ * (the Blockly workspace editor, the visual map editor, the animation editor,
+ * or the effect graph editor). Images (`png`) are supported (shown in the tree,
+ * handed to the game) but not edited.
  */
 export const WORLD_EDITABLE_FILE_TYPES = [
   'js',
@@ -35,6 +37,9 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'map',
   // A `.anim` is an animation file (JSON), edited in the visual animation editor.
   'anim',
+  // An `.effect` is a node graph that compiles to a GLSL shader, edited in the
+  // effect editor (specs/EFFECT_EDITOR.md).
+  'effect',
 ];
 const IMAGE_FILE_TYPES = ['png'];
 
@@ -55,6 +60,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     world: 'world',
     map: 'map',
     anim: 'anim',
+    effect: 'effect',
   },
   languageExtensions: {
     javascript: javascript(),
@@ -70,6 +76,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     world: BlocklyFileEditor,
     map: MapEditor,
     anim: AnimationEditor,
+    effect: EffectFileEditor,
   },
   // File-browser icons for World's own extensions (all FontAwesome solid). The
   // built-in types (js/json/png/…) keep their defaults; these give each World

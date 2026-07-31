@@ -114,10 +114,20 @@ function historyReducer(
   }
 }
 
-/** Document state with undo/redo. */
+/**
+ * Document state with undo/redo.
+ *
+ * `readOnly` is enforced here rather than only in the UI, and that is the
+ * point: it is the one place every edit in the editor passes through, so a
+ * control that forgets to disable itself still cannot change the file. The UI
+ * disables those controls too — a field that accepts typing and discards it
+ * reads as a bug — but this is what makes read-only true rather than intended.
+ */
 export function useEffectDocument(
   initial: EffectDocument,
+  options: {readOnly?: boolean} = {},
 ): UseEffectDocumentResult {
+  const {readOnly = false} = options;
   const [state, dispatch] = useReducer(historyReducer, {
     past: [],
     present: initial,
@@ -126,9 +136,13 @@ export function useEffectDocument(
   });
 
   const update = useCallback<UseEffectDocumentResult['update']>(
-    (change, options) =>
-      dispatch({type: 'update', change, coalesce: options?.coalesce}),
-    [],
+    (change, options) => {
+      if (readOnly) {
+        return;
+      }
+      dispatch({type: 'update', change, coalesce: options?.coalesce});
+    },
+    [readOnly],
   );
 
   const reset = useCallback(
@@ -146,9 +160,12 @@ export function useEffectDocument(
       reset,
       undo,
       redo,
-      canUndo: state.past.length > 0,
-      canRedo: state.future.length > 0,
+      // Read-only reports no history rather than a disabled-looking one: with
+      // no edit possible there is nothing to undo, and the buttons are already
+      // driven by these two flags.
+      canUndo: !readOnly && state.past.length > 0,
+      canRedo: !readOnly && state.future.length > 0,
     }),
-    [state, update, reset, undo, redo],
+    [state, update, reset, undo, redo, readOnly],
   );
 }
