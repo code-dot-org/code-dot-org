@@ -288,8 +288,6 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        {/* The lesson plan behind this dialog already owns the page's h1, so
-            the dialog title is an h2 with the h1 look. */}
         <Typography variant="h1" component="h2">
           {level.display_name || scriptLevel.name || level.name}
         </Typography>
