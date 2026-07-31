@@ -1,5 +1,7 @@
 import {type ReactFlowInstance} from '@xyflow/react';
 
+import {waitForShareFailureRefresh} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ShareFailure, ShareFailureType} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
@@ -8,6 +10,7 @@ import {
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {getStore} from '@cdo/apps/redux';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {createSketchSnapshotBlob} from './createSketchSnapshotBlob';
@@ -51,22 +54,26 @@ export const handleSaveToBackpack = async (
   backpackApi: BackpackClientApi | undefined,
   dialogControl: DialogControlInterface,
   backpackFileList: string[],
-  errorCallback: (error: string) => void,
-  moderationState: {
-    isBlockedAbuse?: boolean;
-    shareFailure?: ShareFailure | null;
-  }
+  errorCallback: (error: string) => void
 ) => {
   if (!reactFlow || !backpackApi) {
     return;
   }
 
-  // A flagged sketch must not be copied into the Backpack, where it would
-  // outlive the moderation state attached to this project.
-  const blockedMessage = moderationState.isBlockedAbuse
+  // Flush save so we can read the latest moderation state.
+  try {
+    await Lab2Registry.getInstance().getProjectManager()?.flushSave();
+    await waitForShareFailureRefresh();
+  } catch (error) {
+    errorCallback('Could not save your sketch. Please try again.');
+    return;
+  }
+
+  const {isBlockedAbuse, shareFailure} = getStore().getState().lab;
+  const blockedMessage = isBlockedAbuse
     ? ABUSE_BLOCKED_MESSAGE
-    : moderationState.shareFailure
-    ? getShareFailureMessage(moderationState.shareFailure)
+    : shareFailure
+    ? getShareFailureMessage(shareFailure)
     : undefined;
   if (blockedMessage) {
     await dialogControl.showDialog({
