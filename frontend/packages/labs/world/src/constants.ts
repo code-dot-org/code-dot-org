@@ -105,9 +105,10 @@ const ruleShim = (exportName: string): string =>
 // moves arrow-controlled actors; "Has Appearance" draws sprites and animations.
 // The rules are project modules (`rules/*`), imported by the generated world.
 //
-// Declarations first, then the map: `load map` builds the world, and a `use
-// rule` below it would arrive too late to be part of it (WorldBuilder throws
-// rather than quietly dropping it).
+// Rules and animations first, then the map: `load map` builds the world, and a
+// `use rule` below it would arrive too late to be part of it (WorldBuilder
+// throws rather than quietly dropping it). Only those two are ordered — `set`
+// and `add effect` forward to the live world, so they may sit anywhere.
 const MAIN_WORLD = JSON.stringify(
   {
     blocks: {

@@ -245,11 +245,21 @@ world.loadMap(Level2);
 export default world;
 ```
 
-The two halves are ordered: everything declarative (`useRules`, `useAnimations`,
-`addEffect`, `set`) must come before the first placement, because the first
-call that needs a live world builds it. A declaration arriving after that would
-have nothing to affect, so it throws rather than doing nothing quietly — Blockly
-blocks can be reordered by dragging, and the mistake is easy to make.
+The first call that needs actors builds the World, and what that means for a
+call arriving afterwards depends on whether the live World can still answer it.
+
+`useRules` and `useAnimations` must come first. Rules decide trait membership
+for every actor, and the animation registry is seeded once when the World is
+constructed, so neither can be applied to a world that already exists. Placing
+one below `load map` throws rather than doing nothing quietly — Blockly blocks
+are reordered by dragging, and a world silently missing a rule the learner can
+see they asked for is the worse outcome.
+
+`set` and `addEffect` are not ordered at all. Both have exact counterparts on
+the live `World`, so after it is built they simply forward to it. Both are also
+blocks a learner may place in an event handler, where they land on the live
+world and mean the same thing; making them care where they sit inside a
+`.world` file would be an arbitrary rule with nothing behind it.
 
 ## Actor
 

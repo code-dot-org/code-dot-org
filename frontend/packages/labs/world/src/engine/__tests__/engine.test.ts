@@ -611,12 +611,6 @@ describe('WorldBuilder declaration order', () => {
     );
   });
 
-  it('refuses a property override added after the actors are placed', () => {
-    expect(() => placed().set(StrengthProperty, 100)).toThrow(
-      /must come before the actors are placed/,
-    );
-  });
-
   it('names the block to move, not the internal state', () => {
     // The message is read by a learner in the console, so it says what to drag.
     expect(() => placed().useAnimations({})).toThrow(
@@ -628,6 +622,43 @@ describe('WorldBuilder declaration order', () => {
     expect(() =>
       placed().define('a', new ActorBuilder({id: 'a', name: 'A'})),
     ).not.toThrow();
+  });
+
+  // The other half of the rule: a call the live world CAN answer is forwarded
+  // to it rather than refused. These are the two that also exist as blocks a
+  // learner may place in an event handler, where they land on the live world
+  // and mean the same thing — so where they sit inside a `.world` file must not
+  // decide whether they work.
+
+  it('forwards a property set to the live world', () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    const world = builder.getWorld();
+
+    builder.set(StrengthProperty, 2500);
+
+    expect(world.get(StrengthProperty)).toBe(2500);
+  });
+
+  it('forwards an effect to the live world', () => {
+    // A viewport filter has no relationship to the actors at all — the driver
+    // reads `world.effects()` every frame — so ordering here is meaningless.
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const world = builder.getWorld();
+
+    builder.addEffect('effects/underwater', {
+      version: 1,
+      name: 'Underwater',
+      parameters: [],
+      nodes: [],
+      edges: [],
+      functions: [],
+    });
+
+    expect(world.effects().map(effect => effect.path)).toEqual([
+      'effects/underwater',
+    ]);
   });
 });
 

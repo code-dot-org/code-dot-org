@@ -1070,3 +1070,18 @@ they existed for these two blocks alone. `builderContextExtension` stays, for
 That is the same thing `set position` asks of them, so it is not a new idea to
 learn — but it does mean the toolbox no longer names the distinction, and the
 tutorial has to.
+
+**A follow-on defect, found by asking the obvious question.** Removing the Scene
+gave `WorldBuilder` a blanket rule: once the world is built, every declarative
+method throws. Applied to `addEffect` that was wrong, and the merge made it
+visibly wrong — `add effect … to the world` is one block meant to work in a
+`.world` body and in a handler, and the guard made it throw when dragged below
+`load map`, for no reason anyone could state. A viewport filter has no
+relationship to the actors; the driver re-reads `world.effects()` every frame.
+
+The right test is not "is this declarative" but "can the live World still answer
+it". `set` and `addEffect` have exact counterparts on `World`, so they now
+forward to it. `useRules` and `useAnimations` do not — rules decide trait
+membership for every actor, and the animation registry is seeded once at
+construction — so those still throw. `set` had the same latent bug for the same
+reason and is fixed with it.
