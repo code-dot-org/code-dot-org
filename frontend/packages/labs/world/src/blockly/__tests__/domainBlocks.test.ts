@@ -626,6 +626,30 @@ describe('domain block generators', () => {
   });
 });
 
+describe('world_slider', () => {
+  it('generates the bare number, like the math_number it stands in for', () => {
+    const code = generatorFor('world_slider')(
+      {getFieldValue: () => 0.035} as never,
+      {} as never,
+      {} as never,
+    ) as [string, number];
+
+    expect(code[0]).toBe('0.035');
+  });
+
+  it('generates 0 rather than NaN for an empty field', () => {
+    // A shadow the learner has cleared must not emit `actor.addEffect(…, NaN)`,
+    // which reaches the shader as a uniform and blanks the sprite.
+    const code = generatorFor('world_slider')(
+      {getFieldValue: () => null} as never,
+      {} as never,
+      {} as never,
+    ) as [string, number];
+
+    expect(code[0]).toBe('0');
+  });
+});
+
 describe('actor-placing block generators', () => {
   // These blocks read block.id and register imports on generator.definitions_
   // (which Blockly's finish() hoists), so they need richer fakes than `emit`.

@@ -39,8 +39,10 @@ import {
   ruleParamsInitExtension,
   ruleParamsMutator,
 } from './extensions/ruleParamsMutator';
+import {sliderRangeMutator} from './extensions/sliderRange';
 import {stepOrderExtension} from './extensions/stepOrder';
 import {worldContextExtension} from './extensions/worldContext';
+import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {label} from './label';
 import {
@@ -1234,6 +1236,32 @@ const worldVector = defineBlock({
   },
 });
 
+// The slider: `math_number` with the range made visible and reachable.
+//
+// Offered as the shadow for any effect parameter that declares bounds (see
+// effectParamsMutator), which is why it is here rather than in the toolbox —
+// a learner meets it already plugged into `add effect`, and can still drop a
+// getter or an expression on top of it like any other shadow.
+const worldSlider = defineBlock({
+  type: 'world_slider',
+  message0: '%1',
+  args0: [fieldSliderArg('NUM', 0)],
+  output: 'Number',
+  // The number blocks' colour: it stands in for `math_number` and should not
+  // read as a different kind of thing.
+  style: 'math_blocks',
+  mutator: sliderRangeMutator,
+  tooltip: 'A number in a fixed range — type it, or drag the slider.',
+  generator: {
+    javascript(block) {
+      return [
+        String(Number(block.getFieldValue('NUM')) || 0),
+        Order.ATOMIC,
+      ] as [string, number];
+    },
+  },
+});
+
 const worldVectorComponent = defineBlock({
   type: 'world_vector_component',
   message0: '%1 of %2',
@@ -1912,6 +1940,7 @@ export const DOMAIN_BLOCKS = [
   worldPrint,
   worldEventValue,
   worldVector,
+  worldSlider,
   worldVectorComponent,
   worldThisActor,
   ActorVariable.getterBlock,
