@@ -42,8 +42,6 @@ class FilesApi < Sinatra::Base
     return host_ip_address.to_s if public_ip_address?(host_ip_address)
 
     nil
-  rescue SocketError
-    nil
   end
 
   def fetch_image_for_moderation(location, redirect_limit = 5)
@@ -70,33 +68,46 @@ class FilesApi < Sinatra::Base
     http.open_timeout = 3
     http.read_timeout = 3
 
-    response = http.request_get(path + query_string)
-    if response.is_a?(Net::HTTPRedirection)
-      redirect_target = response['location']
-      raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
-      redirect_url = URI.join(url.to_s, redirect_target).to_s
-      return fetch_image_for_moderation(redirect_url, redirect_limit - 1)
+    redirect_url = nil
+    body = nil
+    content_type = nil
+
+    # Stream the body so we can enforce max_file_size before an arbitrarily large
+    # payload is fully buffered (Content-Length may be missing or incorrect).
+    http.request_get(path + query_string) do |response|
+      if response.is_a?(Net::HTTPRedirection)
+        redirect_target = response['location']
+        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+        redirect_url = URI.join(url.to_s, redirect_target).to_s
+        next
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("Image URL request failed with status #{response.code}.")
+      end
+
+      content_type = response.content_type
+      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+        raise AzureAiContentSafety::UnsupportedContentType
+      end
+
+      content_length = response['content-length']&.to_i
+      if content_length && content_length > max_file_size
+        raise StandardError.new('Image URL content exceeds maximum file size.')
+      end
+
+      body = +''
+      response.read_body do |chunk|
+        body << chunk
+        if body.bytesize > max_file_size
+          raise StandardError.new('Image URL content exceeds maximum file size.')
+        end
+      end
     end
 
-    unless response.is_a?(Net::HTTPSuccess)
-      raise StandardError.new("Image URL request failed with status #{response.code}.")
-    end
+    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
 
-    content_type = response.content_type
-    unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
-      raise AzureAiContentSafety::UnsupportedContentType
-    end
-
-    content_length = response['content-length']&.to_i
-    if content_length && content_length > max_file_size
-      raise StandardError.new('Image URL content exceeds maximum file size.')
-    end
-
-    body = response.body
     raise StandardError.new('No image data provided.') if body.nil? || body.empty?
-    if body.bytesize > max_file_size
-      raise StandardError.new('Image URL content exceeds maximum file size.')
-    end
 
     [body, content_type]
   end
