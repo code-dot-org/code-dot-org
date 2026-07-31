@@ -189,21 +189,10 @@ const PLAYER_ACTOR = JSON.stringify(
                   // in the dropdown because the lab feeds the project's
                   // animations to the block (Phase D). Position is set by the
                   // Scene when it places this actor, not here.
-                  nextBlock(
-                    {
-                      type: 'world_play_animation',
-                      fields: {ANIMATION: 'playerBob'},
-                    },
-                    // Plays the shader graph in effects/ripple.effect on the
-                    // player's image. Applied here so the whole path — graph
-                    // editor, block, compiled GLSL, Phaser filter — is visible
-                    // on a fresh project rather than only after the learner
-                    // wires it up.
-                    {
-                      type: 'world_use_effect',
-                      fields: {EFFECT: 'effects/ripple'},
-                    },
-                  ),
+                  {
+                    type: 'world_play_animation',
+                    fields: {ANIMATION: 'playerBob'},
+                  },
                 ),
               ),
             ),
@@ -335,8 +324,10 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         folderId: 'rules',
       },
       // A starter shader graph, so `effects/` is not an empty folder and the
-      // effect editor opens on something worth reading. Nothing uses it yet —
-      // the `use effect` block that applies it is the next increment.
+      // effect editor opens on something worth reading. Deliberately not
+      // applied to anything: the tutorial is about gravity and input, and a
+      // permanently rippling player would be a distraction from it. Dragging
+      // `use effect` under an actor is how a learner tries it.
       rippleEffect: {
         id: 'rippleEffect',
         name: 'ripple.effect',
