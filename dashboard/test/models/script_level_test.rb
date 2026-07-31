@@ -1267,6 +1267,22 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "can only be used on migrated scripts", e.message
   end
 
+  test 'add_variant refuses a UI Test variant in a prod script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create(:script, :in_single_unit_course, is_migrated: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    level = create(:level)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest variant')
+
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant ui_test_level
+    end
+    assert_equal [level], script_level.reload.levels.to_a
+  end
+
   test 'level_keys with UI Test levels are only valid in ui-test-* scripts' do
     level = create(:level, name: 'UI Test ScriptLevelTest level')
 

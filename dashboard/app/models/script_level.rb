@@ -781,13 +781,19 @@ class ScriptLevel < ApplicationRecord
     raise "cannot add variant to non-custom level" unless levels.first.level_num == 'custom'
     existing_level = levels.first
 
-    levels << new_level
-    update!(
-      level_keys: levels.map(&:key),
-      variants: {
-        existing_level.name => {"active" => false}
-      }
-    )
+    # Use a transaction so that the database is not modified if any validations
+    # fail: the append writes the join row immediately, before update! runs
+    # them. requires_new is necessary to ensure that the database is restored to
+    # its original state when running inside of another transaction.
+    transaction(requires_new: true) do
+      levels << new_level
+      update!(
+        level_keys: levels.map(&:key),
+        variants: {
+          existing_level.name => {"active" => false}
+        }
+      )
+    end
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end
