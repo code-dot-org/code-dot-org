@@ -52,7 +52,7 @@ Feature: Teacher Lesson Plan
 
     # Check for Teaching Guide
     And I wait until element "h2:contains(Teaching Guide)" is visible
-    And I wait until element "h2:contains(Activity 1)" is visible
+    And I wait until element "h3:contains(Activity 1)" is visible
     And I wait until element ".uitest-ProgressPill" is visible
 
     # Check that the lesson plan looks correct
