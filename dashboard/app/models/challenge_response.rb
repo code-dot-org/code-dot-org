@@ -26,10 +26,7 @@ class ChallengeResponse < ApplicationRecord
   has_many :challenge_response_assets, dependent: :destroy
 
   # Lifecycle of the AI evaluation of this response. NULL means no evaluation
-  # has been requested. The gap before FAILURE leaves room for more terminal
-  # states and mirrors SharedConstants::RUBRIC_AI_EVALUATION_STATUS. The
-  # violation states mean the student's text tripped the PII or profanity
-  # filter, so no request was sent to the LLM.
+  # has been requested.
   enum evaluation_status: {
     queued: 0,
     running: 1,

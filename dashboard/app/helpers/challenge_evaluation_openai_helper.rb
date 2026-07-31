@@ -1,8 +1,6 @@
 # Thin OpenAI chat completions client for challenge response evaluation.
 # The caller supplies the messages and response_format (built by
 # ChallengeEvaluationPromptHelper); this class only handles transport.
-# Modeled on AiEvaluationOpenaiHelper::Client, with the response_format
-# passed in rather than hardcoded because the schema varies per rubric.
 module ChallengeEvaluationOpenaiHelper
   class Client
     attr_accessor :api_key, :model
