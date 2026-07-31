@@ -151,3 +151,42 @@ export const stepOptionsExtension = liveDropdown(
   'STEP',
   stepOptions,
 );
+
+// ── Events (for `emit`) ─────────────────────────────────────────────────────
+// The `EVENT` dropdown lists every event a rule in play declares, so a step or
+// an action can raise one. The value uses the SAME encoding as a trait — a
+// built-in's export name, or `<modulePath>#<exportName>` for a project rule's —
+// so `refFromTraitValue` decodes it unchanged, including the self-reference case
+// that lets a rule emit its own event without importing its own module.
+
+/**
+ * `[label, value]` options for the event dropdown: every event a rule in play
+ * declares, labelled `<Rule> ▸ <event>`. Deduped, sorted by label.
+ *
+ * Every rule's events, not just the authoring rule's own. A rule may legitimately
+ * raise another's — "Has Gravity" is what tells an actor it started falling, and
+ * a project rule extending it would say the same thing the same way.
+ */
+export function eventOptions(): Array<[string, string]> {
+  const seen = new Set<string>();
+  const options: Array<[string, string]> = [];
+  for (const rule of [...BUILTIN_RULE_META, ...projectByModule.values()]) {
+    for (const event of rule.events) {
+      const value = traitValue(event.ref);
+      if (!value || seen.has(value)) {
+        continue;
+      }
+      seen.add(value);
+      options.push([`${rule.name} \u25b8 ${event.name}`, value]);
+    }
+  }
+  options.sort((a, b) => a[0].localeCompare(b[0]));
+  return options.length ? options : [['(none)', '']];
+}
+
+/** Make a block's `EVENT` dropdown reflect the events currently in play. */
+export const eventOptionsExtension = liveDropdown(
+  'world_event_options',
+  'EVENT',
+  eventOptions,
+);

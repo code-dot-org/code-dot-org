@@ -740,6 +740,92 @@ describe('color spelling', () => {
   });
 });
 
+describe('world_emit', () => {
+  // The block that raises an event. Until it existed a rule could DECLARE an
+  // event and nothing in the language could fire it.
+  const run = (
+    _type: string,
+    fields: Record<string, string>,
+    definitions: Record<string, string>,
+    _body: string,
+    values: Record<string, string>,
+  ): string =>
+    generatorFor('world_emit')(
+      {getFieldValue: (name: string) => fields[name]} as never,
+      {
+        definitions_: definitions,
+        valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+      } as never,
+      {} as never,
+    ) as string;
+  it('emits a built-in event through the WorldLab namespace', () => {
+    const code = run('world_emit', {EVENT: 'StartsFallingEvent'}, {}, '', {
+      ACTOR: 'other',
+    });
+    expect(code).toBe('world.emit(WorldLab.StartsFallingEvent, other);\n');
+  });
+
+  it('imports a project rule’s event from its module', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_emit',
+      {EVENT: 'rules/wind#GustedEvent'},
+      defs,
+      '',
+      {ACTOR: 'other'},
+    );
+    expect(code).toBe('world.emit(GustedEvent, other);\n');
+    expect(defs['named:rules/wind:GustedEvent']).toBe(
+      'import {GustedEvent} from "rules/wind";',
+    );
+  });
+
+  it('defaults to the principal actor when the socket is empty', () => {
+    expect(run('world_emit', {EVENT: 'StartsFallingEvent'}, {}, '', {})).toBe(
+      'world.emit(WorldLab.StartsFallingEvent, actor);\n',
+    );
+  });
+
+  it('emits nothing when no rule in play declares an event', () => {
+    // The dropdown's "(none)" placeholder. `world.emit(undefined, actor)` would
+    // be a runtime error for a block the learner has not finished.
+    expect(run('world_emit', {EVENT: ''}, {}, '', {})).toBe('');
+  });
+});
+
+describe('vector arithmetic blocks', () => {
+  // Gravity's step is the worked example: "add direction × strength × delta to
+  // the velocity" could not be written at all before these.
+  const value = (type: string, values: Record<string, string>) =>
+    (
+      generatorFor(type)(
+        {} as never,
+        {
+          valueToCode: (_b: unknown, name: string) => values[name] ?? '',
+        } as never,
+        {} as never,
+      ) as [string, number]
+    )[0];
+
+  it('scales, adds and rotates', () => {
+    expect(value('world_vector_scale', {VECTOR: 'v', FACTOR: '3'})).toBe(
+      'v.scale(3)',
+    );
+    expect(value('world_vector_add', {A: 'v', B: 'w'})).toBe('v.add(w)');
+    expect(value('world_vector_rotate', {VECTOR: 'v', DEGREES: '180'})).toBe(
+      'v.rotate(180)',
+    );
+  });
+
+  it('falls back to a zero vector rather than emitting nothing', () => {
+    // An empty socket must still produce a Vector: `undefined.scale(…)` would
+    // take the game down on the first tick.
+    expect(value('world_vector_scale', {})).toBe(
+      'new WorldLab.Vector(0, 0).scale(0)',
+    );
+  });
+});
+
 describe('world_rgba block shape', () => {
   const rgbaBlock = () => {
     const block = DOMAIN_BLOCKS.find(b => b.type === 'world_rgba');
@@ -1373,6 +1459,7 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_query',
       'world_return',
       'world_rule_step',
+      'world_emit',
       'world_step_delta',
       // Parameters are declared via the +/− mutator (no toolbox block); only the
       // getters that read a parameter in the body appear here.

@@ -436,10 +436,30 @@ describe('actions and queries (imperative members)', () => {
       `export const InvertAction = rule.addAction("Invert", (world) => {\nworld.set(WorldLab.DirectionProperty, 1);\n}, {name: "Invert"});`,
     );
     // An actor query is added to its trait, runs on `actor`, and declares its
-    // return type.
+    // return type. It also opens by binding `world` from the actor: the engine
+    // invokes it as `(actor, …args)` with no world in the signature, but a body
+    // may ask a question about the world ("standing on any ground?"), and every
+    // block that names `world` should work in one.
     expect(code).toContain(
-      `export const IsGustingQuery = WindblownTrait.addQuery("Is_Gusting", (actor) => {\nreturn actor.get(WorldLab.FallingProperty);\n}, {name: "Is Gusting", returns: "boolean"});`,
+      `export const IsGustingQuery = WindblownTrait.addQuery("Is_Gusting", (actor) => {\n  const world = actor.world;\nreturn actor.get(WorldLab.FallingProperty);\n}, {name: "Is Gusting", returns: "boolean"});`,
     );
+  });
+
+  it('does not bind `world` in a world-scoped body, which already has one', () => {
+    const meta = parseRuleMeta(
+      'rules/wind',
+      ruleFile('Has Wind', action('Invert')),
+    )!;
+    const code = ruleMetaToModule(
+      meta,
+      new Map([
+        [
+          ruleBodyKey('action', 'world', undefined, 'Invert'),
+          {params: [], body: 'world.set(X, 1);\n'},
+        ],
+      ]),
+    );
+    expect(code).not.toContain('const world = actor.world');
   });
 
   it('adds no namespace import for a purely declarative rule', () => {

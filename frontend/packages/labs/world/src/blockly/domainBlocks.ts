@@ -74,6 +74,8 @@ import type {
   RuleMeta,
 } from './ruleMeta';
 import {
+  eventOptions,
+  eventOptionsExtension,
   stepOptions,
   stepOptionsExtension,
   traitOptions,
@@ -648,10 +650,28 @@ const COVERED_PROPERTY_EXPORTS: ReadonlySet<string> = new Set([
   'AnimationProperty', // world_play_animation
 ]);
 
-/** A property gets a generated block unless it is read-only or bespoke-covered. */
+/**
+ * Whether a property gets a generated `set` block.
+ *
+ * Not read-only (a step owns the value), and not one a bespoke block already
+ * sets — `set position`, `set sprite`, `play animation` read better than the
+ * generated form would.
+ */
 const isSettable = (property: PropertyMeta): boolean =>
   !property.readonly &&
   !COVERED_PROPERTY_EXPORTS.has(property.ref.exportName) &&
+  property.ref.exportName !== '';
+
+/**
+ * Whether a property gets a generated `get` block. Anything with a name does.
+ *
+ * Separate from {@link isSettable}, which it used to share. Conflating them cost
+ * two things: a READ-ONLY property could not be read — the whole point of one —
+ * so a rule declaring `falling` had no way to look at it, not even from its own
+ * query; and `position` had no getter at all, because a bespoke `set position`
+ * block suppressed the generated pair wholesale.
+ */
+const isGettable = (property: PropertyMeta): boolean =>
   property.ref.exportName !== '';
 
 /** A typed value slot — the shared shape of a property, an action parameter, and
@@ -970,13 +990,16 @@ for (const rule of AUTHORING_RULES) {
   // `rule.properties` is already world-scoped members then each trait's — the
   // same order the two nested loops walked.
   for (const property of rule.properties) {
-    if (!isSettable(property)) {
-      continue;
+    if (isSettable(property)) {
+      const setBlock = defineSetPropertyBlock(property);
+      PROPERTY_BLOCKS.push(setBlock);
+      types.push(setBlock.type);
     }
-    const setBlock = defineSetPropertyBlock(property);
-    const getBlock = defineGetPropertyBlock(property);
-    PROPERTY_BLOCKS.push(setBlock, getBlock);
-    types.push(setBlock.type, getBlock.type);
+    if (isGettable(property)) {
+      const getBlock = defineGetPropertyBlock(property);
+      PROPERTY_BLOCKS.push(getBlock);
+      types.push(getBlock.type);
+    }
   }
   PROPERTY_BLOCK_TYPES_BY_RULE.set(rule, types);
 }
@@ -1378,6 +1401,117 @@ const worldRgba = defineBlock({
     },
   },
 });
+
+// Vector arithmetic. Two blocks, because a step that does physics needs them and
+// there was no way to express either: `world_vector` builds one and
+// `world_vector_component` reads an axis back out, but nothing combined them.
+// Gravity's own step is the worked example — "add (direction × strength × delta)
+// to the velocity" is the whole of applying gravity, and without these it cannot
+// be written in blocks at all.
+
+const worldVectorScale = defineBlock({
+  type: 'world_vector_scale',
+  message0: '%1 × %2',
+  args0: [
+    {type: 'input_value', name: 'VECTOR', check: 'Vector'},
+    {type: 'input_value', name: 'FACTOR', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Vector',
+  style: 'location_blocks',
+  tooltip: 'A vector stretched (or shrunk) by a number.',
+  generator: {
+    javascript(block, generator) {
+      const vector =
+        generator.valueToCode(block, 'VECTOR', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      const factor = generator.valueToCode(block, 'FACTOR', Order.NONE) || '0';
+      return [`${vector}.scale(${factor})`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+const worldVectorAdd = defineBlock({
+  type: 'world_vector_add',
+  message0: '%1 + %2',
+  args0: [
+    {type: 'input_value', name: 'A', check: 'Vector'},
+    {type: 'input_value', name: 'B', check: 'Vector'},
+  ],
+  inputsInline: true,
+  output: 'Vector',
+  style: 'location_blocks',
+  tooltip: 'Two vectors added together.',
+  generator: {
+    javascript(block, generator) {
+      const a =
+        generator.valueToCode(block, 'A', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      const b =
+        generator.valueToCode(block, 'B', Order.NONE) ||
+        'new WorldLab.Vector(0, 0)';
+      return [`${a}.add(${b})`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+// A vector built from two COMPUTED components — the counterpart to
+// `world_vector_component`, which takes one apart. `world_vector` holds a
+// literal in its arrow-grid field, so until now a vector could only be typed,
+// never derived: "set velocity to (its x, 0)" — zeroing one axis on landing —
+// had no expression that could say it.
+const worldVectorOf = defineBlock({
+  type: 'world_vector_of',
+  message0: 'vector x %1 y %2',
+  args0: [
+    {type: 'input_value', name: 'X', check: 'Number'},
+    {type: 'input_value', name: 'Y', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Vector',
+  style: 'location_blocks',
+  tooltip: 'A vector built from an x and a y value.',
+  generator: {
+    javascript(block, generator) {
+      const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
+      const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
+      return [`new WorldLab.Vector(${x}, ${y})`, Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_vector_of', [
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+]);
+
+const worldVectorRotate = defineBlock({
+  type: 'world_vector_rotate',
+  message0: 'rotate %1 by %2°',
+  args0: [
+    {type: 'input_value', name: 'VECTOR', check: 'Vector'},
+    {type: 'input_value', name: 'DEGREES', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Vector',
+  style: 'location_blocks',
+  tooltip: 'A vector turned by an angle, in degrees.',
+  generator: {
+    javascript(block, generator) {
+      const vector =
+        generator.valueToCode(block, 'VECTOR', Order.MEMBER) ||
+        'new WorldLab.Vector(0, 0)';
+      const degrees =
+        generator.valueToCode(block, 'DEGREES', Order.NONE) || '0';
+      return [`${vector}.rotate(${degrees})`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_vector_rotate', [
+  {name: 'DEGREES', shadow: {type: 'math_number', fields: {NUM: 90}}},
+]);
 
 const worldVectorComponent = defineBlock({
   type: 'world_vector_component',
@@ -1853,11 +1987,23 @@ const worldRuleTrait = defineBlock({
   generator: noGenerator,
 });
 
+// `WRITABLE` distinguishes a knob from a readout. A property a STEP owns —
+// gravity's "falling", which its landing step sets and nothing else may — must
+// not grow a `set` block: offering one invites a learner to write a value the
+// next tick overwrites, which looks like the block is broken. The engine has
+// carried `readonly` since the built-in rules were written; there was simply no
+// way to say it in a `.rule`.
+const PROPERTY_ACCESS_OPTIONS: Array<[string, string]> = [
+  ['property', 'writable'],
+  ['read-only property', 'readonly'],
+];
+
 const worldRuleProperty = defineBlock({
   type: 'world_rule_property',
-  message0: 'define %1 property %2 with default %3',
+  message0: 'define %1 %2 %3 with default %4',
   args0: [
     {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
+    {type: 'field_dropdown', name: 'ACCESS', options: PROPERTY_ACCESS_OPTIONS},
     {type: 'field_input', name: 'NAME', text: 'strength'},
     {type: 'field_input', name: 'DEFAULT', text: '0'},
   ],
@@ -1867,7 +2013,8 @@ const worldRuleProperty = defineBlock({
   style: 'default',
   tooltip:
     'Define a property — a world property at the rule level, an actor property ' +
-    'inside a "define trait".',
+    'inside a "define trait". A read-only one can be read but not set, for a ' +
+    'value a step owns.',
   generator: noGenerator,
 });
 
@@ -1997,6 +2144,53 @@ const worldRuleStep = defineBlock({
 
 // The frame time (seconds since the last tick) — bound as `delta` in a step
 // closure, so this reporter is only meaningful inside a `define step` body.
+// `emit <event> for <actor>` — the block that raises an event.
+//
+// Until this existed a rule could DECLARE an event and nothing in the language
+// could fire it: `define event` produced a real `GameEvent` that only the
+// engine's own TypeScript rules ever emitted. A rule's events are how it talks
+// to a learner's `when …` handlers, so without this a project rule could not
+// say anything.
+//
+// The subject is an ACTOR because that is what an event is raised *for* — a
+// handler is registered on an actor and receives it. `world.emit` is the world's
+// method, so this is only valid where `world` is bound (a step, an action, an
+// event handler), which `worldContext` checks.
+const worldEmit = defineBlock({
+  type: 'world_emit',
+  message0: 'emit %1 for %2',
+  args0: [
+    {type: 'field_dropdown', name: 'EVENT', options: eventOptions()},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    eventOptionsExtension,
+    actorInputExtension,
+    worldContextExtension,
+  ],
+  style: 'event_blocks',
+  tooltip:
+    'Raise an event for an actor — every “when …” handler listening for it runs.',
+  generator: {
+    javascript(block, generator) {
+      const event = block.getFieldValue('EVENT');
+      if (!event) {
+        // The dropdown's "(none)" placeholder: no rule in play declares one.
+        return '';
+      }
+      const actor =
+        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
+      // `refCode` resolves a project event to the bare local name when the rule
+      // is emitting its OWN event (it is an `export const` in the module being
+      // written), and imports it otherwise.
+      return `world.emit(${refCode(refFromTraitValue(event), generator)}, ${actor});\n`;
+    },
+  },
+});
+
 const worldStepDelta = defineBlock({
   type: 'world_step_delta',
   message0: 'delta',
@@ -2057,6 +2251,10 @@ export const DOMAIN_BLOCKS = [
   worldPrint,
   worldEventValue,
   worldVector,
+  worldVectorScale,
+  worldVectorAdd,
+  worldVectorRotate,
+  worldVectorOf,
   worldSlider,
   worldRgba,
   worldVectorComponent,
@@ -2077,6 +2275,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleQuery,
   worldReturn,
   worldRuleStep,
+  worldEmit,
   worldStepDelta,
   worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
@@ -2153,6 +2352,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_query',
       'world_return', // ends a query's body
       'world_rule_step', // per-tick behavior (+ ordering)
+      'world_emit', // raise one of the events a rule declares
       'world_step_delta', // the frame time, inside a step
       ...PARAM_GETTER_TYPES, // read a parameter in the body (params via the +/− mutator)
     ],
@@ -2181,7 +2381,13 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'math_number',
       'math_arithmetic',
       'math_modulo',
+      // Absolute value and friends — `abs` is what a distance test needs.
+      'math_single',
       'world_vector',
+      'world_vector_of',
+      'world_vector_scale',
+      'world_vector_add',
+      'world_vector_rotate',
       'world_vector_component',
     ],
   },
@@ -2212,7 +2418,13 @@ export const DOMAIN_TOOLBOX: Toolbox = [
 
 type DomainBlock = (typeof DOMAIN_BLOCKS)[number];
 
-function generateRulePalette(rules: readonly RuleMeta[]): {
+/** `ownRuleModule` sentinel meaning "every rule is its own" (see `allRuleModules`). */
+const ALL_RULE_MODULES = '\u0000all';
+
+function generateRulePalette(
+  rules: readonly RuleMeta[],
+  ownRuleModule?: string,
+): {
   blocks: DomainBlock[];
   categories: ToolboxCategory[];
   eventTypes: string[];
@@ -2226,13 +2438,28 @@ function generateRulePalette(rules: readonly RuleMeta[]): {
     const actionTypes: string[] = [];
     const ruleEventTypes: string[] = [];
     for (const property of rule.properties) {
-      if (!isSettable(property)) {
-        continue;
+      // A rule's own read-only property IS settable inside that rule's own
+      // file. "Read-only" means the declaring rule owns the value, not that
+      // nothing may write it — gravity's landing step is what sets `falling`,
+      // and the built-in does exactly that. Outside its own `.rule` the setter
+      // stays absent, which is the guarantee the flag is for.
+      const ownProperty =
+        ownRuleModule === ALL_RULE_MODULES ||
+        (ownRuleModule !== undefined &&
+          property.ref.modulePath === ownRuleModule);
+      if (
+        isSettable(property) ||
+        (ownProperty && !isSettable(property) && property.readonly)
+      ) {
+        const setBlock = defineSetPropertyBlock(property);
+        blocks.push(setBlock);
+        propTypes.push(setBlock.type);
       }
-      const setBlock = defineSetPropertyBlock(property);
-      const getBlock = defineGetPropertyBlock(property);
-      blocks.push(setBlock, getBlock);
-      propTypes.push(setBlock.type, getBlock.type);
+      if (isGettable(property)) {
+        const getBlock = defineGetPropertyBlock(property);
+        blocks.push(getBlock);
+        propTypes.push(getBlock.type);
+      }
     }
     for (const query of rule.queries) {
       if (!query.returns || query.ref.exportName === '') {
@@ -2278,7 +2505,27 @@ function generateRulePalette(rules: readonly RuleMeta[]): {
  * static built-in palette. Callers (BlocklyFileEditor, BlocklyGenerator) pass the
  * project's parsed rule `RuleMeta`.
  */
-export function buildDomainPalette(projectRules: readonly RuleMeta[]): {
+export function buildDomainPalette(
+  projectRules: readonly RuleMeta[],
+  options: {
+    /**
+     * The module path of the `.rule` being edited, when one is. Its own
+     * read-only properties get `set` blocks here and nowhere else.
+     */
+    ownRuleModule?: string;
+    /**
+     * Define EVERY rule's read-only setters, whichever rule is being written.
+     *
+     * For the headless generator, which turns all of a project's Blockly files
+     * into code with one palette and so cannot scope per file. Its palette is
+     * never shown, so an extra block there costs nothing — where its ABSENCE is
+     * fatal: a `.rule` that legitimately sets its own read-only property fails
+     * to generate at all ("Invalid block definition for type
+     * world_set_…FallingProperty"), and the whole project stops compiling.
+     */
+    allRuleModules?: boolean;
+  } = {},
+): {
   blocks: DomainBlock[];
   toolbox: Toolbox;
   rootTypes: ReadonlySet<string>;
@@ -2295,7 +2542,10 @@ export function buildDomainPalette(projectRules: readonly RuleMeta[]): {
       rootTypes: ROOT_BLOCK_TYPES,
     };
   }
-  const palette = generateRulePalette(projectRules);
+  const palette = generateRulePalette(
+    projectRules,
+    options.allRuleModules ? ALL_RULE_MODULES : options.ownRuleModule,
+  );
   return {
     blocks: [...DOMAIN_BLOCKS, ...palette.blocks],
     toolbox: [

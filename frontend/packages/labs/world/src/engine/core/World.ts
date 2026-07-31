@@ -207,6 +207,10 @@ export class World {
   }
 
   addActor(actor: Actor): void {
+    // The back-reference an actor-scoped action or query reads to reach the
+    // world (see `Actor.world`). Set here because placement is what makes it
+    // true, and cleared by `clearActors` for the same reason.
+    actor.world = this;
     this.actorList.push(actor);
   }
 
@@ -456,6 +460,9 @@ export class World {
 
   /** Remove every actor (used by `WorldBuilder.clear`). */
   clearActors(): void {
+    for (const actor of this.actorList) {
+      actor.world = undefined;
+    }
     this.actorList.length = 0;
   }
 

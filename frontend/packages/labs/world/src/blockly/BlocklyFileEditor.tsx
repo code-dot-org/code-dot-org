@@ -20,7 +20,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
-import {projectFiles} from '../runtime/projectFiles';
+import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
@@ -64,6 +64,7 @@ function parseWorkspace(contents: string): BlocklySerialization {
 }
 
 export const BlocklyFileEditor = ({
+  fileId,
   initialContents,
   isReadOnly,
   onChange,
@@ -134,9 +135,17 @@ export const BlocklyFileEditor = ({
   // The block palette + toolbox for this project: the built-ins, extended with
   // the project's own declarative `.rule` rules (their blocks and categories).
   // Keyed per file, so switching to this editor picks up rules edited elsewhere.
+  // The `.rule` being edited, as the module path its members carry — so the
+  // palette can offer `set` blocks for THIS rule's own read-only properties and
+  // no others (see generateRulePalette). Undefined for every other file type.
+  const ownRuleModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
   const {blocks, toolbox} = useMemo(
-    () => buildDomainPalette(projectRuleMetas(files)),
-    [files],
+    () => buildDomainPalette(projectRuleMetas(files), {ownRuleModule}),
+    [files, ownRuleModule],
   );
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
