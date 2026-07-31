@@ -19,11 +19,11 @@ class AiGatewayAuthController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
-    # The gateway is the only backend for some models (e.g. Gemini image gen),
-    # so token minting is where regional model blocks are enforced for the
-    # client-direct path.
-    model_id = params[:selectedModelId]
-    if model_id.present? && !current_user.can_use_aichat_model?(model_id)
+    # The gateway serves Gemini for generation (see shouldUseAiGateway), and the
+    # token it mints is not bound to a model, so a token issued for one model can
+    # be replayed against another. Refuse to mint at all when Gemini is blocked
+    # rather than trusting a client-supplied model id we cannot enforce later.
+    if current_user.gemini_models_blocked?
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 

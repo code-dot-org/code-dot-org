@@ -3,12 +3,11 @@ import HttpClient from '../util/HttpClient';
 
 export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
 
-export async function fetchAccessToken(selectedModelId?: string) {
+export async function fetchAccessToken() {
   const response = await HttpClient.post(
     '/ai_gateway/access_token',
     JSON.stringify({
       aichatContext: AichatContextManager.getContext(),
-      selectedModelId,
     }),
     true,
     {
