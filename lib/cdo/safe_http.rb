@@ -15,9 +15,11 @@ module SafeHttp
     )
   end
 
-  # Resolve hostname and return the IP string if it is public, or equal to
-  # one of allow_ips. Returns nil if the address is not allowed.
-  # Raises SocketError if DNS lookup fails.
+  # SECURITY FIX: Resolve hostname once and return the IP string if it is
+  # public, or equal to one of allow_ips. Callers should pass this IP to
+  # http_client so the TCP connect cannot be redirected by a later DNS change
+  # (DNS rebinding). Returns nil if the address is not allowed. Raises
+  # SocketError if DNS lookup fails.
   def self.resolved_ip_address(hostname, allow_ips: [])
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
     allowed_ips = Array(allow_ips).map {|ip| ip.is_a?(IPAddr) ? ip : IPAddr.new(ip.to_s)}
@@ -26,8 +28,9 @@ module SafeHttp
     nil
   end
 
-  # Build a Net::HTTP client for url that connects to resolved_ip_address
-  # while keeping the original hostname for TLS/SNI and the Host header.
+  # SECURITY FIX: Build a Net::HTTP client that keeps url.host for TLS/SNI
+  # and the Host header, but connects to resolved_ip_address (from
+  # resolved_ip_address) to prevent a DNS race between validation and connect.
   def self.http_client(url, resolved_ip_address, open_timeout: 3, read_timeout: 3)
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'

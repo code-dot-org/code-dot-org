@@ -24,8 +24,6 @@ module ProxyHelper
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
 
-    # SECURITY FIX: Resolve hostname to IP address once and validate it to prevent DNS race condition
-    # This prevents an attacker from changing DNS between validation and actual request
     resolved_ip_address = resolve_and_validate_ip_address(url.host)
     unless resolved_ip_address
       render_error_response 400, "Target IP address is restricted"
@@ -39,8 +37,6 @@ module ProxyHelper
       return
     end
 
-    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
-    # to prevent race condition. We override the socket creation to use our pre-resolved IP.
     http = SafeHttp.http_client(url, resolved_ip_address)
     media = http.request_get(SafeHttp.request_path(url))
 
@@ -105,13 +101,11 @@ module ProxyHelper
       return 200, location
     end
 
-    # SECURITY FIX: Resolve and validate IP address to prevent DNS race condition
     resolved_ip_address = resolve_and_validate_ip_address(url.host)
     unless resolved_ip_address
       return 400, "Target IP address is restricted"
     end
 
-    # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
     http = SafeHttp.http_client(url, resolved_ip_address)
     response = http.request_head(SafeHttp.request_path(url))
 
@@ -149,8 +143,6 @@ module ProxyHelper
     render plain: text, status: status
   end
 
-  # SECURITY FIX: Resolve hostname to IP address and validate it's allowed
-  # This prevents DNS race condition by resolving once and caching the result
   private def resolve_and_validate_ip_address(hostname)
     SafeHttp.resolved_ip_address(hostname, allow_ips: [ProxyHelper.dashboard_ip_address])
   end
