@@ -472,12 +472,15 @@ class Level < ApplicationRecord
 
   # Renaming across the "UI Test " boundary moves the level's definition file
   # between the two trees, changing which environments seed it. Refuse while a
-  # script still references it. See dashboard/test/ui/config/README.md.
+  # script references the level, or while it is attached to another level as a
+  # parent or child (contained level, project template, LevelGroup/BubbleChoice
+  # sublevel), since parent and child must stay on the same side. See
+  # dashboard/test/ui/config/README.md.
   def name_change_stays_within_ui_test_partition
     return unless name_changed?
     return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
-    return unless script_levels.exists?
-    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script")
+    return unless script_levels.exists? || parent_levels.exists? || child_levels.exists?
+    errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script or another level")
   end
 
   # Uses specific knowledge of how the key method is implemented in hopes of

@@ -1717,6 +1717,21 @@ class LevelTest < ActiveSupport::TestCase
     assert level.valid?
   end
 
+  test 'cannot rename a level across the UI Test boundary while attached to another level' do
+    child = create(:level, name: 'LevelTest attached child')
+    parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])
+
+    # a child with no script_levels of its own is still pinned by its parent
+    child.name = 'UI Test LevelTest attached child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'UI Test'
+
+    # and a parent is pinned by its children
+    parent.name = 'UI Test LevelTest attached parent'
+    refute parent.valid?
+    assert_includes parent.errors[:name].first, 'UI Test'
+  end
+
   test 'a level and its children must be on the same side of the UI Test partition' do
     ui_test_child = create(:level, name: 'UI Test LevelTest child')
     prod_child = create(:level, name: 'LevelTest prod child')

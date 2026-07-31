@@ -42,8 +42,9 @@ enforced in the models:
 - a parent level and its children — contained levels, project template levels,
   LevelGroup and BubbleChoice sublevels — must be on the same side, in both
   directions.
-- a level in use by a unit may not be renamed across the boundary, since that
-  would move its definition file between the trees.
+- a level in use by a unit, or attached to another level as a parent or
+  child, may not be renamed across the boundary, since that would move its
+  definition file between the trees or split it from its relatives.
 
 `grep -r ui_test_name? dashboard` finds every enforcement point.
 
