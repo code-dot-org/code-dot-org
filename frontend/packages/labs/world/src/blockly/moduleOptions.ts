@@ -10,6 +10,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import type {EffectParameter} from '../effect/model/types';
 
+import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
@@ -105,6 +106,21 @@ export function effectFileOptions(): Array<[string, string]> {
   return orNone(projectEffectFiles);
 }
 
+/**
+ * The same, plus an `(import…)` row that opens the stock-effect dialog.
+ *
+ * Offered by the blocks that APPLY an effect, and not by the two that remove
+ * one: importing an effect in order to stop playing it is not a thing anyone
+ * means to do.
+ *
+ * Listed last, and never as the fallback when the project has no effects yet —
+ * `orNone` still supplies "(none)" there — so a saved block whose value is
+ * missing does not silently become the import row.
+ */
+export function effectFileImportOptions(): Array<[string, string]> {
+  return [...orNone(projectEffectFiles), ['(import…)', IMPORT_EFFECT_VALUE]];
+}
+
 /** Current MAP dropdown options (the project's map files). */
 export function mapOptions(): Array<[string, string]> {
   const paths = Object.keys(projectMaps);
@@ -163,6 +179,11 @@ export const effectFileOptionsExtension = liveDropdown(
   'world_effect_file_options',
   'EFFECT',
   effectFileOptions,
+);
+export const effectFileImportOptionsExtension = liveDropdown(
+  'world_effect_import_options',
+  'EFFECT',
+  effectFileImportOptions,
 );
 export const mapOptionsExtension = liveDropdown(
   'world_map_options',

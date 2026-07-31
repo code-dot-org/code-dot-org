@@ -31,6 +31,7 @@ import {
   traitContextExtension,
   worldDefinitionExtension,
 } from './extensions/actorContext';
+import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
   effectParamsInitExtension,
   effectParamsMutator,
@@ -49,6 +50,8 @@ import {
   actorOptionsExtension,
   animationFileOptions,
   animationFileOptionsExtension,
+  effectFileImportOptions,
+  effectFileImportOptionsExtension,
   effectFileOptions,
   effectFileOptionsExtension,
   liveDropdown,
@@ -284,7 +287,11 @@ const worldUseEffect = defineBlock({
   // authored name; the value is the extension-less module path the generated
   // actor imports (`effects/ripple`).
   args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {
+      type: 'field_dropdown',
+      name: 'EFFECT',
+      options: effectFileImportOptions(),
+    },
   ],
   previousStatement: true,
   nextStatement: true,
@@ -295,9 +302,10 @@ const worldUseEffect = defineBlock({
   // knob, rebuilt whenever the dropdown changes (effectParamsMutator).
   mutator: effectParamsMutator,
   extensions: [
-    effectFileOptionsExtension,
+    effectFileImportOptionsExtension,
     actorDefinitionExtension,
     effectParamsInitExtension,
+    effectImportFieldExtension,
   ],
   // An effect changes how the actor is DRAWN, so it reads with the appearance
   // blocks (`set sprite`, `play animation`) rather than with traits.
@@ -342,7 +350,11 @@ const worldAddEffect = defineBlock({
   type: 'world_add_effect',
   message0: 'add effect %1 to %2',
   args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {
+      type: 'field_dropdown',
+      name: 'EFFECT',
+      options: effectFileImportOptions(),
+    },
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
@@ -350,10 +362,11 @@ const worldAddEffect = defineBlock({
   nextStatement: true,
   mutator: effectParamsMutator,
   extensions: [
-    effectFileOptionsExtension,
+    effectFileImportOptionsExtension,
     actorInputExtension,
     runtimeActorExtension,
     effectParamsInitExtension,
+    effectImportFieldExtension,
   ],
   style: 'sprite_blocks',
   tooltip:
@@ -1641,15 +1654,20 @@ const worldWorldUseEffect = defineBlock({
   type: 'world_world_use_effect',
   message0: 'use effect %1',
   args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {
+      type: 'field_dropdown',
+      name: 'EFFECT',
+      options: effectFileImportOptions(),
+    },
   ],
   previousStatement: true,
   nextStatement: true,
   mutator: effectParamsMutator,
   extensions: [
-    effectFileOptionsExtension,
+    effectFileImportOptionsExtension,
     worldDefinitionExtension,
     effectParamsInitExtension,
+    effectImportFieldExtension,
   ],
   style: 'sprite_blocks',
   tooltip:
@@ -1687,16 +1705,21 @@ const worldAddWorldEffect = defineBlock({
   type: 'world_add_world_effect',
   message0: 'add effect %1 to the world',
   args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {
+      type: 'field_dropdown',
+      name: 'EFFECT',
+      options: effectFileImportOptions(),
+    },
   ],
   previousStatement: true,
   nextStatement: true,
   mutator: effectParamsMutator,
   extensions: [
-    effectFileOptionsExtension,
+    effectFileImportOptionsExtension,
     worldContextExtension,
     runtimeWorldExtension,
     effectParamsInitExtension,
+    effectImportFieldExtension,
   ],
   style: 'sprite_blocks',
   tooltip:

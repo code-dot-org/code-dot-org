@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useRef} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {
   Blockly,
@@ -17,10 +17,14 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {ImportEffectDialog} from '../effect/ImportEffectDialog';
+import {importStockEffect} from '../effect/importStockEffect';
+import type {StockEffect} from '../effect/stock';
 import {projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
+import {setEffectImportHandler} from './effectImport';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
@@ -71,12 +75,61 @@ export const BlocklyFileEditor = ({
   // among its options, so the registry must be current first. This runs during
   // render, ahead of the workspace's load effect. (WorldRuntimeContext also
   // refreshes these for the generator; the calls are idempotent.)
-  const {currentSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
   const files = useMemo(
     () => projectFiles(currentSources.source),
     [currentSources],
   );
   useMemo(() => refreshProjectDropdowns(files), [files]);
+
+  // The stock-effect import, opened from an effect dropdown's `(import…)` row.
+  //
+  // The dropdown lives inside Blockly, which cannot reach React context or the
+  // project sources — so the field asks through a registered handler
+  // (./effectImport) and waits on the promise this resolves. Held in a ref
+  // because the field calls it long after the render that installed it.
+  const [importing, setImporting] = useState(false);
+  const resolveImport = useRef<((path: string | undefined) => void) | null>(
+    null,
+  );
+  // Read at import time rather than captured, so the file is written against
+  // the project as it stands when the learner chooses, not as it stood when the
+  // dialog opened.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
+
+  useEffect(() => {
+    setEffectImportHandler(
+      () =>
+        new Promise<string | undefined>(resolve => {
+          resolveImport.current = resolve;
+          setImporting(true);
+        }),
+    );
+    // Cleared on unmount so a field on a disposed workspace cannot open a
+    // dialog this editor no longer owns.
+    return () => setEffectImportHandler(null);
+  }, []);
+
+  const finishImport = useCallback((path: string | undefined) => {
+    setImporting(false);
+    resolveImport.current?.(path);
+    resolveImport.current = null;
+  }, []);
+
+  const handleImport = useCallback(
+    (effect: StockEffect) => {
+      const sources = sourcesRef.current;
+      const {source, path} = importStockEffect(sources.source, effect);
+      // The file has to be in the project BEFORE the field takes its value: the
+      // dropdown rebuilds from the registry, and a value with no matching option
+      // is dropped by Blockly.
+      updateSources({...sources, source});
+      refreshProjectDropdowns(projectFiles(source));
+      finishImport(path);
+    },
+    [updateSources, finishImport],
+  );
 
   // The block palette + toolbox for this project: the built-ins, extended with
   // the project's own declarative `.rule` rules (their blocks and categories).
@@ -124,6 +177,12 @@ export const BlocklyFileEditor = ({
 
   return (
     <div className={styles.editor}>
+      {importing && (
+        <ImportEffectDialog
+          onImport={handleImport}
+          onCancel={() => finishImport(undefined)}
+        />
+      )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
         <BlocklyWorkspace
           className={styles.workspace}
