@@ -1,0 +1,153 @@
+/* Stretch rather than centre, so the knob strip can push itself against the
+   edge the canvas is on and its dots sit right next to the ghost handles the
+   wires actually run to. */
+.row {
+  /* Positioning context for the parameter editor popover, which hangs below
+     the row over the workspace. */
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+  align-items: stretch;
+  min-width: 0;
+  padding: 10px 16px;
+  color: var(--effect-editor-text, #e8ebf5);
+  background: var(--effect-editor-surface, #262b40);
+  border-block: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.textureColumn {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 160px;
+}
+
+.textureBox {
+  overflow: hidden;
+  background: #1b1f30;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 6px;
+}
+
+.textureImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.texturePreviewRow {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+/* Contained look by hand: MUI's IconButton has no `variant` prop. */
+.textureButton {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--effect-editor-text, #e8ebf5);
+  background: var(--effect-editor-surface, #262b40);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.textureButton:hover {
+  color: var(--effect-editor-accent, #8ab4f8);
+  background: #313754;
+}
+
+/* Knobs hug the canvas: the bottom of the input row, the top of the output
+   row. The negative margin eats the row's padding on that side, so a knob is
+   only a couple of pixels from the ghost dot its wire runs to and the two read
+   as one connection. `min-width: 0` lets the strip scroll instead of widening
+   the row when an effect declares more parameters than fit. */
+.knobs {
+  display: flex;
+  flex: 1;
+  gap: 22px;
+  align-items: flex-end;
+  min-width: 0;
+  margin: 0 0 -8px;
+  padding: 0;
+  overflow-x: auto;
+  list-style: none;
+}
+
+.knobsTop {
+  align-items: flex-start;
+  margin: -8px 0 0;
+}
+
+.knobItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.knobLabel {
+  font-size: 11px;
+  color: var(--effect-editor-muted, #9aa4c4);
+  white-space: nowrap;
+}
+
+/* Parameter names are buttons: clicking one opens the editor popover. */
+.knobLabelButton {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding: 0 3px;
+  font: inherit;
+  font-size: 11px;
+  color: var(--effect-editor-muted, #9aa4c4);
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.knobLabelButton:hover {
+  color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.restartButton {
+  margin-bottom: 2px;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--effect-editor-muted, #9aa4c4);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.restartButton:hover {
+  color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.editGlyph {
+  font-size: 9px;
+  opacity: 0.7;
+}
+
+.addParameter {
+  border-style: dashed;
+  white-space: nowrap;
+}
+
+.error {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #ff8fa3;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

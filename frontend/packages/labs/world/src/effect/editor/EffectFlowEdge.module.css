@@ -1,0 +1,52 @@
+/* The edge label layer sets `pointer-events: none` so wires do not swallow
+   canvas drags; anything interactive inside it has to opt back in.
+
+   The z-index matters as much as the pointer-events. That layer sits at
+   `z-index: auto` before `.react-flow__nodes` in the DOM, so without an
+   explicit value the button is painted under every node — visible only where
+   the wire happens to cross empty canvas, and not clickable elsewhere. This
+   sits just above `ACTIVE_EDGE_Z_INDEX` so the button clears the wire it
+   belongs to as well as any node behind it. */
+.remove {
+  position: absolute;
+  z-index: 1101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--effect-editor-text, #e8ebf5);
+  pointer-events: all;
+  cursor: pointer;
+  background: var(--effect-editor-surface, #262b40);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 50%;
+
+  /* Reads as a distinct object when it lands over a node body rather than
+     over empty canvas. */
+  box-shadow: 0 1px 4px rgb(0 0 0 / 55%);
+}
+
+.remove:hover {
+  color: #fff;
+  background: #b33a4c;
+  border-color: #b33a4c;
+}
+
+/* The narrowing badge, sat on the wire just above where it lands. Drawn in
+   the delivered type's color so it reads as part of the wire, not the node. */
+.swizzle {
+  position: absolute;
+  padding: 0 4px;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  background: var(--effect-editor-canvas, #1b1f30);
+  border: 1px solid currentcolor;
+  border-radius: 7px;
+}

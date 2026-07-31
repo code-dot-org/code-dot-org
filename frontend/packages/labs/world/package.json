@@ -68,9 +68,11 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
+    "@xyflow/react": "^12.11.2",
     "blockly": "^13.1.0",
     "esbuild-wasm": "^0.28.1",
-    "phaser": "^4.2.1"
+    "phaser": "^4.2.1",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@code-dot-org/component-library": "workspace:*",
@@ -78,6 +80,7 @@
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/node": "catalog:",
     "@vitejs/plugin-react": "catalog:",

@@ -1,0 +1,63 @@
+/* The annotation slot: to the left of the node, vertically aligned with its
+   header. Absolute so it never enters the node's measured box — React Flow
+   sizes nodes from their layout, and a bubble that widened the node would
+   drag every handle along with it. */
+.slot {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 180px;
+  margin-right: 10px;
+}
+
+.add {
+  padding: 2px 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  cursor: pointer;
+  background: var(--effect-editor-surface, #262b40);
+  border: 1px dashed var(--effect-editor-border, #3a4160);
+  border-radius: 10px;
+  opacity: 0.75;
+}
+
+.add:hover {
+  border-color: var(--effect-editor-accent, #8ab4f8);
+  border-style: solid;
+  opacity: 1;
+}
+
+/* Shared shape for the note in both its states, so clicking to edit does not
+   move the text under the pointer. */
+.bubble,
+.editor {
+  width: 100%;
+  padding: 6px 8px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.45;
+  color: var(--effect-editor-text, #e8ebf5);
+  text-align: left;
+  white-space: pre-wrap;
+  background: var(--effect-editor-field, #1b1f30);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 8px 8px 2px 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 35%);
+}
+
+.bubble {
+  display: block;
+  cursor: text;
+}
+
+.bubble:hover {
+  border-color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.editor {
+  resize: none;
+  border-color: var(--effect-editor-accent, #8ab4f8);
+  outline: none;
+}

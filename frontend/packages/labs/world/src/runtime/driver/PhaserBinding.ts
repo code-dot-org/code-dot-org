@@ -36,6 +36,8 @@ import type {Actor, RenderState, World} from 'world-lab';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 
+import {installSkewHook, type RenderStepInternals} from './skew';
+
 const ACTOR_SIZE = 24;
 // The game's native resolution — its fixed logical coordinate space (16:9). The
 // Scale Manager's FIT mode letterboxes/centers the canvas to fit the preview
@@ -48,36 +50,6 @@ const DEFAULT_ASSET_BASE = '/vendor/';
 
 /** A drawn actor — a textured image or the fallback rectangle. */
 type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
-
-/**
- * Phaser's WebGL render function for one object — `renderWebGL(renderer, src,
- * drawingContext, parentMatrix)`. Both the Image and Rectangle WebGL renderers
- * thread their fourth argument (the parent matrix) into the object's transform
- * — Image into `Submitter.run`, Rectangle through `GetCalcMatrix` — so wrapping
- * this function and swapping that argument is how we inject skew. It is not in
- * the public types (Phaser marks it private), so we describe its shape here and
- * attach it through a structural cast.
- *
- * The display list does not call it directly: it calls
- * `child.renderWebGLStep(renderer, child, context, parentMatrix, step, …)`,
- * which dispatches through the object's `_renderSteps` list. The extra trailing
- * arguments are for steps that hand off to the next one; the two renderers we
- * use ignore them, but the wrapper forwards them so it is transparent.
- */
-type WebGLRenderHook = (
-  renderer: Phaser.Renderer.WebGL.WebGLRenderer,
-  src: GameObject,
-  drawingContext: Phaser.Renderer.WebGL.DrawingContext,
-  parentMatrix?: Phaser.GameObjects.Components.TransformMatrix,
-  ...rest: unknown[]
-) => void;
-
-/** A Game Object's render-step internals, as the skew hook needs to see them. */
-type RenderStepInternals = {
-  renderWebGL: WebGLRenderHook;
-  /** Built in the GameObject constructor; see `installSkewHook`. */
-  _renderSteps?: WebGLRenderHook[];
-};
 
 /**
  * Fail at boot, with a sentence, rather than at the first effect with a stack.
@@ -139,58 +111,16 @@ export class PhaserBinding {
 
     // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
     // not model natively (its per-object matrix is position·rotation·scale only).
-    // We inject it by wrapping each object's own WebGL render function: the
-    // wrapper hands the object's renderer a parent matrix M = T(c)·shear·T(-c) —
-    // a shear about the actor's center c — in place of the (undefined) matrix it
-    // would get as a top-level object. The renderer composes calc =
-    // camera·parent·sprite and the sprite matrix still carries the object's own
-    // position/rotation/scale, so M shears what is drawn about its center while
-    // leaving those untouched. Both textured Images and the fallback Rectangle
-    // thread the parent matrix through their transform the same way. Each skewed
-    // object owns a matrix, rebuilt every frame in `sync`; an unskewed one has no
-    // entry and renders through the normal (no parent matrix) path.
+    // `installSkewHook` (./skew) wraps each object's WebGL render function so its
+    // renderer receives M = T(c)·shear·T(-c) — a shear about the actor's center c
+    // — as the parent matrix it would otherwise not have. This module owns the
+    // matrices: each skewed object has one, rebuilt every frame in `sync`; an
+    // unskewed one has no entry and renders through the normal path.
     const skewMatrices = new WeakMap<
       GameObject,
       Phaser.GameObjects.Components.TransformMatrix
     >();
     const shear = new Phaser.GameObjects.Components.TransformMatrix();
-    // Two places have to be patched, not one, and this is the difference from the
-    // canvas renderer this driver used to run on. Canvas looks the hook up at draw
-    // time (`child.renderCanvas(...)`), so replacing the instance property was
-    // enough. WebGL does not: the GameObject constructor runs
-    // `addRenderStep(this.renderWebGL)`, capturing the FUNCTION into `_renderSteps`,
-    // and the display list dispatches through that list — so an instance property
-    // replaced afterwards is simply never reached. Both must therefore hold the
-    // SAME wrapper reference: `Filters.enableFilters()` finds its insertion point
-    // with `_renderSteps.indexOf(this.renderWebGL)`, and if those two disagree it
-    // inserts the filter step at -1. Effects call `enableFilters()`, so this is
-    // load-bearing rather than tidiness.
-    const installSkewHook = (object: GameObject) => {
-      const target = object as unknown as RenderStepInternals;
-      const original = target.renderWebGL;
-      const hook: WebGLRenderHook = (
-        renderer,
-        src,
-        drawingContext,
-        parentMatrix,
-        ...rest
-      ) => {
-        original.call(
-          src,
-          renderer,
-          src,
-          drawingContext,
-          skewMatrices.get(object) ?? parentMatrix,
-          ...rest,
-        );
-      };
-      target.renderWebGL = hook;
-      const steps = target._renderSteps;
-      const index = steps?.indexOf(original) ?? -1;
-      if (steps && index >= 0) {
-        steps[index] = hook;
-      }
-    };
     // Build (or clear) an object's shear matrix M = T(c)·shear·T(-c) about its
     // drawn center c; the render hook feeds M to the object's WebGL renderer.
     const applySkew = (
@@ -233,7 +163,9 @@ export class PhaserBinding {
             );
       // Give either object kind a skew-aware render hook up front; it is a no-op
       // cost until the actor actually carries a non-zero skew.
-      installSkewHook(object);
+      installSkewHook(object as unknown as RenderStepInternals, () =>
+        skewMatrices.get(object),
+      );
       return object;
     };
 

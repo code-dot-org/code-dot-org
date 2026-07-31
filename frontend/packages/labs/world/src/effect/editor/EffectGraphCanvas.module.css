@@ -1,0 +1,27 @@
+.canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: var(--effect-editor-canvas, #1b1f30);
+
+  /* React Flow theme hooks: its controls read these custom properties, which
+     is the supported way to restyle them — no specificity contest. */
+  --xy-controls-button-background-color: var(--effect-editor-surface, #262b40);
+  --xy-controls-button-background-color-hover: #313754;
+  --xy-controls-button-color: var(--effect-editor-text, #e8ebf5);
+  --xy-controls-button-color-hover: var(--effect-editor-accent, #8ab4f8);
+  --xy-controls-button-border-color: var(--effect-editor-border, #3a4160);
+  --xy-controls-box-shadow: 0 2px 6px rgb(0 0 0 / 35%);
+}
+
+.controls {
+  overflow: hidden;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 6px;
+}
+
+.minimap {
+  overflow: hidden;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 6px;
+}

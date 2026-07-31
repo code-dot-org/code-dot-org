@@ -10,6 +10,9 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    // jsdom shims the effect editor's React Flow canvas needs, plus jest-dom's
+    // matchers. See the file — each shim is inert for tests that do not need it.
+    setupFiles: ['./src/__tests__/setup.ts'],
     exclude: ['node_modules/**', 'dist/**'],
   },
 });

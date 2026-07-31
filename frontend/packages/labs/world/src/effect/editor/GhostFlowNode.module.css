@@ -1,0 +1,17 @@
+.ghost {
+  position: relative;
+}
+
+/* Position and size are set inline — see GhostFlowNode. Only the ring is left
+   here, where nothing of React Flow's competes with it. */
+.handle {
+  min-width: 0;
+  min-height: 0;
+  border: 2px solid rgb(255 255 255 / 65%);
+  border-radius: 50%;
+}
+
+.hitPad {
+  position: absolute;
+  inset: -12px;
+}
