@@ -68,4 +68,59 @@ describe('createTypedVariable', () => {
     // [expression, Order.ATOMIC] — Order.ATOMIC === 0.
     expect(code).toEqual(['v_id_42', 0]);
   });
+
+  it('setter takes a value checked to the same tag the getter reports', () => {
+    // The pair has to agree: what a `Vector` variable accepts is exactly what
+    // reading one can be plugged into. A mismatch is invisible until a learner
+    // drags a getter into a setter and Blockly silently refuses the connection.
+    const v = createTypedVariable({type: 'Vector'});
+    expect(v.setterType).toBe('variables_set_Vector');
+    expect(v.setterBlock.args0?.[0]).toMatchObject({
+      type: 'field_variable',
+      name: 'VAR',
+      variableTypes: ['Vector'],
+    });
+    expect(v.setterBlock.args0?.[1]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'Vector',
+    });
+    expect(v.setterBlock.output).toBeUndefined();
+    expect(v.setterBlock.previousStatement).toBe(true);
+  });
+
+  it('setter honours an explicit output check, as the getter does', () => {
+    // `check` overrides the tag for connections — a Color variable is tagged
+    // `Color` but wires as Blockly's `Colour`.
+    const v = createTypedVariable({type: 'Color', check: 'Colour'});
+    expect(v.getterBlock.output).toBe('Colour');
+    expect(v.setterBlock.args0?.[1]).toMatchObject({check: 'Colour'});
+  });
+
+  it('setter assigns through the same name table as the getter', () => {
+    const v = createTypedVariable({type: 'Number'});
+    const code = v.setterBlock.generator.javascript(
+      {
+        getFieldValue: (name: string) => (name === 'VAR' ? 'id-7' : ''),
+      } as never,
+      {
+        getVariableName: (id: string) => `v_${id.replace(/-/g, '_')}`,
+        valueToCode: () => 'other + 1',
+      } as never,
+      undefined as never,
+    );
+    expect(code).toBe('v_id_7 = other + 1;\n');
+  });
+
+  it('setter falls back to 0 for an empty socket, not to nothing', () => {
+    // `x = ;` would not parse. A cleared socket is a half-finished block, and
+    // the rest of the body should still generate so the learner can see it.
+    const v = createTypedVariable({type: 'Number'});
+    const code = v.setterBlock.generator.javascript(
+      {getFieldValue: () => 'id-1'} as never,
+      {getVariableName: () => 'x', valueToCode: () => ''} as never,
+      undefined as never,
+    );
+    expect(code).toBe('x = 0;\n');
+  });
 });

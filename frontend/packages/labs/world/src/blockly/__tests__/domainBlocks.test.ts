@@ -1472,13 +1472,20 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_step',
       'world_emit',
       'world_step_delta',
-      // Parameters are declared via the +/− mutator (no toolbox block); only the
-      // getters that read a parameter in the body appear here.
+      // Parameters are declared via the +/− mutator (no toolbox block); the
+      // getters read one — or any variable of your own — in the body…
       'variables_get_Number',
       'variables_get_Boolean',
       'variables_get_String',
       'variables_get_Vector',
       'variables_get_Actor',
+      // …and the setters put a value in one, so a body can hold intermediate
+      // state rather than recomputing it.
+      'variables_set_Number',
+      'variables_set_Boolean',
+      'variables_set_String',
+      'variables_set_Vector',
+      'variables_set_Actor',
     ]);
   });
 

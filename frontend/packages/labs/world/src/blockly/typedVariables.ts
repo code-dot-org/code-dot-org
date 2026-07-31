@@ -84,3 +84,24 @@ export const PARAM_GETTER_BLOCKS = PARAM_FLAVOURS.map(
 export const PARAM_GETTER_TYPES = PARAM_FLAVOURS.map(
   ({variable}) => variable.getterType,
 );
+
+/**
+ * The setter blocks — `set <var> to <value>`, one per flavour.
+ *
+ * A variable used to be BINDABLE but not assignable: a `for each` loop bound
+ * one, a parameter row bound one, and nothing else could put a value in. That
+ * left a body unable to keep anything across two statements, which is why
+ * gravity's landing step had to be decomposed into three members that each
+ * recompute what the last one knew (specs/RULES.md).
+ *
+ * Each setter's value socket carries the same check its getter reports, so what
+ * a `Vector` variable accepts is exactly what reading one can be plugged into.
+ */
+export const PARAM_SETTER_BLOCKS = PARAM_FLAVOURS.map(
+  ({variable}) => variable.setterBlock,
+);
+
+/** The setter block types, for a toolbox that offers assigning a variable. */
+export const PARAM_SETTER_TYPES = PARAM_FLAVOURS.map(
+  ({variable}) => variable.setterType,
+);
