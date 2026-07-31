@@ -901,8 +901,74 @@ single Ripple starter. The rest are there to be imported, which is the piece
 still outstanding: a dialog listing `STOCK_EFFECTS` and copying the chosen
 document into `effects/`.
 
+## 11f. The import dialog — DONE
+
+An effect dropdown now ends with an `(import…)` row. Choosing it opens a picker
+of the stock library; choosing one there copies the `.effect` into the project
+and sets the field to it — so the effect is compiled with the project and in use
+in a single gesture.
+
+**The row is a sentinel, not a value**, and the machinery exists to make sure it
+never survives as one: a block left holding `__import_effect__` would generate
+`actor.useEffect("__import_effect__", …)` and fail at run time. The field
+validator therefore _rejects_ it — returning null leaves the field as it was —
+and starts the import, writing the real path back when the dialog resolves.
+
+**It wraps the existing validator rather than replacing it.** A Blockly field
+holds exactly one, and `effectParamsInitExtension` had already installed one to
+rebuild the parameter sockets. So the import extension chains: it must be listed
+_after_ the params extension on the block, and when it writes the imported path
+through `setValue` the wrapped validator sees it as an ordinary choice and
+reshapes the sockets. Verified in the browser — importing Tint left the block
+reading `use effect [Tint]` with four colour sockets seeded from Tint's own
+default.
+
+**Blockly cannot reach React**, so `blockly/effectImport.ts` is a registered
+handler in the same spirit as the existing dropdown registries: the editor
+installs one while mounted and clears it on unmount, and a field with no handler
+resolves undefined rather than hanging — which is the case in the headless
+generator and in tests.
+
+**Placement and naming are a pure transform** (`importStockEffect`), so the
+parts most likely to be subtly wrong are testable without a React tree or a
+workspace:
+
+- the file lands in `effects/`, which is where the dropdown looks — anywhere
+  else and the import would appear to do nothing;
+- the folder is created when a project has never held an effect;
+- a second import of the same effect becomes `ripple-2`, never an overwrite.
+  Overwriting is the worst failure available here: it would silently discard
+  whatever the learner had changed in their copy, with nothing to show it
+  happened;
+- the new file does NOT become the active tab. The import starts from a block's
+  dropdown and the point is to get back to that block with the effect selected;
+  opening the effect editor instead would leave the learner looking at a graph
+  while the change they asked for happened off screen. (Codebridge's own
+  `createNewFile` activates, which is right for the file browser's New File and
+  wrong here, so the file is added directly.)
+
+**Only the four blocks that APPLY an effect offer the row** — `use effect` and
+`add effect`, for actors and for the world. The two `remove effect` blocks keep
+the plain dropdown: importing an effect in order to stop playing it is not
+something anyone means to do.
+
 ## 12. Deferred
 
-- **The import dialog.** `STOCK_EFFECTS` is the data behind it; what is missing
-  is the UI that lists them and writes the chosen one into the project as
-  `effects/<id>.effect`.
+Everything this plan set out to build is done. What is left are the things
+deliberately not attempted, and one problem found on the way that belongs to
+somebody else's afternoon.
+
+- **Camera effects.** A filter on one camera rather than the whole view.
+  `applyEffectToWorld` already targets a camera, so the runtime is there; what
+  is missing is a reason — the World case is what the curriculum wanted first.
+- **`sameActors` is unreliable, and it is not only effects that depend on it.**
+  It compares the previous build's pre-tick snapshot with the incoming one, but
+  an unchanged bundle re-imports to the same module instance whose scene has
+  been ticking, so for any game where something moves the flag reads false on
+  almost every rebuild (measured: `Player.positional.position: {480,80} ->
+{480,408}`). The live shader swap sidesteps it deliberately (§11d). **§9's
+  live world-property patch — "change gravity strength and see it live" — does
+  not, so it likely never fires in practice.** Unconfirmed and unfixed.
+- **More stock effects.** Six is a teaching sequence, not a catalogue. Anything
+  added should say where it sits in that progression (§11e) and carry the same
+  notes; the tests enforce the latter.

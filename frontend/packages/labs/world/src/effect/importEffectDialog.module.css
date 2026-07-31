@@ -1,0 +1,73 @@
+/* The stock-effect picker. Colors come from the design system's semantic
+   tokens, so it follows the lab's Light/Dark setting like everything else —
+   this dialog is lab chrome, not part of the effect editor's dark canvas. */
+
+.dialog {
+  max-width: 520px;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.intro {
+  margin: 0 0 16px;
+  color: var(--text-neutral-secondary, #576575);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per effect: a whole-row button, so the target is the size of the
+   thing being chosen rather than a word inside it. */
+.effect {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  background: var(--background-neutral-secondary, #f0f2f5);
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 6px;
+}
+
+.effect:hover {
+  border-color: var(--borders-brand-teal-primary, #0093a4);
+}
+
+.effect:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.description {
+  color: var(--text-neutral-secondary, #576575);
+}
+
+.knobs {
+  font-size: 0.85em;
+  color: var(--text-neutral-tertiary, #576575);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
