@@ -15,6 +15,7 @@ import type {
   Query,
 } from './types';
 import {Vector} from './Vector';
+import type {World} from './World';
 
 /** The data an ActorBuilder hands the Actor constructor. */
 export interface ActorInit {
@@ -41,6 +42,20 @@ const coerce = <T>(property: Property<T>, value: unknown): T =>
     : (value as T);
 
 export class Actor {
+  /**
+   * The world this actor is in, set when it is placed.
+   *
+   * An actor-scoped action or query is invoked as `(actor, …args)` — the engine
+   * has no world to hand it — so without this, a body inside a trait could not
+   * reach the other actors. "Is this one standing on any ground?" is a question
+   * about the world, asked of an actor, and it was unaskable.
+   *
+   * Undefined until `World.addActor` places it, which is also the only thing
+   * that sets it: an actor belongs to one world at a time, and it is the world
+   * that decides.
+   */
+  world: World | undefined;
+
   readonly id: string;
   /** The template (ActorBuilder id) this instance came from — a type tag. */
   readonly type: string;

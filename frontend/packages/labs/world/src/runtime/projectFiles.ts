@@ -20,6 +20,20 @@ function folderPath(source: MultiFileSource, folderId: string): string {
 }
 
 /** Project as `path -> source text`, e.g. `worlds/main.world` -> "…". */
+/**
+ * One file's folder-prefixed path (`rules/gravity.rule`), or undefined if the
+ * id is unknown. The same path {@link projectFiles} keys by, for a caller that
+ * has an id rather than the whole map — the Blockly editor asking "which file
+ * am I editing?".
+ */
+export function filePath(
+  source: MultiFileSource,
+  fileId: string,
+): string | undefined {
+  const file = source.files[fileId];
+  return file && `${folderPath(source, file.folderId)}${file.name}`;
+}
+
 export function projectFiles(
   source: MultiFileSource | undefined,
 ): Record<string, string> {

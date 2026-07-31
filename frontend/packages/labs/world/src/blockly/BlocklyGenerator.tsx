@@ -53,7 +53,10 @@ export const BlocklyGenerator = forwardRef<
   // the project's own `.rule` rules. Setting `blocks` re-registers on the live
   // workspace (Driver.blocks), so the generator knows a project rule's blocks.
   const {blocks, rootTypes} = useMemo(
-    () => buildDomainPalette(projectRules ?? []),
+    // Every rule's own read-only setters: this palette generates ALL of the
+    // project's Blockly files, so it cannot be scoped to one `.rule` the way the
+    // editor's is. It is never shown, so the extra blocks cost nothing.
+    () => buildDomainPalette(projectRules ?? [], {allRuleModules: true}),
     [projectRules],
   );
   // `generate` is a stable closure; read the current root types through a ref.

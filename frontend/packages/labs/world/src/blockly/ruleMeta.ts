@@ -409,7 +409,9 @@ export function parseRuleMeta(
       name,
       type,
       default: parseDefault(field(block, 'DEFAULT'), type),
-      readonly: false,
+      // Absent on a workspace saved before the field existed, which reads as
+      // writable — the behaviour those files already had.
+      readonly: field(block, 'ACCESS') === 'readonly',
       scope: ownerTraitId ? 'actor' : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Property`),
@@ -847,8 +849,13 @@ export function ruleMetaToModule(
         ? traitExportById.get(property.ownerTraitId)
         : undefined;
     const target = owner ?? 'rule';
+    // `readonly` reaches the engine, which is what actually refuses a write —
+    // the missing `set` block only keeps a learner from trying.
+    const options = property.readonly
+      ? `{name: ${q(property.name)}, readonly: true}`
+      : `{name: ${q(property.name)}}`;
     body.push(
-      `export const ${property.ref.exportName} = ${target}.addProperty(${q(property.id)}, ${q(property.type)}, ${defaultLiteral(property)}, {name: ${q(property.name)}});`,
+      `export const ${property.ref.exportName} = ${target}.addProperty(${q(property.id)}, ${q(property.type)}, ${defaultLiteral(property)}, ${options});`,
     );
   }
 
@@ -867,6 +874,17 @@ export function ruleMetaToModule(
       : undefined) ?? 'rule';
   const subject = (member: {scope: 'world' | 'actor'}): string =>
     member.scope === 'actor' ? 'actor' : 'world';
+  /**
+   * The line that opens an actor-scoped body.
+   *
+   * The engine invokes an actor action/query as `(actor, …args)` — there is no
+   * world in the signature — but a body may well ask a question about the world
+   * ("is this actor standing on any ground?"). Binding it from the actor's own
+   * back-reference means every block that names `world` works in one, with no
+   * generator anywhere needing to know which kind of body it is in.
+   */
+  const preamble = (member: {scope: 'world' | 'actor'}): string =>
+    member.scope === 'actor' ? '  const world = actor.world;\n' : '';
   // The closure's argument list: the subject, then each parameter identifier.
   const signature = (member: {scope: 'world' | 'actor'}, code?: RuleBody) =>
     [subject(member), ...(code?.params ?? [])].join(', ');
@@ -876,7 +894,7 @@ export function ruleMetaToModule(
       ruleBodyKey('action', action.scope, action.ownerTraitId, action.id),
     );
     body.push(
-      `export const ${action.ref.exportName} = ${memberTarget(action)}.addAction(${q(action.id)}, (${signature(action, code)}) => {\n${code?.body ?? ''}}, {name: ${q(action.name)}});`,
+      `export const ${action.ref.exportName} = ${memberTarget(action)}.addAction(${q(action.id)}, (${signature(action, code)}) => {\n${preamble(action)}${code?.body ?? ''}}, {name: ${q(action.name)}});`,
     );
   }
 
@@ -885,7 +903,7 @@ export function ruleMetaToModule(
       ruleBodyKey('query', query.scope, query.ownerTraitId, query.id),
     );
     body.push(
-      `export const ${query.ref.exportName} = ${memberTarget(query)}.addQuery(${q(query.id)}, (${signature(query, code)}) => {\n${code?.body ?? ''}}, {name: ${q(query.name)}, returns: ${q(query.returns ?? 'boolean')}});`,
+      `export const ${query.ref.exportName} = ${memberTarget(query)}.addQuery(${q(query.id)}, (${signature(query, code)}) => {\n${preamble(query)}${code?.body ?? ''}}, {name: ${q(query.name)}, returns: ${q(query.returns ?? 'boolean')}});`,
     );
   }
 

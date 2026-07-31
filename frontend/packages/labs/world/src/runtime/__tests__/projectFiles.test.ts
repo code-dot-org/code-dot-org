@@ -17,7 +17,7 @@ describe('projectFiles', () => {
       'effects/ripple.effect',
       'maps/level1.map',
       'rules/animation.js',
-      'rules/gravity.js',
+      'rules/gravity.rule',
       'rules/input.js',
       'worlds/main.world',
     ]);
