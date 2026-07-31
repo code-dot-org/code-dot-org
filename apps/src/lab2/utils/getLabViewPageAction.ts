@@ -3,7 +3,7 @@
 // or '/levels/12345'
 // For example, if the URL is '/projects/pythonlab/abc123/view', returns 'view'.
 // If the URL is '/projects/pythonlab/abc123', returns 'share'.
-// If the URL is not neither a project nor level URL, returns undefined.
+// If the URL is neither a project nor level URL, returns undefined.
 export const getLabViewPageAction = (): string | undefined => {
   const [, first, , , fourth] = window.location.pathname.split('/');
   if (first === 'projects') {
