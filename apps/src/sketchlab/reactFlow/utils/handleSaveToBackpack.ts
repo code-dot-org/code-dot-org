@@ -22,7 +22,7 @@ const CONTACT_SUPPORT =
 
 export const ABUSE_BLOCKED_MESSAGE =
   'This sketch was flagged for content that violates our Terms of Service, ' +
-  'so it cannot be copied to your Backpack. If an image you added was ' +
+  'so it cannot be saved to your Backpack. If an image you added was ' +
   'flagged, remove it from your sketch and try again. ' +
   CONTACT_SUPPORT;
 
