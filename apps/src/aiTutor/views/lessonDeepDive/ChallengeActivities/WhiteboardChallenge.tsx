@@ -126,7 +126,6 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       <div className={styles.whiteboardPane}>
         <ReactFlowCanvas
           updateSources={setSources}
-          levelName="aiTutorChallenge"
           initialNodes={[]}
           initialEdges={[]}
           initialViewport={undefined}

@@ -1,3 +1,8 @@
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {visuallyHidden} from '@mui/utils';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -6,9 +11,7 @@ import React from 'react';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
 import i18n from '@cdo/locale';
 
 import libraryParser from './libraryParser';
@@ -205,7 +208,13 @@ export class LibraryManagerDialog extends React.Component {
     const {projectLibraries, updatedLibraryChannels} = this.state;
     if (!Array.isArray(projectLibraries) || !projectLibraries.length) {
       return (
-        <div className={styles.message}>{i18n.noLibrariesInProject()}</div>
+        <MuiTypography
+          variant="body3"
+          component="div"
+          className={styles.message}
+        >
+          {i18n.noLibrariesInProject()}
+        </MuiTypography>
       );
     }
 
@@ -238,11 +247,26 @@ export class LibraryManagerDialog extends React.Component {
     const {classLibraries, errorMessages, sectionFilter} = this.state;
     if (errorMessages.loadClassLibraries) {
       return (
-        <div className={styles.error}>{errorMessages.loadClassLibraries}</div>
+        <MuiTypography
+          variant="body3"
+          component="div"
+          className={styles.error}
+          sx={{color: 'var(--text-error-primary)'}}
+        >
+          {errorMessages.loadClassLibraries}
+        </MuiTypography>
       );
     }
     if (!Array.isArray(classLibraries) || !classLibraries.length) {
-      return <div className={styles.message}>{i18n.noLibrariesInClass()}</div>;
+      return (
+        <MuiTypography
+          variant="body3"
+          component="div"
+          className={styles.message}
+        >
+          {i18n.noLibrariesInClass()}
+        </MuiTypography>
+      );
     }
 
     const filteredLibraries = sectionFilter
@@ -322,15 +346,24 @@ export class LibraryManagerDialog extends React.Component {
             sourceCode={displayLibrary.source}
             buttons={
               <div className={styles.updateButtons}>
-                <Button
-                  text={i18n.cancel()}
-                  color={Button.ButtonColor.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
                   onClick={onClose}
-                />
-                <Button
-                  text={i18n.update()}
+                  type="button"
+                >
+                  {i18n.cancel()}
+                </MuiButton>
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="small"
                   onClick={() => this.updateLibraryInProject(displayLibrary)}
-                />
+                  type="button"
+                >
+                  {i18n.update()}
+                </MuiButton>
               </div>
             }
           />
@@ -348,6 +381,7 @@ export class LibraryManagerDialog extends React.Component {
       isLoading,
       errorMessages,
       classLibraries,
+      sectionFilter,
     } = this.state;
 
     if (!isOpen) {
@@ -360,70 +394,112 @@ export class LibraryManagerDialog extends React.Component {
 
     return (
       <div>
-        <BaseDialog
-          isOpen
-          handleClose={this.closeLibraryManager}
+        <CustomDialog
           className={classNames(styles.dialog, {
             [styles.hidden]: displayLibrary,
           })}
-          useUpdatedStyles
+          style={{width: BASE_DIALOG_WIDTH}}
+          onClose={this.closeLibraryManager}
+          closeLabel={i18n.closeDialog()}
+          aria-labelledby="library-manager-dialog-title"
         >
-          <div className={styles.marginSides}>
-            <h1 className={styles.header}>{i18n.libraryManage()}</h1>
-            <div className={styles.libraryList}>
-              {this.displayProjectLibraries()}
-            </div>
-            <h2 className={styles.subHeader}>{i18n.libraryClassImport()}</h2>
-            <div style={{textAlign: 'left'}}>
-              <label className={styles.messageInline}>
-                {i18n.showingLibrariesFromSection()}
-              </label>
-              <select
-                onChange={event =>
-                  this.setState({sectionFilter: event.target.value})
-                }
-              >
-                <option value="">{i18n.all()}</option>
-                {sections.map(section => (
-                  <option key={section} value={section}>
-                    {section}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className={styles.libraryList}>
-              {this.displayClassLibraries()}
-            </div>
-            <h2 className={styles.subHeader}>{i18n.libraryIdImport()}</h2>
-            <div className={styles.inputParent} id="ui-test-import-library">
-              <input
-                className={styles.linkBox}
-                type="text"
-                value={importLibraryId}
-                onChange={this.setLibraryToImport}
-              />
-              <button
-                className={styles.addButton}
-                onClick={() => {
-                  this.setState({isLoading: true});
-                  this.fetchLatestLibrary(
-                    importLibraryId,
-                    this.addLibraryById,
-                    'import' /* event */
-                  );
-                }}
-                type="button"
-                disabled={!importLibraryId}
-              >
-                {isLoading && (
-                  <FontAwesome icon="spinner" className="fa-spin" />
-                )}
-                {!isLoading && i18n.add()}
-              </button>
-            </div>
-            <div className={styles.error}>{errorMessages.importFromId}</div>
+          <MuiTypography
+            variant="h3"
+            id="library-manager-dialog-title"
+            className={styles.header}
+          >
+            {i18n.libraryManage()}
+          </MuiTypography>
+          <MuiTypography
+            component="span"
+            id="dsco-dialog-description"
+            sx={visuallyHidden}
+          >
+            Add, remove, and update code libraries used in this project.
+          </MuiTypography>
+          <div className={styles.libraryList}>
+            {this.displayProjectLibraries()}
           </div>
-        </BaseDialog>
+          <MuiTypography variant="h5" className={styles.subHeader}>
+            {i18n.libraryClassImport()}
+          </MuiTypography>
+          <div style={{textAlign: 'left'}}>
+            <MuiTypography
+              variant="body2"
+              component="label"
+              className={styles.messageInline}
+            >
+              {i18n.showingLibrariesFromSection()}
+            </MuiTypography>
+            <SimpleDropdown
+              name="sectionFilter"
+              labelText={i18n.showingLibrariesFromSection()}
+              isLabelVisible={false}
+              size="s"
+              selectedValue={sectionFilter}
+              items={[
+                {value: '', text: i18n.all()},
+                ...sections.map(section => ({
+                  value: section,
+                  text: section,
+                })),
+              ]}
+              onChange={event =>
+                this.setState({sectionFilter: event.target.value})
+              }
+            />
+          </div>
+          <div className={styles.libraryList}>
+            {this.displayClassLibraries()}
+          </div>
+          <MuiTypography
+            variant="h5"
+            id="ui-test-import-library-header"
+            className={styles.subHeader}
+          >
+            {i18n.libraryIdImport()}
+          </MuiTypography>
+          <div className={styles.inputParent} id="ui-test-import-library">
+            <TextField
+              className={styles.linkBox}
+              name="libraryId"
+              size="s"
+              value={importLibraryId}
+              aria-labelledby="ui-test-import-library-header"
+              aria-describedby="import-library-id-error"
+              aria-invalid={!!errorMessages.importFromId}
+              onChange={this.setLibraryToImport}
+            />
+            <MuiButton
+              variant="contained"
+              color="secondary"
+              size="small"
+              loading={isLoading}
+              onClick={() => {
+                this.setState({isLoading: true});
+                this.fetchLatestLibrary(
+                  importLibraryId,
+                  this.addLibraryById,
+                  'import' /* event */
+                );
+              }}
+              type="button"
+              disabled={!importLibraryId}
+            >
+              {i18n.add()}
+            </MuiButton>
+          </div>
+          <MuiTypography
+            id="import-library-id-error"
+            role="alert"
+            variant="body3"
+            component="div"
+            className={styles.error}
+            sx={{color: 'var(--text-error-primary)'}}
+          >
+            {errorMessages.importFromId}
+          </MuiTypography>
+        </CustomDialog>
         {displayLibrary && this.renderDisplayLibrary()}
       </div>
     );

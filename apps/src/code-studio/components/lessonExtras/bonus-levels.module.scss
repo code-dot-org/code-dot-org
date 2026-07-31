@@ -3,10 +3,10 @@
 
 .lessonNumberHeading {
   @include main-font-regular;
-  background-color: $purple;
+  background-color: var(--background-brand-purple-primary);
   width: 100%;
   text-align: center;
-  color: $white;
+  color: var(--text-neutral-primary-white-fixed);
   font-size: 20px;
   line-height: 35px;
   font-style: normal;

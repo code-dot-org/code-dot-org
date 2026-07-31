@@ -40,6 +40,11 @@ const meta: Meta<typeof StudentCodeWidget> = {
       control: 'number',
       description: 'Selected student ID',
     },
+    hasCodeLevel: {
+      control: 'boolean',
+      description:
+        'Whether the lesson has a level that could produce student code.',
+    },
   },
   decorators: [
     Story => {
@@ -60,6 +65,7 @@ export const SingleFile: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -80,6 +86,7 @@ export const MultipleFiles: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -100,6 +107,7 @@ export const NoFiles: Story = {
     selectedUnitId: 1,
     selectedLessonId: 1,
     selectedStudentId: 1,
+    hasCodeLevel: true,
   },
   decorators: [
     Story => {
@@ -113,4 +121,13 @@ export const NoFiles: Story = {
       return <Story />;
     },
   ],
+};
+
+export const Hidden: Story = {
+  args: {
+    selectedUnitId: 1,
+    selectedLessonId: 1,
+    selectedStudentId: 1,
+    hasCodeLevel: false,
+  },
 };
