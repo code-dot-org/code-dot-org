@@ -24,4 +24,12 @@ describe('LessonExtrasFlagIcon', () => {
       'var(--text-success-primary)'
     );
   });
+
+  it('has an orange flag icon when hovered', () => {
+    const wrapper = shallow(<LessonExtrasFlagIcon />);
+    wrapper.find('span').simulate('mouseEnter');
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
+      'var(--text-accent-orange-primary)'
+    );
+  });
 });

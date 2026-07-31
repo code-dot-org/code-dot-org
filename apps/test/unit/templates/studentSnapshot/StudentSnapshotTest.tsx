@@ -59,6 +59,12 @@ const makeStore = () =>
     currentUser: {
       aiDifferentiationEnabled: false,
     },
+    sectionProgress: {
+      unitDataByUnit: {},
+      studentLessonProgressByUnit: {},
+      studentLevelProgressByUnit: {},
+      isLoadingProgress: false,
+    },
   }));
 
 describe('StudentSnapshot', () => {

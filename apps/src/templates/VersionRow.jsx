@@ -136,12 +136,12 @@ export default class VersionRow extends React.Component {
           highlight: this.props.isSelectedVersion,
         })}
       >
-        <td>
+        <td className={styles.labelCell}>
           <MuiTypography id={versionLabelId} variant="body1">
             {versionLabel}
           </MuiTypography>
         </td>
-        <td width="275" height="52" className={styles.actionCell}>
+        <td width="275" className={styles.actionCell}>
           <MuiStack
             direction="row"
             spacing={1}

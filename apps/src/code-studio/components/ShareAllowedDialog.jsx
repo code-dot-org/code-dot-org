@@ -17,7 +17,7 @@ import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import defaultThumbnail from '@cdo/static/projects/project_default.png';
+import defaultThumbnail from '@cdo/static/projects/project_default.svg';
 
 import * as applabConstants from '../../applab/constants';
 import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
