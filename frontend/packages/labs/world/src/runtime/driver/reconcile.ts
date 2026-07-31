@@ -19,12 +19,20 @@ interface ReconcilableWorld {
   snapshot(): {
     ruleIds: string[];
     actorIds: string[];
-    /** `<path>@<hash>` per applied effect — see engine/core/effectIds.ts. */
+    /** Identity per applied effect — see engine/core/effectIds.ts. */
     effectIds: string[];
+    /** The graph behind each effect in play, hashed, by module path. */
+    effectDocs: Record<string, string>;
     world: Record<string, unknown>;
     actors: Record<string, Record<string, unknown>>;
   };
   setWorldProperty(path: string, value: unknown): boolean;
+  setEffectDocument(path: string, document: unknown): boolean;
+  /**
+   * Every effect in play — the world's own AND every actor's — so a patch can
+   * lift the new graph off the rebuild wherever the edited effect is used.
+   */
+  allEffects(): ReadonlyArray<{path: string; document: unknown}>;
 }
 
 type Snapshot = ReturnType<ReconcilableWorld['snapshot']>;
@@ -50,11 +58,10 @@ export function reconcile(
     return {mode: 'built', snapshot};
   }
 
-  // Effects count as structure. A shader is compiled and registered when its
-  // actor's Game Object is created, so changing one — including editing the
-  // `.effect` behind it, which is what `effectIds` hashes — takes a restart to
-  // show. Swapping the program under a live filter is a later problem
-  // (specs/EFFECTS_PLAN.md §12).
+  // Which effects are in play, and with what knob settings, counts as
+  // structure: the driver reads values once, when it attaches a filter. The
+  // GRAPH behind an effect does not — it can be swapped underneath a running
+  // filter, and is handled below.
   const sameStructure =
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
     stable(previous.actorIds) === stable(snapshot.actorIds) &&
@@ -62,10 +69,46 @@ export function reconcile(
   const sameActors = stable(previous.actors) === stable(snapshot.actors);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
 
-  if (sameStructure && sameActors && worldChanged) {
-    // Level 1: apply the changed world-scoped values to the live world.
+  // Effects whose graph was edited: same effect, new shader.
+  const editedEffects = Object.keys(snapshot.effectDocs).filter(
+    path => previous.effectDocs[path] !== snapshot.effectDocs[path],
+  );
+
+  // An edited graph patches even when `sameActors` is false, and that exception
+  // is deliberate. `sameActors` compares the previous build's PRE-TICK snapshot
+  // against the incoming one, but the incoming world is not always freshly
+  // built — an unchanged bundle re-imports to the same module instance, whose
+  // scene has been ticking — so for any game where something moves the two
+  // disagree about positions and the flag reads false on almost every rebuild.
+  //
+  // Gating a shader swap on it would mean the swap never happens, which is the
+  // whole feature. And the gate is not meaningful here regardless: replacing a
+  // fragment program has nothing to do with where the actors are.
+  //
+  // The cost is narrow and recoverable. Edit a `.effect` AND an actor's start
+  // position in one rebuild and the position change waits for the next restart.
+  // (That `sameActors` is unreliable at all is a pre-existing problem worth
+  // chasing on its own; it is the same flag the live world-property patch
+  // depends on.)
+  if (sameStructure && (editedEffects.length || (sameActors && worldChanged))) {
+    // Level 1: patch the running world rather than replacing it.
     for (const [path, value] of Object.entries(snapshot.world)) {
       running.setWorldProperty(path, value);
+    }
+    // Lift each edited graph off the freshly built world and write it into the
+    // running one. The driver re-reads these specs every frame, so it sees the
+    // new document and swaps the shader on the node the filters already use —
+    // no restart, and the game keeps its state.
+    if (editedEffects.length) {
+      const rebuilt = new Map(
+        incoming.allEffects().map(effect => [effect.path, effect.document]),
+      );
+      for (const path of editedEffects) {
+        const document = rebuilt.get(path);
+        if (document !== undefined) {
+          running.setEffectDocument(path, document);
+        }
+      }
     }
     return {mode: 'reconciled', snapshot};
   }

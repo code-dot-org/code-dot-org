@@ -54,7 +54,11 @@ const effectDoc = (nodeId: string): EffectDocument => ({
  * anything else and the reconciler restarts for that instead, and the test
  * passes while proving nothing.
  */
-function makeWorldWithEffect(document: EffectDocument, strength = 900): World {
+function makeWorldWithEffect(
+  document: EffectDocument,
+  strength = 900,
+  values?: Record<string, number>,
+): World {
   const world = new WorldBuilder({id: 'w', name: 'W'})
     .useRules([GravityRule])
     .set(StrengthProperty, strength)
@@ -63,7 +67,7 @@ function makeWorldWithEffect(document: EffectDocument, strength = 900): World {
     new ActorBuilder({id: 'player', name: 'Player'})
       .useTraits([AffectedByGravityTrait])
       .set(PositionProperty, new Vector(200, 20))
-      .useEffect('effects/ripple', document)
+      .useEffect('effects/ripple', document, values)
       .instantiate(),
   );
   world.addActor(
@@ -127,41 +131,70 @@ describe('reconcile', () => {
     expect(mode).toBe('restarted');
   });
 
-  it('restarts when an effect changed ALONGSIDE a world property', () => {
-    // The case `effectIds` exists for, and the only one where it decides
-    // anything. A shader is compiled when its actor's Game Object is created,
-    // so an edited `.effect` reaches the screen only on a restart — but a
-    // changed world property is precisely the condition for patching live
-    // instead. Without effects in the snapshot this rebuild looks like "only
-    // gravity moved", the game keeps running, and the new shader never loads.
-    //
-    // An effect-only edit restarts either way, through the fallthrough below
-    // ("nothing changed is not patchable"), so it does not discriminate.
-    const running = makeWorldWithEffect(effectDoc('sample-1'), 900);
-    const baseline = running.snapshot();
-    const incoming = makeWorldWithEffect(effectDoc('sine-9'), 1500);
-    const {mode} = reconcile(running, incoming, baseline);
-    expect(mode).toBe('restarted');
-  });
-
-  it('restarts on an effect-only edit too', () => {
+  it('patches an edited graph into the running game instead of restarting', () => {
+    // The live shader swap. A graph can be replaced underneath a filter that is
+    // already drawing, so editing a `.effect` must NOT reboot the game and
+    // throw away the player's position — it patches, and the driver swaps the
+    // shader on its next frame.
     const running = makeWorldWithEffect(effectDoc('sample-1'));
     const baseline = running.snapshot();
     const incoming = makeWorldWithEffect(effectDoc('sine-9'));
+
     const {mode} = reconcile(running, incoming, baseline);
-    expect(mode).toBe('restarted');
+
+    expect(mode).toBe('reconciled');
   });
 
-  it('still applies a world-property change live when the effect is untouched', () => {
-    // The other half: carrying effects in the snapshot must not cost the live
-    // reconcile. Same effect, changed gravity — patch it, do not restart.
-    const document = effectDoc('sample-1');
-    const running = makeWorldWithEffect(document, 900);
+  it('writes the new graph onto the RUNNING world, not just the rebuild', () => {
+    // Patching is only real if the world the driver reads each frame carries
+    // the new document; the freshly built world is discarded.
+    const running = makeWorldWithEffect(effectDoc('sample-1'));
     const baseline = running.snapshot();
-    const incoming = makeWorldWithEffect(document, 1500);
+    const edited = effectDoc('sine-9');
+
+    reconcile(running, makeWorldWithEffect(edited), baseline);
+
+    expect(running.allEffects()[0].document).toEqual(edited);
+  });
+
+  it('patches an edited graph alongside a changed world property', () => {
+    const running = makeWorldWithEffect(effectDoc('sample-1'), 900);
+    const baseline = running.snapshot();
+    const incoming = makeWorldWithEffect(effectDoc('sine-9'), 1500);
+
     const {mode} = reconcile(running, incoming, baseline);
+
     expect(mode).toBe('reconciled');
     expect(running.snapshot().world['gravity.strength']).toBe(1500);
+  });
+
+  it('patches an edited graph even when the actors have moved on', () => {
+    // `sameActors` compares the previous build's pre-tick snapshot with the
+    // incoming one, and the incoming world is not always freshly built — so for
+    // a game where anything moves the flag reads false on almost every rebuild.
+    // Gating the shader swap on it would mean the swap never happened.
+    const running = makeWorldWithEffect(effectDoc('sample-1'));
+    const baseline = running.snapshot();
+    const incoming = makeWorldWithEffect(effectDoc('sine-9'));
+    // The rebuild reports a player who has since fallen.
+    for (const actor of incoming.actors) {
+      actor.set(PositionProperty, new Vector(200, 400));
+    }
+
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+  });
+
+  it('still restarts when the knob settings change', () => {
+    // Values are read once, when the driver attaches the filter, so retuning
+    // is structural in a way that editing the graph is not.
+    const document = effectDoc('sample-1');
+    const running = makeWorldWithEffect(document, 900, {strength: 0.1});
+    const baseline = running.snapshot();
+    const incoming = makeWorldWithEffect(document, 900, {strength: 0.9});
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
   });
 
   it('restarts when an effect is added to an actor that had none', () => {

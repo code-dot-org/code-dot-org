@@ -3,6 +3,7 @@ export {
   buildUniformValues,
   createEffectController,
   registerEffect,
+  updateEffect,
 } from './effectFilter';
 export type {
   AppliedEffect,

@@ -27,7 +27,9 @@ import {BUILTIN_RULE_META} from './builtinMeta';
 import {
   actorDefinitionExtension,
   runtimeActorExtension,
+  runtimeWorldExtension,
   traitContextExtension,
+  worldDefinitionExtension,
 } from './extensions/actorContext';
 import {
   effectParamsInitExtension,
@@ -1628,6 +1630,125 @@ const worldUseAnimations = defineBlock({
 });
 
 /**
+ * Play an effect across the whole viewport.
+ *
+ * The World counterpart to the actor's `use effect`. An actor's effect filters
+ * that actor's own pixels before it is composited into the scene; a world's
+ * filters everything the camera has drawn — the underwater scene from the spec,
+ * rather than a wobble on one fish. Same `.effect` file either way.
+ */
+const worldWorldUseEffect = defineBlock({
+  type: 'world_world_use_effect',
+  message0: 'use effect %1',
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  mutator: effectParamsMutator,
+  extensions: [
+    effectFileOptionsExtension,
+    worldDefinitionExtension,
+    effectParamsInitExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Play a visual effect over the whole view (authored in an .effect file).',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      const values = effectParamValuesCode(block, generator);
+      return values
+        ? `world.useEffect(${str(path)}, ${importVar(path)}, ${values});\n`
+        : `world.useEffect(${str(path)}, ${importVar(path)});\n`;
+    },
+  },
+});
+
+/**
+ * Start a viewport-wide effect while the game runs.
+ *
+ * The world's counterpart to `add effect … to <actor>`: `use effect` in a
+ * `.world` file gives the world an effect from the start, this one turns one on
+ * mid-game — "when the player falls in, go underwater".
+ *
+ * There is no subject socket. The world is the subject, and inside an event
+ * handler or a rule step `world` is already the live one.
+ */
+const worldAddWorldEffect = defineBlock({
+  type: 'world_add_world_effect',
+  message0: 'add effect %1 to the world',
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  mutator: effectParamsMutator,
+  extensions: [
+    effectFileOptionsExtension,
+    worldContextExtension,
+    runtimeWorldExtension,
+    effectParamsInitExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Start playing an effect over the whole view now. Adding one already playing changes nothing.',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      const values = effectParamValuesCode(block, generator);
+      return values
+        ? `world.addEffect(${str(path)}, ${importVar(path)}, ${values});\n`
+        : `world.addEffect(${str(path)}, ${importVar(path)});\n`;
+    },
+  },
+});
+
+/** Stop a viewport-wide effect. Removing one not playing is a no-op. */
+const worldRemoveWorldEffect = defineBlock({
+  type: 'world_remove_world_effect',
+  message0: 'remove effect %1 from the world',
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    effectFileOptionsExtension,
+    worldContextExtension,
+    runtimeWorldExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip: 'Stop playing an effect over the whole view.',
+  generator: {
+    javascript(block) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      // No import: removing needs only the effect's identity, not its graph.
+      return `world.removeEffect(${str(path)});\n`;
+    },
+  },
+});
+
+/**
  * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
  * Blockly blocks the toolbox also offers (controls_if, logic_compare,
  * math_number, text, …) are NOT listed here: importing `@code-dot-org/blockly`
@@ -1881,6 +2002,9 @@ export const DOMAIN_BLOCKS = [
   worldUseEffect,
   worldAddEffect,
   worldRemoveEffect,
+  worldWorldUseEffect,
+  worldAddWorldEffect,
+  worldRemoveWorldEffect,
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
@@ -1964,7 +2088,15 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {name: 'Scene', blocks: ['world_scene', 'world_add_actor', 'world_load_map']},
   {
     name: 'World',
-    blocks: ['world_world', 'world_use_rule', 'world_use_animations'],
+    blocks: [
+      'world_world',
+      'world_use_rule',
+      'world_use_animations',
+      'world_world_use_effect',
+      // The runtime pair, beside the declaration they mirror.
+      'world_add_world_effect',
+      'world_remove_world_effect',
+    ],
   },
   {
     name: 'Rule',

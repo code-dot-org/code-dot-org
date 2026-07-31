@@ -704,13 +704,146 @@ run, no reload between them. Sampling had to start the instant the canvas
 appeared; the fall lasts under a second and a screenshot taken a beat late
 misses it entirely. The scaffolding was then removed.
 
+## 11c. World effects — DONE
+
+An effect can play across the whole viewport, not just on one actor:
+
+```
+define world  Platform World
+  use rule       Gravity
+  use animations game
+  use effect     Underwater
+```
+
+The distinction is the one the spec draws. An actor's effect goes in that Game
+Object's _internal_ filter list, so it distorts the actor's own pixels before
+they are composited — a wobble on one fish. A world's goes on the camera, so it
+filters everything already drawn — the underwater scene, ground and all. Same
+`.effect` file, same parameters; only the surface differs.
+
+**Engine.** `WorldBuilder.useEffect(path, document, values?)` mirrors
+`ActorBuilder`'s, and `World` gained `effects()` plus the same idempotent
+`addEffect`/`removeEffect` an Actor has, so runtime add/remove works here too
+without further work. World effects join `snapshot().effectIds` alongside the
+actors' — nothing downstream needs to tell the two apart, since the reconciler
+only asks whether the set changed.
+
+**Driver.** `reconcile` was generalised rather than duplicated: the diffing,
+the attach-once bookkeeping, the shared `WeakMap`, and the compile cache are
+one `reconcileInto`, and the two public entry points differ only in whether
+they call `applyEffectToActor` or `applyEffectToWorld`. A camera is just
+another key in the same map, so an effect used by both the world and an actor
+still compiles and uploads one shader program.
+
+**Block.** `world_world_use_effect` — `use effect <EFFECT>` in the World
+toolbox category, beside `use rule` and `use animations`, carrying the same
+parameter sockets. It is a separate block type from the actor's because the
+code differs (`world.useEffect` against `actor.useEffect`), and
+`worldDefinitionExtension` warns if it is placed outside `define world`, where
+`world` is the live `World` rather than the builder.
+
+**Verified in Chromium**: with the ripple on the world, the ball, the coin, the
+player, and the ground platform all shear together and continuously across the
+viewport — against the actor case, where one sprite tore and the ground beside
+it was untouched. That contrast is the check; a screenshot of a distorted
+player alone would not distinguish the two.
+
+**Runtime add/remove for the world, too.** `add effect <EFFECT> to the world`
+and `remove effect <EFFECT> from the world` — "when the player falls in, go
+underwater". No subject socket: the world _is_ the subject, and in an event
+handler or a rule step `world` is already the live one. The engine side needed
+nothing, because `World` had gained the same idempotent `addEffect` /
+`removeEffect` an `Actor` has when the declaration block landed.
+
+They carry two warnings, which answer different questions and so coexist by
+id: `worldContext` fires when `world` is unbound entirely (a floating block, an
+actor body), and the new `runtimeWorldExtension` fires inside `define world`,
+where `world` is the _builder_ — there the fix is `use effect`, and the message
+says so. Adding a third guard direction was the moment to stop hand-writing
+them: the inverse-direction extensions now come from a
+`runtimeContextExtension` factory beside the existing `builderContextExtension`
+one, and `worldDefinitionExtension` was folded into the latter.
+
+**Verified in Chromium**, world ripple added on `startsFalling` and removed on
+`stopsFalling`: mid-fall the player, ball, coin, and ground platform are all
+sheared together; after landing every one of them is clean — one continuous
+run. The scaffolding was then removed.
+
+Camera effects (a filter on one camera rather than the whole view) remain
+deferred — the World case is the one the curriculum wants first.
+
+## 11d. Live shader swap — DONE
+
+Editing a `.effect` now updates the running game instead of restarting it. The
+console says **"↻ Applied changes live"** where it used to say "↻ Restarted the
+game", and the player keeps whatever position, animation, and state it had.
+
+**The README's stated mechanism does not exist.** It said re-registering an
+effect under the same name replaces the constructor, "which is what makes live
+editing work". In Phaser 4.2.1 `addNodeConstructor` _throws_ when the name is
+taken, and the manager caches the constructed node anyway, so a second
+constructor would never be used. (Nothing was broken by this: the driver caches
+by path, so it never registered twice.)
+
+What does work is `ProgramManager.setBaseShader`, which is public. The node
+stays and its shader is swapped underneath: the program is looked up by a key
+derived from the shader config, so a changed source under a changed name
+compiles a new program on the next draw, and every filter already attached
+picks it up because filters hold the node by _name_. That is `updateEffect` in
+the effect runtime; `RegisteredEffect` gained a `version` to keep two versions
+of one effect from colliding in the program cache.
+
+**Identity and content had to be separated.** `effectSnapshotId` used to hash
+the graph, which made every edit structural. It now hashes only path and
+parameter values — _identity_, the things the driver reads once when it
+attaches — while the graph moved to a new `effectDocs` map, compared
+separately. `reconcile` patches the new documents onto the RUNNING world
+(`World.setEffectDocument`, which reaches the world's own effects and every
+actor's), and the driver notices on its next frame.
+
+The driver compares documents **by identity, not by hash**: the engine replaces
+the whole spec on an edit, so a new object _is_ the signal, and re-hashing
+every graph every frame would be work done to learn what a pointer comparison
+already says.
+
+**Three bugs found while building it, two of which would have shipped silently:**
+
+- **The swap never ran.** `reconcileInto` skipped `resolve` for an
+  already-attached effect, and `resolve` is where the edit is detected — so the
+  only effects that could ever update were the ones not currently drawing.
+- **A broken effect was never retried.** Failures were remembered by path, to
+  stop one bad graph reporting every frame. That also meant a learner who
+  _fixed_ the graph got nothing back: the effect was written off for the
+  session. Failures are now remembered by the document that failed, which
+  reports each broken version once and retries the moment the graph changes.
+- **A node built after an edit used the stale source.** The shader class closed
+  over the compilation captured at registration, and nodes are constructed
+  lazily on first draw — which can be after the learner has already replaced
+  that version. It now reads the current compilation at construction.
+
+**A pre-existing problem this uncovered, worth chasing separately.**
+`sameActors` compares the previous build's pre-tick snapshot against the
+incoming one, but the incoming world is not always freshly built — an unchanged
+bundle re-imports to the same module instance, whose scene has been ticking. So
+for any game where something moves, the flag reads false on almost every
+rebuild: instrumenting a real session showed
+`Player.positional.position: {480,80} -> {480,408}`, the player already landed.
+The shader swap therefore does not gate on it, which is defensible on the
+merits too — replacing a fragment program has nothing to do with where the
+actors are. **But the live world-property patch (§9's "change gravity strength
+and see it live") depends on that same flag, so it likely does not fire in
+practice either.** That is not this work's to fix, and it is not fixed.
+
+The cost of ignoring the flag is narrow and recoverable: edit a `.effect` _and_
+an actor's start position in one rebuild, and the position change waits for the
+next restart.
+
+**Verified in Chromium** end to end: with a world ripple in play, raising the
+effect's strength in the graph editor took the scene from a barely-visible
+wobble to a heavy smear, with "↻ Applied changes live" in the console and no
+reload. The scaffolding was then removed.
+
 ## 12. Deferred
 
-- **World and Camera effects.** `applyEffectToWorld` exists and applies to the
-  camera's filter list; it needs a `use effect` on `.world` and the same
-  registration path.
-- **Live shader swap.** Re-registering a render node replaces the constructor,
-  which is what would make editing a `.effect` update a running game without a
-  restart. Until then, an edit restarts.
 - **A stock effect library.** Effects come from the project's own `effects/`
   for now; enumerating the ones the curriculum wants is separate work.

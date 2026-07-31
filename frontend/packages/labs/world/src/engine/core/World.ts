@@ -6,7 +6,7 @@
 
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
-import {effectSnapshotId} from './effectIds';
+import {effectContentHash, effectSnapshotId} from './effectIds';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
@@ -33,14 +33,22 @@ export interface WorldSnapshot {
   ruleIds: string[];
   actorIds: string[];
   /**
-   * `<path>@<hash>` per applied effect, across every actor (see `effectIds.ts`).
+   * `<path>@<hash of values>` per applied effect, across the world and every
+   * actor (see `effectIds.ts`).
    *
-   * Structural, not a value: the reconciler compares it alongside rule and
-   * actor ids, so adding, removing, swapping, or *editing* an effect restarts
-   * the game. Without it an edited `.effect` would rebuild and change nothing
-   * on screen.
+   * Structural: the reconciler compares it alongside rule and actor ids, so
+   * gaining, losing, or retuning an effect restarts the game.
    */
   effectIds: string[];
+  /**
+   * The graph behind each effect in play, hashed, by module path.
+   *
+   * Deliberately NOT part of the structure. A shader can be swapped underneath
+   * a filter that is already running, so editing a `.effect` patches the live
+   * game instead of restarting it — which is the difference between authoring a
+   * shader and rebooting a game on every keystroke.
+   */
+  effectDocs: Record<string, string>;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
@@ -78,6 +86,8 @@ export interface WorldInit {
   overrides: Array<[Property, unknown]>;
   /** Animations to register beyond the active rules' stock, by id. */
   animations?: Array<[string, AnimationDef]>;
+  /** Effects played across the whole viewport. */
+  effects?: AppliedEffectSpec[];
 }
 
 // `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
@@ -118,6 +128,9 @@ export class World {
   // Animations known to this world, by id — seeded from the active rules' stock
   // animations. The Animation rule's step and renderSnapshot resolve ids here.
   private readonly animationDefs = new Map<string, AnimationDef>();
+  // Effects played across the whole viewport, not on any one actor. Mutable for
+  // the same reason an actor's list is: the driver re-reads it every frame.
+  private readonly appliedEffects: AppliedEffectSpec[];
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
   // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
@@ -159,6 +172,8 @@ export class World {
     for (const [id, def] of init.animations ?? []) {
       this.animationDefs.set(id, def);
     }
+
+    this.appliedEffects = init.effects ? [...init.effects] : [];
 
     // The per-tick order is fixed by the active rules' steps.
     const steps: Step[] = [];
@@ -266,6 +281,85 @@ export class World {
    * the actors' stores — so the driver needs no engine internals, only these
    * numbers. Empty when the Spatial rule is not in play.
    */
+  /**
+   * Effects played across the whole viewport, in application order.
+   *
+   * Read by the driver each frame and applied to the camera, the way an actor's
+   * are applied to its Game Object.
+   */
+  effects(): readonly AppliedEffectSpec[] {
+    return this.appliedEffects;
+  }
+
+  /** Start a viewport-wide effect now. Idempotent by path, like an actor's. */
+  addEffect(
+    path: string,
+    document: AppliedEffectSpec['document'],
+    values?: AppliedEffectSpec['values'],
+  ): this {
+    if (this.appliedEffects.some(effect => effect.path === path)) {
+      return this;
+    }
+    this.appliedEffects.push(
+      values ? {path, document, values} : {path, document},
+    );
+    return this;
+  }
+
+  /**
+   * Every effect in play, the world's own and every actor's.
+   *
+   * Public because the hot-reload reconciler reads it off a freshly built world
+   * to find the new graph for an effect the learner just edited — which may sit
+   * on an actor, so `effects()` (the world's own) is not enough.
+   */
+  allEffects(): AppliedEffectSpec[] {
+    return [
+      ...this.appliedEffects,
+      ...this.actorList.flatMap(actor => [...actor.effects()]),
+    ];
+  }
+
+  /**
+   * Give every effect with this path a new graph, in place.
+   *
+   * The live half of editing a `.effect`: the reconciler calls this on the
+   * RUNNING world so the driver, which re-reads these specs each frame, notices
+   * the graph changed and swaps the shader. Values are untouched — they are
+   * identity, and a change to them restarts instead.
+   *
+   * @returns whether anything carried that path
+   */
+  setEffectDocument(
+    path: string,
+    document: AppliedEffectSpec['document'],
+  ): boolean {
+    let replaced = false;
+    const patch = (effects: AppliedEffectSpec[]) => {
+      effects.forEach((effect, index) => {
+        if (effect.path === path) {
+          effects[index] = {...effect, document};
+          replaced = true;
+        }
+      });
+    };
+    patch(this.appliedEffects);
+    for (const actor of this.actorList) {
+      actor.setEffectDocument(path, document);
+      replaced ||= actor.effects().some(effect => effect.path === path);
+    }
+    return replaced;
+  }
+
+  /** Stop a viewport-wide effect. Removing one not in play is a no-op. */
+  removeEffect(path: string): this {
+    const index = this.appliedEffects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      this.appliedEffects.splice(index, 1);
+    }
+    return this;
+  }
+
   renderSnapshot(): RenderState[] {
     const spatial = this.membership.items().find(r => r.id === SPATIAL.rule);
     const positional: Trait | undefined = spatial?.traits[SPATIAL.trait];
@@ -395,9 +489,24 @@ export class World {
       actorIds: this.actorList.map(actor => actor.id).sort(),
       // Sorted, like the id lists: the snapshot is compared by stringifying it,
       // so a stable order is what keeps an unchanged world comparing equal.
-      effectIds: this.actorList
-        .flatMap(actor => actor.effects().map(effectSnapshotId))
-        .sort(),
+      // World effects sit in the same list as the actors'. They are keyed by
+      // path and hashed by content just the same, and nothing downstream needs
+      // to tell a viewport effect from an actor's — the reconciler only asks
+      // whether the set changed.
+      effectIds: [
+        ...this.appliedEffects.map(effectSnapshotId),
+        ...this.actorList.flatMap(actor =>
+          actor.effects().map(effectSnapshotId),
+        ),
+      ].sort(),
+      // By path, so the same effect on ten actors is hashed once — and so a
+      // patch can find every spec that needs the new document.
+      effectDocs: Object.fromEntries(
+        this.allEffects().map(effect => [
+          effect.path,
+          effectContentHash(effect),
+        ]),
+      ),
       world,
       actors,
     };
