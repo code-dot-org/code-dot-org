@@ -416,9 +416,9 @@ export default class Craft {
               expandIcon={
                 <img style={{width: '1rem'}} src={moreButtonImg} alt="" />
               }
-              upIcon={<img style={{width: '1rem'}} src={upButtonImg} alt="" />}
+              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
               downIcon={
-                <img style={{width: '1rem'}} src={downButtonImg} alt="" />
+                <img style={{width: '15px'}} src={downButtonImg} alt="" />
               }
               visualizationColumn={
                 <CraftVisualizationColumn

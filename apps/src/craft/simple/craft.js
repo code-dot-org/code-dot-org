@@ -468,9 +468,9 @@ Craft.init = function (config) {
             expandIcon={
               <img style={{width: '2rem'}} src={moreButtonImg} alt="" />
             }
-            upIcon={<img style={{width: '2rem'}} src={upButtonImg} alt="" />}
+            upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
             downIcon={
-              <img style={{width: '2rem'}} src={downButtonImg} alt="" />
+              <img style={{width: '15px'}} src={downButtonImg} alt="" />
             }
             visualizationColumn={
               <CraftVisualizationColumn

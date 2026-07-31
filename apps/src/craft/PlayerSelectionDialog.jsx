@@ -60,9 +60,10 @@ function PlayerSelectionDialog({
           />
         </Box>
         <MuiButton
-          variant="contained"
-          color="secondary"
-          size="medium"
+          variant="outlined"
+          color="tertiary"
+          size="large"
+          data-theme="Light"
           onClick={() => handlePlayerSelection(name)}
         >
           {i18n.selectChooseButton()}
