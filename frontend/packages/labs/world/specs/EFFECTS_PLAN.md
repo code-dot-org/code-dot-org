@@ -924,7 +924,7 @@ rebuild the parameter sockets. So the import extension chains: it must be listed
 _after_ the params extension on the block, and when it writes the imported path
 through `setValue` the wrapped validator sees it as an ordinary choice and
 reshapes the sockets. Verified in the browser — importing Tint left the block
-reading `use effect [Tint]` with four colour sockets seeded from Tint's own
+reading `use effect [Tint]` with four color sockets seeded from Tint's own
 default.
 
 **Blockly cannot reach React**, so `blockly/effectImport.ts` is a registered

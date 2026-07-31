@@ -1,8 +1,8 @@
 // The swatch on the `r g b a` block.
 //
-// Four sliders tell you the channels and nothing about the colour. 0.2 / 1 /
+// Four sliders tell you the channels and nothing about the color. 0.2 / 1 /
 // 0.4 is green, but only to someone who already knows; the point of dragging
-// them is to arrive at a colour, and until now the only way to see the result
+// them is to arrive at a color, and until now the only way to see the result
 // was to run the game.
 //
 // So the block leads with a `field_colour`, which does double duty. It shows
@@ -27,7 +27,7 @@ import {rgb, toHex} from '../../engine';
 
 export const RGBA_PREVIEW_EXTENSION = 'world_rgba_preview';
 
-/** The channel inputs the swatch reflects. Alpha is not a colour. */
+/** The channel inputs the swatch reflects. Alpha is not a color. */
 const CHANNELS = ['R', 'G', 'B'] as const;
 
 /** The field a channel's value lives in, on a slider or a plain number. */

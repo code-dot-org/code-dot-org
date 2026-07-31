@@ -25,6 +25,8 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {COLOUR_CHECK} from './colorCheck';
+import {installColorMessages} from './colorMessages';
 import {
   runtimeActorExtension,
   runtimeWorldExtension,
@@ -197,7 +199,7 @@ const worldActor = defineBlock({
     javascript(block, generator) {
       const name = block.getFieldValue('NAME');
       // Registered rather than emitted inline, so it is deduped against the
-      // other blocks that need `WorldLab` — an effect's colour parameter
+      // other blocks that need `WorldLab` — an effect's color parameter
       // generates a `WorldLab.rgb(…)` call and registers the same import.
       // Emitting it here as well produced a second copy in the hoisted block
       // and "The symbol WorldLab has already been declared" at compile.
@@ -277,13 +279,13 @@ const effectParamValuesCode = (
     /**
      * A socket's code, or the default it stands in for when emptied.
      *
-     * A colour default is handed over as the float array the effect declared,
+     * A color default is handed over as the float array the effect declared,
      * not as hex: `rgb`/`rgba` take either, and going through hex would drop a
      * vec4's alpha and quantize the rest for no reason.
      */
     const socket = (n: number): string =>
       generator.valueToCode(block, `EPARAM_${index}_${n}`, Order.NONE) ||
-      (sockets[n]?.kind === 'colour'
+      (sockets[n]?.kind === 'color'
         ? // Exactly the components the effect declared. Padding to four would
           // write an explicit alpha of 0 for a three-component default, and
           // `rgba`'s "missing means opaque" could no longer see it was missing.
@@ -295,7 +297,7 @@ const effectParamValuesCode = (
             .join(', ')}]`
         : fallback(n));
 
-    // Colours arrive as `#rrggbb` — from the picker, or from any other colour
+    // Colors arrive as `#rrggbb` — from the picker, or from any other color
     // block a learner plugged in — and a shader wants floats. The conversion
     // is a call in the generated code rather than a step in the block, which
     // is what lets `colour_random` and `colour_blend` work here too.
@@ -1292,7 +1294,7 @@ const worldSlider = defineBlock({
   message0: '%1',
   args0: [fieldSliderArg('NUM', 0)],
   output: 'Number',
-  // The number blocks' colour: it stands in for `math_number` and should not
+  // The number blocks' color: it stands in for `math_number` and should not
   // read as a different kind of thing.
   style: 'math_blocks',
   mutator: sliderRangeMutator,
@@ -1307,23 +1309,23 @@ const worldSlider = defineBlock({
   },
 });
 
-// A colour by its channels, for when the swatch is not enough.
+// A color by its channels, for when the swatch is not enough.
 //
 // The picker is the easy road and covers most of what a learner wants: pick a
-// colour, see a colour. It cannot do two things, though — set an alpha, or let
+// color, see a color. It cannot do two things, though — set an alpha, or let
 // a channel be driven by something (a variable, a loop counter, a query). This
 // block is where you go for either, and it drops straight onto the picker
-// because both output `Colour`.
+// because both output `Color`.
 //
 // Channels are 0–1, not 0–255, matching the shader and the numbers in the
 // `.effect` file. The sliders are what makes that workable: nobody has to know
-// the convention to set a colour by dragging, and a learner who opens the
+// the convention to set a color by dragging, and a learner who opens the
 // effect afterwards sees the same numbers there.
 //
 // It leads with a swatch showing what the channels add up to, which is also
 // where the presets live — see `rgbaPreview` for how the two stay in step.
 /**
- * A colour-swatch field arg. Built by a helper, like the vector and slider
+ * A color-swatch field arg. Built by a helper, like the vector and slider
  * fields: a plugin-typed arg carrying extra config trips TypeScript's
  * excess-property check when written as a literal at the call site.
  */
@@ -1353,13 +1355,15 @@ const worldRgba = defineBlock({
     {type: 'input_value', name: 'A', check: 'Number'},
   ],
   inputsInline: true,
-  output: 'Colour',
+  // Blockly's spelling, deliberately: it has to match what the stock color
+  // blocks offer or neither can plug into the other. See `colorCheck`.
+  output: COLOUR_CHECK,
   extensions: [valueShadowExtension, rgbaPreviewExtension],
-  // Blockly's own colour blocks' style, so this reads as one of them — which,
+  // Blockly's own color blocks' style, so this reads as one of them — which,
   // as far as any socket is concerned, it is.
   style: 'colour_blocks',
   tooltip:
-    'A colour from its red, green, blue and alpha channels (0 to 1). Drop it on a colour to set them yourself.',
+    'A color from its red, green, blue and alpha channels (0 to 1). Drop it on a color to set them yourself.',
   generator: {
     javascript(block, generator) {
       // Straight to floats. `rgb`/`rgba` accept an array as readily as hex, so
@@ -2181,11 +2185,11 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'world_vector_component',
     ],
   },
-  // Colour values, beside Math because that is what they are. The picker is
-  // what an effect's colour socket already holds; `world_rgba` is the way past
+  // Color values, beside Math because that is what they are. The picker is
+  // what an effect's color socket already holds; `world_rgba` is the way past
   // it, and `colour_random`/`colour_blend` fit the same socket.
   {
-    name: 'Colour',
+    name: 'Color',
     blocks: ['colour_picker', 'world_rgba', 'colour_random', 'colour_blend'],
   },
   {name: 'Text', blocks: ['text']},
@@ -2279,6 +2283,11 @@ export function buildDomainPalette(projectRules: readonly RuleMeta[]): {
   toolbox: Toolbox;
   rootTypes: ReadonlySet<string>;
 } {
+  // Here rather than at module scope: `Blockly.Msg` is not safe to write until
+  // Blockly's own locale has loaded, and touching it during module evaluation
+  // takes the workspace down with "Cannot read properties of undefined". This
+  // runs once per editor mount, before the palette reaches a workspace.
+  installColorMessages();
   if (projectRules.length === 0) {
     return {
       blocks: DOMAIN_BLOCKS,
