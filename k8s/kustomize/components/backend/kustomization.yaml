@@ -1,0 +1,13 @@
+# Shared backend configuration used by Rails processes. The dashboard
+# component layers frontend-serving resources on top of this component.
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+resources:
+  - locals.yml.yaml
+  - cdo-local-secrets.yaml
+secretGenerator:
+  - name: cdo-local-secrets
+    behavior: merge
+    type: Opaque
+    envs:
+      - cdo-local-secret-overrides.env

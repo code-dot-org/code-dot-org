@@ -1,4 +1,5 @@
 require 'base64'
+require 'json'
 
 # Create a storage id without an associated user id and track it using a cookie.
 def create_storage_id_cookie
@@ -127,7 +128,62 @@ def storage_encrypt_channel_id(storage_id, project_id)
 end
 
 def get_storage_id
-  @get_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
+  if @get_storage_id
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'existing_storage_id',
+      storage_id: @get_storage_id,
+      caller: caller_locations(1, 1).first.to_s,
+      request_url: defined?(request) ? request.base_url + request.path : nil,
+      dashboard_defined: !!defined?(Dashboard::Application),
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
+    )
+    return @get_storage_id
+  end
+
+  @get_storage_id = storage_id_for_current_user
+  if @get_storage_id
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'current_user_storage_id',
+      storage_id: @get_storage_id,
+      caller: caller_locations(1, 1).first.to_s,
+      request_url: request.base_url + request.path,
+      dashboard_defined: !!defined?(Dashboard::Application),
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
+    )
+    return @get_storage_id
+  end
+
+  @get_storage_id = storage_id_from_cookie
+  if @get_storage_id
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'existing_cookie_storage_id',
+      storage_id: @get_storage_id,
+      caller: caller_locations(1, 1).first.to_s,
+      request_url: request.base_url + request.path,
+      dashboard_defined: !!defined?(Dashboard::Application),
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
+    )
+    return @get_storage_id
+  end
+
+  @get_storage_id = create_storage_id_cookie
+  if @get_storage_id
+    CDO.log.info JSON.dump(
+      namespace: 'project_storage_creation',
+      event: 'created_cookie_storage_id',
+      storage_id: @get_storage_id,
+      caller: caller_locations(1, 1).first.to_s,
+      request_url: request.base_url + request.path,
+      dashboard_defined: !!defined?(Dashboard::Application),
+      created_at: Time.now.utc.strftime('%Y-%m-%dT%H:%M:%S.%LZ'),
+    )
+    return @get_storage_id
+  end
+
+  @get_storage_id
 end
 
 def storage_id_cookie_name

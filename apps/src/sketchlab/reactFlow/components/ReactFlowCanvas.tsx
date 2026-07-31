@@ -64,6 +64,7 @@ import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
+import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useTransientMessage} from '../hooks/useTransientMessage';
@@ -137,7 +138,11 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  levelName: string;
+  // When absent, image uploads report an error.
+  uploadImage?: ModeratedImageUploader;
+  uploadsDisabled?: boolean;
+  openUploadsDisabledModal?: () => void;
+  onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -152,9 +157,15 @@ export interface ReactFlowCanvasProps {
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
 
+const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
+  onError();
+
 export default function ReactFlowCanvas({
   updateSources,
-  levelName,
+  uploadImage = uploadImageUnavailable,
+  uploadsDisabled = false,
+  openUploadsDisabledModal,
+  onNodesDeleted,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -167,10 +178,14 @@ export default function ReactFlowCanvas({
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
-  const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
+  const {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo} =
     useUndoHistory();
-  // Keep undo history refs in sync with current canvas state.
+  // Keep undo history refs in sync with current canvas state. nodesRef lets
+  // event callbacks read current nodes without depending on the nodes array,
+  // which changes every drag frame.
+  const nodesRef = useRef(nodes);
   useEffect(() => {
+    nodesRef.current = nodes;
     syncRefs(nodes, edges);
   }, [nodes, edges, syncRefs]);
 
@@ -338,14 +353,19 @@ export default function ReactFlowCanvas({
     [announceGroupMode, showGroupModeError]
   );
 
-  const [imageUploadError, showImageUploadError] = useTransientMessage(
+  const [imageError, showImageError] = useTransientMessage(
     TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleImageUploadError = useCallback(() => {
     const message = 'Could not upload image. Please try again.';
     announceGroupMode(message);
-    showImageUploadError(message);
-  }, [announceGroupMode, showImageUploadError]);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
+  const handleFlaggedImageCopyBlocked = useCallback(() => {
+    const message = 'Flagged images cannot be copied.';
+    announceGroupMode(message);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
 
   // One banner at a time, highest priority first: an upload error, then a
   // group-mode error, the group-mode hint while group mode is active, and
@@ -354,8 +374,8 @@ export default function ReactFlowCanvas({
     message: string;
     variant: 'info' | 'error';
   } | null>(() => {
-    if (imageUploadError) {
-      return {message: imageUploadError, variant: 'error'};
+    if (imageError) {
+      return {message: imageError, variant: 'error'};
     }
     if (groupModeError) {
       return {message: groupModeError, variant: 'info'};
@@ -371,7 +391,7 @@ export default function ReactFlowCanvas({
     }
     return null;
   }, [
-    imageUploadError,
+    imageError,
     groupModeError,
     isGroupMode,
     readOnly,
@@ -453,17 +473,43 @@ export default function ReactFlowCanvas({
     canvasContainerRef.current?.focus();
   }, []);
 
+  const handleNodesDeleted = useCallback(
+    (deletedNodes: SketchLabNode[]) => {
+      onNodesDeleted?.(deletedNodes);
+      handleElementsDeleted();
+    },
+    [onNodesDeleted, handleElementsDeleted]
+  );
+
   // Intercept React Flow's change callbacks to push undo snapshots before
   // delete. Drag is handled by handleNodeDragStart, and resize by
   // RotatedNodeResizer. Adds that bypass onNodesChange (direct setNodes calls)
   // are handled at their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
-      const hasDelete = changes.some(change => change.type === 'remove');
-      if (hasDelete) pushSnapshot();
+      const removedIds = new Set(
+        changes
+          .filter(change => change.type === 'remove')
+          .map(change => change.id)
+      );
+      if (removedIds.size > 0) {
+        // Deleting a flagged image hard-deletes its asset, so wipe history
+        // instead of snapshotting.
+        const deletesFlaggedImage = nodesRef.current.some(
+          node =>
+            removedIds.has(node.id) &&
+            node.type === 'image' &&
+            node.data.flagged
+        );
+        if (deletesFlaggedImage) {
+          clearHistory();
+        } else {
+          pushSnapshot();
+        }
+      }
       onNodesChange(changes);
     },
-    [onNodesChange, pushSnapshot]
+    [onNodesChange, pushSnapshot, clearHistory]
   );
 
   const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(
@@ -491,10 +537,12 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     pushSnapshot,
+    clearHistory,
     canvasContainerRef,
     readOnly,
-    levelName,
+    uploadImage,
     onImageUploadError: handleImageUploadError,
+    onFlaggedImageCopyBlocked: handleFlaggedImageCopyBlocked,
   });
 
   const clipboardContextValue = useMemo(
@@ -803,7 +851,13 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
-      pushSnapshot();
+      // Undoing a flagged image's addition would strand the abuse block with
+      // nothing visible to delete, so wipe history instead.
+      if (request.type === 'image' && request.data.flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setCanvasTool('cursor');
       const {type} = request;
 
@@ -884,6 +938,7 @@ export default function ReactFlowCanvas({
       }, FOCUS_DELAY_MS);
     },
     [
+      clearHistory,
       focusEntry,
       openToolbar,
       pushSnapshot,
@@ -969,7 +1024,10 @@ export default function ReactFlowCanvas({
                   {!readOnly && (
                     <Toolbar
                       onAddNode={handleAddNode}
-                      levelName={levelName}
+                      uploadImage={uploadImage}
+                      onImageUploadError={handleImageUploadError}
+                      uploadsDisabled={uploadsDisabled}
+                      openUploadsDisabledModal={openUploadsDisabledModal}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />
@@ -1013,7 +1071,7 @@ export default function ReactFlowCanvas({
                       onPaneClick={handlePaneClick}
                       onConnect={onConnect}
                       onBeforeDelete={handleBeforeDelete}
-                      onNodesDelete={handleElementsDeleted}
+                      onNodesDelete={handleNodesDeleted}
                       onEdgesDelete={handleElementsDeleted}
                       onNodeDragStart={handleNodeDragStart}
                       onNodeDrag={handleNodeDrag}

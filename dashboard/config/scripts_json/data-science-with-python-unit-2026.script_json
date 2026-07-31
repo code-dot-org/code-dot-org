@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-29 22:31:15 UTC",
+    "serialized_at": "2026-07-30 18:06:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -152,8 +152,9 @@
       "relative_position": 5,
       "properties": {
         "background": "dark",
-        "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students discover the need for a library with functions that create data visualizations in Python. Students explore the syntax and functionality of matplotlib – learning how to create line and bar charts, editing these charts' appearance, title and axis labels.\n\n",
-        "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and modify data visualizations using matplotlib, a library professional Data Scientists use.\n\n\n"
+        "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students explore how the Matplotlib library is used to create data visualizations in Python. With guided support, students learn to create and customize line and bar charts by adding titles and axis labels. They then apply these skills independently to create visualizations using a dataset of their choice.\n",
+        "preparation": "- Print copies of the Data Science with Python Unit Guide (1 for each student)",
+        "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and customize line and bar charts using Matplotlib, a Python library used by professional data scientists.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Matplotlib",
@@ -482,8 +483,21 @@
       }
     },
     {
-      "key": "791b9495-aadd-4e9f-8266-f06eb7ff62e2",
+      "key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2",
       "position": 1,
+      "properties": {
+        "name": "New Level Progression"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2",
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026"
+      }
+    },
+    {
+      "key": "791b9495-aadd-4e9f-8266-f06eb7ff62e2",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -497,7 +511,7 @@
     },
     {
       "key": "d6759d5f-4a0a-4fa7-8c74-3f61fe145dfe",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -511,7 +525,7 @@
     },
     {
       "key": "1857319a-cd9f-4e2e-9c14-166dfe5cc14a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1358,6 +1372,28 @@
       "seeding_key": {
         "activity_section.key": "553d5fe3-418e-487a-9981-cc24b7957550",
         "lesson_activity.key": "767855c4-6051-40e4-b878-1fcf019d16c3"
+      }
+    },
+    {
+      "key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c",
+      "position": 1,
+      "properties": {
+        "name": "Introduction to Matplotlib"
+      },
+      "seeding_key": {
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c",
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2"
+      }
+    },
+    {
+      "key": "f3bff751-62e8-423e-bcd1-f245a965e103",
+      "position": 2,
+      "properties": {
+        "name": "Create Data Visualizations with Matplotlib"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103",
+        "lesson_activity.key": "6936a0ef-e010-4fa7-83ce-e9bd9f3732c2"
       }
     },
     {
@@ -2791,7 +2827,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "datasciencewithpython-lesson2-level1-2026"
+          "datasciencewithpython-lesson3-level1-v0-2026"
         ],
         "lesson.key": "Introduction to Python",
         "lesson_group.key": "lessonGroup-2",
@@ -2799,7 +2835,7 @@
         "activity_section.key": "310a9a3b-2880-461c-8a68-7c12eb6f41a8"
       },
       "level_keys": [
-        "datasciencewithpython-lesson2-level1-2026"
+        "datasciencewithpython-lesson3-level1-v0-2026"
       ]
     },
     {
@@ -3140,7 +3176,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "datasciencewithpython-lesson4-level3-v1-2026"
+          "datasciencewithpython-lesson4-level3-v2-2026"
         ],
         "lesson.key": "Introduction to Pandas",
         "lesson_group.key": "lessonGroup-2",
@@ -3148,7 +3184,7 @@
         "activity_section.key": "c5ead911-06e5-4ca0-8e2c-c5922958a849"
       },
       "level_keys": [
-        "datasciencewithpython-lesson4-level3-v1-2026"
+        "datasciencewithpython-lesson4-level3-v2-2026"
       ]
     },
     {
@@ -3397,6 +3433,111 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level1-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level1-v1-2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level2-v1-2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level3-v1-2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level4-v1-2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      },
+      "level_keys": [
+        "datasciencewithpython-lesson5-level5-v1-2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3414,8 +3555,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 2,
+      "chapter": 36,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3436,8 +3577,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 3,
+      "chapter": 37,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3458,8 +3599,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 4,
+      "chapter": 38,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3480,8 +3621,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 5,
+      "chapter": 39,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3502,8 +3643,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 6,
+      "chapter": 40,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3524,8 +3665,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 7,
+      "chapter": 41,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -3546,8 +3687,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 8,
+      "chapter": 42,
+      "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -3568,8 +3709,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 9,
+      "chapter": 43,
+      "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -3590,7 +3731,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3612,7 +3753,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3634,7 +3775,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3656,7 +3797,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3678,7 +3819,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3700,7 +3841,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3722,7 +3863,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3744,7 +3885,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3766,7 +3907,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3788,7 +3929,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3810,7 +3951,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3832,7 +3973,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3854,7 +3995,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3876,7 +4017,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3898,7 +4039,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 58,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3920,7 +4061,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 59,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3942,7 +4083,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 60,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3964,7 +4105,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3986,7 +4127,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4008,7 +4149,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4030,7 +4171,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4052,7 +4193,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4074,7 +4215,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4096,7 +4237,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4118,7 +4259,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4140,7 +4281,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4162,7 +4303,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4184,7 +4325,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4206,7 +4347,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 72,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4228,7 +4369,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 73,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4250,7 +4391,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 74,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4272,7 +4413,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 75,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4294,7 +4435,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 76,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4316,7 +4457,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 77,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4338,7 +4479,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 78,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4360,7 +4501,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4382,7 +4523,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4404,7 +4545,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4426,7 +4567,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4448,7 +4589,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4470,7 +4611,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 84,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4492,7 +4633,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 85,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4514,7 +4655,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 86,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4536,7 +4677,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4558,7 +4699,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4580,7 +4721,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4602,7 +4743,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4624,7 +4765,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4646,7 +4787,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4668,7 +4809,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4690,7 +4831,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4712,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4734,7 +4875,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4756,7 +4897,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4793,9 +4934,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datasciencewithpython-lesson2-level1-2026",
+        "level.key": "datasciencewithpython-lesson3-level1-v0-2026",
         "script_level.level_keys": [
-          "datasciencewithpython-lesson2-level1-2026"
+          "datasciencewithpython-lesson3-level1-v0-2026"
         ],
         "lesson.key": "Introduction to Python",
         "lesson_group.key": "lessonGroup-2",
@@ -4985,9 +5126,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "datasciencewithpython-lesson4-level3-v1-2026",
+        "level.key": "datasciencewithpython-lesson4-level3-v2-2026",
         "script_level.level_keys": [
-          "datasciencewithpython-lesson4-level3-v1-2026"
+          "datasciencewithpython-lesson4-level3-v2-2026"
         ],
         "lesson.key": "Introduction to Pandas",
         "lesson_group.key": "lessonGroup-2",
@@ -5125,6 +5266,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "data-science-with-python-unit-2026",
         "activity_section.key": "4148056d-7510-414b-8f5b-c465d8d5375d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level1-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level1-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "702a3e5e-aa1a-4ceb-8a78-8a262acd8c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level2-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level2-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level3-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level3-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level4-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level4-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "datasciencewithpython-lesson5-level5-v1-2026",
+        "script_level.level_keys": [
+          "datasciencewithpython-lesson5-level5-v1-2026"
+        ],
+        "lesson.key": "Introduction to Matplotlib",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "data-science-with-python-unit-2026",
+        "activity_section.key": "f3bff751-62e8-423e-bcd1-f245a965e103"
       }
     },
     {
@@ -5914,6 +6115,20 @@
       }
     },
     {
+      "name": "[KEY] Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1Q6c8IHrl24X_tcYwOJHqCU5ksfBMx30hvxX6dK4gUS4/edit?usp=sharing",
+      "key": "_key_data_science_with_python_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_science_with_python_unit_guide"
+      }
+    },
+    {
       "name": "(Optional) Visualization Peer Review",
       "url": "https://docs.google.com/document/d/1Eq_SfFWn7xSb-FdnTWWJFVN5kLSVz7P-ntePFbVq7Wg/edit",
       "key": "_optional_visualization_peer_review",
@@ -6080,6 +6295,20 @@
       }
     },
     {
+      "name": "Data Science with Python Unit Guide",
+      "url": "https://docs.google.com/document/d/1R1COXhWren9sXLX1hf8WkWCTjXoXhLvXf0N0jghCvzw/edit?usp=sharing",
+      "key": "data_science_with_python_unit_guide_2",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_with_python_unit_guide_2"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -6149,14 +6378,16 @@
     },
     {
       "name": "Introduction to Matplotlib",
-      "url": "https://docs.google.com/presentation/d/1pS679hCaFc49ZaooUzAAcy-RJW9q4JSKugrHSQeliig/template/preview",
-      "key": "introduction_to_matplotlib",
+      "url": "https://docs.google.com/presentation/d/13_lxn8TkuCpIQrSbQ7XZssiD3Vd2hFOCSM0fYvbBBa4/edit?usp=sharing",
+      "key": "introduction_to_matplotlib_1",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "introduction_to_matplotlib"
+        "resource.key": "introduction_to_matplotlib_1"
       }
     },
     {
@@ -6398,7 +6629,19 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Matplotlib",
-        "resource.key": "introduction_to_matplotlib"
+        "resource.key": "_key_data_science_with_python_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Matplotlib",
+        "resource.key": "data_science_with_python_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Matplotlib",
+        "resource.key": "introduction_to_matplotlib_1"
       }
     },
     {

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-29T00:55:53.000Z",
   "level_num": "custom",
@@ -50,8 +49,10 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWVmnvTtZt0hc86OHiY5vszHWzegGt9tp8ppR2sK\nKU1cuKbnGxNCTo6XuoPX/8CLHkkleE7O19pcPNOFw72saViG7Rz8KxaK4nEB\nOPcaO2VL2V0vKUwbVyBb9sY2dpmgMmD3hYdsrnPB/pedKnvcWKZt61TUkM+R\n99mKWD43Kett9HblZh4SnUL7AaKT1snUdEDxXtEDyHhAKgeiwqihyQvLdJTg\ncm/mXPI9NvfBpcOu6ieEapLwn4nO5ElMYSvI5VuYDnFKyICAz394miyGN6Sm\nPqt9yM76Nq8btWynltxrFD1pLKxF2MIi4CV0qLCK0CBu9UsNgpUKtKD8wQsM\nyzoiDNu9fOAEP9u6HlY3TXmoNWwfvL3M61H2Qajw1nr0Cj7/mmundcb4YAi+\nBogcYrMr8AFjBNL7FwAXrdxsLuCkMHMx6iVVkVCIrGeiVq6EeiexxI4VvoA9\n/TxO6Mhp87iFXjsKz+Bo7NHhGQBGYKfbwY9+qahfWnVwYqLWmo8NitAD0NAC\npIfyqamRRpNJ7StadIUcBxuRH0robAGshEQq2ZVfgZDs7q20hI7pzJeYQIQe\n2ulTRaIOavgyoZiyYkt4W3XJPhb3eFVkZCGIokbU5wHkJrvEGdeZxIxocnNf\niPlEyhEv2lH0CWOJ40+FWi+3TgeuS+qtYp7860/c9qouwpL1ITl+czw0SpwX\nOa609Oquv7vRLob9FVlapswHyZc+VXXkMo6Mor1qtFeA+rCSQeXQyNuVy4+z\n6bMF1vCZrDcoiJxKuW35SuxyNaA3h6Rx9Z3RrMVzsDFkPKaEtIS0bc32FDci\nWuBZPCdyQmkPo4GtVi30pFkcqwUM1p8MMvsVeUbox+JXM87NL7mSDYQbklgr\nAWsSbbo0X7mY+AYKLnSyQUS/+CNhudhVZ1qsnHQ=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-29T00:55:53.559+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 00:57:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:57:53 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:58:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-29T00:55:53.559+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L8a_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L8a_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 00:57:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:57:53 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:58:19 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 17:54:08 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -49,6 +49,8 @@ export type TextNodeData = NodeDataBase & {
 export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
+  // Image has been flagged by the moderation service.
+  flagged?: boolean;
 };
 
 export type LineAnchorNodeData = NodeDataBase & {

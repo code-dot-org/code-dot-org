@@ -201,7 +201,7 @@ export default class VersionHistory extends React.Component {
               {rows}
               {!this.props.isReadOnly && (
                 <tr>
-                  <td>
+                  <td className={styles.labelCell}>
                     <MuiTypography variant="body1">
                       {i18n.versionHistory_initialVersion_label()}
                     </MuiTypography>
@@ -217,7 +217,6 @@ export default class VersionHistory extends React.Component {
                       size="small"
                       variant="contained"
                       onClick={this.onConfirmClearPuzzle}
-                      style={{float: 'right'}}
                     >
                       {i18n.versionHistory_clearProgress_confirm()}
                     </MuiButton>

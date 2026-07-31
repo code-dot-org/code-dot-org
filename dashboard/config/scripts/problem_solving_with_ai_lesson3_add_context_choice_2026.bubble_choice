@@ -1,6 +1,6 @@
 name 'problem-solving-with-ai-lesson3-add-context-choice-2026'
-display_name 'Build a Bot That Actually Knows Something'
-description 'Pick one of the levels below.'
+display_name 'Make a Trustworthy Bot'
+description '####Each of these bots was set up by someone to help with a real job, but none of them were careful about the information they used. Pick one and see if you can make it trustworthy.'
 
 sublevels
 level 'problem-solving-with-ai-lesson3-add-context-a-2026'
