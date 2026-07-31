@@ -1,129 +1,98 @@
 import {
-  cloneElement,
-  isValidElement,
-  useEffect,
-  useRef,
-  useState,
-  ReactNode,
-  HTMLAttributes,
-} from 'react';
-import {createPortal} from 'react-dom';
+  Tooltip as MuiTooltip,
+  TooltipProps as MuiTooltipProps,
+} from '@mui/material';
+import classnames from 'classnames';
+import {ReactElement} from 'react';
 
-import {updatePositionedElementStyles} from '@/common/helpers';
 import {ComponentPlacementDirection} from '@/common/types';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 
-import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
+import {TooltipProps} from './_Tooltip';
 
-const TAIL_OFFSET = 4;
-const TAIL_LENGTHS = {l: 12, m: 9, s: 6, xs: 6};
+import moduleStyles from './keyboardTooltip.module.scss';
 
-// Track keyboard vs pointer input at the document level. We do this instead
-// of using :focus-visible because jsdom cannot distinguish the two.
-let hadKeyboardEvent = false;
-let listenersAttached = false;
+const PLACEMENTS: Record<
+  ComponentPlacementDirection,
+  MuiTooltipProps['placement']
+> = {
+  onTop: 'top',
+  onRight: 'right',
+  onBottom: 'bottom',
+  onLeft: 'left',
+  none: 'top',
+};
 
-const trackInputMode = () => {
-  if (listenersAttached || typeof document === 'undefined') return;
-  listenersAttached = true;
-  const clearKeyboardFlag = () => {
-    hadKeyboardEvent = false;
-  };
-  document.addEventListener(
-    'keydown',
-    event => {
-      // Modifier-only presses (Alt/Ctrl/Meta) aren't navigation.
-      if (event.metaKey || event.altKey || event.ctrlKey) return;
-      hadKeyboardEvent = true;
-    },
-    true,
-  );
-  document.addEventListener('mousedown', clearKeyboardFlag, true);
-  document.addEventListener('pointerdown', clearKeyboardFlag, true);
-  document.addEventListener('touchstart', clearKeyboardFlag, true);
+export type KeyboardTooltipProps = Pick<
+  TooltipProps,
+  'text' | 'tooltipId' | 'iconLeft' | 'iconRight' | 'direction' | 'size'
+> & {
+  /** Hides the tooltip's tail (arrow). Defaults to false. */
+  hideTail?: boolean;
 };
 
 export interface WithKeyboardTooltipProps {
-  children: ReactNode;
-  tooltipOverlayClassName?: string;
-  tooltipProps: TooltipProps;
+  /** The element that gets the tooltip. Must accept a ref and spread its props. */
+  children: ReactElement;
+  tooltipProps: KeyboardTooltipProps;
 }
 
-// Like WithTooltip, but only shows on keyboard focus — hover and click are
-// ignored. Use for keyboard-navigation hints.
-//
-// WCAG: only put content that is genuinely keyboard-specific here (e.g.,
-// "Press arrows to move"). Info a mouse user also needs belongs in
-// WithTooltip — hiding it from pointer users breaks information parity.
+/**
+ * Like `WithTooltip`, but only shows on keyboard focus — hover and click are
+ * ignored. Use for keyboard-navigation hints.
+ *
+ * MUI's Tooltip already gates its focus handler on `:focus-visible`, so we only
+ * turn off the hover and touch listeners. It never listens for clicks. Escape
+ * closes the tooltip.
+ *
+ * Note: `:focus-visible` does not exist in jsdom, so the open-on-focus behavior
+ * can only be tested in a real browser. The Storybook stories cover it.
+ *
+ * Only put content here that a mouse user does not need (e.g. "Press arrows to
+ * move"). Anything else belongs in `WithTooltip` — hiding it from pointer users
+ * breaks information parity.
+ */
 const WithKeyboardTooltip: React.FC<WithKeyboardTooltipProps> = ({
   children,
-  tooltipOverlayClassName,
-  tooltipProps,
-}) => {
-  // Non-null anchor = tooltip is shown, positioned relative to it.
-  const [anchor, setAnchor] = useState<HTMLElement | null>(null);
-  const [direction, setDirection] = useState<ComponentPlacementDirection>(
-    tooltipProps.direction || 'onTop',
-  );
-  const [styles, setStyles] = useState<React.CSSProperties>({});
-  const tooltipRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(trackInputMode, []);
-
-  useEffect(() => {
-    if (!anchor) return;
-    const reposition = () =>
-      updatePositionedElementStyles({
-        nodePosition: anchor,
-        positionedElementRef: tooltipRef,
-        direction,
-        setPositionedElementStyles: setStyles,
-        setPositionedElementDirection: setDirection,
-        tailOffset: TAIL_OFFSET,
-        tailLength: TAIL_LENGTHS[tooltipProps.size || 'm'],
-      });
-    reposition();
-    window.addEventListener('resize', reposition);
-    return () => window.removeEventListener('resize', reposition);
-  }, [anchor, direction, tooltipProps.size]);
-
-  useEffect(() => {
-    if (!anchor) return;
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setAnchor(null);
-    };
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
-  }, [anchor]);
-
-  const wrapped =
-    isValidElement<HTMLAttributes<HTMLElement>>(children) &&
-    cloneElement(children, {
-      'aria-describedby': tooltipProps.tooltipId,
-      onFocus: (event: React.FocusEvent<HTMLElement>) => {
-        if (hadKeyboardEvent) setAnchor(event.target as HTMLElement);
-        children.props.onFocus?.(event);
+  tooltipProps: {
+    text,
+    tooltipId,
+    iconLeft,
+    iconRight,
+    direction = 'onTop',
+    size = 'm',
+    hideTail = false,
+  },
+}) => (
+  <MuiTooltip
+    id={tooltipId}
+    title={
+      <>
+        {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
+        <span className={moduleStyles.tooltipText}>{text}</span>
+        {iconRight && <FontAwesomeV6Icon {...iconRight} />}
+      </>
+    }
+    placement={PLACEMENTS[direction]}
+    arrow={!hideTail}
+    // Describes the child rather than replacing its accessible name.
+    describeChild
+    disableHoverListener
+    disableTouchListener
+    disableInteractive
+    slotProps={{
+      tooltip: {
+        role: 'tooltip',
+        className: classnames(
+          moduleStyles.tooltip,
+          moduleStyles[`tooltip-${size}`],
+        ),
       },
-      onBlur: (event: React.FocusEvent<HTMLElement>) => {
-        setAnchor(null);
-        children.props.onBlur?.(event);
-      },
-    });
-
-  return (
-    <TooltipOverlay className={tooltipOverlayClassName}>
-      {wrapped}
-      {anchor &&
-        createPortal(
-          <Tooltip
-            {...tooltipProps}
-            direction={direction}
-            ref={tooltipRef}
-            style={{...styles, ...tooltipProps.style}}
-          />,
-          document.body,
-        )}
-    </TooltipOverlay>
-  );
-};
+      arrow: {className: moduleStyles.arrow},
+    }}
+  >
+    {children}
+  </MuiTooltip>
+);
 
 export default WithKeyboardTooltip;
