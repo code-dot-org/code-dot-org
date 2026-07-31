@@ -21,8 +21,7 @@
   line-height: 22px;
 }
 
-// Opt-in vertical rhythm for a heading. There is no blanket rule, so apply
-// this per heading. MUI's Typography root sets `margin: 0` at single-class
+// MUI's Typography root sets `margin: 0` at single-class
 // specificity, so pair our class with the MUI class to win on specificity
 // rather than on stylesheet load order.
 .headingWithMargins {
@@ -31,8 +30,6 @@
   }
 }
 
-// The front-page columns line up only if their first heading sits flush with
-// the top of the column.
 .titleNoTopMargin {
   margin-top: 0;
 
@@ -222,7 +219,6 @@
   font-style: italic;
 }
 
-// Applied to the section body only when the section has remarks.
 .remarksBody {
   margin-bottom: 5px;
   padding-left: 5px;
