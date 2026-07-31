@@ -13,8 +13,9 @@ import type {
  *
  * Both go through Phaser's filter list, but from different owners: an Actor
  * filters its own render, while a World filters the whole camera. That is the
- * distinction the `use effect` block makes, and it is the only real difference
- * between these two functions.
+ * distinction between the `add effect … to <actor>` and `add effect … to the
+ * world` blocks, and it is the only real difference between these two
+ * functions.
  */
 
 /**

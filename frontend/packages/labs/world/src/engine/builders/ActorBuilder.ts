@@ -52,17 +52,29 @@ export class ActorBuilder {
    * engine only carries it out to `renderSnapshot`; the driver compiles the
    * graph to GLSL and hands it to Phaser as a filter.
    *
+   * Named to match `Actor.addEffect`, and identical to it in signature and in
+   * behavior. That is what lets ONE Blockly block serve both a template body
+   * and an event handler: both bind the identifier `actor`, and the block emits
+   * `actor.addEffect(…)` either way. `set` already worked like this; effects
+   * differed only by an accident of naming.
+   *
    * @param path     the effect's module path (`effects/ripple`) — its identity
    *   for shader registration, so the same effect on many actors is one program
    * @param document the parsed `.effect` file, imported as JSON by the bundler
    * @param values   values for the effect's declared parameters, by parameter
    *   id; anything omitted falls back to that parameter's own default
    */
-  useEffect(
+  addEffect(
     path: string,
     document: EffectDocument,
     values?: Readonly<Record<string, number | number[] | boolean>>,
   ): this {
+    // Idempotent by path, as on the live actor: an actor either wears an effect
+    // or it does not. A builder is described once so it can hardly matter here,
+    // but the two must not disagree — one block calls whichever it lands on.
+    if (this.effects.some(effect => effect.path === path)) {
+      return this;
+    }
     this.effects.push(values ? {path, document, values} : {path, document});
     return this;
   }

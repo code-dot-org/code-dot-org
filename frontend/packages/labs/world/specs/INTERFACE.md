@@ -246,7 +246,7 @@ export default world;
 ```
 
 The two halves are ordered: everything declarative (`useRules`, `useAnimations`,
-`useEffect`, `set`) must come before the first placement, because the first
+`addEffect`, `set`) must come before the first placement, because the first
 call that needs a live world builds it. A declaration arriving after that would
 have nothing to affect, so it throws rather than doing nothing quietly — Blockly
 blocks can be reordered by dragging, and the mistake is easy to make.

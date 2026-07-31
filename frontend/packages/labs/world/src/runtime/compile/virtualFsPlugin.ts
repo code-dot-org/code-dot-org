@@ -76,7 +76,7 @@ function loaderFor(path: string): Loader {
     // `.map` (a world-population document), `.anim` (an animation file), and
     // `.effect` (a shader graph) are all raw JSON on disk, imported like
     // `.json` — a `.map` by the world's `load map` block, an `.anim` by the
-    // world's `use animations` block, an `.effect` by an actor's `use effect`.
+    // world's `use animations` block, an `.effect` by an `add effect` block.
     //
     // An `.effect` travels through the bundle as DATA, not as generated code:
     // it is compiled to GLSL in the preview surface, where Phaser is, so the

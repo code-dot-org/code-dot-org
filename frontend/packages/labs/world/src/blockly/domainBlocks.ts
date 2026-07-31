@@ -25,11 +25,9 @@ import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
-  actorDefinitionExtension,
   runtimeActorExtension,
   runtimeWorldExtension,
   traitContextExtension,
-  worldDefinitionExtension,
 } from './extensions/actorContext';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
@@ -278,71 +276,22 @@ const effectParamValuesCode = (
   return entries.length ? `{${entries.join(', ')}}` : '';
 };
 
-const worldUseEffect = defineBlock({
-  type: 'world_use_effect',
-  message0: 'use effect %1',
-  // The options are the project's `.effect` files, labelled by the effect's own
-  // authored name; the value is the extension-less module path the generated
-  // actor imports (`effects/ripple`).
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'EFFECT',
-      options: effectFileImportOptions(),
-    },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  // `useEffect` is a builder method: this configures the actor TEMPLATE, so it
-  // belongs under `define actor`. Inside an event handler `actor` is the live
-  // instance and the call would throw — the extension warns in the editor.
-  // The effect's own parameters become value sockets on this block, one row per
-  // knob, rebuilt whenever the dropdown changes (effectParamsMutator).
-  mutator: effectParamsMutator,
-  extensions: [
-    effectFileImportOptionsExtension,
-    actorDefinitionExtension,
-    effectParamsInitExtension,
-    effectImportFieldExtension,
-  ],
-  // An effect changes how the actor is DRAWN, so it reads with the appearance
-  // blocks (`set sprite`, `play animation`) rather than with traits.
-  style: 'sprite_blocks',
-  tooltip:
-    "Play a visual effect on this actor's image (authored in an .effect file).",
-  generator: {
-    javascript(block, generator) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        // The dropdown's "(none)" placeholder: the project has no effects yet.
-        return '';
-      }
-      // The `.effect` is imported as DATA — the bundler loads it as JSON — and
-      // compiled to GLSL in the preview surface, where Phaser is. Nothing about
-      // shaders reaches the generated code.
-      addImport(
-        generator,
-        `mod:${path}`,
-        `import ${importVar(path)} from ${str(path)};`,
-      );
-      const values = effectParamValuesCode(block, generator);
-      return values
-        ? `actor.useEffect(${str(path)}, ${importVar(path)}, ${values});\n`
-        : `actor.useEffect(${str(path)}, ${importVar(path)});\n`;
-    },
-  },
-});
-
 /**
- * Start an effect on ONE actor, while the game runs.
+ * Play an effect on one actor.
  *
- * The runtime counterpart to `use effect`: that one describes the template, so
- * every instance is born wearing the effect; this one reaches a live actor —
- * "when the player is hit, glow". It carries the same parameter sockets, so the
- * glow can say how bright.
+ * ONE block for both jobs. Chained under `define actor` its `to` socket holds
+ * the default `this actor` shadow, `actor` is the template, and every instance
+ * is born wearing the effect. Inside an event handler the same block reaches a
+ * live actor — "when the player is hit, glow" — either the principal one or
+ * whatever is plugged into the socket (a `for each` loop's variable, a query
+ * result).
  *
- * `Actor.addEffect` is idempotent by path, which is what makes this safe in an
- * event that fires every frame while a condition holds.
+ * There is no separate declarative block. `ActorBuilder.addEffect` and
+ * `Actor.addEffect` take the same arguments and mean the same thing, and both
+ * contexts bind the identifier `actor`, so the generated call is correct in
+ * both — exactly as `set position` has always worked. Both are idempotent by
+ * path, which is what makes this safe in an event that fires every frame while
+ * a condition holds.
  */
 const worldAddEffect = defineBlock({
   type: 'world_add_effect',
@@ -359,16 +308,21 @@ const worldAddEffect = defineBlock({
   previousStatement: true,
   nextStatement: true,
   mutator: effectParamsMutator,
+  // No context guard: `addEffect` exists on the builder and on the live actor
+  // alike, so this block is correct wherever `actor` is bound. The effect's own
+  // parameters become value sockets, one row per knob, rebuilt whenever the
+  // dropdown changes (effectParamsMutator).
   extensions: [
     effectFileImportOptionsExtension,
     actorInputExtension,
-    runtimeActorExtension,
     effectParamsInitExtension,
     effectImportFieldExtension,
   ],
+  // An effect changes how the actor is DRAWN, so it reads with the appearance
+  // blocks (`set sprite`, `play animation`) rather than with traits.
   style: 'sprite_blocks',
   tooltip:
-    'Start playing an effect on an actor now. Adding one it already has changes nothing.',
+    "Play a visual effect on an actor's image (authored in an .effect file). Adding one it already has changes nothing.",
   generator: {
     javascript(block, generator) {
       const path = block.getFieldValue('EFFECT');
@@ -377,8 +331,9 @@ const worldAddEffect = defineBlock({
       }
       const target =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      // The document is needed at runtime — the driver compiles the graph — so
-      // this imports the `.effect` as data exactly like `use effect` does.
+      // The `.effect` is imported as DATA — the bundler loads it as JSON — and
+      // compiled to GLSL in the preview surface, where Phaser is. Nothing about
+      // shaders reaches the generated code.
       addImport(
         generator,
         `mod:${path}`,
@@ -403,6 +358,8 @@ const worldRemoveEffect = defineBlock({
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
+  // Runtime-only, unlike `add effect`: `removeEffect` is a live-actor method,
+  // and there is nothing to un-declare on a template that was described once.
   extensions: [
     effectFileOptionsExtension,
     actorInputExtension,
@@ -1603,61 +1560,19 @@ const worldUseAnimations = defineBlock({
 /**
  * Play an effect across the whole viewport.
  *
- * The World counterpart to the actor's `use effect`. An actor's effect filters
- * that actor's own pixels before it is composited into the scene; a world's
- * filters everything the camera has drawn — the underwater scene from the spec,
- * rather than a wobble on one fish. Same `.effect` file either way.
- */
-const worldWorldUseEffect = defineBlock({
-  type: 'world_world_use_effect',
-  message0: 'use effect %1',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'EFFECT',
-      options: effectFileImportOptions(),
-    },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  mutator: effectParamsMutator,
-  extensions: [
-    effectFileImportOptionsExtension,
-    worldDefinitionExtension,
-    effectParamsInitExtension,
-    effectImportFieldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip:
-    'Play a visual effect over the whole view (authored in an .effect file).',
-  generator: {
-    javascript(block, generator) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        return '';
-      }
-      addImport(
-        generator,
-        `mod:${path}`,
-        `import ${importVar(path)} from ${str(path)};`,
-      );
-      const values = effectParamValuesCode(block, generator);
-      return values
-        ? `world.useEffect(${str(path)}, ${importVar(path)}, ${values});\n`
-        : `world.useEffect(${str(path)}, ${importVar(path)});\n`;
-    },
-  },
-});
-
-/**
- * Start a viewport-wide effect while the game runs.
+ * The world's counterpart to `add effect … to <actor>`, and the same one-block
+ * arrangement: an actor's effect filters that actor's own pixels before it is
+ * composited, a world's filters everything the camera has drawn — the
+ * underwater view from the spec, rather than a wobble on one fish. Same
+ * `.effect` file either way.
  *
- * The world's counterpart to `add effect … to <actor>`: `use effect` in a
- * `.world` file gives the world an effect from the start, this one turns one on
- * mid-game — "when the player falls in, go underwater".
+ * Chained under `define world` it gives the world an effect from the start;
+ * inside an event handler or a rule step it turns one on mid-game — "when the
+ * player falls in, go underwater". `WorldBuilder.addEffect` and
+ * `World.addEffect` agree on name, arguments, and meaning, and both contexts
+ * bind `world`, so one block covers both.
  *
- * There is no subject socket. The world is the subject, and inside an event
- * handler or a rule step `world` is already the live one.
+ * There is no subject socket. The world is the subject.
  */
 const worldAddWorldEffect = defineBlock({
   type: 'world_add_world_effect',
@@ -1672,16 +1587,17 @@ const worldAddWorldEffect = defineBlock({
   previousStatement: true,
   nextStatement: true,
   mutator: effectParamsMutator,
+  // `worldContext` still applies — it asks whether `world` is bound at all —
+  // but there is no builder/runtime guard, because `addEffect` is on both.
   extensions: [
     effectFileImportOptionsExtension,
     worldContextExtension,
-    runtimeWorldExtension,
     effectParamsInitExtension,
     effectImportFieldExtension,
   ],
   style: 'sprite_blocks',
   tooltip:
-    'Start playing an effect over the whole view now. Adding one already playing changes nothing.',
+    'Play a visual effect over the whole view (authored in an .effect file). Adding one already playing changes nothing.',
   generator: {
     javascript(block, generator) {
       const path = block.getFieldValue('EFFECT');
@@ -1710,6 +1626,7 @@ const worldRemoveWorldEffect = defineBlock({
   ],
   previousStatement: true,
   nextStatement: true,
+  // Runtime-only, for the same reason as `remove effect … from <actor>`.
   extensions: [
     effectFileOptionsExtension,
     worldContextExtension,
@@ -1980,10 +1897,8 @@ const worldHasTrait = defineBlock({
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
-  worldUseEffect,
   worldAddEffect,
   worldRemoveEffect,
-  worldWorldUseEffect,
   worldAddWorldEffect,
   worldRemoveWorldEffect,
   worldSetPosition,
@@ -2056,8 +1971,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_actor',
       'world_use_trait',
-      'world_use_effect',
-      // The runtime pair, beside the template block they mirror.
+      // One block plays an effect on an actor, in a template or at runtime;
+      // `remove` is runtime-only (there is nothing to un-declare).
       'world_add_effect',
       'world_remove_effect',
       'world_this_actor',
@@ -2074,8 +1989,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
-      'world_world_use_effect',
-      // The runtime pair, beside the declaration they mirror.
       'world_add_world_effect',
       'world_remove_world_effect',
     ],

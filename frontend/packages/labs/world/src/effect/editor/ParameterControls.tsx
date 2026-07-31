@@ -43,7 +43,7 @@ export interface ParameterTryOutProps {
  * These are editor-only: they drive the previews so a learner can see what
  * their knob actually does, and they are deliberately *not* written to the
  * document. The value a game gets is the parameter's default, or whatever the
- * `.useEffect()` block passes.
+ * `add effect` block passes.
  */
 /**
  * The slider's value, printed above it.

@@ -48,7 +48,7 @@ export interface ParameterEditorProps {
  * The popover for editing one parameter.
  *
  * Everything here shapes the effect's public face: the name becomes the
- * `.useEffect()` argument, the default is what the effect does before anyone
+ * `.addEffect()` argument, the default is what the effect does before anyone
  * touches the knob, and min/max become the bounds of the consumer's slider.
  */
 export function ParameterEditor({
@@ -60,7 +60,7 @@ export function ParameterEditor({
 }: ParameterEditorProps) {
   // The name field drafts locally and commits only non-empty values, so the
   // document never holds a nameless parameter even mid-edit — the name is the
-  // `.useEffect()` argument, and an empty one would be an unusable block.
+  // `.addEffect()` argument, and an empty one would be an unusable block.
   const [nameDraft, setNameDraft] = useState(parameter.name);
 
   useEffect(() => {

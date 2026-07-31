@@ -114,12 +114,12 @@ export interface EffectGraphEdge {
 /**
  * A knob the effect exposes to its consumer. Parameters appear as extra nodes
  * in the pinned input row and become shader uniforms; their names and defaults
- * are what `.useEffect()` expands into on the Actor or World.
+ * are what `.addEffect()` expands into on the Actor or World.
  */
 export interface EffectParameter {
   /** Stable identity across renames. Also seeds the uniform name. */
   id: string;
-  /** Learner-facing name; the argument name in `.useEffect()`. */
+  /** Learner-facing name; the argument name in `.addEffect()`. */
   name: string;
   type: EffectParameterType;
   defaultValue: EffectLiteral;

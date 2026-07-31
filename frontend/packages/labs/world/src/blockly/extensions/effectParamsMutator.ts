@@ -1,5 +1,5 @@
-// The parameter rows on `use effect`: one value socket per knob the chosen
-// effect declares, so `use effect Ripple` can also say *how much* ripple.
+// The parameter rows on `add effect`: one value socket per knob the chosen
+// effect declares, so `add effect Ripple` can also say *how much* ripple.
 //
 // Unlike `ruleParamsMutator`, nothing here is learner-authored — there is no
 // plus or minus. The row list is *derived* from the selected effect, so the
