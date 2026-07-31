@@ -45,7 +45,7 @@ class AichatRequestsController < ApplicationController
 
     model_id = params[:modelParameters][:selectedModelId]
     unless current_user.can_use_aichat_model?(model_id)
-      return render status: :forbidden, json: {error: MODEL_REGION_BLOCKED_ERROR}
+      return render status: :forbidden, json: {user_type: current_user.user_type, error: MODEL_REGION_BLOCKED_ERROR}
     end
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
       log_token_throttling(current_user.id)
@@ -105,7 +105,7 @@ class AichatRequestsController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
     unless current_user.can_use_aichat_model?(params[:modelParameters][:selectedModelId])
-      return render status: :forbidden, json: {error: MODEL_REGION_BLOCKED_ERROR}
+      return render status: :forbidden, json: {user_type: current_user.user_type, error: MODEL_REGION_BLOCKED_ERROR}
     end
 
     request = create_request

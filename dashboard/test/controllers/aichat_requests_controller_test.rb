@@ -122,7 +122,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
     )
     post :start_chat_completion, params: gemini_params, as: :json
     assert_response :forbidden
-    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
+    body = JSON.parse(response.body)
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, body['error']
+    # The client maps user_type to its unauthorized message; without it the chat
+    # falls back to the signed-out copy.
+    assert_equal @authorized_teacher1.user_type, body['user_type']
   end
 
   test 'start_chat_completion allows a non-gemini model when gemini models are blocked' do

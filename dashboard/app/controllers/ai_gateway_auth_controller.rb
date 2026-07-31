@@ -24,7 +24,7 @@ class AiGatewayAuthController < ApplicationController
     # client-direct path.
     model_id = params[:selectedModelId]
     if model_id.present? && !current_user.can_use_aichat_model?(model_id)
-      return render status: :forbidden, json: {error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
+      return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
     token_id = SecureRandom.uuid
