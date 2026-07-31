@@ -16,6 +16,12 @@
 // an actor with no appearance. Phaser is a renderer, not the animator. All
 // textures/spritesheets are preloaded from the self-hosted `${assetBase}sprites/`.
 //
+// Renderer: WebGL. The game runs on `Phaser.WEBGL` outright rather than `AUTO`,
+// because Effects (specs/EFFECTS_PLAN.md) are compiled GLSL registered as filter
+// render nodes, and `renderer.renderNodes` exists only on the WebGL renderer. A
+// browser that cannot give us WebGL is told so at boot (`assertWebGL`), not at
+// the first effect.
+//
 // Input: DOM key listeners on the focusable `#game` parent keep a live set of
 // held keys (by name — every key, not just arrows), handed to the World each
 // frame (`setInput`) before ticking, so the Input rule can move controlled actors
@@ -44,20 +50,58 @@ const DEFAULT_ASSET_BASE = '/vendor/';
 type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
 
 /**
- * Phaser's per-instance canvas render hook — the method the renderer calls to
- * draw one object (`child.renderCanvas(renderer, child, camera, parentMatrix)`).
- * Both the Image and Rectangle canvas renderers thread their fourth argument (the
- * parent matrix) into the object's transform, so wrapping this method and swapping
- * that argument is how we inject skew. It is a supported extension point but is
- * not in the public types, so we describe its shape here and attach it through a
- * structural cast.
+ * Phaser's WebGL render function for one object — `renderWebGL(renderer, src,
+ * drawingContext, parentMatrix)`. Both the Image and Rectangle WebGL renderers
+ * thread their fourth argument (the parent matrix) into the object's transform
+ * — Image into `Submitter.run`, Rectangle through `GetCalcMatrix` — so wrapping
+ * this function and swapping that argument is how we inject skew. It is not in
+ * the public types (Phaser marks it private), so we describe its shape here and
+ * attach it through a structural cast.
+ *
+ * The display list does not call it directly: it calls
+ * `child.renderWebGLStep(renderer, child, context, parentMatrix, step, …)`,
+ * which dispatches through the object's `_renderSteps` list. The extra trailing
+ * arguments are for steps that hand off to the next one; the two renderers we
+ * use ignore them, but the wrapper forwards them so it is transparent.
  */
-type CanvasRenderHook = (
-  renderer: Phaser.Renderer.Canvas.CanvasRenderer,
+type WebGLRenderHook = (
+  renderer: Phaser.Renderer.WebGL.WebGLRenderer,
   src: GameObject,
-  camera: Phaser.Cameras.Scene2D.Camera,
+  drawingContext: Phaser.Renderer.WebGL.DrawingContext,
   parentMatrix?: Phaser.GameObjects.Components.TransformMatrix,
+  ...rest: unknown[]
 ) => void;
+
+/** A Game Object's render-step internals, as the skew hook needs to see them. */
+type RenderStepInternals = {
+  renderWebGL: WebGLRenderHook;
+  /** Built in the GameObject constructor; see `installSkewHook`. */
+  _renderSteps?: WebGLRenderHook[];
+};
+
+/**
+ * Fail at boot, with a sentence, rather than at the first effect with a stack.
+ *
+ * The game asks for `Phaser.WEBGL` outright (not `AUTO`): an effect is a
+ * compiled GLSL shader and has no canvas fallback, so a game silently downgraded
+ * to Canvas would boot fine and then throw from inside the driver the moment an
+ * actor used one. The preview surface catches this and reports it as an engine
+ * error, which is where a learner will actually see it.
+ */
+function assertWebGL(): void {
+  const probe = document.createElement('canvas');
+  const gl =
+    probe.getContext('webgl') ?? probe.getContext('experimental-webgl');
+  if (!gl) {
+    throw new Error(
+      'This browser cannot run WebGL, which the world preview needs to draw.',
+    );
+  }
+  // Contexts are a scarce per-page resource; hand this one back immediately.
+  (gl as WebGLRenderingContext)
+    .getExtension('WEBGL_lose_context')
+    ?.loseContext();
+}
 
 // Keys whose browser default (scrolling the page) we suppress while the game
 // has focus, so arrows/space drive the game instead of the page.
@@ -95,36 +139,60 @@ export class PhaserBinding {
 
     // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
     // not model natively (its per-object matrix is position·rotation·scale only).
-    // We inject it by wrapping each object's own canvas render hook: the wrapper
-    // hands the object's renderer a parent matrix M = T(c)·shear·T(-c) — a shear
-    // about the actor's center c — in place of the (null) matrix it would get as a
-    // top-level object. The renderer composes calc = camera·parent·sprite and the
-    // sprite matrix still carries the object's own position/rotation/scale, so M
-    // shears what is drawn about its center while leaving those untouched. This is
-    // renderer-agnostic within canvas: both textured Images and the fallback
-    // Rectangle thread the parent matrix through their transform the same way. Each
-    // skewed object owns a matrix, rebuilt every frame in `sync`; an unskewed one
-    // has no entry and renders through the normal (no parent matrix) path.
+    // We inject it by wrapping each object's own WebGL render function: the
+    // wrapper hands the object's renderer a parent matrix M = T(c)·shear·T(-c) —
+    // a shear about the actor's center c — in place of the (undefined) matrix it
+    // would get as a top-level object. The renderer composes calc =
+    // camera·parent·sprite and the sprite matrix still carries the object's own
+    // position/rotation/scale, so M shears what is drawn about its center while
+    // leaving those untouched. Both textured Images and the fallback Rectangle
+    // thread the parent matrix through their transform the same way. Each skewed
+    // object owns a matrix, rebuilt every frame in `sync`; an unskewed one has no
+    // entry and renders through the normal (no parent matrix) path.
     const skewMatrices = new WeakMap<
       GameObject,
       Phaser.GameObjects.Components.TransformMatrix
     >();
     const shear = new Phaser.GameObjects.Components.TransformMatrix();
+    // Two places have to be patched, not one, and this is the difference from the
+    // canvas renderer this driver used to run on. Canvas looks the hook up at draw
+    // time (`child.renderCanvas(...)`), so replacing the instance property was
+    // enough. WebGL does not: the GameObject constructor runs
+    // `addRenderStep(this.renderWebGL)`, capturing the FUNCTION into `_renderSteps`,
+    // and the display list dispatches through that list — so an instance property
+    // replaced afterwards is simply never reached. Both must therefore hold the
+    // SAME wrapper reference: `Filters.enableFilters()` finds its insertion point
+    // with `_renderSteps.indexOf(this.renderWebGL)`, and if those two disagree it
+    // inserts the filter step at -1. Effects call `enableFilters()`, so this is
+    // load-bearing rather than tidiness.
     const installSkewHook = (object: GameObject) => {
-      const target = object as unknown as {renderCanvas: CanvasRenderHook};
-      const original = target.renderCanvas;
-      target.renderCanvas = (renderer, src, camera, parentMatrix) => {
+      const target = object as unknown as RenderStepInternals;
+      const original = target.renderWebGL;
+      const hook: WebGLRenderHook = (
+        renderer,
+        src,
+        drawingContext,
+        parentMatrix,
+        ...rest
+      ) => {
         original.call(
           src,
           renderer,
           src,
-          camera,
+          drawingContext,
           skewMatrices.get(object) ?? parentMatrix,
+          ...rest,
         );
       };
+      target.renderWebGL = hook;
+      const steps = target._renderSteps;
+      const index = steps?.indexOf(original) ?? -1;
+      if (steps && index >= 0) {
+        steps[index] = hook;
+      }
     };
     // Build (or clear) an object's shear matrix M = T(c)·shear·T(-c) about its
-    // drawn center c; the render hook feeds M to the object's canvas renderer.
+    // drawn center c; the render hook feeds M to the object's WebGL renderer.
     const applySkew = (
       object: GameObject,
       cx: number,
@@ -239,8 +307,12 @@ export class PhaserBinding {
     parent.addEventListener('keydown', this.onKeyDown);
     parent.addEventListener('keyup', this.onKeyUp);
     parent.addEventListener('blur', this.onBlur);
+    assertWebGL();
     this.game = new Phaser.Game({
-      type: Phaser.CANVAS,
+      // WebGL, not AUTO — see assertWebGL. Effects are compiled GLSL shaders
+      // registered as Phaser filter render nodes, and `renderNodes` exists only
+      // on the WebGL renderer.
+      type: Phaser.WEBGL,
       parent,
       autoFocus: false,
       // Keyboard comes from the DOM listeners above (all keys); Phaser's own
