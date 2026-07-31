@@ -225,7 +225,7 @@ function ReactFlowSketchLabViewInner({
         addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
-    [uploadImage, reactFlow, backpackContext?.primaryApi, dialogControl]
+    [reactFlow, backpackContext, dialogControl, uploadImage]
   );
 
   // Read sources, converting from Excalidraw if this project was last
