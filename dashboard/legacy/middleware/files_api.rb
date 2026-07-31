@@ -28,90 +28,6 @@ class FilesApi < Sinatra::Base
     2_000_000_000 # 2 GB
   end
 
-  def public_ip_address?(ip_address)
-    return (
-      !ip_address.link_local? &&
-      !ip_address.loopback? &&
-      !ip_address.private? &&
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
-    )
-  end
-
-  def resolved_public_ip_address(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    return host_ip_address.to_s if public_ip_address?(host_ip_address)
-
-    nil
-  end
-
-  def fetch_image_for_moderation(location, redirect_limit = 5)
-    raise URI::InvalidURIError.new if redirect_limit < 0
-
-    url = URI.parse(location)
-    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
-
-    resolved_ip_address = resolved_public_ip_address(url.host)
-    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
-
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-
-    http.instance_variable_set(:@ipaddr, resolved_ip_address)
-    def http.conn_address
-      @ipaddr
-    end
-
-    path = url.path.empty? ? '/' : url.path
-    query = url.query || ''
-    query_string = query.empty? ? '' : "?#{query}"
-    http.open_timeout = 3
-    http.read_timeout = 3
-
-    redirect_url = nil
-    body = nil
-    content_type = nil
-
-    # Stream the body so we can enforce max_file_size before an arbitrarily large
-    # payload is fully buffered (Content-Length may be missing or incorrect).
-    http.request_get(path + query_string) do |response|
-      if response.is_a?(Net::HTTPRedirection)
-        redirect_target = response['location']
-        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
-        redirect_url = URI.join(url.to_s, redirect_target).to_s
-        next
-      end
-
-      unless response.is_a?(Net::HTTPSuccess)
-        raise StandardError.new("Image URL request failed with status #{response.code}.")
-      end
-
-      content_type = response.content_type
-      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
-        raise AzureAiContentSafety::UnsupportedContentType
-      end
-
-      content_length = response['content-length']&.to_i
-      if content_length && content_length > max_file_size
-        raise StandardError.new('Image URL content exceeds maximum file size.')
-      end
-
-      body = +''
-      response.read_body do |chunk|
-        body << chunk
-        if body.bytesize > max_file_size
-          raise StandardError.new('Image URL content exceeds maximum file size.')
-        end
-      end
-    end
-
-    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
-
-    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
-
-    [body, content_type]
-  end
-
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
   def get_bucket_impl(endpoint)
@@ -1174,6 +1090,90 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  def public_ip_address?(ip_address)
+    return (
+      !ip_address.link_local? &&
+      !ip_address.loopback? &&
+      !ip_address.private? &&
+      !IPAddr.new('0.0.0.0/8').include?(ip_address)
+    )
+  end
+
+  def resolved_public_ip_address(hostname)
+    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
+    return host_ip_address.to_s if public_ip_address?(host_ip_address)
+
+    nil
+  end
+
+  def fetch_image_for_moderation(location, redirect_limit = 5)
+    raise URI::InvalidURIError.new if redirect_limit < 0
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
+
+    resolved_ip_address = resolved_public_ip_address(url.host)
+    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
+
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = url.scheme == 'https'
+
+    http.instance_variable_set(:@ipaddr, resolved_ip_address)
+    def http.conn_address
+      @ipaddr
+    end
+
+    path = url.path.empty? ? '/' : url.path
+    query = url.query || ''
+    query_string = query.empty? ? '' : "?#{query}"
+    http.open_timeout = 3
+    http.read_timeout = 3
+
+    redirect_url = nil
+    body = nil
+    content_type = nil
+
+    # Stream the body so we can enforce max_file_size before an arbitrarily large
+    # payload is fully buffered (Content-Length may be missing or incorrect).
+    http.request_get(path + query_string) do |response|
+      if response.is_a?(Net::HTTPRedirection)
+        redirect_target = response['location']
+        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+        redirect_url = URI.join(url.to_s, redirect_target).to_s
+        next
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("Image URL request failed with status #{response.code}.")
+      end
+
+      content_type = response.content_type
+      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+        raise AzureAiContentSafety::UnsupportedContentType
+      end
+
+      content_length = response['content-length']&.to_i
+      if content_length && content_length > max_file_size
+        raise StandardError.new('Image URL content exceeds maximum file size.')
+      end
+
+      body = +''
+      response.read_body do |chunk|
+        body << chunk
+        if body.bytesize > max_file_size
+          raise StandardError.new('Image URL content exceeds maximum file size.')
+        end
+      end
+    end
+
+    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
+
+    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
+
+    [body, content_type]
   end
 
   #
