@@ -152,7 +152,11 @@ export class ShareTeacherLibraries extends React.Component {
               {selectedLibraryId ? (
                 <div style={{marginTop: 16}}>
                   <LibraryIdCopier channelId={selectedLibraryId} />
-                  <Typography variant="body3">
+                  <Typography
+                    variant="body2"
+                    gutterBottom
+                    sx={{marginTop: '12px'}}
+                  >
                     {i18n.shareLibraryAccess()}
                   </Typography>
                   <div>{this.displaySharedSections()}</div>

@@ -22,7 +22,7 @@ export default class PublishSuccessDisplay extends React.Component {
           {libraryName}
         </Typography>
         <div>
-          <Typography variant="body2">
+          <Typography variant="body2" gutterBottom>
             {i18n.libraryPublishExplanation()}
           </Typography>
           <div style={styles.centerContent}>
