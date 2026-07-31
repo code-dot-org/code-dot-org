@@ -130,10 +130,21 @@ applied to the World, they are effects that are played on the entire viewport.
 For instance, maybe we have an underwater World, so we have a kind of water
 distortion effect being used to give that impression.
 
-These are applied by an `use effect <name>` and they can be applied on a world
-or an actor. These both respond to the `.useEffect()` call. Supplying arguments
-is tricky. The `.useEffect()` block has to dynamically expand to offer the
-possible arguments and their defaults. These arguments are then supplied when
-the Effect is initially assigned to the Actor or World (or Camera). Updating
-the Effect is tricky and will be deferred for just setting parameters on
-assignment.
+These are applied by an `add effect <name>` block — `to <actor>` for an Actor,
+`to the world` for a World — and both respond to the `.addEffect()` call.
+
+One block covers both describing and doing. Under `define actor` the target is
+the template, so every instance is born wearing the effect; inside an event
+handler the same block reaches a live actor. `ActorBuilder.addEffect` and
+`Actor.addEffect` take the same arguments and mean the same thing (likewise for
+the World pair), and both contexts bind the same identifier, so the generated
+call is right either way. There is no separate declarative block.
+
+`remove effect` is the exception: it is runtime-only, because un-declaring an
+effect on a template described once has no meaning.
+
+Supplying arguments is tricky. The `add effect` block has to dynamically expand
+to offer the possible arguments and their defaults. These arguments are then
+supplied when the Effect is assigned to the Actor or World (or Camera).
+Updating the Effect is tricky and will be deferred for just setting parameters
+on assignment.

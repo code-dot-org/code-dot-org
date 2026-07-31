@@ -36,7 +36,7 @@ export interface EffectUniformDescriptor {
   name: string;
   /** The `EffectParameter.id` it came from. */
   parameterId: string;
-  /** The `.useEffect()` argument name. */
+  /** The `.addEffect()` argument name. */
   label: string;
   /** The GLSL type of the uniform — what a host must actually upload. */
   type: EffectValueType;

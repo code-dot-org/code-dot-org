@@ -7,11 +7,9 @@ import {
   ROOT_BLOCK_TYPES,
 } from '../domainBlocks';
 import {
-  ACTOR_DEFINITION_EXTENSION,
   RUNTIME_ACTOR_EXTENSION,
   RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
-  WORLD_DEFINITION_EXTENSION,
 } from '../extensions/actorContext';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectMaps} from '../moduleOptions';
@@ -681,7 +679,7 @@ describe('world block generators', () => {
     // Value sockets, by input name — what `valueToCode` would return. An input
     // with no entry reads as '' (a socket emptied of its shadow).
     sockets: Record<string, string> = {},
-    // `use effect`'s serialized parameter list, which its generator reads off
+    // `add effect`'s serialized parameter list, which its generator reads off
     // the block to know which sockets exist.
     effectParams?: unknown[],
   ) => {
@@ -735,24 +733,28 @@ describe('world block generators', () => {
     );
   });
 
-  it('world_use_effect imports the .effect as data and applies it', () => {
+  it('world_add_effect imports the .effect as data and applies it', () => {
     // The path is passed alongside the document because it is the effect's
     // identity: the driver registers one shader render node per path, so the
     // same effect on many actors is one compiled program.
+    //
+    // With the ACTOR socket empty the target is the bare identifier `actor` —
+    // which is the template under `define actor` and the live actor inside a
+    // handler. One block, both jobs; `addEffect` is on both objects.
     const defs: Record<string, string> = {};
-    const code = run('world_use_effect', {EFFECT: 'effects/ripple'}, defs, '');
-    expect(code).toBe('actor.useEffect("effects/ripple", Ripple);\n');
+    const code = run('world_add_effect', {EFFECT: 'effects/ripple'}, defs, '');
+    expect(code).toBe('actor.addEffect("effects/ripple", Ripple);\n');
     expect(defs['mod:effects/ripple']).toBe(
       'import Ripple from "effects/ripple";',
     );
   });
 
-  it('world_use_effect passes parameter values by parameter id', () => {
+  it('world_add_effect passes parameter values by parameter id', () => {
     // The sockets are built from the block's own serialized parameter list, so
     // the generator reads that same list to know what to emit.
     const defs: Record<string, string> = {};
     const code = run(
-      'world_use_effect',
+      'world_add_effect',
       {EFFECT: 'effects/ripple'},
       defs,
       '',
@@ -760,15 +762,15 @@ describe('world block generators', () => {
       [{id: 'strength', name: 'strength', type: 'float', defaultValue: 0.02}],
     );
     expect(code).toBe(
-      'actor.useEffect("effects/ripple", Ripple, {"strength": 0.05});\n',
+      'actor.addEffect("effects/ripple", Ripple, {"strength": 0.05});\n',
     );
   });
 
-  it('world_use_effect falls back to a parameter default for an empty socket', () => {
+  it('world_add_effect falls back to a parameter default for an empty socket', () => {
     // A socket emptied of its shadow reads as '' — the declared default is what
     // the effect would have used anyway, so emit that rather than 0.
     const code = run(
-      'world_use_effect',
+      'world_add_effect',
       {EFFECT: 'effects/ripple'},
       {},
       '',
@@ -778,9 +780,9 @@ describe('world block generators', () => {
     expect(code).toContain('{"strength": 0.02}');
   });
 
-  it('world_use_effect gathers a vector parameter into an array', () => {
+  it('world_add_effect gathers a vector parameter into an array', () => {
     const code = run(
-      'world_use_effect',
+      'world_add_effect',
       {EFFECT: 'effects/tint'},
       {},
       '',
@@ -793,21 +795,19 @@ describe('world block generators', () => {
     expect(code).toContain('{"color": [1, 0, 0.5]}');
   });
 
-  it('world_use_effect emits a boolean parameter as true/false', () => {
-    const code = run('world_use_effect', {EFFECT: 'effects/glow'}, {}, '', {}, [
+  it('world_add_effect emits a boolean parameter as true/false', () => {
+    const code = run('world_add_effect', {EFFECT: 'effects/glow'}, {}, '', {}, [
       {id: 'on', name: 'on', type: 'bool', defaultValue: 1},
     ]);
     expect(code).toContain('{"on": true}');
   });
 
-  it('world_use_effect omits the argument when the effect has no parameters', () => {
-    const code = run('world_use_effect', {EFFECT: 'effects/ripple'}, {}, '');
-    expect(code).toBe('actor.useEffect("effects/ripple", Ripple);\n');
+  it('world_add_effect omits the argument when the effect has no parameters', () => {
+    const code = run('world_add_effect', {EFFECT: 'effects/ripple'}, {}, '');
+    expect(code).toBe('actor.addEffect("effects/ripple", Ripple);\n');
   });
 
-  it('world_add_effect starts an effect on a live actor', () => {
-    // The runtime counterpart: it imports the document too, because the driver
-    // compiles the graph when it attaches the filter.
+  it('world_add_effect names the socket target when one is plugged in', () => {
     const defs: Record<string, string> = {};
     const code = run('world_add_effect', {EFFECT: 'effects/glow'}, defs, '', {
       ACTOR: 'actor',
@@ -816,7 +816,7 @@ describe('world block generators', () => {
     expect(defs['mod:effects/glow']).toBe('import Glow from "effects/glow";');
   });
 
-  it('world_add_effect passes parameter values like use effect', () => {
+  it('world_add_effect passes explicit values alongside a socket target', () => {
     const code = run(
       'world_add_effect',
       {EFFECT: 'effects/glow'},
@@ -856,39 +856,13 @@ describe('world block generators', () => {
     expect(run('world_remove_effect', {EFFECT: ''}, {}, '', {})).toBe('');
   });
 
-  it('world_use_effect emits nothing when the project has no effects', () => {
+  it('world_add_effect emits nothing when the project has no effects', () => {
     // The dropdown shows a "(none)" placeholder with an empty value; emitting
-    // `actor.useEffect("", undefined)` would be a runtime error for a block the
+    // `actor.addEffect("", undefined)` would be a runtime error for a block the
     // learner has not finished filling in.
     const defs: Record<string, string> = {};
-    expect(run('world_use_effect', {EFFECT: ''}, defs, '')).toBe('');
+    expect(run('world_add_effect', {EFFECT: ''}, defs, '')).toBe('');
     expect(Object.keys(defs)).toEqual([]);
-  });
-
-  it('world_world_use_effect plays an effect over the whole viewport', () => {
-    const defs: Record<string, string> = {};
-    const code = run(
-      'world_world_use_effect',
-      {EFFECT: 'effects/underwater'},
-      defs,
-      '',
-    );
-    expect(code).toBe('world.useEffect("effects/underwater", Underwater);\n');
-    expect(defs['mod:effects/underwater']).toBe(
-      'import Underwater from "effects/underwater";',
-    );
-  });
-
-  it('world_world_use_effect carries parameter values too', () => {
-    const code = run(
-      'world_world_use_effect',
-      {EFFECT: 'effects/underwater'},
-      {},
-      '',
-      {EPARAM_0_0: '0.4'},
-      [{id: 'murk', name: 'murk', type: 'float', defaultValue: 0.1}],
-    );
-    expect(code).toContain('{"murk": 0.4}');
   });
 
   it('world_add_world_effect starts a viewport effect at runtime', () => {
@@ -1213,43 +1187,43 @@ describe('builder-context warnings', () => {
     );
   };
 
-  it('guards `use effect`, whose `useEffect` is builder-only', () => {
-    expect(extensionsOf('world_use_effect')).toContain(
-      ACTOR_DEFINITION_EXTENSION,
-    );
-  });
-
   it('guards `use trait`, whose `useTraits` is builder-only', () => {
     expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
   });
 
-  it('guards the world effect block to a world definition', () => {
-    // `WorldBuilder.useEffect` is builder-only; a handler rebinds `world` to
-    // the live World, which has no such method.
-    expect(extensionsOf('world_world_use_effect')).toContain(
-      WORLD_DEFINITION_EXTENSION,
+  it('guards `remove effect`, which needs a live actor', () => {
+    // `Actor.removeEffect` has no builder counterpart — un-declaring on a
+    // template described once means nothing — so under `define actor`, where
+    // `actor` is the builder, this would throw.
+    expect(extensionsOf('world_remove_effect')).toContain(
+      RUNTIME_ACTOR_EXTENSION,
     );
   });
 
-  it('guards the runtime effect blocks against a template body', () => {
-    // The mirror case: `addEffect`/`removeEffect` are Actor methods, so under
-    // `define actor` — where `actor` is the builder — they would throw.
-    for (const type of ['world_add_effect', 'world_remove_effect']) {
-      expect(extensionsOf(type)).toContain(RUNTIME_ACTOR_EXTENSION);
-    }
+  it('guards `remove effect from the world`, which needs a live world', () => {
+    // It also carries `worldContext`, which catches `world` being unbound
+    // entirely — the two warnings answer different questions.
+    expect(extensionsOf('world_remove_world_effect')).toContain(
+      RUNTIME_WORLD_EXTENSION,
+    );
+    expect(extensionsOf('world_remove_world_effect')).toContain(
+      WORLD_CONTEXT_EXTENSION,
+    );
   });
 
-  it('guards the runtime world blocks against a world definition', () => {
-    // `World.addEffect` is the live world's; the builder has only `useEffect`.
-    // They also carry `worldContext`, which catches `world` being unbound
-    // entirely — the two warnings answer different questions.
-    for (const type of [
-      'world_add_world_effect',
-      'world_remove_world_effect',
-    ]) {
-      expect(extensionsOf(type)).toContain(RUNTIME_WORLD_EXTENSION);
-      expect(extensionsOf(type)).toContain(WORLD_CONTEXT_EXTENSION);
-    }
+  it('leaves `add effect` alone, because `addEffect` exists on both', () => {
+    // The same reasoning as the `set` blocks below, and the reason there is no
+    // separate `use effect`: `ActorBuilder.addEffect` and `Actor.addEffect`
+    // agree, so this one block is valid as a template default AND at runtime.
+    // Guarding it either way would warn about correct programs.
+    const names = extensionsOf('world_add_effect');
+    expect(names).not.toContain(RUNTIME_ACTOR_EXTENSION);
+    expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
+
+    const worldNames = extensionsOf('world_add_world_effect');
+    expect(worldNames).not.toContain(RUNTIME_WORLD_EXTENSION);
+    // …but `world` must still be bound to something.
+    expect(worldNames).toContain(WORLD_CONTEXT_EXTENSION);
   });
 
   it('leaves the `set` blocks alone, because `set` exists on both', () => {
@@ -1259,7 +1233,7 @@ describe('builder-context warnings', () => {
     // correct programs.
     for (const type of ['world_set_sprite', 'world_set_position']) {
       const names = extensionsOf(type);
-      expect(names).not.toContain(ACTOR_DEFINITION_EXTENSION);
+      expect(names).not.toContain(RUNTIME_ACTOR_EXTENSION);
       expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
     }
   });

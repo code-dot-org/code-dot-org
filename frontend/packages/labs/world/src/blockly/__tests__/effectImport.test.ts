@@ -2,7 +2,7 @@
 //
 // The row is a sentinel, not a value, and the whole point of the machinery is
 // that it never survives as one: a block left holding `__import_effect__` would
-// generate `actor.useEffect("__import_effect__", …)` and fail at run time.
+// generate `actor.addEffect("__import_effect__", …)` and fail at run time.
 
 import {afterEach, describe, expect, it, vi} from 'vitest';
 

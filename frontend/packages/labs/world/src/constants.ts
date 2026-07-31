@@ -305,7 +305,7 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       // effect editor opens on something worth reading. Deliberately not
       // applied to anything: the tutorial is about gravity and input, and a
       // permanently rippling player would be a distraction from it. Dragging
-      // `use effect` under an actor is how a learner tries it.
+      // Dragging `add effect` under an actor is how a learner tries it.
       rippleEffect: {
         id: 'rippleEffect',
         name: 'ripple.effect',

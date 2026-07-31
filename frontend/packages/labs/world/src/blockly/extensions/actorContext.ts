@@ -1,21 +1,25 @@
-// A warning for blocks that configure an actor TEMPLATE rather than a live one.
+// Warnings for blocks placed where the object they call is the wrong one.
 //
-// `define actor` builds an `ActorBuilder`, and some blocks chained under it call
-// methods that exist only there — `useTraits`, `useEffect`. An event handler
-// rebinds the name they call them on: `world_on_*` generates
-// `(world, actor, eventValue) => …`, where `actor` is the live `Actor` the event
-// fired for. The two objects share a name and only part of a surface, so a
-// template block placed inside a handler generates fine and then throws
-// "actor.useTraits is not a function" when the game runs.
+// `define actor` builds an `ActorBuilder`, while an event handler rebinds the
+// same name: `world_on_*` generates `(world, actor, eventValue) => …`, where
+// `actor` is the live `Actor` the event fired for. The two objects share a name
+// and only part of a surface, so a block whose method lives on only one of them
+// generates fine and then throws "actor.useTraits is not a function" when the
+// game runs. `world` has the same split — `WorldBuilder` under `define world`,
+// the live `World` in a handler or a rule step.
 //
-// Only blocks whose method is builder-ONLY need this. `set sprite` and
-// `set position` call `set`, which both `ActorBuilder` and `Actor` have, so they
-// are legitimately valid in a template body *and* at runtime — guarding them
-// would warn about correct programs.
+// Only blocks whose method is genuinely one-sided need a guard, and the surface
+// they share keeps growing:
 //
-// The mirror of `worldContext`, and for the same reason: catch it in the editor,
-// where the learner can see which block is wrong, rather than in a console
-// message about a method name they never typed.
+//   - `set` is on both, so `set sprite` / `set position` are legitimately valid
+//     in a template body *and* at runtime.
+//   - `addEffect` is on both, so `add effect` is too — one block, either place.
+//   - `useTraits` is builder-only; `removeEffect` is live-only.
+//
+// Guarding a block that is valid in both would warn about correct programs,
+// which is worse than not warning at all. Where a guard IS right, it catches
+// the mistake in the editor, where the learner can see which block is wrong,
+// rather than in a console message about a method name they never typed.
 
 import type {Block} from 'blockly';
 
@@ -68,31 +72,6 @@ function builderContextExtension(
   });
 }
 
-export const ACTOR_DEFINITION_EXTENSION = 'world_needs_actor_definition';
-
-/** For `use effect`: `ActorBuilder.useEffect` exists nowhere else. */
-export const actorDefinitionExtension = builderContextExtension(
-  ACTOR_DEFINITION_EXTENSION,
-  ['world_actor'],
-  'This is part of describing an actor. Try placing it under "define actor".',
-);
-
-export const WORLD_DEFINITION_EXTENSION = 'world_needs_world_definition';
-
-/**
- * For blocks that call a `WorldBuilder` method — `use effect` on a `.world`.
- *
- * Same trap one level up: `define world` declares `const world = new
- * WorldBuilder(...)`, while an event handler and a rule step both rebind
- * `world` to the live `World`. `WorldBuilder.useEffect` is builder-only, so a
- * handler would call a method that is not there.
- */
-export const worldDefinitionExtension = builderContextExtension(
-  WORLD_DEFINITION_EXTENSION,
-  ['world_world'],
-  'This is part of describing a world. Try placing it under "define world".',
-);
-
 export const RUNTIME_ACTOR_EXTENSION = 'world_needs_live_actor';
 
 /**
@@ -124,10 +103,13 @@ function runtimeContextExtension(
 /**
  * The mirror image: for blocks that need a LIVE actor.
  *
- * `add effect` and `remove effect` call `Actor` methods, which the builder does
- * not have. Chained under `define actor` they would run at module scope, before
- * any actor exists, against the builder — so the warning fires there and only
- * there.
+ * `remove effect` calls `Actor.removeEffect`, which the builder does not have —
+ * un-declaring something on a template described once has no meaning, so it was
+ * never added. Chained under `define actor` the block would run at module
+ * scope, before any actor exists, against the builder; the warning fires there
+ * and only there.
+ *
+ * `add effect` is deliberately NOT guarded: `addEffect` is on the builder too.
  *
  * Deliberately narrow. Elsewhere the block may well be fine: inside an event
  * handler `actor` is live, and anywhere an ACTOR socket is filled from a loop
@@ -144,12 +126,12 @@ export const runtimeActorExtension = runtimeContextExtension(
 export const RUNTIME_WORLD_EXTENSION = 'world_needs_live_world';
 
 /**
- * For `add effect to the world` / `remove effect from the world`.
+ * For `remove effect from the world`.
  *
- * `World.addEffect` is a method of the live world; `WorldBuilder` has only
- * `useEffect`. Inside `define world` the name `world` is the builder, so the
- * call would be to a method that is not there — and the fix is to say
- * `use effect` instead, which is what the message points at.
+ * `World.removeEffect` is a method of the live world; `WorldBuilder` has no
+ * counterpart, for the same reason the actor builder has none. Inside
+ * `define world` the name `world` is the builder, so the call would be to a
+ * method that is not there.
  *
  * Everywhere else `world` is the live instance: an event handler is
  * `(world, actor, eventValue)` and a rule step is `(world, delta)`. A block
@@ -159,7 +141,7 @@ export const RUNTIME_WORLD_EXTENSION = 'world_needs_live_world';
 export const runtimeWorldExtension = runtimeContextExtension(
   RUNTIME_WORLD_EXTENSION,
   ['world_world'],
-  'This happens while the game runs. To give the world an effect from the start, use "use effect" instead.',
+  'This happens while the game runs. Try placing it inside an event, not under "define world".',
 );
 
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';

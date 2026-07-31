@@ -1,6 +1,6 @@
 // Copying a stock effect into a project: where the file lands and what it is
 // called. Both are easy to get subtly wrong and hard to notice — a file in the
-// wrong folder is invisible to the `use effect` dropdown, and a name collision
+// wrong folder is invisible to the `add effect` dropdown, and a name collision
 // silently destroys work.
 
 import {describe, expect, it} from 'vitest';

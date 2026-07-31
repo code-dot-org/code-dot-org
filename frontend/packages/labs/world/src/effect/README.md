@@ -248,7 +248,7 @@ the toggle already is one. A new switch starts
 off. Games may pass either form: `{glow: true}` and `{glow: 1}` both work.
 
 Adding a parameter opens its editor immediately, because the default name is a
-placeholder and the name matters: it becomes the `.useEffect()` argument, the
+placeholder and the name matters: it becomes the `.addEffect()` argument, the
 min/max become the consumer's slider bounds, and the hint is the description a
 host can surface. Changing a parameter's type resets its default to the new
 shape and recolors its pin and wires. A float parameter also gets a

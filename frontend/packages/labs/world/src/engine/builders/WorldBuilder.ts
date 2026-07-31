@@ -107,21 +107,29 @@ export class WorldBuilder {
   /**
    * Play an effect across the whole viewport (specs/EFFECT_EDITOR.md).
    *
-   * The World counterpart to `ActorBuilder.useEffect`: that one filters one
+   * The World counterpart to `ActorBuilder.addEffect`: that one filters one
    * actor's own pixels, this one filters everything the camera has drawn — the
    * underwater distortion covering the whole view, rather than a wobble on one
    * fish. Same document, same parameters; only the surface it lands on differs.
+   *
+   * Named to match `World.addEffect` so one Blockly block covers both: in a
+   * `.world` file `world` is this builder, in an event handler it is the live
+   * World, and `world.addEffect(…)` is right in both places.
    *
    * @param path     the effect's module path (`effects/underwater`)
    * @param document the parsed `.effect` file, imported as JSON by the bundler
    * @param values   values for the effect's declared parameters, by parameter id
    */
-  useEffect(
+  addEffect(
     path: string,
     document: EffectDocument,
     values?: AppliedEffectSpec['values'],
   ): this {
-    this.requireUnbuilt('use effect');
+    this.requireUnbuilt('add effect');
+    // Idempotent by path, matching the live World — see ActorBuilder.addEffect.
+    if (this.effects.some(effect => effect.path === path)) {
+      return this;
+    }
     this.effects.push(values ? {path, document, values} : {path, document});
     return this;
   }

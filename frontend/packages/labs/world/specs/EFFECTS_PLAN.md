@@ -418,6 +418,10 @@ which look like setup:
 | `use trait`                   | `actor.useTraits([…])`    | yes            | **no**       |
 | `set sprite` / `set position` | `target.set(Prop, value)` | yes            | yes          |
 
+> The `use effect` row is the one this table got wrong: the method was
+> builder-only because it had been _named_ differently, not because the
+> operation was. See §14 — `use effect` and its guard are both gone.
+
 `set` exists on both, so those blocks are correct as a template default _and_ at
 runtime on a live actor — guarding them would warn about working programs.
 
@@ -965,6 +969,8 @@ somebody else's afternoon.
 - **More stock effects.** Six is a teaching sequence, not a catalogue. Anything
   added should say where it sits in that progression (§11e) and carry the same
   notes; the tests enforce the latter.
+- ~~**`use effect` and `add effect` are two blocks for one idea.**~~ Merged;
+  see §14.
 
 ## 13. The `sameActors` defect — FIXED
 
@@ -1009,3 +1015,58 @@ chain would come back.
 do with where the actors are. The underlying sharp edge also remains — a
 rebuild request can still arrive for a module that is already running, so any
 future code that reconciles must not assume `incoming` is freshly built.
+
+## 14. One block, not two — DONE
+
+`use effect` and `add effect` did the same thing to the same list. The question
+that started this was whether they needed to be separate, and they did not.
+
+**What the difference actually was.** Not the operation — the _verb_:
+
+```
+ActorBuilder.useEffect(path, document, values?): this
+Actor       .addEffect(path, document, values?): this
+```
+
+Same arguments, same meaning, same list appended to. The table in §8 read that
+as "builder-only, so guard it", and the guard was real given the names; but the
+names were the only thing making it real. §8 had already written down the test
+that settles it — `set` is on both objects, so `set position` is one block valid
+in a template body _and_ at runtime, and guarding it "would warn about working
+programs". Effects were in that same position with a gratuitous rename on top.
+
+**The change.** `ActorBuilder.useEffect` → `addEffect`, `WorldBuilder.useEffect`
+→ `addEffect`, both idempotent by path like their live counterparts (on a
+builder described once it cannot matter, but the two must not disagree — one
+block calls whichever object it lands on). Then `world_use_effect` and
+`world_world_use_effect` were deleted. Six effect blocks became four:
+
+| Block                            | Under a definition   | In a handler / step |
+| -------------------------------- | -------------------- | ------------------- |
+| `add effect … to <actor>`        | the template         | the live actor      |
+| `remove effect … from <actor>`   | **warns**            | the live actor      |
+| `add effect … to the world`      | the world being made | the live world      |
+| `remove effect … from the world` | **warns**            | the live world      |
+
+Nothing was needed to make `add effect` read correctly in a template body: its
+`ACTOR` socket already carried a `this actor` shadow (`actorInput.ts`), which
+generates the bare identifier `actor` — the builder under `define actor`, the
+live instance inside a handler. The generator already fell back to `'actor'` on
+an empty socket. Only the method name was in the way.
+
+**The `remove` blocks keep their guards, and that asymmetry is the point.** You
+can add an effect to a template; there is nothing to remove from one, so
+`removeEffect` was never put on the builders and the block is genuinely
+runtime-only. `runtimeWorldExtension`'s message used to advise "use `use
+effect` instead" and now says what the actor one says: put it inside an event.
+
+**Deleted.** `actorDefinitionExtension` / `ACTOR_DEFINITION_EXTENSION` and
+`worldDefinitionExtension` / `WORLD_DEFINITION_EXTENSION` had no other users —
+they existed for these two blocks alone. `builderContextExtension` stays, for
+`use trait`, which is still honestly builder-only.
+
+**What this cost.** A learner who wants "born with the effect" and one who wants
+"turn it on when hit" now reach for the same block and place it differently.
+That is the same thing `set position` asks of them, so it is not a new idea to
+learn — but it does mean the toolbox no longer names the distinction, and the
+tutorial has to.

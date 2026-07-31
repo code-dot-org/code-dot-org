@@ -169,7 +169,7 @@ describe('EffectEditor', () => {
       fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
       fireEvent.change(screen.getByLabelText('Name'), {target: {value: '  '}});
 
-      // The name is the `.useEffect()` argument; blank would be an unusable
+      // The name is the `.addEffect()` argument; blank would be an unusable
       // block, so the document keeps the last real name.
       expect(lastDocument(onChange).parameters[0].name).toBe('param1');
     });

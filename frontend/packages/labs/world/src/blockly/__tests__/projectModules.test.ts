@@ -141,7 +141,7 @@ describe('projectWorldRules', () => {
   });
 });
 
-// `.effect` files: what the `use effect` dropdown lists, and the knobs the
+// `.effect` files: what the `add effect` dropdown lists, and the knobs the
 // block grows a socket for.
 const EFFECT_FILES = {
   'effects/ripple.effect': JSON.stringify({

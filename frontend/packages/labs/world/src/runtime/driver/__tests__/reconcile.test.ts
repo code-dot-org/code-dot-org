@@ -67,7 +67,7 @@ function makeWorldWithEffect(
     new ActorBuilder({id: 'player', name: 'Player'})
       .useTraits([AffectedByGravityTrait])
       .set(PositionProperty, new Vector(200, 20))
-      .useEffect('effects/ripple', document, values)
+      .addEffect('effects/ripple', document, values)
       .instantiate(),
   );
   world.addActor(

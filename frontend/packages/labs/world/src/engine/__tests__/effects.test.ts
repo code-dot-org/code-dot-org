@@ -35,11 +35,11 @@ const worldWith = (...actors: ActorBuilder[]) => {
 const positional = (id: string) =>
   new ActorBuilder({id, name: id}).useTraits([PositionalTrait]);
 
-describe('ActorBuilder.useEffect', () => {
+describe('ActorBuilder.addEffect', () => {
   it('carries path and document onto the instantiated actor', () => {
     const ripple = doc('Ripple');
     const actor = positional('fish')
-      .useEffect('effects/ripple', ripple)
+      .addEffect('effects/ripple', ripple)
       .instantiate();
 
     expect(actor.effects()).toEqual([
@@ -49,8 +49,8 @@ describe('ActorBuilder.useEffect', () => {
 
   it('keeps application order for several effects', () => {
     const actor = positional('fish')
-      .useEffect('effects/ripple', doc('Ripple'))
-      .useEffect('effects/glow', doc('Glow'))
+      .addEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/glow', doc('Glow'))
       .instantiate();
 
     expect(actor.effects().map(effect => effect.path)).toEqual([
@@ -61,7 +61,7 @@ describe('ActorBuilder.useEffect', () => {
 
   it('carries parameter values when given', () => {
     const actor = positional('fish')
-      .useEffect('effects/ripple', doc('Ripple'), {strength: 0.05})
+      .addEffect('effects/ripple', doc('Ripple'), {strength: 0.05})
       .instantiate();
 
     expect(actor.effects()[0].values).toEqual({strength: 0.05});
@@ -72,9 +72,23 @@ describe('ActorBuilder.useEffect', () => {
     // default, so an empty map and no map mean the same thing — and the
     // snapshot id hashes this, so they must not look like different effects.
     const actor = positional('fish')
-      .useEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/ripple', doc('Ripple'))
       .instantiate();
 
+    expect(actor.effects()[0]).not.toHaveProperty('values');
+  });
+
+  it('is idempotent by path, exactly as on the live actor', () => {
+    // The two must agree: ONE Blockly block emits `actor.addEffect(…)` and
+    // lands on the builder in a template body and on the live actor inside an
+    // event handler. A difference here would be a difference the learner sees
+    // only after moving a block.
+    const actor = positional('fish')
+      .addEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/ripple', doc('Ripple'), {strength: 0.9})
+      .instantiate();
+
+    expect(actor.effects()).toHaveLength(1);
     expect(actor.effects()[0]).not.toHaveProperty('values');
   });
 
@@ -84,9 +98,9 @@ describe('ActorBuilder.useEffect', () => {
 
   it('does not share the list between instances of one template', () => {
     // The builder is reusable; each instance must own its own array.
-    const builder = positional('fish').useEffect('effects/ripple', doc('R'));
+    const builder = positional('fish').addEffect('effects/ripple', doc('R'));
     const first = builder.instantiate('a');
-    builder.useEffect('effects/glow', doc('G'));
+    builder.addEffect('effects/glow', doc('G'));
 
     expect(first.effects()).toHaveLength(1);
     expect(builder.instantiate('b').effects()).toHaveLength(2);
@@ -138,7 +152,7 @@ describe('Actor.addEffect / removeEffect', () => {
 
   it('ignores removing an effect the actor does not have', () => {
     const actor = positional('fish')
-      .useEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/ripple', doc('Ripple'))
       .instantiate();
 
     actor.removeEffect('effects/glow');
@@ -150,7 +164,7 @@ describe('Actor.addEffect / removeEffect', () => {
     // A template effect and a runtime one are the same list; nothing marks an
     // effect as "from the builder" and so unremovable.
     const actor = positional('fish')
-      .useEffect('effects/ripple', doc('Ripple'))
+      .addEffect('effects/ripple', doc('Ripple'))
       .instantiate();
 
     actor.removeEffect('effects/ripple');
@@ -159,7 +173,7 @@ describe('Actor.addEffect / removeEffect', () => {
   });
 
   it('leaves other instances of the template alone', () => {
-    const builder = positional('fish').useEffect('effects/ripple', doc('R'));
+    const builder = positional('fish').addEffect('effects/ripple', doc('R'));
     const first = builder.instantiate('a');
     const second = builder.instantiate('b');
 
@@ -174,7 +188,7 @@ describe('renderSnapshot', () => {
   it('hands each actor its effects, for the driver to compile', () => {
     const ripple = doc('Ripple');
     const world = worldWith(
-      positional('fish').useEffect('effects/ripple', ripple),
+      positional('fish').addEffect('effects/ripple', ripple),
     );
 
     const [state] = world.renderSnapshot();
@@ -208,7 +222,7 @@ describe('world effects', () => {
   ) =>
     new WorldBuilder({id: 'w', name: 'W'})
       .useRules([SpatialRule])
-      .useEffect('effects/underwater', document, values)
+      .addEffect('effects/underwater', document, values)
       .instantiate();
 
   it('carries an effect declared on the world', () => {
@@ -217,6 +231,20 @@ describe('world effects', () => {
     expect(worldWithEffect(document).effects()).toEqual([
       {path: 'effects/underwater', document},
     ]);
+  });
+
+  it('is idempotent by path, exactly as on the live world', () => {
+    // The WorldBuilder/World counterpart of the ActorBuilder case above, and
+    // for the same reason: `add effect … to the world` is one block that lands
+    // on the builder in a `.world` file and on the live World in a handler.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([SpatialRule])
+      .addEffect('effects/underwater', doc('Underwater'))
+      .addEffect('effects/underwater', doc('Underwater'), {murk: 0.9})
+      .instantiate();
+
+    expect(world.effects()).toHaveLength(1);
+    expect(world.effects()[0]).not.toHaveProperty('values');
   });
 
   it('is empty for a world that declares none', () => {
@@ -267,10 +295,10 @@ describe('world effects', () => {
     // reconciler only asks whether the set changed.
     const world = new WorldBuilder({id: 'w', name: 'W'})
       .useRules([SpatialRule])
-      .useEffect('effects/underwater', doc('U'))
+      .addEffect('effects/underwater', doc('U'))
       .instantiate();
     world.addActor(
-      positional('fish').useEffect('effects/ripple', doc('R')).instantiate('a'),
+      positional('fish').addEffect('effects/ripple', doc('R')).instantiate('a'),
     );
 
     expect(world.snapshot().effectIds).toHaveLength(2);
@@ -284,8 +312,8 @@ describe('snapshot().effectIds', () => {
 
   it('lists one id per applied effect, across every actor', () => {
     const world = worldWith(
-      positional('fish').useEffect('effects/ripple', doc('Ripple')),
-      positional('lamp').useEffect('effects/glow', doc('Glow')),
+      positional('fish').addEffect('effects/ripple', doc('Ripple')),
+      positional('lamp').addEffect('effects/glow', doc('Glow')),
     );
 
     expect(world.snapshot().effectIds).toHaveLength(2);
@@ -293,7 +321,7 @@ describe('snapshot().effectIds', () => {
 
   it('is stable across snapshots of an unchanged world', () => {
     const world = worldWith(
-      positional('fish').useEffect('effects/ripple', doc('Ripple')),
+      positional('fish').addEffect('effects/ripple', doc('Ripple')),
     );
 
     expect(world.snapshot().effectIds).toEqual(world.snapshot().effectIds);
@@ -304,10 +332,10 @@ describe('snapshot().effectIds', () => {
     // `effectDocs` precisely so an edit to it can be swapped into a running
     // game instead of restarting one.
     const before = worldWith(
-      positional('fish').useEffect('effects/ripple', doc('Ripple', 'sample-1')),
+      positional('fish').addEffect('effects/ripple', doc('Ripple', 'sample-1')),
     ).snapshot();
     const after = worldWith(
-      positional('fish').useEffect('effects/ripple', doc('Ripple', 'sine-9')),
+      positional('fish').addEffect('effects/ripple', doc('Ripple', 'sine-9')),
     ).snapshot();
 
     expect(after.effectIds).toEqual(before.effectIds);
@@ -318,10 +346,10 @@ describe('snapshot().effectIds', () => {
     // Values ARE identity: the driver reads them once, when it attaches.
     const document = doc('Ripple');
     const before = worldWith(
-      positional('fish').useEffect('effects/ripple', document, {strength: 0.1}),
+      positional('fish').addEffect('effects/ripple', document, {strength: 0.1}),
     ).snapshot().effectIds;
     const after = worldWith(
-      positional('fish').useEffect('effects/ripple', document, {strength: 0.9}),
+      positional('fish').addEffect('effects/ripple', document, {strength: 0.9}),
     ).snapshot().effectIds;
 
     expect(after).not.toEqual(before);
@@ -333,12 +361,12 @@ describe('snapshot().effectIds', () => {
     // reconciler has to see it, which means the id has to hash it.
     const document = doc('Ripple');
     const before = worldWith(
-      positional('fish').useEffect('effects/ripple', document, {
+      positional('fish').addEffect('effects/ripple', document, {
         strength: 0.02,
       }),
     ).snapshot().effectIds;
     const after = worldWith(
-      positional('fish').useEffect('effects/ripple', document, {strength: 0.5}),
+      positional('fish').addEffect('effects/ripple', document, {strength: 0.5}),
     ).snapshot().effectIds;
 
     expect(after).not.toEqual(before);
@@ -346,8 +374,8 @@ describe('snapshot().effectIds', () => {
 
   it('sorts, so actor order does not move it', () => {
     const ids = worldWith(
-      positional('a').useEffect('effects/zzz', doc('Z')),
-      positional('b').useEffect('effects/aaa', doc('A')),
+      positional('a').addEffect('effects/zzz', doc('Z')),
+      positional('b').addEffect('effects/aaa', doc('A')),
     ).snapshot().effectIds;
 
     expect(ids).toEqual([...ids].sort());

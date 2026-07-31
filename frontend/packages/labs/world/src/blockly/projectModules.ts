@@ -115,7 +115,7 @@ export function projectAnimationFileOptions(
 
 /**
  * `[name, path]` options for the project's effect files (`.effect` under
- * `effects/`) — the `world_use_effect` dropdown. The value is the
+ * `effects/`) — the `world_add_effect` dropdown. The value is the
  * extension-less path the actor imports (`effects/ripple`).
  *
  * The label is the effect's *authored* name, so a learner picks "Ripple" rather

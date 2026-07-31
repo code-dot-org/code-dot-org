@@ -16,7 +16,7 @@ import {label} from './label';
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
-// `[label, path]` for the project's `.effect` files — the `use effect` dropdown.
+// `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
 // `world_use_rule` dropdown offers these ALONGSIDE the built-in rules, and its
