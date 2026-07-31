@@ -122,17 +122,19 @@ usable check: `preserveDrawingBuffer` is false, so the buffer is cleared once
 composited. Capture through the compositor — a Playwright page screenshot —
 instead.
 
-The one thing not covered by a test is the same-reference invariant between
-`renderWebGL` and its `_renderSteps` entry. It is enforced by four lines that a
-future edit could plausibly separate, and it fails silently. Extracting
-`installSkewHook` from the `PhaserBinding` constructor would make it unit
-testable against a fake object with no GL context; that refactor was not made
-here.
+The same-reference invariant between `renderWebGL` and its `_renderSteps` entry
+fails silently in both directions, so it is not left to a browser check.
+`installSkewHook` was extracted from the `PhaserBinding` constructor into
+`src/runtime/driver/skew.ts` — it takes the object and a `matrixFor` lookup, so
+the matrix math stays with the caller and the module needs neither a GL context
+nor Phaser (its only Phaser import is `import type`). Nine tests in
+`__tests__/skew.test.ts` cover it against fakes shaped like a Game Object; six
+of them fail if the `_renderSteps` patch is removed.
 
-## 5. Phase 1 — Fold the editor in
+## 5. Phase 1 — Fold the editor in — DONE
 
-The editor's own checklist (`docs/moving-into-code-dot-org.md`) assumes it
-becomes a package; most of it is discharged rather than followed, because a
+The editor's own checklist (`docs/moving-into-code-dot-org.md`) assumed it
+became a package; most of it was discharged rather than followed, because a
 directory inherits the host's configs instead of repointing its own.
 
 **Layout.** `src/{model,glsl,nodes,compiler,preview,runtime,editor,localization}`
@@ -172,19 +174,52 @@ re-translating already-translated output. Delete `setTranslations`.
 - `@mui/material`, `@emotion/react`, `@emotion/styled` — already world lab
   dependencies at `catalog:`. Nothing to do.
 
-**Tests.** Each layer's `__tests__` move with it and run under world lab's
-vitest — same `jsdom`, same `globals: true`. `vitest.config.ts` gains
-`setupFiles: ['./src/effect/__tests__/setup.ts']`. Note what that file does:
-besides the React Flow jsdom shims (`ResizeObserver`, `DOMMatrixReadOnly`,
-rAF), it sets `HTMLCanvasElement.prototype.getContext = () => null` globally.
-As a package setup that was scoped to the editor's suite; as world lab's setup
-it applies to every test in the lab. No current world test asks for a canvas,
-so this is safe today, but the override should be scoped to the tests that
-need it rather than left as a whole-suite monkeypatch.
+Also added: `@testing-library/jest-dom` (`catalog:`), which the editor's suite
+asserts with and world lab did not previously carry.
 
-**Docs.** The editor's README becomes `src/effect/README.md`; its
-`EFFECT_EDITOR.md` is already this package's `specs/EFFECT_EDITOR.md`.
-`docs/moving-into-code-dot-org.md` is discharged by this phase and deleted.
+**Tests.** Each layer's `__tests__` moved with it and runs under world lab's
+vitest — same `jsdom`, same `globals: true` — via a new
+`setupFiles: ['./src/__tests__/setup.ts']`. All 211 editor tests pass
+unchanged apart from localization (below); the suite is now 402 tests.
+
+The setup file landed at the lab's own `src/__tests__/`, not under
+`src/effect/`, because vitest applies one setup to the whole run and naming it
+after one directory would misdescribe it. Two corrections to the plan came out
+of writing it:
+
+- **The blanket canvas override was right.** The plan called for narrowing
+  `HTMLCanvasElement.prototype.getContext = () => null` to the WebGL context
+  types, on the theory that answering for `2d` was not ours to do. But jsdom
+  has no canvas implementation _at all_ — it throws "Not implemented" for `2d`
+  just as loudly — and the editor's test textures are drawn in 2D, so the
+  narrowing put a stack trace back on every render. The clobbering worry was
+  also unfounded: setup runs before the test file, so a test installing its own
+  stub still wins.
+- **Two suites have no DOM.** `buildCache` and `esbuildCompiler` run under
+  `@vitest-environment node`, where `HTMLCanvasElement` is undefined. The
+  canvas block is guarded.
+
+**Localization.** `src/effect/localization/index.ts` now re-exports the
+mainline singleton and keeps only `translate(text, vars)`. Its two dependent
+suites (`localization.test.ts`, `localizedRendering.test.tsx`) drove the
+deleted `setTranslations`, so both were ported to `vi.mock` the core module
+with a dictionary standing in for LocalizeJS — which keeps what they were
+really testing: that a template is translated _whole_ and values are spliced
+in _after_, so learner-entered names never reach a translator.
+
+**Docs.** The editor's `README.md` and `AGENTS.md` became
+`src/effect/README.md` and `src/effect/AGENTS.md`, repointed at their new
+paths and stripped of package-scoped procedure (sub-path exports, the config
+mirror, the standalone playground). Its `EFFECT_EDITOR.md` was already this
+package's `specs/EFFECT_EDITOR.md`. `LICENSE` and `NOTICE` were dropped in
+favour of the monorepo's, which the editor's own README had already called for.
+
+**Not yet exercised in the lab.** Nothing outside `src/effect/` imports it yet
+— that is Phase 2. What proves the fold-in works is the test suite, which
+renders `EffectEditor` through vite, so CSS modules, `@xyflow/react`
+resolution, and the MUI theme are all covered; and `tsc -b`, which sees every
+file. The standalone repo at `~/phaser-glsl-editor` is untouched and is now
+the stale copy.
 
 The trade accepted here: no independent versioning, and no structural
 guarantee against the preview surface pulling in the editor — that becomes an

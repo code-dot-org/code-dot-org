@@ -1,0 +1,62 @@
+.palette {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  width: 172px;
+
+  /* No padding at the top. A scroll container's top padding sits *above* where
+     its sticky headings pin, leaving a strip that list items scroll through
+     and paint in. The space is put back with a margin on the first child, so
+     it scrolls away like content rather than framing the scrollport. */
+  padding: 0 12px 12px;
+  overflow-y: auto;
+  font-size: 12px;
+  color: var(--effect-editor-text, #e8ebf5);
+  background: var(--effect-editor-surface, #262b40);
+  border-inline-end: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.search.search {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  border-radius: 4px;
+}
+
+.empty {
+  margin: 0;
+  color: var(--effect-editor-muted, #9aa4c4);
+}
+
+.itemRow {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.editFunction {
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+
+.newFunction {
+  margin-top: auto;
+  border-style: dashed;
+}

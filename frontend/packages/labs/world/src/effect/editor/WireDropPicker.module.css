@@ -1,0 +1,65 @@
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1200;
+}
+
+/* Above the backdrop, and therefore above the raised active wire too. Paper
+   supplies surface and elevation. */
+.menu {
+  position: absolute;
+  z-index: 1201;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  max-height: 280px;
+  overflow: hidden;
+  font-size: 12px;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.heading {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 0;
+  padding: 8px 10px 6px;
+  font-size: 11px;
+  color: var(--effect-editor-muted, #9aa4c4);
+  border-block-end: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.wireDot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border: 1px solid rgb(0 0 0 / 45%);
+  border-radius: 50%;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.item {
+  width: 100%;
+  padding: 4px 8px;
+  font: inherit;
+  color: inherit;
+  text-align: start;
+  cursor: pointer;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.item:hover {
+  border-color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.empty {
+  margin: 0;
+  padding: 10px;
+  color: var(--effect-editor-muted, #9aa4c4);
+}

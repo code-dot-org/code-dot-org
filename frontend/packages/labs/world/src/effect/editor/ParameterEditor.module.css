@@ -1,0 +1,51 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+}
+
+/* Sits below the input row, over the workspace. Above the raised active wire
+   (1100) and the wire-drop picker (1201). */
+
+/* Paper supplies surface, radius, and elevation; this positions it and lays
+   out the fields. */
+.popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  z-index: 1301;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 250px;
+  padding: 14px 12px 10px;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+}
+
+.field {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fieldLabel {
+  flex: 0 0 auto;
+  font-size: 11px;
+  color: var(--effect-editor-muted, #9aa4c4);
+}
+
+.rangeRow {
+  display: flex;
+  gap: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+/* The on/off default sits where the number field would, label and all. */
+.switchField {
+  margin: 0;
+}

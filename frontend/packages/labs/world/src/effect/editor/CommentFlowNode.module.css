@@ -1,0 +1,51 @@
+/* Deliberately unlike a computing node: no port strips, no header bar, softer
+   edges. A comment that looked like a step would invite wiring to it. */
+.comment {
+  /* Sized by React Flow from the node's stored size, so the resizer has
+     something to act on; the content stretches to fill it. */
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #2b2a3d;
+  border: 1px solid #4a4463;
+  border-radius: 10px 10px 10px 2px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+}
+
+.selected {
+  border-color: var(--effect-editor-accent, #8ab4f8);
+}
+
+/* One shape for both states, so clicking to edit does not move the text. */
+.body,
+.editor {
+  display: block;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  overflow: auto;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--effect-editor-text, #e8ebf5);
+  text-align: left;
+  white-space: pre-wrap;
+  background: none;
+  border: none;
+  border-radius: inherit;
+}
+
+.body {
+  cursor: text;
+}
+
+.placeholder {
+  color: var(--effect-editor-muted, #9aa4c4);
+  font-style: italic;
+}
+
+.editor {
+  resize: none;
+  outline: none;
+}

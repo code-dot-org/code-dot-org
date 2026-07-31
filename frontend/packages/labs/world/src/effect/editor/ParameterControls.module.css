@@ -1,0 +1,47 @@
+/* One try-out control, standing above its parameter's knob label. */
+
+.slider {
+  /* Keep the thumb inside the scrollable knob strip. */
+  margin: 4px 0 2px;
+}
+
+/* Non-float parameters: a small column of component fields. */
+.components {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.field {
+  width: 56px;
+  padding: 1px 4px;
+  font: inherit;
+  font-size: 11px;
+  color: inherit;
+  text-align: right;
+  background: var(--effect-editor-field, #1b1f30);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 4px;
+}
+
+/* An on/off knob sits where a slider would, so the row stays a row. */
+.switch {
+  margin-bottom: 2px;
+}
+
+/* The readout stacked over its slider. */
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  /* Tabular figures so the width does not jitter while dragging. */
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+  color: var(--effect-editor-text, #e8ebf5);
+  pointer-events: none;
+}

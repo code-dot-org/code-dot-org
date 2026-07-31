@@ -1,0 +1,80 @@
+/* Covers the canvas so a dismissing click never also pans or deselects. */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+}
+
+.menu {
+  position: absolute;
+  z-index: 10;
+
+  /* Centred on the connection point, sitting just above it. */
+  transform: translate(-50%, -100%);
+  padding: 8px;
+}
+
+.heading {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  max-width: 230px;
+  margin: 0 0 6px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--effect-editor-muted, #9aa4c4);
+}
+
+.wireDot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* The order being built, one box per component the port wants. */
+.slots {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.slot {
+  min-width: 34px;
+  padding: 2px 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--effect-editor-text, #e8ebf5);
+  text-align: center;
+  background: var(--effect-editor-field, #1b1f30);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 4px;
+}
+
+/* The slot the next click fills. */
+.slotActive {
+  color: var(--effect-editor-accent, #8ab4f8);
+  border-color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.options {
+  display: flex;
+  gap: 4px;
+}
+
+.component {
+  min-width: 34px;
+  padding: 2px 0;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.action {
+  flex: 1;
+}

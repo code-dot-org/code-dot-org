@@ -1,0 +1,180 @@
+.node {
+  position: relative;
+  min-width: 168px;
+
+  /* No vertical padding: the port strips are the first and last children, and
+     their outer edges have to be the node's edges for the handles to land on
+     them. */
+  padding: 0;
+  font-size: 12px;
+  color: var(--effect-editor-text, #e8ebf5);
+  background: var(--effect-editor-surface, #262b40);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 35%);
+}
+
+.selected {
+  border-color: var(--effect-editor-accent, #8ab4f8);
+}
+
+/* The node the compile error names. Doubled border rather than just a tint,
+   so it reads at a glance even against the selection blue. */
+.errored {
+  border-color: #e5484d;
+  box-shadow:
+    0 0 0 1px #e5484d,
+    0 2px 6px rgb(0 0 0 / 35%);
+}
+
+.nodeError {
+  margin: 0;
+  padding: 2px 10px 4px;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #ff8fa3;
+  white-space: normal;
+}
+
+.portStripLabelError {
+  font-weight: 600;
+  color: #ff8fa3;
+}
+
+/* Invisible, but it receives the pointerdown and bubbles it to the handle.
+   ~34px start target around a 10px dot — the canvas zoom scales it, so at
+   typical zoom it lands near the 24px touch-target minimum. Port spacing
+   (33.6px on a five-input node) keeps neighbouring pads from overlapping. */
+.handleHitPad {
+  position: absolute;
+  inset: -12px;
+}
+
+/* The strip is the positioning context for its handles: React Flow puts a
+   handle's centre on the strip's own top or bottom edge, which — since the
+   strips are the node's first and last children — is the node's edge. Each
+   handle's horizontal offset is set inline; see `PortStrip`. */
+.portStrip {
+  position: relative;
+  height: 14px;
+}
+
+.portStripLabel {
+  position: absolute;
+  font-size: 9px;
+  line-height: 1;
+  color: var(--effect-editor-muted, #9aa4c4);
+  white-space: nowrap;
+
+  /* Paired with the inline `left`, this centres the name over its dot. */
+  transform: translateX(-50%);
+}
+
+/* Names sit inside the node, under the input dots and over the output ones,
+   so the dot is always the thing closest to the edge its wire crosses. */
+.portStripIn .portStripLabel {
+  top: 4px;
+}
+
+.portStripOut .portStripLabel {
+  bottom: 4px;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.eye {
+  padding: 0 2px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--effect-editor-muted, #9aa4c4);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.eye:hover,
+.eyeActive {
+  color: var(--effect-editor-accent, #8ab4f8);
+}
+
+.ports {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.port {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.portLabel {
+  color: var(--effect-editor-muted, #9aa4c4);
+}
+
+.portType {
+  font-size: 11px;
+  color: var(--effect-editor-muted, #9aa4c4);
+}
+
+.literal {
+  display: flex;
+  gap: 3px;
+}
+
+.literalField {
+  width: 46px;
+  padding: 1px 4px;
+  font: inherit;
+  font-size: 11px;
+  color: inherit;
+  text-align: right;
+  background: var(--effect-editor-field, #1b1f30);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 4px;
+}
+
+.inspector {
+  display: flex;
+  justify-content: center;
+  padding: 6px 10px 2px;
+}
+
+.inspectorError {
+  margin: 0;
+  font-size: 11px;
+  color: #ff8fa3;
+}
+
+/* The color nodes' swatch: the native color input is both preview and
+   picker. `nodrag` on the input keeps React Flow from starting a node drag. */
+.swatchRow {
+  display: flex;
+  padding: 4px 8px 0;
+}
+
+.swatch {
+  width: 100%;
+  height: 22px;
+  padding: 1px;
+  cursor: pointer;
+  background: var(--effect-editor-field, #1b1f30);
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 4px;
+}

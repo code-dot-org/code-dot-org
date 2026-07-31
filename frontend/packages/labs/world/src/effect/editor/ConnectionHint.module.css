@@ -1,0 +1,29 @@
+/* Above the raised active wire (1100), below the pickers (1200+). Pointer
+   events must stay off: this floats under a live drag, and swallowing the
+   pointer would end the very connection it is explaining. */
+.hint {
+  position: absolute;
+  z-index: 1150;
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  max-width: 240px;
+  padding: 7px 10px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--effect-editor-text, #e8ebf5);
+  pointer-events: none;
+  background: var(--effect-editor-surface, #262b40);
+  border: 1px solid #b3863a;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 45%);
+}
+
+.wireDot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  margin-top: 2px;
+  border: 1px solid rgb(0 0 0 / 45%);
+  border-radius: 50%;
+}

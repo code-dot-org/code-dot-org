@@ -1,0 +1,21 @@
+.title {
+  padding: 12px 16px 8px;
+  font-size: 14px;
+}
+
+.list {
+  min-width: 300px;
+  padding-bottom: 8px;
+}
+
+.option {
+  gap: 12px;
+  align-items: center;
+}
+
+.thumbnail {
+  display: block;
+  flex: 0 0 auto;
+  border: 1px solid var(--effect-editor-border, #3a4160);
+  border-radius: 4px;
+}
