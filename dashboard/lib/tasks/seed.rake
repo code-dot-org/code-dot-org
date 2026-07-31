@@ -357,6 +357,14 @@ namespace :seed do
         md5 = Digest::MD5.hexdigest(contents)
         data, _i18n = dsl_class.parse(contents, filename)
 
+        # A file must sit in the tree its level name selects, or seeding the
+        # other tree would quietly pick it up; see
+        # dashboard/test/ui/config/README.md.
+        if Policies::LevelFiles.tree_for_name(data[:name]) != Policies::LevelFiles.tree_for_path(filename)
+          raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
+            "live under test/ui/config/scripts, all others under config/scripts"
+        end
+
         # Skip any files which have not been updated since last seed. To force a
         # a level to be reseeded, clear its md5 field in the database.
         unless md5 == level_md5s_by_name[data[:name]]

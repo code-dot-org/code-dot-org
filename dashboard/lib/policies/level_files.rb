@@ -11,6 +11,14 @@ module Policies
       Level.ui_test_name?(level_name) ? :ui_test : :production
     end
 
+    # Which tree the given definition file path (.level or DSL) lies in:
+    # files under test/ui/config define ui_test content, everything else is
+    # production. Seed tasks compare this against tree_for_name to refuse
+    # misfiled definitions.
+    def self.tree_for_path(path)
+      path.to_s.include?('test/ui/config/') ? :ui_test : :production
+    end
+
     # We organize new level files into a `levels` directory to keep them
     # separate from scripts and further organize them by the associated Game if
     # it has one, to avoid packing too many files into a single directory.

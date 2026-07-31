@@ -6,7 +6,7 @@ class LevelLoader
   # name's "UI Test " prefix; without one, `tree` picks which tree's levels to
   # load (:production or :ui_test). See dashboard/test/ui/config/README.md.
   def self.load_custom_levels(level_name, root_dir, tree: nil)
-    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, tree: tree))
+    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, tree: tree), level_name: level_name)
   end
 
   #
@@ -21,16 +21,33 @@ class LevelLoader
   #   Examples:
   #     'config/scripts/levels/K-1 Bee 2.level'
   #     'config/scripts/**/*.level'
+  # @param [String] level_name - set when the glob targets a single level by
+  #   name (rake seed:custom_levels LEVEL_NAME=...). A named level with no
+  #   file is a typo and an error; an empty tree is legal and a no-op.
   #
-  def self.import_levels(level_file_glob)
+  def self.import_levels(level_file_glob, level_name: nil)
     level_file_paths = file_paths_from_glob(level_file_glob)
 
-    # This is only expected to happen when LEVEL_NAME is set and the
-    # filename is not found
-    unless level_file_paths.count > 0
-      raise 'no matching level names found. ' \
-        'please check level name for exact case and spelling. ' \
-        'the level name is the level filename without the .level suffix.'
+    if level_file_paths.empty?
+      if level_name
+        raise 'no matching level names found. ' \
+          'please check level name for exact case and spelling. ' \
+          'the level name is the level filename without the .level suffix.'
+      end
+      return
+    end
+
+    # A file must sit in the tree its level name selects, or seeding the
+    # other tree would quietly pick it up; see
+    # dashboard/test/ui/config/README.md.
+    misfiled = level_file_paths.reject do |path|
+      name = Policies::LevelFiles.level_name_from_path(path)
+      Policies::LevelFiles.tree_for_name(name) == Policies::LevelFiles.tree_for_path(path)
+    end
+    if misfiled.any?
+      raise "level files misfiled: \"UI Test \" levels belong under " \
+        "#{Policies::LevelFiles::LEVELS_SUBDIR[:ui_test]}, all others under " \
+        "#{Policies::LevelFiles::LEVELS_SUBDIR[:production]}. Misfiled: #{misfiled.join(', ')}"
     end
 
     # Use a transaction because loading levels requires two separate imports.
