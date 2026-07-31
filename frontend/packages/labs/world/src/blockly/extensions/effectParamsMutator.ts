@@ -37,6 +37,17 @@ export interface EffectParamState {
   name: string;
   type: EffectParameterType;
   defaultValue: EffectLiteral;
+  /**
+   * The parameter's declared bounds, when it has them.
+   *
+   * Recorded alongside the rest because the socket's shadow is chosen from
+   * them: a bounded parameter gets a slider, an unbounded one a plain number.
+   * A saved workspace is rebuilt from this record before the project registry
+   * is guaranteed to be loaded, so the bounds have to travel with it or a
+   * reopened file would silently downgrade every slider to a number box.
+   */
+  min?: number;
+  max?: number;
 }
 
 /** The mutator's serialized extra state — the parameter list in order. */
@@ -75,13 +86,48 @@ function component(value: EffectLiteral | undefined, index: number): number {
   return typeof value === 'number' ? value : 0;
 }
 
-/** The state a project parameter contributes to the block. */
+/**
+ * The state a project parameter contributes to the block.
+ *
+ * Bounds are carried only when the effect declares BOTH — a half-open range
+ * cannot position a thumb, so it is treated as no range at all rather than
+ * guessing the missing end.
+ */
 export const toParamState = (parameter: EffectParameter): EffectParamState => ({
   id: parameter.id,
   name: parameter.name,
   type: parameter.type,
   defaultValue: parameter.defaultValue,
+  ...(parameter.min !== undefined && parameter.max !== undefined
+    ? {min: parameter.min, max: parameter.max}
+    : {}),
 });
+
+/**
+ * The shadow a numeric socket starts life with.
+ *
+ * A parameter that declares bounds gets `world_slider`, which shows the range
+ * and lets the learner sweep it; one that does not gets the plain
+ * `math_number`, because a slider with nothing to bound it is a worse number
+ * box rather than a better one. `int` carries `precision: 1`, so its slider
+ * lands on whole numbers — that is `FieldNumber`'s own rounding, applied to
+ * the dragged value and the typed one alike.
+ */
+export const numberShadowFor = (
+  parameter: EffectParamState,
+  value: number,
+): Blockly.serialization.blocks.State =>
+  parameter.min !== undefined && parameter.max !== undefined
+    ? {
+        type: 'world_slider',
+        fields: {NUM: value},
+        extraState: {
+          min: parameter.min,
+          max: parameter.max,
+          ...(parameter.type === 'int' ? {precision: 1} : {}),
+        },
+      }
+    : {type: 'math_number', fields: {NUM: value}};
 
 export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
   // Per-instance list. NOT a mixin property — that would share one array across
@@ -235,10 +281,7 @@ export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
                   BOOL: component(parameter.defaultValue, 0) ? 'TRUE' : 'FALSE',
                 },
               }
-            : {
-                type: 'math_number',
-                fields: {NUM: component(parameter.defaultValue, 0)},
-              },
+            : numberShadowFor(parameter, component(parameter.defaultValue, 0)),
         );
         return;
       }
@@ -251,10 +294,16 @@ export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
         }
         input.appendField(part);
         input.setCheck('Number');
-        restore(input.connection, `${parameter.id}:${componentIndex}`, {
-          type: 'math_number',
-          fields: {NUM: component(parameter.defaultValue, componentIndex)},
-        });
+        restore(
+          input.connection,
+          `${parameter.id}:${componentIndex}`,
+          // Every component of a vector shares the parameter's one declared
+          // range — a colour bounded 0–1 means each of r/g/b is.
+          numberShadowFor(
+            parameter,
+            component(parameter.defaultValue, componentIndex),
+          ),
+        );
       });
     });
 

@@ -144,7 +144,27 @@ call is right either way. There is no separate declarative block.
 effect on a template described once has no meaning.
 
 Supplying arguments is tricky. The `add effect` block has to dynamically expand
-to offer the possible arguments and their defaults. These arguments are then
+to offer the possible arguments and their defaults.
+
+A parameter that declares bounds gets a slider rather than a number box. The
+bounds are already in the `.effect` file — the editor's own parameter controls
+use them — and a plain socket throws them away, leaving a learner typing into a
+range they cannot see, where 0.35 and 0.035 look equally plausible and one of
+them does nothing.
+
+The slider is `world_slider`, seeded as the socket's shadow, so it can still be
+replaced by dropping a getter or an expression on top of it like any other
+shadow. It is drawn in the block, not in a popup: the track sits at the left of
+the field and the number to its right, and the thumb is dragged in place. That
+order is deliberate — the number's width changes with its value, so with the
+track on the right it would slide out from under the pointer mid-drag.
+
+Values snap to a step derived from the range (about a hundred positions across
+it, rounded to 1, 2 or 5 times a power of ten), which is finer than the track
+can resolve and coarse enough that every value reads cleanly. The step governs
+the typed value as well as the dragged one: a knob whose slider snaps to 0.02
+but whose text box accepts 0.0234 would be showing a value its own control
+cannot express. These arguments are then
 supplied when the Effect is assigned to the Actor or World (or Camera).
 Updating the Effect is tricky and will be deferred for just setting parameters
 on assignment.
