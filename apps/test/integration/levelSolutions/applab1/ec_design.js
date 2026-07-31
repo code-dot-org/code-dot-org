@@ -162,16 +162,10 @@ module.exports = {
         );
         Applab.onPuzzleComplete();
       },
-      expected: [
-        {
-          result: undefined,
-          testResult: TestResults.LEVEL_STARTED,
-        },
-        {
-          result: true,
-          testResult: TestResults.FREE_PLAY,
-        },
-      ],
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description: 'button image url correct with fully qualified url',
@@ -196,38 +190,27 @@ module.exports = {
           target: {value: assetUrl},
         });
 
-        var remainingPolls = 40;
-        var pollBackgroundImage = setInterval(function () {
-          var hasExpectedImage =
-            buttonElement.style.backgroundImage.includes(assetUrl);
-          if (!hasExpectedImage && remainingPolls > 0) {
-            remainingPolls--;
-            return;
-          }
-
-          clearInterval(pollBackgroundImage);
-          try {
-            assert.include(
-              buttonElement.style.backgroundImage,
-              assetUrl,
-              'Button background image should contain original url'
-            );
-          } finally {
-            delete window.__applabImageModerationStatusOverride;
-            Applab.onPuzzleComplete();
-          }
-        }, 25);
+        setTimeout(function () {
+          // Promise.resolve('safe') moderation resolves on a microtask; one
+          // tick here lets the style update land before we assert.
+          setTimeout(function () {
+            try {
+              assert.include(
+                buttonElement.style.backgroundImage,
+                assetUrl,
+                'Button background image should contain original url'
+              );
+            } finally {
+              delete window.__applabImageModerationStatusOverride;
+              Applab.onPuzzleComplete();
+            }
+          }, 0);
+        }, 0);
       },
-      expected: [
-        {
-          result: undefined,
-          testResult: TestResults.LEVEL_STARTED,
-        },
-        {
-          result: true,
-          testResult: TestResults.FREE_PLAY,
-        },
-      ],
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       description:
