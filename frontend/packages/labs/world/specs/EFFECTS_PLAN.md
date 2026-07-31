@@ -292,7 +292,13 @@ no-write-on-open/read-only pass-through, `editor/__tests__/readOnly.test.tsx`
 (9) covers both read-only layers, and `esbuildCompiler.test.ts` gained a case
 asserting an imported `.effect` arrives in the bundle as data. Suite: 418.
 
-## 7. Phase 3 — Runtime
+## 7. Phase 3 — Runtime — DONE
+
+Effects are applied **once, when the actor's Game Object is created**, and not
+reconciled per frame. Attaching a filter enables the object's filter pipeline
+and inserts a render step, which is the delicate insertion §4 is about. Adding
+or removing an effect while the game runs is a separate piece of work the plan
+defers (§12).
 
 ### 7.1 Engine (`src/engine/`)
 
@@ -332,16 +338,27 @@ a broken graph gets a message, not a blank canvas.
 
 ### 7.3 Hot reload
 
-`reconcile()` reads `snapshot()` — `ruleIds`, `actorIds`, world and actor
-property values. Effects appear in none of them, so editing a `.effect` today
-would rebuild the bundle, reconcile to "no change", and leave the old shader on
-screen.
+`WorldSnapshot` gained `effectIds: string[]`, one `"<path>@<hash>"` per applied
+effect (`engine/core/effectIds.ts`, FNV-1a over the serialized document), and
+`reconcile`'s `sameStructure` check covers it.
 
-`WorldSnapshot` gains `effectIds: string[]`, one `"<path>@<hash>"` per applied
-effect, and `reconcile`'s `sameStructure` check covers it. An effect edit then
-restarts the game. Restart is blunt — `registerEffect` replacing a render-node
-constructor is what makes true live editing possible — but live shader swap on
-already-attached controllers is its own problem and is deferred (§12).
+**The plan overstated why this was needed, and the first test written for it
+proved nothing.** The claim was that without `effectIds` an edited `.effect`
+would "reconcile to no change and leave the old shader on screen". It would
+not: `reconcile` patches live _only_ when rules, actors, and actor values all
+match **and** a world property changed; every other rebuild already restarts.
+An effect-only edit therefore restarted anyway, through the "nothing changed is
+not patchable" fallthrough — and a test asserting that passed with the
+`effectIds` comparison deleted.
+
+The real gap is narrower and still real: an effect edited **alongside** a
+world-property change. That rebuild satisfies every condition for patching
+live, so the game keeps running and the new shader never loads. That is the
+case the test now pins, and it fails without the comparison.
+
+Restart remains blunt — re-registering a render node is what would make true
+live editing possible — but swapping the program under an already-attached
+filter is its own problem (§12).
 
 ## 8. Phase 4 — The block
 
@@ -460,8 +477,33 @@ promoting `src/effect/` back out to its own package.
 - **Live shader swap.** Re-registering a render node replaces the constructor,
   which is what would make editing a `.effect` update a running game without a
   restart. Until then, an edit restarts.
-- **Runtime re-assignment.** Changing or removing an actor's effect while the
-  game runs — `AppliedEffect` already exposes `setValues` / `restart` /
-  `remove`, so the engine-side surface is the missing half.
+- **Runtime effects on an instance — wanted, deferred.** Adding an effect to
+  one actor from inside an event handler ("when the player is hit, glow"), and
+  removing it again. `use effect` cannot do this and must not appear to: it is
+  a _template_ block that calls `ActorBuilder.useEffect`, and inside a handler
+  `actor` is rebound to the live `Actor`, which has no such method. The editor
+  now warns rather than letting that reach the game
+  (`extensions/actorContext.ts`).
+
+  The shape it wants, following `use trait` (template) vs `set sprite` /
+  `play animation` (runtime, on an instance):
+
+  1. `Actor` gains `addEffect(path, document)` / `removeEffect(path)`, keyed by
+     path so adding twice is a no-op. `renderSnapshot` already reports
+     `actor.effects()` every frame, so the list is free to change.
+  2. `PhaserBinding` stops applying effects once at Game Object creation and
+     reconciles them in `sync` instead: a `WeakMap<GameObject, Map<path,
+AppliedEffect>>` against `state.effects`, attaching what is new and calling
+     the `AppliedEffect.remove()` the runtime already returns for what is gone.
+     Actors with no effects and nothing attached early-out, which is most of
+     them.
+  3. Two runtime blocks — `add effect <EFFECT> to <ACTOR>` and
+     `remove effect <EFFECT> from <ACTOR>` — with the `this actor` shadow on the
+     ACTOR socket, exactly like `set sprite`.
+
+  The hot-reload snapshot is unaffected: `reconcile` only ever compares
+  snapshots taken at build time, before any tick, so effects added by a running
+  game never reach it.
+
 - **A stock effect library.** Effects come from the project's own `effects/`
   for now; enumerating the ones the curriculum wants is separate work.

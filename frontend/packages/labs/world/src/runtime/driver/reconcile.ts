@@ -19,6 +19,8 @@ interface ReconcilableWorld {
   snapshot(): {
     ruleIds: string[];
     actorIds: string[];
+    /** `<path>@<hash>` per applied effect — see engine/core/effectIds.ts. */
+    effectIds: string[];
     world: Record<string, unknown>;
     actors: Record<string, Record<string, unknown>>;
   };
@@ -48,9 +50,15 @@ export function reconcile(
     return {mode: 'built', snapshot};
   }
 
+  // Effects count as structure. A shader is compiled and registered when its
+  // actor's Game Object is created, so changing one — including editing the
+  // `.effect` behind it, which is what `effectIds` hashes — takes a restart to
+  // show. Swapping the program under a live filter is a later problem
+  // (specs/EFFECTS_PLAN.md §12).
   const sameStructure =
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
-    stable(previous.actorIds) === stable(snapshot.actorIds);
+    stable(previous.actorIds) === stable(snapshot.actorIds) &&
+    stable(previous.effectIds) === stable(snapshot.effectIds);
   const sameActors = stable(previous.actors) === stable(snapshot.actors);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
 

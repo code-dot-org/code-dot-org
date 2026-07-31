@@ -3,9 +3,15 @@
 // adds their properties with defaults (INTERFACE.md); `set` overrides a default,
 // `on` registers a handler.
 
+import type {EffectDocument} from '../../effect/model/types';
 import {Actor} from '../core/Actor';
 import {Trait} from '../core/Trait';
-import type {EventHandler, GameEvent, Property} from '../core/types';
+import type {
+  AppliedEffectSpec,
+  EventHandler,
+  GameEvent,
+  Property,
+} from '../core/types';
 
 export class ActorBuilder {
   /** The template's id — the actor's type, and the default instance id. */
@@ -14,6 +20,7 @@ export class ActorBuilder {
   private traits: Trait[] = [];
   private readonly overrides: Array<[Property, unknown]> = [];
   private readonly handlers: Array<[GameEvent, EventHandler]> = [];
+  private readonly effects: AppliedEffectSpec[] = [];
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -38,6 +45,23 @@ export class ActorBuilder {
   }
 
   /**
+   * Play an effect on this actor's image (specs/EFFECT_EDITOR.md).
+   *
+   * Sits beside `useTraits` rather than being one, because an effect is not
+   * state the simulation touches: it declares no property and runs no step. The
+   * engine only carries it out to `renderSnapshot`; the driver compiles the
+   * graph to GLSL and hands it to Phaser as a filter.
+   *
+   * @param path     the effect's module path (`effects/ripple`) — its identity
+   *   for shader registration, so the same effect on many actors is one program
+   * @param document the parsed `.effect` file, imported as JSON by the bundler
+   */
+  useEffect(path: string, document: EffectDocument): this {
+    this.effects.push({path, document});
+    return this;
+  }
+
+  /**
    * Create a live Actor from this description. `instanceId` is the unique id the
    * Scene assigns (defaulting to this template's id). `type` is the actor's kind
    * — the identity `TouchingQuery` and other "actors of a type" lookups match on;
@@ -55,6 +79,7 @@ export class ActorBuilder {
       traits: [...this.traits],
       overrides: [...this.overrides],
       handlers: [...this.handlers],
+      effects: [...this.effects],
     });
   }
 }

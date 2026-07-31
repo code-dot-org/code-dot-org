@@ -112,6 +112,39 @@ export function projectAnimationFileOptions(
 }
 
 /**
+ * `[name, path]` options for the project's effect files (`.effect` under
+ * `effects/`) — the `world_use_effect` dropdown. The value is the
+ * extension-less path the actor imports (`effects/ripple`).
+ *
+ * The label is the effect's *authored* name, so a learner picks "Ripple" rather
+ * than the file stem — the same courtesy actors and worlds get, and the reason
+ * the effect editor holds a name to being non-empty.
+ */
+export function projectEffectFileOptions(
+  files: Record<string, string>,
+): Array<[string, string]> {
+  const options: Array<[string, string]> = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (!path.startsWith('effects/') || !path.endsWith('.effect')) {
+      continue;
+    }
+    const modulePath = path.replace(/\.effect$/, '');
+    const stem = modulePath.split('/').pop() ?? modulePath;
+    let name: string | undefined;
+    try {
+      const parsed = JSON.parse(contents) as {name?: unknown};
+      if (typeof parsed.name === 'string' && parsed.name.trim()) {
+        name = parsed.name;
+      }
+    } catch {
+      // Not valid JSON yet (mid-edit); fall back to the file name.
+    }
+    options.push([name ?? label(stem), modulePath]);
+  }
+  return options;
+}
+
+/**
  * Actor module paths referenced by each map file (JSON under `maps/`), keyed by
  * the map's extension-less path. The `world_load_map` block reads this to emit
  * an import + `scene.define` for each actor a map places, then `scene.populate`.

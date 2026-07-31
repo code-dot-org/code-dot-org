@@ -728,6 +728,27 @@ describe('world block generators', () => {
     );
   });
 
+  it('world_use_effect imports the .effect as data and applies it', () => {
+    // The path is passed alongside the document because it is the effect's
+    // identity: the driver registers one shader render node per path, so the
+    // same effect on many actors is one compiled program.
+    const defs: Record<string, string> = {};
+    const code = run('world_use_effect', {EFFECT: 'effects/ripple'}, defs, '');
+    expect(code).toBe('actor.useEffect("effects/ripple", Ripple);\n');
+    expect(defs['mod:effects/ripple']).toBe(
+      'import Ripple from "effects/ripple";',
+    );
+  });
+
+  it('world_use_effect emits nothing when the project has no effects', () => {
+    // The dropdown shows a "(none)" placeholder with an empty value; emitting
+    // `actor.useEffect("", undefined)` would be a runtime error for a block the
+    // learner has not finished filling in.
+    const defs: Record<string, string> = {};
+    expect(run('world_use_effect', {EFFECT: ''}, defs, '')).toBe('');
+    expect(Object.keys(defs)).toEqual([]);
+  });
+
   it('world_use_animations imports the file and registers its animations', () => {
     const defs: Record<string, string> = {};
     const code = run(

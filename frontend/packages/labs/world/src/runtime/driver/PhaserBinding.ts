@@ -36,6 +36,7 @@ import type {Actor, RenderState, World} from 'world-lab';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 
+import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
 
 const ACTOR_SIZE = 24;
@@ -103,6 +104,10 @@ export class PhaserBinding {
     // Learner-uploaded textures as `{fileName: dataURL}`; an animation frame
     // references one by its file name (see projectAssets / UPLOADS.md).
     uploadedAssets: Record<string, string> = {},
+    // Where an effect that will not compile is reported. It happens inside the
+    // render loop — long after the constructor's caller could have caught it —
+    // so the message needs a way out that is not a throw.
+    onEffectError: EffectErrorReporter = () => {},
   ) {
     const objects = new Map<Actor, GameObject>();
     // Every DOM key currently held (by `KeyboardEvent.key` name); fed to the
@@ -116,6 +121,11 @@ export class PhaserBinding {
     // — as the parent matrix it would otherwise not have. This module owns the
     // matrices: each skewed object has one, rebuilt every frame in `sync`; an
     // unskewed one has no entry and renders through the normal path.
+    // Compiled shaders for this game, keyed by effect path. It lives as long as
+    // the binding does: a restart builds a new renderer, and render nodes
+    // registered with the old one mean nothing to it.
+    const effectRegistry = new EffectRegistry(Phaser, onEffectError);
+
     const skewMatrices = new WeakMap<
       GameObject,
       Phaser.GameObjects.Components.TransformMatrix
@@ -166,6 +176,14 @@ export class PhaserBinding {
       installSkewHook(object as unknown as RenderStepInternals, () =>
         skewMatrices.get(object),
       );
+      // Effects are applied once, here, and not reconciled per frame: attaching
+      // a filter enables the object's filter pipeline and inserts a render step
+      // (see ./skew for why that insertion is delicate). Changing an actor's
+      // effects restarts the game — `World.snapshot()` reports them, so the
+      // reconciler treats a change as structural.
+      if (state.effects.length > 0) {
+        effectRegistry.applyTo(scene, object, state.effects);
+      }
       return object;
     };
 

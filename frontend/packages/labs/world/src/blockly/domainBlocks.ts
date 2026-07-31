@@ -24,6 +24,7 @@ import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 import {actorInputExtension} from './actorInput';
 import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {actorDefinitionExtension} from './extensions/actorContext';
 import {
   ruleParamsInitExtension,
   ruleParamsMutator,
@@ -37,6 +38,8 @@ import {
   actorOptionsExtension,
   animationFileOptions,
   animationFileOptionsExtension,
+  effectFileOptions,
+  effectFileOptionsExtension,
   liveDropdown,
   mapActorTypes,
   mapOptions,
@@ -205,6 +208,46 @@ const worldUseTrait = defineBlock({
     javascript(block, generator) {
       const ref = refFromTraitValue(block.getFieldValue('TRAIT'));
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
+    },
+  },
+});
+
+const worldUseEffect = defineBlock({
+  type: 'world_use_effect',
+  message0: 'use effect %1',
+  // The options are the project's `.effect` files, labelled by the effect's own
+  // authored name; the value is the extension-less module path the generated
+  // actor imports (`effects/ripple`).
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  // `useEffect` is a builder method: this configures the actor TEMPLATE, so it
+  // belongs under `define actor`. Inside an event handler `actor` is the live
+  // instance and the call would throw — the extension warns in the editor.
+  extensions: [effectFileOptionsExtension, actorDefinitionExtension],
+  // An effect changes how the actor is DRAWN, so it reads with the appearance
+  // blocks (`set sprite`, `play animation`) rather than with traits.
+  style: 'sprite_blocks',
+  tooltip:
+    "Play a visual effect on this actor's image (authored in an .effect file).",
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        // The dropdown's "(none)" placeholder: the project has no effects yet.
+        return '';
+      }
+      // The `.effect` is imported as DATA — the bundler loads it as JSON — and
+      // compiled to GLSL in the preview surface, where Phaser is. Nothing about
+      // shaders reaches the generated code.
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      return `actor.useEffect(${str(path)}, ${importVar(path)});\n`;
     },
   },
 });
@@ -1676,6 +1719,7 @@ const worldHasTrait = defineBlock({
 export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
+  worldUseEffect,
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
@@ -1747,6 +1791,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_actor',
       'world_use_trait',
+      'world_use_effect',
       'world_this_actor',
       ActorVariable.getterType,
       'world_is_a',

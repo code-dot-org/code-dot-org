@@ -189,10 +189,21 @@ const PLAYER_ACTOR = JSON.stringify(
                   // in the dropdown because the lab feeds the project's
                   // animations to the block (Phase D). Position is set by the
                   // Scene when it places this actor, not here.
-                  {
-                    type: 'world_play_animation',
-                    fields: {ANIMATION: 'playerBob'},
-                  },
+                  nextBlock(
+                    {
+                      type: 'world_play_animation',
+                      fields: {ANIMATION: 'playerBob'},
+                    },
+                    // Plays the shader graph in effects/ripple.effect on the
+                    // player's image. Applied here so the whole path — graph
+                    // editor, block, compiled GLSL, Phaser filter — is visible
+                    // on a fresh project rather than only after the learner
+                    // wires it up.
+                    {
+                      type: 'world_use_effect',
+                      fields: {EFFECT: 'effects/ripple'},
+                    },
+                  ),
                 ),
               ),
             ),
