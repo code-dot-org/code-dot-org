@@ -31,7 +31,7 @@ module Cdo
       Cdo::Metrics.put(
         'Infrastructure',
         'ActiveSupportCacheBytesRead',
-        result.bytesize,
+        result.try(:bytesize) || 0,
         {
           Environment: CDO.rack_env,
           Store: self.class.name
