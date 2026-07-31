@@ -360,7 +360,7 @@ Restart remains blunt — re-registering a render node is what would make true
 live editing possible — but swapping the program under an already-attached
 filter is its own problem (§12).
 
-## 8. Phase 4 — The block
+## 8. Phase 4 — The block — DONE
 
 `src/blockly/`:
 
@@ -394,11 +394,55 @@ actor.useEffect('effects/ripple', effects_ripple);
 export default actor;
 ```
 
+The generator emits nothing when the dropdown holds its `(none)` placeholder —
+a project with no `.effect` files yet. `actor.useEffect("", undefined)` would be
+a runtime error for a block the learner simply has not finished filling in.
+
+**`use effect` is a template block, and the editor now says so.** It calls
+`ActorBuilder.useEffect`, so it belongs under `define actor`. Dropped into an
+event handler it would still generate, because a handler is `(world, actor,
+eventValue) => …` and `actor` resolves — to the _live_ `Actor`, which has no
+such method. The result is `actor.useEffect is not a function` at run time,
+about a method the learner never typed. `extensions/actorContext.ts` warns in
+the editor instead, mirroring `worldContext`: the walk stops at the nearest
+binder, so a handler disqualifies even when it sits inside an `.actor` file.
+(`use trait` and the other builder-method blocks have the same gap; it predates
+this work and is untouched.)
+
+**The starter effect ships unapplied.** `effects/ripple.effect` is in
+`DEFAULT_PROJECT` so the folder is not empty and the editor opens on something
+worth reading, but nothing in the tutorial uses it: that project teaches gravity
+and input, and a permanently rippling player would pull against it. Dragging
+`use effect` under an actor is how a learner tries it.
+
 `compileEffect` already returns a full `EffectUniformDescriptor[]` — `label`,
 `kind`, `defaultValue`, `min`, `max` — per declared parameter. The mutator that
 expands the block's arguments (§12) has its data source ready; nothing in this
-phase needs to anticipate it beyond not painting us into a corner on the
+phase needed to anticipate it beyond not painting us into a corner on the
 block's shape.
+
+**Verified in Chromium**, against the running `dev:isolated` servers, that the
+compiled GLSL runs as a Phaser filter on one actor — the integration the
+editor's README had flagged as never having run in a game. With `use effect
+Ripple` on the player its pixels tear into displaced wavy bands; with the block
+removed, a clean sprite. The ground tile beside it is unchanged in both, which
+is the scoping `applyEffectToActor` promises: the filter goes in the object's
+_internal_ list, so it distorts the actor's own pixels rather than the scene
+behind them. The ripple's default strength (0.02) is sub-pixel on a 24px
+sprite, so the comparison was made at 0.35 — a screenshot at the shipped value
+would have proved only that nothing crashed.
+
+Two traps in doing that comparison, both worth knowing again:
+
+- **The vendored engine does not hot-reload.** `public/vendor/world-lab.mjs` is
+  pre-bundled by `yarn setup:world`; editing `src/engine/` and reloading gives
+  the old bundle, and the symptom is `actor.useEffect is not a function` — the
+  same message the missing-method trap above produces.
+- **A dropdown substitutes an invalid serialized value.** Blanking the block's
+  `EFFECT` field to `''` to make a control did not disable the effect: `''` is
+  not among the options, so Blockly selected the first one and the effect stayed
+  on. The two runs differed only in animation phase. A control has to remove the
+  block.
 
 ## 9. Phase 5 — Design system
 
