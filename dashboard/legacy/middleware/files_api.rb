@@ -27,22 +27,6 @@ class FilesApi < Sinatra::Base
     2_000_000_000 # 2 GB
   end
 
-  def public_ip_address?(ip_address)
-    return (
-      !ip_address.link_local? &&
-      !ip_address.loopback? &&
-      !ip_address.private? &&
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
-    )
-  end
-
-  def resolved_public_ip_address(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    return host_ip_address.to_s if public_ip_address?(host_ip_address)
-
-    nil
-  end
-
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
   def get_bucket_impl(endpoint)
