@@ -8,7 +8,11 @@
 import {describe, expect, it} from 'vitest';
 
 import type {EffectParameter} from '../../../effect/model/types';
-import {numberShadowFor, toParamState} from '../effectParamsMutator';
+import {
+  numberShadowFor,
+  paramSockets,
+  toParamState,
+} from '../effectParamsMutator';
 
 const parameter = (over: Partial<EffectParameter> = {}): EffectParameter => ({
   id: 'strength',
@@ -87,5 +91,39 @@ describe('numberShadowFor', () => {
     expect(
       numberShadowFor(toParamState(parameter({min: 0, max: 1})), 0.75),
     ).toMatchObject({fields: {NUM: 0.75}});
+  });
+});
+
+describe('paramSockets', () => {
+  // One definition, read by the mutator that builds the sockets and by the
+  // generator that reads them back. When these two disagreed they were separate
+  // lists; a change here that breaks one now breaks both, visibly.
+
+  it('gives a scalar a single unlabelled socket', () => {
+    expect(paramSockets('float')).toEqual([{kind: 'number'}]);
+    expect(paramSockets('int')).toEqual([{kind: 'number'}]);
+    expect(paramSockets('bool')).toEqual([{kind: 'boolean'}]);
+  });
+
+  it('keeps vec2 a pair of numbers', () => {
+    // A vec2 is a direction or an offset. Handing it a colour picker would be
+    // a category error the learner cannot undo.
+    expect(paramSockets('vec2')).toEqual([
+      {kind: 'number', label: 'x'},
+      {kind: 'number', label: 'y'},
+    ]);
+  });
+
+  it('gives vec3 one colour socket, not three number boxes', () => {
+    // Nobody picks a colour by typing three floats, and "0.53, 0.27, 0.08"
+    // says nothing about what it looks like.
+    expect(paramSockets('vec3')).toEqual([{kind: 'colour'}]);
+  });
+
+  it('gives vec4 the same single colour socket', () => {
+    // Alpha rides in the value rather than getting a socket of its own: the
+    // picker's shadow means opaque, and reaching the fourth channel means
+    // swapping in the `r g b a` block, which has a slider for it.
+    expect(paramSockets('vec4')).toEqual([{kind: 'colour'}]);
   });
 });

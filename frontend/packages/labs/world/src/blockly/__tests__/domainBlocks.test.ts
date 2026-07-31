@@ -11,9 +11,11 @@ import {
   RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
 } from '../extensions/actorContext';
+import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
+import {VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -48,6 +50,9 @@ const emit = (
     getNextBlock: () => nextBlock,
   };
   const generator = {
+    // Imports are registered here and hoisted by Blockly's `finish()`, so a
+    // block that needs one does not emit it inline (see `world_actor`).
+    definitions_: {} as Record<string, string>,
     statementToCode: (_block: unknown, name: string) => statements[name] ?? '',
     valueToCode: (_block: unknown, name: string) => values[name] ?? '',
     blockToCode: (b: unknown) => (b === nextBlock && next ? next : ''),
@@ -89,7 +94,10 @@ describe('domain block generators', () => {
       {},
       'actor.useTraits([X]);\n',
     );
-    expect(code).toContain(`import * as WorldLab from 'world-lab';`);
+    // Registered for hoisting, not emitted inline: an effect's colour
+    // parameter registers the same import, and two inline copies is a
+    // duplicate declaration at compile.
+    expect(code).not.toContain('import ');
     // The id is derived from the name (spaces → underscores).
     expect(code).toContain(
       `const actor = new WorldLab.ActorBuilder({id: "Player", name: "Player"});`,
@@ -650,6 +658,73 @@ describe('world_slider', () => {
   });
 });
 
+describe('world_rgba', () => {
+  const rgbaCode = (values: Record<string, string>) =>
+    (
+      generatorFor('world_rgba')(
+        {} as never,
+        {
+          valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+        } as never,
+        {} as never,
+      ) as [string, number]
+    )[0];
+
+  it('emits floats, not hex', () => {
+    // The whole reason this block exists beside the picker: hex cannot carry
+    // an alpha, and round-tripping through it would quantize every channel to
+    // 8 bits — a slider dragged to 0.337 would arrive as 0.3372549.
+    expect(rgbaCode({R: '1', G: '0.5', B: '0', A: '0.337'})).toBe(
+      '[1, 0.5, 0, 0.337]',
+    );
+  });
+
+  it('passes an expression through untouched', () => {
+    // A channel can be driven by something — a variable, a query, arithmetic.
+    // That is the other thing the picker cannot do.
+    expect(rgbaCode({R: 'other', G: '0', B: '0', A: '1'})).toBe(
+      '[other, 0, 0, 1]',
+    );
+  });
+
+  it('defaults a cleared channel to 0, and a cleared alpha to opaque', () => {
+    // Alpha is the odd one out: an empty socket meaning "invisible" would make
+    // clearing it look like the block broke.
+    expect(rgbaCode({})).toBe('[0, 0, 0, 1]');
+  });
+});
+
+describe('world_rgba block shape', () => {
+  const rgbaBlock = () => {
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_rgba');
+    if (!block) {
+      throw new Error('no world_rgba block');
+    }
+    return block;
+  };
+
+  it('leads with a colour swatch, then the four channels', () => {
+    // The swatch is what the channels are working toward; reading it first is
+    // the point. It is also where the presets live (rgbaPreview).
+    const args = (rgbaBlock().args0 ?? []) as Array<{name?: string}>;
+    expect(args.map(arg => arg.name)).toEqual(['PREVIEW', 'R', 'G', 'B', 'A']);
+  });
+
+  it('carries the extension that keeps the swatch and channels in step', () => {
+    const names = (rgbaBlock().extensions ?? []).map(extension =>
+      typeof extension === 'string' ? extension : extension.name,
+    );
+    expect(names).toContain(RGBA_PREVIEW_EXTENSION);
+    // …and the one that seeds each channel with a slider.
+    expect(names).toContain(VALUE_SHADOW_EXTENSION);
+  });
+
+  it('outputs Colour, so it drops onto an effect’s colour socket', () => {
+    // The whole reason it can replace the picker.
+    expect(rgbaBlock().output).toBe('Colour');
+  });
+});
+
 describe('actor-placing block generators', () => {
   // These blocks read block.id and register imports on generator.definitions_
   // (which Blockly's finish() hoists), so they need richer fakes than `emit`.
@@ -804,19 +879,74 @@ describe('world block generators', () => {
     expect(code).toContain('{"strength": 0.02}');
   });
 
-  it('world_add_effect gathers a vector parameter into an array', () => {
+  it('world_add_effect gathers a vec2 into an array', () => {
+    // A vec2 is a direction or an offset, not a colour — it keeps its pair of
+    // number sockets.
+    const code = run(
+      'world_add_effect',
+      {EFFECT: 'effects/skew'},
+      {},
+      '',
+      {EPARAM_0_0: '1', EPARAM_0_1: '0.5'},
+      [{id: 'offset', name: 'offset', type: 'vec2', defaultValue: [0, 0]}],
+    );
+    expect(code).toContain('{"offset": [1, 0.5]}');
+  });
+
+  it('world_add_effect converts a vec3 colour socket to shader floats', () => {
+    // The socket holds a colour block, which speaks `#rrggbb`; the uniform
+    // wants three 0–1 floats. Converting in the generated code rather than in
+    // the block is what lets any colour block feed the socket.
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_add_effect',
+      {EFFECT: 'effects/tint'},
+      defs,
+      '',
+      {EPARAM_0_0: "'#ff8800'"},
+      [{id: 'color', name: 'color', type: 'vec3', defaultValue: [0, 0, 0]}],
+    );
+    expect(code).toContain(`{"color": WorldLab.rgb('#ff8800')}`);
+    // …and the module it names has to be imported.
+    expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
+  });
+
+  it('world_add_effect takes a vec4 from the same single colour socket', () => {
+    // No separate opacity socket: alpha rides in the value, whether that is an
+    // eight-digit hex or the float array `r g b a` produces.
     const code = run(
       'world_add_effect',
       {EFFECT: 'effects/tint'},
       {},
       '',
-      {
-        EPARAM_0_0: '1',
-        EPARAM_0_2: '0.5',
-      },
-      [{id: 'color', name: 'color', type: 'vec3', defaultValue: [0, 0, 0]}],
+      {EPARAM_0_0: '[1, 0.5, 0, 0.25]'},
+      [{id: 'color', name: 'color', type: 'vec4', defaultValue: [0, 0, 0, 1]}],
     );
-    expect(code).toContain('{"color": [1, 0, 0.5]}');
+    expect(code).toContain(`{"color": WorldLab.rgba([1, 0.5, 0, 0.25])}`);
+  });
+
+  it('world_add_effect falls back to the declared colour as floats', () => {
+    // An emptied colour socket still has to produce the effect's own default.
+    // Handed over as floats, not hex: `rgb`/`rgba` take either, and hex would
+    // drop a vec4's alpha and quantize the rest for nothing.
+    const code = run('world_add_effect', {EFFECT: 'effects/tint'}, {}, '', {}, [
+      {id: 'color', name: 'color', type: 'vec3', defaultValue: [1, 0.5, 0]},
+    ]);
+    expect(code).toContain(`{"color": WorldLab.rgb([1, 0.5, 0])}`);
+  });
+
+  it('world_add_effect keeps a vec4 default’s alpha in the fallback', () => {
+    // Padding a three-component default to four would write an explicit alpha
+    // of 0, and `rgba` could no longer tell it was never given one.
+    const code = run('world_add_effect', {EFFECT: 'effects/tint'}, {}, '', {}, [
+      {
+        id: 'color',
+        name: 'color',
+        type: 'vec4',
+        defaultValue: [1, 0.6, 0.6, 1],
+      },
+    ]);
+    expect(code).toContain(`{"color": WorldLab.rgba([1, 0.6, 0.6, 1])}`);
   });
 
   it('world_add_effect emits a boolean parameter as true/false', () => {

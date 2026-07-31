@@ -27,6 +27,7 @@ import type {
   EffectParameter,
   EffectParameterType,
 } from '../../effect/model/types';
+import {toHex} from '../../engine';
 import {effectParameters} from '../moduleOptions';
 
 export const EFFECT_PARAMS_MUTATOR = 'effect_params_mutator';
@@ -58,21 +59,50 @@ export interface EffectParamsState {
 const PARAM_INPUT = 'EPARAM_';
 
 /**
- * The component sockets a parameter type occupies.
+ * The sockets a parameter type occupies, in order.
  *
- * A scalar is one unlabelled socket. A vector gets one per component, labelled
- * the way the effect editor names them: a `vec3` is "color (RGB)" there, so it
- * reads r/g/b here rather than x/y/z. Colors are 0–1 floats, like everything
- * else a shader parameter carries.
+ * ONE definition, read by the mutator that builds the sockets and by the
+ * generator that reads them back (domainBlocks). They were separate lists that
+ * had to agree; now disagreeing is impossible.
+ *
+ * A scalar is one unlabelled socket. `vec2` is a pair of numbers, because it is
+ * a direction or an offset — the effect editor names it x/y. `vec3` and `vec4`
+ * are colours by the model's own convention (the editor calls a vec3 "color
+ * (RGB)"), so they take a colour socket rather than three number boxes: nobody
+ * picks a colour by typing three floats, and 0.53, 0.27, 0.08 tells a learner
+ * nothing about what it looks like.
+ *
+ * `vec4` takes the SAME single colour socket. A picker cannot express alpha, so
+ * the shadow it seeds simply means opaque — which is what a learner choosing a
+ * colour from a swatch expects. Reaching the fourth channel means swapping the
+ * picker for the `r g b a` block, which has a slider per channel. That is one
+ * socket to understand instead of two, and it keeps alpha where the other
+ * channels are rather than orphaned beside them.
  */
-const COMPONENTS: Record<EffectParameterType, readonly string[]> = {
-  float: [],
-  int: [],
-  bool: [],
-  vec2: ['x', 'y'],
-  vec3: ['red', 'green', 'blue'],
-  vec4: ['red', 'green', 'blue', 'alpha'],
+export type ParamSocketKind = 'number' | 'boolean' | 'colour';
+
+export interface ParamSocket {
+  kind: ParamSocketKind;
+  /** Shown before the socket; omitted for a parameter's single value. */
+  label?: string;
+}
+
+const SOCKETS: Record<EffectParameterType, readonly ParamSocket[]> = {
+  float: [{kind: 'number'}],
+  int: [{kind: 'number'}],
+  bool: [{kind: 'boolean'}],
+  vec2: [
+    {kind: 'number', label: 'x'},
+    {kind: 'number', label: 'y'},
+  ],
+  vec3: [{kind: 'colour'}],
+  vec4: [{kind: 'colour'}],
 };
+
+/** The sockets a parameter of this type occupies. */
+export const paramSockets = (
+  type: EffectParameterType,
+): readonly ParamSocket[] => SOCKETS[type] ?? [{kind: 'number'}];
 
 /** Socket name for a parameter's whole value, or one of its components. */
 const socketName = (index: number, component = 0): string =>
@@ -113,6 +143,57 @@ export const toParamState = (parameter: EffectParameter): EffectParamState => ({
  * lands on whole numbers — that is `FieldNumber`'s own rounding, applied to
  * the dragged value and the typed one alike.
  */
+/** The Blockly type check each socket kind accepts. */
+const SOCKET_CHECK: Record<ParamSocketKind, string> = {
+  number: 'Number',
+  boolean: 'Boolean',
+  colour: 'Colour',
+};
+
+/**
+ * The shadow one socket of a parameter starts life with.
+ *
+ * A colour socket gets Blockly's own `colour_picker`, seeded with the
+ * parameter's default converted to hex. Deliberately the stock block rather
+ * than one of ours: it outputs `Colour`, as do `colour_random` and
+ * `colour_blend`, so all of them drop into this socket and the generated call
+ * converts whatever arrives (see `WorldLab.rgb`). A bespoke block would have
+ * shut that door for no gain.
+ *
+ * An opacity socket is a 0–1 slider whatever the parameter declares, because
+ * that is what the fourth channel means — it is not the effect author's to
+ * bound.
+ */
+const socketShadow = (
+  parameter: EffectParamState,
+  socket: ParamSocket,
+  socketIndex: number,
+): Blockly.serialization.blocks.State => {
+  if (socket.kind === 'colour') {
+    return {
+      type: 'colour_picker',
+      fields: {COLOUR: toHex(componentsOf(parameter.defaultValue, 3))},
+    };
+  }
+  if (socket.kind === 'boolean') {
+    return {
+      type: 'logic_boolean',
+      fields: {BOOL: component(parameter.defaultValue, 0) ? 'TRUE' : 'FALSE'},
+    };
+  }
+  return numberShadowFor(
+    parameter,
+    component(parameter.defaultValue, socketIndex),
+  );
+};
+
+/** The first `count` components of a literal, zero-filled. */
+const componentsOf = (
+  value: EffectLiteral | undefined,
+  count: number,
+): number[] =>
+  Array.from({length: count}, (_unused, index) => component(value, index));
+
 export const numberShadowFor = (
   parameter: EffectParamState,
   value: number,
@@ -215,7 +296,7 @@ export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
     >();
     (this.builtParams_ ?? []).forEach(
       (parameter: EffectParamState, index: number) => {
-        const width = COMPONENTS[parameter.type]?.length || 1;
+        const width = paramSockets(parameter.type).length;
         for (let component = 0; component < width; component++) {
           const connection = this.getInput(
             socketName(index, component),
@@ -264,45 +345,22 @@ export const effectParamsMutator = defineMutator(EFFECT_PARAMS_MUTATOR, {
     };
 
     this.effectParams_.forEach((parameter, index) => {
-      const parts = COMPONENTS[parameter.type] ?? [];
-      if (parts.length === 0) {
-        const input = this.appendValueInput(socketName(index)).appendField(
-          parameter.name,
-        );
-        const isBool = parameter.type === 'bool';
-        input.setCheck(isBool ? 'Boolean' : 'Number');
-        restore(
-          input.connection,
-          `${parameter.id}:0`,
-          isBool
-            ? {
-                type: 'logic_boolean',
-                fields: {
-                  BOOL: component(parameter.defaultValue, 0) ? 'TRUE' : 'FALSE',
-                },
-              }
-            : numberShadowFor(parameter, component(parameter.defaultValue, 0)),
-        );
-        return;
-      }
-      // A vector: one labelled number socket per component. The parameter's own
-      // name leads the first row so the group reads as one knob.
-      parts.forEach((part, componentIndex) => {
-        const input = this.appendValueInput(socketName(index, componentIndex));
-        if (componentIndex === 0) {
+      const sockets = paramSockets(parameter.type);
+      sockets.forEach((socket, socketIndex) => {
+        const input = this.appendValueInput(socketName(index, socketIndex));
+        // The parameter's own name leads its first row, so a multi-socket knob
+        // (a vec2's x/y, a colour's swatch and opacity) reads as one group.
+        if (socketIndex === 0) {
           input.appendField(parameter.name);
         }
-        input.appendField(part);
-        input.setCheck('Number');
+        if (socket.label) {
+          input.appendField(socket.label);
+        }
+        input.setCheck(SOCKET_CHECK[socket.kind]);
         restore(
           input.connection,
-          `${parameter.id}:${componentIndex}`,
-          // Every component of a vector shares the parameter's one declared
-          // range — a colour bounded 0–1 means each of r/g/b is.
-          numberShadowFor(
-            parameter,
-            component(parameter.defaultValue, componentIndex),
-          ),
+          `${parameter.id}:${socketIndex}`,
+          socketShadow(parameter, socket, socketIndex),
         );
       });
     });

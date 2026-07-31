@@ -17,6 +17,7 @@ import {
   type Toolbox,
   type ToolboxCategory,
 } from '@code-dot-org/blockly';
+import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
 import type {ArgType, PropertyType} from '../engine';
 import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
@@ -33,8 +34,10 @@ import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
   effectParamsInitExtension,
   effectParamsMutator,
+  paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
+import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {
   ruleParamsInitExtension,
   ruleParamsMutator,
@@ -193,11 +196,20 @@ const worldActor = defineBlock({
   generator: {
     javascript(block, generator) {
       const name = block.getFieldValue('NAME');
+      // Registered rather than emitted inline, so it is deduped against the
+      // other blocks that need `WorldLab` — an effect's colour parameter
+      // generates a `WorldLab.rgb(…)` call and registers the same import.
+      // Emitting it here as well produced a second copy in the hoisted block
+      // and "The symbol WorldLab has already been declared" at compile.
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
       // The `export default actor;` and the floating event handlers are appended
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
       return (
-        `import * as WorldLab from 'world-lab';\n` +
         `const actor = new WorldLab.ActorBuilder({id: ${str(id_from_name(name))}, name: ${str(name)}});\n` +
         nextChainCode(block, generator)
       );
@@ -230,15 +242,6 @@ const worldUseTrait = defineBlock({
 });
 
 /** How many number sockets each effect parameter type occupies. */
-const EFFECT_PARAM_WIDTHS: Record<string, number> = {
-  float: 1,
-  int: 1,
-  bool: 1,
-  vec2: 2,
-  vec3: 3,
-  vec4: 4,
-};
-
 /**
  * The `{id: value}` object literal for an effect's parameters, or `''` when the
  * effect declares none — in which case the call omits the argument rather than
@@ -248,6 +251,10 @@ const EFFECT_PARAM_WIDTHS: Record<string, number> = {
  * the sockets were built from that list, so it is what matches the sockets
  * being read here. Reconciling a project edited since the block was saved is
  * the mutator's job, and it happens before generation.
+ *
+ * The socket layout comes from `paramSockets`, the same function the mutator
+ * built those sockets from — so what is read here cannot drift from what is
+ * there.
  */
 const effectParamValuesCode = (
   block: Block,
@@ -257,9 +264,8 @@ const effectParamValuesCode = (
     (block as unknown as {effectParams_?: EffectParamState[]}).effectParams_ ??
     [];
   const entries = params.map((parameter, index) => {
-    const socket = (component: number) =>
-      generator.valueToCode(block, `EPARAM_${index}_${component}`, Order.NONE);
-    // The declared default is the fallback for a socket emptied of its shadow.
+    const sockets = paramSockets(parameter.type);
+    /** The nth component of the declared default, as source text. */
     const fallback = (component: number): string => {
       const value = parameter.defaultValue;
       const scalar = Array.isArray(value) ? (value[component] ?? 0) : value;
@@ -268,11 +274,50 @@ const effectParamValuesCode = (
       }
       return String(Number(scalar ?? 0));
     };
-    const width = EFFECT_PARAM_WIDTHS[parameter.type] ?? 1;
-    const value =
-      width === 1
-        ? socket(0) || fallback(0)
-        : `[${Array.from({length: width}, (_unused, i) => socket(i) || fallback(i)).join(', ')}]`;
+    /**
+     * A socket's code, or the default it stands in for when emptied.
+     *
+     * A colour default is handed over as the float array the effect declared,
+     * not as hex: `rgb`/`rgba` take either, and going through hex would drop a
+     * vec4's alpha and quantize the rest for no reason.
+     */
+    const socket = (n: number): string =>
+      generator.valueToCode(block, `EPARAM_${index}_${n}`, Order.NONE) ||
+      (sockets[n]?.kind === 'colour'
+        ? // Exactly the components the effect declared. Padding to four would
+          // write an explicit alpha of 0 for a three-component default, and
+          // `rgba`'s "missing means opaque" could no longer see it was missing.
+          `[${(Array.isArray(parameter.defaultValue)
+            ? parameter.defaultValue
+            : [0, 0, 0]
+          )
+            .map((_unused, component) => fallback(component))
+            .join(', ')}]`
+        : fallback(n));
+
+    // Colours arrive as `#rrggbb` — from the picker, or from any other colour
+    // block a learner plugged in — and a shader wants floats. The conversion
+    // is a call in the generated code rather than a step in the block, which
+    // is what lets `colour_random` and `colour_blend` work here too.
+    const value = (() => {
+      switch (parameter.type) {
+        case 'vec3':
+          return `WorldLab.rgb(${socket(0)})`;
+        case 'vec4':
+          return `WorldLab.rgba(${socket(0)})`;
+        case 'vec2':
+          return `[${socket(0)}, ${socket(1)}]`;
+        default:
+          return socket(0);
+      }
+    })();
+    if (parameter.type === 'vec3' || parameter.type === 'vec4') {
+      addImport(
+        generator,
+        'world_lab',
+        `import * as WorldLab from 'world-lab';`,
+      );
+    }
     return `${str(parameter.id)}: ${value}`;
   });
   return entries.length ? `{${entries.join(', ')}}` : '';
@@ -1262,6 +1307,74 @@ const worldSlider = defineBlock({
   },
 });
 
+// A colour by its channels, for when the swatch is not enough.
+//
+// The picker is the easy road and covers most of what a learner wants: pick a
+// colour, see a colour. It cannot do two things, though — set an alpha, or let
+// a channel be driven by something (a variable, a loop counter, a query). This
+// block is where you go for either, and it drops straight onto the picker
+// because both output `Colour`.
+//
+// Channels are 0–1, not 0–255, matching the shader and the numbers in the
+// `.effect` file. The sliders are what makes that workable: nobody has to know
+// the convention to set a colour by dragging, and a learner who opens the
+// effect afterwards sees the same numbers there.
+//
+// It leads with a swatch showing what the channels add up to, which is also
+// where the presets live — see `rgbaPreview` for how the two stay in step.
+/**
+ * A colour-swatch field arg. Built by a helper, like the vector and slider
+ * fields: a plugin-typed arg carrying extra config trips TypeScript's
+ * excess-property check when written as a literal at the call site.
+ */
+const swatchArg = (name: string) =>
+  ({type: fieldColourPlugin, name, colour: '#000000'}) as const;
+
+// Each channel is seeded with a 0–1 slider, which is `world_slider`'s own
+// default range — so no per-socket bounds are needed here.
+registerValueShadows(
+  'world_rgba',
+  ['R', 'G', 'B', 'A'].map(name => ({
+    name,
+    shadow: {type: 'world_slider', fields: {NUM: name === 'A' ? 1 : 0}},
+  })),
+);
+
+const worldRgba = defineBlock({
+  type: 'world_rgba',
+  message0: '%1 r %2 g %3 b %4 a %5',
+  args0: [
+    // The swatch leads: it is the answer the channels are working toward, and
+    // it doubles as the preset picker (rgbaPreview).
+    swatchArg('PREVIEW'),
+    {type: 'input_value', name: 'R', check: 'Number'},
+    {type: 'input_value', name: 'G', check: 'Number'},
+    {type: 'input_value', name: 'B', check: 'Number'},
+    {type: 'input_value', name: 'A', check: 'Number'},
+  ],
+  inputsInline: true,
+  output: 'Colour',
+  extensions: [valueShadowExtension, rgbaPreviewExtension],
+  // Blockly's own colour blocks' style, so this reads as one of them — which,
+  // as far as any socket is concerned, it is.
+  style: 'colour_blocks',
+  tooltip:
+    'A colour from its red, green, blue and alpha channels (0 to 1). Drop it on a colour to set them yourself.',
+  generator: {
+    javascript(block, generator) {
+      // Straight to floats. `rgb`/`rgba` accept an array as readily as hex, so
+      // this does not detour through a hex string — which would quantize the
+      // learner's values to 8 bits and throw the alpha away.
+      const channel = (name: string, fallback: string) =>
+        generator.valueToCode(block, name, Order.NONE) || fallback;
+      return [
+        `[${channel('R', '0')}, ${channel('G', '0')}, ${channel('B', '0')}, ${channel('A', '1')}]`,
+        Order.ATOMIC,
+      ] as [string, number];
+    },
+  },
+});
+
 const worldVectorComponent = defineBlock({
   type: 'world_vector_component',
   message0: '%1 of %2',
@@ -1941,6 +2054,7 @@ export const DOMAIN_BLOCKS = [
   worldEventValue,
   worldVector,
   worldSlider,
+  worldRgba,
   worldVectorComponent,
   worldThisActor,
   ActorVariable.getterBlock,
@@ -2066,6 +2180,13 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'world_vector',
       'world_vector_component',
     ],
+  },
+  // Colour values, beside Math because that is what they are. The picker is
+  // what an effect's colour socket already holds; `world_rgba` is the way past
+  // it, and `colour_random`/`colour_blend` fit the same socket.
+  {
+    name: 'Colour',
+    blocks: ['colour_picker', 'world_rgba', 'colour_random', 'colour_blend'],
   },
   {name: 'Text', blocks: ['text']},
 ];
