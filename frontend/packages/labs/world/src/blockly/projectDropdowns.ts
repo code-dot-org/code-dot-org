@@ -13,7 +13,6 @@ import {
   setProjectEffectParameters,
   setProjectMaps,
   setProjectRuleModules,
-  setProjectWorlds,
 } from './moduleOptions';
 import {projectAnimationIds} from './projectAnimations';
 import {
@@ -24,7 +23,6 @@ import {
   projectMapActorTypes,
   projectRuleMetas,
   projectRuleOptions,
-  projectWorldOptions,
   projectWorldRules,
 } from './projectModules';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
@@ -32,7 +30,6 @@ import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectAnimations(projectAnimationIds(files));
   setProjectActors(projectActorOptions(files));
-  setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
   setProjectEffectFiles(projectEffectFileOptions(files));
   setProjectEffectParameters(projectEffectParameters(files));

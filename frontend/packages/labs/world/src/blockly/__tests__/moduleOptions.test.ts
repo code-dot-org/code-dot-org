@@ -1,16 +1,10 @@
 import {afterEach, describe, expect, it} from 'vitest';
 
-import {
-  actorOptions,
-  setProjectActors,
-  setProjectWorlds,
-  worldOptions,
-} from '../moduleOptions';
+import {actorOptions, setProjectActors} from '../moduleOptions';
 
 // Registries are module state; reset between cases.
 afterEach(() => {
   setProjectActors([]);
-  setProjectWorlds([]);
 });
 
 describe('moduleOptions', () => {
@@ -25,13 +19,7 @@ describe('moduleOptions', () => {
     ]);
   });
 
-  it('returns the world options it was given', () => {
-    setProjectWorlds([['Platform World', 'worlds/platform']]);
-    expect(worldOptions()).toEqual([['Platform World', 'worlds/platform']]);
-  });
-
   it('falls back to a single (none) option when empty', () => {
     expect(actorOptions()).toEqual([['(none)', '']]);
-    expect(worldOptions()).toEqual([['(none)', '']]);
   });
 });

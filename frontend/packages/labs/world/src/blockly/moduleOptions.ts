@@ -1,5 +1,5 @@
-// The scene/world dropdowns list the project's modules: `world_add_actor`
-// (ACTOR) the actor templates, `world_scene` (WORLD) the worlds, and
+// The world dropdowns list the project's modules: `world_add_actor` (ACTOR) the
+// actor templates, `world_load_map` (MAP) the map files, and
 // `world_use_animations` (FILE) the animation files. Blockly JSON dropdowns take
 // static options, so — like the animation-id dropdown (animationOptions.ts) — an
 // extension swaps each field's `menuGenerator_` for one that reads this module's
@@ -15,7 +15,6 @@ import {label} from './label';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
-let projectWorlds: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `use effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
@@ -32,11 +31,6 @@ let projectEffectParams: Record<string, EffectParameter[]> = {};
 /** Replace the actor options the ACTOR dropdown offers. */
 export function setProjectActors(options: Array<[string, string]>): void {
   projectActors = options;
-}
-
-/** Replace the world options the WORLD dropdown offers. */
-export function setProjectWorlds(options: Array<[string, string]>): void {
-  projectWorlds = options;
 }
 
 /** Replace the animation-file options the FILE dropdown offers. */
@@ -89,11 +83,6 @@ const orNone = (options: Array<[string, string]>): Array<[string, string]> =>
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
   return orNone(projectActors);
-}
-
-/** Current WORLD dropdown options (the project's worlds). */
-export function worldOptions(): Array<[string, string]> {
-  return orNone(projectWorlds);
 }
 
 /** Current FILE dropdown options (the project's animation files). */
@@ -164,11 +153,6 @@ export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
   'ACTOR',
   actorOptions,
-);
-export const worldOptionsExtension = liveDropdown(
-  'world_world_options',
-  'WORLD',
-  worldOptions,
 );
 export const animationFileOptionsExtension = liveDropdown(
   'world_animation_file_options',

@@ -46,3 +46,6 @@ The runtime works; authoring still assumes built-ins:
    properties, actions, queries, events) is the tractable first slice.
 
 Reference implementations kept here: `rules/gravity.js`, `scenes/spike.js`.
+Both are snapshots from when this spike ran and are not maintained: `SceneBuilder`
+has since been folded into `WorldBuilder` (`useWorld`/`populate` became
+`getWorld`/`loadMap`), so the entry needs adapting before it will run again.

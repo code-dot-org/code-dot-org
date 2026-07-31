@@ -5,9 +5,8 @@
 
 // Builders (INTERFACE.md).
 export {RuleBuilder} from './builders/RuleBuilder';
-export {WorldBuilder} from './builders/WorldBuilder';
+export {WorldBuilder, type WorldMap} from './builders/WorldBuilder';
 export {ActorBuilder} from './builders/ActorBuilder';
-export {SceneBuilder, type SceneMap} from './builders/SceneBuilder';
 
 // Core value type and runtime classes.
 export {Vector, type VectorLike} from './core/Vector';

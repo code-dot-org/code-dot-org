@@ -29,12 +29,12 @@ its own editor, mounted through Codebridge's per-language editor seam
 one loads and saves through the same file `onChange` seam as CodeMirror, so
 persistence is identical whatever the surface:
 
-| Type                                 | Editor                                | On disk                    |
-| ------------------------------------ | ------------------------------------- | -------------------------- |
-| `rule` / `actor` / `scene` / `world` | `src/blockly/BlocklyFileEditor`       | a Blockly workspace (JSON) |
-| `map`                                | `src/mapEditor/MapEditor`             | scene instantiation (JSON) |
-| `anim`                               | `src/animationEditor/AnimationEditor` | an animation file (JSON)   |
-| `effect`                             | `src/effect/EffectFileEditor`         | a shader graph (JSON)      |
+| Type                       | Editor                                | On disk                    |
+| -------------------------- | ------------------------------------- | -------------------------- |
+| `rule` / `actor` / `world` | `src/blockly/BlocklyFileEditor`       | a Blockly workspace (JSON) |
+| `map`                      | `src/mapEditor/MapEditor`             | world population (JSON)    |
+| `anim`                     | `src/animationEditor/AnimationEditor` | an animation file (JSON)   |
+| `effect`                   | `src/effect/EffectFileEditor`         | a shader graph (JSON)      |
 
 An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the

@@ -39,9 +39,9 @@ import {
 import {thumbnailManifest} from './thumbnailManifest';
 import {getAssetBaseUrl, getSandboxUrl} from './worldConfig';
 
-/** A Blockly-authored file (.rule/.actor/.scene/.world) needs generation. */
+/** A Blockly-authored file (.rule/.actor/.world) needs generation. */
 const isBlocklyPath = (path: string): boolean =>
-  /\.(rule|actor|scene|world)$/.test(path);
+  /\.(rule|actor|world)$/.test(path);
 
 export interface ConsoleLine {
   level: string;

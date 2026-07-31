@@ -1,6 +1,6 @@
 // The preview surface (visible iframe = the game canvas) on the sandbox origin.
-// It imports the compiled learner module — whose default export is a built Scene
-// — and hands the Scene's World to the Phaser binding, which runs the game. The
+// It imports the compiled learner module — whose default export is a WorldBuilder
+// — and hands its World to the Phaser binding, which runs the game. The
 // learner module's `import 'world-lab'` was rewritten by the compiler to the
 // self-hosted engine bundle URL (`/vendor/world-lab.mjs`), so there is one
 // engine instance shared with the binding's type view (SANDBOX.md / PLAN §7).
@@ -116,8 +116,8 @@ interface ThumbnailManifest {
   };
 }
 
-/** The shape the compiled `scenes/main` module default-exports. */
-interface SceneModule {
+/** The shape the compiled entry module (`worlds/main`) default-exports. */
+interface EntryModule {
   default?: {getWorld: () => World};
 }
 
@@ -244,14 +244,14 @@ export async function start(): Promise<void> {
   async function load({id, moduleUrl, assets}: LoadMessage) {
     lastAssets = assets ?? {};
     try {
-      const mod: SceneModule = await import(/* @vite-ignore */ moduleUrl);
-      const scene = mod.default;
-      if (!scene || typeof scene.getWorld !== 'function') {
+      const mod: EntryModule = await import(/* @vite-ignore */ moduleUrl);
+      const entry = mod.default;
+      if (!entry || typeof entry.getWorld !== 'function') {
         throw new Error(
-          `entry module must default-export a Scene (got ${typeof scene})`,
+          `entry module must default-export a World (got ${typeof entry})`,
         );
       }
-      const incoming = scene.getWorld();
+      const incoming = entry.getWorld();
       const parent = document.getElementById('game') ?? document.body;
 
       let mode: ReloadMode;
@@ -260,8 +260,8 @@ export async function start(): Promise<void> {
         //
         // Build URLs are a content hash of every project file (`buildCacheKey`),
         // so an unchanged bundle re-imports to the same module instance — and
-        // the scene builds its world once, at module scope, so `getWorld()`
-        // hands back the World that has been ticking. A rebuild lands here
+        // `WorldBuilder.getWorld()` memoizes, so it hands back the World that
+        // has been ticking. A rebuild lands here
         // whenever something outside the bundle changes; opening a file is
         // enough, since `openFiles` is part of the project but not of the hash.
         //

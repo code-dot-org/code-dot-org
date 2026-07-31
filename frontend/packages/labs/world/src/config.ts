@@ -11,12 +11,12 @@ import {MapEditor} from './mapEditor/MapEditor';
 
 /**
  * World Lab's Codebridge configuration. A World project is the game defined by
- * its `scenes` / `worlds` / `actors` / `rules` — code, not a web page. There is
+ * its `worlds` / `actors` / `rules` / `maps` — code, not a web page. There is
  * no editable `index.html`: the preview sandbox serves a fixed host shell and
  * imports the compiled bundle (SANDBOX.md, PLAN §6).
  *
- * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, `scene`,
- * and `world` are Blockly-authored; `map` is a scene-instantiation document,
+ * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, and
+ * `world` are Blockly-authored; `map` is a world-population document,
  * `anim` an animation file, and `effect` a shader graph — all JSON on disk with
  * no CodeMirror language. `editorComponents` routes each to its custom editor
  * (the Blockly workspace editor, the visual map editor, the animation editor,
@@ -31,9 +31,8 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'txt',
   'rule',
   'actor',
-  'scene',
   'world',
-  // A `.map` is a scene-instantiation document, edited in the visual map editor.
+  // A `.map` is a world-population document, edited in the visual map editor.
   'map',
   // A `.anim` is an animation file (JSON), edited in the visual animation editor.
   'anim',
@@ -56,7 +55,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     md: 'markdown',
     rule: 'rule',
     actor: 'actor',
-    scene: 'scene',
     world: 'world',
     map: 'map',
     anim: 'anim',
@@ -72,7 +70,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   editorComponents: {
     rule: BlocklyFileEditor,
     actor: BlocklyFileEditor,
-    scene: BlocklyFileEditor,
     world: BlocklyFileEditor,
     map: MapEditor,
     anim: AnimationEditor,
@@ -83,7 +80,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // file type a distinct, meaningful glyph.
   fileIcons: {
     world: {iconName: 'earth-americas', iconStyle: 'solid', isBrand: false},
-    scene: {iconName: 'clapperboard', iconStyle: 'solid', isBrand: false},
     actor: {iconName: 'masks-theater', iconStyle: 'solid', isBrand: false},
     effect: {iconName: 'wand-sparkles', iconStyle: 'solid', isBrand: false},
     rule: {iconName: 'scroll', iconStyle: 'solid', isBrand: false},

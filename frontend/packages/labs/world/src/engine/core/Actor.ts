@@ -2,7 +2,7 @@
 // set of Traits (reference-counted, so applying one applies its dependencies),
 // a property store keyed by Property identity, and the event handlers it
 // elected to respond to. Instances are produced from an ActorBuilder when a
-// Scene is assembled.
+// world places them.
 
 import {Trait} from './Trait';
 import {DependencySet} from './traits';
@@ -18,7 +18,7 @@ import {Vector} from './Vector';
 
 /** The data an ActorBuilder hands the Actor constructor. */
 export interface ActorInit {
-  /** Unique instance id (the Scene assigns it). */
+  /** Unique instance id (the world assigns it as it places the actor). */
   id: string;
   /** The template this instance was made from; defaults to `id`. */
   type?: string;

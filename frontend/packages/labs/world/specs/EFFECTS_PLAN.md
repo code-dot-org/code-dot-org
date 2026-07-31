@@ -824,7 +824,7 @@ already says.
 **A pre-existing problem this uncovered, worth chasing separately.**
 `sameActors` compares the previous build's pre-tick snapshot against the
 incoming one, but the incoming world is not always freshly built — an unchanged
-bundle re-imports to the same module instance, whose scene has been ticking. So
+bundle re-imports to the same module instance, whose world has been ticking. So
 for any game where something moves, the flag reads false on almost every
 rebuild: instrumenting a real session showed
 `Player.positional.position: {480,80} -> {480,408}`, the player already landed.
@@ -976,7 +976,7 @@ strength and see it live" restarted the game instead.**
 (`buildCacheKey`), so it is content-addressed. `openFiles` is part of the
 project but _not_ of that hash — so merely opening a file requests a rebuild
 that produces the **same URL**, `import()` returns the **cached module**, and
-because a scene builds its world once at module scope, `getWorld()` hands back
+because `WorldBuilder.getWorld()` memoizes, it hands back
 the very World that has been ticking. `incoming === runningWorld`.
 
 `reconcile` then compared the pre-tick baseline against a world mid-flight and

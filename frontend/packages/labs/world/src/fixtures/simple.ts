@@ -25,8 +25,8 @@ const simple: LabFixture = {
       showExemplarLink: false,
       exemplarSources: null,
       longInstructions:
-        '## World Lab\n\nBuild a game world in code. Edit the scene, world, and ' +
-        'actors under `scenes/`, `worlds/`, and `actors/`.\n\n' +
+        '## World Lab\n\nBuild a game world in code. Edit the world and ' +
+        'actors under `worlds/` and `actors/`.\n\n' +
         '- The preview runs your game as you edit\n' +
         '- Click the preview, then use the arrow keys to move the player\n' +
         '- The coin plays a built-in animation; the player and ball play ones authored in `animations/game.json`\n' +

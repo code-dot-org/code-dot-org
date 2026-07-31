@@ -19,11 +19,10 @@ describe('projectFiles', () => {
       'rules/animation.js',
       'rules/gravity.js',
       'rules/input.js',
-      'scenes/main.scene',
-      'worlds/platform.world',
+      'worlds/main.world',
     ]);
-    // The scene is a Blockly workspace (generated to a SceneBuilder at compile).
-    expect(files['scenes/main.scene']).toContain('world_load_map');
+    // The world is a Blockly workspace (generated to a WorldBuilder at compile).
+    expect(files['worlds/main.world']).toContain('world_load_map');
   });
 
   it('nests through multiple folder levels', () => {

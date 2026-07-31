@@ -4,22 +4,22 @@ import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
 
 /**
- * The scene the game starts on — the driver's compile + run entry point
+ * The world the game starts in — the driver's compile + run entry point
  * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
  */
-export const ENTRY_FILE = 'scenes/main.scene';
+export const ENTRY_FILE = 'worlds/main.world';
 
 /**
  * The default project for a new World Lab: a small gravity game across the
  * conventional directories. The learner imports the engine as `world-lab`; the
  * compiler resolves that to the self-hosted engine, and the preview runs the
- * default-exported Scene. There is no `index.html` — the host page is the
+ * default-exported World. There is no `index.html` — the host page is the
  * sandbox's fixed shell (PLAN §6).
  */
 // The actors are TEMPLATES — a set of traits and appearance, but no position:
-// the Scene (main.scene, authored in Blockly) places each instance and sets its
+// the world (main.world, authored in Blockly) places each instance and sets its
 // per-instance position. `ground` is a JS template, `player` a Blockly `.actor`;
-// the scene adds all of them the same way. (The player is arrow-key controlled,
+// the world adds all of them the same way. (The player is arrow-key controlled,
 // so it also carries the input trait — authored in its `.actor` file.)
 
 const GROUND_ACTOR = `import {ActorBuilder, GroundTrait, SolidTrait, AppearanceTrait, SpriteProperty} from 'world-lab';
@@ -47,7 +47,7 @@ export default new ActorBuilder({id: 'ball', name: 'Ball'})
   .set(AnimationProperty, 'pulse');
 `;
 
-// Blockly workspace helpers. A `.actor` / `.scene` / `.world` file is a Blockly
+// Blockly workspace helpers. A `.actor` / `.world` file is a Blockly
 // workspace stored as serialized JSON (INTERFACE.md); the lab generates
 // world-lab code from it before compiling. `nextBlock` chains statement blocks;
 // `onEvent` builds a floating event-handler block (its own workspace root, so it
@@ -64,29 +64,7 @@ const onEvent = (event: string, x: number, y: number, message: string) => ({
   next: {block: {type: 'world_log', fields: {TEXT: message}}},
 });
 
-// The scene, authored in Blockly (`main.scene`): a `world_scene` root naming the
-// world and a `load map` block that places every actor its map file describes.
-const MAIN_SCENE = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_scene',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Game', WORLD: 'worlds/platform'},
-          next: {
-            block: {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
-          },
-        },
-      ],
-    },
-  },
-  null,
-  2,
-);
-
-// A Map is the raw scene-instantiation document (SceneBuilder.populate): each
+// A Map is the raw world-population document (WorldBuilder.loadMap): each
 // entry places an instance of an actor template by its module path, with an
 // optional id and property overrides keyed by owner (trait) id then property id
 // — `positional.position` is the actor's start position. A dedicated map editor
@@ -121,12 +99,16 @@ const LEVEL1_MAP = JSON.stringify(
 const ruleShim = (exportName: string): string =>
   `export {${exportName} as default} from 'world-lab';\n`;
 
-// The world, authored in Blockly (`platform.world`): a `world_world` root with
-// the rules in play and the animation file it registers. "Has Gravity" pulls in
-// motion and collision; "Responds to Input" moves arrow-controlled actors; "Has
-// Appearance" draws sprites and animations. The rules are project modules
-// (`rules/*`), imported by the generated world.
-const PLATFORM_WORLD = JSON.stringify(
+// The world, authored in Blockly (`main.world`): a `world_world` root with the
+// rules in play, the animation file it registers, and the map whose actors it
+// places. "Has Gravity" pulls in motion and collision; "Responds to Input"
+// moves arrow-controlled actors; "Has Appearance" draws sprites and animations.
+// The rules are project modules (`rules/*`), imported by the generated world.
+//
+// Declarations first, then the map: `load map` builds the world, and a `use
+// rule` below it would arrive too late to be part of it (WorldBuilder throws
+// rather than quietly dropping it).
+const MAIN_WORLD = JSON.stringify(
   {
     blocks: {
       blocks: [
@@ -142,10 +124,13 @@ const PLATFORM_WORLD = JSON.stringify(
                 {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
                 nextBlock(
                   {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
-                  {
-                    type: 'world_use_animations',
-                    fields: {FILE: 'animations/game'},
-                  },
+                  nextBlock(
+                    {
+                      type: 'world_use_animations',
+                      fields: {FILE: 'animations/game'},
+                    },
+                    {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
+                  ),
                 ),
               ),
             ),
@@ -188,7 +173,7 @@ const PLAYER_ACTOR = JSON.stringify(
                   // Plays a learner-authored animation (game.anim) — its id is
                   // in the dropdown because the lab feeds the project's
                   // animations to the block (Phase D). Position is set by the
-                  // Scene when it places this actor, not here.
+                  // map when the world places this actor, not here.
                   {
                     type: 'world_play_animation',
                     fields: {ANIMATION: 'playerBob'},
@@ -246,19 +231,12 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
     files: {
       main: {
         id: 'main',
-        name: 'main.scene',
-        language: 'scene',
-        contents: MAIN_SCENE,
-        folderId: 'scenes',
+        name: 'main.world',
+        language: 'world',
+        contents: MAIN_WORLD,
+        folderId: 'worlds',
         active: true,
         open: true,
-      },
-      platform: {
-        id: 'platform',
-        name: 'platform.world',
-        language: 'world',
-        contents: PLATFORM_WORLD,
-        folderId: 'worlds',
       },
       player: {
         id: 'player',
@@ -338,7 +316,6 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
     },
     folders: {
       rules: {id: 'rules', name: 'rules', parentId: '0'},
-      scenes: {id: 'scenes', name: 'scenes', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
       animations: {id: 'animations', name: 'animations', parentId: '0'},

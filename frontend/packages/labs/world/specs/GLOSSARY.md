@@ -4,7 +4,14 @@ This is a set of official terms for common concepts within the system.
 
 ## World
 
-A **World** is the encapsulation of all laws that exist in the simulated environment.
+A **World** is the encapsulation of all laws that exist in the simulated environment, together with
+the Actors living under them. It is the whole of a running game: the Rules in play, the Animations
+registered, and every Actor placed.
+
+There is no separate "scene" concept. An arrangement of Actors is a Map, and a World loads as many
+Maps as it likes — one for the level, another for the UI — so a Map serves the role a Scene would
+have. Splitting the laws from the arrangement bought nothing: everything a Scene could do was an
+operation on the World it held.
 
 ## Actor
 
@@ -54,16 +61,6 @@ can have more than one such routine as necessary. Each routine is a **Step** whi
 or after a Step in another dependent Rule (or explictly ordered at the beginning or end, for
 certain rules.)
 
-## Scene
-
-A **Scene** is some initial arrangement of Actors. Scenes can technically be stacked in a hierarchy.
-Special editors can exist to make editing a Scene more pleasant. For instance, a tile-based Actor
-might be drawn into a Scene on a grid to facilitate tile-based arrangement of Actors.
-
-A Scene can also have UI elements within it. You can essentially design dialogs this way and then
-place the Scene within your game Scene to have one 'Pop Up' within the context of the World you
-are currently within. This will be a more advanced feature that is potentially added later.
-
 ## Sprite
 
 A **Sprite** is a single image. These are combined to create animations. A single image may
@@ -77,5 +74,9 @@ Animation may just be a single image, of course, for simpler Actors.
 
 ## Map
 
-A **Map** is a description of initial instances of Actors that can be loaded into a Scene. This
-allows an easier editing of level data that can be swapped in to a general Scene as needed.
+A **Map** is a description of initial instances of Actors that can be loaded into a World. This
+allows an easier editing of level data that can be swapped in to a general World as needed.
+
+Loading is additive, so a World can stack several: a level Map and a UI Map, say. A Map may hold UI
+Actors as readily as game ones — a dialog is a Map you load on top of what is already there. Special
+editors can exist to make editing a Map more pleasant; the tile-based map editor is the first.

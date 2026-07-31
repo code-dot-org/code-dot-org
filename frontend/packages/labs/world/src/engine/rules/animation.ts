@@ -46,7 +46,7 @@ export const AnimationProperty = AppearanceTrait.addProperty(
 
 // Per-actor runtime state, written by the step. Internal to the rule, but stored
 // as properties so they live in the actor's one state store (and snapshots).
-// `readonly` marks them step-owned: not learner inputs, so scene-authoring tools
+// `readonly` marks them step-owned: not learner inputs, so world-authoring tools
 // (the map editor) skip them.
 export const FrameProperty = AppearanceTrait.addProperty(
   APPEARANCE.frame,

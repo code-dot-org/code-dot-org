@@ -447,7 +447,7 @@ export class World {
     return states;
   }
 
-  /** Remove every actor (used by `SceneBuilder.clear`). */
+  /** Remove every actor (used by `WorldBuilder.clear`). */
   clearActors(): void {
     this.actorList.length = 0;
   }

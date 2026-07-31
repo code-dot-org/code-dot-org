@@ -9,7 +9,6 @@ import {
   MoveSpeedProperty,
   MovableTrait,
   PositionProperty,
-  SceneBuilder,
   Vector,
   VelocityProperty,
   WorldBuilder,
@@ -17,12 +16,10 @@ import {
 
 // A minimal input world: one actor controlled by the arrow keys, no gravity, so
 // the vertical component stays put and horizontal motion is easy to read.
-function makeScene(start = new Vector(100, 100)) {
-  const scene = new SceneBuilder({id: 'game', name: 'Game'});
-  const world = scene.useWorld(
-    new WorldBuilder({id: 'w', name: 'W'}).useRules([InputRule]),
-  );
-  const player = scene.addActor(
+function makeWorld(start = new Vector(100, 100)) {
+  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([InputRule]);
+  const world = builder.getWorld();
+  const player = builder.addActor(
     new ActorBuilder({id: 'player', name: 'Player'})
       .useTraits([ControlledByArrowsTrait])
       .set(PositionProperty, start),
@@ -32,13 +29,13 @@ function makeScene(start = new Vector(100, 100)) {
 
 describe('the Input rule', () => {
   it('"Controlled by Arrow Keys" pulls in Can Move', () => {
-    const {player} = makeScene();
+    const {player} = makeWorld();
     expect(player.has(ControlledByArrowsTrait)).toBe(true);
     expect(player.has(MovableTrait)).toBe(true);
   });
 
   it('moves the actor right while the right arrow is held', () => {
-    const {world, player} = makeScene();
+    const {world, player} = makeWorld();
     world.setInput(['ArrowRight']);
     world.tick(1);
     // vx = +150 (default speed), integrated over 1s: x 100 → 250, y unchanged.
@@ -47,7 +44,7 @@ describe('the Input rule', () => {
   });
 
   it('moves left, and stops when no key is held', () => {
-    const {world, player} = makeScene(new Vector(250, 100));
+    const {world, player} = makeWorld(new Vector(250, 100));
     world.setInput(['ArrowLeft']);
     world.tick(1);
     expect(player.get(PositionProperty).x).toBeCloseTo(100);
@@ -59,7 +56,7 @@ describe('the Input rule', () => {
   });
 
   it('honors a custom move speed', () => {
-    const {world, player} = makeScene();
+    const {world, player} = makeWorld();
     player.set(MoveSpeedProperty, 300);
     world.setInput(['ArrowRight']);
     world.tick(0.5);
@@ -70,7 +67,7 @@ describe('the Input rule', () => {
 
 describe('key press / release events (edge-triggered)', () => {
   it('fires on rising/falling edges, not while a key is held', () => {
-    const {world, player} = makeScene();
+    const {world, player} = makeWorld();
     const pressed: unknown[] = [];
     const released: unknown[] = [];
     player.on(KeyPressedEvent, (_world, _actor, key) => pressed.push(key));
