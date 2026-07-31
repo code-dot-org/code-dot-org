@@ -1048,7 +1048,7 @@ class FilesTest < FilesApiTestBase
     url = 'https://images.example.com/huge.png'
 
     FilesApi.any_instance.stubs(:max_file_size).returns(10)
-    FilesApi.any_instance.stubs(:resolved_public_ip_address).with('images.example.com').returns('203.0.113.10')
+    IPSocket.stubs(:getaddress).with('images.example.com').returns('203.0.113.10')
     ImageModeration.expects(:moderate_image).never
 
     header 'CONTENT_TYPE', 'application/json'

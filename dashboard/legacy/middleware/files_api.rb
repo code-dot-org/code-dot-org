@@ -5,9 +5,8 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
-require 'ipaddr'
+require 'cdo/safe_http'
 require 'net/http'
-require 'socket'
 require 'stringio'
 require 'uri'
 require 'nokogiri'
@@ -1092,22 +1091,6 @@ class FilesApi < Sinatra::Base
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
   end
 
-  def public_ip_address?(ip_address)
-    return (
-      !ip_address.link_local? &&
-      !ip_address.loopback? &&
-      !ip_address.private? &&
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
-    )
-  end
-
-  def resolved_public_ip_address(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    return host_ip_address.to_s if public_ip_address?(host_ip_address)
-
-    nil
-  end
-
   def fetch_image_for_moderation(location, redirect_limit = 5)
     raise URI::InvalidURIError.new if redirect_limit < 0
 
@@ -1115,22 +1098,10 @@ class FilesApi < Sinatra::Base
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
     raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
 
-    resolved_ip_address = resolved_public_ip_address(url.host)
+    resolved_ip_address = SafeHttp.resolved_ip_address(url.host)
     raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
 
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-
-    http.instance_variable_set(:@ipaddr, resolved_ip_address)
-    def http.conn_address
-      @ipaddr
-    end
-
-    path = url.path.empty? ? '/' : url.path
-    query = url.query || ''
-    query_string = query.empty? ? '' : "?#{query}"
-    http.open_timeout = 3
-    http.read_timeout = 3
+    http = SafeHttp.http_client(url, resolved_ip_address)
 
     redirect_url = nil
     body = nil
@@ -1138,7 +1109,7 @@ class FilesApi < Sinatra::Base
 
     # Stream the body so we can enforce max_file_size before an arbitrarily large
     # payload is fully buffered (Content-Length may be missing or incorrect).
-    http.request_get(path + query_string) do |response|
+    http.request_get(SafeHttp.request_path(url)) do |response|
       if response.is_a?(Net::HTTPRedirection)
         redirect_target = response['location']
         raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
