@@ -1,58 +1,33 @@
-# The DSCO tokens that paint each progress-bubble status, mirroring
-# apps/src/templates/progress/progressStyles.js. The matcher resolves these in
-# the browser rather than comparing hardcoded RGB, so a bubble verifies under
-# whatever brand Cdo::Brand serves (see lib/cdo/brand.rb — codeai-next remaps
-# several of these) and whatever theme wraps it (Lab2 renders its content under
-# `<div data-theme="Dark">`).
+# Acceptable RGB values for the DSCO semantic tokens that paint progress
+# bubbles, as they resolve under the codeai-next brand (the default-brand
+# fallback — see lib/cdo/brand.rb). Tokens resolve differently in the Light vs
+# Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any bubble
+# shown inside a Lab2 page paints with the Dark-theme values — so each status
+# lists Light first, then Dark where the two differ.
 #
-# Success statuses border in their own fill color: progressStyles.js draws them
-# with --background-success-primary, not --borders-success-primary.
-def status_tokens(test_result)
+# These are literals, so they only hold for the current default brand: setting
+# default-brand back to codeai moves every one of them.
+#
+# Sources (frontend/packages/component-library-styles):
+#   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
+#   brandCodeAiNextAliases.css legacy token names mapped onto CADS values
+def color_strings(key)
   {
-    'perfect' => {
-      background: '--background-success-primary',
-      border: '--background-success-primary'
-    },
-    'attempted' => {
-      background: '--background-neutral-primary',
-      border: '--background-success-primary'
-    },
-    'not_tried' => {
-      background: '--background-neutral-primary',
-      border: '--borders-neutral-primary'
-    },
-    'perfect_assessment' => {
-      background: '--background-brand-purple-primary',
-      border: '--borders-brand-purple-primary'
-    },
-    'attempted_assessment' => {
-      background: '--background-neutral-primary',
-      border: '--borders-brand-purple-primary'
-    }
-  }[test_result]
-end
-
-# Whether the bubble at `selector` paints `tokens`. getComputedStyle returns
-# resolved colors, not the custom properties behind them, so resolve each token
-# with a probe inside the bubble itself — same element, same theme context — and
-# compare rgb() to rgb(). Mirrors cssColorsMatchVars in
-# frontend/packages/e2e-tests/tests/shared/colors.ts.
-def bubble_paints_tokens?(selector, tokens)
-  @browser.execute_script(<<~JS)
-    var el = $("#{selector}")[0];
-    if (!el) { return false; }
-    var resolve = function (cssVar) {
-      var probe = document.createElement('span');
-      el.appendChild(probe);
-      probe.style.color = 'var(' + cssVar + ')';
-      var value = window.getComputedStyle(probe).color;
-      probe.remove();
-      return value;
-    };
-    var style = window.getComputedStyle(el);
-    return style.getPropertyValue('background-color') === resolve('#{tokens[:background]}') &&
-      style.getPropertyValue('border-top-color') === resolve('#{tokens[:border]}');
-  JS
+    # --background-success-primary (sentiment-success-70 in both themes), which
+    # paints both the fill and the border of every success status —
+    # progressStyles.js draws those borders in the fill color, so there is no
+    # separate --borders-success-primary resolution to accept here.
+    perfect: ['rgb(37, 136, 48)'],
+    # --background-success-extra-light
+    passed: ['rgb(216, 255, 220)', 'rgb(0, 63, 37)'],
+    # --background-neutral-primary (white Light, neutral-base-black Dark)
+    not_tried: ['rgb(255, 255, 255)', 'rgb(18, 18, 18)'],
+    # --borders-neutral-primary
+    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)'],
+    # --background-brand-purple-primary / --borders-brand-purple-primary, which
+    # collapse to one value in both themes under this brand.
+    assessment: ['rgb(76, 66, 207)']
+  }[key.to_sym]
 end
 
 # Verifies that the given selector (which should be a progress bubble) is visible
@@ -61,8 +36,23 @@ end
 # up to 30 seconds; this means that successful checks should be reliable and
 # prompt, but failures will be slow.
 def verify_progress(selector, test_result)
-  tokens = status_tokens(test_result)
-  raise "Unexpected progress status: #{test_result}" unless tokens
+  case test_result
+  when 'perfect'
+    background_colors = color_strings('perfect')
+    border_colors = color_strings('perfect')
+  when 'attempted'
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('perfect')
+  when 'not_tried'
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('lighter_gray')
+  when 'perfect_assessment'
+    background_colors = color_strings('assessment')
+    border_colors = color_strings('assessment')
+  when 'attempted_assessment'
+    background_colors = color_strings('not_tried')
+    border_colors = color_strings('assessment')
+  end
 
   steps %{
     And I wait until element "#{selector}" is visible
@@ -70,9 +60,12 @@ def verify_progress(selector, test_result)
   }
 
   # The data for progress bubbles can be loaded asynchronously, so keep
-  # checking until progress is loaded and the bubble paints its status tokens.
+  # checking until progress is loaded and the bubble is the correct color.
+  # Each status accepts either the Light- or Dark-theme RGB resolution
+  # of its DSCO token (see `color_strings` above for why).
   wait_short_until do
-    bubble_paints_tokens?(selector, tokens)
+    background_colors.include?(element_css_value(selector, 'background-color')) &&
+      border_colors.include?(element_css_value(selector, 'border-top-color'))
   end
 end
 
