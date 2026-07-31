@@ -309,23 +309,23 @@ class BubbleChoice < DSLDefined
   end
 
   def setup_sublevels(sublevel_names)
-    # This path creates the parent-child rows directly, bypassing the
-    # children_stay_within_ui_test_partition validation.
-    offending = cross_partition_child_names(Array(sublevel_names))
-    raise cross_partition_children_message(offending) if offending.any?
-
     # if our existing sublevels already match the given names, do nothing
     return if sublevels.map(&:name) == sublevel_names
 
-    # otherwise, update sublevels to match
-    levels_child_levels.sublevel.destroy_all
-    Level.where(name: sublevel_names).find_each do |new_sublevel|
-      ParentLevelsChildLevel.create!(
-        child_level: new_sublevel,
-        kind: ParentLevelsChildLevel::SUBLEVEL,
-        parent_level: self,
-        position: sublevel_names.index(new_sublevel.name)
-      )
+    # otherwise, update sublevels to match. The clear issues immediate DELETEs
+    # and each create! can raise — the new rows run ParentLevelsChildLevel
+    # validations, among them the "UI Test " partition check — so the
+    # savepoint keeps a refused update from stripping the existing sublevels.
+    transaction(requires_new: true) do
+      levels_child_levels.sublevel.destroy_all
+      Level.where(name: sublevel_names).find_each do |new_sublevel|
+        ParentLevelsChildLevel.create!(
+          child_level: new_sublevel,
+          kind: ParentLevelsChildLevel::SUBLEVEL,
+          parent_level: self,
+          position: sublevel_names.index(new_sublevel.name)
+        )
+      end
     end
 
     reload

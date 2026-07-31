@@ -137,29 +137,28 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
     reload
-    self.child_levels = []
-    new_levels = new_levels_and_texts_by_page.flatten
+    # The clear issues immediate DELETEs and the rebuild can raise — each new
+    # row runs ParentLevelsChildLevel validations, among them the "UI Test "
+    # partition check — so the savepoint keeps a refused update from stripping
+    # the group's existing sublevels, even for a caller with no transaction of
+    # its own.
+    transaction(requires_new: true) do
+      self.child_levels = []
+      new_levels_and_texts_by_page.flatten.each_with_index do |level, level_index|
+        ParentLevelsChildLevel.find_or_create_by!(
+          parent_level: self,
+          child_level: level,
+          position: level_index + 1
+        )
+      end
 
-    # This path creates the parent-child rows directly, bypassing the
-    # children_stay_within_ui_test_partition validation. new_levels mixes
-    # Levels with page text, so pick out the Levels before checking names.
-    offending = cross_partition_child_names(new_levels.grep(Level).map(&:name))
-    raise cross_partition_children_message(offending) if offending.any?
-
-    new_levels.each_with_index do |level, level_index|
-      ParentLevelsChildLevel.find_or_create_by!(
-        parent_level: self,
-        child_level: level,
-        position: level_index + 1
-      )
+      self.levels_and_texts_per_page = []
+      @pages = nil
+      new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
+        levels_and_texts_per_page.push(levels_and_texts_by_page.count)
+      end
+      save!
     end
-
-    self.levels_and_texts_per_page = []
-    @pages = nil
-    new_levels_and_texts_by_page.each do |levels_and_texts_by_page|
-      levels_and_texts_per_page.push(levels_and_texts_by_page.count)
-    end
-    save!
   end
 
   def get_levels_and_texts_by_page

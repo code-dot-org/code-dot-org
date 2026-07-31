@@ -202,11 +202,11 @@ module Levels
     # A parent level and its children must be on the same side of the
     # "UI Test " partition; see dashboard/test/ui/config/README.md.
     #
-    # This validation covers the two relationships whose child names live in
-    # properties, contained levels and project templates. The BubbleChoice and
-    # LevelGroup sublevel paths write ParentLevelsChildLevel rows directly and
-    # so never reach it; they call cross_partition_child_names themselves and
-    # raise.
+    # The row-level check lives on ParentLevelsChildLevel, where it covers
+    # every path that writes parent/child rows. This validation is the
+    # name-based complement for the two relationships whose child names live
+    # in properties, contained levels and project templates: unlike the row
+    # check, it also catches names which resolve to no level at all.
     def children_stay_within_ui_test_partition
       offending = cross_partition_child_names(
         Array(contained_level_names) + [try(:project_template_level_name)]

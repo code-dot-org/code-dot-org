@@ -666,5 +666,11 @@ level 'level1_copy2'"
     assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
     prod_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
     assert_equal [prod_sublevel], prod_level_group.reload.all_child_levels
+
+    # a refused update leaves the existing sublevels in place
+    assert_raises ActiveRecord::RecordInvalid do
+      ui_test_level_group.update_levels_and_texts_by_page([[prod_sublevel]])
+    end
+    assert_equal [ui_test_sublevel], ui_test_level_group.reload.all_child_levels
   end
 end
