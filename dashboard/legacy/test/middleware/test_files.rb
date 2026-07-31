@@ -1014,7 +1014,7 @@ class FilesTest < FilesApiTestBase
     post '/v3/images/moderate_url', {url:}.to_json
 
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Image URL host is not allowed.'}, JSON.parse(last_response.body))
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
   end
 
   def test_moderate_image_url_reports_dns_failure_as_fetch_error
@@ -1027,7 +1027,7 @@ class FilesTest < FilesApiTestBase
     post '/v3/images/moderate_url', {url:}.to_json
 
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Unable to fetch image URL.'}, JSON.parse(last_response.body))
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
   end
 
   def test_moderate_image_url_rejects_unsupported_type
@@ -1040,8 +1040,7 @@ class FilesTest < FilesApiTestBase
     post '/v3/images/moderate_url', {url:}.to_json
 
     assert_equal 400, last_response.status
-    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
-    assert_equal({'error' => "Unsupported image type. Only #{allowed} files are allowed."}, JSON.parse(last_response.body))
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
   end
 
   def test_moderate_image_url_rejects_oversized_streamed_body
@@ -1055,7 +1054,7 @@ class FilesTest < FilesApiTestBase
     post '/v3/images/moderate_url', {url:}.to_json
 
     assert_equal 400, last_response.status
-    assert_equal({'error' => 'Image URL content exceeds maximum file size.'}, JSON.parse(last_response.body))
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
   end
 
   private def delete_all_files(bucket)

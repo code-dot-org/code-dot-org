@@ -1168,31 +1168,10 @@ class FilesApi < Sinatra::Base
     raw, fetched_content_type = fetch_image_for_moderation(image_url)
     result = ImageModeration.moderate_image(StringIO.new(raw), fetched_content_type)
     result.to_json
-  rescue JSON::ParserError
+  # SecurityError is not a StandardError (inherits Exception directly).
+  rescue SecurityError, StandardError
     status 400
-    {error: 'Invalid request body.'}.to_json
-  rescue URI::InvalidURIError
-    status 400
-    {error: 'Invalid image URL.'}.to_json
-  rescue SecurityError
-    status 400
-    {error: 'Image URL host is not allowed.'}.to_json
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
-    status 400
-    {error: 'Unable to fetch image URL.'}.to_json
-  rescue OpenSSL::SSL::SSLError
-    status 400
-    {error: 'Remote host SSL certificate error'}.to_json
-  rescue EOFError
-    status 400
-    {error: 'Remote host closed the connection before sending all data'}.to_json
-  rescue AzureAiContentSafety::UnsupportedContentType
-    status 400
-    allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
-    {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
-  rescue StandardError => exception
-    status 400
-    {error: exception.message}.to_json
+    {error: 'Unable to moderate image URL.'}.to_json
   end
 
   #
