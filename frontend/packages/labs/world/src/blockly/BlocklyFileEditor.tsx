@@ -20,6 +20,9 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
+import {ImportRuleDialog} from '../rules/ImportRuleDialog';
+import {importStockRule} from '../rules/importStockRule';
+import type {StockRule} from '../rules/stock';
 import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
@@ -27,6 +30,7 @@ import {buildDomainPalette} from './domainBlocks';
 import {setEffectImportHandler} from './effectImport';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
+import {setRuleImportHandler} from './ruleImport';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -99,6 +103,11 @@ export const BlocklyFileEditor = ({
   const sourcesRef = useRef(currentSources);
   sourcesRef.current = currentSources;
 
+  // The same machinery for rules. Two handlers rather than one because the two
+  // dropdowns want different dialogs; `importing` says which is open, so only
+  // one can be at a time — which is what a modal means anyway.
+  const [importingRule, setImportingRule] = useState(false);
+
   useEffect(() => {
     setEffectImportHandler(
       () =>
@@ -107,13 +116,24 @@ export const BlocklyFileEditor = ({
           setImporting(true);
         }),
     );
+    setRuleImportHandler(
+      () =>
+        new Promise<string | undefined>(resolve => {
+          resolveImport.current = resolve;
+          setImportingRule(true);
+        }),
+    );
     // Cleared on unmount so a field on a disposed workspace cannot open a
     // dialog this editor no longer owns.
-    return () => setEffectImportHandler(null);
+    return () => {
+      setEffectImportHandler(null);
+      setRuleImportHandler(null);
+    };
   }, []);
 
   const finishImport = useCallback((path: string | undefined) => {
     setImporting(false);
+    setImportingRule(false);
     resolveImport.current?.(path);
     resolveImport.current = null;
   }, []);
@@ -125,6 +145,20 @@ export const BlocklyFileEditor = ({
       // The file has to be in the project BEFORE the field takes its value: the
       // dropdown rebuilds from the registry, and a value with no matching option
       // is dropped by Blockly.
+      updateSources({...sources, source});
+      refreshProjectDropdowns(projectFiles(source));
+      finishImport(path);
+    },
+    [updateSources, finishImport],
+  );
+
+  const handleRuleImport = useCallback(
+    (rule: StockRule) => {
+      const sources = sourcesRef.current;
+      const {source, path} = importStockRule(sources.source, rule);
+      // In the project BEFORE the field takes its value, as with an effect: the
+      // dropdown rebuilds from the registry, and a value with no matching
+      // option is dropped by Blockly.
       updateSources({...sources, source});
       refreshProjectDropdowns(projectFiles(source));
       finishImport(path);
@@ -189,6 +223,12 @@ export const BlocklyFileEditor = ({
       {importing && (
         <ImportEffectDialog
           onImport={handleImport}
+          onCancel={() => finishImport(undefined)}
+        />
+      )}
+      {importingRule && (
+        <ImportRuleDialog
+          onImport={handleRuleImport}
           onCancel={() => finishImport(undefined)}
         />
       )}

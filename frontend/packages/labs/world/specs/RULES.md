@@ -8,6 +8,29 @@ other machinery has to honour.
 `rules/gravity.rule` in the default project is the answer so far: it is real,
 and it is incomplete. Both halves are worth writing down.
 
+## Gravity is imported, not built in
+
+There is no built-in gravity rule any more. `BUILTIN_RULES` is the spatial
+frame, integration, collision, input and animation — what a rule cannot yet be
+written in blocks. "Has Gravity" is a STOCK rule (`src/rules/stock`), and the
+default project is a project that imported it.
+
+That removes the thing the port left behind: two toolbox categories both called
+"Has Gravity", holding different blocks for the same idea.
+
+The `use rule` dropdown now ends with `(import…)`, the same affordance the
+effect dropdown has, opening a picker of stock rules. Importing copies the
+workspace into `rules/<id>.rule`, where it is the learner's — openable,
+editable, unconnected to the library. It never overwrites: importing a second
+time gives `gravity-2`, and a same-stem file of ANY extension counts as taken,
+because two modules differing only by extension make `rules/gravity` ambiguous
+to the compiler's extension search.
+
+Dropping the built-in had one consequence worth recording: **no engine rule
+declares a world-scoped property or action any more** — gravity was the only
+one. The generators for those are therefore exercised against a project rule
+fixture in the tests, which is the honest subject now.
+
 ## What the default project now ships
 
 `rules/gravity.rule` replaces the `rules/gravity.js` shim

@@ -40,6 +40,7 @@ import {
   type EffectParamState,
 } from './extensions/effectParamsMutator';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
+import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {
   ruleParamsInitExtension,
   ruleParamsMutator,
@@ -65,6 +66,7 @@ import {
   mapOptionsExtension,
   ruleModuleOptions,
 } from './moduleOptions';
+import {IMPORT_RULE_VALUE} from './ruleImport';
 import type {
   ActionMeta,
   EventMeta,
@@ -84,9 +86,8 @@ import {
 import {
   ActorVariable,
   PARAM_GETTER_BLOCKS,
-  PARAM_GETTER_TYPES,
   PARAM_SETTER_BLOCKS,
-  PARAM_SETTER_TYPES,
+  PARAM_VARIABLE_TYPES,
 } from './typedVariables';
 import {
   registerValueShadows,
@@ -1774,9 +1775,18 @@ const worldWorld = defineBlock({
 const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
   rule => [rule.name, rule.ref.exportName],
 );
+/**
+ * The rules a world (or another rule) may put in play, plus a way to get more.
+ *
+ * `(import…)` is listed last and copies a stock rule into the project — the
+ * same affordance the effect dropdown has, and the only way to reach gravity
+ * now that it is not built in. Offered even when the project already has rules:
+ * wanting a second one is the normal case.
+ */
 const useRuleOptions = (): Array<[string, string]> => [
   ...BUILTIN_RULE_OPTIONS,
   ...ruleModuleOptions(),
+  ['(import…)', IMPORT_RULE_VALUE],
 ];
 const useRuleOptionsExtension = liveDropdown(
   'world_use_rule_options',
@@ -1792,7 +1802,9 @@ const worldUseRule = defineBlock({
   ],
   previousStatement: true,
   nextStatement: true,
-  extensions: [useRuleOptionsExtension],
+  // The import extension AFTER the options one, so it wraps that validator
+  // rather than being wrapped by it (see ruleImportField).
+  extensions: [useRuleOptionsExtension, ruleImportFieldExtension],
   style: 'behavior_blocks',
   tooltip: 'Put a rule (a game mechanic) in play for this world.',
   generator: {
@@ -2357,12 +2369,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step', // per-tick behavior (+ ordering)
       'world_emit', // raise one of the events a rule declares
       'world_step_delta', // the frame time, inside a step
-      // Read a parameter, or a variable of your own; the `+`/`−` mutator is
-      // what declares a parameter, so no block for that.
-      ...PARAM_GETTER_TYPES,
-      // …and put a value in one. A body can hold intermediate state now, which
-      // is what a step doing real work needs (specs/RULES.md).
-      ...PARAM_SETTER_TYPES,
+      // Reading and writing a variable lives in Variables (below), not here: a
+      // rule's parameters are variables like any other, and a body wanting a
+      // local is not a fact about rules.
     ],
   },
 ];
@@ -2407,6 +2416,12 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
     blocks: ['colour_picker', 'world_rgba', 'colour_random', 'colour_blend'],
   },
   {name: 'Text', blocks: ['text']},
+  // Variables last, as Blockly's own toolboxes have them. A rule's parameters
+  // are declared by the `+`/`−` mutator on `define action`/`define query`, so
+  // there is no block for declaring one — these read and write whatever is in
+  // scope, whether that is a parameter, a `for each` loop's variable, or a
+  // local a body made for itself.
+  {name: 'Variables', blocks: [...PARAM_VARIABLE_TYPES]},
 ];
 
 export const DOMAIN_TOOLBOX: Toolbox = [
