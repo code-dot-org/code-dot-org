@@ -21,6 +21,7 @@ import {compileEffect} from '../../effect/compiler';
 import type {CompiledEffect} from '../../effect/compiler/types';
 import {applyEffectToActor, registerEffect} from '../../effect/runtime';
 import type {
+  AppliedEffect,
   PhaserNamespace,
   RegisteredEffect,
 } from '../../effect/runtime/types';
@@ -56,6 +57,14 @@ export class EffectRegistry {
    * the console would fill with the same sentence.
    */
   private readonly failed = new Set<string>();
+  /**
+   * What is currently attached to each Game Object, by effect path.
+   *
+   * The engine's list is the intent and this is the reality; `reconcile`
+   * closes the gap each frame. Weak so a destroyed object takes its entry with
+   * it — the driver never gets told an actor is gone.
+   */
+  private readonly attached = new WeakMap<object, Map<string, AppliedEffect>>();
   private readonly phaser: PhaserNamespace;
   private readonly onError: EffectErrorReporter;
 
@@ -65,28 +74,66 @@ export class EffectRegistry {
   }
 
   /**
-   * Play every effect an actor carries on its Game Object.
+   * Bring a Game Object's filters in line with the effects its actor carries.
    *
-   * Called once per object, at creation. An effect that will not compile is
-   * reported and skipped — the actor still draws, without it. Refusing to draw
-   * the actor at all would turn one bad graph into a missing character, which
-   * is a worse thing for a learner to debug than a missing wobble.
+   * Called every frame, because the list can change every frame: an event
+   * handler may add an effect when the player is hit and remove it when the
+   * hurt wears off. Attaching is not idempotent — Phaser would stack a second
+   * filter — so what is already on the object is tracked and only the
+   * difference is applied.
+   *
+   * The common case is an actor with no effects and nothing attached, which
+   * costs one property read and returns.
+   *
+   * An effect that will not compile is reported and skipped; the actor still
+   * draws, without it. Refusing to draw the actor at all would turn one bad
+   * graph into a missing character, which is a worse thing for a learner to
+   * debug than a missing wobble.
    */
-  applyTo(
+  reconcile(
     scene: Phaser.Scene,
     object: FilterableGameObject,
     effects: readonly AppliedEffectSpec[],
   ): void {
+    let live = this.attached.get(object);
+    if (effects.length === 0 && !live?.size) {
+      return;
+    }
+    // Resolved once and mutated in place. Re-reading (or rebuilding) it per
+    // attach is a trap: the second effect on an actor would replace the map
+    // holding the first, so the first looked unattached on the next frame and
+    // was attached again — every frame, stacking filters without bound.
+    if (!live) {
+      live = new Map<string, AppliedEffect>();
+      this.attached.set(object, live);
+    }
+
+    const wanted = new Set(effects.map(effect => effect.path));
+
+    // Gone from the actor: detach and forget.
+    for (const [path, applied] of [...live]) {
+      if (!wanted.has(path)) {
+        applied.remove();
+        live.delete(path);
+      }
+    }
+
     for (const effect of effects) {
+      if (live.has(effect.path)) {
+        continue;
+      }
       const registered = this.resolve(scene, effect);
       if (!registered) {
         continue;
       }
       try {
-        // Values are the learner's knob settings from the `use effect` block;
+        // Values are the learner's knob settings from the block;
         // `buildUniformValues` fills in each parameter's own default for
         // anything absent, so a partial map is fine.
-        applyEffectToActor(this.phaser, object, registered, effect.values);
+        live.set(
+          effect.path,
+          applyEffectToActor(this.phaser, object, registered, effect.values),
+        );
       } catch (error) {
         this.report(effect.path, error);
       }

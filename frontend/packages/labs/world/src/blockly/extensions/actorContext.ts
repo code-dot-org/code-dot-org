@@ -77,6 +77,42 @@ export const actorDefinitionExtension = builderContextExtension(
   'This is part of describing an actor. Try placing it under "define actor".',
 );
 
+export const RUNTIME_ACTOR_EXTENSION = 'world_needs_live_actor';
+
+/**
+ * The mirror image: for blocks that need a LIVE actor.
+ *
+ * `add effect` and `remove effect` call `Actor` methods, which the builder does
+ * not have. Chained under `define actor` they would run at module scope, before
+ * any actor exists, against the builder — so the warning fires there and only
+ * there.
+ *
+ * Deliberately narrow. Elsewhere the block may well be fine: inside an event
+ * handler `actor` is live, and anywhere an ACTOR socket is filled from a loop
+ * ("for each actor touching…") the subject is live whatever encloses it. A
+ * positive list of "places a live actor exists" would flag those, and a warning
+ * on a working program is worse than none.
+ */
+export const runtimeActorExtension: Extension = defineExtension(
+  RUNTIME_ACTOR_EXTENSION,
+  {
+    extension() {
+      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
+        const workspace = this.workspace as Blockly.WorkspaceSvg;
+        if (this.isInFlyout || event.isUiEvent || workspace?.isDragging?.()) {
+          return;
+        }
+        this.setWarningText(
+          inBuilderContext(this, ['world_actor'])
+            ? 'This happens while the game runs. Try placing it inside an event, not under "define actor".'
+            : null,
+          RUNTIME_ACTOR_EXTENSION,
+        );
+      });
+    },
+  },
+);
+
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';
 
 /**
