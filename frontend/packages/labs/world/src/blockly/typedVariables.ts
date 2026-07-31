@@ -105,3 +105,17 @@ export const PARAM_SETTER_BLOCKS = PARAM_FLAVOURS.map(
 export const PARAM_SETTER_TYPES = PARAM_FLAVOURS.map(
   ({variable}) => variable.setterType,
 );
+
+/**
+ * Both halves, paired by flavour — `get number` / `set number`, then boolean,
+ * and so on.
+ *
+ * Paired rather than all-gets-then-all-sets because the question a learner
+ * arrives with is "how do I keep a vector?", not "where are the getters": the
+ * type is what they scan for, and both blocks for it should be together when
+ * they find it. This is the order the Variables toolbox category uses.
+ */
+export const PARAM_VARIABLE_TYPES = PARAM_FLAVOURS.flatMap(({variable}) => [
+  variable.getterType,
+  variable.setterType,
+]);

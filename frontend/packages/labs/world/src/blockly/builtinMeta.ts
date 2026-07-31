@@ -12,7 +12,6 @@ import * as WorldLab from '../engine';
 import {
   AnimationRule,
   CollisionRule,
-  GravityRule,
   InputRule,
   MotionRule,
   SpatialRule,
@@ -20,11 +19,24 @@ import {
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 
+/**
+ * The rules the engine provides, in dependency order.
+ *
+ * GRAVITY IS NOT AMONG THEM. It is a stock `.rule` a project imports
+ * (`rules/stock`), which is the whole point of the rule-authoring work: gravity
+ * is the worked example of a mechanic a learner can open and read, and having a
+ * second, built-in "Has Gravity" in the palette meant two categories of the
+ * same name holding different blocks. The engine module still exists as the
+ * reference the stock rule was ported from, and the engine's own tests build
+ * worlds with it; it simply is not offered for authoring.
+ *
+ * What remains here is what a rule cannot yet be written in blocks: the spatial
+ * frame, integration, collision resolution, input, and animation.
+ */
 export const BUILTIN_RULES = [
   SpatialRule,
   MotionRule,
   CollisionRule,
-  GravityRule,
   InputRule,
   AnimationRule,
 ];

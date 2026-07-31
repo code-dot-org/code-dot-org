@@ -16,16 +16,15 @@ afterEach(() => {
 
 describe('traitOptions (traits from the rules in play)', () => {
   it('lists a rule’s traits plus those of every rule it requires', () => {
-    // Gravity requires Motion + Collision; Motion requires Space. So attaching
-    // just Gravity puts all their traits in play — labelled by name, valued by
-    // the `world-lab` export the generator writes.
-    setProjectRules(['GravityRule']);
+    // Collision requires Motion; Motion requires Space. So attaching just
+    // Collision puts all their traits in play — labelled by name, valued by the
+    // `world-lab` export the generator writes. (Gravity used to be the example
+    // here; it is a stock `.rule` now, not a built-in.)
+    setProjectRules(['CollisionRule']);
     const byExport = new Map(
       traitOptions().map(([label, exp]) => [exp, label]),
     );
-    expect(byExport.get('AffectedByGravityTrait')).toBe('Affected by Gravity');
-    expect(byExport.get('GroundTrait')).toBe('Acts as Ground');
-    expect(byExport.get('CollidableTrait')).toBe('Can Collide'); // via Collision
+    expect(byExport.get('CollidableTrait')).toBe('Can Collide');
     expect(byExport.get('SolidTrait')).toBe('Solid');
     expect(byExport.get('MovableTrait')).toBe('Can Move'); // via Motion
     expect(byExport.get('PositionalTrait')).toBe('Can Be Positioned'); // via Space
@@ -43,9 +42,9 @@ describe('traitOptions (traits from the rules in play)', () => {
   });
 
   it('follows a project rule’s `use rule` dependency to the required rule’s traits', () => {
-    // Has Wind requires GravityRule (a `use rule` in its body) and provides a
+    // Has Wind requires CollisionRule (a `use rule` in its body) and provides a
     // Windblown trait. Attaching it should surface both its own trait and the
-    // required rule's (transitively, Gravity → Motion → Collision → Space).
+    // required rule's (transitively, Collision → Motion → Space).
     const wind = parseRuleMeta(
       'rules/wind',
       JSON.stringify({
@@ -57,7 +56,7 @@ describe('traitOptions (traits from the rules in play)', () => {
               next: {
                 block: {
                   type: 'world_use_rule',
-                  fields: {RULE: 'GravityRule'},
+                  fields: {RULE: 'CollisionRule'},
                   next: {
                     block: {
                       type: 'world_rule_trait',
@@ -75,7 +74,7 @@ describe('traitOptions (traits from the rules in play)', () => {
     setProjectRules(['rules/wind']);
     const values = traitOptions().map(([, value]) => value);
     expect(values).toContain('rules/wind#WindblownTrait'); // its own trait
-    expect(values).toContain('AffectedByGravityTrait'); // via the required GravityRule
+    expect(values).toContain('CollidableTrait'); // via the required CollisionRule
     expect(values).toContain('MovableTrait'); // Gravity → Motion, transitively
   });
 
@@ -103,14 +102,14 @@ describe('traitOptions (traits from the rules in play)', () => {
       }),
     );
     setProjectRuleMeta([wind!]);
-    setProjectRules(['rules/wind', 'GravityRule']);
+    setProjectRules(['rules/wind', 'CollisionRule']);
     const byValue = new Map(
       traitOptions().map(([label, value]) => [value, label]),
     );
     // A project trait's value carries its module, so `use trait` imports it.
     expect(byValue.get('rules/wind#WindblownTrait')).toBe('Windblown');
     // A built-in trait is still valued by its bare export name.
-    expect(byValue.get('AffectedByGravityTrait')).toBe('Affected by Gravity');
+    expect(byValue.get('CollidableTrait')).toBe('Can Collide');
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {

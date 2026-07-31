@@ -28,6 +28,113 @@ import {VALUE_SHADOW_EXTENSION} from '../valueShadow';
 // workspace — locking the exact code each block emits. The assembly that orders
 // them into a module is covered by assembleActorModule.test.ts.
 
+/**
+ * A project rule with the members no BUILT-IN rule has any more.
+ *
+ * Gravity used to be the worked example for world-scoped properties, a world
+ * action and an actor query; it is a stock `.rule` now (`src/rules/stock`), and
+ * no engine rule declares a world property or action. So the generators for
+ * those are exercised against a project rule — which is the only kind that has
+ * them, and therefore the honest subject.
+ */
+const PROJECT_RULE = parseRuleMeta(
+  'rules/wind',
+  JSON.stringify({
+    blocks: {
+      blocks: [
+        {
+          type: 'world_rule',
+          fields: {NAME: 'Has Wind'},
+          next: {
+            block: {
+              type: 'world_rule_property',
+              fields: {TYPE: 'number', NAME: 'strength', DEFAULT: '900'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {TYPE: 'vector', NAME: 'direction', DEFAULT: '0,1'},
+                  next: {
+                    block: {
+                      type: 'world_rule_action',
+                      fields: {NAME: 'Invert'},
+                      next: {
+                        block: {
+                          type: 'world_rule_trait',
+                          fields: {NAME: 'Windblown'},
+                          inputs: {
+                            DO: {
+                              block: {
+                                type: 'world_rule_query',
+                                fields: {TYPE: 'boolean', NAME: 'is gusting'},
+                                next: {
+                                  block: {
+                                    type: 'world_rule_event',
+                                    fields: {NAME: 'gusted'},
+                                  },
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  }),
+)!;
+
+/** The palette that project rule contributes, built once. */
+const PROJECT_BLOCKS = buildDomainPalette([PROJECT_RULE]);
+
+/** A toolbox category from the project palette. */
+const projectCategory = (name: string): string[] =>
+  (PROJECT_BLOCKS.toolbox as Array<{name: string; blocks: string[]}>).find(
+    c => c.name === name,
+  )?.blocks ?? [];
+
+/** `generatorFor`, over the project palette rather than the built-in one. */
+const projectGeneratorFor = (type: string) => {
+  const block = PROJECT_BLOCKS.blocks.find(b => b.type === type);
+  if (!block) {
+    throw new Error(`no project block '${type}'`);
+  }
+  return block.generator.javascript;
+};
+
+const emitProject = (
+  type: string,
+  fields: Record<string, unknown> = {},
+  values: Record<string, string> = {},
+): string =>
+  projectGeneratorFor(type)(
+    {getFieldValue: (name: string) => fields[name]} as never,
+    {
+      valueToCode: (_b: unknown, name: string) => values[name] ?? '',
+      definitions_: {} as Record<string, string>,
+    } as never,
+    {} as never,
+  ) as string;
+
+const emitProjectValue = (
+  type: string,
+  fields: Record<string, unknown> = {},
+  values: Record<string, string> = {},
+): [string, number] =>
+  projectGeneratorFor(type)(
+    {getFieldValue: (name: string) => fields[name]} as never,
+    {
+      valueToCode: (_b: unknown, name: string) => values[name] ?? '',
+      definitions_: {} as Record<string, string>,
+    } as never,
+    {} as never,
+  ) as [string, number];
+
 const generatorFor = (type: string) => {
   const block = DOMAIN_BLOCKS.find(b => b.type === type);
   if (!block) {
@@ -265,9 +372,9 @@ describe('domain block generators', () => {
     // Each engine event has its own `world_on_<id>` cap hat; the handler body is
     // the blocks connected below it (the next chain), wrapped in `.on(...)`.
     expect(
-      emit('world_on_startsFalling', {}, {}, {}, 'console.log("hi");\n'),
+      emit('world_on_animationEnded', {}, {}, {}, 'console.log("hi");\n'),
     ).toBe(
-      'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n' +
+      'actor.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n' +
         'console.log("hi");\n});\n',
     );
     expect(
@@ -281,12 +388,12 @@ describe('domain block generators', () => {
   it('event blocks register the handler on their ACTOR value', () => {
     // Default (empty socket → `this actor` shadow) registers on `actor`; an
     // empty next chain yields an empty handler body.
-    expect(emit('world_on_startsFalling', {}, {}, {})).toBe(
-      'actor.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
+    expect(emit('world_on_animationEnded', {}, {}, {})).toBe(
+      'actor.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n});\n',
     );
     // A plugged-in actor value registers on it instead.
-    expect(emit('world_on_startsFalling', {}, {}, {ACTOR: 'other'})).toBe(
-      'other.on(WorldLab.StartsFallingEvent, (world, actor, eventValue) => {\n});\n',
+    expect(emit('world_on_animationEnded', {}, {}, {ACTOR: 'other'})).toBe(
+      'other.on(WorldLab.AnimationEndedEvent, (world, actor, eventValue) => {\n});\n',
     );
   });
 
@@ -403,31 +510,33 @@ describe('domain block generators', () => {
   });
 
   it('generated world-property set blocks set the property on the world', () => {
-    // A number world property (gravity strength) — no ACTOR input, targets world.
-    expect(emit('world_set_StrengthProperty', {}, {}, {VALUE: '500'})).toBe(
-      'world.set(WorldLab.StrengthProperty, 500);\n',
-    );
-    // Empty socket → the property default (strength 900).
-    expect(emit('world_set_StrengthProperty', {}, {}, {})).toBe(
-      'world.set(WorldLab.StrengthProperty, 900);\n',
-    );
-    // A vector world property (gravity direction) is a single Vector socket — a
-    // world_vector literal, or another Vector block, slots straight in.
+    // A number world property — no ACTOR input, targets the world. Read off a
+    // PROJECT rule: no built-in declares a world property any more.
     expect(
-      emit(
-        'world_set_DirectionProperty',
+      emitProject(
+        `world_set_${'rules_wind_'}StrengthProperty`,
         {},
+        {VALUE: '500'},
+      ),
+    ).toBe('world.set(StrengthProperty, 500);\n');
+    // Empty socket → the property default (900).
+    expect(emitProject(`world_set_${'rules_wind_'}StrengthProperty`)).toBe(
+      'world.set(StrengthProperty, 900);\n',
+    );
+    // A vector world property is a single Vector socket — a world_vector
+    // literal, or another Vector block, slots straight in.
+    expect(
+      emitProject(
+        `world_set_${'rules_wind_'}DirectionProperty`,
         {},
         {
           VALUE: 'new WorldLab.Vector(0, -1)',
         },
       ),
-    ).toBe(
-      'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, -1));\n',
-    );
+    ).toBe('world.set(DirectionProperty, new WorldLab.Vector(0, -1));\n');
     // Empty socket → the property default (0, 1).
-    expect(emit('world_set_DirectionProperty', {}, {}, {})).toBe(
-      'world.set(WorldLab.DirectionProperty, new WorldLab.Vector(0, 1));\n',
+    expect(emitProject(`world_set_${'rules_wind_'}DirectionProperty`)).toBe(
+      'world.set(DirectionProperty, new WorldLab.Vector(0, 1));\n',
     );
   });
 
@@ -447,13 +556,13 @@ describe('domain block generators', () => {
   });
 
   it('generated world-property get blocks read the property off the world', () => {
-    expect(emitValue('world_get_StrengthProperty')[0]).toBe(
-      'world.get(WorldLab.StrengthProperty)',
-    );
+    expect(
+      emitProjectValue(`world_get_${'rules_wind_'}StrengthProperty`)[0],
+    ).toBe('world.get(StrengthProperty)');
     // A vector property reads the whole Vector (no axis dropdown).
-    expect(emitValue('world_get_DirectionProperty')[0]).toBe(
-      'world.get(WorldLab.DirectionProperty)',
-    );
+    expect(
+      emitProjectValue(`world_get_${'rules_wind_'}DirectionProperty`)[0],
+    ).toBe('world.get(DirectionProperty)');
   });
 
   it('world_vector builds a Vector literal from its field', () => {
@@ -480,8 +589,8 @@ describe('domain block generators', () => {
   });
 
   it('a vector getter/property outputs a Vector styled as a location', () => {
-    const dir = DOMAIN_BLOCKS.find(
-      b => b.type === 'world_get_DirectionProperty',
+    const dir = PROJECT_BLOCKS.blocks.find(
+      b => b.type === `world_get_${'rules_wind_'}DirectionProperty`,
     ) as {output?: string; style?: string};
     expect(dir.output).toBe('Vector');
     expect(dir.style).toBe('location_blocks');
@@ -489,8 +598,8 @@ describe('domain block generators', () => {
 
   it('generated world-action blocks run the action on the world', () => {
     // A no-argument world action (gravity Invert) → `world.act(Action)`.
-    expect(emit('world_do_InvertAction', {})).toBe(
-      'world.act(WorldLab.InvertAction);\n',
+    expect(emitProject(`world_do_${'rules_wind_'}InvertAction`)).toBe(
+      'world.act(InvertAction);\n',
     );
   });
 
@@ -517,15 +626,21 @@ describe('domain block generators', () => {
 
   it('generated query blocks read the query as a boolean reporter', () => {
     // Gravity's "is on the ground?" — reads the ACTOR value (default `this actor`).
-    expect(emitValue('world_query_IsOnGroundQuery')[0]).toBe(
-      'actor.query(WorldLab.IsOnGroundQuery)',
-    );
     expect(
-      emitValue('world_query_IsOnGroundQuery', {}, {ACTOR: 'touched'})[0],
-    ).toBe('touched.query(WorldLab.IsOnGroundQuery)');
+      emitProjectValue(`world_query_${'rules_wind_'}IsGustingQuery`)[0],
+    ).toBe('actor.query(IsGustingQuery)');
+    expect(
+      emitProjectValue(
+        `world_query_${'rules_wind_'}IsGustingQuery`,
+        {},
+        {
+          ACTOR: 'touched',
+        },
+      )[0],
+    ).toBe('touched.query(IsGustingQuery)');
     // It is a Boolean reporter styled as logic, so it plugs into `if`/comparisons.
-    const block = DOMAIN_BLOCKS.find(
-      b => b.type === 'world_query_IsOnGroundQuery',
+    const block = PROJECT_BLOCKS.blocks.find(
+      b => b.type === `world_query_${'rules_wind_'}IsGustingQuery`,
     ) as {output?: string; style?: string};
     expect(block.output).toBe('Boolean');
     expect(block.style).toBe('logic_blocks');
@@ -543,8 +658,6 @@ describe('domain block generators', () => {
     }
     // Each rule's events are surfaced: the gravity, input, and animation hats.
     for (const t of [
-      'world_on_startsFalling',
-      'world_on_stopsFalling',
       'world_on_keyPressed',
       'world_on_keyReleased',
       'world_on_animationEnded',
@@ -579,14 +692,12 @@ describe('domain block generators', () => {
       ]),
     );
     // Gravity gains its world properties and its actor property, set and get.
-    expect(category('Has Gravity')).toEqual(
+    expect(projectCategory('Has Wind')).toEqual(
       expect.arrayContaining([
-        'world_set_StrengthProperty',
-        'world_get_StrengthProperty',
-        'world_set_DirectionProperty',
-        'world_get_DirectionProperty',
-        'world_set_GravityScaleProperty',
-        'world_get_GravityScaleProperty',
+        `world_set_${'rules_wind_'}StrengthProperty`,
+        `world_get_${'rules_wind_'}StrengthProperty`,
+        `world_set_${'rules_wind_'}DirectionProperty`,
+        `world_get_${'rules_wind_'}DirectionProperty`,
       ]),
     );
     // Spatial keeps the bespoke set-position and gains scale/rotation/skew.
@@ -609,7 +720,9 @@ describe('domain block generators', () => {
         c => c.name === name,
       )?.blocks ?? [];
     // Gravity's world action, Motion's + Spatial's actor actions.
-    expect(category('Has Gravity')).toContain('world_do_InvertAction');
+    expect(projectCategory('Has Wind')).toContain(
+      `world_do_${'rules_wind_'}InvertAction`,
+    );
     expect(category('Has Physics')).toContain('world_do_ApplyForceAction');
     expect(category('Has Space')).toEqual(
       expect.arrayContaining([
@@ -630,7 +743,9 @@ describe('domain block generators', () => {
     // (a boolean query with two actor params — the hoisted heart of the touching
     // filter). Collision's list `TouchingQuery` has no return type, so it gets no
     // block; the `for each … where` loop rebuilds the list from the predicate.
-    expect(category('Has Gravity')).toContain('world_query_IsOnGroundQuery');
+    expect(projectCategory('Has Wind')).toContain(
+      `world_query_${'rules_wind_'}IsGustingQuery`,
+    );
     expect(category('Has Collisions')).toContain('world_query_IsTouchingQuery');
     // Collision also reports an actor's RESOLVED collision box. The `size`
     // property is an override whose `(0, 0)` default means "auto", so reading it
@@ -646,7 +761,6 @@ describe('domain block generators', () => {
     ).toEqual([
       'world_query_IsTouchingQuery',
       'world_query_CollisionSizeQuery',
-      'world_query_IsOnGroundQuery',
     ]);
   });
 });
@@ -770,10 +884,10 @@ describe('world_emit', () => {
       {} as never,
     ) as string;
   it('emits a built-in event through the WorldLab namespace', () => {
-    const code = run('world_emit', {EVENT: 'StartsFallingEvent'}, {}, '', {
+    const code = run('world_emit', {EVENT: 'AnimationEndedEvent'}, {}, '', {
       ACTOR: 'other',
     });
-    expect(code).toBe('world.emit(WorldLab.StartsFallingEvent, other);\n');
+    expect(code).toBe('world.emit(WorldLab.AnimationEndedEvent, other);\n');
   });
 
   it('imports a project rule’s event from its module', () => {
@@ -792,8 +906,8 @@ describe('world_emit', () => {
   });
 
   it('defaults to the principal actor when the socket is empty', () => {
-    expect(run('world_emit', {EVENT: 'StartsFallingEvent'}, {}, '', {})).toBe(
-      'world.emit(WorldLab.StartsFallingEvent, actor);\n',
+    expect(run('world_emit', {EVENT: 'AnimationEndedEvent'}, {}, '', {})).toBe(
+      'world.emit(WorldLab.AnimationEndedEvent, actor);\n',
     );
   });
 
@@ -1312,12 +1426,12 @@ describe('buildDomainPalette (project rule blocks)', () => {
   it('extends the palette with a project rule’s blocks (collision-safe types)', () => {
     const {blocks, toolbox, rootTypes} = buildDomainPalette([wind]);
     const types = blocks.map(b => b.type);
-    // Namespaced by module, so it can't collide with gravity's `StrengthProperty`.
+    // Namespaced by module, so two rules' same-named members cannot collide.
     expect(types).toContain('world_set_rules_wind_StrengthProperty');
     expect(types).toContain('world_get_rules_wind_StrengthProperty');
     expect(types).toContain('world_on_rules_wind_GustedEvent'); // project event hat
     // Built-ins are still present, un-namespaced.
-    expect(types).toContain('world_set_StrengthProperty'); // gravity's
+    expect(types).toContain('world_set_VelocityProperty'); // Motion's
     // A toolbox category for the project rule, carrying its blocks.
     const cats = toolbox as Array<{name: string; blocks: string[]}>;
     expect(cats.find(c => c.name === 'Has Wind')?.blocks).toContain(
@@ -1472,20 +1586,8 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_step',
       'world_emit',
       'world_step_delta',
-      // Parameters are declared via the +/− mutator (no toolbox block); the
-      // getters read one — or any variable of your own — in the body…
-      'variables_get_Number',
-      'variables_get_Boolean',
-      'variables_get_String',
-      'variables_get_Vector',
-      'variables_get_Actor',
-      // …and the setters put a value in one, so a body can hold intermediate
-      // state rather than recomputing it.
-      'variables_set_Number',
-      'variables_set_Boolean',
-      'variables_set_String',
-      'variables_set_Vector',
-      'variables_set_Actor',
+      // Reading and writing a variable is its own category (below): a rule's
+      // parameters are variables like any other.
     ]);
   });
 
@@ -1509,6 +1611,36 @@ describe('builder-context warnings', () => {
       typeof extension === 'string' ? extension : extension.name,
     );
   };
+
+  it('offers a Variables category, paired by flavour', () => {
+    // Paired get/set per type rather than all-gets-then-all-sets: the question
+    // a learner arrives with is "how do I keep a vector?", so both blocks for
+    // a type should be together when they find it.
+    const variables = (
+      DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
+    ).find(c => c.name === 'Variables')?.blocks;
+    expect(variables).toEqual([
+      'variables_get_Number',
+      'variables_set_Number',
+      'variables_get_Boolean',
+      'variables_set_Boolean',
+      'variables_get_String',
+      'variables_set_String',
+      'variables_get_Vector',
+      'variables_set_Vector',
+      'variables_get_Actor',
+      'variables_set_Actor',
+    ]);
+  });
+
+  it('leaves the actor getter in the Actor category too', () => {
+    // Deliberate duplication: the `for each` loop binds an actor variable, and
+    // reading it belongs beside the loop that made it as much as in Variables.
+    const actor = (
+      DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
+    ).find(c => c.name === 'Actor')?.blocks;
+    expect(actor).toContain('variables_get_Actor');
+  });
 
   it('guards `use trait`, whose `useTraits` is builder-only', () => {
     expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
