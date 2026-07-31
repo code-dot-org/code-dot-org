@@ -8,9 +8,7 @@ const NEUTRAL_BG = 'var(--background-neutral-primary)';
 const NEUTRAL_BORDER = 'var(--borders-neutral-primary)';
 const SUCCESS_BG = 'var(--background-success-primary)';
 const SUCCESS_BG_LIGHT = 'var(--background-success-extra-light)';
-const SUCCESS_BORDER = 'var(--borders-success-primary)';
-// Filled completed states drop the border; see progressStyles.js.
-const NO_BORDER = 'transparent';
+const SUCCESS_BORDER = 'var(--background-success-primary)';
 const PURPLE_BG = 'var(--background-brand-purple-primary)';
 const PURPLE_BORDER = 'var(--borders-brand-purple-primary)';
 const ERROR_BG = 'var(--background-error-primary)';
@@ -95,7 +93,7 @@ describe('progressStyles', () => {
       );
 
       expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
-      expect(progressStyle.borderColor).toBe(NO_BORDER);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
 
     it('when level is not assessment and levelStatus is free_play_complete has expected background and border color', () => {
@@ -105,7 +103,7 @@ describe('progressStyles', () => {
       );
 
       expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
-      expect(progressStyle.borderColor).toBe(NO_BORDER);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
 
     it('when level is not assessment and levelStatus is passed has expected background and border color', () => {
@@ -155,7 +153,7 @@ describe('progressStyles', () => {
       );
 
       expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
-      expect(progressStyle.borderColor).toBe(NO_BORDER);
+      expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);
     });
   });
 });

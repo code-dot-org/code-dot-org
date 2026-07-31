@@ -106,6 +106,8 @@ const assessmentStatusStyle = {
   },
 };
 
+const levelSuccessStatusBorderColor = 'var(--background-success-primary)';
+
 // A success border on a success-primary fill reads as a ring of a slightly
 // different green rather than as an outline, so the filled completed states
 // below set borderColor: 'transparent'. The border box stays, so bubble
@@ -114,20 +116,20 @@ const assessmentStatusStyle = {
 // visible at all.
 const levelStatusStyle = {
   [LevelStatus.attempted]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
   },
   [LevelStatus.perfect]: {
-    borderColor: 'transparent',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.free_play_complete]: {
-    borderColor: 'transparent',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-extra-light)',
   },
   // Note: There are submittable levels that are not assessments.

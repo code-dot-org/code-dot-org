@@ -13,7 +13,7 @@ def color_strings(key)
   {
     # --background-success-primary (success-50 in both themes) /
     # --borders-success-primary (success-50 Light, success-40 Dark)
-    perfect: ['rgb(62, 163, 62)', 'rgb(102, 195, 101)'],
+    perfect: ['rgb(62, 163, 62)', 'rgb(62, 163, 62)'],
     # --background-success-extra-light (success-10 Light, success-90 Dark)
     passed: ['rgb(226, 246, 226)', 'rgb(31, 72, 32)'],
     # --background-neutral-primary (white Light, neutral-base-black Dark)
