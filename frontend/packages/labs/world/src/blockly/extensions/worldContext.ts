@@ -2,7 +2,7 @@
 // in exactly two places: inside an event handler (a `world_on_*` block passes
 // `(world, actor, eventValue)` to its body) and in a `.world` file (whose
 // `world_world` root declares `const world`). Placed anywhere else — an actor's
-// setup body, a scene, or floating — the `world.*` call would be a ReferenceError
+// setup body, or floating — the `world.*` call would be a ReferenceError
 // at runtime. This flags that early, in the editor, with a Blockly warning
 // bubble, rather than letting it surface only when the game is run.
 

@@ -12,7 +12,7 @@ import {
 } from '../projectModules';
 
 const FILES = {
-  'scenes/main.scene': '{}',
+  'maps/level1.map': '{}',
   'worlds/platform.world': JSON.stringify({
     blocks: {
       blocks: [
@@ -71,7 +71,7 @@ describe('projectModules', () => {
   it('ignores non-code files and other directories', () => {
     const paths = projectActorOptions(FILES).map(([, path]) => path);
     expect(paths).not.toContain('animations/game');
-    expect(paths).not.toContain('scenes/main');
+    expect(paths).not.toContain('maps/level1');
   });
 });
 
@@ -119,7 +119,7 @@ describe('projectWorldRules', () => {
     const rules = projectWorldRules({
       'worlds/a.world': worldFile('GravityRule', 'InputRule'),
       'worlds/b.world': worldFile('InputRule', 'AnimationRule'), // Input deduped
-      'scenes/main.scene': worldFile('CollisionRule'), // not a .world — ignored
+      'actors/player.actor': worldFile('CollisionRule'), // not a .world — ignored
       'worlds/broken.world': 'not json yet', // mid-edit — skipped
     });
     expect(new Set(rules)).toEqual(

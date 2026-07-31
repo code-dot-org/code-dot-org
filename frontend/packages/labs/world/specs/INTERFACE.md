@@ -8,7 +8,7 @@ In this model, we have a separation of data and implementation via the component
 and the events including rule implementations.
 
 In the simple case, we might offer a prebuilt world (which is what Sprite Lab is, essentially) where there are
-very basic rules. Then, we need a way to apply the traits to different actors, instantiate them in the scene, and
+very basic rules. Then, we need a way to apply the traits to different actors, place them in the world, and
 respond to and code events.
 
 We will discuss, first, the individual serializations and editing interfaces for each major type of construct
@@ -220,9 +220,36 @@ world.useRules([
 world.hideRule(GravityRule);
 world.hideRule(CollectionRule);
 
+// A world holds the Actors living under those rules as well as the rules
+// themselves — there is no separate "scene". Placing one at a time:
+import PlayerActor from 'actors/player';
+
+const player = world.addActor(PlayerActor);
+player.set(PositionActorProperty, {x: 100, y: 100});
+
+// Setting each by hand is intensive, so the usual way is a Map: a JSON
+// description of instances and their property overrides.
+import Level1 from 'maps/level_1.json';
+
+// Every actor type a map names must be registered under that name first.
+world.define('player', PlayerActor);
+world.loadMap(Level1);
+
+// Loading is additive — a world can stack several maps, e.g. a level and a
+// heads-up display. `clear()` empties it first when replacing rather than
+// adding.
+world.clear();
+world.loadMap(Level2);
+
 // Export the world
 export default world;
 ```
+
+The two halves are ordered: everything declarative (`useRules`, `useAnimations`,
+`useEffect`, `set`) must come before the first placement, because the first
+call that needs a live world builds it. A declaration arriving after that would
+have nothing to affect, so it throws rather than doing nothing quietly — Blockly
+blocks can be reordered by dragging, and the mistake is easy to make.
 
 ## Actor
 
@@ -268,57 +295,14 @@ actor.on(CollideEvent, onCollide);
 export default actor;
 ```
 
-## Scene
-
-A scene is a particular view. It is a world and a set of actors.
-Where the World defines the rules, the Scene defines what's living
-in that world.
-
-```
-// scenes/game.js
-
-import {SceneBuilder} from 'world-lab';
-
-import PlatformWorld from 'worlds/platform';
-
-import PlayerActor from 'actors/player';
-
-const scene = new SceneBuilder({
-  id: 'game',
-  name: 'Game',
-});
-
-// Get the instance of the scene's world
-const world = scene.useWorld(PlatformWorld);
-
-const player = scene.addActor(PlayerActor);
-// Fairly laborious to do by hand.
-player.set(world.getRule("spatial").getTrait("positional").properties.position, {x: 100, y: 100});
-
-// Or use imports (pretty laborious, too)
-import {PositionActorProperty} from 'rules/spatial';
-player.set(PositionActorProperty, {x: 100, y: 100});
-
-// Since setting these individually is intensive, you can import a JSON file
-// instead.
-// So, allow a JSON import
-import Level1 from 'maps/level_1.json';
-
-// Clear the scene
-scene.clear();
-
-// Populate the scene from the JSON serialization of a 'Map'
-scene.populate(Level1);
-```
-
 ## User Interfaces
 
 There will be user interface Actors that are there to enable menus and
 such.
 
-A Scene can then have a set of these to define the interface of
-the game at this particular Scene. You can have a sort of "Main
-Menu" Scene to start the game, etc.
+A World can then load a Map of these to define the interface of the
+game at that moment. A "Main Menu" is a Map you load into a world of
+its own; a pop-up dialog is a Map you load on top of the level.
 
 This is something we can design later since user interface elements
 are likely going to be DOM elements and will be interesting to
@@ -327,6 +311,8 @@ incorporate.
 ## Map
 
 A Map can be used to quickly load and instantiate actors as a dataset.
+It is the arrangement half of a game — the World supplies the laws, a Map
+supplies what lives under them — and a World may load several.
 
 A Map editor can be used to populate that data file with actor types
 and their properties.
@@ -557,7 +543,7 @@ This is something we can add to the AnimationRule where we can
 assign an animation _or_ we can assign a sprite directly. In that case,
 it is useful to define the offset and scale.
 
-## Simple Scene (Simple View)
+## Simple World (Simple View)
 
 The abstraction of an Actor is to introduce 'kits'.
 
@@ -572,14 +558,14 @@ development environment.
 
 This allows introducing the concepts of the environment without
 the overhead of the entire ecosystem or interface. We could
-essentially just have the Scene view with PlatformActors where
+essentially just have the World view with PlatformActors where
 one can change their appearance only and add events to the
-Scene view per Actor in order to create a very basic experience.
+World view per Actor in order to create a very basic experience.
 
 Transforming this would mean taking the PlatformActor in the
-Simple version of a Scene, and creating a proper Actor while
+Simple version of a World, and creating a proper Actor while
 tranferring the events pertaining to that Actor to that file.
-Same would go for other Actors in the Simple Scene to their own
+Same would go for other Actors in the Simple World to their own
 files. Then, we can expose the traits, if desired, or the World,
 if desired, from there. That would create an arrangement where
 the complexity is shown incrementally from the perspective of

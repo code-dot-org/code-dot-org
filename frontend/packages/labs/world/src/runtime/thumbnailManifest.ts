@@ -2,8 +2,8 @@
 // the preview surface renders: it imports a world (for its rules + registered
 // animations, so an actor's frame resolves correctly) and every actor template
 // to preview, and default-exports them for the sandbox's thumbnail renderer.
-// Kept separate from the scene entry so rendering the picker never disturbs the
-// running game.
+// Kept separate from the game's entry world so rendering the picker never
+// disturbs the running game.
 
 const quote = (value: string): string => JSON.stringify(value);
 

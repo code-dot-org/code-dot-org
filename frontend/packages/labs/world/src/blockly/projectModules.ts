@@ -1,10 +1,10 @@
 // Discovers a project's actor and world modules by directory convention — actor
 // templates live under `actors/`, worlds under `worlds/` (the lab's directory
-// layout, GLOSSARY.md). The `world_add_actor` / `world_scene` dropdowns list
-// these as `[label, path]`: the label is the module's *authored* name (an
+// layout, GLOSSARY.md). The `world_add_actor` dropdown lists these as
+// `[label, path]`: the label is the module's *authored* name (an
 // ActorBuilder/WorldBuilder `name`, or a Blockly actor's NAME field) so a
-// learner sees "Platform World", not the file stem "platform"; the value is the
-// extension-less module path the generated scene imports (`worlds/platform`).
+// learner sees "Coin", not the file stem "coin"; the value is the
+// extension-less module path the generated world imports (`actors/coin`).
 
 import type {EffectParameter} from '../effect/model/types';
 
@@ -187,7 +187,7 @@ export function projectEffectParameters(
 /**
  * Actor module paths referenced by each map file (JSON under `maps/`), keyed by
  * the map's extension-less path. The `world_load_map` block reads this to emit
- * an import + `scene.define` for each actor a map places, then `scene.populate`.
+ * an import + `world.define` for each actor a map places, then `world.loadMap`.
  */
 export function projectMapActorTypes(
   files: Record<string, string>,

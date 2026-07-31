@@ -19,7 +19,7 @@ function folderPath(source: MultiFileSource, folderId: string): string {
   return segments.length ? `${segments.join('/')}/` : '';
 }
 
-/** Project as `path -> source text`, e.g. `scenes/main.js` -> "…". */
+/** Project as `path -> source text`, e.g. `worlds/main.world` -> "…". */
 export function projectFiles(
   source: MultiFileSource | undefined,
 ): Record<string, string> {

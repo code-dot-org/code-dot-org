@@ -15,7 +15,6 @@ import {
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
-  SceneBuilder,
   SizeProperty,
   SkewProperty,
   SolidTrait,
@@ -29,28 +28,26 @@ import {
 } from '../index';
 
 // Build a gravity world with one faller and one ground actor, wired through the
-// public builders exactly as a learner's scene would be. Sizes are explicit so
+// public builders exactly as a learner's world would be. Sizes are explicit so
 // the half-extent landing math is unambiguous: neither actor has a sprite, so
 // without an override each would fall back to the default box.
-function makeScene(
+function makeWorld(
   playerStart = new Vector(0, 0),
   groundY = 100,
   playerSize = new Vector(20, 20),
   groundSize = new Vector(20, 20),
 ) {
-  const scene = new SceneBuilder({id: 'game', name: 'Game'});
-  const world = scene.useWorld(
-    new WorldBuilder({id: 'platform', name: 'Platform'}).useRules([
-      GravityRule,
-    ]),
+  const builder = new WorldBuilder({id: 'platform', name: 'Platform'}).useRules(
+    [GravityRule],
   );
-  const player = scene.addActor(
+  const world = builder.getWorld();
+  const player = builder.addActor(
     new ActorBuilder({id: 'player', name: 'Player'})
       .useTraits([AffectedByGravityTrait])
       .set(PositionProperty, playerStart)
       .set(SizeProperty, playerSize),
   );
-  scene.addActor(
+  builder.addActor(
     new ActorBuilder({id: 'ground', name: 'Ground'})
       .useTraits([GroundTrait])
       .set(PositionProperty, new Vector(0, groundY))
@@ -61,7 +58,7 @@ function makeScene(
 
 describe('trait resolution through the standard rules', () => {
   it('applying "Affected by Gravity" pulls in its dependency traits', () => {
-    const {player} = makeScene();
+    const {player} = makeWorld();
     expect(player.has(AffectedByGravityTrait)).toBe(true);
     expect(player.has(MovableTrait)).toBe(true); // required by affected
     expect(player.has(CollidableTrait)).toBe(true); // required by affected
@@ -86,7 +83,7 @@ describe('gravity simulation', () => {
   it('accelerates a faller and rests its box on the ground surface', () => {
     // Ground centre 120, half-height 10 → surface top at 110. Player half-height
     // 10 → its box bottom meets the surface when its centre reaches 100.
-    const {world, player} = makeScene(new Vector(0, 0), 120);
+    const {world, player} = makeWorld(new Vector(0, 0), 120);
     let starts = 0;
     let stops = 0;
     player.on(StartsFallingEvent, () => (starts += 1));
@@ -121,7 +118,7 @@ describe('gravity simulation', () => {
   it('rests a taller actor higher — the box half-height sets the resting centre', () => {
     // Same ground (surface top 110), but a 40px-tall player (half-height 20)
     // rests with its centre 20 above the surface, at 90.
-    const {world, player} = makeScene(
+    const {world, player} = makeWorld(
       new Vector(0, 0),
       120,
       new Vector(40, 40),
@@ -135,7 +132,7 @@ describe('gravity simulation', () => {
 
   it('scales the collision box by the actor scale', () => {
     // A 20px player at 2× scale is a 40px box (half-height 20) → rests at 90.
-    const {world, player} = makeScene(new Vector(0, 0), 120);
+    const {world, player} = makeWorld(new Vector(0, 0), 120);
     player.set(ScaleProperty, new Vector(2, 2));
     for (let i = 0; i < 20; i++) {
       world.tick(DELTA);
@@ -145,7 +142,7 @@ describe('gravity simulation', () => {
 
   it('falls again after walking off the edge of the ground', () => {
     // Ground and player are both 20px wide, centred at x=0 (span [-10, 10]).
-    const {world, player} = makeScene(new Vector(0, 0), 120);
+    const {world, player} = makeWorld(new Vector(0, 0), 120);
     for (let i = 0; i < 20; i++) {
       world.tick(DELTA);
     }
@@ -167,18 +164,18 @@ describe('gravity simulation', () => {
   it('stops at the side of a solid block instead of passing through it', () => {
     // A solid wall at x=25 (20 wide → left face at 15) reaching well above and
     // below the player. Gravity is disabled so this isolates the horizontal axis.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
-    );
-    const player = scene.addActor(
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(
       new ActorBuilder({id: 'player', name: 'Player'})
         .useTraits([AffectedByGravityTrait])
         .set(PositionProperty, new Vector(0, 0))
         .set(SizeProperty, new Vector(20, 20))
         .set(GravityScaleProperty, 0),
     );
-    scene.addActor(
+    builder.addActor(
       new ActorBuilder({id: 'wall', name: 'Wall'})
         .useTraits([SolidTrait])
         .set(PositionProperty, new Vector(25, 0))
@@ -198,17 +195,17 @@ describe('gravity simulation', () => {
   it('blocks a plain movable actor at a solid wall — collision needs no gravity', () => {
     // No gravity anywhere: just Motion + Collision. Solidity is general, so a
     // bare movable body still cannot pass through a solid.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
-    const mover = scene.addActor(
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
+    const mover = builder.addActor(
       new ActorBuilder({id: 'mover', name: 'Mover'})
         .useTraits([MovableTrait, CollidableTrait])
         .set(PositionProperty, new Vector(0, 0))
         .set(SizeProperty, new Vector(20, 20)),
     );
-    scene.addActor(
+    builder.addActor(
       new ActorBuilder({id: 'wall', name: 'Wall'})
         .useTraits([SolidTrait])
         .set(PositionProperty, new Vector(25, 0))
@@ -225,17 +222,17 @@ describe('gravity simulation', () => {
     // A Ground-but-not-Solid platform at y=0 (top surface at -10). The player
     // starts below it and jumps: it rises straight through (one-way), then falls
     // and lands on top — proof it passed through, since it began underneath.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
-    );
-    const player = scene.addActor(
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(
       new ActorBuilder({id: 'player', name: 'Player'})
         .useTraits([AffectedByGravityTrait])
         .set(PositionProperty, new Vector(0, 40)) // below the platform
         .set(SizeProperty, new Vector(20, 20)),
     );
-    scene.addActor(
+    builder.addActor(
       new ActorBuilder({id: 'platform', name: 'Platform'})
         .useTraits([GroundTrait]) // landable, but NOT solid
         .set(PositionProperty, new Vector(0, 0))
@@ -254,23 +251,23 @@ describe('gravity simulation', () => {
     // Player already resting on a lower block; a second block overlaps its x but
     // sits well above it. The old min-surface model yanked the player up to the
     // higher block — full AABB leaves it on the block it is actually touching.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
-    );
-    const player = scene.addActor(
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(
       new ActorBuilder({id: 'player', name: 'Player'})
         .useTraits([AffectedByGravityTrait])
         .set(PositionProperty, new Vector(0, 100)) // resting on the lower block
         .set(SizeProperty, new Vector(20, 20)),
     );
-    scene.addActor(
+    builder.addActor(
       new ActorBuilder({id: 'lower', name: 'Lower'})
         .useTraits([GroundTrait])
         .set(PositionProperty, new Vector(0, 120)) // surface top 110
         .set(SizeProperty, new Vector(20, 20)),
     );
-    scene.addActor(
+    builder.addActor(
       new ActorBuilder({id: 'higher', name: 'Higher'})
         .useTraits([GroundTrait])
         .set(PositionProperty, new Vector(0, 60)) // above, overlaps x
@@ -281,7 +278,7 @@ describe('gravity simulation', () => {
   });
 
   it('runs the steps in the intended per-tick order', () => {
-    const {world} = makeScene();
+    const {world} = makeWorld();
     expect(world.stepOrder().map(s => `${s.ownerId}.${s.id}`)).toEqual([
       'gravity.applyVelocity',
       'motion.reposition',
@@ -293,7 +290,7 @@ describe('gravity simulation', () => {
 
 describe('world property hot-patch (hot-reload level 1)', () => {
   it('a live change to gravity strength takes effect on the next tick', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 100_000); // ground far
+    const {world, player} = makeWorld(new Vector(0, 0), 100_000); // ground far
 
     world.tick(0.1);
     expect(player.get(VelocityProperty).y).toBeCloseTo(90); // 900 * 0.1
@@ -306,22 +303,21 @@ describe('world property hot-patch (hot-reload level 1)', () => {
   });
 });
 
-describe('SceneBuilder.populate (Map data)', () => {
+describe('WorldBuilder.loadMap (Map data)', () => {
   it('instantiates registered actor types and applies property overrides', () => {
-    const scene = new SceneBuilder({id: 'game', name: 'Game'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'platform', name: 'Platform'}).useRules([
-        GravityRule,
-      ]),
-    );
-    scene.define(
+    const builder = new WorldBuilder({
+      id: 'platform',
+      name: 'Platform',
+    }).useRules([GravityRule]);
+    const world = builder.getWorld();
+    builder.define(
       'faller',
       new ActorBuilder({id: 'faller', name: 'Faller'}).useTraits([
         AffectedByGravityTrait,
       ]),
     );
 
-    const [actor] = scene.populate({
+    const [actor] = builder.loadMap({
       actors: [
         {type: 'faller', properties: {positional: {position: {x: 5, y: 7}}}},
       ],
@@ -332,14 +328,36 @@ describe('SceneBuilder.populate (Map data)', () => {
     expect([...world.actors].length).toBe(1);
   });
 
-  it('rejects a map that references an unregistered type', () => {
-    const scene = new SceneBuilder({id: 'game', name: 'Game'});
-    scene.useWorld(
-      new WorldBuilder({id: 'platform', name: 'Platform'}).useRules([
-        GravityRule,
+  it('stacks maps rather than replacing, so a level and a HUD compose', () => {
+    // Loading is additive on purpose: a world loads a level map and a UI map,
+    // which is the whole reason there is no separate Scene concept.
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
+    builder.define(
+      'faller',
+      new ActorBuilder({id: 'faller', name: 'Faller'}).useTraits([
+        AffectedByGravityTrait,
       ]),
     );
-    expect(() => scene.populate({actors: [{type: 'ghost'}]})).toThrow(
+
+    builder.loadMap({actors: [{type: 'faller', id: 'a'}]});
+    builder.loadMap({actors: [{type: 'faller', id: 'b'}]});
+
+    expect(builder.getWorld().snapshot().actorIds.sort()).toEqual(['a', 'b']);
+
+    // …and `clear()` is how you replace instead of add.
+    builder.clear();
+    builder.loadMap({actors: [{type: 'faller', id: 'c'}]});
+    expect(builder.getWorld().snapshot().actorIds).toEqual(['c']);
+  });
+
+  it('rejects a map that references an unregistered type', () => {
+    const builder = new WorldBuilder({
+      id: 'platform',
+      name: 'Platform',
+    }).useRules([GravityRule]);
+    expect(() => builder.loadMap({actors: [{type: 'ghost'}]})).toThrow(
       /unregistered actor type/i,
     );
   });
@@ -347,7 +365,7 @@ describe('SceneBuilder.populate (Map data)', () => {
 
 describe('renderSnapshot (driver view)', () => {
   it('reports the transform of each positional actor, tracking the sim', () => {
-    const {world, player} = makeScene(new Vector(10, 0), 100);
+    const {world, player} = makeWorld(new Vector(10, 0), 100);
     const before = world.renderSnapshot();
     // Both the player and the ground carry the positional trait.
     expect(before).toHaveLength(2);
@@ -369,7 +387,7 @@ describe('renderSnapshot (driver view)', () => {
   });
 
   it('reports an actor’s vertical skew', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 120);
+    const {world, player} = makeWorld(new Vector(0, 0), 120);
     player.set(SkewProperty, 30);
     expect(world.renderSnapshot().find(s => s.actor === player)?.skew).toBe(30);
   });
@@ -380,7 +398,7 @@ describe('renderSnapshot (driver view)', () => {
   });
 
   it('has no frame for an actor without an appearance', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 100);
+    const {world, player} = makeWorld(new Vector(0, 0), 100);
     expect(world.renderSnapshot().find(s => s.actor === player)?.frame).toBe(
       undefined,
     );
@@ -389,7 +407,7 @@ describe('renderSnapshot (driver view)', () => {
 
 describe('snapshot + setWorldProperty (hot-reload support)', () => {
   it('captures structure and values, and patches a world property by path', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 100);
+    const {world, player} = makeWorld(new Vector(0, 0), 100);
     const snap = world.snapshot();
 
     expect(snap.ruleIds).toEqual(['collision', 'gravity', 'motion', 'spatial']);
@@ -413,7 +431,7 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
 
 describe('world actions', () => {
   it('invert flips gravity direction in place', () => {
-    const {world, player} = makeScene(new Vector(0, 0), 100_000);
+    const {world, player} = makeWorld(new Vector(0, 0), 100_000);
     world.tick(0.1);
     expect(player.get(VelocityProperty).y).toBeGreaterThan(0); // pulled down
 
@@ -425,36 +443,35 @@ describe('world actions', () => {
   });
 });
 
-describe('SceneBuilder.addActor (instances)', () => {
-  function makeCoinScene() {
-    const scene = new SceneBuilder({id: 'game', name: 'Game'});
-    scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([GravityRule]),
-    );
+describe('WorldBuilder.addActor (instances)', () => {
+  function makeCoinWorld() {
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      GravityRule,
+    ]);
     const coin = () =>
       new ActorBuilder({id: 'coin', name: 'Coin'}).useTraits([PositionalTrait]);
-    return {scene, coin};
+    return {builder, coin};
   }
 
   it('gives a lone actor its template id and a repeat a random unique one', () => {
-    const {scene, coin} = makeCoinScene();
-    const first = scene.addActor(coin());
-    const second = scene.addActor(coin());
+    const {builder, coin} = makeCoinWorld();
+    const first = builder.addActor(coin());
+    const second = builder.addActor(coin());
     expect(first.id).toBe('coin');
     expect(second.id).not.toBe('coin');
     expect(second.id.startsWith('coin-')).toBe(true);
     // Distinct instances, both sharing the template type, both in the snapshot.
     expect(first.type).toBe('coin');
     expect(second.type).toBe('coin');
-    expect(scene.getWorld().snapshot().actorIds.sort()).toEqual(
+    expect(builder.getWorld().snapshot().actorIds.sort()).toEqual(
       [first.id, second.id].sort(),
     );
   });
 
   it('honors an explicit id and sets per-instance props on the returned instance', () => {
-    const {scene, coin} = makeCoinScene();
+    const {builder, coin} = makeCoinWorld();
     // The returned instance's set() chains, so placement reads inline.
-    const c = scene
+    const c = builder
       .addActor(coin(), 'coin-a')
       .set(PositionProperty, new Vector(320, 70));
     expect(c.id).toBe('coin-a');
@@ -463,10 +480,10 @@ describe('SceneBuilder.addActor (instances)', () => {
 
   it('keeps an explicit base id stable, disambiguating repeats with an ordinal', () => {
     // Same base id twice — e.g. one Blockly `add` block running in a loop.
-    const {scene, coin} = makeCoinScene();
-    const a = scene.addActor(coin(), 'coin-a');
-    const b = scene.addActor(coin(), 'coin-a');
-    const c = scene.addActor(coin(), 'coin-a');
+    const {builder, coin} = makeCoinWorld();
+    const a = builder.addActor(coin(), 'coin-a');
+    const b = builder.addActor(coin(), 'coin-a');
+    const c = builder.addActor(coin(), 'coin-a');
     expect([a.id, b.id, c.id]).toEqual(['coin-a', 'coin-a#2', 'coin-a#3']);
   });
 });
@@ -480,14 +497,14 @@ describe('TouchingQuery (Collision rule, via world.query)', () => {
       .set(PositionProperty, new Vector(x, y));
 
   it('reports overlapping actors, excluding self and distant ones', () => {
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
-    const player = scene.addActor(at('player', 0, 0));
-    const nearCoin = scene.addActor(at('coin', 20, 0)); // overlaps
-    const nearBox = scene.addActor(at('box', -10, 8)); // overlaps
-    scene.addActor(at('coin', 200, 0)); // far coin — no overlap
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(at('player', 0, 0));
+    const nearCoin = builder.addActor(at('coin', 20, 0)); // overlaps
+    const nearBox = builder.addActor(at('box', -10, 8)); // overlaps
+    builder.addActor(at('coin', 200, 0)); // far coin — no overlap
 
     const touching = world.query(TouchingQuery, player);
     expect(new Set(touching)).toEqual(new Set([nearCoin, nearBox]));
@@ -495,14 +512,14 @@ describe('TouchingQuery (Collision rule, via world.query)', () => {
   });
 
   it('filters to a single actor type', () => {
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
-    const player = scene.addActor(at('player', 0, 0));
-    const coinA = scene.addActor(at('coin', 16, 0)); // overlaps, type coin
-    const coinB = scene.addActor(at('coin', 0, 16)); // overlaps, type coin
-    scene.addActor(at('box', 8, 8)); // overlaps but type box
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(at('player', 0, 0));
+    const coinA = builder.addActor(at('coin', 16, 0)); // overlaps, type coin
+    const coinB = builder.addActor(at('coin', 0, 16)); // overlaps, type coin
+    builder.addActor(at('box', 8, 8)); // overlaps but type box
 
     const coins = world.query(TouchingQuery, player, 'coin');
     expect(new Set(coins)).toEqual(new Set([coinA, coinB]));
@@ -510,21 +527,21 @@ describe('TouchingQuery (Collision rule, via world.query)', () => {
   });
 
   it('filters by the placed type, not the builder id (renamed template)', () => {
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
     // A template whose builder id ("Coin", e.g. derived from an authored name)
-    // is NOT the module path the scene places it under.
+    // is NOT the module path the world places it under.
     const coinTemplate = new ActorBuilder({id: 'Coin', name: 'Coin'})
       .useTraits([CollidableTrait])
       .set(PositionProperty, new Vector(16, 0));
-    const player = scene.addActor(
+    const player = builder.addActor(
       at('player', 0, 0),
       undefined,
       'actors/player',
     );
-    const coin = scene.addActor(coinTemplate, 'coin-1', 'actors/coin');
+    const coin = builder.addActor(coinTemplate, 'coin-1', 'actors/coin');
     expect(coin.type).toBe('actors/coin'); // the placed type, not 'Coin'
 
     // The loop filters by the module path and still finds the renamed coin.
@@ -541,13 +558,13 @@ describe('IsTouchingQuery (Collision predicate)', () => {
       .set(PositionProperty, new Vector(x, y));
 
   it('is a boolean over two actors — overlap, excluding identity', () => {
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
-    const player = scene.addActor(at('player', 0, 0));
-    const near = scene.addActor(at('coin', 20, 0)); // overlaps
-    const far = scene.addActor(at('coin', 200, 0)); // does not
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(at('player', 0, 0));
+    const near = builder.addActor(at('coin', 20, 0)); // overlaps
+    const far = builder.addActor(at('coin', 200, 0)); // does not
 
     expect(world.query(IsTouchingQuery, player, near)).toBe(true);
     expect(world.query(IsTouchingQuery, player, far)).toBe(false);
@@ -557,14 +574,14 @@ describe('IsTouchingQuery (Collision predicate)', () => {
   it('filtering world.actors through the predicate rebuilds TouchingQuery', () => {
     // This is exactly what the generic `for each Actor … where (a is touching it)`
     // loop does — the predicate hoisted over the actor list equals the list query.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w', name: 'W'}).useRules([CollisionRule]),
-    );
-    const player = scene.addActor(at('player', 0, 0));
-    scene.addActor(at('coin', 20, 0)); // overlaps
-    scene.addActor(at('box', -10, 8)); // overlaps
-    scene.addActor(at('coin', 200, 0)); // far
+    const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+      CollisionRule,
+    ]);
+    const world = builder.getWorld();
+    const player = builder.addActor(at('player', 0, 0));
+    builder.addActor(at('coin', 20, 0)); // overlaps
+    builder.addActor(at('box', -10, 8)); // overlaps
+    builder.addActor(at('coin', 200, 0)); // far
 
     const filtered = [...world.actors].filter(other =>
       world.query(IsTouchingQuery, player, other),
@@ -575,21 +592,59 @@ describe('IsTouchingQuery (Collision predicate)', () => {
   });
 });
 
-describe('SceneBuilder.getWorld', () => {
+describe('WorldBuilder declaration order', () => {
+  // The builder has two halves and they run in order: everything declarative
+  // describes a world that does not exist yet, and the first placement builds
+  // it. A declaration arriving after that has nothing to affect — and since
+  // Blockly blocks are reordered by dragging, a learner can produce exactly
+  // that. Quietly dropping it would leave them with a world missing a rule they
+  // can plainly see they asked for.
+  const placed = () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    builder.addActor(new ActorBuilder({id: 'a', name: 'A'}));
+    return builder;
+  };
+
+  it('refuses a rule added after the actors are placed', () => {
+    expect(() => placed().useRules([GravityRule])).toThrow(
+      /must come before the actors are placed/,
+    );
+  });
+
+  it('refuses a property override added after the actors are placed', () => {
+    expect(() => placed().set(StrengthProperty, 100)).toThrow(
+      /must come before the actors are placed/,
+    );
+  });
+
+  it('names the block to move, not the internal state', () => {
+    // The message is read by a learner in the console, so it says what to drag.
+    expect(() => placed().useAnimations({})).toThrow(
+      /move it above "load map"/,
+    );
+  });
+
+  it('still allows `define`, which registers rather than places', () => {
+    expect(() =>
+      placed().define('a', new ActorBuilder({id: 'a', name: 'A'})),
+    ).not.toThrow();
+  });
+});
+
+describe('WorldBuilder.getWorld', () => {
   it('returns the same World every time, not a fresh one', () => {
     // The preview relies on this. Build URLs are content-addressed, so an
     // unchanged project re-imports to the same module instance — and because
-    // the scene builds its world once, at module scope, `getWorld()` then hands
-    // back the very World that is running. The preview detects that by identity
+    // `getWorld()` memoizes, so it then hands back the very World that is
+    // running. The preview detects that by identity
     // (`incoming === runningWorld`) and skips the reload entirely.
     //
     // If this ever started returning a fresh world, that check would silently
     // stop matching and every no-op rebuild would restart the game again — and,
     // worse, snapshot a mid-flight world as the baseline, breaking live reload
     // for the rest of the session.
-    const scene = new SceneBuilder({id: 'g', name: 'G'});
-    scene.useWorld(new WorldBuilder({id: 'w', name: 'W'}));
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
 
-    expect(scene.getWorld()).toBe(scene.getWorld());
+    expect(builder.getWorld()).toBe(builder.getWorld());
   });
 });

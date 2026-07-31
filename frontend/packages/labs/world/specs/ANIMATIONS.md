@@ -31,7 +31,7 @@ The interim code produces the right pixels on the wrong architecture:
 ```
   PROJECT (Codebridge, TEXT only)     LAB (transform)          COMPILE (esbuild)     PREVIEW (engine + driver)
   animations/player.anim  ─┐                                                         ┌─ AnimationRule advances
-  scenes/main.js           ├─▶ .anim JSON → JS module     ─▶  bundle (text only) ─▶  │   frames on tick, emits
+  worlds/main.world        ├─▶ .anim JSON → JS module     ─▶  bundle (text only) ─▶  │   frames on tick, emits
   (frames name stock       ─┘   exporting the AnimationDef                           │   Frame/End events
    sprites, e.g. "coin")                                                             └─ renderSnapshot exposes the
                                                                                         CURRENT frame; binding blits

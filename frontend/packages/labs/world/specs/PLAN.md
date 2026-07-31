@@ -8,12 +8,12 @@ leave room for them, and otherwise deferred.
 
 Read `DESIGN.md`, `GLOSSARY.md`, `ENGINE.md`, `SANDBOX.md`, and `INTERFACE.md`
 first — this plan assumes their vocabulary (World, Rule, Trait, Actor, Event,
-Step, Tick, Scene, Map, Animation).
+Step, Tick, Map, Animation).
 
 ## 1. Goal
 
 A learner edits a multi-file project (`rules/`, `worlds/`, `actors/`,
-`scenes/`, `maps/`, `animations/`, sprites) in the Codebridge editor. The
+`maps/`, `animations/`, sprites) in the Codebridge editor. The
 driver compiles that project, runs it as a Phaser 4 game inside an isolated
 iframe, shows the game in the preview pane, and relays console output and
 engine errors back to the lab. Small edits reload in place where possible;
@@ -22,8 +22,8 @@ structural edits restart the game.
 The first milestone is a **vertical slice** (§11), not the full runtime: the
 thinnest end-to-end path that proves the pipeline — the two sandboxes, module
 compilation, the ECS core, and the Phaser binding — by rendering a
-gravity-driven sprite from a learner-authored `scene`, `world`, `actor`, and
-`rule`, and hot-patching one property live.
+gravity-driven sprite from a learner-authored `world`, `actor`, and `rule`,
+and hot-patching one property live.
 
 ## 2. One lab origin, one sandbox origin, four programs
 
@@ -62,8 +62,8 @@ overlap:
   instantiation is permitted (§8), and it is deliberately a place no learner
   logic ever runs. Mirrors python-lab's _hidden_ compute iframe.
 - **C — the preview sandbox** (visible iframe on the sandbox origin). Hosts the
-  `world-lab` engine and `Phaser.Game`, imports the compiled module, constructs
-  the Scene, runs the loop, and reports back. It _is_ the canvas the student
+  `world-lab` engine and `Phaser.Game`, imports the compiled module, takes its
+  World, runs the loop, and reports back. It _is_ the canvas the student
   watches, so it lives in the `WorldPreview` pane, sized by the layout —
   web-lab's visible-preview placement.
 - **the learner's program** is compiled by B and executed by C, as real
@@ -177,7 +177,7 @@ Preview → lab (`FromPreviewMessage`):
 | `'built'`        | `id`                                              | the module loaded and the game is running (resolves the run promise)                                                                                            |
 | `'console'`      | `level`, `args`                                   | a learner `console.*`, for the debug surface                                                                                                                    |
 | `'engine_error'` | `message`, `stack?`, `phase: 'construct'\|'tick'` | a runtime failure located to a project file where possible                                                                                                      |
-| `'lifecycle'`    | `event`                                           | engine milestones (`scene_started`, `scene_stopped`, …)                                                                                                         |
+| `'lifecycle'`    | `event`                                           | engine milestones (`world_started`, `world_stopped`, …)                                                                                                         |
 | `'event'`        | `name`, `detail`                                  | open pass-through for arbitrary engine→lab signals, mirroring python relaying raw worker messages — keeps the contract extensible without a new type per signal |
 
 The lab brokers control (B and C surfaces above). The bulk payload — the
@@ -218,7 +218,7 @@ Adapted from `HTMLPreview.tsx`. Responsibilities:
   `?role=preview`) in the pane. The hidden compile iframe is created by the
   manager, not rendered here (like python's hidden iframe appended off-tree).
 - On `useSources` change (debounced), flatten via `projectFiles.ts` and post
-  `compile` with the entry (`scenes/main.js`, §6).
+  `compile` with the entry (`worlds/main.world`, §6).
 - Toolbar (reuse `WorkspaceHeader` + segmented buttons already in
   `WorldLayout`): run/refresh, stop, pause/resume.
 - Relay `console`/`engine_error` (the preview's `FromPreviewMessage`) into a
@@ -243,7 +243,7 @@ warning that the isolation guarantee holds only on the sandbox path.
 Per `INTERFACE.md`:
 
 ```
-scenes/main.js     ← default entry: default-exports a built Scene
+worlds/main.world  ← default entry: default-exports a WorldBuilder
 worlds/*.js        ← WorldBuilder → world-lab
 actors/*.js        ← ActorBuilder → world-lab
 rules/*.js|.ts     ← RuleBuilder → world-lab   (.rule Blockly deferred)
@@ -252,21 +252,21 @@ animations/*.json  ← Animation/spritesheet/tileset descriptors
 sprites/*.png      ← images
 ```
 
-The driver's entry is the scene the game starts on. For the slice, fix it to
-`scenes/main.js`; later, a level/appOptions field or a scene picker selects it.
+The driver's entry is the world the game starts in. For the slice, fix it to
+`worlds/main.world`; later, a level/appOptions field selects it.
 Modules import each other by project-relative path; they import the engine as
 the bare specifier `world-lab`. `phaser` is not learner-facing.
 
 **There is no project `index.html`.** Unlike Web Lab — where the page _is_ the
 artifact and the service worker serves the project's own `index.html` to the
-iframe — a World project is the game defined by `scenes`/`worlds`/`actors`/
-`rules`. The host page is a fixed, uneditable shell that only mounts the canvas
+iframe — a World project is the game defined by `worlds`/`actors`/`rules`/
+`maps`. The host page is a fixed, uneditable shell that only mounts the canvas
 and `import()`s the compiled bundle; in this architecture that shell **is
 `preview.html`** (§2), served static by the sandbox origin, and the SW transport
 carries a compiled _JS module_, not an HTML page. Consequences: `config.ts`
 `editableFileTypes` is code (`js`/`ts`/`json`, later `.rule`/`.anim`), **not**
 `html`; `png` stays supported-but-not-editable; and `DEFAULT_PROJECT` is the
-engine demo (scenes/worlds/actors/rules + a sprite), never an `index.html`. The
+engine demo (worlds/actors/rules/maps + a sprite), never an `index.html`. The
 current scaffold's editable `index.html` + `'html'` type are placeholders cloned
 from Web Lab, replaced when the demo project lands (§11, milestone 3).
 
@@ -425,7 +425,7 @@ compiler's `changed` hint and sends it as `ToPreviewMessage.load{strategy}`:
   because state lives in id-keyed instances, not in the code. This is the "very
   nice" middle ground.
 - **Level 3 — structural reconcile.** Adding/removing an actor, adding a trait,
-  adding a rule: diff the new Scene definition against the live instance tree —
+  adding a rule: diff the new World definition against the live instance tree —
   add new actors, drop gone ones, add/remove trait state on survivors preserving
   overlapping properties. Hardest; later.
 
@@ -454,7 +454,6 @@ src/engine/
     Rule.ts                    ← rule definition (deps, traits, actions, events, steps)
     Actor.ts                   ← actor instance (trait set, property store, handlers)
     World.ts                   ← rule set, world-scoped property store
-    Scene.ts                   ← world instance + actor instances + populate(map)
     Scheduler.ts               ← topological ordering of Steps (before/after)
     EventQueue.ts              ← events queued during a tick, flushed after
     traits.ts                  ← reference-counted trait dependency resolution
@@ -462,9 +461,9 @@ src/engine/
     RuleBuilder.ts             ← addProperty/addAction/addTrait/addEvent/addStepBefore/After, build()
     WorldBuilder.ts            ← useRules/hideRule, build()
     ActorBuilder.ts            ← useTraits/set/on, build()
-    SceneBuilder.ts            ← useWorld/addActor/clear/populate, build()
+    WorldBuilder.ts            ← useRules/define/addActor/loadMap/clear, getWorld()
   phaser/
-    PhaserBinding.ts           ← Scene → Phaser.Game; the Phaser Scene bridge
+    PhaserBinding.ts           ← World → Phaser.Game; the Phaser Scene bridge
     spatialBinding.ts          ← Spatial trait → GameObject transform
     spriteBinding.ts           ← Animation/Sprite → Phaser texture/anim
 ```
@@ -489,9 +488,9 @@ Semantics to honor (`DESIGN.md`/`INTERFACE.md`):
 - **Actions/Queries** carry localizable `name`s for the future Blockly surface;
   in JS they are plain methods.
 
-The **Phaser binding** turns the abstract Scene into a running game:
+The **Phaser binding** turns the abstract World into a running game:
 
-- One `Phaser.Game` with a single Phaser `Scene` bridging to our `Scene`.
+- One `Phaser.Game` with a single Phaser `Scene` bridging to our `World`.
   Phaser `preload` loads sprite textures (project PNGs served as blobs);
   `create` instantiates a Phaser `GameObject` per Actor; `update(time, delta)`
   drives our `Scheduler` with the real `delta` (`ENGINE.md`'s real-time
@@ -509,7 +508,7 @@ Thinnest end-to-end path exercising every layer. Definition of done:
 
 Engine (headless, Vitest-tested):
 
-- `Vector`, `Property`, `Trait`, `Rule`, `Actor`, `World`, `Scene`, the four
+- `Vector`, `Property`, `Trait`, `Rule`, `Actor`, `World`, the four
   builders, `Scheduler` (before/after + cycle detection), `EventQueue`,
   reference-counted deps.
 - Three rules: **Spatial** ("Has Space" → position/scale/rotation +
@@ -517,7 +516,7 @@ Engine (headless, Vitest-tested):
   Step), **Gravity** ("Has Gravity" → acceleration before Motion; "Affected by
   Gravity" / "Acts as Ground" traits; `startsFalling`/`stopsFalling`; a trivial
   ground-stop).
-- One demo project shipped as `DEFAULT_PROJECT`: `scenes/main.js`,
+- One demo project shipped as `DEFAULT_PROJECT`: `worlds/main.world`,
   `worlds/platform.js`, `actors/player.js`, `rules/…` re-exporting the engine
   rules, one `sprites/*.png`.
 
@@ -565,7 +564,7 @@ Changed, in `packages/labs/world/`:
   mount and supplying the Codebridge runtime.
 - `src/config.ts` — add `.png` as supported-non-editable; keep editable types.
 - `src/constants.ts` — `DEFAULT_PROJECT` becomes the slice project; entry
-  constant `scenes/main.js`.
+  constant `worlds/main.world`.
 - `src/main.tsx` — call `setAssetBaseUrl` for the demo; `?world-sandbox=` drives
   isolated mode.
 - `package.json` — add `phaser` (v4), `esbuild-wasm`, `concurrently`; add
@@ -669,9 +668,9 @@ Unit first, then browser:
    origins under the production CSPs. No game yet.
 3. **Preview sandbox + Phaser binding** — DONE
    (`spikes/milestone-3/roundtrip.mjs`). The engine grew a driver-facing render
-   API (`World.renderSnapshot`, `SceneBuilder.getWorld`); `PhaserBinding`
+   API (`World.renderSnapshot`, `WorldBuilder.getWorld`); `PhaserBinding`
    constructs `Phaser.Game` from the built World and reconciles each positional
-   actor each frame; the preview imports the compiled Scene and runs it,
+   actor each frame; the preview imports the compiled World and runs it,
    relaying console. `world-lab` resolves via a **compiler URL rewrite** to the
    self-hosted `/vendor/world-lab.mjs` (one engine instance) — not an import map,
    which the preview's `script-src 'self'` would block inline. The round-trip
@@ -708,7 +707,7 @@ Unit first, then browser:
    Verified in the browser (default project's player is a `.actor`; the editor
    renders the floating blocks; the game runs) and unit-tested headlessly
    (`assembleActorModule`, `domainBlocks` generators). The default project now
-   pairs a JS scene/world with the Blockly-authored player.
+   pairs a JS world with the Blockly-authored player.
 7. **Richer vocabulary + interactivity** — IN PROGRESS. Grow the engine and
    blocks beyond the gravity demo. First slice DONE — keyboard input: the World
    gained a DOM-free input channel (`setInput`/`isKeyDown`), a new `input` rule

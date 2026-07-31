@@ -71,10 +71,7 @@ describe('inBuilderContext', () => {
     expect(inBuilderContext(block, EFFECT_ROOTS)).toBe(false);
   });
 
-  it('rejects a block in a scene or world root', () => {
-    expect(
-      inBuilderContext(chain('world_use_effect', 'world_scene'), EFFECT_ROOTS),
-    ).toBe(false);
+  it('rejects a block in a world root', () => {
     expect(
       inBuilderContext(chain('world_use_effect', 'world_world'), EFFECT_ROOTS),
     ).toBe(false);

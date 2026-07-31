@@ -542,6 +542,18 @@ describe('domain block generators', () => {
     }
   });
 
+  it('puts the actor-placing blocks in the World category', () => {
+    // There is no Scene category: a world holds both the laws and the actors,
+    // so `load map` / `add actor` belong beside the rules they run under.
+    const names = (DOMAIN_TOOLBOX as Array<{name: string}>).map(c => c.name);
+    expect(names).not.toContain('Scene');
+    expect(
+      (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
+        c => c.name === 'World',
+      )?.blocks,
+    ).toEqual(expect.arrayContaining(['world_load_map', 'world_add_actor']));
+  });
+
   it('surfaces generated property setters in their rule categories', () => {
     const category = (name: string) =>
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
@@ -616,12 +628,11 @@ describe('domain block generators', () => {
   });
 });
 
-describe('scene block generators', () => {
-  // The scene blocks read block.id and register imports on generator.definitions_
-  // (which Blockly's finish() hoists), so they need richer fakes than `emit`. The
-  // scene root reads its body from the next chain (`blockToCode(getNextBlock())`);
-  // `world_add_actor` still reads its `DO` input via `statementToCode` — the fake
-  // returns `body` for both.
+describe('actor-placing block generators', () => {
+  // These blocks read block.id and register imports on generator.definitions_
+  // (which Blockly's finish() hoists), so they need richer fakes than `emit`.
+  // `world_add_actor` reads its `DO` input via `statementToCode` — the fake
+  // returns `body` for both that and the next chain.
   const run = (
     type: string,
     block: Record<string, unknown>,
@@ -644,26 +655,6 @@ describe('scene block generators', () => {
     ) as string;
   };
 
-  it('world_scene builds the scene, imports the world, and hosts the body', () => {
-    const defs: Record<string, string> = {};
-    const code = run(
-      'world_scene',
-      {NAME: 'Game', WORLD: 'worlds/platform'},
-      defs,
-      '{ /* add */ }\n',
-    );
-    // The id is derived from the name.
-    expect(code).toContain(
-      'const scene = new WorldLab.SceneBuilder({id: "Game", name: "Game"});',
-    );
-    expect(code).toContain('scene.useWorld(Platform);');
-    expect(code).toContain('{ /* add */ }');
-    expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
-    expect(defs['mod:worlds/platform']).toBe(
-      'import Platform from "worlds/platform";',
-    );
-  });
-
   it('world_add_actor block-scopes the instance, using the block id as its id', () => {
     const defs: Record<string, string> = {};
     const code = run(
@@ -673,7 +664,7 @@ describe('scene block generators', () => {
       'actor.set(X);\n',
     );
     expect(code).toBe(
-      '{\nconst actor = scene.addActor(Coin, "add-coin", "actors/coin");\n' +
+      '{\nconst actor = world.addActor(Coin, "add-coin", "actors/coin");\n' +
         'actor.set(X);\n}\n',
     );
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
@@ -681,7 +672,7 @@ describe('scene block generators', () => {
 });
 
 describe('world block generators', () => {
-  // The world root reads its body from the next chain, like the actor/scene root.
+  // The world root reads its body from the next chain, like the actor root.
   const run = (
     type: string,
     block: Record<string, unknown>,
@@ -963,7 +954,7 @@ describe('world block generators', () => {
 describe('world_load_map generator', () => {
   afterEach(() => setProjectMaps({}));
 
-  it('imports+defines each actor the map places, then populates', () => {
+  it('imports+defines each actor the map places, then loads it', () => {
     setProjectMaps({'maps/level1': ['actors/player', 'actors/coin']});
     const defs: Record<string, string> = {};
     const code = generatorFor('world_load_map')(
@@ -972,9 +963,9 @@ describe('world_load_map generator', () => {
       {} as never,
     ) as string;
     expect(code).toBe(
-      'scene.define("actors/player", Player);\n' +
-        'scene.define("actors/coin", Coin);\n' +
-        'scene.populate(Level1);\n',
+      'world.define("actors/player", Player);\n' +
+        'world.define("actors/coin", Coin);\n' +
+        'world.loadMap(Level1);\n',
     );
     expect(defs['mod:actors/player']).toBe(
       'import Player from "actors/player";',

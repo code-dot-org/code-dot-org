@@ -78,7 +78,7 @@ export function reconcile(
   // is deliberate. `sameActors` compares the previous build's PRE-TICK snapshot
   // against the incoming one, but the incoming world is not always freshly
   // built — an unchanged bundle re-imports to the same module instance, whose
-  // scene has been ticking — so for any game where something moves the two
+  // world has been ticking — so for any game where something moves the two
   // disagree about positions and the flag reads false on almost every rebuild.
   //
   // Gating a shader swap on it would mean the swap never happens, which is the

@@ -10,7 +10,6 @@ import {
   FrameProperty,
   IntrinsicSizeProperty,
   PositionProperty,
-  SceneBuilder,
   SpriteProperty,
   Vector,
   WorldBuilder,
@@ -19,12 +18,12 @@ import {
 } from '../index';
 
 // A world with the Animation rule and one actor that has the appearance trait.
-function makeScene(animation = '') {
-  const scene = new SceneBuilder({id: 'game', name: 'Game'});
-  const world = scene.useWorld(
-    new WorldBuilder({id: 'w', name: 'W'}).useRules([AnimationRule]),
-  );
-  const actor = scene.addActor(
+function makeWorld(animation = '') {
+  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+    AnimationRule,
+  ]);
+  const world = builder.getWorld();
+  const actor = builder.addActor(
     new ActorBuilder({id: 'a', name: 'A'})
       .useTraits([AppearanceTrait])
       .set(PositionProperty, new Vector(0, 0))
@@ -36,7 +35,7 @@ function makeScene(animation = '') {
 describe('the Animation rule', () => {
   it('advances the frame by each frame delay, looping', () => {
     // Stock "coinSpin": 6 frames at 12 fps → 1000/12 ≈ 83.33 ms per frame.
-    const {world, actor} = makeScene('coinSpin');
+    const {world, actor} = makeWorld('coinSpin');
     expect(actor.get(FrameProperty)).toBe(0);
     world.tick(0.1); // 100ms → past frame 0's ~83ms, into frame 1
     expect(actor.get(FrameProperty)).toBe(1);
@@ -53,7 +52,7 @@ describe('the Animation rule', () => {
   it('publishes the animation frame-cell size as the actor intrinsic size', () => {
     // "coinSpin" is a 32px uniform strip; the Collision rule reads this to fit
     // its default box to the sprite.
-    const {world, actor} = makeScene('coinSpin');
+    const {world, actor} = makeWorld('coinSpin');
     // Unknown until the first tick resolves the animation.
     expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
     world.tick(0.01);
@@ -66,13 +65,11 @@ describe('the Animation rule', () => {
     const wholeImage: AnimationDef = {
       frames: [{sprite: 's', delay: 100}],
     };
-    const scene = new SceneBuilder({id: 'gw', name: 'GW'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'ww', name: 'WW'})
-        .useRules([AnimationRule])
-        .useAnimations({wholeImage}),
-    );
-    const actor = scene.addActor(
+    const builder = new WorldBuilder({id: 'ww', name: 'WW'})
+      .useRules([AnimationRule])
+      .useAnimations({wholeImage});
+    const world = builder.getWorld();
+    const actor = builder.addActor(
       new ActorBuilder({id: 'aw', name: 'AW'})
         .useTraits([AppearanceTrait])
         .set(PositionProperty, new Vector(0, 0))
@@ -90,13 +87,11 @@ describe('the Animation rule', () => {
         {sprite: 's', delay: 100},
       ],
     };
-    const scene = new SceneBuilder({id: 'g2', name: 'G2'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'w2', name: 'W2'})
-        .useRules([AnimationRule])
-        .useAnimations({oneShot}),
-    );
-    const actor = scene.addActor(
+    const builder = new WorldBuilder({id: 'w2', name: 'W2'})
+      .useRules([AnimationRule])
+      .useAnimations({oneShot});
+    const world = builder.getWorld();
+    const actor = builder.addActor(
       new ActorBuilder({id: 'a2', name: 'A2'})
         .useTraits([AppearanceTrait])
         .set(PositionProperty, new Vector(0, 0))
@@ -123,13 +118,11 @@ describe('the Animation rule', () => {
         {sprite: 's', delay: 100},
       ],
     };
-    const scene = new SceneBuilder({id: 'gr', name: 'GR'});
-    const world = scene.useWorld(
-      new WorldBuilder({id: 'wr', name: 'WR'})
-        .useRules([AnimationRule])
-        .useAnimations({oneShot}),
-    );
-    const actor = scene.addActor(
+    const builder = new WorldBuilder({id: 'wr', name: 'WR'})
+      .useRules([AnimationRule])
+      .useAnimations({oneShot});
+    const world = builder.getWorld();
+    const actor = builder.addActor(
       new ActorBuilder({id: 'ar', name: 'AR'})
         .useTraits([AppearanceTrait])
         .set(PositionProperty, new Vector(0, 0))
@@ -160,7 +153,7 @@ describe('the Animation rule', () => {
   });
 
   it('leaves a looping animation cycling when it is replayed (no hitch)', () => {
-    const {world, actor} = makeScene('coinSpin');
+    const {world, actor} = makeWorld('coinSpin');
     world.tick(0.3); // advance a few frames into the loop
     const frame = actor.get(FrameProperty);
     expect(frame).toBeGreaterThan(0);
@@ -171,7 +164,7 @@ describe('the Animation rule', () => {
   });
 
   it('emits FrameChangedEvent with the new frame index on each advance', () => {
-    const {world, actor} = makeScene('coinSpin'); // 6 frames, ~83ms each
+    const {world, actor} = makeWorld('coinSpin'); // 6 frames, ~83ms each
     const frames: unknown[] = [];
     actor.on(FrameChangedEvent, (_world, _actor, detail) =>
       frames.push(detail),
@@ -184,7 +177,7 @@ describe('the Animation rule', () => {
   });
 
   it('resets frame state when the selected animation changes', () => {
-    const {world, actor} = makeScene('coinSpin');
+    const {world, actor} = makeWorld('coinSpin');
     world.tick(0.3); // advance several frames
     expect(actor.get(FrameProperty)).toBeGreaterThan(0);
     actor.set(AnimationProperty, 'playerWalk'); // switch
@@ -193,7 +186,7 @@ describe('the Animation rule', () => {
   });
 
   it('renderSnapshot reports the current animation frame cell, or the sprite, or nothing', () => {
-    const {world, actor} = makeScene('coinSpin');
+    const {world, actor} = makeWorld('coinSpin');
     world.tick(0.1); // frame 1
     const frame = world.renderSnapshot().find(s => s.actor === actor)?.frame;
     expect(frame?.sprite).toBe('coinSpin');

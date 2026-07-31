@@ -59,8 +59,6 @@ import {
   mapOptions,
   mapOptionsExtension,
   ruleModuleOptions,
-  worldOptions,
-  worldOptionsExtension,
 } from './moduleOptions';
 import type {
   ActionMeta,
@@ -624,7 +622,6 @@ const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
 export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   ...EVENT_BLOCKS.map(block => block.type),
   'world_actor',
-  'world_scene',
   'world_world',
   'world_rule',
 ]);
@@ -1390,7 +1387,7 @@ const worldIsA = defineBlock({
     'Whether an actor is of a given kind (the map places it by its type).',
   generator: {
     javascript(block, generator) {
-      // The dropdown value is the module path (`actors/coin`), which the scene
+      // The dropdown value is the module path (`actors/coin`), which the world
       // stamps as each placed actor's `type` — so an actor's kind is its `.type`.
       const actor =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
@@ -1403,15 +1400,14 @@ const worldIsA = defineBlock({
   },
 });
 
-// ── Scene composition ────────────────────────────────────────────────────────
-// A `.scene` file is authored with `world_scene` (the root, like `world_actor`)
-// and `world_add_actor` children. Each `add` block PLACES an instance of an
-// actor template: it binds `const actor = scene.addActor(Template, <id>)` in its
-// own block scope, so the very same `set`-style body blocks that target `actor`
-// in an actor definition compose here unchanged (only the pure `actor.set(...)`
-// ones — `set position` — are valid on a live instance; trait/appearance blocks
-// belong to the template). The instance id is the Blockly block's own id, which
-// is stable across edits — realizing "scene tools supply stable ids".
+// ── Placing actors ───────────────────────────────────────────────────────────
+// `world_add_actor` and `world_load_map` chain under a `.world` file's root and
+// PLACE actors in it. An `add` block binds `const actor = world.addActor(
+// Template, <id>)` in its own block scope, so the very same `set`-style body
+// blocks that target `actor` in an actor definition compose here unchanged
+// (only the pure `actor.set(...)` ones — `set position` — are valid on a live
+// instance; trait/appearance blocks belong to the template). The instance id is
+// the Blockly block's own id, which is stable across edits.
 
 /** A JS import identifier for a project module path (`actors/coin` → `Coin`). */
 const importVar = (path: string): string => {
@@ -1428,45 +1424,6 @@ const addImport = (generator: unknown, key: string, code: string): void => {
   (generator as {definitions_: Record<string, string>}).definitions_[key] =
     code;
 };
-
-const worldScene = defineBlock({
-  type: 'world_scene',
-  message0: 'define scene named %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'Game'}],
-  message1: 'world %1',
-  args1: [{type: 'field_dropdown', name: 'WORLD', options: worldOptions()}],
-  // A definition root: no previous connection, a NEXT connection — the `add
-  // actor` / `load map` body chains below it, not nested in a `do` input.
-  nextStatement: true,
-  extensions: [worldOptionsExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Define a scene: the world its actors live in, and the actors in it.',
-  generator: {
-    javascript(block, generator) {
-      const name = block.getFieldValue('NAME');
-      const world = block.getFieldValue('WORLD');
-      addImport(
-        generator,
-        'world_lab',
-        `import * as WorldLab from 'world-lab';`,
-      );
-      addImport(
-        generator,
-        `mod:${world}`,
-        `import ${importVar(world)} from ${str(world)};`,
-      );
-      const body = nextChainCode(block, generator);
-      return (
-        `const scene = new WorldLab.SceneBuilder({id: ${str(id_from_name(name))}, name: ${str(
-          name,
-        )}});\n` +
-        `scene.useWorld(${importVar(world)});\n` +
-        body
-      );
-    },
-  },
-});
 
 const worldAddActor = defineBlock({
   type: 'world_add_actor',
@@ -1489,12 +1446,12 @@ const worldAddActor = defineBlock({
       );
       const body = generator.statementToCode(block, 'DO');
       // Block scope: each add's `actor` binding is independent, so several adds
-      // in one scene don't collide, and the DO body's `actor.set(...)` blocks
+      // in one world don't collide, and the DO body's `actor.set(...)` blocks
       // (e.g. set position) target it. The block id is the stable instance id;
       // the module path is the actor's kind (its `type`), so "for each … I'm
       // touching" matches it regardless of the template's authored name.
       return (
-        `{\nconst actor = scene.addActor(${importVar(actor)}, ${str(
+        `{\nconst actor = world.addActor(${importVar(actor)}, ${str(
           block.id,
         )}, ${str(actor)});\n` + `${body}}\n`
       );
@@ -1510,11 +1467,11 @@ const worldLoadMap = defineBlock({
   nextStatement: true,
   extensions: [mapOptionsExtension],
   style: 'setup_blocks',
-  tooltip: 'Place all the actors a map file describes into the scene.',
+  tooltip: 'Place all the actors a map file describes into the world.',
   generator: {
     javascript(block, generator) {
       const map = block.getFieldValue('MAP');
-      // A map places instances of actor templates (`scene.populate`), so each
+      // A map places instances of actor templates (`world.loadMap`), so each
       // referenced template is imported and registered first. The generator
       // reads the map's actor modules from the live project registry.
       const defines = mapActorTypes(map)
@@ -1524,7 +1481,7 @@ const worldLoadMap = defineBlock({
             `mod:${type}`,
             `import ${importVar(type)} from ${str(type)};`,
           );
-          return `scene.define(${str(type)}, ${importVar(type)});\n`;
+          return `world.define(${str(type)}, ${importVar(type)});\n`;
         })
         .join('');
       addImport(
@@ -1532,16 +1489,17 @@ const worldLoadMap = defineBlock({
         `map:${map}`,
         `import ${importVar(map)} from ${str(map)};`,
       );
-      return `${defines}scene.populate(${importVar(map)});\n`;
+      return `${defines}world.loadMap(${importVar(map)});\n`;
     },
   },
 });
 
 // ── World composition ────────────────────────────────────────────────────────
 // A `.world` file is authored with `world_world` (the root, like `world_actor`)
-// and `world_use_rule` / `world_use_animations` children — the rules in play and
-// the animation files to register. Each body block targets the `const world`
-// the root binds, mirroring the actor/scene pattern.
+// and `world_use_rule` / `world_use_animations` / `world_load_map` children —
+// the rules in play, the animation files to register, and the actors placed.
+// Each body block targets the `const world` the root binds, mirroring the actor
+// pattern.
 
 const worldWorld = defineBlock({
   type: 'world_world',
@@ -1551,7 +1509,7 @@ const worldWorld = defineBlock({
   // rule` / `use animations` body chains below it, not nested in a `do` input.
   nextStatement: true,
   style: 'setup_blocks',
-  tooltip: 'Define a world: the rules in play and the animations it registers.',
+  tooltip: 'Define a world: the rules in play, and the actors that live in it.',
   generator: {
     javascript(block, generator) {
       const name = block.getFieldValue('NAME');
@@ -2044,7 +2002,6 @@ export const DOMAIN_BLOCKS = [
   ActorVariable.getterBlock,
   worldForEach,
   worldIsA,
-  worldScene,
   worldAddActor,
   worldLoadMap,
   worldWorld,
@@ -2086,8 +2043,8 @@ const ruleCategory = (rule: RuleMeta) => ({
 });
 
 /**
- * The toolbox for the Blockly editor. Structural categories (Actor, Scene,
- * World) come first, then one category per rule (in dependency order) holding
+ * The toolbox for the Blockly editor. Structural categories (Actor, World)
+ * come first, then one category per rule (in dependency order) holding
  * that rule's blocks, generated property setters, and events, then the
  * general-purpose blocks (Console output, Logic, Math, Text).
  */
@@ -2108,13 +2065,15 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_is_a',
     ],
   },
-  {name: 'Scene', blocks: ['world_scene', 'world_add_actor', 'world_load_map']},
   {
     name: 'World',
     blocks: [
       'world_world',
       'world_use_rule',
       'world_use_animations',
+      // Placing actors: from a map file, or one at a time.
+      'world_load_map',
+      'world_add_actor',
       'world_world_use_effect',
       // The runtime pair, beside the declaration they mirror.
       'world_add_world_effect',

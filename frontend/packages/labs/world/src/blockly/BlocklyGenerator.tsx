@@ -14,11 +14,7 @@ import {
   BlocklyWorkspace,
 } from '@code-dot-org/blockly';
 
-import {
-  assembleActorModule,
-  assembleSceneModule,
-  assembleWorldModule,
-} from './assembleActorModule';
+import {assembleActorModule, assembleWorldModule} from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {
@@ -90,10 +86,10 @@ export const BlocklyGenerator = forwardRef<
         const asString = (code: string | [string, number]): string =>
           Array.isArray(code) ? code[0] : code;
         // The domain blocks emit these bare identifiers (the principal actor, the
-        // world, a scene, an event's value). Reserve them so a Blockly variable
+        // world, an event's value). Reserve them so a Blockly variable
         // (e.g. a `for each` loop's actor variable) is never named to collide —
         // it gets a numbered suffix instead of shadowing the identifier.
-        generator.addReservedWords('actor,world,scene,eventValue,delta');
+        generator.addReservedWords('actor,world,eventValue,delta');
         generator.init(workspace);
 
         // A `.rule` file: the declarative scaffolding comes from its metadata
@@ -132,7 +128,7 @@ export const BlocklyGenerator = forwardRef<
           return generator.finish(ruleMetaToModule(meta, bodies));
         }
 
-        // A root block (an event handler, or an actor/scene/world definition)
+        // A root block (an event handler, or an actor/world definition)
         // owns the blocks chained below it as its body and generates that chain
         // itself — so generate it `thisOnly` to stop `scrub_` from also appending
         // the chain after it.
@@ -142,13 +138,10 @@ export const BlocklyGenerator = forwardRef<
             generator.blockToCode(block, rootTypesRef.current.has(block.type)),
           ),
         }));
-        // Route by the root block: `world_scene` → scene, `world_world` →
-        // world, otherwise an actor.
-        const assemble = generated.some(b => b.type === 'world_scene')
-          ? assembleSceneModule
-          : generated.some(b => b.type === 'world_world')
-            ? assembleWorldModule
-            : assembleActorModule;
+        // Route by the root block: `world_world` → world, otherwise an actor.
+        const assemble = generated.some(b => b.type === 'world_world')
+          ? assembleWorldModule
+          : assembleActorModule;
         return generator.finish(assemble(generated));
       },
     }),

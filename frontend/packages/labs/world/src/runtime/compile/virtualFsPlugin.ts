@@ -9,7 +9,7 @@
 
 import type {Loader, Plugin} from 'esbuild-wasm';
 
-// `.rule` / `.actor` / `.scene` / `.world` are Blockly-authored; by the time the
+// `.rule` / `.actor` / `.world` are Blockly-authored; by the time the
 // compiler sees them the lab has generated their JavaScript, so they load as JS.
 const EXT_ORDER = [
   '',
@@ -21,7 +21,6 @@ const EXT_ORDER = [
   '.effect',
   '.rule',
   '.actor',
-  '.scene',
   '.world',
   '/index.ts',
   '/index.js',
@@ -74,9 +73,9 @@ function loaderFor(path: string): Loader {
     path.endsWith('.anim') ||
     path.endsWith('.effect')
   ) {
-    // `.map` (a scene-instantiation document), `.anim` (an animation file), and
+    // `.map` (a world-population document), `.anim` (an animation file), and
     // `.effect` (a shader graph) are all raw JSON on disk, imported like
-    // `.json` — a `.map` by the scene's `load map` block, an `.anim` by the
+    // `.json` — a `.map` by the world's `load map` block, an `.anim` by the
     // world's `use animations` block, an `.effect` by an actor's `use effect`.
     //
     // An `.effect` travels through the bundle as DATA, not as generated code:
