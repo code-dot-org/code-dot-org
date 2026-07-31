@@ -29,11 +29,14 @@ import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
+import {useModeratedImageUpload} from './hooks/useModeratedImageUpload';
 import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
 import ShareView from './ShareView';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
@@ -99,6 +102,17 @@ function ReactFlowSketchLabViewInner({
   );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
+  const {
+    uploadImage,
+    handleImageNodesDeleted,
+    flaggedImageData,
+    handleAcceptFlaggedImage,
+    handleCancelFlaggedImage,
+    uploadsDisabled,
+    showUploadsDisabledModal,
+    openUploadsDisabledModal,
+    closeUploadsDisabledModal,
+  } = useModeratedImageUpload({levelName: levelProperties.name});
   // The Backpack API redirects to sign-in for signed-out users, so we only
   // create an instance when we have a user.
   const backpackContext = useMemo(
@@ -210,17 +224,15 @@ function ReactFlowSketchLabViewInner({
       supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
       addFileTooltipText: 'Add to sketch',
       addFileHandler: makeBackpackImageImportHandler({
-        levelName: levelProperties.name,
-        channelId,
+        uploadImage,
         addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
     [
+      uploadImage,
       reactFlow,
-      backpackContext,
+      backpackContext?.primaryApi,
       dialogControl,
-      channelId,
-      levelProperties.name,
       isBlockedAbuse,
       shareFailure,
     ]
@@ -279,7 +291,6 @@ function ReactFlowSketchLabViewInner({
   if (isShareView) {
     return (
       <ShareView
-        levelName={levelProperties.name}
         initialNodes={initialNodes}
         initialEdges={initialEdges}
         initialViewport={initialViewport}
@@ -377,7 +388,10 @@ function ReactFlowSketchLabViewInner({
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
-              levelName={levelProperties.name}
+              uploadImage={uploadImage}
+              uploadsDisabled={uploadsDisabled}
+              openUploadsDisabledModal={openUploadsDisabledModal}
+              onNodesDeleted={handleImageNodesDeleted}
               initialNodes={initialNodes}
               initialEdges={initialEdges}
               initialViewport={initialViewport}
@@ -389,6 +403,16 @@ function ReactFlowSketchLabViewInner({
             {WorkspaceAlert}
           </PanelContainer>
         </div>
+        {flaggedImageData && (
+          <FlaggedImageModal
+            appName="sketchlab"
+            onAccept={handleAcceptFlaggedImage}
+            onCancel={handleCancelFlaggedImage}
+          />
+        )}
+        {showUploadsDisabledModal && (
+          <UploadsDisabledModal onClose={closeUploadsDisabledModal} />
+        )}
       </div>
     </BackpackAPIContext.Provider>
   );

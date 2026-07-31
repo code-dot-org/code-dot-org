@@ -33,7 +33,6 @@ jobs:
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
       markdown-changed: ${{ steps.changes.outputs.markdown }}
-      e2e-tests-changed: ${{ steps.changes.outputs.e2e-tests }}
       playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
       # paths-filter needs a local git repo to diff push events (PRs use the API).
@@ -75,14 +74,6 @@ jobs:
               - 'frontend/packages/playwright-support/**'
               - 'frontend/*'
               - '.github/**'
-            # Trigger on the suite's own test code and its CI config — NOT on the PR's
-            # product code, since this suite runs against the deployed test-studio, where
-            # the PR's changes are not yet visible. .yarnrc.yml catches Playwright version
-            # bumps (catalog pin), which the test code paths alone would miss.
-            e2e-tests:
-              - 'frontend/packages/e2e-tests/**'
-              - '.github/workflows/e2e-tests-ci.yml'
-              - 'frontend/.yarnrc.yml'
 
   # Start the studio app CI workflow
   studio:
@@ -118,19 +109,10 @@ jobs:
       playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
-  # Start the e2e-tests Playwright suite when test code or its CI config changes.
-  e2e-tests:
-    if: ${{ needs.setup.outputs.e2e-tests-changed == 'true' }}
-    needs: setup
-    uses: ./.github/workflows/e2e-tests-ci.yml
-    with:
-      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
-    secrets: inherit
-
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library, oceans, markdown, e2e-tests]
+    needs: [setup, component-library, oceans, markdown]
     if: always()
     runs-on: ubuntu-24.04
     steps:

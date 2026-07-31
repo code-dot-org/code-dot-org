@@ -61,7 +61,7 @@ jobs:
           path: |
             frontend/packages/e2e-tests/playwright-report/
             frontend/packages/e2e-tests/test-results/
-          retention-days: 7
+          retention-days: 30
 
   eyes:
     runs-on: ubuntu-24.04
@@ -104,4 +104,4 @@ jobs:
           path: |
             frontend/packages/e2e-tests/playwright-report/
             frontend/packages/e2e-tests/test-results/
-          retention-days: 7
+          retention-days: 30
