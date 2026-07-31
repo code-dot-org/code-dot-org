@@ -9,8 +9,11 @@ import {
 import {
   ACTOR_DEFINITION_EXTENSION,
   RUNTIME_ACTOR_EXTENSION,
+  RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
+  WORLD_DEFINITION_EXTENSION,
 } from '../extensions/actorContext';
+import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 
@@ -871,6 +874,75 @@ describe('world block generators', () => {
     expect(Object.keys(defs)).toEqual([]);
   });
 
+  it('world_world_use_effect plays an effect over the whole viewport', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_world_use_effect',
+      {EFFECT: 'effects/underwater'},
+      defs,
+      '',
+    );
+    expect(code).toBe('world.useEffect("effects/underwater", Underwater);\n');
+    expect(defs['mod:effects/underwater']).toBe(
+      'import Underwater from "effects/underwater";',
+    );
+  });
+
+  it('world_world_use_effect carries parameter values too', () => {
+    const code = run(
+      'world_world_use_effect',
+      {EFFECT: 'effects/underwater'},
+      {},
+      '',
+      {EPARAM_0_0: '0.4'},
+      [{id: 'murk', name: 'murk', type: 'float', defaultValue: 0.1}],
+    );
+    expect(code).toContain('{"murk": 0.4}');
+  });
+
+  it('world_add_world_effect starts a viewport effect at runtime', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_add_world_effect',
+      {EFFECT: 'effects/underwater'},
+      defs,
+      '',
+    );
+    expect(code).toBe('world.addEffect("effects/underwater", Underwater);\n');
+    expect(defs['mod:effects/underwater']).toBe(
+      'import Underwater from "effects/underwater";',
+    );
+  });
+
+  it('world_add_world_effect carries parameter values', () => {
+    const code = run(
+      'world_add_world_effect',
+      {EFFECT: 'effects/underwater'},
+      {},
+      '',
+      {EPARAM_0_0: '0.4'},
+      [{id: 'murk', name: 'murk', type: 'float', defaultValue: 0.1}],
+    );
+    expect(code).toContain('{"murk": 0.4}');
+  });
+
+  it('world_remove_world_effect needs only the path', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_remove_world_effect',
+      {EFFECT: 'effects/underwater'},
+      defs,
+      '',
+    );
+    expect(code).toBe('world.removeEffect("effects/underwater");\n');
+    expect(Object.keys(defs)).toEqual([]);
+  });
+
+  it('the runtime world blocks emit nothing without a chosen effect', () => {
+    expect(run('world_add_world_effect', {EFFECT: ''}, {}, '')).toBe('');
+    expect(run('world_remove_world_effect', {EFFECT: ''}, {}, '')).toBe('');
+  });
+
   it('world_use_animations imports the file and registers its animations', () => {
     const defs: Record<string, string> = {};
     const code = run(
@@ -1160,11 +1232,32 @@ describe('builder-context warnings', () => {
     expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
   });
 
+  it('guards the world effect block to a world definition', () => {
+    // `WorldBuilder.useEffect` is builder-only; a handler rebinds `world` to
+    // the live World, which has no such method.
+    expect(extensionsOf('world_world_use_effect')).toContain(
+      WORLD_DEFINITION_EXTENSION,
+    );
+  });
+
   it('guards the runtime effect blocks against a template body', () => {
     // The mirror case: `addEffect`/`removeEffect` are Actor methods, so under
     // `define actor` — where `actor` is the builder — they would throw.
     for (const type of ['world_add_effect', 'world_remove_effect']) {
       expect(extensionsOf(type)).toContain(RUNTIME_ACTOR_EXTENSION);
+    }
+  });
+
+  it('guards the runtime world blocks against a world definition', () => {
+    // `World.addEffect` is the live world's; the builder has only `useEffect`.
+    // They also carry `worldContext`, which catches `world` being unbound
+    // entirely — the two warnings answer different questions.
+    for (const type of [
+      'world_add_world_effect',
+      'world_remove_world_effect',
+    ]) {
+      expect(extensionsOf(type)).toContain(RUNTIME_WORLD_EXTENSION);
+      expect(extensionsOf(type)).toContain(WORLD_CONTEXT_EXTENSION);
     }
   });
 

@@ -23,17 +23,43 @@ vi.mock('../../../effect/compiler', () => ({
 vi.mock('../../../effect/runtime', () => ({
   registerEffect: vi.fn((_phaser, _scene, name: string) => ({
     renderNodeName: `EffectShader.${name}`,
+    version: 0,
   })),
-  applyEffectToActor: vi.fn(() => ({remove: vi.fn()})),
+  applyEffectToActor: vi.fn(() => ({
+    remove: vi.fn(),
+    controller: {uniformValues: null},
+  })),
+  applyEffectToWorld: vi.fn(() => ({
+    remove: vi.fn(),
+    controller: {uniformValues: null},
+  })),
+  updateEffect: vi.fn(),
+  buildUniformValues: vi.fn(() => new Map([['uParam', 1]])),
 }));
 
-const {registerEffect, applyEffectToActor} = await import(
-  '../../../effect/runtime'
-);
+const {
+  registerEffect,
+  applyEffectToActor,
+  applyEffectToWorld,
+  updateEffect,
+  buildUniformValues,
+} = await import('../../../effect/runtime');
 const {EffectRegistry} = await import('../effects');
 
-const spec = (path: string, name = 'Ripple'): AppliedEffectSpec =>
-  ({path, document: {name}}) as unknown as AppliedEffectSpec;
+/**
+ * An applied effect. Documents are shared by name, because that is how they
+ * really arrive: a `.effect` is an ES module import, so ten actors wearing one
+ * effect all hold the *same* document object. The registry compares documents
+ * by identity, so a fixture minting a fresh object per call would look like an
+ * edit on every frame.
+ */
+const documents = new Map<string, object>();
+const spec = (path: string, name = 'Ripple'): AppliedEffectSpec => {
+  if (!documents.has(name)) {
+    documents.set(name, {name});
+  }
+  return {path, document: documents.get(name)} as unknown as AppliedEffectSpec;
+};
 
 const scene = {} as Phaser.Scene;
 const phaser = {} as never;
@@ -50,6 +76,9 @@ describe('EffectRegistry.reconcile', () => {
   beforeEach(() => {
     vi.mocked(registerEffect).mockClear();
     vi.mocked(applyEffectToActor).mockClear();
+    vi.mocked(applyEffectToWorld).mockClear();
+    vi.mocked(updateEffect).mockClear();
+    vi.mocked(buildUniformValues).mockClear();
     errors = [];
     registry = new EffectRegistry(phaser, message => errors.push(message));
   });
@@ -159,5 +188,133 @@ describe('EffectRegistry.reconcile', () => {
     registry.reconcile(scene, gameObject(), effects);
 
     expect(errors).toHaveLength(1);
+  });
+
+  describe('the camera', () => {
+    const camera = () => ({}) as never;
+
+    it('attaches a viewport effect to the camera, not to an object', () => {
+      // An actor's effect filters its own pixels; a world's filters everything
+      // the camera drew. Different call, same bookkeeping.
+      registry.reconcileCamera(scene, camera(), [spec('effects/underwater')]);
+
+      expect(applyEffectToWorld).toHaveBeenCalledTimes(1);
+      expect(applyEffectToActor).not.toHaveBeenCalled();
+    });
+
+    it('does not re-attach across frames', () => {
+      const view = camera();
+      const effects = [spec('effects/underwater')];
+
+      registry.reconcileCamera(scene, view, effects);
+      registry.reconcileCamera(scene, view, effects);
+
+      expect(applyEffectToWorld).toHaveBeenCalledTimes(1);
+    });
+
+    it('detaches one the world has dropped', () => {
+      const view = camera();
+      registry.reconcileCamera(scene, view, [spec('effects/underwater')]);
+
+      registry.reconcileCamera(scene, view, []);
+
+      expect(
+        vi.mocked(applyEffectToWorld).mock.results[0].value.remove,
+      ).toHaveBeenCalledTimes(1);
+    });
+
+    it('shares the compiled shader with an actor using the same effect', () => {
+      // Keyed by path, so one program serves both surfaces.
+      registry.reconcileCamera(scene, camera(), [spec('effects/ripple')]);
+      registry.reconcile(scene, gameObject(), [spec('effects/ripple')]);
+
+      expect(registerEffect).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('a live shader swap', () => {
+    /** The same effect at the same path, carrying a different graph object. */
+    const edited = (path: string) =>
+      ({
+        path,
+        document: {name: 'Ripple', edited: true},
+      }) as unknown as AppliedEffectSpec;
+
+    it('swaps the shader when the graph changed, without re-registering', () => {
+      // Phaser throws if a render node name is registered twice, so an edit has
+      // to replace the program on the node that is already there.
+      const object = gameObject();
+      registry.reconcile(scene, object, [spec('effects/ripple')]);
+
+      registry.reconcile(scene, object, [edited('effects/ripple')]);
+
+      expect(updateEffect).toHaveBeenCalledTimes(1);
+      expect(registerEffect).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not detach and re-attach the filter', () => {
+      // The point of swapping in place: the filter keeps drawing, so the game
+      // never blinks.
+      const object = gameObject();
+      registry.reconcile(scene, object, [spec('effects/ripple')]);
+
+      registry.reconcile(scene, object, [edited('effects/ripple')]);
+
+      expect(applyEffectToActor).toHaveBeenCalledTimes(1);
+      expect(removeOf(0)).not.toHaveBeenCalled();
+    });
+
+    it('rebuilds the uniform values of every attached filter', () => {
+      // A new graph may declare different parameters; the old value map is
+      // keyed for the old ones.
+      const first = gameObject();
+      const second = gameObject();
+      registry.reconcile(scene, first, [spec('effects/ripple')]);
+      registry.reconcile(scene, second, [spec('effects/ripple')]);
+
+      registry.reconcile(scene, first, [edited('effects/ripple')]);
+
+      expect(buildUniformValues).toHaveBeenCalledTimes(2);
+    });
+
+    it('does nothing when the graph object is unchanged', () => {
+      // Compared by identity: the engine replaces the whole spec on an edit, so
+      // the same object means the same graph, every frame, for free.
+      const object = gameObject();
+      const effects = [spec('effects/ripple')];
+
+      registry.reconcile(scene, object, effects);
+      registry.reconcile(scene, object, effects);
+
+      expect(updateEffect).not.toHaveBeenCalled();
+    });
+
+    it('keeps the previous shader when the new graph will not compile', () => {
+      // Half-finished edits are normal while authoring; blanking the effect
+      // would punish the learner for one, and the editor already shows them
+      // the error.
+      const object = gameObject();
+      registry.reconcile(scene, object, [spec('effects/ripple')]);
+
+      registry.reconcile(scene, object, [spec('effects/ripple', 'Broken')]);
+
+      expect(updateEffect).not.toHaveBeenCalled();
+      expect(removeOf(0)).not.toHaveBeenCalled();
+      expect(errors).toHaveLength(1);
+    });
+
+    it('reports again if a repaired effect breaks a second time', () => {
+      const object = gameObject();
+      registry.reconcile(scene, object, [spec('effects/ripple', 'Broken')]);
+      expect(errors).toHaveLength(1);
+
+      // Repaired…
+      registry.reconcile(scene, object, [edited('effects/ripple')]);
+      // …then broken again. Without clearing the remembered failure this
+      // second break would be swallowed.
+      registry.reconcile(scene, object, [spec('effects/ripple', 'Broken')]);
+
+      expect(errors).toHaveLength(2);
+    });
   });
 });

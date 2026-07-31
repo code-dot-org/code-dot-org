@@ -10,7 +10,7 @@ import {describe, expect, it} from 'vitest';
 import type {EffectDocument} from '../../effect/model/types';
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
-import {effectSnapshotId} from '../core/effectIds';
+import {effectContentHash, effectSnapshotId} from '../core/effectIds';
 import {PositionalTrait, SpatialRule} from '../rules/spatial';
 
 const doc = (name: string, nodeId = 'sample-1'): EffectDocument => ({
@@ -201,6 +201,82 @@ describe('renderSnapshot', () => {
   });
 });
 
+describe('world effects', () => {
+  const worldWithEffect = (
+    document = doc('Underwater'),
+    values?: Record<string, number>,
+  ) =>
+    new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([SpatialRule])
+      .useEffect('effects/underwater', document, values)
+      .instantiate();
+
+  it('carries an effect declared on the world', () => {
+    const document = doc('Underwater');
+
+    expect(worldWithEffect(document).effects()).toEqual([
+      {path: 'effects/underwater', document},
+    ]);
+  });
+
+  it('is empty for a world that declares none', () => {
+    expect(worldWith(positional('rock')).effects()).toEqual([]);
+  });
+
+  it('carries parameter values', () => {
+    expect(worldWithEffect(doc('U'), {murk: 0.4}).effects()[0].values).toEqual({
+      murk: 0.4,
+    });
+  });
+
+  it('can be added and removed while the game runs', () => {
+    const world = worldWith(positional('rock'));
+
+    world.addEffect('effects/underwater', doc('Underwater'));
+    expect(world.effects()).toHaveLength(1);
+
+    world.removeEffect('effects/underwater');
+    expect(world.effects()).toEqual([]);
+  });
+
+  it('is idempotent by path, the way an actor effect is', () => {
+    const world = worldWith(positional('rock'));
+
+    world.addEffect('effects/underwater', doc('U'));
+    world.addEffect('effects/underwater', doc('U'));
+
+    expect(world.effects()).toHaveLength(1);
+  });
+
+  it('joins the snapshot ids', () => {
+    expect(worldWithEffect().snapshot().effectIds).toHaveLength(1);
+  });
+
+  it('reports its graph in effectDocs, not in the ids', () => {
+    const before = worldWithEffect(doc('U', 'sample-1')).snapshot();
+    const after = worldWithEffect(doc('U', 'sine-9')).snapshot();
+
+    // Editing the graph must NOT read as a structural change — it is patchable
+    // into a running game (see reconcile).
+    expect(after.effectIds).toEqual(before.effectIds);
+    expect(after.effectDocs).not.toEqual(before.effectDocs);
+  });
+
+  it('sits in the same id list as the actors', () => {
+    // Nothing downstream distinguishes a viewport effect from an actor's; the
+    // reconciler only asks whether the set changed.
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .useRules([SpatialRule])
+      .useEffect('effects/underwater', doc('U'))
+      .instantiate();
+    world.addActor(
+      positional('fish').useEffect('effects/ripple', doc('R')).instantiate('a'),
+    );
+
+    expect(world.snapshot().effectIds).toHaveLength(2);
+  });
+});
+
 describe('snapshot().effectIds', () => {
   it('is empty when nothing carries an effect', () => {
     expect(worldWith(positional('rock')).snapshot().effectIds).toEqual([]);
@@ -223,15 +299,29 @@ describe('snapshot().effectIds', () => {
     expect(world.snapshot().effectIds).toEqual(world.snapshot().effectIds);
   });
 
-  it('changes when the effect document changes', () => {
-    // This is the whole reason the id carries a hash rather than just a path:
-    // editing a `.effect` is the change that has to restart the game, and it
-    // leaves the path alone.
+  it('does NOT change when only the graph changes', () => {
+    // Identity is which effect with which knob settings. The graph lives in
+    // `effectDocs` precisely so an edit to it can be swapped into a running
+    // game instead of restarting one.
     const before = worldWith(
       positional('fish').useEffect('effects/ripple', doc('Ripple', 'sample-1')),
-    ).snapshot().effectIds;
+    ).snapshot();
     const after = worldWith(
       positional('fish').useEffect('effects/ripple', doc('Ripple', 'sine-9')),
+    ).snapshot();
+
+    expect(after.effectIds).toEqual(before.effectIds);
+    expect(after.effectDocs).not.toEqual(before.effectDocs);
+  });
+
+  it('changes when a parameter value changes', () => {
+    // Values ARE identity: the driver reads them once, when it attaches.
+    const document = doc('Ripple');
+    const before = worldWith(
+      positional('fish').useEffect('effects/ripple', document, {strength: 0.1}),
+    ).snapshot().effectIds;
+    const after = worldWith(
+      positional('fish').useEffect('effects/ripple', document, {strength: 0.9}),
     ).snapshot().effectIds;
 
     expect(after).not.toEqual(before);
@@ -265,18 +355,43 @@ describe('snapshot().effectIds', () => {
 });
 
 describe('effectSnapshotId', () => {
-  it('is `<path>@<hash>`', () => {
+  it('is `<path>@<hash of values>`', () => {
     const id = effectSnapshotId({path: 'effects/ripple', document: doc('R')});
 
     expect(id).toMatch(/^effects\/ripple@[a-z0-9]+$/);
   });
 
+  it('separates the same effect tuned differently', () => {
+    const document = doc('Ripple');
+    const a = effectSnapshotId({path: 'e', document, values: {s: 0.1}});
+    const b = effectSnapshotId({path: 'e', document, values: {s: 0.9}});
+
+    expect(a).not.toBe(b);
+  });
+
+  it('ignores the graph', () => {
+    const a = effectSnapshotId({path: 'e', document: doc('R', 'node-1')});
+    const b = effectSnapshotId({path: 'e', document: doc('R', 'node-2')});
+
+    expect(a).toBe(b);
+  });
+});
+
+describe('effectContentHash', () => {
   it('separates documents that differ only late in the text', () => {
     // A weak hash that dropped low bits would collide here; the FNV-1a shifts
     // exist for exactly this case.
-    const a = effectSnapshotId({path: 'e', document: doc('Ripple', 'node-1')});
-    const b = effectSnapshotId({path: 'e', document: doc('Ripple', 'node-2')});
+    const a = effectContentHash({path: 'e', document: doc('Ripple', 'node-1')});
+    const b = effectContentHash({path: 'e', document: doc('Ripple', 'node-2')});
 
     expect(a).not.toBe(b);
+  });
+
+  it('ignores the values, which are identity rather than content', () => {
+    const document = doc('Ripple');
+    const a = effectContentHash({path: 'e', document, values: {s: 0.1}});
+    const b = effectContentHash({path: 'e', document, values: {s: 0.9}});
+
+    expect(a).toBe(b);
   });
 });

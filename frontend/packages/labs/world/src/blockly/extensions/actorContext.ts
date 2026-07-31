@@ -77,7 +77,49 @@ export const actorDefinitionExtension = builderContextExtension(
   'This is part of describing an actor. Try placing it under "define actor".',
 );
 
+export const WORLD_DEFINITION_EXTENSION = 'world_needs_world_definition';
+
+/**
+ * For blocks that call a `WorldBuilder` method — `use effect` on a `.world`.
+ *
+ * Same trap one level up: `define world` declares `const world = new
+ * WorldBuilder(...)`, while an event handler and a rule step both rebind
+ * `world` to the live `World`. `WorldBuilder.useEffect` is builder-only, so a
+ * handler would call a method that is not there.
+ */
+export const worldDefinitionExtension = builderContextExtension(
+  WORLD_DEFINITION_EXTENSION,
+  ['world_world'],
+  'This is part of describing a world. Try placing it under "define world".',
+);
+
 export const RUNTIME_ACTOR_EXTENSION = 'world_needs_live_actor';
+
+/**
+ * Build an extension that warns INSIDE the given roots — the inverse of
+ * {@link builderContextExtension}, for blocks that need a live object where
+ * those roots supply a builder.
+ */
+function runtimeContextExtension(
+  name: string,
+  roots: readonly string[],
+  warning: string,
+): Extension {
+  return defineExtension(name, {
+    extension() {
+      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
+        const workspace = this.workspace as Blockly.WorkspaceSvg;
+        if (this.isInFlyout || event.isUiEvent || workspace?.isDragging?.()) {
+          return;
+        }
+        this.setWarningText(
+          inBuilderContext(this, roots) ? warning : null,
+          name,
+        );
+      });
+    },
+  });
+}
 
 /**
  * The mirror image: for blocks that need a LIVE actor.
@@ -93,24 +135,31 @@ export const RUNTIME_ACTOR_EXTENSION = 'world_needs_live_actor';
  * positive list of "places a live actor exists" would flag those, and a warning
  * on a working program is worse than none.
  */
-export const runtimeActorExtension: Extension = defineExtension(
+export const runtimeActorExtension = runtimeContextExtension(
   RUNTIME_ACTOR_EXTENSION,
-  {
-    extension() {
-      this.setOnChange(function (this: Block, event: Blockly.Events.Abstract) {
-        const workspace = this.workspace as Blockly.WorkspaceSvg;
-        if (this.isInFlyout || event.isUiEvent || workspace?.isDragging?.()) {
-          return;
-        }
-        this.setWarningText(
-          inBuilderContext(this, ['world_actor'])
-            ? 'This happens while the game runs. Try placing it inside an event, not under "define actor".'
-            : null,
-          RUNTIME_ACTOR_EXTENSION,
-        );
-      });
-    },
-  },
+  ['world_actor'],
+  'This happens while the game runs. Try placing it inside an event, not under "define actor".',
+);
+
+export const RUNTIME_WORLD_EXTENSION = 'world_needs_live_world';
+
+/**
+ * For `add effect to the world` / `remove effect from the world`.
+ *
+ * `World.addEffect` is a method of the live world; `WorldBuilder` has only
+ * `useEffect`. Inside `define world` the name `world` is the builder, so the
+ * call would be to a method that is not there — and the fix is to say
+ * `use effect` instead, which is what the message points at.
+ *
+ * Everywhere else `world` is the live instance: an event handler is
+ * `(world, actor, eventValue)` and a rule step is `(world, delta)`. A block
+ * with `world` unbound entirely is `worldContext`'s job, not this one, and the
+ * two warnings coexist by using different ids.
+ */
+export const runtimeWorldExtension = runtimeContextExtension(
+  RUNTIME_WORLD_EXTENSION,
+  ['world_world'],
+  'This happens while the game runs. To give the world an effect from the start, use "use effect" instead.',
 );
 
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';

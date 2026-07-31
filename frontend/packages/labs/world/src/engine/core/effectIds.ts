@@ -37,14 +37,26 @@ function hash(text: string): string {
 }
 
 /**
- * `<path>@<hash>` — what a change to this effect changes in the snapshot.
+ * An applied effect's IDENTITY: which effect, with which knob settings.
  *
- * The hash covers the parameter values as well as the graph. Values are read
- * once, when the filter is attached to the Game Object, so changing one only
- * reaches the screen on a restart — exactly like editing the graph.
+ * Deliberately excludes the graph. Identity is what has to be structural —
+ * gaining, losing, or retuning an effect all change what is attached to what,
+ * and the driver reads values once, when it attaches. The graph is different:
+ * it can be swapped underneath a running filter (`updateEffect`), so an edit to
+ * it should update the game rather than restart it. That content lives in
+ * {@link effectContentHash}.
  */
 export function effectSnapshotId(effect: AppliedEffectSpec): string {
-  return `${effect.path}@${hash(
-    JSON.stringify([effect.document, effect.values ?? null]),
-  )}`;
+  return `${effect.path}@${hash(JSON.stringify(effect.values ?? null))}`;
+}
+
+/**
+ * An effect's CONTENT: the graph, hashed.
+ *
+ * Compared separately from identity so the reconciler can tell "the learner
+ * edited the shader" from "the learner changed which effects are in play". The
+ * first is patchable into a running game; the second is not.
+ */
+export function effectContentHash(effect: AppliedEffectSpec): string {
+  return hash(JSON.stringify(effect.document));
 }

@@ -3,8 +3,9 @@
 // a rule for the simple view without removing it, and `set` overrides a
 // world-scoped property's default.
 
+import type {EffectDocument} from '../../effect/model/types';
 import type {AnimationDef} from '../core/animationTypes';
-import type {Property, Rule} from '../core/types';
+import type {AppliedEffectSpec, Property, Rule} from '../core/types';
 import {World} from '../core/World';
 
 export class WorldBuilder {
@@ -14,6 +15,7 @@ export class WorldBuilder {
   private readonly hidden = new Set<Rule>();
   private readonly overrides: Array<[Property, unknown]> = [];
   private readonly animations: Record<string, AnimationDef> = {};
+  private readonly effects: AppliedEffectSpec[] = [];
 
   constructor(opts: {id: string; name: string}) {
     this.id = opts.id;
@@ -51,6 +53,27 @@ export class WorldBuilder {
     return this;
   }
 
+  /**
+   * Play an effect across the whole viewport (specs/EFFECT_EDITOR.md).
+   *
+   * The World counterpart to `ActorBuilder.useEffect`: that one filters one
+   * actor's own pixels, this one filters everything the camera has drawn — the
+   * underwater distortion covering a whole scene, rather than a wobble on one
+   * fish. Same document, same parameters; only the surface it lands on differs.
+   *
+   * @param path     the effect's module path (`effects/underwater`)
+   * @param document the parsed `.effect` file, imported as JSON by the bundler
+   * @param values   values for the effect's declared parameters, by parameter id
+   */
+  useEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+  ): this {
+    this.effects.push(values ? {path, document, values} : {path, document});
+    return this;
+  }
+
   /** Create a live World from this description. */
   instantiate(): World {
     return new World({
@@ -59,6 +82,7 @@ export class WorldBuilder {
       rules: [...this.rules],
       overrides: [...this.overrides],
       animations: Object.entries(this.animations),
+      effects: [...this.effects],
     });
   }
 }

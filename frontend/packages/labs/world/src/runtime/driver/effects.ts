@@ -19,7 +19,13 @@ import type {AppliedEffectSpec} from 'world-lab';
 
 import {compileEffect} from '../../effect/compiler';
 import type {CompiledEffect} from '../../effect/compiler/types';
-import {applyEffectToActor, registerEffect} from '../../effect/runtime';
+import {
+  applyEffectToActor,
+  applyEffectToWorld,
+  buildUniformValues,
+  registerEffect,
+  updateEffect,
+} from '../../effect/runtime';
 import type {
   AppliedEffect,
   PhaserNamespace,
@@ -50,13 +56,28 @@ export type EffectErrorReporter = (message: string) => void;
 export class EffectRegistry {
   private readonly compiled = new Map<string, RegisteredEffect>();
   /**
-   * Paths whose graph would not compile.
+   * The document each registered effect was compiled from, by path.
    *
-   * Remembered so the message is reported once. Without this a broken effect on
-   * an actor would recompile and re-report on every Game Object creation, and
-   * the console would fill with the same sentence.
+   * Compared by identity, not by hashing: the engine replaces the whole spec
+   * when a `.effect` is edited (`World.setEffectDocument`), so a new object IS
+   * the signal, and re-hashing a graph every frame for every actor would be
+   * work done to learn what a pointer comparison already says.
    */
-  private readonly failed = new Set<string>();
+  private readonly compiledFrom = new Map<string, unknown>();
+  /** Controllers attached per path, so a shader swap can refresh their uniforms. */
+  private readonly controllers = new Map<string, Set<AppliedEffect>>();
+  /**
+   * The graph that last failed to compile, by path.
+   *
+   * Keyed by the DOCUMENT, not just the path, and that distinction is the
+   * difference between "do not repeat yourself" and "give up". Remembering the
+   * path alone silences the repeat — it is recompiled every frame for every
+   * actor wearing it — but also means a learner who fixes the graph gets
+   * nothing, because the effect is permanently written off. Remembering which
+   * graph failed reports each broken version once and retries the moment the
+   * learner changes it.
+   */
+  private readonly failed = new Map<string, unknown>();
   /**
    * What is currently attached to each Game Object, by effect path.
    *
@@ -95,6 +116,40 @@ export class EffectRegistry {
     object: FilterableGameObject,
     effects: readonly AppliedEffectSpec[],
   ): void {
+    this.reconcileInto(scene, object, effects, (registered, values) =>
+      applyEffectToActor(this.phaser, object, registered, values),
+    );
+  }
+
+  /**
+   * The same, for the whole viewport.
+   *
+   * An actor's effect filters that actor's own pixels before it is composited;
+   * a world's filters everything the camera has already drawn — an underwater
+   * distortion over a whole scene rather than a wobble on one fish. Identical
+   * bookkeeping, a different surface, so the camera is just another key in the
+   * same map.
+   */
+  reconcileCamera(
+    scene: Phaser.Scene,
+    camera: Phaser.Cameras.Scene2D.Camera,
+    effects: readonly AppliedEffectSpec[],
+  ): void {
+    this.reconcileInto(scene, camera, effects, (registered, values) =>
+      applyEffectToWorld(this.phaser, camera, registered, values),
+    );
+  }
+
+  private reconcileInto(
+    scene: Phaser.Scene,
+    target: object,
+    effects: readonly AppliedEffectSpec[],
+    attach: (
+      registered: RegisteredEffect,
+      values: AppliedEffectSpec['values'],
+    ) => AppliedEffect,
+  ): void {
+    const object = target;
     let live = this.attached.get(object);
     if (effects.length === 0 && !live?.size) {
       return;
@@ -119,23 +174,27 @@ export class EffectRegistry {
     }
 
     for (const effect of effects) {
-      if (live.has(effect.path)) {
-        continue;
-      }
+      // Resolved even when already attached: this is where an edited graph is
+      // noticed and swapped onto the live shader. Skipping it for attached
+      // effects — the obvious shape — means the only effects that could ever
+      // be updated are the ones not currently drawing.
       const registered = this.resolve(scene, effect);
-      if (!registered) {
+      if (!registered || live.has(effect.path)) {
         continue;
       }
       try {
         // Values are the learner's knob settings from the block;
         // `buildUniformValues` fills in each parameter's own default for
         // anything absent, so a partial map is fine.
-        live.set(
-          effect.path,
-          applyEffectToActor(this.phaser, object, registered, effect.values),
-        );
+        const applied = attach(registered, effect.values);
+        live.set(effect.path, applied);
+        // Remembered so a later shader swap can refresh this filter's uniforms.
+        const forPath =
+          this.controllers.get(effect.path) ?? new Set<AppliedEffect>();
+        forPath.add(applied);
+        this.controllers.set(effect.path, forPath);
       } catch (error) {
-        this.report(effect.path, error);
+        this.report(effect.path, effect.document, error);
       }
     }
   }
@@ -147,9 +206,12 @@ export class EffectRegistry {
   ): RegisteredEffect | undefined {
     const existing = this.compiled.get(effect.path);
     if (existing) {
+      if (this.compiledFrom.get(effect.path) !== effect.document) {
+        this.swap(scene, effect, existing);
+      }
       return existing;
     }
-    if (this.failed.has(effect.path)) {
+    if (this.failed.get(effect.path) === effect.document) {
       return undefined;
     }
 
@@ -157,9 +219,10 @@ export class EffectRegistry {
     try {
       compiled = compileEffect(effect.document);
     } catch (error) {
-      this.report(effect.path, error);
+      this.report(effect.path, effect.document, error);
       return undefined;
     }
+    this.compiledFrom.set(effect.path, effect.document);
 
     try {
       const registered = registerEffect(
@@ -173,13 +236,54 @@ export class EffectRegistry {
     } catch (error) {
       // Registration fails on a Canvas renderer, which the driver refuses at
       // boot (`assertWebGL`), so reaching here means something rarer.
-      this.report(effect.path, error);
+      this.report(effect.path, effect.document, error);
       return undefined;
     }
   }
 
-  private report(path: string, error: unknown): void {
-    this.failed.add(path);
+  /**
+   * The learner edited this effect's graph: recompile and swap the shader on
+   * the node the running filters already point at.
+   *
+   * Every filter using it keeps working — they hold the node by name — but
+   * their uniform values are rebuilt, because a new graph may declare different
+   * parameters and the old value map would be keyed for the old ones.
+   *
+   * A graph that no longer compiles is reported and the previous shader stays
+   * on screen. Blanking the effect mid-edit would punish the learner for a
+   * half-finished change; the editor already shows them the error.
+   */
+  private swap(
+    scene: Phaser.Scene,
+    effect: AppliedEffectSpec,
+    registered: RegisteredEffect,
+  ): void {
+    let compiled: CompiledEffect;
+    try {
+      compiled = compileEffect(effect.document);
+    } catch (error) {
+      this.report(effect.path, effect.document, error);
+      return;
+    }
+    this.failed.delete(effect.path);
+    this.compiledFrom.set(effect.path, effect.document);
+
+    try {
+      updateEffect(scene, registered, compiled);
+    } catch (error) {
+      this.report(effect.path, effect.document, error);
+      return;
+    }
+    for (const applied of this.controllers.get(effect.path) ?? []) {
+      applied.controller.uniformValues = buildUniformValues(
+        compiled,
+        effect.values,
+      );
+    }
+  }
+
+  private report(path: string, document: unknown, error: unknown): void {
+    this.failed.set(path, document);
     const detail = error instanceof Error ? error.message : String(error);
     // Name the file. The compiler's messages are about a graph ("Nothing is
     // connected to the Output yet."), and the learner has to be told which

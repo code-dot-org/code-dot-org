@@ -157,6 +157,23 @@ export class Actor {
     return this;
   }
 
+  /**
+   * Give every effect with this path a new graph, in place.
+   *
+   * Called by the hot-reload reconciler when a `.effect` file was edited; see
+   * `World.setEffectDocument`.
+   */
+  setEffectDocument(
+    path: string,
+    document: AppliedEffectSpec['document'],
+  ): void {
+    this.appliedEffects.forEach((effect, index) => {
+      if (effect.path === path) {
+        this.appliedEffects[index] = {...effect, document};
+      }
+    });
+  }
+
   /** Stop playing an effect. Removing one the actor does not have is a no-op. */
   removeEffect(path: string): this {
     const index = this.appliedEffects.findIndex(effect => effect.path === path);

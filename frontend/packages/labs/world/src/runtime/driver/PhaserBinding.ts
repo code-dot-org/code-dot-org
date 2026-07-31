@@ -180,6 +180,16 @@ export class PhaserBinding {
     };
 
     const sync = (scene: Phaser.Scene) => {
+      // Viewport-wide effects, applied to the camera rather than to any one
+      // object — everything it has drawn gets filtered. Reconciled each frame
+      // like an actor's, so a world effect can be added and removed while the
+      // game runs.
+      effectRegistry.reconcileCamera(
+        scene,
+        scene.cameras.main,
+        world.effects(),
+      );
+
       for (const state of world.renderSnapshot() as RenderState[]) {
         let object = objects.get(state.actor);
         if (!object) {

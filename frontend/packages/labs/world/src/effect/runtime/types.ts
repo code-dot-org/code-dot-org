@@ -26,6 +26,12 @@ export interface RegisteredEffect {
   /** Name of the render node registered with the renderer. */
   renderNodeName: string;
   compiled: CompiledEffect;
+  /**
+   * How many times this effect's shader has been swapped in place
+   * (`updateEffect`). It seeds the program name, which is what keeps two
+   * versions of one effect from colliding in the renderer's program cache.
+   */
+  version: number;
 }
 
 /** What `applyEffect` hands back so the caller can update or remove it. */

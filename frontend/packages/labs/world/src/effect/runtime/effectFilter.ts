@@ -70,12 +70,23 @@ export function registerEffect(
   compiled: CompiledEffect,
 ): RegisteredEffect {
   const renderNodeName = `EffectShader.${name}`;
+  // The registration is built first so the shader class can close over it and
+  // read `compiled` at CONSTRUCTION time. A node is built lazily, on the first
+  // draw that uses it, which may be after the effect was edited — reading the
+  // source captured here at registration would silently resurrect the version
+  // the learner has already replaced.
+  const registered: RegisteredEffect = {renderNodeName, compiled, version: 0};
 
   const BaseFilterShader = phaser.Renderer.WebGL.RenderNodes.BaseFilterShader;
 
   class EffectFilterShader extends BaseFilterShader {
     constructor(manager: Phaser.Renderer.WebGL.RenderNodes.RenderNodeManager) {
-      super(renderNodeName, manager, undefined, compiled.fragmentSource);
+      super(
+        renderNodeName,
+        manager,
+        undefined,
+        registered.compiled.fragmentSource,
+      );
     }
 
     override setupUniforms(
@@ -113,9 +124,85 @@ export function registerEffect(
     );
   }
 
+  // Throws if the name is already registered — Phaser has no replace. That is
+  // why editing an effect swaps the shader on the existing node
+  // (`updateEffect`) instead of registering it again.
   renderer.renderNodes.addNodeConstructor(renderNodeName, EffectFilterShader);
 
-  return {renderNodeName, compiled};
+  return registered;
+}
+
+/**
+ * Replace a registered effect's shader in place, keeping every filter that is
+ * already using it.
+ *
+ * This is what makes editing a `.effect` update a running game rather than
+ * restarting it. The obvious route — registering the effect again under the
+ * same name — does not work: `addNodeConstructor` *throws* when the name is
+ * taken, and even if it did not, the manager caches the constructed node and
+ * would never build a second one.
+ *
+ * So the node stays and its shader is swapped underneath.
+ * `ProgramManager.setBaseShader` rewrites the current config, and the program
+ * is looked up by a key derived from that config — so a changed source (and a
+ * changed name, since two versions of one effect must not collide in the
+ * program cache) yields a freshly compiled program on the next draw. Filters
+ * hold the node by *name*, so every controller already attached picks up the
+ * new program without being touched.
+ *
+ * The caller is responsible for the controllers' uniform values: a new graph
+ * may declare different parameters, and `buildUniformValues` has to be re-run
+ * against the new descriptors.
+ *
+ * @returns the same `RegisteredEffect`, now carrying the new compilation
+ */
+export function updateEffect(
+  scene: Phaser.Scene,
+  effect: RegisteredEffect,
+  compiled: CompiledEffect,
+): RegisteredEffect {
+  const renderer = scene.game.renderer;
+  if (!('renderNodes' in renderer)) {
+    throw new Error(
+      translate(
+        'Effects need the WebGL renderer; this game is running on Canvas.',
+      ),
+    );
+  }
+  const node = renderer.renderNodes.getNode(effect.renderNodeName) as
+    | (Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader & {
+        programManager: {
+          currentConfig: {base: {name: string; vertexShader: string}};
+          setBaseShader: (
+            name: string,
+            vertexShader: string,
+            fragmentShader: string,
+          ) => void;
+        };
+      })
+    | null;
+  if (!node) {
+    // Nothing has drawn with this effect yet, so no node was ever constructed.
+    // The next draw builds it from the constructor, which closes over the
+    // compilation the caller is about to store — nothing to swap.
+    effect.compiled = compiled;
+    return effect;
+  }
+
+  const {programManager} = node;
+  const base = programManager.currentConfig.base;
+  programManager.setBaseShader(
+    // A distinct name per version: the program cache is keyed off this, and
+    // reusing it would hand back the previous compile.
+    `${effect.renderNodeName}#${effect.version + 1}`,
+    // The vertex side is Phaser's own filter vertex shader and does not change.
+    base.vertexShader,
+    compiled.fragmentSource,
+  );
+
+  effect.compiled = compiled;
+  effect.version += 1;
+  return effect;
 }
 
 /** Build the controller class for a registered effect. */
