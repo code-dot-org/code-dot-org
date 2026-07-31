@@ -1,6 +1,4 @@
-require 'objspace'
-
-# Track hit rate.
+# Track hit rate per cache store.
 ActiveSupport::Notifications.subscribe "cache_read.active_support" do |event|
   Cdo::Metrics.put(
     'Infrastructure',
@@ -8,22 +6,20 @@ ActiveSupport::Notifications.subscribe "cache_read.active_support" do |event|
     1,
     {
       Environment: CDO.rack_env,
-      Hit: event.payload[:hit],
+      Hit: event.payload[:hit].to_s,
       Store: event.payload[:store]
     }
   )
 end
 
-# Track total amount of data being read out of the cache, mostly to get insight
-# into how difficult it would be to host this cache on a networked server (ie,
-# redis). We can't do this with ActiveSupport instrumentation, because none of
-# the available events let us inspect the returned value itself.
-#
-# Could alternatively use ObjectSpace.memsize_of
+# Track total amount of data being read out of each cache cache, mostly to get
+# insight into what it would take to host the Rails cache on a networked server
+# (ie, redis). We can't do this with ActiveSupport instrumentation, because
+# none of the available events let us inspect the returned value itself.
 #
 # TODO infra: remove this module once we've finished investigating our runaway
 # memory usage issues. The hit rate tracker above might be useful enough to
-# keep, but this has too much potential performance impact for long-term use.
+# keep, but this is too case-specific and too much of a hack for long-term use.
 module Cdo
   module LogCacheBytesRead
     private def read_entry(key, **options)
