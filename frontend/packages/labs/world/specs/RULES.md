@@ -93,20 +93,38 @@ deferred:
   `set position` block had been suppressing the generated pair wholesale, so
   there was no way to read an actor's position in blocks at all.
 
-## The landing step, and what the query decomposition cost
+## The landing step
 
-`handleCollisions` IS authored now. The trick was to stop trying to hold state
-across a nested loop and move the loop into members the step calls:
+`handleCollisions` is authored, and — since variables arrived — it is written
+the way it would be written by hand:
 
-- **query `is resting on (faller, ground, frame)`** — the whole per-ground test,
-  for one pair.
-- **query `is on a ground? (faller, frame)`** — folds that over every ground,
-  `return true` on the first match.
-- **action `land on grounds (faller, frame)`** — the same walk, snapping
-  position and velocity.
+- **query `rest height of (faller, ground)`** — the y the faller comes to rest
+  at on that ground: its top under normal gravity, its underside when inverted.
+- **query `is resting on (faller, ground, frame)`** — the per-ground test.
+- **query `land on ground? (faller, frame)`** — ONE walk of the grounds that
+  snaps position and velocity _and_ reports whether it landed.
 
-The step then reads flat: land, then raise the transition if the resting state
-changed. No local variables anywhere.
+The step reads flat: land-and-ask, then raise the transition if the resting
+state changed.
+
+**Both directions, one test.** The sign of gravity's direction lives in a
+variable, and every comparison multiplies by it, so falling down onto a surface
+and falling up onto one are the same four terms. The built-in writes its whole
+landing test twice, once per direction, because it has nowhere to put the sign
+that reads well. Verified in the browser both ways: the player lands on the
+ground's top with gravity `(0, 1)` and on its underside with `(0, -1)`.
+
+**Landing and reporting are one walk.** `land on ground?` used to be an action
+that landed plus a query that walked the grounds again to answer — two passes
+for one question, because a body could not keep the answer between them. A
+query with a side effect is not pure, but "try to land it; tell me if it worked"
+is a coherent thing to ask, and it beats walking twice.
+
+**A hazard variables introduce.** A Blockly variable in a rule module is
+MODULE-scoped, not local to the member using it — `var sign;` is emitted once
+for the whole file, so two members using the same name share it. `land on
+ground?` therefore reads `restY` only _after_ the call that would clobber it.
+Nothing warns about this; it is the first real footgun in rule authoring.
 
 Four things had to change for that to work, and each was invisible until
 something reached for it:
