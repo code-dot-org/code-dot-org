@@ -162,10 +162,16 @@ module.exports = {
         );
         Applab.onPuzzleComplete();
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
+      expected: [
+        {
+          result: undefined,
+          testResult: TestResults.LEVEL_STARTED,
+        },
+        {
+          result: true,
+          testResult: TestResults.FREE_PLAY,
+        },
+      ],
     },
     {
       description: 'button image url correct with fully qualified url',
@@ -190,7 +196,16 @@ module.exports = {
           target: {value: assetUrl},
         });
 
-        setTimeout(function () {
+        var remainingPolls = 40;
+        var pollBackgroundImage = setInterval(function () {
+          var hasExpectedImage =
+            buttonElement.style.backgroundImage.includes(assetUrl);
+          if (!hasExpectedImage && remainingPolls > 0) {
+            remainingPolls--;
+            return;
+          }
+
+          clearInterval(pollBackgroundImage);
           try {
             assert.include(
               buttonElement.style.backgroundImage,
@@ -199,14 +214,20 @@ module.exports = {
             );
           } finally {
             delete window.__applabImageModerationStatusOverride;
+            Applab.onPuzzleComplete();
           }
-          Applab.onPuzzleComplete();
-        }, 0);
+        }, 25);
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
+      expected: [
+        {
+          result: undefined,
+          testResult: TestResults.LEVEL_STARTED,
+        },
+        {
+          result: true,
+          testResult: TestResults.FREE_PLAY,
+        },
+      ],
     },
     {
       description:

@@ -9,7 +9,8 @@ Feature: App Lab Scenarios 3
     # Create an app with an absolute image URL.
     # Force safe moderation so this scenario checks URL behavior, not service availability.
     When I ensure droplet is in text mode
-    And I append text to droplet "window.__applabImageModerationStatusOverride='safe'; image('test123', 'https://example.com/image.png')"
+    And execute JavaScript expression "window.__applabImageModerationStatusOverride='safe'"
+    And I append text to droplet "image('test123', 'https://example.com/image.png')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
     And I wait until element "#divApplab > .screen > img#test123" is an img with src "https://example.com/image.png"
