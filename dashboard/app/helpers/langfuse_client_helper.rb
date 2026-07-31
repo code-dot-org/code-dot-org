@@ -63,7 +63,7 @@ module LangfuseClientHelper
 
     # Create a trace with a single generation observation in one batch request.
     # Only the user's message text should be passed as input (not system prompts).
-    def create_trace_and_generation(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil)
+    def create_trace_and_generation(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil)
       trace_id = SecureRandom.uuid
       now = Time.now.utc.iso8601(3)
 
@@ -96,6 +96,8 @@ module LangfuseClientHelper
             output: output,
             usage: usage,
             metadata: metadata,
+            promptName: prompt_name,
+            promptVersion: prompt_version,
             startTime: start_time&.utc&.iso8601(3),
             endTime: end_time&.utc&.iso8601(3),
           }.compact,

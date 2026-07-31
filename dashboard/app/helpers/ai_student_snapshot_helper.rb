@@ -63,8 +63,11 @@ module AiStudentSnapshotHelper
 
   MODEL = SharedConstants::STUDENT_SNAPSHOT_MODEL_VERSION
 
+  LESSON_INSIGHT_FIELDS = %w[progress misconceptions assessment next_steps].freeze
+
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
-    system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
+    prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
+    system_prompt = prompt[:content]
     start_time = Time.now
 
     begin
@@ -89,21 +92,25 @@ module AiStudentSnapshotHelper
         unit_name: Unit.find(unit_id).name,
         section_id: section_id,
         student_id: student_id,
-        system_prompt: system_prompt,
+        variables: prompt[:variables],
+        prompt_name: prompt[:prompt_name],
+        prompt_version: prompt[:prompt_version],
         output: content,
         usage: response_body['usage'],
         start_time: start_time,
         end_time: end_time,
       )
 
-      return {status: response.code, json: content}
+      return {status: response.code, json: JSON.parse(content).slice(*LESSON_INSIGHT_FIELDS).to_json}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
     end
   end
 
   def self.generate_lesson_feedback(unit_id, lesson_id, teacher_id, student_id, section_id)
-    system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
+    prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
+    system_prompt = prompt[:content]
+    start_time = Time.now
 
     begin
       response = client.request_lesson_feedback(system_prompt)
@@ -114,13 +121,31 @@ module AiStudentSnapshotHelper
     end
     if response.code == 200
       response_body = JSON.parse(response.body)
-      response_body = response_body['choices'][0]['message']['content']
-      evaluation =  {status: response.code, json: response_body}
+      content = response_body['choices'][0]['message']['content']
+      end_time = Time.now
 
-      feedback_json = JSON.parse(response_body)
+      LangfuseHelper.trace_lesson_feedback(
+        model: MODEL,
+        teacher_id: teacher_id,
+        lesson_id: lesson_id,
+        lesson_name: Lesson.find(lesson_id).name,
+        unit_id: unit_id,
+        unit_name: Unit.find(unit_id).name,
+        section_id: section_id,
+        student_id: student_id,
+        variables: prompt[:variables],
+        prompt_name: prompt[:prompt_name],
+        prompt_version: prompt[:prompt_version],
+        output: content,
+        usage: response_body['usage'],
+        start_time: start_time,
+        end_time: end_time,
+      )
+
+      feedback_json = JSON.parse(content)
       feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
       saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
-      return {status: evaluation[:status], record: saved_record}
+      return {status: response.code, record: saved_record}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson feedback: #{response.body}")
     end
@@ -179,13 +204,7 @@ module AiStudentSnapshotHelper
         "Authorization" => "Bearer #{api_key}"
       }
 
-      response_props =
-        {
-          progress: {type: "string"},
-          misconceptions: {type: "string"},
-          assessment: {type: "string"},
-          next_steps: {type: "string"},
-        }
+      response_props = LESSON_INSIGHT_FIELDS.to_h {|field| [field.to_sym, {type: "string"}]}
 
       data = {
         model: model,
