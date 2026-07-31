@@ -85,6 +85,8 @@ import {
   ActorVariable,
   PARAM_GETTER_BLOCKS,
   PARAM_GETTER_TYPES,
+  PARAM_SETTER_BLOCKS,
+  PARAM_SETTER_TYPES,
 } from './typedVariables';
 import {
   registerValueShadows,
@@ -2279,6 +2281,7 @@ export const DOMAIN_BLOCKS = [
   worldStepDelta,
   worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
+  ...PARAM_SETTER_BLOCKS,
 ];
 
 // Keyed by rule id: the hand-authored (non-generated) blocks that act on a
@@ -2354,7 +2357,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step', // per-tick behavior (+ ordering)
       'world_emit', // raise one of the events a rule declares
       'world_step_delta', // the frame time, inside a step
-      ...PARAM_GETTER_TYPES, // read a parameter in the body (params via the +/− mutator)
+      // Read a parameter, or a variable of your own; the `+`/`−` mutator is
+      // what declares a parameter, so no block for that.
+      ...PARAM_GETTER_TYPES,
+      // …and put a value in one. A body can hold intermediate state now, which
+      // is what a step doing real work needs (specs/RULES.md).
+      ...PARAM_SETTER_TYPES,
     ],
   },
 ];

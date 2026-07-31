@@ -25,12 +25,24 @@ export interface TypedVariableConfig {
   /** The getter block's registered type name. Defaults to `variables_get_<type>`. */
   getterType?: string;
   /**
+   * The setter block's registered type name. Defaults to
+   * `variables_set_<type>`.
+   */
+  setterType?: string;
+  /**
    * The getter block's caption; `%1` is the variable field. Defaults to `%1`
    * (the bare variable name). Supply e.g. `'the %1'` to add fixed wording.
    */
   message0?: string;
+  /**
+   * The setter block's caption; `%1` is the variable field and `%2` the value
+   * socket. Defaults to `set %1 to %2`.
+   */
+  setterMessage0?: string;
   /** The getter block's tooltip. */
   tooltip?: string;
+  /** The setter block's tooltip. */
+  setterTooltip?: string;
 }
 
 /** A reusable, typed Blockly variable flavour produced by {@link createTypedVariable}. */
@@ -39,12 +51,26 @@ export interface TypedVariable {
   readonly type: string;
   /** The getter block's registered type name. */
   readonly getterType: string;
+  /** The setter block's registered type name. */
+  readonly setterType: string;
   /**
    * The getter block definition — a reporter whose output is checked to this
    * type. Register it (and offer it in the toolbox) so a variable of this type
    * can be read into a matching socket.
    */
   readonly getterBlock: BlockDefinition;
+  /**
+   * The setter block definition — a statement assigning a value of this type to
+   * a variable of this flavour. Its value socket is checked to the same tag the
+   * getter reports, so the two agree: what a `Vector` variable can be set to is
+   * exactly what reading one can be plugged into.
+   *
+   * Register it (and offer it in the toolbox) to let a body hold intermediate
+   * state. Without a setter a variable can only be BOUND by a binding block —
+   * a loop's variable, a parameter — never assigned, so a body cannot keep a
+   * value across two statements.
+   */
+  readonly setterBlock: BlockDefinition;
   /**
    * A `field_variable` argument bound to this flavour, to spread into a
    * *binding* block's args (a for-each loop's loop variable, a parameter). The
@@ -74,8 +100,12 @@ export function createTypedVariable(
   const style = config.style ?? 'variable_blocks';
   const defaultName = config.defaultName ?? type.toLowerCase();
   const getterType = config.getterType ?? `variables_get_${type}`;
+  const setterType = config.setterType ?? `variables_set_${type}`;
   const message0 = config.message0 ?? '%1';
+  const setterMessage0 = config.setterMessage0 ?? 'set %1 to %2';
   const tooltip = config.tooltip ?? `A ${type} variable.`;
+  const setterTooltip =
+    config.setterTooltip ?? `Put a value into a ${type} variable.`;
 
   const field = (
     name: string,
@@ -107,5 +137,26 @@ export function createTypedVariable(
     },
   });
 
-  return {type, getterType, getterBlock, field};
+  const setterBlock = defineBlock({
+    type: setterType,
+    message0: setterMessage0,
+    args0: [field('VAR'), {type: 'input_value', name: 'VALUE', check}],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    style,
+    tooltip: setterTooltip,
+    generator: {
+      javascript(block, generator) {
+        // The same name table the getter reads, so an assignment and a read of
+        // one variable agree on the identifier. Blockly's `finish()` emits the
+        // `var` declarations for everything named this way.
+        const name = generator.getVariableName(block.getFieldValue('VAR'));
+        const value = generator.valueToCode(block, 'VALUE', Order.NONE) || '0';
+        return `${name} = ${value};\n`;
+      },
+    },
+  });
+
+  return {type, getterType, setterType, getterBlock, setterBlock, field};
 }

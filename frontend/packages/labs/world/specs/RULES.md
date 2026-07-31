@@ -124,9 +124,31 @@ Two more things the landing step needed, both found by it failing to work:
   "renaming a member silently unhooks the project" hazard, in its other form:
   the reference was still valid, and pointed at a different object.
 
+## Variables
+
+A typed variable could be BOUND — by a `for each` loop, by a parameter row — and
+never assigned. There was no `set`, so a body could not keep a value across two
+statements, which is the whole reason the landing step was decomposed into three
+members that each recompute what the last one knew.
+
+`createTypedVariable` now returns a `setterBlock` beside its `getterBlock`: `set
+<var> to <value>`, with the value socket checked to the same tag the getter
+reports, so what a `Vector` variable accepts is exactly what reading one can be
+plugged into. Every flavour gets one (Number, Boolean, String, Vector, Actor)
+and they are in the Rule toolbox category next to the getters.
+
+The landing step uses one already: it asks `is on a ground?` once and holds the
+answer, where before it walked the grounds twice — once per branch.
+
+**Color has no flavour yet.** Adding one is not just another
+`createTypedVariable` call: `PARAM_FLAVOURS` also drives the parameter type
+dropdown, and a `color` parameter would need `ArgType` and `typedValueInputs` to
+know the type. Worth doing, but it is its own piece of work.
+
 ## What is still missing
 
-**The inverted-gravity branch is omitted.** The built-in mirrors its whole
+**The inverted-gravity branch is omitted.** Now unblocked — a variable can hold
+the sign of gravity's direction — but not yet written. The built-in mirrors its whole
 landing test for upward gravity, keyed on the sign of the direction. Without a
 local to hold that sign the test would have to be written out twice.
 

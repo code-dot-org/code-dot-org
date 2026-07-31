@@ -137,6 +137,20 @@ describe('rules/gravity.rule', () => {
     expect(worldLabImport).not.toContain('Ground');
   });
 
+  it('holds the resting answer in a variable rather than asking twice', () => {
+    // The first use of a variable SETTER in the shipped project. Before it
+    // existed a body could bind a variable (a loop's, a parameter's) but never
+    // assign one, so the landing step had to call `is on a ground?` once per
+    // branch and pay for the ground walk twice.
+    expect(source).toContain('variables_set_Boolean');
+    const doc = JSON.parse(source) as {
+      variables?: Array<{name: string; type: string}>;
+    };
+    expect(doc.variables).toContainEqual(
+      expect.objectContaining({name: 'resting', type: 'Boolean'}),
+    );
+  });
+
   it('is what the world puts in play', () => {
     expect(DEFAULT_PROJECT.source.files.main.contents).toContain(
       'rules/gravity',
