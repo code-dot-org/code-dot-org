@@ -1017,6 +1017,19 @@ class FilesTest < FilesApiTestBase
     assert_equal({'error' => 'Image URL host is not allowed.'}, JSON.parse(last_response.body))
   end
 
+  def test_moderate_image_url_reports_dns_failure_as_fetch_error
+    url = 'https://does-not-resolve.example/image.png'
+
+    IPSocket.expects(:getaddress).with('does-not-resolve.example').raises(SocketError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to fetch image URL.'}, JSON.parse(last_response.body))
+  end
+
   def test_moderate_image_url_rejects_unsupported_type
     url = 'https://images.example.com/unsafe.bmp'
 
@@ -1029,6 +1042,20 @@ class FilesTest < FilesApiTestBase
     assert_equal 400, last_response.status
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     assert_equal({'error' => "Unsupported image type. Only #{allowed} files are allowed."}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_oversized_streamed_body
+    url = 'https://images.example.com/huge.png'
+
+    FilesApi.any_instance.stubs(:max_file_size).returns(10)
+    FilesApi.any_instance.stubs(:resolved_public_ip_address).with('images.example.com').returns('203.0.113.10')
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Image URL content exceeds maximum file size.'}, JSON.parse(last_response.body))
   end
 
   private def delete_all_files(bucket)
