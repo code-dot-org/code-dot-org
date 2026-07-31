@@ -5,6 +5,8 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
+import styles from './library-id-copier.module.scss';
+
 export default class LibraryIdCopier extends React.Component {
   static propTypes = {
     channelId: PropTypes.string.isRequired,
@@ -18,23 +20,23 @@ export default class LibraryIdCopier extends React.Component {
   render() {
     const {channelId} = this.props;
     return (
-      <div style={styles.container}>
+      <div className={styles.container}>
         <TextField
           name="libraryChannelId"
+          className={styles.copy}
           ref={channelId => (this.channelId = channelId)}
           onClick={event => event.target.select()}
           onChange={() => {}}
           readOnly
           value={channelId}
           size="s"
-          style={styles.copy}
         />
         <MuiButton
           variant="contained"
           color="primary"
           size="small"
           onClick={this.copyChannelId}
-          sx={{marginLeft: '10px'}}
+          sx={{marginLeft: '10px', whiteSpace: 'nowrap', flexShrink: 0}}
         >
           {i18n.copyId()}
         </MuiButton>
@@ -42,14 +44,3 @@ export default class LibraryIdCopier extends React.Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  copy: {
-    cursor: 'copy',
-    width: 250,
-  },
-};
