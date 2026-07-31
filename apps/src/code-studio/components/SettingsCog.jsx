@@ -115,6 +115,7 @@ export class SettingsCog extends Component {
             borderRadius: '50%',
             height: '1rem',
             width: '1rem',
+            '& > i': {transform: 'translateY(1px)'},
           }}
           aria-label={msg.settings()}
         >
