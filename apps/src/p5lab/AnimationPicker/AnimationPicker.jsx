@@ -1,3 +1,4 @@
+import Dialog from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -9,7 +10,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
-import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
@@ -186,31 +186,23 @@ class AnimationPicker extends React.Component {
           uploadsEnabled={this.props.uploadsEnabled}
           projectType={this.props.projectType}
         />
-        <StylizedBaseDialog
-          title={msg.animationPicker_leaveSelectionTitle()}
-          isOpen={this.state.exitingDialog}
-          backdropStyle={{
-            top: -15,
-            right: -15,
-            bottom: -15,
-            left: -15,
-          }}
-          hideCloseButton={true}
-          handleClose={() => {
-            this.setState({exitingDialog: false});
-          }}
-          cancellationButtonText={msg.animationPicker_discardSelection()}
-          handleCancellation={() => {
-            this.props.onClose();
-            this.setState({exitingDialog: false});
-          }}
-          confirmationButtonText={msg.animationPicker_returnToLibrary()}
-          handleConfirmation={() => {
-            this.setState({exitingDialog: false});
-          }}
-          style={styles.dialog}
-          body={<p>{msg.animationPicker_leaveSelectionText({contextName})}</p>}
-        />
+        {this.state.exitingDialog && (
+          <Dialog
+            title={msg.animationPicker_leaveSelectionTitle()}
+            description={msg.animationPicker_leaveSelectionText({contextName})}
+            primaryButtonProps={{
+              children: msg.animationPicker_returnToLibrary(),
+              onClick: () => this.setState({exitingDialog: false}),
+            }}
+            secondaryButtonProps={{
+              children: msg.animationPicker_discardSelection(),
+              onClick: () => {
+                this.props.onClose();
+                this.setState({exitingDialog: false});
+              },
+            }}
+          />
+        )}
       </div>
     );
   }

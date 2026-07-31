@@ -11,6 +11,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'spritelab',
   'poetry',
   'game_design',
+  'sketchlab',
   'applab',
 ];
 
@@ -64,6 +65,7 @@ interface AnalyticsData {
   uploaderType?:
     | 'Lab2FileUploader'
     | 'AnimationPicker'
+    | 'SketchLab'
     | 'ImageURLInput'
     | 'n/a';
   moderateEvent?: string;

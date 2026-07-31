@@ -175,7 +175,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     filename = 'index.html'
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
@@ -227,7 +226,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     filename = 'index.html'
     invalid_html = '<button onclick="alert(1)">Click me</button>'
@@ -1066,7 +1064,6 @@ end
 class FilesApiHtmlValidationTest < Minitest::Test
   def test_valid_html_content_disallows_on_attrs
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     api = FilesApi.allocate
 

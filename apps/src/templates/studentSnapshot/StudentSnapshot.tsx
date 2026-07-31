@@ -99,6 +99,11 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
+  const selectedLesson = React.useMemo(
+    () => lessons.find(lesson => lesson.id === selectedLessonId),
+    [lessons, selectedLessonId]
+  );
+
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
   const tourResumed = useRef(false);
@@ -192,13 +197,11 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        {selectedLessonId && selectedStudentId && (
-          <StudentLessonProgressDetailsWidget
-            selectedUnitId={selectedUnitId}
-            selectedLessonId={selectedLessonId}
-            selectedStudentId={selectedStudentId}
-          />
-        )}
+        <StudentLessonProgressDetailsWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonInsightWidget
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
@@ -221,6 +224,7 @@ const StudentSnapshot: React.FC = () => {
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
           selectedStudentId={selectedStudentId}
+          hasCodeLevel={!!selectedLesson?.hasCodeLevel}
         />
         <StudentRubricWidget
           gridWidth={2}
