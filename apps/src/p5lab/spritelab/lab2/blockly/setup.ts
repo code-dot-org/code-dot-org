@@ -171,7 +171,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
   {
     // Behavior2 prototype: typed sprites plus the start-system block. The
     // implementations these start live on the Systems tab.
-    name: 'Platform2',
+    name: 'Systems',
     types: [
       'gamelab_setBackgroundImageAs',
       // The classic platform-tile block: block-image picker, walls group —

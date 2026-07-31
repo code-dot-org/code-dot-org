@@ -132,7 +132,7 @@ function getWorldTabParams() {
     enabled: params.get('world-tab') === 'true',
     large: params.get('world') === 'large',
     // Behavior2 prototype: compose the project's system implementations into
-    // every run (Platform2's start-system block dispatches into them).
+    // every run (the Systems category's start block dispatches into them).
     behavior2: params.get('behavior2') === 'true',
   };
 }

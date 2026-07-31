@@ -86,9 +86,9 @@ export function getBehavior2System(name: string): Behavior2SystemMeta {
   );
 }
 
-// The sprite types Platform2 blocks tag sprites with. Values are runtime
-// group names; 'walls' and 'players' keep compatibility with the existing
-// GameDev group vocabulary (set_type, platformPhysics).
+// The sprite types the Systems category tags sprites with. Values are
+// runtime group names; 'walls' and 'players' keep compatibility with the
+// existing GameDev group vocabulary (set_type, platformPhysics).
 export const BEHAVIOR2_TYPE_OPTIONS: [label: string, group: string][] = [
   ['platform block', 'walls'],
   ['player', 'players'],

@@ -97,7 +97,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   // World-tab experiment: show the tab on this level (equivalent to the
   // world-tab=true URL parameter).
   showWorldTab?: boolean;
-  // Behavior2 prototype: enable the Systems tab, the Platform2 blocks, and
+  // Behavior2 prototype: enable the Systems tab, its toolbox category, and
   // system composition on this level (equivalent to ?behavior2=true).
   showBehavior2Tab?: boolean;
   // World-tab experiment: the tab edits the whole world, not just the

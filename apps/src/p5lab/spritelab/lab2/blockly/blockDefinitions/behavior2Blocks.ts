@@ -10,7 +10,7 @@ import {FIELD_GRID_TYPE} from '../gridFields';
 import {FIELD_COSTUME_TYPE} from '../imagePickerFields';
 
 // The behavior2 prototype's blocks (student-facing word: "system"): the
-// Platform2 category for the Code tab, and the implementation language for
+// Systems category for the Code tab, and the implementation language for
 // the Systems tab. The language blocks compile against __group, __option
 // (bound by compileBehavior2Sources' wrapper) and __current (bound by the
 // loop) — reserved words, see installLabBlocks.
