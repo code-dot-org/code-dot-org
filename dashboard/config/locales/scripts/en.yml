@@ -29575,7 +29575,7 @@ en:
               name: Lesson 2
           lesson_groups: {}
           name: ai-history
-          title: "[DEV] AI History"
+          title: "[DEV] AI History (AI Ready Skills Prep)"
           description_audience: ''
           description_short: ''
           description: |-
@@ -29707,6 +29707,8 @@ en:
           lessons:
             lesson-1:
               name: Teaching Intro to Programming
+            lesson-2:
+              name: Intro to Teaching Programming with AI [JavaScript]
           lesson_groups: {}
           name: pl-aif-intro-programming-js
           title: Teaching Introduction to Programming [JavaScript]
@@ -30031,3 +30033,6 @@ en:
             ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
           description_short: ''
           description_audience: ''
+        pl-intro-teaching-programming-with-ai-js:
+          lessons: {}
+          lesson_groups: {}
