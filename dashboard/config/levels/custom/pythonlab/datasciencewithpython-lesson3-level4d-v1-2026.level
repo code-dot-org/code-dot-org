@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2026-07-29T14:40:08.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## E-Sports Score Tracker\r\n\r\nCreate a program that calculates the total points scored across two matches in an E-Sports tournament. Choose the team or player and their match scores.\r\n\r\n### Build Your Program\r\n\r\nYour program must:\r\n\r\n* Store tournament information in variables and a numeric list\r\n* Access two match scores from the list using their indexes\r\n* Calculate the total points scored\r\n* Build and print a message that includes the result\r\n\r\nRun your program and fix any errors. Then ask AI Tutor to review it against the requirements and make any final changes yourself.\r\n\r\n::: details [Need help? Ask AI Tutor]\r\n\r\nYou can ask AI Tutor to help you:\r\n\r\n* Decide what tournament information to store\r\n* Plan how to calculate the total score\r\n* Check whether your plan meets the requirements\r\n* Give you a hint about a specific part of your code\r\n* Explain an error message\r\n\r\nAsk for guidance or hints, but write the program yourself.\r\n\r\n:::",
+    "long_instructions": "## E-Sports Score Tracker\r\n\r\nCreate a program that helps track performance in an E-Sports tournament. Choose the team or player, their match scores, and what useful score information your program will calculate.\r\n\r\n### Build Your Program\r\n\r\nYour program must:\r\n\r\n* Store tournament information in variables and a numeric list\r\n* Access at least two list elements and use them in an expression\r\n* Calculate information about the tournament scores\r\n* Build and print a message that includes the result\r\n\r\nRun your program and fix any errors. Then ask AI Tutor to review it against the requirements and make any final changes yourself.\r\n\r\n::: details [Need help? Ask AI Tutor]\r\n\r\nYou can ask AI Tutor to help you:\r\n\r\n* Decide what tournament information to store\r\n* Brainstorm useful score information to calculate\r\n* Check whether your plan meets the requirements\r\n* Give you a hint about a specific part of your code\r\n* Explain an error message\r\n\r\nAsk for guidance or hints, but write the program yourself.\r\n\r\n:::",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -57,9 +58,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWVmnvTtZt0hc86OHiY5vszHWzegGt9tp8ppR2sK\nKU1cuKbnGxNCTo6XuoPX/8CLHkkleE7O19pcPNOFw72saViG7Rz8KxaK4nEB\nOPcaO2VL2V0vKUwbVyBb9sY2dpmgMuAJ6ptfCeYqT3EmY5Ejp0HHwk3JYuhU\nJvNMv8sroWVKnurczS8y24atYFUcfb9CnYwXhjIReGEVl74dB/UfEPMp+evB\nZa2KxijgoXMm9VKLra0ewJQra/iopwOdZIOBTRfcvlbcBIVYt25rmIubYhKO\n7I6DfqfrdoPTJRTvYyWvuiDSCbVx2mdt7eFJS7vQdP66+hVqG0Tn1DMxH4KM\n1eeBBE/JwOP7qGt85ltX8SqZJJYFiaAfOwFVZAthlDwdqNHsx9dFYty1HKwM\nr9zdKgdlTDWG2+OqRRJi/963NzvWYX5NVNlA1ofUrqPpEjVKueQDw94vaB1m\n6oBd46V88wCOtRnuE0wt77J9kibqF1/YGR15QSSawwI+VENwPCE93JtLo0Pe\nH9dNWi7N5cgTd3AVO5esBY2R8KABLEdk2MuZeUoXY3YI/J5Tfy0KXOmhTbZW\nYYR5CJG9BsYiquTbYT3YAr093kVAOztLAYFsJHtPq7ObBlnPXyik1d/dRC4G\ncqUSr4/QKs4hCQ+OH/f2HpEfO1Gm2ZaKrlE6Om6h6HBzNXBA+A3ycmQg7+I1\ndWKyctNohDMrCKVK+w08Ws+XRzmRzkodw/Kg5UmoRwuDRN/u2BugpP/c8+n1\npBBCwV1Yc3OyJyDVoy/PncOf7bgqr7hKMmqczhbi6VuQE8Uzd2hjHygqYPL4\n2kWUrwUR/718gsjchElF5ln7q8Y+TaJwd+7MWxGZaV6Op2Ai9MfvOPbZ7rLP\nazbmQdAiraKnvr8sHxsta1GMtmo9j94oOydJUhesxhRY7klyhTXrdAn+Cn+g\nkstlQVI5a6FAPARxfmULXA==\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T14:40:08.144+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9c_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L9c_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 14:41:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 14:47:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T14:40:08.144+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L2-L9c_2024-pilot_pilot-2024\\\"\"],\"cloned_from\":\"datascience-U2L2-L9c_2024-pilot_pilot-2024\"},{\"changed_at\":\"2026-07-29 14:41:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 14:47:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 17:58:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 18:01:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Pythonlab>
