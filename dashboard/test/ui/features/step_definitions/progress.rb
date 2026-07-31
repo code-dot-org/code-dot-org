@@ -37,9 +37,7 @@ def verify_progress(selector, test_result)
   case test_result
   when 'perfect'
     background_colors = color_strings('perfect')
-    # No border check: progressStyles.js paints the filled completed states
-    # with a transparent border, so background alone identifies them.
-    border_colors = nil
+    border_colors = color_strings('perfect')
   when 'attempted'
     background_colors = color_strings('not_tried')
     border_colors = color_strings('perfect')
@@ -62,11 +60,10 @@ def verify_progress(selector, test_result)
   # The data for progress bubbles can be loaded asynchronously, so keep
   # checking until progress is loaded and the bubble is the correct color.
   # Each status accepts either the Light- or Dark-theme RGB resolution
-  # of its DSCO token (see `color_strings` above for why). A nil
-  # border_colors means the status does not distinguish itself by border.
+  # of its DSCO token (see `color_strings` above for why).
   wait_short_until do
     background_colors.include?(element_css_value(selector, 'background-color')) &&
-      (border_colors.nil? || border_colors.include?(element_css_value(selector, 'border-top-color')))
+      border_colors.include?(element_css_value(selector, 'border-top-color'))
   end
 end
 
