@@ -93,6 +93,83 @@ describe('ActorBuilder.useEffect', () => {
   });
 });
 
+describe('Actor.addEffect / removeEffect', () => {
+  it('starts an effect on a live actor', () => {
+    const ripple = doc('Ripple');
+    const actor = positional('fish').instantiate();
+
+    actor.addEffect('effects/ripple', ripple);
+
+    expect(actor.effects()).toEqual([
+      {path: 'effects/ripple', document: ripple},
+    ]);
+  });
+
+  it('is idempotent by path', () => {
+    // The case this exists for: an event that fires every frame while a
+    // condition holds. Stacking would attach a new filter per frame.
+    const actor = positional('fish').instantiate();
+
+    actor.addEffect('effects/ripple', doc('Ripple'));
+    actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.9});
+
+    expect(actor.effects()).toHaveLength(1);
+  });
+
+  it('keeps the first values when adding a path it already has', () => {
+    // Idempotent means idempotent: the second call is not a way to retune a
+    // running effect. Changing values while attached is separate work.
+    const actor = positional('fish').instantiate();
+
+    actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.1});
+    actor.addEffect('effects/ripple', doc('Ripple'), {strength: 0.9});
+
+    expect(actor.effects()[0].values).toEqual({strength: 0.1});
+  });
+
+  it('stops an effect', () => {
+    const actor = positional('fish').instantiate();
+    actor.addEffect('effects/ripple', doc('Ripple'));
+
+    actor.removeEffect('effects/ripple');
+
+    expect(actor.effects()).toEqual([]);
+  });
+
+  it('ignores removing an effect the actor does not have', () => {
+    const actor = positional('fish')
+      .useEffect('effects/ripple', doc('Ripple'))
+      .instantiate();
+
+    actor.removeEffect('effects/glow');
+
+    expect(actor.effects()).toHaveLength(1);
+  });
+
+  it('can remove one the template applied', () => {
+    // A template effect and a runtime one are the same list; nothing marks an
+    // effect as "from the builder" and so unremovable.
+    const actor = positional('fish')
+      .useEffect('effects/ripple', doc('Ripple'))
+      .instantiate();
+
+    actor.removeEffect('effects/ripple');
+
+    expect(actor.effects()).toEqual([]);
+  });
+
+  it('leaves other instances of the template alone', () => {
+    const builder = positional('fish').useEffect('effects/ripple', doc('R'));
+    const first = builder.instantiate('a');
+    const second = builder.instantiate('b');
+
+    first.removeEffect('effects/ripple');
+
+    expect(first.effects()).toEqual([]);
+    expect(second.effects()).toHaveLength(1);
+  });
+});
+
 describe('renderSnapshot', () => {
   it('hands each actor its effects, for the driver to compile', () => {
     const ripple = doc('Ripple');
@@ -103,6 +180,18 @@ describe('renderSnapshot', () => {
     const [state] = world.renderSnapshot();
 
     expect(state.effects).toEqual([{path: 'effects/ripple', document: ripple}]);
+  });
+
+  it('reports an effect added after the actor was built', () => {
+    // The driver re-reads this every frame, which is how a runtime add reaches
+    // the screen without a restart.
+    const world = worldWith(positional('fish'));
+    const [state] = world.renderSnapshot();
+    expect(state.effects).toEqual([]);
+
+    state.actor.addEffect('effects/ripple', doc('Ripple'));
+
+    expect(world.renderSnapshot()[0].effects).toHaveLength(1);
   });
 
   it('reports an empty list for an actor with no effects', () => {

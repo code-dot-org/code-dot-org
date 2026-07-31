@@ -52,7 +52,9 @@ export class Actor {
   private readonly store = new Map<Property, unknown>();
   private readonly handlers = new Map<GameEvent, EventHandler[]>();
   // Held, not interpreted: the engine never looks inside an effect document.
-  private readonly appliedEffects: readonly AppliedEffectSpec[];
+  // Mutable because effects can be added and removed while the game runs — the
+  // driver re-reads this list every frame through `renderSnapshot`.
+  private readonly appliedEffects: AppliedEffectSpec[];
 
   constructor(init: ActorInit) {
     this.id = init.id;
@@ -128,6 +130,40 @@ export class Actor {
   /** The effects played on this actor's image, in application order. */
   effects(): readonly AppliedEffectSpec[] {
     return this.appliedEffects;
+  }
+
+  /**
+   * Start playing an effect on this actor, now.
+   *
+   * Idempotent by path: an actor either wears an effect or it does not, so
+   * adding one it already has changes nothing. That is what makes this safe in
+   * an event that fires every frame while a condition holds — "while hurt, glow"
+   * would otherwise stack a new filter per frame until the frame rate died.
+   *
+   * The driver notices on its next frame (it reconciles this list against what
+   * is attached to the Game Object), so nothing here touches Phaser.
+   */
+  addEffect(
+    path: string,
+    document: AppliedEffectSpec['document'],
+    values?: AppliedEffectSpec['values'],
+  ): this {
+    if (this.appliedEffects.some(effect => effect.path === path)) {
+      return this;
+    }
+    this.appliedEffects.push(
+      values ? {path, document, values} : {path, document},
+    );
+    return this;
+  }
+
+  /** Stop playing an effect. Removing one the actor does not have is a no-op. */
+  removeEffect(path: string): this {
+    const index = this.appliedEffects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      this.appliedEffects.splice(index, 1);
+    }
+    return this;
   }
 
   /** Whether this actor carries `property` (seeded by one of its traits). */

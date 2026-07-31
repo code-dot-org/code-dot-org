@@ -646,6 +646,64 @@ which is sub-pixel on a 24px sprite, so the visible distortion is the block's
 value reaching the uniform and nothing else. The scaffolding was then removed;
 the tutorial's player is unrippled again.
 
+## 11b. Runtime effects on an instance — DONE
+
+An effect can now be started and stopped on ONE actor while the game runs:
+"when the player starts falling, ripple; when it lands, stop". `use effect`
+still describes the template, so every instance is born wearing the effect;
+these two blocks reach a live actor.
+
+```
+when [this actor] starts falling
+  add effect [Ripple] to [this actor]
+
+when [this actor] stops falling
+  remove effect [Ripple] from [this actor]
+```
+
+**Engine.** `Actor.addEffect(path, document, values?)` and
+`removeEffect(path)`. `addEffect` is **idempotent by path** — an actor either
+wears an effect or it does not — which is what makes it safe in an event that
+fires every frame while a condition holds; stacking would attach a new filter
+per frame until the frame rate died. It follows that a second `addEffect` is
+not a way to retune a running effect: the first call's values stand.
+
+**Driver.** `EffectRegistry.applyTo` became `reconcile`, called from `sync`
+every frame rather than once at Game Object creation. It diffs the actor's list
+against a `WeakMap<GameObject, Map<path, AppliedEffect>>` and applies only the
+difference, using the `remove()` the effect runtime already returned. Actors
+with no effects and nothing attached — nearly all of them, nearly every frame —
+cost one property read and return.
+
+**Blocks.** `add effect <EFFECT> to <ACTOR>` and
+`remove effect <EFFECT> from <ACTOR>`, with the `this actor` shadow on the
+socket like `set sprite`, so a loop's touched actor can be dropped in instead.
+`add effect` carries the same parameter sockets as `use effect` (same mutator)
+and imports the `.effect` as data, because the driver compiles the graph when
+it attaches. `remove effect` needs only the path, so it imports nothing.
+
+**The guard runs the other way.** These call `Actor` methods, which the builder
+does not have, so `runtimeActorExtension` warns when one is placed under
+`define actor` — the mirror of the `use effect` warning, sharing the same
+`inBuilderContext` walk. It is deliberately narrow: elsewhere the block may be
+perfectly fine, since an ACTOR socket filled from a loop has a live subject
+whatever encloses it, and a warning on a working program is worse than none.
+
+**A bug the unit tests caught, that a browser probably would not have.** The
+first `reconcile` captured the attached-map once and rebuilt it per attach, so
+the _second_ effect on an actor replaced the map holding the first — the first
+then looked unattached on the next frame and was attached again, every frame,
+stacking filters without bound. One actor with one effect (every manual test)
+looks perfect. The map is now resolved once and mutated in place, and a test
+covers "keeps one effect while removing another".
+
+**Verified in Chromium**, with the player gaining the ripple on `startsFalling`
+and losing it on `stopsFalling`: the first sampled frame shows it mid-air and
+torn into wavy bands, later frames show it landed and clean — one continuous
+run, no reload between them. Sampling had to start the instant the canvas
+appeared; the fall lasts under a second and a screenshot taken a beat late
+misses it entirely. The scaffolding was then removed.
+
 ## 12. Deferred
 
 - **World and Camera effects.** `applyEffectToWorld` exists and applies to the
@@ -654,33 +712,5 @@ the tutorial's player is unrippled again.
 - **Live shader swap.** Re-registering a render node replaces the constructor,
   which is what would make editing a `.effect` update a running game without a
   restart. Until then, an edit restarts.
-- **Runtime effects on an instance — wanted, deferred.** Adding an effect to
-  one actor from inside an event handler ("when the player is hit, glow"), and
-  removing it again. `use effect` cannot do this and must not appear to: it is
-  a _template_ block that calls `ActorBuilder.useEffect`, and inside a handler
-  `actor` is rebound to the live `Actor`, which has no such method. The editor
-  now warns rather than letting that reach the game
-  (`extensions/actorContext.ts`).
-
-  The shape it wants, following `use trait` (template) vs `set sprite` /
-  `play animation` (runtime, on an instance):
-
-  1. `Actor` gains `addEffect(path, document)` / `removeEffect(path)`, keyed by
-     path so adding twice is a no-op. `renderSnapshot` already reports
-     `actor.effects()` every frame, so the list is free to change.
-  2. `PhaserBinding` stops applying effects once at Game Object creation and
-     reconciles them in `sync` instead: a `WeakMap<GameObject, Map<path,
-AppliedEffect>>` against `state.effects`, attaching what is new and calling
-     the `AppliedEffect.remove()` the runtime already returns for what is gone.
-     Actors with no effects and nothing attached early-out, which is most of
-     them.
-  3. Two runtime blocks — `add effect <EFFECT> to <ACTOR>` and
-     `remove effect <EFFECT> from <ACTOR>` — with the `this actor` shadow on the
-     ACTOR socket, exactly like `set sprite`.
-
-  The hot-reload snapshot is unaffected: `reconcile` only ever compares
-  snapshots taken at build time, before any tick, so effects added by a running
-  game never reach it.
-
 - **A stock effect library.** Effects come from the project's own `effects/`
   for now; enumerating the ones the curriculum wants is separate work.

@@ -176,14 +176,6 @@ export class PhaserBinding {
       installSkewHook(object as unknown as RenderStepInternals, () =>
         skewMatrices.get(object),
       );
-      // Effects are applied once, here, and not reconciled per frame: attaching
-      // a filter enables the object's filter pipeline and inserts a render step
-      // (see ./skew for why that insertion is delicate). Changing an actor's
-      // effects restarts the game — `World.snapshot()` reports them, so the
-      // reconciler treats a change as structural.
-      if (state.effects.length > 0) {
-        effectRegistry.applyTo(scene, object, state.effects);
-      }
       return object;
     };
 
@@ -194,6 +186,14 @@ export class PhaserBinding {
           object = create(scene, state);
           objects.set(state.actor, object);
         }
+        // Effects are reconciled every frame, not applied once at creation: an
+        // event handler can add or remove one while the game runs, and the
+        // engine's list is re-read here each tick. `reconcile` attaches only
+        // what is new and detaches what is gone (attaching twice would stack a
+        // second filter), and returns immediately for the common case of an
+        // actor with no effects.
+        effectRegistry.reconcile(scene, object, state.effects);
+
         const frame = state.frame;
         if (frame && object instanceof Phaser.GameObjects.Image) {
           // A cell (spritesheet source rect) maps to a frame index in the

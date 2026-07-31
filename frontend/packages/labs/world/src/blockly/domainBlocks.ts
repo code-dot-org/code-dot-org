@@ -26,6 +26,7 @@ import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
   actorDefinitionExtension,
+  runtimeActorExtension,
   traitContextExtension,
 } from './extensions/actorContext';
 import {
@@ -320,6 +321,92 @@ const worldUseEffect = defineBlock({
       return values
         ? `actor.useEffect(${str(path)}, ${importVar(path)}, ${values});\n`
         : `actor.useEffect(${str(path)}, ${importVar(path)});\n`;
+    },
+  },
+});
+
+/**
+ * Start an effect on ONE actor, while the game runs.
+ *
+ * The runtime counterpart to `use effect`: that one describes the template, so
+ * every instance is born wearing the effect; this one reaches a live actor —
+ * "when the player is hit, glow". It carries the same parameter sockets, so the
+ * glow can say how bright.
+ *
+ * `Actor.addEffect` is idempotent by path, which is what makes this safe in an
+ * event that fires every frame while a condition holds.
+ */
+const worldAddEffect = defineBlock({
+  type: 'world_add_effect',
+  message0: 'add effect %1 to %2',
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  mutator: effectParamsMutator,
+  extensions: [
+    effectFileOptionsExtension,
+    actorInputExtension,
+    runtimeActorExtension,
+    effectParamsInitExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Start playing an effect on an actor now. Adding one it already has changes nothing.',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      // The document is needed at runtime — the driver compiles the graph — so
+      // this imports the `.effect` as data exactly like `use effect` does.
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      const values = effectParamValuesCode(block, generator);
+      return values
+        ? `${target}.addEffect(${str(path)}, ${importVar(path)}, ${values});\n`
+        : `${target}.addEffect(${str(path)}, ${importVar(path)});\n`;
+    },
+  },
+});
+
+/** Stop an effect on one actor. Removing one it does not have is a no-op. */
+const worldRemoveEffect = defineBlock({
+  type: 'world_remove_effect',
+  message0: 'remove effect %1 from %2',
+  args0: [
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    effectFileOptionsExtension,
+    actorInputExtension,
+    runtimeActorExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip: 'Stop playing an effect on an actor.',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      const target =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      // No import: removing needs only the effect's identity, not its graph.
+      return `${target}.removeEffect(${str(path)});\n`;
     },
   },
 });
@@ -1792,6 +1879,8 @@ export const DOMAIN_BLOCKS = [
   worldActor,
   worldUseTrait,
   worldUseEffect,
+  worldAddEffect,
+  worldRemoveEffect,
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
@@ -1864,6 +1953,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_actor',
       'world_use_trait',
       'world_use_effect',
+      // The runtime pair, beside the template block they mirror.
+      'world_add_effect',
+      'world_remove_effect',
       'world_this_actor',
       ActorVariable.getterType,
       'world_is_a',

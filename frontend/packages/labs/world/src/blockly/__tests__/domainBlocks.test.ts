@@ -8,6 +8,7 @@ import {
 } from '../domainBlocks';
 import {
   ACTOR_DEFINITION_EXTENSION,
+  RUNTIME_ACTOR_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
 } from '../extensions/actorContext';
 import {setProjectMaps} from '../moduleOptions';
@@ -810,6 +811,57 @@ describe('world block generators', () => {
     expect(code).toBe('actor.useEffect("effects/ripple", Ripple);\n');
   });
 
+  it('world_add_effect starts an effect on a live actor', () => {
+    // The runtime counterpart: it imports the document too, because the driver
+    // compiles the graph when it attaches the filter.
+    const defs: Record<string, string> = {};
+    const code = run('world_add_effect', {EFFECT: 'effects/glow'}, defs, '', {
+      ACTOR: 'actor',
+    });
+    expect(code).toBe('actor.addEffect("effects/glow", Glow);\n');
+    expect(defs['mod:effects/glow']).toBe('import Glow from "effects/glow";');
+  });
+
+  it('world_add_effect passes parameter values like use effect', () => {
+    const code = run(
+      'world_add_effect',
+      {EFFECT: 'effects/glow'},
+      {},
+      '',
+      {ACTOR: 'actor', EPARAM_0_0: '0.8'},
+      [{id: 'bright', name: 'bright', type: 'float', defaultValue: 0.2}],
+    );
+    expect(code).toContain('{"bright": 0.8}');
+  });
+
+  it('world_add_effect targets whatever is in the ACTOR socket', () => {
+    // A loop's touched actor, say — not just `this actor`.
+    const code = run('world_add_effect', {EFFECT: 'effects/glow'}, {}, '', {
+      ACTOR: 'touched',
+    });
+    expect(code).toBe('touched.addEffect("effects/glow", Glow);\n');
+  });
+
+  it('world_remove_effect needs only the path, so imports nothing', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_remove_effect',
+      {EFFECT: 'effects/glow'},
+      defs,
+      '',
+      {
+        ACTOR: 'actor',
+      },
+    );
+    expect(code).toBe('actor.removeEffect("effects/glow");\n');
+    expect(Object.keys(defs)).toEqual([]);
+  });
+
+  it('the runtime effect blocks emit nothing without a chosen effect', () => {
+    expect(run('world_add_effect', {EFFECT: ''}, {}, '', {})).toBe('');
+    expect(run('world_remove_effect', {EFFECT: ''}, {}, '', {})).toBe('');
+  });
+
   it('world_use_effect emits nothing when the project has no effects', () => {
     // The dropdown shows a "(none)" placeholder with an empty value; emitting
     // `actor.useEffect("", undefined)` would be a runtime error for a block the
@@ -1106,6 +1158,14 @@ describe('builder-context warnings', () => {
 
   it('guards `use trait`, whose `useTraits` is builder-only', () => {
     expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
+  });
+
+  it('guards the runtime effect blocks against a template body', () => {
+    // The mirror case: `addEffect`/`removeEffect` are Actor methods, so under
+    // `define actor` — where `actor` is the builder — they would throw.
+    for (const type of ['world_add_effect', 'world_remove_effect']) {
+      expect(extensionsOf(type)).toContain(RUNTIME_ACTOR_EXTENSION);
+    }
   });
 
   it('leaves the `set` blocks alone, because `set` exists on both', () => {
