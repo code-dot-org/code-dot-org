@@ -68,34 +68,66 @@ dev server has to be aliased around. The layering is what has value, and the
 layering survives a directory move — if a second lab or Codebridge itself
 wants the editor later, extracting it is `git mv` plus a package.json.
 
-## 4. Phase 0 — Canvas to WebGL
+## 4. Phase 0 — Canvas to WebGL — DONE
 
-Nothing else can land first: `registerEffect` throws
+Nothing else could land first: `registerEffect` throws
 `'Effects need the WebGL renderer; this game is running on Canvas.'` when
 `renderNodes` is absent from the renderer.
 
 `src/runtime/driver/PhaserBinding.ts`:
 
 - `type: Phaser.CANVAS` → `Phaser.WEBGL`. Not `AUTO`: a silent fallback to
-  Canvas on a machine without WebGL turns every effect into a thrown error
-  from deep inside the driver, which is a worse failure than refusing to boot.
-  A machine that cannot give us WebGL should say so once, at boot.
-- `installSkewHook` wraps the per-instance `renderCanvas`; it must wrap
-  `renderWebGL` instead. The signature differs only in its third argument —
-  `(renderer, src, drawingContext, parentMatrix)` against Canvas's
-  `(renderer, src, camera, parentMatrix)` — and both `ImageWebGLRenderer` and
-  `RectangleWebGLRenderer` thread `parentMatrix` into the transform the same
-  way Canvas does (`Submitter.run` and `GetCalcMatrix` respectively). The shear
-  matrix `M = T(c)·shear·T(-c)` is unchanged; only the hook's name and its type
-  (`CanvasRenderHook` → `WebGLRenderHook`) change.
+  Canvas on a machine without WebGL turns every effect into a thrown error from
+  deep inside the driver, which is a worse failure than refusing to boot. A new
+  `assertWebGL()` probes for a context before the game is constructed and
+  throws a sentence; the preview surface already reports a constructor throw as
+  an engine error.
+- `installSkewHook` wraps the object's `renderWebGL` instead of its
+  `renderCanvas`. Both `ImageWebGLRenderer` and `RectangleWebGLRenderer` thread
+  their fourth argument into the transform the way Canvas does (`Submitter.run`
+  and `GetCalcMatrix` respectively), so the shear matrix `M = T(c)·shear·T(-c)`
+  is unchanged.
 
-`src/runtime/driver/frameThumbnail.ts` draws into a 2D canvas of its own and is
-not affected.
+**Two places must be patched, not one.** This was not in the original plan and
+is the substantive difference between the renderers. Canvas resolves the hook
+at draw time (`child.renderCanvas(...)`), so replacing the instance property
+sufficed. WebGL does not: the GameObject constructor runs
+`addRenderStep(this.renderWebGL)` (`GameObject.js:279`), capturing the
+_function value_ into `_renderSteps`, and the display list dispatches through
+that list (`ListCompositor.js:94` → `renderWebGLStep`). An instance property
+replaced afterwards is never reached. Worse, `Filters.enableFilters()` locates
+its insertion point with `_renderSteps.indexOf(this.renderWebGL)`
+(`Filters.js:285`), so if the property and the captured entry disagree the
+filter step is spliced in at `-1`. Effects call `enableFilters()`, which makes
+this load-bearing for Phase 3 rather than a detail. Both now hold the same
+wrapper reference.
 
-Verification is a browser, not a unit test: `yarn dev:isolated` and drive the
-preview. Check textured images, spritesheet cell selection, the appearance-less
-Rectangle fallback, non-zero skew, and that `Phaser.Scale.FIT` still maps input
-correctly after the letterbox.
+`src/runtime/driver/frameThumbnail.ts` draws into a 2D canvas of its own and
+was not affected.
+
+**Verified in Chromium** (SwiftShader), against the running `dev:isolated`
+servers:
+
+- the game canvas reports a WebGL 1 context and no 2D context;
+- the default project renders — textured images, spritesheet cells, the
+  platform, and the FIT letterbox;
+- a throwaway probe page installed the hook exactly as the driver does and
+  confirmed it is invoked (130 calls over ~65 frames × 2 objects — zero without
+  the `_renderSteps` patch), that `indexOf(renderWebGL)` finds it at index 0,
+  and that a 30° skew shears both a textured Image and the fallback Rectangle
+  into parallelograms about their centers.
+
+A canvas readback (`drawImage` off the game canvas) reports blank and is not a
+usable check: `preserveDrawingBuffer` is false, so the buffer is cleared once
+composited. Capture through the compositor — a Playwright page screenshot —
+instead.
+
+The one thing not covered by a test is the same-reference invariant between
+`renderWebGL` and its `_renderSteps` entry. It is enforced by four lines that a
+future edit could plausibly separate, and it fails silently. Extracting
+`installSkewHook` from the `PhaserBinding` constructor would make it unit
+testable against a fake object with no GL context; that refactor was not made
+here.
 
 ## 5. Phase 1 — Fold the editor in
 
@@ -320,9 +352,9 @@ and the sandboxes are not unit-testable in jsdom:
 vendored build — but typechecking is not running. This is the single largest
 unknown and it is why Phase 0 comes first and ends in a browser.
 
-**Skew under WebGL.** The port is mechanical and both WebGL renderers thread
-`parentMatrix`, but "mechanical" is a claim about source we have read, not
-about pixels we have seen.
+~~**Skew under WebGL.**~~ Resolved in Phase 0: shear confirmed on both a
+textured Image and the fallback Rectangle, in a browser. The port was not
+mechanical — see §4.
 
 **WebGL context loss.** A Canvas game had no such failure mode. A lost context
 in the preview iframe currently has no handler; at minimum it should report
