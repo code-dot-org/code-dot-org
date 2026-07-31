@@ -133,6 +133,12 @@ export interface EffectGraphCanvasProps {
   errorEdgeId?: string | null;
   /** Reports the selected workspace-node ids, for duplicate and copy. */
   onSelectedNodesChange?: (nodeIds: string[]) => void;
+  /**
+   * The graph may be read but not changed. Nodes stop being draggable and
+   * connectable and the delete keys are unbound; panning, zooming, selection,
+   * and the minimap stay live, because reading a graph means moving around it.
+   */
+  readOnly?: boolean;
 }
 
 /** Half the minimum node width, for centring a new node on a point. */
@@ -201,6 +207,7 @@ export function EffectGraphCanvas({
   resolveSourceType,
   errorEdgeId,
   onSelectedNodesChange,
+  readOnly = false,
 }: EffectGraphCanvasProps) {
   const [selectedEdgeIds, setSelectedEdgeIds] = useState<ReadonlySet<string>>(
     () => new Set(),
@@ -542,9 +549,13 @@ export function EffectGraphCanvas({
         onEdgeMouseEnter={(_event, edge) => setHoveredEdgeId(edge.id)}
         onEdgeMouseLeave={() => setHoveredEdgeId(null)}
         isValidConnection={isValidConnection}
+        nodesDraggable={!readOnly}
+        nodesConnectable={!readOnly}
         // Delete is what most people reach for; Backspace is React Flow's
-        // default and worth keeping for anyone already used to it.
-        deleteKeyCode={['Delete', 'Backspace']}
+        // default and worth keeping for anyone already used to it. Unbound on
+        // a read-only workspace, where a stray Backspace must not look like it
+        // did something.
+        deleteKeyCode={readOnly ? null : ['Delete', 'Backspace']}
         // Auto-pan during a connection drag is poison here: the ghost dots are
         // pinned to the canvas edge by design, so every wire dragged from a
         // row knob starts inside the auto-pan zone — the canvas slides out

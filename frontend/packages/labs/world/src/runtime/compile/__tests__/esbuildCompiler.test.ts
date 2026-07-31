@@ -63,6 +63,25 @@ describe('WorldCompiler', () => {
     expect(code).toContain('delay: 80');
   });
 
+  it('bundles an imported `.effect` file as data, resolving the extension', async () => {
+    // An `.effect` is a shader graph. It travels through the bundle as JSON and
+    // is compiled to GLSL in the preview surface, where Phaser is — so what
+    // must appear in the bundle is the document, not a shader.
+    const project: Record<string, string> = {
+      'scenes/main.ts': `
+        import {SceneBuilder} from 'world-lab';
+        import Ripple from 'effects/ripple';
+        const scene = new SceneBuilder({id: 'g', name: 'G'});
+        console.log(Ripple.name);
+        export default scene;
+      `,
+      'effects/ripple.effect': `{"version":1,"name":"Ripple","parameters":[],"nodes":[{"id":"sample-1","type":"sample","position":{"x":0,"y":0}}],"edges":[],"functions":[]}`,
+    };
+    const code = await compiler.compile(project, 'scenes/main.ts');
+    expect(code).toContain('name: "Ripple"');
+    expect(code).toContain('type: "sample"');
+  });
+
   it('reflects an edit on a subsequent (warm) rebuild', async () => {
     await compiler.compile(PROJECT, 'scenes/main.ts');
     const edited = {...PROJECT, 'scenes/label.ts': `export default 'v2';`};

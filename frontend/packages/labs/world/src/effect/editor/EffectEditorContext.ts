@@ -34,6 +34,17 @@ export interface CompileErrorInfo {
 export interface EffectEditorContextValue {
   /** The scope being edited: the document, or an open function's body. */
   document: EffectGraphScope;
+  /**
+   * The graph may be read but not changed — the host mounted the editor on a
+   * workspace nobody may edit (someone else's project, a frozen one).
+   *
+   * Canvas internals read this to drop their editing affordances. It is not
+   * what *enforces* read-only: `useEffectDocument` refuses every edit at
+   * source. This is so a learner is not offered a control that does nothing.
+   * Reading stays fully live — panning, zooming, the eye previews, and the
+   * parameter try-out sliders all work, because none of them touch the file.
+   */
+  readOnly: boolean;
   /** False inside a function, where the eye preview has no meaning yet. */
   canInspect: boolean;
   registry: EffectNodeRegistry;

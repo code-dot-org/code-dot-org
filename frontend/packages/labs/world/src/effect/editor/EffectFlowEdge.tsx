@@ -32,7 +32,7 @@ export function EffectFlowEdge({
   style,
   data,
 }: EdgeProps) {
-  const {disconnect} = useEffectEditorContext();
+  const {disconnect, readOnly} = useEffectEditorContext();
   const [path, labelX, labelY] = getBezierPath({
     sourceX,
     sourceY,
@@ -75,7 +75,7 @@ export function EffectFlowEdge({
           </span>
         </EdgeLabelRenderer>
       )}
-      {active && (
+      {active && !readOnly && (
         <EdgeLabelRenderer>
           <button
             type="button"

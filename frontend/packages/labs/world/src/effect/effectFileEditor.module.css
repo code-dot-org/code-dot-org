@@ -1,0 +1,42 @@
+/* Fills the editor pane Codebridge hands the custom editor, matching
+   blocklyFileEditor.module.css. `EffectEditor` lays itself out as a flex
+   column (palette beside a stack of rows); this only has to give it a sized
+   box to fill. */
+.editor {
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+/* Shown instead of the editor when the file will not parse. */
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.errorMessage {
+  margin: 0;
+  font-weight: 600;
+}
+
+.errorSource {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 6%);
+  font-family: monospace;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .errorSource {
+    background: rgb(255 255 255 / 8%);
+  }
+}

@@ -23,17 +23,22 @@ See `specs/PLAN.md` for the full design and milestone status.
 
 ## File types and editors
 
-Text files (`js`/`ts`/`json`/`md`/`txt`) edit in CodeMirror. `rule` and `actor`
-files are **Blockly-authored** — a `.rule`/`.actor` is a Blockly workspace stored
-as serialized JSON (INTERFACE.md) — and open in a Blockly editor instead. This
-uses Codebridge's per-language editor seam (`CodebridgeConfig.editorComponents`,
-parallel to `languageExtensions`); World routes `rule`/`actor` to
-`src/blockly/BlocklyFileEditor.tsx`, which loads/saves through the same file
-`onChange` seam as CodeMirror.
+Text files (`js`/`ts`/`json`/`md`/`txt`) edit in CodeMirror. Everything else has
+its own editor, mounted through Codebridge's per-language editor seam
+(`CodebridgeConfig.editorComponents`, parallel to `languageExtensions`). Each
+one loads and saves through the same file `onChange` seam as CodeMirror, so
+persistence is identical whatever the surface:
 
-The Blockly toolbox is a starter set of stock blocks for now; domain blocks
-(Rules/Traits/Actors/Events) and Blockly → `world-lab` code generation (so an
-authored `.rule` actually runs through the compiler) are the next increment.
+| Type                                 | Editor                                | On disk                    |
+| ------------------------------------ | ------------------------------------- | -------------------------- |
+| `rule` / `actor` / `scene` / `world` | `src/blockly/BlocklyFileEditor`       | a Blockly workspace (JSON) |
+| `map`                                | `src/mapEditor/MapEditor`             | scene instantiation (JSON) |
+| `anim`                               | `src/animationEditor/AnimationEditor` | an animation file (JSON)   |
+| `effect`                             | `src/effect/EffectFileEditor`         | a shader graph (JSON)      |
+
+An `.effect` is a node graph that compiles to a GLSL fragment shader — see
+`src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
+bundle as data and is compiled to GLSL in the preview surface, where Phaser is.
 
 ## Layout
 

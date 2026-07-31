@@ -9,6 +9,8 @@ export interface NodeNoteProps {
   /** Name of the node, for describing the controls. */
   nodeLabel: string;
   onChange: (note: string | undefined) => void;
+  /** Show an existing note but offer no way to write or change one. */
+  readOnly?: boolean;
 }
 
 /**
@@ -26,11 +28,22 @@ export interface NodeNoteProps {
  *
  * Typing is local until it finishes — see `useNoteDraft` for why.
  */
-export function NodeNote({note, nodeLabel, onChange}: NodeNoteProps) {
+export function NodeNote({
+  note,
+  nodeLabel,
+  onChange,
+  readOnly = false,
+}: NodeNoteProps) {
   const {draft, editing, inputRef, begin, setDraft, commit} = useNoteDraft(
     note,
     onChange,
   );
+
+  // Nothing to show and nothing to offer: a read-only node with no note has no
+  // note slot at all, rather than a button that cannot be pressed.
+  if (note === undefined && readOnly) {
+    return null;
+  }
 
   if (note === undefined && !editing) {
     return (
@@ -52,7 +65,7 @@ export function NodeNote({note, nodeLabel, onChange}: NodeNoteProps) {
 
   return (
     <div className={styles.slot}>
-      {editing ? (
+      {editing && !readOnly ? (
         <textarea
           ref={inputRef}
           className={`${styles.editor} nodrag nopan nowheel`}
@@ -80,10 +93,13 @@ export function NodeNote({note, nodeLabel, onChange}: NodeNoteProps) {
         <button
           type="button"
           className={`${styles.bubble} nodrag nopan`}
-          aria-label={translate('Edit the note about {name}', {
-            name: nodeLabel,
-          })}
-          title={translate('Click to edit this note')}
+          disabled={readOnly}
+          aria-label={
+            readOnly
+              ? translate('Note about {name}', {name: nodeLabel})
+              : translate('Edit the note about {name}', {name: nodeLabel})
+          }
+          title={readOnly ? undefined : translate('Click to edit this note')}
           onClick={begin}
         >
           {note}

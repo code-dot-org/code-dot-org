@@ -1,5 +1,8 @@
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
+import {rippleEffect} from './effect/examples';
+import {serializeEffectDocument} from './effect/model';
+
 /**
  * The scene the game starts on — the driver's compile + run entry point
  * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
@@ -320,6 +323,16 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: ruleShim('AnimationRule'),
         folderId: 'rules',
       },
+      // A starter shader graph, so `effects/` is not an empty folder and the
+      // effect editor opens on something worth reading. Nothing uses it yet —
+      // the `use effect` block that applies it is the next increment.
+      rippleEffect: {
+        id: 'rippleEffect',
+        name: 'ripple.effect',
+        language: 'effect',
+        contents: serializeEffectDocument(rippleEffect),
+        folderId: 'effects',
+      },
     },
     folders: {
       rules: {id: 'rules', name: 'rules', parentId: '0'},
@@ -328,6 +341,7 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
       animations: {id: 'animations', name: 'animations', parentId: '0'},
       maps: {id: 'maps', name: 'maps', parentId: '0'},
+      effects: {id: 'effects', name: 'effects', parentId: '0'},
     },
     openFiles: ['main'],
   },
