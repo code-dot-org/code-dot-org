@@ -2694,15 +2694,9 @@ a.download-video {
 .devise-links {
   flex-grow: 2;
 
-  // Sign-in page only. The React SignInPage to the left is the taller
-  // column, so without this the flex row stretches this one past its own
-  // content and the provider buttons sit at the top with a gap beneath
-  // them. align-self (rather than align-content) keeps this to the flex
-  // item itself, so it does not depend on block-layout align-content.
-  //
-  // The LTI account-linking page reuses .devise-links with its own markup
-  // instead of devise/shared/_oauth_links, so it never gets this class and
-  // its column keeps stretching.
+  // Sit at the bottom of the row instead of stretching to the taller React
+  // column beside us. Scoped to this class because the LTI account-linking
+  // page reuses .devise-links and must keep stretching.
   &.oauth-links-column {
     align-self: flex-end;
   }
