@@ -10,6 +10,7 @@ import {
   setProjectActors,
   setProjectAnimationFiles,
   setProjectEffectFiles,
+  setProjectEffectParameters,
   setProjectMaps,
   setProjectRuleModules,
   setProjectWorlds,
@@ -19,6 +20,7 @@ import {
   projectActorOptions,
   projectAnimationFileOptions,
   projectEffectFileOptions,
+  projectEffectParameters,
   projectMapActorTypes,
   projectRuleMetas,
   projectRuleOptions,
@@ -33,6 +35,7 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectWorlds(projectWorldOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
   setProjectEffectFiles(projectEffectFileOptions(files));
+  setProjectEffectParameters(projectEffectParameters(files));
   setProjectMaps(projectMapActorTypes(files));
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.

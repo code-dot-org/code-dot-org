@@ -406,8 +406,28 @@ such method. The result is `actor.useEffect is not a function` at run time,
 about a method the learner never typed. `extensions/actorContext.ts` warns in
 the editor instead, mirroring `worldContext`: the walk stops at the nearest
 binder, so a handler disqualifies even when it sits inside an `.actor` file.
-(`use trait` and the other builder-method blocks have the same gap; it predates
-this work and is untouched.)
+The warning has been confirmed rendering on a block dragged into a handler.
+
+**`use trait` carries the same guard; the `set` blocks deliberately do not.**
+Which blocks need it follows from which methods exist on which object, not from
+which look like setup:
+
+| Block                         | Emits                     | `ActorBuilder` | live `Actor` |
+| ----------------------------- | ------------------------- | -------------- | ------------ |
+| `use effect`                  | `actor.useEffect(…)`      | yes            | **no**       |
+| `use trait`                   | `actor.useTraits([…])`    | yes            | **no**       |
+| `set sprite` / `set position` | `target.set(Prop, value)` | yes            | yes          |
+
+`set` exists on both, so those blocks are correct as a template default _and_ at
+runtime on a live actor — guarding them would warn about working programs.
+
+`use trait` needed more than a second copy of the rule, because it has two
+valid homes: under `define actor` it calls the builder, and inside
+`define trait` it declares that trait's own `requires`, where it is parsed into
+`RuleMeta` and never generated at all. So `inActorDefinition` became
+`inBuilderContext(block, roots)` — `['world_actor']` for `use effect`,
+`['world_actor', 'world_rule_trait']` for `use trait`. A handler still
+disqualifies in both.
 
 **The starter effect ships unapplied.** `effects/ripple.effect` is in
 `DEFAULT_PROJECT` so the folder is not empty and the editor opens on something
@@ -568,11 +588,66 @@ must be checked in the built output (`dist-demo/`, the preview surface's
 chunk), not assumed. If it proves hard to hold, that is the argument for
 promoting `src/effect/` back out to its own package.
 
+## 11a. Parameters on the block — DONE
+
+`use effect Ripple` can now say _how much_ ripple. The block grows one value
+socket per parameter the chosen effect declares, seeded with that parameter's
+default, and the values travel to the shader uniforms.
+
+**Parameters are read from the `.effect` document, not from `compileEffect`.**
+The plan assumed the compiler, which does report more (`used` — whether the
+graph actually reads a knob). But it costs a full compile per dropdown refresh
+and _refuses a graph that does not yet build_ — and a learner part-way through
+wiring an effect up should still see its knobs. `projectEffectParameters` reads
+the declared list straight off the JSON, alongside the existing dropdown
+registries.
+
+**It is a mutator because the sockets depend on a file.** A block's inputs are
+fixed at definition time; these come from the project, so
+`effectParamsMutator` reshapes the block when the EFFECT dropdown changes and
+rebuilds from the block's own serialized list on load. Types map onto the
+lab's existing conventions: `float`/`int` a Number socket with a `math_number`
+shadow, `bool` a Boolean socket with `logic_boolean`, and `vec2`/`vec3`/`vec4`
+one labelled Number socket per component (x/y, or red/green/blue/alpha — the
+effect editor calls a `vec3` "color (RGB)", so the labels follow it).
+
+Emitted as a third argument, omitted entirely when the effect has no
+parameters: `actor.useEffect('effects/ripple', Ripple, {"strength": 0.05})`.
+`AppliedEffectSpec.values` carries it, the driver hands it to
+`applyEffectToActor`, and `buildUniformValues` fills in each parameter's own
+default for anything absent — so a partial map is fine. `effectSnapshotId`
+hashes the values with the document, because a value is read once when the
+filter is attached and so a changed knob needs the same restart an edited graph
+does.
+
+**Two bugs the browser found that the unit tests could not.**
+
+- **The generator workspace needs the sockets.** `effectParamsMutator` copied
+  `ruleParamsMutator`'s `isRuleGenerator` early-return, which skips the visual
+  rebuild in the headless workspace. That is right for rule blocks — their rows
+  are `+`/`−` FieldImages the offscreen renderer cannot draw, and they have no
+  generator at all. It is wrong here: this block's generator reads those very
+  sockets through `valueToCode`, so skipping the build left them missing and
+  loading a saved block failed with _"is missing a(n) EPARAM_0_0 connection"_
+  before a line was generated. The carve-out is gone, with a comment saying why
+  it must not come back.
+- **A rebuild overwrote the learner's value.** `setShadowState` ran
+  unconditionally on every rebuild — and a rebuild happens on every block init,
+  deserialization included. So reopening a file reset every knob to its default,
+  and did it _silently_: the block displayed `0.02` while the saved `0.35` went
+  on driving the shader. Sockets now keep what they held across a reshape,
+  matched by parameter **id** rather than socket index, so switching effects
+  does not smear one effect's values onto another's knobs while re-picking the
+  same effect keeps them.
+
+**Verified in Chromium**: the block renders `use effect [Ripple] / strength
+[0.35]`, and the player ripples hard — against a document default of `0.02`,
+which is sub-pixel on a 24px sprite, so the visible distortion is the block's
+value reaching the uniform and nothing else. The scaffolding was then removed;
+the tutorial's player is unrippled again.
+
 ## 12. Deferred
 
-- **Parameters on the block.** `compileEffect` supplies the descriptors; the
-  block needs a mutator that expands one socket per parameter with its default
-  and range, and `applyEffectToActor` already takes a values map.
 - **World and Camera effects.** `applyEffectToWorld` exists and applies to the
   camera's filter list; it needs a `use effect` on `.world` and the same
   registration path.

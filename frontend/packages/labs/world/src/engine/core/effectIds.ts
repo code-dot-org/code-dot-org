@@ -36,7 +36,15 @@ function hash(text: string): string {
   return (value >>> 0).toString(36);
 }
 
-/** `<path>@<hash>` — what a change to this effect changes in the snapshot. */
+/**
+ * `<path>@<hash>` — what a change to this effect changes in the snapshot.
+ *
+ * The hash covers the parameter values as well as the graph. Values are read
+ * once, when the filter is attached to the Game Object, so changing one only
+ * reaches the screen on a restart — exactly like editing the graph.
+ */
 export function effectSnapshotId(effect: AppliedEffectSpec): string {
-  return `${effect.path}@${hash(JSON.stringify(effect.document))}`;
+  return `${effect.path}@${hash(
+    JSON.stringify([effect.document, effect.values ?? null]),
+  )}`;
 }

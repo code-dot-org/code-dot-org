@@ -29,6 +29,14 @@ export interface AppliedEffectSpec {
    */
   readonly path: string;
   readonly document: EffectDocument;
+  /**
+   * Values for the effect's declared parameters, keyed by `EffectParameter.id`.
+   *
+   * Absent or partial is normal: anything unsupplied falls back to the
+   * parameter's own default when the driver builds the uniforms. Kept opaque
+   * here like the document — the engine never reads a shader knob.
+   */
+  readonly values?: Readonly<Record<string, number | number[] | boolean>>;
 }
 
 /**

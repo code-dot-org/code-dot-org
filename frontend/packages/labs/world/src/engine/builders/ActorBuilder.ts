@@ -55,9 +55,15 @@ export class ActorBuilder {
    * @param path     the effect's module path (`effects/ripple`) — its identity
    *   for shader registration, so the same effect on many actors is one program
    * @param document the parsed `.effect` file, imported as JSON by the bundler
+   * @param values   values for the effect's declared parameters, by parameter
+   *   id; anything omitted falls back to that parameter's own default
    */
-  useEffect(path: string, document: EffectDocument): this {
-    this.effects.push({path, document});
+  useEffect(
+    path: string,
+    document: EffectDocument,
+    values?: Readonly<Record<string, number | number[] | boolean>>,
+  ): this {
+    this.effects.push(values ? {path, document, values} : {path, document});
     return this;
   }
 

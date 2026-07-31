@@ -3,6 +3,8 @@ import {describe, expect, it} from 'vitest';
 import {
   projectActorOptions,
   projectAnimationFileOptions,
+  projectEffectFileOptions,
+  projectEffectParameters,
   projectMapActorTypes,
   projectRuleOptions,
   projectWorldOptions,
@@ -136,5 +138,93 @@ describe('projectWorldRules', () => {
     // The gravity shim resolves to GravityRule; the built-in passes through; the
     // real project rule contributes no built-in trait name.
     expect(new Set(rules)).toEqual(new Set(['GravityRule', 'InputRule']));
+  });
+});
+
+// `.effect` files: what the `use effect` dropdown lists, and the knobs the
+// block grows a socket for.
+const EFFECT_FILES = {
+  'effects/ripple.effect': JSON.stringify({
+    version: 1,
+    name: 'Ripple',
+    parameters: [
+      {id: 'strength', name: 'strength', type: 'float', defaultValue: 0.02},
+      {id: 'color', name: 'tint', type: 'vec3', defaultValue: [1, 0, 0]},
+    ],
+    nodes: [],
+    edges: [],
+    functions: [],
+  }),
+  'effects/plain.effect': JSON.stringify({
+    version: 1,
+    name: 'Plain',
+    parameters: [],
+    nodes: [],
+    edges: [],
+    functions: [],
+  }),
+  // Mid-edit: the editor writes on every change, and a learner can also open
+  // the file as text.
+  'effects/broken.effect': '{"name": "Broken", "parameters"',
+  // Not under effects/, so not an effect.
+  'actors/player.actor': '{}',
+};
+
+describe('projectEffectFileOptions', () => {
+  it('labels each effect by its authored name, valued by module path', () => {
+    expect(new Set(projectEffectFileOptions(EFFECT_FILES))).toEqual(
+      new Set([
+        ['Ripple', 'effects/ripple'],
+        ['Plain', 'effects/plain'],
+        // Unparseable: falls back to the file stem rather than disappearing.
+        ['Broken', 'effects/broken'],
+      ]),
+    );
+  });
+});
+
+describe('projectEffectParameters', () => {
+  it('reads the declared parameters, keyed by module path', () => {
+    const parameters = projectEffectParameters(EFFECT_FILES);
+    expect(parameters['effects/ripple'].map(p => p.id)).toEqual([
+      'strength',
+      'color',
+    ]);
+    expect(parameters['effects/ripple'][0]).toMatchObject({
+      name: 'strength',
+      type: 'float',
+      defaultValue: 0.02,
+    });
+  });
+
+  it('gives an effect with no parameters an empty list', () => {
+    expect(projectEffectParameters(EFFECT_FILES)['effects/plain']).toEqual([]);
+  });
+
+  it('gives an unparseable effect an empty list rather than throwing', () => {
+    // The block then shows the effect with no knobs, which is recoverable; a
+    // throw here would take the whole dropdown refresh down with it.
+    expect(projectEffectParameters(EFFECT_FILES)['effects/broken']).toEqual([]);
+  });
+
+  it('ignores files outside effects/', () => {
+    expect(projectEffectParameters(EFFECT_FILES)).not.toHaveProperty(
+      'actors/player',
+    );
+  });
+
+  it('drops entries that are not shaped like a parameter', () => {
+    const files = {
+      'effects/odd.effect': JSON.stringify({
+        parameters: [
+          {id: 'ok', type: 'float', name: 'ok', defaultValue: 0},
+          7,
+          {name: 'no id'},
+        ],
+      }),
+    };
+    expect(
+      projectEffectParameters(files)['effects/odd'].map(p => p.id),
+    ).toEqual(['ok']);
   });
 });
