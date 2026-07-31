@@ -159,6 +159,63 @@ the field and the number to its right, and the thumb is dragged in place. That
 order is deliberate — the number's width changes with its value, so with the
 track on the right it would slide out from under the pointer mid-drag.
 
+A `vec3` or `vec4` parameter is a colour by the model's own convention — the
+editor names a vec3 "color (RGB)" — so it takes a colour socket rather than
+three number boxes. Nobody picks a colour by typing three floats, and
+"0.53, 0.27, 0.08" says nothing about what it looks like. The socket's shadow is
+Blockly's stock `colour_picker`, seeded with the parameter's declared default
+converted to hex.
+
+The picker is deliberately the stock block rather than one of ours. Its output
+type is `Colour`, and so is `colour_random`'s and `colour_blend`'s, so all of
+them drop into the same socket. What makes that work is that the conversion
+from `#rrggbb` to the floats a uniform wants happens in the _generated code_ —
+`WorldLab.rgb("#ff8800")` — rather than inside the block. A bespoke picker that
+emitted floats directly would have shut that door for no gain.
+
+A `vec4` takes the SAME single socket. A picker cannot express alpha, so the
+swatch it seeds simply means opaque, which is what choosing a colour from a
+swatch is understood to mean. Reaching the fourth channel means swapping the
+picker for the `r g b a` block — four sliders, one per channel — which fits the
+socket because it also outputs `Colour`. One socket to understand instead of
+two, and alpha sits with the other channels rather than orphaned beside them.
+
+That block is also the answer to the other thing a picker cannot do: drive a
+channel from something that is not a constant — a variable, a query, a bit of
+arithmetic. It hands its channels over as floats rather than as hex, which is
+why `rgb`/`rgba` accept either. Going through hex would drop the alpha and
+quantize every channel to 8 bits for nothing.
+
+The block leads with a colour swatch, which does double duty. It shows what the
+four channels currently add up to, live as they are dragged — four numbers tell
+you the channels and nothing about the colour, and until the swatch existed the
+only way to see the result was to run the game. Clicking it opens the same grid
+of presets the plain picker offers, and picking one writes the channels, so a
+learner can start from "green" and adjust rather than having to reach green by
+arithmetic.
+
+The sockets are the truth and the swatch never overrides them. A preset writes
+to the channels and the swatch is then re-derived from what they actually hold,
+so a channel driven by something unwritable — a variable, a query, arithmetic —
+keeps it, and the swatch visibly disagrees with what was picked. That is honest
+feedback about which channel is owned elsewhere, and it beats discarding the
+learner's block without saying so. For the same reason a channel the swatch
+cannot read is shown as 0 rather than blanking it: the block that owns it is
+right there to see. The swatch also ignores alpha, which is what a swatch is.
+
+Channels are 0–1, matching the shader and the numbers in the `.effect` file
+rather than the 0–255 a learner may know from elsewhere. The sliders are what
+makes that workable: setting a colour by dragging needs no knowledge of the
+convention, and a learner who opens the effect afterwards finds the same
+numbers there.
+
+A `vec2` keeps its pair of number sockets: it is a direction or an offset, not
+a colour.
+
+The socket layout for each parameter type is one definition (`paramSockets`),
+read both by the mutator that builds the sockets and by the generator that
+reads them back. They were separate lists that had to agree.
+
 Values snap to a step derived from the range (about a hundred positions across
 it, rounded to 1, 2 or 5 times a power of ten), which is finer than the track
 can resolve and coarse enough that every value reads cleanly. The step governs
