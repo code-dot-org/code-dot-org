@@ -102,7 +102,10 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - #{brand_name} [test]</title>")
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Unit: All The Lesson Plans - #{brand_name} [test]']"
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
