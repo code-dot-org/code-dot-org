@@ -100,6 +100,43 @@ describe('rules/gravity.rule', () => {
     expect(module_).not.toContain("from 'rules/gravity'");
   });
 
+  it('declares the landing step, anchored after collision resolves', () => {
+    // The step that lands actors and raises the falling transitions. It runs
+    // after Collision has pushed things out of solids, so what it sees is where
+    // they ended up.
+    const step = meta.steps.find(s => s.id === 'handleCollisions');
+    expect(step?.order.kind).toBe('after');
+    expect(step?.order.anchor?.ownerRef.exportName).toBe('CollisionRule');
+    expect(step?.order.anchor?.stepId).toBe('resolve');
+  });
+
+  it('puts its looping members at rule scope, where a world exists', () => {
+    // An actor-scoped member is invoked as `(actor, …args)`; it reaches the
+    // world through `actor.world`, but these take the subject as a parameter
+    // because they are questions about the world asked of a pair.
+    for (const id of ['is_resting_on', 'is_on_a_ground_']) {
+      expect(meta.queries.find(q => q.id === id)?.scope).toBe('world');
+    }
+    expect(meta.actions.find(a => a.id === 'land_on_grounds')?.scope).toBe(
+      'world',
+    );
+  });
+
+  it('grounds the ground actor on ITS OWN trait, not the engine’s', () => {
+    // `actors/ground.js` kept importing the built-in `GroundTrait` after the
+    // rule moved into the project, so the authored rule's ground loop matched
+    // nothing: the player fell, was held up by collision, and never landed.
+    const ground = DEFAULT_PROJECT.source.files.ground.contents;
+    expect(ground).toContain("from 'rules/gravity'");
+    expect(ground).toContain('ActsAsGroundTrait');
+    // …and its `world-lab` import no longer names a ground trait, which would
+    // be the ENGINE's — a different object, matching nothing the rule loops for.
+    const worldLabImport = ground
+      .split('\n')
+      .find(line => line.includes("from 'world-lab'"));
+    expect(worldLabImport).not.toContain('Ground');
+  });
+
   it('is what the world puts in play', () => {
     expect(DEFAULT_PROJECT.source.files.main.contents).toContain(
       'rules/gravity',

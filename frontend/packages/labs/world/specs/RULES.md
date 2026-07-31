@@ -107,17 +107,24 @@ something reached for it:
   no expression. `world_vector_of` is the counterpart to
   `world_vector_component`.
 
-## What is still missing
+Two more things the landing step needed, both found by it failing to work:
 
-**The landing does not complete.** `starts falling` fires; `stops falling` does
-not, because the resting test never matches. The cause is worth recording: a
-collidable actor's `size` property defaults to `(0, 0)`, an "auto" SENTINEL that
-the engine resolves through `collisionSize()` — the sprite's box, or 32×32.
-Blocks read the raw property, so the authored test computes its surface from a
-zero-sized box and puts it half a tile off. **The effective collision size is
-not readable from blocks at all**, and no amount of restructuring gets around
-it: it needs either a query that reports the resolved size, or a size property
-that reports it.
+- **`Collision ▸ collision size`, a query reporting an actor's RESOLVED box.**
+  The `size` property is an override whose `(0, 0)` default is an "auto"
+  sentinel; the engine resolves it through `collisionSize()` to the sprite's box
+  or 32×32. Reading the property therefore answers a different question than
+  "how big is this actually?", and the authored test computed every surface from
+  a zero-sized box — half a tile out, so nothing ever rested. A query rather
+  than a property because there is nothing to store: it derives from the
+  override, the sprite, and the scale, any of which can change per tick.
+- **`actors/ground.js` was still importing the ENGINE's `GroundTrait`.** After
+  gravity moved into the project, the ground tile kept taking the built-in
+  trait, so the rule's `for each ground` matched nothing. The player fell, was
+  held up by Collision, and never landed — with no error anywhere. This is the
+  "renaming a member silently unhooks the project" hazard, in its other form:
+  the reference was still valid, and pointed at a different object.
+
+## What is still missing
 
 **The inverted-gravity branch is omitted.** The built-in mirrors its whole
 landing test for upward gravity, keyed on the sign of the direction. Without a

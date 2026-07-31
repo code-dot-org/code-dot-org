@@ -632,11 +632,22 @@ describe('domain block generators', () => {
     // block; the `for each … where` loop rebuilds the list from the predicate.
     expect(category('Has Gravity')).toContain('world_query_IsOnGroundQuery');
     expect(category('Has Collisions')).toContain('world_query_IsTouchingQuery');
+    // Collision also reports an actor's RESOLVED collision box. The `size`
+    // property is an override whose `(0, 0)` default means "auto", so reading it
+    // answers a different question than "how big is this actually?" — which is
+    // what any rule standing one actor on another needs.
+    expect(category('Has Collisions')).toContain(
+      'world_query_CollisionSizeQuery',
+    );
     expect(
       (DOMAIN_TOOLBOX as Array<{blocks: string[]}>)
         .flatMap(c => c.blocks)
         .filter(t => t.startsWith('world_query_')),
-    ).toEqual(['world_query_IsTouchingQuery', 'world_query_IsOnGroundQuery']);
+    ).toEqual([
+      'world_query_IsTouchingQuery',
+      'world_query_CollisionSizeQuery',
+      'world_query_IsOnGroundQuery',
+    ]);
   });
 });
 

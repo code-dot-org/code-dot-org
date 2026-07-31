@@ -233,4 +233,27 @@ export const IsTouchingQuery = rule.addQuery(
   },
 );
 
+/**
+ * An actor's collision box, resolved — what {@link collisionSize} computes.
+ *
+ * Surfaced as a query because the `size` PROPERTY is an override, not the
+ * answer: its default `(0, 0)` is an "auto" sentinel meaning "use the sprite's
+ * box, or a default one". Reading the property therefore tells a rule almost
+ * nothing, and a rule that needs to know how big something actually is — any
+ * rule that stands one actor on another — had no way to ask.
+ *
+ * A query rather than a second property because there is nothing to store: it
+ * is derived from the override, the sprite's intrinsic size, and the scale, any
+ * of which can change between ticks.
+ */
+export const CollisionSizeQuery = rule.addQuery(
+  'collisionSize',
+  (_world, actorArg): Vector => collisionSize(actorArg as Actor),
+  {
+    name: 'collision size',
+    returns: 'vector',
+    params: [{name: 'actor', type: 'actor'}],
+  },
+);
+
 export const CollisionRule = rule.build();
