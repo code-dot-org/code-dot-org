@@ -1717,6 +1717,31 @@ class LevelTest < ActiveSupport::TestCase
     assert level.valid?
   end
 
+  test 'UI test levels cannot be created, edited, or destroyed on levelbuilder' do
+    ui_test_level = create(:level, name: 'UI Test LevelTest levelbuilder guard')
+    prod_level = create(:level, name: 'LevelTest levelbuilder guard')
+
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+
+    refute build(:level, name: 'UI Test LevelTest levelbuilder create').valid?
+
+    ui_test_level.notes = 'edited'
+    refute ui_test_level.valid?
+    assert_includes ui_test_level.errors.full_messages.first, 'levelbuilder'
+
+    # renaming a UI Test level to a production name is still an edit
+    ui_test_level.reload.name = 'LevelTest levelbuilder rename'
+    refute ui_test_level.valid?
+
+    refute ui_test_level.reload.destroy
+    refute ui_test_level.destroyed?
+
+    # production levels are unaffected
+    prod_level.notes = 'edited'
+    assert prod_level.valid?
+    assert prod_level.destroy
+  end
+
   test 'cannot rename a level across the UI Test boundary while attached to another level' do
     child = create(:level, name: 'LevelTest attached child')
     parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])

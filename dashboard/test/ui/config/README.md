@@ -60,6 +60,7 @@ not-yet-migrated `ui-test-` unit can still resolve production levels.
 
 Developers author this content, working locally with `levelbuilder_mode`
 enabled so that saving a level writes its definition file. Curriculum authors
-do not: the levelbuilder environment is not intended to reach this tree, and
-under the proposal will not have access to it at all. To move an existing
-unit's levels here, see `bin/curriculum/clone_ui_test_levels.rb`.
+do not: the levelbuilder environment refuses to save or destroy `UI Test `
+levels (a `Level` validation and destroy guard), and under the proposal will
+not have access to this tree at all. To move an existing unit's levels here,
+see `bin/curriculum/clone_ui_test_levels.rb`.
