@@ -31,6 +31,7 @@ import type {
   PhaserNamespace,
   RegisteredEffect,
 } from '../../effect/runtime/types';
+import {effectSnapshotId} from '../../engine/core/effectIds';
 
 /**
  * A Game Object that can carry filters. Every drawn actor qualifies —
@@ -41,6 +42,17 @@ type FilterableGameObject = Parameters<typeof applyEffectToActor>[1];
 
 /** How a failure is reported to whoever is showing the learner messages. */
 export type EffectErrorReporter = (message: string) => void;
+
+/**
+ * One attached effect, and the knob settings it currently carries.
+ *
+ * The settings are held as their identity hash rather than the map itself, so
+ * the per-frame comparison is a string equality whatever the effect declares.
+ */
+interface LiveEffect {
+  applied: AppliedEffect;
+  identity: string;
+}
 
 /**
  * Per-scene registry of compiled effects.
@@ -85,7 +97,7 @@ export class EffectRegistry {
    * closes the gap each frame. Weak so a destroyed object takes its entry with
    * it — the driver never gets told an actor is gone.
    */
-  private readonly attached = new WeakMap<object, Map<string, AppliedEffect>>();
+  private readonly attached = new WeakMap<object, Map<string, LiveEffect>>();
   private readonly phaser: PhaserNamespace;
   private readonly onError: EffectErrorReporter;
 
@@ -159,16 +171,16 @@ export class EffectRegistry {
     // holding the first, so the first looked unattached on the next frame and
     // was attached again — every frame, stacking filters without bound.
     if (!live) {
-      live = new Map<string, AppliedEffect>();
+      live = new Map<string, LiveEffect>();
       this.attached.set(object, live);
     }
 
     const wanted = new Set(effects.map(effect => effect.path));
 
     // Gone from the actor: detach and forget.
-    for (const [path, applied] of [...live]) {
+    for (const [path, entry] of [...live]) {
       if (!wanted.has(path)) {
-        applied.remove();
+        entry.applied.remove();
         live.delete(path);
       }
     }
@@ -179,7 +191,28 @@ export class EffectRegistry {
       // effects — the obvious shape — means the only effects that could ever
       // be updated are the ones not currently drawing.
       const registered = this.resolve(scene, effect);
-      if (!registered || live.has(effect.path)) {
+      if (!registered) {
+        continue;
+      }
+      const existing = live.get(effect.path);
+      if (existing) {
+        // Attached already — but the KNOB SETTINGS may have moved since. They
+        // can now change while the game runs: `add effect Tint to the world`
+        // with a random color behind it produces a different color every time
+        // the handler fires, and a handler that removes the effect and adds it
+        // back within one frame never shows the driver an empty list, so the
+        // only evidence anything happened is the values.
+        //
+        // This used to `continue`, on the reasoning (written into
+        // `effectSnapshotId`) that "the driver reads values once, when it
+        // attaches". That held when values could only change at BUILD time,
+        // where a restart carries them. It stopped holding the moment a block
+        // could compute them.
+        const identity = effectSnapshotId(effect);
+        if (existing.identity !== identity) {
+          existing.applied.setValues(effect.values ?? {});
+          existing.identity = identity;
+        }
         continue;
       }
       try {
@@ -187,7 +220,7 @@ export class EffectRegistry {
         // `buildUniformValues` fills in each parameter's own default for
         // anything absent, so a partial map is fine.
         const applied = attach(registered, effect.values);
-        live.set(effect.path, applied);
+        live.set(effect.path, {applied, identity: effectSnapshotId(effect)});
         // Remembered so a later shader swap can refresh this filter's uniforms.
         const forPath =
           this.controllers.get(effect.path) ?? new Set<AppliedEffect>();

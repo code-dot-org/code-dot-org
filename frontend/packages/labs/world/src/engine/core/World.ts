@@ -291,18 +291,25 @@ export class World {
     return this.appliedEffects;
   }
 
-  /** Start a viewport-wide effect now. Idempotent by path, like an actor's. */
+  /**
+   * Start a viewport-wide effect now, or retune one already playing.
+   *
+   * One entry per path and never stacked, exactly as on an actor — and for the
+   * same reason, adding one already present replaces its values rather than
+   * doing nothing. See {@link Actor.addEffect}.
+   */
   addEffect(
     path: string,
     document: AppliedEffectSpec['document'],
     values?: AppliedEffectSpec['values'],
   ): this {
-    if (this.appliedEffects.some(effect => effect.path === path)) {
+    const spec = values ? {path, document, values} : {path, document};
+    const index = this.appliedEffects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      this.appliedEffects[index] = spec;
       return this;
     }
-    this.appliedEffects.push(
-      values ? {path, document, values} : {path, document},
-    );
+    this.appliedEffects.push(spec);
     return this;
   }
 

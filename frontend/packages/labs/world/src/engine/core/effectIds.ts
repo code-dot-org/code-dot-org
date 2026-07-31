@@ -40,8 +40,10 @@ function hash(text: string): string {
  * An applied effect's IDENTITY: which effect, with which knob settings.
  *
  * Deliberately excludes the graph. Identity is what has to be structural —
- * gaining, losing, or retuning an effect all change what is attached to what,
- * and the driver reads values once, when it attaches. The graph is different:
+ * gaining, losing, or retuning an effect all change what is attached to what.
+ * The driver compares this same id per frame to notice a retune, which is how
+ * `add effect Tint` with a computed color reaches the running filter. The graph
+ * is different:
  * it can be swapped underneath a running filter (`updateEffect`), so an edit to
  * it should update the game rather than restart it. That content lives in
  * {@link effectContentHash}.
