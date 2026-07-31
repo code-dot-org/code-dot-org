@@ -18,11 +18,11 @@
   padding: 0;
   font-size: 13px;
   line-height: 1;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   pointer-events: all;
   cursor: pointer;
-  background: var(--effect-editor-surface, #262b40);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-surface);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 50%;
 
   /* Reads as a distinct object when it lands over a node body rather than
@@ -31,9 +31,10 @@
 }
 
 .remove:hover {
-  color: #fff;
-  background: #b33a4c;
-  border-color: #b33a4c;
+  /* A "fixed" token: white on the error fill in either app theme. */
+  color: var(--text-neutral-white-fixed, #fff);
+  background: var(--effect-editor-error);
+  border-color: var(--effect-editor-error);
 }
 
 /* The narrowing badge, sat on the wire just above where it lands. Drawn in
@@ -46,7 +47,7 @@
   line-height: 14px;
   letter-spacing: 0.04em;
   pointer-events: none;
-  background: var(--effect-editor-canvas, #1b1f30);
+  background: var(--effect-editor-canvas);
   border: 1px solid currentcolor;
   border-radius: 7px;
 }

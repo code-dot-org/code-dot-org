@@ -16,6 +16,6 @@
 .thumbnail {
   display: block;
   flex: 0 0 auto;
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 4px;
 }

@@ -15,7 +15,7 @@
   max-height: 280px;
   overflow: hidden;
   font-size: 12px;
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  border: 1px solid var(--effect-editor-border);
 }
 
 .heading {
@@ -25,8 +25,8 @@
   margin: 0;
   padding: 8px 10px 6px;
   font-size: 11px;
-  color: var(--effect-editor-muted, #9aa4c4);
-  border-block-end: 1px solid var(--effect-editor-border, #3a4160);
+  color: var(--effect-editor-muted);
+  border-block-end: 1px solid var(--effect-editor-border);
 }
 
 .wireDot {
@@ -55,11 +55,11 @@
 }
 
 .item:hover {
-  border-color: var(--effect-editor-accent, #8ab4f8);
+  border-color: var(--effect-editor-accent);
 }
 
 .empty {
   margin: 0;
   padding: 10px;
-  color: var(--effect-editor-muted, #9aa4c4);
+  color: var(--effect-editor-muted);
 }

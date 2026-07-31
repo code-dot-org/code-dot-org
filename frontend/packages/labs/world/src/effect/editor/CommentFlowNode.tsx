@@ -45,7 +45,7 @@ export function CommentFlowNode({id, data, selected}: NodeProps) {
         isVisible={selected && !readOnly}
         minWidth={MIN_WIDTH}
         minHeight={MIN_HEIGHT}
-        color="var(--effect-editor-accent, #8ab4f8)"
+        color="var(--effect-editor-accent)"
         onResizeEnd={(_event, {x, y, width, height}) =>
           resizeNode(id, {position: {x, y}, size: {width, height}})
         }

@@ -20,8 +20,8 @@
   font-size: 11px;
   color: inherit;
   text-align: right;
-  background: var(--effect-editor-field, #1b1f30);
-  border: 1px solid var(--effect-editor-border, #3a4160);
+  background: var(--effect-editor-field);
+  border: 1px solid var(--effect-editor-border);
   border-radius: 4px;
 }
 
@@ -42,6 +42,6 @@
   font-size: 10px;
   font-variant-numeric: tabular-nums;
   line-height: 1.2;
-  color: var(--effect-editor-text, #e8ebf5);
+  color: var(--effect-editor-text);
   pointer-events: none;
 }

@@ -254,7 +254,9 @@ function PortStrip({
                 width: HANDLE_SIZE,
                 height: HANDLE_SIZE,
                 backgroundColor: portColor(port.type),
-                borderColor: errored ? '#e5484d' : 'rgb(0 0 0 / 45%)',
+                borderColor: errored
+                  ? 'var(--effect-editor-error)'
+                  : 'rgb(0 0 0 / 45%)',
                 boxShadow: errored
                   ? '0 0 0 3px rgb(229 72 77 / 45%)'
                   : undefined,
