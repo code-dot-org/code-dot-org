@@ -1,5 +1,6 @@
 require 'net/http'
 require 'uri'
+require 'cdo/safe_http'
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
@@ -40,30 +41,12 @@ module ProxyHelper
 
     # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
     # to prevent race condition. We override the socket creation to use our pre-resolved IP.
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-
-    # Override DNS resolution to use our cached IP address
-    # This prevents the race condition while still allowing SSL to work properly
-    http.instance_variable_set(:@ipaddr, resolved_ip_address)
-    def http.conn_address
-      @ipaddr
-    end
-
-    path = url.path.empty? ? '/' : url.path
-    query = url.query || ''
-
-    # Limit how long in seconds we're willing to wait.
-    http.open_timeout = 3
-    http.read_timeout = 3
-
-    # Get the media.
-    query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-    media = http.request_get(path + query_string)
+    http = SafeHttp.http_client(url, resolved_ip_address)
+    media = http.request_get(SafeHttp.request_path(url))
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?
-      media.content_type = Rack::Mime.mime_type(File.extname(path))
+      media.content_type = Rack::Mime.mime_type(File.extname(url.path))
     end
 
     if media.is_a? Net::HTTPRedirection
@@ -129,24 +112,8 @@ module ProxyHelper
     end
 
     # SECURITY FIX: Use hostname for connection (required for SSL) but with custom DNS resolution
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = url.scheme == 'https'
-
-    # Override DNS resolution to use our cached IP address
-    http.instance_variable_set(:@ipaddr, resolved_ip_address)
-    def http.conn_address
-      @ipaddr
-    end
-
-    path = url.path.empty? ? '/' : url.path
-    query = url.query || ''
-
-    # Limit how long in seconds we're willing to wait.
-    http.open_timeout = 3
-    http.read_timeout = 3
-
-    # Get the response.
-    response = http.request_head(path + '?' + query)
+    http = SafeHttp.http_client(url, resolved_ip_address)
+    response = http.request_head(SafeHttp.request_path(url))
 
     if response.is_a? Net::HTTPRedirection
       resolve_redirect_url(response['location'], allowed_hostname_suffixes: allowed_hostname_suffixes, redirect_limit: redirect_limit - 1)
@@ -185,30 +152,10 @@ module ProxyHelper
   # SECURITY FIX: Resolve hostname to IP address and validate it's allowed
   # This prevents DNS race condition by resolving once and caching the result
   private def resolve_and_validate_ip_address(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    if public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
-      host_ip_address.to_s
-    else
-      nil
-    end
+    SafeHttp.resolved_ip_address(hostname, allow_ips: [ProxyHelper.dashboard_ip_address])
   end
 
-  # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
-  # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
   private def allowed_ip_address?(hostname)
-    host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
-    public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
-  end
-
-  private def public_ip_address?(ip_address)
-    return (
-      !ip_address.link_local? &&
-      !ip_address.loopback? &&
-      !ip_address.private? &&
-      # IPAddr doesn't have an exclude? method
-      # rubocop:disable Rails/NegateInclude
-      !IPAddr.new('0.0.0.0/8').include?(ip_address)
-      # rubocop:enable Rails/NegateInclude
-    )
+    !resolve_and_validate_ip_address(hostname).nil?
   end
 end
