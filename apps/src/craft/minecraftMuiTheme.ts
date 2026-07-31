@@ -142,6 +142,9 @@ const MINECRAFT_OUTLINED = {
     border: 'none',
     textShadow: '1px 2px rgba(33, 33, 33, 0.4)',
   },
+  '&&.MuiButton-sizeExtraSmall': {
+    textShadow: 'none',
+  },
   '&&:hover, &&:active': {border: 'none'},
   '&&.Mui-disabled, &&[aria-disabled="true"]': {border: 'none'},
   '&:active, a&:active': {
@@ -149,6 +152,7 @@ const MINECRAFT_OUTLINED = {
   },
   '&.Mui-disabled, &[aria-disabled="true"]': {
     ...toBackground([...bevel('0.33', '0.33'), DARKEN]),
+    textShadow: 'none',
   },
 } as const;
 
