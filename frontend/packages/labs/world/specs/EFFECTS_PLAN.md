@@ -961,14 +961,51 @@ somebody else's afternoon.
 - **Camera effects.** A filter on one camera rather than the whole view.
   `applyEffectToWorld` already targets a camera, so the runtime is there; what
   is missing is a reason — the World case is what the curriculum wanted first.
-- **`sameActors` is unreliable, and it is not only effects that depend on it.**
-  It compares the previous build's pre-tick snapshot with the incoming one, but
-  an unchanged bundle re-imports to the same module instance whose scene has
-  been ticking, so for any game where something moves the flag reads false on
-  almost every rebuild (measured: `Player.positional.position: {480,80} ->
-{480,408}`). The live shader swap sidesteps it deliberately (§11d). **§9's
-  live world-property patch — "change gravity strength and see it live" — does
-  not, so it likely never fires in practice.** Unconfirmed and unfixed.
+- ~~**`sameActors` is unreliable.**~~ Chased down and fixed; see §13.
 - **More stock effects.** Six is a teaching sequence, not a catalogue. Anything
   added should say where it sits in that progression (§11e) and carry the same
   notes; the tests enforce the latter.
+
+## 13. The `sameActors` defect — FIXED
+
+Flagged while building the live shader swap (§11d), then chased down. It was
+real, and it had broken §9's headline hot-reload behaviour: **"change gravity
+strength and see it live" restarted the game instead.**
+
+**The chain.** A build URL is a SHA-256 of every project file plus the entry
+(`buildCacheKey`), so it is content-addressed. `openFiles` is part of the
+project but _not_ of that hash — so merely opening a file requests a rebuild
+that produces the **same URL**, `import()` returns the **cached module**, and
+because a scene builds its world once at module scope, `getWorld()` hands back
+the very World that has been ticking. `incoming === runningWorld`.
+
+`reconcile` then compared the pre-tick baseline against a world mid-flight and
+saw every moving actor as changed — so it restarted. Worse, it stored that
+mid-flight snapshot as the next baseline, so the _next_ real edit, which does
+produce a fresh world at start positions, differed from the poisoned baseline
+and restarted too. One stray rebuild broke live reload for the rest of the
+session.
+
+**The fix** is five lines in the preview: if the module is the one already
+running, there is nothing to apply — return without reconciling and without
+touching the baseline. An identical URL means an identical bundle, so this is
+sound rather than merely convenient. `ReloadMode` gained `unchanged`, so the
+console says nothing rather than claiming a reload that did not happen.
+
+**Measured before and after**, driving the real UI:
+
+|                         | before               | after                      |
+| ----------------------- | -------------------- | -------------------------- |
+| open a file             | ↻ Restarted the game | _(nothing)_                |
+| change gravity strength | ↻ Restarted the game | **↻ Applied changes live** |
+
+**What is pinned.** The fix turns on `getWorld()` returning the same instance
+across calls, so that is now a test in `engine.test.ts` — if it ever returned a
+fresh world, the identity check would silently stop matching and the whole
+chain would come back.
+
+**What is not fixed.** The shader swap still does not gate on `sameActors`
+(§11d), and that stays deliberate: replacing a fragment program has nothing to
+do with where the actors are. The underlying sharp edge also remains — a
+rebuild request can still arrive for a module that is already running, so any
+future code that reconciles must not assume `incoming` is freshly built.
