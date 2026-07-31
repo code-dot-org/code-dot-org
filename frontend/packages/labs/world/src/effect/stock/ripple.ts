@@ -1,10 +1,4 @@
-// Stock `.effect` documents the lab ships.
-//
-// Effect-domain data, not a layer: it imports `model` and nothing else, so the
-// lab's default project (src/constants.ts) can seed a starter effect without
-// reaching into the editor.
-
-import {edge, emptyEffectDocument} from './model';
+import {edge, emptyEffectDocument} from '../model';
 import {
   GHOST_PORT,
   INPUT_TEXTURE_NODE_ID,
@@ -12,21 +6,22 @@ import {
   INPUT_UV_NODE_ID,
   OUTPUT_NODE_ID,
   parameterNodeId,
-} from './model/constants';
-import type {EffectDocument} from './model/types';
+} from '../model/constants';
+import type {EffectDocument} from '../model/types';
 
 /**
  * A horizontal ripple: offset the UV by a sine wave that travels with time,
  * then sample the texture at the offset coordinate.
  *
- * Exercises the pieces that have to work together — a parameter, the clock,
- * vector splitting and recombining, and generic type resolution — so a new
- * project opens on something worth looking at. Every node carries a note
- * explaining its step, so the graph reads as an explanation.
+ * The most involved of the stock effects, and the one to read last: it uses
+ * every idea the others introduce at once — a parameter, the clock, taking a
+ * value apart and putting it back, and moving where the picture is read from.
  */
 export const rippleEffect: EffectDocument = {
   ...emptyEffectDocument('Ripple'),
   description: 'Waves the picture sideways, like a flag in the wind.',
+  // Straight lines are what make a wobble legible; the checkerboard's edges bend visibly where a soft image would only smear.
+  testTexture: 'checker',
   parameters: [
     {
       id: 'strength',

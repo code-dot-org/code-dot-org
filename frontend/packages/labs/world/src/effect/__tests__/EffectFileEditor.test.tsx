@@ -6,8 +6,8 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import {describe, expect, it, vi} from 'vitest';
 
 import {EffectFileEditor} from '../EffectFileEditor';
-import {rippleEffect} from '../examples';
 import {serializeEffectDocument} from '../model';
+import {rippleEffect} from '../stock';
 
 const props = (overrides: Partial<Parameters<typeof EffectFileEditor>[0]>) => ({
   fileId: 'ripple',

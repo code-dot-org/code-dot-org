@@ -1,7 +1,7 @@
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
-import {rippleEffect} from './effect/examples';
 import {serializeEffectDocument} from './effect/model';
+import {rippleEffect} from './effect/stock';
 
 /**
  * The scene the game starts on — the driver's compile + run entry point

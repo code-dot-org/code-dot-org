@@ -843,7 +843,66 @@ effect's strength in the graph editor took the scene from a barely-visible
 wobble to a heavy smear, with "↻ Applied changes live" in the console and no
 reload. The scaffolding was then removed.
 
+## 11e. A stock effect library — DONE
+
+Six effects under `src/effect/stock/`, each a complete `.effect` document ready
+to be copied into a project. `STOCK_EFFECTS` is the registry an import dialog
+will read; each entry carries a file stem (`ripple` → `effects/ripple.effect`)
+separate from the document's learner-facing `name`, which they may rename.
+
+**They are written to be read, not only run.** The audience is someone meeting
+a shader for the first time, so every one carries a `description` (the line a
+picker shows), a Comment node explaining the idea, and a `note` on every
+working node. Those notes are not decoration: the compiler carries them into
+the generated GLSL as line comments, so the shader a learner eventually opens
+is annotated in the same words as the graph they built it from.
+
+**The order is a teaching order, and each introduces one idea the next
+assumes:**
+
+|           | introduces                                                   |
+| --------- | ------------------------------------------------------------ |
+| Tint      | sample a color; multiplying scales its four numbers          |
+| Fade      | take a color apart — alpha is not like the other three       |
+| Grayscale | measure brightness; Mix applies an effect _partly_           |
+| Pulse     | the clock, and turning a rising number into a back-and-forth |
+| Pixelate  | change _where_ you read, not what you do with the color      |
+| Ripple    | all of the above at once                                     |
+
+That order is pinned in a test rather than derived, because the obvious proxy
+is wrong: by node count Grayscale (8) would follow Pulse (6), yet
+split-and-recombine is a gentler idea than the clock, and Pixelate is four
+nodes while asking more of the reader than either.
+
+**Each opens on the test texture that shows it best** (`testTexture` on the
+document). Pixelate is the case that forced it: pixelating the default
+checkerboard produces moiré, because the pattern and the block grid fight. The
+effect is correct and the picture is unreadable — which would teach a learner
+the wrong thing about their own graph. It opens on the sprite, where the blocks
+are unmistakable. Ripple keeps the checkerboard, because straight lines are
+what make a wobble legible.
+
+**Tested as a product, not just as data.** Every effect must compile to a
+shader, validate against the on-disk schema, name and describe itself, explain
+its graph and every step, describe every knob — and _actually read_ every knob
+it declares. That last one matters: a declared-but-unread parameter is a dial
+that does nothing, which is worse than no dial, because the learner turns it
+and concludes the effect is broken. `compileEffect` reports it, so the test
+asks.
+
+**Verified in Chromium**, each opened in the editor and its output preview
+photographed: Tint washes the checkerboard pink, Fade shows the backdrop
+through the sprite, Grayscale drains the blue, Pixelate is blocky, Ripple bends
+the lines. Pulse is time-driven, so a still frame proves nothing — eight
+samples over a second came back eight distinct pictures.
+
+The library is not seeded into `DEFAULT_PROJECT`; a new project still gets the
+single Ripple starter. The rest are there to be imported, which is the piece
+still outstanding: a dialog listing `STOCK_EFFECTS` and copying the chosen
+document into `effects/`.
+
 ## 12. Deferred
 
-- **A stock effect library.** Effects come from the project's own `effects/`
-  for now; enumerating the ones the curriculum wants is separate work.
+- **The import dialog.** `STOCK_EFFECTS` is the data behind it; what is missing
+  is the UI that lists them and writes the chosen one into the project as
+  `effects/<id>.effect`.
