@@ -154,8 +154,16 @@ export interface PreviewReadyMessage {
   type: typeof FromPreviewMessage.READY;
 }
 
-/** How a `load` was applied: a fresh start, a live reconcile, or a restart. */
-export type ReloadMode = 'built' | 'reconciled' | 'restarted';
+/**
+ * How a `load` was applied: a fresh start, a live reconcile, a restart, or
+ * nothing at all.
+ *
+ * `unchanged` is a rebuild that produced the module the game is already
+ * running. Build URLs are content-addressed, so an identical URL means an
+ * identical bundle — and a rebuild can be requested for reasons that do not
+ * touch the bundle at all, opening a file being the common one.
+ */
+export type ReloadMode = 'built' | 'reconciled' | 'restarted' | 'unchanged';
 
 /** What the preview reports after applying a `load` (hot-reload outcome). */
 export interface ReloadReport {

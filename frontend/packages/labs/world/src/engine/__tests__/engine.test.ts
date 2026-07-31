@@ -574,3 +574,22 @@ describe('IsTouchingQuery (Collision predicate)', () => {
     );
   });
 });
+
+describe('SceneBuilder.getWorld', () => {
+  it('returns the same World every time, not a fresh one', () => {
+    // The preview relies on this. Build URLs are content-addressed, so an
+    // unchanged project re-imports to the same module instance — and because
+    // the scene builds its world once, at module scope, `getWorld()` then hands
+    // back the very World that is running. The preview detects that by identity
+    // (`incoming === runningWorld`) and skips the reload entirely.
+    //
+    // If this ever started returning a fresh world, that check would silently
+    // stop matching and every no-op rebuild would restart the game again — and,
+    // worse, snapshot a mid-flight world as the baseline, breaking live reload
+    // for the rest of the session.
+    const scene = new SceneBuilder({id: 'g', name: 'G'});
+    scene.useWorld(new WorldBuilder({id: 'w', name: 'W'}));
+
+    expect(scene.getWorld()).toBe(scene.getWorld());
+  });
+});

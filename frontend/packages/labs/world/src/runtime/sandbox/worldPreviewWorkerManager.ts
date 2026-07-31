@@ -255,6 +255,29 @@ export async function start(): Promise<void> {
       const parent = document.getElementById('game') ?? document.body;
 
       let mode: ReloadMode;
+      if (binding && runningWorld && incoming === runningWorld) {
+        // The very module the game is already running.
+        //
+        // Build URLs are a content hash of every project file (`buildCacheKey`),
+        // so an unchanged bundle re-imports to the same module instance — and
+        // the scene builds its world once, at module scope, so `getWorld()`
+        // hands back the World that has been ticking. A rebuild lands here
+        // whenever something outside the bundle changes; opening a file is
+        // enough, since `openFiles` is part of the project but not of the hash.
+        //
+        // Returning early is not just an optimisation. Reconciling would
+        // compare the pre-tick baseline against a world mid-flight and see
+        // every moving actor as changed — and then store THAT as the next
+        // baseline, so the following real edit would be measured against
+        // mid-game positions and restart too. One stray rebuild would poison
+        // hot reload for the rest of the session.
+        post({
+          type: FromPreviewMessage.BUILT,
+          id,
+          detail: {mode: 'unchanged', world: runningWorld.snapshot().world},
+        });
+        return;
+      }
       if (!binding || !runningWorld) {
         // First load: start fresh.
         runningWorld = incoming;
