@@ -99,7 +99,6 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.fetch_prompt_template(langfuse_prompt_name, fallback)
-    # In development, use the 'development' label. Defaults to production otherwise.
     label = Rails.env.development? ? 'development' : nil
     Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}/#{label}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development?) do
       response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name, label: label)

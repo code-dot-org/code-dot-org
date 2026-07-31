@@ -65,17 +65,26 @@ module AiStudentSnapshotHelper
 
   LESSON_INSIGHT_FIELDS = %w[progress misconceptions assessment next_steps].freeze
 
+  LESSON_FEEDBACK_FIELDS = %w[id saved_feedback submitted_feedback submitted_at created_at updated_at].freeze
+
+  def self.notify_and_raise(message, context)
+    exception = StandardError.new(message)
+    Honeybadger.notify(exception, context: context)
+    raise exception
+  end
+
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     system_prompt = prompt[:content]
     start_time = Time.now
+    context = {unit_id: unit_id, lesson_id: lesson_id, teacher_id: teacher_id, student_id: student_id, section_id: section_id}
 
     begin
       response = client.request_lesson_insight(system_prompt)
     rescue Net::ReadTimeout
-      raise StandardError.new("Timeout waiting for AI client to return lesson insight")
+      notify_and_raise("Timeout waiting for AI client to return lesson insight", context)
     rescue StandardError => exception
-      raise StandardError.new("Error processing AI lesson insight: #{exception.message}")
+      notify_and_raise("Error processing AI lesson insight: #{exception.message}", context)
     end
 
     if response.code == 200
@@ -101,9 +110,12 @@ module AiStudentSnapshotHelper
         end_time: end_time,
       )
 
-      return {status: response.code, json: JSON.parse(content).slice(*LESSON_INSIGHT_FIELDS).to_json}
+      parsed_content = JSON.parse(content)
+      notify_and_raise("AI lesson insight response was not a JSON object: #{content}", context) unless parsed_content.is_a?(Hash)
+
+      return {status: response.code, json: parsed_content.slice(*LESSON_INSIGHT_FIELDS).to_json}
     else
-      raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
+      notify_and_raise("Received status code #{response.code} when processing AI lesson insight: #{response.body}", context.merge(status: response.code))
     end
   end
 
@@ -111,13 +123,14 @@ module AiStudentSnapshotHelper
     prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     system_prompt = prompt[:content]
     start_time = Time.now
+    context = {unit_id: unit_id, lesson_id: lesson_id, teacher_id: teacher_id, student_id: student_id, section_id: section_id}
 
     begin
       response = client.request_lesson_feedback(system_prompt)
     rescue Net::ReadTimeout
-      raise StandardError.new("Timeout waiting for AI client to return lesson feedback")
+      notify_and_raise("Timeout waiting for AI client to return lesson feedback", context)
     rescue StandardError => exception
-      raise StandardError.new("Error processing AI lesson feedback: #{exception.message}")
+      notify_and_raise("Error processing AI lesson feedback: #{exception.message}", context)
     end
     if response.code == 200
       response_body = JSON.parse(response.body)
@@ -145,9 +158,9 @@ module AiStudentSnapshotHelper
       feedback_json = JSON.parse(content)
       feedback_string = feedback_json.is_a?(Hash) ? feedback_json['feedback'] : feedback_json
       saved_record = save_lesson_feedback(feedback_string, student_id, lesson_id, section_id, teacher_id)
-      return {status: response.code, record: saved_record}
+      return {status: response.code, record: saved_record.as_json(only: LESSON_FEEDBACK_FIELDS)}
     else
-      raise StandardError.new("Received status code #{response.code} when processing AI lesson feedback: #{response.body}")
+      notify_and_raise("Received status code #{response.code} when processing AI lesson feedback: #{response.body}", context.merge(status: response.code))
     end
   end
 
