@@ -1,0 +1,256 @@
+# Builds cdo-dashboard, smoke-tests it on docker and podman, boots Rails from
+# it against MySQL and Redis, and publishes it from staging. Not triggered by
+# source PRs — the slice is validated at publish time. amd64 only.
+# See docker/dashboard/README.md.
+
+name: cdo-dashboard-image
+
+on:
+  pull_request:
+    paths:
+      - 'docker/dashboard/**'
+      - '.github/actions/cdo-deps-key/**'
+      - '.github/workflows/cdo-dashboard-image.yml'
+  push:
+    branches: [staging]
+    paths:
+      - 'docker/dashboard/**'
+      - '.github/actions/cdo-deps-key/**'
+      - '.github/workflows/cdo-dashboard-image.yml'
+  # Chained off cdo-deps rather than scheduled, so the dashboard layer
+  # rebuilds on the dependency layer that just shipped, a failed deps publish
+  # rebuilds nothing, and the weekly cadence is inherited from cdo-base's
+  # cron through the chain rather than restated as a timer here.
+  workflow_run:
+    workflows: [cdo-deps-image]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Publishes are not governed here; build-push has its own group.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-dashboard
+
+jobs:
+  # Resolve cdo-deps once, by the bundle- content key this checkout implies,
+  # and give the same digest to every build. A checkout whose dependency
+  # inputs have no published layer fails here, loudly, instead of landing on
+  # stale bytes.
+  #
+  # This is also where the workflow_run chain is filtered: that event fires
+  # for failed runs and for other branches, and skipping this job skips the
+  # rest.
+  resolve-deps:
+    name: resolve cdo-deps digest
+    runs-on: ubuntu-24.04
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging')
+    permissions:
+      contents: read
+      packages: read
+    outputs:
+      digest: ${{ steps.deps.outputs.digest }}
+    steps:
+      # The key hashes the dependency inputs, so they must be in the checkout.
+      - name: Checkout dependency inputs only
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github/actions/cdo-deps-key
+            docker/build
+            docker/deps
+
+      - name: Compute the dependency-layer content key
+        id: key
+        uses: ./.github/actions/cdo-deps-key
+
+      # GHCR packages are private until someone flips them; authenticate
+      # every pull rather than depending on that manual step.
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Resolve the keyed dependency layer to a digest
+        id: deps
+        env:
+          REF: ghcr.io/code-dot-org/cdo-gems:${{ steps.key.outputs.key }}
+        run: |
+          set -euxo pipefail
+          digest="$(docker buildx imagetools inspect "$REF" \
+            --format '{{json .Manifest.Digest}}' | tr -d '"')" || {
+            echo "::error::No published dependency layer for this checkout's dependency inputs ($REF)." \
+                 "A lockfile change publishes its dependency layer on the staging push." >&2
+            exit 1
+          }
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+
+  smoke-test:
+    name: smoke-test (${{ matrix.engine }})
+    needs: resolve-deps
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [docker, podman]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: read
+    env:
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+    steps:
+      # The full tree: this image bakes the source slice.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # dashboard/config/locales is git-LFS tracked and checkout does not fetch
+      # LFS objects, so without this the image bakes pointer files and Rails
+      # dies at boot on the first non-English locale. Pulled by pattern rather
+      # than with checkout's lfs: true: locales are the only LFS-tracked path
+      # inside the slice, and everything else LFS holds is excluded anyway.
+      - name: Fetch the LFS objects the source slice needs
+        run: git lfs pull --include='dashboard/config/locales/**'
+
+      # podman reads ~/.docker/config.json as a credential fallback, so one
+      # docker login serves both engines.
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-dashboard with ${{ matrix.engine }}
+        run: |
+          ${{ matrix.engine }} build \
+            -f docker/dashboard/Dockerfile \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-dashboard:smoke .
+
+      - name: Smoke test
+        run: ./docker/dashboard/smoke-test.sh cdo-dashboard:smoke ${{ matrix.engine }}
+
+  # Boot the artifact and drive it: verify.sh stands up MySQL and Redis and
+  # proves schema load, a model write, a worker pass, and a signed-in API
+  # read over HTTP — the check the Drone image cannot express, since it
+  # tests the deployed bytes rather than a CI-only environment.
+  rails-boot:
+    name: rails boots from the image
+    needs: resolve-deps
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      packages: read
+    env:
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # dashboard/config/locales is git-LFS tracked and checkout does not fetch
+      # LFS objects, so without this the image bakes pointer files and Rails
+      # dies at boot on the first non-English locale. Pulled by pattern rather
+      # than with checkout's lfs: true: locales are the only LFS-tracked path
+      # inside the slice, and everything else LFS holds is excluded anyway.
+      - name: Fetch the LFS objects the source slice needs
+        run: git lfs pull --include='dashboard/config/locales/**'
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-dashboard
+        run: |
+          docker build \
+            -f docker/dashboard/Dockerfile \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-dashboard:boot .
+
+      - name: Verify the image end to end
+        run: ./docker/dashboard/verify.sh cdo-dashboard:boot docker
+
+  build-push:
+    name: build and push
+    if: github.event_name != 'pull_request'
+    needs: [resolve-deps, smoke-test, rails-boot]
+    runs-on: ubuntu-24.04
+    # Inert until its deployment-branch policy is set; see docker/deps/README.md.
+    environment: ghcr-publish
+    # Shared across refs so two publishes cannot interleave. Safe to cancel:
+    # nothing resolves `latest` programmatically.
+    concurrency:
+      group: cdo-dashboard-publish
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      packages: write
+    env:
+      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-gems@${{ needs.resolve-deps.outputs.digest }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # dashboard/config/locales is git-LFS tracked and checkout does not fetch
+      # LFS objects, so without this the image bakes pointer files and Rails
+      # dies at boot on the first non-English locale. Pulled by pattern rather
+      # than with checkout's lfs: true: locales are the only LFS-tracked path
+      # inside the slice, and everything else LFS holds is excluded anyway.
+      - name: Fetch the LFS objects the source slice needs
+        run: git lfs pull --include='dashboard/config/locales/**'
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # git-<sha> names the source a publish built, but publishes happen on
+      # image-definition changes and on the deps chain — not per staging
+      # commit — so most shas never get a tag. A per-commit contract belongs
+      # to a deploy pipeline, not to this bootstrap automation.
+      - name: Compute tags
+        id: meta
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        with:
+          images: ${{ env.IMAGE }}
+          tags: |
+            type=sha,prefix=git-,format=long,enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
+
+      - name: Build cdo-dashboard
+        run: |
+          docker build \
+            -f docker/dashboard/Dockerfile \
+            --build-arg DEPS_IMAGE="$DEPS_IMAGE" \
+            -t cdo-dashboard:publish .
+
+      # The matrix and rails-boot tested images built on other runners. These
+      # test the bytes actually being published.
+      - name: Smoke test
+        run: ./docker/dashboard/smoke-test.sh cdo-dashboard:publish docker
+
+      - name: Verify the publish artifact end to end
+        run: ./docker/dashboard/verify.sh cdo-dashboard:publish docker
+
+      # Not build-push-action with push: true — that publishes in the step
+      # that builds, before the smoke suite can fail the job.
+      - name: Push cdo-dashboard
+        env:
+          TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euxo pipefail
+          # An empty list would make this step a green no-op.
+          test -n "$TAGS"
+          for ref in $TAGS; do
+            docker tag cdo-dashboard:publish "$ref"
+            docker push "$ref"
+          done

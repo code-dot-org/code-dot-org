@@ -1,0 +1,38 @@
+# Backing services plus the image under test as `web`; used by verify.sh and
+# the README's local-run recipe. The caller sets IMAGE.
+
+services:
+  mysql:
+    image: docker.io/library/mysql:8.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+
+  redis:
+    image: docker.io/library/redis:7
+
+  web:
+    image: ${IMAGE:?set IMAGE to the cdo-dashboard image to run}
+    env_file: adhoc.env
+    # The systemd unit's shape: WorkingDirectory=app_root, bundle exec puma.
+    # Bind and workers come from config/puma.rb via CDO (0.0.0.0:3000).
+    working_dir: /code-dot-org/dashboard
+    command: ["bundle", "exec", "puma", "-C", "config/puma.rb"]
+    ports:
+      - "3000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    # start_period covers the ~1 min adhoc boot; the image ships curl.
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:3000/health_check"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+      start_period: 120s

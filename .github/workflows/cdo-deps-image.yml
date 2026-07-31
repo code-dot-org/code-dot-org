@@ -1,34 +1,42 @@
-# Builds cdo-gems, smoke-tests it on docker and podman, and publishes it from
+# Builds cdo-deps (published, for now, under the legacy cdo-gems package and
+# bundle- key — renaming a published identity is its own change), smoke-tests
+# it on docker and podman, and publishes it from
 # staging. This also gates docker/build, since every job here builds cdo-build
 # anyway: it is unpublished, so there is nothing to pull. amd64 only.
-# See docker/gems/README.md and docker/build/README.md.
+# See docker/deps/README.md and docker/build/README.md.
 
-name: cdo-gems-image
+name: cdo-deps-image
 
 on:
   pull_request:
     paths:
-      - 'docker/gems/**'
+      - 'docker/deps/**'
       - 'docker/build/**'
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
+      - '.python-version'
+      - 'pyproject.toml'
+      - 'uv.lock'
       - 'dashboard/engines/*/*.gemspec'
       - 'dashboard/engines/*/lib/*/version.rb'
-      - '.github/workflows/cdo-gems-image.yml'
+      - '.github/workflows/cdo-deps-image.yml'
   push:
     branches: [staging]
     paths:
-      - 'docker/gems/**'
+      - 'docker/deps/**'
       - 'docker/build/**'
       - 'Gemfile'
       - 'Gemfile.lock'
       - '.ruby-version'
+      - '.python-version'
+      - 'pyproject.toml'
+      - 'uv.lock'
       - 'dashboard/engines/*/*.gemspec'
       - 'dashboard/engines/*/lib/*/version.rb'
-      - '.github/workflows/cdo-gems-image.yml'
-  # Chained off cdo-base rather than scheduled, so the gem layer rebuilds on
-  # the base that just shipped and a failed base rebuilds nothing.
+      - '.github/workflows/cdo-deps-image.yml'
+  # Chained off cdo-base rather than scheduled, so the dependency layer
+  # rebuilds on the base that just shipped and a failed base rebuilds nothing.
   workflow_run:
     workflows: [cdo-base-image]
     types: [completed]
@@ -40,6 +48,8 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
+  # The published identity keeps the legacy name until the package rename;
+  # everything that resolves it does so through the cdo-deps-key action.
   IMAGE: ghcr.io/${{ github.repository_owner }}/cdo-gems
 
 jobs:
@@ -56,9 +66,19 @@ jobs:
     if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'staging')
     permissions:
       contents: read
+      packages: read
     outputs:
       digest: ${{ steps.base.outputs.digest }}
     steps:
+      # GHCR packages are private until someone flips them; authenticate
+      # every pull rather than depending on that manual step.
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       # Takes the latest version and converts to a digest for supply chain
       # digest pinning.
       - name: Resolve cdo-base:latest to a digest
@@ -80,17 +100,29 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       contents: read
+      packages: read
     env:
       BASE_IMAGE: ghcr.io/code-dot-org/cdo-base@${{ needs.resolve-base.outputs.digest }}
     steps:
-      # Sparse checkout cone mode also brings the repo root, where the Gemfile lives.
-      - name: Checkout gem inputs only
+      # Sparse checkout cone mode also brings the repo root, where the
+      # lockfiles live.
+      - name: Checkout dependency inputs only
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
             docker/build
-            docker/gems
+            docker/deps
             dashboard/engines
+            python
+
+      # podman reads ~/.docker/config.json as a credential fallback, so one
+      # docker login serves both engines.
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build cdo-build with ${{ matrix.engine }}
         run: |
@@ -102,16 +134,16 @@ jobs:
       - name: Smoke test cdo-build
         run: ./docker/build/smoke-test.sh cdo-build:ci ${{ matrix.engine }}
 
-      - name: Build cdo-gems with ${{ matrix.engine }}
+      - name: Build cdo-deps with ${{ matrix.engine }}
         run: |
           ${{ matrix.engine }} build \
-            -f docker/gems/Dockerfile \
+            -f docker/deps/Dockerfile \
             --build-arg BUILD_IMAGE=cdo-build:ci \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
-            -t cdo-gems:smoke .
+            -t cdo-deps:smoke .
 
       - name: Smoke test
-        run: ./docker/gems/smoke-test.sh cdo-gems:smoke ${{ matrix.engine }}
+        run: ./docker/deps/smoke-test.sh cdo-deps:smoke ${{ matrix.engine }}
 
   # cdo-build exists only in this job's local image store, which is why nothing
   # sets up a container builder: it would try to pull the tag from a registry.
@@ -120,12 +152,12 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: [resolve-base, smoke-test]
     runs-on: ubuntu-24.04
-    # Inert until its deployment-branch policy is set; see docker/gems/README.md.
+    # Inert until its deployment-branch policy is set; see docker/deps/README.md.
     environment: ghcr-publish
     # Shared across refs so two publishes cannot interleave. Safe to cancel:
     # nothing resolves `latest` programmatically.
     concurrency:
-      group: cdo-gems-publish
+      group: cdo-deps-publish
       cancel-in-progress: true
     permissions:
       contents: read
@@ -133,13 +165,15 @@ jobs:
     env:
       BASE_IMAGE: ghcr.io/code-dot-org/cdo-base@${{ needs.resolve-base.outputs.digest }}
     steps:
-      - name: Checkout gem inputs only
+      - name: Checkout dependency inputs only
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
+            .github/actions/cdo-deps-key
             docker/build
-            docker/gems
+            docker/deps
             dashboard/engines
+            python
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
@@ -154,31 +188,31 @@ jobs:
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
             -t cdo-build:ci docker/build/
 
-      # Tag contract and the key's inputs: docker/gems/README.md.
+      # The one definition of the content key, shared with every consumer.
+      - name: Compute the dependency-layer content key
+        id: key
+        uses: ./.github/actions/cdo-deps-key
+
+      # Tag contract: docker/deps/README.md.
       - name: Compute tags
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
         with:
           images: ${{ env.IMAGE }}
           # latest=auto produces nothing for raw and sha tags, so declare it.
-          #
-          # Literal paths, no globs: hashFiles digests files in glob order and
-          # @actions/glob documents that order as not guaranteed. Engine
-          # gemspecs need no entry — Gemfile.lock's PATH section records every
-          # one, its version, and its dependencies.
           tags: |
-            type=raw,value=bundle-${{ hashFiles('.ruby-version', 'Gemfile', 'Gemfile.lock', 'docker/build/Dockerfile', 'docker/gems/Dockerfile') }},enable={{is_default_branch}}
+            type=raw,value=${{ steps.key.outputs.key }},enable={{is_default_branch}}
             type=sha,prefix=git-,format=long,enable={{is_default_branch}}
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,prefix=dev-,format=long,enable={{is_not_default_branch}}
 
-      - name: Build cdo-gems
+      - name: Build cdo-deps
         run: |
           docker build \
-            -f docker/gems/Dockerfile \
+            -f docker/deps/Dockerfile \
             --build-arg BUILD_IMAGE=cdo-build:ci \
             --build-arg BASE_IMAGE="$BASE_IMAGE" \
-            -t cdo-gems:publish \
+            -t cdo-deps:publish \
             .
 
       # The matrix tested images built on other runners. These test the one
@@ -186,12 +220,12 @@ jobs:
       - name: Smoke test cdo-build
         run: ./docker/build/smoke-test.sh cdo-build:ci docker
 
-      - name: Smoke test cdo-gems
-        run: ./docker/gems/smoke-test.sh cdo-gems:publish docker
+      - name: Smoke test cdo-deps
+        run: ./docker/deps/smoke-test.sh cdo-deps:publish docker
 
       # Not build-push-action with push: true — that publishes in the step that
       # builds, before the smoke suites can fail the job.
-      - name: Push cdo-gems
+      - name: Push cdo-deps (as the cdo-gems package)
         env:
           TAGS: ${{ steps.meta.outputs.tags }}
         run: |
@@ -199,6 +233,6 @@ jobs:
           # An empty list would make this step a green no-op.
           test -n "$TAGS"
           for ref in $TAGS; do
-            docker tag cdo-gems:publish "$ref"
+            docker tag cdo-deps:publish "$ref"
             docker push "$ref"
           done

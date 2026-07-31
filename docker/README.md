@@ -4,6 +4,36 @@
 
 This directory contains Docker Compose files for running the code.org website locally for development and CI purposes.
 
+# The image family
+
+A layered set of container images: one shared base, with each image stacked on
+it in order of how often its contents change. Every image in the family builds
+on both docker and podman from the same Dockerfile.
+
+| image | directory | adds | published as |
+|---|---|---|---|
+| cdo-base | [base/](base/README.md) | Ruby on slim Debian, mysql client, ImageMagick, jemalloc, locales, the uid-1000 `cdo` user | `ghcr.io/code-dot-org/cdo-base` |
+| cdo-build | [build/](build/README.md) | the compile toolchain, Node, and uv; builds the dependency layer and is then discarded | not published |
+| cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-gems` |
+| cdo-dashboard | [dashboard/](dashboard/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-dashboard` |
+
+The dependency layer is published under the older `cdo-gems` package name; the
+directory, build args, and workflows all say `deps`.
+
+Each build takes its parent as a build argument, so a caller can pin the parent
+by digest. `cdo-deps` is resolved by content key rather than by tag — see
+[deps/README.md](deps/README.md#the-content-key) — so a source image is always
+built against the dependency layer its own lockfiles imply.
+
+`smoke-harness.sh` is the assertion harness the family's smoke tests share.
+Source it first thing in a `smoke-test.sh`; it consumes the script's
+`<image-ref> <engine>` arguments and provides `run`, `fails_with`,
+`assert_no_toolchain`, and `report`.
+
+Publish automation is in `.github/workflows/cdo-*-image.yml`. Each workflow is
+chained off its parent's, so a flavor rebuilds on the parent that just shipped
+and a failed parent rebuilds nothing.
+
 # Prerequisites
 
 Caveats:
