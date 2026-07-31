@@ -35,7 +35,6 @@
 // the top of the column.
 .titleNoTopMargin {
   margin-top: 0;
-  margin-bottom: 10px;
 
   // .headingWithMargins above is also 0-2-0, so add a class to outrank it when
   // a heading carries both, instead of depending on which rule comes last.
