@@ -114,11 +114,35 @@ describe('rules/gravity.rule', () => {
     // An actor-scoped member is invoked as `(actor, …args)`; it reaches the
     // world through `actor.world`, but these take the subject as a parameter
     // because they are questions about the world asked of a pair.
-    for (const id of ['is_resting_on', 'is_on_a_ground_']) {
+    for (const id of ['is_resting_on', 'land_on_ground_', 'rest_height_of']) {
       expect(meta.queries.find(q => q.id === id)?.scope).toBe('world');
     }
-    expect(meta.actions.find(a => a.id === 'land_on_grounds')?.scope).toBe(
-      'world',
+  });
+
+  it('lands and reports in one walk of the grounds', () => {
+    // `land on ground?` both snaps the actor and answers whether it did, so the
+    // step walks the grounds once. It used to be an action that landed and a
+    // query that re-walked them to answer — two passes for one question,
+    // because a body could not hold the answer between them.
+    expect(meta.queries.map(q => q.id)).not.toContain('is_on_a_ground_');
+    expect(meta.actions.map(a => a.id)).not.toContain('land_on_grounds');
+    expect(meta.queries.find(q => q.id === 'land_on_ground_')?.returns).toBe(
+      'boolean',
+    );
+  });
+
+  it('handles gravity in either direction with one test', () => {
+    // The sign of gravity's direction lives in a variable, so the resting test
+    // is written once rather than mirrored for the inverted case — which is
+    // what the built-in does, and what a body without variables forced.
+    const doc = JSON.parse(source) as {
+      variables?: Array<{name: string; type: string}>;
+    };
+    expect(doc.variables).toContainEqual(
+      expect.objectContaining({name: 'sign', type: 'Number'}),
+    );
+    expect(meta.queries.find(q => q.id === 'rest_height_of')?.returns).toBe(
+      'number',
     );
   });
 
