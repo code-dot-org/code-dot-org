@@ -112,15 +112,17 @@ const chain = (blocks: object[]): object | undefined =>
     (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
     undefined,
   );
-/** A `trait(...)` result, which `ruleFile` lifts out as its own top block. */
-interface TraitRoot {
-  __traitRoot: object;
+/**
+ * A member that is its own TOP BLOCK — a trait or a step. `ruleFile` lifts these
+ * out beside the rule rather than chaining them inside it.
+ */
+interface DefinitionRoot {
+  __root: object;
 }
-const isTraitRoot = (member: object): member is TraitRoot =>
-  '__traitRoot' in member;
+const isRoot = (member: object): member is DefinitionRoot => '__root' in member;
 
 const ruleFile = (name: string, ...members: object[]): string => {
-  const body = chain(members.filter(m => !isTraitRoot(m)));
+  const body = chain(members.filter(m => !isRoot(m)));
   return JSON.stringify({
     blocks: {
       blocks: [
@@ -129,7 +131,7 @@ const ruleFile = (name: string, ...members: object[]): string => {
           fields: {NAME: name},
           ...(body ? {next: {block: body}} : {}),
         },
-        ...members.filter(isTraitRoot).map(m => m.__traitRoot),
+        ...members.filter(isRoot).map(m => m.__root),
       ],
     },
   });
@@ -145,7 +147,7 @@ const event = (name: string): object => ({
 const trait = (name: string, ...body: object[]): object => {
   const inner = chain(body);
   return {
-    __traitRoot: {
+    __root: {
       type: 'world_rule_trait',
       fields: {NAME: name},
       ...(inner ? {next: {block: inner}} : {}),
@@ -165,9 +167,17 @@ const query = (type: string, name: string): object => ({
 });
 // `define step`: NAME, ORDER (free/before/after), and STEP (the anchor value,
 // `<owner>#<stepId>`) when ordered.
+// `define step`: an event hat per ordering kind. Its NAME names the step; the
+// anchor dropdown is only on the ordered two. Lifted to its own top block by
+// `ruleFile`, like a trait — its body is the chain below it.
 const step = (name: string, order = 'free', anchor = ''): object => ({
-  type: 'world_rule_step',
-  fields: {NAME: name, ORDER: order, STEP: anchor},
+  __root:
+    order === 'free'
+      ? {type: 'world_rule_step_tick', fields: {NAME: name}}
+      : {
+          type: `world_rule_step_${order}`,
+          fields: {NAME: name, STEP: anchor},
+        },
 });
 
 describe('parseRuleMeta', () => {
@@ -513,6 +523,7 @@ describe('extractRuleBodies', () => {
     // the member's params mutator (here, Nudge takes one param, the query none).
     const bodies = extractRuleBodies([root, traitRoot] as never, {
       body: block => `BODY(${block.getFieldValue('NAME')})\n`,
+      chainBody: block => `CHAIN(${block.getFieldValue('NAME')})\n`,
       signature: block =>
         block.getFieldValue('NAME') === 'Nudge' ? ['amount'] : [],
     });

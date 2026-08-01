@@ -175,9 +175,10 @@ describe('rules/gravity.rule', () => {
     );
   });
 
-  it('declares its traits as top blocks, beside the rule', () => {
-    // A trait is a definition of its own, not a `do` mouth nested in the rule's
-    // tower — so each is a separate stack a learner can move and read alone.
+  it('declares its traits and steps as top blocks, beside the rule', () => {
+    // A trait and a step are each definitions of their own, not `do` mouths
+    // nested in the rule's tower — so each is a separate stack a learner can
+    // move and read alone.
     const tops = (
       JSON.parse(source) as {blocks: {blocks: Array<{type: string}>}}
     ).blocks.blocks;
@@ -185,7 +186,25 @@ describe('rules/gravity.rule', () => {
       'world_rule',
       'world_rule_trait',
       'world_rule_trait',
+      'world_rule_step_before',
+      'world_rule_step_after',
     ]);
+  });
+
+  it('carries a step’s ordering in its block type, not a field', () => {
+    // `before Motion ▸ reposition` and `when tick` are different KINDS of step,
+    // not one block with a setting — which is why the anchor dropdown no longer
+    // has to be hidden when it would be meaningless.
+    const tops = (
+      JSON.parse(source) as {
+        blocks: {
+          blocks: Array<{type: string; fields?: Record<string, string>}>;
+        };
+      }
+    ).blocks.blocks;
+    const before = tops.find(b => b.type === 'world_rule_step_before')!;
+    expect(before.fields?.STEP).toBe('MotionRule#reposition');
+    expect(before.fields?.ORDER).toBeUndefined();
   });
 
   it('chains a trait’s members below it, not inside a `do`', () => {

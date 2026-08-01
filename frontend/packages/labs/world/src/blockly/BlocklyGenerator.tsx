@@ -114,6 +114,16 @@ export const BlocklyGenerator = forwardRef<
           const bodies = extractRuleBodies(topBlocks, {
             body: block =>
               generator.statementToCode(block as Blockly.Block, 'DO'),
+            // A step's body is what follows the hat. `blockToCode` on the next
+            // block generates it and everything chained after it.
+            chainBody: block => {
+              const first = (block as Blockly.Block).getNextBlock();
+              if (!first) {
+                return '';
+              }
+              const code = generator.blockToCode(first);
+              return Array.isArray(code) ? code[0] : code;
+            },
             // The params mutator stores each param's variable id in extraState;
             // map them to the safe JS identifiers the body's getters resolve to,
             // so the closure signature and the getters agree.
