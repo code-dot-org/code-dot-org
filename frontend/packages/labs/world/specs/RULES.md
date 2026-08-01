@@ -378,6 +378,30 @@ to refer to ITSELF:
   just without the input and arrows rules. It builds from a flat `stack([…])`
   now, which cannot express the mistake.
 
+## Notes, in the flow of the blocks
+
+`note ⟨…⟩` is a comment as a block: a statement that generates a `//` line and
+changes nothing else. Blockly can already attach a comment to a block through
+its context menu, which is where a note ABOUT one block belongs; this is for the
+other kind — a line of explanation where the thing it explains happens.
+
+The stock rules are annotated with it, for a reader who is meeting this maths
+for the first time. Gravity's `rest height of` is the worked example:
+
+```
+note Where does this faller stop when it lands on this ground?
+note Boxes are measured from the middle, so the top of the ground is
+note its middle minus half its height — and the faller sits half its own
+note height above that. Upside-down gravity flips which side that is,
+note so we multiply by sign: 1 for normal gravity, -1 for upside-down.
+```
+
+Two details worth keeping: the note generates into the module, so the same
+sentence is in the editor and in the code the project runs; and the field's
+`maxDisplayLength` is raised to 140, because Blockly clips a text field's
+DISPLAY at 50 characters — the value was always whole, but a sentence was cut
+off mid-word with an ellipsis.
+
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an
