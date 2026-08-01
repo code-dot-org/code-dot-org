@@ -70,6 +70,14 @@ describe('rules/collision.rule', () => {
     expect(push?.params.map(p => p.type)).toEqual(['actor', 'actor', 'number']);
   });
 
+  it('explains each block it defines', () => {
+    // The tooltip a learner gets when they hover the block in the toolbox. A
+    // member with none has a tooltip that repeats its name back at them.
+    for (const member of [...meta.queries, ...meta.actions]) {
+      expect(member.description, member.name).toMatch(/\w+ \w+/);
+    }
+  });
+
   it('runs after Motion has moved everything', () => {
     // Resolution operates on the positions Motion just integrated, which is what
     // makes the per-tick order a chain: velocity → move → resolve → land.

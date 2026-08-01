@@ -20,6 +20,7 @@ const designed = (
   parts: unknown[],
   returns = 'none',
   variables: Array<{id: string; name: string; type: string}> = [],
+  description = '',
 ) =>
   parseRuleMeta(
     'rules/push',
@@ -33,7 +34,7 @@ const designed = (
             next: {
               block: {
                 type: 'world_rule_block',
-                fields: {RETURNS: returns},
+                fields: {RETURNS: returns, DESCRIPTION: description},
                 extraState: {parts},
               },
             },
@@ -161,6 +162,36 @@ describe('a designed block', () => {
       b => b.type === 'world_query_rules_push_IsOnTheGroundQuery',
     ) as {message0?: string} | undefined;
     expect(call?.message0).toBe('%1 is on the ground?');
+  });
+
+  it('gives the block it defines the description its author wrote', () => {
+    // The tooltip someone reads when they hover it in the toolbox months later,
+    // having forgotten what "push toward" meant. The definition is the only
+    // place that knows.
+    const meta = designed(
+      PUSH_PARTS,
+      'none',
+      PUSH_VARS,
+      'Shove an actor toward another one.',
+    );
+    expect(meta.actions[0].description).toBe(
+      'Shove an actor toward another one.',
+    );
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(
+      b => b.type === 'world_do_rules_push_PushTowardAction',
+    ) as {tooltip?: string} | undefined;
+    expect(call?.tooltip).toBe('Shove an actor toward another one.');
+  });
+
+  it('falls back to the member’s own name when there is no description', () => {
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    expect(meta.actions[0].description).toBeUndefined();
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(
+      b => b.type === 'world_do_rules_push_PushTowardAction',
+    ) as {tooltip?: string} | undefined;
+    expect(call?.tooltip).toBe('push toward');
   });
 
   it('offers a flyout of blocks that are actually registered', () => {

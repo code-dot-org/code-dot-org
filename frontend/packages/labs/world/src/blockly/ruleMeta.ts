@@ -79,6 +79,8 @@ export interface ActionMeta {
   readonly params: readonly ActionParam[];
   /** The designed signature, when `define block` made this. */
   readonly parts?: readonly MemberPart[];
+  /** The author's one-line explanation — the call-site block's tooltip. */
+  readonly description?: string;
   readonly scope: 'world' | 'actor';
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
@@ -91,6 +93,8 @@ export interface QueryMeta {
   readonly params: readonly ActionParam[];
   /** The designed signature, when `define block` made this. */
   readonly parts?: readonly MemberPart[];
+  /** The author's one-line explanation — the call-site block's tooltip. */
+  readonly description?: string;
   readonly scope: 'world' | 'actor';
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
@@ -507,6 +511,7 @@ export function parseRuleMeta(
       name,
       params,
       parts,
+      description: field(block, 'DESCRIPTION') || undefined,
       scope: (ownerTraitId ? 'actor' : 'world') as 'actor' | 'world',
       ownerTraitId,
     };
