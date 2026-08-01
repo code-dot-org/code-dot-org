@@ -30,18 +30,19 @@ import {RuleBuilder} from '../../builders/RuleBuilder';
 import type {Actor} from '../../core/Actor';
 import {Vector} from '../../core/Vector';
 import {
-  MotionRule,
-  MovableTrait,
-  RepositionStep,
-  previousPosition,
-  VelocityProperty,
-} from '../../rules/motion';
-import {
   IntrinsicSizeProperty,
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
 } from '../../rules/spatial';
+
+import {
+  MotionRule,
+  MovableTrait,
+  RepositionStep,
+  previousPosition,
+  VelocityProperty,
+} from './motionRule';
 
 const rule = new RuleBuilder({id: 'collision', name: 'Has Collisions'});
 rule.requires([MotionRule]);

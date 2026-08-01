@@ -84,7 +84,7 @@ describe('rules/collision.rule', () => {
     const [step] = meta.steps;
     expect(step.id).toBe('resolve');
     expect(step.order.kind).toBe('after');
-    expect(step.order.anchor?.ownerRef.exportName).toBe('MotionRule');
+    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
     expect(step.order.anchor?.stepId).toBe('reposition');
   });
 });

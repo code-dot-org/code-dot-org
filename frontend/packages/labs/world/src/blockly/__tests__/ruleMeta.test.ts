@@ -1,14 +1,16 @@
 import {describe, expect, it} from 'vitest';
 
+// Gravity, collision and motion ship as `.rule` files now rather than as engine
+// code. The fixtures the engine's own tests drive are still the richest examples
+// of a rule's shape — traits, world and actor members, events, ordered steps —
+// which is what this file describes, so it reads them from there.
 import * as WorldLab from '../../engine';
-import {MotionRule} from '../../engine';
-// Gravity ships as a `.rule` now, not as engine code; the fixture the engine's
-// own tests drive is still the richest example of a rule's shape (two traits,
-// world and actor members, events), which is what this describes.
 import * as CollisionFixture from '../../engine/__tests__/fixtures/collisionRule';
 import {CollisionRule} from '../../engine/__tests__/fixtures/collisionRule';
 import * as GravityFixture from '../../engine/__tests__/fixtures/gravityRule';
 import {GravityRule} from '../../engine/__tests__/fixtures/gravityRule';
+import * as MotionFixture from '../../engine/__tests__/fixtures/motionRule';
+import {MotionRule} from '../../engine/__tests__/fixtures/motionRule';
 import {
   builtinRuleMeta,
   extractRuleBodies,
@@ -27,6 +29,7 @@ describe('builtinRuleMeta', () => {
       ...(WorldLab as Record<string, unknown>),
       ...(GravityFixture as Record<string, unknown>),
       ...(CollisionFixture as Record<string, unknown>),
+      ...(MotionFixture as Record<string, unknown>),
     })[0];
 
   it('describes a rule, its traits, and its world + actor members', () => {
@@ -660,10 +663,12 @@ describe('a rule that refers to itself', () => {
 
 describe('steps (per-tick behavior + ordering)', () => {
   it('builtinRuleMeta exposes a rule’s steps as anchor targets', () => {
-    const motion = builtinRuleMeta(
-      [MotionRule as never],
-      WorldLab as Record<string, unknown>,
-    )[0];
+    // Motion is a `.rule` now; the fixture stands in for "a rule with a step",
+    // and its exports have to be in the namespace for the ref to resolve.
+    const motion = builtinRuleMeta([MotionRule as never], {
+      ...(WorldLab as Record<string, unknown>),
+      ...(MotionFixture as Record<string, unknown>),
+    })[0];
     const reposition = motion.steps.find(s => s.id === 'reposition');
     expect(reposition).toBeDefined();
     expect(reposition?.ownerRef).toEqual({

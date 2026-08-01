@@ -451,6 +451,14 @@ describe('domain block generators', () => {
     expect(emitValue('world_key', {KEY: 'ArrowLeft'})[0]).toBe('"ArrowLeft"');
   });
 
+  it('reports the scale between a speed and a distance', () => {
+    // The Engine block `rules/stock/motion` multiplies by, in both places it
+    // turns a rate into a distance.
+    expect(emitValue('world_pixels_per_unit')[0]).toBe(
+      'WorldLab.PIXELS_PER_UNIT',
+    );
+  });
+
   it('a note generates a comment, on one line', () => {
     // The note survives into the running code, which is the point: the same
     // sentence in the editor and in what the project runs.
@@ -735,12 +743,10 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === name,
       )?.blocks ?? [];
-    // Motion had no blocks before; its velocity set + get now populate it.
-    expect(category('Has Physics')).toEqual(
-      expect.arrayContaining([
-        'world_set_VelocityProperty',
-        'world_get_VelocityProperty',
-      ]),
+    // Spatial's, which is the only built-in rule left with a settable property
+    // a learner writes: motion's velocity went with motion (rules/stock/motion).
+    expect(category('Has Space')).toEqual(
+      expect.arrayContaining(['world_set_position']),
     );
     // Gravity gains its world properties and its actor property, set and get.
     expect(projectCategory('Has Wind')).toEqual(
@@ -774,7 +780,9 @@ describe('domain block generators', () => {
     expect(projectCategory('Has Wind')).toContain(
       `world_do_${'rules_wind_'}InvertAction`,
     );
-    expect(category('Has Physics')).toContain('world_do_ApplyForceAction');
+    // Motion's `apply force` is a project block now (rules/stock/motion), so
+    // the built-in categories carry only Spatial's and Animation's actions.
+    expect(category('Has Space')).toContain('world_do_MoveAction');
     expect(category('Has Space')).toEqual(
       expect.arrayContaining([
         'world_do_MoveAction',
@@ -802,10 +810,9 @@ describe('domain block generators', () => {
         .flatMap(c => c.blocks)
         .filter(t => t.startsWith('world_query_')),
     ).toEqual([
-      // Motion's, which is how a rule asks where an actor was without knowing
-      // that a rate is in units and a position is in pixels (core/units). It is
-      // the only built-in query left: collision's went with collision.
-      'world_query_PreviousPositionQuery',
+      // None left built in: motion's "position before" went with motion, as
+      // collision's went with collision. Every query a rule offers is now a
+      // rule's own, and a project rule's blocks live in its own category.
     ]);
   });
 });
@@ -1512,7 +1519,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
     expect(types).toContain('world_get_rules_wind_StrengthProperty');
     expect(types).toContain('world_on_rules_wind_GustedEvent'); // project event hat
     // Built-ins are still present, un-namespaced.
-    expect(types).toContain('world_set_VelocityProperty'); // Motion's
+    expect(types).toContain('world_set_position'); // Spatial's
     // A toolbox category for the project rule, carrying its blocks.
     const cats = toolbox as Array<{name: string; blocks: string[]}>;
     expect(cats.find(c => c.name === 'Has Wind')?.blocks).toContain(

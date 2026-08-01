@@ -26,7 +26,7 @@ describe('rules/gravity.rule', () => {
   it('parses to the rule the built-in declares', () => {
     expect(meta.name).toBe('Has Gravity');
     // Collision is a project rule now, named by module path.
-    expect(meta.requires).toEqual(['MotionRule', 'rules/collision']);
+    expect(meta.requires).toEqual(['rules/motion', 'rules/collision']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',
@@ -62,10 +62,10 @@ describe('rules/gravity.rule', () => {
     // Motion turns velocity into position, or it lags a frame behind.
     const [step] = meta.steps;
     expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.exportName).toBe('MotionRule');
+    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
     expect(step.order.anchor?.stepId).toBe('reposition');
     expect(module_).toContain(
-      'rule.addStepBefore("applyVelocity", WorldLab.MotionRule.steps["reposition"]',
+      'rule.addStepBefore("applyVelocity", Motion.steps["reposition"]',
     );
   });
 
@@ -212,7 +212,7 @@ describe('rules/gravity.rule', () => {
       }
     ).blocks.blocks;
     const before = tops.find(b => b.type === 'world_rule_step_before')!;
-    expect(before.fields?.STEP).toBe('MotionRule#reposition');
+    expect(before.fields?.STEP).toBe('rules/motion#reposition');
     expect(before.fields?.ORDER).toBeUndefined();
   });
 

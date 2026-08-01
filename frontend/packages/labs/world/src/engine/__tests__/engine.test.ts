@@ -2,13 +2,11 @@ import {describe, expect, it} from 'vitest';
 
 import {
   ActorBuilder,
-  MovableTrait,
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
   SkewProperty,
   Vector,
-  VelocityProperty,
   WorldBuilder,
 } from '../index';
 
@@ -34,6 +32,7 @@ import {
   StopsFallingEvent,
   StrengthProperty,
 } from './fixtures/gravityRule';
+import {MovableTrait, VelocityProperty} from './fixtures/motionRule';
 
 // Build a gravity world with one faller and one ground actor, wired through the
 // public builders exactly as a learner's world would be. Sizes are explicit so

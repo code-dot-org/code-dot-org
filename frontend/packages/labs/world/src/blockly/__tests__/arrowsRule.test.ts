@@ -37,8 +37,8 @@ describe('rules/arrows.rule', () => {
     // Not the keyboard RULE: reading which keys are held is the World's job
     // (`key … is down`), so walking works in a project that never imported the
     // rule that raises key events.
-    expect(meta.requires).toEqual(['MotionRule']);
-    expect(meta.traits[0].requires).toEqual(['MovableTrait']);
+    expect(meta.requires).toEqual(['rules/motion']);
+    expect(meta.traits[0].requires).toEqual(['rules/motion#CanMoveTrait']);
   });
 
   it('carries a walk speed in units, not pixels', () => {
@@ -52,7 +52,7 @@ describe('rules/arrows.rule', () => {
   it('runs before Motion integrates, so a held key moves this frame', () => {
     const [step] = meta.steps;
     expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.exportName).toBe('MotionRule');
+    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
     expect(step.order.anchor?.stepId).toBe('reposition');
   });
 
