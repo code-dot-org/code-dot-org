@@ -451,6 +451,18 @@ describe('domain block generators', () => {
     expect(emitValue('world_key', {KEY: 'ArrowLeft'})[0]).toBe('"ArrowLeft"');
   });
 
+  it('a note generates a comment, on one line', () => {
+    // The note survives into the running code, which is the point: the same
+    // sentence in the editor and in what the project runs.
+    expect(emit('world_comment', {TEXT: 'gravity speeds things up'})).toBe(
+      '// gravity speeds things up\n',
+    );
+    // A pasted line break would comment out only the first line.
+    expect(emit('world_comment', {TEXT: 'first\nsecond'})).toBe(
+      '// first second\n',
+    );
+  });
+
   it('world_log prints the text field', () => {
     expect(emit('world_log', {TEXT: 'Player landed!'})).toBe(
       'console.log("Player landed!");\n',

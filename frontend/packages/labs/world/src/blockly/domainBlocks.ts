@@ -13,6 +13,7 @@ import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
   defineBlock,
+  defineExtension,
   type BlockArgDefinition,
   type Extension,
   type Toolbox,
@@ -2442,6 +2443,68 @@ const worldForEachKey = defineBlock({
   },
 });
 
+// `note …` — a comment, as a block.
+//
+// Blockly can attach a comment to a block through its context menu, which is
+// where a note ABOUT one block belongs. This is for the other kind: a line of
+// explanation in the flow of a body, sitting where the thing it explains
+// happens. A rule's arithmetic is where a learner meets a lot of this maths for
+// the first time, and "half my height plus half the ground's height" is worth
+// saying next to the blocks that say it in symbols.
+//
+// It generates a `//` comment, so the note survives into the code the project
+// runs — the same sentence in both places, rather than a note that exists only
+// in the editor.
+// A note is prose, and Blockly clips a text field's DISPLAY at 50 characters
+// (`maxDisplayLength`) — enough for a name, not for a sentence. The value was
+// always whole; only the reading was cut off, mid-word, with an ellipsis.
+const COMMENT_WIDTH_EXTENSION = 'world_comment_width';
+const commentWidthExtension: Extension = defineExtension(
+  COMMENT_WIDTH_EXTENSION,
+  {
+    extension() {
+      const field = (
+        this as unknown as {
+          getField: (name: string) => {maxDisplayLength?: number} | null;
+        }
+      ).getField('TEXT');
+      if (field) {
+        field.maxDisplayLength = 140;
+      }
+    },
+  },
+);
+
+const worldComment = defineBlock({
+  type: 'world_comment',
+  message0: 'note %1',
+  args0: [
+    {
+      type: 'field_input',
+      name: 'TEXT',
+      text: 'what this does',
+      spellcheck: true,
+    },
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [commentWidthExtension],
+  style: 'comment_blocks',
+  tooltip:
+    'A note for whoever reads this next — it changes nothing about what runs.',
+  generator: {
+    javascript(block) {
+      // One line, whatever was typed: a note that broke across lines would
+      // comment out only its first one.
+      const text = String(block.getFieldValue('TEXT') ?? '').replace(
+        /[\r\n]+/g,
+        ' ',
+      );
+      return `// ${text}\n`;
+    },
+  },
+});
+
 // `key <key> is down` — the polling side of input, which the engine has always
 // had (`World.isKeyDown`) and the palette never offered: only the edge-triggered
 // event hats ("when this actor presses space") were reachable from blocks, so a
@@ -2544,6 +2607,7 @@ export const DOMAIN_BLOCKS = [
   worldEmitWith,
   worldKey,
   worldForEachKey,
+  worldComment,
   worldStepDelta,
   worldIsKeyDown,
   worldHasTrait,
@@ -2694,7 +2758,9 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
     name: 'Color',
     blocks: ['colour_picker', 'world_rgba', 'colour_random', 'colour_blend'],
   },
-  {name: 'Text', blocks: ['text']},
+  // A note block sits with Text: it is words, and it is the one block here that
+  // a learner writes for another person rather than for the machine.
+  {name: 'Text', blocks: ['text', 'world_comment']},
   // Variables last, as Blockly's own toolboxes have them. A rule's parameters
   // are declared in `define block`'s signature, so there is no block for
   // declaring one — these read and write whatever is in scope, whether that is a
