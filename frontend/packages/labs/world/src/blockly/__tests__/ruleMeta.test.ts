@@ -1,10 +1,12 @@
 import {describe, expect, it} from 'vitest';
 
 import * as WorldLab from '../../engine';
-import {CollisionRule, MotionRule} from '../../engine';
+import {MotionRule} from '../../engine';
 // Gravity ships as a `.rule` now, not as engine code; the fixture the engine's
 // own tests drive is still the richest example of a rule's shape (two traits,
 // world and actor members, events), which is what this describes.
+import * as CollisionFixture from '../../engine/__tests__/fixtures/collisionRule';
+import {CollisionRule} from '../../engine/__tests__/fixtures/collisionRule';
 import * as GravityFixture from '../../engine/__tests__/fixtures/gravityRule';
 import {GravityRule} from '../../engine/__tests__/fixtures/gravityRule';
 import {
@@ -24,6 +26,7 @@ describe('builtinRuleMeta', () => {
     builtinRuleMeta([rule as never], {
       ...(WorldLab as Record<string, unknown>),
       ...(GravityFixture as Record<string, unknown>),
+      ...(CollisionFixture as Record<string, unknown>),
     })[0];
 
   it('describes a rule, its traits, and its world + actor members', () => {
@@ -619,6 +622,39 @@ describe('designed block parameters', () => {
     expect(code).toContain(
       'rule.addAction("Nudge", (world, amount, target) => {',
     );
+  });
+});
+
+describe('a rule that refers to itself', () => {
+  it('names its own trait rather than importing its own module', () => {
+    // A rule whose trait requires another of its traits (collision's Solid
+    // requires its Can Collide). Importing there is not merely redundant: the
+    // module declares the same symbol, and the bundle refuses to build —
+    // "The symbol \"CanCollideTrait\" has already been declared".
+    const meta = parseRuleMeta(
+      'rules/collision',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Has Collisions'}},
+            {type: 'world_rule_trait', fields: {NAME: 'Can Collide'}},
+            {
+              type: 'world_rule_trait',
+              fields: {NAME: 'Solid'},
+              next: {
+                block: {
+                  type: 'world_use_trait',
+                  fields: {TRAIT: 'rules/collision#CanCollideTrait'},
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    const code = ruleMetaToModule(meta);
+    expect(code).toContain('SolidTrait.requires([CanCollideTrait]);');
+    expect(code).not.toContain("from 'rules/collision'");
   });
 });
 

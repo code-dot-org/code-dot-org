@@ -18,6 +18,7 @@ describe('projectFiles', () => {
       'maps/level1.map',
       'rules/animation.js',
       'rules/arrows.rule',
+      'rules/collision.rule',
       'rules/gravity.rule',
       'rules/input.rule',
       'worlds/main.world',

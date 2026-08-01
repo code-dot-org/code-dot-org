@@ -346,6 +346,38 @@ The default project's player jumps on space, which is that chain end to end: the
 input rule emits, the handler filters for the key AND asks gravity's own "is on
 the ground?", and Motion's `apply force` does the rest.
 
+### Impenetrability moved too
+
+`rules/stock/collision` is the last of the physics to leave. It is the one that
+had to be DECOMPOSED to stay readable: the engine's version was a single step
+holding the whole of AABB resolution, and the same thing in one block-workspace
+would be unreadable. As members it says itself —
+
+```
+collision size of ⟨actor⟩            reports a vector
+⟨a⟩ is touching ⟨b⟩                  reports a boolean
+push ⟨body⟩ out of ⟨solid⟩ over ⟨frame⟩
+```
+
+— and the step is three lines: for each mover, for each solid that is not it,
+push it out. That is `define block` earning its keep: the arithmetic has names,
+so the loop reads as the sentence it always was.
+
+Two bugs fell out of doing it, both of which had been waiting for the first rule
+to refer to ITSELF:
+
+- **A trait requiring a trait in the same file imported its own module.**
+  Collision's Solid requires its Can Collide, and the generated module both
+  declared `CanCollideTrait` and imported it — "The symbol has already been
+  declared", and the project stopped building outright. The body generator had
+  always handled self-reference (`__ruleModule`) and steps had `isSelfAnchor`;
+  trait dependencies had not.
+- **Nested `nextBlock` calls silently dropped rules from the default world.**
+  `nextBlock(a, b)` OVERWRITES `a`'s next, so wrapping a block that already had
+  one threw away everything below it — the world still parsed and still ran,
+  just without the input and arrows rules. It builds from a flat `stack([…])`
+  now, which cannot express the mistake.
+
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an

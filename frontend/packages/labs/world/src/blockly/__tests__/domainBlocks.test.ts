@@ -334,17 +334,6 @@ describe('domain block generators', () => {
     );
   });
 
-  it('world_query_IsTouchingQuery reads its two actor sockets', () => {
-    // Empty sockets default to `this actor` on both sides.
-    expect(emitValue('world_query_IsTouchingQuery')[0]).toBe(
-      'world.query(WorldLab.IsTouchingQuery, actor, actor)',
-    );
-    // A subject and a candidate plugged in (e.g. this actor vs a loop variable).
-    expect(
-      emitValue('world_query_IsTouchingQuery', {}, {A: 'actor', B: 'each'})[0],
-    ).toBe('world.query(WorldLab.IsTouchingQuery, actor, each)');
-  });
-
   it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {
     // Default (empty socket → `this actor`) sets it on the current actor.
     expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
@@ -789,31 +778,22 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === name,
       )?.blocks ?? [];
-    // Gravity's "is on the ground?" query and Collision's "is touching?" predicate
-    // (a boolean query with two actor params — the hoisted heart of the touching
-    // filter). Collision's list `TouchingQuery` has no return type, so it gets no
-    // block; the `for each … where` loop rebuilds the list from the predicate.
+    // A project rule's query gets a block in that rule's own category —
+    // collision's "is touching" and "collision size of" are project blocks now,
+    // covered by collisionRule.test; what is left built in is Motion's.
     expect(projectCategory('Has Wind')).toContain(
       `world_query_${'rules_wind_'}IsGustingQuery`,
     );
-    expect(category('Has Collisions')).toContain('world_query_IsTouchingQuery');
-    // Collision also reports an actor's RESOLVED collision box. The `size`
-    // property is an override whose `(0, 0)` default means "auto", so reading it
-    // answers a different question than "how big is this actually?" — which is
-    // what any rule standing one actor on another needs.
-    expect(category('Has Collisions')).toContain(
-      'world_query_CollisionSizeQuery',
-    );
+    void category;
     expect(
       (DOMAIN_TOOLBOX as Array<{blocks: string[]}>)
         .flatMap(c => c.blocks)
         .filter(t => t.startsWith('world_query_')),
     ).toEqual([
       // Motion's, which is how a rule asks where an actor was without knowing
-      // that a rate is in units and a position is in pixels (core/units).
+      // that a rate is in units and a position is in pixels (core/units). It is
+      // the only built-in query left: collision's went with collision.
       'world_query_PreviousPositionQuery',
-      'world_query_IsTouchingQuery',
-      'world_query_CollisionSizeQuery',
     ]);
   });
 });

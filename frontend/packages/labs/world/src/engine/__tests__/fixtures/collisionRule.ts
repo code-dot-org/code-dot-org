@@ -1,3 +1,16 @@
+// The collision rule as the ENGINE once shipped it — now a test fixture.
+//
+// Impenetrability moved out to `rules/stock/collision.ts`, a `.rule` a project
+// imports and a learner can open, the way gravity and walking did. The engine
+// keeps what a rule cannot reach or should not own — the spatial frame,
+// integration, animation — and impenetrability turned out not to be one of
+// those: it is boxes, an overlap test, and a decision about which face was
+// crossed, all of which say themselves in blocks.
+//
+// It stays here because the engine's own tests use it, with the gravity fixture
+// beside it, as a VEHICLE for engine machinery: step ordering across rules,
+// trait composition, and a query that reads an actor's resolved box.
+
 // The Collision rule ("Has Collisions") — the general, gravity-agnostic
 // impenetrability: a movable body may not overlap a "Solid" body, on any axis.
 // Its `resolve` step is where that push-out happens; Gravity orders its own,
@@ -13,23 +26,22 @@
 // lands on and may pass *up* through (a jump-through platform). A normal tile
 // carries both; the two never had to be the same trait.
 
-import {RuleBuilder} from '../builders/RuleBuilder';
-import type {Actor} from '../core/Actor';
-import {Vector} from '../core/Vector';
-
+import {RuleBuilder} from '../../builders/RuleBuilder';
+import type {Actor} from '../../core/Actor';
+import {Vector} from '../../core/Vector';
 import {
   MotionRule,
   MovableTrait,
   RepositionStep,
   previousPosition,
   VelocityProperty,
-} from './motion';
+} from '../../rules/motion';
 import {
   IntrinsicSizeProperty,
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
-} from './spatial';
+} from '../../rules/spatial';
 
 const rule = new RuleBuilder({id: 'collision', name: 'Has Collisions'});
 rule.requires([MotionRule]);

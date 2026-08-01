@@ -2,7 +2,7 @@ import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
-import {arrowsRule, gravityRule, inputRule} from './rules/stock';
+import {arrowsRule, collisionRule, gravityRule, inputRule} from './rules/stock';
 
 /**
  * The world the game starts in — the driver's compile + run entry point
@@ -23,7 +23,8 @@ export const ENTRY_FILE = 'worlds/main.world';
 // the world adds all of them the same way. (The player is arrow-key controlled,
 // so it also carries the input trait — authored in its `.actor` file.)
 
-const GROUND_ACTOR = `import {ActorBuilder, SolidTrait, AppearanceTrait, SpriteProperty} from 'world-lab';
+const GROUND_ACTOR = `import {ActorBuilder, AppearanceTrait, SpriteProperty} from 'world-lab';
+import {SolidTrait} from 'rules/collision';
 import {ActsAsGroundTrait} from 'rules/gravity';
 
 // A ground tile: landable (ActsAsGroundTrait, from the project's own gravity
@@ -57,6 +58,17 @@ export default new ActorBuilder({id: 'ball', name: 'Ball'})
 // sits beside the actor rather than chained inside it).
 const nextBlock = (block: object, next?: object) =>
   next ? {...block, next: {block: next}} : block;
+
+/**
+ * A straight stack of blocks, first to last.
+ *
+ * Nesting `nextBlock` calls to build a long chain is a trap: it OVERWRITES the
+ * `next` of whatever it is given, so wrapping a block that already had one drops
+ * everything below it — silently, since the file still parses and the world
+ * still loads, just without those rules. This takes the list.
+ */
+const stack = (blocks: object[]): object =>
+  blocks.reduceRight((next, block) => nextBlock(block, next));
 
 // Each event has its own cap-hat block (`world_on_<event>`); the handler body
 // attaches below it as the next statement, not nested in a `do` input.
@@ -124,25 +136,18 @@ const MAIN_WORLD = JSON.stringify(
           y: 20,
           fields: {NAME: 'Platform World'},
           next: {
-            block: nextBlock(
+            block: stack([
               {type: 'world_use_rule', fields: {RULE: 'rules/gravity'}},
-              nextBlock(
-                nextBlock(
-                  {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
-                  {type: 'world_use_rule', fields: {RULE: 'rules/arrows'}},
-                ),
-                nextBlock(
-                  {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
-                  nextBlock(
-                    {
-                      type: 'world_use_animations',
-                      fields: {FILE: 'animations/game'},
-                    },
-                    {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
-                  ),
-                ),
-              ),
-            ),
+              {type: 'world_use_rule', fields: {RULE: 'rules/collision'}},
+              {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
+              {type: 'world_use_rule', fields: {RULE: 'rules/arrows'}},
+              {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
+              {
+                type: 'world_use_animations',
+                fields: {FILE: 'animations/game'},
+              },
+              {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
+            ]),
           },
         },
       ],
@@ -369,6 +374,13 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         name: 'input.rule',
         language: 'rule',
         contents: inputRule,
+        folderId: 'rules',
+      },
+      collisionRule: {
+        id: 'collisionRule',
+        name: 'collision.rule',
+        language: 'rule',
+        contents: collisionRule,
         folderId: 'rules',
       },
       animationRule: {

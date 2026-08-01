@@ -45,7 +45,6 @@ export type {
 // Animation).
 export * from './rules/spatial';
 export * from './rules/motion';
-export * from './rules/collision';
 export * from './rules/animation';
 
 // The animation serialization model.
