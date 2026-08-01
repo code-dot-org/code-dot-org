@@ -191,6 +191,67 @@ rule-member body binds `world` — a world-scoped member is invoked as
 `(world, …)`, an actor-scoped one binds it from `actor.world` — and the guard
 now says so.
 
+## `define block` — designing the block a rule makes
+
+`define action` and `define query` name a member in a text field and grow
+parameter rows beneath it, so the block a learner will actually USE is never
+shown until they go and find it in the toolbox. Two things follow, and both are
+why this exists: the definition does not look like the thing it defines, and a
+rule is hard to scan, because "where is `nudge` defined?" means reading NAME
+fields down a column.
+
+`define block` renders its own block, in place, above the body:
+
+```
+define block ⟨does something ▾⟩
+push [amount ▾] toward [target ▾] ✎
+do …
+```
+
+That row is built from the same data the CALL SITE is built from, so designing
+the block is seeing it. One authored signature now drives three things that were
+derived separately — the member's name, its parameters, and the shape of the
+call-site block — which is the point: they cannot drift.
+
+**A signature is an ordered list of labels and parameters.** That is the same
+shape Blockly's own `message0` has, which is not a coincidence: `push %1 toward
+%2` IS "label, param, label, param". Naming a member is the case where the list
+is one label. Action versus query becomes a dropdown, since it was the only
+thing the two blocks differed in.
+
+The ✎ opens an editor: one control row per part (remove, move left, move right,
+retype) and buttons to append a label or a parameter. Closed, only the preview
+shows.
+
+### What this attempt does not do
+
+The idea was a WYSIWYG designer where parts are DRAGGED — a shadow at the right
+of the row you drop a variable into, dragging one out to remove it, dropping one
+onto another to nudge it along, and dragging a parameter down out of the preview
+to get a getter for the body. None of that is here:
+
+- **Reordering is `◂`/`▸` buttons, not dragging.** Blockly's drag machinery
+  moves BLOCKS between connections; a row of fields is not a set of connections,
+  so direct manipulation here needs custom gesture handling rather than a
+  different arrangement of existing parts.
+- **Parameters are used in the body via the Variables toolbox**, not by dragging
+  a copy out of the preview. Blockly has no "drag a copy from a field"; the
+  getter blocks already exist and are already typed, so this is a smaller gap
+  than it looks, but it is not what was asked for.
+- **The editor is rows on the block, not a bubble.** Deliberate — the point is
+  to see the result, and a bubble puts it somewhere else — but it means the
+  editing chrome and the preview share a block face.
+
+### Not yet migrated
+
+`define action` and `define query` still exist and the stock gravity rule still
+uses them. The new block was proven against a scratch rule
+(`push [amount] toward [target]` generating
+`rule.addAction("push_toward", (world, amount, target) => …)`) rather than by
+converting gravity, so both paths are live. Migrating is mechanical — a designed
+block with one label part is exactly an action — but it is a separate change,
+and until it happens there are two ways to define a member.
+
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an
