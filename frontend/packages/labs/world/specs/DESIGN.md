@@ -51,6 +51,23 @@ This Trait adds the `position`, `scale`, and `rotation` vectors as members.
 Therefore it adds the methods: `Get position of {Actor}`, `Get scale of {Actor}`, `Get rotation of {Actor}`, `Move {Actor} to`, `Rotate {Actor} to`, and `Scale {Actor} to` (and helper function `Resize {Actor} to` which sets both x and y of the `scale` property to the same value`.
 These are all where `Actor` is an Actor with that particular Trait.
 
+### Units
+
+Positions and sizes are in pixels, because a map, a sprite and the map editor all
+deal in pixels. RATES are not: a screen is 960 pixels across and a thing crosses
+it in about a second, so a rate written in pixels per second comes out in the
+hundreds — gravity's strength read `900`, a walk `150`, a jump `-500`. Those are
+hard to reason about and hard to nudge.
+
+So a velocity, a force or an acceleration is in UNITS per second, where a unit is
+100 pixels (`engine/core/units.ts`). Gravity is `9`, a walk `1.5`, a jump `-5`.
+
+The engine converts at the one place a rate meets a position: integrating
+velocity into position, and Motion's `position before` query — where an actor was
+a moment ago — which Collision and any landing rule use instead of multiplying a
+velocity by a time themselves. A rule that needs to mix the two and cannot is a
+sign the engine is missing a query, not a reason to write `× 100`.
+
 The Physics rule is doing a lot of the work, here.
 This adds the `velocity` property to the Actor which is generally only readable.
 The rules themselves can affect the velocity during the simulation.

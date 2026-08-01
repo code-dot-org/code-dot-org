@@ -53,7 +53,7 @@ describe('builtinRuleMeta', () => {
       id: 'strength',
       name: 'strength',
       type: 'number',
-      default: 900,
+      default: 9,
       readonly: false,
       scope: 'world',
       ownerTraitId: undefined,

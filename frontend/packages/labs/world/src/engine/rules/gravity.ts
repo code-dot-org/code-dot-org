@@ -13,7 +13,12 @@ import {
   ResolveStep,
   collisionSize,
 } from './collision';
-import {MotionRule, MovableTrait, VelocityProperty} from './motion';
+import {
+  MotionRule,
+  MovableTrait,
+  previousPosition,
+  VelocityProperty,
+} from './motion';
 import {PositionProperty} from './spatial';
 
 const rule = new RuleBuilder({id: 'gravity', name: 'Has Gravity'});
@@ -26,7 +31,8 @@ export const DirectionProperty = rule.addProperty(
   new Vector(0, 1),
   {name: 'direction'},
 );
-export const StrengthProperty = rule.addProperty('strength', 'number', 900, {
+// In units per second per second (core/units): 9 is a brisk, arcade-ish fall.
+export const StrengthProperty = rule.addProperty('strength', 'number', 9, {
   name: 'strength',
 });
 
@@ -115,7 +121,7 @@ export const HandleCollisionsStep = rule.addStepAfter(
       const size = collisionSize(actor);
       let position = actor.get(PositionProperty);
       let velocity = actor.get(VelocityProperty);
-      const prevY = position.y - velocity.y * delta;
+      const prevY = previousPosition(actor, delta).y;
       let grounded = false;
 
       for (const ground of grounds) {

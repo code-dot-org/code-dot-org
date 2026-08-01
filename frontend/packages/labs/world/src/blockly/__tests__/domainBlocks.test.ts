@@ -763,6 +763,9 @@ describe('domain block generators', () => {
         .flatMap(c => c.blocks)
         .filter(t => t.startsWith('world_query_')),
     ).toEqual([
+      // Motion's, which is how a rule asks where an actor was without knowing
+      // that a rate is in units and a position is in pixels (core/units).
+      'world_query_PreviousPositionQuery',
       'world_query_IsTouchingQuery',
       'world_query_CollisionSizeQuery',
     ]);

@@ -38,7 +38,7 @@ describe('the Input rule', () => {
     const {world, player} = makeWorld();
     world.setInput(['ArrowRight']);
     world.tick(1);
-    // vx = +150 (default speed), integrated over 1s: x 100 → 250, y unchanged.
+    // vx = +1.5 (default speed) = 150 px/s over 1s: x 100 → 250, y unchanged.
     expect(player.get(PositionProperty).x).toBeCloseTo(250);
     expect(player.get(PositionProperty).y).toBeCloseTo(100);
   });
@@ -57,10 +57,10 @@ describe('the Input rule', () => {
 
   it('honors a custom move speed', () => {
     const {world, player} = makeWorld();
-    player.set(MoveSpeedProperty, 300);
+    player.set(MoveSpeedProperty, 3);
     world.setInput(['ArrowRight']);
     world.tick(0.5);
-    // 300 px/s over 0.5s = 150: x 100 → 250.
+    // 3 units/s = 300 px/s over 0.5s = 150: x 100 → 250.
     expect(player.get(PositionProperty).x).toBeCloseTo(250);
   });
 });

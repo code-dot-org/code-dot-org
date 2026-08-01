@@ -21,6 +21,7 @@ import {
   MotionRule,
   MovableTrait,
   RepositionStep,
+  previousPosition,
   VelocityProperty,
 } from './motion';
 import {
@@ -116,8 +117,11 @@ export const ResolveStep = rule.addStepAfter(
       let position = actor.get(PositionProperty);
       let velocity = actor.get(VelocityProperty);
       // Where the actor was before Motion moved it this tick — the entry side.
-      const prevX = position.x - velocity.x * delta;
-      const prevY = position.y - velocity.y * delta;
+      // Motion owns the arithmetic: velocity is a rate in units, position is in
+      // pixels, and the conversion between them belongs in one place (units.ts).
+      const previous = previousPosition(actor, delta);
+      const prevX = previous.x;
+      const prevY = previous.y;
 
       for (const solid of solids) {
         if (solid === actor) {
