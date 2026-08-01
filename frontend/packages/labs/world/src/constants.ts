@@ -2,7 +2,7 @@ import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
-import {gravityRule} from './rules/stock';
+import {arrowsRule, gravityRule, inputRule} from './rules/stock';
 
 /**
  * The world the game starts in — the driver's compile + run entry point
@@ -105,8 +105,9 @@ const ruleShim = (exportName: string): string =>
 
 // The world, authored in Blockly (`main.world`): a `world_world` root with the
 // rules in play, the animation file it registers, and the map whose actors it
-// places. "Has Gravity" pulls in motion and collision; "Responds to Input"
-// moves arrow-controlled actors; "Has Appearance" draws sprites and animations.
+// places. "Has Gravity" pulls in motion and collision; "Moves with Arrow Keys"
+// walks the player (and pulls in the engine's keyboard rule); "Has Appearance"
+// draws sprites and animations.
 // The rules are project modules (`rules/*`), imported by the generated world.
 //
 // Rules and animations first, then the map: `load map` builds the world, and a
@@ -126,7 +127,10 @@ const MAIN_WORLD = JSON.stringify(
             block: nextBlock(
               {type: 'world_use_rule', fields: {RULE: 'rules/gravity'}},
               nextBlock(
-                {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
+                nextBlock(
+                  {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
+                  {type: 'world_use_rule', fields: {RULE: 'rules/arrows'}},
+                ),
                 nextBlock(
                   {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
                   nextBlock(
@@ -166,7 +170,9 @@ const PLAYER_ACTOR = JSON.stringify(
               nextBlock(
                 {
                   type: 'world_use_trait',
-                  fields: {TRAIT: 'ControlledByArrowsTrait'},
+                  fields: {
+                    TRAIT: 'rules/arrows#ControlledByArrowKeysTrait',
+                  },
                 },
                 nextBlock(
                   // Appearance is now explicit: `play animation` only sets the
@@ -186,6 +192,60 @@ const PLAYER_ACTOR = JSON.stringify(
                 ),
               ),
             ),
+          },
+        },
+        // Space to jump, which is the input rule's events reaching a handler:
+        // `rules/input` turns the frame's key edges into "a key is pressed",
+        // this filters for the key it wants, and gravity's own query keeps the
+        // jump honest — no second jump in mid-air.
+        {
+          type: 'world_on_rules_input_AKeyIsPressedEvent',
+          x: 20,
+          y: 440,
+          next: {
+            block: {
+              type: 'controls_if',
+              inputs: {
+                IF0: {
+                  block: {
+                    type: 'logic_operation',
+                    fields: {OP: 'AND'},
+                    inputs: {
+                      A: {
+                        block: {
+                          type: 'logic_compare',
+                          fields: {OP: 'EQ'},
+                          inputs: {
+                            A: {block: {type: 'world_event_value'}},
+                            B: {block: {type: 'world_key', fields: {KEY: ' '}}},
+                          },
+                        },
+                      },
+                      B: {
+                        block: {
+                          type: 'world_query_rules_gravity_IsOnTheGroundQuery',
+                          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                        },
+                      },
+                    },
+                  },
+                },
+                DO0: {
+                  block: {
+                    type: 'world_do_ApplyForceAction',
+                    inputs: {
+                      VALUE: {
+                        block: {
+                          type: 'world_vector',
+                          fields: {VECTOR: {x: 0, y: -5}},
+                        },
+                      },
+                      ACTOR: {block: {type: 'world_this_actor'}},
+                    },
+                  },
+                },
+              },
+            },
           },
         },
         onEvent(
@@ -297,11 +357,18 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: gravityRule,
         folderId: 'rules',
       },
+      arrowsRule: {
+        id: 'arrowsRule',
+        name: 'arrows.rule',
+        language: 'rule',
+        contents: arrowsRule,
+        folderId: 'rules',
+      },
       inputRule: {
         id: 'inputRule',
-        name: 'input.js',
-        language: 'javascript',
-        contents: ruleShim('InputRule'),
+        name: 'input.rule',
+        language: 'rule',
+        contents: inputRule,
         folderId: 'rules',
       },
       animationRule: {

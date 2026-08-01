@@ -17,8 +17,9 @@ describe('projectFiles', () => {
       'effects/ripple.effect',
       'maps/level1.map',
       'rules/animation.js',
+      'rules/arrows.rule',
       'rules/gravity.rule',
-      'rules/input.js',
+      'rules/input.rule',
       'worlds/main.world',
     ]);
     // The world is a Blockly workspace (generated to a WorldBuilder at compile).

@@ -62,8 +62,17 @@ export interface BlockImageArgDefinition {
 export interface BlockDropdownArgDefinition extends BlockBaseArgDefinition {
   /** Explicitly a dropdown field */
   type: 'field_dropdown';
-  /** The options for dropdowns or lists */
-  options: BlockOptionsList;
+  /**
+   * The options for dropdowns or lists.
+   *
+   * A FUNCTION is a live generator: Blockly asks it each time the menu opens,
+   * which is what a dropdown over changing content (a project's files, the
+   * events a rule declares) needs. It is also the only way to avoid Blockly's
+   * option trimming — with a static array it factors out any word every label
+   * shares and renders it as a fixed label beside the field, which is wrong the
+   * moment the real options no longer share it.
+   */
+  options: BlockOptionsList | (() => BlockOptionsList);
 }
 
 export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
@@ -242,8 +251,13 @@ export interface BaseBlockDefinition {
    * is a plain type string; the connection's notch *shape* for that type is
    * defined separately by an input plugin supplied via the workspace `plugins`
    * (see {@link InputPlugin}), not here.
+   *
+   * An array is a union — a block that may report any of several types. `null`
+   * is Blockly's "any": it plugs into every socket, and every socket check
+   * accepts it. Reach for `null` when the type genuinely depends on context
+   * (the value an event carries, say), not to avoid deciding.
    */
-  output?: string;
+  output?: string | string[] | null;
   /** The first caption */
   message0?: string;
   /** The first set of interactive arguments */
