@@ -175,6 +175,32 @@ describe('rules/gravity.rule', () => {
     );
   });
 
+  it('declares its traits as top blocks, beside the rule', () => {
+    // A trait is a definition of its own, not a `do` mouth nested in the rule's
+    // tower — so each is a separate stack a learner can move and read alone.
+    const tops = (
+      JSON.parse(source) as {blocks: {blocks: Array<{type: string}>}}
+    ).blocks.blocks;
+    expect(tops.map(b => b.type)).toEqual([
+      'world_rule',
+      'world_rule_trait',
+      'world_rule_trait',
+    ]);
+  });
+
+  it('chains a trait’s members below it, not inside a `do`', () => {
+    const tops = (
+      JSON.parse(source) as {
+        blocks: {
+          blocks: Array<{type: string; next?: unknown; inputs?: unknown}>;
+        };
+      }
+    ).blocks.blocks;
+    const trait = tops.find(b => b.type === 'world_rule_trait')!;
+    expect(trait.next).toBeDefined();
+    expect(trait.inputs).toBeUndefined();
+  });
+
   it('is what the world puts in play', () => {
     expect(DEFAULT_PROJECT.source.files.main.contents).toContain(
       'rules/gravity',

@@ -337,6 +337,7 @@ export function parseRuleMeta(
   contents: string,
 ): RuleMeta | undefined {
   let root: RuleBlock | undefined;
+  let traitRoots: RuleBlock[] = [];
   // A `.rule`'s parameter names live in the workspace variable map (a param
   // block's VAR field is a variable id); resolve id → name to label params.
   const variableNames = new Map<string, string>();
@@ -350,7 +351,11 @@ export function parseRuleMeta(
         variableNames.set(variable.id, variable.name ?? variable.id);
       }
     }
-    root = parsed.blocks?.blocks?.find(b => b?.type === 'world_rule');
+    const tops = parsed.blocks?.blocks ?? [];
+    root = tops.find(b => b?.type === 'world_rule');
+    // Traits are top blocks beside the rule, not chained inside it — one `.rule`
+    // declares one rule, so every trait in the file belongs to it.
+    traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
   } catch {
     return undefined; // mid-edit / not JSON
   }
@@ -496,7 +501,8 @@ export function parseRuleMeta(
     steps.push({id: slug(name), name, ownerRef: selfRef, order});
   };
 
-  // The rule's top-level chain: `use rule` dependencies, world properties, traits.
+  // The rule's own chain: `use rule` dependencies and its world-scoped members.
+  // Traits are separate roots, handled below.
   for (
     let block: RuleBlock | undefined = root.next?.block;
     block;
@@ -515,48 +521,50 @@ export function parseRuleMeta(
       addQuery(block);
     } else if (block.type === 'world_rule_step') {
       addStep(block);
-    } else if (block.type === 'world_rule_trait') {
-      const name = field(block, 'NAME');
-      if (!name) {
-        continue;
-      }
-      const traitId = slug(name);
-      // The trait's `do` body: `use trait` dependencies, actor properties, events.
-      const traitRequires: string[] = [];
-      for (
-        let member: RuleBlock | undefined = block.inputs?.DO?.block;
-        member;
-        member = member.next?.block
-      ) {
-        if (member.type === 'world_use_trait') {
-          const dep = field(member, 'TRAIT');
-          if (dep) {
-            traitRequires.push(dep);
-          }
-        } else if (member.type === 'world_rule_property') {
-          addProperty(member, traitId);
-        } else if (member.type === 'world_rule_action') {
-          addAction(member, traitId);
-        } else if (member.type === 'world_rule_query') {
-          addQuery(member, traitId);
-        } else if (member.type === 'world_rule_event') {
-          const eventName = field(member, 'NAME');
-          if (eventName) {
-            events.push({
-              id: slug(eventName),
-              name: eventName,
-              ref: ref(`${pascal(eventName)}Event`),
-            });
-          }
+    }
+  }
+
+  // Each trait root, and the chain of members below it.
+  for (const traitBlock of traitRoots) {
+    const name = field(traitBlock, 'NAME');
+    if (!name) {
+      continue;
+    }
+    const traitId = slug(name);
+    const traitRequires: string[] = [];
+    for (
+      let member: RuleBlock | undefined = traitBlock.next?.block;
+      member;
+      member = member.next?.block
+    ) {
+      if (member.type === 'world_use_trait') {
+        const dep = field(member, 'TRAIT');
+        if (dep) {
+          traitRequires.push(dep);
+        }
+      } else if (member.type === 'world_rule_property') {
+        addProperty(member, traitId);
+      } else if (member.type === 'world_rule_action') {
+        addAction(member, traitId);
+      } else if (member.type === 'world_rule_query') {
+        addQuery(member, traitId);
+      } else if (member.type === 'world_rule_event') {
+        const eventName = field(member, 'NAME');
+        if (eventName) {
+          events.push({
+            id: slug(eventName),
+            name: eventName,
+            ref: ref(`${pascal(eventName)}Event`),
+          });
         }
       }
-      traits.push({
-        id: traitId,
-        name,
-        ref: ref(`${pascal(name)}Trait`),
-        requires: traitRequires,
-      });
     }
+    traits.push({
+      id: traitId,
+      name,
+      ref: ref(`${pascal(name)}Trait`),
+      requires: traitRequires,
+    });
   }
 
   return {
@@ -619,14 +627,17 @@ export interface RuleBodyGen {
 }
 
 /**
- * Walk a loaded `.rule` workspace's `world_rule` root and generate the body and
- * parameter signature of every `define action` / `define query`, keyed by {@link
- * ruleBodyKey}. Mirrors `parseRuleMeta`'s structural walk (scope by trait
- * nesting) but over live blocks, so `gen` can run `statementToCode` on each
- * member's `DO` input and read its params from the mutator.
+ * Generate the body and parameter signature of every `define action` /
+ * `define query` / `define step` in a loaded `.rule` workspace, keyed by
+ * {@link ruleBodyKey}.
+ *
+ * Takes the workspace's TOP BLOCKS rather than the rule root, because a trait
+ * is a root of its own: its members chain below it, beside the rule rather than
+ * inside it. Mirrors `parseRuleMeta`'s walk, over live blocks, so `gen` can run
+ * `statementToCode` on each member's `DO` input and read its params.
  */
 export function extractRuleBodies(
-  ruleRoot: LiveBlock,
+  roots: readonly LiveBlock[],
   gen: RuleBodyGen,
 ): Map<string, RuleBody> {
   const bodies = new Map<string, RuleBody>();
@@ -658,14 +669,21 @@ export function extractRuleBodies(
       } else if (block.type === 'world_rule_step') {
         // Steps are world-scoped (rule level), run per tick.
         record('step', 'world', undefined, block);
-      } else if (block.type === 'world_rule_trait') {
-        const traitId = slug(block.getFieldValue('NAME') ?? '');
-        // Actions/queries in a trait's `do` are actor-scoped, owned by the trait.
-        visit(block.getInputTargetBlock('DO'), 'actor', traitId);
       }
     }
   };
-  visit(ruleRoot.getNextBlock(), 'world', undefined);
+  for (const root of roots) {
+    if (root.type === 'world_rule') {
+      visit(root.getNextBlock(), 'world', undefined);
+    } else if (root.type === 'world_rule_trait') {
+      // A trait's members are actor-scoped and owned by it.
+      visit(
+        root.getNextBlock(),
+        'actor',
+        slug(root.getFieldValue('NAME') ?? ''),
+      );
+    }
+  }
   return bodies;
 }
 

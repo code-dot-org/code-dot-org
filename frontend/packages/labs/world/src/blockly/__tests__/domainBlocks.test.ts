@@ -57,28 +57,26 @@ const PROJECT_RULE = parseRuleMeta(
                     block: {
                       type: 'world_rule_action',
                       fields: {NAME: 'Invert'},
-                      next: {
-                        block: {
-                          type: 'world_rule_trait',
-                          fields: {NAME: 'Windblown'},
-                          inputs: {
-                            DO: {
-                              block: {
-                                type: 'world_rule_query',
-                                fields: {TYPE: 'boolean', NAME: 'is gusting'},
-                                next: {
-                                  block: {
-                                    type: 'world_rule_event',
-                                    fields: {NAME: 'gusted'},
-                                  },
-                                },
-                              },
-                            },
-                          },
-                        },
-                      },
                     },
                   },
+                },
+              },
+            },
+          },
+        },
+        // A trait is a TOP BLOCK beside the rule, with its members chained
+        // below it — not a `do` mouth nested inside the rule.
+        {
+          type: 'world_rule_trait',
+          fields: {NAME: 'Windblown'},
+          next: {
+            block: {
+              type: 'world_rule_query',
+              fields: {TYPE: 'boolean', NAME: 'is gusting'},
+              next: {
+                block: {
+                  type: 'world_rule_event',
+                  fields: {NAME: 'gusted'},
                 },
               },
             },
@@ -1394,21 +1392,15 @@ describe('buildDomainPalette (project rule blocks)', () => {
               block: {
                 type: 'world_rule_property',
                 fields: {TYPE: 'number', NAME: 'strength', DEFAULT: '0'},
-                next: {
-                  block: {
-                    type: 'world_rule_trait',
-                    fields: {NAME: 'Windblown'},
-                    inputs: {
-                      DO: {
-                        block: {
-                          type: 'world_rule_event',
-                          fields: {NAME: 'gusted'},
-                        },
-                      },
-                    },
-                  },
-                },
               },
+            },
+          },
+          // The trait, beside the rule.
+          {
+            type: 'world_rule_trait',
+            fields: {NAME: 'Windblown'},
+            next: {
+              block: {type: 'world_rule_event', fields: {NAME: 'gusted'}},
             },
           },
         ],
@@ -1484,21 +1476,18 @@ describe('buildDomainPalette (project rule blocks)', () => {
                     {type: 'vector', var: 'b'},
                   ],
                 },
-                next: {
-                  block: {
-                    type: 'world_rule_trait',
-                    fields: {NAME: 'Pushable'},
-                    inputs: {
-                      DO: {
-                        block: {
-                          type: 'world_rule_query',
-                          fields: {TYPE: 'boolean', NAME: 'Near'},
-                          extraState: {params: [{type: 'actor', var: 'c'}]},
-                        },
-                      },
-                    },
-                  },
-                },
+              },
+            },
+          },
+          // The trait, beside the rule.
+          {
+            type: 'world_rule_trait',
+            fields: {NAME: 'Pushable'},
+            next: {
+              block: {
+                type: 'world_rule_query',
+                fields: {TYPE: 'boolean', NAME: 'Near'},
+                extraState: {params: [{type: 'actor', var: 'c'}]},
               },
             },
           },

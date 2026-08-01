@@ -100,9 +100,10 @@ export const BlocklyGenerator = forwardRef<
         // IS real code, generated from its `do` blocks here. `__ruleModule` marks
         // this module so a body referencing the rule's own member uses the local
         // `export const`, not an import of the module into itself.
-        const ruleRoot = workspace
-          .getTopBlocks(true)
-          .find(block => block.type === 'world_rule');
+        // Every top block: the rule root, and each `define trait` root beside
+        // it (a trait's members chain below it, not inside the rule).
+        const topBlocks = workspace.getTopBlocks(true);
+        const ruleRoot = topBlocks.find(block => block.type === 'world_rule');
         if (ruleRoot) {
           const modulePath = (path ?? '').replace(/\.rule$/, '');
           const meta = parseRuleMeta(modulePath, contents);
@@ -110,7 +111,7 @@ export const BlocklyGenerator = forwardRef<
             return generator.finish('export {};\n');
           }
           (generator as {__ruleModule?: string}).__ruleModule = modulePath;
-          const bodies = extractRuleBodies(ruleRoot, {
+          const bodies = extractRuleBodies(topBlocks, {
             body: block =>
               generator.statementToCode(block as Blockly.Block, 'DO'),
             // The params mutator stores each param's variable id in extraState;
