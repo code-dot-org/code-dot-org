@@ -78,7 +78,7 @@ describe('trait resolution through the standard rules', () => {
 });
 
 describe('gravity simulation', () => {
-  const DELTA = 0.1; // strength 900 → +90 px/s of velocity per tick
+  const DELTA = 0.1; // strength 9 → +0.9 units/s of velocity per tick
 
   it('accelerates a faller and rests its box on the ground surface', () => {
     // Ground centre 120, half-height 10 → surface top at 110. Player half-height
@@ -89,9 +89,9 @@ describe('gravity simulation', () => {
     player.on(StartsFallingEvent, () => (starts += 1));
     player.on(StopsFallingEvent, () => (stops += 1));
 
-    // Tick 1: v=(0,90), p=(0,9), still in the air → starts falling.
+    // Tick 1: v=(0,0.9) — 90 px/s — p=(0,9), still in the air → starts falling.
     world.tick(DELTA);
-    expect(player.get(VelocityProperty).y).toBeCloseTo(90);
+    expect(player.get(VelocityProperty).y).toBeCloseTo(0.9);
     expect(player.get(PositionProperty).y).toBeCloseTo(9);
     expect(player.get(FallingProperty)).toBe(true);
     expect(starts).toBe(1);
@@ -185,7 +185,7 @@ describe('gravity simulation', () => {
     // contact); it must not tunnel through the wall despite a fast approach.
     for (let i = 0; i < 10; i++) {
       const {y} = player.get(VelocityProperty);
-      player.set(VelocityProperty, new Vector(300, y));
+      player.set(VelocityProperty, new Vector(3, y));
       world.tick(DELTA);
     }
     // Player right edge (x + 10) rests against the wall's left face (15) → x = 5.
@@ -212,7 +212,7 @@ describe('gravity simulation', () => {
         .set(SizeProperty, new Vector(20, 20)),
     );
     for (let i = 0; i < 10; i++) {
-      mover.set(VelocityProperty, new Vector(300, 0));
+      mover.set(VelocityProperty, new Vector(3, 0));
       world.tick(DELTA);
     }
     expect(mover.get(PositionProperty).x).toBeCloseTo(5);
@@ -238,7 +238,7 @@ describe('gravity simulation', () => {
         .set(PositionProperty, new Vector(0, 0))
         .set(SizeProperty, new Vector(20, 20)),
     );
-    player.set(VelocityProperty, new Vector(0, -400)); // jump upward
+    player.set(VelocityProperty, new Vector(0, -4)); // jump upward
     for (let i = 0; i < 60; i++) {
       world.tick(0.05);
     }
@@ -293,13 +293,13 @@ describe('world property hot-patch (hot-reload level 1)', () => {
     const {world, player} = makeWorld(new Vector(0, 0), 100_000); // ground far
 
     world.tick(0.1);
-    expect(player.get(VelocityProperty).y).toBeCloseTo(90); // 900 * 0.1
+    expect(player.get(VelocityProperty).y).toBeCloseTo(0.9); // 9 * 0.1
 
     // Patch the world-scoped property in place — no rebuild.
-    world.set(StrengthProperty, 1800);
+    world.set(StrengthProperty, 18);
     world.tick(0.1);
-    // 90 + 1800 * 0.1 = 270
-    expect(player.get(VelocityProperty).y).toBeCloseTo(270);
+    // 0.9 + 18 * 0.1 = 2.7
+    expect(player.get(VelocityProperty).y).toBeCloseTo(2.7);
   });
 });
 
@@ -412,7 +412,7 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
 
     expect(snap.ruleIds).toEqual(['collision', 'gravity', 'motion', 'spatial']);
     expect(snap.actorIds).toEqual(['ground', 'player']);
-    expect(snap.world['gravity.strength']).toBe(900);
+    expect(snap.world['gravity.strength']).toBe(9);
     // Actor property values are captured per actor, by trait.prop path.
     expect(snap.actors.player['positional.position']).toMatchObject({
       x: 0,
@@ -420,10 +420,10 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
     });
 
     // Patch by path — the running sim uses it on the next tick.
-    expect(world.setWorldProperty('gravity.strength', 1800)).toBe(true);
+    expect(world.setWorldProperty('gravity.strength', 18)).toBe(true);
     world.tick(0.1);
-    expect(player.get(VelocityProperty).y).toBeCloseTo(180); // 1800 * 0.1
-    expect(world.snapshot().world['gravity.strength']).toBe(1800);
+    expect(player.get(VelocityProperty).y).toBeCloseTo(1.8); // 18 * 0.1
+    expect(world.snapshot().world['gravity.strength']).toBe(18);
 
     expect(world.setWorldProperty('nope.missing', 1)).toBe(false);
   });
@@ -636,9 +636,9 @@ describe('WorldBuilder declaration order', () => {
     ]);
     const world = builder.getWorld();
 
-    builder.set(StrengthProperty, 2500);
+    builder.set(StrengthProperty, 25);
 
-    expect(world.get(StrengthProperty)).toBe(2500);
+    expect(world.get(StrengthProperty)).toBe(25);
   });
 
   it('forwards an effect to the live world', () => {

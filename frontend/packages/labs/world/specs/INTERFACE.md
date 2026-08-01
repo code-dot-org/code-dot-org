@@ -67,7 +67,7 @@ export const DirectionProperty = rule.addProperty('direction', 'vector', {
   x: 0,
   y: 1,
 });
-export const StrengthProperty = rule.addProperty('strength', 'number', 900);
+export const StrengthProperty = rule.addProperty('strength', 'number', 9);
 
 // Actions are methods that help adjust properties that do not return
 // values. These would be accessible via `world.gravity.invert()`.

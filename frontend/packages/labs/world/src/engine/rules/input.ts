@@ -27,11 +27,11 @@ export const ControlledByArrowsTrait = rule.addTrait({
 // Moving writes velocity, so the actor must be able to move.
 ControlledByArrowsTrait.requires([MovableTrait]);
 
-/** Horizontal speed, in pixels per second, while an arrow key is held. */
+/** Horizontal speed, in units per second (core/units), while an arrow is held. */
 export const MoveSpeedProperty = ControlledByArrowsTrait.addProperty(
   'moveSpeed',
   'number',
-  150,
+  1.5,
   {name: 'move speed'},
 );
 
