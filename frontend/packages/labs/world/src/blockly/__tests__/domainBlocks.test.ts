@@ -55,8 +55,11 @@ const PROJECT_RULE = parseRuleMeta(
                   fields: {TYPE: 'vector', NAME: 'direction', DEFAULT: '0,1'},
                   next: {
                     block: {
-                      type: 'world_rule_action',
-                      fields: {NAME: 'Invert'},
+                      type: 'world_rule_block',
+                      fields: {RETURNS: 'none'},
+                      extraState: {
+                        parts: [{kind: 'label', text: 'Invert'}],
+                      },
                     },
                   },
                 },
@@ -71,8 +74,11 @@ const PROJECT_RULE = parseRuleMeta(
           fields: {NAME: 'Windblown'},
           next: {
             block: {
-              type: 'world_rule_query',
-              fields: {TYPE: 'boolean', NAME: 'is gusting'},
+              type: 'world_rule_block',
+              fields: {RETURNS: 'boolean'},
+              extraState: {
+                parts: [{kind: 'label', text: 'is gusting'}],
+              },
               next: {
                 block: {
                   type: 'world_rule_event',
@@ -1468,12 +1474,13 @@ describe('buildDomainPalette (project rule blocks)', () => {
             fields: {NAME: 'Pushes'},
             next: {
               block: {
-                type: 'world_rule_action',
-                fields: {NAME: 'Nudge'},
+                type: 'world_rule_block',
+                fields: {RETURNS: 'none'},
                 extraState: {
-                  params: [
-                    {type: 'number', var: 'a'},
-                    {type: 'vector', var: 'b'},
+                  parts: [
+                    {kind: 'label', text: 'Nudge'},
+                    {kind: 'param', type: 'number', var: 'a'},
+                    {kind: 'param', type: 'vector', var: 'b'},
                   ],
                 },
               },
@@ -1485,9 +1492,14 @@ describe('buildDomainPalette (project rule blocks)', () => {
             fields: {NAME: 'Pushable'},
             next: {
               block: {
-                type: 'world_rule_query',
-                fields: {TYPE: 'boolean', NAME: 'Near'},
-                extraState: {params: [{type: 'actor', var: 'c'}]},
+                type: 'world_rule_block',
+                fields: {RETURNS: 'boolean'},
+                extraState: {
+                  parts: [
+                    {kind: 'label', text: 'Near'},
+                    {kind: 'param', type: 'actor', var: 'c'},
+                  ],
+                },
               },
             },
           },
@@ -1561,7 +1573,7 @@ describe('rule authoring blocks (`.rule` files)', () => {
   it('offers a Rule toolbox category (with the dependency blocks)', () => {
     const cats = DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>;
     // The declarative authoring blocks, `use rule` / `use trait` for deps, and
-    // the imperative `define action` / `define query` (+ its `return`).
+    // the imperative `define block` (+ its `return`).
     expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual([
       'world_rule',
       'world_use_rule',
@@ -1570,8 +1582,6 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_property',
       'world_rule_event',
       'world_rule_block',
-      'world_rule_action',
-      'world_rule_query',
       'world_return',
       'world_rule_step_tick',
       'world_rule_step_before',

@@ -64,10 +64,10 @@ export interface PropertyMeta {
 /**
  * A designed signature: fixed wording and the values it takes, in order.
  *
- * Present on a member defined with `define block`, absent on the older
- * `define action` / `define query` (whose shape is "name, then params"). A call
- * site renders from this when it is there, so the block a learner uses reads
- * exactly like the preview they designed.
+ * Every authored member has one — `define block` is the only way to declare a
+ * member — while the rules the engine ships describe themselves by name and
+ * parameter list. A call site renders from this when it is there, so the block a
+ * learner uses reads exactly like the preview they designed.
  */
 export type MemberPart =
   | {readonly kind: 'label'; readonly text: string}
@@ -411,16 +411,6 @@ export function parseRuleMeta(
       ? (block.fields[name] as string)
       : '';
 
-  // The typed parameters a `define action`/`define query` takes come from its
-  // params mutator's `extraState` — `{params: [{type, var}]}`, in order. The type
-  // is the authored value type; the name is the bound variable's name (resolved
-  // via the workspace variable map). The call-site block reads these to build its
-  // arg sockets; the runtime signature is built separately (extractRuleBodies).
-  const parseParams = (block: RuleBlock): ActionParam[] =>
-    (block.extraState?.params ?? []).map(param => ({
-      name: (param.var && variableNames.get(param.var)) || 'param',
-      type: (param.type ?? 'number') as ArgType,
-    }));
   const ruleName = field(root, 'NAME') || 'Rule';
   const ref = (exportName: string): MemberRef => ({
     source: 'project',
@@ -463,49 +453,6 @@ export function parseRuleMeta(
       scope: ownerTraitId ? 'actor' : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Property`),
-    });
-  };
-
-  // A `define action` block → an ActionMeta (world at the rule level, actor
-  // inside a trait). The imperative body is not read here — metadata is static;
-  // the body is generated separately by the Blockly generator (extractRuleBodies)
-  // and keyed back by {@link ruleBodyKey}. Its params (name + type) drive the
-  // call-site block's arg sockets.
-  const addAction = (block: RuleBlock, ownerTraitId?: string): void => {
-    const name = field(block, 'NAME');
-    if (!name) {
-      return;
-    }
-    actions.push({
-      id: slug(name),
-      name,
-      params: parseParams(block),
-      scope: ownerTraitId ? 'actor' : 'world',
-      ownerTraitId,
-      ref: ref(`${pascal(name)}Action`),
-    });
-  };
-
-  // A `define query` block → a QueryMeta. Its `TYPE` field is the value it
-  // reports (the reporter block's output socket); the body (a `return`) is
-  // generated separately, like an action's.
-  const addQuery = (block: RuleBlock, ownerTraitId?: string): void => {
-    const name = field(block, 'NAME');
-    if (!name) {
-      return;
-    }
-    const declared = field(block, 'TYPE');
-    const returns = (
-      QUERY_RETURN_TYPES.has(declared) ? declared : 'boolean'
-    ) as PropertyType;
-    queries.push({
-      id: slug(name),
-      name,
-      returns,
-      params: parseParams(block),
-      scope: ownerTraitId ? 'actor' : 'world',
-      ownerTraitId,
-      ref: ref(`${pascal(name)}Query`),
     });
   };
 
@@ -614,10 +561,6 @@ export function parseRuleMeta(
       }
     } else if (block.type === 'world_rule_property') {
       addProperty(block);
-    } else if (block.type === 'world_rule_action') {
-      addAction(block);
-    } else if (block.type === 'world_rule_query') {
-      addQuery(block);
     } else if (block.type === 'world_rule_block') {
       addDesignedBlock(block);
     }
@@ -648,10 +591,6 @@ export function parseRuleMeta(
         }
       } else if (member.type === 'world_rule_property') {
         addProperty(member, traitId);
-      } else if (member.type === 'world_rule_action') {
-        addAction(member, traitId);
-      } else if (member.type === 'world_rule_query') {
-        addQuery(member, traitId);
       } else if (member.type === 'world_rule_block') {
         addDesignedBlock(member, traitId);
       } else if (member.type === 'world_rule_event') {
@@ -740,9 +679,8 @@ export interface RuleBodyGen {
 }
 
 /**
- * Generate the body and parameter signature of every `define action` /
- * `define query` / `define step` in a loaded `.rule` workspace, keyed by
- * {@link ruleBodyKey}.
+ * Generate the body and parameter signature of every `define block` and
+ * `define step` in a loaded `.rule` workspace, keyed by {@link ruleBodyKey}.
  *
  * Takes the workspace's TOP BLOCKS rather than the rule root, because a trait
  * is a root of its own: its members chain below it, beside the rule rather than
@@ -777,11 +715,7 @@ export function extractRuleBodies(
     ownerTraitId: string | undefined,
   ): void => {
     for (let block = first; block; block = block.getNextBlock()) {
-      if (block.type === 'world_rule_action') {
-        record('action', scope, ownerTraitId, block);
-      } else if (block.type === 'world_rule_query') {
-        record('query', scope, ownerTraitId, block);
-      } else if (block.type === 'world_rule_block') {
+      if (block.type === 'world_rule_block') {
         // Whichever it is, the body is generated the same way; the RETURNS
         // field decides which key it is filed under. Its id comes from the
         // designed wording, not a NAME field — it has none.

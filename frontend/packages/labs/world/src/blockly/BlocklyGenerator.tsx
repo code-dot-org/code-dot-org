@@ -131,19 +131,15 @@ export const BlocklyGenerator = forwardRef<
               const state = (
                 block as {
                   saveExtraState?: () => {
-                    params?: Array<{var: string}>;
                     parts?: Array<{kind?: string; var?: string}>;
                   };
                 }
               ).saveExtraState?.();
-              // Two shapes: `define action`/`define query` keep a `params`
-              // list, `define block` keeps the whole designed signature and its
-              // parameters are the `param` parts, in order.
-              const vars = state?.parts
-                ? state.parts
-                    .filter(part => part.kind === 'param')
-                    .map(part => part.var ?? '')
-                : (state?.params ?? []).map(param => param.var);
+              // `define block` keeps the whole designed signature; the closure's
+              // parameters are its `param` parts, in order.
+              const vars = (state?.parts ?? [])
+                .filter(part => part.kind === 'param')
+                .map(part => part.var ?? '');
               return vars.map(id => generator.getVariableName(id));
             },
           });

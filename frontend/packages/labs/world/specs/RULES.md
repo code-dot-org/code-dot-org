@@ -193,18 +193,18 @@ now says so.
 
 ## `define block` — designing the block a rule makes
 
-`define action` and `define query` name a member in a text field and grow
-parameter rows beneath it, so the block a learner will actually USE is never
-shown until they go and find it in the toolbox. Two things follow, and both are
-why this exists: the definition does not look like the thing it defines, and a
-rule is hard to scan, because "where is `nudge` defined?" means reading NAME
-fields down a column.
+Members were once declared with `define action` and `define query`, which named
+a member in a text field and grew parameter rows beneath it — so the block a
+learner will actually USE was never shown until they went and found it in the
+toolbox. Two things followed, and both are why this replaced them: the definition
+did not look like the thing it defined, and a rule was hard to scan, because
+"where is `nudge` defined?" meant reading NAME fields down a column.
 
 `define block` renders its own block, in place, above the body:
 
 ```
 define block ⟨does something ▾⟩
-push [amount ▾] toward [target ▾] ✎
+push [amount ▾] toward [target ▾]
 do …
 ```
 
@@ -219,38 +219,77 @@ shape Blockly's own `message0` has, which is not a coincidence: `push %1 toward
 is one label. Action versus query becomes a dropdown, since it was the only
 thing the two blocks differed in.
 
-The ✎ opens an editor: one control row per part (remove, move left, move right,
-retype) and buttons to append a label or a parameter. Closed, only the preview
-shows.
+The editor is Blockly's own mutator bubble. The ⚙ opens a mini-workspace
+holding a `block` container whose statement stack IS the signature, read
+top-to-bottom as the block reads left-to-right; the flyout offers a `text` item
+and one item per parameter type. Adding an input is dragging a type in,
+reordering is reordering statements, removing is dragging one out. All of that
+already worked, so none of it had to be invented — the earlier attempt at
+`◂`/`▸` buttons on the block face was custom machinery for a job Blockly's
+statement connections already do.
 
-### What this attempt does not do
+Each item carries a text field. On a `text` item it is the wording; on a
+parameter it is the NAME OF THE VARIABLE the body reads, so typing there renames
+it everywhere it is used. Names are made unique against both the workspace's
+other variables and the signature's own parameters: two parameters sharing a
+name would generate a closure with a duplicated argument, and one shadowing a
+rule-level variable would silently cut the body off from it.
 
-The idea was a WYSIWYG designer where parts are DRAGGED — a shadow at the right
-of the row you drop a variable into, dragging one out to remove it, dropping one
-onto another to nudge it along, and dragging a parameter down out of the preview
-to get a getter for the body. None of that is here:
+**The preview is a drawing of the block, not fields spelling it out.** A field is
+an SVG group Blockly asks for a size, so a private `WorkspaceSvg` can live inside
+one (`FieldBlockPreview`), holding the call-site block built from the current
+signature with a getter plugged into each socket. The outline, the category
+color, the tabs and the parameter names arrive together, and switching RETURNS
+redraws it as a reporter. Core does the same thing for mutator bubbles
+(`MiniWorkspaceBubble`); CDO Blockly does it for sprite lab's mini-toolboxes
+(`CdoFieldFlyout`).
 
-- **Reordering is `◂`/`▸` buttons, not dragging.** Blockly's drag machinery
-  moves BLOCKS between connections; a row of fields is not a set of connections,
-  so direct manipulation here needs custom gesture handling rather than a
-  different arrangement of existing parts.
-- **Parameters are used in the body via the Variables toolbox**, not by dragging
-  a copy out of the preview. Blockly has no "drag a copy from a field"; the
-  getter blocks already exist and are already typed, so this is a smaller gap
-  than it looks, but it is not what was asked for.
-- **The editor is rows on the block, not a bubble.** Deliberate — the point is
-  to see the result, and a bubble puts it somewhere else — but it means the
-  editing chrome and the preview share a block face.
+The drawing is inert — a transparent overlay takes every press — and a press on
+a parameter pulls a getter for it onto the real workspace (`dragGetterOut`),
+which is how a parameter reaches the body. Blockly has no "drag a copy out of a
+field", so this creates the block under the pointer and hands it to Blockly's own
+`Dragger`, the way a flyout does.
 
-### Not yet migrated
+Three things about that are worth keeping in mind, because each cost a debugging
+session:
 
-`define action` and `define query` still exist and the stock gravity rule still
-uses them. The new block was proven against a scratch rule
-(`push [amount] toward [target]` generating
-`rule.addAction("push_toward", (world, amount, target) => …)`) rather than by
-converting gravity, so both paths are live. Migrating is mechanical — a designed
-block with one label part is exactly an action — but it is a separate change,
-and until it happens there are two ways to define a member.
+- **The getter must be rendered synchronously before the drag starts**
+  (`renderManagement.triggerQueuedRenders`). A block whose render is still queued
+  has no measured size, so its output connection sits at its origin instead of
+  its left edge — it drags along looking right and drops unconnected.
+- **A field's `dispose` must not throw.** `WorkspaceSvg.dispose` unregisters
+  itself from the focus manager unconditionally, and a workspace that was never
+  injected was never registered. The throw left the disposing BLOCK half gone —
+  out of the top-block list but not marked disposed — which surfaced on the next
+  drag as `Block not present in workspace's list of top-most blocks`, from an
+  insertion marker failing to hide. Connections stopped working entirely.
+- **Nothing inside the drawing may take a pointer event.** Saying so on the
+  container is not enough: Blockly's stylesheet sets `pointer-events` on fields
+  and paths, and a descendant that sets the property beats an ancestor that set
+  it to `none`.
+
+Insertion markers skip the drawing altogether — a marker is a throwaway copy of
+the block made and unmade on every drag frame, drawn as an outline, so building
+one meant standing up and tearing down a workspace per frame for something never
+seen.
+
+### One way to define a member
+
+`define action` and `define query` are gone, along with their `+`/`−` parameter
+mutator. Nothing had shipped, so there is no migration: the stock gravity rule is
+authored in `define block`, and its members read as they always did because the
+arrangement says so —
+
+```
+[faller] rest height of [ground]
+[faller] is resting on [ground] [frame]
+Invert Gravity
+```
+
+which is also what closed the last gap in the call-site builder: a query used to
+be assembled as "first argument, name, rest", a sensible default that ignored
+what its author arranged. A designed query now renders from its parts like an
+action does, with an actor query still leading with the subject it is asked of.
 
 ## Steps are per-tick events
 
