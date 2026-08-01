@@ -277,6 +277,7 @@ gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
+gem 'aws-sdk-pi' # RDS/Aurora Performance Insights; see bin/oneoff/pi_top_sql_export
 gem 'aws-sdk-pricing'
 gem 'aws-sdk-rds', '>= 1.205.0'
 gem 'aws-sdk-redshiftdataapiservice'
