@@ -338,6 +338,7 @@ export function parseRuleMeta(
 ): RuleMeta | undefined {
   let root: RuleBlock | undefined;
   let traitRoots: RuleBlock[] = [];
+  let stepRoots: RuleBlock[] = [];
   // A `.rule`'s parameter names live in the workspace variable map (a param
   // block's VAR field is a variable id); resolve id → name to label params.
   const variableNames = new Map<string, string>();
@@ -356,6 +357,7 @@ export function parseRuleMeta(
     // Traits are top blocks beside the rule, not chained inside it — one `.rule`
     // declares one rule, so every trait in the file belongs to it.
     traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
+    stepRoots = tops.filter(b => b?.type?.startsWith('world_rule_step'));
   } catch {
     return undefined; // mid-edit / not JSON
   }
@@ -485,19 +487,24 @@ export function parseRuleMeta(
       : {source: 'builtin', exportName: owner};
     return {ownerRef, stepId};
   };
+  /**
+   * A step root → a StepMeta. Its ordering is the BLOCK TYPE, not a field:
+   * `when tick` is unordered, `before`/`after` carry the anchor dropdown.
+   */
+  const STEP_KIND: Record<string, 'free' | 'before' | 'after'> = {
+    world_rule_step_tick: 'free',
+    world_rule_step_before: 'before',
+    world_rule_step_after: 'after',
+  };
   const addStep = (block: RuleBlock): void => {
     const name = field(block, 'NAME');
-    if (!name) {
+    const kind = STEP_KIND[block.type ?? ''];
+    if (!name || !kind) {
       return;
     }
-    const kind = field(block, 'ORDER'); // 'free' | 'before' | 'after'
     const anchor =
-      kind === 'before' || kind === 'after'
-        ? stepAnchor(field(block, 'STEP'))
-        : undefined;
-    const order: StepOrderMeta = anchor
-      ? {kind: kind as 'before' | 'after', anchor}
-      : {kind: 'free'};
+      kind === 'free' ? undefined : stepAnchor(field(block, 'STEP'));
+    const order: StepOrderMeta = anchor ? {kind, anchor} : {kind: 'free'};
     steps.push({id: slug(name), name, ownerRef: selfRef, order});
   };
 
@@ -519,9 +526,12 @@ export function parseRuleMeta(
       addAction(block);
     } else if (block.type === 'world_rule_query') {
       addQuery(block);
-    } else if (block.type === 'world_rule_step') {
-      addStep(block);
     }
+  }
+
+  // Steps are roots too: an event hat per tick, with its body chained below.
+  for (const stepBlock of stepRoots) {
+    addStep(stepBlock);
   }
 
   // Each trait root, and the chain of members below it.
@@ -622,7 +632,10 @@ export interface RuleBody {
  * so the closure signature and the body's getters agree.
  */
 export interface RuleBodyGen {
+  /** The member's `DO` statement input — an action's or a query's body. */
   body: (block: LiveBlock) => string;
+  /** The chain BELOW a root — a step's body, which is an event hat's. */
+  chainBody: (block: LiveBlock) => string;
   signature: (block: LiveBlock) => readonly string[];
 }
 
@@ -666,14 +679,21 @@ export function extractRuleBodies(
         record('action', scope, ownerTraitId, block);
       } else if (block.type === 'world_rule_query') {
         record('query', scope, ownerTraitId, block);
-      } else if (block.type === 'world_rule_step') {
-        // Steps are world-scoped (rule level), run per tick.
-        record('step', 'world', undefined, block);
       }
     }
   };
   for (const root of roots) {
-    if (root.type === 'world_rule') {
+    if (root.type?.startsWith('world_rule_step')) {
+      // A step's body is the chain BELOW it, not a `DO` input — it is an event
+      // hat, so what follows it is what runs.
+      const id = slug(root.getFieldValue('NAME') ?? '');
+      if (id) {
+        bodies.set(ruleBodyKey('step', 'world', undefined, id), {
+          params: [],
+          body: gen.chainBody(root),
+        });
+      }
+    } else if (root.type === 'world_rule') {
       visit(root.getNextBlock(), 'world', undefined);
     } else if (root.type === 'world_rule_trait') {
       // A trait's members are actor-scoped and owned by it.

@@ -1572,7 +1572,9 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_action',
       'world_rule_query',
       'world_return',
-      'world_rule_step',
+      'world_rule_step_tick',
+      'world_rule_step_before',
+      'world_rule_step_after',
       'world_emit',
       'world_step_delta',
       // Reading and writing a variable is its own category (below): a rule's

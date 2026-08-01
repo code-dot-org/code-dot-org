@@ -191,6 +191,44 @@ rule-member body binds `world` — a world-scoped member is invoked as
 `(world, …)`, an actor-scoped one binds it from `actor.world` — and the guard
 now says so.
 
+## Steps are per-tick events
+
+`define step` became three event hats, styled like the `when …` blocks in an
+actor file, because that is what a step is — behaviour the rule runs when
+something happens, and the something is a tick:
+
+```
+when tick do <name>
+before <Rule ▸ step> do <name>
+after  <Rule ▸ step> do <name>
+```
+
+Each is a top block with its body chained below, like the rule and its traits.
+
+**Three blocks rather than one with an order dropdown.** Ordering is not a
+setting on a step, it is what KIND of step it is: "run before Motion moves
+things" and "run every tick, whenever" are different statements about when
+behaviour happens. The old single block needed a `stepOrder` extension purely to
+HIDE the anchor dropdown when the order dropdown made it meaningless — a shape
+that was two blocks wearing one coat. That extension is deleted.
+
+`before Has Physics ▸ reposition do applyVelocity` reads as the sentence it is.
+
+**A step's body is the chain below the hat**, not a `DO` input, so
+`extractRuleBodies` grew a `chainBody` alongside `body`: an action's and a
+query's body is still a statement input, a step's is what follows it.
+
+This surfaced the same warning bug the trait change did, one layer down:
+`worldContext` had been taught `world_rule_step`, and the types are now
+`world_rule_step_tick` / `_before` / `_after`, so every `for each actor` in a
+step body carried a warning bubble again. It matches on the prefix now.
+
+**Root placement is hand-set and measured.** The rule's stack renders 4028×1622
+workspace units — wide enough that side-by-side columns land _inside_ it — so
+the five roots are stacked in one column at measured offsets, with a test-free
+but checked guarantee that none overlap. Worth revisiting if the stock rule
+grows; Blockly's own "clean up blocks" is the durable answer.
+
 ## Variables
 
 A typed variable could be BOUND — by a `for each` loop, by a parameter row — and

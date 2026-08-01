@@ -14,6 +14,7 @@ import {Order, type JavascriptGenerator} from 'blockly/javascript';
 import {
   defineBlock,
   type BlockArgDefinition,
+  type Extension,
   type Toolbox,
   type ToolboxCategory,
 } from '@code-dot-org/blockly';
@@ -46,7 +47,6 @@ import {
   ruleParamsMutator,
 } from './extensions/ruleParamsMutator';
 import {sliderRangeMutator} from './extensions/sliderRange';
-import {stepOrderExtension} from './extensions/stepOrder';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
@@ -636,8 +636,11 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_world',
   'world_rule',
   // A trait is a definition root too — its members chain below it, beside the
-  // rule rather than inside it.
+  // rule rather than inside it. So is each step: its body chains below it.
   'world_rule_trait',
+  'world_rule_step_tick',
+  'world_rule_step_before',
+  'world_rule_step_after',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -2138,37 +2141,74 @@ const worldReturn = defineBlock({
 // statically for its ordering + as an anchor target; its body is generated like
 // an action's (so it carries no generator here).
 
-const STEP_ORDER_OPTIONS: Array<[string, string]> = [
-  ['unordered', 'free'],
-  ['before', 'before'],
-  ['after', 'after'],
-];
+// A step is a per-tick EVENT the rule handles, so it is an event hat: a top
+// block with its body chained below, like `when this actor …` in an actor file.
+//
+// Three blocks rather than one with an order dropdown. The ordering is not a
+// setting on a step, it is what KIND of step it is — "run before Motion moves
+// things" and "run every tick, whenever" are different statements about when
+// behaviour happens, and a dropdown that changes whether a second dropdown is
+// even meaningful (which is what the old block needed `stepOrder` for, to hide
+// the anchor when unordered) is a shape hiding two blocks in one.
+//
+// `before Motion ▸ reposition do applyVelocity` reads as the sentence it is.
 
-const worldRuleStep = defineBlock({
-  type: 'world_rule_step',
-  message0: 'define step %1 %2',
-  args0: [
-    {type: 'field_input', name: 'NAME', text: 'each tick'},
-    {type: 'field_dropdown', name: 'ORDER', options: STEP_ORDER_OPTIONS},
-  ],
-  // The anchor dropdown lives on its own `ANCHOR` input, so it can be hidden as a
-  // whole (reflowing cleanly) when ORDER is "unordered" (see stepOrderExtension).
-  message1: '%1 %2',
-  args1: [
-    {type: 'field_dropdown', name: 'STEP', options: stepOptions()},
-    {type: 'input_dummy', name: 'ANCHOR'},
-  ],
-  message2: 'do %1',
-  args2: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [stepOptionsExtension, stepOrderExtension],
-  style: 'default',
-  tooltip:
-    'Define a step — behavior that runs every tick (the world is in scope, ' +
-    'with the frame “delta”). Order it before/after another rule’s step.',
-  generator: noGenerator,
-});
+/** The shared shape: a name, a body chained below, no previous connection. */
+const stepBlock = (
+  type: string,
+  message0: string,
+  args0: BlockArgDefinition[],
+  tooltip: string,
+  extensions: Extension[] = [],
+) =>
+  defineBlock({
+    type,
+    message0,
+    args0,
+    // A definition root, like `define rule` and `define trait`: its body chains
+    // below rather than nesting in a `do` mouth.
+    nextStatement: true,
+    extensions,
+    style: 'event_blocks',
+    tooltip,
+    generator: noGenerator,
+  });
+
+const nameArg: BlockArgDefinition = {
+  type: 'field_input',
+  name: 'NAME',
+  text: 'each tick',
+};
+const anchorArg: BlockArgDefinition = {
+  type: 'field_dropdown',
+  name: 'STEP',
+  options: stepOptions(),
+};
+
+const worldRuleStepBefore = stepBlock(
+  'world_rule_step_before',
+  'before %1 do %2',
+  [anchorArg, nameArg],
+  'Run this every tick, before another rule’s step — gravity adds to velocity ' +
+    'before Motion turns velocity into movement.',
+  [stepOptionsExtension],
+);
+
+const worldRuleStepAfter = stepBlock(
+  'world_rule_step_after',
+  'after %1 do %2',
+  [anchorArg, nameArg],
+  'Run this every tick, after another rule’s step — landing happens after ' +
+    'Collision has pushed things out of walls.',
+  [stepOptionsExtension],
+);
+
+const worldRuleStepTick = stepBlock(
+  'world_rule_step_tick',
+  'when tick do %1',
+  [nameArg],
+  'Run this every tick, in no particular order relative to other rules.',
+);
 
 // The frame time (seconds since the last tick) — bound as `delta` in a step
 // closure, so this reporter is only meaningful inside a `define step` body.
@@ -2302,7 +2342,9 @@ export const DOMAIN_BLOCKS = [
   worldRuleAction,
   worldRuleQuery,
   worldReturn,
-  worldRuleStep,
+  worldRuleStepBefore,
+  worldRuleStepAfter,
+  worldRuleStepTick,
   worldEmit,
   worldStepDelta,
   worldHasTrait,
@@ -2380,7 +2422,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_action',
       'world_rule_query',
       'world_return', // ends a query's body
-      'world_rule_step', // per-tick behavior (+ ordering)
+      // Per-tick behaviour, one block per kind of ordering.
+      'world_rule_step_tick',
+      'world_rule_step_before',
+      'world_rule_step_after',
       'world_emit', // raise one of the events a rule declares
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
