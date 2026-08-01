@@ -69,8 +69,13 @@ export interface BlockDropdownArgDefinition extends BlockBaseArgDefinition {
 export interface BlockInputArgDefinition extends BlockBaseArgDefinition {
   /** Explicitly a dropdown field */
   type: 'input_value' | 'field_input';
-  /** The type to explicitly force connecting blocks to output */
-  check?: string;
+  /**
+   * The type(s) a connecting block must output.
+   *
+   * An array is a union, as Blockly means it: a socket that takes either a
+   * `Vector` or a `Number` — the shape an operation that infers over both needs.
+   */
+  check?: string | string[];
   /** The initial value of the field */
   value?: string | number;
   /** The initial text of the field */

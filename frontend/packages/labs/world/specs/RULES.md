@@ -68,10 +68,19 @@ player falls under the authored step, not the engine's.
 Four blocks, one field, and one bug, all of which were missing rather than
 deferred:
 
-- **`world_vector_scale` and `world_vector_add`.** `world_vector` built a vector
-  and `world_vector_component` read an axis back out; nothing combined them. "Add
+- **`world_vector_math`.** `world_vector` built a vector and
+  `world_vector_component` read an axis back out; nothing combined them. "Add
   direction × strength × delta to the velocity" is the whole of applying gravity
   and could not be written at all.
+
+  It began as two blocks — `+` over two vectors, `×` by a number — which is how
+  the operations differ in TYPE and not at all in what a learner is thinking:
+  "velocity × delta" and "velocity × wind" are the same sentence. It is now one
+  block with an operator dropdown, following the GLSL rule: either side may be a
+  vector or a number, the work is component-wise, and a number broadcasts to both
+  components (`Vector.broadcast`, engine/core/Vector). It always reports a
+  Vector; two numbers are what the stock math block is for.
+
 - **`world_vector_rotate`.** Inverting gravity is turning its direction vector
   180°, and there was no way to turn one.
 - **`world_emit`** — `emit <event> for <actor>`. A rule could DECLARE an event

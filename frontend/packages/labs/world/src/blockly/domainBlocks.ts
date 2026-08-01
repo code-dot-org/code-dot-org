@@ -1461,55 +1461,65 @@ const worldRgba = defineBlock({
   },
 });
 
-// Vector arithmetic. Two blocks, because a step that does physics needs them and
-// there was no way to express either: `world_vector` builds one and
-// `world_vector_component` reads an axis back out, but nothing combined them.
-// Gravity's own step is the worked example — "add (direction × strength × delta)
-// to the velocity" is the whole of applying gravity, and without these it cannot
-// be written in blocks at all.
+// Vector arithmetic — one block, which infers what it is doing.
+//
+// A step that does physics needs it, and `world_vector` (build one) and
+// `world_vector_component` (read an axis back out) did not combine. It began as
+// two blocks, `+` over two vectors and `×` by a number, which is how the
+// operations differ in TYPE and not at all in what a learner is thinking:
+// "velocity × delta" and "velocity × wind" are the same sentence.
+//
+// So this is the GLSL rule instead. Either side may be a vector or a number, the
+// work is component-wise, and a number broadcasts to both components. Gravity's
+// step is the worked example: `velocity + direction × strength × delta` — one
+// vector and three scalars, written the way it is said.
+//
+// Output is always a Vector: an operation with a vector in it produces one, and
+// the case with no vector at all (`2 + 3`) is what the stock math block is for.
+const VECTOR_OPS: Array<[string, string]> = [
+  ['+', 'ADD'],
+  ['−', 'SUBTRACT'],
+  ['×', 'MULTIPLY'],
+  ['÷', 'DIVIDE'],
+];
+const VECTOR_OP_METHODS: Record<string, string> = {
+  ADD: 'add',
+  SUBTRACT: 'subtract',
+  MULTIPLY: 'multiply',
+  DIVIDE: 'divide',
+};
+/** Both sockets take either kind — that is the whole point. */
+const VECTOR_OPERAND_CHECK = ['Vector', 'Number'];
 
-const worldVectorScale = defineBlock({
-  type: 'world_vector_scale',
-  message0: '%1 × %2',
+const worldVectorMath = defineBlock({
+  type: 'world_vector_math',
+  message0: '%1 %2 %3',
   args0: [
-    {type: 'input_value', name: 'VECTOR', check: 'Vector'},
-    {type: 'input_value', name: 'FACTOR', check: 'Number'},
+    {type: 'input_value', name: 'A', check: VECTOR_OPERAND_CHECK},
+    {type: 'field_dropdown', name: 'OP', options: VECTOR_OPS},
+    {type: 'input_value', name: 'B', check: VECTOR_OPERAND_CHECK},
   ],
   inputsInline: true,
   output: 'Vector',
   style: 'location_blocks',
-  tooltip: 'A vector stretched (or shrunk) by a number.',
+  tooltip:
+    'Vector arithmetic, component by component. Either side may be a vector ' +
+    'or a number; a number applies to both components.',
   generator: {
     javascript(block, generator) {
-      const vector =
-        generator.valueToCode(block, 'VECTOR', Order.MEMBER) ||
-        'new WorldLab.Vector(0, 0)';
-      const factor = generator.valueToCode(block, 'FACTOR', Order.NONE) || '0';
-      return [`${vector}.scale(${factor})`, Order.MEMBER] as [string, number];
-    },
-  },
-});
-
-const worldVectorAdd = defineBlock({
-  type: 'world_vector_add',
-  message0: '%1 + %2',
-  args0: [
-    {type: 'input_value', name: 'A', check: 'Vector'},
-    {type: 'input_value', name: 'B', check: 'Vector'},
-  ],
-  inputsInline: true,
-  output: 'Vector',
-  style: 'location_blocks',
-  tooltip: 'Two vectors added together.',
-  generator: {
-    javascript(block, generator) {
+      const method = VECTOR_OP_METHODS[block.getFieldValue('OP') ?? 'ADD'];
       const a =
         generator.valueToCode(block, 'A', Order.MEMBER) ||
         'new WorldLab.Vector(0, 0)';
-      const b =
-        generator.valueToCode(block, 'B', Order.NONE) ||
-        'new WorldLab.Vector(0, 0)';
-      return [`${a}.add(${b})`, Order.MEMBER] as [string, number];
+      const b = generator.valueToCode(block, 'B', Order.NONE) || '0';
+      // `a.add(b)` needs `a` to BE a vector. It is, whenever the plugged block
+      // says so — a getter of a vector variable, another of these, a literal.
+      // When it does not (a number leading: `2 × direction`), the operand is
+      // broadcast first, which is the same rule applied to the left-hand side.
+      const left = block.getInputTargetBlock('A');
+      const isVector = left?.outputConnection?.getCheck()?.includes('Vector');
+      const receiver = isVector ? a : `WorldLab.Vector.broadcast(${a})`;
+      return [`${receiver}.${method}(${b})`, Order.MEMBER] as [string, number];
     },
   },
 });
@@ -2406,8 +2416,7 @@ export const DOMAIN_BLOCKS = [
   worldPrint,
   worldEventValue,
   worldVector,
-  worldVectorScale,
-  worldVectorAdd,
+  worldVectorMath,
   worldVectorRotate,
   worldVectorOf,
   worldSlider,
@@ -2548,8 +2557,7 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'math_single',
       'world_vector',
       'world_vector_of',
-      'world_vector_scale',
-      'world_vector_add',
+      'world_vector_math',
       'world_vector_rotate',
       'world_vector_component',
     ],

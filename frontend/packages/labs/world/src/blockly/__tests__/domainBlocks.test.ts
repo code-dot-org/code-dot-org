@@ -925,13 +925,25 @@ describe('world_emit', () => {
   });
 });
 
-describe('vector arithmetic blocks', () => {
+describe('vector arithmetic', () => {
   // Gravity's step is the worked example: "add direction × strength × delta to
-  // the velocity" could not be written at all before these.
-  const value = (type: string, values: Record<string, string>) =>
+  // the velocity" could not be written at all before this block, and reads as
+  // one sentence because either side may be a vector or a number.
+  const value = (
+    type: string,
+    values: Record<string, string>,
+    fields: Record<string, string> = {},
+    leftCheck: string[] | null = ['Vector'],
+  ) =>
     (
       generatorFor(type)(
-        {} as never,
+        {
+          getFieldValue: (name: string) => fields[name] ?? null,
+          getInputTargetBlock: (name: string) =>
+            name === 'A' && values.A
+              ? {outputConnection: {getCheck: () => leftCheck}}
+              : null,
+        } as never,
         {
           valueToCode: (_b: unknown, name: string) => values[name] ?? '',
         } as never,
@@ -939,21 +951,51 @@ describe('vector arithmetic blocks', () => {
       ) as [string, number]
     )[0];
 
-  it('scales, adds and rotates', () => {
-    expect(value('world_vector_scale', {VECTOR: 'v', FACTOR: '3'})).toBe(
-      'v.scale(3)',
-    );
-    expect(value('world_vector_add', {A: 'v', B: 'w'})).toBe('v.add(w)');
-    expect(value('world_vector_rotate', {VECTOR: 'v', DEGREES: '180'})).toBe(
-      'v.rotate(180)',
-    );
+  it('maps each operator to its component-wise method', () => {
+    const ops = {
+      ADD: 'add',
+      SUBTRACT: 'subtract',
+      MULTIPLY: 'multiply',
+      DIVIDE: 'divide',
+    };
+    for (const [op, method] of Object.entries(ops)) {
+      expect(value('world_vector_math', {A: 'v', B: 'w'}, {OP: op})).toBe(
+        `v.${method}(w)`,
+      );
+    }
+  });
+
+  it('takes a number on either side, GLSL-style', () => {
+    // `velocity × delta` — a scalar on the right needs nothing: the engine's
+    // Vector methods broadcast it (core/Vector).
+    expect(
+      value('world_vector_math', {A: 'v', B: 'delta'}, {OP: 'MULTIPLY'}),
+    ).toBe('v.multiply(delta)');
+    // `2 × direction` — a scalar on the LEFT has no method to call, so it is
+    // broadcast into a vector first. Same rule, other side.
+    expect(
+      value('world_vector_math', {A: '2', B: 'v'}, {OP: 'MULTIPLY'}, [
+        'Number',
+      ]),
+    ).toBe('WorldLab.Vector.broadcast(2).multiply(v)');
+  });
+
+  it('defaults to adding when the operator is missing', () => {
+    // A block deserialized without its field still has to generate something.
+    expect(value('world_vector_math', {A: 'v', B: 'w'})).toBe('v.add(w)');
   });
 
   it('falls back to a zero vector rather than emitting nothing', () => {
-    // An empty socket must still produce a Vector: `undefined.scale(…)` would
+    // An empty socket must still produce a Vector: `undefined.add(…)` would
     // take the game down on the first tick.
-    expect(value('world_vector_scale', {})).toBe(
-      'new WorldLab.Vector(0, 0).scale(0)',
+    expect(value('world_vector_math', {}, {OP: 'ADD'}, null)).toBe(
+      'WorldLab.Vector.broadcast(new WorldLab.Vector(0, 0)).add(0)',
+    );
+  });
+
+  it('still rotates, which is not arithmetic', () => {
+    expect(value('world_vector_rotate', {VECTOR: 'v', DEGREES: '180'})).toBe(
+      'v.rotate(180)',
     );
   });
 });
