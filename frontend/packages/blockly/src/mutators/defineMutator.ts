@@ -37,7 +37,10 @@ type InferState<T> = T extends {loadExtraState(state: infer S): void}
 export function defineMutator<T extends object>(
   name: string,
   mutator: T & ThisType<BlockSvg & T>,
-  noRegister?: boolean,
+  options?: boolean | {noRegister?: boolean; blocks?: string[]},
 ): Mutator<InferState<T>, T> {
-  return {name, mutator, noRegister} as Mutator<InferState<T>, T>;
+  // `true` was the old `noRegister` positional; the object form adds `blocks`,
+  // the flyout of a bubble mutator.
+  const opts = typeof options === 'boolean' ? {noRegister: options} : options;
+  return {name, mutator, ...opts} as Mutator<InferState<T>, T>;
 }

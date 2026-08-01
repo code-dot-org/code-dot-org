@@ -61,10 +61,24 @@ export interface PropertyMeta {
   readonly ref: MemberRef;
 }
 
+/**
+ * A designed signature: fixed wording and the values it takes, in order.
+ *
+ * Present on a member defined with `define block`, absent on the older
+ * `define action` / `define query` (whose shape is "name, then params"). A call
+ * site renders from this when it is there, so the block a learner uses reads
+ * exactly like the preview they designed.
+ */
+export type MemberPart =
+  | {readonly kind: 'label'; readonly text: string}
+  | {readonly kind: 'param'; readonly name: string; readonly type: ArgType};
+
 export interface ActionMeta {
   readonly id: string;
   readonly name: string;
   readonly params: readonly ActionParam[];
+  /** The designed signature, when `define block` made this. */
+  readonly parts?: readonly MemberPart[];
   readonly scope: 'world' | 'actor';
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
@@ -75,6 +89,8 @@ export interface QueryMeta {
   readonly name: string;
   readonly returns?: PropertyType;
   readonly params: readonly ActionParam[];
+  /** The designed signature, when `define block` made this. */
+  readonly parts?: readonly MemberPart[];
   readonly scope: 'world' | 'actor';
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
@@ -267,6 +283,22 @@ export function builtinRuleMeta(
 // rule's members are named in generated code by a fixed convention (PascalCase
 // id + kind) that the rule's own module codegen mirrors, so `import`s line up.
 
+/**
+ * The wording a designed signature reads as — its labels, joined.
+ *
+ * A `define block` has no NAME field: its name IS the fixed wording of the
+ * block it draws. Both readers derive it the same way, or the metadata and the
+ * generated body would be filed under different ids.
+ */
+export const designedName = (
+  parts: ReadonlyArray<{kind?: string; text?: string}> | undefined,
+): string =>
+  (parts ?? [])
+    .filter(part => part.kind !== 'param' && part.text)
+    .map(part => (part.text ?? '').trim())
+    .filter(Boolean)
+    .join(' ');
+
 /** An identifier from an authored name/id: non-alphanumerics become `_`. */
 const slug = (text: string): string => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
 
@@ -322,7 +354,16 @@ interface RuleBlock {
   type?: string;
   fields?: Record<string, unknown>;
   inputs?: Record<string, {block?: RuleBlock}>;
-  extraState?: {params?: ReadonlyArray<{type?: string; var?: string}>};
+  extraState?: {
+    params?: ReadonlyArray<{type?: string; var?: string}>;
+    /** `world_rule_block`'s designed signature (blockDesigner). */
+    parts?: ReadonlyArray<{
+      kind?: string;
+      text?: string;
+      type?: string;
+      var?: string;
+    }>;
+  };
   next?: {block?: RuleBlock};
 }
 
@@ -468,6 +509,57 @@ export function parseRuleMeta(
     });
   };
 
+  /**
+   * A `define block` → an action or a query, decided by its RETURNS field.
+   *
+   * Its name is the wording of its labels joined; its params are the parameter
+   * parts, in order. The parts are kept as well, so the call-site block can be
+   * built in the arrangement that was designed rather than name-then-arguments.
+   */
+  const addDesignedBlock = (block: RuleBlock, ownerTraitId?: string): void => {
+    const raw = block.extraState?.parts ?? [];
+    const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
+      if (part.kind === 'param') {
+        return [
+          {
+            kind: 'param',
+            name: (part.var && variableNames.get(part.var)) || 'value',
+            type: (part.type ?? 'number') as ArgType,
+          },
+        ];
+      }
+      return part.text ? [{kind: 'label', text: part.text}] : [];
+    });
+    const name = designedName(raw);
+    if (!name) {
+      return;
+    }
+    const params = parts
+      .filter(
+        (part): part is {kind: 'param'; name: string; type: ArgType} =>
+          part.kind === 'param',
+      )
+      .map(part => ({name: part.name, type: part.type}));
+    const returns = field(block, 'RETURNS');
+    const common = {
+      id: slug(name),
+      name,
+      params,
+      parts,
+      scope: (ownerTraitId ? 'actor' : 'world') as 'actor' | 'world',
+      ownerTraitId,
+    };
+    if (returns && returns !== 'none' && QUERY_RETURN_TYPES.has(returns)) {
+      queries.push({
+        ...common,
+        returns: returns as PropertyType,
+        ref: ref(`${pascal(name)}Query`),
+      });
+    } else {
+      actions.push({...common, ref: ref(`${pascal(name)}Action`)});
+    }
+  };
+
   // A `define step` block → a StepMeta. Its ordering: the `ORDER` dropdown
   // (unordered/before/after) and, when anchored, the `STEP` dropdown's value —
   // an anchor `<owner>#<stepId>` where `owner` is a built-in rule export name or
@@ -526,6 +618,8 @@ export function parseRuleMeta(
       addAction(block);
     } else if (block.type === 'world_rule_query') {
       addQuery(block);
+    } else if (block.type === 'world_rule_block') {
+      addDesignedBlock(block);
     }
   }
 
@@ -558,6 +652,8 @@ export function parseRuleMeta(
         addAction(member, traitId);
       } else if (member.type === 'world_rule_query') {
         addQuery(member, traitId);
+      } else if (member.type === 'world_rule_block') {
+        addDesignedBlock(member, traitId);
       } else if (member.type === 'world_rule_event') {
         const eventName = field(member, 'NAME');
         if (eventName) {
@@ -616,6 +712,10 @@ interface LiveBlock {
   getFieldValue(name: string): string | null;
   getNextBlock(): LiveBlock | null;
   getInputTargetBlock(name: string): LiveBlock | null;
+  /** A mutator's serialized state, when the block has one. */
+  saveExtraState?: () => {
+    parts?: ReadonlyArray<{kind?: string; text?: string}>;
+  };
 }
 
 /** The generated closure of one action/query: its parameter identifiers (in
@@ -659,8 +759,10 @@ export function extractRuleBodies(
     scope: 'world' | 'actor',
     ownerTraitId: string | undefined,
     member: LiveBlock,
+    /** For a member with no NAME field, the id derived some other way. */
+    explicitId?: string,
   ): void => {
-    const id = slug(member.getFieldValue('NAME') ?? '');
+    const id = explicitId ?? slug(member.getFieldValue('NAME') ?? '');
     if (id) {
       bodies.set(ruleBodyKey(kind, scope, ownerTraitId, id), {
         // A step takes no user params (its closure is `(world, delta)`).
@@ -679,6 +781,18 @@ export function extractRuleBodies(
         record('action', scope, ownerTraitId, block);
       } else if (block.type === 'world_rule_query') {
         record('query', scope, ownerTraitId, block);
+      } else if (block.type === 'world_rule_block') {
+        // Whichever it is, the body is generated the same way; the RETURNS
+        // field decides which key it is filed under. Its id comes from the
+        // designed wording, not a NAME field — it has none.
+        const returns = block.getFieldValue('RETURNS');
+        record(
+          returns && returns !== 'none' ? 'query' : 'action',
+          scope,
+          ownerTraitId,
+          block,
+          slug(designedName(block.saveExtraState?.()?.parts)),
+        );
       }
     }
   };

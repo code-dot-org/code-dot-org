@@ -1569,6 +1569,7 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_use_trait',
       'world_rule_property',
       'world_rule_event',
+      'world_rule_block',
       'world_rule_action',
       'world_rule_query',
       'world_return',

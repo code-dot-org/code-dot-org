@@ -388,7 +388,15 @@ class Registry<T extends Environment = Environment> {
         return environment.mainWorkspace === this.workspace;
       };
 
-      Blockly.Extensions.registerMutator(name, newMutator);
+      // `blocks` is Blockly's `opt_blockList`: the flyout of the mutator's
+      // bubble. Passing `undefined` keeps a field-driven mutator bubble-less,
+      // which is what every mutator here did before this was threaded through.
+      Blockly.Extensions.registerMutator(
+        name,
+        newMutator,
+        undefined,
+        mutator.blocks,
+      );
       this.mutators.push(mutator);
     }
   }

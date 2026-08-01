@@ -33,6 +33,10 @@ import {
   runtimeWorldExtension,
   traitContextExtension,
 } from './extensions/actorContext';
+import {
+  blockDesignerInitExtension,
+  blockDesignerMutator,
+} from './extensions/blockDesigner';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
   effectParamsInitExtension,
@@ -87,6 +91,7 @@ import {
   ActorVariable,
   PARAM_GETTER_BLOCKS,
   PARAM_SETTER_BLOCKS,
+  PARAM_TYPE_OPTIONS,
   PARAM_VARIABLE_TYPES,
 } from './typedVariables';
 import {
@@ -1053,17 +1058,39 @@ const defineActionBlock = (action: ActionMeta) => {
 
   const args0: BlockArgDefinition[] = [];
   const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
-  let message0 = name;
-  params.forEach((param, i) => {
-    const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
-    args0.push(...built.args);
-    shadows.push(...built.shadows);
-    // Label each socket by param name only when there are several; a lone param
-    // trails the verb bare, preserving the built-in single-arg blocks' look.
-    message0 += labelled
-      ? ` ${param.name} ${built.message}`
-      : ` ${built.message}`;
-  });
+  // A DESIGNED member (`define block`) carries the arrangement its author saw
+  // in the preview, so the call site is built from that rather than from
+  // "name, then arguments" — which is the whole point of designing it.
+  let message0 = action.parts ? '' : name;
+  if (action.parts) {
+    let paramIndex = 0;
+    for (const part of action.parts) {
+      if (part.kind === 'label') {
+        message0 += `${message0 ? ' ' : ''}${part.text}`;
+        continue;
+      }
+      const built = typedValueInputs(
+        params[paramIndex],
+        args0.length + 1,
+        paramNames[paramIndex],
+      );
+      paramIndex += 1;
+      args0.push(...built.args);
+      shadows.push(...built.shadows);
+      message0 += `${message0 ? ' ' : ''}${built.message}`;
+    }
+  } else {
+    params.forEach((param, i) => {
+      const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
+      args0.push(...built.args);
+      shadows.push(...built.shadows);
+      // Label each socket by param name only when there are several; a lone
+      // param trails the verb bare, preserving the built-in blocks' look.
+      message0 += labelled
+        ? ` ${param.name} ${built.message}`
+        : ` ${built.message}`;
+    });
+  }
   if (actorScoped) {
     // Target socket last, like `play animation … on …`.
     args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
@@ -2114,6 +2141,98 @@ const worldRuleQuery = defineBlock({
   generator: noGenerator,
 });
 
+// ── The signature mutator's own blocks ───────────────────────────────────────
+// These live only inside `define block`'s bubble; they are never in the
+// toolbox. The container holds a statement stack, and the stack IS the
+// signature, read left-to-right as top-to-bottom: drag a `text` in to add
+// wording, drag a type in to add an input, reorder by reordering statements,
+// remove by dragging out. The familiar mutator, doing the job a signature
+// actually needs.
+
+const SIGNATURE_CONTAINER = 'world_signature';
+/** One item block per parameter type, plus the label. Order = flyout order. */
+const SIGNATURE_ITEMS: Array<{type: string; label: string; param?: string}> = [
+  {type: 'world_signature_text', label: 'text'},
+  ...PARAM_TYPE_OPTIONS.map(([label, value]) => ({
+    type: `world_signature_${value}`,
+    label,
+    param: value,
+  })),
+];
+
+const signatureContainer = defineBlock({
+  type: SIGNATURE_CONTAINER,
+  message0: 'block %1',
+  args0: [{type: 'input_statement', name: 'PARTS'}],
+  style: 'setup_blocks',
+  tooltip:
+    'The block being designed. Stack words and inputs here, in the order they ' +
+    'should read.',
+  generator: noGenerator,
+});
+
+const signatureItems = SIGNATURE_ITEMS.map(item =>
+  defineBlock({
+    type: item.type,
+    // Both carry one text field, named TEXT so the designer reads them the same
+    // way: on a label it is the wording, on an input it is the parameter's name.
+    // An input's name is the name of the VARIABLE the body reads, so typing here
+    // renames it everywhere it is used — which is why it is edited here and not
+    // through the preview's variable dropdown.
+    message0: item.param ? `${item.label} %1` : 'text %1',
+    args0: [
+      {
+        type: 'field_input',
+        name: 'TEXT',
+        text: item.param ? item.param : 'word',
+      },
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    style: item.param ? 'variable_blocks' : 'text_blocks',
+    tooltip: item.param
+      ? `An input the block takes: a ${item.label}. Its name is the variable ` +
+        'the body reads.'
+      : 'Wording that appears on the block at this position.',
+    generator: noGenerator,
+  }),
+);
+
+// The generalized member: one block that defines any block a rule adds.
+//
+// `RETURNS` says whether it is an action ("does something") or a query, and
+// what a query reports — the same distinction `define action` / `define query`
+// made by being two blocks, made by a dropdown instead, because everything else
+// about them is identical.
+//
+// Its signature lives in the designer mutator (blockDesigner), which renders it
+// above the body exactly as the call site will read.
+const BLOCK_RETURNS_OPTIONS: Array<[string, string]> = [
+  ['does something', 'none'],
+  ...QUERY_RETURN_TYPE_OPTIONS.map(
+    ([label, value]) => [`reports a ${label}`, value] as [string, string],
+  ),
+];
+
+const worldRuleBlock = defineBlock({
+  type: 'world_rule_block',
+  message0: 'define block %1',
+  args0: [
+    {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  mutator: blockDesignerMutator,
+  extensions: [blockDesignerInitExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Define a block this rule adds. The row above "do" is the block itself — ' +
+    'edit it with the pencil, and it is what you will see when you use it.',
+  generator: noGenerator,
+});
+
 // `return` ends a query body with the value it reports. A body block (generated
 // via the standard path, not statically), so it carries its own generator. No
 // next connection — nothing runs after a return.
@@ -2341,6 +2460,9 @@ export const DOMAIN_BLOCKS = [
   worldRuleEvent,
   worldRuleAction,
   worldRuleQuery,
+  worldRuleBlock,
+  signatureContainer,
+  ...signatureItems,
   worldReturn,
   worldRuleStepBefore,
   worldRuleStepAfter,
@@ -2419,6 +2541,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_use_trait', // a trait's dependencies (requires), under a trait
       'world_rule_property',
       'world_rule_event',
+      'world_rule_block', // the generalized member: design the block it adds
       'world_rule_action',
       'world_rule_query',
       'world_return', // ends a query's body

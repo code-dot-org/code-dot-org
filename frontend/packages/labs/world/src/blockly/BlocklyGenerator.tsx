@@ -130,12 +130,21 @@ export const BlocklyGenerator = forwardRef<
             signature: block => {
               const state = (
                 block as {
-                  saveExtraState?: () => {params?: Array<{var: string}>};
+                  saveExtraState?: () => {
+                    params?: Array<{var: string}>;
+                    parts?: Array<{kind?: string; var?: string}>;
+                  };
                 }
               ).saveExtraState?.();
-              return (state?.params ?? []).map(param =>
-                generator.getVariableName(param.var),
-              );
+              // Two shapes: `define action`/`define query` keep a `params`
+              // list, `define block` keeps the whole designed signature and its
+              // parameters are the `param` parts, in order.
+              const vars = state?.parts
+                ? state.parts
+                    .filter(part => part.kind === 'param')
+                    .map(part => part.var ?? '')
+                : (state?.params ?? []).map(param => param.var);
+              return vars.map(id => generator.getVariableName(id));
             },
           });
           (generator as {__ruleModule?: string}).__ruleModule = undefined;
