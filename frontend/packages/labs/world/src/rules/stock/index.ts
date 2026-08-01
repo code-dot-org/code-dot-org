@@ -11,6 +11,7 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
+import {collisionRule} from './collision';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
 
@@ -40,6 +41,14 @@ export interface StockRule {
  * is likely to want them.
  */
 export const STOCK_RULES: readonly StockRule[] = [
+  {
+    id: 'collision',
+    name: 'Has Collisions',
+    description:
+      'Stops moving actors passing through solid ones, pushing them out at the face they entered.',
+    provides: ['Can Collide', 'Solid'],
+    contents: collisionRule,
+  },
   {
     id: 'input',
     name: 'Responds to Input',
@@ -71,4 +80,4 @@ export function stockRule(id: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.id === id);
 }
 
-export {arrowsRule, gravityRule, inputRule};
+export {arrowsRule, collisionRule, gravityRule, inputRule};

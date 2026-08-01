@@ -845,10 +845,20 @@ export function ruleMetaToModule(
     if (hash >= 0) {
       const modulePath = dep.slice(0, hash);
       const exportName = dep.slice(hash + 1);
-      projectImports.set(
-        `named:${modulePath}:${exportName}`,
-        `import {${exportName}} from ${q(modulePath)};`,
-      );
+      // A trait in THIS rule is an `export const` a few lines up, not something
+      // to import — a rule whose Solid requires its own Can Collide would
+      // otherwise import itself, and the bundle fails to build outright:
+      //
+      //   The symbol "CanCollideTrait" has already been declared
+      //
+      // Same self-reference the body generator avoids via `__ruleModule`, and
+      // steps via `isSelfAnchor`.
+      if (modulePath !== meta.modulePath) {
+        projectImports.set(
+          `named:${modulePath}:${exportName}`,
+          `import {${exportName}} from ${q(modulePath)};`,
+        );
+      }
       return exportName;
     }
     addWorldLab(dep);

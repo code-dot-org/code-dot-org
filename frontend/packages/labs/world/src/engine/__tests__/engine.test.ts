@@ -2,25 +2,27 @@ import {describe, expect, it} from 'vitest';
 
 import {
   ActorBuilder,
-  CollidableTrait,
-  CollisionRule,
-  IsTouchingQuery,
   MovableTrait,
   PositionProperty,
   PositionalTrait,
   ScaleProperty,
-  SizeProperty,
   SkewProperty,
-  SolidTrait,
-  TouchingQuery,
   Vector,
   VelocityProperty,
   WorldBuilder,
 } from '../index';
 
-// Gravity is no longer part of the engine — it is a `.rule` a project imports
-// (rules/stock/gravity). The rule these tests drive engine machinery WITH lives
-// beside them; see the fixture's header.
+// Neither gravity nor collision is part of the engine any more — both are
+// `.rule` files a project imports (rules/stock). The rules these tests drive
+// engine machinery WITH live beside them; see the fixtures' headers.
+import {
+  CollidableTrait,
+  CollisionRule,
+  IsTouchingQuery,
+  SizeProperty,
+  SolidTrait,
+  TouchingQuery,
+} from './fixtures/collisionRule';
 import {
   AffectedByGravityTrait,
   FallingProperty,

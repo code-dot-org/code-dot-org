@@ -33,8 +33,11 @@ describe('rules/arrows.rule', () => {
     ]);
   });
 
-  it('needs an actor that can move, and the keyboard', () => {
-    expect(meta.requires).toEqual(['MotionRule', 'InputRule']);
+  it('needs an actor that can move, and nothing else', () => {
+    // Not the keyboard RULE: reading which keys are held is the World's job
+    // (`key … is down`), so walking works in a project that never imported the
+    // rule that raises key events.
+    expect(meta.requires).toEqual(['MotionRule']);
     expect(meta.traits[0].requires).toEqual(['MovableTrait']);
   });
 

@@ -25,7 +25,8 @@ describe('rules/gravity.rule', () => {
 
   it('parses to the rule the built-in declares', () => {
     expect(meta.name).toBe('Has Gravity');
-    expect(meta.requires).toEqual(['MotionRule', 'CollisionRule']);
+    // Collision is a project rule now, named by module path.
+    expect(meta.requires).toEqual(['MotionRule', 'rules/collision']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',
@@ -103,10 +104,12 @@ describe('rules/gravity.rule', () => {
   it('declares the landing step, anchored after collision resolves', () => {
     // The step that lands actors and raises the falling transitions. It runs
     // after Collision has pushed things out of solids, so what it sees is where
-    // they ended up.
+    // they ended up — and collision is a project rule now, so the anchor names
+    // its MODULE rather than a `world-lab` export.
     const step = meta.steps.find(s => s.id === 'handleCollisions');
     expect(step?.order.kind).toBe('after');
-    expect(step?.order.anchor?.ownerRef.exportName).toBe('CollisionRule');
+    expect(step?.order.anchor?.ownerRef.source).toBe('project');
+    expect(step?.order.anchor?.ownerRef.modulePath).toBe('rules/collision');
     expect(step?.order.anchor?.stepId).toBe('resolve');
   });
 
