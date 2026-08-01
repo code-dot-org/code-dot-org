@@ -3,15 +3,18 @@ import {describe, expect, it} from 'vitest';
 import type {EffectDocument} from '../../../effect/model/types';
 import {
   ActorBuilder,
-  AffectedByGravityTrait,
-  GravityRule,
-  GroundTrait,
   PositionProperty,
-  StrengthProperty,
   Vector,
   WorldBuilder,
   type World,
 } from '../../../engine';
+// Gravity is a `.rule` now; the engine's test fixture is what these worlds run.
+import {
+  AffectedByGravityTrait,
+  GravityRule,
+  GroundTrait,
+  StrengthProperty,
+} from '../../../engine/__tests__/fixtures/gravityRule';
 import {reconcile} from '../reconcile';
 
 // Build a world like the demo: a gravity world with a player and a ground.

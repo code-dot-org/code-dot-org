@@ -1,25 +1,39 @@
+// The gravity rule as the ENGINE once shipped it — now a test fixture.
+//
+// Gravity moved out of the engine and into `rules/stock/gravity.ts`, a `.rule`
+// a project imports and a learner can open: the worked example of a mechanic
+// written in blocks rather than baked in. Two "Has Gravity" rules in the palette
+// (one built in, one authored) was the confusion that made keeping both
+// impossible.
+//
+// It stays here because the engine's own tests use it as a VEHICLE. What they
+// exercise is engine machinery — step ordering across rules, trait composition,
+// events on transitions, collision resolution under a mover — and gravity is the
+// smallest real thing that puts all of it in motion. A rule assembled through
+// the public builders is exactly the right shape for that, and now it cannot
+// drift into being shipped.
+
 // The Gravity rule ("Has Gravity") — the DESIGN.md worked example. It applies a
 // downward acceleration to any actor "Affected by Gravity" before Motion
 // integrates it, and reacts to landing after Collision resolves. It provides two
 // traits ("Affected by Gravity", "Acts as Ground") and two events
 // ("startsFalling", "stopsFalling").
 
-import {RuleBuilder} from '../builders/RuleBuilder';
-import {Vector} from '../core/Vector';
-
+import {RuleBuilder} from '../../builders/RuleBuilder';
+import {Vector} from '../../core/Vector';
 import {
   CollidableTrait,
   CollisionRule,
   ResolveStep,
   collisionSize,
-} from './collision';
+} from '../../rules/collision';
 import {
   MotionRule,
   MovableTrait,
   previousPosition,
   VelocityProperty,
-} from './motion';
-import {PositionProperty} from './spatial';
+} from '../../rules/motion';
+import {PositionProperty} from '../../rules/spatial';
 
 const rule = new RuleBuilder({id: 'gravity', name: 'Has Gravity'});
 rule.requires([MotionRule, CollisionRule]);

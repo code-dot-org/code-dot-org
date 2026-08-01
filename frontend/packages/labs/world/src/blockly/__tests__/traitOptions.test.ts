@@ -28,16 +28,16 @@ describe('traitOptions (traits from the rules in play)', () => {
     expect(byExport.get('SolidTrait')).toBe('Solid');
     expect(byExport.get('MovableTrait')).toBe('Can Move'); // via Motion
     expect(byExport.get('PositionalTrait')).toBe('Can Be Positioned'); // via Space
-    // Input isn't attached, so its trait is not offered.
-    expect(byExport.has('ControlledByArrowsTrait')).toBe(false);
+    // Appearance isn't attached, so its trait is not offered.
+    expect(byExport.has('AppearanceTrait')).toBe(false);
   });
 
   it('unions the traits across every attached rule', () => {
-    setProjectRules(['InputRule', 'AnimationRule']);
+    setProjectRules(['MotionRule', 'AnimationRule']);
     const exports = traitOptions().map(([, exp]) => exp);
-    expect(exports).toContain('ControlledByArrowsTrait'); // Input
+    expect(exports).toContain('MovableTrait'); // Motion
     expect(exports).toContain('AppearanceTrait'); // Animation
-    expect(exports).toContain('MovableTrait'); // Input requires Motion
+    expect(exports).toContain('PositionalTrait'); // Motion requires Spatial
     expect(exports).not.toContain('CollidableTrait'); // neither pulls Collision
   });
 

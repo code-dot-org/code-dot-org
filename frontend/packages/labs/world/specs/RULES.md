@@ -300,6 +300,52 @@ be assembled as "first argument, name, rest", a sensible default that ignored
 what its author arranged. A designed query now renders from its parts like an
 action does, with an actor query still leading with the subject it is asked of.
 
+## The engine keeps what only it can do
+
+Gravity was the first mechanic to leave the engine; walking and the keyboard's
+events followed, and the line they drew is the useful part.
+
+`rules/stock/arrows` ("Moves with Arrow Keys") is a trait, a move speed, and a
+step ordered before Motion integrates. `rules/stock/input` ("Responds to Input")
+declares the two key events and fans each frame's key edges out to every actor.
+What stayed behind is the World's keyboard: which keys are down, and which
+changed SINCE THE LAST TICK. That last one is the whole reason the split is
+where it is — a rule holding only "is it down now?" cannot tell a press from a
+hold, and no arrangement of blocks recovers the frame boundary.
+
+So the blocks that expose it are their own toolbox category, **Engine**, listed
+only while a `.rule` is open:
+
+- `key ⟨key⟩ is down` — polling; what walking reads.
+- `for each ⟨newly pressed | newly released⟩ key ⟨k⟩ do …` — the edges. A loop
+  rather than a list value because the lab has no list type, and iterating is
+  the only thing anyone does with these.
+- `key ⟨key⟩` — a key's name as a value, so a handler filtering for space reads
+  `if event value = key ⟨space⟩` rather than comparing against `" "`.
+
+A `.world` or `.actor` reaching for these would be writing a rule in the wrong
+file, and keeping them out of the everyday palette is also what lets the everyday
+palette stay short. They are always REGISTERED — a file that uses one has to load
+anywhere — this is only about what the toolbox lists.
+
+Two things had to give:
+
+- **`define event` may now be chained under the rule root**, not only under a
+  trait. A key press belongs to nobody; every actor can hear it. (Events were
+  always rule-level in the generated module — `rule.addEvent` — so this only
+  changes where the block may sit.)
+- **The keyboard's event hats lost their KEY dropdown.** They used to be a
+  special shape ("when this actor presses key ⟨space⟩") because they were the
+  engine's own events and it knew what they carried. They are an authored rule's
+  events now, and an authored rule's event is an ordinary event: the hat hands
+  the handler `event value`, and a handler that cares about one key compares it.
+  One block more, and nothing magic about the keyboard that a rule of your own
+  could not have.
+
+The default project's player jumps on space, which is that chain end to end: the
+input rule emits, the handler filters for the key AND asks gravity's own "is on
+the ground?", and Motion's `apply force` does the rest.
+
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an

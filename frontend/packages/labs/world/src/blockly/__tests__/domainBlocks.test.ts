@@ -401,16 +401,65 @@ describe('domain block generators', () => {
     );
   });
 
-  it('key event blocks filter the chosen key, one block per event', () => {
-    // `presses` and `releases` are distinct blocks (no STATE dropdown), each hung
-    // off its own Input event, keeping the KEY dropdown filter; body is the chain.
-    expect(emit('world_on_keyPressed', {KEY: ' '}, {}, {}, 'x;\n')).toBe(
-      'actor.on(WorldLab.KeyPressedEvent, (world, actor, eventValue) => {\n' +
-        'if (eventValue === " ") {\nx;\n}\n});\n',
-    );
-    expect(emit('world_on_keyReleased', {KEY: 'a'}, {}, {})).toContain(
-      'actor.on(WorldLab.KeyReleasedEvent',
-    );
+  it('hands Blockly a generator for every dropdown over project content', () => {
+    // Not a snapshot of one. Two reasons, and the second is the one that bit:
+    //
+    //  • the content changes (a project's rules, files, the events in play), and
+    //  • Blockly TRIMS a static array — it factors out any word every label
+    //    shares and renders it as a fixed label beside the field. Defined before
+    //    a project loads, every event read "Has Appearance ▸ animation …", so
+    //    that prefix was stamped onto `emit` for good; every step anchor read
+    //    "Has …", so `before`/`after` grew a stray "Has".
+    const live = [
+      ['world_use_trait', 'TRAIT'],
+      ['world_use_rule', 'RULE'],
+      ['world_emit', 'EVENT'],
+      ['world_emit_with', 'EVENT'],
+      ['world_rule_step_before', 'STEP'],
+      ['world_rule_step_after', 'STEP'],
+      ['world_add_actor', 'ACTOR'],
+      ['world_load_map', 'MAP'],
+    ] as const;
+    for (const [type, field] of live) {
+      const args = (
+        DOMAIN_BLOCKS.find(b => b.type === type) as {
+          args0?: Array<{name?: string; options?: unknown}>;
+        }
+      ).args0!;
+      const arg = args.find(a => a.name === field);
+      expect(typeof arg?.options, `${type}.${field}`).toBe('function');
+    }
+  });
+
+  it('lets an event value sit opposite anything in a comparison', () => {
+    // `logic_compare` refuses two operands whose output checks disagree — that
+    // is the block's own onchange, not ours — so an `event value` that claimed
+    // to be a Number could not be compared against a key, and a saved handler
+    // was pulled apart on load. This asks the real predicate the compare block
+    // asks: are these two outputs compatible?
+    const definition = (type: string) =>
+      DOMAIN_BLOCKS.find(b => b.type === type) as {output?: unknown};
+    expect(definition('world_event_value').output).toBeNull();
+
+    const workspace = new Blockly.Workspace();
+    const checker = workspace.connectionChecker;
+    const connection = (check: string | null) => {
+      const block = workspace.newBlock('logic_boolean');
+      block.setOutput(true, check);
+      return block.outputConnection!;
+    };
+    const eventValue = connection(null);
+    for (const other of ['String', 'Number', 'Boolean', 'Actor', 'Vector']) {
+      expect(checker.doTypeChecks(eventValue, connection(other))).toBe(true);
+    }
+  });
+
+  it('a key names itself, for comparing against an event value', () => {
+    // The keyboard's events are an authored rule's now, so a handler filters
+    // for its key rather than being built around one: `if event value = key
+    // ⟨space⟩`. This block is what keeps that from reading as `= " "`.
+    expect(emitValue('world_key', {KEY: ' '})[0]).toBe('" "');
+    expect(emitValue('world_key', {KEY: 'ArrowLeft'})[0]).toBe('"ArrowLeft"');
   });
 
   it('world_log prints the text field', () => {
@@ -660,13 +709,10 @@ describe('domain block generators', () => {
     for (const t of toolboxTypes.filter(t => t.startsWith('world_'))) {
       expect(registered).toContain(t);
     }
-    // Each rule's events are surfaced: the gravity, input, and animation hats.
-    for (const t of [
-      'world_on_keyPressed',
-      'world_on_keyReleased',
-      'world_on_animationEnded',
-      'world_on_frameChanged',
-    ]) {
+    // Each built-in rule's events are surfaced. The keyboard's are not among
+    // them any more: they belong to `rules/stock/input`, whose hats the project
+    // palette generates (see arrowsRule/inputRule tests).
+    for (const t of ['world_on_animationEnded', 'world_on_frameChanged']) {
       expect(toolboxTypes).toContain(t);
     }
   });
@@ -1632,6 +1678,7 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_step_before',
       'world_rule_step_after',
       'world_emit',
+      'world_emit_with',
       'world_step_delta',
       // Reading and writing a variable is its own category (below): a rule's
       // parameters are variables like any other.

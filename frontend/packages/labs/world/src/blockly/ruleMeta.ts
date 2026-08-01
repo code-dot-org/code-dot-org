@@ -456,6 +456,20 @@ export function parseRuleMeta(
     });
   };
 
+  // A `define event` block → an EventMeta. Declared at rule level or under a
+  // trait; both produce a rule-level event.
+  const addEvent = (block: RuleBlock): void => {
+    const name = field(block, 'NAME');
+    if (!name) {
+      return;
+    }
+    events.push({
+      id: slug(name),
+      name,
+      ref: ref(`${pascal(name)}Event`),
+    });
+  };
+
   /**
    * A `define block` → an action or a query, decided by its RETURNS field.
    *
@@ -563,6 +577,12 @@ export function parseRuleMeta(
       addProperty(block);
     } else if (block.type === 'world_rule_block') {
       addDesignedBlock(block);
+    } else if (block.type === 'world_rule_event') {
+      // A rule may declare an event with no trait to hang it on — the keyboard
+      // rule's key events belong to the WORLD, not to a kind of actor. Events
+      // are rule-level either way (`rule.addEvent`); chaining one under a trait
+      // says which actors it is about, not who owns it.
+      addEvent(block);
     }
   }
 
@@ -594,14 +614,7 @@ export function parseRuleMeta(
       } else if (member.type === 'world_rule_block') {
         addDesignedBlock(member, traitId);
       } else if (member.type === 'world_rule_event') {
-        const eventName = field(member, 'NAME');
-        if (eventName) {
-          events.push({
-            id: slug(eventName),
-            name: eventName,
-            ref: ref(`${pascal(eventName)}Event`),
-          });
-        }
+        addEvent(member);
       }
     }
     traits.push({

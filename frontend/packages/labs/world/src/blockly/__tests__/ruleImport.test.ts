@@ -16,27 +16,27 @@ import {
 afterEach(() => setRuleImportHandler(null));
 
 describe('the use-rule dropdown', () => {
-  it('offers import last, after the rules already available', () => {
-    const options = (
+  // The definition hands Blockly the GENERATOR, not a snapshot of it — a
+  // dropdown over a project's rules has to be asked afresh each time the menu
+  // opens, and a static array would also have Blockly factor out whatever word
+  // every label happens to share and stamp it beside the field.
+  const options = () =>
+    (
       DOMAIN_BLOCKS.find(b => b.type === 'world_use_rule')?.args0?.[0] as {
-        options?: Array<[string, string]>;
+        options?: () => Array<[string, string]>;
       }
-    ).options!;
-    // The static fallback baked into the definition is the built-ins; the live
-    // dropdown adds the project's own rules and this row (see useRuleOptions).
-    expect(options.at(-1)).toBeDefined();
-    expect(options.map(([, value]) => value)).not.toContain(IMPORT_RULE_VALUE);
+    ).options!();
+
+  it('offers import last, after the rules already available', () => {
+    const rows = options();
+    expect(rows.at(-1)?.[1]).toBe(IMPORT_RULE_VALUE);
+    expect(rows.length).toBeGreaterThan(1);
   });
 
   it('is how gravity reaches a project at all', () => {
-    // Gravity is no longer a built-in, so the static option list must not
-    // claim it — the only route is the import row.
-    const options = (
-      DOMAIN_BLOCKS.find(b => b.type === 'world_use_rule')?.args0?.[0] as {
-        options?: Array<[string, string]>;
-      }
-    ).options!;
-    expect(options.map(([label]) => label)).not.toContain('Has Gravity');
+    // Gravity is no longer a built-in, so the list must not claim it — the only
+    // route is the import row.
+    expect(options().map(([label]) => label)).not.toContain('Has Gravity');
   });
 });
 

@@ -28,7 +28,7 @@ const simple: LabFixture = {
         '## World Lab\n\nBuild a game world in code. Edit the world and ' +
         'actors under `worlds/` and `actors/`.\n\n' +
         '- The preview runs your game as you edit\n' +
-        '- Click the preview, then use the arrow keys to move the player\n' +
+        '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
         '- The coin plays a built-in animation; the player and ball play ones authored in `animations/game.json`\n' +
         '- `console.log` output appears in the Console\n' +
         '- Try changing the player’s start position, gravity, or move speed',

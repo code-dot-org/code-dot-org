@@ -1,7 +1,12 @@
 import {describe, expect, it} from 'vitest';
 
 import * as WorldLab from '../../engine';
-import {CollisionRule, GravityRule, MotionRule} from '../../engine';
+import {CollisionRule, MotionRule} from '../../engine';
+// Gravity ships as a `.rule` now, not as engine code; the fixture the engine's
+// own tests drive is still the richest example of a rule's shape (two traits,
+// world and actor members, events), which is what this describes.
+import * as GravityFixture from '../../engine/__tests__/fixtures/gravityRule';
+import {GravityRule} from '../../engine/__tests__/fixtures/gravityRule';
 import {
   builtinRuleMeta,
   extractRuleBodies,
@@ -16,7 +21,10 @@ import {
 // and that project `.rule` files will parse into.
 describe('builtinRuleMeta', () => {
   const meta = (rule: (typeof WorldLab)[keyof typeof WorldLab]): RuleMeta =>
-    builtinRuleMeta([rule as never], WorldLab as Record<string, unknown>)[0];
+    builtinRuleMeta([rule as never], {
+      ...(WorldLab as Record<string, unknown>),
+      ...(GravityFixture as Record<string, unknown>),
+    })[0];
 
   it('describes a rule, its traits, and its world + actor members', () => {
     const gravity = meta(GravityRule);

@@ -10,7 +10,9 @@
 // rule any more (see `builtinMeta`): "Has Gravity" is one of these, and the
 // default project is a project that imported it.
 
+import {arrowsRule} from './arrows';
 import {gravityRule} from './gravity';
+import {inputRule} from './input';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -34,10 +36,26 @@ export interface StockRule {
 }
 
 /**
- * The library. One rule so far, which is honest: gravity is the worked example
- * and the only one that has been authored end to end.
+ * The library: the mechanics that used to be engine code, in the order a project
+ * is likely to want them.
  */
 export const STOCK_RULES: readonly StockRule[] = [
+  {
+    id: 'input',
+    name: 'Responds to Input',
+    description:
+      'Raises an event on every actor when a key goes down or comes up, so a handler can react to a press rather than to it being held.',
+    provides: [],
+    contents: inputRule,
+  },
+  {
+    id: 'arrows',
+    name: 'Moves with Arrow Keys',
+    description:
+      'Walks an actor left and right while the arrow keys are held, at a speed the actor carries.',
+    provides: ['Controlled by Arrow Keys'],
+    contents: arrowsRule,
+  },
   {
     id: 'gravity',
     name: 'Has Gravity',
@@ -53,4 +71,4 @@ export function stockRule(id: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.id === id);
 }
 
-export {gravityRule};
+export {arrowsRule, gravityRule, inputRule};

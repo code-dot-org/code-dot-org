@@ -105,12 +105,17 @@ describe('importStockRule', () => {
 
 describe('the stock rule library', () => {
   it('describes each rule well enough to choose from', () => {
-    // The dialog shows a name, a sentence, and the traits it provides; a rule
-    // reaches actors through its traits, so that is what a learner is picking.
+    // The dialog shows a name, a sentence, and the traits it provides. A rule
+    // reaches actors through its traits, so those are what a learner is usually
+    // picking — but not every rule has one: the keyboard rule contributes
+    // EVENTS, which every actor can hear without electing anything, and the
+    // dialog omits the line rather than showing an empty list.
     for (const rule of STOCK_RULES) {
       expect(rule.name).toBeTruthy();
       expect(rule.description).toMatch(/\w+ \w+/);
-      expect(rule.provides.length).toBeGreaterThan(0);
+      for (const trait of rule.provides) {
+        expect(trait).toMatch(/\w/);
+      }
     }
   });
 

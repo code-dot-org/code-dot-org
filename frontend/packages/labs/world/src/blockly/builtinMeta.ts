@@ -9,35 +9,30 @@
 // in step with the engine — add a rule, or a member, and its blocks follow.
 
 import * as WorldLab from '../engine';
-import {
-  AnimationRule,
-  CollisionRule,
-  InputRule,
-  MotionRule,
-  SpatialRule,
-} from '../engine';
+import {AnimationRule, CollisionRule, MotionRule, SpatialRule} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 
 /**
  * The rules the engine provides, in dependency order.
  *
- * GRAVITY IS NOT AMONG THEM. It is a stock `.rule` a project imports
- * (`rules/stock`), which is the whole point of the rule-authoring work: gravity
- * is the worked example of a mechanic a learner can open and read, and having a
- * second, built-in "Has Gravity" in the palette meant two categories of the
- * same name holding different blocks. The engine module still exists as the
- * reference the stock rule was ported from, and the engine's own tests build
- * worlds with it; it simply is not offered for authoring.
+ * MECHANICS ARE NOT AMONG THEM. Gravity and arrow-key walking are stock
+ * `.rule` files a project imports (`rules/stock`), which is the whole point of
+ * the rule-authoring work: they are the mechanics a learner can open and read.
+ * Gravity's engine module is now only a test fixture
+ * (`engine/__tests__/fixtures/gravityRule`); walking and the keyboard's events
+ * left too, as `rules/stock/arrows` and `rules/stock/input`. The World still
+ * OWNS the keyboard — which keys are down, and which changed since the last
+ * frame — but what a key means is a rule's business, and now it is written like
+ * one.
  *
- * What remains here is what a rule cannot yet be written in blocks: the spatial
- * frame, integration, collision resolution, input, and animation.
+ * What remains is what a rule cannot be written in blocks, or should not be:
+ * the spatial frame, integration, collision resolution, and animation.
  */
 export const BUILTIN_RULES = [
   SpatialRule,
   MotionRule,
   CollisionRule,
-  InputRule,
   AnimationRule,
 ];
 

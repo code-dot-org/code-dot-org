@@ -3,7 +3,8 @@ import {describe, expect, it} from 'vitest';
 import {WorldBuilder} from '../builders/WorldBuilder';
 import {Scheduler} from '../core/Scheduler';
 import type {Step, StepFn, StepOrder} from '../core/types';
-import {GravityRule} from '../rules/gravity';
+
+import {GravityRule} from './fixtures/gravityRule';
 
 const noop: StepFn = () => {};
 

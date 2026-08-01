@@ -2,14 +2,8 @@ import {describe, expect, it} from 'vitest';
 
 import {
   ActorBuilder,
-  AffectedByGravityTrait,
   CollidableTrait,
   CollisionRule,
-  FallingProperty,
-  GravityRule,
-  GravityScaleProperty,
-  GroundTrait,
-  IsOnGroundQuery,
   IsTouchingQuery,
   MovableTrait,
   PositionProperty,
@@ -18,14 +12,26 @@ import {
   SizeProperty,
   SkewProperty,
   SolidTrait,
-  StartsFallingEvent,
-  StopsFallingEvent,
-  StrengthProperty,
   TouchingQuery,
   Vector,
   VelocityProperty,
   WorldBuilder,
 } from '../index';
+
+// Gravity is no longer part of the engine — it is a `.rule` a project imports
+// (rules/stock/gravity). The rule these tests drive engine machinery WITH lives
+// beside them; see the fixture's header.
+import {
+  AffectedByGravityTrait,
+  FallingProperty,
+  GravityRule,
+  GravityScaleProperty,
+  GroundTrait,
+  IsOnGroundQuery,
+  StartsFallingEvent,
+  StopsFallingEvent,
+  StrengthProperty,
+} from './fixtures/gravityRule';
 
 // Build a gravity world with one faller and one ground actor, wired through the
 // public builders exactly as a learner's world would be. Sizes are explicit so

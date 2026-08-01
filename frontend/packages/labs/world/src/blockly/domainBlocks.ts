@@ -85,6 +85,7 @@ import {
 } from './traitOptions';
 import {
   ActorVariable,
+  paramFlavour,
   PARAM_GETTER_BLOCKS,
   PARAM_SETTER_BLOCKS,
   PARAM_TYPE_OPTIONS,
@@ -230,7 +231,7 @@ const worldUseTrait = defineBlock({
   message0: 'use trait %1',
   // The options are the traits in play — those a rule the project's worlds attach
   // provides (populated live by the extension); the value is the trait's export.
-  args0: [{type: 'field_dropdown', name: 'TRAIT', options: traitOptions()}],
+  args0: [{type: 'field_dropdown', name: 'TRAIT', options: traitOptions}],
   previousStatement: true,
   nextStatement: true,
   // `useTraits` is a builder method, so this belongs under `define actor` — or
@@ -355,7 +356,7 @@ const worldAddEffect = defineBlock({
     {
       type: 'field_dropdown',
       name: 'EFFECT',
-      options: effectFileImportOptions(),
+      options: effectFileImportOptions,
     },
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
@@ -407,7 +408,7 @@ const worldRemoveEffect = defineBlock({
   type: 'world_remove_effect',
   message0: 'remove effect %1 from %2',
   args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
+    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions},
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
@@ -578,51 +579,18 @@ const defineEventBlock = (event: EventMeta) => {
   });
 };
 
-// The Input rule's key events carry a per-key detail, so their blocks add a KEY
-// dropdown and the handler filters for the chosen key. "presses"/"releases" is
-// which event this block hangs off — one block per event, no state dropdown.
-const KEY_VERB: Record<string, string> = {
-  keyPressed: 'presses',
-  keyReleased: 'releases',
-};
-
-/** A key event block: `when <actor> presses/releases key <key>`, body below. */
-const defineKeyEventBlock = (event: EventMeta) => {
-  const verb = KEY_VERB[event.id] ?? 'presses';
-  return defineBlock({
-    type: eventBlockType(event),
-    message0: `when %1 ${verb} key %2`,
-    args0: [
-      {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-      {type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS},
-    ],
-    nextStatement: true,
-    inputsInline: true,
-    extensions: [actorInputExtension],
-    style: 'event_blocks',
-    tooltip: `Run the blocks below when an actor ${verb} a key (while the game is focused).`,
-    generator: {
-      javascript(block, generator) {
-        const target =
-          generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-        const key = block.getFieldValue('KEY');
-        // `eventValue` is the key that fired; act only for the chosen key.
-        const body = `if (eventValue === ${str(key)}) {\n${nextChainCode(
-          block,
-          generator,
-        )}}\n`;
-        return onHandler(target, refCode(event.ref, generator), body);
-      },
-    },
-  });
-};
-
-// Build a block for every event the rule library declares. Input's key events
-// take the KEY-filtered shape; the rest take the plain shape.
+// Build a block for every event the rule library declares.
+//
+// One shape for all of them. The keyboard's events used to get a special hat
+// with a KEY dropdown built in ("when this actor presses key ⟨space⟩"), because
+// they were the engine's own and it could know what they carried. They are an
+// authored rule's events now (rules/stock/input), and an authored rule's event
+// is an ordinary event: the hat hands the handler `event value`, and a handler
+// that cares about one key compares it — `if event value = key ⟨space⟩`. One
+// block more, and nothing magic about the keyboard's events that a rule of your
+// own could not have.
 const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
-  rule.events.map(event =>
-    rule.id === 'input' ? defineKeyEventBlock(event) : defineEventBlock(event),
-  ),
+  rule.events.map(event => defineEventBlock(event)),
 );
 
 /**
@@ -1325,15 +1293,25 @@ const worldPrint = defineBlock({
   },
 });
 
-// The current event's value as an expression — e.g. the animation frame in a
-// "when animation frame changes" handler. `eventValue` is the handler arg bound
-// by world_on_event, so this is only meaningful inside a "when" block.
+// The current event's value as an expression — the animation frame in a "when
+// animation frame changes" handler, the key in a "when a key is pressed" one.
+// `eventValue` is the handler arg bound by world_on_event, so this is only
+// meaningful inside a "when" block.
+//
+// Untyped ON PURPOSE. It reported a Number, from when the only event carrying
+// anything was an animation's frame — which made it unusable the moment an event
+// carried something else: `logic_compare` refuses to hold two operands whose
+// output types disagree, so `event value = key ⟨space⟩` could not be assembled
+// at all, and a saved one was pulled apart on load. What the value IS depends on
+// the event the handler is for, and Blockly's word for that is `null`.
 const worldEventValue = defineBlock({
   type: 'world_event_value',
   message0: 'event value',
-  output: 'Number',
+  output: null,
   style: 'variable_blocks',
-  tooltip: 'The value of the current event (e.g. the animation frame).',
+  tooltip:
+    'The value of the current event — the key that was pressed, the animation ' +
+    'frame, whatever the event carries.',
   generator: {
     javascript() {
       return ['eventValue', Order.ATOMIC] as [string, number];
@@ -1680,7 +1658,7 @@ const worldIsA = defineBlock({
   message0: '%1 is a %2',
   args0: [
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'field_dropdown', name: 'TYPE', options: actorOptions()},
+    {type: 'field_dropdown', name: 'TYPE', options: actorOptions},
   ],
   inputsInline: true,
   output: 'Boolean',
@@ -1733,7 +1711,7 @@ const addImport = (generator: unknown, key: string, code: string): void => {
 const worldAddActor = defineBlock({
   type: 'world_add_actor',
   message0: 'add actor %1',
-  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions()}],
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions}],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
@@ -1767,7 +1745,7 @@ const worldAddActor = defineBlock({
 const worldLoadMap = defineBlock({
   type: 'world_load_map',
   message0: 'load map %1',
-  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions()}],
+  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
   previousStatement: true,
   nextStatement: true,
   extensions: [mapOptionsExtension],
@@ -1863,9 +1841,7 @@ const useRuleOptionsExtension = liveDropdown(
 const worldUseRule = defineBlock({
   type: 'world_use_rule',
   message0: 'use rule %1',
-  args0: [
-    {type: 'field_dropdown', name: 'RULE', options: BUILTIN_RULE_OPTIONS},
-  ],
+  args0: [{type: 'field_dropdown', name: 'RULE', options: useRuleOptions}],
   previousStatement: true,
   nextStatement: true,
   // The import extension AFTER the options one, so it wraps that validator
@@ -1894,7 +1870,7 @@ const worldUseAnimations = defineBlock({
   type: 'world_use_animations',
   message0: 'use animations %1',
   args0: [
-    {type: 'field_dropdown', name: 'FILE', options: animationFileOptions()},
+    {type: 'field_dropdown', name: 'FILE', options: animationFileOptions},
   ],
   previousStatement: true,
   nextStatement: true,
@@ -1940,7 +1916,7 @@ const worldAddWorldEffect = defineBlock({
     {
       type: 'field_dropdown',
       name: 'EFFECT',
-      options: effectFileImportOptions(),
+      options: effectFileImportOptions,
     },
   ],
   previousStatement: true,
@@ -1980,9 +1956,7 @@ const worldAddWorldEffect = defineBlock({
 const worldRemoveWorldEffect = defineBlock({
   type: 'world_remove_world_effect',
   message0: 'remove effect %1 from the world',
-  args0: [
-    {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions()},
-  ],
+  args0: [{type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions}],
   previousStatement: true,
   nextStatement: true,
   // Runtime-only, for the same reason as `remove effect … from <actor>`.
@@ -2279,7 +2253,7 @@ const nameArg: BlockArgDefinition = {
 const anchorArg: BlockArgDefinition = {
   type: 'field_dropdown',
   name: 'STEP',
-  options: stepOptions(),
+  options: stepOptions,
 };
 
 const worldRuleStepBefore = stepBlock(
@@ -2325,7 +2299,7 @@ const worldEmit = defineBlock({
   type: 'world_emit',
   message0: 'emit %1 for %2',
   args0: [
-    {type: 'field_dropdown', name: 'EVENT', options: eventOptions()},
+    {type: 'field_dropdown', name: 'EVENT', options: eventOptions},
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
@@ -2370,6 +2344,130 @@ const worldStepDelta = defineBlock({
   },
 });
 
+// `emit <event> for <actor> with <value>` — the same as `world_emit`, for an
+// event that CARRIES something. The keyboard rule's events carry the key, which
+// is what lets one handler say "when this actor presses space": the hat compares
+// the event's value against the key it cares about (`event value`).
+const worldEmitWith = defineBlock({
+  type: 'world_emit_with',
+  message0: 'emit %1 for %2 with %3',
+  args0: [
+    {type: 'field_dropdown', name: 'EVENT', options: eventOptions},
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'input_value', name: 'VALUE'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    eventOptionsExtension,
+    actorInputExtension,
+    worldContextExtension,
+  ],
+  style: 'event_blocks',
+  tooltip:
+    'Raise an event for an actor, carrying a value its handlers can read with ' +
+    '“event value”.',
+  generator: {
+    javascript(block, generator) {
+      const event = block.getFieldValue('EVENT');
+      if (!event) {
+        return '';
+      }
+      const actor =
+        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
+      const value = generator.valueToCode(block, 'VALUE', Order.NONE) || 'null';
+      return `world.emit(${refCode(refFromTraitValue(event), generator)}, ${actor}, ${value});\n`;
+    },
+  },
+});
+
+// `key <key>` — a key's name as a value, so a comparison against `event value`
+// reads as a key rather than as the string ' ' (which is what space is).
+const worldKey = defineBlock({
+  type: 'world_key',
+  message0: 'key %1',
+  args0: [{type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS}],
+  output: 'String',
+  style: 'text_blocks',
+  tooltip: 'The name of a key, as the keyboard reports it.',
+  generator: {
+    javascript(block) {
+      return [str(block.getFieldValue('KEY')), Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+// `for each newly pressed/released key <k> do …` — the frame boundary, which is
+// the one thing about the keyboard a rule cannot work out for itself: the World
+// knows which keys went down or came up SINCE THE LAST TICK, and a rule holding
+// only "is it down now?" cannot tell a press from a hold.
+//
+// A loop rather than a list value because the lab has no list type; iterating is
+// the only thing anyone does with these anyway.
+const KEY_EDGES: Array<[string, string]> = [
+  ['newly pressed', 'PRESSED'],
+  ['newly released', 'RELEASED'],
+];
+const KEY_EDGE_METHODS: Record<string, string> = {
+  PRESSED: 'newlyPressedKeys',
+  RELEASED: 'newlyReleasedKeys',
+};
+const worldForEachKey = defineBlock({
+  type: 'world_for_each_key',
+  message0: 'for each %1 key %2',
+  args0: [
+    {type: 'field_dropdown', name: 'EDGE', options: KEY_EDGES},
+    paramFlavour('string').field('VAR'),
+  ],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'loop_blocks',
+  tooltip:
+    'Run the blocks once for each key that went down (or came up) since the ' +
+    'last frame. Bind the loop variable to read which key it was.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const edge = KEY_EDGE_METHODS[block.getFieldValue('EDGE') ?? 'PRESSED'];
+      const body = generator.statementToCode(block, 'DO');
+      return `for (const ${variable} of world.${edge}()) {\n${body}}\n`;
+    },
+  },
+});
+
+// `key <key> is down` — the polling side of input, which the engine has always
+// had (`World.isKeyDown`) and the palette never offered: only the edge-triggered
+// event hats ("when this actor presses space") were reachable from blocks, so a
+// rule that wanted "while held" — which is what walking is — could not be
+// written. The dropdown is the same key list the event hats use.
+const worldIsKeyDown = defineBlock({
+  type: 'world_is_key_down',
+  message0: 'key %1 is down',
+  args0: [{type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS}],
+  output: 'Boolean',
+  extensions: [worldContextExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'True while the key is held (and the game has focus). For a one-shot ' +
+    'reaction to a press, use the “when … presses key” event instead.',
+  generator: {
+    javascript(block) {
+      const key = block.getFieldValue('KEY');
+      return [`world.isKeyDown(${str(key)})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 // `<actor> has trait <trait>` — a boolean predicate, so a step's `for each actor
 // where …` can select actors by trait (mirroring the engine's
 // `world.actors.with(Trait)`). The TRAIT dropdown reuses the traits in play.
@@ -2378,7 +2476,7 @@ const worldHasTrait = defineBlock({
   message0: '%1 has trait %2',
   args0: [
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'field_dropdown', name: 'TRAIT', options: traitOptions()},
+    {type: 'field_dropdown', name: 'TRAIT', options: traitOptions},
   ],
   inputsInline: true,
   output: 'Boolean',
@@ -2443,7 +2541,11 @@ export const DOMAIN_BLOCKS = [
   worldRuleStepAfter,
   worldRuleStepTick,
   worldEmit,
+  worldEmitWith,
+  worldKey,
+  worldForEachKey,
   worldStepDelta,
+  worldIsKeyDown,
   worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
   ...PARAM_SETTER_BLOCKS,
@@ -2523,6 +2625,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step_before',
       'world_rule_step_after',
       'world_emit', // raise one of the events a rule declares
+      'world_emit_with', // …carrying a value its handlers can read
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
       // rule's parameters are variables like any other, and a body wanting a
@@ -2533,6 +2636,28 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
   ruleCategory,
 ).filter(category => category.blocks.length > 0);
+/**
+ * Blocks that reach into the engine, offered ONLY while editing a `.rule`.
+ *
+ * These are the primitives a rule needs to do what the engine used to do for it,
+ * and that nothing else has any business with: the keyboard's frame boundary is
+ * how the input rule turns held keys into press and release events, and a
+ * `.world` or `.actor` that reached for it would be writing a rule in the wrong
+ * file. Keeping them out of the everyday palette is also what lets the everyday
+ * palette stay short.
+ *
+ * They are always REGISTERED (a file that uses one has to load anywhere); this
+ * is only about what the toolbox lists.
+ */
+const ENGINE_CATEGORY: ToolboxCategory = {
+  name: 'Engine',
+  blocks: [
+    'world_is_key_down', // the polling side: "while held"
+    'world_for_each_key', // the edges: what went down or came up this frame
+    'world_key', // a key's name, for comparing against an event's value
+  ],
+};
+
 const TOOLBOX_TAIL: ToolboxCategory[] = [
   {name: 'Loops', blocks: ['world_for_each']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
@@ -2577,11 +2702,19 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
   {name: 'Variables', blocks: [...PARAM_VARIABLE_TYPES]},
 ];
 
-export const DOMAIN_TOOLBOX: Toolbox = [
+/** The toolbox as a `.rule` sees it: everything, plus the Engine category. */
+const withEngine = (categories: ToolboxCategory[]): ToolboxCategory[] => [
+  ...categories,
+  ENGINE_CATEGORY,
+];
+
+const DOMAIN_CATEGORIES: ToolboxCategory[] = [
   ...TOOLBOX_HEAD,
   ...BUILTIN_RULE_CATEGORIES,
   ...TOOLBOX_TAIL,
 ];
+
+export const DOMAIN_TOOLBOX: Toolbox = DOMAIN_CATEGORIES;
 
 // ── Per-project rule palette ─────────────────────────────────────────────────
 // Generate the blocks + toolbox category for a set of rules — the project's own
@@ -2654,10 +2787,7 @@ function generateRulePalette(
       actionTypes.push(block.type);
     }
     for (const event of rule.events) {
-      const block =
-        rule.id === 'input'
-          ? defineKeyEventBlock(event)
-          : defineEventBlock(event);
+      const block = defineEventBlock(event);
       blocks.push(block);
       ruleEventTypes.push(block.type);
       eventTypes.push(block.type);
@@ -2711,10 +2841,11 @@ export function buildDomainPalette(
   // takes the workspace down with "Cannot read properties of undefined". This
   // runs once per editor mount, before the palette reaches a workspace.
   installColorMessages();
+  const editingRule = options.ownRuleModule !== undefined;
   if (projectRules.length === 0) {
     return {
       blocks: DOMAIN_BLOCKS,
-      toolbox: DOMAIN_TOOLBOX,
+      toolbox: editingRule ? withEngine(DOMAIN_CATEGORIES) : DOMAIN_TOOLBOX,
       rootTypes: ROOT_BLOCK_TYPES,
     };
   }
@@ -2722,14 +2853,15 @@ export function buildDomainPalette(
     projectRules,
     options.allRuleModules ? ALL_RULE_MODULES : options.ownRuleModule,
   );
+  const toolbox: ToolboxCategory[] = [
+    ...TOOLBOX_HEAD,
+    ...BUILTIN_RULE_CATEGORIES,
+    ...palette.categories,
+    ...TOOLBOX_TAIL,
+  ];
   return {
     blocks: [...DOMAIN_BLOCKS, ...palette.blocks],
-    toolbox: [
-      ...TOOLBOX_HEAD,
-      ...BUILTIN_RULE_CATEGORIES,
-      ...palette.categories,
-      ...TOOLBOX_TAIL,
-    ],
+    toolbox: editingRule ? withEngine(toolbox) : toolbox,
     rootTypes: new Set([...ROOT_BLOCK_TYPES, ...palette.eventTypes]),
   };
 }
