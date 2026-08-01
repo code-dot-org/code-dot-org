@@ -1,13 +1,27 @@
+// The motion rule as the ENGINE once shipped it — now a test fixture.
+//
+// Moving is `rules/stock/motion.ts` now, the last of the physics to leave. What
+// kept it here was not difficulty but dependency: Collision, Input and Gravity
+// all imported it, and engine code cannot import a project file. Once they were
+// `.rule` files, so could this be.
+//
+// It stays as a fixture because the engine's own tests drive machinery with it —
+// step ordering, trait composition, a world that actually moves — alongside the
+// gravity and collision fixtures it belongs with.
+
 // The Motion rule ("Has Physics") — gives an Actor a velocity and integrates it
 // each tick. "Has Velocity" / "Can Move" depends on the Spatial "positional"
 // trait, since integrating velocity writes position (DESIGN.md).
 
-import {RuleBuilder} from '../builders/RuleBuilder';
-import type {Actor} from '../core/Actor';
-import {PIXELS_PER_UNIT} from '../core/units';
-import {Vector, type VectorLike} from '../core/Vector';
-
-import {PositionProperty, PositionalTrait, SpatialRule} from './spatial';
+import {RuleBuilder} from '../../builders/RuleBuilder';
+import type {Actor} from '../../core/Actor';
+import {PIXELS_PER_UNIT} from '../../core/units';
+import {Vector, type VectorLike} from '../../core/Vector';
+import {
+  PositionProperty,
+  PositionalTrait,
+  SpatialRule,
+} from '../../rules/spatial';
 
 const rule = new RuleBuilder({id: 'motion', name: 'Has Physics'});
 rule.requires([SpatialRule]);

@@ -2515,6 +2515,29 @@ const worldComment = defineBlock({
   },
 });
 
+// `pixels per unit` — the scale between a rate and a position.
+//
+// Speeds are in units per second and positions are in pixels (engine/core/units),
+// so anything turning one into the other multiplies by this. That used to be a
+// constant buried in the engine, back when the only code that converted was the
+// engine's own Motion rule; moving belongs to `rules/stock/motion` now, so the
+// number it needs has to be reachable — but as a FACT about the coordinate
+// system the renderer draws in, not as a knob any one rule owns.
+const worldPixelsPerUnit = defineBlock({
+  type: 'world_pixels_per_unit',
+  message0: 'pixels per unit',
+  output: 'Number',
+  style: 'math_blocks',
+  tooltip:
+    'How many pixels one unit of speed covers — the number that turns a speed ' +
+    'into a distance.',
+  generator: {
+    javascript() {
+      return ['WorldLab.PIXELS_PER_UNIT', Order.MEMBER] as [string, number];
+    },
+  },
+});
+
 // `key <key> is down` — the polling side of input, which the engine has always
 // had (`World.isKeyDown`) and the palette never offered: only the edge-triggered
 // event hats ("when this actor presses space") were reachable from blocks, so a
@@ -2618,6 +2641,7 @@ export const DOMAIN_BLOCKS = [
   worldKey,
   worldForEachKey,
   worldComment,
+  worldPixelsPerUnit,
   worldStepDelta,
   worldIsKeyDown,
   worldHasTrait,
@@ -2729,6 +2753,7 @@ const ENGINE_CATEGORY: ToolboxCategory = {
     'world_is_key_down', // the polling side: "while held"
     'world_for_each_key', // the edges: what went down or came up this frame
     'world_key', // a key's name, for comparing against an event's value
+    'world_pixels_per_unit', // the scale between a speed and a distance
   ],
 };
 

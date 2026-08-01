@@ -409,6 +409,29 @@ sentence is in the editor and in the code the project runs; and the field's
 DISPLAY at 50 characters — the value was always whole, but a sentence was cut
 off mid-word with an ellipsis.
 
+### And then moving itself
+
+`rules/stock/motion` is the last of the physics to leave. It was never the hard
+one — a speed, a shove that changes it, and a step that turns speed into a change
+of place — only the most depended-upon: Collision, Input and Gravity all imported
+it, and engine code cannot import a project file. Once those were `.rule` files,
+this could follow.
+
+The interesting part is where the UNIT went. `PIXELS_PER_UNIT` was a constant
+inside the engine (`core/units.ts`) that nothing outside could see, which was
+fine while the only code converting was the engine's own. Now that the rule doing
+the converting is authored, the number has to be reachable — as `pixels per
+unit`, an **Engine** block. It sat briefly as a property of the motion rule, and
+that was the wrong owner: it is a fact about the coordinate system the renderer
+draws in, not a knob one rule keeps, and any rule mixing a speed with a position
+needs the same one.
+
+What is left built in is what a rule cannot reach: **Has Space** (a position is
+not something a rule can invent) and **Has Appearance** (it reads the sprite
+sheets the engine loads, which the language cannot see). Everything else a
+project runs on — moving, bumping, falling, walking, the keyboard's events — is a
+`.rule` a learner can open.
+
 ## Steps are per-tick events
 
 `define step` became three event hats, styled like the `when …` blocks in an

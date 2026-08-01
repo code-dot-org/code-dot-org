@@ -10,6 +10,9 @@ export {ActorBuilder} from './builders/ActorBuilder';
 
 // Core value type and runtime classes.
 export {Vector, type VectorLike} from './core/Vector';
+// The scale between rates and positions, reachable from blocks as `pixels per
+// unit` — the rule that converts is authored (rules/stock/motion).
+export {PIXELS_PER_UNIT} from './core/units';
 export {Trait} from './core/Trait';
 export {Actor, type ActorInit} from './core/Actor';
 export {
@@ -44,7 +47,6 @@ export type {
 // The standard rule library (Spatial → Motion → Collision → Gravity → Input →
 // Animation).
 export * from './rules/spatial';
-export * from './rules/motion';
 export * from './rules/animation';
 
 // The animation serialization model.

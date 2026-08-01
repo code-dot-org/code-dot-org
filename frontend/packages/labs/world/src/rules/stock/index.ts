@@ -14,6 +14,7 @@ import {arrowsRule} from './arrows';
 import {collisionRule} from './collision';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
+import {motionRule} from './motion';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -41,6 +42,14 @@ export interface StockRule {
  * is likely to want them.
  */
 export const STOCK_RULES: readonly StockRule[] = [
+  {
+    id: 'motion',
+    name: 'Has Physics',
+    description:
+      'Gives actors a speed, moves them by it every frame, and lets a force change it.',
+    provides: ['Can Move'],
+    contents: motionRule,
+  },
   {
     id: 'collision',
     name: 'Has Collisions',
@@ -80,4 +89,4 @@ export function stockRule(id: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.id === id);
 }
 
-export {arrowsRule, collisionRule, gravityRule, inputRule};
+export {arrowsRule, collisionRule, gravityRule, inputRule, motionRule};

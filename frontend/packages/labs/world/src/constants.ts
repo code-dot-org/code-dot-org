@@ -2,7 +2,13 @@ import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
-import {arrowsRule, collisionRule, gravityRule, inputRule} from './rules/stock';
+import {
+  arrowsRule,
+  collisionRule,
+  gravityRule,
+  inputRule,
+  motionRule,
+} from './rules/stock';
 
 /**
  * The world the game starts in — the driver's compile + run entry point
@@ -137,6 +143,7 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: stack([
+              {type: 'world_use_rule', fields: {RULE: 'rules/motion'}},
               {type: 'world_use_rule', fields: {RULE: 'rules/gravity'}},
               {type: 'world_use_rule', fields: {RULE: 'rules/collision'}},
               {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
@@ -237,7 +244,7 @@ const PLAYER_ACTOR = JSON.stringify(
                 },
                 DO0: {
                   block: {
-                    type: 'world_do_ApplyForceAction',
+                    type: 'world_do_rules_motion_ApplyForceAction',
                     inputs: {
                       VALUE: {
                         block: {
@@ -374,6 +381,13 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         name: 'input.rule',
         language: 'rule',
         contents: inputRule,
+        folderId: 'rules',
+      },
+      motionRule: {
+        id: 'motionRule',
+        name: 'motion.rule',
+        language: 'rule',
+        contents: motionRule,
         folderId: 'rules',
       },
       collisionRule: {

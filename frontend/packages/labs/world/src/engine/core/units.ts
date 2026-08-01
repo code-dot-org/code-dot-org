@@ -12,12 +12,12 @@
 // where a unit is this many pixels. Gravity is `9`, a walk is `1.5`, a jump is
 // `-5`, and the interesting range of each is a single digit or two.
 //
-// The engine converts at the one place a rate meets a position: integrating
-// velocity into position, and anything that asks where an actor was a moment ago
-// (Motion's `position before`, which Collision and a landing rule both use).
-// Nothing else needs to know, and nothing outside the engine should have to
-// multiply by this by hand — if a rule needs to mix the two, that is a sign the
-// engine is missing a query.
+// The conversion happens at the one place a rate meets a position: turning
+// velocity into a change of position, and asking where an actor was a moment ago
+// (`rules/stock/motion`'s `reposition` and `position before`). That rule is
+// AUTHORED now, so this is exported and reachable from blocks as `pixels per
+// unit` — a fact about the coordinate system, which the renderer draws in
+// pixels, rather than a knob any one rule owns.
 
 /**
  * Pixels in one world unit — the scale between rates and positions.

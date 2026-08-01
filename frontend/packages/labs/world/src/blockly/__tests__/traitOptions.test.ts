@@ -16,31 +16,28 @@ afterEach(() => {
 
 describe('traitOptions (traits from the rules in play)', () => {
   it('lists a rule’s traits plus those of every rule it requires', () => {
-    // Motion requires Space, so attaching just Motion puts both their traits in
-    // play — labelled by name, valued by the `world-lab` export the generator
-    // writes. (Gravity and collision used to be the examples here; both are
-    // stock `.rule` files now, not built-ins.)
-    setProjectRules(['MotionRule']);
+    // Animation requires Space, so attaching just Animation puts both their
+    // traits in play — labelled by name, valued by the `world-lab` export the
+    // generator writes. (Gravity, collision and motion used to be the examples
+    // here; all three are stock `.rule` files now, not built-ins.)
+    setProjectRules(['AnimationRule']);
     const byExport = new Map(
       traitOptions().map(([label, exp]) => [exp, label]),
     );
-    expect(byExport.get('MovableTrait')).toBe('Can Move');
+    expect(byExport.get('AppearanceTrait')).toBe('Has Appearance');
     expect(byExport.get('PositionalTrait')).toBe('Can Be Positioned'); // via Space
-    // Appearance isn't attached, so its trait is not offered.
-    expect(byExport.has('AppearanceTrait')).toBe(false);
   });
 
   it('unions the traits across every attached rule', () => {
-    setProjectRules(['MotionRule', 'AnimationRule']);
+    setProjectRules(['SpatialRule', 'AnimationRule']);
     const exports = traitOptions().map(([, exp]) => exp);
-    expect(exports).toContain('MovableTrait'); // Motion
+    expect(exports).toContain('PositionalTrait'); // Space
     expect(exports).toContain('AppearanceTrait'); // Animation
-    expect(exports).toContain('PositionalTrait'); // Motion requires Spatial
     expect(exports).not.toContain('CollidableTrait'); // neither pulls Collision
   });
 
   it('follows a project rule’s `use rule` dependency to the required rule’s traits', () => {
-    // Has Wind requires MotionRule (a `use rule` in its body) and provides a
+    // Has Wind requires AnimationRule (a `use rule` in its body) and provides a
     // Windblown trait. Attaching it should surface both its own trait and the
     // required rule's (transitively, Collision → Motion → Space).
     const wind = parseRuleMeta(
@@ -54,7 +51,7 @@ describe('traitOptions (traits from the rules in play)', () => {
               next: {
                 block: {
                   type: 'world_use_rule',
-                  fields: {RULE: 'MotionRule'},
+                  fields: {RULE: 'AnimationRule'},
                 },
               },
             },
@@ -68,8 +65,8 @@ describe('traitOptions (traits from the rules in play)', () => {
     setProjectRules(['rules/wind']);
     const values = traitOptions().map(([, value]) => value);
     expect(values).toContain('rules/wind#WindblownTrait'); // its own trait
-    expect(values).toContain('MovableTrait'); // via the required MotionRule
-    expect(values).toContain('PositionalTrait'); // Motion → Space, transitively
+    expect(values).toContain('AppearanceTrait'); // via the required Animation
+    expect(values).toContain('PositionalTrait'); // Animation → Space
   });
 
   it('offers a project `.rule`’s traits when a world attaches it (by module path)', () => {
@@ -91,18 +88,18 @@ describe('traitOptions (traits from the rules in play)', () => {
       }),
     );
     setProjectRuleMeta([wind!]);
-    setProjectRules(['rules/wind', 'MotionRule']);
+    setProjectRules(['rules/wind', 'AnimationRule']);
     const byValue = new Map(
       traitOptions().map(([label, value]) => [value, label]),
     );
     // A project trait's value carries its module, so `use trait` imports it.
     expect(byValue.get('rules/wind#WindblownTrait')).toBe('Windblown');
     // A built-in trait is still valued by its bare export name.
-    expect(byValue.get('MovableTrait')).toBe('Can Move');
+    expect(byValue.get('AppearanceTrait')).toBe('Has Appearance');
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {
-    setProjectRules(['MotionRule']);
+    setProjectRules(['AnimationRule']);
     const labels = traitOptions().map(([label]) => label);
     expect(labels).toEqual([...labels].sort((a, b) => a.localeCompare(b)));
     setProjectRules([]);

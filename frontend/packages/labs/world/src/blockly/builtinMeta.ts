@@ -9,7 +9,7 @@
 // in step with the engine — add a rule, or a member, and its blocks follow.
 
 import * as WorldLab from '../engine';
-import {AnimationRule, MotionRule, SpatialRule} from '../engine';
+import {AnimationRule, SpatialRule} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
 
@@ -26,15 +26,16 @@ import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
  * frame — but what a key means is a rule's business, and now it is written like
  * one.
  *
- * Impenetrability went the same way (`rules/stock/collision`): boxes, an
- * overlap test, and a decision about which face was crossed all say themselves
- * in blocks.
+ * Impenetrability went the same way (`rules/stock/collision`), and then moving
+ * itself (`rules/stock/motion`) — a speed, a shove, and a step that turns speed
+ * into a change of place, including the scale between speeds and pixels, which
+ * is a property of that rule now rather than a constant inside the engine.
  *
- * What remains is what a rule cannot reach or should not own: the spatial frame
- * every actor has, integrating velocity into position, and animation — which
- * reads sprite sheets the engine loads and the language cannot see.
+ * What remains is what a rule cannot reach: the spatial frame every actor has
+ * (a position is not something a rule can invent), and animation, which reads
+ * the sprite sheets the engine loads and the language cannot see.
  */
-export const BUILTIN_RULES = [SpatialRule, MotionRule, AnimationRule];
+export const BUILTIN_RULES = [SpatialRule, AnimationRule];
 
 export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(
   BUILTIN_RULES,

@@ -21,12 +21,6 @@
 
 import {RuleBuilder} from '../../builders/RuleBuilder';
 import {Vector} from '../../core/Vector';
-import {
-  MotionRule,
-  MovableTrait,
-  previousPosition,
-  VelocityProperty,
-} from '../../rules/motion';
 import {PositionProperty} from '../../rules/spatial';
 
 import {
@@ -35,6 +29,12 @@ import {
   ResolveStep,
   collisionSize,
 } from './collisionRule';
+import {
+  MotionRule,
+  MovableTrait,
+  previousPosition,
+  VelocityProperty,
+} from './motionRule';
 
 const rule = new RuleBuilder({id: 'gravity', name: 'Has Gravity'});
 rule.requires([MotionRule, CollisionRule]);

@@ -21,6 +21,7 @@ describe('projectFiles', () => {
       'rules/collision.rule',
       'rules/gravity.rule',
       'rules/input.rule',
+      'rules/motion.rule',
       'worlds/main.world',
     ]);
     // The world is a Blockly workspace (generated to a WorldBuilder at compile).
