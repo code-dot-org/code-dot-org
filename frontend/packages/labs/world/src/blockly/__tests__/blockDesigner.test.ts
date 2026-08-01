@@ -9,6 +9,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
 import {
+  isActorScoped,
   itemTypeFor,
   paramTypeFor,
   SIGNATURE_BLOCK_TYPES,
@@ -192,6 +193,23 @@ describe('a designed block', () => {
       b => b.type === 'world_do_rules_push_PushTowardAction',
     ) as {tooltip?: string} | undefined;
     expect(call?.tooltip).toBe('push toward');
+  });
+
+  it('knows whether it is defining a member with a subject', () => {
+    // Placement decides it: under a `define trait` the block it makes is asked
+    // OF an actor and grows a socket nobody wrote into the signature — which is
+    // what the drawn preview has to show, or the preview is a different block
+    // from the one being defined.
+    expect(
+      isActorScoped({getRootBlock: () => ({type: 'world_rule_trait'})}),
+    ).toBe(true);
+    expect(isActorScoped({getRootBlock: () => ({type: 'world_rule'})})).toBe(
+      false,
+    );
+    // A definition floating on its own workspace is its own root.
+    expect(
+      isActorScoped({getRootBlock: () => ({type: 'world_rule_block'})}),
+    ).toBe(false);
   });
 
   it('offers a flyout of blocks that are actually registered', () => {

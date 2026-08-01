@@ -85,6 +85,8 @@ export class FieldBlockPreview extends Blockly.Field<string> {
   private previewType = '';
   private parts: PreviewPart[] = [];
   private returns = 'none';
+  /** Whether the drawn block takes a subject — see `setSignature`. */
+  private subject = false;
   /** Field-local boxes of each parameter, for the overlay's hit test. */
   private paramBoxes: Array<{
     part: PreviewPart;
@@ -99,10 +101,25 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     super('');
   }
 
-  /** The signature to draw. Safe before the field is in the DOM. */
-  setSignature(parts: PreviewPart[], returns: string): void {
+  /**
+   * The signature to draw. Safe before the field is in the DOM.
+   *
+   * `actorScoped` is placement, not signature: a member defined under a trait is
+   * asked OF an actor, so the block it makes carries an extra `Actor` socket
+   * that nobody wrote into the parts — trailing after "on" for an action,
+   * leading for a query, which is how the generated call sites read. Drawing it
+   * is the point: otherwise the preview is a different block from the one the
+   * definition makes, in exactly the case a learner is most likely to wonder
+   * about.
+   */
+  setSignature(
+    parts: PreviewPart[],
+    returns: string,
+    actorScoped = false,
+  ): void {
     this.parts = parts;
     this.returns = returns;
+    this.subject = actorScoped;
     this.isDirty_ = true;
     if (this.mini) {
       this.build();
@@ -171,6 +188,21 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       block.initSvg();
       this.paramBoxes = [];
       const params = this.parts.filter(part => part.kind === 'param');
+      // The subject's socket, wherever it landed: filled with `this actor`, the
+      // shadow the real call site is seeded with.
+      const subjectSocket = this.subject
+        ? this.subject && this.returns && this.returns !== 'none'
+          ? 0
+          : params.length
+        : -1;
+      if (subjectSocket >= 0) {
+        const here = mini.newBlock('world_this_actor') as Blockly.BlockSvg;
+        here.initSvg();
+        block
+          .getInput(`P${subjectSocket}`)
+          ?.connection?.connect(here.outputConnection!);
+      }
+      const slotOf = (i: number) => (subjectSocket === 0 ? i + 1 : i);
       params.forEach((part, i) => {
         const flavour = paramFlavour(part.type ?? 'number');
         const name = part.name?.trim() || flavour.type.toLowerCase();
@@ -180,7 +212,9 @@ export class FieldBlockPreview extends Blockly.Field<string> {
         const getter = mini.newBlock(flavour.getterType) as Blockly.BlockSvg;
         getter.setFieldValue(variable.getId(), 'VAR');
         getter.initSvg();
-        block.getInput(`P${i}`)?.connection?.connect(getter.outputConnection!);
+        block
+          .getInput(`P${slotOf(i)}`)
+          ?.connection?.connect(getter.outputConnection!);
       });
       // Rendered now: everything below measures the drawing, and a queued render
       // measures as nothing.
@@ -197,9 +231,9 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       // Each parameter's box, in field coordinates, so a press can be matched to
       // the parameter under it.
       params.forEach((part, i) => {
-        const getter = block.getInput(`P${i}`)?.connection?.targetBlock() as
-          | Blockly.BlockSvg
-          | undefined;
+        const getter = block
+          .getInput(`P${slotOf(i)}`)
+          ?.connection?.targetBlock() as Blockly.BlockSvg | undefined;
         if (!getter) {
           return;
         }
@@ -236,6 +270,20 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     const push = (fragment: string) => {
       message += message ? ` ${fragment}` : fragment;
     };
+    const actorSocket = () => {
+      args.push({
+        type: 'input_value',
+        name: `P${args.length}`,
+        check: 'Actor',
+      } as unknown as Blockly.utils.toolbox.BlockInfo);
+      push(`%${args.length}`);
+    };
+    const reportsSomething = this.returns && this.returns !== 'none';
+    // A query leads with its subject ("⟨this actor⟩ is on the ground?"); an
+    // action trails it after "on" ("apply force ⟨force⟩ on ⟨this actor⟩").
+    if (this.subject && reportsSomething) {
+      actorSocket();
+    }
     for (const part of this.parts) {
       if (part.kind === 'label') {
         if (part.text) {
@@ -251,7 +299,11 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       } as unknown as Blockly.utils.toolbox.BlockInfo);
       push(`%${args.length}`);
     }
-    const reports = this.returns && this.returns !== 'none';
+    if (this.subject && !reportsSomething) {
+      push('on');
+      actorSocket();
+    }
+    const reports = reportsSomething;
     const definition: Record<string, unknown> = {
       // Never empty: Blockly cannot lay out a block with no message at all.
       message0: message || ' ',

@@ -96,6 +96,20 @@ export const defaultParts = (): BlockPart[] => [
   {kind: 'label', text: 'do something'},
 ];
 
+/**
+ * Whether this definition sits under a `define trait` — which decides whether
+ * the block it makes takes a SUBJECT.
+ *
+ * A member under a trait is asked OF an actor: the generated block gains an
+ * `Actor` socket the caller fills (defaulting to `this actor`), and the body's
+ * closure receives it as its first argument. A member at rule level has no such
+ * socket — every actor it works on is a parameter its author put in the
+ * signature. Placement decides it, so the preview has to read placement too.
+ */
+export const isActorScoped = (block: {
+  getRootBlock?: () => {type?: string} | null;
+}): boolean => block.getRootBlock?.()?.type === 'world_rule_trait';
+
 /** The wording a signature reads as, for a name (labels joined). */
 export const partsName = (parts: readonly BlockPart[]): string =>
   parts
@@ -251,6 +265,7 @@ export const blockDesignerMutator = defineMutator(
               },
         ),
         this.getFieldValue('RETURNS') ?? 'none',
+        isActorScoped(this),
       );
     },
 
@@ -340,12 +355,24 @@ export const blockDesignerInitExtension: Extension = defineExtension(
       };
       block.parts_ ??= defaultParts();
       block.rebuildDesign_();
+      let wasActorScoped = isActorScoped(block);
       block.setOnChange(event => {
         const changedReturns =
           event.type === Blockly.Events.BLOCK_CHANGE &&
           (event as Blockly.Events.BlockChange).blockId === block.id &&
           (event as Blockly.Events.BlockChange).name === 'RETURNS';
-        if (changedReturns || event.type === Blockly.Events.FINISHED_LOADING) {
+        // Dragging the definition under a trait (or out of one) changes what
+        // the block it makes looks like — it gains or loses the subject socket
+        // — so the drawing has to follow. Compared rather than rebuilt on every
+        // move: a definition is dragged around plenty without changing owner.
+        const nowActorScoped = isActorScoped(block);
+        const changedOwner = nowActorScoped !== wasActorScoped;
+        wasActorScoped = nowActorScoped;
+        if (
+          changedReturns ||
+          changedOwner ||
+          event.type === Blockly.Events.FINISHED_LOADING
+        ) {
           block.rebuildDesign_();
         }
       });
