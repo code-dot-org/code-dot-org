@@ -43,6 +43,12 @@ describe('rules/gravity.rule', () => {
     ]);
   });
 
+  it('explains each block it defines', () => {
+    for (const member of [...meta.queries, ...meta.actions]) {
+      expect(member.description, member.name).toMatch(/\w+ \w+/);
+    }
+  });
+
   it('marks `falling` read-only, because a step owns it', () => {
     // The property the landing step writes. Without this the palette offers a
     // `set falling` block whose value the next tick overwrites.

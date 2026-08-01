@@ -1079,7 +1079,9 @@ const defineActionBlock = (action: ActionMeta) => {
       ...(shadows.length ? [valueShadowExtension] : []),
     ],
     style: 'default',
-    tooltip: actorScoped ? `${name} — for an actor.` : name,
+    // The author's own sentence, when they wrote one.
+    tooltip:
+      action.description || (actorScoped ? `${name} — for an actor.` : name),
     generator: {
       javascript(block, generator) {
         const target = actorScoped
@@ -1217,7 +1219,9 @@ const defineQueryBlock = (query: QueryMeta) => {
       ...(shadows.length ? [valueShadowExtension] : []),
     ],
     style: valueStyle(returns),
-    tooltip: actorScoped ? `Whether an actor ${name}` : `The world's ${name}`,
+    tooltip:
+      query.description ||
+      (actorScoped ? `Whether an actor ${name}` : `The world's ${name}`),
     generator: {
       javascript(block, generator) {
         const argCode = params
@@ -2152,6 +2156,24 @@ const signatureItems = SIGNATURE_ITEMS.map(item =>
   }),
 );
 
+// Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
+// enough for a name, not for a sentence. The value was always whole; only the
+// reading was cut off, mid-word, with an ellipsis. Any field holding PROSE (a
+// note, a block's help) asks for more.
+const wideTextExtension = (fieldName: string): Extension =>
+  defineExtension(`world_wide_text_${fieldName.toLowerCase()}`, {
+    extension() {
+      const field = (
+        this as unknown as {
+          getField: (name: string) => {maxDisplayLength?: number} | null;
+        }
+      ).getField(fieldName);
+      if (field) {
+        field.maxDisplayLength = 140;
+      }
+    },
+  });
+
 // The generalized member: one block that defines any block a rule adds.
 //
 // `RETURNS` says whether it is an action ("does something") or a query, and
@@ -2173,12 +2195,20 @@ const worldRuleBlock = defineBlock({
   args0: [
     {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
   ],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
+  // The tooltip of the block being DEFINED — the sentence someone reads when
+  // they hover it in the toolbox months later, having forgotten what "rest
+  // height of" meant. On its own row because it is a sentence: sharing a line
+  // with the returns dropdown made both hard to read.
+  message1: 'description %1',
+  args1: [
+    {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
+  ],
+  message2: 'do %1',
+  args2: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
   mutator: blockDesignerMutator,
-  extensions: [blockDesignerInitExtension],
+  extensions: [blockDesignerInitExtension, wideTextExtension('DESCRIPTION')],
   style: 'setup_blocks',
   tooltip:
     'Define a block this rule adds. The row above "do" is the block itself — ' +
@@ -2455,26 +2485,6 @@ const worldForEachKey = defineBlock({
 // It generates a `//` comment, so the note survives into the code the project
 // runs — the same sentence in both places, rather than a note that exists only
 // in the editor.
-// A note is prose, and Blockly clips a text field's DISPLAY at 50 characters
-// (`maxDisplayLength`) — enough for a name, not for a sentence. The value was
-// always whole; only the reading was cut off, mid-word, with an ellipsis.
-const COMMENT_WIDTH_EXTENSION = 'world_comment_width';
-const commentWidthExtension: Extension = defineExtension(
-  COMMENT_WIDTH_EXTENSION,
-  {
-    extension() {
-      const field = (
-        this as unknown as {
-          getField: (name: string) => {maxDisplayLength?: number} | null;
-        }
-      ).getField('TEXT');
-      if (field) {
-        field.maxDisplayLength = 140;
-      }
-    },
-  },
-);
-
 const worldComment = defineBlock({
   type: 'world_comment',
   message0: 'note %1',
@@ -2488,7 +2498,7 @@ const worldComment = defineBlock({
   ],
   previousStatement: true,
   nextStatement: true,
-  extensions: [commentWidthExtension],
+  extensions: [wideTextExtension('TEXT')],
   style: 'comment_blocks',
   tooltip:
     'A note for whoever reads this next — it changes nothing about what runs.',

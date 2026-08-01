@@ -228,6 +228,13 @@ shape Blockly's own `message0` has, which is not a coincidence: `push %1 toward
 is one label. Action versus query becomes a dropdown, since it was the only
 thing the two blocks differed in.
 
+`description` is a row of its own on the definition, and it becomes the TOOLTIP
+of the block being defined — the sentence somebody reads when they hover it in
+the toolbox months later, having forgotten what "rest height of" meant. The
+definition is the only place that knows, so it is the place that says; a member
+without one gets a tooltip that repeats its own name back. The stock rules all
+carry one, and their tests require it.
+
 The editor is Blockly's own mutator bubble. The ⚙ opens a mini-workspace
 holding a `block` container whose statement stack IS the signature, read
 top-to-bottom as the block reads left-to-right; the flyout offers a `text` item
