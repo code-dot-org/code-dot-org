@@ -1,10 +1,13 @@
-// A warning for blocks whose generated code references `world`. `world` is bound
-// in exactly two places: inside an event handler (a `world_on_*` block passes
-// `(world, actor, eventValue)` to its body) and in a `.world` file (whose
-// `world_world` root declares `const world`). Placed anywhere else — an actor's
-// setup body, or floating — the `world.*` call would be a ReferenceError
-// at runtime. This flags that early, in the editor, with a Blockly warning
-// bubble, rather than letting it surface only when the game is run.
+// A warning for blocks whose generated code references `world`. Placed where
+// `world` is unbound — an actor's setup body, or floating — the `world.*` call
+// would be a ReferenceError at runtime. This flags that in the editor rather
+// than letting it surface when the game is run.
+//
+// The list of places that DO bind it has grown with rule authoring, and every
+// omission was a warning on a correct program — the failure this file's actor
+// counterpart explicitly warns against. A rule's action, query and step bodies
+// all have a world: a world-scoped member is invoked as `(world, …)`, and an
+// actor-scoped one opens by binding `const world = actor.world` (ruleMeta).
 
 import type {Block} from 'blockly';
 
@@ -18,14 +21,19 @@ const WARNING_TEXT =
 const WARNING_ID = 'worldContext';
 
 /**
- * Whether `world` is in scope for `block`: true if any ancestor is an event
- * handler (`world_on_*`) or the `world_world` root — the two blocks that bind it.
+ * Whether `world` is in scope for `block`: true if any ancestor binds it — an
+ * event handler, a `.world` file's root, or any of a rule's member bodies.
  */
 export function inWorldContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
     if (
       parent.type === 'world_world' ||
-      parent.type === 'world_rule_step' || // a step's body binds `world`
+      // Every rule-member body binds `world`: a step's closure is
+      // `(world, delta)`, a world action's/query's is `(world, …params)`, and
+      // an actor-scoped one binds it from `actor.world`.
+      parent.type === 'world_rule_step' ||
+      parent.type === 'world_rule_action' ||
+      parent.type === 'world_rule_query' ||
       parent.type.startsWith('world_on_')
     ) {
       return true;

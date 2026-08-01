@@ -57,15 +57,11 @@ describe('traitOptions (traits from the rules in play)', () => {
                 block: {
                   type: 'world_use_rule',
                   fields: {RULE: 'CollisionRule'},
-                  next: {
-                    block: {
-                      type: 'world_rule_trait',
-                      fields: {NAME: 'Windblown'},
-                    },
-                  },
                 },
               },
             },
+            // A trait is a top block beside the rule.
+            {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
           ],
         },
       }),
@@ -90,13 +86,8 @@ describe('traitOptions (traits from the rules in play)', () => {
             {
               type: 'world_rule',
               fields: {NAME: 'Has Wind'},
-              next: {
-                block: {
-                  type: 'world_rule_trait',
-                  fields: {NAME: 'Windblown'},
-                },
-              },
             },
+            {type: 'world_rule_trait', fields: {NAME: 'Windblown'}},
           ],
         },
       }),

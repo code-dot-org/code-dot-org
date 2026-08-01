@@ -165,6 +165,32 @@ Two more things the landing step needed, both found by it failing to work:
   "renaming a member silently unhooks the project" hazard, in its other form:
   the reference was still valid, and pointed at a different object.
 
+## Traits are definitions, not nested blocks
+
+A `define trait` is a TOP BLOCK now, beside `define rule` rather than chained
+inside it, and its members chain below it the way the rule's do. It is styled
+like the rule for the same reason: both are definitions.
+
+The old shape put every trait in a `do` mouth nested in the rule's stack, and
+every member of every trait inside that — a rule with three traits was one tower
+indented three deep. Now each trait is a stack a learner can move, collapse and
+read on its own, which is what it is: a separate thing an actor may take,
+belonging to one rule.
+
+The rule it belongs to is the one defined in the same file. A `.rule` declares
+exactly one rule, so there is nothing to disambiguate and nothing to wire up.
+
+`parseRuleMeta` and `extractRuleBodies` both changed to match: the first looks
+for trait roots among the workspace's top blocks, the second takes the top
+blocks rather than the rule root. Scope-by-nesting became scope-by-which-root.
+
+The change also surfaced a warning on correct programs: `worldContext` knew that
+a step's body binds `world` but not that an action's or a query's does, so
+`get world direction` inside `rest height of` carried a warning bubble. Every
+rule-member body binds `world` — a world-scoped member is invoked as
+`(world, …)`, an actor-scoped one binds it from `actor.world` — and the guard
+now says so.
+
 ## Variables
 
 A typed variable could be BOUND — by a `for each` loop, by a parameter row — and

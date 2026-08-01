@@ -104,15 +104,23 @@ describe('builtinRuleMeta', () => {
   });
 });
 
-// Build a `.rule` workspace (Blockly JSON): a `define rule` root chaining
-// members; a `define trait`'s properties/events nest in its `do` input.
+// Build a `.rule` workspace (Blockly JSON): a `define rule` root chaining its
+// world-scoped members, plus one TOP BLOCK per `define trait`, each chaining
+// its own. A trait is a definition beside the rule, not inside it.
 const chain = (blocks: object[]): object | undefined =>
   blocks.reduceRight<object | undefined>(
     (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
     undefined,
   );
+/** A `trait(...)` result, which `ruleFile` lifts out as its own top block. */
+interface TraitRoot {
+  __traitRoot: object;
+}
+const isTraitRoot = (member: object): member is TraitRoot =>
+  '__traitRoot' in member;
+
 const ruleFile = (name: string, ...members: object[]): string => {
-  const body = chain(members);
+  const body = chain(members.filter(m => !isTraitRoot(m)));
   return JSON.stringify({
     blocks: {
       blocks: [
@@ -121,6 +129,7 @@ const ruleFile = (name: string, ...members: object[]): string => {
           fields: {NAME: name},
           ...(body ? {next: {block: body}} : {}),
         },
+        ...members.filter(isTraitRoot).map(m => m.__traitRoot),
       ],
     },
   });
@@ -136,9 +145,11 @@ const event = (name: string): object => ({
 const trait = (name: string, ...body: object[]): object => {
   const inner = chain(body);
   return {
-    type: 'world_rule_trait',
-    fields: {NAME: name},
-    ...(inner ? {inputs: {DO: {block: inner}}} : {}),
+    __traitRoot: {
+      type: 'world_rule_trait',
+      fields: {NAME: name},
+      ...(inner ? {next: {block: inner}} : {}),
+    },
   };
 };
 // `define action`/`define query`: the imperative-body blocks. Their `do` body is
@@ -486,32 +497,21 @@ describe('extractRuleBodies', () => {
     getNextBlock: () => opts.next ?? null,
   });
   it('generates each action/query body + signature, keyed by scope/owner/id', () => {
-    // rule → action Nudge(params: number amount) → trait Windblown(do: query Is Gusting).
+    // Two TOP blocks: the rule (chaining action Nudge) and the trait Windblown
+    // (chaining query Is Gusting) beside it.
     const root = live(
       'world_rule',
       {NAME: 'Has Wind'},
-      {
-        next: live(
-          'world_rule_action',
-          {NAME: 'Nudge'},
-          {
-            next: live(
-              'world_rule_trait',
-              {NAME: 'Windblown'},
-              {
-                do: live('world_rule_query', {
-                  TYPE: 'boolean',
-                  NAME: 'Is Gusting',
-                }),
-              },
-            ),
-          },
-        ),
-      },
+      {next: live('world_rule_action', {NAME: 'Nudge'})},
+    );
+    const traitRoot = live(
+      'world_rule_trait',
+      {NAME: 'Windblown'},
+      {next: live('world_rule_query', {TYPE: 'boolean', NAME: 'Is Gusting'})},
     );
     // The stand-in generator tags each body by NAME; the signature is read from
     // the member's params mutator (here, Nudge takes one param, the query none).
-    const bodies = extractRuleBodies(root as never, {
+    const bodies = extractRuleBodies([root, traitRoot] as never, {
       body: block => `BODY(${block.getFieldValue('NAME')})\n`,
       signature: block =>
         block.getFieldValue('NAME') === 'Nudge' ? ['amount'] : [],

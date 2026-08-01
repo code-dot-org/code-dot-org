@@ -635,6 +635,9 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_actor',
   'world_world',
   'world_rule',
+  // A trait is a definition root too — its members chain below it, beside the
+  // rule rather than inside it.
+  'world_rule_trait',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -1987,17 +1990,28 @@ const worldRule = defineBlock({
   generator: noGenerator,
 });
 
+// A trait is a DEFINITION, like the rule itself, so it is a top block: it sits
+// beside `define rule` in the workspace rather than chained inside it, and its
+// members chain below it the same way the rule's do.
+//
+// It reads better and it scales. A rule with three traits used to be one tower
+// with three `do` mouths nested in it, and every member of every trait was
+// indented inside that. Now each trait is its own stack a learner can move,
+// collapse and read on its own — which is what they are: separate things an
+// actor may take, belonging to one rule.
+//
+// The rule it belongs to is the one defined in the SAME FILE. A `.rule` declares
+// exactly one rule, so there is nothing to disambiguate and nothing to wire up.
 const worldRuleTrait = defineBlock({
   type: 'world_rule_trait',
   message0: 'define trait %1',
   args0: [{type: 'field_input', name: 'NAME', text: 'My Trait'}],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
+  // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
-  style: 'behavior_blocks',
+  style: 'setup_blocks',
   tooltip:
-    'Define a trait an actor may take. Its actor properties and events go in "do".',
+    'Define a trait an actor may take, for the rule in this file. Its actor ' +
+    'properties, events, actions and queries chain below it.',
   generator: noGenerator,
 });
 
@@ -2359,8 +2373,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_rule',
       'world_use_rule', // a rule's dependencies (requires)
-      'world_rule_trait',
-      'world_use_trait', // a trait's dependencies (requires), inside a trait
+      'world_rule_trait', // a second definition root, beside the rule
+      'world_use_trait', // a trait's dependencies (requires), under a trait
       'world_rule_property',
       'world_rule_event',
       'world_rule_action',
