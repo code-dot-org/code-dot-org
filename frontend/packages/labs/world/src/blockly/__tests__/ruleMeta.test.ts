@@ -154,17 +154,26 @@ const trait = (name: string, ...body: object[]): object => {
     },
   };
 };
-// `define action`/`define query`: the imperative-body blocks. Their `do` body is
-// not read by `parseRuleMeta` (metadata is static), so these fixtures leave it
-// empty — the body is exercised through `extractRuleBodies` below.
-const action = (name: string): object => ({
-  type: 'world_rule_action',
-  fields: {NAME: name},
+// `define block`: the imperative-body member, an action or a query by its
+// RETURNS field alone. Its name is the wording of its labels, and its `do` body
+// is not read by `parseRuleMeta` (metadata is static), so these fixtures leave
+// it empty — the body is exercised through `extractRuleBodies` below.
+const designed = (
+  name: string,
+  returns = 'none',
+  params: Array<{type: string; var: string; name?: string}> = [],
+): object => ({
+  type: 'world_rule_block',
+  fields: {RETURNS: returns},
+  extraState: {
+    parts: [
+      {kind: 'label', text: name},
+      ...params.map(param => ({kind: 'param', ...param})),
+    ],
+  },
 });
-const query = (type: string, name: string): object => ({
-  type: 'world_rule_query',
-  fields: {TYPE: type, NAME: name},
-});
+const action = (name: string): object => designed(name);
+const query = (type: string, name: string): object => designed(name, type);
 // `define step`: NAME, ORDER (free/before/after), and STEP (the anchor value,
 // `<owner>#<stepId>`) when ordered.
 // `define step`: an event hat per ordering kind. Its NAME names the step; the
@@ -421,12 +430,15 @@ describe('actions and queries (imperative members)', () => {
     );
   });
 
-  it('an unknown query return type falls back to boolean', () => {
+  it('a RETURNS value that reports nothing recognizable is an action', () => {
+    // One block covers both kinds, so an unreadable RETURNS cannot mean "a
+    // query of some type" — it means the block reports nothing.
     const meta = parseRuleMeta(
       'rules/x',
       ruleFile('X', query('nonsense', 'Q')),
     )!;
-    expect(meta.queries[0].returns).toBe('boolean');
+    expect(meta.queries).toEqual([]);
+    expect(meta.actions[0].id).toBe('Q');
   });
 
   it('emits addAction/addQuery closures with their generated bodies', () => {
@@ -498,13 +510,17 @@ describe('extractRuleBodies', () => {
   const live = (
     type: string,
     fields: Record<string, string>,
-    opts: {do?: unknown; params?: unknown; next?: unknown} = {},
+    opts: {do?: unknown; params?: unknown; next?: unknown; name?: string} = {},
   ) => ({
     type,
     getFieldValue: (name: string) => fields[name] ?? null,
     getInputTargetBlock: (name: string) =>
       name === 'DO' ? opts.do : name === 'PARAMS' ? opts.params : null,
     getNextBlock: () => opts.next ?? null,
+    // A designed member has no NAME field: its name is its signature, which the
+    // extractor reads through the mutator's saved state.
+    saveExtraState: () =>
+      opts.name ? {parts: [{kind: 'label', text: opts.name}]} : undefined,
   });
   it('generates each action/query body + signature, keyed by scope/owner/id', () => {
     // Two TOP blocks: the rule (chaining action Nudge) and the trait Windblown
@@ -512,20 +528,28 @@ describe('extractRuleBodies', () => {
     const root = live(
       'world_rule',
       {NAME: 'Has Wind'},
-      {next: live('world_rule_action', {NAME: 'Nudge'})},
+      {next: live('world_rule_block', {RETURNS: 'none'}, {name: 'Nudge'})},
     );
     const traitRoot = live(
       'world_rule_trait',
       {NAME: 'Windblown'},
-      {next: live('world_rule_query', {TYPE: 'boolean', NAME: 'Is Gusting'})},
+      {
+        next: live(
+          'world_rule_block',
+          {RETURNS: 'boolean'},
+          {name: 'Is Gusting'},
+        ),
+      },
     );
-    // The stand-in generator tags each body by NAME; the signature is read from
-    // the member's params mutator (here, Nudge takes one param, the query none).
+    // The stand-in generator tags each body by its designed name; the signature
+    // is the member's parameters (here, Nudge takes one, the query none).
+    const nameOf = (block: {
+      saveExtraState?: () => {parts?: readonly {text?: string}[]} | undefined;
+    }): string => block.saveExtraState?.()?.parts?.[0]?.text ?? '';
     const bodies = extractRuleBodies([root, traitRoot] as never, {
-      body: block => `BODY(${block.getFieldValue('NAME')})\n`,
-      chainBody: block => `CHAIN(${block.getFieldValue('NAME')})\n`,
-      signature: block =>
-        block.getFieldValue('NAME') === 'Nudge' ? ['amount'] : [],
+      body: block => `BODY(${nameOf(block)})\n`,
+      chainBody: block => `CHAIN(${nameOf(block)})\n`,
+      signature: block => (nameOf(block) === 'Nudge' ? ['amount'] : []),
     });
     expect(
       bodies.get(ruleBodyKey('action', 'world', undefined, 'Nudge')),
@@ -536,9 +560,9 @@ describe('extractRuleBodies', () => {
   });
 });
 
-describe('action / query parameters', () => {
-  // The params mutator stores its list in the block's `extraState`
-  // (`{params: [{type, var}]}`); each `var` is a variable id whose name the
+describe('designed block parameters', () => {
+  // The designer stores the signature in the block's `extraState`
+  // (`{parts: [...]}`); a parameter part's `var` is a variable id whose name the
   // variable map carries. A rule with one action taking (number amount, actor
   // target).
   const ruleWithParams = JSON.stringify({
@@ -552,16 +576,10 @@ describe('action / query parameters', () => {
           type: 'world_rule',
           fields: {NAME: 'Has Wind'},
           next: {
-            block: {
-              type: 'world_rule_action',
-              fields: {NAME: 'Nudge'},
-              extraState: {
-                params: [
-                  {type: 'number', var: 'v1'},
-                  {type: 'actor', var: 'v2'},
-                ],
-              },
-            },
+            block: designed('Nudge', 'none', [
+              {type: 'number', var: 'v1'},
+              {type: 'actor', var: 'v2'},
+            ]),
           },
         },
       ],

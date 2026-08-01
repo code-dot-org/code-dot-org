@@ -29,12 +29,11 @@ export function inWorldContext(block: Block): boolean {
     if (
       parent.type === 'world_world' ||
       // Every rule-member body binds `world`: a step's closure is
-      // `(world, delta)`, a world action's/query's is `(world, …params)`, and
-      // an actor-scoped one binds it from `actor.world`. The step prefix covers
+      // `(world, delta)`, a designed block's is `(world, …params)`, and an
+      // actor-scoped one binds it from `actor.world`. The step prefix covers
       // all three hats (`when tick`, `before …`, `after …`).
       parent.type.startsWith('world_rule_step') ||
-      parent.type === 'world_rule_action' ||
-      parent.type === 'world_rule_query' ||
+      parent.type === 'world_rule_block' ||
       parent.type.startsWith('world_on_')
     ) {
       return true;

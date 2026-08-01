@@ -106,6 +106,63 @@ describe('a designed block', () => {
     );
   });
 
+  it('builds a query’s call site from the design too, not just an action’s', () => {
+    // A query used to be assembled as "<first argument> name <rest>", which is a
+    // sensible default and not what somebody who arranged the block asked for.
+    // `<faller> rest height of <ground>` is the arrangement gravity authors.
+    const meta = designed(
+      [
+        {kind: 'param', type: 'actor', var: 'a'},
+        {kind: 'label', text: 'rest height of'},
+        {kind: 'param', type: 'actor', var: 'b'},
+      ],
+      'number',
+      [
+        {id: 'a', name: 'faller', type: 'Actor'},
+        {id: 'b', name: 'ground', type: 'Actor'},
+      ],
+    );
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(
+      b => b.type === 'world_query_rules_push_RestHeightOfQuery',
+    ) as {message0?: string} | undefined;
+    expect(call?.message0).toMatch(/^%\d rest height of %\d$/);
+  });
+
+  it('leads an actor query with its subject, then the design', () => {
+    // The arrangement describes the block's own words; who it is asked of is
+    // the socket in front of them — "this actor is on the ground?".
+    const meta = parseRuleMeta(
+      'rules/push',
+      JSON.stringify({
+        variables: [],
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Has Push'}},
+            {
+              type: 'world_rule_trait',
+              fields: {NAME: 'Pushable'},
+              next: {
+                block: {
+                  type: 'world_rule_block',
+                  fields: {RETURNS: 'boolean'},
+                  extraState: {
+                    parts: [{kind: 'label', text: 'is on the ground?'}],
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(
+      b => b.type === 'world_query_rules_push_IsOnTheGroundQuery',
+    ) as {message0?: string} | undefined;
+    expect(call?.message0).toBe('%1 is on the ground?');
+  });
+
   it('offers a flyout of blocks that are actually registered', () => {
     // Blockly builds the mutator bubble's flyout by TYPE NAME, and throws on one
     // it cannot find — at the moment the ⚙ is clicked, not at startup. This is
