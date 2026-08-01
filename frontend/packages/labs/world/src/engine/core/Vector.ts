@@ -7,6 +7,16 @@ export interface VectorLike {
   y: number;
 }
 
+/**
+ * What an arithmetic operation will take: another vector, or a plain number.
+ *
+ * A number broadcasts to both components, the way a scalar does against a vector
+ * in GLSL — `velocity × delta` is the same shape of expression as
+ * `velocity × wind`, and an authoring surface that made a learner say which one
+ * they meant would be asking about types, not about physics.
+ */
+export type VectorOperand = VectorLike | number;
+
 const DEG_TO_RAD = Math.PI / 180;
 
 export class Vector implements VectorLike {
@@ -23,15 +33,36 @@ export class Vector implements VectorLike {
     return v instanceof Vector ? v : new Vector(v.x, v.y);
   }
 
-  add(other: VectorLike): Vector {
-    return new Vector(this.x + other.x, this.y + other.y);
+  /** A number as a vector — both components alike. See {@link VectorOperand}. */
+  static broadcast(value: VectorOperand): Vector {
+    return typeof value === 'number'
+      ? new Vector(value, value)
+      : Vector.from(value);
   }
 
-  subtract(other: VectorLike): Vector {
-    return new Vector(this.x - other.x, this.y - other.y);
+  add(other: VectorOperand): Vector {
+    const v = Vector.broadcast(other);
+    return new Vector(this.x + v.x, this.y + v.y);
   }
 
-  /** Scale both components by a scalar. */
+  subtract(other: VectorOperand): Vector {
+    const v = Vector.broadcast(other);
+    return new Vector(this.x - v.x, this.y - v.y);
+  }
+
+  /** Component-wise product; a number multiplies both components. */
+  multiply(other: VectorOperand): Vector {
+    const v = Vector.broadcast(other);
+    return new Vector(this.x * v.x, this.y * v.y);
+  }
+
+  /** Component-wise quotient; a number divides both components. */
+  divide(other: VectorOperand): Vector {
+    const v = Vector.broadcast(other);
+    return new Vector(this.x / v.x, this.y / v.y);
+  }
+
+  /** Scale both components by a scalar — `multiply` with a number, named. */
   scale(factor: number): Vector {
     return new Vector(this.x * factor, this.y * factor);
   }
