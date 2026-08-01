@@ -76,6 +76,15 @@ function assertWebGL(): void {
     ?.loseContext();
 }
 
+/**
+ * Where a throw out of the learner's own code goes.
+ *
+ * Separate from {@link EffectErrorReporter} because they are different failures
+ * with different remedies: an effect that will not compile leaves the game
+ * running without it, while a body that throws stops the simulation.
+ */
+export type RuntimeErrorReporter = (message: string, stack?: string) => void;
+
 // Keys whose browser default (scrolling the page) we suppress while the game
 // has focus, so arrows/space drive the game instead of the page.
 const SCROLL_KEYS = new Set([
@@ -89,6 +98,8 @@ const SCROLL_KEYS = new Set([
 export class PhaserBinding {
   private readonly game: Phaser.Game;
   private readonly parent: HTMLElement;
+  /** Set by the first throw out of the learner's code; nothing ticks after. */
+  private halted = false;
   private readonly focusOnPointerDown: () => void;
   // Broad keyboard capture: DOM listeners on the (focusable) `#game` parent keep
   // a live set of pressed DOM key names. Attached to the parent — not window — so
@@ -108,11 +119,43 @@ export class PhaserBinding {
     // render loop — long after the constructor's caller could have caught it —
     // so the message needs a way out that is not a throw.
     onEffectError: EffectErrorReporter = () => {},
+    // Where a throw from the learner's own code is reported. Same reason: the
+    // simulation runs inside Phaser's loop, so an error in a rule's step body
+    // has no caller left to catch it.
+    onRuntimeError: RuntimeErrorReporter = () => {},
   ) {
     const objects = new Map<Actor, GameObject>();
     // Every DOM key currently held (by `KeyboardEvent.key` name); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
+
+    /**
+     * Run a frame's worth of simulation, and stop simulating if it throws.
+     *
+     * A rule's step body is the learner's code, called from Phaser's loop. A
+     * throw there — a query that no longer exists, a property read off nothing —
+     * escapes into `requestAnimationFrame`, where nobody catches it, and comes
+     * back on the very next frame: sixty identical errors a second, none of them
+     * in the lab's console, and a game that is on screen but no longer running.
+     *
+     * So the first one is reported and the simulation halts. The canvas stays
+     * (an empty pane says less than a frozen one), the scene keeps drawing the
+     * last good frame, and the next build restarts everything.
+     */
+    const guard = (frame: () => void): void => {
+      if (this.halted) {
+        return;
+      }
+      try {
+        frame();
+      } catch (error) {
+        this.halted = true;
+        onRuntimeError(
+          error instanceof Error ? error.message : String(error),
+          error instanceof Error ? error.stack : undefined,
+        );
+      }
+    };
 
     // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
     // not model natively (its per-object matrix is position·rotation·scale only).
@@ -307,25 +350,52 @@ export class PhaserBinding {
           }
         },
         create(this: Phaser.Scene) {
-          sync(this);
+          guard(() => sync(this));
         },
         update(this: Phaser.Scene, _time: number, delta: number) {
-          // Feed this frame's held keys in before advancing the simulation.
-          world.setInput(downKeys);
-          // Phaser's delta is milliseconds; the engine ticks in seconds.
-          world.tick(delta / 1000);
-          sync(this);
+          guard(() => {
+            // Feed this frame's held keys in before advancing the simulation.
+            world.setInput(downKeys);
+            // Phaser's delta is milliseconds; the engine ticks in seconds.
+            world.tick(delta / 1000);
+            sync(this);
+          });
         },
       },
     });
   }
 
-  /** Tear the game down: stops the loop and releases the canvas. */
+  /**
+   * Tear the game down: stops the loop and releases the canvas.
+   *
+   * Never throws, and never returns with a canvas still in the pane. Both
+   * matter because the caller stops a game in order to start another one: a
+   * `destroy` that throws (which a game whose scene died mid-`create` can do)
+   * used to abandon the teardown, leaving the dead canvas in the DOM and the
+   * new game's canvas stacked on top of it — the "phantom canvas" a learner
+   * sees after a crash.
+   */
   stop(): void {
-    this.parent.removeEventListener('pointerdown', this.focusOnPointerDown);
-    this.parent.removeEventListener('keydown', this.onKeyDown);
-    this.parent.removeEventListener('keyup', this.onKeyUp);
-    this.parent.removeEventListener('blur', this.onBlur);
-    this.game.destroy(true);
+    this.halted = true;
+    const forgive = (step: () => void) => {
+      try {
+        step();
+      } catch {
+        // Whatever is left is being thrown away; the sweep below is what has
+        // to happen either way.
+      }
+    };
+    forgive(() =>
+      this.parent.removeEventListener('pointerdown', this.focusOnPointerDown),
+    );
+    forgive(() => this.parent.removeEventListener('keydown', this.onKeyDown));
+    forgive(() => this.parent.removeEventListener('keyup', this.onKeyUp));
+    forgive(() => this.parent.removeEventListener('blur', this.onBlur));
+    forgive(() => this.game.destroy(true));
+    // Phaser removes its own canvas on a clean destroy; this is for the other
+    // case. Anything still under the pane belongs to a game that is gone.
+    for (const canvas of [...this.parent.querySelectorAll('canvas')]) {
+      canvas.remove();
+    }
   }
 }
