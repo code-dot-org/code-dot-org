@@ -228,6 +228,22 @@ shape Blockly's own `message0` has, which is not a coincidence: `push %1 toward
 is one label. Action versus query becomes a dropdown, since it was the only
 thing the two blocks differed in.
 
+**Placement is part of the signature, so the preview draws it.** A `define
+block` under a `define trait` defines a member that is asked OF an actor: the
+block it makes carries an `Actor` socket nobody wrote into the parts, seeded with
+`this actor` — trailing after "on" for an action, leading for a query, which is
+how the generated call sites read. The drawing shows that socket, so the two
+cases read apart at a glance:
+
+```
+⟨subject⟩ position before ⟨seconds⟩        at rule level: every actor is a parameter
+apply force ⟨force⟩ on ⟨this actor⟩        under a trait: the subject is implied
+⟨this actor⟩ is on the ground?             …and a query leads with it
+```
+
+Dragging a definition into or out of a trait redraws it, since that is the moment
+the block it makes changes shape.
+
 `description` is a row of its own on the definition, and it becomes the TOOLTIP
 of the block being defined — the sentence somebody reads when they hover it in
 the toolbox months later, having forgotten what "rest height of" meant. The
