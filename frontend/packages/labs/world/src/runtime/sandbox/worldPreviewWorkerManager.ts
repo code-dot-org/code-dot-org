@@ -134,6 +134,7 @@ export async function start(): Promise<void> {
   };
 
   relayConsole(post);
+  relayUncaught(post);
 
   // Must be CONTROLLED before importing: only then is the build-URL fetch
   // intercepted and served from the SW's memory.
@@ -241,6 +242,22 @@ export async function start(): Promise<void> {
     });
   }
 
+  /**
+   * A throw out of the learner's code, reported from inside the render loop.
+   *
+   * The binding has already stopped simulating by the time this is called (see
+   * PhaserBinding's `guard`), so this is the one report for that error rather
+   * than the first of one per frame.
+   */
+  function reportRuntimeError(message: string, stack?: string) {
+    post({
+      type: FromPreviewMessage.ENGINE_ERROR,
+      message,
+      stack,
+      phase: 'tick',
+    });
+  }
+
   async function load({id, moduleUrl, assets}: LoadMessage) {
     lastAssets = assets ?? {};
     try {
@@ -287,6 +304,7 @@ export async function start(): Promise<void> {
           assetBase,
           assets,
           reportEffectError,
+          reportRuntimeError,
         );
         baseline = incoming.snapshot();
         mode = 'built';
@@ -297,6 +315,7 @@ export async function start(): Promise<void> {
         mode = result.mode;
         if (result.mode === 'restarted') {
           binding.stop();
+          binding = null;
           runningWorld = incoming;
           binding = new PhaserBinding(
             incoming,
@@ -304,6 +323,7 @@ export async function start(): Promise<void> {
             assetBase,
             assets,
             reportEffectError,
+            reportRuntimeError,
           );
         }
         // 'reconciled': reconcile() already patched runningWorld; keep the game.
@@ -315,6 +335,17 @@ export async function start(): Promise<void> {
         detail: {mode, world: runningWorld.snapshot().world},
       });
     } catch (error) {
+      // Whatever was half-built is not a game. Leaving `binding` set would have
+      // the next load reconcile against a world that never ran — and leaving its
+      // canvas in the pane is how two of them end up stacked.
+      try {
+        binding?.stop();
+      } catch {
+        // stop() already swallows what it can; this is the last resort.
+      }
+      binding = null;
+      runningWorld = null;
+      baseline = null;
       post({
         type: FromPreviewMessage.ENGINE_ERROR,
         id,
@@ -324,6 +355,39 @@ export async function start(): Promise<void> {
       });
     }
   }
+}
+
+/**
+ * Report anything that reaches the sandbox window uncaught.
+ *
+ * The guards elsewhere catch what they know how to catch — a module that will
+ * not import, a step body that throws. This is for the rest: a callback the
+ * engine invoked from a timer, a rejected promise nobody awaited, an error
+ * inside a Phaser internal. Uncaught in an IFRAME means invisible, since the
+ * learner is not looking at a devtools console on the sandbox origin, and the
+ * error they need is a `console.log` away from the one they can see.
+ *
+ * Reported as `phase: 'tick'` — construction has, by definition, already
+ * finished if this fires.
+ */
+function relayUncaught(post: (message: unknown) => void): void {
+  window.addEventListener('error', event => {
+    post({
+      type: FromPreviewMessage.ENGINE_ERROR,
+      message: event.message || String(event.error ?? 'Unknown error'),
+      stack: event.error instanceof Error ? event.error.stack : undefined,
+      phase: 'tick',
+    });
+  });
+  window.addEventListener('unhandledrejection', event => {
+    const reason = event.reason;
+    post({
+      type: FromPreviewMessage.ENGINE_ERROR,
+      message: reason instanceof Error ? reason.message : String(reason),
+      stack: reason instanceof Error ? reason.stack : undefined,
+      phase: 'tick',
+    });
+  });
 }
 
 /**
