@@ -11,7 +11,7 @@
 // and a picker that let the two disagree would be a puzzle rather than a tool.
 
 import {Button, Typography} from '@mui/material';
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
@@ -19,6 +19,8 @@ import type {SheetFile} from '../appearance/sheetFile';
 import {translate} from '../effect/localization';
 
 import styles from './addFramesDialog.module.css';
+import {CellThumb} from './CellThumb';
+import cellStyles from './cellThumb.module.css';
 import {type CellRect, sheetCells, sheetGrid} from './sheetFrames';
 
 /** Cells are drawn at 2×, as everywhere else in this editor. */
@@ -33,48 +35,6 @@ export interface AddFramesDialogProps {
   onAdd: (sprite: string, cells: CellRect[]) => void;
   onCancel: () => void;
 }
-
-/** One cell of a sheet, drawn at 2×. */
-const CellThumb = ({
-  image,
-  cell,
-}: {
-  image: HTMLImageElement;
-  cell: CellRect;
-}) => {
-  const ref = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const canvas = ref.current;
-    const ctx = canvas?.getContext('2d');
-    if (!canvas || !ctx) {
-      return;
-    }
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = cell.width * SCALE * dpr;
-    canvas.height = cell.height * SCALE * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.imageSmoothingEnabled = false;
-    ctx.clearRect(0, 0, cell.width * SCALE, cell.height * SCALE);
-    ctx.drawImage(
-      image,
-      cell.x,
-      cell.y,
-      cell.width,
-      cell.height,
-      0,
-      0,
-      cell.width * SCALE,
-      cell.height * SCALE,
-    );
-  }, [image, cell]);
-  return (
-    <canvas
-      ref={ref}
-      className={styles.cell}
-      style={{width: cell.width * SCALE, height: cell.height * SCALE}}
-    />
-  );
-};
 
 export const AddFramesDialog = ({
   sheets,
@@ -212,8 +172,8 @@ export const AddFramesDialog = ({
                       type="button"
                       className={
                         place >= 0
-                          ? `${styles.cellButton} ${styles.cellChosen}`
-                          : styles.cellButton
+                          ? `${cellStyles.cellButton} ${cellStyles.cellChosen}`
+                          : cellStyles.cellButton
                       }
                       aria-pressed={place >= 0}
                       aria-label={
@@ -228,7 +188,7 @@ export const AddFramesDialog = ({
                       }
                       onClick={() => toggle(index)}
                     >
-                      <CellThumb image={image} cell={cell} />
+                      <CellThumb image={image} cell={cell} scale={SCALE} />
                       <span className={styles.place} aria-hidden="true">
                         {place >= 0 ? place + 1 : ''}
                       </span>

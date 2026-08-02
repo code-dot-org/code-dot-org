@@ -1,0 +1,30 @@
+/* The cell picker on a frame. The cells themselves — and what a taken one looks
+   like — are cellThumb.module.css, shared with the sheet-to-frames dialog. */
+
+.cellPicker {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--borders-neutral-light, #e4e4e4);
+}
+
+.cellHint {
+  display: block;
+  font-size: 12px;
+  color: var(--text-neutral-secondary, #555);
+}
+
+/* A sheet is as wide as it is, and wider than this pane whenever it holds more
+   than three or four cells — so it scrolls in its own box rather than pushing
+   the inspector out of the editor. */
+.scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 2px 0;
+}
+
+/* Laid out as the sheet is drawn, so the picker reads like the picture. */
+.grid {
+  display: grid;
+  gap: 4px;
+  width: max-content;
+}
