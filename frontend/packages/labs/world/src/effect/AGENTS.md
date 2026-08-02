@@ -87,6 +87,21 @@ functionId, op)` — never edit `document.nodes` directly in a handler, or the
   the category headings, and the palette's own `padding-top` sat above where
   those headings pin, leaving a strip that items painted in regardless. Put
   leading space on the first child, not on the scroll container.
+- **Buttons name a variant and a color; icons are FontAwesome.** The design
+  system styles `contained`/`outlined`/`text` × `primary`/`secondary`/
+  `tertiary`/`error`, and nothing else — a button left on MUI's default
+  `color="inherit"` falls through every one of those and renders as bare MUI,
+  which is how the editor once came to look like nothing else in the lab.
+  `editor/theme.ts` therefore sets density and no appearance. Say things with
+  `FontAwesomeV6Icon`, not with typographic glyphs (`editor/__tests__/chrome.test.tsx`
+  fails on a ↶ or a 💬 anywhere in the chrome).
+- **Form controls are DSCO; MUI is layout, surfaces, and the vertical slider.**
+  `TextField`, `SimpleDropdown` and `Toggle` come from
+  `@code-dot-org/component-library`. Two consequences: their wrappers default to
+  `min-width: 18.75rem` and every narrow panel here overrides it, and their
+  labels follow `data-theme` while MUI's `Paper` does not — so a popover that
+  does not paint its own `--effect-editor-*` surface is a white panel with
+  invisible labels in dark mode.
 - **MUI must never portal.** Portals mount on `document.body`, outside the
   `data-notranslate` container — translated strings would be re-translated by
   the mainline LocalizeJS DOM engine. Selects are native

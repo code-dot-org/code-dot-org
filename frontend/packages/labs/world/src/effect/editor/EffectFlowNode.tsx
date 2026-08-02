@@ -1,6 +1,8 @@
 import {Handle, Position, type NodeProps} from '@xyflow/react';
 import {Fragment, useCallback, useEffect, useMemo, useRef} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import {compileEffect} from '../compiler/compileEffect';
 import {EffectCompileError} from '../compiler/types';
 import {defaultLiteral} from '../glsl/valueTypes';
@@ -133,7 +135,10 @@ export function EffectFlowNode({id, data, selected}: NodeProps) {
             title={nodeDisplayDescription(definition)}
             onClick={() => toggleInspect(id)}
           >
-            {inspected ? '◉' : '◎'}
+            <FontAwesomeV6Icon
+              iconName="eye"
+              iconStyle={inspected ? 'solid' : 'regular'}
+            />
           </button>
         )}
       </header>

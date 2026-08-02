@@ -112,7 +112,7 @@ describe('EffectEditor, read-only', () => {
   it('withdraws the add-parameter button', () => {
     render(<EffectEditor initialDocument={createEffectDocument()} readOnly />);
 
-    expect(screen.queryByRole('button', {name: '+ Parameter'})).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Parameter'})).toBeNull();
   });
 
   it('disables the effect name and description', () => {

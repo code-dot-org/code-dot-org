@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import {translate} from '../localization';
 
 import styles from './NodeNote.module.css';
@@ -57,7 +59,7 @@ export function NodeNote({
           title={translate('Explain what this node is doing here')}
           onClick={begin}
         >
-          💬
+          <FontAwesomeV6Icon iconName="comment" iconStyle="solid" />
         </button>
       </div>
     );

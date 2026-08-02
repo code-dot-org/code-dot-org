@@ -45,20 +45,6 @@
   align-items: flex-end;
 }
 
-/* Contained look by hand: MUI's IconButton has no `variant` prop. */
-.textureButton {
-  font-size: 14px;
-  line-height: 1;
-  color: var(--effect-editor-text);
-  background: var(--effect-editor-surface);
-  border: 1px solid var(--effect-editor-border);
-}
-
-.textureButton:hover {
-  color: var(--effect-editor-accent);
-  background: var(--effect-editor-raised);
-}
-
 /* Knobs hug the canvas: the bottom of the input row, the top of the output
    row. The negative margin eats the row's padding on that side, so a knob is
    only a couple of pixels from the ghost dot its wire runs to and the two read
@@ -114,16 +100,9 @@
   color: var(--effect-editor-accent);
 }
 
+/* Sits on the knob row, so only its placement is ours. */
 .restartButton {
   margin-bottom: 2px;
-  font-size: 14px;
-  line-height: 1;
-  color: var(--effect-editor-muted);
-  border: 1px solid var(--effect-editor-border);
-}
-
-.restartButton:hover {
-  color: var(--effect-editor-accent);
 }
 
 .editGlyph {
@@ -132,7 +111,6 @@
 }
 
 .addParameter {
-  border-style: dashed;
   white-space: nowrap;
 }
 

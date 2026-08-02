@@ -17,9 +17,19 @@
   border-inline-end: 1px solid var(--effect-editor-border);
 }
 
+/* DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem — a form's
+   width, not a palette's. Override it by specificity and let each field
+   fill the space it is given. */
 .search.search {
   width: 100%;
+  min-width: 0;
   margin-top: 12px;
+}
+
+.search input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
 }
 
 .group {
@@ -56,7 +66,8 @@
   font-size: 12px;
 }
 
+/* Pinned to the bottom of the list. What it looks like is the design system's
+   outlined button — the plus is what says it makes something new. */
 .newFunction {
   margin-top: auto;
-  border-style: dashed;
 }

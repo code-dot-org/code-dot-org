@@ -1,6 +1,8 @@
 import {Button, IconButton} from '@mui/material';
 import {useCallback, useRef, useState} from 'react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import {translate} from '../localization';
 import {
   INPUT_EFFECT_TIME_NODE_ID,
@@ -92,7 +94,7 @@ export function InputRow({
   parameterValues,
   onParameterValueChange,
   showStockInputs = true,
-  addButtonLabel = '+ Parameter',
+  addButtonLabel = 'Parameter',
   readOnly = false,
 }: InputRowProps) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -142,12 +144,13 @@ export function InputRow({
               label={translate(selectedTexture.label)}
             />
             <IconButton
-              className={styles.textureButton}
+              variant="outlined"
+              color="secondary"
               aria-label={translate('Change test texture')}
               title={translate('Choose the texture the previews run on')}
               onClick={() => setChoosingTexture(true)}
             >
-              ⇄
+              <FontAwesomeV6Icon iconName="images" iconStyle="solid" />
             </IconButton>
           </div>
           <TexturePickerDialog
@@ -187,6 +190,8 @@ export function InputRow({
                   // The editor analogue of a game re-applying the effect:
                   // `uEffectTime` in every preview jumps back to zero.
                   <IconButton
+                    variant="outlined"
+                    color="secondary"
                     className={styles.restartButton}
                     aria-label={translate('Restart effect time')}
                     title={translate(
@@ -194,7 +199,10 @@ export function InputRow({
                     )}
                     onClick={restartEffectTime}
                   >
-                    ↻
+                    <FontAwesomeV6Icon
+                      iconName="rotate-right"
+                      iconStyle="solid"
+                    />
                   </IconButton>
                 ) : undefined
               }
@@ -212,7 +220,15 @@ export function InputRow({
         })}
         {!readOnly && (
           <li className={styles.knobItem}>
-            <Button className={styles.addParameter} onClick={handleAdd}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              className={styles.addParameter}
+              startIcon={
+                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+              }
+              onClick={handleAdd}
+            >
               {addButtonLabel}
             </Button>
           </li>
@@ -329,9 +345,12 @@ function Knob({ghost, registerAnchor, control, onEdit}: KnobProps) {
           onClick={onEdit}
         >
           {ghost.label}
-          <span className={styles.editGlyph} aria-hidden="true">
-            ✎
-          </span>
+          <FontAwesomeV6Icon
+            className={styles.editGlyph}
+            iconName="pen"
+            iconStyle="solid"
+            aria-hidden="true"
+          />
         </button>
       ) : (
         <span

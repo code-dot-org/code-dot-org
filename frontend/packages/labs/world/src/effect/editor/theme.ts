@@ -35,20 +35,21 @@ export const effectEditorTheme = (outer: Theme): Theme =>
       // Sizes only. The family comes from the outer theme, which is the design
       // system's stack.
       fontSize: 12.5,
-      button: {textTransform: 'none'},
     },
     components: {
-      MuiButton: {
-        defaultProps: {size: 'small', variant: 'outlined', color: 'inherit'},
-        styleOverrides: {
-          root: {
-            borderColor: 'var(--effect-editor-border)',
-            fontSize: 12,
-            paddingBlock: 2,
-          },
-        },
-      },
-      MuiIconButton: {defaultProps: {size: 'small'}},
+      // DENSITY ONLY. A button here looks like a button anywhere else on the
+      // site, because the design system's own Button theming decides that —
+      // `CdoTheme` styles the variant/color pairs (contained/outlined/text ×
+      // primary/secondary/tertiary/error) and this adds nothing to them.
+      //
+      // An earlier revision defaulted these to `variant: 'outlined', color:
+      // 'inherit'` with a hand-written border and font size. `inherit` is not
+      // one of the pairs the design system styles, so every button in the
+      // editor fell through all of them and got bare MUI plus those few lines —
+      // which is exactly how it came to look like nothing else in the lab.
+      // Call sites name a variant and a color instead.
+      MuiButton: {defaultProps: {size: 'extraSmall'}},
+      MuiIconButton: {defaultProps: {size: 'extraSmall'}},
       MuiTextField: {defaultProps: {size: 'small'}},
       MuiOutlinedInput: {
         styleOverrides: {
