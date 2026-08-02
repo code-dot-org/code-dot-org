@@ -251,9 +251,15 @@ call arriving afterwards depends on whether the live World can still answer it.
 `useRules` and `useAnimations` must come first. Rules decide trait membership
 for every actor, and the animation registry is seeded once when the World is
 constructed, so neither can be applied to a world that already exists. Placing
-one below `load map` throws rather than doing nothing quietly — Blockly blocks
-are reordered by dragging, and a world silently missing a rule the learner can
-see they asked for is the worse outcome.
+`use rule` below `load map` throws rather than doing nothing quietly — Blockly
+blocks are reordered by dragging, and a world silently missing a rule the
+learner can see they asked for is the worse outcome.
+
+There is no block to misplace for `useAnimations`. Every `.anim` the project
+holds is registered, emitted ahead of everything else in the generated world:
+an animation is a file, so holding one is what makes it playable, and asking a
+learner to also say "and use this one" was a second way to say the same thing
+that could only ever be forgotten.
 
 `set` and `addEffect` are not ordered at all. Both have exact counterparts on
 the live `World`, so after it is built they simply forward to it. Both are also
@@ -358,29 +364,60 @@ The appearance of any Actor is governed by its 'Animation'.
 An Animation might be a misleading name since it can be a static image
 or even a set of tile-based images that are grid-aware.
 
-An `anim` file is the JSON serialization of the animation data that
+An `.anim` file is the JSON serialization of the animation data that
 might refer to several images that exist in the project.
 
-Sprite images and raw spritesheet images are just imported as PNGs.
+Nothing here is built in. A project draws only what it holds: the image
+an Actor wears is a PNG in the project and the animation is an `.anim`
+in the project that reads rectangles out of one. There is a library of
+stock sprites and animations, but it is a shelf to copy from — importing
+one writes the files into the project, and from that moment they are the
+learner's, repaintable and deletable, with nothing outside the project
+depending on them.
 
 ### Sprite and Spritesheets
 
 Sprites are the basic images that can be composed together to form an
-animation. A Spritesheet is a file that contains more than one sprite.
-A Spritesheet is a PNG file with a JSON file that defines where in the
-sheet image each sprite is. A Sprite is just a single image.
+animation. A Sprite is just a single image. A Spritesheet is one image
+holding a grid of them.
+
+Nothing about a PNG says which it is — how an image should be cut up is a
+decision someone made — so the decision is a file: a `.sheet` beside the
+image with the same stem. `coinSpin.png` + `coinSpin.sheet` is a
+spritesheet; `player.png` on its own is a picture. Importing a stock
+spritesheet brings both.
+
+Only the editor reads a `.sheet`. The runtime never does: a frame carries
+the rectangle it draws, so by the time an animation is playing the grid
+has already done its job. That is why the metadata can live beside the
+image rather than inside the animation — and why a learner can change it
+without breaking animations already written against it.
 
 ### Animation Asset
 
-A proper Animation is a set of sprites given a name and a delta of time
-between each frame. There is an Animation Rule that updates the frame
-and emits events when the animation changes frames or ends that an Actor
-can elect to use. The Animation Rule has the animation property that
-allows you to set the animation to one known in the project.
+A proper Animation is a set of frames and a rate to play them at. There
+is an Animation Rule that updates the frame and emits events when the
+animation changes frames or ends that an Actor can elect to use. The
+Animation Rule has the animation property that allows you to set the
+animation to one known in the project.
 
-The Animation editor lets you arrange the Sprites to form the animations.
-Obviously, this is intensive, so there will be a set of stock animations
-using stock sprites that can be imported.
+An animation is named by the key it is filed under — `{"animations":
+{"walk": …}}`. That key is what a `play animation` block holds and what
+`playAnimation` looks up, and there is no second, friendlier name: one
+was carried in the file for a while and nothing ever displayed it, which
+made it a name to keep in step with the real name for nothing.
+
+The timing is the animation's, said once as `frameRate`. A frame may name
+its own `delay` in milliseconds, but that is an exception — a walk cycle
+has one timing, and a copy of it on every frame is a set of numbers to
+keep in step by hand.
+
+The Animation editor lets you arrange the Sprites to form the animations:
+a strip of the frames in the order they play, one inspector for the frame
+selected, a looping preview with an onion skin, and — for a sheet-backed
+image — one frame per cell in a click. Obviously, authoring is intensive,
+so there is a set of stock animations using stock sprites that can be
+imported.
 
 ### Tile-based Assets
 
@@ -475,27 +512,36 @@ Then, it is something like this for a tile-based asset:
 And for a normal animation:
 
 ```
-// animations/player.json
+// animations/player.anim
 
 {
   // Hints to the loader that it should load the animation helper
   "type": "animation",
 
   "animations": {
-    // Animations have an id
+    // An animation is named by its key — what a `play animation` block
+    // holds and what `playAnimation` looks up.
     "walk": {
-      // A 'friendly' localizable name for simpler interfaces
-      "name": "Walking",
+      // Frames per second, for the frames that do not say otherwise.
+      // Absent, a frame with no delay of its own is held 100ms.
+      "frameRate": 8,
+
+      // Loop back to the first frame (the default). False holds the last
+      // frame and emits AnimationEnded.
+      "loop": true,
+
       "frames": [
         {
-          "sprite": "sprites/Player.png",
-          // Again, if this is a spritesheet. Omitting this would just
-          // assume the exact dimensions of the image itself.
+          "sprite": "playerWalk.png",
+          // The cell of a spritesheet this frame draws. Omitting it draws
+          // the whole image. Written out rather than named: the frame
+          // carries the rectangle, which is why the `.sheet` beside the
+          // image is an editor convenience and not a runtime dependency.
           "position": {
             "x": 128,
             "y": 128,
-            "width": "128",
-            "height": "128",
+            "width": 128,
+            "height": 128
           },
           // Optionally, (default is no offset so (0, 0)), the offset
           // from the Actor position to draw this frame.
@@ -503,13 +549,18 @@ And for a normal animation:
           // image at the Actor position.
           "offset": {
             "x": 0,
-            "y": 0,
+            "y": 0
           },
           // The relative scale to render the image
-          "scale": 1,
-          // Time to delay the next frame in milliseconds
-          "delay": 150,
+          "scale": 1
         },
+        {
+          "sprite": "playerWalk.png",
+          "position": {"x": 256, "y": 128, "width": 128, "height": 128},
+          // A frame that is an exception to the rate says so, in
+          // milliseconds. Most frames do not.
+          "delay": 500
+        }
         // ... rest of the frames for the 'walk' animation
       ]
     }
@@ -517,36 +568,30 @@ And for a normal animation:
 }
 ```
 
-And a spritesheet is just the dimensions of the cells and the image
-reference. Generally, this just goes next to the sprite image with
-the same name as the sprite. The interface can collapse the sprite
-image and the spritesheet metadata to reduce the complexity.
+A frame's `sprite` is the file name of an image the project holds
+(`playerWalk.png`) — the same name the driver keys its texture by and the
+same name a `set sprite` block stores.
+
+And a spritesheet is just the size of a cell, beside the image, named
+after it. The grid is read left to right and top to bottom; an image that
+is not a whole number of cells has a remainder that is not any cell.
 
 ```
+// sprites/playerWalk.sheet   (beside sprites/playerWalk.png)
+
 {
-  "type": "spritesheet",
-  "sprite": "Player.png",
-  "cells": {
-    "player_walk_1": {
-      "position": {
-        "x": 128,
-        "y": 128,
-        "width": "128",
-        "height": "128",
-      },
-    },
-    "coin": {
-      "position": {
-        "x": 64,
-        "y": 0,
-        "width": "32",
-        "height": "32",
-      },
-    },
-    // all the others
+  "type": "sheet",
+  "cell": {
+    "width": 32,
+    "height": 32
   }
 }
 ```
+
+An earlier form of this named every cell (`"player_walk_1": {position}`).
+Nothing needed the names: a frame stores its own rectangle, so a name
+would have been a second way to say the same thing and one more thing to
+keep in step when an image is repainted.
 
 A simple single-image 'animation' is possible for very simple things.
 This is something we can add to the AnimationRule where we can
