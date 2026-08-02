@@ -44,6 +44,11 @@ Four moving parts, three of them reusing seams that already exist. Crucially,
 _text_, and the image bytes come from self-hosted assets on the sandbox origin,
 not from project `contents`.
 
+> **Superseded — see §9.** The bottom half of that diagram is gone. There are no
+> vendor sprites at render time: an image is a file the project holds (bytes on
+> the file's `url`), forwarded to the preview as a `data:` URL. `frame.sprite` is
+> a project file name (`coinSpin.png`), never a stock id (`"coin"`).
+
 1. **Serialization + loader (lab-side transform).** `.anim` / spritesheet JSON is
    text, so Codebridge stores and round-trips it like any source file. It is
    transformed — the same seam that turns `.rule`/`.actor` Blockly JSON into JS
@@ -54,6 +59,8 @@ not from project `contents`.
    already serving the vendor sprites. No PNG bytes travel through the compiler,
    so the string-typed file map and text-only Codebridge are untouched.
    Learner-supplied images are a separate, framework-gated concern (§7).
+   _(Superseded: `frame.sprite` is a project file name, resolved against the
+   assets the lab forwards — §9.)_
 
 2. **Engine Animation Rule (`engine/rules/animation.ts`).** A new rule owning the
    appearance vocabulary:
@@ -89,7 +96,8 @@ not from project `contents`.
 4. **Driver (`PhaserBinding`).** Stops owning animation timing. Each render it
    reads `frame`, ensures a texture for `frame.sprite` (loaded once from
    `${assetBase}sprites/<sprite>.png` on the sandbox origin — `img-src 'self'`
-   covers it, `SANDBOX.md`), draws it cropped to `cell` at
+   covers it, `SANDBOX.md`; _superseded: from the project's own assets, as
+   `data:` URLs_ — §9), draws it cropped to `cell` at
    `(x + offset.x, y + offset.y)`, scaled by `scale * actorScale`, centered.
    Phaser becomes a blitter; `anims.create`/`play` and the built-in registry are
    removed.
@@ -108,27 +116,42 @@ interface Cell {
 }
 
 interface AnimationFrame {
-  sprite: string; // stock asset ref (e.g. "coin"); driver resolves to a self-origin URL
+  sprite: string; // a project image's file name ("coinSpin.png"); the driver keys its texture by it
   position?: Cell; // spritesheet cell; omitted = the whole image
   offset?: {x: number; y: number}; // default (0, 0)
   scale?: number; // default 1
-  delay: number; // ms until the next frame
+  delay?: number; // ms to hold this frame — an exception to the animation's rate
 }
 
 interface AnimationDef {
-  name?: string; // friendly, localizable
+  frameRate?: number; // frames per second, for frames with no delay of their own
   frames: AnimationFrame[];
   loop?: boolean; // default true; false emits AnimationEndedEvent
 }
 
-// The `.anim` file body: { type: 'animation', animations: {id: AnimationDef} }
-// The spritesheet file body: { type: 'spritesheet', sprite, cells: {id: {position}} }
-// The tileset file body:     { type: 'tileset', tiles: {...} }   // §8, deferred
+// The `.anim` file body:  { type: 'animation', animations: {id: AnimationDef} }
+// The `.sheet` file body: { type: 'sheet', cell: {width, height} }  // beside the image, same stem
+// The tileset file body:  { type: 'tileset', tiles: {...} }         // §8, deferred
 ```
 
-A **static sprite** is the degenerate case: `frames: [{sprite, offset?, scale?,
-delay: Infinity}], loop: false`. `SpriteProperty` folds into the rule as sugar
-that registers such a one-frame animation, preserving the current API.
+Three things moved after this was written, and the shapes above are the current
+ones (`INTERFACE.md` §Animations is the reference):
+
+- **`delay` is optional, and timing lives on the animation** as `frameRate`. A
+  walk cycle has one rate; a copy of it on every frame was a set of numbers to
+  keep in step by hand. `frameDelay(def, frame)` in
+  `engine/core/animationTypes.ts` is the one place that resolves it — the frame's
+  own delay, else the rate, else 100ms.
+- **`AnimationDef.name` is gone.** An animation is named by the key it is filed
+  under, which is what a `play animation` block holds; the friendly name was
+  never displayed anywhere.
+- **The spritesheet file is `.sheet`**, holding one cell size rather than a map
+  of named cells. Nothing needed the names: a frame stores its own rectangle.
+  Only the editor reads it.
+
+A **static sprite** is still the degenerate case, but it is a property rather
+than a synthesized animation: `SpriteProperty` on the appearance trait draws one
+image, and `AnimationProperty` takes precedence when both are set.
 
 ## 4. Phase plan
 
@@ -155,7 +178,9 @@ milestones 1–7 were staged.
 - **A — Learner-authored animation files.** DONE. An animation file is plain
   `.json` (no bespoke extension, no compiler change — the compiler already
   bundles `.json`), discriminated by `type: "animation"`, matching INTERFACE.md's
-  `animations/player.json` example. Frame `sprite`s are stock names the driver
+  `animations/player.json` example. _(Since: the extension is `.anim`, which is
+  what routes the file to the visual animation editor; the body is unchanged
+  JSON.)_ Frame `sprite`s are stock names the driver
   resolves, so no transform is needed. `parseAnimationFile`
   (`engine/core/animationFile.ts`) validates the imported JSON into an
   `AnimationDef` map (clear errors on malformed input); the learner `import`s the
@@ -165,8 +190,10 @@ milestones 1–7 were staged.
   round-trip inlining an animation `.json`) and browser-verified (the ball's
   red-pixel area oscillates as it pulses).
 
-- **D — Blockly + project integration.** DONE. Stock coin/player are spec-model
-  `AnimationDef`s on the rule; `world_set_sprite`/`world_play_animation` elect the
+- **D — Blockly + project integration.** DONE — and later undone in its stock
+  half (§9): there are no animations on the rule any more, and the dropdown
+  offers the project's own ids plus `(import…)`. As shipped at the time: stock
+  coin/player were spec-model `AnimationDef`s on the rule; `world_set_sprite`/`world_play_animation` elect the
   appearance trait; `src/sprites.ts` is now just the driver's load manifest. The
   `world_play_animation` dropdown is **dynamic**: an extension
   (`animationOptions.ts`, the Music-Lab `menuGenerator_` pattern) points it at a
@@ -208,6 +235,11 @@ Animation Rule. The visual demo is preserved; its architecture moves onto the
 spec's model. A future animation editor + asset uploads (§7) let learners author
 their own, replacing the stock library with project `.anim` files.
 
+That last sentence is what happened, and it finished the migration: the engine's
+stock library is gone, `src/sprites.ts` with it, and `generate-sprites.mjs` now
+feeds `appearance/stockImages.ts` — the same drawings, as `data:` URLs on a shelf
+the import dialog copies from (§9).
+
 ## 6. Files
 
 - New: `engine/core/animationTypes.ts`, `engine/rules/animation.ts`,
@@ -242,7 +274,10 @@ their own, replacing the stock library with project `.anim` files.
   **Decision:** World Lab does not widen the file map to binary and does not
   invent a base64-in-`contents` hack that diverges from that direction. Stock
   sprite bytes stay in `public/vendor/sprites/` and are referenced by name,
-  resolved to self-origin URLs at render time (§2). `.anim`/spritesheet
+  resolved to self-origin URLs at render time (§2). _(Superseded once the upload
+  port landed: the decision held — the file MAP is still text — but stock bytes
+  no longer live in vendor. An image is a project file with a `url`, forwarded to
+  the preview as a `data:` URL, exactly as an uploaded one is. §9.)_ `.anim`/spritesheet
   definitions are text and flow through the existing text pipeline untouched.
   Everything in Phases A–D is unblocked by this. **Learner-supplied custom
   images** are handled by porting the legacy Codebridge uploader — see
@@ -256,7 +291,9 @@ their own, replacing the stock library with project `.anim` files.
   the event system currently emits per-actor with no learner-visible detail.
   Phase E depends on that work; `AnimationEndedEvent` (no payload) does not.
 - **CSP.** No change — `img-src 'self'` covers the self-origin vendor textures
-  (`SANDBOX.md`); no `data:` needed.
+  (`SANDBOX.md`); no `data:` needed. _(Since: images arrive as `data:` URLs,
+  which the preview policy already permits — `img-src 'self' blob: data:`. Still
+  no CSP change, for a different reason; `UPLOADS.md` §3 records it.)_
 - **Hot reload.** Animation _definitions_ changing ⇒ restart (structural);
   animation _selection_ (the property) changing ⇒ a live value patch, like other
   per-actor values — folds into the existing `reconcile` snapshot diff. Runtime
@@ -269,3 +306,39 @@ their own, replacing the stock library with project `.anim` files.
   neighbor-aware Map editor painting. The loader recognizes the `type` and skips
   it for now; the render/rule model above is the substrate they build on.
 - **Slope tiles / platformer angles** — advanced, per `INTERFACE.md`.
+
+## 9. Since: the stock library became a shelf
+
+Phases A–E shipped the model above, and then one decision changed what a sprite
+IS. **There are no built-in animations or sprites.** A project draws only what it
+holds; `INTERFACE.md` §Animations is the reference, and this section only records
+what moved from the plan.
+
+- **The library is import-only.** `appearance/stock.ts` holds drawings as `data:`
+  URLs (drawn by `scripts/generate-sprites.mjs`, written into
+  `appearance/stockImages.ts` by `scripts/write-stock-assets.mjs`) and `.anim`
+  documents. Importing one **writes files into the project** — the image, its
+  `.sheet` if it is a grid, and the animation that reads it. From that moment it
+  is the learner's: repaintable, renamable, deletable, and nothing outside the
+  project refers to it. No rule ships animations any more: `RuleBuilder`'s
+  `addAnimation` seam remains, with nothing calling it.
+- **`frame.sprite` is a project file name.** `coinSpin.png`, not `"coin"`. The
+  driver preloads the assets the lab forwards (`runtime/projectAssets.ts` →
+  `data:` URLs in the `LOAD` message) and keys textures by file name; `assetBase`
+  left `PhaserBinding` with the vendor sprites. A frame's cell becomes a Phaser
+  texture frame at load (`texture.add(name, 0, x, y, w, h)`), so an arbitrary
+  rectangle costs nothing at draw time.
+- **Every `.anim` is registered.** There is no `use animations` block: the world
+  generator emits `world.useAnimations(WorldLab.parseAnimationFile(…))` for every
+  animation file the project holds. Holding a file is what makes it playable.
+- **Timing moved onto the animation** (`frameRate`, §3), and a spritesheet is
+  declared by a `.sheet` beside the image (§3).
+- **The `.anim` editor is visual.** `animationEditor/` routes `.anim` to a
+  filmstrip of frames with one inspector, a looping preview with transport and
+  onion skin, whole-strip operations (reverse, ping-pong), a picture picker that
+  reaches the import library, and — for a sheet-backed image — one frame per cell
+  in a click. Renaming an animation rewrites every `play animation` that names it
+  (`blockly/renameAnimation.ts`), because the id is the only handle a block has.
+
+**Still open:** nothing writes a `.sheet` for an image the learner uploaded, so
+an uploaded strip is a picture with no cells to choose (`UPLOADS.md` §9).
