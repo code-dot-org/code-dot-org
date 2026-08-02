@@ -18,6 +18,14 @@ export const WorldLevelDataSchema = z.object({
   // learner owns, and a level turns it off to keep a lesson on one side of the
   // seam.
   showRuleSource: z.boolean().optional(),
+  // Whether the file browser is there at all. Default on; a level about one
+  // file has nothing to browse.
+  showFileBrowser: z.boolean().optional(),
+  // Toolbox categories to leave out, by the name shown on them ("Gravity",
+  // "Loops"). Their blocks stay defined — a workspace that already holds one
+  // still renders and still generates code; they are only unreachable from the
+  // toolbox.
+  hiddenToolboxCategories: z.array(z.string()).optional(),
 });
 
 /**

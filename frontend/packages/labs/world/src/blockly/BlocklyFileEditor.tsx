@@ -21,7 +21,11 @@ import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
-import {showsRuleSource, type WorldLevelProperties} from '../levelData';
+import {
+  hiddenToolboxCategories,
+  showsRuleSource,
+  type WorldLevelProperties,
+} from '../levelData';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
@@ -47,6 +51,7 @@ import {
 import {setRuleImportHandler} from './ruleImport';
 import {parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
+import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -207,6 +212,9 @@ export const BlocklyFileEditor = ({
   // among its options, so the registry must be current first. This runs during
   // render, ahead of the workspace's load effect. (WorldRuntimeContext also
   // refreshes these for the generator; the calls are idempotent.)
+  // What this level asks of the editor: which affordances it offers, and which
+  // toolbox categories it leaves out (levelData).
+  const levelProperties = useMaybeLevelProperties<WorldLevelProperties>();
   const {currentSources, updateSources} = useSources<MultiFileSource>();
   const files = useMemo(
     () => projectFiles(currentSources.source),
@@ -305,10 +313,18 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
-  const {blocks, toolbox} = useMemo(
-    () => buildDomainPalette(projectRuleMetas(files), {ownRuleModule}),
-    [files, ownRuleModule],
-  );
+  // The level may leave categories out of the toolbox. Only the toolbox: the
+  // blocks stay defined, so a workspace that already holds one still renders.
+  const hiddenCategories = hiddenToolboxCategories(levelProperties);
+  const {blocks, toolbox} = useMemo(() => {
+    const palette = buildDomainPalette(projectRuleMetas(files), {
+      ownRuleModule,
+    });
+    return {
+      blocks: palette.blocks,
+      toolbox: withoutCategories(palette.toolbox, hiddenCategories),
+    };
+  }, [files, ownRuleModule, hiddenCategories]);
 
   // Parsed once: Codebridge keys this component by file id, so it remounts (and
   // re-reads `initialContents`) when the active file changes.
@@ -538,10 +554,9 @@ export const BlocklyFileEditor = ({
     [onChange, handleRename, reconcileMembers],
   );
 
-  // The eye on a `use rule` / `use trait` block, and what it does. The level
-  // decides whether it is offered at all; the handler turns the module path the
-  // field hands back into the file the browser would have opened.
-  const levelProperties = useMaybeLevelProperties<WorldLevelProperties>();
+  // The eye on a `use rule` / `use trait` block, and what it does. The handler
+  // turns the module path the field hands back into the file the browser would
+  // have opened; whether it is offered at all is the level's call.
   useEffect(() => {
     setModuleOpeningOffered(showsRuleSource(levelProperties));
   }, [levelProperties]);
@@ -615,6 +630,15 @@ export const BlocklyFileEditor = ({
       )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>
         <BlocklyWorkspace
+          // Blockly reads `readOnly` when the workspace is INJECTED and never
+          // again: a read-only injection has no toolbox, no dragging and no
+          // edits, for the life of that workspace. The lab is read-only for a
+          // moment while the project loads, and the file open at that moment
+          // got a workspace that stayed dead — no categories, nothing
+          // clickable — until you opened another file and came back, which
+          // remounted it. Keying on the answer re-injects once, when it
+          // changes.
+          key={isReadOnly ? 'read-only' : 'editable'}
           className={styles.workspace}
           startBlocks={startBlocks}
           toolbox={toolbox}

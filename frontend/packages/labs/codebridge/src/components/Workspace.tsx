@@ -20,6 +20,16 @@ export interface WorkspaceProps {
    * Most labs pass nothing.
    */
   children?: React.ReactNode;
+  /**
+   * Leave the file browser out entirely — no sidebar, and no way to bring it
+   * back.
+   *
+   * Different from collapsing it, which is the learner's own choice and is
+   * always reversible from the tab strip. This is a level's choice: an exercise
+   * on one file has nothing to browse, and a file list is then a thing to get
+   * lost in rather than a way around.
+   */
+  hideFileBrowser?: boolean;
 }
 
 /**
@@ -32,7 +42,7 @@ export interface WorkspaceProps {
  * The host supplies the surrounding chrome (a PanelContainer, the console or
  * preview beneath it, and so on); this owns only the browser/editor split.
  */
-export const Workspace = ({children}: WorkspaceProps) => {
+export const Workspace = ({children, hideFileBrowser}: WorkspaceProps) => {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR.initial);
   // Legacy has no draggable file-browser divider, only a collapse toggle; we
   // keep both — resize when open, collapse to zero width via the button.
@@ -42,7 +52,7 @@ export const Workspace = ({children}: WorkspaceProps) => {
     <div className={styles.topArea}>
       {/* Collapsed: the file browser is fully hidden so the editor spans the
           whole width; the re-open toggle sits in the tab strip. */}
-      {!fileBrowserCollapsed && (
+      {!hideFileBrowser && !fileBrowserCollapsed && (
         <>
           <aside className={styles.sidebar} style={{width: sidebarWidth}}>
             <FileBrowser
@@ -64,7 +74,7 @@ export const Workspace = ({children}: WorkspaceProps) => {
       )}
       <div className={styles.editorPane}>
         <div className={styles.tabBar}>
-          {fileBrowserCollapsed && (
+          {!hideFileBrowser && fileBrowserCollapsed && (
             <span className={styles.reopen}>
               <FileBrowserToggleButton
                 collapsed
