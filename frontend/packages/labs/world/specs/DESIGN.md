@@ -54,7 +54,7 @@ These are all where `Actor` is an Actor with that particular Trait.
 ### Units
 
 Positions and sizes are in pixels, because a map, a sprite and the map editor all
-deal in pixels. RATES are not: a screen is 960 pixels across and a thing crosses
+deal in pixels. RATES are not: a screen is 800 pixels across and a thing crosses
 it in about a second, so a rate written in pixels per second comes out in the
 hundreds — gravity's strength read `900`, a walk `150`, a jump `-500`. Those are
 hard to reason about and hard to nudge.

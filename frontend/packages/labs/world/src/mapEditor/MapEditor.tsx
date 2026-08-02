@@ -21,16 +21,18 @@ import {
 } from '../blockly/projectModules';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import styles from './mapEditor.module.css';
 
-// The map's world-coordinate space is the game's native resolution. The canvas
-// FILLS its pane; a camera (scale + offset) maps world coords onto it, so the map
-// region is a bordered rectangle you can pan and zoom around. Actors draw at
-// their sprite size, centred on their position.
-const GAME_WIDTH = 960;
-const GAME_HEIGHT = 540;
+// The map's world-coordinate space is the game's native resolution, from the one
+// place that says what it is (runtime/viewport). The canvas FILLS its pane; a
+// camera (scale + offset) maps world coords onto it, so the map region is a
+// bordered rectangle you can pan and zoom around. Actors draw at their sprite
+// size, centred on their position.
+const GAME_WIDTH = VIEWPORT_WIDTH;
+const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEFAULT_TILE = 32;
 const DRAW_SIZE = 32;
 
