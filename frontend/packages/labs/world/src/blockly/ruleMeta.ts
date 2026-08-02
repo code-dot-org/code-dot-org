@@ -22,6 +22,13 @@ import type {
   WorldQuery,
 } from '../engine';
 
+import {
+  refFromValue,
+  refModule,
+  ruleByName,
+  ruleLocation,
+} from './ruleRegistry';
+
 export type RuleSource = 'builtin' | 'project';
 
 /**
@@ -32,7 +39,21 @@ export type RuleSource = 'builtin' | 'project';
 export interface MemberRef {
   readonly source: RuleSource;
   readonly exportName: string;
-  /** The project module a `project` member is imported from (absent for built-ins). */
+  /**
+   * The NAME of the rule this member belongs to — "Gravity".
+   *
+   * How a reference identifies it: a value stored in a dropdown, a block type,
+   * a step anchor. Where the rule lives is looked up from this at generation
+   * time (ruleRegistry), so nothing saved depends on a file's path.
+   */
+  readonly ruleName?: string;
+  /**
+   * The project module a `project` member is imported from.
+   *
+   * A fact about the project as it stands, not part of the reference: present
+   * on refs built by the parser (which read the file) and absent on refs
+   * decoded from a stored value, which name the rule and nothing more.
+   */
   readonly modulePath?: string;
 }
 
@@ -182,9 +203,12 @@ export function builtinRuleMeta(
       nameByRef.set(value, name);
     }
   }
+  // Filled in per rule below: a member's ref names the rule it belongs to.
+  let owningRuleName = '';
   const ref = (obj: unknown): MemberRef => ({
     source: 'builtin',
     exportName: nameByRef.get(obj) ?? '',
+    ruleName: owningRuleName,
   });
   const prop = (p: Property, ownerTraitId?: string): PropertyMeta => ({
     id: p.id,
@@ -223,6 +247,7 @@ export function builtinRuleMeta(
   });
 
   return rules.map(rule => {
+    owningRuleName = rule.name;
     const properties: PropertyMeta[] = Object.values(rule.properties).map(p =>
       prop(p),
     );
@@ -270,9 +295,9 @@ export function builtinRuleMeta(
       ability: rule.ability,
       source: 'builtin' as const,
       ref: ownerRef,
-      // A rule's dependencies as their `world-lab` export names (what a `use
-      // rule` names), so built-in and project requires resolve the same way.
-      requires: rule.requires.map(r => ref(r).exportName).filter(name => name),
+      // A rule's dependencies as the NAMES a `use rule` stores, so built-in and
+      // project requires resolve through the same registry.
+      requires: rule.requires.map(r => r.name).filter(name => name),
       traits,
       properties,
       actions,
@@ -426,6 +451,7 @@ export function parseRuleMeta(
   const ref = (exportName: string): MemberRef => ({
     source: 'project',
     exportName,
+    ruleName,
     modulePath,
   });
   // This rule's own ref — the owner of steps it declares (an anchor target).
@@ -547,9 +573,15 @@ export function parseRuleMeta(
     if (!owner || !stepId) {
       return undefined;
     }
-    const ownerRef: MemberRef = owner.includes('/')
-      ? {source: 'project', exportName: '', modulePath: owner}
-      : {source: 'builtin', exportName: owner};
+    // `owner` is a rule NAME. Which rule that is — engine or project, and if a
+    // project one, in which file — is the registry's business at generate time.
+    const owned = ruleByName(owner);
+    const ownerRef: MemberRef = {
+      source: owned?.source ?? 'project',
+      exportName: owned?.ref.exportName ?? '',
+      ruleName: owner,
+      modulePath: owned?.modulePath,
+    };
     return {ownerRef, stepId};
   };
   /**
@@ -839,53 +871,67 @@ export function ruleMetaToModule(
   const moduleVar = (path: string): string =>
     pascal(path.split('/').pop() ?? path) || 'Rule';
 
-  // A rule dependency (`use rule` value) → its code reference: a built-in export
-  // (named from `world-lab`) or a project rule (default import from its module).
+  // A rule dependency (`use rule` value — a rule's NAME) → its code reference: a
+  // built-in export named from `world-lab`, or a project rule default-imported
+  // from whichever module currently declares that name. A name the registry
+  // doesn't know is a module path, which is how a `.js` rule (declaring no name
+  // to be found by) is referred to.
   const ruleDepRef = (dep: string): string => {
-    if (dep.includes('/')) {
-      const varName = moduleVar(dep);
-      projectImports.set(`default:${dep}`, `import ${varName} from ${q(dep)};`);
+    const located = ruleLocation(dep);
+    const modulePath =
+      located?.source === 'project' ? located.modulePath : located ? '' : dep;
+    if (modulePath) {
+      const varName = moduleVar(modulePath);
+      projectImports.set(
+        `default:${modulePath}`,
+        `import ${varName} from ${q(modulePath)};`,
+      );
       return varName;
     }
-    addWorldLab(dep);
-    return dep;
+    const exportName = located?.source === 'builtin' ? located.exportName : dep;
+    addWorldLab(exportName);
+    return exportName;
   };
 
-  // A trait dependency (`use trait` value) → its code reference: a built-in trait
-  // (named from `world-lab`) or a project trait (`<module>#<export>`, named).
+  // A trait dependency (`use trait` value, `<RuleName>#<export>`) → its code
+  // reference: a built-in trait named from `world-lab`, or a project trait
+  // imported from the module the named rule lives in.
   const traitDepRef = (dep: string): string => {
-    const hash = dep.indexOf('#');
-    if (hash >= 0) {
-      const modulePath = dep.slice(0, hash);
-      const exportName = dep.slice(hash + 1);
-      // A trait in THIS rule is an `export const` a few lines up, not something
-      // to import — a rule whose Solid requires its own Can Collide would
-      // otherwise import itself, and the bundle fails to build outright:
-      //
-      //   The symbol "CanCollideTrait" has already been declared
-      //
-      // Same self-reference the body generator avoids via `__ruleModule`, and
-      // steps via `isSelfAnchor`.
-      if (modulePath !== meta.modulePath) {
-        projectImports.set(
-          `named:${modulePath}:${exportName}`,
-          `import {${exportName}} from ${q(modulePath)};`,
-        );
-      }
-      return exportName;
+    const ref = refFromValue(dep);
+    // A trait in THIS rule is an `export const` a few lines up, not something
+    // to import — a rule whose Solid requires its own Can Collide would
+    // otherwise import itself, and the bundle fails to build outright:
+    //
+    //   The symbol "CanCollideTrait" has already been declared
+    //
+    // Which is a question about the RULE, not about files: the name it names is
+    // the name this file declares. Same self-reference the body generator avoids
+    // via `__ruleModule`, and steps via `isSelfAnchor`.
+    if (ref.ruleName === meta.name) {
+      return ref.exportName;
     }
-    addWorldLab(dep);
-    return dep;
+    const modulePath = refModule(ref);
+    if (modulePath) {
+      projectImports.set(
+        `named:${modulePath}:${ref.exportName}`,
+        `import {${ref.exportName}} from ${q(modulePath)};`,
+      );
+    } else if (ref.source === 'builtin') {
+      addWorldLab(ref.exportName);
+    }
+    // A name that resolves to neither is left bare — nothing here knows where
+    // to import it from, and an undefined identifier says so at build time.
+    return ref.exportName;
   };
 
   // The `export const` a step is captured in (`<PascalName>Step`). Derivable from
   // either its name or its id — `pascal` collapses the slug's `_` the same way.
   const stepExport = (nameOrId: string): string => `${pascal(nameOrId)}Step`;
 
-  // Whether an anchor refers to a step in THIS rule (same module).
+  // Whether an anchor refers to a step in THIS rule — by name, since that is
+  // what the anchor stores and what this file declares itself to be.
   const isSelfAnchor = (anchor: StepAnchor): boolean =>
-    anchor.ownerRef.source === 'project' &&
-    anchor.ownerRef.modulePath === meta.modulePath;
+    anchor.ownerRef.ruleName === meta.name;
 
   // A step-ordering ANCHOR → the code that names that step. A step in THIS rule is
   // the local `export const` (self-importing the module's default would read
@@ -899,15 +945,21 @@ export function ruleMetaToModule(
     }
     const owner = anchor.ownerRef;
     const at = `.steps[${q(anchor.stepId)}]`;
-    if (owner.source === 'project' && owner.modulePath) {
-      const varName = moduleVar(owner.modulePath);
+    const located = owner.ruleName ? ruleLocation(owner.ruleName) : undefined;
+    const modulePath =
+      located?.source === 'project' ? located.modulePath : refModule(owner);
+    if (modulePath) {
+      const varName = moduleVar(modulePath);
       projectImports.set(
-        `default:${owner.modulePath}`,
-        `import ${varName} from ${q(owner.modulePath)};`,
+        `default:${modulePath}`,
+        `import ${varName} from ${q(modulePath)};`,
       );
       return `${varName}${at}`;
     }
-    return `WorldLab.${owner.exportName}${at}`;
+    // A built-in rule's step: `WorldLab.<RuleExport>.steps[<id>]`.
+    const exportName =
+      located?.source === 'builtin' ? located.exportName : owner.exportName;
+    return `WorldLab.${exportName}${at}`;
   };
 
   // Emit steps so a self-anchor's target is declared before the step that names

@@ -76,9 +76,10 @@ import type {
   QueryMeta,
   RuleMeta,
 } from './ruleMeta';
+import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
 import {
   eventOptions,
-  projectRuleAbilities,
+  projectRuleIdentities,
   eventOptionsExtension,
   stepOptions,
   stepOptionsExtension,
@@ -132,14 +133,15 @@ const AUTHORING_RULES: readonly RuleMeta[] = BUILTIN_RULE_META;
 // as `__ruleModule` (set by BlocklyGenerator); a member whose module matches is
 // local, so we skip the import.
 const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
-  if (ref.source === 'project' && ref.modulePath) {
+  const modulePath = refModule(ref);
+  if (modulePath) {
     const selfModule = (generator as {__ruleModule?: string} | undefined)
       ?.__ruleModule;
-    if (generator && ref.modulePath !== selfModule) {
+    if (generator && modulePath !== selfModule) {
       addImport(
         generator,
-        `named:${ref.modulePath}:${ref.exportName}`,
-        `import {${ref.exportName}} from ${str(ref.modulePath)};`,
+        `named:${modulePath}:${ref.exportName}`,
+        `import {${ref.exportName}} from ${str(modulePath)};`,
       );
     }
     return ref.exportName;
@@ -147,32 +149,17 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
   return `WorldLab.${ref.exportName}`;
 };
 
-// The inverse of `traitValue` (traitOptions): a `TRAIT` dropdown value back to a
-// member ref. A `<module>#<export>` value is a project trait (imported from the
-// module); a bare name is a built-in (`WorldLab.<name>`).
-const refFromTraitValue = (value: string): MemberRef => {
-  const hash = value.indexOf('#');
-  return hash >= 0
-    ? {
-        source: 'project',
-        modulePath: value.slice(0, hash),
-        exportName: value.slice(hash + 1),
-      }
-    : {source: 'builtin', exportName: value};
-};
-
 // A globally-unique key for a member's block TYPE (registry + toolbox name),
-// distinct from its codegen reference (`refCode`). Built-in export names are
-// unique; a project member is namespaced by its module, so two rules' same-named
-// members (e.g. both a `strength`) don't collide on one block type.
+// distinct from its codegen reference (`refCode`). Namespaced by the RULE, so
+// two rules' same-named members (e.g. both a `strength`) don't collide on one
+// block type — and so a member keeps its block type when the rule it belongs to
+// moves, which the reference format is the whole point of.
 const memberKey = (ref: MemberRef): string =>
-  ref.source === 'project' && ref.modulePath
-    ? `${ref.modulePath.replaceAll('/', '_')}_${ref.exportName}`
-    : ref.exportName;
+  ref.ruleName ? `${ruleSlug(ref.ruleName)}_${ref.exportName}` : ref.exportName;
 
 /** The toolbox/registry type for the block that handles `event`. */
 const eventBlockType = (event: EventMeta): string =>
-  `world_on_${event.ref.source === 'builtin' ? event.id : memberKey(event.ref)}`;
+  `world_on_${memberKey(event.ref)}`;
 
 // `when key … is pressed/released` dropdown: friendly label -> the DOM
 // `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
@@ -246,7 +233,7 @@ const worldUseTrait = defineBlock({
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
     javascript(block, generator) {
-      const ref = refFromTraitValue(block.getFieldValue('TRAIT'));
+      const ref = refFromValue(block.getFieldValue('TRAIT'));
       return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
   },
@@ -1826,7 +1813,7 @@ const worldWorld = defineBlock({
 // has, and "use rule Has Gravity" is the sentence. The category in the toolbox
 // says the other half — "Gravity", the thing you open and edit.
 const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
-  rule => [rule.ability, rule.ref.exportName],
+  rule => [rule.ability, rule.name],
 );
 /**
  * The rules a world (or another rule) may put in play, plus a way to get more.
@@ -1836,16 +1823,23 @@ const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
  * now that it is not built in. Offered even when the project already has rules:
  * wanting a second one is the normal case.
  */
-const useRuleOptions = (): Array<[string, string]> => [
-  ...BUILTIN_RULE_OPTIONS,
-  ...ruleModuleOptions().map(([fileLabel, modulePath]): [string, string] => [
-    // The rule's own word for what it gives, when the editor has parsed it;
-    // otherwise the file's name, so a rule mid-edit is still pickable.
-    projectRuleAbilities().get(modulePath) ?? fileLabel,
-    modulePath,
-  ]),
-  ['(import…)', IMPORT_RULE_VALUE],
-];
+const useRuleOptions = (): Array<[string, string]> => {
+  const identities = projectRuleIdentities();
+  return [
+    ...BUILTIN_RULE_OPTIONS,
+    ...ruleModuleOptions().map(([fileLabel, modulePath]): [string, string] => {
+      // A parsed `.rule` says what it is and what it gives, and is referred to
+      // by that name from then on, wherever its file ends up. A `.js` rule
+      // declares neither, so it is named by its module — as is a `.rule` the
+      // editor could not parse, which still has to be pickable mid-edit.
+      const identity = identities.get(modulePath);
+      return identity
+        ? [identity.ability, identity.name]
+        : [fileLabel, modulePath];
+    }),
+    ['(import…)', IMPORT_RULE_VALUE],
+  ];
+};
 const useRuleOptionsExtension = liveDropdown(
   'world_use_rule_options',
   'RULE',
@@ -1866,16 +1860,29 @@ const worldUseRule = defineBlock({
   generator: {
     javascript(block, generator) {
       const rule = block.getFieldValue('RULE');
-      // A project rule module (a path) is imported; a built-in reads `WorldLab`.
-      if (rule.includes('/')) {
+      // The field holds a rule's NAME. Where that rule lives is looked up here
+      // and nowhere else: a built-in reads `WorldLab`, a project `.rule` is
+      // imported from whatever module currently declares that name. A value the
+      // registry doesn't know is a module path — a `.js` rule names nothing, so
+      // it can only be referred to by its file.
+      const located = ruleLocation(rule);
+      const modulePath =
+        located?.source === 'project'
+          ? located.modulePath
+          : located
+            ? undefined
+            : rule;
+      if (modulePath) {
         addImport(
           generator,
-          `mod:${rule}`,
-          `import ${importVar(rule)} from ${str(rule)};`,
+          `mod:${modulePath}`,
+          `import ${importVar(modulePath)} from ${str(modulePath)};`,
         );
-        return `world.useRules([${importVar(rule)}]);\n`;
+        return `world.useRules([${importVar(modulePath)}]);\n`;
       }
-      return `world.useRules([WorldLab.${rule}]);\n`;
+      const exportName =
+        located?.source === 'builtin' ? located.exportName : rule;
+      return `world.useRules([WorldLab.${exportName}]);\n`;
     },
   },
 });
@@ -2372,7 +2379,7 @@ const worldEmit = defineBlock({
       // `refCode` resolves a project event to the bare local name when the rule
       // is emitting its OWN event (it is an `export const` in the module being
       // written), and imports it otherwise.
-      return `world.emit(${refCode(refFromTraitValue(event), generator)}, ${actor});\n`;
+      return `world.emit(${refCode(refFromValue(event), generator)}, ${actor});\n`;
     },
   },
 });
@@ -2424,7 +2431,7 @@ const worldEmitWith = defineBlock({
       const actor =
         generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
       const value = generator.valueToCode(block, 'VALUE', Order.NONE) || 'null';
-      return `world.emit(${refCode(refFromTraitValue(event), generator)}, ${actor}, ${value});\n`;
+      return `world.emit(${refCode(refFromValue(event), generator)}, ${actor}, ${value});\n`;
     },
   },
 });
@@ -2599,7 +2606,7 @@ const worldHasTrait = defineBlock({
     javascript(block, generator) {
       const actor =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const ref = refFromTraitValue(block.getFieldValue('TRAIT'));
+      const ref = refFromValue(block.getFieldValue('TRAIT'));
       return [`${actor}.has(${refCode(ref, generator)})`, Order.MEMBER] as [
         string,
         number,
@@ -2872,7 +2879,7 @@ function generateRulePalette(
       const ownProperty =
         ownRuleModule === ALL_RULE_MODULES ||
         (ownRuleModule !== undefined &&
-          property.ref.modulePath === ownRuleModule);
+          refModule(property.ref) === ownRuleModule);
       if (
         isSettable(property) ||
         (ownProperty && !isSettable(property) && property.readonly)

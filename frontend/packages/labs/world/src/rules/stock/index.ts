@@ -21,13 +21,17 @@ export interface StockRule {
   /**
    * File stem this is imported as — `gravity` becomes `rules/gravity.rule`.
    *
-   * Separate from the rule's authored name because that is learner-facing text
-   * they may change ("Has Gravity" → "Moon Gravity"), while this has to stay a
-   * safe file name — and it is what every reference to the rule's members is
-   * built from (`rules/gravity#AffectedByGravityTrait`).
+   * Only a file name. References are built from the rule's NAME, so where the
+   * copy lands and what it is called on disk are the learner's business.
    */
   id: string;
-  /** What the rule is, matching its `define rule` NAME — "Gravity". */
+  /**
+   * What the rule is, matching its `define rule` NAME — "Gravity".
+   *
+   * The name every reference to its members is built from
+   * (`Gravity#AffectedByGravityTrait`), so two rules answering to one name is
+   * an ambiguity, which is why importing the same stock rule twice is a no-op.
+   */
   name: string;
   /** What using it gives a world, matching ABILITY — "Has Gravity". */
   ability: string;
@@ -94,6 +98,12 @@ export const STOCK_RULES: readonly StockRule[] = [
 /** Look one up by its file stem. */
 export function stockRule(id: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.id === id);
+}
+
+/** Look one up by the name its `define rule` block carries — what a `use rule`
+ *  in another stock rule refers to it as. */
+export function stockRuleByName(name: string): StockRule | undefined {
+  return STOCK_RULES.find(rule => rule.name === name);
 }
 
 export {arrowsRule, collisionRule, gravityRule, inputRule, motionRule};

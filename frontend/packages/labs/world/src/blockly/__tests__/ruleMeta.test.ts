@@ -11,6 +11,7 @@ import * as GravityFixture from '../../engine/__tests__/fixtures/gravityRule';
 import {GravityRule} from '../../engine/__tests__/fixtures/gravityRule';
 import * as MotionFixture from '../../engine/__tests__/fixtures/motionRule';
 import {MotionRule} from '../../engine/__tests__/fixtures/motionRule';
+import {BUILTIN_RULE_META} from '../builtinMeta';
 import {
   builtinRuleMeta,
   extractRuleBodies,
@@ -19,6 +20,19 @@ import {
   ruleMetaToModule,
   type RuleMeta,
 } from '../ruleMeta';
+import {registerBuiltinRules, registerProjectRules} from '../ruleRegistry';
+
+// Which rule a name means. The engine's own are registered by `builtinMeta` on
+// import; the fixtures stand in for rules that used to be built in, and a name
+// resolves only if something registered it — so they are registered here.
+registerBuiltinRules([
+  ...BUILTIN_RULE_META,
+  ...builtinRuleMeta([GravityRule as never, MotionRule as never], {
+    ...(WorldLab as Record<string, unknown>),
+    ...(GravityFixture as Record<string, unknown>),
+    ...(MotionFixture as Record<string, unknown>),
+  }),
+]);
 
 // Derive metadata for a couple of the real built-in rules and assert it mirrors
 // them — the shape the editor (trait dropdown, block generator) will consume,
@@ -37,26 +51,39 @@ describe('builtinRuleMeta', () => {
     expect(gravity.id).toBe('gravity');
     expect(gravity.name).toBe('Has Gravity');
     expect(gravity.source).toBe('builtin');
-    expect(gravity.ref).toEqual({source: 'builtin', exportName: 'GravityRule'});
-    // Dependencies, as the world-lab export names a `use rule` would name.
+    expect(gravity.ref).toEqual({
+      source: 'builtin',
+      exportName: 'GravityRule',
+      ruleName: 'Has Gravity',
+    });
+    // Dependencies, as the NAMES a `use rule` would store — which is all a
+    // reference is, whether the rule it names is the engine's or a file's.
     expect(new Set(gravity.requires)).toEqual(
-      new Set(['MotionRule', 'CollisionRule']),
+      new Set(['Has Physics', 'Has Collisions']),
     );
 
-    // Traits, valued by their world-lab export (built-in requires aren't
+    // Traits, each naming the rule it belongs to (built-in requires aren't
     // surfaced for authoring).
     expect(gravity.traits).toEqual(
       expect.arrayContaining([
         {
           id: 'affected',
           name: 'Affected by Gravity',
-          ref: {source: 'builtin', exportName: 'AffectedByGravityTrait'},
+          ref: {
+            source: 'builtin',
+            exportName: 'AffectedByGravityTrait',
+            ruleName: 'Has Gravity',
+          },
           requires: [],
         },
         {
           id: 'ground',
           name: 'Acts as Ground',
-          ref: {source: 'builtin', exportName: 'GroundTrait'},
+          ref: {
+            source: 'builtin',
+            exportName: 'GroundTrait',
+            ruleName: 'Has Gravity',
+          },
           requires: [],
         },
       ]),
@@ -71,7 +98,11 @@ describe('builtinRuleMeta', () => {
       readonly: false,
       scope: 'world',
       ownerTraitId: undefined,
-      ref: {source: 'builtin', exportName: 'StrengthProperty'},
+      ref: {
+        source: 'builtin',
+        exportName: 'StrengthProperty',
+        ruleName: 'Has Gravity',
+      },
     });
     // Actor-scoped property carries its owning trait id.
     expect(gravity.properties).toContainEqual(
@@ -80,7 +111,11 @@ describe('builtinRuleMeta', () => {
         scope: 'actor',
         ownerTraitId: 'affected',
         readonly: true,
-        ref: {source: 'builtin', exportName: 'FallingProperty'},
+        ref: {
+          source: 'builtin',
+          exportName: 'FallingProperty',
+          ruleName: 'Has Gravity',
+        },
       }),
     );
 
@@ -89,7 +124,11 @@ describe('builtinRuleMeta', () => {
       expect.objectContaining({
         id: 'invert',
         scope: 'world',
-        ref: {source: 'builtin', exportName: 'InvertAction'},
+        ref: {
+          source: 'builtin',
+          exportName: 'InvertAction',
+          ruleName: 'Has Gravity',
+        },
       }),
     );
     expect(gravity.queries).toContainEqual(
@@ -98,7 +137,11 @@ describe('builtinRuleMeta', () => {
         scope: 'actor',
         ownerTraitId: 'affected',
         returns: 'boolean',
-        ref: {source: 'builtin', exportName: 'IsOnGroundQuery'},
+        ref: {
+          source: 'builtin',
+          exportName: 'IsOnGroundQuery',
+          ruleName: 'Has Gravity',
+        },
       }),
     );
 
@@ -225,6 +268,7 @@ describe('parseRuleMeta', () => {
       ref: {
         source: 'project',
         exportName: 'HasWindRule',
+        ruleName: 'Has Wind',
         modulePath: 'rules/wind',
       },
     });
@@ -236,6 +280,7 @@ describe('parseRuleMeta', () => {
         ref: {
           source: 'project',
           exportName: 'WindblownTrait',
+          ruleName: 'Has Wind',
           modulePath: 'rules/wind',
         },
         requires: [],
@@ -270,6 +315,7 @@ describe('parseRuleMeta', () => {
         ref: {
           source: 'project',
           exportName: 'GustedEvent',
+          ruleName: 'Has Wind',
           modulePath: 'rules/wind',
         },
       },
@@ -351,44 +397,64 @@ describe('rule + trait dependencies (use rule / use trait)', () => {
     fields: {TRAIT: value},
   });
 
-  // `use rule` blocks at the rule level → rule requires; `use trait` inside a
-  // `define trait`'s `do` → that trait's requires. Built-in (bare name) and
-  // project (`module`/`module#export`) refs mix freely.
+  // Every dependency is a NAME — the rule's, and `<Rule>#<Trait>` for a trait —
+  // and which rule a name means is the registry's answer. So the project this
+  // rule is written against is registered first, exactly as the editor and the
+  // generator register the project's parsed `.rule` files before reading a
+  // workspace.
+  const other = parseRuleMeta('rules/other', ruleFile('Other', trait('Some')))!;
+  const motion = parseRuleMeta('rules/motion', ruleFile('Motion'))!;
+  registerProjectRules([other, motion]);
+
   const meta = parseRuleMeta(
     'rules/wind',
     ruleFile(
       'Has Wind',
-      useRule('GravityRule'), // built-in rule dep
-      useRule('rules/motion'), // project rule dep
+      useRule('Space'), // built-in rule dep
+      useRule('Motion'), // project rule dep
       trait(
         'Windblown',
-        useTrait('MovableTrait'), // built-in trait dep
-        useTrait('rules/other#SomeTrait'), // project trait dep
+        useTrait('Space#PositionalTrait'), // built-in trait dep
+        useTrait('Other#SomeTrait'), // project trait dep
         prop('number', 'drag', '2'),
       ),
     ),
   )!;
 
   it('parses use rule / use trait into rule + trait requires', () => {
-    expect(meta.requires).toEqual(['GravityRule', 'rules/motion']);
+    expect(meta.requires).toEqual(['Space', 'Motion']);
     expect(meta.traits[0].requires).toEqual([
-      'MovableTrait',
-      'rules/other#SomeTrait',
+      'Space#PositionalTrait',
+      'Other#SomeTrait',
     ]);
   });
 
   it('emits requires with the right imports in the module', () => {
     const code = ruleMetaToModule(meta);
-    // Built-in deps join the world-lab import; project deps get their own.
+    // Built-in deps join the world-lab import; project deps get their own — and
+    // the module each is imported from is looked up from its name here, at the
+    // one moment where a file has to be named at all.
     expect(code).toContain(
-      `import {RuleBuilder, GravityRule, MovableTrait} from 'world-lab';`,
+      `import {RuleBuilder, SpatialRule, PositionalTrait} from 'world-lab';`,
     );
     expect(code).toContain(`import Motion from "rules/motion";`); // rule (default)
     expect(code).toContain(`import {SomeTrait} from "rules/other";`); // trait (named)
-    expect(code).toContain('rule.requires([GravityRule, Motion]);');
+    expect(code).toContain('rule.requires([SpatialRule, Motion]);');
     expect(code).toContain(
-      'WindblownTrait.requires([MovableTrait, SomeTrait]);',
+      'WindblownTrait.requires([PositionalTrait, SomeTrait]);',
     );
+  });
+
+  it('follows a rule that has moved, without touching what refers to it', () => {
+    // The point of naming rather than locating: the same workspace, generated
+    // against a project where `Motion` now lives somewhere else, imports it from
+    // where it is now. Nothing stored changed — nothing stored says where.
+    const moved = parseRuleMeta('mechanics/movement', ruleFile('Motion'))!;
+    registerProjectRules([other, moved]);
+    expect(ruleMetaToModule(meta)).toContain(
+      `import Movement from "mechanics/movement";`,
+    );
+    registerProjectRules([other, motion]);
   });
 });
 
@@ -647,7 +713,7 @@ describe('a rule that refers to itself', () => {
               next: {
                 block: {
                   type: 'world_use_trait',
-                  fields: {TRAIT: 'rules/collision#CanCollideTrait'},
+                  fields: {TRAIT: 'Has Collisions#CanCollideTrait'},
                 },
               },
             },
@@ -657,7 +723,7 @@ describe('a rule that refers to itself', () => {
     )!;
     const code = ruleMetaToModule(meta);
     expect(code).toContain('SolidTrait.requires([CanCollideTrait]);');
-    expect(code).not.toContain("from 'rules/collision'");
+    expect(code).not.toContain('rules/collision');
   });
 });
 
@@ -674,6 +740,7 @@ describe('steps (per-tick behavior + ordering)', () => {
     expect(reposition?.ownerRef).toEqual({
       source: 'builtin',
       exportName: 'MotionRule',
+      ruleName: 'Has Physics',
     });
   });
 
@@ -682,8 +749,8 @@ describe('steps (per-tick behavior + ordering)', () => {
       'rules/wind',
       ruleFile(
         'Has Wind',
-        step('gust', 'before', 'MotionRule#reposition'), // anchor a built-in
-        step('land', 'after', 'rules/other#resolve'), // anchor a project rule
+        step('gust', 'before', 'Has Physics#reposition'), // anchor a built-in
+        step('land', 'after', 'Other#resolve'), // anchor a project rule
         step('settle'), // unordered
       ),
     )!;
@@ -694,12 +761,18 @@ describe('steps (per-tick behavior + ordering)', () => {
         ownerRef: {
           source: 'project',
           exportName: 'HasWindRule',
+          ruleName: 'Has Wind',
           modulePath: 'rules/wind',
         },
         order: {
           kind: 'before',
           anchor: {
-            ownerRef: {source: 'builtin', exportName: 'MotionRule'},
+            ownerRef: {
+              source: 'builtin',
+              exportName: 'MotionRule',
+              ruleName: 'Has Physics',
+              modulePath: undefined,
+            },
             stepId: 'reposition',
           },
         },
@@ -711,7 +784,8 @@ describe('steps (per-tick behavior + ordering)', () => {
           anchor: {
             ownerRef: {
               source: 'project',
-              exportName: '',
+              exportName: 'OtherRule',
+              ruleName: 'Other',
               modulePath: 'rules/other',
             },
             stepId: 'resolve',
@@ -727,8 +801,8 @@ describe('steps (per-tick behavior + ordering)', () => {
       'rules/wind',
       ruleFile(
         'Has Wind',
-        step('gust', 'before', 'MotionRule#reposition'),
-        step('land', 'after', 'rules/other#resolve'),
+        step('gust', 'before', 'Has Physics#reposition'),
+        step('land', 'after', 'Other#resolve'),
         step('settle'),
       ),
     )!;
@@ -764,7 +838,7 @@ describe('steps (per-tick behavior + ordering)', () => {
       'rules/wind',
       ruleFile(
         'Has Wind',
-        step('finish', 'after', 'rules/wind#start'), // self-anchor, declared first
+        step('finish', 'after', 'Has Wind#start'), // self-anchor, declared first
         step('start'), // the anchor target, declared second
       ),
     )!;

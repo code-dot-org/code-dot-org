@@ -13,6 +13,12 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
 const source = DEFAULT_PROJECT.source.files.arrowsRule.contents;
 const meta = parseRuleMeta('rules/arrows', source)!;
 const module_ = ruleMetaToModule(meta);
@@ -38,8 +44,8 @@ describe('rules/arrows.rule', () => {
     // Not the keyboard RULE: reading which keys are held is the World's job
     // (`key … is down`), so walking works in a project that never imported the
     // rule that raises key events.
-    expect(meta.requires).toEqual(['rules/motion']);
-    expect(meta.traits[0].requires).toEqual(['rules/motion#CanMoveTrait']);
+    expect(meta.requires).toEqual(['Physics']);
+    expect(meta.traits[0].requires).toEqual(['Physics#CanMoveTrait']);
   });
 
   it('carries a walk speed in units, not pixels', () => {
@@ -53,7 +59,7 @@ describe('rules/arrows.rule', () => {
   it('runs before Motion integrates, so a held key moves this frame', () => {
     const [step] = meta.steps;
     expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
+    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
     expect(step.order.anchor?.stepId).toBe('reposition');
   });
 

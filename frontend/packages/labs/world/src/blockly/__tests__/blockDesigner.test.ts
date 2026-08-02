@@ -31,7 +31,7 @@ const designed = (
         blocks: [
           {
             type: 'world_rule',
-            fields: {NAME: 'Has Push'},
+            fields: {NAME: 'Push', ABILITY: 'Has Push'},
             next: {
               block: {
                 type: 'world_rule_block',
@@ -96,7 +96,7 @@ describe('a designed block', () => {
     const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(
-      b => b.type === 'world_do_rules_push_PushTowardAction',
+      b => b.type === 'world_do_Push_PushTowardAction',
     ) as {message0?: string} | undefined;
     expect(call?.message0).toMatch(/^push %\d toward %\d$/);
   });
@@ -126,7 +126,7 @@ describe('a designed block', () => {
     );
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(
-      b => b.type === 'world_query_rules_push_RestHeightOfQuery',
+      b => b.type === 'world_query_Push_RestHeightOfQuery',
     ) as {message0?: string} | undefined;
     expect(call?.message0).toMatch(/^%\d rest height of %\d$/);
   });
@@ -140,7 +140,7 @@ describe('a designed block', () => {
         variables: [],
         blocks: {
           blocks: [
-            {type: 'world_rule', fields: {NAME: 'Has Push'}},
+            {type: 'world_rule', fields: {NAME: 'Push', ABILITY: 'Has Push'}},
             {
               type: 'world_rule_trait',
               fields: {NAME: 'Pushable'},
@@ -160,7 +160,7 @@ describe('a designed block', () => {
     )!;
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(
-      b => b.type === 'world_query_rules_push_IsOnTheGroundQuery',
+      b => b.type === 'world_query_Push_IsOnTheGroundQuery',
     ) as {message0?: string} | undefined;
     expect(call?.message0).toBe('%1 is on the ground?');
   });
@@ -180,7 +180,7 @@ describe('a designed block', () => {
     );
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(
-      b => b.type === 'world_do_rules_push_PushTowardAction',
+      b => b.type === 'world_do_Push_PushTowardAction',
     ) as {tooltip?: string} | undefined;
     expect(call?.tooltip).toBe('Shove an actor toward another one.');
   });
@@ -190,7 +190,7 @@ describe('a designed block', () => {
     expect(meta.actions[0].description).toBeUndefined();
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(
-      b => b.type === 'world_do_rules_push_PushTowardAction',
+      b => b.type === 'world_do_Push_PushTowardAction',
     ) as {tooltip?: string} | undefined;
     expect(call?.tooltip).toBe('push toward');
   });

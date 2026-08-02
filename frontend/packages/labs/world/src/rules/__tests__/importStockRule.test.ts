@@ -149,12 +149,12 @@ describe('importing what a rule needs', () => {
     const collision = Object.values(source.files).find(
       f => f.name === 'collision.rule',
     )!;
-    expect(collision.contents).toContain('rules/motion');
+    expect(collision.contents).toContain('"RULE": "Physics"');
   });
 
   it('gives a dependency its own name, never a renamed one', () => {
-    // The rule that needs it refers to it by path. `collision-2` would be a file
-    // nothing points at, and gravity would still be broken.
+    // Two copies of a rule are two rules answering to one name, and a reference
+    // that names "Collisions" would then be a question with two answers.
     const {source} = importStockRule(project(), gravity);
     expect(rulePaths(source)).toContain('rules/collision');
   });

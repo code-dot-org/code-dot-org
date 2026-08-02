@@ -155,13 +155,14 @@ export const BlocklyFileEditor = ({
   const handleRuleImport = useCallback(
     (rule: StockRule) => {
       const sources = sourcesRef.current;
-      const {source, path} = importStockRule(sources.source, rule);
+      const {source, name} = importStockRule(sources.source, rule);
       // In the project BEFORE the field takes its value, as with an effect: the
       // dropdown rebuilds from the registry, and a value with no matching
-      // option is dropped by Blockly.
+      // option is dropped by Blockly. The value is the rule's NAME — the field
+      // says which rule, never which file.
       updateSources({...sources, source});
       refreshProjectDropdowns(projectFiles(source));
-      finishImport(path);
+      finishImport(name);
     },
     [updateSources, finishImport],
   );

@@ -8,6 +8,7 @@
 
 import type {EffectParameter} from '../effect/model/types';
 
+import {BUILTIN_RULE_META} from './builtinMeta';
 import {label} from './label';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 
@@ -219,13 +220,14 @@ export function projectMapActorTypes(
   return maps;
 }
 
-// A world's `use rule` names either a built-in (its `world-lab` export name) or a
-// project rule module (a path). `traitOptions` resolves a ref to its `RuleMeta`;
-// this maps a project reference to the key it resolves under:
-//   - a declarative `.rule` module → its path (parsed to project `RuleMeta`);
-//   - a `.js`/`.ts` shim re-exporting a built-in → that built-in's export name;
-//   - a genuinely project-defined `.js` rule → undefined (no static metadata
-//     until it is authored as a `.rule`).
+// A world's `use rule` names a rule — except when it can't, because the rule is
+// a hand-written `.js` module that declares no name and is referred to by its
+// path. Everything downstream (which traits are in play, which categories the
+// toolbox shows) is keyed on names, so a path is resolved to one here:
+//   - a declarative `.rule` module → the name its `define rule` block carries;
+//   - a `.js`/`.ts` shim re-exporting a built-in → that built-in rule's name;
+//   - a genuinely project-defined `.js` rule → undefined (nothing static to
+//     read a name out of until it is authored as a `.rule`).
 const RULE_SHIM_RE =
   /export\s*\{\s*(\w+)\s+as\s+default\s*\}\s*from\s*['"]world-lab['"]/;
 
@@ -234,18 +236,18 @@ function resolveRuleRef(
   files: Record<string, string>,
 ): string | undefined {
   if (!rule.includes('/')) {
-    return rule; // already a built-in export name
+    return rule; // already a rule name
   }
-  // A declarative `.rule` module: keep the path — `traitOptions` resolves it to
-  // the parsed project rule.
-  if (files[`${rule}.rule`] !== undefined) {
-    return rule;
+  const declarative = files[`${rule}.rule`];
+  if (declarative !== undefined) {
+    return parseRuleMeta(rule, declarative)?.name;
   }
-  // A `.js`/`.ts` shim re-exporting a built-in → that built-in's export name.
   for (const ext of ['.js', '.ts']) {
     const contents = files[`${rule}${ext}`];
     if (contents !== undefined) {
-      return contents.match(RULE_SHIM_RE)?.[1];
+      const exportName = contents.match(RULE_SHIM_RE)?.[1];
+      return BUILTIN_RULE_META.find(meta => meta.ref.exportName === exportName)
+        ?.name;
     }
   }
   return undefined;

@@ -1,6 +1,7 @@
 import {afterEach, describe, expect, it} from 'vitest';
 
 import {parseRuleMeta} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
 import {
   setProjectRuleMeta,
   setProjectRules,
@@ -12,28 +13,36 @@ import {
 afterEach(() => {
   setProjectRules([]);
   setProjectRuleMeta([]);
+  registerProjectRules([]);
 });
+
+/** Register a parsed project rule the way `refreshProjectDropdowns` does. */
+const project = (...metas: Array<ReturnType<typeof parseRuleMeta>>): void => {
+  const parsed = metas.filter(m => m !== undefined);
+  setProjectRuleMeta(parsed);
+  registerProjectRules(parsed);
+};
 
 describe('traitOptions (traits from the rules in play)', () => {
   it('lists a rule’s traits plus those of every rule it requires', () => {
     // Animation requires Space, so attaching just Animation puts both their
-    // traits in play — labelled by name, valued by the `world-lab` export the
-    // generator writes. (Gravity, collision and motion used to be the examples
+    // traits in play — labelled by name, valued by the rule and export the
+    // generator resolves. (Gravity, collision and motion used to be the examples
     // here; all three are stock `.rule` files now, not built-ins.)
-    setProjectRules(['AnimationRule']);
-    const byExport = new Map(
-      traitOptions().map(([label, exp]) => [exp, label]),
+    setProjectRules(['Appearance']);
+    const byValue = new Map(
+      traitOptions().map(([label, value]) => [value, label]),
     );
-    expect(byExport.get('AppearanceTrait')).toBe('Has Appearance');
-    expect(byExport.get('PositionalTrait')).toBe('Can Be Positioned'); // via Space
+    expect(byValue.get('Appearance#AppearanceTrait')).toBe('Has Appearance');
+    expect(byValue.get('Space#PositionalTrait')).toBe('Can Be Positioned');
   });
 
   it('unions the traits across every attached rule', () => {
-    setProjectRules(['SpatialRule', 'AnimationRule']);
-    const exports = traitOptions().map(([, exp]) => exp);
-    expect(exports).toContain('PositionalTrait'); // Space
-    expect(exports).toContain('AppearanceTrait'); // Animation
-    expect(exports).not.toContain('CollidableTrait'); // neither pulls Collision
+    setProjectRules(['Space', 'Appearance']);
+    const values = traitOptions().map(([, value]) => value);
+    expect(values).toContain('Space#PositionalTrait');
+    expect(values).toContain('Appearance#AppearanceTrait');
+    expect(values).not.toContain('Collisions#CanCollideTrait'); // neither pulls it
   });
 
   it('follows a project rule’s `use rule` dependency to the required rule’s traits', () => {
@@ -51,7 +60,7 @@ describe('traitOptions (traits from the rules in play)', () => {
               next: {
                 block: {
                   type: 'world_use_rule',
-                  fields: {RULE: 'AnimationRule'},
+                  fields: {RULE: 'Appearance'},
                 },
               },
             },
@@ -61,18 +70,18 @@ describe('traitOptions (traits from the rules in play)', () => {
         },
       }),
     );
-    setProjectRuleMeta([wind!]);
-    setProjectRules(['rules/wind']);
+    project(wind);
+    setProjectRules(['Has Wind']);
     const values = traitOptions().map(([, value]) => value);
-    expect(values).toContain('rules/wind#WindblownTrait'); // its own trait
-    expect(values).toContain('AppearanceTrait'); // via the required Animation
-    expect(values).toContain('PositionalTrait'); // Animation → Space
+    expect(values).toContain('Has Wind#WindblownTrait'); // its own trait
+    expect(values).toContain('Appearance#AppearanceTrait'); // via Animation
+    expect(values).toContain('Space#PositionalTrait'); // Animation → Space
   });
 
-  it('offers a project `.rule`’s traits when a world attaches it (by module path)', () => {
-    // A declarative project rule, referenced by its module path (as a world's
-    // `use rule` names it) — its traits join the dropdown, valued by the project
-    // export the generator will write.
+  it('offers a project `.rule`’s traits when a world attaches it', () => {
+    // A declarative project rule, referenced by the name it gives itself (as a
+    // world's `use rule` names it) — its traits join the dropdown, valued the
+    // same way every other reference is.
     const wind = parseRuleMeta(
       'rules/wind',
       JSON.stringify({
@@ -87,19 +96,19 @@ describe('traitOptions (traits from the rules in play)', () => {
         },
       }),
     );
-    setProjectRuleMeta([wind!]);
-    setProjectRules(['rules/wind', 'AnimationRule']);
+    project(wind);
+    setProjectRules(['Has Wind', 'Appearance']);
     const byValue = new Map(
       traitOptions().map(([label, value]) => [value, label]),
     );
-    // A project trait's value carries its module, so `use trait` imports it.
-    expect(byValue.get('rules/wind#WindblownTrait')).toBe('Windblown');
-    // A built-in trait is still valued by its bare export name.
-    expect(byValue.get('AppearanceTrait')).toBe('Has Appearance');
+    // A trait's value names its RULE, which is what the generator resolves to a
+    // module — the project's own and the engine's, in the same form.
+    expect(byValue.get('Has Wind#WindblownTrait')).toBe('Windblown');
+    expect(byValue.get('Appearance#AppearanceTrait')).toBe('Has Appearance');
   });
 
   it('is sorted by label and falls back to (none) with no rules', () => {
-    setProjectRules(['AnimationRule']);
+    setProjectRules(['Appearance']);
     const labels = traitOptions().map(([label]) => label);
     expect(labels).toEqual([...labels].sort((a, b) => a.localeCompare(b)));
     setProjectRules([]);

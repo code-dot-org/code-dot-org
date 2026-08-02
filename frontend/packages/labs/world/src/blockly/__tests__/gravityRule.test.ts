@@ -13,6 +13,12 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
 const source = DEFAULT_PROJECT.source.files.gravityRule.contents;
 const meta = parseRuleMeta('rules/gravity', source)!;
 const module_ = ruleMetaToModule(meta);
@@ -27,7 +33,7 @@ describe('rules/gravity.rule', () => {
     expect(meta.name).toBe('Gravity');
     expect(meta.ability).toBe('Has Gravity');
     // Collision is a project rule now, named by module path.
-    expect(meta.requires).toEqual(['rules/motion', 'rules/collision']);
+    expect(meta.requires).toEqual(['Physics', 'Collisions']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',
@@ -63,7 +69,7 @@ describe('rules/gravity.rule', () => {
     // Motion turns velocity into position, or it lags a frame behind.
     const [step] = meta.steps;
     expect(step.order.kind).toBe('before');
-    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
+    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
     expect(step.order.anchor?.stepId).toBe('reposition');
     expect(module_).toContain(
       'rule.addStepBefore("applyVelocity", Motion.steps["reposition"]',
@@ -71,12 +77,13 @@ describe('rules/gravity.rule', () => {
   });
 
   it('names its members where the rest of the project reaches for them', () => {
-    // `player.actor` carries `rules/gravity#AffectedByGravityTrait` and handles
-    // `rules_gravity_StartsFallingEvent`. Those strings are built from the
-    // export names above, so a rename here silently unhooks the tutorial.
+    // `player.actor` carries `Gravity#AffectedByGravityTrait` and handles
+    // `world_on_Gravity_StartsFallingEvent`. Both are built from the rule's NAME
+    // and its members' export names, so renaming either here — the rule in its
+    // `define rule` block, or a member — silently unhooks the tutorial.
     const player = DEFAULT_PROJECT.source.files.player.contents;
-    expect(player).toContain('rules/gravity#AffectedByGravityTrait');
-    expect(player).toContain('world_on_rules_gravity_StartsFallingEvent');
+    expect(player).toContain('Gravity#AffectedByGravityTrait');
+    expect(player).toContain('world_on_Gravity_StartsFallingEvent');
   });
 
   it('declares the query that reads its read-only property', () => {
@@ -111,12 +118,10 @@ describe('rules/gravity.rule', () => {
   it('declares the landing step, anchored after collision resolves', () => {
     // The step that lands actors and raises the falling transitions. It runs
     // after Collision has pushed things out of solids, so what it sees is where
-    // they ended up — and collision is a project rule now, so the anchor names
-    // its MODULE rather than a `world-lab` export.
+    // they ended up. The anchor names that rule, wherever its file is.
     const step = meta.steps.find(s => s.id === 'handleCollisions');
     expect(step?.order.kind).toBe('after');
-    expect(step?.order.anchor?.ownerRef.source).toBe('project');
-    expect(step?.order.anchor?.ownerRef.modulePath).toBe('rules/collision');
+    expect(step?.order.anchor?.ownerRef.ruleName).toBe('Collisions');
     expect(step?.order.anchor?.stepId).toBe('resolve');
   });
 
@@ -213,7 +218,7 @@ describe('rules/gravity.rule', () => {
       }
     ).blocks.blocks;
     const before = tops.find(b => b.type === 'world_rule_step_before')!;
-    expect(before.fields?.STEP).toBe('rules/motion#reposition');
+    expect(before.fields?.STEP).toBe('Physics#reposition');
     expect(before.fields?.ORDER).toBeUndefined();
   });
 
@@ -231,8 +236,8 @@ describe('rules/gravity.rule', () => {
   });
 
   it('is what the world puts in play', () => {
-    expect(DEFAULT_PROJECT.source.files.main.contents).toContain(
-      'rules/gravity',
-    );
+    // By name — the world says which rule, and the generator works out which
+    // file that is when it comes to write the import.
+    expect(DEFAULT_PROJECT.source.files.main.contents).toContain('"Gravity"');
   });
 });

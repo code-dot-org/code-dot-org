@@ -14,7 +14,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {parseRuleMeta} from '../blockly/ruleMeta';
 
-import {stockRule, type StockRule} from './stock';
+import {stockRuleByName, type StockRule} from './stock';
 
 /** Where rules live, by the lab's directory convention (GLOSSARY.md). */
 const RULES_FOLDER = 'rules';
@@ -23,11 +23,20 @@ const RULES_FOLDER = 'rules';
 export interface ImportedRule {
   source: MultiFileSource;
   /**
-   * The extension-less module path — `rules/gravity` — which is what a `use
-   * rule` field stores, what the generated world imports, and what every
-   * reference to the rule's members is built from.
+   * The extension-less module path the rule was written to — `rules/gravity`.
+   * Where it landed, which nothing stores: it is how the generated world will
+   * import it, looked up afresh each time from the name below.
    */
   path: string;
+  /**
+   * The rule's NAME — what a `use rule` field takes as its value.
+   *
+   * Read back from the file that ends up at `path` rather than assumed from the
+   * stock rule, because an import onto an existing file keeps that file: if a
+   * learner renamed their copy to "Moon Gravity", that is the rule this import
+   * selects.
+   */
+  name: string;
 }
 
 /** The `rules/` folder id, creating the folder if the project lacks one. */
@@ -94,20 +103,30 @@ function alreadyImported(source: MultiFileSource, modulePath: string): boolean {
 }
 
 /**
- * The stock rules a rule needs, by module path — its `use rule` dependencies
- * that name a project module rather than a built-in.
+ * The stock rules a rule needs — its `use rule` dependencies that name another
+ * stock rule rather than a built-in.
  *
  * A rule's requirements are part of the rule: gravity is written against
  * collision's traits and motion's step, and importing it without them leaves
- * `use rule rules/collision` pointing at a file that is not there. The paths are
- * literal, because that is how the workspace refers to them.
+ * `use rule Collisions` naming a rule the project does not have. The names are
+ * what the workspace stores, so a stock rule is recognized by what it calls
+ * itself, not by which file it happens to ship in.
  */
 export function stockDependencies(rule: StockRule): StockRule[] {
   const meta = parseRuleMeta(`${RULES_FOLDER}/${rule.id}`, rule.contents);
   return (meta?.requires ?? [])
-    .filter(dep => dep.startsWith(`${RULES_FOLDER}/`))
-    .map(dep => stockRule(dep.slice(`${RULES_FOLDER}/`.length)))
+    .map(dep => stockRuleByName(dep))
     .filter((dep): dep is StockRule => dep !== undefined);
+}
+
+/** The name declared by whatever `.rule` now sits at `modulePath`. */
+function importedName(
+  source: MultiFileSource,
+  modulePath: string,
+): string | undefined {
+  const stem = modulePath.slice(`${RULES_FOLDER}/`.length);
+  const file = Object.values(source.files).find(f => f.name === `${stem}.rule`);
+  return file ? parseRuleMeta(modulePath, file.contents)?.name : undefined;
 }
 
 /** Write one rule's file into `rules/`, under `stem`. */
@@ -155,19 +174,13 @@ function writeRule(
  * rule` naming a file the project did not have, which fails at compile time with
  * nothing on screen to explain it.
  *
- * NOTHING IS EVER RENAMED, and nothing already there is overwritten. A rule's
- * workspace names ITSELF by module path — its own traits and events in `use
- * trait` and `emit`, and the very block types of its members
- * (`world_get_rules_gravity_FallingProperty`) — so a copy saved as
- * `gravity-2.rule` generates a module that imports its own exports:
- *
- *   The symbol "AffectedByGravityTrait" has already been declared
- *
- * and whose blocks quietly read the other rule's properties. Importing a rule
- * the project already has is therefore a no-op that hands back the path it is
- * already at, which is also what makes importing gravity twice harmless — and
- * leaves a learner's edited copy alone, which is the failure that would matter
- * most.
+ * NOTHING IS EVER RENAMED, and nothing already there is overwritten. A second
+ * copy would be a second rule called "Gravity", and a name is what every
+ * reference resolves through: `Gravity#AffectedByGravityTrait` would name two
+ * traits in two modules, and which one a block meant would be down to which
+ * file parsed first. Importing a rule the project already has is therefore a
+ * no-op that hands back what is already there — which is also what leaves a
+ * learner's edited copy alone, the failure that would matter most.
  */
 export function importStockRule(
   source: MultiFileSource,
@@ -192,10 +205,12 @@ export function importStockRule(
   importDependencies(rule, new Set([rule.id]));
 
   const path = `${RULES_FOLDER}/${rule.id}`;
+  const written = alreadyImported(current, path)
+    ? current
+    : writeRule(current, folderId, rule.id, rule);
   return {
-    source: alreadyImported(current, path)
-      ? current
-      : writeRule(current, folderId, rule.id, rule),
+    source: written,
     path,
+    name: importedName(written, path) ?? rule.name,
   };
 }

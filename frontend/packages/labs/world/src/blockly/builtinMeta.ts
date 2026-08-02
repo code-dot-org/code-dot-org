@@ -12,6 +12,7 @@ import * as WorldLab from '../engine';
 import {AnimationRule, SpatialRule} from '../engine';
 
 import {builtinRuleMeta, type RuleMeta} from './ruleMeta';
+import {registerBuiltinRules} from './ruleRegistry';
 
 /**
  * The rules the engine provides, in dependency order.
@@ -41,3 +42,9 @@ export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(
   BUILTIN_RULES,
   WorldLab as unknown as Record<string, unknown>,
 );
+
+// A reference names a rule and nothing else, so resolving one means asking which
+// rule a name means. The engine's rules are the half of that answer that never
+// changes, and they are known as soon as this module is loaded — before any
+// project is; the project's own rules join them per project (registerProjectRules).
+registerBuiltinRules(BUILTIN_RULE_META);
