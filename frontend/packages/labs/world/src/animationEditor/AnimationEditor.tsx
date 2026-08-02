@@ -28,7 +28,11 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {projectSheets, type SheetFile} from '../appearance/sheetFile';
-import {projectFiles} from '../runtime/projectFiles';
+import {
+  animationIdOwners,
+  renameAnimationInSource,
+} from '../blockly/renameAnimation';
+import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import styles from './animationEditor.module.css';
 
@@ -231,11 +235,16 @@ const FrameThumb = ({
  * Every edit rewrites the `.anim` JSON through `onChange`, so the game updates.
  */
 export const AnimationEditor = ({
+  fileId,
   initialContents,
   isReadOnly,
   onChange,
 }: CustomEditorProps) => {
-  const {currentSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  // Read when a rename lands rather than captured at render, so it carries
+  // against the project as it stands then.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
 
   const [doc, setDoc] = useState(() => parseAnim(initialContents));
   // Latest doc for handlers that read-modify-write without re-subscribing.
@@ -272,10 +281,14 @@ export const AnimationEditor = ({
   const spriteUrls = uploaded;
   // Which of those images are grids, and how big their cells are — the `.sheet`
   // files the project holds, keyed by the image each one describes.
-  const sheets = useMemo(
-    () => projectSheets(projectFiles(currentSources.source)),
+  const projectText = useMemo(
+    () => projectFiles(currentSources.source),
     [currentSources],
   );
+  const sheets = useMemo(() => projectSheets(projectText), [projectText]);
+  // Which file defines each animation id, for the rename below.
+  const owners = useMemo(() => animationIdOwners(projectText), [projectText]);
+  const ownPath = filePath(currentSources.source, fileId);
 
   // Decode every referenced sprite to an <img> for canvas drawing.
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
@@ -294,6 +307,8 @@ export const AnimationEditor = ({
   // committed on blur). Keyed by the frame's stable __id + field, so a reorder
   // never mismatches a field to the wrong frame.
   const [draft, setDraft] = useState<Record<string, string>>({});
+  // Why the id in the field was put back, if it was (commitRename).
+  const [renameError, setRenameError] = useState<string | null>(null);
   const seedDraft = useCallback((animId: string | null) => {
     const def = animId ? docRef.current.animations[animId] : null;
     const next: Record<string, string> = {};
@@ -308,6 +323,7 @@ export const AnimationEditor = ({
       }
     }
     setDraft(next);
+    setRenameError(null);
   }, []);
   useEffect(() => {
     seedDraft(selId);
@@ -368,24 +384,71 @@ export const AnimationEditor = ({
     commit({...docRef.current, animations});
   };
 
-  // Rename the selected animation's id (its key — what actors reference). On
-  // blur: reject empty / duplicate (revert), else rekey in place, keeping order.
+  /**
+   * Rename the selected animation's id — the key blocks play it by.
+   *
+   * An id is what a `play animation` block holds, and no block records which
+   * file it came from, so this is an edit to the whole project: the key is
+   * rekeyed here and every play of it is rewritten with it, in ONE write.
+   * Letting the ordinary per-file save follow instead would undo the rewrite —
+   * `saveFile` closes over the sources of the render that made it.
+   */
   const commitRename = () => {
     const oldId = selId;
     const newId = (draft.id ?? '').trim();
     if (!oldId || newId === oldId) {
       return;
     }
-    if (!newId || docRef.current.animations[newId]) {
-      setDraft(prev => ({...prev, id: oldId})); // invalid — revert the field
+    const revert = (why: string): void => {
+      setDraft(prev => ({...prev, id: oldId}));
+      setRenameError(why);
+    };
+    if (!newId) {
+      revert('An animation needs a name to be played by.');
       return;
     }
+    // Taken anywhere in the project, not just in this file: the dropdown offers
+    // every id the project defines, and two animations answering to one id is a
+    // reference with two meanings. This file's own ids come from the live
+    // document rather than from `owners`, which is a render behind whenever two
+    // renames land in quick succession.
+    const takenElsewhere = (owners[newId] ?? []).some(path => path !== ownPath);
+    if (docRef.current.animations[newId] || takenElsewhere) {
+      revert(`Another animation is already called \u201c${newId}\u201d.`);
+      return;
+    }
+    setRenameError(null);
+
     const animations: Record<string, AnimDef> = {};
     for (const [id, def] of Object.entries(docRef.current.animations)) {
       animations[id === oldId ? newId : id] = def;
     }
+    const next = {...docRef.current, animations};
     setSelectedId(newId);
-    commit({...docRef.current, animations});
+    setLive(next);
+    if (isReadOnly) {
+      return;
+    }
+    // Unless the old id was ambiguous already — defined in another `.anim` too
+    // — in which case a block that plays it may mean the other one, and
+    // rewriting would move plays that were never this animation's. The key is
+    // still rekeyed; the plays are left as written.
+    const ambiguous = (owners[oldId] ?? []).some(path => path !== ownPath);
+    const sources = sourcesRef.current;
+    const carried = ambiguous
+      ? sources.source
+      : renameAnimationInSource(sources.source, oldId, newId);
+    const file = carried.files[fileId];
+    updateSources({
+      ...sources,
+      source: {
+        ...carried,
+        files: {
+          ...carried.files,
+          [fileId]: {...file, contents: serialize(next)},
+        },
+      },
+    });
   };
 
   const editLabel = (raw: string) => {
@@ -585,9 +648,11 @@ export const AnimationEditor = ({
               size="s"
               value={draft.id ?? ''}
               disabled={isReadOnly}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                setDraft(prev => ({...prev, id: e.target.value}))
-              }
+              errorMessage={renameError ?? undefined}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                setRenameError(null);
+                setDraft(prev => ({...prev, id: e.target.value}));
+              }}
               onBlur={commitRename}
               onKeyDown={blurOnEnter}
             />
@@ -763,19 +828,7 @@ const SortableFrame = ({
           {index + 1}
         </Typography>
         <FrameThumb frame={frame} images={images} />
-        <div className={styles.spriteWrap}>
-          <SimpleDropdown
-            name={`f-${frame.__id}-sprite`}
-            labelText="Sprite"
-            size="s"
-            disabled={disabled}
-            selectedValue={frame.sprite}
-            items={spriteOptions.map(s => ({value: s, text: s}))}
-            onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-              onSprite(e.target.value)
-            }
-          />
-        </div>
+        <div className={styles.frameSpacer} />
         <div className={styles.frameButtons}>
           <IconButton
             aria-label="Move frame up"
@@ -810,6 +863,19 @@ const SortableFrame = ({
         </div>
       </div>
       <div className={styles.frameGrid}>
+        <div className={styles.spriteWrap}>
+          <SimpleDropdown
+            name={`f-${frame.__id}-sprite`}
+            labelText="Sprite"
+            size="s"
+            disabled={disabled}
+            selectedValue={frame.sprite}
+            items={spriteOptions.map(s => ({value: s, text: s}))}
+            onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+              onSprite(e.target.value)
+            }
+          />
+        </div>
         <TextField
           name={`f-${frame.__id}-delay`}
           label="Delay (ms)"
@@ -974,12 +1040,14 @@ const CellPicker = ({
   return (
     <div className={styles.cellPicker}>
       <span className={styles.cellHint}>Cell:</span>
-      <canvas
-        ref={ref}
-        className={styles.sheet}
-        style={{width, height}}
-        onClick={pick}
-      />
+      <div className={styles.sheetScroll}>
+        <canvas
+          ref={ref}
+          className={styles.sheet}
+          style={{width, height}}
+          onClick={pick}
+        />
+      </div>
     </div>
   );
 };

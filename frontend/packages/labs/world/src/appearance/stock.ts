@@ -93,7 +93,10 @@ function strip(
         width: STOCK_CELL,
         height: STOCK_CELL,
       },
-      delay: 1000 / frameRate,
+      // Whole milliseconds: a frame is a number a learner reads and edits, and
+      // "83.33333333333333" in a field says nothing 83 does not. The engine
+      // does not care about the third of a millisecond either.
+      delay: Math.round(1000 / frameRate),
     })),
   };
 }
