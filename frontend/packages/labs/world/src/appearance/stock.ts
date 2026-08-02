@@ -79,11 +79,9 @@ function strip(
   sprite: string,
   frames: number,
   frameRate: number,
-  name: string,
   loop = true,
 ): AnimationFile['animations'][string] {
   return {
-    name,
     loop,
     // The timing said once, on the animation, rather than copied onto every
     // frame: a strip has ONE rate, and six copies of it are six things to keep
@@ -104,12 +102,10 @@ function strip(
 /** One animation that scales a single image, rather than reading a strip. */
 function pulse(
   sprite: string,
-  name: string,
   scales: readonly number[],
   frameRate: number,
 ): AnimationFile['animations'][string] {
   return {
-    name,
     frameRate,
     frames: scales.map(scale => ({
       sprite: spriteFileName(sprite),
@@ -182,7 +178,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     sprites: ['coinSpin'],
     document: {
       type: 'animation',
-      animations: {coinSpin: strip('coinSpin', 6, 12, 'Coin Spin')},
+      animations: {coinSpin: strip('coinSpin', 6, 12)},
     },
   },
   {
@@ -192,7 +188,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     sprites: ['playerWalk'],
     document: {
       type: 'animation',
-      animations: {playerWalk: strip('playerWalk', 4, 8, 'Player Walk')},
+      animations: {playerWalk: strip('playerWalk', 4, 8)},
     },
   },
   {
@@ -203,7 +199,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     sprites: ['switch'],
     document: {
       type: 'animation',
-      animations: {switchFlip: strip('switch', 6, 12, 'Switch', false)},
+      animations: {switchFlip: strip('switch', 6, 12, false)},
     },
   },
   {
@@ -213,7 +209,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     sprites: ['ball'],
     document: {
       type: 'animation',
-      animations: {pulse: pulse('ball', 'Pulse', [0.7, 1, 1.3, 1], 6)},
+      animations: {pulse: pulse('ball', [0.7, 1, 1.3, 1], 6)},
     },
   },
   {
@@ -224,7 +220,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     document: {
       type: 'animation',
       animations: {
-        playerBob: pulse('player', 'Player Bob', [1, 1.25, 1, 0.8], 7),
+        playerBob: pulse('player', [1, 1.25, 1, 0.8], 7),
       },
     },
   },

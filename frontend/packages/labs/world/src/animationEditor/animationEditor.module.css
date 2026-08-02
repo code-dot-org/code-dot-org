@@ -183,6 +183,13 @@
   gap: 0.25rem;
 }
 
+/* The fold over a frame's scale and offset. Flush with the fields it hides. */
+.disclosure {
+  margin-top: 0.25rem;
+  text-transform: none;
+  justify-content: flex-start;
+}
+
 /* What can be done to the whole strip, under it. */
 .stripActions {
   display: flex;

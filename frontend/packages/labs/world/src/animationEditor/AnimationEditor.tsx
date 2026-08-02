@@ -75,7 +75,6 @@ interface Frame {
   __id: string;
 }
 interface AnimDef {
-  name?: string;
   loop?: boolean;
   /** Frames per second, for the frames that do not name a delay (timing.ts). */
   frameRate?: number;
@@ -104,7 +103,6 @@ function parseAnim(contents: string): AnimFile {
         const animations: Record<string, AnimDef> = {};
         for (const [id, def] of Object.entries(raw.animations)) {
           animations[id] = {
-            name: def.name,
             loop: def.loop,
             frameRate: def.frameRate,
             frames: (def.frames ?? []).map(f => ({...f, __id: uid()})),
@@ -145,7 +143,6 @@ function serialize(doc: AnimFile): string {
   const animations: Record<string, object> = {};
   for (const [id, def] of Object.entries(doc.animations)) {
     animations[id] = {
-      ...(def.name ? {name: def.name} : {}),
       ...(def.loop === false ? {loop: false} : {}),
       ...(def.frameRate ? {frameRate: def.frameRate} : {}),
       frames: def.frames.map(cleanFrame),
@@ -367,7 +364,6 @@ export const AnimationEditor = ({
     const next: Record<string, string> = {};
     if (def && animId) {
       next.id = animId;
-      next.label = def.name ?? '';
     }
     // `fps` is deliberately absent: like a frame's fields, it is read from the
     // animation unless it is being typed into.
@@ -514,12 +510,6 @@ export const AnimationEditor = ({
     );
   };
 
-  const editLabel = (raw: string) => {
-    setDraft(prev => ({...prev, label: raw}));
-    if (selected) {
-      setLive(withDef({...selected, name: raw || undefined}));
-    }
-  };
   /**
    * Retime the whole animation, in frames per second.
    *
@@ -905,7 +895,10 @@ export const AnimationEditor = ({
           <div className={styles.detailHeader}>
             <TextField
               name="anim-id"
-              label="Name (id)"
+              // One name, which is the id blocks play it by. There used to be a
+              // second, friendlier one in the file; nothing ever displayed it,
+              // so it was a name to keep in step with the real name for nothing.
+              label="Name"
               size="s"
               value={draft.id ?? ''}
               disabled={isReadOnly}
@@ -915,18 +908,6 @@ export const AnimationEditor = ({
                 setDraft(prev => ({...prev, id: e.target.value}));
               }}
               onBlur={commitRename}
-              onKeyDown={blurOnEnter}
-            />
-            <TextField
-              name="anim-label"
-              label="Label (optional)"
-              size="s"
-              value={draft.label ?? ''}
-              disabled={isReadOnly}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                editLabel(e.target.value)
-              }
-              onBlur={commitCurrent}
               onKeyDown={blurOnEnter}
             />
             <div className={styles.rateField}>
@@ -1315,6 +1296,28 @@ const FrameInspector = ({
   const d = (field: string) =>
     draft[`${frame.__id}.${field}`] ?? authored(field);
 
+  // What this frame has been tuned to, if anything — shown on the disclosure
+  // when it is closed, so nothing about the frame is hidden by folding it away.
+  const parts: string[] = [];
+  if (frame.scale !== undefined && frame.scale !== 1) {
+    parts.push(`scale ${frame.scale}`);
+  }
+  if (frame.offset && (frame.offset.x !== 0 || frame.offset.y !== 0)) {
+    parts.push(`offset ${frame.offset.x}, ${frame.offset.y}`);
+  }
+  const summary = parts.join(', ');
+
+  // Open for a frame that has been tuned, closed for one that has not — and
+  // then however the learner leaves it, until they move to another frame. Set
+  // during render rather than in an effect: this is state derived from a prop
+  // change, which React handles without the extra pass an effect costs.
+  const [open, setOpen] = useState(summary !== '');
+  const shown = useRef(frame.__id);
+  if (shown.current !== frame.__id) {
+    shown.current = frame.__id;
+    setOpen(summary !== '');
+  }
+
   return (
     <div className={styles.frame}>
       <div className={styles.frameHead}>
@@ -1411,46 +1414,76 @@ const FrameInspector = ({
           onBlur={onCommit}
           onKeyDown={blurOnEnter}
         />
-        <TextField
-          name={`f-${frame.__id}-scale`}
-          label="Scale"
-          inputType="number"
-          size="s"
-          value={d('scale')}
-          disabled={disabled}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onNum('scale', e.target.value)
-          }
-          onBlur={onCommit}
-          onKeyDown={blurOnEnter}
-        />
-        <TextField
-          name={`f-${frame.__id}-offx`}
-          label="Offset X"
-          inputType="number"
-          size="s"
-          value={d('offx')}
-          disabled={disabled}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onNum('offx', e.target.value)
-          }
-          onBlur={onCommit}
-          onKeyDown={blurOnEnter}
-        />
-        <TextField
-          name={`f-${frame.__id}-offy`}
-          label="Offset Y"
-          inputType="number"
-          size="s"
-          value={d('offy')}
-          disabled={disabled}
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            onNum('offy', e.target.value)
-          }
-          onBlur={onCommit}
-          onKeyDown={blurOnEnter}
-        />
       </div>
+
+      {/* Scale and offset are tuning — a frame that needs neither (which is
+          most of them) should not have to say so three times. Folded away, but
+          never silently: the button carries what they are set to. */}
+      <Button
+        className={styles.disclosure}
+        variant="text"
+        size="extraSmall"
+        aria-expanded={open}
+        aria-controls={`f-${frame.__id}-adjust`}
+        startIcon={
+          <FontAwesomeV6Icon
+            iconName={open ? 'chevron-down' : 'chevron-right'}
+            iconStyle="solid"
+          />
+        }
+        onClick={() => setOpen(!open)}
+      >
+        {open || !summary
+          ? 'Size and position'
+          : `Size and position — ${summary}`}
+      </Button>
+      {open && (
+        <div className={styles.frameGrid} id={`f-${frame.__id}-adjust`}>
+          <TextField
+            name={`f-${frame.__id}-scale`}
+            label="Scale"
+            inputType="number"
+            size="s"
+            value={d('scale')}
+            placeholder="1"
+            disabled={disabled}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onNum('scale', e.target.value)
+            }
+            onBlur={onCommit}
+            onKeyDown={blurOnEnter}
+          />
+          <span />
+          <TextField
+            name={`f-${frame.__id}-offx`}
+            label="Offset X"
+            inputType="number"
+            size="s"
+            value={d('offx')}
+            placeholder="0"
+            disabled={disabled}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onNum('offx', e.target.value)
+            }
+            onBlur={onCommit}
+            onKeyDown={blurOnEnter}
+          />
+          <TextField
+            name={`f-${frame.__id}-offy`}
+            label="Offset Y"
+            inputType="number"
+            size="s"
+            value={d('offy')}
+            placeholder="0"
+            disabled={disabled}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              onNum('offy', e.target.value)
+            }
+            onBlur={onCommit}
+            onKeyDown={blurOnEnter}
+          />
+        </div>
+      )}
       {sheets[frame.sprite] && (
         <CellPicker
           image={images[frame.sprite]}
