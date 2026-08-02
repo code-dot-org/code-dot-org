@@ -30,8 +30,18 @@ import {buildDomainPalette} from './domainBlocks';
 import {setEffectImportHandler} from './effectImport';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
-import {renameRuleInSource, renameRuleReferences} from './renameRule';
+import {
+  duplicateMemberKeys,
+  memberKeys,
+  renameMemberInSource,
+  renameMemberReferences,
+  renamedMember,
+  renameRuleInSource,
+  renameRuleReferences,
+  type MemberKey,
+} from './renameRule';
 import {setRuleImportHandler} from './ruleImport';
+import {parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -89,17 +99,17 @@ function ruleRename(
 }
 
 /**
- * Whether this event is a rule's name being TYPED, rather than named.
+ * Whether this event is a name being TYPED, rather than named.
  *
  * Blockly writes a text field on every keystroke, as an intermediate change, so
  * that blocks resize while you type. For most fields persisting that is
- * harmless. For this one it is not: the file would declare "M", "Mo", "Moo"…
- * in turn, each of them a rule name nothing refers to and one of which may
- * collide with a real rule — and the name a rename starts from would be gone
- * before the rename happened. So the keystrokes are shown and not saved; the
- * commit below is what the project hears about.
+ * harmless. For the ones a `.rule` declares things with it is not: the file
+ * would declare "M", "Mo", "Moo"… in turn, each of them a name nothing refers
+ * to and one of which may collide with something real — and the name a rename
+ * starts FROM would be gone before the rename happened. So the keystrokes are
+ * shown and not saved; the commit is what the project hears about.
  */
-function isTypingRuleName(
+function isTypingDeclaration(
   event: Blockly.Events.Abstract,
   workspace: Blockly.WorkspaceSvg,
 ): boolean {
@@ -110,7 +120,39 @@ function isTypingRuleName(
   const block = change.blockId
     ? workspace.getBlockById(change.blockId)
     : undefined;
-  return change.name === 'NAME' && block?.type === 'world_rule';
+  return !!block?.type.startsWith('world_rule');
+}
+
+/**
+ * Whether this event opens or closes a signature bubble, and which.
+ *
+ * A `define block`'s wording lives in its mutator, and Blockly recomposes the
+ * block on every keystroke there — so the member's name changes letter by
+ * letter, as a mutation rather than a field edit. Reconciling on each of those
+ * would rewrite the project and reload the workspace out from under the bubble
+ * being typed into. Closing it is the commit.
+ */
+function bubbleToggle(event: Blockly.Events.Abstract): boolean | undefined {
+  if (event.type !== Blockly.Events.BUBBLE_OPEN) {
+    return undefined;
+  }
+  const bubble = event as Blockly.Events.BubbleOpen;
+  return bubble.bubbleType === 'mutator' ? bubble.isOpen : undefined;
+}
+
+/**
+ * What a rule's members are called as the editor opens it.
+ *
+ * The state the first edit is compared against — without it, a member renamed
+ * before anything else in the session would look like one member leaving and
+ * another arriving out of nowhere, which is not a rename anybody can follow.
+ */
+function initialMemberKeys(
+  modulePath: string | undefined,
+  contents: string,
+): MemberKey[] {
+  const meta = modulePath ? parseRuleMeta(modulePath, contents) : undefined;
+  return meta ? memberKeys(meta) : [];
 }
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
@@ -258,8 +300,107 @@ export const BlocklyFileEditor = ({
     [isReadOnly],
   );
 
-  // A workspace to reload once the palette has caught up (see `handleRename`).
+  // A workspace to reload once the palette has caught up (see `carry`).
   const pendingReload = useRef<BlocklySerialization | null>(null);
+  // Whether a `define block`'s signature is being typed into (see `bubbleToggle`).
+  const signatureBubbleOpen = useRef(false);
+  // The keys this rule's members are referred to by, as of the last state the
+  // project agreed on. What the next commit is compared against.
+  const memberState = useRef<MemberKey[]>(
+    initialMemberKeys(ownRuleModule, initialContents),
+  );
+
+  /**
+   * Write a rename through the project, and reload this workspace.
+   *
+   * `renamed` is the project with the references rewritten; `self` is this
+   * file's own workspace rewritten from the LIVE one, because what is on disk
+   * for it is an edit behind — the rename is in the workspace being handled.
+   *
+   * Writing everything in one `updateSources` rather than letting the ordinary
+   * per-file save follow: `saveFile` closes over the sources of the render that
+   * made it, and would put the other files back.
+   */
+  const carry = useCallback(
+    (renamed: MultiFileSource, self: string): void => {
+      const sources = sourcesRef.current;
+      const file = renamed.files[fileId];
+      updateSources({
+        ...sources,
+        source: {
+          ...renamed,
+          files: {...renamed.files, [fileId]: {...file, contents: self}},
+        },
+      });
+      // The blocks in THIS workspace carry the old name in their types, and a
+      // block's type cannot be changed in place. The palette rebuilds from the
+      // sources we just wrote; the workspace is reloaded from the rewritten
+      // state once it has (see the effect below).
+      pendingReload.current = JSON.parse(self) as BlocklySerialization;
+    },
+    [fileId, updateSources],
+  );
+
+  /**
+   * Carry a renamed MEMBER through the project.
+   *
+   * A member is referred to by the export name its own name derives, so
+   * renaming a trait, a property, an event, a step, or the wording of a designed
+   * block is the same kind of edit as renaming the rule: every reference to it
+   * has to follow. What was renamed is worked out by comparing the rule's
+   * members with the last state the project agreed on — not by reading the edit
+   * — because the edits that rename a member are various (a NAME field, a label
+   * in a mutator) and what they have in common is only the result.
+   */
+  const reconcileMembers = useCallback(
+    (contents: string): void => {
+      if (!ownRuleModule) {
+        return;
+      }
+      const meta = parseRuleMeta(ownRuleModule, contents);
+      if (!meta) {
+        return;
+      }
+      const keys = memberKeys(meta);
+      const before = memberState.current;
+      memberState.current = keys;
+      const rename = renamedMember(before, keys);
+      if (!rename) {
+        return;
+      }
+      // Two members with one key is a reference with two meanings — and unlike a
+      // rule's name, there is no one field to put back (a designed block's name
+      // is its whole signature). So it is left as written, said out loud on the
+      // rule, and not carried: rewriting references to a key that names two
+      // things would only spread the ambiguity.
+      const duplicated = duplicateMemberKeys(keys);
+      const [rule] = workspaceRef.current?.getBlocksByType('world_rule') ?? [];
+      rule?.setWarningText(
+        duplicated.length
+          ? `Two of this rule's members are both called \u201c${duplicated[0]}\u201d.`
+          : null,
+      );
+      if (duplicated.length) {
+        return;
+      }
+      const self = renameMemberReferences(
+        contents,
+        meta.name,
+        rename.from,
+        rename.to,
+      );
+      carry(
+        renameMemberInSource(
+          sourcesRef.current.source,
+          meta.name,
+          rename.from,
+          rename.to,
+        ),
+        self ?? contents,
+      );
+    },
+    [carry, ownRuleModule],
+  );
 
   /**
    * Carry a rule's new name through the project.
@@ -301,43 +442,52 @@ export const BlocklyFileEditor = ({
       }
       rename.block.setWarningText(null);
 
-      const sources = sourcesRef.current;
-      const renamed = renameRuleInSource(
-        sources.source,
-        rename.from,
-        rename.to,
-      );
-      // This file last and from the LIVE workspace: what is on disk for it is a
-      // keystroke behind, and the rename is in the workspace we are handling.
       const self = renameRuleReferences(contents, rename.from, rename.to);
-      const file = renamed.files[fileId];
-      updateSources({
-        ...sources,
-        source: {
-          ...renamed,
-          files: {
-            ...renamed.files,
-            [fileId]: {...file, contents: self ?? contents},
-          },
-        },
-      });
-      // The blocks in THIS workspace carry the old name in their types, and a
-      // block's type cannot be changed in place. The palette rebuilds from the
-      // sources we just wrote; the workspace is reloaded from the rewritten
-      // state once it has (see the effect below).
-      pendingReload.current = JSON.parse(
+      carry(
+        renameRuleInSource(sourcesRef.current.source, rename.from, rename.to),
         self ?? contents,
-      ) as BlocklySerialization;
+      );
       return true;
     },
-    [fileId, ownRuleModule, updateSources],
+    [carry, ownRuleModule],
   );
 
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
-      // Ignore pure UI events (selection, viewport) — only persist real edits.
-      if (!workspace || event.isUiEvent || isTypingRuleName(event, workspace)) {
+      if (!workspace) {
+        return;
+      }
+      // Ignore pure UI events (selection, viewport) — only persist real edits,
+      // except a mutator bubble closing, which commits a signature.
+      const bubble = bubbleToggle(event);
+      if (bubble !== undefined) {
+        signatureBubbleOpen.current = bubble;
+        if (bubble) {
+          return;
+        }
+        // Closing it commits the session: a designed block's name is its whole
+        // signature, so what was typed into the bubble is only finished now.
+        const edited = JSON.stringify(
+          Blockly.serialization.workspaces.save(workspace),
+          null,
+          2,
+        );
+        reconcileMembers(edited);
+        if (!pendingReload.current) {
+          onChange(edited);
+        }
+        return;
+      }
+      // An open bubble recomposes its block on every keystroke, so saving those
+      // would put a half-renamed member in front of the compiler — which reports
+      // it, having been handed a rule whose own body no longer names what it
+      // declares. The session is written when it closes, above.
+      if (
+        event.isUiEvent ||
+        signatureBubbleOpen.current ||
+        isTypingDeclaration(event, workspace)
+      ) {
         return;
       }
       const state = Blockly.serialization.workspaces.save(
@@ -348,9 +498,17 @@ export const BlocklyFileEditor = ({
       if (rename && handleRename(rename, contents)) {
         return;
       }
+      // A member's name may have changed with this edit — but not while its
+      // signature is being typed into, which recomposes the block per keystroke.
+      if (!signatureBubbleOpen.current) {
+        reconcileMembers(contents);
+        if (pendingReload.current) {
+          return;
+        }
+      }
       onChange(contents);
     },
-    [onChange, handleRename],
+    [onChange, handleRename, reconcileMembers],
   );
 
   // Reload after a rename, once `blocks` carries the renamed member types —
