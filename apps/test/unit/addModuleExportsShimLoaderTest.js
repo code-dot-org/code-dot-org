@@ -30,10 +30,16 @@ ${body}`;
 
 describe('add-module-exports-shim-loader', function () {
   it('unwraps a module whose only export is default', function () {
+    // Single-export shape: swc uses a bare defineProperty, not its
+    // _export helper — and builtin swc hoists leading file comments
+    // BETWEEN the arguments, so detection must not parse the property
+    // name positionally.
     const exported = runShimmed(
       swcModule(`
 var _default = { create: function () { return 'made'; } };
-Object.defineProperty(exports, "default", {
+Object.defineProperty(exports, /** hoisted
+ * file comment blob
+ */ "default", {
   enumerable: true,
   get: function () { return _default; },
 });`)
@@ -47,25 +53,33 @@ Object.defineProperty(exports, "default", {
     // Mixed legacy style: `import` (which makes swc stamp __esModule)
     // plus bare `exports.foo =` assignments and no ESM exports.
     const exported = runShimmed(
-      swcModule(`exports.createToolbox = function () { return 'toolbox'; };`)
+      swcModule(`
+exports.createToolbox = function () { return 'toolbox'; };
+exports.self = exports;`)
     );
     // babel does not stamp __esModule here, so `import x from` interop
     // wraps the exports object whole; the marker must be gone.
     assert.isUndefined(exported.__esModule);
     assert.equal(exported.createToolbox(), 'toolbox');
+    // Identity must be preserved: modules like studio/studio.js alias
+    // module.exports and mutate it at runtime, so consumers must hold
+    // the same object, not a laundered copy.
+    assert.strictEqual(exported.self, exported);
   });
 
   it('leaves modules with named ESM exports alone', function () {
     const exported = runShimmed(
       swcModule(`
+function _export(target, all) {
+  for (var name in all) Object.defineProperty(target, name, {
+    enumerable: true,
+    get: all[name],
+  });
+}
 var foo = 1;
-Object.defineProperty(exports, "foo", {
-  enumerable: true,
-  get: function () { return foo; },
-});
-Object.defineProperty(exports, "default", {
-  enumerable: true,
-  get: function () { return 'dflt'; },
+_export(exports, {
+  foo: function () { return foo; },
+  default: function () { return 'dflt'; },
 });`)
     );
     // default + named: standard interop applies, nothing rewritten.
