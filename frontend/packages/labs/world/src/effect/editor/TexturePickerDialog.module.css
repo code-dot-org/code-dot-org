@@ -1,21 +1,50 @@
-.title {
-  padding: 12px 16px 8px;
-  font-size: 14px;
-}
+/* The test-texture picker's CONTENT. The dialog itself — surface, width,
+   padding, the button row — is the design system's `Dialog`. Colors are the
+   semantic tokens rather than the editor's `--effect-editor-*` ones: this is a
+   dialog over the whole lab, not a surface inside the dark canvas. */
 
 .list {
-  min-width: 300px;
-  padding-bottom: 8px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
 }
 
+/* One row per texture: a whole-row button, so the target is the size of the
+   thing being chosen rather than a word beside it. Layout only — the colors,
+   the border, the hover and the focus ring are the design system's, because a
+   row here should read as the same kind of thing as a button anywhere else. */
 .option {
+  display: flex;
   gap: 12px;
   align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  text-align: start;
+  text-transform: none;
 }
 
-.thumbnail {
+/* `.list` for the specificity: the design system's dialog sizes any `img` in
+   its text section as a banner (16.25rem × 8.625rem), which is what these were
+   drawn as before this rule. They are thumbnails; the size is the one the
+   canvas was drawn at. */
+.list .thumbnail {
   display: block;
   flex: 0 0 auto;
-  border: 1px solid var(--effect-editor-border);
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
   border-radius: 4px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
 }

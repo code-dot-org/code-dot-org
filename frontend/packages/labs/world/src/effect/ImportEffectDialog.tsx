@@ -5,10 +5,10 @@
 // same thing the library was written to provide: a name, a sentence saying what
 // the effect does, and the knobs it offers.
 
-import {Button} from '@mui/material';
-import {useCallback} from 'react';
+import {Button, Typography} from '@mui/material';
+import {useState} from 'react';
 
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 
 import styles from './importEffectDialog.module.css';
 import {translate} from './localization';
@@ -25,58 +25,74 @@ export const ImportEffectDialog = ({
   onImport,
   onCancel,
 }: ImportEffectDialogProps) => {
-  const choose = useCallback(
-    (effect: StockEffect) => () => onImport(effect),
-    [onImport],
-  );
+  // Picking a row selects it; `Import` is what commits. A click that copies a
+  // file into the project the moment it lands is a decision made by the mouse,
+  // and reading the next row down is how somebody decides they wanted that one.
+  const [chosen, setChosen] = useState<StockEffect | null>(null);
 
   return (
-    <CustomDialog
-      className={styles.dialog}
+    <Dialog
+      // A picker, not an alert: `Dialog` declares `role="alertdialog"`, which
+      // announces something that needs answering now. The prop spread lands
+      // after it, so this is the role that reaches the DOM.
+      role="dialog"
+      title={translate('Add an effect')}
+      description={translate(
+        'Pick one to copy into your project. You can open it afterwards and change anything you like.',
+      )}
       onClose={onCancel}
       closeLabel={translate('Close')}
-    >
-      <h2 className={styles.title}>{translate('Add an effect')}</h2>
-      <p className={styles.intro}>
-        {translate(
-          'Pick one to copy into your project. You can open it afterwards and change anything you like.',
-        )}
-      </p>
-      {/* In the library's order, which is the order they teach in: the first
-          is the one to read if you have never seen a shader. */}
-      <ul className={styles.list}>
-        {STOCK_EFFECTS.map(effect => (
-          <li key={effect.id}>
-            <button
-              type="button"
-              className={styles.effect}
-              onClick={choose(effect)}
-            >
-              <span className={styles.name}>{effect.document.name}</span>
-              <span className={styles.description}>
-                {effect.document.description}
-              </span>
-              {effect.document.parameters.length > 0 && (
-                // The knobs, named. Two effects can do similar things and
-                // differ entirely in what they let you control.
-                <span className={styles.knobs}>
-                  {translate('Knobs: {names}', {
-                    names: effect.document.parameters
-                      .map(parameter => parameter.name)
-                      .join(', '),
-                  })}
-                </span>
-              )}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <div className={styles.actions}>
-        <Button variant="text" color="secondary" onClick={onCancel}>
-          {translate('Cancel')}
-        </Button>
-      </div>
-    </CustomDialog>
+      primaryButtonProps={{
+        children: translate('Import'),
+        disabled: chosen === null,
+        onClick: () => chosen && onImport(chosen),
+      }}
+      secondaryButtonProps={{
+        children: translate('Cancel'),
+        onClick: onCancel,
+      }}
+      customContent={
+        /* In the library's order, which is the order they teach in: the first
+           is the one to read if you have never seen a shader. */
+        <ul className={styles.list}>
+          {STOCK_EFFECTS.map(effect => (
+            <li key={effect.id}>
+              <Button
+                className={styles.effect}
+                // The design system's own colors, so a row reads as the same
+                // kind of thing as every other button on the site — and its
+                // selected state is the one the system already has a look for.
+                variant={chosen?.id === effect.id ? 'contained' : 'outlined'}
+                color="secondary"
+                size="small"
+                fullWidth
+                aria-pressed={chosen?.id === effect.id}
+                onClick={() => setChosen(effect)}
+                onDoubleClick={() => onImport(effect)}
+              >
+                <Typography component="span" variant="strong" color="inherit">
+                  {effect.document.name}
+                </Typography>
+                <Typography component="span" variant="body4" color="inherit">
+                  {effect.document.description}
+                </Typography>
+                {effect.document.parameters.length > 0 && (
+                  // The knobs, named. Two effects can do similar things and
+                  // differ entirely in what they let you control.
+                  <Typography component="span" variant="body4" color="inherit">
+                    {translate('Knobs: {names}', {
+                      names: effect.document.parameters
+                        .map(parameter => parameter.name)
+                        .join(', '),
+                    })}
+                  </Typography>
+                )}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      }
+    />
   );
 };
 

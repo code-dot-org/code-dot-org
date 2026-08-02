@@ -438,11 +438,25 @@ inspector does. And their labels follow the lab's `data-theme` while MUI's
 paints its own surface from `--effect-editor-*` rather than taking Paper's
 default — otherwise a dark-mode popover is a white panel with white labels.
 
-One hard rule: **no MUI component may portal**. Portals mount on
-`document.body`, outside the `data-notranslate` container. Selects are native
-(`slotProps.select.native`), menus are inline `MenuList`s, and the theme sets
-`disablePortal` defaults on Popover/Menu/Modal/Dialog as a backstop — the
-test-texture picker is a `Dialog` that renders inline for exactly this reason.
+Dialogs are the design system's `Dialog` — the whole thing, not just its
+`CustomDialog` foundation: the title and description come from its props, the
+buttons from its `primaryButtonProps`/`secondaryButtonProps`, and the site's
+dialog styling comes with them. Two overrides make it fit a picker: `role`
+(`Dialog` declares `alertdialog`, which announces something that needs
+answering now) and a primary button that reads `Import` / `Use texture` rather
+than a confirmation. Choosing is deferred — a row selects, the primary commits —
+because the alternative is a file copied into the project, or a preview
+changed, by the click that was still reading the options. The rows themselves
+are design-system `Button`s carrying MUI `Typography`, so a row reads as the
+same kind of thing as a button anywhere else on the site, selected state
+included.
+
+One hard rule: **nothing may portal**. Portals mount on `document.body`,
+outside the `data-notranslate` container. DSCO's `SimpleDropdown` is a native
+`<select>` and its `CustomDialog` renders inline, which is what the test-texture
+picker is; menus are inline `MenuList`s; and the theme sets `disablePortal`
+defaults on MUI's Popover/Menu/Modal/Dialog as a backstop for anything added
+later.
 
 #### Localization
 
