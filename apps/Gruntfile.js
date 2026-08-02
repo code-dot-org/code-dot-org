@@ -274,7 +274,7 @@ module.exports = function (grunt) {
           dest: 'build/package/js',
           // e.g. webpack-runtimewp0123456789aabbccddee.min.js --> webpack-runtime.min.js
           rename: function (dest, src) {
-            var outputFile = src.replace(/wp[0-9a-f]{20}/, '');
+            var outputFile = src.replace(/wp[0-9a-f]{16,20}/, '');
             return path.join(dest, outputFile);
           },
         },
@@ -380,6 +380,14 @@ module.exports = function (grunt) {
   };
 
   config.exec = {
+    // APPS_BUNDLER=rspack swaps only the JS bundling step of `grunt
+    // build`; every other task (sass, locales, copies, karma) is
+    // bundler-independent and runs unchanged.  RSPACK_SWC defaults to
+    // the full-swc mode here because this path exists to prove the
+    // production story; see rspack.config.js.
+    rspackBuild:
+      (process.env.RSPACK_SWC ? '' : 'RSPACK_SWC=all ') +
+      'node node_modules/.bin/rspack build --config rspack.config.js',
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
@@ -607,12 +615,20 @@ module.exports = function (grunt) {
 
   grunt.registerTask('postbuild', ['newer:copy:static', 'newer:sass']);
 
+  const APPS_BUNDLER = process.env.APPS_BUNDLER || 'webpack';
+
   grunt.registerTask('build', [
     'prebuild',
     // For any minifiable libs, generate minified sources if they do not already
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
-    envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
+    // rspack.config.js selects minify from NODE_ENV, which build:dist
+    // sets, so one exec target covers both dev and production builds.
+    APPS_BUNDLER === 'rspack'
+      ? 'exec:rspackBuild'
+      : envConstants.DEV
+      ? 'webpack:build'
+      : 'webpack:uglify',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash',
   ]);
