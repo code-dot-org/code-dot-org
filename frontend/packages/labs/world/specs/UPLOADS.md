@@ -107,6 +107,10 @@ type="file">`, MIME gating from a new config `validMimeTypes` /
   resolution folds into the `ANIMATIONS.md` render descriptor (`frame.sprite` →
   resolved self-origin URL). The esbuild file-map stays text.
 
+  **Superseded (§9).** There is no vendor half to resolve any more: every image
+  a game draws is a file the project holds, so `frame.sprite` is always a project
+  file name and `assetBase` left the driver with the stock textures.
+
 ## 5. Moderation
 
 Legacy runs `moderateImage()` before non-start uploads and shows a
@@ -154,7 +158,7 @@ type="file">`: a text file reads into contents, a binary file uploads via the
   preview in the existing `LOAD` message (`assets: {fileName: dataURL}`). The
   preview's CSP already allows `img-src 'self' blob: data:`, and Phaser loads
   images via `Image` elements (not `fetch`, so `connect-src 'none'` is not in
-  play — that is why the vendor sprites load too), so the driver just
+  play), so the driver just
   `load.image(fileName, dataURL)`s them; an animation frame or `SpriteProperty`
   references an uploaded sprite by its file name. No SW change, no self-origin
   path, no ack race. Unit-tested (`projectAssets`) and browser-verified: after
@@ -164,6 +168,8 @@ U1–U3 are framework work (Web Lab shares them); U4 is World-Lab-specific. This
 slots **before** `ANIMATIONS.md` Phase D's custom-asset half — Phases A–C (stock
 animations) need none of it; stock and uploaded sprites converge on the driver's
 texture-key lookup (`frame.sprite` = a stock name or an uploaded file name).
+
+That convergence went further than planned — see §9.
 
 ## 8. Risks and decisions
 
@@ -178,3 +184,36 @@ texture-key lookup (`frame.sprite` = a stock name or an uploaded file name).
   with Web Lab (it already expects `PreviewFile.url`).
 - **Binary in `postMessage`.** `ArrayBuffer` is clone-able; forwarding is cheap
   and needs no encoding.
+
+## 9. Since: every image is an uploaded image
+
+The plan above has two kinds of sprite — stock ones served from
+`public/vendor/sprites/` and uploaded ones carried as `data:` URLs — meeting at
+the driver's texture lookup. They do not any more: **the vendor half is gone**,
+and a project draws only what it holds.
+
+- **The library ships bytes, not URLs.** A stock sprite is a `data:` URL in
+  `appearance/stock.ts`; importing one writes it into the project as a file with
+  a `url`, which is the shape U3 gives an uploaded PNG. An imported drawing and
+  an uploaded one are the same kind of thing from that moment on — repaintable,
+  renamable, deletable — and `projectAssets` forwards both by the same path.
+- **`assetBase` left the driver.** `PhaserBinding` preloads the project's assets
+  and nothing else; `frame.sprite` and `SpriteProperty` name a project file
+  (`player.png`), never a stock id (`player`).
+- **The starter project holds copies.** `constants.ts` builds its images from the
+  same library the import dialog hands out, so what a learner starts with cannot
+  drift from what importing gives them.
+
+### Spritesheets
+
+An uploaded PNG is a picture. What makes one a **spritesheet** is a `.sheet`
+file beside it with the same stem, giving the cell size (`INTERFACE.md`
+§Animations). Importing a stock spritesheet writes both; the animation editor
+offers a cell picker for any image that has one.
+
+**Gap:** nothing writes a `.sheet` for an image the learner uploaded, so an
+uploaded strip is a wide picture with no cells to choose. The file is plain JSON
+and can be typed by hand (`{"type": "sheet", "cell": {"width": 32, "height":
+32}}`), which is a workaround and not an answer. The obvious fix is a "this is a
+spritesheet" affordance on an image in the file browser, or in the picture
+picker, that asks for a cell size and writes the file.
