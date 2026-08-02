@@ -182,6 +182,13 @@
   gap: 0.25rem;
 }
 
+/* What can be done to the whole strip, under it. */
+.stripActions {
+  display: flex;
+  gap: 0.25rem;
+  padding-top: 0.25rem;
+}
+
 /* The inspector for the selected frame. */
 .frame {
   margin-top: 0.5rem;
@@ -215,10 +222,43 @@
 }
 
 /* The sprite takes a row of its own: it is the one thing a frame must say, and
-   sharing a line with the thumbnail and the reorder buttons left it squeezed to
-   a bare chevron with the file name cut away. */
+   sharing a line with the reorder buttons left it squeezed to a bare chevron
+   with the file name cut away. */
 .spriteWrap {
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+/* Matches a DSCO field's label, since this sits among them. */
+.fieldLabel {
+  color: var(--text-neutral-primary, #1a1a1a);
+  font-weight: 600;
+}
+
+/* What the frame draws, shown rather than named — the button opens the
+   picture picker. */
+.spriteButton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 8px;
+  text-align: start;
+  text-transform: none;
+}
+
+.spriteThumb {
+  display: block;
+  flex: 0 0 auto;
+  height: 28px;
+  max-width: 56px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background-color: #101020;
+  border-radius: 3px;
 }
 
 /* The frame's fields, two to a line, spanning the card. */

@@ -27,7 +27,10 @@ import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
+import {importStockSprite} from '../appearance/importStock';
 import {projectSheets, type SheetFile} from '../appearance/sheetFile';
+import type {StockAnimation, StockSprite} from '../appearance/stock';
 import {
   animationIdOwners,
   renameAnimationInSource,
@@ -36,8 +39,10 @@ import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import {AddFramesDialog} from './AddFramesDialog';
 import styles from './animationEditor.module.css';
+import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
 import {type CellRect, sheetGrid} from './sheetFrames';
+import {SpritePickerDialog} from './SpritePickerDialog';
 
 const DEFAULT_DELAY = 100;
 // Preview/thumbnail draw scale: a 32px sprite is drawn at 2× so it reads at a
@@ -277,6 +282,10 @@ export const AnimationEditor = ({
   const [playing, setPlaying] = useState(true);
   const [speed, setSpeed] = useState(1);
   const [onionSkin, setOnionSkin] = useState(false);
+  // Which frame is choosing a picture, and whether that has become a trip to
+  // the stock library (which the picker offers, and comes back from).
+  const [pickingSprite, setPickingSprite] = useState<string | null>(null);
+  const [importingSprite, setImportingSprite] = useState(false);
 
   const selected = selId ? doc.animations[selId] : null;
   const frames = selected?.frames ?? [];
@@ -347,13 +356,11 @@ export const AnimationEditor = ({
     if (def && animId) {
       next.id = animId;
       next.label = def.name ?? '';
-      for (const f of def.frames) {
-        next[`${f.__id}.delay`] = String(f.delay ?? '');
-        next[`${f.__id}.scale`] = f.scale === undefined ? '' : String(f.scale);
-        next[`${f.__id}.offx`] = f.offset ? String(f.offset.x) : '';
-        next[`${f.__id}.offy`] = f.offset ? String(f.offset.y) : '';
-      }
     }
+    // Only the animation's own two fields. A frame's fields are read from the
+    // frame unless there is an edit in progress (`authored`, below) — seeding
+    // them here would leave every frame ADDED since as a row of empty boxes,
+    // which is what a frame taken from a spritesheet or a ping-pong used to be.
     setDraft(next);
     setRenameError(null);
   }, []);
@@ -417,6 +424,26 @@ export const AnimationEditor = ({
   };
 
   /**
+   * Write the project and this file in ONE update.
+   *
+   * Anything that changes both — a rename that carries, an imported picture —
+   * has to: `onChange` saves through a `saveFile` that closes over the sources
+   * of the render that made it, so an ordinary per-file save following a
+   * project write would put the other files back as they were.
+   */
+  const write = (source: MultiFileSource, doc: AnimFile): void => {
+    const sources = sourcesRef.current;
+    const file = source.files[fileId];
+    updateSources({
+      ...sources,
+      source: {
+        ...source,
+        files: {...source.files, [fileId]: {...file, contents: serialize(doc)}},
+      },
+    });
+  };
+
+  /**
    * Rename the selected animation's id — the key blocks play it by.
    *
    * An id is what a `play animation` block holds, and no block records which
@@ -466,21 +493,12 @@ export const AnimationEditor = ({
     // rewriting would move plays that were never this animation's. The key is
     // still rekeyed; the plays are left as written.
     const ambiguous = (owners[oldId] ?? []).some(path => path !== ownPath);
-    const sources = sourcesRef.current;
-    const carried = ambiguous
-      ? sources.source
-      : renameAnimationInSource(sources.source, oldId, newId);
-    const file = carried.files[fileId];
-    updateSources({
-      ...sources,
-      source: {
-        ...carried,
-        files: {
-          ...carried.files,
-          [fileId]: {...file, contents: serialize(next)},
-        },
-      },
-    });
+    write(
+      ambiguous
+        ? sourcesRef.current.source
+        : renameAnimationInSource(sourcesRef.current.source, oldId, newId),
+      next,
+    );
   };
 
   const editLabel = (raw: string) => {
@@ -497,17 +515,80 @@ export const AnimationEditor = ({
 
   // ---- frame ops (by stable __id) -------------------------------------------
 
-  const setFrameSprite = (id: string, sprite: string) => {
-    if (!selected) {
-      return;
-    }
+  /**
+   * This document with one frame pointed at another picture.
+   *
+   * `grids` is which images are spritesheets — passed in rather than read from
+   * state because an imported picture brings its `.sheet` with it, and the
+   * frame is set in the same breath as the import, before the sources this
+   * component rendered from have caught up.
+   */
+  const withFrameSprite = (
+    id: string,
+    sprite: string,
+    grids: Record<string, SheetFile>,
+  ): AnimFile => {
     // A cell belongs to a grid: default a sheet to its first cell (so it does
     // not draw the whole sheet), and clear it for a single picture.
-    const sheet = sheets[sprite];
+    const sheet = grids[sprite];
     const position = sheet
       ? {x: 0, y: 0, width: sheet.cell.width, height: sheet.cell.height}
       : undefined;
-    commit(withFrames(mapFrame(id, f => ({...f, sprite, position}))));
+    return withFrames(mapFrame(id, f => ({...f, sprite, position})));
+  };
+  const setFrameSprite = (id: string, sprite: string) => {
+    if (selected) {
+      commit(withFrameSprite(id, sprite, sheets));
+    }
+  };
+
+  /** Give the whole animation another order — see frameOps. */
+  const reverseFrames = () => {
+    if (selected) {
+      commit(withFrames(reversed(selected.frames)));
+    }
+  };
+  const pingPongFrames = () => {
+    if (selected) {
+      commit(withFrames(pingPong(selected.frames, f => ({...f, __id: uid()}))));
+    }
+  };
+
+  /** Take a picture chosen in the picker. */
+  const chooseSprite = (sprite: string) => {
+    if (pickingSprite) {
+      setFrameSprite(pickingSprite, sprite);
+    }
+    setPickingSprite(null);
+  };
+
+  /**
+   * Copy a picture out of the stock library and put the frame on it.
+   *
+   * The file and the frame that names it land together: an animation pointed at
+   * a picture the project does not hold yet is a frame that draws nothing, and
+   * for the length of one render that is what it would be.
+   */
+  const importSprite = (chosen: StockSprite | StockAnimation) => {
+    const id = pickingSprite;
+    setImportingSprite(false);
+    setPickingSprite(null);
+    if (!id || !selected || !('dataUrl' in chosen)) {
+      return;
+    }
+    const {source, value} = importStockSprite(
+      sourcesRef.current.source,
+      chosen,
+    );
+    const next = withFrameSprite(
+      id,
+      value,
+      projectSheets(projectFiles(source)),
+    );
+    setLive(next);
+    if (!isReadOnly) {
+      write(source, next);
+    }
   };
   const setFrameCell = (id: string, cell: Cell | undefined) => {
     if (selected) {
@@ -968,6 +1049,28 @@ export const AnimationEditor = ({
             </SortableContext>
           </DndContext>
 
+          {frames.length > 1 && (
+            <div className={styles.stripActions}>
+              <Button
+                variant="text"
+                size="extraSmall"
+                disabled={isReadOnly}
+                onClick={reverseFrames}
+              >
+                Reverse
+              </Button>
+              <Button
+                variant="text"
+                size="extraSmall"
+                // Two frames already play out and back (frameOps).
+                disabled={isReadOnly || frames.length < 3}
+                onClick={pingPongFrames}
+              >
+                Ping-pong
+              </Button>
+            </div>
+          )}
+
           {frame && frameId ? (
             <FrameInspector
               frame={frame}
@@ -977,8 +1080,7 @@ export const AnimationEditor = ({
               sheets={sheets}
               draft={draft}
               disabled={isReadOnly}
-              spriteOptions={spriteOptions}
-              onSprite={sprite => setFrameSprite(frameId, sprite)}
+              onPickSprite={() => setPickingSprite(frameId)}
               onCell={cell => setFrameCell(frameId, cell)}
               onNum={(field, raw) => editFrameNum(frameId, field, raw)}
               onCommit={commitCurrent}
@@ -998,6 +1100,28 @@ export const AnimationEditor = ({
               images={images}
               onAdd={addFramesFromSheet}
               onCancel={() => setAddingFrames(false)}
+            />
+          )}
+
+          {pickingSprite && !importingSprite && (
+            <SpritePickerDialog
+              sprites={spriteOptions}
+              images={images}
+              sheets={sheets}
+              current={frames.find(f => f.__id === pickingSprite)?.sprite ?? ''}
+              onPick={chooseSprite}
+              onImport={() => setImportingSprite(true)}
+              onCancel={() => setPickingSprite(null)}
+            />
+          )}
+
+          {importingSprite && (
+            <ImportAppearanceDialog
+              kind="sprite"
+              onImport={importSprite}
+              // Back to the pictures the project already has, not out of the
+              // choosing altogether: this was a detour, not the errand.
+              onCancel={() => setImportingSprite(false)}
             />
           )}
         </div>
@@ -1096,8 +1220,7 @@ const FrameInspector = ({
   sheets,
   draft,
   disabled,
-  spriteOptions,
-  onSprite,
+  onPickSprite,
   onCell,
   onNum,
   onCommit,
@@ -1113,8 +1236,8 @@ const FrameInspector = ({
   sheets: Record<string, SheetFile>;
   draft: Record<string, string>;
   disabled: boolean;
-  spriteOptions: string[];
-  onSprite: (sprite: string) => void;
+  /** Open the picture picker for this frame. */
+  onPickSprite: () => void;
   onCell: (cell: Cell | undefined) => void;
   onNum: (field: 'delay' | 'scale' | 'offx' | 'offy', raw: string) => void;
   onCommit: () => void;
@@ -1122,7 +1245,26 @@ const FrameInspector = ({
   onDuplicate: () => void;
   onRemove: () => void;
 }) => {
-  const d = (field: string) => draft[`${frame.__id}.${field}`] ?? '';
+  /** What the frame itself says, for a field nobody is part-way through typing. */
+  const authored = (field: string): string => {
+    switch (field) {
+      case 'delay':
+        return frame.delay === undefined ? '' : String(frame.delay);
+      case 'scale':
+        return frame.scale === undefined ? '' : String(frame.scale);
+      case 'offx':
+        return frame.offset ? String(frame.offset.x) : '';
+      case 'offy':
+        return frame.offset ? String(frame.offset.y) : '';
+      default:
+        return '';
+    }
+  };
+  // A draft is an edit in progress — "1." on the way to "1.5", or an emptied
+  // box. Everything else comes from the document, so a frame that was never
+  // typed into still shows what it holds.
+  const d = (field: string) =>
+    draft[`${frame.__id}.${field}`] ?? authored(field);
 
   return (
     <div className={styles.frame}>
@@ -1176,17 +1318,33 @@ const FrameInspector = ({
       </div>
       <div className={styles.frameGrid}>
         <div className={styles.spriteWrap}>
-          <SimpleDropdown
-            name={`f-${frame.__id}-sprite`}
-            labelText="Sprite"
-            size="s"
+          <Typography
+            variant="body4"
+            component="span"
+            className={styles.fieldLabel}
+          >
+            Sprite
+          </Typography>
+          <Button
+            className={styles.spriteButton}
+            variant="outlined"
+            color="secondary"
+            size="small"
+            fullWidth
             disabled={disabled}
-            selectedValue={frame.sprite}
-            items={spriteOptions.map(s => ({value: s, text: s}))}
-            onChange={(e: ChangeEvent<HTMLSelectElement>) =>
-              onSprite(e.target.value)
-            }
-          />
+            aria-label={`Picture: ${frame.sprite}`}
+            onClick={onPickSprite}
+          >
+            <img
+              className={styles.spriteThumb}
+              src={images[frame.sprite]?.src}
+              alt=""
+              aria-hidden="true"
+            />
+            <Typography component="span" variant="body4" color="inherit">
+              {frame.sprite}
+            </Typography>
+          </Button>
         </div>
         <TextField
           name={`f-${frame.__id}-delay`}

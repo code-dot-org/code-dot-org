@@ -1,0 +1,60 @@
+/* The picture picker's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* As many across as fit: these are thumbnails, and a column of them would make
+   a project of a dozen pictures a scroll rather than a look. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 6px;
+  width: 100%;
+  max-height: 45vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* Picture over name: side by side left the name a column two characters wide,
+   which wraps "coinSpin.png" one letter to a line. */
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 6px;
+  text-align: center;
+  text-transform: none;
+}
+
+/* `.grid` for the specificity: the design system's dialog sizes any `img` in
+   its content as a banner, and these are 32-pixel drawings. */
+.grid .preview {
+  display: block;
+  flex: 0 0 auto;
+  height: 44px;
+  max-width: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background-color: #101020;
+  border-radius: 4px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
