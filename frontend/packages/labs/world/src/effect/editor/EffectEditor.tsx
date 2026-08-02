@@ -1,7 +1,11 @@
-import {Button, IconButton, TextField} from '@mui/material';
+import {Button, IconButton} from '@mui/material';
 import {ThemeProvider} from '@mui/material/styles';
 import {ReactFlowProvider, useReactFlow, type Connection} from '@xyflow/react';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 
 import {compileEffect} from '../compiler/compileEffect';
 import {EffectCompileError, type CompiledEffect} from '../compiler/types';
@@ -921,7 +925,7 @@ function EffectEditorContent({
               onParameterValueChange={handleParameterValueChange}
               showStockInputs={editingFunctionId === null}
               addButtonLabel={translate(
-                editingFunctionId ? '+ Input' : '+ Parameter',
+                editingFunctionId ? 'Input' : 'Parameter',
               )}
               readOnly={readOnly}
             />
@@ -948,34 +952,42 @@ function EffectEditorContent({
 
               <div className={styles.history}>
                 <IconButton
-                  className={styles.historyButton}
+                  variant="outlined"
+                  color="secondary"
                   disabled={!canUndo}
                   aria-label={translate('Undo')}
                   title={translate('Undo (Ctrl+Z)')}
                   onClick={undo}
                 >
-                  ↶
+                  <FontAwesomeV6Icon iconName="rotate-left" iconStyle="solid" />
                 </IconButton>
                 <IconButton
-                  className={styles.historyButton}
+                  variant="outlined"
+                  color="secondary"
                   disabled={!canRedo}
                   aria-label={translate('Redo')}
                   title={translate('Redo (Ctrl+Shift+Z)')}
                   onClick={redo}
                 >
-                  ↷
+                  <FontAwesomeV6Icon
+                    iconName="rotate-right"
+                    iconStyle="solid"
+                  />
                 </IconButton>
                 <Button
-                  className={styles.codeToggle}
                   aria-pressed={codeVisible}
                   aria-label={translate('Show the GLSL code')}
                   title={translate(
                     'The GLSL shader this graph compiles to, live',
                   )}
                   variant={codeVisible ? 'contained' : 'outlined'}
+                  color="secondary"
+                  startIcon={
+                    <FontAwesomeV6Icon iconName="code" iconStyle="solid" />
+                  }
                   onClick={() => setCodeVisible(visible => !visible)}
                 >
-                  Show Code
+                  {translate('Show Code')}
                 </Button>
               </div>
             </div>
@@ -1033,19 +1045,26 @@ function ShaderCodePanel({
   return (
     <aside className={styles.codePanel} aria-label={translate('GLSL code')}>
       {sections && hiddenLines > 0 && (
-        <button
-          type="button"
+        <Button
           className={styles.setupToggle}
+          variant="text"
+          color="secondary"
           aria-expanded={showSetup}
           title={translate(
             'Version, the Phaser pragma, and the precision guard — the same in every effect',
           )}
+          startIcon={
+            <FontAwesomeV6Icon
+              iconName={showSetup ? 'chevron-down' : 'chevron-right'}
+              iconStyle="solid"
+            />
+          }
           onClick={() => setShowSetup(visible => !visible)}
         >
           {showSetup
             ? translate('Hide the {count} setup lines', {count: hiddenLines})
             : translate('Show the {count} setup lines', {count: hiddenLines})}
-        </button>
+        </Button>
       )}
       {/* Code is code: never translated, and shown exactly as the compiler
           will hand it to Phaser. */}
@@ -1081,9 +1100,11 @@ function EffectBar({document, onRename, onDescribe, readOnly}: EffectBarProps) {
   return (
     <div className={styles.functionBar}>
       <TextField
+        name="effect-name"
+        size="s"
         className={styles.effectName}
         disabled={readOnly}
-        slotProps={{htmlInput: {'aria-label': translate('Effect name')}}}
+        aria-label={translate('Effect name')}
         value={nameDraft}
         onChange={event => {
           setNameDraft(event.target.value);
@@ -1095,10 +1116,12 @@ function EffectBar({document, onRename, onDescribe, readOnly}: EffectBarProps) {
         onBlur={() => setNameDraft(document.name)}
       />
       <TextField
+        name="effect-description"
+        size="s"
         className={styles.effectDescription}
         disabled={readOnly}
         placeholder={translate('What does this effect do?')}
-        slotProps={{htmlInput: {'aria-label': translate('Effect description')}}}
+        aria-label={translate('Effect description')}
         value={document.description ?? ''}
         onChange={event => onDescribe(event.target.value)}
       />
@@ -1130,16 +1153,29 @@ function FunctionBar({
 
   return (
     <div className={styles.functionBar}>
-      <Button onClick={onBack} title={translate('Back to the main effect')}>
-        {translate('◂ Effect')}
+      <Button
+        variant="text"
+        color="secondary"
+        onClick={onBack}
+        title={translate('Back to the main effect')}
+        startIcon={
+          <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
+        }
+      >
+        {translate('Effect')}
       </Button>
-      <span className={styles.functionCrumb} aria-hidden="true">
-        ▸
-      </span>
+      <FontAwesomeV6Icon
+        className={styles.functionCrumb}
+        iconName="chevron-right"
+        iconStyle="solid"
+        aria-hidden="true"
+      />
       <TextField
+        name="function-name"
+        size="s"
         className={styles.functionName}
         disabled={readOnly}
-        slotProps={{htmlInput: {'aria-label': translate('Function name')}}}
+        aria-label={translate('Function name')}
         value={nameDraft}
         onChange={event => {
           setNameDraft(event.target.value);
@@ -1150,37 +1186,38 @@ function FunctionBar({
         }}
         onBlur={() => setNameDraft(fn.name)}
       />
-      <label className={styles.functionReturns}>
-        {translate('returns')}
-        <TextField
-          select
+      <div className={styles.functionReturns}>
+        {/* The word reads as part of the sentence the bar makes, so it stays
+            beside the control rather than above it; `labelText` is the same
+            word, unrendered, which is what names the select for a screen
+            reader. */}
+        <span aria-hidden="true">{translate('returns')}</span>
+        <SimpleDropdown
+          name="function-returns"
+          size="s"
+          labelText={translate('returns')}
+          isLabelVisible={false}
           disabled={readOnly}
-          slotProps={{
-            select: {
-              native: true,
-              // Names the control for assistive tech; the visible "returns"
-              // text is decorative context beside it.
-              inputProps: {'aria-label': translate('returns')},
-            },
-          }}
-          value={fn.outputType}
+          selectedValue={fn.outputType}
+          items={(['float', 'vec2', 'vec3', 'vec4'] as const).map(type => ({
+            value: type,
+            text: portTypeLabel(type),
+          }))}
           onChange={event =>
             onOutputTypeChange(event.target.value as EffectFunctionOutputType)
           }
-        >
-          {(['float', 'vec2', 'vec3', 'vec4'] as const).map(type => (
-            <option key={type} value={type}>
-              {portTypeLabel(type)}
-            </option>
-          ))}
-        </TextField>
-      </label>
+        />
+      </div>
       {!readOnly && (
         <Button
+          variant="text"
           color="error"
           className={styles.functionDelete}
           onClick={onDelete}
           title={translate('Delete this function and every node that uses it')}
+          startIcon={
+            <FontAwesomeV6Icon iconName="trash-can" iconStyle="solid" />
+          }
         >
           {translate('Delete function')}
         </Button>

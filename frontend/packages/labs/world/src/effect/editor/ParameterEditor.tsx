@@ -1,11 +1,9 @@
-import {
-  Button,
-  FormControlLabel,
-  Paper,
-  Switch,
-  TextField,
-} from '@mui/material';
+import {Button, Paper} from '@mui/material';
 import {useEffect, useState} from 'react';
+
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import TextField from '@code-dot-org/component-library/textField';
+import Toggle from '@code-dot-org/component-library/toggle';
 
 import {defaultParameterValue, parameterValueType} from '../glsl/valueTypes';
 import {translate} from '../localization';
@@ -105,8 +103,9 @@ export function ParameterEditor({
         })}
       >
         <TextField
+          name="parameter-name"
+          size="s"
           label={translate('Name')}
-          fullWidth
           value={nameDraft}
           // The popover opens because the learner asked to edit; landing in
           // the name field is the point of the gesture.
@@ -123,38 +122,32 @@ export function ParameterEditor({
           onBlur={() => setNameDraft(parameter.name)}
         />
 
-        <TextField
-          select
-          label={translate('Type')}
-          fullWidth
-          slotProps={{select: {native: true}}}
-          value={parameter.type}
+        <SimpleDropdown
+          name="parameter-type"
+          size="s"
+          labelText={translate('Type')}
+          selectedValue={parameter.type}
+          items={PARAMETER_TYPES.map(type => ({
+            value: type,
+            text: parameterTypeLabel(type),
+          }))}
           onChange={event =>
             handleTypeChange(event.target.value as EffectParameterType)
           }
-        >
-          {PARAMETER_TYPES.map(type => (
-            <option key={type} value={type}>
-              {parameterTypeLabel(type)}
-            </option>
-          ))}
-        </TextField>
+        />
 
         {parameter.type === 'bool' ? (
           // "Starts on" reads better than "default: 1" for a switch, and it
           // is the same 1-or-0 underneath.
-          <FormControlLabel
+          <Toggle
+            name="parameter-default"
+            size="s"
             className={styles.switchField}
-            control={
-              <Switch
-                size="small"
-                checked={parameter.defaultValue === 1}
-                onChange={event =>
-                  onChange({defaultValue: event.target.checked ? 1 : 0})
-                }
-              />
-            }
             label={translate('Starts on')}
+            checked={parameter.defaultValue === 1}
+            onChange={event =>
+              onChange({defaultValue: event.target.checked ? 1 : 0})
+            }
           />
         ) : (
           <div className={styles.field}>
@@ -182,11 +175,11 @@ export function ParameterEditor({
         {(parameter.type === 'float' || parameter.type === 'int') && (
           <div className={styles.rangeRow}>
             <TextField
+              name="parameter-min"
+              size="s"
               label={translate('Min')}
-              type="number"
-              slotProps={{
-                htmlInput: {step: parameter.type === 'int' ? 1 : 0.1},
-              }}
+              inputType="number"
+              step={parameter.type === 'int' ? 1 : 0.1}
               value={parameter.min ?? (parameter.type === 'int' ? 0 : 0)}
               onChange={event =>
                 onChange(
@@ -196,11 +189,11 @@ export function ParameterEditor({
               }
             />
             <TextField
+              name="parameter-max"
+              size="s"
               label={translate('Max')}
-              type="number"
-              slotProps={{
-                htmlInput: {step: parameter.type === 'int' ? 1 : 0.1},
-              }}
+              inputType="number"
+              step={parameter.type === 'int' ? 1 : 0.1}
               value={
                 parameter.max ??
                 (parameter.type === 'int' ? DEFAULT_INT_RANGE.max : 1)
@@ -216,8 +209,9 @@ export function ParameterEditor({
         )}
 
         <TextField
+          name="parameter-hint"
+          size="s"
           label={translate('Hint')}
-          fullWidth
           placeholder={translate('What does this control?')}
           value={parameter.description ?? ''}
           onChange={event =>
@@ -229,7 +223,7 @@ export function ParameterEditor({
         />
 
         <footer className={styles.footer}>
-          <Button color="error" onClick={onRemove}>
+          <Button variant="text" color="error" onClick={onRemove}>
             {translate('Remove parameter')}
           </Button>
           <Button variant="contained" color="primary" onClick={onClose}>

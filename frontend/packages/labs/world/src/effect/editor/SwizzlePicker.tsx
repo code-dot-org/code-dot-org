@@ -140,6 +140,7 @@ export function SwizzlePicker({
               key={option.swizzle}
               className={styles.component}
               variant="outlined"
+              color="secondary"
               onClick={() => choose(option.swizzle)}
             >
               {option.label}
@@ -151,12 +152,19 @@ export function SwizzlePicker({
           {picked.length > 0 && (
             <Button
               className={styles.action}
+              variant="text"
+              color="secondary"
               onClick={() => setPicked(current => current.slice(0, -1))}
             >
               {translate('Back')}
             </Button>
           )}
-          <Button className={styles.action} onClick={onDismiss}>
+          <Button
+            className={styles.action}
+            variant="text"
+            color="secondary"
+            onClick={onDismiss}
+          >
             {translate('Cancel')}
           </Button>
         </div>

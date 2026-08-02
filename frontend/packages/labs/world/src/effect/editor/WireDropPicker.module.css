@@ -15,6 +15,11 @@
   max-height: 280px;
   overflow: hidden;
   font-size: 12px;
+
+  /* The surface, for the reason given on `.popover` in ParameterEditor: MUI's
+     Paper does not follow the lab's theme, and the editor's tokens do. */
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-field);
   border: 1px solid var(--effect-editor-border);
 }
 

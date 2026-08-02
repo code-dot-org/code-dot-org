@@ -36,7 +36,7 @@ describe('localized rendering', () => {
     setTranslations({
       Multiply: 'Multiplicar',
       Undo: 'Deshacer',
-      '+ Parameter': '+ Parámetro',
+      Parameter: 'Parámetro',
       Math: 'Matemáticas',
     });
 
@@ -46,9 +46,7 @@ describe('localized rendering', () => {
       screen.getByRole('button', {name: 'Multiplicar'}),
     ).toBeInTheDocument();
     expect(screen.getByRole('button', {name: 'Deshacer'})).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', {name: '+ Parámetro'}),
-    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Parámetro'})).toBeInTheDocument();
     expect(screen.getByText('Matemáticas')).toBeInTheDocument();
   });
 
@@ -67,10 +65,10 @@ describe('localized rendering', () => {
   it('never translates user-entered parameter names', () => {
     // "Time" is a dictionary key (the stock knob); a learner naming their
     // parameter "Time" must still see their own text everywhere.
-    setTranslations({Time: 'Tiempo', '+ Parameter': '+ Parámetro'});
+    setTranslations({Time: 'Tiempo', Parameter: 'Parámetro'});
 
     render(<EffectEditor initialDocument={createEffectDocument()} />);
-    fireEvent.click(screen.getByRole('button', {name: '+ Parámetro'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Parámetro'}));
     fireEvent.change(screen.getByLabelText('Name'), {
       target: {value: 'Time'},
     });

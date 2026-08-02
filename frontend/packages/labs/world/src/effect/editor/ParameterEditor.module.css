@@ -7,17 +7,27 @@
 /* Sits below the input row, over the workspace. Above the raised active wire
    (1100) and the wire-drop picker (1201). */
 
-/* Paper supplies surface, radius, and elevation; this positions it and lays
-   out the fields. */
+/* MUI's Paper paints itself from MUI's palette, which is light in both themes —
+   `CdoTheme` has no dark color scheme, and the editor's surfaces come from the
+   semantic tokens instead (the `--effect-editor-*` block in
+   EffectEditor.module.css). A popover that kept the Paper default stayed a
+   white panel over a dark canvas, and the labels inside it — which DO follow
+   the theme — turned white on white. */
+
+/* Paper supplies radius and elevation; the surface, the position, and the
+   layout of the fields are here. Wide enough for two design-system fields side by side, which
+   is what the min/max row is. */
 .popover {
   position: absolute;
   top: calc(100% + 6px);
   z-index: 1301;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  width: 250px;
+  gap: 10px;
+  width: 272px;
   padding: 14px 12px 10px;
+  color: var(--effect-editor-text);
+  background: var(--effect-editor-field);
   border: 1px solid var(--effect-editor-border);
 }
 
@@ -34,9 +44,31 @@
   color: var(--effect-editor-muted);
 }
 
+/* DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem — a form's
+   width, not a popover's. Override it by specificity and let each field
+   fill the space it is given. */
+.popover label {
+  width: 100%;
+  min-width: 0;
+}
+
+.popover input:not([type='checkbox']) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Min and Max share the row. `min-width: 0` is what lets them: a field's own
+   width would otherwise hold the row open and push the second one out of the
+   popover, which is where Max went. */
 .rangeRow {
   display: flex;
   gap: 10px;
+}
+
+.rangeRow > * {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .footer {

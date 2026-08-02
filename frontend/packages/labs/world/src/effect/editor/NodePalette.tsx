@@ -4,9 +4,11 @@ import {
   List,
   ListItemButton,
   ListSubheader,
-  TextField,
 } from '@mui/material';
 import {useMemo, useState} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 
 import {translate} from '../localization';
 import {functionIdFromNodeType} from '../model/constants';
@@ -35,7 +37,7 @@ const CATEGORY_LABELS: Record<EffectNodeCategory, string> = {
 export interface NodePaletteProps {
   registry: EffectNodeRegistry;
   onAddNode: (type: string) => void;
-  /** Open a function's workspace. Rendered as a ✎ on function entries. */
+  /** Open a function’s workspace. Rendered as a pencil on function entries. */
   onEditFunction?: (functionId: string) => void;
   /** Create a new function and open it. Renders the "+ New function" button. */
   onCreateFunction?: () => void;
@@ -74,10 +76,11 @@ export function NodePalette({
   return (
     <aside className={styles.palette} aria-label={translate('Node palette')}>
       <TextField
-        type="search"
+        name="node-search"
+        size="s"
         className={styles.search}
         placeholder={translate('Search nodes')}
-        slotProps={{htmlInput: {'aria-label': translate('Search nodes')}}}
+        aria-label={translate('Search nodes')}
         value={query}
         onChange={event => setQuery(event.target.value)}
       />
@@ -113,6 +116,8 @@ export function NodePalette({
                 </ListItemButton>
                 {functionId !== null && onEditFunction && (
                   <IconButton
+                    variant="text"
+                    color="secondary"
                     className={styles.editFunction}
                     aria-label={translate('Open function {name}', {
                       name: definition.label,
@@ -120,7 +125,10 @@ export function NodePalette({
                     title={translate("Open this function's workspace")}
                     onClick={() => onEditFunction(functionId)}
                   >
-                    ✎
+                    <FontAwesomeV6Icon
+                      iconName="pen-to-square"
+                      iconStyle="solid"
+                    />
                   </IconButton>
                 )}
               </li>
@@ -138,13 +146,16 @@ export function NodePalette({
       {onCreateFunction && (
         <Button
           fullWidth
+          variant="outlined"
+          color="secondary"
           className={styles.newFunction}
           title={translate(
             'Build a reusable node from its own workspace of nodes',
           )}
+          startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
           onClick={onCreateFunction}
         >
-          {translate('+ New function')}
+          {translate('New function')}
         </Button>
       )}
     </aside>

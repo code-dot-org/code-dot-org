@@ -33,7 +33,9 @@ const selfUsing = parseRuleMeta(
 
 /** The `use rule` dropdown's live options, as a field on `workspace` sees them. */
 const useRuleOptions = (workspace?: object): Array<[string, string]> => {
-  const block = DOMAIN_BLOCKS.find(b => b.type === 'world_use_rule') as {
+  const block = DOMAIN_BLOCKS.find(
+    b => b.type === 'world_use_rule',
+  ) as unknown as {
     args0: Array<{options: (field?: unknown) => Array<[string, string]>}>;
   };
   const field = workspace ? {getSourceBlock: () => ({workspace})} : undefined;

@@ -72,7 +72,9 @@ export const ImportEffectDialog = ({
         ))}
       </ul>
       <div className={styles.actions}>
-        <Button onClick={onCancel}>{translate('Cancel')}</Button>
+        <Button variant="text" color="secondary" onClick={onCancel}>
+          {translate('Cancel')}
+        </Button>
       </div>
     </CustomDialog>
   );

@@ -5,6 +5,8 @@ import {
   type EdgeProps,
 } from '@xyflow/react';
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
 import {translate} from '../localization';
 
 import {useEffectEditorContext} from './EffectEditorContext';
@@ -94,7 +96,7 @@ export function EffectFlowEdge({
               disconnect(id);
             }}
           >
-            ×
+            <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
           </button>
         </EdgeLabelRenderer>
       )}

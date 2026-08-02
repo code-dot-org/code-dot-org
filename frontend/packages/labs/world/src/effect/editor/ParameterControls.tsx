@@ -1,4 +1,6 @@
-import {Slider, Switch} from '@mui/material';
+import {Slider} from '@mui/material';
+
+import Toggle from '@code-dot-org/component-library/toggle';
 
 import {componentCount, parameterValueType} from '../glsl/valueTypes';
 import {translate} from '../localization';
@@ -76,15 +78,12 @@ export function ParameterTryOut({
     // A switch, not a two-step slider: "on or off" is the idea, and the knob
     // sends 1 or 0 into the graph so it can be multiplied straight in.
     return (
-      <Switch
+      <Toggle
+        name={`parameter-${parameter.id}`}
+        size="xs"
         className={styles.switch}
-        size="small"
         checked={current === 1}
-        inputProps={{
-          'aria-label': translate('{name} on', {
-            name: parameter.name,
-          }),
-        }}
+        aria-label={translate('{name} on', {name: parameter.name})}
         onChange={event => onChange(event.target.checked ? 1 : 0)}
       />
     );

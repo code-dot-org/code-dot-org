@@ -410,10 +410,33 @@ mid-view instead, and the wire-drop picker covers precise placement.
 
 The editor chrome — palette, popovers, form controls, buttons, sliders — is
 MUI (Material UI 7 + Emotion, from the workspace catalog), themed by a nested
-dark `ThemeProvider` (`src/effect/editor/theme.ts`) that composes under the
-host's `CdoTheme`. Canvas internals (nodes, wires, handles, knobs) stay
-purpose-built CSS: they are dense, zoom-scaled, and geometry-bound to React
-Flow in ways MUI components are not.
+`ThemeProvider` (`src/effect/editor/theme.ts`) that composes under the host's
+`CdoTheme`. Canvas internals (nodes, wires, handles, knobs) stay purpose-built
+CSS: they are dense, zoom-scaled, and geometry-bound to React Flow in ways MUI
+components are not.
+
+A button here is a design-system button: every `Button`/`IconButton` names a
+`variant` and a `color` that `CdoTheme` styles (`contained`/`outlined`/`text` ×
+`primary`/`secondary`/`tertiary`/`error`), and the editor's theme adds only
+density (`size="extraSmall"`). Icons are `FontAwesomeV6Icon`, including inside
+the canvas's own custom buttons — a node's inspect eye, a wire's delete, a
+note's bubble — which stay custom for their geometry, not for their glyphs.
+
+Form controls are DSCO: `TextField`, `SimpleDropdown` (a native `<select>`, so
+it cannot portal), and `Toggle`. MUI keeps what DSCO has no answer for — the
+layout and surface components (`Paper`, `List`, `MenuList`) and the _vertical_
+try-out slider, which has no DSCO equivalent and whose orientation is what lets
+it stand in the tall input row beside the knob it feeds. `LiteralInput` stays a
+bare `<input>` for the same reason it always was: it is the number widget on an
+unwired port, sized to a node and used two to four at a time.
+
+Two things follow from DSCO fields being built for full-width forms. Their
+wrapper is `min-width: 18.75rem`, which is wider than the palette, the bars, or
+the parameter popover — each overrides it by specificity, as the map editor's
+inspector does. And their labels follow the lab's `data-theme` while MUI's
+`Paper` does not (`CdoTheme` declares no dark color scheme), so every popover
+paints its own surface from `--effect-editor-*` rather than taking Paper's
+default — otherwise a dark-mode popover is a white panel with white labels.
 
 One hard rule: **no MUI component may portal**. Portals mount on
 `document.body`, outside the `data-notranslate` container. Selects are native

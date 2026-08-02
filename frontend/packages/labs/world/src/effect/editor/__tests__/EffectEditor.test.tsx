@@ -144,7 +144,7 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
 
       expect(screen.getByRole('dialog')).toBeInTheDocument();
 
@@ -166,7 +166,7 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
       fireEvent.change(screen.getByLabelText('Name'), {target: {value: '  '}});
 
       // The name is the `.addEffect()` argument; blank would be an unusable
@@ -183,7 +183,7 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
       fireEvent.change(screen.getByLabelText('Type'), {
         target: {value: 'vec3'},
       });
@@ -203,7 +203,7 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
       fireEvent.click(screen.getByRole('button', {name: 'Done'}));
       expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
 
@@ -227,15 +227,15 @@ describe('EffectEditor', () => {
 
       // Add two, remove the first, add again: the new one must not collide
       // with the surviving param2.
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
       fireEvent.click(screen.getByRole('button', {name: 'Done'}));
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
       fireEvent.click(screen.getByRole('button', {name: 'Done'}));
       fireEvent.click(
         screen.getByRole('button', {name: 'Edit parameter param1'}),
       );
       fireEvent.click(screen.getByRole('button', {name: 'Remove parameter'}));
-      fireEvent.click(screen.getByRole('button', {name: '+ Parameter'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Parameter'}));
 
       const ids = lastDocument(onChange).parameters.map(
         parameter => parameter.id,
@@ -255,12 +255,12 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ New function'}));
+      fireEvent.click(screen.getByRole('button', {name: 'New function'}));
 
       // The function bar is up, the row offers "+ Input", and the test
       // texture column is gone — this is a function workspace, not the effect.
       expect(screen.getByLabelText('Function name')).toHaveValue('Function 1');
-      expect(screen.getByRole('button', {name: '+ Input'})).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Input'})).toBeInTheDocument();
       expect(
         screen.queryByLabelText('Change test texture'),
       ).not.toBeInTheDocument();
@@ -270,8 +270,8 @@ describe('EffectEditor', () => {
     it('returns to the effect and lists the function in the palette', () => {
       render(<EffectEditor initialDocument={createEffectDocument()} />);
 
-      fireEvent.click(screen.getByRole('button', {name: '+ New function'}));
-      fireEvent.click(screen.getByRole('button', {name: '◂ Effect'}));
+      fireEvent.click(screen.getByRole('button', {name: 'New function'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Effect'}));
 
       expect(screen.queryByLabelText('Function name')).not.toBeInTheDocument();
       expect(screen.getByText('Your Functions')).toBeInTheDocument();
@@ -292,8 +292,8 @@ describe('EffectEditor', () => {
         />,
       );
 
-      fireEvent.click(screen.getByRole('button', {name: '+ New function'}));
-      fireEvent.click(screen.getByRole('button', {name: '◂ Effect'}));
+      fireEvent.click(screen.getByRole('button', {name: 'New function'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Effect'}));
       // Place a call node, then delete the function from inside it.
       fireEvent.click(screen.getByRole('button', {name: 'Function 1'}));
       expect(
@@ -315,7 +315,7 @@ describe('EffectEditor', () => {
     it('undoing function creation drops the editor back to the effect', () => {
       render(<EffectEditor initialDocument={createEffectDocument()} />);
 
-      fireEvent.click(screen.getByRole('button', {name: '+ New function'}));
+      fireEvent.click(screen.getByRole('button', {name: 'New function'}));
       fireEvent.keyDown(window, {key: 'z', ctrlKey: true});
 
       expect(screen.queryByLabelText('Function name')).not.toBeInTheDocument();
@@ -382,7 +382,7 @@ describe('EffectEditor', () => {
 
       expect(screen.getByLabelText('Effect name')).toBeInTheDocument();
 
-      fireEvent.click(screen.getByRole('button', {name: '+ New function'}));
+      fireEvent.click(screen.getByRole('button', {name: 'New function'}));
 
       // One slot, two bars: the effect's identity is not what you are editing
       // while you are inside a function.
@@ -661,7 +661,7 @@ describe('EffectEditor', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Sine'}));
       const calls = onChange.mock.calls.length;
 
-      const search = screen.getByRole('searchbox', {name: 'Search nodes'});
+      const search = screen.getByRole('textbox', {name: 'Search nodes'});
       search.focus();
       fireEvent.keyDown(search, {key: 'z', ctrlKey: true});
 
