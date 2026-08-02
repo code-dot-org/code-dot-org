@@ -6,12 +6,17 @@
 // the region a map may place actors in — so a position means the same thing in
 // both, whatever size either is on screen.
 //
-// SQUARE, and 800 on a side. A 16:9 strip is a television's shape, and the
-// things a learner builds here are not televisions: a platform world is as much
+// SQUARE, and 320 on a side: ten 32-pixel tiles each way, which is the size the
+// first levels are built at. A 16:9 strip is a television's shape, and the
+// things a learner builds here are not televisions — a platform world is as much
 // about falling as about walking, and a strip gives the falling a quarter of the
-// room it gives the walking. A square also matches the shape of the pane it
-// lives in more often than not, which is what decides how much of the screen the
-// game actually gets.
+// room it gives the walking.
+//
+// Small on purpose. A world you can count in tiles is a world a beginner can
+// hold in their head: "the floor is the bottom row" is a sentence about this
+// world, and ten columns is few enough that a whole level fits on one screen
+// with nothing off it. It is the world's NATIVE size, not its size on screen —
+// the canvas is scaled up to whatever room the preview pane has.
 //
 // One definition, because there were two: the driver's and the map editor's, and
 // a map drawn against one of them would have been drawn against a lie the moment
@@ -19,8 +24,14 @@
 // canvas box before Phaser boots, so there is nothing to re-fit) and is the one
 // place that has to be kept in step by hand.
 
+/** The size of one tile, in pixels — the grid the map editor and the maps use. */
+export const TILE_SIZE = 32;
+
+/** The world in tiles, each way. */
+export const VIEWPORT_TILES = 10;
+
 /** The world's width in pixels — the map region, and the canvas's native size. */
-export const VIEWPORT_WIDTH = 800;
+export const VIEWPORT_WIDTH = VIEWPORT_TILES * TILE_SIZE;
 
 /** The world's height in pixels. */
-export const VIEWPORT_HEIGHT = 800;
+export const VIEWPORT_HEIGHT = VIEWPORT_TILES * TILE_SIZE;
