@@ -8,7 +8,7 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import type {Block} from 'blockly';
+import type {Block, FieldDropdown} from 'blockly';
 import {Order, type JavascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -29,6 +29,7 @@ import {animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
+import {editingRuleFor} from './editingRule';
 import {
   runtimeActorExtension,
   runtimeWorldExtension,
@@ -1823,20 +1824,25 @@ const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
  * now that it is not built in. Offered even when the project already has rules:
  * wanting a second one is the normal case.
  */
-const useRuleOptions = (): Array<[string, string]> => {
+const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
   const identities = projectRuleIdentities();
+  // Not the rule this workspace IS: a rule that uses itself generates a module
+  // that imports its own default export, and the project stops before it starts.
+  const own = editingRuleFor(field);
   return [
     ...BUILTIN_RULE_OPTIONS,
-    ...ruleModuleOptions().map(([fileLabel, modulePath]): [string, string] => {
-      // A parsed `.rule` says what it is and what it gives, and is referred to
-      // by that name from then on, wherever its file ends up. A `.js` rule
-      // declares neither, so it is named by its module — as is a `.rule` the
-      // editor could not parse, which still has to be pickable mid-edit.
-      const identity = identities.get(modulePath);
-      return identity
-        ? [identity.ability, identity.name]
-        : [fileLabel, modulePath];
-    }),
+    ...ruleModuleOptions()
+      .filter(([, modulePath]) => modulePath !== own)
+      .map(([fileLabel, modulePath]): [string, string] => {
+        // A parsed `.rule` says what it is and what it gives, and is referred to
+        // by that name from then on, wherever its file ends up. A `.js` rule
+        // declares neither, so it is named by its module — as is a `.rule` the
+        // editor could not parse, which still has to be pickable mid-edit.
+        const identity = identities.get(modulePath);
+        return identity
+          ? [identity.ability, identity.name]
+          : [fileLabel, modulePath];
+      }),
     ['(import…)', IMPORT_RULE_VALUE],
   ];
 };
