@@ -1,24 +1,12 @@
-/* The stock-effect picker. Colors come from the design system's semantic
-   tokens, so it follows the lab's Light/Dark setting like everything else —
-   this dialog is lab chrome, not part of the effect editor's dark canvas. */
-
-.dialog {
-  max-width: 520px;
-}
-
-.title {
-  margin: 0 0 4px;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.intro {
-  margin: 0 0 16px;
-  color: var(--text-neutral-secondary, #576575);
-}
+/* The stock-effect picker's CONTENT. The dialog itself — surface, width,
+   padding, the button row — is the design system's `Dialog`, so this stays out
+   of its way and shapes only the list inside it. The rows are design-system
+   buttons, so their colors follow the lab's Light/Dark setting like every
+   other button. */
 
 .list {
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 8px;
   max-height: 55vh;
@@ -29,45 +17,15 @@
 }
 
 /* One row per effect: a whole-row button, so the target is the size of the
-   thing being chosen rather than a word inside it. */
+   thing being chosen rather than a word inside it. Layout only — the colors,
+   the border, the hover and the focus ring are the design system's, because a
+   row here should read as the same kind of thing as a button anywhere else. */
 .effect {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  width: 100%;
+  align-items: flex-start;
   padding: 10px 12px;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  background: var(--background-neutral-secondary, #f0f2f5);
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 6px;
-}
-
-.effect:hover {
-  border-color: var(--borders-brand-teal-primary, #0093a4);
-}
-
-.effect:focus-visible {
-  outline: 2px solid var(--borders-brand-teal-primary, #0093a4);
-  outline-offset: 2px;
-}
-
-.name {
-  font-weight: 600;
-}
-
-.description {
-  color: var(--text-neutral-secondary, #576575);
-}
-
-.knobs {
-  font-size: 0.85em;
-  color: var(--text-neutral-tertiary, #576575);
-}
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 16px;
+  text-align: start;
+  text-transform: none;
 }

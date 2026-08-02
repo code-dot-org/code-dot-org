@@ -55,15 +55,50 @@ describe('ImportEffectDialog', () => {
     expect(names).toEqual(STOCK_EFFECTS.map(effect => effect.document.name));
   });
 
-  it('hands back the effect that was chosen', () => {
+  it('defers the choice: a row selects, `Import` commits', () => {
+    // Copying a file into the project the moment a click lands is a decision
+    // made by the mouse. Nothing happens until the primary button is pressed,
+    // and until something is selected there is nothing for it to do.
     const onImport = vi.fn();
     open({onImport});
 
+    const importButton = screen.getByRole('button', {name: 'Import'});
+    expect(importButton).toBeDisabled();
+
     fireEvent.click(screen.getByRole('button', {name: /Pixelate/}));
+    expect(onImport).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: /Pixelate/})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+
+    fireEvent.click(importButton);
+    expect(onImport).toHaveBeenCalledWith(
+      STOCK_EFFECTS.find(effect => effect.id === 'pixelate'),
+    );
+  });
+
+  it('takes a double click as "that one, now"', () => {
+    const onImport = vi.fn();
+    open({onImport});
+
+    fireEvent.doubleClick(screen.getByRole('button', {name: /Pixelate/}));
 
     expect(onImport).toHaveBeenCalledWith(
       STOCK_EFFECTS.find(effect => effect.id === 'pixelate'),
     );
+  });
+
+  it('is a dialog, named and described, not an alert', () => {
+    // `Dialog` supplies the name and the description from its `title` and
+    // `description` props — and declares `role="alertdialog"`, which announces
+    // something that needs answering now. This is a picker.
+    const {container} = open();
+
+    const dialog = container.querySelector('[role="dialog"]')!;
+    expect(dialog.getAttribute('aria-label')).toBe('Add an effect');
+    expect(dialog.querySelector('#dsco-dialog-description')).not.toBeNull();
+    expect(container.querySelector('[role="alertdialog"]')).toBeNull();
   });
 
   it('cancels without importing', () => {

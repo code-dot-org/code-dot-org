@@ -102,12 +102,23 @@ functionId, op)` — never edit `document.nodes` directly in a handler, or the
   labels follow `data-theme` while MUI's `Paper` does not — so a popover that
   does not paint its own `--effect-editor-*` surface is a white panel with
   invisible labels in dark mode.
-- **MUI must never portal.** Portals mount on `document.body`, outside the
+- **Dialogs are the design system's `Dialog`, rows included.** Not
+  `CustomDialog` on its own — that is the foundation, and using it directly
+  loses the title/description/button styling that makes a dialog here look like
+  a dialog anywhere else. Override `role` (it declares `alertdialog`) and name
+  the primary button for what it does. A row in a picker is a `Button`
+  (`outlined`/`contained` × `secondary`, selected being `contained`) whose text
+  is `Typography` with `color="inherit"`, or the row's text will not follow the
+  button's color when it is selected.
+- **Nothing may portal.** Portals mount on `document.body`, outside the
   `data-notranslate` container — translated strings would be re-translated by
-  the mainline LocalizeJS DOM engine. Selects are native
-  (`slotProps.select.native`), pickers are inline `MenuList`s, and
-  `src/effect/editor/theme.ts` sets `disablePortal` defaults on
-  Popover/Menu/Modal/Dialog as a backstop. The browser suite asserts no `[class*="Mui"]` element escapes the
+  the mainline LocalizeJS DOM engine. DSCO's `SimpleDropdown` is a native
+  `<select>` and its `CustomDialog` renders inline (the test-texture picker);
+  pickers are inline `MenuList`s; and `src/effect/editor/theme.ts` sets
+  `disablePortal` defaults on MUI's Popover/Menu/Modal/Dialog as a backstop.
+  A `CustomDialog` is mounted only while open — it locks body scroll for as
+  long as it exists — and needs `aria-labelledby` plus an element with
+  `id="dsco-dialog-description"`, or it says so in the console. The browser suite asserts no `[class*="Mui"]` element escapes the
   container. MUI is for chrome only; canvas internals (nodes, handles, wires,
   knobs) stay custom CSS because they are zoom-scaled and geometry-bound to
   React Flow.
