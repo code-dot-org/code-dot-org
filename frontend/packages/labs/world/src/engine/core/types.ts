@@ -189,7 +189,17 @@ export interface Step {
  */
 export interface Rule {
   readonly id: string;
+  /** What the rule IS — "Gravity". Names its toolbox category, and identifies it. */
   readonly name: string;
+  /**
+   * What using it GIVES a world — "Has Gravity".
+   *
+   * A rule reads two ways round: as a thing ("open Gravity and change it") and
+   * as something a world has ("this world has gravity"). The category wants the
+   * first, `use rule` wants the second, and one string cannot be both without
+   * reading badly in one of them.
+   */
+  readonly ability: string;
   readonly requires: readonly Rule[];
   readonly properties: Readonly<Record<string, Property>>;
   readonly actions: Readonly<Record<string, WorldAction>>;

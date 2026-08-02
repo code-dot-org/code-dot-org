@@ -14,6 +14,7 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import {translate} from '../effect/localization';
 
 import styles from './importRuleDialog.module.css';
+import {stockRequirements} from './importStockRule';
 import {STOCK_RULES, type StockRule} from './stock';
 
 export interface ImportRuleDialogProps {
@@ -52,8 +53,24 @@ export const ImportRuleDialog = ({
               className={styles.effect}
               onClick={choose(rule)}
             >
-              <span className={styles.name}>{rule.name}</span>
+              {/* The ability leads: this dialog answers "what should this
+                  world have?", and the rule's own name is what you will see on
+                  its toolbox category once it is in. */}
+              <span className={styles.name}>{rule.ability}</span>
               <span className={styles.description}>{rule.description}</span>
+              {stockRequirements(rule).length > 0 && (
+                // What else lands in `rules/`. A mechanic is written against
+                // other mechanics — gravity against collision and motion — and
+                // they come with it, so the dialog says so rather than leaving
+                // a learner to wonder where the extra files came from.
+                <span className={styles.provides}>
+                  {translate('Also adds: {names}', {
+                    names: stockRequirements(rule)
+                      .map(dep => dep.ability)
+                      .join(', '),
+                  })}
+                </span>
+              )}
               {rule.provides.length > 0 && (
                 // The traits, named. A rule reaches actors through its traits,
                 // so this is what a learner will actually put on something.

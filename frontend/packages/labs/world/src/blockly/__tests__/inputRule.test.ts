@@ -25,7 +25,8 @@ describe('rules/input.rule', () => {
     // A key press belongs to nobody. Every actor can hear these, which is why
     // they hang off the rule rather than off a trait — and why the parser has
     // to read a `define event` chained under the rule root at all.
-    expect(meta.name).toBe('Responds to Input');
+    expect(meta.name).toBe('Input');
+    expect(meta.ability).toBe('Responds to Input');
     expect(meta.traits).toEqual([]);
     expect(meta.events.map(event => event.ref.exportName)).toEqual([
       'AKeyIsPressedEvent',

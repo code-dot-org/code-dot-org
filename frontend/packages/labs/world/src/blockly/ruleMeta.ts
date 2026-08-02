@@ -143,7 +143,10 @@ export interface StepMeta {
  */
 export interface RuleMeta {
   readonly id: string;
+  /** What the rule is — its toolbox category, and how it is referred to. */
   readonly name: string;
+  /** What using it gives a world — the label `use rule` shows. */
+  readonly ability: string;
   readonly source: RuleSource;
   /** The project module this rule is defined in (absent for built-ins). */
   readonly modulePath?: string;
@@ -264,6 +267,7 @@ export function builtinRuleMeta(
     return {
       id: rule.id,
       name: rule.name,
+      ability: rule.ability,
       source: 'builtin' as const,
       ref: ownerRef,
       // A rule's dependencies as their `world-lab` export names (what a `use
@@ -416,6 +420,9 @@ export function parseRuleMeta(
       : '';
 
   const ruleName = field(root, 'NAME') || 'Rule';
+  // What using it gives a world. Absent on a rule authored before the field
+  // existed, and on one whose two readings are the same word.
+  const ability = field(root, 'ABILITY') || ruleName;
   const ref = (exportName: string): MemberRef => ({
     source: 'project',
     exportName,
@@ -633,6 +640,7 @@ export function parseRuleMeta(
   return {
     id: slug(ruleName),
     name: ruleName,
+    ability,
     source: 'project',
     modulePath,
     ref: selfRef,
