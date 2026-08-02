@@ -534,7 +534,7 @@ function createRspackConfig({
                   chunks: chunk => vendorEntryNames.has(chunk.name),
                   test: module =>
                     vendorLibRegexes.some(r => r.test(module.resource)),
-              },
+                },
                 p5lab: {
                   name: 'p5-dependencies',
                   priority: 10,
