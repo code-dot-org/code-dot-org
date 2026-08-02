@@ -115,14 +115,31 @@
   gap: 0.5rem;
 }
 
-/* The sprite dropdown takes the row's slack and truncates rather than overflow. */
-.spriteWrap {
-  flex: 1;
+/* DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem — a form's
+   width, not a column's. This editor is routinely a third of a split pane, so
+   every field here is told to fill what it is given instead. Without this the
+   right-hand half of each row (Scale, Offset Y) is clipped off the pane and is
+   simply unreachable. */
+.detail label {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.detail input,
+.detail select {
+  box-sizing: border-box;
+  width: 100%;
   min-width: 0;
 }
 
-/* The numeric fields span the full card width below the sprite row, so they
-   never overflow the (possibly split) editor pane. */
+/* The sprite takes a row of its own: it is the one thing a frame must say, and
+   sharing a line with the thumbnail and the reorder buttons left it squeezed to
+   a bare chevron with the file name cut away. */
+.spriteWrap {
+  grid-column: 1 / -1;
+}
+
+/* The frame's fields, two to a line, spanning the card. */
 .frameGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -139,6 +156,11 @@
 
 .grip:disabled {
   cursor: default;
+}
+
+/* Pushes the reorder/delete buttons to the end of the head row. */
+.frameSpacer {
+  flex: 1;
 }
 
 /* The frame ordinal is a Typography (subtitle2); this just reserves a fixed,
@@ -161,14 +183,19 @@
   gap: 2px;
 }
 
-/* The spritesheet strip: cells drawn at 2×, clickable to set a frame's cell. */
+/* The spritesheet grid: cells drawn at 2×, clickable to set a frame's cell. */
 .cellPicker {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
   border-top: 1px dashed var(--borders-neutral-light, #e4e4e4);
+}
+
+/* A sheet is as wide as it is, and wider than this pane whenever it holds more
+   than three or four cells — so it scrolls in its own box rather than pushing
+   the card out of the editor. */
+.sheetScroll {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .cellHint {
