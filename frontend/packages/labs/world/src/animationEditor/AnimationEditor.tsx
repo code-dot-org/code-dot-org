@@ -36,6 +36,7 @@ import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import {AddFramesDialog} from './AddFramesDialog';
 import styles from './animationEditor.module.css';
+import {frameAt, previousFrame, startOf, totalTime} from './playback';
 import {type CellRect, sheetGrid} from './sheetFrames';
 
 const DEFAULT_DELAY = 100;
@@ -44,6 +45,10 @@ const DEFAULT_DELAY = 100;
 const BASE_SCALE = 2;
 const PREVIEW_BOX = 112;
 const THUMB_BOX = 44;
+/** How faint the onion skin is: there, but never mistaken for the frame. */
+const GHOST_ALPHA = 0.28;
+/** Playback speeds the preview offers, as multiples of the authored timing. */
+const SPEEDS = [0.25, 0.5, 1, 2] as const;
 
 // What makes an image a spritesheet is a `.sheet` file beside it, with the same
 // stem, saying how big a cell is (appearance/sheetFile). Nothing about a PNG
@@ -137,27 +142,13 @@ const parseNum = (s: string, fallback: number): number => {
   return Number.isFinite(n) ? n : fallback;
 };
 
-/** Draw one frame centered in a `box`-sized canvas (device-pixel aware). */
-function drawFrame(
-  canvas: HTMLCanvasElement,
+/** Paint one frame into a `box`-sized context, at whatever alpha is set. */
+function paintFrame(
+  ctx: CanvasRenderingContext2D,
   box: number,
   frame: Frame,
   images: Record<string, HTMLImageElement>,
 ): void {
-  const ctx = canvas.getContext('2d');
-  if (!ctx) {
-    return;
-  }
-  const dpr = window.devicePixelRatio || 1;
-  if (canvas.width !== box * dpr) {
-    canvas.width = box * dpr;
-  }
-  if (canvas.height !== box * dpr) {
-    canvas.height = box * dpr;
-  }
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  ctx.clearRect(0, 0, box, box);
-  ctx.imageSmoothingEnabled = false;
   const img = images[frame.sprite];
   if (!img) {
     return;
@@ -186,6 +177,43 @@ function drawFrame(
   );
 }
 
+/**
+ * Draw one frame centered in a `box`-sized canvas (device-pixel aware).
+ *
+ * `ghost` is the onion skin: the frame before this one, drawn faint underneath.
+ * Offsets and scale are the reason it exists — they are numbers whose whole
+ * effect is where a drawing sits RELATIVE to the frame either side of it, and
+ * nudging one blind is guesswork.
+ */
+function drawFrame(
+  canvas: HTMLCanvasElement,
+  box: number,
+  frame: Frame,
+  images: Record<string, HTMLImageElement>,
+  ghost?: Frame,
+): void {
+  const ctx = canvas.getContext('2d');
+  if (!ctx) {
+    return;
+  }
+  const dpr = window.devicePixelRatio || 1;
+  if (canvas.width !== box * dpr) {
+    canvas.width = box * dpr;
+  }
+  if (canvas.height !== box * dpr) {
+    canvas.height = box * dpr;
+  }
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, box, box);
+  ctx.imageSmoothingEnabled = false;
+  if (ghost) {
+    ctx.globalAlpha = GHOST_ALPHA;
+    paintFrame(ctx, box, ghost, images);
+    ctx.globalAlpha = 1;
+  }
+  paintFrame(ctx, box, frame, images);
+}
+
 /** A static thumbnail of one frame (redraws when the frame or images change). */
 const FrameThumb = ({
   frame,
@@ -199,7 +227,7 @@ const FrameThumb = ({
     if (ref.current) {
       drawFrame(ref.current, THUMB_BOX, frame, images);
     }
-  });
+  }, [frame, images]);
   return (
     <canvas
       ref={ref}
@@ -244,6 +272,11 @@ export const AnimationEditor = ({
   // editor state, not of the file.
   const [selectedFrame, setSelectedFrame] = useState<string | null>(null);
   const [addingFrames, setAddingFrames] = useState(false);
+  // How the preview is playing. Playing to start with: an animation that does
+  // not move is a list of pictures.
+  const [playing, setPlaying] = useState(true);
+  const [speed, setSpeed] = useState(1);
+  const [onionSkin, setOnionSkin] = useState(false);
 
   const selected = selId ? doc.animations[selId] : null;
   const frames = selected?.frames ?? [];
@@ -605,35 +638,114 @@ export const AnimationEditor = ({
   const previewRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef(images);
   imagesRef.current = images;
+
+  // How far into the animation playback has got, in authored milliseconds —
+  // kept across pauses and speed changes so neither is a jump. A ref rather
+  // than state: it changes sixty times a second and nothing renders from it.
+  const elapsed = useRef(0);
+  // The frame the playhead is on, as state, because the STRIP draws it. Set
+  // only when it changes — once per frame of the animation, not per repaint.
+  const [playIndex, setPlayIndex] = useState(0);
+  const playheadRef = useRef(0);
+  // What the preview shows while paused: the frame being edited.
+  const selectedIndexRef = useRef(0);
+  selectedIndexRef.current = Math.max(
+    0,
+    frames.findIndex(f => f.__id === frameId),
+  );
+  const playingRef = useRef(playing);
+  playingRef.current = playing;
+  const onionRef = useRef(onionSkin);
+  onionRef.current = onionSkin;
+
   useEffect(() => {
     let raf = 0;
-    let startedAt = 0;
+    let last = 0;
+    // A different animation starts at its own beginning, not wherever the last
+    // one had got to.
+    elapsed.current = 0;
+    playheadRef.current = 0;
+    setPlayIndex(0);
     const tick = (now: number) => {
-      if (!startedAt) {
-        startedAt = now;
-      }
       const def = selId ? docRef.current.animations[selId] : null;
       const canvas = previewRef.current;
       if (canvas && def && def.frames.length > 0) {
-        const total = def.frames.reduce((s, f) => s + Math.max(1, f.delay), 0);
-        let t = now - startedAt;
-        t = def.loop === false ? Math.min(t, total - 1) : t % total;
-        let acc = 0;
-        let idx = def.frames.length - 1;
-        for (let k = 0; k < def.frames.length; k++) {
-          acc += Math.max(1, def.frames[k].delay);
-          if (t < acc) {
-            idx = k;
-            break;
+        const total = totalTime(def.frames);
+        if (playingRef.current) {
+          // Real time scaled by the speed, rather than a start time compared
+          // against: at half speed the same wall clock is half the animation.
+          elapsed.current += last ? (now - last) * speed : 0;
+          const t =
+            def.loop === false
+              ? Math.min(elapsed.current, total - 1)
+              : elapsed.current % total;
+          const at = frameAt(def.frames, t);
+          if (at !== playheadRef.current) {
+            playheadRef.current = at;
+            setPlayIndex(at);
           }
         }
-        drawFrame(canvas, PREVIEW_BOX, def.frames[idx], imagesRef.current);
+        last = now;
+        const index = playingRef.current
+          ? playheadRef.current
+          : selectedIndexRef.current;
+        const frame = def.frames[Math.min(index, def.frames.length - 1)];
+        // The frame before this one, for the onion skin: the one it has to
+        // line up with.
+        const before = previousFrame(def.frames, index, def.loop !== false);
+        drawFrame(
+          canvas,
+          PREVIEW_BOX,
+          frame,
+          imagesRef.current,
+          onionRef.current && before >= 0 ? def.frames[before] : undefined,
+        );
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [selId]);
+  }, [selId, speed]);
+
+  // ---- transport ------------------------------------------------------------
+
+  /**
+   * Pause here, or play on from the frame being looked at.
+   *
+   * Pausing selects the frame that was on screen — pausing on the one that
+   * looks wrong is how the frame that looks wrong gets fixed — and playing
+   * resumes from wherever the selection has since got to.
+   */
+  const togglePlay = () => {
+    if (playing) {
+      const at = frames[playheadRef.current];
+      if (at) {
+        setSelectedFrame(at.__id);
+      }
+      setPlaying(false);
+      return;
+    }
+    elapsed.current = startOf(frames, selectedIndexRef.current);
+    playheadRef.current = selectedIndexRef.current;
+    setPlayIndex(selectedIndexRef.current);
+    setPlaying(true);
+  };
+
+  /** Step a frame at a time, which is a thing you do while paused. */
+  const step = (dir: -1 | 1) => {
+    setPlaying(false);
+    const at = Math.min(
+      frames.length - 1,
+      Math.max(0, selectedIndexRef.current + dir),
+    );
+    const frame = frames[at];
+    if (frame) {
+      setSelectedFrame(frame.__id);
+      elapsed.current = startOf(frames, at);
+      playheadRef.current = at;
+      setPlayIndex(at);
+    }
+  };
 
   // ---------------------------------------------------------------------------
 
@@ -725,15 +837,78 @@ export const AnimationEditor = ({
               className={styles.preview}
               style={{width: PREVIEW_BOX, height: PREVIEW_BOX}}
             />
-            <Checkbox
-              name="anim-loop"
-              label="Loop"
-              checked={selected.loop !== false}
-              disabled={isReadOnly}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                setLoop(e.target.checked)
-              }
-            />
+            <div className={styles.previewSettings}>
+              <Checkbox
+                name="anim-loop"
+                label="Loop"
+                checked={selected.loop !== false}
+                disabled={isReadOnly}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setLoop(e.target.checked)
+                }
+              />
+              <Checkbox
+                name="anim-onion"
+                label="Onion skin"
+                checked={onionSkin}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setOnionSkin(e.target.checked)
+                }
+              />
+            </div>
+          </div>
+
+          {/* The transport. Stepping and pausing move the SELECTION, so the
+              frame on screen is the frame the inspector is editing. */}
+          <div className={styles.transport}>
+            <IconButton
+              aria-label="Previous frame"
+              size="extraSmall"
+              variant="outlined"
+              color="tertiary"
+              disabled={frames.length === 0}
+              onClick={() => step(-1)}
+            >
+              <FontAwesomeV6Icon iconName="backward-step" iconStyle="solid" />
+            </IconButton>
+            <IconButton
+              aria-label={playing ? 'Pause' : 'Play'}
+              size="extraSmall"
+              variant="contained"
+              color="secondary"
+              disabled={frames.length === 0}
+              onClick={togglePlay}
+            >
+              <FontAwesomeV6Icon
+                iconName={playing ? 'pause' : 'play'}
+                iconStyle="solid"
+              />
+            </IconButton>
+            <IconButton
+              aria-label="Next frame"
+              size="extraSmall"
+              variant="outlined"
+              color="tertiary"
+              disabled={frames.length === 0}
+              onClick={() => step(1)}
+            >
+              <FontAwesomeV6Icon iconName="forward-step" iconStyle="solid" />
+            </IconButton>
+            <div className={styles.speed}>
+              <SimpleDropdown
+                name="anim-speed"
+                labelText="Speed"
+                size="s"
+                selectedValue={String(speed)}
+                items={SPEEDS.map(rate => ({
+                  value: String(rate),
+                  text: `${rate}\u00d7`,
+                }))}
+                onChange={(e: ChangeEvent<HTMLSelectElement>) =>
+                  setSpeed(Number(e.target.value))
+                }
+              />
+            </div>
           </div>
 
           <div className={styles.framesHeader}>
@@ -781,6 +956,10 @@ export const AnimationEditor = ({
                     index={i}
                     images={images}
                     active={f.__id === frameId}
+                    // Where the preview has got to. Only while playing: paused,
+                    // the playhead IS the selection, and two marks on one frame
+                    // say less than one.
+                    playing={playing && i === playIndex}
                     disabled={isReadOnly}
                     onSelect={() => setSelectedFrame(f.__id)}
                   />
@@ -855,13 +1034,17 @@ const StripFrame = ({
   index,
   images,
   active,
+  playing,
   disabled,
   onSelect,
 }: {
   frame: Frame;
   index: number;
   images: Record<string, HTMLImageElement>;
+  /** The frame the inspector is editing. */
   active: boolean;
+  /** The frame the preview is showing right now. */
+  playing: boolean;
   disabled: boolean;
   onSelect: () => void;
 }) => {
@@ -880,9 +1063,13 @@ const StripFrame = ({
     >
       <button
         type="button"
-        className={
-          active ? `${styles.strip} ${styles.stripActive}` : styles.strip
-        }
+        className={[
+          styles.strip,
+          active ? styles.stripActive : '',
+          playing ? styles.stripPlaying : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
         aria-label={`Frame ${index + 1}`}
         onClick={onSelect}
         // `attributes` carries the sortable's own roledescription and tabIndex;
