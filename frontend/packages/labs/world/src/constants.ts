@@ -342,7 +342,6 @@ const GAME_ANIMATIONS = JSON.stringify(
     type: 'animation',
     animations: {
       pulse: {
-        name: 'Pulse',
         frameRate: 6,
         frames: [
           {sprite: 'ball.png', scale: 0.7},
@@ -352,7 +351,6 @@ const GAME_ANIMATIONS = JSON.stringify(
         ],
       },
       playerBob: {
-        name: 'Player Bob',
         frameRate: 7,
         frames: [
           {sprite: 'player.png', scale: 1.0},

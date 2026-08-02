@@ -8,6 +8,8 @@ describe('parseAnimationFile', () => {
       type: 'animation',
       animations: {
         walk: {
+          // An old file's display name: read and dropped, since an animation is
+          // named by the key it is filed under and nothing ever showed this.
           name: 'Walking',
           loop: false,
           frames: [
@@ -22,7 +24,7 @@ describe('parseAnimationFile', () => {
       },
     });
     expect(Object.keys(defs)).toEqual(['walk']);
-    expect(defs.walk.name).toBe('Walking');
+    expect('name' in defs.walk).toBe(false);
     expect(defs.walk.loop).toBe(false);
     expect(defs.walk.frames).toHaveLength(2);
     expect(defs.walk.frames[0]).toEqual({

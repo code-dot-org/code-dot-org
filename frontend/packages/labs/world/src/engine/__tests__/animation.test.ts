@@ -26,7 +26,6 @@ import {
  */
 const CELL = 32;
 const coinSpin: AnimationDef = {
-  name: 'Coin Spin',
   loop: true,
   frames: Array.from({length: 6}, (_unused, index) => ({
     sprite: 'coinSpin.png',
@@ -35,7 +34,6 @@ const coinSpin: AnimationDef = {
   })),
 };
 const playerWalk: AnimationDef = {
-  name: 'Player Walk',
   loop: true,
   frames: Array.from({length: 4}, (_unused, index) => ({
     sprite: 'playerWalk.png',

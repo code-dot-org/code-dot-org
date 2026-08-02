@@ -99,7 +99,6 @@ function parseDef(id: string, value: unknown): AnimationDef {
     fail(`animation "${id}" "frameRate" must be a positive number`);
   }
   return {
-    name: typeof value.name === 'string' ? value.name : undefined,
     loop: typeof value.loop === 'boolean' ? value.loop : undefined,
     frameRate:
       typeof value.frameRate === 'number' ? value.frameRate : undefined,

@@ -34,10 +34,16 @@ export interface AnimationFrame {
   delay?: number;
 }
 
-/** A named animation: an ordered set of frames, looping by default. */
+/**
+ * A named animation: an ordered set of frames, looping by default.
+ *
+ * Its name is the key it is filed under in the file — `{"animations": {"walk":
+ * …}}` — which is also what a `play animation` block holds and what
+ * `playAnimation` looks up. There is no second, friendlier name: one was
+ * carried here for a while and nothing ever read it, which made it a thing to
+ * keep in step with the real name for no benefit.
+ */
 export interface AnimationDef {
-  /** Friendly, localizable label for the interface. */
-  name?: string;
   /**
    * Frames per second, for the frames that do not name a delay.
    *
