@@ -27,6 +27,7 @@ import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
+import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
@@ -510,6 +511,17 @@ export const BlocklyFileEditor = ({
     },
     [onChange, handleRename, reconcileMembers],
   );
+
+  // Which rule this workspace is, so `use rule` can leave it out of its own list.
+  // After mount rather than during: the workspace is created by a child, whose
+  // effects run first. A block deserialized before this lands keeps whatever it
+  // was saved with, which is the right way round — a dropdown that cannot offer
+  // a value drops it.
+  useEffect(() => {
+    if (workspaceRef.current) {
+      setEditingRule(workspaceRef.current, ownRuleModule);
+    }
+  }, [ownRuleModule]);
 
   // Reload after a rename, once `blocks` carries the renamed member types —
   // BlocklyProvider registers them in its own effect, which runs before this one

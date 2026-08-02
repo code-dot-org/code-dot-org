@@ -676,7 +676,11 @@ export function parseRuleMeta(
     source: 'project',
     modulePath,
     ref: selfRef,
-    requires,
+    // Never itself. A `use rule` naming this rule generates a module that
+    // imports its own default export — a cycle the compiler resolves to
+    // `undefined`, and the project dies reading `.id` of it. The dropdown does
+    // not offer it (editingRule), so this is for a file that already holds one.
+    requires: requires.filter(dep => dep !== ruleName),
     traits,
     properties,
     actions,
