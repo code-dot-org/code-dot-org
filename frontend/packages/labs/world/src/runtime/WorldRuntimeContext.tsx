@@ -30,7 +30,7 @@ import {ENTRY_FILE} from '../constants';
 
 import type {ReloadReport} from './messages';
 import {projectAssets} from './projectAssets';
-import {projectFiles} from './projectFiles';
+import {projectFiles, projectImageNames} from './projectFiles';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {
   WorldPreviewManager,
@@ -169,7 +169,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
     // Refresh the project-derived dropdowns (animations, actor/world modules)
     // before the generator runs.
-    refreshProjectDropdowns(files);
+    refreshProjectDropdowns(files, projectImageNames(currentSources.source));
     // Wait for the Blockly generator before compiling a project that has any
     // Blockly-authored files; this effect re-runs when it becomes ready.
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {

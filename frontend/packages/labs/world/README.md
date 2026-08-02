@@ -40,6 +40,24 @@ An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
 bundle as data and is compiled to GLSL in the preview surface, where Phaser is.
 
+## Where a picture comes from
+
+Nothing is built in. A game draws only what its project holds: an image is a
+file (bytes on the file's `url`, the same shape an uploaded PNG has) and an
+animation is a `.anim` that reads rectangles out of one. The driver preloads the
+project's images and nothing else, and every `.anim` in the project is registered
+when the world is built — there is no `use animations` block, because an
+animation file is not something a world opts into, it is something the project
+has.
+
+The library at `src/appearance/stock.ts` is a shelf to copy from, reached by the
+`(import…)` row on a `set sprite` or `play animation` dropdown. Importing writes
+real files — an animation brings the image it reads — and from then on they are
+the learner's: repaintable, renamable, deletable. The drawings live in
+`scripts/generate-sprites.mjs`; `scripts/write-stock-assets.mjs` turns them into
+the data URLs the library hands out (`src/appearance/stockImages.ts`, generated
+and committed).
+
 ## What a level can say
 
 Most of a World level is its starting project, but a few of the editor's

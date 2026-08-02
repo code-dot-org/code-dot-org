@@ -16,6 +16,7 @@ import {label} from './label';
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
+let projectSprites: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
@@ -31,6 +32,11 @@ let projectEffectParams: Record<string, EffectParameter[]> = {};
 /** Replace the actor options the ACTOR dropdown offers. */
 export function setProjectActors(options: Array<[string, string]>): void {
   projectActors = options;
+}
+
+/** Replace the sprite options — the project's own image files. */
+export function setProjectSprites(options: Array<[string, string]>): void {
+  projectSprites = options;
 }
 
 /** Replace the animation-file options the FILE dropdown offers. */
@@ -83,6 +89,11 @@ const orNone = (options: Array<[string, string]>): Array<[string, string]> =>
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
   return orNone(projectActors);
+}
+
+/** Current SPRITE dropdown options (the images the project holds). */
+export function spriteOptions(): Array<[string, string]> {
+  return orNone(projectSprites);
 }
 
 /** Current FILE dropdown options (the project's animation files). */

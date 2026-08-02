@@ -1,18 +1,20 @@
-// The `world_play_animation` dropdown lists the animations available in the
-// project: the built-in stock animations plus the ids the learner authored in
-// their animation `.json` files. Blockly JSON dropdowns take static options, so
-// — like Music Lab's effect dropdowns — an extension swaps the field's
-// `menuGenerator_` for one that reads this module's registry, which the lab
-// refreshes from the project sources (WorldRuntimeContext) before the editor
-// loads or the generator runs.
+// The `world_play_animation` dropdown lists the animations the PROJECT holds —
+// the ids defined across its `.anim` files — and nothing else. There are no
+// built-in animations to play: an animation is frames of an image, both of them
+// files, and a project draws only what it holds. The last row is how you get
+// more (`(import…)`, appearance/stock).
+//
+// Blockly JSON dropdowns take static options, so — like Music Lab's effect
+// dropdowns — an extension swaps the field's `menuGenerator_` for one that reads
+// this module's registry, which the lab refreshes from the project sources
+// (WorldRuntimeContext) before the editor loads or the generator runs.
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
-import {SPRITESHEET_NAMES} from '../sprites';
+import {IMPORT_ANIMATION_VALUE} from '../appearance/appearanceImport';
 
 import {label} from './label';
 
-const STOCK_ANIMATIONS = [...SPRITESHEET_NAMES];
 let projectAnimations: string[] = [];
 
 /** Replace the project-authored animation ids the dropdown offers. */
@@ -20,10 +22,13 @@ export function setProjectAnimations(ids: string[]): void {
   projectAnimations = ids;
 }
 
-/** Current `[label, id]` dropdown options: stock animations, then authored ones. */
+/** Current `[label, id]` options: the project's animations, then `(import…)`. */
 export function animationOptions(): Array<[string, string]> {
-  const ids = [...new Set([...STOCK_ANIMATIONS, ...projectAnimations])];
-  return ids.length ? ids.map(id => [label(id), id]) : [['(none)', '']];
+  const ids = [...new Set(projectAnimations)];
+  return [
+    ...ids.map((id): [string, string] => [label(id), id]),
+    ['(import…)', IMPORT_ANIMATION_VALUE],
+  ];
 }
 
 export const ANIMATION_OPTIONS_EXTENSION = 'world_animation_options';

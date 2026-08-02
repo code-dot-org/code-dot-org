@@ -17,11 +17,38 @@ import {
   type AnimationDef,
 } from '../index';
 
+/**
+ * A six-frame strip, the way a project's own `.anim` file describes one.
+ *
+ * The engine ships no animations — they are files a project holds — so a test
+ * about timing brings its own, exactly as a learner's project would: frames that
+ * name an image and a rectangle in it.
+ */
+const CELL = 32;
+const coinSpin: AnimationDef = {
+  name: 'Coin Spin',
+  loop: true,
+  frames: Array.from({length: 6}, (_unused, index) => ({
+    sprite: 'coinSpin.png',
+    position: {x: index * CELL, y: 0, width: CELL, height: CELL},
+    delay: 1000 / 12,
+  })),
+};
+const playerWalk: AnimationDef = {
+  name: 'Player Walk',
+  loop: true,
+  frames: Array.from({length: 4}, (_unused, index) => ({
+    sprite: 'playerWalk.png',
+    position: {x: index * CELL, y: 0, width: CELL, height: CELL},
+    delay: 1000 / 8,
+  })),
+};
+
 // A world with the Animation rule and one actor that has the appearance trait.
 function makeWorld(animation = '') {
-  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
-    AnimationRule,
-  ]);
+  const builder = new WorldBuilder({id: 'w', name: 'W'})
+    .useRules([AnimationRule])
+    .useAnimations({coinSpin, playerWalk});
   const world = builder.getWorld();
   const actor = builder.addActor(
     new ActorBuilder({id: 'a', name: 'A'})
@@ -189,7 +216,7 @@ describe('the Animation rule', () => {
     const {world, actor} = makeWorld('coinSpin');
     world.tick(0.1); // frame 1
     const frame = world.renderSnapshot().find(s => s.actor === actor)?.frame;
-    expect(frame?.sprite).toBe('coinSpin');
+    expect(frame?.sprite).toBe('coinSpin.png');
     expect(frame?.cell).toEqual({x: 32, y: 0, width: 32, height: 32});
 
     // Clearing the animation and setting a static sprite reports a whole image.

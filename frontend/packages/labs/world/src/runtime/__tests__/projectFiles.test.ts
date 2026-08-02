@@ -13,6 +13,7 @@ describe('projectFiles', () => {
       'actors/coin.js',
       'actors/ground.js',
       'actors/player.actor',
+      'animations/coinSpin.anim',
       'animations/game.anim',
       'effects/ripple.effect',
       'maps/level1.map',

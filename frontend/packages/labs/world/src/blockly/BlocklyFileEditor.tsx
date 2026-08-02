@@ -18,6 +18,16 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
+import {
+  setAppearanceImportHandler,
+  type AppearanceKind,
+} from '../appearance/appearanceImport';
+import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
+import {
+  importStockAnimation,
+  importStockSprite,
+} from '../appearance/importStock';
+import type {StockAnimation, StockSprite} from '../appearance/stock';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
@@ -29,7 +39,11 @@ import {
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
-import {filePath, projectFiles} from '../runtime/projectFiles';
+import {
+  filePath,
+  projectFiles,
+  projectImageNames,
+} from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
@@ -220,7 +234,11 @@ export const BlocklyFileEditor = ({
     () => projectFiles(currentSources.source),
     [currentSources],
   );
-  useMemo(() => refreshProjectDropdowns(files), [files]);
+  const images = useMemo(
+    () => projectImageNames(currentSources.source),
+    [currentSources],
+  );
+  useMemo(() => refreshProjectDropdowns(files, images), [files, images]);
 
   // The stock-effect import, opened from an effect dropdown's `(import…)` row.
   //
@@ -269,6 +287,7 @@ export const BlocklyFileEditor = ({
   const finishImport = useCallback((path: string | undefined) => {
     setImporting(false);
     setImportingRule(false);
+    setImportingAppearance(null);
     resolveImport.current?.(path);
     resolveImport.current = null;
   }, []);
@@ -281,7 +300,7 @@ export const BlocklyFileEditor = ({
       // dropdown rebuilds from the registry, and a value with no matching option
       // is dropped by Blockly.
       updateSources({...sources, source});
-      refreshProjectDropdowns(projectFiles(source));
+      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
       finishImport(path);
     },
     [updateSources, finishImport],
@@ -296,8 +315,40 @@ export const BlocklyFileEditor = ({
       // option is dropped by Blockly. The value is the rule's NAME — the field
       // says which rule, never which file.
       updateSources({...sources, source});
-      refreshProjectDropdowns(projectFiles(source));
+      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
       finishImport(name);
+    },
+    [updateSources, finishImport],
+  );
+
+  // The appearance picker, opened from a `set sprite` / `play animation`
+  // dropdown. Same machinery as the other two: the field cannot reach React, so
+  // it asks through a handler and waits on the promise this resolves.
+  const [importingAppearance, setImportingAppearance] =
+    useState<AppearanceKind | null>(null);
+  useEffect(() => {
+    setAppearanceImportHandler(
+      kind =>
+        new Promise<string | undefined>(resolve => {
+          resolveImport.current = resolve;
+          setImportingAppearance(kind);
+        }),
+    );
+    return () => setAppearanceImportHandler(null);
+  }, []);
+
+  const handleAppearanceImport = useCallback(
+    (chosen: StockSprite | StockAnimation) => {
+      const sources = sourcesRef.current;
+      const {source, value} =
+        'dataUrl' in chosen
+          ? importStockSprite(sources.source, chosen)
+          : importStockAnimation(sources.source, chosen);
+      // In the project BEFORE the field takes its value: the dropdown rebuilds
+      // from the registry, and a value with no matching option is dropped.
+      updateSources({...sources, source});
+      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
+      finishImport(value);
     },
     [updateSources, finishImport],
   );
@@ -625,6 +676,13 @@ export const BlocklyFileEditor = ({
       {importingRule && (
         <ImportRuleDialog
           onImport={handleRuleImport}
+          onCancel={() => finishImport(undefined)}
+        />
+      )}
+      {importingAppearance && (
+        <ImportAppearanceDialog
+          kind={importingAppearance}
+          onImport={handleAppearanceImport}
           onCancel={() => finishImport(undefined)}
         />
       )}

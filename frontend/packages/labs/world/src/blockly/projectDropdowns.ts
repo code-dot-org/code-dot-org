@@ -13,6 +13,7 @@ import {
   setProjectEffectParameters,
   setProjectMaps,
   setProjectRuleModules,
+  setProjectSprites,
 } from './moduleOptions';
 import {setOpenableModules} from './openModule';
 import {projectAnimationIds} from './projectAnimations';
@@ -24,6 +25,7 @@ import {
   projectMapActorTypes,
   projectRuleMetas,
   projectRuleOptions,
+  projectSpriteOptions,
   projectWorldRules,
 } from './projectModules';
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
@@ -32,8 +34,19 @@ import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 /** Extensions a module path can resolve to — what a block may open. */
 const MODULE_FILE = /\.(rule|js|ts)$/;
 
-export function refreshProjectDropdowns(files: Record<string, string>): void {
+export function refreshProjectDropdowns(
+  files: Record<string, string>,
+  /**
+   * Image file names the project holds. They carry no text contents — an
+   * uploaded or imported PNG is bytes on a `url` — so they never appear in the
+   * flattened `files` map and have to be passed alongside it.
+   */
+  images: readonly string[] = [],
+): void {
   setProjectAnimations(projectAnimationIds(files));
+  // The images a `set sprite` block may name: the project's own, and nothing
+  // else — a game draws what its project holds.
+  setProjectSprites(projectSpriteOptions(files, images));
   // Which module paths there is a file to open for — what puts the eye on a
   // `use rule` / `use trait` block (openModule).
   setOpenableModules(

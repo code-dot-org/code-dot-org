@@ -13,8 +13,9 @@
 // each actor's current frame; `renderSnapshot` hands it over as a `frame`
 // descriptor and this binding just blits it — a textured Image cropped to the
 // frame's spritesheet cell (or a whole single image), else a plain rectangle for
-// an actor with no appearance. Phaser is a renderer, not the animator. All
-// textures/spritesheets are preloaded from the self-hosted `${assetBase}sprites/`.
+// an actor with no appearance. Phaser is a renderer, not the animator. Every
+// texture comes from the project itself (`projectAssets`), loaded as a plain
+// image; a frame's cell rectangle becomes a named texture frame on first use.
 //
 // Renderer: WebGL. The game runs on `Phaser.WEBGL` outright rather than `AUTO`,
 // because Effects (specs/EFFECTS_PLAN.md) are compiled GLSL registered as filter
@@ -34,7 +35,6 @@ import Phaser from 'phaser';
 
 import type {Actor, RenderState, World} from 'world-lab';
 
-import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {EffectRegistry, type EffectErrorReporter} from './effects';
@@ -49,7 +49,28 @@ const ACTOR_SIZE = 24;
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEGREES_TO_RADIANS = Math.PI / 180;
-const DEFAULT_ASSET_BASE = '/vendor/';
+
+/**
+ * The name of a texture frame for `cell`, registering it on first use.
+ *
+ * Phaser reads a sub-rectangle of an image through a named frame, which a
+ * spritesheet load would normally create up front from a fixed cell size. There
+ * is no fixed cell size here — an animation's frames carry their own rectangles,
+ * and the image they read is just an image — so each rectangle becomes a frame
+ * the first time it is drawn, named by the rectangle itself.
+ */
+function cellFrame(
+  scene: Phaser.Scene,
+  sprite: string,
+  cell: {x: number; y: number; width: number; height: number},
+): string {
+  const name = `${cell.x},${cell.y},${cell.width},${cell.height}`;
+  const texture = scene.textures.get(sprite);
+  if (texture && !texture.has(name)) {
+    texture.add(name, 0, cell.x, cell.y, cell.width, cell.height);
+  }
+  return name;
+}
 
 /** A drawn actor — a textured image or the fallback rectangle. */
 type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
@@ -113,10 +134,10 @@ export class PhaserBinding {
   constructor(
     world: World,
     parent: HTMLElement,
-    assetBase: string = DEFAULT_ASSET_BASE,
-    // Learner-uploaded textures as `{fileName: dataURL}`; an animation frame
-    // references one by its file name (see projectAssets / UPLOADS.md).
-    uploadedAssets: Record<string, string> = {},
+    // The project's textures as `{fileName: dataURL}`; an animation frame
+    // references one by its file name (see projectAssets / UPLOADS.md). There
+    // is no other source: a game draws what its project holds.
+    projectAssets: Record<string, string> = {},
     // Where an effect that will not compile is reported. It happens inside the
     // render loop — long after the constructor's caller could have caught it —
     // so the message needs a way out that is not a throw.
@@ -251,12 +272,15 @@ export class PhaserBinding {
 
         const frame = state.frame;
         if (frame && object instanceof Phaser.GameObjects.Image) {
-          // A cell (spritesheet source rect) maps to a frame index in the
-          // uniform strip; no cell ⇒ the whole single image.
-          const index = frame.cell
-            ? Math.round(frame.cell.x / frame.cell.width)
-            : undefined;
-          object.setTexture(frame.sprite, index);
+          // A cell is a source rectangle in the image, named and registered on
+          // the texture the first time it is drawn (`cellFrame`); no cell ⇒ the
+          // whole image. Every texture is loaded as a plain image, so a
+          // spritesheet is not a kind of asset here — it is an image that some
+          // animation happens to read rectangles out of.
+          object.setTexture(
+            frame.sprite,
+            frame.cell ? cellFrame(scene, frame.sprite, frame.cell) : undefined,
+          );
           object.setPosition(
             state.x + frame.offset.x,
             state.y + frame.offset.y,
@@ -337,17 +361,10 @@ export class PhaserBinding {
       audio: {noAudio: true},
       scene: {
         preload(this: Phaser.Scene) {
-          for (const name of SPRITE_NAMES) {
-            this.load.image(name, `${assetBase}sprites/${name}.png`);
-          }
-          for (const name of SPRITESHEET_NAMES) {
-            this.load.spritesheet(name, `${assetBase}sprites/${name}.png`, {
-              frameWidth: SPRITE_SIZE,
-              frameHeight: SPRITE_SIZE,
-            });
-          }
-          // Uploaded images, keyed by file name (data URLs — no network).
-          for (const [name, dataUrl] of Object.entries(uploadedAssets)) {
+          // The project's own images, keyed by file name (data URLs — no
+          // network, and nothing built in: an image a game draws is a file the
+          // project holds, whether the learner drew it or imported it).
+          for (const [name, dataUrl] of Object.entries(projectAssets)) {
             this.load.image(name, dataUrl);
           }
         },

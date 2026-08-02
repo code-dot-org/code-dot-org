@@ -8,8 +8,6 @@
 //   world-lab.mjs   — the engine, bundled from src/engine; the compiler rewrites
 //                     the learner's `import 'world-lab'` to this URL, so there is
 //                     exactly one engine instance (PLAN §7 / §10)
-//   sprites/*.png   — the built-in sprite images the preview draws actors with,
-//                     generated (not copied) by generate-sprites.mjs
 //
 // Run: node scripts/setup-world-assets.mjs   (wired as `yarn setup:world`)
 
@@ -18,8 +16,6 @@ import {existsSync, mkdirSync, copyFileSync, statSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
-
-import {generateSprites} from './generate-sprites.mjs';
 
 const require = createRequire(import.meta.url);
 const here = dirname(fileURLToPath(import.meta.url));
@@ -64,10 +60,5 @@ console.log('world assets: bundled world-lab.mjs');
 
 // Generate the built-in sprite + animation images the preview loads as
 // self-hosted assets.
-const {sprites, animations} = generateSprites(join(vendorDir, 'sprites'));
-console.log(
-  `world assets: generated ${sprites.length} sprites, ` +
-    `${animations.length} animations`,
-);
 
 console.log('world assets: ready in public/vendor/');

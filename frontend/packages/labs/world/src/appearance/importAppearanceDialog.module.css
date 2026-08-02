@@ -1,0 +1,48 @@
+/* The appearance picker's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`; the rows are design-system
+   buttons, so their colors follow the lab's Light/Dark setting like every other
+   button. */
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per drawing: the picture, then what it is. Layout only. */
+.item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  text-align: start;
+  text-transform: none;
+}
+
+/* `.list` for the specificity: the design system's dialog sizes any `img` in its
+   text section as a banner. These are 32-pixel drawings, and a strip of six is
+   six of them wide — shown at 2× so a learner can tell them apart. */
+.list .preview {
+  display: block;
+  flex: 0 0 auto;
+  height: 64px;
+  max-width: 192px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
