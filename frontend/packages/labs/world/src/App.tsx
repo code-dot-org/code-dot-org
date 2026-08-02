@@ -1,4 +1,5 @@
 import {CodebridgeLab} from '@code-dot-org/codebridge';
+import {registerLevelKindSchema} from '@code-dot-org/core/api';
 
 import styles from './app.module.css';
 import {WorldBlocklyThemeProvider} from './blockly/worldBlocklyTheme';
@@ -6,6 +7,11 @@ import {worldConfig} from './config';
 import {DEFAULT_PROJECT} from './constants';
 import WorldLayout from './layout/WorldLayout';
 import {WorldRuntimeProvider} from './runtime/WorldRuntimeContext';
+import {LevelKindSchema} from './schema';
+
+// At import, before any level properties are fetched: an unregistered kind is
+// parsed against the base schema alone, which drops `levelData` on the floor.
+registerLevelKindSchema('world', LevelKindSchema);
 
 /**
  * The World Lab entrypoint. Composes the Codebridge shell: `CodebridgeLab`
