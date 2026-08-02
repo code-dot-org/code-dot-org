@@ -172,9 +172,21 @@ export function usePinnedGhosts(
     const observer = new ResizeObserver(() => compute());
     observer.observe(containerRef.current ?? document.body);
 
+    // A knob strip that scrolls is the other way a knob moves without anything
+    // here changing: more parameters than fit make the row scrollable, and
+    // sliding it sideways slides every knob on it. Captured at the document,
+    // because a scroll event does not bubble — and because the strip is not the
+    // only scroller that can move a knob (a pane, a panel, the page itself).
+    const onScroll = () => compute();
+    document.addEventListener('scroll', onScroll, {
+      capture: true,
+      passive: true,
+    });
+
     return () => {
       unsubscribe();
       observer.disconnect();
+      document.removeEventListener('scroll', onScroll, {capture: true});
     };
   }, [anchors, containerRef, screenToFlowPosition, store, updateNodeInternals]);
 
