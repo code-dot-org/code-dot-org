@@ -9,6 +9,7 @@ import {
   inputRule,
   motionRule,
 } from './rules/stock';
+import {TILE_SIZE} from './runtime/viewport';
 
 /**
  * The world the game starts in — the driver's compile + run entry point
@@ -95,18 +96,67 @@ const place = (type: string, id: string, x: number, y: number) => ({
   id,
   properties: {positional: {position: {x, y}}},
 });
-// Laid out for the square world (runtime/viewport): the ground near the bottom,
-// the player well above it so the fall is something you watch rather than
-// something you miss, and the two decorative actors flanking the drop.
+// The middle of tile `column`/`row` on the world's 10 × 10 grid — the point a
+// placed actor's position names. Everything in the starter level is on the grid,
+// because "the floor is the bottom row" should be true of the numbers as well as
+// of the picture.
+const tileCenter = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
+
+/** A run of ground tiles along `row`, one per column in `columns`. */
+const ground = (name: string, row: number, columns: readonly number[]) =>
+  columns.map(column =>
+    place(
+      'actors/ground',
+      `${name}${column}`,
+      tileCenter(column),
+      tileCenter(row),
+    ),
+  );
+
+/** A column of ground tiles down `column`, one per row in `rows`. */
+const wall = (name: string, column: number, rows: readonly number[]) =>
+  rows.map(row =>
+    place(
+      'actors/ground',
+      `${name}${row}`,
+      tileCenter(column),
+      tileCenter(row),
+    ),
+  );
+
+const ALL_COLUMNS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+// The starter level, laid out on the grid (runtime/viewport):
+//
+//   # . . . . . . . . #   0   #  wall
+//   # . . . . . . . . #   1
+//   # . . B . . . . . #   2   B  ball, floating
+//   # . . . . . . C . #   3   C  coin, over the platform
+//   # . P . . . . . . #   4   P  player, which falls to the floor
+//   # . . . . . . . . #   5
+//   # . . . . = = = . #   6   =  a platform, three tiles, one jump up
+//   # . . . . . . . . #   7
+//   # . . . . . . . . #   8
+//   # # # # # # # # # #   9   #  the floor
+//
+// A room, on purpose. A jump clears about four tiles, so the platform is
+// comfortably reachable from the floor and the coin sits over it; the walls mean
+// the first thing a learner does — hold an arrow key — bumps into something
+// rather than walking out of the world, which in ten columns takes a second and
+// a half. Leaving the world is a thing to build deliberately.
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
-    tile: {width: 32, height: 32},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
-      place('actors/player', 'Player', 400, 240),
-      place('actors/ground', 'Ground', 400, 700),
-      place('actors/coin', 'Coin', 560, 400),
-      place('actors/ball', 'Ball', 240, 400),
+      place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
+      ...ground('Floor', 9, ALL_COLUMNS),
+      ...wall('WallLeft', 0, WALL_ROWS),
+      ...wall('WallRight', 9, WALL_ROWS),
+      ...ground('Platform', 6, [5, 6, 7]),
+      place('actors/coin', 'Coin', tileCenter(6), tileCenter(3)),
+      place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
     ],
   },
   null,

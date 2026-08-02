@@ -21,7 +21,7 @@ import {
 } from '../blockly/projectModules';
 import type {ActorSchema, PropertySchema} from '../runtime/messages';
 import {projectFiles} from '../runtime/projectFiles';
-import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
+import {TILE_SIZE, VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../runtime/viewport';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import styles from './mapEditor.module.css';
@@ -33,7 +33,7 @@ import styles from './mapEditor.module.css';
 // size, centred on their position.
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
-const DEFAULT_TILE = 32;
+const DEFAULT_TILE = TILE_SIZE;
 const DRAW_SIZE = 32;
 
 // Camera limits. `FIT_PADDING` leaves a margin so the bordered map doesn't touch
