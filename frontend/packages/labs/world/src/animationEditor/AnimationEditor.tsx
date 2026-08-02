@@ -43,8 +43,10 @@ import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
 import {type CellRect, sheetGrid} from './sheetFrames';
 import {SpritePickerDialog} from './SpritePickerDialog';
+import {delayOf, durations, retimed, shownRate} from './timing';
 
-const DEFAULT_DELAY = 100;
+/** What a new animation runs at, in frames per second. */
+const DEFAULT_FRAME_RATE = 10;
 // Preview/thumbnail draw scale: a 32px sprite is drawn at 2× so it reads at a
 // glance; the frame's own scale/offset multiply on top.
 const BASE_SCALE = 2;
@@ -64,7 +66,8 @@ const SPEEDS = [0.25, 0.5, 1, 2] as const;
 type Cell = CellRect;
 interface Frame {
   sprite: string;
-  delay: number;
+  /** This frame's own timing, when it is an exception to the animation's. */
+  delay?: number;
   scale?: number;
   offset?: {x: number; y: number};
   position?: Cell;
@@ -74,6 +77,8 @@ interface Frame {
 interface AnimDef {
   name?: string;
   loop?: boolean;
+  /** Frames per second, for the frames that do not name a delay (timing.ts). */
+  frameRate?: number;
   frames: Frame[];
 }
 interface AnimFile {
@@ -101,6 +106,7 @@ function parseAnim(contents: string): AnimFile {
           animations[id] = {
             name: def.name,
             loop: def.loop,
+            frameRate: def.frameRate,
             frames: (def.frames ?? []).map(f => ({...f, __id: uid()})),
           };
         }
@@ -117,7 +123,12 @@ function parseAnim(contents: string): AnimFile {
  *  hand-authored shape: no `__id`, no zero offset, no unit scale, no absent
  *  cell). `out` is rebuilt from known keys, so `__id` never leaks. */
 function cleanFrame(f: Frame): Omit<Frame, '__id'> {
-  const out: Omit<Frame, '__id'> = {sprite: f.sprite, delay: f.delay};
+  const out: Omit<Frame, '__id'> = {sprite: f.sprite};
+  // Only when it differs from the animation's rate: a frame that says nothing
+  // is a frame that follows (timing.ts).
+  if (typeof f.delay === 'number') {
+    out.delay = f.delay;
+  }
   if (f.position) {
     out.position = f.position;
   }
@@ -136,6 +147,7 @@ function serialize(doc: AnimFile): string {
     animations[id] = {
       ...(def.name ? {name: def.name} : {}),
       ...(def.loop === false ? {loop: false} : {}),
+      ...(def.frameRate ? {frameRate: def.frameRate} : {}),
       frames: def.frames.map(cleanFrame),
     };
   }
@@ -357,6 +369,8 @@ export const AnimationEditor = ({
       next.id = animId;
       next.label = def.name ?? '';
     }
+    // `fps` is deliberately absent: like a frame's fields, it is read from the
+    // animation unless it is being typed into.
     // Only the animation's own two fields. A frame's fields are read from the
     // frame unless there is an edit in progress (`authored`, below) — seeding
     // them here would leave every frame ADDED since as a row of empty boxes,
@@ -404,9 +418,8 @@ export const AnimationEditor = ({
     }
     const id = `animation${n}`;
     const def: AnimDef = {
-      frames: [
-        {sprite: spriteOptions[0] ?? 'ball', delay: DEFAULT_DELAY, __id: uid()},
-      ],
+      frameRate: DEFAULT_FRAME_RATE,
+      frames: [{sprite: spriteOptions[0] ?? 'ball', __id: uid()}],
     };
     commit({
       ...docRef.current,
@@ -506,6 +519,20 @@ export const AnimationEditor = ({
     if (selected) {
       setLive(withDef({...selected, name: raw || undefined}));
     }
+  };
+  /**
+   * Retime the whole animation, in frames per second.
+   *
+   * Frames that were only keeping the old rate follow the new one; a frame that
+   * said something different keeps saying it (timing.retimed).
+   */
+  const setFrameRate = (raw: string) => {
+    setDraft(prev => ({...prev, fps: raw}));
+    const rate = parseFloat(raw);
+    if (!selected || !Number.isFinite(rate) || rate <= 0) {
+      return;
+    }
+    setLive(withDef(retimed(selected, rate) as AnimDef));
   };
   const setLoop = (loop: boolean) => {
     if (selected) {
@@ -608,7 +635,15 @@ export const AnimationEditor = ({
       withFrames(
         mapFrame(id, f => {
           if (field === 'delay') {
-            return {...f, delay: parseNum(raw, f.delay)};
+            // Empty means "follow the animation": a frame only carries a delay
+            // when it is an exception to the rate (timing.ts).
+            return {
+              ...f,
+              delay:
+                raw === ''
+                  ? undefined
+                  : parseNum(raw, f.delay ?? delayOf(selected, f)),
+            };
           }
           if (field === 'scale') {
             return {
@@ -646,8 +681,10 @@ export const AnimationEditor = ({
     const last = selected.frames[selected.frames.length - 1];
     appendFrames([
       {
+        // The last frame's picture and cell, because the next frame of an
+        // animation is nearly always more of the same thing — but not its
+        // delay: an exception one frame made is not the next frame's.
         sprite: last?.sprite ?? spriteOptions[0] ?? 'ball',
-        delay: last?.delay ?? DEFAULT_DELAY,
         position: last?.position,
         __id: uid(),
       },
@@ -655,15 +692,7 @@ export const AnimationEditor = ({
   };
   /** One frame per cell chosen from a spritesheet, in the order chosen. */
   const addFramesFromSheet = (sprite: string, cells: CellRect[]) => {
-    const last = selected?.frames[selected.frames.length - 1];
-    appendFrames(
-      cells.map(position => ({
-        sprite,
-        delay: last?.delay ?? DEFAULT_DELAY,
-        position,
-        __id: uid(),
-      })),
-    );
+    appendFrames(cells.map(position => ({sprite, position, __id: uid()})));
     setAddingFrames(false);
   };
   const duplicateFrame = (id: string) => {
@@ -751,7 +780,10 @@ export const AnimationEditor = ({
       const def = selId ? docRef.current.animations[selId] : null;
       const canvas = previewRef.current;
       if (canvas && def && def.frames.length > 0) {
-        const total = totalTime(def.frames);
+        // How long each frame is held, resolved: the animation's rate, or a
+        // frame's own delay where it has one.
+        const held = durations(def);
+        const total = totalTime(held);
         if (playingRef.current) {
           // Real time scaled by the speed, rather than a start time compared
           // against: at half speed the same wall clock is half the animation.
@@ -760,7 +792,7 @@ export const AnimationEditor = ({
             def.loop === false
               ? Math.min(elapsed.current, total - 1)
               : elapsed.current % total;
-          const at = frameAt(def.frames, t);
+          const at = frameAt(held, t);
           if (at !== playheadRef.current) {
             playheadRef.current = at;
             setPlayIndex(at);
@@ -773,7 +805,11 @@ export const AnimationEditor = ({
         const frame = def.frames[Math.min(index, def.frames.length - 1)];
         // The frame before this one, for the onion skin: the one it has to
         // line up with.
-        const before = previousFrame(def.frames, index, def.loop !== false);
+        const before = previousFrame(
+          def.frames.length,
+          index,
+          def.loop !== false,
+        );
         drawFrame(
           canvas,
           PREVIEW_BOX,
@@ -806,7 +842,10 @@ export const AnimationEditor = ({
       setPlaying(false);
       return;
     }
-    elapsed.current = startOf(frames, selectedIndexRef.current);
+    elapsed.current = startOf(
+      durations(selected ?? {frames: []}),
+      selectedIndexRef.current,
+    );
     playheadRef.current = selectedIndexRef.current;
     setPlayIndex(selectedIndexRef.current);
     setPlaying(true);
@@ -822,7 +861,7 @@ export const AnimationEditor = ({
     const frame = frames[at];
     if (frame) {
       setSelectedFrame(frame.__id);
-      elapsed.current = startOf(frames, at);
+      elapsed.current = startOf(durations(selected ?? {frames: []}), at);
       playheadRef.current = at;
       setPlayIndex(at);
     }
@@ -832,43 +871,32 @@ export const AnimationEditor = ({
 
   return (
     <div className={styles.editor}>
-      {/* Left: the file's animations. */}
-      <div className={styles.list}>
-        <div className={styles.listHeader}>
-          <Typography variant="overline3" component="h2" className={styles.h}>
-            Animations
-          </Typography>
-          <Button
-            variant="text"
-            size="extraSmall"
-            onClick={addAnimation}
-            disabled={isReadOnly}
+      {/* The file's animations, along the top. A `.anim` usually holds one, and
+          a full-height column for a single row spent most of the pane's width
+          on saying so — width the frames and their fields wanted. */}
+      <div className={styles.tabs} role="tablist" aria-label="Animations">
+        {ids.map(id => (
+          <button
+            key={id}
+            type="button"
+            role="tab"
+            className={
+              id === selId ? `${styles.tab} ${styles.tabActive}` : styles.tab
+            }
+            aria-selected={id === selId}
+            onClick={() => setSelectedId(id)}
           >
-            + Add
-          </Button>
-        </div>
-        {ids.length === 0 ? (
-          <p className={styles.empty}>No animations yet. Add one to start.</p>
-        ) : (
-          <ul className={styles.animList}>
-            {ids.map(id => (
-              <li key={id}>
-                <button
-                  type="button"
-                  className={
-                    id === selId
-                      ? `${styles.animItem} ${styles.animItemActive}`
-                      : styles.animItem
-                  }
-                  onClick={() => setSelectedId(id)}
-                  aria-pressed={id === selId}
-                >
-                  {id}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
+            {id}
+          </button>
+        ))}
+        <Button
+          variant="text"
+          size="extraSmall"
+          onClick={addAnimation}
+          disabled={isReadOnly}
+        >
+          + Add
+        </Button>
       </div>
 
       {/* Right: the selected animation's settings, preview, and frames. */}
@@ -901,6 +929,21 @@ export const AnimationEditor = ({
               onBlur={commitCurrent}
               onKeyDown={blurOnEnter}
             />
+            <div className={styles.rateField}>
+              <TextField
+                name="anim-fps"
+                label="Frames / second"
+                inputType="number"
+                size="s"
+                value={draft.fps ?? String(shownRate(selected) ?? '')}
+                disabled={isReadOnly}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  setFrameRate(e.target.value)
+                }
+                onBlur={commitCurrent}
+                onKeyDown={blurOnEnter}
+              />
+            </div>
             <Button
               variant="text"
               size="extraSmall"
@@ -1079,6 +1122,7 @@ export const AnimationEditor = ({
               images={images}
               sheets={sheets}
               draft={draft}
+              inherited={delayOf(selected, {})}
               disabled={isReadOnly}
               onPickSprite={() => setPickingSprite(frameId)}
               onCell={cell => setFrameCell(frameId, cell)}
@@ -1219,6 +1263,7 @@ const FrameInspector = ({
   images,
   sheets,
   draft,
+  inherited,
   disabled,
   onPickSprite,
   onCell,
@@ -1235,6 +1280,8 @@ const FrameInspector = ({
   /** The grids among those images, by image file name — see appearance/sheetFile. */
   sheets: Record<string, SheetFile>;
   draft: Record<string, string>;
+  /** What this frame is held for when it names no delay of its own. */
+  inherited: number;
   disabled: boolean;
   /** Open the picture picker for this frame. */
   onPickSprite: () => void;
@@ -1249,6 +1296,8 @@ const FrameInspector = ({
   const authored = (field: string): string => {
     switch (field) {
       case 'delay':
+        // Empty when the frame follows the animation — which is not the same
+        // as a frame that holds for the same number by coincidence.
         return frame.delay === undefined ? '' : String(frame.delay);
       case 'scale':
         return frame.scale === undefined ? '' : String(frame.scale);
@@ -1348,10 +1397,13 @@ const FrameInspector = ({
         </div>
         <TextField
           name={`f-${frame.__id}-delay`}
-          label="Delay (ms)"
+          label="Hold (ms)"
           inputType="number"
           size="s"
           value={d('delay')}
+          // What it is held for when it says nothing: the animation's rate.
+          // Empty is the ordinary case, so the field says what empty means.
+          placeholder={String(Math.round(inherited))}
           disabled={disabled}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             onNum('delay', e.target.value)

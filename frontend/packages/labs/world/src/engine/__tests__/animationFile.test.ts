@@ -56,8 +56,32 @@ describe('parseAnimationFile', () => {
     expect(() =>
       parseAnimationFile({
         type: 'animation',
-        animations: {a: {frames: [{sprite: 's'}]}},
+        animations: {a: {frames: [{sprite: 's', delay: 'slow'}]}},
       }),
-    ).toThrow(/"a" frame 0 needs a numeric "delay"/);
+    ).toThrow(/"a" frame 0 "delay" must be a number/);
+    expect(() =>
+      parseAnimationFile({
+        type: 'animation',
+        animations: {a: {frameRate: 0, frames: [{sprite: 's'}]}},
+      }),
+    ).toThrow(/"a" "frameRate" must be a positive number/);
+  });
+
+  it('takes an animation timed by its frame rate', () => {
+    // A frame need not carry a delay: the rate is the animation's, and saying
+    // it once is the point (INTERFACE.md §Animations).
+    const defs = parseAnimationFile({
+      type: 'animation',
+      animations: {
+        walk: {
+          frameRate: 8,
+          frames: [{sprite: 'a.png'}, {sprite: 'b.png', delay: 500}],
+        },
+      },
+    });
+
+    expect(defs.walk.frameRate).toBe(8);
+    expect(defs.walk.frames[0].delay).toBeUndefined();
+    expect(defs.walk.frames[1].delay).toBe(500);
   });
 });

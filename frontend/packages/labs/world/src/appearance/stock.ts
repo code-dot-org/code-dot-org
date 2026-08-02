@@ -85,6 +85,10 @@ function strip(
   return {
     name,
     loop,
+    // The timing said once, on the animation, rather than copied onto every
+    // frame: a strip has ONE rate, and six copies of it are six things to keep
+    // in step by hand (animationTypes.frameDelay).
+    frameRate,
     frames: Array.from({length: frames}, (_unused, index) => ({
       sprite: spriteFileName(sprite),
       position: {
@@ -93,10 +97,6 @@ function strip(
         width: STOCK_CELL,
         height: STOCK_CELL,
       },
-      // Whole milliseconds: a frame is a number a learner reads and edits, and
-      // "83.33333333333333" in a field says nothing 83 does not. The engine
-      // does not care about the third of a millisecond either.
-      delay: Math.round(1000 / frameRate),
     })),
   };
 }
@@ -106,14 +106,14 @@ function pulse(
   sprite: string,
   name: string,
   scales: readonly number[],
-  delay: number,
+  frameRate: number,
 ): AnimationFile['animations'][string] {
   return {
     name,
+    frameRate,
     frames: scales.map(scale => ({
       sprite: spriteFileName(sprite),
       scale,
-      delay,
     })),
   };
 }
@@ -213,7 +213,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     sprites: ['ball'],
     document: {
       type: 'animation',
-      animations: {pulse: pulse('ball', 'Pulse', [0.7, 1, 1.3, 1], 160)},
+      animations: {pulse: pulse('ball', 'Pulse', [0.7, 1, 1.3, 1], 6)},
     },
   },
   {
@@ -224,7 +224,7 @@ export const STOCK_ANIMATIONS: readonly StockAnimation[] = [
     document: {
       type: 'animation',
       animations: {
-        playerBob: pulse('player', 'Player Bob', [1, 1.25, 1, 0.8], 150),
+        playerBob: pulse('player', 'Player Bob', [1, 1.25, 1, 0.8], 7),
       },
     },
   },

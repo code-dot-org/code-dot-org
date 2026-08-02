@@ -1,7 +1,8 @@
 // The Animation rule ("Has Appearance") — governs how an Actor looks
 // (INTERFACE.md §Animations). An Actor elects the appearance trait and sets a
 // static `sprite` or a named `animation`; the rule advances the animation's
-// current frame each tick by the frame's `delay` and emits `AnimationEnded` when
+// current frame each tick by the frame's resolved delay (its own, or the
+// animation's frame rate — animationTypes.frameDelay) and emits `AnimationEnded` when
 // a non-looping animation finishes. `World.renderSnapshot` reads the resulting
 // frame; the driver draws it. The engine owns timing and events — not Phaser.
 //
@@ -11,7 +12,7 @@
 
 import {RuleBuilder} from '../builders/RuleBuilder';
 import type {Actor} from '../core/Actor';
-import type {AnimationDef} from '../core/animationTypes';
+import {type AnimationDef, frameDelay} from '../core/animationTypes';
 import {APPEARANCE} from '../core/spatialKeys';
 import type {Property} from '../core/types';
 import {Vector} from '../core/Vector';
@@ -165,7 +166,7 @@ export const AdvanceAnimationStep = rule.addStep(
       // Cross as many frame boundaries as `elapsed` allows. A non-positive or
       // infinite delay holds the frame (a static one-frame sprite never advances).
       for (;;) {
-        const {delay} = def.frames[frame];
+        const delay = frameDelay(def, def.frames[frame]);
         if (!Number.isFinite(delay) || delay <= 0 || elapsed < delay) {
           break;
         }
