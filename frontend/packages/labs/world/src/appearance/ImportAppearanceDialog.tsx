@@ -14,6 +14,7 @@ import {translate} from '../effect/localization';
 
 import type {AppearanceKind} from './appearanceImport';
 import styles from './importAppearanceDialog.module.css';
+import {sheetFileName} from './sheetFile';
 import {
   spriteFileName,
   stockSprite,
@@ -31,6 +32,30 @@ export interface ImportAppearanceDialogProps {
   /** Dismissed without choosing. */
   onCancel: () => void;
 }
+
+/** The files one sprite lands as: the image, and the grid file if it is a grid. */
+const spriteFiles = (sprite: StockSprite): string[] => {
+  const image = spriteFileName(sprite.id);
+  return sprite.sheet ? [image, sheetFileName(image)] : [image];
+};
+
+/**
+ * Everything an import writes, in the order it writes it.
+ *
+ * The row promises this, so it is derived the same way `importStock` derives
+ * what it writes — a promise of two files that leaves three behind is worse than
+ * no promise.
+ */
+export const addedFiles = (item: StockSprite | StockAnimation): string[] =>
+  'dataUrl' in item
+    ? spriteFiles(item)
+    : [
+        `${item.id}.anim`,
+        ...item.sprites.flatMap(id => {
+          const sprite = stockSprite(id);
+          return sprite ? spriteFiles(sprite) : [];
+        }),
+      ];
 
 /** The image a row shows: the sprite itself, or the first sprite an animation reads. */
 const previewUrl = (item: StockSprite | StockAnimation): string | undefined =>
@@ -108,16 +133,9 @@ export const ImportAppearanceDialog = ({
                     {item.description}
                   </Typography>
                   <Typography component="span" variant="body4" color="inherit">
-                    {'dataUrl' in item
-                      ? translate('Adds: {names}', {
-                          names: spriteFileName(item.id),
-                        })
-                      : translate('Adds: {names}', {
-                          names: [
-                            `${item.id}.anim`,
-                            ...item.sprites.map(spriteFileName),
-                          ].join(', '),
-                        })}
+                    {translate('Adds: {names}', {
+                      names: addedFiles(item).join(', '),
+                    })}
                   </Typography>
                 </span>
               </Button>

@@ -39,6 +39,10 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   // An `.effect` is a node graph that compiles to a GLSL shader, edited in the
   // effect editor (specs/EFFECT_EDITOR.md).
   'effect',
+  // A `.sheet` says how to cut the image of the same name into cells — what
+  // makes a PNG a spritesheet (appearance/sheetFile). JSON, and small enough to
+  // read and edit as text.
+  'sheet',
 ];
 const IMAGE_FILE_TYPES = ['png'];
 
@@ -59,6 +63,7 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     map: 'map',
     anim: 'anim',
     effect: 'effect',
+    sheet: 'json',
   },
   languageExtensions: {
     javascript: javascript(),
@@ -85,5 +90,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     rule: {iconName: 'scroll', iconStyle: 'solid', isBrand: false},
     map: {iconName: 'map', iconStyle: 'solid', isBrand: false},
     anim: {iconName: 'film', iconStyle: 'solid', isBrand: false},
+    sheet: {iconName: 'table-cells', iconStyle: 'solid', isBrand: false},
   },
 };

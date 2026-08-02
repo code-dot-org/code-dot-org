@@ -13,6 +13,7 @@
 
 import type {AnimationFile} from '../engine';
 
+import type {SheetFile} from './sheetFile';
 import {STOCK_IMAGES} from './stockImages';
 
 /** Frame (and static image) edge length of every stock drawing, in pixels. */
@@ -27,6 +28,14 @@ export interface StockSprite {
   description: string;
   /** The image itself, as a `data:` URL (stockImages). */
   dataUrl: string;
+  /**
+   * How to cut it into cells, for the ones that are grids.
+   *
+   * Imported as a `.sheet` beside the image (appearance/sheetFile). A drawing
+   * without one is a picture, not a spritesheet — nothing about the PNG says
+   * which it is, so the library says.
+   */
+  sheet?: SheetFile;
 }
 
 export interface StockAnimation {
@@ -48,6 +57,12 @@ const image = (id: string): string => {
     throw new Error(`no stock image named "${id}"`);
   }
   return dataUrl;
+};
+
+/** Every stock grid is a row of squares the size of one drawing. */
+const SQUARE_CELLS: SheetFile = {
+  type: 'sheet',
+  cell: {width: STOCK_CELL, height: STOCK_CELL},
 };
 
 /** The file name a stock sprite is imported under — what a frame references. */
@@ -137,18 +152,21 @@ export const STOCK_SPRITES: readonly StockSprite[] = [
     name: 'Player Walking',
     description: 'Four frames of the player mid-stride, side by side.',
     dataUrl: image('playerWalk'),
+    sheet: SQUARE_CELLS,
   },
   {
     id: 'coinSpin',
     name: 'Coin Spinning',
     description: 'Six frames of a coin turning, side by side.',
     dataUrl: image('coinSpin'),
+    sheet: SQUARE_CELLS,
   },
   {
     id: 'switch',
     name: 'Switch',
     description: 'Six frames of a switch flipping over, side by side.',
     dataUrl: image('switch'),
+    sheet: SQUARE_CELLS,
   },
 ];
 
