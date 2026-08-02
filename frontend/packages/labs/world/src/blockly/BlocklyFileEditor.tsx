@@ -13,13 +13,15 @@ import {
 import DisableOrphansPlugin from '@code-dot-org/blockly/plugins/disableOrphans';
 import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
+import {activateFile} from '@code-dot-org/codebridge';
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
-import {useSources} from '@code-dot-org/lab/contexts';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
+import {showsRuleSource, type WorldLevelProperties} from '../levelData';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
@@ -29,6 +31,7 @@ import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
+import {setModuleOpener, setModuleOpeningOffered} from './openModule';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
 import {
@@ -154,6 +157,29 @@ function initialMemberKeys(
 ): MemberKey[] {
   const meta = modulePath ? parseRuleMeta(modulePath, contents) : undefined;
   return meta ? memberKeys(meta) : [];
+}
+
+/**
+ * The file a module path names — `rules/gravity` → `rules/gravity.rule`.
+ *
+ * A module path has no extension, which is what makes it a module path: the
+ * compiler's own resolution tries `.rule`, then `.js`, then `.ts`, and this
+ * follows it so the file a block opens is the file the project would compile.
+ */
+function fileIdForModule(
+  source: MultiFileSource,
+  modulePath: string,
+): string | undefined {
+  for (const extension of ['.rule', '.js', '.ts']) {
+    const wanted = `${modulePath}${extension}`;
+    const found = Object.keys(source.files).find(
+      id => filePath(source, id) === wanted,
+    );
+    if (found) {
+      return found;
+    }
+  }
+  return undefined;
 }
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
@@ -511,6 +537,30 @@ export const BlocklyFileEditor = ({
     },
     [onChange, handleRename, reconcileMembers],
   );
+
+  // The eye on a `use rule` / `use trait` block, and what it does. The level
+  // decides whether it is offered at all; the handler turns the module path the
+  // field hands back into the file the browser would have opened.
+  const levelProperties = useMaybeLevelProperties<WorldLevelProperties>();
+  useEffect(() => {
+    setModuleOpeningOffered(showsRuleSource(levelProperties));
+  }, [levelProperties]);
+
+  useEffect(() => {
+    setModuleOpener(modulePath => {
+      const sources = sourcesRef.current;
+      const fileId = fileIdForModule(sources.source, modulePath);
+      if (fileId) {
+        updateSources({
+          ...sources,
+          source: activateFile(sources.source, fileId),
+        });
+      }
+    });
+    // Cleared on unmount so a field on a disposed workspace cannot open a file
+    // through an editor that is gone.
+    return () => setModuleOpener(null);
+  }, [updateSources]);
 
   // Which rule this workspace is, so `use rule` can leave it out of its own list.
   // After mount rather than during: the workspace is created by a child, whose

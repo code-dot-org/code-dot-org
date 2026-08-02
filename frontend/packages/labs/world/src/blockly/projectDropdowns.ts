@@ -14,6 +14,7 @@ import {
   setProjectMaps,
   setProjectRuleModules,
 } from './moduleOptions';
+import {setOpenableModules} from './openModule';
 import {projectAnimationIds} from './projectAnimations';
 import {
   projectActorOptions,
@@ -28,8 +29,18 @@ import {
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
+/** Extensions a module path can resolve to — what a block may open. */
+const MODULE_FILE = /\.(rule|js|ts)$/;
+
 export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectAnimations(projectAnimationIds(files));
+  // Which module paths there is a file to open for — what puts the eye on a
+  // `use rule` / `use trait` block (openModule).
+  setOpenableModules(
+    Object.keys(files)
+      .filter(path => MODULE_FILE.test(path))
+      .map(path => path.replace(MODULE_FILE, '')),
+  );
   setProjectActors(projectActorOptions(files));
   setProjectAnimationFiles(projectAnimationFileOptions(files));
   setProjectEffectFiles(projectEffectFileOptions(files));

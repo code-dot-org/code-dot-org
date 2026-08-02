@@ -40,6 +40,22 @@ An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
 bundle as data and is compiled to GLSL in the preview surface, where Phaser is.
 
+## What a level can say
+
+Most of a World level is its starting project, but a few of the editor's
+affordances are teaching decisions rather than preferences, and those live in
+the level's own data (`src/levelData.ts`):
+
+| `levelData` field | Default | What turning it off does                                                  |
+| ----------------- | ------- | ------------------------------------------------------------------------- |
+| `showRuleSource`  | on      | Removes the eye on `use rule` / `use trait` that opens the file behind it |
+
+Level properties are validated on the way in and **zod drops keys it was not
+told about**, so a field only reaches the lab because `src/schema.ts` declares
+it and `App.tsx` registers that schema for the `world` kind. A new field added
+to one and not the other parses away silently, and every level looks like the
+default one.
+
 ## Layout
 
 ```

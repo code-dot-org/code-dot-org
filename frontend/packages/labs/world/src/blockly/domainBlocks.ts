@@ -46,6 +46,7 @@ import {
   paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
+import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {sliderRangeMutator} from './extensions/sliderRange';
@@ -229,7 +230,11 @@ const worldUseTrait = defineBlock({
   // is read statically rather than generated. In an event handler `actor` is
   // the live instance and the call would throw; the extension warns in the
   // editor instead.
-  extensions: [traitOptionsExtension, traitContextExtension],
+  extensions: [
+    traitOptionsExtension,
+    traitContextExtension,
+    openSourceButtonExtension,
+  ],
   style: 'behavior_blocks',
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
@@ -1860,7 +1865,11 @@ const worldUseRule = defineBlock({
   nextStatement: true,
   // The import extension AFTER the options one, so it wraps that validator
   // rather than being wrapped by it (see ruleImportField).
-  extensions: [useRuleOptionsExtension, ruleImportFieldExtension],
+  extensions: [
+    useRuleOptionsExtension,
+    ruleImportFieldExtension,
+    openSourceButtonExtension,
+  ],
   style: 'behavior_blocks',
   tooltip: 'Put a rule (a game mechanic) in play for this world.',
   generator: {
