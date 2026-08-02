@@ -123,6 +123,10 @@ function createRspackConfig({
     output: {
       path: p('build/package/js'),
       publicPath: '/assets/js/',
+      // rspack contenthashes are 16 hex (hashDigestLength is not honored
+      // for chunk filenames in 2.1.5, and explicit [contenthash:20]
+      // panics); the wp-hash consumers — sprockets' WP_REGEX in
+      // asset_sync.rake and grunt copy:unhash — accept 16-32 hex.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
     stats: envConstants.DEV ? 'normal' : 'errors-only',
