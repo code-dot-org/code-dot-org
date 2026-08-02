@@ -276,11 +276,36 @@ function createRspackConfig({
         // loose spread (jsc.assumptions).
         ...(process.env.RSPACK_SWC === 'all' || process.env.RSPACK_SWC === '1'
           ? [
+              // The blockly fork cannot take loose class semantics: its
+              // accessor setters use `super`, which loose lowering turns
+              // into self-dispatch and infinite recursion.  babel carries
+              // the same carve-out (babel.config.json overrides
+              // node_modules/blockly with transform-classes loose:false);
+              // give it spec classes here and exclude it from the loose
+              // rule below.
+              {
+                test: /\.jsx?$/,
+                enforce: 'pre',
+                include: [p('node_modules/blockly')],
+                loader: 'builtin:swc-loader',
+                options: {
+                  isModule: 'unknown',
+                  jsc: {
+                    parser: {syntax: 'ecmascript', jsx: true},
+                    target: 'es5',
+                  },
+                  module: {
+                    type: 'commonjs',
+                    ignoreDynamic: true,
+                    preserveImportMeta: true,
+                  },
+                },
+              },
               {
                 test: /\.jsx?$/,
                 enforce: 'pre',
                 include: [...nodeModulesToTranspile, p('src'), p('test')],
-                exclude: [p('src/lodash.js')],
+                exclude: [p('src/lodash.js'), p('node_modules/blockly')],
                 use: [
                   // Post-processes swc output (loaders run bottom-up);
                   // replicates babel-plugin-add-module-exports, which
