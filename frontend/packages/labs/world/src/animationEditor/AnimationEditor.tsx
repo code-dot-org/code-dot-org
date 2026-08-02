@@ -9,10 +9,10 @@ import {
 } from '@dnd-kit/core';
 import {
   arrayMove,
+  horizontalListSortingStrategy,
   SortableContext,
   sortableKeyboardCoordinates,
   useSortable,
-  verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import {Button, IconButton, Typography} from '@mui/material';
@@ -34,7 +34,9 @@ import {
 } from '../blockly/renameAnimation';
 import {filePath, projectFiles} from '../runtime/projectFiles';
 
+import {AddFramesDialog} from './AddFramesDialog';
 import styles from './animationEditor.module.css';
+import {type CellRect, sheetGrid} from './sheetFrames';
 
 const DEFAULT_DELAY = 100;
 // Preview/thumbnail draw scale: a 32px sprite is drawn at 2× so it reads at a
@@ -48,13 +50,8 @@ const THUMB_BOX = 44;
 // says how it should be cut up — that is a decision someone made, so it is a
 // file rather than a guess about the picture's shape.
 
-/** A source rectangle within a spritesheet. */
-interface Cell {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-}
+/** A source rectangle within a spritesheet — what a frame draws (sheetFrames). */
+type Cell = CellRect;
 interface Frame {
   sprite: string;
   delay: number;
@@ -138,20 +135,6 @@ function serialize(doc: AnimFile): string {
 const parseNum = (s: string, fallback: number): number => {
   const n = parseFloat(s);
   return Number.isFinite(n) ? n : fallback;
-};
-
-/** How many cells across and down a sheet's grid holds for a loaded image. */
-const gridSize = (
-  img: HTMLImageElement | undefined,
-  sheet: SheetFile | undefined,
-): {columns: number; rows: number} => {
-  if (!img || !sheet) {
-    return {columns: 0, rows: 0};
-  }
-  return {
-    columns: Math.max(1, Math.floor(img.width / sheet.cell.width)),
-    rows: Math.max(1, Math.floor(img.height / sheet.cell.height)),
-  };
 };
 
 /** Draw one frame centered in a `box`-sized canvas (device-pixel aware). */
@@ -256,7 +239,21 @@ export const AnimationEditor = ({
   // Guard against a stale selection (deleted / renamed): fall back to the first.
   const selId =
     selectedId && doc.animations[selectedId] ? selectedId : (ids[0] ?? null);
+  // The frame the inspector edits, and whether the sheet picker is open. A
+  // filmstrip shows every frame at once and edits one: which one is a piece of
+  // editor state, not of the file.
+  const [selectedFrame, setSelectedFrame] = useState<string | null>(null);
+  const [addingFrames, setAddingFrames] = useState(false);
+
   const selected = selId ? doc.animations[selId] : null;
+  const frames = selected?.frames ?? [];
+  // Guard the frame selection the same way: a frame deleted (or an animation
+  // switched to) falls back to the first one this animation has.
+  const frameId =
+    selectedFrame && frames.some(f => f.__id === selectedFrame)
+      ? selectedFrame
+      : (frames[0]?.__id ?? null);
+  const frame = frames.find(f => f.__id === frameId) ?? null;
 
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 4}}),
@@ -288,6 +285,8 @@ export const AnimationEditor = ({
   const sheets = useMemo(() => projectSheets(projectText), [projectText]);
   // Which file defines each animation id, for the rename below.
   const owners = useMemo(() => animationIdOwners(projectText), [projectText]);
+  // The images that are grids — what `+ From sheet` has to offer.
+  const sheetNames = useMemo(() => Object.keys(sheets), [sheets]);
   const ownPath = filePath(currentSources.source, fileId);
 
   // Decode every referenced sprite to an <img> for canvas drawing.
@@ -516,26 +515,67 @@ export const AnimationEditor = ({
     );
   };
 
+  /** Append frames, and select the first of them — the one to adjust next. */
+  const appendFrames = (added: Frame[]) => {
+    if (!selected || added.length === 0) {
+      return;
+    }
+    commit(withFrames([...selected.frames, ...added]));
+    setSelectedFrame(added[0].__id);
+  };
   const addFrame = () => {
     if (!selected) {
       return;
     }
+    // Carrying the last frame's sprite and timing: the next frame of an
+    // animation is nearly always more of the same thing.
     const last = selected.frames[selected.frames.length - 1];
-    commit(
-      withFrames([
-        ...selected.frames,
-        {
-          sprite: last?.sprite ?? spriteOptions[0] ?? 'ball',
-          delay: DEFAULT_DELAY,
-          __id: uid(),
-        },
-      ]),
+    appendFrames([
+      {
+        sprite: last?.sprite ?? spriteOptions[0] ?? 'ball',
+        delay: last?.delay ?? DEFAULT_DELAY,
+        position: last?.position,
+        __id: uid(),
+      },
+    ]);
+  };
+  /** One frame per cell chosen from a spritesheet, in the order chosen. */
+  const addFramesFromSheet = (sprite: string, cells: CellRect[]) => {
+    const last = selected?.frames[selected.frames.length - 1];
+    appendFrames(
+      cells.map(position => ({
+        sprite,
+        delay: last?.delay ?? DEFAULT_DELAY,
+        position,
+        __id: uid(),
+      })),
     );
+    setAddingFrames(false);
+  };
+  const duplicateFrame = (id: string) => {
+    if (!selected) {
+      return;
+    }
+    const at = selected.frames.findIndex(f => f.__id === id);
+    if (at < 0) {
+      return;
+    }
+    const copy = {...selected.frames[at], __id: uid()};
+    const frames = [...selected.frames];
+    frames.splice(at + 1, 0, copy);
+    commit(withFrames(frames));
+    setSelectedFrame(copy.__id);
   };
   const removeFrame = (id: string) => {
-    if (selected) {
-      commit(withFrames(selected.frames.filter(f => f.__id !== id)));
+    if (!selected) {
+      return;
     }
+    const at = selected.frames.findIndex(f => f.__id === id);
+    const rest = selected.frames.filter(f => f.__id !== id);
+    // Land on the frame that took its place, so deleting several in a row does
+    // not send the selection back to the start each time.
+    setSelectedFrame(rest[Math.min(at, rest.length - 1)]?.__id ?? null);
+    commit(withFrames(rest));
   };
   const nudgeFrame = (id: string, dir: -1 | 1) => {
     if (!selected) {
@@ -700,47 +740,87 @@ export const AnimationEditor = ({
             <Typography variant="overline3" component="h3" className={styles.h}>
               Frames
             </Typography>
-            <Button
-              variant="text"
-              size="extraSmall"
-              onClick={addFrame}
-              disabled={isReadOnly}
-            >
-              + Frame
-            </Button>
+            <div className={styles.headerButtons}>
+              <Button
+                variant="text"
+                size="extraSmall"
+                onClick={addFrame}
+                disabled={isReadOnly}
+              >
+                + Frame
+              </Button>
+              <Button
+                variant="text"
+                size="extraSmall"
+                onClick={() => setAddingFrames(true)}
+                // Nothing to pick from until the project holds a spritesheet —
+                // an image with a `.sheet` beside it.
+                disabled={isReadOnly || sheetNames.length === 0}
+              >
+                + From sheet
+              </Button>
+            </div>
           </div>
+
+          {/* The frames as a strip, the way an animation is drawn: one
+              thumbnail each, in order, click to edit, drag to reorder. */}
           <DndContext
             sensors={sensors}
             collisionDetection={closestCenter}
             onDragEnd={onDragEnd}
           >
             <SortableContext
-              items={selected.frames.map(f => f.__id)}
-              strategy={verticalListSortingStrategy}
+              items={frames.map(f => f.__id)}
+              strategy={horizontalListSortingStrategy}
             >
-              <ol className={styles.frames}>
-                {selected.frames.map((frame, i) => (
-                  <SortableFrame
-                    key={frame.__id}
-                    frame={frame}
+              <ol className={styles.filmstrip}>
+                {frames.map((f, i) => (
+                  <StripFrame
+                    key={f.__id}
+                    frame={f}
                     index={i}
-                    total={selected.frames.length}
                     images={images}
-                    sheets={sheets}
-                    draft={draft}
+                    active={f.__id === frameId}
                     disabled={isReadOnly}
-                    spriteOptions={spriteOptions}
-                    onSprite={sprite => setFrameSprite(frame.__id, sprite)}
-                    onCell={cell => setFrameCell(frame.__id, cell)}
-                    onNum={(field, raw) => editFrameNum(frame.__id, field, raw)}
-                    onCommit={commitCurrent}
-                    onNudge={dir => nudgeFrame(frame.__id, dir)}
-                    onRemove={() => removeFrame(frame.__id)}
+                    onSelect={() => setSelectedFrame(f.__id)}
                   />
                 ))}
               </ol>
             </SortableContext>
           </DndContext>
+
+          {frame && frameId ? (
+            <FrameInspector
+              frame={frame}
+              index={frames.findIndex(f => f.__id === frameId)}
+              total={frames.length}
+              images={images}
+              sheets={sheets}
+              draft={draft}
+              disabled={isReadOnly}
+              spriteOptions={spriteOptions}
+              onSprite={sprite => setFrameSprite(frameId, sprite)}
+              onCell={cell => setFrameCell(frameId, cell)}
+              onNum={(field, raw) => editFrameNum(frameId, field, raw)}
+              onCommit={commitCurrent}
+              onNudge={dir => nudgeFrame(frameId, dir)}
+              onDuplicate={() => duplicateFrame(frameId)}
+              onRemove={() => removeFrame(frameId)}
+            />
+          ) : (
+            <p className={styles.empty}>
+              No frames yet. Add one, or take a row of them from a spritesheet.
+            </p>
+          )}
+
+          {addingFrames && (
+            <AddFramesDialog
+              sheets={sheets}
+              images={images}
+              onAdd={addFramesFromSheet}
+              onCancel={() => setAddingFrames(false)}
+            />
+          )}
         </div>
       ) : (
         <div className={styles.detail}>
@@ -761,9 +841,67 @@ const blurOnEnter = (event: ReactKeyboardEvent<HTMLInputElement>) => {
   }
 };
 
-/** One sortable frame card: thumbnail, sprite/delay/scale/offset fields, an
- *  optional spritesheet cell picker, and reorder/delete controls. */
-const SortableFrame = ({
+/**
+ * One frame in the strip: its picture, its place in the order.
+ *
+ * Dragging is the whole item's, selecting is the button's. Not both on the
+ * button: dnd-kit's keyboard sensor starts a drag on Space and Enter, which are
+ * also how a button is pressed — a learner reaching the strip by keyboard would
+ * pick a frame up when they meant to open it. Reordering by keyboard is the
+ * inspector's ← and → instead, which say what they do.
+ */
+const StripFrame = ({
+  frame,
+  index,
+  images,
+  active,
+  disabled,
+  onSelect,
+}: {
+  frame: Frame;
+  index: number;
+  images: Record<string, HTMLImageElement>;
+  active: boolean;
+  disabled: boolean;
+  onSelect: () => void;
+}) => {
+  const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
+    useSortable({id: frame.__id, disabled});
+  return (
+    <li
+      ref={setNodeRef}
+      className={styles.stripItem}
+      style={{
+        transform: CSS.Transform.toString(transform),
+        transition,
+        opacity: isDragging ? 0.5 : 1,
+      }}
+      {...listeners}
+    >
+      <button
+        type="button"
+        className={
+          active ? `${styles.strip} ${styles.stripActive}` : styles.strip
+        }
+        aria-label={`Frame ${index + 1}`}
+        onClick={onSelect}
+        // `attributes` carries the sortable's own roledescription and tabIndex;
+        // `aria-pressed` after it, because here it means "the frame being
+        // edited" and that is the sense to survive.
+        {...attributes}
+        aria-pressed={active}
+      >
+        <FrameThumb frame={frame} images={images} />
+        <span className={styles.stripNum} aria-hidden="true">
+          {index + 1}
+        </span>
+      </button>
+    </li>
+  );
+};
+
+/** The selected frame's settings: what it draws, for how long, and where. */
+const FrameInspector = ({
   frame,
   index,
   total,
@@ -777,6 +915,7 @@ const SortableFrame = ({
   onNum,
   onCommit,
   onNudge,
+  onDuplicate,
   onRemove,
 }: {
   frame: Frame;
@@ -793,62 +932,48 @@ const SortableFrame = ({
   onNum: (field: 'delay' | 'scale' | 'offx' | 'offy', raw: string) => void;
   onCommit: () => void;
   onNudge: (dir: -1 | 1) => void;
+  onDuplicate: () => void;
   onRemove: () => void;
 }) => {
-  const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
-    useSortable({id: frame.__id, disabled});
-  const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
-    opacity: isDragging ? 0.5 : 1,
-  };
   const d = (field: string) => draft[`${frame.__id}.${field}`] ?? '';
 
   return (
-    <li ref={setNodeRef} style={style} className={styles.frame}>
+    <div className={styles.frame}>
       <div className={styles.frameHead}>
-        <IconButton
-          className={styles.grip}
-          variant="contained"
-          aria-label={`Reorder frame ${index + 1}`}
-          size="extraSmall"
-          color="tertiary"
-          disabled={disabled}
-          {...attributes}
-          {...listeners}
-        >
-          <FontAwesomeV6Icon iconName="grip-vertical" iconStyle="solid" />
-        </IconButton>
-        <Typography
-          variant="subtitle2"
-          component="span"
-          className={styles.frameNum}
-          aria-hidden="true"
-        >
-          {index + 1}
+        <Typography variant="overline3" component="h4" className={styles.h}>
+          {`Frame ${index + 1} of ${total}`}
         </Typography>
-        <FrameThumb frame={frame} images={images} />
         <div className={styles.frameSpacer} />
         <div className={styles.frameButtons}>
           <IconButton
-            aria-label="Move frame up"
+            aria-label="Move frame earlier"
             size="extraSmall"
             variant="outlined"
             color="tertiary"
             disabled={disabled || index === 0}
             onClick={() => onNudge(-1)}
           >
-            <FontAwesomeV6Icon iconName="chevron-up" iconStyle="solid" />
+            <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
           </IconButton>
           <IconButton
-            aria-label="Move frame down"
+            aria-label="Move frame later"
             size="extraSmall"
             variant="outlined"
             color="tertiary"
             disabled={disabled || index === total - 1}
             onClick={() => onNudge(1)}
           >
-            <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
+            <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
+          </IconButton>
+          <IconButton
+            aria-label="Duplicate frame"
+            size="extraSmall"
+            variant="outlined"
+            color="tertiary"
+            disabled={disabled}
+            onClick={onDuplicate}
+          >
+            <FontAwesomeV6Icon iconName="clone" iconStyle="solid" />
           </IconButton>
           <IconButton
             aria-label="Delete frame"
@@ -938,7 +1063,7 @@ const SortableFrame = ({
           onPick={onCell}
         />
       )}
-    </li>
+    </div>
   );
 };
 
@@ -963,7 +1088,7 @@ const CellPicker = ({
   onPick: (cell: Cell) => void;
 }) => {
   const ref = useRef<HTMLCanvasElement>(null);
-  const {columns, rows} = gridSize(image, sheet);
+  const {columns, rows} = sheetGrid(image, sheet);
   const {width: cellW, height: cellH} = sheet.cell;
   // On-screen size of one cell.
   const cw = cellW * BASE_SCALE;
