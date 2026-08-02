@@ -615,7 +615,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('postbuild', ['newer:copy:static', 'newer:sass']);
 
-  const APPS_BUNDLER = process.env.APPS_BUNDLER || 'webpack';
+  // TEMPORARY: default to rspack so drone builds this branch's optimized
+  // assets with it and runs UI tests against them — the migration
+  // evidence discussed in the PR.  Revert to 'webpack' before merge.
+  const APPS_BUNDLER = process.env.APPS_BUNDLER || 'rspack';
 
   grunt.registerTask('build', [
     'prebuild',
