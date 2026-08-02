@@ -199,26 +199,26 @@ brings it all back.
 
 #### Wiring
 
-| To do this          | Do that                                                                            |
-| ------------------- | ---------------------------------------------------------------------------------- |
-| Add a node          | Click it in the palette (lands mid-view), or drag it exactly where you want it     |
-| Build from a wire   | Drop a wire on empty canvas and pick from the nodes that can take it               |
-| Move a node         | Drag it by its body                                                                |
-| Pan the workspace   | Drag the empty canvas                                                              |
-| Zoom                | Scroll, or use the controls at the bottom left                                     |
-| Connect two ports   | Drag from one dot to another                                                       |
-| Rewire an input     | Drag a new wire onto it — inputs hold one wire, so the old one is replaced         |
-| **Delete a wire**   | Hover it and click the **×**, or click it and press Delete or Backspace            |
-| Delete a node       | Select it and press Delete or Backspace (its wires go too)                         |
-| Set a value by hand | Leave an input unwired and type in its number field                                |
-| Edit a parameter    | Click its name in the input row — rename, retype, set default and range, or remove |
-| Make a function     | "+ New function" in the palette opens its own workspace; ◂ Effect returns          |
-| Use a function      | It appears under "Your Functions" — place and wire it like any node                |
-| Duplicate nodes     | Select them and press Ctrl+D — copies arrive offset, still fed by their inputs     |
-| Copy / paste        | Ctrl+C snapshots the selection; Ctrl+V pastes it, staggering on repeat             |
-| Get an overview     | The minimap (bottom right) — drag inside it to pan, scroll it to zoom              |
-| Undo / redo         | Ctrl+Z / Ctrl+Shift+Z (or Ctrl+Y), or the ↶ ↷ buttons over the canvas              |
-| See the GLSL        | The **GLSL** button by undo/redo opens the live compiled shader beside the canvas  |
+| To do this          | Do that                                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Add a node          | Click it in the palette (lands mid-view), or drag it exactly where you want it                                       |
+| Build from a wire   | Drop a wire on empty canvas and pick from the nodes that can take it                                                 |
+| Move a node         | Drag it by its body                                                                                                  |
+| Pan the workspace   | Drag the empty canvas                                                                                                |
+| Zoom                | Scroll, or use the controls at the bottom left                                                                       |
+| Connect two ports   | Drag from one dot to another                                                                                         |
+| Rewire an input     | Drag a new wire onto it — inputs hold one wire, so the old one is replaced                                           |
+| **Delete a wire**   | Hover it and click the **×**, or click it and press Delete or Backspace                                              |
+| Delete a node       | Select it and press Delete or Backspace (its wires go too)                                                           |
+| Set a value by hand | Leave an input unwired and type in its number field                                                                  |
+| Edit a parameter    | Click its name in the input row — rename, retype, set default and range, or remove                                   |
+| Make a function     | "+ New function" in the palette opens its own workspace; ◂ Effect returns                                            |
+| Use a function      | It appears under "Your Functions" — place and wire it like any node                                                  |
+| Duplicate nodes     | Select them and press Ctrl+D — copies arrive offset, still fed by their inputs                                       |
+| Copy / paste        | Ctrl+C snapshots the selection; Ctrl+V pastes it, staggering on repeat                                               |
+| Get an overview     | The map button under the zoom controls shows the overview (off by default); drag inside it to pan, scroll it to zoom |
+| Undo / redo         | Ctrl+Z / Ctrl+Shift+Z (or Ctrl+Y), or the ↶ ↷ buttons over the canvas                                                |
+| See the GLSL        | The **GLSL** button by undo/redo opens the live compiled shader beside the canvas                                    |
 
 Duplicating or pasting copies the wires _between_ the chosen nodes and the
 wires _into_ them — from other nodes, input knobs, or parameters — so the

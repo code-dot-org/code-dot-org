@@ -2,6 +2,7 @@ import {
   applyNodeChanges,
   Background,
   BackgroundVariant,
+  ControlButton,
   Controls,
   MiniMap,
   ReactFlow,
@@ -19,6 +20,7 @@ import {
 import {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import {translate} from '../localization';
 import {isGhostNodeId} from '../model/constants';
@@ -225,6 +227,10 @@ export function EffectGraphCanvas({
     () => new Set(),
   );
   const [hoveredEdgeId, setHoveredEdgeId] = useState<string | null>(null);
+  // The overview is off until it is asked for. It is a small picture of a graph
+  // you are already looking at, and it sits in the corner a wire is most likely
+  // to be dragged to — worth having on demand, not worth the room by default.
+  const [overviewShown, setOverviewShown] = useState(false);
   const [pendingWire, setPendingWire] = useState<PendingWire | null>(null);
   const [pendingSwizzle, setPendingSwizzle] = useState<PendingSwizzle | null>(
     null,
@@ -585,17 +591,39 @@ export function EffectGraphCanvas({
         fitView
       >
         <Background variant={BackgroundVariant.Dots} gap={20} size={1} />
-        <Controls className={styles.controls} showInteractive={false} />
-        <MiniMap
-          className={styles.minimap}
-          pannable
-          zoomable
-          ariaLabel={translate('Graph overview')}
-          bgColor="var(--effect-editor-canvas)"
-          maskColor="rgb(14 17 30 / 65%)"
-          nodeColor={minimapNodeColor}
-          nodeStrokeColor="transparent"
-        />
+        {/* The overview's switch lives with the zoom buttons rather than in the
+            editor's own toolbar: it is React Flow's chrome that it shows and
+            hides, and it belongs with the rest of "how am I looking at this". */}
+        <Controls className={styles.controls} showInteractive={false}>
+          <ControlButton
+            onClick={() => setOverviewShown(shown => !shown)}
+            aria-pressed={overviewShown}
+            aria-label={
+              overviewShown
+                ? translate('Hide the graph overview')
+                : translate('Show the graph overview')
+            }
+            title={
+              overviewShown
+                ? translate('Hide the graph overview')
+                : translate('Show the graph overview')
+            }
+          >
+            <FontAwesomeV6Icon iconName="map" iconStyle="solid" />
+          </ControlButton>
+        </Controls>
+        {overviewShown && (
+          <MiniMap
+            className={styles.minimap}
+            pannable
+            zoomable
+            ariaLabel={translate('Graph overview')}
+            bgColor="var(--effect-editor-canvas)"
+            maskColor="rgb(14 17 30 / 65%)"
+            nodeColor={minimapNodeColor}
+            nodeStrokeColor="transparent"
+          />
+        )}
       </ReactFlow>
 
       <ConnectionHint
