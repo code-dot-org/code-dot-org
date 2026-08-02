@@ -35,3 +35,17 @@ export function showsRuleSource(
 ): boolean {
   return properties?.levelData?.showRuleSource !== false;
 }
+
+/** Whether this level shows the file browser beside the editor. */
+export function showsFileBrowser(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.showFileBrowser !== false;
+}
+
+/** Toolbox categories this level leaves out, by their displayed name. */
+export function hiddenToolboxCategories(
+  properties: WorldLevelProperties | undefined,
+): readonly string[] {
+  return properties?.levelData?.hiddenToolboxCategories ?? [];
+}

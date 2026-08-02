@@ -11,7 +11,12 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {createLevelPropertyFixture} from '@code-dot-org/core/api/mocks';
 
-import {showsRuleSource, type WorldLevelProperties} from '../../levelData';
+import {
+  hiddenToolboxCategories,
+  showsFileBrowser,
+  showsRuleSource,
+  type WorldLevelProperties,
+} from '../../levelData';
 import {LevelKindSchema} from '../../schema';
 import {moduleNamedBy} from '../extensions/openSourceButton';
 import {
@@ -112,6 +117,24 @@ describe('what the level says', () => {
     ).toBe(false);
   });
 
+  it('shows the file browser unless a level turns it off', () => {
+    expect(showsFileBrowser(undefined)).toBe(true);
+    expect(
+      showsFileBrowser({
+        levelData: {showFileBrowser: false},
+      } as WorldLevelProperties),
+    ).toBe(false);
+  });
+
+  it('hides no toolbox categories unless a level names some', () => {
+    expect(hiddenToolboxCategories(undefined)).toEqual([]);
+    expect(
+      hiddenToolboxCategories({
+        levelData: {hiddenToolboxCategories: ['Gravity', 'Loops']},
+      } as WorldLevelProperties),
+    ).toEqual(['Gravity', 'Loops']);
+  });
+
   it('lets `levelData` through validation', () => {
     // Zod objects drop keys they were not told about, so a lab's level data
     // reaches it only through a registered kind schema. Without this the
@@ -126,9 +149,17 @@ describe('what the level says', () => {
         appName: 'world',
         offerBrowserTts: false,
         showExemplarLink: false,
-        levelData: {showRuleSource: false},
+        levelData: {
+          showRuleSource: false,
+          showFileBrowser: false,
+          hiddenToolboxCategories: ['Gravity'],
+        },
       }),
-    ) as {levelData?: {showRuleSource?: boolean}};
-    expect(parsed.levelData).toEqual({showRuleSource: false});
+    ) as {levelData?: Record<string, unknown>};
+    expect(parsed.levelData).toEqual({
+      showRuleSource: false,
+      showFileBrowser: false,
+      hiddenToolboxCategories: ['Gravity'],
+    });
   });
 });
