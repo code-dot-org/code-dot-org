@@ -334,27 +334,31 @@ const PLAYER_ACTOR = JSON.stringify(
 // registered when the world is built, so a file being here is what makes its
 // animations playable. Both of these scale one image per frame rather than
 // reading a strip, and both are selectable in the `play animation` dropdown:
-// "pulse" (the ball) and "playerBob" (the player).
+// "pulse" (the ball) and "playerBob" (the player). Each says its timing once,
+// as a frame rate, rather than repeating a delay on every frame — a frame only
+// carries a delay when it is an exception (engine animationTypes.frameDelay).
 const GAME_ANIMATIONS = JSON.stringify(
   {
     type: 'animation',
     animations: {
       pulse: {
         name: 'Pulse',
+        frameRate: 6,
         frames: [
-          {sprite: 'ball.png', scale: 0.7, delay: 160},
-          {sprite: 'ball.png', scale: 1.0, delay: 160},
-          {sprite: 'ball.png', scale: 1.3, delay: 160},
-          {sprite: 'ball.png', scale: 1.0, delay: 160},
+          {sprite: 'ball.png', scale: 0.7},
+          {sprite: 'ball.png', scale: 1.0},
+          {sprite: 'ball.png', scale: 1.3},
+          {sprite: 'ball.png', scale: 1.0},
         ],
       },
       playerBob: {
         name: 'Player Bob',
+        frameRate: 7,
         frames: [
-          {sprite: 'player.png', scale: 1.0, delay: 150},
-          {sprite: 'player.png', scale: 1.25, delay: 150},
-          {sprite: 'player.png', scale: 1.0, delay: 150},
-          {sprite: 'player.png', scale: 0.8, delay: 150},
+          {sprite: 'player.png', scale: 1.0},
+          {sprite: 'player.png', scale: 1.25},
+          {sprite: 'player.png', scale: 1.0},
+          {sprite: 'player.png', scale: 0.8},
         ],
       },
     },

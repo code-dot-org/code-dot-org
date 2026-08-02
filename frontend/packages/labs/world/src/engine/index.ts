@@ -56,6 +56,9 @@ export type {
   Cell,
   FrameState,
 } from './core/animationTypes';
+// How long a frame is held — exported because the editor's preview has to play
+// an animation by the same rule the engine steps it by.
+export {DEFAULT_FRAME_DELAY, frameDelay} from './core/animationTypes';
 export {parseAnimationFile, type AnimationFile} from './core/animationFile';
 
 // Color conversion for effect parameters: the generated `add effect` call

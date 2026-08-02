@@ -52,8 +52,13 @@ function parseFrame(id: string, index: number, value: unknown): AnimationFrame {
   if (typeof value.sprite !== 'string' || value.sprite === '') {
     fail(`"${id}" frame ${index} needs a non-empty "sprite"`);
   }
-  if (typeof value.delay !== 'number' || !Number.isFinite(value.delay)) {
-    fail(`"${id}" frame ${index} needs a numeric "delay"`);
+  // A frame need not say: without one it is held at the animation's frameRate
+  // (animationTypes.frameDelay). What it must not be is nonsense.
+  if (
+    value.delay !== undefined &&
+    (typeof value.delay !== 'number' || !Number.isFinite(value.delay))
+  ) {
+    fail(`"${id}" frame ${index} "delay" must be a number`);
   }
   let offset: {x: number; y: number} | undefined;
   if (value.offset !== undefined) {
@@ -71,7 +76,7 @@ function parseFrame(id: string, index: number, value: unknown): AnimationFrame {
   }
   return {
     sprite: value.sprite,
-    delay: value.delay,
+    delay: typeof value.delay === 'number' ? value.delay : undefined,
     position: parseCell(id, index, value.position),
     offset,
     scale: typeof value.scale === 'number' ? value.scale : undefined,
@@ -85,9 +90,19 @@ function parseDef(id: string, value: unknown): AnimationDef {
   if (!Array.isArray(value.frames) || value.frames.length === 0) {
     fail(`animation "${id}" needs a non-empty "frames" array`);
   }
+  if (
+    value.frameRate !== undefined &&
+    (typeof value.frameRate !== 'number' ||
+      !Number.isFinite(value.frameRate) ||
+      value.frameRate <= 0)
+  ) {
+    fail(`animation "${id}" "frameRate" must be a positive number`);
+  }
   return {
     name: typeof value.name === 'string' ? value.name : undefined,
     loop: typeof value.loop === 'boolean' ? value.loop : undefined,
+    frameRate:
+      typeof value.frameRate === 'number' ? value.frameRate : undefined,
     frames: value.frames.map((frame, i) => parseFrame(id, i, frame)),
   };
 }

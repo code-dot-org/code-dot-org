@@ -1,7 +1,8 @@
-/* Two panes: the file's animations on the left, the selected animation's frames
-   on the right. Fills the editor area (Codebridge routes a `.anim` file here). */
+/* The file's animations along the top, the selected one's frames below.
+   Fills the editor area (Codebridge routes a `.anim` file here). */
 .editor {
   display: flex;
+  flex-direction: column;
   height: 100%;
   min-height: 0;
   overflow: hidden;
@@ -9,16 +10,40 @@
   color: var(--text-neutral-primary, #1a1a1a);
 }
 
-.list {
+/* One tab per animation in the file, and the way to another. Scrolls sideways
+   rather than wrapping: a file of a dozen animations must not push the editor
+   itself off the bottom. */
+.tabs {
   display: flex;
-  flex-direction: column;
-  width: 12rem;
-  min-width: 9rem;
-  border-inline-end: 1px solid var(--borders-neutral-light, #e4e4e4);
+  align-items: center;
+  gap: 2px;
+  padding: 0.25rem 0.5rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
   background-color: var(--background-neutral-secondary, #f0f0f0);
 }
 
-.listHeader,
+.tab {
+  flex: none;
+  padding: 0.25rem 0.625rem;
+  border: none;
+  border-radius: var(--border-radius, 4px);
+  background: none;
+  color: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: var(--background-neutral-tertiary, #e4e4e4);
+}
+
+.tabActive {
+  background-color: var(--background-brand-secondary, rgb(0 144 160 / 0.12));
+  color: var(--text-brand-primary, #0093a4);
+  font-weight: 600;
+}
+
 .framesHeader {
   display: flex;
   align-items: center;
@@ -31,35 +56,6 @@
 .h {
   margin: 0;
   color: var(--text-neutral-secondary, #555);
-}
-
-.animList {
-  list-style: none;
-  margin: 0;
-  padding: 4px;
-  overflow-y: auto;
-}
-
-.animItem {
-  width: 100%;
-  text-align: start;
-  padding: 0.375rem 0.5rem;
-  margin-bottom: 2px;
-  border: none;
-  border-radius: var(--border-radius, 4px);
-  background: none;
-  color: inherit;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.animItem:hover {
-  background-color: var(--background-neutral-tertiary, #e4e4e4);
-}
-
-.animItemActive {
-  background-color: var(--background-brand-secondary, rgb(0 144 160 / 0.12));
-  font-weight: 600;
 }
 
 .detail {
@@ -75,6 +71,11 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-bottom: 0.75rem;
+}
+
+/* The animation's timing. Narrow, because it is a number under ten. */
+.rateField {
+  width: 8rem;
 }
 
 .previewRow {
