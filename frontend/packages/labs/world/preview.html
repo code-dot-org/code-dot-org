@@ -18,13 +18,15 @@
         justify-content: center;
         background: #101020;
       }
-      /* The game box is sized purely by CSS to the largest 16:9 rectangle that
-         fits the pane, capped at native width and centered — so Phaser's FIT has
-         nothing to re-fit (no boot resize flash). The canvas fills it. */
+      /* The game box is sized purely by CSS to the largest square that fits the
+         pane, capped at native width and centered — so Phaser's FIT has nothing
+         to re-fit (no boot resize flash). The canvas fills it. These numbers are
+         the world's native resolution (src/runtime/viewport.ts); CSS cannot
+         import it, so this is the one copy that is kept in step by hand. */
       #game {
-        width: min(100vw, calc(100vh * 16 / 9));
-        max-width: 960px;
-        aspect-ratio: 16 / 9;
+        width: min(100vw, 100vh);
+        max-width: 800px;
+        aspect-ratio: 1;
       }
       /* Cap the canvas to its box so the pre-FIT boot frame can't overflow. */
       #game canvas {

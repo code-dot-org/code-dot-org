@@ -95,15 +95,18 @@ const place = (type: string, id: string, x: number, y: number) => ({
   id,
   properties: {positional: {position: {x, y}}},
 });
+// Laid out for the square world (runtime/viewport): the ground near the bottom,
+// the player well above it so the fall is something you watch rather than
+// something you miss, and the two decorative actors flanking the drop.
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
     tile: {width: 32, height: 32},
     actors: [
-      place('actors/player', 'Player', 480, 80),
-      place('actors/ground', 'Ground', 480, 440),
-      place('actors/coin', 'Coin', 660, 220),
-      place('actors/ball', 'Ball', 300, 220),
+      place('actors/player', 'Player', 400, 240),
+      place('actors/ground', 'Ground', 400, 700),
+      place('actors/coin', 'Coin', 560, 400),
+      place('actors/ball', 'Ball', 240, 400),
     ],
   },
   null,

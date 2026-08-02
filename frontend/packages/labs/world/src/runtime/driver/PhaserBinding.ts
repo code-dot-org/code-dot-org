@@ -35,17 +35,19 @@ import Phaser from 'phaser';
 import type {Actor, RenderState, World} from 'world-lab';
 
 import {SPRITESHEET_NAMES, SPRITE_NAMES, SPRITE_SIZE} from '../../sprites';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {EffectRegistry, type EffectErrorReporter} from './effects';
 import {installSkewHook, type RenderStepInternals} from './skew';
 
 const ACTOR_SIZE = 24;
-// The game's native resolution — its fixed logical coordinate space (16:9). The
-// Scale Manager's FIT mode letterboxes/centers the canvas to fit the preview
-// pane, shrinking it when the pane is smaller; the host page caps the container
-// at this width (preview.html), so it is never scaled *above* native.
-const GAME_WIDTH = 960;
-const GAME_HEIGHT = 540;
+// The game's native resolution — its fixed logical coordinate space, shared with
+// the map editor (runtime/viewport). The Scale Manager's FIT mode
+// letterboxes/centers the canvas to fit the preview pane, shrinking it when the
+// pane is smaller; the host page caps the container at this width
+// (preview.html), so it is never scaled *above* native.
+const GAME_WIDTH = VIEWPORT_WIDTH;
+const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEGREES_TO_RADIANS = Math.PI / 180;
 const DEFAULT_ASSET_BASE = '/vendor/';
 
