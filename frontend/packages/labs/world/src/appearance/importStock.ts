@@ -13,6 +13,7 @@
 import {createNewFolder, getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {serializeSheetFile, sheetFileName} from './sheetFile';
 import {
   spriteFileName,
   stockSprite,
@@ -85,7 +86,12 @@ function write(
       [id]: {
         id,
         name: file.name,
-        language: file.contents !== undefined ? 'anim' : 'png',
+        language:
+          file.contents === undefined
+            ? 'png'
+            : file.name.endsWith('.sheet')
+              ? 'json'
+              : 'anim',
         contents: file.contents ?? '',
         folderId,
         ...(file.url ? {url: file.url, mimeType: file.mimeType} : {}),
@@ -108,14 +114,20 @@ export function importStockSprite(
 ): ImportedAppearance {
   const placed = folder(source, SPRITES_FOLDER);
   const name = spriteFileName(sprite.id);
-  return {
-    source: write(placed.source, placed.folderId, {
-      name,
-      url: sprite.dataUrl,
-      mimeType: 'image/png',
-    }),
-    value: name,
-  };
+  let current = write(placed.source, placed.folderId, {
+    name,
+    url: sprite.dataUrl,
+    mimeType: 'image/png',
+  });
+  // A grid comes with the file that says it is one — an image without its
+  // `.sheet` is a picture, and the animation editor would offer no frames.
+  if (sprite.sheet) {
+    current = write(current, placed.folderId, {
+      name: sheetFileName(name),
+      contents: serializeSheetFile(sprite.sheet),
+    });
+  }
+  return {source: current, value: name};
 }
 
 /** Copy a stock animation in, with the images its frames read. */

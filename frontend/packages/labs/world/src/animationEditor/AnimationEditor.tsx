@@ -27,6 +27,9 @@ import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {projectSheets, type SheetFile} from '../appearance/sheetFile';
+import {projectFiles} from '../runtime/projectFiles';
+
 import styles from './animationEditor.module.css';
 
 const DEFAULT_DELAY = 100;
@@ -36,21 +39,10 @@ const BASE_SCALE = 2;
 const PREVIEW_BOX = 112;
 const THUMB_BOX = 44;
 
-/**
- * Whether an image is a strip of cells rather than one picture.
- *
- * There is no manifest to ask any more — every image is a file the project
- * holds, and nothing marks one as a spritesheet — so the image says it itself: a
- * strip is wider than it is tall, and its cells are as wide as it is high. That
- * covers the drawings the library ships (six 32-pixel squares in a row) and
- * anything a learner draws to the same shape.
- */
-const isStrip = (img: HTMLImageElement | undefined): boolean =>
-  !!img && img.width > img.height;
-
-/** The edge length of one cell in a strip — its height. */
-const cellSize = (img: HTMLImageElement | undefined): number =>
-  img ? img.height : 0;
+// What makes an image a spritesheet is a `.sheet` file beside it, with the same
+// stem, saying how big a cell is (appearance/sheetFile). Nothing about a PNG
+// says how it should be cut up — that is a decision someone made, so it is a
+// file rather than a guess about the picture's shape.
 
 /** A source rectangle within a spritesheet. */
 interface Cell {
@@ -144,9 +136,19 @@ const parseNum = (s: string, fallback: number): number => {
   return Number.isFinite(n) ? n : fallback;
 };
 
-/** How many cells a loaded strip holds. */
-const cellCount = (img: HTMLImageElement | undefined): number =>
-  img ? Math.max(1, Math.round(img.width / Math.max(1, img.height))) : 0;
+/** How many cells across and down a sheet's grid holds for a loaded image. */
+const gridSize = (
+  img: HTMLImageElement | undefined,
+  sheet: SheetFile | undefined,
+): {columns: number; rows: number} => {
+  if (!img || !sheet) {
+    return {columns: 0, rows: 0};
+  }
+  return {
+    columns: Math.max(1, Math.floor(img.width / sheet.cell.width)),
+    rows: Math.max(1, Math.floor(img.height / sheet.cell.height)),
+  };
+};
 
 /** Draw one frame centered in a `box`-sized canvas (device-pixel aware). */
 function drawFrame(
@@ -268,6 +270,12 @@ export const AnimationEditor = ({
     [uploaded],
   );
   const spriteUrls = uploaded;
+  // Which of those images are grids, and how big their cells are — the `.sheet`
+  // files the project holds, keyed by the image each one describes.
+  const sheets = useMemo(
+    () => projectSheets(projectFiles(currentSources.source)),
+    [currentSources],
+  );
 
   // Decode every referenced sprite to an <img> for canvas drawing.
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
@@ -398,12 +406,11 @@ export const AnimationEditor = ({
     if (!selected) {
       return;
     }
-    // A cell is strip-specific: default a strip to its first cell (so it does
-    // not draw the whole row), and clear it for a single picture.
-    const img = images[sprite];
-    const size = cellSize(img);
-    const position = isStrip(img)
-      ? {x: 0, y: 0, width: size, height: size}
+    // A cell belongs to a grid: default a sheet to its first cell (so it does
+    // not draw the whole sheet), and clear it for a single picture.
+    const sheet = sheets[sprite];
+    const position = sheet
+      ? {x: 0, y: 0, width: sheet.cell.width, height: sheet.cell.height}
       : undefined;
     commit(withFrames(mapFrame(id, f => ({...f, sprite, position}))));
   };
@@ -654,6 +661,7 @@ export const AnimationEditor = ({
                     index={i}
                     total={selected.frames.length}
                     images={images}
+                    sheets={sheets}
                     draft={draft}
                     disabled={isReadOnly}
                     spriteOptions={spriteOptions}
@@ -695,6 +703,7 @@ const SortableFrame = ({
   index,
   total,
   images,
+  sheets,
   draft,
   disabled,
   spriteOptions,
@@ -709,6 +718,8 @@ const SortableFrame = ({
   index: number;
   total: number;
   images: Record<string, HTMLImageElement>;
+  /** The grids among those images, by image file name — see appearance/sheetFile. */
+  sheets: Record<string, SheetFile>;
   draft: Record<string, string>;
   disabled: boolean;
   spriteOptions: string[];
@@ -852,9 +863,10 @@ const SortableFrame = ({
           onKeyDown={blurOnEnter}
         />
       </div>
-      {isStrip(images[frame.sprite]) && (
+      {sheets[frame.sprite] && (
         <CellPicker
           image={images[frame.sprite]}
+          sheet={sheets[frame.sprite]}
           selected={frame.position}
           disabled={disabled}
           onPick={onCell}
@@ -865,27 +877,33 @@ const SortableFrame = ({
 };
 
 /**
- * A spritesheet cell picker: the strip drawn at 2×, each SPRITE_SIZE cell
- * clickable. Clicking a cell sets the frame's `position`; the selected cell is
- * outlined. Only shown for stock spritesheets (known SPRITE_SIZE grid).
+ * A spritesheet cell picker: the sheet drawn at 2×, each cell clickable.
+ *
+ * Clicking a cell sets the frame's `position`; the selected cell is outlined.
+ * The grid comes from the image's `.sheet` file — this is only rendered for an
+ * image that has one, because without one there is no answer to "which cell".
  */
 const CellPicker = ({
   image,
+  sheet,
   selected,
   disabled,
   onPick,
 }: {
   image: HTMLImageElement | undefined;
+  sheet: SheetFile;
   selected: Cell | undefined;
   disabled: boolean;
   onPick: (cell: Cell) => void;
 }) => {
   const ref = useRef<HTMLCanvasElement>(null);
-  const count = cellCount(image);
-  // The cell's own size, read off the image rather than assumed: a strip's cells
-  // are as wide as it is high, whatever a learner drew.
-  const size = cellSize(image);
-  const cw = size * BASE_SCALE;
+  const {columns, rows} = gridSize(image, sheet);
+  const {width: cellW, height: cellH} = sheet.cell;
+  // On-screen size of one cell.
+  const cw = cellW * BASE_SCALE;
+  const ch = cellH * BASE_SCALE;
+  const width = columns * cw;
+  const height = rows * ch;
 
   useEffect(() => {
     const canvas = ref.current;
@@ -893,37 +911,46 @@ const CellPicker = ({
       return;
     }
     const dpr = window.devicePixelRatio || 1;
-    const w = count * cw;
-    const h = cw;
-    if (canvas.width !== w * dpr) {
-      canvas.width = w * dpr;
+    if (canvas.width !== width * dpr) {
+      canvas.width = width * dpr;
     }
-    if (canvas.height !== h * dpr) {
-      canvas.height = h * dpr;
+    if (canvas.height !== height * dpr) {
+      canvas.height = height * dpr;
     }
     const ctx = canvas.getContext('2d');
     if (!ctx) {
       return;
     }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, w, h);
+    ctx.clearRect(0, 0, width, height);
     ctx.imageSmoothingEnabled = false;
-    ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, w, h);
+    // Only the part of the image the grid covers: a sheet whose size is not a
+    // whole number of cells has a remainder that is not any cell.
+    const sw = columns * cellW;
+    const sh = rows * cellH;
+    ctx.drawImage(image, 0, 0, sw, sh, 0, 0, width, height);
     ctx.strokeStyle = 'rgba(255,255,255,0.3)';
     ctx.lineWidth = 1;
-    for (let k = 1; k < count; k++) {
+    for (let k = 1; k < columns; k++) {
       ctx.beginPath();
       ctx.moveTo(k * cw, 0);
-      ctx.lineTo(k * cw, h);
+      ctx.lineTo(k * cw, height);
       ctx.stroke();
     }
-    const selIndex = selected && size > 0 ? Math.round(selected.x / size) : -1;
-    if (selIndex >= 0 && selIndex < count) {
+    for (let k = 1; k < rows; k++) {
+      ctx.beginPath();
+      ctx.moveTo(0, k * ch);
+      ctx.lineTo(width, k * ch);
+      ctx.stroke();
+    }
+    const column = selected ? Math.round(selected.x / cellW) : -1;
+    const row = selected ? Math.round(selected.y / cellH) : -1;
+    if (column >= 0 && column < columns && row >= 0 && row < rows) {
       ctx.strokeStyle = '#0093a4';
       ctx.lineWidth = 3;
-      ctx.strokeRect(selIndex * cw + 1.5, 1.5, cw - 3, h - 3);
+      ctx.strokeRect(column * cw + 1.5, row * ch + 1.5, cw - 3, ch - 3);
     }
-  }, [image, count, cw, selected, size]);
+  }, [image, columns, rows, cw, ch, width, height, cellW, cellH, selected]);
 
   if (!image) {
     return null;
@@ -933,14 +960,16 @@ const CellPicker = ({
       return;
     }
     const rect = event.currentTarget.getBoundingClientRect();
-    const index = Math.min(
-      count - 1,
-      Math.max(
-        0,
-        Math.floor(((event.clientX - rect.left) / rect.width) * count),
-      ),
-    );
-    onPick({x: index * size, y: 0, width: size, height: size});
+    const at = (offset: number, extent: number, count: number) =>
+      Math.min(count - 1, Math.max(0, Math.floor((offset / extent) * count)));
+    const column = at(event.clientX - rect.left, rect.width, columns);
+    const row = at(event.clientY - rect.top, rect.height, rows);
+    onPick({
+      x: column * cellW,
+      y: row * cellH,
+      width: cellW,
+      height: cellH,
+    });
   };
   return (
     <div className={styles.cellPicker}>
@@ -948,7 +977,7 @@ const CellPicker = ({
       <canvas
         ref={ref}
         className={styles.sheet}
-        style={{width: count * cw, height: cw}}
+        style={{width, height}}
         onClick={pick}
       />
     </div>

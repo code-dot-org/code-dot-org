@@ -10,3 +10,6 @@
 # service workers (public/*.js) stay committed — only the vendored bundles are
 # ignored.
 /public/vendor
+
+# TODO files, etc
+TODO

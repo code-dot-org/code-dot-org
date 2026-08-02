@@ -23,6 +23,9 @@ describe('projectFiles', () => {
       'rules/gravity.rule',
       'rules/input.rule',
       'rules/motion.rule',
+      // The images themselves are bytes on a `url`, so they are not here; the
+      // `.sheet` saying how to cut one of them up is text, so it is.
+      'sprites/coinSpin.sheet',
       'worlds/main.world',
     ]);
     // The world is a Blockly workspace (generated to a WorldBuilder at compile).

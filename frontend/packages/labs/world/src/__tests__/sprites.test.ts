@@ -40,6 +40,22 @@ describe('the stock appearance library', () => {
     }
   });
 
+  it('marks the grids as grids, and nothing else', () => {
+    // A drawing is a grid exactly when the generator drew it as a strip of
+    // frames; that is what its `.sheet` says on import (appearance/sheetFile),
+    // and an unmarked strip is a wide picture with no cells to pick.
+    for (const sprite of STOCK_SPRITES) {
+      const drawnAsStrip = sprite.id in generator.ANIMATION_SPECS;
+      expect(Boolean(sprite.sheet), sprite.id).toBe(drawnAsStrip);
+      if (sprite.sheet) {
+        expect(sprite.sheet.cell, sprite.id).toEqual({
+          width: STOCK_CELL,
+          height: STOCK_CELL,
+        });
+      }
+    }
+  });
+
   it('reads as many frames out of a strip as the strip has', () => {
     for (const animation of STOCK_ANIMATIONS) {
       for (const def of Object.values(animation.document.animations)) {

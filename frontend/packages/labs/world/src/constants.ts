@@ -1,5 +1,6 @@
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
+import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
 import {
   spriteFileName,
   STOCK_ANIMATIONS,
@@ -385,6 +386,19 @@ function starterSprites(ids: readonly string[]) {
       url: sprite.dataUrl,
       mimeType: 'image/png',
     };
+    // A grid ships with the file that says it is one, the same as an import
+    // writes it — without the `.sheet`, `coinSpin.png` is a wide picture and the
+    // animation editor has no cells to offer.
+    if (sprite.sheet) {
+      const name = sheetFileName(spriteFileName(id));
+      files[`sheet-${id}`] = {
+        id: `sheet-${id}`,
+        name,
+        language: 'json',
+        contents: serializeSheetFile(sprite.sheet),
+        folderId: 'sprites',
+      };
+    }
   }
   return files;
 }
