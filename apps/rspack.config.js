@@ -26,6 +26,7 @@ const rspack = require('@rspack/core');
 
 const {PyodidePlugin} = require('@pyodide/webpack-plugin');
 const {RspackManifestPlugin} = require('rspack-manifest-plugin');
+const {StatsWriterPlugin} = require('webpack-stats-plugin');
 const {TsCheckerRspackPlugin} = require('ts-checker-rspack-plugin');
 const {ReactRefreshRspackPlugin} = require('@rspack/plugin-react-refresh');
 const ReactRefreshTypeScript = require('react-refresh-typescript');
@@ -42,7 +43,6 @@ const {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
@@ -64,6 +64,44 @@ const pyodidePlugin = new PyodidePlugin({
 });
 const pyodideCopyPatterns = pyodidePlugin.patterns;
 const pyodideLoader = p('node_modules/@pyodide/webpack-plugin/loader.cjs');
+
+// RSPACK-DIFF: replaces unminified-webpack-plugin, which re-renders
+// chunks through webpack internals rspack does not expose.  Same
+// effect, declaratively: before the minimizer stage the rendered
+// assets are still unminified, so copy the named chunks' main files to
+// their bare '<name>.js' filenames and exclude those from the
+// minimizer.  Unit tests and the applab exporter read these copies.
+class UnminifiedCopiesPlugin {
+  constructor(chunkNames) {
+    this.chunkNames = new Set(chunkNames);
+  }
+  apply(compiler) {
+    compiler.hooks.thisCompilation.tap('UnminifiedCopies', compilation => {
+      compilation.hooks.processAssets.tap(
+        {
+          name: 'UnminifiedCopies',
+          stage: rspack.Compilation.PROCESS_ASSETS_STAGE_OPTIMIZE,
+        },
+        () => {
+          for (const chunk of compilation.chunks) {
+            if (!this.chunkNames.has(chunk.name)) {
+              continue;
+            }
+            for (const file of chunk.files) {
+              if (!file.endsWith('.js')) {
+                continue;
+              }
+              compilation.emitAsset(
+                `${chunk.name}.js`,
+                compilation.getAsset(file).source
+              );
+            }
+          }
+        }
+      );
+    });
+  }
+}
 
 /**
  * Generate the rspack config for building `apps/`.
@@ -95,7 +133,6 @@ function createRspackConfig({
           ...appsEntries,
           ...CODE_STUDIO_ENTRIES,
           ...INTERNAL_ENTRIES,
-          ...PEGASUS_ENTRIES,
           ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
           ...SHARED_ENTRIES,
           ...OTHER_ENTRIES,
@@ -414,15 +451,21 @@ function createRspackConfig({
       chunkIds: 'deterministic',
       moduleIds: 'deterministic',
       minimize: minify,
+      // RSPACK-DIFF: SwcJsMinimizerRspackPlugin instead of TerserPlugin —
+      // rspack's built-in rust minifier.  Same exclusions: blockly and
+      // brambleHost break when minified; the unminified copies emitted by
+      // UnminifiedCopiesPlugin below must stay unminified.
       minimizer: [
-        // RSPACK-DIFF: swc minifier replaces terser (rust-side, parallel).
-        // Exclusions and the safari10 mangle workaround carry over.
         new rspack.SwcJsMinimizerRspackPlugin({
-          exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+          exclude: [
+            /\/blockly\.js$/,
+            /brambleHost\.js$/,
+            /^(webpack-runtime|applab-api|gamelab-api)\.js$/,
+          ],
           minimizerOptions: {
-            mangle: {
-              safari10: true,
-            },
+            // Safari 10.x mangle workaround, as in webpack.config.js
+            // [FND-2108 / FND-2109].
+            mangle: {safari10: true},
           },
         }),
       ],
@@ -432,81 +475,76 @@ function createRspackConfig({
       runtimeChunk: {
         name: 'webpack-runtime',
       },
+      // RSPACK-DIFF: the `chunks` callbacks are hot — rspack invokes them
+      // from rust far more often than webpack does, and profiling showed
+      // Object.keys(...).includes(...) per call dominating the whole
+      // production build.  Hoist each group's name set and test with
+      // Set.has.
       splitChunks: process.env.DEV
         ? undefined
-        : {
-            maxInitialRequests: 100,
-            cacheGroups: {
-              common: {
-                name: 'common',
-                minChunks: 2,
-                chunks: chunk => {
-                  return Object.keys(appsEntries).includes(chunk.name);
+        : (() => {
+            const appsEntryNames = new Set(Object.keys(appsEntries));
+            const p5EntryNames = new Set(['spritelab', 'gamelab', 'dance']);
+            const codeStudioNames = new Set(Object.keys(CODE_STUDIO_ENTRIES));
+            const codeStudioAndApps = new Set([
+              ...codeStudioNames,
+              ...appsEntryNames,
+            ]);
+            const vendorLibRegexes = [
+              '@babel/polyfill/noConflict',
+              '@mui',
+              'immutable',
+              'lodash',
+              'moment',
+              'radium',
+              'react',
+              'react-dom',
+              'wgxpath',
+            ].map(libName => new RegExp(`/apps/node_modules/${libName}/`));
+            const vendorEntryNames = new Set([
+              ...appsEntryNames,
+              ...codeStudioNames,
+              ...Object.keys(INTERNAL_ENTRIES),
+              ...Object.keys(PROFESSIONAL_DEVELOPMENT_ENTRIES),
+              ...Object.keys(SHARED_ENTRIES),
+            ]);
+            return {
+              maxInitialRequests: 100,
+              cacheGroups: {
+                common: {
+                  name: 'common',
+                  minChunks: 2,
+                  chunks: chunk => appsEntryNames.has(chunk.name),
+                },
+                'code-studio-common': {
+                  name: 'code-studio-common',
+                  minChunks: 2,
+                  chunks: chunk => codeStudioNames.has(chunk.name),
+                  priority: 10,
+                },
+                'code-studio-multi': {
+                  name: 'code-studio-common',
+                  minChunks: appsEntryNames.size + 1,
+                  chunks: chunk => codeStudioAndApps.has(chunk.name),
+                  priority: 20,
+                },
+                vendors: {
+                  name: 'vendors',
+                  priority: 30,
+                  chunks: chunk => vendorEntryNames.has(chunk.name),
+                  test: module =>
+                    vendorLibRegexes.some(r => r.test(module.resource)),
+              },
+                p5lab: {
+                  name: 'p5-dependencies',
+                  priority: 10,
+                  minChunks: 2,
+                  chunks: chunk => p5EntryNames.has(chunk.name),
+                  test: module => /p5/.test(module.resource),
                 },
               },
-              'code-studio-common': {
-                name: 'code-studio-common',
-                minChunks: 2,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
-                  return chunkNames.includes(chunk.name);
-                },
-                priority: 10,
-              },
-              'code-studio-multi': {
-                name: 'code-studio-common',
-                minChunks: Object.keys(appsEntries).length + 1,
-                chunks: chunk => {
-                  const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
-                    Object.keys(appsEntries)
-                  );
-                  return chunkNames.includes(chunk.name);
-                },
-                priority: 20,
-              },
-              vendors: {
-                name: 'vendors',
-                priority: 30,
-                chunks: chunk => {
-                  const chunkNames = Object.keys({
-                    ...appsEntries,
-                    ...CODE_STUDIO_ENTRIES,
-                    ...INTERNAL_ENTRIES,
-                    ...PEGASUS_ENTRIES,
-                    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-                    ...SHARED_ENTRIES,
-                  });
-
-                  return chunkNames.includes(chunk.name);
-                },
-                test(module) {
-                  return [
-                    '@babel/polyfill/noConflict',
-                    '@mui',
-                    'immutable',
-                    'lodash',
-                    'moment',
-                    'radium',
-                    'react',
-                    'react-dom',
-                    'wgxpath',
-                  ].some(libName =>
-                    new RegExp(`/apps/node_modules/${libName}/`).test(
-                      module.resource
-                    )
-                  );
-                },
-              },
-              p5lab: {
-                name: 'p5-dependencies',
-                priority: 10,
-                minChunks: 2,
-                chunks: chunk =>
-                  ['spritelab', 'gamelab', 'dance'].includes(chunk.name),
-                test: module => /p5/.test(module.resource),
-              },
-            },
-          },
+            };
+          })(),
     },
     mode: minify ? 'production' : 'development',
     infrastructureLogging: {
@@ -585,8 +623,33 @@ function createRspackConfig({
       // webpack-runtime/applab-api/gamelab-api for unit tests) is webpack 4
       // era and incompatible; minified builds are out of scope for the
       // prototype.  TODO before any real switch.
+      ...(minify
+        ? [
+            new UnminifiedCopiesPlugin([
+              'webpack-runtime',
+              'applab-api',
+              'gamelab-api',
+            ]),
+          ]
+        : []),
+      ...(process.env.DEV
+        ? []
+        : [
+            new StatsWriterPlugin({
+              fields: ['assetsByChunkName', 'assets'],
+            }),
+          ]),
       new RspackManifestPlugin({
         basePath: 'js/',
+        // The unminified copies emitted by UnminifiedCopiesPlugin collide
+        // with the hashed entries once map() strips the hash; keep them
+        // out of the manifest so pages load the minified bundles.  In dev
+        // these same names ARE the real entries and must stay.
+        filter: file =>
+          !minify ||
+          !/^(webpack-runtime|applab-api|gamelab-api)\.js$/.test(
+            file.path.split('/').pop()
+          ),
         map: file => {
           if (minify) {
             file.name = file.name
@@ -673,4 +736,6 @@ function addPolyfillsToEntryPoints(entries, polyfills) {
   );
 }
 
-module.exports = createRspackConfig();
+module.exports = createRspackConfig({
+  minify: process.env.NODE_ENV === 'production',
+});

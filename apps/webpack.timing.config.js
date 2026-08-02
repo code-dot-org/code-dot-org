@@ -3,4 +3,6 @@
 // prebuild (already seeded) is skipped.
 const {createWebpackConfig} = require('./webpack.config');
 
-module.exports = createWebpackConfig();
+module.exports = createWebpackConfig({
+  minify: process.env.NODE_ENV === 'production',
+});
