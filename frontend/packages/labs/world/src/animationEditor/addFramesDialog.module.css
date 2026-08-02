@@ -1,0 +1,96 @@
+/* The sheet-to-frames picker's CONTENT. The dialog itself — surface, width,
+   padding, the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* Which sheet, when the project holds more than one. */
+.sheets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.sheetButton {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-transform: none;
+}
+
+/* `.sheets` for the specificity: the design system's dialog sizes any `img` in
+   its content as a banner, and these are thumbnails of pixel art. */
+.sheets .sheetPreview {
+  display: block;
+  height: 24px;
+  max-width: 96px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+/* The sheet laid out as it is drawn: one column per column of the grid, so the
+   picker reads like the picture it came from. Scrolls in its own box — a wide
+   sheet must not push the dialog off the screen. */
+.grid {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  max-height: 45vh;
+  overflow: auto;
+  list-style: none;
+}
+
+.cellButton {
+  position: relative;
+  display: block;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
+}
+
+.cellButton:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.cellChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.cell {
+  display: block;
+  image-rendering: pixelated;
+}
+
+/* Where this cell lands in the animation — the whole reason order is worth
+   showing rather than assuming. */
+.place {
+  position: absolute;
+  inset-block-end: 2px;
+  inset-inline-end: 2px;
+  min-width: 1rem;
+  padding: 0 2px;
+  border-radius: 3px;
+  background-color: var(--background-brand-primary, #0093a4);
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.cellButton:not(.cellChosen) .place {
+  display: none;
+}
