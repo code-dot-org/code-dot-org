@@ -39,9 +39,10 @@ import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import {AddFramesDialog} from './AddFramesDialog';
 import styles from './animationEditor.module.css';
+import {CellPicker} from './CellPicker';
 import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
-import {type CellRect, sheetGrid} from './sheetFrames';
+import type {CellRect} from './sheetFrames';
 import {SpritePickerDialog} from './SpritePickerDialog';
 import {delayOf, durations, retimed, shownRate} from './timing';
 
@@ -925,15 +926,21 @@ export const AnimationEditor = ({
                 onKeyDown={blurOnEnter}
               />
             </div>
-            <Button
-              variant="text"
+            {/* Away from the fields, at the end of the row: a red word
+                between two text boxes is a destructive action sitting where
+                the eye goes next after typing a name. */}
+            <div className={styles.headerSpacer} />
+            <IconButton
+              aria-label="Delete this animation"
+              title="Delete this animation"
               size="extraSmall"
+              variant="outlined"
               color="error"
               onClick={() => deleteAnimation(selId)}
               disabled={isReadOnly}
             >
-              Delete
-            </Button>
+              <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
+            </IconButton>
           </div>
 
           <div className={styles.previewRow}>
@@ -1493,116 +1500,6 @@ const FrameInspector = ({
           onPick={onCell}
         />
       )}
-    </div>
-  );
-};
-
-/**
- * A spritesheet cell picker: the sheet drawn at 2×, each cell clickable.
- *
- * Clicking a cell sets the frame's `position`; the selected cell is outlined.
- * The grid comes from the image's `.sheet` file — this is only rendered for an
- * image that has one, because without one there is no answer to "which cell".
- */
-const CellPicker = ({
-  image,
-  sheet,
-  selected,
-  disabled,
-  onPick,
-}: {
-  image: HTMLImageElement | undefined;
-  sheet: SheetFile;
-  selected: Cell | undefined;
-  disabled: boolean;
-  onPick: (cell: Cell) => void;
-}) => {
-  const ref = useRef<HTMLCanvasElement>(null);
-  const {columns, rows} = sheetGrid(image, sheet);
-  const {width: cellW, height: cellH} = sheet.cell;
-  // On-screen size of one cell.
-  const cw = cellW * BASE_SCALE;
-  const ch = cellH * BASE_SCALE;
-  const width = columns * cw;
-  const height = rows * ch;
-
-  useEffect(() => {
-    const canvas = ref.current;
-    if (!canvas || !image) {
-      return;
-    }
-    const dpr = window.devicePixelRatio || 1;
-    if (canvas.width !== width * dpr) {
-      canvas.width = width * dpr;
-    }
-    if (canvas.height !== height * dpr) {
-      canvas.height = height * dpr;
-    }
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      return;
-    }
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, width, height);
-    ctx.imageSmoothingEnabled = false;
-    // Only the part of the image the grid covers: a sheet whose size is not a
-    // whole number of cells has a remainder that is not any cell.
-    const sw = columns * cellW;
-    const sh = rows * cellH;
-    ctx.drawImage(image, 0, 0, sw, sh, 0, 0, width, height);
-    ctx.strokeStyle = 'rgba(255,255,255,0.3)';
-    ctx.lineWidth = 1;
-    for (let k = 1; k < columns; k++) {
-      ctx.beginPath();
-      ctx.moveTo(k * cw, 0);
-      ctx.lineTo(k * cw, height);
-      ctx.stroke();
-    }
-    for (let k = 1; k < rows; k++) {
-      ctx.beginPath();
-      ctx.moveTo(0, k * ch);
-      ctx.lineTo(width, k * ch);
-      ctx.stroke();
-    }
-    const column = selected ? Math.round(selected.x / cellW) : -1;
-    const row = selected ? Math.round(selected.y / cellH) : -1;
-    if (column >= 0 && column < columns && row >= 0 && row < rows) {
-      ctx.strokeStyle = '#0093a4';
-      ctx.lineWidth = 3;
-      ctx.strokeRect(column * cw + 1.5, row * ch + 1.5, cw - 3, ch - 3);
-    }
-  }, [image, columns, rows, cw, ch, width, height, cellW, cellH, selected]);
-
-  if (!image) {
-    return null;
-  }
-  const pick = (event: React.MouseEvent<HTMLCanvasElement>) => {
-    if (disabled) {
-      return;
-    }
-    const rect = event.currentTarget.getBoundingClientRect();
-    const at = (offset: number, extent: number, count: number) =>
-      Math.min(count - 1, Math.max(0, Math.floor((offset / extent) * count)));
-    const column = at(event.clientX - rect.left, rect.width, columns);
-    const row = at(event.clientY - rect.top, rect.height, rows);
-    onPick({
-      x: column * cellW,
-      y: row * cellH,
-      width: cellW,
-      height: cellH,
-    });
-  };
-  return (
-    <div className={styles.cellPicker}>
-      <span className={styles.cellHint}>Cell:</span>
-      <div className={styles.sheetScroll}>
-        <canvas
-          ref={ref}
-          className={styles.sheet}
-          style={{width, height}}
-          onClick={pick}
-        />
-      </div>
     </div>
   );
 };

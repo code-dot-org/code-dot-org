@@ -51,32 +51,9 @@
   list-style: none;
 }
 
-.cellButton {
-  position: relative;
-  display: block;
-  padding: 2px;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  background-color: #101020;
-  cursor: pointer;
-}
-
-.cellButton:focus-visible {
-  outline: 2px solid var(--borders-brand-primary, #0093a4);
-  outline-offset: 2px;
-}
-
-.cellChosen {
-  border-color: var(--borders-brand-primary, #0093a4);
-}
-
-.cell {
-  display: block;
-  image-rendering: pixelated;
-}
-
 /* Where this cell lands in the animation — the whole reason order is worth
-   showing rather than assuming. */
+   showing rather than assuming. Positioned against the shared cell button
+   (cellThumb.module.css), which is the positioned ancestor. */
 .place {
   position: absolute;
   inset-block-end: 2px;
@@ -89,8 +66,4 @@
   font-size: 11px;
   line-height: 1.2;
   text-align: center;
-}
-
-.cellButton:not(.cellChosen) .place {
-  display: none;
 }
