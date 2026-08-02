@@ -198,6 +198,32 @@ function encodePng(rgba, width, height) {
   ]);
 }
 
+/**
+ * Every stock image, as `{name: pngBuffer}`.
+ *
+ * The bytes, with nowhere to put them: `generateSprites` writes them to disk for
+ * the demo's vendor directory, and `write-stock-assets.mjs` writes them into the
+ * lab's source as data URLs, which is what an import copies into a project.
+ */
+export function stockImages() {
+  const images = {};
+  for (const name of SPRITE_NAMES) {
+    const c = canvas(SPRITE_SIZE);
+    STATIC[name](c);
+    images[name] = encodePng(c.data, SPRITE_SIZE, SPRITE_SIZE);
+  }
+  for (const [name, {frames}] of Object.entries(ANIMATION_SPECS)) {
+    const sheet = canvas(SPRITE_SIZE * frames, SPRITE_SIZE);
+    for (let t = 0; t < frames; t++) {
+      const frame = canvas(SPRITE_SIZE);
+      ANIMATION_FRAME[name](frame, t, frames);
+      blit(sheet, frame, t * SPRITE_SIZE);
+    }
+    images[name] = encodePng(sheet.data, SPRITE_SIZE * frames, SPRITE_SIZE);
+  }
+  return images;
+}
+
 /** Write every built-in sprite and animation PNG into `outDir`. */
 export function generateSprites(outDir) {
   mkdirSync(outDir, {recursive: true});

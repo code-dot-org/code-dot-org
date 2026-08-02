@@ -313,3 +313,25 @@ export function projectWorldRules(files: Record<string, string>): string[] {
   }
   return [...names];
 }
+
+/**
+ * The images the project holds, as `[label, fileName]` for the SPRITE dropdown.
+ *
+ * The VALUE is the file name — what a frame references and what the driver keys
+ * a texture by — and the label drops the extension, because "player" is what the
+ * sentence on the block wants to read.
+ */
+export function projectSpriteOptions(
+  files: Record<string, string>,
+  assets: readonly string[] = [],
+): Array<[string, string]> {
+  const names = [
+    ...Object.keys(files).filter(path =>
+      /\.(png|jpg|jpeg|gif|webp)$/i.test(path),
+    ),
+    ...assets,
+  ].map(path => path.split('/').pop() as string);
+  return [...new Set(names)]
+    .sort((a, b) => a.localeCompare(b))
+    .map(name => [name.replace(/\.[^.]+$/, ''), name]);
+}

@@ -19,7 +19,7 @@ import {
 import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
-import {setProjectMaps} from '../moduleOptions';
+import {setProjectAnimationFiles, setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {VALUE_SHADOW_EXTENSION} from '../valueShadow';
@@ -1473,20 +1473,28 @@ describe('world block generators', () => {
     expect(run('world_remove_world_effect', {EFFECT: ''}, {}, '')).toBe('');
   });
 
-  it('world_use_animations imports the file and registers its animations', () => {
+  it('registers every animation file the project holds, with no block for it', () => {
+    // There is no `use animations` block and deliberately so: an animation file
+    // is not something a world opts into, it is something the project HAS. A
+    // learner who draws one and plays it should not also have to remember to
+    // say the world may use it.
+    setProjectAnimationFiles([
+      ['game', 'animations/game'],
+      ['coinSpin', 'animations/coinSpin'],
+    ]);
     const defs: Record<string, string> = {};
-    const code = run(
-      'world_use_animations',
-      {FILE: 'animations/game'},
-      defs,
-      '',
+    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
+
+    expect(code).toContain(
+      'world.useAnimations(WorldLab.parseAnimationFile(Game));',
     );
-    expect(code).toBe(
-      'world.useAnimations(WorldLab.parseAnimationFile(Game));\n',
+    expect(code).toContain(
+      'world.useAnimations(WorldLab.parseAnimationFile(CoinSpin));',
     );
     expect(defs['mod:animations/game']).toBe(
       'import Game from "animations/game";',
     );
+    setProjectAnimationFiles([]);
   });
 });
 

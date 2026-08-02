@@ -13,7 +13,6 @@ import type {
   WorldSnapshot,
 } from 'world-lab';
 
-import {SPRITE_NAMES} from '../../sprites';
 import {frameThumbnail} from '../driver/frameThumbnail';
 import {PhaserBinding} from '../driver/PhaserBinding';
 import {reconcile} from '../driver/reconcile';
@@ -37,8 +36,9 @@ const DEFERRED_PROPS = new Set<string>([]);
 /**
  * Enumerable string properties → their allowed values, so the editor renders a
  * dropdown. Keyed by `${ownerId}.${propId}`; `animation` resolves against the
- * world's live registry (stock + project animations), `sprite` against the
- * built-in sprite set plus the project's uploaded sprites (deduped).
+ * world's live registry (the project's own animations), `sprite` against the
+ * images the project holds. There is no built-in set on either side: a game
+ * draws what its project has.
  */
 function optionsFor(
   key: string,
@@ -46,7 +46,7 @@ function optionsFor(
   uploadedSprites: string[],
 ): string[] | undefined {
   if (key === 'appearance.sprite') {
-    return [...new Set([...SPRITE_NAMES, ...uploadedSprites])];
+    return [...new Set(uploadedSprites)];
   }
   if (key === 'appearance.animation') {
     return animationIds;
@@ -301,7 +301,6 @@ export async function start(): Promise<void> {
         binding = new PhaserBinding(
           incoming,
           parent,
-          assetBase,
           assets,
           reportEffectError,
           reportRuntimeError,
@@ -320,7 +319,6 @@ export async function start(): Promise<void> {
           binding = new PhaserBinding(
             incoming,
             parent,
-            assetBase,
             assets,
             reportEffectError,
             reportRuntimeError,

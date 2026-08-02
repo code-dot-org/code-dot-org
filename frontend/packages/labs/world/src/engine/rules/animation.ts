@@ -209,40 +209,10 @@ export function playAnimation(target: AnimationTarget, id: string): void {
   target.set(RestartRequestedProperty, true);
 }
 
-// ── Stock animations ─────────────────────────────────────────────────────────
-// Backed by the self-hosted vendor spritesheets (`public/vendor/sprites/`); the
-// frame cells index a uniform horizontal strip of `CELL`-sized frames. Cell size
-// and frame counts mirror the driver's asset manifest (`src/sprites.ts`); a test
-// keeps them in sync.
-const CELL = 32;
-
-/**
- * An animation over a uniform horizontal spritesheet strip. Loops by default; a
- * non-looping strip (e.g. a switch) plays once, holds its last frame, and emits
- * `AnimationEnded`.
- */
-function strip(
-  sprite: string,
-  frames: number,
-  frameRate: number,
-  name: string,
-  loop = true,
-): AnimationDef {
-  return {
-    name,
-    loop,
-    frames: Array.from({length: frames}, (_unused, i) => ({
-      sprite,
-      position: {x: i * CELL, y: 0, width: CELL, height: CELL},
-      delay: 1000 / frameRate,
-    })),
-  };
-}
-
-rule.addAnimation('coinSpin', strip('coinSpin', 6, 12, 'Coin Spin'));
-rule.addAnimation('playerWalk', strip('playerWalk', 4, 8, 'Player Walk'));
-// A switch flips from one side to the other on activation, then holds — so it
-// plays once (loop = false) rather than cycling.
-rule.addAnimation('switch', strip('switch', 6, 12, 'Switch', false));
+// NO STOCK ANIMATIONS. An animation is frames of an image, and both are files a
+// project holds — the appearance library (`src/appearance/stock`) is a shelf to
+// copy from, not a set of things every game already has. The rule owns timing
+// and the properties; what plays is whatever the project registered
+// (`WorldBuilder.useAnimations`, from its own `.anim` files).
 
 export const AnimationRule = rule.build();

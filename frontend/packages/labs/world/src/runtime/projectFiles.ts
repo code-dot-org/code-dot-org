@@ -42,7 +42,31 @@ export function projectFiles(
   }
   const files: Record<string, string> = {};
   for (const file of Object.values(source.files)) {
+    // An image is bytes on a `url`, not text: its `contents` are empty, and an
+    // empty module in the bundle is a module the compiler could be asked to
+    // resolve. The driver gets those separately (projectAssets).
+    if (file.url) {
+      continue;
+    }
     files[`${folderPath(source, file.folderId)}${file.name}`] = file.contents;
   }
   return files;
+}
+
+/**
+ * The names of the images the project holds.
+ *
+ * An image is bytes on a `url`, not text, so it never appears in `projectFiles`
+ * — but it is exactly what a `set sprite` block names and what the driver keys a
+ * texture by, so the editor's registries need it alongside them.
+ */
+export function projectImageNames(
+  source: MultiFileSource | undefined,
+): string[] {
+  if (!source) {
+    return [];
+  }
+  return Object.values(source.files)
+    .filter(file => file.url)
+    .map(file => file.name);
 }

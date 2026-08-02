@@ -27,13 +27,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
-import {SPRITE_NAMES, SPRITE_SIZE, SPRITESHEET_NAMES} from '../sprites';
-
 import styles from './animationEditor.module.css';
 
-// Stock sprite assets live at this base on the LAB origin (the same PNGs the
-// preview's Phaser loads via `/vendor/`); uploaded sprites carry their own URL.
-const ASSET_BASE = '/vendor/sprites/';
 const DEFAULT_DELAY = 100;
 // Preview/thumbnail draw scale: a 32px sprite is drawn at 2× so it reads at a
 // glance; the frame's own scale/offset multiply on top.
@@ -41,13 +36,21 @@ const BASE_SCALE = 2;
 const PREVIEW_BOX = 112;
 const THUMB_BOX = 44;
 
-// Stock spritesheets are horizontal strips of SPRITE_SIZE cells; single sprites
-// have no cells. `SHEETS` is the set that offers the cell picker.
-const SHEETS = new Set<string>(SPRITESHEET_NAMES);
-const STOCK_SPRITES: readonly string[] = [
-  ...SPRITE_NAMES,
-  ...SPRITESHEET_NAMES,
-];
+/**
+ * Whether an image is a strip of cells rather than one picture.
+ *
+ * There is no manifest to ask any more — every image is a file the project
+ * holds, and nothing marks one as a spritesheet — so the image says it itself: a
+ * strip is wider than it is tall, and its cells are as wide as it is high. That
+ * covers the drawings the library ships (six 32-pixel squares in a row) and
+ * anything a learner draws to the same shape.
+ */
+const isStrip = (img: HTMLImageElement | undefined): boolean =>
+  !!img && img.width > img.height;
+
+/** The edge length of one cell in a strip — its height. */
+const cellSize = (img: HTMLImageElement | undefined): number =>
+  img ? img.height : 0;
 
 /** A source rectangle within a spritesheet. */
 interface Cell {
@@ -141,9 +144,9 @@ const parseNum = (s: string, fallback: number): number => {
   return Number.isFinite(n) ? n : fallback;
 };
 
-/** How many SPRITE_SIZE cells a loaded spritesheet strip holds. */
+/** How many cells a loaded strip holds. */
 const cellCount = (img: HTMLImageElement | undefined): number =>
-  img ? Math.max(1, Math.round(img.width / SPRITE_SIZE)) : 0;
+  img ? Math.max(1, Math.round(img.width / Math.max(1, img.height))) : 0;
 
 /** Draw one frame centered in a `box`-sized canvas (device-pixel aware). */
 function drawFrame(
@@ -249,7 +252,8 @@ export const AnimationEditor = ({
     useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}),
   );
 
-  // Uploaded sprites (learner PNGs) → their same-origin URLs; merged with stock.
+  // The project's images (drawn, uploaded, or imported from the library) → their
+  // URLs. There is no other source: a game draws what its project holds.
   const uploaded = useMemo(() => {
     const out: Record<string, string> = {};
     for (const file of Object.values(currentSources.source.files)) {
@@ -260,16 +264,10 @@ export const AnimationEditor = ({
     return out;
   }, [currentSources]);
   const spriteOptions = useMemo(
-    () => [...new Set([...STOCK_SPRITES, ...Object.keys(uploaded)])],
+    () => [...new Set(Object.keys(uploaded))],
     [uploaded],
   );
-  const spriteUrls = useMemo(() => {
-    const urls: Record<string, string> = {};
-    for (const name of STOCK_SPRITES) {
-      urls[name] = `${ASSET_BASE}${name}.png`;
-    }
-    return {...urls, ...uploaded};
-  }, [uploaded]);
+  const spriteUrls = uploaded;
 
   // Decode every referenced sprite to an <img> for canvas drawing.
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
@@ -400,10 +398,12 @@ export const AnimationEditor = ({
     if (!selected) {
       return;
     }
-    // A cell (position) is sheet-specific: default a spritesheet to its first
-    // cell (so it doesn't draw the whole strip), and clear it for a single image.
-    const position = SHEETS.has(sprite)
-      ? {x: 0, y: 0, width: SPRITE_SIZE, height: SPRITE_SIZE}
+    // A cell is strip-specific: default a strip to its first cell (so it does
+    // not draw the whole row), and clear it for a single picture.
+    const img = images[sprite];
+    const size = cellSize(img);
+    const position = isStrip(img)
+      ? {x: 0, y: 0, width: size, height: size}
       : undefined;
     commit(withFrames(mapFrame(id, f => ({...f, sprite, position}))));
   };
@@ -852,7 +852,7 @@ const SortableFrame = ({
           onKeyDown={blurOnEnter}
         />
       </div>
-      {SHEETS.has(frame.sprite) && (
+      {isStrip(images[frame.sprite]) && (
         <CellPicker
           image={images[frame.sprite]}
           selected={frame.position}
@@ -882,7 +882,10 @@ const CellPicker = ({
 }) => {
   const ref = useRef<HTMLCanvasElement>(null);
   const count = cellCount(image);
-  const cw = SPRITE_SIZE * BASE_SCALE;
+  // The cell's own size, read off the image rather than assumed: a strip's cells
+  // are as wide as it is high, whatever a learner drew.
+  const size = cellSize(image);
+  const cw = size * BASE_SCALE;
 
   useEffect(() => {
     const canvas = ref.current;
@@ -914,13 +917,13 @@ const CellPicker = ({
       ctx.lineTo(k * cw, h);
       ctx.stroke();
     }
-    const selIndex = selected ? Math.round(selected.x / SPRITE_SIZE) : -1;
+    const selIndex = selected && size > 0 ? Math.round(selected.x / size) : -1;
     if (selIndex >= 0 && selIndex < count) {
       ctx.strokeStyle = '#0093a4';
       ctx.lineWidth = 3;
       ctx.strokeRect(selIndex * cw + 1.5, 1.5, cw - 3, h - 3);
     }
-  }, [image, count, cw, selected]);
+  }, [image, count, cw, selected, size]);
 
   if (!image) {
     return null;
@@ -937,12 +940,7 @@ const CellPicker = ({
         Math.floor(((event.clientX - rect.left) / rect.width) * count),
       ),
     );
-    onPick({
-      x: index * SPRITE_SIZE,
-      y: 0,
-      width: SPRITE_SIZE,
-      height: SPRITE_SIZE,
-    });
+    onPick({x: index * size, y: 0, width: size, height: size});
   };
   return (
     <div className={styles.cellPicker}>

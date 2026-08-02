@@ -1,5 +1,10 @@
 import type {MultiFileSource, ProjectSources} from '@code-dot-org/core/api';
 
+import {
+  spriteFileName,
+  STOCK_ANIMATIONS,
+  STOCK_SPRITES,
+} from './appearance/stock';
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
 import {
@@ -36,15 +41,15 @@ import {ActsAsGroundTrait} from 'rules/gravity';
 
 // A ground tile: landable (ActsAsGroundTrait, from the project's own gravity
 // rule) and a wall (SolidTrait, from the engine's collision rule), drawn with
-// the built-in "ground" sprite. A normal tile is both.
+// the project's own "ground.png". A normal tile is both.
 export default new ActorBuilder({id: 'ground', name: 'Ground'})
   .useTraits([ActsAsGroundTrait, SolidTrait, AppearanceTrait])
-  .set(SpriteProperty, 'ground');
+  .set(SpriteProperty, 'ground.png');
 `;
 
 const COIN_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
 
-// A coin playing the built-in "coinSpin" animation.
+// A coin playing "coinSpin" — the animation in animations/coinSpin.anim.
 export default new ActorBuilder({id: 'coin', name: 'Coin'})
   .useTraits([PositionalTrait, AppearanceTrait])
   .set(AnimationProperty, 'coinSpin');
@@ -52,7 +57,7 @@ export default new ActorBuilder({id: 'coin', name: 'Coin'})
 
 const BALL_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
 
-// A ball playing "pulse" — the animation authored in animations/game.anim.
+// A ball playing "pulse" — the animation in animations/game.anim.
 export default new ActorBuilder({id: 'ball', name: 'Ball'})
   .useTraits([PositionalTrait, AppearanceTrait])
   .set(AnimationProperty, 'pulse');
@@ -202,10 +207,6 @@ const MAIN_WORLD = JSON.stringify(
               {type: 'world_use_rule', fields: {RULE: 'Input'}},
               {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
               {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
-              {
-                type: 'world_use_animations',
-                fields: {FILE: 'animations/game'},
-              },
               {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
             ]),
           },
@@ -327,12 +328,12 @@ const PLAYER_ACTOR = JSON.stringify(
   2,
 );
 
-// Learner-authored animations — a `.anim` file (JSON on disk), discriminated by `type: 'animation'`
-// (INTERFACE.md §Animations). The world imports and registers them
-// (`useAnimations(parseAnimationFile(...))`). Both scale a built-in sprite per
-// frame, showing the per-frame `scale` the stock strip animations don't use, and
-// both become selectable in the `world_play_animation` Blockly dropdown: "pulse"
-// (the ball, in JS) and "playerBob" (the player, authored in Blockly).
+// Learner-authored animations — a `.anim` file (JSON on disk), discriminated by
+// `type: 'animation'` (INTERFACE.md §Animations). Every `.anim` in the project is
+// registered when the world is built, so a file being here is what makes its
+// animations playable. Both of these scale one image per frame rather than
+// reading a strip, and both are selectable in the `play animation` dropdown:
+// "pulse" (the ball) and "playerBob" (the player).
 const GAME_ANIMATIONS = JSON.stringify(
   {
     type: 'animation',
@@ -340,19 +341,19 @@ const GAME_ANIMATIONS = JSON.stringify(
       pulse: {
         name: 'Pulse',
         frames: [
-          {sprite: 'ball', scale: 0.7, delay: 160},
-          {sprite: 'ball', scale: 1.0, delay: 160},
-          {sprite: 'ball', scale: 1.3, delay: 160},
-          {sprite: 'ball', scale: 1.0, delay: 160},
+          {sprite: 'ball.png', scale: 0.7, delay: 160},
+          {sprite: 'ball.png', scale: 1.0, delay: 160},
+          {sprite: 'ball.png', scale: 1.3, delay: 160},
+          {sprite: 'ball.png', scale: 1.0, delay: 160},
         ],
       },
       playerBob: {
         name: 'Player Bob',
         frames: [
-          {sprite: 'player', scale: 1.0, delay: 150},
-          {sprite: 'player', scale: 1.25, delay: 150},
-          {sprite: 'player', scale: 1.0, delay: 150},
-          {sprite: 'player', scale: 0.8, delay: 150},
+          {sprite: 'player.png', scale: 1.0, delay: 150},
+          {sprite: 'player.png', scale: 1.25, delay: 150},
+          {sprite: 'player.png', scale: 1.0, delay: 150},
+          {sprite: 'player.png', scale: 0.8, delay: 150},
         ],
       },
     },
@@ -360,6 +361,50 @@ const GAME_ANIMATIONS = JSON.stringify(
   null,
   2,
 );
+
+/**
+ * The stock images the starter project ships copies of, as project files.
+ *
+ * Written here rather than pasted as base64: they are the same bytes the import
+ * dialog hands out (`appearance/stock`), so the starter project cannot drift
+ * from what a learner would get by importing one.
+ */
+function starterSprites(ids: readonly string[]) {
+  const files: MultiFileSource['files'] = {};
+  for (const id of ids) {
+    const sprite = STOCK_SPRITES.find(entry => entry.id === id);
+    if (!sprite) {
+      continue;
+    }
+    files[`sprite-${id}`] = {
+      id: `sprite-${id}`,
+      name: spriteFileName(id),
+      language: 'png',
+      contents: '',
+      folderId: 'sprites',
+      url: sprite.dataUrl,
+      mimeType: 'image/png',
+    };
+  }
+  return files;
+}
+
+/** A stock animation shipped as a project file, exactly as an import leaves it. */
+function starterAnimation(id: string) {
+  const animation = STOCK_ANIMATIONS.find(entry => entry.id === id);
+  if (!animation) {
+    return {};
+  }
+  return {
+    [`anim-${id}`]: {
+      id: `anim-${id}`,
+      name: `${id}.anim`,
+      language: 'anim',
+      contents: `${JSON.stringify(animation.document, null, 2)}\n`,
+      folderId: 'animations',
+    },
+  };
+}
 
 export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
   source: {
@@ -469,12 +514,22 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: serializeEffectDocument(rippleEffect),
         folderId: 'effects',
       },
+      // The images. A project draws only what it holds, so the four the starter
+      // level uses are files in it — copies of the stock drawings, exactly as
+      // importing them would leave them, and editable from here on.
+      ...starterSprites(['player', 'ground', 'coin', 'ball', 'coinSpin']),
+      // …and one animation copied in whole, frames and image both: the coin's
+      // spin, which reads six squares out of one strip. The other two
+      // animations here scale a single image instead — between them they show
+      // the two ways an animation is made.
+      ...starterAnimation('coinSpin'),
     },
     folders: {
       rules: {id: 'rules', name: 'rules', parentId: '0'},
       worlds: {id: 'worlds', name: 'worlds', parentId: '0'},
       actors: {id: 'actors', name: 'actors', parentId: '0'},
       animations: {id: 'animations', name: 'animations', parentId: '0'},
+      sprites: {id: 'sprites', name: 'sprites', parentId: '0'},
       maps: {id: 'maps', name: 'maps', parentId: '0'},
       effects: {id: 'effects', name: 'effects', parentId: '0'},
     },

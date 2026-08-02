@@ -21,11 +21,11 @@ import {
 } from '@code-dot-org/blockly';
 import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
+import {IMPORT_SPRITE_VALUE} from '../appearance/appearanceImport';
 import type {ArgType, PropertyType} from '../engine';
-import {SPRITESHEET_NAMES, SPRITE_NAMES} from '../sprites';
 
 import {actorInputExtension} from './actorInput';
-import {animationOptionsExtension} from './animationOptions';
+import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
@@ -35,6 +35,10 @@ import {
   runtimeWorldExtension,
   traitContextExtension,
 } from './extensions/actorContext';
+import {
+  animationImportFieldExtension,
+  spriteImportFieldExtension,
+} from './extensions/appearanceImportField';
 import {
   blockDesignerInitExtension,
   blockDesignerMutator,
@@ -53,12 +57,10 @@ import {sliderRangeMutator} from './extensions/sliderRange';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
-import {label} from './label';
 import {
   actorOptions,
   actorOptionsExtension,
   animationFileOptions,
-  animationFileOptionsExtension,
   effectFileImportOptions,
   effectFileImportOptionsExtension,
   effectFileOptions,
@@ -68,6 +70,7 @@ import {
   mapOptions,
   mapOptionsExtension,
   ruleModuleOptions,
+  spriteOptions,
 } from './moduleOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
 import type {
@@ -106,17 +109,25 @@ import {
 const str = (value: unknown): string => JSON.stringify(String(value));
 
 /** Dropdown `[label, value]` pairs for the built-in sprites. */
-const SPRITE_OPTIONS: Array<[string, string]> = SPRITE_NAMES.map(name => [
-  label(name),
-  name,
-]);
+// The images a `set sprite` block may name: the project's own (populated live by
+// the extension), and `(import…)` to copy one in. There is no built-in list —
+// what a game draws is what its project holds.
+const spriteFieldOptions = (): Array<[string, string]> => [
+  ...spriteOptions().filter(([, value]: [string, string]) => value),
+  ['(import…)', IMPORT_SPRITE_VALUE],
+];
+
+/** Point a `SPRITE` dropdown at the live list (the project's images + import). */
+const spriteOptionsExtension = liveDropdown(
+  'world_sprite_options',
+  'SPRITE',
+  spriteFieldOptions,
+);
 
 // The animation dropdown's static fallback — the stock ids. The
 // `animationOptionsExtension` replaces this at block-init with the live registry
 // (stock + the project's authored animations).
-const ANIMATION_OPTIONS: Array<[string, string]> = SPRITESHEET_NAMES.map(
-  name => [label(name), name],
-);
+const ANIMATION_OPTIONS = (): Array<[string, string]> => animationOptions();
 
 // The rules whose members drive the block palette: the built-in library as
 // `RuleMeta` (dependency order — the toolbox lists one category per rule and the
@@ -468,11 +479,17 @@ const worldSetSprite = defineBlock({
   type: 'world_set_sprite',
   message0: 'set sprite %1 on %2',
   args0: [
-    {type: 'field_dropdown', name: 'SPRITE', options: SPRITE_OPTIONS},
+    {type: 'field_dropdown', name: 'SPRITE', options: spriteFieldOptions},
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
-  extensions: [actorInputExtension],
+  // The options extension first, then the import one, so the latter wraps that
+  // validator rather than being wrapped by it (see appearanceImportField).
+  extensions: [
+    actorInputExtension,
+    spriteOptionsExtension,
+    spriteImportFieldExtension,
+  ],
   previousStatement: true,
   nextStatement: true,
   style: 'default',
@@ -498,7 +515,11 @@ const worldPlayAnimation = defineBlock({
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
   ],
   inputsInline: true,
-  extensions: [animationOptionsExtension, actorInputExtension],
+  extensions: [
+    animationOptionsExtension,
+    animationImportFieldExtension,
+    actorInputExtension,
+  ],
   previousStatement: true,
   nextStatement: true,
   // `play animation` is an action of the appearance rule → the action (default)
@@ -1801,10 +1822,31 @@ const worldWorld = defineBlock({
         `import * as WorldLab from 'world-lab';`,
       );
       const body = nextChainCode(block, generator);
+      // Every `.anim` in the project, registered. There is no block for this and
+      // deliberately so: an animation file is not a thing a world opts into, it
+      // is a thing the project HAS — a learner who draws one and plays it should
+      // not also have to remember to say the world may use it. The blocks below
+      // decide what plays; this decides what exists.
+      const animations = animationFileOptions()
+        .map(([, modulePath]) => modulePath)
+        .filter(modulePath => modulePath)
+        .map(modulePath => {
+          addImport(
+            generator,
+            `mod:${modulePath}`,
+            `import ${importVar(modulePath)} from ${str(modulePath)};`,
+          );
+          return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
+            modulePath,
+          )}));\n`;
+        })
+        .join('');
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
-        )}});\n` + body
+        )}});\n` +
+        animations +
+        body
       );
     },
   },
@@ -1898,32 +1940,6 @@ const worldUseRule = defineBlock({
       const exportName =
         located?.source === 'builtin' ? located.exportName : rule;
       return `world.useRules([WorldLab.${exportName}]);\n`;
-    },
-  },
-});
-
-const worldUseAnimations = defineBlock({
-  type: 'world_use_animations',
-  message0: 'use animations %1',
-  args0: [
-    {type: 'field_dropdown', name: 'FILE', options: animationFileOptions},
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [animationFileOptionsExtension],
-  style: 'sprite_blocks',
-  tooltip: 'Register the animations authored in a project animation file.',
-  generator: {
-    javascript(block, generator) {
-      const file = block.getFieldValue('FILE');
-      addImport(
-        generator,
-        `mod:${file}`,
-        `import ${importVar(file)} from ${str(file)};`,
-      );
-      return `world.useAnimations(WorldLab.parseAnimationFile(${importVar(
-        file,
-      )}));\n`;
     },
   },
 });
@@ -2662,7 +2678,6 @@ export const DOMAIN_BLOCKS = [
   worldLoadMap,
   worldWorld,
   worldUseRule,
-  worldUseAnimations,
   worldRule,
   worldRuleTrait,
   worldRuleProperty,
@@ -2737,7 +2752,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       'world_world',
       'world_use_rule',
-      'world_use_animations',
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
