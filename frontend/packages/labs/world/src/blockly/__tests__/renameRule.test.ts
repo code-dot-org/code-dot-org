@@ -11,7 +11,16 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {projectRuleMetas} from '../projectModules';
-import {renameRuleInSource, renameRuleReferences} from '../renameRule';
+import {
+  duplicateMemberKeys,
+  memberKeys,
+  renameMemberInSource,
+  renameMemberReferences,
+  renamedMember,
+  renameRuleInSource,
+  renameRuleReferences,
+  type MemberKey,
+} from '../renameRule';
 import {parseRuleMeta} from '../ruleMeta';
 
 const workspace = (...blocks: unknown[]) =>
@@ -158,5 +167,147 @@ describe('renameRuleInSource', () => {
 
   it('hands back the same source when nothing named the rule', () => {
     expect(renameRuleInSource(source, 'Nothing', 'Something')).toBe(source);
+  });
+});
+
+// ── Members ─────────────────────────────────────────────────────────────────
+// A member is referred to by the export name its own name derives, so renaming
+// a trait, a property, an event, a step or a designed block's wording is the
+// same kind of edit as renaming the rule — and is worked out the same way,
+// except that what was edited is not what says so. The rule's members before
+// and after are compared, because the edits that rename one are various (a NAME
+// field, a label typed into a mutator) and their only common ground is the
+// result.
+
+describe('renameMemberReferences', () => {
+  const contents = workspace(
+    {type: 'world_use_trait', fields: {TRAIT: 'Gravity#AffectedTrait'}},
+    {type: 'world_get_Gravity_StrengthProperty'},
+    {type: 'world_rule_step_after', fields: {STEP: 'Gravity#land'}},
+    // Another rule's member of the same name, and this rule's other members.
+    {type: 'world_get_Wind_StrengthProperty'},
+    {type: 'world_use_trait', fields: {TRAIT: 'Wind#StrengthProperty'}},
+    {type: 'world_get_Gravity_DirectionProperty'},
+  );
+
+  it('renames a member of the named rule, and only there', () => {
+    const {blocks} = JSON.parse(
+      renameMemberReferences(
+        contents,
+        'Gravity',
+        'StrengthProperty',
+        'PowerProperty',
+      )!,
+    ).blocks as {blocks: Array<{type: string; fields?: object}>};
+    expect(blocks.map(b => b.type)).toEqual([
+      'world_use_trait',
+      'world_get_Gravity_PowerProperty',
+      'world_rule_step_after',
+      'world_get_Wind_StrengthProperty', // a different rule's, left alone
+      'world_use_trait',
+      'world_get_Gravity_DirectionProperty',
+    ]);
+    expect(blocks[4].fields).toEqual({TRAIT: 'Wind#StrengthProperty'});
+  });
+
+  it('renames a trait and a step where they are named', () => {
+    const trait = JSON.parse(
+      renameMemberReferences(
+        contents,
+        'Gravity',
+        'AffectedTrait',
+        'PulledTrait',
+      )!,
+    ).blocks.blocks[0] as {fields: object};
+    expect(trait.fields).toEqual({TRAIT: 'Gravity#PulledTrait'});
+    const step = JSON.parse(
+      renameMemberReferences(contents, 'Gravity', 'land', 'settle')!,
+    ).blocks.blocks[2] as {fields: object};
+    expect(step.fields).toEqual({STEP: 'Gravity#settle'});
+  });
+
+  it('leaves the rule itself, and a member nothing refers to, alone', () => {
+    expect(
+      renameMemberReferences(contents, 'Gravity', 'NobodysProperty', 'X'),
+    ).toBe(undefined);
+  });
+
+  it('carries a member rename across the project', () => {
+    // Gravity's `starts falling` is handled by the player, whose hat block is
+    // that event's type — a file away from the rule that declares it.
+    const next = renameMemberInSource(
+      DEFAULT_PROJECT.source,
+      'Gravity',
+      'StartsFallingEvent',
+      'BeginsFallingEvent',
+    );
+    expect(next.files.player.contents).toContain(
+      'world_on_Gravity_BeginsFallingEvent',
+    );
+    expect(next.files.player.contents).not.toContain('StartsFallingEvent');
+  });
+});
+
+describe('what changed between two states of a rule', () => {
+  const key = (k: string, kind: MemberKey['kind']) => ({key: k, kind});
+
+  it('reads one key gone and one arrived as a rename', () => {
+    expect(
+      renamedMember(
+        [key('StrengthProperty', 'property'), key('AffectedTrait', 'trait')],
+        [key('PowerProperty', 'property'), key('AffectedTrait', 'trait')],
+      ),
+    ).toEqual({from: 'StrengthProperty', to: 'PowerProperty'});
+  });
+
+  it('is not a rename when a member was added or deleted', () => {
+    const before = [key('StrengthProperty', 'property')];
+    expect(
+      renamedMember(before, [...before, key('DragProperty', 'property')]),
+    ).toBeUndefined();
+    expect(renamedMember(before, [])).toBeUndefined();
+    expect(renamedMember(before, before)).toBeUndefined();
+  });
+
+  it('is not a rename when two members changed at once', () => {
+    // Guessing which became which would rewrite references to the wrong member.
+    expect(
+      renamedMember(
+        [key('AProperty', 'property'), key('BProperty', 'property')],
+        [key('CProperty', 'property'), key('DProperty', 'property')],
+      ),
+    ).toBeUndefined();
+  });
+
+  it('is not a rename when a block changed what it reports', () => {
+    // `define block` switched from doing something to reporting something: the
+    // key leaves as an action's and arrives as a query's, and no rewrite of the
+    // call sites is possible — a reporter cannot go where a statement went.
+    expect(
+      renamedMember([key('PushAction', 'action')], [key('PushQuery', 'query')]),
+    ).toBeUndefined();
+  });
+
+  it('reads a rule’s members as the keys they are referred to by', () => {
+    const meta = parseRuleMeta(
+      'rules/gravity',
+      DEFAULT_PROJECT.source.files.gravityRule.contents,
+    )!;
+    const keys = memberKeys(meta);
+    expect(keys).toContainEqual(key('AffectedByGravityTrait', 'trait'));
+    expect(keys).toContainEqual(key('StrengthProperty', 'property'));
+    expect(keys).toContainEqual(key('StartsFallingEvent', 'event'));
+    expect(keys).toContainEqual(key('RestHeightOfQuery', 'query'));
+    expect(keys.filter(k => k.kind === 'step').length).toBeGreaterThan(0);
+    expect(duplicateMemberKeys(keys)).toEqual([]);
+  });
+
+  it('reports two members that would answer to one key', () => {
+    expect(
+      duplicateMemberKeys([
+        key('StrengthProperty', 'property'),
+        key('StrengthProperty', 'property'),
+      ]),
+    ).toEqual(['StrengthProperty']);
   });
 });
