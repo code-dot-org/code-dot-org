@@ -745,7 +745,7 @@ describe('domain block generators', () => {
       )?.blocks ?? [];
     // Spatial's, which is the only built-in rule left with a settable property
     // a learner writes: motion's velocity went with motion (rules/stock/motion).
-    expect(category('Has Space')).toEqual(
+    expect(category('Space')).toEqual(
       expect.arrayContaining(['world_set_position']),
     );
     // Gravity gains its world properties and its actor property, set and get.
@@ -758,7 +758,7 @@ describe('domain block generators', () => {
       ]),
     );
     // Spatial keeps the bespoke set-position and gains scale/rotation/skew.
-    expect(category('Has Space')).toEqual(
+    expect(category('Space')).toEqual(
       expect.arrayContaining([
         'world_set_position',
         'world_set_ScaleProperty',
@@ -782,8 +782,8 @@ describe('domain block generators', () => {
     );
     // Motion's `apply force` is a project block now (rules/stock/motion), so
     // the built-in categories carry only Spatial's and Animation's actions.
-    expect(category('Has Space')).toContain('world_do_MoveAction');
-    expect(category('Has Space')).toEqual(
+    expect(category('Space')).toContain('world_do_MoveAction');
+    expect(category('Space')).toEqual(
       expect.arrayContaining([
         'world_do_MoveAction',
         'world_do_RotateAction',

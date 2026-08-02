@@ -23,7 +23,8 @@ describe('rules/motion.rule', () => {
   });
 
   it('gives an actor a speed, on a trait that can be positioned', () => {
-    expect(meta.name).toBe('Has Physics');
+    expect(meta.name).toBe('Physics');
+    expect(meta.ability).toBe('Has Physics');
     expect(meta.requires).toEqual(['SpatialRule']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'CanMoveTrait',

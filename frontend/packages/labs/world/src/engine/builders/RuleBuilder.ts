@@ -21,6 +21,7 @@ import type {World} from '../core/World';
 export class RuleBuilder {
   private readonly id: string;
   private readonly name: string;
+  private readonly ability: string;
   private requiredRules: Rule[] = [];
   private readonly properties: Record<string, Property> = {};
   private readonly actions: Record<string, WorldAction> = {};
@@ -31,9 +32,12 @@ export class RuleBuilder {
   private readonly animationDefs: Record<string, AnimationDef> = {};
   private built = false;
 
-  constructor(opts: {id: string; name: string}) {
+  constructor(opts: {id: string; name: string; ability?: string}) {
     this.id = opts.id;
     this.name = opts.name;
+    // Defaults to the name: a rule whose two readings are the same word ("Has
+    // Physics") should not have to say it twice.
+    this.ability = opts.ability ?? opts.name;
   }
 
   private assertMutable(): void {
@@ -165,6 +169,7 @@ export class RuleBuilder {
     return Object.freeze({
       id: this.id,
       name: this.name,
+      ability: this.ability,
       requires: Object.freeze([...this.requiredRules]),
       properties: Object.freeze({...this.properties}),
       actions: Object.freeze({...this.actions}),

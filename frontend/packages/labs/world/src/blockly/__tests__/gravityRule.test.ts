@@ -24,7 +24,8 @@ describe('rules/gravity.rule', () => {
   });
 
   it('parses to the rule the built-in declares', () => {
-    expect(meta.name).toBe('Has Gravity');
+    expect(meta.name).toBe('Gravity');
+    expect(meta.ability).toBe('Has Gravity');
     // Collision is a project rule now, named by module path.
     expect(meta.requires).toEqual(['rules/motion', 'rules/collision']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([

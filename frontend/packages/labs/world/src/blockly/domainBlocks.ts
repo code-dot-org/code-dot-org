@@ -78,6 +78,7 @@ import type {
 } from './ruleMeta';
 import {
   eventOptions,
+  projectRuleAbilities,
   eventOptionsExtension,
   stepOptions,
   stepOptionsExtension,
@@ -1819,10 +1820,13 @@ const worldWorld = defineBlock({
 // The `use rule` dropdown offers the built-in rules AND the project's own rule
 // modules (under `rules/`). A built-in's value is its `world-lab` export name; a
 // project rule's is its module path — the generator branches on the `/` a path
-// carries, importing the module rather than reading `WorldLab`. This is the
-// first seam toward rules living in the project rather than the engine bundle.
+// carries, importing the module rather than reading `WorldLab`.
+//
+// Labelled by the rule's ABILITY, not its name: this block says what the world
+// has, and "use rule Has Gravity" is the sentence. The category in the toolbox
+// says the other half — "Gravity", the thing you open and edit.
 const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
-  rule => [rule.name, rule.ref.exportName],
+  rule => [rule.ability, rule.ref.exportName],
 );
 /**
  * The rules a world (or another rule) may put in play, plus a way to get more.
@@ -1834,7 +1838,12 @@ const BUILTIN_RULE_OPTIONS: Array<[string, string]> = AUTHORING_RULES.map(
  */
 const useRuleOptions = (): Array<[string, string]> => [
   ...BUILTIN_RULE_OPTIONS,
-  ...ruleModuleOptions(),
+  ...ruleModuleOptions().map(([fileLabel, modulePath]): [string, string] => [
+    // The rule's own word for what it gives, when the editor has parsed it;
+    // otherwise the file's name, so a rule mid-edit is still pickable.
+    projectRuleAbilities().get(modulePath) ?? fileLabel,
+    modulePath,
+  ]),
   ['(import…)', IMPORT_RULE_VALUE],
 ];
 const useRuleOptionsExtension = liveDropdown(
@@ -2023,8 +2032,15 @@ const QUERY_RETURN_TYPE_OPTIONS: Array<[string, string]> = [
 
 const worldRule = defineBlock({
   type: 'world_rule',
-  message0: 'define rule %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'My Rule'}],
+  // Two names, because a rule reads two ways round. NAME is what it IS
+  // ("Gravity") — its toolbox category, and how everything refers to it. ABILITY
+  // is what using it GIVES a world ("Has Gravity"), which is what `use rule`
+  // shows, because that block is a sentence about the world.
+  message0: 'define rule %1 which adds ability %2',
+  args0: [
+    {type: 'field_input', name: 'NAME', text: 'My Rule'},
+    {type: 'field_input', name: 'ABILITY', text: 'Has My Rule'},
+  ],
   // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
   style: 'setup_blocks',

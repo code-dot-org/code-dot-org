@@ -33,6 +33,22 @@ for (const rule of BUILTIN_RULE_META) {
 // or another rule's `use rule` names). Refreshed per project.
 let projectByModule = new Map<string, RuleMeta>();
 
+/**
+ * What each parsed project rule GIVES a world, by module path.
+ *
+ * `use rule` is a sentence about the world, so it reads the ability ("Has
+ * Gravity") rather than the rule's own name ("Gravity") or its file's. A module
+ * the editor has not parsed is absent, and the caller falls back to the file
+ * name — a rule mid-edit still has to be pickable.
+ */
+export function projectRuleAbilities(): Map<string, string> {
+  const abilities = new Map<string, string>();
+  for (const [modulePath, meta] of projectByModule) {
+    abilities.set(modulePath, meta.ability);
+  }
+  return abilities;
+}
+
 /** Register the project's parsed `.rule` metadata (for resolving project rules
  *  a world attaches, and their transitive requires). */
 export function setProjectRuleMeta(metas: RuleMeta[]): void {

@@ -401,6 +401,25 @@ to refer to ITSELF:
   just without the input and arrows rules. It builds from a flat `stack([…])`
   now, which cannot express the mistake.
 
+## A rule has two names
+
+`define rule ⟨Gravity⟩ which adds ability ⟨Has Gravity⟩`.
+
+A rule reads two ways round, and one string cannot be both without reading badly
+in one of them:
+
+- **NAME** — what it IS. It titles the toolbox category holding its blocks, and
+  it is how everything refers to it. "Gravity".
+- **ABILITY** — what using it GIVES a world. It is the label `use rule` shows,
+  because that block is a sentence about the world: `use rule ⟨Has Gravity⟩`.
+
+The engine's two remaining rules carry both (Space / Has Space, Appearance / Has
+Appearance), and `RuleBuilder` defaults the ability to the name, so a rule whose
+two readings are the same word need not say it twice.
+
+The import dialog leads with the ability, since it answers "what should this
+world have?" — the name is what you will see on the category once it is in.
+
 ## Notes, in the flow of the blocks
 
 `note ⟨…⟩` is a comment as a block: a statement that generates a `//` line and

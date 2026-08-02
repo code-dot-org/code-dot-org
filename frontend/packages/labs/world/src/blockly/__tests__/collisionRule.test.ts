@@ -27,7 +27,8 @@ describe('rules/collision.rule', () => {
   it('keeps the two traits apart, as the engine did', () => {
     // A Solid blocks every side; gravity's "Acts as Ground" is a surface you may
     // pass up through. A tile carries both, and they were never the same thing.
-    expect(meta.name).toBe('Has Collisions');
+    expect(meta.name).toBe('Collisions');
+    expect(meta.ability).toBe('Has Collisions');
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'CanCollideTrait',
       'SolidTrait',

@@ -27,8 +27,10 @@ export interface StockRule {
    * built from (`rules/gravity#AffectedByGravityTrait`).
    */
   id: string;
-  /** Learner-facing name, matching the `define rule` block's NAME field. */
+  /** What the rule is, matching its `define rule` NAME — "Gravity". */
   name: string;
+  /** What using it gives a world, matching ABILITY — "Has Gravity". */
+  ability: string;
   /** One line on what the rule does, for the import dialog. */
   description: string;
   /** What it gives an actor, in the dialog: the traits it provides. */
@@ -44,7 +46,8 @@ export interface StockRule {
 export const STOCK_RULES: readonly StockRule[] = [
   {
     id: 'motion',
-    name: 'Has Physics',
+    name: 'Physics',
+    ability: 'Has Physics',
     description:
       'Gives actors a speed, moves them by it every frame, and lets a force change it.',
     provides: ['Can Move'],
@@ -52,7 +55,8 @@ export const STOCK_RULES: readonly StockRule[] = [
   },
   {
     id: 'collision',
-    name: 'Has Collisions',
+    name: 'Collisions',
+    ability: 'Has Collisions',
     description:
       'Stops moving actors passing through solid ones, pushing them out at the face they entered.',
     provides: ['Can Collide', 'Solid'],
@@ -60,7 +64,8 @@ export const STOCK_RULES: readonly StockRule[] = [
   },
   {
     id: 'input',
-    name: 'Responds to Input',
+    name: 'Input',
+    ability: 'Responds to Input',
     description:
       'Raises an event on every actor when a key goes down or comes up, so a handler can react to a press rather than to it being held.',
     provides: [],
@@ -68,7 +73,8 @@ export const STOCK_RULES: readonly StockRule[] = [
   },
   {
     id: 'arrows',
-    name: 'Moves with Arrow Keys',
+    name: 'Arrow Keys',
+    ability: 'Moves with Arrow Keys',
     description:
       'Walks an actor left and right while the arrow keys are held, at a speed the actor carries.',
     provides: ['Controlled by Arrow Keys'],
@@ -76,7 +82,8 @@ export const STOCK_RULES: readonly StockRule[] = [
   },
   {
     id: 'gravity',
-    name: 'Has Gravity',
+    name: 'Gravity',
+    ability: 'Has Gravity',
     description:
       'Pulls actors downward, lands them on solid ground, and tells them when they start and stop falling.',
     provides: ['Affected by Gravity', 'Acts as Ground'],

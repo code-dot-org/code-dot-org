@@ -18,7 +18,11 @@ import {Vector} from '../core/Vector';
 
 import {IntrinsicSizeProperty, PositionalTrait, SpatialRule} from './spatial';
 
-const rule = new RuleBuilder({id: APPEARANCE.rule, name: 'Has Appearance'});
+const rule = new RuleBuilder({
+  id: APPEARANCE.rule,
+  name: 'Appearance',
+  ability: 'Has Appearance',
+});
 rule.requires([SpatialRule]);
 
 export const AppearanceTrait = rule.addTrait({

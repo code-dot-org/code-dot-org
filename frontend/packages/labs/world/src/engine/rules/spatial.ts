@@ -8,7 +8,11 @@ import {Vector, type VectorLike} from '../core/Vector';
 
 // Ids come from the shared SPATIAL table so core's renderSnapshot and this rule
 // cannot drift apart.
-const rule = new RuleBuilder({id: SPATIAL.rule, name: 'Has Space'});
+const rule = new RuleBuilder({
+  id: SPATIAL.rule,
+  name: 'Space',
+  ability: 'Has Space',
+});
 
 export const PositionalTrait = rule.addTrait({
   id: SPATIAL.trait,

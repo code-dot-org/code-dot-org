@@ -24,7 +24,8 @@ describe('rules/arrows.rule', () => {
   });
 
   it('declares what the engine rule declared', () => {
-    expect(meta.name).toBe('Moves with Arrow Keys');
+    expect(meta.name).toBe('Arrow Keys');
+    expect(meta.ability).toBe('Moves with Arrow Keys');
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'ControlledByArrowKeysTrait',
     ]);
