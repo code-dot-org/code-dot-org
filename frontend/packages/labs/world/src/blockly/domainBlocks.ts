@@ -108,7 +108,6 @@ import {
 /** JS string literal for a field value. */
 const str = (value: unknown): string => JSON.stringify(String(value));
 
-/** Dropdown `[label, value]` pairs for the built-in sprites. */
 // The images a `set sprite` block may name: the project's own (populated live by
 // the extension), and `(import…)` to copy one in. There is no built-in list —
 // what a game draws is what its project holds.
@@ -124,9 +123,10 @@ const spriteOptionsExtension = liveDropdown(
   spriteFieldOptions,
 );
 
-// The animation dropdown's static fallback — the stock ids. The
-// `animationOptionsExtension` replaces this at block-init with the live registry
-// (stock + the project's authored animations).
+// The animation dropdown's static fallback. The `animationOptionsExtension`
+// replaces it at block-init with the live registry: the ids the project's own
+// `.anim` files define, and `(import…)`. There are no built-in animations —
+// an animation is frames of an image, and both are files a project holds.
 const ANIMATION_OPTIONS = (): Array<[string, string]> => animationOptions();
 
 // The rules whose members drive the block palette: the built-in library as
