@@ -30,7 +30,9 @@ import {buildDomainPalette} from './domainBlocks';
 import {setEffectImportHandler} from './effectImport';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {projectRuleMetas} from './projectModules';
+import {renameRuleInSource, renameRuleReferences} from './renameRule';
 import {setRuleImportHandler} from './ruleImport';
+import {ruleByName} from './ruleRegistry';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -54,6 +56,62 @@ const plugins = [
 // The toolbox is the World Lab domain blocks (Actor / Traits / Events); passing
 // `DOMAIN_BLOCKS` registers them (and their world-lab generators) on this
 // workspace, the same definitions the generator uses.
+
+/**
+ * The rule rename this event is, if it is one.
+ *
+ * A committed edit of a `define rule` block's NAME — `BLOCK_CHANGE`, which
+ * Blockly fires when the field editor closes. Typing into the field fires
+ * `block_field_intermediate_change` instead, and must not be acted on: a rename
+ * rewrites the project and reloads this workspace, which is not a thing to do
+ * between two keystrokes.
+ */
+function ruleRename(
+  event: Blockly.Events.Abstract,
+  workspace: Blockly.WorkspaceSvg,
+): {from: string; to: string; block: Blockly.Block} | undefined {
+  if (event.type !== Blockly.Events.BLOCK_CHANGE) {
+    return undefined;
+  }
+  const change = event as Blockly.Events.BlockChange;
+  if (change.element !== 'field' || change.name !== 'NAME') {
+    return undefined;
+  }
+  const block = change.blockId
+    ? workspace.getBlockById(change.blockId)
+    : undefined;
+  if (!block || block.type !== 'world_rule') {
+    return undefined;
+  }
+  const from = String(change.oldValue ?? '');
+  const to = String(change.newValue ?? '');
+  return from && to && from !== to ? {from, to, block} : undefined;
+}
+
+/**
+ * Whether this event is a rule's name being TYPED, rather than named.
+ *
+ * Blockly writes a text field on every keystroke, as an intermediate change, so
+ * that blocks resize while you type. For most fields persisting that is
+ * harmless. For this one it is not: the file would declare "M", "Mo", "Moo"…
+ * in turn, each of them a rule name nothing refers to and one of which may
+ * collide with a real rule — and the name a rename starts from would be gone
+ * before the rename happened. So the keystrokes are shown and not saved; the
+ * commit below is what the project hears about.
+ */
+function isTypingRuleName(
+  event: Blockly.Events.Abstract,
+  workspace: Blockly.WorkspaceSvg,
+): boolean {
+  if (event.type !== Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
+    return false;
+  }
+  const change = event as Blockly.Events.BlockFieldIntermediateChange;
+  const block = change.blockId
+    ? workspace.getBlockById(change.blockId)
+    : undefined;
+  return change.name === 'NAME' && block?.type === 'world_rule';
+}
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
 function parseWorkspace(contents: string): BlocklySerialization {
@@ -200,20 +258,122 @@ export const BlocklyFileEditor = ({
     [isReadOnly],
   );
 
+  // A workspace to reload once the palette has caught up (see `handleRename`).
+  const pendingReload = useRef<BlocklySerialization | null>(null);
+
+  /**
+   * Carry a rule's new name through the project.
+   *
+   * Every reference to a rule is its name, so renaming one is an edit to every
+   * file that mentions it — and to this one, whose own members' block types are
+   * built from the name too. Returns true when it has written the project
+   * itself, so the ordinary per-file save is skipped: `saveFile` closes over the
+   * sources of the render that made it, and would put the other files back.
+   */
+  const handleRename = useCallback(
+    (
+      rename: {from: string; to: string; block: Blockly.Block},
+      contents: string,
+    ): boolean => {
+      // A name two rules answer to is a reference with two meanings, so a taken
+      // one is refused rather than carried: the field goes back to what it was
+      // and the block says why.
+      //
+      // Refusing has to mean the edit did not happen at all. Letting the name
+      // stand while the references keep the old one would strand the rule —
+      // nothing would name it, and the NEXT rename would carry the name nothing
+      // refers to, leaving no rename that could ever put it right.
+      const taken = ruleByName(rename.to);
+      if (taken && taken.modulePath !== ownRuleModule) {
+        // Silently: the revert is not an edit, and an event for it would come
+        // back through here as a rename in the other direction.
+        Blockly.Events.disable();
+        try {
+          rename.block.setFieldValue(rename.from, 'NAME');
+        } finally {
+          Blockly.Events.enable();
+        }
+        rename.block.setWarningText(
+          `Another rule is already called \u201c${rename.to}\u201d. ` +
+            'Rules are referred to by name, so this one needs its own.',
+        );
+        return true;
+      }
+      rename.block.setWarningText(null);
+
+      const sources = sourcesRef.current;
+      const renamed = renameRuleInSource(
+        sources.source,
+        rename.from,
+        rename.to,
+      );
+      // This file last and from the LIVE workspace: what is on disk for it is a
+      // keystroke behind, and the rename is in the workspace we are handling.
+      const self = renameRuleReferences(contents, rename.from, rename.to);
+      const file = renamed.files[fileId];
+      updateSources({
+        ...sources,
+        source: {
+          ...renamed,
+          files: {
+            ...renamed.files,
+            [fileId]: {...file, contents: self ?? contents},
+          },
+        },
+      });
+      // The blocks in THIS workspace carry the old name in their types, and a
+      // block's type cannot be changed in place. The palette rebuilds from the
+      // sources we just wrote; the workspace is reloaded from the rewritten
+      // state once it has (see the effect below).
+      pendingReload.current = JSON.parse(
+        self ?? contents,
+      ) as BlocklySerialization;
+      return true;
+    },
+    [fileId, ownRuleModule, updateSources],
+  );
+
   const handleChange = useCallback(
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
       // Ignore pure UI events (selection, viewport) — only persist real edits.
-      if (!workspace || event.isUiEvent) {
+      if (!workspace || event.isUiEvent || isTypingRuleName(event, workspace)) {
         return;
       }
       const state = Blockly.serialization.workspaces.save(
         workspace,
       ) as BlocklySerialization;
-      onChange(JSON.stringify(state, null, 2));
+      const contents = JSON.stringify(state, null, 2);
+      const rename = ruleRename(event, workspace);
+      if (rename && handleRename(rename, contents)) {
+        return;
+      }
+      onChange(contents);
     },
-    [onChange],
+    [onChange, handleRename],
   );
+
+  // Reload after a rename, once `blocks` carries the renamed member types —
+  // BlocklyProvider registers them in its own effect, which runs before this one
+  // because it is deeper in the tree. Loading with events off: the sources
+  // already hold this state, and re-saving it would be a second write of the
+  // file for the same edit.
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    const state = pendingReload.current;
+    if (!workspace || !state) {
+      return;
+    }
+    pendingReload.current = null;
+    const {scrollX, scrollY} = workspace;
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(state, workspace);
+    } finally {
+      Blockly.Events.enable();
+    }
+    workspace.scroll(scrollX, scrollY);
+  }, [blocks]);
 
   // The selected block-color theme (its dark variant when the app is in dark
   // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.
