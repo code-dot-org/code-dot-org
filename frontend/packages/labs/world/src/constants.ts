@@ -143,11 +143,11 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: stack([
-              {type: 'world_use_rule', fields: {RULE: 'rules/motion'}},
-              {type: 'world_use_rule', fields: {RULE: 'rules/gravity'}},
-              {type: 'world_use_rule', fields: {RULE: 'rules/collision'}},
-              {type: 'world_use_rule', fields: {RULE: 'rules/input'}},
-              {type: 'world_use_rule', fields: {RULE: 'rules/arrows'}},
+              {type: 'world_use_rule', fields: {RULE: 'Physics'}},
+              {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
+              {type: 'world_use_rule', fields: {RULE: 'Collisions'}},
+              {type: 'world_use_rule', fields: {RULE: 'Input'}},
+              {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
               {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
               {
                 type: 'world_use_animations',
@@ -177,13 +177,13 @@ const PLAYER_ACTOR = JSON.stringify(
             block: nextBlock(
               {
                 type: 'world_use_trait',
-                fields: {TRAIT: 'rules/gravity#AffectedByGravityTrait'},
+                fields: {TRAIT: 'Gravity#AffectedByGravityTrait'},
               },
               nextBlock(
                 {
                   type: 'world_use_trait',
                   fields: {
-                    TRAIT: 'rules/arrows#ControlledByArrowKeysTrait',
+                    TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait',
                   },
                 },
                 nextBlock(
@@ -191,7 +191,7 @@ const PLAYER_ACTOR = JSON.stringify(
                   // animation, so the actor must elect the trait itself.
                   {
                     type: 'world_use_trait',
-                    fields: {TRAIT: 'AppearanceTrait'},
+                    fields: {TRAIT: 'Appearance#AppearanceTrait'},
                   },
                   // Plays a learner-authored animation (game.anim) — its id is
                   // in the dropdown because the lab feeds the project's
@@ -211,7 +211,7 @@ const PLAYER_ACTOR = JSON.stringify(
         // this filters for the key it wants, and gravity's own query keeps the
         // jump honest — no second jump in mid-air.
         {
-          type: 'world_on_rules_input_AKeyIsPressedEvent',
+          type: 'world_on_Input_AKeyIsPressedEvent',
           x: 20,
           y: 440,
           next: {
@@ -235,7 +235,7 @@ const PLAYER_ACTOR = JSON.stringify(
                       },
                       B: {
                         block: {
-                          type: 'world_query_rules_gravity_IsOnTheGroundQuery',
+                          type: 'world_query_Gravity_IsOnTheGroundQuery',
                           inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                         },
                       },
@@ -244,7 +244,7 @@ const PLAYER_ACTOR = JSON.stringify(
                 },
                 DO0: {
                   block: {
-                    type: 'world_do_rules_motion_ApplyForceAction',
+                    type: 'world_do_Physics_ApplyForceAction',
                     inputs: {
                       VALUE: {
                         block: {
@@ -261,12 +261,12 @@ const PLAYER_ACTOR = JSON.stringify(
           },
         },
         onEvent(
-          'rules_gravity_StartsFallingEvent',
+          'Gravity_StartsFallingEvent',
           20,
           200,
           'Player started falling',
         ),
-        onEvent('rules_gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
+        onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
       ],
     },
   },

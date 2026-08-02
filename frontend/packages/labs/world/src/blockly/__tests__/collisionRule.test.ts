@@ -12,6 +12,12 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
 const source = DEFAULT_PROJECT.source.files.collisionRule.contents;
 const meta = parseRuleMeta('rules/collision', source)!;
 const module_ = ruleMetaToModule(meta);
@@ -33,17 +39,16 @@ describe('rules/collision.rule', () => {
       'CanCollideTrait',
       'SolidTrait',
     ]);
-    expect(meta.traits[1].requires).toEqual([
-      'rules/collision#CanCollideTrait',
-    ]);
+    expect(meta.traits[1].requires).toEqual(['Collisions#CanCollideTrait']);
   });
 
   it('names its own trait rather than importing its own module', () => {
     // Solid requires Can Collide, which is declared a few lines above it. An
     // import there is not redundant but fatal: "The symbol CanCollideTrait has
-    // already been declared", and the project stops building.
+    // already been declared", and the project stops building. The rule knows the
+    // trait is its own because the reference names the rule this file declares.
     expect(module_).toContain('SolidTrait.requires([CanCollideTrait]);');
-    expect(module_).not.toContain("from 'rules/collision'");
+    expect(module_).not.toContain('rules/collision');
   });
 
   it('carries the size override, with its “auto” default', () => {
@@ -85,7 +90,7 @@ describe('rules/collision.rule', () => {
     const [step] = meta.steps;
     expect(step.id).toBe('resolve');
     expect(step.order.kind).toBe('after');
-    expect(step.order.anchor?.ownerRef.modulePath).toBe('rules/motion');
+    expect(step.order.anchor?.ownerRef.ruleName).toBe('Physics');
     expect(step.order.anchor?.stepId).toBe('reposition');
   });
 });

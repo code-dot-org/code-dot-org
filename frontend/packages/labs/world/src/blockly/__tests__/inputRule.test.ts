@@ -11,6 +11,12 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
 const source = DEFAULT_PROJECT.source.files.inputRule.contents;
 const meta = parseRuleMeta('rules/input', source)!;
 const module_ = ruleMetaToModule(meta);

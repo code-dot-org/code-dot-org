@@ -12,6 +12,12 @@ import {describe, expect, it} from 'vitest';
 import {DEFAULT_PROJECT} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
 const source = DEFAULT_PROJECT.source.files.motionRule.contents;
 const meta = parseRuleMeta('rules/motion', source)!;
 const module_ = ruleMetaToModule(meta);
@@ -25,11 +31,11 @@ describe('rules/motion.rule', () => {
   it('gives an actor a speed, on a trait that can be positioned', () => {
     expect(meta.name).toBe('Physics');
     expect(meta.ability).toBe('Has Physics');
-    expect(meta.requires).toEqual(['SpatialRule']);
+    expect(meta.requires).toEqual(['Space']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'CanMoveTrait',
     ]);
-    expect(meta.traits[0].requires).toEqual(['PositionalTrait']);
+    expect(meta.traits[0].requires).toEqual(['Space#PositionalTrait']);
     const velocity = meta.properties.find(p => p.id === 'velocity');
     expect(velocity?.scope).toBe('actor');
     expect(velocity?.type).toBe('vector');
@@ -57,7 +63,7 @@ describe('rules/motion.rule', () => {
 
   it('runs a step called `reposition`, which everything else anchors to', () => {
     // Gravity runs before it, collision after it, arrows before it. The NAME is
-    // load-bearing: an anchor is `<module>#<stepId>`.
+    // load-bearing: an anchor is `<RuleName>#<stepId>`.
     const [step] = meta.steps;
     expect(step.id).toBe('reposition');
     expect(step.order.kind).toBe('free');

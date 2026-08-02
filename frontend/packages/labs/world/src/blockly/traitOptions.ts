@@ -7,46 +7,30 @@
 
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {liveDropdown} from './moduleOptions';
-import type {MemberRef, RuleMeta, StepMeta} from './ruleMeta';
-
-// The `TRAIT` dropdown value encodes how the generator names the trait: a
-// built-in is its `world-lab` export name; a project trait is
-// `<modulePath>#<exportName>` so `use trait` can import it from the rule module
-// (see `refFromTraitValue` in domainBlocks). Built-in values are unchanged, so
-// saved actors keep working.
-const traitValue = (ref: MemberRef): string =>
-  ref.source === 'project' && ref.modulePath
-    ? `${ref.modulePath}#${ref.exportName}`
-    : ref.exportName;
-
-// Built-in rules indexed by `world-lab` export name — what a `.world`'s `use
-// rule` block names, and what a rule's `requires` lists (a built-in export name
-// or a project module path, uniformly).
-const metaByExport = new Map<string, RuleMeta>();
-for (const rule of BUILTIN_RULE_META) {
-  if (rule.ref.exportName) {
-    metaByExport.set(rule.ref.exportName, rule);
-  }
-}
+import type {RuleMeta, StepMeta} from './ruleMeta';
+import {memberValue, ruleByName} from './ruleRegistry';
 
 // The project's declarative `.rule` rules, indexed by module path (what a world's
 // or another rule's `use rule` names). Refreshed per project.
 let projectByModule = new Map<string, RuleMeta>();
 
 /**
- * What each parsed project rule GIVES a world, by module path.
+ * What each parsed project rule IS and GIVES, by module path.
  *
- * `use rule` is a sentence about the world, so it reads the ability ("Has
- * Gravity") rather than the rule's own name ("Gravity") or its file's. A module
- * the editor has not parsed is absent, and the caller falls back to the file
- * name — a rule mid-edit still has to be pickable.
+ * `use rule` is a sentence about the world, so it is labelled by the ability
+ * ("Has Gravity") and stores the rule's name ("Gravity"). A module the editor
+ * has not parsed — a `.js` rule, or a `.rule` mid-edit — is absent, and the
+ * caller falls back to naming it by its file, which is all it can be named by.
  */
-export function projectRuleAbilities(): Map<string, string> {
-  const abilities = new Map<string, string>();
+export function projectRuleIdentities(): Map<
+  string,
+  {name: string; ability: string}
+> {
+  const identities = new Map<string, {name: string; ability: string}>();
   for (const [modulePath, meta] of projectByModule) {
-    abilities.set(modulePath, meta.ability);
+    identities.set(modulePath, {name: meta.name, ability: meta.ability});
   }
-  return abilities;
+  return identities;
 }
 
 /** Register the project's parsed `.rule` metadata (for resolving project rules
@@ -60,8 +44,9 @@ export function setProjectRuleMeta(metas: RuleMeta[]): void {
   }
 }
 
-// The rules the project's worlds attach — a built-in export name or a project
-// `.rule` module path — refreshed before the editor loads or the generator runs.
+// The rules the project's worlds attach — a rule NAME, or the module path of a
+// `.js` rule, which has no declared name. Refreshed before the editor loads or
+// the generator runs.
 let projectRuleRefs: string[] = [];
 
 /** Replace the rule references the trait dropdown derives its traits from. */
@@ -69,12 +54,12 @@ export function setProjectRules(refs: string[]): void {
   projectRuleRefs = refs;
 }
 
-// A rule reference resolves to a built-in (by export name) or a project `.rule`
-// (by module path). `requires` uses the same reference form, so the transitive
-// closure is one resolver. (A `.js` shim dependency resolves at runtime but not
-// here — it is not a parsed `.rule` — so its traits aren't surfaced.)
+// A rule reference resolves by NAME, wherever that rule lives. `requires` uses
+// the same reference form, so the transitive closure is one resolver. A `.js`
+// rule names no rule, so it is referenced by its module and resolves at runtime
+// but not here — it is not a parsed `.rule`, and its traits aren't surfaced.
 const resolveRef = (ref: string): RuleMeta | undefined =>
-  metaByExport.get(ref) ?? projectByModule.get(ref);
+  ruleByName(ref) ?? projectByModule.get(ref);
 
 /** The transitive closure of the referenced rules (each plus what it requires). */
 function rulesInPlay(refs: string[]): Set<RuleMeta> {
@@ -107,7 +92,7 @@ export function traitOptions(): Array<[string, string]> {
       if (!trait.ref.exportName) {
         continue;
       }
-      const value = traitValue(trait.ref);
+      const value = memberValue(trait.ref);
       if (!seen.has(value)) {
         seen.add(value);
         options.push([trait.name, value]);
@@ -127,17 +112,11 @@ export const traitOptionsExtension = liveDropdown(
 
 // ── Step anchors (for `define step`'s before/after ordering) ─────────────────
 // A step's `STEP` dropdown lists steps other rules provide — a project step may
-// run before/after one of them (gravity before Motion's `reposition`). The value
-// encodes the anchor for codegen: `<owner>#<stepId>`, `owner` being a built-in
-// rule export name or a project rule module path (as `stepAnchorRef` decodes).
-const stepValue = (step: StepMeta): string => {
-  const owner = step.ownerRef;
-  const key =
-    owner.source === 'project' && owner.modulePath
-      ? owner.modulePath
-      : owner.exportName;
-  return `${key}#${step.id}`;
-};
+// run before/after one of them (gravity before Physics's `reposition`). The
+// value is the same shape as every other reference: `<RuleName>#<stepId>`, the
+// step being named within the rule that runs it (as `stepAnchorRef` decodes).
+const stepValue = (step: StepMeta, rule: RuleMeta): string =>
+  `${step.ownerRef.ruleName || rule.name}#${step.id}`;
 
 /**
  * `[label, value]` options for the step anchor dropdown: every built-in step
@@ -150,7 +129,7 @@ export function stepOptions(): Array<[string, string]> {
   const rules = [...BUILTIN_RULE_META, ...projectByModule.values()];
   for (const rule of rules) {
     for (const step of rule.steps) {
-      const value = stepValue(step);
+      const value = stepValue(step, rule);
       if (!seen.has(value)) {
         seen.add(value);
         options.push([`${rule.name} ▸ ${step.name}`, value]);
@@ -170,10 +149,10 @@ export const stepOptionsExtension = liveDropdown(
 
 // ── Events (for `emit`) ─────────────────────────────────────────────────────
 // The `EVENT` dropdown lists every event a rule in play declares, so a step or
-// an action can raise one. The value uses the SAME encoding as a trait — a
-// built-in's export name, or `<modulePath>#<exportName>` for a project rule's —
-// so `refFromTraitValue` decodes it unchanged, including the self-reference case
-// that lets a rule emit its own event without importing its own module.
+// an action can raise one. The value uses the SAME encoding as a trait —
+// `<RuleName>#<exportName>` — so one decoder reads both, including the
+// self-reference case that lets a rule emit its own event without importing its
+// own module.
 
 /**
  * `[label, value]` options for the event dropdown: every event a rule in play
@@ -188,7 +167,7 @@ export function eventOptions(): Array<[string, string]> {
   const options: Array<[string, string]> = [];
   for (const rule of [...BUILTIN_RULE_META, ...projectByModule.values()]) {
     for (const event of rule.events) {
-      const value = traitValue(event.ref);
+      const value = memberValue(event.ref);
       if (!value || seen.has(value)) {
         continue;
       }

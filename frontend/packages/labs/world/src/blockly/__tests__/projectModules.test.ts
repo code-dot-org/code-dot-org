@@ -117,27 +117,39 @@ describe('projectWorldRules', () => {
 
   it('collects the RULE of every use-rule block, deduped across worlds', () => {
     const rules = projectWorldRules({
-      'worlds/a.world': worldFile('GravityRule', 'InputRule'),
-      'worlds/b.world': worldFile('InputRule', 'AnimationRule'), // Input deduped
-      'actors/player.actor': worldFile('CollisionRule'), // not a .world — ignored
+      'worlds/a.world': worldFile('Gravity', 'Input'),
+      'worlds/b.world': worldFile('Input', 'Appearance'), // Input deduped
+      'actors/player.actor': worldFile('Collisions'), // not a .world — ignored
       'worlds/broken.world': 'not json yet', // mid-edit — skipped
     });
-    expect(new Set(rules)).toEqual(
-      new Set(['GravityRule', 'InputRule', 'AnimationRule']),
-    );
+    expect(new Set(rules)).toEqual(new Set(['Gravity', 'Input', 'Appearance']));
   });
 
-  it('resolves a project rule shim (path) to the built-in it re-exports', () => {
+  it('resolves a rule referred to by module — a `.js` — to a NAME', () => {
+    // Everything downstream keys on names, and a hand-written rule has none of
+    // its own. A shim re-exporting a built-in is that built-in, so it resolves
+    // to the built-in's name; a rule that is genuinely the project's resolves to
+    // nothing, having nothing static to read a name out of.
     const rules = projectWorldRules({
-      'worlds/a.world': worldFile('rules/gravity', 'rules/mine', 'InputRule'),
-      'rules/gravity.js': `export {GravityRule as default} from 'world-lab';\n`,
-      // A genuinely project-defined rule (no built-in re-export) → no trait
-      // contribution yet, so it resolves to nothing.
+      'worlds/a.world': worldFile('rules/animation', 'rules/mine', 'Space'),
+      'rules/animation.js': `export {AnimationRule as default} from 'world-lab';\n`,
       'rules/mine.js': `const rule = new RuleBuilder({id: 'mine', name: 'Mine'});\nexport default rule.build();`,
     });
-    // The gravity shim resolves to GravityRule; the built-in passes through; the
-    // real project rule contributes no built-in trait name.
-    expect(new Set(rules)).toEqual(new Set(['GravityRule', 'InputRule']));
+    expect(new Set(rules)).toEqual(new Set(['Appearance', 'Space']));
+  });
+
+  it('resolves a `.rule` referred to by module to the name it declares', () => {
+    // Which is what a `use rule` field holds anyway; this is the path for one
+    // written before the file was parsed, or by something that only had a path.
+    const rules = projectWorldRules({
+      'worlds/a.world': worldFile('rules/wind'),
+      'rules/wind.rule': JSON.stringify({
+        blocks: {
+          blocks: [{type: 'world_rule', fields: {NAME: 'Wind'}}],
+        },
+      }),
+    });
+    expect(rules).toEqual(['Wind']);
   });
 });
 

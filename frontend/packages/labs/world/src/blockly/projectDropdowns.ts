@@ -25,6 +25,7 @@ import {
   projectRuleOptions,
   projectWorldRules,
 } from './projectModules';
+import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
 export function refreshProjectDropdowns(files: Record<string, string>): void {
@@ -39,6 +40,42 @@ export function refreshProjectDropdowns(files: Record<string, string>): void {
   setProjectRuleModules(projectRuleOptions(files));
   // The traits an actor may take come from the rules the project's worlds attach
   // — built-ins and the project's own declarative `.rule` rules.
-  setProjectRuleMeta(projectRuleMetas(files));
+  const ruleMetas = projectRuleMetas(files);
+  setProjectRuleMeta(ruleMetas);
+  // Every stored reference names a rule; this is what those names mean for this
+  // project. Refreshed here rather than at parse time so the editor and the
+  // generator resolve against the same set — the files as they are right now.
+  registerProjectRules(ruleMetas);
+  warnAboutDuplicateNames();
   setProjectRules(projectWorldRules(files));
+}
+
+// The last-warned set, so a collision is reported when it appears rather than on
+// every keystroke that refreshes the project.
+let warnedAbout = '';
+
+/**
+ * Say when two rules answer to one name.
+ *
+ * A reference names a rule, so two rules called "Gravity" make
+ * `Gravity#AffectedByGravityTrait` a question with two answers — and the toolbox
+ * grows two categories with one name. The registry picks the first and this says
+ * so, which is the least a program can do about an ambiguity it cannot resolve.
+ * Preventing the collision (a `define rule` refusing a name already taken) is the
+ * editor's job, not this one's.
+ */
+function warnAboutDuplicateNames(): void {
+  const duplicated = duplicateRuleNames();
+  const key = duplicated.join('\u0000');
+  if (key === warnedAbout) {
+    return;
+  }
+  warnedAbout = key;
+  if (duplicated.length) {
+    console.warn(
+      `world lab: more than one rule is named ${duplicated
+        .map(name => `"${name}"`)
+        .join(', ')}; references to it resolve to the first one.`,
+    );
+  }
 }
