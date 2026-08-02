@@ -29,7 +29,7 @@ const simple: LabFixture = {
         'actors under `worlds/` and `actors/`.\n\n' +
         '- The preview runs your game as you edit\n' +
         '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
-        '- The coin plays a built-in animation; the player and ball play ones authored in `animations/game.json`\n' +
+        '- Animations are files under `animations/`: open one to edit its frames\n' +
         '- `console.log` output appears in the Console\n' +
         '- Try changing the player’s start position, gravity, or move speed',
     }),
