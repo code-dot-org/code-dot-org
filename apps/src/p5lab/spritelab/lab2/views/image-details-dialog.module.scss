@@ -239,11 +239,20 @@
 }
 
 // Bootstrap's global legend styling draws a full-width underline; these
-// are plain labels.
+// sit inset on the group's border like classic fieldset legends.
 .radioGroup legend {
   width: auto;
+  margin: 0;
+  padding: 0 4px;
   border: none;
   line-height: inherit;
+}
+
+// A column of stacked groups sharing a row with the prompt.
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .promptInput {
@@ -264,8 +273,9 @@
   flex-direction: column;
   gap: 8px;
   margin: 0;
-  padding: 0;
-  border: none;
+  padding: 10px 12px;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
   // The design system's disabled-label grey is illegible on the panel;
   // remap the variable it reads to our secondary text (the greyed radio
   // circle still marks the option disabled).

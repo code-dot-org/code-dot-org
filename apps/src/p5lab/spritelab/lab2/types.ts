@@ -19,6 +19,18 @@ export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
 // shaded illustration. See removeBackground's MatteOptions.
 export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
 
+// Display names, shared so the image dialog's summary and generate views
+// use the same words.
+export const ITEM_TYPE_LABELS: Record<SpriteLab2ItemType, string> = {
+  sprite: 'Sprite',
+  background: 'Background',
+  block: 'Block',
+};
+export const ITEM_STYLE_LABELS: Record<SpriteLab2ItemStyle, string> = {
+  smooth: 'Smooth',
+  pixel: 'Pixel art',
+};
+
 // How an AI-generated image was made, recorded on its animation so a later
 // generation can replay the same roll of randomness or start from the
 // current image.

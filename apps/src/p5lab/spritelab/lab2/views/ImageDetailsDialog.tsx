@@ -5,8 +5,14 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {ImageGenerationMetadata, SpriteLab2ItemType} from '../types';
+import {
+  ImageGenerationMetadata,
+  ITEM_STYLE_LABELS,
+  ITEM_TYPE_LABELS,
+  SpriteLab2ItemType,
+} from '../types';
 
+import DeleteImageButton from './DeleteImageButton';
 import GenerateImageView, {GeneratedImageResult} from './GenerateImageView';
 
 import moduleStyles from './image-details-dialog.module.scss';
@@ -41,13 +47,6 @@ interface ImageDetailsDialogProps {
   ) => Promise<void>;
 }
 
-const TYPE_LABELS = {
-  sprite: 'Sprite',
-  background: 'Background',
-  block: 'Block',
-};
-const STYLE_LABELS = {smooth: 'Smooth', pixel: 'Pixel art'};
-
 /**
  * The image dialog. An existing image opens on the summary view: the image
  * large on the left (click it to paint), how it was made on the right, and
@@ -80,7 +79,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [renaming, setRenaming] = useState(false);
   const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
-  const [confirmingDelete, setConfirmingDelete] = useState(false);
 
   // Flag a duplicate as it's typed and hold Save until it's unique (an
   // image keeps its own name while renaming).
@@ -223,6 +221,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               setView('details');
             }}
             onBackToImage={isNew ? undefined : () => setView('details')}
+            onDelete={isNew ? undefined : onDelete}
           />
         ) : (
           <>
@@ -252,9 +251,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     <dt>Prompt</dt>
                     <dd>{generation.prompt}</dd>
                     <dt>Type</dt>
-                    <dd>{TYPE_LABELS[generation.itemType]}</dd>
+                    <dd>{ITEM_TYPE_LABELS[generation.itemType]}</dd>
                     <dt>Style</dt>
-                    <dd>{STYLE_LABELS[generation.style]}</dd>
+                    <dd>{ITEM_STYLE_LABELS[generation.style]}</dd>
                     {generation.temperature !== undefined && (
                       <>
                         <dt>Temperature</dt>
@@ -266,44 +265,23 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               </div>
             </div>
             <div className={moduleStyles.footer}>
-              {/* Confirming swaps the button for an inline question, so no
-                  second dialog stacks on this one. */}
               <div className={moduleStyles.footerLeft}>
-                {confirmingDelete ? (
-                  <>
-                    <span>Delete this image?</span>
-                    <button
-                      type="button"
-                      className={moduleStyles.dangerButton}
-                      onClick={onDelete}
-                    >
-                      Delete
-                    </button>
-                    <button
-                      type="button"
-                      className={moduleStyles.button}
-                      onClick={() => setConfirmingDelete(false)}
-                    >
-                      Keep
-                    </button>
-                  </>
-                ) : (
-                  <button
-                    type="button"
-                    className={moduleStyles.dangerButton}
-                    onClick={() => setConfirmingDelete(true)}
-                  >
-                    Delete
-                  </button>
-                )}
+                <DeleteImageButton onDelete={onDelete} />
               </div>
               <button
                 type="button"
-                className={moduleStyles.primaryButton}
+                className={moduleStyles.button}
                 onClick={() => setView('generate')}
               >
                 <FontAwesomeV6Icon iconName="sparkles" />
                 {generation ? 'Regenerate with AI' : 'Generate with AI'}
+              </button>
+              <button
+                type="button"
+                className={moduleStyles.primaryButton}
+                onClick={onClose}
+              >
+                Done
               </button>
             </div>
           </>

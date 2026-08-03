@@ -8,9 +8,13 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {generateImage, GenerateImageOptions} from '../ai/items/itemGeneration';
 import {
   ImageGenerationMetadata,
+  ITEM_STYLE_LABELS,
+  ITEM_TYPE_LABELS,
   SpriteLab2ItemStyle,
   SpriteLab2ItemType,
 } from '../types';
+
+import DeleteImageButton from './DeleteImageButton';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -73,6 +77,8 @@ interface GenerateImageViewProps {
   ) => Promise<void> | void;
   /** Return to the summary view without generating (existing images). */
   onBackToImage?: () => void;
+  /** Delete this image (existing images). */
+  onDelete?: () => void;
 }
 
 /**
@@ -89,6 +95,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   create,
   onAccept,
   onBackToImage,
+  onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
@@ -196,50 +203,18 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         </div>
         <div className={moduleStyles.detailsPane}>
           {create && (
-            <div className={moduleStyles.formRow}>
-              <div>
-                <TextField
-                  name="newImageName"
-                  label="Name"
-                  value={name}
-                  errorMessage={nameError || undefined}
-                  disabled={generating}
-                  onChange={e => {
-                    setName(e.target.value);
-                    setPaintError(null);
-                  }}
-                />
-              </div>
-              <fieldset
-                className={moduleStyles.radioGroup}
+            <div>
+              <TextField
+                name="newImageName"
+                label="Name"
+                value={name}
+                errorMessage={nameError || undefined}
                 disabled={generating}
-              >
-                <legend>Type</legend>
-                <RadioButton
-                  name="generation-type"
-                  value="sprite"
-                  label="Sprite (costume)"
-                  size="s"
-                  checked={itemType === 'sprite'}
-                  onChange={() => setItemType('sprite')}
-                />
-                <RadioButton
-                  name="generation-type"
-                  value="background"
-                  label="Background"
-                  size="s"
-                  checked={itemType === 'background'}
-                  onChange={() => setItemType('background')}
-                />
-                <RadioButton
-                  name="generation-type"
-                  value="block"
-                  label="Block (platform tile)"
-                  size="s"
-                  checked={itemType === 'block'}
-                  onChange={() => setItemType('block')}
-                />
-              </fieldset>
+                onChange={e => {
+                  setName(e.target.value);
+                  setPaintError(null);
+                }}
+              />
             </div>
           )}
 
@@ -250,7 +225,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 moduleStyles.wide
               )}
             >
-              <span>Describe it</span>
+              <span>Prompt</span>
               <textarea
                 className={moduleStyles.promptInput}
                 value={prompt}
@@ -260,25 +235,44 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 onChange={e => setPrompt(e.target.value)}
               />
             </label>
-            <fieldset className={moduleStyles.radioGroup} disabled={generating}>
-              <legend>Style</legend>
-              <RadioButton
-                name="generation-style"
-                value="smooth"
-                label="Smooth"
-                size="s"
-                checked={style === 'smooth'}
-                onChange={() => setStyle('smooth')}
-              />
-              <RadioButton
-                name="generation-style"
-                value="pixel"
-                label="Pixel art"
-                size="s"
-                checked={style === 'pixel'}
-                onChange={() => setStyle('pixel')}
-              />
-            </fieldset>
+            <div className={moduleStyles.formStack}>
+              {/* An existing image's type is locked: regenerating can't
+                  change what kind of image it is. */}
+              <fieldset
+                className={moduleStyles.radioGroup}
+                disabled={generating || !!existing}
+              >
+                <legend>Type</legend>
+                {(['sprite', 'background', 'block'] as const).map(type => (
+                  <RadioButton
+                    key={type}
+                    name="generation-type"
+                    value={type}
+                    label={ITEM_TYPE_LABELS[type]}
+                    size="s"
+                    checked={itemType === type}
+                    onChange={() => setItemType(type)}
+                  />
+                ))}
+              </fieldset>
+              <fieldset
+                className={moduleStyles.radioGroup}
+                disabled={generating}
+              >
+                <legend>Style</legend>
+                {(['smooth', 'pixel'] as const).map(s => (
+                  <RadioButton
+                    key={s}
+                    name="generation-style"
+                    value={s}
+                    label={ITEM_STYLE_LABELS[s]}
+                    size="s"
+                    checked={style === s}
+                    onChange={() => setStyle(s)}
+                  />
+                ))}
+              </fieldset>
+            </div>
           </div>
 
           <div className={moduleStyles.formRow}>
@@ -363,28 +357,31 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       </div>
 
       <div className={moduleStyles.footer}>
-        <div className={moduleStyles.footerLeft}>
-          {create && (
-            <button
-              type="button"
-              className={moduleStyles.button}
-              disabled={generating || !nameUsable}
-              onClick={() => setPaintError(create.onPaintInstead(trimmedName))}
-            >
-              Paint it instead
-            </button>
-          )}
-          {onBackToImage && (
-            <button
-              type="button"
-              className={moduleStyles.button}
-              disabled={generating}
-              onClick={onBackToImage}
-            >
-              Back to image
-            </button>
-          )}
-        </div>
+        {onDelete && (
+          <div className={moduleStyles.footerLeft}>
+            <DeleteImageButton onDelete={onDelete} />
+          </div>
+        )}
+        {create && (
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating || !nameUsable}
+            onClick={() => setPaintError(create.onPaintInstead(trimmedName))}
+          >
+            Paint it instead
+          </button>
+        )}
+        {onBackToImage && (
+          <button
+            type="button"
+            className={moduleStyles.button}
+            disabled={generating}
+            onClick={onBackToImage}
+          >
+            Cancel
+          </button>
+        )}
         <button
           type="button"
           className={moduleStyles.primaryButton}
