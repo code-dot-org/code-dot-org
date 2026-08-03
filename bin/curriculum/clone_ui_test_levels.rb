@@ -35,21 +35,6 @@ $verbose = false
 UI_TEST_LEVEL_NAME_PREFIX = 'UI Test '.freeze
 MAX_LEVEL_NAME_LENGTH = 70
 
-# Teacher-facing answer material, held as ciphertext under the prod
-# properties_encryption_key. These fields are dropped during cloning because:
-# 1. every consumer reads the decrypted value, so the ciphertext is inert
-#    wherever the key is absent, and
-# 2. we are working toward eliminating UI test dependencies on the key.
-#
-# encrypted_validation is deliberately absent from this list. Javalab reads
-# whether that property is present rather than what it decrypts to, so
-# dropping it would turn a validated level into an unvalidated one.
-ANSWER_PROPERTIES = %w(
-  encrypted_solution
-  encrypted_examples
-  encrypted_exemplar_sources
-).freeze
-
 def parse_options
   options = {}
 
@@ -151,7 +136,6 @@ def clone_custom_level(level, new_name)
   clone.name = new_name
   # :published makes write_to_file? true, so the level file gets written
   clone.published = true
-  clone.properties = clone.properties.except(*ANSWER_PROPERTIES)
   clone.audit_log = [{changed_at: Time.now, changed: ["cloned from #{level.name.dump}"], cloned_from: level.name}].to_json
   clone.contained_level_names = contained_names if contained_names.present?
   clone.project_template_level_name = template_name if template_name
