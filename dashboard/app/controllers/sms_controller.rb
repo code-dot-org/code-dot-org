@@ -21,7 +21,8 @@ class SmsController < ApplicationController
 
   private def send_sms_link(link, phone)
     decorated_link = link + '?sms=true'
-    body = "Check this out on Code Studio: #{decorated_link} (reply STOP to stop receiving this)"
+    brand_name = Cdo::Brand.legal_name(request)
+    body = "Check this out on #{brand_name}: #{decorated_link} (reply STOP to stop receiving this)"
     send_sms(body, phone)
   end
 
