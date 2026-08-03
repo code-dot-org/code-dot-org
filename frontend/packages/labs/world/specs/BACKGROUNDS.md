@@ -159,8 +159,15 @@ Two consequences in the UI:
   `backgrounds/`, and the background field's picker includes only it. Neither
   pool leaks into the other, which is the point.
 - The **image editor** offers no spritesheet controls for a file in
-  `backgrounds/`. A backdrop is not a grid of cells, and `.sheet` should never be
-  written beside one.
+  `backgrounds/`, and draws no grid over one either — not even when a `.sheet`
+  is sitting beside it, which is what dragging a spritesheet into the folder
+  leaves behind (`appearance/sheetCompanions` moves the companion with its
+  image). A backdrop is not a grid of cells, so it is edited as the picture it
+  is.
+
+All three read the same line: `appearance/backgroundsFolder`. The folder name
+was known in four places by the time it was a rule, which is three too many for
+something whose only failure mode is a silent disagreement.
 
 ## 6. Importing
 
@@ -313,6 +320,5 @@ The shape of each extension, so today's decisions do not have to be revisited:
 3. Blocks: the three, plus the `remove` counterpart.
 4. Library: import flow and the `backgrounds/` folder in `DEFAULT_PROJECT`
    (done — §6, §7).
-5. Pool hygiene: the dropdowns and the picture palette are filtered (§5);
-   what is left is the image editor, which still offers spritesheet controls
-   for a file under `backgrounds/`.
+5. Pool hygiene: the dropdowns, the picture palette and the image editor are
+   all filtered (§5). Done.

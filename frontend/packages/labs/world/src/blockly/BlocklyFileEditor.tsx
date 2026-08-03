@@ -27,6 +27,7 @@ import {
   type AppearanceKind,
 } from '../appearance/appearanceImport';
 import {BackgroundLibraryDialog} from '../appearance/BackgroundLibraryDialog';
+import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {fetchStockBackground} from '../appearance/fetchStockBackground';
 import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
 import {
@@ -264,7 +265,7 @@ export const BlocklyFileEditor = ({
   const images = useMemo(
     () =>
       imagePaths
-        .filter(path => !path.startsWith('backgrounds/'))
+        .filter(path => !isBackgroundPath(path))
         .map(path => path.split('/').pop() as string),
     [imagePaths],
   );

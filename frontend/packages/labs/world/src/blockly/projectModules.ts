@@ -6,6 +6,7 @@
 // learner sees "Coin", not the file stem "coin"; the value is the
 // extension-less module path the generated world imports (`actors/coin`).
 
+import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
@@ -315,9 +316,6 @@ export function projectWorldRules(files: Record<string, string>): string[] {
   return [...names];
 }
 
-/** Where the backdrops live; everything under it is out of the sprite pool. */
-const BACKGROUNDS_FOLDER = 'backgrounds/';
-
 const IMAGE_FILE = /\.(png|jpg|jpeg|gif|webp)$/i;
 
 /** Every image path the project holds, from both places they can come from. */
@@ -351,7 +349,7 @@ export function projectSpriteOptions(
   images: readonly string[] = [],
 ): Array<[string, string]> {
   const names = imagePaths(files, images)
-    .filter(path => !path.startsWith(BACKGROUNDS_FOLDER))
+    .filter(path => !isBackgroundPath(path))
     .map(baseName);
   // A spritesheet is offered a cell at a time: drawing a whole strip is almost
   // never what `set sprite` means for one. `cellCount` knows the project's
@@ -388,7 +386,7 @@ export function projectBackgroundOptions(
   images: readonly string[] = [],
 ): Array<[string, string]> {
   const names = imagePaths(files, images)
-    .filter(path => path.startsWith(BACKGROUNDS_FOLDER))
+    .filter(isBackgroundPath)
     .map(baseName);
   return [...new Set(names)]
     .sort((a, b) => a.localeCompare(b))

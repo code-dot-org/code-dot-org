@@ -14,12 +14,14 @@ import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {
   parseSheetFile,
   setImageSheet,
   sheetFileName,
   type SheetFile,
 } from '../appearance/sheetFile';
+import {filePath} from '../runtime/projectFiles';
 
 import PixelEditor from './PixelEditor';
 
@@ -48,11 +50,18 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
     [currentSources, fileId, updateSources],
   );
 
+  // A backdrop is not a grid of cells (BACKGROUNDS.md §5). It is stretched over
+  // the whole viewport, so there is nothing a cell of one would mean — and a
+  // `.sheet` written beside it would be a claim the animation editor believes.
+  // So an image under `backgrounds/` is edited as the picture it is: no grid
+  // drawn over it, and no controls offering to cut one.
+  const isBackdrop = isBackgroundPath(filePath(currentSources.source, fileId));
+
   // The grid this image is cut into, if it has one: the `.sheet` beside it.
   // Read live (not held like the URL) — it is small, and the editor's own
   // controls are what change it.
   const sheet = useMemo((): SheetFile | undefined => {
-    if (!file) {
+    if (!file || isBackdrop) {
       return undefined;
     }
     const name = sheetFileName(file.name);
@@ -61,7 +70,7 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
         candidate.name === name && candidate.folderId === file.folderId,
     );
     return beside ? parseSheetFile(beside.contents) : undefined;
-  }, [currentSources, file]);
+  }, [currentSources, file, isBackdrop]);
 
   const changeSheet = useCallback(
     (next: SheetFile | undefined) => {
@@ -89,7 +98,9 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
       imageUrl={openedWith.current}
       isReadOnly={isReadOnly}
       sheet={sheet}
-      onSheetChange={changeSheet}
+      // Absent for a backdrop, which is what hides the spritesheet controls:
+      // `PixelEditor` renders them only for an editor that can change one.
+      onSheetChange={isBackdrop ? undefined : changeSheet}
       onCommit={save}
     />
   );
