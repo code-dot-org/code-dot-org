@@ -110,8 +110,8 @@ const processMode = (mode: Mode | undefined): void => {
       })[0];
       store.dispatch(setSelectedCSV(assetPath + item.path));
       store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
-      // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store 
-      // directly and are fire-and-forget, so an in-flight load from a prior 
+      // TODO - Fix race condition: parseCSV and parseJSON dispatch into the store
+      // directly and are fire-and-forget, so an in-flight load from a prior
       // level/dataset can resolve after a newer loadLevel and clobber state.
       parseCSV(assetPath + item.path, true, false);
 
