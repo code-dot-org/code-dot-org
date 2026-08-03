@@ -38,6 +38,7 @@ has non-obvious data flow, stateful services, or significant constraints.
 - `version`: `0.0.0` (managed by Turborepo/Changesets, never edit manually)
 - `private`: `true` for internal packages not published to npm
 - External dependencies (`react`, `uuid`, etc.) → `peerDependencies` + `devDependencies`, never `dependencies`
+- In `devDependencies`, take shared versions from the catalog (`"react": "catalog:"`) rather than an explicit range. React in particular is pinned to 18.x there because `apps/` portals require one shared instance; a hardcoded 19.x range reintroduces the duplicate-React hooks failures the pin exists to prevent. See `.yarnrc.yml` for when to add a catalog entry
 - Do not add `"type": "module"` — it breaks the legacy `apps/` webpack bundle
 
 ## Vite config
@@ -71,19 +72,32 @@ export default [globalIgnores(['dist']), ...cdoReactConfig];
 
 ## Stylelint config
 
-- Packages with CSS/SCSS files shall have a `stylelint.config.mjs` extending the shared config:
+Stylelint is wired through `package.json`, not a separate config file — a
+`stylelint` key extending the shared config, plus the scripts that Turborepo's
+`lint` task depends on. Without the `stylelint` script, `turbo lint` has nothing
+to run and a package's CSS/SCSS goes unchecked:
 
-```js
-// stylelint.config.mjs
-import cdoStylelint from '@code-dot-org/lint-config/stylelint/index.mjs';
-export default cdoStylelint;
+```json
+{
+  "scripts": {
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix"
+  },
+  "stylelint": {"extends": "@code-dot-org/lint-config/stylelint/index.mjs"}
+}
 ```
+
+Two details matter. Quote the glob: Yarn's shell expands an unquoted one itself
+and aborts with `No matches found` when a package has no stylesheets, so let
+stylelint do the expanding. And `--allow-empty-input` keeps the gate green in
+that no-stylesheet case, which lets the wiring ship with the scaffold and start
+working the moment the first `.scss` file lands.
 
 ## Testing
 
 - Use Vitest (not Jest — Jest is for the legacy `apps/` bundle)
 - Test files: `src/**/__tests__/*.test.ts` or `*.test.tsx`
-- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`)
+- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`). Both generators scaffold this base, so component tests run without further setup
 
 ## Lint-staged
 
