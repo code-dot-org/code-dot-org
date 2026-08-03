@@ -16,7 +16,7 @@ Feature: Libraries
     And I wait for the lab page to fully load
     Then I open the library publish dialog
     And I click selector "#ui-test-unpublish-library" once I see it
-    And I wait until element "b:contains('Successfully unpublished your library')" is visible
+    And I wait until element "h4:contains('Successfully unpublished your library')" is visible
 
   Scenario: Adding and removing a library from a project
     # Student1 publishes a library
