@@ -13,6 +13,7 @@
 import {createNewFolder, getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {BACKGROUNDS_FOLDER} from './backgroundsFolder';
 import {serializeSheetFile, sheetFileName} from './sheetFile';
 import {
   backgroundFileName,
@@ -25,8 +26,6 @@ import {
 /** Where each kind lives, by the lab's directory convention (GLOSSARY.md). */
 const SPRITES_FOLDER = 'sprites';
 const ANIMATIONS_FOLDER = 'animations';
-/** Backdrops, which is the whole of what makes one a backdrop — BACKGROUNDS.md §5. */
-const BACKGROUNDS_FOLDER = 'backgrounds';
 
 /** The result of an import: the new project, and what the block should name. */
 export interface ImportedAppearance {
