@@ -58,6 +58,8 @@ import {
   paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
+import {mapEditButtonExtension} from './extensions/mapEditButton';
+import {mapPlacementsMutator} from './extensions/mapPlacementsMutator';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
@@ -73,6 +75,7 @@ import {
   localActorFor,
   localActorVar,
 } from './localActors';
+import {instanceId, placementsOf} from './mapPlacements';
 import {
   actorFieldOptions,
   actorOptionsExtension,
@@ -1847,6 +1850,74 @@ const worldAddActor = defineBlock({
   },
 });
 
+/**
+ * Place many actors of one kind, arranged on the map (MAPS.md).
+ *
+ * The arrangement lives in the block (`mapPlacements`), so it is part of the
+ * `.world` file — which is what lets a world place its OWN actors this way, the
+ * ones no file can name. `edit…` opens the map canvas on them.
+ *
+ * Sugar over `add actor`, in the same sense a map file is: twenty `add actor`
+ * stacks is not an arrangement, it is a wall of blocks.
+ */
+const worldCreateInMap = defineBlock({
+  type: 'world_create_in_map',
+  message0: 'create %1 in map',
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  mutator: mapPlacementsMutator,
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    mapEditButtonExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip:
+    'Place several actors of one kind, arranged on the map. Their positions ' +
+    'and properties are part of this world.',
+  generator: {
+    javascript(block, generator) {
+      const actor = block.getFieldValue('ACTOR');
+      const placements = placementsOf(block);
+      // Nothing arranged yet is nothing to place — and a `define actor` that
+      // has since been deleted leaves a block naming nothing (localActors).
+      const local = localActorFor(block, actor);
+      if (
+        !actor ||
+        !placements.length ||
+        (localActorBlockId(actor) && !local)
+      ) {
+        return '';
+      }
+      const template = local ? local.variable : importVar(actor);
+      const type = local ? local.type : actor;
+      if (!local) {
+        addImport(
+          generator,
+          `mod:${actor}`,
+          `import ${importVar(actor)} from ${str(actor)};`,
+        );
+      }
+      // Through `loadMap`, which already resolves each entry's overrides
+      // against the world's property registry and stamps the actor's type.
+      const actors = placements
+        .map(placement =>
+          JSON.stringify({
+            type,
+            id: instanceId(block.id, placement.id),
+            ...(placement.properties ? {properties: placement.properties} : {}),
+          }),
+        )
+        .join(', ');
+      return (
+        `world.define(${str(type)}, ${template});\n` +
+        `world.loadMap({actors: [${actors}]});\n`
+      );
+    },
+  },
+});
+
 const worldLoadMap = defineBlock({
   type: 'world_load_map',
   message0: 'load map %1',
@@ -2930,6 +3001,7 @@ export const DOMAIN_BLOCKS = [
   worldForEach,
   worldIsA,
   worldAddActor,
+  worldCreateInMap,
   worldLoadMap,
   worldWorld,
   worldUseRule,
@@ -3010,6 +3082,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
+      // Many of one kind, arranged on a map that lives in this world (MAPS.md).
+      'world_create_in_map',
       'world_add_world_effect',
       'world_remove_world_effect',
       // What is behind everything: an image, a colour, and effects on that

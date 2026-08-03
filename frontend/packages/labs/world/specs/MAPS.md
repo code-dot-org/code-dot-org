@@ -122,6 +122,19 @@ Notes on the shape:
   because the type string is what a placed actor is known by: `is a` compares
   against it, and so does anything asking for actors of a kind.
 
+**Done — the block is implemented.** `world_create_in_map`, its
+`mapPlacementsMutator` (extraState, so the arrangement is saved with the
+workspace, copied with a duplicated block, and undone by Blockly's own undo),
+its generator, and the `edit…` button that will open the canvas. The button
+carries the count — `edit… (3)` — because a block whose content is somewhere
+else should at least say how much of it there is, and it writes back through one
+`BlockChange` mutation event: extraState changes fire nothing on their own, and
+an edit the workspace never hears about is neither saved nor compiled.
+
+It emits nothing at all until something is arranged, so a block dragged out and
+left alone is inert rather than broken — checked in the editor, where a world
+holding one keeps running with no console errors.
+
 ## 4. The popup: the map editor, scoped
 
 The field opens what `MapEditor.tsx` already is, minus the part that chooses
@@ -169,6 +182,19 @@ handler seam the sprite picker and the effect import use
 (`blockly/spritePick`, `appearance/appearanceImport`): a Blockly field cannot
 reach React, so the editor registers a handler while it is mounted and the field
 asks through it.
+
+**Done — the popup is implemented.** `MapPlacementsDialog` opens `MapStage` on
+the block's placements, with every OTHER `create actor in map` block's
+placements as context, behind the `mapPick` seam.
+
+One control the file editor does not need: a toggle between adding and editing.
+The palette is what switches those there, and there is no palette here. It opens
+in SELECT mode, because opening an arrangement you already made in order to move
+one thing is the commoner errand.
+
+Checked end to end: drag the block, open its map, add three, press Done — the
+block reads `create Player ▾ in map edit… (3)`, and the game restarts with three
+more players falling into it.
 
 ## 5. What blocks this: a world-local actor has no schema
 
@@ -258,6 +284,17 @@ conclusion to reach from use, not from this document.
   not, and a per-block grid would be a setting with no consequence outside the
   editor.
 
+## 7a. An unrelated thing this turned up
+
+A block dragged into a `.world` file does not come back after a full page
+reload: the saved file has it (the compiler reads the same file and places its
+actors), but the editor's workspace comes up showing the STARTER contents. It
+happens to a plain `add actor` exactly as it does to `create actor in map`, so it
+is neither this feature's nor new — it looks like the editor rendering the
+contents it mounted with rather than the sources that arrived afterwards, which
+is the same shape as the `LabWithSources` / `initialSources` wrinkle noted
+elsewhere. Worth chasing on its own; nothing here depends on it.
+
 ## 8. Testing
 
 - **Pure, in vitest**: the block's generator (both actor kinds, empty state, a
@@ -278,6 +315,8 @@ conclusion to reach from use, not from this document.
 2. **Extract** the map editor's canvas + inspector from `MapEditor.tsx`, with
    the file editor as its first caller and no behaviour change. (Done — §4.)
 3. **The block**: `world_create_in_map`, its `extraState`, its generator.
+   (Done — §3.)
 4. **The popup**: the extracted editor, scoped, behind the field's handler seam.
+   (Done — §4.)
 5. **Context**: draw the siblings' placements, and the loaded `.map`'s if there
    is one.
