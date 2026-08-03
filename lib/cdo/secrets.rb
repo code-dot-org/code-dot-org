@@ -7,11 +7,6 @@ require 'json'
 
 module Cdo
   # Interface for fetching secrets from AWS Secrets Manager.
-  #
-  # SDK references must be written ::Aws, fully qualified: inside `module Cdo`
-  # a bare Aws:: resolves to Cdo::Aws (lib/cdo/aws/redshift) whenever that
-  # namespace has been loaded, e.g. under `rake`, which loads
-  # dashboard/lib/tasks/analytics_exportable.rake.
   class Secrets
     CURRENT = "AWSCURRENT".freeze
     NOT_FOUND = ::Aws::SecretsManager::Errors::ResourceNotFoundException
