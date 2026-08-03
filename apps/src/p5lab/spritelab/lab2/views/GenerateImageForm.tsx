@@ -91,8 +91,8 @@ const GenerateImageForm: React.FunctionComponent<{
     setStatus('generating');
     setError(null);
     try {
-      const {filename, uint8Array, mediaType, pixelGridSize} =
-        await generateImage(trimmedPrompt, itemType, style);
+      const {filename, uint8Array, mediaType, pixelGridSize, generation} =
+        await generateImage(trimmedPrompt, {itemType, style});
       const url = await uploadImage(filename, uint8Array, mediaType);
       const frameSize = await getImageSize(uint8Array, mediaType);
       const key = createUuid();
@@ -117,6 +117,9 @@ const GenerateImageForm: React.FunctionComponent<{
           // Recorded once here; the pixel editor trusts this instead of
           // re-detecting the grid on every open.
           pixelGridSize,
+          // How this image was made, for the image dialog's metadata and
+          // seed replay.
+          generation,
         }) as unknown as AnyAction
       );
       // The classic thunk unconditionally renames to name_N; take the plain

@@ -11,6 +11,30 @@ export const BACKGROUNDS_CATEGORY = 'backgrounds';
 // draws from these).
 export const BLOCKS_CATEGORY = 'blocks';
 
+// 'block' is a square platform tile: keyed and cropped to its content so
+// copies tile seamlessly when laid out on the grid.
+export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
+
+// Visual style. 'pixel' yields crisp pixel art with hard edges; 'smooth' a
+// shaded illustration. See removeBackground's MatteOptions.
+export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
+
+// How an AI-generated image was made, recorded on its animation so a later
+// generation can replay the same roll of randomness or start from the
+// current image.
+export interface ImageGenerationMetadata {
+  prompt: string;
+  itemType: SpriteLab2ItemType;
+  style: SpriteLab2ItemStyle;
+  // Sending the same seed and prompt again asks the service for the same
+  // image.
+  seed: number;
+  // Sampling wildness the user chose; absent = the service default.
+  temperature?: number;
+  // True when the image was made by modifying its previous version.
+  editedPrevious?: boolean;
+}
+
 // The serializable subset of a Sprite Lab animation, mirroring the JSDoc
 // `SerializedAnimationProps` typedef in p5lab/shapes.js (which is plain JS, so
 // not importable as a TS type).
@@ -28,6 +52,8 @@ export interface SerializedAnimationProps {
   // Pixel-editor recently-used colors, in first-seen order; absent until the
   // image is edited there.
   recentColors?: RGBA[];
+  // Present on AI-generated images.
+  generation?: ImageGenerationMetadata;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.

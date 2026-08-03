@@ -6,17 +6,16 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {
+  ImageGenerationMetadata,
+  SpriteLab2ItemStyle,
+  SpriteLab2ItemType,
+} from '../../types';
+
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
 import {cropToContent, removeBackground} from './removeBackground';
 
-// 'block' is a square platform tile: keyed and cropped to its content so
-// copies tile seamlessly when laid out on the grid.
-export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
-
-// Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
-// 1-bit background cut); 'smooth' yields a shaded illustration (and a feathered,
-// anti-aliased cut). See removeBackground's MatteOptions.
-export type SpriteLab2ItemStyle = 'smooth' | 'pixel';
+export type {SpriteLab2ItemStyle, SpriteLab2ItemType};
 
 // The logical canvas the prompt asks for: model output size over block size.
 const PROMPT_LOGICAL_GRID = MODEL_OUTPUT_PX / ASSUMED_BLOCK;
@@ -64,25 +63,44 @@ async function normalizeIfPixelArt(
   }
 }
 
+export interface GenerateImageOptions {
+  itemType?: SpriteLab2ItemType;
+  style?: SpriteLab2ItemStyle;
+  // Sampling wildness, 0 (tame) to 2 (wild); omitted = the service default.
+  temperature?: number;
+  // Replay a specific roll of the randomness; omitted = a fresh roll. The
+  // roll actually used is returned in the generation metadata either way.
+  seed?: number;
+  // When set, the service modifies this image per the prompt instead of
+  // drawing from scratch. A data URI (not raw bytes) because the request
+  // body is JSON.
+  inputImageDataURI?: string;
+}
+
 /**
- * Generate an image from a text prompt using gemini-2.5-flash-image, straight
- * through the AI Gateway (which logs/attributes via AichatContextManager).
- * Sprites and blocks get a flat key color the model picks to contrast with
- * the subject, flood-filled to transparency.
+ * Generate an image from a text prompt via the AI Gateway (which
+ * logs/attributes via AichatContextManager). Sprites and blocks get a flat
+ * key color the model picks to contrast with the subject, flood-filled to
+ * transparency.
  *
- * @returns the generated image as {filename, uint8Array, mediaType}.
+ * @returns the generated image as {filename, uint8Array, mediaType}, plus
+ * the generation metadata to record on its animation.
  */
 export async function generateImage(
   prompt: string,
-  itemType: SpriteLab2ItemType = 'sprite',
-  style: SpriteLab2ItemStyle = 'smooth'
+  options: GenerateImageOptions = {}
 ): Promise<{
   filename: string;
   uint8Array: Uint8Array;
   mediaType: string;
   // Set when pixel-style output was normalized: physical px per art pixel.
   pixelGridSize?: number;
+  generation: ImageGenerationMetadata;
 }> {
+  const {itemType = 'sprite', style = 'smooth'} = options;
+  // Always choose the seed ourselves: the service doesn't report the one it
+  // rolls, and an unrecorded roll can never be replayed.
+  const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const styleClause = STYLE_PROMPT[style];
   let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
@@ -93,8 +111,33 @@ export async function generateImage(
 
   const {files} = await generateText({
     model: getImageModel(),
-    messages: [{role: 'user', content: fullPrompt}],
+    messages: [
+      {
+        role: 'user',
+        content: options.inputImageDataURI
+          ? [
+              {type: 'image', image: options.inputImageDataURI},
+              {type: 'text', text: `Modify the provided image: ${fullPrompt}`},
+            ]
+          : fullPrompt,
+      },
+    ],
+    seed,
+    ...(options.temperature !== undefined && {
+      temperature: options.temperature,
+    }),
   });
+
+  const generation: ImageGenerationMetadata = {
+    prompt,
+    itemType,
+    style,
+    seed,
+    ...(options.temperature !== undefined && {
+      temperature: options.temperature,
+    }),
+    ...(options.inputImageDataURI && {editedPrevious: true}),
+  };
 
   const imageFile = files.find(f => f.mediaType.startsWith('image/'));
   if (!imageFile) {
@@ -127,6 +170,7 @@ export async function generateImage(
       uint8Array: new Uint8Array(await blob.arrayBuffer()),
       mediaType: 'image/png',
       pixelGridSize,
+      generation,
     };
   }
 
@@ -135,6 +179,7 @@ export async function generateImage(
     filename: `generated-${createUuid()}.${ext}`,
     uint8Array: imageFile.uint8Array,
     mediaType: imageFile.mediaType,
+    generation,
   };
 }
 
