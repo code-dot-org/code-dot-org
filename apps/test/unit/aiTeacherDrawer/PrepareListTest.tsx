@@ -235,7 +235,7 @@ describe('PrepareList', () => {
 
     await renderAndSettle(<PrepareList />);
     await user.selectOptions(
-      screen.getByRole('combobox', {name: 'Select date'}),
+      screen.getByRole('combobox', {name: 'Show prep content for'}),
       'Coming up'
     );
 
