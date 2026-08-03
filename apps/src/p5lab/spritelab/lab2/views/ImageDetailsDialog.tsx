@@ -137,7 +137,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   if (e.key === 'Enter' && draftUsable) {
                     commitRename();
                   } else if (e.key === 'Escape') {
-                    // Ours: without this the dialog itself would close.
+                    // Stop it here or the whole dialog closes.
                     e.stopPropagation();
                     cancelRename();
                   }

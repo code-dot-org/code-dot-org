@@ -13,6 +13,7 @@ import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
 import {getStore} from '@cdo/apps/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -189,7 +190,7 @@ const GenerateImagePane: React.FunctionComponent<{
       return null;
     }
     try {
-      const blob = await (await fetch(targetProps.sourceUrl)).blob();
+      const blob = await (await HttpClient.get(targetProps.sourceUrl)).blob();
       return await new Promise<string>((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = () => resolve(reader.result as string);
