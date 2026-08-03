@@ -281,12 +281,62 @@ export class World {
     return query.evaluate(this, ...args);
   }
 
+  /**
+   * Actors asked to leave while a tick was in progress; swept when it ends.
+   * See {@link removeActor}.
+   */
+  private readonly leaving = new Set<Actor>();
+  /** Whether a tick is running, which is what makes removal deferred. */
+  private ticking = false;
+
   addActor(actor: Actor): void {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
     // true, and cleared by `clearActors` for the same reason.
     actor.world = this;
     this.actorList.push(actor);
+  }
+
+  /**
+   * Take an actor out of the world.
+   *
+   * The other half of `addActor`, and a thing a learner asks for directly:
+   * "when the player touches a coin, remove the coin". Takes the actor or its
+   * id, and says whether there was one to remove.
+   *
+   * DEFERRED while a tick is running, and immediate otherwise. A removal
+   * almost always comes from inside the tick that noticed it — an event
+   * handler, a rule's step — where the world is being walked by whatever is
+   * running, and splicing the list underneath a `for each` would skip the
+   * actor after the one removed. The sweep happens after the steps and their
+   * events, still before the frame is drawn, so the coin is gone from the
+   * picture the learner sees.
+   */
+  removeActor(actor: Actor | string): boolean {
+    const target =
+      typeof actor === 'string'
+        ? this.actorList.find(candidate => candidate.id === actor)
+        : actor;
+    if (!target || !this.actorList.includes(target)) {
+      return false;
+    }
+    if (this.ticking) {
+      this.leaving.add(target);
+      return true;
+    }
+    this.detach(target);
+    return true;
+  }
+
+  /** Actually take it out: off the list, and no longer pointing at this world. */
+  private detach(actor: Actor): void {
+    const index = this.actorList.indexOf(actor);
+    if (index >= 0) {
+      this.actorList.splice(index, 1);
+    }
+    // The back-reference `addActor` set; an actor that is nowhere should not
+    // be able to reach the world it used to be in.
+    actor.world = undefined;
   }
 
   /** Whether an actor with `id` is already in this world. */
@@ -331,8 +381,19 @@ export class World {
 
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
-    this.scheduler.run(this, delta);
-    this.events.flush(this);
+    this.ticking = true;
+    try {
+      this.scheduler.run(this, delta);
+      // Handlers run here, and a handler is where "remove that coin" comes
+      // from — so the sweep below is after them, not before.
+      this.events.flush(this);
+    } finally {
+      this.ticking = false;
+      for (const actor of this.leaving) {
+        this.detach(actor);
+      }
+      this.leaving.clear();
+    }
     // The keys this tick become "previous" for the next, so edge detection
     // (newlyPressed/Released) compares against exactly one frame back.
     this.previousKeys = this.keys;

@@ -1859,6 +1859,42 @@ const worldAddActor = defineBlock({
  * Sugar over `add actor`, in the same sense a map file is: twenty `add actor`
  * stacks is not an arrangement, it is a wall of blocks.
  */
+/**
+ * Take an actor out of the world, while the game is running.
+ *
+ * The other half of `add actor`, and the one a learner reaches for first: when
+ * the player touches a coin, the coin goes. Runtime-only — there is nothing to
+ * un-place under `define world`, where the actor has not been placed yet.
+ *
+ * The subject is a socket rather than a dropdown because what is removed is an
+ * INSTANCE, not a kind: the coin that was touched, the actor a loop is looking
+ * at, `this actor`. A dropdown of templates could not say which one.
+ */
+const worldRemoveActor = defineBlock({
+  type: 'world_remove_actor',
+  message0: 'remove actor %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    actorInputExtension,
+    worldContextExtension,
+    runtimeWorldExtension,
+  ],
+  style: 'behavior_blocks',
+  tooltip:
+    'Remove an actor from the world. It stops being drawn and stops being ' +
+    'seen by the rules. Removing one already gone does nothing.',
+  generator: {
+    javascript(block, generator) {
+      const actor =
+        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      return `world.removeActor(${actor});\n`;
+    },
+  },
+});
+
 const worldCreateInMap = defineBlock({
   type: 'world_create_in_map',
   message0: 'create %1 in map %2',
@@ -3001,6 +3037,7 @@ export const DOMAIN_BLOCKS = [
   worldForEach,
   worldIsA,
   worldAddActor,
+  worldRemoveActor,
   worldCreateInMap,
   worldLoadMap,
   worldWorld,
@@ -3082,6 +3119,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
+      // …and taking one back out again, while the game runs.
+      'world_remove_actor',
       // Many of one kind, arranged on a map that lives in this world (MAPS.md).
       'world_create_in_map',
       'world_add_world_effect',

@@ -22,6 +22,13 @@ interface FakeImage {
   destroyed: boolean;
 }
 let images: FakeImage[] = [];
+/** The most recent game's scene, so a test can run frames against it. */
+let lastScene: {
+  config: {scene: {update(time: number, delta: number): void}};
+  scene: unknown;
+} | null = null;
+export const runFrame = () =>
+  lastScene?.config.scene.update.call(lastScene.scene, 0, 16);
 let cameraColor = 0;
 /** Texture keys the fake scene claims to hold. */
 let textures = new Set<string>();
@@ -72,10 +79,15 @@ vi.mock('phaser', () => {
     },
   };
   class Game {
-    constructor(config: {parent: HTMLElement; scene: {create(): void}}) {
+    constructor(config: {
+      parent: HTMLElement;
+      scene: {create(): void; update(time: number, delta: number): void};
+    }) {
       config.parent.appendChild(document.createElement('canvas'));
-      // Run the scene, which is the point of this fake.
+      // Run the scene, which is the point of this fake — and keep `update`, so
+      // a test can advance a frame.
       config.scene.create.call(scene);
+      lastScene = {config, scene};
     }
     destroy(): void {}
   }

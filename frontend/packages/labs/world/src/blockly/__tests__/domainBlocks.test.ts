@@ -1452,6 +1452,22 @@ describe('world block generators', () => {
     expect(run('world_remove_effect', {EFFECT: ''}, {}, '', {})).toBe('');
   });
 
+  it('world_remove_actor takes out whatever is in its socket', () => {
+    // An instance, not a kind: the coin that was touched, the actor a loop is
+    // looking at, `this actor`.
+    expect(run('world_remove_actor', {}, {}, '', {ACTOR: 'touched'})).toBe(
+      'world.removeActor(touched);\n',
+    );
+  });
+
+  it('world_remove_actor falls back to this actor', () => {
+    // The socket's shadow is `this actor`; an emptied socket still means the
+    // actor whose handler this is.
+    expect(run('world_remove_actor', {}, {}, '', {})).toBe(
+      'world.removeActor(actor);\n',
+    );
+  });
+
   it('world_add_effect emits nothing when the project has no effects', () => {
     // The dropdown shows a "(none)" placeholder with an empty value; emitting
     // `actor.addEffect("", undefined)` would be a runtime error for a block the

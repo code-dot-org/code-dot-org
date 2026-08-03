@@ -142,6 +142,25 @@ export class EffectRegistry {
    * bookkeeping, a different surface, so the camera is just another key in the
    * same map.
    */
+  /**
+   * Let go of everything attached to an object that is about to be destroyed.
+   *
+   * Detaching is the same act as an effect being taken off an actor — the
+   * filter is removed and forgotten — so a destroyed object leaves nothing
+   * behind that a later shader swap could try to talk to.
+   */
+  release(object: object): void {
+    const live = this.attached.get(object);
+    if (!live) {
+      return;
+    }
+    for (const entry of live.values()) {
+      entry.applied.remove();
+    }
+    live.clear();
+    this.attached.delete(object);
+  }
+
   reconcileCamera(
     scene: Phaser.Scene,
     camera: Phaser.Cameras.Scene2D.Camera,

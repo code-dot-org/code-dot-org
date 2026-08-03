@@ -23,5 +23,19 @@ These are a set of ideas that improve the basic building of projects geared towa
      after the press: it reappears at 41% of the canvas and falls again, where
      before it stayed at 80–82% throughout.
 3. Map editing and placing actors adds them to the currently running program. Moving them moves them in the running program. Editing properties modifies them in the current running program.
+   - _Moving and editing: done_ — see §1's actor properties.
+   - _Adding and removing: the engine and driver are ready._
+     `World.removeActor(actor | id)` is the half `addActor` never had, and there
+     is a `remove actor` block for it (a runtime act: "when the player lands,
+     remove it"). Removal is DEFERRED while a tick is running and immediate
+     otherwise — a removal almost always comes from inside the tick that
+     noticed it, and splicing the actor list underneath a walk would skip the
+     actor after the one removed; the sweep runs after the steps and their
+     events, before the frame is drawn. The driver destroys the Phaser object
+     of an actor that has left, and releases its filters, so nothing is left on
+     screen belonging to nothing.
+     What remains for this policy is the RECONCILER: a placement added or
+     removed still changes `actorIds`, which is structural, so it restarts.
+     Diffing that list is now possible because both halves exist.
 4. Adding or removing or otherwise modifying the background of a World should be possible while the program is running.
 5. Changing rules or traits, however, will perform a full reset of the current World.
