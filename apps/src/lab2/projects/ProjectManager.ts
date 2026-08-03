@@ -264,10 +264,9 @@ export default class ProjectManager {
   }
 
   /**
-   * Force save the last sourcesToSave, if it exists. This is used to flush out any
-   * remaining enqueued saves. If a save is already in flight, we wait for it to
-   * finish and then save anything that changed while it ran, so the returned
-   * promise resolves only once the pending changes have been written.
+   * Force save the last sourcesToSave, if it exists. If a save is already in flight,
+   * we wait for it to finish and then save anything that changed while it ran,
+   * so the returned promise resolves only once the pending changes have been written.
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
