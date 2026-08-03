@@ -1,0 +1,283 @@
+# Plan: maps in the world
+
+A world places actors two ways today. `add actor` places one, with its
+per-instance values set by blocks chained under it; `load map` places everything
+a `.map` file describes, which is where an arrangement of twenty coins belongs
+because twenty `add actor` stacks is not an arrangement, it is a wall of blocks.
+
+Neither reaches an actor a world defines for itself (BACKGROUNDS-adjacent work;
+see `blockly/localActors`). `add actor` does — one at a time. A `.map` cannot:
+its entries name a type, a type is a module path, and a world-local actor has no
+module. That is not an oversight to patch. A file that could name the private
+actor of one world would be a file that means nothing anywhere else, and the
+whole point of the file form is that it is shared.
+
+So: **`create actor in map`** — a block in the world's body that places many
+actors of one type, with a field that opens the map editor scoped to that type.
+Sugar over `add actor`, in the same sense a map file is sugar over twenty of
+them, and the arrangement lives in the world rather than beside it.
+
+## 1. The map is not a file
+
+The placements are part of the `.world` file — its Blockly serialization —
+rather than a `.map` of their own.
+
+This is a constraint, not a preference, and it follows from what the actors are.
+An actor defined in a world exists only in that world (BACKGROUNDS.md's
+neighbour: `specs/INTERFACE.md` on files as the unit of sharing). A file
+describing where those actors sit would be a file that only one world can read,
+sitting in a folder whose whole promise is that anything in it can be used
+anywhere. The arrangement of a world's own actors is part of that world in
+exactly the way its rules are.
+
+It also removes a class of breakage nobody would enjoy: a `.map` renamed,
+deleted or moved while a world still names it. There is nothing to keep in step
+when there is nothing beside it.
+
+## 2. Where it lives: the block's own state
+
+Each `create actor in map` block carries its placements in Blockly's
+`extraState` — the per-block state a mutator saves and loads, which
+`extensions/sliderRange` and `extensions/effectParamsMutator` already use.
+
+```jsonc
+// inside the `.world` workspace, on one `world_create_in_map` block
+{
+  "type": "world_create_in_map",
+  "id": "mk1",
+  "fields": {"ACTOR": "local:localActorBlock"},
+  "extraState": {
+    "placements": [
+      {"id": "c1", "properties": {"Space": {"position": {"x": 64, "y": 96}}}},
+      {"id": "c2", "properties": {"Space": {"position": {"x": 128, "y": 96}}}},
+    ],
+  },
+}
+```
+
+One block, one actor type, its own placements. Three consequences worth stating:
+
+- **Deleting the block deletes its actors**, and nothing else's. There is no
+  shared document to garbage-collect, and no way to leave orphans behind.
+- **Undo is Blockly's.** A placement made in the popup is a change to a block,
+  so ⌘Z is the editor's own undo rather than something the dialog has to
+  reimplement.
+- **The `.world` file grows with the placements.** A hundred actors is a few KB
+  of JSON — small beside the project's images, and the same order as the blocks
+  around it. A thousand would be a different conversation; §7.
+
+Each entry omits `type`: the block's ACTOR field says which actor these are, and
+storing it twice is storing it wrong. The generator supplies it (§3).
+
+## 3. The block, and what it generates
+
+```
+create [Coin ▾] in map  (edit…)      ← a statement in the world's body
+```
+
+The ACTOR dropdown is `actorFieldOptions` — the project's actor modules and the
+world's own actors, the same list `add actor` offers. `(edit…)` opens the popup.
+
+The generated code needs no engine change, because `loadMap` already does this
+job: it resolves each entry's `properties[ownerId][propId]` against the world's
+property registry, stamps the actor's `type`, and disambiguates instance ids
+(`WorldBuilder.loadMap`, `resolveInstanceId`).
+
+```js
+// a world's own actor: the template is a const in this same module
+world.define('Coin', actor_Coin_mk1);
+world.loadMap({
+  actors: [
+    {
+      type: 'Coin',
+      id: 'mk1:c1',
+      properties: {Space: {position: {x: 64, y: 96}}},
+    },
+    {
+      type: 'Coin',
+      id: 'mk1:c2',
+      properties: {Space: {position: {x: 128, y: 96}}},
+    },
+  ],
+});
+```
+
+```js
+// a module actor: imported, exactly as `add actor` imports one
+import Coin from "actors/coin";
+world.define("actors/coin", Coin);
+world.loadMap({actors: [{type: "actors/coin", id: "mk1:c1", …}]});
+```
+
+Notes on the shape:
+
+- **Each block loads its own literal**, so there is no coordination problem —
+  the "who emits `loadMap`" question that a shared document would have forced,
+  and no chance of loading the same map twice (`loadMap` is additive).
+- **Instance ids are prefixed with the block's id.** They must be unique across
+  the world and stable across rebuilds — stable because that is what lets the
+  reconciler tell "the same actor moved" from "a different actor"; prefixed
+  because two blocks may both have a `c1`.
+- **`world.define` is emitted even though the literal could carry the builder**,
+  because the type string is what a placed actor is known by: `is a` compares
+  against it, and so does anything asking for actors of a kind.
+
+## 4. The popup: the map editor, scoped
+
+The field opens what `MapEditor.tsx` already is, minus the part that chooses
+what to place:
+
+- **No palette.** The type is the block's, so the editor is in place mode for
+  exactly one template and there is nothing to select between.
+- **The rest of the world is drawn, and is not selectable.** Every other
+  `create actor in map` block in this workspace contributes its placements as
+  context — you are arranging coins _in a world_, and a coin's place is
+  meaningless without the ground under it. Clicking one does nothing; it belongs
+  to another block.
+- **The inspector is unchanged**: the selected instance's traits and properties,
+  from the schema the sandbox introspects (§5).
+
+That is the whole of the difference, which is the argument for making it the
+same component rather than a second one: extract the canvas + inspector from
+`MapEditor` into a piece that takes the placements it may edit, the placements
+it may only draw, and the one type it places. The file editor passes the whole
+map and the project's actor list; the popup passes one block's placements, its
+siblings', and one type.
+
+**Done — the extraction is implemented.** `MapStage` is the canvas and the
+inspector: the camera, the drawing, the gestures, and the panel. It takes the
+document it edits, a `context` list it draws behind and never selects, and the
+type a click places. `MapEditor` is now the file half — parse, serialize,
+palette, and the sandbox introspection — at 125 lines against the 1103 it was;
+`mapModel.ts` holds the document types and accessors both need.
+
+Two pieces of state moved with the canvas rather than staying above it: the
+selected PLACEMENT (the palette above only knows which template is being placed)
+and the decoded thumbnail images (a drawing detail). Entering place mode still
+clears the selection, but the stage does that itself now — it owns the state, so
+it owns the rule.
+
+The `.map` editor has no unit tests, so this was checked by driving it: the
+palette lists Player / Ground / Coin / Ball with four thumbnails, choosing Coin
+enters place mode, a canvas click places one and the game restarts, clicking it
+back in select mode opens the inspector on `coin-88e36299` with its position,
+scale and rotation fields, dragging moves it and the inspector follows to
+(176, 176), and Reset view returns to 200%. No console errors.
+
+Writing back is a `saveExtraState`-shaped change to the block, through the same
+handler seam the sprite picker and the effect import use
+(`blockly/spritePick`, `appearance/appearanceImport`): a Blockly field cannot
+reach React, so the editor registers a handler while it is mounted and the field
+asks through it.
+
+## 5. What blocks this: a world-local actor has no schema
+
+The inspector is driven by `schemas[type]`, which the sandbox builds by
+introspecting real actor instances — and it builds them from the **thumbnail
+manifest**, which imports actor modules by path:
+
+```js
+// runtime/thumbnailManifest.ts
+import W from 'worlds/main';
+import M0 from 'actors/coin';
+export default {world: W, actors: [{type: 'actors/coin', builder: M0}]};
+```
+
+An actor defined inside the world is not a module and cannot be imported. So for
+exactly the actors this block exists to serve, the popup would draw a canvas and
+an empty inspector — placements you can move but not configure.
+
+**The fix, and it is step one.** The world's module already gets imported by the
+manifest, so let it carry its own templates out:
+
+```js
+const localActors = {};                       // assembler, when any are defined
+const actor_Coin_mk1 = new WorldLab.ActorBuilder({id: "Coin", name: "Coin"});
+{ const actor = actor_Coin_mk1; /* traits, values */ }
+localActors["Coin"] = actor_Coin_mk1;         // the define block
+const world = new WorldLab.WorldBuilder(…);
+export default world;
+export {localActors};                         // assembler
+```
+
+`assembleWorldModule` already orders definitions before the world and already
+knows which top-level blocks are `world_actor`, so both added lines are its to
+emit. The manifest then reads `W`'s companion export and describes those
+builders the same way it describes an imported one.
+
+**Done — this part is implemented.** Every world declares and exports
+`localActors`, defined actors or not: an export that is only sometimes there is
+one its importers must ask about first, and empty is a perfectly good answer.
+The `define actor` block registers itself under the type a placement carries
+(`localActors["Coin"] = actor_Coin_ab1`), and `thumbnailManifest` spreads them in
+beside the imported modules. Two actors of one name share a key, as they already
+share what `is a` can tell about them.
+
+Checked in the browser, because the manifest is compiled rather than bundled and
+a broken one would only show there: a world with a `define actor` in it restarts
+and runs, and opening `level1.map` still compiles the manifest, draws its four
+thumbnails and lists Player / Ground / Coin / Ball. The other half — a local
+actor's schema actually reaching the inspector — has no way to show until the
+popup exists (§4), and is pinned by tests until then.
+
+This is worth doing whether or not the block ships: an actor you cannot inspect
+is an actor the map editor cannot help you place, and that is true of `add
+actor` too.
+
+## 6. What happens to `.map` files
+
+Nothing, for now. `load map` and `maps/*.map` keep working and keep their reason
+to exist: an arrangement several worlds load, authored in a file, is a real
+thing — the starter project's `level1.map` is one.
+
+The two forms answer different questions. A file says "this arrangement is a
+thing in its own right"; a block says "this world has these actors in these
+places". A project may use both, and the popup draws the file's actors as
+context too if the world loads one (§4, second bullet) — worth having, not worth
+blocking on.
+
+If in-world maps turn out to cover everything a learner actually does, the file
+form becomes a levelbuilder feature rather than a learner one. That is a
+conclusion to reach from use, not from this document.
+
+## 7. Costs, and what is deliberately not solved
+
+- **Size.** The placements ride in the `.world` file, which rides in the project
+  save. A hundred actors is a few KB; ten thousand tiles would not be, and this
+  is not a tilemap — a floor is one wide Ground actor, as the starter project
+  already has it.
+- **No sharing.** Two worlds cannot use the same in-world arrangement. That is
+  what the file form is for, and copying a block between worlds copies its
+  placements with it.
+- **One type per block.** Arranging a scene means several blocks, each opened in
+  turn. The alternative — one popup that edits everything — is the map file
+  editor, which exists. This block is deliberately the narrow one: it makes
+  "twenty of these, here" a single act.
+- **Tile size** is the lab's (`runtime/viewport.TILE_SIZE`), not the map's. The
+  `.map` file carries a `tile` because a file has to say; a block in a world does
+  not, and a per-block grid would be a setting with no consequence outside the
+  editor.
+
+## 8. Testing
+
+- **Pure, in vitest**: the block's generator (both actor kinds, empty state, a
+  deleted definition), `saveExtraState`/`loadExtraState` round-tripping, id
+  prefixing and uniqueness, and the manifest's new export.
+- **The scoped editor**, in jsdom: it places only its own type, draws its
+  siblings' placements, refuses to select them, and writes back exactly the
+  placements it was given plus the new one.
+- **In the browser** (Playwright against `dev:isolated`): place three actors in
+  the popup, close it, and see three actors in the preview — then reload and see
+  them still there, which is the test that the state really did land in the
+  `.world` file.
+
+## 9. Order of work
+
+1. **The manifest gap** (§5): `localActors` export, manifest reads it, schemas
+   arrive for world-local actors. Useful on its own — `add actor` benefits too.
+2. **Extract** the map editor's canvas + inspector from `MapEditor.tsx`, with
+   the file editor as its first caller and no behaviour change. (Done — §4.)
+3. **The block**: `world_create_in_map`, its `extraState`, its generator.
+4. **The popup**: the extracted editor, scoped, behind the field's handler seam.
+5. **Context**: draw the siblings' placements, and the loaded `.map`'s if there
+   is one.

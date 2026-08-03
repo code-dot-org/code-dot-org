@@ -30,11 +30,31 @@ export function assembleActorModule(blocks: GeneratedBlock[]): string {
  * `load map` children inline — so it is the only top-level block; any stray
  * others are appended before the default export. Imports are hoisted by
  * `finish()`.
+ *
+ * With one exception, and it is the same one the actor module has: a world may
+ * define actors of its own (`blockly/localActors`), each a `const` the world's
+ * body then places with `add actor`. Those must be declared BEFORE the world
+ * block, or placing one reads a variable in its temporal dead zone — and where
+ * a definition sits on the canvas is not something a learner should have to
+ * think about.
  */
 export function assembleWorldModule(blocks: GeneratedBlock[]): string {
   const world = blocks.find(block => block.type === 'world_world');
-  const rest = blocks.filter(block => block !== world);
+  const actors = blocks.filter(block => block.type === 'world_actor');
+  const rest = blocks.filter(
+    block => block !== world && !actors.includes(block),
+  );
+  const actorsCode = actors.map(block => block.code).join('');
   const worldCode = world ? world.code : '';
   const restCode = rest.map(block => block.code).join('');
-  return `${worldCode}${restCode}export default world;\n`;
+  // `localActors` is declared and exported by every world, defined actors or
+  // not: a module that only sometimes has an export is a module its importers
+  // have to ask about first, and the thumbnail manifest imports it by name
+  // (MAPS.md §5). Empty is a perfectly good answer.
+  return (
+    `const localActors = {};\n` +
+    `${actorsCode}${worldCode}${restCode}` +
+    `export default world;\n` +
+    `export {localActors};\n`
+  );
 }
