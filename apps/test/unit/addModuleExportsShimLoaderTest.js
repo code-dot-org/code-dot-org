@@ -1,13 +1,20 @@
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
+
 import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const shim = require('../../lib/add-module-exports-shim-loader');
 
 // Run the loader on `source`, then execute the result as a CommonJS
-// module and return its final module.exports.
-function runShimmed(source) {
+// module and return its final module.exports.  `resourcePath` stands in
+// for the original on-disk source; when omitted the loader treats the
+// marker as swc-added.
+function runShimmed(source, resourcePath) {
   let out;
   shim.call(
     {
+      resourcePath,
       callback: (err, code) => {
         assert.isNull(err);
         out = code;
@@ -86,6 +93,54 @@ _export(exports, {
     assert.isTrue(exported.__esModule);
     assert.equal(exported.foo, 1);
     assert.equal(exported.default, 'dflt');
+  });
+
+  it('keeps the marker on export-star re-export files', function () {
+    // `export * from` emits _export_star, whose defineProperty happens
+    // at runtime inside the helper — static detection must still count
+    // it as an ESM export declaration.
+    const exported = runShimmed(
+      swcModule(`
+function _export_star(from, to) {
+  Object.keys(from).forEach(function (k) {
+    if (k !== 'default' && !Object.prototype.hasOwnProperty.call(to, k)) {
+      Object.defineProperty(to, k, {
+        enumerable: true,
+        get: function () { return from[k]; },
+      });
+    }
+  });
+  return from;
+}
+_export_star({widget: 1}, exports);`)
+    );
+    assert.isTrue(exported.__esModule);
+    assert.equal(exported.widget, 1);
+  });
+
+  it('keeps a marker the source itself authors (rollup CJS dist)', function () {
+    // react-loading-skeleton/dist/index.js pattern: prebuilt CJS that
+    // stamps its own __esModule and exports via plain assignment.
+    // babel classifies it as a script and leaves it alone; stripping
+    // its marker makes default-import interop double-wrap the exports
+    // object, which surfaced as React error #130.
+    const source = `
+Object.defineProperty(exports, '__esModule', { value: true });
+function Skeleton() { return 'bones'; }
+function SkeletonTheme() { return 'theme'; }
+exports.SkeletonTheme = SkeletonTheme;
+exports["default"] = Skeleton;`;
+    const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'shim-test-'));
+    const file = path.join(dir, 'index.js');
+    fs.writeFileSync(file, source);
+    try {
+      const exported = runShimmed(source, file);
+      assert.isTrue(exported.__esModule);
+      assert.equal(exported.default(), 'bones');
+      assert.equal(exported.SkeletonTheme(), 'theme');
+    } finally {
+      fs.rmSync(dir, {recursive: true, force: true});
+    }
   });
 
   it('passes plain CommonJS sources through untouched', function () {

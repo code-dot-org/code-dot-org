@@ -21,15 +21,20 @@
  */
 'use strict';
 
+const fs = require('fs');
+
 const MARKER =
   /Object\.defineProperty\(exports,\s*["']__esModule["'],\s*\{\s*value:\s*true,?\s*\}\s*\);?/;
 // swc declares exports through its _export helper when there are
-// several, and through a bare defineProperty for a single one.  The
+// several, through a bare defineProperty for a single one, and through
+// _export_star for `export * from` re-exports (whose defineProperty
+// only happens at runtime inside the helper).  The
 // property name cannot be pattern-matched directly: builtin swc hoists
 // leading comments BETWEEN the defineProperty arguments.  Instead,
 // remove the marker statement and test whether any defineProperty on
 // exports remains.
-const HAS_ESM_EXPORTS = /_export\(exports,|Object\.defineProperty\(exports,/;
+const HAS_ESM_EXPORTS =
+  /_export\(exports,|_export_star\(|Object\.defineProperty\(exports,/;
 
 const FOOTER = `
 ;(function () {
@@ -49,7 +54,21 @@ module.exports = function addModuleExportsShim(source, map, meta) {
   const withoutMarker = source.replace(MARKER, '');
   if (!HAS_ESM_EXPORTS.test(withoutMarker)) {
     // Module-classified file with no export declarations: babel would
-    // not have stamped it.
+    // not have stamped it.  But only strip a marker swc ADDED — CJS
+    // sources that author their own marker with assignment-style
+    // exports (rollup dist output such as react-loading-skeleton) are
+    // script-classified by babel and must pass through untouched;
+    // stripping theirs makes default-import interop double-wrap.
+    let original = '';
+    try {
+      original = fs.readFileSync(this.resourcePath, 'utf8');
+    } catch (e) {
+      // Virtual or unreadable resource: assume the marker came from swc.
+    }
+    if (original.includes('__esModule')) {
+      this.callback(null, source, map, meta);
+      return;
+    }
     this.callback(null, withoutMarker, map, meta);
     return;
   }
