@@ -21,8 +21,23 @@
   line-height: 22px;
 }
 
+// MUI's Typography root sets `margin: 0` at single-class
+// specificity, so pair our class with the MUI class to win on specificity
+// rather than on stylesheet load order.
+.headingWithMargins {
+  &:global(.MuiTypography-root) {
+    margin: 25px 0 10px 0;
+  }
+}
+
 .titleNoTopMargin {
   margin-top: 0;
+
+  // .headingWithMargins above is also 0-2-0, so add a class to outrank it when
+  // a heading carries both, instead of depending on which rule comes last.
+  &.headingWithMargins:global(.MuiTypography-root) {
+    margin-top: 0;
+  }
 }
 
 // Bulletless list, shared by LessonStandards and LessonAgenda.
@@ -36,6 +51,10 @@
   display: flex;
   flex-direction: row;
   margin-top: 40px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
 }
 
 .left {
@@ -83,10 +102,11 @@
 
 .copyResourceWarningArea {
   padding: 10px 10px 0;
-  border: 2px solid #f5e79e;
+  border: 2px solid var(--borders-warning-light);
   border-radius: 4px;
-  background-color: #fcf8e3;
-  color: #8a6d3b;
+  background-color: var(--background-warning-light);
+  color: var(--text-neutral-secondary);
+  margin-bottom: 10px;
 }
 
 // -- StudentLessonOverview -------------------------------------------------
@@ -173,10 +193,20 @@
 // -- Activity --------------------------------------------------------------
 
 .activityHeader {
-  color: $purple;
+  // MuiTypography-root sets `color` at the same specificity, so pair with the
+  // MUI class rather than relying on stylesheet load order.
+  &:global(.MuiTypography-root) {
+    color: var(--text-brand-purple-primary);
+  }
 }
 
 // -- ActivitySection -------------------------------------------------------
+
+.activitySectionHeader {
+  &:global(.MuiTypography-root) {
+    margin: 10px 0;
+  }
+}
 
 .textAndProgression {
   display: flex;
@@ -184,16 +214,11 @@
   width: 100%;
 }
 
-.remarksHeader {
-  margin-top: 0;
-}
-
 .remarks {
   margin-left: 5px;
   font-style: italic;
 }
 
-// Applied to the section body only when the section has remarks.
 .remarksBody {
   margin-bottom: 5px;
   padding-left: 5px;

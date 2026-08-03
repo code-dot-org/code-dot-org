@@ -1240,7 +1240,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'Laurel Lesson 2 #1 | custom-script-laurel - Code.org [test]',
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_equal "Laurel Lesson 2 #1 | custom-script-laurel - #{brand_name} [test]",
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 

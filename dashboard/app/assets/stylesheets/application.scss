@@ -479,9 +479,24 @@ img.video_thumbnail {
   }
 }
 
+// Clips project-header content that exceeds its allocated width (the lesson
+// title and Share/Remix share the row).
+.project_info_container {
+  overflow: hidden;
+}
+
 // Pill nav links and outlined header buttons for codeai-next/codeai-audit;
 // default codeai keeps its square 35px/4px buttons and orange hover underline.
 @include codeai-brand {
+  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
+  // outside the buttons while still containing overflowing content. Browsers
+  // without overflow-clip-margin clip the rings at the box; browsers without
+  // clip keep the hidden fallback above.
+  .project_info_container {
+    overflow: clip;
+    overflow-clip-margin: 4px;
+  }
+
   // Marketing-site spacing model: no container gap, spacing comes from pill padding.
   .header-wrapper .headerlinks {
     flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
@@ -534,6 +549,20 @@ img.video_thumbnail {
     &:focus-visible {
       outline: 1px solid var(--borders-neutral-white-fixed);
       outline-offset: 2px;
+    }
+  }
+
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
     }
   }
 
