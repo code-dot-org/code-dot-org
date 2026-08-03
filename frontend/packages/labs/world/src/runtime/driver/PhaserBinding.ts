@@ -323,7 +323,23 @@ export class PhaserBinding {
         world.effects(),
       );
 
-      for (const state of world.renderSnapshot() as RenderState[]) {
+      const snapshot = world.renderSnapshot() as RenderState[];
+
+      // Actors that have left the world (`World.removeActor`) take their
+      // drawing with them. Without this the sprite stays on screen — still
+      // filtered, still lit — belonging to nothing.
+      if (objects.size > snapshot.length) {
+        const present = new Set(snapshot.map(state => state.actor));
+        for (const [actor, object] of [...objects]) {
+          if (!present.has(actor)) {
+            effectRegistry.release(object);
+            object.destroy();
+            objects.delete(actor);
+          }
+        }
+      }
+
+      for (const state of snapshot) {
         let object = objects.get(state.actor);
         if (!object) {
           object = create(scene, state);
