@@ -11,11 +11,11 @@ DEPRECATED = [
 def detect_deprecated_code
   Dir.chdir REPO_DIR do
     diff_output = `git diff --cached -- . ':(exclude)tools/hooks/deprecated_code.rb' ':(exclude)apps/src/code-studio/initApp/project.js' --unified=0`
-    # The diff may include hunks from binary files whose bytes aren't valid
-    # UTF-8. Scrub to UTF-8 so each_line / match? below don't raise
-    # ArgumentError: invalid byte sequence in UTF-8. We're only scanning
-    # for ASCII identifiers, so dropping un-decodable bytes is safe.
-    diff_output = diff_output.encode('UTF-8', invalid: :replace, undef: :replace, replace: '')
+    # The diff can carry raw binary (a staged binary file, or a diff driver
+    # that expands LFS pointers to file contents), and match? below raises
+    # on invalid UTF-8. The scan only looks for ASCII identifiers, so
+    # dropping the un-decodable bytes loses nothing.
+    diff_output = diff_output.scrub('')
 
     # Only consider added lines (those starting with '+', excluding the diff metadata lines)
     @added_lines = diff_output.each_line.select {|line| line.start_with?('+') && !line.start_with?('+++')}.map {|line| line[1..]}.join
