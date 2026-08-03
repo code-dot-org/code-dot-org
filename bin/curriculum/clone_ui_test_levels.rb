@@ -14,7 +14,10 @@
 #
 # Must run with levelbuilder_mode on so the level after_save hooks write the
 # new definition files (under dashboard/test/ui/config); commit the result.
-# Idempotent: clones are found by name on re-run.
+# Within a run, clones are found by name, so a level shared by several
+# script_levels or units is cloned only once. Re-running on an already
+# migrated unit raises: its script_levels already point at "UI Test " levels,
+# and cloning those would double the prefix.
 #
 # The existing clone helpers (Unit#clone_migrated_unit, Level#clone_with_name,
 # Level#clone_with_suffix and its LevelGroup/BubbleChoice overrides) are too
@@ -30,6 +33,22 @@ require 'optparse'
 $verbose = false
 
 UI_TEST_LEVEL_NAME_PREFIX = 'UI Test '.freeze
+MAX_LEVEL_NAME_LENGTH = 70
+
+# Teacher-facing answer material, held as ciphertext under the prod
+# properties_encryption_key. These fields are dropped during cloning because:
+# 1. every consumer reads the decrypted value, so the ciphertext is inert
+#    wherever the key is absent, and
+# 2. we are working toward eliminating UI test dependencies on the key.
+#
+# encrypted_validation is deliberately absent from this list. Javalab reads
+# whether that property is present rather than what it decrypts to, so
+# dropping it would turn a validated level into an unvalidated one.
+ANSWER_PROPERTIES = %w(
+  encrypted_solution
+  encrypted_examples
+  encrypted_exemplar_sources
+).freeze
 
 def parse_options
   options = {}
@@ -67,10 +86,17 @@ end
 # as needed. Returns the level itself for deprecated blockly levels.
 def clone_level(level)
   return level if level.key.start_with?('blockly:')
+  if level.ui_test?
+    raise "#{level.name.dump} already carries the #{UI_TEST_LEVEL_NAME_PREFIX.dump} prefix; " \
+      "cloning it would double the prefix. Is this unit already migrated?"
+  end
 
   new_name = "#{UI_TEST_LEVEL_NAME_PREFIX}#{level.name}"
-  if new_name.length > 70
-    raise "cannot clone #{level.name.dump}: #{new_name.dump} exceeds the 70 character level name limit"
+  if new_name.length > MAX_LEVEL_NAME_LENGTH
+    raise "cannot clone #{level.name.dump}: #{new_name.dump} exceeds the " \
+      "#{MAX_LEVEL_NAME_LENGTH} character level name limit. Names this long are dealt with by " \
+      "hand as they come up: make a shorter-named copy of the level, without the prefix, point " \
+      "the unit at the copy, and re-run."
   end
 
   existing = Level.find_by_name(new_name)
@@ -89,8 +115,9 @@ end
 # the new file at its canonical path under test/ui/config/scripts.
 def clone_dsl_level(level, new_name)
   if level.level_encrypted? && CDO.properties_encryption_key.blank?
-    raise "cannot clone encrypted level #{level.name.dump} without properties_encryption_key; " \
-      "see the plan's step-3 encrypted-DSL contingency"
+    raise "cannot clone encrypted level #{level.name.dump}: reading its dsl text requires " \
+      "properties_encryption_key in locals.yml. Either set the key, or write a plaintext " \
+      "replacement level and point the unit at that instead (see dashboard/test/ui/config/README.md)."
   end
 
   dsl_text = level.dsl_text
@@ -124,6 +151,7 @@ def clone_custom_level(level, new_name)
   clone.name = new_name
   # :published makes write_to_file? true, so the level file gets written
   clone.published = true
+  clone.properties = clone.properties.except(*ANSWER_PROPERTIES)
   clone.audit_log = [{changed_at: Time.now, changed: ["cloned from #{level.name.dump}"], cloned_from: level.name}].to_json
   clone.contained_level_names = contained_names if contained_names.present?
   clone.project_template_level_name = template_name if template_name
