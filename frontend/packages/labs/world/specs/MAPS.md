@@ -284,16 +284,65 @@ conclusion to reach from use, not from this document.
   not, and a per-block grid would be a setting with no consequence outside the
   editor.
 
-## 7a. An unrelated thing this turned up
+## 7a. An unrelated thing this turned up — since fixed
 
-A block dragged into a `.world` file does not come back after a full page
-reload: the saved file has it (the compiler reads the same file and places its
-actors), but the editor's workspace comes up showing the STARTER contents. It
-happens to a plain `add actor` exactly as it does to `create actor in map`, so it
-is neither this feature's nor new — it looks like the editor rendering the
-contents it mounted with rather than the sources that arrived afterwards, which
-is the same shape as the `LabWithSources` / `initialSources` wrinkle noted
-elsewhere. Worth chasing on its own; nothing here depends on it.
+A block dragged into a `.world` file did not come back after a full page reload:
+the saved file had it (the compiler read the same file and placed its actors),
+but the editor's workspace came up showing the STARTER contents. It happened to a
+plain `add actor` exactly as it did to `create actor in map`, so it was neither
+this feature's nor new.
+
+The cause: every custom editor seeded itself from `initialContents` once, at
+mount, and the project finishes loading AFTER that — `onLevelLoad` replaces the
+sources through the context (which is why the compiler had the saved file), but
+nothing told an already-mounted editor to look again. So the workspace showed a
+project nobody had any more, and half a minute later would have saved it back
+over the real one.
+
+Three changes: one that stops the situation arising, and two that make the
+system honest about it either way.
+
+**The sources are now a value, not an event.** `LabWithSources` reads
+`state.lab.initialSources` from redux and passes it to `SourcesProvider`, which
+was always shaped to take it (`getInitialSources` prefers it; the provider
+reinitializes when it changes) and never got it. Before, the loaded project
+reached the context only through `LevelLoadCompleted` — which a provider that
+mounts AFTER the load never hears, leaving it on the level's start sources with
+nothing to correct it. `Lab` renders nothing while `isLoadingProjectOrLevel`, so
+that order is a real one.
+
+**Each editor re-seeds when its file changes underneath it.** It keeps the
+contents it is in step with — what it was seeded from, plus everything it has
+written since — and reloads when anything else arrives: `BlocklyFileEditor`,
+`MapEditor`, `AnimationEditor`, and Codebridge's text editor, which had it too.
+
+**And nothing mounts before the sources are known.** `LabHost` gated on
+`!levelPropertiesMap || !appOptions` — the level METADATA. `loadLab`, which
+fetches the sources, goes out from an effect a render later, so the lab mounted,
+rendered the level's start sources, and swapped them for the learner's project a
+moment later. That flicker is the situation these guards were catching.
+
+The gate is now a positive signal, `hasLoadedProjectFor(levelId)`, recorded where
+the sources become known (`onLevelChange`, which every path reaches — including
+levels with no project at all) and cleared when a new load starts. Positive
+because the absence of a load in flight is not the same as a load having
+happened: `isLoadingProjectOrLevel` is false before the dispatch as well as
+after it lands, so a host waiting on the flag still gets one render with no
+sources. A spinner that says nothing yet beats a lab that says the wrong thing
+and corrects itself.
+
+Measured, by disabling each in turn against the same reload:
+
+|                       | dragged block after a reload |
+| --------------------- | ---------------------------- |
+| none of the three     | gone (8 blocks)              |
+| provider change only  | gone (8 blocks)              |
+| per-editor guard only | back (9 blocks)              |
+| loading gate only     | back (9 blocks)              |
+
+So the gate is what makes the common case correct, and the guard is what catches
+the rest: sources are replaced under a mounted editor by a version restored, a
+Start Over, and a level switch (Lab2 does not reload the page between levels).
 
 ## 8. Testing
 

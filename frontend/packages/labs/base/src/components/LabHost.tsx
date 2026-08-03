@@ -9,6 +9,7 @@ import {
 
 import {useLoadLab} from '../contexts/ProjectContext';
 import {useThrowIfPageError} from '../hooks/useThrowIfPageError';
+import {labActions, useAppSelector} from '../redux';
 
 import Lab from './Lab';
 import LabErrorBoundary from './LabErrorBoundary';
@@ -157,12 +158,25 @@ function LabHostContent(props: LabHostProps) {
   // Re-throw a failed `loadLab` (recorded in redux) into the boundary.
   useThrowIfPageError();
 
+  // Nothing renders until this level's project data has arrived. The metadata
+  // above is not enough: `loadLab` goes out from an effect a render later, so a
+  // lab mounted on metadata alone is a lab seeded from the level's START
+  // sources — it would show those, then swap them for the learner's project a
+  // moment later. A spinner that says nothing yet is better than a lab that
+  // says the wrong thing and corrects itself.
+  //
+  // Positive by design (`hasLoadedProjectFor`), not "no load in flight": that
+  // flag is false before the load is dispatched as well as after it lands.
+  const hasLoadedProject = useAppSelector(
+    labActions.hasLoadedProjectFor(levelId),
+  );
+
   // The single `<Lab>` for the whole tree lives here, at the host. It publishes
   // the resolved level data to context; the entrypoint and its LabWithSources
   // read it rather than receiving props, so nothing double-wraps `<Lab>`.
   return (
     <Lab
-      isLoading={!levelPropertiesMap || !appOptions}
+      isLoading={!levelPropertiesMap || !appOptions || !hasLoadedProject}
       standaloneProjectType={props.standaloneProjectType}
       levelId={levelId}
       levelPropertiesMap={levelPropertiesMap}

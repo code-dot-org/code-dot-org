@@ -45,6 +45,18 @@ export interface LabState {
   // If we are currently loading common data for a project or level. Should only be used internally
   // by this Redux file.
   isLoadingProjectOrLevel: boolean;
+  /**
+   * The level whose project data has arrived, or undefined before any has.
+   *
+   * A POSITIVE signal, because the absence of a load in flight is not the same
+   * as a load having happened: `isLoadingProjectOrLevel` is false both before
+   * `loadLab` is dispatched (it goes out from an effect, a render after the
+   * level metadata lands) and after it settles. A host that waits on the flag
+   * alone still gets one render with no sources — long enough to show a lab
+   * seeded from the level's start sources and then swap it for the learner's
+   * project, which is the flicker this exists to prevent.
+   */
+  loadedLevelId: number | undefined;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
   // If we are currently loading the theme
@@ -77,6 +89,7 @@ export interface LabState {
 
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
+  loadedLevelId: undefined,
   isLoading: false,
   isLoadingTheme: false,
   pageError: undefined,
@@ -144,6 +157,11 @@ const slice: Slice<LabState> = createSlice({
       }>,
     ) {
       const {levelProperties, appOptions} = action.payload;
+      // Everything a lab needs to render correctly is in this action, including
+      // a level that has no project at all (`usesProjects` false, edit modes,
+      // exemplars — they reach here too, with no sources, which is the right
+      // answer for them).
+      state.loadedLevelId = levelProperties.id;
       state.channel = action.payload.channel;
       // Cast needed because LevelProperties contains readonly nested types (BlockOptionsList)
       // that conflict with Immer's WritableDraft requirements
@@ -185,6 +203,9 @@ const slice: Slice<LabState> = createSlice({
     });
     builder.addCase(loadLab.pending, state => {
       state.isLoadingProjectOrLevel = true;
+      // Switching levels does not reload the page (Lab2), so what was loaded
+      // before is not what is being asked for now.
+      state.loadedLevelId = undefined;
     });
     builder.addCase(clearPageError, state => {
       state.pageError = undefined;
@@ -472,6 +493,17 @@ async function setUpAndLoadProject(
   }
   return await projectManager.load(resetToStartSources);
 }
+
+/**
+ * Whether this level's project data has arrived.
+ *
+ * What a host should gate rendering on: a lab that mounts before this is true
+ * is a lab seeded from the level's start sources, which will be replaced the
+ * moment the project lands. An honest spinner beats showing the wrong project.
+ */
+export const hasLoadedProjectFor =
+  (levelId: number | undefined) => (state: RootState) =>
+    levelId !== undefined && state.lab.loadedLevelId === levelId;
 
 // If any load is currently in progress.
 export const isLabLoading = (state: RootState) =>

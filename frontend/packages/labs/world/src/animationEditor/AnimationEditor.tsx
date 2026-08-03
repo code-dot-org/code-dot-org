@@ -279,6 +279,17 @@ export const AnimationEditor = ({
   sourcesRef.current = currentSources;
 
   const [doc, setDoc] = useState(() => parseAnim(initialContents));
+  // What this editor is in step with — see MapEditor: a file replaced
+  // underneath it (the project finishing loading, a version restored) has to
+  // re-seed, or it edits and then saves a version nobody has any more.
+  const syncedContents = useRef(initialContents);
+  useEffect(() => {
+    if (initialContents === syncedContents.current) {
+      return;
+    }
+    syncedContents.current = initialContents;
+    setDoc(parseAnim(initialContents));
+  }, [initialContents]);
   // Latest doc for handlers that read-modify-write without re-subscribing.
   const docRef = useRef(doc);
   docRef.current = doc;
@@ -400,12 +411,16 @@ export const AnimationEditor = ({
   const commit = (next: AnimFile) => {
     setLive(next);
     if (!isReadOnly) {
-      onChange(serialize(next));
+      const text = serialize(next);
+      syncedContents.current = text;
+      onChange(text);
     }
   };
   const commitCurrent = () => {
     if (!isReadOnly) {
-      onChange(serialize(docRef.current));
+      const text = serialize(docRef.current);
+      syncedContents.current = text;
+      onChange(text);
     }
   };
   const withDef = (def: AnimDef): AnimFile => ({

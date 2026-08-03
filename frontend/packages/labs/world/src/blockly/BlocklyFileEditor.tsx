@@ -657,6 +657,18 @@ export const BlocklyFileEditor = ({
   // re-reads `initialContents`) when the active file changes.
   const startBlocks = useRef(parseWorkspace(initialContents)).current;
 
+  // The contents this workspace is in step with: what it was seeded from, plus
+  // everything it has written since.
+  //
+  // Anything else arriving on `initialContents` came from somewhere else, and
+  // the case that matters is the ordinary one: the project finishes loading
+  // AFTER this editor mounted, so the workspace was seeded from the starter and
+  // the file it is supposedly editing has been replaced underneath it. It then
+  // showed a project nobody has any more — a learner's saved work looked lost
+  // on every reload — and, worse, would eventually save the starter back over
+  // it. A version restored or a start-over lands here the same way.
+  const syncedContents = useRef(initialContents);
+
   const options = useMemo(
     () => ({
       readOnly: isReadOnly,
@@ -709,6 +721,9 @@ export const BlocklyFileEditor = ({
     (renamed: MultiFileSource, self: string): void => {
       const sources = sourcesRef.current;
       const file = renamed.files[fileId];
+      // This editor's own write, so the re-seed effect below leaves it alone —
+      // `pendingReload` already reloads the workspace from exactly this state.
+      syncedContents.current = self;
       updateSources({
         ...sources,
         source: {
@@ -866,6 +881,7 @@ export const BlocklyFileEditor = ({
         );
         reconcileMembers(edited);
         if (!pendingReload.current) {
+          syncedContents.current = edited;
           onChangeRef.current(edited);
         }
         return;
@@ -897,6 +913,7 @@ export const BlocklyFileEditor = ({
           return;
         }
       }
+      syncedContents.current = contents;
       onChangeRef.current(contents);
     },
     [handleRename, reconcileMembers],
@@ -957,6 +974,28 @@ export const BlocklyFileEditor = ({
     }
     workspace.scroll(scrollX, scrollY);
   }, [blocks]);
+
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace || initialContents === syncedContents.current) {
+      return;
+    }
+    syncedContents.current = initialContents;
+    const {scrollX, scrollY} = workspace;
+    // With events off, like the rename reload: the sources already hold this
+    // state, and re-saving it would be a second write of the file for an edit
+    // nobody made.
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(
+        parseWorkspace(initialContents),
+        workspace,
+      );
+    } finally {
+      Blockly.Events.enable();
+    }
+    workspace.scroll(scrollX, scrollY);
+  }, [initialContents]);
 
   // The selected block-color theme (its dark variant when the app is in dark
   // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.
