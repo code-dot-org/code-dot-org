@@ -553,9 +553,6 @@ export default class ProjectManager {
     this.executeSaveStartListeners();
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
-    // Snapshot what this save is responsible for. save(), rename() and
-    // updateChannel() can replace the pending values while the requests below
-    // are in flight; those newer edits belong to the next save, not this one.
     const sourcesBeingSaved = this.sourcesToSave;
     const channelBeingSaved = this.channelToSave;
     // If neither source nor channel has actually changed, no need to save again
@@ -634,6 +631,9 @@ export default class ProjectManager {
       try {
         channelResponse = await this.channelsStore.save(channelUpdate);
       } catch (error) {
+        // Leave the channel pending so a later save retries it, unless newer
+        // channel edits have already taken its place.
+        this.channelToSave ??= channelUpdate;
         this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }

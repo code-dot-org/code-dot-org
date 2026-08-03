@@ -1,6 +1,7 @@
 import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {ChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
@@ -726,6 +727,75 @@ describe('ProjectManager', () => {
     expect(sourcesStore.save.secondCall.args[1]).to.deep.equal(
       UPDATED_SOURCE_2
     );
+  });
+
+  it('retries the channel save after it fails', async () => {
+    const sourcesWithLabConfig: ProjectSources = {
+      source: 'fakeSource2',
+      labConfig: {music: {packId: 'fakePack'}},
+    };
+    stubSuccessfulSourceLoad(sourcesStore);
+    channelsStore.save.onFirstCall().rejects(new Error('channel save failed'));
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+      metricsReporter: stubObject<LabMetricsReporter>(
+        new LabMetricsReporter()
+      ),
+    });
+    await projectManager.load();
+
+    // The source lands, then the channel save fails.
+    await projectManager.save(sourcesWithLabConfig);
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(channelsStore.save.calledOnce);
+
+    // The channel is still pending, so the next save retries it. Only the
+    // channel: the source already saved.
+    await projectManager.flushSave();
+    assert.isTrue(sourcesStore.save.calledOnce);
+    assert.isTrue(channelsStore.save.calledTwice);
+    const retriedChannel = channelsStore.save.secondCall.args[0] as Channel;
+    expect(retriedChannel.labConfig).to.deep.equal(
+      sourcesWithLabConfig.labConfig
+    );
+  });
+
+  it('keeps a rename made while a failing channel save was in flight', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    let failChannelSave!: () => void;
+    channelsStore.save.onFirstCall().returns(
+      new Promise<Response>((_resolve, reject) => {
+        failChannelSave = () => reject(new Error('channel save failed'));
+      })
+    );
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+      metricsReporter: stubObject<LabMetricsReporter>(
+        new LabMetricsReporter()
+      ),
+    });
+    await projectManager.load();
+
+    // This save suspends inside the channel save, which then fails.
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    const rename = projectManager.rename('new name');
+    failChannelSave();
+    await firstSave;
+    await rename;
+
+    // The failed save must not have replaced the pending rename with its own
+    // stale copy of the channel.
+    assert.isTrue(channelsStore.save.calledTwice);
+    const renamedChannel = channelsStore.save.secondCall.args[0] as Channel;
+    expect(renamedChannel.name).to.equal('new name');
   });
 
   it('createCommit throws when the project has no saved version', async () => {
