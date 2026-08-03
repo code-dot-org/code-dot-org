@@ -52,7 +52,17 @@ These are a set of ideas that improve the basic building of projects geared towa
    to `Function.prototype.toString`, so such an edit would still patch. Blockly
    inlines its arguments, which is why this is narrow rather than routine.
 
-   Rule STEPS have the same shape of problem and not yet the same treatment:
-   `ruleIds` says which rules are in play, not what their code says, so editing
-   a `.rule` body in the same rebuild as a patchable change leaves the old step
-   running. The fix is the same hash over the same kind of function.
+   Rule code gets the same treatment, for the same reason one step further out:
+   the running world holds the Rule objects it was built with, and the Scheduler
+   resolved a total order from them. `ruleCode` hashes every function a rule
+   carries — steps (with their placement), its actions and queries, and its
+   traits' — so editing a `.rule`, renaming a step, or moving one before
+   another restarts. Property DEFAULTS are excluded on purpose: they reach the
+   snapshot as values, where changing one patches live, which is the behaviour
+   worth keeping.
+
+   Both hashes rest on the bundler emitting an untouched module identically
+   across builds; if it did not, every edit anywhere would read as a rule
+   change and nothing would ever reload live. It does, even when a new file
+   collides with a name inside a rule — `esbuildCompiler.test.ts` holds that
+   down.

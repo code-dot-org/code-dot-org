@@ -9,6 +9,7 @@ import type {AnimationDef, FrameState} from './animationTypes';
 import {rgba, type ColorValue, type Rgba} from './color';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
+import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import type {Trait} from './Trait';
@@ -32,6 +33,16 @@ import {Vector} from './Vector';
  */
 export interface WorldSnapshot {
   ruleIds: string[];
+  /**
+   * What each rule's code says, hashed, by rule id (`ruleIds.ts`).
+   *
+   * Structural, like {@link handlerIds} and for the same reason: the running
+   * world holds the Rule objects it was built with, and a patch cannot replace
+   * a step the scheduler has already ordered. Separate from `ruleIds` because
+   * the two answer different questions — which rules are in play, and whether
+   * one of them was edited.
+   */
+  ruleCode: Record<string, string>;
   actorIds: string[];
   /**
    * Which effects are in play and what carries each — `[owner, path]` per
@@ -857,6 +868,9 @@ export class World {
     }
     return {
       ruleIds: rules.map(rule => rule.id).sort(),
+      ruleCode: Object.fromEntries(
+        rules.map(rule => [rule.id, ruleContentHash(rule)]),
+      ),
       actorIds: this.actorList.map(actor => actor.id).sort(),
       // By actor id so the list is stable, but NOT sorted within an actor:
       // handlers for one event run in registration order, so a reorder is a
