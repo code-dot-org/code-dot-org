@@ -22,6 +22,7 @@ import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
 import {setProjectAnimationFiles, setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
+import {setProjectGrids} from '../spriteCells';
 import {VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
@@ -341,14 +342,44 @@ describe('domain block generators', () => {
   });
 
   it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {
-    // Default (empty socket → `this actor`) sets it on the current actor.
+    // Default (empty socket → `this actor`) sets it on the current actor. The
+    // cell is written every time — an actor that drew one cell and is then set
+    // to a picture must stop drawing it — and (0, 0) means the whole image.
     expect(emit('world_set_sprite', {SPRITE: 'player'})).toBe(
-      'actor.set(WorldLab.SpriteProperty, "player");\n',
+      'actor.set(WorldLab.SpriteProperty, "player");\n' +
+        'actor.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(0, 0));\n' +
+        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n',
     );
     // A plugged-in actor (e.g. a loop's touched actor) is set instead.
     expect(
       emit('world_set_sprite', {SPRITE: 'switch'}, {}, {ACTOR: 'touched'}),
-    ).toBe('touched.set(WorldLab.SpriteProperty, "switch");\n');
+    ).toBe(
+      'touched.set(WorldLab.SpriteProperty, "switch");\n' +
+        'touched.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(0, 0));\n' +
+        'touched.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(0, 0));\n',
+    );
+  });
+
+  it('world_set_sprite resolves a chosen cell to its rectangle', () => {
+    // The field names a cell (`coinSpin.png#3`); the RECTANGLE is generated,
+    // because the engine is never told about grids (blockly/spriteCells).
+    setProjectGrids(
+      {'coinSpin.png': {type: 'sheet', cell: {width: 32, height: 32}}},
+      {'coinSpin.png': {width: 192, height: 32}},
+    );
+
+    expect(emit('world_set_sprite', {SPRITE: 'coinSpin.png#3'})).toBe(
+      'actor.set(WorldLab.SpriteProperty, "coinSpin.png");\n' +
+        'actor.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(96, 0));\n' +
+        'actor.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(32, 32));\n',
+    );
+
+    // An index the grid no longer holds draws the whole picture: a visible
+    // wrong answer beats a made-up rectangle.
+    expect(emit('world_set_sprite', {SPRITE: 'coinSpin.png#99'})).toContain(
+      'SpriteCellSizeProperty, new WorldLab.Vector(0, 0)',
+    );
+    setProjectGrids({}, {});
   });
 
   it('world_play_animation plays the animation on the ACTOR value (restarting it)', () => {

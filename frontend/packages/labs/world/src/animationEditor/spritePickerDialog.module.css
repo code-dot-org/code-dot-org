@@ -1,4 +1,4 @@
-/* The picture picker's CONTENT. The dialog itself — surface, width, padding,
+/* The picture palette's CONTENT. The dialog itself — surface, width, padding,
    the button row — is the design system's `Dialog`. */
 
 .body {
@@ -10,51 +10,46 @@
   min-width: 0;
 }
 
-/* As many across as fit: these are thumbnails, and a column of them would make
-   a project of a dozen pictures a scroll rather than a look. */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+/* Everything the project can draw, as one wrapped run of tiles: pictures and
+   the cells of every spritesheet, in the order the project holds them. No
+   names — the point is to recognise the drawing, not read about it. */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
   gap: 6px;
   width: 100%;
-  max-height: 45vh;
+  max-height: 50vh;
   margin: 0;
   padding: 0;
   overflow-y: auto;
   list-style: none;
 }
 
-/* Picture over name: side by side left the name a column two characters wide,
-   which wraps "coinSpin.png" one letter to a line. */
-.item {
+/* A fixed square whatever the art's shape: a palette of ragged tiles is a
+   palette nobody can scan. Wide or tall art is drawn to fit inside it. */
+.tile {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
   align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  padding: 6px;
-  text-align: center;
-  text-transform: none;
-}
-
-/* `.grid` for the specificity: the design system's dialog sizes any `img` in
-   its content as a banner, and these are 32-pixel drawings. */
-.grid .preview {
-  display: block;
-  flex: 0 0 auto;
-  height: 44px;
-  max-width: 100%;
-  object-fit: contain;
-  image-rendering: pixelated;
-  background-color: #101020;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 56px;
+  height: 56px;
+  padding: 2px;
+  border: 2px solid transparent;
   border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 0;
-  overflow-wrap: break-word;
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.tileChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
 }

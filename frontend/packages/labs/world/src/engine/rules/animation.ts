@@ -41,6 +41,34 @@ export const SpriteProperty = AppearanceTrait.addProperty(
   {name: 'sprite'},
 );
 
+/**
+ * Which cell of a spritesheet {@link SpriteProperty} draws.
+ *
+ * Two vectors rather than one rectangle, because a rectangle is not a property
+ * type and these are: where the cell starts, and how big it is. A size of
+ * (0, 0) — the default — means the whole image, which is what a picture is.
+ *
+ * The rectangle, never a grid: the engine has no idea what a spritesheet is
+ * (INTERFACE.md §Animations). The editor knows the `.sheet` and resolves a
+ * chosen cell to these numbers when it generates the code, exactly as an
+ * animation frame carries the rectangle it draws.
+ *
+ * `readonly` keeps them out of the world-authoring tools' property lists: they
+ * are half of `set sprite`, not a field to fill in on their own.
+ */
+export const SpriteCellOriginProperty = AppearanceTrait.addProperty(
+  APPEARANCE.spriteCellOrigin,
+  'vector',
+  new Vector(0, 0),
+  {readonly: true},
+);
+export const SpriteCellSizeProperty = AppearanceTrait.addProperty(
+  APPEARANCE.spriteCellSize,
+  'vector',
+  new Vector(0, 0),
+  {readonly: true},
+);
+
 /** The animation to play — an id known to the world (empty = none). */
 export const AnimationProperty = AppearanceTrait.addProperty(
   APPEARANCE.animation,

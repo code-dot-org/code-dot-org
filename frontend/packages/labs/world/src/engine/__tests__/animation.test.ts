@@ -1,5 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
+import type {Actor} from '../core/Actor';
 import {
   ActorBuilder,
   AnimationEndedEvent,
@@ -10,6 +11,8 @@ import {
   FrameProperty,
   IntrinsicSizeProperty,
   PositionProperty,
+  SpriteCellOriginProperty,
+  SpriteCellSizeProperty,
   SpriteProperty,
   Vector,
   WorldBuilder,
@@ -224,5 +227,51 @@ describe('the Animation rule', () => {
     const still = world.renderSnapshot().find(s => s.actor === actor)?.frame;
     expect(still?.sprite).toBe('player');
     expect(still?.cell).toBe(undefined);
+  });
+});
+
+describe('a static sprite', () => {
+  // `set sprite` may name one cell of a spritesheet. The engine is never told
+  // about grids: the rectangle arrives on the actor, resolved by the editor
+  // when it generated the code (blockly/spriteCells).
+  const drawn = (paint: (actor: Actor) => void) => {
+    const {world, actor} = makeWorld();
+    paint(actor);
+    return world.renderSnapshot().find(state => state.actor === actor)?.frame;
+  };
+
+  it('draws the whole image by default', () => {
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'player.png');
+    });
+
+    expect(frame).toEqual({
+      sprite: 'player.png',
+      cell: undefined,
+      offset: {x: 0, y: 0},
+      scale: 1,
+    });
+  });
+
+  it('draws one cell when it is given a rectangle', () => {
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'coinSpin.png');
+      actor.set(SpriteCellOriginProperty, new Vector(96, 0));
+      actor.set(SpriteCellSizeProperty, new Vector(32, 32));
+    });
+
+    expect(frame?.cell).toEqual({x: 96, y: 0, width: 32, height: 32});
+  });
+
+  it('treats a cell of no size as the whole image', () => {
+    // What `set sprite` writes for a plain picture — and what an actor that
+    // used to draw a cell is reset to.
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'player.png');
+      actor.set(SpriteCellOriginProperty, new Vector(96, 0));
+      actor.set(SpriteCellSizeProperty, new Vector(0, 0));
+    });
+
+    expect(frame?.cell).toBeUndefined();
   });
 });

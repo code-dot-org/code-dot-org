@@ -29,6 +29,7 @@ import {projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
 import {createGeneratedFileCache} from './generatedFiles';
+import {projectImageSizes} from './imageSize';
 import type {ReloadReport} from './messages';
 import {projectAssets} from './projectAssets';
 import {projectFiles, projectImageNames} from './projectFiles';
@@ -188,7 +189,11 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
     // Refresh the project-derived dropdowns (animations, actor/world modules)
     // before the generator runs.
-    refreshProjectDropdowns(files, projectImageNames(source));
+    refreshProjectDropdowns(
+      files,
+      projectImageNames(source),
+      projectImageSizes(source),
+    );
     // Wait for the Blockly generator before compiling a project that has any
     // Blockly-authored files; this effect re-runs when it becomes ready.
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {

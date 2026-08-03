@@ -5,6 +5,9 @@
 // not among its options, so the registry must be populated before Blockly
 // deserializes a block that selected it.
 
+import {projectSheets} from '../appearance/sheetFile';
+import type {ImageSize} from '../runtime/imageSize';
+
 import {setProjectAnimations} from './animationOptions';
 import {
   setProjectActors,
@@ -29,6 +32,7 @@ import {
   projectWorldRules,
 } from './projectModules';
 import {duplicateRuleNames, registerProjectRules} from './ruleRegistry';
+import {setProjectGrids} from './spriteCells';
 import {setProjectRuleMeta, setProjectRules} from './traitOptions';
 
 /** Extensions a module path can resolve to — what a block may open. */
@@ -42,7 +46,13 @@ export function refreshProjectDropdowns(
    * flattened `files` map and have to be passed alongside it.
    */
   images: readonly string[] = [],
+  /** Image sizes, by file name, for the ones the editor can measure. */
+  imageSizes: Record<string, ImageSize> = {},
 ): void {
+  // What the editor knows about spritesheets: the grids, and how big the images
+  // are — together they say how many cells a sheet holds, which is what a
+  // `set sprite` dropdown offers and what its generator resolves (spriteCells).
+  setProjectGrids(projectSheets(files), imageSizes);
   setProjectAnimations(projectAnimationIds(files));
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
