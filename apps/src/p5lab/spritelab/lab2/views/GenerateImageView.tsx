@@ -1,6 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
+import TextField from '@code-dot-org/component-library/textField';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {generateImage, GenerateImageOptions} from '../ai/items/itemGeneration';
@@ -52,23 +54,42 @@ interface GenerateImageViewProps {
     /** Current pixels, for "use previous image". */
     getDataURI: () => Promise<string | null>;
   };
-  onAccept: (result: GeneratedImageResult) => Promise<void> | void;
-  onBack: () => void;
+  /** The image's current pixels, held on the left until a result lands. */
+  thumb?: string;
+  /** Set when creating a brand-new image. */
+  create?: {
+    /** Whether another image already uses this name. */
+    isNameTaken: (name: string) => boolean;
+    /** Paint from a blank canvas instead of generating; error or null. */
+    onPaintInstead: (name: string) => string | null;
+    // Handing off to the paint editor unmounts this view; if that paint is
+    // cancelled, the name typed before the handoff comes back through here.
+    initialName?: string;
+  };
+  /** Persist an accepted result (name set when creating). */
+  onAccept: (
+    result: GeneratedImageResult,
+    name?: string
+  ) => Promise<void> | void;
 }
 
 /**
- * The image dialog's Generate view: prompt, type/style, a temperature
- * slider with a bot whose expression follows it, and a choice of where the
- * randomness comes from — a fresh roll, the image's saved seed, or the
- * image itself as a starting point.
+ * The image dialog's Generate view: the current image (or a blank area) on
+ * the left where the result will land; on the right the prompt, style, a
+ * choice of where the randomness comes from, and a temperature slider with
+ * a bot whose expression follows it. Renders the dialog body and the footer
+ * button row.
  */
 const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   existing,
+  thumb,
+  create,
   onAccept,
-  onBack,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
+  const [name, setName] = useState(create?.initialName || '');
+  const [paintError, setPaintError] = useState<string | null>(null);
   const [itemType, setItemType] = useState<SpriteLab2ItemType>(
     existing?.itemType || 'sprite'
   );
@@ -83,6 +104,13 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [result, setResult] = useState<GeneratedImageResult | null>(null);
   const [resultUrl, setResultUrl] = useState<string | null>(null);
   const [accepting, setAccepting] = useState(false);
+
+  // Flag a duplicate as it's typed and hold the buttons until it's unique.
+  const trimmedName = name.trim();
+  const duplicateName =
+    !!create && !!trimmedName && create.isNameTaken(trimmedName);
+  const nameUsable = !create || (!!trimmedName && !duplicateName);
+  const nameError = duplicateName ? 'That name is already used.' : paintError;
 
   // Cycle the bot's generating frames while a request is out.
   const [generatingTick, setGeneratingTick] = useState(0);
@@ -161,11 +189,11 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
     }
     setAccepting(true);
     try {
-      await onAccept(result);
+      await onAccept(result, create ? trimmedName : undefined);
     } finally {
       setAccepting(false);
     }
-  }, [result, onAccept]);
+  }, [result, onAccept, create, trimmedName]);
 
   const botImage =
     mode === 'generating'
@@ -179,34 +207,207 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           )
         ];
 
-  if (mode === 'reviewing' && result) {
-    return (
+  const generating = mode === 'generating';
+  const reviewing = mode === 'reviewing' && !!result;
+  // The current image holds the left pane until the result replaces it.
+  const displayUrl = resultUrl || thumb;
+
+  return (
+    <>
       <div className={moduleStyles.body}>
-        <div className={moduleStyles.imagePane}>
-          {resultUrl && <img src={resultUrl} alt="Generated result" />}
+        <div
+          className={classNames(
+            moduleStyles.imagePane,
+            displayUrl && moduleStyles.imagePaneChecker
+          )}
+        >
+          {displayUrl ? (
+            <img
+              src={displayUrl}
+              alt={resultUrl ? 'Generated result' : 'Current image'}
+            />
+          ) : (
+            <div className={moduleStyles.imagePlaceholder} aria-hidden />
+          )}
         </div>
         <div className={moduleStyles.detailsPane}>
-          <p className={moduleStyles.reviewHint}>
-            Keep it, try again with the same settings, or go back and change the
-            prompt.
-          </p>
-          <div className={moduleStyles.actions}>
-            <button
-              type="button"
-              className={moduleStyles.primaryButton}
-              disabled={accepting}
-              onClick={handleContinue}
-            >
-              {accepting ? 'Saving…' : 'Continue'}
-            </button>
-            <button
-              type="button"
-              className={moduleStyles.button}
-              disabled={accepting}
-              onClick={() => generate(true)}
-            >
-              Regenerate
-            </button>
+          {reviewing ? (
+            <p className={moduleStyles.reviewHint}>
+              Keep it, try again with the same settings, or go back and change
+              the prompt.
+            </p>
+          ) : (
+            <>
+              {create && (
+                <div className={moduleStyles.formRow}>
+                  <div>
+                    <TextField
+                      name="newImageName"
+                      label="Name"
+                      value={name}
+                      errorMessage={nameError || undefined}
+                      disabled={generating}
+                      onChange={e => {
+                        setName(e.target.value);
+                        setPaintError(null);
+                      }}
+                    />
+                  </div>
+                  <fieldset
+                    className={moduleStyles.radioGroup}
+                    disabled={generating}
+                  >
+                    <legend>Type</legend>
+                    <RadioButton
+                      name="generation-type"
+                      value="sprite"
+                      label="Sprite (costume)"
+                      checked={itemType === 'sprite'}
+                      onChange={() => setItemType('sprite')}
+                    />
+                    <RadioButton
+                      name="generation-type"
+                      value="background"
+                      label="Background"
+                      checked={itemType === 'background'}
+                      onChange={() => setItemType('background')}
+                    />
+                    <RadioButton
+                      name="generation-type"
+                      value="block"
+                      label="Block (platform tile)"
+                      checked={itemType === 'block'}
+                      onChange={() => setItemType('block')}
+                    />
+                  </fieldset>
+                </div>
+              )}
+
+              <div className={moduleStyles.formRow}>
+                <label
+                  className={classNames(
+                    moduleStyles.promptLabel,
+                    moduleStyles.wide
+                  )}
+                >
+                  <span>Describe it</span>
+                  <textarea
+                    className={moduleStyles.promptInput}
+                    value={prompt}
+                    rows={5}
+                    placeholder="e.g. a friendly green dragon"
+                    disabled={generating}
+                    onChange={e => setPrompt(e.target.value)}
+                  />
+                </label>
+                <fieldset
+                  className={moduleStyles.radioGroup}
+                  disabled={generating}
+                >
+                  <legend>Style</legend>
+                  <RadioButton
+                    name="generation-style"
+                    value="smooth"
+                    label="Smooth"
+                    checked={style === 'smooth'}
+                    onChange={() => setStyle('smooth')}
+                  />
+                  <RadioButton
+                    name="generation-style"
+                    value="pixel"
+                    label="Pixel art"
+                    checked={style === 'pixel'}
+                    onChange={() => setStyle('pixel')}
+                  />
+                </fieldset>
+              </div>
+
+              <div className={moduleStyles.formRow}>
+                <fieldset
+                  className={classNames(
+                    moduleStyles.radioGroup,
+                    moduleStyles.wide
+                  )}
+                  disabled={generating}
+                >
+                  <legend>Start from</legend>
+                  <RadioButton
+                    name="generation-source"
+                    value="new"
+                    label="Create new image"
+                    checked={source === 'new'}
+                    onChange={() => setSource('new')}
+                  />
+                  <RadioButton
+                    name="generation-source"
+                    value="seed"
+                    label="Use same seed (small prompt changes keep the picture similar)"
+                    checked={source === 'seed'}
+                    disabled={!canUseSeed}
+                    onChange={() => setSource('seed')}
+                  />
+                  <RadioButton
+                    name="generation-source"
+                    value="previous"
+                    label="Use previous image (the prompt modifies it)"
+                    checked={source === 'previous'}
+                    disabled={!canUsePrevious}
+                    onChange={() => setSource('previous')}
+                  />
+                </fieldset>
+                <div className={moduleStyles.temperatureGroup}>
+                  <span id="temperature-label">Temperature</span>
+                  <img
+                    src={botImage}
+                    className={moduleStyles.bot}
+                    alt=""
+                    draggable={false}
+                  />
+                  <Slider
+                    name="temperature-slider"
+                    aria-labelledby="temperature-label"
+                    minValue={0}
+                    maxValue={TEMPERATURE_LEVEL_MAX}
+                    step={1}
+                    value={temperatureLevel}
+                    onChange={e => setTemperatureLevel(+e.target.value)}
+                    hideValue={true}
+                    color="aqua"
+                    leftButtonProps={{
+                      children: (
+                        <FontAwesomeV6Icon
+                          iconName="minus"
+                          title="Lower temperature"
+                        />
+                      ),
+                      ['aria-label']: 'Lower temperature',
+                    }}
+                    rightButtonProps={{
+                      children: (
+                        <FontAwesomeV6Icon
+                          iconName="plus"
+                          title="Raise temperature"
+                        />
+                      ),
+                      ['aria-label']: 'Raise temperature',
+                    }}
+                  />
+                </div>
+              </div>
+            </>
+          )}
+
+          {error && (
+            <div aria-live="polite" className={moduleStyles.generateError}>
+              {error}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className={moduleStyles.footer}>
+        {reviewing ? (
+          <>
             <button
               type="button"
               className={moduleStyles.button}
@@ -218,142 +419,53 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             >
               Back to prompt
             </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  const generating = mode === 'generating';
-  return (
-    <div className={moduleStyles.generateView}>
-      <label className={moduleStyles.promptLabel}>
-        <span>Describe it</span>
-        <textarea
-          className={moduleStyles.promptInput}
-          value={prompt}
-          rows={3}
-          placeholder="e.g. a friendly green dragon"
-          disabled={generating}
-          onChange={e => setPrompt(e.target.value)}
-        />
-      </label>
-
-      <div className={moduleStyles.fieldRow}>
-        {!existing && (
-          <label>
-            <span>Type</span>
-            <select
-              value={itemType}
-              disabled={generating}
-              onChange={e => setItemType(e.target.value as SpriteLab2ItemType)}
+            <button
+              type="button"
+              className={moduleStyles.button}
+              disabled={accepting}
+              onClick={() => generate(true)}
             >
-              <option value="sprite">Sprite (costume)</option>
-              <option value="background">Background</option>
-              <option value="block">Block (platform tile)</option>
-            </select>
-          </label>
+              <FontAwesomeV6Icon iconName="arrows-rotate" />
+              Regenerate
+            </button>
+            <button
+              type="button"
+              className={moduleStyles.primaryButton}
+              disabled={accepting}
+              onClick={handleContinue}
+            >
+              {accepting ? 'Saving…' : 'Continue'}
+              <FontAwesomeV6Icon iconName="arrow-right" />
+            </button>
+          </>
+        ) : (
+          <>
+            {create && (
+              <div className={moduleStyles.footerLeft}>
+                <button
+                  type="button"
+                  className={moduleStyles.button}
+                  disabled={generating || !nameUsable}
+                  onClick={() =>
+                    setPaintError(create.onPaintInstead(trimmedName))
+                  }
+                >
+                  Paint it instead
+                </button>
+              </div>
+            )}
+            <button
+              type="button"
+              className={moduleStyles.primaryButton}
+              disabled={generating || !prompt.trim() || !nameUsable}
+              onClick={() => generate(false)}
+            >
+              {generating ? 'Generating…' : 'Generate'}
+            </button>
+          </>
         )}
-        <label>
-          <span>Style</span>
-          <select
-            value={style}
-            disabled={generating}
-            onChange={e => setStyle(e.target.value as SpriteLab2ItemStyle)}
-          >
-            <option value="smooth">Smooth</option>
-            <option value="pixel">Pixel art</option>
-          </select>
-        </label>
       </div>
-
-      <fieldset className={moduleStyles.sourceGroup} disabled={generating}>
-        <legend>Start from</legend>
-        <RadioButton
-          name="generation-source"
-          value="new"
-          label="Create new image"
-          checked={source === 'new'}
-          onChange={() => setSource('new')}
-        />
-        <RadioButton
-          name="generation-source"
-          value="seed"
-          label="Use same seed (small prompt changes keep the picture similar)"
-          checked={source === 'seed'}
-          disabled={!canUseSeed}
-          onChange={() => setSource('seed')}
-        />
-        <RadioButton
-          name="generation-source"
-          value="previous"
-          label="Use previous image (the prompt modifies it)"
-          checked={source === 'previous'}
-          disabled={!canUsePrevious}
-          onChange={() => setSource('previous')}
-        />
-      </fieldset>
-
-      <div className={moduleStyles.botRow}>
-        <img
-          src={botImage}
-          className={moduleStyles.bot}
-          alt=""
-          draggable={false}
-        />
-        <div className={moduleStyles.temperature}>
-          <span id="temperature-label">Temperature</span>
-          <Slider
-            name="temperature-slider"
-            aria-labelledby="temperature-label"
-            minValue={0}
-            maxValue={TEMPERATURE_LEVEL_MAX}
-            step={1}
-            value={temperatureLevel}
-            onChange={e => setTemperatureLevel(+e.target.value)}
-            hideValue={true}
-            color="aqua"
-            leftButtonProps={{
-              children: (
-                <FontAwesomeV6Icon iconName="minus" title="Lower temperature" />
-              ),
-              ['aria-label']: 'Lower temperature',
-            }}
-            rightButtonProps={{
-              children: (
-                <FontAwesomeV6Icon iconName="plus" title="Raise temperature" />
-              ),
-              ['aria-label']: 'Raise temperature',
-            }}
-          />
-        </div>
-      </div>
-
-      {error && (
-        <div aria-live="polite" className={moduleStyles.generateError}>
-          {error}
-        </div>
-      )}
-
-      <div className={moduleStyles.actions}>
-        <button
-          type="button"
-          className={moduleStyles.primaryButton}
-          disabled={generating || !prompt.trim()}
-          onClick={() => generate(false)}
-        >
-          {generating ? 'Generating…' : 'Generate'}
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.button}
-          disabled={generating}
-          onClick={onBack}
-        >
-          Back
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 

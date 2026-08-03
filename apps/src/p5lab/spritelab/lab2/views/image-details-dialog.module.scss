@@ -1,6 +1,7 @@
-// The image dialog: image large on the left, name/metadata/actions on the
-// right. Wears the same rounded chrome as the pixel editor
-// (dialogChrome.scss), following the page's light/dark theme.
+// The image dialog: image large on the left, details or the generate form
+// on the right, actions in a footer bar. Wears the same rounded chrome as
+// the pixel editor (dialogChrome.scss), following the page's light/dark
+// theme.
 
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 
@@ -31,6 +32,15 @@
 
 .header {
   @include chrome.header;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerTitle {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .srOnly {
@@ -55,8 +65,19 @@
   flex-shrink: 0;
   border: 1px solid chrome.$border-subtle;
   border-radius: 6px;
-  // Checkerboard signals transparency (translucent grey works over either
-  // panel theme).
+  background-color: transparent;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    // Art-pixel edges stay crisp when upscaled.
+    image-rendering: pixelated;
+  }
+}
+
+// Checkerboard signals transparency (translucent grey works over either
+// panel theme). Only once there's an image: an empty pane stays blank.
+.imagePaneChecker {
   $check: rgb(128 128 128 / 22%);
 
   background-image: linear-gradient(45deg, $check 25%, transparent 25%),
@@ -65,13 +86,38 @@
     linear-gradient(-45deg, transparent 75%, $check 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+}
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    // Art-pixel edges stay crisp when upscaled.
-    image-rendering: pixelated;
-  }
+// The summary view's image is itself the way into the paint editor.
+.imageButton {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+// The paint affordance in the image's corner: quiet until the image is
+// hovered or focused.
+.paintOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--dialog-primary-bg);
+  color: var(--dialog-primary-text);
+  font-size: 15px;
+  opacity: 0.55;
+  transition: opacity 0.12s ease;
+}
+
+.imageButton:hover .paintOverlay,
+.imageButton:focus-visible .paintOverlay {
+  opacity: 1;
 }
 
 .imagePlaceholder {
@@ -82,28 +128,9 @@
 .detailsPane {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   flex: 1;
   min-width: 0;
-}
-
-.nameRow {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-
-  h2 {
-    margin: 0;
-    overflow-wrap: anywhere;
-    font-size: 20px;
-    font-weight: 600;
-  }
-}
-
-.nameButtons {
-  display: flex;
-  gap: 8px;
 }
 
 .metadata {
@@ -123,9 +150,24 @@
   }
 }
 
-.actions {
+.footer {
+  @include chrome.footer;
+
+  font-size: 14px;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+.footerLeft {
   display: flex;
+  align-items: center;
   gap: 10px;
+  margin-right: auto;
 }
 
 .button {
@@ -142,42 +184,34 @@
   @include chrome.danger-button;
 }
 
-// Delete sits apart from the everyday actions; confirming swaps the button
-// for an inline question, so no second dialog stacks on this one.
-.dangerRow {
-  display: flex;
+.iconButton {
+  @include chrome.plain-button;
+
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: auto;
-  padding-top: 12px;
-  font-size: 14px;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-color: transparent;
+  flex-shrink: 0;
 }
 
 // --- Generate view ---
 
-.generateView {
+.formRow {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 16px;
+  gap: 16px;
 
-  label span,
-  legend {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 13px;
-    color: var(--dialog-text-secondary);
+  > * {
+    flex: 1 1 0;
+    min-width: 0;
   }
+}
 
-  select {
-    height: 34px;
-    padding: 0 8px;
-    border: 1px solid var(--dialog-control-border);
-    border-radius: 6px;
-    background-color: var(--dialog-control-bg);
-    color: chrome.$panel-text;
-    font-size: 14px;
-  }
+// The row's roomier half (prompt, start-from choices).
+.wide {
+  flex: 1.6 1 0;
 }
 
 .promptLabel {
@@ -185,9 +219,19 @@
   flex-direction: column;
 }
 
+.promptLabel span,
+.radioGroup legend,
+.temperatureGroup > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: var(--dialog-text-secondary);
+}
+
 .promptInput {
   box-sizing: border-box;
   width: 100%;
+  flex: 1;
   padding: 8px 10px;
   border: 1px solid var(--dialog-control-border);
   border-radius: 6px;
@@ -197,12 +241,7 @@
   resize: vertical;
 }
 
-.fieldRow {
-  display: flex;
-  gap: 16px;
-}
-
-.sourceGroup {
+.radioGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -210,39 +249,39 @@
   padding: 10px 12px;
   border: 1px solid chrome.$border-subtle;
   border-radius: 6px;
+  // The design system's disabled-label grey is illegible on the panel;
+  // remap the variable it reads to our secondary text (the greyed radio
+  // circle still marks the option disabled).
+  --text-neutral-disabled: var(--dialog-text-secondary);
 
   legend {
     padding: 0 4px;
   }
 }
 
-.botRow {
+.temperatureGroup {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .bot {
   width: 64px;
   height: 64px;
+  align-self: center;
   object-fit: contain;
-}
-
-.temperature {
-  flex: 1;
-
-  span {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 13px;
-    color: var(--dialog-text-secondary);
-  }
 }
 
 .reviewHint {
   margin: 0;
   font-size: 14px;
   color: chrome.$panel-text;
+}
+
+.paneHint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--dialog-text-secondary);
 }
 
 .generateError {

@@ -460,6 +460,11 @@ const GenerateImagePane: React.FunctionComponent<{
           onClose={closeDialog}
           onPaint={() => setPainting('loading')}
           onCreateFromPaint={handleCreateFromPaint}
+          // A cancelled paint handoff remounts the dialog; give back the
+          // name typed before it.
+          initialNewName={
+            creating ? pendingNewNameRef.current || undefined : undefined
+          }
           onRename={handleRename}
           onDelete={handleDelete}
           itemType={itemTypeFromCategories(targetProps?.categories)}

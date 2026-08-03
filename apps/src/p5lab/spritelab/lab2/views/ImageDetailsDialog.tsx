@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
@@ -11,8 +12,8 @@ import GenerateImageView, {GeneratedImageResult} from './GenerateImageView';
 import moduleStyles from './image-details-dialog.module.scss';
 
 interface ImageDetailsDialogProps {
-  // null = the "new image" state: name it, then paint or generate; nothing
-  // is created until one of those succeeds.
+  // null = the "new image" state: it opens straight into the generate view
+  // and nothing is created until a generation or first paint succeeds.
   animKey: string | null;
   name?: string;
   thumb?: string;
@@ -22,6 +23,8 @@ interface ImageDetailsDialogProps {
   onPaint: () => void;
   /** Create a new image by painting from a blank canvas; error or null. */
   onCreateFromPaint: (name: string) => string | null;
+  /** A new image's name typed before a cancelled paint handoff. */
+  initialNewName?: string;
   /** Rename this image everywhere; error or null. */
   onRename: (newName: string) => string | null;
   onDelete: () => void;
@@ -46,10 +49,11 @@ const TYPE_LABELS = {
 const STYLE_LABELS = {smooth: 'Smooth', pixel: 'Pixel art'};
 
 /**
- * The image dialog's Details view: the image large on the left; its name and
- * how it was made on the right, with edit, rename, and delete. Wears the
- * pixel editor's chrome, following the page's light/dark theme. AI
- * generation hands off to the generate view.
+ * The image dialog. An existing image opens on the summary view: the image
+ * large on the left (click it to paint), how it was made on the right, and
+ * delete/regenerate in the footer; its name sits in the header with a
+ * pencil to rename. A new image opens straight into the generate view.
+ * Wears the pixel editor's chrome, following the page's light/dark theme.
  */
 const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
@@ -59,6 +63,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onClose,
   onPaint,
   onCreateFromPaint,
+  initialNewName,
   onRename,
   onDelete,
   itemType,
@@ -69,14 +74,16 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const isNew = animKey === null;
   const {theme} = useTheme();
   const mode = theme === 'Dark' ? 'dark' : 'light';
-  const [nameDraft, setNameDraft] = useState(name || '');
+  const [view, setView] = useState<'details' | 'generate'>(
+    isNew ? 'generate' : 'details'
+  );
   const [renaming, setRenaming] = useState(false);
+  const [nameDraft, setNameDraft] = useState('');
   const [nameError, setNameError] = useState<string | null>(null);
   const [confirmingDelete, setConfirmingDelete] = useState(false);
-  const [view, setView] = useState<'details' | 'generate'>('details');
 
-  // Flag a duplicate as it's typed and hold the buttons until it's unique
-  // (an image keeps its own name while renaming).
+  // Flag a duplicate as it's typed and hold Save until it's unique (an
+  // image keeps its own name while renaming).
   const draftName = nameDraft.trim();
   const duplicateName =
     !!draftName && draftName !== name && isNameTaken(draftName);
@@ -85,16 +92,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     ? 'That name is already used.'
     : nameError;
 
-  const title =
-    view === 'generate'
-      ? `Generate: ${isNew ? nameDraft.trim() || 'new image' : name}`
-      : isNew
-      ? 'New image'
-      : name || 'Image';
+  const title = isNew ? 'New image' : name || 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
-    if (trimmed === name) {
+    if (!trimmed || trimmed === name) {
       setRenaming(false);
       setNameError(null);
       return;
@@ -106,8 +108,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     }
   };
 
-  const startCreatePaint = () => {
-    setNameError(onCreateFromPaint(nameDraft.trim()));
+  const cancelRename = () => {
+    setRenaming(false);
+    setNameError(null);
   };
 
   return (
@@ -126,15 +129,72 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           {view === 'generate'
             ? 'Describe the image and generate it with AI.'
-            : isNew
-            ? 'Name the image, then paint or generate it.'
             : 'View, edit, rename, or delete this image.'}
         </span>
-        {/* Tabbable so the focus trap lands on the title first (the
-            pixel editor's pattern). */}
-        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <div className={moduleStyles.header} tabIndex={0}>
-          {title}
+        <div className={moduleStyles.header}>
+          {renaming ? (
+            <>
+              <TextField
+                name="imageName"
+                aria-label="Image name"
+                value={nameDraft}
+                errorMessage={shownNameError || undefined}
+                onChange={e => {
+                  setNameDraft(e.target.value);
+                  setNameError(null);
+                }}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' && draftUsable) {
+                    commitRename();
+                  } else if (e.key === 'Escape') {
+                    // Ours: without this the dialog itself would close.
+                    e.stopPropagation();
+                    cancelRename();
+                  }
+                }}
+              />
+              <button
+                type="button"
+                className={moduleStyles.iconButton}
+                aria-label="Save name"
+                disabled={!draftUsable}
+                onClick={commitRename}
+              >
+                <FontAwesomeV6Icon iconName="check" />
+              </button>
+              <button
+                type="button"
+                className={moduleStyles.iconButton}
+                aria-label="Cancel rename"
+                onClick={cancelRename}
+              >
+                <FontAwesomeV6Icon iconName="xmark" />
+              </button>
+            </>
+          ) : (
+            <>
+              {/* Tabbable so the focus trap lands on the title first (the
+                  pixel editor's pattern). */}
+              {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+              <span className={moduleStyles.headerTitle} tabIndex={0}>
+                {title}
+              </span>
+              {!isNew && view === 'details' && (
+                <button
+                  type="button"
+                  className={moduleStyles.iconButton}
+                  aria-label="Rename"
+                  onClick={() => {
+                    setNameDraft(name || '');
+                    setNameError(null);
+                    setRenaming(true);
+                  }}
+                >
+                  <FontAwesomeV6Icon iconName="pencil" />
+                </button>
+              )}
+            </>
+          )}
         </div>
         {view === 'generate' ? (
           <GenerateImageView
@@ -147,163 +207,106 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     getDataURI,
                   }
             }
-            onAccept={async result => {
-              await onAcceptGenerated(
-                result,
-                isNew ? nameDraft.trim() : undefined
-              );
+            thumb={isNew ? undefined : thumb}
+            create={
+              isNew
+                ? {
+                    isNameTaken,
+                    onPaintInstead: onCreateFromPaint,
+                    initialName: initialNewName,
+                  }
+                : undefined
+            }
+            onAccept={async (result, newName) => {
+              await onAcceptGenerated(result, newName);
               setView('details');
             }}
-            onBack={() => setView('details')}
           />
         ) : (
-          <div className={moduleStyles.body}>
-            <div className={moduleStyles.imagePane}>
-              {thumb ? (
-                <img src={thumb} alt={name || 'image'} />
-              ) : (
-                <div className={moduleStyles.imagePlaceholder} aria-hidden />
-              )}
-            </div>
-            <div className={moduleStyles.detailsPane}>
-              {isNew || renaming ? (
-                <div className={moduleStyles.nameRow}>
-                  <TextField
-                    name="imageName"
-                    label="Name"
-                    value={nameDraft}
-                    errorMessage={shownNameError || undefined}
-                    onChange={e => {
-                      setNameDraft(e.target.value);
-                      setNameError(null);
-                    }}
-                  />
-                  {!isNew && (
-                    <div className={moduleStyles.nameButtons}>
-                      <button
-                        type="button"
-                        className={moduleStyles.primaryButton}
-                        disabled={!draftUsable}
-                        onClick={commitRename}
-                      >
-                        Save name
-                      </button>
-                      <button
-                        type="button"
-                        className={moduleStyles.button}
-                        onClick={() => {
-                          setNameDraft(name || '');
-                          setNameError(null);
-                          setRenaming(false);
-                        }}
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div className={moduleStyles.nameRow}>
-                  <h2>{name}</h2>
-                  <button
-                    type="button"
-                    className={moduleStyles.button}
-                    onClick={() => setRenaming(true)}
-                  >
-                    Rename
-                  </button>
-                </div>
-              )}
-
-              {generation && (
-                <dl className={moduleStyles.metadata}>
-                  <dt>Prompt</dt>
-                  <dd>{generation.prompt}</dd>
-                  <dt>Type</dt>
-                  <dd>{TYPE_LABELS[generation.itemType]}</dd>
-                  <dt>Style</dt>
-                  <dd>{STYLE_LABELS[generation.style]}</dd>
-                  {generation.temperature !== undefined && (
-                    <>
-                      <dt>Temperature</dt>
-                      <dd>{generation.temperature}</dd>
-                    </>
-                  )}
-                </dl>
-              )}
-
-              <div className={moduleStyles.actions}>
-                {isNew ? (
-                  <button
-                    type="button"
-                    className={moduleStyles.primaryButton}
-                    disabled={!draftUsable}
-                    onClick={startCreatePaint}
-                  >
-                    Paint it
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    className={moduleStyles.primaryButton}
-                    onClick={onPaint}
-                  >
-                    Edit
-                  </button>
+          <>
+            <div className={moduleStyles.body}>
+              <button
+                type="button"
+                className={classNames(
+                  moduleStyles.imagePane,
+                  moduleStyles.imageButton,
+                  thumb && moduleStyles.imagePaneChecker
                 )}
-                {isNew ? (
-                  <button
-                    type="button"
-                    className={moduleStyles.button}
-                    disabled={!draftUsable}
-                    onClick={() => setView('generate')}
-                  >
-                    Generate it
-                  </button>
+                aria-label="Edit with paint tools"
+                onClick={onPaint}
+              >
+                {thumb ? (
+                  <img src={thumb} alt="" />
                 ) : (
-                  <button
-                    type="button"
-                    className={moduleStyles.button}
-                    onClick={() => setView('generate')}
-                  >
-                    Generate with AI
-                  </button>
+                  <div className={moduleStyles.imagePlaceholder} aria-hidden />
+                )}
+                <span className={moduleStyles.paintOverlay} aria-hidden>
+                  <FontAwesomeV6Icon iconName="pen" />
+                </span>
+              </button>
+              <div className={moduleStyles.detailsPane}>
+                <p className={moduleStyles.paneHint}>
+                  Click the image to edit it with the paint tools.
+                </p>
+                {generation && (
+                  <dl className={moduleStyles.metadata}>
+                    <dt>Prompt</dt>
+                    <dd>{generation.prompt}</dd>
+                    <dt>Type</dt>
+                    <dd>{TYPE_LABELS[generation.itemType]}</dd>
+                    <dt>Style</dt>
+                    <dd>{STYLE_LABELS[generation.style]}</dd>
+                    {generation.temperature !== undefined && (
+                      <>
+                        <dt>Temperature</dt>
+                        <dd>{generation.temperature}</dd>
+                      </>
+                    )}
+                  </dl>
                 )}
               </div>
-
-              {!isNew && (
-                <div className={moduleStyles.dangerRow}>
-                  {confirmingDelete ? (
-                    <>
-                      <span>Delete this image?</span>
-                      <button
-                        type="button"
-                        className={moduleStyles.dangerButton}
-                        onClick={onDelete}
-                      >
-                        Delete
-                      </button>
-                      <button
-                        type="button"
-                        className={moduleStyles.button}
-                        onClick={() => setConfirmingDelete(false)}
-                      >
-                        Keep
-                      </button>
-                    </>
-                  ) : (
+            </div>
+            <div className={moduleStyles.footer}>
+              {/* Confirming swaps the button for an inline question, so no
+                  second dialog stacks on this one. */}
+              <div className={moduleStyles.footerLeft}>
+                {confirmingDelete ? (
+                  <>
+                    <span>Delete this image?</span>
                     <button
                       type="button"
                       className={moduleStyles.dangerButton}
-                      onClick={() => setConfirmingDelete(true)}
+                      onClick={onDelete}
                     >
                       Delete
                     </button>
-                  )}
-                </div>
-              )}
+                    <button
+                      type="button"
+                      className={moduleStyles.button}
+                      onClick={() => setConfirmingDelete(false)}
+                    >
+                      Keep
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    type="button"
+                    className={moduleStyles.dangerButton}
+                    onClick={() => setConfirmingDelete(true)}
+                  >
+                    Delete
+                  </button>
+                )}
+              </div>
+              <button
+                type="button"
+                className={moduleStyles.primaryButton}
+                onClick={() => setView('generate')}
+              >
+                {generation ? 'Regenerate with AI' : 'Generate with AI'}
+              </button>
             </div>
-          </div>
+          </>
         )}
       </CustomDialog>
     </div>

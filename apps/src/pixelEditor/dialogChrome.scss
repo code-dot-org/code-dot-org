@@ -95,6 +95,17 @@ $panel-text: var(--dialog-panel-text);
   font-weight: 600;
 }
 
+// The bottom action bar: buttons right-aligned; give a child
+// margin-right: auto to sit flush left.
+@mixin footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 1px solid $border-subtle;
+}
+
 @mixin plain-button {
   box-sizing: border-box;
   height: 34px;
