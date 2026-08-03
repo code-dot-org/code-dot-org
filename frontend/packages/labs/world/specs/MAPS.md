@@ -160,6 +160,14 @@ goes. That is the whole interaction.
   through the field's `sourceBlock`. A coin's place is worth judging against the
   ground under it.
 
+**The block face shows the map.** A 30-pixel square of the world with a dark
+mark at each of this block's placements, on a light ground — the same preview
+the old Sprite Lab put on its block, and for the same reason: it says WHERE,
+which is what the block is about. No count beside it; the marks are the count. Thirty rather than the
+eighteen a field is normally tall because ten cells across a smaller box gives
+each cell under two pixels, and an arrangement nobody can read is not worth
+drawing. Only the occupied cells are drawn; an empty map is an empty box.
+
 Actors are drawn with the thumbnails the sandbox renders, pushed into a registry
 the field reads (`blockly/actorThumbnails`) because a Blockly field is not in the
 React tree and cannot ask the runtime context itself — the same arrangement the

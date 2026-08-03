@@ -15,7 +15,8 @@ import {createReactField} from '@code-dot-org/blockly';
 import type {ReactFieldPreviewContext} from '@code-dot-org/blockly';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 
-import type {MapPlacement} from '../mapPlacements';
+import {TILE_SIZE, VIEWPORT_TILES} from '../../runtime/viewport';
+import {cellOf, type MapPlacement} from '../mapPlacements';
 
 import {PlacementGrid} from './PlacementGrid';
 
@@ -25,44 +26,68 @@ export const FIELD_MAP_PLACEMENTS_NAME = 'field_map_placements';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 /**
- * The block face: a small grid glyph and a count.
+ * The preview box on the block face, in pixels. Square, like the world.
  *
- * A glyph rather than the word "map", because the word is already in the block
- * ("create … in map") and saying it twice is not saying anything.
+ * Thirty, not the eighteen a field is normally tall: at ten cells across, a
+ * smaller box gives each cell under two pixels and the arrangement stops being
+ * legible — which is the whole point of drawing it. The block grows a little to
+ * carry it.
+ */
+const MAP_SIZE = 30;
+
+/**
+ * The block face: the map, in miniature.
+ *
+ * A square of the world with a mark where each actor is — the same thing the
+ * old Sprite Lab put on its block, and for the same reason: it says WHERE,
+ * which is what the block is about, small enough to sit in a sentence. No
+ * count beside it; the marks are the count, and a number that repeats what is
+ * already drawn is a number in the way.
+ *
+ * Light box, dark marks, whatever colour the block is: the map is not part of
+ * the block, it is a thing shown on it.
  */
 const renderPreview = ({
   value,
   element,
+  width,
   height,
 }: ReactFieldPreviewContext<MapPlacement[]>) => {
-  const size = 10;
-  const top = (height - size) / 2;
-  const grid = document.createElementNS(SVG_NS, 'g');
-  for (const [x, y] of [
-    [0, 0],
-    [1, 0],
-    [0, 1],
-    [1, 1],
-  ]) {
-    const box = document.createElementNS(SVG_NS, 'rect');
-    box.setAttribute('x', String(2 + x * (size / 2 + 1)));
-    box.setAttribute('y', String(top + y * (size / 2 + 1)));
-    box.setAttribute('width', String(size / 2));
-    box.setAttribute('height', String(size / 2));
-    box.setAttribute('fill', 'currentColor');
-    box.setAttribute('opacity', value.length ? '0.9' : '0.4');
-    grid.appendChild(box);
-  }
-  element.appendChild(grid);
+  // Centred in the field, both ways. The gap between this and the word before
+  // it is Blockly's own field spacing; padding drawn inside the field would
+  // only move the box off its own middle.
+  const left = (width - MAP_SIZE) / 2;
+  const top = (height - MAP_SIZE) / 2;
 
-  const count = document.createElementNS(SVG_NS, 'text');
-  count.setAttribute('x', String(size + 6));
-  count.setAttribute('y', String(height / 2));
-  count.setAttribute('dominant-baseline', 'central');
-  count.setAttribute('fill', 'currentColor');
-  count.setAttribute('font-size', '11');
-  count.textContent = String(value.length);
-  element.appendChild(count);
+  const box = document.createElementNS(SVG_NS, 'rect');
+  box.setAttribute('x', String(left));
+  box.setAttribute('y', String(top));
+  box.setAttribute('width', String(MAP_SIZE));
+  box.setAttribute('height', String(MAP_SIZE));
+  box.setAttribute('rx', '2');
+  box.setAttribute('fill', '#f7f9fb');
+  box.setAttribute('stroke', 'rgba(0, 0, 0, 0.35)');
+  box.setAttribute('stroke-width', '1');
+  element.appendChild(box);
+
+  // One mark per placement, at its cell. Only the occupied cells are drawn —
+  // a hundred rects for an empty map would be a hundred rects saying nothing.
+  const cellSize = MAP_SIZE / VIEWPORT_TILES;
+  for (const placement of value) {
+    const cell = cellOf(placement, TILE_SIZE);
+    if (!cell) {
+      continue;
+    }
+    const mark = document.createElementNS(SVG_NS, 'rect');
+    mark.setAttribute('x', String(left + cell.column * cellSize));
+    mark.setAttribute('y', String(top + cell.row * cellSize));
+    // A hair over one cell, so neighbours read as a run rather than a dotted
+    // line: at this size the gap between two marks is most of the mark.
+    mark.setAttribute('width', String(cellSize + 0.3));
+    mark.setAttribute('height', String(cellSize + 0.3));
+    mark.setAttribute('fill', '#1a1a24');
+    element.appendChild(mark);
+  }
 };
 
 // The popup renders in its own React root (Blockly's DropDownDiv), outside the
@@ -86,10 +111,7 @@ export const plugin = createReactField<MapPlacement[]>({
   renderPreview,
   renderBackground: false,
   getText: value => String(value.length),
-  getSize: ({value}) => ({
-    width: 22 + String(value.length).length * 7,
-    height: 18,
-  }),
+  getSize: () => ({width: MAP_SIZE + 4, height: MAP_SIZE + 4}),
   dropdownStyle: {
     backgroundColor: 'var(--background-neutral-secondary)',
     color: 'var(--text-neutral-primary)',

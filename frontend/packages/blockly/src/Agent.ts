@@ -53,6 +53,8 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
   // The unique renderer-registry name this workspace was injected with, held so
   // it can be released when the workspace is torn down.
   protected _rendererName?: string;
+  /** Re-measure on `loadingdone`; held so `deconstruct` can unsubscribe. */
+  protected _reMeasureForFonts?: () => void;
   // The font size of the currently applied theme, tracked so a theme change that
   // alters the font size can trigger a re-layout (see _themeChangedEvent).
   protected _appliedFontSize?: number;
@@ -257,6 +259,55 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
     this._workspace.addChangeListener((event: Blockly.Events.Abstract) => {
       this.emit(AgentEvent.BlocklyEvent, event, this.driver.environment);
     });
+
+    this.reMeasureWhenFontsArrive();
+  }
+
+  /**
+   * Measure the workspace again once the web fonts have arrived.
+   *
+   * A field records its size the first time it renders, and a block that
+   * re-renders reuses what its fields recorded ("Other fields on the same block
+   * will not rerender, because their sizes have already been recorded" —
+   * Blockly's own note on `markDirty`). So a workspace injected while a web font
+   * is still loading measures every field against the fallback and KEEPS those
+   * measurements: fields sit off their centres, blocks are the wrong width, and
+   * the font visibly changing underneath them fixes none of it.
+   *
+   * Hence both halves here — mark every field dirty, which is what makes the
+   * re-render a re-measure, and then render.
+   *
+   * Twice, too. `fonts.ready` settles when nothing is *currently* loading, and
+   * a font is not fetched until something using it is laid out — so a font that
+   * starts loading after inject is missed by `ready` alone. `loadingdone` fires
+   * for each batch that finishes, which covers the rest.
+   */
+  protected reMeasureWhenFontsArrive() {
+    const fonts = document.fonts;
+    if (!fonts) {
+      return;
+    }
+    const workspace = this._workspace;
+    this._reMeasureForFonts = async () => {
+      // The workspace can be gone by now — a file switched, a lab unmounted.
+      if (!workspace || this._workspace !== workspace || !workspace.rendered) {
+        return;
+      }
+      for (const block of workspace.getAllBlocks(false)) {
+        for (const input of block.inputList) {
+          for (const field of input.fieldRow) {
+            field.markDirty();
+          }
+        }
+        void block.queueRender();
+      }
+      await Blockly.renderManagement.finishQueuedRenders();
+      if (this._workspace === workspace && workspace.rendered) {
+        Blockly.svgResize(workspace);
+      }
+    };
+    void fonts.ready.then(() => this._reMeasureForFonts?.());
+    fonts.addEventListener('loadingdone', this._reMeasureForFonts);
   }
 
   /**
@@ -342,6 +393,14 @@ class Agent<T extends Environment = Environment> extends TypedEventEmitter<T> {
    * Removes the workspace.
    */
   deconstruct() {
+    if (this._reMeasureForFonts) {
+      document.fonts?.removeEventListener(
+        'loadingdone',
+        this._reMeasureForFonts,
+      );
+      this._reMeasureForFonts = undefined;
+    }
+
     // Remove from the Driver's awareness
     this.driver.uninitialize(this);
     this.driver.removeListener(
