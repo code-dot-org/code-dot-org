@@ -1230,19 +1230,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onPreviewClick={handlePreviewClick}
         />
 
-        {/* The image form always shows on Images; codegen only when the
-          level asks for it. */}
-        {((activeTab === 'Code' && !!levelProperties.guideMode) ||
-          activeTab === 'Images') && (
+        {/* Codegen guide, when the level asks for it. (Image generation
+          lives in the Images tab's image dialog.) */}
+        {activeTab === 'Code' && !!levelProperties.guideMode && (
           <GenerateSpriteLab
-            guideMode={
-              activeTab === 'Images'
-                ? 'aiImageGenerate'
-                : levelProperties.guideMode!
-            }
+            guideMode={levelProperties.guideMode}
             instructions={levelProperties.longInstructions}
             onCodeGenerated={handleCodeGenerated}
-            uploadImage={uploadImage}
           />
         )}
       </TabShell>

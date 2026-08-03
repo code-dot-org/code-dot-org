@@ -22,7 +22,13 @@ import {
   onTrimsUpdated,
   trimAnimationListImages,
 } from '../imageTrim';
+import {
+  BACKGROUNDS_CATEGORY,
+  BLOCKS_CATEGORY,
+  SpriteLab2ItemType,
+} from '../types';
 
+import {GeneratedImageResult} from './GenerateImageView';
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -41,6 +47,25 @@ function getBlankCanvasDataURI(): string {
     blankCanvasDataURI = canvas.toDataURL('image/png');
   }
   return blankCanvasDataURI;
+}
+
+function itemTypeFromCategories(categories?: string[]): SpriteLab2ItemType {
+  if (categories?.includes(BACKGROUNDS_CATEGORY)) {
+    return 'background';
+  }
+  if (categories?.includes(BLOCKS_CATEGORY)) {
+    return 'block';
+  }
+  return 'sprite';
+}
+
+function bytesToDataURI(bytes: Uint8Array, mediaType: string): string {
+  let binary = '';
+  // Chunked: spreading a megabyte-scale array overflows the argument limit.
+  for (let i = 0; i < bytes.length; i += 32768) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + 32768));
+  }
+  return `data:${mediaType};base64,${btoa(binary)}`;
 }
 
 interface GalleryCardProps {
@@ -165,17 +190,132 @@ const GenerateImagePane: React.FunctionComponent<{
     [targetProps, onRenameImage]
   );
 
-  const handleCreateFromPaint = useCallback((name: string): string | null => {
+  const validateNewName = useCallback((name: string): string | null => {
     if (!name) {
       return 'Enter a name first.';
     }
     if (!isNameUnique(name, getStore().getState().animationList.propsByKey)) {
       return 'That name is already used.';
     }
-    pendingNewNameRef.current = name;
-    setPainting('loading');
     return null;
   }, []);
+
+  const handleCreateFromPaint = useCallback(
+    (name: string): string | null => {
+      const error = validateNewName(name);
+      if (error) {
+        return error;
+      }
+      pendingNewNameRef.current = name;
+      setPainting('loading');
+      return null;
+    },
+    [validateNewName]
+  );
+
+  // Current pixels as a data URI (generation's "use previous image" sends
+  // them in a JSON request body).
+  const getTargetDataURI = useCallback(async (): Promise<string | null> => {
+    if (!targetProps) {
+      return null;
+    }
+    if (targetProps.dataURI) {
+      return targetProps.dataURI;
+    }
+    if (!targetProps.sourceUrl) {
+      return null;
+    }
+    try {
+      const blob = await (await fetch(targetProps.sourceUrl)).blob();
+      return await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    } catch {
+      return null;
+    }
+  }, [targetProps]);
+
+  // Persist an accepted generation: upload, then create the animation (new
+  // image) or repoint the existing one, with the generation metadata.
+  const handleAcceptGenerated = useCallback(
+    async (result: GeneratedImageResult, newName?: string) => {
+      const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
+      let sourceUrl = dataURI;
+      if (uploadImage) {
+        try {
+          sourceUrl = await uploadImage(
+            result.filename,
+            result.uint8Array,
+            result.mediaType
+          );
+        } catch {
+          // Keep the embedded data URI.
+        }
+      }
+      const frameSize: {x: number; y: number} | null =
+        await dataURIToSourceSize(dataURI).catch(() => null);
+
+      if (dialogTarget === 'new' && newName) {
+        const key = createUuid();
+        dispatch(
+          // addAnimation is an untyped JS thunk; cast for dispatch.
+          addAnimation(key, {
+            name: newName,
+            sourceUrl,
+            frameSize: frameSize || {x: 1024, y: 1024},
+            frameCount: 1,
+            frameDelay: 2,
+            looping: true,
+            categories:
+              result.generation.itemType === 'background'
+                ? [BACKGROUNDS_CATEGORY]
+                : result.generation.itemType === 'block'
+                ? [BLOCKS_CATEGORY]
+                : [],
+            pixelGridSize: result.pixelGridSize,
+            generation: result.generation,
+          }) as unknown as AnyAction
+        );
+        // The classic thunk unconditionally renames to name_N; take the
+        // plain name back (validated free before entering the view).
+        if (
+          isNameUnique(newName, getStore().getState().animationList.propsByKey)
+        ) {
+          dispatch(setAnimationName(key, newName) as unknown as AnyAction);
+        }
+        setDialogTarget(key);
+        return;
+      }
+
+      const key = dialogTarget;
+      if (!key || key === 'new' || !targetProps) {
+        return;
+      }
+      const current = getStore().getState().animationList;
+      const updated = {
+        orderedKeys: current.orderedKeys,
+        propsByKey: {
+          ...current.propsByKey,
+          [key]: {
+            ...current.propsByKey[key],
+            sourceUrl,
+            dataURI,
+            ...(frameSize ? {frameSize, sourceSize: frameSize} : {}),
+            pixelGridSize: result.pixelGridSize,
+            generation: result.generation,
+            loadedFromSource: true,
+            saved: false,
+          },
+        },
+      };
+      dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
+      trimAnimationListImages(updated);
+    },
+    [dialogTarget, targetProps, uploadImage, dispatch]
+  );
 
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
   // asset (new filename, so nothing caches the old pixels).
@@ -327,6 +467,10 @@ const GenerateImagePane: React.FunctionComponent<{
           onCreateFromPaint={handleCreateFromPaint}
           onRename={handleRename}
           onDelete={handleDelete}
+          itemType={itemTypeFromCategories(targetProps?.categories)}
+          getDataURI={getTargetDataURI}
+          onValidateNewName={validateNewName}
+          onAcceptGenerated={handleAcceptGenerated}
         />
       )}
 

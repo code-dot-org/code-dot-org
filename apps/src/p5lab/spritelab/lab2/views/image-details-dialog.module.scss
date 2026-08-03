@@ -14,6 +14,12 @@
   @include chrome.panel;
 
   width: 720px;
+  // The panel glides between the Details and Generate views' widths.
+  transition: width 0.25s ease;
+}
+
+.dialogHost .dialogWide {
+  width: 860px;
 }
 
 .dialogHost .dialog :focus-visible {
@@ -142,4 +148,102 @@
   margin-top: auto;
   padding-top: 12px;
   font-size: 14px;
+}
+
+// --- Generate view ---
+
+.generateView {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+
+  label span,
+  legend {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: rgb(240 242 246 / 75%);
+  }
+
+  select {
+    height: 34px;
+    padding: 0 8px;
+    border: 1px solid rgb(255 255 255 / 25%);
+    border-radius: 6px;
+    background-color: rgb(255 255 255 / 6%);
+    color: chrome.$panel-text;
+    font-size: 14px;
+  }
+}
+
+.promptLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.promptInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 25%);
+  border-radius: 6px;
+  background-color: rgb(255 255 255 / 6%);
+  color: chrome.$panel-text;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.fieldRow {
+  display: flex;
+  gap: 16px;
+}
+
+.sourceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
+
+  legend {
+    padding: 0 4px;
+  }
+}
+
+.botRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bot {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.wildness {
+  flex: 1;
+
+  span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: rgb(240 242 246 / 75%);
+  }
+}
+
+.reviewHint {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(240 242 246 / 85%);
+}
+
+.generateError {
+  color: #ff9d9d;
+  font-size: 13px;
+  font-weight: 600;
 }
