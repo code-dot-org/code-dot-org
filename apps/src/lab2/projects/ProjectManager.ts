@@ -777,6 +777,12 @@ export default class ProjectManager {
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
       }
+      if (this.saveInProgress) {
+        // We deferred this save because one is still running, so we are not
+        // done saving. Reporting a noop here would tell listeners the project
+        // is up to date while a save is in flight and newer changes are queued.
+        return this.getNoopResponse();
+      }
       return this.getNoopResponseAndSendSaveNoopEvent();
     } else {
       // if we can save immediately, initiate a save now. This is an async

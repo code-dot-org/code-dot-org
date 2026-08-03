@@ -635,6 +635,34 @@ describe('ProjectManager', () => {
     assert.isFalse(projectManager.hasUnsavedChanges());
   });
 
+  it('does not report a noop when an edit arrives during a save in flight', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    const noopListener = sinon.stub();
+    const startListener = sinon.stub();
+    projectManager.addSaveNoopListener(noopListener);
+    projectManager.addSaveStartListener(startListener);
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2);
+
+    // The first save is still running and the edit is queued behind it, so the
+    // project is not up to date and listeners must not hear otherwise.
+    assert.isTrue(startListener.calledOnce);
+    assert.isTrue(noopListener.notCalled);
+
+    finishFirstSourceSave();
+    await firstSave;
+  });
+
   it('keeps sources edited during a save in flight for the next save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
     const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
