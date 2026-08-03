@@ -418,6 +418,17 @@ const GenerateImagePane: React.FunctionComponent<{
   return (
     <div className={moduleStyles.imagesManager}>
       <div className={moduleStyles.imageGallery}>
+        {/* First slot, so it never hides behind a scroll. */}
+        <div className={moduleStyles.imageCard}>
+          <button
+            type="button"
+            className={moduleStyles.newImageCard}
+            onClick={openNewDialog}
+          >
+            <span aria-hidden>+</span>
+            <span className={moduleStyles.newImageLabel}>New image</span>
+          </button>
+        </div>
         {images.map(({key, props}) => (
           <GalleryCard
             key={key}
@@ -432,16 +443,6 @@ const GenerateImagePane: React.FunctionComponent<{
             onOpen={openDialog}
           />
         ))}
-        <div className={moduleStyles.imageCard}>
-          <button
-            type="button"
-            className={moduleStyles.newImageCard}
-            onClick={openNewDialog}
-          >
-            <span aria-hidden>+</span>
-            <span className={moduleStyles.newImageLabel}>New image</span>
-          </button>
-        </div>
       </div>
 
       {dialogTarget && painting !== 'active' && (
