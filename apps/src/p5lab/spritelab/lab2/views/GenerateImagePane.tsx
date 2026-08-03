@@ -107,11 +107,13 @@ const GenerateImagePane: React.FunctionComponent<{
     trimAnimationListImages(animationList);
   }, [animationList]);
 
-  // The dialog's subject: an animation key, 'new', or closed. While
-  // `painting`, the paint editor renders in the dialog's place and the
-  // dialog returns on save/cancel (one modal at a time).
+  // The dialog's subject: an animation key, 'new', or closed. Painting is
+  // three-way: the details dialog stays up through 'loading' (the paint
+  // editor renders nothing until its image decodes) and hands off in one
+  // step when the editor reports ready — otherwise the backdrop vanishes
+  // for a moment between the two dialogs.
   const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
-  const [painting, setPainting] = useState(false);
+  const [painting, setPainting] = useState<'no' | 'loading' | 'active'>('no');
   // The name chosen for a new image, held until its first paint is saved —
   // nothing is created before that.
   const pendingNewNameRef = useRef<string | null>(null);
@@ -130,7 +132,7 @@ const GenerateImagePane: React.FunctionComponent<{
 
   const closeDialog = useCallback(() => {
     setDialogTarget(null);
-    setPainting(false);
+    setPainting('no');
     pendingNewNameRef.current = null;
     triggerRef.current?.focus();
   }, []);
@@ -171,7 +173,7 @@ const GenerateImagePane: React.FunctionComponent<{
       return 'That name is already used.';
     }
     pendingNewNameRef.current = name;
-    setPainting(true);
+    setPainting('loading');
     return null;
   }, []);
 
@@ -204,7 +206,7 @@ const GenerateImagePane: React.FunctionComponent<{
 
   const handleEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
-      setPainting(false);
+      setPainting('no');
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
@@ -307,7 +309,7 @@ const GenerateImagePane: React.FunctionComponent<{
         </div>
       </div>
 
-      {dialogTarget && !painting && (
+      {dialogTarget && painting !== 'active' && (
         <ImageDetailsDialog
           animKey={creating ? null : dialogTarget}
           name={targetProps?.name}
@@ -321,14 +323,14 @@ const GenerateImagePane: React.FunctionComponent<{
           }
           generation={targetProps?.generation}
           onClose={closeDialog}
-          onPaint={() => setPainting(true)}
+          onPaint={() => setPainting('loading')}
           onCreateFromPaint={handleCreateFromPaint}
           onRename={handleRename}
           onDelete={handleDelete}
         />
       )}
 
-      {dialogTarget && painting && (
+      {dialogTarget && painting !== 'no' && (
         <PixelEditorModal
           title={
             creating
@@ -348,8 +350,9 @@ const GenerateImagePane: React.FunctionComponent<{
             creating ? BLANK_CANVAS_GRID : targetProps?.pixelGridSize
           }
           initialRecentColors={targetProps?.recentColors}
+          onReady={() => setPainting('active')}
           onSave={handleEditorSave}
-          onCancel={() => setPainting(false)}
+          onCancel={() => setPainting('no')}
         />
       )}
     </div>

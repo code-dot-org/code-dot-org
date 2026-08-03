@@ -1,21 +1,39 @@
 // The image dialog (Details view): image large on the left, name/metadata/
-// actions on the right.
+// actions on the right. Wears the same dark rounded chrome as the pixel
+// editor (dialogChrome.scss).
 
-// display: contents host so our dialog sizing wins over CustomDialog's via
+@use '../../../../pixelEditor/dialogChrome' as chrome;
+
+// display: contents host so our panel styles win over CustomDialog's via
 // parent-selector specificity (the PixelEditorModal pattern).
 .dialogHost {
   display: contents;
-
-  .dialog {
-    width: 720px;
-    max-width: 92vw;
-  }
 }
+
+.dialogHost .dialog {
+  @include chrome.panel;
+
+  width: 720px;
+}
+
+.dialogHost .dialog :focus-visible {
+  @include chrome.focus-ring;
+}
+
+.header {
+  @include chrome.header;
+}
+
+.srOnly {
+  @include chrome.sr-only;
+}
+
+@include chrome.keyframes;
 
 .body {
   display: flex;
   gap: 20px;
-  padding: 8px;
+  padding: 16px;
 }
 
 .imagePane {
@@ -26,11 +44,11 @@
   width: 380px;
   height: 380px;
   flex-shrink: 0;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  // Checkerboard signals transparency (translucent grey works on light and
-  // dark themes).
-  $check: rgb(128 128 128 / 16%);
+  border: 1px solid chrome.$border-subtle;
+  border-radius: 6px;
+  // Checkerboard signals transparency (translucent grey works over the dark
+  // panel).
+  $check: rgb(128 128 128 / 22%);
 
   background-image: linear-gradient(45deg, $check 25%, transparent 25%),
     linear-gradient(-45deg, $check 25%, transparent 25%),
@@ -58,7 +76,6 @@
   gap: 16px;
   flex: 1;
   min-width: 0;
-  color: var(--text-neutral-primary);
 }
 
 .nameRow {
@@ -70,6 +87,8 @@
   h2 {
     margin: 0;
     overflow-wrap: anywhere;
+    font-size: 20px;
+    font-weight: 600;
   }
 }
 
@@ -86,7 +105,7 @@
   font-size: 14px;
 
   dt {
-    color: var(--text-neutral-secondary);
+    color: rgb(240 242 246 / 65%);
   }
 
   dd {
@@ -100,6 +119,20 @@
   gap: 10px;
 }
 
+.button {
+  @include chrome.plain-button;
+}
+
+.primaryButton {
+  @include chrome.plain-button;
+  @include chrome.primary-button;
+}
+
+.dangerButton {
+  @include chrome.plain-button;
+  @include chrome.danger-button;
+}
+
 // Delete sits apart from the everyday actions; confirming swaps the button
 // for an inline question, so no second dialog stacks on this one.
 .dangerRow {
@@ -108,4 +141,5 @@
   gap: 10px;
   margin-top: auto;
   padding-top: 12px;
+  font-size: 14px;
 }

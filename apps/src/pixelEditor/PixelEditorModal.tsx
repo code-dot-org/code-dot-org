@@ -102,6 +102,10 @@ interface PixelEditorModalProps {
   knownPixelGrid?: number;
   // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
   initialRecentColors?: RGBA[];
+  // Fires when the editor first renders content (the image loaded or
+  // failed). Until then the modal renders nothing; a caller swapping
+  // another dialog for this one can wait for it to avoid a scrim gap.
+  onReady?: () => void;
   onSave: (dataURI: string, meta: PixelEditorSaveMeta) => void;
   onCancel: () => void;
 }
@@ -120,6 +124,7 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   imageUrl,
   knownPixelGrid,
   initialRecentColors,
+  onReady,
   onSave,
   onCancel,
 }) => {
@@ -135,6 +140,14 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
+  // See the onReady prop; by ref so a changing identity can't re-fire it.
+  const onReadyRef = useRef(onReady);
+  onReadyRef.current = onReady;
+  useEffect(() => {
+    if (loaded || loadError) {
+      onReadyRef.current?.();
+    }
+  }, [loaded, loadError]);
   // Editing at the image's logical resolution (see knownPixelGrid).
   const [pixelMode, setPixelMode] = useState(false);
   // Mirror for the stable repaint callback (which runs on every stroke).

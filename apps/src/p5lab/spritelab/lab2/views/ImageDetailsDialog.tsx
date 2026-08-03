@@ -1,6 +1,5 @@
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useState} from 'react';
 
 import {ImageGenerationMetadata} from '../types';
@@ -33,8 +32,9 @@ const STYLE_LABELS = {smooth: 'Smooth', pixel: 'Pixel art'};
 
 /**
  * The image dialog's Details view: the image large on the left; its name and
- * how it was made on the right, with edit, rename, and delete. AI generation
- * hands off to the generate view (next phase).
+ * how it was made on the right, with edit, rename, and delete. Wears the
+ * pixel editor's dark chrome. AI generation hands off to the generate view
+ * (next phase).
  */
 const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
@@ -52,6 +52,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [renaming, setRenaming] = useState(false);
   const [nameError, setNameError] = useState<string | null>(null);
   const [confirmingDelete, setConfirmingDelete] = useState(false);
+
+  const title = isNew ? 'New image' : name || 'Image';
 
   const commitRename = () => {
     const trimmed = nameDraft.trim();
@@ -72,12 +74,26 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   };
 
   return (
-    <div className={moduleStyles.dialogHost}>
+    // data-theme flips the design system's semantic colors to dark inside
+    // the panel (the TextField reads them).
+    <div className={moduleStyles.dialogHost} data-theme="dark">
       <CustomDialog
-        aria-label={isNew ? 'New image' : `Image: ${name}`}
+        aria-label={title}
         onClose={onClose}
+        mode="dark"
         className={moduleStyles.dialog}
       >
+        <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
+          {isNew
+            ? 'Name the image, then paint or generate it.'
+            : 'View, edit, rename, or delete this image.'}
+        </span>
+        {/* Tabbable so the focus trap lands on the title first (the
+            pixel editor's pattern). */}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+        <div className={moduleStyles.header} tabIndex={0}>
+          {title}
+        </div>
         <div className={moduleStyles.body}>
           <div className={moduleStyles.imagePane}>
             {thumb ? (
@@ -101,18 +117,17 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 />
                 {!isNew && (
                   <div className={moduleStyles.nameButtons}>
-                    <MuiButton
-                      variant="contained"
-                      size="small"
+                    <button
+                      type="button"
+                      className={moduleStyles.primaryButton}
                       disabled={!nameDraft.trim()}
                       onClick={commitRename}
                     >
                       Save name
-                    </MuiButton>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      size="small"
+                    </button>
+                    <button
+                      type="button"
+                      className={moduleStyles.button}
                       onClick={() => {
                         setNameDraft(name || '');
                         setNameError(null);
@@ -120,23 +135,20 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       }}
                     >
                       Cancel
-                    </MuiButton>
+                    </button>
                   </div>
                 )}
               </div>
             ) : (
               <div className={moduleStyles.nameRow}>
-                <MuiTypography variant="h4" component="h2">
-                  {name}
-                </MuiTypography>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="extraSmall"
+                <h2>{name}</h2>
+                <button
+                  type="button"
+                  className={moduleStyles.button}
                   onClick={() => setRenaming(true)}
                 >
                   Rename
-                </MuiButton>
+                </button>
               </div>
             )}
 
@@ -159,63 +171,61 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
 
             <div className={moduleStyles.actions}>
               {isNew ? (
-                <MuiButton
-                  variant="contained"
-                  size="small"
+                <button
+                  type="button"
+                  className={moduleStyles.primaryButton}
                   disabled={!nameDraft.trim()}
                   onClick={startCreatePaint}
                 >
                   Paint it
-                </MuiButton>
+                </button>
               ) : (
-                <MuiButton variant="contained" size="small" onClick={onPaint}>
+                <button
+                  type="button"
+                  className={moduleStyles.primaryButton}
+                  onClick={onPaint}
+                >
                   Edit
-                </MuiButton>
+                </button>
               )}
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="small"
+              <button
+                type="button"
+                className={moduleStyles.button}
                 disabled
                 title="AI generation moves here next"
               >
                 Generate with AI
-              </MuiButton>
+              </button>
             </div>
 
             {!isNew && (
               <div className={moduleStyles.dangerRow}>
                 {confirmingDelete ? (
                   <>
-                    <MuiTypography variant="body2" component="span">
-                      Delete this image?
-                    </MuiTypography>
-                    <MuiButton
-                      variant="contained"
-                      color="error"
-                      size="extraSmall"
+                    <span>Delete this image?</span>
+                    <button
+                      type="button"
+                      className={moduleStyles.dangerButton}
                       onClick={onDelete}
                     >
                       Delete
-                    </MuiButton>
-                    <MuiButton
-                      variant="outlined"
-                      color="secondary"
-                      size="extraSmall"
+                    </button>
+                    <button
+                      type="button"
+                      className={moduleStyles.button}
                       onClick={() => setConfirmingDelete(false)}
                     >
                       Keep
-                    </MuiButton>
+                    </button>
                   </>
                 ) : (
-                  <MuiButton
-                    variant="outlined"
-                    color="error"
-                    size="extraSmall"
+                  <button
+                    type="button"
+                    className={moduleStyles.dangerButton}
                     onClick={() => setConfirmingDelete(true)}
                   >
                     Delete
-                  </MuiButton>
+                  </button>
                 )}
               </div>
             )}
