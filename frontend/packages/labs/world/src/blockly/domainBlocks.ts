@@ -21,7 +21,10 @@ import {
 } from '@code-dot-org/blockly';
 import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
-import {IMPORT_SPRITE_VALUE} from '../appearance/appearanceImport';
+import {
+  IMPORT_BACKGROUND_VALUE,
+  IMPORT_SPRITE_VALUE,
+} from '../appearance/appearanceImport';
 import {
   DEFAULT_BACKDROP_COLOR,
   type ArgType,
@@ -41,6 +44,7 @@ import {
 } from './extensions/actorContext';
 import {
   animationImportFieldExtension,
+  backgroundImportFieldExtension,
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
 import {
@@ -75,7 +79,7 @@ import {
   mapOptions,
   mapOptionsExtension,
   ruleModuleOptions,
-  backgroundOptions,
+  backgroundImportOptions,
   spriteOptions,
 } from './moduleOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
@@ -2083,25 +2087,40 @@ const worldRemoveWorldEffect = defineBlock({
 // optional layer index, so parallax later adds blocks that name a layer and
 // changes nothing a learner has already built.
 
+// The backdrops a `set background to` block may name: the project's own
+// (populated live by the extension), and `(import…)` to copy one in.
+const backgroundFieldOptions = (): Array<[string, string]> =>
+  backgroundImportOptions();
+
 /** Point a `BACKGROUND` dropdown at the live list (the project's backdrops). */
 const backgroundOptionsExtension = liveDropdown(
   'world_background_options',
   'BACKGROUND',
-  backgroundOptions,
+  backgroundFieldOptions,
 );
 
 const worldSetBackground = defineBlock({
   type: 'world_set_background',
   message0: 'set background to %1',
   args0: [
-    {type: 'field_dropdown', name: 'BACKGROUND', options: backgroundOptions},
+    {
+      type: 'field_dropdown',
+      name: 'BACKGROUND',
+      options: backgroundFieldOptions,
+    },
   ],
   previousStatement: true,
   nextStatement: true,
   // Chained under `define world` it is the world's background from the start;
   // in a handler or a rule step it changes it mid-game. `setBackground` is on
   // the builder and the live World alike, so there is no context guard.
-  extensions: [backgroundOptionsExtension, worldContextExtension],
+  // The options extension first, then the import one, so the latter wraps that
+  // validator rather than being wrapped by it (see appearanceImportField).
+  extensions: [
+    backgroundOptionsExtension,
+    worldContextExtension,
+    backgroundImportFieldExtension,
+  ],
   style: 'sprite_blocks',
   tooltip:
     'Draw an image behind everything, stretched to fill the view. Backgrounds ' +
@@ -2109,7 +2128,9 @@ const worldSetBackground = defineBlock({
   generator: {
     javascript(block) {
       const name = block.getFieldValue('BACKGROUND');
-      if (!name) {
+      // Nothing chosen, or the `(import…)` row still sitting in the field
+      // because no editor was there to answer it (the headless generator).
+      if (!name || name === IMPORT_BACKGROUND_VALUE) {
         return '';
       }
       // A whole image, never a cell: a backdrop is not a spritesheet, so this

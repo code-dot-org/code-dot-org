@@ -26,13 +26,20 @@ import {
   setAppearanceImportHandler,
   type AppearanceKind,
 } from '../appearance/appearanceImport';
+import {BackgroundLibraryDialog} from '../appearance/BackgroundLibraryDialog';
+import {fetchStockBackground} from '../appearance/fetchStockBackground';
 import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
 import {
   importStockAnimation,
+  importStockBackground,
   importStockSprite,
 } from '../appearance/importStock';
 import {projectSheets} from '../appearance/sheetFile';
-import type {StockAnimation, StockSprite} from '../appearance/stock';
+import type {
+  StockAnimation,
+  StockBackground,
+  StockSprite,
+} from '../appearance/stock';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
@@ -49,7 +56,6 @@ import {projectImageSizes} from '../runtime/imageSize';
 import {
   filePath,
   projectFiles,
-  projectImageNames,
   projectImagePaths,
 } from '../runtime/projectFiles';
 
@@ -247,13 +253,20 @@ export const BlocklyFileEditor = ({
   // Names for the pickers (a block stores a name, and the decoded images are
   // keyed by one); paths for the dropdown registries, which have to tell a
   // backdrop from a sprite and the folder is the only thing that says so.
-  const images = useMemo(
-    () => projectImageNames(currentSources.source),
-    [currentSources],
-  );
   const imagePaths = useMemo(
     () => projectImagePaths(currentSources.source),
     [currentSources],
+  );
+  // The picture palette's pool, which is the sprites and not the backdrops: a
+  // sky is not something to dress an actor in (BACKGROUNDS.md §5). Derived from
+  // the paths rather than from the names, because a name cannot say where a
+  // file lives.
+  const images = useMemo(
+    () =>
+      imagePaths
+        .filter(path => !path.startsWith('backgrounds/'))
+        .map(path => path.split('/').pop() as string),
+    [imagePaths],
   );
   // How big those images are, where the editor can tell: what says how many
   // cells a spritesheet holds (blockly/spriteCells).
@@ -290,6 +303,14 @@ export const BlocklyFileEditor = ({
   // dialog opened.
   const sourcesRef = useRef(currentSources);
   sourcesRef.current = currentSources;
+  // And the write itself, through a ref for the same reason Codebridge's own
+  // editor keeps one: `onChange` is `saveFile` bound to the project as it was
+  // at that render, and the workspace's change listener outlives the render it
+  // was made in. Calling the captured one writes the file into a project from
+  // BEFORE anything else changed — which is how an imported background arrived
+  // and then vanished, undone by the very edit that named it.
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
 
   // The same machinery for rules. Two handlers rather than one because the two
   // dropdowns want different dialogs; `importing` says which is open, so only
@@ -450,6 +471,52 @@ export const BlocklyFileEditor = ({
         setPickingSprite(true);
         return;
       }
+      finishImport(value);
+    },
+    [updateSources, finishImport],
+  );
+
+  /**
+   * The backdrop shelf, opened from `set background to`'s `(import…)` row.
+   *
+   * Async where the others are not: a backdrop's bytes are served rather than
+   * bundled (BACKGROUNDS.md §7), so choosing one is a fetch before it is an
+   * edit. The dialog stays open and says so while that happens, because a
+   * dialog that vanished and then failed would leave the learner with nothing
+   * to look at and nothing to try again.
+   */
+  const [importingBackground, setImportingBackground] = useState(false);
+  const [backgroundError, setBackgroundError] = useState<string | undefined>();
+
+  const handleBackgroundImport = useCallback(
+    async (chosen: StockBackground) => {
+      setBackgroundError(undefined);
+      setImportingBackground(true);
+      let dataUrl: string;
+      try {
+        dataUrl = await fetchStockBackground(chosen);
+      } catch (error) {
+        setImportingBackground(false);
+        setBackgroundError(
+          error instanceof Error ? error.message : String(error),
+        );
+        return;
+      }
+      setImportingBackground(false);
+      const sources = sourcesRef.current;
+      const {source, value} = importStockBackground(
+        sources.source,
+        chosen,
+        dataUrl,
+      );
+      // In the project BEFORE the field takes its value: the dropdown rebuilds
+      // from the registry, and a value with no matching option is dropped.
+      updateSources({...sources, source});
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImagePaths(source),
+        projectImageSizes(source),
+      );
       finishImport(value);
     },
     [updateSources, finishImport],
@@ -692,7 +759,7 @@ export const BlocklyFileEditor = ({
         );
         reconcileMembers(edited);
         if (!pendingReload.current) {
-          onChange(edited);
+          onChangeRef.current(edited);
         }
         return;
       }
@@ -723,9 +790,9 @@ export const BlocklyFileEditor = ({
           return;
         }
       }
-      onChange(contents);
+      onChangeRef.current(contents);
     },
-    [onChange, handleRename, reconcileMembers],
+    [handleRename, reconcileMembers],
   );
 
   // The eye on a `use rule` / `use trait` block, and what it does. The handler
@@ -816,7 +883,18 @@ export const BlocklyFileEditor = ({
           onCancel={() => finishPick(undefined)}
         />
       )}
-      {importingAppearance && (
+      {importingAppearance === 'background' && (
+        <BackgroundLibraryDialog
+          onImport={handleBackgroundImport}
+          busy={importingBackground}
+          error={backgroundError}
+          onCancel={() => {
+            setBackgroundError(undefined);
+            finishImport(undefined);
+          }}
+        />
+      )}
+      {importingAppearance && importingAppearance !== 'background' && (
         <ImportAppearanceDialog
           kind={importingAppearance}
           onImport={handleAppearanceImport}

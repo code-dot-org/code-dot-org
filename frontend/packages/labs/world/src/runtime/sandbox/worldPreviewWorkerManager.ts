@@ -147,6 +147,12 @@ export async function start(): Promise<void> {
   let baseline: WorldSnapshot | null = null;
   // The last load's uploaded textures — reused when rendering thumbnails.
   let lastAssets: Record<string, string> = {};
+  // The textures the RUNNING game loaded, as a signature. A Phaser scene loads
+  // them once, in `preload`, so a game cannot start drawing an image that
+  // arrived after it started — and the images do not travel in the bundle (they
+  // have no text contents, so they are not in the build hash), which means a
+  // rebuild is not enough to notice one. See `texturesChanged`.
+  let runningTextures = '';
 
   window.addEventListener('message', event => {
     if (!parentOrigin || event.origin !== parentOrigin) {
@@ -258,6 +264,19 @@ export async function start(): Promise<void> {
     });
   }
 
+  /**
+   * A stable signature of the project's images: names AND bytes.
+   *
+   * Bytes as well as names, because a repainted sprite keeps its name — the
+   * image editor writes the same file with new pixels, and a game still holding
+   * the old texture would show the drawing the learner has just changed.
+   */
+  const textureSignature = (assets: Record<string, string>): string =>
+    Object.keys(assets)
+      .sort()
+      .map(name => `${name}:${assets[name].length}:${assets[name].slice(-32)}`)
+      .join('|');
+
   async function load({id, moduleUrl, assets}: LoadMessage) {
     lastAssets = assets ?? {};
     try {
@@ -271,8 +290,20 @@ export async function start(): Promise<void> {
       const incoming = entry.getWorld();
       const parent = document.getElementById('game') ?? document.body;
 
+      const textures = textureSignature(lastAssets);
+      // New or repainted images mean new textures, and textures are loaded when
+      // a game starts. So this restarts where a patch would otherwise have been
+      // enough — importing a background, or repainting a sprite, is the one kind
+      // of edit the running game cannot be told about.
+      const texturesChanged = Boolean(binding) && textures !== runningTextures;
+
       let mode: ReloadMode;
-      if (binding && runningWorld && incoming === runningWorld) {
+      if (
+        binding &&
+        runningWorld &&
+        incoming === runningWorld &&
+        !texturesChanged
+      ) {
         // The very module the game is already running.
         //
         // Build URLs are a content hash of every project file (`buildCacheKey`),
@@ -311,8 +342,8 @@ export async function start(): Promise<void> {
         // Reconcile against the last build; patch live or restart.
         const result = reconcile(runningWorld, incoming, baseline);
         baseline = result.snapshot;
-        mode = result.mode;
-        if (result.mode === 'restarted') {
+        mode = texturesChanged ? 'restarted' : result.mode;
+        if (mode === 'restarted') {
           binding.stop();
           binding = null;
           runningWorld = incoming;
@@ -326,6 +357,8 @@ export async function start(): Promise<void> {
         }
         // 'reconciled': reconcile() already patched runningWorld; keep the game.
       }
+
+      runningTextures = textures;
 
       post({
         type: FromPreviewMessage.BUILT,

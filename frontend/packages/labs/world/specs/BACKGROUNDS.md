@@ -180,6 +180,37 @@ backdrop's are not. So the import is:
 The fetch is a static same-origin asset, not an API call — `<img>`-and-`fetch`
 territory, like the image editor's loads, not `DashboardApiClient`.
 
+**Done — this part is implemented.** `fetchStockBackground` gets the bytes,
+`importStockBackground` writes the file, and `BackgroundLibraryDialog` is the
+shelf: thumbnails with no text on them, because a backdrop is a place and "cave"
+versus "court" is a worse question than looking at the two. Its own dialog rather
+than a `kind` of `ImportAppearanceDialog` — that one lists rows promising which
+files an import writes, because a sprite can bring a `.sheet` and an animation
+drags its frames along, whereas a backdrop writes one file and always the same
+one.
+
+Two bugs surfaced on the way, both older than this feature and both fixed:
+
+- **A texture cannot arrive mid-game.** A Phaser scene loads its textures once,
+  in `preload`, and the project's images do not travel in the build hash (they
+  carry no text contents), so a rebuild was not enough to notice a new one. The
+  imported backdrop was named, generated and set on the world — and not drawn.
+  The preview now compares a signature of the project's images, names AND bytes,
+  and restarts when it changes: importing a background, or repainting a sprite,
+  is the one kind of edit a running game cannot be told about.
+- **The write could be built on a stale project.** `onChange` is `saveFile`
+  bound to the project as it was at that render, and the workspace's change
+  listener outlives the render that made it — so the edit that named the backdrop
+  wrote a project from before the backdrop existed, undoing the import that
+  caused it. `BlocklyFileEditor` now writes through a ref, the way Codebridge's
+  own editor already did. It was intermittent, which is what a race looks like
+  from the outside.
+
+And one of this feature's own: a dropdown caches the options it last built, so
+the field took `cave.png` and went on showing "(none)" — right in the generated
+code, wrong on the block. The import row rebuilds that cache before the value
+lands.
+
 Cost, from the measured library (§7): a median backdrop is 59KB, so ~79KB as
 base64 in the project; the largest is 265KB, so ~353KB. Against a ~430KB project
 that is real but affordable for the one or two backdrops a project will hold. If
@@ -281,5 +312,7 @@ The shape of each extension, so today's decisions do not have to be revisited:
 2. Driver: create, stretch, per-frame reconcile, camera colour.
 3. Blocks: the three, plus the `remove` counterpart.
 4. Library: import flow and the `backgrounds/` folder in `DEFAULT_PROJECT`
-   (the manifest generator and base URL are done — §7).
-5. Pool hygiene: picker filters, no `.sheet` UI for backdrops.
+   (done — §6, §7).
+5. Pool hygiene: the dropdowns and the picture palette are filtered (§5);
+   what is left is the image editor, which still offers spritesheet controls
+   for a file under `backgrounds/`.

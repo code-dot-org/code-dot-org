@@ -8,6 +8,7 @@
 
 import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 
+import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 
 import {IMPORT_EFFECT_VALUE} from './effectImport';
@@ -110,6 +111,20 @@ export function spriteOptions(): Array<[string, string]> {
 /** Current BACKGROUND dropdown options (the project's backdrops). */
 export function backgroundOptions(): Array<[string, string]> {
   return orNone(projectBackgrounds);
+}
+
+/**
+ * The same, plus an `(import…)` row that opens the stock backdrop shelf.
+ *
+ * Listed last, and never as the fallback when the project has none — `orNone`
+ * still supplies "(none)" there — so a saved block whose backdrop was deleted
+ * does not silently become the import row.
+ */
+export function backgroundImportOptions(): Array<[string, string]> {
+  return [
+    ...orNone(projectBackgrounds),
+    ['(import…)', IMPORT_BACKGROUND_VALUE],
+  ];
 }
 
 /** Current FILE dropdown options (the project's animation files). */

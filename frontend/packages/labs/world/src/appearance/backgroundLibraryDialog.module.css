@@ -1,0 +1,62 @@
+/* The backdrop shelf's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* A wrapped run of thumbnails, like the picture palette's. Bigger tiles than
+   that one's 56px: these are whole scenes rather than a 32-pixel drawing, and a
+   cave is not a city at thumbnail size unless you can see it. */
+.shelf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  max-height: 50vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 96px;
+  height: 96px;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.tileChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+/* Drawn as the game draws it: stretched to fill, not fitted. A shelf that
+   showed a backdrop letterboxed would be promising something else. */
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 2px;
+}
