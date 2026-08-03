@@ -104,6 +104,15 @@ export const localActorOptions = (
     localActorValue(blockId),
   ]);
 
+/**
+ * What to call the actor a dropdown value names.
+ *
+ * A world's own by the name on its definition; a module actor by its file stem,
+ * which is what the dropdown shows for it too.
+ */
+export const actorLabelFor = (block: Blockly.Block, value: string): string =>
+  localActorFor(block, value)?.name || (value.split('/').pop() ?? value);
+
 /** The actor a dropdown value names, looked up in the block's own workspace. */
 export const localActorFor = (
   block: Blockly.Block,
