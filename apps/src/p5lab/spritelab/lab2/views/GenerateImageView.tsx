@@ -308,8 +308,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 onChange={() => setSource('previous')}
               />
             </fieldset>
-            <div className={moduleStyles.temperatureGroup}>
-              <span id="temperature-label">Temperature</span>
+            <fieldset
+              className={classNames(
+                moduleStyles.radioGroup,
+                moduleStyles.temperatureGroup
+              )}
+              disabled={generating}
+            >
+              <legend id="temperature-label">Temperature</legend>
               <img
                 src={botImage}
                 className={moduleStyles.bot}
@@ -345,7 +351,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                   ['aria-label']: 'Raise temperature',
                 }}
               />
-            </div>
+            </fieldset>
           </div>
 
           {error && (

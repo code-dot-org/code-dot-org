@@ -230,8 +230,7 @@
 }
 
 .promptLabel span,
-.radioGroup legend,
-.temperatureGroup > span {
+.radioGroup legend {
   display: block;
   margin-bottom: 4px;
   font-size: 13px;
@@ -282,17 +281,12 @@
   --text-neutral-disabled: var(--dialog-text-secondary);
 }
 
-.temperatureGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  // The design system slider is a fixed 300px; fit it to the column (its
-  // track and input already stretch to their container).
-  > div {
-    width: 100%;
-    min-width: 0;
-  }
+// Wears .radioGroup's bordered look; this only fits the slider, which the
+// design system fixes at 300px (its track and input already stretch to
+// their container).
+.temperatureGroup > div {
+  width: 100%;
+  min-width: 0;
 }
 
 .bot {
