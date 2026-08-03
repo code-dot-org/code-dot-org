@@ -1504,6 +1504,79 @@ describe('world block generators', () => {
     expect(run('world_remove_world_effect', {EFFECT: ''}, {}, '')).toBe('');
   });
 
+  it('world_set_background names a whole image, never a cell', () => {
+    // The sprite field can carry `coinSpin.png#3`; this one cannot. A backdrop
+    // is stretched over the viewport, so a grid of it means nothing.
+    expect(run('world_set_background', {BACKGROUND: 'cave.png'}, {}, '')).toBe(
+      'world.setBackground("cave.png");\n',
+    );
+  });
+
+  it('world_set_background_color hands the color over as it arrived', () => {
+    // Not through `WorldLab.rgb`, unlike an effect's color parameter: a uniform
+    // needs floats, `setBackgroundColor` takes either, and converting here
+    // would drop the alpha of an `r g b a` block on the way past.
+    expect(
+      run('world_set_background_color', {}, {}, '', {COLOR: "'#88ccff'"}),
+    ).toBe("world.setBackgroundColor('#88ccff');\n");
+    expect(
+      run('world_set_background_color', {}, {}, '', {
+        COLOR: '[1, 0.5, 0, 0.25]',
+      }),
+    ).toBe('world.setBackgroundColor([1, 0.5, 0, 0.25]);\n');
+  });
+
+  it('world_add_background_effect filters the sky and not the swimmer', () => {
+    // The whole point of a backdrop carrying its own effects: `addEffect` would
+    // filter the camera, and everything the camera drew with it.
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_add_background_effect',
+      {EFFECT: 'effects/ripple'},
+      defs,
+      '',
+    );
+    expect(code).toBe('world.addBackgroundEffect("effects/ripple", Ripple);\n');
+    expect(defs['mod:effects/ripple']).toBe(
+      'import Ripple from "effects/ripple";',
+    );
+  });
+
+  it('world_add_background_effect carries parameter values', () => {
+    const code = run(
+      'world_add_background_effect',
+      {EFFECT: 'effects/ripple'},
+      {},
+      '',
+      {EPARAM_0_0: '0.4'},
+      [{id: 'speed', name: 'speed', type: 'float', defaultValue: 0.1}],
+    );
+    expect(code).toContain('{"speed": 0.4}');
+  });
+
+  it('world_remove_background_effect needs only the path', () => {
+    const defs: Record<string, string> = {};
+    const code = run(
+      'world_remove_background_effect',
+      {EFFECT: 'effects/ripple'},
+      defs,
+      '',
+    );
+    expect(code).toBe('world.removeBackgroundEffect("effects/ripple");\n');
+    expect(Object.keys(defs)).toEqual([]);
+  });
+
+  it('the background blocks emit nothing before they are filled in', () => {
+    // A "(none)" dropdown and an emptied socket both read as ''; emitting a
+    // call with it would be a runtime error for a half-built block.
+    expect(run('world_set_background', {BACKGROUND: ''}, {}, '')).toBe('');
+    expect(run('world_set_background_color', {}, {}, '', {COLOR: ''})).toBe('');
+    expect(run('world_add_background_effect', {EFFECT: ''}, {}, '')).toBe('');
+    expect(run('world_remove_background_effect', {EFFECT: ''}, {}, '')).toBe(
+      '',
+    );
+  });
+
   it('registers every animation file the project holds, with no block for it', () => {
     // There is no `use animations` block and deliberately so: an animation file
     // is not something a world opts into, it is something the project HAS. A

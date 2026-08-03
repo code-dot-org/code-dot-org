@@ -16,6 +16,7 @@ import {
   setProjectEffectParameters,
   setProjectMaps,
   setProjectRuleModules,
+  setProjectBackgrounds,
   setProjectSprites,
 } from './moduleOptions';
 import {setOpenableModules} from './openModule';
@@ -28,6 +29,7 @@ import {
   projectMapActorTypes,
   projectRuleMetas,
   projectRuleOptions,
+  projectBackgroundOptions,
   projectSpriteOptions,
   projectWorldRules,
 } from './projectModules';
@@ -41,9 +43,11 @@ const MODULE_FILE = /\.(rule|js|ts)$/;
 export function refreshProjectDropdowns(
   files: Record<string, string>,
   /**
-   * Image file names the project holds. They carry no text contents — an
-   * uploaded or imported PNG is bytes on a `url` — so they never appear in the
-   * flattened `files` map and have to be passed alongside it.
+   * Image file PATHS the project holds (`backgrounds/cave.png`). They carry no
+   * text contents — an uploaded or imported PNG is bytes on a `url` — so they
+   * never appear in the flattened `files` map and have to be passed alongside
+   * it. Paths, not names, because the folder is what says which pool an image
+   * belongs to (projectFiles.projectImagePaths).
    */
   images: readonly string[] = [],
   /** Image sizes, by file name, for the ones the editor can measure. */
@@ -57,6 +61,9 @@ export function refreshProjectDropdowns(
   // The images a `set sprite` block may name: the project's own, and nothing
   // else — a game draws what its project holds.
   setProjectSprites(projectSpriteOptions(files, images));
+  // And the backdrops, which are the same images minus the folder that tells
+  // them apart — one pool never offers the other's contents.
+  setProjectBackgrounds(projectBackgroundOptions(files, images));
   // Which module paths there is a file to open for — what puts the eye on a
   // `use rule` / `use trait` block (openModule).
   setOpenableModules(

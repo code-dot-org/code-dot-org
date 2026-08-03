@@ -17,6 +17,9 @@ import {label} from './label';
 let projectActors: Array<[string, string]> = [];
 let projectAnimationFiles: Array<[string, string]> = [];
 let projectSprites: Array<[string, string]> = [];
+// The same, for the images under `backgrounds/` — a pool of its own, because a
+// sky and a costume are never wanted in the same list (BACKGROUNDS.md §5).
+let projectBackgrounds: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
 // `[label, path]` for the project's own rule modules under `rules/` — the
@@ -37,6 +40,11 @@ export function setProjectActors(options: Array<[string, string]>): void {
 /** Replace the sprite options — the project's own image files. */
 export function setProjectSprites(options: Array<[string, string]>): void {
   projectSprites = options;
+}
+
+/** Replace the backdrop options — the project's images under `backgrounds/`. */
+export function setProjectBackgrounds(options: Array<[string, string]>): void {
+  projectBackgrounds = options;
 }
 
 /** Replace the animation-file options the FILE dropdown offers. */
@@ -97,6 +105,11 @@ export function actorOptions(): Array<[string, string]> {
 /** Current SPRITE dropdown options (the images the project holds). */
 export function spriteOptions(): Array<[string, string]> {
   return orNone(projectSprites);
+}
+
+/** Current BACKGROUND dropdown options (the project's backdrops). */
+export function backgroundOptions(): Array<[string, string]> {
+  return orNone(projectBackgrounds);
 }
 
 /** Current FILE dropdown options (the project's animation files). */

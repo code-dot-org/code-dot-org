@@ -22,7 +22,11 @@ import {
 import fieldColourPlugin from '@code-dot-org/blockly/fields/fieldColour';
 
 import {IMPORT_SPRITE_VALUE} from '../appearance/appearanceImport';
-import type {ArgType, PropertyType} from '../engine';
+import {
+  DEFAULT_BACKDROP_COLOR,
+  type ArgType,
+  type PropertyType,
+} from '../engine';
 
 import {actorInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
@@ -71,6 +75,7 @@ import {
   mapOptions,
   mapOptionsExtension,
   ruleModuleOptions,
+  backgroundOptions,
   spriteOptions,
 } from './moduleOptions';
 import {IMPORT_RULE_VALUE} from './ruleImport';
@@ -2068,6 +2073,155 @@ const worldRemoveWorldEffect = defineBlock({
   },
 });
 
+// ── Backgrounds (BACKGROUNDS.md) ─────────────────────────────────────────────
+// A backdrop is the appearance half of an actor with none of the body: something
+// to draw behind everything, a colour behind that, and effects of its own. It is
+// not an actor, so these are world blocks with no subject socket — the world is
+// the subject, as it is for `add effect … to the world`.
+//
+// Every one of them means backdrop layer 0. The engine's methods take an
+// optional layer index, so parallax later adds blocks that name a layer and
+// changes nothing a learner has already built.
+
+/** Point a `BACKGROUND` dropdown at the live list (the project's backdrops). */
+const backgroundOptionsExtension = liveDropdown(
+  'world_background_options',
+  'BACKGROUND',
+  backgroundOptions,
+);
+
+const worldSetBackground = defineBlock({
+  type: 'world_set_background',
+  message0: 'set background to %1',
+  args0: [
+    {type: 'field_dropdown', name: 'BACKGROUND', options: backgroundOptions},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  // Chained under `define world` it is the world's background from the start;
+  // in a handler or a rule step it changes it mid-game. `setBackground` is on
+  // the builder and the live World alike, so there is no context guard.
+  extensions: [backgroundOptionsExtension, worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw an image behind everything, stretched to fill the view. Backgrounds ' +
+    'are the images in the project’s backgrounds folder.',
+  generator: {
+    javascript(block) {
+      const name = block.getFieldValue('BACKGROUND');
+      if (!name) {
+        return '';
+      }
+      // A whole image, never a cell: a backdrop is not a spritesheet, so this
+      // field never carries the `name.png#3` a `set sprite` field can.
+      return `world.setBackground(${str(name)});\n`;
+    },
+  },
+});
+
+const worldSetBackgroundColor = defineBlock({
+  type: 'world_set_background_color',
+  message0: 'set background color to %1',
+  args0: [{type: 'input_value', name: 'COLOR', check: COLOUR_CHECK}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Set the color behind the background image — and the whole view when ' +
+    'there is no background image.',
+  generator: {
+    javascript(block, generator) {
+      const color = generator.valueToCode(block, 'COLOR', Order.NONE);
+      if (!color) {
+        return '';
+      }
+      // Handed over as the color block produced it. `setBackgroundColor` takes
+      // hex or floats (engine color.ts), so a `colour_picker`, a blend and the
+      // `r g b a` block all arrive intact — converting here would quantize the
+      // floats and throw away an alpha the picker cannot express anyway.
+      return `world.setBackgroundColor(${color});\n`;
+    },
+  },
+});
+registerValueShadows('world_set_background_color', [
+  {
+    name: 'COLOR',
+    // The colour a world starts with, so the swatch opens on what is on screen
+    // rather than on Blockly's red.
+    shadow: {type: 'colour_picker', fields: {COLOUR: DEFAULT_BACKDROP_COLOR}},
+  },
+]);
+
+const worldAddBackgroundEffect = defineBlock({
+  type: 'world_add_background_effect',
+  message0: 'add effect %1 to the background',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'EFFECT',
+      options: effectFileImportOptions,
+    },
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  mutator: effectParamsMutator,
+  extensions: [
+    effectFileImportOptionsExtension,
+    worldContextExtension,
+    effectParamsInitExtension,
+    effectImportFieldExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Play a visual effect on the background only — the actors in front of it ' +
+    'are not affected. Use “add effect … to the world” for the whole view.',
+  generator: {
+    javascript(block, generator) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      addImport(
+        generator,
+        `mod:${path}`,
+        `import ${importVar(path)} from ${str(path)};`,
+      );
+      const values = effectParamValuesCode(block, generator);
+      return values
+        ? `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, ${values});\n`
+        : `world.addBackgroundEffect(${str(path)}, ${importVar(path)});\n`;
+    },
+  },
+});
+
+/** Stop an effect on the background. Removing one not playing is a no-op. */
+const worldRemoveBackgroundEffect = defineBlock({
+  type: 'world_remove_background_effect',
+  message0: 'remove effect %1 from the background',
+  args0: [{type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  // Runtime-only, for the same reason as the world's and an actor's.
+  extensions: [
+    effectFileOptionsExtension,
+    worldContextExtension,
+    runtimeWorldExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip: 'Stop playing an effect on the background.',
+  generator: {
+    javascript(block) {
+      const path = block.getFieldValue('EFFECT');
+      if (!path) {
+        return '';
+      }
+      return `world.removeBackgroundEffect(${str(path)});\n`;
+    },
+  },
+});
+
 /**
  * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
  * Blockly blocks the toolbox also offers (controls_if, logic_compare,
@@ -2690,6 +2844,10 @@ export const DOMAIN_BLOCKS = [
   worldRemoveEffect,
   worldAddWorldEffect,
   worldRemoveWorldEffect,
+  worldSetBackground,
+  worldSetBackgroundColor,
+  worldAddBackgroundEffect,
+  worldRemoveBackgroundEffect,
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
@@ -2794,6 +2952,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_add_actor',
       'world_add_world_effect',
       'world_remove_world_effect',
+      // What is behind everything: an image, a colour, and effects on that
+      // image alone (BACKGROUNDS.md).
+      'world_set_background',
+      'world_set_background_color',
+      'world_add_background_effect',
+      'world_remove_background_effect',
     ],
   },
   {
