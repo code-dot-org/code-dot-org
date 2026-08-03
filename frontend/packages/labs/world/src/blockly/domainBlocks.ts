@@ -1708,6 +1708,58 @@ const worldThisActor = defineBlock({
   },
 });
 
+/**
+ * A KIND of actor: every one of them, and every one there will be.
+ *
+ * The counterpart to `this actor`, and the one a `.world` file needs. In an
+ * `.actor` file the subject is obvious — the file is about one actor, and
+ * `this actor` is it. A world names several, so a block there has to say which,
+ * and what it usually means is "any of them": when ANY coin is collected, when
+ * ANY enemy lands.
+ *
+ * It resolves to the actor's TEMPLATE, and templates take the same messages
+ * their instances do (`ActorBuilder.on` and `Actor.on` agree on name, arguments
+ * and meaning). So `when any Coin starts falling` generates the same
+ * `X.on(event, handler)` that `when this actor starts falling` does, and the
+ * handler reaches every coin the world places rather than one of them.
+ *
+ * Registration is copied into an instance when it is made (`ActorBuilder
+ * .instantiate`), so a handler has to be registered before the actors are
+ * placed — which is what `assembleWorldModule` orders (event hats above the
+ * world block).
+ */
+const worldActorKind = defineBlock({
+  type: 'world_actor_kind',
+  message0: 'any %1',
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
+  output: 'Actor',
+  extensions: [actorOptionsExtension],
+  // Actor values share the sprite style — the color that groups the actors.
+  style: 'sprite_blocks',
+  tooltip:
+    'Every actor of this kind — the ones placed now and the ones placed later.',
+  generator: {
+    javascript(block, generator) {
+      const actor = block.getFieldValue('ACTOR');
+      const local = localActorFor(block, actor);
+      // A definition since deleted, or nothing chosen: the caller falls back to
+      // its own subject rather than naming a variable no line declares.
+      if (!actor || (localActorBlockId(actor) && !local)) {
+        return ['actor', Order.ATOMIC] as [string, number];
+      }
+      if (local) {
+        return [local.variable, Order.ATOMIC] as [string, number];
+      }
+      addImport(
+        generator,
+        `mod:${actor}`,
+        `import ${importVar(actor)} from ${str(actor)};`,
+      );
+      return [importVar(actor), Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
 // The `Actor` typed variable: a getter (`variables_get_Actor`, output `Actor`)
 // and a `field(name)` helper for binding one (the for-each loop variable). An
 // Actor variable only plugs into Actor sockets, and reads with the sprite style.
@@ -3033,6 +3085,7 @@ export const DOMAIN_BLOCKS = [
   worldRgba,
   worldVectorComponent,
   worldThisActor,
+  worldActorKind,
   ActorVariable.getterBlock,
   worldForEach,
   worldIsA,
@@ -3107,6 +3160,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_add_effect',
       'world_remove_effect',
       'world_this_actor',
+      // The 'any of this kind' counterpart, for a world file naming several.
+      'world_actor_kind',
       ActorVariable.getterType,
       'world_is_a',
     ],

@@ -4,6 +4,7 @@
 // elected to respond to. Instances are produced from an ActorBuilder when a
 // world places them.
 
+import {fnv1a} from './hash';
 import {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
@@ -135,6 +136,35 @@ export class Actor {
   /** Handlers registered for `event`; used by the EventQueue on flush. */
   handlersFor(event: GameEvent): readonly EventHandler[] {
     return this.handlers.get(event) ?? [];
+  }
+
+  /**
+   * What this actor responds to, and with what — one `<event>@<hash of the
+   * handler's source>` per registered handler, in the order they will run.
+   *
+   * For `World.snapshot`, so the hot-reload reconciler can see a handler being
+   * added, removed, reordered or REWRITTEN. Nothing else in the snapshot says a
+   * handler exists: an actor that gains a `when tapped` block has the same
+   * traits, properties and effects it had a moment ago, so without this the
+   * reconciler reads the rebuild as "nothing structural changed", patches the
+   * running world, and the actors keep the handlers `ActorBuilder.instantiate`
+   * copied into them — a deleted block that still fires.
+   *
+   * The source text, because that is the only handle a compiled closure gives
+   * us and it is a good one: it changes when the block's body changes, so
+   * editing what a handler DOES restarts the game too. Its limit is what
+   * `Function.prototype.toString` cannot see — a value the handler closes over
+   * rather than inlines reads as the same handler. Blockly inlines its
+   * arguments, so that is a narrow gap in practice.
+   */
+  handlerIds(): string[] {
+    const ids: string[] = [];
+    for (const [event, handlers] of this.handlers) {
+      for (const handler of handlers) {
+        ids.push(`${event.ownerId}.${event.id}@${fnv1a(handler.toString())}`);
+      }
+    }
+    return ids;
   }
 
   /** The traits present on this actor, in application order. */

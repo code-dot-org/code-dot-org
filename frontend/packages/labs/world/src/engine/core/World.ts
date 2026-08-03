@@ -44,6 +44,18 @@ export interface WorldSnapshot {
    */
   effectIds: string[];
   /**
+   * Every event handler in the world — `<actorId>:<event>@<hash>` — in the
+   * order each actor will run them (`Actor.handlerIds`).
+   *
+   * Structural, and it has to be: a handler is a closure the running actors
+   * already hold, so there is no patch that removes one, replaces one, or
+   * changes what one does. Nothing else here would notice — an actor's traits,
+   * properties and effects are all unchanged by adding a `when` block — so
+   * without this the reconciler patches, keeps the running actors, and their
+   * copies of the handler go on firing after the block is gone.
+   */
+  handlerIds: string[];
+  /**
    * Each applied effect's knob settings, by the same slot key.
    *
    * Values, not structure: a filter that is already running can be retuned in
@@ -846,6 +858,12 @@ export class World {
     return {
       ruleIds: rules.map(rule => rule.id).sort(),
       actorIds: this.actorList.map(actor => actor.id).sort(),
+      // By actor id so the list is stable, but NOT sorted within an actor:
+      // handlers for one event run in registration order, so a reorder is a
+      // real change and should read as one.
+      handlerIds: [...this.actorList]
+        .sort((left, right) => (left.id < right.id ? -1 : 1))
+        .flatMap(actor => actor.handlerIds().map(id => `${actor.id}:${id}`)),
       // Sorted, like the id lists: the snapshot is compared by stringifying it,
       // so a stable order is what keeps an unchanged world comparing equal.
       // World effects sit in the same list as the actors'. They are keyed by

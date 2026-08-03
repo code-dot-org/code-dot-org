@@ -598,6 +598,28 @@ This is something we can add to the AnimationRule where we can
 assign an animation _or_ we can assign a sprite directly. In that case,
 it is useful to define the offset and scale.
 
+## Actor events in a world file
+
+An `.actor` file is about one actor, so a `when …` hat's subject is obvious:
+`this actor`, the file's own. A `.world` file names several and binds no
+principal one — `actor` is not in scope there at all — so the same hat defaults
+its socket to `any <kind>` (`world_actor_kind`), which resolves to that actor's
+TEMPLATE.
+
+That works because a template takes the same messages its instances do
+(`ActorBuilder.on` and `Actor.on` agree on name, arguments and meaning), so one
+block serves both files and reads correctly in each: "when any Coin starts
+falling" in a world, "when this actor starts falling" in the coin's own file.
+Registering on the kind means every actor of it — the ones the map places and
+the ones placed later.
+
+One ordering consequence, and it is not optional: `ActorBuilder.instantiate`
+COPIES the handlers a template has when it makes an instance, so a hat that ran
+after the world placed its actors would register onto a template nothing was
+made from any more. `assembleWorldModule` emits the hats above the world block
+for exactly that reason (with the `define actor` blocks, which have the same
+problem for the same reason).
+
 ## Simple World (Simple View)
 
 The abstraction of an Actor is to introduce 'kits'.

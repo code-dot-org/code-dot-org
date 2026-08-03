@@ -39,3 +39,20 @@ These are a set of ideas that improve the basic building of projects geared towa
      Diffing that list is now possible because both halves exist.
 4. Adding or removing or otherwise modifying the background of a World should be possible while the program is running.
 5. Changing rules or traits, however, will perform a full reset of the current World.
+
+   So does changing a `when` block — adding one, deleting one, reordering two on
+   the same event, or editing what one does. A handler is a closure the running
+   actors already hold (`ActorBuilder.instantiate` copies them), and no patch
+   reaches inside a closure, so the alternative is a deleted block that still
+   fires while the reload reports it applied the change live. `World.snapshot`
+   carries `handlerIds` — `<actorId>:<event>@<hash of the handler's source>` —
+   and the reconciler treats any difference as structural.
+
+   The gap left: a value a handler CLOSES OVER rather than inlines is invisible
+   to `Function.prototype.toString`, so such an edit would still patch. Blockly
+   inlines its arguments, which is why this is narrow rather than routine.
+
+   Rule STEPS have the same shape of problem and not yet the same treatment:
+   `ruleIds` says which rules are in play, not what their code says, so editing
+   a `.rule` body in the same rebuild as a patchable change leaves the old step
+   running. The fix is the same hash over the same kind of function.
