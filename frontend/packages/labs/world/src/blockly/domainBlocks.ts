@@ -54,6 +54,7 @@ import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {sliderRangeMutator} from './extensions/sliderRange';
+import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
@@ -82,6 +83,7 @@ import type {
   RuleMeta,
 } from './ruleMeta';
 import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
+import {parseSpriteRef, spriteCell} from './spriteCells';
 import {
   eventOptions,
   projectRuleIdentities,
@@ -485,9 +487,11 @@ const worldSetSprite = defineBlock({
   inputsInline: true,
   // The options extension first, then the import one, so the latter wraps that
   // validator rather than being wrapped by it (see appearanceImportField).
+  // `spritePick` replaces how the field is EDITED, which is independent of both.
   extensions: [
     actorInputExtension,
     spriteOptionsExtension,
+    spritePickExtension,
     spriteImportFieldExtension,
   ],
   previousStatement: true,
@@ -501,8 +505,26 @@ const worldSetSprite = defineBlock({
     javascript(block, generator) {
       const target =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const sprite = block.getFieldValue('SPRITE');
-      return `${target}.set(WorldLab.SpriteProperty, ${str(sprite)});\n`;
+      const value = block.getFieldValue('SPRITE');
+      // The field may name one cell of a spritesheet (`coinSpin.png#3`); the
+      // rectangle is resolved HERE, where the project's `.sheet` files are
+      // known, because the engine is only ever told rectangles (spriteCells).
+      const {sprite} = parseSpriteRef(value);
+      const cell = spriteCell(value);
+      const lines = [
+        `${target}.set(WorldLab.SpriteProperty, ${str(sprite)});\n`,
+      ];
+      // Always both: an actor that drew a cell and is then set to a plain
+      // picture must stop drawing that cell, and a size of zero says "all of it".
+      lines.push(
+        `${target}.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(${
+          cell?.x ?? 0
+        }, ${cell?.y ?? 0}));\n`,
+        `${target}.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(${
+          cell?.width ?? 0
+        }, ${cell?.height ?? 0}));\n`,
+      );
+      return lines.join('');
     },
   },
 });
@@ -645,6 +667,19 @@ const COVERED_PROPERTY_EXPORTS: ReadonlySet<string> = new Set([
 ]);
 
 /**
+ * Properties that are plumbing for a bespoke block, and get no blocks at all.
+ *
+ * The cell of a spritesheet that `set sprite` draws is carried on the actor as
+ * two vectors, because the engine has to be told a rectangle (spriteCells). It
+ * is not vocabulary: "get sprite cell origin of this actor" answers a question
+ * nobody asked, in units nobody chose.
+ */
+const HIDDEN_PROPERTY_EXPORTS: ReadonlySet<string> = new Set([
+  'SpriteCellOriginProperty',
+  'SpriteCellSizeProperty',
+]);
+
+/**
  * Whether a property gets a generated `set` block.
  *
  * Not read-only (a step owns the value), and not one a bespoke block already
@@ -652,6 +687,7 @@ const COVERED_PROPERTY_EXPORTS: ReadonlySet<string> = new Set([
  * generated form would.
  */
 const isSettable = (property: PropertyMeta): boolean =>
+  !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName) &&
   !property.readonly &&
   !COVERED_PROPERTY_EXPORTS.has(property.ref.exportName) &&
   property.ref.exportName !== '';
@@ -666,7 +702,8 @@ const isSettable = (property: PropertyMeta): boolean =>
  * block suppressed the generated pair wholesale.
  */
 const isGettable = (property: PropertyMeta): boolean =>
-  property.ref.exportName !== '';
+  property.ref.exportName !== '' &&
+  !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName);
 
 /** A typed value slot — the shared shape of a property, an action parameter, and
  * a query argument. Uses the wider {@link ArgType} so an `actor` socket (a query

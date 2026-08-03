@@ -19,6 +19,10 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {
+  SpritePickerDialog,
+  type PickedSprite,
+} from '../animationEditor/SpritePickerDialog';
+import {
   setAppearanceImportHandler,
   type AppearanceKind,
 } from '../appearance/appearanceImport';
@@ -27,7 +31,9 @@ import {
   importStockAnimation,
   importStockSprite,
 } from '../appearance/importStock';
+import {projectSheets} from '../appearance/sheetFile';
 import type {StockAnimation, StockSprite} from '../appearance/stock';
+import {useProjectImages} from '../appearance/useProjectImages';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
@@ -39,6 +45,7 @@ import {
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
+import {projectImageSizes} from '../runtime/imageSize';
 import {
   filePath,
   projectFiles,
@@ -65,6 +72,8 @@ import {
 import {setRuleImportHandler} from './ruleImport';
 import {parseRuleMeta} from './ruleMeta';
 import {ruleByName} from './ruleRegistry';
+import {parseSpriteRef} from './spriteCells';
+import {setSpritePickHandler} from './spritePick';
 import {withoutCategories} from './toolboxFilter';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
@@ -238,7 +247,19 @@ export const BlocklyFileEditor = ({
     () => projectImageNames(currentSources.source),
     [currentSources],
   );
-  useMemo(() => refreshProjectDropdowns(files, images), [files, images]);
+  // How big those images are, where the editor can tell: what says how many
+  // cells a spritesheet holds (blockly/spriteCells).
+  const imageSizes = useMemo(
+    () => projectImageSizes(currentSources.source),
+    [currentSources],
+  );
+  useMemo(
+    () => refreshProjectDropdowns(files, images, imageSizes),
+    [files, images, imageSizes],
+  );
+  // For the pickers: the project's grids, and its images decoded to draw.
+  const sheets = useMemo(() => projectSheets(files), [files]);
+  const decoded = useProjectImages(currentSources.source);
 
   // The stock-effect import, opened from an effect dropdown's `(import…)` row.
   //
@@ -300,7 +321,11 @@ export const BlocklyFileEditor = ({
       // dropdown rebuilds from the registry, and a value with no matching option
       // is dropped by Blockly.
       updateSources({...sources, source});
-      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImageNames(source),
+        projectImageSizes(source),
+      );
       finishImport(path);
     },
     [updateSources, finishImport],
@@ -315,7 +340,11 @@ export const BlocklyFileEditor = ({
       // option is dropped by Blockly. The value is the rule's NAME — the field
       // says which rule, never which file.
       updateSources({...sources, source});
-      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImageNames(source),
+        projectImageSizes(source),
+      );
       finishImport(name);
     },
     [updateSources, finishImport],
@@ -337,6 +366,51 @@ export const BlocklyFileEditor = ({
     return () => setAppearanceImportHandler(null);
   }, []);
 
+  /**
+   * The `set sprite` picker: one palette of everything the project can draw.
+   *
+   * The field asks (blockly/spritePick) and waits. A spritesheet is shown as
+   * its cells, so choosing a drawing is one question and one answer — the value
+   * is `player.png`, or `coinSpin.png#3` for a cell. Importing is the other
+   * door out, and lands back in the same flow.
+   */
+  const [pickingSprite, setPickingSprite] = useState(false);
+  const [pickCurrent, setPickCurrent] = useState<PickedSprite | undefined>();
+  const resolvePick = useRef<((value: string | undefined) => void) | null>(
+    null,
+  );
+
+  useEffect(() => {
+    setSpritePickHandler(
+      current =>
+        new Promise<string | undefined>(resolve => {
+          resolvePick.current = resolve;
+          const {sprite, cell} = parseSpriteRef(current);
+          setPickCurrent(sprite ? {sprite, cell} : undefined);
+          setPickingSprite(true);
+        }),
+    );
+    return () => setSpritePickHandler(null);
+  }, []);
+
+  const finishPick = useCallback((value: string | undefined) => {
+    setPickingSprite(false);
+    resolvePick.current?.(value);
+    resolvePick.current = null;
+  }, []);
+
+  /** A tile was chosen: the field takes its name, with the cell if it has one. */
+  const choosePicture = useCallback(
+    (picked: PickedSprite) => {
+      finishPick(
+        picked.cell === undefined
+          ? picked.sprite
+          : `${picked.sprite}#${picked.cell}`,
+      );
+    },
+    [finishPick],
+  );
+
   const handleAppearanceImport = useCallback(
     (chosen: StockSprite | StockAnimation) => {
       const sources = sourcesRef.current;
@@ -347,7 +421,21 @@ export const BlocklyFileEditor = ({
       // In the project BEFORE the field takes its value: the dropdown rebuilds
       // from the registry, and a value with no matching option is dropped.
       updateSources({...sources, source});
-      refreshProjectDropdowns(projectFiles(source), projectImageNames(source));
+      refreshProjectDropdowns(
+        projectFiles(source),
+        projectImageNames(source),
+        projectImageSizes(source),
+      );
+      // An import from inside the picker continues the picking: the learner
+      // asked for a picture, and now the project has one. Back to the palette
+      // rather than straight to the field — an imported spritesheet still has
+      // to say WHICH cell.
+      if (resolvePick.current) {
+        setImportingAppearance(null);
+        setPickCurrent({sprite: value});
+        setPickingSprite(true);
+        return;
+      }
       finishImport(value);
     },
     [updateSources, finishImport],
@@ -692,11 +780,30 @@ export const BlocklyFileEditor = ({
           onCancel={() => finishImport(undefined)}
         />
       )}
+      {pickingSprite && (
+        <SpritePickerDialog
+          sprites={images}
+          images={decoded}
+          sheets={sheets}
+          current={pickCurrent}
+          onPick={choosePicture}
+          onImport={() => {
+            setPickingSprite(false);
+            setImportingAppearance('sprite');
+          }}
+          onCancel={() => finishPick(undefined)}
+        />
+      )}
       {importingAppearance && (
         <ImportAppearanceDialog
           kind={importingAppearance}
           onImport={handleAppearanceImport}
-          onCancel={() => finishImport(undefined)}
+          onCancel={() =>
+            // Back to the pictures if this was a detour from the picker.
+            resolvePick.current
+              ? (setImportingAppearance(null), setPickingSprite(true))
+              : finishImport(undefined)
+          }
         />
       )}
       <BlocklyProvider blocks={blocks} plugins={plugins} theme={theme}>

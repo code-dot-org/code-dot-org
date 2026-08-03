@@ -11,6 +11,7 @@ import type {EffectParameter} from '../effect/model/types';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {label} from './label';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
+import {cellCount} from './spriteCells';
 
 // Code files that define a module: a Blockly rule/actor/world, or plain JS/TS.
 const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
@@ -331,7 +332,22 @@ export function projectSpriteOptions(
     ),
     ...assets,
   ].map(path => path.split('/').pop() as string);
-  return [...new Set(names)]
-    .sort((a, b) => a.localeCompare(b))
-    .map(name => [name.replace(/\.[^.]+$/, ''), name]);
+  // A spritesheet is offered a cell at a time: drawing a whole strip is almost
+  // never what `set sprite` means for one. `cellCount` knows the project's
+  // grids and image sizes (blockly/spriteCells); an image it cannot measure is
+  // offered whole, which is the honest answer.
+  const options: Array<[string, string]> = [];
+  for (const name of [...new Set(names)].sort((a, b) => a.localeCompare(b))) {
+    const label = name.replace(/\.[^.]+$/, '');
+    const cells = cellCount(name);
+    if (cells <= 1) {
+      options.push([label, name]);
+      continue;
+    }
+    for (let index = 0; index < cells; index++) {
+      // `name#index`, resolved to a rectangle when the block generates code.
+      options.push([`${label} ${index + 1}`, `${name}#${index}`]);
+    }
+  }
+  return options;
 }

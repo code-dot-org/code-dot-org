@@ -48,8 +48,8 @@ import styles from './animationEditor.module.css';
 import {CellPicker} from './CellPicker';
 import {pingPong, reversed} from './frameOps';
 import {frameAt, previousFrame, startOf, totalTime} from './playback';
-import type {CellRect} from './sheetFrames';
-import {SpritePickerDialog} from './SpritePickerDialog';
+import {cellIndex, sheetCells, type CellRect} from './sheetFrames';
+import {SpritePickerDialog, type PickedSprite} from './SpritePickerDialog';
 import {delayOf, durations, retimed, shownRate} from './timing';
 
 /** What a new animation runs at, in frames per second. */
@@ -594,12 +594,6 @@ export const AnimationEditor = ({
       : undefined;
     return withFrames(mapFrame(id, f => ({...f, sprite, position})));
   };
-  const setFrameSprite = (id: string, sprite: string) => {
-    if (selected) {
-      commit(withFrameSprite(id, sprite, sheets));
-    }
-  };
-
   /** Give the whole animation another order — see frameOps. */
   const reverseFrames = () => {
     if (selected) {
@@ -613,9 +607,35 @@ export const AnimationEditor = ({
   };
 
   /** Take a picture chosen in the picker. */
-  const chooseSprite = (sprite: string) => {
-    if (pickingSprite) {
-      setFrameSprite(pickingSprite, sprite);
+  /**
+   * A tile was chosen for a frame: its picture, and the cell if it is one.
+   *
+   * The palette shows a spritesheet as its cells, so the frame gets both at
+   * once — where it used to take the picture here and the cell from the
+   * inspector's picker afterwards.
+   */
+  const chooseSprite = (picked: PickedSprite) => {
+    if (pickingSprite && selected) {
+      const withSprite = withFrameSprite(pickingSprite, picked.sprite, sheets);
+      const doc = picked.rect
+        ? {
+            ...withSprite,
+            animations: {
+              ...withSprite.animations,
+              [selId as string]: {
+                ...(withSprite.animations[selId as string] as AnimDef),
+                frames: (
+                  withSprite.animations[selId as string] as AnimDef
+                ).frames.map(frame =>
+                  frame.__id === pickingSprite
+                    ? {...frame, position: picked.rect}
+                    : frame,
+                ),
+              },
+            },
+          }
+        : withSprite;
+      commit(doc);
     }
     setPickingSprite(null);
   };
@@ -1180,7 +1200,17 @@ export const AnimationEditor = ({
               sprites={spriteOptions}
               images={images}
               sheets={sheets}
-              current={frames.find(f => f.__id === pickingSprite)?.sprite ?? ''}
+              current={(() => {
+                const frame = frames.find(f => f.__id === pickingSprite);
+                if (!frame) {
+                  return undefined;
+                }
+                const at = cellIndex(
+                  sheetCells(images[frame.sprite], sheets[frame.sprite]),
+                  frame.position,
+                );
+                return {sprite: frame.sprite, cell: at >= 0 ? at : undefined};
+              })()}
               onPick={chooseSprite}
               onImport={() => setImportingSprite(true)}
               onCancel={() => setPickingSprite(null)}

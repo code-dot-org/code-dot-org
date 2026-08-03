@@ -26,6 +26,11 @@ export interface PickCellDialogProps {
   cells: readonly CellRect[];
   /** The cell being edited now, if any. */
   current?: CellRect;
+  /**
+   * What choosing one will do — this dialog serves two callers. The image
+   * editor narrows the canvas to a cell; a `set sprite` block draws one.
+   */
+  description?: string;
   onPick: (cell: CellRect) => void;
   onCancel: () => void;
 }
@@ -34,15 +39,19 @@ export const PickCellDialog = ({
   image,
   cells,
   current,
+  description,
   onPick,
   onCancel,
 }: PickCellDialogProps) => (
   <Dialog
     role="dialog"
     title={translate('Choose a cell')}
-    description={translate(
-      'Only this cell is shown while you draw it. The rest of the sheet is untouched.',
-    )}
+    description={
+      description ??
+      translate(
+        'Only this cell is shown while you draw it. The rest of the sheet is untouched.',
+      )
+    }
     onClose={onCancel}
     closeLabel={translate('Close')}
     // A click on a cell is the choice — there is one thing being decided and it

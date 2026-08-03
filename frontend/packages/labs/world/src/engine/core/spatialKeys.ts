@@ -23,6 +23,10 @@ export const APPEARANCE = {
   rule: 'animation',
   trait: 'appearance',
   sprite: 'sprite',
+  // Which cell of a spritesheet the static sprite draws, as two vectors: where
+  // it starts and how big it is. A size of (0, 0) means the whole image.
+  spriteCellOrigin: 'spriteCellOrigin',
+  spriteCellSize: 'spriteCellSize',
   animation: 'animation',
   frame: 'frame',
   elapsed: 'elapsed',

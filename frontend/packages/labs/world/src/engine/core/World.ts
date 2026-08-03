@@ -403,6 +403,12 @@ export class World {
     const spriteProp = appearanceTrait?.properties[APPEARANCE.sprite] as
       | Property<string>
       | undefined;
+    const cellOriginProp = appearanceTrait?.properties[
+      APPEARANCE.spriteCellOrigin
+    ] as Property<Vector> | undefined;
+    const cellSizeProp = appearanceTrait?.properties[
+      APPEARANCE.spriteCellSize
+    ] as Property<Vector> | undefined;
     const animationProp = appearanceTrait?.properties[APPEARANCE.animation] as
       | Property<string>
       | undefined;
@@ -431,7 +437,21 @@ export class World {
       }
       const sprite = spriteProp ? actor.get(spriteProp) : '';
       if (sprite) {
-        return {sprite, offset: {x: 0, y: 0}, scale: 1};
+        // A static sprite may draw one cell of a spritesheet: the rectangle is
+        // on the actor (set by `set sprite`), since the engine knows nothing of
+        // grids. A size of (0, 0) means the whole image.
+        const size = cellSizeProp ? actor.get(cellSizeProp) : undefined;
+        const origin = cellOriginProp ? actor.get(cellOriginProp) : undefined;
+        const cell =
+          size && size.x > 0 && size.y > 0
+            ? {
+                x: origin?.x ?? 0,
+                y: origin?.y ?? 0,
+                width: size.x,
+                height: size.y,
+              }
+            : undefined;
+        return {sprite, cell, offset: {x: 0, y: 0}, scale: 1};
       }
       return undefined;
     };
