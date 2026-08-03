@@ -283,9 +283,15 @@ namespace :seed do
     end
   end
 
+  # The DSL level definition files of the given types under the given scripts
+  # directory: one sorted glob per type, concatenated in type order.
+  def dsl_files(scripts_dir, dsl_types)
+    dsl_types.flat_map {|type| Dir.glob("#{CURRICULUM_CONTENT_DIR}/#{scripts_dir}/**/*.#{type.underscore}*").sort}
+  end
+
   # multi and match files must be seeded before any custom levels which contain them
   CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
-  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  CHILD_DSL_FILES = dsl_files('config/scripts', CHILD_DSL_TYPES).freeze
 
   timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
@@ -296,7 +302,7 @@ namespace :seed do
   # bubble choice and level group files must be seeded last, since they can
   # contain many other level types
   PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
-  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  PARENT_DSL_FILES = dsl_files('config/scripts', PARENT_DSL_TYPES).freeze
 
   timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
@@ -308,8 +314,8 @@ namespace :seed do
   # tasks, so a not-yet-migrated ui-test-* unit can still resolve normal
   # levels; see dashboard/test/ui/config/README.md. Same child -> custom ->
   # parent ordering as above.
-  UI_TEST_CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
-  UI_TEST_PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  UI_TEST_CHILD_DSL_FILES = dsl_files('test/ui/config/scripts', CHILD_DSL_TYPES).freeze
+  UI_TEST_PARENT_DSL_FILES = dsl_files('test/ui/config/scripts', PARENT_DSL_TYPES).freeze
 
   timed_task_with_logging child_dsls_ui_tests: :environment do
     DSLDefined.transaction do
