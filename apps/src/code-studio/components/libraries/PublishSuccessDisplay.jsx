@@ -18,8 +18,7 @@ export default class PublishSuccessDisplay extends React.Component {
     return (
       <div>
         <Typography variant="h4" gutterBottom>
-          {i18n.libraryPublishTitle()}
-          {libraryName}
+          {i18n.libraryPublishTitle().trimEnd()} {libraryName}
         </Typography>
         <div>
           <Typography variant="body2" gutterBottom>
