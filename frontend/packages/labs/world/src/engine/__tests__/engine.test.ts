@@ -308,6 +308,35 @@ describe('world property hot-patch (hot-reload level 1)', () => {
     // 0.9 + 18 * 0.1 = 2.7
     expect(player.get(VelocityProperty).y).toBeCloseTo(2.7);
   });
+
+  it('patches one placed actor by the path a snapshot names', () => {
+    // The actor half: a value edited on a `.actor` file reaches the running
+    // game (specs/QUALITY_OF_LIFE.md §1), addressed one property at a time so
+    // the patch touches nothing the learner did not change.
+    const {world, player} = makeWorld(new Vector(0, 0), 100_000);
+    world.tick(0.1); // the player has moved on
+
+    expect(
+      world.setActorProperty(
+        player.id,
+        'positional.position',
+        new Vector(7, 3),
+      ),
+    ).toBe(true);
+
+    expect(player.get(PositionProperty)).toEqual(new Vector(7, 3));
+  });
+
+  it('says so when there is no such actor or property', () => {
+    // A patch is computed from a snapshot, and a snapshot can describe a world
+    // that has since changed underneath it.
+    const {world, player} = makeWorld(new Vector(0, 0), 100_000);
+
+    expect(world.setActorProperty('nobody', 'positional.position', 1)).toBe(
+      false,
+    );
+    expect(world.setActorProperty(player.id, 'nothing.here', 1)).toBe(false);
+  });
 });
 
 describe('WorldBuilder.loadMap (Map data)', () => {

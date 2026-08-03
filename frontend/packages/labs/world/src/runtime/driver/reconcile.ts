@@ -40,6 +40,7 @@ interface ReconcilableWorld {
     actors: Record<string, Record<string, unknown>>;
   };
   setWorldProperty(path: string, value: unknown): boolean;
+  setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: number): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
@@ -86,15 +87,34 @@ export function reconcile(
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
     stable(previous.actorIds) === stable(snapshot.actorIds) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
-  const sameActors = stable(previous.actors) === stable(snapshot.actors);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
   // What the backdrops draw is a value, like a world property, and patches the
   // same way. Without this a rebuild whose only change was the background would
   // compare equal to the previous one and reconcile to a running world that
-  // still has the old sky — the change silently lost until something else
-  // forced a restart. Their EFFECTS are structural and live in `effectIds`.
+  // still has the old sky — the change silently lost. Their EFFECTS are
+  // structural and live in `effectIds`.
   const backdropChanged =
     stable(previous.backdrops) !== stable(snapshot.backdrops);
+
+  // Actor values the LEARNER changed — not values that have merely moved.
+  //
+  // Both snapshots are authored: the previous one was taken when its build
+  // landed, and the incoming world is freshly built (an unchanged bundle
+  // re-imports to the same module and the caller returns before reaching here).
+  // So their difference is exactly what was edited, and patching it leaves a
+  // falling actor falling instead of putting it back where it started.
+  const actorEdits: Array<[string, string, unknown]> = [];
+  for (const [actorId, values] of Object.entries(snapshot.actors)) {
+    const before = previous.actors[actorId];
+    if (!before) {
+      continue; // a new actor: structural, handled above
+    }
+    for (const [path, value] of Object.entries(values)) {
+      if (stable(before[path]) !== stable(value)) {
+        actorEdits.push([actorId, path, value]);
+      }
+    }
+  }
 
   // Effects whose graph was edited: same effect, new shader.
   const editedEffects = Object.keys(snapshot.effectDocs).filter(
@@ -131,11 +151,16 @@ export function reconcile(
     sameStructure &&
     (editedEffects.length ||
       retunedEffects.length ||
-      (sameActors && (worldChanged || backdropChanged)))
+      actorEdits.length ||
+      worldChanged ||
+      backdropChanged)
   ) {
     // Level 1: patch the running world rather than replacing it.
     for (const [path, value] of Object.entries(snapshot.world)) {
       running.setWorldProperty(path, value);
+    }
+    for (const [actorId, path, value] of actorEdits) {
+      running.setActorProperty(actorId, path, value);
     }
     snapshot.backdrops.forEach((backdrop, layer) =>
       running.setBackground(backdrop.sprite, layer),

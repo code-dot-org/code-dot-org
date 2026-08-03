@@ -732,6 +732,37 @@ export class World {
     return false;
   }
 
+  /**
+   * Set one placed actor's property, by the path a snapshot names it with.
+   *
+   * The actor half of `setWorldProperty`, and the reason a learner can nudge a
+   * value on a `.actor` file — a start position, a move speed — and see it in
+   * the game they are watching rather than in the game that restarts around
+   * them (specs/QUALITY_OF_LIFE.md §1).
+   *
+   * One property, addressed exactly: the reconciler patches only what the
+   * learner actually changed. Writing back a whole snapshot would put every
+   * actor back where it was authored, which for anything that moves is the
+   * reset this exists to avoid.
+   *
+   * @returns whether that actor has that property
+   */
+  setActorProperty(actorId: string, path: string, value: unknown): boolean {
+    const actor = this.actorList.find(candidate => candidate.id === actorId);
+    if (!actor) {
+      return false;
+    }
+    for (const trait of actor.traits()) {
+      for (const property of Object.values(trait.properties)) {
+        if (`${property.ownerId}.${property.id}` === path) {
+          actor.set(property, value as never);
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   /** A pristine, comparable snapshot of this world's structure and values. */
   snapshot(): WorldSnapshot {
     const rules = this.membership.items();
