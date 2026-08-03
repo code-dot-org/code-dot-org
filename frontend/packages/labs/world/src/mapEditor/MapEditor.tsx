@@ -46,6 +46,20 @@ export const MapEditor = ({
   );
 
   const [map, setMap] = useState(() => parseMap(initialContents));
+  // What this editor is in step with: what it was seeded from, plus everything
+  // it has written since. Anything else arriving on `initialContents` came from
+  // outside — most often the project finishing loading after this mounted, so
+  // the editor was seeded from the level's start sources and the file it is
+  // editing has been replaced underneath it (see BlocklyFileEditor for the same
+  // guard, and what it looked like: work that seemed lost on every reload).
+  const syncedContents = useRef(initialContents);
+  useEffect(() => {
+    if (initialContents === syncedContents.current) {
+      return;
+    }
+    syncedContents.current = initialContents;
+    setMap(parseMap(initialContents));
+  }, [initialContents]);
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
   const [schemas, setSchemas] = useState<Record<string, ActorSchema>>({});
   // The picker template to PLACE; null is the stage's select mode.
@@ -80,8 +94,10 @@ export const MapEditor = ({
   }, [actorOptions, worldPath, hasCompiled, thumbnails]);
 
   const commit = (next: MapDoc) => {
+    const text = JSON.stringify(next, null, 2);
+    syncedContents.current = text;
     setMap(next);
-    onChange(JSON.stringify(next, null, 2));
+    onChange(text);
   };
 
   return (

@@ -77,7 +77,9 @@ const InnerCodeEditor = ({
     const lintExtensions = lintExtensionsFor(language);
     const updateListener = EditorView.updateListener.of(update => {
       if (update.docChanged) {
-        onChangeRef.current(update.state.doc.toString());
+        const text = update.state.doc.toString();
+        syncedContents.current = text;
+        onChangeRef.current(text);
       }
     });
 
@@ -132,6 +134,31 @@ const InnerCodeEditor = ({
     // Mount-once: file identity (contents/language) is fixed for this instance
     // via the outer key; live-updating props are handled by the effects below.
   }, []);
+
+  // The contents this editor is in step with: what it was seeded from, plus
+  // everything it has typed since.
+  //
+  // Anything else arriving on `initialContents` came from somewhere else, and
+  // the case that matters is the ordinary one: the project finishes loading
+  // AFTER this editor mounted, so it was seeded from the level's start sources
+  // and the file it is supposedly editing has been replaced underneath it. It
+  // then shows a file nobody has any more — a learner's saved work looks lost
+  // until they switch files and back — and would eventually save that over it.
+  // A version restored or a start-over lands here the same way.
+  const syncedContents = useRef(initialContents);
+  useEffect(() => {
+    const view = viewRef.current;
+    if (!view || initialContents === syncedContents.current) {
+      return;
+    }
+    syncedContents.current = initialContents;
+    // Replacing the document, not editing it: this is not the learner's change,
+    // so it should not read as one. `docChanged` still fires — the write-back is
+    // a no-op against the contents it just came from.
+    view.dispatch({
+      changes: {from: 0, to: view.state.doc.length, insert: initialContents},
+    });
+  }, [initialContents]);
 
   // Reconfigure read-only state live.
   useEffect(() => {

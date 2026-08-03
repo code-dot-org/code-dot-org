@@ -6,6 +6,7 @@ import {useMaybeLevelProperties} from '../contexts/LevelPropertiesContext';
 import {ProjectProvider} from '../contexts/ProjectContext';
 import {SourcesProvider} from '../contexts/SourcesContext';
 import type {ProjectSources, ProjectManager} from '../projects';
+import {useAppSelector} from '../redux';
 
 /**
  * The sources layer a lab renders inside the host's `<Lab>`. It reads the level
@@ -55,10 +56,26 @@ const LabWithSources = <
   children,
 }: LabWithSourcesProps<T, U>) => {
   const levelProperties = useMaybeLevelProperties<T>();
+  // The project the level load fetched, from redux rather than from the
+  // `LevelLoadCompleted` event `SourcesProvider` also listens for.
+  //
+  // The event only reaches a provider that is already mounted, and the value is
+  // the same either way — so reading it makes a late mount correct instead of
+  // leaving it on the level's start sources, which is what a project that
+  // finishes loading before the lab renders used to produce: a learner's saved
+  // work missing until they switched files, and eventually saved over.
+  //
+  // `getInitialSources` prefers this over template/start sources when it is
+  // there (utils/getInitialSources), and `SourcesProvider` reinitializes when it
+  // arrives, so this covers both orders.
+  const initialSources = useAppSelector(state => state.lab.initialSources) as
+    | ProjectSources<U>
+    | undefined;
 
   return levelProperties ? (
     <SourcesProvider<T, U>
       levelProperties={levelProperties}
+      initialSources={initialSources}
       defaultSources={defaultSources}
       projectManager={projectManager}
       getInitialSources={getInitialSources}
