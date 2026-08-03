@@ -108,6 +108,8 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   } | null>(null);
   // Generation counter so a slow compile can't clobber a newer one.
   const generation = useRef(0);
+  /** How many times Restart has been pressed; distinguishes module instances. */
+  const restarts = useRef(0);
 
   // The Blockly → world-lab generator (a hidden workspace); ready once injected.
   const blocklyGenerator = useRef<BlocklyGeneratorHandle>(null);
@@ -230,7 +232,28 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // compileAndLoad closes over refs and stable state setters only.
   }, [signature, sizeSignature, generatorReady]);
 
-  async function compileAndLoad(files: Record<string, string>) {
+  /**
+   * A module URL nothing has imported yet.
+   *
+   * The compiler keys its URL on the content of the project, so an unchanged
+   * project compiles to the URL that is already in the sandbox's module
+   * registry — and a second `import()` of that URL hands back the module that
+   * is already evaluated. Its `WorldBuilder` memoizes (`getWorld`), so what
+   * comes back is the world that has been ticking, actors wherever the last
+   * frame left them.
+   *
+   * That is right for a rebuild and wrong for a restart, which has to run the
+   * program from the beginning. A query the module registry has not seen makes
+   * a fresh instance; the build service worker matches on `pathname`, so it
+   * serves the same bundle either way.
+   */
+  const freshModuleUrl = (moduleUrl: string): string =>
+    `${moduleUrl}${moduleUrl.includes('?') ? '&' : '?'}restart=${++restarts.current}`;
+
+  async function compileAndLoad(
+    files: Record<string, string>,
+    {fresh = false}: {fresh?: boolean} = {},
+  ) {
     const pair = managers.current;
     if (!pair) {
       return;
@@ -284,9 +307,10 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       // The compiler is now warm and the surfaces are up; let the map editor
       // start rendering thumbnails in parallel with the Phaser boot below.
       setHasCompiled(true);
-      const detail = (await pair.preview.load(moduleUrl, assets)) as
-        | ReloadReport
-        | undefined;
+      const detail = (await pair.preview.load(
+        fresh ? freshModuleUrl(moduleUrl) : moduleUrl,
+        assets,
+      )) as ReloadReport | undefined;
       if (mine !== generation.current) {
         return;
       }
@@ -321,10 +345,12 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       return;
     }
     // STOP tears the game down and resets the preview's reconcile baseline, so
-    // the re-run starts fresh (actors back to their initial state) instead of
-    // live-patching.
+    // the re-run is a first load rather than a live patch — and `fresh` makes it
+    // a first load of a NEW module, which is what puts the actors back where the
+    // program puts them. Without it the same evaluated module hands back the
+    // same world, and Restart is a flash with everything where it was.
     pair.preview.stop();
-    void compileAndLoad(files);
+    void compileAndLoad(files, {fresh: true});
   };
 
   /**
