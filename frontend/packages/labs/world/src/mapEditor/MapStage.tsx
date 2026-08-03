@@ -82,13 +82,6 @@ export interface MapStageProps {
   doc: MapDoc;
   /** Write back — every commit, so the caller decides what persisting means. */
   onDocChange: (next: MapDoc) => void;
-  /**
-   * Placements drawn behind the editable ones and never selectable.
-   *
-   * A coin's place is meaningless without the ground under it, so the popup
-   * shows the rest of the world while editing one type of it (MAPS.md §4).
-   */
-  context?: readonly Placement[];
   /** The actor type a click places; null is select mode. */
   placing: string | null;
   /** Sandbox-rendered thumbnails by type — what an actor is drawn as. */
@@ -110,7 +103,6 @@ export interface MapStageProps {
 export const MapStage = ({
   doc,
   onDocChange,
-  context = [],
   placing,
   thumbnails,
   schemas,
@@ -851,13 +843,6 @@ export const MapStage = ({
       ctx.strokeRect(-hw, -hh, hw * 2, hh * 2);
       ctx.restore();
     };
-    // The rest of the world first, dimmed and behind: it is what the editable
-    // actors are being placed AMONG, and it is not this stage's to touch.
-    for (const actor of context) {
-      if (positionOf(actor)) {
-        drawSprite(actor.type, transformOf(actor), 0.45);
-      }
-    }
     let selectedTransform: Transform | null = null;
     let hoveredTransform: Transform | null = null;
     for (const actor of map.actors) {
@@ -888,17 +873,7 @@ export const MapStage = ({
         0.5,
       );
     }
-  }, [
-    view,
-    size,
-    map,
-    context,
-    images,
-    hover,
-    selected,
-    selectedId,
-    hoveredId,
-  ]);
+  }, [view, size, map, images, hover, selected, selectedId, hoveredId]);
 
   const canvasClass = [
     styles.canvas,

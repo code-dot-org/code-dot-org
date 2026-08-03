@@ -1,27 +1,35 @@
-// `create actor in map`: the placements, and the code they become.
+// `create actor in map`: the click model, and the code it becomes.
 //
-// The arrangement lives in the block (MAPS.md §2), so the two things to pin are
-// that it survives a save/load round trip — that is what makes it part of the
-// `.world` file — and that the generated code places exactly those actors, with
-// ids that are unique across the world and stable across rebuilds.
+// The whole interaction is one act — a click means "there should be one here"
+// or "there should not" — which is why the editor can be a field dropdown
+// rather than a window. That act is a pure function, and this is where it is
+// pinned; the grid around it only turns cells into calls.
+//
+// The arrangement is the FIELD's value, so Blockly saves and loads it with the
+// block and there is nothing of ours in that path to test.
 
 import {describe, expect, it} from 'vitest';
 
 import {DOMAIN_BLOCKS} from '../domainBlocks';
-import {mapPlacementsMutator} from '../extensions/mapPlacementsMutator';
 import {localActorValue, localActorVar} from '../localActors';
 import {
-  asMapActors,
-  asPlacements,
+  cellCentre,
+  cellOf,
   instanceId,
-  placementsOf,
-  setPlacements,
+  placementAt,
+  toggleCell,
   type MapPlacement,
 } from '../mapPlacements';
 
+const TILE = 32;
+
+const at = (x: number, y: number): MapPlacement['properties'] => ({
+  positional: {position: {x, y}},
+});
+
 const COIN: MapPlacement[] = [
-  {id: 'c1', properties: {positional: {position: {x: 64, y: 96}}}},
-  {id: 'c2', properties: {positional: {position: {x: 128, y: 96}}}},
+  {id: 'p1', properties: at(48, 80)},
+  {id: 'p2', properties: at(112, 80)},
 ];
 
 /** A stand-in workspace: the top blocks, and lookup by id. */
@@ -46,24 +54,21 @@ const WORLD = () =>
     {id: 'a1', type: 'world_actor', name: 'Coin'},
   ]);
 
-/** Run the block's generator with given fields, placements and workspace. */
+/** Run the block's generator with given fields and placements. */
 const emit = (
-  fields: Record<string, string>,
-  placements: MapPlacement[],
+  fields: Record<string, unknown>,
   space: unknown = WORLD(),
   id = 'mk1',
 ): {code: string; imports: string[]} => {
   const definition = DOMAIN_BLOCKS.find(b => b.type === 'world_create_in_map')!;
-  const block = {
-    id,
-    workspace: space,
-    getFieldValue: (name: string) => fields[name],
-    getNextBlock: () => null,
-  };
-  setPlacements(block as never, placements);
   const definitions: Record<string, string> = {};
   const code = definition.generator.javascript(
-    block as never,
+    {
+      id,
+      workspace: space,
+      getFieldValue: (name: string) => fields[name],
+      getNextBlock: () => null,
+    } as never,
     {
       definitions_: definitions,
       statementToCode: () => '',
@@ -75,61 +80,60 @@ const emit = (
   return {code, imports: Object.keys(definitions)};
 };
 
-describe('the placements a block carries', () => {
-  it('survives a save and load, which is what puts it in the .world file', () => {
-    const {mutator} = mapPlacementsMutator as unknown as {
-      mutator: {
-        saveExtraState(this: unknown): unknown;
-        loadExtraState(this: unknown, state: unknown): void;
-      };
-    };
-    const block = {mapPlacements_: {placements: COIN}};
+describe('clicking a cell', () => {
+  it('puts one in an empty cell, at the middle of it', () => {
+    const next = toggleCell([], {column: 2, row: 3}, TILE);
 
-    const saved = mutator.saveExtraState.call(block);
-    const loaded = {mapPlacements_: {placements: []}};
-    mutator.loadExtraState.call(loaded, saved);
-
-    expect(loaded.mapPlacements_.placements).toEqual(COIN);
-    // Copied, not shared: a duplicated block must not edit its original's map.
-    expect(loaded.mapPlacements_.placements[0]).not.toBe(COIN[0]);
+    expect(next).toEqual([{id: 'p1', properties: at(80, 112)}]);
+    expect(cellCentre({column: 2, row: 3}, TILE)).toEqual({x: 80, y: 112});
   });
 
-  it('loads an absent or malformed state as no placements', () => {
-    const {mutator} = mapPlacementsMutator as unknown as {
-      mutator: {loadExtraState(this: unknown, state: unknown): void};
-    };
-    const block = {mapPlacements_: {placements: COIN}};
+  it('takes away the one that is there', () => {
+    // The second click on a cell undoes the first, which is the whole of "and
+    // nothing else".
+    const next = toggleCell(COIN, {column: 1, row: 2}, TILE);
 
-    mutator.loadExtraState.call(block, {});
-
-    expect(block.mapPlacements_.placements).toEqual([]);
+    expect(next).toEqual([COIN[1]]);
   });
 
-  it('gains and loses its type at the canvas boundary', () => {
-    // The entries store no type — the block's dropdown says which actor these
-    // are, and storing it twice is storing it wrong.
-    const actors = asMapActors(COIN, 'Coin');
+  it('numbers ids rather than inventing them', () => {
+    // These become instance ids in the running world, and an id that changed on
+    // every edit would be an actor the reconciler cannot recognise.
+    const once = toggleCell(COIN, {column: 5, row: 5}, TILE);
+    expect(once[2].id).toBe('p3');
 
-    expect(actors.map(a => a.type)).toEqual(['Coin', 'Coin']);
-    expect(asPlacements(actors)).toEqual(COIN);
+    // A gap left by a removal is filled, not skipped past.
+    const removed = toggleCell(COIN, {column: 1, row: 2}, TILE);
+    expect(toggleCell(removed, {column: 5, row: 5}, TILE)[1].id).toBe('p1');
+  });
+
+  it('knows which cell a placement is in, and which is empty', () => {
+    expect(cellOf(COIN[0], TILE)).toEqual({column: 1, row: 2});
+    expect(placementAt(COIN, {column: 1, row: 2}, TILE)).toBe(COIN[0]);
+    expect(placementAt(COIN, {column: 9, row: 9}, TILE)).toBeUndefined();
+    // A placement with no position at all belongs to no cell.
+    expect(cellOf({id: 'p9'}, TILE)).toBeUndefined();
   });
 });
 
 describe('create actor in map', () => {
-  it('places a world’s own actor, with no import', () => {
-    const {code, imports} = emit({ACTOR: localActorValue('a1')}, COIN);
+  it('places a world own actor, with no import', () => {
+    const {code, imports} = emit({
+      ACTOR: localActorValue('a1'),
+      PLACEMENTS: COIN,
+    });
 
     expect(code).toContain(
       `world.define("Coin", ${localActorVar('Coin', 'a1')});`,
     );
     expect(code).toContain('world.loadMap({actors: [');
-    expect(code).toContain(`"id":"${instanceId('mk1', 'c1')}"`);
-    expect(code).toContain('"position":{"x":64,"y":96}');
+    expect(code).toContain(`"id":"${instanceId('mk1', 'p1')}"`);
+    expect(code).toContain('"position":{"x":48,"y":80}');
     expect(imports).toEqual([]);
   });
 
   it('places a module actor, imported like `add actor` imports one', () => {
-    const {code, imports} = emit({ACTOR: 'actors/coin'}, COIN);
+    const {code, imports} = emit({ACTOR: 'actors/coin', PLACEMENTS: COIN});
 
     expect(code).toContain('world.define("actors/coin", Coin);');
     expect(code).toContain('"type":"actors/coin"');
@@ -137,35 +141,33 @@ describe('create actor in map', () => {
   });
 
   it('gives every placement an id unique across the world', () => {
-    // Two blocks may each hold a `c1`; the block's id is what tells them apart,
-    // and it is stable across rebuilds so the reconciler can too.
-    const first = emit({ACTOR: 'actors/coin'}, COIN, WORLD(), 'mk1').code;
-    const second = emit({ACTOR: 'actors/coin'}, COIN, WORLD(), 'mk2').code;
+    // Two blocks may each hold a `p1`; the block id tells them apart, and it is
+    // stable across rebuilds so the reconciler can too.
+    const first = emit(
+      {ACTOR: 'actors/coin', PLACEMENTS: COIN},
+      WORLD(),
+      'mk1',
+    );
+    const second = emit(
+      {ACTOR: 'actors/coin', PLACEMENTS: COIN},
+      WORLD(),
+      'mk2',
+    );
 
-    expect(first).toContain('"id":"mk1:c1"');
-    expect(second).toContain('"id":"mk2:c1"');
+    expect(first.code).toContain('"id":"mk1:p1"');
+    expect(second.code).toContain('"id":"mk2:p1"');
   });
 
-  it('emits nothing before anything has been arranged', () => {
-    expect(emit({ACTOR: 'actors/coin'}, []).code).toBe('');
-    expect(emit({ACTOR: ''}, COIN).code).toBe('');
+  it('emits nothing before anything has been placed', () => {
+    expect(emit({ACTOR: 'actors/coin', PLACEMENTS: []}).code).toBe('');
+    // A field Blockly has not filled in yet reads as absent, not as empty.
+    expect(emit({ACTOR: 'actors/coin'}).code).toBe('');
+    expect(emit({ACTOR: '', PLACEMENTS: COIN}).code).toBe('');
   });
 
   it('emits nothing for a definition that has been deleted', () => {
-    expect(emit({ACTOR: localActorValue('gone')}, COIN).code).toBe('');
-  });
-
-  it('carries a placement with no overrides at all', () => {
-    // An actor dropped with nothing changed still has a place in the list.
-    const {code} = emit({ACTOR: 'actors/coin'}, [{id: 'c1'}]);
-
-    expect(code).toContain('{"type":"actors/coin","id":"mk1:c1"}');
-  });
-});
-
-describe('placementsOf', () => {
-  it('is empty for a block that has never been edited', () => {
-    expect(placementsOf(undefined)).toEqual([]);
-    expect(placementsOf({} as never)).toEqual([]);
+    expect(emit({ACTOR: localActorValue('gone'), PLACEMENTS: COIN}).code).toBe(
+      '',
+    );
   });
 });

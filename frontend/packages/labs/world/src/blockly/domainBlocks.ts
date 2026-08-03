@@ -58,14 +58,13 @@ import {
   paramSockets,
   type EffectParamState,
 } from './extensions/effectParamsMutator';
-import {mapEditButtonExtension} from './extensions/mapEditButton';
-import {mapPlacementsMutator} from './extensions/mapPlacementsMutator';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
 import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {spritePickExtension} from './extensions/spritePickField';
 import {worldContextExtension} from './extensions/worldContext';
+import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {
@@ -75,7 +74,7 @@ import {
   localActorFor,
   localActorVar,
 } from './localActors';
-import {instanceId, placementsOf} from './mapPlacements';
+import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
   actorOptionsExtension,
@@ -1862,16 +1861,16 @@ const worldAddActor = defineBlock({
  */
 const worldCreateInMap = defineBlock({
   type: 'world_create_in_map',
-  message0: 'create %1 in map',
-  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
+  message0: 'create %1 in map %2',
+  args0: [
+    {type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions},
+    // The arrangement is this field's VALUE, so Blockly saves it with the block
+    // and the `.world` file carries it (MAPS.md §2). Clicking it opens the grid.
+    fieldMapPlacementsArg('PLACEMENTS'),
+  ],
   previousStatement: true,
   nextStatement: true,
-  mutator: mapPlacementsMutator,
-  extensions: [
-    actorOptionsExtension,
-    worldContextExtension,
-    mapEditButtonExtension,
-  ],
+  extensions: [actorOptionsExtension, worldContextExtension],
   style: 'behavior_blocks',
   tooltip:
     'Place several actors of one kind, arranged on the map. Their positions ' +
@@ -1879,7 +1878,8 @@ const worldCreateInMap = defineBlock({
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
-      const placements = placementsOf(block);
+      const placements =
+        (block.getFieldValue('PLACEMENTS') as MapPlacement[] | null) ?? [];
       // Nothing arranged yet is nothing to place — and a `define actor` that
       // has since been deleted leaves a block naming nothing (localActors).
       const local = localActorFor(block, actor);

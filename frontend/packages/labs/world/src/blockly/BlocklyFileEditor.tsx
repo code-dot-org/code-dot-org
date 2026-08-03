@@ -50,8 +50,6 @@ import {
   showsRuleSource,
   type WorldLevelProperties,
 } from '../levelData';
-import type {Placement} from '../mapEditor/mapModel';
-import {MapPlacementsDialog} from '../mapEditor/MapPlacementsDialog';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
 import type {StockRule} from '../rules/stock';
@@ -61,16 +59,13 @@ import {
   projectFiles,
   projectImagePaths,
 } from '../runtime/projectFiles';
-import type {ActorInfo} from '../runtime/sandbox/worldPreviewManager';
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
+import {addActorThumbnails} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingRule} from './editingRule';
 import {setEffectImportHandler} from './effectImport';
-import {localActorFor} from './localActors';
-import {setMapPickHandler, type MapPickRequest} from './mapPick';
-import {asMapActors, placementsOf, type MapPlacement} from './mapPlacements';
 import {setModuleOpener, setModuleOpeningOffered} from './openModule';
 import {refreshProjectDropdowns} from './projectDropdowns';
 import {
@@ -547,87 +542,33 @@ export const BlocklyFileEditor = ({
   }, [currentSources.source, fileId, files]);
 
   /**
-   * The map popup, opened from a `create actor in map` block's `edit…`.
+   * Keep the actor thumbnails the map field draws with.
    *
-   * The block asks through `mapPick` and waits; this holds the request, renders
-   * the canvas over the workspace, and resolves with what came out of it. The
-   * arrangement goes back into the block's own state (MAPS.md §2) — nothing
-   * here writes a file.
+   * The sandbox renders them, and a Blockly field cannot ask it — it is not in
+   * the React tree — so they are pushed into a registry the field reads
+   * (`blockly/actorThumbnails`), the same way the project dropdowns are fed.
+   *
+   * Once per world file, after the first compile: the manifest build is cached,
+   * and a `create actor in map` grid with plain markers instead of actors is
+   * usable but not much fun.
    */
-  const [mapPick, setMapPick] = useState<MapPickRequest | null>(null);
-  const [mapInfo, setMapInfo] = useState<ActorInfo>({
-    thumbnails: {},
-    schemas: {},
-  });
-  const resolveMapPick = useRef<
-    ((value: MapPlacement[] | undefined) => void) | null
-  >(null);
-
   useEffect(() => {
-    setMapPickHandler(
-      request =>
-        new Promise<MapPlacement[] | undefined>(resolve => {
-          resolveMapPick.current = resolve;
-          setMapPick(request);
-        }),
-    );
-    return () => setMapPickHandler(null);
-  }, []);
-
-  const finishMapPick = useCallback((value: MapPlacement[] | undefined) => {
-    setMapPick(null);
-    resolveMapPick.current?.(value);
-    resolveMapPick.current = null;
-  }, []);
-
-  // Ask the sandbox what these actors look like and what they can be given,
-  // once, when the popup opens. The world's own actors come with the world it
-  // names (runtime/thumbnailManifest), which is why they can be inspected here
-  // at all.
-  useEffect(() => {
-    if (!mapPick || !hasCompiled) {
-      return;
-    }
-    const worldModule = worldPath;
-    if (!worldModule) {
+    if (!hasCompiled || !worldPath) {
       return;
     }
     let alive = true;
     void getActorInfo(
       projectActorOptions(files).map(([, path]) => path),
-      worldModule,
+      worldPath,
     ).then(info => {
       if (alive) {
-        setMapInfo(info);
+        addActorThumbnails(info.thumbnails);
       }
     });
     return () => {
       alive = false;
     };
-  }, [mapPick, hasCompiled, worldPath, files, getActorInfo]);
-
-  /**
-   * The rest of the world, for the popup to draw behind what it edits: every
-   * OTHER `create actor in map` block's placements, with the type each of them
-   * places (which is how a drawing is looked up).
-   */
-  const mapContext = useMemo((): Placement[] => {
-    const workspace = workspaceRef.current;
-    if (!workspace || !mapPick) {
-      return [];
-    }
-    return workspace
-      .getBlocksByType('world_create_in_map', false)
-      .filter(block => block.id !== mapPick.blockId)
-      .flatMap(block => {
-        const value = block.getFieldValue('ACTOR');
-        if (!value) {
-          return [];
-        }
-        const type = localActorFor(block, value)?.type ?? value;
-        return asMapActors(placementsOf(block), type);
-      });
-  }, [mapPick]);
+  }, [hasCompiled, worldPath, files, getActorInfo]);
 
   // The block palette + toolbox for this project: the built-ins, extended with
   // the project's own declarative `.rule` rules (their blocks and categories).
@@ -1027,18 +968,6 @@ export const BlocklyFileEditor = ({
             setImportingAppearance('sprite');
           }}
           onCancel={() => finishPick(undefined)}
-        />
-      )}
-      {mapPick && (
-        <MapPlacementsDialog
-          name={mapPick.name}
-          type={mapPick.type}
-          placements={mapPick.placements}
-          context={mapContext}
-          thumbnails={mapInfo.thumbnails}
-          schemas={mapInfo.schemas}
-          onDone={finishMapPick}
-          onCancel={() => finishMapPick(undefined)}
         />
       )}
       {importingAppearance === 'background' && (
