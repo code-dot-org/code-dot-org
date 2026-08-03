@@ -2,7 +2,7 @@
   "name": "@code-dot-org/lesson-deep-dive",
   "version": "0.0.0",
   "private": true,
-  "description": "Post-lesson review flow for AI Tutor (Tutor+) students",
+  "description": "Post-lesson review flow for AI Tutor+",
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lesson-deep-dive/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
