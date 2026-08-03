@@ -1,7 +1,10 @@
 class Widget2Controller < ApplicationController
   include Widget2Helper
 
+  before_action :authenticate_user!
   before_action :require_levelbuilder_mode
+  # Levelbuilder mode is an environment, not a permission.
+  authorize_resource class: false
 
   def index
     @widget2s = get_widget2_ids.map do |widget2_id|
@@ -15,12 +18,15 @@ class Widget2Controller < ApplicationController
   end
 
   def update_code
-    head :service_unavailable
-    # set_widget2_sources(params[:widget2_id], params[:start_sources])
-    # render json: {redirect: "/widget2/edit"}
+    set_widget2_sources(params[:widget2_id], params[:start_sources])
+    render json: {}
+  rescue ArgumentError => exception
+    render json: {error: exception.message}, status: :bad_request
   end
 
   def new
-    redirect_to get_edit_url(params[:id])
+    redirect_to get_widget2_edit_url(params[:id])
+  rescue ArgumentError => exception
+    redirect_to '/widget2', flash: {alert: exception.message}
   end
 end
