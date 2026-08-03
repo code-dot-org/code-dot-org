@@ -1,30 +1,32 @@
 # Acceptable RGB values for the DSCO semantic tokens that paint progress
-# bubbles. The cdo brand theme resolves some tokens differently in the Light
-# vs Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any
-# bubble shown inside a Lab2 page paints with the Dark-theme values. Legacy
-# SCSS was theme-agnostic, so the matcher just compared one hex; with DSCO
-# tokens it has to accept either resolution.
+# bubbles, as they resolve under the codeai-next brand (the default-brand
+# fallback — see lib/cdo/brand.rb). Tokens resolve differently in the Light vs
+# Dark theme — Lab2 wraps its content in `<div data-theme="Dark">` so any bubble
+# shown inside a Lab2 page paints with the Dark-theme values — so each status
+# lists Light first, then Dark where the two differ.
+#
+# These are literals, so they only hold for the current default brand: setting
+# default-brand back to codeai moves every one of them.
 #
 # Sources (frontend/packages/component-library-styles):
-#   primitiveColors.css                — raw hex values
-#   colors.css `:root`                 — Light cdo mapping
-#   colors.css `[data-theme='Dark']`   — Dark cdo mapping
+#   brandCodeAiNext.css        canonical CADS tokens, [data-brand='codeai-next']
+#   brandCodeAiNextAliases.css legacy token names mapped onto CADS values
 def color_strings(key)
   {
-    # --background-success-primary (success-50 in both themes), which paints
-    # both the fill and the border of every success status — progressStyles.js
-    # draws those borders in the fill color, so there is no separate
-    # --borders-success-primary resolution to accept here.
-    perfect: ['rgb(62, 163, 62)'],
-    # --background-success-extra-light (success-10 Light, success-90 Dark)
-    passed: ['rgb(226, 246, 226)', 'rgb(31, 72, 32)'],
+    # --background-success-primary (sentiment-success-70 in both themes), which
+    # paints both the fill and the border of every success status —
+    # progressStyles.js draws those borders in the fill color, so there is no
+    # separate --borders-success-primary resolution to accept here.
+    perfect: ['rgb(37, 136, 48)'],
+    # --background-success-extra-light
+    passed: ['rgb(216, 255, 220)', 'rgb(0, 63, 37)'],
     # --background-neutral-primary (white Light, neutral-base-black Dark)
-    not_tried: ['rgb(255, 255, 255)', 'rgb(41, 47, 54)'],
-    # --borders-neutral-primary (gray-20 Light, gray-80 Dark)
-    lighter_gray: ['rgb(212, 218, 225)', 'rgb(105, 120, 138)'],
-    # --background-brand-purple-primary (purple-50 both themes) /
-    # --borders-brand-purple-primary (purple-50 Light, purple-40 Dark)
-    assessment: ['rgb(150, 87, 199)', 'rgb(168, 108, 216)']
+    not_tried: ['rgb(255, 255, 255)', 'rgb(18, 18, 18)'],
+    # --borders-neutral-primary
+    lighter_gray: ['rgb(211, 214, 218)', 'rgb(75, 82, 88)'],
+    # --background-brand-purple-primary / --borders-brand-purple-primary, which
+    # collapse to one value in both themes under this brand.
+    assessment: ['rgb(76, 66, 207)']
   }[key.to_sym]
 end
 

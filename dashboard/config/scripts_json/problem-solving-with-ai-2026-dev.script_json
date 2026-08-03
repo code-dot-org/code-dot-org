@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-31 00:13:11 UTC",
+    "serialized_at": "2026-08-03 00:47:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -628,6 +628,18 @@
       }
     },
     {
+      "key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12",
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev"
+      }
+    },
+    {
       "key": "0dd807bf-234d-42b7-9732-49530cc16d65",
       "position": 1,
       "properties": {
@@ -929,6 +941,18 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c347dc91-1be3-42cf-8f12-844c8946397e",
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "problem-solving-with-ai-2026-dev"
+      }
+    },
+    {
+      "key": "bf6f0ce1-9751-4599-928d-10c136344bdd",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf6f0ce1-9751-4599-928d-10c136344bdd",
         "lesson.key": "Lesson 13: AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev"
@@ -2704,6 +2728,17 @@
       }
     },
     {
+      "key": "082d4fe1-64fc-44c1-847a-3dff9d15e442",
+      "position": 1,
+      "properties": {
+        "progression_name": "New Progressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442",
+        "lesson_activity.key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12"
+      }
+    },
+    {
       "key": "5c2f7e5f-1c35-4757-a5ef-6bcd1df53733",
       "position": 1,
       "properties": {
@@ -3405,8 +3440,30 @@
       }
     },
     {
-      "key": "8e7350fa-d278-47b8-99b4-107ebae316b6",
+      "key": "d1eb814f-54a9-4790-b4b7-cc62c5b2406e",
       "position": 2,
+      "properties": {
+        "progression_name": "Explore Music Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1eb814f-54a9-4790-b4b7-cc62c5b2406e",
+        "lesson_activity.key": "91667405-9262-4b65-9886-1f9d3522035f"
+      }
+    },
+    {
+      "key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Music Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e",
+        "lesson_activity.key": "91667405-9262-4b65-9886-1f9d3522035f"
+      }
+    },
+    {
+      "key": "8e7350fa-d278-47b8-99b4-107ebae316b6",
+      "position": 4,
       "properties": {
         "description": "Let's watch a short video to see how professionals use AI in their creative work. As you watch, pay attention to what the human does and what the AI does.",
         "remarks": true
@@ -3418,7 +3475,7 @@
     },
     {
       "key": "55a1d44e-6b46-4834-b5f4-c4f80bf99354",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Create an Entire Game Ad using AI!\" video.\n\n**Questions to consider with the video:**\n- What tasks does the human do?\n- What tasks does AI assist with?\n- Did AI replace human creativity or did it enhance it?\n\n**Discussion Goal:** Students should identify the different roles that humans and AI play in creative work by analyzing specific tasks performed in the video. The goal is for students to recognize that AI assists with creative processes by generating ideas, refining details, or automating repetitive tasks, but human creativity is still essential for originality, decision-making, and artistic intent.\n",
         "tips": [
@@ -3435,7 +3492,7 @@
     },
     {
       "key": "0ce7a21e-711f-41d3-850f-64ca3c6d4b62",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3445,7 +3502,7 @@
     },
     {
       "key": "ff94900c-709b-4367-8d0e-576789387fd3",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Apply AI to refine creative content through iteration, evaluation, and human input.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI Remix Challenge activity guide.\n",
         "duration": "15",
@@ -3464,7 +3521,7 @@
     },
     {
       "key": "e2a06e2b-63b7-491b-b9e3-adf449186805",
-      "position": 6,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3474,7 +3531,7 @@
     },
     {
       "key": "ea28d6ba-6eee-4ada-8290-8ca8477326f6",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "In this activity, you’ll collaborate with AI to create and improve a social media post — just like a creative team would. You and the AI will switch off between being the ‘pilot’ — the one leading the writing — and the ‘co-pilot’ — the one providing feedback and suggestions. This pilot/co-pilot language comes from pair programming, where two people work together on code — one types, the other watches and guides. Here, you're doing that kind of teamwork, but one of your partners is AI.",
         "remarks": true
@@ -3486,7 +3543,7 @@
     },
     {
       "key": "f133c3ba-bf3c-4e89-9b11-cbc6f6708412",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to help you explain the structure of the activity by walking students through the two rounds of collaboration. In Round 1, students act as the pilot by writing their own social media post, while AI serves as the co-pilot by giving suggestions to revise and improve it. In Round 2, the roles reverse: AI generates a post as the pilot, and students become the co-pilot by reviewing and improving it. Emphasize that both rounds involve thoughtful revision and decision-making.\n",
         "tips": [
@@ -3503,7 +3560,7 @@
     },
     {
       "key": "9434f909-83dd-4f8e-ae87-14daae7b3836",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "Remember, you are the pilot. Start by choosing one of the social media post prompts in your activity guide. Then write your post on page 2. Keep it short, clear, and school-appropriate — a few sentences is all you need.\n",
         "remarks": true
@@ -3515,7 +3572,7 @@
     },
     {
       "key": "aace46d4-3f51-4a6c-aed0-e81fb626e585",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one of the social media post prompts in Part 1 of their activity guide. Give them a few minutes to write their initial post on page 2. If students are stuck or short on time, encourage them to use one of the example scenarios provided. Remind students that the goal is to take the lead in content creation and thoughtfully collaborate with AI to strengthen their message.\n",
         "tips": [
@@ -3532,7 +3589,7 @@
     },
     {
       "key": "fc9a13e0-f0ca-429e-8d26-d8328d70712b",
-      "position": 11,
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -3542,7 +3599,7 @@
     },
     {
       "key": "ee63f529-be64-4114-8e97-1fe1fd622a64",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 2 to work with their AI Chat co-pilot to get suggestions for revision ideas. Make sure students record their revised content in Round 1 of their activity guide.",
         "progression_name": "Students as the Pilot"
@@ -3554,7 +3611,7 @@
     },
     {
       "key": "607996a5-3641-4372-b2d5-4259fe3fe63e",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to evaluate the AI's suggestions, not just accept them. Ask: 'Which suggestions do you agree with? Which don’t sound right for your audience or tone?' This helps them stay in control of the revision process.",
         "tips": [
@@ -3571,7 +3628,7 @@
     },
     {
       "key": "d451ec45-f28a-4ccf-b872-b5229b2c6dec",
-      "position": 14,
+      "position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -3581,7 +3638,7 @@
     },
     {
       "key": "4a6efa6e-13ea-4192-803f-bc904f3a0bf4",
-      "position": 15,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did AI’s suggestions improve your content? Why or why not?*\n- *Which AI suggestion did you find most useful, and which one did you ignore? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize that AI can enhance creative work, but human decision-making is needed to refine originality and intent. Students should consider which AI suggestions actually improved their work and which ones didn’t align with their creative instincts. The goal is to get students thinking critically about AI's role as an assistant rather than a creator.\n"
       },
@@ -3592,7 +3649,7 @@
     },
     {
       "key": "4064b263-aeb8-4782-8ed8-b6415d0ab528",
-      "position": 16,
+      "position": 18,
       "properties": {
         "description": "Now it’s your turn to be the co-pilot. This time, AI Chat will write a social media post as the pilot, and you’ll guide it through revising its work — just like it helped you earlier.",
         "remarks": true
@@ -3604,7 +3661,7 @@
     },
     {
       "key": "808ce0fd-0183-4ca1-8b20-7b0482f26e0f",
-      "position": 17,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students are now switching roles. The AI becomes the pilot and takes the lead by writing a social media post based on the same prompt the student used. Students act as the co-pilot — reviewing the AI's draft and offering feedback to improve it. Emphasize that they are helping the AI improve its work, just like it helped them earlier.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 3. Have them prompt the AI to generate a new post based on the same scenario they used earlier. Then, students provide revision suggestions and record both versions in their activity guide.",
         "progression_name": "Students as the Co-Pilot"
@@ -3616,7 +3673,7 @@
     },
     {
       "key": "b7a735ca-a295-454d-a841-c345a7af02ce",
-      "position": 18,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for students giving vague or overly positive feedback to the AI. Push them to go deeper with questions like, “What exactly would you change?” or “What’s missing here?”",
         "tips": [
@@ -3633,7 +3690,7 @@
     },
     {
       "key": "901fc759-4951-4ed9-9a65-f5d802441218",
-      "position": 19,
+      "position": 21,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i>**Goal of this activity:** Now that students have experienced both roles—getting AI's feedback on their work and guiding AI to refine its content, students compare these two experiences.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which type of AI collaboration did you prefer and why? (i.e., getting AI's suggestions on how to refine your original idea vs. guiding AI to refine its content)*\n- *Where would you find each type of collaboration useful in any of the tasks you do both in and outside of school?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the difference between AI assisting in content refinement and AI generating original work. The goal is for students to evaluate whether AI's suggestions improved the content or made it feel more artificial, and to reflect on the importance of human input in creative tasks.\n",
         "duration": "5",
@@ -3652,7 +3709,7 @@
     },
     {
       "key": "df77acc7-0f49-4c69-81ec-7c96a73e2bdc",
-      "position": 20,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review each takeaway with students, pausing to reinforce the idea that AI is a tool, not a replacement for human creativity."
       },
@@ -3663,7 +3720,7 @@
     },
     {
       "key": "bd6b08d3-61e0-432c-bd8d-d2e46a432fa1",
-      "position": 21,
+      "position": 23,
       "properties": {
         "description": "As we've seen today, AI is great at generating ideas and patterns, but the heart of creativity—meaning, emotion, and originality—comes from you. The most powerful work happens when AI helps you get started and you take it further.",
         "remarks": true
@@ -3675,7 +3732,7 @@
     },
     {
       "key": "7449f387-a5be-432e-880d-507bb44725b7",
-      "position": 22,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -3685,7 +3742,7 @@
     },
     {
       "key": "3ff668f6-a0e3-4b89-9159-02e15a443078",
-      "position": 23,
+      "position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -3695,7 +3752,7 @@
     },
     {
       "key": "b6c2f4af-a195-402f-b5d0-de2defc1d323",
-      "position": 24,
+      "position": 26,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete an assessment reflecting on their process during the choice level activity. Let students know this assessment is their opportunity to reflect on how AI and human creativity interact.",
         "duration": "5",
@@ -4696,6 +4753,16 @@
       }
     },
     {
+      "key": "10dd8858-7915-4863-b4a0-f5f6de5018ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "10dd8858-7915-4863-b4a0-f5f6de5018ca",
+        "lesson_activity.key": "bf6f0ce1-9751-4599-928d-10c136344bdd"
+      }
+    },
+    {
       "key": "2c3e3de1-bd7f-4f4f-963e-fc2ff9c6b09f",
       "position": 1,
       "properties": {
@@ -5425,6 +5492,72 @@
     },
     {
       "chapter": 33,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-decision-making-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-decision-making-choice"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-examine-data-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-examine-data-choice"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "New Progressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-ai-chat-decision-making"
+      ]
+    },
+    {
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5446,7 +5579,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5468,7 +5601,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5490,7 +5623,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5512,7 +5645,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5534,7 +5667,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5556,7 +5689,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5578,7 +5711,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
@@ -5600,7 +5733,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5622,7 +5755,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5644,7 +5777,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -5666,7 +5799,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5688,7 +5821,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5710,7 +5843,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5732,7 +5865,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5754,7 +5887,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5776,7 +5909,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5798,12 +5931,12 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI in Music Lab"
+        "progression": "Explore Music Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -5813,15 +5946,59 @@
         "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "883685a6-ac26-45b1-8d1e-00f7bedbef9e"
+        "activity_section.key": "d1eb814f-54a9-4790-b4b7-cc62c5b2406e"
       },
       "level_keys": [
         "problem-solving-with-ai-lesson10-level1_v2_2026_dev"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Music Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-remix-lesson-music-lab-sample_2026"
+        ],
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-remix-lesson-music-lab-sample_2026"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Music Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-remix-lesson-music-lab-build_2026"
+        ],
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-remix-lesson-music-lab-build_2026"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5842,8 +6019,8 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 3,
+      "chapter": 57,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5864,8 +6041,8 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 4,
+      "chapter": 58,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5886,8 +6063,8 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 5,
+      "chapter": 59,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5908,7 +6085,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5930,7 +6107,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5952,7 +6129,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5974,7 +6151,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5996,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6018,7 +6195,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6040,7 +6217,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6062,7 +6239,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6084,7 +6261,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6106,7 +6283,28 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 69,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-project-prototype-choice"
+        ],
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "10dd8858-7915-4863-b4a0-f5f6de5018ca"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-project-prototype-choice"
+      ]
+    },
+    {
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6128,7 +6326,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6537,6 +6735,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-decision-making-choice",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-decision-making-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-examine-data-choice",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-examine-data-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-ai-chat-decision-making",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "problem-solving-with-ai-lesson7-level1_v2_2026_dev",
         "script_level.level_keys": [
           "problem-solving-with-ai-lesson7-level1_v2_2026_dev"
@@ -6748,7 +6982,31 @@
         "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "883685a6-ac26-45b1-8d1e-00f7bedbef9e"
+        "activity_section.key": "d1eb814f-54a9-4790-b4b7-cc62c5b2406e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-remix-lesson-music-lab-sample_2026",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-remix-lesson-music-lab-sample_2026"
+        ],
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-remix-lesson-music-lab-build_2026",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-remix-lesson-music-lab-build_2026"
+        ],
+        "lesson.key": "Lesson 10: Remixing, Creativity, and Originality",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "0b2664df-e8a3-4f57-bb4d-c260ac1af86e"
       }
     },
     {
@@ -6905,6 +7163,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "problem-solving-with-ai-2026-dev",
         "activity_section.key": "e48e578c-522f-44a0-9705-e3aa88fffe02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-project-prototype-choice",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-project-prototype-choice"
+        ],
+        "lesson.key": "Lesson 13: AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "10dd8858-7915-4863-b4a0-f5f6de5018ca"
       }
     },
     {

@@ -113,14 +113,14 @@ Rules for these blocks:
 ### How brand is determined
 
 Brand resolution happens server-side, in `Cdo::Brand.current_brand_code`
-(`lib/cdo/brand.rb`): DCDO `default-brand` (falling back to `codeai`) unless
-`brand-router-enabled` is on, in which case a `?brand=` URL param or the
-`brand` cookie can override it per request. The result is written to
+(`lib/cdo/brand.rb`): DCDO `default-brand` (falling back to `codeai-next`)
+unless `brand-router-enabled` is on, in which case a `?brand=` URL param or
+the `brand` cookie can override it per request. The result is written to
 `data-brand` on `<html>` by `application.html.haml`.
 
 `apps/src/util/brand.ts`'s `getCurrentBrand()` just reads that attribute
 client-side, returning one of `'code' | 'codeai' | 'codeai-next' |
-'codeai-audit'`, defaulting to `'codeai'` if the attribute is absent or
+'codeai-audit'`, defaulting to `'codeai-next'` if the attribute is absent or
 unrecognized.
 
 The brand cookie is set by navigating with `?brand=codeai` and cleared with `?brand-reset=1`.

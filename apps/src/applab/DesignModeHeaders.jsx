@@ -72,6 +72,7 @@ export default class DesignModeHeaders extends React.Component {
           borderRadius: '50%',
           height: '1rem',
           width: '1rem',
+          '& > i': {transform: 'translateY(1px)'},
         }}
       >
         <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
@@ -93,6 +94,7 @@ export default class DesignModeHeaders extends React.Component {
           borderRadius: '50%',
           height: '1rem',
           width: '1rem',
+          '& > i': {transform: 'translateY(1px)'},
         }}
       >
         <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />
