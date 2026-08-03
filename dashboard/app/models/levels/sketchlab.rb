@@ -30,6 +30,7 @@ class Sketchlab < Level
     exemplar_sources
     is_project_level
     require_edit_to_continue
+    hide_share_and_remix
   )
 
   after_initialize do
