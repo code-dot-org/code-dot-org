@@ -12,6 +12,8 @@ import {
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {DashboardApiClient} from '@code-dot-org/core/api';
 
+import type {SheetFile} from '../appearance/sheetFile';
+
 import ColorPicker from './ColorPicker';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
@@ -48,6 +50,10 @@ const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
 
 // Dark navy ink.
 const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
+
+// The spritesheet grid, drawn over the image. Bright enough to read against
+// pixel art of any colour, thin enough not to be mistaken for drawn pixels.
+const GRID_COLOR = 'rgb(0 200 255 / 70%)';
 
 // How long drawing must settle before the file is written. Long enough that a
 // flurry of strokes is one save, short enough that the game shows the change
@@ -108,6 +114,16 @@ interface PixelEditorProps {
   // Nothing may be drawn (a level with a locked workspace).
   isReadOnly?: boolean;
   /**
+   * The grid this image is cut into, if it is a spritesheet — the `.sheet`
+   * beside it (appearance/sheetFile). Undefined for a plain picture.
+   */
+  sheet?: SheetFile;
+  /**
+   * The grid changed: a new cell size, or `undefined` for "this is a picture,
+   * not a sheet". The caller writes or deletes the `.sheet` file.
+   */
+  onSheetChange?: (sheet: SheetFile | undefined) => void;
+  /**
    * A completed edit, as a PNG data URI.
    *
    * Called after drawing settles, not on a Save button: this is a file editor,
@@ -132,6 +148,8 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   knownPixelGrid,
   initialRecentColors,
   isReadOnly = false,
+  sheet,
+  onSheetChange,
   onCommit,
 }) => {
   const [tool, setTool] = useState<PixelTool>('pen');
@@ -145,6 +163,10 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   const pixelModeRef = useRef(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
+  // The grid, for `repaint` — which is a stable callback and cannot close over
+  // a prop. Editing the cell size repaints through the effect below.
+  const sheetRef = useRef<SheetFile | undefined>(sheet);
+  sheetRef.current = sheet;
   // Backing canvas at native image resolution: the single source of truth.
   const backingRef = useRef<HTMLCanvasElement | null>(null);
   // Circle preview: drawn over the backing on the display until pointer-up.
@@ -263,6 +285,34 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     ctx.drawImage(backing, 0, 0, display.width, display.height);
     if (previewRef.current) {
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
+    }
+    // The spritesheet grid, over everything: it is not part of the picture, it
+    // is a statement ABOUT the picture, and the learner is choosing where the
+    // frames fall while looking at what falls inside them.
+    const grid = sheetRef.current;
+    if (grid) {
+      const across = display.width / backing.width;
+      const down = display.height / backing.height;
+      ctx.save();
+      ctx.strokeStyle = GRID_COLOR;
+      ctx.lineWidth = 1;
+      for (let x = grid.cell.width; x < backing.width; x += grid.cell.width) {
+        ctx.beginPath();
+        ctx.moveTo(Math.round(x * across) + 0.5, 0);
+        ctx.lineTo(Math.round(x * across) + 0.5, display.height);
+        ctx.stroke();
+      }
+      for (
+        let y = grid.cell.height;
+        y < backing.height;
+        y += grid.cell.height
+      ) {
+        ctx.beginPath();
+        ctx.moveTo(0, Math.round(y * down) + 0.5);
+        ctx.lineTo(display.width, Math.round(y * down) + 0.5);
+        ctx.stroke();
+      }
+      ctx.restore();
     }
   }, []);
 
@@ -779,6 +829,12 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     onCommit(backing.toDataURL('image/png'), {recentColors});
   }, [onCommit, pixelMode, recentColors]);
 
+  useEffect(() => {
+    if (loaded) {
+      repaint();
+    }
+  }, [sheet, loaded, repaint]);
+
   // Commit after the drawing settles. `historyVersion` bumps once per completed
   // operation (a finished stroke, an undo, a redo), so this coalesces a burst of
   // strokes into one save without ever missing the last one.
@@ -806,7 +862,18 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
 
   return (
     <div className={moduleStyles.panel} aria-label={title}>
-      <div className={moduleStyles.header}>{title}</div>
+      <div className={moduleStyles.header}>
+        <span>{title}</span>
+        {onSheetChange && (
+          <SheetControls
+            sheet={sheet}
+            width={backingRef.current?.width ?? 0}
+            height={backingRef.current?.height ?? 0}
+            disabled={isReadOnly || !loaded}
+            onChange={onSheetChange}
+          />
+        )}
+      </div>
       <div className={moduleStyles.body}>
         <div className={moduleStyles.toolbar}>
           <div className={moduleStyles.toolGrid}>
@@ -918,6 +985,97 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
           )}
         </div>
       </div>
+    </div>
+  );
+};
+
+/**
+ * Whether this image is a spritesheet, and how big its cells are.
+ *
+ * The whole of what a `.sheet` says. Turning it on writes the file; turning it
+ * off deletes it — an image with no grid is a picture, and a grid nobody can
+ * see is not a decision anyone made.
+ */
+const SheetControls = ({
+  sheet,
+  width,
+  height,
+  disabled,
+  onChange,
+}: {
+  sheet?: SheetFile;
+  /** The image's own size, for the default grid and the frame count. */
+  width: number;
+  height: number;
+  disabled: boolean;
+  onChange: (sheet: SheetFile | undefined) => void;
+}) => {
+  const cell = sheet?.cell;
+  // A first guess a learner will usually accept: square cells the height of the
+  // image, which is what a strip of frames in a row is.
+  const suggested = Math.max(1, Math.min(height || 32, width || 32));
+  const columns = cell ? Math.max(1, Math.floor(width / cell.width)) : 0;
+  const rows = cell ? Math.max(1, Math.floor(height / cell.height)) : 0;
+
+  const size = (part: 'width' | 'height', raw: string) => {
+    const value = Math.round(Number(raw));
+    if (!cell || !Number.isFinite(value) || value < 1) {
+      return;
+    }
+    onChange({type: 'sheet', cell: {...cell, [part]: value}});
+  };
+
+  return (
+    <div className={moduleStyles.sheetControls}>
+      <label className={moduleStyles.sheetToggle}>
+        <input
+          type="checkbox"
+          checked={Boolean(sheet)}
+          disabled={disabled}
+          onChange={event =>
+            onChange(
+              event.target.checked
+                ? {
+                    type: 'sheet',
+                    cell: {width: suggested, height: suggested},
+                  }
+                : undefined,
+            )
+          }
+        />
+        Spritesheet
+      </label>
+      {cell && (
+        <>
+          <label className={moduleStyles.sheetField}>
+            Cell
+            <input
+              type="number"
+              min={1}
+              value={cell.width}
+              disabled={disabled}
+              aria-label="Cell width"
+              onChange={event => size('width', event.target.value)}
+            />
+          </label>
+          <span aria-hidden="true">×</span>
+          <label className={moduleStyles.sheetField}>
+            <input
+              type="number"
+              min={1}
+              value={cell.height}
+              disabled={disabled}
+              aria-label="Cell height"
+              onChange={event => size('height', event.target.value)}
+            />
+          </label>
+          <span className={moduleStyles.sheetCount}>
+            {columns * rows === 1
+              ? '1 frame'
+              : `${columns * rows} frames (${columns}×${rows})`}
+          </span>
+        </>
+      )}
     </div>
   );
 };

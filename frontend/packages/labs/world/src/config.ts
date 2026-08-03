@@ -53,6 +53,10 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // Learners can upload PNG sprites; they're stored in the assets backend and
   // referenced by URL (the game resolves them for the preview — see UPLOADS.md).
   validMimeTypes: ['image/png'],
+  // A `.sheet` belongs to the `.png` of the same name: the image editor writes
+  // it when an image is made a spritesheet and deletes it when it stops being
+  // one, so it is not a file to open (appearance/sheetFile).
+  hiddenFileTypes: ['sheet'],
   languageMapping: {
     js: 'javascript',
     ts: 'javascript',

@@ -68,6 +68,16 @@ export interface CodebridgeConfig {
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
   /**
+   * Extensions the file browser does not list (e.g. ['sheet']).
+   *
+   * For a file that belongs to another one and has no life of its own: World's
+   * `.sheet` says how to cut the `.png` of the same name into cells, is written
+   * and deleted by the image editor, and would only be a puzzle in the tree.
+   * The file is still in the project — the compiler and the editors read it —
+   * it is simply not something to open.
+   */
+  hiddenFileTypes?: string[];
+  /**
    * MIME types the user may upload (e.g. ['image/png']). Empty/undefined hides
    * the upload affordance. A `text/*` upload is read into the file's contents; any
    * other type is stored in the assets backend and referenced by URL.

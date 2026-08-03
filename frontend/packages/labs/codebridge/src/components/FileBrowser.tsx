@@ -70,6 +70,7 @@ const FileTree = ({
   fileIcons,
   isReadOnly,
   dragActive,
+  hiddenFileTypes = [],
 }: {
   source: MultiFileSource;
   parentId: FolderId;
@@ -77,6 +78,8 @@ const FileTree = ({
   hideNewFolderButton?: boolean;
   /** Lab-supplied extension -> icon overrides (`config.fileIcons`). */
   fileIcons?: {[extension: string]: FileIcon};
+  /** Extensions this lab does not list (`config.hiddenFileTypes`). */
+  hiddenFileTypes?: string[];
   /** Hides the per-row edit menus (legacy `enableMenu={!isReadOnly}`). */
   isReadOnly?: boolean;
   /** While a drag is in progress, hide the row menus (matches the legacy). */
@@ -86,7 +89,12 @@ const FileTree = ({
     .filter(f => f.parentId === parentId)
     .sort(byName);
   const files = Object.values(source.files)
-    .filter(f => f.folderId === parentId && shouldShowFile(f))
+    .filter(
+      f =>
+        f.folderId === parentId &&
+        shouldShowFile(f) &&
+        !hiddenFileTypes.includes(getFileExtension(f.name) ?? ''),
+    )
     .sort(byName);
 
   // Rows drag to move (a folder is also a drop target); read-only workspaces get
@@ -164,6 +172,7 @@ const FileTree = ({
               fileIcons={fileIcons}
               isReadOnly={isReadOnly}
               dragActive={dragActive}
+              hiddenFileTypes={hiddenFileTypes}
             />
           )}
         </li>
@@ -521,6 +530,7 @@ const FileBrowser = ({onToggleCollapse}: FileBrowserProps = {}) => {
                 fileIcons={config.fileIcons}
                 isReadOnly={isReadOnly}
                 dragActive={dragActive}
+                hiddenFileTypes={config.hiddenFileTypes}
               />
             </Droppable>
           </DndContext>

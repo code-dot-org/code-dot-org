@@ -6,10 +6,13 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
 import {
   parseSheetFile,
   projectSheets,
   serializeSheetFile,
+  setImageSheet,
   sheetFileName,
   type SheetFile,
 } from '../sheetFile';
@@ -64,5 +67,113 @@ describe('sheet files', () => {
         projectSheets({'sprites/coinSpin.sheet': '{"type": "sheet"}'}),
       ).toEqual({});
     });
+  });
+});
+
+describe('setImageSheet', () => {
+  /** A project holding one image, and whatever else is given. */
+  const project = (
+    extra: Record<
+      string,
+      {name: string; contents?: string; folderId?: string}
+    > = {},
+  ): MultiFileSource => ({
+    files: {
+      img: {
+        id: 'img',
+        name: 'coinSpin.png',
+        language: 'png',
+        contents: '',
+        folderId: 'sprites',
+        url: 'data:image/png;base64,AAA',
+      },
+      ...Object.fromEntries(
+        Object.entries(extra).map(([id, file]) => [
+          id,
+          {
+            id,
+            language: 'json',
+            contents: '',
+            folderId: 'sprites',
+            ...file,
+          },
+        ]),
+      ),
+    },
+    folders: {sprites: {id: 'sprites', name: 'sprites', parentId: '0'}},
+    openFiles: [],
+  });
+
+  const sheetOf = (source: MultiFileSource) =>
+    Object.values(source.files).find(file => file.name === 'coinSpin.sheet');
+
+  it('writes the sheet beside its image', () => {
+    const after = setImageSheet(project(), 'img', SHEET);
+
+    const written = sheetOf(after);
+    expect(written?.folderId).toBe('sprites');
+    expect(parseSheetFile(written?.contents ?? '')).toEqual(SHEET);
+  });
+
+  it('replaces one that is already there', () => {
+    const before = project({
+      sheet: {name: 'coinSpin.sheet', contents: serializeSheetFile(SHEET)},
+    });
+
+    const after = setImageSheet(before, 'img', {
+      type: 'sheet',
+      cell: {width: 16, height: 16},
+    });
+
+    expect(Object.keys(after.files)).toHaveLength(2);
+    expect(parseSheetFile(sheetOf(after)?.contents ?? '')).toEqual({
+      type: 'sheet',
+      cell: {width: 16, height: 16},
+    });
+  });
+
+  it('removes it when there is no grid any more', () => {
+    const before = project({
+      sheet: {name: 'coinSpin.sheet', contents: serializeSheetFile(SHEET)},
+    });
+
+    const after = setImageSheet(before, 'img', undefined);
+
+    expect(sheetOf(after)).toBeUndefined();
+    expect(after.files.img).toBeDefined();
+  });
+
+  it('changes nothing when it already says this', () => {
+    // The caller writes the sources; an unchanged write is a recompile.
+    const before = project({
+      sheet: {name: 'coinSpin.sheet', contents: serializeSheetFile(SHEET)},
+    });
+
+    expect(setImageSheet(before, 'img', SHEET)).toBe(before);
+    expect(setImageSheet(project(), 'img', undefined)).toEqual(project());
+  });
+
+  it('leaves a sheet of the same name in another folder alone', () => {
+    // Beside the image means beside THIS image.
+    const before = project({
+      other: {
+        name: 'coinSpin.sheet',
+        contents: serializeSheetFile(SHEET),
+        folderId: 'elsewhere',
+      },
+    });
+
+    const after = setImageSheet(before, 'img', {
+      type: 'sheet',
+      cell: {width: 8, height: 8},
+    });
+
+    expect(after.files.other.contents).toBe(serializeSheetFile(SHEET));
+    expect(Object.keys(after.files)).toHaveLength(3);
+  });
+
+  it('does nothing for a file that is not there', () => {
+    const before = project();
+    expect(setImageSheet(before, 'nope', SHEET)).toBe(before);
   });
 });
