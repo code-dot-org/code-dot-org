@@ -16,24 +16,6 @@
   margin-bottom: 16px;
 }
 
-.datePickerLabel {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.datePicker {
-  width: 100%;
-  padding: 0 24px 0 8px;
-  border: 1px solid var(--borders-neutral-primary, #d4dae1);
-  border-radius: 8px;
-  background: var(--background-neutral-primary, #fff);
-  font-size: 1rem;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
 .sectionGroup {
   display: flex;
   flex-direction: column;

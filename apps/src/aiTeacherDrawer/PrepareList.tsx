@@ -1,3 +1,4 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -97,19 +98,16 @@ const PrepareList: React.FC = () => {
     <div className={styles.container}>
       <h2 className={styles.heading}>Prepare</h2>
       <div className={styles.datePickerSection}>
-        <span className={styles.datePickerLabel}>Show prep content for</span>
-        <select
-          className={styles.datePicker}
-          value={selectedDate}
+        <SimpleDropdown
+          items={availableDates.map(date => ({
+            value: date,
+            text: date === COMING_UP ? 'Coming up' : formatDate(date),
+          }))}
+          labelText="Show prep content for"
+          name="date-picker"
+          selectedValue={selectedDate}
           onChange={e => setSelectedDate(e.target.value)}
-          aria-label="Select date"
-        >
-          {availableDates.map(date => (
-            <option key={date} value={date}>
-              {date === COMING_UP ? 'Coming up' : formatDate(date)}
-            </option>
-          ))}
-        </select>
+        />
       </div>
       {activeSections.length === 0 ? (
         <div className={styles.emptyState}>No active sections found.</div>
