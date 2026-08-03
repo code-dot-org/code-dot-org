@@ -137,11 +137,9 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def update_levels_and_texts_by_page(new_levels_and_texts_by_page)
     reload
-    # The clear issues immediate DELETEs and the rebuild can raise — each new
-    # row runs ParentLevelsChildLevel validations, among them the "UI Test "
-    # partition check — so the savepoint keeps a refused update from stripping
-    # the group's existing sublevels, even for a caller with no transaction of
-    # its own.
+    # Use a transaction so that the database is not modified if any child level
+    # validations fail. requires_new is necessary to ensure that the database is
+    # restored to its original state when running inside of another transaction.
     transaction(requires_new: true) do
       self.child_levels = []
       new_levels_and_texts_by_page.flatten.each_with_index do |level, level_index|
