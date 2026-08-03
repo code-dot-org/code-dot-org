@@ -33,7 +33,7 @@
 
 import Phaser from 'phaser';
 
-import type {Actor, RenderState, World} from 'world-lab';
+import type {Actor, BackdropState, RenderState, World} from 'world-lab';
 
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
@@ -49,6 +49,10 @@ const ACTOR_SIZE = 24;
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEGREES_TO_RADIANS = Math.PI / 180;
+// Where the backdrops sit. Below every actor (which draw at Phaser's default
+// depth of 0) with room between the layers, so a background set mid-game lands
+// behind the actors that were created before it.
+const BACKDROP_DEPTH = -1000;
 
 /**
  * The name of a texture frame for `cell`, registering it on first use.
@@ -148,6 +152,9 @@ export class PhaserBinding {
     onRuntimeError: RuntimeErrorReporter = () => {},
   ) {
     const objects = new Map<Actor, GameObject>();
+    // The backdrop layers' images, by layer index — created on demand, because
+    // a world may be told about its background mid-game.
+    const backdrops: Array<Phaser.GameObjects.Image | undefined> = [];
     // Every DOM key currently held (by `KeyboardEvent.key` name); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
@@ -245,7 +252,67 @@ export class PhaserBinding {
       return object;
     };
 
+    /**
+     * Draw what is behind everything: the backdrop layers (BACKGROUNDS.md §4).
+     *
+     * Reconciled every frame like the actors, because a backdrop can change
+     * mid-game — an event handler saying `set background to …`, or the
+     * hot-reload patch after the learner edits their `.world` file.
+     *
+     * Each layer's image is STRETCHED to the viewport: the stock backdrops are
+     * square and larger than it, so fitting would letterbox a square into a
+     * square, and a learner's own small drawing should become a background when
+     * they say it is one rather than a stamp in the middle of a dark field.
+     *
+     * The images sit at a negative depth rather than relying on being created
+     * first. Creation order would be enough for a background set before the game
+     * starts, but not for one set during it — that image would be made after the
+     * actors' and would cover them.
+     */
+    const syncBackdrops = (scene: Phaser.Scene) => {
+      const layers = world.backdropSnapshot() as BackdropState[];
+
+      // One sky, from layer 0: a colour on any other layer is behind the layer
+      // under it and can never be seen.
+      const [r, g, b, a] = layers[0]?.color ?? [0, 0, 0, 1];
+      const byte = (channel: number) => Math.round(channel * 255);
+      scene.cameras.main.setBackgroundColor(
+        Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
+      );
+
+      layers.forEach((layer, index) => {
+        let image = backdrops[index];
+        const sprite = layer.sprite;
+        if (sprite === undefined || !scene.textures.exists(sprite)) {
+          // No image, or one the project no longer holds: nothing to draw, and
+          // the colour behind it is already set.
+          image?.destroy();
+          backdrops[index] = undefined;
+          return;
+        }
+        if (!image) {
+          image = scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
+          // Below every actor, and layers in order among themselves.
+          image.setDepth(BACKDROP_DEPTH + index);
+          backdrops[index] = image;
+        }
+        image.setTexture(sprite);
+        image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
+        // A layer's effects filter its own pixels — unlike a world effect,
+        // which filters the camera and so covers the actors too.
+        effectRegistry.reconcile(scene, image, layer.effects);
+      });
+
+      // Layers the world dropped: their images go with them.
+      for (let index = layers.length; index < backdrops.length; index++) {
+        backdrops[index]?.destroy();
+        backdrops[index] = undefined;
+      }
+    };
+
     const sync = (scene: Phaser.Scene) => {
+      syncBackdrops(scene);
+
       // Viewport-wide effects, applied to the camera rather than to any one
       // object — everything it has drawn gets filtered. Reconciled each frame
       // like an actor's, so a world effect can be added and removed while the
@@ -356,6 +423,10 @@ export class PhaserBinding {
         width: GAME_WIDTH,
         height: GAME_HEIGHT,
       },
+      // Only ever visible for the instant before the scene's first `create`,
+      // which sets the camera's colour from the world (`syncBackdrops`). Kept in
+      // step with the engine's DEFAULT_BACKDROP_COLOR by hand: this module
+      // imports `world-lab` for types only.
       backgroundColor: '#101020',
       banner: false,
       audio: {noAudio: true},

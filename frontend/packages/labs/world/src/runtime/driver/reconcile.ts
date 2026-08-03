@@ -23,10 +23,20 @@ interface ReconcilableWorld {
     effectIds: string[];
     /** The graph behind each effect in play, hashed, by module path. */
     effectDocs: Record<string, string>;
+    /**
+     * What each backdrop layer draws. The colour is four floats (engine
+     * color.ts); spelled out rather than imported, like everything else here.
+     */
+    backdrops: Array<{
+      sprite?: string;
+      color: [number, number, number, number];
+    }>;
     world: Record<string, unknown>;
     actors: Record<string, Record<string, unknown>>;
   };
   setWorldProperty(path: string, value: unknown): boolean;
+  setBackground(sprite: string | undefined, layer?: number): unknown;
+  setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   /**
    * Every effect in play — the world's own AND every actor's — so a patch can
@@ -68,6 +78,13 @@ export function reconcile(
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const sameActors = stable(previous.actors) === stable(snapshot.actors);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
+  // What the backdrops draw is a value, like a world property, and patches the
+  // same way. Without this a rebuild whose only change was the background would
+  // compare equal to the previous one and reconcile to a running world that
+  // still has the old sky — the change silently lost until something else
+  // forced a restart. Their EFFECTS are structural and live in `effectIds`.
+  const backdropChanged =
+    stable(previous.backdrops) !== stable(snapshot.backdrops);
 
   // Effects whose graph was edited: same effect, new shader.
   const editedEffects = Object.keys(snapshot.effectDocs).filter(
@@ -90,10 +107,20 @@ export function reconcile(
   // (That `sameActors` is unreliable at all is a pre-existing problem worth
   // chasing on its own; it is the same flag the live world-property patch
   // depends on.)
-  if (sameStructure && (editedEffects.length || (sameActors && worldChanged))) {
+  if (
+    sameStructure &&
+    (editedEffects.length || (sameActors && (worldChanged || backdropChanged)))
+  ) {
     // Level 1: patch the running world rather than replacing it.
     for (const [path, value] of Object.entries(snapshot.world)) {
       running.setWorldProperty(path, value);
+    }
+    snapshot.backdrops.forEach((backdrop, layer) =>
+      running.setBackground(backdrop.sprite, layer),
+    );
+    // One sky: only layer 0 carries a colour anyone can see (World.setBackgroundColor).
+    if (snapshot.backdrops[0]) {
+      running.setBackgroundColor(snapshot.backdrops[0].color);
     }
     // Lift each edited graph off the freshly built world and write it into the
     // running one. The driver re-reads these specs every frame, so it sees the

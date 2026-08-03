@@ -23,8 +23,9 @@
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
+import {rgba, type ColorValue} from '../core/color';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
-import {World} from '../core/World';
+import {DEFAULT_BACKDROP_COLOR, World, type BackdropState} from '../core/World';
 
 import type {ActorBuilder} from './ActorBuilder';
 
@@ -52,6 +53,11 @@ export class WorldBuilder {
   private readonly overrides: Array<[Property, unknown]> = [];
   private readonly animations: Record<string, AnimationDef> = {};
   private readonly effects: AppliedEffectSpec[] = [];
+  // Backdrop layers as described, back to front. Empty until something says
+  // otherwise; the World fills in the default layer either way.
+  private readonly backdrops: Array<
+    BackdropState & {effects: AppliedEffectSpec[]}
+  > = [];
   private readonly types = new Map<string, ActorBuilder>();
   /** The live world, once something has needed one. See `getWorld`. */
   private built: World | undefined;
@@ -158,6 +164,96 @@ export class WorldBuilder {
     }
     this.effects.push(values ? {path, document, values} : {path, document});
     return this;
+  }
+
+  /**
+   * Draw an image behind everything (BACKGROUNDS.md).
+   *
+   * Forwards once the world exists, for the reason `set` and `addEffect` do:
+   * `set background to …` is a block a learner can place under `define world`
+   * or in an event handler, `world` is this builder in one and the live World in
+   * the other, and the same call has to be right in both.
+   */
+  setBackground(sprite: string | undefined, layer = 0): this {
+    if (this.built) {
+      this.built.setBackground(sprite, layer);
+      return this;
+    }
+    this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /** Set the colour behind the backdrop. See {@link World.setBackgroundColor}. */
+  setBackgroundColor(color: ColorValue): this {
+    if (this.built) {
+      this.built.setBackgroundColor(color);
+      return this;
+    }
+    this.backdropAt(0).color = rgba(color);
+    return this;
+  }
+
+  /**
+   * Play an effect on the backdrop's own pixels, not on the whole camera.
+   *
+   * @param path     the effect's module path (`effects/ripple`)
+   * @param document the parsed `.effect` file, imported as JSON by the bundler
+   * @param values   values for the effect's declared parameters, by parameter id
+   * @param layer    which backdrop; 0 is the one the blocks address
+   */
+  addBackgroundEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+    layer = 0,
+  ): this {
+    if (this.built) {
+      this.built.addBackgroundEffect(path, document, values, layer);
+      return this;
+    }
+    // Idempotent by path, matching the live World — see World.addEffect.
+    const effects = this.backdropAt(layer).effects;
+    if (effects.some(effect => effect.path === path)) {
+      return this;
+    }
+    effects.push(values ? {path, document, values} : {path, document});
+    return this;
+  }
+
+  /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
+  removeBackgroundEffect(path: string, layer = 0): this {
+    if (this.built) {
+      this.built.removeBackgroundEffect(path, layer);
+      return this;
+    }
+    const effects = this.backdropAt(layer).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
+    return this;
+  }
+
+  /**
+   * The described layer `n`, creating the layers up to it. Mirrors the World's
+   * own, so a description and a live world grow alike.
+   */
+  private backdropAt(layer: number): BackdropState & {
+    effects: AppliedEffectSpec[];
+  } {
+    const index = Math.max(0, Math.floor(layer));
+    while (this.backdrops.length <= index) {
+      // Layer 0 is the one that has ever been drawn on its own, so it is the
+      // one that carries the default colour; a layer above it starts clear.
+      this.backdrops.push({
+        color:
+          this.backdrops.length === 0
+            ? rgba(DEFAULT_BACKDROP_COLOR)
+            : [0, 0, 0, 0],
+        effects: [],
+      });
+    }
+    return this.backdrops[index];
   }
 
   /**
@@ -301,6 +397,7 @@ export class WorldBuilder {
       overrides: [...this.overrides],
       animations: Object.entries(this.animations),
       effects: [...this.effects],
+      backdrops: this.backdrops.map(backdrop => ({...backdrop})),
     });
   }
 }

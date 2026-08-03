@@ -17,8 +17,10 @@ export {Trait} from './core/Trait';
 export {Actor, type ActorInit} from './core/Actor';
 export {
   World,
+  DEFAULT_BACKDROP_COLOR,
   type WorldInit,
   type RenderState,
+  type BackdropState,
   type WorldSnapshot,
 } from './core/World';
 export {Scheduler} from './core/Scheduler';
