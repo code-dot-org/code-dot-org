@@ -11,30 +11,8 @@
 // would catch an effect being added, removed, or swapped, but not the case that
 // matters most while authoring: the same effect, edited.
 
+import {fnv1a} from './hash';
 import type {AppliedEffectSpec} from './types';
-
-/**
- * FNV-1a over the serialized document.
- *
- * A hash rather than the document itself because the snapshot is compared by
- * stringifying it, and a graph is kilobytes: the comparison should cost the
- * same whatever the effect. FNV-1a is not a security hash and does not need to
- * be — a collision means one edit does not restart the game, which the next
- * edit corrects. It is chosen for being short, dependency-free, and stable
- * across runs, which `Object.hashCode`-style identity is not.
- */
-function hash(text: string): string {
-  let value = 0x811c9dc5;
-  for (let index = 0; index < text.length; index++) {
-    value ^= text.charCodeAt(index);
-    // The FNV prime, by shifts: `value * 16777619` overflows past 2^53 and
-    // loses the low bits that carry the difference between similar documents.
-    value +=
-      (value << 1) + (value << 4) + (value << 7) + (value << 8) + (value << 24);
-  }
-  // `>>>` folds the accumulated 32-bit value back into an unsigned integer.
-  return (value >>> 0).toString(36);
-}
 
 /**
  * WHERE an applied effect is, and which effect it is — not how it is tuned.
@@ -67,7 +45,7 @@ export function effectSlotId(owner: string, effect: AppliedEffectSpec): string {
  * {@link effectContentHash}.
  */
 export function effectSnapshotId(effect: AppliedEffectSpec): string {
-  return `${effect.path}@${hash(JSON.stringify(effect.values ?? null))}`;
+  return `${effect.path}@${fnv1a(JSON.stringify(effect.values ?? null))}`;
 }
 
 /**
@@ -78,5 +56,5 @@ export function effectSnapshotId(effect: AppliedEffectSpec): string {
  * first is patchable into a running game; the second is not.
  */
 export function effectContentHash(effect: AppliedEffectSpec): string {
-  return hash(JSON.stringify(effect.document));
+  return fnv1a(JSON.stringify(effect.document));
 }

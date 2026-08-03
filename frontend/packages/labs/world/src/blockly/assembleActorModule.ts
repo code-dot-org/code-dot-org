@@ -41,10 +41,19 @@ export function assembleActorModule(blocks: GeneratedBlock[]): string {
 export function assembleWorldModule(blocks: GeneratedBlock[]): string {
   const world = blocks.find(block => block.type === 'world_world');
   const actors = blocks.filter(block => block.type === 'world_actor');
+  // Event handlers are REGISTRATIONS on an actor, and a template copies its
+  // handlers into each instance as it makes one (`ActorBuilder.instantiate`).
+  // So a hat below the world block would register onto a template every actor
+  // had already been made from: the handler would compile, run, and never fire.
+  const handlers = blocks.filter(block => block.type.startsWith('world_on_'));
   const rest = blocks.filter(
-    block => block !== world && !actors.includes(block),
+    block =>
+      block !== world && !actors.includes(block) && !handlers.includes(block),
   );
-  const actorsCode = actors.map(block => block.code).join('');
+  const actorsCode = actors
+    .map(block => block.code)
+    .concat(handlers.map(block => block.code))
+    .join('');
   const worldCode = world ? world.code : '';
   const restCode = rest.map(block => block.code).join('');
   // `localActors` is declared and exported by every world, defined actors or

@@ -19,6 +19,8 @@ interface ReconcilableWorld {
   snapshot(): {
     ruleIds: string[];
     actorIds: string[];
+    /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
+    handlerIds: string[];
     /** Which effects are in play, and what carries each (effectIds.ts). */
     effectIds: string[];
     /** Their knob settings, by the same key — patchable, unlike the above. */
@@ -83,9 +85,17 @@ export function reconcile(
   // structure: the driver reads values once, when it attaches a filter. The
   // GRAPH behind an effect does not — it can be swapped underneath a running
   // filter, and is handled below.
+  //
+  // Handlers count as structure for a harder reason than the rest: a patch
+  // keeps the RUNNING world, and its actors hold the handler functions the
+  // previous build gave them. Delete a `when` block, patch, and the block is
+  // gone from the screen while its handler still fires — the reload even says
+  // it applied the change live. Nothing is patchable about a closure, so any
+  // difference here restarts.
   const sameStructure =
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
     stable(previous.actorIds) === stable(snapshot.actorIds) &&
+    stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
   // What the backdrops draw is a value, like a world property, and patches the
