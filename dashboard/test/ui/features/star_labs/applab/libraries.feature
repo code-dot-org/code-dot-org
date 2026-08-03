@@ -56,7 +56,7 @@ Feature: Libraries
     And I wait until element ".ui-test-sortable-table-select" is visible
     When I select the "UntitledProject" option in dropdown named "selectOption"
     And I click selector ".ui-test-sortable-table-select table input:eq(0)"
-    And I click selector ".modal div:contains('Assign library'):last"
+    And I click selector "[role='dialog'] button:contains('Assign library'):last"
     And I wait until element "p:contains('This library is assigned to the following sections:')" is visible
     Then I sign out
 
