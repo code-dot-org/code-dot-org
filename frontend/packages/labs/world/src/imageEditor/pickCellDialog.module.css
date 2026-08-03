@@ -1,0 +1,15 @@
+/* The cell picker's CONTENT. The dialog itself — surface, width, padding, the
+   button row — is the design system's `Dialog`; the cells and what a chosen one
+   looks like are shared with the animation editor (cellThumb.module.css). */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}

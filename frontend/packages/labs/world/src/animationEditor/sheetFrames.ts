@@ -11,7 +11,7 @@
 // the driver hands the texture (PhaserBinding.cellFrame) — a sheet is never a
 // thing at runtime, only at the moment somebody chooses frames from one.
 
-import type {SheetFile} from '../appearance/sheetFile';
+import {sheetSpacing, type SheetFile} from '../appearance/sheetFile';
 
 /** A source rectangle within an image. */
 export interface CellRect {
@@ -33,6 +33,9 @@ export interface ImageSize {
  * Whole ones only: a sheet whose image is not a round number of cells has a
  * remainder that is not any cell, and offering it would hand back a rectangle
  * that runs off the edge of the picture.
+ *
+ * With padding and gap, a run of `n` cells occupies
+ * `2·padding + n·cell + (n − 1)·gap`; solving that for `n` is the count below.
  */
 export function sheetGrid(
   image: ImageSize | undefined,
@@ -41,9 +44,12 @@ export function sheetGrid(
   if (!image || !sheet || sheet.cell.width <= 0 || sheet.cell.height <= 0) {
     return {columns: 0, rows: 0};
   }
+  const {padding, gap} = sheetSpacing(sheet);
+  const fit = (extent: number, size: number) =>
+    Math.max(0, Math.floor((extent - 2 * padding + gap) / (size + gap)));
   return {
-    columns: Math.max(1, Math.floor(image.width / sheet.cell.width)),
-    rows: Math.max(1, Math.floor(image.height / sheet.cell.height)),
+    columns: Math.max(1, fit(image.width, sheet.cell.width)),
+    rows: Math.max(1, fit(image.height, sheet.cell.height)),
   };
 }
 
@@ -53,14 +59,19 @@ export function sheetCells(
   sheet: SheetFile | undefined,
 ): CellRect[] {
   const {columns, rows} = sheetGrid(image, sheet);
+  if (!sheet || columns === 0 || rows === 0) {
+    return [];
+  }
+  const {padding, gap} = sheetSpacing(sheet);
+  const {width, height} = sheet.cell;
   const cells: CellRect[] = [];
   for (let row = 0; row < rows; row++) {
     for (let column = 0; column < columns; column++) {
       cells.push({
-        x: column * (sheet as SheetFile).cell.width,
-        y: row * (sheet as SheetFile).cell.height,
-        width: (sheet as SheetFile).cell.width,
-        height: (sheet as SheetFile).cell.height,
+        x: padding + column * (width + gap),
+        y: padding + row * (height + gap),
+        width,
+        height,
       });
     }
   }

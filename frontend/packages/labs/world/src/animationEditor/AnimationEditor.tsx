@@ -29,7 +29,11 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {ImportAppearanceDialog} from '../appearance/ImportAppearanceDialog';
 import {importStockSprite} from '../appearance/importStock';
-import {projectSheets, type SheetFile} from '../appearance/sheetFile';
+import {
+  projectSheets,
+  sheetSpacing,
+  type SheetFile,
+} from '../appearance/sheetFile';
 import type {StockAnimation, StockSprite} from '../appearance/stock';
 import {
   animationIdOwners,
@@ -549,8 +553,15 @@ export const AnimationEditor = ({
     // A cell belongs to a grid: default a sheet to its first cell (so it does
     // not draw the whole sheet), and clear it for a single picture.
     const sheet = grids[sprite];
+    // The first cell — which is not the corner of the image when the sheet has
+    // padding around its grid (appearance/sheetFile).
     const position = sheet
-      ? {x: 0, y: 0, width: sheet.cell.width, height: sheet.cell.height}
+      ? {
+          x: sheetSpacing(sheet).padding,
+          y: sheetSpacing(sheet).padding,
+          width: sheet.cell.width,
+          height: sheet.cell.height,
+        }
       : undefined;
     return withFrames(mapFrame(id, f => ({...f, sprite, position})));
   };

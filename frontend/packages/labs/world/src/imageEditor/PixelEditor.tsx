@@ -1,20 +1,31 @@
+import {Button, Typography} from '@mui/material';
 import classNames from 'classnames';
 import {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
+  type ChangeEvent,
   type FunctionComponent,
   type PointerEvent as ReactPointerEvent,
 } from 'react';
 
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {DashboardApiClient} from '@code-dot-org/core/api';
 
+import {
+  cellIndex,
+  sheetCells,
+  type CellRect,
+} from '../animationEditor/sheetFrames';
 import type {SheetFile} from '../appearance/sheetFile';
 
 import ColorPicker from './ColorPicker';
+import PickCellDialog from './PickCellDialog';
 import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {TOOLS, toolTitle, type PixelTool} from './toolDefinitions';
@@ -171,6 +182,19 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   const displayRef = useRef<HTMLCanvasElement | null>(null);
   // The box the canvas is fitted into — watched for resizes.
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  /**
+   * The part of the image on screen: one cell of the sheet, or the whole image.
+   *
+   * Editing a spritesheet cell by cell is the point of a cell picker — a frame
+   * of a walk cycle is a drawing, and drawing it inside a strip of six means
+   * aiming at a sixth of the canvas. The BACKING is still the whole image (the
+   * tools, the undo stack and the saved PNG never know about this); only what is
+   * displayed, and where a pointer lands, are narrowed to the region.
+   */
+  const [region, setRegion] = useState<CellRect | undefined>(undefined);
+  const regionRef = useRef(region);
+  regionRef.current = region;
+  const [pickingCell, setPickingCell] = useState(false);
   // The grid, for `repaint` — which is a stable callback and cannot close over
   // a prop. Editing the cell size repaints through the effect below.
   const sheetRef = useRef<SheetFile | undefined>(sheet);
@@ -290,35 +314,57 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
         ctx.fillRect(x * cell, y * cell, cell, cell);
       }
     }
-    ctx.drawImage(backing, 0, 0, display.width, display.height);
+    // The region, or the whole image: one `drawImage` source rectangle is the
+    // entire difference between editing a sheet and editing one of its cells.
+    const view = regionRef.current ?? {
+      x: 0,
+      y: 0,
+      width: backing.width,
+      height: backing.height,
+    };
+    ctx.drawImage(
+      backing,
+      view.x,
+      view.y,
+      view.width,
+      view.height,
+      0,
+      0,
+      display.width,
+      display.height,
+    );
     if (previewRef.current) {
-      ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
+      ctx.drawImage(
+        previewRef.current,
+        view.x,
+        view.y,
+        view.width,
+        view.height,
+        0,
+        0,
+        display.width,
+        display.height,
+      );
     }
     // The spritesheet grid, over everything: it is not part of the picture, it
     // is a statement ABOUT the picture, and the learner is choosing where the
-    // frames fall while looking at what falls inside them.
-    const grid = sheetRef.current;
+    // frames fall while looking at what falls inside them. Each cell is drawn as
+    // its own rectangle rather than as full-length rules, so the padding around
+    // the grid and the gap between cells show up as the moat they are.
+    const grid = regionRef.current ? undefined : sheetRef.current;
     if (grid) {
       const across = display.width / backing.width;
       const down = display.height / backing.height;
       ctx.save();
       ctx.strokeStyle = GRID_COLOR;
       ctx.lineWidth = 1;
-      for (let x = grid.cell.width; x < backing.width; x += grid.cell.width) {
-        ctx.beginPath();
-        ctx.moveTo(Math.round(x * across) + 0.5, 0);
-        ctx.lineTo(Math.round(x * across) + 0.5, display.height);
-        ctx.stroke();
-      }
-      for (
-        let y = grid.cell.height;
-        y < backing.height;
-        y += grid.cell.height
-      ) {
-        ctx.beginPath();
-        ctx.moveTo(0, Math.round(y * down) + 0.5);
-        ctx.lineTo(display.width, Math.round(y * down) + 0.5);
-        ctx.stroke();
+      for (const cellRect of sheetCells(backing, grid)) {
+        ctx.strokeRect(
+          Math.round(cellRect.x * across) + 0.5,
+          Math.round(cellRect.y * down) + 0.5,
+          Math.round(cellRect.width * across) - 1,
+          Math.round(cellRect.height * down) - 1,
+        );
       }
       ctx.restore();
     }
@@ -547,9 +593,13 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     if (!display || !backing || !area) {
       return;
     }
-    display.width = backing.width * scaleRef.current;
-    display.height = backing.height * scaleRef.current;
-    const aspect = backing.width / backing.height;
+    const view = regionRef.current ?? {
+      width: backing.width,
+      height: backing.height,
+    };
+    display.width = view.width * scaleRef.current;
+    display.height = view.height * scaleRef.current;
+    const aspect = view.width / view.height;
     // The box the canvas may fill, less the breathing room around it — and
     // never smaller than something a person could draw in. A pane squeezed
     // below that scrolls (see `.canvasArea`) rather than leaving the canvas at
@@ -591,14 +641,25 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     if (!display || !backing) {
       return null;
     }
+    const view = regionRef.current ?? {
+      x: 0,
+      y: 0,
+      width: backing.width,
+      height: backing.height,
+    };
     const rect = display.getBoundingClientRect();
-    const x = Math.floor(
-      ((e.clientX - rect.left) / rect.width) * backing.width,
-    );
-    const y = Math.floor(
-      ((e.clientY - rect.top) / rect.height) * backing.height,
-    );
-    if (x < 0 || y < 0 || x >= backing.width || y >= backing.height) {
+    // Into the region first, then into the image: the tools write to the
+    // backing, which is always the whole picture.
+    const x =
+      view.x + Math.floor(((e.clientX - rect.left) / rect.width) * view.width);
+    const y =
+      view.y + Math.floor(((e.clientY - rect.top) / rect.height) * view.height);
+    if (
+      x < view.x ||
+      y < view.y ||
+      x >= view.x + view.width ||
+      y >= view.y + view.height
+    ) {
       return null;
     }
     return {x, y};
@@ -861,9 +922,9 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
 
   useEffect(() => {
     if (loaded) {
-      repaint();
+      fit();
     }
-  }, [sheet, loaded, repaint]);
+  }, [sheet, region, loaded, fit]);
 
   // Commit after the drawing settles. `historyVersion` bumps once per completed
   // operation (a finished stroke, an undo, a redo), so this coalesces a burst of
@@ -881,6 +942,22 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
     return () => window.clearTimeout(handle);
   }, [historyVersion, loaded, isReadOnly, commit]);
 
+  // The cells this sheet declares, against the image as loaded. Empty for a
+  // picture; recomputed rather than stored, since both halves are already state.
+  const cells = useMemo(
+    () =>
+      loaded && backingRef.current ? sheetCells(backingRef.current, sheet) : [],
+    [loaded, sheet],
+  );
+
+  // A grid that has stopped containing the cell being edited (its size changed,
+  // or it stopped being a sheet) leaves the region pointing at nothing.
+  useEffect(() => {
+    if (region && cellIndex(cells, region) < 0) {
+      setRegion(undefined);
+    }
+  }, [cells, region]);
+
   // historyVersion re-renders this component whenever the stacks change; the
   // stacks themselves live in refs.
   const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
@@ -891,17 +968,34 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   }
 
   return (
+    // The file's name is on the tab above and in the browser beside; a third
+    // copy of it here would be a heading that says nothing new.
     <div className={moduleStyles.panel} aria-label={title}>
       <div className={moduleStyles.header}>
-        <span>{title}</span>
         {onSheetChange && (
           <SheetControls
             sheet={sheet}
             width={backingRef.current?.width ?? 0}
             height={backingRef.current?.height ?? 0}
             disabled={isReadOnly || !loaded}
+            cellCount={cells.length}
             onChange={onSheetChange}
+            onPickCell={() => setPickingCell(true)}
           />
+        )}
+        {region && (
+          <div className={moduleStyles.regionBar}>
+            <Typography variant="body4">
+              {`Cell ${cellIndex(cells, region) + 1} of ${cells.length}`}
+            </Typography>
+            <Button
+              variant="text"
+              size="extraSmall"
+              onClick={() => setRegion(undefined)}
+            >
+              Show whole sheet
+            </Button>
+          </div>
         )}
       </div>
       <div className={moduleStyles.body}>
@@ -998,6 +1092,18 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
             </PixelTooltip>
           </div>
         </div>
+        {pickingCell && backingRef.current && (
+          <PickCellDialog
+            image={backingRef.current}
+            cells={cells}
+            current={region}
+            onPick={cell => {
+              setRegion(cell);
+              setPickingCell(false);
+            }}
+            onCancel={() => setPickingCell(false)}
+          />
+        )}
         <div className={moduleStyles.canvasArea} ref={canvasAreaRef}>
           {loadError ? (
             <div className={moduleStyles.loadError}>
@@ -1020,90 +1126,129 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
 };
 
 /**
- * Whether this image is a spritesheet, and how big its cells are.
+ * Whether this image is a spritesheet, how big its cells are, and how far apart.
  *
  * The whole of what a `.sheet` says. Turning it on writes the file; turning it
  * off deletes it — an image with no grid is a picture, and a grid nobody can
  * see is not a decision anyone made.
+ *
+ * Design-system controls on the lab's own surface: this row is about the FILE,
+ * and it should look like the rest of the site rather than like the drawing
+ * board below it.
  */
 const SheetControls = ({
   sheet,
   width,
   height,
   disabled,
+  cellCount,
   onChange,
+  onPickCell,
 }: {
   sheet?: SheetFile;
-  /** The image's own size, for the default grid and the frame count. */
+  /** The image's own size, for the default grid. */
   width: number;
   height: number;
   disabled: boolean;
+  /** How many cells the grid currently holds. */
+  cellCount: number;
   onChange: (sheet: SheetFile | undefined) => void;
+  /** Open the cell picker (only when there is more than one cell). */
+  onPickCell?: () => void;
 }) => {
   const cell = sheet?.cell;
   // A first guess a learner will usually accept: square cells the height of the
   // image, which is what a strip of frames in a row is.
   const suggested = Math.max(1, Math.min(height || 32, width || 32));
-  const columns = cell ? Math.max(1, Math.floor(width / cell.width)) : 0;
-  const rows = cell ? Math.max(1, Math.floor(height / cell.height)) : 0;
 
-  const size = (part: 'width' | 'height', raw: string) => {
-    const value = Math.round(Number(raw));
-    if (!cell || !Number.isFinite(value) || value < 1) {
+  /** One number of the grid, kept sane: a cell has size, a moat may be zero. */
+  const set = (
+    part: 'width' | 'height' | 'padding' | 'gap',
+    raw: string,
+  ): void => {
+    if (!sheet || !cell) {
       return;
     }
-    onChange({type: 'sheet', cell: {...cell, [part]: value}});
+    const value = Math.round(Number(raw));
+    if (!Number.isFinite(value) || value < 0) {
+      return;
+    }
+    if (part === 'width' || part === 'height') {
+      if (value < 1) {
+        return;
+      }
+      onChange({...sheet, cell: {...cell, [part]: value}});
+      return;
+    }
+    // Zero is the ordinary case, and the file says nothing rather than nothing
+    // twice: `padding: 0` and no padding at all mean the same, so only one of
+    // them is ever written.
+    const next = {...sheet, [part]: value || undefined};
+    if (!next.padding) {
+      delete next.padding;
+    }
+    if (!next.gap) {
+      delete next.gap;
+    }
+    onChange(next);
   };
+
+  const number = (
+    label: string,
+    value: number,
+    part: 'width' | 'height' | 'padding' | 'gap',
+    min: number,
+  ) => (
+    <TextField
+      className={moduleStyles.sheetNumber}
+      name={`sheet-${part}`}
+      label={label}
+      inputType="number"
+      size="s"
+      min={min}
+      value={String(value)}
+      disabled={disabled}
+      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+        set(part, event.target.value)
+      }
+    />
+  );
 
   return (
     <div className={moduleStyles.sheetControls}>
-      <label className={moduleStyles.sheetToggle}>
-        <input
-          type="checkbox"
-          checked={Boolean(sheet)}
-          disabled={disabled}
-          onChange={event =>
-            onChange(
-              event.target.checked
-                ? {
-                    type: 'sheet',
-                    cell: {width: suggested, height: suggested},
-                  }
-                : undefined,
-            )
-          }
-        />
-        Spritesheet
-      </label>
-      {cell && (
+      <Checkbox
+        name="sheet-on"
+        label="Spritesheet"
+        checked={Boolean(sheet)}
+        disabled={disabled}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          onChange(
+            event.target.checked
+              ? {type: 'sheet', cell: {width: suggested, height: suggested}}
+              : undefined,
+          )
+        }
+      />
+      {sheet && cell && (
         <>
-          <label className={moduleStyles.sheetField}>
-            Cell
-            <input
-              type="number"
-              min={1}
-              value={cell.width}
+          {number('Cell width', cell.width, 'width', 1)}
+          {number('Cell height', cell.height, 'height', 1)}
+          {number('Padding', sheet.padding ?? 0, 'padding', 0)}
+          {number('Gap', sheet.gap ?? 0, 'gap', 0)}
+          <Typography variant="body4" className={moduleStyles.sheetCount}>
+            {cellCount === 1 ? '1 cell' : `${cellCount} cells`}
+          </Typography>
+          {onPickCell && cellCount > 1 && (
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
               disabled={disabled}
-              aria-label="Cell width"
-              onChange={event => size('width', event.target.value)}
-            />
-          </label>
-          <span aria-hidden="true">×</span>
-          <label className={moduleStyles.sheetField}>
-            <input
-              type="number"
-              min={1}
-              value={cell.height}
-              disabled={disabled}
-              aria-label="Cell height"
-              onChange={event => size('height', event.target.value)}
-            />
-          </label>
-          <span className={moduleStyles.sheetCount}>
-            {columns * rows === 1
-              ? '1 frame'
-              : `${columns * rows} frames (${columns}×${rows})`}
-          </span>
+              onClick={onPickCell}
+            >
+              Edit one cell
+            </Button>
+          )}
         </>
       )}
     </div>

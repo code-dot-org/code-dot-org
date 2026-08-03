@@ -15,11 +15,33 @@
 import {getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-/** The on-disk shape of a `.sheet` file. */
+/**
+ * The on-disk shape of a `.sheet` file.
+ *
+ * A grid of cells, read left to right and top down, with two allowances that
+ * real spritesheets need: `padding` around the outside and a `gap` between
+ * neighbours. Both exist to keep a cell's pixels away from its neighbour's —
+ * a renderer sampling a texture at a scaled or rotated size reaches slightly
+ * past the rectangle it was given, and without a moat it fetches the sprite
+ * next door (the "bleeding" that plagues tile maps). Absent means zero, which
+ * is the strip-of-frames case.
+ */
 export interface SheetFile {
   type: 'sheet';
-  /** The size of one cell, in pixels. The grid is read left to right, top down. */
+  /** The size of one cell, in pixels. */
   cell: {width: number; height: number};
+  /** Blank pixels around the whole grid. Default 0. */
+  padding?: number;
+  /** Blank pixels between neighbouring cells. Default 0. */
+  gap?: number;
+}
+
+/** Padding and gap as numbers, whether or not the file mentions them. */
+export function sheetSpacing(sheet: SheetFile): {padding: number; gap: number} {
+  return {
+    padding: Math.max(0, sheet.padding ?? 0),
+    gap: Math.max(0, sheet.gap ?? 0),
+  };
 }
 
 /** The `.sheet` for an image file name — `coinSpin.png` → `coinSpin.sheet`. */
@@ -62,7 +84,27 @@ export function parseSheetFile(contents: string): SheetFile | undefined {
     ) {
       return undefined;
     }
-    return {type: 'sheet', cell: {width, height}};
+    // Padding and gap are optional and may be zero; anything else about them —
+    // a string, a negative — is malformed, and a malformed sheet is no sheet.
+    const spacing = (value: unknown): number | undefined | false => {
+      if (value === undefined) {
+        return undefined;
+      }
+      return typeof value === 'number' && Number.isFinite(value) && value >= 0
+        ? value
+        : false;
+    };
+    const padding = spacing((parsed as {padding?: unknown}).padding);
+    const gap = spacing((parsed as {gap?: unknown}).gap);
+    if (padding === false || gap === false) {
+      return undefined;
+    }
+    return {
+      type: 'sheet',
+      cell: {width, height},
+      ...(padding ? {padding} : {}),
+      ...(gap ? {gap} : {}),
+    };
   } catch {
     return undefined;
   }
