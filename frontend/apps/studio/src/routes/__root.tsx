@@ -16,6 +16,7 @@ import {
   createRootRoute,
   HeadContent,
   Outlet,
+  useMatches,
   useRouter,
 } from '@tanstack/react-router';
 import {TanStackRouterDevtools} from '@tanstack/react-router-devtools';
@@ -35,6 +36,8 @@ import {
 import Bootstrap from '@/modules/bootstrap';
 import {AuthErrorPage} from '@/modules/errors';
 import {queryClient} from '@/modules/queryClient';
+
+import {shouldHideFooter} from './shouldHideFooter';
 
 /**
  * Maps auth status to the route content area.
@@ -75,6 +78,7 @@ function RootContent() {
   const auth = useAuth();
   const router = useRouter();
   const onRetry = useCallback(() => router.invalidate(), [router]);
+  const hideFooter = shouldHideFooter(useMatches());
 
   return (
     <>
@@ -86,7 +90,7 @@ function RootContent() {
       <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
         {renderRouteArea(auth, onRetry)}
       </Box>
-      <StudioFooter />
+      {!hideFooter && <StudioFooter />}
       <TanStackRouterDevtools />
     </>
   );

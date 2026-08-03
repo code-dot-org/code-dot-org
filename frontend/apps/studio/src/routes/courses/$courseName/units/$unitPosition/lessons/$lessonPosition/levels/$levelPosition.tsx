@@ -1,4 +1,4 @@
-import {Box, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import {createFileRoute, notFound, useRouter} from '@tanstack/react-router';
 import {useCallback} from 'react';
 
@@ -9,6 +9,7 @@ import {
 } from '@code-dot-org/core/api';
 import {Lab} from '@code-dot-org/lab/host';
 
+import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
 import {
@@ -114,6 +115,9 @@ export const Route = createFileRoute(
 
     return {resolved, LabEntrypoint};
   },
+  // The lab is full-bleed and fills the viewport itself (FullHeightLabFrame);
+  // suppress the global StudioFooter so it doesn't sit below the fold.
+  staticData: {hideFooter: true},
   // Preserve the whole query string. The oceans lab reads its own URL flags
   // (?guide, ?testFreeze, ?tts) straight from location.search, so we must not
   // strip to a known subset — pass search through untouched.
@@ -167,16 +171,7 @@ function CourseLevelRoute() {
   }, [resolved, router]);
 
   return (
-    // Own full-height flex context (the shared root layout stays block, so
-    // centered routes like /users/edit are unaffected); the lab fills below the
-    // nav. Offset mirrors the root's header-height reserve.
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: 'calc(100vh - 50px)',
-      }}
-    >
+    <FullHeightLabFrame>
       <LevelNavigation
         currentPosition={resolved.position}
         levels={resolved.levels}
@@ -194,6 +189,6 @@ function CourseLevelRoute() {
           </Typography>
         )}
       </Lab>
-    </Box>
+    </FullHeightLabFrame>
   );
 }
