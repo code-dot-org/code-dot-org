@@ -145,7 +145,7 @@ export const ProjectProvider = ({children}: ProjectProviderProps) => {
   );
 
   useEffect(() => {
-    window.addEventListener('beforeunload', event => {
+    const onBeforeUnload = (event: BeforeUnloadEvent) => {
       const projectManager = LabRegistry.projectManager;
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
@@ -162,7 +162,12 @@ export const ProjectProvider = ({children}: ProjectProviderProps) => {
         event.preventDefault();
         event.returnValue = '';
       }
-    });
+    };
+    window.addEventListener('beforeunload', onBeforeUnload);
+    // Removed on the way out, and before re-registering for a new `isReadOnly`.
+    // Without this the listeners accumulate over a session and each surviving
+    // one calls `cleanUp()` again on the same unload.
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
   }, [isReadOnly]);
 
   useEffect(() => {
