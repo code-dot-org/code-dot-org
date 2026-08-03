@@ -155,6 +155,7 @@ export default class LibraryPublisher extends React.Component {
     return (
       <div>
         <TextField
+          aria-labelledby="library-name-label"
           name="libraryName"
           value={libraryName}
           onChange={this.setLibraryName}
@@ -187,6 +188,7 @@ export default class LibraryPublisher extends React.Component {
     return (
       <textarea
         id="ui-test-library-description"
+        aria-labelledby="library-description-label"
         rows="2"
         cols="200"
         style={styles.description}
@@ -371,11 +373,21 @@ export default class LibraryPublisher extends React.Component {
 
     return (
       <div>
-        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
+        <Typography
+          id="library-name-label"
+          variant="h4"
+          gutterBottom
+          sx={styles.sectionHeader}
+        >
           {i18n.libraryName()}
         </Typography>
         {this.displayNameInput()}
-        <Typography variant="h4" gutterBottom sx={styles.sectionHeader}>
+        <Typography
+          id="library-description-label"
+          variant="h4"
+          gutterBottom
+          sx={styles.sectionHeader}
+        >
           {i18n.description()}
         </Typography>
         {this.displayDescription()}

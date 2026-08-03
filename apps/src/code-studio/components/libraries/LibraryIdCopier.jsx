@@ -34,6 +34,7 @@ export default class LibraryIdCopier extends React.Component {
           readOnly
           value={channelId}
           size="s"
+          aria-label="Library ID"
         />
         <MuiButton
           variant="contained"
