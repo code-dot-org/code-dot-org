@@ -201,15 +201,35 @@ fetches each into `public/backgrounds/` (git-ignored), where the demo serves it.
 The measured library: 29 files, 2.0MB, 409 bytes to 265KB (median 59KB); 22 at
 400×400, 6 at 800×800, one at 800×398.
 
-**Still to do:**
+### The shelf, and where it points
 
-- `scripts/write-stock-backgrounds.mjs` → `src/appearance/stockBackgrounds.ts`
-  (generated, committed): the manifest the library dialog lists. Names derive
-  from `backgrounds.txt` without the bytes, so the manifest can be generated
-  from the committed list alone and cannot drift from what setup will fetch.
-- `getBackgroundBaseUrl()` in `runtime/worldConfig.ts`, defaulting to
-  `/backgrounds/`, set by the host exactly as `assetBaseUrl` is. The studio host
-  serves its own copies; the demo serves what setup fetched.
+**Done — this part is implemented too.**
+
+`scripts/write-stock-backgrounds.mjs` writes `src/appearance/stockBackgrounds.ts`
+(generated, committed): the ids, and nothing else. Names derive from
+`backgrounds.txt` without the bytes, so the shelf is generated from the committed
+list alone and cannot list a backdrop setup will not fetch. It refuses a name
+that is not a plain identifier, and refuses two URLs whose names collide — that
+pair would overwrite each other in `public/backgrounds/` and leave a tile whose
+image nobody downloaded.
+
+`appearance/stock.ts` builds `StockBackground {id, name, url}` from those ids.
+It is a **function**, `stockBackgrounds()`, not a constant: the base URL is
+host-supplied and may be set after the module loads, and a shelf resolved once at
+import time would bake in the default. Labels are derived (`sunAndRainbow` → "Sun
+and rainbow") rather than authored — the picker's tiles are pictures, and a
+hand-written label per backdrop is one more thing to drift.
+
+`runtime/worldConfig.ts` gains `getBackgroundBaseUrl()` / `setBackgroundBaseUrl()`,
+defaulting to `/backgrounds/` and normalising a missing trailing slash, exactly
+as `assetBaseUrl` does. It is **not** forwarded to the sandbox iframes: a backdrop
+is fetched by the library dialog on the lab's origin and ends up inlined in the
+project, so the sandbox only ever sees the copy the project holds.
+
+`src/__tests__/backgrounds.test.ts` is what keeps the three in step — the list,
+the shelf, and the URL — and it was checked by making it fail: adding a URL to
+`backgrounds.txt` without regenerating turns the first case red, naming the
+missing id.
 
 ## 8. Room to grow
 
@@ -248,6 +268,6 @@ The shape of each extension, so today's decisions do not have to be revisited:
    reconcile. (`yarn setup:world` after — the sandbox runs a prebuilt bundle.)
 2. Driver: create, stretch, per-frame reconcile, camera colour.
 3. Blocks: the three, plus the `remove` counterpart.
-4. Library: manifest generator, base URL, import flow, the `backgrounds/` folder
-   in `DEFAULT_PROJECT`.
+4. Library: import flow and the `backgrounds/` folder in `DEFAULT_PROJECT`
+   (the manifest generator and base URL are done — §7).
 5. Pool hygiene: picker filters, no `.sheet` UI for backdrops.
