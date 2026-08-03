@@ -18,6 +18,8 @@ import type {ReloadMode} from '../messages';
 interface ReconcilableWorld {
   snapshot(): {
     ruleIds: string[];
+    /** Each rule's code, hashed (`ruleIds.ts`) — a rule EDITED, not swapped. */
+    ruleCode: Record<string, string>;
     actorIds: string[];
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
@@ -86,14 +88,16 @@ export function reconcile(
   // GRAPH behind an effect does not — it can be swapped underneath a running
   // filter, and is handled below.
   //
-  // Handlers count as structure for a harder reason than the rest: a patch
-  // keeps the RUNNING world, and its actors hold the handler functions the
-  // previous build gave them. Delete a `when` block, patch, and the block is
-  // gone from the screen while its handler still fires — the reload even says
-  // it applied the change live. Nothing is patchable about a closure, so any
-  // difference here restarts.
+  // Handlers and rule code count as structure for a harder reason than the
+  // rest: a patch keeps the RUNNING world, and it holds the functions the
+  // previous build gave it — the handlers its actors copied, the steps its
+  // scheduler ordered. Delete a `when` block, patch, and the block is gone from
+  // the screen while its handler still fires; edit a `.rule` and the old step
+  // goes on running. The reload even says it applied the change live. Nothing
+  // is patchable about a closure, so any difference here restarts.
   const sameStructure =
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
+    stable(previous.ruleCode) === stable(snapshot.ruleCode) &&
     stable(previous.actorIds) === stable(snapshot.actorIds) &&
     stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);

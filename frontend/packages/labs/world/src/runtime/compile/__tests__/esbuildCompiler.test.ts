@@ -89,6 +89,45 @@ describe('WorldCompiler', () => {
     expect(code).not.toContain("'v1'");
   });
 
+  it('emits an untouched module identically when another file changes', async () => {
+    // The hot-reload reconciler hashes FUNCTION SOURCE to notice an edited rule
+    // or handler (`ruleIds.ts`, `Actor.handlerIds`). That only works if a
+    // module the learner did not touch comes out of the bundler the same way
+    // every time — otherwise every edit anywhere would read as "the rules
+    // changed" and restart the game, which is the feature turned inside out.
+    //
+    // The case to fear is a name collision: two modules bundled into one file,
+    // both declaring `speed`, one of them necessarily renamed.
+    const rule = `
+      const speed = 3;
+      export function step(world) { world.x = speed * 2; }
+    `;
+    const main = (extra: string) => `
+      import {step} from 'rules/thing';
+      ${extra}
+      export default {step};
+    `;
+    const stepSource = (code: string) => {
+      const at = code.indexOf('function step(');
+      return code.slice(at, code.indexOf('}', at) + 1);
+    };
+
+    const before = await compiler.compile(
+      {'worlds/main.ts': main(`console.log('a');`), 'rules/thing.ts': rule},
+      'worlds/main.ts',
+    );
+    const after = await compiler.compile(
+      {
+        'worlds/main.ts': main(`const speed = 99; console.log(speed);`),
+        'rules/thing.ts': rule,
+      },
+      'worlds/main.ts',
+    );
+
+    expect(stepSource(before)).toContain('speed * 2');
+    expect(stepSource(after)).toBe(stepSource(before));
+  });
+
   it('throws a CompileError with a location for an unresolved import', async () => {
     const broken = {
       'worlds/main.ts': `import x from 'worlds/missing'; export default x;`,
