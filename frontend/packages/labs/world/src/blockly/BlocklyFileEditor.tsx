@@ -50,6 +50,7 @@ import {
   filePath,
   projectFiles,
   projectImageNames,
+  projectImagePaths,
 } from '../runtime/projectFiles';
 
 import styles from './blocklyFileEditor.module.css';
@@ -243,8 +244,15 @@ export const BlocklyFileEditor = ({
     () => projectFiles(currentSources.source),
     [currentSources],
   );
+  // Names for the pickers (a block stores a name, and the decoded images are
+  // keyed by one); paths for the dropdown registries, which have to tell a
+  // backdrop from a sprite and the folder is the only thing that says so.
   const images = useMemo(
     () => projectImageNames(currentSources.source),
+    [currentSources],
+  );
+  const imagePaths = useMemo(
+    () => projectImagePaths(currentSources.source),
     [currentSources],
   );
   // How big those images are, where the editor can tell: what says how many
@@ -263,8 +271,8 @@ export const BlocklyFileEditor = ({
     [currentSources, decoded],
   );
   useMemo(
-    () => refreshProjectDropdowns(files, images, imageSizes),
-    [files, images, imageSizes],
+    () => refreshProjectDropdowns(files, imagePaths, imageSizes),
+    [files, imagePaths, imageSizes],
   );
 
   // The stock-effect import, opened from an effect dropdown's `(import…)` row.
@@ -329,7 +337,7 @@ export const BlocklyFileEditor = ({
       updateSources({...sources, source});
       refreshProjectDropdowns(
         projectFiles(source),
-        projectImageNames(source),
+        projectImagePaths(source),
         projectImageSizes(source),
       );
       finishImport(path);
@@ -348,7 +356,7 @@ export const BlocklyFileEditor = ({
       updateSources({...sources, source});
       refreshProjectDropdowns(
         projectFiles(source),
-        projectImageNames(source),
+        projectImagePaths(source),
         projectImageSizes(source),
       );
       finishImport(name);
@@ -429,7 +437,7 @@ export const BlocklyFileEditor = ({
       updateSources({...sources, source});
       refreshProjectDropdowns(
         projectFiles(source),
-        projectImageNames(source),
+        projectImagePaths(source),
         projectImageSizes(source),
       );
       // An import from inside the picker continues the picking: the learner

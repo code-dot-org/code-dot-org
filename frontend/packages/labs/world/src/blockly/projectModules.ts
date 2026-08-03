@@ -315,30 +315,51 @@ export function projectWorldRules(files: Record<string, string>): string[] {
   return [...names];
 }
 
+/** Where the backdrops live; everything under it is out of the sprite pool. */
+const BACKGROUNDS_FOLDER = 'backgrounds/';
+
+const IMAGE_FILE = /\.(png|jpg|jpeg|gif|webp)$/i;
+
+/** Every image path the project holds, from both places they can come from. */
+const imagePaths = (
+  files: Record<string, string>,
+  images: readonly string[],
+): string[] => [
+  ...Object.keys(files).filter(path => IMAGE_FILE.test(path)),
+  ...images,
+];
+
+const baseName = (path: string): string => path.split('/').pop() as string;
+
+/** `cave.png` → `cave`, which is what the sentence on a block wants to read. */
+const imageLabel = (path: string): string =>
+  baseName(path).replace(/\.[^.]+$/, '');
+
 /**
  * The images the project holds, as `[label, fileName]` for the SPRITE dropdown.
  *
  * The VALUE is the file name — what a frame references and what the driver keys
  * a texture by — and the label drops the extension, because "player" is what the
  * sentence on the block wants to read.
+ *
+ * Backdrops are NOT here. They are a pool of their own, told apart by their
+ * folder (BACKGROUNDS.md §5): a sky is not something to dress an actor in, and
+ * an actor's costume is not something to stretch across the viewport.
  */
 export function projectSpriteOptions(
   files: Record<string, string>,
-  assets: readonly string[] = [],
+  images: readonly string[] = [],
 ): Array<[string, string]> {
-  const names = [
-    ...Object.keys(files).filter(path =>
-      /\.(png|jpg|jpeg|gif|webp)$/i.test(path),
-    ),
-    ...assets,
-  ].map(path => path.split('/').pop() as string);
+  const names = imagePaths(files, images)
+    .filter(path => !path.startsWith(BACKGROUNDS_FOLDER))
+    .map(baseName);
   // A spritesheet is offered a cell at a time: drawing a whole strip is almost
   // never what `set sprite` means for one. `cellCount` knows the project's
   // grids and image sizes (blockly/spriteCells); an image it cannot measure is
   // offered whole, which is the honest answer.
   const options: Array<[string, string]> = [];
   for (const name of [...new Set(names)].sort((a, b) => a.localeCompare(b))) {
-    const label = name.replace(/\.[^.]+$/, '');
+    const label = imageLabel(name);
     const cells = cellCount(name);
     if (cells <= 1) {
       options.push([label, name]);
@@ -350,4 +371,26 @@ export function projectSpriteOptions(
     }
   }
   return options;
+}
+
+/**
+ * The project's backdrops, as `[label, fileName]` for the BACKGROUND dropdown.
+ *
+ * The pool is the folder and nothing else: an image under `backgrounds/` is a
+ * backdrop, and moving one there is a reasonable way to say so.
+ *
+ * Whole images only — no cells. A backdrop is stretched over the viewport, so
+ * there is nothing a grid of it would mean, and `.sheet` is never written beside
+ * one (BACKGROUNDS.md §5).
+ */
+export function projectBackgroundOptions(
+  files: Record<string, string>,
+  images: readonly string[] = [],
+): Array<[string, string]> {
+  const names = imagePaths(files, images)
+    .filter(path => path.startsWith(BACKGROUNDS_FOLDER))
+    .map(baseName);
+  return [...new Set(names)]
+    .sort((a, b) => a.localeCompare(b))
+    .map(name => [imageLabel(name), name] as [string, string]);
 }

@@ -70,3 +70,23 @@ export function projectImageNames(
     .filter(file => file.url)
     .map(file => file.name);
 }
+
+/**
+ * The same images, folder and all (`backgrounds/cave.png`).
+ *
+ * A name is what a block stores and what the driver keys a texture by, so
+ * {@link projectImageNames} is what most of the lab wants. The editor's
+ * dropdowns want more than that: which pool an image belongs to is its folder
+ * and nothing else (`backgrounds/` versus `sprites/`, BACKGROUNDS.md §5), and a
+ * bare name cannot answer that question.
+ */
+export function projectImagePaths(
+  source: MultiFileSource | undefined,
+): string[] {
+  if (!source) {
+    return [];
+  }
+  return Object.values(source.files)
+    .filter(file => file.url)
+    .map(file => `${folderPath(source, file.folderId)}${file.name}`);
+}
