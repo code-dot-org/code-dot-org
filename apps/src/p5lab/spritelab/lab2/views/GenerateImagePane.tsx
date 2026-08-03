@@ -1,9 +1,12 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {AnyAction} from 'redux';
 
 import {dataURIToSourceSize} from '@cdo/apps/imageUtils';
 import {
+  addAnimation,
   deleteAnimation,
+  isNameUnique,
+  setAnimationName,
   SET_INITIAL_ANIMATION_LIST,
 } from '@cdo/apps/p5lab/redux/animationList';
 import PixelEditorModal, {
@@ -11,6 +14,7 @@ import PixelEditorModal, {
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 import {UploadImageFunction} from '../ai/items/itemGeneration';
 import {
@@ -19,52 +23,65 @@ import {
   trimAnimationListImages,
 } from '../imageTrim';
 
+import ImageDetailsDialog from './ImageDetailsDialog';
+
 import moduleStyles from './sprite-lab2-view.module.scss';
+
+// A new image starts as a blank, transparent, pixel-editable canvas: 32x32
+// art pixels drawn at 16 physical px each (the generation pipeline's block
+// size).
+const BLANK_CANVAS_PX = 512;
+const BLANK_CANVAS_GRID = 16;
+let blankCanvasDataURI: string | null = null;
+function getBlankCanvasDataURI(): string {
+  if (!blankCanvasDataURI) {
+    const canvas = document.createElement('canvas');
+    canvas.width = BLANK_CANVAS_PX;
+    canvas.height = BLANK_CANVAS_PX;
+    blankCanvasDataURI = canvas.toDataURL('image/png');
+  }
+  return blankCanvasDataURI;
+}
 
 interface GalleryCardProps {
   animKey: string;
   name?: string;
   thumb?: string;
-  onEdit: (key: string) => void;
-  onDelete: (key: string) => void;
+  onOpen: (key: string, trigger: HTMLElement) => void;
 }
 
-// Memoized: opening/closing the editor modal re-renders the pane, and
-// without this every card (thumbnail img and all) re-renders with it —
-// most of dev-mode's click-to-modal latency. The thumb string is computed
-// by the parent so trim updates still flow through as a changed prop.
+// Memoized: opening/closing the dialog re-renders the pane, and without this
+// every card (thumbnail img and all) re-renders with it. The thumb string is
+// computed by the parent so trim updates still flow through as a changed
+// prop.
 const GalleryCard = React.memo<GalleryCardProps>(
-  ({animKey, name, thumb, onEdit, onDelete}) => (
+  ({animKey, name, thumb, onOpen}) => (
     <div className={moduleStyles.imageCard}>
       <button
         type="button"
         className={moduleStyles.imageThumb}
-        title={`Edit ${name || 'image'}`}
-        onClick={() => onEdit(animKey)}
+        title={name}
+        onClick={event => onOpen(animKey, event.currentTarget)}
       >
         {thumb && <img src={thumb} alt={name || 'image'} />}
       </button>
       <div className={moduleStyles.imageName} title={name}>
         {name}
       </div>
-      <button
-        type="button"
-        className={moduleStyles.deleteButton}
-        onClick={() => onDelete(animKey)}
-      >
-        Delete
-      </button>
     </div>
   )
 );
 GalleryCard.displayName = 'GalleryCard';
 
 /**
- * The Images tab: the project's image gallery (delete, click-to-edit via the pixel editor).
+ * The Images tab: the project's image gallery. Clicking an image (or the
+ * new-image card) opens the image dialog; painting happens from there.
  */
 const GenerateImagePane: React.FunctionComponent<{
   uploadImage?: UploadImageFunction;
-}> = ({uploadImage}) => {
+  /** Rename an image and every reference to it; error message or null. */
+  onRenameImage: (oldName: string, newName: string) => string | null;
+}> = ({uploadImage, onRenameImage}) => {
   const dispatch = useAppDispatch();
 
   // The project's images live in the animation list (AI-generated images are
@@ -90,56 +107,144 @@ const GenerateImagePane: React.FunctionComponent<{
     trimAnimationListImages(animationList);
   }, [animationList]);
 
-  const handleDelete = useCallback(
-    (key: string) => {
+  // The dialog's subject: an animation key, 'new', or closed. While
+  // `painting`, the paint editor renders in the dialog's place and the
+  // dialog returns on save/cancel (one modal at a time).
+  const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
+  const [painting, setPainting] = useState(false);
+  // The name chosen for a new image, held until its first paint is saved —
+  // nothing is created before that.
+  const pendingNewNameRef = useRef<string | null>(null);
+  // The gallery card that opened the dialog; focus returns to it on close.
+  const triggerRef = useRef<HTMLElement | null>(null);
+
+  const openDialog = useCallback((key: string, trigger: HTMLElement) => {
+    triggerRef.current = trigger;
+    setDialogTarget(key);
+  }, []);
+
+  const openNewDialog = useCallback((event: React.MouseEvent<HTMLElement>) => {
+    triggerRef.current = event.currentTarget;
+    setDialogTarget('new');
+  }, []);
+
+  const closeDialog = useCallback(() => {
+    setDialogTarget(null);
+    setPainting(false);
+    pendingNewNameRef.current = null;
+    triggerRef.current?.focus();
+  }, []);
+
+  const targetProps =
+    dialogTarget && dialogTarget !== 'new'
+      ? images.find(i => i.key === dialogTarget)?.props
+      : undefined;
+
+  const handleDelete = useCallback(() => {
+    if (dialogTarget && dialogTarget !== 'new') {
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
-        deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
+        deleteAnimation(
+          dialogTarget,
+          true /* isSpriteLab */
+        ) as unknown as AnyAction
       );
+    }
+    closeDialog();
+  }, [dispatch, dialogTarget, closeDialog]);
+
+  const handleRename = useCallback(
+    (newName: string): string | null => {
+      if (!targetProps?.name) {
+        return 'Image not found.';
+      }
+      return onRenameImage(targetProps.name, newName);
     },
-    [dispatch]
+    [targetProps, onRenameImage]
   );
 
-  // Pixel editor: clicking a gallery image opens it in the modal; Save
-  // uploads the edited PNG as a fresh asset (new filename, so nothing caches
-  // the old pixels) and points the animation at it. With nowhere to upload,
-  // the dataURI itself is stored as the source, which persists in project
-  // sources.
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const editingProps = editingKey
-    ? images.find(i => i.key === editingKey)?.props
-    : undefined;
-  const handleEdit = useCallback((key: string) => setEditingKey(key), []);
+  const handleCreateFromPaint = useCallback((name: string): string | null => {
+    if (!name) {
+      return 'Enter a name first.';
+    }
+    if (!isNameUnique(name, getStore().getState().animationList.propsByKey)) {
+      return 'That name is already used.';
+    }
+    pendingNewNameRef.current = name;
+    setPainting(true);
+    return null;
+  }, []);
+
+  // Persist an edited (or first-painted) image: upload the PNG as a fresh
+  // asset (new filename, so nothing caches the old pixels).
+  const uploadEdited = useCallback(
+    async (name: string, dataURI: string): Promise<string> => {
+      if (!uploadImage) {
+        // With nowhere to upload, the dataURI itself is stored as the
+        // source, which persists in project sources.
+        return dataURI;
+      }
+      try {
+        const base64 = dataURI.split(',')[1];
+        const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+        const safeName = (name || 'image')
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_');
+        return await uploadImage(
+          `${safeName}_${Date.now()}.png`,
+          bytes,
+          'image/png'
+        );
+      } catch {
+        return dataURI;
+      }
+    },
+    [uploadImage]
+  );
 
   const handleEditorSave = useCallback(
     async (dataURI: string, meta: PixelEditorSaveMeta) => {
-      const key = editingKey;
-      const props = editingProps;
-      setEditingKey(null);
-      if (!key || !props) {
-        return;
-      }
-      // Pixel-art edits can change resolution (logical downsample + crisp
-      // upscale); keep the animation's frame metadata truthful.
+      setPainting(false);
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
-      let sourceUrl = dataURI;
-      if (uploadImage) {
-        try {
-          const base64 = dataURI.split(',')[1];
-          const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
-          const safeName = (props.name || 'image')
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, '_');
-          sourceUrl = await uploadImage(
-            `${safeName}_${Date.now()}.png`,
-            bytes,
-            'image/png'
-          );
-        } catch {
-          // Fall back to embedding the dataURI as the source.
+
+      // First paint of a new image: create its animation now.
+      const newName = pendingNewNameRef.current;
+      if (dialogTarget === 'new' && newName) {
+        pendingNewNameRef.current = null;
+        const sourceUrl = await uploadEdited(newName, dataURI);
+        const key = createUuid();
+        dispatch(
+          // addAnimation is an untyped JS thunk; cast for dispatch.
+          addAnimation(key, {
+            name: newName,
+            sourceUrl,
+            frameSize: frameSize || {x: BLANK_CANVAS_PX, y: BLANK_CANVAS_PX},
+            frameCount: 1,
+            frameDelay: 2,
+            looping: true,
+            categories: [],
+            pixelGridSize: meta.pixelGridSize,
+            recentColors: meta.recentColors,
+          }) as unknown as AnyAction
+        );
+        // The classic thunk unconditionally renames to name_N; take the
+        // plain name back (validated free in handleCreateFromPaint).
+        if (
+          isNameUnique(newName, getStore().getState().animationList.propsByKey)
+        ) {
+          dispatch(setAnimationName(key, newName) as unknown as AnyAction);
         }
+        setDialogTarget(key);
+        return;
       }
+
+      const props = targetProps;
+      const key = dialogTarget;
+      if (!key || key === 'new' || !props) {
+        return;
+      }
+      const sourceUrl = await uploadEdited(props.name || 'image', dataURI);
       // Update via the raw list-replace action rather than editAnimation:
       // the classic EDIT_ANIMATION reducer forces sourceUrl to null (it
       // expects the legacy animation-save service to upload later), which
@@ -169,18 +274,13 @@ const GenerateImagePane: React.FunctionComponent<{
       // onTrimsUpdated, refreshing the gallery and block dropdowns).
       trimAnimationListImages(updated);
     },
-    [editingKey, editingProps, uploadImage, dispatch]
+    [dialogTarget, targetProps, uploadEdited, dispatch]
   );
 
+  const creating = dialogTarget === 'new';
   return (
     <div className={moduleStyles.imagesManager}>
       <div className={moduleStyles.imageGallery}>
-        {images.length === 0 && (
-          <div className={moduleStyles.galleryEmpty}>
-            No images yet. Generate one in the panel below to use it in your
-            code.
-          </div>
-        )}
         {images.map(({key, props}) => (
           <GalleryCard
             key={key}
@@ -192,24 +292,64 @@ const GenerateImagePane: React.FunctionComponent<{
               props?.sourceUrl ||
               undefined
             }
-            onEdit={handleEdit}
-            onDelete={handleDelete}
+            onOpen={openDialog}
           />
         ))}
+        <div className={moduleStyles.imageCard}>
+          <button
+            type="button"
+            className={moduleStyles.newImageCard}
+            onClick={openNewDialog}
+          >
+            <span aria-hidden>+</span>
+            <span className={moduleStyles.newImageLabel}>New image</span>
+          </button>
+        </div>
       </div>
 
-      {editingProps && (
+      {dialogTarget && !painting && (
+        <ImageDetailsDialog
+          animKey={creating ? null : dialogTarget}
+          name={targetProps?.name}
+          thumb={
+            creating
+              ? undefined
+              : getTrimmedThumbnail(targetProps?.name || '') ||
+                targetProps?.dataURI ||
+                targetProps?.sourceUrl ||
+                undefined
+          }
+          generation={targetProps?.generation}
+          onClose={closeDialog}
+          onPaint={() => setPainting(true)}
+          onCreateFromPaint={handleCreateFromPaint}
+          onRename={handleRename}
+          onDelete={handleDelete}
+        />
+      )}
+
+      {dialogTarget && painting && (
         <PixelEditorModal
-          title={`Edit ${editingProps.name}`}
+          title={
+            creating
+              ? `Paint ${pendingNewNameRef.current}`
+              : `Edit ${targetProps?.name}`
+          }
           // Edit the ORIGINAL image (untrimmed): trims are a display-time
           // optimization; the animation's pixels are the source of truth.
-          imageUrl={editingProps.dataURI || editingProps.sourceUrl || ''}
+          imageUrl={
+            creating
+              ? getBlankCanvasDataURI()
+              : targetProps?.dataURI || targetProps?.sourceUrl || ''
+          }
           // Recorded at generation time; images without it (legacy, smooth
           // style) edit at native resolution.
-          knownPixelGrid={editingProps.pixelGridSize}
-          initialRecentColors={editingProps.recentColors}
+          knownPixelGrid={
+            creating ? BLANK_CANVAS_GRID : targetProps?.pixelGridSize
+          }
+          initialRecentColors={targetProps?.recentColors}
           onSave={handleEditorSave}
-          onCancel={() => setEditingKey(null)}
+          onCancel={() => setPainting(false)}
         />
       )}
     </div>

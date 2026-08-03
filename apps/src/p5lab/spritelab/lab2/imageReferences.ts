@@ -96,7 +96,7 @@ interface WorkspaceField {
   setValue: (value: string) => void;
 }
 
-interface WorkspaceLike {
+export interface WorkspaceLike {
   getAllBlocks: () => {
     inputList: {fieldRow: WorkspaceField[]}[];
   }[];

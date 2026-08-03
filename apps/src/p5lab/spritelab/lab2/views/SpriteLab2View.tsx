@@ -21,7 +21,9 @@ import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
+  isNameUnique,
   SET_INITIAL_ANIMATION_LIST,
+  setAnimationName,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {cancelLocationSelection} from '@cdo/apps/p5lab/redux/locationPicker';
@@ -42,6 +44,11 @@ import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {
+  renameImageReferences,
+  renameImageReferencesOnWorkspace,
+  WorkspaceLike,
+} from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
@@ -924,6 +931,38 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun]
   );
 
+  // Rename an image and cascade through every reference — blocks in all
+  // scenes, World grids, and the live workspace — so tidying a name never
+  // breaks the project.
+  const handleRenameImage = useCallback(
+    (oldName: string, newName: string): string | null => {
+      if (!newName) {
+        return 'Enter a name.';
+      }
+      const list = getStore().getState().animationList;
+      if (!isNameUnique(newName, list.propsByKey)) {
+        return 'That name is already used.';
+      }
+      const key = list.orderedKeys.find(
+        (k: string) => list.propsByKey[k]?.name === oldName
+      );
+      if (!key) {
+        return 'Image not found.';
+      }
+      dispatch(setAnimationName(key, newName) as unknown as AnyAction);
+      updateSources(prev => renameImageReferences(prev, oldName, newName));
+      renameImageReferencesOnWorkspace(
+        Blockly.getMainWorkspace() as unknown as WorkspaceLike,
+        oldName,
+        newName
+      );
+      refreshAnimationDropdownThumbnails();
+      scheduleRun();
+      return null;
+    },
+    [dispatch, updateSources, scheduleRun]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1161,7 +1200,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }}
           >
             <div className={moduleStyles.itemsTab}>
-              <GenerateImagePane uploadImage={uploadImage} />
+              <GenerateImagePane
+                uploadImage={uploadImage}
+                onRenameImage={handleRenameImage}
+              />
             </div>
           </div>
         )}
