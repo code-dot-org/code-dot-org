@@ -20,53 +20,51 @@ $border-subtle: rgb(255 255 255 / 12%);
   color: #f0f2f6;
 }
 
+// The header is about the FILE — whether it is a spritesheet, and which cell is
+// being drawn — so it sits on the lab's own surface with design-system controls
+// and looks like the rest of the site. The dark drawing board starts below it.
 .header {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-end;
+  gap: 12px;
   flex-wrap: wrap;
-  padding: 12px 16px;
-  border-bottom: 1px solid $border-subtle;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
+  background-color: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-primary, #1a1a1a);
 }
 
-// What makes this image a spritesheet, beside its name: the one decision that
-// is about the file rather than about the pixels.
 .sheetControls {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 8px;
-  font-size: 13px;
-  font-weight: 400;
+  flex-wrap: wrap;
 }
 
-.sheetToggle {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.sheetField {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+// DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem — a form's
+// width, not a number's. These hold values under four digits.
+.sheetControls .sheetNumber {
+  width: 6.5rem;
+  min-width: 0;
 
   input {
     box-sizing: border-box;
-    width: 62px;
-    padding: 3px 6px;
-    border: 1px solid rgb(255 255 255 / 25%);
-    border-radius: 4px;
-    background: none;
-    color: inherit;
-    font-size: 13px;
+    width: 100%;
+    min-width: 0;
   }
 }
 
 .sheetCount {
-  color: rgb(240 242 246 / 70%);
+  padding-block-end: 6px;
+  color: var(--text-neutral-secondary, #555);
+}
+
+// Which cell is being drawn, and the way back to the whole sheet.
+.regionBar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-block-end: 2px;
 }
 
 .body {

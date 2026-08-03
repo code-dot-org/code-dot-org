@@ -81,6 +81,61 @@ describe('sheetCells', () => {
   });
 });
 
+describe('a sheet with padding and a gap', () => {
+  // Blank pixels around the grid and between neighbours, so a scaled or rotated
+  // sample cannot reach into the sprite next door.
+  const spaced = (padding: number, gap: number): SheetFile => ({
+    type: 'sheet',
+    cell: {width: 32, height: 32},
+    padding,
+    gap,
+  });
+
+  it('counts the cells a run of them actually fits', () => {
+    // 2 + 32 + 4 + 32 + 2 = 72 across: two cells, not two-and-a-bit.
+    expect(sheetGrid({width: 72, height: 36}, spaced(2, 4))).toEqual({
+      columns: 2,
+      rows: 1,
+    });
+    // One pixel short of the third cell.
+    expect(sheetGrid({width: 107, height: 36}, spaced(2, 4)).columns).toBe(2);
+    expect(sheetGrid({width: 108, height: 36}, spaced(2, 4)).columns).toBe(3);
+  });
+
+  it('starts at the padding and steps by cell + gap', () => {
+    expect(sheetCells({width: 72, height: 36}, spaced(2, 4))).toEqual([
+      {x: 2, y: 2, width: 32, height: 32},
+      {x: 38, y: 2, width: 32, height: 32},
+    ]);
+  });
+
+  it('reads a grid row by row through the gaps', () => {
+    const cells = sheetCells({width: 72, height: 72}, spaced(2, 4));
+    expect(cells.map(cell => [cell.x, cell.y])).toEqual([
+      [2, 2],
+      [38, 2],
+      [2, 38],
+      [38, 38],
+    ]);
+  });
+
+  it('is the plain grid when both are zero or absent', () => {
+    const plain = sheetCells(
+      {width: 64, height: 32},
+      {
+        type: 'sheet',
+        cell: {width: 32, height: 32},
+      },
+    );
+    expect(sheetCells({width: 64, height: 32}, spaced(0, 0))).toEqual(plain);
+  });
+
+  it('finds a padded cell by its rectangle', () => {
+    const cells = sheetCells({width: 72, height: 36}, spaced(2, 4));
+    expect(cellIndex(cells, {x: 38, y: 2, width: 32, height: 32})).toBe(1);
+  });
+});
+
 describe('cellIndex', () => {
   const cells = sheetCells({width: 96, height: 32}, sheet(32));
 

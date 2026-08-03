@@ -13,7 +13,12 @@ import styles from './cellThumb.module.css';
 import type {CellRect} from './sheetFrames';
 
 export interface CellThumbProps {
-  image: HTMLImageElement;
+  /**
+   * What to draw from: a decoded image, or a canvas. The image editor passes
+   * its live backing canvas, so a cell shows the strokes made since the last
+   * save rather than the file's last saved bytes.
+   */
+  image: CanvasImageSource;
   cell: CellRect;
   /** Draw scale — 2 everywhere in this editor, so pixel art reads. */
   scale: number;
