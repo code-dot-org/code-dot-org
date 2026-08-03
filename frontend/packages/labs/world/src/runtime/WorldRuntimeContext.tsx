@@ -28,9 +28,11 @@ import {refreshProjectDropdowns} from '../blockly/projectDropdowns';
 import {projectRuleMetas} from '../blockly/projectModules';
 import {ENTRY_FILE} from '../constants';
 
+import {createGeneratedFileCache} from './generatedFiles';
 import type {ReloadReport} from './messages';
 import {projectAssets} from './projectAssets';
 import {projectFiles, projectImageNames} from './projectFiles';
+import {projectSignature} from './projectSignature';
 import {WorldCompileManager} from './sandbox/worldCompileManager';
 import {
   WorldPreviewManager,
@@ -112,24 +114,28 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   const pushConsole = (line: ConsoleLine) =>
     setConsoleLog(prev => [...prev, line].slice(-MAX_CONSOLE_LINES));
 
+  // Generated modules, kept between compiles: an edit to one file leaves the
+  // others byte-identical, and regenerating them is the expensive half of a
+  // compile (generatedFiles).
+  const generated = useRef(createGeneratedFileCache());
+
   /** Replace each Blockly file's JSON with its generated JavaScript. */
   const generateBlocklyFiles = (
     files: Record<string, string>,
   ): Record<string, string> => {
     const generator = blocklyGenerator.current;
-    const out: Record<string, string> = {};
-    for (const [path, contents] of Object.entries(files)) {
-      if (isBlocklyPath(path) && generator) {
-        // Every Blockly file — including a `.rule`, whose declarative scaffolding
-        // is emitted from its metadata and whose action/query bodies are real
-        // generated code — is turned into a world-lab module by the headless
-        // generator (which needs the file's path for a `.rule`'s own imports).
-        out[path] = generator.generate(contents, path);
-      } else {
-        out[path] = contents;
-      }
+    if (!generator) {
+      return {...files};
     }
-    return out;
+    // Every Blockly file — including a `.rule`, whose declarative scaffolding is
+    // emitted from its metadata and whose action/query bodies are real generated
+    // code — is turned into a world-lab module by the headless generator (which
+    // needs the file's path for a `.rule`'s own imports).
+    return generated.current.generateAll(
+      files,
+      isBlocklyPath,
+      (contents, path) => generator.generate(contents, path),
+    );
   };
 
   // Create the sandbox managers once, when configured.
@@ -157,11 +163,24 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
   }, [sandboxUrl]);
 
   // Recompile + reload whenever the sources change (debounced).
+  // What the compiler can see, as one comparable string: everything except
+  // which file the learner has open (projectSignature). Selecting a file used
+  // to land here as an edit — a full regenerate, compile and preview reload for
+  // byte-identical output.
+  const signature = useMemo(
+    () => projectSignature(currentSources.source),
+    [currentSources],
+  );
+  // Read inside the effect, which no longer re-runs on every source change.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
+
   useEffect(() => {
     if (!managers.current) {
       return;
     }
-    const files = projectFiles(currentSources.source);
+    const source = sourcesRef.current.source;
+    const files = projectFiles(source);
     // The project has not loaded yet (initial render / level still loading);
     // compiling an empty project would spuriously fail to find the entry.
     if (Object.keys(files).length === 0) {
@@ -169,7 +188,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
     // Refresh the project-derived dropdowns (animations, actor/world modules)
     // before the generator runs.
-    refreshProjectDropdowns(files, projectImageNames(currentSources.source));
+    refreshProjectDropdowns(files, projectImageNames(source));
     // Wait for the Blockly generator before compiling a project that has any
     // Blockly-authored files; this effect re-runs when it becomes ready.
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {
@@ -185,7 +204,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }, delay);
     return () => window.clearTimeout(handle);
     // compileAndLoad closes over refs and stable state setters only.
-  }, [currentSources, generatorReady]);
+  }, [signature, generatorReady]);
 
   async function compileAndLoad(files: Record<string, string>) {
     const pair = managers.current;
@@ -230,7 +249,9 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       // preview needs both to draw the game.
       const [moduleUrl, assets] = await Promise.all([
         pair.compile.compile(compileFiles, ENTRY_FILE),
-        projectAssets(currentSources.source),
+        // From the ref, not the render's closure: this runs after a debounce,
+        // and the effect that scheduled it no longer re-runs on every change.
+        projectAssets(sourcesRef.current.source),
       ]);
       if (mine !== generation.current) {
         return; // a newer edit superseded this compile

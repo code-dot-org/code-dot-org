@@ -396,6 +396,12 @@ export const BlocklyFileEditor = ({
 
   // A workspace to reload once the palette has caught up (see `carry`).
   const pendingReload = useRef<BlocklySerialization | null>(null);
+  // Whether the initial load has finished. Blockly reports what it creates
+  // while loading — the variables a rule declares, the blocks themselves — as
+  // ordinary change events, and saving those writes the file back the moment it
+  // is opened: an edit nobody made, a project marked dirty, and a full recompile
+  // for byte-identical output. Nothing is saved until loading is done.
+  const loaded = useRef(false);
   // Whether a `define block`'s signature is being typed into (see `bubbleToggle`).
   const signatureBubbleOpen = useRef(false);
   // The keys this rule's members are referred to by, as of the last state the
@@ -550,6 +556,13 @@ export const BlocklyFileEditor = ({
     (event: Blockly.Events.Abstract) => {
       const workspace = workspaceRef.current;
       if (!workspace) {
+        return;
+      }
+      // Opening a file is not editing it.
+      if (!loaded.current) {
+        if (event.type === Blockly.Events.FINISHED_LOADING) {
+          loaded.current = true;
+        }
         return;
       }
       // Ignore pure UI events (selection, viewport) — only persist real edits,
