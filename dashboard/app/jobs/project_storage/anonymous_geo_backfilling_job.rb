@@ -17,6 +17,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   end
 
   around_perform do |job, block|
+    # Ensures only one backfill job runs at a time
     ActiveRecord::Base.connection_pool.with_connection do |connection|
       next unless connection.get_advisory_lock(job.class.name)
 
