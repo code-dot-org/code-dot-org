@@ -34,22 +34,29 @@ It also removes a class of breakage nobody would enjoy: a `.map` renamed,
 deleted or moved while a world still names it. There is nothing to keep in step
 when there is nothing beside it.
 
-## 2. Where it lives: the block's own state
+## 2. Where it lives: the map field's value
 
-Each `create actor in map` block carries its placements in Blockly's
-`extraState` — the per-block state a mutator saves and loads, which
-`extensions/sliderRange` and `extensions/effectParamsMutator` already use.
+Each `create actor in map` block carries its placements as the VALUE of a map
+field (`fields/FieldMapPlacements`, built on the same `createReactField` the
+vector field uses). Blockly serializes a field's value with the block, so the
+arrangement is in the `.world` file with nothing of ours in that path.
 
 ```jsonc
 // inside the `.world` workspace, on one `world_create_in_map` block
 {
   "type": "world_create_in_map",
   "id": "mk1",
-  "fields": {"ACTOR": "local:localActorBlock"},
-  "extraState": {
-    "placements": [
-      {"id": "c1", "properties": {"Space": {"position": {"x": 64, "y": 96}}}},
-      {"id": "c2", "properties": {"Space": {"position": {"x": 128, "y": 96}}}},
+  "fields": {
+    "ACTOR": "local:localActorBlock",
+    "PLACEMENTS": [
+      {
+        "id": "p1",
+        "properties": {"positional": {"position": {"x": 48, "y": 80}}},
+      },
+      {
+        "id": "p2",
+        "properties": {"positional": {"position": {"x": 112, "y": 80}}},
+      },
     ],
   },
 }
@@ -59,15 +66,18 @@ One block, one actor type, its own placements. Three consequences worth stating:
 
 - **Deleting the block deletes its actors**, and nothing else's. There is no
   shared document to garbage-collect, and no way to leave orphans behind.
-- **Undo is Blockly's.** A placement made in the popup is a change to a block,
-  so ⌘Z is the editor's own undo rather than something the dialog has to
-  reimplement.
+- **Undo is Blockly's**, and so is copy: duplicating the block duplicates the
+  arrangement, because it is a field value like any other.
 - **The `.world` file grows with the placements.** A hundred actors is a few KB
-  of JSON — small beside the project's images, and the same order as the blocks
-  around it. A thousand would be a different conversation; §7.
+  of JSON — small beside the project's images. A thousand would be a different
+  conversation; §7.
 
 Each entry omits `type`: the block's ACTOR field says which actor these are, and
 storing it twice is storing it wrong. The generator supplies it (§3).
+
+Ids are `p1`, `p2`, … , the lowest free number, rather than random: they become
+instance ids in the running world, and an id that changed on every edit would be
+an actor the hot reloader cannot recognise as the one already there.
 
 ## 3. The block, and what it generates
 
@@ -135,66 +145,39 @@ It emits nothing at all until something is arranged, so a block dragged out and
 left alone is inert rather than broken — checked in the editor, where a world
 holding one keeps running with no console errors.
 
-## 4. The popup: the map editor, scoped
+## 4. The popup: a field dropdown, and one act
 
-The field opens what `MapEditor.tsx` already is, minus the part that chooses
-what to place:
+Clicking the field opens a grid of the world's tiles in Blockly's dropdown —
+ten by ten, 22 pixels a cell, about the size of a colour picker. Click an empty
+cell and this block places one there; click a cell it placed in and that one
+goes. That is the whole interaction.
 
-- **No palette.** The type is the block's, so the editor is in place mode for
-  exactly one template and there is nothing to select between.
-- **The rest of the world is drawn, and is not selectable.** Every other
-  `create actor in map` block in this workspace contributes its placements as
-  context — you are arranging coins _in a world_, and a coin's place is
-  meaningless without the ground under it. Clicking one does nothing; it belongs
-  to another block.
-- **The inspector is unchanged**: the selected instance's traits and properties,
-  from the schema the sandbox introspects (§5).
+- **No palette**: the block's dropdown already said which actor these are.
+- **No camera**: the world is 320 pixels and the grid shows all of it.
+- **No inspector**, which is the one thing given up — see below.
+- **The rest of the world is drawn behind**, dimmed and not clickable: the other
+  `create actor in map` blocks' placements, read straight off the workspace
+  through the field's `sourceBlock`. A coin's place is worth judging against the
+  ground under it.
 
-That is the whole of the difference, which is the argument for making it the
-same component rather than a second one: extract the canvas + inspector from
-`MapEditor` into a piece that takes the placements it may edit, the placements
-it may only draw, and the one type it places. The file editor passes the whole
-map and the project's actor list; the popup passes one block's placements, its
-siblings', and one type.
+Actors are drawn with the thumbnails the sandbox renders, pushed into a registry
+the field reads (`blockly/actorThumbnails`) because a Blockly field is not in the
+React tree and cannot ask the runtime context itself — the same arrangement the
+project dropdowns use. A cell whose thumbnail has not arrived draws a plain
+marker, which still says it is taken.
 
-**Done — the extraction is implemented.** `MapStage` is the canvas and the
-inspector: the camera, the drawing, the gestures, and the panel. It takes the
-document it edits, a `context` list it draws behind and never selects, and the
-type a click places. `MapEditor` is now the file half — parse, serialize,
-palette, and the sandbox introspection — at 125 lines against the 1103 it was;
-`mapModel.ts` holds the document types and accessors both need.
+**What this gives up.** An earlier draft of this plan opened the full map editor
+scoped to one actor, so a learner could set each instance's properties without
+blocks. Placement-only drops that: an actor placed here gets the position of its
+cell and whatever its definition gives it. Positions are what an arrangement of
+twenty coins is actually about, and a dropdown that does one thing is worth more
+than a window that does five; per-instance properties remain available where
+they always were, in a `.map` file and its editor.
 
-Two pieces of state moved with the canvas rather than staying above it: the
-selected PLACEMENT (the palette above only knows which template is being placed)
-and the decoded thumbnail images (a drawing detail). Entering place mode still
-clears the selection, but the stage does that itself now — it owns the state, so
-it owns the rule.
-
-The `.map` editor has no unit tests, so this was checked by driving it: the
-palette lists Player / Ground / Coin / Ball with four thumbnails, choosing Coin
-enters place mode, a canvas click places one and the game restarts, clicking it
-back in select mode opens the inspector on `coin-88e36299` with its position,
-scale and rotation fields, dragging moves it and the inspector follows to
-(176, 176), and Reset view returns to 200%. No console errors.
-
-Writing back is a `saveExtraState`-shaped change to the block, through the same
-handler seam the sprite picker and the effect import use
-(`blockly/spritePick`, `appearance/appearanceImport`): a Blockly field cannot
-reach React, so the editor registers a handler while it is mounted and the field
-asks through it.
-
-**Done — the popup is implemented.** `MapPlacementsDialog` opens `MapStage` on
-the block's placements, with every OTHER `create actor in map` block's
-placements as context, behind the `mapPick` seam.
-
-One control the file editor does not need: a toggle between adding and editing.
-The palette is what switches those there, and there is no palette here. It opens
-in SELECT mode, because opening an arrangement you already made in order to move
-one thing is the commoner errand.
-
-Checked end to end: drag the block, open its map, add three, press Done — the
-block reads `create Player ▾ in map edit… (3)`, and the game restarts with three
-more players falling into it.
+That editor is unchanged, and `MapStage` — the canvas and inspector extracted in
+step 2 — is now back to one caller. The extraction still pays for itself in
+`MapEditor` being 125 lines instead of 1103, but it is fair to say the second
+caller it was made for no longer exists.
 
 ## 5. What blocks this: a world-local actor has no schema
 
@@ -363,9 +346,8 @@ Start Over, and a level switch (Lab2 does not reload the page between levels).
    arrive for world-local actors. Useful on its own — `add actor` benefits too.
 2. **Extract** the map editor's canvas + inspector from `MapEditor.tsx`, with
    the file editor as its first caller and no behaviour change. (Done — §4.)
-3. **The block**: `world_create_in_map`, its `extraState`, its generator.
+3. **The block**: `world_create_in_map`, its map field, its generator.
    (Done — §3.)
-4. **The popup**: the extracted editor, scoped, behind the field's handler seam.
-   (Done — §4.)
-5. **Context**: draw the siblings' placements, and the loaded `.map`'s if there
-   is one.
+4. **The popup**: a field dropdown that places and unplaces. (Done — §4.)
+5. **Context**: the siblings' placements are drawn (§4); the loaded `.map`'s
+   are not yet.
