@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
@@ -47,8 +48,8 @@ const STYLE_LABELS = {smooth: 'Smooth', pixel: 'Pixel art'};
 /**
  * The image dialog's Details view: the image large on the left; its name and
  * how it was made on the right, with edit, rename, and delete. Wears the
- * pixel editor's dark chrome. AI generation hands off to the generate view
- * (next phase).
+ * pixel editor's chrome, following the page's light/dark theme. AI
+ * generation hands off to the generate view.
  */
 const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   animKey,
@@ -66,6 +67,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onAcceptGenerated,
 }) => {
   const isNew = animKey === null;
+  const {theme} = useTheme();
+  const mode = theme === 'Dark' ? 'dark' : 'light';
   const [nameDraft, setNameDraft] = useState(name || '');
   const [renaming, setRenaming] = useState(false);
   const [nameError, setNameError] = useState<string | null>(null);
@@ -98,13 +101,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   };
 
   return (
-    // data-theme flips the design system's semantic colors to dark inside
-    // the panel (the TextField reads them).
-    <div className={moduleStyles.dialogHost} data-theme="dark">
+    // data-theme drives both the chrome's own colors and the design
+    // system's semantic colors inside the panel (the TextField reads them).
+    <div className={moduleStyles.dialogHost} data-theme={mode}>
       <CustomDialog
         aria-label={title}
         onClose={onClose}
-        mode="dark"
+        mode={mode}
         className={classNames(
           moduleStyles.dialog,
           view === 'generate' && moduleStyles.dialogWide

@@ -1,6 +1,6 @@
-// Self-contained styles for the pixel editor modal. Dark theme to sit
-// comfortably over Lab2's full-screen labs. The panel chrome is shared with
-// SpriteLab2's image dialog (dialogChrome.scss).
+// Self-contained styles for the pixel editor modal, following the page's
+// light/dark theme. The panel chrome is shared with SpriteLab2's image
+// dialog (dialogChrome.scss).
 
 @use './dialogChrome' as chrome;
 
@@ -11,10 +11,13 @@ $border-subtle: chrome.$border-subtle;
 // (stylesheet order must not matter).
 .dialogHost {
   display: contents;
+
+  // The host carries data-theme; the chrome colors follow it.
+  @include chrome.theme;
 }
 
 // One high-contrast keyboard focus ring for everything in the dark modal;
-// UA defaults are hard to see against #333a47.
+// UA defaults are hard to see against the panel background.
 .dialogHost .modal :focus-visible {
   @include chrome.focus-ring;
 }
@@ -91,7 +94,7 @@ $border-subtle: chrome.$border-subtle;
   border: 1px solid transparent;
   border-radius: 6px;
   background: none;
-  color: #cdd3de;
+  color: var(--dialog-text-secondary);
   cursor: pointer;
 
   // WithTooltip anchors its bubble to the innermost element under the
@@ -106,7 +109,7 @@ $border-subtle: chrome.$border-subtle;
   }
 
   &:hover:not(:disabled) {
-    background-color: rgb(255 255 255 / 8%);
+    background-color: var(--dialog-hover-bg);
   }
 
   &:disabled {
@@ -116,9 +119,9 @@ $border-subtle: chrome.$border-subtle;
 }
 
 .toolActive {
-  border-color: rgb(255 255 255 / 35%);
-  background-color: rgb(255 255 255 / 14%);
-  color: #fff;
+  border-color: var(--dialog-control-border-strong);
+  background-color: var(--dialog-active-bg);
+  color: var(--dialog-panel-text);
 }
 
 .toolbarDivider {
@@ -126,7 +129,7 @@ $border-subtle: chrome.$border-subtle;
   justify-self: stretch;
   height: 1px;
   margin: 4px 0;
-  background-color: rgb(255 255 255 / 15%);
+  background-color: var(--dialog-active-bg);
 }
 
 .brushDot {
@@ -159,7 +162,7 @@ $border-subtle: chrome.$border-subtle;
   border-radius: 6px;
   // The transparency checkerboard is painted INTO the display canvas (so it
   // can align with the art-pixel grid); the surround stays quiet.
-  background-color: #2b313d;
+  background-color: var(--dialog-inset-bg);
 }
 
 // Shrink-wraps the canvas so the keyboard-cursor overlay positions against
@@ -180,7 +183,7 @@ $border-subtle: chrome.$border-subtle;
   touch-action: none;
 
   &:focus-visible {
-    outline: 2px solid #fff;
+    outline: 2px solid var(--dialog-focus-ring);
     outline-offset: 3px;
   }
 }
@@ -245,7 +248,7 @@ $border-subtle: chrome.$border-subtle;
 
 .loadError {
   padding: 40px;
-  color: #ff9d9d;
+  color: var(--dialog-danger-text);
 }
 
 .footer {
@@ -288,7 +291,7 @@ $border-subtle: chrome.$border-subtle;
   height: 30px;
   margin: 0;
   padding: 0;
-  border: 2px solid rgb(255 255 255 / 60%);
+  border: 2px solid var(--dialog-control-border-strong);
   border-radius: 6px;
   cursor: pointer;
 }
@@ -317,13 +320,13 @@ $border-subtle: chrome.$border-subtle;
   height: 22px;
   margin: 0;
   padding: 0;
-  border: 1px solid rgb(255 255 255 / 45%);
+  border: 1px solid var(--dialog-control-border-strong);
   border-radius: 4px;
   box-shadow: none;
   cursor: pointer;
 
   &:hover {
-    border-color: rgb(255 255 255 / 90%);
+    border-color: var(--dialog-panel-text);
   }
 }
 
@@ -336,9 +339,9 @@ $border-subtle: chrome.$border-subtle;
   left: calc(100% + 16px);
   z-index: 10;
   padding: 6px;
-  border: 1px solid rgb(255 255 255 / 15%);
+  border: 1px solid var(--dialog-border-subtle);
   border-radius: 8px;
-  background-color: #262c36;
+  background-color: var(--dialog-inset-bg);
   box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
 
   canvas {
@@ -348,7 +351,7 @@ $border-subtle: chrome.$border-subtle;
     touch-action: none;
 
     &:focus-visible {
-      outline: 2px solid #fff;
+      outline: 2px solid var(--dialog-focus-ring);
       outline-offset: 2px;
     }
   }

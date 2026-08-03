@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
@@ -128,6 +129,8 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   onSave,
   onCancel,
 }) => {
+  const {theme} = useTheme();
+  const themeMode = theme === 'Dark' ? 'dark' : 'light';
   const [tool, setTool] = useState<PixelTool>('pen');
   // The last non-eyedropper tool, so the eyedropper returns you to what you
   // were using rather than always the pen. Tracked during render: whenever
@@ -1226,11 +1229,11 @@ const PixelEditorModal: React.FunctionComponent<PixelEditorModalProps> = ({
   return (
     // display: contents host, so the editor's panel styles win over
     // CustomDialog's via parent-selector specificity (never load order).
-    <div className={moduleStyles.dialogHost}>
+    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
       <CustomDialog
         aria-label={title}
         onClose={onCancel}
-        mode="dark"
+        mode={themeMode}
         className={moduleStyles.modal}
       >
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>

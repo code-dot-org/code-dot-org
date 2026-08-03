@@ -1,6 +1,6 @@
-// The image dialog (Details view): image large on the left, name/metadata/
-// actions on the right. Wears the same dark rounded chrome as the pixel
-// editor (dialogChrome.scss).
+// The image dialog: image large on the left, name/metadata/actions on the
+// right. Wears the same rounded chrome as the pixel editor
+// (dialogChrome.scss), following the page's light/dark theme.
 
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 
@@ -8,6 +8,9 @@
 // parent-selector specificity (the PixelEditorModal pattern).
 .dialogHost {
   display: contents;
+
+  // The host carries data-theme; the chrome colors follow it.
+  @include chrome.theme;
 }
 
 .dialogHost .dialog {
@@ -52,8 +55,8 @@
   flex-shrink: 0;
   border: 1px solid chrome.$border-subtle;
   border-radius: 6px;
-  // Checkerboard signals transparency (translucent grey works over the dark
-  // panel).
+  // Checkerboard signals transparency (translucent grey works over either
+  // panel theme).
   $check: rgb(128 128 128 / 22%);
 
   background-image: linear-gradient(45deg, $check 25%, transparent 25%),
@@ -111,7 +114,7 @@
   font-size: 14px;
 
   dt {
-    color: rgb(240 242 246 / 65%);
+    color: var(--dialog-text-secondary);
   }
 
   dd {
@@ -163,15 +166,15 @@
     display: block;
     margin-bottom: 4px;
     font-size: 13px;
-    color: rgb(240 242 246 / 75%);
+    color: var(--dialog-text-secondary);
   }
 
   select {
     height: 34px;
     padding: 0 8px;
-    border: 1px solid rgb(255 255 255 / 25%);
+    border: 1px solid var(--dialog-control-border);
     border-radius: 6px;
-    background-color: rgb(255 255 255 / 6%);
+    background-color: var(--dialog-control-bg);
     color: chrome.$panel-text;
     font-size: 14px;
   }
@@ -186,9 +189,9 @@
   box-sizing: border-box;
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid rgb(255 255 255 / 25%);
+  border: 1px solid var(--dialog-control-border);
   border-radius: 6px;
-  background-color: rgb(255 255 255 / 6%);
+  background-color: var(--dialog-control-bg);
   color: chrome.$panel-text;
   font-size: 14px;
   resize: vertical;
@@ -232,18 +235,18 @@
     display: block;
     margin-bottom: 4px;
     font-size: 13px;
-    color: rgb(240 242 246 / 75%);
+    color: var(--dialog-text-secondary);
   }
 }
 
 .reviewHint {
   margin: 0;
   font-size: 14px;
-  color: rgb(240 242 246 / 85%);
+  color: chrome.$panel-text;
 }
 
 .generateError {
-  color: #ff9d9d;
+  color: var(--dialog-danger-text);
   font-size: 13px;
   font-weight: 600;
 }
