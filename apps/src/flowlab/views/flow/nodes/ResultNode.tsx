@@ -19,6 +19,7 @@ function ResultNode({selected, width}: NodeProps) {
       key={index}
       openExternalLinksInNewTab
       markdown={resultText}
+      localized={false}
       className="resultnode-markdown"
     />
   ));

@@ -1,0 +1,27 @@
+# Dispatcher for the DTT (Deploy To Test) post-deploy Playwright e2e run.
+#
+# The test-server daemon triggers this via the GitHub REST API (workflow_dispatch,
+# ref: test) at the start of test:ui_all, moving e2e browser execution off the single
+# daemon and onto GitHub Actions runners. It runs the same suite as the PR lane,
+# against the deployed test-studio. Fire-and-forget: the daemon does not wait for
+# or gate on the result. Note, all browsers are executed on DTT instead of just 
+# chromium.
+#
+# workflow_dispatch only becomes dispatchable once this file (with the trigger)
+# lands on the default branch (staging); after that, any ref can be dispatched.
+name: DTT
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    uses: ./.github/workflows/e2e-tests-ci.yml
+    with:
+      # Literal, not ${{ env.* }}: the env context is unavailable in a reusable
+      # workflow's `with:`. Keep in lockstep with frontend-ci.yml's pin.
+      playwright-image-tag: 'v1.59.1-noble'
+      # DTT is post-deploy and fire-and-forget, off the PR critical path, so it
+      # runs the full engine matrix. The PR lane keeps the Chromium-only default.
+      playwright-projects: '--project=chromium --project=firefox --project=webkit'
+    secrets: inherit

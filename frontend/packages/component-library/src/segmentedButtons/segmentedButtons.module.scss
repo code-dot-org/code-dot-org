@@ -32,7 +32,7 @@
     }
 
     &:not(:last-child) {
-      margin-right: -1px;
+      margin-inline-end: -1px;
     }
 
     // Hover styles
@@ -239,6 +239,97 @@
       height: 1rem;
       font-size: 0.8125rem;
       line-height: 1.25;
+    }
+  }
+}
+
+// CodeAI (CADS) brand overrides — see themes/README.md
+// "Component-level brand overrides"; tags/tags.module.scss is the reference
+// example. Scoped to [data-brand='codeai-next'] so legacy brands render
+// exactly as before; only CADS semantic tokens, so Dark mode comes from the
+// tokens with no [data-theme] rules.
+// The CADS design diverges from the bridge mapping in three ways: the
+// group's outer corners round to --shape-sm (the fused middle seams stay
+// square, same geometry as legacy at the new radius), selection uses the
+// CADS selected/focused state families instead of brand teal, and
+// hover/focus carry a 2px ring. The second ring pixel is an inset
+// box-shadow rather than a wider border so segment geometry doesn't shift;
+// the primary/strong color variants both collapse to this one design.
+[data-brand='codeai-next'] {
+  .segmentedButtons {
+    .segmentedButton {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--border-neutral-primary);
+      color: var(--text-neutral-primary);
+
+      &:first-child {
+        border-start-start-radius: var(--shape-sm, 0.375rem);
+        border-end-start-radius: var(--shape-sm, 0.375rem);
+      }
+
+      &:last-child {
+        border-start-end-radius: var(--shape-sm, 0.375rem);
+        border-end-end-radius: var(--shape-sm, 0.375rem);
+      }
+
+      // :hover matches disabled buttons too (unlike :active/:focus-visible),
+      // so gate it — e.g. HiddenForSectionToggle disables segments in place.
+      &:hover:not(:disabled) {
+        background-color: var(--background-neutral-secondary);
+      }
+
+      &:focus-visible {
+        // Raise above neighbors so the ring isn't clipped at the -1px seams.
+        z-index: 2;
+        background-color: var(--background-brand-light);
+        border-color: var(--border-focused-primary);
+        box-shadow: inset 0 0 0 1px var(--border-focused-primary);
+        color: var(--text-neutral-primary);
+      }
+
+      &:active {
+        background-color: var(--background-neutral-tertiary);
+        color: var(--text-neutral-secondary);
+      }
+
+      &:disabled {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--border-disabled-neutral);
+        color: var(--text-disabled-neutral);
+        box-shadow: none;
+      }
+    }
+
+    .selectedSegmentedButton.segmentedButton {
+      background-color: var(--background-selected-primary);
+      // Pairs with background-selected per colors_codeAi.css — always use
+      // the selected background/border/text tokens together.
+      border-color: var(--border-selected-primary);
+      color: var(--text-selected-primary);
+
+      &:hover:not(:disabled) {
+        // Selected sits below its neighbors (z-index 0); raise it while the
+        // ring shows so the seams don't clip it.
+        z-index: 2;
+        background-color: var(--background-selected-primary);
+        border-color: var(--border-selected-strong);
+        box-shadow: inset 0 0 0 1px var(--border-selected-strong);
+        color: var(--text-selected-primary);
+      }
+
+      &:focus-visible {
+        z-index: 2;
+        background-color: var(--background-selected-primary);
+        border-color: var(--border-focused-inverse);
+        box-shadow: inset 0 0 0 1px var(--border-focused-inverse);
+        color: var(--text-selected-primary);
+      }
+
+      &:active {
+        background-color: var(--background-selected-strong);
+        border-color: var(--border-selected-strong);
+        box-shadow: none;
+      }
     }
   }
 }

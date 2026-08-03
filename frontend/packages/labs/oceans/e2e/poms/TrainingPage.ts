@@ -16,28 +16,32 @@ export abstract class TrainingPage extends OceansPage {
   abstract get noButton(): Locator;
 
   /**
-   * Click Yes (or No) once and wait until the training counter increments.
+   * Classify one fish and wait until the training counter increments.
    *
-   * `onClassifyFish` increments the count synchronously but also sets
-   * `isRunning: true`. While `isRunning` is true (~1 s fish-eat animation)
-   * subsequent clicks are silently ignored. This method retries the click until
-   * the counter advances, so callers never need to manage animation timing.
+   * Retries because `onClassifyFish` no-ops while `state.isRunning` is true
+   * (~1 s fish-eat animation), so a single click/keypress that lands during
+   * that window is silently ignored.
    *
-   * @param isYes - `true` to click Yes, `false` to click No.
+   * @param isYes - `true` for Yes, `false` for No.
+   * @param via - Activation method: mouse click (default) or keyboard Enter.
    */
-  async classifyOne(isYes: boolean): Promise<void> {
+  async classifyOne(
+    isYes: boolean,
+    via: 'click' | 'key' = 'click',
+  ): Promise<void> {
     const currentText = (await this.trainCount.textContent()) ?? '0';
     const count = parseInt(currentText.trim(), 10);
     const next = Math.min(999, count + 1);
+    const button = isYes ? this.yesButton : this.noButton;
 
     await expect(async () => {
-      if (isYes) {
-        await this.yesButton.click();
+      if (via === 'key') {
+        await button.press('Enter');
       } else {
-        await this.noButton.click();
+        await button.click();
       }
-      await expect(this.trainCount).toHaveText(String(next), {timeout: 1_200});
-    }).toPass({timeout: 5_000});
+      await expect(this.trainCount).toHaveText(String(next), {timeout: 3_000});
+    }).toPass({timeout: 15_000});
   }
 
   /**

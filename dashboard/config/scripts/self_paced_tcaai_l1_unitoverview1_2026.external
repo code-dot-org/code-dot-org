@@ -33,21 +33,61 @@ By the end of the unit, students synthesize their findings into this final guide
 
 ## Frequently Asked Questions
 
-#### **Do I need to be an AI expert to teach this curriculum?**
+<details style="background-color:#F5F7F8; padding:15px; margin-bottom:15px; border-radius:10px;">
 
+<summary style="font-size:16px; font-weight:bold; cursor:pointer;">
+Do I need to be an AI expert to teach this curriculum?
+</summary>
+
+<div style="margin-top:15px;">
+
+<p style="font-size:16px;">
 Thinking Critically About AI is designed to build conceptual understanding, not technical expertise. Teachers do not need a background in artificial intelligence, computer science, or programming to successfully teach this unit.
+</p>
 
+<p style="font-size:16px;">
 Some familiarity with using large language models (LLMs) and writing prompts can be helpful. However, the unit is intentionally structured so that teachers and students can investigate AI systems together through guided testing, discussion, and reflection.
-<br><Br>
+</p>
 
-#### **How Does the Generate and Judge Guide Work?**
+</div>
 
+</details>
+
+<details style="background-color:#F5F7F8; padding:15px; margin-bottom:15px; border-radius:10px;">
+
+<summary style="font-size:16px; font-weight:bold; cursor:pointer;">
+How Does the Generate and Judge Guide Work?
+</summary>
+
+<div style="margin-top:15px;">
+
+<p style="font-size:16px;">
 The Generate and Judge Guide acts as a throughline across the unit. Students revisit and expand their guide throughout multiple lessons as they test AI systems, collect examples, identify patterns, and refine their thinking.
+</p>
 
+<p style="font-size:16px;">
 This ongoing structure helps students move beyond first impressions and toward evidence-based conclusions. By the end of the unit, students will have created a guide grounded in their own investigations, experiences, and reflections about responsible AI use.
-<br><Br>
+</p>
 
-#### **Will students use tools like ChatGPT or other public AI systems?**
+</div>
 
-Students will interact with AI within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org-managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms. 
+</details>
+
+<details style="background-color:#F5F7F8; padding:15px; margin-bottom:15px; border-radius:10px;">
+
+<summary style="font-size:16px; font-weight:bold; cursor:pointer;">
+Will students use tools like ChatGPT or other public AI systems?
+</summary>
+
+<div style="margin-top:15px;">
+
+<p style="font-size:16px;">
+Students will interact with AI within a classroom-appropriate environment. AI Discoveries uses a secure, Code.org-managed AI chat interface designed specifically for educational use. Students are not required to create personal accounts on external platforms.
+
+For more about technical requirements, please check out our <a href="https://code.org/en-US/about/it-requirements" target="blank" rel="noopener noreferrer">Technical Requirements support page</a>.
+</p>
+
+</div>
+
+</details>
 MARKDOWN

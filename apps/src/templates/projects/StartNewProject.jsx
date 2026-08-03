@@ -1,12 +1,10 @@
-import {Button as MuiButton} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import i18n from '@cdo/locale';
-
-import color from '../../util/color';
 
 import NewProjectButtons from './NewProjectButtons';
 
@@ -163,9 +161,14 @@ export class StartNewProject extends React.Component {
       <div>
         {!!showAboveFold && (
           <>
-            <h4 className="new-project-heading" style={styles.headingStartNew}>
+            <MuiTypography
+              className="new-project-heading"
+              style={styles.headingStartNew}
+              variant="h5"
+              component="h5"
+            >
               {'Create a new project'}
-            </h4>
+            </MuiTypography>
             {!!blocksProjectTypes.length && (
               <NewProjectButtons
                 description={'Blocks'}
@@ -193,8 +196,9 @@ export class StartNewProject extends React.Component {
                 size="small"
                 style={styles.dividerButton}
                 startIcon={
-                  <i
-                    className={`fa fa-chevron-${showFullList ? 'up' : 'down'}`}
+                  <FontAwesomeV6Icon
+                    iconStyle="solid"
+                    iconName={`chevron-${showFullList ? 'up' : 'down'}`}
                   />
                 }
               >
@@ -231,7 +235,7 @@ const styles = {
   },
   dividerLine: {
     flex: 1,
-    borderTop: '1px solid ' + color.neutral_dark20,
+    borderTop: '1px solid var(--borders-neutral-primary)',
   },
   dividerButton: {
     margin: '0 16px',
@@ -240,9 +244,6 @@ const styles = {
   headingStartNew: {
     paddingRight: 10,
     paddingBottom: 10,
-    fontSize: 16,
-    ...fontConstants['main-font-regular'],
-    color: color.neutral_dark,
     marginBottom: -10,
   },
   spacer: {

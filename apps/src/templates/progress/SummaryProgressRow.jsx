@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,11 +7,8 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -94,12 +91,12 @@ function SummaryProgressRow({
       >
         <div style={styles.colText}>
           {lessonIsHiddenForStudents && (
-            <FontAwesome icon="eye-slash" style={styles.icon} />
+            <FontAwesomeV6Icon iconName="eye-slash" style={styles.icon} />
           )}
           {lesson.lockable && (
             <span data-tip data-for={lockedTooltipId}>
-              <FontAwesome
-                icon={showAsLocked ? 'lock' : 'unlock'}
+              <FontAwesomeV6Icon
+                iconName={showAsLocked ? 'lock' : 'unlock'}
                 style={{
                   ...styles.icon,
                   ...(!showAsLocked && styles.unlockedIcon),
@@ -122,7 +119,9 @@ function SummaryProgressRow({
             data-for={titleTooltipId}
             aria-describedby={titleTooltipId}
           >
-            {lessonTitle}
+            <Typography variant="body4" component="span" sx={{fontWeight: 600}}>
+              {lessonTitle}
+            </Typography>
             <ReactTooltip
               id={titleTooltipId}
               role="tooltip"
@@ -159,10 +158,11 @@ function SummaryProgressRow({
               {viewAs === ViewType.Participant &&
                 lesson.student_lesson_plan_html_url && (
                   <MuiButton
+                    size="small"
                     className="ui-test-lesson-resources"
                     href={lesson.student_lesson_plan_html_url}
-                    variant="contained"
-                    color="white"
+                    variant="outlined"
+                    color="secondary"
                     target="_blank"
                     rel="noopener noreferrer"
                     startIcon={<FontAwesomeV6Icon iconName="file-lines" />}
@@ -219,27 +219,27 @@ SummaryProgressRow.propTypes = {
 
 export const styles = {
   lightRow: {
-    backgroundColor: color.table_light_row,
+    backgroundColor: 'var(--background-neutral-primary)',
   },
   darkRow: {
-    backgroundColor: color.table_dark_row,
+    backgroundColor: 'var(--background-neutral-secondary)',
   },
   dashedBorder: {
     borderStyle: 'dashed',
     borderWidth: 2,
   },
   col1: {
-    width: 200,
-    minWidth: 200,
-    maxWidth: 200,
+    width: 241,
+    minWidth: 241,
+    maxWidth: 241,
     lineHeight: '52px',
-    color: color.charcoal,
+    color: 'var(--text-neutral-primary)',
     letterSpacing: -0.11,
     whiteSpace: 'nowrap',
     paddingLeft: 20,
     paddingRight: 20,
     borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
+    borderRightColor: 'var(--borders-neutral-secondary)',
     borderRightStyle: 'solid',
   },
   col2: {
@@ -269,19 +269,16 @@ export const styles = {
     opacity: 0.6,
   },
   colText: {
-    color: color.charcoal,
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 12,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
   icon: {
     marginRight: 5,
     fontSize: 12,
-    color: color.cyan,
+    color: 'var(--text-info-primary)',
   },
   unlockedIcon: {
-    color: color.orange,
+    color: 'var(--text-warning-primary)',
   },
   focusAreaMargin: {
     // Our focus area indicator is absolutely positioned. Add a margin when it's

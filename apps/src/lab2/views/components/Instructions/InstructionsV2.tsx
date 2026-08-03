@@ -1,6 +1,12 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useRef, MutableRefObject, memo} from 'react';
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  MutableRefObject,
+  memo,
+} from 'react';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -39,6 +45,8 @@ export interface InstructionsProps {
   hideNavigation?: boolean;
   /** If the continue button should be hidden if disabled. */
   hideContinueIfDisabled?: boolean;
+  /** Instructions content that updates dynamically throughout a level. Replaces `longInstructions` if provided. */
+  dynamicInstructions?: string;
 }
 
 /**
@@ -55,6 +63,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   bottomComponent,
   fixedDarkBackground,
   overrideTheme,
+  dynamicInstructions,
   hideNavigation = false,
   hideContinueIfDisabled = false,
   ...feedbackProps
@@ -65,9 +74,23 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
   const {theme: defaultTheme} = useTheme();
   const ref: MutableRefObject<HTMLDivElement | null> = useRef(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isScrollable, setIsScrollable] = useState(false);
 
+  // Scrollable regions must be keyboard-reachable (WCAG 2.1 SC 2.1.1).
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(() => {
+      setIsScrollable(el.scrollHeight > el.clientHeight);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const displayInstructions = dynamicInstructions || longInstructions;
   // Don't render anything if we don't have any instructions.
-  if (longInstructions === undefined) {
+  if (displayInstructions === undefined) {
     return null;
   }
 
@@ -89,13 +112,19 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         className={classNames(moduleStyles.item)}
       >
         <div
-          key={longInstructions}
+          key={displayInstructions}
           id="instructions-text"
           className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
         >
-          <div className={moduleStyles.scrollingContent}>
+          {/* eslint-disable jsx-a11y/no-noninteractive-tabindex -- scrollable region requires keyboard access per WCAG 2.1 SC 2.1.1 */}
+          <div
+            className={moduleStyles.scrollingContent}
+            ref={scrollRef}
+            tabIndex={isScrollable ? 0 : undefined}
+            aria-label={isScrollable ? 'Instructions' : undefined}
+          >
             <MainInstructionsContent
-              instructionsText={longInstructions}
+              instructionsText={displayInstructions}
               handleInstructionsTextClick={handleInstructionsTextClick}
               ref={ref}
             />

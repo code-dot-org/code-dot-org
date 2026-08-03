@@ -6,6 +6,10 @@ import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 
 import OceansLab from './App';
 import {AppMode, type AppModeValue} from './oceans/constants';
+// Frame sizing (proportional font-size + 16:9 width clamp).  The studio host
+// opts into this same file; the dev harness must too, or it renders at a flat
+// 16 px base and diverges from the curriculum path.
+import './oceans/styles/oceansLab.css';
 
 initializeCore({plugins: [localizationPlugin]});
 
@@ -59,7 +63,6 @@ function DemoShell() {
         backgroundColor: 'rgb(2, 0, 28)',
         color: 'white',
         fontFamily: 'sans-serif',
-        boxSizing: 'border-box',
       }}
     >
       {/* Mode picker — kept small so it doesn't affect the lab's dimensions */}
@@ -88,27 +91,11 @@ function DemoShell() {
         ))}
       </div>
 
-      {/* Lab area — mirrors OceansContainer: centred, capped at 1280 px, 10 px gap */}
-      <div
-        style={{
-          flex: 1,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          padding: '0 10px 10px',
-          minHeight: 0,
-        }}
-      >
-        <div
-          style={{
-            width: '100%',
-            maxWidth: 1280,
-            // content-box reset: matches the studio path's MUI CssBaseline override
-            // so %-based padding inside #container-react renders identically.
-          }}
-        >
-          {/* Inline style resets content-box on the lab container, same as studio */}
-          <style>{`#container-react, #container-react * { box-sizing: content-box; }`}</style>
+      {/* Lab area — mirrors the studio OceansContainer exactly: same shell /
+          frame classes, so the proportional font-size and 16:9 width clamp
+          match the curriculum path. */}
+      <div className="oceans-lab-shell">
+        <div className="oceans-lab-frame">
           <OceansLab
             appMode={appMode}
             guides={params.get('guides') ?? undefined}

@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_6_8",
-      "curriculum_umbrella": "Self-paced PL - CSD",
+      "curriculum_umbrella": "Self-paced PL - AID",
       "has_unnumbered_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 19:11:11 UTC",
+    "serialized_at": "2026-07-21 16:57:24 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,

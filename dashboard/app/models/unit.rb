@@ -39,6 +39,28 @@ require 'ruby-progressbar'
 
 # A sequence of Levels
 class Unit < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :public,
+    name: :public,
+    created_at: :public,
+    updated_at: :public,
+    wrapup_video_id: :public,
+    user_id: :confidential,
+    login_required: :public,
+    properties: :public,
+    new_name: :public,
+    family_name: :public,
+    published_state: :public,
+    instruction_type: :public,
+    instructor_audience: :public,
+    participant_audience: :public,
+    original_unit_group_id: :public,
+    hide_within_course: :public,
+    md5: :public,
+  )
+
   self.table_name = 'scripts'
 
   TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -285,11 +307,8 @@ class Unit < ApplicationRecord
     content_area
     topic_tags
     enable_blockly_keyboard_navigation
+    generate_outline
   )
-
-  def self.hoc_2014_unit
-    Unit.get_from_cache(Unit::HOC_NAME)
-  end
 
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
@@ -581,10 +600,9 @@ class Unit < ApplicationRecord
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
         next if is_not_contained && is_not_predict_free_response
-        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [text_response_level]
+          levels: level.levels_for_progress
         }
       end
     end
@@ -1114,6 +1132,94 @@ class Unit < ApplicationRecord
     end
   end
 
+  # Replace the unit's lessons with `raw_lessons` (an ordered array). Used
+  # by the unit /generate page. Each entry is {id?, key, name,
+  # generateOutline?}: entries with an id reuse the existing Lesson row;
+  # entries without an id create a fresh one. Lessons present in the unit
+  # but missing from `raw_lessons` are destroyed via reassignment of the
+  # group's `lessons` collection. New lessons are placed in the first
+  # user-facing lesson group; if the unit has none, one is created. Refuses
+  # to operate on units with more than one user-facing lesson group, since
+  # cross-group reordering is out of scope for this page.
+  #
+  # `unit_generate_outline`, when supplied, is persisted on the Unit so the
+  # /generate page can restore it across reloads. nil leaves the existing
+  # value alone; '' clears it.
+  def update_lesson_outlines(raw_lessons, unit_generate_outline = nil)
+    user_facing_groups = lesson_groups.select(&:user_facing)
+    if user_facing_groups.length > 1
+      raise 'Cannot bulk-edit lessons on a unit with multiple user-facing lesson groups.'
+    end
+    target_group = user_facing_groups.first || LessonGroup.find_or_create_by!(
+      key: 'outlines', script: self, user_facing: true, position: 1
+    ) do |lg|
+      lg.properties = {display_name: 'Lessons'}
+    end
+
+    transaction do
+      # Destroy lessons missing from the payload BEFORE creating new ones.
+      # If we did it after, a fresh entry whose key collides with a
+      # just-deleted-in-UI lesson (common when the AI re-suggests an outline
+      # after the user trims the list) would 422 on Lesson.create! because
+      # the soon-to-be-destroyed row still holds the unique (script_id, key)
+      # slot.
+      kept_ids = raw_lessons.filter_map do |raw|
+        raw_sym = raw.respond_to?(:deep_symbolize_keys) ? raw.deep_symbolize_keys : raw.symbolize_keys
+        raw_sym[:id]&.to_i
+      end
+      lessons.where.not(id: kept_ids).destroy_all
+
+      counters = LessonGroup::Counters.new(0, 0, 0, 0)
+      new_lessons = raw_lessons.map do |raw|
+        raw = raw.deep_symbolize_keys
+        lesson =
+          if raw[:id]
+            Lesson.find_by!(script: self, id: raw[:id])
+          else
+            raise 'Lesson key required for new lesson' if raw[:key].blank?
+            raise 'Lesson name required for new lesson' if raw[:name].blank?
+            Lesson.create!(
+              key: raw[:key],
+              script: self,
+              name: raw[:name],
+              relative_position: 0,
+              has_lesson_plan: true
+            )
+          end
+
+        lesson.assign_attributes(
+          lesson_group: target_group,
+          absolute_position: (counters.lesson_position += 1),
+          relative_position: lesson.numbered_lesson? ?
+            (counters.numbered_lesson_count += 1) :
+            (counters.unnumbered_lesson_count += 1)
+        )
+        # Only overwrite generate_outline when the caller supplies a value;
+        # callers that just want to reorder shouldn't accidentally clear an
+        # existing outline by sending nil.
+        if raw.key?(:generateOutline)
+          lesson.generate_outline = raw[:generateOutline]
+        end
+        lesson.save! if lesson.changed?
+        lesson
+      end
+
+      target_group.lessons = new_lessons
+      target_group.save!
+
+      unless unit_generate_outline.nil?
+        self.generate_outline = unit_generate_outline
+        save! if changed?
+      end
+    end
+
+    if Rails.application.config.levelbuilder_mode
+      reload
+      write_script_json
+    end
+    reload
+  end
+
   def write_script_json
     # make sure we only write script json in the levelbuilder environment.
     return unless Rails.application.config.levelbuilder_mode
@@ -1299,8 +1405,8 @@ class Unit < ApplicationRecord
         student_detail_progress_view: student_detail_progress_view?,
         project_widget_visible: project_widget_visible?,
         project_widget_types: project_widget_types,
-        teacher_resources: sorted_user_facing_resources(resources),
-        student_resources: sorted_user_facing_resources(student_resources),
+        teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+        student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available,
         hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
@@ -1372,8 +1478,8 @@ class Unit < ApplicationRecord
       unitName: title_for_display(unit_group_unit: unit_group_unit),
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
-      teacher_resources: sorted_user_facing_resources(resources),
-      student_resources: sorted_user_facing_resources(student_resources),
+      teacher_resources: sorted_user_facing_resources(resources, unit_group_unit: unit_group_unit),
+      student_resources: sorted_user_facing_resources(student_resources, unit_group_unit: unit_group_unit),
       numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
@@ -1409,6 +1515,31 @@ class Unit < ApplicationRecord
     summary[:isCSDCourseOffering] = get_original_unit_group&.course_version&.course_offering&.csd?
     summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
+  end
+
+  # Compact payload for the /generate page. We deliberately do NOT reuse
+  # summarize_for_unit_edit because that page renders the full editor and
+  # ships hundreds of fields the generator doesn't use. The generator just
+  # needs the unit's identity, the lesson list (each with its existing
+  # generate_outline prompt and a /generate URL), and a flag indicating
+  # whether the page can safely write back changes.
+  def summarize_for_unit_generate
+    user_facing_groups = lesson_groups.select(&:user_facing)
+    {
+      id: id,
+      name: name,
+      title: localized_title,
+      lessons: lessons.map(&:summarize_for_unit_generate),
+      # Only single-lesson-group units are safe targets for the /generate
+      # page's bulk-write path. The page degrades to "edit prompts only"
+      # when multiple user-facing lesson groups are present.
+      multipleLessonGroups: user_facing_groups.length > 1,
+      # Persisted unit-level outline prompt — same role as the lesson's
+      # generate_outline, but at the unit scope. The page restores it on
+      # reload so the levelbuilder doesn't have to retype the unit
+      # description on every visit.
+      generateOutline: generate_outline,
+    }
   end
 
   def allow_major_curriculum_changes?
@@ -1819,6 +1950,14 @@ class Unit < ApplicationRecord
     unit_group&.pl_course?
   end
 
+  # The lesson tutor deep dive is scoped to the AI Foundations (AIF) and AI
+  # Discovery (AID) student curricula. PL/facilitator courses are excluded even
+  # if they carry an AI marketing initiative.
+  def lesson_tutor_available?
+    return false if pl_course?
+    !!get_course_version&.course_offering&.ai_initiative?
+  end
+
   # returns true if the user is a levelbuilder, or a teacher with any pilot
   # unit experiments enabled.
   def self.has_any_pilot_access?(user = nil)
@@ -1927,7 +2066,44 @@ class Unit < ApplicationRecord
     TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
-  private def sorted_user_facing_resources(resources)
-    resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown)
+  private def sorted_user_facing_resources(resources, unit_group_unit: nil)
+    resources.
+      filter(&:show_in_resource_ui?).
+      sort_by(&:name).
+      map {|resource| summarize_resource_for_dropdown(resource, unit_group_unit)}
+  end
+
+  # Rollup resources ("All Resources", "All Code", "All Standards", "All
+  # Vocabulary") store a single static URL, baked at generation time to the
+  # unit's original course. When the same unit is reused in another unit group
+  # (e.g. a full-year course built from semester courses), that URL points at
+  # the wrong course, which corrupts the resource-page breadcrumb trail. Rewrite
+  # the course/position portion of rollup URLs to match the unit group the user
+  # is actually viewing.
+  private def summarize_resource_for_dropdown(resource, unit_group_unit)
+    summary = resource.summarize_for_resources_dropdown
+    if resource.is_rollup && Policies::Courses.modularity_enabled? && unit_group_unit
+      rebuilt = rebuild_rollup_url(summary[:url], unit_group_unit)
+      summary[:url] = rebuilt if rebuilt
+    end
+    summary
+  end
+
+  private def rebuild_rollup_url(url, unit_group_unit)
+    rollup_type = url[%r{/(code|resources|standards|vocab)\z}, 1]
+    return nil unless rollup_type
+
+    course = unit_group_unit.cached_unit_group
+    position = unit_group_unit.position
+    case rollup_type
+    when 'code'
+      code_course_unit_path(course, position)
+    when 'resources'
+      resources_course_unit_path(course, position)
+    when 'standards'
+      standards_course_unit_path(course, position)
+    when 'vocab'
+      vocab_course_unit_path(course, position)
+    end
   end
 end

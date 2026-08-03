@@ -32,6 +32,7 @@
     "test": "vitest --run",
     "test:ui": "playwright test",
     "test:ui:ci": "CI=true playwright test",
+    "test:visual:prove": "prove-visual",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -46,7 +47,6 @@
     "@tensorflow-models/mobilenet": "^2.0.4",
     "@tensorflow/tfjs": "^1.3.1",
     "messageformat": "2.3.0",
-    "radium": "^0.25.2",
     "react-typist": "^2.0.5",
     "rehype-react": "^4.0.1",
     "remark-parse": "^7.0.2",
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
@@ -74,7 +75,8 @@
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "catalog:",
+    "zod": "catalog:"
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",

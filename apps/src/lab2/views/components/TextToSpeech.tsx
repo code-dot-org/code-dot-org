@@ -118,6 +118,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
       onClick={playText}
       onKeyDown={handleKeyDown}
       aria-label={i18n.playTextToSpeech()}
+      aria-pressed={isPlaying}
       type="button"
     >
       <FontAwesomeV6Icon

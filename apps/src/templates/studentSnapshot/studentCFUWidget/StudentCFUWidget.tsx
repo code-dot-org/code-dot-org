@@ -50,19 +50,31 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   const [fetchedCfuResponses, setFetchedCfuResponses] = useState<
     CFULevelResponse[]
   >([]);
-  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(false);
+  const [isCfuLevelsLoading, setIsCfuLevelsLoading] = useState<boolean>(true);
   const [isCfuResponsesLoading, setIsCfuResponsesLoading] =
-    useState<boolean>(false);
+    useState<boolean>(true);
+
+  // Show loading state when lesson or student changes
+  const [lastLessonId, setLastLessonId] = useState(lessonId);
+  if (lessonId !== lastLessonId) {
+    setLastLessonId(lessonId);
+    setFetchedCfuLevels([]);
+    setIsCfuLevelsLoading(!!lessonId);
+  }
+
+  const [lastStudentId, setLastStudentId] = useState(studentId);
+  if (lessonId !== lastLessonId || studentId !== lastStudentId) {
+    setLastStudentId(studentId);
+    setFetchedCfuResponses([]);
+    setIsCfuResponsesLoading(!!(lessonId && studentId));
+  }
 
   // Fetch CFU levels when lessonId changes, unless parent supplies cfuLevels.
   useEffect(() => {
     if (!lessonId) {
-      setFetchedCfuLevels([]);
-      setIsCfuLevelsLoading(false);
       return;
     }
 
-    setIsCfuLevelsLoading(true);
     HttpClient.fetchJson<CFULevelsData>(
       `/student_snapshots/cfu_levels/${lessonId}`
     )
@@ -82,12 +94,9 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
   // supplies cfuResponses.
   useEffect(() => {
     if (!lessonId || !studentId) {
-      setFetchedCfuResponses([]);
-      setIsCfuResponsesLoading(false);
       return;
     }
 
-    setIsCfuResponsesLoading(true);
     HttpClient.fetchJson<CFULevelResponsesData>(
       `/student_snapshots/cfu_responses/${lessonId}?student_id=${studentId}`
     )
@@ -224,6 +233,10 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     return {total, completed, accuracy, counts};
   }, [fetchedCfuLevels, statusBuckets]);
 
+  if (!loading && (!fetchedCfuLevels || fetchedCfuLevels.length === 0)) {
+    return null;
+  }
+
   let content: React.ReactNode;
   let scrollable = false;
 
@@ -231,12 +244,6 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
     content = (
       <Typography variant="body3" gutterBottom>
         Loading CFU data...
-      </Typography>
-    );
-  } else if (!fetchedCfuLevels || fetchedCfuLevels.length === 0) {
-    content = (
-      <Typography variant="body3" gutterBottom>
-        This lesson doesn't have any "Check for Understanding" questions.
       </Typography>
     );
   } else {
@@ -249,19 +256,18 @@ const StudentCFUWidget: React.FC<StudentCFUWidgetProps> = ({
           accuracy={summary.accuracy}
           counts={summary.counts}
         />
-        {!!fetchedCfuLevels.length && (
-          <StudentCFUWidgetQuestionsSection
-            cfuLevels={fetchedCfuLevels}
-            cfuResponses={fetchedCfuResponses}
-            statusBuckets={statusBuckets}
-          />
-        )}
+        <StudentCFUWidgetQuestionsSection
+          cfuLevels={fetchedCfuLevels}
+          cfuResponses={fetchedCfuResponses}
+          statusBuckets={statusBuckets}
+        />
       </div>
     );
   }
 
   return (
     <WidgetTemplate
+      id="ui-test-cfu-widget"
       widgetName="Check For Understanding Questions"
       gridWidth={gridWidth}
       gridHeight={gridHeight}

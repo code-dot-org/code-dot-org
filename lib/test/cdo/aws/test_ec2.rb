@@ -6,7 +6,7 @@ describe AWS::EC2 do
 
   # Reset memoized variables to ensure fresh metadata lookups
   before do
-    [:@instance_id, :@region, :@account_id].each do |var|
+    [:@instance_id, :@region, :@account_id, :@local_ipv4, :@instance_type, :@availability_zone, :@hourly_rates].each do |var|
       described_class.remove_instance_variable(var) if described_class.instance_variable_defined?(var)
     end
   end
@@ -56,6 +56,82 @@ describe AWS::EC2 do
         returns(mock_region_resp)
 
       _(described_class.region).must_equal 'us-west-2'
+    end
+  end
+
+  describe '.local_ipv4' do
+    it 'returns the private IPv4 address of the current EC2 instance' do
+      mock_token_resp = mock {stubs(code: '200', body: 'test_token')}
+      mock_ip_resp = mock {stubs(code: '200', body: '10.0.1.23')}
+
+      described_class.stubs(:http_request).
+        with {|method, uri, _| method == Net::HTTP::Put && uri.path.include?('token')}.
+        returns(mock_token_resp)
+
+      described_class.stubs(:http_request).
+        with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('local-ipv4')}.
+        returns(mock_ip_resp)
+
+      _(described_class.local_ipv4).must_equal '10.0.1.23'
+    end
+  end
+
+  describe '.hourly_rate' do
+    # A trimmed shape of one AWS Price List product document.
+    let(:product_json) do
+      {
+        'terms' => {
+          'OnDemand' => {
+            'ABC.JRTCKXETXF' => {
+              'priceDimensions' => {
+                'ABC.JRTCKXETXF.6YS6EN2CT7' => {
+                  'pricePerUnit' => {'USD' => '0.192000000'}
+                }
+              }
+            }
+          }
+        }
+      }.to_json
+    end
+
+    it 'returns the on-demand USD/hour and memoizes the query' do
+      pricing_client = mock
+      pricing_client.expects(:get_products).once.returns(stub(price_list: [product_json]))
+      described_class.stubs(:pricing_client).returns(pricing_client)
+
+      _(described_class.hourly_rate(instance_type: 'm5.xlarge', region: 'us-east-1')).must_be_close_to 0.192
+      # Second call is served from the memo, not a second API query.
+      _(described_class.hourly_rate(instance_type: 'm5.xlarge', region: 'us-east-1')).must_be_close_to 0.192
+    end
+
+    it 'defaults to this instance type and region' do
+      described_class.stubs(:instance_type).returns('c5.large')
+      described_class.stubs(:region).returns('us-west-2')
+      pricing_client = mock
+      pricing_client.expects(:get_products).
+        with {|args| args[:filters].include?(type: 'TERM_MATCH', field: 'instanceType', value: 'c5.large')}.
+        returns(stub(price_list: [product_json]))
+      described_class.stubs(:pricing_client).returns(pricing_client)
+
+      _(described_class.hourly_rate).must_be_close_to 0.192
+    end
+
+    it 'returns nil without a resolvable type or region' do
+      described_class.stubs(:instance_type).returns(nil)
+      described_class.stubs(:region).returns(nil)
+      _(described_class.hourly_rate).must_be_nil
+    end
+
+    it 'returns nil on an empty price list' do
+      described_class.stubs(:pricing_client).returns(stub(get_products: stub(price_list: [])))
+      _(described_class.hourly_rate(instance_type: 'nonexistent.type', region: 'us-east-1')).must_be_nil
+    end
+
+    it 'returns nil on an API error' do
+      pricing_client = mock
+      pricing_client.stubs(:get_products).raises(StandardError, 'boom')
+      described_class.stubs(:pricing_client).returns(pricing_client)
+      _(described_class.hourly_rate(instance_type: 'm5.xlarge', region: 'us-east-1')).must_be_nil
     end
   end
 

@@ -1,5 +1,10 @@
 import {useCallback, useEffect, useRef} from 'react';
 
+// Scene styles live in CSS classes — pull them in here so the lab works
+// in any consumer (standalone dev harness, library build, studio embed)
+// without each consumer having to remember to import the CSS separately.
+import './oceans/styles/scenes.css';
+
 import {
   AppMode,
   type AppModeValue,
@@ -65,13 +70,10 @@ export default function OceansLab({
       registerSound: sounds.register.bind(sounds),
     });
 
-    // Stop the canvas RAF loop on cleanup, but leave the React UI root alive.
-    // Unmounting the root here triggers React's "synchronously unmount during
-    // render" warning under StrictMode's double-invoke cycle — the deferred
-    // unmount then clears the container after the second initAll, leaving the
-    // UI empty. The root is safely orphaned when the container DOM node is
-    // removed on true component unmount.
-    return stopUIRerender;
+    return () => {
+      sounds.stopAllAudio();
+      stopUIRerender();
+    };
   }, [appMode, guides, textToSpeechLocale, stableOnContinue]);
 
   // 16:9 responsive wrapper — padding-top 56.25% creates the aspect-ratio box.

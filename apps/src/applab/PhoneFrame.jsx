@@ -1,8 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '../legacySharedComponents/FontAwesome';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import {RunButton, ResetButton} from '../templates/GameButtons';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
@@ -109,10 +110,19 @@ export default class PhoneFrame extends React.Component {
               </div>
             )}
             {isPaused && (
-              <div className={classNames(style.centeredInFrame, style.paused)}>
-                <FontAwesome icon="pause" className={style.pauseIcon} />
+              <MuiTypography
+                variant="body1"
+                component="div"
+                className={classNames(style.centeredInFrame, style.paused)}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: 1,
+                }}
+              >
+                <FontAwesomeV6Icon iconName="pause" iconStyle="solid" />
                 PAUSED
-              </div>
+              </MuiTypography>
             )}
             {/* Top run/reset button only renders when user is so zoomed in
             that the bottom run button is hidden*/}

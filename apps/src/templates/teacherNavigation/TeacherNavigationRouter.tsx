@@ -19,7 +19,6 @@ import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/Teach
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {sectionDoesNotHaveNewData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import TeacherCourseOverview from '../courseOverview/TeacherCourseOverview';
@@ -77,6 +76,7 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
+  logoTransitionEnabled?: boolean;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -85,6 +85,7 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
+  logoTransitionEnabled,
 }) => {
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
@@ -124,7 +125,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <TeacherHomepage
+                  studioUrlPrefix={studioUrlPrefix}
+                  logoTransitionEnabled={logoTransitionEnabled}
+                />
                 <ScrollRestoration />
               </div>
             </>
@@ -280,18 +284,16 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               path={TEACHER_NAVIGATION_PATHS.unitOverview}
               element={<TeacherUnitOverview />}
             />
-            {experiments.isEnabled('student-snapshot') && (
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
-                element={
-                  <ElementOrEmptyPage
-                    showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={!anyStudentHasProgress}
-                    element={<StudentSnapshot />}
-                  />
-                }
-              />
-            )}
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.studentSnapshot}
+              element={
+                <ElementOrEmptyPage
+                  showNoStudents={studentCount === 0}
+                  showNoCurriculumAssigned={!anyStudentHasProgress}
+                  element={<StudentSnapshot />}
+                />
+              }
+            />
             <Route
               path={TEACHER_NAVIGATION_PATHS.settings}
               element={
@@ -350,6 +352,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       showAiChatSettings,
       selectedSection,
       studioUrlPrefix,
+      logoTransitionEnabled,
     ]
   );
 

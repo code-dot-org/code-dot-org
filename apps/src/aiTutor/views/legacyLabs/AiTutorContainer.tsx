@@ -66,7 +66,7 @@ export const AiTutorContainer: FC<{
     !!labState.appType &&
     !shouldShowAiTutor({
       appName: labState.appType,
-      tutorLevel: aiTutorAvailableForLevel,
+      isTutorLevel: aiTutorAvailableForLevel,
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
@@ -159,7 +159,7 @@ export const AiTutorContainer: FC<{
           [styles.displayNone]: !aiChatOpen,
         })}
       >
-        <div className={styles.header}>
+        <div className={styles.header} data-theme="Dark">
           <img
             src={aiBotOutlineIcon}
             alt=""

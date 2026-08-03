@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -73,8 +74,13 @@ class ProjectRemix extends React.Component {
         type="button"
         className={classNames(styles.buttonSpacing, className)}
         onClick={this.remixProject}
+        aria-label={i18n.remix()}
       >
-        {i18n.remix()}
+        <span className={styles.buttonText}>{i18n.remix()}</span>
+        <FontAwesomeV6Icon
+          iconName="arrows-rotate"
+          className={styles.buttonIcon}
+        />
       </button>
     ) : null;
   }

@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -58,7 +59,10 @@ describe('RosterDialog', () => {
     );
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    wrapper.find('button[id="cancel-button"]').simulate('click');
+    wrapper
+      .find(MuiButton)
+      .filterWhere(button => button.prop('id') === 'roster-cancel-button')
+      .simulate('click');
     assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
     assert.deepEqual(analyticsSpy.getCall(0).args[1], {
@@ -125,7 +129,13 @@ describe('RosterDialog', () => {
         userId={90}
       />
     );
-    expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
+    expect(
+      wrapper
+        .find(MuiButton)
+        .filterWhere(
+          button => button.prop('id') === 'import-button-and-redirect'
+        )
+    ).to.have.lengthOf(1);
   });
 
   it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
@@ -155,6 +165,37 @@ describe('RosterDialog', () => {
       .catch(error => {
         expect(handleImportFailureMock.mock.calls.length).to.equal(1);
       });
+  });
+
+  it('displays Clever 404 message when Clever classrooms returns 404', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 404, message: 'Not Found'}}
+        rosterProvider={OAuthSectionTypes.clever}
+      />
+    );
+    expect(wrapper.html()).contains(locale.cleverClassroomsNotFound());
+  });
+
+  it('displays generic error for non-404 Clever failures', () => {
+    const wrapper = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        isOpen={true}
+        classrooms={[]}
+        loadError={{status: 500, message: 'Internal Server Error'}}
+        rosterProvider={OAuthSectionTypes.clever}
+      />
+    );
+    expect(wrapper.html()).not.contains(locale.cleverClassroomsNotFound());
+    expect(wrapper.html()).contains(
+      locale.errorLoadingRosteredSections({type: locale.loginTypeClever()})
+    );
   });
 
   it('should label archived sections as archived ', () => {

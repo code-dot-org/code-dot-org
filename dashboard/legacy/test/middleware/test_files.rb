@@ -4,7 +4,7 @@ require 'cdo/aws/s3'
 
 class FilesTest < FilesApiTestBase
   def setup
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
     @channel_id = create_channel
     @api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
     @api.ensure_aws_credentials
@@ -39,7 +39,7 @@ class FilesTest < FilesApiTestBase
     assert successful?
     assert_equal file_data, last_response.body
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -67,7 +67,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(new_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -94,7 +94,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(old_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -154,7 +154,7 @@ class FilesTest < FilesApiTestBase
     @api.get_codeproject_object(dog_image_filename, '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
     assert_equal dog_image_body, last_response.body
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
@@ -296,7 +296,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(html_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
@@ -400,7 +400,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(mismatched_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -435,7 +435,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
@@ -461,7 +461,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(different_case_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -489,7 +489,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(dog_image_filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -558,7 +558,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.list_versions
@@ -624,7 +624,7 @@ class FilesTest < FilesApiTestBase
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_bad_channel_id
@@ -632,7 +632,7 @@ class FilesTest < FilesApiTestBase
     api = FilesApiTestHelper.new(current_session, 'files', bad_channel_id)
     api.list_objects
     assert not_found?
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_thumbnail
@@ -647,7 +647,7 @@ class FilesTest < FilesApiTestBase
 
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -687,7 +687,7 @@ class FilesTest < FilesApiTestBase
     # file contents has not changed
     assert_equal thumbnail_body, @api.get_object(thumbnail_filename)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -717,7 +717,7 @@ class FilesTest < FilesApiTestBase
     @api.get_object(bogus_metadata_filename)
     assert not_found?
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
   end
 
   def test_rename_mixed_case
@@ -749,7 +749,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(escaped_filename2)
     assert successful?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.object_and_app_size
     )
@@ -810,7 +810,7 @@ class FilesTest < FilesApiTestBase
     refute_equal response_before_rename['filesVersionId'], response_after_rename['filesVersionId']
     assert_equal file_infos[0]['versionId'], file_infos_after_rename[0]['versionId']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -868,7 +868,7 @@ class FilesTest < FilesApiTestBase
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
@@ -897,7 +897,7 @@ class FilesTest < FilesApiTestBase
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=300'
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -920,7 +920,7 @@ class FilesTest < FilesApiTestBase
     # Has a 5-minute timeout by default
     assert_includes temp_url, 'X-Amz-Expires=3600'
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )
 
@@ -972,6 +972,89 @@ class FilesTest < FilesApiTestBase
     post '/v3/images/moderate', ''
     assert_equal 400, last_response.status
     assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_success
+    url = 'https://images.example.com/safe.png'
+    moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).returns(['fake-image-bytes', 'image/png'])
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(moderation_result)
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert successful?
+    assert_equal moderation_result, JSON.parse(last_response.body)
+  end
+
+  def test_moderate_image_url_requires_url
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).never
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image URL provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_disallowed_host
+    url = 'https://127.0.0.1/image.png'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(SecurityError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_reports_dns_failure_as_fetch_error
+    url = 'https://does-not-resolve.example/image.png'
+
+    IPSocket.expects(:getaddress).with('does-not-resolve.example').raises(SocketError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_unsupported_type
+    url = 'https://images.example.com/unsafe.bmp'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(AzureAiContentSafety::UnsupportedContentType)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_oversized_streamed_body
+    url = 'https://images.example.com/huge.png'
+
+    FilesApi.any_instance.stubs(:max_file_size).returns(10)
+    IPSocket.stubs(:getaddress).with('images.example.com').returns('203.0.113.10')
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
   end
 
   private def delete_all_files(bucket)

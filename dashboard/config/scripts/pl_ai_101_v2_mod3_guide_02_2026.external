@@ -1,0 +1,84 @@
+name 'pl-ai-101-V2-mod3-guide-02_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using AI Tools
+
+AI can help teachers save time on planning, feedback, and administrative tasks. But deciding when and how to use AI is just as important as knowing what it can do.
+
+A helpful way to approach AI use is to pause and **THINK** before using it:
+
+<div style="width:80%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
+
+<div style="border:1px solid #D9DDE3; border-radius:16px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+T
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Task & Purpose</div>
+<div style="font-size:15px; line-height:1.5;">
+Start with a clear reason for using AI. Use AI when it helps achieve a specific learning, instructional, or professional goal. Choose AI because it improves the process or outcome, not simply because it is available.
+</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+H
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Human Oversight</div>
+<div style="font-size:15px; line-height:1.5;">
+Always review and refine AI-generated content. Check for accuracy, clarity, and bias before sharing with students.</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+I
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Instructional Quality</div>
+<div style="font-size:15px; line-height:1.5;">
+Keep quality at the center of your decisions. Check that AI-generated materials are accurate, aligned to standards, and appropriate for your students.
+</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns: 80px 1fr; border-bottom:1px solid #E8ECF0;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+N
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">No Sensitive Data</div>
+<div style="font-size:15px; line-height:1.5;">
+Protect student privacy when using AI tools. Avoid sharing personal or sensitive information, and follow your school's or district's AI policies.</div>
+</div>
+</div>
+
+<!-- ROW -->
+<div style="display:grid; grid-template-columns: 80px 1fr;">
+<div style="background:#8C52BA; color:#FFFFFF; font-weight:800; font-size:28px; display:flex; align-items:center; justify-content:center;">
+K
+</div>
+<div style="padding:16px;">
+<div style="font-weight:800; font-size:18px; margin-bottom:6px;">Keep Professional Judgment First</div>
+<div style="font-size:15px; line-height:1.5;">
+AI is a tool, not a replacement for your expertise. AI does not know your students, classroom context, or instructional goals, so your judgment is essential</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<br>
+
+In Module 5, Ensuring a Responsible Approach, you'll explore data privacy, responsible AI use, and other important considerations in greater depth.
+MARKDOWN

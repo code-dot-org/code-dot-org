@@ -1,6 +1,4 @@
 @no_mobile
-# Our minimum version of Safari does not support web workers
-@no_safari
 Feature: Python Lab manage files and folders
 
 Background:
@@ -12,7 +10,7 @@ Scenario: Can add a new, unlocked file
   And I wait to see "#uitest-new-file"
   And I press "uitest-new-file"
   And I wait to see "#uitest-prompt-field"
-  And I press keys "new_file.py" for element "#uitest-prompt-field"
+  And I press keys "new_file" for element "#uitest-prompt-field"
   And I press "uitest-generic-dialog-ok"
   And element ".cm-content" contains text "Add your changes to new_file.py"
   And element "#uitest-files-list" contains text "new_file.py"

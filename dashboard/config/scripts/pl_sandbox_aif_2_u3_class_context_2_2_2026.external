@@ -30,14 +30,89 @@ Teachers serve as guides supporting **design thinking, encouraging responsible A
 ## Unit Length and Format
 
 **Total Duration:** Approximately 3 weeks
+
 **Structure:** Eleven 45-minute lessons and one 5-day culminating project
 
-<img src="https://images.code.org/0845fe02cb126948ac8b81f06b861103-image-1767974753854.png" alt="lesson calandar for unit 2" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+<!-- Unit 3 Lesson Calendar -->
+<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #c4c0f0;">
+
+  <!-- Week 1 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 1
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 1</span>
+        Intro to Data Structures
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 2</span>
+        Turning Data Into Displays
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 3</span>
+        Basic Array Methods
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 4</span>
+        Objects for Real-World Data
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 5</span>
+        Lists of Objects
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div style="display: flex; align-items: stretch; border-bottom: 2px solid #fff;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 2
+    </div>
+    <div style="display: flex; flex: 1; flex-wrap: wrap; background: #eeedf9; gap: 6px; padding: 10px;">
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 6</span>
+        Rendering Lists of Objects
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 7</span>
+        Evaluating Fairness and Accessibility
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 8</span>
+        Filtering
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 9</span>
+        Searching
+      </div>
+      <div style="background: #fff; border: 1.5px solid #c4c0f0; border-radius: 6px; padding: 10px; flex: 1 1 120px; min-width: 110px; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4;">
+        <span style="display:block; font-size:10px; font-weight:600; color:#6a62d9; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Lesson 10</span>
+        Sorting and Chaining
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div style="display: flex; align-items: stretch;">
+    <div style="background: #6a62d9; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; min-width: 72px; padding: 16px 10px; text-align: center; letter-spacing: 0.3px;">
+      Week 3
+    </div>
+    <div style="display: flex; flex: 1; background: #eeedf9; padding: 10px;">
+      <div style="background: #fff; border: 2px solid #6a62d9; border-radius: 6px; padding: 10px; flex: 1; font-size: 12.5px; color: #2a2560; text-align: center; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+        <span style="display:inline-block; background:#6a62d9; color:#fff; font-size:10px; font-weight:700; padding:2px 8px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; white-space:nowrap;">Lesson 11</span>
+        Value Explorer Project
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
 
 
 
 
-
+*This calendar reflects a standard 225-minute week. Lesson pacing can be adjusted based on your available instructional minutes using the schedule adjuster in the curriculum.*
 MARKDOWN

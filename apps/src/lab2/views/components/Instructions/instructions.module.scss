@@ -1,3 +1,4 @@
+@use '@cdo/apps/mixins.scss' as mixins;
 @import 'font.scss';
 
 @keyframes slidein {
@@ -164,7 +165,8 @@
     &:not(h5, h6),
     em,
     strong {
-      font-family: var(--font-family-barlow-semi-condensed-semibold);
+      font-family: var(--font-family-main);
+      font-weight: var(--font-weight-semi-bold);
     }
   }
 
@@ -323,6 +325,8 @@
 }
 
 .scrollingContent {
+  @include mixins.focus-styles($outline-offset: -2px);
+  border-radius: 4px;
   flex: 1;
   overflow-y: auto;
   min-height: 70px;

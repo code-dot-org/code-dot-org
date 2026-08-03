@@ -1,10 +1,9 @@
-@import "color.scss";
-
-$ai-rubric-cyan-hover: #37e1db;
+@import 'color.scss';
 
 // Move the arrow left and right.
 @keyframes left-right {
-  0%, 100% {
+  0%,
+  100% {
     left: 10px;
   }
   50% {
@@ -22,7 +21,8 @@ $ai-rubric-cyan-hover: #37e1db;
 }
 
 @keyframes delay-fade-in {
-  0%, 80% {
+  0%,
+  80% {
     opacity: 0;
   }
   100% {
@@ -148,7 +148,7 @@ $ai-rubric-cyan-hover: #37e1db;
     }
 
     &Scanning {
-      background-color: $ai_rubric_cyan;
+      background-color: var(--background-brand-aqua-primary);
     }
 
     &SlowFade {
@@ -186,13 +186,15 @@ $ai-rubric-cyan-hover: #37e1db;
 }
 
 .button {
-  background-color: $ai_rubric_cyan !important;
+  background-color: var(--background-brand-aqua-primary) !important;
 
-  &:hover, &:disabled {
-    background-color: $ai-rubric-cyan-hover !important;
+  &:hover,
+  &[data-generating='true'] {
+    background-color: var(--background-brand-aqua-strong) !important;
   }
 
-  &:disabled {
+  // Stand-in for :disabled — see the button in PatternAiPanel.tsx.
+  &[data-generating='true'] {
     border: 1px solid rgba(0 0 0 / 0);
     cursor: default;
   }
@@ -229,7 +231,7 @@ $ai-rubric-cyan-hover: #37e1db;
   transition: 0.1s ease-in-out;
   width: 100px;
 
-  &:hover{
+  &:hover {
     transform: scale(1.05, 1.05);
     transition: 0.1s ease-in-out;
   }
@@ -244,7 +246,7 @@ $ai-rubric-cyan-hover: #37e1db;
   transition: 0.1s ease-in-out;
   animation: 0.5s fade-in;
 
-  &:hover{
+  &:hover {
     transform: scale(1.4, 1.4);
     transition: 0.1s ease-in-out;
   }
@@ -283,7 +285,7 @@ $ai-rubric-cyan-hover: #37e1db;
     }
 
     &Active {
-      background-color: $ai_rubric_cyan;
+      background-color: var(--background-brand-aqua-primary);
     }
   }
 }
@@ -314,12 +316,14 @@ $ai-rubric-cyan-hover: #37e1db;
     right: 214px;
   }
 
-  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+  &GenerateNoTemperature,
+  &GenerateAgainNoTemperature {
     top: 195px;
     right: 216px;
   }
 
-  &Generate, &GenerateAgain {
+  &Generate,
+  &GenerateAgain {
     top: 205px;
     right: 216px;
   }
@@ -348,12 +352,14 @@ $ai-rubric-cyan-hover: #37e1db;
     top: 177px;
   }
 
-  &GenerateNoTemperature, &GenerateAgainNoTemperature {
+  &GenerateNoTemperature,
+  &GenerateAgainNoTemperature {
     right: 189px;
     top: 210px;
   }
 
-  &Generate, &GenerateAgain {
+  &Generate,
+  &GenerateAgain {
     right: 189px;
     top: 221px;
   }

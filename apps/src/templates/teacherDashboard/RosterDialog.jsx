@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -18,20 +19,12 @@ import {
 } from './teacherSectionsRedux';
 import {isRosterDialogOpen} from './teacherSectionsReduxSelectors';
 
+import moduleStyles from './rosterDialog.module.scss';
+
 const COMPLETED_EVENT = 'Section Setup Completed';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 const ARCHIVED_STATE = 'ARCHIVED';
-
-const ctaButtonStyle = {
-  background: color.orange,
-  color: color.white,
-  border: '1px solid #b07202',
-  borderRadius: 3,
-  boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
-  fontSize: 14,
-  padding: '8px 20px',
-};
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
   classrooms.length ? (
@@ -105,7 +98,7 @@ const GOOGLE_CLASSROOMS_SYNC_SUPPORT_URL =
 const ROSTERED_SECTIONS_SUPPORT_URL =
   'https://support.code.org/hc/en-us/articles/6496495212557';
 
-const LoadError = ({rosterProvider, loginType}) => {
+const LoadError = ({rosterProvider, loginType, loadError}) => {
   switch (rosterProvider) {
     case OAuthSectionTypes.google_classroom:
       return (
@@ -122,6 +115,33 @@ const LoadError = ({rosterProvider, loginType}) => {
             </a>
           </p>
         </div>
+      );
+    case OAuthSectionTypes.clever:
+      if (loadError && loadError.status === 404) {
+        return (
+          <p>
+            {locale.cleverClassroomsNotFound()}{' '}
+            <a
+              href={ROSTERED_SECTIONS_SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {locale.errorLoadingRosteredSectionsSupport()}
+            </a>
+          </p>
+        );
+      }
+      return (
+        <p>
+          {locale.errorLoadingRosteredSections({type: loginType})}{' '}
+          <a
+            href={ROSTERED_SECTIONS_SUPPORT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {locale.errorLoadingRosteredSectionsSupport()}
+          </a>
+        </p>
       );
     default:
       return (
@@ -141,6 +161,7 @@ const LoadError = ({rosterProvider, loginType}) => {
 LoadError.propTypes = {
   rosterProvider: PropTypes.string,
   loginType: PropTypes.string,
+  loadError: loadErrorShape,
 };
 
 class RosterDialog extends React.Component {
@@ -257,6 +278,7 @@ class RosterDialog extends React.Component {
             <LoadError
               rosterProvider={this.props.rosterProvider}
               loginType={loginType}
+              loadError={this.props.loadError}
             />
           ) : this.props.classrooms ? (
             <ClassroomList
@@ -269,28 +291,28 @@ class RosterDialog extends React.Component {
             locale.loading()
           )}
         </div>
-        <div style={styles.footer}>
-          <button
-            id="cancel-button"
+        <div className={moduleStyles.footer}>
+          <MuiButton
+            id="roster-cancel-button"
+            variant="outlined"
+            color="tertiary"
+            size="small"
             type="button"
             onClick={this.cancel}
-            style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
           >
             {locale.dialogCancel()}
-          </button>
-          <button
+          </MuiButton>
+          <MuiButton
             id="import-button-and-redirect"
+            variant="contained"
+            color="primary"
+            size="small"
             type="button"
             onClick={this.handleRedirect}
-            style={Object.assign(
-              {},
-              styles.buttonPrimary,
-              !this.state.selectedId && {opacity: 0.5}
-            )}
             disabled={!this.state.selectedId}
           >
             {locale.chooseSection()}
-          </button>
+          </MuiButton>
         </div>
       </BaseDialog>
     );
@@ -319,22 +341,6 @@ const styles = {
   highlightRow: {
     backgroundColor: color.default_blue,
     color: color.white,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 15,
-    right: 20,
-    left: 20,
-  },
-  buttonPrimary: {
-    ...ctaButtonStyle,
-    float: 'right',
-  },
-  buttonSecondary: {
-    float: 'left',
-    background: '#eee',
-    color: '#5b6770',
-    border: '1px solid #c5c5c5',
   },
 };
 export const UnconnectedRosterDialog = RosterDialog;

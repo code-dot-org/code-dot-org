@@ -1,4 +1,5 @@
 @chrome
+@playwright
 Feature: Global Edition - Farsi MVP - Sign In page
 
   Background:
@@ -13,10 +14,10 @@ Feature: Global Edition - Farsi MVP - Sign In page
     # Have an account already? Sign in
     Given I wait until element "h2" contains text "دارای حساب کاربری هستید؟ وارد سیستم شوید"
     And element "form[action='/fa/join'] button" contains text matching "Go"
-    And element "form[action='/fa/users/auth/google_oauth2'] button" contains text matching "ورود از طریق حساب گوگل"
-    And element "form[action='/fa/users/auth/microsoft_v2_auth'] button" contains text matching "ورود از طریق حساب مایکروسافت"
-    And element "form[action='/fa/users/auth/facebook'] button" contains text matching "ورود از طریق حساب فیس‌بوک"
-    And element "form[action='/fa/users/auth/clever'] button" contains text matching "ورود از طریق باهوش"
+    And element "form[action='/users/auth/google_oauth2'] button" contains text matching "ورود از طریق حساب گوگل"
+    And element "form[action='/users/auth/microsoft_v2_auth'] button" contains text matching "ورود از طریق حساب مایکروسافت"
+    And element "form[action='/users/auth/facebook'] button" contains text matching "ورود از طریق حساب فیس‌بوک"
+    And element "form[action='/users/auth/clever'] button" contains text matching "ورود از طریق باهوش"
     And element "form[action='/fa/users/sign_in'] button" contains text matching "ورود"
     And the link reading "رمز عبور خود را فراموش کرده‌اید؟" within element "#signin" goes to "http://studio.code.org/fa/users/password/new"
     And the href of selector "#signin a:contains(یک حساب کاربری ایجاد کنید)" contains "/fa/users/sign_up/account_type"

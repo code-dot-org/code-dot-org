@@ -1,7 +1,7 @@
+import {Button as MuiButton} from '@mui/material';
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
@@ -118,7 +118,7 @@ describe('FoormEntityLoadButtons', () => {
   });
 
   it('shows blank editor on new library click', () => {
-    wrapper.find(Button).prop('onClick')();
+    wrapper.find(MuiButton).prop('onClick')();
 
     expect(showCodeMirrorStub).toHaveBeenCalledTimes(1);
   });

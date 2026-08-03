@@ -33,11 +33,12 @@
       ],
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-15 20:24:35 UTC",
+    "serialized_at": "2026-07-13 16:21:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -61,19 +62,1424 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Teaching Iterating with AI",
+      "name": "Teaching Iterating with AI",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how iteration and loops work\n*Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.",
+        "student_overview": " **By the end of this professional learning module, you will be able to:**\n\n* Explain how iteration and loops work\n*Implement loops in JavaScript to create interactive features such as filters, searches, and views\n* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code."
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf",
+      "position": 1,
+      "properties": {
+        "duration": 90
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf",
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7d93915e-3a16-480d-8aa9-64550aed2bc5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introducing Loops (20 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626",
+      "position": 3,
+      "properties": {
+        "progression_name": "Displaying Objects with Loops (20 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "64f735ea-9ba5-4204-b510-d0b2ac894287",
+      "position": 4,
+      "properties": {
+        "progression_name": "Filtering and Transparency (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "02899fda-d39e-40c0-8e6a-dfa35466d71a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Copying Data (15 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "023af9e5-db59-4ad0-840c-0466ed558b92",
+      "position": 6,
+      "properties": {
+        "progression_name": "Filtering Data (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "dc628e4a-a063-4879-a7bb-eab0924cd340",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrapping Up (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    },
+    {
+      "key": "46a6813c-24f2-4003-93aa-27fb0cce1058",
+      "position": 8,
+      "properties": {
+        "progression_name": "Progress Bar Sandbox"
+      },
+      "seeding_key": {
+        "activity_section.key": "46a6813c-24f2-4003-93aa-27fb0cce1058",
+        "lesson_activity.key": "48a38056-e162-4ba0-97dd-9bcaeb18c1bf"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-Intro-1_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-Intro-1_pl"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U4-curriculum-overview-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl=aif-2-U4-curriculum-overview-2_pl"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-class-context-3_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U4-class-context-3_pl"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-pl-context_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U4-pl-context_pl"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-project-overview-4_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-project-overview-4_pl"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-prompting_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-prompting_pl"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-types-of-loops-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-types-of-loops-2_pl"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-introducing-loops-1_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-introducing-loops-1_pl"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-introducing-loops-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-introducing-loops-2_pl"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-forloop-panel_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-forloop-panel_pl"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-debugging-for-loops-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-debugging-for-loops-video_pl"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-forloop-debug-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-forloop-debug-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reuseable-routine-loops_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-reuseable-routine-loops_pl"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif2-U4_debugging_loops-rebrand_pl"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-whileloop-panel_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-whileloop-panel_pl"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-sandbox-aif-sem2-iterating-with-ai-while-16_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      },
+      "level_keys": [
+        "pl-sandbox-aif-sem2-iterating-with-ai-while-16_pl"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-movie-app-display_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-movie-app-display_pl"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-trancparencycues-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-trancparencycues-video_pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-u4-filter-transparency-movie-times-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif2-u4-filter-transparency-movie-times-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pipeline-steps_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-pipeline-steps_pl"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-display-obj-cards_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-display-obj-cards_pl"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-designthinkging-user-perception_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-designthinkging-user-perception_pl"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Displaying Objects with Loops (20 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-rendering-w-fallbacks-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-rendering-w-fallbacks-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering and Transparency (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filters-intro_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filters-intro_pl"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering and Transparency (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filters-cont_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filters-cont_pl"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering and Transparency (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filtering-for-transparency-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filtering-for-transparency-video_pl"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering and Transparency (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-improve-filters-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-improve-filters-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering and Transparency (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fallback-bias-reflection_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-fallback-bias-reflection_pl"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Copying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pure-methods-visualizer_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-pure-methods-visualizer_pl"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Copying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-cop-dont-mutate_pl"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Copying Data (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-fix-reset-webLab_pl"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-and-threshold_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filter-and-threshold_pl"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-logic-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-filter-logic-video_pl"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Filtering Data (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-redesign-the-filter-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-redesign-the-filter-weblab_pl"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-wrap-up-project_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-wrap-up-project_pl"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-padlet-embed_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-padlet-embed_pl"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-lesson-resources-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-lesson-resources-2_pl"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-final-level_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-final-level_pl"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-Intro-1_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-Intro-1_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U4-curriculum-overview-2_pl",
+        "script_level.level_keys": [
+          "pl=aif-2-U4-curriculum-overview-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U4-class-context-3_pl",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-class-context-3_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U4-pl-context_pl",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U4-pl-context_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-project-overview-4_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-project-overview-4_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-prompting_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-prompting_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "7d93915e-3a16-480d-8aa9-64550aed2bc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-types-of-loops-2_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-types-of-loops-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-introducing-loops-1_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-introducing-loops-1_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-introducing-loops-2_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-introducing-loops-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-forloop-panel_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-forloop-panel_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-debugging-for-loops-video_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-debugging-for-loops-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-forloop-debug-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-forloop-debug-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-reuseable-routine-loops_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reuseable-routine-loops_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U4_debugging_loops-rebrand_pl",
+        "script_level.level_keys": [
+          "pl-aif2-U4_debugging_loops-rebrand_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-whileloop-panel_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-whileloop-panel_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-sandbox-aif-sem2-iterating-with-ai-while-16_pl",
+        "script_level.level_keys": [
+          "pl-sandbox-aif-sem2-iterating-with-ai-while-16_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "fb39d7ee-d03c-4fcc-8fff-97f0a85289d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-movie-app-display_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-movie-app-display_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-trancparencycues-video_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-trancparencycues-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-u4-filter-transparency-movie-times-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif2-u4-filter-transparency-movie-times-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-pipeline-steps_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pipeline-steps_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-display-obj-cards_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-display-obj-cards_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-designthinkging-user-perception_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-designthinkging-user-perception_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-rendering-w-fallbacks-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-rendering-w-fallbacks-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "6b42addf-f44b-4cfb-a1ff-d9b64c676626"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filters-intro_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filters-intro_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filters-cont_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filters-cont_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filtering-for-transparency-video_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filtering-for-transparency-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-improve-filters-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-improve-filters-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-fallback-bias-reflection_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fallback-bias-reflection_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "64f735ea-9ba5-4204-b510-d0b2ac894287"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-pure-methods-visualizer_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-pure-methods-visualizer_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-cop-dont-mutate_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-cop-dont-mutate_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-fix-reset-webLab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-fix-reset-webLab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "02899fda-d39e-40c0-8e6a-dfa35466d71a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filter-and-threshold_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-and-threshold_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-filter-logic-video_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-filter-logic-video_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-redesign-the-filter-weblab_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-redesign-the-filter-weblab_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "023af9e5-db59-4ad0-840c-0466ed558b92"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-wrap-up-project_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-wrap-up-project_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-padlet-embed_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-padlet-embed_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-lesson-resources-2_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-lesson-resources-2_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-final-level_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-final-level_pl"
+        ],
+        "lesson.key": "Teaching Iterating with AI",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-iterating-with-ai-2026",
+        "activity_section.key": "dc628e4a-a063-4879-a7bb-eab0924cd340"
+      }
+    }
   ],
   "resources": [
 

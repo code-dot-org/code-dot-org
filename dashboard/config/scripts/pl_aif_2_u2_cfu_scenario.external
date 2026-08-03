@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit 2 Scenario Quiz 
+# Unit 2 Scenario Quiz
 
 **Directions:**  
 The following scenarios represent common situations you may encounter while supporting students using AI to build apps with JavaScript.
@@ -14,251 +14,291 @@ For each scenario, select the facilitation move that best supports strong prompt
 
 ## Question 1: Writing JavaScript
 
-<img src="https://images.code.org/8c50b5a07d5a8e6442887c219fba4fda-image-1778251654466.png"  
-     alt="student unsure where to start writing JavaScript code"  
-     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
 
-**Scenario:**  
-A student wants to add a button feature to their app, but they say, “I don’t know where to start.”
+  <div style="flex:2;">
 
-They are not sure what code they need or where it should go.
+  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
 
-What is the best facilitation move?
+  <p style="font-size:14pt; line-height:1.5;">
+      A student wants to add a button feature to their app, but they say, “I don’t know where to start.”
+    </p>
 
-<div style="clear:both;"></div>
+  <p style="font-size:14pt; line-height:1.5;">
+      They are not sure what code they need or where it should go.
+    </p>
 
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-A) Tell them to ask AI to build the whole app
-</summary>
+  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
+      What is the best facilitation move?
+    </p>
 
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Asking AI to build everything skips the student’s planning and decision-making.
+  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          A) Tell them to ask AI to build the whole app
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Asking AI to build everything skips the student’s planning and decision-making.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          B) Ask what feature they are trying to build and what should happen when the user clicks
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
+          <strong>Correct Answer:</strong> Help the student name the feature and action first. Then they can focus on one feature at a time and decide where that code belongs.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          C) Give them the JavaScript code so they can move on
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Giving the code skips the learning goal of generating, analyzing, and modifying code.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          D) Tell them to work on several features at once
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Students should stay focused on one feature at a time.
+        </div>
+      </details>
+
+  </div>
+  </div>
+
+  <div style="flex:1; text-align:center;">
+    <img 
+      src="https://images.code.org/8c50b5a07d5a8e6442887c219fba4fda-image-1778251654466.png"
+      alt="student unsure where to start writing JavaScript code"
+      style="width:100%; max-width:300px; border-radius:10px;"
+    >
+  </div>
+
 </div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-B) Ask what feature they are trying to build and what should happen when the user clicks
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Correct Answer:</strong> Help the student name the feature and action first. Then they can focus on one feature at a time and decide where that code belongs.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-C) Give them the JavaScript code so they can move on
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Giving the code skips the learning goal of generating, analyzing, and modifying code.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-D) Tell them to work on several features at once
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Students should stay focused on one feature at a time.
-</div>
-</details>
 
 ---
 
 ## Question 2: Debugging Code
 
-<img src="https://images.code.org/9db2823087cde67466a97ba0d1e6e71d-image-1778251863228.png"  
-     alt="student debugging JavaScript code that is not working as expected"  
-     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
 
-**Scenario:**  
-A student runs their JavaScript program and says, “It’s just broken.”
+  <div style="flex:2;">
 
-They are frustrated and do not know what part of the code is causing the problem.
+  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
 
-What should you do?
+  <p style="font-size:14pt; line-height:1.5;">
+      A student runs their JavaScript program and says, “It’s just broken.”
+  </p>
 
-<div style="clear:both;"></div>
+  <p style="font-size:14pt; line-height:1.5;">
+      They are frustrated and do not know what part of the code is causing the problem.
+    </p>
 
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-A) Ask what the code is supposed to do, what it is doing instead, and where it stops working
-</summary>
+  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
+      What should you do?
+    </p>
 
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Correct Answer:</strong> Guide the student to break the problem down and trace the logic step-by-step.
+  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          A) Ask what the code is supposed to do, what it is doing instead, and where it stops working
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
+          <strong>Correct Answer:</strong> Guide the student to break the problem down and trace the logic step-by-step.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          B) Tell them to delete the program and start over
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Starting over does not help students build debugging habits.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          C) Fix the bug for them
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Fixing it for the student removes the opportunity to reason through the code.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          D) Tell them bugs are not important if they used AI
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> AI-generated code still needs to be tested, analyzed, and refined.
+        </div>
+      </details>
+
+  </div>
+  </div>
+
+  <div style="flex:1; text-align:center;">
+    <img 
+      src="https://images.code.org/9db2823087cde67466a97ba0d1e6e71d-image-1778251863228.png"
+      alt="student debugging JavaScript code that is not working as expected"
+      style="width:100%; max-width:300px; border-radius:10px;"
+    >
+  </div>
+
 </div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-B) Tell them to delete the program and start over
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Starting over does not help students build debugging habits.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-C) Fix the bug for them
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Fixing it for the student removes the opportunity to reason through the code.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-D) Tell them bugs are not important if they used AI
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> AI-generated code still needs to be tested, analyzed, and refined.
-</div>
-</details>
 
 ---
 
 ## Question 3: Prompting the AI
 
-<img src="https://images.code.org/138259ea4ef3b73b150659ccd5f41050-image-1778252098758.png"  
-     alt="student revising an AI prompt for JavaScript help"  
-     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
 
-**Scenario:**  
-A student asks AI, “Fix my code,” but the response does not help.
+  <div style="flex:2;">
 
-They say, “The AI isn’t helping.”
+  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
 
-What is the best facilitation move?
+  <p style="font-size:14pt; line-height:1.5;">
+      A student asks AI, “Fix my code,” but the response does not help.
+    </p>
 
-<div style="clear:both;"></div>
+  <p style="font-size:14pt; line-height:1.5;">
+      They say, “The AI isn’t helping.”
+    </p>
 
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-A) Help them describe what they are trying to build and what specific feature the AI should focus on
-</summary>
+  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
+      What is the best facilitation move?
+    </p>
 
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Correct Answer:</strong> Students should make the prompt more specific by describing the feature, what it should do, and what kind of help they need.
+  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          A) Help them describe what they are trying to build and what specific feature the AI should focus on
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
+          <strong>Correct Answer:</strong> Students should make the prompt more specific by describing the feature, what it should do, and what kind of help they need.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          B) Tell them to keep submitting the same prompt
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Repeating the same vague prompt is unlikely to improve the response.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          C) Tell them AI cannot help with JavaScript
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> AI can help when students give clear context and evaluate the response carefully.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          D) Ask AI for a completely new app instead
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> The student should stay focused on one feature and refine the prompt.
+        </div>
+      </details>
+
+  </div>
+  </div>
+
+  <div style="flex:1; text-align:center;">
+    <img 
+      src="https://images.code.org/138259ea4ef3b73b150659ccd5f41050-image-1778252098758.png"
+      alt="student revising an AI prompt for JavaScript help"
+      style="width:100%; max-width:300px; border-radius:10px;"
+    >
+  </div>
+
 </div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-B) Tell them to keep submitting the same prompt
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Repeating the same vague prompt is unlikely to improve the response.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-C) Tell them AI cannot help with JavaScript
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> AI can help when students give clear context and evaluate the response carefully.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-D) Ask AI for a completely new app instead
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> The student should stay focused on one feature and refine the prompt.
-</div>
-</details>
 
 ---
 
 ## Question 4: Understanding AI Responses
 
-<img src="https://images.code.org/6363ada0ea3b384472fcd24d46cb011c-image-1778252315642.png"  
-     alt="student reviewing AI-generated JavaScript before using it"  
-     style="width: 40%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+<div style="display:flex; gap:24px; align-items:flex-start; margin:24px 0;">
 
-**Scenario:**  
-A student copies JavaScript from AI into their project without reading it.
+  <div style="flex:2;">
 
-When you ask what the code does, they say, “I’m not sure, but the AI gave it to me.”
+  <p style="font-size:16pt;"><strong>Scenario:</strong></p>
 
-What should you do?
+  <p style="font-size:14pt; line-height:1.5;">
+      A student copies JavaScript from AI into their project without reading it.
+    </p>
 
-<div style="clear:both;"></div>
+   <p style="font-size:14pt; line-height:1.5;">
+      When you ask what the code does, they say, “I’m not sure, but the AI gave it to me.”
+    </p>
 
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-A) Approve the code because it came from AI
-</summary>
+  <p style="font-size:16pt; font-weight:bold; margin-top:18px;">
+      What should you do?
+    </p>
 
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> Students need to understand, test, and refine AI-generated code.
+  <div style="display:grid; grid-template-columns:1fr; gap:14px; margin-top:18px;">
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          A) Approve the code because it came from AI
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> Students need to understand, test, and refine AI-generated code.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          B) Ask what part makes sense, what they would change, and whether the output does what they asked
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#EAF7F8;border-left:6px solid #008C95;border-radius:12px;padding:14px 16px;">
+          <strong>Correct Answer:</strong> Encourage the student to think it through instead of copying. Students should check the output and refine the code.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          C) Tell them not to use AI again
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> The goal is not to avoid AI, but to use it thoughtfully.
+        </div>
+      </details>
+
+  <details>
+        <summary style="cursor:pointer;display:block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
+          D) Tell them understanding the code is optional if the app works
+        </summary>
+        <div style="margin-top:12px;font-size:12pt;background:#FFF4F4;border-radius:12px;padding:14px 16px;">
+          <strong>Incorrect Answer:</strong> A working app is not the endpoint. Students show learning by explaining, evaluating, and improving code.
+        </div>
+      </details>
+
 </div>
-</details>
+  </div>
 
-<br>
+  <div style="flex:1; text-align:center;">
+    <img 
+      src="https://images.code.org/6363ada0ea3b384472fcd24d46cb011c-image-1778252315642.png"
+      alt="student reviewing AI-generated JavaScript before using it"
+      style="width:100%; max-width:300px; border-radius:10px;"
+    >
+  </div>
 
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-B) Ask what part makes sense, what they would change, and whether the output does what they asked
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Correct Answer:</strong> Encourage the student to think it through instead of copying. Students should check the output and refine the code.
 </div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-C) Tell them not to use AI again
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> The goal is not to avoid AI, but to use it thoughtfully.
-</div>
-</details>
-
-<br>
-
-<details>
-<summary style="cursor:pointer;display:inline-block;background:#8148B2;color:white;padding:14px 22px;font-size:18px;font-weight:600;border-radius:999px;list-style:none;">
-D) Tell them understanding the code is optional if the app works
-</summary>
-
-<div style="margin-top:16px;font-size: 12pt;">
-<strong>Incorrect Answer:</strong> A working app is not the endpoint. Students show learning by explaining, evaluating, and improving code.
-</div>
-</details>
 MARKDOWN

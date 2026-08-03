@@ -20,6 +20,9 @@ on:
 
 env:
   APPLITOOLS_BATCH_ID: ${{ github.event.pull_request.head.sha || github.sha }}
+  # Playwright container image tag. Version must match the catalog pin in
+  # frontend/.yarnrc.yml; variant (noble/jammy) must match the runner's Ubuntu release.
+  PLAYWRIGHT_IMAGE_TAG: 'v1.59.1-noble'
 
 jobs:
   # Initializes common variables and environment prior to executing other jobs
@@ -29,7 +32,12 @@ jobs:
       component-library-changed: ${{ steps.changes.outputs.component-library }}
       studio-changed: ${{ steps.changes.outputs.studio }}
       oceans-changed: ${{ steps.changes.outputs.oceans }}
+      markdown-changed: ${{ steps.changes.outputs.markdown }}
+      playwright-image-tag: ${{ env.PLAYWRIGHT_IMAGE_TAG }}
     steps:
+      # paths-filter needs a local git repo to diff push events (PRs use the API).
+      - uses: actions/checkout@v4
+
       # Determine what changed to later skip workflows
       # Github Actions does not offer conditional runtime path filtering, thus use this action to calculate the
       # changes. Root level applications (such as marketing) are not skipped as its dependency tree always changes
@@ -53,6 +61,17 @@ jobs:
               - 'frontend/packages/labs/oceans/**'
               - 'frontend/packages/core/**'
               - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/playwright-support/**'
+              - 'frontend/*'
+              - '.github/**'
+            markdown:
+              - 'frontend/packages/markdown/**'
+              - 'frontend/packages/component-library/**'
+              - 'frontend/packages/component-library-styles/**'
+              - 'frontend/packages/core/**'
+              - 'frontend/packages/fonts/**'
+              - 'frontend/packages/lint-config/**'
+              - 'frontend/packages/playwright-support/**'
               - 'frontend/*'
               - '.github/**'
 
@@ -68,6 +87,8 @@ jobs:
     if: ${{ needs.setup.outputs.component-library-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/component-library-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Start the oceans lab CI workflow
@@ -75,12 +96,23 @@ jobs:
     if: ${{ needs.setup.outputs.oceans-changed == 'true' }}
     needs: setup
     uses: ./.github/workflows/oceans-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
+    secrets: inherit
+
+  # Start the markdown package CI workflow
+  markdown:
+    if: ${{ needs.setup.outputs.markdown-changed == 'true' }}
+    needs: setup
+    uses: ./.github/workflows/markdown-ci.yml
+    with:
+      playwright-image-tag: ${{ needs.setup.outputs.playwright-image-tag }}
     secrets: inherit
 
   # Common teardown actions that must occur after _all_ workflows have completed.
   # For example, closing the Applitools batch after its completion.
   teardown:
-    needs: [setup, component-library, oceans]
+    needs: [setup, component-library, oceans, markdown]
     if: always()
     runs-on: ubuntu-24.04
     steps:

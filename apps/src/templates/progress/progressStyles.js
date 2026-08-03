@@ -1,5 +1,3 @@
-import fontConstants from '@cdo/apps/fontConstants';
-import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 /**
@@ -47,16 +45,12 @@ export const marginTopBottom = margin => {
  * ======================================
  */
 
-export const font = {
-  ...fontConstants['main-font-semi-bold'],
-};
-
 export const hoverStyle = {
   ':hover': {
     textDecoration: 'none',
-    color: color.white,
-    borderColor: color.level_current,
-    backgroundColor: color.level_current,
+    color: 'var(--text-neutral-inverse)',
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
   },
   transition:
     'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
@@ -74,10 +68,10 @@ export const hoverStyle = {
 export function levelProgressStyle(levelStatus, levelKind) {
   let style = {
     borderWidth: 2,
-    borderColor: color.lighter_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     borderStyle: 'solid',
-    color: color.charcoal,
-    backgroundColor: color.level_not_tried,
+    color: 'var(--text-neutral-primary)',
+    backgroundColor: 'var(--background-neutral-primary)',
   };
 
   const statusStyle =
@@ -93,63 +87,71 @@ export function levelProgressStyle(levelStatus, levelKind) {
 
 const assessmentStatusStyle = {
   [LevelStatus.attempted]: {
-    borderColor: color.level_submitted,
+    borderColor: 'var(--borders-brand-purple-primary)',
   },
   [LevelStatus.submitted]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white,
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.completed_assessment]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white,
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.perfect]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white,
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
 };
 
+// --borders-success-primary on a --background-success-primary fill reads as a
+// ring of a slightly different green rather than as an outline, because under
+// codeai-next the two tokens resolve close together (#34bd43 on #258830). The
+// success statuses below all draw their border in the fill color instead: on a
+// filled bubble the border disappears into the fill, and on an unfilled one
+// (attempted, passed) it stays a visible green outline.
+const levelSuccessStatusBorderColor = 'var(--background-success-primary)';
+
 const levelStatusStyle = {
   [LevelStatus.attempted]: {
-    borderColor: color.level_perfect,
+    borderColor: levelSuccessStatusBorderColor,
   },
   [LevelStatus.perfect]: {
-    borderColor: color.level_perfect,
-    backgroundColor: color.level_perfect,
-    color: color.white,
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.free_play_complete]: {
-    borderColor: color.level_perfect,
-    backgroundColor: color.level_perfect,
-    color: color.white,
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: color.level_perfect,
-    backgroundColor: color.level_passed,
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-extra-light)',
   },
   // Note: There are submittable levels that are not assessments.
   [LevelStatus.submitted]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white,
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.completed_assessment]: {
-    borderColor: color.level_submitted,
-    backgroundColor: color.level_submitted,
-    color: color.white,
+    borderColor: 'var(--borders-brand-purple-primary)',
+    backgroundColor: 'var(--background-brand-purple-primary)',
+    color: 'var(--text-neutral-inverse)',
   },
   // Below are used by peer reviews
   [LevelStatus.review_rejected]: {
-    color: color.white,
-    borderColor: color.level_review_rejected,
-    backgroundColor: color.level_review_rejected,
+    color: 'var(--text-neutral-inverse)',
+    borderColor: 'var(--borders-error-primary)',
+    backgroundColor: 'var(--background-error-primary)',
   },
   [LevelStatus.review_accepted]: {
-    color: color.white,
-    borderColor: color.level_perfect,
-    backgroundColor: color.level_perfect,
+    color: 'var(--text-neutral-inverse)',
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-primary)',
   },
 };

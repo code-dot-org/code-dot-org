@@ -24,7 +24,7 @@
     "designing-reliable-apps-with-ai-and-apis-2026",
     "web-apps-with-ai-capstone-project-2026"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -44,6 +44,39 @@
       },
       "seeding_key": {
         "resource.key": "aif_designing_and_building_with_ai_syllabus"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/resources",
+      "key": "all_resources_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_8"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/ai-foundations-designing-and-building-with-ai-2026/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
       }
     }
   ],

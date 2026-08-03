@@ -795,7 +795,7 @@ Artist.prototype.reset = function (ignore) {
 Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
-  document.getElementById('spinner').style.visibility = 'visible';
+  document.getElementById('spinner').style.display = 'inline-block';
   this.studioApp_.attempts++;
   this.execute(this.executionInfo);
 };
@@ -825,7 +825,7 @@ Artist.prototype.evalCode = function (code, executionInfo) {
     // and analyze success/failure based on what was drawn.
     // Otherwise, abnormal termination is a user error.
     if (e.message !== 'Infinity') {
-      // call window.onerror so that we get new relic collection.  prepend with
+      // call window.onerror so browser observability captures it. prepend with
       // UserCode so that it's clear this is in eval'ed code.
       if (window.onerror) {
         window.onerror('UserCode:' + e.message, document.URL, 0);
@@ -1023,7 +1023,7 @@ Artist.prototype.executeTuple_ = function () {
 Artist.prototype.finishExecution_ = function () {
   this.studioApp_.stopLoopingAudio('start');
 
-  document.getElementById('spinner').style.visibility = 'hidden';
+  document.getElementById('spinner').style.display = 'none';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }

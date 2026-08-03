@@ -1,0 +1,96 @@
+// CreateMenu styles. These override MUI's Button / List / MenuItem theme styles;
+// they win because MUI's emotion styles are in `@layer mui` (enableCssLayer) and
+// these module classes are unlayered. @media values are static px (originals
+// derive from HEADER_BREAKPOINTS). The Menu paper reuses the shared
+// `.menuPaper` from headerMenu.module.scss in CreateMenu.tsx.
+
+// "New project" trigger: transparent outline pill on the teal bar. Header-button
+// pill geometry matches the Rails header's `.header_button` under codeai-brand.
+.createTrigger {
+  display: inline-flex;
+  min-width: 0;
+  height: 32px;
+  padding: 6.5px 1rem;
+  column-gap: 8px;
+  color: var(--neutral-base-white);
+  border: 1px solid var(--neutral-base-white);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 1.5;
+  text-transform: none;
+  white-space: nowrap;
+
+  // Hidden below the desktop-full breakpoint; authored default-visible so jsdom
+  // (which ignores @media) keeps the button testable.
+  @media (max-width: 1200px) {
+    display: none;
+  } // < HEADER_BREAKPOINTS.desktopFull
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    box-shadow: none;
+    border: 1px solid var(--neutral-base-white);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--neutral-white-alpha-20);
+  }
+
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+    outline: 1px solid var(--border-neutral-white-fixed);
+    outline-offset: 2px;
+  }
+
+  :global(.MuiButton-endIcon),
+  :global(.MuiButton-endIcon) i {
+    width: auto;
+    font-size: 14px;
+  }
+}
+
+// Project-type picker list (the Menu's list slot).
+.createList {
+  min-width: 240px;
+  padding: 4px 0;
+}
+
+// Project-type picker rows: icon + label tiles.
+.createTile {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 0;
+  padding: 0.375rem;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &:visited,
+  &:active {
+    color: var(--text-neutral-primary);
+  }
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+  }
+}
+
+// Layout for the project-tile icon in each row.
+.tileIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 4px;
+}

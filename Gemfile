@@ -78,6 +78,7 @@ gem 'rack_csrf'
 
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'bootsnap', '>= 1.14.0', require: false
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
@@ -85,11 +86,8 @@ gem 'annotaterb', '~> 4.19', group: [:development, :test]
 
 group :development do
   gem 'aws-google', '~> 0.2.3'
-  gem 'web-console', '~> 4.2.0'
-  # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
-  # We only use it in development atm to get a feel for it, and the benefit is greatest here.
-  gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -201,7 +199,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
+# Target the same version of Bootstrap as we use in Javascript while we work on
+# moving all assets into the JS pipeline.
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
 
@@ -212,8 +213,6 @@ gem 'nokogiri', '~> 1.18.9'
 gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
-
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -278,7 +277,8 @@ gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
-gem 'aws-sdk-rds'
+gem 'aws-sdk-pricing'
+gem 'aws-sdk-rds', '>= 1.205.0'
 gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
@@ -360,10 +360,10 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', '~> 2.19.1'
 
-# Install pg gem only on specific production hosts and the i18n-dev server.
+# Install pg gem only on specific production hosts.
 require_pg = lambda do
   require 'socket'
-  %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
+  %w[production-daemon production-console].include?(Socket.gethostname)
 end
 
 install_if require_pg do
@@ -389,8 +389,6 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.10.0'
-
 gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
@@ -406,6 +404,9 @@ gem 'statsig', '~> 2.5.5'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+# Used for generating js file that defines all Rails named routes as js helper functions.
+gem 'js-routes', '~> 2.3', require: false
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"

@@ -17,9 +17,27 @@
 #
 # Indexes
 #
+#  index_aichat_requests_on_created_at        (created_at)
 #  index_aichat_requests_on_execution_status  (execution_status)
 #
 class AichatRequest < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    level_id: :restricted,
+    script_id: :restricted,
+    project_id: :restricted,
+    model_customizations: :restricted,
+    stored_messages: :restricted,
+    new_message: :restricted,
+    execution_status: :restricted,
+    response: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   belongs_to :user
   after_initialize :set_default_execution_status
 

@@ -10,14 +10,12 @@ markdown <<MARKDOWN
 </div>
 <br>
 
-# Welcome!
-
 This professional learning module prepares you to teach a unit where students advance from managing single interactions to processing entire collections of data using iteration and loops.
 
 
 
 
-___
+
 
 <div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
   <img src="https://images.code.org/36211eedb3698751fa5523b4dde93351-image-1760467094025.png" style="border-radius: 5pt; width: 32%;">
@@ -32,7 +30,7 @@ ___
 
 * Explain how iteration and loops work
 * Implement loops in JavaScript to create interactive features such as filters, searches, and views
-* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code.
+* Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code
 
 
 

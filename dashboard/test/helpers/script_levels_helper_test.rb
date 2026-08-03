@@ -12,23 +12,32 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
+
+    # HOC tutorial URLs are derived from the unit name, so these tests need
+    # units with the exact tutorial names.
+    # HOC_2013_NAME ('Hour of Code') needs skip_name_format_validation because
+    # of its legacy spaces-and-capitals name.
+    [Unit::HOC_2013_NAME, Unit::FROZEN_NAME, Unit::STARWARS_NAME, Unit::ARTIST_NAME].each do |name|
+      create(:script, name: name, skip_name_format_validation: true)
+    end
+    setup_script_cache
   end
 
   test 'tracking_pixel_url' do
     # hoc
-    assert_equal '//test-studio.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_codeorg.png', tracking_pixel_url(Unit.get_from_cache(Unit::HOC_2013_NAME))
 
-    assert_equal '//test-studio.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
-    assert_equal '//test-studio.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_frozen.png', tracking_pixel_url(Unit.get_from_cache(Unit::FROZEN_NAME))
+    assert_equal 'https://test-studio.code.org/api/hour/begin_artist.png', tracking_pixel_url(Unit.get_from_cache(Unit::ARTIST_NAME))
   end
 
   test 'hoc_finish_url' do
     # hoc
-    assert_equal '//test-studio.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish', Unit.get_from_cache(Unit::HOC_2013_NAME).hoc_finish_url
 
-    assert_equal '//test-studio.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
-    assert_equal '//test-studio.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
-    assert_equal '//test-studio.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/frozen', Unit.get_from_cache(Unit::FROZEN_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/starwars', Unit.get_from_cache(Unit::STARWARS_NAME).hoc_finish_url
+    assert_equal 'https://test-studio.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
   test 'unit name instead of lesson name in header for single-lesson unit' do

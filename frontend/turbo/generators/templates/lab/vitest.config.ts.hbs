@@ -1,10 +1,12 @@
-import react from '@vitejs/plugin-react';
-import {defineConfig} from 'vitest/config';
+import {mergeConfig} from 'vitest/config';
 
-export default defineConfig({
-  plugins: [react()],
+import base from '@code-dot-org/lint-config/vitest/react.mjs';
+
+// Extend the shared React base. The only per-lab addition is excluding the
+// Playwright e2e specs (`*.spec.ts` under e2e/) — those run under `test:ui`,
+// not Vitest.
+export default mergeConfig(base, {
   test: {
-    globals: true,
-    environment: 'jsdom',
+    exclude: ['e2e/**', 'node_modules/**', 'dist/**'],
   },
 });

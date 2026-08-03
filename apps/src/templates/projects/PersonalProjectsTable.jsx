@@ -12,7 +12,6 @@ import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectI
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -259,11 +258,11 @@ export default connect(state => ({
 export const styles = {
   cellFirst: {
     borderWidth: '1px 0px 1px 1px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
   },
   headerCellFirst: {
     borderWidth: '0px 0px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
   },
   cellThumbnail: {
     width: THUMBNAIL_SIZE,
@@ -276,13 +275,13 @@ export const styles = {
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
     width: 250,
   },
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
-    borderColor: color.border_light_gray,
+    borderColor: 'var(--borders-neutral-primary)',
     padding: 15,
   },
   centeredCell: {

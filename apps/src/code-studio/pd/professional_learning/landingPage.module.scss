@@ -1,11 +1,10 @@
 // Styles for studio.code.org/my-professional-learning
 
-@use 'color.scss';
 @import '@code-dot-org/component-library-styles/typography.module';
 @import 'breakpoints';
 
 main.wrapper {
-  max-width: 60rem;
+  max-width: 62rem;
   padding: 4rem 1rem;
   margin-inline: auto;
 }
@@ -15,7 +14,7 @@ section {
 }
 
 .headerContainer {
-  background-color: color.$light_gray_50;
+  background-color: var(--background-neutral-secondary);
   padding: 0 1rem;
 }
 
@@ -55,7 +54,7 @@ section {
 
   hr {
     margin: 0;
-    border-color: color.$light_gray_200;
+    border-color: var(--borders-neutral-primary);
   }
 
   .dialogContainer {
@@ -97,12 +96,12 @@ section {
     table {
       border: 1px solid;
       border-radius: 0.25rem;
-      border-color: color.$light_gray_200;
+      border-color: var(--borders-neutral-primary);
 
       .calendarTableHeaderCell {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
-        background-color: color.$light_gray_50;
+        background-color: var(--background-neutral-secondary);
         border: none;
 
         @media screen and (min-width: $width-sm) {
@@ -113,7 +112,7 @@ section {
       tbody {
         tr {
           border-top: 1px solid;
-          border-color: color.$light_gray_200;
+          border-color: var(--borders-neutral-primary);
         }
       }
 
@@ -127,7 +126,7 @@ section {
 
       .addSessionToCalendarButton {
         padding: 0.125rem 0.5rem;
-        border-color: color.$light_gray_400;
+        border-color: var(--borders-neutral-strong);
 
         span {
           font-size: 0.75rem;

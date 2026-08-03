@@ -104,6 +104,7 @@ $tabs-default-spacing: 4px;
 
   .chatDisabledIcon {
     font-size: 2rem;
+    color: var(--text-neutral-quaternary);
   }
 }
 
@@ -113,6 +114,7 @@ $tabs-default-spacing: 4px;
   .chatDisabledAlertIcon.chatDisabledAlertIcon {
     font-size: 1.25rem;
     align-self: center;
+    color: var(--text-neutral-quaternary);
   }
 }
 
@@ -165,6 +167,10 @@ $tabs-default-spacing: 4px;
   gap: 0.75rem;
   align-items: flex-start;
   min-width: 0;
+
+  &:empty {
+    display: none;
+  }
 }
 
 .alertLink {

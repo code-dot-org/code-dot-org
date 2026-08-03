@@ -34,7 +34,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 ### Load Balancers
 
 - **ALB access logs**: After CloudFront, requests that reach the Application Load Balancer are logged with full request/target/latency details. Logging is enabled directly on the ALB via [access log attributes](../aws/cloudformation/cloud_formation_stack.yml.erb#L300-L305), and those CSV logs are written to S3 under the standard `AWSLogs/<account>/<region>/elasticloadbalancing/` prefixes. We define an Athena schema so you can query ALB traffic efficiently using the [ELB/ALB Glue/Athena schema](../aws/cloudformation/data.yml.erb#L350-L420).
-- **CodeProjects ALB access logs**: The codeprojects.org Application Load Balancer (manually configured, not in infrastructure-as-code) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/`. A Glue crawler discovers these logs and exposes them in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). Format is the same space-delimited ALB format as the main dashboard ALB logs.
+- **CodeProjects ALB access logs**: The codeprojects.org Application Load Balancer (manually configured, not in infrastructure-as-code) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/[AccountID]/elasticloadbalancing/us-east-1/`. A Glue crawler discovers these logs and exposes them in Athena as table `elb_logs.codeprojects_alb` (partitioned by `year/month/day`). Format is the same space-delimited ALB format as the main dashboard ALB logs.
 
 ### Application servers (EC2)
 
@@ -68,7 +68,7 @@ This document inventories logging across the Code.org platform. It explains, in 
 ### Observability services (third-party)
 
 - **[Honeybadger](../lib/cdo/honeybadger.rb)**: Honeybadger reports back‑end errors in [Rails](../dashboard/app/controllers/application_controller.rb#L386-L388) and in CLI/cron jobs via specialized stdout/stderr capture [helpers](../lib/cdo/honeybadger.rb#L27-L74), and forwards infrastructure alerts through a CloudWatch→SNS [Lambda](../aws/cloudformation/honeybadgerNotify.js#L4-L24) defined in the [alerting template](../aws/cloudformation/alerting.yml.erb#L21-L41).
-- **[New Relic](../cookbooks/cdo-apps/templates/default/newrelic.yml.erb)**: New Relic provides back‑end Application Performance Monitoring (APM) and records server‑side custom metrics such as the [Files API](../dashboard/legacy/middleware/files_api.rb#L90-L106), and it captures errors/exceptions in the [studio front‑end](../apps/src/logToCloud.js#L31-L41) and the [marketing front‑end](../frontend/apps/marketing/src/providers/newrelic/NewRelicLoader.tsx#L6-L13).
+- **[OpenTelemetry + Sentry](../dashboard/engines/observability/README.md)**: Backend APM is provided by an OpenTelemetry SDK that auto-instruments Rails and forwards spans through a local OTel Contrib collector ([cookbook](../cookbooks/cdo-otel-collector)) to Sentry. Application-level events are emitted as span events on the active OTel span (e.g. [Files API](../dashboard/legacy/middleware/files_api.rb#L90-L106) calls `OpenTelemetry::Trace.current_span.add_event(...)`). Browser-side errors are reported to Sentry via the [observability plugin](../frontend/packages/core/src/plugins/observability) consumed by `apps/src/sites/studio/pages/essential.js`.
 - **Statsig**: This is used for feature flagging/analytics for [marketing site](../frontend/apps/marketing/src/providers/statsig/client.ts), studio [front‑end](../apps/webpackEntryPoints.js), and [back‑end](../dashboard/lib/metrics/events.rb). Where possible, prefer Statsig (or equivalent) for client analytics events over direct Firehose writes.
 
 ## Destinations (and durability expectations)
@@ -80,7 +80,7 @@ This document inventories logging across the Code.org platform. It explains, in 
   - Production web frontends: instances cloned from the latest AMI builder upload under a shared prefix `hosts/ami-<builder-instance-id>/<app>` (the builder is a stopped EC2 instance; clear the "running" filter to find it). 
   - The hourly cronjob to sync logs (`upload-logs-to-s3`) caused ~99% loss of these files in production web frontends, because each instance overwrote the files in the shared `hosts/ami-<id>/` bucket rather than using a unique bucket. To fix the data loss, `puma_stdout.log*` and `puma_stderr.log*` are now directly streamed to the CloudWatch `<env>-syslog` log group via the CloudWatch Agent, and the S3 uploader cronjob has been disabled on web frontends. The `milestone.log*` files are no longer used and no longer written.
 - **`<stack-name>-alb-access-logs/` ALB access logs** (space‑delimited [format](./log-formats.md#application-load-balancer-alb-logs)): Load balancer logs are written to `s3://cdo-logs/<stack-name>-alb-access-logs/AWSLogs/<account>/elasticloadbalancing/<region>/YYYY/MM/DD/`. Queryable in Athena using the [ALB/ELB schema](../aws/cloudformation/data.yml.erb#L350-L420).
-- **`codeprojects-elb/` CodeProjects ALB access logs** (space‑delimited [format](./log-formats.md#application-load-balancer-alb-logs)): The codeprojects.org ALB (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/475661607190/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. Queryable in Athena via table `elb_logs.codeprojects_alb` (discovered by Glue crawler `codeprojects_alb_logs`).
+- **`codeprojects-elb/` CodeProjects ALB access logs** (space‑delimited [format](./log-formats.md#application-load-balancer-alb-logs)): The codeprojects.org ALB (manually configured) writes logs to `s3://cdo-logs/codeprojects-elb/AWSLogs/[AccountID]/elasticloadbalancing/us-east-1/YYYY/MM/DD/`. Queryable in Athena via table `elb_logs.codeprojects_alb` (discovered by Glue crawler `codeprojects_alb_logs`).
 - **`cloudfront/<env>-<app>-cdn/` CloudFront access logs** (TSV [format](./log-formats.md#cloudfront-standard-access-logs-non-real-time)): initially land under `s3://cdo-logs/cloudfront/<env>-<app>-cdn/` and are rewritten by the partition Lambda to `s3://cdo-logs/cloudfront/<env>-<app>-cdn/year=YYYY/month=MM/day=DD/hour=HH/<ID>.YYYY-MM-DD-HH.<hash>.gz`, matching the [Athena table](../aws/cloudformation/data.yml.erb#L504-L563). During extreme traffic (e.g., DDoS), the end‑to‑end pipeline is best‑effort and short‑term gaps can occur due to S3 event throttling, Lambda concurrency limits, or retry exhaustion; operationally, these logs are not guaranteed to be 100% complete in peak scenarios.
 - **`AWSLogs/` CloudTrail logs** (JSON [format](./log-formats.md#cloudtrail-logs)): AWS delivers API activity here and can be queried in Athena  under `cdo.cloudtrail_logs`.
 
@@ -121,7 +121,7 @@ First, the browser requests the document page for a level:
 
 Secondly, while the user is on the page (in addition to the above):
 
-- Browser‑side interaction events are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group; the page may also [report](#observability-services-thirdparty) New Relic page actions/errors.
+- Browser‑side interaction events are batched and [written](#cloudwatch-logs) to the `<env>-browser-events` CloudWatch log group; the page may also [report](#observability-services-thirdparty) errors to Sentry through the observability plugin.
 - Client analytics may [log](#observability-services-thirdparty) to Statsig (back‑end via server SDK; front‑end via app code) and [log](#event-pipelines-firehose) to Firehose (deprecated).
 - Background jobs (e.g., ActiveJob) kicked off from user actions [log](#application-servers-ec2) via the same Rails logger and appear in the same `<env>-syslog` CloudWatch log group.
 - Hourly, instance app logs are [synced](#s3-cdo-logs-bucket) to S3 for long‑term retention.
@@ -133,8 +133,8 @@ Secondly, while the user is on the page (in addition to the above):
 - Reduce duplication between layers
   - CloudFront logging: Standard TSV uploads and the real-time Parquet pipeline both record every request. Decide whether to keep real-time for fast DDoS triage or fall back to the legacy archive, but stop paying for both.
   - General Request Logging: CloudFront, ALB, NGINX, and Rails all log requests. Maybe we keep CloudFront; keep Rails for application context.
-  - Errors: Rails/syslog, Honeybadger, and New Relic all capture the same failures. Treat Honeybadger as the alerting source; keep Rails/syslog for raw detail;
-  - Front‑end telemetry: New Relic Browser, Browser Events, Firehose, and Statsig all track user behavior. Maybe favor New Relic for JS errors; favor Statsig for experiments and analytics.
+  - Errors: Rails/syslog, Honeybadger, and Sentry (via OTel) all capture the same failures. Treat Honeybadger as the alerting source; keep Rails/syslog for raw detail;
+  - Front‑end telemetry: Sentry (errors), Browser Events, Firehose, and Statsig all track user behavior. Favor Sentry for JS errors; favor Statsig for experiments and analytics.
   - Database visibility: Rails Lograge timings and Aurora exports full audit/slow/general/error logs to CloudWatch. Maybe one can be retired.
 - Ensure graceful autoscaling termination flushes hourly-synced logs to S3.
   - This would assure no logs are lost on instance termination of scale-down or production code deploys.

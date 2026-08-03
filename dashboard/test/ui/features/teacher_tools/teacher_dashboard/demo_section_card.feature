@@ -2,6 +2,8 @@
 Feature: Demo section card on the teacher homepage
 
   Scenario: Teacher with zero sections can create a practice section from the homepage
+    Given I am on "http://studio.code.org/home"
+    Given I use a cookie to mock the DCDO key "hide-teacher-dashboard-logo-animation" as "true"
     Given I am a teacher
     And I am on "http://studio.code.org/teacher_dashboard/home?enableExperiments=demo-section"
     Then I wait until element "#ui-test-demo-section-card" is visible

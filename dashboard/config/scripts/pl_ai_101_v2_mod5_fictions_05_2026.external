@@ -1,0 +1,119 @@
+name 'pl-ai-101-V2-mod5-fictions-05_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Identifying AI Fictions
+
+Now that you’ve explored what AI fictions are and why they occur, this activity focuses on applying that understanding to realistic classroom scenarios.
+
+In each example, a teacher or student uses AI to support a task. Your job is to look closely at the response and identify what might be misleading, incomplete, or inaccurate.
+
+👉 Review each scenario and decide what seems off before clicking on to reveal the explanation.
+
+>**💬 Quick Reflection:** What clues can you be looking out for to help you identify AI fictions?
+
+--- 
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Confident Answers
+</div>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 5th-grade teacher is preparing a quick mini-lesson on ecosystems and wants to include an engaging fact about the Amazon rainforest. They use AI to generate a quick explanation and receive the following response.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+The Amazon rainforest produces 50% of the world's oxygen, making it the "lungs of the Earth."
+</div>
+</div>
+
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response includes a widely repeated but misleading statistic that oversimplifies how oxygen cycles work. It sounds authoritative and complete, but presents an inaccurate claim without context or verification.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Oversimplifcation
+</div>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 6th-grade math teacher is planning a lesson on ratios and wants to better support a wide range of learners in their classroom. They ask AI for ideas on how to differentiate the assignment.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+A good way to differentiate this lesson is to give struggling students an easier version of the assignment and advanced students a harder version. This ensures all students are working at the right level.
+</div>
+</div>
+
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response oversimplifies differentiation by reducing it to "easier versus harder" tasks, which does not reflect best instructional practice. It presents a partial strategy as if it were complete, leaving out important approaches such as scaffolding, student choice, flexible grouping, and varied supports.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+<div style="max-width:900px; margin:20px auto; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; color:#292F36;">
+
+<details style="margin-bottom:12px; border:1px solid #D9DDE3; border-radius:10px; overflow:hidden; background:white;">
+
+<summary style="cursor:pointer; padding:16px 18px; background-color:#F7F8FA;">
+
+<div style="font-size:18px; font-weight:600; margin-bottom:8px;">
+Missing Context
+</div>
+
+<div style="font-size:15px; line-height:1.45; color:#555; margin-bottom:12px;">
+A 9th-grade social studies teacher is grading short-answer responses about a historical event and uses AI to help generate feedback for students. One student submits an answer that shows partial understanding but includes some confusion.
+</div>
+
+<div style="background:#F7F8FA; border-left:5px solid #000; border-radius:10px; padding:14px;">
+<div style="font-size:15px; line-height:1.45;">
+This response is incorrect because it does not match the expected answer. The student should review the material and try again.
+</div>
+</div>
+
+</summary>
+
+<div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB;">
+
+<p style="margin:0; font-size:15px; line-height:1.5; color:#555;">
+This response ignores the student's partial understanding and provides feedback that is generic rather than instructional. By treating the answer as simply right or wrong, it misses an opportunity to identify misconceptions and guide the student's next steps.
+</p>
+
+</div>
+
+</details>
+
+</div>
+MARKDOWN

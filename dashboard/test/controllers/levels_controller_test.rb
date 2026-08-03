@@ -857,6 +857,26 @@ class LevelsControllerTest < ActionController::TestCase
     assert level.properties['start_sources']
   end
 
+  test "update_start_code clears starter_assets for lab2 javalab" do
+    level = create(:javalab, uses_lab2: true, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_nil assigns(:level).starter_assets
+  end
+
+  test "update_start_code keeps starter_assets for legacy javalab" do
+    level = create(:javalab, starter_assets: {"welcome.png" => "123-abc.png"})
+    post :update_start_code, params: {
+      id: level.id
+    }, body: {start_sources: {"MyClass.java" => "{}"}}.to_json
+
+    assert_response :success
+    assert_equal({"welcome.png" => "123-abc.png"}, assigns(:level).starter_assets)
+  end
+
   test "update_start_code works if level does not support validation" do
     post :update_start_code, params: {
       id: create(:applab).id,
@@ -1375,6 +1395,59 @@ class LevelsControllerTest < ActionController::TestCase
     level.sublevels.each do |sublevel|
       assert_equal sublevel.name, properties[sublevel.id.to_s]["name"]
     end
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for music levels" do
+    texts = extra_links_texts(create(:music))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start and exemplar but not toolbox for non-Blockly pythonlab levels" do
+    texts = extra_links_texts(create(:pythonlab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for lab2 dance levels" do
+    level = create(:dance)
+    level.uses_lab2 = true
+    level.save!
+    texts = extra_links_texts(level)
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for classic dance levels" do
+    texts = extra_links_texts(create(:dance))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links includes start, exemplar, and toolbox links for sprite lab levels" do
+    texts = extra_links_texts(create(:spritelab))
+    assert_includes texts, '[s]tart'
+    assert_includes texts, 'e[x]emplar'
+    assert_includes texts, '[t]oolbox'
+  end
+
+  test "extra_links omits edit-mode links for non-channel-backed levels" do
+    texts = extra_links_texts(create(:panels))
+    assert_includes texts, '[E]dit'
+    refute_includes texts, '[s]tart'
+    refute_includes texts, 'e[x]emplar'
+    refute_includes texts, '[t]oolbox'
+  end
+
+  private def extra_links_texts(level)
+    get :extra_links, params: {id: level.id}
+    assert_response :success
+    JSON.parse(@response.body)['links'][level.name].map {|link| link['text']}
   end
 
   # Assert that the url is a real S3 url, and not a placeholder.

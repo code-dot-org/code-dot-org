@@ -1,10 +1,12 @@
 // Globals used in this file:
 //   Blockly
 
+import Link from '@code-dot-org/component-library/link';
+import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import {Provider} from 'react-redux';
+import ReactDOM from 'react-dom';
 
 import {
   blockLimitExceeded,
@@ -21,7 +23,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
-import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
 import LegacyDialog from './code-studio/LegacyDialog';
 import testImageAccess from './code-studio/url_test';
@@ -863,13 +864,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   options.assetUrl = this.studioApp_.assetUrl;
 
-  // An early optimization; only render the container for
-  // DownloadReplayVideoButton if we think we're actually going to use it.
-  // @see DownloadReplayVideoButton.hasReplayVideo
-  options.downloadReplayVideo =
-    getStore().getState().pageConstants.appType === 'dance' &&
-    window.appOptions.signedReplayLogUrl;
-
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
   sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
@@ -987,22 +981,6 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     }
   });
 
-  var downloadReplayVideoContainer = sharingDiv.querySelector(
-    '#download-replay-video-container'
-  );
-  if (downloadReplayVideoContainer) {
-    const onDownloadError = () => $('#download-replay-video-error').show();
-    createReactRoot(
-      <Provider store={getStore()}>
-        <DownloadReplayVideoButton onError={onDownloadError} />
-      </Provider>,
-      downloadReplayVideoContainer,
-      {
-        legacyReactDomRender: true,
-      }
-    );
-  }
-
   return sharingDiv;
 };
 
@@ -1012,14 +990,6 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   createReactRoot(this.getShowCodeComponent_(options), showCodeDiv, {
     legacyReactDomRender: true,
   });
-
-  // If the jQuery details polyfill is available, use it on the
-  // newly-created details element. If the details polyfill is not
-  // available - either because it failed to load or was removed - then
-  // the browser-specified details functionality will be applied.
-  if ($.fn.details) {
-    $(showCodeDiv).find('details').details();
-  }
 
   return showCodeDiv;
 };
@@ -1097,15 +1067,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function () {
 FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
   options = options || {};
 
-  const codeInfoMsgParams = {
-    berkeleyLink:
-      "<a href='http://bjc.berkeley.edu/' target='_blank'>Berkeley</a>",
-    harvardLink:
-      "<a href='https://cs50.harvard.edu/' target='_blank'>Harvard</a>",
-  };
-
   const {message, shortMessage} = this.getGeneratedCodeDescriptions_(
-    codeInfoMsgParams,
     options.generatedCodeDescription
   );
   const code = this.studioApp_.polishGeneratedCodeString(
@@ -1121,13 +1083,11 @@ FeedbackUtils.prototype.getGeneratedCodeProperties = function (options) {
 
 /**
  * Generates explanation of what code is.
- * @param {Object} codeInfoMsgParams - params for generatedCodeInfo msg function
  * @param {String} [generatedCodeDescription] - optional description to use
  *        instead of the default
- * @returns {string}
+ * @returns {{message: React.ReactNode, shortMessage: React.ReactNode}}
  */
 FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
-  codeInfoMsgParams,
   generatedCodeDescription
 ) {
   if (this.studioApp_.editCode) {
@@ -1144,9 +1104,31 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
     };
   }
 
+  const berkeley = (
+    <Link href="http://bjc.berkeley.edu/" openInNewTab external size="s">
+      Berkeley
+    </Link>
+  );
+  const harvard = (
+    <Link href="https://cs50.harvard.edu/" openInNewTab external size="s">
+      Harvard
+    </Link>
+  );
   return {
-    message: msg.generatedCodeInfo(codeInfoMsgParams),
-    shortMessage: msg.shortGeneratedCodeInfo(codeInfoMsgParams),
+    message: (
+      <>
+        Even top universities teach block-based coding (e.g., {berkeley},{' '}
+        {harvard}). But under the hood, the blocks you have assembled can also
+        be shown in JavaScript, the world's most widely used coding language:
+      </>
+    ),
+    shortMessage: (
+      <>
+        Even top universities teach block-based coding (e.g., {berkeley},{' '}
+        {harvard}). The blocks you use can also be shown in JavaScript, the most
+        widely used coding language:
+      </>
+    ),
   };
 };
 
@@ -1157,40 +1139,41 @@ FeedbackUtils.prototype.getGeneratedCodeDescriptions_ = function (
  *        to display instead of the usual show code description
  */
 FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
-  var codeDiv = document.createElement('div');
-
   var generatedCodeProperties = this.getGeneratedCodeProperties({
     generatedCodeDescription: appStrings && appStrings.generatedCodeDescription,
   });
 
+  var container = document.createElement('div');
+  container.id = 'showCodeModal';
+  document.body.appendChild(container);
+  var close = function () {
+    ReactDOM.unmountComponentAtNode(container);
+    container.remove();
+  };
+
   createReactRoot(
-    <div>
-      <GeneratedCode
-        message={generatedCodeProperties.message}
-        code={generatedCodeProperties.code}
-      />
-      <DialogButtons ok={true} />
-    </div>,
-    codeDiv,
-    {
-      legacyReactDomRender: true,
-    }
+    <Modal
+      title={msg.showCodeHeader()}
+      onClose={close}
+      closeLabel={msg.closeDialog()}
+      imageUrl={this.studioApp_.icon || undefined}
+      imageAlt=""
+      imagePlacement="inline"
+      customContent={
+        <GeneratedCode
+          message={generatedCodeProperties.message}
+          code={generatedCodeProperties.code}
+          style={{marginTop: 0}}
+        />
+      }
+      primaryButtonProps={{
+        children: msg.dialogOK(),
+        onClick: close,
+      }}
+    />,
+    container,
+    {legacyReactDomRender: true}
   );
-
-  var dialog = this.createModalDialog({
-    contentDiv: codeDiv,
-    icon: this.studioApp_.icon,
-    defaultBtnSelector: '#ok-button',
-  });
-
-  var okayButton = codeDiv.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(okayButton, function () {
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
 };
 
 /**

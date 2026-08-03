@@ -5,7 +5,10 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'cdo/safe_http'
+require 'net/http'
 require 'stringio'
+require 'uri'
 require 'nokogiri'
 
 # Rack's built-in mime type table doesn't include some extensions we serve.
@@ -92,22 +95,20 @@ class FilesApi < Sinatra::Base
   end
 
   def record_metric(quota_event_type, quota_type, value = 1)
-    return unless CDO.newrelic_logging
-
-    NewRelic::Agent.record_metric("Custom/FilesApi/#{quota_event_type}_#{quota_type}", value)
+    OpenTelemetry::Trace.current_span.set_attribute(
+      "Custom/FilesApi/#{quota_event_type}_#{quota_type}", value
+    )
   end
 
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
-    return unless CDO.newrelic_logging
-
     owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    event_details = {
-      quota_type: quota_type,
-      encrypted_channel_id: encrypted_channel_id,
-      owner_user_id: owner_user_id
-    }
-    NewRelic::Agent.record_custom_event("FilesApi#{quota_event_type}", event_details)
+    span = OpenTelemetry::Trace.current_span
+    event_name = "FilesApi#{quota_event_type}"
+    span.set_attribute(event_name, true)
+    span.set_attribute("#{event_name}.quota_type", quota_type)
+    span.set_attribute("#{event_name}.encrypted_channel_id", encrypted_channel_id)
+    span.set_attribute("#{event_name}.owner_user_id", owner_user_id)
   end
 
   helpers do
@@ -223,13 +224,6 @@ class FilesApi < Sinatra::Base
   # @return [IO] requested file body as an IO stream
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
-    # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    begin
-      NewRelic::Agent.ignore_enduser
-    rescue
-      nil
-    end
-
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
     set_object_cache_duration cache_duration
@@ -1095,6 +1089,89 @@ class FilesApi < Sinatra::Base
     status 400
     allowed = SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.map {|t| t.split('/').last.upcase}.join(', ')
     {error: "Unsupported image type. Only #{allowed} files are allowed."}.to_json
+  end
+
+  def fetch_image_for_moderation(location, redirect_limit = 5)
+    raise URI::InvalidURIError.new if redirect_limit < 0
+
+    url = URI.parse(location)
+    raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
+    raise URI::InvalidURIError.new unless %w(http https).include?(url.scheme)
+
+    resolved_ip_address = SafeHttp.resolved_ip_address(url.host)
+    raise SecurityError.new('Image URL host is not allowed.') unless resolved_ip_address
+
+    http = SafeHttp.http_client(url, resolved_ip_address)
+
+    redirect_url = nil
+    body = nil
+    content_type = nil
+
+    # Stream the body so we can enforce max_file_size before an arbitrarily large
+    # payload is fully buffered (Content-Length may be missing or incorrect).
+    http.request_get(SafeHttp.request_path(url)) do |response|
+      if response.is_a?(Net::HTTPRedirection)
+        redirect_target = response['location']
+        raise URI::InvalidURIError.new if redirect_target.nil? || redirect_target.empty?
+        redirect_url = URI.join(url.to_s, redirect_target).to_s
+        next
+      end
+
+      unless response.is_a?(Net::HTTPSuccess)
+        raise StandardError.new("Image URL request failed with status #{response.code}.")
+      end
+
+      content_type = response.content_type
+      unless SharedConstants::SAFE_AND_SUPPORTED_IMAGE_TYPES.include?(content_type)
+        raise AzureAiContentSafety::UnsupportedContentType
+      end
+
+      content_length = response['content-length']&.to_i
+      if content_length && content_length > max_file_size
+        raise StandardError.new('Image URL content exceeds maximum file size.')
+      end
+
+      body = +''
+      response.read_body do |chunk|
+        body << chunk
+        if body.bytesize > max_file_size
+          raise StandardError.new('Image URL content exceeds maximum file size.')
+        end
+      end
+    end
+
+    return fetch_image_for_moderation(redirect_url, redirect_limit - 1) if redirect_url
+
+    raise StandardError.new('No image data provided.') if body.nil? || body.empty?
+
+    [body, content_type]
+  end
+
+  #
+  # POST /v3/images/moderate_url
+  #
+  # Moderate an image URL by fetching bytes server-side and passing them to
+  # ImageModeration (Azure AI Content Safety). Returns null if the moderation
+  # service is unavailable.
+  #
+  post %r{/v3/images/moderate_url$} do
+    content_type :json
+    dont_cache
+
+    payload = JSON.parse(request.body.read)
+    image_url = payload['url']
+    unless image_url.is_a?(String) && !image_url.empty?
+      status 400
+      return {error: 'No image URL provided.'}.to_json
+    end
+
+    raw, fetched_content_type = fetch_image_for_moderation(image_url)
+    result = ImageModeration.moderate_image(StringIO.new(raw), fetched_content_type)
+    result.to_json
+  # SecurityError is not a StandardError (inherits Exception directly).
+  rescue SecurityError, StandardError
+    status 400
+    {error: 'Unable to moderate image URL.'}.to_json
   end
 
   #

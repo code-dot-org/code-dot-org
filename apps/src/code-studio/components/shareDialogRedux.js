@@ -2,7 +2,6 @@
 
 const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
-const SAVE_REPLAY_LOG = 'shareDialog/SAVE_REPLAY_LOG';
 const SHOW_LIBRARY_CREATION_DIALOG = 'shareDialog/SHOW_LIBRARY_CREATION_DIALOG';
 const HIDE_LIBRARY_CREATION_DIALOG = 'shareDialog/HIDE_LIBRARY_CREATION_DIALOG';
 
@@ -25,11 +24,6 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         isOpen: false,
-      };
-    case SAVE_REPLAY_LOG:
-      return {
-        ...state,
-        replayLog: action.replayLog,
       };
     case SHOW_LIBRARY_CREATION_DIALOG:
       return {
@@ -54,10 +48,6 @@ export function showShareDialog() {
 
 export function hideShareDialog() {
   return {type: HIDE_SHARE_DIALOG};
-}
-
-export function saveReplayLog(replayLog) {
-  return {type: SAVE_REPLAY_LOG, replayLog};
 }
 
 export function showLibraryCreationDialog() {

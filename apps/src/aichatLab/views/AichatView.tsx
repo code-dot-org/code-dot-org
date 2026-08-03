@@ -3,6 +3,7 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
+import {extensions as mimeToExtensions} from 'mime-types';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledState';
@@ -34,8 +35,10 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
+import PairingNavigatorAlert from '@cdo/apps/lab2/views/alerts/pairingNavigator';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel, {
@@ -55,6 +58,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {LevelPropertiesContext} from '../levelPropertiesContext';
+import {setChatMessageSent} from '../redux/slice';
 import {AichatLevelProperties, ModalTypes, ViewMode} from '../types';
 
 import {isDisabled} from './modelCustomization/utils';
@@ -113,6 +117,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const hasSetInitialCustomizations = useAppSelector(
     state => state.aichatLab.hasSetInitialCustomizations
+  );
+  const saveInProgress = useAppSelector(
+    state => state.aichatLab.saveInProgress
   );
 
   const chatWorkspaceInitialized = hasSetInitialCustomizations;
@@ -270,6 +277,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     }
   }, [dialogControl, resetProject]);
 
+  const onMessageSent = useCallback(() => {
+    logLevelActivity();
+    dispatch(setChatMessageSent(true));
+  }, [dispatch, logLevelActivity]);
+
   // Only recreate modelParameters when relevant customizations are updated.
   const modelParameters: ModelParameters = useMemo(() => {
     return {
@@ -290,6 +302,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
     hasSubmittedPredictResponse,
   });
+
+  const settings = [useThemeSetting(levelProperties.appName)];
 
   const chatWorkspaceRef = useRef<ChatWorkspaceHandle>(null);
 
@@ -345,8 +359,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       createNewProjectFile: () => {},
       findIdForFileName: () => undefined,
       supportedFileTypes: levelAichatSettings?.multimodalEnabled
-        ? getAllowedFileTypes(modelParameters.selectedModelId).map(
-            f => f.split('.').pop() || ''
+        ? getAllowedFileTypes(modelParameters.selectedModelId).flatMap(
+            // mimeToExtensions returns all known extensions for a MIME type, e.g. ['jpg', 'jpeg', 'jpe'] for image/jpeg.
+            // Exclude 'jpe' since it's rarely used.
+            mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
           )
         : [],
     };
@@ -370,6 +386,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             </div>
           )}
           {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
+          <PairingNavigatorAlert
+            isTeacherViewingStudent={teacherViewingStudent}
+            doesAppTypeHaveStandaloneProjectLevel={false}
+          />
           <div className={moduleStyles.labCoreContainer}>
             {viewMode === ViewMode.EDIT && (
               <>
@@ -390,6 +410,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                         );
                       }
                     )}
+                    settings={settings}
                     backpackProps={backpackProps}
                   />
                 </div>
@@ -452,8 +473,9 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                       starterAssets && Object.keys(starterAssets).length > 0
                     }
                     multimodalEnabled={levelAichatSettings?.multimodalEnabled}
-                    logLevelActivity={logLevelActivity}
                     disabledState={disabledState}
+                    sendDisabled={saveInProgress}
+                    onMessageSent={onMessageSent}
                     ref={chatWorkspaceRef}
                   />
                 )}
@@ -493,7 +515,7 @@ const renderInstructionsHeaderRight = (
       label={'About AI Chat Lab'}
       icon={{iconName: 'message-question', iconStyle: 'solid'}}
       variant="text"
-      color="secondary"
+      color="tertiary"
       size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"

@@ -1,6 +1,7 @@
 require 'json'
 
 require_relative '../../deployment'
+require_relative 'global_edition'
 require_relative 'i18n'
 require_relative 'http_cache'
 require_relative '../state_abbr'
@@ -17,6 +18,8 @@ module SharedConstants
   DEFAULT_LOCALE = Cdo::I18n::DEFAULT_LOCALE
   LOCALE_FALLBACKS = Cdo::I18n::LOCALE_FALLBACKS
   LOCALIZE_TO_I18N_LOCALES = Cdo::I18n::LOCALIZE_TO_I18N_LOCALES
+  GLOBAL_EDITION_DEFAULT_REGION = Cdo::GlobalEdition::DEFAULT_REGION
+  GLOBAL_EDITION_EXCLUDED_PATHS = Cdo::GlobalEdition::EXCLUDED_PATHS.to_a
 
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
@@ -778,6 +781,15 @@ module SharedConstants
     SCRAMBLE: 'scramble',
   }.freeze
 
+  PRACTICE_PROBLEM_DELIVERY_CONTEXT = {
+    AI_TUTOR_LESSON_DEEP_DIVE: 'ai_tutor_lesson_deep_dive'
+  }.freeze
+
+  CHALLENGE_TYPES = {
+    VIDEO: 'video',
+    WHITEBOARD: 'whiteboard',
+  }.freeze
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
@@ -1129,7 +1141,14 @@ module SharedConstants
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
     'picsum.photos', # Placeholder images - Public API
-    'images.code.org' # Code.org hosted images - Public API
+    'images.code.org', # Code.org hosted images - Public API
+    'upload.wikimedia.org' # Wikimedia-hosted images used in curriculum
+  ].freeze
+
+  # Audio hosts the media proxy will relay. Unlike the image list, this does not
+  # feed any Content Security Policy.
+  ALLOWED_AUDIO_HOSTNAME_SUFFIXES = [
+    'nationalanthems.info' # Anthems in the Countries and Territories dataset - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [

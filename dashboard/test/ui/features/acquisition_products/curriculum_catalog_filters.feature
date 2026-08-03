@@ -5,13 +5,13 @@ Feature: Curriculum Catalog Filters
     Given I am on "http://studio.code.org/catalog"
     And I open my eyes to test "Curriculum Catalog"
     Then I wait until element "#topic-dropdown" is visible
-    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I wait until element "h4:contains(UI Test CSF)" is visible
     And I see no difference for "Curriculum Catalog: All Offerings"
 
     Then I click selector "#topic-dropdown-button"
     And I wait until element "span:contains(Digital Literacy)" is visible
     Then I click selector "span:contains(Digital Literacy)"
-    And I wait until element "h4:contains(AI for Oceans)" is not visible
+    And I wait until element "h4:contains(UI Test CSF)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering"
 
     Then I click selector "#grade-dropdown-button"
@@ -25,16 +25,16 @@ Feature: Curriculum Catalog Filters
   @eyes
   Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
     Given I am on "http://studio.code.org/catalog/lang/es"
-    Then I wait until I am on "http://studio.code.org/catalog?lang=es"
+    Then I wait until I am on "http://studio.code.org/es/catalog?lang=es"
     And I open my eyes to test "Curriculum Catalog in Spanish"
     Then I wait until element "#topic-dropdown" is visible
-    And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is visible
+    And I wait until element "h4:contains(UI Test Artist)" is visible
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
 
     Then I click selector "#topic-dropdown-button"
     And I wait until element "span:contains(Alfabetización Digital)" is visible
     Then I click selector "span:contains(Alfabetización Digital)"
-    And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is not visible
+    And I wait until element "h4:contains(UI Test Artist)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering in Spanish"
 
     Then I click selector "#grade-dropdown-button"

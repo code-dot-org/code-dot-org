@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-06-19T15:55:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "#####Consider the JSON array below:\r\n\r\n```\r\nconst items = [\r\n  {\r\n    name: \"Notebook\",\r\n    price: 3.99,\r\n    category: \"school\"\r\n  },\r\n  {\r\n    name: \"Water Bottle\",\r\n    price: 12.5,\r\n    category: \"supplies\"\r\n  }\r\n];\r\n```\r\n> 1. Write the dot-notation path to access the price of the first item.\r\n> \r\n> 2. Explain how you would use .map() to create a new array that only includes the name and price from each item.\r\n\r\n#####You do not need to write perfect code for Question 2. You may explain your answer in plain language or pseudocode.",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "enter response here...",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-19T15:55:39.614+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level7-2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level7-2026\"},{\"changed_at\":\"2026-06-19 15:56:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-06-19 20:17:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -33,11 +33,12 @@
       ],
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-15 20:30:41 UTC",
+    "serialized_at": "2026-07-13 16:23:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -61,19 +62,745 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Navigating the Capstone Project",
+      "name": "Navigating the Capstone Project",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**By the end of this professional learning module, you will be able to:**\n\n- Explain the process-oriented approach, emphasizing iteration, testing, and intentional decision-making over just adding features\n- Use project tools like the Kanban Board and Project Guide to manage workflow, scope, and team roles\n- Facilitate daily spot-checks to monitor progress, prompt reflection, and keep teams aligned\n- Assess and celebrate student growth based on process, reasoning, and iteration, not just the final product",
+        "student_overview": "**By the end of this professional learning module, you will be able to:**\n\n- Explain the process-oriented approach, emphasizing iteration, testing, and intentional decision-making over just adding features\n- Use project tools like the Kanban Board and Project Guide to manage workflow, scope, and team roles\n- Facilitate daily spot-checks to monitor progress, prompt reflection, and keep teams aligned\n- Assess and celebrate student growth based on process, reasoning, and iteration, not just the final product"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ed1286ff-571b-4b52-8a41-73b958460b39",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39",
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introducting the Capstone (10 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb",
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39"
+      }
+    },
+    {
+      "key": "14daa10d-3d1b-4337-bd14-7658f09c0611",
+      "position": 2,
+      "properties": {
+        "progression_name": "Day-by-Day Planning (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611",
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39"
+      }
+    },
+    {
+      "key": "7124698e-0290-434c-bba7-2d2967e1cee0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Managing the Capstone (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0",
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39"
+      }
+    },
+    {
+      "key": "733438a4-702b-4993-92d8-e6a251908597",
+      "position": 4,
+      "properties": {
+        "progression_name": "Assessing the Capstone (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597",
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39"
+      }
+    },
+    {
+      "key": "9a7bfe04-272e-413e-ac59-1cb2de83a446",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrapping-Up (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446",
+        "lesson_activity.key": "ed1286ff-571b-4b52-8a41-73b958460b39"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-Intro-1_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-Intro-1_pl"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U6-class-context-2_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U6-class-context-2_pl"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-overview-3_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-project-overview-3_pl"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-guide-4_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-project-guide-4_pl"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-kanban-panel-5_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-kanban-panel-5_pl"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-leader-6_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-project-leader-6_pl"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducting the Capstone (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-team-engagement-7_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-team-engagement-7_pl"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Day-by-Day Planning (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-8_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-day-by-day-8_pl"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Day-by-Day Planning (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-9_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-day-by-day-9_pl"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Day-by-Day Planning (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-10_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-day-by-day-10_pl"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Managing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-facilitating-group-work-widget_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-facilitating-group-work-widget_pl"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Managing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-tag-13_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-tag-13_pl"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Managing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-guiding-showcase-panel-14_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-guiding-showcase-panel-14_pl"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-assesing-capstone-15_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-assesing-capstone-15_pl"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-teaching-moves-assesment-16_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-teaching-moves-assesment-16_pl"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessing the Capstone (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U6-Final-project-Sample_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      },
+      "level_keys": [
+        "pl-aif2-U6-Final-project-Sample_pl"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping-Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-CFU-scenario_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-CFU-scenario_pl"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping-Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-reflect-wrap-17_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-reflect-wrap-17_pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping-Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U6-final-level-18_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      },
+      "level_keys": [
+        "pl-aif-2-U6-final-level-18_pl"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-Intro-1_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-Intro-1_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U6-class-context-2_pl",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U6-class-context-2_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-project-overview-3_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-overview-3_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-project-guide-4_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-guide-4_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-kanban-panel-5_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-kanban-panel-5_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-project-leader-6_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-project-leader-6_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-team-engagement-7_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-team-engagement-7_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "a23c4abf-fee0-4c9f-97e2-1a28dfd59cdb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-day-by-day-8_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-8_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-day-by-day-9_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-9_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-day-by-day-10_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-day-by-day-10_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "14daa10d-3d1b-4337-bd14-7658f09c0611"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-facilitating-group-work-widget_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-facilitating-group-work-widget_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-tag-13_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-tag-13_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-guiding-showcase-panel-14_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-guiding-showcase-panel-14_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "7124698e-0290-434c-bba7-2d2967e1cee0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-assesing-capstone-15_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-assesing-capstone-15_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-teaching-moves-assesment-16_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-teaching-moves-assesment-16_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U6-Final-project-Sample_pl",
+        "script_level.level_keys": [
+          "pl-aif2-U6-Final-project-Sample_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "733438a4-702b-4993-92d8-e6a251908597"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-CFU-scenario_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-CFU-scenario_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-reflect-wrap-17_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-reflect-wrap-17_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U6-final-level-18_pl",
+        "script_level.level_keys": [
+          "pl-aif-2-U6-final-level-18_pl"
+        ],
+        "lesson.key": "Navigating the Capstone Project",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-web-apps-with-ai-capstone-project-2026",
+        "activity_section.key": "9a7bfe04-272e-413e-ac59-1cb2de83a446"
+      }
+    }
   ],
   "resources": [
 

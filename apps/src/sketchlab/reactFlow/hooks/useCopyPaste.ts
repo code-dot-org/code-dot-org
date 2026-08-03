@@ -1,16 +1,19 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import type {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   DEFAULT_PASTE_OFFSET_PX,
+  INTERNAL_CLIPBOARD_MARKER,
+  INTERNAL_CLIPBOARD_MIME,
 } from '../constants';
 import type {ClipboardContents} from '../context';
 import type {TabOrderEntry} from '../utils/computeTabOrder';
@@ -20,6 +23,8 @@ import {
   getHandleFlowPosition,
   lineAnchorHandleId,
 } from '../utils/lineAnchors';
+
+import type {ModeratedImageUploader} from './useModeratedImageUpload';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -31,6 +36,21 @@ interface UseCopyPasteOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  clearHistory: () => void;
+  canvasContainerRef: React.RefObject<HTMLDivElement>;
+  readOnly: boolean;
+  uploadImage: ModeratedImageUploader;
+  onImageUploadError: () => void;
+  onFlaggedImageCopyBlocked: () => void;
+}
+
+// Flagged images must not be copied: clones share the original's asset URL,
+// so deleting any one copy would hard-delete the asset out from under the
+// others and lift the abuse block while flagged copies remain.
+function containsFlaggedImage(contents: ClipboardContents): boolean {
+  return contents.nodes.some(
+    node => node.type === 'image' && node.data.flagged
+  );
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -53,6 +73,12 @@ export function useCopyPaste({
   setNodes,
   setEdges,
   pushSnapshot,
+  clearHistory,
+  canvasContainerRef,
+  readOnly,
+  uploadImage,
+  onImageUploadError,
+  onFlaggedImageCopyBlocked,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
@@ -72,18 +98,93 @@ export function useCopyPaste({
   const lastDuplicateRef = useRef<ClipboardContents | null>(null);
   const lastDuplicateIdRef = useRef<string | null>(null);
 
+  // Set by an in-app copy/cut so the next native copy/cut event stamps our
+  // marker onto the system clipboard.
+  const pendingMarkerStampRef = useRef(false);
+
   const writeClipboard = useCallback((contents: ClipboardContents) => {
     clipboardRef.current = contents;
     setHasClipboard(true);
+    // Flag the imminent native copy/cut event to stamp our marker onto the
+    // system clipboard.
+    pendingMarkerStampRef.current = true;
   }, []);
+
+  // Stamp our marker onto the system clipboard via a custom MIME type on the
+  // native copy/cut event that follows an in-app copy/cut. Its presence lets the
+  // paste handler know the in-app copy is the most recent clipboard action; an
+  // external copy replaces the whole clipboard, dropping the marker, which
+  // restores paste. The custom type keeps the marker out of text/plain so it
+  // never appears when pasting into another app.
+  useEffect(() => {
+    const stampMarker = (event: ClipboardEvent) => {
+      if (!pendingMarkerStampRef.current) return;
+      pendingMarkerStampRef.current = false;
+      const clipboardData = event.clipboardData;
+      if (!clipboardData) return;
+      clipboardData.setData(INTERNAL_CLIPBOARD_MIME, INTERNAL_CLIPBOARD_MARKER);
+      event.preventDefault();
+    };
+    document.addEventListener('copy', stampMarker);
+    document.addEventListener('cut', stampMarker);
+    return () => {
+      document.removeEventListener('copy', stampMarker);
+      document.removeEventListener('cut', stampMarker);
+    };
+  }, []);
+
+  // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
+  // top-left at the cursor when it's over the canvas, else centered in the viewport.
+  const pasteImage = useCallback(
+    (src: string, flagged: boolean) => {
+      const mousePos = mousePositionRef.current;
+      const position =
+        mousePos ??
+        screenToFlowPosition({
+          x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2,
+          y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2,
+        });
+      const newImageNode = {
+        id: createUuid(),
+        type: 'image',
+        data: {src, altText: '', ...(flagged && {flagged})},
+        position,
+        width: DEFAULT_NODE_WIDTH,
+        height: DEFAULT_NODE_HEIGHT,
+      } as SketchlabReactFlowNode;
+      if (flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
+      setNodes(currentNodes => [...currentNodes, newImageNode]);
+    },
+    [screenToFlowPosition, pushSnapshot, clearHistory, setNodes]
+  );
 
   const buildNodeClipboard = useCallback(
     (nodeId: string): ClipboardContents | null => {
       const node = nodes.find(n => n.id === nodeId);
-      if (!node || node.data.locked) return null;
+      if (!node || node.data.locked || node.type === 'group') return null;
       return {nodes: [node], edges: []};
     },
     [nodes]
+  );
+
+  const buildGroupClipboard = useCallback(
+    (groupId: string): ClipboardContents | null => {
+      const groupNode = nodes.find(n => n.id === groupId && n.type === 'group');
+      if (!groupNode) return null;
+      const children = nodes.filter(n => n.parentId === groupId);
+      const childIds = new Set(children.map(n => n.id));
+      // Only include edges fully contained in the group (both endpoints are children).
+      const groupEdges = edges.filter(
+        e => childIds.has(e.source) && childIds.has(e.target)
+      );
+      // Group node first so children can remap parentId in a single pass during paste.
+      return {nodes: [groupNode, ...children], edges: groupEdges};
+    },
+    [nodes, edges]
   );
 
   // A line is stored as an edge with two nodes - the nodes are either anchor nodes or real nodes.
@@ -151,6 +252,10 @@ export function useCopyPaste({
           ? lastDuplicateRef.current
           : buildNodeClipboard(nodeId);
       if (!source) return;
+      if (containsFlaggedImage(source)) {
+        onFlaggedImageCopyBlocked();
+        return;
+      }
 
       const newNodes = source.nodes.map(node => ({
         ...node,
@@ -167,7 +272,7 @@ export function useCopyPaste({
       pushSnapshot();
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
-    [buildNodeClipboard, pushSnapshot, setNodes]
+    [buildNodeClipboard, pushSnapshot, setNodes, onFlaggedImageCopyBlocked]
   );
 
   // Toolbar action: duplicate a line.
@@ -221,23 +326,57 @@ export function useCopyPaste({
   const copyEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
-        const contents = buildNodeClipboard(entry.id);
-        if (contents) writeClipboard(contents);
+        const node = nodes.find(n => n.id === entry.id);
+        const contents =
+          node?.type === 'group'
+            ? buildGroupClipboard(entry.id)
+            : buildNodeClipboard(entry.id);
+        if (!contents) return;
+        if (containsFlaggedImage(contents)) {
+          onFlaggedImageCopyBlocked();
+          return;
+        }
+        writeClipboard(contents);
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (contents) writeClipboard(contents);
       }
     },
-    [buildNodeClipboard, buildLineEdgeClipboard, writeClipboard]
+    [
+      nodes,
+      buildGroupClipboard,
+      buildNodeClipboard,
+      buildLineEdgeClipboard,
+      writeClipboard,
+      onFlaggedImageCopyBlocked,
+    ]
   );
 
   const cutEntry = useCallback(
     (entry: TabOrderEntry) => {
       if (entry.type === 'node') {
-        const contents = buildNodeClipboard(entry.id);
-        if (!contents) return;
-        writeClipboard(contents);
-        deleteElements({nodes: [{id: entry.id}]});
+        const node = nodes.find(n => n.id === entry.id);
+        if (node?.type === 'group') {
+          const contents = buildGroupClipboard(entry.id);
+          if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
+          writeClipboard(contents);
+          // The canvas's onBeforeDelete handler expands this to the group's
+          // children.
+          deleteElements({nodes: [{id: entry.id}]});
+        } else {
+          const contents = buildNodeClipboard(entry.id);
+          if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
+          writeClipboard(contents);
+          deleteElements({nodes: [{id: entry.id}]});
+        }
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (!contents) return;
@@ -259,12 +398,14 @@ export function useCopyPaste({
       }
     },
     [
+      nodes,
+      buildGroupClipboard,
       buildNodeClipboard,
       writeClipboard,
       deleteElements,
       buildLineEdgeClipboard,
       edges,
-      nodes,
+      onFlaggedImageCopyBlocked,
     ]
   );
 
@@ -283,8 +424,10 @@ export function useCopyPaste({
       deltaX = mousePos.x - anchorNode.position.x;
       deltaY = mousePos.y - anchorNode.position.y;
     } else {
-      const isLine = contents.edges.length > 0;
-      if (isLine) {
+      // Nodes and groups offset by width; standalone lines offset by their horizontal span.
+      const hasGroup = contents.nodes.some(n => n.type === 'group');
+      const isStandaloneLine = !hasGroup && contents.edges.length > 0;
+      if (isStandaloneLine) {
         const lineHorizontalSpan = lineHorizontalSpanFromClipboardNodes(
           contents.nodes
         );
@@ -297,17 +440,26 @@ export function useCopyPaste({
       deltaY = 0;
     }
 
+    // IDs in the clipboard — used to detect parent-child relationships below.
+    const clipboardNodeIds = new Set(contents.nodes.map(n => n.id));
+
+    // Build idMap before creating new nodes so parentId remapping works in one
+    // pass: the group node (index 0) is mapped before its children are processed.
     const idMap = new Map<string, string>();
+    for (const node of contents.nodes) {
+      idMap.set(node.id, createUuid());
+    }
+
     const newNodes = contents.nodes.map(node => {
-      const newId = createUuid();
-      idMap.set(node.id, newId);
       return {
         ...node,
-        id: newId,
-        position: {
-          x: node.position.x + deltaX,
-          y: node.position.y + deltaY,
-        },
+        id: idMap.get(node.id)!,
+        // Children have positions relative to the parent group — don't offset them.
+        position:
+          node.parentId && clipboardNodeIds.has(node.parentId)
+            ? node.position
+            : {x: node.position.x + deltaX, y: node.position.y + deltaY},
+        ...(node.parentId && {parentId: idMap.get(node.parentId)}),
       };
     });
 
@@ -339,12 +491,57 @@ export function useCopyPaste({
     mousePositionRef.current = null;
   }, []);
 
+  // Native paste while the canvas is focused, with the following precedence:
+  // 1. If we are over an editable element use native paste (allowing copy/paste of text).
+  // 2. If the last clipboard action was an in-app copy, paste the copied element.
+  // 3. If there is a clipboard image, paste it as an ImageNode.
+  // 4. Otherwise, fall back to internal element paste (paste() function).
+  useEffect(() => {
+    const handlePaste = async (event: ClipboardEvent) => {
+      if (readOnly) return;
+      const container = canvasContainerRef.current;
+      if (!container || !container.contains(document.activeElement)) return;
+      const target = event.target as HTMLElement | null;
+      if (target && isTargetEditable(target)) return;
+
+      event.preventDefault();
+      const internalCopyIsLatest =
+        event.clipboardData?.getData(INTERNAL_CLIPBOARD_MIME) ===
+        INTERNAL_CLIPBOARD_MARKER;
+      const items = event.clipboardData?.items;
+      const imageItem =
+        !internalCopyIsLatest && items
+          ? Array.from(items).find(item => item.type.startsWith('image/'))
+          : undefined;
+
+      const file = imageItem?.getAsFile();
+      if (!file) {
+        paste();
+        return;
+      }
+
+      await uploadImage({
+        file,
+        onUploaded: pasteImage,
+        onError: onImageUploadError,
+      });
+    };
+    document.addEventListener('paste', handlePaste);
+    return () => document.removeEventListener('paste', handlePaste);
+  }, [
+    canvasContainerRef,
+    readOnly,
+    uploadImage,
+    paste,
+    pasteImage,
+    onImageUploadError,
+  ]);
+
   return {
     duplicateNode,
     duplicateLine,
     copyEntry,
     cutEntry,
-    paste,
     hasClipboard,
     handleMouseMove,
     handleMouseLeave,

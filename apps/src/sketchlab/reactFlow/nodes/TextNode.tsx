@@ -1,29 +1,49 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
-import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
+import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
+  DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
+  MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
+} from '../constants';
+import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
+  DEFAULT_TEXT_BORDER_COLOR,
 } from '../elementToolbars/toolbarPalettes';
+import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
+import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {TextNodeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './text-node.module.scss';
 
-function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
-  const readOnly = useSketchLabReadOnly();
-  const {updateNodeData} = useReactFlow();
-  const pushSnapshot = usePushSnapshot();
-  const [isEditing, setIsEditing] = useState(false);
-  const textRef = useRef<HTMLDivElement>(null);
-  const textAtEditStart = useRef<string>('');
-
+function TextNode({
+  id,
+  data,
+  selected,
+  isConnectable,
+}: NodeProps<TextNodeType>) {
+  const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
+    selected,
+    isConnectable
+  );
   const {text} = data;
-  const showHandles = data.showHandles !== false;
+
+  const {isEditing, editableRef, startEditing, commitEdit, handleKeyDown} =
+    useInlineTextEditing({
+      id,
+      field: 'text',
+      value: text,
+      locked: data.locked,
+    });
 
   const textStyle: React.CSSProperties = useMemo(() => {
     const style: React.CSSProperties = {};
@@ -31,82 +51,40 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign]);
+  }, [data.fontColor, data.fontSize, data.fontFamily, data.textAlign]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
-  const rotatableStyle: React.CSSProperties = useMemo(
-    () => ({transform: `rotate(${rotation}deg)`}),
-    [rotation]
-  );
-
-  const startEditing = useCallback(() => {
-    if (isEditing || readOnly || data.locked) {
-      return;
+  const strokeColor = data.strokeColor ?? DEFAULT_TEXT_BORDER_COLOR;
+  const rotatableStyle: React.CSSProperties = useMemo(() => {
+    const style: React.CSSProperties = {transform: `rotate(${rotation}deg)`};
+    // Only a chosen color gets inline border styles; when clear, the
+    // stylesheet's transparent border (and its hover highlight) stays active.
+    if (strokeColor !== 'transparent') {
+      style.borderColor = strokeColor;
+      style.borderWidth = ELEMENT_BORDER_PX;
     }
-    textAtEditStart.current = text;
-    setIsEditing(true);
-    setTimeout(() => {
-      if (textRef.current) {
-        textRef.current.focus();
-        const range = document.createRange();
-        const selection = window.getSelection();
-        range.selectNodeContents(textRef.current);
-        range.collapse(false);
-        selection?.removeAllRanges();
-        selection?.addRange(range);
-      }
-    }, 0);
-  }, [isEditing, readOnly, data.locked, text]);
-
-  const commitEdit = useCallback(() => {
-    setIsEditing(false);
-    // innerText preserves visible newlines from <br> and block-element
-    // boundaries that contentEditable inserts on Shift+Enter; textContent
-    // would flatten them.
-    const newText = textRef.current?.innerText ?? '';
-    if (newText !== textAtEditStart.current) {
-      pushSnapshot();
-    }
-    updateNodeData(id, {text: newText});
-  }, [id, pushSnapshot, updateNodeData]);
-
-  const handleKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (isEditing) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-        if (event.key === 'Escape') {
-          if (textRef.current) {
-            textRef.current.textContent = text;
-          }
-          setIsEditing(false);
-          textRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-      }
-    },
-    [text, isEditing]
-  );
+    return style;
+  }, [rotation, strokeColor]);
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
       className={styles.textNode}
       aria-label={`Text: ${text}`}
       onDoubleClick={startEditing}
+      {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         <div
-          ref={textRef}
-          className={classNames(styles.text, isEditing && 'nodrag nopan')}
+          ref={editableRef}
+          className={classNames(
+            styles.text,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noDrag,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noPan
+          )}
           style={textStyle}
           contentEditable={isEditing}
           suppressContentEditableWarning
@@ -115,13 +93,24 @@ function TextNode({id, data, selected}: NodeProps<TextNodeType>) {
           onKeyDown={handleKeyDown}
           tabIndex={-1}
           role="textbox"
+          aria-multiline={true}
           aria-label={`Text content${isEditing ? ' (editing)' : ''}`}
         >
           {text}
         </div>
-      </div>
 
-      <ConnectionHandles visible={showHandles} />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_TEXT_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+        />
+      </div>
     </div>
   );
 }

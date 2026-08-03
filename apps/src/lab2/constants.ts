@@ -1,3 +1,7 @@
+import {extensions as mimeToExtensions} from 'mime-types';
+
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {AppName, ProjectType} from './types';
 
 export const SOURCE_FILE = 'main.json';
@@ -24,7 +28,13 @@ export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'pythonlab',
   'weblab2',
   'music_dance_ai',
+  'sketchlab',
 ];
+
+// Project types whose content is share-filtered for profanity/PII on the
+// server. Must stay in sync with FILTERED_PROJECT_TYPES in
+// lib/cdo/share_filtering.rb (for the lab2 project types listed there).
+export const PROJECT_TYPES_WITH_SHARE_FILTERING: ProjectType[] = ['sketchlab'];
 
 // Text-based labs that are currently supported by lab2.
 export const TEXT_BASED_LABS: AppName[] = ['aichat', 'pythonlab', 'weblab2'];
@@ -53,3 +63,7 @@ export enum FontSize {
 }
 
 export const INITIAL_VERSION_ID = 'initial-version';
+
+export const SUPPORTED_IMAGE_EXTENSIONS = SafeAndSupportedImageTypes.flatMap(
+  mime => (mimeToExtensions[mime] ?? []).filter(ext => ext !== 'jpe')
+);

@@ -14,17 +14,13 @@ module Cdo
 
     LANGUAGES = CSV.read(CDO.dir('config/i18n/cdo-languages.csv'), headers: true, header_converters: :symbol).freeze
 
-    LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each do |_locale, data|
-      data.symbolize_keys! if data.is_a?(Hash)
-    end.freeze
+    LOCALE_CONFIGS = YAML.load_file(CDO.dir('config/i18n/locales.yml')).each {_2.symbolize_keys!.freeze if _2.is_a?(Hash)}.freeze
 
     # Mapping of short locale codes to normalized I18n locale codes (e.g., 'en' => 'en-US').
     LOCALE_ALIASES = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v if v.is_a?(String)}.freeze
 
     # Mapping locale codes to their fallback locale codes (e.g., 'en-IN' => 'en-US').
-    LOCALE_FALLBACKS = LOCALE_CONFIGS.each_with_object({}) do |(k, v), h|
-      h[k] = v[:fallback] if v.is_a?(Hash) && v[:fallback]
-    end.freeze
+    LOCALE_FALLBACKS = LOCALE_CONFIGS.each_with_object({}) {|(k, v), h| h[k] = v[:fallback] if v.is_a?(Hash) && v[:fallback]}.freeze
 
     # Mapping LocalizeJS locale codes to normalized I18n locale codes (e.g., 'zh-Hans' => 'zh-CN').
     LOCALIZE_TO_I18N_LOCALES = LANGUAGES.each_with_object({}) do |cdo_language, locales|
@@ -47,7 +43,7 @@ module Cdo
       end
 
       def available_languages_by_locale
-        @available_languages_by_locale ||= available_languages.index_by {|cdo_language| cdo_language[:locale_s]}.freeze
+        @available_languages_by_locale ||= available_languages.to_h {[_1[:locale_s], _1.freeze]}.freeze
       end
 
       def available_locale?(locale)
@@ -72,9 +68,7 @@ module Cdo
       end
 
       def locale_options
-        @locale_options ||= available_languages.map do |cdo_language|
-          [language_name(cdo_language[:locale_s]), cdo_language[:locale_s]]
-        end.sort_by(&:second).freeze
+        @locale_options ||= available_languages.map {[language_name(_1[:locale_s]), _1[:locale_s]]}.sort_by(&:second).freeze
       end
 
       def locale_direction(locale)

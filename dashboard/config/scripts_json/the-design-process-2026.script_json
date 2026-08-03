@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_6_8",
-      "curriculum_umbrella": "CSD",
+      "curriculum_umbrella": "AID",
       "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-19 11:21:59 UTC",
+    "serialized_at": "2026-06-29 22:15:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

@@ -763,7 +763,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1")
     )
   end
 
@@ -775,7 +775,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
-      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1", CDO.default_scheme)
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1")
     )
   end
 
@@ -943,6 +943,23 @@ class LessonTest < ActiveSupport::TestCase
     end
     bubble_choice_level.sublevels.each do |sublevel|
       assert_equal sublevel.name, properties[sublevel.id][:name]
+    end
+  end
+
+  test 'summarize_for_lab2_properties skips levels with no game app' do
+    script = create(:script, :in_single_unit_course)
+    lesson = create(:lesson, script: script)
+    python_level = create(:pythonlab)
+    nil_app_game = create(:game, app: nil)
+    non_lab2_level = create(:text_match, game: nil_app_game)
+    create(:script_level, lesson: lesson, levels: [python_level], script: script)
+    create(:script_level, lesson: lesson, levels: [non_lab2_level], script: script)
+
+    properties = lesson.summarize_for_lab2_properties
+    assert_includes properties.keys, python_level.id
+    refute_includes properties.keys, non_lab2_level.id
+    properties.each_value do |props|
+      assert props[:appName], "expected appName to be present for all returned levels"
     end
   end
 
@@ -1465,5 +1482,58 @@ class LessonTest < ActiveSupport::TestCase
 
     bubble_choice_summary = summary[:levels].first
     assert_equal false, bubble_choice_summary[:isSubmittable]
+  end
+
+  test 'summarize_for_unit_generate exposes id, name, key, generateOutline, and paths' do
+    unit = create(:script)
+    group = create(:lesson_group, script: unit, user_facing: true)
+    lesson = create(:lesson, script: unit, lesson_group: group, name: 'L', key: 'l-key', has_lesson_plan: true)
+    lesson.update!(properties: lesson.properties.merge('generate_outline' => 'do thing'))
+
+    summary = lesson.summarize_for_unit_generate
+    assert_equal lesson.id, summary[:id]
+    assert_equal 'L', summary[:name]
+    assert_equal 'l-key', summary[:key]
+    assert_equal 'do thing', summary[:generateOutline]
+    refute_nil summary[:lessonEditPath]
+    assert_equal summary[:lessonEditPath].sub(%r{/edit\z}, '/generate'), summary[:lessonGeneratePath]
+  end
+
+  test 'lesson_tutor_available? is true for a lesson with a lesson plan in an AIF/AID course' do
+    unit = ai_course_unit('AIF')
+    lesson = create(:lesson, script: unit, has_lesson_plan: true)
+    assert lesson.lesson_tutor_available?
+    assert_equal "#{lesson.get_uncached_show_path}/tutor", lesson.summarize[:lessonTutorPath]
+  end
+
+  test 'lesson_tutor_available? is false for a lesson without a lesson plan' do
+    unit = ai_course_unit('AIF')
+    lesson = create(:lesson, script: unit, has_lesson_plan: false)
+    refute lesson.lesson_tutor_available?
+    assert_nil lesson.summarize[:lessonTutorPath]
+  end
+
+  test 'lesson_tutor_available? is false for a lesson in a non-AI course' do
+    unit = ai_course_unit('CSD')
+    lesson = create(:lesson, script: unit, has_lesson_plan: true)
+    refute lesson.lesson_tutor_available?
+    assert_nil lesson.summarize[:lessonTutorPath]
+  end
+
+  test 'lesson_tutor_path returns the tutor path when available and nil otherwise' do
+    unit = ai_course_unit('AIF')
+    available = create(:lesson, script: unit, has_lesson_plan: true)
+    assert_equal "#{available.get_uncached_show_path}/tutor", available.lesson_tutor_path
+
+    unavailable = create(:lesson, script: unit, has_lesson_plan: false)
+    assert_nil unavailable.lesson_tutor_path
+  end
+
+  # Builds the single unit of a course whose offering has the given marketing
+  # initiative, so lessons created on it inherit that course's tutor eligibility.
+  private def ai_course_unit(marketing_initiative)
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-course-#{marketing_initiative.downcase}", version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: marketing_initiative)
+    unit_group.first_unit
   end
 end

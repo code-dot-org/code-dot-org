@@ -15,6 +15,7 @@
         "cs-CZ",
         "de-DE",
         "es-ES",
+        "es-LA",
         "es-MX",
         "fa-IR",
         "fr-FR",
@@ -32,7 +33,14 @@
         "th-TH",
         "tr-TR",
         "zh-CN",
-        "zh-TW"
+        "zh-TW",
+        "gu-IN",
+        "ja-JP",
+        "or-IN",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "uk-UA"
       ],
       "topic_tags": [
         "ai"
@@ -40,7 +48,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-11 04:05:44 UTC",
+    "serialized_at": "2026-06-23 23:48:38 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1455,6 +1463,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

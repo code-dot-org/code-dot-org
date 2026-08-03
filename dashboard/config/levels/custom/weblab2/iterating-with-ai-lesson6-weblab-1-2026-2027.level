@@ -1,0 +1,51 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-02T20:45:16.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson6-weblab-template-2026-2027",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "true",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrUZWTpPmEztAc9I5Sh\ny6YxdfqEuUD64BpCyEmKqArWaA==\n",
+    "long_instructions": "## Audit OpportunityMatch\r\n\r\nYou are acting as a **Responsible AI Specialist**.\r\n\r\nTest the app's filters and think about users who:\r\n\r\n* cannot travel far\r\n* are only free at certain times\r\n* have little experience\r\n* need better pay\r\n* want a specific kind of work\r\n\r\nUse the **Responsible AI Audit Checklist** to record what you notice.\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-02 20:46:25 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:46:36 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:46:44 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 20:47:41 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 23:05:20 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 23:07:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-02 23:11:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-06-16 11:15:24 +0000\",\"changed\":[\"disable_edit_run_for_submission\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

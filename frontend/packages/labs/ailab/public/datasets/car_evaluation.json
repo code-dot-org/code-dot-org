@@ -1,0 +1,51 @@
+{
+  "name": "car_evaluation",
+  "card": {
+    "description": "A dataset of cars ranked on 'acceptability', based on features like price, safety, and number of passengers. The rankings come from a decision model designed by Marko Bohanec.",
+    "source": "UCI (http://archive.ics.uci.edu/ml/datasets/Car+Evaluation)",
+    "lastUpdated": "1997",
+    "context": {
+      "createdBy": "Marko Bohanec",
+      "potentialUses": "Determine a car's acceptability rating based on certain feature.",
+      "potentialMisuses": "You might have different car criteria than this rating system - this can't make a better decision on car buying than you can! Although it might help you in your search."
+    }
+  },
+  "defaultLabelColumn": "Car Acceptability",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Buying Price",
+      "description": "The buying price of the car, from very high to low."
+    },
+    {
+      "type": "categorical",
+      "id": "Maintenance Cost",
+      "description": "The maintenance cost of the car, from very high to low."
+    },
+    {
+      "type": "categorical",
+      "id": "Number Of Doors",
+      "description": "The number of doors, from 2 to 5 or more."
+    },
+    {
+      "type": "categorical",
+      "id": "Number of Passengers",
+      "description": "The number of passengers: 2, 4, or more."
+    },
+    {
+      "type": "categorical",
+      "id": "Boot Size",
+      "description": "The boot (trunk) size: small, medium, or big."
+    },
+    {
+      "type": "categorical",
+      "id": "Safety Rating",
+      "description": "The safety rating: high, medium, or low."
+    },
+    {
+      "type": "categorical",
+      "id": "Car Acceptability",
+      "description": "The acceptability rating of the car: unacceptable, acceptable, good, or very good."
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import Modal from '@code-dot-org/component-library/modal';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -49,6 +50,6 @@ describe('LibraryTable', () => {
       />
     );
     wrapper.setState({unpublishFailedChannel: projectLibraries[0].channel});
-    expect(wrapper.find('BaseDialog').exists()).toBe(true);
+    expect(wrapper.find(Modal).exists()).toBe(true);
   });
 });

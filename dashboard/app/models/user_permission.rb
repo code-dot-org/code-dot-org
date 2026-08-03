@@ -16,6 +16,16 @@
 require 'cdo/chat_client'
 
 class UserPermission < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+    permission: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+  )
+
   belongs_to :user, optional: true
 
   VALID_PERMISSIONS = [

@@ -5,6 +5,11 @@ import {XYPosition} from '@xyflow/react';
 
 import type {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
+import {
+  REACT_FLOW_SELECTOR,
+  reactFlowNodeTypeClass,
+} from '../reactFlowSelectors';
+
 // Builds the partial edge fields that point one side at a node+handle.
 export function endpointPatch(
   side: 'source' | 'target',
@@ -35,49 +40,30 @@ function getHandleType(handle: HTMLElement): 'source' | 'target' | null {
   return null;
 }
 
-// Pulls an (x,y) position out of either a MouseEvent (direct
-// fields) or a TouchEvent (first changedTouches/touches entry). Returns
-// null when no touch is present.
-export function getEventClientPosition(
-  event: MouseEvent | TouchEvent
-): XYPosition | null {
-  if (event instanceof MouseEvent) {
-    return {x: event.clientX, y: event.clientY};
-  }
-  const touch = event.changedTouches[0] ?? event.touches[0] ?? null;
-  return touch ? {x: touch.clientX, y: touch.clientY} : null;
-}
-
-// Returns the nearest handle matching the criteria within the radius, or null if
-// none found.
-export function findNearestHandleInRadius(
+// Picks the nearest handle to screenPoint among the given candidates,
+// keeping only those of the requested type and within radiusPx. resolveNodeId
+// returns the node id to record for a candidate, or null to skip it — this
+// is where callers express their inclusion rules (e.g. exclude a specific
+// node, skip lineAnchor handles).
+export function findNearestHandleAmong(
+  handles: NodeListOf<HTMLElement>,
   screenPoint: XYPosition,
-  excludeNodeId: string,
   requiredType: 'source' | 'target',
-  radiusPx: number
+  radiusPx: number,
+  resolveNodeId: (handle: HTMLElement) => string | null
 ): SnapTarget | null {
-  const handles = document.querySelectorAll<HTMLElement>('.react-flow__handle');
   let closest: SnapTarget | null = null;
   let closestDistance = radiusPx;
 
   handles.forEach(handle => {
-    const nodeId = handle.dataset.nodeid;
-    if (!nodeId || nodeId === excludeNodeId) {
-      return;
-    }
-    // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
-    if (
-      handle
-        .closest('.react-flow__node')
-        ?.classList.contains('react-flow__node-lineAnchor')
-    ) {
-      return;
-    }
     const handleType = getHandleType(handle);
     if (handleType !== requiredType) {
       return;
     }
-
+    const nodeId = resolveNodeId(handle);
+    if (nodeId === null) {
+      return;
+    }
     const rect = handle.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -99,43 +85,71 @@ export function findNearestHandleInRadius(
   return closest;
 }
 
-// Handles snapping an edge endpoint onto a real node handle.
-// Looks up the nearest valid handle and, if found, rewrites the edge.
-// Returns true when a snap was performed, false otherwise.
-export function snapEdgeEndpointToHandle({
+// Returns the nearest handle matching the criteria within the radius, or null if
+// none found.
+export function findNearestHandleInRadius(
+  screenPoint: XYPosition,
+  excludeNodeIds: string[],
+  requiredType: 'source' | 'target',
+  radiusPx: number
+): SnapTarget | null {
+  const handles = document.querySelectorAll<HTMLElement>(
+    REACT_FLOW_SELECTOR.handle
+  );
+  return findNearestHandleAmong(
+    handles,
+    screenPoint,
+    requiredType,
+    radiusPx,
+    handle => {
+      const nodeId = handle.dataset.nodeid;
+      if (!nodeId || excludeNodeIds.includes(nodeId)) {
+        return null;
+      }
+      // Lines only attach to real nodes (shape/text/image), not other line's hidden anchors.
+      if (
+        handle
+          .closest(REACT_FLOW_SELECTOR.node)
+          ?.classList.contains(reactFlowNodeTypeClass('lineAnchor'))
+      ) {
+        return null;
+      }
+      return nodeId;
+    }
+  );
+}
+
+// Points one end of an edge at a real-node handle, unless that would make both
+// ends share a node and collapse the edge into a self-loop. The check also
+// catches the case where two endpoints snap to the same node in one gesture,
+// which the candidate search can't see (each side searches independently).
+export function attachEdgeEndpoint({
   edgeId,
-  excludeNodeId,
   side,
-  screenPoint,
-  radiusPx,
+  nodeId,
+  handleId,
   setEdges,
 }: {
   edgeId: string;
-  excludeNodeId: string;
   side: 'source' | 'target';
-  screenPoint: XYPosition;
-  radiusPx: number;
+  nodeId: string;
+  handleId: string | null;
   setEdges: (
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
-}): boolean {
-  const snap = findNearestHandleInRadius(
-    screenPoint,
-    excludeNodeId,
-    side,
-    radiusPx
-  );
-  if (!snap) return false;
-  const patch = endpointPatch(side, snap.nodeId, snap.handleId);
+}): void {
+  const patch = endpointPatch(side, nodeId, handleId);
   setEdges(currentEdges =>
-    currentEdges.map(currentEdge =>
-      currentEdge.id === edgeId ? {...currentEdge, ...patch} : currentEdge
-    )
+    currentEdges.map(currentEdge => {
+      if (currentEdge.id !== edgeId) return currentEdge;
+      const patched = {...currentEdge, ...patch};
+      return patched.source === patched.target ? currentEdge : patched;
+    })
   );
-  return true;
 }
 
-// Snap a free-floating anchor onto a nearby real-node handle, if any.
+// Discrete snap (keyboard moves, which have no live preview): find the nearest
+// real-node handle to a free anchor and attach the edge there in one step.
 // Returns the edge id when snapping occurred, null otherwise.
 export function snapAnchorIfNearby({
   anchorId,
@@ -160,13 +174,21 @@ export function snapAnchorIfNearby({
   if (!associatedEdge) return null;
   const side: 'source' | 'target' =
     associatedEdge.source === anchorId ? 'source' : 'target';
-  const snapped = snapEdgeEndpointToHandle({
-    edgeId: associatedEdge.id,
-    excludeNodeId: anchorId,
-    side,
+  const oppositeNodeId =
+    side === 'source' ? associatedEdge.target : associatedEdge.source;
+  const snap = findNearestHandleInRadius(
     screenPoint,
-    radiusPx,
+    [anchorId, oppositeNodeId],
+    side,
+    radiusPx
+  );
+  if (!snap) return null;
+  attachEdgeEndpoint({
+    edgeId: associatedEdge.id,
+    side,
+    nodeId: snap.nodeId,
+    handleId: snap.handleId,
     setEdges,
   });
-  return snapped ? associatedEdge.id : null;
+  return associatedEdge.id;
 }

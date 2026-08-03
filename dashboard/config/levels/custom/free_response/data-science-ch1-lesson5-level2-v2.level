@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Read 2: Quantities",
-    "long_instructions": "\r\n![](https://images.code.org/d3e25272adb7ee76bb07ba54763d0fd8-image-1721231264012.40.55 AM.png)\r\n\r\n####What quantities do you notice?\r\n- There are __ cases\r\n- The sample size is __\r\n- There are __ attributes\r\n- The range is...\r\n",
+    "long_instructions": "\r\n![](https://images.code.org/d3e25272adb7ee76bb07ba54763d0fd8-image-1721231264012.40.55 AM.png)\r\n\r\nWhat quantities do you notice?\r\n- There are __ cases\r\n- The sample size is __\r\n- There are __ attributes\r\n- The range is...\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

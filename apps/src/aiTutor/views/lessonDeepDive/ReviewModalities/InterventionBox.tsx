@@ -8,7 +8,10 @@ import {
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import ChallengeBox from '../ChallengeActivities/ChallengeBox';
 
 import Chat from './Chat';
 import PodcastsBox from './PodcastsBox';
@@ -17,7 +20,7 @@ import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from './intervention-box.module.scss';
 
-type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts';
+type CardId = 'flashcards' | 'chat' | 'videos' | 'podcasts' | 'challenge';
 
 interface Card {
   id: CardId;
@@ -55,6 +58,13 @@ const CARDS: Card[] = [
     navLabel: 'Chat',
     icon: 'messages',
     iconColor: '#f5c042',
+  },
+  {
+    id: 'challenge',
+    menuLabel: 'Take on a challenge',
+    navLabel: 'Challenge',
+    icon: 'trophy',
+    iconColor: '#f262ff',
   },
 ];
 
@@ -130,7 +140,12 @@ const InterventionBox: FC<InterventionBoxProps> = ({
               Pick a mode and we&apos;ll get you going.
             </p>
             <div className={styles.menuList}>
-              {CARDS.map(card => (
+              {CARDS.filter(
+                card =>
+                  card.id !== 'challenge' ||
+                  (card.id === 'challenge' &&
+                    experiments.isEnabled(experiments.LESSON_TUTOR_CHALLENGE))
+              ).map(card => (
                 <button
                   key={card.id}
                   type="button"
@@ -163,8 +178,15 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             reflectionData={reflectionData}
           />
         )}
+        {selected === 'challenge' && <ChallengeBox lessonId={lessonId} />}
         {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
-        {selected === 'podcasts' && <PodcastsBox />}
+        {selected === 'podcasts' && (
+          <PodcastsBox
+            lessonId={lessonId}
+            reflectionData={reflectionData}
+            objectives={objectives}
+          />
+        )}
       </div>
 
       <nav className={styles.bottomNav} aria-label="Practice options">
@@ -179,7 +201,12 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           <FontAwesomeV6Icon iconName="grid-2" />
         </button>
         <div className={styles.navDivider} />
-        {CARDS.map(card => {
+        {CARDS.filter(
+          card =>
+            card.id !== 'challenge' ||
+            (card.id === 'challenge' &&
+              experiments.isEnabled(experiments.LESSON_TUTOR_CHALLENGE))
+        ).map(card => {
           const isActive = selected === card.id;
           return (
             <button

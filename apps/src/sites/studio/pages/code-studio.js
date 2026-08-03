@@ -7,8 +7,10 @@
  * so when moving things preserve the include order as much as possible.
  */
 import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 import $ from 'jquery';
 import React from 'react';
@@ -86,7 +88,7 @@ window.Multi = require('@cdo/apps/code-studio/levels/multi');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
 
 // Wrap existing window onerror caller with a script error check.  If we have a
-// script error and a url, throw that so that we have the info in New Relic.
+// script error and a url, rethrow it so the URL reaches browser observability.
 var windowOnError = window.onerror;
 
 window.onerror = function (msg, url, ln) {

@@ -56,12 +56,19 @@ describe('The DebugConsole component', () => {
     restoreRedux();
   });
 
+  function findButtonById(id) {
+    return root
+      .find('button')
+      .filterWhere(button => button.prop('id') === id)
+      .at(0);
+  }
+
   const buttons = {
-    pauseButton: () => root.find('#pauseButton'),
-    continueButton: () => root.find('#continueButton'),
-    stepOverButton: () => root.find('#stepOverButton'),
-    stepOutButton: () => root.find('#stepOutButton'),
-    stepInButton: () => root.find('#stepInButton'),
+    pauseButton: () => findButtonById('pauseButton'),
+    continueButton: () => findButtonById('continueButton'),
+    stepOverButton: () => findButtonById('stepOverButton'),
+    stepOutButton: () => findButtonById('stepOutButton'),
+    stepInButton: () => findButtonById('stepInButton'),
   };
 
   function isVisible(selector) {

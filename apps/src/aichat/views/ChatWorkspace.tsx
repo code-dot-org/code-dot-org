@@ -70,28 +70,36 @@ interface ChatWorkspaceProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   hideModelChangeMessage?: boolean;
+  sendDisabled?: boolean;
+  onMessageSent?: () => void;
 
   // Multimodal support
   multimodalEnabled?: boolean;
   channelId?: string;
   levelName?: string;
   hasStarterAssets?: boolean;
+  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
+  onAssetRemoved?: (asset: ChatAsset) => void;
 
-  // Optional callback to process the model's response before it is recorded in chat
-  // history (useful for structured outputs).
-  responseCallback?: (response: string) => string;
-
-  // Optional callback to log level activity
-  logLevelActivity?: () => void;
+  // Formats a jsonSchema-configured session's parsed response before it's
+  // recorded in chat history. Only ever set alongside modelParameters.responseJsonSchema.
+  jsonSchemaResponseCallback?: (response: unknown) => string;
 
   hasInstructionsDrawer?: boolean;
   lessonId?: number;
   disabledState?: AiChatDisabledState;
+  // If true, disables the ability to send messages. disabledState takes precendence over this, and
+  // will disable the entire workspace.
+  disableSendingMessages?: boolean;
 
   // Optional content to render after the last chat message (e.g. lab-specific actions).
   renderLastMessagePostText?: (
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
+
+  // If provided, displayed as an assistant chat bubble when the user has no prior chat history.
+  // Not sent to the model.
+  initialWelcomeMessage?: string;
 }
 
 /**
@@ -108,13 +116,18 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       levelName,
       channelId,
       hasStarterAssets = false,
+      onAssetUploaded,
+      onAssetRemoved,
       hideModelChangeMessage = false,
-      responseCallback,
-      logLevelActivity,
+      jsonSchemaResponseCallback,
       hasInstructionsDrawer,
       lessonId,
       disabledState,
+      disableSendingMessages,
       renderLastMessagePostText,
+      initialWelcomeMessage,
+      sendDisabled = false,
+      onMessageSent,
     },
     ref
   ) => {
@@ -214,6 +227,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
             isOwnHistory: true,
             channelId,
             lessonId,
+            initialWelcomeMessage: disabled ? undefined : initialWelcomeMessage,
           })
         );
       }
@@ -224,6 +238,8 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       selectedStudent,
       channelId,
       lessonId,
+      initialWelcomeMessage,
+      disabled,
     ]);
 
     useEffect(() => {
@@ -358,11 +374,18 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       () => ({
         addFiles: (files, onUploadFinished) => {
           if (canUploadAssets) {
-            dispatch(uploadFiles({files, buildAssetUrl, onUploadFinished}));
+            dispatch(
+              uploadFiles({
+                files,
+                buildAssetUrl,
+                onUploadFinished,
+                onAssetUploaded,
+              })
+            );
           }
         },
       }),
-      [canUploadAssets, dispatch, buildAssetUrl]
+      [canUploadAssets, dispatch, buildAssetUrl, onAssetUploaded]
     );
 
     return (
@@ -391,7 +414,10 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
         <div className={moduleStyles.footer}>
           <div className={moduleStyles.chipsRow}>
             {canUploadAssets && (
-              <StagedFilesPreview buildAssetUrl={buildAssetUrl} />
+              <StagedFilesPreview
+                buildAssetUrl={buildAssetUrl}
+                onAssetRemoved={onAssetRemoved}
+              />
             )}
             <UserAddedSelectionContextPreview />
           </div>
@@ -404,15 +430,17 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               chatButtons={chatButtons}
               hiddenContextCallback={hiddenContextCallback}
               multimodalAvailable={canUploadAssets}
-              responseCallback={responseCallback}
+              jsonSchemaResponseCallback={jsonSchemaResponseCallback}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
-              logLevelActivity={logLevelActivity}
+              onAssetUploaded={onAssetUploaded}
               uploadDisabled={uploadDisabled}
               currentLevelId={currentLevelId}
               lessonId={lessonId}
-              chatDisabled={disabled}
+              chatDisabled={disabled || disableSendingMessages}
+              sendDisabled={sendDisabled}
+              onMessageSent={onMessageSent}
             />
           )}
         </div>

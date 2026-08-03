@@ -22,21 +22,4 @@ describe('PermanentPromotions', () => {
     });
     expect(link).toHaveAttribute('href', '/my-professional-learning');
   });
-
-  it('renders the second promotion with correct title, description, and link', () => {
-    expect(screen.getByText('Help improve Code.org')).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        'Participate in user research to help us improve our platform for everyone.'
-      )
-    ).toBeInTheDocument();
-
-    const link = screen.getByRole('link', {
-      name: 'Join the user research program',
-    });
-    expect(link).toHaveAttribute(
-      'href',
-      'https://greatquestion.co/codedotorg/userresearch'
-    );
-  });
 });

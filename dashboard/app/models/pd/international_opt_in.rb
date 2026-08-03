@@ -20,6 +20,16 @@ require 'services/international_opt_in/school_data/chile'
 require 'services/international_opt_in/school_data/uzbekistan'
 
 class Pd::InternationalOptIn < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :restricted,
+    user_id: :restricted,
+    form_data: :restricted,
+    created_at: :restricted,
+    updated_at: :restricted,
+  )
+
   include Pd::Form
 
   belongs_to :user
@@ -72,7 +82,6 @@ class Pd::InternationalOptIn < ApplicationRecord
   ## Class Methods
   def self.options
     entry_keys = {
-      schoolCountry: Services::InternationalOptIn::PartnerDataLoader.partners.keys.map(&:to_s).sort,
       workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)
@@ -85,15 +94,19 @@ class Pd::InternationalOptIn < ApplicationRecord
     # apps/src/code-studio/pd/form_components/utils.js
     entries = entry_keys.map do |key, values|
       [key, values.map do |value|
-        # Capitalize country values to be consistent with other country strings in our database
-        answer = key.to_s == 'schoolCountry' ? value.titleize : value
         {
           answerText: I18n.t("pd.form_entries.#{key.to_s.underscore}.#{value.underscore}"),
-          answerValue: answer
+          answerValue: value
         }
       end]
     end.to_h
 
+    entries[:schoolCountry] = supported_countries.map do |country_key, country_name|
+      {
+        answerText: I18n.t("pd.form_entries.school_country.#{country_key}", default: country_name),
+        answerValue: country_name
+      }
+    end
     entries[:workshopOrganizer] = partner_entries
 
     entries[:colombianSchoolData] = colombia_school_data
@@ -151,6 +164,10 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   def self.partner_entries
     Services::InternationalOptIn::PartnerDataLoader.partner_entries
+  end
+
+  def self.supported_countries
+    Services::InternationalOptIn::PartnerDataLoader.supported_countries
   end
 
   def self.colombia_school_data

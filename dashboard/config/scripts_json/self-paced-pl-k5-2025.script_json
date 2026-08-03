@@ -12,6 +12,7 @@
         "cs-CZ",
         "de-DE",
         "es-ES",
+        "es-LA",
         "es-MX",
         "fa-IR",
         "fr-FR",
@@ -29,13 +30,20 @@
         "th-TH",
         "tr-TR",
         "zh-CN",
-        "zh-TW"
+        "zh-TW",
+        "gu-IN",
+        "ja-JP",
+        "or-IN",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "uk-UA"
       ],
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-07 04:57:56 UTC",
+    "serialized_at": "2026-06-23 23:51:16 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4281,6 +4289,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

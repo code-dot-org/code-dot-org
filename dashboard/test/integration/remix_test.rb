@@ -11,6 +11,9 @@ class RemixTest < ActionDispatch::IntegrationTest
 
   def setup
     AWS::S3.stubs :create_client # Don't actually talk to S3
+    # The page header falls back to the hourofcode unit,
+    # so full page renders need it to exist.
+    create_hourofcode_unit_and_levels
     sign_in create :student
   end
 
@@ -104,6 +107,10 @@ class RemixTest < ActionDispatch::IntegrationTest
 
   test 'weblab only remixes Sources and Files buckets' do
     assert_only_remixes_sources_files 'weblab'
+  end
+
+  test 'weblab2 only remixes Sources and Assets buckets' do
+    assert_only_remixes_sources_assets 'weblab2'
   end
 
   test 'bounce only remixes Sources bucket' do

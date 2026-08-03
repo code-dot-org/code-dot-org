@@ -1,5 +1,6 @@
-import {AiTutorMode, AiTutorAnswerType} from './types';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '../lab2/constants';
 
+import {AiTutorMode, AiTutorAnswerType} from './types';
 export const WEBLAB2_EDITABLE_FILE_TYPES = [
   'html',
   'css',
@@ -10,10 +11,8 @@ export const WEBLAB2_EDITABLE_FILE_TYPES = [
   'json',
 ];
 
-export const WEBLAB2_IMAGE_FILE_TYPES = ['jpg', 'jpeg', 'png', 'gif'];
-
 export const WEBLAB2_SUPPORTED_FILE_TYPES = WEBLAB2_EDITABLE_FILE_TYPES.concat(
-  WEBLAB2_IMAGE_FILE_TYPES
+  SUPPORTED_IMAGE_EXTENSIONS
 );
 
 export const AI_SAVED_COMMENT = 'AI***SAVE';
@@ -127,3 +126,6 @@ export const TUTOR_MODE_TO_ANSWER_TYPE: Record<
     'testCase',
   ],
 };
+
+export const WEBLAB2_WELCOME_CHAT_MESSAGE =
+  "Hi, I'm your AI Tutor! I can help you brainstorm, debug, and work through this level.";

@@ -4,6 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
+import * as Observability from '@code-dot-org/core/plugins/observability';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -13,6 +14,7 @@ import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import localization from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -437,8 +439,8 @@ Applab.init = function (config) {
     channelId: config.channel,
   });
 
-  // inlcude channel id in any new relic actions we generate
-  logToCloud.setCustomAttribute('channelId', Applab.channelId);
+  // include channel id in any subsequent observability page actions
+  Observability.setContext('channel', {id: Applab.channelId});
 
   config.usesAssets = true;
 
@@ -548,9 +550,18 @@ Applab.init = function (config) {
       config.level.levelHtml = '';
     }
 
+    // Parse and localize the start HTML, if we need it
+    let startHtml = level.startHtml;
+    if (!level.levelHtml && !!startHtml) {
+      const container = document.createElement('div');
+      container.innerHTML = startHtml;
+      const localized = localization.translate(container);
+      startHtml = localized.innerHTML;
+    }
+
     // Set designModeViz contents after it is created in configureDom()
     // and sized in drawDiv().
-    Applab.setLevelHtml(level.levelHtml || level.startHtml || '');
+    Applab.setLevelHtml(level.levelHtml || startHtml || '');
   };
 
   config.afterEditorReady = function () {
@@ -752,6 +763,17 @@ Applab.init = function (config) {
   }
 
   studioApp().loadLibraryBlocks(config);
+
+  // Localize the block parameters
+  config.dropletConfig.blocks = config.dropletConfig.blocks.map(block => ({
+    ...block,
+    localized: true,
+    paletteParams: block.localized
+      ? block.paletteParams
+      : block.paletteParams?.map(
+          param => `"${localization.translate(param.replaceAll('"', ''))}"`
+        ),
+  }));
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.

@@ -61,25 +61,26 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
-// Enable the new teacher dashboard student snapshot page and features
-experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+// and shows the review path for AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
+// Show the challenge path for AI Tutor+
+experiments.LESSON_TUTOR_CHALLENGE = 'lesson-tutor-challenge';
 // Enable Onboarding experiments
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
 experiments.AI_DIFF_DRAWER = 'ai-diff-drawer';
 // Route all Gemini model traffic through the AI gateway instead of the Rails backend
 experiments.USE_AI_GATEWAY = 'useAiGateway';
-// Legacy version of Sketch Lab. This should be removed once the new version is fully stable.
-experiments.EXCALIDRAW = 'excalidraw';
-
-/**
- * This was a gamified version of the finish dialog, built in 2018,
- * but never fully shipped.
- * See github.com/code-dot-org/code-dot-org/pull/19557
- */
-experiments.BUBBLE_DIALOG = 'bubbleDialog';
+// Enable speech-to-text input in AI chat lab and AI tutor for all models
+experiments.ENABLE_SPEECH_TO_TEXT = 'enable-speech-to-text';
+// Run the pyodide worker in a hidden iframe on a separate codeprojects.org
+// subdomain, isolated from studio.code.org's cookies/session, instead of directly
+// on studio.code.org.
+experiments.PYTHONLAB_SEPARATE_DOMAIN = 'pythonlab-separate-domain';
+// Student scrapbook entrypoint + "My scrapbook" dropdown link.
+// Enable with ?student-scrapbook=true or ?enableExperiments=student-scrapbook.
+experiments.STUDENT_SCRAPBOOK = 'student-scrapbook';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
@@ -88,8 +89,33 @@ experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
+experiments.getLocalStorageExperiments_ = function () {
+  try {
+    const jsonList = localStorage.getItem(STORAGE_KEY);
+    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
+    const now = Date.now();
+    // Storage may contain duplicate keys; keep the first live entry for each.
+    const seenKeys = new Set();
+    const enabledExperiments = storedExperiments.filter(experiment => {
+      const enabled =
+        experiment.key &&
+        !seenKeys.has(experiment.key) &&
+        (experiment.expiration === undefined || experiment.expiration > now);
+      if (enabled) {
+        seenKeys.add(experiment.key);
+      }
+      return enabled;
+    });
+    if (enabledExperiments.length < storedExperiments.length) {
+      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
+    }
+    return enabledExperiments;
+  } catch (e) {
+    return [];
+  }
+};
+
 experiments.getStoredExperiments_ = function () {
-  // Get experiments on current user from experiments cookie
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
     ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
@@ -97,32 +123,26 @@ experiments.getStoredExperiments_ = function () {
       }))
     : [];
 
-  // Get experiments stored in local storage.
-  try {
-    const jsonList = localStorage.getItem(STORAGE_KEY);
-    const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
-    const now = Date.now();
-    const enabledExperiments = storedExperiments.filter(experiment => {
-      return (
-        experiment.key &&
-        (experiment.expiration === undefined || experiment.expiration > now)
-      );
-    });
-    if (enabledExperiments.length < storedExperiments.length) {
-      trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));
-    }
-    return userExperiments.concat(enabledExperiments);
-  } catch (e) {
-    return userExperiments;
-  }
+  return userExperiments.concat(this.getLocalStorageExperiments_());
 };
 
 experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
+/**
+ * Returns the experiments enabled in this browser via local storage (the kind
+ * setEnabled manages), along with the metadata we store for them. Does not
+ * include user experiments mirrored into the _experiments cookie at sign-in.
+ * @returns {Array<{key: string, expiration?: number}>} expiration is ms since
+ *   epoch, present only for temporarily-enabled experiments.
+ */
+experiments.getLocalStorageExperimentDetails = function () {
+  return this.getLocalStorageExperiments_();
+};
+
 experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
-  const allEnabled = this.getStoredExperiments_();
+  const allEnabled = this.getLocalStorageExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
   );

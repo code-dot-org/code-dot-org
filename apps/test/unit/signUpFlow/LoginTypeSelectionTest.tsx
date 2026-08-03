@@ -269,7 +269,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/sign_up/finish_student_account'
+        'http://localhost-studio.code.org/users/sign_up/finish_student_account'
       );
     });
 
@@ -501,7 +501,7 @@ describe('LoginTypeSelection', () => {
 
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(
-        '/users/sign_up/finish_student_account'
+        'http://localhost-studio.code.org/users/sign_up/finish_student_account'
       );
     });
 
@@ -519,7 +519,9 @@ describe('LoginTypeSelection', () => {
     expect(
       finishSignUpButton
         .toString()
-        .includes("href: '/users/sign_up/finish_student_account'")
+        .includes(
+          "href: 'http://localhost-studio.code.org/users/sign_up/finish_student_account'"
+        )
     ).toBeTruthy;
 
     // Checks that the page is displaying student-facing LMS content
@@ -546,8 +548,8 @@ describe('LoginTypeSelection', () => {
     // Checks that the page is displaying teacher-facing LMS content
     screen.getByText(locale.using_lms_platforms());
     screen.getByText(locale.access_detailed_instructions());
-    screen.getByText('Canvas', {selector: 'span'});
-    screen.getByText('Schoology', {selector: 'span'});
+    screen.getByRole('link', {name: 'Canvas'});
+    screen.getByRole('link', {name: 'Schoology'});
   });
 
   it('email is stored in sessionStorage', async () => {

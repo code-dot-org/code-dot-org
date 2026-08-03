@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-20 03:51:47 UTC",
+    "serialized_at": "2026-06-03 15:45:34 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -61,14 +61,14 @@
   "lessons": [
     {
       "key": "Introduction to Teaching AI Foundations (Semester 2)",
-      "name": "Preparing to Teach: Designing & Building with AI",
+      "name": "Intro to Teaching AIF: Designing & Building with AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested Time:** 20 minutes"
+        "overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "\n **By the end of this professional learning module, you will be able to:**\n\n*  Introduce the foundaitonal concepts in the AI Foundations (Semester 2) course.\n*  Understand the basics of web applications and how they support interactive, AI-powered projects.\n*  Understand how to integrate AI tools and concepts into coding lessons to model responsible and creative AI use.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Teaching AI Foundations (Semester 2)",

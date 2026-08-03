@@ -1,7 +1,6 @@
 @eyes
 Feature: Hidden Stages
 
-@properties_encryption_key
 Scenario: Hidden Stages - lesson 2 hidden
   When I open my eyes to test "hidden stages"
   Given I create an authorized teacher-associated student named "bobby"

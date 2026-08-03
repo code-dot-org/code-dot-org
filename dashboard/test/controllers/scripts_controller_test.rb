@@ -4,6 +4,12 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
+  setup_all do
+    # The page header falls back to the hourofcode unit,
+    # so full page renders need it to exist.
+    create_hourofcode_unit_and_levels
+  end
+
   setup do
     @coursez_2017 = create(:script, name: 'coursez-2017')
     create(:single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
@@ -96,7 +102,10 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - #{brand_name} [test]</title>")
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Unit: All The Lesson Plans - #{brand_name} [test]']"
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
@@ -110,7 +119,7 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1
     }
     assert_response :ok
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course2025.name}/units/1")
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"https://test-studio.code.org/courses/#{course2025.name}/units/1")
   end
 
   test 'canonical url is not added if is not single unit course' do
@@ -139,7 +148,6 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show of hourofcode redirects to hoc" do
-    create_hourofcode_unit_and_levels
     get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
@@ -487,7 +495,6 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
-  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "edit" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
@@ -1762,6 +1769,116 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_raises ActiveRecord::RecordNotFound do
       delete :destroy, params: {id: legacy_path_validation_unit.id}
     end
+  end
+
+  # ---- /generate (unit-level lesson outline page) ----
+
+  test "generate redirects signed-out users" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    get :generate, params: {id: @single_unit_2023.name}
+    assert_redirected_to_sign_in
+  end
+
+  test "generate forbids non-levelbuilders" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:teacher)
+    get :generate, params: {id: @single_unit_2023.name}
+    assert_response :forbidden
+  end
+
+  test "generate refuses unmigrated units" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    get :generate, params: {id: @unmigrated_unit.name}
+    assert_response :forbidden
+  end
+
+  test "generate renders payload via /s/ URL with editUnitUrl pointing at /edit" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    get :generate, params: {id: @migrated_unit.name}
+    assert_response :ok
+    data = assigns(:unit_data)
+    assert_equal @migrated_unit.name, data[:name]
+    assert_equal "/s/#{@migrated_unit.name}/edit", data[:editUnitUrl]
+  end
+
+  test "generate renders payload via /courses/ URL with editUnitUrl pointing at /edit" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    course = @migrated_unit.original_unit_group
+    get :generate, params: {course_course_name: course.name, position: 1}
+    assert_response :ok
+    data = assigns(:unit_data)
+    assert_equal "/courses/#{course.name}/units/1/edit", data[:editUnitUrl]
+  end
+
+  # ---- PUT /lesson_outlines (bulk-write endpoint) ----
+
+  test "update_lesson_outlines refuses unmigrated units" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    put :update_lesson_outlines, params: {id: @unmigrated_unit.name, lessons: '[]'}
+    assert_response :bad_request
+  end
+
+  test "update_lesson_outlines requires lessons param" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    put :update_lesson_outlines, params: {id: @migrated_unit.name}
+    assert_response :bad_request
+  end
+
+  test "update_lesson_outlines creates new lessons in spec order" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [
+        {key: 'one', name: 'One', generateOutline: 'first'},
+        {key: 'two', name: 'Two', generateOutline: 'second'},
+      ],
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    keys = @migrated_unit.lessons.order(:absolute_position).pluck(:key)
+    assert_equal %w(one two), keys
+    assert_equal 'first', @migrated_unit.lessons.find_by(key: 'one').generate_outline
+  end
+
+  test "update_lesson_outlines persists unit-level generateOutline when supplied" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+      generateOutline: 'unit-level prompt',
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'unit-level prompt', @migrated_unit.generate_outline
+  end
+
+  test "update_lesson_outlines leaves unit generate_outline alone when omitted" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+    stub_file_writes(@migrated_unit.name)
+    @migrated_unit.update!(properties: @migrated_unit.properties.merge('generate_outline' => 'preexisting'))
+
+    put :update_lesson_outlines, params: {
+      id: @migrated_unit.name,
+      lessons: [{key: 'a', name: 'A'}],
+    }, as: :json
+
+    assert_response :ok
+    @migrated_unit.reload
+    assert_equal 'preexisting', @migrated_unit.generate_outline
   end
 
   def stub_file_writes(unit_name)

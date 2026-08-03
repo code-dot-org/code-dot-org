@@ -1,4 +1,5 @@
 /** Body of the animation picker dialog */
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,11 +7,9 @@ import {
   searchAssets,
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import Button from '@cdo/apps/legacySharedComponents/Button.jsx';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar.jsx';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
-import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
@@ -20,7 +19,6 @@ import AnimationPickerListItem, {
   getCategory,
 } from './AnimationPickerListItem.jsx';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
-import * as dialogStyles from './styles';
 
 import style from './animation-picker-body.module.scss';
 
@@ -249,15 +247,17 @@ export default class AnimationPickerBody extends React.Component {
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
-          <Button
-            text={msg.done()}
+          <MuiButton
+            color="primary"
+            variant="contained"
             onClick={onAnimationSelectionComplete}
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
+          >
+            {msg.done()}
+          </MuiButton>
         )}
-        <h1 style={dialogStyles.title}>
+        <Typography variant="h4" component="h1" className={style.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
-        </h1>
+        </Typography>
         {uploadsEnabled && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
@@ -321,12 +321,14 @@ export default class AnimationPickerBody extends React.Component {
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
           <div className={style.footer}>
-            <Button
+            <MuiButton
               className="ui-test-selector-done-button"
-              text={msg.done()}
+              color="primary"
+              variant="contained"
               onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
+            >
+              {msg.done()}
+            </MuiButton>
           </div>
         )}
       </div>
@@ -335,7 +337,7 @@ export default class AnimationPickerBody extends React.Component {
 }
 
 export const WarningLabel = ({children}) => (
-  <span style={{color: color.red}}>{children}</span>
+  <span className={style.warning}>{children}</span>
 );
 WarningLabel.propTypes = {
   children: PropTypes.node,

@@ -4,7 +4,6 @@ import {Typography} from '@mui/material';
 import React from 'react';
 
 import bookWithBulb from './images/book_with_bulb.png';
-import magnifierWithBackground from './images/magnifier_with_background.png';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -20,21 +19,6 @@ const PermanentPromotions: React.FC = () => {
       image: (
         <img
           src={bookWithBulb}
-          alt=""
-          className={styles.staticPromotionImage}
-        />
-      ),
-    },
-    {
-      id: 'static-2',
-      title: 'Help improve Code.org',
-      description:
-        'Participate in user research to help us improve our platform for everyone.',
-      buttonLabel: 'Join the user research program',
-      buttonTarget: 'https://greatquestion.co/codedotorg/userresearch',
-      image: (
-        <img
-          src={magnifierWithBackground}
           alt=""
           className={styles.staticPromotionImage}
         />

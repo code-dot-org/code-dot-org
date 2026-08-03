@@ -20,7 +20,7 @@ const ProjectsPromo = () => {
             </Typography>
             <Typography variant="body3">
               {
-                'Code.org labs and widgets let students explore computer science concepts through hands-on discovery, no structured course required.'
+                'CodeAI labs and widgets let students explore computer science concepts through hands-on discovery, no structured course required.'
               }
             </Typography>
           </div>

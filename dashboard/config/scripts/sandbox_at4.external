@@ -1,0 +1,32 @@
+name 'sandbox_AT4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Rubric Grading Practice
+
+Let's practice grading an Interactive Card. Below, you'll find a student's project represented by a set of code alongside its output. 
+
+1. First, study the code to understand the student's work. 
+2. Then, scroll beneath the project to find the rubric. Click a cell within each row to score the project.
+
+## Sample Project
+
+<iframe
+  src="https://atrejo-code.github.io/demo_embeddings_U3/interactive_card/input_output.html"
+  title="Interactive Card — Game Lab code and output"
+  width="100%"
+  height="600"
+  frameborder="0">
+</iframe>
+
+## Rubric
+
+<iframe
+  src="https://atrejo-code.github.io/demo_embeddings_U3/interactive_card/rubric.html"
+  title="Captioned Scenes Project Rubric"
+  width="100%"
+  height="650"
+  frameborder="0">
+</iframe>
+MARKDOWN

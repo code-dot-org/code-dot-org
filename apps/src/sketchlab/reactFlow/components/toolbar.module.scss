@@ -1,13 +1,35 @@
+@mixin toolbar-base {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+  pointer-events: all;
+  background-color: var(--background-neutral-primary);
+}
+
 .toolbar {
+  @include toolbar-base;
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
   z-index: 10;
+}
+
+.canvasControls {
+  @include toolbar-base;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
+// Groups related buttons so the onboarding tour can highlight them as a unit.
+// Matches the parent's column gap so wrapping changes nothing visually.
+.toolbarGroup {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 6px;
-  pointer-events: all;
-  background-color: var(--background-neutral-primary);
+}
+
+.divider {
+  border-color: var(--borders-neutral-primary);
+  margin: 0 -4px;
 }

@@ -11,17 +11,23 @@
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
 import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   currentLocation,
   getEnvironment,
   isProductionEnvironment,
 } from '@cdo/apps/utils';
 
+import {PROJECT_TYPES_WITH_SHARE_FILTERING} from '../constants';
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
 import {ValidationError} from '../responseValidators';
-import {Channel, ProjectAndSources, ProjectSources} from '../types';
+import {
+  Channel,
+  ProjectAndSources,
+  ProjectSources,
+  ShareFailure,
+} from '../types';
 
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
@@ -115,20 +121,43 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     await this.initializeForceNewVersionState();
-    const abuseScore = await this.channelsStore.getAbuseScore(channel);
-    const sharingDisabled = await this.channelsStore.getSharingDisabled(
-      channel
-    );
-    const isTeacherOfProjectOwner =
-      await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    // These are independent lookups; fetch them concurrently so
+    // project load waits for the slowest one instead of the sum of all four.
+    const [abuseScore, sharingDisabled, shareFailure, isTeacherOfProjectOwner] =
+      await Promise.all([
+        this.channelsStore.getAbuseScore(channel),
+        this.channelsStore.getSharingDisabled(channel),
+        this.getShareFailureIfFiltered(channel),
+        this.channelsStore.getIsTeacherOfProjectOwner(channel),
+      ]);
     this.setTitleFromChannel(channel);
     return {
       sources,
       channel,
       abuseScore,
       sharingDisabled,
+      shareFailure,
       isTeacherOfProjectOwner,
     };
+  }
+
+  // Fetch the share-filter result for project types the server filters;
+  // resolves to null for everything else.
+  private async getShareFailureIfFiltered(
+    channel: Channel
+  ): Promise<ShareFailure | null> {
+    if (!PROJECT_TYPES_WITH_SHARE_FILTERING.includes(channel.projectType)) {
+      return null;
+    }
+    try {
+      return await this.channelsStore.getShareFailure(channel);
+    } catch (error) {
+      // Fail silently, matching server behavior.
+      this.metricsReporter.logWarning(
+        'Unable to fetch share failure status. Defaulting to no failure.'
+      );
+      return null;
+    }
   }
 
   // Restore the given version of the project. This will call restore on the sources store
@@ -212,7 +241,8 @@ export default class ProjectManager {
   async save(
     sources: ProjectSources,
     forceSave = false,
-    forceNewVersion = false
+    forceNewVersion = false,
+    skipSourcesChangedCheck = false
   ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
@@ -220,7 +250,11 @@ export default class ProjectManager {
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
     this.sourcesToSave = sources;
-    return await this.enqueueSaveOrSave(forceSave, forceNewVersion);
+    return await this.enqueueSaveOrSave(
+      forceSave,
+      forceNewVersion,
+      skipSourcesChangedCheck
+    );
   }
 
   /**
@@ -229,16 +263,13 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave() {
+  async flushSave(forceNewVersion = false) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(
-      /* forceSave */ true,
-      /* forceNewVersion */ false
-    );
+    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
   }
 
   /**
@@ -374,6 +405,31 @@ export default class ProjectManager {
     return this.sourcesStore.getCurrentVersionId();
   }
 
+  /**
+   * Create a named commit: force-flush any pending sources as a new version,
+   * then record the comment against that version. Subsequent saves start a
+   * fresh version so the committed one stays intact.
+   */
+  async createCommit(description: string): Promise<void> {
+    this.throwErrorIfDestroyed('createCommit');
+    await this.flushSave(/* forceNewVersion */ true);
+    const versionId = this.getCurrentVersionId();
+    if (!versionId) {
+      throw new Error(
+        'Cannot create a commit: the project has no saved version'
+      );
+    }
+    const payload = {
+      storage_id: this.channelId,
+      version_id: versionId,
+      comment: description,
+    };
+    await HttpClient.post('/project_commits', JSON.stringify(payload), true, {
+      'Content-Type': 'application/json; charset=UTF-8',
+    });
+    this.setForceNewVersion(true);
+  }
+
   getForceNewVersion(): boolean {
     return this.forceNewVersion;
   }
@@ -463,10 +519,14 @@ export default class ProjectManager {
    * channel is metadata about the project and we don't want to save it unless the source
    * save succeeded.
    * @param forceNewVersion boolean: If the save should create a new version.
+   * @param skipSourcesChangedCheck boolean: If true, we will save the source even if it has not changed.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
-  private async saveHelper(forceNewVersion: boolean): Promise<void> {
+  private async saveHelper(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean
+  ): Promise<void> {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we don't have sources to save
     // or a channel to save.
@@ -485,16 +545,17 @@ export default class ProjectManager {
     this.executeSaveStartListeners();
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
-    // If neither source nor channel has actually changed, no need to save again.
-    if (!sourceChanged && !channelChanged) {
+    // If neither source nor channel has actually changed, no need to save again
+    // unless skipSourcesChangedCheck is true.
+    if (!sourceChanged && !channelChanged && !skipSourcesChangedCheck) {
       this.saveInProgress = false;
       // We can clear sourcesToSave since they have not changed.
       this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
-    // Only save the source if it has changed.
-    if (this.sourcesToSave && sourceChanged) {
+    // Only save the source if it has changed or we are skipping the changed check.
+    if (this.sourcesToSave && (sourceChanged || skipSourcesChangedCheck)) {
       try {
         await this.sourcesStore.save(
           this.channelId,
@@ -633,11 +694,13 @@ export default class ProjectManager {
   // if forceSave is true or it has been at least 30 seconds since our last save,
   // initiate a save.
   // If forceNewVersion is true, we will create a new version on save.
+  // If skipSourcesChangedCheck is true, we will save the source even if it has not changed.
   // If we cannot save now, enqueue a save if one has not already been enqueued and
   // return a noop response.
   private async enqueueSaveOrSave(
     forceSave: boolean,
-    forceNewVersion: boolean
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean = false
   ) {
     if (!this.canSave(forceSave)) {
       if (!this.saveQueued) {
@@ -645,7 +708,7 @@ export default class ProjectManager {
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.saveHelper(forceNewVersion);
+            this.saveHelper(forceNewVersion, skipSourcesChangedCheck);
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
@@ -654,7 +717,7 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request.
-      return await this.saveHelper(forceNewVersion);
+      return await this.saveHelper(forceNewVersion, skipSourcesChangedCheck);
     }
   }
 
@@ -747,7 +810,7 @@ export default class ProjectManager {
   /**
    * Set the title of the page based on the channel name. We only do this for standalone project levels.
    * The title format is:
-   * {channel.name} - {project type display name} - Code.org [{environment}]. If we are on production,
+   * {channel.name} - {project type display name} - CodeAI [{environment}]. If we are on production,
    * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
    * @param channel
    */
@@ -760,7 +823,7 @@ export default class ProjectManager {
           : ` [${currentEnvironment}]`;
       const projectName = convertProjectTypeToDisplayName(channel.projectType);
       const projectString = projectName ? `${projectName} - ` : '';
-      document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
+      document.title = `${channel.name} - ${projectString}CodeAI${environmentSuffix}`;
     }
     // Otherwise, we will use the default document title from the server.
   }

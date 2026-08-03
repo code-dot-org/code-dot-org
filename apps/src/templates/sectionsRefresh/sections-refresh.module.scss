@@ -15,6 +15,10 @@
   align-items: center;
 }
 
+.whyCreateSectionLink {
+  margin-bottom: 1rem;
+}
+
 p.noMarginBottomParagraph {
   margin-bottom: 0;
 }
@@ -166,6 +170,11 @@ p.noMarginBottomParagraph {
   align-items: center;
 }
 
+.unavailableLanguageTag {
+  display: block;
+  margin: 4px 0 8px 10px;
+}
+
 .unitDropdown {
   @include main-font-semi-bold;
   font-size: 16px;
@@ -199,12 +208,11 @@ button.advancedSettingsButton {
 }
 
 .celebrationDialogBody {
+  flex-direction: column;
+  text-align: center;
   padding: 36px;
-  font-family: var(--font-family-barlow-semi-condensed-medium);
-
-  h1 {
-    margin-bottom: 0;
-  }
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-medium);
 }
 
 .celebrationDialogBody .celebrationGif {
@@ -212,16 +220,11 @@ button.advancedSettingsButton {
 }
 
 .celebrationDialogFooter {
-  padding-right: 36px;
   padding-bottom: 36px;
   padding-left: 0;
   padding-top: 0;
   display: flex;
-  justify-content: flex-end;
-}
-
-.textPopUp {
-  cursor: pointer;
+  justify-content: center;
 }
 
 .toolTipContainer {

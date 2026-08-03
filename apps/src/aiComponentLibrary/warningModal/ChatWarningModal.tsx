@@ -1,7 +1,7 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import Modal from '@code-dot-org/component-library/modal';
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
@@ -17,39 +17,32 @@ export interface ChatWarningModalProps {
 const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
   onClose,
 }) => (
-  <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
-    <div className={moduleStyles.headerContainer}>
-      <Typography variant="h3" gutterBottom>
-        {i18n.aiWarningModalHeader()}
-      </Typography>
-    </div>
-    <hr />
-    <div className={moduleStyles.warningModuleTextContainer}>
-      <Typography variant="body2" gutterBottom>
-        <strong>{i18n.aiWarningModalMessagesAreRecorded()}</strong>
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        {i18n.aiWarningModalInappropriateFlagged()}
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        {i18n.aiWarningUnsaved()}
-      </Typography>
-      <Typography variant="body2" gutterBottom>
-        {i18n.aiWarningModalPersonalNotSubmitted()}
-      </Typography>
-    </div>
-    <hr />
-    <div className={moduleStyles.bottomSection}>
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="medium"
-        onClick={onClose}
-        type="button"
-      >
-        {i18n.aiWarningModalOk()}
-      </MuiButton>
-    </div>
-  </AccessibleDialog>
+  <Modal
+    className={moduleStyles.chatWarningModal}
+    title={i18n.aiWarningModalHeader()}
+    onClose={onClose}
+    closeLabel={i18n.closeDialog()}
+    customContent={
+      <div id="dsco-dialog-description" className={moduleStyles.warningContent}>
+        <Typography variant="body2" gutterBottom>
+          <strong>{i18n.aiWarningModalMessagesAreRecorded()}</strong>
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {i18n.aiWarningModalInappropriateFlagged()}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {i18n.aiWarningUnsaved()}
+        </Typography>
+        <Typography variant="body2" gutterBottom>
+          {i18n.aiWarningModalPersonalNotSubmitted()}
+        </Typography>
+      </div>
+    }
+    primaryButtonProps={{
+      children: i18n.aiWarningModalOk(),
+      onClick: onClose,
+    }}
+  />
 );
+
 export default ChatWarningModal;

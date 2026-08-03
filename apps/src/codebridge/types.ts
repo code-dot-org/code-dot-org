@@ -39,13 +39,24 @@ export type ConfigType = {
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
   validMimeTypes?: string[];
-  layoutComponents: {
-    horizontal?: React.FunctionComponent<LayoutProps>;
-    vertical: React.FunctionComponent<LayoutProps>;
-    share?: React.FunctionComponent<LayoutProps>;
-    widget?: React.FunctionComponent<LayoutProps>;
-  };
+  hideNewFolderButton?: boolean;
+  layoutComponents: LayoutComponents;
 };
+
+// At least one of horizontal/vertical must be supplied; share/widget are
+// always optional. The union forces one of the two required keys to be present.
+type LayoutComponentMap = {
+  horizontal?: React.FunctionComponent<LayoutProps>;
+  vertical?: React.FunctionComponent<LayoutProps>;
+  share?: React.FunctionComponent<LayoutProps>;
+  widget?: React.FunctionComponent<LayoutProps>;
+};
+
+type LayoutComponents = LayoutComponentMap &
+  (
+    | {horizontal: React.FunctionComponent<LayoutProps>}
+    | {vertical: React.FunctionComponent<LayoutProps>}
+  );
 
 export type SetProjectFunction = (project: ProjectSources) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
@@ -57,6 +68,10 @@ export type OnRunFunction = (
 ) => Promise<void>;
 export type OnStopFunction = () => void;
 export type SendConsoleInputFunction = (input: string) => void;
+export type SendTypedInputMessageFunction = (
+  messageType: string,
+  message: string
+) => void;
 
 export type ReducerAction = {
   type: string;

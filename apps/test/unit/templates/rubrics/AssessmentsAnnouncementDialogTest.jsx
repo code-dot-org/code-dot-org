@@ -25,8 +25,11 @@ describe('AssessmentsAnnouncementDialog', () => {
 
   it('renders the dialog', () => {
     render(<AssessmentsAnnouncementDialog />);
+    // DSCO Modal renders the inner element with `role="dialog"` and uses the
+    // title as the aria-label; legacy AccessibleDialog had a `role="region"`
+    // inner div with the same aria-label.
     expect(
-      screen.getByRole('region', {
+      screen.getByRole('dialog', {
         name: i18n.aiAssessmentsAnnouncementHeading(),
       })
     ).toBeInTheDocument();
@@ -37,9 +40,11 @@ describe('AssessmentsAnnouncementDialog', () => {
 
   it('closes the dialog when the close button is clicked', async () => {
     render(<AssessmentsAnnouncementDialog />);
-    fireEvent.click(screen.getByRole('button', {name: 'Close'}));
+    // Modal's close affordance is labeled "Close modal" by default (the
+    // legacy AccessibleDialog used "Close").
+    fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     expect(
-      screen.queryByRole('region', {
+      screen.queryByRole('dialog', {
         name: i18n.aiAssessmentsAnnouncementHeading(),
       })
     ).not.toBeInTheDocument();

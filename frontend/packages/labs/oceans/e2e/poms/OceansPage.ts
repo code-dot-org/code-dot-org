@@ -150,45 +150,77 @@ export class OceansPage {
 
   // ── Navigation ──────────────────────────────────────────────────────
 
+  /** The app mode this page expects. Subclasses override. */
+  protected get appMode(): AppModeValue {
+    return AppMode.FishVTrash;
+  }
+
   /**
-   * Navigate to the standalone dev server for the given app mode.
-   *
-   * Always appends `?guide=off` to suppress guide overlays, keeping tests
-   * deterministic without guide-dismissal boilerplate.
+   * Navigate to the standalone dev server for the given mode. Appends
+   * `?guide=off`, plus `?testFreeze=1` when opts.freeze is set
+   * (deterministic mode for visual-regression specs).
    *
    * @param mode - App mode to load; defaults to FishVTrash.
+   * @param opts - Optional freeze flag for visual-regression callers.
    */
-  async goto(mode: AppModeValue = AppMode.FishVTrash): Promise<void> {
+  async goto(
+    mode: AppModeValue = AppMode.FishVTrash,
+    opts: {freeze?: boolean} = {},
+  ): Promise<void> {
     const params = new URLSearchParams({guide: 'off', mode});
+    if (opts.freeze) {
+      params.set('testFreeze', '1');
+    }
     await this.page.goto(`/?${params.toString()}`);
   }
+
+  /**
+   * Navigate to `appMode` and wait for the page to be ready. Subclasses
+   * override {@link waitForReady} with their own readiness check; subclass
+   * static `load` helpers just construct + delegate here.
+   *
+   * @param opts - Optional freeze flag for visual-regression callers.
+   * @returns `this` for chaining.
+   */
+  async load(opts: {freeze?: boolean} = {}): Promise<this> {
+    await this.goto(this.appMode, opts);
+    await this.waitForReady();
+    return this;
+  }
+
+  /**
+   * Subclass hook called by {@link load} after navigation. Default no-op;
+   * override to wait for a mode-specific sentinel (e.g. training scene),
+   * dismiss intro UI, etc.
+   */
+  protected async waitForReady(): Promise<void> {}
 
   /**
    * Wait until the Training scene is fully visible.
    * Uses the Erase button as the sentinel — it is only rendered in the training scene.
    */
   async waitForTrainingScene(): Promise<void> {
-    await this.eraseButton.waitFor({state: 'visible', timeout: 10_000});
+    await this.eraseButton.waitFor({state: 'visible', timeout: 30_000});
   }
 
   /** Wait until the Words scene is visible (FishShort / FishLong modes). */
   async waitForWordsScene(): Promise<void> {
-    await this.wordButtons.first().waitFor({state: 'visible', timeout: 10_000});
+    await this.wordButtons.first().waitFor({state: 'visible', timeout: 30_000});
   }
 
   /**
    * Wait until the Predict scene is visible (Run button rendered).
    *
-   * @param timeout - Max ms to wait; defaults to 15 s to absorb
-   *   the IntermediateLoading phase that precedes Predicting mode.
+   * @param timeout - Max ms to wait; defaults to 30 s to absorb the
+   *   IntermediateLoading phase and webkit's slower asset/model load.
    */
-  async waitForPredictScene(timeout = 15_000): Promise<void> {
+  async waitForPredictScene(timeout = 30_000): Promise<void> {
     await this.runButton.waitFor({state: 'visible', timeout});
   }
 
   /** Wait until the Pond scene is visible (fish-pond surface rendered). */
   async waitForPondScene(): Promise<void> {
-    await this.pondSurface.waitFor({state: 'visible', timeout: 10_000});
+    await this.pondSurface.waitFor({state: 'visible', timeout: 30_000});
   }
 
   /**

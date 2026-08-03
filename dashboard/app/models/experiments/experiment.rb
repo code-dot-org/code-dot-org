@@ -30,7 +30,28 @@
 MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    created_at: :confidential,
+    updated_at: :confidential,
+    name: :confidential,
+    type: :confidential,
+    start_at: :confidential,
+    end_at: :confidential,
+    section_id: :confidential,
+    min_user_id: :confidential,
+    max_user_id: :confidential,
+    overflow_max_user_id: :confidential,
+    earliest_section_at: :confidential,
+    latest_section_at: :confidential,
+    script_id: :confidential,
+  )
+
   belongs_to :script, class_name: 'Unit', optional: true
+
+  scope :active, -> {where('start_at IS NULL or start_at < ?', DateTime.now).where('end_at IS NULL or end_at > ?', DateTime.now)}
 
   validates :name, presence: true
   after_save {Experiment.update_cache}
@@ -106,12 +127,8 @@ class Experiment < ApplicationRecord
   end
 
   def self.update_cache
-    now = DateTime.now
-    @@experiments = Experiment.
-      where('start_at IS NULL or start_at < ?', now).
-      where('end_at IS NULL or end_at > ?', now).
-      to_a
-    @@experiments_loaded = now
+    @@experiments = Experiment.active.to_a
+    @@experiments_loaded = DateTime.now
   end
 
   def percentage

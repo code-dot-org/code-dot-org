@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Read 1: Context",
-    "long_instructions": "![](https://images.code.org/232918b2bcab7b45d53fce4c75b7b2de-image-1721230866699.40.55 AM.png)\r\n\r\n####What is this data about?\r\n- This data is from...\r\n- I know that...\r\n- A pattern I see is...\r\n- The data is organized...",
+    "long_instructions": "![](https://images.code.org/232918b2bcab7b45d53fce4c75b7b2de-image-1721230866699.40.55 AM.png)\r\n\r\nWhat is this data about?\r\n- This data is from...\r\n- I know that...\r\n- A pattern I see is...\r\n- The data is organized...",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",

@@ -9,7 +9,7 @@ Feature: Using the teacher homepage sections feature
     # After a teacher creates an account, they see the section create dialog
     Given I create a teacher who has never signed in named "Ariel" and go home
     And I wait until I am on "http://studio.code.org/home"
-    And I wait to see a modal containing text "Let's get you started teaching with Code.org!"
+    And I wait to see a modal containing text "Let's get you started teaching with CodeAI!"
 
     # Section Creation dialog is not displayed when reloaded
     Then I reload the page
@@ -34,7 +34,6 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
-  @properties_encryption_key
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
     And I create a new "High School" student section with course "Computer Science Principles", version "'25-'26" and unit "Digital Information"

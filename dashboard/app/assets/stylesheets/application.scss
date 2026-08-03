@@ -22,12 +22,12 @@
  *
  * Shared
  *= require fonts/barlow-semi-condensed
- *= require fonts/figtree
+ *= require fonts/geist
  *= require fonts/noto-sans
+ *= require fonts/space-grotesk
  *= require user-menu
  *= require buttons
  *= require course-blocks
- *= require details-polyfill
  *= require warning-banner
  */
 
@@ -35,12 +35,15 @@
 @import "font";
 @import "mixins";
 @import "style-constants";
+@import "brand-selectors";
 
 // Bootstrap Variables
-$baseFontFamily: $main-font;
-$headingsFontWeight: $regular-font-weight;
-$btnPrimaryBackground: $orange;
-$btnPrimaryBackgroundHighlight: $orange;
+$font-family-base: $main-font;
+$headings-font-weight: $regular-font-weight;
+$btn-primary-bg: $orange;
+$btn-primary-background-highlight: $orange;
+$code-bg: #f7f7f9;
+$blue: #049cdb;
 
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
@@ -50,9 +53,44 @@ $selectUserTypeButtonTextColorHover: #000;
 $selectUserTypeButtonBackgroundColorSelected: #0093a4;
 $selectUserTypeButtonTextColorSelected: #fff;
 
-$contrastTealHeader: #00818f;
-
 @import "bootstrap";
+@import "bootstrap/v2-to-v3";
+
+// Bootstrap runtime-themable brand-purple primary button.
+.btn-primary {
+  background-color: var(--background-brand-purple-primary);
+  border-color: var(--borders-brand-purple-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-brand-purple-strong, #{$dark_purple});
+    border-color: var(--borders-brand-purple-strong, #{$dark_purple});
+  }
+}
+
+// Bootstramp runtime-themable success button.
+.btn-success {
+  background-color: var(--background-success-primary);
+  border-color: var(--borders-success-primary);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: var(--background-success-strong);
+    border-color: var(--borders-success-strong);
+  }
+}
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
 
 p,pre,span {
   @include selectable;
@@ -60,7 +98,6 @@ p,pre,span {
 
 body {
   -webkit-tap-highlight-color: transparent;
-  padding: 0;
   font-style: normal;
 }
 
@@ -70,6 +107,12 @@ body.pin_bottom {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft
+// (own theming) and AI for Oceans (needs the deep-blue underwater scene).
+body.pin_bottom:not(.minecraft):not(.oceans-blue) {
+  background-color: var(--background-neutral-secondary);
 }
 
 body.oceans-blue {
@@ -91,10 +134,16 @@ body:has(#lab2-container) {
 h1 {
   @include main-font-bold;
   font-size: 32px;
-  color: $purple;
+  color: var(--text-brand-purple-primary);
 
   &.text-black {
-    color: $light_black;
+    color: var(--text-neutral-primary);
+  }
+}
+
+@include codeai-brand {
+  h1.existing-account-heading {
+    color: var(--text-neutral-primary);
   }
 }
 
@@ -103,7 +152,15 @@ h2 {
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
-  color: $teal;
+  color: var(--text-brand-teal-primary);
+
+  // Opt-in neutral heading, mirroring h1 above. Needed where a page's heading
+  // would otherwise share the brand color of its primary button: under
+  // codeai-next the brand teal here aliases to the same purple the button
+  // uses.
+  &.text-black {
+    color: var(--text-neutral-primary);
+  }
 }
 
 h3 {
@@ -113,6 +170,11 @@ h3 {
 hr {
   border-color: $teal;
   border-bottom: none;
+}
+
+// Account edit page: neutral section dividers instead of the brand teal above.
+hr.account-section-divider {
+  border-color: var(--borders-neutral-strong);
 }
 
 #classroom-sections hr {
@@ -202,13 +264,17 @@ img.video_thumbnail {
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
-    background-color: $contrastTealHeader;
-    color: $header_text;
+    background-color: var(--background-brand-teal-primary);
+    color: var(--text-neutral-white-fixed);
     a:link {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: var(--text-neutral-white-fixed);
+      }
     }
     a:visited {
-      color: $header_text;
+      &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
+        color: var(--text-neutral-white-fixed);
+      }
     }
 
     .small_font_on_tablet {
@@ -231,7 +297,7 @@ img.video_thumbnail {
     }
 
     .header_logo {
-      width: 38px;
+      width: 66px;
       padding: 6px 14px;
       margin-top: 0;
     }
@@ -293,6 +359,7 @@ img.video_thumbnail {
       }
 
       &:hover, &:active {
+        // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
@@ -308,9 +375,9 @@ img.video_thumbnail {
     @include main-font-regular;
     display: flex;
     align-items: center;
-    color: $white;
+    color: var(--text-neutral-white-fixed);
     background-color: transparent;
-    border: 1px solid $white;
+    border: 1px solid var(--borders-neutral-white-fixed);
     border-radius: 4px;
     padding: 6.5px 16px;
     font-size: 14px;
@@ -322,10 +389,11 @@ img.video_thumbnail {
     height: 35px;
     a:hover {
       text-decoration: none;
+      // Intentionally not tokenized: this hover does not carry over to the rebrand (to be replaced by a marketing-style hover in the nav redesign); shows non-pink under codeai-audit by design.
       background-color: $orange;
     }
     &:active {
-      border: 1px solid $white !important;
+      border: 1px solid var(--borders-neutral-white-fixed) !important;
     }
   }
 
@@ -352,8 +420,8 @@ img.video_thumbnail {
   }
 
   #header_user_create_account {
-    background-color: $light_white !important;
-    color: $light_primary_500;
+    background-color: var(--background-neutral-primary) !important;
+    color: var(--text-brand-teal-primary);
     font-weight: $semi-bold-font-weight;
   }
 
@@ -363,7 +431,7 @@ img.video_thumbnail {
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
-      background-color: $dark_red;
+      background-color: var(--background-error-primary);
       padding: 0 5px;
       margin-top: 2px;
       font-size: 12px;
@@ -396,7 +464,7 @@ img.video_thumbnail {
 
       // Usually transparent, so adding teal allows button to render in front
       .header_user {
-        background-color: $teal;
+        background-color: var(--background-brand-teal-primary);
       }
     }
   }
@@ -407,6 +475,146 @@ img.video_thumbnail {
     .button-signin.desktop,
     .button-create-account.desktop {
       display: none;
+    }
+  }
+}
+
+// Clips project-header content that exceeds its allocated width (the lesson
+// title and Share/Remix share the row).
+.project_info_container {
+  overflow: hidden;
+}
+
+// Pill nav links and outlined header buttons for codeai-next/codeai-audit;
+// default codeai keeps its square 35px/4px buttons and orange hover underline.
+@include codeai-brand {
+  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
+  // outside the buttons while still containing overflowing content. Browsers
+  // without overflow-clip-margin clip the rings at the box; browsers without
+  // clip keep the hidden fallback above.
+  .project_info_container {
+    overflow: clip;
+    overflow-clip-margin: 4px;
+  }
+
+  // Marketing-site spacing model: no container gap, spacing comes from pill padding.
+  .header-wrapper .headerlinks {
+    flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
+  }
+
+  // marketing-nav-no-create only renders under the marketing nav (see
+  // user_header.haml), so there's no stock rule left to out-specificity here.
+  .create_menu.marketing-nav-no-create {
+    display: none;
+  }
+
+  .header-wrapper .headerlinks .headerlink {
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+    // Pills never wrap to two lines; the row overflows visibly rather than
+    // silently breaking vertical rhythm.
+    white-space: nowrap;
+
+    &:hover, &:active {
+      border-bottom: none;
+      margin-top: -1px;
+      padding: 5px 10px;
+      background-color: var(--neutral-white-alpha-10);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  .header-wrapper .header_button {
+    height: 32px;
+    border-radius: 0.5rem;
+    font-weight: var(--font-weight-semi-bold);
+
+    &:hover, a:hover {
+      background-color: var(--neutral-white-alpha-20);
+    }
+
+    &:active {
+      background-color: var(--neutral-white-alpha-30);
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
+    }
+  }
+
+  // Stock markup only shows the UA outline while `.user-is-tabbing` is set
+  // (hamburger.js), which is invisible on teal; give these the same ring as
+  // the pills/buttons above for a consistent focus treatment.
+  .header-wrapper .help_button,
+  .header-wrapper #hamburger {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // Signed-out Sign in / Create account: the tabbable element is the wrapping
+  // `<a>` (`#signin_button` / `#create_account_button`), not the `.header_button`
+  // div nested inside it, so the `.header_button:focus-visible` rule above never
+  // engages here -- the anchor itself needs the ring.
+  .header-wrapper #signin_button,
+  .header-wrapper #create_account_button {
+    &:focus-visible {
+      outline: 1px solid var(--borders-neutral-white-fixed);
+      outline-offset: 2px;
+    }
+  }
+
+  // This container replaces hide_on_tablet outright (see _header.html.haml);
+  // its link anchors also drop hide-mobile/hide-small-desktop, which assume a
+  // <=7-link row and would otherwise fight the two stages below. hamburger.rb's
+  // own get_header_contents() call is unaffected by this HAML change and still
+  // needs those stock classes to auto-invert hide->show for the hamburger menu.
+  .header-wrapper .headerlinks.marketing-nav {
+    #header-about {
+      margin-inline-start: auto;
+    }
+
+    // Stage 2: visible by default (>= 960px), hidden below. 960px measured
+    // (not the 900px default): the 6 remaining links start overlapping
+    // .header_right below ~950px.
+    @media (max-width: 959px) {
+      display: none;
+    }
+
+    // Stage 1: About/Donate collapse into the hamburger first; both have
+    // counterparts there. 1079px measured: the 8-link row's slack hits zero
+    // at ~1077px and labels start wrapping. Measured against us.yml's
+    // header.top.signed_out_marketing 8-link list; re-measure both stage
+    // thresholds if its labels, order, or count change.
+    @media (max-width: 1079px) {
+      #header-about, #header-donate {
+        display: none;
+      }
     }
   }
 }
@@ -547,14 +755,14 @@ img.video_thumbnail {
   a:link, a:visited, a:hover, a:active {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
       @include main-font-bold;
-      color: $brand_secondary_default;
+      color: var(--text-brand-purple-primary);
       background-color: transparent;
       text-decoration: underline;
     }
   }
   a:hover {
     &:where(:not(.MuiButton-root, .MuiIconButton-root)) {
-      color: $brand_secondary_dark;
+      color: var(--text-brand-purple-secondary);
       text-decoration: underline;
     }
   }
@@ -582,6 +790,7 @@ $footer_padding-top: 20px;
 $footer_fullheight: $footer_min_height + $footer_padding-top;
 html, body {
   height: 100%;
+  font-size: 100%;
 }
 .wrapper {
   min-height: 100%;
@@ -601,11 +810,11 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $darkest_gray;
-  color: $header_text;
+  background-color: var(--background-neutral-primary-inverse);
+  color: var(--text-neutral-inverse);
   a:link, a:visited, a:hover, a:active {
     @include main-font-regular;
-    color: $white;
+    color: var(--text-neutral-inverse);
     background-color: transparent;
   }
   a:hover {
@@ -644,7 +853,7 @@ html, body {
 
   .container {
     .row {
-      [class*="span"] {
+      [class*="col-md"] {
         html[dir=rtl] & {
           float: right;
           margin-right: 20px;
@@ -974,7 +1183,7 @@ body.background-dark, body.music-black {
   margin-top: -8px;
   margin-right: 2px;
   height: 42px;
-  border-right: 1px solid $inset_color;
+  border-right: 1px solid var(--borders-neutral-strong);
   border-right-style: inset;
   display: inline-block;
 }
@@ -982,22 +1191,22 @@ body.background-dark, body.music-black {
 .user_options, .help_contents {
   display: none;
   a:link {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:visited {
-    color: $black;
+    color: var(--text-neutral-primary);
   }
   a:hover {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
     text-decoration: none;
   }
   a:active {
-    color: $white;
-    background-color: $dark_color;
+    color: var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-purple-primary);
   }
-  border: 1px solid $black;
-  color: $black;
+  border: 1px solid var(--borders-neutral-solid);
+  color: var(--text-neutral-primary);
   padding: 10px;
 }
 
@@ -1053,9 +1262,6 @@ $default-modal-width: 640px;
     position: absolute;
     top: 50px; // top of the dialog
 
-    width: $default-modal-width;
-    margin-left: -($default-modal-width * 0.5);
-
     // margin-bottom is reused in JavaScript to determine
     // how close to get to the bottom of the viewport.
     margin-bottom: 25px;
@@ -1066,11 +1272,6 @@ $default-modal-width: 640px;
 
 .modal-body {
   max-height: none;
-}
-
-.dash_modal {
-  width: $default-modal-width;
-  margin-left: -($default-modal-width * 0.5);
 }
 
 .dash_modal_body {
@@ -1174,11 +1375,51 @@ $default-modal-width: 640px;
   margin-top: -24px;
   padding-top: 14px;
   min-width: 0;
-  max-width: 55px;
-  width: 55px;
+  max-width: 66px;
+  width: 66px;
 
   a:hover {
     background-color: transparent;
+  }
+}
+
+// CodeAI logo is rectangular (~5.9:1), so the square-logo offsets above
+// don't apply. Center it vertically inside the 50px header instead.
+@include codeai-family-brand {
+  .header-wrapper .header .header_logo,
+  .header_logo {
+    width: auto;
+    max-width: none;
+    height: 50px;
+    margin-top: 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 22px;
+      width: auto;
+      // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+      // reserves ~130px wide before fetch, preventing horizontal CLS.
+      aspect-ratio: 591.15 / 100;
+      display: block;
+    }
+  }
+
+  // Wider logo recovers space in the nav gap instead of bumping the collapse
+  // threshold. Tighten .headerlinks gap at small-desktop so the wider logo
+  // doesn't force links into the hamburger any earlier than the code brand.
+  .header-wrapper .header .headerlinks {
+    @media (min-width: 1024px) and (max-width: 1268px) {
+      gap: 1.5rem;
+    }
+  }
+}
+// Pill spacing comes from link padding, not container gap; re-assert over
+// the small-desktop band rule above, which would double-space the pills.
+@include codeai-brand {
+  .header-wrapper .header .headerlinks {
+    gap: 0;
   }
 }
 
@@ -1621,11 +1862,34 @@ body.iframe_embed_app_and_code {
 }
 
 .x-close {
-  @include close-button($cornerOffset: -20px);
-  // Reset native <button> styles so the icon matches the old <div>-based markup.
-  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
   border: 0;
   padding: 0;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 .open-link {
@@ -1660,10 +1924,11 @@ body.iframe_embed_app_and_code {
 }
 
 .qtip-content {
-  font-size: 20px;
-  line-height: 28px;
-  color: $neutral_dark;
-  @include main-font-semi-bold;
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.48;
+  color: var(--text-neutral-primary);
   padding-right: 25px;
 }
 
@@ -1675,9 +1940,9 @@ html[dir=rtl] .qtip-content {
 }
 
 .qtip-default {
-  background-color: $white;
-  color: $charcoal;
-  border: 1px solid $charcoal;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
   border-radius: 8px;
   box-shadow: 5px 5px 5px $shadow;
   padding: 10px;
@@ -1692,14 +1957,39 @@ html[dir=rtl] .qtip-content {
 }
 
 .tooltip-x-close.qtip-icon {
-  @include close-button($cornerOffset: -20px);
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 a.download-video {
   z-index: 1;
   cursor: pointer;
-  width: 40px;
-  height: 34px;
+  width: 44px;
+  height: 38px;
   font-size: 28px;
   background-color: $neutral_white;
   color: $neutral_dark;
@@ -1828,46 +2118,6 @@ a.download-video {
   margin: 10px 0;
 }
 
-#signinsection {
-  ul.students, ul.pictures {
-    margin-left: 0;
-  }
-
-  ul.students li,
-  ul.pictures li {
-    list-style-type: none;
-    border: 1px solid $lighter_gray;
-    border-radius: 5px;
-    background-color: $lightest_gray;
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-  ul.students li:hover,
-  ul.pictures li:hover {
-    background-color: $light_yellow;
-  }
-
-  ul.students li.selected,
-  ul.pictures li.selected {
-    background-color: $yellow;
-  }
-
-  #pairing_checkbox {
-    margin: 5px 0;
-    label {
-      font-size: 17.5px;
-    }
-    label, input {
-      margin: 5px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-}
-
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -1877,9 +2127,14 @@ a.download-video {
   max-width: 600px;
 }
 
-#signin,
+// The React sign-in page (apps/src/signIn/) styles itself, so #signin no longer
+// carries these rules. They remain for #change-password (password reset) and
+// for the legacy server-rendered sign-in/sign-up pages still using this markup
+// (existing_account, PD/Foorm logged-out pages), which opt in via .signin-legacy.
+// Don't re-add #signin here: the React page reuses that id as a test hook and
+// must not inherit the legacy form/button styling.
+.signin-legacy,
 #change-password {
-  $field-width: 310px;
   $button-width: 324px;
 
   min-width: 450px;
@@ -1898,8 +2153,8 @@ a.download-video {
     justify-content: space-between;
 
     input[type=text], input[type=password] {
-      width: $field-width;
-      height: 40px;
+      width: $button-width;
+      height: 42px;
       padding: 0 6px;
     }
     input {
@@ -1966,6 +2221,45 @@ a.download-video {
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
+  }
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
   }
   .neutral-button {
     background-color: $neutral_white;
@@ -2216,7 +2510,7 @@ a.download-video {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -2404,48 +2698,8 @@ a.download-video {
     margin: 0;
   }
 
-  .section-sign-in {
-    display: flex;
-    align-items: center;
-
-    input {
-      background-color: $neutral_light;
-    }
-
-    input[type=text] {
-      flex-grow: 2;
-      height: 40px;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin: 0;
-    }
-
-    button {
-      @include main-font-semi-bold;
-      padding: 10px 20px;
-      margin-right: 0;
-      background-color: $brand_secondary_default;
-      border: 2px solid $brand_secondary_default;
-      color: $neutral_white;
-
-      &:hover {
-        background-color: $brand_secondary_dark;
-        border-color: $brand_secondary_dark;
-        box-shadow: none;
-      }
-      &:focus {
-        border-color: $brand_primary_default;
-      }
-
-      &:disabled {
-        color: $neutral_white;
-        border-color: $neutral_dark20;
-        background-color: $neutral_dark20;
-        @include box-shadow(none);
-        cursor: not-allowed;
-      }
-    }
-  }
+  // .section-sign-in retired: section-code entry now lives in React
+  // (apps/src/signIn/SectionCodeEntry.tsx).
 
   .oauth-sign-in {
     @include main-font-semi-bold;
@@ -2591,6 +2845,7 @@ a.download-video {
     border-style: solid;
     border-color: transparent;
     border-width: 6px;
+    box-sizing: content-box;
   }
   .match_questions {
     list-style-type: none;
@@ -2669,7 +2924,7 @@ a.download-video {
     }
   }
   .match_correctmarkscolumn {
-    width: 20px;
+    width: 40px;
     padding-right: 20px;
   }
   .match_correctmarks {
@@ -2806,6 +3061,8 @@ a.download-video {
 
 .container {
   width: $content-width;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .container,
@@ -2819,8 +3076,8 @@ a.download-video {
 .bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
-    border: 5px solid $cyan;
-    background-color: $lightest_cyan;
+    border: 5px solid var(--borders-info-strong);
+    background-color: var(--background-info-extra-light);
     border-radius: 5px;
     margin: 10px auto;
     .level-group-content & {
@@ -2834,12 +3091,13 @@ a.download-video {
       font-size: 18px;
       line-height: 18px;
       @include main-font-bold;
-      color: $white;
-      background: $cyan;
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-info-primary);
       margin: 0;
     }
     p {
       font-size: 13px;
+      color: var(--text-neutral-primary);
     }
   }
 
@@ -2995,14 +3253,42 @@ a.download-video {
 
 .previousPageButton {
   margin-right: 5px;
+  background-color: var(--background-neutral-primary);
+  border-color: var(--borders-neutral-primary);
+  color: var(--text-neutral-primary);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-neutral-tertiary);
+    color: var(--text-border-neutral-primary);
+  }
 }
 
-.buttons.submittable {
-  .submitButton, .unsubmitButton {
-    border-color: $purple;
-    background-color: $purple;
-    color: $white;
-    background-image: none;
+.nextPageButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+}
+
+.submitButton, .unsubmitButton {
+  border-color: var(--borders-brand-purple-primary);
+  background-color: var(--background-brand-purple-primary);
+  color: var(--text-neutral-white-fixed);
+  background-image: none;
+
+  &:hover {
+    background-color: var(--background-brand-purple-strong);
+    border-color: var(--borders-brand-purple-strong);
+  }
+
+  &:disabled {
+    background-color: var(--background-brand-purple-primary);
   }
 }
 
@@ -3067,6 +3353,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       width: calc(100% - #{$multi-left-margin});
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
     }
 
     // The block of answers.
@@ -3083,6 +3370,13 @@ $information-desktop: "only screen and (min-width: 1024px)";
     .answerbutton {
       clear: both;
       margin-left: $multi-left-margin;
+      color: var(--text-neutral-primary);
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      padding: 5px;
+      margin: 5px;
+      box-shadow: none;
     }
   }
 
@@ -3111,6 +3405,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
       float: left;
       font-size: 16px;
       line-height: 24px;
+      color: var(--text-neutral-primary);
 
       @media #{$information-tablet-tall} {
         margin-left: $multi-left-margin;
@@ -3145,8 +3440,12 @@ $information-desktop: "only screen and (min-width: 1024px)";
       margin-right: 15px;
       padding-left: 10px;
       padding-right: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: none;
+      border: none;
     }
   }
 
@@ -3212,96 +3511,124 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-content {
-  margin-left: $modal-image-width + $modal-image-margin-gap;
-  html[dir=rtl] & {
-    margin-left: 0;
-    margin-right: $modal-image-width + $modal-image-margin-gap;
-  }
-  &.no-modal-icon {
-    margin-left: $modal-no-icon-gap;
-  }
-
-  p, pre {
-    line-height: 27px;
-    font-size: 24px;
-    color: $neutral_dark;
-  }
-
-  pre {
-    color: $purple;
-  }
-
-  .congrats {
-    @include main-font-semi-bold;
-    font-size: 21px;
-    line-height: 27px;
-  }
-
-  .instructions2 {
-    font-size: 18px;
-    color: $charcoal;
-  }
-
-  .aniGif {
-    display: block;
-    margin: 0 auto 6px auto;
-    position: relative;
-    z-index: -1;
-  }
-
-  .feedback-image {
-    width: 180px;
-    height: auto;
-    margin: 0 15px 0 0;
-    float: left;
-    border: $light_gray;
-    border-style: solid;
-  }
-
-  .feedback-links {
-    margin-top: 15px;
-  }
-
-  .feedback-callout {
-    border: solid;
-    border-radius: 10px;
-    border-color: $red;
-
-    p {
-      margin: 15px;
-      color: $red;
-      padding-right: 20%;
+.dash_modal .modal-body {
+  .modal-content {
+    margin-left: $modal-image-width + $modal-image-margin-gap;
+    html[dir=rtl] & {
+      margin-left: 0;
+      margin-right: $modal-image-width + $modal-image-margin-gap;
+    }
+    &.no-modal-icon {
+      margin-left: $modal-no-icon-gap;
     }
 
+    p, pre {
+      font-size: var(--font-size-body-lg);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .generated-code-container p {
+      font-family: inherit;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: inherit;
+    }
+    .generated-code-container pre {
+      font-family: monospace;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: normal;
+    }
+
+    // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
     .congrats {
-      font-size: 24px;
-      line-height: 27px;
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-semi-bold);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
-    .hint-header {
-      @include main-font-bold;
+    .lines-of-code-message {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
-    .hint-image {
-      float: right;
-      width: 20%;
+    .instructions-markdown p {
+      line-height: 25px;
+      font-size: 16px;
+      color: $neutral_dark;
     }
-  }
 
-  .lines-of-code-message {
-    font-size: 20px;
-    line-height: normal;
-    margin: 0 0 8px 0;
-  }
+    .instructions2 {
+      font-size: 18px;
+      color: $charcoal;
+    }
 
-  .instructions-container {
-    .authored-hints {
-      p, pre {
-        font-size: 18px;
-        line-height: normal;
-        color: $charcoal;
-        margin: 0;
+    .aniGif {
+      display: block;
+      margin: 0 auto 6px auto;
+      position: relative;
+      z-index: -1;
+    }
+
+    .feedback-image {
+      width: 180px;
+      height: auto;
+      margin: 0 15px 0 0;
+      float: left;
+      border: $light_gray;
+      border-style: solid;
+    }
+
+    .feedback-links {
+      margin-top: 15px;
+    }
+
+    .feedback-callout {
+      border: solid;
+      border-radius: 10px;
+      border-color: $red;
+
+      p {
+        margin: 15px;
+        color: $red;
+        padding-right: 20%;
+      }
+
+      .congrats {
+        font-size: 24px;
+        line-height: 27px;
+      }
+
+      .hint-header {
+        @include main-font-bold;
+      }
+
+      .hint-image {
+        float: right;
+        width: 20%;
+      }
+    }
+
+    .lines-of-code-message {
+      font-size: 20px;
+      line-height: normal;
+      margin: 0 0 8px 0;
+    }
+
+    .instructions-container {
+      .authored-hints {
+        p, pre {
+          font-size: 18px;
+          line-height: normal;
+          color: $charcoal;
+          margin: 0;
+        }
       }
     }
   }
@@ -3337,6 +3664,68 @@ h5.dialog-title {
   margin-right: 10px;
 }
 
+.dash_modal {
+  .modal-content .show-code > summary {
+    font-family: var(--font-family-main) !important;
+    font-size: var(--font-size-body-md) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  #feedbackButtons > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  #feedbackButtons #continue-button,
+  #feedbackButtons #again-button {
+    float: none !important;
+    margin: 0 !important;
+    font-family: var(--font-family-main);
+  }
+
+  // Puzzle rating buttons. !important on the fills beats
+  // apps/style/common.scss:652 which selects by #like/#dislike id.
+  #puzzleRatingButtons {
+    margin-top: 16px;
+
+    hr {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-md);
+      color: var(--text-neutral-tertiary);
+      margin: 8px 10px 0 0;
+
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .puzzle-rating-btn {
+      fill: var(--text-neutral-quaternary) !important;
+
+      &:hover {
+        fill: var(--text-neutral-primary) !important;
+      }
+
+      &#like.enabled {
+        fill: var(--text-error-primary-fixed) !important;
+      }
+
+      &#dislike.enabled {
+        fill: var(--text-info-primary-fixed) !important;
+      }
+    }
+  }
+}
+
 .modal-image {
   max-width: $modal-image-width;
   max-height: 100px;
@@ -3362,9 +3751,6 @@ h5.dialog-title {
 .modal-content.markdown-instructions-container {
   margin-left: $modal-no-icon-gap;
   margin-right: $modal-no-icon-gap;
-  /*margin-top: 10px;*/
-  margin-bottom: 15px;
-  float: left;
   padding: 0 0 15px 0;
   background-color: $white;
   $outside-margin-side: 15px;
@@ -3632,8 +4018,6 @@ $width: 400px;
   display: inline-block;
   top: 10px;
   left: 10px;
-  text-align: center;
-  font-size: 1.275em;
   position: fixed;
   z-index: 1000;
 
@@ -3644,12 +4028,18 @@ $width: 400px;
     }
   }
 
-  #logo-container {
-    padding: 4px;
-    background-color: $light_gray;
-    width: 60px;
-    border-radius: 0;
-    margin-bottom: 4px;
+  #logo-img {
+    height: 22px;
+    width: auto;
+    display: block;
+  }
+}
+
+@include codeai-family-brand {
+  #main-logo #logo-img {
+    // aspect ratio of logo-codeai-inverse.svg (viewBox="0 0 591.15 100");
+    // reserves ~130px wide before fetch, preventing horizontal CLS.
+    aspect-ratio: 591.15 / 100;
   }
 }
 
@@ -3658,9 +4048,9 @@ $width: 400px;
   top: 0;
   right: 0;
   color: $white;
-  background-color: $light_purple;
+  background-color: var(--background-brand-purple-primary);
   padding: 3px;
-  z-index: 100;
+  z-index: 1010; // must be greater than bootstrap's .navbar-static-top (1000)
   cursor: pointer;
   box-shadow: 0 0 7px 2px $shadow;
 }
@@ -4328,7 +4718,7 @@ a {
       display: flex;
       margin-bottom: 20px;
 
-      [class*=span] {
+      [class*="col-md"] {
         align-self: center;
         display: flex;
         .div {
@@ -4410,4 +4800,23 @@ a {
 
 .cm-editor {
   height: 100%;
+}
+
+// @see https://github.com/code-dot-org/code-dot-org/commit/3a5ecdffd3ea400182896aa031d9d70b77eba2b1#diff-12c03faea22f2ff4ab3508193ed80cd058cce54ef3e6708ce46703c29b92511cR3-R28
+details {
+  summary {
+    cursor: pointer;
+
+    // Supports `<summary><h1>Title</h1><p>See more</p></summary>` idiom often used by level builders
+    h1 {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      // Include hover effect on mouseover
+      background: $lightest_gray;
+      cursor: pointer;
+    }
+  }
 }

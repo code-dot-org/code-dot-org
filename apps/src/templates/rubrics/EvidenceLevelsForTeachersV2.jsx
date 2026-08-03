@@ -150,7 +150,11 @@ export default function EvidenceLevelsForTeachersV2({
               {UNDERSTANDING_LEVEL_STRINGS_V2[evidenceLevel.understanding]}
             </button>
           ))}
-          <Typography variant="body4" gutterBottom>
+          <Typography
+            className={style.evidenceLevelDescriptionV2}
+            variant="body4"
+            gutterBottom
+          >
             {showDescription !== INVALID_UNDERSTANDING
               ? evidenceLevels.find(e => e.understanding === showDescription)
                   ?.teacherDescription

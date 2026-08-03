@@ -11,6 +11,13 @@
 #  user_storage_ids_user_id_index  (user_id)
 #
 class ProjectStorage < ApplicationRecord
+  export_to_analytics
+
+  data_classification(
+    id: :confidential,
+    user_id: :confidential,
+  )
+
   # Conceptually, an instance of this class represents blob storage for all of
   # the projects belonging to a single user. The user may have an account (user_id
   # points to the user) or may be unsigned-in (user_id is nil). Under the covers,
@@ -21,4 +28,9 @@ class ProjectStorage < ApplicationRecord
 
   belongs_to :user, optional: true
   has_many :projects, inverse_of: :project_storage
+  has_one :geo,
+          class_name: 'ProjectStorage::Geo',
+          foreign_key: :storage_id,
+          inverse_of: :project_storage,
+          dependent: :destroy
 end

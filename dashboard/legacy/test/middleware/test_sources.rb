@@ -11,7 +11,7 @@ class SourcesTest < FilesApiTestBase
     # Stub out helpers that make remote API calls
     ProfanityFilter.stubs(:find_potential_profanity).returns nil
     Geocoder.stubs(:find_potential_street_address).returns false
-    NewRelic::Agent.reset_stub
+    ObservabilityTestRecorder.install
 
     @channel = create_channel
     @api = FilesApiTestHelper.new(current_session, 'sources', @channel)
@@ -85,7 +85,7 @@ class SourcesTest < FilesApiTestBase
     refute_equal first_version_id, restored_version_id
     assert_equal file_data, third_version
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -146,7 +146,7 @@ class SourcesTest < FilesApiTestBase
     @api.get_object_version(filename, bad_version_id)
     assert_equal 404, last_response.status
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
 
     delete_all_source_versions(filename)
   end
@@ -176,7 +176,7 @@ class SourcesTest < FilesApiTestBase
     @api.get_object_version(filename, v1)
     assert_equal 404, last_response.status
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
 
     delete_all_source_versions(filename)
   end
@@ -205,7 +205,7 @@ class SourcesTest < FilesApiTestBase
       assert not_found?
     end
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
 
     delete_all_source_versions(filename)
   end
@@ -251,7 +251,7 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
 
     delete_all_source_versions(filename)
   end
@@ -269,14 +269,66 @@ class SourcesTest < FilesApiTestBase
     # use assert_equal to check both type and value of response (true vs 'true')
     assert_equal true, JSON.parse(policy_check_response)['has_violation']
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_get_source_blocks_sketchlab_profanity_violations
+    filename = MAIN_JSON
+    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    # Mock that the profanity filter will find a violation
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+
+    assert_recorded_metric_names []
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_policy_channel_api_sketchlab
+    filename = MAIN_JSON
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
+
+    # A phone number in a text node is a violation
+    violation_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-privacy-violation-source.json', __FILE__))
+    @api.put_object(filename, violation_data, file_headers)
+    assert successful?
+    policy_check_response = @api.channel_policy_violation
+    assert successful?
+    assert_equal true, JSON.parse(policy_check_response)['has_violation']
+
+    # A clean source is not
+    clean_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    @api.put_object(filename, clean_data, file_headers)
+    assert successful?
+    policy_check_response = @api.channel_policy_violation
+    assert successful?
+    assert_equal false, JSON.parse(policy_check_response)['has_violation']
+
+    assert_recorded_metric_names []
 
     delete_all_source_versions(filename)
   end
 
   def test_replace_version
-    CDO.expects(:log).never
-
     # Upload a source file.
     filename = MAIN_JSON
     file_data = '{"source":"version 1"}'
@@ -296,7 +348,7 @@ class SourcesTest < FilesApiTestBase
     assert successful?
     assert_equal 1, versions.count
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -326,6 +378,7 @@ class SourcesTest < FilesApiTestBase
 
     Timecop.travel 1
 
+    CDO.log.stubs(:info)
     # log when replacing non-current version.
     CDO.log.expects(:info).with do |data|
       data = JSON.parse(data)
@@ -340,7 +393,7 @@ class SourcesTest < FilesApiTestBase
     @api.put_object_version(filename, version1, file_data, file_headers, timestamp1)
     assert conflict?
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/SourceBucket/BucketHelper.check_current_version
     )
   ensure
@@ -373,7 +426,7 @@ class SourcesTest < FilesApiTestBase
     restored_data = @api.get_object(MAIN_JSON)
     assert_equal_json v1_data.to_json, restored_data
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
     )
 
@@ -457,7 +510,7 @@ class SourcesTest < FilesApiTestBase
       v3_parsed['animations']['propsByKey'][animation_key]['version']
     )
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
@@ -538,7 +591,7 @@ class SourcesTest < FilesApiTestBase
       v3_parsed['animations']['propsByKey'][animation_key]
     )
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions
       Custom/ListRequests/SourceBucket/BucketHelper.list_versions
@@ -622,7 +675,7 @@ class SourcesTest < FilesApiTestBase
     assert_includes [props[animation_key_1]['version'], props[animation_key_2]['version']], remixed_animation_versions_1[0]['versionId']
     assert_includes [props[animation_key_1]['version'], props[animation_key_2]['version']], remixed_animation_versions_2[0]['versionId']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
@@ -676,7 +729,7 @@ class SourcesTest < FilesApiTestBase
     props = JSON.parse(remixed_source)['animations']['propsByKey']
     assert_equal "1234", props[animation_key]['version']
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
     )
 
@@ -712,7 +765,7 @@ class SourcesTest < FilesApiTestBase
     props = JSON.parse(remixed_source)['animations']
     assert_equal props["orderedKeys"], []
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.copy_files
     )
 
@@ -772,7 +825,7 @@ class SourcesTest < FilesApiTestBase
       FilesApi.any_instance.unstub(:under_13?)
     end
 
-    assert_newrelic_metrics []
+    assert_recorded_metric_names []
 
     delete_all_source_versions(MAIN_JSON)
   end
@@ -890,7 +943,7 @@ class SourcesTest < FilesApiTestBase
       v3_parsed['animations']['propsByKey'][animation_key]['version']
     )
 
-    assert_newrelic_metrics %w(
+    assert_recorded_metric_names %w(
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.app_size
       Custom/ListRequests/AnimationBucket/BucketHelper.list_versions

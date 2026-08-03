@@ -16,6 +16,7 @@ export default class Icon extends React.Component {
         fontSize: '24px',
         width: '32px',
         textAlign: 'center',
+        color: 'var(--text-neutral-primary)',
       },
     };
 

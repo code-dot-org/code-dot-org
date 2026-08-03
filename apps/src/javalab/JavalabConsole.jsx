@@ -91,7 +91,11 @@ class JavalabConsole extends React.Component {
         lines[++currentLine] = '';
       } else if (log.type === 'markdown') {
         lines[++currentLine] = (
-          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+          <SafeMarkdown
+            markdown={log.text}
+            localized={false}
+            openExternalLinksInNewTab={true}
+          />
         );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
@@ -216,9 +220,10 @@ class JavalabConsole extends React.Component {
       <div style={style}>
         <PaneHeader
           id="pane-header"
-          style={styles.header}
-          hasFocus
-          isOldPurpleColor
+          style={{
+            backgroundColor: '#7665a0',
+            paddingLeft: '0.125rem',
+          }}
         >
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
@@ -239,7 +244,7 @@ class JavalabConsole extends React.Component {
               onClick={() => {
                 clearConsoleLogs();
               }}
-              iconClass="fa-solid fa-eraser"
+              iconProps={{iconName: 'eraser', iconStyle: 'solid'}}
               label={javalabMsg.clearConsole()}
             />
           </PaneSection>
@@ -307,7 +312,6 @@ const styles = {
     color: color.black,
   },
   container: {
-    marginTop: 30,
     display: 'flex',
     flexGrow: 1,
     overflowY: 'hidden',
