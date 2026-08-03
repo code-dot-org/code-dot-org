@@ -48,6 +48,26 @@ describe('account fixtures', () => {
     );
   });
 
+  // Each of these pins one delete-account gate combination the others miss.
+  it('exposes a teacher with no dependent students', async () => {
+    activate('teacher-no-dependents');
+    const settings = await account.getSettings();
+    expect(settings.userType).toBe('teacher');
+    expect(settings.dependentStudentsCount).toBe(0);
+    expect(settings.canDeleteOwnAccount).toBe(true);
+  });
+
+  it('exposes an SSO teacher who still has dependent students', async () => {
+    activate('sso-teacher-dependents');
+    const settings = await account.getSettings();
+    expect(settings.userType).toBe('teacher');
+    // No password to re-authenticate with, so the acknowledgments and the typed
+    // string are the whole gate.
+    expect(settings.hasPassword).toBe(false);
+    expect(settings.dependentStudentsCount).toBe(2);
+    expect(settings.canDeleteOwnAccount).toBe(true);
+  });
+
   it('exposes an oauth-only student with no add-password entitlement', async () => {
     activate('sso-student');
     const settings = await account.getSettings();

@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson6-examine-data-choice'
+display_name 'Reviewing Profiles'
+description 'Pick one of the levels below. Review the six profiles and select two people.'
+
+sublevels
+level 'problem-solving-with-ai-lesson6-examine-data-a'
+level 'problem-solving-with-ai-lesson6-examine-data-b'
+level 'problem-solving-with-ai-lesson6-examine-data-c'
+
+uses_lab2
