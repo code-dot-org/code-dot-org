@@ -1,3 +1,4 @@
+require 'csv'
 require 'digest'
 require 'erb'
 require 'fileutils'
@@ -62,12 +63,6 @@ module Cdo
         NON_PII_CLASSIFICATIONS = %i[public confidential].freeze
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
-
-        # The Redshift Data API's BatchExecuteStatement accepts at most 40 SQL statements per
-        # call. The consolidated orphan-drop can exceed this (a full re-provision of ~110 models
-        # produces ~220 drops), so we submit it in chunks of this size.
-        # https://docs.aws.amazon.com/redshift-data/latest/APIReference/API_BatchExecuteStatement.html
-        MAX_BATCH_STATEMENTS = 40
 
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
@@ -297,7 +292,9 @@ module Cdo
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
 
-            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql])
+            # A create-or-replace is drop+create+comment (3 statements), always a single batch, so
+            # `batch_execute_async` returns exactly one statement id.
+            statements[fqn] = client.batch_execute_async([drop_sql, create_sql, comment_sql]).first
           end
 
           statements
@@ -423,11 +420,17 @@ module Cdo
             end
           end
 
-          # Drop orphaned views in chunks: the Data API caps a batch at MAX_BATCH_STATEMENTS.
-          plan[:to_drop].each_slice(MAX_BATCH_STATEMENTS).with_index do |fqns, chunk_index|
-            drop_sql = fqns.map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
-            plan[:statements]["__drop_orphans___#{chunk_index}"] = client.batch_execute_async(drop_sql)
-            yield(:drop_batch_submitted, fqns) if block_given?
+          # Drop orphaned views. A full re-provision can orphan a couple hundred, exceeding the Data
+          # API's per-call statement limit, so we opt into `allow_separate_transactions`: these drops
+          # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
+          # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
+          # batch.
+          if plan[:to_drop].any?
+            drop_sqls = plan[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
+            client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
+              plan[:statements]["__drop_orphans___#{batch_index}"] = statement_id
+            end
+            yield(:drop_batch_submitted, plan[:to_drop]) if block_given?
           end
 
           plan
@@ -683,7 +686,7 @@ module Cdo
           orphan_fqns.each do |fqn|
             prefix = schema_prefixes.find {|p| fqn.start_with?(p)}
             orphan_table = prefix ? fqn.delete_prefix(prefix) : fqn
-            rows << build_row.call('(orphan)', orphan_table, fqn)
+            rows << build_row.call(ORPHAN_MODEL_NAME, orphan_table, fqn)
           end
 
           rows
@@ -744,6 +747,74 @@ module Cdo
             max_seconds_since_last_refresh: refresh_ages.max,
             max_refresh_duration_seconds: refresh_durations.max
           }
+        end
+
+        # `model_name` value `view_status` assigns to a row for a view present in Redshift but not
+        # produced by any current model (an orphan left behind after a model stopped exporting).
+        ORPHAN_MODEL_NAME = '(orphan)'.freeze
+
+        # Ordered column headers for `view_status_to_csv`. Kept in lockstep with the value order in
+        # `view_status_csv_values`; a test asserts the two stay the same length.
+        VIEW_STATUS_CSV_HEADERS = %w[
+          model
+          mysql_table_name
+          view_type
+          most_recent_operation
+          operation_executed_at
+          operation_duration_seconds
+          redshift_statement_id
+          operation_status
+          redshift_db_user
+          view_is_stale
+          view_state
+          view_state_description
+          error
+        ].freeze
+
+        # A light tally of `view_status` rows for human-readable (CLI / log) reporting — distinct from
+        # `view_status_summary`, which computes the CloudWatch error/stale/freshness metrics.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [Hash] :by_status (status => count), :expected (non-orphan row count),
+        #   :orphan (orphan row count), :failures_by_error (error message => [rows]).
+        def self.summarize_view_status(rows)
+          {
+            by_status: rows.each_with_object(Hash.new(0)) {|row, counts| counts[row.status] += 1},
+            expected: rows.count {|row| row.model_name != ORPHAN_MODEL_NAME},
+            orphan: rows.count {|row| row.model_name == ORPHAN_MODEL_NAME},
+            failures_by_error: rows.select(&:error).group_by(&:error)
+          }
+        end
+
+        # Serializes `view_status` rows to a CSV string: a `VIEW_STATUS_CSV_HEADERS` header row
+        # followed by one row per view.
+        # @param rows [Array<ViewStatusRow>]
+        # @return [String] CSV text
+        def self.view_status_to_csv(rows)
+          CSV.generate do |csv|
+            csv << VIEW_STATUS_CSV_HEADERS
+            rows.each {|row| csv << view_status_csv_values(row)}
+          end
+        end
+
+        # One row's CSV values, ordered to match `VIEW_STATUS_CSV_HEADERS`.
+        # @param row [ViewStatusRow]
+        # @return [Array]
+        def self.view_status_csv_values(row)
+          [
+            row.model_name,
+            row.table_name,
+            row.view_type,
+            row.operation,
+            row.executed_at&.iso8601,
+            row.duration_seconds&.round(1),
+            row.statement_id,
+            row.status,
+            row.db_user,
+            row.is_stale&.to_s,
+            row.state,
+            row.state_description,
+            row.error
+          ]
         end
 
         # Computes `view_status` for the given models, emits CloudWatch metrics (one set per

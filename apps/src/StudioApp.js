@@ -1171,13 +1171,13 @@ StudioApp.prototype.toggleRunReset = function (button) {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
-      showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
+      showRun && !this.config.alwaysHideRunButton ? '' : 'none';
     run.disabled = !showRun;
   });
 
   document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
     reset.classList.toggle('hide', showRun);
-    reset.style.display = !showRun ? 'inline-block' : 'none';
+    reset.style.display = !showRun ? '' : 'none';
     reset.disabled = showRun;
   });
 
@@ -1666,9 +1666,29 @@ StudioApp.prototype.resizeToolboxHeader = function () {
   } else if (this.isUsingBlockly()) {
     toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
-  document.getElementById('toolbox-header').style.width = `${
-    toolboxWidth + 1
-  }px`;
+  if (toolboxWidth < 2) {
+    // Effectively hidden
+    document.getElementById('toolbox-header').style.display = 'none';
+    if (this.editor && this.editor.session) {
+      const hideToolboxIcon = document.getElementById('hide-toolbox-icon');
+      const showToolboxHeader = document.getElementById('show-toolbox-header');
+      if (showToolboxHeader) {
+        showToolboxHeader.style.display = this.editor.session.paletteEnabled
+          ? 'none'
+          : 'flex';
+      }
+      if (hideToolboxIcon) {
+        hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
+          ? 'none'
+          : 'flex';
+      }
+    }
+  } else {
+    document.getElementById('toolbox-header').style.display = 'flex';
+    document.getElementById('toolbox-header').style.width = `${
+      toolboxWidth + 1
+    }px`;
+  }
 };
 
 /**
@@ -2651,7 +2671,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     'show-toolbox-click-target'
   );
   if (hideToolboxIcon && showToolboxHeader) {
-    hideToolboxIcon.style.display = 'inline-block';
+    hideToolboxIcon.style.display = 'flex';
     const handleTogglePalette = () => {
       if (this.editor && this.editor.session) {
         this.editor.enablePalette(!this.editor.session.paletteEnabled);
@@ -2660,7 +2680,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
           : 'flex';
         hideToolboxIcon.style.display = !this.editor.session.paletteEnabled
           ? 'none'
-          : 'inline-block';
+          : 'flex';
         this.resizeToolboxHeader();
       }
     };

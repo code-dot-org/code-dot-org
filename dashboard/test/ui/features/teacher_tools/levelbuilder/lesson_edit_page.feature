@@ -39,7 +39,7 @@ Feature: Using the Lesson Edit Page
 
     # Make sure the lesson overview page updated correctly
     And I wait until element "#show-container" is visible
-    And element "h2" contains text "Temp Activity (15 minutes)"
+    And element "h3" contains text "Temp Activity (15 minutes)"
 
     # Make sure the lesson edit page updated correctly
     And I view the temp lesson edit page

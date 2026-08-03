@@ -56,6 +56,8 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
     SubmissionStatusType | undefined
   >(undefined);
 
+  const shareFailure = useAppSelector(state => state.lab.shareFailure);
+
   const fetchSubmissionStatusHandleError = (
     channelId: string,
     projectType: string
@@ -117,6 +119,7 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
         userSharingDisabled={userSharingDisabled}
+        shareFailure={shareFailure}
       />
     ) : (
       <SubmitProjectDialog

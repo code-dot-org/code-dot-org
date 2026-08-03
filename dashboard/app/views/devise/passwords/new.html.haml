@@ -1,4 +1,4 @@
-%h2= t('password.reset_form.title')
+%h2.text-black= t('password.reset_form.title')
 - if current_user&.admin?
   = "Enter the email address or username associated with the account you want to reset the password for. An email will be sent to the user if you use email to reset."
 - else

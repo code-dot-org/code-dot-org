@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -287,7 +288,9 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <h1>{level.display_name || scriptLevel.name || level.name}</h1>
+        <Typography variant="h1" component="h2">
+          {level.display_name || scriptLevel.name || level.name}
+        </Typography>
         {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>

@@ -11,6 +11,11 @@ on:
         required: true
         type: string
         description: 'mcr.microsoft.com/playwright image tag, e.g. v1.59.1-noble. Version must match the catalog pin in frontend/.yarnrc.yml; variant must match the runner Ubuntu release.'
+      playwright-projects:
+        required: false
+        type: string
+        default: '--project=chromium'
+        description: 'Playwright --project flags selecting browser projects. Defaults to Chromium, matching the legacy Drone Chrome-only lane; DTT overrides with the full engine matrix.'
 
 jobs:
   e2e:
@@ -43,7 +48,9 @@ jobs:
           HOME: /root
           # Explicit target: the deployed test env. Repoint at a PR adhoc to gate PR code.
           TARGET_URL: https://test-studio.code.org
-        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests
+        # Browser projects are caller-controlled: Chromium by default (PR lane),
+        # full engine matrix on DTT. See the playwright-projects input.
+        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- ${{ inputs.playwright-projects }}
         working-directory: ./frontend
 
       - name: Upload Playwright Report
@@ -54,7 +61,7 @@ jobs:
           path: |
             frontend/packages/e2e-tests/playwright-report/
             frontend/packages/e2e-tests/test-results/
-          retention-days: 7
+          retention-days: 30
 
   eyes:
     runs-on: ubuntu-24.04
@@ -97,4 +104,4 @@ jobs:
           path: |
             frontend/packages/e2e-tests/playwright-report/
             frontend/packages/e2e-tests/test-results/
-          retention-days: 7
+          retention-days: 30

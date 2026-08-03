@@ -274,9 +274,61 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(filename)
   end
 
-  def test_replace_version
-    CDO.expects(:log).never
+  def test_get_source_blocks_sketchlab_profanity_violations
+    filename = MAIN_JSON
+    file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
 
+    # Mock that the profanity filter will find a violation
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'profane'
+
+    # owner can view
+    @api.get_object(filename)
+    assert successful?
+
+    # non-owner cannot view
+    with_session(:non_owner) do
+      non_owner_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
+      non_owner_api.get_object(filename)
+      refute successful?
+      assert not_found?
+    end
+
+    assert_recorded_metric_names []
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_policy_channel_api_sketchlab
+    filename = MAIN_JSON
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'sketchlab'})
+
+    # A phone number in a text node is a violation
+    violation_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-privacy-violation-source.json', __FILE__))
+    @api.put_object(filename, violation_data, file_headers)
+    assert successful?
+    policy_check_response = @api.channel_policy_violation
+    assert successful?
+    assert_equal true, JSON.parse(policy_check_response)['has_violation']
+
+    # A clean source is not
+    clean_data = File.read(File.expand_path('../../fixtures/privacy-profanity/sketchlab-normal-source.json', __FILE__))
+    @api.put_object(filename, clean_data, file_headers)
+    assert successful?
+    policy_check_response = @api.channel_policy_violation
+    assert successful?
+    assert_equal false, JSON.parse(policy_check_response)['has_violation']
+
+    assert_recorded_metric_names []
+
+    delete_all_source_versions(filename)
+  end
+
+  def test_replace_version
     # Upload a source file.
     filename = MAIN_JSON
     file_data = '{"source":"version 1"}'
@@ -326,6 +378,7 @@ class SourcesTest < FilesApiTestBase
 
     Timecop.travel 1
 
+    CDO.log.stubs(:info)
     # log when replacing non-current version.
     CDO.log.expects(:info).with do |data|
       data = JSON.parse(data)

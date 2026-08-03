@@ -1570,6 +1570,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: evaluation_status
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   challenges:
   - *9
   - &82 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -1606,6 +1614,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: rubric
+    sql_type_metadata: *17
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   channel_tokens:
   - *5
   - *38
@@ -9138,7 +9154,9 @@ primary_keys:
   level_sources: id
   level_sources_multi_types: id
   levels: id
-  levels_script_levels: 
+  levels_script_levels:
+  - script_level_id
+  - level_id
   levels_skills: 
   libraries: id
   lti_courses: id
@@ -12069,20 +12087,6 @@ indexes:
     using: :btree
     comment: 
   levels_script_levels:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: levels_script_levels
-    name: index_levels_script_levels_on_script_level_id_and_level_id
-    unique: true
-    columns:
-    - script_level_id
-    - level_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels_script_levels
     name: index_levels_script_levels_on_level_id
@@ -16363,7 +16367,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260720131433
+version: 20260729204552
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

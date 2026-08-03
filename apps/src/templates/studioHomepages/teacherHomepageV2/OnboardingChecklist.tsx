@@ -5,6 +5,8 @@ import Snackbar from '@mui/material/Snackbar';
 import React from 'react';
 import {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -31,7 +33,15 @@ const CHECKLIST_ITEMS = [
   {id: 'create_class_section', label: 'Create a class section'},
 ];
 
-const recordTourStart = (tourName: string, demoType: DemoType) => {
+const recordTourStart = (
+  tourName: string,
+  demoType: DemoType,
+  previouslyStartedNotFinished: boolean
+) => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_STARTED, {
+    tour_name: tourName,
+    previously_started_not_finished: previouslyStartedNotFinished,
+  });
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
     JSON.stringify({
@@ -68,6 +78,9 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
   const [completedTourNames, setCompletedTourNames] = React.useState<
     Set<string>
   >(new Set());
+  const [startedTourNames, setStartedTourNames] = React.useState<Set<string>>(
+    new Set()
+  );
   const [pendingTour, setPendingTour] = React.useState<Tour | null>(null);
   const [resetFailed, setResetFailed] = React.useState(false);
   const [creationError, setCreationError] = React.useState(false);
@@ -76,8 +89,14 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
 
   React.useEffect(() => {
     HttpClient.get('/dashboardapi/v1/user_product_tours', true)
-      .then(response => response.json() as Promise<string[]>)
-      .then(names => setCompletedTourNames(new Set(names)))
+      .then(
+        response =>
+          response.json() as Promise<{completed: string[]; started: string[]}>
+      )
+      .then(({completed, started}) => {
+        setCompletedTourNames(new Set(completed));
+        setStartedTourNames(new Set(started));
+      })
       .catch(err =>
         console.error('Failed to fetch tour completion status:', err)
       );
@@ -122,7 +141,9 @@ const OnboardingChecklist: React.FC<OnboardingChecklistProps> = ({
 
   const handleButtonClick = async (tourName: string) => {
     if (!(await ensureDemoSection())) return;
-    recordTourStart(tourName, demoType);
+    const previouslyStartedNotFinished =
+      startedTourNames.has(tourName) && !completedTourNames.has(tourName);
+    recordTourStart(tourName, demoType, previouslyStartedNotFinished);
     if (tourName === 'create_class_section') {
       createSectionTour?.start();
     } else if (tourName === 'view_syllabus') {

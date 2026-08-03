@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-12 23:29:35 UTC",
+    "serialized_at": "2026-07-30 00:35:18 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -318,7 +318,7 @@
       "properties": {
         "assessment": true,
         "overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nThe project spans three days with a clear milestone structure — Plan, Build, Finalize — and ends with a Gallery Walk where students move around the room leaving sticky-note feedback on each other's work. Day 1 is define and plan: students use everything from the unit (brand kit, site map, wireframes) to plan their magazine before touching the AI tools. Day 2 is build: students generate their first draft and participate in a TAG peer review (Tell, Ask, Give). Day 3 is finalize: students self-assess against the rubric, make final adjustments, and showcase their work. Each day ends with a discussion prompt that closes the loop on the HCD thread running through the unit — Day 1 asks who the magazine is for, Day 2 asks what students did when AI surprised them, and Day 3 asks whether the final product actually serves the user they defined on Day 1.",
-        "preparation": "- Print copies of the Digital Magazine Project Guide (one for each student)",
+        "preparation": "- Print copies of the Digital Magazine Project Rubric (one for each student)",
         "student_overview": "**How can we bring our design plan to life in a way that meets our user’s needs?**\n\nEverything in this unit has been building toward this. Your brand kit, your user persona, your site map, your wireframes, your accessibility thinking — you're going to use all of it to design and build a complete digital magazine over the next three days. A digital magazine is a multi-page web app that works like a real publication: a defined theme, a consistent visual identity, content organized for a specific reader. You'll plan it, build it with AI, refine it based on feedback, and present it in a Gallery Walk. When you're done, you'll have something real — something you built, something you can explain, and something you can put in your portfolio."
       },
       "seeding_key": {
@@ -3913,7 +3913,7 @@
       "key": "01d16791-3307-4052-9640-eced4c4c445e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Digital Magazine Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Digital Magazine Project is divided into three milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Digital Magazine Project Rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Digital Magazine Project is divided into three milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3942,7 +3942,7 @@
       "key": "a54e66ff-832d-4d7a-9194-e07a0af3a787",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Digital Magazine Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Digital Magazine Project Rubric and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4080,7 +4080,7 @@
       "key": "e813196c-4355-417b-8b30-f19e7370da7f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project rubric if using shared docs.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4162,7 +4162,7 @@
       "key": "f9b4cf30-de8c-4ed9-a3cb-be3fc5e942e1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Digital Magazine Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Digital Magazine Project Rubric, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
         "tips": [
           {
             "type": "teachingTip",
@@ -6118,6 +6118,48 @@
       }
     },
     {
+      "name": "Accessibility in Design",
+      "url": "https://docs.google.com/presentation/d/17rI0I1ArAN6On_L_nDyEaxjjo2rvvEkiGB_byHUP9Gk",
+      "key": "accessibility_in_design",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "accessibility_in_design"
+      }
+    },
+    {
+      "name": "Accessibility in Design",
+      "url": "https://docs.google.com/document/d/1-gOT9aQKoFnJSypCHNDFXw_AmarNc_mdCKVRrtWR8e4",
+      "key": "accessibility_in_design_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "accessibility_in_design_1"
+      }
+    },
+    {
+      "name": "Accessibility in Design",
+      "url": "https://docs.google.com/document/d/1yvvdnTGJ5Zn9pWsFiN6tjU22Qyv-8e4yfHdjKk8LSHQ",
+      "key": "accessibility_in_design_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "accessibility_in_design_2"
+      }
+    },
+    {
       "name": "AI-Generated Design Unit Guide",
       "url": "https://docs.google.com/document/d/1Znt4C-uU4F-fVcYYlwx6qD3XcGqky9nbDbV84Kzqu5g/edit?usp=sharing",
       "key": "ai-generated_design_unit_guide",
@@ -6183,11 +6225,39 @@
       }
     },
     {
+      "name": "Brand Identity",
+      "url": "https://docs.google.com/presentation/d/14L83a37wE_O0DqL69JvOU9x7RY4ieb6pB_tI2VW0C10",
+      "key": "brand_identity",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "brand_identity"
+      }
+    },
+    {
+      "name": "Build Your First Web Page with AI",
+      "url": "https://docs.google.com/presentation/d/1MFxOJDgJEmefZHVueUkY8FmuDaVg3KYUWal0nPAaa7E",
+      "key": "build_your_first_web_page_with_ai",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_your_first_web_page_with_ai"
+      }
+    },
+    {
       "name": "Designing for Responsiveness",
-      "url": "https://docs.google.com/presentation/d/1K9dvvhPTFekqKVMBRvB1OvMOiSvKaRh_SjrWaw5Upq4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/14FZP5qZBrYCQW6Z9tKcWAbeqZYpJuOBU3m4bmxezGhk",
       "key": "designing_for_responsiveness",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
@@ -6209,6 +6279,160 @@
       },
       "seeding_key": {
         "resource.key": "designing_for_responsiveness_1"
+      }
+    },
+    {
+      "name": "Digital Magazine Project",
+      "url": "https://docs.google.com/presentation/d/1M-meThiVup0t6zEyIne94F-4on3hvrqVfcK2aGLBJgE",
+      "key": "digital_magazine_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "digital_magazine_project"
+      }
+    },
+    {
+      "name": " Digital Magazine Project Rubric",
+      "url": "https://docs.google.com/document/d/1GJNpJUAXiNFOUhJkrBPwGb3gEZ5sdxw1EfSWagwiCOk/",
+      "key": "digital_magazine_project_rubric",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "digital_magazine_project_rubric"
+      }
+    },
+    {
+      "name": "Digital Magazine Project Rubric",
+      "url": "https://docs.google.com/document/d/1GJNpJUAXiNFOUhJkrBPwGb3gEZ5sdxw1EfSWagwiCOk",
+      "key": "digital_magazine_project_rubric_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "digital_magazine_project_rubric_1"
+      }
+    },
+    {
+      "name": "Finding Your Style",
+      "url": "https://docs.google.com/presentation/d/1x4OKlHp446ePQ2Ansg-K2bkBdz4spxrkDPLeIIuiwC8/",
+      "key": "finding_your_style",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "finding_your_style"
+      }
+    },
+    {
+      "name": "From Wireframes to Layouts",
+      "url": "https://docs.google.com/presentation/d/1378y5Di7pQkZS5BIlPKRt-te4On61pEfPIt-4uxWnlw/",
+      "key": "from_wireframes_to_layouts",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "from_wireframes_to_layouts"
+      }
+    },
+    {
+      "name": "From Wireframes to Layouts",
+      "url": "https://docs.google.com/document/d/176PlQ7X_vOb22aUgyT64kFtCNHPmBz7piKGGrVAFM5g",
+      "key": "from_wireframes_to_layouts_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "from_wireframes_to_layouts_1"
+      }
+    },
+    {
+      "name": "From Wireframes to Layouts",
+      "url": "https://docs.google.com/document/d/1uRsq_M96C2UXQXz0LXQtkKUzbkXlbduBk_EAhcC7aD0/",
+      "key": "from_wireframes_to_layouts_2",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "from_wireframes_to_layouts_2"
+      }
+    },
+    {
+      "name": "Intro to CSS",
+      "url": "https://docs.google.com/presentation/d/1noJbbULjFLrC7S9mCJ9BJYRR-KoxWR2TWXajY0l8U-E",
+      "key": "intro_to_css",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_css"
+      }
+    },
+    {
+      "name": "Meet Your User",
+      "url": "https://docs.google.com/presentation/d/1xnyCwcyYXbzWT3-UITZPLwDOcDIVB6zE-tv0Whjz0do",
+      "key": "meet_your_user",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "meet_your_user"
+      }
+    },
+    {
+      "name": "Paper App Prototype",
+      "url": "https://docs.google.com/presentation/d/1xtYFEWOOm06tpjkvQXtLUT8BREPlFQBuigkgroeS3iU/",
+      "key": "paper_app_prototype",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "paper_app_prototype"
+      }
+    },
+    {
+      "name": "Site Maps",
+      "url": "https://docs.google.com/presentation/d/1WJM6x-UTRLasVzfMwAn3ThqB5IqR45FOFNHod-Fqcnw",
+      "key": "site_maps",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "site_maps"
       }
     },
     {
@@ -6238,6 +6462,48 @@
       "seeding_key": {
         "resource.key": "the_user_s_experience_1"
       }
+    },
+    {
+      "name": "Website Cards",
+      "url": "https://docs.google.com/document/d/12gIwAdZgRBKnUCTV5PwsC4ufTS2jruK8CsuxlAG02Ow",
+      "key": "website_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "website_cards"
+      }
+    },
+    {
+      "name": "Welcome to Web Apps",
+      "url": "https://docs.google.com/presentation/d/1nThSKLKPussNxR2UupIklnzL7dvOK73boUKlWKKM_uw/edit?usp=sharing",
+      "key": "welcome_to_web_apps_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_web_apps_1"
+      }
+    },
+    {
+      "name": "Wireframes",
+      "url": "https://docs.google.com/presentation/d/1tm8zE_n7KOn-tBoq66cr5pID-X0tT_C9zRJvV9gQ6o8",
+      "key": "wireframes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "wireframes"
+      }
     }
   ],
   "lessons_resources": [
@@ -6255,6 +6521,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 10: Wireframes",
+        "resource.key": "wireframes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6263,6 +6535,24 @@
       "seeding_key": {
         "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "resource.key": "ai-generated_design_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "from_wireframes_to_layouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "from_wireframes_to_layouts_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "resource.key": "from_wireframes_to_layouts_2"
       }
     },
     {
@@ -6297,6 +6587,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "resource.key": "digital_magazine_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "resource.key": "digital_magazine_project_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Digital Magazine Project",
+        "resource.key": "digital_magazine_project_rubric_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6305,6 +6613,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 1: Introduction to Web Apps",
         "resource.key": "ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "resource.key": "paper_app_prototype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 1: Introduction to Web Apps",
+        "resource.key": "welcome_to_web_apps_1"
       }
     },
     {
@@ -6351,6 +6671,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "resource.key": "build_your_first_web_page_with_ai"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6359,6 +6685,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "resource.key": "ai-generated_design_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 4: Finding Your Style",
+        "resource.key": "finding_your_style"
       }
     },
     {
@@ -6375,6 +6707,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 5: Brand Identity",
+        "resource.key": "brand_identity"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 6: Intro to CSS",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6383,6 +6721,12 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: Intro to CSS",
         "resource.key": "ai-generated_design_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "resource.key": "intro_to_css"
       }
     },
     {
@@ -6399,6 +6743,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 7: Meet Your User",
+        "resource.key": "meet_your_user"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 8: Site Maps",
         "resource.key": "_key_ai-generated_design_unit_guide"
       }
@@ -6407,12 +6757,42 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: Site Maps",
         "resource.key": "ai-generated_design_unit_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Site Maps",
+        "resource.key": "site_maps"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 8: Site Maps",
+        "resource.key": "website_cards"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: Accessibility in Design",
         "resource.key": "_key_ai-generated_design_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "accessibility_in_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "accessibility_in_design_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "resource.key": "accessibility_in_design_2"
       }
     },
     {

@@ -24,10 +24,10 @@ Then /^I initiate pairing$/ do
     # Wait for user menu to finish animating
     And I wait for 0.5 seconds
     And I press "pairing_link"
-    And I wait until element ".student" is visible
-    And I click selector ".student"
-    And I wait until element ".addPartners" is visible
-    And I click selector ".addPartners"
+    And I wait until element "[data-testid='chips-pairingStudents'] label" is visible
+    And I click selector "[data-testid='chips-pairingStudents'] label"
+    And I wait until element "#pairing-add-partners" is visible
+    And I press "pairing-add-partners"
     And I wait for 5 seconds
   STEPS
 end

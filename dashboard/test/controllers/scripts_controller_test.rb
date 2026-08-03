@@ -5,7 +5,7 @@ class ScriptsControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # The page header falls back to the hourofcode unit,
     # so full page renders need it to exist.
     create_hourofcode_unit_and_levels
   end
@@ -102,7 +102,10 @@ class ScriptsControllerTest < ActionController::TestCase
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - #{brand_name} [test]</title>")
+    assert_select "meta[property='og:site_name'][content='#{brand_name}']"
+    assert_select "meta[property='og:title'][content='Unit: All The Lesson Plans - #{brand_name} [test]']"
     assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 

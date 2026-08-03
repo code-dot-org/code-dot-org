@@ -15,8 +15,9 @@ class Widget2Controller < ApplicationController
   end
 
   def update_code
-    set_widget2_sources(params[:widget2_id], params[:start_sources])
-    render json: {redirect: "/widget2/edit"}
+    head :service_unavailable
+    # set_widget2_sources(params[:widget2_id], params[:start_sources])
+    # render json: {redirect: "/widget2/edit"}
   end
 
   def new

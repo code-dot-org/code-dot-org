@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HeaderTest < ActionDispatch::IntegrationTest
   setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # The page header falls back to the hourofcode unit,
     # so full page renders need it to exist.
     create_hourofcode_unit_and_levels
   end
@@ -115,8 +115,8 @@ class HeaderTest < ActionDispatch::IntegrationTest
               'Elementary School'      => '//test.code.org/educate/curriculum/elementary-school',
               'Middle School'          => '//test.code.org/educate/curriculum/middle-school',
               'High School'            => '//test.code.org/educate/curriculum/high-school',
-              'Hour of Code'           => 'https://hourofcode.com',
-              'Beyond Code.org'        => '//test.code.org/educate/curriculum/3rd-party',
+              'Hour of AI'             => '//test.code.org/hour-of-ai',
+              'Beyond CodeAI'          => '//test.code.org/educate/curriculum/3rd-party',
               'Online Community'       => 'https://forum.code.org/',
               'Technical Requirements' => '//test.code.org/educate/it',
               'Tools and Videos'       => '//test.code.org/educate/resources/videos',

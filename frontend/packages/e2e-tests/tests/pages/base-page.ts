@@ -1,9 +1,11 @@
 import {expect, type Locator, type Page} from '@playwright/test';
 
+import {CookieBannerComponent} from '../components/cookie-banner';
 import {FooterComponent} from '../components/footer';
 import {GdprDialogComponent} from '../components/gdpr-dialog';
 import {HeaderComponent} from '../components/header';
 import {OneTrustComponent} from '../components/one-trust';
+import {ParentalPermissionNagModalComponent} from '../components/parental-permission-nag-modal';
 import {StudentInfoModalComponent} from '../components/student-info-modal';
 
 /** Base for every page object — home for the UI common to all pages. */
@@ -25,11 +27,20 @@ export class BasePage {
   /** OneTrust cookie-consent banner and SDK script tags. */
   readonly oneTrust: OneTrustComponent;
 
+  /** Legacy GDPR cookie-consent banner — a global overlay that can appear on any page. */
+  readonly cookieBanner: CookieBannerComponent;
+
+  /** Site-wide CAP parental-permission nag modal — a global overlay that can appear on any page. */
+  readonly parentalPermissionNagModal: ParentalPermissionNagModalComponent;
+
   /**
    * The main content landmark (#main_content) from the application layout —
    * present on every page and the "skip to main content" link target. Scope
    * page content to this to exclude global overlays (header, OneTrust, etc.).
+   * The raw selector is exposed too: axe's include() needs a CSS string, not
+   * the locator.
    */
+  readonly mainContentSelector = '#main_content';
   readonly mainContent: Locator;
 
   constructor(page: Page) {
@@ -39,7 +50,11 @@ export class BasePage {
     this.gdprDialog = new GdprDialogComponent(page);
     this.studentInfoModal = new StudentInfoModalComponent(page);
     this.oneTrust = new OneTrustComponent(page);
-    this.mainContent = page.locator('#main_content');
+    this.cookieBanner = new CookieBannerComponent(page);
+    this.parentalPermissionNagModal = new ParentalPermissionNagModalComponent(
+      page,
+    );
+    this.mainContent = page.locator(this.mainContentSelector);
   }
 
   /**

@@ -1,5 +1,5 @@
 /** Body of the animation picker dialog */
-import {Typography} from '@mui/material';
+import {Button as MuiButton, Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -7,7 +7,6 @@ import {
   searchAssets,
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import Button from '@cdo/apps/legacySharedComponents/Button.jsx';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar.jsx';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
@@ -248,11 +247,13 @@ export default class AnimationPickerBody extends React.Component {
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
-          <Button
-            text={msg.done()}
+          <MuiButton
+            color="primary"
+            variant="contained"
             onClick={onAnimationSelectionComplete}
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
+          >
+            {msg.done()}
+          </MuiButton>
         )}
         <Typography variant="h4" component="h1" className={style.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
@@ -320,12 +321,14 @@ export default class AnimationPickerBody extends React.Component {
         </div>
         {(searchQuery !== '' || categoryQuery !== '') && (
           <div className={style.footer}>
-            <Button
+            <MuiButton
               className="ui-test-selector-done-button"
-              text={msg.done()}
+              color="primary"
+              variant="contained"
               onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
+            >
+              {msg.done()}
+            </MuiButton>
           </div>
         )}
       </div>

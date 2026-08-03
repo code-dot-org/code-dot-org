@@ -10566,6 +10566,8 @@ en:
               name: Career Journeys B
             lesson-18:
               name: AID Playground
+            lesson-19:
+              name: HoAI26 Sandbox
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -22195,32 +22197,32 @@ en:
               name: Navigating Support
           lesson_groups: {}
           name: self-paced-pl-getting-started-2024
-          title: Getting Started with Code.org
+          title: Getting Started with CodeAI
           description_audience: ''
           description_short: ''
           description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
           student_description: |-
             ## Welcome
-            ##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to use the Code.org platform** with your students.
+            ##### Welcome to CodeAI's free self-paced online learning for educators to get started teaching with CodeAI! After completing this professional learning experience, **you'll be ready to use the CodeAI platform** with your students.
 
             ##### Find the learning that works for you:
 
             * ##### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
             * ##### **Pick your content**: The Getting Started Content is organized into five lessons. You may choose to engage with them in any combination or order that you would like.
-               * ##### **Lesson 1**: Welcome to Code.org
-               * ##### **Lesson 2**: Navigating the Code.org Learning Platform
+               * ##### **Lesson 1**: Welcome to CodeAI
+               * ##### **Lesson 2**: Navigating the CodeAI Learning Platform
                * ##### **Lesson 3**: The Student Experience
                * ##### **Lesson 4**: Navigating Lesson Plans, Assessments, and Resources
                * ##### **Lesson 5**: Navigating Support
@@ -27410,6 +27412,8 @@ en:
             '
           description_short: Learn how humans work with computers to solve problems.
           description_audience: ''
+          lessons: {}
+          name: csd1-2026
         csd3-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27423,6 +27427,8 @@ en:
           student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: Learn to program animations, interactive art, and games in Game Lab.
           description_audience: ''
+          lessons: {}
+          name: csd3-2026
         csd4-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27436,6 +27442,8 @@ en:
           student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: Learn how to design a program that meets the needs of your users.
           description_audience: ''
+          lessons: {}
+          name: csd4-2026
         csd5-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27466,6 +27474,8 @@ en:
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_short: Learn to program with physical devices.
           description_audience: ''
+          lessons: {}
+          name: csd6a-2026
         csd6b-2026:
           lesson_groups:
             lessonGroup-2:
@@ -27481,6 +27491,8 @@ en:
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: csd6b-2026
         csd7-2026:
           lesson_groups:
             lessonGroup-4:
@@ -27496,6 +27508,8 @@ en:
           student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
           description_short: Learn to about Artificial Intelligence and Machine Learning.
           description_audience: ''
+          lessons: {}
+          name: csd7-2026
         programming-with-music-lab-2026:
           lesson_groups:
             lessonGroup-2:
@@ -28913,11 +28927,11 @@ en:
           description: |-
             #### This professional learning module is designed to help you prepare to teach CodeAI’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+            #### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
           student_description: |-
             #### This professional learning module is designed to help you prepare to teach CodeAI's [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
 
-            ### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
+            #### This unit is part of the [**AI Foundations Curriculum: Exploring AI & Computing**](https://studio.code.org/courses/ai-foundations-exploring-ai-and-cs-2026/units/1) but can also stand alone for grades 9-12.
         self-paced-pl-teaching-ai-and-the-systems-that-power-it-2026:
           lessons: {}
           lesson_groups: {}
@@ -29219,6 +29233,8 @@ en:
               name: Lesson 11
             lesson-12:
               name: Lesson 12
+            lesson-13:
+              name: Lesson 13
           lesson_groups: {}
           name: aif-year2-semester1-unit1
           title: Logic-Based AI
@@ -29227,40 +29243,62 @@ en:
           description: |-
             This unit introduces students to what artificial intelligence is and to how programming concepts can be applied to build programs that behave intelligently.
 
-            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. They are also introduced to Python data structures like lists, tuples, dictionaries, and sets. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
+            Students begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. The unit focuses on developing students’ comfort with programming in Python: students practice programming concepts introduced in AI Foundations Year 1, including variables, data flow, conditional statements, loops, and functions. As students build programs that solve problems with logic, students also reflect on the limits and challenges of logic-based AI as motivation for the following unit on machine learning.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
           student_description: |-
             In this unit, you'll learn what artificial intelligence is and how to build simple programs that behave intelligently.
 
-            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. You'll also be introduced to Python data structures like lists, tuples, dictionaries, and sets. As you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
+            You'll begin by examining what it means for a computer to be artificially intelligent and what types of problems AI can be used to solve. Along the way, you'll develop greater comfort with programming in Python: in fact, you'll review concepts including variables, data flow, conditional statements, loops, and functions. YAs you build programs that solve problems with logic, you'll also see the limits and challenges of logic-based AI.
 
             ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you'll be able to . . .**]
             - Identify different types of AI and their applications.
             - Make use of variables, conditional statements, loops, and functions in Python code.
-            - Choose appropriate data structures to represent data in Python.
             - Translate algorithmic ideas to code.
             - Analyze code for bugs and identify how to fix them.
             - Write Python code to build AI systems capable of solving problems logically.
             - Design heuristics that can help AI make informed decisions.
-            - Implement search algorithms to build systems that can find solutions to problems.
             - Evaluate the limitations of logic-based AI for problem-solving.
             :::
         aif-year2-semester1-unit2:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+            lesson-13:
+              name: Lesson 13
           lesson_groups: {}
           name: aif-year2-semester1-unit2
-          title: AIF Year 2 Semester 1 Unit 2
+          title: Machine Learning Fundamentals
           description_audience: ''
           description_short: ''
           description: ''
@@ -29507,6 +29545,8 @@ en:
             &nbsp;
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: aif1-india-2025
         sample-aid-sc2-unit-generation:
           lessons: {}
           lesson_groups: {}
@@ -29535,7 +29575,7 @@ en:
               name: Lesson 2
           lesson_groups: {}
           name: ai-history
-          title: "[DEV] AI History"
+          title: "[DEV] AI History (AI Ready Skills Prep)"
           description_audience: ''
           description_short: ''
           description: |-
@@ -29631,12 +29671,368 @@ en:
           lessons:
             lesson-1:
               name: Lesson 1
+            lesson-2:
+              name: Lesson 12
+            lesson-3:
+              name: Lesson 1
+            lesson-4:
+              name: csd preamble
           lesson_groups:
             lessonGroup-2:
               display_name: Data Sci w/Python
+            lessonGroup-3:
+              display_name: Dev Stuff
           name: cody-playground
           title: Cody's Playground
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
+        data-science-with-python-unit-2026:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          title: Data Science with Python
+          description: "In this unit, students dive into data analysis using the Python programming language. They start by learning the basics of Python syntax and then progress to using data science libraries such as Pandas and Matplotlib to explore, manipulate, and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis, using these tools to answer data-driven questions. The unit includes a strong emphasis on creating custom visualizations and communicating insights effectively. By the end of this unit, students will have experience in using Python to transform raw data into actionable insights, culminating in a project that addresses a community or school-based issue through a data-driven approach.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
+          student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
+          description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
+          description_audience: ''
+          lessons: {}
+          name: data-science-with-python-unit-2026
+        pl-aif-intro-programming-js:
+          lessons:
+            lesson-1:
+              name: Teaching Intro to Programming
+            lesson-2:
+              name: Intro to Teaching Programming with AI [JavaScript]
+          lesson_groups: {}
+          name: pl-aif-intro-programming-js
+          title: Teaching Introduction to Programming [JavaScript]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        problem-solving-with-ai-2026-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-4:
+              display_name: Content
+            lessonGroup-5:
+              display_name: End of Unit Project
+            lessonGroup-2:
+              display_name: End of Unit Assessment and Survey
+          title: "[DEV] Problem Solving with AI 26/27"
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          name: problem-solving-with-ai-2026-dev
+        ai-and-the-systems-that-power-it-2026-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI and the Systems That Power It
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_3) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        the-fabric-of-the-internet-and-ai-2026-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment and Survey
+          title: The Fabric of the Internet and AI
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_4) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        ai-powered-threats-and-defenses-2026-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: AI-Powered Threats and Defenses
+          description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, students take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. Students analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. They also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication. Throughout the unit, students use computational thinking practices to analyze threats, evaluate system behavior, and reason through design tradeoffs. They apply human-centered design principles to propose security features that consider user needs and system constraints. Students examine real-world decisions made by cybersecurity professionals, including how they balance protection with usability, anticipate unintended consequences, and build trust in systems. Through case analysis, collaborative design challenges, and reflection routines, students gain insight into cybersecurity as a sociotechnical system. They also explore career pathways in cybersecurity and AI, learning how professionals contribute to safer, more ethical, and more inclusive computing systems.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_5) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            Cybersecurity is a fast-changing field shaped by evolving threats, intelligent systems, and the professionals who work to defend digital infrastructure. In this unit, you take a systems-level look at how cyberattacks happen, how defenses are built, and how artificial intelligence (AI) is reshaping both offense and defense. You analyze common attack types such as phishing, malware, and denial-of-service, and examine how these threats are increasingly powered by AI tools that automate, personalize, or scale digital attacks. You also explore how AI is used in defense strategies, such as detecting anomalies, managing access, and adapting authentication.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how different types of cybersecurity attacks work, including how AI is used to enhance or scale these threats.
+            - Describe how AI is used in cybersecurity tools to detect, prevent, or respond to attacks.
+            - Analyze cybersecurity scenarios using concepts such as system vulnerabilities, authentication, and data protection.
+            - Apply computational thinking strategies to examine cybersecurity threats, vulnerabilities, and defenses.
+            - Evaluate tradeoffs between usability and security in the design of digital systems.
+            - Propose security design improvements that consider both human-centered design principles and their impact on diverse users and communities.
+            - Describe cybersecurity career roles and how professionals use AI tools in their work.
+            :::
+          description_short: ''
+          description_audience: ''
+        insights-from-data-and-ai-2026-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          title: Insights from Data and AI
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze datasets and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_6) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<div style=\"overflow: hidden;\">\n      <img src=\"https://images.code.org/7fe1b2e1fc05e1c6961f9b7e5d8e952e-NSF_Official_logo_small.png\" style=\"float: left; margin-right:15px\">\n      <div><i>This unit includes material developed with the support of the National Science Foundation under Grant No. 2122485. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i></div>\n</div>\n\n&nbsp;\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description_audience: ''
+        foundations-of-ai-programming-2026-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
+          title: Foundations of AI Programming
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/aif_post_unit_survey?survey_data[unit_number]=unit_2) to let the Code.org curriculum team know how the unit went.
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+
+            &nbsp;
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-aif-s1-overview-2026-dev:
+          title: Introduction to AI Foundations, Semester 1
+          description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach Semester 1 of Code.org’s [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
+          student_description: |-
+            ##Start Here!
+
+            #### This professional learning module is designed to help you prepare to teach Semester 1 of Code.org’s [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations). It provides an overview of the curriculum, teaching resources, and learning foundations.
+
+            #### It is recommended that you complete this module before working through any of the unit specific modules.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-ps-with-ai-s1-2026-dev:
+          title: Teaching Problem-Solving with AI
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Problem-Solving with AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/1).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-foundations-ai-programming-s1-2026-dev:
+          title: Teaching Foundations of AI Programming
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Foundations of AI Programming Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/2).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-ai-systems-that-power-it-s1-2026-dev:
+          title: Teaching AI and the Systems that Power It
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI and the Systems that Power It Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/3).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-fabric-of-internet-and-ai-s1-2026-dev:
+          title: Teaching the Fabric of The Internet
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**The Fabric of the Internet and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/4).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-ai-powered-threats-defenses-s1-2026-dev:
+          title: Teaching AI-Powered Threats and Defenses
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/5).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**AI-Powered Threats and Defenses Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/5).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        self-paced-pl-teaching-insights-from-data-ai-s1-2026-dev:
+          title: Teaching Insights from Data and AI
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s [**Insights from Data and AI Unit**](https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/6).
+
+            ### This unit is part of the [**AI Foundations Curriculum**](https://code.org/en-US/curriculum/artificial-intelligence-foundations) but can also stand alone for grades 9-12.
+          description_short: ''
+          description_audience: ''
+        pl-intro-teaching-programming-with-ai-js:
+          lessons: {}
+          lesson_groups: {}

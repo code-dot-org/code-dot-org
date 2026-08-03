@@ -5,10 +5,6 @@ class ApiControllerTest < ActionController::TestCase
   include Minitest::RSpecMocks
 
   setup_all do
-    # Sections without an assigned script fall back to the hourofcode unit
-    # (ApiController#load_script -> Unit.hoc_2014_unit), so it must exist.
-    create_hourofcode_unit_and_levels
-
     @teacher = create(:teacher)
 
     @teacher_other = create(:teacher)
@@ -102,11 +98,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal "[\"https://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
-  test "should get text_responses for section with default script" do
+  test "should get no text_responses for section with no assigned script" do
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to hoc_2014_unit, which has no text_response levels
+    # @section has no assigned unit and the request names no script, so there
+    # is no script to collect responses from
     assert_equal '[]', @response.body
   end
 
@@ -1203,40 +1200,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'section_level_progress response should not be cached by the browser' do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
+    get :section_level_progress, params: {section_id: @section.id, script_id: @script.id, page: 1, per: 2}
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]
-  end
-
-  test "should get paginated section level progress" do
-    get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-    assert_equal 4, data['pagination']['total_pages']
-
-    get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-
-    get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['student_progress'].keys.length
-
-    # fourth page has only one student (of 7 total)
-    get :section_level_progress, params: {section_id: @section.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['student_progress'].keys.length
-
-    # if we request 1 per page, page 8 should still work (because page 7 gave
-    # us a full page of data), but page 9 should fail
-    get :section_level_progress, params: {section_id: @section.id, page: 8, per: 1}
-    assert_response :success
-    get :section_level_progress, params: {section_id: @section.id, page: 9, per: 1}
-    assert_response 416
   end
 
   test "section with duplicated students loads all data when per is equal to the number of unique students" do
@@ -1257,7 +1223,7 @@ class ApiControllerTest < ActionController::TestCase
     create(:follower, section: duplicated_section, student_user: duplicated_students[2])
 
     sign_in duplicated_section_owner
-    get :section_level_progress, params: {section_id: duplicated_section.id, page: 1, per: 7}
+    get :section_level_progress, params: {section_id: duplicated_section.id, script_id: @script.id, page: 1, per: 7}
     assert_response :success
     data = JSON.parse(@response.body)
     assert_equal 7, data['student_progress'].keys.length
@@ -1293,6 +1259,13 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     assert_equal 1, data['student_progress'].keys.length
     assert_equal 1, data['student_last_updates'].keys.length
+
+    # if we request 1 per page, page 8 should still work (because page 7 gave
+    # us a full page of data), but page 9 should fail
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 8, per: 1}
+    assert_response :success
+    get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 9, per: 1}
+    assert_response 416
   end
 
   test "teacher_panel_progress returns progress when called with script and level" do
@@ -2309,5 +2282,47 @@ class ApiControllerTest < ActionController::TestCase
     level_source = create(:level_source)
     create(:user_level, level: level, user: student, script: script, level_source: level_source)
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
+  end
+end
+
+# ApiController#load_script resolves the script_id param, then the section's
+# assigned unit; when neither is present it returns nil, and the section
+# endpoints render an empty state or reject the request.
+class ApiControllerNoDefaultScriptTest < ActionController::TestCase
+  tests ApiController
+  include Devise::Test::ControllerHelpers
+
+  setup do
+    @teacher = create(:teacher)
+    # A section with no assigned script or course, so Section#default_script is
+    # nil and load_script returns nil.
+    @section = create(:section, user: @teacher, login_type: 'word')
+    @student = create(:student)
+    create(:follower, section: @section, student_user: @student)
+    sign_in @teacher
+  end
+
+  test 'lockable_state returns an empty lesson set for a section with no script' do
+    get :lockable_state
+    assert_response :success
+    data = JSON.parse(@response.body)
+    assert_equal [@section.id.to_s], data.keys
+    assert_equal({}, data[@section.id.to_s]['lessons'])
+  end
+
+  test 'section_level_progress returns bad_request for a section with no script' do
+    get :section_level_progress, params: {section_id: @section.id}
+    assert_response :bad_request
+  end
+
+  test 'teacher_panel_progress returns bad_request for a section with no script' do
+    get :teacher_panel_progress, params: {section_id: @section.id}
+    assert_response :bad_request
+  end
+
+  test 'section_text_responses returns no responses for a section with no script' do
+    get :section_text_responses, params: {section_id: @section.id}
+    assert_response :success
+    assert_equal '[]', @response.body
   end
 end

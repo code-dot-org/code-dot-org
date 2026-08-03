@@ -231,7 +231,7 @@
     "@code-dot-org/ml-activities": "0.1.3",
     "@code-dot-org/ml-playground": "0.0.52",
     "@code-dot-org/p5.play": "1.3.21-cdo",
-    "@code-dot-org/piskel": "0.13.0-cdo.13",
+    "@code-dot-org/piskel": "0.13.0-cdo.14",
     "@code-dot-org/redactable-markdown": "^0.10.0",
     "@code-dot-org/remark-plugins": "^2.0.1",
     "@codemirror/autocomplete": "^6.18.6",

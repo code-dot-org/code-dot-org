@@ -38,6 +38,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "8eae0159-8e05-45e4-ad35-30ca70f920a0",
+        "notice": "Looking at CS Discoveries?",
+        "details": "Consider AI Discoveries, our newest middle school course offering: it builds on this course, with an AI focus woven throughout. ",
+        "link": "https://support.code.org/hc/en-us/articles/47237786998669-Transitioning-to-AI-Discoveries-from-CS-Discoveries",
+        "type": "information",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "See what's new →"
+      }
+    ],
     "family_name": "csd",
     "has_verified_resources": true,
     "numbered_units": "custom",

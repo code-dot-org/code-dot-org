@@ -59,6 +59,12 @@ const makeStore = () =>
     currentUser: {
       aiDifferentiationEnabled: false,
     },
+    sectionProgress: {
+      unitDataByUnit: {},
+      studentLessonProgressByUnit: {},
+      studentLevelProgressByUnit: {},
+      isLoadingProgress: false,
+    },
   }));
 
 describe('StudentSnapshot', () => {
@@ -76,7 +82,7 @@ describe('StudentSnapshot', () => {
       );
     });
 
-    screen.getByText('Next student >');
+    screen.getAllByText('Next');
     screen.getByRole('heading', {level: 4, name: 'Student1 Test'});
     screen.getByText('Lesson Insight');
   });
