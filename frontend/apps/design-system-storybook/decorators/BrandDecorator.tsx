@@ -15,10 +15,9 @@ import {
 
 /**
  * Default brand for stories, matching the production default-brand DCDO key
- * (Cdo::Brand::BRAND_CODEAI). Renders identically to the pre-brand-switcher
- * Storybook, since 'code'/'codeai' resolve to the :root legacy tokens.
+ * (Cdo::Brand::BRAND_CODEAI_NEXT).
  */
-export const DEFAULT_BRAND = 'codeai';
+export const DEFAULT_BRAND = 'codeai-next';
 
 /**
  * MUI theme for a brand code, so palette-driven MUI components stay in step
