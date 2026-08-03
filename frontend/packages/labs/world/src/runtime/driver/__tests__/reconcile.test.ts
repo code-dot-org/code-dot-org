@@ -106,12 +106,48 @@ describe('reconcile', () => {
     expect(running.snapshot().world['gravity.strength']).toBe(1500);
   });
 
-  it('restarts when an actor value changed', () => {
+  it('patches an actor value the learner changed', () => {
+    // A start position nudged on the `.actor` file reaches the game that is
+    // running, rather than restarting it (specs/QUALITY_OF_LIFE.md §1).
     const running = makeWorld(900, 20);
     const baseline = running.snapshot();
     const incoming = makeWorld(900, 50); // player start moved
+
     const {mode} = reconcile(running, incoming, baseline);
-    expect(mode).toBe('restarted');
+
+    expect(mode).toBe('reconciled');
+    expect(running.snapshot().actors.player['positional.position']).toEqual(
+      new Vector(200, 50),
+    );
+  });
+
+  it('leaves alone the actors the learner did not touch', () => {
+    // The whole point of patching the DIFFERENCE: everything is falling, and
+    // writing the incoming snapshot back wholesale would put every actor at its
+    // authored position — the reset this is meant to avoid.
+    const running = makeWorld(900, 20);
+    const baseline = running.snapshot();
+    running.tick(0.2); // the player and the ground move on
+    const movedTo = running.snapshot().actors.player['positional.position'];
+
+    // A rebuild whose only edit is to the GROUND's position.
+    const incoming = makeWorld(900, 20);
+    for (const actor of incoming.actors) {
+      if (actor.id === 'ground') {
+        actor.set(PositionProperty, new Vector(200, 300));
+      }
+    }
+
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+    expect(running.snapshot().actors.ground['positional.position']).toEqual(
+      new Vector(200, 300),
+    );
+    // …and the player is still where the simulation had carried it.
+    expect(running.snapshot().actors.player['positional.position']).toEqual(
+      movedTo,
+    );
   });
 
   it('restarts when structure changed (an actor added)', () => {
