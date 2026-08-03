@@ -90,6 +90,7 @@
       justify-content: flex-end;
       align-items: center;
       gap: 0.25rem;
+      color: var(--text-neutral-secondary, #69788A);
 
       .cfuQuestionRightPartAiInsightIcon {
         color: var(--background-brand-aqua-strong);
@@ -97,7 +98,11 @@
 
       .cfuStatusBucketTags-correct {
         > div {
-            background: var(--background-success-light, #C7ECC6);
+          background: var(--background-success-light, #C7ECC6);
+          border-color: var(--sentiment-success-50, #3EA33E);
+          span {
+            color: var(--text-neutral-black-fixed);
+          }
           i {
             color: var(--sentiment-success-50, #3EA33E);
           }
@@ -107,6 +112,10 @@
       .cfuStatusBucketTags-partially_correct {
         > div {
           background: var(--background-warning-light, #FEF8C3);
+          border-color: var(--accent-orange-70, #D68A00);
+          span {
+            color: var(--text-neutral-black-fixed);
+          }
           i {
             color: var(--accent-orange-70, #D68A00);
           }
@@ -116,6 +125,10 @@
       .cfuStatusBucketTags-incorrect {
         > div {
           background: var(--background-error-light, #FFBFB6);
+          border-color: var(--sentiment-error-50, #E02D16);
+          span {
+            color: var(--text-neutral-black-fixed);
+          }
           i {
             color: var(--sentiment-error-50, #E02D16);
           }
@@ -125,6 +138,10 @@
       .cfuStatusBucketTags-incomplete {
         > div {
           background: var(--background-neutral-tertiary, #DFE3E9);
+          border-color: var(--neutral-gray-80, #69788A);
+          span {
+            color: var(--text-neutral-black-fixed);
+          }
           i {
             color: var(--neutral-gray-80, #69788A);
           }

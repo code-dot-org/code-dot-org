@@ -23,13 +23,13 @@ const CFUFreeResponseAnswer: React.FC<CFUFreeResponseAnswerProps> = ({
 }) => (
   <div className={styles.freeResponseAnswerContainer}>
     <div className={styles.freeResponseAnswer}>
-      <Typography variant="body4">
+      <Typography variant="body4" sx={{fontStyle: 'italic'}}>
         <SafeMarkdown
           unwrapped
           markdown={
             typeof response?.student_result === 'string'
               ? response.student_result
-              : 'No answer provided by student.'
+              : 'The student did not submit a response for this question.'
           }
         />
       </Typography>
