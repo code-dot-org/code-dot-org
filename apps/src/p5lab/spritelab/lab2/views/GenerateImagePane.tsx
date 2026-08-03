@@ -190,27 +190,22 @@ const GenerateImagePane: React.FunctionComponent<{
     [targetProps, onRenameImage]
   );
 
-  const validateNewName = useCallback((name: string): string | null => {
-    if (!name) {
-      return 'Enter a name first.';
-    }
-    if (!isNameUnique(name, getStore().getState().animationList.propsByKey)) {
-      return 'That name is already used.';
-    }
-    return null;
-  }, []);
+  const isNameTaken = useCallback(
+    (name: string): boolean =>
+      !isNameUnique(name, getStore().getState().animationList.propsByKey),
+    []
+  );
 
   const handleCreateFromPaint = useCallback(
     (name: string): string | null => {
-      const error = validateNewName(name);
-      if (error) {
-        return error;
+      if (!name || isNameTaken(name)) {
+        return name ? 'That name is already used.' : 'Enter a name first.';
       }
       pendingNewNameRef.current = name;
       setPainting('loading');
       return null;
     },
-    [validateNewName]
+    [isNameTaken]
   );
 
   // Current pixels as a data URI (generation's "use previous image" sends
@@ -469,7 +464,7 @@ const GenerateImagePane: React.FunctionComponent<{
           onDelete={handleDelete}
           itemType={itemTypeFromCategories(targetProps?.categories)}
           getDataURI={getTargetDataURI}
-          onValidateNewName={validateNewName}
+          isNameTaken={isNameTaken}
           onAcceptGenerated={handleAcceptGenerated}
         />
       )}

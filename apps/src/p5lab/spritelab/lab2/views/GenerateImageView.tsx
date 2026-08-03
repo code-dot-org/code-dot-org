@@ -25,12 +25,12 @@ const BOT_GENERATING_IMAGES = [
   require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png'),
 ];
 
-// The wildness slider runs 0..10 for friendly whole numbers; the service's
-// scale is 0..2 with 1.0 the default.
-const WILDNESS_MAX = 10;
-const WILDNESS_DEFAULT = 5;
-const wildnessToTemperature = (wildness: number) =>
-  (wildness / WILDNESS_MAX) * 2;
+// The temperature slider runs 0..10 for friendly whole numbers; the
+// service's scale is 0..2 with 1.0 the default.
+const TEMPERATURE_LEVEL_MAX = 10;
+const TEMPERATURE_LEVEL_DEFAULT = 5;
+const levelToTemperature = (level: number) =>
+  (level / TEMPERATURE_LEVEL_MAX) * 2;
 
 export interface GeneratedImageResult {
   filename: string;
@@ -57,8 +57,8 @@ interface GenerateImageViewProps {
 }
 
 /**
- * The image dialog's Generate view: prompt, type/style, a wildness slider
- * with a bot whose expression follows it, and a choice of where the
+ * The image dialog's Generate view: prompt, type/style, a temperature
+ * slider with a bot whose expression follows it, and a choice of where the
  * randomness comes from — a fresh roll, the image's saved seed, or the
  * image itself as a starting point.
  */
@@ -75,7 +75,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const [style, setStyle] = useState<SpriteLab2ItemStyle>(
     existing?.generation?.style || 'smooth'
   );
-  const [wildness, setWildness] = useState(WILDNESS_DEFAULT);
+  const [temperatureLevel, setTemperatureLevel] = useState(
+    TEMPERATURE_LEVEL_DEFAULT
+  );
   const [source, setSource] = useState<RandomnessSource>('new');
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<GeneratedImageResult | null>(null);
@@ -120,7 +122,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         const options: GenerateImageOptions = {
           itemType,
           style,
-          temperature: wildnessToTemperature(wildness),
+          temperature: levelToTemperature(temperatureLevel),
         };
         // Regenerate always re-rolls, even in same-seed mode: replaying the
         // seed would hand back a near-copy of what was just declined.
@@ -145,7 +147,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       prompt,
       itemType,
       style,
-      wildness,
+      temperatureLevel,
       source,
       existing,
       canUseSeed,
@@ -171,7 +173,9 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
       : BOT_IMAGES[
           Math.min(
             BOT_IMAGES.length - 1,
-            Math.floor((wildness / WILDNESS_MAX) * BOT_IMAGES.length)
+            Math.floor(
+              (temperatureLevel / TEMPERATURE_LEVEL_MAX) * BOT_IMAGES.length
+            )
           )
         ];
 
@@ -297,25 +301,29 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
           alt=""
           draggable={false}
         />
-        <div className={moduleStyles.wildness}>
-          <span id="wildness-label">Wildness</span>
+        <div className={moduleStyles.temperature}>
+          <span id="temperature-label">Temperature</span>
           <Slider
-            name="wildness-slider"
-            aria-labelledby="wildness-label"
+            name="temperature-slider"
+            aria-labelledby="temperature-label"
             minValue={0}
-            maxValue={WILDNESS_MAX}
+            maxValue={TEMPERATURE_LEVEL_MAX}
             step={1}
-            value={wildness}
-            onChange={e => setWildness(+e.target.value)}
+            value={temperatureLevel}
+            onChange={e => setTemperatureLevel(+e.target.value)}
             hideValue={true}
             color="aqua"
             leftButtonProps={{
-              children: <FontAwesomeV6Icon iconName="minus" title="Tamer" />,
-              ['aria-label']: 'Tamer',
+              children: (
+                <FontAwesomeV6Icon iconName="minus" title="Lower temperature" />
+              ),
+              ['aria-label']: 'Lower temperature',
             }}
             rightButtonProps={{
-              children: <FontAwesomeV6Icon iconName="plus" title="Wilder" />,
-              ['aria-label']: 'Wilder',
+              children: (
+                <FontAwesomeV6Icon iconName="plus" title="Raise temperature" />
+              ),
+              ['aria-label']: 'Raise temperature',
             }}
           />
         </div>

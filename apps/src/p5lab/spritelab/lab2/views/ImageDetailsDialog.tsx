@@ -29,8 +29,8 @@ interface ImageDetailsDialogProps {
   itemType?: SpriteLab2ItemType;
   /** Current pixels, for generation's "use previous image". */
   getDataURI: () => Promise<string | null>;
-  /** Validate a new image's name before generating; error or null. */
-  onValidateNewName: (name: string) => string | null;
+  /** Whether another image already uses this name. */
+  isNameTaken: (name: string) => boolean;
   /** Persist an accepted generation (newName set when creating). */
   onAcceptGenerated: (
     result: GeneratedImageResult,
@@ -63,7 +63,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onDelete,
   itemType,
   getDataURI,
-  onValidateNewName,
+  isNameTaken,
   onAcceptGenerated,
 }) => {
   const isNew = animKey === null;
@@ -74,6 +74,16 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [nameError, setNameError] = useState<string | null>(null);
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [view, setView] = useState<'details' | 'generate'>('details');
+
+  // Flag a duplicate as it's typed and hold the buttons until it's unique
+  // (an image keeps its own name while renaming).
+  const draftName = nameDraft.trim();
+  const duplicateName =
+    !!draftName && draftName !== name && isNameTaken(draftName);
+  const draftUsable = !!draftName && !duplicateName;
+  const shownNameError = duplicateName
+    ? 'That name is already used.'
+    : nameError;
 
   const title =
     view === 'generate'
@@ -162,7 +172,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                     name="imageName"
                     label="Name"
                     value={nameDraft}
-                    errorMessage={nameError || undefined}
+                    errorMessage={shownNameError || undefined}
                     onChange={e => {
                       setNameDraft(e.target.value);
                       setNameError(null);
@@ -173,7 +183,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                       <button
                         type="button"
                         className={moduleStyles.primaryButton}
-                        disabled={!nameDraft.trim()}
+                        disabled={!draftUsable}
                         onClick={commitRename}
                       >
                         Save name
@@ -215,7 +225,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   <dd>{STYLE_LABELS[generation.style]}</dd>
                   {generation.temperature !== undefined && (
                     <>
-                      <dt>Wildness</dt>
+                      <dt>Temperature</dt>
                       <dd>{generation.temperature}</dd>
                     </>
                   )}
@@ -227,7 +237,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   <button
                     type="button"
                     className={moduleStyles.primaryButton}
-                    disabled={!nameDraft.trim()}
+                    disabled={!draftUsable}
                     onClick={startCreatePaint}
                   >
                     Paint it
@@ -245,14 +255,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   <button
                     type="button"
                     className={moduleStyles.button}
-                    disabled={!nameDraft.trim()}
-                    onClick={() => {
-                      const error = onValidateNewName(nameDraft.trim());
-                      setNameError(error);
-                      if (!error) {
-                        setView('generate');
-                      }
-                    }}
+                    disabled={!draftUsable}
+                    onClick={() => setView('generate')}
                   >
                     Generate it
                   </button>
