@@ -190,15 +190,47 @@ describe('reconcile', () => {
     expect(mode).toBe('reconciled');
   });
 
-  it('still restarts when the knob settings change', () => {
-    // Values are read once, when the driver attaches the filter, so retuning
-    // is structural in a way that editing the graph is not.
+  it('retunes the running game when the knob settings change', () => {
+    // A filter that is attached can be retuned in place, and the driver pushes
+    // the new values onto it every frame — so nudging a number is a patch, not
+    // a restart (specs/QUALITY_OF_LIFE.md §1).
     const document = effectDoc('sample-1');
     const running = makeWorldWithEffect(document, 900, {strength: 0.1});
     const baseline = running.snapshot();
     const incoming = makeWorldWithEffect(document, 900, {strength: 0.9});
 
-    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+    // And it landed: without the patch this reconciles to a running game whose
+    // filter still has the old number.
+    expect(Object.values(running.snapshot().effectValues)).toEqual([
+      {strength: 0.9},
+    ]);
+  });
+
+  it('retunes only the slot that changed', () => {
+    // The same effect on two actors has two sets of knobs; turning one must not
+    // reach the other.
+    const document = effectDoc('sample-1');
+    const running = makeWorld(900);
+    for (const [index, actor] of [...running.actors].entries()) {
+      actor.addEffect('effects/ripple', document, {strength: index / 10});
+    }
+    const baseline = running.snapshot();
+
+    const incoming = makeWorld(900);
+    for (const [index, actor] of [...incoming.actors].entries()) {
+      actor.addEffect('effects/ripple', document, {
+        strength: index === 0 ? 0.7 : index / 10,
+      });
+    }
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('reconciled');
+    expect(Object.values(running.snapshot().effectValues)).toEqual([
+      {strength: 0.7},
+      {strength: 0.1},
+    ]);
   });
 
   it('restarts when an effect is added to an actor that had none', () => {

@@ -48,6 +48,18 @@ export interface SourcesContent<T = string> {
    * workspace read-only, so that ref is still stale.)
    */
   previewSources: (newSources: ProjectSources<T>) => void;
+  /**
+   * Bumped whenever the sources are REPLACED rather than edited.
+   *
+   * Loading the project, restoring a version, starting over: each hands the lab
+   * a different document, and an editor showing the old one has to re-seed. An
+   * editor's own `updateSources` does NOT bump it — which is the point. Without
+   * it an editor has to guess, by comparing the contents coming back against
+   * what it wrote, and that guess is wrong exactly when the writes are fast
+   * (a slider drag): an echo arriving out of order looks like somebody else's
+   * edit, and the editor re-seeds to a value the learner has already moved past.
+   */
+  sourcesEpoch: number;
   showStartOverDialog: (type: MessageType, message?: string) => void;
   setReinitializationHandler: (handler: () => void) => void;
   startOver: () => void;
@@ -62,6 +74,7 @@ const SourcesContext = createContext<SourcesContent>({
   },
   updateSources: (_, __) => {},
   previewSources: _ => {},
+  sourcesEpoch: 0,
   showStartOverDialog: (_, __) => {},
   setReinitializationHandler: _ => {},
   startOver: () => {},
@@ -138,6 +151,30 @@ export const SourcesProvider = <
     undefined,
   );
 
+  // How many times the sources have been replaced wholesale; see the field's
+  // note in SourcesContent.
+  const [sourcesEpoch, setSourcesEpoch] = useState(0);
+
+  /**
+   * Put a different document in front of the lab.
+   *
+   * Both replacement paths go through here, so both bump the epoch — and
+   * neither bumps it for a document identical to the one already showing,
+   * because that is not something any editor needs to react to.
+   */
+  const replaceSources = useCallback(
+    (next: ProjectSources<U>) => {
+      setCurrentSources(prev => {
+        if (isEqual(prev, next)) {
+          return prev;
+        }
+        setSourcesEpoch(epoch => epoch + 1);
+        return next;
+      });
+    },
+    [setCurrentSources],
+  );
+
   const reinitializationHandler = useRef<(() => void) | null>(null);
   const setReinitializationHandler = useCallback((handler: () => void) => {
     reinitializationHandler.current = handler;
@@ -145,7 +182,7 @@ export const SourcesProvider = <
 
   const reinitializeSources = useCallback(
     (sources: ProjectSources<U>, save: boolean = false) => {
-      setCurrentSources(transform?.(sources) || sources);
+      replaceSources(transform?.(sources) || sources);
       if (save && !readonlyWorkspaceRef.current) {
         (projectManager || LabRegistry.projectManager)?.save(
           sources as ProjectSources,
@@ -157,7 +194,7 @@ export const SourcesProvider = <
         reinitializationHandler.current();
       }
     },
-    [projectManager, transform, setCurrentSources, reinitializationHandler],
+    [projectManager, transform, replaceSources, reinitializationHandler],
   );
 
   useEffect(() => {
@@ -217,12 +254,9 @@ export const SourcesProvider = <
   // be relied on to make `updateSources` safe in this path.
   const previewSources = useCallback(
     (newSources: ProjectSources<U>) => {
-      setCurrentSources(prev => {
-        const transformed = transform?.(newSources) || newSources;
-        return isEqual(prev, transformed) ? prev : transformed;
-      });
+      replaceSources(transform?.(newSources) || newSources);
     },
-    [setCurrentSources, transform],
+    [replaceSources, transform],
   );
 
   const onLevelLoad = useCallback(
@@ -261,6 +295,7 @@ export const SourcesProvider = <
         currentSources,
         updateSources,
         previewSources,
+        sourcesEpoch,
         showStartOverDialog,
         setReinitializationHandler,
         startOver: onStartOver,

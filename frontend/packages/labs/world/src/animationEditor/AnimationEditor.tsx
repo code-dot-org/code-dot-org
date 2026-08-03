@@ -272,24 +272,25 @@ export const AnimationEditor = ({
   isReadOnly,
   onChange,
 }: CustomEditorProps) => {
-  const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {currentSources, updateSources, sourcesEpoch} =
+    useSources<MultiFileSource>();
   // Read when a rename lands rather than captured at render, so it carries
   // against the project as it stands then.
   const sourcesRef = useRef(currentSources);
   sourcesRef.current = currentSources;
 
   const [doc, setDoc] = useState(() => parseAnim(initialContents));
-  // What this editor is in step with — see MapEditor: a file replaced
-  // underneath it (the project finishing loading, a version restored) has to
-  // re-seed, or it edits and then saves a version nobody has any more.
-  const syncedContents = useRef(initialContents);
+  // Re-seed when the lab is handed a different document (SourcesContext's
+  // `sourcesEpoch`): the project loading, a version restored, a start-over.
+  const seenEpoch = useRef(sourcesEpoch);
   useEffect(() => {
-    if (initialContents === syncedContents.current) {
+    if (seenEpoch.current === sourcesEpoch) {
       return;
     }
-    syncedContents.current = initialContents;
+    seenEpoch.current = sourcesEpoch;
     setDoc(parseAnim(initialContents));
-  }, [initialContents]);
+  }, [sourcesEpoch, initialContents]);
+
   // Latest doc for handlers that read-modify-write without re-subscribing.
   const docRef = useRef(doc);
   docRef.current = doc;
@@ -411,16 +412,12 @@ export const AnimationEditor = ({
   const commit = (next: AnimFile) => {
     setLive(next);
     if (!isReadOnly) {
-      const text = serialize(next);
-      syncedContents.current = text;
-      onChange(text);
+      onChange(serialize(next));
     }
   };
   const commitCurrent = () => {
     if (!isReadOnly) {
-      const text = serialize(docRef.current);
-      syncedContents.current = text;
-      onChange(text);
+      onChange(serialize(docRef.current));
     }
   };
   const withDef = (def: AnimDef): AnimFile => ({

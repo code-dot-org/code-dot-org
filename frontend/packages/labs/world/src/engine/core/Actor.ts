@@ -198,6 +198,28 @@ export class Actor {
     });
   }
 
+  /**
+   * Retune this actor's copy of an effect, in place.
+   *
+   * See `World.setEffectValues`: knob settings are patchable where an
+   * attachment is not, and each actor's copy has its own.
+   *
+   * @returns whether this actor carries that effect
+   */
+  setEffectValues(path: string, values: AppliedEffectSpec['values']): boolean {
+    const index = this.appliedEffects.findIndex(effect => effect.path === path);
+    if (index < 0) {
+      return false;
+    }
+    this.appliedEffects[index] = values
+      ? {...this.appliedEffects[index], values}
+      : {
+          path: this.appliedEffects[index].path,
+          document: this.appliedEffects[index].document,
+        };
+    return true;
+  }
+
   /** Stop playing an effect. Removing one the actor does not have is a no-op. */
   removeEffect(path: string): this {
     const index = this.appliedEffects.findIndex(effect => effect.path === path);

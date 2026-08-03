@@ -112,10 +112,13 @@ describe('a world backdrop', () => {
     expect(snapshot.backdrops).toEqual([
       {sprite: 'cave.png', color: rgba('#88ccff')},
     ]);
-    // The effect is structural, so it travels with everyone else's id.
-    expect(snapshot.effectIds.some(id => id.startsWith('effects/ripple'))).toBe(
-      true,
-    );
+    // The effect is structural, so it travels with everyone else's — as a slot
+    // saying what carries it, which for a backdrop is its layer.
+    expect(snapshot.effectIds).toContain('["backdrop:0","effects/ripple"]');
+    // Its knobs travel beside it, and are patchable rather than structural.
+    expect(
+      snapshot.effectValues['["backdrop:0","effects/ripple"]'],
+    ).toBeUndefined();
   });
 
   it('grows a layer when one is asked for, without blacking out layer 0', () => {

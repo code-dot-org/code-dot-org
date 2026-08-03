@@ -19,8 +19,13 @@ interface ReconcilableWorld {
   snapshot(): {
     ruleIds: string[];
     actorIds: string[];
-    /** Identity per applied effect — see engine/core/effectIds.ts. */
+    /** Which effects are in play, and what carries each (effectIds.ts). */
     effectIds: string[];
+    /** Their knob settings, by the same key — patchable, unlike the above. */
+    effectValues: Record<
+      string,
+      Readonly<Record<string, number | boolean | number[]>> | undefined
+    >;
     /** The graph behind each effect in play, hashed, by module path. */
     effectDocs: Record<string, string>;
     /**
@@ -38,6 +43,11 @@ interface ReconcilableWorld {
   setBackground(sprite: string | undefined, layer?: number): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
+  setEffectValues(
+    owner: string,
+    path: string,
+    values: Readonly<Record<string, number | boolean | number[]>> | undefined,
+  ): boolean;
   /**
    * Every effect in play — the world's own AND every actor's — so a patch can
    * lift the new graph off the rebuild wherever the edited effect is used.
@@ -91,6 +101,16 @@ export function reconcile(
     path => previous.effectDocs[path] !== snapshot.effectDocs[path],
   );
 
+  // Effects whose KNOBS were turned: same effect, same shader, new numbers.
+  // Patchable for the same reason the graph is — the filter is already
+  // attached, and the driver pushes new values onto it (effects.ts). A learner
+  // nudging a number should see the number, not a restart.
+  const retunedEffects = Object.keys(snapshot.effectValues).filter(
+    slot =>
+      stable(previous.effectValues[slot]) !==
+      stable(snapshot.effectValues[slot]),
+  );
+
   // An edited graph patches even when `sameActors` is false, and that exception
   // is deliberate. `sameActors` compares the previous build's PRE-TICK snapshot
   // against the incoming one, but the incoming world is not always freshly
@@ -109,7 +129,9 @@ export function reconcile(
   // depends on.)
   if (
     sameStructure &&
-    (editedEffects.length || (sameActors && (worldChanged || backdropChanged)))
+    (editedEffects.length ||
+      retunedEffects.length ||
+      (sameActors && (worldChanged || backdropChanged)))
   ) {
     // Level 1: patch the running world rather than replacing it.
     for (const [path, value] of Object.entries(snapshot.world)) {
@@ -121,6 +143,12 @@ export function reconcile(
     // One sky: only layer 0 carries a colour anyone can see (World.setBackgroundColor).
     if (snapshot.backdrops[0]) {
       running.setBackgroundColor(snapshot.backdrops[0].color);
+    }
+    // Retune each slot whose knobs moved. By slot, so the same effect on two
+    // actors keeps two sets of settings.
+    for (const slot of retunedEffects) {
+      const [owner, path] = JSON.parse(slot) as [string, string];
+      running.setEffectValues(owner, path, snapshot.effectValues[slot]);
     }
     // Lift each edited graph off the freshly built world and write it into the
     // running one. The driver re-reads these specs every frame, so it sees the
