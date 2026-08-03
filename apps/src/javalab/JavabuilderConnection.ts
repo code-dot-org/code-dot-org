@@ -209,19 +209,13 @@ export default class JavabuilderConnection {
   // When getting the access token, send override sources to run instead of attempting to find
   // sources based on a channel id.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilderWithOverrides(overrideSources: JavalabFlatSource) {
-    const requestData = this.getDefaultRequestData();
-    requestData.overrideSources = overrideSources;
-    // we include the channel id so that assets are available
-    requestData.channelId = this.channelId;
-
+  connectJavabuilderWithOverrideSources(overrideSources: JavalabFlatSource) {
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
-    this.connectJavabuilderHelper(
+    this.connectJavabuilderWithOverridesHelper(
       '/javabuilder/access_token_with_override_sources',
-      requestData,
-      /* checkProjectEdited */ false,
-      /* usePostRequest */ true
+      false,
+      overrideSources
     );
   }
 
@@ -230,23 +224,17 @@ export default class JavabuilderConnection {
   // lab2 levelbuilder start mode (which has no channel id) test in-memory validation edits before
   // saving. The endpoint is restricted to levelbuilders.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilderWithOverridesAndValidation(
+  connectJavabuilderWithOverrides(
     overrideSources: JavalabFlatSource,
     overrideValidation: JavalabFlatSource
   ) {
-    const requestData = this.getDefaultRequestData();
-    requestData.overrideSources = overrideSources;
-    // we include the channel id so that assets are available
-    requestData.channelId = this.channelId;
-    requestData.overrideValidation = overrideValidation;
-
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
-    this.connectJavabuilderHelper(
+    this.connectJavabuilderWithOverridesHelper(
       '/javabuilder/access_token_with_override_sources_and_validation',
-      requestData,
-      /* checkProjectEdited */ false,
-      /* usePostRequest */ true
+      false,
+      overrideSources,
+      overrideValidation
     );
   }
 
@@ -257,14 +245,34 @@ export default class JavabuilderConnection {
   connectJavabuilderWithOverrideValidation(
     overrideValidation: JavalabFlatSource
   ) {
+    this.connectJavabuilderWithOverridesHelper(
+      '/javabuilder/access_token_with_override_validation',
+      true,
+      undefined,
+      overrideValidation
+    );
+  }
+
+  private connectJavabuilderWithOverridesHelper(
+    url: string,
+    checkProjectEdited: boolean,
+    overrideSources?: JavalabFlatSource,
+    overrideValidation?: JavalabFlatSource
+  ) {
     const requestData = this.getDefaultRequestData();
+    if (overrideSources) {
+      requestData.overrideSources = overrideSources;
+    }
+    // We include the channel id so that assets are available.
     requestData.channelId = this.channelId;
-    requestData.overrideValidation = overrideValidation;
+    if (overrideValidation) {
+      requestData.overrideValidation = overrideValidation;
+    }
 
     this.connectJavabuilderHelper(
-      '/javabuilder/access_token_with_override_validation',
+      url,
       requestData,
-      /* checkProjectEdited */ true,
+      checkProjectEdited,
       /* usePostRequest */ true
     );
   }

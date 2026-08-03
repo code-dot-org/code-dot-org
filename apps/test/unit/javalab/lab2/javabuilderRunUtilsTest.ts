@@ -54,7 +54,7 @@ describe('javabuilderRunUtils', () => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides: jest.fn(),
+        connectJavabuilderWithOverrideSources: jest.fn(),
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -135,7 +135,7 @@ describe('javabuilderRunUtils', () => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides: jest.fn(),
+        connectJavabuilderWithOverrideSources: jest.fn(),
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -241,12 +241,12 @@ describe('javabuilderRunUtils', () => {
     (isReadOnlyWorkspace as unknown as jest.Mock).mockReturnValueOnce(true);
     mockGetAuthenticityToken.mockResolvedValue('token');
 
-    const connectJavabuilderWithOverrides = jest.fn();
+    const connectJavabuilderWithOverrideSources = jest.fn();
     mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
-        connectJavabuilderWithOverrides,
+        connectJavabuilderWithOverrideSources,
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -260,7 +260,7 @@ describe('javabuilderRunUtils', () => {
       /* needsInitialSourcesSave */ false
     );
 
-    expect(connectJavabuilderWithOverrides).toHaveBeenCalledWith(startSources);
+    expect(connectJavabuilderWithOverrideSources).toHaveBeenCalledWith(startSources);
   });
 
   it('sends override validation through the levelbuilder-only endpoint when running tests in start mode', async () => {
@@ -277,14 +277,14 @@ describe('javabuilderRunUtils', () => {
     (getIsStartMode as jest.Mock).mockReturnValue(true);
     mockGetAuthenticityToken.mockResolvedValue('token');
 
+    const connectJavabuilderWithOverrideSources = jest.fn();
     const connectJavabuilderWithOverrides = jest.fn();
-    const connectJavabuilderWithOverridesAndValidation = jest.fn();
     mockJavabuilderConnection.mockImplementation((...args: unknown[]) => {
       (args[SET_IS_RUNNING_ARG] as () => void)();
       return {
         connectJavabuilder: jest.fn(),
+        connectJavabuilderWithOverrideSources,
         connectJavabuilderWithOverrides,
-        connectJavabuilderWithOverridesAndValidation,
         closeConnection: jest.fn(),
       } as unknown as JavabuilderConnection;
     });
@@ -298,10 +298,10 @@ describe('javabuilderRunUtils', () => {
       /* needsInitialSourcesSave */ false
     );
 
-    expect(connectJavabuilderWithOverridesAndValidation).toHaveBeenCalledWith(
+    expect(connectJavabuilderWithOverrides).toHaveBeenCalledWith(
       startSources,
       validation
     );
-    expect(connectJavabuilderWithOverrides).not.toHaveBeenCalled();
+    expect(connectJavabuilderWithOverrideSources).not.toHaveBeenCalled();
   });
 });
