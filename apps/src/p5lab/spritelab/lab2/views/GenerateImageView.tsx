@@ -64,19 +64,15 @@ interface GenerateImageViewProps {
   create?: {
     /** Whether another image already uses this name. */
     isNameTaken: (name: string) => boolean;
-    /** Paint from a blank canvas instead of generating; error or null. */
-    onPaintInstead: (name: string) => string | null;
-    // Handing off to the paint editor unmounts this view; if that paint is
-    // cancelled, the name typed before the handoff comes back through here.
-    initialName?: string;
   };
   /** Persist a finished result (name set when creating). */
   onAccept: (
     result: GeneratedImageResult,
     name?: string
   ) => Promise<void> | void;
-  /** Return to the summary view without generating (existing images). */
-  onBackToImage?: () => void;
+  /** Leave without generating: back to the summary, or out of the dialog
+      for a brand-new image. */
+  onCancel: () => void;
   /** Delete this image (existing images). */
   onDelete?: () => void;
 }
@@ -94,13 +90,12 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   thumb,
   create,
   onAccept,
-  onBackToImage,
+  onCancel,
   onDelete,
 }) => {
   const [mode, setMode] = useState<GenerateMode>('prompt');
   const [prompt, setPrompt] = useState(existing?.generation?.prompt || '');
-  const [name, setName] = useState(create?.initialName || '');
-  const [paintError, setPaintError] = useState<string | null>(null);
+  const [name, setName] = useState('');
   const [itemType, setItemType] = useState<SpriteLab2ItemType>(
     existing?.itemType || 'sprite'
   );
@@ -118,7 +113,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
   const duplicateName =
     !!create && !!trimmedName && create.isNameTaken(trimmedName);
   const nameUsable = !create || (!!trimmedName && !duplicateName);
-  const nameError = duplicateName ? 'That name is already used.' : paintError;
+  const nameError = duplicateName ? 'That name is already used.' : null;
 
   // Cycle the bot's generating frames while a request is out.
   const [generatingTick, setGeneratingTick] = useState(0);
@@ -210,10 +205,7 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 value={name}
                 errorMessage={nameError || undefined}
                 disabled={generating}
-                onChange={e => {
-                  setName(e.target.value);
-                  setPaintError(null);
-                }}
+                onChange={e => setName(e.target.value)}
               />
             </div>
           )}
@@ -368,26 +360,14 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
             <DeleteImageButton onDelete={onDelete} />
           </div>
         )}
-        {create && (
-          <button
-            type="button"
-            className={moduleStyles.button}
-            disabled={generating || !nameUsable}
-            onClick={() => setPaintError(create.onPaintInstead(trimmedName))}
-          >
-            Paint it instead
-          </button>
-        )}
-        {onBackToImage && (
-          <button
-            type="button"
-            className={moduleStyles.button}
-            disabled={generating}
-            onClick={onBackToImage}
-          >
-            Cancel
-          </button>
-        )}
+        <button
+          type="button"
+          className={moduleStyles.button}
+          disabled={generating}
+          onClick={onCancel}
+        >
+          Cancel
+        </button>
         <button
           type="button"
           className={moduleStyles.primaryButton}

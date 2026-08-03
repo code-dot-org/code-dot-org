@@ -33,22 +33,6 @@ import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
 
-// A new image starts as a blank, transparent, pixel-editable canvas: 32x32
-// art pixels drawn at 16 physical px each (the generation pipeline's block
-// size).
-const BLANK_CANVAS_PX = 512;
-const BLANK_CANVAS_GRID = 16;
-let blankCanvasDataURI: string | null = null;
-function getBlankCanvasDataURI(): string {
-  if (!blankCanvasDataURI) {
-    const canvas = document.createElement('canvas');
-    canvas.width = BLANK_CANVAS_PX;
-    canvas.height = BLANK_CANVAS_PX;
-    blankCanvasDataURI = canvas.toDataURL('image/png');
-  }
-  return blankCanvasDataURI;
-}
-
 function itemTypeFromCategories(categories?: string[]): SpriteLab2ItemType {
   if (categories?.includes(BACKGROUNDS_CATEGORY)) {
     return 'background';
@@ -139,9 +123,6 @@ const GenerateImagePane: React.FunctionComponent<{
   // for a moment between the two dialogs.
   const [dialogTarget, setDialogTarget] = useState<string | 'new' | null>(null);
   const [painting, setPainting] = useState<'no' | 'loading' | 'active'>('no');
-  // The name chosen for a new image, held until its first paint is saved —
-  // nothing is created before that.
-  const pendingNewNameRef = useRef<string | null>(null);
   // The gallery card that opened the dialog; focus returns to it on close.
   const triggerRef = useRef<HTMLElement | null>(null);
 
@@ -158,7 +139,6 @@ const GenerateImagePane: React.FunctionComponent<{
   const closeDialog = useCallback(() => {
     setDialogTarget(null);
     setPainting('no');
-    pendingNewNameRef.current = null;
     triggerRef.current?.focus();
   }, []);
 
@@ -194,18 +174,6 @@ const GenerateImagePane: React.FunctionComponent<{
     (name: string): boolean =>
       !isNameUnique(name, getStore().getState().animationList.propsByKey),
     []
-  );
-
-  const handleCreateFromPaint = useCallback(
-    (name: string): string | null => {
-      if (!name || isNameTaken(name)) {
-        return name ? 'That name is already used.' : 'Enter a name first.';
-      }
-      pendingNewNameRef.current = name;
-      setPainting('loading');
-      return null;
-    },
-    [isNameTaken]
   );
 
   // Current pixels as a data URI (generation's "use previous image" sends
@@ -345,37 +313,6 @@ const GenerateImagePane: React.FunctionComponent<{
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
 
-      // First paint of a new image: create its animation now.
-      const newName = pendingNewNameRef.current;
-      if (dialogTarget === 'new' && newName) {
-        pendingNewNameRef.current = null;
-        const sourceUrl = await uploadEdited(newName, dataURI);
-        const key = createUuid();
-        dispatch(
-          // addAnimation is an untyped JS thunk; cast for dispatch.
-          addAnimation(key, {
-            name: newName,
-            sourceUrl,
-            frameSize: frameSize || {x: BLANK_CANVAS_PX, y: BLANK_CANVAS_PX},
-            frameCount: 1,
-            frameDelay: 2,
-            looping: true,
-            categories: [],
-            pixelGridSize: meta.pixelGridSize,
-            recentColors: meta.recentColors,
-          }) as unknown as AnyAction
-        );
-        // The classic thunk unconditionally renames to name_N; take the
-        // plain name back (validated free in handleCreateFromPaint).
-        if (
-          isNameUnique(newName, getStore().getState().animationList.propsByKey)
-        ) {
-          dispatch(setAnimationName(key, newName) as unknown as AnyAction);
-        }
-        setDialogTarget(key);
-        return;
-      }
-
       const props = targetProps;
       const key = dialogTarget;
       if (!key || key === 'new' || !props) {
@@ -460,12 +397,6 @@ const GenerateImagePane: React.FunctionComponent<{
           generation={targetProps?.generation}
           onClose={closeDialog}
           onPaint={() => setPainting('loading')}
-          onCreateFromPaint={handleCreateFromPaint}
-          // A cancelled paint handoff remounts the dialog; give back the
-          // name typed before it.
-          initialNewName={
-            creating ? pendingNewNameRef.current || undefined : undefined
-          }
           onRename={handleRename}
           onDelete={handleDelete}
           itemType={itemTypeFromCategories(targetProps?.categories)}
@@ -477,23 +408,13 @@ const GenerateImagePane: React.FunctionComponent<{
 
       {dialogTarget && painting !== 'no' && (
         <PixelEditorModal
-          title={
-            creating
-              ? `Paint ${pendingNewNameRef.current}`
-              : `Edit ${targetProps?.name}`
-          }
+          title={`Edit ${targetProps?.name}`}
           // Edit the ORIGINAL image (untrimmed): trims are a display-time
           // optimization; the animation's pixels are the source of truth.
-          imageUrl={
-            creating
-              ? getBlankCanvasDataURI()
-              : targetProps?.dataURI || targetProps?.sourceUrl || ''
-          }
+          imageUrl={targetProps?.dataURI || targetProps?.sourceUrl || ''}
           // Recorded at generation time; images without it (legacy, smooth
           // style) edit at native resolution.
-          knownPixelGrid={
-            creating ? BLANK_CANVAS_GRID : targetProps?.pixelGridSize
-          }
+          knownPixelGrid={targetProps?.pixelGridSize}
           initialRecentColors={targetProps?.recentColors}
           onReady={() => setPainting('active')}
           onSave={handleEditorSave}

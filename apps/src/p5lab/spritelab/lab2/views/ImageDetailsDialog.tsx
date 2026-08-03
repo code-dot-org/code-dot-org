@@ -19,7 +19,7 @@ import moduleStyles from './image-details-dialog.module.scss';
 
 interface ImageDetailsDialogProps {
   // null = the "new image" state: it opens straight into the generate view
-  // and nothing is created until a generation or first paint succeeds.
+  // and nothing is created until a generation succeeds.
   animKey: string | null;
   name?: string;
   thumb?: string;
@@ -27,10 +27,6 @@ interface ImageDetailsDialogProps {
   onClose: () => void;
   /** Open the paint editor on this image. */
   onPaint: () => void;
-  /** Create a new image by painting from a blank canvas; error or null. */
-  onCreateFromPaint: (name: string) => string | null;
-  /** A new image's name typed before a cancelled paint handoff. */
-  initialNewName?: string;
   /** Rename this image everywhere; error or null. */
   onRename: (newName: string) => string | null;
   onDelete: () => void;
@@ -61,8 +57,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   generation,
   onClose,
   onPaint,
-  onCreateFromPaint,
-  initialNewName,
   onRename,
   onDelete,
   itemType,
@@ -204,20 +198,13 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                   }
             }
             thumb={isNew ? undefined : thumb}
-            create={
-              isNew
-                ? {
-                    isNameTaken,
-                    onPaintInstead: onCreateFromPaint,
-                    initialName: initialNewName,
-                  }
-                : undefined
-            }
+            create={isNew ? {isNameTaken} : undefined}
             onAccept={async (result, newName) => {
               await onAcceptGenerated(result, newName);
               setView('details');
             }}
-            onBackToImage={isNew ? undefined : () => setView('details')}
+            // A brand-new image has no summary to fall back to.
+            onCancel={isNew ? onClose : () => setView('details')}
             onDelete={isNew ? undefined : onDelete}
           />
         ) : (
