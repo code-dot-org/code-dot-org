@@ -93,15 +93,27 @@ In `PhaserBinding`, inside `create()` and before the first `sync()`:
 2. One `scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite)` when there is
    a sprite.
 
-Created before any actor exists, so it is behind everything by display order.
-This is why the plan needs no depth concept — see §8 for what changes when one
-arrives.
+Each layer's image sits at a negative depth (`BACKDROP_DEPTH = -1000`, plus the
+layer index) rather than relying on being created first. Creation order would be
+enough for a background set before the game starts, but not for one set during
+it — an event handler's `set background to …` makes its image after the actors'
+and it would cover them. This is not the general depth concept §8 describes:
+actors still draw at Phaser's default 0 in snapshot order, and nothing has to
+choose a depth for them.
 
 Each frame, `sync()` reconciles it from a `backdropSnapshot()` beside
 `renderSnapshot()`: texture, colour, and `effectRegistry.reconcile(scene,
 backdropImage, backdrop.effects)` — the same call the actors use, pointed at a
 different object. A backdrop changed mid-game therefore behaves like everything
 else that changes mid-game.
+
+**Hot reload.** What a backdrop draws is a value, so it patches the running world
+like a world property (`reconcile.ts`), and the game keeps its state while the
+learner tries backgrounds. Without that it would be worse than a restart: an
+otherwise-unchanged rebuild compares equal, reconciles, and leaves the running
+world with the old sky — the change silently lost. A backdrop's EFFECTS are
+structural, in `effectIds` with everyone else's, so gaining or losing one
+restarts exactly as it does on an actor.
 
 ### Scale: stretch
 

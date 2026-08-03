@@ -4,6 +4,7 @@ import type {EffectDocument} from '../../../effect/model/types';
 import {
   ActorBuilder,
   PositionProperty,
+  rgba,
   Vector,
   WorldBuilder,
   type World,
@@ -206,5 +207,35 @@ describe('reconcile', () => {
     const incoming = makeWorldWithEffect(effectDoc('sample-1'), 900);
     const {mode} = reconcile(running, incoming, baseline);
     expect(mode).toBe('restarted');
+  });
+
+  it('changes the sky on the running game rather than restarting it', () => {
+    // A background is a value, like a world property. Restarting for it would
+    // throw away the game state a learner is looking at while they pick one.
+    const running = makeWorld(900);
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+    incoming.setBackground('cave.png');
+    incoming.setBackgroundColor('#88ccff');
+
+    const {mode} = reconcile(running, incoming, baseline);
+
+    expect(mode).toBe('reconciled');
+    // And it actually landed: without the patch this reconciles to a running
+    // world that still has the old sky, and the change is silently lost.
+    expect(running.backdropSnapshot()[0]).toMatchObject({
+      sprite: 'cave.png',
+      color: rgba('#88ccff'),
+    });
+  });
+
+  it('restarts when the backdrop gains an effect', () => {
+    // Which effects are in play is structure, on a backdrop as on an actor.
+    const running = makeWorld(900);
+    const baseline = running.snapshot();
+    const incoming = makeWorld(900);
+    incoming.addBackgroundEffect('effects/ripple', effectDoc('sample-1'));
+
+    expect(reconcile(running, incoming, baseline).mode).toBe('restarted');
   });
 });

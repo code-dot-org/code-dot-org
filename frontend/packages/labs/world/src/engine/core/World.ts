@@ -6,6 +6,7 @@
 
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
+import {rgba, type ColorValue, type Rgba} from './color';
 import {effectContentHash, effectSnapshotId} from './effectIds';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
@@ -49,6 +50,16 @@ export interface WorldSnapshot {
    * shader and rebooting a game on every keystroke.
    */
   effectDocs: Record<string, string>;
+  /**
+   * What each backdrop layer draws, back to front.
+   *
+   * Values, not structure, and patched live like world properties: changing the
+   * sky is the kind of edit a learner makes while watching the game, and it
+   * would be a poor trade to restart for it. The layers' EFFECTS are not here —
+   * they are in `effectIds` with everyone else's, so gaining or losing one is
+   * structural exactly as it is on an actor.
+   */
+  backdrops: Array<{sprite?: string; color: Rgba}>;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
@@ -76,6 +87,38 @@ export interface RenderState {
   frame?: FrameState;
 }
 
+/**
+ * One backdrop layer, as the driver draws it.
+ *
+ * The appearance half of an actor with none of the body: something to draw,
+ * effects to draw it through, and nothing the simulation can reach — no
+ * position, no traits, no place in the rules (BACKGROUNDS.md §1). A world has
+ * at least one, and it is drawn behind everything.
+ */
+export interface BackdropState {
+  /** An image file name, as a frame names one; absent means colour only. */
+  sprite?: string;
+  /** Behind the image, and all there is when there is none. */
+  color: Rgba;
+  /** Effects filtering this layer's own pixels — not the whole camera. */
+  effects: readonly AppliedEffectSpec[];
+}
+
+/** The same, while the world still owns it and can change it. */
+interface BackdropSlot {
+  sprite?: string;
+  color: Rgba;
+  effects: AppliedEffectSpec[];
+}
+
+/**
+ * What a world draws behind everything until told otherwise.
+ *
+ * The colour the preview has always cleared to, moved here so the driver reads
+ * it off the world rather than carrying its own copy.
+ */
+export const DEFAULT_BACKDROP_COLOR = '#101020';
+
 /** The data a WorldBuilder hands the World constructor. */
 export interface WorldInit {
   id: string;
@@ -88,6 +131,8 @@ export interface WorldInit {
   animations?: Array<[string, AnimationDef]>;
   /** Effects played across the whole viewport. */
   effects?: AppliedEffectSpec[];
+  /** Backdrop layers, back to front; layer 0 is what the blocks address. */
+  backdrops?: BackdropState[];
 }
 
 // `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
@@ -131,6 +176,10 @@ export class World {
   // Effects played across the whole viewport, not on any one actor. Mutable for
   // the same reason an actor's list is: the driver re-reads it every frame.
   private readonly appliedEffects: AppliedEffectSpec[];
+  // Backdrop layers, back to front. Never empty: layer 0 is what every
+  // background block addresses, and a world that was told nothing about its
+  // background still has one, in the default colour.
+  private readonly backdropList: BackdropSlot[];
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
   // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
@@ -174,6 +223,21 @@ export class World {
     }
 
     this.appliedEffects = init.effects ? [...init.effects] : [];
+
+    // Copied, not adopted: the builder may instantiate more than one world from
+    // the same description (`instantiate`), and two worlds sharing a backdrop
+    // would share every later change to it.
+    this.backdropList = (init.backdrops ?? []).map(backdrop => ({
+      ...backdrop,
+      color: [...backdrop.color] as Rgba,
+      effects: [...backdrop.effects],
+    }));
+    if (this.backdropList.length === 0) {
+      this.backdropList.push({
+        color: rgba(DEFAULT_BACKDROP_COLOR),
+        effects: [],
+      });
+    }
 
     // The per-tick order is fixed by the active rules' steps.
     const steps: Step[] = [];
@@ -318,7 +382,98 @@ export class World {
   }
 
   /**
-   * Every effect in play, the world's own and every actor's.
+   * The backdrop layers, back to front, as the driver draws them.
+   *
+   * Read every frame beside `renderSnapshot`, so a backdrop changed mid-game —
+   * by an event handler, or by the hot-reload patch — shows up on the next one.
+   */
+  backdropSnapshot(): readonly BackdropState[] {
+    return this.backdropList;
+  }
+
+  /**
+   * The layer `n`, creating the layers up to it if they do not exist yet.
+   *
+   * Growing rather than throwing is what makes the optional `layer` argument on
+   * the methods below a real promise: parallax adds blocks that name a layer,
+   * and nothing about the engine has to change when they arrive. A new layer
+   * starts transparent, so adding layer 2 does not black out layer 0.
+   */
+  private backdropAt(layer: number): BackdropSlot {
+    const index = Math.max(0, Math.floor(layer));
+    while (this.backdropList.length <= index) {
+      this.backdropList.push({color: [0, 0, 0, 0], effects: []});
+    }
+    return this.backdropList[index];
+  }
+
+  /**
+   * Draw `sprite` behind everything — an image file name, as a frame names one.
+   *
+   * `undefined` clears it, leaving the backdrop colour. The image is stretched
+   * to the viewport by the driver (BACKGROUNDS.md §4); nothing here knows how
+   * big it is, and a backdrop is never a spritesheet, so this takes a file name
+   * and never a cell reference.
+   */
+  setBackground(sprite: string | undefined, layer = 0): this {
+    this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /**
+   * Set the colour behind the backdrop image, and behind everything without one.
+   *
+   * Takes whatever a colour block produced — hex from a picker, floats from
+   * `r g b a` — because `rgba` accepts both and every colour block can then
+   * feed this one (see color.ts).
+   *
+   * One sky, not one per layer: a colour on any layer but the bottom would be
+   * hidden by the layer under it.
+   */
+  setBackgroundColor(color: ColorValue): this {
+    this.backdropAt(0).color = rgba(color);
+    return this;
+  }
+
+  /**
+   * Play an effect on the backdrop's own pixels.
+   *
+   * Not the same as `addEffect`, and the difference is the whole reason a
+   * backdrop carries effects at all: a world effect filters the camera, so it
+   * covers the actors too. This filters the sky and leaves the swimmer alone.
+   *
+   * One entry per path and never stacked, exactly as on the world and on an
+   * actor — adding one already present retunes it.
+   */
+  addBackgroundEffect(
+    path: string,
+    document: AppliedEffectSpec['document'],
+    values?: AppliedEffectSpec['values'],
+    layer = 0,
+  ): this {
+    const spec = values ? {path, document, values} : {path, document};
+    const effects = this.backdropAt(layer).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects[index] = spec;
+      return this;
+    }
+    effects.push(spec);
+    return this;
+  }
+
+  /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
+  removeBackgroundEffect(path: string, layer = 0): this {
+    const effects = this.backdropAt(layer).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
+    return this;
+  }
+
+  /**
+   * Every effect in play, the world's own, every backdrop's, and every actor's.
    *
    * Public because the hot-reload reconciler reads it off a freshly built world
    * to find the new graph for an effect the learner just edited — which may sit
@@ -327,6 +482,7 @@ export class World {
   allEffects(): AppliedEffectSpec[] {
     return [
       ...this.appliedEffects,
+      ...this.backdropList.flatMap(backdrop => [...backdrop.effects]),
       ...this.actorList.flatMap(actor => [...actor.effects()]),
     ];
   }
@@ -355,6 +511,9 @@ export class World {
       });
     };
     patch(this.appliedEffects);
+    for (const backdrop of this.backdropList) {
+      patch(backdrop.effects);
+    }
     for (const actor of this.actorList) {
       actor.setEffectDocument(path, document);
       replaced ||= actor.effects().some(effect => effect.path === path);
@@ -529,6 +688,9 @@ export class World {
       // whether the set changed.
       effectIds: [
         ...this.appliedEffects.map(effectSnapshotId),
+        ...this.backdropList.flatMap(backdrop =>
+          backdrop.effects.map(effectSnapshotId),
+        ),
         ...this.actorList.flatMap(actor =>
           actor.effects().map(effectSnapshotId),
         ),
@@ -541,6 +703,10 @@ export class World {
           effectContentHash(effect),
         ]),
       ),
+      backdrops: this.backdropList.map(backdrop => ({
+        ...(backdrop.sprite === undefined ? {} : {sprite: backdrop.sprite}),
+        color: [...backdrop.color] as Rgba,
+      })),
       world,
       actors,
     };
