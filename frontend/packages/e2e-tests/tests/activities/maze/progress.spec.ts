@@ -16,12 +16,12 @@ const poll = {timeout: PROGRESS_TIMEOUT_MS};
 // DOM (not the shared header/footer chrome). rule id -> failing node count, the
 // way multi.spec documents it; a new violation outside this set fails the scan.
 //   lessonHeader: the lesson-progress bubble strip is clean.
-//   summaryTable: 3 color-contrast nodes — a pre-existing DSCO contrast
-//     shortfall in the unit-overview progress bubbles, not introduced by this
-//     port; baselined here so a new regression still fails.
+//   summaryTable: clean. The unit-overview progress bubbles used to contribute 3
+//     color-contrast nodes; the new brand palette recolored them and they now
+//     pass. Kept as an empty map so a new regression still fails.
 const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
   lessonHeader: {},
-  summaryTable: {'color-contrast': 3},
+  summaryTable: {},
 };
 
 /** Solves lesson 2 level 1 (load the K1 solution and run), ending on that level page. */
