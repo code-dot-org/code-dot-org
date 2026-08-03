@@ -16,6 +16,18 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
     throw :abort if DCDO.get('project_storage_geos_backfill_disabled', false)
   end
 
+  around_perform do |job, block|
+    ActiveRecord::Base.connection_pool.with_connection do |connection|
+      next unless connection.get_advisory_lock(job.class.name)
+
+      begin
+        block.call
+      ensure
+        connection.release_advisory_lock(job.class.name)
+      end
+    end
+  end
+
   def perform(limit: DEFAULT_LIMIT)
     started_at = Time.now.utc
     success = false

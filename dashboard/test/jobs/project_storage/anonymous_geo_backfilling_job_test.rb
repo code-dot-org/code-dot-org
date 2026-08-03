@@ -39,6 +39,26 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       end
     end
 
+    context 'when another job holds database lock' do
+      let(:connection_pool) {ActiveRecord::Base.connection_pool}
+      let(:lock_connection) {connection_pool.checkout}
+
+      around do |test|
+        _(lock_connection.get_advisory_lock(described_class.name)).must_equal true
+
+        test.call
+      ensure
+        lock_connection.release_advisory_lock(described_class.name)
+        connection_pool.checkin(lock_connection)
+      end
+
+      it 'does not perform backfill' do
+        assert_queries 1 do
+          perform_now
+        end
+      end
+    end
+
     context 'when backfill raises error' do
       let(:error) {StandardError.new('expected error')}
 
@@ -49,7 +69,7 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
       it 'captures error without reraising' do
         Observability::Errors.expects(:capture_exception).with(error).once
 
-        assert_queries 0 do
+        assert_queries 2 do
           perform_now
         end
       end
