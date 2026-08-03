@@ -14,7 +14,8 @@ $border-subtle: rgb(255 255 255 / 12%);
   width: 100%;
   height: 100%;
   min-height: 0;
-  overflow: auto;
+  // Nothing overflows: the canvas is fitted to the space this pane has.
+  overflow: hidden;
   background-color: #333a47;
   color: #f0f2f6;
 }
@@ -71,6 +72,10 @@ $border-subtle: rgb(255 255 255 / 12%);
 .body {
   display: flex;
   gap: 12px;
+  // Fills what the panel gives it; the canvas area inside takes the rest of the
+  // row and the canvas is fitted to that.
+  flex: 1;
+  min-width: 0;
   min-height: 0;
   padding: 12px;
 }
@@ -182,11 +187,18 @@ $border-subtle: rgb(255 255 255 / 12%);
 
 .canvasArea {
   display: flex;
+  // Takes the rest of the row, and is allowed to be smaller than its content
+  // (min-width/height: 0) so the canvas is fitted to it rather than the other
+  // way round.
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
   align-items: center;
   justify-content: center;
-  // Never scroll: the canvas is bounded below so the whole image is always
-  // visible and editable.
-  overflow: hidden;
+  // The canvas is fitted to this box, so ordinarily there is nothing to scroll.
+  // The exception is a pane squeezed below the canvas's minimum size, where
+  // scrolling beats a canvas too small to draw on.
+  overflow: auto;
   border: 1px solid $border-subtle;
   border-radius: 6px;
   // The transparency checkerboard is painted INTO the display canvas (so it

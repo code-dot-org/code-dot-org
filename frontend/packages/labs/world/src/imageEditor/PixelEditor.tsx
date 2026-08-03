@@ -36,10 +36,16 @@ import moduleStyles from './pixel-editor.module.scss';
 // as large as fits this budget. The rendered (CSS) size is independent: the
 // canvas fills this fraction of the viewport, capped, aspect preserved.
 const MAX_DISPLAY_SIZE = 640;
-const CSS_HEIGHT_VIEWPORT_FRACTION = 0.68;
+// Caps only: the canvas fits the pane it is given (see `fit`), and these stop a
+// wide editor from scaling one 32-pixel sprite to the size of a wall.
 const MAX_CSS_HEIGHT_PX = 720;
-const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
 const MAX_CSS_WIDTH_PX = 900;
+// Breathing room between the canvas and the edge of its box.
+const CANVAS_MARGIN_PX = 12;
+// The canvas never shrinks below this, however narrow the pane gets: past it
+// the image is not something anyone could draw on, and scrolling is the better
+// answer than a canvas the size of a word.
+const MIN_CANVAS_PX = 64;
 
 // Transparency checkerboard: cell size in display px outside pixel mode, the
 // smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
@@ -163,6 +169,8 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   const pixelModeRef = useRef(false);
 
   const displayRef = useRef<HTMLCanvasElement | null>(null);
+  // The box the canvas is fitted into — watched for resizes.
+  const canvasAreaRef = useRef<HTMLDivElement | null>(null);
   // The grid, for `repaint` — which is a stable callback and cannot close over
   // a prop. Editing the cell size repaints through the effect below.
   const sheetRef = useRef<SheetFile | undefined>(sheet);
@@ -521,38 +529,60 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
   }, []);
 
   // Layout effect: size and paint the canvas BEFORE the browser paints the
-  // newly-mounted panel, or its first frame flashes default-sized. The
-  // rendered size fills the viewport allowance (aspect preserved, the modal
-  // sizes to match); image-rendering: pixelated covers the fractional
-  // remainder over the integer-upscaled internal resolution.
+  // newly-mounted panel, or its first frame flashes default-sized.
+  //
+  // The rendered size fits the SPACE THIS EDITOR HAS, aspect preserved — not a
+  // fraction of the viewport, which is what it took when it was a modal that
+  // owned the screen. Here it is one pane of a split editor, and a wide strip
+  // sized against the window ran off the side of it. `image-rendering:
+  // pixelated` covers the fractional remainder over the integer-upscaled
+  // internal resolution.
+  //
+  // Re-runs whenever the pane changes size (a ResizeObserver below), because a
+  // learner dragging the split is asking for exactly that.
+  const fit = useCallback(() => {
+    const display = displayRef.current;
+    const backing = backingRef.current;
+    const area = canvasAreaRef.current;
+    if (!display || !backing || !area) {
+      return;
+    }
+    display.width = backing.width * scaleRef.current;
+    display.height = backing.height * scaleRef.current;
+    const aspect = backing.width / backing.height;
+    // The box the canvas may fill, less the breathing room around it — and
+    // never smaller than something a person could draw in. A pane squeezed
+    // below that scrolls (see `.canvasArea`) rather than leaving the canvas at
+    // whatever size it happened to have, which is how it came to overflow.
+    const available = {
+      width: Math.max(MIN_CANVAS_PX, area.clientWidth - CANVAS_MARGIN_PX * 2),
+      height: Math.max(MIN_CANVAS_PX, area.clientHeight - CANVAS_MARGIN_PX * 2),
+    };
+    let cssW = Math.min(available.width, MAX_CSS_WIDTH_PX);
+    let cssH = cssW / aspect;
+    const maxH = Math.min(available.height, MAX_CSS_HEIGHT_PX);
+    if (cssH > maxH) {
+      cssH = maxH;
+      cssW = cssH * aspect;
+    }
+    display.style.width = `${Math.round(cssW)}px`;
+    display.style.height = `${Math.round(cssH)}px`;
+    repaint();
+  }, [repaint]);
+
   useLayoutEffect(() => {
     if (!loaded) {
       return;
     }
-    const display = displayRef.current;
-    const backing = backingRef.current;
-    if (display && backing) {
-      display.width = backing.width * scaleRef.current;
-      display.height = backing.height * scaleRef.current;
-      const aspect = backing.width / backing.height;
-      let cssH = Math.min(
-        window.innerHeight * CSS_HEIGHT_VIEWPORT_FRACTION,
-        MAX_CSS_HEIGHT_PX,
-      );
-      let cssW = cssH * aspect;
-      const maxW = Math.min(
-        window.innerWidth * CSS_WIDTH_VIEWPORT_FRACTION,
-        MAX_CSS_WIDTH_PX,
-      );
-      if (cssW > maxW) {
-        cssW = maxW;
-        cssH = cssW / aspect;
-      }
-      display.style.width = `${Math.round(cssW)}px`;
-      display.style.height = `${Math.round(cssH)}px`;
-      repaint();
+    fit();
+    const area = canvasAreaRef.current;
+    if (!area || typeof ResizeObserver !== 'function') {
+      return;
     }
-  }, [loaded, repaint]);
+    const observer = new ResizeObserver(fit);
+    observer.observe(area);
+    return () => observer.disconnect();
+  }, [loaded, fit]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: ReactPointerEvent<HTMLCanvasElement>) => {
@@ -968,7 +998,7 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
             </PixelTooltip>
           </div>
         </div>
-        <div className={moduleStyles.canvasArea}>
+        <div className={moduleStyles.canvasArea} ref={canvasAreaRef}>
           {loadError ? (
             <div className={moduleStyles.loadError}>
               This image couldn't be loaded for editing.
