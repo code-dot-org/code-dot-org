@@ -94,6 +94,52 @@ export default class ProjectManager {
     this.metricsReporter = metricsReporter;
     this.isShareView = isShareView;
     this.isStandaloneProjectLevel = isStandaloneProjectLevel;
+    this.listenForLeaving();
+  }
+
+  /**
+   * Save what is enqueued before the page goes away.
+   *
+   * An edit only enqueues a save — the next one lands up to `saveInterval`
+   * later — so leaving in that window risks everything done in it. That is half
+   * a minute of a learner's work.
+   *
+   * `visibilitychange` to hidden, and `pagehide`: these are where an
+   * asynchronous save still has a chance to finish, because the page is not
+   * necessarily going away — switching tabs or minimising fires them, and a
+   * save started there completes normally.
+   *
+   * NOT `beforeunload`, which `ProjectContext` already handles: it cannot wait
+   * for a request either way, so it force-saves and asks the browser to warn
+   * the learner. A second listener here would only enter the same race twice.
+   * An actual unload aborts a save in flight whatever we do — the payload is
+   * far past the 64KB that `keepalive` or `sendBeacon` would carry.
+   */
+  private listenForLeaving(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    window.addEventListener('visibilitychange', this.onHidden);
+    window.addEventListener('pagehide', this.onHidden);
+  }
+
+  private readonly onHidden = (): void => {
+    if (document.visibilityState === 'visible') {
+      return; // a `visibilitychange` back to the foreground
+    }
+    if (this.hasUnsavedChanges()) {
+      // Not awaited: an unload gives no time to wait, and the request is
+      // already on its way by the time the page goes.
+      void this.flushSave();
+    }
+  };
+
+  private stopListeningForLeaving(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    window.removeEventListener('visibilitychange', this.onHidden);
+    window.removeEventListener('pagehide', this.onHidden);
   }
 
   getChannelId(): string {
@@ -211,10 +257,11 @@ export default class ProjectManager {
     return this.sourceChanged();
   }
 
-  // Shut down this project manager. All we do here is clear the existing
-  // timeout, if it exists.
+  // Shut down this project manager: clear the existing timeout, if it exists,
+  // and stop listening for the page going away.
   destroy(): void {
     this.resetSaveState();
+    this.stopListeningForLeaving();
     this.destroyed = true;
   }
 
