@@ -12,8 +12,10 @@
 // renamable, deletable, and nothing outside the project depends on it.
 
 import type {AnimationFile} from '../engine';
+import {getBackgroundBaseUrl} from '../runtime/worldConfig';
 
 import type {SheetFile} from './sheetFile';
+import {STOCK_BACKGROUND_IDS} from './stockBackgrounds';
 import {STOCK_IMAGES} from './stockImages';
 
 /** Frame (and static image) edge length of every stock drawing, in pixels. */
@@ -234,4 +236,58 @@ export function stockSprite(id: string): StockSprite | undefined {
 /** Look a stock animation up by its id. */
 export function stockAnimation(id: string): StockAnimation | undefined {
   return STOCK_ANIMATIONS.find(animation => animation.id === id);
+}
+
+/**
+ * A stock backdrop: a shelf entry with no bytes on it.
+ *
+ * The one part of the library that is not in the bundle. A backdrop is 60KB of
+ * someone else's art rather than a 32-pixel drawing this repo generates, so the
+ * bytes are fetched by `yarn setup:world` and served (BACKGROUNDS.md §7); what
+ * is committed is the list, and `url` is where to go for the rest.
+ */
+export interface StockBackground {
+  /** File stem this is imported as — `cave` becomes `backgrounds/cave.png`. */
+  id: string;
+  /** What it is, for the picker. */
+  name: string;
+  /** Where the bytes are, resolved against the configured background base. */
+  url: string;
+}
+
+/** The file name a stock backdrop is imported under — what a block stores. */
+export const backgroundFileName = (id: string): string => `${id}.png`;
+
+/**
+ * A label for a backdrop, from its id: `sunAndRainbow` → "Sun and rainbow".
+ *
+ * Derived rather than authored. Twenty-nine hand-written labels would be
+ * twenty-nine chances for the shelf and the file to drift apart, for a picker
+ * whose tiles are pictures — a backdrop is a thing you recognise on sight, and
+ * the label is what a screen reader reads and what a search would match.
+ */
+export function backgroundLabel(id: string): string {
+  const words = id.replace(/([a-z0-9])([A-Z])/g, '$1 $2').toLowerCase();
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
+/**
+ * The backdrop shelf.
+ *
+ * A function, not a constant: the base URL is host-supplied and may be set
+ * after this module loads, so resolving it once at import time would bake in
+ * whatever the default happened to be.
+ */
+export function stockBackgrounds(): readonly StockBackground[] {
+  const base = getBackgroundBaseUrl();
+  return STOCK_BACKGROUND_IDS.map(id => ({
+    id,
+    name: backgroundLabel(id),
+    url: `${base}${backgroundFileName(id)}`,
+  }));
+}
+
+/** Look a stock backdrop up by its id. */
+export function stockBackground(id: string): StockBackground | undefined {
+  return stockBackgrounds().find(background => background.id === id);
 }

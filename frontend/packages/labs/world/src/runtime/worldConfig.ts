@@ -9,6 +9,7 @@ export const SANDBOX_URL_PARAM = 'world-sandbox';
 
 let sandboxUrl: string | null = null;
 let assetBaseUrl = '/vendor/';
+let backgroundBaseUrl = '/backgrounds/';
 
 /** Point the lab at a sandbox origin base (e.g. `http://localhost:5202/`). */
 export function setSandboxUrl(url: string | null): void {
@@ -46,4 +47,23 @@ export function getAssetBaseUrl(): string {
 
 export function setAssetBaseUrl(url: string): void {
   assetBaseUrl = url.endsWith('/') ? url : `${url}/`;
+}
+
+/**
+ * Base the stock backdrops are served from.
+ *
+ * The LAB's origin, not the sandbox's — unlike `assetBaseUrl`. A backdrop is
+ * fetched when a learner imports one, which happens in the library dialog and
+ * ends with the bytes inlined into the project; the sandbox only ever sees the
+ * copy the project holds. So this is not forwarded to the iframes.
+ *
+ * The demo serves what `yarn setup:world` fetched into `public/backgrounds/`
+ * (BACKGROUNDS.md §7); the studio host serves its own copies and says where.
+ */
+export function getBackgroundBaseUrl(): string {
+  return backgroundBaseUrl;
+}
+
+export function setBackgroundBaseUrl(url: string): void {
+  backgroundBaseUrl = url.endsWith('/') ? url : `${url}/`;
 }
