@@ -1,6 +1,6 @@
 %script{src: webpack_asset_path('js/devise/shared/_oauth_links.js')}
 
-.devise-links
+.devise-links.oauth-links-column
   / Unless we're already on the Sign in page, show a Sign in link
   - unless ['sessions', 'registrations'].include? controller_name
     = t('auth.already_signedup')
