@@ -1,17 +1,27 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .copy {
-  flex: 1 1 auto;
-  min-width: 120px;
-  max-width: 250px;
+  flex: 0 0 260px;
 
   input {
     width: 100%;
     box-sizing: border-box;
     cursor: copy;
+  }
+}
+
+// Used when this component renders in a narrower layout (e.g. next to
+// SortedTableSelect's fixed-width table) that can't always fit the full ID.
+.copyCompact {
+  flex: 0 1 260px;
+  min-width: 0;
+
+  input {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

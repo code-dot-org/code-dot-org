@@ -151,7 +151,7 @@ export class ShareTeacherLibraries extends React.Component {
             >
               {selectedLibraryId ? (
                 <div style={{marginTop: 16}}>
-                  <LibraryIdCopier channelId={selectedLibraryId} />
+                  <LibraryIdCopier channelId={selectedLibraryId} compact />
                   <Typography
                     variant="body2"
                     gutterBottom
