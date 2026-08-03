@@ -11,6 +11,11 @@
 # ignored.
 /public/vendor
 
+# Stock backdrops, fetched by `yarn setup:world` from the URLs in
+# backgrounds.txt (which IS committed). 2MB of the animation library's art;
+# see specs/BACKGROUNDS.md §7.
+/public/backgrounds
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
