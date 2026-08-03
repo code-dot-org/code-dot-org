@@ -490,12 +490,20 @@ export const BlocklyFileEditor = ({
 
   // A workspace to reload once the palette has caught up (see `carry`).
   const pendingReload = useRef<BlocklySerialization | null>(null);
-  // Whether the initial load has finished. Blockly reports what it creates
-  // while loading — the variables a rule declares, the blocks themselves — as
-  // ordinary change events, and saving those writes the file back the moment it
-  // is opened: an edit nobody made, a project marked dirty, and a full recompile
-  // for byte-identical output. Nothing is saved until loading is done.
-  const loaded = useRef(false);
+  // The workspace whose load has finished. Blockly reports what it creates while
+  // loading — the variables a rule declares, the blocks themselves — as ordinary
+  // change events, and saving those writes the file back the moment it is
+  // opened: an edit nobody made, a project marked dirty, and a full recompile
+  // for byte-identical output.
+  //
+  // Per WORKSPACE, not per editor: this component keeps its state while the
+  // workspace beneath it is re-injected (see the `readOnly` key below), and the
+  // lab is read-only for a moment while the project loads — so every file open
+  // was followed by a second load whose events looked like edits. Worse, they
+  // were edits to the sources as they stood BEFORE the project arrived, so the
+  // enqueued save wrote the starter project over the learner's work half a
+  // minute later.
+  const loadedWorkspace = useRef<Blockly.WorkspaceSvg | null>(null);
   // Whether a `define block`'s signature is being typed into (see `bubbleToggle`).
   const signatureBubbleOpen = useRef(false);
   // The keys this rule's members are referred to by, as of the last state the
@@ -653,9 +661,9 @@ export const BlocklyFileEditor = ({
         return;
       }
       // Opening a file is not editing it.
-      if (!loaded.current) {
+      if (loadedWorkspace.current !== workspace) {
         if (event.type === Blockly.Events.FINISHED_LOADING) {
-          loaded.current = true;
+          loadedWorkspace.current = workspace;
         }
         return;
       }
