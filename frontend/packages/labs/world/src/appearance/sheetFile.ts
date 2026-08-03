@@ -6,11 +6,14 @@
 // `coinSpin.png` + `coinSpin.sheet` is a spritesheet; `player.png` on its own is
 // a picture.
 //
-// Only the animation editor reads it. The runtime never does: a frame carries
+// Only the editors read it. The runtime never does: a frame carries
 // the rectangle it draws, so by the time an animation is playing, the grid has
 // already done its job. That is why the metadata can live beside the image
 // instead of inside it — and why a learner can change it without breaking
 // animations that were already written against it.
+
+import {getNextFileId} from '@code-dot-org/codebridge';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 
 /** The on-disk shape of a `.sheet` file. */
 export interface SheetFile {
@@ -86,4 +89,58 @@ export function projectSheets(
     }
   }
   return sheets;
+}
+
+/**
+ * The project with an image's `.sheet` set, replaced, or removed.
+ *
+ * Beside the image, in its folder, named after it — the whole convention. A
+ * `sheet` of `undefined` deletes the file: an image with no grid is a picture,
+ * and leaving an empty declaration behind would be a spritesheet with no cells,
+ * which is a thing the editors would have to have an opinion about.
+ *
+ * Returns the same source when it already says this, so a caller can skip the
+ * write and the recompile that follows it.
+ */
+export function setImageSheet(
+  source: MultiFileSource,
+  imageFileId: string,
+  sheet: SheetFile | undefined,
+): MultiFileSource {
+  const image = source.files[imageFileId];
+  if (!image) {
+    return source;
+  }
+  const name = sheetFileName(image.name);
+  const existing = Object.values(source.files).find(
+    file => file.name === name && file.folderId === image.folderId,
+  );
+  const contents = sheet ? serializeSheetFile(sheet) : undefined;
+  if (existing?.contents === contents || (!existing && !sheet)) {
+    return source;
+  }
+
+  const files = {...source.files};
+  if (!sheet) {
+    delete files[existing!.id];
+    return {...source, files};
+  }
+  if (existing) {
+    files[existing.id] = {...existing, contents: contents as string};
+    return {...source, files};
+  }
+  // `getNextFileId` is max-numeric-id + 1, which is NaN when a project holds a
+  // non-numeric id; fall back to a count, as the stock import does.
+  const numeric = getNextFileId(Object.values(source.files));
+  const id = Number.isNaN(Number(numeric))
+    ? String(Object.keys(source.files).length + 1)
+    : numeric;
+  files[id] = {
+    id,
+    name,
+    language: 'json',
+    contents: contents as string,
+    folderId: image.folderId,
+  };
+  return {...source, files};
 }

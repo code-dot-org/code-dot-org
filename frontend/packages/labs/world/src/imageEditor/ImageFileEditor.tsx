@@ -8,11 +8,18 @@
 // edited image's bytes live in the project JSON rather than the assets backend,
 // so editing an uploaded image moves it there.
 
-import {useCallback, useRef} from 'react';
+import {useCallback, useMemo, useRef} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
+
+import {
+  parseSheetFile,
+  setImageSheet,
+  sheetFileName,
+  type SheetFile,
+} from '../appearance/sheetFile';
 
 import PixelEditor from './PixelEditor';
 
@@ -41,6 +48,32 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
     [currentSources, fileId, updateSources],
   );
 
+  // The grid this image is cut into, if it has one: the `.sheet` beside it.
+  // Read live (not held like the URL) — it is small, and the editor's own
+  // controls are what change it.
+  const sheet = useMemo((): SheetFile | undefined => {
+    if (!file) {
+      return undefined;
+    }
+    const name = sheetFileName(file.name);
+    const beside = Object.values(currentSources.source.files).find(
+      candidate =>
+        candidate.name === name && candidate.folderId === file.folderId,
+    );
+    return beside ? parseSheetFile(beside.contents) : undefined;
+  }, [currentSources, file]);
+
+  const changeSheet = useCallback(
+    (next: SheetFile | undefined) => {
+      const sources = currentSources;
+      const source = setImageSheet(sources.source, fileId, next);
+      if (source !== sources.source) {
+        updateSources({...sources, source});
+      }
+    },
+    [currentSources, fileId, updateSources],
+  );
+
   // The URL the editor opened with, held for the life of this file's editor.
   // Following the file's `url` instead would hand the editor back the image it
   // has just drawn, on every save — reloading the canvas mid-stroke. Codebridge
@@ -55,6 +88,8 @@ export const ImageFileEditor = ({fileId, isReadOnly}: CustomEditorProps) => {
       title={file?.name ?? ''}
       imageUrl={openedWith.current}
       isReadOnly={isReadOnly}
+      sheet={sheet}
+      onSheetChange={changeSheet}
       onCommit={save}
     />
   );
