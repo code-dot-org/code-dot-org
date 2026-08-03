@@ -546,6 +546,10 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
       actors: {id: 'actors', name: 'actors', parentId: '0'},
       animations: {id: 'animations', name: 'animations', parentId: '0'},
       sprites: {id: 'sprites', name: 'sprites', parentId: '0'},
+      // Empty until something is imported into it, and present anyway: the
+      // folder is what makes an image a backdrop (BACKGROUNDS.md §5), so a
+      // learner who uploads a sky needs somewhere to put it that means that.
+      backgrounds: {id: 'backgrounds', name: 'backgrounds', parentId: '0'},
       maps: {id: 'maps', name: 'maps', parentId: '0'},
       effects: {id: 'effects', name: 'effects', parentId: '0'},
     },

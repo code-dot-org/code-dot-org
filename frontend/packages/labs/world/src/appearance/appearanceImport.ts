@@ -5,17 +5,18 @@
 // it can reach are plain module state by design. The field asks through a
 // handler the editor registers while it is mounted.
 //
-// Two sentinels rather than one, because the two dropdowns pick different
-// things: an image and an animation are not interchangeable, and a picker that
-// had to ask which one you meant would be asking a question the block already
-// answered.
+// A sentinel per dropdown rather than one shared, because they pick different
+// things: an image, an animation and a backdrop are not interchangeable, and a
+// picker that had to ask which one you meant would be asking a question the
+// block already answered.
 
 /** What a dropdown's `(import…)` row carries. */
 export const IMPORT_SPRITE_VALUE = '__import_sprite__';
 export const IMPORT_ANIMATION_VALUE = '__import_animation__';
+export const IMPORT_BACKGROUND_VALUE = '__import_background__';
 
 /** Which library the picker should open on. */
-export type AppearanceKind = 'sprite' | 'animation';
+export type AppearanceKind = 'sprite' | 'animation' | 'background';
 
 /**
  * Opens the picker and resolves with what the field should now hold — a sprite's

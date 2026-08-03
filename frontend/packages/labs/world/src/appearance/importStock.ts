@@ -15,6 +15,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {serializeSheetFile, sheetFileName} from './sheetFile';
 import {
+  backgroundFileName,
   spriteFileName,
   stockSprite,
   type StockAnimation,
@@ -24,6 +25,8 @@ import {
 /** Where each kind lives, by the lab's directory convention (GLOSSARY.md). */
 const SPRITES_FOLDER = 'sprites';
 const ANIMATIONS_FOLDER = 'animations';
+/** Backdrops, which is the whole of what makes one a backdrop — BACKGROUNDS.md §5. */
+const BACKGROUNDS_FOLDER = 'backgrounds';
 
 /** The result of an import: the new project, and what the block should name. */
 export interface ImportedAppearance {
@@ -128,6 +131,35 @@ export function importStockSprite(
     });
   }
   return {source: current, value: name};
+}
+
+/**
+ * Copy a stock backdrop in, given the bytes someone has already fetched.
+ *
+ * Bytes as an argument, unlike a sprite's, because a backdrop's are not in the
+ * bundle: the stock backdrops are served (BACKGROUNDS.md §7) and the caller
+ * fetches one before it can be copied. Keeping the fetch outside leaves this a
+ * pure transform like its neighbours, which is the half worth testing.
+ *
+ * No `.sheet`, ever. A backdrop is stretched over the viewport, so a grid of one
+ * means nothing, and a file saying otherwise beside it would be a lie the
+ * animation editor believes.
+ */
+export function importStockBackground(
+  source: MultiFileSource,
+  background: {id: string},
+  dataUrl: string,
+): ImportedAppearance {
+  const placed = folder(source, BACKGROUNDS_FOLDER);
+  const name = backgroundFileName(background.id);
+  return {
+    source: write(placed.source, placed.folderId, {
+      name,
+      url: dataUrl,
+      mimeType: 'image/png',
+    }),
+    value: name,
+  };
 }
 
 /** Copy a stock animation in, with the images its frames read. */

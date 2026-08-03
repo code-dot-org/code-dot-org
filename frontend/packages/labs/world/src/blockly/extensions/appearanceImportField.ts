@@ -15,6 +15,7 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {
   IMPORT_ANIMATION_VALUE,
+  IMPORT_BACKGROUND_VALUE,
   IMPORT_SPRITE_VALUE,
   requestAppearanceImport,
   type AppearanceKind,
@@ -37,6 +38,12 @@ const KINDS: ReadonlyArray<{
     field: 'ANIMATION',
     sentinel: IMPORT_ANIMATION_VALUE,
     kind: 'animation',
+  },
+  {
+    extension: 'world_background_import_field',
+    field: 'BACKGROUND',
+    sentinel: IMPORT_BACKGROUND_VALUE,
+    kind: 'background',
   },
 ];
 
@@ -65,7 +72,13 @@ const importField = ({
           if (!imported || block.isDisposed()) {
             return;
           }
+          // The import put a new row in the registry, and a dropdown caches the
+          // options it last built. Rebuild that cache first, or the field takes
+          // the value and goes on showing "(none)" — right in the generated
+          // code, wrong on the block, which is the worst way to be wrong.
+          field.getOptions(false);
           field.setValue(imported);
+          field.forceRerender();
         });
 
         // Reject the sentinel: the field keeps whatever it held while the
@@ -75,5 +88,8 @@ const importField = ({
     },
   });
 
-export const [spriteImportFieldExtension, animationImportFieldExtension] =
-  KINDS.map(importField);
+export const [
+  spriteImportFieldExtension,
+  animationImportFieldExtension,
+  backgroundImportFieldExtension,
+] = KINDS.map(importField);
