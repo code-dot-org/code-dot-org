@@ -6,7 +6,9 @@ import {EditorView} from '@codemirror/view';
 import {useEffect, useMemo, useRef} from 'react';
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import type {MultiFileSource} from '@code-dot-org/core/api';
 import {FontSize} from '@code-dot-org/lab/constants';
+import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions} from '@code-dot-org/lab/redux';
 
 import emptyFilesPlaceholderImage from '../assets/empty-files-placeholder.svg';
@@ -29,6 +31,8 @@ const readOnlyExtensions = (isReadOnly: boolean): Extension => [
 
 interface InnerCodeEditorProps {
   initialContents: string;
+  /** Bumped when the lab is handed a different document (SourcesContext). */
+  sourcesEpoch: number;
   language: string;
   onChange: (contents: string) => void;
   languageExtensions: CodebridgeConfig['languageExtensions'];
@@ -45,6 +49,7 @@ interface InnerCodeEditorProps {
  */
 const InnerCodeEditor = ({
   initialContents,
+  sourcesEpoch,
   language,
   onChange,
   languageExtensions,
@@ -77,9 +82,7 @@ const InnerCodeEditor = ({
     const lintExtensions = lintExtensionsFor(language);
     const updateListener = EditorView.updateListener.of(update => {
       if (update.docChanged) {
-        const text = update.state.doc.toString();
-        syncedContents.current = text;
-        onChangeRef.current(text);
+        onChangeRef.current(update.state.doc.toString());
       }
     });
 
@@ -135,30 +138,29 @@ const InnerCodeEditor = ({
     // via the outer key; live-updating props are handled by the effects below.
   }, []);
 
-  // The contents this editor is in step with: what it was seeded from, plus
-  // everything it has typed since.
-  //
-  // Anything else arriving on `initialContents` came from somewhere else, and
-  // the case that matters is the ordinary one: the project finishes loading
-  // AFTER this editor mounted, so it was seeded from the level's start sources
-  // and the file it is supposedly editing has been replaced underneath it. It
-  // then shows a file nobody has any more — a learner's saved work looks lost
-  // until they switch files and back — and would eventually save that over it.
-  // A version restored or a start-over lands here the same way.
-  const syncedContents = useRef(initialContents);
+  /**
+   * Re-seed when the lab is handed a different document.
+   *
+   * `sourcesEpoch` counts the times the sources were REPLACED — the project
+   * loading, a version restored, a start-over — and not an editor's own edits
+   * (SourcesContext). So this needs no way to tell its own writes from anyone
+   * else's, which is just as well: typing produces a burst of them and their
+   * echoes need not come back in order.
+   */
+  const seenEpoch = useRef(sourcesEpoch);
   useEffect(() => {
     const view = viewRef.current;
-    if (!view || initialContents === syncedContents.current) {
+    if (!view || seenEpoch.current === sourcesEpoch) {
       return;
     }
-    syncedContents.current = initialContents;
-    // Replacing the document, not editing it: this is not the learner's change,
-    // so it should not read as one. `docChanged` still fires — the write-back is
-    // a no-op against the contents it just came from.
+    seenEpoch.current = sourcesEpoch;
+    if (view.state.doc.toString() === initialContents) {
+      return;
+    }
     view.dispatch({
       changes: {from: 0, to: view.state.doc.length, insert: initialContents},
     });
-  }, [initialContents]);
+  }, [sourcesEpoch, initialContents]);
 
   // Reconfigure read-only state live.
   useEffect(() => {
@@ -203,6 +205,10 @@ const InnerCodeEditor = ({
  */
 const CodeEditor = () => {
   const {source, saveFile} = useFileOperations();
+  // Told, not guessed: the sources context counts wholesale replacements
+  // (project load, version restore, start over) separately from an editor's own
+  // edits, and only the former should re-seed an editor.
+  const {sourcesEpoch} = useSources<MultiFileSource>();
   const activeFile = getActiveFileForSource(source);
   const {languageExtensions, editorComponents} = useCodebridgeConfig();
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
@@ -262,6 +268,7 @@ const CodeEditor = () => {
     <InnerCodeEditor
       key={activeFile.id}
       initialContents={activeFile.contents}
+      sourcesEpoch={sourcesEpoch}
       language={activeFile.language}
       onChange={contents => saveFile(activeFile.id, contents)}
       languageExtensions={languageExtensions}

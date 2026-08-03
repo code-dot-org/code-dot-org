@@ -7,7 +7,7 @@
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
 import {rgba, type ColorValue, type Rgba} from './color';
-import {effectContentHash, effectSnapshotId} from './effectIds';
+import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
@@ -34,13 +34,24 @@ export interface WorldSnapshot {
   ruleIds: string[];
   actorIds: string[];
   /**
-   * `<path>@<hash of values>` per applied effect, across the world and every
-   * actor (see `effectIds.ts`).
+   * Which effects are in play and what carries each — `[owner, path]` per
+   * applied effect, across the world, its backdrops and every actor
+   * (`effectIds.ts`).
    *
-   * Structural: the reconciler compares it alongside rule and actor ids, so
-   * gaining, losing, or retuning an effect restarts the game.
+   * Structural: gaining or losing an effect restarts the game, because nothing
+   * can patch an attachment. RETUNING one does not appear here — see
+   * {@link effectValues}.
    */
   effectIds: string[];
+  /**
+   * Each applied effect's knob settings, by the same slot key.
+   *
+   * Values, not structure: a filter that is already running can be retuned in
+   * place, and the driver does exactly that when it notices (effects.ts). So a
+   * learner nudging a number on an `add effect` block sees it in the running
+   * game instead of watching the game restart around them.
+   */
+  effectValues: Record<string, AppliedEffectSpec['values']>;
   /**
    * The graph behind each effect in play, hashed, by module path.
    *
@@ -488,6 +499,69 @@ export class World {
   }
 
   /**
+   * Every applied effect with what carries it: `world`, `backdrop:<n>`, or the
+   * actor's id. The vocabulary the snapshot and the value patch share.
+   */
+  private effectSlots(): Array<[string, AppliedEffectSpec]> {
+    return [
+      ...this.appliedEffects.map(
+        effect => ['world', effect] as [string, AppliedEffectSpec],
+      ),
+      ...this.backdropList.flatMap((backdrop, index) =>
+        backdrop.effects.map(
+          effect =>
+            [`backdrop:${index}`, effect] as [string, AppliedEffectSpec],
+        ),
+      ),
+      ...this.actorList.flatMap(actor =>
+        actor
+          .effects()
+          .map(effect => [actor.id, effect] as [string, AppliedEffectSpec]),
+      ),
+    ];
+  }
+
+  /**
+   * Retune one applied effect, in place.
+   *
+   * The live half of turning a knob on an `add effect` block: the driver
+   * re-reads these specs every frame and pushes new values onto the filter that
+   * is already running (effects.ts), so nothing has to restart. Addressed by
+   * slot, not by path — the same effect on two actors has two sets of knobs and
+   * patching one must not touch the other.
+   *
+   * @returns whether that slot exists
+   */
+  setEffectValues(
+    owner: string,
+    path: string,
+    values: AppliedEffectSpec['values'],
+  ): boolean {
+    const retune = (effects: AppliedEffectSpec[]): boolean => {
+      const index = effects.findIndex(effect => effect.path === path);
+      if (index < 0) {
+        return false;
+      }
+      effects[index] = values
+        ? {...effects[index], values}
+        : // No values at all is a different spec from empty ones: the driver
+          // fills each parameter's declared default for anything absent.
+          {path: effects[index].path, document: effects[index].document};
+      return true;
+    };
+    if (owner === 'world') {
+      return retune(this.appliedEffects);
+    }
+    const backdrop = /^backdrop:(\d+)$/.exec(owner);
+    if (backdrop) {
+      const layer = this.backdropList[Number(backdrop[1])];
+      return layer ? retune(layer.effects) : false;
+    }
+    const actor = this.actorList.find(candidate => candidate.id === owner);
+    return actor ? actor.setEffectValues(path, values) : false;
+  }
+
+  /**
    * Give every effect with this path a new graph, in place.
    *
    * The live half of editing a `.effect`: the reconciler calls this on the
@@ -686,15 +760,15 @@ export class World {
       // path and hashed by content just the same, and nothing downstream needs
       // to tell a viewport effect from an actor's — the reconciler only asks
       // whether the set changed.
-      effectIds: [
-        ...this.appliedEffects.map(effectSnapshotId),
-        ...this.backdropList.flatMap(backdrop =>
-          backdrop.effects.map(effectSnapshotId),
-        ),
-        ...this.actorList.flatMap(actor =>
-          actor.effects().map(effectSnapshotId),
-        ),
-      ].sort(),
+      effectIds: this.effectSlots()
+        .map(([owner, effect]) => effectSlotId(owner, effect))
+        .sort(),
+      effectValues: Object.fromEntries(
+        this.effectSlots().map(([owner, effect]) => [
+          effectSlotId(owner, effect),
+          effect.values,
+        ]),
+      ),
       // By path, so the same effect on ten actors is hashed once — and so a
       // patch can find every spec that needs the new document.
       effectDocs: Object.fromEntries(

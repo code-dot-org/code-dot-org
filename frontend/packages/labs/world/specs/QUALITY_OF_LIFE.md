@@ -3,6 +3,15 @@
 These are a set of ideas that improve the basic building of projects geared toward a beginner's experience.
 
 1. Non-normative edits (basic properties) can be modified while the student's program is running. These include effect properties and actor properties. Other substantial edits may reset the state of the program to the current World.
+   - _Effect properties: done._ Knob settings used to be part of an effect's
+     structural identity, so nudging one restarted the game. Identity is now the
+     SLOT — `["<owner>","<path>"]`, owner being `world`, `backdrop:<n>` or an
+     actor id — and the values travel beside it as patchable state
+     (`World.setEffectValues`). Per slot, because the same effect on two actors
+     is two sets of knobs. The driver already pushed new values onto a live
+     filter each frame; nothing there had to change.
+   - _Actor properties: not yet._ There is no `World.setActorProperty`, and
+     `sameActors` still gates the patch.
 2. The 'Restart' button always resets the entire state and runs the program from the beginning in order to unstick anything.
    - _Done._ It did not: the compiler keys its module URL on the project's
      content, so an unchanged project re-imported the module that was already

@@ -322,6 +322,56 @@ describe('world effects', () => {
   });
 });
 
+describe('setEffectValues', () => {
+  it('retunes the slot it names, and leaves the others alone', () => {
+    const document = doc('Ripple');
+    const world = worldWith(
+      positional('fish').addEffect('effects/ripple', document, {strength: 0.1}),
+      positional('crab').addEffect('effects/ripple', document, {strength: 0.9}),
+    );
+    const [first] = [...world.actors];
+
+    expect(
+      world.setEffectValues(first.id, 'effects/ripple', {strength: 0.5}),
+    ).toBe(true);
+
+    expect(Object.values(world.snapshot().effectValues)).toEqual([
+      {strength: 0.5},
+      {strength: 0.9},
+    ]);
+  });
+
+  it("retunes the world's own, and a backdrop's", () => {
+    const world = worldWith();
+    world.addEffect('effects/underwater', doc('Underwater'), {murk: 0.2});
+    world.addBackgroundEffect('effects/ripple', doc('Ripple'), {speed: 1});
+
+    expect(
+      world.setEffectValues('world', 'effects/underwater', {murk: 0.8}),
+    ).toBe(true);
+    expect(
+      world.setEffectValues('backdrop:0', 'effects/ripple', {speed: 4}),
+    ).toBe(true);
+
+    expect(world.effects()[0].values).toEqual({murk: 0.8});
+    expect(world.backdropSnapshot()[0].effects[0].values).toEqual({speed: 4});
+  });
+
+  it('says so when there is no such slot', () => {
+    // A patch is computed from a snapshot, and a snapshot can describe a world
+    // that has since changed underneath it.
+    const world = worldWith();
+
+    expect(world.setEffectValues('world', 'effects/gone', {a: 1})).toBe(false);
+    expect(world.setEffectValues('nobody', 'effects/ripple', {a: 1})).toBe(
+      false,
+    );
+    expect(world.setEffectValues('backdrop:9', 'effects/ripple', {a: 1})).toBe(
+      false,
+    );
+  });
+});
+
 describe('snapshot().effectIds', () => {
   it('is empty when nothing carries an effect', () => {
     expect(worldWith(positional('rock')).snapshot().effectIds).toEqual([]);
@@ -359,34 +409,52 @@ describe('snapshot().effectIds', () => {
     expect(after.effectDocs).not.toEqual(before.effectDocs);
   });
 
-  it('changes when a parameter value changes', () => {
-    // Values ARE identity: the driver reads them once, when it attaches.
+  it('does NOT change when a parameter value changes', () => {
+    // Knobs are not identity. A filter that is attached can be retuned in
+    // place — the driver pushes new values onto it — so a value change must not
+    // read as structure, or every nudge restarts the game
+    // (specs/QUALITY_OF_LIFE.md §1).
     const document = doc('Ripple');
     const before = worldWith(
       positional('fish').addEffect('effects/ripple', document, {strength: 0.1}),
-    ).snapshot().effectIds;
+    ).snapshot();
     const after = worldWith(
       positional('fish').addEffect('effects/ripple', document, {strength: 0.9}),
-    ).snapshot().effectIds;
+    ).snapshot();
 
-    expect(after).not.toEqual(before);
+    expect(after.effectIds).toEqual(before.effectIds);
+    // They travel beside it instead, by slot.
+    expect(after.effectValues).not.toEqual(before.effectValues);
+    expect(Object.values(after.effectValues)).toEqual([{strength: 0.9}]);
   });
 
-  it('changes when a parameter value changes', () => {
-    // Values are read once, when the filter is attached to the Game Object, so
-    // turning a knob only reaches the screen on a restart — which means the
-    // reconciler has to see it, which means the id has to hash it.
-    const document = doc('Ripple');
-    const before = worldWith(
-      positional('fish').addEffect('effects/ripple', document, {
-        strength: 0.02,
+  it('says which slot each set of knobs belongs to', () => {
+    // The same effect on two actors is two sets of knobs; patching one must not
+    // reach the other, so the key says what carries it.
+    const world = worldWith(
+      positional('fish').addEffect('effects/ripple', doc('Ripple'), {
+        strength: 0.1,
       }),
-    ).snapshot().effectIds;
-    const after = worldWith(
-      positional('fish').addEffect('effects/ripple', document, {strength: 0.5}),
-    ).snapshot().effectIds;
+      positional('crab').addEffect('effects/ripple', doc('Ripple'), {
+        strength: 0.9,
+      }),
+    ).snapshot();
 
-    expect(after).not.toEqual(before);
+    // Two slots, one per actor, each with its own knobs — and the key says
+    // which actor carries it (its id) and which effect it is.
+    const slots = Object.keys(world.effectValues).map(
+      key => JSON.parse(key) as [string, string],
+    );
+    expect(slots).toHaveLength(2);
+    expect(slots.map(([, path]) => path)).toEqual([
+      'effects/ripple',
+      'effects/ripple',
+    ]);
+    expect(new Set(slots.map(([owner]) => owner)).size).toBe(2);
+    expect(Object.values(world.effectValues)).toEqual([
+      {strength: 0.1},
+      {strength: 0.9},
+    ]);
   });
 
   it('sorts, so actor order does not move it', () => {

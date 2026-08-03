@@ -37,6 +37,24 @@ function hash(text: string): string {
 }
 
 /**
+ * WHERE an applied effect is, and which effect it is — not how it is tuned.
+ *
+ * The structural question: gaining or losing an effect changes what is attached
+ * to what, and no patch can express that. Its knob settings are a different
+ * question, because a filter already running can be retuned in place — see
+ * `World.setEffectValues` and the driver's per-frame reconcile.
+ *
+ * Per SLOT rather than per path, because the same effect on two actors is two
+ * effects with two sets of knobs: `[owner, path]` says which one, where owner
+ * is `world`, `backdrop:<n>`, or an actor's id. A JSON pair rather than a
+ * joined string — an actor's id may itself contain a separator (a placement's
+ * is `<blockId>:<placementId>`).
+ */
+export function effectSlotId(owner: string, effect: AppliedEffectSpec): string {
+  return JSON.stringify([owner, effect.path]);
+}
+
+/**
  * An applied effect's IDENTITY: which effect, with which knob settings.
  *
  * Deliberately excludes the graph. Identity is what has to be structural —
