@@ -17,13 +17,9 @@
 .dialogHost .dialog {
   @include chrome.panel;
 
-  width: 720px;
-  // The panel glides between the Details and Generate views' widths.
-  transition: width 0.25s ease;
-}
-
-.dialogHost .dialogWide {
-  width: 860px;
+  // One width for both views; the panel's max-width still shrinks it on
+  // narrow browsers.
+  width: 850px;
 }
 
 .dialogHost .dialog :focus-visible {

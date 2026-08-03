@@ -119,10 +119,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
         aria-label={title}
         onClose={onClose}
         mode={mode}
-        className={classNames(
-          moduleStyles.dialog,
-          view === 'generate' && moduleStyles.dialogWide
-        )}
+        className={moduleStyles.dialog}
       >
         <span id="dsco-dialog-description" className={moduleStyles.srOnly}>
           {view === 'generate'
