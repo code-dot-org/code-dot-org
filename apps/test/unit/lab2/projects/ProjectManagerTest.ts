@@ -563,7 +563,10 @@ describe('ProjectManager', () => {
       flushed = true;
     });
     await drainMicrotasks();
-    assert.isFalse(flushed, 'flush resolved before the save in flight finished');
+    assert.isFalse(
+      flushed,
+      'flush resolved before the save in flight finished'
+    );
 
     finishFirstSourceSave();
     await firstSave;
@@ -594,7 +597,10 @@ describe('ProjectManager', () => {
       flushed = true;
     });
     await drainMicrotasks();
-    assert.isFalse(flushed, 'flush resolved before the save in flight finished');
+    assert.isFalse(
+      flushed,
+      'flush resolved before the save in flight finished'
+    );
 
     finishFirstSourceSave();
     await firstSave;
@@ -770,9 +776,7 @@ describe('ProjectManager', () => {
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
       isStandaloneProjectLevel: false,
-      metricsReporter: stubObject<LabMetricsReporter>(
-        new LabMetricsReporter()
-      ),
+      metricsReporter: stubObject<LabMetricsReporter>(new LabMetricsReporter()),
     });
     await projectManager.load();
 
@@ -806,9 +810,7 @@ describe('ProjectManager', () => {
       channelId: FAKE_CHANNEL_ID,
       reduceChannelUpdates: false,
       isStandaloneProjectLevel: false,
-      metricsReporter: stubObject<LabMetricsReporter>(
-        new LabMetricsReporter()
-      ),
+      metricsReporter: stubObject<LabMetricsReporter>(new LabMetricsReporter()),
     });
     await projectManager.load();
 
