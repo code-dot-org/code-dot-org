@@ -31,12 +31,16 @@
 
     .insightText {
       overflow-y: auto;
-      padding: 6px 8px;
+      padding: 12px 12px;
       height: 100%;
-      width: calc(100% - 16px);
+      width: 100%;
       margin: 0;
     }
   }
+}
+
+.aiGenerated {
+  margin-left: 8px;
 }
 
 // Adds an animated gradient background behind the content that acts like a border
