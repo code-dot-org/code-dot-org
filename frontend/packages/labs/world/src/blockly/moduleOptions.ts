@@ -13,6 +13,7 @@ import type {EffectParameter} from '../effect/model/types';
 
 import {IMPORT_EFFECT_VALUE} from './effectImport';
 import {label} from './label';
+import {localActorOptions} from './localActors';
 
 // `[label, path]` dropdown options, refreshed from the project (projectModules).
 let projectActors: Array<[string, string]> = [];
@@ -224,10 +225,24 @@ export function liveDropdown(
   });
 }
 
+/**
+ * What an ACTOR dropdown offers: the actor templates the project holds, and the
+ * ones the world being edited defines for itself (blockly/localActors).
+ *
+ * A world's own come first — they are the ones that file is about — and a
+ * `.actor` file defines none, so the list is the project's there.
+ */
+export function actorFieldOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  const local = localActorOptions(field);
+  return local.length ? [...local, ...projectActors] : orNone(projectActors);
+}
+
 export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
   'ACTOR',
-  actorOptions,
+  actorFieldOptions,
 );
 export const animationFileOptionsExtension = liveDropdown(
   'world_animation_file_options',

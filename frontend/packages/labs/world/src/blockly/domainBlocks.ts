@@ -67,7 +67,14 @@ import {worldContextExtension} from './extensions/worldContext';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {
-  actorOptions,
+  actorIdFromName,
+  definesWorld,
+  localActorBlockId,
+  localActorFor,
+  localActorVar,
+} from './localActors';
+import {
+  actorFieldOptions,
   actorOptionsExtension,
   animationFileOptions,
   effectFileImportOptions,
@@ -228,13 +235,31 @@ const worldActor = defineBlock({
         'world_lab',
         `import * as WorldLab from 'world-lab';`,
       );
+      const built = `new WorldLab.ActorBuilder({id: ${str(
+        id_from_name(name),
+      )}, name: ${str(name)}})`;
+      // In a `.world` file this actor is the world's own: no export, no module,
+      // and a name of its own so several can coexist (blockly/localActors). Its
+      // body still speaks of `actor`, so the chain runs in a block scope where
+      // that is what the builder is called — the same shape `add actor` uses.
+      if (definesWorld(block.workspace)) {
+        const variable = localActorVar(name, block.id);
+        return (
+          `const ${variable} = ${built};\n` +
+          `{\nconst actor = ${variable};\n` +
+          `${nextChainCode(block, generator)}}\n` +
+          // Registered under the type a placed one carries, so the module can
+          // hand its own templates out (`export {localActors}`) — which is how
+          // the map editor introspects an actor that is not a module
+          // (MAPS.md §5). Two actors of the same name share a key, as they
+          // already share what `is a` can tell about them.
+          `localActors[${str(actorIdFromName(name))}] = ${variable};\n`
+        );
+      }
       // The `export default actor;` and the floating event handlers are appended
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
-      return (
-        `const actor = new WorldLab.ActorBuilder({id: ${str(id_from_name(name))}, name: ${str(name)}});\n` +
-        nextChainCode(block, generator)
-      );
+      return `const actor = ${built};\n` + nextChainCode(block, generator);
     },
   },
 });
@@ -1724,7 +1749,7 @@ const worldIsA = defineBlock({
   message0: '%1 is a %2',
   args0: [
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'field_dropdown', name: 'TYPE', options: actorOptions},
+    {type: 'field_dropdown', name: 'TYPE', options: actorFieldOptions},
   ],
   inputsInline: true,
   output: 'Boolean',
@@ -1740,7 +1765,10 @@ const worldIsA = defineBlock({
       // stamps as each placed actor's `type` — so an actor's kind is its `.type`.
       const actor =
         generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      const modulePath = block.getFieldValue('TYPE');
+      const chosen = block.getFieldValue('TYPE');
+      // A world's own actor is stamped with its id, not a module path — the
+      // same string `add actor` gave it (blockly/localActors).
+      const modulePath = localActorFor(block, chosen)?.type ?? chosen;
       return [`${actor}.type === ${str(modulePath)}`, Order.EQUALITY] as [
         string,
         number,
@@ -1777,7 +1805,7 @@ const addImport = (generator: unknown, key: string, code: string): void => {
 const worldAddActor = defineBlock({
   type: 'world_add_actor',
   message0: 'add actor %1',
-  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorOptions}],
+  args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
@@ -1788,11 +1816,22 @@ const worldAddActor = defineBlock({
   generator: {
     javascript(block, generator) {
       const actor = block.getFieldValue('ACTOR');
-      addImport(
-        generator,
-        `mod:${actor}`,
-        `import ${importVar(actor)} from ${str(actor)};`,
-      );
+      const local = localActorFor(block, actor);
+      // A world's own actor is a `const` in this same module — nothing to
+      // import, and its `type` is its id rather than a module path. A value
+      // naming a definition that has since been deleted emits nothing.
+      if (localActorBlockId(actor) && !local) {
+        return '';
+      }
+      if (!local) {
+        addImport(
+          generator,
+          `mod:${actor}`,
+          `import ${importVar(actor)} from ${str(actor)};`,
+        );
+      }
+      const template = local ? local.variable : importVar(actor);
+      const type = local ? local.type : actor;
       const body = generator.statementToCode(block, 'DO');
       // Block scope: each add's `actor` binding is independent, so several adds
       // in one world don't collide, and the DO body's `actor.set(...)` blocks
@@ -1800,9 +1839,9 @@ const worldAddActor = defineBlock({
       // the module path is the actor's kind (its `type`), so "for each … I'm
       // touching" matches it regardless of the template's authored name.
       return (
-        `{\nconst actor = world.addActor(${importVar(actor)}, ${str(
+        `{\nconst actor = world.addActor(${template}, ${str(
           block.id,
-        )}, ${str(actor)});\n` + `${body}}\n`
+        )}, ${str(type)});\n` + `${body}}\n`
       );
     },
   },

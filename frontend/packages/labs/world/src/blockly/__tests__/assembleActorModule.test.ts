@@ -46,8 +46,13 @@ describe('assembleWorldModule', () => {
         code: 'const world = mk();\nworld.useRules([X]);\n',
       },
     ]);
+    // Every world declares and exports `localActors`, defined actors or not:
+    // the thumbnail manifest imports it by name, and an export that is only
+    // sometimes there is one its importers must ask about first (MAPS.md §5).
     expect(code).toBe(
-      'const world = mk();\nworld.useRules([X]);\nexport default world;\n',
+      'const localActors = {};\n' +
+        'const world = mk();\nworld.useRules([X]);\n' +
+        'export default world;\nexport {localActors};\n',
     );
   });
 });
