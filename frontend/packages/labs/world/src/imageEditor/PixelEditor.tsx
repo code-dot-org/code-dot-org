@@ -15,7 +15,6 @@ import {
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {DashboardApiClient} from '@code-dot-org/core/api';
 
 import {
   cellIndex,
@@ -506,26 +505,17 @@ const PixelEditor: FunctionComponent<PixelEditorProps> = ({
       };
       img.src = imageUrl;
     };
-    // A `data:` URL is bytes already — there is nothing to request, and handing
-    // one to the API client would send it at the dashboard. Everything else is
-    // an asset the backend serves, so it goes through core's transport (the
-    // same door `assets.upload` uses): it carries the credentials, and the
-    // demo's MSW mock answers it.
-    if (
-      !imageUrl.startsWith('data:') &&
-      typeof createImageBitmap === 'function'
-    ) {
-      DashboardApiClient.transport
-        .requestBlob({method: 'GET', url: imageUrl})
-        .then(blob => createImageBitmap(blob))
-        .then(bitmap => {
-          finish(bitmap, bitmap.width, bitmap.height);
-          bitmap.close();
-        })
-        .catch(loadViaImage);
-    } else {
-      loadViaImage();
-    }
+    // Always through an `<img>`, never through the API client.
+    //
+    // The URL is one the PROJECT holds — a `data:` URL, or an asset path the
+    // upload wrote — not an endpoint. Handing it to the API client sent it at
+    // the dashboard's origin instead of the lab's, where the demo's mock
+    // service worker (which is scoped to this page) never saw it and the
+    // request escaped to a host that need not be running:
+    // `GET http://localhost-studio.code.org:3000/v3/assets/… ERR_CONNECTION_REFUSED`.
+    // An image element resolves it the way every other picture in Codebridge is
+    // resolved, and needs no credentials to read what it was already shown.
+    loadViaImage();
     return () => {
       cancelled = true;
     };

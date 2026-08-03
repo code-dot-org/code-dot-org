@@ -20,6 +20,7 @@ import {
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {
   BlocklyGenerator,
   type BlocklyGeneratorHandle,
@@ -172,9 +173,31 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     () => projectSignature(currentSources.source),
     [currentSources],
   );
+  // The generator resolves a `set sprite` cell to a rectangle, which needs the
+  // image's size (blockly/spriteCells). An uploaded image only reveals its size
+  // once it has decoded, so that arrival is a change the compiler can see —
+  // hence part of what the recompile watches.
+  const decoded = useProjectImages(currentSources.source);
+  const imageSizes = useMemo(
+    () => ({
+      ...projectImageSizes(currentSources.source),
+      ...sizesOfImages(decoded),
+    }),
+    [currentSources, decoded],
+  );
+  const sizeSignature = useMemo(
+    () =>
+      Object.entries(imageSizes)
+        .map(([name, size]) => `${name} ${size.width}x${size.height}`)
+        .sort()
+        .join('\n'),
+    [imageSizes],
+  );
   // Read inside the effect, which no longer re-runs on every source change.
   const sourcesRef = useRef(currentSources);
   sourcesRef.current = currentSources;
+  const sizesRef = useRef(imageSizes);
+  sizesRef.current = imageSizes;
 
   useEffect(() => {
     if (!managers.current) {
@@ -189,11 +212,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }
     // Refresh the project-derived dropdowns (animations, actor/world modules)
     // before the generator runs.
-    refreshProjectDropdowns(
-      files,
-      projectImageNames(source),
-      projectImageSizes(source),
-    );
+    refreshProjectDropdowns(files, projectImageNames(source), sizesRef.current);
     // Wait for the Blockly generator before compiling a project that has any
     // Blockly-authored files; this effect re-runs when it becomes ready.
     if (Object.keys(files).some(isBlocklyPath) && !generatorReady) {
@@ -209,7 +228,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     }, delay);
     return () => window.clearTimeout(handle);
     // compileAndLoad closes over refs and stable state setters only.
-  }, [signature, generatorReady]);
+  }, [signature, sizeSignature, generatorReady]);
 
   async function compileAndLoad(files: Record<string, string>) {
     const pair = managers.current;

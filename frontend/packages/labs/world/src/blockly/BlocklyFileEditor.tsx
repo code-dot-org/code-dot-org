@@ -33,7 +33,7 @@ import {
 } from '../appearance/importStock';
 import {projectSheets} from '../appearance/sheetFile';
 import type {StockAnimation, StockSprite} from '../appearance/stock';
-import {useProjectImages} from '../appearance/useProjectImages';
+import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
@@ -249,17 +249,23 @@ export const BlocklyFileEditor = ({
   );
   // How big those images are, where the editor can tell: what says how many
   // cells a spritesheet holds (blockly/spriteCells).
+  // For the pickers: the project's grids, and its images decoded to draw.
+  const sheets = useMemo(() => projectSheets(files), [files]);
+  const decoded = useProjectImages(currentSources.source);
+  // An uploaded image is a URL, so its size cannot be read from the project —
+  // only from the image itself, once it has decoded. Those measurements join
+  // the ones read out of the `data:` URLs the project carries.
   const imageSizes = useMemo(
-    () => projectImageSizes(currentSources.source),
-    [currentSources],
+    () => ({
+      ...projectImageSizes(currentSources.source),
+      ...sizesOfImages(decoded),
+    }),
+    [currentSources, decoded],
   );
   useMemo(
     () => refreshProjectDropdowns(files, images, imageSizes),
     [files, images, imageSizes],
   );
-  // For the pickers: the project's grids, and its images decoded to draw.
-  const sheets = useMemo(() => projectSheets(files), [files]);
-  const decoded = useProjectImages(currentSources.source);
 
   // The stock-effect import, opened from an effect dropdown's `(import…)` row.
   //
