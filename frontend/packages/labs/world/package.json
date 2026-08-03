@@ -90,6 +90,7 @@
     "prettier": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
+    "sass": "^1.85.0",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
