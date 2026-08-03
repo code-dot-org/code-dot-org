@@ -196,9 +196,18 @@ const CodeEditor = () => {
     );
   }
 
-  // An uploaded image has no editable contents; show it. Its bytes live in the
-  // assets backend, referenced by `url` (see `ProjectFile`).
-  if (activeFile.url && activeFile.mimeType?.startsWith('image/')) {
+  // A lab may supply a custom editor for a language (e.g. Blockly for `rule`,
+  // an image editor for `png`); fall back to CodeMirror when there is none.
+  // Ahead of the image preview below: a lab that registers an editor for an
+  // image language means to EDIT those files, and a preview cannot be edited.
+  const CustomEditor = editorComponents?.[activeFile.language];
+  // An image with no editor of its own has no editable contents; show it. Its
+  // bytes live on the file's `url` (see `ProjectFile`).
+  if (
+    !CustomEditor &&
+    activeFile.url &&
+    activeFile.mimeType?.startsWith('image/')
+  ) {
     return (
       <img
         key={activeFile.id}
@@ -209,9 +218,6 @@ const CodeEditor = () => {
     );
   }
 
-  // A lab may supply a custom editor for a language (e.g. Blockly for `rule`);
-  // fall back to CodeMirror when there is none.
-  const CustomEditor = editorComponents?.[activeFile.language];
   if (CustomEditor) {
     return (
       <CustomEditor

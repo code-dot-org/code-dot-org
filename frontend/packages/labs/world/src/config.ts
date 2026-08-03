@@ -7,6 +7,7 @@ import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 import {AnimationEditor} from './animationEditor/AnimationEditor';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {EffectFileEditor} from './effect/EffectFileEditor';
+import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 
 /**
@@ -73,6 +74,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // Blockly-authored file types open in the Blockly editor (Codebridge's
   // per-language editor seam), not CodeMirror.
   editorComponents: {
+    // A `.png` is bytes, not text: the image editor reads and writes them
+    // through the file's `url` (imageEditor/ImageFileEditor).
+    png: ImageFileEditor,
     rule: BlocklyFileEditor,
     actor: BlocklyFileEditor,
     world: BlocklyFileEditor,
