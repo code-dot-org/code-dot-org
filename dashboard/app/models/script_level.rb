@@ -99,18 +99,28 @@ class ScriptLevel < ApplicationRecord
   # dashboard/test/ui/config/README.md. Checked against the serialized
   # level_keys property because ScriptSeed's import! runs validations before
   # the HABTM join rows are imported. The levelbuilder attach path
-  # (update_levels) bypasses validations and carries its own check.
+  # (update_levels) writes those rows without validating, so it applies the
+  # same rule itself through cross_partition_level_names.
   def ui_test_levels_only_in_ui_test_scripts
-    # check level_keys first: it is in-memory, while ui_test_script? may load
-    # the unit, and this validation runs for every script_level of every seed.
-    offending = (level_keys || []).select {|level_key| Level.ui_test_name?(level_key)}
+    offending = cross_partition_level_names(level_keys || [])
     return if offending.empty?
-    return if ui_test_script?
-    errors.add(
-      :script_level,
-      "UI Test levels may only be used in ui-test-* scripts, " \
-      "but \"#{script&.name}\" references: #{offending.join(', ')}"
-    )
+    errors.add(:script_level, cross_partition_levels_message(offending))
+  end
+
+  # Of the given level keys or names, those on the wrong side of the
+  # "UI Test " partition for this script_level's unit. Ignores nil entries.
+  def cross_partition_level_names(level_names)
+    # Select on the names before consulting the unit: the names are in memory,
+    # while ui_test_script? may load the unit, and the validation above runs
+    # for every script_level of every seed.
+    offending = level_names.compact.select {|level_name| Level.ui_test_name?(level_name)}
+    return [] if offending.empty? || ui_test_script?
+    offending
+  end
+
+  def cross_partition_levels_message(offending_level_names)
+    "UI Test levels may only be used in ui-test-* scripts, " \
+      "but \"#{script&.name}\" references: #{offending_level_names.join(', ')}"
   end
 
   def ui_test_script?
@@ -757,14 +767,9 @@ class ScriptLevel < ApplicationRecord
     end
 
     # This path writes the levels HABTM rows without running model
-    # validations, so enforce the UI Test partition here as well.
-    unless ui_test_script?
-      offending = levels.select(&:ui_test?)
-      if offending.any?
-        raise "UI Test levels may only be used in ui-test-* scripts, " \
-          "but \"#{script&.name}\" references: #{offending.map(&:name).join(', ')}"
-      end
-    end
+    # validations, so apply the UI Test partition rule here as well.
+    offending = cross_partition_level_names(levels.map(&:name))
+    raise cross_partition_levels_message(offending) if offending.any?
 
     # Unit levels containing anonymous levels must be assessments.
     if levels.any? {|l| l.properties["anonymous"] == "true"}
