@@ -83,8 +83,11 @@ export function mapActorTypes(path: string): string[] {
   return projectMaps[path] ?? [];
 }
 
+/** What a dropdown holds before the project offers it anything real. */
+const NONE_VALUE = '';
+
 const orNone = (options: Array<[string, string]>): Array<[string, string]> =>
-  options.length ? options : [['(none)', '']];
+  options.length ? options : [['(none)', NONE_VALUE]];
 
 /** Current ACTOR dropdown options (the project's actor templates). */
 export function actorOptions(): Array<[string, string]> {
@@ -147,15 +150,45 @@ export function liveDropdown(
       // @ts-expect-error protected — reflect the live project registry, not the
       // static fallback baked in at block definition.
       field.menuGenerator_ = () => options(field);
-      // A fresh block still holds the static "(none)" fallback; if that isn't one
-      // the live registry offers, default to the first real option so the block
-      // is usable without opening the menu. A saved block keeps its own value —
-      // it's already among the options.
+
+      // A dropdown normally refuses a value that is not one of its options, and
+      // that is wrong for a LIVE one: the options are the project as the editor
+      // currently understands it, and a saved workspace can name something the
+      // editor has not caught up with. An uploaded spritesheet is the case that
+      // bites — its cells are only known once the image has decoded, so a block
+      // holding `strip.png#3` was quietly reset to the first picture in the list
+      // on every reload, and then saved that way.
+      //
+      // So an unknown value is kept, and shows as itself until the option that
+      // explains it arrives. A value naming something genuinely gone stays
+      // visible too, which is the same bargain the renames make: a block that
+      // says what it means and is wrong beats one silently changed.
+      const validate = (
+        field as unknown as {
+          doClassValidation_?: (value?: string) => string | null;
+        }
+      ).doClassValidation_?.bind(field);
+      (
+        field as unknown as {
+          doClassValidation_: (value?: string) => string | null;
+        }
+      ).doClassValidation_ = (value?: string) => {
+        if (typeof value !== 'string') {
+          return validate ? (validate(value) ?? null) : null;
+        }
+        const known = options(field).some(([, option]) => option === value);
+        return known && validate ? (validate(value) ?? value) : value;
+      };
+
+      // A fresh block still holds the static "(none)" fallback; if that isn't
+      // one the live registry offers, default to the first real option so the
+      // block is usable without opening the menu. Only that fallback: anything
+      // else was chosen or loaded, and is not this code's to replace.
       const values = options(field).map(([, value]) => value);
       const current = field.getValue();
       if (
         values.length > 0 &&
-        (current === null || !values.includes(current))
+        (current === null || current === '' || current === NONE_VALUE)
       ) {
         field.setValue(values[0]);
       }

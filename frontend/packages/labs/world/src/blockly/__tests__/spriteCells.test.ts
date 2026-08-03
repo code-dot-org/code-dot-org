@@ -10,6 +10,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 import {projectSpriteOptions} from '../projectModules';
 import {
   cellCount,
+  forgetImageSizes,
   parseSpriteRef,
   setProjectGrids,
   spriteCell,
@@ -18,6 +19,7 @@ import {
 const SHEET = {type: 'sheet', cell: {width: 32, height: 32}} as const;
 
 beforeEach(() => {
+  forgetImageSizes();
   setProjectGrids(
     {'coinSpin.png': SHEET},
     {
@@ -119,5 +121,45 @@ describe('the set-sprite dropdown', () => {
       // Unmeasured: offered whole rather than guessed at.
       ['uploaded', 'uploaded.png'],
     ]);
+  });
+});
+
+describe('what the editor remembers', () => {
+  it('keeps a measured size when the next refresh cannot measure it', () => {
+    // An uploaded image only reveals its size once it has decoded, and the
+    // editor decodes per mount — so opening another file and coming back must
+    // not lose the cells of a sheet it has already measured.
+    setProjectGrids(
+      {'upload.png': SHEET},
+      {'upload.png': {width: 192, height: 32}},
+    );
+    expect(cellCount('upload.png')).toBe(6);
+
+    // A refresh from a fresh mount: the sheet is still declared, no size yet.
+    setProjectGrids({'upload.png': SHEET}, {});
+
+    expect(cellCount('upload.png')).toBe(6);
+    expect(spriteCell('upload.png#3')).toEqual({
+      x: 96,
+      y: 0,
+      width: 32,
+      height: 32,
+    });
+  });
+
+  it('takes a new measurement over an old one', () => {
+    // The learner repainted it at another size.
+    setProjectGrids({'art.png': SHEET}, {'art.png': {width: 192, height: 32}});
+    setProjectGrids({'art.png': SHEET}, {'art.png': {width: 64, height: 32}});
+
+    expect(cellCount('art.png')).toBe(2);
+  });
+
+  it('forgets a grid the project no longer declares', () => {
+    // Sheets are replaced wholesale: a file is the whole truth about itself.
+    setProjectGrids({'art.png': SHEET}, {'art.png': {width: 192, height: 32}});
+    setProjectGrids({}, {});
+
+    expect(cellCount('art.png')).toBe(0);
   });
 });
