@@ -137,6 +137,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               <TextField
                 name="imageName"
                 aria-label="Image name"
+                className={moduleStyles.headerNameField}
                 value={nameDraft}
                 errorMessage={shownNameError || undefined}
                 onChange={e => {
@@ -221,6 +222,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               await onAcceptGenerated(result, newName);
               setView('details');
             }}
+            onBackToImage={isNew ? undefined : () => setView('details')}
           />
         ) : (
           <>
@@ -245,9 +247,6 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 </span>
               </button>
               <div className={moduleStyles.detailsPane}>
-                <p className={moduleStyles.paneHint}>
-                  Click the image to edit it with the paint tools.
-                </p>
                 {generation && (
                   <dl className={moduleStyles.metadata}>
                     <dt>Prompt</dt>
@@ -303,6 +302,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 className={moduleStyles.primaryButton}
                 onClick={() => setView('generate')}
               >
+                <FontAwesomeV6Icon iconName="sparkles" />
                 {generation ? 'Regenerate with AI' : 'Generate with AI'}
               </button>
             </div>

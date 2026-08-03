@@ -29,6 +29,10 @@ $panel-text: var(--dialog-panel-text);
   --dialog-danger-border: rgb(179 38 30 / 55%);
   --dialog-danger-hover-bg: rgb(179 38 30 / 10%);
   --dialog-focus-ring: #292f36;
+  // Transparency checkerboard: a white base reads best on a light panel; a
+  // panel-colored base reads best on a dark one.
+  --dialog-checker-bg: #fff;
+  --dialog-checker-tint: rgb(128 128 128 / 16%);
 
   &[data-theme='dark'] {
     --dialog-panel-bg: #333a47;
@@ -48,6 +52,8 @@ $panel-text: var(--dialog-panel-text);
     --dialog-danger-border: rgb(255 130 130 / 55%);
     --dialog-danger-hover-bg: rgb(255 130 130 / 12%);
     --dialog-focus-ring: #fff;
+    --dialog-checker-bg: transparent;
+    --dialog-checker-tint: rgb(128 128 128 / 22%);
   }
 }
 

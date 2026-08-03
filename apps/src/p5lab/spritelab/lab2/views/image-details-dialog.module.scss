@@ -75,15 +75,19 @@
   }
 }
 
-// Checkerboard signals transparency (translucent grey works over either
-// panel theme). Only once there's an image: an empty pane stays blank.
+// Checkerboard signals transparency; base and tint follow the theme (the
+// paint editor draws the same pair into its canvas). Only once there's an
+// image: an empty pane stays blank.
 .imagePaneChecker {
-  $check: rgb(128 128 128 / 22%);
-
-  background-image: linear-gradient(45deg, $check 25%, transparent 25%),
-    linear-gradient(-45deg, $check 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, $check 75%),
-    linear-gradient(-45deg, transparent 75%, $check 75%);
+  background-color: var(--dialog-checker-bg);
+  background-image: linear-gradient(
+      45deg,
+      var(--dialog-checker-tint) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, var(--dialog-checker-tint) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--dialog-checker-tint) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--dialog-checker-tint) 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0;
 }
@@ -94,6 +98,12 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
+
+  // The page's legacy `button > img {opacity: 0.6}` dims the image until
+  // hover; only the paint affordance should be quiet, never the image.
+  img {
+    opacity: 1;
+  }
 }
 
 // The paint affordance in the image's corner: quiet until the image is
@@ -228,6 +238,14 @@
   color: var(--dialog-text-secondary);
 }
 
+// Bootstrap's global legend styling draws a full-width underline; these
+// are plain labels.
+.radioGroup legend {
+  width: auto;
+  border: none;
+  line-height: inherit;
+}
+
 .promptInput {
   box-sizing: border-box;
   width: 100%;
@@ -246,23 +264,25 @@
   flex-direction: column;
   gap: 8px;
   margin: 0;
-  padding: 10px 12px;
-  border: 1px solid chrome.$border-subtle;
-  border-radius: 6px;
+  padding: 0;
+  border: none;
   // The design system's disabled-label grey is illegible on the panel;
   // remap the variable it reads to our secondary text (the greyed radio
   // circle still marks the option disabled).
   --text-neutral-disabled: var(--dialog-text-secondary);
-
-  legend {
-    padding: 0 4px;
-  }
 }
 
 .temperatureGroup {
   display: flex;
   flex-direction: column;
   gap: 6px;
+
+  // The design system slider is a fixed 300px; fit it to the column (its
+  // track and input already stretch to their container).
+  > div {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 .bot {
@@ -278,10 +298,17 @@
   color: chrome.$panel-text;
 }
 
-.paneHint {
-  margin: 0;
-  font-size: 13px;
-  color: var(--dialog-text-secondary);
+// The rename field sits in the header; sized so its save/cancel buttons
+// stay next to it (the design system wrapper's own min-width is 300px,
+// wider than the input it draws).
+.header .headerNameField {
+  width: 280px;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 .generateError {
