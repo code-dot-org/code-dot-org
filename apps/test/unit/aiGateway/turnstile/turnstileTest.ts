@@ -1,3 +1,11 @@
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  startSpan: jest.fn((_options: unknown, callback: () => unknown) =>
+    callback()
+  ),
+}));
+
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
 import {TOKEN_MAX_AGE_MS} from '@cdo/apps/aiGateway/turnstile/constants';
 import {TurnstileManager} from '@cdo/apps/aiGateway/turnstile/manager';
 import {
@@ -5,6 +13,8 @@ import {
   turnstileHeaders,
 } from '@cdo/apps/aiGateway/turnstile/util';
 import experiments from '@cdo/apps/util/experiments';
+
+const startSpanMock = Observability.startSpan as jest.Mock;
 
 // Reset the singleton between tests so each test starts clean.
 afterEach(() => {
@@ -61,7 +71,7 @@ describe('fetchTurnstileTokenIfEnabled', () => {
 type TurnstileManagerPrivates = {
   nextTokenPromise: Promise<string> | null;
   nextTokenResolvedAt: number | null;
-  getToken: () => Promise<string>;
+  getToken: () => {mode: 'pre-fetch' | 'on-demand'; token: Promise<string>};
   runSerializedChallenge: () => Promise<string>;
 };
 
@@ -87,9 +97,10 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve('stale-token');
     m.nextTokenResolvedAt = Date.now() - TOKEN_MAX_AGE_MS - 1000;
 
-    const result = await m.getToken();
+    const {mode, token} = m.getToken();
 
-    expect(result).toBe(freshToken);
+    expect(await token).toBe(freshToken);
+    expect(mode).toBe('on-demand');
     // call #1: fresh challenge replacing stale token; call #2: schedulePrefetch after delivery
     expect(freshChallenge).toHaveBeenCalledTimes(2);
   });
@@ -105,12 +116,72 @@ describe('TurnstileManager stale pre-fetch', () => {
     m.nextTokenPromise = Promise.resolve(validToken);
     m.nextTokenResolvedAt = Date.now() - 60_000; // 1 minute old — well within limit
 
-    const result = await m.getToken();
+    const {mode, token} = m.getToken();
 
-    expect(result).toBe(validToken);
+    expect(await token).toBe(validToken);
+    expect(mode).toBe('pre-fetch');
     // runSerializedChallenge called once for the scheduled pre-fetch, not to
     // replace the valid token.
     expect(freshChallenge).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('TurnstileManager token acquisition span', () => {
+  beforeEach(() => {
+    document.body.innerHTML = '';
+    startSpanMock.mockClear();
+  });
+
+  const getTokenWithSpan = async (
+    prepare: (m: TurnstileManagerPrivates) => void
+  ) => {
+    const manager = TurnstileManager.getInstance();
+    prepare(manager as unknown as TurnstileManagerPrivates);
+    return manager.getTurnstileToken();
+  };
+
+  it('wraps an on-demand challenge in an ai-gateway.turnstile span', async () => {
+    const token = await getTokenWithSpan(m => {
+      jest.spyOn(m, 'runSerializedChallenge').mockResolvedValue('fresh-token');
+    });
+
+    expect(token).toBe('fresh-token');
+    expect(startSpanMock).toHaveBeenCalledWith(
+      {
+        name: 'ai-gateway.turnstile',
+        op: 'ai.turnstile',
+        attributes: {'turnstile.mode': 'on-demand', feature: 'ai-gateway'},
+      },
+      expect.any(Function)
+    );
+  });
+
+  it('reports pre-fetch mode when a pre-fetched token is consumed', async () => {
+    const token = await getTokenWithSpan(m => {
+      jest.spyOn(m, 'runSerializedChallenge').mockResolvedValue('ignored');
+      m.nextTokenPromise = Promise.resolve('prefetched-token');
+      m.nextTokenResolvedAt = Date.now();
+    });
+
+    expect(token).toBe('prefetched-token');
+    expect(startSpanMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        attributes: {'turnstile.mode': 'pre-fetch', feature: 'ai-gateway'},
+      }),
+      expect.any(Function)
+    );
+  });
+
+  it('opens the span even when the challenge fails', async () => {
+    const failure = new Error('challenge failed');
+
+    await expect(
+      getTokenWithSpan(m => {
+        jest.spyOn(m, 'runSerializedChallenge').mockRejectedValue(failure);
+      })
+    ).rejects.toBe(failure);
+
+    expect(startSpanMock).toHaveBeenCalledTimes(1);
   });
 });
 
