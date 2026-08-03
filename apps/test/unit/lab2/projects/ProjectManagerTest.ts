@@ -41,18 +41,13 @@ describe('ProjectManager', () => {
 
   beforeEach(() => {
     sourcesStore = stubObject<SourcesStore>(new SourcesStore());
-    // We need to create separate promises for each call so they can each
-    // be read from.
-    sourcesStore.save.onCall(0).returns(Promise.resolve(new Response('')));
-    sourcesStore.save.onCall(1).returns(Promise.resolve(new Response('')));
+    // A fresh Response per call, since a Response body can only be read once.
+    sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
     channelsStore = stubObject<ChannelsStore>(new ChannelsStore());
     channelsStore.load.returns(Promise.resolve(FAKE_CHANNEL));
-    channelsStore.save
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(FAKE_CHANNEL))));
-    channelsStore.save
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(FAKE_CHANNEL))));
+    channelsStore.save.callsFake(() =>
+      Promise.resolve(new Response(JSON.stringify(FAKE_CHANNEL)))
+    );
   });
 
   it('returns sources and channel on load', async () => {
@@ -544,6 +539,195 @@ describe('ProjectManager', () => {
     assert.isFalse(projectManager.getForceNewVersion());
   });
 
+  it('flushSave waits for the save in flight, then saves the changes made during it', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    // This save suspends inside sourcesStore.save.
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    // Edited while that save is in flight, so this one is only enqueued.
+    await projectManager.save(UPDATED_SOURCE_2);
+    assert.isTrue(sourcesStore.save.calledOnce);
+
+    let flushed = false;
+    const flush = projectManager.flushSave().then(() => {
+      flushed = true;
+    });
+    await drainMicrotasks();
+    assert.isFalse(flushed, 'flush resolved before the save in flight finished');
+
+    finishFirstSourceSave();
+    await firstSave;
+    await flush;
+
+    assert.isTrue(sourcesStore.save.calledTwice);
+    expect(sourcesStore.save.secondCall.args[1]).to.deep.equal(
+      UPDATED_SOURCE_2
+    );
+    assert.isFalse(projectManager.hasUnsavedChanges());
+  });
+
+  it('flushSave waits for the save in flight even when nothing else changed', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    let flushed = false;
+    const flush = projectManager.flushSave().then(() => {
+      flushed = true;
+    });
+    await drainMicrotasks();
+    assert.isFalse(flushed, 'flush resolved before the save in flight finished');
+
+    finishFirstSourceSave();
+    await firstSave;
+    await flush;
+
+    // Nothing changed while the first save ran, so there is nothing to save.
+    assert.isTrue(sourcesStore.save.calledOnce);
+  });
+
+  it('saves the pending changes once when two flushes overlap', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2);
+    const flushes = Promise.all([
+      projectManager.flushSave(),
+      projectManager.flushSave(),
+    ]);
+    finishFirstSourceSave();
+    await firstSave;
+    await flushes;
+
+    // The first save plus one save of the pending change: the second flush finds
+    // nothing left to write.
+    assert.isTrue(sourcesStore.save.calledTwice);
+    expect(sourcesStore.save.secondCall.args[1]).to.deep.equal(
+      UPDATED_SOURCE_2
+    );
+    assert.isFalse(projectManager.hasUnsavedChanges());
+  });
+
+  it('keeps sources edited during a save in flight for the next save', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2);
+    finishFirstSourceSave();
+    await firstSave;
+
+    // Only the first source reached the store, so the second is still unsaved.
+    expect(sourcesStore.save.firstCall.args[1]).to.deep.equal(UPDATED_SOURCE);
+    assert.isTrue(projectManager.hasUnsavedChanges());
+  });
+
+  it('keeps a rename made during a save in flight', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    const rename = projectManager.rename('new name');
+    finishFirstSourceSave();
+    await firstSave;
+    await rename;
+
+    assert.isTrue(channelsStore.save.calledTwice);
+    const renamedChannel = channelsStore.save.secondCall.args[0] as Channel;
+    expect(renamedChannel.name).to.equal('new name');
+  });
+
+  it('force save waits for the save in flight instead of enqueueing', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    const forcedSave = projectManager.save(UPDATED_SOURCE_2, true);
+    finishFirstSourceSave();
+    await firstSave;
+    await forcedSave;
+
+    assert.isTrue(sourcesStore.save.calledTwice);
+    expect(sourcesStore.save.secondCall.args[1]).to.deep.equal(
+      UPDATED_SOURCE_2
+    );
+  });
+
+  it('cleanUp flushes changes made during a save in flight', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const finishFirstSourceSave = deferNextSourceSave(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+
+    const firstSave = projectManager.save(UPDATED_SOURCE);
+    await projectManager.save(UPDATED_SOURCE_2);
+    const cleanUp = projectManager.cleanUp();
+    finishFirstSourceSave();
+    await firstSave;
+    await cleanUp;
+
+    assert.isTrue(sourcesStore.save.calledTwice);
+    expect(sourcesStore.save.secondCall.args[1]).to.deep.equal(
+      UPDATED_SOURCE_2
+    );
+  });
+
   it('createCommit throws when the project has no saved version', async () => {
     sourcesStore.getCurrentVersionId.returns(null);
     const projectManager = new ProjectManager({
@@ -595,4 +779,20 @@ describe('ProjectManager', () => {
 // Helper functions
 function stubSuccessfulSourceLoad(sourcesStore: StubbedInstance<SourcesStore>) {
   sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
+}
+
+// Hold the next source save open so a save stays in flight. Returns the function
+// that lets that save finish.
+function deferNextSourceSave(sourcesStore: StubbedInstance<SourcesStore>) {
+  let finishSave!: () => void;
+  const pendingSave = new Promise<Response>(resolve => {
+    finishSave = () => resolve(new Response(''));
+  });
+  sourcesStore.save.onFirstCall().returns(pendingSave);
+  return finishSave;
+}
+
+// Run every pending microtask, so anything that can settle has settled.
+function drainMicrotasks() {
+  return new Promise(resolve => setTimeout(resolve, 0));
 }
