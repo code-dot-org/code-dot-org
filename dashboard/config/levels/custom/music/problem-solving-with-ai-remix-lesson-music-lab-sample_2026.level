@@ -1,0 +1,179 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2026-08-03T00:32:10.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Sample Music",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "hide_version_history": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "category",
+            "name": "Play",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "play_sound_at_current_location_simple2",
+                "id": "play_sound_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "sound": "electro/drum_beat_cowbell"
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_tune_at_current_location_simple2",
+                "id": "play_tune_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "tune": {
+                    "instrument": "piano",
+                    "events": [
+
+                    ],
+                    "length": 1,
+                    "relative": false,
+                    "scaleMode": "simple"
+                  }
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_chord_at_current_location_simple2",
+                "id": "play_chord_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "chord": {
+                    "instrument": "piano",
+                    "notes": [
+
+                    ],
+                    "playStyle": "arpeggio-up"
+                  }
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_rest_at_current_location_simple2",
+                "id": "play_rest_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                },
+                "enabled": true
+              }
+            ],
+            "id": "Play"
+          },
+          {
+            "kind": "category",
+            "name": "Control",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "play_sounds_together",
+                "id": "play_sounds_together",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_sounds_sequential",
+                "id": "play_sounds_sequential",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_sounds_random",
+                "id": "play_sounds_random",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "repeat_simple2",
+                "id": "repeat_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "times": 1
+                },
+                "enabled": true
+              }
+            ],
+            "id": "Control"
+          }
+        ],
+        "kind": "categoryToolbox"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-03 00:32:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
