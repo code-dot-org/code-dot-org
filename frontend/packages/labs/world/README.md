@@ -27,7 +27,11 @@ Text files (`js`/`ts`/`json`/`md`/`txt`) edit in CodeMirror. Everything else has
 its own editor, mounted through Codebridge's per-language editor seam
 (`CodebridgeConfig.editorComponents`, parallel to `languageExtensions`). Each
 one loads and saves through the same file `onChange` seam as CodeMirror, so
-persistence is identical whatever the surface:
+persistence is identical whatever the surface — except the image editor, whose
+file has no text contents at all: it reads and writes the bytes on the file's
+`url` (`UPLOADS.md`), and writes the `.sheet` beside a spritesheet. A `.sheet`
+is not listed in the file browser (`hiddenFileTypes`); it belongs to the image
+of the same name, which is what writes and deletes it.
 
 | Type                       | Editor                                | On disk                    |
 | -------------------------- | ------------------------------------- | -------------------------- |
@@ -35,6 +39,7 @@ persistence is identical whatever the surface:
 | `map`                      | `src/mapEditor/MapEditor`             | world population (JSON)    |
 | `anim`                     | `src/animationEditor/AnimationEditor` | an animation file (JSON)   |
 | `effect`                   | `src/effect/EffectFileEditor`         | a shader graph (JSON)      |
+| `png`                      | `src/imageEditor/ImageFileEditor`     | bytes, on the file's `url` |
 
 An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
