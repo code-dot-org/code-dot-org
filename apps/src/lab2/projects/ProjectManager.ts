@@ -46,12 +46,10 @@ export default class ProjectManager {
   private nextSaveTime: number | null = null;
   private readonly saveInterval: number = 30 * 1000; // 30 seconds
   // How many in-flight saves a force save will wait out before giving up. More
-  // than a couple means another caller keeps winning the race for the next
-  // save, and returning beats spinning.
+  // than a couple means another caller keeps winning the race for the next save.
   private static readonly MAX_SAVE_WAITS = 3;
   private saveInProgress = false;
-  // Resolves when the save currently in flight finishes. Never rejects: waiters
-  // only need to know it is done, not whether it worked.
+  // Resolves when the save currently in flight finishes.
   private saveInFlight: Promise<void> | undefined;
   private saveQueued = false;
   private saveSuccessListeners: ((channel: Channel) => void)[] = [];
@@ -296,9 +294,8 @@ export default class ProjectManager {
       // don't attempt to rename.
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    // Build a new object rather than mutating the pending channel: a save may
-    // already be holding it, and saveHelper tells "still pending" from "already
-    // saved" by identity.
+    // Build a new object rather than mutating the pending channel: saveHelper tells
+    // "still pending" from "already saved" by identity.
     this.channelToSave = {
       ...(this.channelToSave ?? this.lastChannel),
       name,
