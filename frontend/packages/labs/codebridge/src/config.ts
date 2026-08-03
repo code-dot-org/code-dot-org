@@ -68,6 +68,24 @@ export interface CodebridgeConfig {
   /** Hide the new-folder affordances. */
   hideNewFolderButton?: boolean;
   /**
+   * The lab's last word on any file operation.
+   *
+   * Given the source a file operation produced and the one it started from,
+   * return the source to actually write. For a lab whose files come in pairs
+   * this is where the second one is kept in step: World's `.sheet` belongs to
+   * the `.png` of the same name, so moving, renaming or deleting the image has
+   * to take the sheet with it.
+   *
+   * In the same write as the operation, not after it: one entry in the undo
+   * history, one save, one recompile — and no window in which the project is
+   * inconsistent. Return `next` unchanged when there is nothing to repair.
+   */
+  reconcileSource?: (
+    next: MultiFileSource,
+    previous: MultiFileSource,
+  ) => MultiFileSource;
+
+  /**
    * Extensions the file browser does not list (e.g. ['sheet']).
    *
    * For a file that belongs to another one and has no life of its own: World's
@@ -121,8 +139,10 @@ const siblingFolderNames = (
 /**
  * Validate a proposed file name in `folderId`: non-empty, an editable extension
  * (when the config restricts them), and not a duplicate of a sibling. Returns an
- * error message, or undefined when valid. `excludeId` skips the file being
- * renamed from the duplicate check.
+ * error message, or undefined when valid.
+ *
+ * `excludeId` says this is a rename rather than a new file: it skips the file
+ * being renamed in the duplicate check, and lets it keep its own extension.
  */
 export const validateFileName = (
   config: CodebridgeConfig,
@@ -135,7 +155,16 @@ export const validateFileName = (
   if (!trimmed) {
     return 'Enter a file name.';
   }
+  // A RENAME may keep the extension the file already has, even one the lab does
+  // not let you create: an uploaded `.png` is a file the learner owns, and being
+  // unable to rename it is not what "you cannot make one of these" meant. The
+  // move validator below already draws this line; renaming was the gap.
+  const keepsItsType =
+    excludeId !== undefined &&
+    getFileExtension(source.files[excludeId]?.name ?? '') ===
+      getFileExtension(trimmed);
   if (
+    !keepsItsType &&
     config.editableFileTypes.length > 0 &&
     !config.editableFileTypes.includes(getFileExtension(trimmed))
   ) {

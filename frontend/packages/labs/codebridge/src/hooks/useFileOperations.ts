@@ -3,6 +3,7 @@ import {useMemo} from 'react';
 import type {FileId, FolderId, MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {useCodebridgeConfig} from '../contexts/CodebridgeConfigContext';
 import * as edit from '../utils/multiFileSource';
 
 export interface FileOperations {
@@ -48,12 +49,17 @@ export interface FileOperations {
  */
 export const useFileOperations = (): FileOperations => {
   const {currentSources, updateSources} = useSources<MultiFileSource>();
+  const {reconcileSource} = useCodebridgeConfig();
   const source = currentSources.source;
 
   return useMemo(() => {
     const commit = (next: MultiFileSource) => {
-      if (next !== source) {
-        updateSources({...currentSources, source: next});
+      // The lab's last word: a chance to keep companion files in step, in this
+      // same write (see `CodebridgeConfig.reconcileSource`).
+      const repaired =
+        next === source ? next : (reconcileSource?.(next, source) ?? next);
+      if (repaired !== source) {
+        updateSources({...currentSources, source: repaired});
       }
     };
 
@@ -77,5 +83,5 @@ export const useFileOperations = (): FileOperations => {
         commit(edit.moveFolder(source, id, parentId)),
       toggleFolder: id => commit(edit.toggleFolderOpen(source, id)),
     };
-  }, [source, currentSources, updateSources]);
+  }, [source, currentSources, updateSources, reconcileSource]);
 };

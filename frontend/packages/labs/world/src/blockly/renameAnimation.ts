@@ -16,7 +16,11 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {mapWorkspaces, rewriteWorkspace} from './rewriteWorkspaces';
+import {
+  mapWorkspaces,
+  rewriteWorkspace,
+  WORKSPACE_FILE,
+} from './rewriteWorkspaces';
 
 /** The field an animation id is held in, wherever a block names one. */
 const ANIMATION_FIELD = 'ANIMATION';
@@ -93,4 +97,30 @@ export function animationIdOwners(
     }
   }
   return owners;
+}
+
+/**
+ * Which files play a given animation, by path.
+ *
+ * What deleting one would strand. A block holds an id and nothing else, so a
+ * play whose animation has gone is a block that quietly stops working — the
+ * learner is owed the list before they decide, not a mystery afterwards.
+ */
+export function animationPlayedIn(
+  files: Record<string, string>,
+  id: string,
+): string[] {
+  const playing: string[] = [];
+  for (const [path, contents] of Object.entries(files)) {
+    if (!WORKSPACE_FILE.test(path)) {
+      continue;
+    }
+    // The same structural test the rename uses, asked without rewriting: a
+    // reference is an ANIMATION field holding this id, not the word appearing
+    // in a log message or a sprite's file name.
+    if (renameAnimationReferences(contents, id, `${id}\u0000`) !== undefined) {
+      playing.push(path);
+    }
+  }
+  return playing.sort();
 }

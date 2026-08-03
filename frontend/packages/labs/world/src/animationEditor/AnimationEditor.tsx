@@ -21,6 +21,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
@@ -37,6 +38,7 @@ import {
 import type {StockAnimation, StockSprite} from '../appearance/stock';
 import {
   animationIdOwners,
+  animationPlayedIn,
   renameAnimationInSource,
 } from '../blockly/renameAnimation';
 import {filePath, projectFiles} from '../runtime/projectFiles';
@@ -298,6 +300,11 @@ export const AnimationEditor = ({
   const [onionSkin, setOnionSkin] = useState(false);
   // Which frame is choosing a picture, and whether that has become a trip to
   // the stock library (which the picker offers, and comes back from).
+  // The animation whose deletion is waiting on an answer, and what plays it.
+  const [deleting, setDeleting] = useState<{
+    id: string;
+    played: string[];
+  } | null>(null);
   const [pickingSprite, setPickingSprite] = useState<string | null>(null);
   const [importingSprite, setImportingSprite] = useState(false);
 
@@ -428,12 +435,34 @@ export const AnimationEditor = ({
     });
     setSelectedId(id);
   };
+  /**
+   * Delete an animation — after saying what plays it, if anything does.
+   *
+   * A block holds an id and nothing else, so deleting an animation that is
+   * played leaves a block that quietly stops working. Renaming carries
+   * (renameAnimation); deleting cannot, because there is nothing to carry to.
+   * The next best thing is to say so first and let the learner decide.
+   *
+   * The blocks are left exactly as they are if they go ahead: a `play
+   * animation` naming something the project no longer has is visible and
+   * fixable, where a field silently emptied is neither.
+   */
   const deleteAnimation = (id: string) => {
+    const played = animationPlayedIn(projectText, id);
+    if (played.length > 0) {
+      setDeleting({id, played});
+      return;
+    }
+    removeAnimation(id);
+  };
+
+  const removeAnimation = (id: string) => {
     const animations = {...docRef.current.animations};
     delete animations[id];
     if (selId === id) {
       setSelectedId(Object.keys(animations)[0] ?? null);
     }
+    setDeleting(null);
     commit({...docRef.current, animations});
   };
 
@@ -1155,6 +1184,29 @@ export const AnimationEditor = ({
               onPick={chooseSprite}
               onImport={() => setImportingSprite(true)}
               onCancel={() => setPickingSprite(null)}
+            />
+          )}
+
+          {deleting && (
+            <Dialog
+              role="alertdialog"
+              title={`Delete "${deleting.id}"?`}
+              description={
+                deleting.played.length === 1
+                  ? `${deleting.played[0]} plays this animation. That block will name an animation the project no longer has.`
+                  : `${deleting.played.length} files play this animation (${deleting.played.join(', ')}). Those blocks will name an animation the project no longer has.`
+              }
+              onClose={() => setDeleting(null)}
+              closeLabel="Close"
+              primaryButtonProps={{
+                children: 'Delete anyway',
+                color: 'error',
+                onClick: () => removeAnimation(deleting.id),
+              }}
+              secondaryButtonProps={{
+                children: 'Keep it',
+                onClick: () => setDeleting(null),
+              }}
             />
           )}
 

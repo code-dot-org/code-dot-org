@@ -47,6 +47,36 @@ describe('validateFileName', () => {
       /enter a file name/i,
     );
   });
+  it('lets a rename keep an extension the lab cannot create', () => {
+    // An uploaded `.png` is the learner's file; not being able to create one
+    // does not mean not being able to rename one (World's image files).
+    const withImage = {
+      ...source,
+      files: {
+        ...source.files,
+        img: {
+          id: 'img',
+          name: 'hero.png',
+          language: 'png',
+          contents: '',
+          folderId: '0',
+          url: 'https://example.test/hero.png',
+        },
+      },
+    };
+
+    expect(
+      validateFileName(config, withImage, '0', 'villain.png', 'img'),
+    ).toBeUndefined();
+    // Still not a type you may invent, and not a type you may switch to.
+    expect(validateFileName(config, withImage, '0', 'new.png')).toMatch(
+      /must end in/i,
+    );
+    expect(validateFileName(config, withImage, '0', 'hero.txt', 'img')).toMatch(
+      /must end in/i,
+    );
+  });
+
   it('rejects a disallowed extension', () => {
     expect(validateFileName(config, source, '0', 'notes.txt')).toMatch(
       /must end in/i,
