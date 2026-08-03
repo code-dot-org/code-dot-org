@@ -20,6 +20,7 @@ import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
+import {applySchemaDisplayTransform} from '../helpers/applySchemaDisplayTransform';
 import {
   addChatEvent,
   clearChatMessages,
@@ -297,7 +298,22 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     }, [dispatch, previousParameters, modelParameters]);
 
     const [liveAnnouncement, setLiveAnnouncement] = useState('');
-    const chatEvents = selectedStudent ? studentChatHistory : visibleItems;
+    const storedChatEvents = selectedStudent
+      ? studentChatHistory
+      : visibleItems;
+    // Applied here rather than before logging: the transform is presentational,
+    // and running it earlier would make stored history a client-side derivation
+    // of the model's response instead of the response itself. Covers the
+    // teacher's view of a student's history too, since both paths feed this
+    // same list.
+    const chatEvents = useMemo(
+      () =>
+        applySchemaDisplayTransform(
+          storedChatEvents,
+          jsonSchemaResponseCallback
+        ),
+      [storedChatEvents, jsonSchemaResponseCallback]
+    );
     const hasChatHistory = chatEvents.length > 0;
     useEffect(() => {
       if (hasChatHistory) {

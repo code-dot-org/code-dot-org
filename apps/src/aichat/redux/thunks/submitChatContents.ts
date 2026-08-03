@@ -60,6 +60,12 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      /**
+       * No longer consumed here. The transform moved to render time
+       * (applySchemaDisplayTransform) so stored history holds the model's
+       * response verbatim. Kept on the input type so existing callers still
+       * compile; remove once they stop passing it.
+       */
       jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
     },
@@ -76,7 +82,6 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
       lessonId,
     } = newUserMessageInput;
 
@@ -230,24 +235,13 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // jsonSchemaResponseCallback only applies to successful model
-        // responses, and is only ever set for a jsonSchema-configured
-        // session -- so it always gets parsed JSON, never a bare string.
-        // structuredOutput is already parsed (gateway path); the legacy
-        // Rails-job path never has a parsed form, so parse chatMessageText
-        // here once, rather than pushing that split onto every callback.
-        if (message.status === Status.OK && jsonSchemaResponseCallback) {
-          try {
-            const parsedResponse =
-              message.structuredOutput ?? JSON.parse(message.chatMessageText);
-            message.chatMessageText =
-              jsonSchemaResponseCallback(parsedResponse);
-          } catch (err) {
-            // Model didn't return valid JSON despite the schema -- keep the
-            // raw text rather than losing the response to a crashed thunk.
-            console.error('Failed to parse structured chat response', err);
-          }
-        }
+        // The model's response is logged verbatim. A level's
+        // jsonSchemaResponseCallback used to rewrite chatMessageText here,
+        // before logging, which made stored history a client-side derivation of
+        // the response instead of the response itself -- nothing server-side
+        // could then check it against what the model actually produced. The
+        // transform is presentational, so ChatWorkspace now applies it when
+        // rendering (see applySchemaDisplayTransform).
         dispatch(addChatEvent(message));
       }
       if (message.role === Role.USER) {
