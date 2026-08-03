@@ -133,9 +133,7 @@ export const SpritePickerDialog = ({
     <Dialog
       role="dialog"
       title={translate('Choose a picture')}
-      description={translate(
-        'Everything this project can draw. A spritesheet is shown as its cells.',
-      )}
+      description={translate('Everything we can draw!')}
       onClose={onCancel}
       closeLabel={translate('Close')}
       primaryButtonProps={{
