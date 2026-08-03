@@ -260,7 +260,9 @@ describe('javabuilderRunUtils', () => {
       /* needsInitialSourcesSave */ false
     );
 
-    expect(connectJavabuilderWithOverrideSources).toHaveBeenCalledWith(startSources);
+    expect(connectJavabuilderWithOverrideSources).toHaveBeenCalledWith(
+      startSources
+    );
   });
 
   it('sends override validation through the levelbuilder-only endpoint when running tests in start mode', async () => {

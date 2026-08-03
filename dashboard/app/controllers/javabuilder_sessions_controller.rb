@@ -59,7 +59,7 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
-  # Only used by levelbuilders
+  # Only available to levelbuilders.
   # POST /javabuilder/access_token_with_override_sources_and_validation
   def access_token_with_override_sources_and_validation
     unless has_required_params?([:overrideSources])
@@ -68,7 +68,6 @@ class JavabuilderSessionsController < ApplicationController
     override_sources = params[:overrideSources]
     # channel id is not required but can be included in order to retrieve assets
     channel_id = params[:channelId]
-    # validation is optional, used in start mode.
     override_validation = params[:overrideValidation]
 
     session_id = SecureRandom.uuid
