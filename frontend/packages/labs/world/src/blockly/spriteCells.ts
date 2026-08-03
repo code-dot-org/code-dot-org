@@ -24,15 +24,28 @@ export interface SpriteRef {
 }
 
 let sheets: Record<string, SheetFile> = {};
+// Sizes ACCUMULATE, where the sheets are replaced wholesale.
+//
+// A `.sheet` is a file: what the project says now is the whole truth. A size is
+// a measurement — and for an uploaded image it can only be taken by decoding
+// it, which the editor does per mount. Replacing the map on every refresh would
+// forget an uploaded sheet's size each time the learner opened another file,
+// and the cells of that sheet would vanish from the dropdowns for as long as it
+// took to decode again.
 let sizes: Record<string, ImageSize> = {};
 
-/** Replace what the editor knows about the project's grids and image sizes. */
+/** Replace the project's grids, and add to what has been measured. */
 export function setProjectGrids(
   nextSheets: Record<string, SheetFile>,
   nextSizes: Record<string, ImageSize>,
 ): void {
   sheets = nextSheets;
-  sizes = nextSizes;
+  sizes = {...sizes, ...nextSizes};
+}
+
+/** Forget every measurement — for tests, which must not leak into each other. */
+export function forgetImageSizes(): void {
+  sizes = {};
 }
 
 /**
