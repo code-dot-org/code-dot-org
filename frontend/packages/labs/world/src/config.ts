@@ -5,6 +5,7 @@ import {markdown} from '@codemirror/lang-markdown';
 import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
 import {AnimationEditor} from './animationEditor/AnimationEditor';
+import {followImages} from './appearance/sheetCompanions';
 import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
@@ -57,6 +58,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // it when an image is made a spritesheet and deletes it when it stops being
   // one, so it is not a file to open (appearance/sheetFile).
   hiddenFileTypes: ['sheet'],
+  // A `.sheet` is hidden, so nothing can move, rename or delete it by hand: it
+  // goes wherever its `.png` goes, in the same write (appearance/sheetCompanions).
+  reconcileSource: followImages,
   languageMapping: {
     js: 'javascript',
     ts: 'javascript',
