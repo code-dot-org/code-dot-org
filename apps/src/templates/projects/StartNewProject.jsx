@@ -18,13 +18,13 @@ const BEYOND_BLOCKS_PROJECT_TYPES = [
 ];
 
 const OPEN_ENDED_PROJECT_TYPES = [
+  'sketchlab',
   'music_dance_ai',
   'music',
   'spritelab',
   'game_design',
   'dance',
   'poetry_hoc',
-  'sketchlab',
 ];
 
 const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];

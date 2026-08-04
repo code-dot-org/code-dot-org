@@ -14,6 +14,7 @@ import AllProjectsIcon from '@/config/brand/assets/courses/header-all-projects-i
 import MusicDanceAiIcon from '@/config/brand/assets/courses/music-dance-ai-icon.webp';
 import MusicLabIcon from '@/config/brand/assets/courses/music-lab-icon.webp';
 import PythonLabIcon from '@/config/brand/assets/courses/python-lab-icon.webp';
+import SketchLabIcon from '@/config/brand/assets/courses/sketch-lab-icon.webp';
 import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
 import WebLab2Icon from '@/config/brand/assets/courses/weblab2-icon.webp';
 import CodeAILogo from '@/config/brand/assets/logo-codeai-inverse.svg';
@@ -108,6 +109,12 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       label: 'Dance',
       href: '/projects/dance/new',
       iconUrl: DanceIcon,
+    },
+    {
+      id: 'sketchlab',
+      label: 'Sketch Lab',
+      href: '/projects/sketchlab/new',
+      iconUrl: SketchLabIcon,
     },
     {
       id: 'view_all',
