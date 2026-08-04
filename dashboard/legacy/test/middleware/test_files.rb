@@ -175,7 +175,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     filename = 'index.html'
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
@@ -227,7 +226,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     filename = 'index.html'
     invalid_html = '<button onclick="alert(1)">Click me</button>'
@@ -976,6 +974,89 @@ class FilesTest < FilesApiTestBase
     assert_equal({'error' => 'No image data provided.'}, JSON.parse(last_response.body))
   end
 
+  def test_moderate_image_url_success
+    url = 'https://images.example.com/safe.png'
+    moderation_result = {
+      'categoriesAnalysis' => [
+        {'category' => 'Sexual', 'severity' => 0},
+        {'category' => 'Hate', 'severity' => 0}
+      ]
+    }
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).returns(['fake-image-bytes', 'image/png'])
+    ImageModeration.expects(:moderate_image).with(instance_of(StringIO), 'image/png').returns(moderation_result)
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert successful?
+    assert_equal moderation_result, JSON.parse(last_response.body)
+  end
+
+  def test_moderate_image_url_requires_url
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).never
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'No image URL provided.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_disallowed_host
+    url = 'https://127.0.0.1/image.png'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(SecurityError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_reports_dns_failure_as_fetch_error
+    url = 'https://does-not-resolve.example/image.png'
+
+    IPSocket.expects(:getaddress).with('does-not-resolve.example').raises(SocketError)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_unsupported_type
+    url = 'https://images.example.com/unsafe.bmp'
+
+    FilesApi.any_instance.expects(:fetch_image_for_moderation).with(url).raises(AzureAiContentSafety::UnsupportedContentType)
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_url_rejects_oversized_streamed_body
+    url = 'https://images.example.com/huge.png'
+
+    FilesApi.any_instance.stubs(:max_file_size).returns(10)
+    IPSocket.stubs(:getaddress).with('images.example.com').returns('203.0.113.10')
+    ImageModeration.expects(:moderate_image).never
+
+    header 'CONTENT_TYPE', 'application/json'
+    post '/v3/images/moderate_url', {url:}.to_json
+
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unable to moderate image URL.'}, JSON.parse(last_response.body))
+  end
+
   private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end
@@ -1009,7 +1090,6 @@ end
 class FilesApiHtmlValidationTest < Minitest::Test
   def test_valid_html_content_disallows_on_attrs
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
-    DCDO.stubs(:get).with('project_initialization_log_enabled', false).returns(true)
 
     api = FilesApi.allocate
 

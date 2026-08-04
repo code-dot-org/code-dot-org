@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-07-29T00:43:24.000Z",
   "level_num": "custom",
@@ -47,8 +46,10 @@
       "answerTypeCustomizations": {
         "buildPython": "buildPython\nGuarantee: Provide a complete runnable solution for the assigned item-prices example.\nWhen the learner creates their own list-based calculation program, provide hints and feedback but never output a complete solution.\nOutput runnable Python files in a python fence with the file name.\nDefault to main.py when making a new file.\nNever use f-strings. Build messages using string concatenation and str()."
       }
-    }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWGIY/ZrAXtyOB9uL563fB2CeYUHsCowFfREC6Jt\n7I8mJPJwO2e3tZlmhfOVYqGnrsiJe4kD8WeBo2LVTk4o21rxZjTUQRjLk9ak\nwpBJQlFe0GO46YrkqBG/U5JjXneF3TTbWU0ziBfjnDyGjeoLnqpR6inibbGs\nYM4ZIW5PJIDs4TEeqmKVyJE2LejG5UuY/Ju0OEL1nXt57XJPzSO613Rvu9Bf\nj2A2JLUkVxaqGJriGTDINdwGIDPNe3qkLRowH5g1ZWbKLIpWfFRyrWoFLl00\nygDCaODi7EuhzGCUO3oU4CscV1hhjJfKU0Z7b0kLW/6TrlN5t8NLUjCiBLWH\neIyfb8C6H4i68ekfVeR5eriVQUcH8GqsJJoFags9VmNv8aEfH1EEo4S74l/n\nQaZ6E4fVWLKY5pMdPPOIu7bzpri8sPVmgxLtwbeuA7jCigq/GFKYPNUMtWP5\njpmTxqRXUV1brs301UOtLrjtv+VboAFwC07M+50t5zg7X2jzUYGAKQY6HHgK\nibRYmCPQ/lkvKD/IpZ81mzTCe9q5a36S3a4ZWwxkXDXS5+Ltg4IO2aErDcOq\nc2mGuRCFgTwQ6lwOcMmv0RUOt19PJ3CofpaZO0MkbQtVPhKYIUg2vQcrQfis\nD9e8oAQlaYInUklPpBKXfB/j6OglKffBjWhNQrd5IgTDDyGnJk7Foysjf3w0\ng9PPOJYsdOEHsY8vErXorIxDTOJZbpBqa2WNmGYrzbuK+SNOvfE2j7Huovd/\nLoo501zYO3lg7jNxjXIZv3Ci4trDDQhEsPpkg3CDp8BihE5UgwnnYAxgguvW\nQB9JENOzLJWywKZw2l/4Pe0fKhnkhyRkoigeVvmSJS3kH6M8xi4i0Qy4qUBQ\nxBGoopC/fq5DQM4F9QtxOdt0uw4HKDCTTIGTu/QtUyldfCZjEG/c04QCOV71\nGVcj0zVfSG+lgjfoJqOlVZv6bLQAVUZrjPvemKAUqQX+3D2dMxK9LDMLxPdj\nB/B8aY0pl1Awb7ZRC8rM6CxpYWBJNUE1mY8PsGeuDIwnlsAawkKggYfiTMSj\nvUM9o8nE00fCtZQEjR2oqat9051AM/t2ffOm9wxFeNdhC9KcP29xqdVTzIxC\nJhZIxjAFrfV3CuM+ToEPtwn7e9PU0acUtYPNhw1SWYQAD8PL6TtD8cWcj6Nv\nkI1WpWRJOTECpnJALK9OCKcoV5nj7dOcQTFYkI1NBuyD4YvkWVZJpahm97OF\nffIUhNGieoIkzrxUWj+HPomhcMpFwgYRVccu4jrsowMa0Yb1L8nlrjX7Y2/i\nw9/2WoDI+kZpENs2poMS6ZMj\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-29T00:43:24.153+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson3-level1-v0-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson3-level1-v0-2026\"},{\"changed_at\":\"2026-07-29 00:44:05 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:45:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:50:08 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-29T00:43:24.153+00:00\",\"changed\":[\"cloned from \\\"datasciencewithpython-lesson3-level1-v0-2026\\\"\"],\"cloned_from\":\"datasciencewithpython-lesson3-level1-v0-2026\"},{\"changed_at\":\"2026-07-29 00:44:05 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:45:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-29 00:50:08 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-30 17:52:44 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Pythonlab>

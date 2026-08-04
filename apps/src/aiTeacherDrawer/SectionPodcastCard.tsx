@@ -11,6 +11,11 @@ export interface SuggestedLesson {
   url?: string;
   podcast_url?: string | null;
   completed_unit?: boolean;
+  timestamp?: string;
+}
+
+export interface SuggestedLessonEntry extends SuggestedLesson {
+  date: string;
 }
 
 type AudioStatus = 'loading' | 'ready' | 'unavailable';
@@ -88,7 +93,19 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
     <div className={styles.sectionGroup}>
       <div className={styles.sectionRow}>
         <SectionAvatar color={avatarColor} emoji={avatarEmoji} size="xs" />
-        <span className={styles.sectionName}>{sectionName}</span>
+        <div className={styles.sectionInfo}>
+          <span className={styles.sectionName}>{sectionName}</span>
+          {lesson?.completed_unit ? (
+            <span className={styles.lessonName}>
+              Your students are finishing this unit! Consider assigning a new
+              one.
+            </span>
+          ) : (
+            lesson?.name && (
+              <span className={styles.lessonName}>{lesson.name}</span>
+            )
+          )}
+        </div>
         <FontAwesomeV6Icon iconName="chevron-right" />
       </div>
       {hasPodcast && (

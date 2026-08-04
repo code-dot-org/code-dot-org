@@ -1570,6 +1570,14 @@ columns:
     comment: 
   - *12
   - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: evaluation_status
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   challenges:
   - *9
   - &82 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -16359,7 +16367,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20260729193550
+version: 20260729204552
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

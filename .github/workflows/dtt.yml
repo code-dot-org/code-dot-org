@@ -1,7 +1,7 @@
 # Dispatcher for the DTT (Deploy To Test) post-deploy Playwright e2e run.
 #
 # The test-server daemon triggers this via the GitHub REST API (workflow_dispatch,
-# ref: test) at the end of test:ui_all, moving e2e browser execution off the single
+# ref: test) at the start of test:ui_all, moving e2e browser execution off the single
 # daemon and onto GitHub Actions runners. It runs the same suite as the PR lane,
 # against the deployed test-studio. Fire-and-forget: the daemon does not wait for
 # or gate on the result. Note, all browsers are executed on DTT instead of just 

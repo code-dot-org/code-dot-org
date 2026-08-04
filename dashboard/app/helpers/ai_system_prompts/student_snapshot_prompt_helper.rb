@@ -106,7 +106,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
     levels = lesson.levels.order(:position)
-    assessment_level = lesson.levels.where(type: 'Pythonlab').last
+    assessment_level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
     level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}

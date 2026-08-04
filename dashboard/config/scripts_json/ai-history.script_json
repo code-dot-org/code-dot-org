@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-09 16:15:34 UTC",
+    "serialized_at": "2026-07-31 21:42:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -579,7 +579,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-history-lesson2-level1-2026"
+          "ai-history-lesson2-level1-v2-2026"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -587,7 +587,7 @@
         "activity_section.key": "87422adb-b51e-4b56-b171-71087165d4fc"
       },
       "level_keys": [
-        "ai-history-lesson2-level1-2026"
+        "ai-history-lesson2-level1-v2-2026"
       ]
     }
   ],
@@ -618,9 +618,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-history-lesson2-level1-2026",
+        "level.key": "ai-history-lesson2-level1-v2-2026",
         "script_level.level_keys": [
-          "ai-history-lesson2-level1-2026"
+          "ai-history-lesson2-level1-v2-2026"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

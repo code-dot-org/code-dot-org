@@ -1,0 +1,10 @@
+name 'problem-solving-with-ai-lesson6-decision-making-choice'
+display_name 'Reviewing Profiles'
+description 'Pick one of the levels below. Review the six profiles and select two people.'
+
+sublevels
+level 'problem-solving-with-ai-lesson6-decision-making-choice-a'
+level 'problem-solving-with-ai-lesson6-decision-making-choice-b'
+level 'problem-solving-with-ai-lesson6-decision-making-choice-c'
+
+uses_lab2

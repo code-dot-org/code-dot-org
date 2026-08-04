@@ -1468,6 +1468,31 @@ FactoryBot.define do
   factory :challenge do
     association :lesson
     question {'What is 2 + 2?'}
+
+    trait :with_rubric do
+      rubric do
+        {
+          'criteria' => [
+            {
+              'key' => 'accuracy',
+              'description' => 'The answer is mathematically correct',
+              'scale' => [
+                {'level' => 'meets', 'description' => 'Answer is correct'},
+                {'level' => 'developing', 'description' => 'Answer is partially correct'},
+              ],
+            },
+            {
+              'key' => 'explanation',
+              'description' => 'The reasoning is clearly explained',
+              'scale' => [
+                {'level' => 'meets', 'description' => 'Reasoning is complete and clear'},
+                {'level' => 'developing', 'description' => 'Reasoning is incomplete'},
+              ],
+            },
+          ],
+        }
+      end
+    end
   end
 
   factory :challenge_response do
