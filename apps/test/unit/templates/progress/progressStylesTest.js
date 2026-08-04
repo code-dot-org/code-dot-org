@@ -38,7 +38,9 @@ describe('progressStyles', () => {
     });
 
     it('when levelStatus is completed assessment has expected background and border color', () => {
-      const progressStyle = levelProgressStyle(LevelStatus.completed_assessment);
+      const progressStyle = levelProgressStyle(
+        LevelStatus.completed_assessment
+      );
 
       expect(progressStyle.backgroundColor).toBe(SUCCESS_BG);
       expect(progressStyle.borderColor).toBe(SUCCESS_BORDER);

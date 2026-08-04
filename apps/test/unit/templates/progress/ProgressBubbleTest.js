@@ -314,9 +314,7 @@ describe('ProgressBubble', () => {
     expect(star).to.have.lengthOf(1);
 
     const style = bubble.childAt(0).props().style;
-    expect(style.backgroundColor).to.equal(
-      'var(--background-neutral-primary)'
-    );
+    expect(style.backgroundColor).to.equal('var(--background-neutral-primary)');
     expect(style.borderColor).to.equal('var(--borders-neutral-primary)');
     expect(style.color).to.equal('var(--text-neutral-primary)');
   });
