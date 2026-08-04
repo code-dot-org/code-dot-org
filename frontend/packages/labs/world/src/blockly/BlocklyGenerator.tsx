@@ -144,7 +144,16 @@ export const BlocklyGenerator = forwardRef<
             },
           });
           (generator as {__ruleModule?: string}).__ruleModule = undefined;
-          return generator.finish(ruleMetaToModule(meta, bodies));
+          // What the bodies imported, so the declarations do not import it
+          // again — `finish` prepends these, and two imports of one name is a
+          // build failure rather than a redundancy (ruleMetaToModule).
+          const imported = new Set(
+            Object.keys(
+              (generator as unknown as {definitions_?: Record<string, string>})
+                .definitions_ ?? {},
+            ),
+          );
+          return generator.finish(ruleMetaToModule(meta, bodies, imported));
         }
 
         // A root block (an event handler, or an actor/world definition)

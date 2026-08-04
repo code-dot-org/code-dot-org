@@ -11,6 +11,7 @@ import {rippleEffect} from './effect/stock';
 import {
   arrowsRule,
   collisionRule,
+  contactsRule,
   gravityRule,
   inputRule,
   motionRule,
@@ -486,6 +487,13 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         name: 'motion.rule',
         language: 'rule',
         contents: motionRule,
+        folderId: 'rules',
+      },
+      contactsRule: {
+        id: 'contactsRule',
+        name: 'contacts.rule',
+        language: 'rule',
+        contents: contactsRule,
         folderId: 'rules',
       },
       collisionRule: {

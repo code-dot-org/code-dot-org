@@ -133,10 +133,37 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    scratch). It is also kept out of the map editor's property panel: there is no
    field that would edit one.
 
-2. **`Contacts`.** The stock rule: the `Can Collide` trait moves to it, it
-   declares `contacts`, and its step fills them.
-3. **`Solid Bodies`.** The response, X-then-Y, requiring Contacts — and the
-   starter project using both, so nothing a learner sees changes except that
-   jumping along a wall now slides.
+2. **`Contacts`.** ✅ Everything that MEASURES moved: the `Can Collide` trait
+   and its `size`, `collision size of`, and `is touching`. It declares
+   `contacts` (read-only, actors) and a `find` step, ordered after Motion, that
+   writes each actor's. `Collisions` requires it, references its trait, and
+   anchors `resolve` on `find` — so the per-tick chain is velocity → move →
+   find → push → land, ordered rather than merely hoped for.
+
+   It turned up a latent bug in module generation, which the split was the
+   first thing to trigger: a rule's module is written by two hands — the
+   declarations, and the bodies the Blockly generator produced — and both
+   emit imports keyed the same way without seeing each other. A member used in
+   a declaration AND in a body was imported twice, which esbuild refuses
+   ("The symbol X has already been declared"). The bodies' keys are passed to
+   `ruleMetaToModule` now.
+
+3. **The response, one axis at a time.** ✅ `resolve` walks each mover's
+   CONTACTS twice — sideways, then up or down — and the single
+   axis-choosing `push out of over` is two actions, one per axis. Which axis a
+   pass resolves is the caller's business now; what each pass decides is only
+   whether the body was already overlapping the OTHER way, which is what tells
+   a wall from a floor.
+
+   The asymmetry between the two passes is the whole thing, and getting it
+   wrong the first time cost a wall-jump: sideways looks at where the body WAS
+   vertically (its vertical position has not been corrected yet), and up-or-down
+   looks at where it IS horizontally (the sideways pass has already corrected
+   that). Testing the previous x in the second pass makes a wall push the body
+   vertically and cancel its jump — which is the old bug wearing a new hat.
+
+   Still to do in this step: the rule is called `Collisions` and should be
+   called `Solid Bodies`, since noticing collisions is Contacts' job now.
+
 4. **Gravity reads contacts** instead of re-deriving landing.
 5. **`bounciness` and `friction`** on `Solid Bodies`.

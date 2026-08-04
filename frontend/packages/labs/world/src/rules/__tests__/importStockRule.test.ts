@@ -74,12 +74,17 @@ describe('importStockRule', () => {
     expect(source.files.f1.contents).toBe('{}');
     expect(path).toBe('rules/gravity');
     // Its dependencies still arrive: the learner's file may be a rule of their
-    // own by that name, and either way collision and motion have to be there.
+    // own by that name, and either way the chain below it has to be there.
     expect(
       Object.values(source.files)
         .map(f => f.name)
         .sort(),
-    ).toEqual(['collision.rule', 'gravity.rule', 'motion.rule']);
+    ).toEqual([
+      'collision.rule',
+      'contacts.rule',
+      'gravity.rule',
+      'motion.rule',
+    ]);
   });
 
   it('counts a same-stem file of ANY extension as already there', () => {
@@ -137,6 +142,7 @@ describe('importing what a rule needs', () => {
     const {source} = importStockRule(project(), gravity);
     expect(rulePaths(source)).toEqual([
       'rules/collision',
+      'rules/contacts',
       'rules/gravity',
       'rules/motion',
     ]);
@@ -177,6 +183,7 @@ describe('importing what a rule needs', () => {
     const second = importStockRule(edited, gravity);
     expect(rulePaths(second.source)).toEqual([
       'rules/collision',
+      'rules/contacts',
       'rules/gravity',
       'rules/motion',
     ]);
@@ -189,8 +196,11 @@ describe('importing what a rule needs', () => {
   it('says in advance what else it will add', () => {
     // The dialog shows this before a learner picks, so files appearing in
     // `rules/` are something they were told about rather than a surprise.
+    // Deepest first, as they are copied: gravity wants collision, collision
+    // wants contacts, and both of them want motion.
     expect(stockRequirements(gravity).map(r => r.id)).toEqual([
       'motion',
+      'contacts',
       'collision',
     ]);
     expect(stockRequirements(stockRule('motion')!)).toEqual([]);

@@ -20,6 +20,7 @@ describe('projectFiles', () => {
       'rules/animation.js',
       'rules/arrows.rule',
       'rules/collision.rule',
+      'rules/contacts.rule',
       'rules/gravity.rule',
       'rules/input.rule',
       'rules/motion.rule',
