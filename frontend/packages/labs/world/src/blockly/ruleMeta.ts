@@ -382,6 +382,10 @@ const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   'string',
   'vector',
   'point',
+  // What a rule works out about who is where (specs/COLLISION.md). Not offered
+  // as a query's return type below: a query reports a single value, and this is
+  // one or many.
+  'actors',
 ]);
 
 // The types an authored query may return (its `TYPE` dropdown → the reporter's
@@ -397,6 +401,10 @@ const QUERY_RETURN_TYPES: ReadonlySet<string> = new Set([
 /** Parse an authored default (a text field) into a value of the property's type. */
 const parseDefault = (text: string, type: PropertyType): unknown => {
   switch (type) {
+    // No actors. There is no other sensible starting value for a set a rule
+    // works out each tick, and no text a learner could type that would be one.
+    case 'actors':
+      return [];
     case 'boolean':
       return text.trim().toLowerCase() === 'true';
     case 'string':
@@ -914,6 +922,10 @@ export function extractRuleBodies(
 const defaultLiteral = (property: PropertyMeta): string => {
   const value = property.default;
   switch (property.type) {
+    // No actors — and a fresh array per declaration, not one shared by every
+    // actor that has the property.
+    case 'actors':
+      return '[]';
     case 'boolean':
       return value ? 'true' : 'false';
     case 'string':

@@ -37,10 +37,30 @@ export interface ActorInit {
 
 // A `vector` (directional) and a `point` (an x/y pair, e.g. scale) are both
 // stored as a `Vector`; they differ only in how the editor presents them.
-const coerce = <T>(property: Property<T>, value: unknown): T =>
-  property.type === 'vector' || property.type === 'point'
-    ? (Vector.from(value as Vector) as unknown as T)
-    : (value as T);
+const coerce = <T>(property: Property<T>, value: unknown): T => {
+  if (property.type === 'vector' || property.type === 'point') {
+    return Vector.from(value as Vector) as unknown as T;
+  }
+  // An actors property always holds a list, and always its OWN.
+  //
+  // Its own because a declaration's default is one value and every actor is
+  // seeded from it: sharing it would make one actor's contacts every actor's.
+  // A list because that is what the property means, so `set contacts to ⟨that
+  // actor⟩` stores a list of one rather than something to special-case later.
+  // Anything that is not actors at all — the empty text a declaration carries
+  // when it has no default to give — is no actors.
+  if (property.type === 'actors') {
+    if (Array.isArray(value)) {
+      return [...value] as unknown as T;
+    }
+    return (isActor(value) ? [value] : []) as unknown as T;
+  }
+  return value as T;
+};
+
+/** An Actor by duck type — importing the class here would be this file. */
+const isActor = (value: unknown): boolean =>
+  typeof value === 'object' && value !== null && 'traits' in value;
 
 export class Actor {
   /**
