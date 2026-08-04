@@ -83,6 +83,7 @@ import {
   localActorFor,
   localActorVar,
 } from './localActors';
+import {yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
@@ -949,9 +950,6 @@ const isGettable = (property: PropertyMeta): boolean =>
 // because wrapping `this actor` in a broadcast would make every actor file
 // harder to read for a case it does not have.
 
-/** The blocks that yield more than one actor. */
-const MANY_ACTOR_BLOCKS = new Set(['world_actor_kind', 'world_all_actors']);
-
 /** An `ACTOR` socket's expression, and whether it could hold several. */
 interface ActorTarget {
   code: string;
@@ -971,10 +969,10 @@ const actorTarget = (
   block: Block,
   generator: JavascriptGenerator,
   order: number = Order.NONE,
+  name = 'ACTOR',
 ): ActorTarget => {
-  const code = generator.valueToCode(block, 'ACTOR', order) || 'actor';
-  const plugged = block.getInputTargetBlock?.('ACTOR');
-  return {code, many: MANY_ACTOR_BLOCKS.has(plugged?.type ?? '')};
+  const code = generator.valueToCode(block, name, order) || 'actor';
+  return {code, many: yieldsMany(block.getInputTargetBlock?.(name))};
 };
 
 /**
@@ -2146,6 +2144,105 @@ const worldAllActors = defineBlock({
     },
   },
 });
+
+/**
+ * Add an actor to what a variable holds (specs/ACTOR_LISTS.md).
+ *
+ * The variable is a FIELD, not a socket, because this changes what the variable
+ * holds and a socket hands over a value rather than a place to put one. A
+ * variable holding one actor becomes a list of two; one already holding several
+ * is appended to in place, so a set built across a loop is one list and not a
+ * chain of copies.
+ */
+const worldPushActor = defineBlock({
+  type: 'world_push_actor',
+  message0: 'add %1 to %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    ActorVariable.field('LIST'),
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Add an actor to the actors a variable holds — building up a group as you ' +
+    'go, one at a time.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      const target = actorTarget(block, generator);
+      return `${list} = WorldLab.pushed(${list}, ${oneActor(target)});\n`;
+    },
+  },
+});
+
+/** Empty a variable — what a per-tick set does before it is filled again. */
+const worldClearActors = defineBlock({
+  type: 'world_clear_actors',
+  message0: 'empty %1',
+  args0: [ActorVariable.field('LIST')],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'sprite_blocks',
+  tooltip: 'Leave a variable holding no actors at all.',
+  generator: {
+    javascript(block, generator) {
+      const list = generator.getVariableName(block.getFieldValue('LIST'));
+      return `${list} = [];\n`;
+    },
+  },
+});
+
+/** How many actors a value holds — one, for a value holding one. */
+const worldCountActors = defineBlock({
+  type: 'world_count_actors',
+  message0: 'how many actors in %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Number',
+  extensions: [actorInputExtension],
+  style: 'math_blocks',
+  tooltip: 'How many actors a value holds.',
+  generator: {
+    javascript(block, generator) {
+      const target = actorTarget(block, generator);
+      return [`WorldLab.all(${target.code}).length`, Order.MEMBER] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
+/** Whether an actor is among the actors a value holds. */
+const worldIsInActors = defineBlock({
+  type: 'world_is_in_actors',
+  message0: '%1 is in %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'input_value', name: 'LIST', check: 'Actor'},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [actorInputExtension, valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip: 'Whether an actor is one of the actors a value holds.',
+  generator: {
+    javascript(block, generator) {
+      const actor = actorTarget(block, generator);
+      const list = actorTarget(block, generator, Order.NONE, 'LIST');
+      return [
+        `WorldLab.all(${list.code}).includes(${oneActor(actor)})`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_is_in_actors', [
+  {name: 'LIST', shadow: {type: 'world_all_actors'}},
+]);
 
 const worldForEach = defineBlock({
   type: 'world_for_each',
@@ -3495,6 +3592,10 @@ export const DOMAIN_BLOCKS = [
   worldActorKind,
   ActorVariable.getterBlock,
   worldAllActors,
+  worldPushActor,
+  worldClearActors,
+  worldCountActors,
+  worldIsInActors,
   worldForEach,
   worldIsA,
   worldAddActor,
@@ -3575,6 +3676,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
       'world_all_actors',
+      // Building a group up, and asking about one.
+      'world_push_actor',
+      'world_clear_actors',
+      'world_count_actors',
+      'world_is_in_actors',
       ActorVariable.getterType,
       'world_is_a',
     ],

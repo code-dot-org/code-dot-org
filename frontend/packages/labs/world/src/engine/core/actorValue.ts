@@ -44,6 +44,26 @@ export function each(value: ActorValue, body: (actor: Actor) => void): void {
 }
 
 /**
+ * `value` with `actor` added — what `push … to ⟨var⟩` assigns back.
+ *
+ * A value already holding several is appended to IN PLACE, because a set built
+ * across a loop is the whole point and two variables naming one list should see
+ * each other's pushes. A value holding one actor cannot be appended to, so it
+ * becomes a list of two, and the actor that was in it is untouched — which is
+ * why this returns the value rather than only mutating it.
+ */
+export function pushed(
+  value: ActorValue | undefined,
+  actor: Actor,
+): readonly Actor[] {
+  if (Array.isArray(value)) {
+    (value as Actor[]).push(actor);
+    return value;
+  }
+  return value ? [value as Actor, actor] : [actor];
+}
+
+/**
  * The actor a value reads as — the first, when it holds several.
  *
  * Typed as an `Actor` rather than `Actor | undefined` because that is what a
