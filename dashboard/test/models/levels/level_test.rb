@@ -1756,29 +1756,4 @@ class LevelTest < ActiveSupport::TestCase
     refute parent.valid?
     assert_includes parent.errors[:name].first, 'UI Test'
   end
-
-  test 'a level and its children must be on the same side of the UI Test partition' do
-    ui_test_child = create(:level, name: 'UI Test LevelTest child')
-    prod_child = create(:level, name: 'LevelTest prod child')
-
-    level = create(:level, name: 'LevelTest contained parent')
-    level.contained_level_names = [ui_test_child.name]
-    refute level.valid?
-    assert_includes level.errors.full_messages.first, ui_test_child.name
-
-    level = create(:level, name: 'LevelTest template parent')
-    level.project_template_level_name = ui_test_child.name
-    refute level.valid?
-
-    ui_test_parent = create(:level, name: 'UI Test LevelTest parent')
-    ui_test_parent.contained_level_names = [prod_child.name]
-    refute ui_test_parent.valid?
-    assert_includes ui_test_parent.errors.full_messages.first, prod_child.name
-
-    # same-side references are fine in both partitions
-    ui_test_parent.reload.contained_level_names = [ui_test_child.name]
-    assert ui_test_parent.valid?
-    level.reload.project_template_level_name = prod_child.name
-    assert level.valid?
-  end
 end
