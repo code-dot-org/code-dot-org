@@ -10,12 +10,10 @@ import PixelEditorModal, {
   PixelEditorSaveMeta,
 } from '@cdo/apps/pixelEditor/PixelEditorModal';
 import {getStore} from '@cdo/apps/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {
-  deleteAssetFromProject,
-  UploadImageFunction,
-} from '../ai/items/itemGeneration';
+import {UploadImageFunction} from '../ai/items/itemGeneration';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -115,7 +113,7 @@ const GenerateImagePane: React.FunctionComponent<{
       if (stillUsed) {
         return;
       }
-      deleteAssetFromProject(url).catch(() => undefined);
+      HttpClient.delete(url, true).catch(() => undefined);
     },
     [channelId]
   );
