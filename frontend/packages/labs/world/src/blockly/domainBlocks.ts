@@ -949,6 +949,9 @@ const isGettable = (property: PropertyMeta): boolean =>
 // because wrapping `this actor` in a broadcast would make every actor file
 // harder to read for a case it does not have.
 
+/** The blocks that yield more than one actor. */
+const MANY_ACTOR_BLOCKS = new Set(['world_actor_kind', 'world_all_actors']);
+
 /** An `ACTOR` socket's expression, and whether it could hold several. */
 interface ActorTarget {
   code: string;
@@ -971,7 +974,7 @@ const actorTarget = (
 ): ActorTarget => {
   const code = generator.valueToCode(block, 'ACTOR', order) || 'actor';
   const plugged = block.getInputTargetBlock?.('ACTOR');
-  return {code, many: plugged?.type === 'world_actor_kind'};
+  return {code, many: MANY_ACTOR_BLOCKS.has(plugged?.type ?? '')};
 };
 
 /**
@@ -987,6 +990,21 @@ const forEachActor = (
   target.many
     ? `WorldLab.each(${target.code}, actor => ${body('actor')});\n`
     : `${body(target.code)};\n`;
+
+/**
+ * What a `for … of` walks for a loop's SOURCE socket.
+ *
+ * `all actors` is already every actor and already iterable, so the common case
+ * emits what it always did — `world.actors`, no copy, no wrapper. Anything else
+ * is an actor value, one or many, and `WorldLab.all` makes a list of it.
+ */
+const actorSource = (block: Block, generator: JavascriptGenerator): string => {
+  const plugged = block.getInputTargetBlock?.('SOURCE');
+  if (!plugged || plugged.type === 'world_all_actors') {
+    return 'world.actors';
+  }
+  return `WorldLab.all(${generator.valueToCode(block, 'SOURCE', Order.NONE) || 'actor'})`;
+};
 
 /** An actor value read as one actor — the first, when it holds several. */
 const oneActor = (target: ActorTarget): string =>
@@ -2108,19 +2126,42 @@ const worldActorKind = defineBlock({
 // bare identifier `actor`, so a loop variable named `actor` would shadow it
 // (`for (const actor of world.actors)`) and break "this actor is touching it".
 // The generator also reserves `actor` (see BlocklyGenerator) against a rename.
+/**
+ * Every actor in the world — the value a loop walked before it could be given
+ * one, and an actor value like any other (specs/ACTOR_LISTS.md).
+ *
+ * A copy, because a source is read once at the top of a loop: a rule that adds
+ * actors while iterating them terminates.
+ */
+const worldAllActors = defineBlock({
+  type: 'world_all_actors',
+  message0: 'all actors',
+  output: 'Actor',
+  extensions: [worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Every actor in the world, as it is now.',
+  generator: {
+    javascript() {
+      return ['[...world.actors]', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
 const worldForEach = defineBlock({
   type: 'world_for_each',
-  message0: 'for each actor %1 where %2',
+  message0: 'for each actor %1 in %2 where %3',
   args0: [
     ActorVariable.field('VAR'),
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
     {type: 'input_value', name: 'WHERE', check: 'Boolean'},
   ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  // Iterates `world.actors`, so warn where `world` is unbound; the WHERE socket
-  // seeds a `true` shadow (run for every actor until a predicate is dropped in).
+  // Iterates a source, so warn where `world` is unbound (the default source is
+  // the world's own actors); the SOURCE socket seeds `all actors` and the WHERE
+  // socket a `true` shadow, so a loop dragged out reads as it always did.
   extensions: [worldContextExtension, valueShadowExtension],
   style: 'loop_blocks',
   tooltip:
@@ -2131,11 +2172,12 @@ const worldForEach = defineBlock({
       const variable = generator.getVariableName(block.getFieldValue('VAR'));
       const where = generator.valueToCode(block, 'WHERE', Order.NONE) || 'true';
       const body = generator.statementToCode(block, 'DO');
-      return `for (const ${variable} of world.actors) {\nif (${where}) {\n${body}}\n}\n`;
+      return `for (const ${variable} of ${actorSource(block, generator)}) {\nif (${where}) {\n${body}}\n}\n`;
     },
   },
 });
 registerValueShadows('world_for_each', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
   {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
 ]);
 
@@ -3452,6 +3494,7 @@ export const DOMAIN_BLOCKS = [
   worldThisActor,
   worldActorKind,
   ActorVariable.getterBlock,
+  worldAllActors,
   worldForEach,
   worldIsA,
   worldAddActor,
@@ -3531,6 +3574,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_this_actor',
       // The 'any of this kind' counterpart, for a world file naming several.
       'world_actor_kind',
+      'world_all_actors',
       ActorVariable.getterType,
       'world_is_a',
     ],
