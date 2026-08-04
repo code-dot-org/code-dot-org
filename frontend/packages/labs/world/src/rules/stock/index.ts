@@ -11,11 +11,11 @@
 // default project is a project that imported it.
 
 import {arrowsRule} from './arrows';
-import {collisionRule} from './collision';
-import {contactsRule} from './contacts';
+import {collisionsRule} from './collisions';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
 import {motionRule} from './motion';
+import {solidRule} from './solid';
 
 /** One entry in the library. */
 export interface StockRule {
@@ -75,22 +75,22 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: motionRule,
   },
   {
-    id: 'contacts',
-    name: 'Contacts',
-    ability: 'Notices Contacts',
+    id: 'collisions',
+    name: 'Collisions',
+    ability: 'Notices Collisions',
     description:
       'Works out which actors are touching which, once a tick, and writes each one down. Says nothing about what to do about it.',
     provides: ['Can Collide'],
-    contents: contactsRule,
+    contents: collisionsRule,
   },
   {
-    id: 'collision',
-    name: 'Collisions',
-    ability: 'Has Collisions',
+    id: 'solid',
+    name: 'Solid Bodies',
+    ability: 'Has Solid Bodies',
     description:
       'Stops moving actors passing through solid ones, pushing them out at the face they entered.',
-    provides: ['Can Collide', 'Solid'],
-    contents: collisionRule,
+    provides: ['Solid'],
+    contents: solidRule,
   },
   {
     id: 'input',
@@ -135,8 +135,8 @@ export function stockRuleByName(name: string): StockRule | undefined {
 
 export {
   arrowsRule,
-  collisionRule,
-  contactsRule,
+  solidRule,
+  collisionsRule,
   gravityRule,
   inputRule,
   motionRule,

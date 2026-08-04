@@ -10,8 +10,8 @@ import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
 import {
   arrowsRule,
-  collisionRule,
-  contactsRule,
+  solidRule,
+  collisionsRule,
   gravityRule,
   inputRule,
   motionRule,
@@ -42,7 +42,7 @@ export const ENTRY_FILE = 'worlds/main.world';
 // what makes it that kind of actor and nothing else.
 
 const GROUND_ACTOR = `import {ActorBuilder, SpriteProperty} from 'world-lab';
-import {SolidTrait} from 'rules/collision';
+import {SolidTrait} from 'rules/solid';
 import {ActsAsGroundTrait} from 'rules/gravity';
 
 // A ground tile: landable (ActsAsGroundTrait, from the project's own gravity
@@ -489,18 +489,18 @@ export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
         contents: motionRule,
         folderId: 'rules',
       },
-      contactsRule: {
-        id: 'contactsRule',
-        name: 'contacts.rule',
+      collisionsRule: {
+        id: 'collisionsRule',
+        name: 'collisions.rule',
         language: 'rule',
-        contents: contactsRule,
+        contents: collisionsRule,
         folderId: 'rules',
       },
-      collisionRule: {
-        id: 'collisionRule',
-        name: 'collision.rule',
+      solidRule: {
+        id: 'solidRule',
+        name: 'solid.rule',
         language: 'rule',
-        contents: collisionRule,
+        contents: solidRule,
         folderId: 'rules',
       },
       animationRule: {

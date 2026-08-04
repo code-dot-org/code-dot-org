@@ -22,14 +22,20 @@ ordered after `resolve`.
 
 ## The split
 
-- **`Contacts`** — detection. Works out which actors overlap which, and says so.
-  Pushes nothing, changes no velocity.
-- **`Solid Bodies`** — the default response. Requires Contacts; applies the
+- **`Collisions`** — detection. Works out which actors overlap which, and says
+  so. Pushes nothing, changes no velocity. Noticing a collision is what this
+  rule is FOR, so it is what the name says.
+- **`Solid Bodies`** — the default response. Requires Collisions; applies the
   push-out and stops the velocity. Today's behaviour, in a file that can be
-  opened, replaced, or left out.
+  opened, replaced, or left out. It does not notice collisions; it decides what
+  a solid body does about one.
 
 Gravity then reads contacts instead of re-deriving landing, and a project that
 wants bouncing writes a rule beside `Solid Bodies` rather than inside it.
+
+The names went the other way round at first — the detector was `Contacts` and
+the responder kept `Collisions` — which read as one rule cut in half rather than
+as two rules with different jobs.
 
 ## The storage decision
 
@@ -162,8 +168,10 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    that). Testing the previous x in the second pass makes a wall push the body
    vertically and cancel its jump — which is the old bug wearing a new hat.
 
-   Still to do in this step: the rule is called `Collisions` and should be
-   called `Solid Bodies`, since noticing collisions is Contacts' job now.
+   ✅ And the names: the detector is `Collisions` (`rules/collisions.rule`) and
+   the responder is `Solid Bodies` (`rules/solid.rule`). A swap, so it went
+   through placeholders — renaming the detector first would have caught what the
+   second rename was for.
 
 4. **Gravity reads contacts** instead of re-deriving landing.
 5. **`bounciness` and `friction`** on `Solid Bodies`.

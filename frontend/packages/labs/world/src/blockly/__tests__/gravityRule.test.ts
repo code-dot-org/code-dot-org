@@ -33,7 +33,7 @@ describe('rules/gravity.rule', () => {
     expect(meta.name).toBe('Gravity');
     expect(meta.ability).toBe('Has Gravity');
     // Collision is a project rule now, named by module path.
-    expect(meta.requires).toEqual(['Physics', 'Collisions']);
+    expect(meta.requires).toEqual(['Physics', 'Solid Bodies']);
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',
@@ -121,7 +121,7 @@ describe('rules/gravity.rule', () => {
     // they ended up. The anchor names that rule, wherever its file is.
     const step = meta.steps.find(s => s.id === 'handleCollisions');
     expect(step?.order.kind).toBe('after');
-    expect(step?.order.anchor?.ownerRef.ruleName).toBe('Collisions');
+    expect(step?.order.anchor?.ownerRef.ruleName).toBe('Solid Bodies');
     expect(step?.order.anchor?.stepId).toBe('resolve');
   });
 

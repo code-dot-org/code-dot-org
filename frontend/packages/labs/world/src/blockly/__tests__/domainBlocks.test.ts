@@ -857,7 +857,7 @@ describe('domain block generators', () => {
       )?.blocks ?? [];
     // A project rule's query gets a block in that rule's own category —
     // collision's "is touching" and "collision size of" are project blocks now,
-    // covered by collisionRule.test; what is left built in is Motion's.
+    // covered by solidRule.test; what is left built in is Motion's.
     expect(projectCategory('Has Wind')).toContain(
       `world_query_${'HasWind_'}IsGustingQuery`,
     );

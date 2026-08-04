@@ -79,12 +79,7 @@ describe('importStockRule', () => {
       Object.values(source.files)
         .map(f => f.name)
         .sort(),
-    ).toEqual([
-      'collision.rule',
-      'contacts.rule',
-      'gravity.rule',
-      'motion.rule',
-    ]);
+    ).toEqual(['collisions.rule', 'gravity.rule', 'motion.rule', 'solid.rule']);
   });
 
   it('counts a same-stem file of ANY extension as already there', () => {
@@ -141,10 +136,10 @@ describe('importing what a rule needs', () => {
     // to compile with nothing on screen to say why.
     const {source} = importStockRule(project(), gravity);
     expect(rulePaths(source)).toEqual([
-      'rules/collision',
-      'rules/contacts',
+      'rules/collisions',
       'rules/gravity',
       'rules/motion',
+      'rules/solid',
     ]);
   });
 
@@ -153,28 +148,28 @@ describe('importing what a rule needs', () => {
     // collision asked for it, not because gravity did.
     const {source} = importStockRule(project(), gravity);
     const collision = Object.values(source.files).find(
-      f => f.name === 'collision.rule',
+      f => f.name === 'solid.rule',
     )!;
     expect(collision.contents).toContain('"RULE": "Physics"');
   });
 
   it('gives a dependency its own name, never a renamed one', () => {
     // Two copies of a rule are two rules answering to one name, and a reference
-    // that names "Collisions" would then be a question with two answers.
+    // that names "Solid Bodies" would then be a question with two answers.
     const {source} = importStockRule(project(), gravity);
-    expect(rulePaths(source)).toContain('rules/collision');
+    expect(rulePaths(source)).toContain('rules/solid');
   });
 
   it('leaves a dependency the project already has alone', () => {
     // Importing collision and then gravity must not copy collision again — and
     // must not touch the learner's, which they may have edited.
-    const first = importStockRule(project(), stockRule('collision')!);
+    const first = importStockRule(project(), stockRule('solid')!);
     const edited = {
       ...first.source,
       files: Object.fromEntries(
         Object.entries(first.source.files).map(([id, file]) => [
           id,
-          file.name === 'collision.rule'
+          file.name === 'solid.rule'
             ? {...file, contents: '{"mine": true}'}
             : file,
         ]),
@@ -182,13 +177,13 @@ describe('importing what a rule needs', () => {
     };
     const second = importStockRule(edited, gravity);
     expect(rulePaths(second.source)).toEqual([
-      'rules/collision',
-      'rules/contacts',
+      'rules/collisions',
       'rules/gravity',
       'rules/motion',
+      'rules/solid',
     ]);
     expect(
-      Object.values(second.source.files).find(f => f.name === 'collision.rule')
+      Object.values(second.source.files).find(f => f.name === 'solid.rule')
         ?.contents,
     ).toBe('{"mine": true}');
   });
@@ -200,8 +195,8 @@ describe('importing what a rule needs', () => {
     // wants contacts, and both of them want motion.
     expect(stockRequirements(gravity).map(r => r.id)).toEqual([
       'motion',
-      'contacts',
-      'collision',
+      'collisions',
+      'solid',
     ]);
     expect(stockRequirements(stockRule('motion')!)).toEqual([]);
   });

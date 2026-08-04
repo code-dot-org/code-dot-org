@@ -1,8 +1,8 @@
-// The default project's `rules/contacts.rule` — who is touching whom, and
+// The default project's `rules/collisions.rule` — who is touching whom, and
 // nothing about what to do next (specs/COLLISION.md).
 //
 // The measuring half of what used to be one collision rule. It owns the box and
-// writes each actor's `contacts` once a tick; `rules/collision.rule` reads them
+// writes each actor's `contacts` once a tick; `rules/solid.rule` reads them
 // and pushes bodies apart, and anything else that wants to react — a bouncy
 // rule, a trigger, gravity noticing a landing — reads the same list rather than
 // working out overlaps again.
@@ -16,21 +16,21 @@ import {registerDefaultProjectRules} from './defaultProjectRules';
 
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.contactsRule.contents;
-const meta = parseRuleMeta('rules/contacts', source)!;
+const source = DEFAULT_PROJECT.source.files.collisionsRule.contents;
+const meta = parseRuleMeta('rules/collisions', source)!;
 const module_ = ruleMetaToModule(meta);
 
-describe('rules/contacts.rule', () => {
+describe('rules/collisions.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.contactsRule.name).toBe(
-      'contacts.rule',
+    expect(DEFAULT_PROJECT.source.files.collisionsRule.name).toBe(
+      'collisions.rule',
     );
     expect(source).not.toContain('world-lab');
   });
 
   it('owns the box: the trait, its size, and the two questions about it', () => {
-    expect(meta.name).toBe('Contacts');
-    expect(meta.ability).toBe('Notices Contacts');
+    expect(meta.name).toBe('Collisions');
+    expect(meta.ability).toBe('Notices Collisions');
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'CanCollideTrait',
     ]);
