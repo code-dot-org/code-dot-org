@@ -1,0 +1,84 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Relaxed for files moved from apps/ which use non-verbatim import syntax
+    // and apps-era type patterns. Tighten as files are modernized.
+    "strict": false,
+    "verbatimModuleSyntax": false,
+    "erasableSyntaxOnly": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "skipLibCheck": true,
+    // Typecheck @cdo/* imports against the same files the dev-host resolver
+    // serves at runtime (src/devhost/cdoResolverPlugin.ts). The stubs carry
+    // the shapes the Studio host provides. Exception: the sketchlab canvas
+    // entries stay on the stubs here while the resolver serves the real
+    // apps/src/sketchlab files, so tsc never crawls into apps/.
+    "paths": {
+      "@/*": ["./src/*"],
+      "@cdo/generated-scripts/sharedConstants": [
+        "./src/devhost/modules/sharedConstants.ts"
+      ],
+      "@cdo/apps/aiComponentLibrary/chatMessage/types": [
+        "../../../apps/src/aiComponentLibrary/chatMessage/types.ts"
+      ],
+      "@cdo/apps/aiTutor/reflectionsApi": [
+        "../../../apps/src/aiTutor/reflectionsApi.ts"
+      ],
+      "@cdo/static/tutor/*": ["../../../apps/static/tutor/*"],
+      "@cdo/apps/aiTutor/views/lessonDeepDive/types": [
+        "./src/lessonDeepDive/types.ts"
+      ],
+      "@cdo/apps/util/HttpClient": ["./src/devhost/modules/httpClient.ts"],
+      "@cdo/apps/util/experiments": ["./src/devhost/modules/experiments.ts"],
+      "@cdo/apps/util/reduxHooks": ["./src/devhost/modules/reduxHooks.ts"],
+      "@cdo/apps/utils": ["./src/devhost/modules/utils.ts"],
+      "@cdo/apps/util/AuthenticityTokenStore": [
+        "./src/devhost/modules/authenticityTokenStore.ts"
+      ],
+      "@cdo/apps/metrics/AnalyticsReporter": [
+        "./src/devhost/modules/analyticsReporter.ts"
+      ],
+      "@cdo/apps/metrics/AnalyticsConstants": [
+        "./src/devhost/modules/analyticsConstants.ts"
+      ],
+      "@cdo/apps/aiTutor/hooks/useAiTutorModelParameters": [
+        "./src/devhost/modules/useAiTutorModelParameters.ts"
+      ],
+      "@cdo/apps/aichat/aichatApi": ["./src/devhost/modules/aichatApi.ts"],
+      "@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob": [
+        "./src/devhost/modules/createSketchSnapshotBlob.d.ts"
+      ],
+      "@cdo/apps/sketchlab/reactFlow/types": ["./src/devhost/hostTypes.ts"],
+      "@cdo/apps/lab2/types": ["./src/devhost/hostTypes.ts"],
+      "@cdo/apps/lab2/views/SourcesContainer": [
+        "./src/devhost/modules/sourcesContainer.ts"
+      ],
+      "@cdo/apps/lab2/projects/utils": [
+        "./src/devhost/modules/lab2ProjectUtils.ts"
+      ],
+      "@cdo/apps/aichat/types": ["./src/devhost/hostTypes.ts"],
+      "@cdo/apps/templates/SafeMarkdown": [
+        "./src/devhost/modules/safeMarkdown.ts"
+      ],
+      "@cdo/apps/aichat/views/WaitingAnimation": [
+        "./src/devhost/modules/waitingAnimation.ts"
+      ],
+      "@cdo/apps/lab2/views/components/AiTutorChat": [
+        "./src/devhost/modules/aiTutorChat.ts"
+      ],
+      "@cdo/apps/jsonVideo/TutorVideo": ["./src/devhost/modules/tutorVideo.ts"],
+      "@cdo/apps/codebridge/FileBrowser/Droppable": [
+        "./src/devhost/modules/droppable.ts"
+      ],
+      "@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas": [
+        "./src/devhost/modules/reactFlowCanvas.d.ts"
+      ]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["src/**/__tests__"]
+}

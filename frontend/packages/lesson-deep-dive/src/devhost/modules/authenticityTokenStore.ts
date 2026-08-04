@@ -1,0 +1,1 @@
+export {getAuthenticityToken} from '../cdoStubs';
