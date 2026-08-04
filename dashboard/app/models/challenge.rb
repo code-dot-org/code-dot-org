@@ -9,6 +9,7 @@
 #  whiteboard_starter_image_alt_text :text(65535)
 #  created_at                        :datetime         not null
 #  updated_at                        :datetime         not null
+#  rubric                            :json
 #
 # Indexes
 #

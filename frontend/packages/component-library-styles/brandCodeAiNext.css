@@ -18,7 +18,11 @@
 
 /* stylelint-disable color-hex-length */
 [data-brand='codeai-next']:root,
-[data-brand='codeai-next'] {
+[data-brand='codeai-next'],
+[data-brand='codeai-next'][data-theme='Light'],
+[data-brand='codeai-next'] [data-theme='Light'],
+[data-brand='codeai-next'][data-theme='Dark'],
+[data-brand='codeai-next'] [data-theme='Dark'] {
   --brand-purple-5: #e4e2f8;
   --brand-purple-10: #cac6f5;
   --brand-purple-20: #aca8ea;
@@ -88,7 +92,7 @@
   --neutral-white-alpha-80: #ffffffcc;
   --neutral-white-alpha-90: #ffffffe5;
   --neutral-white-alpha-95: #fffffff2;
-  --sentiment-error-5: #fbd5d5;
+  --sentiment-error-5: #ffdada;
   --sentiment-error-10: #fac2c2;
   --sentiment-error-20: #f69898;
   --sentiment-error-30: #f37272;
@@ -110,8 +114,8 @@
   --sentiment-information-80: #0855b2;
   --sentiment-information-90: #0b43a3;
   --sentiment-information-95: #06338d;
-  --sentiment-success-5: #ccf1d0;
-  --sentiment-success-10: #b7e6bd;
+  --sentiment-success-5: #d8ffdc;
+  --sentiment-success-10: #c4f1ca;
   --sentiment-success-20: #9be3a3;
   --sentiment-success-30: #7cdb87;
   --sentiment-success-40: #4fcf5d;
@@ -121,7 +125,7 @@
   --sentiment-success-80: #1f7028;
   --sentiment-success-90: #17541e;
   --sentiment-success-95: #003f25;
-  --sentiment-warning-5: #fff3d1;
+  --sentiment-warning-5: #fff5da;
   --sentiment-warning-10: #ffecb8;
   --sentiment-warning-20: #ffe08a;
   --sentiment-warning-30: #ffd35c;
@@ -224,8 +228,8 @@
   --border-neutral-black-fixed: var(--neutral-base-black);
   --border-neutral-white-fixed: var(--neutral-base-white);
   --border-brand-primary: var(--brand-purple-50);
-  --border-brand-light: var(--brand-purple-5);
-  --border-brand-mid: var(--brand-purple-20);
+  --border-brand-light: var(--brand-purple-10);
+  --border-brand-mid: var(--brand-purple-30);
   --border-brand-strong: var(--brand-purple-70);
   --border-error-primary: var(--sentiment-error-50);
   --border-error-light: var(--sentiment-error-10);

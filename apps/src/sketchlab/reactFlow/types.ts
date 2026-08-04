@@ -39,6 +39,7 @@ export type ShapeNodeData = NodeDataBase & {
 
 export type TextNodeData = NodeDataBase & {
   text: string;
+  strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSize;
   fontFamily?: FontFamilyValue;
@@ -48,6 +49,8 @@ export type TextNodeData = NodeDataBase & {
 export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
+  // Image has been flagged by the moderation service.
+  flagged?: boolean;
 };
 
 export type LineAnchorNodeData = NodeDataBase & {

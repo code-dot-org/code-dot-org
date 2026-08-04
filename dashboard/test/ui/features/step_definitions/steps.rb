@@ -1,4 +1,5 @@
 require 'cdo/url_converter'
+require 'cdo/brand'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
@@ -724,6 +725,10 @@ end
 
 Then /^I should see title includes "([^"]*)"$/ do |title|
   expect(@browser.title).to include(title)
+end
+
+Then /^I should see branded title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include("#{title} - #{Cdo::Brand.legal_name}")
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|

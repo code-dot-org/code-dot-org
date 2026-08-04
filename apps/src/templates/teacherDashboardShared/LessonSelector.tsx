@@ -43,12 +43,14 @@ export interface LessonOption {
   hasLessonPlan: boolean;
   isLockable: boolean;
   position: number;
+  hasCodeLevel?: boolean;
 }
 
 interface LessonSelectorProps {
   lessons: LessonOption[];
   selectedLesson: LessonOption | null;
   onLessonChange: (lessonId: number) => void;
+  onUserLessonChange?: (lessonId: number) => void;
   hasUnnumberedLessons: boolean;
   isLoading?: boolean;
   unitName?: string;
@@ -62,6 +64,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   lessons,
   selectedLesson,
   onLessonChange,
+  onUserLessonChange,
   hasUnnumberedLessons,
   isLoading = false,
   unitName,
@@ -72,6 +75,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
 }) => {
   const onDropdownChange = (value: string) => {
     onLessonChange(Number(value));
+    onUserLessonChange?.(Number(value));
 
     analyticsReporter.sendEvent(EVENTS.LESSON_MATERIALS_LESSON_CHANGE, {
       unitName,

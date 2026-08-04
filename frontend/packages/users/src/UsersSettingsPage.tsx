@@ -97,9 +97,10 @@ export default function UsersSettingsPage({
             username: settings.data.username ?? '',
             age: settings.data.age != null ? String(settings.data.age) : '',
             us_state: settings.data.usState ?? '',
+            gender: settings.data.gender ?? '',
           }}
         >
-          <UsersDetailsForm />
+          <UsersDetailsForm settings={settings.data} />
         </FormProvider>
       ) : null,
   }));
@@ -145,8 +146,11 @@ export default function UsersSettingsPage({
         </Box>
       )}
 
+      {/* Every toast here confirms a save the user just asked for, so it waits its
+          turn instead of interrupting the screen reader; failures surface inline
+          on the field or in the dialog, not as a toast. */}
       {!isPending && !isError && settings.data && (
-        <ToastProvider>
+        <ToastProvider politeness="polite">
           <Box className={styles.tabs} sx={{mt: 3}}>
             <Tabs
               name="account-settings"

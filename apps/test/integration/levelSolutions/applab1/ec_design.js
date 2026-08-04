@@ -181,8 +181,6 @@ module.exports = {
 
         var assetUrl =
           'https://studio.code.org/blockly/media/skins/studio/small_static_avatar.png';
-        var encodedAssetUrl =
-          '/media?u=https%3A%2F%2Fstudio.code.org%2Fblockly%2Fmedia%2Fskins%2Fstudio%2Fsmall_static_avatar.png';
         var imageInput = $('#imagePickerInput')[0];
 
         var buttonElement = $('#design_button1')[0];
@@ -193,8 +191,8 @@ module.exports = {
 
         assert.include(
           buttonElement.style.backgroundImage,
-          encodedAssetUrl,
-          'Button background image should contain proxied, escaped url'
+          assetUrl,
+          'Button background image should contain original url'
         );
         Applab.onPuzzleComplete();
       },

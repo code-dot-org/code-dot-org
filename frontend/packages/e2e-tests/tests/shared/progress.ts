@@ -5,14 +5,19 @@ import {cssColorsMatchVars} from './colors';
 /** A progress bubble's rendered state, named for the DSCO tokens progress.rb keys on. */
 export type ProgressBubbleState = 'perfect' | 'not_tried';
 
-/** Background + top-border DSCO tokens that define each bubble state. */
+/**
+ * Background + top-border DSCO tokens that define each bubble state. `perfect`
+ * borders in its own fill color: progressStyles.js draws every success-status
+ * border with --background-success-primary rather than
+ * --borders-success-primary, so the two lighter greens cannot form a ring.
+ */
 const STATE_TOKENS: Record<
   ProgressBubbleState,
   {background: string; border: string}
 > = {
   perfect: {
     background: '--background-success-primary',
-    border: '--borders-success-primary',
+    border: '--background-success-primary',
   },
   not_tried: {
     background: '--background-neutral-primary',

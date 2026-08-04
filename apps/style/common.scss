@@ -567,18 +567,6 @@ input[type="radio"] {
   line-height: 0;
 }
 
-#slider-cell {
-  display: inline-block;
-  vertical-align: top;
-  touch-action: none;
-  -ms-touch-action: none;
-}
-
-#slider {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 #spinner {
   display: inline-block;
   vertical-align: middle;
@@ -818,26 +806,6 @@ html[dir="RTL"] .prompt-icon-cell {
   overflow-x: hidden;
   height: $workspace-headers-height;
   color: white;
-  .workspace-header-clickable:hover {
-    cursor: pointer;
-    color: $yellow;
-  }
-  span {
-    line-height: $workspace-headers-height;
-  }
-  .fa {
-    font-size: 18px;
-  }
-
-  /* We don't want some of these styles to affect modal content. */
-  .ml-modal {
-    span {
-      line-height: 12px;
-    }
-    .fa {
-      font-size: 12px;
-    }
-  }
 
   &.is-running {
     background-color: $lighter-purple;
@@ -873,15 +841,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
-// Hidden by default. Manually shown for Blockly labs only (loadApp.js)
-#settings-header {
-  display: none;
-}
-
-#versions-header {
-  display: none;
-}
-
 #design-headers {
   height: $workspace-headers-height;
   overflow-y: hidden;
@@ -893,51 +852,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
 #headers,
 .purple-header {
-  #show-toolbox-icon,
-  #hide-toolbox-icon {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    line-height: $workspace-headers-height;
-    color: $lighter_purple;
-    cursor: pointer;
-    &:hover.fa {
-      color: $white;
-    }
-  }
-
-  #hide-toolbox-icon {
-    @include horizontal-flip;
-  }
-
-  #toolbox-header {
-    width: 270px;
-    border-right: 1px solid gray;
-    float: left;
-  }
-  #show-toolbox-header {
-    border: 0;
-    float: left;
-    padding: 0 10px;
-    cursor: pointer;
-
-    & > span {
-      margin: auto auto auto 18px;
-    }
-  }
-  #blockCounter,
   #blockUsed {
     display: inline-block;
   }
 
   #clear-puzzle-header:hover {
-    background-color: $product_negative_default;
-    color: $neutral_white;
+    background-color: var(--background-error-primary);
+    color: var(--text-neutral-white-fixed);
   }
 
   .block-counter-overflow {
     color: $yellow;
   }
+
   &.is-running {
     .block-counter-overflow {
       color: $dark_orange;
@@ -950,28 +877,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     margin-right: 0;
   }
 
-  #show-toolbox-icon,
-  #hide-toolbox-icon {
-    left: auto;
-    right: 8px;
-  }
-
-  #show-toolbox-icon {
-    @include horizontal-flip;
-  }
-
-  #hide-toolbox-icon {
-    @include no-transform;
-  }
-
-  #toolbox-header {
-    border-right: 0;
-    border-left: 1px solid gray;
-    float: right;
-  }
-  #show-toolbox-header {
-    float: right;
-  }
   .workspace-header-button {
     margin-left: $workspace-header-button-margin;
     margin-right: 0;
@@ -986,9 +891,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
       padding-right: 0;
       padding-left: 8px;
     }
-  }
-  .show-toolbox-label {
-    margin-right: 20px;
   }
 }
 
@@ -1242,7 +1144,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   clear: both;
   margin-top: 25px;
   font-size: 18px;
-  color: $charcoal;
+  color: var(--text-neutral-primary);
 
   $image-width: 180px;
   $image-height: $image-width;
@@ -1252,7 +1154,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     height: $image-height + 6px;
     margin: 0;
     float: left;
-    border: $lighter_gray;
+    border: var(--borders-neutral-primary);
     border-style: solid;
 
     html[dir="rtl"] & {
@@ -1292,7 +1194,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     a:visited {
       background-color: transparent;
       text-decoration: none;
-      color: white;
+      color: var(--text-neutral-white-fixed);
     }
 
     html[dir="rtl"] & {
@@ -1304,8 +1206,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button {
-    background-color: $purple;
-    color: white;
+    background-color: var(--background-brand-purple-primary);
+    color: var(--text-neutral-white-fixed);
     font-size: 14px;
     min-width: 40px;
     text-align: center;
@@ -1314,8 +1216,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .disabled,
     &[disabled="disabled"],
     &:disabled {
-      border: 1px solid $purple;
-      background-color: $lighter_gray;
+      border: 1px solid var(--borders-brand-purple-primary);
+      background-color: var(--background-neutral-disabled);
       box-shadow: none;
     }
   }
@@ -1342,7 +1244,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button.saved-to-gallery {
-    @include main-font-regular-italic;
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-regular);
+    font-style: italic;
   }
 
   #sharing-input-container {
@@ -1362,7 +1266,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   .sharing-dialog-copy-button-shared {
-    background-color: $light_purple;
+    background-color: var(--background-brand-purple-hover);
   }
 
   #copy-button {
@@ -1385,7 +1289,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   div#phone-charges {
     font-size: 10px;
     margin-top: 0;
-    color: $red;
+    color: var(--text-error-primary);
   }
 }
 
@@ -1551,35 +1455,20 @@ $see-examples-thick-underline-color: $yellow;
   }
 }
 
-a.WireframeButtons_button {
-  background-color: $purple;
-  border-radius: 5px;
-  color: $white;
-  cursor: pointer;
-  font-size: 0.8em;
-  line-height: 3;
+.WireframeButtons_buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
   margin: 5px;
-  padding: 8px;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-a.WireframeButtons_active {
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 div.WireframeButtons_active {
+  background-color: var(--background-brand-purple-extra-light);
+  border-radius: 5px;
+  color: var(--text-neutral-primary);
   cursor: default;
   display: inline-block;
-}
-
-a.WireframeButtons_active,
-div.WireframeButtons_active {
-  background-color: $lightest-purple;
-  border-radius: 5px;
-  color: $dark-charcoal;
   font-size: 0.8em;
   line-height: 3em;
   margin: 5px;

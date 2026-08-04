@@ -2,8 +2,8 @@
 #
 # DCDO keys:
 #   default-brand         The brand code returned to all users when no per-user
-#                         override applies. Defaults to BRAND_CODEAI when unset
-#                         or set to an unknown code.
+#                         override applies. Defaults to BRAND_CODEAI_NEXT when
+#                         unset or set to an unknown code.
 #   brand-router-enabled  On/off switch for per-user routing. When off, every
 #                         request gets the default-brand. When on, the brand is
 #                         resolved per request: URL param > cookie > default.
@@ -19,12 +19,12 @@ module Cdo
     #
     # BRAND_CODE_ORG     Legacy Code.org branding. Hard-coded fallback of last
     #                    resort if the BRANDS lookup fails; not the
-    #                    operational default (see BRAND_CODEAI).
-    # BRAND_CODEAI       Current default branding, via the 'default-brand'
-    #                    DCDO key (which itself defaults to this).
-    # BRAND_CODEAI_NEXT  Parking lot for in-flight CodeAI branding changes that
-    #                    are not yet ready to launch. Carries the CADS color
-    #                    ramp (component-library-styles/brandCodeAiNext.css).
+    #                    operational default (see BRAND_CODEAI_NEXT).
+    # BRAND_CODEAI       Prior default branding. Still selectable via the
+    #                    'default-brand' DCDO key or per-user override.
+    # BRAND_CODEAI_NEXT  Current default branding, via the 'default-brand'
+    #                    DCDO key (which itself defaults to this). Carries the
+    #                    CADS color ramp (component-library-styles/brandCodeAiNext.css).
     # BRAND_CODEAI_AUDIT Visual auditing tool: every DSCO semantic token
     #                    renders pink (brandCodeAiAudit.css) so surfaces that
     #                    bypass the token system stand out. Never a default.
@@ -72,14 +72,14 @@ module Cdo
     # When brand-router-enabled is off, always returns the default brand.
     # When on, checks URL param > cookie, falling back to the default brand.
     # The default brand is read from DCDO 'default-brand' and falls back to
-    # BRAND_CODEAI when unset, set to an unknown code, or set to
+    # BRAND_CODEAI_NEXT when unset, set to an unknown code, or set to
     # BRAND_CODEAI_AUDIT (which may only be reached via per-request override).
     # @param request [ActionDispatch::Request, nil] the current request
     def self.current_brand_code(request = nil)
-      default = DCDO.get('default-brand', BRAND_CODEAI)
+      default = DCDO.get('default-brand', BRAND_CODEAI_NEXT)
       # BRAND_CODEAI_AUDIT is a per-request QA tool (see enum comment above)
       # and must never be reachable as the sitewide default.
-      default = BRAND_CODEAI unless BRANDS.key?(default) && default != BRAND_CODEAI_AUDIT
+      default = BRAND_CODEAI_NEXT unless BRANDS.key?(default) && default != BRAND_CODEAI_AUDIT
 
       return default unless DCDO.get('brand-router-enabled', false)
 
@@ -88,8 +88,9 @@ module Cdo
     end
 
     # True for codeai-next or its audit variant codeai-audit. Drives the
-    # `html.nav-reskin` class (see application.html.haml); rollout happens by
-    # flipping the 'default-brand' DCDO to BRAND_CODEAI_NEXT, not a separate flag.
+    # `html.nav-reskin` class (see application.html.haml); reverting to the
+    # prior brand is done by setting the 'default-brand' DCDO to BRAND_CODEAI,
+    # not a separate flag.
     def self.codeai_next?(request = nil)
       [BRAND_CODEAI_NEXT, BRAND_CODEAI_AUDIT].include?(current_brand_code(request))
     end

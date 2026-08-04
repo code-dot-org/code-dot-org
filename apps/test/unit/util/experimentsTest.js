@@ -20,3 +20,40 @@ describe('experiments.isEnabled', () => {
     expect(experiments.isEnabled('test-experiment')).toBe(true);
   });
 });
+
+describe('experiments.getLocalStorageExperimentDetails', () => {
+  afterEach(() => {
+    localStorage.removeItem('experimentsList');
+  });
+
+  it('drops duplicate keys and rewrites storage', () => {
+    localStorage.setItem(
+      'experimentsList',
+      JSON.stringify([{key: 'dupe'}, {key: 'other'}, {key: 'dupe'}])
+    );
+
+    expect(experiments.getLocalStorageExperimentDetails()).toEqual([
+      {key: 'dupe'},
+      {key: 'other'},
+    ]);
+    expect(JSON.parse(localStorage.getItem('experimentsList'))).toEqual([
+      {key: 'dupe'},
+      {key: 'other'},
+    ]);
+  });
+
+  it('keeps a valid entry that follows an expired duplicate', () => {
+    const future = Date.now() + 1000;
+    localStorage.setItem(
+      'experimentsList',
+      JSON.stringify([
+        {key: 'dupe', expiration: 1},
+        {key: 'dupe', expiration: future},
+      ])
+    );
+
+    expect(experiments.getLocalStorageExperimentDetails()).toEqual([
+      {key: 'dupe', expiration: future},
+    ]);
+  });
+});

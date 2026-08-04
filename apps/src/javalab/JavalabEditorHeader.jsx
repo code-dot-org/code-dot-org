@@ -33,16 +33,49 @@ function JavalabEditorHeader({
     : javalabMsg.editor();
 
   return (
-    <PaneHeader hasFocus isOldPurpleColor>
+    <PaneHeader
+      style={{
+        backgroundColor: '#7665a0',
+        paddingLeft: '0.125rem',
+      }}
+    >
       <PaneButton
         id="javalab-editor-create-file"
-        iconClass="fa-solid fa-circle-plus"
+        iconProps={{iconName: 'circle-plus', iconStyle: 'solid'}}
         onClick={() => openEditorDialog(JavalabEditorDialog.CREATE_FILE)}
         headerHasFocus
         isLegacyStyles
         isRtl={false}
         label={javalabMsg.newFile()}
         leftJustified
+        isDisabled={isReadOnlyWorkspace}
+      />
+      <PaneSection
+        style={{
+          flex: '1 1 0',
+        }}
+      >
+        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
+        {editorHeaderText}
+      </PaneSection>
+      <PaneButton
+        id="javalab-editor-save"
+        isLegacyStyles
+        iconProps={{iconName: 'circle-check', iconStyle: 'solid'}}
+        onClick={() => openEditorDialog(JavalabEditorDialog.COMMIT_FILES)}
+        headerHasFocus
+        isRtl={false}
+        label={javalabMsg.commitCode()}
+        isDisabled={isReadOnlyWorkspace}
+      />
+      <PaneButton
+        id="data-mode-versions-header"
+        isLegacyStyles
+        iconProps={{iconName: 'clock', iconStyle: 'regular'}}
+        label={msg.showVersionsHeader()}
+        headerHasFocus
+        isRtl={false}
+        onClick={() => openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)}
         isDisabled={isReadOnlyWorkspace}
       />
       {backpackEnabled && (
@@ -55,30 +88,6 @@ function JavalabEditorHeader({
           />
         </PaneSection>
       )}
-      <PaneButton
-        id="data-mode-versions-header"
-        isLegacyStyles
-        iconClass="fa-regular fa-clock"
-        label={msg.showVersionsHeader()}
-        headerHasFocus
-        isRtl={false}
-        onClick={() => openEditorDialog(JavalabEditorDialog.VERSION_HISTORY)}
-        isDisabled={isReadOnlyWorkspace}
-      />
-      <PaneButton
-        id="javalab-editor-save"
-        isLegacyStyles
-        iconClass="fa-solid fa-circle-check"
-        onClick={() => openEditorDialog(JavalabEditorDialog.COMMIT_FILES)}
-        headerHasFocus
-        isRtl={false}
-        label={javalabMsg.commitCode()}
-        isDisabled={isReadOnlyWorkspace}
-      />
-      <PaneSection>
-        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
-        {editorHeaderText}
-      </PaneSection>
     </PaneHeader>
   );
 }

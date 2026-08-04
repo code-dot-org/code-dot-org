@@ -1,6 +1,5 @@
 import Drawer from '@mui/material/Drawer';
 import React, {useCallback, useEffect, useState} from 'react';
-import FocusLock from 'react-focus-lock';
 
 import {useTeachingProfileData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {fetchThreadMessages} from '@cdo/apps/aiDifferentiation/redux';
@@ -142,12 +141,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         sx: {width: drawerWidth, top: 50, height: 'calc(100% - 50px)'},
       }}
     >
-      <FocusLock
-        disabled={!chatIsOpen}
-        lockProps={{
-          style: {display: 'flex', flexDirection: 'column', height: '100%'},
-        }}
-      >
+      <div style={{display: 'flex', flexDirection: 'column', height: '100%'}}>
         <AiDiffHeader
           closeTutor={closeTutor}
           closeButtonClassName={AI_DIFF_CLOSE_BUTTON_CLASSNAME}
@@ -162,7 +156,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           unreadNotificationCount={unreadNotificationCount}
           showLearn={showLearn}
         />
-      </FocusLock>
+      </div>
     </Drawer>
   );
 };

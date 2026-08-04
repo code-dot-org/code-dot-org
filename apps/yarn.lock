@@ -3938,6 +3938,7 @@ __metadata:
     camelcase-keys: "npm:^10.0.2"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
+    mitt: "npm:^3.0.1"
     tldts: "npm:^7.0.23"
   peerDependencies:
     "@reduxjs/toolkit": ^2.8.2
@@ -4092,14 +4093,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/piskel@npm:0.13.0-cdo.13":
-  version: 0.13.0-cdo.13
-  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.13"
+"@code-dot-org/piskel@npm:0.13.0-cdo.14":
+  version: 0.13.0-cdo.14
+  resolution: "@code-dot-org/piskel@npm:0.13.0-cdo.14"
   dependencies:
     messageformat: "npm:^2.3.0"
   bin:
     piskel-root: misc/scripts/piskel-root
-  checksum: 10/3560b3a4a3c46ffa4f75114067aae920279f5db55b97bf79a91113469b6897ec8accf3fb25448769ed6295df10990a5a689038c5f45dc29691b1ada7e086f988
+  checksum: 10/65796508d9c2a358171928e744d591481a6f6cc1df20b5fbfbacabb1221ee0f9d8741182a8b329a4565dd96eb5c5abadb82d2de6a5a6825b6aeb2911a978e0a7
   languageName: node
   linkType: hard
 
@@ -11380,7 +11381,7 @@ __metadata:
     "@code-dot-org/ml-activities": "npm:0.1.3"
     "@code-dot-org/ml-playground": "npm:0.0.52"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
-    "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
+    "@code-dot-org/piskel": "npm:0.13.0-cdo.14"
     "@code-dot-org/redactable-markdown": "npm:^0.10.0"
     "@code-dot-org/remark-plugins": "npm:^2.0.1"
     "@codemirror/autocomplete": "npm:^6.18.6"
@@ -22452,7 +22453,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"mitt@npm:^3.0.0":
+"mitt@npm:^3.0.0, mitt@npm:^3.0.1":
   version: 3.0.1
   resolution: "mitt@npm:3.0.1"
   checksum: 10/287c70d8e73ffc25624261a4989c783768aed95ecb60900f051d180cf83e311e3e59865bfd6e9d029cdb149dc20ba2f128a805e9429c5c4ce33b1416c65bbd14

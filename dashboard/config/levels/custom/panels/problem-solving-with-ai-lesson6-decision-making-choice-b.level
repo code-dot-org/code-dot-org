@@ -1,0 +1,32 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-07-31T15:01:01.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-a179455f-28c9-45c0-b859-596d0a7bb98c"
+      },
+      {
+        "text": "",
+        "imageUrl": "",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be"
+      },
+      {
+        "text": "",
+        "imageUrl": "",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-31 15:01:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:10:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 19:21:59 +0000\",\"changed\":[\"use_links\",\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -114,7 +114,10 @@ export const ImageWithShadow: Story = {
     const canvas = within(canvasElement);
     const figure = canvas.getByRole('figure');
     const image = await canvas.findByAltText('Teacher helping student');
-    const expectedBoxShadow = 'rgb(191, 228, 232) 8px 8px 0px 0px';
+    const expectedShadowColor = window
+      .getComputedStyle(document.body)
+      .getPropertyValue('--background-brand-teal-light');
+    const expectedBoxShadow = `${expectedShadowColor} 8px 8px 0px 0px`;
 
     // check if image is visible
     await expect(image).toBeVisible();

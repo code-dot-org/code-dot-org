@@ -1,12 +1,13 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-04-01T20:47:05.000Z",
   "level_num": "custom",
   "user_id": 19378,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "<img src=\"https://images.code.org/f76a2fe814e5bd440ee7cad7093bb5ee-image-1707427214244.png\" style=\"float: right; width: 400px; margin: 10px;\">\r\n\r\n# Match The Image\r\n\r\nZoie is trying to style her web page to match the layout in the image to the right. Can you help her?\r\n\r\n# Do This\r\n\r\nNotice the order, size, alignment, and spacing of the items in the example image.\r\n1. Adjust the order of the items to match the example.\r\n2. Identify any items that are aligned differently from others within the container and apply `align-self` to achieve the same effect.\r\n3. Determine which items need to be larger than others and appy `flex-grow` to these items, consider their proportion in the example image.\r\n\r\n*Make sure you adjust the Preview Window to see if you've matched the image example.*\r\n\r\n<br>\r\n\r\n\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\">Flexbox Children Cheat Sheet</a> when needed!**",
+    "long_instructions": "# Match The Image\r\n\r\nZoie is trying to style her web page to match the layout in the image below. Can you help her?\r\n\r\n# Do This\r\n\r\nNotice the order, size, alignment, and spacing of the items in the example image.\r\n1. Adjust the order of the items to match the example.\r\n2. Identify any items that are aligned differently from others within the container and apply `align-self` to achieve the same effect.\r\n3. Determine which items need to be larger than others and appy `flex-grow` to these items, consider their proportion in the example image.\r\n\r\n*Make sure you adjust the Preview Window to see if you've matched the image example.*\r\n\r\n<br>\r\n\r\n<img src=\"https://images.code.org/f76a2fe814e5bd440ee7cad7093bb5ee-image-1707427214244.png\">\r\n\r\n<br>\r\n\r\n**Don't forget to refer back to your <a href=\"https://docs.google.com/document/d/1lrkMGcPwjKo4g5uyvVfaXpFb7kRUfdtqcsqLRtaDWYM/edit?usp=sharing\" target=\"_blank\" rel=\"noopener noreferrer\">Flexbox Children Cheat Sheet</a> when needed!**",
     "submittable": "true",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -137,15 +138,6 @@
       },
       "openFiles": [
         "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
         "11"
       ]
     },
@@ -163,9 +155,10 @@
       "answerTypeCustomizations": {
       }
     },
-    "name_suffix": "_2025-v2"
+    "name_suffix": "_2025-v2",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:05.780+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L7-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-04-01T20:47:05.780+00:00\",\"changed\":[\"cloned from \\\"CSD U2L13-L7-2025\\\"\"],\"cloned_from\":\"CSD U2L13-L7-2025\"},{\"changed_at\":\"2026-07-25 00:41:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-25 00:42:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-07-26 22:55:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Weblab2>

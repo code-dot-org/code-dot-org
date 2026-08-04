@@ -111,13 +111,13 @@ describe('Pairing component', () => {
 
       const sectionSelect = await screen.findByRole('combobox');
       await user.selectOptions(sectionSelect, '1');
-      screen.getByRole('button', {name: 'First student'});
-      screen.getByRole('button', {name: 'Second Student'});
+      screen.getByRole('checkbox', {name: 'First student'});
+      screen.getByRole('checkbox', {name: 'Second Student'});
 
       await user.selectOptions(sectionSelect, '15');
       await waitFor(() => {
         expect(
-          screen.queryByRole('button', {name: 'First student'})
+          screen.queryByRole('checkbox', {name: 'First student'})
         ).not.toBeInTheDocument();
       });
     });
@@ -138,7 +138,7 @@ describe('Pairing component', () => {
       pairings: [],
     };
 
-    it('shows and hides Add Partners as student selections change', async () => {
+    it('enables and disables Add Partners as student selections change', async () => {
       const user = userEvent.setup();
       const {requests} = setupAjaxMock();
       render(<Pairing source="/pairings" />);
@@ -149,22 +149,20 @@ describe('Pairing component', () => {
       });
       await resolveRequest(getRequest, ajaxState);
 
-      const firstStudentButton = await screen.findByRole('button', {
+      const firstStudent = await screen.findByRole('checkbox', {
         name: 'First student',
       });
-      const addPartnersButtonName = i18n.addPartners();
+      const addPartnersButton = screen.getByRole('button', {
+        name: i18n.addPartners(),
+      });
 
-      expect(
-        screen.queryByRole('button', {name: addPartnersButtonName})
-      ).not.toBeInTheDocument();
+      expect(addPartnersButton).toBeDisabled();
 
-      await user.click(firstStudentButton);
-      screen.getByRole('button', {name: addPartnersButtonName});
+      await user.click(firstStudent);
+      expect(addPartnersButton).toBeEnabled();
 
-      await user.click(firstStudentButton);
-      expect(
-        screen.queryByRole('button', {name: addPartnersButtonName})
-      ).not.toBeInTheDocument();
+      await user.click(firstStudent);
+      expect(addPartnersButton).toBeDisabled();
     });
 
     it('submits selected partners with expected payload', async () => {
@@ -179,7 +177,7 @@ describe('Pairing component', () => {
       await resolveRequest(getRequest, ajaxState);
 
       await user.click(
-        await screen.findByRole('button', {name: 'First student'})
+        await screen.findByRole('checkbox', {name: 'First student'})
       );
       await user.click(screen.getByRole('button', {name: i18n.addPartners()}));
 
@@ -204,7 +202,7 @@ describe('Pairing component', () => {
       await resolveRequest(getRequest, ajaxState);
 
       await user.click(
-        await screen.findByRole('button', {name: 'First student'})
+        await screen.findByRole('checkbox', {name: 'First student'})
       );
       await user.click(screen.getByRole('button', {name: i18n.addPartners()}));
 
@@ -217,7 +215,7 @@ describe('Pairing component', () => {
       await screen.findByText(i18n.unexpectedError());
     });
 
-    it('does not allow selecting more than 3 partners', async () => {
+    it('does not allow selecting more than 4 partners', async () => {
       const user = userEvent.setup();
       const {requests} = setupAjaxMock();
       render(<Pairing source="/pairings" />);
@@ -244,17 +242,17 @@ describe('Pairing component', () => {
       });
 
       await user.click(
-        await screen.findByRole('button', {name: 'First student'})
+        await screen.findByRole('checkbox', {name: 'First student'})
       );
-      await user.click(screen.getByRole('button', {name: 'Second Student'}));
-      await user.click(screen.getByRole('button', {name: 'Third Student'}));
-      await user.click(screen.getByRole('button', {name: 'Fourth Student'}));
+      await user.click(screen.getByRole('checkbox', {name: 'Second Student'}));
+      await user.click(screen.getByRole('checkbox', {name: 'Third Student'}));
+      await user.click(screen.getByRole('checkbox', {name: 'Fourth Student'}));
 
       screen.getByText(i18n.exceededPairProgrammingMax());
 
-      expect(
-        screen.getByRole('button', {name: 'Fifth Student'})
-      ).toBeDisabled();
+      const fifth = screen.getByRole('checkbox', {name: 'Fifth Student'});
+      await user.click(fifth);
+      expect(fifth).not.toBeChecked();
     });
   });
 

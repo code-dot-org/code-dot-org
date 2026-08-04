@@ -1,0 +1,54 @@
+name 'pl-aif-programming-welcome-JS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<!-- Banner Section -->
+<!-- Banner Section -->
+<div style="width: 100%; margin-top: 20px; border-radius: 10px; background: #4C42CF; padding: 40px 30px; display: flex; align-items: center; justify-content: center; gap: 24px;">
+   
+    <div style="color: #FFFFFF; font-size: 32px; font-weight: bold; line-height: 1.1;">
+        Teaching Programming with AI [JavaSript]
+    </div>
+</div>
+
+<!-- Welcome Section -->
+
+## Welcome
+    
+This professional learning module is designed to help you prepare to teach CodeAI's        **Programming with AI** from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
+
+The Programming with AI content is designed for 9th - 12th grade students.
+    
+
+
+<!-- Goals Section -->
+<div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2 style="margin-top: 0;">In this module, you will:</h2>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
+        <li>Recognize AI as a pattern-matching tool, not a black box, and teach students to evaluate its output rather than accept it.</li><br>
+        <li>Guide students through structured planning documents (prompt.md, spec.md) as the bridge between an idea and a working prompt.</li><br>
+        <li>Explain the HTML/CSS split and the DOM as separate, teachable mental models, not implementation details.</li><br>
+        <li>Apply the POUR accessibility framework to audit real sites and recognize how AI reproduces existing accessibility failures.</li><br>
+        <li>Support students through the core JavaScript progression: events, variables/state, functions, conditionals, and loops as a connected sequence, not isolated topics.</li>
+    </ul>
+</div>
+
+
+**Suggested Total Time:** 90 minutes
+
+**Lesson One Suggested Time:** 10 minutes
+
+---
+
+##Take the Pre-Survey
+
+CodeAI values and is responsive to feedback. Please fill out the pre-survey to  tell us about who you are and how we can best support you.
+
+
+<p style="text-align: left;">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+</p>
+
+
+MARKDOWN

@@ -1,0 +1,22 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-07-27T23:52:06.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check Your Understanding",
+    "long_instructions": "This is a four-line Python chatbot that helps you figure out how long it will take to walk to school and then walk back home. Read the code below and describe what each line does, one line at a time.\r\n\r\n```python\r\none_way = int(input(\"How many minutes does it take to walk to school? \"))\r\nround_trip = one_way * 2\r\nprint(f\"It will take {round_trip} minutes to walk to school and back!\")\r\n```",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

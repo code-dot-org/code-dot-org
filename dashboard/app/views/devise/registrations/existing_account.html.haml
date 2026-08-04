@@ -1,4 +1,4 @@
-%h1
+%h1.existing-account-heading
   = I18n.t('auth.existing_account.account_exists', email: params[:email])
 
 #signin.signin-legacy
@@ -8,11 +8,11 @@
 
   %p
     = link_to new_user_session_path({user_return_to: edit_user_registration_path}) do
-      %button= I18n.t('nav.user.signin')
+      %button.primary-button= I18n.t('nav.user.signin')
 
   %p
     = I18n.t('auth.existing_account.sign_up', provider: I18n.t(params[:provider], scope: "auth"))
 
   %p
     = link_to users_sign_up_account_type_path({user_return_to: edit_user_registration_path}) do
-      %button.blue-button= I18n.t('nav.user.signup')
+      %button.blue-button.secondary-button= I18n.t('nav.user.signup')

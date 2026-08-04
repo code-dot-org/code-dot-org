@@ -222,8 +222,7 @@ describe('AiDiffWorkspace', () => {
     screen.getByRole('button', {name: 'Write an exit ticket'});
   });
 
-  // TODO: flaky, times out intermittently. Re-enable once stabilized.
-  it.skip('Click on thread shows thread messages', async () => {
+  it('Click on thread shows thread messages', async () => {
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadListResponse,
       response: new Response(),
@@ -240,7 +239,6 @@ describe('AiDiffWorkspace', () => {
     const thread = screen.getByText('blah thread two');
     screen.getByText('blah thread three');
     fetchJsonStub.mockClear();
-
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadMessagesResponse,
       response: new Response(),
