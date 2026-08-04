@@ -101,7 +101,9 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
         where(storage_id: unlocated_storage_ids_batch)
 
       Project.from(unlocated_storage_numbered_projects, Project.table_name).where(per_storage_position: 1).map do |project|
-        location = Geocoder.with_errors {Geocoder.find(project.updated_ip)}
+        location = Retryable.retryable(on: StandardError, tries: 2, sleep: 0.05) do
+          Geocoder.with_errors {Geocoder.find(project.updated_ip)}
+        end
 
         ProjectStorage::Geo.new(
           storage_id:  project.storage_id,

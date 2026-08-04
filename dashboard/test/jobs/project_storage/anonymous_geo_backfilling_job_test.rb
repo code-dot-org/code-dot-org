@@ -199,5 +199,20 @@ class ProjectStorage::AnonymousGeoBackfillingJobTest < ActiveJob::TestCase
 
       it_behaves_like 'does not backfill geo records'
     end
+
+    context 'when geocoding initially raises an error' do
+      let(:projects_per_storage) {1}
+
+      let(:error) {StandardError.new('expected error')}
+
+      before do
+        Geocoder.expects(:find).with(projects.first.updated_ip).twice.raises(error).then.returns(nil)
+      end
+
+      it 'retries once after half a second' do
+        Kernel.expects(:sleep).with(0.05).once
+        _ {perform_job}.must_change -> {ProjectStorage::Geo.count}, from: 0, to: project_storages_total
+      end
+    end
   end
 end
