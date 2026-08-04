@@ -94,6 +94,35 @@ describe('rules/solid.rule', () => {
     }
   });
 
+  it('keeps both numbers between 0 and 1', () => {
+    // Above one, bounciness hands back more speed than arrived — energy from
+    // nowhere, every bounce; friction runs the tangent backwards. Below zero,
+    // both do the opposite. Neither is a thing a learner meant to ask for, so
+    // the two reads go through a query that says so once, by name.
+    const clamp = meta.queries.find(
+      query => query.ref.exportName === 'KeptBetween0And1Query',
+    );
+
+    expect(clamp?.returns).toBe('number');
+    expect(clamp?.params.map(param => param.type)).toEqual(['number']);
+    // Four reads: two properties, two axes, every one of them kept in range.
+    expect(
+      (source.match(/world_query_SolidBodies_KeptBetween0And1Query/g) ?? [])
+        .length,
+    ).toBe(4);
+  });
+
+  it('brakes by the same amount however often the world ticks', () => {
+    // Friction is a fraction lost per SECOND, raised to the length of this
+    // frame — the unit gravity's strength already uses. Multiplying it in flat,
+    // once per contact frame, made the same number a different brake at a
+    // different frame rate.
+    const powers = (source.match(/"OP": "POWER"/g) ?? []).length;
+
+    expect(powers).toBe(2);
+    expect(source).toContain('colFrame2');
+  });
+
   it('reads them off the solid it is pushing out of, on both axes', () => {
     // Both passes: what goes INTO the surface is turned around by bounciness,
     // what runs ALONG it is slowed by friction. A pass that read them off the
