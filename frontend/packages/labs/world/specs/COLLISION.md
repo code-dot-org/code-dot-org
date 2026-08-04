@@ -197,12 +197,28 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    combines both surfaces; if that turns out to matter, the fix is to multiply
    the two rather than to move the property.
 
-   Both are read through `⟨n⟩ kept between 0 and 1`, a query of the rule's own:
-   above one, bounciness hands back more speed than arrived and friction runs
-   the tangent backwards; below zero, both do the reverse. And friction is a
-   fraction lost per SECOND, raised to the length of the frame — the unit
-   gravity's strength already uses. Multiplied in flat, once per contact frame,
-   the same number was a different brake at a different frame rate.
+   Three coefficients, all 0…1, all read through `⟨n⟩ kept between 0 and 1`:
+
+   - **bounciness** — how much of the speed INTO the surface comes back.
+   - **friction** — grip. It SUBTRACTS, so it either stops a body or lets it
+     keep gathering speed; and when it takes the whole tangential speed, this
+     frame's slide is undone as well, because velocity alone can never pin
+     anything (gravity adds before the move, the response acts after). That is
+     what makes a grippy wall HOLD.
+   - **drag** — how much of the speed ALONG the surface is lost per second. It
+     SCALES, so it settles at a steady slide and can never hold anything.
+
+   Neither friction nor drag can do the other's job, which is why both exist: a
+   wall-grab is friction, a wall-slide at a fixed speed is drag, ice is neither.
+
+   Friction is a fraction OF something, and that something is a world property
+   this rule declares — `grip strength`, in the units gravity's `strength` is
+   in, defaulting to the same 9. So `friction 1` is full grip, enough to hold a
+   body in an ordinary world, and a heavier world raises one number rather than
+   every surface being re-tuned. Two earlier attempts got this wrong: a plain
+   scaling (which cannot hold anything at any value), and then a raw
+   acceleration (which held, but made `1` mean 11% of gravity — a coefficient
+   everywhere else, an acceleration here).
 
    What friction does NOT touch is a speed something re-declares every tick:
    `Arrow Keys` assigns `velocity.x` from the keys held, so floor friction
