@@ -261,12 +261,14 @@ const PLAYER_ACTOR = JSON.stringify(
             ]),
           },
         },
-        // Space to jump, which is the input rule's events reaching a handler:
-        // `rules/input` turns the frame's key edges into "a key is pressed",
-        // this filters for the key it wants, and gravity's own query keeps the
-        // jump honest — no second jump in mid-air.
+        // Space to jump. WHICH key is on the hat — `rules/input` declares its
+        // events as "⟨a key⟩ is pressed", so the handler is registered for the
+        // space bar and never runs for anything else (specs/ENUMS.md). What is
+        // left inside is the one condition a filter cannot express: gravity's
+        // own query, keeping the jump honest — no second jump in mid-air.
         {
-          type: 'world_on_Input_SeesThatAKeyIsPressedEvent',
+          type: 'world_on_Input_IsPressedEvent',
+          fields: {FILTER0: 'space'},
           x: 20,
           y: 440,
           next: {
@@ -275,31 +277,8 @@ const PLAYER_ACTOR = JSON.stringify(
               inputs: {
                 IF0: {
                   block: {
-                    type: 'logic_operation',
-                    fields: {OP: 'AND'},
-                    inputs: {
-                      A: {
-                        block: {
-                          type: 'logic_compare',
-                          fields: {OP: 'EQ'},
-                          inputs: {
-                            A: {block: {type: 'world_event_value'}},
-                            B: {
-                              block: {
-                                type: 'world_key',
-                                fields: {KEY: 'space'},
-                              },
-                            },
-                          },
-                        },
-                      },
-                      B: {
-                        block: {
-                          type: 'world_query_Gravity_IsOnTheGroundQuery',
-                          inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
-                        },
-                      },
-                    },
+                    type: 'world_query_Gravity_IsOnTheGroundQuery',
+                    inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
                   },
                 },
                 DO0: {
