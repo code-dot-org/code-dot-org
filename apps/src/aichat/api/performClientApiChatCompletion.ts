@@ -54,13 +54,14 @@ export async function performClientApiChatCompletion(
   ];
   metricsReporter.incrementCounter(`${metricPrefix}.Start`, metricDimensions);
 
-  const {response, assets, status} = await clientApi.generateChatResponse(
-    newMessage,
-    storedMessages,
-    modelParameters,
-    buildAssetUrl,
-    levelSystemPrompt
-  );
+  const {response, assets, status, attestation} =
+    await clientApi.generateChatResponse(
+      newMessage,
+      storedMessages,
+      modelParameters,
+      buildAssetUrl,
+      levelSystemPrompt
+    );
 
   metricsReporter.reportLoadTime(
     `${metricPrefix}.Latency`,
@@ -78,7 +79,7 @@ export async function performClientApiChatCompletion(
     {name: 'ExecutionStatus', value: statusName},
   ]);
 
-  await updateAichatRequest(requestId, status, response);
+  await updateAichatRequest(requestId, status, response, attestation);
 
   const updatedUserMessage = {...newMessage, requestId};
 

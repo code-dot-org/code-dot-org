@@ -78,16 +78,25 @@ export async function generateChatResponse(
     : undefined;
 
   // Generate a response with the model.
-  const {text, files, finishReason, response, output} = await generateText({
-    model: getModel(modelParameters.selectedModelId),
-    messages,
-    temperature: modelParameters.temperature,
-    ...(outputSchema && {output: outputSchema}),
-  });
+  const {text, files, finishReason, response, output, outputJson, attestation} =
+    await generateText({
+      model: getModel(modelParameters.selectedModelId),
+      messages,
+      temperature: modelParameters.temperature,
+      ...(outputSchema && {output: outputSchema}),
+    });
 
   // chatMessageText has to stay a string: rendering, storage and non-schema
   // messages all depend on that, even when a schema was used.
-  const responseText = outputSchema ? JSON.stringify(output) : text;
+  //
+  // For the schema case prefer the worker's own serialization (outputJson): the
+  // signature covers a digest of exactly those bytes, and JSON.stringify()
+  // guarantees no key order, so re-serializing here could produce a different
+  // string and fail verification on a perfectly good response. The fallback is
+  // only for a worker predating outputJson, which sends no signature anyway.
+  const responseText = outputSchema
+    ? outputJson ?? JSON.stringify(output)
+    : text;
 
   if (['content-filter', 'other'].includes(finishReason)) {
     // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
@@ -180,18 +189,21 @@ export async function generateChatResponse(
       if (imageModerationStatus === 'flagged') {
         return {
           response: responseText,
+          attestation,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageSafe === false) {
         return {
           response: responseText,
+          attestation,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
         };
       }
       if (imageModerationStatus === 'error' || imageSafe === undefined) {
         return {
           response: responseText,
+          attestation,
           status: AiRequestExecutionStatus.FAILURE,
         };
       }
@@ -207,12 +219,14 @@ export async function generateChatResponse(
   if (!modelOutputSafe) {
     return {
       response: responseText,
+      attestation,
       status: AiRequestExecutionStatus.MODEL_PROFANITY,
     };
   }
 
   return {
     response: responseText,
+    attestation,
     assets,
     status: AiRequestExecutionStatus.SUCCESS,
   };

@@ -1,6 +1,20 @@
 class AichatEventsController < ApplicationController
   authorize_resource class: false
 
+  # Matches Role.ASSISTANT in apps/src/aiComponentLibrary/chatMessage/types.ts.
+  # Ruby has no shared constant for chat roles -- the rest of the backend spells
+  # it out too (see AichatAiHelper) -- so keep the literal local rather than
+  # inventing a cross-language enum for one comparison.
+  ASSISTANT_ROLE = 'assistant'.freeze
+
+  # Fields the client must not be able to write into stored history.
+  #
+  # `attestation` is transport, not content: it is verified above and has no
+  # business in the transcript. `teacherFeedback` is authorization-bearing --
+  # submit_teacher_feedback guards it with can_submit_feedback?, and accepting it
+  # here verbatim would let a student mark their own message as teacher-reviewed.
+  UNPERSISTED_EVENT_KEYS = %w[attestation teacherFeedback].freeze
+
   # POST /aichat_events/log_chat_event
   # ----------------------------------
   # params are:
@@ -27,6 +41,14 @@ class AichatEventsController < ApplicationController
 
     event = params[:newChatEvent]
 
+    integrity = assistant_event_integrity(event, context)
+    if integrity[:error]
+      log_integrity_failure(event, context, integrity[:error])
+      if require_response_attestation?
+        return render status: :unprocessable_entity, json: {error: 'chat event failed integrity check'}
+      end
+    end
+
     project_id = nil
     if context[:channelId]
       _, project_id = get_storage_id_and_project_id(context[:channelId])
@@ -40,7 +62,7 @@ class AichatEventsController < ApplicationController
         project_id: project_id,
         lesson_id: context[:lessonId],
         request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
-        aichat_event: event
+        aichat_event: persistable_event(event)
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
@@ -129,6 +151,113 @@ class AichatEventsController < ApplicationController
     chat_event.save!
 
     render status: :ok, json: {}
+  end
+
+  # Assistant-role messages are the only events that claim to be model output,
+  # and so the only ones a forger gains anything by inventing. They must match a
+  # response we can vouch for.
+  #
+  # Everything else -- the user's own messages, notifications, model updates,
+  # user actions -- is client-authored by construction and carries no integrity
+  # claim that could be checked. That is acceptable only because each is stored
+  # with its own discriminator (notificationType, updatedField, descriptionKey)
+  # and cannot present itself as model output.
+  #
+  # Two provenances, and note that neither is selected by the client:
+  #
+  #   gateway  the browser called the worker, so the only evidence is the
+  #            worker's attestation, verified here against chatMessageText.
+  #   legacy   AichatRequestChatCompletionJob ran the completion in-process, so
+  #            aichat_requests.response is ours and the event must match it.
+  #
+  # The legacy comparison is only sound because AichatRequestsController#update
+  # refuses to write `response` without a matching attestation. Without that,
+  # `response` would be client-writable and comparing against it would prove
+  # nothing.
+  #
+  # Returns {error:} with a short reason, or {error: nil, status:} when accepted.
+  private def assistant_event_integrity(event, context)
+    return {error: nil} unless assistant_message?(event)
+    return {error: nil, status: :placeholder} if failed_completion_placeholder?(event)
+
+    result = AichatResponseAttestation.verify(
+      attestation: event[:attestation],
+      response_text: event[:chatMessageText],
+      user: current_user,
+      context: context
+    )
+    return {error: nil, status: result.status} if result.verified?
+
+    # No attestation is the expected shape for a legacy event, so fall through
+    # to the server-authored comparison rather than treating it as a failure.
+    # An attestation that was supplied and did not check out is never downgraded
+    # this way -- that is an attack signal, not a legacy event.
+    if result.status == :absent
+      legacy_error = legacy_response_mismatch(event)
+      return {error: nil, status: :server_executed} if legacy_error.nil?
+      return {error: legacy_error, status: :absent}
+    end
+
+    {error: result.error || result.status.to_s, status: result.status}
+  end
+
+  # Compares an unattested assistant message against the response our own job
+  # wrote for its request.
+  private def legacy_response_mismatch(event)
+    request_id = event[:requestId]
+    return 'assistant message without requestId or attestation' if request_id.blank?
+
+    request = AichatRequest.find_by(id: request_id)
+    return 'requestId not found' if request.nil?
+    # requestId is client-supplied, so ownership has to be checked explicitly or
+    # an event could reference another user's request.
+    return 'requestId belongs to another user' if request.user_id != current_user.id
+    return 'request has no recorded response' if request.response.nil?
+
+    expected = AichatResponseAttestation.sha256(request.response)
+    actual = AichatResponseAttestation.sha256(event[:chatMessageText])
+    return nil if ActiveSupport::SecurityUtils.secure_compare(expected, actual)
+    'chatMessageText does not match the recorded response'
+  end
+
+  private def assistant_message?(event)
+    event[:role].to_s == ASSISTANT_ROLE && event[:chatMessageText].present?
+  end
+
+  # submitChatContents logs a fixed placeholder when a completion never produced
+  # a response at all. It has no requestId because no model output exists to
+  # attest.
+  #
+  # Deliberately exact rather than "any errored assistant message": a loose
+  # carve-out here would be the bypass for the whole check, since status and
+  # text both come from the client.
+  private def failed_completion_placeholder?(event)
+    event[:status].to_s == SharedConstants::AI_INTERACTION_STATUS[:ERROR] &&
+      event[:chatMessageText].to_s == 'error' &&
+      event[:requestId].blank?
+  end
+
+  private def persistable_event(event)
+    event.except(*UNPERSISTED_EVENT_KEYS)
+  end
+
+  private def require_response_attestation?
+    DCDO.get('aichat_require_response_attestation', false)
+  end
+
+  # Separate signals on purpose. An invalid or replayed attestation is an attack
+  # signal; :key_unavailable is our own misprovisioning and :absent an
+  # un-upgraded worker. Folding them together buries the interesting one.
+  private def log_integrity_failure(event, context, reason)
+    CDO.log.info({
+      event: 'aichat_event_integrity_failure',
+      reason: reason,
+      requestId: event[:requestId],
+      userId: current_user.id,
+      clientType: context[:clientType],
+      enforcing: require_response_attestation?,
+    }.to_json.to_s
+)
   end
 
   private def can_log_aichat_events?(level_id, client_type)

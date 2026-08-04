@@ -37,14 +37,23 @@ export async function createAichatRequest(
   return requestId;
 }
 
+/**
+ * Reports a client-executed chat completion back to dashboard.
+ *
+ * `attestation` is the worker's detached signature over `response`. Relaying it
+ * is what lets dashboard record the response as verified rather than taking the
+ * browser's word for it -- so it must be passed through unmodified whenever the
+ * worker supplied one.
+ */
 export async function updateAichatRequest(
   requestId: number,
   status: ValueOf<typeof AiRequestExecutionStatus>,
-  response?: string
+  response?: string,
+  attestation?: string
 ) {
   await HttpClient.put(
     `${ROOT_URL}/${requestId}`,
-    JSON.stringify({execution_status: status, response}),
+    JSON.stringify({execution_status: status, response, attestation}),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',

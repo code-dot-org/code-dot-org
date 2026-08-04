@@ -116,8 +116,33 @@ class AichatRequestsController < ApplicationController
     # Only the user who initiated the request can update it.
     return render status: :forbidden, json: {} if request.user_id != current_user.id
 
-    if request.update(update_params)
-      render status: :ok, json: {requestId: request.id}
+    # `response` is what AichatEventsController compares an unattested (legacy)
+    # assistant message against, so it must never be a free-form client write.
+    # Accept it only when the worker's attestation covers exactly this value;
+    # otherwise record the outcome and drop the text.
+    #
+    # This is not the integrity check itself -- that happens at insert time, in
+    # log_chat_event. It is what makes `response` trustworthy enough for the
+    # legacy comparison there to mean anything, and it keeps the analytics
+    # record from carrying client-authored text as though the model produced it.
+    result = AichatResponseAttestation.verify(
+      attestation: params[:attestation],
+      response_text: params[:response],
+      user: current_user,
+      context: attestation_context(request)
+    )
+    log_attestation_result(result, request)
+
+    attributes = update_params.to_h
+    unless result.verified?
+      # Content-filter and failure paths legitimately report a
+      # client-synthesized string the worker never produced and cannot attest.
+      # Keep the status, drop the text.
+      attributes.delete('response')
+    end
+
+    if request.update(attributes)
+      render status: :ok, json: {requestId: request.id, responseVerified: result.verified?}
     else
       render status: :unprocessable_entity, json: {errors: request.errors}
     end
@@ -130,6 +155,32 @@ class AichatRequestsController < ApplicationController
     attributes = AichatAiHelper.build_request_attributes(current_user.id, request_params)
 
     AichatRequest.new(attributes).tap(&:save!)
+  end
+
+  # The attestation binds to the context the inbound token proved; compare it
+  # against what this request row was created with.
+  private def attestation_context(request)
+    {
+      currentLevelId: request.level_id,
+      scriptId: request.script_id,
+      lessonId: nil,
+      channelId: params.dig(:aichatContext, :channelId),
+    }
+  end
+
+  # Separate signals on purpose. :invalid means an attestation was supplied and
+  # did not check out, which is an attack signal. :key_unavailable is our own
+  # misprovisioning and :absent is an un-upgraded worker; folding those together
+  # would bury the interesting one.
+  private def log_attestation_result(result, request)
+    CDO.log.info({
+      event: 'aichat_response_attestation',
+      status: result.status,
+      requestId: request.id,
+      userId: current_user.id,
+      error: result.error,
+    }.to_json.to_s
+)
   end
 
   private def should_throttle_request_count?

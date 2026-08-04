@@ -219,6 +219,24 @@ export const GatewayGenerateTextResponseV1Schema = z.object({
   // Accessing response.body is intentional for provider-specific fields
   // (e.g. Gemini moderation details live in body.candidates[0]).
   response: ResponseMetaSchema.optional(),
+  // Detached attestation over this response: a compact JWS (RS256) signed with
+  // the worker's private key. Its payload carries digests and binding claims
+  // only -- no message content -- so `text`/`output` above remain the
+  // authoritative, independently verifiable copy. Dashboard verifies it with
+  // the worker's public key before accepting a client-submitted response as
+  // authoritative; see AichatResponseAttestation.
+  //
+  // Optional because a worker deployed before response signing landed omits
+  // it, and because dashboard tolerates its absence while running permissively.
+  attestation: z.string().optional(),
+  // The exact serialization of `output` whose digest `attestation` covers.
+  // Present only when the request supplied an `output` schema.
+  //
+  // Consumers MUST forward this string verbatim rather than re-stringifying
+  // the parsed `output` above: JSON.stringify() gives no key-order guarantee,
+  // so a browser-side re-serialization need not reproduce the bytes the worker
+  // hashed, and verification would fail on legitimate traffic.
+  outputJson: z.string().optional(),
 });
 
 // ---------------------------------------------------------------------------

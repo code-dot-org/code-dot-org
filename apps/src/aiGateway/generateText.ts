@@ -49,9 +49,26 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
   return output;
 };
 
+/**
+ * The SDK result plus the two gateway-only fields that ride alongside it.
+ *
+ * `attestation` is the worker's detached signature over the response; callers
+ * that persist the response must relay it to dashboard so the value can be
+ * verified rather than taken on trust. `outputJson` is the worker's own
+ * serialization of `output`, and must be used verbatim rather than
+ * re-stringified -- it is the exact byte sequence the attestation covers.
+ */
+export type GatewayGenerateTextResult<
+  TOOLS extends SDKTools,
+  OUTPUT extends SDKOutput
+> = GenerateTextResult<TOOLS, OUTPUT> & {
+  attestation?: string;
+  outputJson?: string;
+};
+
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
   wire: GatewayGenerateTextResponseV1
-): GenerateTextResult<TOOLS, OUTPUT> => {
+): GatewayGenerateTextResult<TOOLS, OUTPUT> => {
   return {
     ...wire,
     text: wire.text ?? '',
@@ -65,7 +82,7 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
     response: wire.response
       ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
       : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
-  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
+  } as unknown as GatewayGenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -78,7 +95,7 @@ const generateTextThroughGateway = async <
   OUTPUT extends SDKOutput = SDKOutput
 >(
   options: SDKOptions
-): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const modelString = getModelString(model);
   const promptLength =
@@ -86,7 +103,9 @@ const generateTextThroughGateway = async <
   const clientType = AichatContextManager.getContext().clientType;
 
   let schemaErrorReported = false;
-  const execute = async (): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
+  const execute = async (): Promise<
+    GatewayGenerateTextResult<TOOLS, OUTPUT>
+  > => {
     try {
       const serializedOutput = await serializeOutputSchema(options.output);
 

@@ -652,6 +652,10 @@ google_gemini_ai_tutor_api_key: !Secret
 ai_gateway_auth_key: !Secret
 ai_gateway_auth_public_key: !Secret
 ai_gateway_auth_key_passphrase: !Secret
+# Public half of the worker's response-signing keypair (SPKI PEM). Verifies
+# response attestations; see AichatResponseAttestation. The private half lives
+# only as a wrangler secret in the worker, so nothing here can mint one.
+ai_gateway_worker_public_key: !Secret
 
 # Credentials for Google Vertex API
 google_vertex_ai_tutor_service_account_key: !Secret
