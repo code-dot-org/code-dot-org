@@ -43,6 +43,7 @@ export interface LessonOption {
   hasLessonPlan: boolean;
   isLockable: boolean;
   position: number;
+  hasCodeLevel?: boolean;
 }
 
 interface LessonSelectorProps {

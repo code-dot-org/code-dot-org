@@ -3,6 +3,7 @@ import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
+import {useSearchParams} from 'react-router-dom';
 
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -54,12 +55,21 @@ const getLessons = (unitId: number) =>
 
 const lessonsCachedLoader = _.memoize(getLessons);
 
+const parseIdParam = (idParam: string | null): number | null => {
+  const parsed = idParam ? Number(idParam) : NaN;
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
 const StudentSnapshot: React.FC = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [selectedStudentId, setSelectedStudentId] = React.useState<
     number | null
-  >(null);
+  >(() => parseIdParam(searchParams.get('studentId')));
   const [lessons, setLessons] = useState<LessonOption[]>([]);
-  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(null);
+  const [selectedLessonId, setSelectedLessonId] = useState<number | null>(() =>
+    parseIdParam(searchParams.get('lessonId'))
+  );
   const [isLessonsLoading, setIsLessonsLoading] = useState<boolean>(false);
   const [hasUnnumberedLessons, setHasUnnumberedLessons] =
     useState<boolean>(false);
@@ -99,6 +109,11 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
+  const selectedLesson = React.useMemo(
+    () => lessons.find(lesson => lesson.id === selectedLessonId),
+    [lessons, selectedLessonId]
+  );
+
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
   const tourResumed = useRef(false);
@@ -109,6 +124,26 @@ const StudentSnapshot: React.FC = () => {
     tourResumed.current = true;
     resumeLearnHowToEvaluateTour();
   }, []);
+
+  useEffect(() => {
+    setSearchParams(
+      prevParams => {
+        const nextParams = new URLSearchParams(prevParams);
+        if (selectedLessonId !== null) {
+          nextParams.set('lessonId', String(selectedLessonId));
+        } else {
+          nextParams.delete('lessonId');
+        }
+        if (selectedStudentId !== null) {
+          nextParams.set('studentId', String(selectedStudentId));
+        } else {
+          nextParams.delete('studentId');
+        }
+        return nextParams;
+      },
+      {replace: true}
+    );
+  }, [selectedLessonId, selectedStudentId, setSearchParams]);
 
   useEffect(() => {
     if (selectedUnitId) {
@@ -192,13 +227,11 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        {selectedLessonId && selectedStudentId && (
-          <StudentLessonProgressDetailsWidget
-            selectedUnitId={selectedUnitId}
-            selectedLessonId={selectedLessonId}
-            selectedStudentId={selectedStudentId}
-          />
-        )}
+        <StudentLessonProgressDetailsWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonInsightWidget
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
@@ -221,6 +254,7 @@ const StudentSnapshot: React.FC = () => {
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
           selectedStudentId={selectedStudentId}
+          hasCodeLevel={!!selectedLesson?.hasCodeLevel}
         />
         <StudentRubricWidget
           gridWidth={2}

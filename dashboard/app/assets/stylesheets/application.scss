@@ -109,8 +109,9 @@ body.pin_bottom {
   left: 0;
 }
 
-// Brand-aware lab shell background for legacy labs. Excludes Minecraft labs
-body.pin_bottom:not(.minecraft) {
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft
+// (own theming) and AI for Oceans (needs the deep-blue underwater scene).
+body.pin_bottom:not(.minecraft):not(.oceans-blue) {
   background-color: var(--background-neutral-secondary);
 }
 
@@ -478,9 +479,24 @@ img.video_thumbnail {
   }
 }
 
+// Clips project-header content that exceeds its allocated width (the lesson
+// title and Share/Remix share the row).
+.project_info_container {
+  overflow: hidden;
+}
+
 // Pill nav links and outlined header buttons for codeai-next/codeai-audit;
 // default codeai keeps its square 35px/4px buttons and orange hover underline.
 @include codeai-brand {
+  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
+  // outside the buttons while still containing overflowing content. Browsers
+  // without overflow-clip-margin clip the rings at the box; browsers without
+  // clip keep the hidden fallback above.
+  .project_info_container {
+    overflow: clip;
+    overflow-clip-margin: 4px;
+  }
+
   // Marketing-site spacing model: no container gap, spacing comes from pill padding.
   .header-wrapper .headerlinks {
     flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
@@ -533,6 +549,20 @@ img.video_thumbnail {
     &:focus-visible {
       outline: 1px solid var(--borders-neutral-white-fixed);
       outline-offset: 2px;
+    }
+  }
+
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
     }
   }
 
@@ -2664,6 +2694,13 @@ a.download-video {
 .devise-links {
   flex-grow: 2;
 
+  // Sit at the bottom of the row instead of stretching to the taller React
+  // column beside us. Scoped to this class because the LTI account-linking
+  // page reuses .devise-links and must keep stretching.
+  &.oauth-links-column {
+    align-self: flex-end;
+  }
+
   form {
     margin: 0;
   }
@@ -3490,6 +3527,25 @@ $modal-no-icon-gap: 22px;
     }
     &.no-modal-icon {
       margin-left: $modal-no-icon-gap;
+    }
+
+    p, pre {
+      font-size: var(--font-size-body-lg);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .generated-code-container p {
+      font-family: inherit;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: inherit;
+    }
+    .generated-code-container pre {
+      font-family: monospace;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: normal;
     }
 
     // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.

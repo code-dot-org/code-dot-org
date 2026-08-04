@@ -576,13 +576,14 @@ class Ability
       # The get_access_token endpoint is used for normal execution, and the access_token_with_override_sources
       # is used when viewing another version of a student's project (in preview or Code Review mode).
       # It is also used for running exemplars, but only teachers can access exemplars.
-      # Levelbuilders can access and update Java Lab validation code (using the
-      # access_token_with_override_validation endpoint).
+      # Levelbuilders can run unsaved Java Lab validation code, either against a
+      # channel's saved sources (access_token_with_override_validation) or
+      # alongside override sources (access_token_with_override_sources_and_validation).
       can [:get_access_token, :access_token_with_override_sources], :javabuilder_session do
         user.teacher? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can :access_token_with_override_validation, :javabuilder_session do
+      can [:access_token_with_override_validation, :access_token_with_override_sources_and_validation], :javabuilder_session do
         user.levelbuilder?
       end
 

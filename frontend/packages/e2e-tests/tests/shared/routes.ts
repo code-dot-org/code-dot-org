@@ -57,3 +57,18 @@ export function unitOverviewUrl({
 }: UnitOverviewUrlParams = {}): string {
   return `/courses/${course}/units/${unit}`;
 }
+
+export interface LessonOverviewUrlParams {
+  course?: string;
+  unit?: number;
+  lesson: number;
+}
+
+/** Build a relative URL for a lesson overview (lesson plan) page. */
+export function lessonOverviewUrl({
+  course = 'allthethingscourse',
+  unit = 1,
+  lesson,
+}: LessonOverviewUrlParams): string {
+  return `/courses/${course}/units/${unit}/lessons/${lesson}`;
+}

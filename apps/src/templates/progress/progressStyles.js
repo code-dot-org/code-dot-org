@@ -106,22 +106,30 @@ const assessmentStatusStyle = {
   },
 };
 
+// --borders-success-primary on a --background-success-primary fill reads as a
+// ring of a slightly different green rather than as an outline, because under
+// codeai-next the two tokens resolve close together (#34bd43 on #258830). The
+// success statuses below all draw their border in the fill color instead: on a
+// filled bubble the border disappears into the fill, and on an unfilled one
+// (attempted, passed) it stays a visible green outline.
+const levelSuccessStatusBorderColor = 'var(--background-success-primary)';
+
 const levelStatusStyle = {
   [LevelStatus.attempted]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
   },
   [LevelStatus.perfect]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.free_play_complete]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.passed]: {
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-extra-light)',
   },
   // Note: There are submittable levels that are not assessments.
@@ -143,7 +151,7 @@ const levelStatusStyle = {
   },
   [LevelStatus.review_accepted]: {
     color: 'var(--text-neutral-inverse)',
-    borderColor: 'var(--borders-success-primary)',
+    borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-primary)',
   },
 };

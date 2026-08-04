@@ -10,11 +10,7 @@ import shareStyles from '@cdo/apps/lab2/views/components/layout/share-layout.mod
 
 type ShareViewProps = Pick<
   ReactFlowCanvasProps,
-  | 'levelName'
-  | 'initialNodes'
-  | 'initialEdges'
-  | 'initialViewport'
-  | 'colorMode'
+  'initialNodes' | 'initialEdges' | 'initialViewport' | 'colorMode'
 >;
 
 /**

@@ -31,6 +31,16 @@
         "visibility": "Teacher-only",
         "dismissible": true,
         "buttonText": "Let's Go!"
+      },
+      {
+        "key": "220a22c9-1550-479f-9d3f-abff09e58c28",
+        "notice": "Teaching in the United States?",
+        "details": "This version of the course is designed for global use. If you are in the US, please use the latest version of AI Foundations",
+        "link": "https://studio.code.org/courses/ai-foundations-year1-2026",
+        "type": "course",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "AI Foundations: Exploring AI and CS"
       }
     ],
     "family_name": "artificial-intelligence-foundations",

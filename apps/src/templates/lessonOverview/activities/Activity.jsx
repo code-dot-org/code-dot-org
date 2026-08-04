@@ -1,3 +1,5 @@
+import {Typography} from '@mui/material';
+import classNames from 'classnames';
 import React, {Component} from 'react';
 
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
@@ -16,7 +18,16 @@ export default class Activity extends Component {
 
     return (
       <div>
-        <h2 className={styles.activityHeader} id={`activity-${activity.key}`}>
+        {/* An activity is a subsection of the "Teaching Guide" h2, so h3. */}
+        <Typography
+          variant="h4"
+          component="h3"
+          className={classNames(
+            styles.activityHeader,
+            styles.headingWithMargins
+          )}
+          id={`activity-${activity.key}`}
+        >
           {activity.displayName}
           {activity.duration > 0 && (
             <span>
@@ -25,7 +36,7 @@ export default class Activity extends Component {
               })}
             </span>
           )}
-        </h2>
+        </Typography>
         {activity.activitySections.map(item => {
           return <ActivitySection key={item.key} section={item} />;
         })}

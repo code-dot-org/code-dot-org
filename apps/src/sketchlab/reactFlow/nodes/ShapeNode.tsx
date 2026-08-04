@@ -2,7 +2,12 @@ import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
 import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
+import {
+  DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
+  MIN_NODE_HEIGHT,
+  MIN_NODE_WIDTH,
+} from '../constants';
 import {
   fontFamilyCss,
   fontSizePx,
@@ -23,7 +28,6 @@ import styles from './shape-node.module.scss';
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 // SVG path for a diamond (rhombus) filling a 100x100 viewBox: top, right, bottom, left.
 const DIAMOND_POINTS = '50,5 95,50 50,95 5,50';
-const SHAPE_BORDER_PX = 2;
 
 interface ShapeSvgProps {
   shapeType: ShapeType;
@@ -50,7 +54,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
           rx="48"
           ry="48"
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -69,7 +73,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={TRIANGLE_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -88,7 +92,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={DIAMOND_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
