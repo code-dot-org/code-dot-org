@@ -473,8 +473,7 @@ const worldAddEffect = defineBlock({
       if (!path) {
         return '';
       }
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       // The `.effect` is imported as DATA — the bundler loads it as JSON — and
       // compiled to GLSL in the preview surface, where Phaser is. Nothing about
       // shaders reaches the generated code.
@@ -484,9 +483,11 @@ const worldAddEffect = defineBlock({
         `import ${importVar(path)} from ${str(path)};`,
       );
       const values = effectParamValuesCode(block, generator);
-      return values
-        ? `${target}.addEffect(${str(path)}, ${importVar(path)}, ${values});\n`
-        : `${target}.addEffect(${str(path)}, ${importVar(path)});\n`;
+      return forEachActor(target, actor =>
+        values
+          ? `${actor}.addEffect(${str(path)}, ${importVar(path)}, ${values})`
+          : `${actor}.addEffect(${str(path)}, ${importVar(path)})`,
+      );
     },
   },
 });
@@ -517,10 +518,12 @@ const worldRemoveEffect = defineBlock({
       if (!path) {
         return '';
       }
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       // No import: removing needs only the effect's identity, not its graph.
-      return `${target}.removeEffect(${str(path)});\n`;
+      return forEachActor(
+        target,
+        actor => `${actor}.removeEffect(${str(path)})`,
+      );
     },
   },
 });
@@ -544,11 +547,14 @@ const worldSetPosition = defineBlock({
   tooltip: "Set an actor's position.",
   generator: {
     javascript(block, generator) {
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       const x = generator.valueToCode(block, 'X', Order.NONE) || '0';
       const y = generator.valueToCode(block, 'Y', Order.NONE) || '0';
-      return `${target}.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}));\n`;
+      return forEachActor(
+        target,
+        actor =>
+          `${actor}.set(WorldLab.PositionProperty, new WorldLab.Vector(${x}, ${y}))`,
+      );
     },
   },
 });
@@ -583,28 +589,26 @@ const worldSetSprite = defineBlock({
   tooltip: "Set an actor's sprite (it must have the appearance trait).",
   generator: {
     javascript(block, generator) {
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       const value = block.getFieldValue('SPRITE');
       // The field may name one cell of a spritesheet (`coinSpin.png#3`); the
       // rectangle is resolved HERE, where the project's `.sheet` files are
       // known, because the engine is only ever told rectangles (spriteCells).
       const {sprite} = parseSpriteRef(value);
       const cell = spriteCell(value);
-      const lines = [
-        `${target}.set(WorldLab.SpriteProperty, ${str(sprite)});\n`,
-      ];
-      // Always both: an actor that drew a cell and is then set to a plain
+      // Always all three: an actor that drew a cell and is then set to a plain
       // picture must stop drawing that cell, and a size of zero says "all of it".
-      lines.push(
-        `${target}.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(${
-          cell?.x ?? 0
-        }, ${cell?.y ?? 0}));\n`,
-        `${target}.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(${
-          cell?.width ?? 0
-        }, ${cell?.height ?? 0}));\n`,
-      );
-      return lines.join('');
+      const lines = (actor: string) =>
+        [
+          `${actor}.set(WorldLab.SpriteProperty, ${str(sprite)})`,
+          `${actor}.set(WorldLab.SpriteCellOriginProperty, new WorldLab.Vector(${
+            cell?.x ?? 0
+          }, ${cell?.y ?? 0}))`,
+          `${actor}.set(WorldLab.SpriteCellSizeProperty, new WorldLab.Vector(${
+            cell?.width ?? 0
+          }, ${cell?.height ?? 0}))`,
+        ].join(';\n');
+      return forEachActor(target, lines);
     },
   },
 });
@@ -635,10 +639,12 @@ const worldPlayAnimation = defineBlock({
   tooltip: "Play an actor's animation (it must have the appearance trait).",
   generator: {
     javascript(block, generator) {
-      const target =
-        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
+      const target = actorTarget(block, generator);
       const animation = block.getFieldValue('ANIMATION');
-      return `WorldLab.playAnimation(${target}, ${str(animation)});\n`;
+      return forEachActor(
+        target,
+        actor => `WorldLab.playAnimation(${actor}, ${str(animation)})`,
+      );
     },
   },
 });
@@ -733,8 +739,7 @@ const defineEventBlock = (event: EventMeta) => {
     tooltip: `Run the blocks below when this actor ${event.name}.`,
     generator: {
       javascript(block, generator) {
-        const target =
-          generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+        const target = actorTarget(block, generator, Order.MEMBER);
         // The guard a learner would otherwise write themselves: compare the
         // event's value against the choice and leave if it is not the one.
         const guards = filters
@@ -743,7 +748,7 @@ const defineEventBlock = (event: EventMeta) => {
           .map(value => `  if (eventValue !== ${str(value)}) return;\n`)
           .join('');
         return onHandler(
-          target,
+          target.code,
           refCode(event.ref, generator),
           guards + nextChainCode(block, generator),
         );
@@ -823,8 +828,7 @@ const defineEmitBlock = (event: EventMeta) => {
     tooltip: `Raise "${event.name}" for an actor — every “when …” handler listening for it runs.`,
     generator: {
       javascript(block, generator) {
-        const actor =
-          generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
+        const target = actorTarget(block, generator);
         const carried = names
           .slice(0, paramIndex)
           .map(name => generator.valueToCode(block, name.value, Order.NONE))
@@ -832,9 +836,12 @@ const defineEmitBlock = (event: EventMeta) => {
         // `refCode` resolves a project event to the bare local name when the
         // rule is emitting its OWN event (it is an `export const` in the module
         // being written), and imports it otherwise.
-        return `world.emit(${refCode(event.ref, generator)}, ${actor}${carried
-          .map(code => `, ${code}`)
-          .join('')});\n`;
+        const event_ = refCode(event.ref, generator);
+        const values = carried.map(code => `, ${code}`).join('');
+        return forEachActor(
+          target,
+          actor => `world.emit(${event_}, ${actor}${values})`,
+        );
       },
     },
   });
@@ -933,6 +940,57 @@ const isSettable = (property: PropertyMeta): boolean =>
 const isGettable = (property: PropertyMeta): boolean =>
   property.ref.exportName !== '' &&
   !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName);
+
+// ── Actor values: one actor, or several ──────────────────────────────────────
+// An actor socket carries one actor or many (specs/ACTOR_LISTS.md), and what a
+// block does with it depends on which kind of block it is: a statement
+// broadcasts, a value reads the first. Generated code says so out loud, through
+// `WorldLab.each` and `WorldLab.one` — but only where the value could BE many,
+// because wrapping `this actor` in a broadcast would make every actor file
+// harder to read for a case it does not have.
+
+/** An `ACTOR` socket's expression, and whether it could hold several. */
+interface ActorTarget {
+  code: string;
+  many: boolean;
+}
+
+/**
+ * Read a block's `ACTOR` socket.
+ *
+ * `many` asks the block plugged in, not the value at runtime: only
+ * `any ⟨Kind⟩` yields several today. A VARIABLE will be able to, once there is
+ * a way to put several in one (`push`, ACTOR_LISTS.md step 4) — that is the
+ * moment this has to start asking where the variable came from, and until then
+ * treating one as single keeps every rule body reading as it does.
+ */
+const actorTarget = (
+  block: Block,
+  generator: JavascriptGenerator,
+  order: number = Order.NONE,
+): ActorTarget => {
+  const code = generator.valueToCode(block, 'ACTOR', order) || 'actor';
+  const plugged = block.getInputTargetBlock?.('ACTOR');
+  return {code, many: plugged?.type === 'world_actor_kind'};
+};
+
+/**
+ * A statement over an actor value: run `body` for each actor in it.
+ *
+ * `body` is handed the expression naming one actor, so a single value emits the
+ * line it always did and a many-valued one emits the broadcast around it.
+ */
+const forEachActor = (
+  target: ActorTarget,
+  body: (actor: string) => string,
+): string =>
+  target.many
+    ? `WorldLab.each(${target.code}, actor => ${body('actor')});\n`
+    : `${body(target.code)};\n`;
+
+/** An actor value read as one actor — the first, when it holds several. */
+const oneActor = (target: ActorTarget): string =>
+  target.many ? `WorldLab.one(${target.code})` : target.code;
 
 /** A typed value slot — the shared shape of a property, an action parameter, and
  * a query argument. Uses the widest list, {@link ParamType}: an `actor` socket
@@ -1219,14 +1277,12 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
       : `Set the world's ${name}.`,
     generator: {
       javascript(block, generator) {
-        const target = actorScoped
-          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
-          : 'world';
-        return `${target}.set(${refCode(property.ref, generator)}, ${typedValueCode(
-          property,
-          block,
-          generator,
-        )});\n`;
+        const value = typedValueCode(property, block, generator);
+        const set = (subject: string) =>
+          `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
+        return actorScoped
+          ? forEachActor(actorTarget(block, generator, Order.MEMBER), set)
+          : `${set('world')};\n`;
       },
     },
   });
@@ -1289,14 +1345,14 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
       : `Get the world's ${name}.`,
     generator: {
       javascript(block, generator) {
-        const target = actorScoped
-          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
+        const subject = actorScoped
+          ? oneActor(actorTarget(block, generator, Order.MEMBER))
           : 'world';
         const component = hasComponent
           ? `.${block.getFieldValue('COMPONENT')}`
           : '';
         return [
-          `${target}.get(${refCode(property.ref, generator)})${component}`,
+          `${subject}.get(${refCode(property.ref, generator)})${component}`,
           Order.ATOMIC,
         ] as [string, number];
       },
@@ -1437,16 +1493,17 @@ const defineActionBlock = (action: ActionMeta) => {
       action.description || (actorScoped ? `${name} — for an actor.` : name),
     generator: {
       javascript(block, generator) {
-        const target = actorScoped
-          ? generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor'
-          : 'world';
         const argCode = params
           .map(
             (param, i) =>
               `, ${typedValueCode(param, block, generator, paramNames[i])}`,
           )
           .join('');
-        return `${target}.act(${refCode(action.ref, generator)}${argCode});\n`;
+        const call = (subject: string) =>
+          `${subject}.act(${refCode(action.ref, generator)}${argCode})`;
+        return actorScoped
+          ? forEachActor(actorTarget(block, generator, Order.MEMBER), call)
+          : `${call('world')};\n`;
       },
     },
   });
@@ -1589,10 +1646,9 @@ const defineQueryBlock = (query: QueryMeta) => {
           )
           .join('');
         if (actorScoped) {
-          const target =
-            generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+          const subject = oneActor(actorTarget(block, generator, Order.MEMBER));
           return [
-            `${target}.query(${refCode(query.ref, generator)}${argCode})`,
+            `${subject}.query(${refCode(query.ref, generator)}${argCode})`,
             Order.ATOMIC,
           ] as [string, number];
         }
@@ -2017,6 +2073,21 @@ const worldActorKind = defineBlock({
       if (!actor || (localActorBlockId(actor) && !local)) {
         return ['actor', Order.ATOMIC] as [string, number];
       }
+      // Two compilations of one idea (specs/ACTOR_LISTS.md). Plugged into a
+      // handler's subject socket this is the TEMPLATE, so registering on it
+      // reaches the coins placed later as well; anywhere else it is the coins
+      // there are, which is what a statement acts on and a value reads.
+      const parent = block.outputConnection?.targetConnection?.getSourceBlock();
+      if (!parent?.type.startsWith('world_on_')) {
+        // The world stamps each placed actor with its type: a module path for a
+        // project actor, the id `add actor` gave a world's own. Either way it
+        // is a string, so nothing has to be imported to ask for them.
+        const type = local?.type ?? actor;
+        return [`world.actors.ofType(${str(type)})`, Order.MEMBER] as [
+          string,
+          number,
+        ];
+      }
       if (local) {
         return [local.variable, Order.ATOMIC] as [string, number];
       }
@@ -2087,16 +2158,15 @@ const worldIsA = defineBlock({
     javascript(block, generator) {
       // The dropdown value is the module path (`actors/coin`), which the world
       // stamps as each placed actor's `type` — so an actor's kind is its `.type`.
-      const actor =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       const chosen = block.getFieldValue('TYPE');
       // A world's own actor is stamped with its id, not a module path — the
       // same string `add actor` gave it (blockly/localActors).
       const modulePath = localActorFor(block, chosen)?.type ?? chosen;
-      return [`${actor}.type === ${str(modulePath)}`, Order.EQUALITY] as [
-        string,
-        number,
-      ];
+      return [
+        `${oneActor(target)}.type === ${str(modulePath)}`,
+        Order.EQUALITY,
+      ] as [string, number];
     },
   },
 });
@@ -2210,9 +2280,8 @@ const worldRemoveActor = defineBlock({
     'seen by the rules. Removing one already gone does nothing.',
   generator: {
     javascript(block, generator) {
-      const actor =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
-      return `world.removeActor(${actor});\n`;
+      const target = actorTarget(block, generator, Order.MEMBER);
+      return forEachActor(target, actor => `world.removeActor(${actor})`);
     },
   },
 });
@@ -3341,13 +3410,12 @@ const worldHasTrait = defineBlock({
   tooltip: 'Whether an actor has a given trait.',
   generator: {
     javascript(block, generator) {
-      const actor =
-        generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+      const target = actorTarget(block, generator, Order.MEMBER);
       const ref = refFromValue(block.getFieldValue('TRAIT'));
-      return [`${actor}.has(${refCode(ref, generator)})`, Order.MEMBER] as [
-        string,
-        number,
-      ];
+      return [
+        `${oneActor(target)}.has(${refCode(ref, generator)})`,
+        Order.MEMBER,
+      ] as [string, number];
     },
   },
 });

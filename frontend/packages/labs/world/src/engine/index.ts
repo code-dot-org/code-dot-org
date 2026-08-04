@@ -15,6 +15,9 @@ export {Vector, type VectorLike} from './core/Vector';
 export {PIXELS_PER_UNIT} from './core/units';
 export {Trait} from './core/Trait';
 export {Actor, type ActorInit} from './core/Actor';
+// One actor or several, and what an operation means when it is several
+// (specs/ACTOR_LISTS.md). Generated code routes through these.
+export {each, one, type ActorValue} from './core/actorValue';
 export {
   World,
   DEFAULT_BACKDROP_COLOR,
