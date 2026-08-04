@@ -131,7 +131,7 @@ Given /^I publish a basic library in (Applab|Game Lab)$/ do |lab_type|
     And I press keys "My library" for element "#ui-test-library-description"
     And I click selector "label:contains('Select all functions')"
     Then I click selector "#ui-test-publish-library"
-    And I wait until element "b:contains('Successfully published your library:')" is visible
+    And I wait until element "h4:contains('Successfully published your library:')" is visible
   STEPS
 end
 

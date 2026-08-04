@@ -1341,6 +1341,7 @@ Dashboard::Application.routes.draw do
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
+    post '/javabuilder/access_token_with_override_sources_and_validation', to: 'javabuilder_sessions#access_token_with_override_sources_and_validation'
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
