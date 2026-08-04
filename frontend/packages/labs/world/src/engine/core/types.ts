@@ -45,7 +45,28 @@ export interface AppliedEffectSpec {
  * a position) are both stored as `Vector` instances; they differ only in how the
  * Blockly editor presents them (an arrow-grid field vs. two plain number inputs).
  */
-export type PropertyType = 'number' | 'boolean' | 'string' | 'vector' | 'point';
+export type PropertyType =
+  | 'number'
+  | 'boolean'
+  | 'string'
+  | 'vector'
+  | 'point'
+  /**
+   * Actors — one, several, or none (`ActorValue`).
+   *
+   * The kind that is not plain data, and the only one a rule may hold another
+   * actor in: a contact set, a group, whatever a rule works out about who is
+   * where (specs/COLLISION.md). Two things follow, both on this type rather
+   * than on any rule that uses it:
+   *
+   *   - it is NEVER snapshotted. `World.snapshot()` is compared by
+   *     stringifying, an Actor holds the world and the world holds its actors,
+   *     so this would throw — and a set of actors worked out this tick is
+   *     scratch, not state a hot reload should carry across a rebuild.
+   *   - it defaults to none, because "no actors yet" is the only sensible
+   *     starting value for one.
+   */
+  | 'actors';
 
 /**
  * The kinds an Action parameter or query argument can take. A superset of

@@ -865,6 +865,9 @@ export class World {
     const world: Record<string, unknown> = {};
     for (const rule of rules) {
       for (const property of Object.values(rule.properties)) {
+        if (property.type === 'actors') {
+          continue; // never snapshotted — see PropertyType
+        }
         world[`${property.ownerId}.${property.id}`] = this.get(property);
       }
     }
@@ -873,6 +876,13 @@ export class World {
       const values: Record<string, unknown> = {};
       for (const trait of actor.traits()) {
         for (const property of Object.values(trait.properties)) {
+          if (property.type === 'actors') {
+            // An actor holds the world and the world holds its actors, so a
+            // baseline containing one could not be stringified — and a set of
+            // actors worked out this tick is scratch, not state a rebuild
+            // should carry (specs/COLLISION.md).
+            continue;
+          }
           values[`${property.ownerId}.${property.id}`] = actor.get(property);
         }
       }

@@ -8,7 +8,8 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DOMAIN_BLOCKS} from '../domainBlocks';
+import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
+import {parseRuleMeta} from '../ruleMeta';
 
 /** Run a block's generator with chosen blocks plugged into its sockets. */
 const emit = (
@@ -275,5 +276,65 @@ describe('building a group', () => {
     expect(code).toBe(
       'WorldLab.each(coins, actor => world.removeActor(actor));\n',
     );
+  });
+});
+
+describe('a property whose value is actors', () => {
+  // What a rule works out about who is where (specs/COLLISION.md). The blocks
+  // it generates are ordinary get/set blocks — the point is that what they
+  // carry is an ACTOR value, so it plugs into everything actor-shaped.
+  const meta = parseRuleMeta(
+    'rules/touch',
+    JSON.stringify({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Touching', ABILITY: 'Has Touching'},
+          },
+          {
+            type: 'world_rule_trait',
+            fields: {NAME: 'Can Touch'},
+            next: {
+              block: {
+                type: 'world_rule_property',
+                fields: {
+                  TYPE: 'actors',
+                  ACCESS: 'writable',
+                  NAME: 'contacts',
+                  DEFAULT: '',
+                },
+              },
+            },
+          },
+        ],
+      },
+    }),
+  )!;
+  const {blocks} = buildDomainPalette([meta]);
+  const find = (type: string) =>
+    blocks.find(block => block.type === type) as {
+      args0?: Array<{type: string; name: string; check?: string}>;
+      output?: string;
+    };
+
+  it('starts holding none', () => {
+    expect(meta.properties[0]).toMatchObject({type: 'actors', default: []});
+  });
+
+  it('is set through an actor socket, with no shadow to mean none', () => {
+    const set = find('world_set_Touching_ContactsProperty');
+
+    expect(set.args0?.[1]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'Actor',
+    });
+  });
+
+  it('reports an actor value, so a loop can walk what it holds', () => {
+    const get = find('world_get_Touching_ContactsProperty');
+
+    expect(get.output).toBe('Actor');
   });
 });

@@ -23,6 +23,7 @@ import {
   ToPreviewMessage,
   type ActorSchema,
   type LoadMessage,
+  type PropertySchema,
   type ReloadMode,
   type ToPreview,
 } from '../messages';
@@ -73,6 +74,10 @@ function describeActor(
         property =>
           !property.readonly &&
           property.scope === 'actor' &&
+          // Actors are not a value a placement can be given in a panel: they
+          // are what a rule works out at runtime (specs/COLLISION.md), and
+          // there is no field that would edit one.
+          property.type !== 'actors' &&
           !DEFERRED_PROPS.has(`${property.ownerId}.${property.id}`),
       )
       .map(property => {
@@ -89,7 +94,7 @@ function describeActor(
           ownerId: property.ownerId,
           propId: property.id,
           name: property.name ?? property.id,
-          type: property.type,
+          type: property.type as PropertySchema['type'],
           default:
             property.type === 'vector' || property.type === 'point'
               ? {x: (base as {x: number}).x, y: (base as {y: number}).y}

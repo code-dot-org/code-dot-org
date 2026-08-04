@@ -1066,6 +1066,8 @@ const typedValueCode = (
       return read(names.value) || (d ? 'true' : 'false');
     case 'string':
       return read(names.value) || str(String(d ?? ''));
+    case 'actors':
+      return read(names.value) || '[]';
     case 'number':
       return read(names.value) || String(Number(d ?? 0));
     default:
@@ -1220,6 +1222,14 @@ const typedValueInputs = (
           },
         ],
       };
+    case 'actors':
+      // An actor value, one or many — and no shadow: the empty socket means no
+      // actors, which is the only default a set of them has.
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: 'Actor'}],
+        shadows: [],
+      };
     case 'number':
     default:
       return {
@@ -1245,7 +1255,11 @@ const outputForType = (type: PropertyType): string =>
       ? 'String'
       : type === 'vector'
         ? 'Vector'
-        : 'Number';
+        : // An actors property reports an ACTOR value, so it plugs into a loop's
+          // source, `is in`, `how many actors in` — every actor socket there is.
+          type === 'actors'
+          ? 'Actor'
+          : 'Number';
 
 // A value block's style by the kind it reports: a boolean is logic, a whole
 // vector is a location, everything else (numbers, point axes) is math.
@@ -1254,7 +1268,9 @@ const valueStyle = (type: PropertyType): string =>
     ? 'logic_blocks'
     : type === 'vector'
       ? 'location_blocks'
-      : 'math_blocks';
+      : type === 'actors'
+        ? 'sprite_blocks' // the colour that groups the actors
+        : 'math_blocks';
 
 /**
  * A "set …" block for one settable property, generated from its definition. An
@@ -2969,6 +2985,10 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   ['string', 'string'],
   ['vector', 'vector'],
   ['point', 'point'],
+  // Actors — what a rule works out about who is where: a contact set, a group.
+  // Read-only in practice (the rule that fills it owns it) and never carried
+  // across a hot reload (specs/COLLISION.md).
+  ['actors', 'actors'],
 ];
 
 // A query reports one value; `point` (two scalars) isn't a single report, so it
