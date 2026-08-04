@@ -4,7 +4,10 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {FLAGGED_IMAGE_URL_WARNING} from '@cdo/apps/applab/constants';
+import {
+  FLAGGED_IMAGE_URL_WARNING,
+  IMAGE_MODERATION_ERROR_WARNING,
+} from '@cdo/apps/applab/constants';
 import {
   isAbsoluteImageUrl,
   moderateApplabImageUrl,
@@ -12,9 +15,6 @@ import {
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
-
-const MODERATION_ERROR =
-  "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
 export default class ImageURLInput extends React.Component {
   static propTypes = {
@@ -72,7 +72,7 @@ export default class ImageURLInput extends React.Component {
       return FLAGGED_IMAGE_URL_WARNING;
     }
     if (errorType === 'moderation-error') {
-      return MODERATION_ERROR;
+      return IMAGE_MODERATION_ERROR_WARNING;
     }
     return null;
   };
