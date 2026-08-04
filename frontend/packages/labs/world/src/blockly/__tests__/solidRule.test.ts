@@ -73,6 +73,42 @@ describe('rules/solid.rule', () => {
     }
   });
 
+  it('takes the response as numbers on the solid, defaulting to a dead stop', () => {
+    // The trampoline is bouncy and the ice is slippery — properties of the
+    // SOLID, not of whatever hits it (specs/COLLISION.md). They sit on this
+    // rule's own trait, so every solid has them and the push actions need no
+    // "if it has trait" guard; and 0 and 0 are what the rule did before there
+    // were numbers for it.
+    const numbers = meta.properties.filter(
+      property => property.ownerTraitId === 'Solid',
+    );
+
+    expect(numbers.map(property => property.id)).toEqual([
+      'bounciness',
+      'friction',
+    ]);
+    for (const property of numbers) {
+      expect(property.type).toBe('number');
+      expect(property.default).toBe(0);
+      expect(property.scope).toBe('actor');
+    }
+  });
+
+  it('reads them off the solid it is pushing out of, on both axes', () => {
+    // Both passes: what goes INTO the surface is turned around by bounciness,
+    // what runs ALONG it is slowed by friction. A pass that read them off the
+    // moving body would be a different rule (and a different sentence).
+    const uses = (name: string) =>
+      (
+        source.match(
+          new RegExp(`world_get_SolidBodies_${name}Property`, 'g'),
+        ) ?? []
+      ).length;
+
+    expect(uses('Bounciness')).toBe(2);
+    expect(uses('Friction')).toBe(2);
+  });
+
   it('runs on contacts that are this tick’s', () => {
     // The per-tick chain: velocity → move → find who is touching → push them
     // apart → land. Anchoring on `find` rather than on `reposition` is what
