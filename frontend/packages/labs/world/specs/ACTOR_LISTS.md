@@ -178,12 +178,13 @@ key` exists because "what changed this frame" is what a rule cannot work out
    able to hold several once `push` exists (step 4); that is the moment
    `actorTarget` has to start asking where a variable came from.
 
-2. **The loop takes a source.** `for each ⟨var⟩ in ⟨source⟩ where ⟨…⟩`, an
-   ordinary `Actor` socket, with `all actors` as its shadow so every loop that
-   exists reads as it did.
-3. **The sources.** `all actors`, and teaching `any ⟨Kind ▾⟩` its second
-   compilation — the actors of that type, which wants an engine-side
-   `world.actors.ofType(…)` rather than a filter spelled out at every call site.
+2. **The loop takes a source.** ✅ `for each ⟨var⟩ in ⟨source⟩ where ⟨…⟩`, an
+   ordinary `Actor` socket seeded with `all actors`, so a loop dragged out
+   today generates what one dragged out yesterday generated: the default source
+   emits `world.actors` — already every actor, already iterable — and anything
+   else goes through `WorldLab.all`. A real `for … of` either way, because a
+   body may `return` out of the query it is in.
+3. ✅ `all actors` (step 2) and `any ⟨Kind ▾⟩`'s second compilation (step 1).
 4. **Building one.** `push`, `clear`, `count of`, `is in`.
 5. **What it was for.** Whichever of the three storage answers above collision
    turns out to want — decided there, not here.

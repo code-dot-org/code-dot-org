@@ -10,23 +10,31 @@ import {describe, expect, it} from 'vitest';
 
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 
-/** Run a block's generator with a chosen block plugged into its ACTOR socket. */
+/** Run a block's generator with chosen blocks plugged into its sockets. */
 const emit = (
   type: string,
   fields: Record<string, string>,
-  pluggedType: string | null,
+  plugged: string | null | Record<string, string | null>,
   values: Record<string, string> = {},
+  statements: Record<string, string> = {},
 ): string => {
   const definition = DOMAIN_BLOCKS.find(block => block.type === type)!;
+  const sockets: Record<string, string | null> =
+    typeof plugged === 'string' || plugged === null
+      ? {ACTOR: plugged}
+      : plugged;
   return definition.generator.javascript(
     {
       getFieldValue: (name: string) => fields[name] ?? null,
       getInputTargetBlock: (name: string) =>
-        name === 'ACTOR' && pluggedType ? {type: pluggedType} : null,
+        sockets[name] ? {type: sockets[name]} : null,
     } as never,
     {
       definitions_: {},
       valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+      statementToCode: (_block: unknown, name: string) =>
+        statements[name] ?? '',
+      getVariableName: (id: string) => id,
     } as never,
     {} as never,
   ) as string;
@@ -95,5 +103,77 @@ describe('a value over an actor value', () => {
     })[0] as unknown as string;
 
     expect(code).toBe('actor.type === "actors/coin"');
+  });
+});
+
+describe('the loop takes a source', () => {
+  it('walks the world when given `all actors`, as it always did', () => {
+    // The default, seeded as the socket's shadow — so a loop dragged out today
+    // generates what a loop dragged out yesterday generated, no copy and no
+    // wrapper for a value that is already every actor and already iterable.
+    const code = emit(
+      'world_for_each',
+      {VAR: 'each'},
+      {SOURCE: 'world_all_actors'},
+      {WHERE: 'true'},
+      {DO: 'body();\n'},
+    );
+
+    expect(code).toBe(
+      'for (const each of world.actors) {\nif (true) {\nbody();\n}\n}\n',
+    );
+  });
+
+  it('walks whatever else it is given', () => {
+    const code = emit(
+      'world_for_each',
+      {VAR: 'each'},
+      {SOURCE: 'world_actor_kind'},
+      {WHERE: 'true', SOURCE: 'world.actors.ofType("actors/coin")'},
+      {DO: 'body();\n'},
+    );
+
+    expect(code).toBe(
+      'for (const each of WorldLab.all(world.actors.ofType("actors/coin"))) ' +
+        '{\nif (true) {\nbody();\n}\n}\n',
+    );
+  });
+
+  it('is a real loop, so a body may return out of the rule it is in', () => {
+    // Not a callback: a query answering early has to leave the QUERY, and a
+    // `return` inside a callback would leave only the callback.
+    const code = emit(
+      'world_for_each',
+      {VAR: 'each'},
+      {SOURCE: 'world_all_actors'},
+      {},
+      {DO: 'return true;\n'},
+    );
+
+    expect(code).toContain('for (const each of');
+    expect(code).toContain('return true;');
+  });
+});
+
+describe('all actors', () => {
+  it('is a copy, so adding while iterating terminates', () => {
+    const block = DOMAIN_BLOCKS.find(b => b.type === 'world_all_actors')!;
+    const [code] = block.generator.javascript(
+      {} as never,
+      {} as never,
+      {} as never,
+    ) as [string, number];
+
+    expect(code).toBe('[...world.actors]');
+  });
+
+  it('is an actor value like any other, so a statement broadcasts over it', () => {
+    const code = emit('world_remove_actor', {}, 'world_all_actors', {
+      ACTOR: '[...world.actors]',
+    });
+
+    expect(code).toBe(
+      'WorldLab.each([...world.actors], actor => world.removeActor(actor));\n',
+    );
   });
 });

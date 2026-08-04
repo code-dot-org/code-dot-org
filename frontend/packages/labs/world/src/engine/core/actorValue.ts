@@ -22,18 +22,25 @@ import type {Actor} from './Actor';
 export type ActorValue = Actor | readonly Actor[];
 
 /**
+ * The actors in a value, as a list — one actor becomes a list of one.
+ *
+ * What a `for each` walks. A real `for … of` rather than a callback, because a
+ * loop's body may `return` (a query answering early), and a body that returned
+ * out of a callback would leave the loop and not the query.
+ */
+export function all(value: ActorValue): readonly Actor[] {
+  return Array.isArray(value) ? value : [value as Actor];
+}
+
+/**
  * Run `body` for each actor in `value` — the broadcast a statement does.
  *
  * An empty value runs nothing, which is what a loop over nothing does.
  */
 export function each(value: ActorValue, body: (actor: Actor) => void): void {
-  if (Array.isArray(value)) {
-    for (const actor of value) {
-      body(actor);
-    }
-    return;
+  for (const actor of all(value)) {
+    body(actor);
   }
-  body(value as Actor);
 }
 
 /**
