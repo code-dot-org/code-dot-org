@@ -1,15 +1,15 @@
 import React from 'react';
 
+import ReorderableCard from '@cdo/apps/levelbuilder/curriculum-generator/components/ReorderableCard';
 import {createUuid} from '@cdo/apps/utils';
 
-import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
 import {AICHAT_PRESETS, AichatPresetId} from '../ai/aichat';
 import {BUBBLE_CHOICE_SUBLEVEL_LAB_TYPES, LabType, LevelSpec} from '../types';
 
 import SublevelSection from './SublevelSection';
 
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
+import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
 
 interface LevelCardProps {
   spec: LevelSpec;

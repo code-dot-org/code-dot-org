@@ -3,15 +3,14 @@ import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {createUuid} from '@cdo/apps/utils';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
+import {createUuid} from '@cdo/apps/utils';
 
 const weblabPlanSchema = Output.object({
   schema: z.object({

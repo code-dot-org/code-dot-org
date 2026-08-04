@@ -2,14 +2,13 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
 const sketchlabPlanSchema = Output.object({
   schema: z.object({

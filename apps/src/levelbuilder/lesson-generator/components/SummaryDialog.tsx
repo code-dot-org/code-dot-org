@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Dialog from '../../curriculum-generator/components/Dialog';
+import Dialog from '@cdo/apps/levelbuilder/curriculum-generator/components/Dialog';
+
 import {GenerationSummary} from '../types';
 
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
+import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
 
 interface SummaryDialogProps {
   summary: GenerationSummary;

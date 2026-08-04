@@ -1,6 +1,7 @@
 import React from 'react';
 
-import GenerationProgressDialog from '../../curriculum-generator/components/GenerationProgressDialog';
+import GenerationProgressDialog from '@cdo/apps/levelbuilder/curriculum-generator/components/GenerationProgressDialog';
+
 import {ProgressUpdate} from '../types';
 
 const phaseLabel = (phase: ProgressUpdate['phase']): string => {

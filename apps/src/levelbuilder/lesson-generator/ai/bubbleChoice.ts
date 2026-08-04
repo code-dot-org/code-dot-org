@@ -2,17 +2,17 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {createUuid} from '@cdo/apps/utils';
-import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {LessonContext} from '../../curriculum-generator/ai/context';
+import {LessonContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getImageModel,
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
+import {createUuid} from '@cdo/apps/utils';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {uploadLevelAsset} from '../levelApi';
 
 // Bubble Choice is a DSLDefined picker page whose sublevels are full

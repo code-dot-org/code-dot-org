@@ -1,11 +1,12 @@
 import React from 'react';
 
-import ReorderableCard from '../../curriculum-generator/components/ReorderableCard';
+import ReorderableCard from '@cdo/apps/levelbuilder/curriculum-generator/components/ReorderableCard';
+
 import {AICHAT_PRESETS, AichatPresetId} from '../ai/aichat';
 import {LabType, LevelSpec} from '../types';
 
-import sharedStyles from '../../curriculum-generator/curriculum-generator.module.scss';
 import moduleStyles from '../lesson-generator.module.scss';
+import sharedStyles from '@cdo/apps/levelbuilder/curriculum-generator/curriculum-generator.module.scss';
 
 // Nested sublevel list rendered inside a Bubble Choice parent card.
 // Reuses ReorderableCard so the sublevels visually match the top-level
