@@ -173,5 +173,17 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    through placeholders — renaming the detector first would have caught what the
    second rename was for.
 
-4. **Gravity reads contacts** instead of re-deriving landing.
+4. **Gravity reads contacts** ✅ — and this was the test of whether the
+   boundary was drawn in the right place, so it is worth saying how small it
+   turned out to be: one socket. `land on ground?` walked every actor in the
+   world looking for grounds, once per falling actor; its loop now takes
+   `contacts of ⟨faller⟩` as its source and keeps the same body, which asks
+   gravity's own question — is this ground under me, am I moving toward it, was
+   I above it last frame.
+
+   Nothing else had to change. Both of gravity's traits already require
+   `Can Collide`, so every ground a faller could land on is in its contacts; and
+   a jump-through platform, which is ground without being solid, is in there too
+   — Collisions records every overlap, not only the ones something pushes on.
+
 5. **`bounciness` and `friction`** on `Solid Bodies`.

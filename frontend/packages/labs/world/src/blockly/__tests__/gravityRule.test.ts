@@ -235,6 +235,39 @@ describe('rules/gravity.rule', () => {
     expect(trait.inputs).toBeUndefined();
   });
 
+  it('asks Collisions what it is touching, rather than scanning the world', () => {
+    // The whole point of splitting detection out (specs/COLLISION.md): landing
+    // used to walk every actor in the world looking for grounds, once per
+    // falling actor, re-deriving overlaps that Collisions had already worked
+    // out. Now the loop's SOURCE is this actor's contacts, and what is left in
+    // the loop is gravity's own question — is this ground under me?
+    const sources: string[] = [];
+    const walk = (node: unknown): void => {
+      if (Array.isArray(node)) {
+        node.forEach(walk);
+        return;
+      }
+      if (!node || typeof node !== 'object') {
+        return;
+      }
+      const block = node as {
+        type?: string;
+        inputs?: Record<string, {block?: {type?: string}}>;
+      };
+      if (block.type === 'world_for_each') {
+        sources.push(block.inputs?.SOURCE?.block?.type ?? '(all actors)');
+      }
+      Object.values(node as Record<string, unknown>).forEach(walk);
+    };
+    walk(JSON.parse(source));
+
+    expect(sources).toContain('world_get_Collisions_ContactsProperty');
+    // Its two per-tick steps still walk the world: every actor gravity pulls on,
+    // and every actor that might have landed. It is the INNER loop, over one
+    // faller's grounds, that had a shorter list available all along.
+    expect(sources.filter(s => s === '(all actors)')).toHaveLength(2);
+  });
+
   it('is what the world puts in play', () => {
     // By name — the world says which rule, and the generator works out which
     // file that is when it comes to write the import.
