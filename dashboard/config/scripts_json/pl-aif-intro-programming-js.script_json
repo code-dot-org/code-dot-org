@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-30 14:20:53 UTC",
+    "serialized_at": "2026-08-03 15:20:16 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -34,7 +34,7 @@
   "lessons": [
     {
       "key": "lesson-2",
-      "name": "Intro to Teaching Programming with AI [JavaScript]",
+      "name": "Module Introduction",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -190,28 +190,6 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-JS-getting-ready"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "pl-aif-intro-programming-js",
-        "activity_section.key": "f776e48e-0fc9-4db5-9e6e-d36b257ab54a"
-      },
-      "level_keys": [
-        "pl-aif-JS-getting-ready"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Introduction "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
           "pl-aif-JS-project-overview-begin"
         ],
         "lesson.key": "lesson-2",
@@ -224,7 +202,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -245,7 +223,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -266,7 +244,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -317,18 +295,6 @@
         "level.key": "pl-aif-calendar-JS",
         "script_level.level_keys": [
           "pl-aif-calendar-JS"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "pl-aif-intro-programming-js",
-        "activity_section.key": "f776e48e-0fc9-4db5-9e6e-d36b257ab54a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "pl-aif-JS-getting-ready",
-        "script_level.level_keys": [
-          "pl-aif-JS-getting-ready"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
