@@ -239,7 +239,6 @@ describe('AiDiffWorkspace', () => {
     const thread = screen.getByText('blah thread two');
     screen.getByText('blah thread three');
     fetchJsonStub.mockClear();
-
     fetchJsonStub.mockResolvedValue({
       value: defaultThreadMessagesResponse,
       response: new Response(),

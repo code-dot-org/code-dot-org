@@ -1748,21 +1748,36 @@ class SectionTest < ActiveSupport::TestCase
   # suggested_lesson
 
   test 'suggested_lesson_stale? returns true when suggested_lesson is nil' do
+    @section.update!(suggested_lesson: nil, suggested_lesson_history: nil)
     assert @section.suggested_lesson_stale?
   end
 
   test 'suggested_lesson_stale? returns true when timestamp is missing' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1})
+    @section.update!(suggested_lesson: {'lesson_id' => 1}, suggested_lesson_history: nil)
     assert @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns false for a fresh timestamp' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601})
+  test 'suggested_lesson_stale? returns false when timestamp is from today' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.today.iso8601}]
+    )
     refute @section.suggested_lesson_stale?
   end
 
-  test 'suggested_lesson_stale? returns true for a stale timestamp' do
-    @section.update!(suggested_lesson: {'lesson_id' => 1, 'timestamp' => 2.hours.ago.utc.iso8601})
+  test 'suggested_lesson_stale? returns true when suggested_lesson_history is nil despite timestamp from today' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: nil
+    )
+    assert @section.suggested_lesson_stale?
+  end
+
+  test 'suggested_lesson_stale? returns true when timestamp is from a previous day' do
+    @section.update!(
+      suggested_lesson: {'lesson_id' => 1, 'timestamp' => Time.zone.yesterday.end_of_day.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => 1, 'date' => Time.zone.yesterday.iso8601}]
+    )
     assert @section.suggested_lesson_stale?
   end
 
@@ -1838,6 +1853,98 @@ class SectionTest < ActiveSupport::TestCase
     end
     section.compute_suggested_lesson
     assert_equal lesson2.id, section.reload.suggested_lesson['lesson_id']
+  end
+
+  # suggested_lesson_history
+
+  test 'compute_suggested_lesson creates a history entry with today date' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 1, history.length
+    assert_equal Time.zone.today.iso8601, history.first['date']
+    assert_equal lesson1.id, history.first['lesson_id']
+  end
+
+  test 'compute_suggested_lesson appends a new entry on a different day' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    yesterday = (Time.zone.today - 1).iso8601
+    section.update!(suggested_lesson_history: [{'lesson_id' => 99, 'timestamp' => yesterday + 'T10:00:00Z', 'date' => yesterday}])
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 2, history.length
+    assert(history.any? {|e| e['date'] == yesterday})
+    assert(history.any? {|e| e['date'] == Time.zone.today.iso8601})
+  end
+
+  test 'compute_suggested_lesson replaces an existing history entry for today' do
+    _, lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    today = Time.zone.today.iso8601
+    section.update!(suggested_lesson_history: [{'lesson_id' => 99, 'timestamp' => today + 'T00:00:00Z', 'date' => today}])
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert_equal 1, history.length
+    assert_equal lesson1.id, history.first['lesson_id']
+  end
+
+  test 'compute_suggested_lesson removes history entries more than 10 days old' do
+    _, _lesson1, _lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    eleven_days_ago = (Time.zone.today - 11).iso8601
+    ten_days_ago = (Time.zone.today - 10).iso8601
+    section.update!(
+      suggested_lesson_history: [
+        {'lesson_id' => 1, 'timestamp' => eleven_days_ago + 'T10:00:00Z', 'date' => eleven_days_ago},
+        {'lesson_id' => 2, 'timestamp' => ten_days_ago + 'T10:00:00Z', 'date' => ten_days_ago},
+      ]
+    )
+    section.compute_suggested_lesson
+    history = section.reload.suggested_lesson_history
+    assert history.none? {|e| e['date'] == eleven_days_ago}, 'entry 11 days old should be removed'
+    assert history.any? {|e| e['date'] == ten_days_ago}, 'entry exactly 10 days old should be kept'
+  end
+
+  test 'compute_suggested_lesson history entry includes the computed lesson_id' do
+    unit, _lesson1, lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert_equal lesson2.id, entry['lesson_id']
+    assert entry['timestamp'].present?
+  end
+
+  test 'compute_suggested_lesson history entry reflects completed_unit state' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert entry['completed_unit']
+    assert_nil entry['lesson_id']
+  end
+
+  test 'compute_suggested_lesson history entry includes coming_up with next lesson id' do
+    _unit, _lesson1, lesson2, _sl1, _sl2, section, _student = build_suggested_lesson_section
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert_equal lesson2.id, entry.dig('coming_up', 'lesson_id')
+  end
+
+  test 'compute_suggested_lesson history entry coming_up has completed_unit when current is the last numbered lesson' do
+    unit, _lesson1, _lesson2, sl1, _sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    # lesson2 is last; no further lesson exists
+    assert entry.dig('coming_up', 'completed_unit')
+  end
+
+  test 'compute_suggested_lesson history entry coming_up has completed_unit when unit is finished' do
+    unit, _lesson1, _lesson2, sl1, sl2, section, student = build_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    create(:user_level, user: student, level: sl2.oldest_active_level, script_id: unit.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.compute_suggested_lesson
+    entry = section.reload.suggested_lesson_history.first
+    assert entry.dig('coming_up', 'completed_unit')
   end
 
   private def build_suggested_lesson_section
