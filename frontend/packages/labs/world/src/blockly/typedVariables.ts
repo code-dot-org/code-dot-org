@@ -10,6 +10,8 @@
 
 import {createTypedVariable, type TypedVariable} from '@code-dot-org/blockly';
 
+import {enumRefOfParamType} from './enums';
+
 /** The actor variable — a `for each` loop's binding, or an `actor` parameter. */
 export const ActorVariable: TypedVariable = createTypedVariable({
   type: 'Actor',
@@ -66,9 +68,20 @@ export const PARAM_FLAVOURS: ReadonlyArray<{
   {type: 'actor', variable: ActorVariable},
 ];
 
-/** Look up a parameter flavour by its authored value type. */
-export const paramFlavour = (type: string): TypedVariable =>
-  (PARAM_FLAVOURS.find(f => f.type === type) ?? PARAM_FLAVOURS[0]).variable;
+/**
+ * Look up a parameter flavour by its authored value type.
+ *
+ * An ENUM parameter is a string parameter (`blockly/enums`). Its choices decide
+ * what a dropdown offers; they do not make it a different kind of value, so the
+ * variable the body reads it with, and the type check on the socket it arrives
+ * through, are a string's — and everything downstream of here needs no notion
+ * of an enum at all.
+ */
+export const paramFlavour = (type: string): TypedVariable => {
+  const wanted = enumRefOfParamType(type) ? 'string' : type;
+  return (PARAM_FLAVOURS.find(f => f.type === wanted) ?? PARAM_FLAVOURS[0])
+    .variable;
+};
 
 /** The parameter type dropdown's `[label, value]` options. */
 export const PARAM_TYPE_OPTIONS: Array<[string, string]> = PARAM_FLAVOURS.map(

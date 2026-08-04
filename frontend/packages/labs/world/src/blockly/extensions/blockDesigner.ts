@@ -46,6 +46,7 @@ import {
   type Extension,
 } from '@code-dot-org/blockly';
 
+import {enumParamType, enumRefOfParamType} from '../enums';
 import {FieldBlockPreview} from '../fields/FieldBlockPreview';
 import {PARAM_FLAVOURS, paramFlavour} from '../typedVariables';
 
@@ -73,20 +74,47 @@ const SIGNATURE_CONTAINER = 'world_signature';
 const PARTS_INPUT = 'PARTS';
 const TEXT_FIELD = 'TEXT';
 
-/** The item block a part is edited as, and the reverse. */
-export const itemTypeFor = (part: BlockPart): string =>
-  part.kind === 'label'
-    ? 'world_signature_text'
+/** The item block that edits a part. */
+export const itemTypeFor = (part: BlockPart): string => {
+  if (part.kind === 'label') {
+    return 'world_signature_text';
+  }
+  // Every enum shares ONE item block; which enum is a field on it, so a new
+  // `define choices` needs no new block type.
+  return enumRefOfParamType(part.type)
+    ? SIGNATURE_CHOICE
     : `world_signature_${part.type}`;
-export const paramTypeFor = (itemType: string): string | undefined =>
-  PARAM_FLAVOURS.map(flavour => flavour.type).find(
-    type => itemType === `world_signature_${type}`,
+};
+
+/**
+ * The parameter type an item block stands for, or undefined if it is a label.
+ *
+ * Reads the BLOCK, not just its type, because the choice item carries the enum
+ * it is typed by in a field.
+ */
+export const paramTypeOf = (item: {
+  type: string;
+  getFieldValue: (name: string) => string | null;
+}): string | undefined => {
+  if (item.type === SIGNATURE_CHOICE) {
+    const ref = item.getFieldValue(ENUM_FIELD);
+    return ref ? enumParamType(ref) : undefined;
+  }
+  return PARAM_FLAVOURS.map(flavour => flavour.type).find(
+    type => item.type === `world_signature_${type}`,
   );
+};
+
+/** The item block a parameter typed by an enum is edited as. */
+export const SIGNATURE_CHOICE = 'world_signature_choice';
+/** The field on it naming which enum. */
+export const ENUM_FIELD = 'ENUM';
 
 /** Every block the mutator's flyout offers, in order. */
 export const SIGNATURE_BLOCK_TYPES: string[] = [
   'world_signature_text',
   ...PARAM_FLAVOURS.map(flavour => `world_signature_${flavour.type}`),
+  SIGNATURE_CHOICE,
 ];
 /** The one field on the preview row: the drawing of the block being defined. */
 const PREVIEW_FIELD = 'DRAWING';
@@ -287,6 +315,13 @@ export const blockDesignerMutator = defineMutator(
         if (part.kind === 'label') {
           item.setFieldValue(part.text, TEXT_FIELD);
         } else {
+          // Which enum, before the name: the choice item's dropdown is what
+          // makes it this parameter rather than a differently-typed one, and a
+          // part reopened in the bubble has to come back as what it was.
+          const choice = enumRefOfParamType(part.type);
+          if (choice) {
+            item.setFieldValue(choice, ENUM_FIELD);
+          }
           item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
           (item as {varId_?: string}).varId_ = part.var;
         }
@@ -301,7 +336,7 @@ export const blockDesignerMutator = defineMutator(
       const parts: BlockPart[] = [];
       let item = container.getInput(PARTS_INPUT)?.connection?.targetBlock();
       while (item) {
-        const param = paramTypeFor(item.type);
+        const param = paramTypeOf(item);
         if (param) {
           parts.push({
             kind: 'param',

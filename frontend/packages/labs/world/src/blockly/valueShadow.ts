@@ -31,6 +31,18 @@ export function registerValueShadows(
   SHADOWS.set(blockType, shadows);
 }
 
+/**
+ * The shadows registered for a block type — what its value inputs will wear.
+ *
+ * For tests, which have no workspace to attach a shadow to and so cannot see
+ * the extension do its work.
+ */
+export function shadowsFor(
+  blockType: string,
+): Array<{name: string; shadow: ShadowSpec}> | undefined {
+  return SHADOWS.get(blockType);
+}
+
 /** Seed each registered value input with its default shadow (if still empty). */
 export const valueShadowExtension: Extension = defineExtension(
   VALUE_SHADOW_EXTENSION,

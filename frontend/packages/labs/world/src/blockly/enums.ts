@@ -15,6 +15,7 @@
 // always carried, given a name so a rule can point at it instead of rebuilding
 // it; a rule's own arrive from `define choices` (ENUMS.md step 3).
 
+import type {ArgType} from '../engine';
 import {KEY_CHOICES} from '../engine/core/keys';
 
 /** A named set of string choices. */
@@ -123,4 +124,26 @@ export function enumRefOfParamType(type: string): string | undefined {
   return type.startsWith(ENUM_TYPE_PREFIX)
     ? type.slice(ENUM_TYPE_PREFIX.length)
     : undefined;
+}
+
+/**
+ * A designed parameter's type: one of the plain kinds, or an enum.
+ *
+ * `ArgType` is the ENGINE's list, and enums are not on it — the engine never
+ * hears about one. This is the editor's wider list, and the only place the two
+ * differ.
+ */
+export type ParamType = ArgType | `${typeof ENUM_TYPE_PREFIX}${string}`;
+
+/**
+ * The value block for an enum: a bare dropdown of its choices.
+ *
+ * One block type per enum, built with the palette, exactly as a block is built
+ * per property and per event. It is what an enum-typed socket carries as its
+ * shadow, so the argument reads as a dropdown while still accepting a value
+ * dropped over it — which the emitting side needs, `rules/input.rule` sending
+ * the key it is looping over.
+ */
+export function enumValueBlockType(ref: string): string {
+  return `world_choice_${ref.replace(/[^A-Za-z0-9]+/g, '_')}`;
 }
