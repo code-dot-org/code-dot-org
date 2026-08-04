@@ -62,8 +62,11 @@ export default class ProjectManager {
   private sourcesToSave: ProjectSources | undefined;
   // The last channel we saved or loaded, or undefined if we have not saved a channel yet.
   private lastChannel: Channel | undefined;
-  // The next channel to save, or undefined if we have no channel to save.
-  private channelToSave: Channel | undefined;
+  // Set when a channel write fails, so the next save writes the channel again even
+  // if nothing has changed since.
+  private channelSaveNeeded = false;
+  // Channel fields edited since the last save, or undefined if there are none.
+  private pendingChannelUpdates: Partial<Channel> | undefined;
   // Id of the last timeout we set on a save, or undefined if there is no current timeout.
   // When we enqueue a save, we set a timeout to execute the save after the save interval.
   // If we force a save or destroy the ProjectManager, we clear the remaining timeout,
@@ -293,13 +296,13 @@ export default class ProjectManager {
       // don't attempt to rename.
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    // Build a new object rather than mutating the pending channel: saveHelper tells
+    // Build a new object rather than mutating the pending updates: saveHelper tells
     // "still pending" from "already saved" by identity.
-    this.channelToSave = {
-      ...(this.channelToSave ?? this.lastChannel),
-      name,
-    };
-    this.setTitleFromChannel(this.channelToSave);
+    this.pendingChannelUpdates = {...this.pendingChannelUpdates, name};
+    this.setTitleFromChannel({
+      ...this.lastChannel,
+      ...this.pendingChannelUpdates,
+    });
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
@@ -309,13 +312,8 @@ export default class ProjectManager {
       // don't attempt to update.
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    if (!this.channelToSave) {
-      this.channelToSave = JSON.parse(
-        JSON.stringify(this.lastChannel)
-      ) as Channel;
-    }
-    this.channelToSave = {
-      ...this.channelToSave,
+    this.pendingChannelUpdates = {
+      ...this.pendingChannelUpdates,
       ...channelUpdates,
     };
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
@@ -535,13 +533,17 @@ export default class ProjectManager {
     skipSourcesChangedCheck: boolean
   ): Promise<void> {
     // We can't save without a last channel or last source.
-    // We also know we don't need to save if we don't have sources to save
-    // or a channel to save.
+    // We also know we don't need to save if we have no sources to save, no pending
+    // channel edits, and no channel write owed from an earlier failure.
     // We also cannot save if the user is not the owner of this project.
     if (
       !this.lastChannel ||
       !this.lastChannel.isOwner ||
-      !(this.sourcesToSave || this.channelToSave)
+      !(
+        this.sourcesToSave ||
+        this.pendingChannelUpdates ||
+        this.channelSaveNeeded
+      )
     ) {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
@@ -553,10 +555,15 @@ export default class ProjectManager {
     const sourceChanged = this.sourceChanged();
     const channelChanged = this.channelChanged();
     const sourcesBeingSaved = this.sourcesToSave;
-    const channelBeingSaved = this.channelToSave;
+    const channelUpdatesBeingSaved = this.pendingChannelUpdates;
     // If neither source nor channel has actually changed, no need to save again
-    // unless skipSourcesChangedCheck is true.
-    if (!sourceChanged && !channelChanged && !skipSourcesChangedCheck) {
+    // unless skipSourcesChangedCheck is true or a failed channel write is owed a retry.
+    if (
+      !sourceChanged &&
+      !channelChanged &&
+      !this.channelSaveNeeded &&
+      !skipSourcesChangedCheck
+    ) {
       this.saveInProgress = false;
       // We can clear sourcesToSave since they have not changed.
       this.sourcesToSave = undefined;
@@ -607,7 +614,11 @@ export default class ProjectManager {
       // as either the channel has changed and/or the source changed.
       // Even if only the source changed, we still update the channel to modify the last
       // updated time.
-      let channelUpdate = channelBeingSaved ?? this.lastChannel;
+      // Merge onto the channel as it stands now, not the one the edits were made
+      // against: a save that finished in the meantime may have added fields to it.
+      let channelUpdate = channelUpdatesBeingSaved
+        ? {...this.lastChannel, ...channelUpdatesBeingSaved}
+        : this.lastChannel;
 
       // If the sources contain a labConfig entry, then also save this to the
       // channel, which means that the labConfig entry will also be saved in the
@@ -630,14 +641,17 @@ export default class ProjectManager {
       try {
         channelResponse = await this.channelsStore.save(channelUpdate);
       } catch (error) {
-        // Leave the channel pending so a later save retries it, unless newer
-        // channel edits have already taken its place.
-        this.channelToSave ??= channelUpdate;
+        // Leave the edits pending so a later save retries them, unless newer edits
+        // have already taken their place. Newer edits are built on top of these, so
+        // they carry them along.
+        this.pendingChannelUpdates ??= channelUpdatesBeingSaved;
+        this.channelSaveNeeded = true;
         this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }
       const channelSaveResponse = await channelResponse.json();
       this.lastChannel = channelSaveResponse as Channel;
+      this.channelSaveNeeded = false;
     }
 
     this.saveInProgress = false;
@@ -645,8 +659,8 @@ export default class ProjectManager {
     if (this.sourcesToSave === sourcesBeingSaved) {
       this.sourcesToSave = undefined;
     }
-    if (this.channelToSave === channelBeingSaved) {
-      this.channelToSave = undefined;
+    if (this.pendingChannelUpdates === channelUpdatesBeingSaved) {
+      this.pendingChannelUpdates = undefined;
     }
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
@@ -807,15 +821,15 @@ export default class ProjectManager {
     return this.lastSource !== JSON.stringify(this.sourcesToSave);
   }
 
+  // Whether the pending edits would actually change the channel. An edit that
+  // sets a field to the value it already has does not count as a change.
   private channelChanged(): boolean {
-    // If we don't have a channel to save or a last channel, we can't compare.
-    // It isn't possible to have a channelToSave without a lastChannel,
-    // as we create channelToSave from lastChannel.
-    if (!this.channelToSave || !this.lastChannel) {
+    if (!this.pendingChannelUpdates || !this.lastChannel) {
       return false;
     }
     return (
-      JSON.stringify(this.lastChannel) !== JSON.stringify(this.channelToSave)
+      JSON.stringify(this.lastChannel) !==
+      JSON.stringify({...this.lastChannel, ...this.pendingChannelUpdates})
     );
   }
 
