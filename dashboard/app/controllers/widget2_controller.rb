@@ -3,7 +3,6 @@ class Widget2Controller < ApplicationController
 
   before_action :authenticate_user!
   before_action :require_levelbuilder_mode
-  # Levelbuilder mode is an environment, not a permission.
   authorize_resource class: false
 
   def index

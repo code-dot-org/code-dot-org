@@ -520,8 +520,6 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
-      # Paired with `cannot :read, :widget2` above: `can :read, :all` would otherwise
-      # leave :index open to everyone.
       can :manage, :widget2
 
       can [:validate_form, :validate_library_question], :pd_foorm
