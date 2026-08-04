@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {FLAGGED_IMAGE_URL_WARNING} from '@cdo/apps/applab/constants';
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
+import {
+  isAbsoluteImageUrl,
+  moderateApplabImageUrl,
+} from '@cdo/apps/applab/imageUrlModeration';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 import i18n from '@cdo/locale';
 
-const HTTP_PREFIX_REGEX = /^http:\/\//i;
 const MODERATION_ERROR =
   "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
@@ -43,25 +44,22 @@ export default class ImageURLInput extends React.Component {
   };
 
   handleSubmitWrapper = async url => {
-    if (ABSOLUTE_REGEXP.test(url)) {
-      analyticsReporter.sendEvent(EVENTS.SUBMIT_IMAGE_URL, {LabType: 'applab'});
-      const normalizedUrl = url.replace(HTTP_PREFIX_REGEX, 'https://');
-      this.setState({isSubmitting: true});
-      const moderationStatus = await moderateImageUrl(normalizedUrl, 'applab', {
-        uploaderType: 'ImageURLInput',
-        assetUrl: normalizedUrl,
-      });
-      this.setState({isSubmitting: false});
-
-      if (moderationStatus === 'safe') {
-        this.props.assetChosen(normalizedUrl, moment());
-      } else if (moderationStatus === 'flagged') {
-        this.setState({errorType: 'flagged'});
-      } else {
-        this.setState({errorType: 'moderation-error'});
-      }
-    } else {
+    if (!isAbsoluteImageUrl(url)) {
       this.setState({errorType: 'invalid-url'});
+      return;
+    }
+
+    analyticsReporter.sendEvent(EVENTS.SUBMIT_IMAGE_URL, {LabType: 'applab'});
+    this.setState({isSubmitting: true});
+    const {status, normalizedUrl} = await moderateApplabImageUrl(url);
+    this.setState({isSubmitting: false});
+
+    if (status === 'safe') {
+      this.props.assetChosen(normalizedUrl, moment());
+    } else if (status === 'flagged') {
+      this.setState({errorType: 'flagged'});
+    } else {
+      this.setState({errorType: 'moderation-error'});
     }
   };
 

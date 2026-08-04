@@ -20,7 +20,6 @@ import {
 } from '../lib/util/javascriptMode';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
-import {moderateImageUrl} from '../util/moderateImage';
 import * as utils from '../utils';
 
 import applabTurtle from './applabTurtle';
@@ -30,6 +29,7 @@ import {ICON_PREFIX_REGEX, FLAGGED_IMAGE_URL_WARNING} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
+import {moderateApplabImageUrl} from './imageUrlModeration';
 import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
@@ -37,7 +37,6 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
-const HTTP_URL_PREFIX_REGEX = /^http:\/\//i;
 const MODERATION_ERROR_WARNING =
   "We couldn't check this image link right now. Try a different image link.";
 
@@ -59,22 +58,10 @@ var toBeCached = {};
  */
 var eventSandboxer = new EventSandboxer();
 
-function normalizeImageUrl(url) {
-  return url.replace(HTTP_URL_PREFIX_REGEX, 'https://');
-}
-
 function moderationWarningForStatus(status) {
   return status === 'flagged'
     ? FLAGGED_IMAGE_URL_WARNING
     : MODERATION_ERROR_WARNING;
-}
-
-function getModerationStatusOverride() {
-  if (window.dashboard?.rack_env !== 'test') {
-    return null;
-  }
-  const override = window.__applabImageModerationStatusOverride;
-  return ['safe', 'flagged', 'error'].includes(override) ? override : null;
 }
 
 function captureAsyncWarningHandler() {
@@ -92,26 +79,18 @@ function moderateAbsoluteImageUrl(
   onUnsafe,
   warningHandler = () => {}
 ) {
-  const normalizedUrl = normalizeImageUrl(imageUrl);
-  const overrideStatus = getModerationStatusOverride();
-  const moderationPromise =
-    overrideStatus !== null
-      ? Promise.resolve(overrideStatus)
-      : moderateImageUrl(normalizedUrl, 'applab', {
-          uploaderType: 'ImageURLInput',
-          assetUrl: normalizedUrl,
-        });
-
-  moderationPromise.then(status => {
-    if (status === 'safe') {
-      onSafe(normalizedUrl);
-      return;
+  moderateApplabImageUrl(imageUrl, {allowTestOverride: true}).then(
+    ({status, normalizedUrl}) => {
+      if (status === 'safe') {
+        onSafe(normalizedUrl);
+        return;
+      }
+      warningHandler(`${commandName}(): ${moderationWarningForStatus(status)}`);
+      if (onUnsafe) {
+        onUnsafe();
+      }
     }
-    warningHandler(`${commandName}(): ${moderationWarningForStatus(status)}`);
-    if (onUnsafe) {
-      onUnsafe();
-    }
-  });
+  );
 }
 
 function apiValidateActiveCanvas(opts, funcName) {

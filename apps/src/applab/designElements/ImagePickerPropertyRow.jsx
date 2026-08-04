@@ -7,8 +7,7 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
-import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
+import {moderateApplabImageUrl} from '@cdo/apps/applab/imageUrlModeration';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
@@ -24,7 +23,6 @@ import styles from './image-picker-property-row.module.scss';
 // instead of typing them manually, which will result in an immediate GET,
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
 const USER_INPUT_DELAY = 1500;
-const HTTP_PREFIX_REGEX = /^http:\/\//i;
 const MODERATION_ERROR =
   "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
@@ -99,26 +97,30 @@ export default class ImagePickerPropertyRow extends React.Component {
   changeImageInternal = async (filename, timestamp) => {
     // Absolute URLs typed directly in the property row bypass the URL picker,
     // so moderate them before applying.
-    if (ABSOLUTE_REGEXP.test(filename) && !timestamp) {
-      const normalizedUrl = filename.replace(HTTP_PREFIX_REGEX, 'https://');
+    if (!timestamp) {
       const requestId = ++this.moderationRequestId;
-      const moderationStatus = await moderateImageUrl(normalizedUrl, 'applab', {
-        uploaderType: 'ImageURLInput',
-        assetUrl: normalizedUrl,
-      });
+      const {status, normalizedUrl} = await moderateApplabImageUrl(filename);
 
       if (requestId !== this.moderationRequestId) {
         return;
       }
 
-      if (moderationStatus === 'flagged') {
+      if (status === 'invalid-url') {
+        this.props.handleChange(filename, timestamp);
+        if (this.isMounted_) {
+          this.setState({value: filename, errorMessage: null});
+        }
+        return;
+      }
+
+      if (status === 'flagged') {
         if (this.isMounted_) {
           this.setState({errorMessage: FLAGGED_IMAGE_URL_WARNING});
         }
         return;
       }
 
-      if (moderationStatus === 'error') {
+      if (status === 'error') {
         if (this.isMounted_) {
           this.setState({errorMessage: MODERATION_ERROR});
         }
