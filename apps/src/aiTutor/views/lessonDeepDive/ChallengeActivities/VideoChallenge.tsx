@@ -1,3 +1,4 @@
+import {VideoRecorder} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useState} from 'react';
 
 import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
@@ -8,8 +9,6 @@ import {
   ChallengeResponse,
   challengeResponseValidator,
 } from '../types';
-
-import VideoRecorder from './VideoRecorder';
 
 // import freeResponseStyles from './free-response.module.scss';
 import styles from './video-challenge.module.scss';

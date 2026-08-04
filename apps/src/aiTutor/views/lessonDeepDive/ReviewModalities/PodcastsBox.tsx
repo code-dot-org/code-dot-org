@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Waveform} from '@code-dot-org/lesson-deep-dive';
 import React, {
   FC,
   useCallback,
@@ -14,8 +15,6 @@ import {
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
-
-import Waveform from './Waveform';
 
 import styles from './podcasts-box.module.scss';
 

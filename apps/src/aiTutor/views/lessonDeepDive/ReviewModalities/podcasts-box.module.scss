@@ -16,39 +16,6 @@ $purple: #9657c7;
   margin: 0 0 20px;
 }
 
-// ── Waveform ──────────────────────────────────────────────────────────────────
-
-.waveform {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  height: 140px;
-  margin: 0 auto 24px;
-}
-
-.bar {
-  width: 10px;
-  border-radius: 6px;
-  transition: height 0.3s ease;
-  flex-shrink: 0;
-}
-
-// Live (analyser-driven) bars update ~60fps, so the leisurely idle transition
-// would smear them; use a short linear one to stay responsive.
-.barLive {
-  transition: height 0.07s linear;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scaleY(1); }
-  50%       { transform: scaleY(0.5); }
-}
-
-.barAnimating {
-  animation: pulse 0.8s ease-in-out infinite;
-}
-
 // ── Player ────────────────────────────────────────────────────────────────────
 
 .playerArea {

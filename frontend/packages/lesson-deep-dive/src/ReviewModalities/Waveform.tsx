@@ -1,6 +1,6 @@
-import React, {FC, useEffect, useState} from 'react';
+import {type FC, useEffect, useState} from 'react';
 
-import styles from './podcasts-box.module.scss';
+import styles from './waveform.module.scss';
 
 // Rainbow waveform bars: [restingHeightPct, color]. The resting heights are the
 // decorative shape shown while idle; during playback the heights are driven by
@@ -57,7 +57,7 @@ const Waveform: FC<WaveformProps> = ({analyser, isPlaying}) => {
         BARS.map((_bar, i) => {
           const magnitude = (data[i] ?? 0) / 255;
           return MIN_LIVE_HEIGHT + magnitude * (100 - MIN_LIVE_HEIGHT);
-        })
+        }),
       );
       frame = requestAnimationFrame(tick);
     };
