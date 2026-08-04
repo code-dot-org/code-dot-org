@@ -35,6 +35,10 @@ import Phaser from 'phaser';
 
 import type {Actor, BackdropState, RenderState, World} from 'world-lab';
 
+// Straight from the source, not through `world-lab`: that specifier is the
+// LEARNER's name for the vendored engine bundle, and this is our own code.
+// `core/keys` imports nothing, so nothing of the engine comes with it.
+import {keyName} from '../../engine/core/keys';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
 
 import {EffectRegistry, type EffectErrorReporter} from './effects';
@@ -155,7 +159,7 @@ export class PhaserBinding {
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
     const backdrops: Array<Phaser.GameObjects.Image | undefined> = [];
-    // Every DOM key currently held (by `KeyboardEvent.key` name); fed to the
+    // Every key currently held (by our name, `engine/core/keys`); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
 
@@ -407,13 +411,19 @@ export class PhaserBinding {
     parent.addEventListener('pointerdown', this.focusOnPointerDown);
     // Read the keyboard ourselves (Phaser's keyboard is disabled below): capture
     // every key by DOM name into `downKeys` while `#game` is focused.
+    // Translated at the door (`engine/core/keys`): the DOM's names are the
+    // DOM's business, and everything inland — the pressed set, `key … is down`,
+    // an event's value, the JavaScript a learner reads — says `space` and
+    // `up arrow`. The scroll check stays on the DOM name because that is what
+    // the browser is about to act on.
     this.onKeyDown = (event: KeyboardEvent) => {
-      downKeys.add(event.key);
+      downKeys.add(keyName(event.key));
       if (SCROLL_KEYS.has(event.key)) {
         event.preventDefault();
       }
     };
-    this.onKeyUp = (event: KeyboardEvent) => downKeys.delete(event.key);
+    this.onKeyUp = (event: KeyboardEvent) =>
+      downKeys.delete(keyName(event.key));
     // A blur mid-press never sees the keyup; clear so keys don't stick down.
     this.onBlur = () => downKeys.clear();
     parent.addEventListener('keydown', this.onKeyDown);
