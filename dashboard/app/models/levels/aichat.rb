@@ -48,6 +48,10 @@ class Aichat < Level
     )
   end
 
+  def generate_fields
+    super.merge(generateAichatPreset: generate_aichat_preset)
+  end
+
   def uses_lab2?
     true
   end
