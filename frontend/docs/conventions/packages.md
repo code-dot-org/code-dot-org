@@ -71,19 +71,25 @@ export default [globalIgnores(['dist']), ...cdoReactConfig];
 
 ## Stylelint config
 
-- Packages with CSS/SCSS files shall have a `stylelint.config.mjs` extending the shared config:
+Stylelint is wired through `package.json`, not a separate config file — a
+`stylelint` key extending the shared config, plus the scripts that Turborepo's
+`lint` task depends on:
 
-```js
-// stylelint.config.mjs
-import cdoStylelint from '@code-dot-org/lint-config/stylelint/index.mjs';
-export default cdoStylelint;
+```json
+{
+  "scripts": {
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix"
+  },
+  "stylelint": {"extends": "@code-dot-org/lint-config/stylelint/index.mjs"}
+}
 ```
 
 ## Testing
 
 - Use Vitest (not Jest — Jest is for the legacy `apps/` bundle)
 - Test files: `src/**/__tests__/*.test.ts` or `*.test.tsx`
-- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`)
+- React + jsdom packages extend the shared base from `@code-dot-org/lint-config/vitest/react.mjs` (re-export, or merge with `mergeConfig` to add overrides like `setupFiles` or `resolve.alias`). Both generators scaffold this base, so component tests run without further setup
 
 ## Lint-staged
 

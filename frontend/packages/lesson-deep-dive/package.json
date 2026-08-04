@@ -1,14 +1,16 @@
 {
-  "name": "@code-dot-org/{{name}}",
+  "name": "@code-dot-org/lesson-deep-dive",
   "version": "0.0.0",
   "private": true,
-  "description": "{{description}}",
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/{{name}}/#readme",
-  "bugs": {"url": "https://github.com/code-dot-org/code-dot-org/issues"},
+  "description": "Post-lesson review flow for AI Tutor+",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lesson-deep-dive/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/{{name}}"
+    "directory": "frontend/packages/lesson-deep-dive"
   },
   "license": "SEE LICENSE IN LICENSE",
   "exports": {
@@ -31,7 +33,9 @@
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
-  "stylelint": {"extends": "@code-dot-org/lint-config/stylelint/index.mjs"},
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "devDependencies": {
     "@code-dot-org/lint-config": "workspace:*",
     "@testing-library/react": "catalog:",
