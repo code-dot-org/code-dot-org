@@ -44,12 +44,39 @@ function renderSection(overrides: Partial<UserSettings>) {
   const settings = {...BASE, ...overrides};
   render(
     <QueryClientProvider client={createQueryClient({queries: {retry: false}})}>
-      <ToastProvider>
+      {/* politeness mirrors UsersSettingsPage, which owns the real provider. */}
+      <ToastProvider politeness="polite">
         <UsersActions settings={settings} />
       </ToastProvider>
     </QueryClientProvider>,
   );
 }
+
+const deleteButton = () =>
+  screen.queryByRole('button', {name: /delete my account/i});
+const cannotDeleteNote = () =>
+  screen.queryByText(/do not have permission to delete this account/i);
+
+describe('UsersActions delete affordance', () => {
+  // Per the design the section is just the action; the consequences copy lives in
+  // the dialog, and is asserted in DeleteUserModal.test.tsx.
+  it('labels the action and offers an enabled Delete', () => {
+    renderSection({canDeleteOwnAccount: true, userType: 'student'});
+    expect(screen.getByText('Danger zone')).toBeInTheDocument();
+    expect(deleteButton()).toBeEnabled();
+    expect(
+      screen.queryByText(/permanently erase all personal information/i),
+    ).toBeNull();
+    expect(cannotDeleteNote()).toBeNull();
+  });
+
+  it('labels the action and explains why instead of a disabled button when deletion is not allowed', () => {
+    renderSection({canDeleteOwnAccount: false});
+    expect(screen.getByText('Danger zone')).toBeInTheDocument();
+    expect(deleteButton()).toBeNull();
+    expect(cannotDeleteNote()).toBeInTheDocument();
+  });
+});
 
 const sessionsButton = () =>
   screen.getByRole('button', {name: 'Sign Out All Other Sessions'});
@@ -95,7 +122,7 @@ describe('UsersActions manage other sessions', () => {
       expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
     );
     await waitFor(() =>
-      expect(screen.getByRole('alert')).toHaveTextContent(
+      expect(screen.getByRole('status')).toHaveTextContent(
         'Signed out of all other sessions.',
       ),
     );

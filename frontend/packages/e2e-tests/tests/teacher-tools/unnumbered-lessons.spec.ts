@@ -17,15 +17,16 @@ const COURSE = 'ui-test-unnumbered-lessons';
 // rule id -> failing node count; a new violation outside this set fails the
 // scan.
 //   unitOverviewLessons: the per-lesson progress cards are clean.
-//   lessonOverview: pre-existing DSCO shortfalls in LessonOverview.jsx, not
-//     introduced by this port — color-contrast: the "0 minutes"/"Agenda"/
-//     "Teaching Guide" <h2> section headers (teal #0093a4-on-white, 3.67:1,
-//     below the 4.5:1 AA threshold); link-name: an in-page "#activity-N" jump
-//     anchor with no accessible text.
+//   lessonOverview: link-name — an in-page "#activity-N" jump anchor in
+//     LessonOverview.jsx with no accessible text, pre-existing and not
+//     introduced by this port. The "0 minutes"/"Agenda"/"Teaching Guide" <h2>
+//     section headers used to add 3 color-contrast nodes (teal #0093a4-on-white,
+//     3.67:1, below the 4.5:1 AA threshold); the new brand palette recolored
+//     them and they now pass.
 //   headerPopup: the progress-summary popup content is clean.
 const EXPECTED_VIOLATIONS: Record<string, Record<string, number>> = {
   unitOverviewLessons: {},
-  lessonOverview: {'color-contrast': 3, 'link-name': 1},
+  lessonOverview: {'link-name': 1},
   headerPopup: {},
 };
 

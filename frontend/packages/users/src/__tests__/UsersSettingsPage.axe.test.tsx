@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {http, HttpResponse} from 'msw';
 import {afterEach, describe, expect, it} from 'vitest';
 import {axe} from 'vitest-axe';
@@ -45,6 +45,14 @@ describe('UsersSettingsPage — accessibility', () => {
     },
   );
 
+  it('has no axe violations with the dirty save bar shown', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+    await screen.findByRole('button', {name: 'Save changes'});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
   it('has no axe violations in the error state', async () => {
     registerUsersFixtures();
     setActiveScenario({labKey: USERS_LAB_KEY, tag: 'teacher'});
@@ -61,6 +69,70 @@ describe('UsersSettingsPage — accessibility', () => {
       </QueryClientProvider>,
     );
     await screen.findByRole('alert');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-email modal open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    await screen.findByRole('dialog', {name: /update email/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the update-password modal open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: 'Update password'}));
+    await screen.findByRole('dialog', {name: /update password/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the create-password modal open (sso)', async () => {
+    renderPage('sso-teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: /create password/i}));
+    await screen.findByRole('dialog', {name: /create password/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the account-type alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'student'},
+    });
+    await screen.findByRole('alertdialog', {name: /change account type/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the delete-account alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    await screen.findByRole('alertdialog', {name: /delete/i});
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the sign-out-sessions alertdialog open', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    fireEvent.click(
+      screen.getByRole('button', {name: /sign out all other sessions/i}),
+    );
+    await screen.findByRole('alertdialog', {
+      name: /sign out all other sessions/i,
+    });
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
+  it('has no axe violations with the parent-email dialog open (student)', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
+    await screen.findByRole('dialog', {name: /parent\/guardian email/i});
     expect(await auditBody()).toHaveNoViolations();
   });
 });
