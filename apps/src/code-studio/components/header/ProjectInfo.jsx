@@ -27,12 +27,13 @@ class ProjectInfo extends React.Component {
   };
 
   getFullWidth() {
-    // The trailing button (Remix) has a 1px border sitting flush against the
-    // clip edge below. Round the measured width up so the reported width never
-    // falls short of the true sub-pixel extent — a rounded-down report lands
-    // the clip inside the content and shaves that border. No extra slack:
-    // HeaderMiddle rations the row, so every surplus pixel reserved here is a
-    // pixel taken from the lesson title and progress bubbles.
+    // The trailing button (Remix) has a 1px border flush against the right edge
+    // of this width, and the parent clips to it (.project_info_container, in
+    // dashboard's application.scss). Round up so the report never falls short
+    // of the true sub-pixel extent: a rounded-down report lands the clip inside
+    // the content and shaves that border. No slack beyond the ceiling, since
+    // HeaderMiddle rations the row — surplus reserved here comes out of the
+    // lesson title's share.
     return Math.ceil(measureRenderedWidth(this.refs.projectInfo));
   }
 
