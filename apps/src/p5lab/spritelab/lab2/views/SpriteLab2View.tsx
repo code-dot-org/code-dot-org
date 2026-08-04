@@ -47,7 +47,6 @@ import defaultSources from '../defaultSources.json';
 import {
   renameImageReferences,
   renameImageReferencesOnWorkspace,
-  WorkspaceLike,
 } from '../imageReferences';
 import {onTrimsUpdated} from '../imageTrim';
 import reseedablePageConstants, {
@@ -952,7 +951,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       dispatch(setAnimationName(key, newName) as unknown as AnyAction);
       updateSources(prev => renameImageReferences(prev, oldName, newName));
       renameImageReferencesOnWorkspace(
-        Blockly.getMainWorkspace() as unknown as WorkspaceLike,
+        Blockly.getMainWorkspace(),
         oldName,
         newName
       );

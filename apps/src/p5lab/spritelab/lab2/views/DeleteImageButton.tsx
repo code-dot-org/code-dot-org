@@ -4,8 +4,7 @@ import moduleStyles from './image-details-dialog.module.scss';
 
 /**
  * The image dialog's Delete button: confirming swaps it for an inline
- * question, so no second dialog stacks on this one. Lives in the footer's
- * flush-left slot in both the summary and generate views.
+ * question.
  */
 const DeleteImageButton: React.FunctionComponent<{onDelete: () => void}> = ({
   onDelete,

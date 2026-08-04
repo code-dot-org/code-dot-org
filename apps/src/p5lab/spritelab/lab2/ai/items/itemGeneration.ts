@@ -63,18 +63,25 @@ async function normalizeIfPixelArt(
   }
 }
 
-export interface GenerateImageOptions {
-  itemType?: SpriteLab2ItemType;
-  style?: SpriteLab2ItemStyle;
-  // Sampling wildness, 0 (tame) to 2 (wild); omitted = the service default.
-  temperature?: number;
-  // Replay a specific roll of the randomness; omitted = a fresh roll. The
-  // roll actually used is returned in the generation metadata either way.
-  seed?: number;
-  // When set, the service modifies this image per the prompt instead of
-  // drawing from scratch. A data URI (not raw bytes) because the request
-  // body is JSON.
+/** What to generate; every omitted field falls back to a default. */
+export type GenerateImageOptions = Partial<
+  Pick<ImageGenerationMetadata, 'itemType' | 'style' | 'seed' | 'temperature'>
+> & {
+  /**
+   * Modify this image per the prompt instead of drawing from scratch. A
+   * data URI, not raw bytes: the request body is JSON.
+   */
   inputImageDataURI?: string;
+};
+
+export interface GeneratedImageResult {
+  filename: string;
+  uint8Array: Uint8Array;
+  mediaType: string;
+  /** Set when pixel-style output was normalized: physical px per art pixel. */
+  pixelGridSize?: number;
+  /** How this image was made, to record on its animation. */
+  generation: ImageGenerationMetadata;
 }
 
 /**
@@ -82,21 +89,11 @@ export interface GenerateImageOptions {
  * logs/attributes via AichatContextManager). Sprites and blocks get a flat
  * key color the model picks to contrast with the subject, flood-filled to
  * transparency.
- *
- * @returns the generated image as {filename, uint8Array, mediaType}, plus
- * the generation metadata to record on its animation.
  */
 export async function generateImage(
   prompt: string,
   options: GenerateImageOptions = {}
-): Promise<{
-  filename: string;
-  uint8Array: Uint8Array;
-  mediaType: string;
-  // Set when pixel-style output was normalized: physical px per art pixel.
-  pixelGridSize?: number;
-  generation: ImageGenerationMetadata;
-}> {
+): Promise<GeneratedImageResult> {
   const {itemType = 'sprite', style = 'smooth'} = options;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.

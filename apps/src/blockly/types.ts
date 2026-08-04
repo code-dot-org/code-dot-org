@@ -301,8 +301,8 @@ export interface JsonBlockConfig {
   fields?: {
     [key: string]: {name: string; type: string; id?: string} | string | number;
   };
-  inputs?: {[key: string]: {block: JsonBlockConfig}};
-  next?: {block: JsonBlockConfig};
+  inputs?: {[key: string]: {block: JsonBlockConfig; shadow?: JsonBlockConfig}};
+  next?: {block: JsonBlockConfig; shadow?: JsonBlockConfig};
   kind?: string;
 }
 

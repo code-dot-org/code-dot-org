@@ -31,19 +31,20 @@ export const ITEM_STYLE_LABELS: Record<SpriteLab2ItemStyle, string> = {
   pixel: 'Pixel art',
 };
 
-// How an AI-generated image was made, recorded on its animation so a later
-// generation can replay the same roll of randomness or start from the
-// current image.
+/**
+ * How an AI-generated image was made, recorded on its animation so a later
+ * generation can replay the same roll of randomness or start from the
+ * current image.
+ */
 export interface ImageGenerationMetadata {
   prompt: string;
   itemType: SpriteLab2ItemType;
   style: SpriteLab2ItemStyle;
-  // Sending the same seed and prompt again asks the service for the same
-  // image.
+  /** Sending the same seed and prompt again asks for the same image. */
   seed: number;
-  // Sampling wildness the user chose; absent = the service default.
+  /** Sampling wildness the user chose; absent = the service default. */
   temperature?: number;
-  // True when the image was made by modifying its previous version.
+  /** True when the image was made by modifying its previous version. */
   editedPrevious?: boolean;
 }
 

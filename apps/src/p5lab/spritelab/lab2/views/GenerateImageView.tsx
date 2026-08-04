@@ -5,7 +5,20 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {generateImage, GenerateImageOptions} from '../ai/items/itemGeneration';
+import aiBot0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png';
+import aiBot1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png';
+import aiBot2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png';
+import aiBot3 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png';
+import aiBotGenerating0 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png';
+import aiBotGenerating1 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png';
+import aiBotGenerating2 from '@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png';
+
+import {
+  GeneratedImageResult,
+  generateImage,
+  GenerateImageOptions,
+} from '../ai/items/itemGeneration';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,
   ITEM_STYLE_LABELS,
@@ -19,16 +32,11 @@ import DeleteImageButton from './DeleteImageButton';
 import moduleStyles from './image-details-dialog.module.scss';
 
 // Our own copies (not Music Lab's) — these may not live long.
-const BOT_IMAGES = [
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-0.png'),
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-1.png'),
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-2.png'),
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-3.png'),
-];
+const BOT_IMAGES = [aiBot0, aiBot1, aiBot2, aiBot3];
 const BOT_GENERATING_IMAGES = [
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-0.png'),
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-1.png'),
-  require('@cdo/static/spritelab_lab2/ai-bot/ai-bot-generating-2.png'),
+  aiBotGenerating0,
+  aiBotGenerating1,
+  aiBotGenerating2,
 ];
 
 // The temperature slider runs 0..10 for friendly whole numbers; the
@@ -37,14 +45,6 @@ const TEMPERATURE_LEVEL_MAX = 10;
 const TEMPERATURE_LEVEL_DEFAULT = 5;
 const levelToTemperature = (level: number) =>
   (level / TEMPERATURE_LEVEL_MAX) * 2;
-
-export interface GeneratedImageResult {
-  filename: string;
-  uint8Array: Uint8Array;
-  mediaType: string;
-  pixelGridSize?: number;
-  generation: ImageGenerationMetadata;
-}
 
 type GenerateMode = 'prompt' | 'generating';
 type RandomnessSource = 'new' | 'seed' | 'previous';
@@ -205,7 +205,8 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
                 value={name}
                 errorMessage={nameError || undefined}
                 disabled={generating}
-                onChange={e => setName(e.target.value)}
+                maxLength={IMAGE_NAME_MAX_LENGTH}
+                onChange={e => setName(sanitizeImageName(e.target.value))}
               />
             </div>
           )}

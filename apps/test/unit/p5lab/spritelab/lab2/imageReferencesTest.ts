@@ -1,5 +1,9 @@
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
-import {renameImageReferences} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
+import {
+  IMAGE_NAME_MAX_LENGTH,
+  renameImageReferences,
+  sanitizeImageName,
+} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 import {SpriteLab2Source} from '@cdo/apps/p5lab/spritelab/lab2/types';
 
 interface TestBlock {
@@ -91,14 +95,17 @@ describe('renameImageReferences', () => {
       kind: 'sprite',
     });
   });
+});
 
-  it('handles names needing JSON escaping', () => {
-    const sources: SpriteLab2Source = {
-      source: workspaceWith([
-        {type: 'a', fields: {ANIMATION: '"say \\"hi\\""'}},
-      ]),
-    };
-    const out = renameImageReferences(sources, 'say "hi"', 'greeting');
-    expect(blocksOf(out.source)[0].fields).toEqual({ANIMATION: '"greeting"'});
+describe('sanitizeImageName', () => {
+  it('drops quotes, collapses whitespace, keeps a trailing space', () => {
+    expect(sanitizeImageName('say "hi"')).toBe('say hi');
+    expect(sanitizeImageName('  big   cat ')).toBe('big cat ');
+  });
+
+  it('caps the length', () => {
+    expect(sanitizeImageName('x'.repeat(99))).toHaveLength(
+      IMAGE_NAME_MAX_LENGTH
+    );
   });
 });

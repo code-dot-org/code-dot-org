@@ -17,7 +17,11 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
-import {UploadImageFunction} from '../ai/items/itemGeneration';
+import {
+  GeneratedImageResult,
+  UploadImageFunction,
+} from '../ai/items/itemGeneration';
+import {MODEL_OUTPUT_PX} from '../ai/items/modelHelpers';
 import {
   getTrimmedThumbnail,
   onTrimsUpdated,
@@ -29,7 +33,6 @@ import {
   SpriteLab2ItemType,
 } from '../types';
 
-import {GeneratedImageResult} from './GenerateImageView';
 import ImageDetailsDialog from './ImageDetailsDialog';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -260,7 +263,7 @@ const GenerateImagePane: React.FunctionComponent<{
           addAnimation(key, {
             name: newName,
             sourceUrl,
-            frameSize: frameSize || {x: 1024, y: 1024},
+            frameSize: frameSize || {x: MODEL_OUTPUT_PX, y: MODEL_OUTPUT_PX},
             frameCount: 1,
             frameDelay: 2,
             looping: true,

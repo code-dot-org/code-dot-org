@@ -5,6 +5,8 @@ import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import {GeneratedImageResult} from '../ai/items/itemGeneration';
+import {IMAGE_NAME_MAX_LENGTH, sanitizeImageName} from '../imageReferences';
 import {
   ImageGenerationMetadata,
   ITEM_STYLE_LABELS,
@@ -13,7 +15,7 @@ import {
 } from '../types';
 
 import DeleteImageButton from './DeleteImageButton';
-import GenerateImageView, {GeneratedImageResult} from './GenerateImageView';
+import GenerateImageView from './GenerateImageView';
 
 import moduleStyles from './image-details-dialog.module.scss';
 
@@ -129,8 +131,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 className={moduleStyles.headerNameField}
                 value={nameDraft}
                 errorMessage={shownNameError || undefined}
+                maxLength={IMAGE_NAME_MAX_LENGTH}
                 onChange={e => {
-                  setNameDraft(e.target.value);
+                  setNameDraft(sanitizeImageName(e.target.value));
                   setNameError(null);
                 }}
                 onKeyDown={e => {
