@@ -165,6 +165,9 @@ describe('ProjectManager', () => {
     // to happen in the next save interval.
     assert.isTrue(sourcesStore.save.calledOnce);
     assert.isTrue(channelsStore.save.calledOnce);
+
+    // The queued save is still pending; clear its timeout.
+    projectManager.destroy();
   });
 
   it('always triggers a save on force save', async () => {
@@ -538,6 +541,9 @@ describe('ProjectManager', () => {
     // Second save should not force new version (comment state reset)
     await projectManager.save(UPDATED_SOURCE_2);
     assert.isFalse(projectManager.getForceNewVersion());
+
+    // The queued save is still pending; clear its timeout.
+    projectManager.destroy();
   });
 
   it('flushSave waits for the save in flight, then saves the changes made during it', async () => {
@@ -667,6 +673,9 @@ describe('ProjectManager', () => {
 
     finishFirstSourceSave();
     await firstSave;
+
+    // The queued save is still pending; clear its timeout.
+    projectManager.destroy();
   });
 
   it('keeps sources edited during a save in flight for the next save', async () => {
@@ -689,6 +698,9 @@ describe('ProjectManager', () => {
     // Only the first source reached the store, so the second is still unsaved.
     expect(sourcesStore.save.firstCall.args[1]).to.deep.equal(UPDATED_SOURCE);
     assert.isTrue(projectManager.hasUnsavedChanges());
+
+    // The queued save is still pending; clear its timeout.
+    projectManager.destroy();
   });
 
   it('keeps a rename made during a save in flight', async () => {
