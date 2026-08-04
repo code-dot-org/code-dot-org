@@ -8,10 +8,6 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
 
   queue_as CDO.active_job_queues[:low_priority]
 
-  rescue_from StandardError do |exception|
-    Observability::Errors.capture_exception(exception)
-  end
-
   before_perform do
     throw :abort if DCDO.get('project_storage_geos_backfill_disabled', false)
   end
@@ -27,6 +23,10 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
         connection.release_advisory_lock(job.class.name)
       end
     end
+  end
+
+  rescue_from StandardError do |exception|
+    Observability::Errors.capture_exception(exception)
   end
 
   def perform(limit: DEFAULT_LIMIT)
