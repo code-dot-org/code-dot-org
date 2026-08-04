@@ -186,4 +186,21 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    a jump-through platform, which is ground without being solid, is in there too
    — Collisions records every overlap, not only the ones something pushes on.
 
-5. **`bounciness` and `friction`** on `Solid Bodies`.
+5. **`bounciness` and `friction`** ✅ — on `Solid`, the rule's own trait, so
+   every solid has them and neither push action needs an "if it has trait"
+   guard. What goes INTO the surface is turned around by bounciness; what runs
+   ALONG it is slowed by friction; 0 and 0 are the dead stop the rule did
+   before there were numbers for it.
+
+   On the SOLID rather than on the body that hits it, which is the sentence a
+   learner means — the trampoline is bouncy, the ice is slippery. Real physics
+   combines both surfaces; if that turns out to matter, the fix is to multiply
+   the two rather than to move the property.
+
+   Why this is a parameter and not another rule: two responders reading the same
+   contacts do not compose. Solid Bodies zeroes the velocity on the axis it
+   resolves, so a separate bouncy rule either runs after it — and finds the
+   velocity it needed already gone — or runs before it and has its work undone.
+   Last writer wins, silently. A DIFFERENT physics model (mass, impulses,
+   rotation) is the other path, and it replaces Solid Bodies rather than sitting
+   beside it, which is exactly what splitting detection out made possible.
