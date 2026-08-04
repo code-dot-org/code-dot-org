@@ -24,6 +24,7 @@ const OPEN_ENDED_PROJECT_TYPES = [
   'game_design',
   'dance',
   'poetry_hoc',
+  'sketchlab',
 ];
 
 const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];

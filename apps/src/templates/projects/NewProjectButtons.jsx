@@ -130,6 +130,10 @@ const PROJECT_INFO = {
     thumbnail: studio('/shared/images/courses/music-dance-ai-icon.png'),
     urlOverride: pegasus('/mix-move-ai'),
   },
+  sketchlab: {
+    label: 'Sketch Lab',
+    thumbnail: studio('/shared/images/courses/sketch-lab-icon.png'),
+  },
 };
 
 const TILES_PER_ROW = 4;
