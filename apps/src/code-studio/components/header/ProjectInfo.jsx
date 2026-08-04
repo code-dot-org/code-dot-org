@@ -28,10 +28,12 @@ class ProjectInfo extends React.Component {
 
   getFullWidth() {
     // The trailing button (Remix) has a 1px border sitting flush against the
-    // clip edge below. Round the measured width up and add a pixel of slack so
-    // that border always clears the overflow:hidden edge, rather than relying
-    // on the rounding HeaderMiddle happens to apply to the reported width.
-    return Math.ceil(measureRenderedWidth(this.refs.projectInfo)) + 1;
+    // clip edge below. Round the measured width up so the reported width never
+    // falls short of the true sub-pixel extent — a rounded-down report lands
+    // the clip inside the content and shaves that border. No extra slack:
+    // HeaderMiddle rations the row, so every surplus pixel reserved here is a
+    // pixel taken from the lesson title and progress bubbles.
+    return Math.ceil(measureRenderedWidth(this.refs.projectInfo));
   }
 
   setDesiredWidth() {
