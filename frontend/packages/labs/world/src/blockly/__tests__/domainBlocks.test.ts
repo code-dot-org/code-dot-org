@@ -453,8 +453,6 @@ describe('domain block generators', () => {
     const live = [
       ['world_use_trait', 'TRAIT'],
       ['world_use_rule', 'RULE'],
-      ['world_emit', 'EVENT'],
-      ['world_emit_with', 'EVENT'],
       ['world_rule_step_before', 'STEP'],
       ['world_rule_step_after', 'STEP'],
       ['world_add_actor', 'ACTOR'],
@@ -976,58 +974,65 @@ describe('color spelling', () => {
   });
 });
 
-describe('world_emit', () => {
-  // The block that raises an event. Until it existed a rule could DECLARE an
-  // event and nothing in the language could fire it.
-  const run = (
-    _type: string,
-    fields: Record<string, string>,
-    definitions: Record<string, string>,
-    _body: string,
+describe('the block that raises an event', () => {
+  // Generated per event, from the same signature the hat is built from — so it
+  // says which event in its own words and takes exactly what that event
+  // carries. It replaces a pair of hand-written blocks that named their event
+  // in a dropdown and always said "with", whether there was anything to carry
+  // or not.
+  const emit = (
+    type: string,
     values: Record<string, string>,
+    definitions: Record<string, string> = {},
   ): string =>
-    generatorFor('world_emit')(
-      {getFieldValue: (name: string) => fields[name]} as never,
+    generatorFor(type)(
+      {getFieldValue: () => null} as never,
       {
         definitions_: definitions,
         valueToCode: (_block: unknown, name: string) => values[name] ?? '',
       } as never,
       {} as never,
     ) as string;
+
   it('emits a built-in event through the WorldLab namespace', () => {
-    const code = run(
-      'world_emit',
-      {EVENT: 'Appearance#AnimationEndedEvent'},
-      {},
-      '',
-      {
-        ACTOR: 'other',
-      },
+    expect(
+      emit('world_emit_Appearance_AnimationEndedEvent', {ACTOR: 'other'}),
+    ).toBe('world.emit(WorldLab.AnimationEndedEvent, other);\n');
+  });
+
+  it('defaults to the principal actor when the socket is empty', () => {
+    expect(emit('world_emit_Appearance_AnimationEndedEvent', {})).toBe(
+      'world.emit(WorldLab.AnimationEndedEvent, actor);\n',
     );
-    expect(code).toBe('world.emit(WorldLab.AnimationEndedEvent, other);\n');
+  });
+
+  it('reads `emit <event> for <actor>`, in the event’s own words', () => {
+    const block = DOMAIN_BLOCKS.find(
+      b => b.type === 'world_emit_Appearance_AnimationEndedEvent',
+    ) as {message0: string} | undefined;
+
+    expect(block?.message0).toBe('emit animation ends for %1');
   });
 
   it('imports a project rule’s event from its module', () => {
     const defs: Record<string, string> = {};
-    const code = run('world_emit', {EVENT: 'Has Wind#GustedEvent'}, defs, '', {
-      ACTOR: 'other',
-    });
+    const block = PROJECT_BLOCKS.blocks.find(
+      b => b.type === 'world_emit_HasWind_GustedEvent',
+    )!;
+
+    const code = block.generator.javascript(
+      {getFieldValue: () => null} as never,
+      {
+        definitions_: defs,
+        valueToCode: () => 'other',
+      } as never,
+      {} as never,
+    ) as string;
+
     expect(code).toBe('world.emit(GustedEvent, other);\n');
     expect(defs['named:rules/wind:GustedEvent']).toBe(
       'import {GustedEvent} from "rules/wind";',
     );
-  });
-
-  it('defaults to the principal actor when the socket is empty', () => {
-    expect(
-      run('world_emit', {EVENT: 'Appearance#AnimationEndedEvent'}, {}, '', {}),
-    ).toBe('world.emit(WorldLab.AnimationEndedEvent, actor);\n');
-  });
-
-  it('emits nothing when no rule in play declares an event', () => {
-    // The dropdown's "(none)" placeholder. `world.emit(undefined, actor)` would
-    // be a runtime error for a block the learner has not finished.
-    expect(run('world_emit', {EVENT: ''}, {}, '', {})).toBe('');
   });
 });
 
@@ -1889,8 +1894,6 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_rule_step_tick',
       'world_rule_step_before',
       'world_rule_step_after',
-      'world_emit',
-      'world_emit_with',
       'world_step_delta',
       // Reading and writing a variable is its own category (below): a rule's
       // parameters are variables like any other.

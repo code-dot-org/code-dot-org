@@ -131,9 +131,19 @@ when this actor [ space ▾ ] is pressed        (was: a key is pressed → if �
   from an enum must not silently rewrite a block that said `red` — the dropdown
   shows the unknown value and the project still generates, the same way a
   `use rule` naming a deleted rule behaves.
-- **`emit … with` stays generic** in the first pass. Generating a per-event emit
-  block from the signature (`emit ⟨a key is pressed⟩ for ⟨actor⟩ with ⟨key ▾⟩`)
-  is a nicety that can follow; the value is a string either way.
+- **A parameter is a FIELD where a constant is meant and a SOCKET where a value
+  is meant.** The hat picks one of the choices to wait for; the block that
+  raises the event supplies whichever the code worked out — `rules/input` raises
+  its event once per key it is looping over, so a dropdown has to be
+  droppable-over there. One signature, two renderings, and the difference is
+  not an inconsistency but the thing each side is for.
+- **`emit` is generated per event**, from that signature, and the two
+  hand-written blocks are retired. `world_emit` / `world_emit_with` named their
+  event in a dropdown and always said "with" — wrong for an event that carries
+  nothing and unextendable past one argument — and they were the last member
+  reference in the language that went through a dropdown instead of being a
+  block of its own. The event's own words now read at the place it is raised:
+  `emit ⟨space ▾⟩ is pressed for ⟨each⟩`.
 - **A filter change restarts the game.** It edits the handler's source, which
   `handlerIds` hashes — already true and already correct.
 
