@@ -73,6 +73,21 @@ describe('rules/solid.rule', () => {
     }
   });
 
+  it('says what a friction of 1 is worth, once, on the world', () => {
+    // `friction` is the 0…1 coefficient every other tool uses, so it needs
+    // something to be a fraction OF. That is a world property in gravity's own
+    // units, defaulting to the same 9 — so friction 1 holds a body in an
+    // ordinary world, and a heavier world raises this once instead of every
+    // surface being re-tuned.
+    const grip = meta.properties.find(
+      property => property.id === 'grip_strength',
+    );
+
+    expect(grip?.scope).toBe('world');
+    expect(grip?.type).toBe('number');
+    expect(grip?.default).toBe(9);
+  });
+
   it('takes the response as numbers on the solid, defaulting to a dead stop', () => {
     // The trampoline is bouncy and the ice is slippery — properties of the
     // SOLID, not of whatever hits it (specs/COLLISION.md). They sit on this
@@ -86,6 +101,7 @@ describe('rules/solid.rule', () => {
     expect(numbers.map(property => property.id)).toEqual([
       'bounciness',
       'friction',
+      'drag',
     ]);
     for (const property of numbers) {
       expect(property.type).toBe('number');
@@ -94,48 +110,96 @@ describe('rules/solid.rule', () => {
     }
   });
 
-  it('keeps both numbers between 0 and 1', () => {
-    // Above one, bounciness hands back more speed than arrived — energy from
-    // nowhere, every bounce; friction runs the tangent backwards. Below zero,
-    // both do the opposite. Neither is a thing a learner meant to ask for, so
-    // the two reads go through a query that says so once, by name.
+  it('keeps every coefficient between 0 and 1', () => {
+    // Bounciness above one hands back more speed than arrived — energy from
+    // nowhere, every bounce. Friction and drag above one reverse what they are
+    // meant to slow. All three reads go through a query that says so once, by
+    // name, rather than the same comparison written out six times.
     const clamp = meta.queries.find(
       query => query.ref.exportName === 'KeptBetween0And1Query',
     );
 
     expect(clamp?.returns).toBe('number');
     expect(clamp?.params.map(param => param.type)).toEqual(['number']);
-    // Four reads: two properties, two axes, every one of them kept in range.
+    // Three coefficients on two axes, and friction is read again by the test
+    // that decides whether the body is held.
     expect(
       (source.match(/world_query_SolidBodies_KeptBetween0And1Query/g) ?? [])
         .length,
-    ).toBe(4);
+    ).toBeGreaterThanOrEqual(6);
   });
 
-  it('brakes by the same amount however often the world ticks', () => {
-    // Friction is a fraction lost per SECOND, raised to the length of this
-    // frame — the unit gravity's strength already uses. Multiplying it in flat,
-    // once per contact frame, made the same number a different brake at a
-    // different frame rate.
-    const powers = (source.match(/"OP": "POWER"/g) ?? []).length;
-
-    expect(powers).toBe(2);
-    expect(source).toContain('colFrame2');
+  it('keeps friction and drag apart, because neither can do the other’s job', () => {
+    // Friction SUBTRACTS, so it either stops a body or lets it keep gathering
+    // speed — it cannot say "slide at this speed". Drag SCALES, so it settles
+    // at a steady slide but can never hold anything. A wall-slide wants drag; a
+    // wall-grab wants friction; ice wants neither.
+    expect(source).toContain('"OP": "POWER"'); // drag scales, over the frame
+    expect(source).toContain('world_query_SolidBodies_SlowedByQuery'); // friction subtracts
   });
 
-  it('reads them off the solid it is pushing out of, on both axes', () => {
-    // Both passes: what goes INTO the surface is turned around by bounciness,
-    // what runs ALONG it is slowed by friction. A pass that read them off the
-    // moving body would be a different rule (and a different sentence).
-    const uses = (name: string) =>
-      (
-        source.match(
-          new RegExp(`world_get_SolidBodies_${name}Property`, 'g'),
-        ) ?? []
-      ).length;
+  it('takes friction off the speed rather than scaling it', () => {
+    // A scaling cannot hold a body against a constant pull: gravity ADDS a
+    // fixed amount every frame and a fraction of what is there can only ever
+    // balance it at some terminal speed. So friction subtracts, in gravity's
+    // own units and over the frame's own length — `friction × frame`, the same
+    // shape as `strength × frame`.
+    const slowed = meta.queries.find(
+      query => query.ref.exportName === 'SlowedByQuery',
+    );
 
-    expect(uses('Bounciness')).toBe(2);
-    expect(uses('Friction')).toBe(2);
+    expect(slowed?.returns).toBe('number');
+    expect(slowed?.params.map(param => param.type)).toEqual([
+      'number',
+      'number',
+    ]);
+    // Once per axis.
+    expect(
+      (source.match(/world_query_SolidBodies_SlowedByQuery/g) ?? []).length,
+    ).toBe(2);
+  });
+
+  it('puts the body back when the grip takes the whole slide', () => {
+    // Velocity alone cannot pin anything: gravity adds its speed before the
+    // move and friction takes it away after, so a body on a perfectly grippy
+    // wall still travels one frame's worth every frame. Undoing that frame's
+    // slide is what makes "grippier than gravity" mean stuck.
+    expect(source).toContain('logic_ternary');
+    expect(source.match(/colWas2/g)?.length).toBeGreaterThan(2);
+  });
+
+  it('reads them off the solid it is pushing out of, never off the body', () => {
+    // The trampoline is bouncy and the ice is slippery: both numbers belong to
+    // the surface. A read that took them from the moving body would be a
+    // different rule, and a different sentence.
+    const readsFrom: string[] = [];
+    const walk = (node: unknown): void => {
+      if (Array.isArray(node)) {
+        node.forEach(walk);
+        return;
+      }
+      if (!node || typeof node !== 'object') {
+        return;
+      }
+      const block = node as {
+        type?: string;
+        inputs?: Record<string, {block?: {fields?: {VAR?: {name?: string}}}}>;
+      };
+      if (
+        /^world_get_SolidBodies_(Bounciness|Friction|Drag)Property$/.test(
+          block.type ?? '',
+        )
+      ) {
+        readsFrom.push(
+          block.inputs?.ACTOR?.block?.fields?.VAR?.name ?? '(none)',
+        );
+      }
+      Object.values(node as Record<string, unknown>).forEach(walk);
+    };
+    walk(JSON.parse(source));
+
+    expect(readsFrom.length).toBeGreaterThanOrEqual(4);
+    expect(new Set(readsFrom)).toEqual(new Set(['solid']));
   });
 
   it('runs on contacts that are this tick’s', () => {
