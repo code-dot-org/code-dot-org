@@ -177,3 +177,103 @@ describe('all actors', () => {
     );
   });
 });
+
+describe('building a group', () => {
+  /** A block whose ACTOR socket holds `plugged`, in a workspace of `blocks`. */
+  const emitWith = (
+    type: string,
+    fields: Record<string, string>,
+    plugged: Record<string, string | null>,
+    values: Record<string, string>,
+    workspaceBlocks: Array<{type: string; fields: Record<string, string>}> = [],
+  ): string | [string, number] => {
+    const definition = DOMAIN_BLOCKS.find(block => block.type === type)!;
+    const made = workspaceBlocks.map(block => ({
+      type: block.type,
+      getFieldValue: (name: string) => block.fields[name] ?? null,
+      getInputTargetBlock: () => null,
+    }));
+    const space = {
+      getBlocksByType: (wanted: string) =>
+        made.filter(block => block.type === wanted),
+    };
+    return definition.generator.javascript(
+      {
+        getFieldValue: (name: string) => fields[name] ?? null,
+        getInputTargetBlock: (name: string) =>
+          plugged[name]
+            ? {
+                type: plugged[name],
+                workspace: space,
+                getFieldValue: () => fields[`${name}_VAR`] ?? null,
+              }
+            : null,
+      } as never,
+      {
+        definitions_: {},
+        valueToCode: (_block: unknown, name: string) => values[name] ?? '',
+        getVariableName: (id: string) => id,
+      } as never,
+      {} as never,
+    ) as string | [string, number];
+  };
+
+  it('adds to what a variable holds, and assigns it back', () => {
+    // Assigned back because a variable holding ONE actor cannot be appended
+    // to: it becomes a list of two, and the actor that was in it is untouched.
+    const code = emitWith(
+      'world_push_actor',
+      {LIST: 'coins'},
+      {ACTOR: 'world_this_actor'},
+      {ACTOR: 'actor'},
+    );
+
+    expect(code).toBe('coins = WorldLab.pushed(coins, actor);\n');
+  });
+
+  it('empties one', () => {
+    expect(emitWith('world_clear_actors', {LIST: 'coins'}, {}, {})).toBe(
+      'coins = [];\n',
+    );
+  });
+
+  it('counts what a value holds, one or many', () => {
+    const [code] = emitWith(
+      'world_count_actors',
+      {},
+      {ACTOR: 'world_all_actors'},
+      {ACTOR: '[...world.actors]'},
+    ) as [string, number];
+
+    expect(code).toBe('WorldLab.all([...world.actors]).length');
+  });
+
+  it('asks whether an actor is among them', () => {
+    const [code] = emitWith(
+      'world_is_in_actors',
+      {LIST_VAR: 'coins'},
+      {ACTOR: 'world_this_actor', LIST: 'variables_get_Actor'},
+      {ACTOR: 'actor', LIST: 'coins'},
+      [{type: 'world_push_actor', fields: {LIST: 'coins'}}],
+    ) as [string, number];
+
+    expect(code).toBe('WorldLab.all(coins).includes(actor)');
+  });
+
+  it('broadcasts over a variable that a group was built in', () => {
+    // The step 4 change: until something pushed into it, a variable held one
+    // actor and generated code said so. `coins` is many now, and every
+    // statement over it broadcasts.
+    const code = emitWith(
+      'world_remove_actor',
+      {ACTOR_VAR: 'coins'},
+      {ACTOR: 'variables_get_Actor'},
+      {ACTOR: 'coins'},
+      [{type: 'world_push_actor', fields: {LIST: 'coins'}}],
+    );
+
+    expect(code).toBe(
+      'WorldLab.each(coins, actor => world.removeActor(actor));\n',
+    );
+  });
+});
