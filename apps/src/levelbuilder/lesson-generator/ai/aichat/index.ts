@@ -1,165 +1,21 @@
 import {Output} from 'ai';
 import z from 'zod/v3';
 
-import {ModelParameters} from '@cdo/apps/aichat/types/model';
-import {
-  FieldVisibilities,
-  Visibility,
-} from '@cdo/apps/aichatLab/types/customizations';
+import {Visibility} from '@cdo/apps/aichatLab/types/customizations';
 import {LevelAichatSettings} from '@cdo/apps/aichatLab/types/levelProperties';
 import {generateText} from '@cdo/apps/aiGateway';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
-
-import {LevelContext} from '../../curriculum-generator/ai/context';
+import {LevelContext} from '@cdo/apps/levelbuilder/curriculum-generator/ai/context';
 import {
   getTextModel,
   logPrompt,
   logResponse,
   PROMPT_TAGS,
-} from '../../curriculum-generator/ai/shared';
+} from '@cdo/apps/levelbuilder/curriculum-generator/ai/shared';
 
-// Presets fix every field of LevelAichatSettings except the prompts
-// (systemPrompt + levelSystemPrompt) and, for Bot Builder, the model card
-// — those are AI-generated per level. responseJsonSchema is omitted
-// because no shipped preset varies it.
-type PresetDefaultKey = 'selectedModelId' | 'temperature';
-type PresetVisibilityKey =
-  | 'selectedModelId'
-  | 'temperature'
-  | 'systemPrompt'
-  | 'retrievalContexts'
-  | 'modelCardInfo';
+import {AichatPreset, AICHAT_PRESETS, AichatPresetId} from './presets';
 
-export interface AichatPreset {
-  id: AichatPresetId;
-  label: string;
-  description: string;
-  defaults: Pick<ModelParameters, PresetDefaultKey>;
-  visibilities: Pick<FieldVisibilities, PresetVisibilityKey>;
-  hidePresentationPanel: LevelAichatSettings['hidePresentationPanel'];
-  multimodalEnabled: NonNullable<LevelAichatSettings['multimodalEnabled']>;
-  promptForModelCard: boolean;
-}
-
-export const AICHAT_PRESET_IDS = [
-  'explore',
-  'tutor',
-  'evaluation',
-  'domainExpert',
-  'botBuilder',
-] as const;
-
-export type AichatPresetId = (typeof AICHAT_PRESET_IDS)[number];
-
-export const AICHAT_PRESETS: Record<AichatPresetId, AichatPreset> = {
-  explore: {
-    id: 'explore',
-    label: 'Explore',
-    description:
-      'Free-form chat with a persona-driven bot. Everything hidden; ' +
-      'the system prompt sets the bot identity.',
-    defaults: {
-      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
-      temperature: 0.5,
-    },
-    visibilities: {
-      selectedModelId: Visibility.HIDDEN,
-      temperature: Visibility.HIDDEN,
-      systemPrompt: Visibility.HIDDEN,
-      retrievalContexts: Visibility.HIDDEN,
-      modelCardInfo: Visibility.HIDDEN,
-    },
-    hidePresentationPanel: false,
-    multimodalEnabled: false,
-    promptForModelCard: false,
-  },
-  tutor: {
-    id: 'tutor',
-    label: 'Tutor',
-    description:
-      'Bot guides the student through a specific skill. Lower ' +
-      'temperature for consistency; safety/scope in levelSystemPrompt.',
-    defaults: {
-      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
-      temperature: 0.3,
-    },
-    visibilities: {
-      selectedModelId: Visibility.HIDDEN,
-      temperature: Visibility.HIDDEN,
-      systemPrompt: Visibility.HIDDEN,
-      retrievalContexts: Visibility.HIDDEN,
-      modelCardInfo: Visibility.HIDDEN,
-    },
-    hidePresentationPanel: false,
-    multimodalEnabled: false,
-    promptForModelCard: false,
-  },
-  evaluation: {
-    id: 'evaluation',
-    label: 'Evaluation',
-    description:
-      "Bot evaluates the student's work or analyses an artifact. " +
-      'System prompt shown read-only so the student knows the criteria. ' +
-      'Multimodal on so the student can upload images/PDFs.',
-    defaults: {
-      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
-      temperature: 0.3,
-    },
-    visibilities: {
-      selectedModelId: Visibility.HIDDEN,
-      temperature: Visibility.HIDDEN,
-      systemPrompt: Visibility.READONLY,
-      retrievalContexts: Visibility.HIDDEN,
-      modelCardInfo: Visibility.HIDDEN,
-    },
-    hidePresentationPanel: false,
-    multimodalEnabled: true,
-    promptForModelCard: false,
-  },
-  domainExpert: {
-    id: 'domainExpert',
-    label: 'Domain Expert',
-    description:
-      'Bot constrained to a single subject. Presentation panel hidden ' +
-      'so the chat fills the workspace; system prompt visible read-only.',
-    defaults: {
-      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
-      temperature: 0.3,
-    },
-    visibilities: {
-      selectedModelId: Visibility.HIDDEN,
-      temperature: Visibility.HIDDEN,
-      systemPrompt: Visibility.READONLY,
-      retrievalContexts: Visibility.HIDDEN,
-      modelCardInfo: Visibility.HIDDEN,
-    },
-    hidePresentationPanel: true,
-    multimodalEnabled: false,
-    promptForModelCard: false,
-  },
-  botBuilder: {
-    id: 'botBuilder',
-    label: 'Bot Builder',
-    description:
-      'Student designs their own bot — every customization editable, ' +
-      'model card on. The starter prompt and model card are placeholders ' +
-      'the student rewrites.',
-    defaults: {
-      selectedModelId: AiChatModelIds.GEMINI_2_5_FLASH,
-      temperature: 0.5,
-    },
-    visibilities: {
-      selectedModelId: Visibility.EDITABLE,
-      temperature: Visibility.EDITABLE,
-      systemPrompt: Visibility.EDITABLE,
-      retrievalContexts: Visibility.HIDDEN,
-      modelCardInfo: Visibility.EDITABLE,
-    },
-    hidePresentationPanel: false,
-    multimodalEnabled: false,
-    promptForModelCard: true,
-  },
-};
+export {AICHAT_PRESET_IDS, AICHAT_PRESETS} from './presets';
+export type {AichatPreset, AichatPresetId} from './presets';
 
 const baseAichatSchema = z.object({
   longInstructions: z
@@ -208,6 +64,10 @@ const aichatPlanSchema = Output.object({
   }),
 });
 
+type AichatPlan = z.infer<typeof baseAichatSchema> & {
+  modelCard?: z.infer<typeof modelCardSchema>;
+};
+
 export interface AichatGeneration {
   longInstructions: string;
   aichatSettings: LevelAichatSettings;
@@ -216,18 +76,7 @@ export interface AichatGeneration {
 
 function settingsFromPresetAndPlan(
   preset: AichatPreset,
-  plan: {
-    systemPrompt: string;
-    levelSystemPrompt: string;
-    modelCard?: {
-      botName: string;
-      description: string;
-      intendedUse: string;
-      limitationsAndWarnings: string;
-      testingAndEvaluation: string;
-      exampleTopics: string[];
-    };
-  }
+  plan: AichatPlan
 ): LevelAichatSettings {
   const emptyModelCard = {
     botName: '',
@@ -329,19 +178,7 @@ export async function generateAichatLevel(
     prompt,
     output: aichatPlanSchema,
   });
-  const plan = response.output as {
-    longInstructions: string;
-    systemPrompt: string;
-    levelSystemPrompt: string;
-    modelCard?: {
-      botName: string;
-      description: string;
-      intendedUse: string;
-      limitationsAndWarnings: string;
-      testingAndEvaluation: string;
-      exampleTopics: string[];
-    };
-  };
+  const plan = response.output as AichatPlan;
   logResponse(PROMPT_TAGS.AICHAT_PLAN, plan, planContext);
   if (!plan.longInstructions?.trim()) {
     throw new Error('Model returned no instructions');
