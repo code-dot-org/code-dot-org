@@ -120,7 +120,7 @@ describe('projectWorldRules', () => {
     const rules = projectWorldRules({
       'worlds/a.world': worldFile('Gravity', 'Input'),
       'worlds/b.world': worldFile('Input', 'Appearance'), // Input deduped
-      'actors/player.actor': worldFile('Collisions'), // not a .world — ignored
+      'actors/player.actor': worldFile('Solid Bodies'), // not a .world — ignored
       'worlds/broken.world': 'not json yet', // mid-edit — skipped
     });
     // Gravity is the only one of these that is a CHOICE; Input and Appearance

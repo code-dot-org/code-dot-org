@@ -19,11 +19,11 @@ describe('projectFiles', () => {
       'maps/level1.map',
       'rules/animation.js',
       'rules/arrows.rule',
-      'rules/collision.rule',
-      'rules/contacts.rule',
+      'rules/collisions.rule',
       'rules/gravity.rule',
       'rules/input.rule',
       'rules/motion.rule',
+      'rules/solid.rule',
       // The images themselves are bytes on a `url`, so they are not here; the
       // `.sheet` saying how to cut one of them up is text, so it is.
       'sprites/coinSpin.sheet',

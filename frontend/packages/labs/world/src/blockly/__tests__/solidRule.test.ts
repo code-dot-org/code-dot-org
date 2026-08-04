@@ -1,6 +1,6 @@
-// The default project's `rules/collision.rule` — impenetrability, in blocks.
+// The default project's `rules/solid.rule` — impenetrability, in blocks.
 //
-// The RESPONDING half: what measures overlap is `rules/contacts.rule` now
+// The RESPONDING half: what measures overlap is `rules/collisions.rule` now
 // (specs/COLLISION.md), and this reads what that wrote. What is left here is
 // the Solid trait, the geometry of pushing one body out of another, and the
 // step that walks the movers — ordered after `find`, so it acts on contacts
@@ -17,15 +17,13 @@ import {registerDefaultProjectRules} from './defaultProjectRules';
 // before a module can be generated from it — the same call the editor makes.
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.collisionRule.contents;
-const meta = parseRuleMeta('rules/collision', source)!;
+const source = DEFAULT_PROJECT.source.files.solidRule.contents;
+const meta = parseRuleMeta('rules/solid', source)!;
 const module_ = ruleMetaToModule(meta);
 
-describe('rules/collision.rule', () => {
+describe('rules/solid.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.collisionRule.name).toBe(
-      'collision.rule',
-    );
+    expect(DEFAULT_PROJECT.source.files.solidRule.name).toBe('solid.rule');
     expect(source).not.toContain('world-lab');
   });
 
@@ -34,18 +32,18 @@ describe('rules/collision.rule', () => {
     // (every actor with a box has that, whether or not anything pushes it), and
     // gravity's "Acts as Ground" is a surface you may pass up through. A tile
     // carries several of these, and they were never the same thing.
-    expect(meta.name).toBe('Collisions');
-    expect(meta.ability).toBe('Has Collisions');
+    expect(meta.name).toBe('Solid Bodies');
+    expect(meta.ability).toBe('Has Solid Bodies');
     expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
       'SolidTrait',
     ]);
-    expect(meta.traits[0].requires).toEqual(['Contacts#CanCollideTrait']);
+    expect(meta.traits[0].requires).toEqual(['Collisions#CanCollideTrait']);
   });
 
   it('is written against Contacts, and says so', () => {
-    expect(meta.requires).toEqual(['Physics', 'Contacts']);
-    expect(module_).toContain('from "rules/contacts"');
-    expect(module_).not.toContain('rules/collision');
+    expect(meta.requires).toEqual(['Physics', 'Collisions']);
+    expect(module_).toContain('from "rules/collisions"');
+    expect(module_).not.toContain('rules/solid');
   });
 
   it('resolves one pair at a time, one axis at a time', () => {
@@ -82,7 +80,7 @@ describe('rules/collision.rule', () => {
     const [step] = meta.steps;
     expect(step.id).toBe('resolve');
     expect(step.order.kind).toBe('after');
-    expect(step.order.anchor?.ownerRef.ruleName).toBe('Contacts');
+    expect(step.order.anchor?.ownerRef.ruleName).toBe('Collisions');
     expect(step.order.anchor?.stepId).toBe('find');
   });
 });
