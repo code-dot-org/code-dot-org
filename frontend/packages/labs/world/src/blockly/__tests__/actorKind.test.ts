@@ -35,9 +35,17 @@ const WORLD = () =>
     {id: 'a1', type: 'world_actor', name: 'Coin'},
   ]);
 
+/**
+ * Generate the block, as plugged into `parentType`.
+ *
+ * Which socket it sits in decides which of its two compilations it gets: a
+ * handler's subject socket wants the template, everything else wants the
+ * actors (specs/ACTOR_LISTS.md).
+ */
 const emitValue = (
   fields: Record<string, string>,
   space: unknown = WORLD(),
+  parentType = 'world_set_position',
 ): {code: string; imports: string[]} => {
   const definition = DOMAIN_BLOCKS.find(b => b.type === 'world_actor_kind')!;
   const definitions: Record<string, string> = {};
@@ -46,6 +54,9 @@ const emitValue = (
       id: 'k1',
       workspace: space,
       getFieldValue: (name: string) => fields[name],
+      outputConnection: {
+        targetConnection: {getSourceBlock: () => ({type: parentType})},
+      },
     } as never,
     {definitions_: definitions} as never,
     {} as never,
@@ -53,19 +64,47 @@ const emitValue = (
   return {code: result[0], imports: Object.keys(definitions)};
 };
 
-describe('any <kind>', () => {
+/** …as plugged into a handler's subject socket. */
+const emitSubject = (
+  fields: Record<string, string>,
+  space: unknown = WORLD(),
+) => emitValue(fields, space, 'world_on_Gravity_StartsFallingEvent');
+
+describe('any <kind>, in a handler’s subject socket', () => {
+  // The TEMPLATE, so that registering a handler on it reaches the coins placed
+  // later as well — the half of "every actor of this kind" a list cannot honour.
   it('is the world’s own actor, by the variable that holds its template', () => {
-    const {code, imports} = emitValue({ACTOR: localActorValue('a1')});
+    const {code, imports} = emitSubject({ACTOR: localActorValue('a1')});
 
     expect(code).toBe(localActorVar('Coin', 'a1'));
     expect(imports).toEqual([]);
   });
 
   it('is a module actor, imported like anything else that names one', () => {
-    const {code, imports} = emitValue({ACTOR: 'actors/coin'});
+    const {code, imports} = emitSubject({ACTOR: 'actors/coin'});
 
     expect(code).toBe('Coin');
     expect(imports).toEqual(['mod:actors/coin']);
+  });
+});
+
+describe('any <kind>, anywhere else', () => {
+  it('is the actors of that kind, there and then', () => {
+    // What a statement acts on and a value reads. Nothing is imported: the
+    // world stamps each placed actor with its type, and a type is a string.
+    const {code, imports} = emitValue({ACTOR: 'actors/coin'});
+
+    expect(code).toBe('world.actors.ofType("actors/coin")');
+    expect(imports).toEqual([]);
+  });
+
+  it('asks for a world’s own actor by the type it was placed under', () => {
+    // A world's own actor is stamped with the id derived from its NAME, which
+    // is what `add actor` and `create … in map` register it as — not the block
+    // id the dropdown stores (blockly/localActors).
+    const {code} = emitValue({ACTOR: localActorValue('a1')});
+
+    expect(code).toBe('world.actors.ofType("Coin")');
   });
 
   it('falls back to the subject when it names nothing', () => {

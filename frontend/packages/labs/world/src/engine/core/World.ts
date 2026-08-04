@@ -187,6 +187,18 @@ class ActorCollection {
     return this.list.filter(actor => actor.has(trait));
   }
 
+  /**
+   * Every actor of a kind — the module a template was registered under
+   * (`actors/coin`), or a world-local template's id.
+   *
+   * What `any ⟨Coin⟩` means everywhere except a handler's subject socket: the
+   * coins there are, right now. (In that one socket it means the TEMPLATE, so
+   * that a handler registered on it reaches the coins placed later too.)
+   */
+  ofType(type: string): Actor[] {
+    return this.list.filter(actor => actor.type === type);
+  }
+
   [Symbol.iterator](): Iterator<Actor> {
     return this.list[Symbol.iterator]();
   }
