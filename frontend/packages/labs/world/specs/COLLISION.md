@@ -197,6 +197,17 @@ mechanisms — `bounciness` scaling and reflecting the normal component,
    combines both surfaces; if that turns out to matter, the fix is to multiply
    the two rather than to move the property.
 
+   Both are read through `⟨n⟩ kept between 0 and 1`, a query of the rule's own:
+   above one, bounciness hands back more speed than arrived and friction runs
+   the tangent backwards; below zero, both do the reverse. And friction is a
+   fraction lost per SECOND, raised to the length of the frame — the unit
+   gravity's strength already uses. Multiplied in flat, once per contact frame,
+   the same number was a different brake at a different frame rate.
+
+   What friction does NOT touch is a speed something re-declares every tick:
+   `Arrow Keys` assigns `velocity.x` from the keys held, so floor friction
+   slows a slide, a knock-back or a bounce, and leaves walking alone.
+
    Why this is a parameter and not another rule: two responders reading the same
    contacts do not compose. Solid Bodies zeroes the velocity on the axis it
    resolves, so a separate bouncy rule either runs after it — and finds the
