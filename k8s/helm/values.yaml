@@ -4,6 +4,7 @@
 # argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
 image: code-dot-org:latest
+imagePullPolicy: IfNotPresent
 command: ["bin/dashboard-server"]
 args:
 
@@ -12,11 +13,18 @@ RAILS_ENV:
 dnsName: studio-development
 dashboard_workers: 0
 
+# Keep the existing full-dashboard default while introducing the ActiveJob
+# worker. Backend-only deployments disable the dashboard explicitly.
+dashboard:
+  enabled: true
+
 locals.yml:
   # For example:
   # levelbuilder_mode: true
   # build_apps: false
   # ...etc...
+
+extraEnv: {}
 
 # Require the k8s secret `cdo-external-secrets` to exist before bootup
 # Aka: "Require AWS Secrets Manager access to boot" mode
@@ -26,6 +34,8 @@ healthChecks:
   enabled: false
 
 resources:
+  cpu:
+  memory:
   ephemeralStorage: 30Gi
 
 autoscaling:
@@ -36,12 +46,37 @@ autoscaling:
 
 dashboardJob:
   enabled: false
-  name: zsh
-  command: ["zsh", "-c"]
+  name: sh
+  command: ["sh", "-c"]
   args: []
   restartPolicy: Never
   backoffLimit: 1
   ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
+
+# ActiveJob (delayed_job) worker, enabled by default: the first piece of the
+# app migrating to Kubernetes. RAILS_ENV, extraEnv, and resources here are
+# pinned per-component (they do NOT inherit the chart-wide values) so the
+# worker renders identically in every environment until k8s-gitops
+# configures it per envType. Keep in sync with the static manifest in
+# k8s/kustomize/components/backend/active-job-worker-deployment.yaml.
+activeJobWorker:
+  enabled: true
+  replicas: 1
+  command: ["sh", "-c"]
+  args:
+    - cd dashboard && bundle exec bin/delayed_job run
+  RAILS_ENV: adhoc
+  # Worker tuning; the blank secret overrides the adhoc boot needs live in
+  # the shared locals ConfigMap (templates/locals.yml.yaml) so the
+  # setup-db-minimal job inherits them too.
+  extraEnv:
+    AWS_EC2_METADATA_DISABLED: "true"
+    CDO_ACTIVE_JOB_BACKEND_N_WORKERS_TO_START: "1"
+    CDO_ACTIVE_JOB_BACKEND_ROLLING_RESTART_IN_N_BATCHES: "1"
+  resources:
+    cpu: 1
+    memory: 2Gi
+    ephemeralStorage: 30Gi
 
 services:
   redis:
