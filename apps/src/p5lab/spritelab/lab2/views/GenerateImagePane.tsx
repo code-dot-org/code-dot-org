@@ -117,6 +117,33 @@ const GenerateImagePane: React.FunctionComponent<{
     trimAnimationListImages(animationList);
   }, [animationList]);
 
+  // The channel is only needed to recognize this project's own asset URLs;
+  // uploads go through the uploadImage seam.
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
+  // Reclaim a superseded image asset. Guards keep it safe: only this
+  // project's own uploaded assets (never library images, absolute URLs,
+  // inline dataURIs, or level starter assets), and only when no image still
+  // points at it (a duplicate can share one). Best-effort — a failed cleanup
+  // never disrupts the edit or delete. Known tradeoff: restoring an older
+  // project version shows a broken image for anything deleted since (as in
+  // App Lab).
+  const deleteUnreferencedAsset = useCallback(
+    (url?: string) => {
+      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
+        return;
+      }
+      const stillUsed = Object.values(
+        getStore().getState().animationList.propsByKey
+      ).some(p => (p as {sourceUrl?: string} | undefined)?.sourceUrl === url);
+      if (stillUsed) {
+        return;
+      }
+      HttpClient.delete(url, true).catch(() => undefined);
+    },
+    [channelId]
+  );
+
   // The dialog's subject: an animation key, 'new', or closed. Painting is
   // three-way: the details dialog stays up through 'loading' (the paint
   // editor renders nothing until its image decodes) and hands off in one
@@ -150,6 +177,8 @@ const GenerateImagePane: React.FunctionComponent<{
 
   const handleDelete = useCallback(() => {
     if (dialogTarget && dialogTarget !== 'new') {
+      const removedUrl =
+        getStore().getState().animationList.propsByKey[dialogTarget]?.sourceUrl;
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(
@@ -157,9 +186,11 @@ const GenerateImagePane: React.FunctionComponent<{
           true /* isSpriteLab */
         ) as unknown as AnyAction
       );
+      // The removal already happened; reclaim the asset if unreferenced now.
+      deleteUnreferencedAsset(removedUrl);
     }
     closeDialog();
-  }, [dispatch, dialogTarget, closeDialog]);
+  }, [dispatch, dialogTarget, closeDialog, deleteUnreferencedAsset]);
 
   const handleRename = useCallback(
     (newName: string): string | null => {
@@ -259,6 +290,9 @@ const GenerateImagePane: React.FunctionComponent<{
         return;
       }
       const current = getStore().getState().animationList;
+      // The asset this generation replaces; cleaned up once the new one is
+      // in place.
+      const previousUrl = current.propsByKey[key]?.sourceUrl;
       const updated = {
         orderedKeys: current.orderedKeys,
         propsByKey: {
@@ -277,8 +311,10 @@ const GenerateImagePane: React.FunctionComponent<{
       };
       dispatch({type: SET_INITIAL_ANIMATION_LIST, animationList: updated});
       trimAnimationListImages(updated);
+      // The image now points at the fresh asset; drop the old one.
+      deleteUnreferencedAsset(previousUrl);
     },
-    [dialogTarget, targetProps, uploadImage, dispatch]
+    [dialogTarget, targetProps, uploadImage, dispatch, deleteUnreferencedAsset]
   );
 
   // Persist an edited (or first-painted) image: upload the PNG as a fresh
@@ -319,6 +355,8 @@ const GenerateImagePane: React.FunctionComponent<{
       if (!key || key === 'new' || !props) {
         return;
       }
+      // The asset this edit replaces; cleaned up once the new one is in place.
+      const previousUrl = props.sourceUrl;
       const sourceUrl = await uploadEdited(props.name || 'image', dataURI);
       // Update via the raw list-replace action rather than editAnimation:
       // the classic EDIT_ANIMATION reducer forces sourceUrl to null (it
@@ -348,8 +386,10 @@ const GenerateImagePane: React.FunctionComponent<{
       // Recompute this image's trimmed thumbnail (cached by source; fires
       // onTrimsUpdated, refreshing the gallery and block dropdowns).
       trimAnimationListImages(updated);
+      // The image now points at the fresh asset; drop the old one.
+      deleteUnreferencedAsset(previousUrl);
     },
-    [dialogTarget, targetProps, uploadEdited, dispatch]
+    [dialogTarget, targetProps, uploadEdited, dispatch, deleteUnreferencedAsset]
   );
 
   const creating = dialogTarget === 'new';

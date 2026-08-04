@@ -1,12 +1,13 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-08-03T00:32:10.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Sample Music",
+    "long_instructions": "# Sample Music\r\n\r\nReal artists' songs are made of pieces — beats, bass lines, melodies. Producers call using these pieces sampling.\r\n\r\n1. Click **Drum Beat Cowbell** in the **play** block found in your start code.\r\n   \r\n<img src=\"https://images.code.org/b05d6c082ec27fcc9651ca740c24d4b9-Screenshot 2026-08-03 135049.png\" style=\"width: 150px; margin-bottom: 10px\">\r\n\r\n   \r\n2. Scroll up in the pop-up window to find the track you selected — preview a few of its sounds and pick one.\r\n3. Build a short mix using pieces of the song — try using the `play together` or `repeat` blocks.\r\n4. Press **Run** to hear your remix.\r\n\r\nTry combining pieces the original artist never put together!\r\n\r\n::: details [**Help! I didn't select a track at the start of this level**]\r\n\r\nIf you skipped selecting a track, you can click the **Version History** icon in the left hand menu. \r\n\r\n<img src=\"https://images.code.org/b8bcc2addd95fe532d0936a122285c49-Screenshot 2026-08-03 135106.png\" style=\"width: 50px\">\r\n\r\nSelect **Initial version** and **Restore**. This will allow you to start the level over and select a track.\r\n\r\n<img src=\"https://images.code.org/c7517b056659fd7cee87d360f8ac0b2c-Screenshot 2026-08-03 135140.png\" style=\"width: 150px\">\r\n\r\n:::",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "submittable": "false",
@@ -172,8 +173,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-08-03 00:32:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-03 00:32:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:39:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:27:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:36:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:49:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:53:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:58:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 21:01:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
