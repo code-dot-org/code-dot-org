@@ -191,16 +191,20 @@ module.exports = {
         });
 
         setTimeout(function () {
-          try {
-            assert.include(
-              buttonElement.style.backgroundImage,
-              assetUrl,
-              'Button background image should contain original url'
-            );
-          } finally {
-            delete window.__applabImageModerationStatusOverride;
-          }
-          Applab.onPuzzleComplete();
+          // Promise.resolve('safe') moderation resolves on a microtask; one
+          // tick here lets the style update land before we assert.
+          setTimeout(function () {
+            try {
+              assert.include(
+                buttonElement.style.backgroundImage,
+                assetUrl,
+                'Button background image should contain original url'
+              );
+            } finally {
+              delete window.__applabImageModerationStatusOverride;
+              Applab.onPuzzleComplete();
+            }
+          }, 0);
         }, 0);
       },
       expected: {
