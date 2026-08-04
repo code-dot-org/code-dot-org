@@ -26,7 +26,18 @@ From `frontend/`:
   suite runs off the single daemon on GitHub runners with the full browser
   matrix. It needs no CDO secrets and no local Rails build, which keeps the
   suite portable: runnable outside Drone/DTT by external contributors or
-  sandboxed agents, and horizontally shardable.
+  sandboxed agents, and horizontally sharded.
+
+Sharding splits the Playwright test report too: each shard can only report on
+the tests it ran. So each writes its slice using Playwright's `blob` reporter, a
+format meant to be merged rather than read, and an `e2e-report` job merges the
+slices into one whole-run report, published as the `e2e-tests-report` artifact
+and printed as a pass/fail list in that job's own log.
+
+A passing `e2e-report` job means the merge succeeded, not that the tests passed.
+If any e2e shard jobs failed, read the merged `e2e-tests-report` artifact to see
+which tests failed. Shard count is the length of the `shard` list in
+`e2e-tests-ci.yml`.
 
 ## Agent skill setup
 

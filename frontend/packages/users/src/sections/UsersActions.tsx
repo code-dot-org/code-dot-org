@@ -5,6 +5,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Field} from '@code-dot-org/component-library/form';
 import type {UserType} from '@code-dot-org/core/api';
 
+import DeleteUserModal from '../components/DeleteUserModal';
 import SignOutOtherSessionsModal from '../components/SignOutOtherSessionsModal';
 import UsersTypeModal from '../components/UsersTypeModal';
 
@@ -19,12 +20,14 @@ const TYPE_ITEMS = [
 /**
  * The "Account Actions" section: account-level operations consequential enough
  * to confirm in a dialog, rather than edit inline and save with the rest of the
- * profile. Account type is server-gated on `canChangeUserType`.
+ * profile. Changing type and deleting are both server-gated, on
+ * `canChangeUserType` and `canDeleteOwnAccount`.
  */
 export default function UsersActions({settings}: SectionProps) {
   // The dropdown stays bound to the current type; a selection only opens the
   // confirmation modal, so dismissing reverts it.
   const [prospectiveType, setProspectiveType] = useState<UserType | null>(null);
+  const [deleteOpen, setDeleteOpen] = useState(false);
   const [sessionsOpen, setSessionsOpen] = useState(false);
 
   const onTypeSelect = (value: string) => {
@@ -77,6 +80,39 @@ export default function UsersActions({settings}: SectionProps) {
           open={sessionsOpen}
           onClose={() => setSessionsOpen(false)}
         />
+      </Box>
+
+      <Box>
+        <Typography
+          variant="overline2"
+          component="p"
+          sx={{color: 'var(--text-neutral-secondary)', mb: 1}}
+        >
+          Danger zone
+        </Typography>
+        {settings.canDeleteOwnAccount ? (
+          <>
+            <Button
+              color="error"
+              onClick={() => setDeleteOpen(true)}
+              sx={{px: 0}}
+            >
+              Delete my account
+            </Button>
+            <DeleteUserModal
+              open={deleteOpen}
+              onClose={() => setDeleteOpen(false)}
+              settings={settings}
+            />
+          </>
+        ) : (
+          // Legacy parity: explain why deletion is blocked, not a dead disabled button.
+          <Typography variant="body2">
+            You do not have permission to delete this account because it is
+            managed by your teacher. Your teacher(s) will need to remove you
+            from their sections before you can delete your account.
+          </Typography>
+        )}
       </Box>
     </Section>
   );
