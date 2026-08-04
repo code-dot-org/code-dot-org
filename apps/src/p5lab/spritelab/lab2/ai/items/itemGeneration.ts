@@ -106,7 +106,9 @@ export async function generateImage(
   if (itemType === 'sprite') {
     fullPrompt = `${fullPrompt} Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.`;
   } else if (itemType === 'block') {
-    fullPrompt = `${fullPrompt} Draw one large square block centered in the image, with a clear margin around all four sides of one plain solid flat color that contrasts strongly with the block and appears nowhere on it, extending to the image edges. No background scene — just the block on that flat background.`;
+    // Name no drawable object here ("block", "tile") — the model adds it
+    // to the picture. Describe only the square-and-margin layout.
+    fullPrompt = `${fullPrompt} Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.`;
   }
 
   const {files} = await generateText({
