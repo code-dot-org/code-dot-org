@@ -23,9 +23,20 @@
 
 import * as Blockly from 'blockly/core';
 
+import {enumOptions, enumRefOfParamType} from '../enums';
 import {paramFlavour} from '../typedVariables';
 
 import {beginGetterDrag} from './dragGetterOut';
+
+/**
+ * What the design makes: a block to call, or an event's hat.
+ *
+ * They are drawn differently because they ARE different blocks. A hat opens
+ * with `when ⟨this actor⟩` and its parameters are dropdowns — the choice a
+ * handler filters on is picked on the hat, not plugged into it (specs/ENUMS.md)
+ * — where a call site's parameters are sockets a value goes into.
+ */
+export type PreviewKind = 'block' | 'event';
 
 /** One piece of the drawn block, mirroring a designer part. */
 export interface PreviewPart {
@@ -51,6 +62,14 @@ const styleForReturn = (returns: string): string =>
     : returns === 'vector'
       ? 'location_blocks'
       : 'math_blocks';
+
+/**
+ * The filter dropdown's first entry, as the real hat has it (domainBlocks).
+ *
+ * Duplicated for the same reason `styleForReturn` is: domainBlocks imports the
+ * designer that owns this field, and two words are not worth the cycle.
+ */
+const ANY_CHOICE: [string, string] = ['(any)', ''];
 
 /** Where the drawing sits inside the field, so it does not touch the edges. */
 const PAD = 2;
@@ -85,6 +104,8 @@ export class FieldBlockPreview extends Blockly.Field<string> {
   private previewType = '';
   private parts: PreviewPart[] = [];
   private returns = 'none';
+  /** What KIND of block is being designed — see `setSignature`. */
+  private kind: PreviewKind = 'block';
   /** Whether the drawn block takes a subject — see `setSignature`. */
   private subject = false;
   /** Field-local boxes of each parameter, for the overlay's hit test. */
@@ -116,10 +137,12 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     parts: PreviewPart[],
     returns: string,
     actorScoped = false,
+    kind: PreviewKind = 'block',
   ): void {
     this.parts = parts;
     this.returns = returns;
     this.subject = actorScoped;
+    this.kind = kind;
     this.isDirty_ = true;
     if (this.mini) {
       this.build();
@@ -187,14 +210,23 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       const block = mini.newBlock(this.previewType) as Blockly.BlockSvg;
       block.initSvg();
       this.paramBoxes = [];
-      const params = this.parts.filter(part => part.kind === 'param');
+      // A hat's parameters are fields on it, not sockets, so there is nothing
+      // to plug in and nothing to drag out of one: the choice a handler filters
+      // on is picked, not passed.
+      const params =
+        this.kind === 'event'
+          ? []
+          : this.parts.filter(part => part.kind === 'param');
       // The subject's socket, wherever it landed: filled with `this actor`, the
-      // shadow the real call site is seeded with.
-      const subjectSocket = this.subject
-        ? this.subject && this.returns && this.returns !== 'none'
+      // shadow the real call site is seeded with. A hat's leads, always.
+      const subjectSocket =
+        this.kind === 'event'
           ? 0
-          : params.length
-        : -1;
+          : this.subject
+            ? this.subject && this.returns && this.returns !== 'none'
+              ? 0
+              : params.length
+            : -1;
       if (subjectSocket >= 0) {
         const here = mini.newBlock('world_this_actor') as Blockly.BlockSvg;
         here.initSvg();
@@ -279,44 +311,79 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       push(`%${args.length}`);
     };
     const reportsSomething = this.returns && this.returns !== 'none';
-    // A query leads with its subject ("⟨this actor⟩ is on the ground?"); an
-    // action trails it after "on" ("apply force ⟨force⟩ on ⟨this actor⟩").
-    if (this.subject && reportsSomething) {
+
+    if (this.kind === 'event') {
+      // The HAT this event makes. The subject leads, because that is what the
+      // real hat asks first — whose handler this is — and a parameter is drawn
+      // as the dropdown it will be, carrying that enum's choices with `(any)`
+      // at the front. What is designed here and what turns up in the toolbox
+      // are then the same block, down to the words in the menu.
+      push('when');
       actorSocket();
-    }
-    for (const part of this.parts) {
-      if (part.kind === 'label') {
-        if (part.text) {
-          push(part.text);
+      for (const part of this.parts) {
+        if (part.kind === 'label') {
+          if (part.text) {
+            push(part.text);
+          }
+          continue;
         }
-        continue;
+        const choice = enumRefOfParamType(part.type ?? '');
+        // An event filters on a set of choices or on nothing; a parameter of
+        // any other kind has nothing to draw and no meaning here.
+        if (!choice) {
+          continue;
+        }
+        args.push({
+          type: 'field_dropdown',
+          name: `F${args.length}`,
+          options: [ANY_CHOICE, ...enumOptions(choice)],
+        } as unknown as Blockly.utils.toolbox.BlockInfo);
+        push(`%${args.length}`);
       }
-      const check = paramFlavour(part.type ?? 'number').type;
-      args.push({
-        type: 'input_value',
-        name: `P${args.length}`,
-        check,
-      } as unknown as Blockly.utils.toolbox.BlockInfo);
-      push(`%${args.length}`);
+    } else {
+      // A query leads with its subject ("⟨this actor⟩ is on the ground?"); an
+      // action trails it after "on" ("apply force ⟨force⟩ on ⟨this actor⟩").
+      if (this.subject && reportsSomething) {
+        actorSocket();
+      }
+      for (const part of this.parts) {
+        if (part.kind === 'label') {
+          if (part.text) {
+            push(part.text);
+          }
+          continue;
+        }
+        const check = paramFlavour(part.type ?? 'number').type;
+        args.push({
+          type: 'input_value',
+          name: `P${args.length}`,
+          check,
+        } as unknown as Blockly.utils.toolbox.BlockInfo);
+        push(`%${args.length}`);
+      }
+      if (this.subject && !reportsSomething) {
+        push('on');
+        actorSocket();
+      }
     }
-    if (this.subject && !reportsSomething) {
-      push('on');
-      actorSocket();
-    }
-    const reports = reportsSomething;
+
+    const reports = this.kind !== 'event' && reportsSomething;
     const definition: Record<string, unknown> = {
       // Never empty: Blockly cannot lay out a block with no message at all.
       message0: message || ' ',
       args0: args,
       inputsInline: true,
-      // A block that reports plugs in and takes the color of what it reports; a
-      // block that acts stacks. This is what the call site will be.
-      ...(reports
-        ? {
-            output: paramFlavour(this.returns).type,
-            style: styleForReturn(this.returns),
-          }
-        : {previousStatement: null, nextStatement: null, style: 'default'}),
+      // A hat opens a stack and closes nothing above it; a block that reports
+      // plugs in and takes the color of what it reports; a block that acts
+      // stacks. This is what the call site will be.
+      ...(this.kind === 'event'
+        ? {nextStatement: null, style: 'event_blocks'}
+        : reports
+          ? {
+              output: paramFlavour(this.returns).type,
+              style: styleForReturn(this.returns),
+            }
+          : {previousStatement: null, nextStatement: null, style: 'default'}),
     };
     Blockly.Blocks[this.previewType] = {
       init: function (this: Blockly.Block) {

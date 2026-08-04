@@ -84,7 +84,7 @@ const PROJECT_RULE = parseRuleMeta(
               next: {
                 block: {
                   type: 'world_rule_event',
-                  fields: {NAME: 'gusted'},
+                  extraState: {parts: [{kind: 'label', text: 'gusted'}]},
                 },
               },
             },
@@ -1705,7 +1705,10 @@ describe('buildDomainPalette (project rule blocks)', () => {
             type: 'world_rule_trait',
             fields: {NAME: 'Windblown'},
             next: {
-              block: {type: 'world_rule_event', fields: {NAME: 'gusted'}},
+              block: {
+                type: 'world_rule_event',
+                extraState: {parts: [{kind: 'label', text: 'gusted'}]},
+              },
             },
           },
         ],
