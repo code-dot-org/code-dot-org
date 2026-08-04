@@ -35,11 +35,11 @@ describe('rules/input.rule', () => {
     expect(meta.ability).toBe('Responds to Input');
     expect(meta.traits).toEqual([]);
     expect(meta.events.map(event => event.ref.exportName)).toEqual([
-      'AKeyIsPressedEvent',
-      'AKeyIsReleasedEvent',
+      'SeesThatAKeyIsPressedEvent',
+      'SeesThatAKeyIsReleasedEvent',
     ]);
     expect(module_).toContain(
-      'export const AKeyIsPressedEvent = rule.addEvent(',
+      'export const SeesThatAKeyIsPressedEvent = rule.addEvent(',
     );
   });
 

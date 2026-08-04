@@ -37,6 +37,7 @@ import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {editingRuleFor} from './editingRule';
+import {enumOptions, enumRef, KEY_ENUM} from './enums';
 import {
   runtimeActorExtension,
   runtimeWorldExtension,
@@ -191,23 +192,16 @@ const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
 const memberKey = (ref: MemberRef): string =>
   ref.ruleName ? `${ruleSlug(ref.ruleName)}_${ref.exportName}` : ref.exportName;
 
+// The keyboard's keys, from the enum that declares them (`Engine#Key`). Both
+// key dropdowns read it rather than carrying a list: the World owns the
+// keyboard, so the set of key names is one fact with one home, and a rule that
+// wants it points at the same enum (specs/ENUMS.md).
+const keyOptions = (): Array<[string, string]> =>
+  enumOptions(enumRef(KEY_ENUM));
+
 /** The toolbox/registry type for the block that handles `event`. */
 const eventBlockType = (event: EventMeta): string =>
   `world_on_${memberKey(event.ref)}`;
-
-// `when key … is pressed/released` dropdown: friendly label -> the DOM
-// `KeyboardEvent.key` name the driver reports (space is ' ', letters lowercase).
-const KEY_OPTIONS: Array<[string, string]> = [
-  ['space', ' '],
-  ['up arrow', 'ArrowUp'],
-  ['down arrow', 'ArrowDown'],
-  ['left arrow', 'ArrowLeft'],
-  ['right arrow', 'ArrowRight'],
-  ['enter', 'Enter'],
-  ...'abcdefghijklmnopqrstuvwxyz'
-    .split('')
-    .map(c => [c.toUpperCase(), c] as [string, string]),
-];
 
 // Derive a module/instance id from an authored name: spaces (and any other
 // non-identifier character) become underscores, so "Platform World" → the id
@@ -2908,7 +2902,7 @@ const worldEmitWith = defineBlock({
 const worldKey = defineBlock({
   type: 'world_key',
   message0: 'key %1',
-  args0: [{type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS}],
+  args0: [{type: 'field_dropdown', name: 'KEY', options: keyOptions()}],
   output: 'String',
   style: 'text_blocks',
   tooltip: 'The name of a key, as the keyboard reports it.',
@@ -3036,7 +3030,7 @@ const worldPixelsPerUnit = defineBlock({
 const worldIsKeyDown = defineBlock({
   type: 'world_is_key_down',
   message0: 'key %1 is down',
-  args0: [{type: 'field_dropdown', name: 'KEY', options: KEY_OPTIONS}],
+  args0: [{type: 'field_dropdown', name: 'KEY', options: keyOptions()}],
   output: 'Boolean',
   extensions: [worldContextExtension],
   style: 'logic_blocks',
