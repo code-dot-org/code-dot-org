@@ -24,6 +24,9 @@ describe('Scheduler', () => {
       .instantiate();
     const ids = world.stepOrder().map(s => `${s.ownerId}.${s.id}`);
     expect(ids).toEqual([
+      // Appearance is in play whether or not a world says so (WorldBuilder's
+      // foundation), and its step is unanchored, so it sorts to the front.
+      'animation.advanceAnimation',
       'gravity.applyVelocity',
       'motion.reposition',
       'collision.resolve',

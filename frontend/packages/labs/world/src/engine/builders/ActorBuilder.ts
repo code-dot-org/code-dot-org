@@ -12,6 +12,30 @@ import type {
   GameEvent,
   Property,
 } from '../core/types';
+import {AppearanceTrait} from '../rules/animation';
+import {PositionalTrait} from '../rules/spatial';
+
+/**
+ * The traits every actor has whether or not it elects them.
+ *
+ * The foundation, one level down from `WorldBuilder`'s: the world runs Space
+ * and Appearance because a rule cannot provide them, and an actor has their
+ * traits because an actor without them is not a simpler actor. "Can Be
+ * Positioned" IS what being in the world means — `World.renderSnapshot` skips
+ * an actor that lacks it, so such an actor is not invisible, it is absent — and
+ * "Has Appearance" is what `set sprite` and `play animation` write to, which
+ * are the first two blocks a learner reaches for.
+ *
+ * The visible behaviour does not change: an actor with no picture was already
+ * drawn as a plain rectangle, and still is, because a frame comes from a sprite
+ * or an animation and neither is set by default. What changes is that the two
+ * blocks work on any actor rather than failing on one that forgot a `use trait`
+ * row saying something no actor would say no to.
+ *
+ * Electing them anyway is allowed and does nothing — `Actor`'s membership is a
+ * DependencySet, so a trait is present once however many times it arrives.
+ */
+const FOUNDATION_TRAITS: readonly Trait[] = [PositionalTrait, AppearanceTrait];
 
 export class ActorBuilder {
   /** The template's id — the actor's type, and the default instance id. */
@@ -94,7 +118,7 @@ export class ActorBuilder {
       id: instanceId ?? this.id,
       type: type ?? this.id,
       name: this.name,
-      traits: [...this.traits],
+      traits: [...FOUNDATION_TRAITS, ...this.traits],
       overrides: [...this.overrides],
       handlers: [...this.handlers],
       effects: [...this.effects],

@@ -63,6 +63,74 @@ for each actor `each` where `each` has trait "Affected by Gravity"
 — and generates the line the built-in hand-writes. The rule really runs: the
 player falls under the authored step, not the engine's.
 
+## The foundation is not declared
+
+`use rule` is a sentence about a world — "this world has gravity" — and it
+earns its place when the answer could be no. Four of the default project's six
+rows were not answers to anything: Space and Appearance, which nothing can run
+without, and Physics and Collisions, which Gravity's own `requires` already
+pulls in. A learner's first sight of a world block was mostly ritual.
+
+Two halves, because the foundation has two:
+
+- **The engine's own.** `WorldBuilder.rulesInPlay` seeds Space and Appearance
+  into every world it builds. Those two are built in precisely because a rule
+  CANNOT provide them — a position is not something a rule can invent, and
+  animation reads the sprite sheets the language cannot see — so no world can
+  meaningfully lack them, and a hand-written `.js` world gets them too.
+- **Foundational stock rules.** The keyboard's events are an authored `.rule`
+  now, and that was right: `rules/input.rule` is the worked example for the
+  Engine blocks. But noticing a keypress is not a mechanic a game opts into.
+  `StockRule.foundational` marks it, and the world generator emits
+  `world.useRules([Input])` for any foundational rule the project HOLDS — the
+  same bargain the `.anim` files already had, where holding the file is the
+  opting-in. Delete `rules/input.rule` and nothing is emitted.
+
+An explicitly named rule of the same id WINS over the seeded one. That is what
+keeps this from being a trap: eject Appearance into an authored rule, name it,
+and the world runs the learner's version instead of silently running the
+built-in it shadows.
+
+Two consequences worth stating:
+
+- `projectWorldRules` — which the `use trait` dropdown reads — includes the
+  foundation whether or not a world names it. Otherwise "Can Be Positioned"
+  would vanish from the dropdown the moment nobody wrote `use rule Has Space`.
+- A rule need not declare the foundation in its own `requires`. `motion.rule`
+  still says `use rule Space`, which is true and harmless; it is no longer
+  load-bearing.
+
+`main.world` is down to two rows, and both are choices:
+`use rule Has Gravity`, `use rule Moves with Arrow Keys`.
+
+### …and neither are its traits
+
+A rule in play only makes its traits AVAILABLE, so the same tautology sat one
+level down: `coin.js` and `ball.js` opened with
+`.useTraits([PositionalTrait, AppearanceTrait])`, and `player.actor` carried a
+`use trait Has Appearance` row. `ActorBuilder.instantiate` seeds both onto every
+actor now.
+
+"Can Be Positioned" is the strong case: `World.renderSnapshot` skips an actor
+that lacks it, so forgetting the row did not make an actor plainer, it made it
+ABSENT — present in the simulation, missing from the frame. "Has Appearance" is
+what `set sprite` and `play animation` write to, and those are the first two
+blocks a learner reaches for; it was explicit only because `play animation`
+does not add the trait itself, which is a reason that stops existing when every
+actor has it.
+
+Nothing looks different. An actor with no picture was drawn as a plain
+rectangle before and still is — a frame comes from a sprite or an animation,
+and neither is set by default. What changed is that `coin.js` elects no traits
+at all, and what remains on `player.actor` are the two that make it a player
+rather than a coin.
+
+The one case this closes off is an actor deliberately outside the world — a
+score keeper, a timer — which now renders as a rectangle wherever it sits. Such
+an actor could not hold anything before (properties come from traits, and it
+had none), so nothing loses; if we ever want them, the honest fix is to filter
+the render on APPEARANCE rather than on position.
+
 ## What it cost to get there
 
 Four blocks, one field, and one bug, all of which were missing rather than

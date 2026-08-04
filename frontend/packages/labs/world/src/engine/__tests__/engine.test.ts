@@ -70,13 +70,22 @@ describe('trait resolution through the standard rules', () => {
     expect(player.has(MovableTrait)).toBe(true); // required by affected
     expect(player.has(CollidableTrait)).toBe(true); // required by affected
     expect(player.has(PositionalTrait)).toBe(true); // required transitively
-    // Exactly those four, nothing else.
+    // Those four and nothing else the RULES brought — `appearance` is the
+    // foundation every actor has whether or not it says so
+    // (`ActorBuilder.instantiate`), like `positional`, which this actor was
+    // already getting transitively rather than by asking.
     expect(
       player
         .traits()
         .map(t => t.id)
         .sort(),
-    ).toEqual(['affected', 'collidable', 'movable', 'positional']);
+    ).toEqual([
+      'affected',
+      'appearance',
+      'collidable',
+      'movable',
+      'positional',
+    ]);
     // Their properties are all seeded on the actor.
     expect(player.get(VelocityProperty).equals({x: 0, y: 0})).toBe(true);
     expect(player.get(FallingProperty)).toBe(false);
@@ -287,6 +296,8 @@ describe('gravity simulation', () => {
   it('runs the steps in the intended per-tick order', () => {
     const {world} = makeWorld();
     expect(world.stepOrder().map(s => `${s.ownerId}.${s.id}`)).toEqual([
+      // The foundation's, which no world asks for (WorldBuilder.rulesInPlay).
+      'animation.advanceAnimation',
       'gravity.applyVelocity',
       'motion.reposition',
       'collision.resolve',
@@ -446,7 +457,15 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
     const {world, player} = makeWorld(new Vector(0, 0), 100);
     const snap = world.snapshot();
 
-    expect(snap.ruleIds).toEqual(['collision', 'gravity', 'motion', 'spatial']);
+    // `animation` and `spatial` without anyone naming them: the first from the
+    // foundation every world runs on, the second also required by motion.
+    expect(snap.ruleIds).toEqual([
+      'animation',
+      'collision',
+      'gravity',
+      'motion',
+      'spatial',
+    ]);
     expect(snap.actorIds).toEqual(['ground', 'player']);
     expect(snap.world['gravity.strength']).toBe(9);
     // Actor property values are captured per actor, by trait.prop path.
