@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Build a Song \r\nTime to explore! In this level, see what you can discover about how AI makes music.\r\n\r\n1. Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to open the drum grid.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n2. Add some beats to the grid, then see what new options appear.\r\n3. Experiment! Try anything you're curious about.\r\n4. Press [Run](#clickable=run-button) to hear your work. \r\n\r\n",
+    "long_instructions": "#### Create Your Theme\r\n\r\nNow put it all together. \r\n\r\n**The challenge**: compose a short theme for a **movie scene** or **game moment**. Pick a mood — suspense building, victory moment, chase scene, boss battle.\r\n\r\nYour theme must use:\r\n1. The **play AI drums** block (generate, then customize)\r\n2. At least **one sampled sound** from a track\r\n3. The **play together** and **repeat** blocks from the **Control** menu\r\n\r\nThink like a producer: does every sound serve your scene's mood? (_Jaws needed only two notes!_)\r\n\r\nPress **Run**, listen, and revise until it gives you chills.\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -233,7 +233,7 @@
     "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-03T00:43:54.439+00:00\",\"changed\":[\"cloned from \\\"ang-test-music-lab\\\"\"],\"cloned_from\":\"ang-test-music-lab\"},{\"changed_at\":\"2026-08-03 00:44:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-08-03T00:43:54.439+00:00\",\"changed\":[\"cloned from \\\"ang-test-music-lab\\\"\"],\"cloned_from\":\"ang-test-music-lab\"},{\"changed_at\":\"2026-08-03 00:44:00 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:42:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
