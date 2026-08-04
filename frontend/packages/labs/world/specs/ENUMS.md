@@ -127,6 +127,13 @@ when this actor [ space ▾ ] is pressed        (was: a key is pressed → if �
 - **Equality is `!==`.** Sound for enums, which are strings by construction.
   A filter on a vector parameter would need `WorldLab.sameValue`; enums do not,
   so that arrives with multi-parameter filters or not at all.
+- **Two sets of choices with one name are reported, not silently resolved.**
+  A reference carries its owner (`Wind#Colors`), so two rules may each declare
+  a `Colors`; two `define choices` inside ONE rule may not, and the editor says
+  so — the same warning two rules with one name get, for the same reason. The
+  first is what every dropdown offers, and the palette builds one chip for the
+  one reference rather than defining a type twice (registering a type twice
+  does not fail, it silently replaces).
 - **A stored value that is no longer an option stays stored.** Deleting `red`
   from an enum must not silently rewrite a block that said `red` — the dropdown
   shows the unknown value and the project still generates, the same way a

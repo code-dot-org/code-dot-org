@@ -4,11 +4,12 @@
 // edit surface turns into a dropdown and generated code never mentions. These
 // pin down what a reference to one means and how a parameter carries it.
 
-import {afterEach, describe, expect, it} from 'vitest';
+import {afterEach, describe, expect, it, vi} from 'vitest';
 
 import {buildDomainPalette} from '../domainBlocks';
 import {
   allEnums,
+  duplicateEnumNames,
   enumByRef,
   enumOptions,
   enumParamType,
@@ -18,6 +19,7 @@ import {
   registerProjectEnums,
   type EnumMeta,
 } from '../enums';
+import {refreshProjectDropdowns} from '../projectDropdowns';
 import {parseRuleMeta} from '../ruleMeta';
 
 const GUSTS: EnumMeta = {
@@ -145,6 +147,47 @@ describe('`define choices` in a `.rule`', () => {
     expect(ruleWithChoices('Gusts', []).enums[0].options).toEqual([]);
   });
 
+  it('reports two sets named the same, rather than silently picking', () => {
+    // One name is one reference, so the second set's words appear nowhere —
+    // which a learner would otherwise experience as choices that do nothing.
+    // The same bargain two rules with one name get (`duplicateRuleNames`).
+    const meta = parseRuleMeta(
+      'rules/wind',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Wind', ABILITY: 'Has Wind'}},
+            {
+              type: 'world_rule_enum',
+              fields: {NAME: 'Gusts'},
+              next: {block: optionChain(['breeze'])},
+            },
+            {
+              type: 'world_rule_enum',
+              fields: {NAME: 'Gusts'},
+              next: {block: optionChain(['gale'])},
+            },
+          ],
+        },
+      }),
+    )!;
+    registerProjectEnums(meta.enums);
+
+    // Both are read — the file says what it says …
+    expect(meta.enums).toHaveLength(2);
+    // … the reference answers with the first …
+    expect(enumOptions('Wind#Gusts')).toEqual([['breeze', 'breeze']]);
+    // … and the collision is named.
+    expect(duplicateEnumNames()).toEqual(['Wind#Gusts']);
+
+    // One block for one reference: registering a type twice does not fail, it
+    // silently replaces, so the palette must not offer the chance.
+    const {blocks} = buildDomainPalette([meta]);
+    expect(
+      blocks.filter(block => block.type === 'world_choice_Wind_Gusts'),
+    ).toHaveLength(1);
+  });
+
   it('is resolvable, and offers a chip, once the project registers it', () => {
     const meta = ruleWithChoices('Gusts', ['breeze', 'gale']);
     registerProjectEnums(meta.enums);
@@ -161,5 +204,60 @@ describe('`define choices` in a `.rule`', () => {
         category => category.name === 'Wind',
       )?.blocks,
     ).toContain('world_choice_Wind_Gusts');
+  });
+});
+
+describe('what the editor says about a collision', () => {
+  afterEach(() => registerProjectEnums([]));
+
+  /** A `.rule` file declaring two sets of choices under one name. */
+  const ambiguous = JSON.stringify({
+    blocks: {
+      blocks: [
+        {type: 'world_rule', fields: {NAME: 'Wind', ABILITY: 'Has Wind'}},
+        {
+          type: 'world_rule_enum',
+          fields: {NAME: 'Gusts'},
+          next: {
+            block: {type: 'world_rule_enum_option', fields: {NAME: 'breeze'}},
+          },
+        },
+        {
+          type: 'world_rule_enum',
+          fields: {NAME: 'Gusts'},
+          next: {
+            block: {type: 'world_rule_enum_option', fields: {NAME: 'gale'}},
+          },
+        },
+      ],
+    },
+  });
+
+  it('warns, the way it warns about two rules with one name', () => {
+    // A project with nothing wrong in it first: what has been warned about is
+    // remembered across refreshes, which the next test is about.
+    refreshProjectDropdowns({});
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('more than one set of choices is named'),
+    );
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('Wind \u25b8 Gusts'),
+    );
+    warn.mockRestore();
+  });
+
+  it('says it once, not on every keystroke that refreshes the project', () => {
+    refreshProjectDropdowns({});
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
+    refreshProjectDropdowns({'rules/wind.rule': ambiguous});
+
+    expect(warn).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
   });
 });

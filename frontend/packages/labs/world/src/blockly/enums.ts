@@ -86,6 +86,30 @@ export function allEnums(): EnumMeta[] {
   return [...ENGINE_ENUMS, ...projectEnums];
 }
 
+/**
+ * Sets of choices claimed by more than one declaration — an ambiguous reference
+ * each, the same problem two rules with one name are.
+ *
+ * A reference carries the owner (`Wind#Colors`), so two RULES may each declare
+ * their own `Colors` without either being in doubt. What is in doubt is two
+ * `define choices` blocks naming the same set inside one rule: they produce one
+ * reference, `enumByRef` answers with the first, and the second's words appear
+ * nowhere. Reported rather than silently picked, exactly as `duplicateRuleNames`
+ * is — a learner whose choices do nothing should be told why.
+ */
+export function duplicateEnumNames(): string[] {
+  const seen = new Set<string>();
+  const duplicated = new Set<string>();
+  for (const meta of allEnums()) {
+    const ref = enumRef(meta);
+    if (seen.has(ref)) {
+      duplicated.add(ref);
+    }
+    seen.add(ref);
+  }
+  return [...duplicated];
+}
+
 /** The enum a stored reference means, or undefined if nothing declares it. */
 export function enumByRef(ref: string): EnumMeta | undefined {
   return allEnums().find(meta => enumRef(meta) === ref);

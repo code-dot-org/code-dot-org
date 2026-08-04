@@ -9,7 +9,7 @@ import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
 import {setProjectAnimations} from './animationOptions';
-import {registerProjectEnums} from './enums';
+import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
   setProjectActors,
   setProjectAnimationFiles,
@@ -112,17 +112,27 @@ let warnedAbout = '';
  * editor's job, not this one's.
  */
 function warnAboutDuplicateNames(): void {
-  const duplicated = duplicateRuleNames();
-  const key = duplicated.join('\u0000');
+  const rules = duplicateRuleNames();
+  // Sets of choices go the same way and are reported the same way: one name,
+  // one reference, and everything that reads it gets the first (blockly/enums).
+  const choices = duplicateEnumNames();
+  const key = [...rules, '\u0000', ...choices].join('\u0000');
   if (key === warnedAbout) {
     return;
   }
   warnedAbout = key;
-  if (duplicated.length) {
+  if (rules.length) {
     console.warn(
-      `world lab: more than one rule is named ${duplicated
+      `world lab: more than one rule is named ${rules
         .map(name => `"${name}"`)
         .join(', ')}; references to it resolve to the first one.`,
+    );
+  }
+  if (choices.length) {
+    console.warn(
+      `world lab: more than one set of choices is named ${choices
+        .map(ref => `"${ref.replace('#', ' \u25b8 ')}"`)
+        .join(', ')}; the words offered are the first one's.`,
     );
   }
 }
