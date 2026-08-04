@@ -1878,6 +1878,9 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_use_trait',
       'world_rule_property',
       'world_rule_event',
+      // A named set of choices, and one of its choices (specs/ENUMS.md).
+      'world_rule_enum',
+      'world_rule_enum_option',
       'world_rule_block',
       'world_return',
       'world_rule_step_tick',

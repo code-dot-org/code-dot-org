@@ -6,6 +6,7 @@
 
 import {afterEach, describe, expect, it} from 'vitest';
 
+import {buildDomainPalette} from '../domainBlocks';
 import {
   allEnums,
   enumByRef,
@@ -17,6 +18,7 @@ import {
   registerProjectEnums,
   type EnumMeta,
 } from '../enums';
+import {parseRuleMeta} from '../ruleMeta';
 
 const GUSTS: EnumMeta = {
   owner: 'Wind',
@@ -77,5 +79,87 @@ describe('enums as parameter types', () => {
     // vector, and only the `enum:` prefix means otherwise.
     expect(enumRefOfParamType('vector')).toBeUndefined();
     expect(enumRefOfParamType('string')).toBeUndefined();
+  });
+});
+
+describe('`define choices` in a `.rule`', () => {
+  afterEach(() => registerProjectEnums([]));
+
+  /** The options, as the stack of blocks that chains below the root. */
+  const optionChain = (options: string[]) =>
+    options.reduceRight<object | undefined>(
+      (next, word) => ({
+        type: 'world_rule_enum_option',
+        fields: {NAME: word},
+        ...(next ? {next: {block: next}} : {}),
+      }),
+      undefined,
+    );
+
+  /** A `.rule` declaring one set of choices. */
+  const ruleWithChoices = (name: string, options: string[]) =>
+    parseRuleMeta(
+      'rules/wind',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Wind', ABILITY: 'Has Wind'}},
+            {
+              type: 'world_rule_enum',
+              fields: {NAME: name},
+              ...(options.length > 0
+                ? {next: {block: optionChain(options)}}
+                : {}),
+            },
+          ],
+        },
+      }),
+    )!;
+
+  it('reads the choices off the blocks below it', () => {
+    const meta = ruleWithChoices('Gusts', ['breeze', 'gale']);
+
+    // The word IS the value: what a learner reads and what the block emits are
+    // one string, so there is no table to keep in step.
+    expect(meta.enums).toEqual([
+      {
+        owner: 'Wind',
+        name: 'Gusts',
+        options: [
+          ['breeze', 'breeze'],
+          ['gale', 'gale'],
+        ],
+      },
+    ]);
+  });
+
+  it('drops a repeated word rather than offering it twice', () => {
+    const meta = ruleWithChoices('Gusts', ['gale', 'gale']);
+
+    expect(meta.enums[0].options).toEqual([['gale', 'gale']]);
+  });
+
+  it('keeps a set with no choices yet', () => {
+    // A learner names the set before filling it, and a set that vanished
+    // between keystrokes would take the dropdowns using it with it.
+    expect(ruleWithChoices('Gusts', []).enums[0].options).toEqual([]);
+  });
+
+  it('is resolvable, and offers a chip, once the project registers it', () => {
+    const meta = ruleWithChoices('Gusts', ['breeze', 'gale']);
+    registerProjectEnums(meta.enums);
+
+    expect(enumByRef('Wind#Gusts')).toEqual(meta.enums[0]);
+    // The chip is the only way to name one of these choices outside a socket
+    // prepared for them, so it is in the rule's own category.
+    const {blocks, toolbox} = buildDomainPalette([meta]);
+    expect(blocks.map(block => block.type)).toContain(
+      'world_choice_Wind_Gusts',
+    );
+    expect(
+      (toolbox as Array<{name: string; blocks: string[]}>).find(
+        category => category.name === 'Wind',
+      )?.blocks,
+    ).toContain('world_choice_Wind_Gusts');
   });
 });

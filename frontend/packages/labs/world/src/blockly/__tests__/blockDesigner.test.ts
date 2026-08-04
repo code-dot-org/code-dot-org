@@ -102,11 +102,12 @@ describe('a designed block', () => {
     expect(call?.message0).toMatch(/^push %\d toward %\d$/);
   });
 
-  it('gives an enum parameter a socket wearing that enum’s dropdown', () => {
-    // A parameter typed by an enum (specs/ENUMS.md): the socket takes a String
-    // — an enum value IS a string — and is seeded with the enum's own chip, so
-    // the argument reads as a dropdown and still accepts a value dropped over
-    // it, which is what the emitting side needs.
+  it('gives an enum parameter the dropdown itself, not a socket', () => {
+    // A parameter typed by an enum (specs/ENUMS.md) is a FIELD on the block:
+    // the choices are the whole of what the argument can be, so there is
+    // nothing for a socket to accept that a dropdown cannot say. Naming a
+    // choice where a socket IS wanted — a comparison, an `emit … with` — is
+    // what the enum's own chip block is for.
     const meta = designed(
       [
         {kind: 'label', text: 'press'},
@@ -117,17 +118,50 @@ describe('a designed block', () => {
     );
     const {blocks} = buildDomainPalette([meta]);
     const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as
-      | {args0?: Array<{type: string; check?: string}>}
+      | {args0?: Array<{type: string; name?: string; check?: string}>}
       | undefined;
 
     expect(call?.args0?.[0]).toMatchObject({
-      type: 'input_value',
-      check: 'String',
+      type: 'field_dropdown',
+      name: 'VALUE',
     });
-    expect(shadowsFor('world_do_Push_PressAction')?.[0]?.shadow).toMatchObject({
-      type: 'world_choice_Engine_Key',
-      fields: {VALUE: 'space'},
-    });
+    expect(
+      (call?.args0?.[0] as {options?: Array<[string, string]>}).options,
+    ).toContainEqual(['space', 'space']);
+    // No socket, so nothing to seed.
+    expect(shadowsFor('world_do_Push_PressAction') ?? []).toEqual([]);
+  });
+
+  it('emits the chosen word from the field', () => {
+    // The choice is read off the block, not pulled through a socket, and what
+    // it stands for is the word itself — an enum is strings by the time any
+    // code runs.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'press'},
+        {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+      ],
+      'none',
+      [{id: 'k', name: 'key', type: 'String'}],
+    );
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as {
+      generator: {
+        javascript: (
+          block: unknown,
+          generator: unknown,
+          env: unknown,
+        ) => string;
+      };
+    };
+
+    const code = call.generator.javascript(
+      {getFieldValue: (name: string) => (name === 'VALUE' ? 'up arrow' : null)},
+      {valueToCode: () => '', definitions_: {}},
+      {},
+    );
+
+    expect(code).toContain('"up arrow"');
   });
 
   it('offers a dropdown of the enum’s choices on that chip', () => {
