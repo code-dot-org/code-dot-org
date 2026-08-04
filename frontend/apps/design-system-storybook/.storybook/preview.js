@@ -59,8 +59,8 @@ const preview = {
  * component-library-styles/brandOverrides.css) and applies the matching MUI
  * theme. The codes are Cdo::Brand's brand enum (lib/cdo/brand.rb):
  *   code         legacy Code.org tokens (== :root default)
- *   codeai       current default CodeAI branding (== :root default)
- *   codeai-next  the CADS color ramp ([data-brand='codeai-next'])
+ *   codeai       prior default CodeAI branding (== :root default)
+ *   codeai-next  current default: the CADS color ramp ([data-brand='codeai-next'])
  *   codeai-audit all-pink DSCO-coverage audit ([data-brand='codeai-audit'])
  */
 export const globalTypes = {

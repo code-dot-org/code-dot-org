@@ -18,9 +18,20 @@ on:
         description: 'Playwright --project flags selecting browser projects. Defaults to Chromium, matching the legacy Drone Chrome-only lane; DTT overrides with the full engine matrix.'
 
 jobs:
+  # Sharded so wall time stays flat as specs are added.
   e2e:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    # Backstop so a runaway shard cannot tie up GHA workers. Sized to complete in
+    # less time than the slowest selenium test suite, which this suite runs in
+    # parallel with during the DTT.
+    timeout-minutes: 30
+    strategy:
+      # Finish running all specs across shards even when there are failures.
+      fail-fast: false
+      # Shard count is this list's length; the values are unused. Each job takes
+      # its shard number from its position, so a repeat cannot skip a slice.
+      matrix:
+        shard: [1, 2, 3, 4]
     container:
       image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
     steps:
@@ -37,8 +48,15 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
+      # Separate from the test step: turbo hashes the arguments it forwards, so
+      # running the tests through it would key this build to the shard flags and
+      # give each shard its own copy instead of four sharing one.
+      - name: Build Test Dependencies
+        run: yarn turbo run build --filter=@code-dot-org/playwright-support
+        working-directory: ./frontend
+
       - name: E2E Tests
-        # Step-level env: job-level env isn't reliably forwarded through yarn/turbo.
+        # Step-level env: job-level env isn't reliably forwarded through yarn.
         # The container pre-installs browsers at /ms-playwright.
         env:
           PLAYWRIGHT_PROVIDER: github-actions
@@ -50,17 +68,66 @@ jobs:
           TARGET_URL: https://test-studio.code.org
         # Browser projects are caller-controlled: Chromium by default (PR lane),
         # full engine matrix on DTT. See the playwright-projects input.
-        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- ${{ inputs.playwright-projects }}
-        working-directory: ./frontend
+        #
+        # A shard's own HTML report covers only its slice, so each writes a blob
+        # instead and the report job below merges them into one.
+        run: yarn test:ui ${{ inputs.playwright-projects }} --shard=$(( ${{ strategy.job-index }} + 1 ))/${{ strategy.job-total }} --reporter=blob,list
+        working-directory: ./frontend/packages/e2e-tests
+
+      # Uploaded whether the shard passed or failed: the merged report needs every
+      # shard's blob to show the whole suite. Blobs carry their own traces,
+      # screenshots and videos, so no separate test-results upload.
+      - name: Upload Blob Report
+        if: '!cancelled()'
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-blob-report-${{ strategy.job-index }}
+          path: frontend/packages/e2e-tests/blob-report/
+          # Intermediate. The merged report below is the copy that is kept.
+          retention-days: 1
+
+  # One report and one joint pass/fail list, which no single shard's log can show.
+  # Reports only: merge-reports exits 0 even when the blobs it merged contain
+  # failures, so pass/fail stays on the shard jobs above.
+  e2e-report:
+    needs: e2e
+    if: '!cancelled()'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    # Same image as the shards: the blob format is coupled to the Playwright
+    # version that wrote it.
+    container:
+      image: mcr.microsoft.com/playwright:${{ inputs.playwright-image-tag }}
+    steps:
+      # No LFS: merging reports needs the yarn install and nothing else.
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      # Blob filenames carry their project and shard, so they land side by side.
+      - name: Download Blob Reports
+        uses: actions/download-artifact@v4
+        with:
+          path: frontend/packages/e2e-tests/all-blob-reports
+          pattern: e2e-blob-report-*
+          merge-multiple: true
+
+      # `list` prints the merged run to this job's log; `html` writes the report.
+      - name: Merge Reports
+        run: yarn playwright merge-reports --reporter list,html ./all-blob-reports
+        working-directory: ./frontend/packages/e2e-tests
 
       - name: Upload Playwright Report
-        if: failure() || cancelled()
+        if: '!cancelled()'
         uses: actions/upload-artifact@v4
         with:
           name: e2e-tests-report
-          path: |
-            frontend/packages/e2e-tests/playwright-report/
-            frontend/packages/e2e-tests/test-results/
+          path: frontend/packages/e2e-tests/playwright-report/
           retention-days: 30
 
   eyes:
@@ -82,6 +149,11 @@ jobs:
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
+      # Separate from the test step for the same reason as the e2e job above.
+      - name: Build Test Dependencies
+        run: yarn turbo run build --filter=@code-dot-org/playwright-support
+        working-directory: ./frontend
+
       - name: Eyes Tests
         env:
           VISUAL_PROVIDER: applitools
@@ -93,8 +165,8 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
           HOME: /root
           TARGET_URL: https://test-studio.code.org
-        run: yarn turbo run test:ui --filter=@code-dot-org/e2e-tests -- --grep @visual --project=visual-chromium
-        working-directory: ./frontend
+        run: yarn test:ui --grep @visual --project=visual-chromium
+        working-directory: ./frontend/packages/e2e-tests
 
       - name: Upload Playwright Report
         if: failure() || cancelled()
