@@ -10,15 +10,18 @@ import {ProjectSourcesSchema} from '../sources';
  */
 export const ChannelSchema = z.object({
   id: z.string(),
-  name: z.string(),
+  // Optional: a freshly created project channel has no name until the user
+  // names it, and the server omits the field rather than sending null.
+  name: z.string().nullable().optional(),
   isOwner: z.boolean(),
   projectType: z.enum(ProjectTypes),
-  publishedAt: z.string().nullable(),
+  // Nullable and optional: the server omits these rather than sending null.
+  publishedAt: z.string().nullable().optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
   hidden: z.boolean().optional(),
   thumbnailUrl: z.string().optional(),
-  frozen: z.boolean().nullable(),
+  frozen: z.boolean().nullable().optional(),
   // Optional lab-specific configuration for this project.  If provided, this will be saved
   // to the Project model in the database along with the other entries in this interface,
   // inside the value field JSON.

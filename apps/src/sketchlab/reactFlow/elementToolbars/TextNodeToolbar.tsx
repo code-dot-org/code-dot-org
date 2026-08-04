@@ -8,14 +8,18 @@ import ToolbarSection from './components/ToolbarSection';
 import ToolbarShell from './components/ToolbarShell';
 import AlignmentDropdownRow from './sections/AlignmentDropdownRow';
 import ColorDropdownRow from './sections/ColorDropdownRow';
+import FontFamilyDropdownRow from './sections/FontFamilyDropdownRow';
 import NodeActionsGroup from './sections/NodeActionsGroup';
 import RotationGroup from './sections/RotationGroup';
 import SizeDropdownRow from './sections/SizeDropdownRow';
 import {
   DEFAULT_FONT_COLOR,
+  DEFAULT_FONT_FAMILY,
   DEFAULT_FONT_SIZE,
   DEFAULT_TEXT_ALIGN,
+  DEFAULT_TEXT_BORDER_COLOR,
   STROKE_FONT_PALETTE,
+  TEXT_BORDER_PALETTE,
 } from './toolbarPalettes';
 import {useNodeToolbarData} from './useNodeToolbarData';
 
@@ -25,7 +29,7 @@ interface TextNodeToolbarProps {
 
 export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
   const {data, patchNodeData} = useNodeToolbarData<TextNodeType>(nodeId);
-  const {fontSize, fontColor, textAlign} = data;
+  const {fontSize, fontFamily, fontColor, textAlign, strokeColor} = data;
 
   return (
     <ToolbarShell
@@ -42,6 +46,10 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
               value={fontSize ?? DEFAULT_FONT_SIZE}
               onSelect={next => patchNodeData({fontSize: next})}
             />
+            <FontFamilyDropdownRow
+              value={fontFamily ?? DEFAULT_FONT_FAMILY}
+              onSelect={next => patchNodeData({fontFamily: next})}
+            />
             <AlignmentDropdownRow
               value={textAlign ?? DEFAULT_TEXT_ALIGN}
               onSelect={next => patchNodeData({textAlign: next})}
@@ -51,6 +59,12 @@ export default function TextNodeToolbar({nodeId}: TextNodeToolbarProps) {
               swatches={STROKE_FONT_PALETTE}
               value={fontColor ?? DEFAULT_FONT_COLOR}
               onSelect={next => patchNodeData({fontColor: next})}
+            />
+            <ColorDropdownRow
+              label="Border"
+              swatches={TEXT_BORDER_PALETTE}
+              value={strokeColor ?? DEFAULT_TEXT_BORDER_COLOR}
+              onSelect={next => patchNodeData({strokeColor: next})}
             />
           </ToolbarSection>
           <RotationGroup

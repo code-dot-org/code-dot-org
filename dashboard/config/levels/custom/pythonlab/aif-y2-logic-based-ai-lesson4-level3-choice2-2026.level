@@ -1,0 +1,43 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-27T23:47:09.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Check My Notifications",
+    "long_instructions": "After your chatbot greets you, you’d like for it to tell you how many notifications you have in your favorite all. For example, it might say “Good morning! You have 5 new notifications for Instagram.”\r\n\r\n**☑️ Do This:**\r\n1. Define a string variable that stores an app’s name.\r\n2. Define an integer variable that stores a number of notifications.\r\n3. Print a message that says hello to the user and uses your two variables to tell the user how many notifications they have for the app.",
+    "bubble_choice_description": "Build a chatbot that checks the notifications on your phone.",
+    "thumbnail_url": "https://images.code.org/2e834445517b9687845698f40d13d171-notification.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Define a variable that stores an app name\n\n# TODO 2: Define a variable that stores the a number of notifications\n\n# TODO 3: Print a message that says hello and tells the user how many notifications they have for the app",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-27 23:47:18 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

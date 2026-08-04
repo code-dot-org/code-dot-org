@@ -21,6 +21,14 @@
   border: 1px solid var(--borders-neutral-primary);
 }
 
+// Groups related buttons so the onboarding tour can highlight them as a unit.
+// Matches the parent's column gap so wrapping changes nothing visually.
+.toolbarGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .divider {
   border-color: var(--borders-neutral-primary);
   margin: 0 -4px;

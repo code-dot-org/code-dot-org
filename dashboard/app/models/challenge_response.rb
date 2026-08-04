@@ -13,6 +13,7 @@
 #  evaluated_at      :datetime
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  evaluation_status :integer
 #
 # Indexes
 #
@@ -25,8 +26,10 @@ class ChallengeResponse < ApplicationRecord
   has_many :challenge_response_assets, dependent: :destroy
 
   # The frontend-facing shape of a response and its assets.
-  # @param assets_for_upload [Boolean] when true, each asset carries a presigned
-  #   upload URL (used right after create); otherwise a presigned download URL.
+  # @param assets_for_upload [Boolean] when true (used right after create),
+  #   assets carry no download URL since their bytes are not uploaded yet; the
+  #   client PUTs them to /challenge_response_assets/:id/upload. Otherwise
+  #   each asset carries a presigned download URL.
   def summarize(assets_for_upload: false)
     {
       id: id,

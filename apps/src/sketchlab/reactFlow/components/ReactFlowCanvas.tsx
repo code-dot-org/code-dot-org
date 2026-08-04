@@ -14,7 +14,14 @@ import {
 } from '@xyflow/react';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from 'react';
 
 import {
   SketchlabReactFlowSource,
@@ -22,11 +29,17 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
+import {
+  hasActiveTour,
+  subscribeToActiveTour,
+} from '@cdo/apps/sharedComponents/productTour/activeTourTracker';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  DEFAULT_TEXT_NODE_HEIGHT,
+  KEYBOARD_PAN_STEP,
   LINE_DEFAULT_LENGTH_PX,
   LINE_RECONNECT_SNAP_RADIUS_PX,
   MIN_ZOOM,
@@ -51,6 +64,7 @@ import {useElementClickHandlers} from '../hooks/useElementClickHandlers';
 import {useFocusManagement} from '../hooks/useFocusManagement';
 import {useKeyboardNavigation} from '../hooks/useKeyboardNavigation';
 import {useLineEdgeDrag} from '../hooks/useLineEdgeDrag';
+import {ModeratedImageUploader} from '../hooks/useModeratedImageUpload';
 import {useNodeDrag} from '../hooks/useNodeDrag';
 import {useTabOrder} from '../hooks/useTabOrder';
 import {useTransientMessage} from '../hooks/useTransientMessage';
@@ -90,12 +104,14 @@ const NODE_TYPES = {
   group: GroupNode,
 };
 
-// Offset added per new node so they don't stack exactly on top of each other.
-const NEW_NODE_STAGGER_PX = 20;
 const FOCUS_DELAY_MS = 100;
 
 const GROUP_MODE_HINT =
   'Tab to move — Enter to select/deselect — G to group — Esc to cancel';
+
+const HAND_MODE_HINT =
+  'Hand tool — use the arrow keys to pan — Esc to return to select';
+const HAND_MODE_HINT_READ_ONLY = 'Hand tool — use the arrow keys to pan';
 
 // Fallbacks for edges that don't specify type/style, kept in sync with the
 // fields a new line gets. markerEnd is intentionally omitted so edges saved
@@ -122,7 +138,11 @@ export interface ReactFlowCanvasProps {
   updateSources: ReturnType<
     typeof useSources<ReactFlowSketchLabSources>
   >['updateSources'];
-  levelName: string;
+  // When absent, image uploads report an error.
+  uploadImage?: ModeratedImageUploader;
+  uploadsDisabled?: boolean;
+  openUploadsDisabledModal?: () => void;
+  onNodesDeleted?: (deletedNodes: SketchLabNode[]) => void;
   initialNodes: SketchlabReactFlowNode[];
   initialEdges: SketchlabReactFlowEdge[];
   initialViewport: SketchlabReactFlowSource['viewport'];
@@ -137,9 +157,15 @@ export interface ReactFlowCanvasProps {
 
 export const SKETCHLAB_CONTAINER_CLASS = 'sketchlab-react-flow-container';
 
+const uploadImageUnavailable: ModeratedImageUploader = async ({onError}) =>
+  onError();
+
 export default function ReactFlowCanvas({
   updateSources,
-  levelName,
+  uploadImage = uploadImageUnavailable,
+  uploadsDisabled = false,
+  openUploadsDisabledModal,
+  onNodesDeleted,
   initialNodes,
   initialEdges,
   initialViewport,
@@ -151,10 +177,15 @@ export default function ReactFlowCanvas({
   const [nodes, setNodes, onNodesChange] =
     useNodesState<SketchLabNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const {syncRefs, pushSnapshot, undo, redo, canUndo, canRedo} =
+  const tourActive = useSyncExternalStore(subscribeToActiveTour, hasActiveTour);
+  const {syncRefs, pushSnapshot, clearHistory, undo, redo, canUndo, canRedo} =
     useUndoHistory();
-  // Keep undo history refs in sync with current canvas state.
+  // Keep undo history refs in sync with current canvas state. nodesRef lets
+  // event callbacks read current nodes without depending on the nodes array,
+  // which changes every drag frame.
+  const nodesRef = useRef(nodes);
   useEffect(() => {
+    nodesRef.current = nodes;
     syncRefs(nodes, edges);
   }, [nodes, edges, syncRefs]);
 
@@ -180,12 +211,20 @@ export default function ReactFlowCanvas({
   }>({target: null, trapFocus: false});
   const {target: openToolbarTarget, trapFocus} = openToolbarInfo;
 
-  const [canvasTool, setCanvasTool] = useState<CanvasTool>('cursor');
+  // Read-only viewers get no editing toolbar, so grab (pan) is the only useful
+  // default; editors start in cursor mode.
+  const [canvasTool, setCanvasTool] = useState<CanvasTool>(
+    readOnly ? 'grab' : 'cursor'
+  );
+  const isGrabMode = canvasTool === 'grab';
 
   const [isAnyPopoverOpen, setPopoverOpen] = useState(false);
   const [keyboardMovingLineId, setKeyboardMovingLineId] = useState<
     string | null
   >(null);
+  // True while the workspace wrapper itself (the hand-mode tab stop) holds
+  // keyboard focus.
+  const [workspaceFocused, setWorkspaceFocused] = useState(false);
 
   const openToolbar = useCallback(
     (target: ToolbarTarget, options?: {trapFocus?: boolean}) => {
@@ -220,11 +259,12 @@ export default function ReactFlowCanvas({
     ]
   );
 
-  const {screenToFlowPosition, flowToScreenPosition} = useReactFlow<
-    SketchlabReactFlowNode,
-    SketchlabReactFlowEdge
-  >();
-  const addedNodeCountRef = useRef(0);
+  const {
+    screenToFlowPosition,
+    flowToScreenPosition,
+    getViewport,
+    setViewport: setReactFlowViewport,
+  } = useReactFlow<SketchlabReactFlowNode, SketchlabReactFlowEdge>();
   const canvasContainerRef = useRef<HTMLDivElement>(null);
 
   const {
@@ -313,30 +353,110 @@ export default function ReactFlowCanvas({
     [announceGroupMode, showGroupModeError]
   );
 
-  const [imageUploadError, showImageUploadError] = useTransientMessage(
+  const [imageError, showImageError] = useTransientMessage(
     TRANSIENT_MESSAGE_DURATION_MS
   );
   const handleImageUploadError = useCallback(() => {
     const message = 'Could not upload image. Please try again.';
     announceGroupMode(message);
-    showImageUploadError(message);
-  }, [announceGroupMode, showImageUploadError]);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
+  const handleFlaggedImageCopyBlocked = useCallback(() => {
+    const message = 'Flagged images cannot be copied.';
+    announceGroupMode(message);
+    showImageError(message);
+  }, [announceGroupMode, showImageError]);
 
   // One banner at a time, highest priority first: an upload error, then a
-  // group-mode error, then the group-mode hint while group mode is active.
-  const banner: {message: string; variant: 'info' | 'error'} | null =
-    imageUploadError
-      ? {message: imageUploadError, variant: 'error'}
-      : groupModeError
-      ? {message: groupModeError, variant: 'info'}
-      : isGroupMode
-      ? {message: GROUP_MODE_HINT, variant: 'info'}
-      : null;
+  // group-mode error, the group-mode hint while group mode is active, and
+  // finally the hand-tool pan hint while the workspace itself is focused.
+  const banner = useMemo<{
+    message: string;
+    variant: 'info' | 'error';
+  } | null>(() => {
+    if (imageError) {
+      return {message: imageError, variant: 'error'};
+    }
+    if (groupModeError) {
+      return {message: groupModeError, variant: 'info'};
+    }
+    if (isGroupMode) {
+      return {message: GROUP_MODE_HINT, variant: 'info'};
+    }
+    if (isGrabMode && workspaceFocused) {
+      return {
+        message: readOnly ? HAND_MODE_HINT_READ_ONLY : HAND_MODE_HINT,
+        variant: 'info',
+      };
+    }
+    return null;
+  }, [
+    imageError,
+    groupModeError,
+    isGroupMode,
+    readOnly,
+    isGrabMode,
+    workspaceFocused,
+  ]);
 
   const handlePaneClick = useCallback(() => {
     canvasContainerRef.current?.focus();
     clearSelection();
   }, [clearSelection]);
+
+  // The workspace wrapper is the single tab stop for the canvas in hand mode.
+  // While it holds focus, arrow keys pan the viewport and Esc returns to the select tool.
+  const handleWorkspaceKeyDown = useCallback(
+    (event: React.KeyboardEvent) => {
+      if (event.target !== event.currentTarget) return;
+
+      // Leave read-only viewers in pan mode on Escape rather than stranding them,
+      // as the only tool available in read only is the hand tool.
+      if (event.key === 'Escape') {
+        if (readOnly) return;
+        event.preventDefault();
+        setCanvasTool('cursor');
+        canvasContainerRef.current?.focus();
+        return;
+      }
+
+      let deltaX = 0;
+      let deltaY = 0;
+      switch (event.key) {
+        case 'ArrowLeft':
+          deltaX = KEYBOARD_PAN_STEP;
+          break;
+        case 'ArrowRight':
+          deltaX = -KEYBOARD_PAN_STEP;
+          break;
+        case 'ArrowUp':
+          deltaY = KEYBOARD_PAN_STEP;
+          break;
+        case 'ArrowDown':
+          deltaY = -KEYBOARD_PAN_STEP;
+          break;
+        default:
+          return;
+      }
+      event.preventDefault();
+      const current = getViewport();
+      setReactFlowViewport({
+        ...current,
+        x: current.x + deltaX,
+        y: current.y + deltaY,
+      });
+    },
+    [readOnly, getViewport, setReactFlowViewport]
+  );
+
+  const handleWorkspaceFocus = useCallback((event: React.FocusEvent) => {
+    if (event.target !== event.currentTarget) return;
+    setWorkspaceFocused(event.currentTarget.matches(':focus-visible'));
+  }, []);
+
+  const handleWorkspaceBlur = useCallback((event: React.FocusEvent) => {
+    if (event.target === event.currentTarget) setWorkspaceFocused(false);
+  }, []);
   const {
     tabOrder,
     activeEntry,
@@ -353,20 +473,43 @@ export default function ReactFlowCanvas({
     canvasContainerRef.current?.focus();
   }, []);
 
+  const handleNodesDeleted = useCallback(
+    (deletedNodes: SketchLabNode[]) => {
+      onNodesDeleted?.(deletedNodes);
+      handleElementsDeleted();
+    },
+    [onNodesDeleted, handleElementsDeleted]
+  );
+
   // Intercept React Flow's change callbacks to push undo snapshots before
-  // resize-stop and delete. Drag is handled by handleNodeDragStart instead.
-  // Adds that bypass onNodesChange (direct setNodes calls) are handled at
-  // their call sites.
+  // delete. Drag is handled by handleNodeDragStart, and resize by
+  // RotatedNodeResizer. Adds that bypass onNodesChange (direct setNodes calls)
+  // are handled at their call sites.
   const handleNodesChange: OnNodesChange<SketchLabNode> = useCallback(
     changes => {
-      const commitsResize = changes.some(
-        change => change.type === 'dimensions' && change.resizing === false
+      const removedIds = new Set(
+        changes
+          .filter(change => change.type === 'remove')
+          .map(change => change.id)
       );
-      const hasDelete = changes.some(change => change.type === 'remove');
-      if (commitsResize || hasDelete) pushSnapshot();
+      if (removedIds.size > 0) {
+        // Deleting a flagged image hard-deletes its asset, so wipe history
+        // instead of snapshotting.
+        const deletesFlaggedImage = nodesRef.current.some(
+          node =>
+            removedIds.has(node.id) &&
+            node.type === 'image' &&
+            node.data.flagged
+        );
+        if (deletesFlaggedImage) {
+          clearHistory();
+        } else {
+          pushSnapshot();
+        }
+      }
       onNodesChange(changes);
     },
-    [onNodesChange, pushSnapshot]
+    [onNodesChange, pushSnapshot, clearHistory]
   );
 
   const handleEdgesChange: OnEdgesChange<SketchlabReactFlowEdge> = useCallback(
@@ -394,10 +537,12 @@ export default function ReactFlowCanvas({
     setNodes,
     setEdges,
     pushSnapshot,
+    clearHistory,
     canvasContainerRef,
     readOnly,
-    levelName,
+    uploadImage,
     onImageUploadError: handleImageUploadError,
+    onFlaggedImageCopyBlocked: handleFlaggedImageCopyBlocked,
   });
 
   const clipboardContextValue = useMemo(
@@ -547,6 +692,9 @@ export default function ReactFlowCanvas({
   // don't dismiss it.
   useEffect(() => {
     if (!openToolbarTarget) return;
+    // The onboarding tour moves focus into its own popup to point at the
+    // element toolbar; don't treat that as the user leaving the element.
+    if (tourActive) return;
     // If the user is actively interacting with the toolbar (mouse or keyboard
     // focus inside it), keep it open regardless of where the focus-tracking
     // state currently points.
@@ -562,7 +710,13 @@ export default function ReactFlowCanvas({
     ) {
       closeToolbar();
     }
-  }, [openToolbarTarget, nodeOrEdgeFocused, lastFocusedEntry, closeToolbar]);
+  }, [
+    openToolbarTarget,
+    nodeOrEdgeFocused,
+    lastFocusedEntry,
+    closeToolbar,
+    tourActive,
+  ]);
 
   // Close the toolbar when its owning node/edge is deleted.
   useEffect(() => {
@@ -599,8 +753,6 @@ export default function ReactFlowCanvas({
     },
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
-
-  const isGrabMode = canvasTool === 'grab';
 
   const {displayNodes, displayEdges} = useDisplayElements({
     nodes,
@@ -699,15 +851,19 @@ export default function ReactFlowCanvas({
 
   const handleAddNode = useCallback(
     (request: AddNodeRequest) => {
-      pushSnapshot();
+      // Undoing a flagged image's addition would strand the abuse block with
+      // nothing visible to delete, so wipe history instead.
+      if (request.type === 'image' && request.data.flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setCanvasTool('cursor');
       const {type} = request;
-      const stagger = addedNodeCountRef.current * NEW_NODE_STAGGER_PX;
-      addedNodeCountRef.current += 1;
 
       const centerPosition = screenToFlowPosition({
-        x: window.innerWidth / 2 + stagger,
-        y: window.innerHeight / 2 + stagger,
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
       });
 
       // For lines, create two hidden anchor nodes and connect them.
@@ -748,10 +904,12 @@ export default function ReactFlowCanvas({
         return;
       }
 
-      const position = screenToFlowPosition({
-        x: window.innerWidth / 2 - DEFAULT_NODE_WIDTH / 2 + stagger,
-        y: window.innerHeight / 2 - DEFAULT_NODE_HEIGHT / 2 + stagger,
-      });
+      const defaultHeight =
+        type === 'text' ? DEFAULT_TEXT_NODE_HEIGHT : DEFAULT_NODE_HEIGHT;
+      const position = {
+        x: centerPosition.x - DEFAULT_NODE_WIDTH / 2,
+        y: centerPosition.y - defaultHeight / 2,
+      };
 
       const newNodeId = createUuid();
       // width/height are the React Flow fields NodeResizer also writes on drag,
@@ -764,7 +922,7 @@ export default function ReactFlowCanvas({
         data: request.data,
         position,
         width: DEFAULT_NODE_WIDTH,
-        height: DEFAULT_NODE_HEIGHT,
+        height: defaultHeight,
       } as SketchLabNode;
 
       setNodes(currentNodes => [...currentNodes, newNode]);
@@ -780,6 +938,7 @@ export default function ReactFlowCanvas({
       }, FOCUS_DELAY_MS);
     },
     [
+      clearHistory,
       focusEntry,
       openToolbar,
       pushSnapshot,
@@ -865,7 +1024,10 @@ export default function ReactFlowCanvas({
                   {!readOnly && (
                     <Toolbar
                       onAddNode={handleAddNode}
-                      levelName={levelName}
+                      uploadImage={uploadImage}
+                      onImageUploadError={handleImageUploadError}
+                      uploadsDisabled={uploadsDisabled}
+                      openUploadsDisabledModal={openUploadsDisabledModal}
                       canvasTool={canvasTool}
                       onSetCanvasTool={setCanvasTool}
                     />
@@ -876,73 +1038,98 @@ export default function ReactFlowCanvas({
                   <div aria-live="polite" className={styles.srOnly}>
                     {ariaAnnouncement}
                   </div>
-                  <ReactFlow
-                    nodes={displayNodes}
-                    edges={displayEdges}
-                    onNodesChange={handleNodesChange}
-                    onEdgesChange={handleEdgesChange}
-                    {...grabModeProps}
-                    onPaneClick={handlePaneClick}
-                    onConnect={onConnect}
-                    onBeforeDelete={handleBeforeDelete}
-                    onNodesDelete={handleElementsDeleted}
-                    onEdgesDelete={handleElementsDeleted}
-                    onNodeDragStart={handleNodeDragStart}
-                    onNodeDrag={handleNodeDrag}
-                    onNodeDragStop={handleNodeDragStop}
-                    isValidConnection={isValidConnection}
-                    connectionLineComponent={ConnectionLine}
-                    minZoom={MIN_ZOOM}
-                    connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
-                    nodeTypes={NODE_TYPES}
-                    onMoveEnd={handleMoveEnd}
-                    defaultViewport={initialViewport}
-                    fitView={!initialViewport}
-                    colorMode={colorMode}
-                    // We implement our own shift+click multi-selection and
-                    // drag-to-select; disable React Flow's built-in versions.
-                    multiSelectionKeyCode={null}
-                    selectionKeyCode={null}
-                    proOptions={{hideAttribution: true}}
-                    // Even though we manage tab order, we keep React Flow's keyboard A11y on because
-                    // it manages things like moving nodes with arrow keys.
-                    disableKeyboardA11y={false}
-                    autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
-                    zIndexMode={'manual'}
-                    defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
-                    defaultMarkerColor={DEFAULT_STROKE_COLOR}
+                  {/* In hand mode this is the single keyboard tab stop for
+                      the canvas, so users can use arrow keys to pan */}
+                  <div
+                    className={styles.workspace}
+                    // Only claim the application role while the workspace is the
+                    // grab-mode pan target. In cursor mode it's a passive wrapper,
+                    // and an always-on application region would put the toolbar and
+                    // controls inside it into screen-reader application mode.
+                    role={isGrabMode ? 'application' : undefined}
+                    tabIndex={isGrabMode ? 0 : -1}
+                    aria-label={
+                      readOnly
+                        ? 'Canvas workspace. Use the arrow keys to pan.'
+                        : 'Canvas workspace. Use the arrow keys to pan. Press Escape to return to the select tool.'
+                    }
+                    aria-keyshortcuts={
+                      readOnly
+                        ? 'ArrowUp ArrowDown ArrowLeft ArrowRight'
+                        : 'ArrowUp ArrowDown ArrowLeft ArrowRight Escape'
+                    }
+                    onFocus={handleWorkspaceFocus}
+                    onBlur={handleWorkspaceBlur}
+                    onKeyDown={handleWorkspaceKeyDown}
                   >
-                    <CornerToolbarPanel
-                      nodes={nodes}
-                      edges={edges}
-                      setNodes={setNodes}
-                      setEdges={setEdges}
-                      pushSnapshot={pushSnapshot}
-                      groupableCount={groupableCount}
-                      onGroupNodes={handleGroupNodes}
-                      onUngroupNode={handleUngroupNode}
-                    />
-                    {banner && (
-                      <Panel
-                        position="bottom-center"
-                        className={
-                          banner.variant === 'error'
-                            ? styles.bannerError
-                            : styles.bannerInfo
-                        }
-                      >
-                        {banner.message}
-                      </Panel>
-                    )}
-                    <Background />
-                    <CanvasControls
-                      onUndo={handleUndo}
-                      onRedo={handleRedo}
-                      canUndo={canUndo}
-                      canRedo={canRedo}
-                      isReadOnly={readOnly}
-                    />
-                  </ReactFlow>
+                    <ReactFlow
+                      nodes={displayNodes}
+                      edges={displayEdges}
+                      onNodesChange={handleNodesChange}
+                      onEdgesChange={handleEdgesChange}
+                      {...grabModeProps}
+                      onPaneClick={handlePaneClick}
+                      onConnect={onConnect}
+                      onBeforeDelete={handleBeforeDelete}
+                      onNodesDelete={handleNodesDeleted}
+                      onEdgesDelete={handleElementsDeleted}
+                      onNodeDragStart={handleNodeDragStart}
+                      onNodeDrag={handleNodeDrag}
+                      onNodeDragStop={handleNodeDragStop}
+                      isValidConnection={isValidConnection}
+                      connectionLineComponent={ConnectionLine}
+                      minZoom={MIN_ZOOM}
+                      connectionRadius={LINE_RECONNECT_SNAP_RADIUS_PX}
+                      nodeTypes={NODE_TYPES}
+                      onMoveEnd={handleMoveEnd}
+                      defaultViewport={initialViewport}
+                      fitView={!initialViewport}
+                      colorMode={colorMode}
+                      // We implement our own shift+click multi-selection and
+                      // drag-to-select; disable React Flow's built-in versions.
+                      multiSelectionKeyCode={null}
+                      selectionKeyCode={null}
+                      proOptions={{hideAttribution: true}}
+                      // Even though we manage tab order, we keep React Flow's keyboard A11y on because
+                      // it manages things like moving nodes with arrow keys.
+                      disableKeyboardA11y={false}
+                      autoPanOnNodeFocus={false} // We manage viewport on focus manually in useFocusManagement.
+                      zIndexMode={'manual'}
+                      defaultEdgeOptions={DEFAULT_EDGE_OPTIONS}
+                      defaultMarkerColor={DEFAULT_STROKE_COLOR}
+                    >
+                      <CornerToolbarPanel
+                        nodes={nodes}
+                        edges={edges}
+                        setNodes={setNodes}
+                        setEdges={setEdges}
+                        pushSnapshot={pushSnapshot}
+                        groupableCount={groupableCount}
+                        onGroupNodes={handleGroupNodes}
+                        onUngroupNode={handleUngroupNode}
+                      />
+                      {banner && (
+                        <Panel
+                          position="bottom-center"
+                          className={
+                            banner.variant === 'error'
+                              ? styles.bannerError
+                              : styles.bannerInfo
+                          }
+                        >
+                          {banner.message}
+                        </Panel>
+                      )}
+                      <Background />
+                      <CanvasControls
+                        onUndo={handleUndo}
+                        onRedo={handleRedo}
+                        canUndo={canUndo}
+                        canRedo={canRedo}
+                        isReadOnly={readOnly}
+                      />
+                    </ReactFlow>
+                  </div>
                   {dragBoxStyle && (
                     <div
                       aria-hidden="true"

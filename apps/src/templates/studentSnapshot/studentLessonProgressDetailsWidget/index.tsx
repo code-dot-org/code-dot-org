@@ -13,8 +13,8 @@ import styles from './studentLessonProgressDetailsWidget.module.scss';
 
 interface StudentLessonProgressDetailsWidgetProps {
   selectedUnitId: number;
-  selectedLessonId: number;
-  selectedStudentId: number;
+  selectedLessonId: number | null;
+  selectedStudentId: number | null;
 }
 
 interface UserProgressByLessonData {
@@ -75,6 +75,9 @@ const StudentLessonProgressDetailsWidget: React.FC<
   const studentIds = useAppSelector(state =>
     state.teacherSections?.selectedStudents?.map(student => student.id)
   );
+
+  const effectiveLessonId = selectedLessonId ?? -1;
+  const effectiveStudentId = selectedStudentId ?? -1;
 
   // Map each lesson to both individual student progress + time spent in the given lesson and
   // the class's averages of both
@@ -220,28 +223,28 @@ const StudentLessonProgressDetailsWidget: React.FC<
     ]);
 
   const selectedStudentLessonProgressInfo = React.useMemo(() => {
-    return userProgressByLesson[selectedLessonId]
-      ? userProgressByLesson[selectedLessonId][selectedStudentId]
+    return userProgressByLesson[effectiveLessonId]
+      ? userProgressByLesson[effectiveLessonId][effectiveStudentId]
       : null;
-  }, [userProgressByLesson, selectedLessonId, selectedStudentId]);
+  }, [userProgressByLesson, effectiveLessonId, effectiveStudentId]);
 
   const numValidationLevelsUserCompleted = React.useMemo(() => {
-    return userValidationProgressByLesson[selectedLessonId]
-      ? userValidationProgressByLesson[selectedLessonId][
-          `${selectedStudentId}`
+    return userValidationProgressByLesson[effectiveLessonId]
+      ? userValidationProgressByLesson[effectiveLessonId][
+          `${effectiveStudentId}`
         ] ?? 0
       : 0;
-  }, [userValidationProgressByLesson, selectedLessonId, selectedStudentId]);
+  }, [userValidationProgressByLesson, effectiveLessonId, effectiveStudentId]);
 
   const numValidationLevelsCompleteString = (
     numValidationLevelsComplete: number
   ) => {
-    if (!selectedLessonId || !lessonsToValidationLevels) {
+    if (!lessonsToValidationLevels) {
       return '0 of 0 passed';
     }
 
     const totalValidationLevels =
-      lessonsToValidationLevels[selectedLessonId]?.length ?? 0;
+      lessonsToValidationLevels[effectiveLessonId]?.length ?? 0;
     return `${numValidationLevelsComplete} of ${totalValidationLevels} passed`;
   };
 
@@ -250,15 +253,31 @@ const StudentLessonProgressDetailsWidget: React.FC<
   const selectedStudentLessonTimeSpent =
     selectedStudentLessonProgressInfo?.timeSpent ?? ZERO_TIME_SPENT;
   const classAvgLessonProgress =
-    progressAveragesByLesson[selectedLessonId]?.progressAverage ?? 0;
+    progressAveragesByLesson[effectiveLessonId]?.progressAverage ?? 0;
   const classAvgNumValidationLevelsCompleted =
-    classAvgValidationProgressByLesson[selectedLessonId] ?? 0;
+    classAvgValidationProgressByLesson[effectiveLessonId] ?? 0;
   const classAvgLessonTimeSpent =
-    progressAveragesByLesson[selectedLessonId]?.timeSpentAverage ??
+    progressAveragesByLesson[effectiveLessonId]?.timeSpentAverage ??
     ZERO_TIME_SPENT;
   const numUnpassedValidationLevels =
-    (lessonsToValidationLevels[selectedLessonId]?.length ?? 0) -
+    (lessonsToValidationLevels[effectiveLessonId]?.length ?? 0) -
     numValidationLevelsUserCompleted;
+
+  if (!selectedLessonId || !selectedStudentId) {
+    if (!isLoadingProgress) {
+      return null;
+    }
+    return (
+      <WidgetTemplate
+        widgetName="Lesson Details"
+        gridWidth={3}
+        gridHeight={1}
+        loading
+      >
+        <div />
+      </WidgetTemplate>
+    );
+  }
 
   return (
     <WidgetTemplate widgetName="Lesson Details" gridWidth={3} gridHeight={1}>

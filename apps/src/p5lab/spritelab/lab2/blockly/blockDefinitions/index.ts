@@ -2,13 +2,36 @@ import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
+import makePlatformBlocks from './makePlatformBlocks';
+import makePlatformPlayer from './makePlatformPlayer';
+import makeSpriteAtGrid from './makeSpriteAtGrid';
+import movingLeft from './movingLeft';
+import movingWithArrowKeys from './movingWithArrowKeys';
+import patrollingLeftRight from './patrollingLeftRight';
+import patrollingOnBlocks from './patrollingOnBlocks';
 
-// Scenes UI variant blocks, defined client-side (not in the DB block pool)
-// because their dropdown options are the project's scenes, which only this
-// lab knows.
-const sceneBlockDefinitions: {
+// Lab-owned blocks, defined client-side rather than in the DB block pool. A
+// block whose runtime half is interpreted code exports it as helperCode.
+const labBlockDefinitions: {
   definition: BlockJson;
   generator: GeneratorFunction;
-}[] = [goToScene, goToExternalScene];
+  helperCode?: string;
+}[] = [
+  goToScene,
+  goToExternalScene,
+  movingLeft,
+  movingWithArrowKeys,
+  patrollingLeftRight,
+  patrollingOnBlocks,
+  makePlatformPlayer,
+  makeSpriteAtGrid,
+  makePlatformBlocks,
+];
 
-export default sceneBlockDefinitions;
+export default labBlockDefinitions;
+
+// The interpreted runtime half, prepended to user code by the engine (shaped
+// like level sharedBlocks entries — P5Lab reads .helperCode off each).
+export const SPRITELAB2_HELPER_CODE = labBlockDefinitions
+  .filter(({helperCode}) => helperCode)
+  .map(({helperCode}) => ({helperCode}));

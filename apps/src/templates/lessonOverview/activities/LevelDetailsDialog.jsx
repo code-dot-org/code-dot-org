@@ -1,3 +1,4 @@
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -277,9 +278,7 @@ class LevelDetailsDialog extends Component {
     const hasVideo =
       level.type === 'StandaloneVideo' ||
       (level.type === 'External' && !!level.videoOptions);
-    const levelSpecificStyling = hasVideo
-      ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-      : {};
+    const levelSpecificStyling = hasVideo ? {width: VIDEO_MODAL_WIDTH} : {};
     const baseUrl = level.url || scriptLevel.url;
     const url = `${baseUrl}?no_redirect=1`;
     return (
@@ -289,7 +288,9 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <h1>{level.display_name || scriptLevel.name || level.name}</h1>
+        <Typography variant="h1" component="h2">
+          {level.display_name || scriptLevel.name || level.name}
+        </Typography>
         {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>

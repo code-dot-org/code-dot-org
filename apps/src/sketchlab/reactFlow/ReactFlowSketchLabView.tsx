@@ -3,8 +3,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
+import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -27,10 +29,16 @@ import {useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {useSources} from '@cdo/apps/lab2/views/SourcesContainer';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ReactFlowCanvas from './components/ReactFlowCanvas';
+import {useModeratedImageUpload} from './hooks/useModeratedImageUpload';
+import useReactFlowSketchLabTour from './introTour/useReactFlowSketchLabTour';
+import ShareView from './ShareView';
 import {ImageNodeData, ReactFlowSketchLabSources} from './types';
 import {
   convertExcalidrawToReactFlow,
@@ -63,10 +71,21 @@ function ReactFlowSketchLabViewInner({
   } = useSources<ReactFlowSketchLabSources>();
 
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const isResourcePanelCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const isShareView = useAppSelector(state => state.lab.isShareView);
+  const themeSetting = useThemeSetting('sketchlab');
+
+  useReactFlowSketchLabTour({levelProperties, enabled: !isShareView});
 
   const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const {theme} = useTheme();
   const colorMode = theme.toLowerCase() as 'light' | 'dark';
+
+  const hasAttempted = useAppSelector(
+    state => getCurrentLevel(state)?.status !== LevelStatus.not_tried
+  );
 
   const reactFlow = useReactFlow();
   const dialogControl = useDialogControl();
@@ -81,6 +100,17 @@ function ReactFlowSketchLabViewInner({
   );
   const currentUserId = useAppSelector(state => state.currentUser.userId);
   const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
+  const {
+    uploadImage,
+    handleImageNodesDeleted,
+    flaggedImageData,
+    handleAcceptFlaggedImage,
+    handleCancelFlaggedImage,
+    uploadsDisabled,
+    showUploadsDisabledModal,
+    openUploadsDisabledModal,
+    closeUploadsDisabledModal,
+  } = useModeratedImageUpload({levelName: levelProperties.name});
   // The Backpack API redirects to sign-in for signed-out users, so we only
   // create an instance when we have a user.
   const backpackContext = useMemo(
@@ -191,12 +221,11 @@ function ReactFlowSketchLabViewInner({
       supportedFileTypes: SUPPORTED_IMAGE_EXTENSIONS,
       addFileTooltipText: 'Add to sketch',
       addFileHandler: makeBackpackImageImportHandler({
-        levelName: levelProperties.name,
-        channelId,
+        uploadImage,
         addImageNode: (data: ImageNodeData) => setPendingImageImport(data),
       }),
     }),
-    [reactFlow, backpackContext, dialogControl, channelId, levelProperties.name]
+    [reactFlow, backpackContext, dialogControl, uploadImage]
   );
 
   // Read sources, converting from Excalidraw if this project was last
@@ -249,16 +278,34 @@ function ReactFlowSketchLabViewInner({
     readonlyWorkspace,
   ]);
 
+  if (isShareView) {
+    return (
+      <ShareView
+        initialNodes={initialNodes}
+        initialEdges={initialEdges}
+        initialViewport={initialViewport}
+        colorMode={colorMode}
+      />
+    );
+  }
+
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={styles.sketchlabContainer}>
-        <div style={{width: leftPanelWidth}} className={panelClassName}>
+        <div
+          style={isResourcePanelCollapsed ? undefined : {width: leftPanelWidth}}
+          className={classNames(
+            panelClassName,
+            isResourcePanelCollapsed && styles.collapsedPanel
+          )}
+        >
           <ResourcePanel
             levelProperties={levelProperties}
             isRunning={false}
             hasRun={hasRun}
-            hasEdited={false}
-            settings={[useThemeSetting('sketchlab')]}
+            hasEdited={hasAttempted}
+            hideCollapsedTabBorder
+            settings={[themeSetting]}
             versionHistoryProps={{
               startSources:
                 (levelProperties?.templateSources as ProjectSources) ||
@@ -269,12 +316,18 @@ function ReactFlowSketchLabViewInner({
             backpackProps={backpackProps}
           />
         </div>
-        <ResizeBar
-          isVertical={true}
-          separatorProps={panelSeparatorProps}
-          isDragging={isDragging}
-        />
-        <div style={{width: rightPanelWidth}}>
+        {!isResourcePanelCollapsed && (
+          <ResizeBar
+            isVertical={true}
+            separatorProps={panelSeparatorProps}
+            isDragging={isDragging}
+          />
+        )}
+        <div
+          style={
+            isResourcePanelCollapsed ? {flex: 1} : {width: rightPanelWidth}
+          }
+        >
           <PanelContainer
             id="workspace"
             className={panelClassName}
@@ -325,7 +378,10 @@ function ReactFlowSketchLabViewInner({
             <ReactFlowCanvas
               key={mountKey}
               updateSources={updateSources}
-              levelName={levelProperties.name}
+              uploadImage={uploadImage}
+              uploadsDisabled={uploadsDisabled}
+              openUploadsDisabledModal={openUploadsDisabledModal}
+              onNodesDeleted={handleImageNodesDeleted}
               initialNodes={initialNodes}
               initialEdges={initialEdges}
               initialViewport={initialViewport}
@@ -337,6 +393,16 @@ function ReactFlowSketchLabViewInner({
             {WorkspaceAlert}
           </PanelContainer>
         </div>
+        {flaggedImageData && (
+          <FlaggedImageModal
+            appName="sketchlab"
+            onAccept={handleAcceptFlaggedImage}
+            onCancel={handleCancelFlaggedImage}
+          />
+        )}
+        {showUploadsDisabledModal && (
+          <UploadsDisabledModal onClose={closeUploadsDisabledModal} />
+        )}
       </div>
     </BackpackAPIContext.Provider>
   );

@@ -107,7 +107,7 @@ module RegistrationsControllerTests
 
       mail = ActionMailer::Base.deliveries.first
       assert_equal [parent_email], mail.to
-      assert_equal 'Login information for Code.org', mail.subject
+      assert_equal 'Login information for CodeAI', mail.subject
       assert_includes(mail.body.to_s, 'Your child')
     end
 

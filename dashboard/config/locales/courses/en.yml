@@ -4319,7 +4319,7 @@ en:
           description_teacher: ''
           version_title: ''
         getting-started-2025:
-          title: Getting Started with Code.org
+          title: Getting Started with CodeAI
           description_short: ''
           description_student: |-
             ##Welcome
@@ -5476,7 +5476,7 @@ en:
           description_teacher: ''
           version_title: '2025'
         artificial-intelligence-foundations-2025:
-          title: AI Foundations (AIF)
+          title: AI Foundations (Global)
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
           description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
           description_teacher: |-
@@ -7415,7 +7415,7 @@ en:
           description_teacher: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: "'26-'27"
         aif-year2-semester1-pilot:
-          title: AI Foundations Year 2 Semester 1 Pilot
+          title: In Depth with AI 2026 Pilot
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -7530,4 +7530,16 @@ en:
           description_short: UI Test Oceans Course Short Description
           description_student: UI Test Oceans Course Student Description
           description_teacher: UI Test Oceans Course Teacher Description
+          version_title: ''
+        data-science-with-python-2026:
+          title: data-science-with-python-2026
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        aif-pl-playground:
+          title: aif-pl-playground
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
           version_title: ''

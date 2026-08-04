@@ -18,7 +18,7 @@ module Marketing
         ],
         ai_prompts: [],
         priority: 0,
-        expires_at: "2026-08-01T00:00-07:00",
+        expires_at: "2036-08-01T00:00-07:00",
         icon_color: "Purple"
       }
     )
@@ -38,7 +38,7 @@ module Marketing
           }
         ],
         priority: 0,
-        expires_at: "2026-08-01T00:00-07:00",
+        expires_at: "2036-08-01T00:00-07:00",
         icon_color: "Aqua"
       }
     )

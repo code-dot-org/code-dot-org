@@ -7,9 +7,11 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {ASSUMED_BLOCK, getImageModel, MODEL_OUTPUT_PX} from './modelHelpers';
-import {removeBackground} from './removeBackground';
+import {cropToContent, removeBackground} from './removeBackground';
 
-export type SpriteLab2ItemType = 'sprite' | 'background';
+// 'block' is a square platform tile: keyed and cropped to its content so
+// copies tile seamlessly when laid out on the grid.
+export type SpriteLab2ItemType = 'sprite' | 'background' | 'block';
 
 // Visual style. 'pixel' yields crisp pixel art with hard edges (and a sharp,
 // 1-bit background cut); 'smooth' yields a shaded illustration (and a feathered,
@@ -65,7 +67,8 @@ async function normalizeIfPixelArt(
 /**
  * Generate an image from a text prompt using gemini-2.5-flash-image, straight
  * through the AI Gateway (which logs/attributes via AichatContextManager).
- * Sprites get a flat green background that is flood-filled to transparency.
+ * Sprites and blocks get a flat key color the model picks to contrast with
+ * the subject, flood-filled to transparency.
  *
  * @returns the generated image as {filename, uint8Array, mediaType}.
  */
@@ -83,7 +86,9 @@ export async function generateImage(
   const styleClause = STYLE_PROMPT[style];
   let fullPrompt = `${prompt}. ${styleClause}`;
   if (itemType === 'sprite') {
-    fullPrompt = `${fullPrompt} Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
+    fullPrompt = `${fullPrompt} Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.`;
+  } else if (itemType === 'block') {
+    fullPrompt = `${fullPrompt} Draw one large square block centered in the image, with a clear margin around all four sides of one plain solid flat color that contrasts strongly with the block and appears nowhere on it, extending to the image edges. No background scene — just the block on that flat background.`;
   }
 
   const {files} = await generateText({
@@ -96,17 +101,20 @@ export async function generateImage(
     throw new Error('No image was generated');
   }
 
-  // One processing pipeline: sprites get the green background removed
-  // (flood-fill from top-left; pixel art a sharp 1-bit cut, smooth art a
-  // feathered matte), pixel style gets grid-normalized, and any processed
-  // image comes back as PNG. A smooth background passes through as-is.
-  if (itemType === 'sprite' || style === 'pixel') {
+  // Sprites and blocks get the key-color background removed the same way
+  // (both prompts keep the corner as background); blocks are then cropped to
+  // content so grid-placed copies tile seamlessly. Pixel style gets
+  // grid-normalized; a smooth background passes through as-is.
+  if (itemType !== 'background' || style === 'pixel') {
     let blob = new Blob(
       [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
       {type: imageFile.mediaType}
     );
-    if (itemType === 'sprite') {
+    if (itemType === 'sprite' || itemType === 'block') {
       blob = await removeBackground(blob, {soft: style === 'smooth'});
+    }
+    if (itemType === 'block') {
+      blob = await cropToContent(blob);
     }
     let pixelGridSize: number | undefined;
     if (style === 'pixel') {
@@ -157,3 +165,35 @@ export async function uploadAssetToProject(
 export async function deleteAssetFromProject(url: string): Promise<void> {
   await HttpClient.delete(url, true);
 }
+
+/**
+ * Upload a generated image to the level's starter assets.
+ * @returns the URL of the uploaded asset.
+ */
+export async function uploadAssetToLevel(
+  levelName: string,
+  filename: string,
+  data: Uint8Array,
+  mediaType: string
+): Promise<string> {
+  const extension = filename.split('.').pop() || 'png';
+  const uuidName = `${createUuid()}.${extension}`;
+  const url = `/level_starter_assets/${encodeURIComponent(
+    levelName
+  )}/uuid/${uuidName}`;
+  const buffer = new Uint8Array(data).buffer as ArrayBuffer;
+  const bodyData = new FormData();
+  bodyData.append('files[]', new File([buffer], uuidName, {type: mediaType}));
+  await HttpClient.post(url, bodyData, true);
+  return url;
+}
+
+/**
+ * Uploads an image to wherever the current context persists images.
+ * @returns the URL of the uploaded asset.
+ */
+export type UploadImageFunction = (
+  filename: string,
+  data: Uint8Array,
+  mediaType: string
+) => Promise<string>;

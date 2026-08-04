@@ -31,6 +31,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: "pyodide-sandbox.#{CDO.preview_codeprojects_hostname}" do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
   constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
@@ -119,7 +123,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -482,6 +486,7 @@ Dashboard::Application.routes.draw do
         get 'instructions'
         get 'get_rollup_resources'
         get 'generate', to: 'scripts#generate'
+        get 'listing', to: 'scripts#listing'
         put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
@@ -1336,6 +1341,7 @@ Dashboard::Application.routes.draw do
     get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
+    post '/javabuilder/access_token_with_override_sources_and_validation', to: 'javabuilder_sessions#access_token_with_override_sources_and_validation'
 
     post '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
 
@@ -1472,7 +1478,11 @@ Dashboard::Application.routes.draw do
 
     resources :challenges, only: [:index, :show]
     resources :challenge_responses, only: [:create, :show]
-    resources :challenge_response_assets, only: [:show]
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

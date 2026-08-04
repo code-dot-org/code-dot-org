@@ -1,3 +1,5 @@
+import Dialog from '@code-dot-org/component-library/dialog';
+import Modal from '@code-dot-org/component-library/modal';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -22,6 +24,7 @@ export default class VersionHistory extends React.Component {
     useFilesApi: PropTypes.bool.isRequired,
     selectedVersion: PropTypes.string,
     isReadOnly: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
   };
 
   /**
@@ -116,7 +119,7 @@ export default class VersionHistory extends React.Component {
   };
 
   onClearPuzzle = () => {
-    this.setState({showSpinner: true});
+    this.setState({confirmingClearPuzzle: false, showSpinner: true});
 
     this.props
       .handleClearPuzzle()
@@ -124,11 +127,43 @@ export default class VersionHistory extends React.Component {
       .then(() => utils.reload());
   };
 
+  renderStartOverDialog() {
+    return (
+      <Dialog
+        title={i18n.versionHistory_clearProgress_header()}
+        description={i18n.versionHistory_clearProgress_prompt()}
+        onClose={this.onCancelClearPuzzle}
+        closeLabel={i18n.versionHistory_clearProgress_cancel()}
+        customContent={
+          this.props.isProjectTemplateLevel && (
+            <MuiTypography variant="body1" className="template-level-warning">
+              {i18n.versionHistory_clearProgress_templateLevelWarning()}
+            </MuiTypography>
+          )
+        }
+        primaryButtonProps={{
+          id: 'start-over-button',
+          color: 'error',
+          children: i18n.versionHistory_clearProgress_confirm(),
+          onClick: this.onClearPuzzle,
+        }}
+        secondaryButtonProps={{
+          id: 'again-button',
+          className: styles.cancelButton,
+          children: i18n.versionHistory_clearProgress_cancel(),
+          onClick: this.onCancelClearPuzzle,
+        }}
+      />
+    );
+  }
+
   render() {
-    let title;
+    if (this.state.confirmingClearPuzzle) {
+      return this.renderStartOverDialog();
+    }
+
     let body;
     if (this.state.showSpinner) {
-      title = i18n.versionHistory_header();
       body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
           <i
@@ -137,46 +172,7 @@ export default class VersionHistory extends React.Component {
           />
         </div>
       );
-    } else if (this.state.confirmingClearPuzzle) {
-      title = i18n.versionHistory_clearProgress_header();
-      body = (
-        <div>
-          <MuiTypography variant="body1">
-            {i18n.versionHistory_clearProgress_prompt()}
-          </MuiTypography>
-          {this.props.isProjectTemplateLevel && (
-            <MuiTypography variant="body1" className="template-level-warning">
-              {i18n.versionHistory_clearProgress_templateLevelWarning()}
-            </MuiTypography>
-          )}
-          <MuiButton
-            type="button"
-            color="error"
-            size="small"
-            variant="contained"
-            id="start-over-button"
-            style={{marginLeft: 0}}
-            onClick={this.onClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_confirm()}
-          </MuiButton>
-          <MuiButton
-            type="button"
-            color="secondary"
-            size="small"
-            variant="outlined"
-            id="again-button"
-            className={styles.cancelButton}
-            style={{float: 'right'}}
-            onClick={this.onCancelClearPuzzle}
-          >
-            {i18n.versionHistory_clearProgress_cancel()}
-          </MuiButton>
-        </div>
-      );
     } else {
-      title = i18n.versionHistory_header();
-
       const rows = this.state.versions.map(
         function (version, index) {
           return (
@@ -199,53 +195,58 @@ export default class VersionHistory extends React.Component {
       );
 
       body = (
-        <div>
-          <div style={{maxHeight: '330px', overflowX: 'auto', margin: '1em 0'}}>
-            <table style={{width: '100%'}}>
-              <tbody>
-                {rows}
-                {!this.props.isReadOnly && (
-                  <tr>
-                    <td>
-                      <MuiTypography variant="body1">
-                        {i18n.versionHistory_initialVersion_label()}
-                      </MuiTypography>
-                    </td>
-                    <td
-                      width="275"
-                      style={{textAlign: 'right'}}
-                      className={styles.actionCell}
+        <div className={styles.versionList}>
+          <table style={{width: '100%'}}>
+            <tbody>
+              {rows}
+              {!this.props.isReadOnly && (
+                <tr>
+                  <td className={styles.labelCell}>
+                    <MuiTypography variant="body1">
+                      {i18n.versionHistory_initialVersion_label()}
+                    </MuiTypography>
+                  </td>
+                  <td
+                    width="275"
+                    style={{textAlign: 'right'}}
+                    className={styles.actionCell}
+                  >
+                    <MuiButton
+                      type="button"
+                      color="error"
+                      size="small"
+                      variant="contained"
+                      onClick={this.onConfirmClearPuzzle}
                     >
-                      <MuiButton
-                        type="button"
-                        color="error"
-                        size="small"
-                        variant="contained"
-                        onClick={this.onConfirmClearPuzzle}
-                        style={{float: 'right'}}
-                      >
-                        {i18n.versionHistory_clearProgress_confirm()}
-                      </MuiButton>
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
+                      {i18n.versionHistory_clearProgress_confirm()}
+                    </MuiButton>
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       );
     }
 
     return (
-      <div className="modal-content" style={{margin: 0}}>
-        <MuiTypography variant="h5" className="dialog-title">
-          {title}
-        </MuiTypography>
-        {body}
-        <MuiTypography variant="body2" className="caption-text">
-          {this.state.statusMessage}
-        </MuiTypography>
-      </div>
+      <Modal
+        title={i18n.versionHistory_header()}
+        onClose={this.props.onClose}
+        closeLabel={i18n.closeDialog()}
+        customContent={
+          <div className={styles.modalBody}>
+            {body}
+            <MuiTypography variant="body2" className="caption-text">
+              {this.state.statusMessage}
+            </MuiTypography>
+          </div>
+        }
+        primaryButtonProps={{
+          children: i18n.closeDialog(),
+          onClick: this.props.onClose,
+        }}
+      />
     );
   }
 }

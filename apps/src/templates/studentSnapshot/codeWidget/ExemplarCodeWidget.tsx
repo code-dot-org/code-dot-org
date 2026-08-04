@@ -29,12 +29,18 @@ const ExemplarCodeWidget = ({
   lessonId,
 }: ExemplarCodeWidgetProps) => {
   const [exemplarCode, setExemplarCode] = useState<ExemplarCodeData>();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [lastLessonId, setLastLessonId] = useState(lessonId);
+  if (lessonId !== lastLessonId) {
+    setLastLessonId(lessonId);
+    setExemplarCode(undefined);
+    setIsLoading(!!lessonId);
+  }
 
   useEffect(() => {
     if (lessonId) {
       let isCancelled = false;
-      setIsLoading(true);
 
       getExemplarCodeData(lessonId)
         .then(data => {
@@ -57,11 +63,12 @@ const ExemplarCodeWidget = ({
       return () => {
         isCancelled = true;
       };
-    } else {
-      setExemplarCode(undefined);
-      setIsLoading(false);
     }
   }, [lessonId]);
+
+  if (!isLoading && !exemplarCode?.exemplarSources) {
+    return null;
+  }
 
   return (
     <CodeWidget

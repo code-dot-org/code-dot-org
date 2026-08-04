@@ -229,6 +229,13 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+      # For lessons with Tutor+ available (AIF/AID courses), send students at
+      # the end of the lesson to the lesson deep dive ("tutor") space instead of
+      # the next-level / unit-overview redirect. This is the single choke point
+      # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
+      # takes precedence over lesson extras and the unit overview dialog.
+      lesson.lesson_tutor_path
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit

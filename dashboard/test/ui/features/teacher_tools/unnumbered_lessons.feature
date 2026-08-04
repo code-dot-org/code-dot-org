@@ -1,3 +1,4 @@
+@playwright
 Feature: Unnumbered Lessons
 
   Scenario: Units with Unnumbered Lessons

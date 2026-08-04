@@ -6,7 +6,6 @@ import type {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 import {
@@ -24,7 +23,8 @@ import {
   getHandleFlowPosition,
   lineAnchorHandleId,
 } from '../utils/lineAnchors';
-import {uploadImageAsset} from '../utils/uploadImageAsset';
+
+import type {ModeratedImageUploader} from './useModeratedImageUpload';
 
 interface UseCopyPasteOptions {
   nodes: SketchlabReactFlowNode[];
@@ -36,10 +36,21 @@ interface UseCopyPasteOptions {
     updater: (edges: SketchlabReactFlowEdge[]) => SketchlabReactFlowEdge[]
   ) => void;
   pushSnapshot: () => void;
+  clearHistory: () => void;
   canvasContainerRef: React.RefObject<HTMLDivElement>;
   readOnly: boolean;
-  levelName: string;
+  uploadImage: ModeratedImageUploader;
   onImageUploadError: () => void;
+  onFlaggedImageCopyBlocked: () => void;
+}
+
+// Flagged images must not be copied: clones share the original's asset URL,
+// so deleting any one copy would hard-delete the asset out from under the
+// others and lift the abuse block while flagged copies remain.
+function containsFlaggedImage(contents: ClipboardContents): boolean {
+  return contents.nodes.some(
+    node => node.type === 'image' && node.data.flagged
+  );
 }
 
 // Returns the handle-to-handle horizontal span of a line clipboard's anchor
@@ -62,16 +73,17 @@ export function useCopyPaste({
   setNodes,
   setEdges,
   pushSnapshot,
+  clearHistory,
   canvasContainerRef,
   readOnly,
-  levelName,
+  uploadImage,
   onImageUploadError,
+  onFlaggedImageCopyBlocked,
 }: UseCopyPasteOptions) {
   const {deleteElements, screenToFlowPosition} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
-  const channelId = useAppSelector(state => state.lab.channel?.id) ?? '';
 
   // Keyboard clipboard. useRef holds data (no re-renders); useState tracks
   // whether anything is available so dependent UI can update.
@@ -124,7 +136,7 @@ export function useCopyPaste({
   // Drop a clipboard-pasted image onto the canvas as an ImageNode. Positioned
   // top-left at the cursor when it's over the canvas, else centered in the viewport.
   const pasteImage = useCallback(
-    (src: string) => {
+    (src: string, flagged: boolean) => {
       const mousePos = mousePositionRef.current;
       const position =
         mousePos ??
@@ -135,15 +147,19 @@ export function useCopyPaste({
       const newImageNode = {
         id: createUuid(),
         type: 'image',
-        data: {src, altText: ''},
+        data: {src, altText: '', ...(flagged && {flagged})},
         position,
         width: DEFAULT_NODE_WIDTH,
         height: DEFAULT_NODE_HEIGHT,
       } as SketchlabReactFlowNode;
-      pushSnapshot();
+      if (flagged) {
+        clearHistory();
+      } else {
+        pushSnapshot();
+      }
       setNodes(currentNodes => [...currentNodes, newImageNode]);
     },
-    [screenToFlowPosition, pushSnapshot, setNodes]
+    [screenToFlowPosition, pushSnapshot, clearHistory, setNodes]
   );
 
   const buildNodeClipboard = useCallback(
@@ -236,6 +252,10 @@ export function useCopyPaste({
           ? lastDuplicateRef.current
           : buildNodeClipboard(nodeId);
       if (!source) return;
+      if (containsFlaggedImage(source)) {
+        onFlaggedImageCopyBlocked();
+        return;
+      }
 
       const newNodes = source.nodes.map(node => ({
         ...node,
@@ -252,7 +272,7 @@ export function useCopyPaste({
       pushSnapshot();
       setNodes(currentNodes => [...currentNodes, ...newNodes]);
     },
-    [buildNodeClipboard, pushSnapshot, setNodes]
+    [buildNodeClipboard, pushSnapshot, setNodes, onFlaggedImageCopyBlocked]
   );
 
   // Toolbar action: duplicate a line.
@@ -311,7 +331,12 @@ export function useCopyPaste({
           node?.type === 'group'
             ? buildGroupClipboard(entry.id)
             : buildNodeClipboard(entry.id);
-        if (contents) writeClipboard(contents);
+        if (!contents) return;
+        if (containsFlaggedImage(contents)) {
+          onFlaggedImageCopyBlocked();
+          return;
+        }
+        writeClipboard(contents);
       } else if (entry.type === 'edge') {
         const contents = buildLineEdgeClipboard(entry.id);
         if (contents) writeClipboard(contents);
@@ -323,6 +348,7 @@ export function useCopyPaste({
       buildNodeClipboard,
       buildLineEdgeClipboard,
       writeClipboard,
+      onFlaggedImageCopyBlocked,
     ]
   );
 
@@ -333,6 +359,10 @@ export function useCopyPaste({
         if (node?.type === 'group') {
           const contents = buildGroupClipboard(entry.id);
           if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
           writeClipboard(contents);
           // The canvas's onBeforeDelete handler expands this to the group's
           // children.
@@ -340,6 +370,10 @@ export function useCopyPaste({
         } else {
           const contents = buildNodeClipboard(entry.id);
           if (!contents) return;
+          if (containsFlaggedImage(contents)) {
+            onFlaggedImageCopyBlocked();
+            return;
+          }
           writeClipboard(contents);
           deleteElements({nodes: [{id: entry.id}]});
         }
@@ -371,6 +405,7 @@ export function useCopyPaste({
       deleteElements,
       buildLineEdgeClipboard,
       edges,
+      onFlaggedImageCopyBlocked,
     ]
   );
 
@@ -485,25 +520,18 @@ export function useCopyPaste({
         return;
       }
 
-      try {
-        const uploadUrl = await uploadImageAsset(file, {levelName, channelId});
-        if (!uploadUrl) {
-          onImageUploadError();
-          return;
-        }
-        pasteImage(uploadUrl);
-      } catch (error) {
-        console.error('Failed to upload pasted image:', error);
-        onImageUploadError();
-      }
+      await uploadImage({
+        file,
+        onUploaded: pasteImage,
+        onError: onImageUploadError,
+      });
     };
     document.addEventListener('paste', handlePaste);
     return () => document.removeEventListener('paste', handlePaste);
   }, [
     canvasContainerRef,
     readOnly,
-    levelName,
-    channelId,
+    uploadImage,
     paste,
     pasteImage,
     onImageUploadError,

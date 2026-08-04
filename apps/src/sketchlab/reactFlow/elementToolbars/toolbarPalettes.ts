@@ -19,6 +19,12 @@ export const STROKE_FONT_PALETTE: ColorSwatch[] = [
   {value: 'var(--sketchlab-stroke-pink)', label: 'Pink'},
 ];
 
+// Text-box borders offer the same colors as shape borders plus Clear.
+export const TEXT_BORDER_PALETTE: ColorSwatch[] = [
+  {value: 'transparent', label: 'Clear', transparent: true},
+  ...STROKE_FONT_PALETTE,
+];
+
 export const BACKGROUND_PALETTE: ColorSwatch[] = [
   {value: 'transparent', label: 'Clear', transparent: true},
   {value: 'var(--sketchlab-bg-gray)', label: 'Gray'},
@@ -41,6 +47,32 @@ export type FontSizeValue = (typeof FONT_SIZE_OPTIONS)[number]['value'];
 
 // fontSize on a node may be a named preset or a raw pixel number.
 export type FontSize = FontSizeValue | number;
+
+// Font-family presets. We store the stable `value` key on the node and resolve
+// it to a `css` stack at render time. Every stack but Sans relies on fonts
+// the OS ships (none are bundled), so glyphs vary by device; each ends in a
+// generic family so text still renders in the right category everywhere.
+export const FONT_FAMILY_OPTIONS = [
+  {value: 'sans', label: 'Sans', css: 'var(--font-family-main)'},
+  {
+    value: 'monospace',
+    label: 'Monospace',
+    css: "'Courier New', Consolas, 'DejaVu Sans Mono', monospace",
+  },
+  {value: 'serif', label: 'Serif', css: "Georgia, 'Times New Roman', serif"},
+  {
+    value: 'cursive',
+    label: 'Cursive',
+    css: "'Segoe Script', 'Brush Script MT', 'Snell Roundhand', cursive",
+  },
+  {
+    value: 'draw',
+    label: 'Draw',
+    css: "'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', fantasy",
+  },
+] as const;
+
+export type FontFamilyValue = (typeof FONT_FAMILY_OPTIONS)[number]['value'];
 
 // We set a minimum font size for sanity-checking but do not set a maximum,
 // since the canvas can be zoomed out.
@@ -105,7 +137,11 @@ export type TextAlignValue = (typeof TEXT_ALIGN_OPTIONS)[number]['value'];
 export const DEFAULT_BACKGROUND_COLOR = 'transparent';
 export const DEFAULT_STROKE_COLOR = 'var(--sketchlab-stroke-default)';
 export const DEFAULT_FONT_COLOR = 'var(--sketchlab-stroke-default)';
+// Fallback when a text node has no strokeColor, i.e. it predates the border
+// option. New nodes get an explicit color at creation instead.
+export const DEFAULT_TEXT_BORDER_COLOR = 'transparent';
 export const DEFAULT_FONT_SIZE: FontSizeValue = 'medium';
+export const DEFAULT_FONT_FAMILY: FontFamilyValue = 'sans';
 export const DEFAULT_TEXT_ALIGN: TextAlignValue = 'center';
 export const DEFAULT_LINE_WIDTH: LineWidthValue = 1;
 export const DEFAULT_LINE_STROKE_STYLE: LineStrokeStyleValue = 'solid';
@@ -161,6 +197,16 @@ export function fontSizePx(value: FontSize | undefined): number | undefined {
   return (
     match?.px ||
     FONT_SIZE_OPTIONS.find(option => option.value === DEFAULT_FONT_SIZE)?.px
+  );
+}
+
+export function fontFamilyCss(value: FontFamilyValue | undefined): string {
+  const match = FONT_FAMILY_OPTIONS.find(option => option.value === value);
+  return (
+    match?.css ??
+    FONT_FAMILY_OPTIONS.find(option => option.value === DEFAULT_FONT_FAMILY)
+      ?.css ??
+    'var(--font-family-main)'
   );
 }
 

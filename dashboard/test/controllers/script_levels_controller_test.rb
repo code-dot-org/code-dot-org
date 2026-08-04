@@ -713,9 +713,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     create_hourofcode_unit_and_levels
+    hoc_course_name = Unit.get_from_cache(Unit::HOC_NAME).original_unit_group.name
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
+        course_course_name: hoc_course_name,
         unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
@@ -724,7 +725,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        course_course_name: Unit.hoc_2014_unit.original_unit_group.name,
+        course_course_name: hoc_course_name,
         unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
@@ -1239,7 +1240,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
-    assert_equal 'Laurel Lesson 2 #1 | custom-script-laurel - Code.org [test]',
+    brand_name = Cdo::Brand.legal_name(@request)
+    assert_equal "Laurel Lesson 2 #1 | custom-script-laurel - #{brand_name} [test]",
       Nokogiri::HTML(@response.body).css('title').text.strip
   end
 

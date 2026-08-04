@@ -151,6 +151,10 @@
     }
   }
 
+  &.hideCollapsedTabBorder.collapsed .tabButton.tabButton.selected {
+    border-inline-end: none;
+  }
+
   .bottomTabs {
     display: flex;
     flex-direction: column;

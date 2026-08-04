@@ -100,22 +100,23 @@ export default class ReCaptchaDialog extends React.Component {
       <div>
         <BaseDialog
           useUpdatedStyles
-          fixedWidth={600}
+          fixedWidth={640}
           handleClose={handleCancel}
-          style={styles.dialog}
           isOpen={isOpen}
         >
-          <h3>{title || i18n.verifyNotBot()}</h3>
-          {children}
-          {!this.state.loadedCaptcha && <Spinner size="large" />}
-          {this.state.loadedCaptcha && (
-            <div
-              className="g-recaptcha"
-              data-sitekey={siteKey}
-              data-callback="onCaptchaSubmit"
-              data-expired-callback="onCaptchaExpired"
-            />
-          )}
+          <div style={styles.body}>
+            <h3>{title || i18n.verifyNotBot()}</h3>
+            {children}
+            {!this.state.loadedCaptcha && <Spinner size="large" />}
+            {this.state.loadedCaptcha && (
+              <div
+                className="g-recaptcha"
+                data-sitekey={siteKey}
+                data-callback="onCaptchaSubmit"
+                data-expired-callback="onCaptchaExpired"
+              />
+            )}
+          </div>
           <DialogFooter>
             <Button
               onClick={handleCancel}
@@ -136,7 +137,7 @@ export default class ReCaptchaDialog extends React.Component {
 }
 
 const styles = {
-  dialog: {
+  body: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,

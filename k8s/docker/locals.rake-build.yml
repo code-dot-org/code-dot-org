@@ -9,7 +9,6 @@ build_apps: true
 # Enabling this copies lots of CSS/image assets to the rails public
 # folder and is important for the resulting dashboard to load.
 build_dashboard: true
-build_i18n: false
 build_pegasus: true
 
 # Setting this to true will keep `rake build` from trying to seed the DB

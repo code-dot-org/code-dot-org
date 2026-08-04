@@ -2,7 +2,7 @@ require 'test_helper'
 
 class HeaderTest < ActionDispatch::IntegrationTest
   setup_all do
-    # The page header falls back to the hourofcode unit (Unit.hoc_2014_unit),
+    # The page header falls back to the hourofcode unit,
     # so full page renders need it to exist.
     create_hourofcode_unit_and_levels
   end
@@ -37,13 +37,14 @@ class HeaderTest < ActionDispatch::IntegrationTest
 
       it 'renders links' do
         {
-          'Learn'      => '//test.code.org/students',
-          'Teach'      => '//test.code.org/teach',
-          'Districts'  => '//test.code.org/administrators',
-          'Stats'      => '//test.code.org/promote',
-          'Donate'     => '//test.code.org/donate',
-          'Incubator'  => '//test.code.org/incubator',
-          'About'      => '//test.code.org/about'
+          'Teachers'   => '//test.code.org/teachers',
+          'Districts'  => '//test.code.org/districts',
+          'Advocacy'   => 'https://advocacy.code.org',
+          'Hour of AI' => '//test.code.org/hour-of-ai',
+          'Parents'    => '//test.code.org/parents',
+          'Students'   => '//test.code.org/students',
+          'About'      => '//test.code.org/about',
+          'Donate'     => '//test.code.org/donate'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
         end
@@ -92,56 +93,23 @@ class HeaderTest < ActionDispatch::IntegrationTest
           end
         end
 
+        # The signed-out hamburger mirrors the marketing nav as flat links —
+        # under this brand there are no Teach or About submenus to descend into,
+        # only the Privacy & Legal one below.
         it 'renders links' do
           {
-            'Learn'            => '//test.code.org/students',
-            'Districts'        => '//test.code.org/administrators',
-            'Stats'            => '//test.code.org/promote',
+            'Teachers'         => '//test.code.org/teachers',
+            'Districts'        => '//test.code.org/districts',
+            'Advocacy'         => 'https://advocacy.code.org',
+            'Hour of AI'       => '//test.code.org/hour-of-ai',
+            'Parents'          => '//test.code.org/parents',
+            'Students'         => '//test.code.org/students',
+            'About'            => '//test.code.org/about',
             'Donate'           => '//test.code.org/donate',
-            'Incubator'        => '//test.code.org/incubator',
             'Help and support' => 'https://support.code.org',
             'Report a problem' => 'https://support.code.org/hc/en-us/requests/new',
           }.each do |text, href|
             must_select 'a[href=?]', href, text
-          end
-        end
-
-        it 'renders links within Teach submenu' do
-          must_select '#educate_entries', 'Teach'
-          must_select '#educate_entries-items' do
-            {
-              'Educator Overview'      => '//test.code.org/teach',
-              'Course Catalog'         => 'https://test-studio.code.org/catalog',
-              'Elementary School'      => '//test.code.org/educate/curriculum/elementary-school',
-              'Middle School'          => '//test.code.org/educate/curriculum/middle-school',
-              'High School'            => '//test.code.org/educate/curriculum/high-school',
-              'Hour of Code'           => 'https://hourofcode.com',
-              'Beyond Code.org'        => '//test.code.org/educate/curriculum/3rd-party',
-              'Online Community'       => 'https://forum.code.org/',
-              'Technical Requirements' => '//test.code.org/educate/it',
-              'Tools and Videos'       => '//test.code.org/educate/resources/videos',
-            }.each do |text, href|
-              must_select 'a[href=?]', href, text
-            end
-          end
-        end
-
-        it 'renders links within About submenu' do
-          must_select '#about_entries', 'About'
-          must_select '#about_entries-items' do
-            {
-              'About Us'    => '//test.code.org/about',
-              'Leadership'  => '//test.code.org/about/leadership',
-              'Donors'      => '//test.code.org/about/donors',
-              'Partners'    => '//test.code.org/about/partners',
-              'Full Team'   => '//test.code.org/about/team',
-              'Newsroom'    => '//test.code.org/about/news',
-              'Careers'     => '//test.code.org/about/jobs',
-              'Contact Us'  => '//test.code.org/contact',
-              'FAQs'        => '//test.code.org/faq',
-            }.each do |text, href|
-              must_select 'a[href=?]', href, text
-            end
           end
         end
 

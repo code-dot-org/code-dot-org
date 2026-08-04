@@ -1,4 +1,5 @@
 require 'cdo/url_converter'
+require 'cdo/brand'
 
 DEFAULT_WAIT_TIMEOUT = 2.minutes
 SHORT_WAIT_TIMEOUT = 30.seconds
@@ -218,8 +219,19 @@ end
 
 When /^I close the dialog$/ do
   # Add a wait to closing dialog because it's sometimes animated, now.
+  # Legacy BaseDialog renders `#x-close`; DSCO CustomDialog renders a button
+  # with `aria-label="Close"`. Both may coexist in the DOM (legacy dialogs
+  # stay mounted after being hidden), so match only the visible one.
+  script = <<~JS
+    var candidates = Array.from(document.querySelectorAll(
+      '#x-close, [role="dialog"] button[aria-label="Close"]'
+    ));
+    var el = candidates.find(function (n) { return n.offsetParent !== null; });
+    if (el) { el.click(); }
+    return !!el;
+  JS
+  wait_short_until {@browser.execute_script(script)}
   steps <<-GHERKIN
-    When I press "x-close"
     And I wait for 0.75 seconds
   GHERKIN
 end
@@ -715,6 +727,10 @@ Then /^I should see title includes "([^"]*)"$/ do |title|
   expect(@browser.title).to include(title)
 end
 
+Then /^I should see branded title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include("#{title} - #{Cdo::Brand.legal_name}")
+end
+
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
@@ -773,10 +789,10 @@ Then /^element "([^"]*)" has html "([^"]*)"$/ do |selector, expected_html|
 end
 
 Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  steps %{
-    Then I wait to see a ".dialog-title"
-    And element ".dialog-title" has text "#{expected_text}"
-  }
+  # Legacy BaseDialog uses `.dialog-title`; DSCO CustomDialog puts the title in
+  # an h3 inside a `[role="dialog"]`. Accept either.
+  selector = %q($('.dialog-title:visible').first().text() || $('[role="dialog"]:visible h3').first().text())
+  wait_short_until {@browser.execute_script("return #{selector};")&.include?(expected_text)}
 end
 
 Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|

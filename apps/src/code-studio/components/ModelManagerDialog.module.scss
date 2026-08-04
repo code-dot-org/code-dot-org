@@ -1,0 +1,47 @@
+.mlModal [class*='modalContentSection'] {
+  max-height: none;
+  overflow: visible;
+}
+
+.mlModal [class*='modalDescription'] {
+  white-space: normal;
+}
+
+.mlModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.spinner {
+  height: calc(80vh - 140px);
+  color: var(--text-neutral-secondary);
+}
+
+.emptyState {
+  color: var(--text-neutral-secondary);
+  text-align: center;
+  padding: 24px 0;
+}
+
+.modelCardScroll {
+  max-height: calc(80vh - 250px);
+  overflow-y: auto;
+  scrollbar-color: var(--background-neutral-senary)
+    var(--background-neutral-quinary);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--background-neutral-quinary);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-neutral-senary);
+    border-radius: 5px;
+    border: 2px solid var(--background-neutral-quinary);
+  }
+}

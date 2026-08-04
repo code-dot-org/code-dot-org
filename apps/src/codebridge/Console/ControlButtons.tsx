@@ -20,6 +20,7 @@ import {
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
@@ -168,6 +169,7 @@ const ControlButtons: React.FunctionComponent = () => {
             id="uitest-codebridge-run"
             onClick={handleRun}
             type="button"
+            sx={getRunButtonSx()}
             startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
           >
             {codebridgeI18n.run()}

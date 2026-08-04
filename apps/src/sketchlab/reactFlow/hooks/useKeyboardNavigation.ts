@@ -12,6 +12,7 @@ import {
   DEFAULT_NODE_WIDTH,
   MIN_NODE_HEIGHT,
   MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
 } from '../constants';
@@ -73,8 +74,10 @@ function resizeNodeByDelta(
     if (node.id !== nodeId) return node;
     const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
     const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
+    const minHeight =
+      node.type === 'text' ? MIN_TEXT_NODE_HEIGHT : MIN_NODE_HEIGHT;
     const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + deltaWidth);
-    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + deltaHeight);
+    const newHeight = Math.max(minHeight, currentHeight + deltaHeight);
     return {...node, width: newWidth, height: newHeight};
   });
 }
@@ -147,9 +150,8 @@ interface KeyContext {
  * Keyboard-driven edge creation and canvas key handling.
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
- * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. "[" and "]" resize the focused node by adjusting its width and
- * height by the keyboard resize step.
+ * candidate target nodes, Enter or "c" to create the edge. Escape cancels.
+ * "[" and "]" resize the focused node by adjusting its width and height by the keyboard resize step.
  * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  *
@@ -379,23 +381,25 @@ export function useKeyboardNavigation({
     [connectingFrom, nodes, openToolbar]
   );
 
-  const handleConnectToggle = useCallback(
+  const handleConnectKey = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
       if (event.key !== 'c') return false;
       if (connectingFrom) {
-        event.preventDefault();
-        cancelConnect();
-        return true;
-      }
-      if (focusedNodeId) {
+        // A second "c" completes the connection to the focused target, like Enter.
+        if (focusedNodeId && focusedNodeId !== connectingFrom) {
+          event.preventDefault();
+          event.stopPropagation();
+          completeConnect(focusedNodeId);
+        }
+      } else if (focusedNodeId) {
         event.preventDefault();
         startConnect(focusedNodeId);
       }
       // Always consume "c" so it never falls through to other handlers.
       return true;
     },
-    [connectingFrom, cancelConnect, startConnect]
+    [connectingFrom, startConnect, completeConnect]
   );
 
   const handleConnectComplete = useCallback(
@@ -791,7 +795,7 @@ export function useKeyboardNavigation({
 
       if (handleOpenToolbar(keyContext)) return;
       if (handleGroupModeEnter(keyContext)) return;
-      if (handleConnectToggle(keyContext)) return;
+      if (handleConnectKey(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
       // All further interactions require an unlocked element, if an element is focused.
@@ -826,7 +830,7 @@ export function useKeyboardNavigation({
       handleRedo,
       handleOpenToolbar,
       handleGroupModeEnter,
-      handleConnectToggle,
+      handleConnectKey,
       handleConnectComplete,
       handleArrowMove,
       handleResize,

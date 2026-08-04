@@ -14,7 +14,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   deleteAssetFromProject,
-  uploadAssetToProject,
+  UploadImageFunction,
 } from '../ai/items/itemGeneration';
 import {
   getTrimmedThumbnail,
@@ -63,12 +63,12 @@ const GalleryCard = React.memo<GalleryCardProps>(
 GalleryCard.displayName = 'GalleryCard';
 
 /**
- * The Images tab: the project's image gallery (delete, click-to-edit via the
- * pixel editor).
+ * The Images tab: the project's image gallery (delete, click-to-edit via the pixel editor).
  */
-const GenerateImagePane: React.FunctionComponent = () => {
+const GenerateImagePane: React.FunctionComponent<{
+  uploadImage?: UploadImageFunction;
+}> = ({uploadImage}) => {
   const dispatch = useAppDispatch();
-  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   // The project's images live in the animation list (AI-generated images are
   // bridged in there); this view is also how you manage them.
@@ -85,12 +85,25 @@ const GenerateImagePane: React.FunctionComponent = () => {
   const [, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 
+  // Compute trims for images added after the initial load (a fresh
+  // generation lands here before any engine preload runs). The pass is
+  // source-cached, so only new images do work.
+  const animationList = useAppSelector(state => state.animationList);
+  useEffect(() => {
+    trimAnimationListImages(animationList);
+  }, [animationList]);
+
+  // The channel is only needed to recognize this project's own asset URLs;
+  // uploads go through the uploadImage seam.
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
   // Reclaim a superseded image asset. Guards keep it safe: only this
-  // project's own uploaded assets (never library images, absolute URLs, or
-  // inline dataURIs), and only when no image still points at it (a duplicate
-  // can share one). Best-effort — a failed cleanup never disrupts the edit or
-  // delete. Known tradeoff: restoring an older project version shows a broken
-  // image for anything deleted since (as in App Lab).
+  // project's own uploaded assets (never library images, absolute URLs,
+  // inline dataURIs, or level starter assets), and only when no image still
+  // points at it (a duplicate can share one). Best-effort — a failed cleanup
+  // never disrupts the edit or delete. Known tradeoff: restoring an older
+  // project version shows a broken image for anything deleted since (as in
+  // App Lab).
   const deleteUnreferencedAsset = useCallback(
     (url?: string) => {
       if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
@@ -122,10 +135,10 @@ const GenerateImagePane: React.FunctionComponent = () => {
   );
 
   // Pixel editor: clicking a gallery image opens it in the modal; Save
-  // uploads the edited PNG as a fresh project asset (new filename, so
-  // nothing caches the old pixels) and points the animation at it. Without
-  // a channel the dataURI itself is stored as the source, which persists in
-  // project sources.
+  // uploads the edited PNG as a fresh asset (new filename, so nothing caches
+  // the old pixels) and points the animation at it. With nowhere to upload,
+  // the dataURI itself is stored as the source, which persists in project
+  // sources.
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const editingProps = editingKey
     ? images.find(i => i.key === editingKey)?.props
@@ -147,15 +160,14 @@ const GenerateImagePane: React.FunctionComponent = () => {
       const frameSize: {x: number; y: number} | null =
         await dataURIToSourceSize(dataURI).catch(() => null);
       let sourceUrl = dataURI;
-      if (channelId) {
+      if (uploadImage) {
         try {
           const base64 = dataURI.split(',')[1];
           const bytes = Uint8Array.from(atob(base64), c => c.charCodeAt(0));
           const safeName = (props.name || 'image')
             .toLowerCase()
             .replace(/[^a-z0-9]+/g, '_');
-          sourceUrl = await uploadAssetToProject(
-            channelId,
+          sourceUrl = await uploadImage(
             `${safeName}_${Date.now()}.png`,
             bytes,
             'image/png'
@@ -195,7 +207,7 @@ const GenerateImagePane: React.FunctionComponent = () => {
       // The image now points at the fresh asset; drop the old one.
       deleteUnreferencedAsset(previousUrl);
     },
-    [editingKey, editingProps, channelId, dispatch, deleteUnreferencedAsset]
+    [editingKey, editingProps, uploadImage, dispatch, deleteUnreferencedAsset]
   );
 
   return (

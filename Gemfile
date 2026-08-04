@@ -78,6 +78,7 @@ gem 'rack_csrf'
 
 # Allow profiling in all environments (including production). It will only be enabled when
 # CDO.rack_mini_profiler_enabled is set. See dashboard/config/initializers/mini_profiler.rb
+gem 'bootsnap', '>= 1.14.0', require: false
 gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
@@ -85,11 +86,8 @@ gem 'annotaterb', '~> 4.19', group: [:development, :test]
 
 group :development do
   gem 'aws-google', '~> 0.2.3'
-  gem 'web-console', '~> 4.2.0'
-  # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
-  # We only use it in development atm to get a feel for it, and the benefit is greatest here.
-  gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
+  gem 'web-console', '~> 4.2.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -201,7 +199,10 @@ gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # see: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9284
 gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 
-gem 'bootstrap-sass', '~> 2.3.2.2'
+# Target the same version of Bootstrap as we use in Javascript while we work on
+# moving all assets into the JS pipeline.
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
 
