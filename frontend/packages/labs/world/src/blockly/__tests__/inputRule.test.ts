@@ -35,12 +35,24 @@ describe('rules/input.rule', () => {
     expect(meta.ability).toBe('Responds to Input');
     expect(meta.traits).toEqual([]);
     expect(meta.events.map(event => event.ref.exportName)).toEqual([
-      'SeesThatAKeyIsPressedEvent',
-      'SeesThatAKeyIsReleasedEvent',
+      'IsPressedEvent',
+      'IsReleasedEvent',
     ]);
-    expect(module_).toContain(
-      'export const SeesThatAKeyIsPressedEvent = rule.addEvent(',
-    );
+    expect(module_).toContain('export const IsPressedEvent = rule.addEvent(');
+  });
+
+  it('signs its events with the key, so a handler filters on one', () => {
+    // The phrasing is "⟨a key⟩ is pressed" — a choice from `Engine#Key` and
+    // then the wording — so the hat carries a dropdown and the handler it
+    // generates runs for that key alone (specs/ENUMS.md).
+    expect(meta.events[0].parts).toEqual([
+      {kind: 'param', name: 'pressed key', type: 'enum:Engine#Key'},
+      {kind: 'label', text: 'is pressed'},
+    ]);
+    expect(meta.events[1].parts?.[1]).toEqual({
+      kind: 'label',
+      text: 'is released',
+    });
   });
 
   it('runs every tick, unordered — it reports, it does not act', () => {

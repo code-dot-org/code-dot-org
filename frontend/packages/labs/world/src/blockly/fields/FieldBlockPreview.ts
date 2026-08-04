@@ -117,6 +117,8 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     h: number;
   }> = [];
   private overlay: SVGRectElement | null = null;
+  /** The deferred draw, so disposing before it lands cancels it. */
+  private pending: ReturnType<typeof setTimeout> | null = null;
 
   constructor() {
     super('');
@@ -161,23 +163,9 @@ export class FieldBlockPreview extends Blockly.Field<string> {
    * then measure them is overridden below.
    */
   override initView(): void {
-    const host = this.getSourceBlock()?.workspace as
-      | Blockly.WorkspaceSvg
-      | undefined;
-    if (!host || !this.fieldGroup_) {
+    if (!this.getSourceBlock()?.workspace || !this.fieldGroup_) {
       return;
     }
-    // The host's own options, so the drawing gets the same renderer, theme and
-    // constants — otherwise it is the right shape in the wrong colors.
-    this.mini = new Blockly.WorkspaceSvg(host.options);
-    const canvas = this.mini.createDom() as SVGGElement;
-    // The drawing is inert: every press belongs to the overlay below, which
-    // knows what to do with it. See the stylesheet registered above — this class
-    // is what turns pointer events off, all the way down.
-    canvas.classList.add(PREVIEW_CLASS);
-    canvas.setAttribute('transform', `translate(${PAD}, ${PAD})`);
-    this.fieldGroup_.appendChild(canvas);
-
     this.overlay = Blockly.utils.dom.createSvgElement<SVGRectElement>(
       Blockly.utils.Svg.RECT,
       {fill: 'transparent', x: 0, y: 0, width: 0, height: 0},
@@ -189,7 +177,54 @@ export class FieldBlockPreview extends Blockly.Field<string> {
       this,
       this.onPress,
     );
+    // The drawing itself comes on the next turn of the loop — see `drawLater`.
+    this.pending = setTimeout(() => {
+      this.pending = null;
+      this.drawNow();
+    }, 0);
+  }
+
+  /**
+   * Build the drawing's workspace and draw into it.
+   *
+   * NOT in `initView`, and this is the whole reason the field is built in two
+   * halves. A workspace registers itself with Blockly's FocusManager when its
+   * DOM is created, and the manager REFUSES to change state while it is inside
+   * a focus or blur callback:
+   *
+   *   FocusManager state changes cannot happen in a tree/node focus/blur
+   *   callback.
+   *
+   * Returning to the tab does exactly that — the window's focus event reaches
+   * the flyout, which re-creates the blocks it shows, which initialises their
+   * fields. A field that made a workspace there took the toolbox down with it.
+   * There is no public way to ask the manager whether it is locked, so this
+   * waits for the callback to have returned instead, which is a timeout of
+   * zero.
+   */
+  private drawNow(): void {
+    const host = this.getSourceBlock()?.workspace as
+      | Blockly.WorkspaceSvg
+      | undefined;
+    if (!host || !this.fieldGroup_ || this.mini) {
+      return;
+    }
+    // The host's own options, so the drawing gets the same renderer, theme and
+    // constants — otherwise it is the right shape in the wrong colors.
+    this.mini = new Blockly.WorkspaceSvg(host.options);
+    const canvas = this.mini.createDom() as SVGGElement;
+    // The drawing is inert: every press belongs to the overlay below, which
+    // knows what to do with it. See the stylesheet registered above — this class
+    // is what turns pointer events off, all the way down.
+    canvas.classList.add(PREVIEW_CLASS);
+    canvas.setAttribute('transform', `translate(${PAD}, ${PAD})`);
+    // Under the overlay, which was made first and must stay on top: a press
+    // belongs to it, not to the drawing.
+    this.fieldGroup_.insertBefore(canvas, this.overlay);
     this.build();
+    // The drawing decides the field's size, and this one arrived after the
+    // block was laid out — so it has to ask for that layout again.
+    this.forceRerender();
   }
 
   /** Draw the current signature, and measure what came out. */
@@ -448,6 +483,10 @@ export class FieldBlockPreview extends Blockly.Field<string> {
     //
     // which is what an insertion marker does on every drag. Losing the drawing's
     // workspace is worth strictly less than breaking connections.
+    if (this.pending) {
+      clearTimeout(this.pending);
+      this.pending = null;
+    }
     try {
       this.mini?.dispose();
     } catch {
