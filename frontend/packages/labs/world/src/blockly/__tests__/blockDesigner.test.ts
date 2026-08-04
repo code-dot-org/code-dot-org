@@ -11,10 +11,11 @@ import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
 import {
   isActorScoped,
   itemTypeFor,
-  paramTypeFor,
+  paramTypeOf,
   SIGNATURE_BLOCK_TYPES,
 } from '../extensions/blockDesigner';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
+import {shadowsFor} from '../valueShadow';
 
 /** A `.rule` whose only member is a designed block. */
 const designed = (
@@ -99,6 +100,48 @@ describe('a designed block', () => {
       b => b.type === 'world_do_Push_PushTowardAction',
     ) as {message0?: string} | undefined;
     expect(call?.message0).toMatch(/^push %\d toward %\d$/);
+  });
+
+  it('gives an enum parameter a socket wearing that enum’s dropdown', () => {
+    // A parameter typed by an enum (specs/ENUMS.md): the socket takes a String
+    // — an enum value IS a string — and is seeded with the enum's own chip, so
+    // the argument reads as a dropdown and still accepts a value dropped over
+    // it, which is what the emitting side needs.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'press'},
+        {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+      ],
+      'none',
+      [{id: 'k', name: 'key', type: 'String'}],
+    );
+    const {blocks} = buildDomainPalette([meta]);
+    const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as
+      | {args0?: Array<{type: string; check?: string}>}
+      | undefined;
+
+    expect(call?.args0?.[0]).toMatchObject({
+      type: 'input_value',
+      check: 'String',
+    });
+    expect(shadowsFor('world_do_Push_PressAction')?.[0]?.shadow).toMatchObject({
+      type: 'world_choice_Engine_Key',
+      fields: {VALUE: 'space'},
+    });
+  });
+
+  it('offers a dropdown of the enum’s choices on that chip', () => {
+    // The chip is one block per enum, built with the palette. Its options are
+    // the enum's, so what the argument offers is what the enum declares.
+    const chip = DOMAIN_BLOCKS.find(
+      b => b.type === 'world_choice_Engine_Key',
+    ) as
+      | {args0?: Array<{options?: Array<[string, string]>}>; output?: string}
+      | undefined;
+
+    expect(chip?.output).toBe('String');
+    expect(chip?.args0?.[0]?.options).toContainEqual(['space', 'space']);
+    expect(chip?.args0?.[0]?.options).toContainEqual(['A', 'a']);
   });
 
   it('declares the member in the generated module', () => {
@@ -235,10 +278,32 @@ describe('a designed block', () => {
     ] as Parameters<typeof itemTypeFor>[0][]) {
       const type = itemTypeFor(part);
       expect(SIGNATURE_BLOCK_TYPES).toContain(type);
-      expect(paramTypeFor(type)).toBe(
+      // The item block, as the bubble would hold it: `paramTypeOf` reads the
+      // block rather than its type, because the choice item carries which enum
+      // it is typed by in a field.
+      expect(paramTypeOf({type, getFieldValue: () => null})).toBe(
         part.kind === 'param' ? part.type : undefined,
       );
     }
+  });
+
+  it('edits an enum parameter as the one choice item, whichever enum', () => {
+    // One item block for every enum — which one is a field on it — so a rule
+    // that declares a new set of choices needs no new block type.
+    const part = {
+      kind: 'param' as const,
+      type: 'enum:Engine#Key',
+      var: '',
+    };
+    const type = itemTypeFor(part);
+
+    expect(type).toBe('world_signature_choice');
+    expect(SIGNATURE_BLOCK_TYPES).toContain(type);
+    expect(paramTypeOf({type, getFieldValue: () => 'Engine#Key'})).toBe(
+      'enum:Engine#Key',
+    );
+    // A choice item with no enum picked yet is not a parameter of any type.
+    expect(paramTypeOf({type, getFieldValue: () => ''})).toBeUndefined();
   });
 
   it('ignores a signature with no wording at all', () => {

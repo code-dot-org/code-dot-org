@@ -8,9 +8,7 @@
 // rule objects directly — the seam that lets rules live in the project.
 
 import type {
-  ActionParam,
   ActorAction,
-  ArgType,
   GameEvent,
   Property,
   PropertyType,
@@ -22,6 +20,7 @@ import type {
   WorldQuery,
 } from '../engine';
 
+import type {ParamType} from './enums';
 import {
   refFromValue,
   refModule,
@@ -92,12 +91,26 @@ export interface PropertyMeta {
  */
 export type MemberPart =
   | {readonly kind: 'label'; readonly text: string}
-  | {readonly kind: 'param'; readonly name: string; readonly type: ArgType};
+  | {readonly kind: 'param'; readonly name: string; readonly type: ParamType};
+
+/**
+ * An action or query parameter as the EDITOR sees it.
+ *
+ * The engine's `ActionParam` with one widening: a parameter may be typed by an
+ * ENUM (`blockly/enums`), which the engine has no notion of and never needs
+ * one — an enum parameter is a string parameter by the time any code runs, and
+ * what the extra type buys is the dropdown the editor puts on its socket.
+ */
+export interface EditorParam {
+  readonly name: string;
+  readonly type: ParamType;
+  readonly default?: unknown;
+}
 
 export interface ActionMeta {
   readonly id: string;
   readonly name: string;
-  readonly params: readonly ActionParam[];
+  readonly params: readonly EditorParam[];
   /** The designed signature, when `define block` made this. */
   readonly parts?: readonly MemberPart[];
   /** The author's one-line explanation — the call-site block's tooltip. */
@@ -111,7 +124,7 @@ export interface QueryMeta {
   readonly id: string;
   readonly name: string;
   readonly returns?: PropertyType;
-  readonly params: readonly ActionParam[];
+  readonly params: readonly EditorParam[];
   /** The designed signature, when `define block` made this. */
   readonly parts?: readonly MemberPart[];
   /** The author's one-line explanation — the call-site block's tooltip. */
@@ -522,7 +535,7 @@ export function parseRuleMeta(
           {
             kind: 'param',
             name: (part.var && variableNames.get(part.var)) || 'value',
-            type: (part.type ?? 'number') as ArgType,
+            type: (part.type ?? 'number') as ParamType,
           },
         ];
       }
@@ -534,7 +547,7 @@ export function parseRuleMeta(
     }
     const params = parts
       .filter(
-        (part): part is {kind: 'param'; name: string; type: ArgType} =>
+        (part): part is {kind: 'param'; name: string; type: ParamType} =>
           part.kind === 'param',
       )
       .map(part => ({name: part.name, type: part.type}));

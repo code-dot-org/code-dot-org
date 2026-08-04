@@ -25,11 +25,7 @@ import {
   IMPORT_BACKGROUND_VALUE,
   IMPORT_SPRITE_VALUE,
 } from '../appearance/appearanceImport';
-import {
-  DEFAULT_BACKDROP_COLOR,
-  type ArgType,
-  type PropertyType,
-} from '../engine';
+import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
 
 import {actorInputExtension, actorSubjectExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
@@ -37,7 +33,17 @@ import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {editingRuleFor} from './editingRule';
-import {enumOptions, enumRef, KEY_ENUM} from './enums';
+import {
+  allEnums,
+  ENGINE_ENUMS,
+  enumOptions,
+  enumRef,
+  enumRefOfParamType,
+  enumValueBlockType,
+  KEY_ENUM,
+  type ParamType,
+  type EnumMeta,
+} from './enums';
 import {
   runtimeActorExtension,
   runtimeWorldExtension,
@@ -198,6 +204,50 @@ const memberKey = (ref: MemberRef): string =>
 // wants it points at the same enum (specs/ENUMS.md).
 const keyOptions = (): Array<[string, string]> =>
   enumOptions(enumRef(KEY_ENUM));
+
+/**
+ * The value block for one enum: a bare dropdown of its choices, reporting the
+ * string it stands for.
+ *
+ * Bare — no wording of its own — because it is what an enum-typed socket
+ * carries as its shadow, and the argument around it has already said what the
+ * choice is FOR ("push ⟨up arrow ▾⟩"). `world_key` keeps its own wording for
+ * the standalone case, where "key ⟨space⟩" is a phrase rather than a chip.
+ *
+ * Live options, so a project enum edited in its `.rule` reaches the blocks
+ * using it — and so a stored value the enum no longer offers is KEPT and shown
+ * as itself rather than silently rewritten (`liveDropdown`).
+ */
+const defineEnumValueBlock = (meta: EnumMeta) => {
+  const ref = enumRef(meta);
+  const options = (): Array<[string, string]> => enumOptions(ref);
+  return defineBlock({
+    type: enumValueBlockType(ref),
+    message0: '%1',
+    args0: [{type: 'field_dropdown', name: 'VALUE', options: options()}],
+    extensions: [
+      liveDropdown(
+        `world_choice_options_${ref.replace(/[^A-Za-z0-9]+/g, '_')}`,
+        'VALUE',
+        options,
+      ),
+    ],
+    output: 'String',
+    style: 'text_blocks',
+    tooltip: `One of ${meta.name}'s choices.`,
+    generator: {
+      javascript(block) {
+        return [str(block.getFieldValue('VALUE') ?? ''), Order.ATOMIC] as [
+          string,
+          number,
+        ];
+      },
+    },
+  });
+};
+
+/** The engine's enums as blocks; a project's follow with its rules (step 3). */
+const ENUM_VALUE_BLOCKS = ENGINE_ENUMS.map(defineEnumValueBlock);
 
 /** The toolbox/registry type for the block that handles `event`. */
 const eventBlockType = (event: EventMeta): string =>
@@ -738,10 +788,14 @@ const isGettable = (property: PropertyMeta): boolean =>
   !HIDDEN_PROPERTY_EXPORTS.has(property.ref.exportName);
 
 /** A typed value slot — the shared shape of a property, an action parameter, and
- * a query argument. Uses the wider {@link ArgType} so an `actor` socket (a query
- * argument) is expressible; properties only ever carry a {@link PropertyType}. */
+ * a query argument. Uses the widest list, {@link ParamType}: an `actor` socket
+ * (a query argument) is expressible, and so is a parameter typed by an enum,
+ * whose socket wears a dropdown. Properties only ever carry a
+ * {@link PropertyType}. */
 interface TypedValue {
-  type: ArgType;
+  // The editor's wider list: the engine's kinds, plus a parameter typed by an
+  // enum (`blockly/enums`), whose socket wears a dropdown.
+  type: ParamType;
   default?: unknown;
 }
 
@@ -792,8 +846,14 @@ const typedValueCode = (
     case 'string':
       return read(names.value) || str(String(d ?? ''));
     case 'number':
-    default:
       return read(names.value) || String(Number(d ?? 0));
+    default:
+      // An enum parameter (`enum:<Owner>#<Name>`) is a string parameter; its
+      // socket carries a dropdown rather than a text field, and what comes out
+      // is the choice's value.
+      return enumRefOfParamType(value.type)
+        ? read(names.value) || str(String(d ?? ''))
+        : read(names.value) || String(Number(d ?? 0));
   }
 };
 
@@ -821,6 +881,27 @@ const typedValueInputs = (
     name,
     shadow: {type: 'math_number', fields: {NUM: num}},
   });
+  // An enum-typed parameter: a String socket seeded with that enum's dropdown
+  // chip. A shadow rather than a field, so the choice can be replaced by a
+  // value — which the emitting side needs, `rules/input.rule` sending the key
+  // it is looping over where the dropdown would otherwise sit.
+  const choice = enumRefOfParamType(value.type);
+  if (choice) {
+    const first = enumOptions(choice)[0]?.[1] ?? '';
+    return {
+      message: `%${slot}`,
+      args: [{type: 'input_value', name: names.value, check: 'String'}],
+      shadows: [
+        {
+          name: names.value,
+          shadow: {
+            type: enumValueBlockType(choice),
+            fields: {VALUE: String(d ?? first)},
+          },
+        },
+      ],
+    };
+  }
   switch (value.type) {
     case 'actor':
       // One `Actor` socket, seeded with a `this actor` shadow — a plugged actor
@@ -2613,6 +2694,44 @@ const signatureContainer = defineBlock({
   generator: noGenerator,
 });
 
+/**
+ * The `choice` item: a parameter typed by an ENUM.
+ *
+ * One item rather than one per enum, because which enum is a FIELD on it. The
+ * dropdown is live, so a `define choices` written a minute ago is offered here
+ * without the bubble being rebuilt, and an enum that has gone away leaves the
+ * name it had rather than silently becoming another one.
+ */
+const SIGNATURE_CHOICE = 'world_signature_choice';
+
+const enumChoiceOptions = (): Array<[string, string]> => {
+  const enums = allEnums();
+  return enums.length > 0
+    ? enums.map(meta => [`${meta.name} (${meta.owner})`, enumRef(meta)])
+    : [['(no choices yet)', '']];
+};
+
+const signatureChoice = defineBlock({
+  type: SIGNATURE_CHOICE,
+  // The enum first, then the name, so the row reads as "a Key called `key`".
+  message0: 'choice %1 %2',
+  args0: [
+    {type: 'field_dropdown', name: 'ENUM', options: enumChoiceOptions()},
+    {type: 'field_input', name: 'TEXT', text: 'choice'},
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    liveDropdown('world_signature_choice_options', 'ENUM', enumChoiceOptions),
+  ],
+  style: 'variable_blocks',
+  tooltip:
+    'An input the block takes, chosen from a named set of choices. Its name ' +
+    'is the variable the body reads.',
+  generator: noGenerator,
+});
+
 const signatureItems = SIGNATURE_ITEMS.map(item =>
   defineBlock({
     type: item.type,
@@ -3122,6 +3241,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleBlock,
   signatureContainer,
   ...signatureItems,
+  signatureChoice,
   worldReturn,
   worldRuleStepBefore,
   worldRuleStepAfter,
@@ -3137,6 +3257,9 @@ export const DOMAIN_BLOCKS = [
   worldHasTrait,
   ...PARAM_GETTER_BLOCKS,
   ...PARAM_SETTER_BLOCKS,
+  // One dropdown chip per engine enum. Not in any toolbox category: it is what
+  // an enum-typed socket wears, not something to go looking for.
+  ...ENUM_VALUE_BLOCKS,
 ];
 
 // Keyed by rule id: the hand-authored (non-generated) blocks that act on a
