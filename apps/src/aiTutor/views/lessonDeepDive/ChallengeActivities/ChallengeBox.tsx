@@ -115,7 +115,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
         {showConfirmation && (
           <Dialog
             title="Response submitted"
-            description="Your work has been submitted. Your teacher will review it and share feedback with you."
+            description="Your work has been submitted. Check back soon to see feedback on your work."
             onClose={() => setShowConfirmation(false)}
             primaryButtonProps={{
               children: 'OK',

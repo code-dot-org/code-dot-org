@@ -114,16 +114,18 @@ type ServerChallengeResponseAsset = {
   download_url?: string;
 };
 
-// The student-facing shape of a response. The AI evaluation fields
-// (evaluation_result, evaluation_status, student_feedback, evaluated_at) are
-// server-side only for students: they see their evaluation only after a
-// teacher has reviewed it, so the server omits those fields here.
+// The student-facing shape of a response. student_feedback carries the
+// constructive AI feedback (null until evaluation completes) and
+// evaluation_status its lifecycle; the scored evaluation_result is
+// teacher-only, so the server omits it here.
 export type ChallengeResponse = {
   id: number;
   challenge_id: number;
   user_id: number;
   student_text: string | null;
   transcript: string | null;
+  student_feedback: string | null;
+  evaluation_status: string | null;
   is_final: boolean;
   created_at: string;
   assets: ChallengeResponseAsset[];
@@ -135,6 +137,8 @@ type ServerChallengeResponse = {
   user_id: number;
   student_text: string | null;
   transcript: string | null;
+  student_feedback: string | null;
+  evaluation_status: string | null;
   is_final: boolean;
   created_at: string;
   assets: ServerChallengeResponseAsset[];
@@ -153,6 +157,8 @@ export const challengeResponseValidator: ResponseValidator<
     user_id: r.user_id,
     student_text: r.student_text ?? null,
     transcript: r.transcript ?? null,
+    student_feedback: r.student_feedback ?? null,
+    evaluation_status: r.evaluation_status ?? null,
     is_final: r.is_final,
     created_at: r.created_at,
     assets: r.assets.map(a => ({
