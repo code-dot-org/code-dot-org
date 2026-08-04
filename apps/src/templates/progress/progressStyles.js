@@ -1,4 +1,4 @@
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * Note: these constants will be removed in favor of `BubbleFactory.bubbleSizes`
@@ -63,9 +63,11 @@ export const hoverStyle = {
  */
 
 /**
- * Get border and background styling based on level kind and student progress.
+ * Get border and background styling based on student progress. Assessment
+ * levels take the same status colors as any other level; they are denoted
+ * by a star badge (see BubbleBadge), not by color.
  */
-export function levelProgressStyle(levelStatus, levelKind) {
+export function levelProgressStyle(levelStatus) {
   let style = {
     borderWidth: 2,
     borderColor: 'var(--borders-neutral-primary)',
@@ -74,37 +76,11 @@ export function levelProgressStyle(levelStatus, levelKind) {
     backgroundColor: 'var(--background-neutral-primary)',
   };
 
-  const statusStyle =
-    levelKind === LevelKind.assessment
-      ? assessmentStatusStyle[levelStatus]
-      : levelStatusStyle[levelStatus];
-
   return {
     ...style,
-    ...statusStyle,
+    ...levelStatusStyle[levelStatus],
   };
 }
-
-const assessmentStatusStyle = {
-  [LevelStatus.attempted]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-  },
-  [LevelStatus.submitted]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
-    color: 'var(--text-neutral-inverse)',
-  },
-  [LevelStatus.completed_assessment]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
-    color: 'var(--text-neutral-inverse)',
-  },
-  [LevelStatus.perfect]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
-    color: 'var(--text-neutral-inverse)',
-  },
-};
 
 // --borders-success-primary on a --background-success-primary fill reads as a
 // ring of a slightly different green rather than as an outline, because under
@@ -132,15 +108,17 @@ const levelStatusStyle = {
     borderColor: levelSuccessStatusBorderColor,
     backgroundColor: 'var(--background-success-extra-light)',
   },
-  // Note: There are submittable levels that are not assessments.
+  // Submitted and completed-assessment levels count as completed work, so
+  // they take the same green fill as perfect. Note: there are submittable
+  // levels that are not assessments.
   [LevelStatus.submitted]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   [LevelStatus.completed_assessment]: {
-    borderColor: 'var(--borders-brand-purple-primary)',
-    backgroundColor: 'var(--background-brand-purple-primary)',
+    borderColor: levelSuccessStatusBorderColor,
+    backgroundColor: 'var(--background-success-primary)',
     color: 'var(--text-neutral-inverse)',
   },
   // Below are used by peer reviews
