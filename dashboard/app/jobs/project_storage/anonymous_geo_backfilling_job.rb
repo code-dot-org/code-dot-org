@@ -31,29 +31,33 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
 
   def perform(limit: DEFAULT_LIMIT)
     started_at = Time.now.utc
+
     success = false
-
     processed_count = 0
-    imported_count  = 0
 
-    last_processed_storage_id = nil
-    while processed_count < limit
-      missing_project_storage_geos_batch = missing_project_storage_geos(
-        from_storage_id: last_processed_storage_id.to_i.next,
-        limit: [BATCH_SIZE, limit - processed_count].min,
-      )
+    first_storage_id = nil
+    last_storage_id  = nil
+
+    loop do
+      current_batch_size = [BATCH_SIZE, limit - processed_count].min
+      break unless current_batch_size.positive?
+
+      from_storage_id = last_storage_id.to_i.next
+      missing_project_storage_geos_batch = missing_project_storage_geos(from_storage_id:, limit: current_batch_size)
       break if missing_project_storage_geos_batch.empty?
 
-      import_result = ProjectStorage::Geo.import(
+      ProjectStorage::Geo.import(
         missing_project_storage_geos_batch,
         validate: false,
         on_duplicate_key_ignore: true,
       )
 
-      imported_count  += import_result.num_inserts
-      processed_count += missing_project_storage_geos_batch.size
+      minmax_storage_ids = missing_project_storage_geos_batch.map(&:storage_id).minmax
+      first_storage_id ||= minmax_storage_ids.first
+      last_storage_id    = minmax_storage_ids.last
 
-      last_processed_storage_id = missing_project_storage_geos_batch.map(&:storage_id).max
+      processed_count += missing_project_storage_geos_batch.size
+      break if missing_project_storage_geos_batch.size < current_batch_size
     end
 
     success = true
@@ -67,8 +71,8 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
       success:,
       limit:,
       processed_count:,
-      imported_count:,
-      last_processed_storage_id:,
+      first_storage_id:,
+      last_storage_id:,
       started_at:,
       finished_at:,
       duration: finished_at - started_at,
