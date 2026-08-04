@@ -176,6 +176,7 @@ export default class ImagePickerPropertyRow extends React.Component {
         </Box>
         {this.state.errorMessage && (
           <MuiTypography
+            role="alert"
             variant="body2"
             component="div"
             sx={{color: 'var(--text-error-primary)'}}

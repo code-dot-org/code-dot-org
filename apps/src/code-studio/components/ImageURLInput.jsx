@@ -116,6 +116,7 @@ export default class ImageURLInput extends React.Component {
         </form>
         {this.getErrorText() && (
           <MuiTypography
+            role="alert"
             variant="body2"
             component="div"
             sx={{color: 'var(--text-error-primary)'}}

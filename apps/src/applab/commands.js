@@ -72,6 +72,9 @@ function moderationWarningForStatus(status) {
 }
 
 function getModerationStatusOverride() {
+  if (window.dashboard?.rack_env !== 'test') {
+    return null;
+  }
   const override = window.__applabImageModerationStatusOverride;
   return ['safe', 'flagged', 'error'].includes(override) ? override : null;
 }
