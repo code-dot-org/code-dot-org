@@ -1,6 +1,7 @@
 import {expect, test} from '@playwright/test';
 
 import {FallbackPlayerCaptionDialogLinkComponent} from '../components/fallback-player-caption-dialog-link';
+import {LegacyBlocklyLab} from '../pages/legacy-blockly-lab';
 import {LessonLevelPage} from '../pages/lesson-level-page';
 import {analyze, WCAG_AA_TAGS} from '../shared/axe';
 
@@ -81,12 +82,18 @@ test.describe('Fallback player caption dialog link', () => {
     'Level with fallback video player in dialog has captions popup',
     {tag: ['@no_mobile']},
     async ({page, browserName}) => {
+      // Not LegacyBlocklyLab#gotoLevel: its waitForReady() dismisses the
+      // instructions overlay, which also closes the video dialog under test.
       const lessonLevel = new LessonLevelPage(page);
       await lessonLevel.gotoLevel({
         lesson: 2,
         level: 1,
         noautoplay: false,
         forceYoutubeFallback: true,
+      });
+      // A maze lab: its #codeApp splash skews contrast until it finishes fading.
+      await expect(new LegacyBlocklyLab(page).loadingSpinner).toBeHidden({
+        timeout: 45_000,
       });
 
       const captionDialog = new FallbackPlayerCaptionDialogLinkComponent(page);
