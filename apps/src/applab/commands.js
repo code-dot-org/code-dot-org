@@ -26,7 +26,7 @@ import * as utils from '../utils';
 import applabTurtle from './applabTurtle';
 import ChangeEventHandler from './ChangeEventHandler';
 import ChartApi from './ChartApi';
-import {ICON_PREFIX_REGEX} from './constants';
+import {ICON_PREFIX_REGEX, FLAGGED_IMAGE_URL_WARNING} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
@@ -38,8 +38,6 @@ import * as setPropertyDropdown from './setPropertyDropdown';
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
 const HTTP_URL_PREFIX_REGEX = /^http:\/\//i;
-const FLAGGED_IMAGE_URL_WARNING =
-  'This image URL cannot be used because it may contain inappropriate content.';
 const MODERATION_ERROR_WARNING =
   "We couldn't check this image link right now. Try a different image link.";
 

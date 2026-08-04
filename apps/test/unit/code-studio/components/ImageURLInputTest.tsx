@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
+import {FLAGGED_IMAGE_URL_WARNING} from '@cdo/apps/applab/constants';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
@@ -17,8 +18,6 @@ jest.mock('@cdo/apps/util/moderateImage', () => ({
 }));
 
 describe('ImageURLInput', () => {
-  const flaggedUrlError =
-    'This image URL cannot be used because it may contain inappropriate content.';
   const moderationError =
     "We couldn't check this image link right now. Please try a different image link or upload a file.";
   const mockModerateImageUrl = moderateImageUrl as jest.MockedFunction<
@@ -78,7 +77,7 @@ describe('ImageURLInput', () => {
     fireEvent.click(screen.getByRole('button', {name: /submit/i}));
 
     await waitFor(() =>
-      expect(screen.getByText(flaggedUrlError)).toBeInTheDocument()
+      expect(screen.getByText(FLAGGED_IMAGE_URL_WARNING)).toBeInTheDocument()
     );
     expect(assetChosen).not.toHaveBeenCalled();
   });

@@ -219,3 +219,6 @@ if (fontFamilyOptions.length !== fontFamilyStyles.length) {
     'fontFamilyOptions length must equal fontFamilyStyles length'
   );
 }
+
+export const FLAGGED_IMAGE_URL_WARNING =
+  'This image URL cannot be used because it may contain inappropriate content.';

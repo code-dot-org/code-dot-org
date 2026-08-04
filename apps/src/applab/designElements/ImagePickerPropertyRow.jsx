@@ -12,8 +12,11 @@ import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
+import {FLAGGED_IMAGE_URL_WARNING} from '../constants';
 
 import * as rowStyle from './rowStyle';
+
+import styles from './image-picker-property-row.module.scss';
 
 // We'd prefer not to make GET requests every time someone types a character.
 // This is the amount of time that must pass between edits before we'll do a GET
@@ -22,8 +25,6 @@ import * as rowStyle from './rowStyle';
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
 const USER_INPUT_DELAY = 1500;
 const HTTP_PREFIX_REGEX = /^http:\/\//i;
-const FLAGGED_IMAGE_URL_ERROR =
-  'This image URL cannot be used because it may contain inappropriate content.';
 const MODERATION_ERROR =
   "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
@@ -112,7 +113,7 @@ export default class ImagePickerPropertyRow extends React.Component {
 
       if (moderationStatus === 'flagged') {
         if (this.isMounted_) {
-          this.setState({errorMessage: FLAGGED_IMAGE_URL_ERROR});
+          this.setState({errorMessage: FLAGGED_IMAGE_URL_WARNING});
         }
         return;
       }
@@ -176,6 +177,7 @@ export default class ImagePickerPropertyRow extends React.Component {
         </Box>
         {this.state.errorMessage && (
           <MuiTypography
+            className={styles.errorMessage}
             role="alert"
             variant="body2"
             component="div"
