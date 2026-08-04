@@ -10,7 +10,8 @@
 # template levels, and LevelGroup/BubbleChoice sublevels with the same prefix
 # and rewriting those references to the new names. Deprecated blockly levels
 # (blockly:* keys) are exempt from the partition and carried over unchanged.
-# Then the script_level is repointed and the unit's script_json regenerated.
+# Then the script_level is repointed, any rubric naming a migrated level is
+# repointed, and the unit's script_json regenerated.
 #
 # Must run with levelbuilder_mode on so the level after_save hooks write the
 # new definition files (under dashboard/test/ui/config); commit the result.
@@ -159,8 +160,31 @@ def migrate_unit(unit)
     puts "repointed script_level #{script_level.id}: #{mapped_levels.map(&:name).join(', ')}" if $verbose
   end
 
+  repoint_rubrics(unit)
+
   unit.reload.write_script_json
   puts "migrated #{unit.name}"
+end
+
+# A rubric names its level directly, and ScriptSeed#import_rubrics resolves that
+# name among the lesson's own levels. A rubric left pointing at the production
+# level therefore resolves to nothing once its lesson moves to the clone, and
+# seeding fails on Rubric's required level with "Level must exist". The rubric
+# is unique in this respect: every other seeded object reaches a level through
+# a script_level, which the loop above has already repointed.
+def repoint_rubrics(unit)
+  Rubric.joins(:lesson).where('stages.script_id' => unit.id).each do |rubric|
+    level = rubric.level
+    next if level.nil? || level.ui_test? || level.key.start_with?('blockly:')
+
+    clone = Level.find_by_name("#{UI_TEST_LEVEL_NAME_PREFIX}#{level.name}")
+    unless clone
+      raise "rubric #{rubric.id} refers to #{level.name.dump}, which was not cloned; " \
+        "is that level reachable from this unit's script_levels?"
+    end
+    rubric.update!(level_id: clone.id)
+    puts "repointed rubric #{rubric.id}: #{level.name.dump} -> #{clone.name.dump}" if $verbose
+  end
 end
 
 def main(options)
