@@ -112,9 +112,7 @@ import type {
 import {refFromValue, refModule, ruleLocation, ruleSlug} from './ruleRegistry';
 import {parseSpriteRef, spriteCell} from './spriteCells';
 import {
-  eventOptions,
   projectRuleIdentities,
-  eventOptionsExtension,
   stepOptions,
   stepOptionsExtension,
   traitOptions,
@@ -754,6 +752,94 @@ const defineEventBlock = (event: EventMeta) => {
   });
 };
 
+/** The toolbox/registry type for the block that RAISES `event`. */
+const emitBlockType = (event: EventMeta): string =>
+  `world_emit_${memberKey(event.ref)}`;
+
+/**
+ * The block that raises an event: `emit ⟨space ▾⟩ is pressed for ⟨this actor⟩`.
+ *
+ * Generated per event, from the same signature the hat is built from, because
+ * an event is a member like any other and every other member reaches the
+ * palette this way. What it replaces is a pair of hand-written blocks that
+ * named their event in a dropdown and always said "with", whether the event
+ * carried anything or not — so the arity was wrong for events with nothing to
+ * carry and unextendable for events with more than one thing.
+ *
+ * A parameter is a SOCKET here, where the hat gives it a field. That is the
+ * distinction the two sides genuinely have: a hat picks one of the choices to
+ * wait for, an emit supplies whichever the code worked out. `rules/input` is
+ * the case in point — it raises its event once per key it is looping over.
+ */
+const defineEmitBlock = (event: EventMeta) => {
+  const parts = event.parts ?? [{kind: 'label' as const, text: event.name}];
+  const params = parts.filter(part => part.kind === 'param');
+  const names = params.map(param =>
+    params.length > 1 ? paramValueNames(param.name) : DEFAULT_VALUE_NAMES,
+  );
+  const args0: BlockArgDefinition[] = [];
+  const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
+  let message0 = 'emit';
+  let paramIndex = 0;
+  for (const part of parts) {
+    if (part.kind === 'label') {
+      message0 += ` ${part.text}`;
+      continue;
+    }
+    // Only a set of choices can be carried, as only a set of choices can be
+    // filtered on — the two sides of one event agree about that.
+    if (!enumRefOfParamType(part.type)) {
+      continue;
+    }
+    const built = typedValueInputs(part, args0.length + 1, names[paramIndex], {
+      enumAsSocket: true,
+    });
+    paramIndex += 1;
+    args0.push(...built.args);
+    shadows.push(...built.shadows);
+    message0 += ` ${built.message}`;
+  }
+  // The subject last, as `emit … for …` always read.
+  args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
+  message0 += ` for %${args0.length}`;
+
+  const type = emitBlockType(event);
+  if (shadows.length) {
+    registerValueShadows(type, shadows);
+  }
+  return defineBlock({
+    type,
+    message0,
+    args0,
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [
+      actorInputExtension,
+      worldContextExtension,
+      ...(shadows.length ? [valueShadowExtension] : []),
+    ],
+    style: 'event_blocks',
+    tooltip: `Raise "${event.name}" for an actor — every “when …” handler listening for it runs.`,
+    generator: {
+      javascript(block, generator) {
+        const actor =
+          generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
+        const carried = names
+          .slice(0, paramIndex)
+          .map(name => generator.valueToCode(block, name.value, Order.NONE))
+          .map(code => code || '""');
+        // `refCode` resolves a project event to the bare local name when the
+        // rule is emitting its OWN event (it is an `export const` in the module
+        // being written), and imports it otherwise.
+        return `world.emit(${refCode(event.ref, generator)}, ${actor}${carried
+          .map(code => `, ${code}`)
+          .join('')});\n`;
+      },
+    },
+  });
+};
+
 // Build a block for every event the rule library declares.
 //
 // One shape for all of them. The keyboard's events used to get a special hat
@@ -766,6 +852,10 @@ const defineEventBlock = (event: EventMeta) => {
 // own could not have.
 const EVENT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
   rule.events.map(event => defineEventBlock(event)),
+);
+/** …and the block that raises each, beside the hat that hears it. */
+const EMIT_BLOCKS = AUTHORING_RULES.flatMap(rule =>
+  rule.events.map(event => defineEmitBlock(event)),
 );
 
 /**
@@ -923,6 +1013,11 @@ const typedValueInputs = (
   value: TypedValue,
   slot: number,
   names: ValueNames = DEFAULT_VALUE_NAMES,
+  // A signature's parameter is a FIELD where a constant is meant and a SOCKET
+  // where a value is meant: a hat filters on one of an enum's choices, an
+  // `emit` supplies whichever the code worked out (specs/ENUMS.md). Every
+  // caller but the emit side means the first.
+  opts: {enumAsSocket?: boolean} = {},
 ): {
   message: string;
   args: BlockArgDefinition[];
@@ -954,6 +1049,24 @@ const typedValueInputs = (
   // shown as itself rather than silently becoming the first option
   // (`liveDropdown`).
   const choice = enumRefOfParamType(value.type);
+  if (choice && opts.enumAsSocket) {
+    // The choices as a block that can be replaced: `rules/input` emits the key
+    // it is looping over, so a dropdown has to be droppable-over here.
+    const first = enumOptions(choice)[0]?.[1] ?? '';
+    return {
+      message: `%${slot}`,
+      args: [{type: 'input_value', name: names.value, check: 'String'}],
+      shadows: [
+        {
+          name: names.value,
+          shadow: {
+            type: enumValueBlockType(choice),
+            fields: {VALUE: String(d ?? first)},
+          },
+        },
+      ],
+    };
+  }
   if (choice) {
     const options = (): Array<[string, string]> => {
       const live = enumOptions(choice);
@@ -3046,55 +3159,6 @@ const worldRuleStepTick = stepBlock(
   'Run this every tick, in no particular order relative to other rules.',
 );
 
-// The frame time (seconds since the last tick) — bound as `delta` in a step
-// closure, so this reporter is only meaningful inside a `define step` body.
-// `emit <event> for <actor>` — the block that raises an event.
-//
-// Until this existed a rule could DECLARE an event and nothing in the language
-// could fire it: `define event` produced a real `GameEvent` that only the
-// engine's own TypeScript rules ever emitted. A rule's events are how it talks
-// to a learner's `when …` handlers, so without this a project rule could not
-// say anything.
-//
-// The subject is an ACTOR because that is what an event is raised *for* — a
-// handler is registered on an actor and receives it. `world.emit` is the world's
-// method, so this is only valid where `world` is bound (a step, an action, an
-// event handler), which `worldContext` checks.
-const worldEmit = defineBlock({
-  type: 'world_emit',
-  message0: 'emit %1 for %2',
-  args0: [
-    {type: 'field_dropdown', name: 'EVENT', options: eventOptions},
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    eventOptionsExtension,
-    actorInputExtension,
-    worldContextExtension,
-  ],
-  style: 'event_blocks',
-  tooltip:
-    'Raise an event for an actor — every “when …” handler listening for it runs.',
-  generator: {
-    javascript(block, generator) {
-      const event = block.getFieldValue('EVENT');
-      if (!event) {
-        // The dropdown's "(none)" placeholder: no rule in play declares one.
-        return '';
-      }
-      const actor =
-        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
-      // `refCode` resolves a project event to the bare local name when the rule
-      // is emitting its OWN event (it is an `export const` in the module being
-      // written), and imports it otherwise.
-      return `world.emit(${refCode(refFromValue(event), generator)}, ${actor});\n`;
-    },
-  },
-});
-
 const worldStepDelta = defineBlock({
   type: 'world_step_delta',
   message0: 'delta',
@@ -3105,44 +3169,6 @@ const worldStepDelta = defineBlock({
   generator: {
     javascript() {
       return ['delta', Order.ATOMIC] as [string, number];
-    },
-  },
-});
-
-// `emit <event> for <actor> with <value>` — the same as `world_emit`, for an
-// event that CARRIES something. The keyboard rule's events carry the key, which
-// is what lets one handler say "when this actor presses space": the hat compares
-// the event's value against the key it cares about (`event value`).
-const worldEmitWith = defineBlock({
-  type: 'world_emit_with',
-  message0: 'emit %1 for %2 with %3',
-  args0: [
-    {type: 'field_dropdown', name: 'EVENT', options: eventOptions},
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'input_value', name: 'VALUE'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    eventOptionsExtension,
-    actorInputExtension,
-    worldContextExtension,
-  ],
-  style: 'event_blocks',
-  tooltip:
-    'Raise an event for an actor, carrying a value its handlers can read with ' +
-    '“event value”.',
-  generator: {
-    javascript(block, generator) {
-      const event = block.getFieldValue('EVENT');
-      if (!event) {
-        return '';
-      }
-      const actor =
-        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'actor';
-      const value = generator.valueToCode(block, 'VALUE', Order.NONE) || 'null';
-      return `world.emit(${refCode(refFromValue(event), generator)}, ${actor}, ${value});\n`;
     },
   },
 });
@@ -3344,6 +3370,7 @@ export const DOMAIN_BLOCKS = [
   ...ACTION_BLOCKS,
   ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
+  ...EMIT_BLOCKS,
   worldLog,
   worldPrint,
   worldEventValue,
@@ -3379,8 +3406,6 @@ export const DOMAIN_BLOCKS = [
   worldRuleStepBefore,
   worldRuleStepAfter,
   worldRuleStepTick,
-  worldEmit,
-  worldEmitWith,
   worldKey,
   worldForEachKey,
   worldComment,
@@ -3481,8 +3506,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_rule_step_tick',
       'world_rule_step_before',
       'world_rule_step_after',
-      'world_emit', // raise one of the events a rule declares
-      'world_emit_with', // …carrying a value its handlers can read
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
       // rule's parameters are variables like any other, and a body wanting a
@@ -3651,6 +3674,10 @@ function generateRulePalette(
       blocks.push(block);
       ruleEventTypes.push(block.type);
       eventTypes.push(block.type);
+      // The block that raises it, next to the one that hears it.
+      const emit = defineEmitBlock(event);
+      blocks.push(emit);
+      ruleEventTypes.push(emit.type);
     }
     // A chip per set of choices this rule declares — the block an enum-typed
     // socket wears, and the only way to name one of the choices anywhere else

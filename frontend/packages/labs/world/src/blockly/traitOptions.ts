@@ -153,35 +153,3 @@ export const stepOptionsExtension = liveDropdown(
 // `<RuleName>#<exportName>` — so one decoder reads both, including the
 // self-reference case that lets a rule emit its own event without importing its
 // own module.
-
-/**
- * `[label, value]` options for the event dropdown: every event a rule in play
- * declares, labelled `<Rule> ▸ <event>`. Deduped, sorted by label.
- *
- * Every rule's events, not just the authoring rule's own. A rule may legitimately
- * raise another's — "Has Gravity" is what tells an actor it started falling, and
- * a project rule extending it would say the same thing the same way.
- */
-export function eventOptions(): Array<[string, string]> {
-  const seen = new Set<string>();
-  const options: Array<[string, string]> = [];
-  for (const rule of [...BUILTIN_RULE_META, ...projectByModule.values()]) {
-    for (const event of rule.events) {
-      const value = memberValue(event.ref);
-      if (!value || seen.has(value)) {
-        continue;
-      }
-      seen.add(value);
-      options.push([`${rule.name} \u25b8 ${event.name}`, value]);
-    }
-  }
-  options.sort((a, b) => a[0].localeCompare(b[0]));
-  return options.length ? options : [['(none)', '']];
-}
-
-/** Make a block's `EVENT` dropdown reflect the events currently in play. */
-export const eventOptionsExtension = liveDropdown(
-  'world_event_options',
-  'EVENT',
-  eventOptions,
-);

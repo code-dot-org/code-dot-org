@@ -15,6 +15,7 @@ import {describe, expect, it} from 'vitest';
 
 import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta} from '../ruleMeta';
+import {shadowsFor} from '../valueShadow';
 
 /** A `.rule` whose one event carries the given phrasing. */
 const ruleWithEvent = (
@@ -86,6 +87,19 @@ const codeFor = (
     {},
   );
 
+/** The block that RAISES this rule's event. */
+const emitFor = (meta: ReturnType<typeof ruleWithEvent>) => {
+  const {blocks} = buildDomainPalette([meta]);
+  return blocks.find(block => block.type.startsWith('world_emit_Keys_')) as {
+    type: string;
+    message0: string;
+    args0: Array<{type: string; name: string; check?: string}>;
+    generator: {
+      javascript: (block: unknown, generator: unknown, env: unknown) => string;
+    };
+  };
+};
+
 describe('an event with a designed phrasing', () => {
   it('is named by its labels, not by the whole phrase', () => {
     const meta = ruleWithEvent(PRESSED, KEY_VAR);
@@ -133,5 +147,41 @@ describe('an event with a designed phrasing', () => {
     const code = codeFor(hat, '');
     expect(code).not.toContain('eventValue !==');
     expect(code).toContain('(world, actor, eventValue)');
+  });
+});
+
+describe('raising an event that carries a choice', () => {
+  it('takes it through a SOCKET, where the hat gives it a field', () => {
+    // The distinction the two sides genuinely have: a hat picks one of the
+    // choices to wait for, an emit supplies whichever the code worked out.
+    // `rules/input` is the case in point — it raises its event once per key it
+    // is looping over, so a dropdown has to be droppable-over here.
+    const emit = emitFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    expect(emit.message0).toBe('emit %1 is pressed for %2');
+    expect(emit.args0[0]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'String',
+    });
+    expect(shadowsFor(emit.type)?.[0]?.shadow).toMatchObject({
+      type: 'world_choice_Engine_Key',
+    });
+  });
+
+  it('passes what is plugged in as the event’s value', () => {
+    const emit = emitFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    const code = emit.generator.javascript(
+      {getFieldValue: () => null} as never,
+      {
+        definitions_: {},
+        valueToCode: (_block: unknown, name: string) =>
+          name === 'ACTOR' ? 'each' : 'key',
+      } as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe('world.emit(IsPressedEvent, each, key);\n');
   });
 });
