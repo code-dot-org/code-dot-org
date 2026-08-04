@@ -23,13 +23,15 @@ module Cdo
       return nil unless File.directory?(report_dir)
 
       uploader = AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
+      index_url = nil
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
         name = path.delete_prefix("#{report_dir}/")
         content_type = Rack::Mime.mime_type(File.extname(path), 'application/octet-stream')
-        File.open(path, 'rb') do |body|
+        versioned_url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
+        index_url = versioned_url&.split('?', 2)&.first if name == 'index.html'
       end
       # Unversioned, like the Cucumber status page (upload_status_page_to_s3 in
       # dashboard/test/ui/runner.rb): the report's JS copies this page's query

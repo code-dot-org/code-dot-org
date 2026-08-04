@@ -22,8 +22,7 @@ class CdoPlaywrightReportTest < Minitest::Test
       true
     end.returns("https://#{BUCKET}.s3.amazonaws.com/#{INDEX_KEY}?versionId=abc123")
     AWS::S3::LogUploader.stubs(:new).returns(uploader)
-    AWS::S3.stubs(:public_url).with(BUCKET, INDEX_KEY).
-      returns("https://#{BUCKET}.s3.amazonaws.com/#{INDEX_KEY}")
+    AWS::S3.expects(:public_url).never
 
     url = Dir.mktmpdir do |dir|
       File.write(File.join(dir, 'index.html'), '<html></html>')
