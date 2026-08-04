@@ -950,6 +950,20 @@ const defaultLiteral = (property: PropertyMeta): string => {
 export function ruleMetaToModule(
   meta: RuleMeta,
   bodies: ReadonlyMap<string, RuleBody> = new Map(),
+  /**
+   * Import keys the BODIES already emitted (`generator.definitions_`).
+   *
+   * A rule's module is written by two hands: the declarations here, and the
+   * bodies the Blockly generator produced, whose own imports it prepends. Both
+   * key an import the same way (`named:<module>:<Export>`) and neither could
+   * see the other, so a member used in a declaration AND in a body was imported
+   * twice — which is not a redundancy but a build failure:
+   *
+   *   The symbol "CanCollideTrait" has already been declared
+   *
+   * Passing what the bodies emitted is what makes the two hands agree.
+   */
+  alreadyImported: ReadonlySet<string> = new Set(),
 ): string {
   const q = (value: string): string => JSON.stringify(value);
   const hasBehavior =
@@ -965,7 +979,14 @@ export function ruleMetaToModule(
   if (meta.properties.some(p => p.type === 'vector' || p.type === 'point')) {
     addWorldLab('Vector');
   }
-  const projectImports = new Map<string, string>(); // dedupe key → import line
+  // Dedupe key → import line, seeded with what the bodies already imported so
+  // the same member is not imported by both.
+  const projectImports = new Map<string, string>();
+  const addProjectImport = (key: string, line: string): void => {
+    if (!alreadyImported.has(key)) {
+      projectImports.set(key, line);
+    }
+  };
 
   // A default-import identifier for a project rule module (`rules/wind` → `Wind`).
   const moduleVar = (path: string): string =>
@@ -982,7 +1003,7 @@ export function ruleMetaToModule(
       located?.source === 'project' ? located.modulePath : located ? '' : dep;
     if (modulePath) {
       const varName = moduleVar(modulePath);
-      projectImports.set(
+      addProjectImport(
         `default:${modulePath}`,
         `import ${varName} from ${q(modulePath)};`,
       );
@@ -1012,7 +1033,7 @@ export function ruleMetaToModule(
     }
     const modulePath = refModule(ref);
     if (modulePath) {
-      projectImports.set(
+      addProjectImport(
         `named:${modulePath}:${ref.exportName}`,
         `import {${ref.exportName}} from ${q(modulePath)};`,
       );
@@ -1050,7 +1071,7 @@ export function ruleMetaToModule(
       located?.source === 'project' ? located.modulePath : refModule(owner);
     if (modulePath) {
       const varName = moduleVar(modulePath);
-      projectImports.set(
+      addProjectImport(
         `default:${modulePath}`,
         `import ${varName} from ${q(modulePath)};`,
       );

@@ -12,6 +12,7 @@
 
 import {arrowsRule} from './arrows';
 import {collisionRule} from './collision';
+import {contactsRule} from './contacts';
 import {gravityRule} from './gravity';
 import {inputRule} from './input';
 import {motionRule} from './motion';
@@ -74,6 +75,15 @@ export const STOCK_RULES: readonly StockRule[] = [
     contents: motionRule,
   },
   {
+    id: 'contacts',
+    name: 'Contacts',
+    ability: 'Notices Contacts',
+    description:
+      'Works out which actors are touching which, once a tick, and writes each one down. Says nothing about what to do about it.',
+    provides: ['Can Collide'],
+    contents: contactsRule,
+  },
+  {
     id: 'collision',
     name: 'Collisions',
     ability: 'Has Collisions',
@@ -123,4 +133,11 @@ export function stockRuleByName(name: string): StockRule | undefined {
   return STOCK_RULES.find(rule => rule.name === name);
 }
 
-export {arrowsRule, collisionRule, gravityRule, inputRule, motionRule};
+export {
+  arrowsRule,
+  collisionRule,
+  contactsRule,
+  gravityRule,
+  inputRule,
+  motionRule,
+};
