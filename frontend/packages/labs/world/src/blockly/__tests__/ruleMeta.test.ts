@@ -197,9 +197,11 @@ const prop = (type: string, name: string, def: string): object => ({
   type: 'world_rule_property',
   fields: {TYPE: type, NAME: name, DEFAULT: def},
 });
+// An event's wording is its designed phrasing — labels, and the choices a
+// handler filters on (specs/ENUMS.md). A plain one is a single label.
 const event = (name: string): object => ({
   type: 'world_rule_event',
-  fields: {NAME: name},
+  extraState: {parts: [{kind: 'label', text: name}]},
 });
 const trait = (name: string, ...body: object[]): object => {
   const inner = chain(body);
@@ -312,6 +314,8 @@ describe('parseRuleMeta', () => {
       {
         id: 'gusted',
         name: 'gusted',
+        // Its designed phrasing: one label, and no choice to filter on.
+        parts: [{kind: 'label', text: 'gusted'}],
         ref: {
           source: 'project',
           exportName: 'GustedEvent',

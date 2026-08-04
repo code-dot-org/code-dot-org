@@ -57,6 +57,7 @@ import {
 import {
   blockDesignerInitExtension,
   blockDesignerMutator,
+  eventDesignerMutator,
 } from './extensions/blockDesigner';
 import {effectImportFieldExtension} from './extensions/effectImportField';
 import {
@@ -674,25 +675,79 @@ const nextChainCode = (
   return Array.isArray(code) ? code[0] : code;
 };
 
-/** A plain event block: `when <actor> <event name>`, body chained below. */
+/** The field an event's filter dropdown occupies, by position in the phrasing. */
+const filterFieldName = (index: number): string => `FILTER${index}`;
+
+/** The dropdown entry meaning "whatever was emitted" — no filter at all. */
+const ANY_CHOICE: [string, string] = ['(any)', ''];
+
+/**
+ * An event's hat: `when <actor> <phrasing>`, body chained below.
+ *
+ * The phrasing is the event's own, when it designed one (`define event`), and
+ * a parameter in it is a FILTER: the hat shows that enum's choices with `(any)`
+ * at the front, and the handler generated runs only when what was emitted
+ * matches. `(any)` emits no guard, which is what an undesigned event has always
+ * done — so a hat that filters and a hat that hears everything are the same
+ * block with a different word in it (specs/ENUMS.md).
+ */
 const defineEventBlock = (event: EventMeta) => {
+  const args0: BlockArgDefinition[] = [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+  ];
+  const extensions: Extension[] = [actorSubjectExtension];
+  // `%1` is the actor; the phrasing follows it.
+  let message0 = 'when %1';
+  const filters: Array<{field: string; ref: string}> = [];
+  for (const part of event.parts ?? [{kind: 'label', text: event.name}]) {
+    if (part.kind === 'label') {
+      message0 += ` ${part.text}`;
+      continue;
+    }
+    const choice = enumRefOfParamType(part.type);
+    if (!choice) {
+      continue; // only a set of choices can be filtered on
+    }
+    const field = filterFieldName(filters.length);
+    const options = (): Array<[string, string]> => [
+      ANY_CHOICE,
+      ...enumOptions(choice),
+    ];
+    args0.push({type: 'field_dropdown', name: field, options: options()});
+    extensions.push(
+      liveDropdown(
+        `world_event_filter_${choice.replace(/[^A-Za-z0-9]+/g, '_')}_${field}`,
+        field,
+        options,
+      ),
+    );
+    filters.push({field, ref: choice});
+    message0 += ` %${args0.length}`;
+  }
   return defineBlock({
     type: eventBlockType(event),
-    message0: `when %1 ${event.name}`,
-    args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+    message0,
+    args0,
     nextStatement: true,
     inputsInline: true,
-    extensions: [actorSubjectExtension],
+    extensions,
     style: 'event_blocks',
     tooltip: `Run the blocks below when this actor ${event.name}.`,
     generator: {
       javascript(block, generator) {
         const target =
           generator.valueToCode(block, 'ACTOR', Order.MEMBER) || 'actor';
+        // The guard a learner would otherwise write themselves: compare the
+        // event's value against the choice and leave if it is not the one.
+        const guards = filters
+          .map(filter => block.getFieldValue(filter.field))
+          .filter(value => value)
+          .map(value => `  if (eventValue !== ${str(value)}) return;\n`)
+          .join('');
         return onHandler(
           target,
           refCode(event.ref, generator),
-          nextChainCode(block, generator),
+          guards + nextChainCode(block, generator),
         );
       },
     },
@@ -2680,12 +2735,22 @@ const worldRuleProperty = defineBlock({
 
 const worldRuleEvent = defineBlock({
   type: 'world_rule_event',
-  message0: 'define event %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'gusted'}],
+  // Designed, like `define block`: the row below is the HAT this event makes,
+  // built from the same parts. An event whose phrasing takes a choice —
+  // "⟨space⟩ is pressed" — is one a handler can filter on, which is the whole
+  // of specs/ENUMS.md.
+  message0: 'define event',
   previousStatement: true,
   nextStatement: true,
-  style: 'event_blocks',
-  tooltip: 'Define an event a rule can raise (inside a "define trait").',
+  mutator: eventDesignerMutator,
+  extensions: [blockDesignerInitExtension],
+  // A DEFINITION, coloured like the other definitions — `define rule`,
+  // `define trait`, `define block`. The event colour belongs to the hat this
+  // makes, which the preview row below draws.
+  style: 'setup_blocks',
+  tooltip:
+    'Define an event a rule can raise. The row below is the "when …" block it ' +
+    'makes — edit it with the pencil. A choice in it is what a handler filters on.',
   generator: noGenerator,
 });
 

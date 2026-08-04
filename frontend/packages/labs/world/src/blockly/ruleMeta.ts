@@ -138,6 +138,15 @@ export interface EventMeta {
   readonly id: string;
   readonly name: string;
   readonly ref: MemberRef;
+  /**
+   * The designed phrasing of the hat this event makes, when one was designed.
+   *
+   * Labels are its wording; a parameter is what a handler FILTERS on — the hat
+   * carries a dropdown of that enum's choices, and the handler it generates
+   * runs only when what was emitted matches (specs/ENUMS.md). Absent means the
+   * plain `when ⟨actor⟩ <name>` hat, which is every event written before this.
+   */
+  readonly parts?: readonly MemberPart[];
 }
 
 /** A reference to another Step, for ordering — its owning rule and its id, so
@@ -521,8 +530,27 @@ export function parseRuleMeta(
 
   // A `define event` block → an EventMeta. Declared at rule level or under a
   // trait; both produce a rule-level event.
+  /**
+   * A `define event` → the event, and the phrasing of the hat it makes.
+   *
+   * Designed like a block (`extraState.parts`), and named by its labels joined,
+   * so "%1 is pressed" is the event `is pressed` with one choice to filter on.
+   */
   const addEvent = (block: RuleBlock): void => {
-    const name = field(block, 'NAME');
+    const raw = block.extraState?.parts ?? [];
+    const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
+      if (part.kind === 'param') {
+        return [
+          {
+            kind: 'param',
+            name: (part.var && variableNames.get(part.var)) || 'choice',
+            type: (part.type ?? 'string') as ParamType,
+          },
+        ];
+      }
+      return part.text ? [{kind: 'label', text: part.text}] : [];
+    });
+    const name = designedName(raw);
     if (!name) {
       return;
     }
@@ -530,6 +558,7 @@ export function parseRuleMeta(
       id: slug(name),
       name,
       ref: ref(`${pascal(name)}Event`),
+      ...(parts.length > 0 ? {parts} : {}),
     });
   };
 
