@@ -105,13 +105,19 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['assets'].first['download_url']).must_equal 'https://s3.example/download'
       end
 
-      it 'omits the evaluation fields (students see them only after teacher review)' do
-        challenge_response.update!(evaluation_result: {'evaluations' => []}, evaluation_status: :success)
+      it 'includes their feedback and status but not the scored evaluation' do
+        challenge_response.update!(
+          evaluation_result: {'evaluations' => []},
+          student_feedback: 'Nice work!',
+          evaluation_status: :success
+        )
 
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
-        %w[evaluation_result evaluation_status student_feedback evaluated_at].each do |field|
+        _(response_json['student_feedback']).must_equal 'Nice work!'
+        _(response_json['evaluation_status']).must_equal 'success'
+        %w[evaluation_result evaluated_at].each do |field|
           _(response_json).wont_include field
         end
       end

@@ -10,7 +10,7 @@ class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
     'evaluations' => [
       {'key' => 'accuracy', 'level' => 'meets', 'reasoning' => 'correct', 'evidence' => 'It equals 4'},
     ],
-    'overall_feedback' => 'Good work',
+    'student_feedback' => 'You explained your idea clearly. Next time, try showing your steps.',
   }.freeze
 
   def stub_openai(code: 200, content: EVALUATION.to_json)
@@ -36,6 +36,7 @@ class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
 
     challenge_response.reload
     _(challenge_response.evaluation_result).must_equal EVALUATION
+    _(challenge_response.student_feedback).must_equal EVALUATION['student_feedback']
     _(challenge_response.evaluation_status).must_equal 'success'
     _(challenge_response.evaluated_at).wont_be_nil
   end

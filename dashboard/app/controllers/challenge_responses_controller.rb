@@ -26,9 +26,9 @@ class ChallengeResponsesController < ApplicationController
 
   # GET /challenge_responses/:id
   #
-  # Students do not see their AI evaluation until a teacher has reviewed it,
-  # so the evaluation fields are only included for non-owner readers (i.e.
-  # the student's teachers, per the :read ability).
+  # The scored rubric evaluation is teacher-only, so it is included just for
+  # non-owner readers (the student's teachers, per the :read ability).
+  # Students always get their constructive feedback via student_feedback.
   def show
     include_evaluation = @challenge_response.user_id != current_user.id
     render json: @challenge_response.summarize(include_evaluation: include_evaluation)
@@ -38,8 +38,9 @@ class ChallengeResponsesController < ApplicationController
   #
   # Enqueues asynchronous AI evaluation of this response. Fire-and-forget
   # from the client's perspective: the result is stored server-side for
-  # later teacher review, so a 202 is all the client needs. A failed
-  # evaluation may be requested again; queued/running/finished ones may not.
+  # later viewing (teacher review, student feedback gallery), so a 202 is
+  # all the client needs. A failed evaluation may be requested again;
+  # queued/running/finished ones may not.
   def evaluate
     if @challenge_response.challenge.rubric.blank?
       return render status: :unprocessable_entity, json: {error: 'Challenge has no rubric'}

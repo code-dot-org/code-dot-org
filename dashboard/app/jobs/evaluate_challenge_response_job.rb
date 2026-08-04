@@ -6,9 +6,11 @@ require 'cdo/share_filtering'
 #
 # The student's text and transcript are run through the PII and profanity
 # filters first; a hit records a violation status and nothing is sent to the
-# LLM. On success the parsed evaluation is stored in evaluation_result. The
-# result is not shown to the student — a teacher reviews it first (teacher
-# view is future work) — so nothing here notifies the client.
+# LLM. On success the parsed evaluation is stored in evaluation_result
+# (scored per rubric criterion, teacher-only) and its constructive,
+# score-free feedback is copied to student_feedback for the student. Neither
+# is displayed at submit time — teacher view and student gallery are future
+# work — so nothing here notifies the client.
 class EvaluateChallengeResponseJob < ApplicationJob
   MODEL = 'gpt-4o-mini-2024-07-18'.freeze
 
@@ -74,8 +76,10 @@ class EvaluateChallengeResponseJob < ApplicationJob
     content = response.parsed_response&.dig('choices', 0, 'message', 'content')
     raise "OpenAI response had no message content for challenge_response #{challenge_response.id}" if content.blank?
 
+    evaluation = JSON.parse(content)
     challenge_response.update!(
-      evaluation_result: JSON.parse(content),
+      evaluation_result: evaluation,
+      student_feedback: evaluation['student_feedback'],
       evaluation_status: :success,
       evaluated_at: Time.now
     )
