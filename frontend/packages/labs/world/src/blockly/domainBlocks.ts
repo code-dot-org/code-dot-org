@@ -67,6 +67,7 @@ import {worldContextExtension} from './extensions/worldContext';
 import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
+import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
   actorIdFromName,
   definesWorld,
@@ -2067,6 +2068,29 @@ const worldWorld = defineBlock({
         `import * as WorldLab from 'world-lab';`,
       );
       const body = nextChainCode(block, generator);
+      // The foundational rules the project HOLDS, in play without being named.
+      //
+      // The engine seeds its own two (Space and Appearance — `WorldBuilder`),
+      // but the keyboard's events are an authored rule now, and noticing a
+      // keypress is not a mechanic a game opts into. So a project holding
+      // `rules/input.rule` runs it, on the same terms as the `.anim` files
+      // below: holding the file is the opting-in. Delete the file and nothing
+      // is emitted; name it in a `use rule` as well and it is the same module,
+      // so the world has it once.
+      const foundation = FOUNDATIONAL_STOCK_RULES.map(rule =>
+        ruleLocation(rule.name),
+      )
+        .filter(located => located?.source === 'project')
+        .map(located => {
+          const modulePath = (located as {modulePath: string}).modulePath;
+          addImport(
+            generator,
+            `mod:${modulePath}`,
+            `import ${importVar(modulePath)} from ${str(modulePath)};`,
+          );
+          return `world.useRules([${importVar(modulePath)}]);\n`;
+        })
+        .join('');
       // Every `.anim` in the project, registered. There is no block for this and
       // deliberately so: an animation file is not a thing a world opts into, it
       // is a thing the project HAS — a learner who draws one and plays it should
@@ -2090,6 +2114,7 @@ const worldWorld = defineBlock({
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
+        foundation +
         animations +
         body
       );

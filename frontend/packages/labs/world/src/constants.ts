@@ -35,32 +35,37 @@ export const ENTRY_FILE = 'worlds/main.world';
 // per-instance position. `ground` is a JS template, `player` a Blockly `.actor`;
 // the world adds all of them the same way. (The player is arrow-key controlled,
 // so it also carries the input trait — authored in its `.actor` file.)
+//
+// What none of them elects is being POSITIONED or having an APPEARANCE: every
+// actor has those (`ActorBuilder`'s foundation), so what a template lists is
+// what makes it that kind of actor and nothing else.
 
-const GROUND_ACTOR = `import {ActorBuilder, AppearanceTrait, SpriteProperty} from 'world-lab';
+const GROUND_ACTOR = `import {ActorBuilder, SpriteProperty} from 'world-lab';
 import {SolidTrait} from 'rules/collision';
 import {ActsAsGroundTrait} from 'rules/gravity';
 
 // A ground tile: landable (ActsAsGroundTrait, from the project's own gravity
 // rule) and a wall (SolidTrait, from the engine's collision rule), drawn with
-// the project's own "ground.png". A normal tile is both.
+// the project's own "ground.png". A normal tile is both. Being somewhere and
+// having a picture are not among the traits it elects — every actor has those.
 export default new ActorBuilder({id: 'ground', name: 'Ground'})
-  .useTraits([ActsAsGroundTrait, SolidTrait, AppearanceTrait])
+  .useTraits([ActsAsGroundTrait, SolidTrait])
   .set(SpriteProperty, 'ground.png');
 `;
 
-const COIN_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
+const COIN_ACTOR = `import {ActorBuilder, AnimationProperty} from 'world-lab';
 
-// A coin playing "coinSpin" — the animation in animations/coinSpin.anim.
+// A coin playing "coinSpin" — the animation in animations/coinSpin.anim. It
+// elects no traits at all: an actor can be somewhere and be drawn without
+// asking, so playing an animation is the whole of what makes this a coin.
 export default new ActorBuilder({id: 'coin', name: 'Coin'})
-  .useTraits([PositionalTrait, AppearanceTrait])
   .set(AnimationProperty, 'coinSpin');
 `;
 
-const BALL_ACTOR = `import {ActorBuilder, PositionalTrait, AppearanceTrait, AnimationProperty} from 'world-lab';
+const BALL_ACTOR = `import {ActorBuilder, AnimationProperty} from 'world-lab';
 
 // A ball playing "pulse" — the animation in animations/game.anim.
 export default new ActorBuilder({id: 'ball', name: 'Ball'})
-  .useTraits([PositionalTrait, AppearanceTrait])
   .set(AnimationProperty, 'pulse');
 `;
 
@@ -181,11 +186,17 @@ const ruleShim = (exportName: string): string =>
   `export {${exportName} as default} from 'world-lab';\n`;
 
 // The world, authored in Blockly (`main.world`): a `world_world` root with the
-// rules in play, the animation file it registers, and the map whose actors it
-// places. "Has Gravity" pulls in motion and collision; "Moves with Arrow Keys"
-// walks the player (and pulls in the engine's keyboard rule); "Has Appearance"
-// draws sprites and animations.
-// The rules are project modules (`rules/*`), imported by the generated world.
+// rules in play and the map whose actors it places.
+//
+// TWO rows, and both are choices. "Has Gravity" pulls in motion and collision
+// through its own `requires`, and "Moves with Arrow Keys" pulls in motion the
+// same way; a world could sensibly have neither. What is NOT here is the
+// foundation — Space and Appearance, which the engine seeds into every world,
+// and Input, which the project runs by holding `rules/input.rule`
+// (blockly/foundation). Those were four more rows saying what no game can be
+// without, which is four rows of noise on the first thing a learner reads.
+// The rules named are project modules (`rules/*`), imported by the generated
+// world.
 //
 // Rules and animations first, then the map: `load map` builds the world, and a
 // `use rule` below it would arrive too late to be part of it (WorldBuilder
@@ -202,12 +213,8 @@ const MAIN_WORLD = JSON.stringify(
           fields: {NAME: 'Platform World'},
           next: {
             block: stack([
-              {type: 'world_use_rule', fields: {RULE: 'Physics'}},
               {type: 'world_use_rule', fields: {RULE: 'Gravity'}},
-              {type: 'world_use_rule', fields: {RULE: 'Collisions'}},
-              {type: 'world_use_rule', fields: {RULE: 'Input'}},
               {type: 'world_use_rule', fields: {RULE: 'Arrow Keys'}},
-              {type: 'world_use_rule', fields: {RULE: 'rules/animation'}},
               {type: 'world_load_map', fields: {MAP: 'maps/level1'}},
             ]),
           },
@@ -229,36 +236,29 @@ const PLAYER_ACTOR = JSON.stringify(
           y: 20,
           fields: {NAME: 'Player'},
           next: {
-            block: nextBlock(
+            block: stack([
               {
                 type: 'world_use_trait',
                 fields: {TRAIT: 'Gravity#AffectedByGravityTrait'},
               },
-              nextBlock(
-                {
-                  type: 'world_use_trait',
-                  fields: {
-                    TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait',
-                  },
-                },
-                nextBlock(
-                  // Appearance is now explicit: `play animation` only sets the
-                  // animation, so the actor must elect the trait itself.
-                  {
-                    type: 'world_use_trait',
-                    fields: {TRAIT: 'Appearance#AppearanceTrait'},
-                  },
-                  // Plays a learner-authored animation (game.anim) — its id is
-                  // in the dropdown because the lab feeds the project's
-                  // animations to the block (Phase D). Position is set by the
-                  // map when the world places this actor, not here.
-                  {
-                    type: 'world_play_animation',
-                    fields: {ANIMATION: 'playerBob'},
-                  },
-                ),
-              ),
-            ),
+              {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Arrow Keys#ControlledByArrowKeysTrait'},
+              },
+              // Plays a learner-authored animation (game.anim) — its id is in
+              // the dropdown because the lab feeds the project's animations to
+              // the block (Phase D). Position is set by the map when the world
+              // places this actor, not here.
+              //
+              // No `use trait Has Appearance` above it any more: every actor
+              // has that, and being positioned, without electing either
+              // (ActorBuilder's foundation). What is left are the two traits
+              // that make this actor a PLAYER rather than a coin.
+              {
+                type: 'world_play_animation',
+                fields: {ANIMATION: 'playerBob'},
+              },
+            ]),
           },
         },
         // Space to jump, which is the input rule's events reaching a handler:
@@ -266,7 +266,7 @@ const PLAYER_ACTOR = JSON.stringify(
         // this filters for the key it wants, and gravity's own query keeps the
         // jump honest — no second jump in mid-air.
         {
-          type: 'world_on_Input_AKeyIsPressedEvent',
+          type: 'world_on_Input_SeesThatAKeyIsPressedEvent',
           x: 20,
           y: 440,
           next: {

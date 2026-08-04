@@ -39,6 +39,22 @@ export interface StockRule {
   description: string;
   /** What it gives an actor, in the dialog: the traits it provides. */
   provides: readonly string[];
+  /**
+   * Whether a project holding this rule runs it without saying so.
+   *
+   * The engine's own foundation (Space, Appearance) is seeded by
+   * `WorldBuilder` — a rule cannot provide a position or read a sprite sheet,
+   * so no world can lack them. This flag is the same idea for a rule that IS
+   * authored: the keyboard's events belong to a rule now, but noticing a
+   * keypress is not a mechanic a game opts into, so a project that holds
+   * `rules/input.rule` gets it in play the way it gets its `.anim` files
+   * registered — by holding them.
+   *
+   * `use rule` keeps meaning what it says: a mechanic in play, which is a
+   * choice. Naming a foundational rule explicitly is allowed and does nothing
+   * extra.
+   */
+  foundational?: boolean;
   /** The `.rule` workspace JSON, copied verbatim on import. */
   contents: string;
 }
@@ -73,6 +89,7 @@ export const STOCK_RULES: readonly StockRule[] = [
     description:
       'Raises an event on every actor when a key goes down or comes up, so a handler can react to a press rather than to it being held.',
     provides: [],
+    foundational: true,
     contents: inputRule,
   },
   {

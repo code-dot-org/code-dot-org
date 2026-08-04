@@ -1616,6 +1616,45 @@ describe('world block generators', () => {
     );
     setProjectAnimationFiles([]);
   });
+
+  it('puts the foundational rules the project holds in play, with no block for it', () => {
+    // Same argument as the animations above, one step further: noticing a
+    // keypress is not a mechanic a game opts into, so a project that HOLDS
+    // `rules/input.rule` runs it. `use rule` is left for the rules a world
+    // could sensibly be without.
+    const INPUT_RULE = parseRuleMeta(
+      'rules/input',
+      JSON.stringify({
+        blocks: {
+          blocks: [
+            {
+              type: 'world_rule',
+              fields: {NAME: 'Input', ABILITY: 'Responds to Input'},
+            },
+          ],
+        },
+      }),
+    )!;
+    registerProjectRules([PROJECT_RULE, INPUT_RULE]);
+    const defs: Record<string, string> = {};
+
+    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
+
+    expect(code).toContain('world.useRules([Input]);');
+    expect(defs['mod:rules/input']).toBe('import Input from "rules/input";');
+    registerProjectRules([PROJECT_RULE]);
+  });
+
+  it('emits no foundational rule the project does not hold', () => {
+    // Delete `rules/input.rule` and nothing is emitted — the world generator
+    // never conjures a module the project has not got.
+    const defs: Record<string, string> = {};
+
+    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
+
+    expect(code).not.toContain('useRules');
+    expect(defs['mod:rules/input']).toBeUndefined();
+  });
 });
 
 describe('world_load_map generator', () => {

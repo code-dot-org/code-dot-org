@@ -26,8 +26,18 @@ import type {AnimationDef} from '../core/animationTypes';
 import {rgba, type ColorValue} from '../core/color';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
 import {DEFAULT_BACKDROP_COLOR, World, type BackdropState} from '../core/World';
+import {AnimationRule} from '../rules/animation';
+import {SpatialRule} from '../rules/spatial';
 
 import type {ActorBuilder} from './ActorBuilder';
+
+/**
+ * The rules every world has whether or not it says so — see `rulesInPlay`.
+ *
+ * Imported from their modules rather than through the engine's index, which
+ * would be a cycle: the index re-exports this file.
+ */
+const FOUNDATION_RULES: readonly Rule[] = [SpatialRule, AnimationRule];
 
 /**
  * A Map: initial actor instances as data (GLOSSARY.md), loaded into a World.
@@ -383,6 +393,30 @@ export class WorldBuilder {
   }
 
   /**
+   * The rules this world runs under: what it asked for, over the foundation.
+   *
+   * Space and Appearance are not asked for. They are the two the engine
+   * provides because a rule CANNOT provide them — a position is not something
+   * a rule can invent, and animation reads sprite sheets the language cannot
+   * see (builtinMeta) — so no world can meaningfully be without them, and
+   * making a learner say `use rule Has Space` is asking them to affirm a
+   * tautology before their game will run. `use rule` is left meaning what it
+   * says: a mechanic in play, which is a choice.
+   *
+   * An explicit rule of the same id WINS. That is what keeps the foundation
+   * from being a trap: eject Appearance into an authored `.rule` and name it,
+   * and the world runs the learner's version rather than silently running the
+   * built-in one it shadows.
+   */
+  private rulesInPlay(): Rule[] {
+    const claimed = new Set(this.rules.map(rule => rule.id));
+    return [
+      ...FOUNDATION_RULES.filter(rule => !claimed.has(rule.id)),
+      ...this.rules,
+    ];
+  }
+
+  /**
    * Build a NEW World from this description.
    *
    * Distinct from `getWorld`, which memoizes: this is for callers that want a
@@ -393,7 +427,7 @@ export class WorldBuilder {
     return new World({
       id: this.id,
       name: this.name,
-      rules: [...this.rules],
+      rules: this.rulesInPlay(),
       overrides: [...this.overrides],
       animations: Object.entries(this.animations),
       effects: [...this.effects],

@@ -10,6 +10,7 @@ import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {FOUNDATION_RULE_NAMES} from './foundation';
 import {label} from './label';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
 import {cellCount} from './spriteCells';
@@ -275,9 +276,16 @@ export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
  * export names (a project rule that shims a built-in resolves through
  * {@link resolveRuleExport}). The trait dropdown resolves these against the
  * engine to list the traits in play.
+ *
+ * The FOUNDATION is in the list whether a world names it or not, because it is
+ * in play whether a world names it or not: the engine's own two rules
+ * (`WorldBuilder.rulesInPlay`) and any foundational stock rule the project
+ * holds (the world generator emits those). Leaving them out would offer a
+ * learner fewer traits than their world actually supports — "Can Be Positioned"
+ * would vanish from `use trait` the moment nobody wrote `use rule Has Space`.
  */
 export function projectWorldRules(files: Record<string, string>): string[] {
-  const names = new Set<string>();
+  const names = new Set<string>(FOUNDATION_RULE_NAMES);
   interface Block {
     type?: string;
     fields?: {RULE?: string};

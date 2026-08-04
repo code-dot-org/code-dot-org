@@ -1,5 +1,6 @@
 import {describe, expect, it} from 'vitest';
 
+import {FOUNDATION_RULE_NAMES} from '../foundation';
 import {
   projectActorOptions,
   projectAnimationFileOptions,
@@ -122,7 +123,21 @@ describe('projectWorldRules', () => {
       'actors/player.actor': worldFile('Collisions'), // not a .world — ignored
       'worlds/broken.world': 'not json yet', // mid-edit — skipped
     });
-    expect(new Set(rules)).toEqual(new Set(['Gravity', 'Input', 'Appearance']));
+    // Gravity is the only one of these that is a CHOICE; Input and Appearance
+    // are in the list either way, being foundational.
+    expect(new Set(rules)).toEqual(
+      new Set([...FOUNDATION_RULE_NAMES, 'Gravity']),
+    );
+  });
+
+  it('lists the foundation even when no world names it', () => {
+    // A world runs on Space and Appearance whether or not it says so
+    // (`WorldBuilder.rulesInPlay`), and on the foundational stock rules the
+    // project holds. The trait dropdown reads this list, so leaving them out
+    // would hide traits the learner's world actually supports.
+    expect(new Set(projectWorldRules({'worlds/a.world': worldFile()}))).toEqual(
+      new Set(FOUNDATION_RULE_NAMES),
+    );
   });
 
   it('resolves a rule referred to by module — a `.js` — to a NAME', () => {
@@ -135,7 +150,12 @@ describe('projectWorldRules', () => {
       'rules/animation.js': `export {AnimationRule as default} from 'world-lab';\n`,
       'rules/mine.js': `const rule = new RuleBuilder({id: 'mine', name: 'Mine'});\nexport default rule.build();`,
     });
-    expect(new Set(rules)).toEqual(new Set(['Appearance', 'Space']));
+    // The shim resolves to "Appearance" and the field "Space" is already one —
+    // both foundational, so what this pins down is the other half: a rule that
+    // is genuinely the project's own contributes NOTHING, having no name to
+    // read statically.
+    expect(new Set(rules)).toEqual(new Set(FOUNDATION_RULE_NAMES));
+    expect(rules).not.toContain('Mine');
   });
 
   it('resolves a `.rule` referred to by module to the name it declares', () => {
@@ -149,7 +169,7 @@ describe('projectWorldRules', () => {
         },
       }),
     });
-    expect(rules).toEqual(['Wind']);
+    expect(new Set(rules)).toEqual(new Set([...FOUNDATION_RULE_NAMES, 'Wind']));
   });
 });
 
