@@ -2124,11 +2124,6 @@ FactoryBot.define do
     end
   end
 
-  factory :contact_rollups_final do
-    sequence(:email) {|n| "contact_#{n}@example.domain"}
-    data {{'opt_in' => true}}
-  end
-
   factory :contact_rollups_pardot_memory do
     sequence(:email) {|n| "contact_#{n}@example.domain"}
     sequence(:pardot_id) {|n| n}
