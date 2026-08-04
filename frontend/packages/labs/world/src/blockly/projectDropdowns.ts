@@ -9,6 +9,7 @@ import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
 import {setProjectAnimations} from './animationOptions';
+import {registerProjectEnums} from './enums';
 import {
   setProjectActors,
   setProjectAnimationFiles,
@@ -87,6 +88,11 @@ export function refreshProjectDropdowns(
   // project. Refreshed here rather than at parse time so the editor and the
   // generator resolve against the same set — the files as they are right now.
   registerProjectRules(ruleMetas);
+  // …and the choices those rules declare (`define choices`), which the block
+  // designer offers as parameter types and the enum chips read their options
+  // from. Same moment as the rules, for the same reason: one view of the files
+  // as they are right now.
+  registerProjectEnums(ruleMetas.flatMap(rule => rule.enums));
   warnAboutDuplicateNames();
   setProjectRules(projectWorldRules(files));
 }

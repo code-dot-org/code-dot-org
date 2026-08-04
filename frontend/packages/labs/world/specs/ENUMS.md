@@ -51,18 +51,22 @@ Referred to like every other member, by `<Owner>#<Name>` — `Engine#Key`,
 
 ## Using one as a block argument
 
-The designer's parameter type dropdown lists the enums in play beside `number`,
-`boolean`, `string`, `vector`, `actor`. A parameter typed by an enum is a
-string parameter — `paramFlavour` maps `enum:<ref>` to the string flavour, so
-its getter, its type check and the body that reads it are unchanged — that
-arrives at the call site as a socket carrying a DROPDOWN SHADOW of the enum's
-options (`typedValueInputs` already builds sockets-with-shadows per type; this
-is one more case).
+The designer's flyout offers a `choice` item beside `number`, `boolean`,
+`string`, `vector`, `actor`; which enum is a field on it, so a new set of
+choices needs no new item block. A parameter typed by an enum is a string
+parameter — `paramFlavour` maps `enum:<ref>` to the string flavour, so its
+getter, its type check and the body that reads it are unchanged.
 
-A shadow rather than a field, because the shadow can be replaced. That is not
-hypothetical: `rules/input.rule` emits the key it is looping over, so its emit
-site needs a variable where the dropdown would be. Reading as a dropdown and
-accepting a value is exactly the shape that serves both.
+At the call site it is the DROPDOWN ITSELF, a field on the block. The choices
+are the whole of what the argument can be, so a socket would draw a notch, an
+outline and a plug around a list of five words, and offer to accept a value
+that is not one of them. Naming a choice where a socket is genuinely wanted — a
+comparison, an `emit … with` — is what the enum's own chip block is for, and
+that is the block `rules/input.rule` uses to send the key it is looping over.
+
+The options are live, so a set of choices edited a moment ago reaches the blocks
+built from it, and a stored word the set no longer offers is kept and shown as
+itself rather than becoming the first option.
 
 ## Using one on an event
 
@@ -135,16 +139,25 @@ when this actor [ space ▾ ] is pressed        (was: a key is pressed → if �
 
 ## Plan
 
-1. **The enum model.** `EnumMeta {ref, name, options: [label, value][]}`, a
-   registry beside `ruleRegistry`, and `Engine#Key` built from the existing
-   `KEY_OPTIONS`. `world_key` becomes the `Engine#Key` value block.
-2. **Enums as block arguments.** Designer type dropdown lists them;
-   `paramFlavour` maps `enum:<ref>` to the string flavour; `typedValueInputs`
-   builds the socket-plus-dropdown-shadow. At this point a rule can already
-   declare `push ⟨direction ▾⟩` and mean it.
-3. **`define choices`.** The `.rule` blocks (`world_rule_enum`,
-   `world_rule_enum_option`), parsed into `RuleMeta.enums`, so a rule can author
-   its own rather than only using the engine's.
+1. **The enum model.** ✅ `EnumMeta {owner, name, options}` in `blockly/enums`,
+   referenced as `<Owner>#<Name>`, with `Engine#Key` built from the engine's own
+   key table. Both key dropdowns read it.
+
+   The keys got their NAMES at the same time: the driver translates
+   `KeyboardEvent.key` at the door (`engine/core/keys`), so a key is `space` and
+   `up arrow` everywhere inland — including in the JavaScript a learner reads,
+   which no longer compares against `" "`.
+
+2. **Enums as block arguments.** ✅ The designer's flyout offers one `choice`
+   item for every enum (which enum is a field on it, so a new set of choices
+   needs no new block type); `paramFlavour` maps `enum:<ref>` to the string
+   flavour; `typedValueInputs` builds the socket-plus-dropdown-shadow. The
+   editor's parameter type is `ParamType`, which is `ArgType` plus enums — the
+   engine's list stays the engine's.
+3. **`define choices`.** ✅ A definition root with its options chained below,
+   parsed into `RuleMeta.enums` and registered beside the project's rules. Each
+   set gets a chip in its own rule's toolbox category — the only way to name one
+   of its choices outside a socket already typed by it.
 4. **Events get signatures.** The designer on `world_rule_event`; `EventMeta`
    grows `parts`; `defineEventBlock` builds its message from them; an enum part
    becomes the `(any)`-bearing dropdown and the generated guard.

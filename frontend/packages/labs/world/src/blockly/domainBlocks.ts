@@ -730,6 +730,8 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   'world_rule_step_tick',
   'world_rule_step_before',
   'world_rule_step_after',
+  // …and a set of choices, whose options chain below it.
+  'world_rule_enum',
 ]);
 
 // ── Property-driven "set" blocks ─────────────────────────────────────────────
@@ -848,11 +850,11 @@ const typedValueCode = (
     case 'number':
       return read(names.value) || String(Number(d ?? 0));
     default:
-      // An enum parameter (`enum:<Owner>#<Name>`) is a string parameter; its
-      // socket carries a dropdown rather than a text field, and what comes out
-      // is the choice's value.
+      // An enum parameter (`enum:<Owner>#<Name>`): the choice is a FIELD on the
+      // block, so it is read rather than pulled through a socket, and what it
+      // stands for is the word itself.
       return enumRefOfParamType(value.type)
-        ? read(names.value) || str(String(d ?? ''))
+        ? str(String(block.getFieldValue(names.value) ?? d ?? ''))
         : read(names.value) || String(Number(d ?? 0));
   }
 };
@@ -870,6 +872,8 @@ const typedValueInputs = (
   message: string;
   args: BlockArgDefinition[];
   shadows: Array<{name: string; shadow: ShadowSpec}>;
+  /** Extensions the block must carry for this slot (an enum's live options). */
+  extensions?: Extension[];
 } => {
   const d = value.default;
   const numberInput = (name: string): BlockArgDefinition => ({
@@ -881,24 +885,35 @@ const typedValueInputs = (
     name,
     shadow: {type: 'math_number', fields: {NUM: num}},
   });
-  // An enum-typed parameter: a String socket seeded with that enum's dropdown
-  // chip. A shadow rather than a field, so the choice can be replaced by a
-  // value — which the emitting side needs, `rules/input.rule` sending the key
-  // it is looping over where the dropdown would otherwise sit.
+  // An enum-typed parameter: the dropdown itself, on the block.
+  //
+  // A FIELD rather than a socket, because the choices are the whole of what the
+  // argument can be — a set of words the rule named. A socket would draw a
+  // notch, an outline and a plug around a list of five words, and offer to
+  // accept a value that is not one of them. Naming a choice somewhere a socket
+  // is genuinely wanted (a comparison, an `emit … with`) is what the enum's own
+  // chip block is for.
+  //
+  // Live options, so a `define choices` edited a moment ago reaches the blocks
+  // built from it — and so a stored word the set no longer offers is KEPT and
+  // shown as itself rather than silently becoming the first option
+  // (`liveDropdown`).
   const choice = enumRefOfParamType(value.type);
   if (choice) {
-    const first = enumOptions(choice)[0]?.[1] ?? '';
+    const options = (): Array<[string, string]> => {
+      const live = enumOptions(choice);
+      return live.length > 0 ? live : [['(no choices yet)', '']];
+    };
     return {
       message: `%${slot}`,
-      args: [{type: 'input_value', name: names.value, check: 'String'}],
-      shadows: [
-        {
-          name: names.value,
-          shadow: {
-            type: enumValueBlockType(choice),
-            fields: {VALUE: String(d ?? first)},
-          },
-        },
+      args: [{type: 'field_dropdown', name: names.value, options: options()}],
+      shadows: [],
+      extensions: [
+        liveDropdown(
+          `world_choice_field_${choice.replace(/[^A-Za-z0-9]+/g, '_')}_${names.value}`,
+          names.value,
+          options,
+        ),
       ],
     };
   }
@@ -1188,6 +1203,8 @@ const defineActionBlock = (action: ActionMeta) => {
 
   const args0: BlockArgDefinition[] = [];
   const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
+  // What an enum-typed argument's dropdown needs to stay live (typedValueInputs).
+  const slotExtensions: Extension[] = [];
   // A DESIGNED member (`define block`) carries the arrangement its author saw
   // in the preview, so the call site is built from that rather than from
   // "name, then arguments" — which is the whole point of designing it.
@@ -1207,6 +1224,7 @@ const defineActionBlock = (action: ActionMeta) => {
       paramIndex += 1;
       args0.push(...built.args);
       shadows.push(...built.shadows);
+      slotExtensions.push(...(built.extensions ?? []));
       message0 += `${message0 ? ' ' : ''}${built.message}`;
     }
   } else {
@@ -1214,6 +1232,7 @@ const defineActionBlock = (action: ActionMeta) => {
       const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
       args0.push(...built.args);
       shadows.push(...built.shadows);
+      slotExtensions.push(...(built.extensions ?? []));
       // Label each socket by param name only when there are several; a lone
       // param trails the verb bare, preserving the built-in blocks' look.
       message0 += labelled
@@ -1242,6 +1261,7 @@ const defineActionBlock = (action: ActionMeta) => {
     extensions: [
       ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
+      ...slotExtensions,
     ],
     style: 'default',
     // The author's own sentence, when they wrote one.
@@ -1312,6 +1332,7 @@ const defineQueryBlock = (query: QueryMeta) => {
 
   const args0: BlockArgDefinition[] = [];
   const shadows: Array<{name: string; shadow: ShadowSpec}> = [];
+  const slotExtensions: Extension[] = [];
   let message0: string;
   if (query.parts) {
     // A DESIGNED query (`define block`) reads in the arrangement its author saw
@@ -1337,6 +1358,7 @@ const defineQueryBlock = (query: QueryMeta) => {
       paramIndex += 1;
       args0.push(...built.args);
       shadows.push(...built.shadows);
+      slotExtensions.push(...(built.extensions ?? []));
       designed += `${designed ? ' ' : ''}${built.message}`;
     }
     message0 = designed;
@@ -1349,6 +1371,7 @@ const defineQueryBlock = (query: QueryMeta) => {
       const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
       args0.push(...built.args);
       shadows.push(...built.shadows);
+      slotExtensions.push(...(built.extensions ?? []));
       message0 += ` ${param.name} ${built.message}`;
     });
   } else if (params.length > 0) {
@@ -1358,6 +1381,7 @@ const defineQueryBlock = (query: QueryMeta) => {
       const built = typedValueInputs(param, args0.length + 1, paramNames[i]);
       args0.push(...built.args);
       shadows.push(...built.shadows);
+      slotExtensions.push(...(built.extensions ?? []));
       return built.message;
     });
     message0 = `${frags[0]} ${name}${frags
@@ -1382,6 +1406,7 @@ const defineQueryBlock = (query: QueryMeta) => {
     extensions: [
       ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
+      ...slotExtensions,
     ],
     style: valueStyle(returns),
     tooltip:
@@ -2664,6 +2689,47 @@ const worldRuleEvent = defineBlock({
   generator: noGenerator,
 });
 
+/**
+ * `define choices` — a named set of string choices this rule declares
+ * (specs/ENUMS.md).
+ *
+ * A definition ROOT, beside `define trait` and the step hats rather than
+ * chained under the rule: its options stack below it, and a rule with three
+ * sets of choices reads as three lists rather than one long column.
+ *
+ * What it buys is at the edit surface. A parameter typed by these choices is a
+ * dropdown of them, and an event argument typed by them is a filter. Nothing
+ * of it survives into generated code: the value is the string.
+ */
+const worldRuleEnum = defineBlock({
+  type: 'world_rule_enum',
+  message0: 'define choices %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Colors'}],
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip:
+    'Define a named set of choices. A block input typed by them is a dropdown ' +
+    'of these words; an event argument typed by them filters on one.',
+  generator: noGenerator,
+});
+
+/**
+ * One choice. The word IS the value — what a learner reads and what the block
+ * emits are the same string, which is what makes a set of choices something
+ * they can reason about without a table of translations. (The engine's `Key`
+ * differs there, and can: it is naming keys the browser already named.)
+ */
+const worldRuleEnumOption = defineBlock({
+  type: 'world_rule_enum_option',
+  message0: 'option %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'red'}],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'text_blocks',
+  tooltip: 'One of the choices. The word is the value.',
+  generator: noGenerator,
+});
+
 // ── The signature mutator's own blocks ───────────────────────────────────────
 // These live only inside `define block`'s bubble; they are never in the
 // toolbox. The container holds a statement stack, and the stack IS the
@@ -3239,6 +3305,8 @@ export const DOMAIN_BLOCKS = [
   worldRuleProperty,
   worldRuleEvent,
   worldRuleBlock,
+  worldRuleEnum,
+  worldRuleEnumOption,
   signatureContainer,
   ...signatureItems,
   signatureChoice,
@@ -3340,6 +3408,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_use_trait', // a trait's dependencies (requires), under a trait
       'world_rule_property',
       'world_rule_event',
+      'world_rule_enum', // a named set of choices, its options chained below
+      'world_rule_enum_option',
       'world_rule_block', // the generalized member: design the block it adds
       'world_return', // ends a query's body
       // Per-tick behaviour, one block per kind of ordering.
@@ -3517,11 +3587,22 @@ function generateRulePalette(
       ruleEventTypes.push(block.type);
       eventTypes.push(block.type);
     }
+    // A chip per set of choices this rule declares — the block an enum-typed
+    // socket wears, and the only way to name one of the choices anywhere else
+    // (a comparison, a variable). The engine's `Key` has `world_key` for that
+    // and so is not listed; a rule's own has nothing but this.
+    const choiceTypes: string[] = [];
+    for (const meta of rule.enums) {
+      const block = defineEnumValueBlock(meta);
+      blocks.push(block);
+      choiceTypes.push(block.type);
+    }
     const categoryBlocks = [
       ...propTypes,
       ...queryTypes,
       ...actionTypes,
       ...ruleEventTypes,
+      ...choiceTypes,
     ];
     if (categoryBlocks.length > 0) {
       categories.push({name: rule.name, blocks: categoryBlocks});

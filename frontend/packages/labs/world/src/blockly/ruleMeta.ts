@@ -20,7 +20,7 @@ import type {
   WorldQuery,
 } from '../engine';
 
-import type {ParamType} from './enums';
+import type {ParamType, EnumMeta} from './enums';
 import {
   refFromValue,
   refModule,
@@ -197,6 +197,14 @@ export interface RuleMeta {
   readonly queries: readonly QueryMeta[];
   readonly events: readonly EventMeta[];
   readonly steps: readonly StepMeta[];
+  /**
+   * Named sets of choices this rule declares (`define choices`).
+   *
+   * Not members: nothing generated names one, and the engine never hears about
+   * them (specs/ENUMS.md). They are here because a `.rule` is where one is
+   * written, and the editor reads a project's rules to learn what it has.
+   */
+  readonly enums: readonly EnumMeta[];
 }
 
 /**
@@ -317,6 +325,9 @@ export function builtinRuleMeta(
       queries,
       events,
       steps,
+      // The engine's own enums are not a rule's (`Engine#Key` belongs to the
+      // World, which owns the keyboard); they are declared in `blockly/enums`.
+      enums: [],
     };
   });
 }
@@ -426,6 +437,7 @@ export function parseRuleMeta(
   let root: RuleBlock | undefined;
   let traitRoots: RuleBlock[] = [];
   let stepRoots: RuleBlock[] = [];
+  let enumRoots: RuleBlock[] = [];
   // A `.rule`'s parameter names live in the workspace variable map (a param
   // block's VAR field is a variable id); resolve id → name to label params.
   const variableNames = new Map<string, string>();
@@ -445,6 +457,7 @@ export function parseRuleMeta(
     // declares one rule, so every trait in the file belongs to it.
     traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
     stepRoots = tops.filter(b => b?.type?.startsWith('world_rule_step'));
+    enumRoots = tops.filter(b => b?.type === 'world_rule_enum');
   } catch {
     return undefined; // mid-edit / not JSON
   }
@@ -648,6 +661,34 @@ export function parseRuleMeta(
     addStep(stepBlock);
   }
 
+  // A set of choices: the root names it, the blocks below it are the choices.
+  // A word is both what a learner reads and what the block emits, so no
+  // translation table and no way for the two to disagree. An empty set is kept
+  // — a learner types the name before the options, and a set that vanished
+  // between keystrokes would take the dropdowns using it with it.
+  const enums: EnumMeta[] = [];
+  for (const enumBlock of enumRoots) {
+    const name = field(enumBlock, 'NAME');
+    if (!name) {
+      continue;
+    }
+    const options: Array<readonly [string, string]> = [];
+    for (
+      let block: RuleBlock | undefined = enumBlock.next?.block;
+      block;
+      block = block.next?.block
+    ) {
+      if (block.type !== 'world_rule_enum_option') {
+        continue;
+      }
+      const word = field(block, 'NAME');
+      if (word && !options.some(([, value]) => value === word)) {
+        options.push([word, word]);
+      }
+    }
+    enums.push({owner: ruleName, name, options});
+  }
+
   // Each trait root, and the chain of members below it.
   for (const traitBlock of traitRoots) {
     const name = field(traitBlock, 'NAME');
@@ -700,6 +741,7 @@ export function parseRuleMeta(
     queries,
     events,
     steps,
+    enums,
   };
 }
 
