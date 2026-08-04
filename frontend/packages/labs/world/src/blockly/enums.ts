@@ -15,6 +15,8 @@
 // always carried, given a name so a rule can point at it instead of rebuilding
 // it; a rule's own arrive from `define choices` (ENUMS.md step 3).
 
+import {KEY_CHOICES} from '../engine/core/keys';
+
 /** A named set of string choices. */
 export interface EnumMeta {
   /**
@@ -46,20 +48,6 @@ export function enumRef(meta: {owner: string; name: string}): string {
 /** The owner name the engine's own enums declare. */
 export const ENGINE_OWNER = 'Engine';
 
-// The keyboard, as the driver reports it: a friendly label against the DOM
-// `KeyboardEvent.key` name (space is ' ', letters lowercase).
-const KEY_OPTIONS: Array<[string, string]> = [
-  ['space', ' '],
-  ['up arrow', 'ArrowUp'],
-  ['down arrow', 'ArrowDown'],
-  ['left arrow', 'ArrowLeft'],
-  ['right arrow', 'ArrowRight'],
-  ['enter', 'Enter'],
-  ...'abcdefghijklmnopqrstuvwxyz'
-    .split('')
-    .map(c => [c.toUpperCase(), c] as [string, string]),
-];
-
 /**
  * The keys, as an enum.
  *
@@ -71,7 +59,10 @@ const KEY_OPTIONS: Array<[string, string]> = [
 export const KEY_ENUM: EnumMeta = {
   owner: ENGINE_OWNER,
   name: 'Key',
-  options: KEY_OPTIONS,
+  // Straight from the engine's own table, so what a dropdown offers and what
+  // the World compares are one list. The label differs from the value only for
+  // the letters, which show `A` and are `a` (keys fold case).
+  options: KEY_CHOICES.map(([label, value]) => [label, value] as const),
 };
 
 /** The enums the engine provides. */

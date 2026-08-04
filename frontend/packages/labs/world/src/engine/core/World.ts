@@ -216,8 +216,8 @@ export class World {
   private readonly backdropList: BackdropSlot[];
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
-  // Rule steps read it through `isKeyDown`; keys use DOM `KeyboardEvent.key`
-  // names ('ArrowLeft', 'a', ' ').
+  // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
+  // 'a', 'space' — which the driver translates the DOM's into (core/keys).
   private keys: ReadonlySet<string> = new Set();
   // The previous tick's pressed set, so a rule step can detect rising/falling
   // edges (a key *just* pressed or released) rather than only the held state.
@@ -377,7 +377,7 @@ export class World {
     this.keys = new Set(keys);
   }
 
-  /** Whether `key` (a DOM `KeyboardEvent.key` name) is currently pressed. */
+  /** Whether `key` (a name from `core/keys`) is currently pressed. */
   isKeyDown(key: string): boolean {
     return this.keys.has(key);
   }

@@ -284,7 +284,12 @@ const PLAYER_ACTOR = JSON.stringify(
                           fields: {OP: 'EQ'},
                           inputs: {
                             A: {block: {type: 'world_event_value'}},
-                            B: {block: {type: 'world_key', fields: {KEY: ' '}}},
+                            B: {
+                              block: {
+                                type: 'world_key',
+                                fields: {KEY: 'space'},
+                              },
+                            },
                           },
                         },
                       },

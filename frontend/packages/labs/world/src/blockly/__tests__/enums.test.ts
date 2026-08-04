@@ -54,10 +54,13 @@ describe('enum references', () => {
 });
 
 describe('the Key enum', () => {
-  it('is what the driver reports, under a label a learner reads', () => {
-    // The two differ and have to: the space bar reads `space` and IS `" "`.
-    expect(enumOptions('Engine#Key')).toContainEqual(['space', ' ']);
-    expect(enumOptions('Engine#Key')).toContainEqual(['up arrow', 'ArrowUp']);
+  it('offers the names the engine itself compares', () => {
+    // Not the DOM's names: the driver translates those away at the door
+    // (`engine/core/keys`), so a key IS `space`, and the JavaScript a learner
+    // reads says so. Only the letters have a label of their own, showing `A`
+    // for the key whose name is `a`, because keys fold case.
+    expect(enumOptions('Engine#Key')).toContainEqual(['space', 'space']);
+    expect(enumOptions('Engine#Key')).toContainEqual(['up arrow', 'up arrow']);
     expect(enumOptions('Engine#Key')).toContainEqual(['A', 'a']);
   });
 });
