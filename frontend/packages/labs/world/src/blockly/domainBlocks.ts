@@ -31,7 +31,7 @@ import {
   type PropertyType,
 } from '../engine';
 
-import {actorInputExtension} from './actorInput';
+import {actorInputExtension, actorSubjectExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {COLOUR_CHECK} from './colorCheck';
@@ -604,8 +604,9 @@ const worldPlayAnimation = defineBlock({
 // under its rule's toolbox category. Like `when_run`, an event is a top-level
 // root: no previous connection, but a NEXT connection — the handler body
 // attaches below as the next statement, not nested in a `do` input. The ACTOR
-// socket is whose handler this is; it defaults to a `this actor` shadow (on an
-// `.actor` file the subject is obvious). A handler runs at RUNTIME, so its args
+// socket is whose handler this is — the one socket in the language that names a
+// SUBJECT rather than a target, so it takes `actorSubjectExtension` and reads
+// `any <kind>` in a world file. A handler runs at RUNTIME, so its args
 // are the live `world` and `actor` (they shadow the outer `actor` builder) and
 // `eventValue` (the event's detail — the animation frame, the key pressed).
 
@@ -636,7 +637,7 @@ const defineEventBlock = (event: EventMeta) => {
     args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
     nextStatement: true,
     inputsInline: true,
-    extensions: [actorInputExtension],
+    extensions: [actorSubjectExtension],
     style: 'event_blocks',
     tooltip: `Run the blocks below when this actor ${event.name}.`,
     generator: {

@@ -8,7 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {actorInputExtension} from '../actorInput';
+import {actorInputExtension, actorSubjectExtension} from '../actorInput';
 import {assembleWorldModule} from '../assembleActorModule';
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 import {localActorValue, localActorVar} from '../localActors';
@@ -99,8 +99,8 @@ describe('assembleWorldModule', () => {
 });
 
 describe('the ACTOR socket’s default', () => {
-  /** Apply the extension to a block in a given workspace, and read the shadow. */
-  const shadowIn = (space: unknown): string | undefined => {
+  /** Apply an extension to a block in a given workspace, and read the shadow. */
+  const shadowIn = (extension: unknown, space: unknown): string | undefined => {
     let shadow: {type?: string} | undefined;
     const block = {
       workspace: space,
@@ -113,27 +113,38 @@ describe('the ACTOR socket’s default', () => {
         },
       }),
     };
-    (
-      actorInputExtension as unknown as {extension(this: unknown): void}
-    ).extension.call(block);
+    (extension as {extension(this: unknown): void}).extension.call(block);
     return shadow?.type;
   };
 
-  it('is `this actor` in an actor file', () => {
+  const ACTOR_FILE = () => workspace([{id: 'a1', type: 'world_actor'}]);
+
+  it('is `this actor` on an action, whatever the file', () => {
+    // An action acts on ONE actor, and inside a handler that is the instance
+    // the event was delivered to. Defaulting these to the kind would read as
+    // "hide every coin" where the learner wrote "hide this actor".
+    expect(shadowIn(actorInputExtension, ACTOR_FILE())).toBe(
+      'world_this_actor',
+    );
+    expect(shadowIn(actorInputExtension, WORLD())).toBe('world_this_actor');
+  });
+
+  it('is `this actor` on an event hat in an actor file', () => {
     // One actor, and the file is about it.
-    expect(shadowIn(workspace([{id: 'a1', type: 'world_actor'}]))).toBe(
+    expect(shadowIn(actorSubjectExtension, ACTOR_FILE())).toBe(
       'world_this_actor',
     );
   });
 
-  it('is `any <kind>` in a world file', () => {
+  it('is `any <kind>` on an event hat in a world file', () => {
     // Several actors and no principal one — `actor` is not even bound there.
-    expect(shadowIn(WORLD())).toBe('world_actor_kind');
+    expect(shadowIn(actorSubjectExtension, WORLD())).toBe('world_actor_kind');
   });
 
   it('asks the workspace a flyout block would be dragged into', () => {
     const flyout = {...workspace([]), isFlyout: true, targetWorkspace: WORLD()};
 
-    expect(shadowIn(flyout)).toBe('world_actor_kind');
+    expect(shadowIn(actorSubjectExtension, flyout)).toBe('world_actor_kind');
+    expect(shadowIn(actorInputExtension, flyout)).toBe('world_this_actor');
   });
 });
