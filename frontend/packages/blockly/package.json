@@ -1,0 +1,213 @@
+{
+  "name": "@code-dot-org/blockly",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": [
+    "blockly",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/blockly/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/blockly"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./xml": {
+      "types": "./dist/xml/index.d.ts",
+      "import": "./dist/xml/index.mjs",
+      "require": "./dist/xml/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./contexts": {
+      "types": "./dist/contexts/index.d.ts",
+      "import": "./dist/contexts/index.mjs",
+      "require": "./dist/contexts/index.cjs"
+    },
+    "./renderers": {
+      "types": "./dist/renderers/index.d.ts",
+      "import": "./dist/renderers/index.mjs",
+      "require": "./dist/renderers/index.cjs"
+    },
+    "./renderers/thrasos": {
+      "types": "./dist/renderers/thrasos/index.d.ts",
+      "import": "./dist/renderers/thrasos/index.mjs",
+      "require": "./dist/renderers/thrasos/index.cjs"
+    },
+    "./themes": {
+      "types": "./dist/themes/index.d.ts",
+      "import": "./dist/themes/index.mjs",
+      "require": "./dist/themes/index.cjs"
+    },
+    "./themes/default": {
+      "types": "./dist/themes/default/index.d.ts",
+      "import": "./dist/themes/default/index.mjs",
+      "require": "./dist/themes/default/index.cjs"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.mjs",
+      "require": "./dist/plugins/index.cjs"
+    },
+    "./plugins/toolboxTrashcan": {
+      "types": "./dist/plugins/toolboxTrashcan/index.d.ts",
+      "import": "./dist/plugins/toolboxTrashcan/index.mjs",
+      "require": "./dist/plugins/toolboxTrashcan/index.cjs"
+    },
+    "./plugins/sharableProcedures": {
+      "types": "./dist/plugins/sharableProcedures/index.d.ts",
+      "import": "./dist/plugins/sharableProcedures/index.mjs",
+      "require": "./dist/plugins/sharableProcedures/index.cjs"
+    },
+    "./plugins/blockLimits": {
+      "types": "./dist/plugins/blockLimits/index.d.ts",
+      "import": "./dist/plugins/blockLimits/index.mjs",
+      "require": "./dist/plugins/blockLimits/index.cjs"
+    },
+    "./plugins/grayOutUndeletableBlocks": {
+      "types": "./dist/plugins/grayOutUndeletableBlocks/index.d.ts",
+      "import": "./dist/plugins/grayOutUndeletableBlocks/index.mjs",
+      "require": "./dist/plugins/grayOutUndeletableBlocks/index.cjs"
+    },
+    "./plugins/disableOrphans": {
+      "types": "./dist/plugins/disableOrphans/index.d.ts",
+      "import": "./dist/plugins/disableOrphans/index.mjs",
+      "require": "./dist/plugins/disableOrphans/index.cjs"
+    },
+    "./mutators": {
+      "types": "./dist/mutators/index.d.ts",
+      "import": "./dist/mutators/index.mjs",
+      "require": "./dist/mutators/index.cjs"
+    },
+    "./inputs": {
+      "types": "./dist/inputs/index.d.ts",
+      "import": "./dist/inputs/index.mjs",
+      "require": "./dist/inputs/index.cjs"
+    },
+    "./inputs/rectangle": {
+      "types": "./dist/inputs/rectangle.d.ts",
+      "import": "./dist/inputs/rectangle.mjs",
+      "require": "./dist/inputs/rectangle.cjs"
+    },
+    "./inputs/round": {
+      "types": "./dist/inputs/round.d.ts",
+      "import": "./dist/inputs/round.mjs",
+      "require": "./dist/inputs/round.cjs"
+    },
+    "./inputs/triangle": {
+      "types": "./dist/inputs/triangle.d.ts",
+      "import": "./dist/inputs/triangle.mjs",
+      "require": "./dist/inputs/triangle.cjs"
+    },
+    "./fields/fieldButton": {
+      "types": "./dist/fields/fieldButton/index.d.ts",
+      "import": "./dist/fields/fieldButton/index.mjs",
+      "require": "./dist/fields/fieldButton/index.cjs"
+    },
+    "./fields/fieldColour": {
+      "types": "./dist/fields/fieldColour/index.d.ts",
+      "import": "./dist/fields/fieldColour/index.mjs",
+      "require": "./dist/fields/fieldColour/index.cjs"
+    },
+    "./blocks/types": {
+      "types": "./dist/blocks/types.d.ts"
+    }
+  },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite --config vite.demo.config.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint src/**/*.css",
+    "stylelint:fix": "yarn run stylelint --fix",
+    "test": "vitest --run",
+    "test:browser": "vitest --run --config vitest.browser.config.ts",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@blockly/block-shareable-procedures": "^6.0.10",
+    "@blockly/field-colour": "^6.0.4",
+    "@blockly/theme-dark": "^8.0.3",
+    "@blockly/theme-highcontrast": "^7.0.3",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/markdown": "workspace:*",
+    "@mantine/hooks": "^8.3.13",
+    "blockly": "^13.0.0",
+    "hast-util-to-html": "^9.0.5"
+  },
+  "devDependencies": {
+    "@code-dot-org/changelogs": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@eslint/js": "catalog:",
+    "@mui/material": "catalog:",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/identity-obj-proxy": "^3",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "classnames": "catalog:",
+    "clean-package": "^2.2.0",
+    "eslint": "catalog:",
+    "glob": "^11.0.0",
+    "globals": "catalog:",
+    "identity-obj-proxy": "^3.0.0",
+    "jsdom": "catalog:",
+    "playwright": "catalog:",
+    "postcss": "^8.4.49",
+    "postcss-modules": "^6.0.1",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "release-it": "catalog:",
+    "rimraf": "catalog:",
+    "schema-dts": "^1.1.5",
+    "stylelint": "catalog:",
+    "swiper": "^11.0.5",
+    "typed-emitter": "^2.1.0",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "classnames": "^2.5.1",
+    "react": ">=16",
+    "react-dom": ">=16",
+    "swiper": "^11.0.5"
+  }
+}

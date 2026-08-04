@@ -1,0 +1,353 @@
+import * as Blockly from 'blockly/core';
+import {
+  javascriptGenerator,
+  type JavascriptGenerator,
+} from 'blockly/javascript';
+import {simpleGenerator} from './generators/simple';
+import EventEmitter from 'events';
+import type TypedEmitter from 'typed-emitter';
+import type {EventMap} from 'typed-emitter';
+
+import type {JavascriptBlockGenerator} from './blocks/types';
+import type {Plugin} from './plugins';
+import {PluginType} from './plugins';
+import Registry from './Registry';
+import DefaultTheme from './themes/default';
+import type {
+  BlockDefinitions,
+  BlockSvg,
+  Environment,
+  OriginalGeneratorFunctions,
+  Renderer,
+  Theme,
+} from './types';
+import type Agent from './Agent';
+
+export const DriverEvent = {
+  /** The workspace was injected into the container */
+  Injected: 'injected',
+  /** A workspace was removed from the environment */
+  Removed: 'removed',
+  /** A callback for when anything in the workspace updates */
+  BlocklyEvent: 'blockly-event',
+  /** The theme changed */
+  ThemeChanged: 'theme-changed',
+} as const;
+
+interface DriverEvents<T extends Environment = Environment> extends EventMap {
+  [DriverEvent.Injected]: (
+    workspace: Blockly.WorkspaceSvg,
+    environment: T,
+  ) => void;
+  [DriverEvent.Removed]: (workspace: Blockly.WorkspaceSvg) => void;
+  [DriverEvent.BlocklyEvent]: (
+    event: Blockly.Events.Abstract,
+    environment: T,
+  ) => void;
+  [DriverEvent.ThemeChanged]: () => void;
+}
+
+const originalGeneratorFunctions: OriginalGeneratorFunctions = {
+  javascript: {},
+};
+
+class Driver<
+  T extends Environment = Environment,
+> extends (EventEmitter as unknown as new () => TypedEmitter<DriverEvents>) {
+  // An instance of our Blockly registry
+  protected _registry: Registry<T>;
+  // Reference to the set of plugins that require injection before they can be initialized
+  protected _injectPlugins: Plugin[];
+  // All of the current blocks that are defined and available
+  protected _blocks: BlockDefinitions;
+  // A reference to the Blockly environment for this instance of the workspace
+  protected _environment: T;
+  // All workspaces inside our environment
+  protected _agents: Agent<T>[];
+  // All 'main' workspaces
+  protected _mainAgents: Agent<T>[];
+  // All hidden workspace agents
+  protected _hiddenAgents: Agent<T>[];
+  // All inline (embedded) workspace agents
+  protected _inlineAgents: Agent<T>[];
+  // The renderer to use
+  protected _renderer: Renderer;
+  // The theme to use
+  protected _theme: Theme;
+
+  /**
+   * Constructs a driver to power a Blockly Workspace in the given container.
+   */
+  constructor(
+    environment: T,
+    renderer: Renderer,
+    theme: Theme,
+    plugins?: Plugin[],
+  ) {
+    super();
+
+    this._renderer = renderer;
+    this._theme = theme;
+    this._registry = new Registry<T>(environment, theme, renderer);
+    this._injectPlugins = [];
+    this._blocks = [];
+    this._environment = environment;
+    this._agents = [];
+    this._mainAgents = [];
+    this._hiddenAgents = [];
+    this._inlineAgents = [];
+
+    environment.originalGeneratorFunctions = originalGeneratorFunctions;
+
+    this.register(plugins || []);
+  }
+
+  register(plugins: Plugin[]) {
+    this._injectPlugins = plugins.filter(
+      plugin => plugin.type === PluginType.Inject,
+    );
+    this._registry.registerAll(plugins);
+  }
+
+  protected registerBlocks() {
+    this._blocks.forEach(blockDefinition => {
+      // Determine if this is a procedure block and register the procedure
+      // extensions.
+      this._registry.registerProcedures();
+
+      // Register (and modify the block definition to just reference mixins
+      // and extensions by name) any block fields, extensions, etc.
+      const formedBlockDefinition =
+        this._registry.registerFromBlockDefinition(blockDefinition);
+
+      if (Blockly.Blocks[blockDefinition.type]) {
+        delete Blockly.Blocks[blockDefinition.type];
+      }
+      Blockly.common.defineBlocksWithJsonArray([formedBlockDefinition]);
+
+      const environment = this._environment;
+
+      // Retain the original generator, in case a block is overriding a stock generator
+      originalGeneratorFunctions.javascript ||= {};
+      originalGeneratorFunctions.javascript[blockDefinition.type] ||=
+        javascriptGenerator.forBlock[
+          blockDefinition.type
+        ] as JavascriptBlockGenerator;
+
+      // Bind the given block definition's generator to the overall generator
+      javascriptGenerator.forBlock[blockDefinition.type] = function (
+        block: Blockly.Block,
+        _generator: JavascriptGenerator,
+      ) {
+        return (
+          blockDefinition.generator?.javascript?.(
+            block as BlockSvg,
+            javascriptGenerator,
+            environment,
+          ) || ''
+        );
+      };
+
+      // Deal with the 'simple' generator. It is an alias of the javascript generator
+      // when not specified.
+      simpleGenerator.forBlock[blockDefinition.type] = (blockDefinition
+        .generator?.simple
+        ? function (block: Blockly.Block, _generator: JavascriptGenerator) {
+            return (
+              blockDefinition.generator?.simple?.(
+                block as BlockSvg,
+                simpleGenerator as unknown as JavascriptGenerator,
+                environment,
+              ) || ''
+            );
+          }
+        : javascriptGenerator.forBlock[
+            blockDefinition.type
+          ]) as unknown as Blockly.CodeGenerator['forBlock'][string];
+    });
+  }
+
+  /**
+   * Retrieves a reference to the currently used Renderer.
+   */
+  get renderer(): Renderer {
+    return this._renderer;
+  }
+
+  /**
+   * The main (non-inline, non-hidden) workspace, once one has been injected.
+   * This is the workspace other surfaces target — e.g. a BlocklyFlyout creates
+   * its dragged blocks here.
+   */
+  get mainWorkspace(): Blockly.WorkspaceSvg | undefined {
+    return this._mainAgents[0]?.workspace;
+  }
+
+  /**
+   * Registers a renderer for one workspace and returns the unique name to inject
+   * with (it carries the current input-plugin shapes). Released via
+   * {@link releaseRenderer} when the workspace is torn down.
+   */
+  acquireRenderer(): string {
+    return this._registry.acquireRenderer();
+  }
+
+  /**
+   * Releases a renderer previously produced by {@link acquireRenderer}.
+   */
+  releaseRenderer(name: string) {
+    this._registry.releaseRenderer(name);
+  }
+
+  /**
+   * Retrieves a reference to the blockly Environment.
+   */
+  get environment(): T {
+    return this._environment;
+  }
+
+  /**
+   * Retrieves a reference to the currently used Theme.
+   */
+  get theme(): Theme {
+    return this._theme;
+  }
+
+  /**
+   * Updates the theme.
+   */
+  set theme(theme: Theme | undefined) {
+    this._theme = theme || DefaultTheme;
+    this.emit(DriverEvent.ThemeChanged);
+  }
+
+  /**
+   * Updates the theme.
+   */
+  setTheme(theme: Theme | undefined) {
+    this.theme = theme;
+  }
+
+  /**
+   * Registers the given set of blocks.
+   *
+   * If you give this method another list, it will replace the list of blocks currently in use.
+   */
+  set blocks(blocks: BlockDefinitions) {
+    this._blocks = blocks;
+    this.registerBlocks();
+  }
+
+  setBlocks(blocks: BlockDefinitions) {
+    this.blocks = blocks;
+  }
+
+  /**
+   * Returns a reference to the list of blocks currently registered.
+   */
+  get blocks() {
+    return this._blocks;
+  }
+
+  /**
+   * Registers a particular workspace Agent.
+   */
+  initialize(agent: Agent<T>) {
+    this._agents.push(agent);
+
+    if (agent.inline) {
+      this._inlineAgents.push(agent);
+    }
+
+    if (agent.hidden) {
+      this._hiddenAgents.push(agent);
+    }
+
+    if (!agent.inline && !agent.hidden) {
+      this._mainAgents.push(agent);
+    }
+  }
+
+  /**
+   * Unloads a workspace agent.
+   */
+  uninitialize(agent: Agent<T>) {
+    let index = this._agents.indexOf(agent);
+    if (index > -1) {
+      this._agents.splice(index, 1);
+    }
+
+    index = this._mainAgents.indexOf(agent);
+    if (index > -1) {
+      this._mainAgents.splice(index, 1);
+    }
+
+    index = this._hiddenAgents.indexOf(agent);
+    if (index > -1) {
+      this._hiddenAgents.splice(index, 1);
+    }
+
+    index = this._inlineAgents.indexOf(agent);
+    if (index > -1) {
+      this._inlineAgents.splice(index, 1);
+    }
+
+    if (agent.workspace) {
+      // Dispose this workspace's inject plugins while it is still live, before
+      // Agent.deconstruct calls workspace.dispose().
+      this._registry.disposeInject(agent.workspace);
+      this.emit(DriverEvent.Removed, agent.workspace);
+    }
+  }
+
+  /**
+   * An upcall when an Agent is injected.
+   */
+  onInject(agent: Agent<T>) {
+    if (agent.workspace) {
+      if (this._mainAgents[0] === agent) {
+        // The main workspace
+        this._environment.mainWorkspace = agent.workspace;
+
+        // Register inject plugins
+        this._registry.registerAll(
+          this._injectPlugins,
+          agent.inline,
+          agent.workspace,
+        );
+
+        // Register toolboxes
+        const toolbox = agent.getToolbox();
+        if (toolbox) {
+          this._registry.registerToolbox(toolbox, agent.workspace);
+        }
+      } else if (agent.hidden) {
+        this._environment.hiddenWorkspaces ||= [];
+        this._environment.hiddenWorkspaces.push(agent.workspace);
+      } else if (agent.inline) {
+        this._environment.embeddedWorkspaces ||= [];
+        this._environment.embeddedWorkspaces.push(agent.workspace);
+      }
+
+      // Emit general event
+      this.emit(DriverEvent.Injected, agent.workspace, this._environment);
+    }
+  }
+
+  /**
+   * Removes the workspace and deregisters the different plugins and blocks.
+   */
+  deconstruct() {
+    this.blocks = [];
+    this._injectPlugins = [];
+    this._registry.unregisterAll();
+
+    // Drop the retained stock-generator backups. They accumulate per block
+    // type across registerBlocks() calls and are never otherwise cleared;
+    // reset the map in place so environment.originalGeneratorFunctions keeps
+    // pointing at the same object.
+    originalGeneratorFunctions.javascript = {};
+  }
+}
+
+export default Driver;
