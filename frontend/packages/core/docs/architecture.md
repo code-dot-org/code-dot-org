@@ -57,6 +57,14 @@ immediately after `initializeCore()` are buffered while the async factory
 dynamically imports the Sentry adapter. Log and metric sampling are
 session-based via an observability-owned session ID stored in `sessionStorage`.
 
+**`getEnabledExperiments`** ([`src/plugins/experiments/index.ts`](../src/plugins/experiments/index.ts))
+
+Reads the experiments enabled for the current browser from the `_experiments`
+cookie and the `experimentsList` localStorage entry. Available via the
+`@code-dot-org/core/plugins/experiments` sub-path export. It exports no
+`CorePlugin`: there is nothing to configure at boot, so consumers import the
+function directly rather than registering anything.
+
 **`defaultStore`** ([`src/redux/store.ts`](../src/redux/store.ts))
 
 The global redux store, created with only a built-in bookkeeping slice.
@@ -77,7 +85,7 @@ export interface CorePlugin {
 
 `SiteConfigExtensions` is an empty interface that plugins extend via TypeScript module augmentation, allowing them to add typed fields to `SiteConfig` without modifying core. Concrete fields that core itself parses and owns, such as `SiteConfig.observability`, should be typed directly on `SiteConfig` rather than routed through `SiteConfigExtensions`. `SiteConfig.observability` is normalized to `{provider: 'none'}` when the underlying runtime config is absent.
 
-Plugins live in `src/plugins/` and are exposed as sub-path exports (e.g. `@code-dot-org/core/plugins/localization`, `@code-dot-org/core/plugins/observability`). The main `src/index.ts` does **not** re-export plugin sub-paths — consumers must import them explicitly. This ensures plugins are excluded from the bundle when not used.
+Plugins live in `src/plugins/` and are exposed as sub-path exports (e.g. `@code-dot-org/core/plugins/localization`, `@code-dot-org/core/plugins/observability`). Not every one implements `CorePlugin` — `plugins/experiments` is a sub-path export with no boot lifecycle at all. The main `src/index.ts` does **not** re-export plugin sub-paths — consumers must import them explicitly. This ensures plugins are excluded from the bundle when not used.
 
 ## Boot sequence
 
