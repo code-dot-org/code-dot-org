@@ -48,6 +48,19 @@ describe('getEnabledExperiments', () => {
     expect(getEnabledExperiments()).toEqual(['live', 'permanent']);
   });
 
+  it('reports a duplicated localStorage key once', () => {
+    localStorage.setItem(
+      'experimentsList',
+      JSON.stringify([
+        {key: 'twice', expiration: Date.now() + 60_000},
+        {key: 'twice'},
+        {key: 'other'},
+      ]),
+    );
+
+    expect(getEnabledExperiments()).toEqual(['twice', 'other']);
+  });
+
   it('reads the unsuffixed cookie when no environment suffix is rendered', () => {
     setCookie('_experiments', JSON.stringify(['from-cookie']));
 
