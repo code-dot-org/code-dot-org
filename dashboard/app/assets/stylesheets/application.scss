@@ -109,8 +109,9 @@ body.pin_bottom {
   left: 0;
 }
 
-// Brand-aware lab shell background for legacy labs. Excludes Minecraft labs
-body.pin_bottom:not(.minecraft) {
+// Brand-aware lab shell background for legacy labs. Excludes Minecraft
+// (own theming) and AI for Oceans (needs the deep-blue underwater scene).
+body.pin_bottom:not(.minecraft):not(.oceans-blue) {
   background-color: var(--background-neutral-secondary);
 }
 
@@ -140,12 +141,26 @@ h1 {
   }
 }
 
+@include codeai-brand {
+  h1.existing-account-heading {
+    color: var(--text-neutral-primary);
+  }
+}
+
 h2 {
   margin: 25px 0 10px 0;
   @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
   color: var(--text-brand-teal-primary);
+
+  // Opt-in neutral heading, mirroring h1 above. Needed where a page's heading
+  // would otherwise share the brand color of its primary button: under
+  // codeai-next the brand teal here aliases to the same purple the button
+  // uses.
+  &.text-black {
+    color: var(--text-neutral-primary);
+  }
 }
 
 h3 {
@@ -464,9 +479,24 @@ img.video_thumbnail {
   }
 }
 
+// Clips project-header content that exceeds its allocated width (the lesson
+// title and Share/Remix share the row).
+.project_info_container {
+  overflow: hidden;
+}
+
 // Pill nav links and outlined header buttons for codeai-next/codeai-audit;
 // default codeai keeps its square 35px/4px buttons and orange hover underline.
 @include codeai-brand {
+  // clip (not hidden) with a margin lets the 2px-offset focus rings paint
+  // outside the buttons while still containing overflowing content. Browsers
+  // without overflow-clip-margin clip the rings at the box; browsers without
+  // clip keep the hidden fallback above.
+  .project_info_container {
+    overflow: clip;
+    overflow-clip-margin: 4px;
+  }
+
   // Marketing-site spacing model: no container gap, spacing comes from pill padding.
   .header-wrapper .headerlinks {
     flex-grow: 1; // fills .header_middle so the auto margin below can reach the edge
@@ -519,6 +549,20 @@ img.video_thumbnail {
     &:focus-visible {
       outline: 1px solid var(--borders-neutral-white-fixed);
       outline-offset: 2px;
+    }
+  }
+
+  // Stock hand-centers the right cluster: the create menu, the user menu and
+  // the signed-out buttons each carry a 7px margin-top, which centers a 35px
+  // button in the 50px header. The reskin's buttons are 32px, so those margins
+  // leave the whole cluster 2px high (7px above, 11px below). Center on the
+  // cross axis instead and drop the offsets. The sibling help button and
+  // hamburger are not in this flex container and keep their own paddings.
+  .header-wrapper #sign_in_or_user {
+    align-items: center;
+
+    .header_button {
+      margin-top: 0;
     }
   }
 
@@ -1818,11 +1862,34 @@ body.iframe_embed_app_and_code {
 }
 
 .x-close {
-  @include close-button($cornerOffset: -20px);
-  // Reset native <button> styles so the icon matches the old <div>-based markup.
-  // (background-color already reset by the `background` shorthand in close-button mixin.)
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-neutral-quaternary);
+  background: transparent;
   border: 0;
   padding: 0;
+
+  i {
+    font-size: var(--font-size-body-md);
+    line-height: 125%;
+  }
+
+  &:hover {
+    color: var(--text-neutral-placeholder);
+  }
+
+  html[dir=rtl] &, .flip-x-close & {
+    right: auto;
+    left: 6px;
+  }
 }
 
 .open-link {
@@ -2154,6 +2221,45 @@ a.download-video {
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
+  }
+  @include codeai-brand($ancestor: true) {
+    .primary-button {
+      background-color: var(--background-brand-purple-primary);
+      border-color: var(--borders-brand-purple-primary);
+      color: var(--text-neutral-white-fixed);
+
+      &:hover {
+        background-color: var(--background-brand-purple-strong);
+        border-color: var(--borders-brand-purple-strong);
+        color: var(--text-neutral-white-fixed);
+      }
+
+      &:focus {
+        border-color: var(--borders-brand-purple-primary);
+      }
+    }
+    .secondary-button {
+      background-color: var(--background-neutral-primary);
+      border-color: var(--borders-neutral-solid);
+      color: var(--text-neutral-primary);
+
+      &:hover {
+        background-color: var(--background-neutral-tertiary);
+        border-color: var(--borders-neutral-solid);
+        color: var(--text-neutral-primary);
+      }
+
+      &:focus {
+        border-color: var(--borders-neutral-solid);
+      }
+    }
+    .primary-button,
+    .secondary-button {
+      &:focus-visible {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
   }
   .neutral-button {
     background-color: $neutral_white;
@@ -2587,6 +2693,13 @@ a.download-video {
 // NEW STYLES FOR devise/shared/_new_links
 .devise-links {
   flex-grow: 2;
+
+  // Sit at the bottom of the row instead of stretching to the taller React
+  // column beside us. Scoped to this class because the LTI account-linking
+  // page reuses .devise-links and must keep stretching.
+  &.oauth-links-column {
+    align-self: flex-end;
+  }
 
   form {
     margin: 0;
@@ -3405,7 +3518,7 @@ $modal-image-width: 100px;
 $modal-image-margin-gap: 10px;
 $modal-no-icon-gap: 22px;
 
-.modal-body {
+.dash_modal .modal-body {
   .modal-content {
     margin-left: $modal-image-width + $modal-image-margin-gap;
     html[dir=rtl] & {
@@ -3417,19 +3530,39 @@ $modal-no-icon-gap: 22px;
     }
 
     p, pre {
-      line-height: 27px;
-      font-size: 24px;
-      color: $neutral_dark;
+      font-size: var(--font-size-body-lg);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
-    pre {
-      color: $purple;
+    .generated-code-container p {
+      font-family: inherit;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: inherit;
+    }
+    .generated-code-container pre {
+      font-family: monospace;
+      font-size: var(--font-size-body-sm);
+      font-weight: normal;
+      line-height: normal;
     }
 
+    // Puzzle-complete message ("Congratulations! ...") - mirrors MUI h6.
     .congrats {
-      @include main-font-semi-bold;
-      font-size: 21px;
-      line-height: 27px;
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-semi-bold);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
+    }
+
+    .lines-of-code-message {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-lg);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.4;
+      color: var(--text-neutral-primary);
     }
 
     .instructions-markdown p {
@@ -3536,6 +3669,68 @@ h5.dialog-title {
   color: $white;
   margin-left: 0;
   margin-right: 10px;
+}
+
+.dash_modal {
+  .modal-content .show-code > summary {
+    font-family: var(--font-family-main) !important;
+    font-size: var(--font-size-body-md) !important;
+    font-weight: var(--font-weight-semi-bold) !important;
+    color: var(--text-neutral-primary) !important;
+  }
+
+  #feedbackButtons > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  #feedbackButtons #continue-button,
+  #feedbackButtons #again-button {
+    float: none !important;
+    margin: 0 !important;
+    font-family: var(--font-family-main);
+  }
+
+  // Puzzle rating buttons. !important on the fills beats
+  // apps/style/common.scss:652 which selects by #like/#dislike id.
+  #puzzleRatingButtons {
+    margin-top: 16px;
+
+    hr {
+      border-top: 1px solid var(--borders-neutral-primary);
+    }
+
+    p {
+      font-family: var(--font-family-main);
+      font-size: var(--font-size-body-md);
+      color: var(--text-neutral-tertiary);
+      margin: 8px 10px 0 0;
+
+      html[dir="rtl"] & {
+        margin-right: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .puzzle-rating-btn {
+      fill: var(--text-neutral-quaternary) !important;
+
+      &:hover {
+        fill: var(--text-neutral-primary) !important;
+      }
+
+      &#like.enabled {
+        fill: var(--text-error-primary-fixed) !important;
+      }
+
+      &#dislike.enabled {
+        fill: var(--text-info-primary-fixed) !important;
+      }
+    }
+  }
 }
 
 .modal-image {

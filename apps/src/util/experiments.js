@@ -62,7 +62,10 @@ experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 // Show the lesson/<lesson_id>/tutor page as a home for a AI Tutor+
+// and shows the review path for AI Tutor+
 experiments.LESSON_TUTOR = 'lesson-tutor';
+// Show the challenge path for AI Tutor+
+experiments.LESSON_TUTOR_CHALLENGE = 'lesson-tutor-challenge';
 // Enable Onboarding experiments
 experiments.ONBOARDING = 'onboarding';
 // Enable AI Diff Chat Drawer
@@ -91,11 +94,17 @@ experiments.getLocalStorageExperiments_ = function () {
     const jsonList = localStorage.getItem(STORAGE_KEY);
     const storedExperiments = jsonList ? JSON.parse(jsonList) : [];
     const now = Date.now();
+    // Storage may contain duplicate keys; keep the first live entry for each.
+    const seenKeys = new Set();
     const enabledExperiments = storedExperiments.filter(experiment => {
-      return (
+      const enabled =
         experiment.key &&
-        (experiment.expiration === undefined || experiment.expiration > now)
-      );
+        !seenKeys.has(experiment.key) &&
+        (experiment.expiration === undefined || experiment.expiration > now);
+      if (enabled) {
+        seenKeys.add(experiment.key);
+      }
+      return enabled;
     });
     if (enabledExperiments.length < storedExperiments.length) {
       trySetLocalStorage(STORAGE_KEY, JSON.stringify(enabledExperiments));

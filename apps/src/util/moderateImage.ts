@@ -11,6 +11,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'spritelab',
   'poetry',
   'game_design',
+  'sketchlab',
 ];
 
 export type CategoryName = 'Hate' | 'SelfHarm' | 'Sexual' | 'Violence';
@@ -60,7 +61,7 @@ export const getImageModerationVerdict = (
 };
 
 interface AnalyticsData {
-  uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
+  uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'SketchLab' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
   assetUrl?: string;

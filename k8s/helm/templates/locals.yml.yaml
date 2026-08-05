@@ -8,6 +8,12 @@ data:
   # Local service non-secret configuration shared as a base by all instances:
   dashboard_workers: {{ .Values.dashboard_workers | quote }}
 
+  # ActiveJob queue adapter, shared by enqueuers (dashboard) and the
+  # active-job-worker deployment so jobs land where the worker looks.
+  # Mirrored in k8s/kustomize/components/backend/locals.yml.yaml.
+  # Deliberately unquoted to render byte-identically to the kustomize side.
+  active_job_queue_adapter: :delayed_job
+
   build_apps: "true"
   use_my_apps: "true"
 
@@ -18,6 +24,24 @@ data:
   cloudfront_private_key: ""
   slack_bot_token: ""
   properties_encryption_key: ""
+
+  # Same idea for the adhoc environment used by the ActiveJob worker and the
+  # setup-db-minimal job; mirrored in
+  # k8s/kustomize/components/backend/locals.yml.yaml.
+  contentful_api_key: ""
+  contentful_cs_for_all_access_token: ""
+  javabuilder_key_password: ""
+  javabuilder_private_key: ""
+  openai_student_learning_api_key: ""
+  puma_control_server_token: ""
+  recaptcha_secret_key: ""
+  recaptcha_site_key: ""
+
+  # Read at eager-load time by rake db:migrate in development (the
+  # analytics_exportable enhance eager-loads the app); Secret-marked in
+  # config/development.yml.erb.
+  ai_gateway_auth_key: ""
+  ai_gateway_auth_key_passphrase: ""
 
   # Configuration for cluster local services in "development mode":
   {{- if .Values.services.mysql.enabled }}

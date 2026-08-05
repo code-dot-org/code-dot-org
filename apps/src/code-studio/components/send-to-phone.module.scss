@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.disclaimer {
+  margin: 0;
+}
+
+.twilioLink {
+  font-size: inherit;
+  line-height: inherit;
+}

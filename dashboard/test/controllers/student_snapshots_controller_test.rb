@@ -40,6 +40,23 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
     assert_equal true, lesson_data['hasLessonPlan']
     assert_equal false, lesson_data['isLockable']
     assert_equal 1, lesson_data['position']
+    assert_equal false, lesson_data['hasCodeLevel']
+  end
+
+  test "lessons endpoint reports hasCodeLevel true when lesson has a Pythonlab level" do
+    pythonlab_level = create(:pythonlab, name: 'Test Pythonlab Level')
+    create(:script_level, script: @unit, lesson: @lesson1, levels: [pythonlab_level])
+
+    get :lessons, params: {unit_id: @unit.id}
+
+    assert_response :ok
+
+    response_data = JSON.parse(response.body)
+    lesson_data = response_data['lessons'].find {|l| l['id'] == @lesson1.id}
+    assert_equal true, lesson_data['hasCodeLevel']
+
+    other_lesson_data = response_data['lessons'].find {|l| l['id'] == @lesson2.id}
+    assert_equal false, other_lesson_data['hasCodeLevel']
   end
 
   test "lessons endpoint returns error for invalid unit_id" do

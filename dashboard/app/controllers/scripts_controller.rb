@@ -8,7 +8,7 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create, :generate, :update_lesson_outlines]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :generate, :update_lesson_outlines]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy, :generate, :listing, :update_lesson_outlines]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
@@ -196,6 +196,19 @@ class ScriptsController < ApplicationController
     edit_url = request.path.sub(%r{/generate\z}, '/edit')
     edit_url = edit_script_path(id: @script) if edit_url == request.path
     @unit_data = @script.summarize_for_unit_generate.merge(editUnitUrl: edit_url)
+  end
+
+  # GET /s/:script_name/listing
+  # GET /courses/:course_course_name/units/:position/listing
+  # Levelbuilder-only overview of a unit: every lesson, and under each lesson
+  # every level, rendered as an indented list where each level links to its
+  # own page. Handy for eyeballing the whole unit at a glance. Read-only, so
+  # unlike #generate it works for both migrated and unmigrated units.
+  def listing
+    @page_title = "Level listing: #{@script.localized_title}"
+    # Eager-load the chain the view walks so rendering doesn't fire a query per
+    # lesson and per level.
+    @lesson_groups = @script.lesson_groups.includes(lessons: {script_levels: :levels})
   end
 
   # PUT /s/:script_name/lesson_outlines

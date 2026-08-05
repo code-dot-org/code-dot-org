@@ -1,11 +1,14 @@
 $thumbnail-size: 115px;
 $thumbnail-border-width: 1px;
+$thumbnail-padding: 2px;
+$thumbnail-root-padding: 10px;
 $hover-plus-size: 24px;
 $thumbnail-margin-height: 10px;
+$thumbnail-inset: 2 * ($thumbnail-border-width + $thumbnail-padding);
+$preview-size: $thumbnail-size - $thumbnail-root-padding - $thumbnail-inset;
 
-// Used for the width and height properties of AnimationPreview
 :export {
-  previewSize: calc(($thumbnail-size - 2 * $thumbnail-border-width) / 1px);
+  previewSize: $preview-size;
 }
 
 .root {
@@ -28,10 +31,12 @@ $thumbnail-margin-height: 10px;
   border-radius: 12px;
   padding: 2px;
   cursor: pointer;
-  background: none;
+  // Explicit transparent to override common.scss `button { background-color: #eee }`.
+  background-color: transparent;
+  background-image: none;
   box-shadow: none;
   margin: 0 0 0 0;
-  outline: none;
+  position: relative;
 }
 
 .thumbnailIcon {
@@ -47,6 +52,9 @@ $thumbnail-margin-height: 10px;
     background-color: var(--background-brand-purple-strong);
     border-color: var(--borders-brand-purple-strong);
   }
+  .label {
+    color: var(--text-neutral-white-fixed);
+  }
 }
 
 .icon {
@@ -58,6 +66,7 @@ $thumbnail-margin-height: 10px;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
+  color: var(--text-neutral-primary);
 }
 
 .noLabel {
@@ -70,6 +79,8 @@ $thumbnail-margin-height: 10px;
 
 .categoryImage {
   border-radius: 10px;
+  // Keep taller-than-square images inside the tile.
+  max-height: $preview-size;
 }
 
 .multiSelectIcon {
@@ -80,8 +91,13 @@ $thumbnail-margin-height: 10px;
   height: $hover-plus-size;
   width: $hover-plus-size;
   border-radius: 5px;
-  top: calc($thumbnail-size / 2 - $hover-plus-size / 2);
-  left: calc($thumbnail-size / 2 - $hover-plus-size / 2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .hoverIcon {

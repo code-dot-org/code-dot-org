@@ -4,6 +4,7 @@ import {progressBubbleShows} from '../shared/progress';
 import {unitOverviewUrl, type UnitOverviewUrlParams} from '../shared/routes';
 
 import {BasePage} from './base-page';
+import {PROGRESS_LESSON_SELECTOR} from './lesson-level-page';
 
 /** A 1-based lesson/level position within the unit's summary progress table. */
 export interface LessonLevelRef {
@@ -19,9 +20,16 @@ export class UnitOverviewPage extends BasePage {
   /** Summary progress table; one row per lesson, one bubble per level. */
   private readonly summaryProgressTable: Locator;
 
+  /**
+   * Per-lesson progress cards, one per lesson, each showing the lesson's
+   * displayed name (unnumbered courses omit the "Lesson N" prefix).
+   */
+  readonly progressLessons: Locator;
+
   constructor(page: Page) {
     super(page);
     this.summaryProgressTable = page.locator(this.summaryTableSelector);
+    this.progressLessons = page.locator(PROGRESS_LESSON_SELECTOR);
   }
 
   /** Navigate to the unit overview page. */

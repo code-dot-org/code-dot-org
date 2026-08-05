@@ -76,10 +76,16 @@ export function setupApp(appOptions) {
         });
       }
 
+      const settingsHeader = document.querySelector('#settings-header');
       if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
-        $('#settings-header').show();
+        if (settingsHeader) {
+          settingsHeader.style.display = '';
+        }
+      } else if (settingsHeader) {
+        settingsHeader.style.display = 'none';
       }
 
+      const versionsHeader = document.querySelector('#versions-header');
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -88,13 +94,28 @@ export function setupApp(appOptions) {
         appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
-        $('#clear-puzzle-header').hide();
+        const clearPuzzleHeader = document.querySelector(
+          '#clear-puzzle-header'
+        );
+        if (clearPuzzleHeader) {
+          clearPuzzleHeader.style.display = 'none';
+        }
         // Only show version history if user is project owner, or teacher viewing student work
         if (
           project.isOwner() ||
           (teacherViewingStudentWork && appOptions.level.isStarted)
         ) {
-          $('#versions-header').show();
+          if (versionsHeader) {
+            versionsHeader.style.display = '';
+          }
+        } else {
+          if (versionsHeader) {
+            versionsHeader.style.display = 'none';
+          }
+        }
+      } else {
+        if (versionsHeader) {
+          versionsHeader.style.display = 'none';
         }
       }
       $(document).trigger('appInitialized');

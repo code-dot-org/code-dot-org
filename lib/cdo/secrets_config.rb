@@ -79,12 +79,12 @@ module Cdo
       def lookup(secrets_manager)
         # First try looking for a Stack-specific secret.
         stack_specific_secret_path ? secrets_manager.get!(stack_specific_secret_path) : super
-      rescue Aws::SecretsManager::Errors::ValidationException
+      rescue ::Aws::SecretsManager::Errors::ValidationException
         # We're likely executing in an environment that's not part of a
         # CloudFormation Stack, so the secret name was invalid (nil). Fall back
         # to looking up the environment type secret.
         super
-      rescue Aws::SecretsManager::Errors::ResourceNotFoundException
+      rescue ::Aws::SecretsManager::Errors::ResourceNotFoundException
         # Fall back to looking up a secret shared by all deployments with the
         # same environment-type ('development', 'test', 'production', etc.).
         super
@@ -112,7 +112,7 @@ module Cdo
         region = AWS::EC2.region
         return unless region
 
-        ec2_client = Aws::EC2::Client.new(region: region)
+        ec2_client = ::Aws::EC2::Client.new(region: region)
         ec2_client.
           describe_tags({filters: [{name: "resource-id", values: [ec2_instance_id]}]}).
           tags.

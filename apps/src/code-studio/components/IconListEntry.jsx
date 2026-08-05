@@ -1,3 +1,4 @@
+import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -25,7 +26,11 @@ export default class IconListEntry extends React.Component {
     return (
       <span>
         {left}
-        <span style={{backgroundColor: '#ffc'}}>{this.props.search}</span>
+        <span
+          style={{backgroundColor: 'var(--background-warning-extra-light)'}}
+        >
+          {this.props.search}
+        </span>
         {right}
       </span>
     );
@@ -36,13 +41,13 @@ export default class IconListEntry extends React.Component {
       altMatchText: {
         float: 'left',
         fontSize: '13px',
-        color: '#999',
+        color: 'var(--text-neutral-tertiary)',
       },
       iconLabel: {
         float: 'left',
         margin: '0 5px',
         fontSize: '13px',
-        color: '#000',
+        color: 'var(--text-neutral-primary)',
       },
     };
 
@@ -56,9 +61,13 @@ export default class IconListEntry extends React.Component {
         // We matched based on an alternate keyword, show that keyword in parens
         // next to the icon ID.
         altMatchText = (
-          <p style={styles.altMatchText}>
+          <MuiTypography
+            component="span"
+            variant="body4"
+            style={styles.altMatchText}
+          >
             ({this.highlightSearch(this.props.altMatch)})
-          </p>
+          </MuiTypography>
         );
       } else {
         highlightedName = this.highlightSearch(this.props.iconId);
@@ -66,7 +75,13 @@ export default class IconListEntry extends React.Component {
 
       iconLabel = (
         <div>
-          <p style={styles.iconLabel}>{highlightedName}</p>
+          <MuiTypography
+            component="span"
+            variant="body4"
+            style={styles.iconLabel}
+          >
+            {highlightedName}
+          </MuiTypography>
           {altMatchText}
         </div>
       );
@@ -75,7 +90,7 @@ export default class IconListEntry extends React.Component {
     const rootStyles = {
       float: 'left',
       width: columnWidth,
-      height: '35px',
+      minHeight: '35px',
       cursor: 'pointer',
     };
 
