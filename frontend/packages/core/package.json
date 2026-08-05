@@ -43,6 +43,11 @@
       "import": "./dist/constants/index.mjs",
       "require": "./dist/constants/index.cjs"
     },
+    "./plugins/experiments": {
+      "types": "./dist/plugins/experiments/index.d.ts",
+      "import": "./dist/plugins/experiments/index.mjs",
+      "require": "./dist/plugins/experiments/index.cjs"
+    },
     "./plugins/localization": {
       "types": "./dist/plugins/localization/index.d.ts",
       "import": "./dist/plugins/localization/index.mjs",
