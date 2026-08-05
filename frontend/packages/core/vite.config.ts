@@ -50,6 +50,7 @@ export default defineConfig({
         'src/api/mocks/index.ts',
         'src/api/mocks/server.ts',
         'src/constants/index.ts',
+        'src/plugins/analytics/index.ts',
         'src/plugins/experiments/index.ts',
         'src/plugins/localization/index.ts',
         'src/plugins/observability/index.ts',

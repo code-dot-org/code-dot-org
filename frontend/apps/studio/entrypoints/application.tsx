@@ -4,6 +4,7 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {initializeCore} from '@code-dot-org/core';
+import {analyticsPlugin} from '@code-dot-org/core/plugins/analytics';
 import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
@@ -18,7 +19,14 @@ const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {
   initializeCore({
-    plugins: [localizationPlugin, observabilityPlugin, consentPlugin],
+    // consentPlugin precedes analyticsPlugin: analytics waits for consent to
+    // settle, and consentPlugin is what reports settlement.
+    plugins: [
+      localizationPlugin,
+      observabilityPlugin,
+      consentPlugin,
+      analyticsPlugin,
+    ],
   });
   // Import FontAwesome into the `base` layer (declared below `mui` in
   // __root.tsx) so MUI's layered styleOverrides win over FA's base icon rules.
