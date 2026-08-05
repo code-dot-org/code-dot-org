@@ -41,11 +41,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 7.0
 
-    # Convert cookies from old (:marshall) to new (:json) default format
-    # TODO infra: remove this override after 40 days in production (as
-    # determined by CDO.dashboard_session_ttl_days)
-    config.action_dispatch.cookies_serializer = :hybrid
-
     # Continue to use old, 6.1-only cache format version while we figure out
     # some issues with 7.0
     config.active_support.cache_format_version = 6.1
