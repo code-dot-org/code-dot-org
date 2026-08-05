@@ -33,22 +33,6 @@ function geRegion(): string | null {
 
 let booted = false;
 
-/** Test hook and bootstrap helper for swapping the active client. */
-export function _initializeSingleton(client: AnalyticsClient): void {
-  analyticsClient = client;
-}
-
-/** Test hook exposing the active client. */
-export function _getSingleton(): AnalyticsClient {
-  return analyticsClient;
-}
-
-/** Test hook returning the module to its pre-boot state. */
-export function _resetForTests(): void {
-  booted = false;
-  analyticsClient = new NoopAdapter();
-}
-
 export function sendEvent(
   name: string,
   payload?: Record<string, unknown>,
@@ -94,7 +78,7 @@ function bootClient(
     .then(client => {
       client.init(config, session);
       deferredClient.flushTo(client);
-      _initializeSingleton(client);
+      analyticsClient = client;
     })
     .catch(error => {
       console.warn(
@@ -103,7 +87,7 @@ function bootClient(
       );
       const noopClient = new NoopAdapter();
       deferredClient.flushTo(noopClient);
-      _initializeSingleton(noopClient);
+      analyticsClient = noopClient;
     });
 }
 
@@ -130,7 +114,7 @@ export const analyticsPlugin: CorePlugin = {
 
     const resolvedConfig = analytics ?? {provider: 'none' as const};
     const deferredClient = new DeferredAdapter();
-    _initializeSingleton(deferredClient);
+    analyticsClient = deferredClient;
 
     // The consent decision cannot be made before the CMP has settled, so the
     // client waits for it. A CMP that never settles means nothing is sent.

@@ -5,7 +5,7 @@ module FrontendAppConfigHelper
   #              (e.g. CDO.frontend_studio_sentry_dsn).
   def frontend_app_config(sentry_dsn)
     {
-      observability: JSON.parse(observability_config(sentry_dsn)).fetch('observability'),
+      observability: observability_section(sentry_dsn),
       analytics: analytics_config,
     }.to_json
   end
