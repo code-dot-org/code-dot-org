@@ -8,7 +8,6 @@ import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import LatamGeRegionNotice from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/LatamGeRegionNotice';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -372,8 +371,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
                 }}
               />
             )}
-
-            <LatamGeRegionNotice />
 
             <Header
               selectedArchiveToggle={selectedArchiveToggle}

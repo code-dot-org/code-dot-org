@@ -167,8 +167,7 @@ namespace :test do
     status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
     report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
     report += playwright_pass_fail_line
-    # This run's report by version, since the key itself holds only the latest.
-    report += %(\nSee <a href="#{report_url}">the HTML report</a> for this run, or the <a href="#{pending_report}">latest</a>.) if report_url
+    report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
     ChatClient.log report, color: (passed ? 'green' : 'red')
   end
 

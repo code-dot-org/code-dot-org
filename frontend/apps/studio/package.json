@@ -24,6 +24,7 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lab": "workspace:*",
+    "@code-dot-org/lesson-deep-dive": "workspace:*",
     "@code-dot-org/music-lab": "workspace:*",
     "@code-dot-org/oceans-lab": "workspace:*",
     "@code-dot-org/users": "workspace:*",
