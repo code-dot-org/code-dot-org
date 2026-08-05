@@ -8,7 +8,7 @@ markdown <<MARKDOWN
 <div style="width: 100%; margin-top: 20px; border-radius: 10px; background: #4C42CF; padding: 40px 30px; display: flex; align-items: center; justify-content: center; gap: 24px;">
    
     <div style="color: #FFFFFF; font-size: 32px; font-weight: bold; line-height: 1.1;">
-        Teaching Programming with AI
+        Teaching Programming with AI [JavaSript]
     </div>
 </div>
 

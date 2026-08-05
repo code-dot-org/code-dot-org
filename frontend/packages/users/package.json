@@ -35,6 +35,7 @@
     "preview": "vite preview",
     "test": "vitest --run",
     "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
     "typecheck": "tsc -b --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
@@ -55,7 +56,7 @@
     "@emotion/react": "catalog:",
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",

@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-05 13:31:33 UTC",
+    "serialized_at": "2026-08-04 19:58:17 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -63,7 +63,7 @@
   "lessons": [
     {
       "key": "Introduction to AI Foundations, Semester 1",
-      "name": "Introduction to Exploring AI & Computing",
+      "name": "Introduction to Exploring AI & CS",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -97,7 +97,7 @@
       "key": "c4dfed43-413b-4c58-a9c8-c2972259bae1",
       "position": 1,
       "properties": {
-        "progression_name": "Introduction to Exploring AI & Computing"
+        "progression_name": "Introduction to Exploring AI & CS"
       },
       "seeding_key": {
         "activity_section.key": "c4dfed43-413b-4c58-a9c8-c2972259bae1",
@@ -156,7 +156,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Exploring AI & Computing"
+        "progression": "Introduction to Exploring AI & CS"
       },
       "bonus": false,
       "seeding_key": {
@@ -178,7 +178,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Exploring AI & Computing"
+        "progression": "Introduction to Exploring AI & CS"
       },
       "bonus": false,
       "seeding_key": {
@@ -200,7 +200,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to Exploring AI & Computing"
+        "progression": "Introduction to Exploring AI & CS"
       },
       "bonus": false,
       "seeding_key": {

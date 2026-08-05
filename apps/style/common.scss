@@ -1144,7 +1144,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   clear: both;
   margin-top: 25px;
   font-size: 18px;
-  color: $charcoal;
+  color: var(--text-neutral-primary);
 
   $image-width: 180px;
   $image-height: $image-width;
@@ -1154,7 +1154,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     height: $image-height + 6px;
     margin: 0;
     float: left;
-    border: $lighter_gray;
+    border: var(--borders-neutral-primary);
     border-style: solid;
 
     html[dir="rtl"] & {
@@ -1194,7 +1194,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     a:visited {
       background-color: transparent;
       text-decoration: none;
-      color: white;
+      color: var(--text-neutral-white-fixed);
     }
 
     html[dir="rtl"] & {
@@ -1206,8 +1206,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button {
-    background-color: $purple;
-    color: white;
+    background-color: var(--background-brand-purple-primary);
+    color: var(--text-neutral-white-fixed);
     font-size: 14px;
     min-width: 40px;
     text-align: center;
@@ -1216,8 +1216,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     .disabled,
     &[disabled="disabled"],
     &:disabled {
-      border: 1px solid $purple;
-      background-color: $lighter_gray;
+      border: 1px solid var(--borders-brand-purple-primary);
+      background-color: var(--background-neutral-disabled);
       box-shadow: none;
     }
   }
@@ -1244,7 +1244,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button.saved-to-gallery {
-    @include main-font-regular-italic;
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-regular);
+    font-style: italic;
   }
 
   #sharing-input-container {
@@ -1264,7 +1266,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   .sharing-dialog-copy-button-shared {
-    background-color: $light_purple;
+    background-color: var(--background-brand-purple-hover);
   }
 
   #copy-button {
@@ -1287,7 +1289,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   div#phone-charges {
     font-size: 10px;
     margin-top: 0;
-    color: $red;
+    color: var(--text-error-primary);
   }
 }
 
