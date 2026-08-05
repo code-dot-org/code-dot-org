@@ -51,7 +51,9 @@ guides.
    that also asserts becomes a test assertion — capture all of it.
 3. Drive test-studio.code.org live with the @playwright/mcp browser_* tools to discover and
    VERIFY every locator by using it: browser_navigate to the scenario URL, then
-   browser_snapshot / browser_evaluate to confirm each selector against the live DOM. Each
+   browser_snapshot to read the accessibility tree (roles + accessible names) and choose
+   role/name locators (see Selector policy), and browser_evaluate to confirm against the
+   live DOM. Each
    browser_* action echoes the Playwright code it ran — use that to ground the spec you
    write. Never write a locator you have not confirmed live. (These tools are deferred — one
    ToolSearch `select:mcp__playwright__browser_navigate,mcp__playwright__browser_snapshot,mcp__playwright__browser_evaluate`
@@ -60,18 +62,28 @@ guides.
 5. Self-verify before returning: `yarn turbo run typecheck --filter=@code-dot-org/e2e-tests`
    and lint your changed files (`./tools/hooks/pre-commit`). Fix every error.
 
-## Placement and POM base (two independent axes)
+## Object model: page objects, bases, and the spec
 
-- **architecture** (technical) picks the POM BASE to extend:
-  legacy  -> tests/legacy/shared/LegacyBlocklyLab.ts
-  lab2    -> tests/lab2/shared/Lab2Lab.ts
-  non-lab -> no Blockly base; compose a plain POM.
-- **featureGroup** (functional) picks the DIRECTORY: place all files under
-  `tests/{featureGroup-kebab}/` (a {name}/ subdir when the group holds several
-  labs/features). architecture never appears in the path.
+Author the object model Scout planned (`pageObjects`, `sharedChrome`) — NOT one POM per
+feature:
+- **One page object per distinct page/route** the scenarios drive (e.g. `SignInPage` for
+  /users/sign_in, `ArtistLab` for the artist project). A scenario that spans several pages
+  is NOT a page object — the spec coordinates the page objects. Never invent an `XyzPage`
+  that is really a scenario.
+- **Global, site-wide UI** present across pages (the locale/language switcher, header,
+  footer — Scout's `sharedChrome`) lives ONCE on a shared base class the page objects
+  extend (e.g. `BasePage`); never duplicate it per page, and never fake-unify genuinely
+  different widgets behind one selector-parameterized component.
+- **architecture** picks the lab base a lab page extends: legacy -> `LegacyBlocklyLab`,
+  lab2 -> `Lab2Lab`, non-lab -> no Blockly base. Bases compose: a lab page extends a lab
+  base that itself extends the shared base.
+- **featureGroup** picks the DIRECTORY: place files under `tests/{featureGroup-kebab}/`
+  (a {name}/ subdir when the group holds several labs/features). architecture never
+  appears in the path.
 
-Files per port: `{name}.spec.ts` (one describe per feature, one test per scenario),
-`{Name}.ts` (the POM), `blocks.ts` (Blockly labs only).
+Filenames are KEBAB-CASE — `{name}.spec.ts` (one describe per feature, one test per
+scenario), one `{page-object}.ts` per page object (`sign-in.ts`, `artist-lab.ts`),
+`blocks.ts` (Blockly labs only). Never PascalCase filenames.
 
 ## Reuse: shared helpers AND POMs
 
@@ -88,9 +100,16 @@ materialize what you import from the reference branch first (inside e2e-tests).
 
 ## Selector policy
 
-Priority: getByRole, getByLabel, getByText, getByPlaceholder, getByTestId. CSS / jQuery /
-XPath only as a last resort, with an inline comment saying why and a filed
-accessibility-gap note. (You may not add attributes to app source — see Hard constraint.)
+Priority: getByRole, getByLabel, getByText, getByPlaceholder, getByTestId. Drive the
+choice from the ACCESSIBILITY TREE, not guesswork: `browser_snapshot` returns roles +
+accessible names — locate each element by its role + accessible name when it has one
+(e.g. `getByRole('combobox', {name: 'Select language'})`), which stays unique even on a
+page with several similar elements. CSS / jQuery / XPath only as a last resort, with an
+inline comment saying why and a filed accessibility-gap note. Two cases legitimately need
+a non-role handle (not a regression): an element with no accessible name, and one whose
+accessible name IS the text under test (e.g. a tab whose label localizes) — there a stable
+test-hook / CSS class is correct. (You may not add attributes to app source — see Hard
+constraint.)
 
 ## page.evaluate — the Blockly/game-state exception
 
@@ -118,10 +137,19 @@ This documents the exact API contract and keeps `any` out of the codebase entire
 
 ## POM encapsulation
 
-The spec body reads as requirements, not selectors. Every interaction — click, wait,
-evaluate, network intercept — is a named method on the POM. Raw page.locator() in a spec
-body is forbidden. The `lab.page` escape hatch (keyboard, viewport) is used only in the
-spec, never inside POM methods.
+The spec reads as requirements. Page objects EXPOSE their elements as `readonly` Locator
+properties and own the INTERACTIONS — every click, wait, navigation, form submit, network
+intercept is a named method (especially multi-step sequences). The spec performs the
+ASSERTIONS itself, on the exposed locators:
+`await expect(signIn.selectedLocale).toContainText('English')`.
+- Do NOT wrap a single assertion in a POM method (`expectXVisible()`) — expose the locator
+  and assert in the spec. A genuinely composite, REUSED assertion may be a helper, but it
+  lives in the SPEC file, not the page object.
+- The spec must not CONSTRUCT its own locator from `page` — `page.locator(...)` /
+  `page.getByRole(...)` in a spec body is forbidden; reference the page object's exposed
+  locator instead.
+- The `lab.page` escape hatch (keyboard, viewport, raw goto) is used only in the spec,
+  never inside POM methods.
 
 ## blocks.ts
 
