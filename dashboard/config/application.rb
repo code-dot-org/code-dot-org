@@ -41,11 +41,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 7.0
 
-    # Convert cookies from old (:marshall) to new (:json) default format
-    # TODO infra: remove this override after 40 days in production (as
-    # determined by CDO.dashboard_session_ttl_days)
-    config.action_dispatch.cookies_serializer = :hybrid
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
