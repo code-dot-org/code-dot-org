@@ -217,18 +217,10 @@ module Dashboard
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
-    # Rails.cache is a fast memory store, cleared every time the application reloads.
-    #
-    # We have historically used a per-process, in-memory store for this, but
-    # that's not an ideal approach for a frontend server with 32 independent
-    # Puma processes. While the infra team evaluates different alternatives, we
-    # temporarily support multiple different options.
-    #
-    # TODO infra: finalize this experiment and either enforce a path or default
-    # to :null_store.
-    config.cache_store = CDO.local_cache_file_path ?
-      [:file_store, CDO.local_cache_file_path] :
-      [:memory_store, {size: 256.megabytes}]
+    # Rails.cache is a local file system store shared by all Puma worker
+    # processes on a given web application server, which persists for the
+    # lifetime of the server.
+    config.cache_store = :file_store, '/tmp/rails-cache'
 
     # Sprockets file cache limit must be greater than precompiled-asset total to prevent thrashing.
     config.assets.cache_limit = 1.gigabyte
