@@ -85,12 +85,8 @@ export async function generateChatResponse(
     ...(outputSchema && {output: outputSchema}),
   });
 
-  // chatMessageText has to stay a string (rendering, storage, non-schema
-  // messages all depend on that) even when a schema was used, so keep a
-  // stringified fallback for the non-SUCCESS return paths below and for
-  // storage. On SUCCESS we additionally return the already-parsed `output`
-  // itself (see structuredOutput below) so a jsonSchemaResponseCallback
-  // doesn't have to JSON.parse a string we just serialized from the same data.
+  // chatMessageText has to stay a string: rendering, storage and non-schema
+  // messages all depend on that, even when a schema was used.
   const responseText = outputSchema ? JSON.stringify(output) : text;
 
   if (['content-filter', 'other'].includes(finishReason)) {
@@ -217,10 +213,6 @@ export async function generateChatResponse(
 
   return {
     response: responseText,
-    // Already-parsed structured output, when a schema was used. Lets
-    // submitChatContents hand jsonSchemaResponseCallback the real object
-    // instead of making it re-parse responseText.
-    structuredOutput: outputSchema ? output : undefined,
     assets,
     status: AiRequestExecutionStatus.SUCCESS,
   };

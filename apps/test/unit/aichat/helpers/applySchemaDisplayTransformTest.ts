@@ -40,7 +40,7 @@ describe('applySchemaDisplayTransform', () => {
   });
 
   it('leaves already-transformed history alone', () => {
-    // Events logged before the transform moved to render time hold prose, not
+    // Rows saved before the transform moved to render time hold prose, not
     // JSON. Passing them to the callback would corrupt them.
     const prose = 'Try moving the sprite to the left instead.';
     const result = applySchemaDisplayTransform(

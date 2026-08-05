@@ -230,7 +230,7 @@ export const submitChatContents = createAsyncThunk(
       if (message.role === Role.ASSISTANT) {
         // The model's response is logged verbatim. A level's
         // jsonSchemaResponseCallback used to rewrite chatMessageText here,
-        // before logging, which made stored history a client-side derivation of
+        // before the message was saved, which made stored history a client-side derivation of
         // the response instead of the response itself -- nothing server-side
         // could then check it against what the model actually produced. The
         // transform is presentational, so ChatWorkspace now applies it when
