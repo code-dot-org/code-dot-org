@@ -4,6 +4,9 @@ import {type Locator, type Page} from '@playwright/test';
 export class FallbackPlayerCaptionDialogLinkComponent {
   readonly rootSelector = '#fallback-player-caption-dialog-link';
 
+  /** The open dialog alone. BaseDialog gives it no role, hence the class. */
+  readonly dialogSelector = `${this.rootSelector} .modal.dash_modal`;
+
   /** includeHidden: autoplay=1 leaves the container display:none. */
   readonly bigPlayButton: Locator;
 
