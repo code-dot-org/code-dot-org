@@ -36,11 +36,13 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   };
 }
 
-// The three demo surfaces built as a production MPA (see `isDemo` below).
+// The three demo surfaces built as a production MPA (see `isDemo` below). The
+// two sandbox pages live under `sandbox/` and emit there, which is what gives
+// their service worker a scope of its own — see `SANDBOX_SURFACE_DIR`.
 const demoInput = (root: string) => ({
   index: path.resolve(root, 'index.html'),
-  preview: path.resolve(root, 'preview.html'),
-  compile: path.resolve(root, 'compile.html'),
+  preview: path.resolve(root, 'sandbox/preview.html'),
+  compile: path.resolve(root, 'sandbox/compile.html'),
 });
 
 export default defineConfig(({command, mode}) => {
@@ -58,7 +60,20 @@ export default defineConfig(({command, mode}) => {
   // them.
   const useSourceAliases = command === 'serve' || isDemo;
 
+  // Where the demo is served FROM, when that is not the root of an origin —
+  // `https://wilkie.github.io/world-lab/` needs `/world-lab/`. Read for every
+  // command, not just the demo build, so `preview:demo` serves a based build at
+  // the path it was built for. The default is the root, which is what the dev server and
+  // the library build have always assumed.
+  //
+  // Everything the app addresses absolutely is derived from this: the two
+  // service workers, the vendored sandbox assets, the stock backdrops (see
+  // `src/main.tsx`). A build put at a path it was not built for will 404 on all
+  // of them.
+  const base = process.env.WORLD_DEMO_BASE ?? '/';
+
   return {
+    base,
     plugins: isDemo
       ? [react()]
       : [
@@ -72,14 +87,15 @@ export default defineConfig(({command, mode}) => {
         ],
     // Dev only (Vite ignores optimizeDeps for a build). By default the dep
     // scanner crawls only index.html, so the sandbox surfaces' deps — reached
-    // through preview.html / compile.html and two levels of dynamic import — are
-    // discovered LATE, when the iframe loads. Vite then re-optimizes and forces
-    // a full-page reload mid-boot; chained, that is the slow "8-9s first load".
+    // through sandbox/preview.html and sandbox/compile.html and two levels of
+    // dynamic import — are discovered LATE, when the iframe loads. Vite then
+    // re-optimizes and forces a full-page reload mid-boot; chained, that is the
+    // slow "8-9s first load".
     // Scanning all three entries pre-bundles the union in ONE startup pass, and
     // listing the two biggest sandbox deps (past the dynamic imports the scanner
     // can miss) guarantees they are ready before the iframe asks for them.
     optimizeDeps: {
-      entries: ['index.html', 'preview.html', 'compile.html'],
+      entries: ['index.html', 'sandbox/preview.html', 'sandbox/compile.html'],
       include: ['phaser', 'esbuild-wasm'],
     },
     // Dev only (`server` is ignored by a build). optimizeDeps above pre-bundles
@@ -130,7 +146,10 @@ export default defineConfig(({command, mode}) => {
           // hashed by Vite's defaults; each surface gets one bundle.
           outDir: 'dist-demo',
           emptyOutDir: true,
-          sourcemap: true,
+          // No maps: they are 29MB of the 78MB this build weighed, on a static
+          // host that serves what it is given. The library build keeps its own
+          // (`sourcemap: true` below) — that one is debugged inside studio.
+          sourcemap: false,
           rollupOptions: {input: demoInput(__dirname)},
         }
       : {

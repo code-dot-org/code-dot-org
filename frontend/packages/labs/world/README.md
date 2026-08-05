@@ -137,14 +137,99 @@ The lab is registered with the studio app in
 `frontend/apps/studio/src/modules/labs/config/labs.ts` and reachable there at
 `/app/projects/world/:channelId/edit`.
 
+## Deploying the demo
+
+`yarn build:demo` emits a static `dist-demo/` — the lab at the root, the two
+sandbox surfaces under `sandbox/`, and the vendored assets. There is no backend:
+the MSW mock answers the API and the project lives in `sessionStorage`, so the
+whole thing is a directory anyone can serve. (`yarn build` is the LIBRARY build
+the studio host consumes — different artifact, no HTML.)
+
+Two knobs, both read at build time:
+
+|                      |                                                                    |
+| -------------------- | ------------------------------------------------------------------ |
+| `VITE_WORLD_SANDBOX` | where the sandbox is served from: a URL, or `same-origin`          |
+| `WORLD_DEMO_BASE`    | the path the build is served from, if not `/` (e.g. `/world-lab/`) |
+
+Serve `dist-demo/` at exactly the base it was built for. Everything the app
+addresses absolutely hangs off it — both service workers, `vendor/`,
+`backgrounds/` — and a build moved elsewhere 404s on all of them.
+
+### Two origins (what the design wants)
+
+Deploy the same `dist-demo/` twice, at the same base path on each, and name the
+sandbox:
+
+```
+VITE_WORLD_SANDBOX=https://world-sandbox.example/ yarn build:demo
+```
+
+The origin split is the security boundary (`specs/SANDBOX.md`): learner code
+runs where it cannot reach the lab's cookies, storage, or DOM. Production goes
+further and gives each project its own sandbox subdomain.
+
+### One origin (GitHub Pages)
+
+`yarn build:pages` builds for `https://<name>.github.io/world-lab/` — that is
+`WORLD_DEMO_BASE=/world-lab/` plus `VITE_WORLD_SANDBOX=same-origin`. It exists
+because Pages hands out an origin per ACCOUNT, not per repository: two repos are
+two paths on one origin, and a second origin means a second org (`org.github.io`
+is a root of its own) or a custom domain per site.
+
+**This runs learner code on the lab's own origin, which the spec forbids in
+production.** It is defensible for a demo that holds no session and none of
+anyone else's work, and nothing selects it silently — a build has to ask for it.
+Prefer two orgs and `VITE_WORLD_SANDBOX=https://<org>-sandbox.github.io/` if you
+have them.
+
+Sharing an origin means the lab's mock-API worker and the sandbox's build worker
+are both service workers on one origin. They coexist because the sandbox
+surfaces live under `sandbox/`, so the build worker's scope is narrower and each
+client is controlled by the most specific scope that matches it
+(`SANDBOX_SURFACE_DIR`). Two workers cannot share one scope: the later
+registration evicts the earlier, which is why the surfaces are in a directory
+rather than beside `index.html`.
+
+The demo's `index.html` also carries `<meta name="cdo-api-url"
+content="same-origin">`. Core resolves the dashboard API from the hostname, and
+a host it does not recognise means `development` — `http://localhost-studio
+.code.org:3000`. On an HTTPS deployment the browser refuses that as mixed
+content, and it refuses it _before_ the request reaches a service worker, so the
+mock never gets the chance to answer and nothing loads at all. The tag points
+the API at the page's own origin instead, which the handlers match (`*​/v3/…`)
+and which never leaves the page.
+
+Serving requirements, learned by getting them wrong:
+
+- **HTTPS** (or localhost). Both service workers need it — MSW serves the
+  project, and the build worker serves the compiled module.
+- `.wasm` as **`application/wasm`**. `WebAssembly.compileStreaming` refuses
+  anything else, and esbuild's worker dies without a word. Pages sends it; a
+  hand-rolled static server may not.
+- No header control on Pages, so the sandbox CSP in `specs/SANDBOX.md` cannot be
+  applied. Nothing breaks; a layer of defense in depth is simply absent.
+
+`dist-demo/` is ~49MB, of which 22MB is vendored `esbuild.wasm` (13.9) and
+`phaser.esm.js` (8.8) — inside the 1GB Pages site limit and the 100MB per-file
+limit, but Pages will not compress the wasm.
+
+A deployed build still fetches two things from elsewhere: the design system's
+FontAwesome from `dsco.code.org`, and Blockly's media (trashcan and zoom
+sprites, click sounds) from `static.blockly.com`. Both are HTTPS, so neither is
+mixed content — they simply need those hosts to be reachable.
+
 ## Scripts
 
 - `yarn dev` — lab dev server on :5139
-- `yarn dev:sandbox` — sandbox dev server on :5202 (serves `compile.html` /
-  `preview.html`)
+- `yarn dev:sandbox` — sandbox dev server on :5202 (serves `sandbox/compile.html`
+  / `sandbox/preview.html`)
 - `yarn dev:isolated` — both, in parallel
 - `yarn setup:world` — self-host the sandbox assets into `public/vendor/`
 - `yarn build` — library build (ESM + CJS + d.ts)
+- `yarn build:demo` — static demo build → `dist-demo/` (see Deploying the demo)
+- `yarn build:pages` — the same, built for `<host>/world-lab/` on one origin
+- `yarn preview:demo` — serve `dist-demo/` on :5139 and :5202
 - `yarn typecheck` — `tsc -b --noEmit`
 - `yarn test` — Vitest
 - `yarn lint` / `yarn lint:fix`

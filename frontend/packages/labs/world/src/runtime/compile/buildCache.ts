@@ -11,7 +11,7 @@
 // compile. This tier targets the UNCHANGED case (refresh); the warm esbuild
 // BuildContext handles the edit case in memory.
 
-// Kept in sync with public/worldBuildServiceWorker.js, which cannot import
+// Kept in sync with public/sandbox/worldBuildServiceWorker.js, which cannot import
 // modules. Bumping the name orphans old entries harmlessly (they age out).
 export const BUILD_CACHE_NAME = 'world-build-v1';
 

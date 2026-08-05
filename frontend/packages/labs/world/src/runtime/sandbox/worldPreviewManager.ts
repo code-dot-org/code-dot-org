@@ -15,6 +15,7 @@ import {
   type ActorSchema,
   type FromPreview,
 } from '../messages';
+import {SANDBOX_SURFACE_DIR} from '../worldConfig';
 
 /** The map editor's per-type picker thumbnails + inspector schemas. */
 export interface ActorInfo {
@@ -45,7 +46,7 @@ export class WorldPreviewManager {
 
   constructor(opts: PreviewManagerOptions) {
     this.opts = opts;
-    const url = new URL('preview.html', opts.sandboxUrl);
+    const url = new URL(`${SANDBOX_SURFACE_DIR}preview.html`, opts.sandboxUrl);
     this.sandboxOrigin = url.origin;
     url.searchParams.set(PARENT_ORIGIN_PARAM, window.location.origin);
     url.searchParams.set(ASSET_BASE_PARAM, opts.assetBase);

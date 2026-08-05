@@ -7,6 +7,22 @@
 /** Query param on the lab URL naming the sandbox origin's base URL. */
 export const SANDBOX_URL_PARAM = 'world-sandbox';
 
+/**
+ * Where the two sandbox surfaces sit under the sandbox base — a directory of
+ * their own, not the root of the origin.
+ *
+ * On a dedicated sandbox origin this is cosmetic. It is load-bearing when the
+ * lab and the sandbox share one origin, which a static host that hands out an
+ * origin per ACCOUNT rather than per site forces (GitHub Pages, see the
+ * README's deploy section). Two service workers cannot both hold one scope: the
+ * later registration replaces the earlier, so the lab's mock API and the
+ * sandbox's build transport evicted each other and the game never got its
+ * module. Registering the build worker beside these pages scopes it to this
+ * directory, and a client is controlled by the most specific scope that matches
+ * it — so the lab keeps its own worker at the base above.
+ */
+export const SANDBOX_SURFACE_DIR = 'sandbox/';
+
 let sandboxUrl: string | null = null;
 let assetBaseUrl = '/vendor/';
 let backgroundBaseUrl = '/backgrounds/';
