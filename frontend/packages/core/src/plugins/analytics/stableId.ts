@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 /**
  * Storage for the Statsig stable ID.
  *
@@ -10,9 +12,19 @@
 export const COOKIE_NAME = 'statsig_stable_id';
 export const LOCAL_STORAGE_KEY = 'STATSIG_STABLE_ID';
 
-const COOKIE_PATH = '/';
-const COOKIE_DOMAIN = '.code.org';
-const COOKIE_SCOPE = `path=${COOKIE_PATH}; domain=${COOKIE_DOMAIN}`;
+/** No expiry, so the cookie lasts only the browser session. */
+const COOKIE_ATTRIBUTES = {
+  path: '/',
+  domain: '.code.org',
+  sameSite: 'Lax',
+  secure: true,
+} as const;
+
+/** Removal only takes when path and domain match the write. */
+const COOKIE_SCOPE = {
+  path: COOKIE_ATTRIBUTES.path,
+  domain: COOKIE_ATTRIBUTES.domain,
+};
 
 function readLocalStorage(): string | null {
   try {
@@ -22,26 +34,14 @@ function readLocalStorage(): string | null {
   }
 }
 
-function readCookie(): string | undefined {
-  const match = document.cookie.match(
-    new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`),
-  );
-  if (!match) return undefined;
-  try {
-    return decodeURIComponent(match[1]);
-  } catch {
-    return undefined;
-  }
-}
-
 /** Reads the persisted stable ID, preferring the cookie. Always permitted. */
 export function readStableId(): string | undefined {
-  return readCookie() || readLocalStorage() || undefined;
+  return Cookies.get(COOKIE_NAME) || readLocalStorage() || undefined;
 }
 
 /** Writes the stable ID to both stores. Call only when consent permits it. */
 export function persistStableId(stableId: string): void {
-  document.cookie = `${COOKIE_NAME}=${encodeURIComponent(stableId)}; ${COOKIE_SCOPE}; SameSite=Lax; Secure`;
+  Cookies.set(COOKIE_NAME, stableId, COOKIE_ATTRIBUTES);
   try {
     localStorage.setItem(LOCAL_STORAGE_KEY, stableId);
   } catch {
@@ -51,7 +51,7 @@ export function persistStableId(stableId: string): void {
 
 /** Deletes every persisted copy of the stable ID. */
 export function forgetStableId(): void {
-  document.cookie = `${COOKIE_NAME}=; ${COOKIE_SCOPE}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+  Cookies.remove(COOKIE_NAME, COOKIE_SCOPE);
   try {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
   } catch {
