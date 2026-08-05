@@ -606,7 +606,7 @@ export default function ReactFlowCanvas({
     [nodes, edges]
   );
 
-  // A finished marquee selects; the user groups it explicitly afterwards.
+  // A finished drag selection selects; the user groups it explicitly afterwards.
   const handleDragSelectComplete = useCallback(
     (selectedIds: Set<string>) => {
       setMultiSelectedNodeIds(selectedIds);
@@ -668,8 +668,8 @@ export default function ReactFlowCanvas({
   });
 
   const handlePaneClick = useCallback(() => {
-    // The click that ends a marquee also lands on the pane; it must not clear
-    // the selection the marquee just made.
+    // The click that ends a drag selection also lands on the pane; it must not
+    // clear the selection the drag just made.
     if (consumeDragSelectClick()) return;
     canvasContainerRef.current?.focus();
     clearSelection();

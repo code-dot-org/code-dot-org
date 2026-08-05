@@ -152,10 +152,10 @@ export function useDragSelection({
     active: boolean;
   } | null>(null);
 
-  // Mouseup at the end of a marquee is followed by a click on the pane, which
-  // would clear the selection the marquee just made. Set here, read once by
-  // the pane-click handler, and reset on the next mousedown so a marquee that
-  // ends over a node (no pane click follows) can't swallow a later one.
+  // Mouseup at the end of a drag selection is followed by a click on the pane,
+  // which would clear the selection the drag just made. Set here, read once by
+  // the pane-click handler, and reset on the next mousedown so a drag that ends
+  // over a node (no pane click follows) can't swallow a later one.
   const completedDragRef = useRef(false);
 
   const consumeDragSelectClick = useCallback(() => {
