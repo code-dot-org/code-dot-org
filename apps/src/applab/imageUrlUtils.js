@@ -7,7 +7,7 @@ export function normalizeToHttps(url) {
 }
 
 /**
- * Resolve an image path to a fully qualified URL.
+ * Resolve an image path for App Lab image loading (absolute URL or path).
  * @param {string} url
  * @returns {string}
  */
