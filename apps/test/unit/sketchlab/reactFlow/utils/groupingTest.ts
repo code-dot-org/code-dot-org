@@ -1,5 +1,6 @@
 import {SketchLabNode} from '@cdo/apps/sketchlab/reactFlow/types';
 import {
+  countLogicalElements,
   expandGroupDeletion,
   getGroupChildren,
   groupSelectedNodes,
@@ -36,6 +37,48 @@ function makeLineAnchorNode(id: string, x: number, y: number): SketchLabNode {
     data: {},
   } as SketchLabNode;
 }
+
+describe('countLogicalElements', () => {
+  it('counts each non-anchor node as one element', () => {
+    expect(
+      countLogicalElements([makeTextNode('t1', 0, 0), makeTextNode('t2', 0, 0)])
+    ).toBe(2);
+  });
+
+  it('counts a pair of anchors as one line', () => {
+    expect(
+      countLogicalElements([
+        makeLineAnchorNode('a1', 0, 0),
+        makeLineAnchorNode('a2', 0, 0),
+      ])
+    ).toBe(1);
+  });
+
+  it('counts lines and nodes together', () => {
+    expect(
+      countLogicalElements([
+        makeLineAnchorNode('a1', 0, 0),
+        makeLineAnchorNode('a2', 0, 0),
+        makeLineAnchorNode('b1', 0, 0),
+        makeLineAnchorNode('b2', 0, 0),
+        makeTextNode('t1', 0, 0),
+      ])
+    ).toBe(3);
+  });
+
+  it('ignores a half line', () => {
+    expect(
+      countLogicalElements([
+        makeTextNode('t1', 0, 0),
+        makeLineAnchorNode('a1', 0, 0),
+      ])
+    ).toBe(1);
+  });
+
+  it('counts an empty list as zero', () => {
+    expect(countLogicalElements([])).toBe(0);
+  });
+});
 
 describe('groupSelectedNodes', () => {
   it('does not create a group from a single standalone line (two lineAnchor nodes)', () => {

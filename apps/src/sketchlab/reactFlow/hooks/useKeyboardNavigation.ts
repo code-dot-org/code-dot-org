@@ -24,7 +24,7 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
-import {isGroupedChildNode} from '../utils/grouping';
+import {countLogicalElements, isGroupedChildNode} from '../utils/grouping';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -78,12 +78,9 @@ export function getSelectionMoveIds(
       !node.data?.locked &&
       !isGroupedChildNode(node)
   );
-  // A standalone line is two lineAnchor nodes but one element, so a lone
-  // selected line is not a multi-element selection.
-  const anchorCount = movable.filter(node => node.type === 'lineAnchor').length;
-  const logicalCount =
-    movable.length - anchorCount + Math.floor(anchorCount / 2);
-  return logicalCount >= 2 ? movable.map(node => node.id) : [];
+  // A lone standalone line is two anchor nodes but one element, so it stays on
+  // the single-element path where endpoint snapping still applies.
+  return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];
 }
 
 /**

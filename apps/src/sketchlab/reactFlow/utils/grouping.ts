@@ -20,6 +20,18 @@ export function getGroupChildren(
   return nodes.filter(n => n.parentId === groupId);
 }
 
+/**
+ * Counts what a user would call elements: a regular node is one, and each pair
+ * of lineAnchor nodes is one standalone line. A group needs two of these, so
+ * two anchors on their own are just a line, not a group.
+ */
+export function countLogicalElements(
+  nodes: Pick<SketchLabNode, 'type'>[]
+): number {
+  const anchorCount = nodes.filter(node => node.type === 'lineAnchor').length;
+  return nodes.length - anchorCount + Math.floor(anchorCount / 2);
+}
+
 function computeBounds(nodes: SketchLabNode[]) {
   let minX = Infinity,
     minY = Infinity,
@@ -59,13 +71,7 @@ export function groupSelectedNodes(
   const targets = nodes.filter(
     n => selectedIds.includes(n.id) && !n.parentId && !n.data?.locked
   );
-  // Count logical elements: regular nodes count as 1 each; every two
-  // lineAnchor nodes count as one standalone line. A group needs at least 2
-  // logical elements — two anchors alone is just one line, not a group.
-  const anchorCount = targets.filter(n => n.type === 'lineAnchor').length;
-  const logicalCount =
-    targets.length - anchorCount + Math.floor(anchorCount / 2);
-  if (logicalCount < 2) return nodes;
+  if (countLogicalElements(targets) < 2) return nodes;
 
   const {minX, minY, maxX, maxY} = computeBounds(targets);
   const groupX = minX - GROUP_PADDING_PX;

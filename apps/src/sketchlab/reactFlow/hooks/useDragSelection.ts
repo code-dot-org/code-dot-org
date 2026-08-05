@@ -29,7 +29,7 @@ interface UseDragSelectionOptions {
   isGrabMode: boolean;
   readOnly: boolean;
   screenToFlowPosition: (pos: XYPosition) => XYPosition;
-  onGroupNodes: (ids: Set<string>) => void;
+  onSelectNodes: (ids: Set<string>) => void;
 }
 
 // Returns the set of node/anchor IDs that overlap the drag box in canvas space.
@@ -129,14 +129,15 @@ function screenBoxToCanvas(
 // Drag-to-select on the canvas pane. Mousedown on the pane starts tracking;
 // once the pointer moves past DRAG_THRESHOLD_PX a selection box appears.
 // pendingSelectedIds updates live as the box changes so elements highlight
-// in real time. Mouseup commits: overlapping elements are grouped via onGroupNodes.
+// in real time. Mouseup hands the overlapping elements to onSelectNodes as a
+// multi-selection; grouping them is a separate, explicit step.
 export function useDragSelection({
   nodes,
   edges,
   isGrabMode,
   readOnly,
   screenToFlowPosition,
-  onGroupNodes,
+  onSelectNodes,
 }: UseDragSelectionOptions) {
   const [selectionBox, setSelectionBox] = useState<DragSelectionBox | null>(
     null
@@ -151,6 +152,18 @@ export function useDragSelection({
     active: boolean;
   } | null>(null);
 
+  // Mouseup at the end of a marquee is followed by a click on the pane, which
+  // would clear the selection the marquee just made. Set here, read once by
+  // the pane-click handler, and reset on the next mousedown so a marquee that
+  // ends over a node (no pane click follows) can't swallow a later one.
+  const completedDragRef = useRef(false);
+
+  const consumeDragSelectClick = useCallback(() => {
+    const completed = completedDragRef.current;
+    completedDragRef.current = false;
+    return completed;
+  }, []);
+
   const handleMouseDown = useCallback(
     (event: React.MouseEvent) => {
       if (isGrabMode || readOnly || event.button !== 0) return;
@@ -158,6 +171,7 @@ export function useDragSelection({
       const target = event.target;
       if (!(target instanceof Element)) return;
       if (!target.classList.contains('react-flow__pane')) return;
+      completedDragRef.current = false;
       dragRef.current = {
         startX: event.clientX,
         startY: event.clientY,
@@ -210,6 +224,7 @@ export function useDragSelection({
       setSelectionBox(null);
       setPendingSelectedIds(EMPTY_SET);
       if (!drag?.active) return;
+      completedDragRef.current = true;
 
       const {canvasMin, canvasMax} = screenBoxToCanvas(
         drag.startX,
@@ -219,9 +234,9 @@ export function useDragSelection({
         screenToFlowPosition
       );
       const selectedIds = computeOverlapIds(nodes, edges, canvasMin, canvasMax);
-      onGroupNodes(selectedIds);
+      onSelectNodes(selectedIds);
     },
-    [nodes, edges, screenToFlowPosition, onGroupNodes]
+    [nodes, edges, screenToFlowPosition, onSelectNodes]
   );
 
   // Cancel an in-progress drag if the pointer leaves the canvas container.
@@ -234,6 +249,7 @@ export function useDragSelection({
   return {
     selectionBox,
     pendingSelectedIds,
+    consumeDragSelectClick,
     dragSelectMouseDown: handleMouseDown,
     dragSelectMouseMove: handleMouseMove,
     dragSelectMouseUp: handleMouseUp,
