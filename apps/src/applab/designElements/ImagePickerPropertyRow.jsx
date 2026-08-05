@@ -11,7 +11,10 @@ import {moderateApplabImageUrl} from '@cdo/apps/applab/imageUrlModeration';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
-import {FLAGGED_IMAGE_URL_MESSAGE} from '../constants';
+import {
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from '../constants';
 
 import * as rowStyle from './rowStyle';
 
@@ -23,8 +26,6 @@ import styles from './image-picker-property-row.module.scss';
 // instead of typing them manually, which will result in an immediate GET,
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
 const USER_INPUT_DELAY = 1500;
-const MODERATION_ERROR =
-  "We couldn't check this image link right now. Please try a different image link or upload a file.";
 
 export default class ImagePickerPropertyRow extends React.Component {
   static propTypes = {
@@ -122,7 +123,7 @@ export default class ImagePickerPropertyRow extends React.Component {
 
       if (status === 'error') {
         if (this.isMounted_) {
-          this.setState({errorMessage: MODERATION_ERROR});
+          this.setState({errorMessage: IMAGE_MODERATION_ERROR_MESSAGE});
         }
         return;
       }
