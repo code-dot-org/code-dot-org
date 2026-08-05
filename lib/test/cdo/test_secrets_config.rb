@@ -99,6 +99,56 @@ class SecretsConfigTest < Minitest::Test
     assert_equal 'bar!', config.bar
   end
 
+  # A Stack that has no Secret of its own resolves the one shared by every
+  # deployment of the same environment type.
+  def test_stack_secret_tag_falls_back_when_stack_secret_absent
+    stub_multiple_secrets({"/cdo/bar" => "environment-type bar secret"})
+
+    load_configuration <<~YAML
+      bar: !StackSecret
+    YAML
+    assert_equal 'environment-type bar secret', config.bar
+  end
+
+  # Executing outside a CloudFormation Stack (a developer machine, a CI runner)
+  # leaves no Stack name to construct a stack-specific path from, so the
+  # environment-type Secret is the only one available.
+  def test_stack_secret_tag_falls_back_without_stack_name
+    Cdo::SecretsConfig::StackSecret.stubs(:current_stack_name).returns(nil)
+    stub_multiple_secrets({"/cdo/bar" => "environment-type bar secret"})
+
+    load_configuration <<~YAML
+      bar: !StackSecret
+    YAML
+    assert_equal 'environment-type bar secret', config.bar
+  end
+
+  # With neither Secret provisioned the lookup fails rather than resolving to
+  # nil, having tried the stack-specific path before the environment-type one.
+  # The exception reports the environment-type path, since that lookup is the
+  # one that raises last.
+  def test_stack_secret_tag_raises_when_no_secret_exists
+    requested = []
+    client = Aws::SecretsManager::Client.new(
+      stub_responses: {
+        get_secret_value: lambda do |context|
+          requested << context.params[:secret_id]
+          'ResourceNotFoundException'
+        end
+      }
+    )
+    config.cdo_secrets = Cdo::Secrets.new(client: client)
+
+    load_configuration <<~YAML
+      bar: !StackSecret
+    YAML
+    error = assert_raises Aws::SecretsManager::Errors::ResourceNotFoundException do
+      config.bar
+    end
+    assert_equal ['CfnStack/test/bar', '/cdo/bar'], requested
+    assert_includes error.message, '/cdo/bar'
+  end
+
   def test_clear_secrets
     load_configuration <<~YAML
       foo: !Secret

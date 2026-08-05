@@ -53,8 +53,17 @@ module Cdo
     # identify the secret and a prefix which can identify which environment's
     # secrets we should use.
     Secret = Struct.new(:secret_prefix, :secret_key) do
-      def key
+      # Path to the Secret shared by every deployment of this environment type.
+      #
+      # Subclasses override `key`, so anything that must resolve the
+      # environment-type Secret specifically has to call this rather than `key`;
+      # otherwise `super` from a subclass dispatches back to the override.
+      def env_specific_secret_path
         SecretsConfig.secret_path(secret_prefix, secret_key)
+      end
+
+      def key
+        env_specific_secret_path
       end
 
       def to_s
@@ -63,14 +72,16 @@ module Cdo
 
       # Resolve the secret referenced by this object.
       def lookup(secrets_manager)
-        secrets_manager.get!(key)
+        secrets_manager.get!(env_specific_secret_path)
       end
     end
 
     class StackSecret < Secret
       # This attribute is used by the Cdo::Secrets.required (and require!) methods to determine which AWS Secret to get.
+      # Off-stack there is no stack-specific path, and `lookup` resolves the
+      # environment-type Secret instead, so name that one here.
       def key
-        stack_specific_secret_path
+        stack_specific_secret_path || env_specific_secret_path
       end
 
       # Extend the default lookup functionality to support checking for
