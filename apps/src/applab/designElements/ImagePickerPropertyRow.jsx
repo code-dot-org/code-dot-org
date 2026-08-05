@@ -50,6 +50,7 @@ export default class ImagePickerPropertyRow extends React.Component {
     lastEdit: 0,
   };
 
+  // Tracks the latest moderation request so older responses are ignored.
   moderationRequestId = 0;
 
   changeUnlessEditing(filename) {
@@ -98,6 +99,8 @@ export default class ImagePickerPropertyRow extends React.Component {
   changeImageInternal = async (filename, timestamp) => {
     // Absolute URLs typed directly in the property row bypass the URL picker,
     // so moderate them before applying.
+    // Picker flows usually pass a timestamp. When it's missing, treat this as
+    // direct URL entry and moderate the absolute URL.
     if (!timestamp) {
       const requestId = ++this.moderationRequestId;
       const {status, normalizedUrl} = await moderateApplabImageUrl(filename);
