@@ -2,13 +2,18 @@
  * The stable-ID cookie is `Secure` and scoped to `.code.org`, so the test
  * document must be an https code.org host or jsdom's cookie jar rejects it.
  *
+ * Each case loads a fresh module graph via `vi.resetModules()`, so the plugin
+ * needs no test hooks: a fresh module is a pre-boot module. Consent and
+ * settlement must be driven through the same generation the plugin imported,
+ * which is why `loadAnalytics` hands back their exports too.
+ *
  * @vitest-environment jsdom
  * @vitest-environment-options {"url": "https://test-studio.code.org/"}
  */
 
 import {afterEach, beforeEach, describe, expect, it, vi} from 'vitest';
 
-const statsigInstances: Array<{
+interface MockStatsigClient {
   key: string;
   user: {customIDs?: {stableID?: string}; custom?: Record<string, unknown>};
   options: Record<string, unknown>;
@@ -16,7 +21,9 @@ const statsigInstances: Array<{
   updateUserAsync: ReturnType<typeof vi.fn>;
   initializeAsync: ReturnType<typeof vi.fn>;
   shutdown: ReturnType<typeof vi.fn>;
-}> = [];
+}
+
+const statsigInstances: MockStatsigClient[] = [];
 
 vi.mock('@statsig/js-client', () => ({
   StatsigClient: vi.fn(function (
@@ -34,37 +41,19 @@ vi.mock('@statsig/js-client', () => ({
       initializeAsync: vi.fn().mockResolvedValue(undefined),
       shutdown: vi.fn().mockResolvedValue(undefined),
     };
-    statsigInstances.push(instance as never);
+    statsigInstances.push(instance as MockStatsigClient);
     Object.assign(this, instance);
   }),
 }));
 
-import {StatsigClient} from '@statsig/js-client';
-
 import type {SiteConfig, SiteConfigExtensions} from '../../../config';
-import {_resetConsentSettled, markConsentSettled} from '../../consent/settled';
-import {DEFAULT_STATE, pushConsentState} from '../../consent/store';
-import {ConsoleAdapter} from '../adapters/ConsoleAdapter';
-import {DeferredAdapter} from '../adapters/DeferredAdapter';
-import {NoopAdapter} from '../adapters/NoopAdapter';
-import {StatsigAdapter} from '../adapters/StatsigAdapter';
-import {createAnalyticsClient, type AnalyticsClientKind} from '../factory';
-import {
-  _getSingleton,
-  _initializeSingleton,
-  _resetForTests,
-  analyticsPlugin,
-  sendEvent,
-  setUser,
-} from '../index';
-import {
-  COOKIE_NAME,
-  LOCAL_STORAGE_KEY,
-  forgetStableId,
-  persistStableId,
-  readStableId,
-} from '../stableId';
 import type {AnalyticsConfig} from '../types';
+
+// The storage contract, spelled out rather than imported, so these tests pin it
+// independently of the implementation's constants.
+const COOKIE_NAME = 'statsig_stable_id';
+const LOCAL_STORAGE_KEY = 'STATSIG_STABLE_ID';
+const COOKIE_SCOPE = 'path=/; domain=.code.org';
 
 const STATSIG_CONFIG: AnalyticsConfig = {
   provider: 'statsig',
@@ -80,110 +69,177 @@ function pluginConfig(
     SiteConfigExtensions;
 }
 
-function latestStatsig() {
-  return statsigInstances[statsigInstances.length - 1];
+/**
+ * Loads a pre-boot analytics module together with the consent modules it
+ * imported, so tests drive the same instances the plugin reads.
+ */
+async function loadAnalytics() {
+  vi.resetModules();
+  const settled = await import('../../consent/settled');
+  const store = await import('../../consent/store');
+  const analytics = await import('../index');
+
+  return {
+    onCoreReady: (config?: AnalyticsConfig, environment?: string) =>
+      analytics.analyticsPlugin.onCoreReady(pluginConfig(config, environment)),
+    sendEvent: analytics.sendEvent,
+    setUser: analytics.setUser,
+    createAnalyticsClient: analytics.createAnalyticsClient,
+    markConsentSettled: settled.markConsentSettled,
+    pushConsentState: store.pushConsentState,
+  };
 }
 
-/** Report a CMP decision on `performance` and settle the consent source. */
-function reportConsent(granted: boolean) {
-  pushConsentState({
+type Analytics = Awaited<ReturnType<typeof loadAnalytics>>;
+
+/** Reports a CMP decision on `performance` and settles the consent source. */
+function reportConsent(analytics: Analytics, granted: boolean) {
+  analytics.pushConsentState({
     categories: new Set(
       granted
         ? (['strictly-necessary', 'performance'] as const)
         : (['strictly-necessary'] as const),
     ),
   });
-  markConsentSettled();
+  analytics.markConsentSettled();
 }
 
-/** Let the settlement promise and the provider import chain drain. */
+function latestStatsig(): MockStatsigClient {
+  return statsigInstances[statsigInstances.length - 1];
+}
+
+/** Waits for the async provider import to install a client. */
 async function drain() {
   await vi.waitFor(() => expect(latestStatsig()).toBeDefined());
 }
 
+function clearStableId() {
+  document.cookie = `${COOKIE_NAME}=; ${COOKIE_SCOPE}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+  localStorage.removeItem(LOCAL_STORAGE_KEY);
+}
+
+function persistedStableId(): string | undefined {
+  const match = document.cookie.match(
+    new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`),
+  );
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+let log: ReturnType<typeof vi.spyOn>;
+let warn: ReturnType<typeof vi.spyOn>;
+
 beforeEach(() => {
-  _resetForTests();
-  vi.clearAllMocks();
   statsigInstances.length = 0;
-  forgetStableId();
-  pushConsentState(DEFAULT_STATE);
-  _resetConsentSettled();
+  clearStableId();
+  localStorage.clear();
+  log = vi.spyOn(console, 'log').mockImplementation(() => {});
+  warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 });
 
 afterEach(() => {
-  _resetForTests();
-  forgetStableId();
-  pushConsentState(DEFAULT_STATE);
-  _resetConsentSettled();
+  clearStableId();
+  localStorage.clear();
+  vi.restoreAllMocks();
 });
 
 describe('analytics factory', () => {
   it('creates a console client for the development stand-in', async () => {
+    vi.resetModules();
+    const {createAnalyticsClient} = await import('../factory');
+    const {ConsoleAdapter} = await import('../adapters/ConsoleAdapter');
+
     await expect(createAnalyticsClient('console')).resolves.toBeInstanceOf(
       ConsoleAdapter,
     );
   });
 
   it('creates a statsig client for the statsig provider', async () => {
+    vi.resetModules();
+    const {createAnalyticsClient} = await import('../factory');
+    const {StatsigAdapter} = await import('../adapters/StatsigAdapter');
+
     await expect(createAnalyticsClient('statsig')).resolves.toBeInstanceOf(
       StatsigAdapter,
     );
   });
 
   it('rejects an unsupported client kind', async () => {
+    const {createAnalyticsClient} = await loadAnalytics();
+
     await expect(
-      createAnalyticsClient('mixpanel' as AnalyticsClientKind),
+      createAnalyticsClient(
+        'mixpanel' as Parameters<typeof createAnalyticsClient>[0],
+      ),
     ).rejects.toThrow(/Unsupported analytics client/);
   });
 });
 
 describe('analytics plugin bootstrap', () => {
   it('stays silent when analytics config is absent outside development', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(undefined));
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(undefined);
+    analytics.markConsentSettled();
+    await Promise.resolve();
     await Promise.resolve();
 
-    expect(_getSingleton()).toBeInstanceOf(NoopAdapter);
-    expect(StatsigClient).not.toHaveBeenCalled();
+    analytics.sendEvent('ignored');
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(log).not.toHaveBeenCalled();
   });
 
   it('stays silent for provider "none" outside development', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig({provider: 'none'}));
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady({provider: 'none'});
+    analytics.markConsentSettled();
+    await Promise.resolve();
     await Promise.resolve();
 
-    expect(_getSingleton()).toBeInstanceOf(NoopAdapter);
-    expect(StatsigClient).not.toHaveBeenCalled();
+    analytics.sendEvent('ignored');
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(log).not.toHaveBeenCalled();
   });
 
   it('logs to the console for a non-transmitting development environment', async () => {
-    const log = vi.spyOn(console, 'log').mockImplementation(() => {});
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(
-      pluginConfig({provider: 'none'}, 'development'),
-    );
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({provider: 'none'}, 'development');
     await vi.waitFor(() =>
-      expect(_getSingleton()).toBeInstanceOf(ConsoleAdapter),
+      expect(log).toHaveBeenCalledWith(
+        expect.stringContaining('Statsig Stable ID'),
+      ),
     );
 
-    sendEvent('Some Event', {a: 1});
+    analytics.sendEvent('Some Event', {a: 1});
 
-    expect(StatsigClient).not.toHaveBeenCalled();
+    expect(statsigInstances).toHaveLength(0);
     expect(log).toHaveBeenCalledWith(
       '[STATSIG ANALYTICS EVENT]: Some Event. Payload: {"payload":{"a":1}}',
     );
-    log.mockRestore();
   });
 
-  it('installs a deferred client synchronously so early events are not lost', () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+  it('buffers an event sent synchronously after onCoreReady', async () => {
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.sendEvent('synchronous');
 
-    expect(_getSingleton()).toBeInstanceOf(DeferredAdapter);
+    reportConsent(analytics, true);
+    await drain();
+
+    expect(latestStatsig().logEvent).toHaveBeenCalledWith(
+      'synchronous',
+      'synchronous',
+      undefined,
+    );
   });
 
   it('replays buffered events in order once the client is ready', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    sendEvent('first');
-    sendEvent('second');
-    reportConsent(true);
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.sendEvent('first');
+    analytics.sendEvent('second');
+    reportConsent(analytics, true);
     await drain();
 
     expect(latestStatsig().logEvent.mock.calls.map(call => call[0])).toEqual([
@@ -192,40 +248,49 @@ describe('analytics plugin bootstrap', () => {
     ]);
   });
 
-  it('boots once, ignoring any later onCoreReady', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    reportConsent(true);
-    await drain();
-    const client = _getSingleton();
+  it('falls back to a silent client when provider setup fails', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    // No clientKey, so the adapter's init throws inside the boot chain.
+    analytics.onCoreReady({provider: 'statsig'});
+    await vi.waitFor(() => expect(warn).toHaveBeenCalled());
 
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+    expect(() => analytics.sendEvent('dropped')).not.toThrow();
+    expect(statsigInstances).toHaveLength(0);
+  });
+
+  it('boots once, ignoring any later onCoreReady', async () => {
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    reportConsent(analytics, true);
+    await drain();
+
+    analytics.onCoreReady(STATSIG_CONFIG);
     await Promise.resolve();
     await Promise.resolve();
 
     expect(statsigInstances).toHaveLength(1);
-    expect(_getSingleton()).toBe(client);
   });
 
-  it('falls back to a silent client when provider setup fails', async () => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-    markConsentSettled();
-    // No clientKey, so the adapter's init throws inside the boot chain.
-    analyticsPlugin.onCoreReady(pluginConfig({provider: 'statsig'}));
-    await vi.waitFor(() => expect(_getSingleton()).toBeInstanceOf(NoopAdapter));
+  it('drops events and identity before any boot without throwing', async () => {
+    const analytics = await loadAnalytics();
 
-    expect(warn).toHaveBeenCalled();
-    warn.mockRestore();
+    expect(() => analytics.sendEvent('ignored', {a: 1})).not.toThrow();
+    expect(() => analytics.setUser({userId: '1'})).not.toThrow();
+    expect(() => analytics.setUser(null)).not.toThrow();
+    expect(statsigInstances).toHaveLength(0);
   });
 });
 
 describe('analytics consent gate', () => {
   it('sends immediately when the page carries no CMP', async () => {
+    const analytics = await loadAnalytics();
     // No CMP means the consent source settles synchronously at connect time.
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
-    sendEvent('immediate');
+    analytics.sendEvent('immediate');
 
     expect(latestStatsig().logEvent).toHaveBeenCalledWith(
       'immediate',
@@ -235,19 +300,20 @@ describe('analytics consent gate', () => {
   });
 
   it('sends nothing while a CMP is present but has not settled', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    sendEvent('buffered');
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.sendEvent('buffered');
     await Promise.resolve();
     await Promise.resolve();
 
-    expect(StatsigClient).not.toHaveBeenCalled();
-    expect(_getSingleton()).toBeInstanceOf(DeferredAdapter);
+    expect(statsigInstances).toHaveLength(0);
   });
 
   it('sends buffered events after a grant, and persists the stable id', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    sendEvent('before consent');
-    reportConsent(true);
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.sendEvent('before consent');
+    reportConsent(analytics, true);
     await drain();
 
     expect(latestStatsig().logEvent).toHaveBeenCalledWith(
@@ -255,15 +321,19 @@ describe('analytics consent gate', () => {
       'before consent',
       undefined,
     );
-    expect(readStableId()).toBeDefined();
-    expect(latestStatsig().user.customIDs?.stableID).toBe(readStableId());
+    expect(persistedStableId()).toBeDefined();
+    expect(localStorage.getItem(LOCAL_STORAGE_KEY)).toBe(persistedStableId());
+    expect(latestStatsig().user.customIDs?.stableID).toBe(persistedStableId());
   });
 
   it('still sends buffered events after a denial — only persistence differs', async () => {
-    persistStableId('previously-persisted');
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    sendEvent('before consent');
-    reportConsent(false);
+    document.cookie = `${COOKIE_NAME}=previously-persisted; ${COOKIE_SCOPE}`;
+    localStorage.setItem(LOCAL_STORAGE_KEY, 'previously-persisted');
+
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.sendEvent('before consent');
+    reportConsent(analytics, false);
     await drain();
 
     expect(latestStatsig().logEvent).toHaveBeenCalledWith(
@@ -273,40 +343,41 @@ describe('analytics consent gate', () => {
     );
     // Our copies are deleted and no stable ID is handed to the SDK, which is
     // its cue to mint and store one of its own.
-    expect(readStableId()).toBeUndefined();
-    expect(document.cookie).not.toContain(COOKIE_NAME);
+    expect(persistedStableId()).toBeUndefined();
     expect(localStorage.getItem(LOCAL_STORAGE_KEY)).toBeNull();
     expect(latestStatsig().user.customIDs).toEqual({stableID: undefined});
   });
 
   it('adopts an already-persisted stable id on a grant', async () => {
-    persistStableId('persisted-id');
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    reportConsent(true);
+    document.cookie = `${COOKIE_NAME}=persisted-id; ${COOKIE_SCOPE}`;
+
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    reportConsent(analytics, true);
     await drain();
 
     expect(latestStatsig().user.customIDs?.stableID).toBe('persisted-id');
-    expect(readStableId()).toBe('persisted-id');
+    expect(persistedStableId()).toBe('persisted-id');
   });
 
   it('ignores consent changes after the single boot-time decision', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    reportConsent(false);
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    reportConsent(analytics, false);
     await drain();
     const client = latestStatsig();
 
     // A mid-session accept earns no cookie until the next page load, and the
     // running client is left alone.
-    reportConsent(true);
+    reportConsent(analytics, true);
     await Promise.resolve();
     await Promise.resolve();
 
-    expect(readStableId()).toBeUndefined();
+    expect(persistedStableId()).toBeUndefined();
     expect(client.shutdown).not.toHaveBeenCalled();
     expect(statsigInstances).toHaveLength(1);
 
-    // Sending still works — consent never gated transmission.
-    sendEvent('after change');
+    analytics.sendEvent('after change');
     expect(client.logEvent).toHaveBeenCalledWith(
       'after change',
       'after change',
@@ -315,13 +386,14 @@ describe('analytics consent gate', () => {
   });
 
   it('keeps sending after a mid-session revoke', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    reportConsent(true);
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    reportConsent(analytics, true);
     await drain();
 
-    reportConsent(false);
+    reportConsent(analytics, false);
     await Promise.resolve();
-    sendEvent('still sending');
+    analytics.sendEvent('still sending');
 
     expect(latestStatsig().logEvent).toHaveBeenCalledWith(
       'still sending',
@@ -341,8 +413,9 @@ describe('analytics session dimensions', () => {
     document.cookie = '_experiments=%5B%22cookie-one%22%5D; path=/';
     document.documentElement.dataset.geRegion = 'fa';
 
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
     expect(latestStatsig().user.custom).toEqual({
@@ -352,13 +425,13 @@ describe('analytics session dimensions', () => {
 
     document.cookie =
       '_experiments=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-    localStorage.removeItem('experimentsList');
     delete document.documentElement.dataset.geRegion;
   });
 
   it('passes the environment tier and leaves SDK storage at its default', async () => {
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
     expect(latestStatsig().options).toEqual({environment: {tier: 'test'}});
@@ -366,13 +439,15 @@ describe('analytics session dimensions', () => {
 });
 
 describe('analytics identity', () => {
-  it('matches legacy setUserProperties, including its omitted customIDs', async () => {
-    persistStableId('persisted-id');
-    reportConsent(true);
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+  it('sends the identity update without customIDs', async () => {
+    document.cookie = `${COOKIE_NAME}=persisted-id; ${COOKIE_SCOPE}`;
+
+    const analytics = await loadAnalytics();
+    reportConsent(analytics, true);
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
-    setUser({
+    analytics.setUser({
       userId: '1234',
       userType: 'teacher',
       isVerifiedInstructor: true,
@@ -391,48 +466,44 @@ describe('analytics identity', () => {
   });
 
   it('drops an identical repeat setUser', async () => {
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
-    setUser({userId: '1234', userType: 'teacher'});
-    setUser({userId: '1234', userType: 'teacher'});
+    analytics.setUser({userId: '1234', userType: 'teacher'});
+    analytics.setUser({userId: '1234', userType: 'teacher'});
 
     expect(latestStatsig().updateUserAsync).toHaveBeenCalledTimes(1);
   });
 
-  it('treats setUser(null) as a no-op, as legacy had no sign-out path', async () => {
-    markConsentSettled();
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
+  it('treats setUser(null) as a no-op', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
     await drain();
 
-    setUser(null);
+    analytics.setUser(null);
 
     expect(latestStatsig().updateUserAsync).not.toHaveBeenCalled();
   });
 
   it('buffers a setUser issued before the client exists', async () => {
-    analyticsPlugin.onCoreReady(pluginConfig(STATSIG_CONFIG));
-    setUser({userId: '77', userType: 'student'});
-    reportConsent(true);
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    analytics.setUser({userId: '77', userType: 'student'});
+    reportConsent(analytics, true);
     await drain();
 
     expect(latestStatsig().updateUserAsync).toHaveBeenCalledWith(
       expect.objectContaining({userID: 'test-77'}),
     );
   });
-
-  it('drops events and identity on the silent client without throwing', () => {
-    _initializeSingleton(new NoopAdapter());
-
-    expect(() => sendEvent('ignored', {a: 1})).not.toThrow();
-    expect(() => setUser({userId: '1'})).not.toThrow();
-    expect(() => setUser(null)).not.toThrow();
-  });
 });
 
 describe('stable id storage', () => {
-  it('round-trips through the cookie and localStorage', () => {
+  it('round-trips through the cookie and localStorage', async () => {
+    const {persistStableId, readStableId} = await import('../stableId');
     persistStableId('abc-123');
 
     expect(document.cookie).toContain(`${COOKIE_NAME}=abc-123`);
@@ -440,27 +511,33 @@ describe('stable id storage', () => {
     expect(readStableId()).toBe('abc-123');
   });
 
-  it('falls back to localStorage when the cookie is gone', () => {
+  it('falls back to localStorage when the cookie is gone', async () => {
+    const {readStableId} = await import('../stableId');
     localStorage.setItem(LOCAL_STORAGE_KEY, 'from-storage');
 
     expect(readStableId()).toBe('from-storage');
   });
 
-  it('falls through an empty cookie value to localStorage', () => {
+  it('falls through an empty cookie value to localStorage', async () => {
+    const {readStableId} = await import('../stableId');
     localStorage.setItem(LOCAL_STORAGE_KEY, 'from-storage');
-    document.cookie = `${COOKIE_NAME}=; path=/; domain=.code.org`;
+    document.cookie = `${COOKIE_NAME}=; ${COOKIE_SCOPE}`;
 
     expect(readStableId()).toBe('from-storage');
   });
 
-  it('treats a malformed cookie escape as absent', () => {
-    document.cookie = `${COOKIE_NAME}=100%; path=/; domain=.code.org`;
+  it('treats a malformed cookie escape as absent', async () => {
+    const {readStableId} = await import('../stableId');
+    document.cookie = `${COOKIE_NAME}=100%; ${COOKIE_SCOPE}`;
 
     expect(() => readStableId()).not.toThrow();
     expect(readStableId()).toBeUndefined();
   });
 
-  it('reports nothing once forgotten', () => {
+  it('reports nothing once forgotten', async () => {
+    const {forgetStableId, persistStableId, readStableId} = await import(
+      '../stableId'
+    );
     persistStableId('abc-123');
     forgetStableId();
 
