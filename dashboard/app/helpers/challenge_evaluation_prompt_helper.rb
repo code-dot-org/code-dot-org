@@ -49,7 +49,8 @@ module ChallengeEvaluationPromptHelper
     challenge_response.challenge_response_assets.select(&:asset_whiteboard_image?).each do |asset|
       next unless asset.uploaded?
       bytes = asset.download_bytes
-      data_uri = "data:#{image_content_type(bytes)};base64,#{Base64.strict_encode64(bytes)}"
+      # Whiteboard images are always PNG (enforced at upload time).
+      data_uri = "data:image/png;base64,#{Base64.strict_encode64(bytes)}"
       content << {type: 'image_url', image_url: {url: data_uri}}
     end
     content
@@ -105,12 +106,5 @@ module ChallengeEvaluationPromptHelper
       end
       lines.join("\n")
     end.join("\n")
-  end
-
-  # Whiteboard images are PNG or JPEG (enforced at upload time), so the
-  # content type is recoverable from the magic bytes; S3 object metadata is
-  # not consulted.
-  def self.image_content_type(bytes)
-    bytes.start_with?("\x89PNG".b) ? 'image/png' : 'image/jpeg'
   end
 end
