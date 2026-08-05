@@ -34,7 +34,7 @@
   "scripts": {
     "build": "vite build",
     "build:demo": "yarn setup:world && vite build --mode demo",
-    "build:pages": "WORLD_DEMO_BASE=/world-lab/ VITE_WORLD_SANDBOX=same-origin yarn build:demo",
+    "build:pages": "WORLD_DEMO_BASE=/world-lab/ WORLD_DEMO_ICONS=free VITE_WORLD_SANDBOX=same-origin yarn build:demo",
     "dev": "yarn setup:world && vite --port 5139 --strictPort",
     "dev:isolated": "yarn setup:world && concurrently -k -n app,sandbox -c blue,magenta \"vite --port 5139 --strictPort\" \"vite --port 5202 --strictPort\"",
     "dev:sandbox": "yarn setup:world && vite --port 5202 --strictPort",
@@ -80,6 +80,7 @@
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@fortawesome/fontawesome-free": "^7.1.0",
     "@testing-library/dom": "catalog:",
     "@testing-library/jest-dom": "catalog:",
     "@testing-library/react": "catalog:",
