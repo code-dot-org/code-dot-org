@@ -1,3 +1,5 @@
+import {type VocabularyItem} from '@code-dot-org/lesson-deep-dive';
+
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import {ResponseValidator} from '../../../util/HttpClient';
@@ -37,7 +39,7 @@ export type LessonDeepDiveData = {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: {id: string; word: string; definition: string}[];
+  vocabulary: VocabularyItem[];
   objectives: {id: string; description: string}[];
   assessmentAnalysis: AssessmentQuestionResult[];
   jsonVideos: JsonVideoData[];
