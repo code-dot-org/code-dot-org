@@ -82,6 +82,7 @@ class ProjectStorage::AnonymousGeoBackfillingJob < ApplicationJob
   private def unlocated_storages
     ActiveRecord::Base.connected_to(role: :reporting) do
       ProjectStorage.
+        optimizer_hints("INDEX(#{ProjectStorage.table_name} PRIMARY)").
         where(user_id: nil).
         # LEFT OUTER JOIN project_storage_geos geo ON geo.storage_id = user_project_storage_ids.id WHERE geo.id IS NULL
         where.missing(:geo).
