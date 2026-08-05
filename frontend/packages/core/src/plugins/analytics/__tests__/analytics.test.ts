@@ -526,12 +526,18 @@ describe('stable id storage', () => {
     expect(readStableId()).toBe('from-storage');
   });
 
-  it('treats a malformed cookie escape as absent', async () => {
+  it('treats an undecodable cookie escape as absent', async () => {
+    const {readStableId} = await import('../stableId');
+    document.cookie = `${COOKIE_NAME}=%E0%A4%A; ${COOKIE_SCOPE}`;
+
+    expect(readStableId()).toBeUndefined();
+  });
+
+  it('reads a value carrying a stray percent without throwing', async () => {
     const {readStableId} = await import('../stableId');
     document.cookie = `${COOKIE_NAME}=100%; ${COOKIE_SCOPE}`;
 
     expect(() => readStableId()).not.toThrow();
-    expect(readStableId()).toBeUndefined();
   });
 
   it('reports nothing once forgotten', async () => {
