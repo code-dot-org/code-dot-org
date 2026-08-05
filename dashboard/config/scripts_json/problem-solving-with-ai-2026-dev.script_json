@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-04 02:01:36 UTC",
+    "serialized_at": "2026-08-04 19:10:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -603,7 +603,7 @@
       "key": "e788f8e7-b705-453f-9bc1-6ccc7d866841",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -617,23 +617,11 @@
       "key": "53f8518c-97b8-4638-98d6-c01a6314471f",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "53f8518c-97b8-4638-98d6-c01a6314471f",
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev"
-      }
-    },
-    {
-      "key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12",
         "lesson.key": "Lesson 6: Understanding Bias",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev"
@@ -2598,7 +2586,7 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Students analyze bias in decision-making by comparing their own candidate selection process with AI’s and exploring how training data influences AI’s choices.",
-        "duration": "15",
+        "duration": "20",
         "name": "AI Audit Challenges"
       },
       "seeding_key": {
@@ -2622,7 +2610,7 @@
       "key": "47e5f6e9-9806-4443-89dd-879ee8098aaa",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 6, Level 3. Students choose one decision-making role:\n- **Hiring Manager:** Selects top candidates for job interviews.\n- **College Admissions Officer:** Picks students for acceptance.\n- **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n\nThen students review the candidate pool and select two candidates based on their qualifications. They record and justify selections in the activity guide.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 6, Level 3 to complete Levels 3 and 4.\n- **Level #3:** Students choose one decision-making role and navigate an interactive panel level:\n   - **Hiring Manager:** Selects top candidates for job interviews.\n   - **College Admissions Officer:** Picks students for acceptance.\n   - **Hospital Triage Nurse:** Prioritizes patients for urgent care.\n- **Level #4:** Students review resources in Sketch Lab related to their scenario and rank their candidates. They record and justify selections in both the activity guide",
         "progression_name": "Decision-Making Roles"
       },
       "seeding_key": {
@@ -2657,7 +2645,7 @@
       "key": "8f02a287-8b9c-4750-a595-04ee8358ac02",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 4, where they will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own. After reviewing AI's choices, students will refine their prompt to better align with their group's priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**Direct students to Lesson 6, Level 5 to complete Levels 5 and 6.\n- **Level #5:** Students will ask AI Chat to select candidates for the same decision-making role they previously chose. Students will then compare AI's selections to their own\n- **Level #6:** Student refine the the system prompt to better align with their priorities, specifying which qualities AI should prioritize while abstracting away irrelevant details.\n",
         "progression_name": "AI Audit Challenge"
       },
       "seeding_key": {
@@ -2725,17 +2713,6 @@
       "seeding_key": {
         "activity_section.key": "c5e0dd3d-b845-4d21-9178-e441faf756d5",
         "lesson_activity.key": "53f8518c-97b8-4638-98d6-c01a6314471f"
-      }
-    },
-    {
-      "key": "082d4fe1-64fc-44c1-847a-3dff9d15e442",
-      "position": 1,
-      "properties": {
-        "progression_name": "New Progressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442",
-        "lesson_activity.key": "b4fe0681-e3b8-4f4c-b84c-c64983e48b12"
       }
     },
     {
@@ -5200,7 +5177,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-level3_v2_2026_dev"
+          "problem-solving-with-ai-lesson6-decision-making-choice"
         ],
         "lesson.key": "Lesson 6: Understanding Bias",
         "lesson_group.key": "lessonGroup-4",
@@ -5208,12 +5185,34 @@
         "activity_section.key": "47e5f6e9-9806-4443-89dd-879ee8098aaa"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson6-level3_v2_2026_dev"
+        "problem-solving-with-ai-lesson6-decision-making-choice"
       ]
     },
     {
       "chapter": 31,
       "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Decision-Making Roles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-examine-data-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "47e5f6e9-9806-4443-89dd-879ee8098aaa"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-examine-data-choice"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5234,9 +5233,31 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Audit Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "8f02a287-8b9c-4750-a595-04ee8358ac02"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson6-ai-chat-decision-making"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "progression": "AI Audit Challenge"
@@ -5256,73 +5277,7 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-decision-making-choice"
-        ],
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson6-decision-making-choice"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-examine-data-choice"
-        ],
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson6-examine-data-choice"
-      ]
-    },
-    {
       "chapter": 35,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "New Progressions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
-        ],
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
-      },
-      "level_keys": [
-        "problem-solving-with-ai-lesson6-ai-chat-decision-making"
-      ]
-    },
-    {
-      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5344,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5366,7 +5321,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5388,7 +5343,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5410,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5432,7 +5387,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5454,7 +5409,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5476,7 +5431,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
@@ -5498,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5520,7 +5475,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5542,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 3,
       "assessment": true,
@@ -5564,7 +5519,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5586,7 +5541,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5608,7 +5563,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5630,7 +5585,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5652,7 +5607,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 5,
       "assessment": true,
@@ -5674,7 +5629,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5696,7 +5651,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5718,7 +5673,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5740,7 +5695,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5762,7 +5717,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5784,7 +5739,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5806,7 +5761,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5828,7 +5783,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5850,7 +5805,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5872,7 +5827,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5894,7 +5849,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5916,7 +5871,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5938,7 +5893,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5960,7 +5915,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5982,7 +5937,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6003,7 +5958,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6025,7 +5980,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6398,9 +6353,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson6-level3_v2_2026_dev",
+        "level.key": "problem-solving-with-ai-lesson6-decision-making-choice",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-level3_v2_2026_dev"
+          "problem-solving-with-ai-lesson6-decision-making-choice"
+        ],
+        "lesson.key": "Lesson 6: Understanding Bias",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "problem-solving-with-ai-2026-dev",
+        "activity_section.key": "47e5f6e9-9806-4443-89dd-879ee8098aaa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson6-examine-data-choice",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson6-examine-data-choice"
         ],
         "lesson.key": "Lesson 6: Understanding Bias",
         "lesson_group.key": "lessonGroup-4",
@@ -6422,9 +6389,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson6-level5_2024-pilot_v2_2026_dev",
+        "level.key": "problem-solving-with-ai-lesson6-ai-chat-decision-making",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-level5_2024-pilot_v2_2026_dev"
+          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
         ],
         "lesson.key": "Lesson 6: Understanding Bias",
         "lesson_group.key": "lessonGroup-4",
@@ -6434,38 +6401,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson6-decision-making-choice",
+        "level.key": "problem-solving-with-ai-lesson6-level5_2024-pilot_v2_2026_dev",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-decision-making-choice"
+          "problem-solving-with-ai-lesson6-level5_2024-pilot_v2_2026_dev"
         ],
         "lesson.key": "Lesson 6: Understanding Bias",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson6-examine-data-choice",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-examine-data-choice"
-        ],
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson6-ai-chat-decision-making",
-        "script_level.level_keys": [
-          "problem-solving-with-ai-lesson6-ai-chat-decision-making"
-        ],
-        "lesson.key": "Lesson 6: Understanding Bias",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "problem-solving-with-ai-2026-dev",
-        "activity_section.key": "082d4fe1-64fc-44c1-847a-3dff9d15e442"
+        "activity_section.key": "8f02a287-8b9c-4750-a595-04ee8358ac02"
       }
     },
     {

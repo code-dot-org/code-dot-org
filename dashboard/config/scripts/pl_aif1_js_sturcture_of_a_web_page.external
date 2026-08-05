@@ -1,0 +1,49 @@
+name 'pl-aif1-js-sturcture-of-a-web-page'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Structure of a Web App</h1>
+
+When AI generates a web page for your students, it doesn't hand back one file, it generates at least two: an HTML file and a CSS file. The home page is always named index.html, and a multi-page site might include others like about.html, contact.html, or gallery.html.
+
+Your students won't need to memorize this, but it helps to recognize it when you see it in Web Lab.
+
+
+<div style="text-align: center; margin: 20px 0;">
+<img src="https://images.code.org/9c58210ab663bfc940383035c65f6de3-image-1785858746846.png" alt="Structure of a Web App diagram: a home page is always named index.html, and a web app may include additional linked pages like a Contact page at contact.html, an About page at about.html, and a Gallery page at gallery.html." style="max-width: 600px; width: 100%; border-radius: 10px;">
+</div>
+
+
+---
+
+<h2>HTML Builds Structure. CSS Adds Style.</h2>
+
+<p>The easiest way to see the difference is to look at the same content with and without CSS. Notice the words on the page haven't changed at all, only how they're presented.</p>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 20px 0;">
+  <div style="flex: 1; min-width: 220px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; background-color: #FFFFFF;">
+    <div style="font-size: 12px; font-weight: 700; color: #4C42CF; margin-bottom: 10px;">HTML ONLY</div>
+    <div style="font-family: Georgia, serif; font-size: 16px; margin-bottom: 8px;">Welcome to the Dog Lover's Page!</div>
+    <div style="font-family: Georgia, serif; font-size: 14px; margin-bottom: 4px;">Popular Dog Breeds</div>
+    <div style="font-family: Georgia, serif; font-size: 13px; color: #333333;">Dogs come in many shapes and sizes.</div>
+  </div>
+
+  <div style="flex: 1; min-width: 220px; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; background-color: #1F1976;">
+    <div style="font-size: 12px; font-weight: 700; color: #ACA8EA; margin-bottom: 10px;">HTML + CSS</div>
+    <div style="font-family: 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: bold; color: #FFFFFF; margin-bottom: 10px;">Welcome to the Dog Lover's Page!</div>
+    <div style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-family: 'Trebuchet MS', sans-serif; font-size: 13px; font-weight: bold; border-radius: 6px; padding: 4px 10px; margin-bottom: 8px;">Popular Dog Breeds</div>
+    <div style="font-family: 'Trebuchet MS', sans-serif; font-size: 13px; color: #E4E2F8;">Dogs come in many shapes and sizes.</div>
+  </div>
+</div>
+
+That's the whole relationship: 
+- HTML says what's on the page
+-  CSS says how it looks.
+
+When AI generates code with your students, this is the split they'll see, and it's the reason changing a color or font never touches the actual words on the page.
+
+<div style="background-color: #E4E2F8; color: #222222; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+<strong>💡 Teacher tip:</strong> it's easy to feel like you need to become fluent in HTML and CSS tags to teach this unit well. You don't. This is a JavaScript course, and this early look at structure is just building intuition, not a coding requirement. Your students will design pages by prompting AI, not by hand-writing markup, the next level walks through exactly how that works. Your role here is helping them recognize structure and judge whether AI's output matches what they asked for, not becoming an HTML instructor overnight.
+</div>
+MARKDOWN
