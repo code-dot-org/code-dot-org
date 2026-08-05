@@ -25,6 +25,32 @@ const FONT_AWESOME_STYLESHEETS = [
 ];
 
 /**
+ * Where the stylesheets come from, when it is not the CDN above.
+ *
+ * A whole list rather than a base URL, because a different SOURCE is a
+ * different set of sheets, not the same files somewhere else: the Free
+ * distribution has no `duotone`, no `v4-font-face`, and no `custom-icons`
+ * (which is code.org's own kit), and asking for those would be four 404s.
+ *
+ * A setting rather than an argument, because the injection is not all in one
+ * place — a lab's entry does it and `<Lab>` does it again on mount (labs/base),
+ * so a host that passed a source to its own call would still get the CDN from
+ * the call it does not own. Set it before rendering.
+ *
+ * Self-hosted sheets name their webfonts relative to themselves, which the
+ * linked form resolves correctly and the `{layer}` form does not (inlining
+ * moves the rules to the document's base).
+ */
+let stylesheets = FONT_AWESOME_STYLESHEETS;
+
+export function setFontAwesomeStylesheets(hrefs: readonly string[]): void {
+  stylesheets = [...hrefs];
+}
+
+/** Sheets already added, by href, so a second call adds nothing. */
+const injected = new Set<string>();
+
+/**
  * Injects FontAwesome's stylesheets. Returns a promise that resolves once they
  * are in the DOM (so callers can gate rendering on it).
  *
@@ -44,12 +70,17 @@ export function injectFontAwesome(
   options: {layer?: string} = {},
 ): Promise<void> {
   const {layer} = options;
+  // Injecting the same sheet twice costs a duplicate rule set and, for the
+  // `{layer}` form, a second fetch of every file. Both callers can fire.
+  const pending = stylesheets.filter(href => !injected.has(href));
+  if (pending.length === 0) {
+    return Promise.resolve();
+  }
+  pending.forEach(href => injected.add(href));
 
   if (layer) {
     return Promise.all(
-      FONT_AWESOME_STYLESHEETS.map(href =>
-        fetch(href).then(response => response.text()),
-      ),
+      pending.map(href => fetch(href).then(response => response.text())),
     ).then(cssTexts => {
       const style = document.createElement('style');
       style.textContent = `@layer ${layer} {\n${cssTexts.join('\n')}\n}`;
@@ -57,7 +88,7 @@ export function injectFontAwesome(
     });
   }
 
-  FONT_AWESOME_STYLESHEETS.forEach(href => {
+  pending.forEach(href => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;

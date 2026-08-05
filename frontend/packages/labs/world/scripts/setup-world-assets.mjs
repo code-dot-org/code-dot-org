@@ -10,6 +10,7 @@
 //                     exactly one engine instance (PLAN §7 / §10)
 //   backgrounds/    — the stock backdrops, fetched from the animation library
 //                     (backgrounds.txt); see BACKGROUNDS.md §7
+//   fontawesome/    — the icon font, with WORLD_DEMO_ICONS=free; see below
 //
 // Run: node scripts/setup-world-assets.mjs   (wired as `yarn setup:world`)
 
@@ -18,7 +19,9 @@ import {
   existsSync,
   mkdirSync,
   copyFileSync,
+  readdirSync,
   readFileSync,
+  rmSync,
   statSync,
   writeFileSync,
 } from 'node:fs';
@@ -137,6 +140,63 @@ if (!existsSync(listing)) {
   for (const failure of failures) {
     console.warn(`world assets: could not fetch ${failure}`);
   }
+}
+
+// FontAwesome, when this build is asked to carry its own icons.
+//
+// The design system loads FontAwesome PRO from `dsco.code.org`, and that CDN
+// answers CORS only for code.org origins — a webfont is always a CORS request,
+// so a demo deployed anywhere else loads the stylesheets fine and then draws
+// every icon as an empty box. `WORLD_DEMO_ICONS=free` swaps in the FREE
+// distribution, which is already in the workspace (labs/base depends on it) and
+// is redistributable: CC BY 4.0 for the icons, SIL OFL for the fonts.
+//
+// A copy, not a download — the package is on disk, so this step needs no
+// network and cannot half-succeed. Free is a smaller set than Pro; what is
+// missing is remapped in `src/freeIconShims.ts`, and the demo says so in the
+// console when it meets an icon nothing draws.
+const faDir = join(vendorDir, 'fontawesome');
+if (process.env.WORLD_DEMO_ICONS !== 'free') {
+  // Both directions, or the flag stops deciding anything: `public/` is copied
+  // whole into a build, so a copy left behind by an earlier flagged run ships
+  // as 400KB of files nothing asks for.
+  if (existsSync(faDir)) {
+    rmSync(faDir, {recursive: true, force: true});
+    console.log('world assets: removed the self-hosted FontAwesome copy');
+  }
+} else {
+  const from = dirname(
+    require.resolve('@fortawesome/fontawesome-free/package.json'),
+  );
+  mkdirSync(join(faDir, 'css'), {recursive: true});
+  mkdirSync(join(faDir, 'webfonts'), {recursive: true});
+
+  // The sheets Free ships that we use, and every webfont they name. No
+  // `duotone`, `v4-font-face` or `custom-icons` — those are Pro's.
+  const sheets = [
+    'fontawesome.min.css',
+    'solid.min.css',
+    'regular.min.css',
+    'brands.min.css',
+    'v4-shims.min.css',
+  ];
+  for (const name of sheets) {
+    copyFileSync(join(from, 'css', name), join(faDir, 'css', name));
+  }
+  // Only woff2: every browser this runs in reads it, and the .ttf beside it is
+  // three times the size for nobody.
+  const fonts = readdirSync(join(from, 'webfonts')).filter(name =>
+    name.endsWith('.woff2'),
+  );
+  for (const name of fonts) {
+    copyFileSync(join(from, 'webfonts', name), join(faDir, 'webfonts', name));
+  }
+  // Attribution travels with the files, which is what the licence asks.
+  copyFileSync(join(from, 'LICENSE.txt'), join(faDir, 'LICENSE.txt'));
+  console.log(
+    `world assets: self-hosted FontAwesome Free ` +
+      `(${sheets.length} sheets, ${fonts.length} webfonts)`,
+  );
 }
 
 // Generate the built-in sprite + animation images the preview loads as

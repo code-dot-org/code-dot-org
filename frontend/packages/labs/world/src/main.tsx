@@ -27,11 +27,15 @@ import {
 } from '@code-dot-org/core/api';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {RootStateProvider} from '@code-dot-org/core/redux';
-import {injectFontAwesome} from '@code-dot-org/fonts';
+import {
+  injectFontAwesome,
+  setFontAwesomeStylesheets,
+} from '@code-dot-org/fonts';
 import {LabHost} from '@code-dot-org/lab/host';
 
 import App from './App';
 import {mountBootBadge} from './demoBootBadge';
+import {freeIconShimCss, reportMissingIcons} from './freeIconShims';
 import {
   getSandboxUrl,
   setAssetBaseUrl,
@@ -40,6 +44,33 @@ import {
 } from './runtime/worldConfig';
 
 initializeCore({plugins: [localizationPlugin]});
+
+// Icons: the design system's FontAwesome Pro from `dsco.code.org`, or this
+// build's own copy of the Free distribution (`WORLD_DEMO_ICONS=free`).
+//
+// The CDN is right for a code.org origin and useless anywhere else: it answers
+// CORS for code.org hosts only, and a webfont is ALWAYS a CORS request, so a
+// deployment elsewhere loads the stylesheets, applies them, and draws every
+// icon as an empty box. The Free copy is same-origin, so nothing can refuse it.
+//
+// Set before rendering, and as the source rather than an argument, because
+// `<Lab>` injects on mount too (labs/base) and would otherwise pull the CDN's
+// copy alongside this one.
+if (import.meta.env.VITE_WORLD_ICONS === 'free') {
+  const base = `${import.meta.env.BASE_URL}vendor/fontawesome/css/`;
+  setFontAwesomeStylesheets([
+    `${base}fontawesome.min.css`,
+    `${base}solid.min.css`,
+    `${base}regular.min.css`,
+    `${base}brands.min.css`,
+    `${base}v4-shims.min.css`,
+  ]);
+  // What Free does not draw, drawn as something (src/freeIconShims.ts). Last in
+  // the head, so it wins over the sheets it patches.
+  const shims = document.createElement('style');
+  shims.textContent = freeIconShimCss();
+  document.head.appendChild(shims);
+}
 injectFontAwesome();
 
 /** A base URL a relative path can be resolved against, which needs the slash. */
@@ -178,4 +209,17 @@ if (rootElement) {
   // Demo-only: show the real boot time on-page so it can be read with DevTools
   // closed (see demoBootBadge for why that matters).
   mountBootBadge();
+
+  // Icons Free cannot draw are silent — the element renders, sized and empty —
+  // so the build that uses Free says so instead. Watching rather than sampling:
+  // most of this lab's icons live in menus and dialogs that do not exist until
+  // they are opened, and a single pass at startup would miss every one.
+  if (import.meta.env.VITE_WORLD_ICONS === 'free') {
+    const look = () => reportMissingIcons();
+    setTimeout(look, 2_000);
+    new MutationObserver(look).observe(rootElement, {
+      childList: true,
+      subtree: true,
+    });
+  }
 }

@@ -72,8 +72,17 @@ export default defineConfig(({command, mode}) => {
   // of them.
   const base = process.env.WORLD_DEMO_BASE ?? '/';
 
+  // Which icon set this build carries. One knob for both halves of the job:
+  // `yarn setup:world` copies FontAwesome Free into `public/vendor/` when it is
+  // `free`, and the app points at that copy when it reads the same value here.
+  // Two variables for one decision would let them disagree.
+  const icons = process.env.WORLD_DEMO_ICONS ?? '';
+
   return {
     base,
+    define: {
+      'import.meta.env.VITE_WORLD_ICONS': JSON.stringify(icons),
+    },
     plugins: isDemo
       ? [react()]
       : [

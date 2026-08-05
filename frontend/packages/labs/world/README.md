@@ -145,12 +145,13 @@ the MSW mock answers the API and the project lives in `sessionStorage`, so the
 whole thing is a directory anyone can serve. (`yarn build` is the LIBRARY build
 the studio host consumes — different artifact, no HTML.)
 
-Two knobs, both read at build time:
+Three knobs, all read at build time:
 
 |                      |                                                                    |
 | -------------------- | ------------------------------------------------------------------ |
 | `VITE_WORLD_SANDBOX` | where the sandbox is served from: a URL, or `same-origin`          |
 | `WORLD_DEMO_BASE`    | the path the build is served from, if not `/` (e.g. `/world-lab/`) |
+| `WORLD_DEMO_ICONS`   | `free` to carry FontAwesome Free rather than load Pro from the CDN |
 
 Serve `dist-demo/` at exactly the base it was built for. Everything the app
 addresses absolutely hangs off it — both service workers, `vendor/`,
@@ -172,7 +173,8 @@ further and gives each project its own sandbox subdomain.
 ### One origin (GitHub Pages)
 
 `yarn build:pages` builds for `https://<name>.github.io/world-lab/` — that is
-`WORLD_DEMO_BASE=/world-lab/` plus `VITE_WORLD_SANDBOX=same-origin`. It exists
+`WORLD_DEMO_BASE=/world-lab/`, `WORLD_DEMO_ICONS=free`, and
+`VITE_WORLD_SANDBOX=same-origin`. It exists
 because Pages hands out an origin per ACCOUNT, not per repository: two repos are
 two paths on one origin, and a second origin means a second org (`org.github.io`
 is a root of its own) or a custom domain per site.
@@ -214,10 +216,40 @@ Serving requirements, learned by getting them wrong:
 `phaser.esm.js` (8.8) — inside the 1GB Pages site limit and the 100MB per-file
 limit, but Pages will not compress the wasm.
 
-A deployed build still fetches two things from elsewhere: the design system's
-FontAwesome from `dsco.code.org`, and Blockly's media (trashcan and zoom
-sprites, click sounds) from `static.blockly.com`. Both are HTTPS, so neither is
-mixed content — they simply need those hosts to be reachable.
+### Icons
+
+The design system loads FontAwesome **Pro** from `dsco.code.org`, and that CDN
+answers CORS for code.org origins only:
+
+    Origin: https://studio.code.org   →  Access-Control-Allow-Origin: https://studio.code.org
+    Origin: https://wilkie.github.io  →  (no header)
+
+A webfont is always a CORS request, with no way to opt out, so a demo deployed
+anywhere else loads the eight stylesheets, applies them, and draws every icon as
+an empty box — correctly sized, and blank. `WORLD_DEMO_ICONS=free` carries
+FontAwesome **Free** instead: `yarn setup:world` copies it out of the workspace
+(`labs/base` already depends on it) into `public/vendor/fontawesome/`, 408KB of
+five sheets and four woff2 files, and the app points at that copy. Same-origin,
+so nothing can refuse it. The licence travels with the files — CC BY 4.0 for the
+icons, SIL OFL for the fonts.
+
+Free is a smaller set than Pro, and a name it does not know draws NOTHING: no
+error, no fallback glyph. Two of this lab's icons are Pro-only, and
+`src/freeIconShims.ts` maps them to Free glyphs that mean the same thing
+(FontAwesome 7 makes that a one-line custom-property override). The rest of that
+file is how the next one gets found: a build using Free watches the DOM and
+names, in the console, any icon nothing drew —
+
+    World Lab: FontAwesome Free has no glyph for fa-… — add a substitute to
+    src/freeIconShims.ts
+
+which is a line to add to the map rather than a gap to notice. It watches rather
+than samples because most icons here live in menus and dialogs that do not exist
+until they are opened.
+
+Blockly's own media (trashcan and zoom sprites, click sounds) still comes from
+`static.blockly.com`. It is HTTPS and needs no CORS, so it works — it is simply
+the last thing a deployed demo fetches from anywhere else.
 
 ## Scripts
 
