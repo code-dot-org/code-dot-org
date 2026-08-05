@@ -655,6 +655,7 @@ export default function ReactFlowCanvas({
       pushSnapshot,
       lastFocusedEntry,
       onLineKeyboardMove: setKeyboardMovingLineId,
+      multiSelectedNodeIds,
       isGroupMode,
       canGroup: groupableCount >= 2,
       canEnterGroupMode: totalGroupableCount >= 2,

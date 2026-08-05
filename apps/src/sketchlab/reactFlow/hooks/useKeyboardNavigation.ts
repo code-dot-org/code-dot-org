@@ -61,6 +61,32 @@ function moveNodesByDelta(
 }
 
 /**
+ * Ids the arrow keys should translate for a whole-selection move, in node
+ * order. Empty when the selection isn't worth treating as a multi-element
+ * move, which leaves the caller on its single-element path.
+ *
+ * Locked nodes and grouped children are dropped: either can be locked or
+ * grouped after the selection was made, and neither may move.
+ */
+export function getSelectionMoveIds(
+  selectedIds: ReadonlySet<string>,
+  nodes: SketchlabReactFlowNode[]
+): string[] {
+  const movable = nodes.filter(
+    node =>
+      selectedIds.has(node.id) &&
+      !node.data?.locked &&
+      !isGroupedChildNode(node)
+  );
+  // A standalone line is two lineAnchor nodes but one element, so a lone
+  // selected line is not a multi-element selection.
+  const anchorCount = movable.filter(node => node.type === 'lineAnchor').length;
+  const logicalCount =
+    movable.length - anchorCount + Math.floor(anchorCount / 2);
+  return logicalCount >= 2 ? movable.map(node => node.id) : [];
+}
+
+/**
  * Resize a single node by adding `deltaWidth` and `deltaHeight` to its
  * dimensions, each clamped to the minimum node dimensions independently.
  */
@@ -124,6 +150,9 @@ interface UseKeyboardNavigationOptions {
   // Called with the anchor id or edge id when a line/line anchor is
   // translated by an arrow key.
   onLineKeyboardMove: (elementId: string) => void;
+  // Shift+click / drag-select selection. Arrow keys translate all of it when
+  // the focused element is a member.
+  multiSelectedNodeIds: ReadonlySet<string>;
   isGroupMode: boolean;
   canGroup: boolean;
   canEnterGroupMode: boolean;
@@ -176,6 +205,7 @@ export function useKeyboardNavigation({
   pushSnapshot,
   lastFocusedEntry,
   onLineKeyboardMove,
+  multiSelectedNodeIds,
   isGroupMode,
   canGroup,
   canEnterGroupMode,
@@ -455,6 +485,28 @@ export function useKeyboardNavigation({
     [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
   );
 
+  // Translates every element in the multi-selection by one step. Endpoint
+  // snapping is deliberately skipped here: a selection moves as a rigid body,
+  // so a line inside it shouldn't reattach to whatever it passes over.
+  const moveSelectionByDelta = useCallback(
+    (event: React.KeyboardEvent, deltaX: number, deltaY: number): boolean => {
+      const idsToMove = getSelectionMoveIds(multiSelectedNodeIds, nodes);
+      if (idsToMove.length === 0) return false;
+      event.preventDefault();
+      event.stopPropagation();
+      // Snapshot and announce once per press, not once per auto-repeat tick.
+      if (!event.repeat) {
+        pushSnapshot();
+        announce('Selection moved.');
+      }
+      setNodes(currentNodes =>
+        moveNodesByDelta(currentNodes, idsToMove, deltaX, deltaY)
+      );
+      return true;
+    },
+    [multiSelectedNodeIds, nodes, pushSnapshot, setNodes, announce]
+  );
+
   const handleMoveNode = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
@@ -465,6 +517,12 @@ export function useKeyboardNavigation({
       if (focusedNode && isGroupedChildNode(focusedNode)) {
         event.preventDefault();
         event.stopPropagation();
+        return true;
+      }
+      if (
+        multiSelectedNodeIds.has(focusedNodeId) &&
+        moveSelectionByDelta(event, deltaX, deltaY)
+      ) {
         return true;
       }
       event.preventDefault();
@@ -487,6 +545,8 @@ export function useKeyboardNavigation({
       setNodes,
       snapAnchorIfNearHandle,
       onLineKeyboardMove,
+      multiSelectedNodeIds,
+      moveSelectionByDelta,
     ]
   );
 
@@ -603,6 +663,20 @@ export function useKeyboardNavigation({
       if (!focusedEdgeId) return false;
       const {deltaX, deltaY} = getArrowDelta(event.key);
       if (!deltaX && !deltaY) return false;
+
+      // Focus sits on a line that belongs to the multi-selection: move the
+      // whole selection rather than just this line.
+      const focusedEdge = getEdge(focusedEdgeId);
+      const anchorIds = focusedEdge
+        ? getStandaloneLineAnchorIds(focusedEdge, getNode)
+        : null;
+      if (
+        anchorIds?.every(id => multiSelectedNodeIds.has(id)) &&
+        moveSelectionByDelta(event, deltaX, deltaY)
+      ) {
+        return true;
+      }
+
       if (!moveEdgeByDelta(focusedEdgeId, deltaX, deltaY)) return false;
       if (!event.repeat) pushSnapshot();
       onLineKeyboardMove(focusedEdgeId);
@@ -610,7 +684,15 @@ export function useKeyboardNavigation({
       event.stopPropagation();
       return true;
     },
-    [pushSnapshot, moveEdgeByDelta, onLineKeyboardMove]
+    [
+      pushSnapshot,
+      moveEdgeByDelta,
+      onLineKeyboardMove,
+      getEdge,
+      getNode,
+      multiSelectedNodeIds,
+      moveSelectionByDelta,
+    ]
   );
 
   /**
