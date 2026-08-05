@@ -3959,8 +3959,6 @@ __metadata:
       optional: true
     "@statsig/web-analytics":
       optional: true
-    js-cookie:
-      optional: true
     msw:
       optional: true
     query-string:

@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 declare global {
   interface Window {
     /** Rendered by the Rails page; absent on shells that omit the user header. */
@@ -11,16 +13,6 @@ const COOKIE_PREFIX = '_experiments';
 interface StoredExperiment {
   key?: string;
   expiration?: number;
-}
-
-function readCookie(name: string): string | undefined {
-  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
-  if (!match) return undefined;
-  try {
-    return decodeURIComponent(match[1]);
-  } catch {
-    return undefined;
-  }
 }
 
 /** Experiments enabled in this browser, dropping any whose expiry has passed. */
@@ -50,7 +42,7 @@ function localStorageExperiments(): string[] {
  */
 function cookieExperiments(): string[] {
   const suffix = window.cookieEnvSuffix ?? '';
-  const raw = readCookie(`${COOKIE_PREFIX}${suffix}`);
+  const raw = Cookies.get(`${COOKIE_PREFIX}${suffix}`);
   if (!raw) return [];
   try {
     return JSON.parse(raw) as string[];
