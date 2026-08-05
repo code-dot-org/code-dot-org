@@ -177,6 +177,74 @@ const liveDropdownFields = new Map<string, string>();
 export const liveDropdownFieldNames = (): ReadonlyMap<string, string> =>
   liveDropdownFields;
 
+/**
+ * Point one dropdown field at a live option list — its menu AND its label.
+ *
+ * Blockly keeps the two apart, and both need saying:
+ *
+ *   - the MENU comes from `menuGenerator_`, which a dynamic dropdown calls with
+ *     no arguments. Passing the field is how a list can depend on where the
+ *     block is: the actors a world defines for itself are reached through the
+ *     field's own workspace (blockly/localActors).
+ *   - the LABEL is `selectedOption`, which `doValueUpdate_` resolves against
+ *     `getOptions(true)` — the CACHED list — and, on a miss, leaves exactly as
+ *     it was. For a live list that cache is a lie: it is generated when the
+ *     block is built, which during a load is before the rest of the file
+ *     exists. A `create ⟨actor⟩ in map` naming a `define actor` further down
+ *     the file therefore held the right value and drew the wrong name — the
+ *     first actor in the list, because that is what the block was defaulted to
+ *     a moment earlier. The value was right, so the game ran with the right
+ *     actor and the menu opened on the right row (it regenerates); only the
+ *     label anyone reads was wrong.
+ *
+ * So the cache is refused, and the label is looked up when it is drawn. A value
+ * with no option to explain it keeps the name it had, which is the same bargain
+ * the validator makes — and the validator belongs here for the same reason, as
+ * a dropdown that refuses what its own list has not caught up with is exactly
+ * what a live list cannot afford.
+ */
+export function bindLiveOptions(
+  field: Blockly.FieldDropdown,
+  options: (field?: Blockly.FieldDropdown) => Array<[string, string]>,
+): void {
+  const dropdown = field as unknown as {
+    menuGenerator_: () => Array<[string, string]>;
+    getOptions: (useCache?: boolean) => Array<[string, string]>;
+    getText_: () => string | null;
+    doClassValidation_?: (value?: string) => string | null;
+  };
+  const staleLabel = dropdown.getText_.bind(field);
+  const validate = dropdown.doClassValidation_?.bind(field);
+
+  dropdown.menuGenerator_ = () => options(field);
+  dropdown.getOptions = () => options(field);
+  dropdown.getText_ = () => {
+    const value = field.getValue();
+    const chosen = options(field).find(([, option]) => option === value);
+    return chosen ? String(chosen[0]) : staleLabel();
+  };
+
+  // A dropdown normally refuses a value that is not one of its options, and
+  // that is wrong for a LIVE one: the options are the project as the editor
+  // currently understands it, and a saved workspace can name something the
+  // editor has not caught up with. An uploaded spritesheet is the case that
+  // bites — its cells are only known once the image has decoded, so a block
+  // holding `strip.png#3` was quietly reset to the first picture in the list on
+  // every reload, and then saved that way.
+  //
+  // So an unknown value is kept, and shows as itself until the option that
+  // explains it arrives. A value naming something genuinely gone stays visible
+  // too, which is the same bargain the renames make: a block that says what it
+  // means and is wrong beats one silently changed.
+  dropdown.doClassValidation_ = (value?: string) => {
+    if (typeof value !== 'string') {
+      return validate ? (validate(value) ?? null) : null;
+    }
+    const known = options(field).some(([, option]) => option === value);
+    return known && validate ? (validate(value) ?? value) : value;
+  };
+}
+
 /** An extension that points `fieldName`'s dropdown at a live options function. */
 export function liveDropdown(
   extensionName: string,
@@ -193,38 +261,7 @@ export function liveDropdown(
       if (!field) {
         return;
       }
-      // @ts-expect-error protected — reflect the live project registry, not the
-      // static fallback baked in at block definition.
-      field.menuGenerator_ = () => options(field);
-
-      // A dropdown normally refuses a value that is not one of its options, and
-      // that is wrong for a LIVE one: the options are the project as the editor
-      // currently understands it, and a saved workspace can name something the
-      // editor has not caught up with. An uploaded spritesheet is the case that
-      // bites — its cells are only known once the image has decoded, so a block
-      // holding `strip.png#3` was quietly reset to the first picture in the list
-      // on every reload, and then saved that way.
-      //
-      // So an unknown value is kept, and shows as itself until the option that
-      // explains it arrives. A value naming something genuinely gone stays
-      // visible too, which is the same bargain the renames make: a block that
-      // says what it means and is wrong beats one silently changed.
-      const validate = (
-        field as unknown as {
-          doClassValidation_?: (value?: string) => string | null;
-        }
-      ).doClassValidation_?.bind(field);
-      (
-        field as unknown as {
-          doClassValidation_: (value?: string) => string | null;
-        }
-      ).doClassValidation_ = (value?: string) => {
-        if (typeof value !== 'string') {
-          return validate ? (validate(value) ?? null) : null;
-        }
-        const known = options(field).some(([, option]) => option === value);
-        return known && validate ? (validate(value) ?? value) : value;
-      };
+      bindLiveOptions(field, options);
 
       // A fresh block still holds the static "(none)" fallback; if that isn't
       // one the live registry offers, default to the first real option so the

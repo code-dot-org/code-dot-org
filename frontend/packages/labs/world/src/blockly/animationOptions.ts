@@ -14,6 +14,7 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {IMPORT_ANIMATION_VALUE} from '../appearance/appearanceImport';
 
 import {label} from './label';
+import {bindLiveOptions} from './moduleOptions';
 
 let projectAnimations: string[] = [];
 
@@ -42,9 +43,12 @@ export const animationOptionsExtension: Extension = defineExtension(
       if (!field) {
         return;
       }
-      // @ts-expect-error protected — point the menu at the live registry so the
-      // dropdown reflects the project's animations, not the static fallback.
-      field.menuGenerator_ = () => animationOptions();
+      // Point the menu at the live registry so the dropdown reflects the
+      // project's animations, not the static fallback — and the label too:
+      // Blockly resolves that against a cached list and leaves it alone on a
+      // miss, so a block loaded before its animation was registered kept
+      // whatever name it had (blockly/moduleOptions).
+      bindLiveOptions(field, animationOptions);
     },
   },
 );
