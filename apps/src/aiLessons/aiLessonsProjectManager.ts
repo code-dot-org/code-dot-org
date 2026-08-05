@@ -1,7 +1,14 @@
 // Minimal ProjectManager that intercepts `save()` calls from lab2 views
 // (codebridge's setAndSaveProjectSources thunk for Weblab2, and MusicView's
 // saveCode for Music) and persists the project sources to our AI Lessons
-// backend under `dashboard/tmp/ai_lessons/sources/<lessonId>/<labType>.json`.
+// backend under
+// `dashboard/tmp/ai_lessons/sources/<lessonId>/<userId>/<scope>.json`
+// (the server derives the user from the session).
+//
+// A "scope" names one saved source within a lesson: the lab type
+// ("weblab2", "music") for the lesson-wide project that carries across
+// steps, or "sandbox-<segmentOrStepId>" for a skill-practice step that
+// must not touch the student's project.
 //
 // Also dispatches into our private `aiLessonsSources` slice on every save
 // so useStudentWork can feed the latest Blockly/web source to the AI Tutor.
@@ -15,28 +22,62 @@
 // setLastSource() — and returns Response shapes shaped enough to satisfy
 // the lab2 code paths that look at them.
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {setSavedSource} from './aiLessonsSourcesRedux';
+import {LabStep} from './types';
 
 const SAVE_DEBOUNCE_MS = 750;
 
+// The storage scope a lab step reads and writes.  Sandboxed steps share
+// one throwaway source per segment (so a multi-step skill practice keeps
+// its state) or get their own when unsegmented.
+export function sourceScopeFor(step: LabStep): string {
+  if (step.sourceMode === 'sandbox') {
+    return `sandbox-${step.segment?.id || step.id}`;
+  }
+  return step.labType;
+}
+
+// Builds lab2 ProjectSources from a plain filename -> contents map (the
+// authored `starterFiles` shape, and what the build partner generates).
+// The first file is active/open.
+export function projectSourcesFromFiles(files: {
+  [filename: string]: string;
+}): ProjectSources {
+  const names = Object.keys(files);
+  const source: MultiFileSource = {
+    folders: {},
+    files: {},
+    openFiles: names.length > 0 ? ['1'] : [],
+  };
+  names.forEach((name, i) => {
+    const id = String(i + 1);
+    source.files[id] = {
+      id,
+      name,
+      contents: files[name],
+      active: i === 0,
+      folderId: '0',
+    };
+  });
+  return {source};
+}
+
 export class AiLessonsProjectManager {
   private readonly url: string;
-  private readonly labType: string;
+  private readonly scope: string;
   private lastSource: ProjectSources | undefined;
   private pending: ProjectSources | undefined;
   private timer: ReturnType<typeof setTimeout> | undefined;
   private inFlight: Promise<void> | undefined;
   private destroyed = false;
 
-  constructor(lessonId: string, labType: string) {
-    this.labType = labType;
-    this.url = `/ai_lessons/${encodeURIComponent(
-      lessonId
-    )}/sources/${encodeURIComponent(labType)}`;
+  constructor(lessonId: string, scope: string) {
+    this.scope = scope;
+    this.url = sourcesUrl(lessonId, scope);
   }
 
   // Lab2 callers expect a Promise<Response>.  We resolve to an empty 204 on
@@ -48,7 +89,7 @@ export class AiLessonsProjectManager {
     // Push into our private slice so useStudentWork sees the latest
     // source without going through lab2Project (which Music watches and
     // would reload-loop on).
-    getStore().dispatch(setSavedSource({labType: this.labType, sources}));
+    getStore().dispatch(setSavedSource({labType: this.scope, sources}));
     if (forceSave) {
       return this.flush();
     }
@@ -115,19 +156,38 @@ export class AiLessonsProjectManager {
   }
 }
 
-// Fetches the saved project sources for a (lessonId, labType) pair, or
+function sourcesUrl(lessonId: string, scope: string): string {
+  return `/ai_lessons/${encodeURIComponent(
+    lessonId
+  )}/sources/${encodeURIComponent(scope)}`;
+}
+
+// Fetches the saved project sources for a (lessonId, scope) pair, or
 // undefined if nothing has been saved yet.
 export async function loadSavedSources(
   lessonId: string,
-  labType: string
+  scope: string
 ): Promise<ProjectSources | undefined> {
-  const url = `/ai_lessons/${encodeURIComponent(
-    lessonId
-  )}/sources/${encodeURIComponent(labType)}`;
   try {
-    const response = await HttpClient.get(url);
+    const response = await HttpClient.get(sourcesUrl(lessonId, scope));
     return (await response.json()) as ProjectSources;
   } catch {
     return undefined;
   }
+}
+
+// Writes sources directly (outside the debounced ProjectManager path).
+// Used to persist AI-generated starters and build-partner output before
+// the lab mounts/remounts on them.
+export async function saveSources(
+  lessonId: string,
+  scope: string,
+  sources: ProjectSources
+): Promise<void> {
+  await HttpClient.put(
+    sourcesUrl(lessonId, scope),
+    JSON.stringify(sources),
+    true,
+    {'Content-Type': 'application/json'}
+  );
 }

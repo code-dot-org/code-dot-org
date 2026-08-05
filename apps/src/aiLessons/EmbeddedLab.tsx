@@ -13,7 +13,7 @@
 // toolbox.
 
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import React, {Suspense, useEffect, useMemo, useState} from 'react';
+import React, {Suspense, useEffect, useMemo, useRef, useState} from 'react';
 
 import {onLevelChange, setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -29,8 +29,13 @@ import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
 import {
   AiLessonsProjectManager,
   loadSavedSources,
+  projectSourcesFromFiles,
+  saveSources,
+  sourceScopeFor,
 } from './aiLessonsProjectManager';
-import {LabStep, PanelsStep, ProjectLabType, Step} from './types';
+import {generateProjectFiles} from './buildPartner';
+import {StudentInputs} from './studentInputs';
+import {LabStep, LessonPlan, PanelsStep, ProjectLabType, Step} from './types';
 
 import styles from './aiLessons.module.scss';
 
@@ -66,11 +71,14 @@ function applyLabTheme(
 
 interface EmbeddedLabProps {
   step: Step;
-  // The lesson this step belongs to.  Used as the storage scope for
-  // saved project sources — all lab steps in the same lesson that target
+  // The lesson this step belongs to.  Its id scopes saved project
+  // sources — all non-sandbox lab steps in the same lesson that target
   // the same lab type share one project, so the student's code carries
-  // across steps.
+  // across steps.  The full plan and the student's recorded answers
+  // feed starter-code generation on first arrival.
+  lesson: LessonPlan;
   lessonId: string;
+  inputs: StudentInputs;
   // Called when an in-app navigation action signals the student has
   // finished the main-area portion of the step — currently the Continue
   // button on the last panel of a panels step.
@@ -207,6 +215,7 @@ const PanelsCheckpointLab: React.FC<{
 function useLabSetup(
   lessonId: string,
   labType: ProjectLabType,
+  scope: string,
   checkpoint: LabStep,
   appName: AppName,
   levelProperties: LabProps['levelProperties'],
@@ -234,9 +243,9 @@ function useLabSetup(
 
     // Build a custom ProjectManager so lab2 view saves (Weblab2's
     // setAndSaveProjectSources thunk, MusicView's saveCode) persist to
-    // our per-(lesson, labType) source storage.  All checkpoints sharing
-    // a lab type within a lesson write to the same file.
-    const m = new AiLessonsProjectManager(lessonId, labType);
+    // our per-(lesson, scope) source storage.  Steps sharing a scope
+    // (the lesson project, or one sandbox segment) write to one file.
+    const m = new AiLessonsProjectManager(lessonId, scope);
     if (initialSources) {
       m.setLastSource(initialSources);
     }
@@ -262,6 +271,7 @@ function useLabSetup(
     dispatch,
     lessonId,
     labType,
+    scope,
     checkpoint,
     appName,
     levelProperties,
@@ -275,6 +285,7 @@ function useLabSetup(
 const Lab2MountedView: React.FC<{
   lessonId: string;
   labType: ProjectLabType;
+  scope: string;
   checkpoint: LabStep;
   appName: AppName;
   view: React.LazyExoticComponent<React.ComponentType<LabProps>>;
@@ -284,6 +295,7 @@ const Lab2MountedView: React.FC<{
 }> = ({
   lessonId,
   labType,
+  scope,
   checkpoint,
   appName,
   view: LabView,
@@ -294,6 +306,7 @@ const Lab2MountedView: React.FC<{
   const projectManager = useLabSetup(
     lessonId,
     labType,
+    scope,
     checkpoint,
     appName,
     levelProperties,
@@ -348,21 +361,38 @@ const MUSIC_START_SOURCES = {
 
 const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   step,
+  lesson,
   lessonId,
+  inputs,
   onLabComplete,
   onRun,
 }) => {
   const labType = step.kind === 'lab' ? step.labType : undefined;
-  const id = synthesizeLevelId(lessonId, labType || step.kind);
+  // One saved source per scope: the lab type for the shared project,
+  // or a sandbox slug for isolated skill practice.  Level id + channel
+  // follow the scope so lab2 treats each sandbox as its own workspace.
+  const scope = step.kind === 'lab' ? sourceScopeFor(step) : step.kind;
+  const id = synthesizeLevelId(lessonId, scope);
 
-  // Sources start undefined until we either confirm there's nothing saved
-  // on the server or get back what was previously saved.  We re-fetch
-  // whenever the lab type changes (panels → weblab2 → music, etc.) so
-  // each lab type gets its own carry-over.
+  // Sources start undefined until first-arrival resolution finishes:
+  // saved source wins, then authored starterFiles, then an AI-generated
+  // starter (persisted so it happens once per student), then the lab
+  // default.  `generating` distinguishes the slow AI path in the UI.
   const [savedSources, setSavedSources] = useState<ProjectSources | undefined>(
     undefined
   );
   const [sourcesLoading, setSourcesLoading] = useState<boolean>(true);
+  const [generating, setGenerating] = useState<boolean>(false);
+
+  // Read through refs at generation time: answers recorded while a lab
+  // step is mounted (e.g. build-partner prompts) must not refire this
+  // effect and clobber the live editor.
+  const lessonRef = useRef(lesson);
+  lessonRef.current = lesson;
+  const inputsRef = useRef(inputs);
+  inputsRef.current = inputs;
+  const stepRef = useRef(step);
+  stepRef.current = step;
 
   useEffect(() => {
     let cancelled = false;
@@ -375,15 +405,46 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
         }
         return;
       }
-      const loaded = await loadSavedSources(lessonId, labType);
+      const currentStep = stepRef.current as LabStep;
+      let resolved = await loadSavedSources(lessonId, scope);
       if (cancelled) return;
-      setSavedSources(loaded);
+
+      if (!resolved && currentStep.starterFiles) {
+        resolved = projectSourcesFromFiles(currentStep.starterFiles);
+      } else if (
+        !resolved &&
+        currentStep.starterPrompt &&
+        labType === 'weblab2'
+      ) {
+        setGenerating(true);
+        try {
+          const built = await generateProjectFiles({
+            lesson: lessonRef.current,
+            step: currentStep,
+            prompt: currentStep.starterPrompt,
+            inputs: inputsRef.current,
+          });
+          resolved = built.sources;
+          // Persist so generation happens once per student; a failure
+          // here just means we regenerate next visit.
+          await saveSources(lessonId, scope, built.sources).catch(e =>
+            console.warn('Failed to persist generated starter', e)
+          );
+        } catch (e) {
+          // Fall through to the lab default rather than dead-ending.
+          console.warn('Starter generation failed', e);
+        }
+        if (cancelled) return;
+        setGenerating(false);
+      }
+
+      setSavedSources(resolved);
       setSourcesLoading(false);
     })();
     return () => {
       cancelled = true;
     };
-  }, [lessonId, labType]);
+  }, [lessonId, scope, labType]);
 
   // IMPORTANT: memoize levelProperties + initialSources so their object
   // identity doesn't change every render.  Without this, `useLabSetup`'s
@@ -394,7 +455,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     if (labType === 'weblab2') {
       return {
         id,
-        name: `ai-lesson-${lessonId}-weblab2`,
+        name: `ai-lesson-${lessonId}-${scope}`,
         appName: 'weblab2' as AppName,
         isProjectLevel: true,
         usesProjects: true,
@@ -403,7 +464,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     if (labType === 'music') {
       return {
         id,
-        name: `ai-lesson-${lessonId}-music`,
+        name: `ai-lesson-${lessonId}-${scope}`,
         appName: 'music' as AppName,
         isProjectLevel: true,
         usesProjects: true,
@@ -414,7 +475,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       };
     }
     return undefined;
-  }, [labType, id, lessonId]);
+  }, [labType, id, lessonId, scope]);
 
   // Prefer the server's saved sources if present; otherwise fall back to
   // the lab-type-specific defaults for first-time mount.
@@ -445,7 +506,13 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
   }
 
   if (sourcesLoading) {
-    return <div className={styles.labMessage}>Loading your project…</div>;
+    return (
+      <div className={styles.labMessage}>
+        {generating
+          ? 'Building your starter site from your answers…'
+          : 'Loading your project…'}
+      </div>
+    );
   }
 
   if (labType === 'weblab2' && levelProperties) {
@@ -453,6 +520,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       <Lab2MountedView
         lessonId={lessonId}
         labType="weblab2"
+        scope={scope}
         checkpoint={step}
         appName="weblab2"
         view={Weblab2EntryPoint.view}
@@ -468,6 +536,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       <Lab2MountedView
         lessonId={lessonId}
         labType="music"
+        scope={scope}
         checkpoint={step}
         appName="music"
         view={MusicEntryPoint.view}

@@ -25,6 +25,7 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
+import BuildPartnerPanel from './BuildPartnerPanel';
 import EmbeddedLab from './EmbeddedLab';
 import {deterministicResolver, NavDecision} from './navigation';
 import QuestionFlow from './QuestionFlow';
@@ -156,6 +157,10 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // opening on every answer).
   const [inputs, setInputs] = useState<StudentInputs>({});
   const inputsRef = useRef<StudentInputs>({});
+  // Bumped when the AI build partner rewrites the current step's saved
+  // source; part of the EmbeddedLab key, so the lab remounts and loads
+  // the new source through the normal path.
+  const [sourcesEpoch, setSourcesEpoch] = useState(0);
   // `evaluating` is a sub-state of `busy`: true when the tutor is actively
   // grading the student's work (auto-check on run, or Check-my-work click).
   // Lets us show "Evaluating…" instead of the general "Tutor is thinking…".
@@ -572,6 +577,19 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           {error && <div className={styles.error}>{error}</div>}
         </div>
 
+        {step.kind === 'lab' &&
+          step.aiPrompting &&
+          step.aiPrompting !== 'off' && (
+            <BuildPartnerPanel
+              key={step.id}
+              lesson={lesson}
+              step={step}
+              inputs={inputs}
+              onRecordPrompt={handleAnswer}
+              onSourcesApplied={() => setSourcesEpoch(e => e + 1)}
+            />
+          )}
+
         {step.kind === 'lab' && (
           <div className={styles.composer}>
             <UserMessageEditor
@@ -648,9 +666,11 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           />
         ) : (
           <EmbeddedLab
-            key={`${lesson.id || 'unsaved'}-${step.id}`}
+            key={`${lesson.id || 'unsaved'}-${step.id}-${sourcesEpoch}`}
             step={step}
+            lesson={lesson}
             lessonId={lesson.id || ''}
+            inputs={inputs}
             onLabComplete={() => completeStep()}
             onRun={handleLabRun}
           />

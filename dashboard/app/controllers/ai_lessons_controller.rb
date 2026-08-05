@@ -117,26 +117,29 @@ class AiLessonsController < ApplicationController
     head :bad_request
   end
 
-  # Returns the saved project source for a (lesson, lab_type) pair, or 404
-  # if no save has happened yet.  Sources are stored as JSON so the client
-  # can pass them straight to the lab2 view as `initialSources`.
+  # Returns the current user's saved project source for a (lesson, scope)
+  # pair, or 404 if no save has happened yet.  A scope is either a lab
+  # type ("weblab2", "music") for the lesson-wide project, or a sandbox
+  # slug ("sandbox-html-tags") for an isolated skill-practice source.
+  # Sources are stored as JSON so the client can pass them straight to
+  # the lab2 view as `initialSources`.
   def read_sources
     return head :not_found unless load_lesson_json(params[:id])
-    path = sources_path(params[:id], params[:lab_type])
+    path = sources_path(params[:id], current_user.id, params[:scope])
     return head :not_found unless File.exist?(path)
     render json: JSON.parse(File.read(path))
   rescue ArgumentError, JSON::ParserError
     head :bad_request
   end
 
-  # Stores the current project source for a (lesson, lab_type) pair.  The
-  # whole JSON request body is treated as the new ProjectSources blob; the
-  # client controls the schema.
+  # Stores the current user's project source for a (lesson, scope) pair.
+  # The whole JSON request body is treated as the new ProjectSources blob;
+  # the client controls the schema.
   def write_sources
     return head :not_found unless load_lesson_json(params[:id])
     raw = request.raw_post
     parsed = JSON.parse(raw)
-    path = sources_path(params[:id], params[:lab_type])
+    path = sources_path(params[:id], current_user.id, params[:scope])
     FileUtils.mkdir_p(File.dirname(path))
     File.write(path, JSON.pretty_generate(parsed))
     head :no_content
@@ -328,10 +331,14 @@ class AiLessonsController < ApplicationController
     filename.is_a?(String) && filename.match?(/\A[a-f0-9]{1,64}\.(png|jpg|jpeg|gif|webp)\z/)
   end
 
-  private def sources_path(id, lab_type)
+  # Per-user since sources became personalized (AI-generated starters);
+  # pre-existing per-lesson files at sources/<id>/<scope>.json are simply
+  # orphaned.
+  private def sources_path(id, user_id, scope)
     raise ArgumentError, "bad id" unless id.is_a?(String) && id.match?(/\A[a-z0-9_-]{1,64}\z/)
-    raise ArgumentError, "bad lab_type" unless lab_type.is_a?(String) && lab_type.match?(/\A[a-z0-9_]{1,32}\z/)
-    File.join(storage_dir, 'sources', id, "#{lab_type}.json")
+    raise ArgumentError, "bad user_id" unless user_id.is_a?(Integer) && user_id.positive?
+    raise ArgumentError, "bad scope" unless scope.is_a?(String) && scope.match?(/\A[a-z0-9_-]{1,80}\z/)
+    File.join(storage_dir, 'sources', id, user_id.to_s, "#{scope}.json")
   end
 
   private def progress_path(id, user_id)

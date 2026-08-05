@@ -1376,10 +1376,11 @@ Dashboard::Application.routes.draw do
     post '/ai_lessons/:id/images', to: 'ai_lessons#upload_image'
     get '/ai_lessons/:id/images/:filename', to: 'ai_lessons#image',
       constraints: {filename: /[a-zA-Z0-9_.-]+/}
-    get '/ai_lessons/:id/sources/:lab_type', to: 'ai_lessons#read_sources',
-      constraints: {lab_type: /[a-z0-9_]+/}
-    put '/ai_lessons/:id/sources/:lab_type', to: 'ai_lessons#write_sources',
-      constraints: {lab_type: /[a-z0-9_]+/}
+    # :scope is a lab type ("weblab2") or a sandbox slug ("sandbox-html-tags").
+    get '/ai_lessons/:id/sources/:scope', to: 'ai_lessons#read_sources',
+      constraints: {scope: /[a-z0-9_-]+/}
+    put '/ai_lessons/:id/sources/:scope', to: 'ai_lessons#write_sources',
+      constraints: {scope: /[a-z0-9_-]+/}
     get '/ai_lessons/:id/progress', to: 'ai_lessons#read_progress'
     put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
     get '/ai_lessons/:id/inputs', to: 'ai_lessons#read_inputs'

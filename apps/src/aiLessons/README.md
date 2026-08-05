@@ -121,10 +121,41 @@ starter-code generator and adaptive resolver.
 **Runtime support is intentionally behind the format** (walking-skeleton
 rule: every step kind renders, unsupported mechanics degrade politely):
 
+### The AI build partner and student sources
+
+`buildPartner.ts` turns a prompt into a complete Web Lab 2 project
+(whole files via structured output, personalised with the student's
+recorded answers).  One code path, two triggers:
+
+- **Starter generation**: a lab step's authored `starterPrompt` runs
+  once per student on first arrival — the interview answers become
+  *their* starter site.  The result is persisted through our sources
+  API, then the lab mounts on it like any saved source.  Authored
+  `starterFiles` (e.g. a sandbox with planted bugs) win over generation.
+- **Student prompting**: steps with `aiPrompting: 'presets' | 'free'`
+  show BuildPartnerPanel in the tutor sidebar.  A build saves the new
+  source and remounts the lab on it (an epoch in the EmbeddedLab key);
+  Undo restores the stashed pre-build source the same way.  Every
+  student prompt is recorded to the inputs store.
+
+Deliberately, none of this touches lab2's AI-version redux state
+(`setAiTutorVersionFiles` et al.) — that machinery is coupled to real
+channels, `/project_commits`, and the aichat pipeline.  The trade: no
+in-editor per-file diff affordances, and a build/undo resets editor UI
+state (open file, cursor) via the remount.
+
+Sources are per-user and per-**scope**: the lab type for the shared
+lesson project, or `sandbox-<segmentOrStepId>` for `sourceMode:
+'sandbox'` steps, so skill practice never dirties the student's project
+and a multi-step segment shares one throwaway workspace.
+
+**Runtime support still behind the format:**
+
 - `validation: 'tutor'` on individual questions is recorded but not yet
   judged — the answer is accepted like a survey answer.
-- Sandbox sources, starter code, AI prompting, and checklists are
-  format-only so far.
+- Checklists are format-only.
+- `starterPrompt` / `aiPrompting` are Web Lab 2 only; Music steps
+  ignore them.
 
 Two hand-authored exemplar lessons live in `dashboard/config/ai_lessons/`
 and are the fixtures development validates against:
@@ -168,11 +199,11 @@ They're validated (JSON shape, unique ids, resolvable branch targets) by
   custom `ProjectManager` so saves persist.
 - One-checkpoint-at-a-time. Auto-resumes one past the last completed
   checkpoint on reopen.
-- Source carry-over: all checkpoints in a lesson that target the same
-  lab type share a single project. Editing weblab2 in checkpoint 2 and
-  then returning in checkpoint 5 picks up exactly where you left off.
-  Sources are stored at
-  `dashboard/tmp/ai_lessons/sources/<lessonId>/<labType>.json`.
+- Source carry-over: all non-sandbox lab steps in a lesson that target
+  the same lab type share a single project. Editing weblab2 in step 2
+  and then returning in step 5 picks up exactly where you left off.
+  Sources are per-user, at
+  `dashboard/tmp/ai_lessons/sources/<lessonId>/<userId>/<scope>.json`.
 - Music's Blockly workspace JSON (not the executed playback events) is
   what the tutor sees when evaluating, so success criteria like "use a
   Repeat block" actually work.
@@ -287,17 +318,11 @@ PUT    /ai_lessons/:id/inputs                     # write this user's answers
   its inner panels when its container changes size — switching
   checkpoints or resizing the window can leave the editor or preview
   pinned to a stale width.
-- **Per-checkpoint starter code.** Today the source is shared across all
-  same-lab checkpoints in a lesson, but there's no way for the author to
-  seed a checkpoint with a specific starting state (e.g. "checkpoint 3
-  begins with a broken loop the student has to fix"). Need authoring UI
-  for starter code + a way to plumb it through the source-carryover
-  logic.
-- **Per-checkpoint "continue vs fresh" toggle.** Right now every
-  checkpoint of a given lab type picks up from the previous one's
-  source. The author should be able to mark a checkpoint as starting
-  fresh — useful when a new concept needs a clean slate, or when the
-  starter code (above) is meant to replace what the student had.
+- **Starter authoring UI.** Starter code exists in the format
+  (`starterFiles` for literal files, `starterPrompt` for generation,
+  `sourceMode: 'sandbox'` for a clean slate) and the runtime honours
+  all three, but only via hand-edited JSON — the editor doesn't expose
+  them yet.
 - **Organise into subdirectories.** Likely shape:
   - `apps/src/aiLessons/author/` — author page, lesson generator,
     image generator
@@ -347,7 +372,7 @@ dashboard/config/ai_lessons/<lessonId>.json   # repo-shipped lessons (read-only 
 dashboard/tmp/ai_lessons/
 ├── <lessonId>.json                           # authored LessonPlans
 ├── images/<lessonId>/<random>.png            # panel illustrations
-├── sources/<lessonId>/<labType>.json         # student's saved source per lab type
+├── sources/<lessonId>/<userId>/<scope>.json  # per-(lesson, user, scope) saved source
 ├── inputs/<lessonId>/<userId>.json           # per-(lesson, user) question answers
 └── progress/<lessonId>/<userId>.json         # per-(lesson, user) progress + summary
 ```
