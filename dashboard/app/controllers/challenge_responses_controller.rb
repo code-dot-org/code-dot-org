@@ -33,9 +33,9 @@ class ChallengeResponsesController < ApplicationController
     authorize! :create, ChallengeResponse
   end
 
-  # Server-owned fields (transcript, student_feedback, evaluation_result,
+  # Server-owned fields (student_feedback, evaluation_result,
   # evaluated_at) are intentionally not permitted.
   private def challenge_response_params
-    params.permit(:challenge_id, :student_text, :is_final, assets: [:asset_type])
+    params.permit(:challenge_id, :student_text, :transcript, :is_final, assets: [:asset_type])
   end
 end
