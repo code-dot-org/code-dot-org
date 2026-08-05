@@ -1,5 +1,9 @@
 import {ProjectFile} from '@codebridge/types';
-import React, {useMemo} from 'react';
+import {viewableImageFileType} from '@codebridge/utils/viewableImageFileType';
+import React, {useEffect, useMemo, useState} from 'react';
+
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import Editor from './Editor';
 import FileTabs from './FileTabs';
@@ -26,6 +30,16 @@ const Workspace: React.FC<WorkspaceProps> = ({
 
   const code = useMemo(() => currentFile?.contents || '', [currentFile]);
 
+  const isImage =
+    !!currentFile?.url &&
+    viewableImageFileType(getFileExtension(currentFile.name));
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [currentFile?.url]);
+
   return (
     <div className={styles.workspaceContainer}>
       {files.length === 0 ? (
@@ -38,7 +52,21 @@ const Workspace: React.FC<WorkspaceProps> = ({
             onFileSelect={onFileSelect}
           />
 
-          <Editor code={code} theme={theme} />
+          {isImage ? (
+            <div className={styles.imageContainer}>
+              {!imageLoaded && <Spinner size="large" />}
+              <img
+                className={styles.imagePreview}
+                src={currentFile?.url}
+                alt={currentFile?.name}
+                hidden={!imageLoaded}
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageLoaded(true)}
+              />
+            </div>
+          ) : (
+            <Editor code={code} theme={theme} />
+          )}
         </>
       )}
     </div>
