@@ -4,12 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  setup_all do
-    # The page header falls back to the hourofcode unit,
-    # so full page renders need it to exist.
-    create_hourofcode_unit_and_levels
-  end
-
   setup do
     @coursez_2017 = create(:script, name: 'coursez-2017')
     create(:single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
@@ -148,6 +142,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show of hourofcode redirects to hoc" do
+    create_hourofcode_unit_and_levels
     get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end

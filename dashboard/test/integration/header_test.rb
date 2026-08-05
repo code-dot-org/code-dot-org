@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class HeaderTest < ActionDispatch::IntegrationTest
-  setup_all do
-    # The page header falls back to the hourofcode unit,
-    # so full page renders need it to exist.
-    create_hourofcode_unit_and_levels
-  end
-
   context 'when signed out' do
     around do |test|
       get '/catalog'
