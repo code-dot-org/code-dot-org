@@ -37,7 +37,14 @@ self.addEventListener('message', event => {
   }
   if (data.type === PUT_MODULE) {
     modules.set(data.path, data.code);
-    if (event.source) {
+    // Answer on the port the sender opened, when there is one. `event.source`
+    // reaches a CONTROLLED client only, and the compile surface does not wait
+    // to be controlled — so on a fast load that reply went nowhere and the
+    // compile never completed (see storeModule in worldCompileWorkerManager).
+    var port = event.ports && event.ports[0];
+    if (port) {
+      port.postMessage({type: MODULE_STORED, path: data.path});
+    } else if (event.source) {
       event.source.postMessage({type: MODULE_STORED, path: data.path});
     }
   } else if (data.type === KEEP_ALIVE) {

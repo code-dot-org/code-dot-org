@@ -34,6 +34,51 @@ describe('SiteConfig', () => {
   });
 });
 
+describe('SiteConfig with an API url the page names', () => {
+  const meta = (content: string) => {
+    const tag = document.createElement('meta');
+    tag.name = 'cdo-api-url';
+    tag.content = content;
+    document.head.appendChild(tag);
+    return tag;
+  };
+
+  afterEach(() => {
+    document
+      .querySelectorAll('meta[name="cdo-api-url"]')
+      .forEach(tag => tag.remove());
+  });
+
+  it('takes the hostname’s answer when the page says nothing', () => {
+    // jsdom serves localhost, so this is the development URL — and the point is
+    // that nothing changed for a page without the tag.
+    expect(new SiteConfig().dashboardApiUrl).toBe(
+      'http://localhost-studio.code.org:3000',
+    );
+  });
+
+  it('serves its own origin when asked for same-origin', () => {
+    // What a mock-backed static build needs: an HTTPS page cannot request an
+    // `http://localhost-studio…` subresource at all — the browser blocks it as
+    // mixed content BEFORE a service worker could answer it, so the mock never
+    // gets the chance and nothing loads.
+    meta('same-origin');
+    expect(new SiteConfig().dashboardApiUrl).toBe(window.location.origin);
+  });
+
+  it('takes a named origin as given', () => {
+    meta('https://studio.example');
+    expect(new SiteConfig().dashboardApiUrl).toBe('https://studio.example');
+  });
+
+  it('ignores an empty tag rather than pointing at nowhere', () => {
+    meta('   ');
+    expect(new SiteConfig().dashboardApiUrl).toBe(
+      'http://localhost-studio.code.org:3000',
+    );
+  });
+});
+
 describe('SiteConfig.marketingUrl', () => {
   let siteConfig: SiteConfig;
 

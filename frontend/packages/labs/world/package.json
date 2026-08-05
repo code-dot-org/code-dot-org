@@ -34,6 +34,7 @@
   "scripts": {
     "build": "vite build",
     "build:demo": "yarn setup:world && vite build --mode demo",
+    "build:pages": "WORLD_DEMO_BASE=/world-lab/ VITE_WORLD_SANDBOX=same-origin yarn build:demo",
     "dev": "yarn setup:world && vite --port 5139 --strictPort",
     "dev:isolated": "yarn setup:world && concurrently -k -n app,sandbox -c blue,magenta \"vite --port 5139 --strictPort\" \"vite --port 5202 --strictPort\"",
     "dev:sandbox": "yarn setup:world && vite --port 5202 --strictPort",

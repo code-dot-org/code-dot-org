@@ -15,6 +15,7 @@ import {
   ToCompileMessage,
   type FromCompile,
 } from '../messages';
+import {SANDBOX_SURFACE_DIR} from '../worldConfig';
 
 export interface CompileManagerOptions {
   /** Sandbox origin base, e.g. `http://localhost:5202/`. */
@@ -36,7 +37,7 @@ export class WorldCompileManager {
   private readonly pending = new Map<string, Pending>();
 
   constructor(opts: CompileManagerOptions) {
-    const url = new URL('compile.html', opts.sandboxUrl);
+    const url = new URL(`${SANDBOX_SURFACE_DIR}compile.html`, opts.sandboxUrl);
     this.sandboxOrigin = url.origin;
     url.searchParams.set(PARENT_ORIGIN_PARAM, window.location.origin);
     url.searchParams.set(ASSET_BASE_PARAM, opts.assetBase);

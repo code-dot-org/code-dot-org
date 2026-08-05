@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      This demo has no dashboard: the MSW mock answers the API and the project
+      lives in sessionStorage. Point the API at this page's own origin, because
+      the alternative is the one the hostname implies — and for any host that is
+      not a code.org environment that means `http://localhost-studio…`, which an
+      HTTPS deployment refuses as mixed content before the mock can answer it.
+      Read by core's SiteConfig at import, so it must be in the markup.
+    -->
+    <meta name="cdo-api-url" content="same-origin" />
     <title>World Lab (demo)</title>
   </head>
   <body style="margin: 0; padding: 0; width: 100%; height: 100%">

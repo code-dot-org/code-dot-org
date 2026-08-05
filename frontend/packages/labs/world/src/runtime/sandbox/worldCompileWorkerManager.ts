@@ -106,7 +106,26 @@ export async function start(): Promise<void> {
   }
 }
 
-/** Hand the bundle to the SW and wait until it confirms it holds it. */
+/** How long to wait for the worker to confirm it holds the bundle. */
+const STORE_TIMEOUT_MS = 10_000;
+
+/**
+ * Hand the bundle to the SW and wait until it confirms it holds it.
+ *
+ * The confirmation comes back over a MessageChannel, not over
+ * `navigator.serviceWorker` — because this surface deliberately does NOT wait
+ * to be controlled (`awaitControl: false`: a cache hit needs no worker, so
+ * control must stay off the critical path), and a reply sent to an uncontrolled
+ * client with `event.source.postMessage` is not delivered. That is a race, and
+ * the dev server hid it: unbundled, the first compile arrives so much later
+ * than `clients.claim()` that the page is always controlled by then. The
+ * production build is faster, lost the race every time, and — with no reply and
+ * no timeout — sat here forever while the game never started. A port belongs to
+ * the message that opened it, so control cannot come into it.
+ *
+ * The timeout is the second half: a transport that can go quiet has to say so,
+ * rather than leaving a compile pending and a preview blank.
+ */
 function storeModule(
   worker: ServiceWorker | null,
   path: string,
@@ -117,16 +136,26 @@ function storeModule(
       reject(new Error('build service worker unavailable'));
       return;
     }
-    const onMessage = (event: MessageEvent) => {
-      if (
-        event.data?.type === BuildWorkerMessage.MODULE_STORED &&
-        event.data.path === path
-      ) {
-        navigator.serviceWorker.removeEventListener('message', onMessage);
-        resolve();
+    const channel = new MessageChannel();
+    const timer = setTimeout(() => {
+      channel.port1.close();
+      reject(
+        new Error(
+          `the build service worker did not confirm ${path} within ` +
+            `${STORE_TIMEOUT_MS / 1000}s`,
+        ),
+      );
+    }, STORE_TIMEOUT_MS);
+    channel.port1.onmessage = event => {
+      if (event.data?.type !== BuildWorkerMessage.MODULE_STORED) {
+        return;
       }
+      clearTimeout(timer);
+      channel.port1.close();
+      resolve();
     };
-    navigator.serviceWorker.addEventListener('message', onMessage);
-    worker.postMessage({type: BuildWorkerMessage.PUT_MODULE, path, code});
+    worker.postMessage({type: BuildWorkerMessage.PUT_MODULE, path, code}, [
+      channel.port2,
+    ]);
   });
 }
