@@ -12,14 +12,14 @@ module StatsigAnalyticsHelper
 
   # Returns the analytics section of the frontend app-config as a hash.
   #
-  # Only production and the chef-managed test web server transmit; every other
-  # environment is served provider 'none' and never loads the Statsig SDK.
-  # statsig_force_transmit (locals.yml) overrides that for local testing.
+  # An environment transmits iff it provisions a client key: production and
+  # the chef-managed test web server do (config/*.yml.erb); everywhere else
+  # the key defaults to blank and the page is served provider 'none'. A
+  # developer enables the provider locally by setting a real
+  # statsig_api_client_key in locals.yml.
   def analytics_config
     client_key = CDO.safe_statsig_api_client_key
-    transmit = CDO.rack_env?(:production) || CDO.managed_test_server? ||
-      CDO.statsig_force_transmit
-    return {provider: 'none'} unless transmit && client_key.present?
+    return {provider: 'none'} if client_key.blank?
 
     {provider: 'statsig', statsig: {clientKey: client_key}}
   end
