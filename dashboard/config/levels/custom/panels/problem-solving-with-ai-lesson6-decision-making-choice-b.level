@@ -11,22 +11,200 @@
     "use_links": "true",
     "panels": [
       {
-        "text": "",
-        "imageUrl": "",
-        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-a179455f-28c9-45c0-b859-596d0a7bb98c"
+        "text": "Decision day is almost here! Counselor Marcus Webb has 6 applications on his desk, but only 2 spots left in this year's incoming class. Click through the files to learn more about each applicant.",
+        "imageUrl": "https://images.code.org/6537baae08aae1b33ef6f6cdb3f299fb-slide-one.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-a179455f-28c9-45c0-b859-596d0a7bb98c",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "Examine applicants",
+            "x": 46,
+            "y": 85,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+            "width": 13
+          }
+        ]
       },
       {
         "text": "",
-        "imageUrl": "",
-        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be"
+        "imageUrl": "https://images.code.org/8e68734e8cbb557e5d73d7dd97270f78-slide-two.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+        "links": [
+          {
+            "text": "Jasmine",
+            "x": 23,
+            "y": 75,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-d1ab8c15-ba3c-4fd5-82a3-41dd0c3a38f8",
+            "width": 12
+          },
+          {
+            "text": "Ryan",
+            "x": 52,
+            "y": 71,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-6c018933-e47a-444c-ae3c-41b69afbe0a8",
+            "width": 10
+          },
+          {
+            "text": "Alex",
+            "x": 80,
+            "y": 74,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-5abfc2bd-dd36-4b2d-9bac-1d743fbb78d8",
+            "width": 11
+          },
+          {
+            "text": "More applicants ->",
+            "x": 51,
+            "y": 13,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707",
+            "width": 12
+          }
+        ]
       },
       {
         "text": "",
-        "imageUrl": "",
-        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707"
+        "imageUrl": "https://images.code.org/47e08d6ce0ddb96a285ce2c0abab6a79-slide-three.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707",
+        "links": [
+          {
+            "text": "Maria",
+            "x": 25,
+            "y": 28,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-92ba6908-e23d-44a4-b62b-673f1fcc45d7",
+            "width": 10
+          },
+          {
+            "text": "Jordan",
+            "x": 58,
+            "y": 25,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-29b21bad-6b94-492e-a636-ac4c264da9e0",
+            "width": 11
+          },
+          {
+            "text": "Kevin",
+            "x": 91,
+            "y": 29,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-bae6f155-6c43-4da6-afff-f742b332cb21",
+            "width": 11
+          },
+          {
+            "text": " <- Previous Applicants",
+            "x": 51,
+            "y": 85,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+            "width": 16
+          }
+        ]
+      },
+      {
+        "text": "Jasmine — Passionate about environmental science; runs a community garden and volunteers for a conservation group. GPA 4.1, SAT 1420. AP Biology, AP Environmental Science, AP Statistics",
+        "imageUrl": "https://images.code.org/c07d55583468f615441f15cee12f2378-slide-four.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-d1ab8c15-ba3c-4fd5-82a3-41dd0c3a38f8",
+        "layout": "text-bottom-left",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "links": [
+          {
+            "text": "BACK",
+            "x": 8,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+            "width": 10
+          }
+        ]
+      },
+      {
+        "text": "Ryan — Trumpet player since age 8; marching band, jazz ensemble, composes his own music. Hopes to teach music to younger students. GPA 3.3, SAT 1250. AP Music Theory, Honors English.",
+        "imageUrl": "https://images.code.org/1ed22536bc9fac22dce68b11a4e9515c-slide-five.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-6c018933-e47a-444c-ae3c-41b69afbe0a8",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "links": [
+          {
+            "text": "BACK",
+            "x": 8,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+            "width": 12
+          }
+        ]
+      },
+      {
+        "text": "Alex — Robotics enthusiast; 3 years of FIRST Robotics and Arduino projects. GPA 3.8, ACT 32. AP Computer Science, AP Physics, AP Calculus.",
+        "imageUrl": "https://images.code.org/aef42e8fda26885a55803ab8ed8d4911-slide-six.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-5abfc2bd-dd36-4b2d-9bac-1d743fbb78d8",
+        "layout": "text-bottom-right",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "links": [
+          {
+            "text": "BACK",
+            "x": 8,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-60cabe2c-8e6b-499b-bb01-c0cacb9f19be",
+            "width": 11
+          }
+        ]
+      },
+      {
+        "text": "Maria — Soccer team captain; values leadership, discipline, and close-knit community. GPA 3.5, SAT 1310. Honors Chemistry, AP U.S. History, AP Psychology.",
+        "imageUrl": "https://images.code.org/e45e0247bdfc455d6e1ecf2e3f4c72ad-slide-seven.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-92ba6908-e23d-44a4-b62b-673f1fcc45d7",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707",
+            "width": 12
+          }
+        ],
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true
+      },
+      {
+        "text": "Jordan — Runs the school literary magazine; published short stories; interested in documentary filmmaking. GPA 3.9, ACT 29. AP Literature, AP U.S. Government, AP Art.",
+        "imageUrl": "https://images.code.org/78e9191d6a7a13f062e7e7d833dee591-slide-eight.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-29b21bad-6b94-492e-a636-ac4c264da9e0",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707",
+            "width": 12
+          }
+        ],
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Kevin — Two summers at an auto shop; completed a welding certification program; plans to become a certified mechanic. GPA 2.9, no SAT. Standard + technical education courses.",
+        "imageUrl": "https://images.code.org/79bdc45beb9670afb759df93d7c2cedf-slide-nine.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-b-bae6f155-6c43-4da6-afff-f742b332cb21",
+        "links": [
+          {
+            "text": "BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-b-27e5c9b9-445c-4f31-9b15-318ddb1fd707",
+            "width": 12
+          }
+        ],
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true
       }
-    ]
+    ],
+    "display_name": "College Admissions",
+    "bubble_choice_description": "There are six promising college applicants, but only enough space for two! Assist with examining their applications and selecting the most qualified applicant.",
+    "thumbnail_url": "https://images.code.org/483b1559872f53cc88c4c01aa196cdc7-slide-one.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-31 15:01:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:10:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 19:21:59 +0000\",\"changed\":[\"use_links\",\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-31 15:01:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:10:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 19:21:59 +0000\",\"changed\":[\"use_links\",\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:05:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:08:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:12:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:17:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:19:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
