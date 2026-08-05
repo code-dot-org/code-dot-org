@@ -267,6 +267,7 @@ Resources:
 
   # Rails secret_key_base, generated per stack so that no deployment shares
   # cookie-signing keys with another and the value never enters the repository.
+  # As of 2026-08-05, only Adhocs use this, while other env's still use !Secret
   DashboardSecretKeyBase:
     Type: AWS::SecretsManager::Secret
     Properties:
