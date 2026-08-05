@@ -38,6 +38,11 @@
       "import": "./dist/api/mocks/server.mjs",
       "require": "./dist/api/mocks/server.cjs"
     },
+    "./plugins/analytics": {
+      "types": "./dist/plugins/analytics/index.d.ts",
+      "import": "./dist/plugins/analytics/index.mjs",
+      "require": "./dist/plugins/analytics/index.cjs"
+    },
     "./plugins/experiments": {
       "types": "./dist/plugins/experiments/index.d.ts",
       "import": "./dist/plugins/experiments/index.mjs",
@@ -86,6 +91,7 @@
     "@code-dot-org/lint-config": "workspace:*",
     "@reduxjs/toolkit": "catalog:",
     "@sentry/browser": "catalog:",
+    "@statsig/js-client": "^3.25.5",
     "@tanstack/react-query": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/flat": "^5.0.5",
@@ -114,6 +120,7 @@
   "peerDependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "@sentry/browser": "^10.51.0",
+    "@statsig/js-client": "^3.25.5",
     "@tanstack/react-query": "*",
     "js-cookie": "^3.0.5",
     "ky": "^1.14.3",

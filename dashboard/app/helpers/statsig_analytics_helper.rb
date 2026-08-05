@@ -9,4 +9,16 @@ module StatsigAnalyticsHelper
   def load_web_analytics?(request)
     TARGET_PATH_PATTERNS.match?(request.path)
   end
+
+  # Returns the analytics section of the frontend app-config as a hash.
+  #
+  # Only production and the chef-managed test web server transmit; every other
+  # environment is served provider 'none' and never loads the Statsig SDK.
+  def analytics_config
+    client_key = CDO.safe_statsig_api_client_key
+    transmit = CDO.rack_env?(:production) || CDO.managed_test_server?
+    return {provider: 'none'} unless transmit && client_key.present?
+
+    {provider: 'statsig', statsig: {clientKey: client_key}}
+  end
 end

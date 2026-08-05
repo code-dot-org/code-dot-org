@@ -10,6 +10,7 @@ import {
   useUserSettings,
   useCurrentUser,
 } from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 
 import UsersDetailsForm from './components/UsersDetailsForm';
 import styles from './UsersSettingsPage.module.css';
@@ -32,6 +33,10 @@ const TAB_META = [
 
 const NO_OP = () => {};
 
+// The event name and the space in the 'user type' payload key are part of the
+// event contract dashboards key on.
+const PAGE_VISITED_EVENT = 'Account Settings Page Visited';
+
 export interface UsersSettingsPageProps {
   tab?: string;
   onTabChange?: (tab: string) => void;
@@ -53,6 +58,18 @@ export default function UsersSettingsPage({
   // relies on); the page's own fields all come from `settings`, not its data.
   const currentUser = useCurrentUser(DashboardApiClient);
   const settings = useUserSettings(DashboardApiClient);
+
+  // Reported once at mount from the cache the host primes at bootstrap, so the
+  // visit is not delayed by the settings fetch.
+  const visitUserType = currentUser.data?.isSignedIn
+    ? currentUser.data.userType
+    : undefined;
+  const visitReported = useRef(false);
+  useEffect(() => {
+    if (visitReported.current) return;
+    visitReported.current = true;
+    sendEvent(PAGE_VISITED_EVENT, {'user type': visitUserType});
+  }, [visitUserType]);
 
   const isStudent = settings.data?.userType === 'student';
   const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));

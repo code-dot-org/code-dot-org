@@ -57,6 +57,20 @@ immediately after `initializeCore()` are buffered while the async factory
 dynamically imports the Sentry adapter. Log and metric sampling are
 session-based via an observability-owned session ID stored in `sessionStorage`.
 
+**`analytics`** ([`src/plugins/analytics/index.ts`](../src/plugins/analytics/index.ts))
+
+Module-level `sendEvent`/`setUser` API backed by a no-op adapter until
+`analyticsPlugin` installs the configured provider. Available via the
+`@code-dot-org/core/plugins/analytics` sub-path export. Boot mirrors
+observability: a deferred adapter is installed synchronously while the async
+factory dynamically imports the Statsig adapter, then buffered calls are
+replayed in order. The client is not built until the consent module reports
+that the page's consent source has settled (`whenConsentSettled`), which is
+also when the plugin makes its single stable-ID persistence decision from the
+`performance` category. Consent does not gate sending. See
+[`src/plugins/analytics/README.md`](../src/plugins/analytics/README.md) for the
+event and identity shapes.
+
 **`getEnabledExperiments`** ([`src/plugins/experiments/index.ts`](../src/plugins/experiments/index.ts))
 
 Reads the experiments enabled for the current browser from the `_experiments`
@@ -83,7 +97,7 @@ export interface CorePlugin {
 }
 ```
 
-`SiteConfigExtensions` is an empty interface that plugins extend via TypeScript module augmentation, allowing them to add typed fields to `SiteConfig` without modifying core. Concrete fields that core itself parses and owns, such as `SiteConfig.observability`, should be typed directly on `SiteConfig` rather than routed through `SiteConfigExtensions`. `SiteConfig.observability` is normalized to `{provider: 'none'}` when the underlying runtime config is absent.
+`SiteConfigExtensions` is an empty interface that plugins extend via TypeScript module augmentation, allowing them to add typed fields to `SiteConfig` without modifying core. Concrete fields that core itself parses and owns, such as `SiteConfig.observability` and `SiteConfig.analytics`, should be typed directly on `SiteConfig` rather than routed through `SiteConfigExtensions`. Both are normalized to `{provider: 'none'}` when the underlying runtime config is absent.
 
 Plugins live in `src/plugins/` and are exposed as sub-path exports (e.g. `@code-dot-org/core/plugins/localization`, `@code-dot-org/core/plugins/observability`). Not every one implements `CorePlugin` — `plugins/experiments` is a sub-path export with no boot lifecycle at all. The main `src/index.ts` does **not** re-export plugin sub-paths — consumers must import them explicitly. This ensures plugins are excluded from the bundle when not used.
 

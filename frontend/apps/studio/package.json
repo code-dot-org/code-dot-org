@@ -32,6 +32,7 @@
     "@emotion/styled": "catalog:",
     "@mui/material": "catalog:",
     "@sentry/browser": "catalog:",
+    "@statsig/js-client": "^3.25.5",
     "@tanstack/react-query": "catalog:",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",

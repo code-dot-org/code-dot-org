@@ -1812,6 +1812,7 @@ __metadata:
     "@code-dot-org/lint-config": "workspace:*"
     "@reduxjs/toolkit": "catalog:"
     "@sentry/browser": "catalog:"
+    "@statsig/js-client": "npm:^3.25.5"
     "@tanstack/react-query": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/flat": "npm:^5.0.5"
@@ -1844,6 +1845,7 @@ __metadata:
   peerDependencies:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
+    "@statsig/js-client": ^3.25.5
     "@tanstack/react-query": "*"
     js-cookie: ^3.0.5
     ky: ^1.14.3
@@ -2265,6 +2267,7 @@ __metadata:
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
     "@sentry/browser": "catalog:"
+    "@statsig/js-client": "npm:^3.25.5"
     "@tanstack/react-query": "catalog:"
     "@tanstack/react-router": "npm:^1.139.14"
     "@tanstack/react-router-devtools": "npm:^1.139.14"
@@ -6369,6 +6372,22 @@ __metadata:
   version: 0.3.0
   resolution: "@standard-schema/utils@npm:0.3.0"
   checksum: 10c0/6eb74cd13e52d5fc74054df51e37d947ef53f3ab9e02c085665dcca3c38c60ece8d735cebbdf18fbb13c775fbcb9becb3f53109b0e092a63f0f7389ce0993fd0
+  languageName: node
+  linkType: hard
+
+"@statsig/client-core@npm:3.33.3":
+  version: 3.33.3
+  resolution: "@statsig/client-core@npm:3.33.3"
+  checksum: 10c0/52d625ca805c926d89008d2281c9841a02a29684120addcb1f9c1a78b91c76f3660f904b5f4e212c087a01a57f2059a0836f0ead9d5810cee8750570749039e2
+  languageName: node
+  linkType: hard
+
+"@statsig/js-client@npm:^3.25.5":
+  version: 3.33.3
+  resolution: "@statsig/js-client@npm:3.33.3"
+  dependencies:
+    "@statsig/client-core": "npm:3.33.3"
+  checksum: 10c0/3658e2f91b999d77c17925fdeeba5e838dd131bd1af971176deffc741b37c5116bb29afcd6b1be5eb8f5f24866f0a124ecf534e41c34df36cd2650b5010697ab
   languageName: node
   linkType: hard
 

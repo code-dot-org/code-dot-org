@@ -116,3 +116,62 @@ describe('SiteConfig observability (parseRuntimeConfig)', () => {
     expect(config.observability.provider).toBe('none');
   });
 });
+
+describe('SiteConfig analytics (parseRuntimeConfig)', () => {
+  afterEach(() => {
+    document
+      .querySelectorAll('meta[name="app-config"]')
+      .forEach(el => el.remove());
+  });
+
+  function setMetaConfig(content: string) {
+    const meta = document.createElement('meta');
+    meta.name = 'app-config';
+    meta.content = content;
+    document.head.appendChild(meta);
+  }
+
+  it('defaults provider to "none" when no meta tag is present', () => {
+    const config = new SiteConfig();
+    expect(config.analytics.provider).toBe('none');
+  });
+
+  it('reads provider and client key from the meta tag', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {provider: 'statsig', statsig: {clientKey: 'client-abc'}},
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.provider).toBe('statsig');
+    expect(config.analytics.statsig?.clientKey).toBe('client-abc');
+  });
+
+  it('defaults provider to "none" when the tag carries only observability', () => {
+    setMetaConfig(JSON.stringify({observability: {provider: 'sentry'}}));
+    const config = new SiteConfig();
+    expect(config.analytics.provider).toBe('none');
+  });
+
+  it('defaults provider to "none" when meta content is invalid JSON', () => {
+    setMetaConfig('not-json{');
+    const config = new SiteConfig();
+    expect(config.analytics.provider).toBe('none');
+  });
+
+  it('defaults provider to "none" when the meta names it explicitly as null', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {provider: null, statsig: {clientKey: 'client-abc'}},
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.provider).toBe('none');
+  });
+
+  it('defaults observability provider to "none" when named explicitly as null', () => {
+    setMetaConfig(JSON.stringify({observability: {provider: null}}));
+    const config = new SiteConfig();
+    expect(config.observability.provider).toBe('none');
+  });
+});
