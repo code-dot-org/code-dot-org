@@ -14,13 +14,16 @@ import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
-export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
+export type GatewayPhase =
+  | 'input_filter'
+  | 'generation'
+  | 'image_generation'
+  | 'output_filter';
 
 type SDKOptions = Parameters<typeof generateText>[0];
+type ExtraOptions = Record<string, unknown>;
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
-
-type GatewayOptions = SDKOptions & {phase?: GatewayPhase};
 
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
@@ -81,9 +84,11 @@ const generateTextThroughGateway = async <
   TOOLS extends SDKTools = SDKTools,
   OUTPUT extends SDKOutput = SDKOutput
 >(
-  options: GatewayOptions
+  options: SDKOptions,
+  extraOptions?: ExtraOptions
 ): Promise<GenerateTextResult<TOOLS, OUTPUT>> => {
-  const {model, phase, ...restOptions} = options;
+  const {model, ...restOptions} = options;
+  const phase = extraOptions?.phase as GatewayPhase | undefined;
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;

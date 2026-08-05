@@ -1,7 +1,7 @@
 import AichatContextManager from '../aichat/aichatContextManager';
 import HttpClient from '../util/HttpClient';
 
-export const AI_GATEWAY_URL = `https://ai-gateway.code.org`;
+export const AI_GATEWAY_URL = `https://observability-add-phase-attribute-ai-gateway-development.code-org.workers.dev`;
 
 export async function fetchAccessToken() {
   const response = await HttpClient.post(

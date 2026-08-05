@@ -81,13 +81,15 @@ export async function generateChatResponse(
     : undefined;
 
   // Generate a response with the model.
-  const {text, files, finishReason, response, output} = await generateText({
-    model: getModel(modelParameters.selectedModelId),
-    messages,
-    temperature: modelParameters.temperature,
-    phase: 'generation',
-    ...(outputSchema && {output: outputSchema}),
-  });
+  const {text, files, finishReason, response, output} = await generateText(
+    {
+      model: getModel(modelParameters.selectedModelId),
+      messages,
+      temperature: modelParameters.temperature,
+      ...(outputSchema && {output: outputSchema}),
+    },
+    {phase: 'generation'}
+  );
 
   // chatMessageText has to stay a string (rendering, storage, non-schema
   // messages all depend on that) even when a schema was used, so keep a
