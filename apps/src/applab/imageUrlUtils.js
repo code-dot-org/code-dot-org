@@ -7,8 +7,7 @@ export function normalizeToHttps(url) {
 }
 
 /**
- * The media proxy only reaches allowlisted hostnames so absolute URLs load
- * directly. Our img-src policy omits http: so replace it with https:
+ * Resolve an image path to a fully qualified URL.
  * @param {string} url
  * @returns {string}
  */

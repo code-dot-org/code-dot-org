@@ -861,8 +861,7 @@ applabCommands.drawImageURL = function (opts) {
       var renderWidth = utils.valueOr(opts.width, image.width);
       var renderHeight = utils.valueOr(opts.height, image.height);
 
-      // if undefined, extra width/height from image and potentially resize to
-      // fit
+      // if undefined, extract width/height from image and potentially resize to fit.
       if (opts.width === undefined || opts.height === undefined) {
         var aspectRatio = image.width / image.height;
         if (aspectRatio > 1) {
