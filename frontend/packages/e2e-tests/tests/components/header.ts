@@ -8,6 +8,9 @@ import {expect, type Locator, type Page} from '@playwright/test';
 export class HeaderComponent {
   private readonly page: Page;
 
+  /** The single header root, signed-in or out; also the axe scan scope. */
+  readonly rootSelector = 'header';
+
   /** The container holding all nav anchor links. */
   readonly headerLinks: Locator;
 
@@ -56,6 +59,15 @@ export class HeaderComponent {
   /** "View all projects..." at the foot of the open dropdown. By id: the text is locale-dependent. */
   readonly viewAllProjectsLink: Locator;
 
+  /** Signed-out "Create account" link; the name is shared by a desktop and a mobile node, so .first() takes the one this viewport exposes. */
+  readonly createAccountLink: Locator;
+
+  /** "Account settings" link inside the open user-menu dropdown. */
+  readonly userEditLink: Locator;
+
+  /** "Sign out" link inside the open user-menu dropdown. */
+  readonly signOutLink: Locator;
+
   constructor(page: Page) {
     this.page = page;
     this.headerLinks = page.locator('.headerlinks');
@@ -71,6 +83,13 @@ export class HeaderComponent {
     this.signInButton = page.locator('#header_user_signin').first();
     this.createMenu = page.locator(this.createMenuSelector);
     this.viewAllProjectsLink = page.locator('#view_all_projects');
+    this.createAccountLink = page
+      .getByRole('link', {name: 'Create account', exact: true})
+      .first();
+    this.userEditLink = this.userMenu.getByRole('link', {
+      name: 'Account settings',
+    });
+    this.signOutLink = this.userMenu.getByRole('link', {name: 'Sign out'});
   }
 
   /** A header nav link by its visible label (its accessible name). */
@@ -133,5 +152,13 @@ export class HeaderComponent {
   async openCreateMenu(): Promise<void> {
     await this.createMenu.click();
     await expect(this.viewAllProjectsLink).toBeVisible();
+  }
+
+  /**
+   * Open the signed-in user-menu dropdown. Its links are already in the DOM and
+   * only toggle visibility, so callers can assert on them with no wait here.
+   */
+  async openUserMenu(): Promise<void> {
+    await this.displayName.click();
   }
 }
