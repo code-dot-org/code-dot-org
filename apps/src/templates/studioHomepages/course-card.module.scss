@@ -1,15 +1,12 @@
 .card {
     overflow: hidden;
     border: 1px solid var(--borders-neutral-primary);
-    position: relative;
     width: 473px;
     float: left;
     margin-bottom: 20px;
     background-color: var(--background-neutral-secondary);
 
     .title {
-        box-sizing: border-box;
-        min-height: 130px;
         padding-top: 25px;
         padding-bottom: 5px;
         // padding-inline auto-flips for RTL (replaces the old isRtl prop).
@@ -17,15 +14,12 @@
         padding-inline-end: 10px;
         margin: 0;
         color: var(--text-neutral-inverse);
-        z-index: 2;
-        position: relative;
     }
 }
 
 .header {
-    position: absolute;
     width: 100%;
-    height: 130px;
+    min-height: 130px;
     background-color: var(--background-brand-teal-primary);
 }
 
@@ -35,6 +29,4 @@
     background: var(--background-neutral-secondary);
     width: 100%;
     box-sizing: border-box;
-    z-index: 2;
-    position: relative;
 }
