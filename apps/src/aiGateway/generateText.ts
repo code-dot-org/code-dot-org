@@ -14,11 +14,7 @@ import {reportGatewayError} from './logHelper';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {fetchTurnstileTokenIfEnabled, turnstileHeaders} from './turnstile';
 
-export type GatewayPhase =
-  | 'input_filter'
-  | 'generation'
-  | 'image_generation'
-  | 'output_filter';
+export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type ExtraOptions = Record<string, unknown>;

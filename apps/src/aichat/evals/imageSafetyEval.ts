@@ -217,7 +217,7 @@ export async function evaluatePrompt(
             ? {temperature: options.temperature}
             : {}),
         },
-        {phase: 'image_generation'}
+        {phase: 'generation'}
       )
     );
 
