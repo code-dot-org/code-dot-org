@@ -7,6 +7,28 @@
 # Lets you do guard blocks to skip elements that aren't valid for Jobs:
 {{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
 {{- $isJob := eq (.kind | default "Deployment") "Job" }}
+{{- $portsEnabled := true }}
+{{- if hasKey . "portsEnabled" }}
+{{- $portsEnabled = .portsEnabled }}
+{{- end }}
+# hasKey instead of `| default`: sprig default treats an explicit false as
+# empty, which would silently re-enable health checks for includes that
+# pass healthChecksEnabled false.
+{{- $healthChecksEnabled := .Values.healthChecks.enabled }}
+{{- if hasKey . "healthChecksEnabled" }}
+{{- $healthChecksEnabled = .healthChecksEnabled }}
+{{- end }}
+
+# Per-include overrides for values that normally come from chart-wide
+# .Values. The active-job-worker include pins these so its rendering does
+# not vary with per-environment values (see activeJobWorker in values.yaml).
+{{- $railsEnv := .RAILS_ENV | default .Values.RAILS_ENV }}
+{{- $extraEnv := .extraEnv | default .Values.extraEnv }}
+{{- $componentResources := .resources | default .Values.resources }}
+{{- $localDevMounts := true }}
+{{- if hasKey . "localDevMountsEnabled" }}
+{{- $localDevMounts = .localDevMountsEnabled }}
+{{- end }}
 
 # Calculate CPU and memory resources from the original environment sizing table.
 # Weighted across all environments, floored to 2 decimal places:
@@ -33,7 +55,7 @@ metadata:
 spec:
 
   {{- if $isDeployment }}
-  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
+  replicas: {{ .replicas | default .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
   selector:
     matchLabels:
       {{ .selectorLabels | nindent 6 }}
@@ -52,6 +74,7 @@ spec:
       containers:
       - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"
+        imagePullPolicy: {{ .Values.imagePullPolicy }}
 
         command: {{ (.command | default .Values.command) | toJson }}
         args: {{ (.args | default .Values.args) | toJson }}
@@ -59,12 +82,16 @@ spec:
 
         env:
           - name: RAILS_ENV
-            value: {{ .Values.RAILS_ENV }}
+            value: {{ $railsEnv }}
           - name: RACK_ENV
-            value: {{ .Values.RAILS_ENV }}
+            value: {{ $railsEnv }}
           - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
             value: "1"
-          {{- if .Values.localDev.mounts.mountDotAWS }}
+          {{- range $name, $value := $extraEnv }}
+          - name: {{ $name }}
+            value: {{ $value | quote }}
+          {{- end }}
+          {{- if and $localDevMounts .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
           {{- end }}
@@ -105,25 +132,27 @@ spec:
         {{- if $isDeployment }}
         resources:
           requests:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
-            {{- if .Values.resources.ephemeralStorage }}
-            ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
+            cpu: {{ $componentResources.cpu | default $cpu }}
+            memory: {{ $componentResources.memory | default $memory }}
+            {{- if $componentResources.ephemeralStorage }}
+            ephemeral-storage: {{ $componentResources.ephemeralStorage }}
             {{- end }}
           limits:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
-            {{- if .Values.resources.ephemeralStorage }}
-            ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
+            cpu: {{ $componentResources.cpu | default $cpu }}
+            memory: {{ $componentResources.memory | default $memory }}
+            {{- if $componentResources.ephemeralStorage }}
+            ephemeral-storage: {{ $componentResources.ephemeralStorage }}
             {{- end }}
+        {{- if $portsEnabled }}
         ports:
         - name: http
           containerPort: 3000
         - name: http-hmr
           containerPort: 9000
         {{- end }}
+        {{- end }}
 
-        {{- if and $isDeployment (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
+        {{- if and $isDeployment $healthChecksEnabled }}
         startupProbe:
           failureThreshold: 300
           periodSeconds: 1
@@ -149,22 +178,22 @@ spec:
         {{- end }}
 
         volumeMounts:
-        {{- if .Values.localDev.mounts.mountDotAWS }}
+        {{- if and $localDevMounts .Values.localDev.mounts.mountDotAWS }}
         - mountPath: {{ .Values.user.home }}/.aws
           name: dot-aws
         {{- end }}
-        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
+        {{- if and $localDevMounts .Values.localDev.mounts.mountDotConfigGcloud }}
         - mountPath: {{ .Values.user.home }}/.config/gcloud
           name: dot-config-gcloud
         {{- end }}
 
       volumes:
-        {{- if .Values.localDev.mounts.mountDotAWS }}
+        {{- if and $localDevMounts .Values.localDev.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
         {{- end }}
-        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
+        {{- if and $localDevMounts .Values.localDev.mounts.mountDotConfigGcloud }}
         - name: dot-config-gcloud
           persistentVolumeClaim:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}

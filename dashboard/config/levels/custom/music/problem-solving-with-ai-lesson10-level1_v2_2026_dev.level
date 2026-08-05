@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-07-29T13:22:18.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Generate a Beat with A.I. \r\nUse A.I. to help you create a new drum beat.\r\n\r\n- Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n- Make sure to select at least 4 beats so that the **Generate** button pops up.\r\n- You can customize the AI generated beat or even **Generate** a new beat.\r\n- When you have a beat you like, click off the pop up to save your beat.\r\n- Work with AI to see if you can generate beats to match different musical moods like elevator music, intense combat scene in a move, upbeat pop song, etc.\r\n- Press [Run](#clickable=run-button). \r\n\r\n",
+    "long_instructions": "#### Explore AI Music Lab \r\n\r\nTime to explore! In this level, see what you can discover about how AI makes music.\r\n\r\n1. Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to open the drum grid.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n2. Add some beats to the grid, then see what new options appear.\r\n3. Check out the Control and Sounds menus — drag out blocks and see what they do.\r\n4. Experiment! Try anything you're curious about.\r\n5. Press [Run](#clickable=run-button) to hear your work. \r\n\r\nAs you explore: What do you notice? What do you wonder?",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -103,7 +104,106 @@
       "sounds": {
       },
       "blockMode": "Simple2",
-      "packId": "default"
+      "packId": "default",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "category",
+            "name": "Control",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "play_sounds_together",
+                "id": "play_sounds_together",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_sounds_sequential",
+                "id": "play_sounds_sequential",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "repeat_simple2",
+                "id": "repeat_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "times": 1
+                },
+                "enabled": true
+              }
+            ],
+            "id": "Control"
+          },
+          {
+            "kind": "category",
+            "name": "Play",
+            "contents": [
+              {
+                "kind": "block",
+                "type": "play_tune_at_current_location_simple2",
+                "id": "play_tune_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "tune": {
+                    "instrument": "piano",
+                    "events": [
+
+                    ],
+                    "length": 1,
+                    "relative": false,
+                    "scaleMode": "simple"
+                  }
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_chord_at_current_location_simple2",
+                "id": "play_chord_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "chord": {
+                    "instrument": "piano",
+                    "notes": [
+
+                    ],
+                    "playStyle": "arpeggio-up"
+                  }
+                },
+                "enabled": true
+              },
+              {
+                "kind": "block",
+                "type": "play_rest_at_current_location_simple2",
+                "id": "play_rest_at_current_location_simple2",
+                "extraState": {
+                  "disableNextConnection": false
+                },
+                "fields": {
+                  "rest_duration": "<field name=\"rest_duration\">1</field>"
+                },
+                "enabled": true
+              }
+            ],
+            "id": "Play"
+          }
+        ],
+        "kind": "categoryToolbox"
+      }
     },
     "name_suffix": "_2026_dev",
     "offer_browser_tts": "true",
@@ -116,10 +216,12 @@
       "validationEnabled": false
     },
     "ai_tutor_available": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:18.296+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level1_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level1_v2_2026\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:18.296+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level1_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level1_v2_2026\"},{\"changed_at\":\"2026-07-31 16:52:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 16:56:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:15:09 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:19:13 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 00:20:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-03 20:17:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

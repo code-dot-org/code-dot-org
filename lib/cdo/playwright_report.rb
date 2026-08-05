@@ -17,8 +17,8 @@ module Cdo
     # Recursively upload report_dir, preserving relative paths and per-file
     # content types.
     # @param report_dir [String] path to the playwright-report directory
-    # @return [String, nil] versioned public URL of index.html, or nil if the
-    #   report is missing or the upload fails (best-effort; never raises).
+    # @return [String, nil] public URL of index.html, or nil if the report is
+    #   missing or the upload fails (best-effort; never raises).
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
@@ -28,17 +28,14 @@ module Cdo
         next unless File.file?(path)
         name = path.delete_prefix("#{report_dir}/")
         content_type = Rack::Mime.mime_type(File.extname(path), 'application/octet-stream')
-        url = File.open(path, 'rb') do |body|
+        versioned_url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
-        # Keep the versionId param. On the DTT the key is overwritten every run,
-        # so a versioned link is what survives past the start of the next one.
-        # In Drone the output is namespaced per build and never overwritten, but
-        # a versioned link still lives longer than an unversioned one. See the
-        # cucumber-logs bucket lifecycle configuration in S3 for the current
-        # expiration policy.
-        index_url = url if name == 'index.html'
+        index_url = versioned_url&.split('?', 2)&.first if name == 'index.html'
       end
+      # Unversioned, like the Cucumber status page (upload_status_page_to_s3 in
+      # dashboard/test/ui/runner.rb): the report's JS copies this page's query
+      # onto every link it renders, and a versionId resolves only for its own key.
       index_url
     rescue StandardError => exception
       CDO.log.error "Failed to upload Playwright report: #{exception.message}"

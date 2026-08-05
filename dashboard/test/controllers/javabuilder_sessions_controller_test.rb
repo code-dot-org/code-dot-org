@@ -67,14 +67,32 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :levelbuilder,
     response: :success
 
-  test 'override sources route forwards override validation to helper when present' do
+  test_user_gets_response_for :access_token_with_override_sources_and_validation,
+    method: :post,
+    user: :student,
+    response: :forbidden
+  test_user_gets_response_for :access_token_with_override_sources_and_validation,
+    method: :post,
+    user: :teacher,
+    response: :forbidden
+  test_user_gets_response_for :access_token_with_override_sources_and_validation,
+    method: :post,
+    user: :authorized_teacher,
+    response: :forbidden
+  test_user_gets_response_for :access_token_with_override_sources_and_validation,
+    method: :post,
+    params: {overrideSources: "{'source': {}}", overrideValidation: "{'MyClass.java': {}}", executionType: 'TEST', miniAppType: 'console'},
+    user: :levelbuilder,
+    response: :success
+
+  test 'override sources and validation route forwards override validation to helper' do
     levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     JavalabFilesHelper.unstub(:get_project_files_with_overrides)
     JavalabFilesHelper.expects(:get_project_files_with_overrides).
       with("{'source': {}}", 0, nil, "{'MyClass.java': {}}").
       returns({})
-    post :access_token_with_override_sources, params: {
+    post :access_token_with_override_sources_and_validation, params: {
       overrideSources: "{'source': {}}",
       overrideValidation: "{'MyClass.java': {}}",
       executionType: 'TEST',
@@ -83,15 +101,16 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'override sources route omits override validation when not provided' do
+  test 'override sources route does not forward override validation to helper' do
     levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     JavalabFilesHelper.unstub(:get_project_files_with_overrides)
     JavalabFilesHelper.expects(:get_project_files_with_overrides).
-      with("{'source': {}}", 0, nil, nil).
+      with("{'source': {}}", 0, nil).
       returns({})
     post :access_token_with_override_sources, params: {
       overrideSources: "{'source': {}}",
+      overrideValidation: "{'MyClass.java': {}}",
       executionType: 'RUN',
       miniAppType: 'console'
     }
@@ -209,6 +228,13 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     post :access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
+    assert_response :bad_request
+  end
+
+  test 'param for override sources is required when using override sources and validation route' do
+    levelbuilder = create(:levelbuilder)
+    sign_in(levelbuilder)
+    post :access_token_with_override_sources_and_validation, params: {executionType: 'TEST', miniAppType: 'console'}
     assert_response :bad_request
   end
 

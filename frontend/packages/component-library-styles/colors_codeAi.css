@@ -87,8 +87,8 @@
   --border-neutral-black-fixed: var(--neutral-base-black);
   --border-neutral-white-fixed: var(--neutral-base-white);
   --border-brand-primary: var(--brand-purple-50);
-  --border-brand-light: var(--brand-purple-5);
-  --border-brand-mid: var(--brand-purple-20);
+  --border-brand-light: var(--brand-purple-10);
+  --border-brand-mid: var(--brand-purple-30);
   --border-brand-strong: var(--brand-purple-70);
   --border-error-primary: var(--sentiment-error-50);
   --border-error-light: var(--sentiment-error-10);

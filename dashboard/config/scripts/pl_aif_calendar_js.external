@@ -12,20 +12,16 @@ They learn how to plan, build, and style a web app, how to use AI as a coding pa
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
-    <div>Students will:</div>
+    <div><h2>Students will:</h2></div>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Design and structure a web app, using layout patterns that guide how users think and move through a page.</li>
-      <li>Use CSS and the POUR principles to style a page and make it usable for everyone.</li>
-      <li>Use JavaScript event listeners and handlers to make a web app respond to user actions through the DOM.</li>
-      <li>Use variables, conditionals, loops, and functions to create, test, and refine a working program.</li>
+      <li>Design and structure a web app, using layout patterns that guide how users think and move through a page.</li><br>
+      <li>Use CSS and the POUR principles to style a page and make it usable for everyone.</li><br>
+      <li>Use JavaScript event listeners and handlers to make a web app respond to user actions through the DOM.</li><br>
+      <li>Use variables, conditionals, loops, and functions to create, test, and refine a working program.</li><br>
       <li>Evaluate AI-generated code for correctness and fit, rather than accepting it by default.</li>
     </ul>
   </div>
-  <div>
-    <img src="https://images.code.org/db73fbca8ae8ad9c2f2b36aba4b6f423-image-1740587515537.png" 
-         alt="Icon with computer and code brackets" 
-         style="border-radius: 10px; width: 300px; height: auto;">
-  </div>
+
 </div>
 
 ---
@@ -38,7 +34,7 @@ Take a quick look at the lessons included in this unit using the calendar tool.
 
 This version of the calendar assumes 5 lessons per week and can be customized using the drop-down menu to accommodate your schedule. 
 
-Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+Check out the <a href="https://studio.code.org/s/aif1-2026" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
 <!-- Unit Lesson Calendar -->
 <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 860px; margin: 0 auto; border-radius: 10px; overflow: hidden; border: 1.5px solid #ACA8EA;">
@@ -146,7 +142,7 @@ Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="
 </div>
 <br>
 
-<div style="font-size: 14px; font-weight: bold; background-color: #f7f8fa; padding: 10px; border-left: 5px solid #4c42cf; display: inline-block; color: #000;">
+<div style="font-size: 14pt; font-weight: bold; background-color: #f7f8fa; padding: 10px; border-left: 5px solid #4c42cf; display: inline-block; color: #000;">
     ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/s/aif2-2026' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold; color: #1F1976;'>here</a>.
 </div>
 MARKDOWN

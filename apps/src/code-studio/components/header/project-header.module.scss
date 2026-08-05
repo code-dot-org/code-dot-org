@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 .buttonWrapper {
   float: left;
   display: flex;
@@ -10,4 +12,24 @@
   margin-left: 10;
   margin-right: 0;
   box-shadow: 'none';
+}
+
+// Doubled class out-specifies FontAwesome's own display rule on .fa-solid.
+.buttonIcon.buttonIcon {
+  display: none;
+}
+
+// At tablet widths the header runs out of room, so the project buttons
+// (Rename/Share/Remix) collapse from text to icons. The buttons keep their
+// accessible names via aria-label.
+:global(html.nav-reskin) {
+  @media (max-width: $width-md) {
+    .buttonText {
+      display: none;
+    }
+
+    .buttonIcon.buttonIcon {
+      display: inline;
+    }
+  }
 }
