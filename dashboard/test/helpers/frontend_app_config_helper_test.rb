@@ -7,9 +7,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
   describe '#frontend_app_config' do
     before do
       CDO.stubs(:enable_sentry).returns(false)
-      CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
-      CDO.stubs(:managed_test_server?).returns(false)
-      CDO.stubs(:statsig_force_transmit).returns(false)
+      CDO.stubs(:safe_statsig_api_client_key).returns('')
       DCDO.stubs(:get).with('frontend-observability-sampling-config', {}).returns({})
     end
 
@@ -24,7 +22,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
 
     it 'carries each section owner\'s values through unchanged' do
       CDO.stubs(:enable_sentry).returns(true)
-      CDO.stubs(:managed_test_server?).returns(true)
+      CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
 
       _(JSON.parse(frontend_app_config('test-dsn'))).must_equal(
         {
