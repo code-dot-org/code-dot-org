@@ -719,9 +719,6 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
-  LATAM_GE_REGION_NOTICE_CLICKED: 'LATAM GE region notice clicked',
-  LATAM_GE_REGION_NOTICE_CLOSED: 'LATAM GE region notice closed',
-
   // Pair programming
   PAIRING_ADD_PARTNER_BUTTON_CLICKED:
     'Add pair programming partner button clicked',
