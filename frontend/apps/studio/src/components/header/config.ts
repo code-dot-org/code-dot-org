@@ -7,7 +7,6 @@ import type {
 import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 
 import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
-import ArtistIcon from '@/config/brand/assets/courses/artist-icon.webp';
 import DanceIcon from '@/config/brand/assets/courses/dance-party-icon.webp';
 import GameLabIcon from '@/config/brand/assets/courses/game-lab-icon.webp';
 import AllProjectsIcon from '@/config/brand/assets/courses/header-all-projects-icon.webp';
@@ -81,6 +80,12 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       iconUrl: GameLabIcon,
     },
     {
+      id: 'sketchlab',
+      label: 'Sketch Lab',
+      href: '/projects/sketchlab/new',
+      iconUrl: SketchLabIcon,
+    },
+    {
       id: 'weblab2',
       label: 'Web Lab (New)',
       href: '/projects/weblab2/new',
@@ -99,22 +104,10 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
       iconUrl: PythonLabIcon,
     },
     {
-      id: 'artist',
-      label: 'Artist',
-      href: '/projects/artist/new',
-      iconUrl: ArtistIcon,
-    },
-    {
       id: 'dance',
       label: 'Dance',
       href: '/projects/dance/new',
       iconUrl: DanceIcon,
-    },
-    {
-      id: 'sketchlab',
-      label: 'Sketch Lab',
-      href: '/projects/sketchlab/new',
-      iconUrl: SketchLabIcon,
     },
     {
       id: 'view_all',

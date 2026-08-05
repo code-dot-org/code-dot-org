@@ -81,7 +81,7 @@ class CreateHeader
   def self.get_create_dropdown_contents(options)
     entries = options[:limit_project_types] == "true" ?
       %w(spritelab minecraft_designer music artist dance) :
-      %w(music_dance_ai spritelab applab gamelab weblab2 music pythonlab artist dance sketchlab)
+      %w(music_dance_ai spritelab applab gamelab sketchlab weblab2 music pythonlab dance)
 
     if options[:project_type] &&
         !entries.include?(options[:project_type]) &&
