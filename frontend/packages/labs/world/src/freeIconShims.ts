@@ -41,6 +41,17 @@ export const FREE_ICON_SHIMS: Shim[] = [
     glyph: '\\f100',
     substitute: 'angles-left',
   },
+  {
+    // The reverses of the above
+    name: 'arrow-right-from-line',
+    glyph: '\\f101',
+    substitute: 'angles-right',
+  },
+  {
+    name: 'arrow-right-to-line',
+    glyph: '\\f101',
+    substitute: 'angles-right',
+  },
 ];
 
 /** The stylesheet those shims amount to. */
