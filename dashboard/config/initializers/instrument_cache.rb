@@ -1,4 +1,4 @@
-if CDO.rack_env?(:production, :adhoc) || CDO.test_system?
+if rack_env?(:production, :adhoc) || CDO.test_system?
   # Count hits and misses per cache store.
   ActiveSupport::Notifications.subscribe "cache_read.active_support" do |event|
     metric_name = "ActiveSupportCache#{event.payload[:hit] ? 'Hit' : 'Miss'}"
