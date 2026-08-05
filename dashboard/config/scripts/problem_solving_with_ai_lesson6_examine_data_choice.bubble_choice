@@ -4,7 +4,7 @@ description 'Pick one of the levels below. Review the six profiles and select tw
 
 sublevels
 level 'problem-solving-with-ai-lesson6-examine-data-a'
-level 'problem-solving-with-ai-lesson6-examine-data-b'
-level 'problem-solving-with-ai-lesson6-examine-data-c'
+level 'problem-solving-with-ai-lesson6-examine-data-b-1'
+level 'problem-solving-with-ai-lesson6-examine-data-c-1'
 
 uses_lab2

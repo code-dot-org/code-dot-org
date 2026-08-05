@@ -8,8 +8,206 @@
   "properties": {
     "encrypted": "false",
     "offer_browser_tts": "false",
-    "use_links": "false"
+    "use_links": "true",
+    "display_name": "Hiring Manager",
+    "bubble_choice_description": "Six applicants have applied for an open software development role at Dana's company. Assist her in choosing the most promising two to invite to interviews.",
+    "thumbnail_url": "https://images.code.org/604a219e62ebd79f6471d9b1a7476a8c-slide-one.jpg",
+    "panels": [
+      {
+        "text": "The team is growing! Hiring Manager Dana Okafor has 6 applications for one Software Engineer opening — but time to interview only 2 candidates. Click through the resumes to learn more about each applicant.",
+        "imageUrl": "https://images.code.org/ed784a54a8c5a490c7425bf72d583ad2-slide-one.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-d65fceae-79d4-4e41-9ef8-9568014c0ea2",
+        "layout": "text-top-left",
+        "links": [
+          {
+            "text": "Examine Applicants",
+            "x": 59,
+            "y": 73,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+            "width": 13
+          }
+        ]
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/5c858d0927c8f4202c61a2d380d8be25-slide-two.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+        "links": [
+          {
+            "text": "Jamal",
+            "x": 25,
+            "y": 68,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-e98656b2-239d-411d-9c12-68936d313f6d",
+            "width": 10
+          },
+          {
+            "text": "Samantha",
+            "x": 52,
+            "y": 65,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-551971e6-dfcd-4c75-8219-fb8527e4302a",
+            "width": 13
+          },
+          {
+            "text": "David",
+            "x": 79,
+            "y": 69,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-4dd7a785-ae76-4b06-bbb8-c5caba9abfa3",
+            "width": 11
+          },
+          {
+            "text": "More Applicants ->",
+            "x": 50,
+            "y": 11,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-e8a93d9b-0443-4ac3-8183-eca9edd9ec50",
+            "width": 16
+          }
+        ]
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/6d282e55720eddd0917afc57592cec90-slide-three.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-e8a93d9b-0443-4ac3-8183-eca9edd9ec50",
+        "links": [
+          {
+            "text": "Eric",
+            "x": 25,
+            "y": 69,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-7ecc86c2-7462-4182-87da-6d60644e46cf",
+            "width": 8
+          },
+          {
+            "text": "Aisha",
+            "x": 52,
+            "y": 66,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-c020eda8-daec-4957-96f2-7490d4438cf3",
+            "width": 10
+          },
+          {
+            "text": "Priya",
+            "x": 79,
+            "y": 70,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-35bf5a48-7a63-438d-98f0-1bda21837ec5",
+            "width": 10
+          },
+          {
+            "text": "<- Previous Applicants",
+            "x": 50,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+            "width": 14
+          }
+        ]
+      },
+      {
+        "text": "Jamal — Civil engineer with 5 years in urban infrastructure at the Chicago Transit Authority. Skilled in AutoCAD, Revit, and Civil 3D, with basic Python and SQL. National Engineering Excellence Award winner. Degree: Civil Engineering, UIUC.",
+        "imageUrl": "https://images.code.org/29e1e1b3844f9fcc3b0f240171f22cd8-slide-four.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-e98656b2-239d-411d-9c12-68936d313f6d",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true,
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "Samantha — Software engineer with 4 years in full-stack development and machine learning at Google and Twitch. JavaScript, Python, Ruby, SQL; React, Django, Node.js. Hackathon winner. Degree: Computer Science, Columbia.",
+        "imageUrl": "https://images.code.org/276c84341e92c535178c549aeae66820-slide-five.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-551971e6-dfcd-4c75-8219-fb8527e4302a",
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-right",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true
+      },
+      {
+        "text": "David — Electrical engineer with 2 years in wearables and embedded systems at Fitbit and Tesla. C, C++, Python; Altium Designer, MATLAB. Published in an AI & Robotics journal. Degree: Electrical Engineering, Stanford.",
+        "imageUrl": "https://images.code.org/594f7090a653bc822ed424b225039821-slide-six.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-4dd7a785-ae76-4b06-bbb8-c5caba9abfa3",
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-89e339d1-503a-4dbc-8f98-568066249b88",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-left",
+        "showContinueButton": true,
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "Eric — Full-stack engineer with 7 years building high-performance web apps at Spotify and BuzzFeed. JavaScript, TypeScript, Ruby, SQL; React, Ruby on Rails, Node.js. Spotify Employee of the Year. Degree: Computer Science, USC.",
+        "imageUrl": "https://images.code.org/67723ac57fb1899dbe7b7bce46b6cf52-slide-seven.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-7ecc86c2-7462-4182-87da-6d60644e46cf",
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-e8a93d9b-0443-4ac3-8183-eca9edd9ec50",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-left",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "showContinueButton": true
+      },
+      {
+        "text": "Aisha — Cybersecurity analyst with 5 years at IBM plus an FBI internship. Penetration testing, Python, Wireshark, Metasploit, Linux. Volunteers as a cybersecurity instructor for a high school STEM program. Degree: Cybersecurity, UT Austin.",
+        "imageUrl": "https://images.code.org/df1b7b5099f4bb07d111f76186ea2840-slide-eight.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-c020eda8-daec-4957-96f2-7490d4438cf3",
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-e8a93d9b-0443-4ac3-8183-eca9edd9ec50",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-left",
+        "showContinueButton": true,
+        "fadeInOverPrevious": true,
+        "typing": true
+      },
+      {
+        "text": "Priya — Cloud engineer with 6 years at Amazon and Microsoft, specializing in scalable enterprise systems. Python, Java, JavaScript, Go; AWS, Kubernetes, Terraform. AWS Innovation Award winner. Degree: Computer Science, University of Washington.",
+        "imageUrl": "https://images.code.org/e5eeb9d057db2309a9c3b1fc23cb0ffc-slide-nine.jpg",
+        "key": "problem-solving-with-ai-lesson6-decision-making-choice-c-35bf5a48-7a63-438d-98f0-1bda21837ec5",
+        "links": [
+          {
+            "text": "<- BACK",
+            "x": 10,
+            "y": 10,
+            "targetKey": "problem-solving-with-ai-lesson6-decision-making-choice-c-e8a93d9b-0443-4ac3-8183-eca9edd9ec50",
+            "width": 14
+          }
+        ],
+        "layout": "text-bottom-left",
+        "showContinueButton": true,
+        "fadeInOverPrevious": true,
+        "typing": true
+      }
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-31 15:01:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-31 15:01:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:06:51 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:49:32 +0000\",\"changed\":[\"use_links\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 15:50:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

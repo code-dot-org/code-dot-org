@@ -1,0 +1,88 @@
+name 'pl-aif1-js-weblab-tips'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Pro Tips for Web Lab</h1>
+
+<p>Now that you've had a chance to explore Web Lab, here are some common challenges teachers and students run into, and how to handle them smoothly.</p>
+
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 900px; margin: 20px auto;">
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/65cc70df044c06a2e9750d1a48bf87f1-image-1761073828457.png" alt="AI icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Using the AI</h3>
+      <p>The AI can be a great partner for debugging and creating. Encourage students to ask it for help finding problems in their code or brainstorming ways to improve their project.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        ➡️ Click the AI icon in the top left of the workspace to open the AI bot.
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/fe34dbc344639aa52100c39a6221fccb-image-1761075817469.png" alt="Prompt icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Prompt Engineering</h3>
+      <p>Good prompts lead to better results. Be specific about what you want the AI to do.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        💡 Instead of "make it look better," try "center the box and change the text color to blue."
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/69c5d8e9385c45b8947ab591a1f4dd68-image-1761075768469.png" alt="Code icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Using the Code</h3>
+      <p>Make sure code goes in the right place. HTML handles structure, CSS handles style.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        🧠 Double check which file you're on before editing text.
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/99fe165565cd4611f279861a1e081d18-image-1761074831537.png" alt="Version history icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Version History</h3>
+      <p>Mistakes happen. Get into the habit of saving version history so it's easy to roll back to an earlier version if something breaks.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        🔁 Click the Version History icon, describe the change, and save. This lets students experiment and return to an earlier version if something doesn't work out.
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/67eaece7c88bf7bfb8d2add1266b10e7-image-1761075565221.png" alt="Bug icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Troubleshooting</h3>
+      <p>Something not working? Slow down and look for small details. Missing tags, typos, or misplaced brackets are usually the culprit.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        🔍 Debugging is detective work, not guessing. The AI can help here too.
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; gap: 15px; background-color: #FFFFFF; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px;">
+    <img src="https://images.code.org/f1e674936257f5bc2097fe0a436fb295-image-1761075706724.png" alt="Clock icon" style="width: 20%; max-width: 100px; height: auto; border-radius: 10px;">
+    <div style="flex: 1;">
+      <h3>Lag Time and Patience with Results</h3>
+      <p>Sometimes Web Lab or the AI takes a few seconds to load. Remind students to pause and wait before refreshing or clicking again.</p>
+      <div style="background-color: #E4E2F8; color: #1F1976; padding: 10px 14px; border-left: 5px solid #4C42CF; border-radius: 6px;">
+        ⏳ A little patience keeps things running smoothly.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="background-color: #D5EFFF; color: #06338D; border-radius: 10px; padding: 16px 20px; margin: 20px 0;">
+Which of these do you want to emphasize with your students during this unit?
+</div>
+
+
+<h2>Up Next</h2>
+
+<p>Time to move into the next lesson: Design Foundations.</p>
+MARKDOWN
