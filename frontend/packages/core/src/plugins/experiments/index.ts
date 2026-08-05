@@ -15,20 +15,22 @@ interface StoredExperiment {
   expiration?: number;
 }
 
-/** Experiments enabled in this browser, dropping any whose expiry has passed. */
+/**
+ * Experiments enabled in this browser, dropping any whose expiry has passed.
+ * Storage may hold the same key more than once; the first live entry wins.
+ */
 function localStorageExperiments(): string[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return [];
     const stored = JSON.parse(raw) as StoredExperiment[];
     const now = Date.now();
-    return stored
-      .filter(
-        experiment =>
-          experiment.key &&
-          (experiment.expiration === undefined || experiment.expiration > now),
-      )
-      .map(experiment => experiment.key as string);
+    const live = stored.filter(
+      experiment =>
+        experiment.key &&
+        (experiment.expiration === undefined || experiment.expiration > now),
+    );
+    return [...new Set(live.map(experiment => experiment.key as string))];
   } catch {
     return [];
   }
