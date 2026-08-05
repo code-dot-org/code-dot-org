@@ -65,8 +65,8 @@ function moveNodesByDelta(
  * order. Empty when the selection isn't worth treating as a multi-element
  * move, which leaves the caller on its single-element path.
  *
- * Locked nodes and grouped children are dropped: either can be locked or
- * grouped after the selection was made, and neither may move.
+ * Locked nodes and grouped children are dropped: undo can restore either
+ * state while the selection that predates it is still live.
  */
 export function getSelectionMoveIds(
   selectedIds: ReadonlySet<string>,
