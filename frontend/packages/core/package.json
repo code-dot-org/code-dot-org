@@ -89,12 +89,14 @@
     "@tanstack/react-query": "catalog:",
     "@testing-library/react": "catalog:",
     "@types/flat": "^5.0.5",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "catalog:",
     "@types/tldjs": "^2",
     "@types/uuid": "^10.0.0",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-react-refresh": "catalog:",
+    "js-cookie": "^3.0.5",
     "ky": "catalog:",
     "msw": "catalog:",
     "prettier": "catalog:",
@@ -131,9 +133,6 @@
       "optional": true
     },
     "@statsig/web-analytics": {
-      "optional": true
-    },
-    "js-cookie": {
       "optional": true
     },
     "msw": {

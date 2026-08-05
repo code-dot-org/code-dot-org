@@ -1815,6 +1815,7 @@ __metadata:
     "@tanstack/react-query": "catalog:"
     "@testing-library/react": "catalog:"
     "@types/flat": "npm:^5.0.5"
+    "@types/js-cookie": "npm:^3.0.6"
     "@types/node": "catalog:"
     "@types/tldjs": "npm:^2"
     "@types/uuid": "npm:^10.0.0"
@@ -1824,6 +1825,7 @@ __metadata:
     eslint-plugin-react-refresh: "catalog:"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
+    js-cookie: "npm:^3.0.5"
     ky: "catalog:"
     mitt: "npm:^3.0.1"
     msw: "catalog:"
@@ -1857,8 +1859,6 @@ __metadata:
     "@statsig/session-replay":
       optional: true
     "@statsig/web-analytics":
-      optional: true
-    js-cookie:
       optional: true
     msw:
       optional: true
@@ -7370,6 +7370,13 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "npm:*"
   checksum: 10c0/1647fd402aced5b6edac87274af14ebd6b3a85447ef9ad11853a70fd92a98d35f81a5d3ea9fcb5dbb5834e800c6e35b64475e33fcae6bfa9acc70d61497c54ee
+  languageName: node
+  linkType: hard
+
+"@types/js-cookie@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/js-cookie@npm:3.0.6"
+  checksum: 10c0/173afaf5ea9d86c22395b9d2a00b6adb0006dcfef165d6dcb0395cdc32f5a5dcf9c3c60f97194119963a15849b8f85121e1ae730b03e40bc0c29b84396ba22f9
   languageName: node
   linkType: hard
 
@@ -15845,6 +15852,13 @@ __metadata:
   version: 0.4.4
   resolution: "jpeg-js@npm:0.4.4"
   checksum: 10c0/4d0d5097f8e55d8bbce6f1dc32ffaf3f43f321f6222e4e6490734fdc6d005322e3bd6fb992c2df7f5b587343b1441a1c333281dc3285bc9116e369fd2a2b43a7
+  languageName: node
+  linkType: hard
+
+"js-cookie@npm:^3.0.5":
+  version: 3.0.8
+  resolution: "js-cookie@npm:3.0.8"
+  checksum: 10c0/421912a4a55535bda32b3059835864e1182c3af5b4516df00a060edc1fa5a53d38bb8d5a91d5d305e396206f4fd11e829f17850aa5aa8164118c04d8ebf1ff5d
   languageName: node
   linkType: hard
 
