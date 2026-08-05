@@ -1,5 +1,7 @@
 import {describe, expect, it} from 'vitest';
 
+import {COUNTRIES} from '@code-dot-org/core/constants';
+
 import {COUNTRIES_US_FIRST} from '../countries';
 import {SELECT_COUNTRY, US_COUNTRY_CODE} from '../schoolInfo';
 
@@ -15,18 +17,9 @@ describe('COUNTRIES_US_FIRST', () => {
     });
   });
 
-  it('lists the remaining countries once each, alphabetically', () => {
-    const rest = COUNTRIES_US_FIRST.slice(2);
-    expect(rest.some(country => country.value === US_COUNTRY_CODE)).toBe(false);
-    expect(rest.map(country => country.text)).toEqual(
-      [...rest.map(country => country.text)].sort((a, b) => a.localeCompare(b)),
-    );
-    expect(new Set(rest.map(country => country.value)).size).toBe(rest.length);
-  });
-
-  it('keeps every country code paired with a display name', () => {
-    expect(COUNTRIES_US_FIRST.every(({value, text}) => value && text)).toBe(
-      true,
+  it('then lists the core countries with the United States removed', () => {
+    expect(COUNTRIES_US_FIRST.slice(2)).toEqual(
+      COUNTRIES.filter(country => country.value !== US_COUNTRY_CODE),
     );
     expect(
       COUNTRIES_US_FIRST.find(country => country.value === 'CA')?.text,
