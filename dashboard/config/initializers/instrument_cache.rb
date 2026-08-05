@@ -1,12 +1,12 @@
-# Track hit rate per cache store.
+# Count hits and misses per cache store.
 ActiveSupport::Notifications.subscribe "cache_read.active_support" do |event|
+  metric_name = "ActiveSupportCache#{event.payload[:hit] ? 'Hit' : 'Miss'}"
   Cdo::Metrics.put(
     'Infrastructure',
-    'ActiveSupportCacheRead',
+    metric_name,
     1,
     {
       Environment: CDO.rack_env,
-      Hit: event.payload[:hit].to_s,
       Store: event.payload[:store]
     }
   )
