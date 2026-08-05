@@ -1279,16 +1279,9 @@ FactoryBot.define do
   # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
   # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
-    transient do
-      owner {create(:user)}
-    end
+    association :owner, factory: :user
 
-    updated_ip {'127.0.0.1'}
-
-    after(:build) do |project, evaluator|
-      project_storage = create(:project_storage, user_id: evaluator.owner.id)
-      project.storage_id = project_storage.id
-    end
+    updated_ip {Faker::Internet.unique.public_ip_v4_address}
   end
 
   factory :featured_project do
