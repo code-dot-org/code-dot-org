@@ -924,10 +924,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    create_hourofcode_unit_and_levels
-    hourofcode = Unit.get_from_cache(Unit::HOC_NAME)
-    script_level = ScriptLevel.cache_find(hourofcode.script_levels[0].id)
-    assert_equal(hourofcode.script_levels[0], script_level)
+    unit = create(:unit, :with_levels, levels_count: 2)
+    script_level = ScriptLevel.cache_find(unit.script_levels[0].id)
+    assert_equal(unit.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)
