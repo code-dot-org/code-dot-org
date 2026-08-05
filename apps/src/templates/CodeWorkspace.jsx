@@ -145,6 +145,7 @@ class CodeWorkspace extends React.Component {
               height: '1rem',
               width: '1rem',
               display: 'none',
+              '& > i': {transform: 'translateY(1px)'},
             }}
           >
             <FontAwesomeV6Icon iconName="chevron-left" iconStyle="solid" />
@@ -194,6 +195,7 @@ class CodeWorkspace extends React.Component {
                 borderRadius: '50%',
                 height: '1rem',
                 width: '1rem',
+                '& > i': {transform: 'translateY(1px)'},
               }}
             >
               <FontAwesomeV6Icon iconName="chevron-right" iconStyle="solid" />

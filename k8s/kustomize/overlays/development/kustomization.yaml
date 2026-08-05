@@ -1,11 +1,11 @@
+# Full-app local development: the backend overlay plus the dashboard layer,
+# with dev-mode relaxations for the dashboard deployment.
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../base
+  - ../backend
 components:
-  - ../../components/redis
-  - ../../components/mysql
-  - ../../components/minio
+  - ../../components/dashboard
 patches:
   - path: deployment.patch.yaml
   - path: ingress.patch.yaml

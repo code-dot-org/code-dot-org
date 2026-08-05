@@ -1774,7 +1774,7 @@ __metadata:
     jscodeshift: "npm:^0.15.2"
     jsdom: "catalog:"
     lodash: "npm:^4.17.21"
-    postcss: "npm:^8.5.10"
+    postcss: "npm:^8.5.23"
     postcss-modules: "npm:^6.0.1"
     react: "catalog:"
     react-dom: "catalog:"
@@ -2011,6 +2011,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/lesson-deep-dive@workspace:*, @code-dot-org/lesson-deep-dive@workspace:packages/lesson-deep-dive":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/lesson-deep-dive@workspace:packages/lesson-deep-dive"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@testing-library/react": "catalog:"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    eslint: "catalog:"
+    jsdom: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    stylelint: "catalog:"
+    typescript: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/lint-config@workspace:*, @code-dot-org/lint-config@workspace:packages/lint-config":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lint-config@workspace:packages/lint-config"
@@ -2212,6 +2238,7 @@ __metadata:
     "@code-dot-org/core": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lab": "workspace:*"
+    "@code-dot-org/lesson-deep-dive": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
     "@code-dot-org/oceans-lab": "workspace:*"
@@ -2270,7 +2297,7 @@ __metadata:
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
     "@mui/utils": "catalog:"
-    "@playwright/test": "npm:^1.59.1"
+    "@playwright/test": "catalog:"
     "@tanstack/react-query": "catalog:"
     "@testing-library/dom": "catalog:"
     "@testing-library/jest-dom": "catalog:"
@@ -5792,17 +5819,6 @@ __metadata:
   bin:
     playwright: cli.js
   checksum: 10c0/8c2d94a860d3c254a0b114df2f888ad0a0e9310f45b6059bd5d4da196d965cadf6922267cef0881cfa9784d4bef6d78363d2c2d94caa64be67ff644c41162137
-  languageName: node
-  linkType: hard
-
-"@playwright/test@npm:^1.59.1":
-  version: 1.61.0
-  resolution: "@playwright/test@npm:1.61.0"
-  dependencies:
-    playwright: "npm:1.61.0"
-  bin:
-    playwright: cli.js
-  checksum: 10c0/993f5e30878f50c92c058f7a37f15bca456b794f2818a8c0b75bf09bc947657d56fee836ff4ebee83a869a3471663f0d61ca4eaaae31dd1bcf8bf4342344be35
   languageName: node
   linkType: hard
 
@@ -9516,12 +9532,12 @@ __metadata:
   linkType: hard
 
 "brace-expansion@npm:^1.1.7":
-  version: 1.1.12
-  resolution: "brace-expansion@npm:1.1.12"
+  version: 1.1.18
+  resolution: "brace-expansion@npm:1.1.18"
   dependencies:
     balanced-match: "npm:^1.0.0"
     concat-map: "npm:0.0.1"
-  checksum: 10c0/975fecac2bb7758c062c20d0b3b6288c7cc895219ee25f0a64a9de662dbac981ff0b6e89909c3897c1f84fa353113a721923afdec5f8b2350255b097f12b1f73
+  checksum: 10c0/3432c18a9e2ebf94162d4effb62198bd0adea06a9f332b2c0188df5d5e30b1e51ea3c848b6608e47d0b857ebe1ea5b3888ed3326dd3c4f6f9645c94153cf9c14
   languageName: node
   linkType: hard
 
@@ -12695,9 +12711,9 @@ __metadata:
   linkType: hard
 
 "fast-uri@npm:^2.0.0, fast-uri@npm:^2.1.0":
-  version: 2.4.3
-  resolution: "fast-uri@npm:2.4.3"
-  checksum: 10c0/9207e3c401db8bdb47b4d09cfb5d71bc6f247754a434701273a4ec195f8d740ead9d91d1869ae29442b7ff8f49e18d57298d7d0c19d52bf0b8f23d22d1cb1e68
+  version: 2.4.4
+  resolution: "fast-uri@npm:2.4.4"
+  checksum: 10c0/999344391f328fdbc40f4495e43a1099055d026fc501c30a912844104479afc44202cee4aa37df056c965d925f8ee110935160434ccb24857e0ec7a01613f213
   languageName: node
   linkType: hard
 
@@ -17774,6 +17790,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.16":
+  version: 3.3.17
+  resolution: "nanoid@npm:3.3.17"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/06f7949c7cce5c92c6aea66022f29a1eae7f56e05acbfddf1e049e819b4bf234c44a765cc44da7163482b111677948514012e27acdfa56f95309295768bdae32
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.3.8":
   version: 3.3.8
   resolution: "nanoid@npm:3.3.8"
@@ -18855,15 +18880,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.61.0":
-  version: 1.61.0
-  resolution: "playwright-core@npm:1.61.0"
-  bin:
-    playwright-core: cli.js
-  checksum: 10c0/64cbf5e9f4ad81cbb005d59417e96435e324a6e3801f1c79b36850ad99f6bb90853c4b569a32c49b9eca1e07925bbb2a5a864babdba2178c3c395e0c589d5941
-  languageName: node
-  linkType: hard
-
 "playwright-core@npm:>=1.2.0":
   version: 1.49.0
   resolution: "playwright-core@npm:1.49.0"
@@ -18885,21 +18901,6 @@ __metadata:
   bin:
     playwright: cli.js
   checksum: 10c0/dfe38396e616e5c4f98825ce90037bb96e477c5a2bd9258a24854f8ce72a8a41427b19098863866f85aa0216e70287dd537c4438d761aca93995e31ae099c533
-  languageName: node
-  linkType: hard
-
-"playwright@npm:1.61.0":
-  version: 1.61.0
-  resolution: "playwright@npm:1.61.0"
-  dependencies:
-    fsevents: "npm:2.3.2"
-    playwright-core: "npm:1.61.0"
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    playwright: cli.js
-  checksum: 10c0/079dceebe8b745fa6062a3af928024d0c508177fbf15d61dba09ba173f277465ad3746fdc1b31788ade65428f4d3f92fc8083b44c07381b088721eaa2ea06513
   languageName: node
   linkType: hard
 
@@ -19089,14 +19090,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.10":
-  version: 8.5.14
-  resolution: "postcss@npm:8.5.14"
+"postcss@npm:^8.5.23":
+  version: 8.5.23
+  resolution: "postcss@npm:8.5.23"
   dependencies:
-    nanoid: "npm:^3.3.11"
+    nanoid: "npm:^3.3.16"
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
-  checksum: 10c0/48138207cf5ef5581be1bfe2cb65ccfe0ac75e43888ba045afc8ed6043d7b56aeb3b9a9fe5b353ff554be943cd0cc15d826ccb991525159175971e5ee8ab0237
+  checksum: 10c0/ed714e635b330bb42666ecdd0c0b4f30224ded15b0b0052d6bc2b92832f2cf17d1c1141359453f96f0a84f8fbf4c405a74df187f559163b8f31131b2535455aa
   languageName: node
   linkType: hard
 

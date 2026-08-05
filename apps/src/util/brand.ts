@@ -19,7 +19,7 @@ export type BrandCode =
  * Resolve the current brand from the `data-brand` attribute on `<html>`,
  * which is set server-side in application.html.haml via Cdo::Brand.
  *
- * Returns the default CodeAI brand when:
+ * Returns the default CodeAI Next brand when:
  *  - the attribute is absent (default brand / DCDO flag off)
  *  - the attribute contains an unrecognised value
  */
@@ -42,7 +42,7 @@ export function getCurrentBrand(): BrandCode {
     // SSR or DOM access error — fall through to default
   }
 
-  return BRAND_CODEAI;
+  return BRAND_CODEAI_NEXT;
 }
 
 /**
