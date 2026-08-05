@@ -50,14 +50,6 @@ function JavalabEditorHeader({
         leftJustified
         isDisabled={isReadOnlyWorkspace}
       />
-      <PaneSection
-        style={{
-          flex: '1 1 0',
-        }}
-      >
-        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
-        {editorHeaderText}
-      </PaneSection>
       {backpackEnabled && (
         <Backpack
           id={'javalab-editor-backpack'}
@@ -66,6 +58,14 @@ function JavalabEditorHeader({
           onImport={onBackpackImportFile}
         />
       )}
+      <PaneSection
+        style={{
+          flex: '1 1 0',
+        }}
+      >
+        {showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon />}
+        {editorHeaderText}
+      </PaneSection>
       <PaneButton
         id="javalab-editor-save"
         isLegacyStyles
