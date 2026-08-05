@@ -105,14 +105,13 @@ describe('submitChatContents', () => {
   // (applySchemaDisplayTransform), so what gets saved is the model's response
   // verbatim -- which is what lets the server check saved history against what
   // the model actually produced.
-  it('saves the model response verbatim, without applying jsonSchemaResponseCallback', async () => {
+  it('saves the model response verbatim, without reshaping it', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: '{"answer":"formatted"}',
         status: Status.OK,
       })
     );
-    const jsonSchemaResponseCallback = jest.fn(() => 'formatted response');
     const store = makeStore();
 
     const result = await store.dispatch(
@@ -120,12 +119,10 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    expect(jsonSchemaResponseCallback).not.toHaveBeenCalled();
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -144,9 +141,6 @@ describe('submitChatContents', () => {
         status: Status.ERROR,
       })
     );
-    const jsonSchemaResponseCallback = jest.fn(() => {
-      throw new Error('should never be invoked');
-    });
     const store = makeStore();
 
     const result = await store.dispatch(
@@ -154,12 +148,10 @@ describe('submitChatContents', () => {
         text: 'Hello',
         modelParameters,
         clientType: AiChatClientTypes.AI_TUTOR,
-        jsonSchemaResponseCallback,
       })
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    expect(jsonSchemaResponseCallback).not.toHaveBeenCalled();
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({

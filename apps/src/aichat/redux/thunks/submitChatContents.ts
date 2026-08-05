@@ -60,13 +60,6 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
-      /**
-       * No longer consumed here. The transform moved to render time
-       * (applySchemaDisplayTransform) so stored history holds the model's
-       * response verbatim. Kept on the input type so existing callers still
-       * compile; remove once they stop passing it.
-       */
-      jsonSchemaResponseCallback?: (response: unknown) => string;
       lessonId?: number;
     },
     thunkAPI

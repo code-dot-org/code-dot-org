@@ -34,7 +34,6 @@ interface UserChatMessageEditorProps {
   chatButtons?: ChatButtonAndKey[];
   hiddenContextCallback?: () => Promise<string>;
   multimodalAvailable?: boolean;
-  jsonSchemaResponseCallback?: (response: unknown) => string;
   currentLevelId?: string | null;
   sendDisabled?: boolean;
   onMessageSent?: () => void;
@@ -62,7 +61,6 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatButtons,
   hiddenContextCallback,
   multimodalAvailable,
-  jsonSchemaResponseCallback,
   currentLevelId,
   lessonId,
   levelName,
@@ -128,7 +126,6 @@ const UserChatMessageEditor: React.FunctionComponent<
               Object.values(userAddedSelectionContext).length > 0
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
-            jsonSchemaResponseCallback,
             lessonId,
           })
         );
@@ -145,7 +142,6 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       userAddedSelectionContext,
-      jsonSchemaResponseCallback,
       lessonId,
       onMessageSent,
     ]

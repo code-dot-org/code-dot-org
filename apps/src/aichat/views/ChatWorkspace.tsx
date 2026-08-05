@@ -446,7 +446,6 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               chatButtons={chatButtons}
               hiddenContextCallback={hiddenContextCallback}
               multimodalAvailable={canUploadAssets}
-              jsonSchemaResponseCallback={jsonSchemaResponseCallback}
               levelName={levelName}
               hasStarterAssets={hasStarterAssets}
               buildAssetUrl={buildAssetUrlValue}
