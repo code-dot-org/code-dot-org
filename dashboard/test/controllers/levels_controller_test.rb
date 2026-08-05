@@ -1386,6 +1386,43 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal level.name, properties[level.id.to_s]["name"]
   end
 
+  # level_properties is open to signed out users, so the widget2 parameter must be
+  # ignored unless the user could edit a widget2.
+  test "level_properties ignores the widget2 parameter for a student" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:student)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
+  test "level_properties honors the widget2 parameter for a levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    Weblab2.any_instance.stubs(:get_widget2_sources).returns({files: {'1' => {name: 'widget.html'}}})
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'mywidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_equal 'widget.html', properties[level.id.to_s].dig("startSources", "files", "1", "name")
+  end
+
+  test "level_properties leaves start sources alone for a widget2 with no sources yet" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    level = create(:weblab2)
+    sign_in create(:levelbuilder)
+
+    get :level_properties, params: {id: level.id, widget2: 'nosuchwidget'}
+    assert_response :success
+    properties = JSON.parse(@response.body)
+    assert_nil properties[level.id.to_s]["startSources"]
+  end
+
   test "level_properties includes sublevels if present" do
     level = create(:bubble_choice_level, :with_sublevels)
     get :level_properties, params: {id: level.id}
