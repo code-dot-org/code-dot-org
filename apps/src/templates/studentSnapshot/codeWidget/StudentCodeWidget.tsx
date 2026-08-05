@@ -19,23 +19,16 @@ interface StudentCodeWidgetProps {
 
 interface StudentCodeData {
   studentCode: Record<string, string>;
-  studentCodeUrls?: Record<string, string>;
 }
 
 const getStudentCode = (
   unitId: number,
   lessonId: number,
   studentId: number
-): Promise<StudentCodeData> => {
+): Promise<Record<string, string>> => {
   return HttpClient.fetchJson<StudentCodeData>(
     `/student_snapshots/units/${unitId}/lessons/${lessonId}/students/${studentId}/code`
-  ).then(
-    response =>
-      response?.value || {
-        studentCode: {},
-        studentCodeUrls: {},
-      }
-  );
+  ).then(response => response?.value?.studentCode || {});
 };
 
 const StudentCodeWidget = ({
@@ -46,10 +39,7 @@ const StudentCodeWidget = ({
   selectedStudentId,
   hasCodeLevel,
 }: StudentCodeWidgetProps) => {
-  const [studentCode, setStudentCode] = useState<StudentCodeData>({
-    studentCode: {},
-    studentCodeUrls: {},
-  });
+  const [studentCode, setStudentCode] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState<boolean>(true);
   useEffect(() => {
     if (selectedUnitId && selectedLessonId && selectedStudentId) {
@@ -60,32 +50,30 @@ const StudentCodeWidget = ({
         })
         .catch(error => {
           console.error('Error fetching student code:', error);
-          setStudentCode({studentCode: {}, studentCodeUrls: {}});
+          setStudentCode({});
         })
         .finally(() => {
           setIsLoading(false);
         });
     } else {
-      setStudentCode({studentCode: {}, studentCodeUrls: {}});
+      setStudentCode({});
     }
   }, [selectedUnitId, selectedLessonId, selectedStudentId]);
 
   const codeData = useMemo<MultiFileSource | undefined>(() => {
-    const {studentCode: codeFiles, studentCodeUrls: urls} = studentCode;
-    if (!codeFiles || Object.keys(codeFiles).length === 0) {
+    if (!studentCode || Object.keys(studentCode).length === 0) {
       return undefined;
     }
 
     const files: Record<string, ProjectFile> = {};
     const fileIds: string[] = [];
 
-    Object.entries(codeFiles).forEach(([filename, contents], index) => {
+    Object.entries(studentCode).forEach(([filename, contents], index) => {
       const fileId = `file_${index}`;
       files[fileId] = {
         id: fileId,
         name: filename,
         contents: contents,
-        url: urls?.[filename],
         folderId: 'root',
         active: index === 0, // Make first file active
       };

@@ -229,10 +229,7 @@ class StudentSnapshotsController < ApplicationController
 
     if level
       student_code_data = get_student_code(params[:student_id], level, params[:unit_id])
-      render json: {
-        studentCode: student_code_data[:student_code],
-        studentCodeUrls: student_code_data[:student_code_urls],
-      }
+      render json: {studentCode: student_code_data[:student_code]}
     else
       render json: {studentCode: nil}
     end

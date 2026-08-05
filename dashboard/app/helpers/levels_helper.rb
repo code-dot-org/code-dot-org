@@ -1033,7 +1033,6 @@ module LevelsHelper
         return
       end
       student_code = nil
-      student_code_urls = {}
       if body
         parsed = JSON.parse(body)
         source = parsed['source']
@@ -1042,9 +1041,6 @@ module LevelsHelper
           student_code = {}
           source['files'].each do |_, file_obj|
             student_code[file_obj['name']] = file_obj['contents']
-            # Asset files (e.g. images) store their data at file_obj['url']
-            # rather than inline in file_obj['contents'].
-            student_code_urls[file_obj['name']] = file_obj['url'] if file_obj['url'].present?
           end
         else
           student_code = source
@@ -1055,7 +1051,6 @@ module LevelsHelper
       project_id: channel_id,
       code_version: code_version,
       student_code: student_code,
-      student_code_urls: student_code_urls,
     }
   end
 end
