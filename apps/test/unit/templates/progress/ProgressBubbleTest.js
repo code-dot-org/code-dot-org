@@ -104,15 +104,13 @@ describe('ProgressBubble', () => {
     expect(style.backgroundColor).to.equal('var(--background-success-primary)');
   });
 
-  it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
+  it('has a green background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
     const style = styleForStatus(
       LevelStatus.completed_assessment,
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(
-      'var(--background-brand-purple-primary)'
-    );
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
   });
 
   it('has green border and white background for in progress level', () => {
@@ -129,16 +127,14 @@ describe('ProgressBubble', () => {
     expect(style.borderColor).to.equal('var(--background-success-primary)');
   });
 
-  it('has a purple background for submitted level', () => {
+  it('has a green background for submitted level', () => {
     const style = styleForStatus(
       LevelStatus.submitted,
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(
-      'var(--background-brand-purple-primary)'
-    );
-    expect(style.borderColor).to.equal('var(--borders-brand-purple-primary)');
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
     expect(style.color).to.equal('var(--text-neutral-inverse)');
   });
 
@@ -305,6 +301,60 @@ describe('ProgressBubble', () => {
 
     const badge = wrapper.find(BubbleBadge);
     expect(badge).to.have.lengthOf(0);
+  });
+
+  it('renders small unstarted assessment bubble as a black star in a white circle with gray outline', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.not_tried,
+      {smallBubble: true},
+      {kind: LevelKind.assessment}
+    );
+
+    const star = bubble.find('FontAwesome').filter({icon: 'star'});
+    expect(star).to.have.lengthOf(1);
+
+    const style = bubble.childAt(0).props().style;
+    expect(style.backgroundColor).to.equal('var(--background-neutral-primary)');
+    expect(style.borderColor).to.equal('var(--borders-neutral-primary)');
+    expect(style.color).to.equal('var(--text-neutral-primary)');
+  });
+
+  it('renders small completed assessment bubble as a white star in a green circle', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.completed_assessment,
+      {smallBubble: true},
+      {kind: LevelKind.assessment}
+    );
+
+    const star = bubble.find('FontAwesome').filter({icon: 'star'});
+    expect(star).to.have.lengthOf(1);
+
+    const style = bubble.childAt(0).props().style;
+    expect(style.backgroundColor).to.equal('var(--background-success-primary)');
+    expect(style.borderColor).to.equal('var(--background-success-primary)');
+    expect(style.color).to.equal('var(--text-neutral-inverse)');
+  });
+
+  it('does not render a star in small non-assessment bubble', () => {
+    const bubble = getBasicBubble(LevelStatus.perfect, {smallBubble: true});
+    expect(bubble.find('FontAwesome').filter({icon: 'star'})).to.have.lengthOf(
+      0
+    );
+  });
+
+  it('keeps status styling on small assessment bubble when hideAssessmentBadge is true', () => {
+    const bubble = getBasicBubble(
+      LevelStatus.perfect,
+      {smallBubble: true, hideAssessmentBadge: true},
+      {kind: LevelKind.assessment}
+    );
+
+    expect(bubble.find('FontAwesome').filter({icon: 'star'})).to.have.lengthOf(
+      0
+    );
+    expect(bubble.childAt(0).props().style.backgroundColor).to.equal(
+      'var(--background-success-primary)'
+    );
   });
 
   it('renders a pill shape for unplugged lessons', () => {
