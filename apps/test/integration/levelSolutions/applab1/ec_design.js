@@ -135,7 +135,7 @@ module.exports = {
   levelId: 'ec_simple',
   tests: [
     {
-      description: 'button image with absolute url',
+      description: 'button image with relative path',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {
@@ -169,7 +169,7 @@ module.exports = {
       },
     },
     {
-      description: 'button image url correct with fully qualified url',
+      description: 'button image url correct with absolute url',
       editCode: true,
       xml: '',
       runBeforeClick: function (assert) {

@@ -7,7 +7,10 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {moderateApplabImageUrl} from '@cdo/apps/applab/imageUrlModeration';
+import {
+  isAbsoluteImageUrl,
+  moderateApplabImageUrl,
+} from '@cdo/apps/applab/imageUrlModeration';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
@@ -97,23 +100,13 @@ export default class ImagePickerPropertyRow extends React.Component {
   };
 
   changeImageInternal = async (filename, timestamp) => {
-    // Absolute URLs typed directly in the property row bypass the URL picker,
-    // so moderate them before applying.
-    // Picker flows usually pass a timestamp. When it's missing, treat this as
-    // direct URL entry and moderate the absolute URL.
-    if (!timestamp) {
+    // Moderate only manual absolute URL entry; picker callbacks include a
+    // timestamp and URL-picker flows have already moderated absolute URLs.
+    if (!timestamp && isAbsoluteImageUrl(filename)) {
       const requestId = ++this.moderationRequestId;
       const {status, normalizedUrl} = await moderateApplabImageUrl(filename);
 
       if (requestId !== this.moderationRequestId) {
-        return;
-      }
-
-      if (status === 'invalid-url') {
-        this.props.handleChange(filename, timestamp);
-        if (this.isMounted_) {
-          this.setState({value: filename, errorMessage: null});
-        }
         return;
       }
 
