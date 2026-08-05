@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_07_29_204552) do
+ActiveRecord::Schema[7.0].define(version: 2026_08_05_182458) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -489,14 +489,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_07_29_204552) do
     t.integer "level_id"
     t.index ["concept_id"], name: "index_concepts_levels_on_concept_id"
     t.index ["level_id"], name: "index_concepts_levels_on_level_id"
-  end
-
-  create_table "contact_rollups_final", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "email", null: false
-    t.json "data", null: false
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["email"], name: "index_contact_rollups_final_on_email", unique: true
   end
 
   create_table "contact_rollups_pardot_memory", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
