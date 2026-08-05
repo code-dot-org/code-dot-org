@@ -55,11 +55,13 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
   # ---------------------------------------------------------------------------
 
   test 'get_insight_system_prompt compiles the Langfuse-sourced template when the fetch succeeds' do
-    LangfuseHelper.stubs(:fetch_ta_prompt).returns(status: :ok, json: {'prompt' => 'Custom insight template for {{lesson_name}}'})
+    LangfuseHelper.stubs(:fetch_ta_prompt).returns(status: :ok, json: {'prompt' => 'Custom insight template for {{lesson_name}}', 'version' => 3})
 
     result = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(@lesson.id, @unit.id, @student.id, @teacher.id, @section.id)
 
-    assert_equal "Custom insight template for #{@lesson.name}", result
+    assert_equal "Custom insight template for #{@lesson.name}", result[:content]
+    assert_equal "teaching-assistant/student-snapshot/lesson-insight", result[:prompt_name]
+    assert_equal 3, result[:prompt_version]
   end
 
   test 'get_insight_system_prompt falls back to the local constant when the fetch fails' do
@@ -67,17 +69,21 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
 
     result = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(@lesson.id, @unit.id, @student.id, @teacher.id, @section.id)
 
-    assert_includes result, "You are a teaching assistant for a computer science curriculum."
-    assert_includes result, "Lesson Name: #{@lesson.name}"
-    refute_includes result, "{{lesson_name}}"
+    assert_includes result[:content], "You are a teaching assistant for a computer science curriculum."
+    assert_includes result[:content], "Lesson Name: #{@lesson.name}"
+    refute_includes result[:content], "{{lesson_name}}"
+    assert_nil result[:prompt_name]
+    assert_nil result[:prompt_version]
   end
 
   test 'get_feedback_system_prompt compiles the Langfuse-sourced template when the fetch succeeds' do
-    LangfuseHelper.stubs(:fetch_ta_prompt).returns(status: :ok, json: {'prompt' => 'Custom feedback template for {{lesson_name}}'})
+    LangfuseHelper.stubs(:fetch_ta_prompt).returns(status: :ok, json: {'prompt' => 'Custom feedback template for {{lesson_name}}', 'version' => 2})
 
     result = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(@lesson.id, @unit.id, @student.id, @teacher.id, @section.id)
 
-    assert_equal "Custom feedback template for #{@lesson.name}", result
+    assert_equal "Custom feedback template for #{@lesson.name}", result[:content]
+    assert_equal "teaching-assistant/student-snapshot/lesson-feedback", result[:prompt_name]
+    assert_equal 2, result[:prompt_version]
   end
 
   test 'get_feedback_system_prompt falls back to the local constant when the fetch fails' do
@@ -85,8 +91,10 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
 
     result = AiSystemPrompts::StudentSnapshotPromptHelper.get_feedback_system_prompt(@lesson.id, @unit.id, @student.id, @teacher.id, @section.id)
 
-    assert_includes result, "I need you to provide constructive student-facing feedback"
-    assert_includes result, "Lesson Name: #{@lesson.name}"
-    refute_includes result, "{{lesson_name}}"
+    assert_includes result[:content], "I need you to provide constructive student-facing feedback"
+    assert_includes result[:content], "Lesson Name: #{@lesson.name}"
+    refute_includes result[:content], "{{lesson_name}}"
+    assert_nil result[:prompt_name]
+    assert_nil result[:prompt_version]
   end
 end
