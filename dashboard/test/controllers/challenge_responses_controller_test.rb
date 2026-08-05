@@ -38,6 +38,17 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['student_text']).must_equal 'my answer'
       end
 
+      it 'creates a response owned by the current user, including transcript' do
+        assert_difference 'ChallengeResponse.count', 1 do
+          post :create, params: {challenge_id: challenge.id, transcript: 'beep boop'}
+        end
+
+        assert_response :created
+        _(response_json['challenge_id']).must_equal challenge.id
+        _(response_json['user_id']).must_equal student.id
+        _(response_json['transcript']).must_equal 'beep boop'
+      end
+
       it 'creates an asset row per asset_type, without download URLs' do
         assert_difference 'ChallengeResponseAsset.count', 2 do
           post :create, params: {
