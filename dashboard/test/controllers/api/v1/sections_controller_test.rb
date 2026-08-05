@@ -1641,9 +1641,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert json_response['name'].present?
   end
 
-  test 'get suggested_lesson recomputes when data is stale' do
+  test 'get suggested_lesson recomputes when data is from a previous day' do
     section, student, lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
-    stale_timestamp = 2.hours.ago.utc.iso8601
+    stale_timestamp = Time.zone.yesterday.end_of_day.utc.iso8601
     section.update!(suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => stale_timestamp})
     create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
 
@@ -1753,7 +1753,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'suggested_lessons returns fresh stored data without recomputing' do
     section, _student, _lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
     fresh_timestamp = Time.now.utc.iso8601
-    section.update!(suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => fresh_timestamp})
+    section.update!(
+      suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => fresh_timestamp},
+      suggested_lesson_history: [{'lesson_id' => lesson2.id, 'date' => Time.zone.today.iso8601}]
+    )
 
     sign_in @teacher
     get :suggested_lessons
@@ -1761,6 +1764,84 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     result = json_response[section.id.to_s]
     assert_equal lesson2.id, result['lesson_id']
     assert_equal fresh_timestamp, result['timestamp']
+  end
+
+  test 'suggested_lessons recomputes when suggested_lesson_history is nil' do
+    section, student, _lesson1, lesson2, sl1, _sl2 = setup_suggested_lesson_section
+    create(:user_level, user: student, level: sl1.oldest_active_level, script_id: section.script.id, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
+    section.update!(suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => Time.now.utc.iso8601})
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    history = json_response[section.id.to_s]['history']
+    assert_equal 1, history.length
+    assert_equal Time.zone.today.iso8601, history.first['date']
+  end
+
+  test 'suggested_lessons response includes history entries' do
+    section, _student, lesson1, _lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    yesterday = (Time.zone.today - 1).iso8601
+    section.update!(
+      suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [
+        {'lesson_id' => lesson1.id, 'date' => yesterday},
+        {'lesson_id' => lesson1.id, 'date' => Time.zone.today.iso8601}
+      ]
+    )
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    history = json_response[section.id.to_s]['history']
+    assert_equal 2, history.length
+    assert(history.any? {|e| e['date'] == yesterday})
+    assert(history.all? {|e| e['lesson_id'] == lesson1.id})
+    assert(history.all? {|e| e['name'].present?})
+  end
+
+  test 'suggested_lessons coming_up returns the next lesson in sequence' do
+    section, _student, lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    section.update!(
+      suggested_lesson: {'lesson_id' => lesson1.id, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => lesson1.id, 'date' => Time.zone.today.iso8601, 'coming_up' => {'lesson_id' => lesson2.id}}]
+    )
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    coming_up = json_response[section.id.to_s]['coming_up']
+    assert_equal lesson2.id, coming_up['lesson_id']
+    assert coming_up['name'].present?
+    assert coming_up['url'].present?
+  end
+
+  test 'suggested_lessons coming_up has completed_unit when suggested lesson is the last in the unit' do
+    section, _student, _lesson1, lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    section.update!(
+      suggested_lesson: {'lesson_id' => lesson2.id, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [{'lesson_id' => lesson2.id, 'date' => Time.zone.today.iso8601, 'coming_up' => {'completed_unit' => true}}]
+    )
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    coming_up = json_response[section.id.to_s]['coming_up']
+    assert coming_up['completed_unit']
+  end
+
+  test 'suggested_lessons coming_up reflects completed_unit when unit is finished' do
+    section, _student, _lesson1, _lesson2, _sl1, _sl2 = setup_suggested_lesson_section
+    section.update!(
+      suggested_lesson: {'completed_unit' => true, 'timestamp' => Time.now.utc.iso8601},
+      suggested_lesson_history: [{'completed_unit' => true, 'date' => Time.zone.today.iso8601, 'coming_up' => {'completed_unit' => true}}]
+    )
+
+    sign_in @teacher
+    get :suggested_lessons
+    assert_response :success
+    coming_up = json_response[section.id.to_s]['coming_up']
+    assert coming_up['completed_unit']
   end
 
   test 'suggested_lessons excludes hidden sections' do
