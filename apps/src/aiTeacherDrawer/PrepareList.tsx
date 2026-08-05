@@ -6,6 +6,7 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import LessonSummaryScreen from './LessonSummaryScreen';
 import SectionPodcastCard, {
   SuggestedLesson,
   SuggestedLessonEntry,
@@ -36,7 +37,11 @@ function formatDate(isoDate: string): string {
   });
 }
 
-const PrepareList: React.FC = () => {
+interface PrepareListProps {
+  onNavigateToChats?: () => void;
+}
+
+const PrepareList: React.FC<PrepareListProps> = ({onNavigateToChats}) => {
   const dispatch = useAppDispatch();
   const sections = useAppSelector(state => state.teacherSections);
   const [suggestedLessons, setSuggestedLessons] = useState<Record<
@@ -46,6 +51,10 @@ const PrepareList: React.FC = () => {
 
   const todayISO = useMemo(() => localISODate(new Date()), []);
   const [selectedDate, setSelectedDate] = useState<string>(todayISO);
+  const [detailInfo, setDetailInfo] = useState<{
+    lesson: SuggestedLesson;
+    sectionName: string;
+  } | null>(null);
 
   useEffect(() => {
     dispatch(asyncLoadSectionData());
@@ -94,6 +103,17 @@ const PrepareList: React.FC = () => {
     return data.history?.find(e => e.date === selectedDate) ?? null;
   }
 
+  if (detailInfo) {
+    return (
+      <LessonSummaryScreen
+        lesson={detailInfo.lesson}
+        sectionName={detailInfo.sectionName}
+        onBack={() => setDetailInfo(null)}
+        onNavigateToChats={onNavigateToChats}
+      />
+    );
+  }
+
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>Prepare</h2>
@@ -112,17 +132,26 @@ const PrepareList: React.FC = () => {
       {activeSections.length === 0 ? (
         <div className={styles.emptyState}>No active sections found.</div>
       ) : (
-        activeSections.map(section => (
-          <SectionPodcastCard
-            key={section.id}
-            sectionName={section.name}
-            avatarColor={section.avatar_color ?? 0}
-            avatarEmoji={section.avatar_emoji ?? 0}
-            lesson={lessonForDate(
-              suggestedLessons ? suggestedLessons[section.id] : undefined
-            )}
-          />
-        ))
+        activeSections.map(section => {
+          const lesson = lessonForDate(
+            suggestedLessons ? suggestedLessons[section.id] : undefined
+          );
+          return (
+            <SectionPodcastCard
+              key={section.id}
+              sectionName={section.name}
+              avatarColor={section.avatar_color ?? 0}
+              avatarEmoji={section.avatar_emoji ?? 0}
+              lesson={lesson}
+              onSectionClick={
+                lesson != null
+                  ? () =>
+                      setDetailInfo({lesson, sectionName: section.name})
+                  : undefined
+              }
+            />
+          );
+        })
       )}
     </div>
   );
