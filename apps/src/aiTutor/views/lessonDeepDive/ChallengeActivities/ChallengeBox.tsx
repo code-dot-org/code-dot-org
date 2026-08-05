@@ -93,6 +93,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({lessonId}) => {
             submitted={submitted}
             submitCallback={setSubmitted}
             challenge={challenge}
+            lessonId={lessonId}
           />
         )}
         <div className={styles.challengeToggle}>
