@@ -15,6 +15,7 @@ import {
   DELETE_WRONG_PASSWORD,
   INVALID_PARENT_EMAIL,
   MALFORMED_EMAIL,
+  SCHOOL_INFO_MISSING,
   SHORT_PASSWORD,
   TAKEN_USERNAME,
   WRONG_PASSWORD,
@@ -126,6 +127,40 @@ const US_STATE_OPTIONS = [
   ['WY', 'Wyoming'],
 ].map(([value, text]) => ({value, text}));
 
+// Stands in for SharedConstants::EDUCATOR_ROLES.
+const EDUCATOR_ROLE_OPTIONS = [
+  ['classroom_teacher', 'Classroom Teacher', 'educator'],
+  ['stem_tech_teacher', 'STEM/Technology Teacher', 'educator'],
+  ['subject_area_teacher', 'Subject Area Teacher', 'educator'],
+  ['librarian_media_specialist', 'Librarian/Media Specialist', 'educator'],
+  ['homeschool_teacher', 'Homeschool Teacher', 'educator'],
+  ['school_admin', 'School Administrator', 'admin'],
+  ['district_admin', 'District Administrator', 'admin'],
+  ['parent', 'Parent', 'other'],
+  ['other', 'Other', 'other'],
+].map(([value, text, category]) => ({value, text, category}));
+
+// 30305 is a valid zip with no schools, for the empty-list state.
+const ZIP_SEARCH_RESULTS: Record<string, {nces_id: string; name: string}[]> = {
+  '98101': [
+    {nces_id: '100000000001', name: 'Example Elementary School'},
+    {nces_id: '100000000002', name: 'Example Middle School'},
+    {nces_id: '100000000003', name: 'Example High School'},
+  ],
+  '30305': [],
+};
+
+// A sent school_id carries no name or zip; the server backfills both from NCES.
+function cannedSchool(
+  schoolId: string,
+): {name: string; zip: string} | undefined {
+  for (const [zip, schools] of Object.entries(ZIP_SEARCH_RESULTS)) {
+    const school = schools.find(({nces_id}) => nces_id === schoolId);
+    if (school) return {name: school.name, zip};
+  }
+  return undefined;
+}
+
 function readSettings(
   ctx: MockResponderContext,
   scenario: UsersScenario,
@@ -156,11 +191,50 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
     {
       method: 'get',
       path: '*/api/v1/users/me/settings',
-      respond: ctx => ({
-        ...readSettings(ctx, scenario),
-        age_options: AGE_OPTIONS,
-        us_state_options: US_STATE_OPTIONS,
-      }),
+      respond: ctx => {
+        const settings = readSettings(ctx, scenario);
+        return {
+          ...settings,
+          age_options: AGE_OPTIONS,
+          us_state_options: US_STATE_OPTIONS,
+          ...(settings.user_type === 'teacher' && {
+            educator_role_options: EDUCATOR_ROLE_OPTIONS,
+          }),
+        };
+      },
+    },
+    {
+      method: 'get',
+      path: '*/dashboardapi/v1/schoolzipsearch/:zip',
+      respond: ctx => ZIP_SEARCH_RESULTS[String(ctx.params.zip)] ?? [],
+    },
+    {
+      method: 'patch',
+      path: '*/api/v1/user_school_infos',
+      respond: async ctx => {
+        const user = await readUserBody(ctx);
+        const attributes = isRecord(user.school_info_attributes)
+          ? user.school_info_attributes
+          : {};
+        const schoolId = asString(attributes.school_id);
+        const country = asString(attributes.country);
+        // The controller guards on this pair before touching the record.
+        if (!schoolId && !country) return json(SCHOOL_INFO_MISSING, 422);
+
+        const canned = schoolId ? cannedSchool(schoolId) : undefined;
+        ctx.store.write('settings', {
+          ...readSettings(ctx, scenario),
+          school_info: {
+            school_name:
+              canned?.name ?? asString(attributes.school_name) ?? null,
+            school_type: asString(attributes.school_type) ?? null,
+            school_id: schoolId ?? null,
+            school_zip: canned?.zip ?? asString(attributes.zip) ?? null,
+            country: country ?? (schoolId ? 'US' : null),
+          },
+        });
+        return json(null, 204);
+      },
     },
     {
       method: 'patch',
@@ -184,6 +258,7 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
         const username = asString(user.username);
         const age = asStringOrNumber(user.age);
         const usState = asNullableString(user.us_state);
+        const educatorRole = asString(user.educator_role);
 
         const settings: UsersSettingsSeed = {
           ...readSettings(ctx, scenario),
@@ -193,6 +268,7 @@ function scenarioRoutes(tag: UsersScenarioTag): MockRoute[] {
           ...(username !== undefined && {username}),
           ...(age !== undefined && {age}),
           ...(usState !== undefined && {us_state: usState}),
+          ...(educatorRole !== undefined && {educator_role: educatorRole}),
           ...(typeof user.password === 'string' && {has_password: true}),
         };
         ctx.store.write('settings', settings);
