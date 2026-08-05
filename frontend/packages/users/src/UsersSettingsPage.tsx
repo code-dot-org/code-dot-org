@@ -11,19 +11,19 @@ import {
   useCurrentUser,
 } from '@code-dot-org/core/api';
 
+import EducatorProfileForm from './components/EducatorProfileForm';
 import UsersDetailsForm from './components/UsersDetailsForm';
 import styles from './UsersSettingsPage.module.css';
 
 const ACCOUNT_DETAILS_TAB = 'account-details';
+const EDUCATOR_PROFILE_TAB = 'educator-profile';
 
-// Account Details is the only functional tab; the rest are disabled placeholders
-// (legacy parity). Educator Profile is hidden for students.
+// The placeholder tabs ship disabled rather than hidden, for legacy parity.
 const TAB_META = [
   {value: ACCOUNT_DETAILS_TAB, text: 'Account Details'},
   {
-    value: 'educator-profile',
+    value: EDUCATOR_PROFILE_TAB,
     text: 'Educator Profile',
-    disabled: true,
     educatorOnly: true,
   },
   {value: 'communications', text: 'Communications', disabled: true},
@@ -58,12 +58,23 @@ export default function UsersSettingsPage({
   const visibleTabs = TAB_META.filter(t => !(t.educatorOnly && isStudent));
 
   const activeTab =
-    tab && TAB_META.some(t => t.value === tab && !t.disabled)
+    tab && visibleTabs.some(t => t.value === tab && !t.disabled)
       ? tab
       : ACCOUNT_DETAILS_TAB;
 
+  // A requested tab can disappear under the user (an educator switches to
+  // student). DSCO's Tabs falls back to the first tab without telling the host,
+  // leaving its URL pointing at a tab that no longer exists.
+  useEffect(() => {
+    if (tab && tab !== activeTab) onTabChange?.(activeTab);
+  }, [tab, activeTab, onTabChange]);
+
   const isPending = currentUser.isPending || settings.isPending;
-  const isError = currentUser.isError || settings.isError;
+  // Only until first data: a failed background refetch keeps the cached
+  // settings, because unmounting the tabs would discard form state.
+  const isError =
+    (currentUser.isError && !currentUser.data) ||
+    (settings.isError && !settings.data);
 
   const retry = () => {
     if (currentUser.isError) void currentUser.refetch();
@@ -82,27 +93,44 @@ export default function UsersSettingsPage({
     wasError.current = isError;
   }, [isPending, isError, settings.data]);
 
-  // Only Account Details carries content; the placeholders render an empty panel.
+  const tabContent = (value: string) => {
+    const data = settings.data;
+    if (!data) return null;
+
+    if (value === ACCOUNT_DETAILS_TAB) {
+      return (
+        <FormProvider
+          initialValues={{
+            given_name: data.givenName ?? '',
+            family_name: data.familyName ?? '',
+            name: data.displayName,
+            username: data.username ?? '',
+            age: data.age != null ? String(data.age) : '',
+            us_state: data.usState ?? '',
+            gender: data.gender ?? '',
+          }}
+        >
+          <UsersDetailsForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    if (value === EDUCATOR_PROFILE_TAB) {
+      return (
+        <FormProvider initialValues={{educator_role: data.educatorRole ?? ''}}>
+          <EducatorProfileForm settings={data} />
+        </FormProvider>
+      );
+    }
+
+    return null;
+  };
+
   const tabs: TabModel[] = visibleTabs.map(t => ({
     value: t.value,
     text: t.text,
     disabled: t.disabled,
-    tabContent:
-      t.value === ACCOUNT_DETAILS_TAB && settings.data ? (
-        <FormProvider
-          initialValues={{
-            given_name: settings.data.givenName ?? '',
-            family_name: settings.data.familyName ?? '',
-            name: settings.data.displayName,
-            username: settings.data.username ?? '',
-            age: settings.data.age != null ? String(settings.data.age) : '',
-            us_state: settings.data.usState ?? '',
-            gender: settings.data.gender ?? '',
-          }}
-        >
-          <UsersDetailsForm settings={settings.data} />
-        </FormProvider>
-      ) : null,
+    tabContent: tabContent(t.value),
   }));
 
   return (
@@ -157,6 +185,7 @@ export default function UsersSettingsPage({
               type="primary"
               mode="light"
               size="m"
+              scrollable
               tabs={tabs}
               defaultSelectedTabValue={activeTab}
               onChange={onTabChange ?? NO_OP}
