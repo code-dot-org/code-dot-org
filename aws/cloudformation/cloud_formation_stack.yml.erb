@@ -90,6 +90,7 @@ Resources:
             Action: 'secretsmanager:GetSecretValue'
             Resource:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/${AWS::StackName}/*"
+              - !Ref DashboardSecretKeyBase # Captured by wildcard above, !Ref'd to enforce sequencing
               - !Ref ChefConfig
             Condition:
               StringEquals:
@@ -262,6 +263,18 @@ Resources:
             Action:
               - 'aps:RemoteWrite'
             Resource: '*'
+
+
+  # Rails secret_key_base, generated per stack so that no deployment shares
+  # cookie-signing keys with another and the value never enters the repository.
+  DashboardSecretKeyBase:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: !Sub "Rails secret_key_base for ${AWS::StackName}"
+      Name: !Sub "CfnStack/${AWS::StackName}/dashboard_secret_key_base"
+      GenerateSecretString:
+        PasswordLength: 128
+        ExcludePunctuation: true
 
   # ---------------------------------------------
   # Frontend Servers
