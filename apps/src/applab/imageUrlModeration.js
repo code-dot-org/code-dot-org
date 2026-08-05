@@ -1,7 +1,8 @@
 import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
-const HTTP_URL_PREFIX_REGEX = /^http:\/\//i;
+import {normalizeToHttps} from './imageUrlUtils';
+
 const MODERATION_STATUSES = ['safe', 'flagged', 'error'];
 
 export function isAbsoluteImageUrl(imageUrl) {
@@ -25,7 +26,7 @@ export async function moderateApplabImageUrl(
     return {status: 'invalid-url'};
   }
 
-  const normalizedUrl = imageUrl.replace(HTTP_URL_PREFIX_REGEX, 'https://');
+  const normalizedUrl = normalizeToHttps(imageUrl);
   const overrideStatus = allowTestOverride
     ? getModerationStatusOverride()
     : null;
