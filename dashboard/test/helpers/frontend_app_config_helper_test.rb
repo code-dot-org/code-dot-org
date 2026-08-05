@@ -9,6 +9,7 @@ class FrontendAppConfigHelperTest < ActionView::TestCase
       CDO.stubs(:enable_sentry).returns(false)
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
       CDO.stubs(:managed_test_server?).returns(false)
+      CDO.stubs(:statsig_force_transmit).returns(false)
       DCDO.stubs(:get).with('frontend-observability-sampling-config', {}).returns({})
     end
 
