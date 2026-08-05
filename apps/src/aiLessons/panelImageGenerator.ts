@@ -7,11 +7,11 @@
 // to scope the image directory under).
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {generateText} from '@cdo/apps/aiGateway';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
+import {loggedGenerateText} from './aiLog';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
 
@@ -49,7 +49,7 @@ export async function generatePanelImage(
     throw new Error('Save the lesson first so the image can be stored.');
   }
 
-  const response = await generateText({
+  const response = await loggedGenerateText('panel image', {
     model: getModel(MODEL_ID),
     prompt: `${STYLE_PROMPT_PREFIX} ${subject}`,
   });

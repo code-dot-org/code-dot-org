@@ -11,6 +11,8 @@ Code lives under:
 - `apps/src/sites/studio/pages/ai_lessons/` — webpack entry shims
 - `dashboard/app/controllers/ai_lessons_controller.rb` — Rails controller
 - `dashboard/app/views/ai_lessons/*.html.haml` — view shells + locale loader
+- `dashboard/config/ai_lessons/` — repo-shipped exemplar lessons (read-only
+  through the UI; edit the JSON directly)
 - `dashboard/tmp/ai_lessons/` — on-disk storage (lessons, sources, images,
   progress)
 
@@ -49,6 +51,92 @@ schema or seed scars.
    title, objective, ordered checkpoints, lab type assignments,
    success criteria, panel slide captions, and panel illustrations.
    The author can edit any of it inline before saving.
+
+## Lesson format v2: steps
+
+A lesson is an ordered list of typed **steps** (`types.ts`), replacing the
+v1 model where every entry was a lab checkpoint.  Old v1 JSONs still load
+— `normalizeLessonPlan()` in `lessonFormat.ts` migrates `checkpoints` to
+steps at read time.
+
+Step kinds:
+
+- **lab** — the student works in Web Lab 2 or Music Lab.  `validation:
+  'tutor'` gates advancement on the AI Tutor's judgment against
+  `successCriteria`; `validation: 'none'` shows a Continue button
+  (explore / free-play steps — the tutor chats but never gates).
+- **panels** — the instructional slide carousel; Continue advances.
+- **questions** — free-response / multiple-choice / scale prompts,
+  one at a time.  Every answer is recorded as student input.
+
+Cross-cutting fields:
+
+- `role` + `segment` — advisory labels ("skill practice: HTML tags",
+  "project checkpoint") for grouping; never drive behavior.
+- `next` / `option.goTo` — branching pointers: the array is the default
+  order, `goTo` jumps, `next` rejoins (or `'end'` finishes).
+- `sourceMode: 'sandbox'` — isolates a skill-practice step's source from
+  the student's project (scoped to the segment).
+- `starterPrompt` / `starterFiles` — generated-per-student or literal
+  starting code.
+- `aiPrompting` / `presetPrompts` — whether the student can prompt the AI
+  build partner to write code into this step's source.
+- Lesson-level `checklist` — project rubric the tutor reports against.
+
+### Navigation
+
+Where to go after a step completes is decided by a **navigation
+resolver** (`navigation.ts`), never by the page: the deterministic
+resolver follows the student's branch option, then the step's `next`
+pointer, then array order, then ends the lesson.  The interface is async
+and context-fed so an adaptive resolver (suggest the next step from the
+student's answers, performance, and chat) can replace it without touching
+call sites; a `recommend()` seam for "highlight one option in a hub"
+exists but returns nothing until student inputs land.
+
+The split of responsibilities: **the tutor judges, the resolver routes.**
+The tutor's `advance`/`celebrate` verdict only unlocks the Continue
+button; every navigation goes through the resolver.  Position is a
+step-id path persisted in the progress snapshot, so branched
+playthroughs resume exactly where they left off (old index-only
+snapshots fall back to last-completed + 1).
+
+### Questions and student inputs
+
+Questions steps render through `QuestionFlow.tsx`: one question at a
+time — free response, multiple choice (single or check-all), or a slider
+scale.  Key-validated questions gate on the correct option with retries;
+branch options complete the step through the resolver; hub options show
+a check mark once their target has been visited.
+
+Every answer, graded or not, is recorded as an `AnswerRecord`
+(`studentInputs.ts`) in a per-(lesson, user) map at
+`dashboard/tmp/ai_lessons/inputs/<lessonId>/<userId>.json`.  Records
+denormalize the question prompt and carry outcome + attempt counts, so
+they're self-describing for every consumer: QuestionFlow prefill, the
+tutor's STUDENT CONTEXT prompt section (personalization — the tutor
+knows the student's project, interests, and confidence), and later the
+starter-code generator and adaptive resolver.
+
+**Runtime support is intentionally behind the format** (walking-skeleton
+rule: every step kind renders, unsupported mechanics degrade politely):
+
+- `validation: 'tutor'` on individual questions is recorded but not yet
+  judged — the answer is accepted like a survey answer.
+- Sandbox sources, starter code, AI prompting, and checklists are
+  format-only so far.
+
+Two hand-authored exemplar lessons live in `dashboard/config/ai_lessons/`
+and are the fixtures development validates against:
+
+- `musical-artist-webpage.json` — project-based HTML/CSS lesson with
+  skill-practice segments, project checkpoints, and a branching check-in.
+- `adaptive-fan-page.json` — AI-partnership lesson (9-12) with a
+  diagnostic, student prompting, a hub of mini lessons, a debugging
+  sidequest, and a project checklist.
+
+They're validated (JSON shape, unique ids, resolvable branch targets) by
+`apps/test/unit/aiLessons/lessonFormatTest.ts`.
 
 ## Current functionality
 
@@ -138,6 +226,8 @@ GET    /ai_lessons/:id/sources/:lab_type          # load saved source
 PUT    /ai_lessons/:id/sources/:lab_type          # save source
 GET    /ai_lessons/:id/progress                   # this user's progress
 PUT    /ai_lessons/:id/progress                   # write this user's progress
+GET    /ai_lessons/:id/inputs                     # this user's question answers
+PUT    /ai_lessons/:id/inputs                     # write this user's answers
 ```
 
 ## Future ideas (where this could go)
@@ -236,10 +326,13 @@ PUT    /ai_lessons/:id/progress                   # write this user's progress
   all unauthenticated within the user's session; writes use Rails CSRF
   via `HttpClient.put(..., true, ...)`.
 - **No tests.** None at all. Anywhere.
-- **Old lessons may have a stale shape.** We dropped `introduction` and
-  `instructions` from the schema; old saved JSONs that still have those
-  fields load fine (extra fields are ignored) but they won't round-trip
-  through the editor.
+- **Old lessons may have a stale shape.** v1 (checkpoints) JSONs are
+  migrated to steps on every load but never rewritten on disk; they
+  round-trip through the editor as v2 the next time they're saved.
+- **The generator and editor lag the format.** `lessonGenerator` emits
+  only lab/panels steps, and the editor shows questions steps read-only.
+  Both catch up in the authoring-tools phase; until then the exemplars
+  are edited as JSON.
 
 ## How to run
 
@@ -249,15 +342,20 @@ With dashboard + apps running (see the repo's main `SETUP.md`), open
 ### Storage layout
 
 ```
+dashboard/config/ai_lessons/<lessonId>.json   # repo-shipped lessons (read-only via API)
+
 dashboard/tmp/ai_lessons/
-├── <lessonId>.json                           # the LessonPlan
+├── <lessonId>.json                           # authored LessonPlans
 ├── images/<lessonId>/<random>.png            # panel illustrations
 ├── sources/<lessonId>/<labType>.json         # student's saved source per lab type
+├── inputs/<lessonId>/<userId>.json           # per-(lesson, user) question answers
 └── progress/<lessonId>/<userId>.json         # per-(lesson, user) progress + summary
 ```
 
-`<lessonId>` is `<timestamp36>-<random6>` (e.g. `tezm2v-b8930f`).
-`<labType>` is one of `weblab2`, `music`, `panels`.
+Authored `<lessonId>`s are `<timestamp36>-<random6>` (e.g. `tezm2v-b8930f`);
+repo-shipped ones are human-readable slugs.  `<labType>` is `weblab2` or
+`music`.  Student state for repo-shipped lessons still lives under tmp,
+keyed by the lesson id, so reset-progress works on them too.
 
 ### Entry point
 

@@ -1,0 +1,310 @@
+{
+  "formatVersion": 2,
+  "id": "adaptive-fan-page",
+  "title": "Build a Fan Page with AI",
+  "objective": "Learn to direct AI as a creative partner — brainstorming, prompting, and debugging — while building a fan page in Web Lab 2 and picking up the web languages that let you say exactly what you mean.",
+  "authorInputs": {
+    "prompt": ""
+  },
+  "checklist": [
+    {"id": "title-header", "label": "Page has a title and a main header"},
+    {"id": "sections", "label": "At least three sections of real content"},
+    {"id": "styled", "label": "Custom colors or fonts applied with CSS"},
+    {"id": "image", "label": "At least one image"},
+    {"id": "footer", "label": "A footer or closing section"}
+  ],
+  "steps": [
+    {
+      "id": "intro",
+      "kind": "panels",
+      "title": "Welcome",
+      "role": "intro",
+      "panels": [
+        {
+          "caption": "In this tutorial, AI will help you brainstorm, code, and learn while you build your very own fan page."
+        }
+      ]
+    },
+    {
+      "id": "diagnostic",
+      "kind": "questions",
+      "title": "A few questions first",
+      "role": "checkIn",
+      "description": "Diagnostic inputs that tune the rest of the experience: workspace preference, prior web experience, and how the student has used AI before. No wrong answers, nothing graded.",
+      "questions": [
+        {
+          "id": "work-style",
+          "type": "multipleChoice",
+          "prompt": "How do you like to work?",
+          "options": [
+            {"id": "dark", "label": "Dark mode"},
+            {"id": "light", "label": "Light mode"}
+          ]
+        },
+        {
+          "id": "experience",
+          "type": "scale",
+          "prompt": "How experienced are you with web code like HTML, CSS, or JavaScript?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Never touched it",
+            "maxLabel": "Very experienced"
+          }
+        },
+        {
+          "id": "ai-usage",
+          "type": "multipleChoice",
+          "multiSelect": true,
+          "prompt": "How have you used AI? Check all that apply.",
+          "options": [
+            {"id": "questions-personal", "label": "Answer questions (non-academic)"},
+            {"id": "questions-academic", "label": "Answer questions (academic)"},
+            {"id": "advice", "label": "For personal advice"},
+            {"id": "code", "label": "Write code"},
+            {"id": "images", "label": "Generate images"},
+            {"id": "writing", "label": "Write other text"},
+            {"id": "brainstorm", "label": "Brainstorm before a project"},
+            {"id": "check-work", "label": "Check my work"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brainstorm",
+      "kind": "questions",
+      "title": "AI as a brainstorm partner",
+      "role": "interview",
+      "description": "Walk the student through forming a vision for their page, one question at a time. These answers become the project vision the AI build partner uses for every generation in this lesson.",
+      "questions": [
+        {
+          "id": "topic",
+          "type": "freeResponse",
+          "prompt": "This is a website for fans of…",
+          "placeholder": "A band, a game, a team, a show — anything with fans."
+        },
+        {
+          "id": "audience",
+          "type": "multipleChoice",
+          "prompt": "Who will visit this page?",
+          "options": [
+            {"id": "casual", "label": "Casual fans"},
+            {"id": "experts", "label": "Hardcore lore experts"},
+            {"id": "beginners", "label": "Beginners trying to get into it"},
+            {"id": "local", "label": "Local fans"}
+          ]
+        },
+        {
+          "id": "purpose",
+          "type": "freeResponse",
+          "prompt": "People will view this page to…",
+          "placeholder": "Learn something? Feel the hype? Find each other?"
+        }
+      ]
+    },
+    {
+      "id": "reflect-brainstorm",
+      "kind": "questions",
+      "title": "Whose ideas are they?",
+      "role": "reflection",
+      "questions": [
+        {
+          "id": "own-ideas",
+          "type": "freeResponse",
+          "prompt": "If AI helps you brainstorm ideas, are they still your own ideas? Why or why not?"
+        }
+      ]
+    },
+    {
+      "id": "try-presets",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Try it out!",
+      "role": "explore",
+      "validation": "none",
+      "aiPrompting": "presets",
+      "presetPrompts": [
+        "Make me a fan page.",
+        "Create a fan page with a bold header, a short introduction written for people new to the topic, and a section listing three reasons fans love it. Use a color scheme that fits the topic's vibe."
+      ],
+      "description": "The student picks one of the premade prompts and watches the AI build from it, using the vision they developed while brainstorming. The two prompts differ on purpose — one is bare, one is detailed — so the student sees firsthand how specificity changes the result. There is no right choice: sometimes you want AI to just give it a go. Encourage them to try both and compare."
+    },
+    {
+      "id": "rate-ai",
+      "kind": "questions",
+      "title": "Rate the AI",
+      "role": "reflection",
+      "description": "The student evaluates the AI's output and thinks about how they would prompt differently. Their answers inform which mini lesson gets suggested next.",
+      "questions": [
+        {
+          "id": "ai-rating",
+          "type": "scale",
+          "prompt": "How did the AI do?",
+          "scale": {
+            "min": 0,
+            "max": 10,
+            "minLabel": "Not what I wanted",
+            "maxLabel": "Nailed it"
+          }
+        },
+        {
+          "id": "prompt-rewrite",
+          "type": "freeResponse",
+          "prompt": "How would you write your prompt to get closer to what you imagined?"
+        }
+      ]
+    },
+    {
+      "id": "learn-the-language",
+      "kind": "questions",
+      "title": "Learn the language!",
+      "role": "checkIn",
+      "hub": true,
+      "description": "Learning the language of the web gives you the words to say exactly what you mean. Each mini lesson is a small but impactful bite; the student can take as many as they like and return here after each. One choice may be highlighted as a suggestion based on the student's experience and ratings, but all are always available.",
+      "questions": [
+        {
+          "id": "language-choice",
+          "type": "multipleChoice",
+          "prompt": "What do you want to be able to say exactly?",
+          "options": [
+            {
+              "id": "html-text",
+              "label": "What will it say? — HTML text",
+              "goTo": "lang-html-text"
+            },
+            {
+              "id": "html-tags",
+              "label": "What goes where? — HTML tags",
+              "goTo": "lang-html-tags"
+            },
+            {
+              "id": "css",
+              "label": "What's the style? — CSS",
+              "goTo": "lang-css"
+            },
+            {
+              "id": "js",
+              "label": "What has motion? — JavaScript",
+              "goTo": "lang-js"
+            },
+            {
+              "id": "done",
+              "label": "I'm ready to keep building",
+              "goTo": "try-freeprompt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lang-html-text",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What will it say?",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "next": "learn-the-language",
+      "description": "One small bite: the words on a page live inside elements, and editing them is the fastest way to make a page yours. Show the student the text in the sandbox, have them change what it says, then send them back to the hub.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Say it your way</title>\n  </head>\n  <body>\n    <h1>This page says whatever you want</h1>\n    <p>Change this sentence to something only you would write.</p>\n  </body>\n</html>\n"
+      }
+    },
+    {
+      "id": "lang-html-tags",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What goes where?",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "next": "learn-the-language",
+      "description": "One small bite: tags name the pieces of a page — headings, paragraphs, lists — and their order is the page's structure. Have the student rearrange or add an element, then send them back to the hub.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Structure</title>\n  </head>\n  <body>\n    <h1>Big heading</h1>\n    <h2>Smaller heading</h2>\n    <p>A paragraph.</p>\n    <ul>\n      <li>A list item</li>\n      <li>Another one</li>\n    </ul>\n  </body>\n</html>\n"
+      }
+    },
+    {
+      "id": "lang-css",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What's the style?",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "next": "learn-the-language",
+      "description": "One small bite: CSS rules pick an element and describe how it should look. Have the student change a value in the existing rule and see the page respond, then send them back to the hub.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Style</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Try changing my color</h1>\n    <p>The rules in style.css decide how this page looks.</p>\n  </body>\n</html>\n",
+        "style.css": "h1 {\n  color: teal;\n}\n\nbody {\n  font-family: sans-serif;\n}\n"
+      }
+    },
+    {
+      "id": "lang-js",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What has motion?",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "next": "learn-the-language",
+      "description": "One small bite: JavaScript makes a page react. The sandbox has a button that changes the heading when clicked. Have the student change what the click does — different text, different color — then send them back to the hub.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Motion</title>\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1 id=\"headline\">Nothing has happened yet</h1>\n    <button id=\"go\">Make something happen</button>\n  </body>\n</html>\n",
+        "script.js": "document.getElementById('go').addEventListener('click', function () {\n  document.getElementById('headline').textContent = 'Something happened!';\n});\n"
+      }
+    },
+    {
+      "id": "try-freeprompt",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Build with your own prompts",
+      "role": "projectCheckpoint",
+      "validation": "none",
+      "aiPrompting": "free",
+      "description": "Now the student writes their own prompts to keep building their page. Guide them one step at a time toward the items on the website checklist — suggest the next unchecked item, help them phrase a prompt for it or code it by hand, and celebrate each item that gets done."
+    },
+    {
+      "id": "sidequest-fixit",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Sidequest: fix it!",
+      "role": "skillBuilding",
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "A debugging sidequest on a broken page, separate from the student's project. Three planted issues range in difficulty: (1) the second paragraph's closing tag is missing, so text runs together; (2) style.css misspells 'color' as 'colr', so the heading isn't blue; (3) script.js targets the id 'buton' which doesn't exist, so the button does nothing. The student can ask AI for help fixing them — which issue they attack first, how many attempts they take, and how effective their prompts are is exactly what we want to observe. Can they fix all three?",
+      "successCriteria": "At least one of the three planted bugs is verifiably fixed. Celebrate if all three are.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Fix me</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    <h1>This heading should be blue</h1>\n    <p>This paragraph is fine.</p>\n    <p>This paragraph never ends…\n    <p>…and this one got swallowed by it.</p>\n    <button id=\"button\">This button should change the heading</button>\n  </body>\n</html>\n",
+        "style.css": "h1 {\n  colr: blue;\n}\n",
+        "script.js": "document.getElementById('buton').addEventListener('click', function () {\n  document.querySelector('h1').textContent = 'Fixed it!';\n});\n"
+      }
+    },
+    {
+      "id": "reflect-ai-learning",
+      "kind": "questions",
+      "title": "How do you learn?",
+      "role": "reflection",
+      "questions": [
+        {
+          "id": "learning-with-ai",
+          "type": "freeResponse",
+          "prompt": "How do you learn when AI does a lot of the hard work?"
+        }
+      ]
+    },
+    {
+      "id": "finish-up",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Finish it up",
+      "role": "projectCheckpoint",
+      "validation": "tutor",
+      "aiPrompting": "free",
+      "description": "Guide the student to finish the remaining checklist items on their fan page — prompting the AI, coding by hand, or both. When the checklist is done, offer extensions: another section, a second page, something animated.",
+      "successCriteria": "Every item on the lesson checklist is present on the student's page.",
+      "next": "end"
+    }
+  ]
+}

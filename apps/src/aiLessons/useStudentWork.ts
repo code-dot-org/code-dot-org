@@ -20,7 +20,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectSavedSource} from './aiLessonsSourcesRedux';
-import {Checkpoint} from './types';
+import {Step} from './types';
 
 interface SerializedWeblab2File {
   name: string;
@@ -79,7 +79,7 @@ function serializeMusicSource(
   return lines.join('\n');
 }
 
-export function useStudentWork(checkpoint: Checkpoint): string | undefined {
+export function useStudentWork(step: Step): string | undefined {
   // Weblab2 source is in lab2Project (codebridge dispatches setProjectSource
   // on every keystroke).  Music source lives in our own slice because
   // dispatching into lab2Project would loop with MusicView's reload-on-
@@ -88,22 +88,20 @@ export function useStudentWork(checkpoint: Checkpoint): string | undefined {
     state => state.lab2Project.projectSources?.source
   );
   const musicSaved = useAppSelector(state => selectSavedSource(state, 'music'));
+  const labType = step.kind === 'lab' ? step.labType : undefined;
 
   return useMemo(() => {
-    if (checkpoint.labType === 'panels') {
-      return undefined;
-    }
-
-    if (checkpoint.labType === 'music') {
+    if (labType === 'music') {
       if (!musicSaved) return undefined;
       return serializeMusicSource(musicSaved.source, musicSaved.labConfig);
     }
 
-    if (checkpoint.labType === 'weblab2') {
+    if (labType === 'weblab2') {
       if (!weblab2Source) return undefined;
       return serializeWeblab2Source(weblab2Source as MultiFileSource);
     }
 
+    // Panels and questions steps have no lab source to snapshot.
     return undefined;
-  }, [checkpoint.labType, weblab2Source, musicSaved]);
+  }, [labType, weblab2Source, musicSaved]);
 }

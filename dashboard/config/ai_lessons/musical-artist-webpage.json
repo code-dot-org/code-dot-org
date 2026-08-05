@@ -1,0 +1,337 @@
+{
+  "formatVersion": 2,
+  "id": "musical-artist-webpage",
+  "title": "Design a Webpage for Your Favorite Musical Artist",
+  "objective": "Learn core HTML and CSS by building a personalized fan page for a musical artist you choose, guided by an AI tutor.",
+  "authorInputs": {
+    "prompt": ""
+  },
+  "steps": [
+    {
+      "id": "welcome",
+      "kind": "panels",
+      "title": "Welcome",
+      "role": "intro",
+      "panels": [
+        {
+          "caption": "In this lesson you'll build a real webpage about a musical artist you love — and learn the languages of the web while you do it."
+        },
+        {
+          "caption": "An AI tutor will guide you the whole way: it can explain, give hints, and check your work. Let's start by picking your artist."
+        }
+      ]
+    },
+    {
+      "id": "artist-interview",
+      "kind": "questions",
+      "title": "Tell us about your artist",
+      "role": "interview",
+      "description": "Collect the raw material for the student's fan page. These answers generate their starter site and personalize the tutor for the rest of the lesson.",
+      "questions": [
+        {
+          "id": "artist",
+          "type": "freeResponse",
+          "prompt": "Which musical artist or band do you want to feature?",
+          "placeholder": "e.g. Beyonce, BTS, Bad Bunny…"
+        },
+        {
+          "id": "bio",
+          "type": "freeResponse",
+          "prompt": "What should a visitor to your page know about them?",
+          "placeholder": "Who they are, what kind of music they make, why you like them…"
+        },
+        {
+          "id": "favorites",
+          "type": "freeResponse",
+          "prompt": "What are your favorite albums or songs by them?",
+          "placeholder": "List a few favorites."
+        },
+        {
+          "id": "facts",
+          "type": "freeResponse",
+          "prompt": "Share one or two lesser-known facts about them.",
+          "placeholder": "Something a casual fan might not know."
+        }
+      ]
+    },
+    {
+      "id": "explore-starter",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Explore your starter site",
+      "role": "explore",
+      "validation": "none",
+      "description": "The student has just landed on a bare-bones website about their artist, generated from their interview answers. Encourage them to poke around: read the code, change some text, and watch the preview update. There is no task to complete — curiosity is the goal. Invite them to press Continue when they've had a look around.",
+      "starterPrompt": "Generate a deliberately plain, unstyled starter website about the student's chosen artist using their interview answers. Create index.html and an empty style.css. Include a heading with the artist's name, a short bio paragraph based on their answers, a list of their favorite songs or albums, and a fun facts section. Keep the HTML simple and readable for a beginner. No CSS rules, no JavaScript."
+    },
+    {
+      "id": "reflect-starter",
+      "kind": "questions",
+      "title": "What did you notice?",
+      "role": "reflection",
+      "description": "A moment of reflection before any concepts are named. There are no wrong answers.",
+      "questions": [
+        {
+          "id": "noticed",
+          "type": "freeResponse",
+          "prompt": "What did you notice about the code behind your page?"
+        },
+        {
+          "id": "liked-ai-output",
+          "type": "freeResponse",
+          "prompt": "Did you like what the AI produced? What would you change?"
+        }
+      ]
+    },
+    {
+      "id": "html-what-is-a-tag",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What is a tag?",
+      "role": "skillBuilding",
+      "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "description": "Introduce HTML tags using the small example page in the sandbox. Explain that tags come in pairs like <h1>…</h1> and <p>…</p>, and that they tell the browser what each piece of content is. Point at the specific tags visible in the example. The student just reads and continues; nothing to complete.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Tag practice</title>\n  </head>\n  <body>\n    <h1>This is a heading</h1>\n    <p>This is a paragraph. The tags around it tell the browser what it is.</p>\n    <p>Every tag opens like this: &lt;p&gt; and closes like this: &lt;/p&gt;</p>\n  </body>\n</html>\n"
+      }
+    },
+    {
+      "id": "html-edit-text",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Edit the text in a tag",
+      "role": "skillBuilding",
+      "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Ask the student to change the text inside one of the existing tags — the heading or a paragraph — and watch the preview update.",
+      "successCriteria": "The text inside at least one existing element differs from the starter text."
+    },
+    {
+      "id": "html-add-tag",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Add your own tag",
+      "role": "skillBuilding",
+      "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Ask the student to add a complete new element of their own — another paragraph, a heading, anything with an opening and closing tag.",
+      "successCriteria": "The page contains at least one new complete element (opening and closing tag with content) that was not in the starter code."
+    },
+    {
+      "id": "html-quiz",
+      "kind": "questions",
+      "title": "Quick check: tags",
+      "role": "skillBuilding",
+      "segment": {"id": "html-tags", "title": "Skill practice: HTML tags"},
+      "questions": [
+        {
+          "id": "tag-check",
+          "type": "multipleChoice",
+          "prompt": "Which of these is a complete HTML paragraph element?",
+          "validation": "key",
+          "options": [
+            {"id": "a", "label": "<p>Hello</p>", "correct": true},
+            {"id": "b", "label": "<p>Hello"},
+            {"id": "c", "label": "p Hello p"},
+            {"id": "d", "label": "(p) Hello (/p)"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project-tags",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Build out your page with tags",
+      "role": "projectCheckpoint",
+      "validation": "tutor",
+      "description": "Back on the student's own artist page. Have them apply what they practiced: use headings, paragraphs, and a list to fill in real content — the bio, the favorite songs, the fun facts they shared earlier. Reference their interview answers when guiding them.",
+      "successCriteria": "The page includes at least one heading, at least one paragraph of real content about the artist, and a list. The content reflects the student's own artist rather than placeholder text."
+    },
+    {
+      "id": "css-what-is",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "What is CSS?",
+      "role": "skillBuilding",
+      "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
+      "sourceMode": "sandbox",
+      "validation": "none",
+      "description": "Introduce CSS using the example in the sandbox: a rule has a selector, a property, and a value. Point at the h1 rule in style.css and how it changes the heading in the preview. The student just reads and continues.",
+      "starterFiles": {
+        "index.html": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>CSS practice</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n  </head>\n  <body>\n    <h1>Styling with CSS</h1>\n    <p>The file style.css controls how this page looks.</p>\n  </body>\n</html>\n",
+        "style.css": "h1 {\n  color: purple;\n}\n"
+      }
+    },
+    {
+      "id": "css-edit-rule",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Add to an existing rule",
+      "role": "skillBuilding",
+      "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Ask the student to add another property to the existing h1 rule — a different color, a font-size, anything that visibly changes the heading.",
+      "successCriteria": "The h1 rule contains at least one property beyond the starter's color: purple, or the starter property's value was changed."
+    },
+    {
+      "id": "css-new-rule",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Write a new rule",
+      "role": "skillBuilding",
+      "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Ask the student to write a brand new rule targeting a different element, like p or body.",
+      "successCriteria": "style.css contains a new rule (selector plus at least one property) that was not in the starter code."
+    },
+    {
+      "id": "css-quiz",
+      "kind": "questions",
+      "title": "Quick check: CSS",
+      "role": "skillBuilding",
+      "segment": {"id": "css-basics", "title": "Skill practice: CSS"},
+      "questions": [
+        {
+          "id": "css-check",
+          "type": "multipleChoice",
+          "prompt": "In the rule  h1 { color: purple; }  which part is the selector?",
+          "validation": "key",
+          "options": [
+            {"id": "a", "label": "h1", "correct": true},
+            {"id": "b", "label": "color"},
+            {"id": "c", "label": "purple"},
+            {"id": "d", "label": "{ }"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project-style",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Style your site",
+      "role": "projectCheckpoint",
+      "validation": "tutor",
+      "description": "Back on the student's artist page. Have them bring it to life with CSS: colors, fonts, spacing — their choice. Encourage styling that fits the artist's vibe.",
+      "successCriteria": "The stylesheet contains at least two rules written by the student that visibly affect the page (color, typography, spacing, or layout)."
+    },
+    {
+      "id": "check-in",
+      "kind": "questions",
+      "title": "How's it going?",
+      "role": "checkIn",
+      "description": "A self-assessment with no right answer; the confidence answer should shape the tutor's tone from here on.",
+      "questions": [
+        {
+          "id": "confidence",
+          "type": "multipleChoice",
+          "prompt": "How confident do you feel about HTML and CSS?",
+          "options": [
+            {"id": "very", "label": "Very confident"},
+            {"id": "somewhat", "label": "Somewhat confident"},
+            {"id": "confused", "label": "Still a bit confused"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "what-next",
+      "kind": "questions",
+      "title": "What's next?",
+      "role": "checkIn",
+      "hub": true,
+      "description": "The branch point. Both mini-lesson paths are multi-step sequences that route back here when finished, so the student can take the other one — or as many as they like — before settling into free building.",
+      "questions": [
+        {
+          "id": "what-next",
+          "type": "multipleChoice",
+          "prompt": "Thanks for sharing. What would you like to do next?",
+          "options": [
+            {
+              "id": "more-html",
+              "label": "Learn more about HTML",
+              "goTo": "html-extra-lists"
+            },
+            {
+              "id": "more-css",
+              "label": "Learn more about CSS",
+              "goTo": "css-extra-fonts"
+            },
+            {
+              "id": "stay",
+              "label": "Work on my website",
+              "goTo": "free-play"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-extra-lists",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Lists and text formatting",
+      "role": "skillBuilding",
+      "segment": {"id": "html-extra", "title": "More HTML"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Teach ordered and unordered lists (<ul>, <ol>, <li>) and inline formatting (<strong>, <em>). Have the student build a small list with at least one formatted item.",
+      "successCriteria": "The page contains a list with at least two items, and at least one use of strong or em."
+    },
+    {
+      "id": "html-extra-headings",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Heading levels",
+      "role": "skillBuilding",
+      "segment": {"id": "html-extra", "title": "More HTML"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Teach the h1-h6 hierarchy: one main heading, subheadings for sections. Have the student structure a page with at least two heading levels. This is the last step of the HTML mini-lesson; afterwards the student returns to the what-next choice.",
+      "successCriteria": "The page uses at least two different heading levels in a sensible hierarchy.",
+      "next": "what-next"
+    },
+    {
+      "id": "css-extra-fonts",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Fonts and text styling",
+      "role": "skillBuilding",
+      "segment": {"id": "css-extra", "title": "More CSS"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Teach font-family, font-size, and text-align. Have the student restyle the sandbox page's text.",
+      "successCriteria": "The stylesheet sets at least two of font-family, font-size, or text-align."
+    },
+    {
+      "id": "css-extra-boxes",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Backgrounds and spacing",
+      "role": "skillBuilding",
+      "segment": {"id": "css-extra", "title": "More CSS"},
+      "sourceMode": "sandbox",
+      "validation": "tutor",
+      "description": "Teach background-color, padding, and margin. Have the student give an element a visible box: background plus some breathing room. This is the last step of the CSS mini-lesson; afterwards the student returns to the what-next choice.",
+      "successCriteria": "At least one rule sets a background-color together with padding or margin.",
+      "next": "what-next"
+    },
+    {
+      "id": "free-play",
+      "kind": "lab",
+      "labType": "weblab2",
+      "title": "Keep building your site",
+      "role": "freePlay",
+      "validation": "none",
+      "description": "Open studio time on the student's artist page. No task and no checks — offer ideas if asked (more sections, an images area, styling experiments) and celebrate what they make. This is the end of the lesson; they can continue whenever they feel done.",
+      "next": "end"
+    }
+  ]
+}

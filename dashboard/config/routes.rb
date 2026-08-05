@@ -1382,6 +1382,8 @@ Dashboard::Application.routes.draw do
       constraints: {lab_type: /[a-z0-9_]+/}
     get '/ai_lessons/:id/progress', to: 'ai_lessons#read_progress'
     put '/ai_lessons/:id/progress', to: 'ai_lessons#write_progress'
+    get '/ai_lessons/:id/inputs', to: 'ai_lessons#read_inputs'
+    put '/ai_lessons/:id/inputs', to: 'ai_lessons#write_inputs'
 
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do

@@ -2,14 +2,18 @@
 //
 // Layout: a persistent AI Tutor chat on the left, the current lab embedded
 // directly on the right (no iframes — the real Lab2 React view).  No header
-// progress bar; the AI Tutor narrates the journey and decides when the
-// student has met the success criteria.
+// progress bar; the AI Tutor narrates the journey.
 //
 // Because the lab is in our React tree, we can pull the student's live
 // source out of Redux and hand it to the tutor whenever they ask to be
-// checked — there is no manual "paste your code" step.  Advancement is
-// gated on `action === 'advance'` returned by the tutor's structured JSON
-// output, so the student cannot skip past a checkpoint they haven't met.
+// checked — there is no manual "paste your code" step.
+//
+// The tutor judges, the resolver routes: on tutor-gated steps the tutor's
+// structured `advance`/`celebrate` verdict unlocks a Continue button, but
+// WHERE Continue goes is always the navigation resolver's call
+// (navigation.ts) — branch options, `next` rejoins, array order, or end.
+// Position is tracked as a step-id path so branched playthroughs resume
+// correctly.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
@@ -22,7 +26,15 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {loadLesson} from './api';
 import EmbeddedLab from './EmbeddedLab';
+import {deterministicResolver, NavDecision} from './navigation';
+import QuestionFlow from './QuestionFlow';
 import {Link} from './router';
+import {
+  AnswerRecord,
+  loadInputs,
+  saveAnswer,
+  StudentInputs,
+} from './studentInputs';
 import {
   loadProgress,
   ProgressSnapshot,
@@ -105,7 +117,16 @@ interface StudentPageInnerProps {
 const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   lesson,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // Position is a step id plus the ordered path of visited ids (ending
+  // with the current step).  The array index is derived — it's what the
+  // tutor prompt and progress events still speak.
+  const firstStepId = lesson.steps[0]?.id || '';
+  const [currentStepId, setCurrentStepId] = useState<string>(firstStepId);
+  const [path, setPath] = useState<string[]>(firstStepId ? [firstStepId] : []);
+  const currentIndex = Math.max(
+    0,
+    lesson.steps.findIndex(s => s.id === currentStepId)
+  );
   const [phase, setPhase] = useState<Phase>('in-progress');
   const [history, setHistory] = useState<TutorMessage[]>([]);
   const [busy, setBusy] = useState(false);
@@ -128,6 +149,13 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   // server-side history without race-prone state batching.
   const progressRef = useRef<ProgressSnapshot | undefined>(undefined);
   const [progressLoading, setProgressLoading] = useState<boolean>(true);
+  // Every question answer the student has given, graded or not.  Feeds
+  // QuestionFlow prefill and the tutor's student-context section.  The
+  // ref mirrors the state so tutor calls and rapid saves read the latest
+  // map without adding it to effect dependencies (which would refire the
+  // opening on every answer).
+  const [inputs, setInputs] = useState<StudentInputs>({});
+  const inputsRef = useRef<StudentInputs>({});
   // `evaluating` is a sub-state of `busy`: true when the tutor is actively
   // grading the student's work (auto-check on run, or Check-my-work click).
   // Lets us show "Evaluating…" instead of the general "Tutor is thinking…".
@@ -136,8 +164,8 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   const transcriptRef = useRef<HTMLDivElement>(null);
   const pageRef = useRef<HTMLDivElement>(null);
   const [pageHeight, setPageHeight] = useState<string>('100vh');
-  const checkpoint = lesson.checkpoints[currentIndex];
-  const liveWork = useStudentWork(checkpoint);
+  const step = lesson.steps[currentIndex];
+  const liveWork = useStudentWork(step);
 
   // Size the page to fill the viewport below whatever studio chrome is
   // rendered above our React root.  Re-measure on window resize in case
@@ -155,8 +183,9 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
   }, []);
 
   // Load any previously-saved progress for this (lesson, user) and resume
-  // one checkpoint past the last one the student completed (clamped to the
-  // last checkpoint).  Falls through to the start if nothing is saved.
+  // where the student left off.  New snapshots carry the exact position
+  // (currentStepId + path); older ones only have an index, so fall back
+  // to one past the last completed step with a synthesized linear path.
   useEffect(() => {
     if (!lesson.id) {
       setProgressLoading(false);
@@ -164,22 +193,34 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     }
     let cancelled = false;
     (async () => {
-      const snapshot = await loadProgress(lesson.id!);
+      const [snapshot, savedInputs] = await Promise.all([
+        loadProgress(lesson.id!),
+        loadInputs(lesson.id!),
+      ]);
       if (cancelled) return;
+      setInputs(savedInputs);
+      inputsRef.current = savedInputs;
       progressRef.current = snapshot;
-      if (snapshot && snapshot.lastCompletedCheckpointIndex >= 0) {
+      const savedId = snapshot?.currentStepId;
+      if (savedId && lesson.steps.some(s => s.id === savedId)) {
+        setCurrentStepId(savedId);
+        setPath(
+          snapshot.path && snapshot.path.length > 0 ? snapshot.path : [savedId]
+        );
+      } else if (snapshot && snapshot.lastCompletedCheckpointIndex >= 0) {
         const next = Math.min(
           snapshot.lastCompletedCheckpointIndex + 1,
-          lesson.checkpoints.length - 1
+          lesson.steps.length - 1
         );
-        setCurrentIndex(next);
+        setCurrentStepId(lesson.steps[next].id);
+        setPath(lesson.steps.slice(0, next + 1).map(s => s.id));
       }
       setProgressLoading(false);
     })();
     return () => {
       cancelled = true;
     };
-  }, [lesson.id, lesson.checkpoints.length]);
+  }, [lesson.id, lesson.steps]);
 
   // Persist a single progress event (run or checkpoint completion) and
   // hold on to the returned snapshot so subsequent events can append to
@@ -188,7 +229,12 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     async (
       type: 'run' | 'checkpoint-completed',
       checkpointIndex: number,
-      work?: string
+      work?: string,
+      position?: {
+        path?: string[];
+        currentStepId?: string;
+        branchOptionId?: string;
+      }
     ) => {
       if (!lesson.id) return;
       try {
@@ -198,6 +244,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           lesson,
           work,
           previous: progressRef.current,
+          ...position,
         });
         progressRef.current = snapshot;
       } catch (e) {
@@ -223,7 +270,11 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     setBusy(true);
     (async () => {
       try {
-        const reply = await generateTutorOpening(lesson, currentIndex);
+        const reply = await generateTutorOpening(
+          lesson,
+          currentIndex,
+          inputsRef.current
+        );
         if (cancelled) return;
         setOpening(reply);
         // Stitch the structured opening into the LLM transcript so reply
@@ -253,38 +304,80 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     }
   }, [history, busy]);
 
-  // The tutor decided this turn — record completion if the student
-  // passed, but don't navigate.  The student moves on by pressing
-  // Continue.  A subsequent `stay` (re-check after tweaking) clears
-  // the pending state.
-  const handleAdvance = useCallback(
-    (action: TutorAction) => {
-      if (action === 'advance' || action === 'celebrate') {
-        persistProgressEvent('checkpoint-completed', currentIndex, liveWork);
-        setPendingAdvance(action);
-      } else {
-        setPendingAdvance(null);
+  // Record a question answer: merge locally (state + ref), then persist
+  // the whole map in the background.
+  const handleAnswer = useCallback(
+    (record: AnswerRecord) => {
+      const merged = {...inputsRef.current, [record.questionId]: record};
+      inputsRef.current = merged;
+      setInputs(merged);
+      if (lesson.id) {
+        saveAnswer(lesson.id, merged, record);
       }
     },
-    [currentIndex, liveWork, persistProgressEvent]
+    [lesson.id]
   );
 
-  // Clear any pending Continue when the active checkpoint changes.
+  // The tutor decided this turn — surface a Continue button if the
+  // student passed, but don't navigate or record yet.  The student moves
+  // on (and the completion is recorded) when they press Continue.  A
+  // subsequent `stay` (re-check after tweaking) clears the pending state.
+  const handleAdvance = useCallback((action: TutorAction) => {
+    if (action === 'advance' || action === 'celebrate') {
+      setPendingAdvance(action);
+    } else {
+      setPendingAdvance(null);
+    }
+  }, []);
+
+  // Clear any pending Continue when the active step changes.
   useEffect(() => {
     setPendingAdvance(null);
-  }, [currentIndex]);
+  }, [currentStepId]);
 
-  const handleContinue = useCallback(() => {
-    if (
-      pendingAdvance === 'advance' &&
-      currentIndex < lesson.checkpoints.length - 1
-    ) {
-      setCurrentIndex(i => i + 1);
-    } else {
+  // Apply a resolver decision to the UI.
+  const navigateTo = useCallback((decision: NavDecision) => {
+    if (decision.kind === 'end') {
       setPhase('celebrate');
+      return;
     }
-    setPendingAdvance(null);
-  }, [pendingAdvance, currentIndex, lesson.checkpoints.length]);
+    setCurrentStepId(decision.stepId);
+    setPath(p => [...p, decision.stepId]);
+  }, []);
+
+  // Complete the current step: record it, ask the resolver where to go,
+  // and navigate.  `selectedOptionId` is set when completion came from a
+  // multiple-choice selection whose option may carry a branch target.
+  // Used by every completion source — the post-verdict Continue button,
+  // unvalidated steps' Continue, panels, and the questions placeholder.
+  const completeStep = useCallback(
+    async (selectedOptionId?: string) => {
+      setPendingAdvance(null);
+      const decision = await deterministicResolver.resolveNext({
+        lesson,
+        currentStepId: step.id,
+        path,
+        selectedOptionId,
+      });
+      const destinationId =
+        decision.kind === 'goto' ? decision.stepId : undefined;
+      persistProgressEvent('checkpoint-completed', currentIndex, liveWork, {
+        path: destinationId ? [...path, destinationId] : path,
+        currentStepId: destinationId ?? step.id,
+        branchOptionId: selectedOptionId,
+      });
+      navigateTo(decision);
+    },
+    [
+      lesson,
+      step,
+      path,
+      currentIndex,
+      liveWork,
+      persistProgressEvent,
+      navigateTo,
+    ]
+  );
 
   const requestTutorTurn = useCallback(
     async (
@@ -300,7 +393,8 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           lesson,
           currentIndex,
           nextHistory,
-          liveWork
+          liveWork,
+          inputsRef.current
         );
         setHistory(h => [...h, {role: 'tutor' as const, text: reply.message}]);
         handleAdvance(reply.action);
@@ -345,25 +439,26 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
     [busy, history, requestTutorTurn]
   );
 
-  // Panels checkpoints have no source to evaluate; when the student presses
-  // Continue on the last slide we just advance.  If this is the final
-  // checkpoint of the lesson, fall through to the celebrate phase.
-  const handlePanelsComplete = useCallback(() => {
-    if (currentIndex < lesson.checkpoints.length - 1) {
-      setCurrentIndex(i => i + 1);
-    } else {
-      setPhase('celebrate');
-    }
-  }, [currentIndex, lesson.checkpoints.length]);
-
   // Fire a check the moment the student hits Run/Play in the lab. The
   // lab view calls our `onRun` prop (an ExtraLabProps field) from its
-  // Run/Play handler — no redux digging needed.
+  // Run/Play handler — no redux digging needed.  Unvalidated steps just
+  // log the run; there is nothing to evaluate.
   const handleLabRun = useCallback(() => {
-    if (!busy && phase === 'in-progress') {
-      handleCheck();
+    if (busy || phase !== 'in-progress') return;
+    if (step.kind === 'lab' && step.validation === 'none') {
+      persistProgressEvent('run', currentIndex, liveWork);
+      return;
     }
-  }, [busy, phase, handleCheck]);
+    handleCheck();
+  }, [
+    busy,
+    phase,
+    step,
+    currentIndex,
+    liveWork,
+    persistProgressEvent,
+    handleCheck,
+  ]);
 
   if (phase === 'celebrate') {
     return (
@@ -390,29 +485,43 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             <button
               type="button"
               className={styles.demoNavArrow}
-              onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
-              disabled={currentIndex === 0}
-              aria-label="Go to previous checkpoint"
-              title="Demo: jump back one checkpoint"
+              onClick={() => {
+                // Demo affordance: retrace the path when there is one,
+                // else fall back to the previous array position.
+                if (path.length > 1) {
+                  const previous = path[path.length - 2];
+                  setPath(p => p.slice(0, -1));
+                  setCurrentStepId(previous);
+                } else if (currentIndex > 0) {
+                  setCurrentStepId(lesson.steps[currentIndex - 1].id);
+                }
+              }}
+              disabled={currentIndex === 0 && path.length <= 1}
+              aria-label="Go to previous step"
+              title="Demo: jump back one step"
             >
               ←
             </button>
             <span>
-              Step {currentIndex + 1} of {lesson.checkpoints.length} ·{' '}
-              {checkpoint.title}
+              Step {currentIndex + 1} of {lesson.steps.length} · {step.title}
             </span>
             <button
               type="button"
               className={styles.demoNavArrow}
               onClick={() => {
-                if (currentIndex < lesson.checkpoints.length - 1) {
-                  setCurrentIndex(i => i + 1);
+                // Demo affordance: array order on purpose (ignores
+                // branch targets), so a presenter can page through every
+                // step without getting caught in a hub loop.
+                if (currentIndex < lesson.steps.length - 1) {
+                  const next = lesson.steps[currentIndex + 1].id;
+                  setCurrentStepId(next);
+                  setPath(p => [...p, next]);
                 } else {
                   setPhase('celebrate');
                 }
               }}
-              aria-label="Skip to next checkpoint"
-              title="Demo: skip the tutor check and jump to the next checkpoint"
+              aria-label="Skip to next step"
+              title="Demo: skip the tutor check and jump to the next step in authored order"
             >
               →
             </button>
@@ -463,7 +572,7 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
           {error && <div className={styles.error}>{error}</div>}
         </div>
 
-        {checkpoint.labType !== 'panels' && (
+        {step.kind === 'lab' && (
           <div className={styles.composer}>
             <UserMessageEditor
               userMessage={draft}
@@ -477,13 +586,30 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
                   arrow takes over and we hide the Check/Continue
                   button so it doesn't compete for attention. */}
               {draft.trim() === '' &&
-                (pendingAdvance ? (
+                (step.validation === 'none' ? (
+                  // Unvalidated step (explore / free play): no tutor
+                  // gate — the student moves on whenever they're ready.
                   <MuiButton
                     variant="contained"
                     color="primary"
                     type="button"
                     size="small"
-                    onClick={handleContinue}
+                    onClick={() => completeStep()}
+                    disabled={busy}
+                    className={styles.continueButton}
+                  >
+                    {currentIndex >= lesson.steps.length - 1 ||
+                    step.next === 'end'
+                      ? 'Finish lesson →'
+                      : 'Continue →'}
+                  </MuiButton>
+                ) : pendingAdvance ? (
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    type="button"
+                    size="small"
+                    onClick={() => completeStep()}
                     disabled={busy}
                     className={styles.continueButton}
                   >
@@ -511,13 +637,24 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
       </aside>
 
       <main className={styles.labArea}>
-        <EmbeddedLab
-          key={`${lesson.id || 'unsaved'}-${checkpoint.id}`}
-          checkpoint={checkpoint}
-          lessonId={lesson.id || ''}
-          onLabComplete={handlePanelsComplete}
-          onRun={handleLabRun}
-        />
+        {step.kind === 'questions' ? (
+          <QuestionFlow
+            key={`${lesson.id || 'unsaved'}-${step.id}`}
+            step={step}
+            inputs={inputs}
+            path={path}
+            onAnswer={handleAnswer}
+            onComplete={optionId => completeStep(optionId)}
+          />
+        ) : (
+          <EmbeddedLab
+            key={`${lesson.id || 'unsaved'}-${step.id}`}
+            step={step}
+            lessonId={lesson.id || ''}
+            onLabComplete={() => completeStep()}
+            onRun={handleLabRun}
+          />
+        )}
       </main>
     </div>
   );

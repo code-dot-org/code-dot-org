@@ -14,16 +14,22 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {generateText} from '@cdo/apps/aiGateway';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
+import {loggedGenerateText} from './aiLog';
 import {getCapabilitiesMarkdownAll} from './labCapabilities';
-import {Checkpoint, LabType, LessonPlan, PanelSlide} from './types';
+import {LessonPlan, PanelSlide, Step} from './types';
+
+// NOTE: the generator still speaks the v1 vocabulary (a flat list of
+// "checkpoints", each weblab2/music/panels) and its output is coerced to
+// lab/panels steps.  Teaching it the full step model — questions,
+// branching, segments, checklists — is deferred until authoring tools
+// (the exemplar lessons are hand-written JSON until then).
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_PRO;
 
-const LAB_DESCRIPTIONS: Record<LabType, string> = {
+const LAB_DESCRIPTIONS: {[key: string]: string} = {
   weblab2:
     'Web Lab 2 — a beginner-friendly HTML/CSS/JS editor for building web pages. Students can edit index.html, style.css, and script.js and see a live preview.',
   music:
@@ -99,37 +105,43 @@ Guidance:
 
 ${getCapabilitiesMarkdownAll()}`;
 
-function genCheckpointId(index: number): string {
-  return `cp-${index}-${Math.random().toString(36).slice(2, 7)}`;
+function genStepId(index: number): string {
+  return `step-${index}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
 interface RawCheckpoint {
   title: string;
   description: string;
-  labType: LabType;
+  labType: string;
   successCriteria: string;
   panels: {caption: string}[];
 }
 
-function coerceCheckpoint(raw: RawCheckpoint, index: number): Checkpoint {
-  const labType: LabType =
-    raw.labType === 'weblab2' || raw.labType === 'music'
-      ? raw.labType
-      : 'panels';
-  const panels: PanelSlide[] | undefined =
-    labType === 'panels'
-      ? (raw.panels || [])
-          .map(p => ({caption: String(p?.caption || '').trim()}))
-          .filter(p => p.caption.length > 0)
-      : undefined;
+function coerceStep(raw: RawCheckpoint, index: number): Step {
+  const id = genStepId(index);
+  const title = String(raw.title || `Step ${index + 1}`).trim();
 
+  if (raw.labType !== 'weblab2' && raw.labType !== 'music') {
+    const panels: PanelSlide[] = (raw.panels || [])
+      .map(p => ({caption: String(p?.caption || '').trim()}))
+      .filter(p => p.caption.length > 0);
+    return {
+      id,
+      title,
+      kind: 'panels',
+      panels: panels.length > 0 ? panels : [{caption: title}],
+    };
+  }
+
+  const successCriteria = String(raw.successCriteria || '').trim();
   return {
-    id: genCheckpointId(index),
-    title: String(raw.title || `Checkpoint ${index + 1}`).trim(),
+    id,
+    title,
+    kind: 'lab',
+    labType: raw.labType,
     description: String(raw.description || '').trim(),
-    labType,
-    successCriteria: String(raw.successCriteria || '').trim(),
-    panels,
+    validation: successCriteria ? 'tutor' : 'none',
+    successCriteria: successCriteria || undefined,
   };
 }
 
@@ -138,7 +150,7 @@ export async function generateLessonFromPrompt(
 ): Promise<LessonPlan> {
   initAiLessonsGatewayContext();
 
-  const response = await generateText({
+  const response = await loggedGenerateText('lesson generator', {
     model: getModel(MODEL_ID),
     system: SYSTEM_PROMPT,
     prompt: prompt.trim(),
@@ -151,14 +163,15 @@ export async function generateLessonFromPrompt(
     objective?: string;
     checkpoints?: RawCheckpoint[];
   };
-  const checkpoints: Checkpoint[] = (raw.checkpoints || []).map(
-    (c: RawCheckpoint, i: number) => coerceCheckpoint(c, i)
+  const steps: Step[] = (raw.checkpoints || []).map(
+    (c: RawCheckpoint, i: number) => coerceStep(c, i)
   );
 
   return {
+    formatVersion: 2,
     title: String(raw.title || 'Untitled Lesson').trim(),
     objective: String(raw.objective || '').trim(),
-    checkpoints,
+    steps,
     authorInputs: {prompt: prompt.trim()},
   };
 }

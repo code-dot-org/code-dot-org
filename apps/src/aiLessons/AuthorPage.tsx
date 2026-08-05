@@ -17,7 +17,7 @@ import {createLesson, loadLesson, updateLesson} from './api';
 import {generateLessonFromPrompt} from './lessonGenerator';
 import {generatePanelImage} from './panelImageGenerator';
 import {Link} from './router';
-import {Checkpoint, LabType, LessonPlan, PanelSlide} from './types';
+import {LessonPlan, PanelSlide, Step} from './types';
 
 import styles from './aiLessons.module.scss';
 
@@ -68,14 +68,40 @@ const SectionLabel: React.FC<{
   </>
 );
 
-function newCheckpoint(): Checkpoint {
+function newStep(): Step {
   return {
-    id: `cp-${Date.now()}-${Math.random().toString(36).slice(2, 5)}`,
-    title: 'New checkpoint',
-    description: '',
-    labType: 'panels',
-    successCriteria: '',
+    id: `step-${Date.now()}-${Math.random().toString(36).slice(2, 5)}`,
+    title: 'New step',
+    kind: 'panels',
     panels: [{caption: ''}],
+  };
+}
+
+// The editor's surface dropdown maps onto step kind + labType.  Editing
+// support for questions steps (and branching, segments, checklists) is
+// deferred — those show a read-only notice and are edited as JSON.
+function changeStepSurface(step: Step, value: string): Step {
+  const base = {id: step.id, title: step.title, role: step.role};
+  if (value === 'panels') {
+    return {
+      ...base,
+      kind: 'panels',
+      panels:
+        step.kind === 'panels' && step.panels.length > 0
+          ? step.panels
+          : [{caption: ''}],
+    };
+  }
+  const labType = value === 'music' ? ('music' as const) : ('weblab2' as const);
+  if (step.kind === 'lab') {
+    return {...step, labType};
+  }
+  return {
+    ...base,
+    kind: 'lab',
+    labType,
+    description: '',
+    validation: 'none',
   };
 }
 
@@ -140,8 +166,8 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   ): Promise<LessonPlan> => {
     const targets: {cpIndex: number; panelIndex: number; caption: string}[] =
       [];
-    seed.checkpoints.forEach((cp, cpIndex) => {
-      if (cp.labType !== 'panels') return;
+    seed.steps.forEach((cp, cpIndex) => {
+      if (cp.kind !== 'panels') return;
       (cp.panels || []).forEach((panel, panelIndex) => {
         if (panel.caption.trim() && !panel.imageUrl) {
           targets.push({cpIndex, panelIndex, caption: panel.caption});
@@ -171,20 +197,19 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
     );
 
     // Apply all results into the plan in one pass.
-    const checkpoints = seed.checkpoints.map(cp => ({
-      ...cp,
-      panels: cp.panels ? [...cp.panels] : cp.panels,
-    }));
+    const steps = seed.steps.map(cp =>
+      cp.kind === 'panels' ? {...cp, panels: [...cp.panels]} : cp
+    );
     for (const result of results) {
       if (!result.url) continue;
-      const cp = checkpoints[result.cpIndex];
-      if (!cp.panels) continue;
+      const cp = steps[result.cpIndex];
+      if (cp.kind !== 'panels') continue;
       cp.panels[result.panelIndex] = {
         ...cp.panels[result.panelIndex],
         imageUrl: result.url,
       };
     }
-    return {...seed, checkpoints};
+    return {...seed, steps};
   };
 
   const handleGenerate = async () => {
@@ -262,36 +287,52 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   const updatePlan = (patch: Partial<LessonPlan>) =>
     setPlan(p => (p ? {...p, ...patch} : p));
 
-  const updateCheckpoint = (i: number, patch: Partial<Checkpoint>) =>
+  // Patches are only ever applied to a step of the matching kind (the
+  // editor renders kind-specific fields), so the spread-and-cast is safe.
+  const updateStep = (i: number, patch: {[key: string]: unknown}) =>
     setPlan(p =>
       p
         ? {
             ...p,
-            checkpoints: p.checkpoints.map((c, idx) =>
-              idx === i ? {...c, ...patch} : c
+            steps: p.steps.map((c, idx) =>
+              idx === i ? ({...c, ...patch} as Step) : c
             ),
           }
         : p
     );
 
-  const removeCheckpoint = (i: number) =>
+  const removeStep = (i: number) =>
     setPlan(p => {
       if (!p) return p;
-      const next = p.checkpoints.filter((_, idx) => idx !== i);
+      const next = p.steps.filter((_, idx) => idx !== i);
       // Clamp the carousel index so we don't end up pointing past the
       // end after a delete.
       setCurrentCheckpointIndex(c => Math.min(c, Math.max(0, next.length - 1)));
-      return {...p, checkpoints: next};
+      return {...p, steps: next};
     });
 
-  const addCheckpoint = () =>
+  const addStep = () =>
     setPlan(p => {
       if (!p) return p;
-      const next = [...p.checkpoints, newCheckpoint()];
-      // Jump to the new checkpoint so the author can start editing it.
+      const next = [...p.steps, newStep()];
+      // Jump to the new step so the author can start editing it.
       setCurrentCheckpointIndex(next.length - 1);
-      return {...p, checkpoints: next};
+      return {...p, steps: next};
     });
+
+  const withPanels = (
+    p: LessonPlan,
+    cpIndex: number,
+    panels: PanelSlide[]
+  ): LessonPlan => ({
+    ...p,
+    steps: p.steps.map((c, idx) =>
+      idx === cpIndex && c.kind === 'panels' ? {...c, panels} : c
+    ),
+  });
+
+  const panelsOf = (step: Step): PanelSlide[] =>
+    step.kind === 'panels' ? step.panels : [];
 
   const updatePanel = (
     cpIndex: number,
@@ -300,57 +341,41 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
   ) =>
     setPlan(p => {
       if (!p) return p;
-      const cp = p.checkpoints[cpIndex];
-      const panels = [...(cp.panels || [])];
+      const panels = [...panelsOf(p.steps[cpIndex])];
       panels[panelIndex] = {...panels[panelIndex], ...patch};
-      return {
-        ...p,
-        checkpoints: p.checkpoints.map((c, idx) =>
-          idx === cpIndex ? {...c, panels} : c
-        ),
-      };
+      return withPanels(p, cpIndex, panels);
     });
 
   const addPanel = (cpIndex: number) =>
     setPlan(p => {
       if (!p) return p;
-      const cp = p.checkpoints[cpIndex];
-      const panels: PanelSlide[] = [...(cp.panels || []), {caption: ''}];
+      const cp = p.steps[cpIndex];
+      const panels: PanelSlide[] = [...panelsOf(cp), {caption: ''}];
       // Jump to the freshly added slide so the author starts editing it.
       setPanelIndexByCheckpoint(prev => ({
         ...prev,
         [cp.id]: panels.length - 1,
       }));
-      return {
-        ...p,
-        checkpoints: p.checkpoints.map((c, idx) =>
-          idx === cpIndex ? {...c, panels} : c
-        ),
-      };
+      return withPanels(p, cpIndex, panels);
     });
 
   const removePanel = (cpIndex: number, panelIndex: number) =>
     setPlan(p => {
       if (!p) return p;
-      const cp = p.checkpoints[cpIndex];
-      const panels = (cp.panels || []).filter((_, i) => i !== panelIndex);
-      // Clamp the per-checkpoint slide index so we don't end up past the
+      const cp = p.steps[cpIndex];
+      const panels = panelsOf(cp).filter((_, i) => i !== panelIndex);
+      // Clamp the per-step slide index so we don't end up past the
       // end of the slide list after a delete.
       setPanelIndexByCheckpoint(prev => ({
         ...prev,
         [cp.id]: Math.min(prev[cp.id] ?? 0, Math.max(0, panels.length - 1)),
       }));
-      return {
-        ...p,
-        checkpoints: p.checkpoints.map((c, idx) =>
-          idx === cpIndex ? {...c, panels} : c
-        ),
-      };
+      return withPanels(p, cpIndex, panels);
     });
 
   const goToCheckpoint = (i: number) => {
     if (!plan) return;
-    const clamped = Math.max(0, Math.min(i, plan.checkpoints.length - 1));
+    const clamped = Math.max(0, Math.min(i, plan.steps.length - 1));
     setCurrentCheckpointIndex(clamped);
   };
 
@@ -400,7 +425,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
             type="button"
             className={styles.linkButton}
             onClick={() => removePanel(cpIndex, panelIndex)}
-            disabled={(plan?.checkpoints[cpIndex].panels || []).length <= 1}
+            disabled={(plan ? panelsOf(plan.steps[cpIndex]) : []).length <= 1}
             aria-label={`Remove slide ${panelIndex + 1}`}
           >
             Remove
@@ -543,23 +568,23 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
             />
           </label>
 
-          <h2>Checkpoints</h2>
-          {plan.checkpoints.length === 0 ? (
+          <h2>Steps</h2>
+          {plan.steps.length === 0 ? (
             <p className={styles.muted}>
-              No checkpoints yet — add one to get started.
+              No steps yet — add one to get started.
             </p>
           ) : (
             (() => {
               const i = Math.max(
                 0,
-                Math.min(currentCheckpointIndex, plan.checkpoints.length - 1)
+                Math.min(currentCheckpointIndex, plan.steps.length - 1)
               );
-              const cp = plan.checkpoints[i];
+              const cp = plan.steps[i];
               const slideIndex = Math.max(
                 0,
                 Math.min(
                   panelIndexByCheckpoint[cp.id] ?? 0,
-                  (cp.panels?.length ?? 1) - 1
+                  Math.max(panelsOf(cp).length, 1) - 1
                 )
               );
               return (
@@ -570,19 +595,19 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                       className={styles.linkButton}
                       onClick={() => goToCheckpoint(i - 1)}
                       disabled={i === 0}
-                      aria-label="Previous checkpoint"
+                      aria-label="Previous step"
                     >
                       ← Previous
                     </button>
                     <span className={styles.carouselPosition}>
-                      Checkpoint {i + 1} of {plan.checkpoints.length}
+                      Step {i + 1} of {plan.steps.length}
                     </span>
                     <button
                       type="button"
                       className={styles.linkButton}
                       onClick={() => goToCheckpoint(i + 1)}
-                      disabled={i >= plan.checkpoints.length - 1}
-                      aria-label="Next checkpoint"
+                      disabled={i >= plan.steps.length - 1}
+                      aria-label="Next step"
                     >
                       Next →
                     </button>
@@ -590,27 +615,42 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                   <div className={styles.checkpointInput}>
                     <div className={styles.checkpointRow}>
                       <span className={styles.checkpointBadge}>
-                        Checkpoint #{i + 1}
+                        Step #{i + 1}
                       </span>
-                      <SimpleDropdown
-                        name={`checkpoint-${i}-lab-type`}
-                        labelText="Lab type"
-                        isLabelVisible={false}
-                        size="s"
-                        color="black"
-                        items={LAB_ITEMS}
-                        selectedValue={cp.labType}
-                        onChange={e =>
-                          updateCheckpoint(i, {
-                            labType: e.target.value as LabType,
-                          })
-                        }
-                      />
+                      {cp.kind === 'questions' ? (
+                        <span className={styles.muted}>Questions step</span>
+                      ) : (
+                        <SimpleDropdown
+                          name={`step-${i}-lab-type`}
+                          labelText="Step surface"
+                          isLabelVisible={false}
+                          size="s"
+                          color="black"
+                          items={LAB_ITEMS}
+                          selectedValue={
+                            cp.kind === 'lab' ? cp.labType : 'panels'
+                          }
+                          onChange={e =>
+                            setPlan(p =>
+                              p
+                                ? {
+                                    ...p,
+                                    steps: p.steps.map((s, idx) =>
+                                      idx === i
+                                        ? changeStepSurface(s, e.target.value)
+                                        : s
+                                    ),
+                                  }
+                                : p
+                            )
+                          }
+                        />
+                      )}
                       <button
                         type="button"
                         className={styles.linkButton}
-                        onClick={() => removeCheckpoint(i)}
-                        aria-label={`Remove checkpoint ${i + 1}`}
+                        onClick={() => removeStep(i)}
+                        aria-label={`Remove step ${i + 1}`}
                       >
                         Remove
                       </button>
@@ -637,18 +677,16 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                         id={`cp-${cp.id}-title`}
                         type="text"
                         value={cp.title}
-                        onChange={e =>
-                          updateCheckpoint(i, {title: e.target.value})
-                        }
+                        onChange={e => updateStep(i, {title: e.target.value})}
                       />
                     </label>
 
                     {/* Description + success criteria only apply to lab
-                        checkpoints where the AI Tutor coaches and grades
-                        the student.  Panels checkpoints advance via
-                        Continue, so these are hidden — the slide captions
-                        themselves are the content. */}
-                    {cp.labType !== 'panels' && (
+                        steps where the AI Tutor coaches and grades the
+                        student.  Panels steps advance via Continue, so
+                        these are hidden — the slide captions themselves
+                        are the content. */}
+                    {cp.kind === 'lab' && (
                       <>
                         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
                         <label
@@ -667,7 +705,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                             id={`cp-${cp.id}-desc`}
                             value={cp.description}
                             onChange={e =>
-                              updateCheckpoint(i, {description: e.target.value})
+                              updateStep(i, {description: e.target.value})
                             }
                             rows={4}
                           />
@@ -689,10 +727,15 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                           </span>
                           <textarea
                             id={`cp-${cp.id}-success`}
-                            value={cp.successCriteria}
+                            value={cp.successCriteria || ''}
                             onChange={e =>
-                              updateCheckpoint(i, {
+                              // Non-empty criteria imply a tutor gate;
+                              // clearing them makes the step Continue-only.
+                              updateStep(i, {
                                 successCriteria: e.target.value,
+                                validation: e.target.value.trim()
+                                  ? 'tutor'
+                                  : 'none',
                               })
                             }
                             rows={2}
@@ -701,7 +744,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                       </>
                     )}
 
-                    {cp.labType === 'panels' && (
+                    {cp.kind === 'panels' && (
                       <div className={styles.field}>
                         <span>
                           <FontAwesomeV6Icon
@@ -711,7 +754,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                           />
                           Slide captions
                         </span>
-                        {(cp.panels?.length ?? 0) === 0 ? (
+                        {cp.panels.length === 0 ? (
                           <p className={styles.muted}>
                             No slides yet — add one to get started.
                           </p>
@@ -724,7 +767,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                                 onClick={() =>
                                   goToPanel(
                                     cp.id,
-                                    cp.panels!.length,
+                                    cp.panels.length,
                                     slideIndex - 1
                                   )
                                 }
@@ -734,7 +777,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                                 ← Previous
                               </button>
                               <span className={styles.carouselPosition}>
-                                Slide {slideIndex + 1} of {cp.panels!.length}
+                                Slide {slideIndex + 1} of {cp.panels.length}
                               </span>
                               <button
                                 type="button"
@@ -742,11 +785,11 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                                 onClick={() =>
                                   goToPanel(
                                     cp.id,
-                                    cp.panels!.length,
+                                    cp.panels.length,
                                     slideIndex + 1
                                   )
                                 }
-                                disabled={slideIndex >= cp.panels!.length - 1}
+                                disabled={slideIndex >= cp.panels.length - 1}
                                 aria-label="Next slide"
                               >
                                 Next →
@@ -755,7 +798,7 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                             {renderSlideEditor(
                               i,
                               slideIndex,
-                              cp.panels![slideIndex]
+                              cp.panels[slideIndex]
                             )}
                           </div>
                         )}
@@ -768,6 +811,24 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
                         </button>
                       </div>
                     )}
+
+                    {cp.kind === 'questions' && (
+                      <div className={styles.field}>
+                        <span>Questions</span>
+                        <ul>
+                          {cp.questions.map(q => (
+                            <li key={q.id} className={styles.muted}>
+                              {q.prompt} ({q.type}
+                              {q.validation ? `, ${q.validation}` : ''})
+                            </li>
+                          ))}
+                        </ul>
+                        <p className={styles.muted}>
+                          Editing questions steps isn't supported here yet —
+                          edit the lesson JSON directly.
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               );
@@ -776,9 +837,9 @@ const AuthorPage: React.FunctionComponent<AuthorPageProps> = ({
           <button
             type="button"
             className={styles.secondaryButton}
-            onClick={addCheckpoint}
+            onClick={addStep}
           >
-            + Add checkpoint
+            + Add step
           </button>
 
           <div className={styles.actions}>

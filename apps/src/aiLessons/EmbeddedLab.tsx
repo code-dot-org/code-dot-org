@@ -30,7 +30,7 @@ import {
   AiLessonsProjectManager,
   loadSavedSources,
 } from './aiLessonsProjectManager';
-import {Checkpoint, LabType} from './types';
+import {LabStep, PanelsStep, ProjectLabType, Step} from './types';
 
 import styles from './aiLessons.module.scss';
 
@@ -65,15 +65,15 @@ function applyLabTheme(
 }
 
 interface EmbeddedLabProps {
-  checkpoint: Checkpoint;
-  // The lesson this checkpoint belongs to.  Used as the storage scope for
-  // saved project sources — all checkpoints in the same lesson that target
+  step: Step;
+  // The lesson this step belongs to.  Used as the storage scope for
+  // saved project sources — all lab steps in the same lesson that target
   // the same lab type share one project, so the student's code carries
-  // across checkpoints.
+  // across steps.
   lessonId: string;
   // Called when an in-app navigation action signals the student has
-  // finished the lab portion of the checkpoint — currently only the
-  // Continue button on the last panel of a Panels checkpoint.
+  // finished the main-area portion of the step — currently the Continue
+  // button on the last panel of a panels step.
   onLabComplete?: () => void;
   // Fires when the student presses Run/Play inside the embedded lab.
   // Forwarded to the lab view via ExtraLabProps.
@@ -96,7 +96,7 @@ function synthesizeLevelId(lessonId: string, labType: string): number {
 
 function syntheticChannel(
   lessonId: string,
-  labType: LabType,
+  labType: ProjectLabType,
   projectType: AppName,
   checkpointTitle: string
 ): Channel {
@@ -163,28 +163,27 @@ function slidesToPanels(slides: SlideInput[]): Panel[] {
 }
 
 const PanelsCheckpointLab: React.FC<{
-  checkpoint: Checkpoint;
+  step: PanelsStep;
   lessonId: string;
   onLabComplete?: () => void;
-}> = ({checkpoint, lessonId, onLabComplete}) => {
+}> = ({step, lessonId, onLabComplete}) => {
   // Panels skips useLabSetup (no Lab2 view to mount), so apply the
-  // theme override here on each (lessonId, checkpoint) change.
+  // theme override here on each (lessonId, step) change.
   const {setTheme} = useTheme();
   useEffect(() => {
     applyLabTheme('panels', setTheme);
-  }, [lessonId, checkpoint.id, setTheme]);
+  }, [lessonId, step.id, setTheme]);
 
-  // Always render the real PanelsView.  If the AI didn't generate explicit
-  // slide captions for this checkpoint, fall back to a single panel built
-  // from the instruction text so the student still gets the same Continue
-  // affordance.
+  // Always render the real PanelsView.  If the step has no usable slide
+  // captions, fall back to a single panel built from the title so the
+  // student still gets the same Continue affordance.
   const panels = useMemo(() => {
-    const explicit = (checkpoint.panels ?? [])
+    const explicit = (step.panels ?? [])
       .map(p => ({caption: p.caption.trim(), imageUrl: p.imageUrl}))
       .filter(p => p.caption.length > 0);
     if (explicit.length > 0) return slidesToPanels(explicit);
-    return slidesToPanels([{caption: checkpoint.title}]);
-  }, [checkpoint]);
+    return slidesToPanels([{caption: step.title}]);
+  }, [step]);
 
   return (
     <div className={styles.panelsView}>
@@ -207,8 +206,8 @@ const PanelsCheckpointLab: React.FC<{
 // is Light-first, Weblab2 starts Dark.
 function useLabSetup(
   lessonId: string,
-  labType: LabType,
-  checkpoint: Checkpoint,
+  labType: ProjectLabType,
+  checkpoint: LabStep,
   appName: AppName,
   levelProperties: LabProps['levelProperties'],
   initialSources?: ProjectSources
@@ -275,8 +274,8 @@ function useLabSetup(
 
 const Lab2MountedView: React.FC<{
   lessonId: string;
-  labType: LabType;
-  checkpoint: Checkpoint;
+  labType: ProjectLabType;
+  checkpoint: LabStep;
   appName: AppName;
   view: React.LazyExoticComponent<React.ComponentType<LabProps>>;
   levelProperties: LabProps['levelProperties'];
@@ -348,13 +347,13 @@ const MUSIC_START_SOURCES = {
 };
 
 const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
-  checkpoint,
+  step,
   lessonId,
   onLabComplete,
   onRun,
 }) => {
-  const labType = checkpoint.labType as LabType;
-  const id = synthesizeLevelId(lessonId, labType);
+  const labType = step.kind === 'lab' ? step.labType : undefined;
+  const id = synthesizeLevelId(lessonId, labType || step.kind);
 
   // Sources start undefined until we either confirm there's nothing saved
   // on the server or get back what was previously saved.  We re-fetch
@@ -369,7 +368,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     let cancelled = false;
     setSourcesLoading(true);
     (async () => {
-      if (labType === 'panels') {
+      if (!labType) {
         if (!cancelled) {
           setSavedSources(undefined);
           setSourcesLoading(false);
@@ -429,14 +428,20 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     return undefined;
   }, [labType, savedSources]);
 
-  if (labType === 'panels') {
+  if (step.kind === 'panels') {
     return (
       <PanelsCheckpointLab
-        checkpoint={checkpoint}
+        step={step}
         lessonId={lessonId}
         onLabComplete={onLabComplete}
       />
     );
+  }
+
+  if (step.kind === 'questions') {
+    // Questions steps are rendered by QuestionFlow at the page level,
+    // not through the lab mount.
+    return null;
   }
 
   if (sourcesLoading) {
@@ -448,7 +453,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       <Lab2MountedView
         lessonId={lessonId}
         labType="weblab2"
-        checkpoint={checkpoint}
+        checkpoint={step}
         appName="weblab2"
         view={Weblab2EntryPoint.view}
         levelProperties={levelProperties}
@@ -463,7 +468,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
       <Lab2MountedView
         lessonId={lessonId}
         labType="music"
-        checkpoint={checkpoint}
+        checkpoint={step}
         appName="music"
         view={MusicEntryPoint.view}
         levelProperties={levelProperties}
@@ -473,11 +478,7 @@ const EmbeddedLab: React.FunctionComponent<EmbeddedLabProps> = ({
     );
   }
 
-  return (
-    <div className={styles.labMessage}>
-      Unknown lab type: {checkpoint.labType}
-    </div>
-  );
+  return <div className={styles.labMessage}>Unknown step kind</div>;
 };
 
 export default EmbeddedLab;

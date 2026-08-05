@@ -14,12 +14,13 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {generateText} from '@cdo/apps/aiGateway';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
-import {getCapabilitiesMarkdownFor} from './labCapabilities';
-import {LessonPlan} from './types';
+import {loggedGenerateText} from './aiLog';
+import {getCapabilitiesMarkdownFor, StepSurface} from './labCapabilities';
+import {StudentInputs} from './studentInputs';
+import {LessonPlan, Step} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
 
@@ -77,33 +78,95 @@ const tutorOpeningSchema = Output.object({
   }),
 });
 
-const SYSTEM_PROMPT_TEMPLATE = (lesson: LessonPlan, currentIndex: number) => {
-  const totalCheckpoints = lesson.checkpoints.length;
-  const current = lesson.checkpoints[currentIndex];
-  const upcoming = lesson.checkpoints[currentIndex + 1];
+// The surface the student is looking at during a step, for capability
+// docs and prompt labels.
+function surfaceFor(step: Step): StepSurface {
+  return step.kind === 'lab' ? step.labType : step.kind;
+}
 
-  const overview = lesson.checkpoints
-    .map((c, i) => {
-      const marker = i < currentIndex ? '✓' : i === currentIndex ? '→' : ' ';
-      const tail = c.description ? ` — ${c.description}` : '';
-      return `  ${marker} ${i + 1}. ${c.title} (${c.labType})${tail}`;
-    })
-    .join('\n');
+// One line per step for the lesson overview in the system prompt.
+function overviewLine(step: Step, index: number, currentIndex: number) {
+  const marker =
+    index < currentIndex ? '✓' : index === currentIndex ? '→' : ' ';
+  const segment = step.segment ? ` [${step.segment.title}]` : '';
+  const description =
+    step.kind !== 'panels' && step.description ? ` — ${step.description}` : '';
+  return `  ${marker} ${index + 1}. ${step.title} (${surfaceFor(
+    step
+  )})${segment}${description}`;
+}
 
-  // Panels checkpoints don't have a description or success criteria —
-  // the slide captions carry the content and Continue advances directly.
-  // Skip the empty lines so the prompt doesn't dangle them.
-  const currentDetails = [
-    `  Title: ${current.title}`,
-    `  Lab type: ${current.labType}`,
-    current.description &&
-      `  Description (what the student should do — turn this into your own
+function currentStepDetails(step: Step): string {
+  const lines: (string | false | undefined)[] = [
+    `  Title: ${step.title}`,
+    `  Surface: ${surfaceFor(step)}`,
+  ];
+  if (step.kind !== 'panels' && step.description) {
+    lines.push(`  Description (what the student should do — turn this into your own
   natural-language guidance for the student; never paste it verbatim):
-  ${current.description}`,
-    current.successCriteria &&
-      `  Success criteria (what you, the tutor, must verify before advancing): ${current.successCriteria}`,
-  ]
-    .filter(Boolean)
+  ${step.description}`);
+  }
+  if (step.kind === 'lab') {
+    if (step.validation === 'tutor' && step.successCriteria) {
+      lines.push(
+        `  Success criteria (what you, the tutor, must verify before advancing): ${step.successCriteria}`
+      );
+    } else {
+      lines.push(
+        `  This step has NO completion check — the student moves on with a
+  Continue button whenever they're ready.  Never set action="advance"
+  or "celebrate" here; encourage and answer questions instead.`
+      );
+    }
+  }
+  if (step.kind === 'questions') {
+    lines.push('  Questions the student answers on this step:');
+    step.questions.forEach(q => lines.push(`    - ${q.prompt}`));
+    lines.push(
+      `  The student answers in the main area, not in this chat.  Never set
+  action="advance" — the questions surface advances itself.`
+    );
+  }
+  return lines.filter(Boolean).join('\n');
+}
+
+// Everything the student has answered so far, oldest first, formatted
+// for the system prompt.  This is the personalization substrate: the
+// tutor should reference the student's own project, adjust its tone to
+// their confidence, and never re-ask what's already been answered.
+function formatStudentContext(inputs: StudentInputs | undefined): string {
+  const records = Object.values(inputs || {}).sort((a, b) =>
+    a.at.localeCompare(b.at)
+  );
+  if (records.length === 0) return '';
+  const lines = records.map(r => {
+    const grade =
+      r.outcome === 'correct' || r.outcome === 'incorrect'
+        ? ` (answered ${r.outcome}${
+            r.attempts && r.attempts > 1 ? ` after ${r.attempts} tries` : ''
+          })`
+        : '';
+    return `  - "${r.prompt}" → ${r.answer}${grade}`;
+  });
+  return `
+STUDENT CONTEXT (their own answers so far — use these to personalize:
+reference their project and interests naturally, match your support to
+their confidence, and never re-ask them)
+${lines.join('\n')}
+`;
+}
+
+const SYSTEM_PROMPT_TEMPLATE = (
+  lesson: LessonPlan,
+  currentIndex: number,
+  studentInputs?: StudentInputs
+) => {
+  const totalSteps = lesson.steps.length;
+  const current = lesson.steps[currentIndex];
+  const upcoming = lesson.steps[currentIndex + 1];
+
+  const overview = lesson.steps
+    .map((s, i) => overviewLine(s, i, currentIndex))
     .join('\n');
 
   return `You are AI Tutor, a warm, encouraging teaching assistant guiding a
@@ -114,39 +177,39 @@ decide when the student is ready to move on.
 LESSON
   Title: ${lesson.title}
   Objective: ${lesson.objective}
-
-CHECKPOINTS
+${formatStudentContext(studentInputs)}
+STEPS
 ${overview}
 
-CURRENT CHECKPOINT (#${currentIndex + 1} of ${totalCheckpoints})
-${currentDetails}
+CURRENT STEP (#${currentIndex + 1} of ${totalSteps})
+${currentStepDetails(current)}
 
 ${
   upcoming
-    ? `NEXT CHECKPOINT (after this one)
+    ? `NEXT STEP (after this one)
   Title: ${upcoming.title}
-  Lab type: ${upcoming.labType}`
-    : 'This is the LAST checkpoint.  After it, congratulate the student.'
+  Surface: ${surfaceFor(upcoming)}`
+    : 'This is the LAST step.  After it, congratulate the student.'
 }
 
 YOUR JOB
 - Keep replies short (1-4 short paragraphs).  Markdown is rendered, so
   feel free to use **bold**, *italics*, bullet lists, and inline \`code\`
   to highlight what matters.  Don't overdo it.
-- Stay focused on the current checkpoint.  If the student wanders, gently
+- Stay focused on the current step.  If the student wanders, gently
   bring them back.
 - When the student shares their work (code, a description, or by clicking
   "Check my work"), evaluate it against the success criteria.
 - If the success criteria are clearly met, set action="advance" and write a
-  brief celebratory transition that previews the next checkpoint.
-- If this is the final checkpoint and the criteria are met, set
+  brief celebratory transition that previews the next step.
+- If this is the final step and the criteria are met, set
   action="celebrate".
 - Otherwise set action="stay" and give targeted, actionable feedback —
   one or two specific suggestions.  Never advance prematurely.
-- Do not invent UI controls.  The student has the lab on screen and a chat
-  with you; that's it.
+- Do not invent UI controls.  The student has the lesson surface on screen
+  and a chat with you; that's it.
 
-${getCapabilitiesMarkdownFor(current.labType)}`;
+${getCapabilitiesMarkdownFor(surfaceFor(current))}`;
 };
 
 function formatTranscript(
@@ -171,7 +234,7 @@ async function callTutorModel(
   prompt: string,
   temperature: number
 ): Promise<TutorReply> {
-  const response = await generateText({
+  const response = await loggedGenerateText('tutor reply', {
     model: getModel(MODEL_ID),
     system,
     prompt,
@@ -193,13 +256,14 @@ async function callTutorModel(
 
 export async function generateTutorOpening(
   lesson: LessonPlan,
-  currentIndex: number
+  currentIndex: number,
+  studentInputs?: StudentInputs
 ): Promise<TutorOpening> {
   initAiLessonsGatewayContext();
   const isFirst = currentIndex === 0;
-  const response = await generateText({
+  const response = await loggedGenerateText('tutor opening', {
     model: getModel(MODEL_ID),
-    system: SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex),
+    system: SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs),
     prompt: `The student has just arrived at this checkpoint.  Return:
 
 welcome:  ONE friendly ${
@@ -230,11 +294,12 @@ export async function generateTutorReply(
   lesson: LessonPlan,
   currentIndex: number,
   history: TutorMessage[],
-  studentWork?: string
+  studentWork?: string,
+  studentInputs?: StudentInputs
 ): Promise<TutorReply> {
   initAiLessonsGatewayContext();
   return callTutorModel(
-    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex),
+    SYSTEM_PROMPT_TEMPLATE(lesson, currentIndex, studentInputs),
     formatTranscript(history, studentWork),
     0.4
   );

@@ -765,3 +765,293 @@ textarea {
     color: var(--text-brand-teal-primary);
   }
 }
+
+
+
+// Interactive question surface (QuestionFlow): one big bold question at
+// a time in the main area, with entrance/exit transitions between
+// questions.  Timings must stay in sync with EXIT_TRANSITION_MS in
+// QuestionFlow.tsx.
+.questionFlow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 48px;
+  gap: 28px;
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.questionProgress {
+  display: flex;
+  gap: 8px;
+
+  // Dots are buttons: visited ones navigate, unreached ones are inert.
+  button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--borders-neutral-primary);
+    cursor: pointer;
+    transition: background 200ms ease, transform 200ms ease;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      transform: scale(1.35);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+  }
+}
+
+.questionDotActive {
+  background: var(--background-brand-teal-primary) !important;
+  transform: scale(1.35);
+}
+
+.questionDotDone {
+  background: var(--background-brand-teal-primary) !important;
+  opacity: 0.45;
+}
+
+// The per-question card that animates in and out.
+.questionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.questionEnter {
+  animation: question-enter 320ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+.questionExit {
+  animation: question-exit 200ms ease-in both;
+}
+
+@keyframes question-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes question-exit {
+  to {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.98);
+  }
+}
+
+.questionPrompt {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+  text-align: center;
+  margin: 0;
+}
+
+// Options render as chips in a responsive grid: as many columns as fit
+// at ~210px each, reflowing with the container (a two-option question
+// sits side by side on a laptop, everything stacks on narrow screens).
+// Grid rows keep chips in the same row equal-height.
+.questionOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  width: min(720px, 100%);
+  justify-items: stretch;
+
+  button {
+    @extend %button-base;
+    font-size: 17px;
+    padding: 14px 20px;
+    border-radius: 20px;
+    background: var(--background-neutral-primary);
+    color: var(--text-neutral-primary);
+    border: 2px solid var(--borders-neutral-primary);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 150ms ease, transform 150ms ease,
+      box-shadow 150ms ease;
+
+    &:hover:not(:disabled) {
+      border-color: var(--background-brand-teal-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgb(0 0 0 / 18%);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--background-brand-teal-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}
+
+.optionsShake {
+  animation: options-shake 360ms ease both;
+}
+
+@keyframes options-shake {
+  15% {
+    transform: translateX(-8px);
+  }
+
+  35% {
+    transform: translateX(7px);
+  }
+
+  55% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.questionOptionSelected {
+  border-color: var(--background-brand-teal-primary) !important;
+  background: var(--background-brand-teal-secondary, rgb(0 128 128 / 15%)) !important;
+}
+
+.questionOptionCorrect {
+  border-color: #2e7d32 !important;
+  background: rgb(46 125 50 / 18%) !important;
+}
+
+.questionOptionWrong {
+  border-color: #c62828 !important;
+  background: rgb(198 40 40 / 14%) !important;
+}
+
+.questionTextarea {
+  width: min(640px, 100%);
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+    border-color: var(--background-brand-teal-primary);
+  }
+}
+
+.questionSubmit {
+  @extend %button-base;
+  font-size: 18px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.questionScale {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(560px, 100%);
+
+  input[type='range'] {
+    flex: 1;
+    accent-color: var(--background-brand-teal-primary);
+  }
+}
+
+.questionScaleLabel {
+  font-size: 14px;
+  color: var(--text-neutral-tertiary);
+  max-width: 120px;
+  text-align: center;
+}
+
+.questionScaleValue {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.questionFeedbackCorrect {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-success, #2e7d32);
+  animation: feedback-pop 260ms cubic-bezier(0.2, 0.8, 0.3, 1.4) both;
+}
+
+.questionFeedbackIncorrect {
+  font-size: 18px;
+  color: var(--text-danger, #c62828);
+  animation: feedback-pop 200ms ease both;
+}
+
+@keyframes feedback-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Kill all question-surface motion for users who ask for less of it.
+@media (prefers-reduced-motion: reduce) {
+  .questionEnter,
+  .questionExit,
+  .optionsShake,
+  .questionFeedbackCorrect,
+  .questionFeedbackIncorrect {
+    animation: none;
+  }
+
+  .questionProgress button,
+  .questionOptions button {
+    transition: none;
+  }
+
+  .questionOptions button:hover:not(:disabled) {
+    transform: none;
+  }
+}

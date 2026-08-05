@@ -29,7 +29,10 @@ import {
   AllowedImageHostnameSuffixes,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {LabType} from './types';
+// The surfaces a step can present.  Lab steps map to their labType;
+// panels and questions steps have their own blurbs so the tutor knows
+// what the student is looking at.
+export type StepSurface = 'weblab2' | 'music' | 'panels' | 'questions';
 
 // ---- Music ----
 
@@ -121,8 +124,15 @@ const SECTION_RULES = [
   'the student will hit a dead end.',
 ];
 
-export function getCapabilitiesMarkdownFor(labType: LabType): string {
-  switch (labType) {
+function questionsCapabilities(): string {
+  return `Questions — a full-screen prompt surface, one question at a time.
+  Questions are free-response, multiple-choice, or a slider scale.  The
+  student answers in the main area, not in the chat; every answer is
+  recorded.  No code is involved.`;
+}
+
+export function getCapabilitiesMarkdownFor(surface: StepSurface): string {
+  switch (surface) {
     case 'music':
       return [
         ...SECTION_RULES,
@@ -143,6 +153,13 @@ export function getCapabilitiesMarkdownFor(labType: LabType): string {
         '',
         '=== Panels capabilities ===',
         panelsCapabilities(),
+      ].join('\n');
+    case 'questions':
+      return [
+        ...SECTION_RULES,
+        '',
+        '=== Questions capabilities ===',
+        questionsCapabilities(),
       ].join('\n');
   }
 }

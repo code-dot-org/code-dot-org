@@ -18,11 +18,11 @@ import {Output} from 'ai';
 import z from 'zod/v3';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {generateText} from '@cdo/apps/aiGateway';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {initAiLessonsGatewayContext} from './aiGatewaySetup';
+import {loggedGenerateText} from './aiLog';
 import {LessonPlan} from './types';
 
 const MODEL_ID = AiChatModelIds.GEMINI_2_5_FLASH;
@@ -39,6 +39,9 @@ export interface ProgressEvent {
   // Optional snapshot of the student's work at the moment of the event.
   // Bounded to a reasonable length to keep payloads small.
   workExcerpt?: string;
+  // Set when this completion navigated via a branch option the student
+  // chose, so the future adaptive resolver can see which paths were taken.
+  branchOptionId?: string;
 }
 
 export interface ProgressSnapshot {
@@ -48,6 +51,11 @@ export interface ProgressSnapshot {
   summary: string;
   events: ProgressEvent[];
   updatedAt: string;
+  // Step ids visited in order, ending with `currentStepId`.  Snapshots
+  // written before branching landed lack these; resume falls back to
+  // lastCompletedCheckpointIndex + 1.
+  path?: string[];
+  currentStepId?: string;
 }
 
 const EMPTY_SUMMARY = 'No progress yet.';
@@ -118,9 +126,12 @@ async function generateSummary(
     `Lesson title: ${lesson.title}`,
     `Lesson objective: ${lesson.objective}`,
     '',
-    'Checkpoints:',
-    ...lesson.checkpoints.map(
-      (c, i) => `  ${i + 1}. ${c.title} (${c.labType}) — ${c.description}`
+    'Steps:',
+    ...lesson.steps.map(
+      (s, i) =>
+        `  ${i + 1}. ${s.title} (${s.kind === 'lab' ? s.labType : s.kind})${
+          s.kind !== 'panels' && s.description ? ` — ${s.description}` : ''
+        }`
     ),
   ].join('\n');
 
@@ -138,7 +149,7 @@ Recent activity (most recent last):
 ${formatEventsForPrompt(events.slice(-30))}${work}`;
 
   try {
-    const response = await generateText({
+    const response = await loggedGenerateText('progress summary', {
       model: getModel(MODEL_ID),
       prompt,
       temperature: 0.3,
@@ -151,7 +162,7 @@ ${formatEventsForPrompt(events.slice(-30))}${work}`;
     const completed = events.filter(
       e => e.type === 'checkpoint-completed'
     ).length;
-    return `Student has completed ${completed} of ${lesson.checkpoints.length} checkpoints so far.`;
+    return `Student has completed ${completed} of ${lesson.steps.length} steps so far.`;
   }
 }
 
@@ -164,16 +175,27 @@ interface RecordOptions {
   work?: string;
   // The previous snapshot (so we can append rather than overwrite).
   previous?: ProgressSnapshot;
+  // Where the student is after this event: the visited-step path and the
+  // step they're now on (for completions, the destination the resolver
+  // chose).  Persisted so resume can restore branched positions.
+  path?: string[];
+  currentStepId?: string;
+  // The branch option that produced this navigation, when there was one.
+  branchOptionId?: string;
 }
 
 export async function recordProgressEvent(
   lessonId: string,
   options: RecordOptions
 ): Promise<ProgressSnapshot> {
-  const checkpoint = options.lesson.checkpoints[options.checkpointIndex];
-  if (!checkpoint) {
+  // Progress still speaks the v1 "checkpoint" vocabulary on the wire
+  // (checkpointIndex etc.) so old snapshots keep loading; the whole
+  // snapshot shape gets replaced by path-based progress in the
+  // navigation rework.
+  const step = options.lesson.steps[options.checkpointIndex];
+  if (!step) {
     throw new Error(
-      `Bad checkpoint index ${options.checkpointIndex} for lesson with ${options.lesson.checkpoints.length} checkpoints`
+      `Bad step index ${options.checkpointIndex} for lesson with ${options.lesson.steps.length} steps`
     );
   }
   const now = new Date().toISOString();
@@ -181,10 +203,11 @@ export async function recordProgressEvent(
   const event: ProgressEvent = {
     type: options.type,
     checkpointIndex: options.checkpointIndex,
-    checkpointId: checkpoint.id,
-    checkpointTitle: checkpoint.title,
+    checkpointId: step.id,
+    checkpointTitle: step.title,
     at: now,
     workExcerpt: clipWork(options.work),
+    branchOptionId: options.branchOptionId,
   };
 
   const baseEvents = options.previous?.events ?? [];
@@ -195,7 +218,7 @@ export async function recordProgressEvent(
     ? options.checkpointIndex
     : options.previous?.lastCompletedCheckpointIndex ?? -1;
   const lastCompletedCheckpointId = isCompletion
-    ? checkpoint.id
+    ? step.id
     : options.previous?.lastCompletedCheckpointId;
 
   const summary = await generateSummary(options.lesson, events, options.work);
@@ -203,10 +226,12 @@ export async function recordProgressEvent(
   const snapshot: ProgressSnapshot = {
     lastCompletedCheckpointIndex,
     lastCompletedCheckpointId,
-    totalCheckpoints: options.lesson.checkpoints.length,
+    totalCheckpoints: options.lesson.steps.length,
     summary,
     events,
     updatedAt: now,
+    path: options.path ?? options.previous?.path,
+    currentStepId: options.currentStepId ?? options.previous?.currentStepId,
   };
 
   try {

@@ -2,6 +2,7 @@
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {normalizeLessonPlan} from './lessonFormat';
 import {LessonPlan} from './types';
 
 const JSON_HEADERS = {'Content-Type': 'application/json'};
@@ -31,7 +32,8 @@ export async function updateLesson(
 
 export async function loadLesson(id: string): Promise<LessonPlan> {
   const response = await HttpClient.get(`/ai_lessons/${id}.json`, false, {});
-  return (await response.json()) as LessonPlan;
+  // Migrates v1 (checkpoints) JSONs to the current step-based shape.
+  return normalizeLessonPlan(await response.json());
 }
 
 export async function deleteLesson(id: string): Promise<void> {
