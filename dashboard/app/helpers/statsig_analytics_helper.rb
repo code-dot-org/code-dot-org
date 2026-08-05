@@ -14,9 +14,11 @@ module StatsigAnalyticsHelper
   #
   # Only production and the chef-managed test web server transmit; every other
   # environment is served provider 'none' and never loads the Statsig SDK.
+  # statsig_force_transmit (locals.yml) overrides that for local testing.
   def analytics_config
     client_key = CDO.safe_statsig_api_client_key
-    transmit = CDO.rack_env?(:production) || CDO.managed_test_server?
+    transmit = CDO.rack_env?(:production) || CDO.managed_test_server? ||
+      CDO.statsig_force_transmit
     return {provider: 'none'} unless transmit && client_key.present?
 
     {provider: 'statsig', statsig: {clientKey: client_key}}

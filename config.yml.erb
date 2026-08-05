@@ -670,6 +670,11 @@ statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
 statsig_api_client_key_session_replay: 'client-fake-key'
 
+# Serve frontend/ pages a 'statsig' analytics provider outside production and
+# the managed test server. For local testing of the browser analytics path;
+# set in locals.yml together with a real client key.
+statsig_force_transmit: false
+
 # MailGun/MailJet API keys
 mailjet_api_key:
 mailjet_secret_key:
