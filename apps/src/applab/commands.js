@@ -27,8 +27,8 @@ import ChangeEventHandler from './ChangeEventHandler';
 import ChartApi from './ChartApi';
 import {
   ICON_PREFIX_REGEX,
-  FLAGGED_IMAGE_URL_WARNING,
-  IMAGE_MODERATION_ERROR_WARNING,
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
 } from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
@@ -62,8 +62,8 @@ var eventSandboxer = new EventSandboxer();
 
 function moderationWarningForStatus(status) {
   return status === 'flagged'
-    ? FLAGGED_IMAGE_URL_WARNING
-    : IMAGE_MODERATION_ERROR_WARNING;
+    ? FLAGGED_IMAGE_URL_MESSAGE
+    : IMAGE_MODERATION_ERROR_MESSAGE;
 }
 
 function captureAsyncWarningHandler() {

@@ -2,7 +2,10 @@ import '@testing-library/jest-dom';
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import {FLAGGED_IMAGE_URL_WARNING} from '@cdo/apps/applab/constants';
+import {
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from '@cdo/apps/applab/constants';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 import {moderateImageUrl} from '@cdo/apps/util/moderateImage';
 
@@ -18,8 +21,6 @@ jest.mock('@cdo/apps/util/moderateImage', () => ({
 }));
 
 describe('ImageURLInput', () => {
-  const moderationError =
-    "We couldn't check this image link right now. Please try a different image link or upload a file.";
   const mockModerateImageUrl = moderateImageUrl as jest.MockedFunction<
     typeof moderateImageUrl
   >;
@@ -77,7 +78,7 @@ describe('ImageURLInput', () => {
     fireEvent.click(screen.getByRole('button', {name: /submit/i}));
 
     await waitFor(() =>
-      expect(screen.getByText(FLAGGED_IMAGE_URL_WARNING)).toBeInTheDocument()
+      expect(screen.getByText(FLAGGED_IMAGE_URL_MESSAGE)).toBeInTheDocument()
     );
     expect(assetChosen).not.toHaveBeenCalled();
   });
@@ -91,7 +92,9 @@ describe('ImageURLInput', () => {
     fireEvent.click(screen.getByRole('button', {name: /submit/i}));
 
     await waitFor(() =>
-      expect(screen.getByText(moderationError)).toBeInTheDocument()
+      expect(
+        screen.getByText(IMAGE_MODERATION_ERROR_MESSAGE)
+      ).toBeInTheDocument()
     );
     expect(assetChosen).not.toHaveBeenCalled();
   });

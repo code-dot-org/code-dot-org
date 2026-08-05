@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
-  FLAGGED_IMAGE_URL_WARNING,
-  IMAGE_MODERATION_ERROR_WARNING,
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
 } from '@cdo/apps/applab/constants';
 import {
   isAbsoluteImageUrl,
@@ -69,10 +69,10 @@ export default class ImageURLInput extends React.Component {
       return i18n.imageURLInputInvalid();
     }
     if (errorType === 'flagged') {
-      return FLAGGED_IMAGE_URL_WARNING;
+      return FLAGGED_IMAGE_URL_MESSAGE;
     }
     if (errorType === 'moderation-error') {
-      return IMAGE_MODERATION_ERROR_WARNING;
+      return IMAGE_MODERATION_ERROR_MESSAGE;
     }
     return null;
   };

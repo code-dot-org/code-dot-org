@@ -11,7 +11,7 @@ import {moderateApplabImageUrl} from '@cdo/apps/applab/imageUrlModeration';
 import commonMsg from '@cdo/locale';
 
 import {getStore} from '../../redux';
-import {FLAGGED_IMAGE_URL_WARNING} from '../constants';
+import {FLAGGED_IMAGE_URL_MESSAGE} from '../constants';
 
 import * as rowStyle from './rowStyle';
 
@@ -115,7 +115,7 @@ export default class ImagePickerPropertyRow extends React.Component {
 
       if (status === 'flagged') {
         if (this.isMounted_) {
-          this.setState({errorMessage: FLAGGED_IMAGE_URL_WARNING});
+          this.setState({errorMessage: FLAGGED_IMAGE_URL_MESSAGE});
         }
         return;
       }
