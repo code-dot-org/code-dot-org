@@ -1,6 +1,22 @@
+// The :global(.react-flow__*) selectors below target class names that
+// @xyflow/react owns; they can't import the reactFlowSelectors.ts constants.
+// reactFlowSelectorsTest.tsx renders a live flow to catch a rename, which
+// would also break these overrides.
+
 // Pixels of clickable padding added around connection handles so users don't
 // have to land precisely on the small visible dot.
 $handle-grab-buffer: 10px;
+
+.workspace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: -2px;
+  }
+}
 
 .canvasContainer {
   position: relative;
@@ -26,21 +42,43 @@ $handle-grab-buffer: 10px;
     border-radius: 50%;
   }
 
+  // Cursor affordances in select mode. .nodrag is added by React Flow when a
+  // node is non-draggable (read-only, grab mode). .grabMode * below overrides
+  // all three rules in hand tool mode (same specificity, later rule wins).
+  // move      — whole-element repositioning (regular nodes, standalone line bodies)
+  // crosshair — single-endpoint repositioning (line anchor nodes)
+  :global(.react-flow__node:not(.nodrag, .react-flow__node-lineAnchor)) {
+    cursor: move;
+  }
+
+  :global(.react-flow__node-lineAnchor:not(.nodrag)) {
+    cursor: crosshair;
+  }
+
+  // .standaloneLineEdge is only added to edges whose both endpoints are
+  // lineAnchors (not connector edges between nodes).
+  :global(.react-flow__edge).standaloneLineEdge {
+    cursor: move;
+  }
+
   // Keyboard connect-mode: pulse the source node so the user knows it's selected.
   &.connectMode :global(.react-flow__node) {
     cursor: crosshair;
   }
 
-  // Focus outline for keyboard navigation, matching the component library pattern.
-  // Group nodes are excluded — React Flow provides their focus indicator.
-  // Line anchors are excluded too — they get a focus ring on the handle dot
-  // itself below, not a square around the node.
-  :global(
-      .react-flow__node:not(
-          .react-flow__node-group,
-          .react-flow__node-lineAnchor
-        ):focus-visible
-    ),
+  // Grab/pan mode: override node cursors so the whole canvas feels like a
+  // panning surface. Node labels use cursor: inherit so they pick this up.
+  &.grabMode * {
+    cursor: grab;
+  }
+
+  &.grabMode:active * {
+    cursor: grabbing;
+  }
+
+  // Focus outline for keyboard navigation, matching the component library
+  // pattern. Shape/text/image nodes draw their own focus ring on the rotated
+  // wrapper so it turns with the node; group nodes and line anchors provide their own indicators.
   :global(.react-flow__edge:focus-visible) {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
@@ -62,11 +100,23 @@ $handle-grab-buffer: 10px;
     opacity: 1;
   }
 
-  // Group nodes: transparent background; React Flow provides the focus indicator.
+  // Group nodes: transparent background and no wrapper border — hover/select
+  // indicators are handled by the inner .groupNode div in group-node.module.scss.
   // Override the wrapper background that React Flow injects via CSS variables.
   :global(.react-flow__node-group) {
     background: transparent;
     border: none;
+    outline: none;
+  }
+
+  // React Flow's built-in stylesheet applies box-shadow on hover, selected, and
+  // focus-visible via .selectable.* selectors ([0,3,0]). Nesting inside
+  // .canvasContainer gives [0,4,0], overriding all three cases so only our
+  // inner outline (group-node.module.scss) shows.
+  :global(.react-flow__node-group.selectable:hover),
+  :global(.react-flow__node-group.selectable.selected),
+  :global(.react-flow__node-group.selectable:focus-visible) {
+    box-shadow: none;
   }
 
   // Line anchors are tiny nodes; apply focus ring to the handle itself so it
@@ -122,6 +172,42 @@ $handle-grab-buffer: 10px;
 .connectSource {
   box-shadow: 0 0 0 4px var(--borders-neutral-solid);
   border-radius: 4px;
+}
+
+// Shared look for the transient banners shown at the bottom of the canvas
+// (group-mode hint, upload error). Each variant sets its own colors.
+%canvas-message {
+  background-color: var(--background-neutral-primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bannerInfo {
+  @extend %canvas-message;
+
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-brand-teal-primary);
+  border-left: 4px solid var(--borders-brand-teal-primary);
+}
+
+.bannerError {
+  @extend %canvas-message;
+
+  color: var(--text-error-primary);
+  border: 1px solid var(--borders-error-primary);
+  border-left: 4px solid var(--borders-error-primary);
+}
+
+// Drag-to-select overlay drawn on the canvas pane in cursor mode.
+.dragSelectionBox {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  border: 1px solid var(--borders-brand-teal-primary);
+  background: color-mix(in srgb, var(--borders-brand-teal-primary) 10%, transparent);
 }
 
 // Visually hidden but announced by screen readers.

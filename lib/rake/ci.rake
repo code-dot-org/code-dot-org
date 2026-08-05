@@ -158,8 +158,8 @@ namespace :ci do
       Cdo::SauceConnect.start_sauce_connect(dump_logs: true, verbose: true)
     end
 
-    # In order for Device Farm to reach localhost, the Device Farm project
-    # (set in DEVICE_FARM_DESKTOP_PROJECT_ARN) must live in the same VPC as the
+    # In order for Device Farm to reach localhost, the Device Farm project (set
+    # in CDO.device_farm_desktop_project_id) must live in the same VPC as the
     # drone workers and belong to the DeviceFarmToDroneWorker security group.
     # This works because:
     # - the ui-tests step in .drone.yml runs in `network_mode: host`, making
@@ -169,6 +169,11 @@ namespace :ci do
     # - Chrome's --host-resolver-rules maps localhost-studio.code.org to drone
     #   worker IP (see connect.rb).
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
+
+    # Runs here, before Cucumber, so its result doesn't depend on whether
+    # Cucumber goes on to pass or fail.
+    ENV['TARGET_URL'] = 'http://localhost-studio.code.org:3000'
+    Rake::Task['test:playwright_ui'].invoke
 
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
@@ -214,6 +219,13 @@ namespace :ci do
     end
     close_sauce_connect if needs_sauce_connect
     RakeUtils.system_stream_output 'sleep 10'
+  ensure
+    # Both results together, Cucumber's output having scrolled Playwright's
+    # verdict away by now. $! names Cucumber's failure when that is what failed.
+    if PLAYWRIGHT_ROLLUP[:line]
+      cucumber = $! ? "❌ Cucumber: #{$!.message}." : '✅ Cucumber: passed.'
+      ChatClient.log ['UI suites:', PLAYWRIGHT_ROLLUP[:line], cucumber].join("\n")
+    end
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'

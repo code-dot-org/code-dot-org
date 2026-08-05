@@ -1,3 +1,9 @@
+import {useCallback} from 'react';
+import Shepherd, {Tour} from 'shepherd.js';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {attachOnboardingAnalytics} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -17,10 +23,15 @@ export {
   STUDENT_SNAPSHOT_AI_INSIGHTS_STEP_ID,
 };
 
+const TOUR_NAME = 'learn_to_evaluate';
+
 export const recordLearnToEvaluateCompletion = () => {
+  analyticsReporter.sendEvent(EVENTS.ONBOARDING_TOUR_COMPLETED, {
+    tour_name: TOUR_NAME,
+  });
   HttpClient.post(
     '/dashboardapi/v1/user_product_tours',
-    JSON.stringify({tour_name: 'learn_to_evaluate'}),
+    JSON.stringify({tour_name: TOUR_NAME}),
     true,
     {'Content-Type': 'application/json'}
   ).catch(err => console.error('Failed to record tour completion:', err));
@@ -40,21 +51,32 @@ export const isLearnToEvaluateTourOnSnapshotPage = (): boolean => {
 // Call this on the section progress page to resume the tour after navigation.
 // Runs outside React so it works regardless of render mode.
 export const resumeLearnHowToEvaluateTour = () => {
+  // Read before cancelling — the active tour's cancel handler clears sessionStorage.
   const savedStepId = tryGetSessionStorage(
     LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
     ''
   );
   if (!savedStepId) return;
 
+  // Cancel any running tour (e.g. the homepage tour still mounted during SPA
+  // navigation) so we never show two tour popovers simultaneously.
+  Shepherd.activeTour?.cancel();
+
   const tour = createShepherdTour({
     stepClass: 'custom-shepherd-onboarding-container',
   });
-  tour.addSteps(createLearnHowToEvaluateProgressSteps(tour));
+  tour.addSteps(createLearnHowToEvaluateProgressSteps(tour, TOUR_NAME));
 
   if (tour.steps.length === 0) {
     trySetSessionStorage(LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY, '');
     return;
   }
+
+  attachOnboardingAnalytics(
+    tour,
+    TOUR_NAME,
+    LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+  );
 
   const clearStep = () =>
     trySetSessionStorage(LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY, '');
@@ -62,22 +84,31 @@ export const resumeLearnHowToEvaluateTour = () => {
     clearStep();
     recordLearnToEvaluateCompletion();
   });
-  tour.on('cancel', clearStep);
+  tour.on('cancel', () => {
+    clearStep();
+  });
 
   const startStep = tour.steps.find(s => s.id === savedStepId) ?? tour.steps[0];
   tour.show(startStep.id);
 };
 
 const useLearnHowToEvaluateTour = (demoType: DemoType | null) => {
-  const {tour} = useOnboardingTour({
-    getSteps: tour =>
+  const getSteps = useCallback(
+    (tour: Tour) =>
       demoType
         ? createLearnHowToEvaluateHomepageSteps(
             tour,
-            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY
+            LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+            TOUR_NAME
           )
         : [],
+    [demoType]
+  );
+
+  const {tour} = useOnboardingTour({
+    getSteps,
     sessionStorageKey: LEARN_HOW_TO_EVALUATE_ONBOARDING_STEP_KEY,
+    tourName: TOUR_NAME,
   });
 
   return tour;

@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+
+# Seeds three specific Challenge activities into the local database for manual
+# testing, attaching them to a single lesson ("Lesson 1: Talking to Machines")
+# of a unit (default: aif1-2025).
+#
+# Idempotent: challenges are matched by lesson + question, so re-running does
+# not create duplicates. Refuses to run in the production environment.
+#
+# Usage:
+#   bin/seed_challenge_activities [unit_name]
+#
+# Examples:
+#   bin/seed_challenge_activities                # aif1-2025
+#   bin/seed_challenge_activities aif1-2025
+
+# The one lesson these challenges attach to.
+LESSON_NAME = 'Lesson 1: Talking to Machines'
+
+# The challenges to seed, in order. default_modality reflects the activity each
+# prompt calls for (pitch/film it -> video, draw it -> whiteboard).
+CHALLENGES = [
+  {
+    question: 'Shark Tank but for terrible ideas. Invent the most useless, ' \
+      'absurd, or chaotic AI product imaginable, then pitch it on camera like ' \
+      'you genuinely believe it will make you a billionaire.',
+    default_modality: 'video',
+  },
+  {
+    question: 'You are David Attenborough. Your subject: a confused AI, alone ' \
+      'in the wild, trying to complete a sentence it has never seen before. ' \
+      'Film a 30 second nature documentary narrating its struggle.',
+    default_modality: 'video',
+  },
+  {
+    question: 'No one actually knows what AI looks like on the inside, so you ' \
+      'get to decide. Draw it - weird, funny mechanical, cosmic - whatever ' \
+      'feels right to you.',
+    default_modality: 'whiteboard',
+  },
+].freeze
+
+puts 'loading rails environment...'
+require_relative '../dashboard/config/environment'
+
+abort 'refusing to run in the production environment' if Rails.env.production?
+
+unit_name = ARGV[0] || 'aif1-2025'
+
+unit = Unit.find_by(name: unit_name)
+abort "unit #{unit_name.inspect} not found" unless unit
+
+lesson = unit.lessons.find_by(name: LESSON_NAME)
+abort "unit #{unit_name.inspect} has no lesson named #{LESSON_NAME.inspect}" unless lesson
+
+created = 0
+existing = 0
+
+CHALLENGES.each do |attrs|
+  challenge = Challenge.find_or_initialize_by(lesson_id: lesson.id, question: attrs[:question])
+  if challenge.persisted?
+    existing += 1
+    next
+  end
+
+  challenge.default_modality = attrs[:default_modality]
+  challenge.whiteboard_starter_image_alt_text = attrs[:whiteboard_starter_image_alt_text]
+  challenge.save!
+  created += 1
+end
+
+puts "unit #{unit_name.inspect} (id=#{unit.id}), lesson #{lesson.name.inspect} (id=#{lesson.id})"
+puts "challenges created: #{created}, already existed: #{existing}"

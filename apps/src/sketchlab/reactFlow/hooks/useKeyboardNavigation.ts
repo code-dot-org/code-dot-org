@@ -5,12 +5,14 @@ import {
   SketchlabReactFlowEdge,
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
+import {isTargetEditable} from '@cdo/apps/util/isTargetEditable';
 
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
   MIN_NODE_HEIGHT,
   MIN_NODE_WIDTH,
+  MIN_TEXT_NODE_HEIGHT,
   KEYBOARD_RESIZE_STEP,
   KEYBOARD_MOVE_STEP,
 } from '../constants';
@@ -18,7 +20,7 @@ import {
   entriesMatch,
   getElementForEntry,
   getEntryFromDOM,
-  type TabOrderEntry,
+  TabOrderEntry,
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
@@ -31,6 +33,7 @@ import {
 import {
   anchorHandleFlowPosition,
   attachEdgeToFreshAnchor,
+  getStandaloneLineAnchorIds,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
@@ -71,22 +74,12 @@ function resizeNodeByDelta(
     if (node.id !== nodeId) return node;
     const currentWidth = node.width ?? DEFAULT_NODE_WIDTH;
     const currentHeight = node.height ?? DEFAULT_NODE_HEIGHT;
+    const minHeight =
+      node.type === 'text' ? MIN_TEXT_NODE_HEIGHT : MIN_NODE_HEIGHT;
     const newWidth = Math.max(MIN_NODE_WIDTH, currentWidth + deltaWidth);
-    const newHeight = Math.max(MIN_NODE_HEIGHT, currentHeight + deltaHeight);
+    const newHeight = Math.max(minHeight, currentHeight + deltaHeight);
     return {...node, width: newWidth, height: newHeight};
   });
-}
-
-/**
- * Returns true if `target` is a context where text editing/typing is the
- * primary purpose — input, textarea, or contentEditable.
- */
-function isTargetEditable(target: HTMLElement): boolean {
-  return (
-    target.isContentEditable ||
-    target.tagName === 'INPUT' ||
-    target.tagName === 'TEXTAREA'
-  );
 }
 
 /**
@@ -121,7 +114,6 @@ interface UseKeyboardNavigationOptions {
   openToolbar: (entry: TabOrderEntry, options?: {trapFocus?: boolean}) => void;
   copyEntry: (entry: TabOrderEntry) => void;
   cutEntry: (entry: TabOrderEntry) => void;
-  paste: () => void;
   undo: () => void;
   redo: () => void;
   pushSnapshot: () => void;
@@ -132,6 +124,14 @@ interface UseKeyboardNavigationOptions {
   // Called with the anchor id or edge id when a line/line anchor is
   // translated by an arrow key.
   onLineKeyboardMove: (elementId: string) => void;
+  isGroupMode: boolean;
+  canGroup: boolean;
+  canEnterGroupMode: boolean;
+  onEnterGroupMode: () => void;
+  onExitGroupMode: () => void;
+  onToggleEntryInGroupMode: (entry: TabOrderEntry) => void;
+  onGroupSelected: () => void;
+  onCannotGroup: (msg: string) => void;
 }
 
 /**
@@ -150,9 +150,8 @@ interface KeyContext {
  * Keyboard-driven edge creation and canvas key handling.
  *
  * Press "c" on a focused node to enter connect mode, Tab to cycle through
- * candidate target nodes, Enter to create the edge. Escape or "c" again
- * cancels. "[" and "]" resize the focused node by adjusting its width and
- * height by the keyboard resize step.
+ * candidate target nodes, Enter or "c" to create the edge. Escape cancels.
+ * "[" and "]" resize the focused node by adjusting its width and height by the keyboard resize step.
  * Also handles Tab-based navigation in normal mode and Enter to
  * activate a node's editable content.
  *
@@ -172,12 +171,19 @@ export function useKeyboardNavigation({
   openToolbar,
   copyEntry,
   cutEntry,
-  paste,
   undo,
   redo,
   pushSnapshot,
   lastFocusedEntry,
   onLineKeyboardMove,
+  isGroupMode,
+  canGroup,
+  canEnterGroupMode,
+  onEnterGroupMode,
+  onExitGroupMode,
+  onToggleEntryInGroupMode,
+  onGroupSelected,
+  onCannotGroup,
 }: UseKeyboardNavigationOptions) {
   const {
     getEdge,
@@ -219,6 +225,45 @@ export function useKeyboardNavigation({
         return true;
       }
 
+      if (isGroupMode) {
+        // Group mode: cycle through groupable elements only, wrap around.
+        // Skips lineAnchor nodes, group nodes, locked elements, grouped
+        // children, and edges attached to real nodes (non-standalone lines).
+        const groupableEntries = tabOrder.filter(entry => {
+          if (entry.type === 'node') {
+            const node = getNode(entry.id);
+            return (
+              node &&
+              node.type !== 'lineAnchor' &&
+              node.type !== 'group' &&
+              !isGroupedChildNode(node) &&
+              !node.data?.locked
+            );
+          }
+          // edge: must be a standalone ungrouped unlocked line.
+          const edge = getEdge(entry.id);
+          if (!edge || edge.data?.locked) return false;
+          const anchorIds = getStandaloneLineAnchorIds(edge, getNode);
+          return (
+            anchorIds !== null &&
+            anchorIds.every(id => !isGroupedChildNode(getNode(id)))
+          );
+        });
+        if (groupableEntries.length === 0) return true;
+        const curIdx = focusedEntry
+          ? groupableEntries.findIndex(entry =>
+              entriesMatch(entry, focusedEntry)
+            )
+          : -1;
+        const nextIdx =
+          (curIdx + tabDirection + groupableEntries.length) %
+          groupableEntries.length;
+        event.preventDefault();
+        event.stopPropagation();
+        focusEntry(groupableEntries[nextIdx]);
+        return true;
+      }
+
       // Normal mode: move through full order; escape at boundaries.
       if (!focusedEntry) return false;
 
@@ -237,7 +282,7 @@ export function useKeyboardNavigation({
       // Boundary: no preventDefault lets the browser move focus out.
       return true;
     },
-    [tabOrder, connectingFrom, focusEntry]
+    [tabOrder, connectingFrom, isGroupMode, getNode, getEdge, focusEntry]
   );
 
   const handleEscapeCancelConnect = useCallback(
@@ -258,7 +303,8 @@ export function useKeyboardNavigation({
       const entry = focusedEntry ?? lastFocusedEntry;
       if (!entry) return false;
       copyEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default copy command is what fires
+      // the native 'copy' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
@@ -280,23 +326,12 @@ export function useKeyboardNavigation({
         }
       }
       cutEntry(entry);
-      event.preventDefault();
+      // Don't preventDefault: the keydown's default cut command is what fires
+      // the native 'cut' event that useCopyPaste uses to stamp its marker.
       event.stopPropagation();
       return true;
     },
     [cutEntry, getNode, lastFocusedEntry]
-  );
-
-  const handlePaste = useCallback(
-    (keyContext: KeyContext): boolean => {
-      const {event} = keyContext;
-      if (event.key !== 'v' || !(event.ctrlKey || event.metaKey)) return false;
-      paste();
-      event.preventDefault();
-      event.stopPropagation();
-      return true;
-    },
-    [paste]
   );
 
   // Undo: Ctrl/Cmd+Z.
@@ -346,23 +381,25 @@ export function useKeyboardNavigation({
     [connectingFrom, nodes, openToolbar]
   );
 
-  const handleConnectToggle = useCallback(
+  const handleConnectKey = useCallback(
     (keyContext: KeyContext): boolean => {
       const {event, focusedNodeId} = keyContext;
       if (event.key !== 'c') return false;
       if (connectingFrom) {
-        event.preventDefault();
-        cancelConnect();
-        return true;
-      }
-      if (focusedNodeId) {
+        // A second "c" completes the connection to the focused target, like Enter.
+        if (focusedNodeId && focusedNodeId !== connectingFrom) {
+          event.preventDefault();
+          event.stopPropagation();
+          completeConnect(focusedNodeId);
+        }
+      } else if (focusedNodeId) {
         event.preventDefault();
         startConnect(focusedNodeId);
       }
       // Always consume "c" so it never falls through to other handlers.
       return true;
     },
-    [connectingFrom, cancelConnect, startConnect]
+    [connectingFrom, startConnect, completeConnect]
   );
 
   const handleConnectComplete = useCallback(
@@ -616,6 +653,61 @@ export function useKeyboardNavigation({
     [nodes, getNode, pushSnapshot, setNodes, announce]
   );
 
+  // G key: enter group mode, or confirm group creation if already in it.
+  const handleGroupModeKey = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (event.key !== 'g') return false;
+      event.preventDefault();
+      event.stopPropagation();
+      if (isGroupMode) {
+        if (canGroup) onGroupSelected();
+        else
+          onCannotGroup('Select 2 or more elements before creating a group.');
+      } else {
+        if (canEnterGroupMode) onEnterGroupMode();
+        else
+          onCannotGroup(
+            'Entering group mode requires 2 or more ungrouped elements on the canvas.'
+          );
+      }
+      return true;
+    },
+    [
+      isGroupMode,
+      canGroup,
+      canEnterGroupMode,
+      onEnterGroupMode,
+      onGroupSelected,
+      onCannotGroup,
+    ]
+  );
+
+  // Escape in group mode: exit without creating a group.
+  const handleGroupModeEscape = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event} = keyContext;
+      if (!isGroupMode || event.key !== 'Escape') return false;
+      event.preventDefault();
+      onExitGroupMode();
+      return true;
+    },
+    [isGroupMode, onExitGroupMode]
+  );
+
+  // Enter in group mode: toggle the focused element in/out of the selection.
+  const handleGroupModeEnter = useCallback(
+    (keyContext: KeyContext): boolean => {
+      const {event, focusedEntry} = keyContext;
+      if (!isGroupMode || event.key !== 'Enter' || !focusedEntry) return false;
+      event.preventDefault();
+      event.stopPropagation();
+      onToggleEntryInGroupMode(focusedEntry);
+      return true;
+    },
+    [isGroupMode, onToggleEntryInGroupMode]
+  );
+
   /**
    * Enter on a focused node (outside connect mode) enters edit mode.
    * Do NOT stopPropagation here: React Flow's handler needs to fire
@@ -687,20 +779,23 @@ export function useKeyboardNavigation({
       // Tab navigation works in both read-only and edit mode.
       if (handleTabNavigation(keyContext)) return;
 
-      // Escape cancels connect mode.
+      // Escape cancels connect mode first, then exits group mode if active.
       if (handleEscapeCancelConnect(keyContext)) return;
 
       // Everything below mutates the canvas and requires edit access.
       if (readOnly) return;
 
+      if (handleGroupModeEscape(keyContext)) return;
+      if (handleGroupModeKey(keyContext)) return;
+
       if (handleCopy(keyContext)) return;
       if (handleCut(keyContext)) return;
-      if (handlePaste(keyContext)) return;
       if (handleUndo(keyContext)) return;
       if (handleRedo(keyContext)) return;
 
       if (handleOpenToolbar(keyContext)) return;
-      if (handleConnectToggle(keyContext)) return;
+      if (handleGroupModeEnter(keyContext)) return;
+      if (handleConnectKey(keyContext)) return;
       if (handleConnectComplete(keyContext)) return;
 
       // All further interactions require an unlocked element, if an element is focused.
@@ -727,13 +822,15 @@ export function useKeyboardNavigation({
       getNode,
       handleTabNavigation,
       handleEscapeCancelConnect,
+      handleGroupModeEscape,
+      handleGroupModeKey,
       handleCopy,
       handleCut,
-      handlePaste,
       handleUndo,
       handleRedo,
       handleOpenToolbar,
-      handleConnectToggle,
+      handleGroupModeEnter,
+      handleConnectKey,
       handleConnectComplete,
       handleArrowMove,
       handleResize,

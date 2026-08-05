@@ -1,10 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import {
@@ -97,9 +99,19 @@ const StudentSnapshot: React.FC = () => {
     [selectedStudentId, selectedStudents]
   );
 
+  const selectedLesson = React.useMemo(
+    () => lessons.find(lesson => lesson.id === selectedLessonId),
+    [lessons, selectedLessonId]
+  );
+
   const feedbackLink = DCDO.get('student-snapshot-feedback-link', undefined);
 
+  const tourResumed = useRef(false);
+
   useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.STUDENT_SNAPSHOT_VIEWED);
+    if (tourResumed.current) return;
+    tourResumed.current = true;
     resumeLearnHowToEvaluateTour();
   }, []);
 
@@ -185,13 +197,11 @@ const StudentSnapshot: React.FC = () => {
       )}
 
       <div className={styles.widgetGrid}>
-        {selectedLessonId && selectedStudentId && (
-          <StudentLessonProgressDetailsWidget
-            selectedUnitId={selectedUnitId}
-            selectedLessonId={selectedLessonId}
-            selectedStudentId={selectedStudentId}
-          />
-        )}
+        <StudentLessonProgressDetailsWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+        />
         <LessonInsightWidget
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
@@ -214,6 +224,7 @@ const StudentSnapshot: React.FC = () => {
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
           selectedStudentId={selectedStudentId}
+          hasCodeLevel={!!selectedLesson?.hasCodeLevel}
         />
         <StudentRubricWidget
           gridWidth={2}

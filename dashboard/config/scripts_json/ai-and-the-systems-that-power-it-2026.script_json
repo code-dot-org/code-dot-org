@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:20:35 UTC",
+    "serialized_at": "2026-07-24 21:04:49 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5964,7 +5964,7 @@
   "resources": [
     {
       "name": "[EXEMPLAR] Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1B564B7VVxuGwiYfi1YQBLMzoS6eqT8d8DvixrwaqBTs/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Dato9dFitzLp4ba51-oy8mAov2HxxqJH9873QlPmUvQ/edit?usp=sharing",
       "key": "_exemplar_sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",
@@ -6181,7 +6181,7 @@
     },
     {
       "name": "[KEY] User Testing",
-      "url": "https://docs.google.com/document/d/16g2XhVwTbsWxpGug-uzS2b3CkL91lB3dX3pWeZuNXG4/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1uKchorQvM--IFoPcoBlNNvLinVydVTm8CdL13M4PK1M/edit?usp=drive_link",
       "key": "_key_user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6195,7 +6195,7 @@
     },
     {
       "name": "AI and Emerging Technology Slide Template",
-      "url": "https://docs.google.com/presentation/d/16ABliORG5aD5QeuA2Q70Cy8y2I8idJcRL0v3-oA7hrk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MxMLZUpOq8ovgR5G0kdON9CF6LeOQH05WIBs9vHDGaQ/edit?usp=sharing",
       "key": "ai_and_emerging_technology_slide_template",
       "properties": {
         "audience": "Student",
@@ -6534,7 +6534,7 @@
     },
     {
       "name": "Just Because We Can, Should We?",
-      "url": "https://docs.google.com/presentation/d/1aCcdtIFyQLn5eYO1WDlVILrFsaYnkRpMiq4qk3L06AE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1u-fm1_SFuBgk2nwA2I2-ID5Ev3xNZiNoxueNlVxJtF0/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "just_because_we_can_should_we_",
       "properties": {
         "audience": "Verified Teacher",
@@ -6575,7 +6575,7 @@
     },
     {
       "name": "Ownership and Ethics",
-      "url": "https://docs.google.com/document/d/1jVY2xsIXiucY_HspsGghRi6Z8N8Yn-P5ABjJuLVXBSc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1XLXq0hnSJlaImTAxhIkJ-jsdNrCivOKAcgZQ0oRkfOM/edit?usp=sharing",
       "key": "ownership_and_ethics",
       "properties": {
         "audience": "Student",
@@ -6667,7 +6667,7 @@
     },
     {
       "name": "Sustainable Systems Project",
-      "url": "https://docs.google.com/presentation/d/12v_QRcfdFTx-qpeO6mOdW-V5FTnyEciNtYj23uPWov4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/12wyuza4y1dtipfaZ1C7NroXnY4sMzy-kVdiKK8C_GoY/edit",
       "key": "sustainable_systems_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -6681,7 +6681,7 @@
     },
     {
       "name": "Sustainable Systems Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Q2XZY-7HUOAboldM5sTE30bTjTCqpjYSGacgy1GQ-TY/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-bJOm3T_O1e4wljgCmbJFhvnDCoEHeZEV4TgLfHVDrw/edit?usp=sharing",
       "key": "sustainable_systems_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -6722,10 +6722,11 @@
     },
     {
       "name": "Technology Ethics Discussion Guide",
-      "url": "https://docs.google.com/document/d/1IfC_-shBbZUB-5DMYhrC86JsgJI4AC5KnddIaRvGYnM/edit?usp=drivesdk",
+      "url": "https://docs.google.com/document/d/1IfC_-shBbZUB-5DMYhrC86JsgJI4AC5KnddIaRvGYnM/edit?usp=drive_link",
       "key": "technology_ethics_discussion_guide",
       "properties": {
         "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6808,7 +6809,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/presentation/d/1UoykfbPPdGrgchkjBFTYyU03RYg8EY82Nx33GfqyfDo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1UC4dnTYyqo8XhS2QBZoMA_Gaomfv_lzX2CFr7_dB7yE/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "user_testing",
       "properties": {
         "audience": "Verified Teacher",
@@ -6822,7 +6823,7 @@
     },
     {
       "name": "User Testing",
-      "url": "https://docs.google.com/document/d/1zr6ATCilcHCnksBFyJYjMpnXp7qnGjBYasWn-9tTCHI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Nqb8_xopj7cL8vE5XUARg4L-3PCY9GcporaBdUKHHXw/edit?usp=drive_link",
       "key": "user_testing_1",
       "properties": {
         "audience": "Student",

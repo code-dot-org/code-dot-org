@@ -2,7 +2,7 @@ import {Tour} from 'shepherd.js';
 
 import {
   REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-  UNIT_BREADCRUMB_STEP_ID,
+  COURSE_HEADER_STEP_ID,
   createReviewSyllabusHomepageSteps,
   createReviewSyllabusUnitOverviewSteps,
   ReviewSyllabusQuizConfig,
@@ -56,7 +56,8 @@ describe('createReviewSyllabusHomepageSteps', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -66,7 +67,8 @@ describe('createReviewSyllabusHomepageSteps', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'middle'
+      'middle',
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -76,7 +78,8 @@ describe('createReviewSyllabusHomepageSteps', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'elementary'
+      'elementary',
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -87,12 +90,14 @@ describe('createReviewSyllabusHomepageSteps', () => {
     const highSteps = createReviewSyllabusHomepageSteps(
       tourHigh,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     const middleSteps = createReviewSyllabusHomepageSteps(
       tourMiddle,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'middle'
+      'middle',
+      'test_tour'
     );
     expect(highSteps.map(s => s.id)).toEqual(middleSteps.map(s => s.id));
   });
@@ -103,12 +108,14 @@ describe('createReviewSyllabusHomepageSteps', () => {
     const highSteps = createReviewSyllabusHomepageSteps(
       tourHigh,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     const elemSteps = createReviewSyllabusHomepageSteps(
       tourElem,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'elementary'
+      'elementary',
+      'test_tour'
     );
     expect(elemSteps.map(s => s.id)).toEqual(highSteps.map(s => s.id));
   });
@@ -120,7 +127,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -130,7 +138,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -140,7 +149,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     );
     expect(steps.length).toBeGreaterThan(0);
   });
@@ -150,10 +160,11 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
-    expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).toContain(COURSE_HEADER_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -163,10 +174,11 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
-    expect(ids).toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).toContain(COURSE_HEADER_STEP_ID);
     expect(ids).toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -176,10 +188,11 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     );
     const ids = steps.map(s => s.id);
-    expect(ids).not.toContain(UNIT_BREADCRUMB_STEP_ID);
+    expect(ids).not.toContain(COURSE_HEADER_STEP_ID);
     expect(ids).not.toContain('quiz-level-priority');
     expect(ids).toContain('lesson-resources-intro');
   });
@@ -189,7 +202,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const ids = createReviewSyllabusUnitOverviewSteps(
       tour,
       'elementary',
-      null
+      null,
+      'test_tour'
     ).map(s => s.id);
     expect(ids).toContain('teacher-resources-dropdown');
   });
@@ -199,7 +213,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-1'});
@@ -210,7 +225,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     expect(quizStep.attachTo).toMatchObject({element: '#progress-lesson-3'});
@@ -221,7 +237,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
@@ -237,7 +254,8 @@ describe('createReviewSyllabusUnitOverviewSteps', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const quizStep = steps.find(s => s.id === 'quiz-level-priority')!;
     const text = quizStep.text as string;
@@ -264,12 +282,13 @@ describe('select-first-lesson when handler', () => {
     document.body.innerHTML = '';
   });
 
-  it('saves UNIT_BREADCRUMB_STEP_ID to sessionStorage for demoType "high"', () => {
+  it('saves COURSE_HEADER_STEP_ID to sessionStorage for demoType "high"', () => {
     const tour = makeMockTour();
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     const selectStep = steps.find(s => s.id === 'select-first-lesson')!;
     (selectStep.when as {show: () => void}).show();
@@ -278,16 +297,17 @@ describe('select-first-lesson when handler', () => {
 
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      UNIT_BREADCRUMB_STEP_ID
+      COURSE_HEADER_STEP_ID
     );
   });
 
-  it('saves UNIT_BREADCRUMB_STEP_ID to sessionStorage for demoType "middle"', () => {
+  it('saves COURSE_HEADER_STEP_ID to sessionStorage for demoType "middle"', () => {
     const tour = makeMockTour();
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'middle'
+      'middle',
+      'test_tour'
     );
     const selectStep = steps.find(s => s.id === 'select-first-lesson')!;
     (selectStep.when as {show: () => void}).show();
@@ -296,7 +316,7 @@ describe('select-first-lesson when handler', () => {
 
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      UNIT_BREADCRUMB_STEP_ID
+      COURSE_HEADER_STEP_ID
     );
   });
 
@@ -305,7 +325,8 @@ describe('select-first-lesson when handler', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'elementary'
+      'elementary',
+      'test_tour'
     );
     const selectStep = steps.find(s => s.id === 'select-first-lesson')!;
     (selectStep.when as {show: () => void}).show();
@@ -323,7 +344,8 @@ describe('select-first-lesson when handler', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     const selectStep = steps.find(s => s.id === 'select-first-lesson')!;
     (selectStep.when as {show: () => void}).show();
@@ -341,7 +363,8 @@ describe('select-first-lesson when handler', () => {
     const steps = createReviewSyllabusHomepageSteps(
       tour,
       REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
-      'high'
+      'high',
+      'test_tour'
     );
     const selectStep = steps.find(s => s.id === 'select-first-lesson')!;
     const when = selectStep.when as {show: () => void; hide: () => void};
@@ -379,7 +402,8 @@ describe('quiz-level-priority when handler', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'high',
-      HIGH_QUIZ_CONFIG
+      HIGH_QUIZ_CONFIG,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();
@@ -476,7 +500,8 @@ describe('middle school quiz-level-priority when handler', () => {
     const steps = createReviewSyllabusUnitOverviewSteps(
       tour,
       'middle',
-      MIDDLE_QUIZ_CONFIG
+      MIDDLE_QUIZ_CONFIG,
+      'test_tour'
     );
     const step = steps.find(s => s.id === 'quiz-level-priority')!;
     (step.when as {show: () => void}).show();

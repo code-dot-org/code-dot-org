@@ -51,6 +51,8 @@ class Experiment < ApplicationRecord
 
   belongs_to :script, class_name: 'Unit', optional: true
 
+  scope :active, -> {where('start_at IS NULL or start_at < ?', DateTime.now).where('end_at IS NULL or end_at > ?', DateTime.now)}
+
   validates :name, presence: true
   after_save {Experiment.update_cache}
   after_destroy {Experiment.update_cache}
@@ -125,12 +127,8 @@ class Experiment < ApplicationRecord
   end
 
   def self.update_cache
-    now = DateTime.now
-    @@experiments = Experiment.
-      where('start_at IS NULL or start_at < ?', now).
-      where('end_at IS NULL or end_at > ?', now).
-      to_a
-    @@experiments_loaded = now
+    @@experiments = Experiment.active.to_a
+    @@experiments_loaded = DateTime.now
   end
 
   def percentage

@@ -1,15 +1,12 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
-import {
-  useFlaggedImage,
-  useSyncValidationOverride,
-  useZoomTracker,
-} from '@codebridge/hooks';
+import {useSyncValidationOverride, useZoomTracker} from '@codebridge/hooks';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {
   ConfigType,
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
+  SendTypedInputMessageFunction,
   CodebridgeLevelProperties,
   ProjectPickerSettings,
   LayoutProps,
@@ -22,6 +19,7 @@ import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
@@ -46,6 +44,7 @@ type CodebridgeProps = {
   onRun?: OnRunFunction;
   onStop?: () => void;
   sendConsoleInput?: SendConsoleInputFunction;
+  sendTypedInputMessage?: SendTypedInputMessageFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
@@ -70,6 +69,7 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
     sendConsoleInput,
+    sendTypedInputMessage,
     levelProperties,
     projectPickerSettings,
     hiddenContextCallback,
@@ -226,6 +226,7 @@ export const Codebridge = React.memo(
           onRun,
           onStop,
           sendConsoleInput,
+          sendTypedInputMessage,
           levelProperties,
           projectPickerSettings,
           hiddenContextCallback,

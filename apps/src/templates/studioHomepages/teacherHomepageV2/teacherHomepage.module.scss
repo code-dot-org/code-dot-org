@@ -56,6 +56,7 @@
   flex-direction: column;
   gap: 16px;
   margin: 0;
+  padding: 0;
 }
 
 // SectionCard
@@ -286,7 +287,7 @@
   flex-direction: row;
   background-color: var(--background-neutral-primary);
   gap: 8px;
-  height: 38px;
+  height: 40px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -365,7 +366,7 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  height: 38px;
+  height: 40px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
@@ -394,10 +395,10 @@
 
 .promotion {
   position: relative;
-  width: 280px;
-  max-width: 280px;
-  min-height: 150px;
-  max-height: 800px;
+  width: 322px;
+  max-width: 322px;
+  min-height: 192px;
+  max-height: 842px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -452,7 +453,7 @@
 }
 
 .promotionPartnerLogo {
-  height: 22px;
+  height: 48px;
   max-width: 100%;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -486,8 +487,8 @@
   border: solid 1px var(--borders-neutral-primary);
   background-color: var(--background-neutral-primary);
   border-radius: 4px;
-  width: 280px;
-  max-width: 280px;
+  width: 322px;
+  max-width: 322px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -521,7 +522,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-flex;
-  padding-right: 4px;
+  padding-right: 8px;
 }
 
 .onboardingChecklistOuter {
@@ -534,6 +535,7 @@
 .onboardingChecklistInner {
   border-radius: 10px;
   padding: 3px;
+  width: 100%;
   background: linear-gradient(
     90deg,
     #15c5f9,
@@ -554,11 +556,11 @@
 .onboardingChecklistInnerContent {
   background: var(--background-neutral-primary, #fff);
   border-radius: 7px;
-  padding: 28px 32px 20px;
+  padding: 40px 32px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 4px;
   text-align: center;
 }
 
@@ -592,6 +594,19 @@
   font-size: 16px;
   display: flex;
   align-items: center;
+}
+
+.onboardingChecklistOuterCelebration {
+  margin-bottom: 24px;
+}
+
+.onboardingChecklistCelebration {
+  width: 70%;
+}
+
+.onboardingCelebrationEmoji {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 // Drawer Component

@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Policy Compliance
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"

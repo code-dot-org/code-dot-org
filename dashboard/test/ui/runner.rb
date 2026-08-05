@@ -27,6 +27,7 @@ require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
 require 'cdo/ci_utils'
+require 'cdo/playwright_report'
 
 require 'haml'
 require 'json'
@@ -163,7 +164,7 @@ def parse_options
         options.first_run_local = 'true'
       end
       opts.on("--device-farm", "Use AWS Device Farm instead of SauceLabs for remote browser testing. " \
-                               "Requires CDO.device_farm_desktop_project_arn (desktop configs) " \
+                               "Requires CDO.device_farm_desktop_project_id (desktop configs) " \
                                "and/or CDO.device_farm_mobile_project_arn (mobile configs) to be set. " \
                                "Note: Device Farm cannot reach localhost on development machines -- " \
                                "use a public domain (e.g. via ngrok)."
@@ -519,7 +520,8 @@ end
 # cross-page navigation row at the top of each status page. Each entry's
 # :filename must equal the value status_page_filename returns when that
 # page is being generated, so the active entry can be rendered unlinked.
-# The four entries are the four suites rake test:ui_all dispatches.
+# These three are the Selenium suites rake test:ui_all dispatches; Playwright,
+# the fourth, is appended in status_pages_navigation.
 STATUS_PAGES_NAVIGATION = [
   {filename: 'test_status_Chrome_Firefox_UI.html',     display_name: 'Chrome + Firefox UI'},
   {filename: 'test_status_Safari_iPad_iPhone_UI.html', display_name: 'Safari + iPad + iPhone UI'},
@@ -531,11 +533,17 @@ def status_pages_navigation
   # so that the oncall engineer can quickly find all the pages they need to
   # check for UI test failures.
   return nil unless GIT_BRANCH == 'test'
-  STATUS_PAGES_NAVIGATION.map do |page|
+  pages = STATUS_PAGES_NAVIGATION.map do |page|
     page.merge(
       url: CDO.studio_url("/ui_test/#{page[:filename]}", scheme_for_environment, ge_region: nil)
     )
   end
+  # Appended here, not baked into the frozen constant, so that loading this file
+  # runs no S3 code. Playwright publishes its own report, so this entry carries
+  # a url and no :filename; the key is stable and always serves the latest run.
+  playwright_url = Cdo::PlaywrightReport.index_url
+  pages << {display_name: 'Playwright (latest run)', url: playwright_url} if playwright_url
+  pages
 end
 
 # Status page filename per suite. Eyes keeps a stable name across providers.
@@ -803,6 +811,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
+  arguments += skip_tag('@contentful_key') if CDO.contentful_cs_for_all_access_token.blank?
   arguments
 end
 

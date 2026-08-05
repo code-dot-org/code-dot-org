@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-06-29T17:11:39.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "panels": [
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-d278c1aa-acad-4e55-9c55-81db4ea00207",
+        "text": "Every AI system, from the simplest to the most complex, is a product of human choices. These choices have real-world impacts.",
+        "imageUrl": "https://images.code.org/a1b2648ca5c76c5ea8f25c409ab92eef-sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-panel-1-53069ba3-c8e2-40d9-a74e-703bc7f38337.png",
+        "layout": "text-top-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-65a53917-5212-4bc2-9f35-41780cfdc5ac",
+        "text": "As future designers and users of AI, understanding ethical considerations like fairness, transparency, and accountability is your responsibility.",
+        "imageUrl": "https://images.code.org/59bb0384264dc26606a99b9af27e90a1-sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-panel-2-a52e9817-eb7d-43c4-98cb-b8ca9ea922b1.png",
+        "layout": "text-top-center"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-55844666-b8a5-4d8b-9c0c-ee3bee284e77",
+        "text": "You now have the tools to critically evaluate the AI systems you encounter every day. Ask: Is it fair? Is it transparent? Who is accountable?",
+        "imageUrl": "https://images.code.org/87055a9423f975ff04a39eef878b260b-sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-panel-3-d9afba8a-ea7c-4c7b-ae62-838b722f8a42.png",
+        "layout": "text-bottom-left"
+      },
+      {
+        "key": "sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-11bccb36-6da2-46d6-82da-016c36406a23",
+        "text": "Your design choices, even in simple programs, reflect the same dilemmas faced by real-world AI developers. You can shape a more responsible future.",
+        "imageUrl": "https://images.code.org/dad29204d101a98c16de220689359113-sample-aid-sc2-unit-generation-lesson-15-reflect-ai-consequences-panel-4-60f1ec29-4def-400f-a910-194a5b69ebf2.png",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "generate_outline": "Conclude the lesson by summarizing the critical role of human decision-making in AI development and its societal consequences. Prompt students to reflect on the ethical responsibilities of AI designers and to critically evaluate AI systems they encounter in their daily lives, connecting their own design choices to real-world scenarios."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-06-29 17:12:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-06-29 17:12:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

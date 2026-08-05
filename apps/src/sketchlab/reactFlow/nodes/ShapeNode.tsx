@@ -1,17 +1,26 @@
-import {NodeResizer, useReactFlow, type NodeProps} from '@xyflow/react';
+import {type NodeProps} from '@xyflow/react';
 import classNames from 'classnames';
-import React, {memo, useCallback, useMemo, useRef, useState} from 'react';
+import React, {memo, useMemo} from 'react';
 
-import {DEFAULT_ROTATION, MIN_NODE_HEIGHT, MIN_NODE_WIDTH} from '../constants';
-import {usePushSnapshot, useSketchLabReadOnly} from '../context';
 import {
+  DEFAULT_ROTATION,
+  ELEMENT_BORDER_PX,
+  MIN_NODE_HEIGHT,
+  MIN_NODE_WIDTH,
+} from '../constants';
+import {
+  fontFamilyCss,
   fontSizePx,
   DEFAULT_TEXT_ALIGN,
 } from '../elementToolbars/toolbarPalettes';
 import {useConnectionHandleVisibility} from '../hooks/useConnectionHandleVisibility';
+import {useInlineTextEditing} from '../hooks/useInlineTextEditing';
+import {useRotatedHandleInternals} from '../hooks/useRotatedHandleInternals';
+import {REACT_FLOW_INTERACTION_CLASS} from '../reactFlowSelectors';
 import {ShapeNodeType, ShapeType} from '../types';
 
 import ConnectionHandles from './ConnectionHandles';
+import RotatedNodeResizer from './RotatedNodeResizer';
 
 import styles from './shape-node.module.scss';
 
@@ -19,7 +28,6 @@ import styles from './shape-node.module.scss';
 const TRIANGLE_POINTS = '50,5 95,95 5,95';
 // SVG path for a diamond (rhombus) filling a 100x100 viewBox: top, right, bottom, left.
 const DIAMOND_POINTS = '50,5 95,50 50,95 5,50';
-const SHAPE_BORDER_PX = 2;
 
 interface ShapeSvgProps {
   shapeType: ShapeType;
@@ -46,7 +54,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
           rx="48"
           ry="48"
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -65,7 +73,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={TRIANGLE_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -84,7 +92,7 @@ function ShapeSvg({shapeType, strokeColor, backgroundColor}: ShapeSvgProps) {
         <polygon
           points={DIAMOND_POINTS}
           style={{fill, stroke}}
-          strokeWidth={SHAPE_BORDER_PX}
+          strokeWidth={ELEMENT_BORDER_PX}
           vectorEffect="non-scaling-stroke"
         />
       </svg>
@@ -100,65 +108,24 @@ function ShapeNode({
   selected,
   isConnectable,
 }: NodeProps<ShapeNodeType>) {
-  const readOnly = useSketchLabReadOnly();
-  const {updateNodeData} = useReactFlow();
-  const pushSnapshot = usePushSnapshot();
-  const [isEditing, setIsEditing] = useState(false);
-  const labelRef = useRef<HTMLDivElement>(null);
-  const labelAtEditStart = useRef<string>('');
-
   const {showHandles, hoverHandlers} = useConnectionHandleVisibility(
     selected,
     isConnectable
   );
   const {shapeType, label, backgroundColor, strokeColor} = data;
 
-  const startEditing = useCallback(() => {
-    if (isEditing || readOnly || data.locked) {
-      return;
-    }
-    labelAtEditStart.current = label;
-    setIsEditing(true);
-    setTimeout(() => {
-      if (labelRef.current) {
-        labelRef.current.focus();
-        const range = document.createRange();
-        const selection = window.getSelection();
-        range.selectNodeContents(labelRef.current);
-        range.collapse(false);
-        selection?.removeAllRanges();
-        selection?.addRange(range);
-      }
-    }, 0);
-  }, [isEditing, readOnly, data.locked, label]);
-
-  const commitEdit = useCallback(() => {
-    setIsEditing(false);
-    const newLabel = labelRef.current?.textContent ?? '';
-    if (newLabel !== labelAtEditStart.current) {
-      pushSnapshot();
-    }
-    updateNodeData(id, {label: newLabel});
-  }, [id, pushSnapshot, updateNodeData]);
-
-  const handleLabelKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLDivElement>) => {
-      if (isEditing) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-          event.preventDefault();
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-        if (event.key === 'Escape') {
-          if (labelRef.current) {
-            labelRef.current.textContent = label;
-          }
-          setIsEditing(false);
-          labelRef.current?.closest<HTMLElement>('.react-flow__node')?.focus();
-        }
-      }
-    },
-    [label, isEditing]
-  );
+  const {
+    isEditing,
+    editableRef: labelRef,
+    startEditing,
+    commitEdit,
+    handleKeyDown: handleLabelKeyDown,
+  } = useInlineTextEditing({
+    id,
+    field: 'label',
+    value: label,
+    locked: data.locked,
+  });
 
   const isRectangle = shapeType === 'rectangle';
   const isCircle = shapeType === 'circle';
@@ -182,15 +149,23 @@ function ShapeNode({
       style.color = data.fontColor;
     }
     style.fontSize = fontSizePx(data.fontSize);
+    style.fontFamily = fontFamilyCss(data.fontFamily);
     style.textAlign = data.textAlign ?? DEFAULT_TEXT_ALIGN;
     return style;
-  }, [data.fontColor, data.fontSize, data.textAlign, isEditing]);
+  }, [
+    data.fontColor,
+    data.fontSize,
+    data.fontFamily,
+    data.textAlign,
+    isEditing,
+  ]);
 
   const rotation = data.rotation ?? DEFAULT_ROTATION;
   const rotatableStyle: React.CSSProperties = useMemo(
     () => ({transform: `rotate(${rotation}deg)`}),
     [rotation]
   );
+  useRotatedHandleInternals(rotation);
 
   return (
     <div
@@ -199,12 +174,6 @@ function ShapeNode({
       onDoubleClick={startEditing}
       {...hoverHandlers}
     >
-      <NodeResizer
-        isVisible={selected && !data.locked}
-        minWidth={MIN_NODE_WIDTH}
-        minHeight={MIN_NODE_HEIGHT}
-      />
-
       <div className={styles.rotatable} style={rotatableStyle}>
         {/* Background shape */}
         {isRectangle ? (
@@ -221,12 +190,13 @@ function ShapeNode({
           />
         )}
 
-        {/* Text label: click or enter to start editing */}
+        {/* Text label: double-click or Enter to start editing */}
         <div
           ref={labelRef}
           className={classNames(
             styles.label,
-            isEditing && 'nodrag nopan',
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noDrag,
+            isEditing && REACT_FLOW_INTERACTION_CLASS.noPan,
             isCircle && styles.circleLabel,
             isTriangle && styles.triangleLabel,
             isDiamond && styles.diamondLabel,
@@ -240,17 +210,25 @@ function ShapeNode({
           onKeyDown={handleLabelKeyDown}
           tabIndex={-1}
           role="textbox"
+          aria-multiline={true}
           aria-label={`${shapeType} label${isEditing ? ' (editing)' : ''}`}
         >
           {label}
         </div>
-      </div>
 
-      <ConnectionHandles
-        visible={showHandles}
-        isConnectable={isConnectable}
-        shapeType={shapeType}
-      />
+        <RotatedNodeResizer
+          isVisible={selected && !data.locked}
+          rotation={rotation}
+          minWidth={MIN_NODE_WIDTH}
+          minHeight={MIN_NODE_HEIGHT}
+        />
+
+        <ConnectionHandles
+          visible={showHandles}
+          isConnectable={isConnectable}
+          shapeType={shapeType}
+        />
+      </div>
     </div>
   );
 }

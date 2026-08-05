@@ -27,9 +27,9 @@ And(/^no Tooltipster tooltip is visible$/) do
   wait.until {!@browser.execute_script("return $('.tooltipster-base').is(':visible');")}
 end
 
-And(/^there is a Tooltipster tooltip with text "([^"]*)"$/) do |tooltip_text|
+And(/^there is a Tooltipster tooltip with text (?:"([^"]*)"|'([^']*)')$/) do |tooltip_text, tooltip_text_2|
   wait = Selenium::WebDriver::Wait.new(timeout: 10)
-  wait.until {@browser.execute_script("return $('.tooltipster-content :contains(#{tooltip_text})').length > 0;")}
+  wait.until {@browser.execute_script("return $('.tooltipster-content :contains(#{tooltip_text || tooltip_text_2})').length > 0;")}
 end
 
 # This doesn't work in IE or on mobile yet, not sure why.
@@ -139,7 +139,7 @@ Then /^I open the library publish dialog/ do
   steps <<-STEPS
     When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')" if it exists
-    And I click selector "#project-share li:contains('Share as library')"
-    And I click selector "button:contains('Share as library')"
+    And I click selector "#project-share button[role='tab']:contains('Share as library')"
+    And I click selector "button:not([role='tab']):contains('Share as library')"
   STEPS
 end

@@ -5,9 +5,15 @@ import type {
   SketchlabReactFlowSource,
 } from '@cdo/apps/lab2/types';
 
-import type {FontSize, TextAlignValue} from './elementToolbars/toolbarPalettes';
+import type {
+  FontFamilyValue,
+  FontSize,
+  TextAlignValue,
+} from './elementToolbars/toolbarPalettes';
 
 export type ShapeType = 'rectangle' | 'triangle' | 'circle' | 'diamond';
+
+export type CanvasTool = 'cursor' | 'grab';
 
 export type ReactFlowSketchLabSources = ProjectSources & {
   source: SketchlabReactFlowSource;
@@ -27,19 +33,24 @@ export type ShapeNodeData = NodeDataBase & {
   strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSize;
+  fontFamily?: FontFamilyValue;
   textAlign?: TextAlignValue;
 };
 
 export type TextNodeData = NodeDataBase & {
   text: string;
+  strokeColor?: string;
   fontColor?: string;
   fontSize?: FontSize;
+  fontFamily?: FontFamilyValue;
   textAlign?: TextAlignValue;
 };
 
 export type ImageNodeData = NodeDataBase & {
   src: string;
   altText: string;
+  // Image has been flagged by the moderation service.
+  flagged?: boolean;
 };
 
 export type LineAnchorNodeData = NodeDataBase & {

@@ -31,6 +31,10 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: "pyodide-sandbox.#{CDO.preview_codeprojects_hostname}" do
+    get '/', to: 'pyodide_sandbox#show'
+  end
+
   constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:
@@ -75,7 +79,7 @@ Dashboard::Application.routes.draw do
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
-    get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/level_source/:script_id/:level_id(/user/:user_id)', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     resources :student_work_evaluations, only: [:create] do
@@ -119,7 +123,7 @@ Dashboard::Application.routes.draw do
     resources :puzzle_ratings, only: [:create]
     resources :callouts
     resources :congrats, only: %i[index show], param: :course_name
-    resources :json_videos, only: [:create] do
+    resources :json_videos, only: [:create, :update, :destroy] do
       member do
         get 'content'
       end
@@ -136,6 +140,7 @@ Dashboard::Application.routes.draw do
     resources :images, only: [:new]
 
     get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/ai_iteration/image_safety_eval", to: "ai_iteration#image_safety_eval"
     post "/student_code_samples", to: "student_work_sample#fetch_student_code_samples"
     post "/free_response_answers", to: "student_work_sample#fetch_free_response_answers"
 
@@ -225,9 +230,14 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
-          get 'demo/presets', action: 'presets', as: 'presets'
-          post 'demo/:demo_type', action: 'create_demo', as: 'create_demo'
           get 'assigned_essential_ai_dependency'
+          get 'suggested_lessons'
+        end
+        collection do
+          get 'demo/presets', action: 'presets', as: 'presets'
+          get 'demo/check_staleness', action: 'check_demo_section_staleness', as: 'check_demo_section_staleness'
+          post 'demo/reset', action: 'reset_demo_section', as: 'reset_demo_section'
+          post 'demo/create/:demo_type', action: 'create_demo', as: 'create_demo'
         end
       end
     end
@@ -476,6 +486,7 @@ Dashboard::Application.routes.draw do
         get 'instructions'
         get 'get_rollup_resources'
         get 'generate', to: 'scripts#generate'
+        get 'listing', to: 'scripts#listing'
         put 'lesson_outlines', to: 'scripts#update_lesson_outlines'
       end
 
@@ -675,6 +686,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get '/scrapbook', to: 'scrapbook#show'
+    # :token is an urlsafe-base64 signed token (no dots/slashes), so it needs no
+    # constraint. It carries the image's identity and authorization, letting an
+    # <img> tag load the image without relying on the session cookie.
+    get '/scrapbook/images/:token', to: 'scrapbook#image'
+
     get '/beta', to: redirect('/')
 
     get '/hoc/reset', to: 'script_levels#reset', script_id: Unit::HOC_NAME, as: 'hoc_reset'
@@ -841,10 +858,15 @@ Dashboard::Application.routes.draw do
 
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
-    # Experiments are get requests so that a user can click on a link to join or leave an experiment
+    get '/experiments', to: 'experiments#index'
+
+    # The set/disable experiment routes are state-mutating GETs, kept only so
+    # they can be clickable links in emails. Use them nowhere else; the
+    # /experiments page leaves experiments via the POST route.
     resource :experiments, only: [] do
       get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
       get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+      post 'leave/:experiment_name', action: :leave
     end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
@@ -1107,6 +1129,9 @@ Dashboard::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
+        resources :scrapbook_entries, only: [:create, :index, :destroy] do
+          post :image, on: :collection
+        end
         concerns :api_v1_pd_routes
         concerns :section_api_routes
 
@@ -1427,6 +1452,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
+    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
+    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
+    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
+
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
@@ -1445,6 +1474,14 @@ Dashboard::Application.routes.draw do
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
     resources :practice_problems, only: [:index, :show]
+
+    resources :challenges, only: [:index, :show]
+    resources :challenge_responses, only: [:create, :show]
+    resources :challenge_response_assets, only: [:show] do
+      member do
+        put :upload
+      end
+    end
 
     resources :aidiff_exit_tickets, only: [:index, :update, :create, :show]
     resources :aidiff_lesson_hooks, only: [:index, :update, :create, :show]

@@ -202,14 +202,6 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. If you are on an M-series Mac, you will need to install Rosetta if you have not done so already, otherwise the apps build may fail:
-    ```sh
-    softwareupdate --install-rosetta
-    ```
-    ```sh
-    arch -x86_64 /bin/bash -c 'echo "Rosetta is working!"'
-    ```
-
 1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
     ```
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb

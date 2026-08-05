@@ -186,11 +186,14 @@ saucelabs_tunnel_name:
 
 # Credentials for AWS Device Farm, used as an alternative to SauceLabs for
 # running selenium tests against multiple browsers.
-# device_farm_desktop_project_arn is the ARN of a Desktop Browser Testing project,
-# created via the AWS Device Farm console or CLI.
-device_farm_desktop_project_arn:
-# device_farm_mobile_project_arn is the ARN of a Mobile Device Testing project,
-# used for running mobile browser tests (iPhone, iPad, etc.).
+
+# UUID of a Device Farm Desktop Browser Testing project. It is combined with the
+# region and runtime AWS account id to form the full project ARN in
+# lib/cdo/aws/device_farm.rb. It is not secret.
+device_farm_desktop_project_id:
+
+# ARN of a Mobile Device Testing project, used for running mobile browser tests
+# (iPhone, iPad, etc.). Treated as secret because it contains AWS account id.
 device_farm_mobile_project_arn:
 
 # Credentials for applitools.com, used for running automated visual tests
@@ -295,6 +298,9 @@ user_content_s3_bucket: <%=
     'staging'      => 'org.code.staging-studio.user-content',
     'test'         => 'org.code.test-studio.user-content',
     'levelbuilder' => 'org.code.levelbuilder-studio.user-content',
+    # Development has no bucket of its own; borrow the test bucket. Requires
+    # AWS credentials with access to it (see aws_credentials in locals.yml).
+    'development'  => 'org.code.test-studio.user-content',
   }[env]
 %>
 
@@ -676,6 +682,15 @@ active_job_queues:
   :default: :default
   :mailers: :mailers
   :mailjet: :mailjet
+  :low_priority: :low_priority
+
+# Delayed Job priority per ActiveJob queue. Lower numbers run first.
+# See dashboard/config/initializers/delayed_job_config.rb.
+active_job_queue_priorities:
+  :mailers: 0
+  :mailjet: 0
+  :default: 0
+  :low_priority: 10
 
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job

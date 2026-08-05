@@ -1,0 +1,350 @@
+/* CADS Semantic Colors */
+
+/* This file consists of Semantic colors, if you need color tokens that support multiple themes, you need to import and use this file. */
+
+/* Raw values for Semantic colors are defined in Primitive Colors (primitiveColors.css), while semantic color values are specified for every theme. */
+
+/* Generated from CADS color variables — do not hand-edit; check with the design team first and then re-export from the Color foundation page. */
+
+/* Light Theme Semantic Colors (light is the default theme, that's why :root rule is included) */
+:root,
+[data-theme='Light'] {
+  --background-neutral-primary: var(--neutral-base-white);
+  --background-neutral-secondary: var(--neutral-gray-5);
+  --background-neutral-tertiary: var(--neutral-gray-10);
+  --background-neutral-quaternary: var(--neutral-gray-20);
+  --background-neutral-quinary: var(--neutral-gray-30);
+  --background-neutral-senary: var(--neutral-gray-50);
+  --background-neutral-septenary: var(--neutral-gray-70);
+  --background-neutral-octonary: var(--neutral-gray-80);
+  --background-neutral-primary-inverse: var(--neutral-base-black);
+  --background-neutral-true-base: var(--neutral-base-black);
+  --background-neutral-black-fixed: var(--neutral-base-black);
+  --background-neutral-white-fixed: var(--neutral-base-white);
+  --background-neutral-alpha-5: var(--neutral-black-alpha-5);
+  --background-neutral-alpha-10: var(--neutral-black-alpha-10);
+  --background-neutral-alpha-20: var(--neutral-black-alpha-20);
+  --background-neutral-alpha-30: var(--neutral-black-alpha-30);
+  --background-neutral-alpha-40: var(--neutral-black-alpha-40);
+  --background-neutral-alpha-50: var(--neutral-black-alpha-50);
+  --background-neutral-alpha-60: var(--neutral-black-alpha-60);
+  --background-neutral-alpha-70: var(--neutral-black-alpha-70);
+  --background-neutral-alpha-80: var(--neutral-black-alpha-80);
+  --background-neutral-alpha-90: var(--neutral-black-alpha-90);
+  --background-neutral-alpha-95: var(--neutral-black-alpha-95);
+  --background-brand-primary: var(--brand-purple-50);
+  --background-brand-light: var(--brand-purple-5);
+  --background-brand-mid: var(--brand-purple-20);
+  --background-brand-strong: var(--brand-purple-80);
+  --background-error-primary: var(--sentiment-error-50);
+  --background-error-light: var(--sentiment-error-5);
+  --background-error-mid: var(--sentiment-error-30);
+  --background-error-strong: var(--sentiment-error-70);
+  --background-warning-primary: var(--sentiment-warning-50);
+  --background-warning-light: var(--sentiment-warning-5);
+  --background-warning-mid: var(--sentiment-warning-30);
+  --background-warning-strong: var(--sentiment-warning-70);
+
+  /* Bumped to level 70 (brand-guideline primary is 50) so white labels pass 4.5:1; strong sits at 90. */
+  --background-success-primary: var(--sentiment-success-70);
+  --background-success-light: var(--sentiment-success-5);
+  --background-success-mid: var(--sentiment-success-30);
+  --background-success-strong: var(--sentiment-success-90);
+
+  /* Bumped to level 70 (brand-guideline primary is 50) so white labels pass 4.5:1; strong sits at 90. */
+  --background-info-primary: var(--sentiment-information-70);
+  --background-info-light: var(--sentiment-information-5);
+  --background-info-mid: var(--sentiment-information-30);
+  --background-info-strong: var(--sentiment-information-90);
+
+  /* Selected state is mode-inverted and cross-family by design: brand fill + seafoam text in light, seafoam fill + navy text in dark. */
+  --background-selected-primary: var(--brand-purple-80);
+  --background-selected-strong: var(--brand-purple-95);
+  --background-selected-primary-inverse: var(--sentiment-success-5);
+  --background-disabled-brand: var(--brand-purple-5);
+  --background-disabled-error: var(--sentiment-error-5);
+  --background-disabled-info: var(--sentiment-information-5);
+
+  /* Matches background-neutral-quaternary by value today, but disabled intent is decoupled so the state can be restyled independently. */
+  --background-disabled-neutral: var(--neutral-gray-20);
+  --background-disabled-orange: var(--brand-orange-5);
+  --background-disabled-pink: var(--brand-pink-5);
+  --background-disabled-success: var(--sentiment-success-5);
+  --background-disabled-warning: var(--sentiment-warning-5);
+
+  /* The Run button orange is an intentional a11y exception. It fails 4.5:1 contrast with white labels but we are keeping it for its deep user association with "run" (and Blockly's run blocks). */
+  --background-accent-orange-primary: var(--brand-orange-50);
+  --background-accent-orange-light: var(--brand-orange-5);
+  --background-accent-orange-mid: var(--brand-orange-30);
+  --background-accent-orange-strong: var(--brand-orange-70);
+  --background-accent-pink-primary: var(--brand-pink-50);
+  --background-accent-pink-light: var(--brand-pink-5);
+  --background-accent-pink-mid: var(--brand-pink-30);
+  --background-accent-pink-strong: var(--brand-pink-70);
+  --border-neutral-primary: var(--neutral-gray-20);
+  --border-neutral-secondary: var(--neutral-gray-40);
+  --border-neutral-solid: var(--neutral-base-black);
+  --border-neutral-black-fixed: var(--neutral-base-black);
+  --border-neutral-white-fixed: var(--neutral-base-white);
+  --border-brand-primary: var(--brand-purple-50);
+  --border-brand-light: var(--brand-purple-10);
+  --border-brand-mid: var(--brand-purple-30);
+  --border-brand-strong: var(--brand-purple-70);
+  --border-error-primary: var(--sentiment-error-50);
+  --border-error-light: var(--sentiment-error-10);
+  --border-error-mid: var(--sentiment-error-20);
+  --border-error-strong: var(--sentiment-error-70);
+  --border-warning-primary: var(--sentiment-warning-50);
+  --border-warning-light: var(--sentiment-warning-10);
+  --border-warning-mid: var(--sentiment-warning-30);
+  --border-warning-strong: var(--sentiment-warning-70);
+
+  /* Stays at level 50 (unlike the bumped background primary at 70) since border contrast only needs 3:1. */
+  --border-success-primary: var(--sentiment-success-50);
+  --border-success-light: var(--sentiment-success-10);
+  --border-success-mid: var(--sentiment-success-30);
+  --border-success-strong: var(--sentiment-success-70);
+
+  /* Stays at level 50 (unlike the bumped background primary at 70) since border contrast only needs 3:1. */
+  --border-info-primary: var(--sentiment-information-50);
+  --border-info-light: var(--sentiment-information-10);
+  --border-info-mid: var(--sentiment-information-30);
+  --border-info-strong: var(--sentiment-information-70);
+  --border-focused-primary: var(--brand-purple-50);
+
+  /* Border state selected strong and primary intentionally match the background state color. */
+  --border-selected-primary: var(--brand-purple-80);
+  --border-selected-strong: var(--brand-purple-95);
+  --border-selected-primary-inverse: var(--sentiment-success-5);
+  --border-disabled-brand: var(--brand-purple-5);
+  --border-disabled-error: var(--sentiment-error-5);
+  --border-disabled-info: var(--sentiment-information-5);
+  --border-disabled-neutral: var(--neutral-gray-20);
+  --border-disabled-orange: var(--brand-orange-5);
+  --border-disabled-pink: var(--brand-pink-5);
+  --border-disabled-success: var(--sentiment-success-5);
+  --border-disabled-warning: var(--sentiment-warning-5);
+  --border-focused-inverse: var(--sentiment-success-5);
+  --border-accent-orange-primary: var(--brand-orange-50);
+  --border-accent-orange-light: var(--brand-orange-10);
+  --border-accent-orange-mid: var(--brand-orange-30);
+  --border-accent-orange-strong: var(--brand-orange-70);
+  --border-accent-pink-primary: var(--brand-pink-50);
+  --border-accent-pink-light: var(--brand-pink-10);
+  --border-accent-pink-mid: var(--brand-pink-30);
+  --border-accent-pink-strong: var(--brand-pink-70);
+  --text-neutral-primary: var(--neutral-base-black);
+  --text-neutral-secondary: var(--neutral-gray-90);
+  --text-neutral-tertiary: var(--neutral-gray-80);
+  --text-neutral-quaternary: var(--neutral-gray-70);
+  --text-neutral-primary-inverse: var(--neutral-base-white);
+  --text-neutral-placeholder: var(--neutral-gray-40);
+  --text-neutral-black-fixed: var(--neutral-base-black);
+  --text-neutral-white-fixed: var(--neutral-base-white);
+  --text-brand-primary: var(--brand-purple-50);
+  --text-brand-secondary: var(--brand-purple-90);
+  --text-brand-primary-fixed: var(--brand-purple-50);
+  --text-error-primary: var(--sentiment-error-50);
+  --text-error-secondary: var(--sentiment-error-70);
+  --text-error-primary-fixed: var(--sentiment-error-50);
+  --text-warning-primary: var(--sentiment-warning-50);
+  --text-warning-secondary: var(--sentiment-warning-90);
+  --text-warning-primary-fixed: var(--sentiment-warning-50);
+  --text-success-primary: var(--sentiment-success-70);
+  --text-success-secondary: var(--sentiment-success-90);
+  --text-success-primary-fixed: var(--sentiment-success-70);
+  --text-info-primary: var(--sentiment-information-70);
+  --text-info-secondary: var(--sentiment-information-90);
+  --text-info-primary-fixed: var(--sentiment-information-70);
+
+  /* Selected state text pairs with background and border-state-selected — always use the two together. */
+  --text-selected-primary: var(--sentiment-success-5);
+  --text-selected-primary-inverse: var(--brand-purple-95);
+  --text-disabled-brand: var(--brand-purple-5);
+  --text-disabled-error: var(--sentiment-error-5);
+  --text-disabled-info: var(--sentiment-information-5);
+  --text-disabled-neutral: var(--neutral-gray-20);
+
+  /* Single inverse for the whole disabled family: label color for solid-fill disabled elements of any color; pair with the matching background/disabled/<color>. Outline disabled elements use text/disabled/<color> instead. */
+  --text-disabled-neutral-inverse: var(--neutral-base-white);
+  --text-disabled-orange: var(--brand-orange-5);
+  --text-disabled-pink: var(--brand-pink-5);
+  --text-disabled-success: var(--sentiment-success-5);
+  --text-disabled-warning: var(--sentiment-warning-5);
+
+  /* Orange text intentionally keeps the true brand-guideline level-50 value instead of bumping for contrast */
+  --text-accent-orange-primary: var(--brand-orange-50);
+  --text-accent-orange-secondary: var(--brand-orange-70);
+  --text-accent-orange-primary-fixed: var(--brand-orange-50);
+  --text-accent-pink-primary: var(--brand-pink-50);
+  --text-accent-pink-secondary: var(--brand-pink-70);
+  --text-accent-pink-primary-fixed: var(--brand-pink-50);
+}
+
+/* Dark Theme Semantic Colors */
+[data-theme='Dark'] {
+  --background-neutral-primary: var(--neutral-base-black);
+  --background-neutral-secondary: var(--neutral-gray-95);
+  --background-neutral-tertiary: var(--neutral-gray-90);
+  --background-neutral-quaternary: var(--neutral-gray-80);
+  --background-neutral-quinary: var(--neutral-gray-70);
+  --background-neutral-senary: var(--neutral-gray-50);
+  --background-neutral-septenary: var(--neutral-gray-30);
+  --background-neutral-octonary: var(--neutral-gray-20);
+  --background-neutral-primary-inverse: var(--neutral-base-white);
+  --background-neutral-true-base: var(--neutral-base-true-black);
+  --background-neutral-black-fixed: var(--neutral-base-black);
+  --background-neutral-white-fixed: var(--neutral-base-white);
+  --background-neutral-alpha-5: var(--neutral-white-alpha-5);
+  --background-neutral-alpha-10: var(--neutral-white-alpha-10);
+  --background-neutral-alpha-20: var(--neutral-white-alpha-20);
+  --background-neutral-alpha-30: var(--neutral-white-alpha-30);
+  --background-neutral-alpha-40: var(--neutral-white-alpha-40);
+  --background-neutral-alpha-50: var(--neutral-white-alpha-50);
+  --background-neutral-alpha-60: var(--neutral-white-alpha-60);
+  --background-neutral-alpha-70: var(--neutral-white-alpha-70);
+  --background-neutral-alpha-80: var(--neutral-white-alpha-80);
+  --background-neutral-alpha-90: var(--neutral-white-alpha-90);
+  --background-neutral-alpha-95: var(--neutral-white-alpha-95);
+  --background-brand-primary: var(--brand-purple-50);
+  --background-brand-light: var(--brand-purple-95);
+  --background-brand-mid: var(--brand-purple-80);
+
+  /* Strong variables are mostly used for hover states, in dark mode they invert and become lighter. They fail 4.5:1 contrast with labels, but we only need the default state to pass. */
+  --background-brand-strong: var(--brand-purple-40);
+  --background-error-primary: var(--sentiment-error-50);
+  --background-error-light: var(--sentiment-error-95);
+  --background-error-mid: var(--sentiment-error-80);
+  --background-error-strong: var(--sentiment-error-40);
+  --background-warning-primary: var(--sentiment-warning-50);
+  --background-warning-light: var(--sentiment-warning-95);
+  --background-warning-mid: var(--sentiment-warning-80);
+  --background-warning-strong: var(--sentiment-warning-40);
+
+  /* Level 70 is preserved for success even in dark mode to continue to pass 4.5:1 contrast with white labels, we intentionally don't invert to avoid black labels. */
+  --background-success-primary: var(--sentiment-success-70);
+  --background-success-light: var(--sentiment-success-95);
+  --background-success-mid: var(--sentiment-success-80);
+
+  /* Bc success is at level 70, we maintain the relative hover rule by setting the strong to 60. */
+  --background-success-strong: var(--sentiment-success-60);
+
+  /* Level 70 is preserved for info even in dark mode to continue to pass 4.5:1 contrast with white labels, we intentionally don't invert to avoid black labels. */
+  --background-info-primary: var(--sentiment-information-70);
+  --background-info-light: var(--sentiment-information-95);
+  --background-info-mid: var(--sentiment-information-80);
+
+  /* Bc info is at level 70, we maintain the relative hover rule by setting the strong to 60. */
+  --background-info-strong: var(--sentiment-information-60);
+
+  /* Selected state is mode-inverted and cross-family by design: brand fill + seafoam text in light, seafoam fill + navy text in dark. */
+  --background-selected-primary: var(--sentiment-success-5);
+  --background-selected-strong: var(--sentiment-success-20);
+  --background-selected-primary-inverse: var(--brand-purple-80);
+  --background-disabled-brand: var(--neutral-gray-80);
+  --background-disabled-error: var(--neutral-gray-80);
+  --background-disabled-info: var(--neutral-gray-80);
+  --background-disabled-neutral: var(--neutral-gray-80);
+  --background-disabled-orange: var(--neutral-gray-80);
+  --background-disabled-pink: var(--neutral-gray-80);
+  --background-disabled-success: var(--neutral-gray-80);
+  --background-disabled-warning: var(--neutral-gray-80);
+  --background-accent-orange-primary: var(--brand-orange-50);
+  --background-accent-orange-light: var(--brand-orange-95);
+  --background-accent-orange-mid: var(--brand-orange-80);
+  --background-accent-orange-strong: var(--brand-orange-40);
+  --background-accent-pink-primary: var(--brand-pink-50);
+  --background-accent-pink-light: var(--brand-pink-95);
+  --background-accent-pink-mid: var(--brand-pink-80);
+  --background-accent-pink-strong: var(--brand-pink-40);
+  --border-neutral-primary: var(--neutral-gray-80);
+  --border-neutral-secondary: var(--neutral-gray-60);
+  --border-neutral-solid: var(--neutral-base-white);
+  --border-neutral-black-fixed: var(--neutral-base-black);
+  --border-neutral-white-fixed: var(--neutral-base-white);
+
+  /* Primary borders of all colors stay at level 50 in dark mode since contrast only needs 3:1. */
+  --border-brand-primary: var(--brand-purple-50);
+  --border-brand-light: var(--brand-purple-90);
+  --border-brand-mid: var(--brand-purple-70);
+  --border-brand-strong: var(--brand-purple-30);
+  --border-error-primary: var(--sentiment-error-50);
+  --border-error-light: var(--sentiment-error-90);
+  --border-error-mid: var(--sentiment-error-70);
+  --border-error-strong: var(--sentiment-error-30);
+  --border-warning-primary: var(--sentiment-warning-50);
+  --border-warning-light: var(--sentiment-warning-90);
+  --border-warning-mid: var(--sentiment-warning-70);
+  --border-warning-strong: var(--sentiment-warning-30);
+  --border-success-primary: var(--sentiment-success-50);
+  --border-success-light: var(--sentiment-success-90);
+  --border-success-mid: var(--sentiment-success-70);
+  --border-success-strong: var(--sentiment-success-30);
+  --border-info-primary: var(--sentiment-information-50);
+  --border-info-light: var(--sentiment-information-90);
+  --border-info-mid: var(--sentiment-information-70);
+  --border-info-strong: var(--sentiment-information-30);
+  --border-focused-primary: var(--brand-purple-30);
+  --border-selected-primary: var(--sentiment-success-5);
+  --border-selected-strong: var(--sentiment-success-20);
+  --border-selected-primary-inverse: var(--brand-purple-80);
+  --border-disabled-brand: var(--neutral-gray-80);
+  --border-disabled-error: var(--neutral-gray-80);
+  --border-disabled-info: var(--neutral-gray-80);
+  --border-disabled-neutral: var(--neutral-gray-80);
+  --border-disabled-orange: var(--neutral-gray-80);
+  --border-disabled-pink: var(--neutral-gray-80);
+  --border-disabled-success: var(--neutral-gray-80);
+  --border-disabled-warning: var(--neutral-gray-80);
+  --border-focused-inverse: var(--brand-purple-50);
+  --border-accent-orange-primary: var(--brand-orange-50);
+  --border-accent-orange-light: var(--brand-orange-90);
+  --border-accent-orange-mid: var(--brand-orange-70);
+  --border-accent-orange-strong: var(--brand-orange-30);
+  --border-accent-pink-primary: var(--brand-pink-50);
+  --border-accent-pink-light: var(--brand-pink-90);
+  --border-accent-pink-mid: var(--brand-pink-70);
+  --border-accent-pink-strong: var(--brand-pink-30);
+  --text-neutral-primary: var(--neutral-base-white);
+  --text-neutral-secondary: var(--neutral-gray-5);
+  --text-neutral-tertiary: var(--neutral-gray-10);
+  --text-neutral-quaternary: var(--neutral-gray-20);
+  --text-neutral-primary-inverse: var(--neutral-base-black);
+  --text-neutral-placeholder: var(--neutral-gray-60);
+  --text-neutral-black-fixed: var(--neutral-base-black);
+  --text-neutral-white-fixed: var(--neutral-base-white);
+  --text-brand-primary: var(--neutral-base-white);
+  --text-brand-secondary: var(--brand-purple-5);
+  --text-brand-primary-fixed: var(--brand-purple-30);
+  --text-error-primary: var(--neutral-base-white);
+  --text-error-secondary: var(--sentiment-error-5);
+  --text-error-primary-fixed: var(--sentiment-error-30);
+  --text-warning-primary: var(--neutral-base-white);
+  --text-warning-secondary: var(--sentiment-warning-5);
+  --text-warning-primary-fixed: var(--sentiment-warning-30);
+  --text-success-primary: var(--neutral-base-white);
+  --text-success-secondary: var(--sentiment-success-5);
+  --text-success-primary-fixed: var(--sentiment-success-30);
+  --text-info-primary: var(--neutral-base-white);
+  --text-info-secondary: var(--sentiment-information-5);
+  --text-info-primary-fixed: var(--sentiment-information-30);
+
+  /* Pairs with background-state-selected — always use the two together. */
+  --text-selected-primary: var(--brand-purple-95);
+  --text-selected-primary-inverse: var(--sentiment-success-5);
+  --text-disabled-brand: var(--neutral-gray-80);
+  --text-disabled-error: var(--neutral-gray-80);
+  --text-disabled-info: var(--neutral-gray-80);
+  --text-disabled-neutral: var(--neutral-gray-80);
+  --text-disabled-neutral-inverse: var(--neutral-base-black);
+  --text-disabled-orange: var(--neutral-gray-80);
+  --text-disabled-pink: var(--neutral-gray-80);
+  --text-disabled-success: var(--neutral-gray-80);
+  --text-disabled-warning: var(--neutral-gray-80);
+  --text-accent-orange-primary: var(--neutral-base-white);
+  --text-accent-orange-secondary: var(--brand-orange-5);
+  --text-accent-orange-primary-fixed: var(--brand-orange-30);
+  --text-accent-pink-primary: var(--neutral-base-white);
+  --text-accent-pink-secondary: var(--brand-pink-5);
+  --text-accent-pink-primary-fixed: var(--brand-pink-30);
+}

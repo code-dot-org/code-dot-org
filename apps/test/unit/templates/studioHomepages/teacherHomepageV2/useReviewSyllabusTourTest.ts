@@ -1,15 +1,19 @@
 import {renderHook} from '@testing-library/react-hooks';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Tour} from 'shepherd.js';
+import Shepherd, {Tour} from 'shepherd.js';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
+import {COURSE_HEADER_STEP_ID} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/reviewSyllabusOnboarding';
 import useReviewSyllabusTour, {
   resumeReviewSyllabusOnboardingTour,
   recordViewSyllabusCompletion,
@@ -28,6 +32,28 @@ const mockHttpClientPost = HttpClient.post as jest.MockedFunction<
 >;
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
+// attachOnboardingAnalytics is stubbed with a minimal fake that wires the
+// mocked recordOnboardingTourAbandonment into 'cancel' itself: the real
+// attachOnboardingAnalytics calls recordOnboardingTourAbandonment via a
+// same-module local reference (a TS/babel compilation artifact), which
+// bypasses this jest.mock override entirely, so the real implementation
+// would never touch our mock.
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => {
+  const recordOnboardingTourAbandonment = jest.fn();
+  return {
+    ...jest.requireActual(
+      '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+    ),
+    recordOnboardingTourAbandonment,
+    attachOnboardingAnalytics: jest.fn(
+      (tour: Tour, tourName: string, sessionStorageKey: string) => {
+        tour.on('cancel', () =>
+          recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName)
+        );
+      }
+    ),
+  };
+});
 jest.mock('@cdo/apps/sharedComponents/productTour/useOnboardingTour', () =>
   jest.fn(({getSteps}: {getSteps: (t: Tour) => unknown}) => {
     const tour = (
@@ -49,6 +75,10 @@ const mockCreateShepherdTour = createShepherdTour as jest.MockedFunction<
 const mockTryGetSessionStorage = tryGetSessionStorage as jest.MockedFunction<
   typeof tryGetSessionStorage
 >;
+const mockRecordTourAbandonment =
+  recordOnboardingTourAbandonment as jest.MockedFunction<
+    typeof recordOnboardingTourAbandonment
+  >;
 const mockTrySetSessionStorage = trySetSessionStorage as jest.MockedFunction<
   typeof trySetSessionStorage
 >;
@@ -57,8 +87,17 @@ const makeMockTour = () => {
   const handlers: Record<string, () => void> = {};
   const steps: {id: string}[] = [];
   return {
+    // Shepherd supports multiple listeners per event; chain rather than
+    // overwrite so both attachOnboardingAnalytics's wiring and the hook's
+    // own handler fire on the same event.
     on: jest.fn((event: string, cb: () => void) => {
-      handlers[event] = cb;
+      const existing = handlers[event];
+      handlers[event] = existing
+        ? () => {
+            existing();
+            cb();
+          }
+        : cb;
     }),
     addSteps: jest.fn((s: {id: string}[]) => steps.push(...s)),
     show: jest.fn(),
@@ -68,9 +107,14 @@ const makeMockTour = () => {
 };
 
 describe('recordViewSyllabusCompletion', () => {
+  let sendEventSpy: jest.SpyInstance;
+
   beforeEach(() => {
     jest.clearAllMocks();
     mockHttpClientPost.mockResolvedValue(new Response());
+    sendEventSpy = jest
+      .spyOn(analyticsReporter, 'sendEvent')
+      .mockImplementation(jest.fn());
   });
 
   it('calls HttpClient.post with correct args', () => {
@@ -80,6 +124,16 @@ describe('recordViewSyllabusCompletion', () => {
       JSON.stringify({tour_name: 'view_syllabus'}),
       true,
       {'Content-Type': 'application/json'}
+    );
+  });
+
+  it('sends an ONBOARDING_TOUR_COMPLETED analytics event with the tour name', () => {
+    recordViewSyllabusCompletion();
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.ONBOARDING_TOUR_COMPLETED,
+      {
+        tour_name: 'view_syllabus',
+      }
     );
   });
 
@@ -105,6 +159,10 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
     mockCreateShepherdTour.mockReturnValue(mockTour as unknown as Tour);
   });
 
+  afterEach(() => {
+    Shepherd.activeTour = null;
+  });
+
   it('does nothing when no step ID is saved in sessionStorage', () => {
     mockTryGetSessionStorage.mockReturnValue('');
     resumeReviewSyllabusOnboardingTour();
@@ -113,7 +171,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
   it('does nothing when step ID is present but demoType is missing', () => {
     mockTryGetSessionStorage
-      .mockReturnValueOnce('unit-breadcrumb-step') // step key
+      .mockReturnValueOnce(COURSE_HEADER_STEP_ID) // step key
       .mockReturnValueOnce(''); // demo type key
     resumeReviewSyllabusOnboardingTour();
     expect(mockCreateShepherdTour).not.toHaveBeenCalled();
@@ -121,7 +179,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
   it('clears the step key and does not show when no steps are built for the demoType', () => {
     mockTryGetSessionStorage
-      .mockReturnValueOnce('unit-breadcrumb-step')
+      .mockReturnValueOnce(COURSE_HEADER_STEP_ID)
       .mockReturnValueOnce('unknown' as 'high'); // unrecognized demoType — hits default case, returns []
 
     resumeReviewSyllabusOnboardingTour();
@@ -134,7 +192,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('builds a tour and shows the saved step when both keys are present', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage
@@ -148,7 +206,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('falls back to the first step when the saved step ID is not found', () => {
-    (mockTour.steps as {id: string}[]).push({id: 'unit-breadcrumb-step'});
+    (mockTour.steps as {id: string}[]).push({id: COURSE_HEADER_STEP_ID});
 
     mockTryGetSessionStorage
       .mockReturnValueOnce('nonexistent-step-id')
@@ -156,11 +214,11 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
 
     resumeReviewSyllabusOnboardingTour();
 
-    expect(mockTour.show).toHaveBeenCalledWith('unit-breadcrumb-step');
+    expect(mockTour.show).toHaveBeenCalledWith(COURSE_HEADER_STEP_ID);
   });
 
   it('clears sessionStorage and records completion on complete', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage
@@ -187,7 +245,7 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
   });
 
   it('clears sessionStorage but does not record completion on cancel', () => {
-    const savedStepId = 'unit-breadcrumb-step';
+    const savedStepId = COURSE_HEADER_STEP_ID;
     (mockTour.steps as {id: string}[]).push({id: savedStepId});
 
     mockTryGetSessionStorage
@@ -206,6 +264,49 @@ describe('resumeReviewSyllabusOnboardingTour', () => {
       ''
     );
     expect(mockHttpClientPost).not.toHaveBeenCalled();
+  });
+
+  it('reports abandonment before clearing sessionStorage on cancel', () => {
+    const savedStepId = COURSE_HEADER_STEP_ID;
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+
+    mockTryGetSessionStorage
+      .mockReturnValueOnce(savedStepId)
+      .mockReturnValueOnce('high');
+
+    resumeReviewSyllabusOnboardingTour();
+
+    const handlers = (
+      mockTour as unknown as {_handlers: Record<string, () => void>}
+    )._handlers;
+    handlers['cancel']();
+
+    expect(mockRecordTourAbandonment).toHaveBeenCalledWith(
+      mockTour,
+      REVIEW_SYLLABUS_ONBOARDING_STEP_KEY,
+      'view_syllabus'
+    );
+    expect(mockRecordTourAbandonment.mock.invocationCallOrder[0]).toBeLessThan(
+      mockTrySetSessionStorage.mock.invocationCallOrder[0]
+    );
+  });
+
+  it('cancels any active Shepherd tour before creating the resumed tour', () => {
+    const savedStepId = COURSE_HEADER_STEP_ID;
+    (mockTour.steps as {id: string}[]).push({id: savedStepId});
+
+    mockTryGetSessionStorage
+      .mockReturnValueOnce(savedStepId)
+      .mockReturnValueOnce('high');
+
+    const cancelMock = jest.fn();
+    (Shepherd as unknown as {activeTour: object}).activeTour = {
+      cancel: cancelMock,
+    };
+
+    resumeReviewSyllabusOnboardingTour();
+
+    expect(cancelMock).toHaveBeenCalled();
   });
 });
 
@@ -241,7 +342,9 @@ describe('useReviewSyllabusTour', () => {
   });
 
   it('saves demoType to sessionStorage on mount', () => {
-    renderHook(() => useReviewSyllabusTour('high'), {wrapper: makeWrapper()});
+    renderHook(() => useReviewSyllabusTour('high'), {
+      wrapper: makeWrapper(),
+    });
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(
       'reviewSyllabusOnboardingDemoType',
       'high'

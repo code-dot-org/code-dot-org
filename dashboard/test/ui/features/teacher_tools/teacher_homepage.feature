@@ -34,7 +34,6 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
-  @properties_encryption_key
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
     And I create a new "High School" student section with course "Computer Science Principles", version "'25-'26" and unit "Digital Information"

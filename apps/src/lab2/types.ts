@@ -31,14 +31,17 @@ import type {
   TextNodeData,
 } from '../sketchlab/reactFlow/types';
 
-export {Theme};
+export type {Theme};
 
 /// ------ USER APP OPTIONS ------ ///
 
 // Partial definition of the UserAppOptions structure, only defining the
 // pieces we need at the moment.
 export interface PartialUserAppOptions {
-  isInstructor: boolean;
+  isInstructor?: boolean;
+  isNavigator?: boolean;
+  pairingDriver?: string;
+  pairingChannelId?: string;
 }
 
 /// ------ PROJECTS ------ ///
@@ -65,6 +68,14 @@ export interface Channel {
 
 export type DefaultChannel = Pick<Channel, 'name'>;
 
+export type ShareFailureType = 'email' | 'phone' | 'address' | 'profanity';
+
+/** A share-filtering failure (profanity or PII) found in project content. */
+export interface ShareFailure {
+  type: ShareFailureType;
+  content?: string;
+}
+
 /** A project and its corresponding sources if present, fetched together when loading a level. */
 export interface ProjectAndSources {
   // When projects are loaded for the first time, sources may not be present
@@ -72,6 +83,7 @@ export interface ProjectAndSources {
   channel: Channel;
   abuseScore?: number;
   sharingDisabled?: boolean;
+  shareFailure?: ShareFailure | null;
   isTeacherOfProjectOwner?: boolean;
 }
 
@@ -405,6 +417,10 @@ export interface Lab2EntryPoint {
    * An array of themes that the lab supports.
    */
   themes: Theme[];
+  /**
+   * The lab loads and saves its own project (via the useSources hook).
+   */
+  managesOwnProject?: boolean;
 }
 
 export type LevelData =

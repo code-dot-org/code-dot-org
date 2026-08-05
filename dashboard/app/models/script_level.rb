@@ -229,6 +229,13 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+      # For lessons with Tutor+ available (AIF/AID courses), send students at
+      # the end of the lesson to the lesson deep dive ("tutor") space instead of
+      # the next-level / unit-overview redirect. This is the single choke point
+      # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
+      # takes precedence over lesson extras and the unit overview dialog.
+      lesson.lesson_tutor_path
     else
       # To help teachers have more control over the pacing of certain
       # scripts, we send students on the last level of a lesson to the unit
@@ -579,7 +586,11 @@ class ScriptLevel < ApplicationRecord
   # Bring together all the information needed to show the teacher panel on a level
   def summarize_for_teacher_panel(student, teacher = nil)
     level_for_progress = oldest_active_level.get_level_for_progress(student, script)
-    user_level = student.last_attempt_for_any([level_for_progress], script_id: script_id)
+    # A migrated predict level's attempt may live on the level itself (new) or
+    # its contained level (pre-migration), so consider both. Every other level
+    # (including bubble choice) resolves to a single progress level for the student.
+    progress_levels = oldest_active_level.predict_level? ? oldest_active_level.levels_for_progress : [level_for_progress]
+    user_level = student.last_attempt_for_any(progress_levels, script_id: script_id)
 
     status = activity_css_class(user_level)
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)

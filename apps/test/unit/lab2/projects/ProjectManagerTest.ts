@@ -5,8 +5,8 @@ import {ChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {SourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
-import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {ProjectSources, Channel, ShareFailure} from '@cdo/apps/lab2/types';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
 
@@ -67,6 +67,60 @@ describe('ProjectManager', () => {
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
     expect(channel).to.deep.equal(FAKE_CHANNEL);
+  });
+
+  it('fetches the share failure for share-filtered project types', async () => {
+    const sketchlabChannel: Channel = {
+      ...FAKE_CHANNEL,
+      projectType: 'sketchlab',
+    };
+    const failure: ShareFailure = {type: 'profanity'};
+    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
+    channelsStore.getShareFailure.returns(Promise.resolve(failure));
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    const {shareFailure} = await projectManager.load();
+    expect(shareFailure).to.deep.equal(failure);
+  });
+
+  it('does not check the share failure for non-filtered project types', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    // FAKE_CHANNEL is a music project, which is not share-filtered.
+    const {shareFailure} = await projectManager.load();
+    assert.isNull(shareFailure);
+    assert.isTrue(channelsStore.getShareFailure.notCalled);
+  });
+
+  it('defaults to no share failure if the check fails', async () => {
+    const sketchlabChannel: Channel = {
+      ...FAKE_CHANNEL,
+      projectType: 'sketchlab',
+    };
+    channelsStore.load.returns(Promise.resolve(sketchlabChannel));
+    channelsStore.getShareFailure.throws(new Error('network error'));
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    const {shareFailure} = await projectManager.load();
+    assert.isNull(shareFailure);
   });
 
   it('triggers save immediately on first save', async () => {
@@ -488,6 +542,53 @@ describe('ProjectManager', () => {
     // Second save should not force new version (comment state reset)
     await projectManager.save(UPDATED_SOURCE_2);
     assert.isFalse(projectManager.getForceNewVersion());
+  });
+
+  it('createCommit throws when the project has no saved version', async () => {
+    sourcesStore.getCurrentVersionId.returns(null);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+
+    let error: Error | undefined;
+    try {
+      await projectManager.createCommit('a note');
+    } catch (e) {
+      error = e as Error;
+    }
+    expect(error?.message).to.contain('no saved version');
+  });
+
+  it('createCommit posts the comment against the flushed version', async () => {
+    sourcesStore.getCurrentVersionId.returns('v123');
+    const post = sinon.stub(HttpClient, 'post').resolves(new Response(''));
+    try {
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.createCommit('a note');
+
+      sinon.assert.calledOnce(post);
+      const [url, body] = post.firstCall.args;
+      expect(url).to.equal('/project_commits');
+      expect(JSON.parse(body as string)).to.deep.equal({
+        storage_id: FAKE_CHANNEL_ID,
+        version_id: 'v123',
+        comment: 'a note',
+      });
+      // Later saves must start a new version so this one stays intact.
+      assert.isTrue(projectManager.getForceNewVersion());
+    } finally {
+      post.restore();
+    }
   });
 });
 

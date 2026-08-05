@@ -338,7 +338,7 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonTutorPath: "#{get_uncached_show_path}/tutor",
+        lessonTutorPath: lesson_tutor_path,
         lessonEditPath: get_uncached_edit_path,
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
@@ -417,6 +417,17 @@ class Lesson < ApplicationRecord
 
   def total_lesson_duration
     lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
+  end
+
+  # The lesson tutor deep dive is available only for lessons with a lesson plan
+  # (assessments/surveys are excluded) that belong to an AIF/AID student course.
+  def lesson_tutor_available?
+    has_lesson_plan && !!script&.lesson_tutor_available?
+  end
+
+  # Path to the lesson's tutor deep dive space, or nil if it is unavailable.
+  def lesson_tutor_path
+    lesson_tutor_available? ? "#{get_uncached_show_path}/tutor" : nil
   end
 
   def summarize_for_calendar(unit_group_unit: nil)
@@ -510,6 +521,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
       objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
+      tutorVideos: JSONVideo.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|v| v.summarize_for_lesson_edit(self)},
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),

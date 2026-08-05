@@ -14,7 +14,8 @@
     "*.css"
   ],
   "scripts": {
-    "release": "release-it --preRelease=alpha"
+    "release": "release-it --preRelease=alpha",
+    "test": "node scripts/generateBrandCodeAiNext.mjs --check"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {

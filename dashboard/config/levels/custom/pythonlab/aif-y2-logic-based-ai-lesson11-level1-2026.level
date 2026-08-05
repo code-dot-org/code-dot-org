@@ -1,0 +1,56 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-07-28T20:43:57.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**You’re going to learn to create decision trees in Python.** \r\n\r\nFirst, see one in action.\r\n\r\n**☑️ Do This:**\r\n- Predict what this program will tell a person without a fever, but with a cough, to do.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "Take cough medicine",
+      "questionType": "multipleChoice",
+      "multipleChoiceOptions": [
+        "Visit clinic",
+        "Get rest",
+        "Take cough medicine",
+        "Hydrate"
+      ],
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "def decide(fever, cough):\n    if fever:\n        if cough:\n            return \"Visit clinic\"\n        else:\n            return \"Get rest\"\n    else:\n        if cough:\n            return \"Take cough medicine\"\n        else:\n            return \"Hydrate\"\n\n\ndef main():\n    fever = False\n    cough = True\n    decision = decide(fever, cough)\n    print(f\"You might need to: {decision}\")\n\n\nmain()\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-07-28 20:45:06 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:45:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-07-28 20:46:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

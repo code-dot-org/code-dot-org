@@ -42,6 +42,7 @@ const CODE_STUDIO_ENTRIES = {
   'curriculum_catalog/index': './src/sites/studio/pages/curriculum_catalog/index.js',
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
+  'experiments/index': './src/sites/studio/pages/experiments/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'lessons/tutor': './src/sites/studio/pages/lessons/tutor.js',
@@ -109,8 +110,10 @@ const CODE_STUDIO_ENTRIES = {
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
+  'scrapbook/show': './src/sites/studio/pages/scrapbook/show.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
+  'pyodide_sandbox/show': './src/sites/studio/pages/pyodide_sandbox/show.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'routing': './src/sites/studio/pages/routing.js',
@@ -131,6 +134,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_iteration/image_safety_eval': './src/sites/studio/pages/ai_iteration/image_safety_eval.js',
   'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',

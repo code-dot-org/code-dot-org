@@ -13,7 +13,6 @@
   min-width: $screen-xs-min;
   left: 50%;
   transform: translate(-50%, 0);
-  margin: unset;
 
   @media (min-width: $screen-sm-min) {
     .modal-dialog {
@@ -23,27 +22,17 @@
   }
 
   & .modal-content {
-    all: unset;
-
-    & form {
-      all: unset;
-    }
-
     & .modal-header {
-      padding: unset;
       border-bottom: unset;
       height: fit-content;
 
       & .close {
-        border: unset !important;
         box-shadow: none;
-        margin: unset;
         position: fixed;
         top: 12px;
         right: 10px;
         font-weight: var(--font-weight-extra-light);
         font-size: 40px;
-        line-height: unset;
       }
 
       & img {
@@ -64,7 +53,6 @@
 
     & .modal-body {
       $margin-bottom: 16px;
-      padding: unset;
 
       & a, #resend-permission-email-button {
         color: $brand_secondary_default;
@@ -101,16 +89,11 @@
             padding-right: 20px;
           }
 
-          & div[class^="col-"] {
-            padding: unset;
-          }
-
           &#parental-permission-request-status {
             & .form-control-static {
               font-size: $font-size;
               font-weight: $font-weight;
               padding: $padding-top 0 0 0;
-              margin: unset;
             }
 
             & .status {
@@ -140,20 +123,13 @@
     }
 
     & .modal-footer {
-      background: unset;
       border: unset;
-      padding: unset;
 
       & button {
-        margin: unset;
 
         &.primary {
           float: right;
           color: $white;
-
-          &:hover {
-            color: $orange;
-          }
         }
 
         &.secondary {

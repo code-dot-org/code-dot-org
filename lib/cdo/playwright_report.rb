@@ -17,14 +17,12 @@ module Cdo
     # Recursively upload report_dir, preserving relative paths and per-file
     # content types.
     # @param report_dir [String] path to the playwright-report directory
-    # @return [String, nil] public URL of index.html, or nil if the report is
-    #   missing or the upload fails (best-effort; never raises).
+    # @return [String, nil] versioned public URL of index.html, or nil if the
+    #   report is missing or the upload fails (best-effort; never raises).
     def self.upload(report_dir)
       return nil unless File.directory?(report_dir)
 
-      # Absolute ::AWS — inside module Cdo, a bare AWS resolves to Cdo::AWS
-      # (defined by cdo/aws/* siblings) and would miss the top-level uploader.
-      uploader = ::AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
+      uploader = AWS::S3::LogUploader.new(BUCKET, "#{prefix}/playwright", make_public: true)
       index_url = nil
       Dir.glob(File.join(report_dir, '**', '*')).each do |path|
         next unless File.file?(path)
@@ -33,11 +31,13 @@ module Cdo
         url = File.open(path, 'rb') do |body|
           uploader.upload_log(name, body, content_type: content_type)
         end
-        # Return the unversioned URL: the report SPA resolves sibling data/
-        # attachments relative to its own URL, so a ?versionId= (which belongs
-        # to index.html) leaks onto those requests and 404s. The bare key serves
-        # the latest upload, matching the overwrite-per-run behavior anyway.
-        index_url = url.split('?', 2).first if name == 'index.html'
+        # Keep the versionId param. On the DTT the key is overwritten every run,
+        # so a versioned link is what survives past the start of the next one.
+        # In Drone the output is namespaced per build and never overwritten, but
+        # a versioned link still lives longer than an unversioned one. See the
+        # cucumber-logs bucket lifecycle configuration in S3 for the current
+        # expiration policy.
+        index_url = url if name == 'index.html'
       end
       index_url
     rescue StandardError => exception
@@ -45,10 +45,10 @@ module Cdo
       nil
     end
 
-    # Computed without uploading, so the report can be linked before the run finishes.
+    # The unversioned key, which serves the latest upload. Computed without
+    # uploading, so the report can also be linked before the run finishes.
     def self.index_url
-      # ::AWS, not bare AWS (→ Cdo::AWS); see #upload.
-      ::AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
+      AWS::S3.public_url(BUCKET, "#{prefix}/playwright/index.html")
     rescue StandardError => exception
       CDO.log.error "Failed to compute Playwright report URL: #{exception.message}"
       nil

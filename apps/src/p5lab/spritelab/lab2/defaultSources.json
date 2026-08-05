@@ -1,0 +1,16 @@
+{
+  "animations": {"orderedKeys": [], "propsByKey": {}},
+  "source": {
+    "blocks": {
+      "blocks": [
+        {
+          "type": "when_run",
+          "x": 20,
+          "y": 20,
+          "deletable": false,
+          "movable": false
+        }
+      ]
+    }
+  }
+}

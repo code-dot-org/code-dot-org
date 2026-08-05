@@ -102,13 +102,6 @@ steps:
     pull: always
     environment:
       CI_JOB: 'unit_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
-      CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
-        from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
@@ -239,11 +232,8 @@ steps:
     network_mode: host
     environment:
       CI_JOB: 'ui_tests'
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/prepare_ci_env.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
+      # Each Drone secret below must be explicitly passed to the corresponding
+      # config value in test.yml.erb.
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
       PROPERTIES_ENCRYPTION_KEY:
@@ -252,8 +242,9 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
-      DEVICE_FARM_DESKTOP_PROJECT_ARN:
-        from_secret: DEVICE_FARM_DESKTOP_PROJECT_ARN
+      VISUAL_PROVIDER: 'applitools'
+      APPLITOOLS_API_KEY:
+        from_secret: APPLITOOLS_API_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       # Cached data gets restored by the root user, so we need to reassign
@@ -268,6 +259,9 @@ steps:
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
       - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
+      - export APPLITOOLS_BATCH_ID=$DRONE_COMMIT
+      - export APPLITOOLS_BATCH_NAME="Drone PR Playwright Eyes Tests"
+      - export APPLITOOLS_BRANCH=$DRONE_SOURCE_BRANCH
       - EXIT_CODE=0
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -376,6 +370,6 @@ trigger:
 
 ---
 kind: signature
-hmac: e75b83c2d058f6f4465e93bf9ebaf9ce75b9120378e5a9198e27eae5599ce56e
+hmac: 82e50b0b4fa996380cf9f79a8c9881e6b768471a94ac7ffbb45a45181a6b19d2
 
 ...

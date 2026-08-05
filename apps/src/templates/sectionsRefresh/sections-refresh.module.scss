@@ -170,6 +170,11 @@ p.noMarginBottomParagraph {
   align-items: center;
 }
 
+.unavailableLanguageTag {
+  display: block;
+  margin: 4px 0 8px 10px;
+}
+
 .unitDropdown {
   @include main-font-semi-bold;
   font-size: 16px;
@@ -206,7 +211,8 @@ button.advancedSettingsButton {
   flex-direction: column;
   text-align: center;
   padding: 36px;
-  font-family: var(--font-family-barlow-semi-condensed-medium);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-weight-medium);
 }
 
 .celebrationDialogBody .celebrationGif {

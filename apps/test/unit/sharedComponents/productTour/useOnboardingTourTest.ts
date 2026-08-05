@@ -1,11 +1,34 @@
 import {renderHook} from '@testing-library/react-hooks';
 import {Tour} from 'shepherd.js';
 
+import {recordOnboardingTourAbandonment} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 import {createShepherdTour} from '@cdo/apps/sharedComponents/productTour/shepherdTourFactory';
 import useOnboardingTour from '@cdo/apps/sharedComponents/productTour/useOnboardingTour';
 import {trySetSessionStorage} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/sharedComponents/productTour/shepherdTourFactory');
+// attachOnboardingAnalytics is stubbed with a minimal fake that wires the
+// mocked recordOnboardingTourAbandonment into 'cancel' itself: the real
+// attachOnboardingAnalytics calls recordOnboardingTourAbandonment via a
+// same-module local reference (a TS/babel compilation artifact), which
+// bypasses this jest.mock override entirely, so the real implementation
+// would never touch our mock.
+jest.mock('@cdo/apps/sharedComponents/productTour/productTourHelpers', () => {
+  const recordOnboardingTourAbandonment = jest.fn();
+  return {
+    ...jest.requireActual(
+      '@cdo/apps/sharedComponents/productTour/productTourHelpers'
+    ),
+    recordOnboardingTourAbandonment,
+    attachOnboardingAnalytics: jest.fn(
+      (tour: Tour, tourName: string, sessionStorageKey: string) => {
+        tour.on('cancel', () =>
+          recordOnboardingTourAbandonment(tour, sessionStorageKey, tourName)
+        );
+      }
+    ),
+  };
+});
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
   trySetSessionStorage: jest.fn(),
@@ -17,12 +40,18 @@ const mockCreateShepherdTour = createShepherdTour as jest.MockedFunction<
 const mockTrySetSessionStorage = trySetSessionStorage as jest.MockedFunction<
   typeof trySetSessionStorage
 >;
+const mockRecordTourAbandonment =
+  recordOnboardingTourAbandonment as jest.MockedFunction<
+    typeof recordOnboardingTourAbandonment
+  >;
 
 const SESSION_KEY = 'test-onboarding-step';
+const TOUR_NAME = 'test-tour';
 
 const defaultProps = {
   getSteps: jest.fn().mockReturnValue([]),
   sessionStorageKey: SESSION_KEY,
+  tourName: TOUR_NAME,
 };
 
 describe('useOnboardingTour', () => {
@@ -33,8 +62,17 @@ describe('useOnboardingTour', () => {
     jest.clearAllMocks();
     eventHandlers = {};
     mockTour = {
+      // Shepherd supports multiple listeners per event; chain rather than
+      // overwrite so both attachOnboardingAnalytics's wiring and the hook's
+      // own handler fire on the same event.
       on: jest.fn((event: string, cb: () => void) => {
-        eventHandlers[event] = cb;
+        const existing = eventHandlers[event];
+        eventHandlers[event] = existing
+          ? () => {
+              existing();
+              cb();
+            }
+          : cb;
       }),
       addSteps: jest.fn(),
       currentStep: null,
@@ -91,5 +129,19 @@ describe('useOnboardingTour', () => {
     renderHook(() => useOnboardingTour(defaultProps));
     eventHandlers['cancel']();
     expect(mockTrySetSessionStorage).toHaveBeenCalledWith(SESSION_KEY, '');
+  });
+
+  it('reports abandonment on cancel before clearing sessionStorage', () => {
+    renderHook(() => useOnboardingTour(defaultProps));
+    eventHandlers['cancel']();
+
+    expect(mockRecordTourAbandonment).toHaveBeenCalledWith(
+      mockTour,
+      SESSION_KEY,
+      TOUR_NAME
+    );
+    expect(mockRecordTourAbandonment.mock.invocationCallOrder[0]).toBeLessThan(
+      mockTrySetSessionStorage.mock.invocationCallOrder[0]
+    );
   });
 });

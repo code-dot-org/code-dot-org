@@ -3,15 +3,17 @@
 // module classes are unlayered. The Menu items stay in the shared `headerMenu*`
 // sx (MUI-override).
 
-// Account-menu trigger (teal pill with the display name + chevron).
+// Account-menu trigger (teal pill with the display name + chevron). Header-button
+// pill geometry matches the Rails header's `.header_button` under codeai-brand:
+// shorter + more rounded, semi-bold name, and a white alpha overlay for hover/press.
 .accountTrigger {
   min-width: 0;
-  height: 35px;
+  height: 32px;
   padding: 6.5px 1rem;
   column-gap: 8px;
   color: var(--text-neutral-white-fixed);
   border: 1px solid var(--neutral-base-white);
-  border-radius: 4px;
+  border-radius: 0.5rem;
   background-color: var(--background-brand-teal-primary);
   box-shadow: none;
   font-size: 14px;
@@ -19,18 +21,31 @@
   line-height: 1.5;
   text-transform: none;
 
+  .accountName {
+    font-weight: var(--font-weight-semi-bold);
+  }
+
   &:hover,
   &:active,
   &:focus-visible {
-    background-color: var(--background-brand-teal-primary);
     box-shadow: none;
     color: var(--text-neutral-white-fixed);
     // Re-pin the white outline; the theme's Button :active rule recolors it otherwise.
     border: 1px solid var(--neutral-base-white);
   }
 
+  &:hover,
+  &:active {
+    background-color: var(--neutral-white-alpha-20);
+  }
+
+  &:active {
+    background-color: var(--neutral-white-alpha-30);
+  }
+
   &:focus-visible {
-    outline: 2px solid var(--text-neutral-white-fixed);
+    background-color: var(--background-brand-teal-primary);
+    outline: 1px solid var(--border-neutral-white-fixed);
     outline-offset: 2px;
   }
 

@@ -1,14 +1,16 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import i18n from '@cdo/locale';
 
 import BonusLevels from './BonusLevels';
 import LessonExtrasNotification from './LessonExtrasNotification';
 import {lessonOfBonusLevels} from './shapes';
+
+import moduleStyles from './lesson-extras.module.scss';
 
 export default class LessonExtras extends React.Component {
   static propTypes = {
@@ -51,14 +53,15 @@ export default class LessonExtras extends React.Component {
           <h1 style={styles.header}>
             {i18n.extrasStageNumberCompleted({number: lessonNumber})}
           </h1>
-          <Button
-            __useDeprecatedTag
+          <MuiButton
             href={nextLevelPath}
-            text={nextMessage}
-            size={Button.ButtonSize.large}
-            color={Button.ButtonColor.brandSecondaryDefault}
-            style={styles.button}
-          />
+            variant="contained"
+            color="primary"
+            size="large"
+            className={moduleStyles.nextButton}
+          >
+            {nextMessage}
+          </MuiButton>
         </div>
 
         <div style={styles.subHeader}>{i18n.extrasTryAChallenge()}</div>
@@ -89,9 +92,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  button: {
-    margin: '10px 0px',
   },
   subHeader: {
     fontSize: 24,

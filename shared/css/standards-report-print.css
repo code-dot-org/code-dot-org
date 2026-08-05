@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'Figtree';
+    font-family: 'Geist';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/figtree/Figtree-Regular-Critical.otf');
+    src: url('/fonts/Geist/Geist-Regular.woff2') format('woff2');
 }
 
 @media print and (color) {
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        font-family: 'Figtree', sans-serif;
+        font-family: 'Geist', sans-serif;
         font-weight: 400;
         font-style: normal;
     }
@@ -19,7 +19,7 @@
 }
 
 * {
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Geist', sans-serif;
     font-weight: 400;
     font-style: normal;
 }

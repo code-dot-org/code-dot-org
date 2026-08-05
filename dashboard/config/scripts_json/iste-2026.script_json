@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-24 20:03:36 UTC",
+    "serialized_at": "2026-06-25 22:00:15 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -44,8 +44,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Step into a mock classroom and experience how AI can support learning without becoming the center of the lesson. In this interactive session, participants will move through a compressed student experience built around three classroom activities: exploring how context shapes AI output, examining how patterns can reinforce assumptions or bias, and creating a digital artifact with intentional AI support.\n\nThe session demonstrates that AI does not change what good teaching and learning looks like. Participants will engage in unplugged learning, inquiry, communication, collaboration, choice, differentiation, and reflection while using AI as part of the learning environment. AI is present throughout, but it is never the point. The point is what students are doing with their thinking while AI is in the room.\n\nParticipants begin with a no-device warm-up that shows how humans and AI both rely on patterns and context. They then explore how AI-generated images can reflect assumptions about audience, culture, and “default” perspectives. Finally, participants utilize the AI Tutor along with content, wireframes, and style guides to create or customize a digital artifact such as a webpage, magazine cover, or guide.\n\nThe Pilot / Co-Pilot / Passenger framework is introduced as a practical way to help students describe their relationship with AI during creative work: when they are leading, when they are collaborating, and when they may be letting AI take over. Participants leave having experienced a pedagogy-first CodeAI classroom activity, with clear connections to AI Discoveries and AI Foundations.",
-        "student_overview": "In this session, you will explore how AI can support your learning, creativity, and decision-making without taking over the work. You will move through three activities that show how AI responds to context, how patterns can sometimes lead to assumptions or bias, and how you can use AI intentionally to create something with a clear purpose.\n\nYou will start by exploring how people make predictions from patterns and how adding more context changes what someone — or an AI system — might produce. Then you will use AI to generate images for a specific audience and look closely at what the results reveal about defaults, assumptions, and missing perspectives.\n\nFinally, you will use AI Tutor to create or customize a digital artifact, such as a webpage, magazine cover, or guide. You will make choices about your audience, purpose, content, and design while deciding how AI should support your work.\n\nThroughout the session, you will use the Pilot / Co-Pilot / Passenger framework to reflect on your relationship with AI. Are you leading the work? Are you collaborating with AI? Or are you letting AI take over? By the end, you will have practiced using AI as a support for your own thinking, creativity, and judgment.\n"
+        "overview": "Step into a mock classroom and experience how AI can support learning without becoming the center of the lesson. In this interactive session, participants will move through a compressed student experience built around three classroom activities: exploring how context shapes AI output, examining how patterns can reinforce assumptions or bias, and creating a digital artifact with intentional AI support.\n\nThe session demonstrates that AI does not change what good teaching and learning looks like. Participants will engage in unplugged learning, inquiry, communication, collaboration, choice, differentiation, and reflection while using AI as part of the learning environment. AI is present throughout, but it is never the point. The point is what students are doing with their thinking while AI is in the room.\n\nParticipants begin with a no-device warm-up that shows how humans and AI both rely on patterns and context. They then explore how AI-generated images can reflect assumptions about audience, culture, and “default” perspectives. Finally, participants utilize the AI Tutor along with content, wireframes, and style guides to create or customize a digital artifact such as a webpage, magazine cover, or guide.\n\nThe Pilot / Co-Pilot / Autopilot framework is introduced as a practical way to help students describe their relationship with AI during creative work: when they are leading, when they are collaborating, and when they may be letting AI take over. Participants leave having experienced a pedagogy-first CodeAI classroom activity, with clear connections to AI Discoveries and AI Foundations.",
+        "student_overview": "In this session, you will explore how AI can support your learning, creativity, and decision-making without taking over the work. You will move through three activities that show how AI responds to context, how patterns can sometimes lead to assumptions or bias, and how you can use AI intentionally to create something with a clear purpose.\n\nYou will start by exploring how people make predictions from patterns and how adding more context changes what someone — or an AI system — might produce. Then you will use AI to generate images for a specific audience and look closely at what the results reveal about defaults, assumptions, and missing perspectives.\n\nFinally, you will use AI Tutor to create or customize a digital artifact, such as a webpage, magazine cover, or guide. You will make choices about your audience, purpose, content, and design while deciding how AI should support your work.\n\nThroughout the session, you will use the Pilot / Co-Pilot / Autopilot framework to reflect on your relationship with AI. Are you leading the work? Are you collaborating with AI? Or are you letting AI take over? By the end, you will have practiced using AI as a support for your own thinking, creativity, and judgment.\n"
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",
@@ -97,8 +97,21 @@
       }
     },
     {
-      "key": "a8974db3-a410-4d1e-8d16-948ccceb5421",
+      "key": "7392b431-1262-48a0-8602-9747059b4aa1",
       "position": 4,
+      "properties": {
+        "name": "Reflection: Working with AI"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7392b431-1262-48a0-8602-9747059b4aa1",
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026"
+      }
+    },
+    {
+      "key": "a8974db3-a410-4d1e-8d16-948ccceb5421",
+      "position": 5,
       "properties": {
         "duration": 20,
         "name": "Part 3: Independent Exploration"
@@ -112,7 +125,7 @@
     },
     {
       "key": "4f8e4621-1a22-4ae0-bf73-b7556954895e",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "After the Lesson"
       },
@@ -138,21 +151,10 @@
       }
     },
     {
-      "key": "26c369e4-7aea-4dec-acfa-7dd72e61ddef",
-      "position": 2,
-      "properties": {
-        "description": "### Preview the Levels\n\nWe recommend attempting each level in the progression before running this activity for students so you are familiar with the user interface and the general tasks on each level. Verified teachers can also access the Teaching Tips in each level:\n\n| | |\n| :---- | :---- |\n| **Viewing Teaching Tips in Levels:** Every Web Lab level has a _Teaching Tips_ area of the left sidebar which only appears for verified teachers. Open it to see more details about the level itself, questions to ask while circulating, and potential misconceptions. | ![](https://images.code.org/61180218998bcfab2fca0a28f00afa9a-teaching-tips-panel.png) |\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "26c369e4-7aea-4dec-acfa-7dd72e61ddef",
-        "lesson_activity.key": "0069a833-fb03-4080-bc6c-0657412d6527"
-      }
-    },
-    {
       "key": "0165e8be-ca2c-42f9-a1d9-9eaff768545e",
       "position": 1,
       "properties": {
-        "description": "Students learn that the quality of what they get from AI depends on the quality of what they ask, and that prompting is a skill they can build through experimentation. Working with an AI image tool, they practice systematic testing: changing one variable at a time to see how output shifts. \n\nAdditionally, through generating images, students see that AI does not invent neutral answers, it reproduces patterns from training data, including narrow ideas about something as ordinary as a \"healthy meal.\" The purpose is for students to recognize bias as a predictable result of how AI learns, not a random glitch, and to understand that unquestioned outputs can quietly spread those assumptions. \n\nThe bigger purpose is to establish the mindset that anchors the whole unit, that students are here to test and question AI rather than passively accept it. This first taste of control helps them see themselves as investigators from day one.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 1 | Introduction to Prompting | Students interact with a slideshow. They learn the importance of providing details when prompting an AI Chat tool. |\n| 2 | Exploring Context | Students select one or more activities to experiment and discover what kinds of prompts get the best results. |\n| 3 | Details Matter | Students explore how many details are necessary to recreate a given image. |\n| 4 | Create an Image for a Healthy Meal | Students explore how many details are necessary to recreate a given image. |"
+        "description": "Students learn that the quality of what they get from AI depends on the quality of what they ask, and that prompting is a skill they can build through experimentation. Working with an AI image tool, they practice systematic testing: changing one variable at a time to see how output shifts. \n\nAdditionally, through generating images, students see that AI does not invent neutral answers, it reproduces patterns from training data, including narrow ideas about something as ordinary as a \"healthy meal.\" The purpose is for students to recognize bias as a predictable result of how AI learns, not a random glitch, and to understand that unquestioned outputs can quietly spread those assumptions. \n\nThe bigger purpose is to establish the mindset that anchors the whole unit, that students are here to test and question AI rather than passively accept it. This first taste of control helps them see themselves as investigators from day one.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 2 | Introduction to Prompting | Students interact with a slideshow. They learn the importance of providing details when prompting an AI Chat tool. |\n| 3 | Exploring Context | Students select one or more activities to experiment and discover what kinds of prompts get the best results. |\n| 4 | Details Matter | Students explore how many details are necessary to recreate a given image. |\n| 5 | Create an Image for a Healthy Meal | Students explore how many details are necessary to recreate a given image. |\n| 6 | Understanding AI Models | Students explore how AI models progress from training to pattern recognition and then ouput |"
       },
       "seeding_key": {
         "activity_section.key": "0165e8be-ca2c-42f9-a1d9-9eaff768545e",
@@ -174,7 +176,7 @@
       "key": "55b081a1-a72c-44ba-a9d2-4a6c0f715f73",
       "position": 1,
       "properties": {
-        "description": "Students build something real, fast. The goal is to give them a page they care about before the Essential Question is introduced. Expect students to spend between 20-30 minutes just in this first few levels as they get familiar with Web Lab and interacting with AI tutor, and spend time writing their initial vision and tweaking the first draft of their website.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 5 | Introduction to Part 1 | Students view an interactive slideshow introducing the Big Idea of the lesson: **designers communicate a vision**. Students are prompted to think of their vision for a webpage they want to make. |\n| 2 | Exploring Web Lab | Students make their first interaction with AI tutor using a pre-built otter webpage. They highlight an example prompt, send it to AI Tutor, and use the Accept/Reject mechanic for the first time. |\n| 3 | Create Your Own Vision | Students fill in a `vision.md` template for a topic of their own choosing, then prompt AI Tutor to generate an HTML page from it. They see the power of AI for generating content, but also the gaps between their vision and what's on the page. |\n| 4 | Reflection: Your First Version | Students generate images depicting healthy meals. While the level reinforces the importance of context, it also sets the stage for a discussion on assumptions and bias in AI results. |"
+        "description": "Students build something real, fast. The goal is to give them a page they care about before the Essential Question is introduced. Expect students to spend between 20-30 minutes just in this first few levels as they get familiar with Web Lab and interacting with AI tutor, and spend time writing their initial vision and tweaking the first draft of their website.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 8  | Introduction to Designing and Building | Students learn about the roles of developers and are introduced to key elements: audience, content, struture, and style.  |\n| 9 | Exploring Web Lab | Students make their first interaction with AI tutor using a pre-built otter webpage. They highlight an example prompt, send it to AI Tutor, and use the Accept/Reject mechanic for the first time. |\n| 10-11 | Developing Content | Students complete a `content.md` template for a topic of their own choosing, then prompt AI Tutor to provide feedback. |\n| 12-13 | Building the Structure | Students select a wireframe for the structure of their website and prompt the AI Tutor to generate an HTML page from it. They see the power of AI, but also the gaps between their vision and what's on the page |\n| 14-15 |  Adding Your Style | Students complete a `style.md` template to define the look and feel of the webpage. Then use AI Tutor to bring that style to the webpage. |\n| 16 | Reflection | Students return to the question of the day, _\"Who is in control, you or the AI?\"_ |"
       },
       "seeding_key": {
         "activity_section.key": "55b081a1-a72c-44ba-a9d2-4a6c0f715f73",
@@ -185,13 +187,7 @@
       "key": "05b512fc-97c8-4010-9f4b-e361d4dd14bb",
       "position": 2,
       "properties": {
-        "progression_name": "Part 2: Designing and Building with AI",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Staying in Early Levels:** While the goal of the lesson is to create just a first draft and return to your webpage later in the progression, you may notice some students continue to build and develop their webpage in these early levels much longer than the lesson intends. If you notice students are lingering because they feel \"stuck\", encourage them to continue with the promise that they will learn more in the next levels that will help them get unstuck. However, you may also have students who are already fluent in prompting AI to build their webpage, and you can decide whether or not to let them continue in these early levels.\n\nIn our playtests and feedback from students, we've found that students who linger and continue to develop their website are students who may already have some familiarity with web design or HTML/CSS, and so already feel comfortable prompting AI Tutor to make their webpage. Or, for students who may already have experience with AI tools, they may find themselves wanting to \"experiment\" or \"explore\" and push the boundaries of the AI (similar to the Adapt dimension of the [4A's AI Literacy Framework for Families](https://wip.mitpress.mit.edu/pub/the-4as/release/1#adapt-dimension---trick-the-ai)). In both cases, students are still developing and applying their skills to build with AI, and so it may be reasonable to let them continue iterating in these early levels."
-          }
-        ]
+        "progression_name": "Part 2: Designing and Building with AI"
       },
       "seeding_key": {
         "activity_section.key": "05b512fc-97c8-4010-9f4b-e361d4dd14bb",
@@ -199,10 +195,22 @@
       }
     },
     {
+      "key": "8cc0f871-3857-4e31-92de-b8f58693c7cb",
+      "position": 1,
+      "properties": {
+        "description": "In this reflection, you will think about the role AI played in your work and the role you played as the human decision-maker. Sometimes you may act as the pilot by setting the direction and making the key choices. Sometimes AI may act as a co-pilot by suggesting ideas, giving feedback, or helping carry out your plan. At other times, AI may feel more like autopilot, doing a larger part of the work from the flight plan you provided. Responsible AI use means noticing which role you are in, staying engaged, checking the results, and being ready to adjust or take control when needed.",
+        "progression_name": "Reflection: Working with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb",
+        "lesson_activity.key": "7392b431-1262-48a0-8602-9747059b4aa1"
+      }
+    },
+    {
       "key": "446930f5-d4a3-4d47-9e59-efda461aa399",
       "position": 1,
       "properties": {
-        "description": "Students build vocabulary and conceptual understanding to close the gap they felt in Act 1. The Essential Question has now been introduced. \n\nExpect students to spend between 10-20 minutes in this part of the lesson. This section takes less time than Part 1 because the levels are more goal-oriented and focused.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 14 | HTML Choice Levels | Students choose one HTML feature to investigate (headings, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 15 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 16 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 17 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n| 18 | Reflection: What Changed? | Students respond to: *\"After fixing someone else's site, what do you notice about how you think about prompting now? What would you do differently on your own page?\"* |"
+        "description": "In this section, you can continue exploring how AI can support your learning in Web Lab. You will choose HTML or CSS features to investigate, ask AI Tutor to explain how they work, and then use more specific vocabulary to improve a webpage. You may also work through prompting puzzles where you compare a goal, an AI-generated result, and the gap between them. The focus is not just getting AI to make changes, but understanding what changed and why.\n\n| Level | Title | Description |\n| :---- | :---- | :---- |\n| 21 | Inspecting Web Pages | Students use the Tag Inspector to hover over elements of the otter example site and identify the HTML tags and CSS rules responsible for each element. They then ask AI Tutor to explain at least one element they found. |\n| 22 | HTML Choice Levels | Students choose one HTML feature to investigate (headings, lists, images, paragraphs & line breaks, or sections). They ask AI Tutor how it works, then prompt AI to add new content to an example page using specific vocabulary. |\n| 23 | CSS Choice Levels | Students choose one CSS feature to investigate (color, font-family, border, text styles, or spacing). Same pattern as Level 7: ask AI Tutor how it works, then prompt AI to apply it to an example page. |\n| 24 | Prompting Puzzles | Students receive someone else's raw text content and a non-technical vision description with a screenshot. They prompt AI Tutor to add HTML structure and CSS style, iterating until their result is close to the target. |\n| 25 | Debug the Gap | Students see someone else's `vision.md` alongside the AI-generated output that didn't match it. They diagnose the mismatch and choose how to fix it \\- by updating the vision, prompting AI Tutor directly, or both. |\n"
       },
       "seeding_key": {
         "activity_section.key": "446930f5-d4a3-4d47-9e59-efda461aa399",
@@ -221,27 +229,10 @@
       }
     },
     {
-      "key": "96c02132-f664-443d-ab35-7f5d7e4d315f",
-      "position": 3,
-      "properties": {
-        "progression_name": "Reflection: Working with AI",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "This reflection can be an appropriate place to gauge how well students are internalizing the concepts from this lesson. Look for responses that suggest \"being more specific\" is important for prompting."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f",
-        "lesson_activity.key": "a8974db3-a410-4d1e-8d16-948ccceb5421"
-      }
-    },
-    {
       "key": "906c63a9-fc57-4a19-a78c-943b9a4c2b0c",
       "position": 1,
       "properties": {
-        "description": "[**Artificial Intelligence Foundations**](https://studio.code.org/courses/artificial-intelligence-foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. In addition, students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.",
+        "description": "[**AI Foundations**](https://studio.code.org/courses/artificial-intelligence-foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. In addition, students design and build interactive web apps using HTML, CSS, and JavaScript while learning to collaborate thoughtfully with AI through design, coding, and project work.",
         "name": "What Comes Next?: Explore More AI Curricula"
       },
       "seeding_key": {
@@ -253,7 +244,7 @@
       "key": "e092cff9-a1f1-4eb9-8f16-5d2696b14421",
       "position": 2,
       "properties": {
-        "description": "[**Artificial Intelligence Discoveries**](https://studio.code.org/courses/ai-discoveries-2026) is an introductory, classroom-based course appropriate for 6–8th grade students. The course aims to empower students to create authentic artifacts and engage with computer science and AI as media for creativity, communication, problem solving, and exploration. AI Discoveries (AID) takes a wide lens on computer science by covering topics such as programming, web development, design, and data, while placing AI literacy and computational thinking at the center of the experience. "
+        "description": "[**AI Discoveries**](https://studio.code.org/courses/ai-discoveries-2026) is an introductory, classroom-based course appropriate for 6–8th grade students. The course aims to empower students to create authentic artifacts and engage with computer science and AI as media for creativity, communication, problem solving, and exploration. AI Discoveries (AID) takes a wide lens on computer science by covering topics such as programming, web development, design, and data, while placing AI literacy and computational thinking at the center of the experience. "
       },
       "seeding_key": {
         "activity_section.key": "e092cff9-a1f1-4eb9-8f16-5d2696b14421",
@@ -273,6 +264,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "iste_intro_thinking"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "aa39eacc-140e-44d7-a287-0fb393469929"
+      },
+      "level_keys": [
+        "iste_intro_thinking"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Thinking Critically About AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "iste_prompting_panels"
         ],
         "lesson.key": "Intro to Web Lab",
@@ -285,9 +298,9 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Part 1: Thinking Critically About AI"
@@ -307,9 +320,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Part 1: Thinking Critically About AI"
@@ -329,9 +342,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Part 1: Thinking Critically About AI"
@@ -351,9 +364,53 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 1: Thinking Critically About AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_training_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "aa39eacc-140e-44d7-a287-0fb393469929"
+      },
+      "level_keys": [
+        "iste_training_panels"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 2: Designing and Building with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_intro_designbuild"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "05b512fc-97c8-4010-9f4b-e361d4dd14bb"
+      },
+      "level_keys": [
+        "iste_intro_designbuild"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -373,9 +430,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -395,9 +452,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -417,9 +474,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -439,9 +496,9 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -461,9 +518,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 6,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -483,9 +540,9 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 7,
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -505,9 +562,9 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 8,
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -527,9 +584,9 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 9,
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "progression": "Part 2: Designing and Building with AI"
@@ -549,9 +606,97 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 17,
+      "position": 17,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Working with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_pilot_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      },
+      "level_keys": [
+        "iste_pilot_panels"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Working with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_autopilot_panel"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      },
+      "level_keys": [
+        "iste_autopilot_panel"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection: Working with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_pilot_reflection"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      },
+      "level_keys": [
+        "iste_pilot_reflection"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part 3: Independent Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "iste_intro_independent"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "a709fc14-854c-4ed4-b84e-4feb7cb338d9"
+      },
+      "level_keys": [
+        "iste_intro_independent"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Part 3: Independent Exploration"
@@ -571,9 +716,9 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
-      "activity_section_position": 2,
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Part 3: Independent Exploration"
@@ -593,9 +738,9 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
-      "activity_section_position": 3,
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Part 3: Independent Exploration"
@@ -615,9 +760,9 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
-      "activity_section_position": 4,
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Part 3: Independent Exploration"
@@ -637,9 +782,9 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
-      "activity_section_position": 5,
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Part 3: Independent Exploration"
@@ -657,75 +802,21 @@
       "level_keys": [
         "hoai-web-design-v2-12_pilot2_launch_iste-2026"
       ]
-    },
-    {
-      "chapter": 19,
-      "position": 19,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Reflection: Working with AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iste_pilot_panels"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      },
-      "level_keys": [
-        "iste_pilot_panels"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 20,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Reflection: Working with AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "iste_autopilot_panel"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      },
-      "level_keys": [
-        "iste_autopilot_panel"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 21,
-      "activity_section_position": 3,
-      "assessment": true,
-      "properties": {
-        "progression": "Reflection: Working with AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "hoai-web-design-v2-13_pilot2_launch_iste-2026"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      },
-      "level_keys": [
-        "hoai-web-design-v2-13_pilot2_launch_iste-2026"
-      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "iste_intro_thinking",
+        "script_level.level_keys": [
+          "iste_intro_thinking"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "aa39eacc-140e-44d7-a287-0fb393469929"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "iste_prompting_panels",
@@ -772,6 +863,30 @@
         "lesson_group.key": "",
         "script.name": "iste-2026",
         "activity_section.key": "aa39eacc-140e-44d7-a287-0fb393469929"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_training_panels",
+        "script_level.level_keys": [
+          "iste_training_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "aa39eacc-140e-44d7-a287-0fb393469929"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_intro_designbuild",
+        "script_level.level_keys": [
+          "iste_intro_designbuild"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "05b512fc-97c8-4010-9f4b-e361d4dd14bb"
       }
     },
     {
@@ -884,6 +999,54 @@
     },
     {
       "seeding_key": {
+        "level.key": "iste_pilot_panels",
+        "script_level.level_keys": [
+          "iste_pilot_panels"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_autopilot_panel",
+        "script_level.level_keys": [
+          "iste_autopilot_panel"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_pilot_reflection",
+        "script_level.level_keys": [
+          "iste_pilot_reflection"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "8cc0f871-3857-4e31-92de-b8f58693c7cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iste_intro_independent",
+        "script_level.level_keys": [
+          "iste_intro_independent"
+        ],
+        "lesson.key": "Intro to Web Lab",
+        "lesson_group.key": "",
+        "script.name": "iste-2026",
+        "activity_section.key": "a709fc14-854c-4ed4-b84e-4feb7cb338d9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "hoai-web-design-v2-8_pilot2_launch_iste-2026",
         "script_level.level_keys": [
           "hoai-web-design-v2-8_pilot2_launch_iste-2026"
@@ -941,42 +1104,6 @@
         "script.name": "iste-2026",
         "activity_section.key": "a709fc14-854c-4ed4-b84e-4feb7cb338d9"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iste_pilot_panels",
-        "script_level.level_keys": [
-          "iste_pilot_panels"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "iste_autopilot_panel",
-        "script_level.level_keys": [
-          "iste_autopilot_panel"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "hoai-web-design-v2-13_pilot2_launch_iste-2026",
-        "script_level.level_keys": [
-          "hoai-web-design-v2-13_pilot2_launch_iste-2026"
-        ],
-        "lesson.key": "Intro to Web Lab",
-        "lesson_group.key": "",
-        "script.name": "iste-2026",
-        "activity_section.key": "96c02132-f664-443d-ab35-7f5d7e4d315f"
-      }
     }
   ],
   "resources": [
@@ -1004,7 +1131,7 @@
     {
       "key": "5a6c0ee7-521c-4cb4-93ce-e5f22d53ba56",
       "properties": {
-        "description": "Recognize how established instructional best practices — inquiry, collaboration, communication, choice, differentiation, and reflection — remain central to learning even when AI is present."
+        "description": "Evaluate whether an AI-assisted webpage matches the intended goal and make thoughtful revisions."
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",
@@ -1014,7 +1141,7 @@
     {
       "key": "ac90ad1e-8cb6-4736-9912-2abab98e06f6",
       "properties": {
-        "description": "Describe how AI can support student creativity and artifact creation without replacing student thinking, judgment, or voice."
+        "description": "Explain how prompts, context, and training-data patterns can shape AI outputs."
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",
@@ -1024,7 +1151,7 @@
     {
       "key": "b152c850-392b-495e-950b-a3653c912df7",
       "properties": {
-        "description": "Use the Pilot / Co-Pilot / Passenger framework to describe their own relationship with AI during a creative task."
+        "description": "Explain why responsible AI use requires questioning, checking, and staying engaged with the work."
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",
@@ -1034,7 +1161,7 @@
     {
       "key": "c65c1bd1-71ae-4509-a41d-53cd61d57349",
       "properties": {
-        "description": "Identify how AI assumptions and training data can produce biased or incomplete outputs."
+        "description": "Use audience, purpose, content, and style choices to guide AI during a creative project."
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",
@@ -1044,7 +1171,7 @@
     {
       "key": "e0404d79-819f-4724-956a-c956df929f41",
       "properties": {
-        "description": "Explain how AI generates output based on patterns and why context improves results."
+        "description": "Identify assumptions, bias, or missing perspectives in an AI-generated image or response."
       },
       "seeding_key": {
         "lesson.key": "Intro to Web Lab",

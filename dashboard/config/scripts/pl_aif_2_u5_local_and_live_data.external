@@ -111,24 +111,17 @@ Look at each example below and choose whether it should use <strong>Hardcoded / 
 
 Frequently changing, time-sensitive data should be fetched **Live**, while stable, structural, or rarely changing data is better stored **Locally** for speed and reliability.
   
+### **Vocabulary**
 
+Click the cards to reveal the definition. 
 
-<!-- Vocabulary Boxes -->
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-  <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
-    📖 <strong>Live Data</strong> is data that is stored on an external server rather than on the device running the application.  
-    It requires an internet connection to access and is retrieved using an API.
-  </p>
-</div>
-
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
-  <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">
-    📖 <strong>Local Data</strong> is data that is stored directly on the device that is running the application.  
-    It is available immediately and does not require internet connection.
-  </p>
-</div>
-
-![]()
+<iframe 
+  src="https://amandadennard-dotcom.github.io/Unit5AIF2/live-local-data-flipcards2.html" 
+  width="100%" 
+  height="320" 
+  style="border: none;" 
+  title="Vocabulary flip cards: live data, local data">
+</iframe>
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

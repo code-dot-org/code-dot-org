@@ -1,0 +1,50 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-06-28T23:14:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "\r\n# Debug Interaction Flow\r\n\r\n**Goal:** Make sure clicking a button shows the correct details for the correct card.\r\n\r\n1. **Test a Button Click:** Click one card and watch what happens. Does only that card change?\r\n2. **Check the Console:** Add a console.log inside your click handler to confirm which card was clicked.\r\n3. **Confirm the Right Card Updates:** Make sure your code updates only the selected card, not all of them.\r\n4. **Check Your Data:** If the wrong details appear, confirm you are using the correct id or index.\r\n5. **Prevent Repeating Content:** If details show up multiple times, clear the detail area before adding new content.\r\n\r\n**Optional:** If nothing shows up, double check that your reveal logic runs after the button is clicked.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-level1-template-2026",
+    "name_suffix": "_2026",
+    "offer_browser_tts": "false",
+    "require_edit_to_continue": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-06-28T23:14:09.539+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone2-level2d-test_20_2025-_2026\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone2-level2d-test_20_2025-_2026\"},{\"changed_at\":\"2026-06-28 23:17:22 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"ai_tutor_prompt_settings\",\"project_template_level_name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

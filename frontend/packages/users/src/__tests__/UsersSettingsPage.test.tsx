@@ -1,0 +1,562 @@
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
+import {http, HttpResponse} from 'msw';
+import {afterEach, describe, expect, it} from 'vitest';
+
+import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
+import {setActiveScenario} from '@code-dot-org/core/api/mocks';
+import {mockServer} from '@code-dot-org/core/api/mocks/server';
+
+import {
+  USERS_LAB_KEY,
+  registerUsersFixtures,
+  resetUsersFixtures,
+} from '../fixtures';
+import UsersSettingsPage from '../UsersSettingsPage';
+
+function renderPage(tag: string) {
+  registerUsersFixtures();
+  setActiveScenario({labKey: USERS_LAB_KEY, tag});
+  const client = createQueryClient({queries: {retry: false}});
+  return render(
+    <QueryClientProvider client={client}>
+      <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+    </QueryClientProvider>,
+  );
+}
+
+afterEach(() => resetUsersFixtures());
+
+describe('UsersSettingsPage', () => {
+  it('shows a loading state, then the page heading, tabs, and sections (teacher)', async () => {
+    renderPage('teacher');
+
+    expect(screen.getByRole('status')).toBeInTheDocument();
+    expect(screen.getByRole('main')).toHaveAttribute('aria-busy', 'true');
+
+    const tablist = await screen.findByRole('tablist');
+    expect(
+      screen.getByRole('heading', {level: 1, name: 'My Account'}),
+    ).toBeInTheDocument();
+    expect(document.title).toBe('My Account — Code.org');
+
+    const tabs = within(tablist).getAllByRole('tab');
+    expect(tabs).toHaveLength(4);
+    expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
+    expect(tabs[1]).toBeDisabled();
+
+    for (const name of [
+      'My Information',
+      'Login Information',
+      'Account Actions',
+    ]) {
+      expect(screen.getByRole('heading', {level: 2, name})).toBeInTheDocument();
+    }
+  });
+
+  it('renders the student variant without a last name', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+    expect(screen.queryByText('Last name')).not.toBeInTheDocument();
+  });
+
+  it('hides the educator-only Educator Profile tab for students', async () => {
+    // Students hide Educator Profile; Communications and Integrations still apply.
+    renderPage('student');
+    const tablist = await screen.findByRole('tablist');
+    const tabs = within(tablist).getAllByRole('tab');
+    expect(tabs).toHaveLength(3);
+    expect(
+      within(tablist).queryByRole('tab', {name: 'Educator Profile'}),
+    ).toBeNull();
+    expect(
+      within(tablist).getByRole('tab', {name: 'Account Details'}),
+    ).toBeInTheDocument();
+  });
+
+  it('shows an error with a retry control when settings fail to load', async () => {
+    registerUsersFixtures();
+    setActiveScenario({labKey: USERS_LAB_KEY, tag: 'teacher'});
+    mockServer.use(
+      http.get(
+        '*/api/v1/users/me/settings',
+        () => new HttpResponse(null, {status: 500}),
+      ),
+    );
+    const client = createQueryClient({queries: {retry: false}});
+    render(
+      <QueryClientProvider client={client}>
+        <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+      </QueryClientProvider>,
+    );
+
+    const alert = await screen.findByRole('alert');
+    expect(
+      within(alert).getByRole('button', {name: 'Try again'}),
+    ).toBeInTheDocument();
+  });
+
+  it('moves focus to the heading after recovering from a load error', async () => {
+    registerUsersFixtures();
+    setActiveScenario({labKey: USERS_LAB_KEY, tag: 'teacher'});
+    // Fail once; the retry falls through to the scenario's success handler.
+    mockServer.use(
+      http.get(
+        '*/api/v1/users/me/settings',
+        () => new HttpResponse(null, {status: 500}),
+        {once: true},
+      ),
+    );
+    const client = createQueryClient({queries: {retry: false}});
+    render(
+      <QueryClientProvider client={client}>
+        <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+      </QueryClientProvider>,
+    );
+
+    fireEvent.click(await screen.findByRole('button', {name: 'Try again'}));
+
+    const heading = await screen.findByRole('heading', {
+      level: 1,
+      name: 'My Account',
+    });
+    await waitFor(() => expect(heading).toHaveFocus());
+  });
+});
+
+describe('UsersSettingsPage save flow', () => {
+  it('reveals the save bar on edit, then clears it after a successful save', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+
+    const save = await screen.findByRole('button', {name: 'Save changes'});
+    expect(screen.getByText('You’ve made some changes.')).toBeInTheDocument();
+
+    fireEvent.click(save);
+
+    // The toast confirms the save; the bar just clears (no redundant message).
+    await waitFor(() =>
+      expect(
+        screen.queryByRole('button', {name: 'Save changes'}),
+      ).not.toBeInTheDocument(),
+    );
+    expect(
+      screen.queryByText('You’ve made some changes.'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a success toast after a profile save', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    // The confirmation lands in the persistent polite live region (it also
+    // shows in the visible toast, hence the role-scoped assertion).
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
+  });
+
+  it('skips the request and clears the bar when submitted with no net changes', async () => {
+    // Edit-then-revert leaves the save bar up but nothing net-dirty. Saving then
+    // must not fire a request (a bare {user:{}} 400s as ParameterMissing) and
+    // must clear the bar rather than leave it stuck.
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+    const original = (displayName as HTMLInputElement).value;
+
+    fireEvent.change(displayName, {target: {value: `${original} edited`}});
+    const save = await screen.findByRole('button', {name: 'Save changes'});
+    fireEvent.change(displayName, {target: {value: original}});
+
+    fireEvent.click(save);
+
+    // No save fired (no toast), and the bar cleared (not stuck on "made changes").
+    await waitFor(() =>
+      expect(
+        screen.queryByRole('button', {name: 'Save changes'}),
+      ).not.toBeInTheDocument(),
+    );
+    expect(screen.queryByText('Changes saved.')).not.toBeInTheDocument();
+    expect(
+      screen.queryByText('You’ve made some changes.'),
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows a server field error and keeps the value on a 422', async () => {
+    renderPage('teacher');
+    mockServer.use(
+      http.patch(
+        '*/dashboardapi/users',
+        () =>
+          new HttpResponse(
+            JSON.stringify({name: ['Display name is too long']}),
+            {
+              status: 422,
+              headers: {'content-type': 'application/json'},
+            },
+          ),
+      ),
+    );
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    fireEvent.change(displayName, {target: {value: 'x'.repeat(80)}});
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    expect(
+      await screen.findByText('Display name is too long'),
+    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByLabelText(/Display name/)).toHaveAttribute(
+        'aria-invalid',
+        'true',
+      ),
+    );
+
+    // The save-status bar is one polite live region with no nested live region
+    // (an assertive role="alert" inside aria-live="polite" has contradictory
+    // politeness across screen readers).
+    const saveRegion = screen.getByRole('region', {name: 'Save status'});
+    expect(saveRegion).toHaveAttribute('aria-live', 'polite');
+    expect(
+      saveRegion.querySelector('[role="alert"], [role="status"], [aria-live]'),
+    ).toBeNull();
+  });
+});
+
+describe('UsersSettingsPage — Login Information', () => {
+  it('updates the email through a modal that closes on success and reflects the new value', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    const dialog = await screen.findByRole('dialog', {name: /update email/i});
+    fireEvent.change(within(dialog).getByLabelText(/new email/i), {
+      target: {value: 'ada@newschool.org'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/current password/i), {
+      target: {value: 'currentpass'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /update email/i}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+    expect(
+      await screen.findByDisplayValue('ada@newschool.org'),
+    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Email updated.'),
+    );
+  });
+
+  it('keeps the update-password modal open with the server error on a wrong current password', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update password'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: /update password/i,
+    });
+    fireEvent.change(within(dialog).getByLabelText(/current password/i), {
+      target: {value: 'wrong'},
+    });
+    fireEvent.change(within(dialog).getByLabelText('New password'), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/confirm/i), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /update password/i}),
+    );
+
+    expect(
+      await within(dialog).findByText('Current password is invalid'),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
+  });
+
+  it('closes a modal on Escape without submitting', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update email'}));
+    const dialog = await screen.findByRole('dialog');
+    fireEvent.keyDown(dialog, {key: 'Escape'});
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+  });
+
+  it('masks a student email as ***encrypted*** but can still update it', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+
+    expect(screen.getByDisplayValue('***encrypted***')).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: 'Update email'}),
+    ).toBeInTheDocument();
+  });
+});
+
+describe('UsersSettingsPage — SSO variant', () => {
+  it('shows the SSO provider and a Create password action, not Update password', async () => {
+    renderPage('sso-teacher');
+    await screen.findByRole('tablist');
+
+    expect(screen.getByText(/signed in with google/i)).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', {name: /create password/i}),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Update password'}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('creates a password through a modal that closes on success', async () => {
+    renderPage('sso-teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /create password/i}));
+    const dialog = await screen.findByRole('dialog', {
+      name: /create password/i,
+    });
+    fireEvent.change(within(dialog).getByLabelText('New password'), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.change(within(dialog).getByLabelText(/confirm/i), {
+      target: {value: 'newpassword1'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /create password/i}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+  });
+
+  it('offers no password action for an oauth-only student (no entitlement)', async () => {
+    renderPage('sso-student');
+    await screen.findByRole('tablist');
+
+    expect(screen.getByText(/signed in with google/i)).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: /create password/i}),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Update password'}),
+    ).not.toBeInTheDocument();
+  });
+});
+
+describe('UsersSettingsPage — Account Actions', () => {
+  it('confirms an account-type change in an alertdialog and reverts the dropdown on cancel', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    const select = screen.getByRole('combobox', {name: /account type/i});
+    fireEvent.change(select, {target: {value: 'student'}});
+
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    expect(dialog).toBeInTheDocument();
+
+    fireEvent.click(within(dialog).getByRole('button', {name: /cancel/i}));
+    await waitFor(() =>
+      expect(screen.queryByRole('alertdialog')).not.toBeInTheDocument(),
+    );
+    expect(screen.getByRole('combobox', {name: /account type/i})).toHaveValue(
+      'teacher',
+    );
+  });
+
+  it('keeps the account-type dialog open with an error when the change fails', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+    mockServer.use(
+      http.patch(
+        '*/users/user_type',
+        () => new HttpResponse(null, {status: 500}),
+      ),
+    );
+
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'student'},
+    });
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /change to student/i}),
+    );
+
+    expect(await within(dialog).findByRole('alert')).toBeInTheDocument();
+    expect(screen.getByRole('alertdialog')).toBeInTheDocument();
+  });
+
+  it('hides the account-type control when the user cannot change type', async () => {
+    renderPage('student');
+    await screen.findByRole('tablist');
+    expect(
+      screen.queryByRole('combobox', {name: /account type/i}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('opens a delete alertdialog with the dependent-students warning and a self-describing button', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    const dialog = await screen.findByRole('alertdialog', {name: /delete/i});
+    // A teacher depended upon for login meets the personal-login guidance first,
+    // which hedges the count rather than asserting it.
+    expect(within(dialog).getByText(/2 or more students/)).toBeInTheDocument();
+
+    fireEvent.click(within(dialog).getByRole('button', {name: 'Next'}));
+    expect(
+      within(dialog).getByRole('button', {
+        name: "Delete my and my students' accounts",
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('shows the server error in the delete dialog on a wrong password', async () => {
+    renderPage('teacher');
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: /delete my account/i}));
+    const dialog = await screen.findByRole('alertdialog');
+    fireEvent.click(within(dialog).getByRole('button', {name: 'Next'}));
+    fireEvent.change(within(dialog).getByLabelText(/password/i), {
+      target: {value: 'wrong'},
+    });
+    // The teacher scenario has dependent students, so deletion requires all
+    // five acknowledgments and the typed verification string.
+    within(dialog)
+      .getAllByRole('checkbox')
+      .forEach(box => fireEvent.click(box));
+    fireEvent.change(
+      within(dialog).getByRole('textbox', {name: /type DELETE MY ACCOUNT/i}),
+      {target: {value: 'DELETE MY ACCOUNT'}},
+    );
+    fireEvent.click(
+      within(dialog).getByRole('button', {
+        name: "Delete my and my students' accounts",
+      }),
+    );
+    expect(
+      await within(dialog).findByText('Current password is invalid'),
+    ).toBeInTheDocument();
+  });
+});
+
+describe('UsersSettingsPage — student variant', () => {
+  it('shows age and US state for a student and excludes last name', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByRole('combobox', {name: /^age$/i})).toBeInTheDocument();
+    expect(screen.getByRole('combobox', {name: /state/i})).toBeInTheDocument();
+    expect(screen.queryByLabelText('Last name')).not.toBeInTheDocument();
+  });
+
+  it('disables the placeholder so a set age or state cannot be cleared', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByRole('option', {name: 'Select age'})).toBeDisabled();
+    expect(screen.getByRole('option', {name: 'Select a state'})).toBeDisabled();
+  });
+
+  it('keeps last name for a teacher and omits age/state', async () => {
+    renderPage('teacher');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+
+    expect(screen.getByLabelText('Last name')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('combobox', {name: /^age$/i}),
+    ).not.toBeInTheDocument();
+  });
+
+  it('shows the For Parents and Guardians section for a student', async () => {
+    renderPage('student');
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'For Parents and Guardians',
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('moves initial focus inside the dialog so it is announced on open', async () => {
+    // MUI focuses a wrapper outside role="dialog" by default (silent for SRs);
+    // autoFocus lands focus on a control inside the dialog instead.
+    renderPage('student');
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'For Parents and Guardians',
+    });
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
+    const dialog = await screen.findByRole('dialog', {
+      name: /update parent.guardian email/i,
+    });
+    await waitFor(() =>
+      expect(dialog).toContainElement(
+        document.activeElement as HTMLElement | null,
+      ),
+    );
+  });
+
+  it('offers selectable opt-in radios in the parent/guardian modal', async () => {
+    renderPage('student');
+    await screen.findByRole('heading', {
+      level: 2,
+      name: 'For Parents and Guardians',
+    });
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Update parent/guardian email'}),
+    );
+    const dialog = await screen.findByRole('dialog', {
+      name: /update parent.guardian email/i,
+    });
+
+    // The group is named by the consent question, not just the qualifier.
+    expect(within(dialog).getByRole('radiogroup')).toHaveAccessibleName(
+      /Can we email you/,
+    );
+
+    const yes = within(dialog).getByRole('radio', {name: 'Yes'});
+    const no = within(dialog).getByRole('radio', {name: 'No'});
+    expect(yes).not.toBeChecked();
+
+    fireEvent.click(yes);
+    expect(yes).toBeChecked();
+    expect(no).not.toBeChecked();
+  });
+
+  it('hides For Parents and Guardians for a teacher', async () => {
+    renderPage('teacher');
+    await screen.findByRole('heading', {level: 2, name: 'My Information'});
+    expect(
+      screen.queryByRole('heading', {name: 'For Parents and Guardians'}),
+    ).toBeNull();
+  });
+});

@@ -151,6 +151,10 @@
     }
   }
 
+  &.hideCollapsedTabBorder.collapsed .tabButton.tabButton.selected {
+    border-inline-end: none;
+  }
+
   .bottomTabs {
     display: flex;
     flex-direction: column;
@@ -204,6 +208,13 @@
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+
+    // Honor reduced-motion preferences: snap instead of fade.
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
 
     &Hidden {
       opacity: 0;

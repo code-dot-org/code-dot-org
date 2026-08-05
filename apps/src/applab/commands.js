@@ -5,6 +5,7 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import localization from '@cdo/apps/localization';
 import * as makerCommands from '@cdo/apps/maker/commands';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
@@ -28,6 +29,7 @@ import {ICON_PREFIX_REGEX} from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import elementLibrary from './designElements/library';
 import EventSandboxer from './EventSandboxer';
+import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions, REDIRECT_RESPONSE} from './redux/applab';
 import sanitizeHtml from './sanitizeHtml';
 import * as setPropertyDropdown from './setPropertyDropdown';
@@ -216,7 +218,7 @@ applabCommands.image = function (opts) {
     newImage.src = assetPrefix.renderIconToString(opts.src, newImage);
     newImage.width = newImage.height = 200;
   } else {
-    newImage.src = assetPrefix.fixPath(opts.src);
+    newImage.src = resolveAppLabImagePath(opts.src);
   }
   newImage.setAttribute('data-canonical-image-url', opts.src);
   newImage.id = opts.elementId;
@@ -792,7 +794,7 @@ applabCommands.drawImageURL = function (opts) {
   };
 
   var image = new Image();
-  image.src = assetPrefix.fixPath(opts.url);
+  image.src = resolveAppLabImagePath(opts.url);
   image.onload = function () {
     var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
     if (!ctx) {
@@ -1208,7 +1210,7 @@ applabCommands.setImageURL = function (opts) {
     if (ICON_PREFIX_REGEX.test(opts.src)) {
       element.src = assetPrefix.renderIconToString(opts.src, element);
     } else {
-      element.src = assetPrefix.fixPath(opts.src);
+      element.src = resolveAppLabImagePath(opts.src);
     }
     element.setAttribute('data-canonical-image-url', opts.src);
 
@@ -1887,21 +1889,85 @@ var handleSetKeyValueSyncError = function (opts, message) {
   outputWarning(message);
 };
 
+// Resolve a possibly-localized identifier back to its canonical English form
+// by matching against the forward translation of each known name. Returns the
+// value unchanged when it is already canonical or matches nothing — so the
+// English path and genuinely-missing names both pass through untouched.
+//
+// Injective within `candidates`: each real name is translated forward (the
+// same map localizeSource used to rewrite the starter source at load) and
+// compared, rather than inverting a global translation table, so there is no
+// cross-talk with unrelated strings.
+function resolveLocalizedName(candidates, value) {
+  if (candidates.includes(value)) {
+    return value; // already canonical — no lookup, no ambiguity
+  }
+  const match = candidates.find(name => localization.translate(name) === value);
+  return match ?? value;
+}
+
+// Promise wrapper over the callback-style storage.getColumn.
+function fetchColumn(table, column) {
+  return new Promise((resolve, reject) =>
+    Applab.storage.getColumn(table, column, resolve, reject)
+  );
+}
+
 applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
   try {
     rateLimit();
-    Applab.storage.getColumn(
-      opts.table,
-      opts.column,
-      handleGetColumn.bind(this, opts),
-      handleGetColumnError.bind(this, opts)
-    );
+    // async; storage/network errors surface through handleGetColumnError.
+    runGetColumn.call(this, opts);
   } catch (e) {
     outputError(e.message);
   }
 };
+
+// Look the column up as given. On a not-found result — null (table missing) or
+// an all-undefined array (column missing) — map the offending identifier from a
+// localized form back to English and retry exactly once for that field. The
+// common path (English / startBlocks-excluded literals) resolves on the first
+// fetch and never enters the fallback branches.
+//
+// Termination: resolveLocalizedName is idempotent (a canonical name is
+// returned unchanged), and a retry fires only when it actually changes a name,
+// so each of table/column can change at most once. Worst case is three fetches
+// — original, one table-resolve, one column-resolve — before falling through
+// to handleGetColumn.
+async function runGetColumn(opts) {
+  let columnValues;
+  try {
+    columnValues = await fetchColumn(opts.table, opts.column);
+  } catch (message) {
+    return handleGetColumnError.call(this, opts, message);
+  }
+
+  const tableMissing = columnValues === null;
+  const columnMissing =
+    !tableMissing && columnValues.every(element => element === undefined);
+
+  if (tableMissing) {
+    const tables = await Applab.storage.getTableNames();
+    const resolved = resolveLocalizedName(tables, opts.table);
+    if (resolved !== opts.table) {
+      opts.table = resolved; // retry with the English table name
+      return runGetColumn.call(this, opts);
+    }
+  } else if (columnMissing) {
+    const columns = await Applab.storage.getColumnsForTable(opts.table);
+    const resolved = resolveLocalizedName(columns, opts.column);
+    if (resolved !== opts.column) {
+      opts.column = resolved; // retry with the English column name
+      return runGetColumn.call(this, opts);
+    }
+  }
+
+  // Success, or resolution changed nothing — hand off to the existing
+  // success/error reporting unchanged.
+  handleGetColumn.call(this, opts, columnValues);
+}
 
 var handleGetColumn = function (opts, columnValues) {
   let columnName = opts.column;
