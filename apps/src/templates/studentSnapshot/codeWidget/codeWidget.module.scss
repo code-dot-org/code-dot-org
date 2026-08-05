@@ -26,8 +26,8 @@
 }
 
 .codeEditorContainer {
-  // Remove the height of the file browser
-  height: calc(100% - 50px);
+  flex: 1;
+  min-height: 0;
   width: 100%;
 }
 
