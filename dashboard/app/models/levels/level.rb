@@ -89,9 +89,9 @@ class Level < ApplicationRecord
 
   validate :validate_game, on: [:create, :update]
   validate :name_change_stays_within_ui_test_partition, on: :update
-  validate :ui_test_levels_are_read_only_on_levelbuilder
+  validate :ui_test_levels_are_immutable_on_levelbuilder
   # prepend: the abort must come before remove_empty_script_levels destroys rows
-  before_destroy :ui_test_levels_are_read_only_on_levelbuilder, prepend: true
+  before_destroy :ui_test_levels_are_immutable_on_levelbuilder, prepend: true
 
   after_save {Services::LevelFiles.write_custom_level_file(self)}
   after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
@@ -491,7 +491,7 @@ class Level < ApplicationRecord
   # tree the daily content push from the levelbuilder environment must never
   # modify. Refuse to save or destroy them there; the throw halts a destroy
   # and is harmless during validation. See dashboard/test/ui/config/README.md.
-  def ui_test_levels_are_read_only_on_levelbuilder
+  def ui_test_levels_are_immutable_on_levelbuilder
     return unless rack_env?(:levelbuilder)
     return unless ui_test? || Level.ui_test_name?(name_was)
     errors.add(:base, "UI test levels cannot be changed on levelbuilder; they are maintained in the repo under dashboard/test/ui/config")
