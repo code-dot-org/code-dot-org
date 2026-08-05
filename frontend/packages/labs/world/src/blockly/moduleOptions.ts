@@ -161,6 +161,22 @@ export function mapOptions(): Array<[string, string]> {
   );
 }
 
+/**
+ * The field each live dropdown rebinds, by extension name.
+ *
+ * An extension that names a field its block does not have does nothing at all,
+ * and quietly: the dropdown keeps the static generator from the block
+ * definition, which Blockly calls with no arguments — so any option list that
+ * depends on WHERE the block is silently loses that half of itself. A test
+ * walks this against the block definitions rather than waiting for someone to
+ * open the menu (blockly/__tests__/liveDropdowns.test.ts).
+ */
+const liveDropdownFields = new Map<string, string>();
+
+/** Which field each live-dropdown extension expects, by extension name. */
+export const liveDropdownFieldNames = (): ReadonlyMap<string, string> =>
+  liveDropdownFields;
+
 /** An extension that points `fieldName`'s dropdown at a live options function. */
 export function liveDropdown(
   extensionName: string,
@@ -170,6 +186,7 @@ export function liveDropdown(
   // Most lists are the same everywhere and ignore it.
   options: (field?: Blockly.FieldDropdown) => Array<[string, string]>,
 ): Extension {
+  liveDropdownFields.set(extensionName, fieldName);
   return defineExtension(extensionName, {
     extension() {
       const field = this.getField(fieldName) as Blockly.FieldDropdown | null;
@@ -242,6 +259,21 @@ export function actorFieldOptions(
 export const actorOptionsExtension = liveDropdown(
   'world_actor_options',
   'ACTOR',
+  actorFieldOptions,
+);
+/**
+ * The same list, for a block whose actor dropdown is not called ACTOR.
+ *
+ * `world_is_a` takes an actor in a SOCKET named ACTOR and names the kind field
+ * TYPE, so it needs the extension bound to that name — an extension only
+ * rebinds the one field it was given, and the ACTOR one found nothing there.
+ * The symptom was narrow: the project's `.actor` files listed (they come from
+ * this module's registry, which the static fallback still reads), and a world's
+ * OWN `define actor` did not, because those are found through the field.
+ */
+export const actorTypeOptionsExtension = liveDropdown(
+  'world_actor_type_options',
+  'TYPE',
   actorFieldOptions,
 );
 export const animationFileOptionsExtension = liveDropdown(

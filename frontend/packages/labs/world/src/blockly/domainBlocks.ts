@@ -88,6 +88,7 @@ import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
   actorOptionsExtension,
+  actorTypeOptionsExtension,
   animationFileOptions,
   effectFileImportOptions,
   effectFileImportOptionsExtension,
@@ -2304,8 +2305,10 @@ const worldIsA = defineBlock({
   inputsInline: true,
   output: 'Boolean',
   // ACTOR defaults to a `this actor` shadow; the dropdown lists the project's
-  // actor templates (populated live), the same as `world_add_actor`.
-  extensions: [actorInputExtension, actorOptionsExtension],
+  // actor templates AND the world's own `define actor`s, the same as
+  // `world_add_actor` — through the TYPE-bound extension, because the socket
+  // here has taken the name ACTOR.
+  extensions: [actorInputExtension, actorTypeOptionsExtension],
   style: 'logic_blocks',
   tooltip:
     'Whether an actor is of a given kind (the map places it by its type).',
