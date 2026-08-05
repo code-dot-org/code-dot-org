@@ -10,6 +10,8 @@ import * as Observability from '@/plugins/observability';
 
 vi.mock('@/plugins/observability', () => ({recordError: vi.fn()}));
 
+const NO_OP = () => {};
+
 afterEach(() => {
   delete window.oneTrustPromise;
   delete window.OneTrust;
@@ -49,10 +51,43 @@ describe('parseActiveGroups', () => {
   });
 });
 
+describe('connectOneTrust settlement', () => {
+  it('settles synchronously when the page carries no CMP', () => {
+    const settle = vi.fn();
+    connectOneTrust(NO_OP, settle);
+
+    expect(settle).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not settle until the OneTrust promise resolves', async () => {
+    let resolveOneTrust: (value: undefined) => void = NO_OP;
+    window.oneTrustPromise = new Promise(resolve => {
+      resolveOneTrust = resolve;
+    });
+
+    const settle = vi.fn();
+    connectOneTrust(NO_OP, settle);
+    await Promise.resolve();
+    expect(settle).not.toHaveBeenCalled();
+
+    resolveOneTrust(undefined);
+    await vi.waitFor(() => expect(settle).toHaveBeenCalledTimes(1));
+  });
+
+  it('settles when the promise rejects, so consumers are not blocked forever', async () => {
+    window.oneTrustPromise = Promise.reject(new Error('blocked'));
+
+    const settle = vi.fn();
+    connectOneTrust(NO_OP, settle);
+
+    await vi.waitFor(() => expect(settle).toHaveBeenCalledTimes(1));
+  });
+});
+
 describe('connectOneTrust', () => {
   it('never pushes and injects no scripts when there is no oneTrustPromise', async () => {
     const push = vi.fn();
-    connectOneTrust(push);
+    connectOneTrust(push, NO_OP);
 
     await Promise.resolve();
 
@@ -68,7 +103,7 @@ describe('connectOneTrust', () => {
     window.OnetrustActiveGroups = 'C0001,C0002';
 
     const push = vi.fn();
-    connectOneTrust(push);
+    connectOneTrust(push, NO_OP);
     await window.oneTrustPromise;
 
     expect(document.querySelectorAll('script')).toHaveLength(0);
@@ -87,7 +122,7 @@ describe('connectOneTrust', () => {
     window.OnetrustActiveGroups = 'C0001';
 
     const push = vi.fn();
-    connectOneTrust(push);
+    connectOneTrust(push, NO_OP);
     await window.oneTrustPromise;
 
     window.OnetrustActiveGroups = 'C0001,C0003';
@@ -102,7 +137,7 @@ describe('connectOneTrust', () => {
     window.oneTrustPromise = Promise.resolve(undefined);
 
     const push = vi.fn();
-    connectOneTrust(push);
+    connectOneTrust(push, NO_OP);
     await window.oneTrustPromise;
     await Promise.resolve();
 
@@ -121,7 +156,7 @@ describe('connectOneTrust', () => {
     const push = vi.fn<(state: unknown) => void>(() => {
       throw new Error('subscriber blew up');
     });
-    connectOneTrust(push);
+    connectOneTrust(push, NO_OP);
     await window.oneTrustPromise;
     await Promise.resolve();
 
@@ -138,7 +173,7 @@ describe('connectOneTrust', () => {
     window.oneTrustPromise = Promise.reject(blocked);
 
     const push = vi.fn();
-    expect(() => connectOneTrust(push)).not.toThrow();
+    expect(() => connectOneTrust(push, NO_OP)).not.toThrow();
 
     await new Promise(resolve => setTimeout(resolve, 0));
 
