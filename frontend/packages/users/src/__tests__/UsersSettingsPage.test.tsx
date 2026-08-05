@@ -6,6 +6,7 @@ import {
   within,
 } from '@testing-library/react';
 import {http, HttpResponse} from 'msw';
+import {useState} from 'react';
 import {afterEach, describe, expect, it} from 'vitest';
 
 import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
@@ -19,16 +20,45 @@ import {
 } from '../fixtures';
 import UsersSettingsPage from '../UsersSettingsPage';
 
-function renderPage(tag: string) {
+function renderPage(
+  tag: string,
+  {tab = 'account-details', onTabChange = () => {}} = {},
+) {
   registerUsersFixtures();
   setActiveScenario({labKey: USERS_LAB_KEY, tag});
   const client = createQueryClient({queries: {retry: false}});
   return render(
     <QueryClientProvider client={client}>
-      <UsersSettingsPage tab="account-details" onTabChange={() => {}} />
+      <UsersSettingsPage tab={tab} onTabChange={onTabChange} />
     </QueryClientProvider>,
   );
 }
+
+// Stands in for the Studio route: tab selection round-trips through host state.
+function renderHostedPage(tag: string, initialTab: string) {
+  registerUsersFixtures();
+  setActiveScenario({labKey: USERS_LAB_KEY, tag});
+  const client = createQueryClient({queries: {retry: false}});
+  let hostTab = initialTab;
+
+  function Host() {
+    const [tab, setTab] = useState(initialTab);
+    hostTab = tab;
+    return <UsersSettingsPage tab={tab} onTabChange={setTab} />;
+  }
+
+  render(
+    <QueryClientProvider client={client}>
+      <Host />
+    </QueryClientProvider>,
+  );
+  return () => hostTab;
+}
+
+const tabNames = async () =>
+  within(await screen.findByRole('tablist'))
+    .getAllByRole('tab')
+    .map(tab => tab.textContent);
 
 afterEach(() => resetUsersFixtures());
 
@@ -48,7 +78,8 @@ describe('UsersSettingsPage', () => {
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs).toHaveLength(4);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');
-    expect(tabs[1]).toBeDisabled();
+    expect(tabs[1]).toBeEnabled(); // Educator Profile
+    expect(tabs[2]).toBeDisabled(); // Communications
 
     for (const name of [
       'My Information',
@@ -126,6 +157,31 @@ describe('UsersSettingsPage', () => {
       name: 'My Account',
     });
     await waitFor(() => expect(heading).toHaveFocus());
+  });
+
+  it('keeps the page mounted when a background settings refetch fails', async () => {
+    renderPage('teacher');
+    const displayName = await screen.findByLabelText(/Display name/);
+
+    // Reads fail from here on; the save's invalidation triggers one.
+    mockServer.use(
+      http.get(
+        '*/api/v1/users/me/settings',
+        () => new HttpResponse(null, {status: 500}),
+      ),
+    );
+
+    fireEvent.change(displayName, {target: {value: 'Dr. Ada'}});
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('alert')).not.toBeInTheDocument(),
+    );
+    expect(screen.getByRole('tablist')).toBeInTheDocument();
+    expect(screen.getByLabelText(/Display name/)).toHaveValue('Dr. Ada');
   });
 });
 
@@ -558,5 +614,176 @@ describe('UsersSettingsPage — student variant', () => {
     expect(
       screen.queryByRole('heading', {name: 'For Parents and Guardians'}),
     ).toBeNull();
+  });
+});
+
+describe('UsersSettingsPage — Educator Profile tab', () => {
+  it('shows the school and role sections for an educator', async () => {
+    renderPage('teacher', {tab: 'educator-profile'});
+    await screen.findByRole('tablist');
+
+    for (const name of ['School Information', 'Role']) {
+      expect(screen.getByRole('heading', {level: 2, name})).toBeInTheDocument();
+    }
+    expect(screen.getByRole('textbox', {name: 'My school'})).toHaveValue(
+      'Example Elementary School',
+    );
+    expect(screen.getByRole('combobox', {name: 'Educator role'})).toHaveValue(
+      'classroom_teacher',
+    );
+  });
+
+  it('shows the empty school value and role placeholder for a new educator', async () => {
+    renderPage('teacher-no-school', {tab: 'educator-profile'});
+    await screen.findByRole('tablist');
+
+    expect(screen.getByRole('textbox', {name: 'My school'})).toHaveValue('');
+    expect(screen.getByText('No school on record yet.')).toBeInTheDocument();
+    expect(screen.getByRole('combobox', {name: 'Educator role'})).toHaveValue(
+      '',
+    );
+    expect(screen.getByRole('option', {name: 'Select a role'})).toBeDisabled();
+  });
+
+  it('falls back to Account Details when a student asks for the educator tab', async () => {
+    const currentTab = renderHostedPage('student', 'educator-profile');
+    const tablist = await screen.findByRole('tablist');
+
+    expect(
+      within(tablist).getByRole('tab', {name: 'Account Details'}),
+    ).toHaveAttribute('aria-selected', 'true');
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'My Information'}),
+    ).toBeInTheDocument();
+    await waitFor(() => expect(currentTab()).toBe('account-details'));
+  });
+
+  it('saves a changed role through the save bar', async () => {
+    renderPage('teacher-no-school', {tab: 'educator-profile'});
+    await screen.findByRole('tablist');
+
+    fireEvent.change(screen.getByRole('combobox', {name: 'Educator role'}), {
+      target: {value: 'librarian_media_specialist'},
+    });
+    fireEvent.click(await screen.findByRole('button', {name: 'Save changes'}));
+
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent('Changes saved.'),
+    );
+    // The refetched settings drop the placeholder: a role can never be cleared.
+    await waitFor(() =>
+      expect(
+        screen.queryByRole('option', {name: 'Select a role'}),
+      ).not.toBeInTheDocument(),
+    );
+    expect(screen.getByRole('combobox', {name: 'Educator role'})).toHaveValue(
+      'librarian_media_specialist',
+    );
+  });
+
+  it('updates the school through the dialog and shows the new name', async () => {
+    renderPage('teacher-no-school', {tab: 'educator-profile'});
+    await screen.findByRole('tablist');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Update my school'}));
+    const dialog = await screen.findByRole('dialog', {
+      name: 'Update your school information',
+    });
+
+    fireEvent.change(
+      within(dialog).getByRole('combobox', {name: /what country/i}),
+      {target: {value: 'US'}},
+    );
+    fireEvent.change(within(dialog).getByRole('textbox', {name: /zip code/i}), {
+      target: {value: '98101'},
+    });
+    const list = await within(dialog).findByRole('combobox', {
+      name: 'Select your school from the list',
+    });
+    await waitFor(() =>
+      expect(
+        within(list).getByRole('option', {name: 'Example Middle School'}),
+      ).toBeInTheDocument(),
+    );
+    fireEvent.change(list, {target: {value: '100000000002'}});
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: 'Update my school'}),
+    );
+
+    await waitFor(() =>
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument(),
+    );
+    expect(
+      await screen.findByDisplayValue('Example Middle School'),
+    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByRole('status')).toHaveTextContent(
+        'School information updated.',
+      ),
+    );
+  });
+});
+
+describe('UsersSettingsPage — Educator Profile tab across a type change', () => {
+  it('reveals the tab when a student becomes an educator', async () => {
+    renderPage('student-can-switch');
+    expect(await tabNames()).not.toContain('Educator Profile');
+
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'teacher'},
+    });
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    fireEvent.change(within(dialog).getByLabelText(/email address/i), {
+      target: {value: 'ada@example.com'},
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /change to educator/i}),
+    );
+
+    await waitFor(async () =>
+      expect(await tabNames()).toContain('Educator Profile'),
+    );
+    const tab = screen.getByRole('tab', {name: 'Educator Profile'});
+    expect(tab).toBeEnabled();
+
+    fireEvent.click(tab);
+    expect(
+      await screen.findByRole('heading', {
+        level: 2,
+        name: 'School Information',
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('removes the tab and lands on Account Details when an educator becomes a student', async () => {
+    const currentTab = renderHostedPage('teacher', 'educator-profile');
+    await screen.findByRole('tablist');
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'School Information'}),
+    ).toBeInTheDocument();
+
+    // The account-type control lives on the other tab, so go there first.
+    fireEvent.click(screen.getByRole('tab', {name: 'Account Details'}));
+    fireEvent.change(
+      await screen.findByRole('combobox', {name: /account type/i}),
+      {target: {value: 'student'}},
+    );
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    fireEvent.click(
+      within(dialog).getByRole('button', {name: /change to student/i}),
+    );
+
+    await waitFor(async () =>
+      expect(await tabNames()).not.toContain('Educator Profile'),
+    );
+    const tablist = await screen.findByRole('tablist');
+    expect(
+      within(tablist).getByRole('tab', {name: 'Account Details'}),
+    ).toHaveAttribute('aria-selected', 'true');
+    expect(currentTab()).toBe('account-details');
   });
 });
