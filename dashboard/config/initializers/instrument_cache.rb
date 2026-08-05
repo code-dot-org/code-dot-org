@@ -6,7 +6,7 @@ ActiveSupport::Notifications.subscribe "cache_read.active_support" do |event|
     metric_name,
     1,
     {
-      Environment: CDO.rack_env,
+      Host: CDO.dashboard_hostname,
       Store: event.payload[:store]
     }
   )
@@ -29,7 +29,7 @@ module Cdo
         'ActiveSupportCacheBytesRead',
         result.try(:bytesize) || 0,
         {
-          Environment: CDO.rack_env,
+          Host: CDO.dashboard_hostname,
           Store: self.class.name
         }
       )
