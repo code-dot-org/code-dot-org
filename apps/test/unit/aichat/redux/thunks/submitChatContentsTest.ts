@@ -100,7 +100,12 @@ describe('submitChatContents', () => {
     mockSendAnalytics.mockReturnValue({type: 'analytics/send'});
   });
 
-  it('applies jsonSchemaResponseCallback to successful assistant messages', async () => {
+  // jsonSchemaResponseCallback used to run here, rewriting chatMessageText
+  // before the message was saved. It now runs at render time instead
+  // (applySchemaDisplayTransform), so what gets saved is the model's response
+  // verbatim -- which is what lets the server check saved history against what
+  // the model actually produced.
+  it('saves the model response verbatim, without applying jsonSchemaResponseCallback', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: '{"answer":"formatted"}',
@@ -120,24 +125,19 @@ describe('submitChatContents', () => {
     );
 
     expect(submitChatContents.fulfilled.match(result)).toBe(true);
-    // The legacy Rails-job path never has a parsed form to offer, so
-    // submitChatContents parses chatMessageText itself before invoking the
-    // callback -- the callback always receives already-parsed JSON.
-    expect(jsonSchemaResponseCallback).toHaveBeenCalledWith({
-      answer: 'formatted',
-    });
+    expect(jsonSchemaResponseCallback).not.toHaveBeenCalled();
     expect(store.getState().aichat.chatEventsCurrent).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           role: Role.ASSISTANT,
           status: Status.OK,
-          chatMessageText: 'formatted response',
+          chatMessageText: '{"answer":"formatted"}',
         }),
       ])
     );
   });
 
-  it('does not apply jsonSchemaResponseCallback to assistant error messages', async () => {
+  it('saves assistant error messages unchanged', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
         chatMessageText: 'Error: service account missing',
@@ -145,7 +145,7 @@ describe('submitChatContents', () => {
       })
     );
     const jsonSchemaResponseCallback = jest.fn(() => {
-      throw new Error('should not parse error text');
+      throw new Error('should never be invoked');
     });
     const store = makeStore();
 
