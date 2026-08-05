@@ -34,6 +34,9 @@ require 'yaml'
 module DashboardKustomize
   ROOT = File.expand_path('..', __dir__)
   HELM_VALUES = File.join(ROOT, '..', 'helm', 'values.yaml')
+  # values.yaml defaults to backend-only; every overlay that renders the
+  # dashboard stacks this additive layer (config key dashboard: false opts out).
+  DASHBOARD_VALUES = File.join(ROOT, '..', 'helm', 'dashboard.values.yaml')
   CHART_PATH = File.join(ROOT, '..', 'helm')
   GITOPS_ENVTYPES_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/envTypes'.freeze
   GITOPS_DEPLOYMENTS_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/deployments'.freeze
@@ -85,7 +88,7 @@ module DashboardKustomize
       release_name: 'cdo',
       services: {mysql: true, redis: true, minio: true},
       helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
-      helm_set: [['--set', 'dashboard.enabled=false']],
+      helm_set: [],
       dashboard: false
     },
     'development' => {
@@ -210,6 +213,7 @@ module DashboardKustomize
 
   module_function def helm_command_from_config(config, secret_values = {})
     cmd = ['helm', 'template', config[:release_name], CHART_PATH, '-f', HELM_VALUES]
+    cmd.push('-f', DASHBOARD_VALUES) unless config[:dashboard] == false
     config[:helm_values].each do |path|
       cmd.push('-f', path)
     end
