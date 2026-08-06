@@ -661,21 +661,16 @@ google_vertex_ai_chat_service_account_key: !Secret
 ai_proxy_origin: https://aiproxy-test.code.org
 
 # Statsig API keys
-# Real values exist only in production and on our managed Test web application
-# server, via production.yml.erb and test.yml.erb. The server SDK expects the
-# prefixed key type (secret-) in the string, otherwise it will throw an error
-# on initialization, even in local_mode, so its dummy value keeps the prefix.
-# The client keys default to blank: a blank key serves frontend/ pages
-# provider 'none', and setting a real key in locals.yml enables the Statsig
-# provider locally.
+# These are dummy values for all environments except Production and our managed
+# Test web application server, which are overridden in production.yml.erb
+# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
+# the string, otherwise it will throw an error on initialization, even in
+# local_mode.
+# The client keys are blank by default; set one in locals.yml to enable
+# Statsig locally.
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: ''
 statsig_api_client_key_session_replay: ''
-
-# Serve frontend/ pages a 'statsig' analytics provider outside production and
-# the managed test server. For local testing of the browser analytics path;
-# set in locals.yml together with a real client key.
-statsig_force_transmit: false
 
 # MailGun/MailJet API keys
 mailjet_api_key:
