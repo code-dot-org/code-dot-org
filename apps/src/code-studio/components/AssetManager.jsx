@@ -9,6 +9,11 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -84,6 +89,8 @@ export default class AssetManager extends React.Component {
       projectType: '',
       pendingUploadData: null,
       showFlaggedModal: false,
+      flaggedModalError: null,
+      uploadsEnabled: props.uploadsEnabled,
     };
   }
 
@@ -192,7 +199,57 @@ export default class AssetManager extends React.Component {
       return;
     }
 
+    this.setState({pendingUploadData: null});
     data.submit();
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) {
+      return;
+    }
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.projectId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+          flaggedModalError: null,
+          uploadsEnabled: false,
+          statusMessage: 'Uploading...',
+        });
+        pendingUploadData.submit();
+        analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+          UploaderType: 'AssetManager',
+          ProjectType: this.state.projectType,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: i18n.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
+      });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'AssetManager',
+      ProjectType: this.state.projectType,
+    });
   };
 
   onUploadDone = result => {
@@ -348,7 +405,7 @@ export default class AssetManager extends React.Component {
           />
         )}
         <AddAssetButtonRow
-          uploadsEnabled={this.props.uploadsEnabled}
+          uploadsEnabled={this.state.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
           api={this.uploadApi()}
           onUploadStart={this.onUploadStart}
@@ -422,7 +479,19 @@ export default class AssetManager extends React.Component {
       );
     }
 
-    return assetList;
+    return (
+      <div>
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            appName={this.state.projectType}
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
+          />
+        )}
+        {assetList}
+      </div>
+    );
   }
 }
 
