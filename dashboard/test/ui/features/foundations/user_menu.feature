@@ -1,4 +1,5 @@
 @no_mobile
+@playwright
 Feature: Sign In Button and User Menu in Header
 
 Scenario: Signed Out - create account button shows on signed out studio page
