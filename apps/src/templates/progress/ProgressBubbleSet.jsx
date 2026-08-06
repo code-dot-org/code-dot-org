@@ -104,9 +104,7 @@ class ProgressBubbleSet extends React.Component {
 // Height of a bubble row: full circle bubble (dot plus 2px borders) plus its
 // 3px top and bottom margins. Every bubble — pills, diamonds, circles and
 // small sublevel dots alike — is centered within this height so all shapes
-// share one vertical center. Sublevel dots deliberately get no special
-// placement: they used to hang off tuned pixel nudges whose effective
-// position moved with surrounding font metrics.
+// share one vertical center.
 const ROW_HEIGHT = DOT_SIZE + 4 + 6;
 
 const inlineStyles = {
