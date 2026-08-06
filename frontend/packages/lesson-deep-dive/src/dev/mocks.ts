@@ -53,7 +53,22 @@ let nextAttemptId = 500;
 
 export function registerLessonDeepDiveMocks(): void {
   registerMockFixture([
-    {path: '*/practice_problems', respond: PRACTICE_PROBLEMS},
+    // PracticeProblemsController#index filters by objective when asked. The
+    // seeded problems hang off a different lesson's objective, so the deep
+    // dive's own objective ids match none and SkillsCheck falls back to its
+    // built-in example questions — which is what Studio does here too.
+    {
+      path: '*/practice_problems',
+      respond: ({url}) => {
+        const ids = url.searchParams.getAll('objective_ids[]');
+        if (ids.length === 0) return PRACTICE_PROBLEMS;
+        return PRACTICE_PROBLEMS.filter(problem =>
+          problem.objectives.some(objective =>
+            ids.includes(String(objective.id)),
+          ),
+        );
+      },
+    },
     {path: '*/user_practice_problem_attempts', respond: []},
     {
       method: 'post',

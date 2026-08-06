@@ -126,7 +126,7 @@ export const LESSON_DEEP_DIVE_DATA: RailsLessonDeepDiveData = {
     validatedLevelsIncorrectCount: 0,
   },
   timeSpentSeconds: 0,
-  unitLabel: null,
+  unitLabel: 'Unit 1',
 };
 
 // GET /practice_problems, PracticeProblem#summarize.

@@ -59,6 +59,10 @@ Two things the config has to get right or nothing renders:
 
 `src/dev/nodeShims.ts` restates the Node globals webpack's `ProvidePlugin`
 gives apps' bundles; `@code-dot-org/redactable-markdown` needs `process`.
+`index.html` carries the `csrf_meta_tags` the Rails layout emits, because
+`AuthenticityTokenStore` reads that tag and otherwise falls back to
+`GET /get_token`; without it every write the feature makes fails before it is
+sent.
 
 `src/dev/cdo-ambient.d.ts` declares the `@cdo/*` modules the shell imports, so
 `yarn typecheck` never crawls apps' type graph.
@@ -77,8 +81,10 @@ The wire shape differs from `LessonDeepDiveData` in
 `question_text`, `student_response` and `aiReasoning` to each
 `assessmentAnalysis` entry. `src/dev/fixtures.ts` types what is actually sent.
 
-Regenerate the payload with `dashboard/bin/rails runner`, building the same
-hash `LessonsController#tutor` builds.
+Regenerate the payload by loading the real page as a signed-in student and
+reading `script[data-lessondeepdivedata]`. Rebuilding it from
+`LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
+`unitLabel` comes from the unit-group context, not the lesson.
 
 ### Matching how Studio renders
 
