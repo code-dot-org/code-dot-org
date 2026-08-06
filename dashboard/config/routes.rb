@@ -1477,7 +1477,11 @@ Dashboard::Application.routes.draw do
     resources :practice_problems, only: [:index, :show]
 
     resources :challenges, only: [:index, :show]
-    resources :challenge_responses, only: [:create, :show]
+    resources :challenge_responses, only: [:create, :show] do
+      member do
+        post :evaluate
+      end
+    end
     resources :challenge_response_assets, only: [:show] do
       member do
         put :upload
