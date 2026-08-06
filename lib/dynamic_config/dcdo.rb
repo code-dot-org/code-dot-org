@@ -75,7 +75,8 @@ class DCDOBase < DynamicConfigBase
       'browser-events-enabled': DCDO.get('browser-events-enabled', true),
       'onboarding-enabled': DCDO.get('onboarding-enabled', false),
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
-      'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false)
+      'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
+      'statsig-enabled': DCDO.get('statsig-enabled', true)
     }
   end
 end

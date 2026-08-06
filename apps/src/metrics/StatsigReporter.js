@@ -1,6 +1,7 @@
 import {StatsigClient} from '@statsig/js-client';
 import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
+import DCDO from '@cdo/apps/dcdo';
 import logToCloud from '@cdo/apps/logToCloud';
 import experiments from '@cdo/apps/util/experiments';
 import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
@@ -195,6 +196,10 @@ class StatsigReporter {
    *   Firehose.
    */
   shouldPutRecord(alwaysPut) {
+    // Checked before alwaysPut so the kill switch beats the manual override.
+    if (!DCDO.get('statsig-enabled', true)) {
+      return false;
+    }
     if (alwaysPut) {
       return true;
     }
