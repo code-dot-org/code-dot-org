@@ -37,7 +37,7 @@ to a fully open source toolchain, try (minikube)[https://minikube.sigs.k8s.io/].
 
 From code-dot-org/ run:
 ```
-skaffold dev --trigger=manual -p setup-db -p setup-s3
+skaffold dev --trigger=manual -p dashboard -p setup-db -p setup-s3
 ```
 
 NOTE: this command **will not exit automatically** when complete, and will take 30+ minutes. 
@@ -59,8 +59,11 @@ Your first skaffold run will:
 
 Once setup is done, the command to start dashboard is:
 ```
-skaffold dev
+skaffold dev -p dashboard
 ```
+
+(Bare `skaffold dev` deploys the backend-only base — the ActiveJob worker
+and cluster services, no frontend. See "Backend-only mode" below.)
 
 Then open: http://localhost-studio.code.org:13000
 
@@ -109,9 +112,21 @@ A particularly useful page is [skaffold's CLI docs](https://skaffold.dev/docs/re
 
 Here's a quick overview of the 4 most useful commands, run from the repo root:
 - `skaffold build` to build the docker images, this will also happen automatically when you run other skaffold commands, if needed.
-- `skaffold dev` run dashboard in "dev mode", this will tail log output to the console, and when you ctrl-c to quit, the app will be uninstalled from the cluster automatically.
-- `skaffold run` deploy dashboard to the k8s cluster as a standalone app.
+- `skaffold dev -p dashboard` run dashboard in "dev mode", this will tail log output to the console, and when you ctrl-c to quit, the app will be uninstalled from the cluster automatically. Bare `skaffold dev` runs the backend-only base instead.
+- `skaffold run -p dashboard` deploy dashboard to the k8s cluster as a standalone app.
 - `skaffold dev -p ________`: -p activates a skaffold profile, which can modify skaffold behavior (like running a job, or switching to a more production-like configuration), see [profiles: in skaffold.yaml](../skaffold.yaml) for some of the profiles.
+
+### Backend-only mode (the default)
+
+The base skaffold config is a backend-only stack: the ActiveJob worker and
+cluster services, no dashboard frontend and no frontend asset build. Bare
+`skaffold dev` gives you exactly that; every additional layer is an
+explicit profile (`-p dashboard` for the full app):
+
+```
+skaffold dev --trigger=manual -p setup-db-minimal   # create/migrate the DB (no curriculum seed)
+skaffold dev                                        # run the ActiveJob worker
+```
 
 ### Other Commands
 

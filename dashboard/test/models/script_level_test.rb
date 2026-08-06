@@ -924,10 +924,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'cached_find' do
-    create_hourofcode_unit_and_levels
-    hourofcode = Unit.get_from_cache(Unit::HOC_NAME)
-    script_level = ScriptLevel.cache_find(hourofcode.script_levels[0].id)
-    assert_equal(hourofcode.script_levels[0], script_level)
+    unit = create(:unit, :with_levels, levels_count: 2)
+    script_level = ScriptLevel.cache_find(unit.script_levels[0].id)
+    assert_equal(unit.script_levels[0], script_level)
 
     multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 3)
     script_level2 = ScriptLevel.cache_find(multi_lesson_unit.script_levels.last.id)
@@ -1265,6 +1264,51 @@ class ScriptLevelTest < ActiveSupport::TestCase
       script_level.add_variant level2
     end
     assert_equal "can only be used on migrated scripts", e.message
+  end
+
+  test 'add_variant refuses a UI Test variant in a prod script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    script = create(:script, :in_single_unit_course, is_migrated: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    level = create(:level)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest variant')
+
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant ui_test_level
+    end
+    assert_equal [level], script_level.reload.levels.to_a
+  end
+
+  test 'level_keys with UI Test levels are only valid in ui-test-* scripts' do
+    level = create(:level, name: 'UI Test ScriptLevelTest level')
+
+    ui_test_script = create(:script, name: 'ui-test-script-level-test')
+    script_level = create(:script_level, script: ui_test_script, levels: [level])
+    script_level.level_keys = [level.key]
+    assert script_level.valid?
+
+    prod_script = create(:script, name: 'script-level-test-prod')
+    script_level = create(:script_level, script: prod_script)
+    script_level.level_keys = [level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, level.name
+  end
+
+  test 'update_levels rejects UI Test levels in non-ui-test scripts' do
+    level = create(:level, name: 'UI Test ScriptLevelTest attach')
+
+    prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
+    error = assert_raises RuntimeError do
+      prod_script_level.update_levels([{'id' => level.id}])
+    end
+    assert_includes error.message, level.name
+
+    ui_test_script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-attach'))
+    ui_test_script_level.update_levels([{'id' => level.id}])
+    assert_equal [level], ui_test_script_level.levels.to_a
   end
 
   private def create_fake_plc_data

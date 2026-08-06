@@ -4,7 +4,14 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
+import {
+  FLAGGED_IMAGE_URL_MESSAGE,
+  IMAGE_MODERATION_ERROR_MESSAGE,
+} from '@cdo/apps/applab/constants';
+import {
+  isAbsoluteImageUrl,
+  moderateApplabImageUrl,
+} from '@cdo/apps/applab/imageUrlModeration';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -15,7 +22,11 @@ export default class ImageURLInput extends React.Component {
     allowedExtensions: PropTypes.string,
     currentValue: PropTypes.string,
   };
-  state = {showError: false, value: this.props.currentValue || ''};
+  state = {
+    errorType: null,
+    isSubmitting: false,
+    value: this.props.currentValue || '',
+  };
 
   inputRef = React.createRef();
 
@@ -24,7 +35,7 @@ export default class ImageURLInput extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({value: event.target.value});
+    this.setState({errorType: null, value: event.target.value});
   };
 
   handleSubmit = event => {
@@ -32,13 +43,38 @@ export default class ImageURLInput extends React.Component {
     this.handleSubmitWrapper(this.state.value);
   };
 
-  handleSubmitWrapper = url => {
-    if (ABSOLUTE_REGEXP.test(url)) {
-      this.props.assetChosen(url, moment());
-      analyticsReporter.sendEvent(EVENTS.SUBMIT_IMAGE_URL, {LabType: 'applab'});
-    } else {
-      this.setState({showError: true});
+  handleSubmitWrapper = async url => {
+    if (!isAbsoluteImageUrl(url)) {
+      this.setState({errorType: 'invalid-url'});
+      return;
     }
+
+    analyticsReporter.sendEvent(EVENTS.SUBMIT_IMAGE_URL, {LabType: 'applab'});
+    this.setState({isSubmitting: true});
+    const {status, normalizedUrl} = await moderateApplabImageUrl(url);
+    this.setState({isSubmitting: false});
+
+    if (status === 'safe') {
+      this.props.assetChosen(normalizedUrl, moment());
+    } else if (status === 'flagged') {
+      this.setState({errorType: 'flagged'});
+    } else {
+      this.setState({errorType: 'moderation-error'});
+    }
+  };
+
+  getErrorText = () => {
+    const {errorType} = this.state;
+    if (errorType === 'invalid-url') {
+      return i18n.imageURLInputInvalid();
+    }
+    if (errorType === 'flagged') {
+      return FLAGGED_IMAGE_URL_MESSAGE;
+    }
+    if (errorType === 'moderation-error') {
+      return IMAGE_MODERATION_ERROR_MESSAGE;
+    }
+    return null;
   };
 
   render() {
@@ -69,18 +105,20 @@ export default class ImageURLInput extends React.Component {
             variant="contained"
             color="primary"
             size="small"
+            disabled={this.state.isSubmitting}
             sx={{alignSelf: 'flex-start'}}
           >
             Submit
           </MuiButton>
         </form>
-        {this.state.showError && (
+        {this.getErrorText() && (
           <MuiTypography
+            role="alert"
             variant="body2"
             component="div"
             sx={{color: 'var(--text-error-primary)'}}
           >
-            {i18n.imageURLInputInvalid()}
+            {this.getErrorText()}
           </MuiTypography>
         )}
         <MuiTypography variant="body2" component="div" gutterBottom>

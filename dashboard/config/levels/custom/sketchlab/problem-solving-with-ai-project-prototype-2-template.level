@@ -274,7 +274,7 @@
               "fontFamily": "cursive",
               "textAlign": "center",
               "fontSize": 50,
-              "locked": true
+              "locked": false
             },
             "position": {
               "x": 2495.223231848751,
@@ -1355,7 +1355,7 @@
             "id": "5fcafc36-3c15-4598-bb75-f7fd0c8c9110",
             "type": "text",
             "data": {
-              "text": "9.  Launch your product with a single social media post using the template.\n\n\nPick at supporting media: images, music / jingle, and supporting text.\n",
+              "text": "9.  Launch your product with a single social media post using the template.\n\n\nChoose a job and create supporting media: images, music / jingle, and marketing text.\n",
               "strokeColor": "transparent",
               "rotation": 0,
               "locked": true,
@@ -1638,8 +1638,8 @@
               "locked": true
             },
             "position": {
-              "x": 4928.089194733609,
-              "y": 1737.6006727052347
+              "x": 4344.820317325206,
+              "y": 1732.377369325458
             },
             "width": 160,
             "height": 120,
@@ -2578,8 +2578,8 @@
               "locked": true
             },
             "position": {
-              "x": 3927.7856120927695,
-              "y": 1743.6649126647094
+              "x": 3532.555656356329,
+              "y": 1733.2183059051558
             },
             "width": 160,
             "height": 120,
@@ -2677,62 +2677,18 @@
             "dragging": false
           },
           {
-            "id": "dd00d7a2-2efa-4761-a254-4a8b8cec0b80",
-            "type": "text",
-            "data": {
-              "text": "Use the space below to gather images that you have generated with AI to support your product launch\n",
-              "strokeColor": "transparent",
-              "rotation": 0,
-              "locked": true,
-              "textAlign": "left"
-            },
-            "position": {
-              "x": 2764.7704421184926,
-              "y": 1866.8194398294113
-            },
-            "width": 456.29904505201364,
-            "height": 83.68310730899668,
-            "measured": {
-              "width": 456,
-              "height": 84
-            },
-            "dragging": false
-          },
-          {
             "id": "2c43400f-9b4b-45ff-b3b4-bdd45dbb3210",
             "type": "text",
             "data": {
-              "text": "Use the space below to gather text that you have generated with AI to support your product launch\n",
+              "text": "You own the words. You will name the product, give it a slogan, and write the social media caption that launches it. Every claim you write must be a fact your spec sheet can back up.\n\nTo Do:\n- Draft a product name, a slogan, and a post caption with AI's assistnace, then revise until they sound like your team and your audience.\n- Check every claim in the caption against the spec sheet. Remove anything the sheet does not support.\n- Paste your final text into the text zone and the caption field of the social media template above.\n- Add a note in your Keep / Modify / Reject log.\n",
               "strokeColor": "transparent",
               "rotation": 0,
               "locked": true,
               "textAlign": "left"
             },
             "position": {
-              "x": 3797.7237741830722,
-              "y": 1866.8194398294113
-            },
-            "width": 456.29904505201364,
-            "height": 83.68310730899668,
-            "measured": {
-              "width": 456,
-              "height": 84
-            },
-            "dragging": false
-          },
-          {
-            "id": "13f05210-efd3-440b-afe0-171ca5f76156",
-            "type": "text",
-            "data": {
-              "text": "Use the space below to link to music / jingles that support your product launch\n",
-              "strokeColor": "transparent",
-              "rotation": 0,
-              "locked": true,
-              "textAlign": "left"
-            },
-            "position": {
-              "x": 4799.654537858676,
-              "y": 1875.434677491889
+              "x": 3408.97483043149,
+              "y": 2063.9738416736136
             },
             "width": 456.29904505201364,
             "height": 83.68310730899668,
@@ -2802,6 +2758,351 @@
             "measured": {
               "width": 502,
               "height": 99
+            },
+            "dragging": false
+          },
+          {
+            "id": "d3d375c3-68b2-401b-b97c-ea254d2abae9",
+            "type": "text",
+            "data": {
+              "text": "JOB DESCRIPTIONS (Mandatory)",
+              "fontFamily": "cursive",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 2767.7696597375525,
+              "y": 1576.132357592774
+            },
+            "width": 811.6395624085471,
+            "height": 120,
+            "measured": {
+              "width": 812,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "b3d9fe22-6d7e-4ae1-abf9-d40b7f535574",
+            "type": "text",
+            "data": {
+              "text": "SOCIAL MEDIA POST",
+              "fontFamily": "cursive",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": false
+            },
+            "position": {
+              "x": 3293.09786352499,
+              "y": -152.68901040275853
+            },
+            "width": 393.3152034379728,
+            "height": 120,
+            "measured": {
+              "width": 393,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "70408bfd-3eb8-455f-a0c6-e45a3941da9a",
+            "type": "text",
+            "data": {
+              "text": "Your social media text goes here...\n",
+              "strokeColor": "transparent",
+              "rotation": 0,
+              "locked": false,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 3156.9791400038403,
+              "y": 799.7032582411041
+            },
+            "width": 671.7603094678033,
+            "height": 165.4347083689113,
+            "measured": {
+              "width": 672,
+              "height": 165
+            },
+            "dragging": false
+          },
+          {
+            "id": "2e0c60bc-8ed6-405f-9519-a70ca0df22f7",
+            "type": "text",
+            "data": {
+              "text": "Copywriter",
+              "fontFamily": "sans",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 3491.2696701158975,
+              "y": 1873.132357592774
+            },
+            "width": 253.7299661147859,
+            "height": 68,
+            "measured": {
+              "width": 254,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "e42e291a-e917-4257-86a6-8a50bb8516e2",
+            "type": "text",
+            "data": {
+              "text": "Art Director",
+              "fontFamily": "sans",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 2822.492042844558,
+              "y": 1873.1323575927738
+            },
+            "width": 253.7299661147859,
+            "height": 68,
+            "measured": {
+              "width": 254,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "5d354b7c-4eff-44cb-acea-ce03ba293999",
+            "type": "text",
+            "data": {
+              "text": "You own the look. You will create the main image for the post, and a logo if time allows. Your image should match what the spec sheet says the product actually is.\n\nTo Do:\n- Create an image prompt to generate the main image for your post.\n- Check it against the spec sheet: number of parts, colors, and appearance must match. \n- Save your image to your Backpack and import it into Sketch Lab in the social media template above.\n- Add a note in your Keep / Modify / Reject log.\n",
+              "strokeColor": "transparent",
+              "rotation": 0,
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2753.0573474318057,
+              "y": 2041.9168318708598
+            },
+            "width": 456.29904505201364,
+            "height": 83.68310730899668,
+            "measured": {
+              "width": 456,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "46a89cd6-9c7d-42bd-bdf5-38f304d2358c",
+            "type": "text",
+            "data": {
+              "text": "JOB DESCRIPTIONS (Optional)",
+              "fontFamily": "cursive",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 4195.759020959755,
+              "y": 1576.1323575927738
+            },
+            "width": 811.6395624085471,
+            "height": 120,
+            "measured": {
+              "width": 812,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "61a282a7-52fe-4b73-8f7a-dbacaeaa99cf",
+            "type": "text",
+            "data": {
+              "text": "Sound Designer",
+              "fontFamily": "sans",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 4316.08080575294,
+              "y": 1869.6501553395897
+            },
+            "width": 253.7299661147859,
+            "height": 68,
+            "measured": {
+              "width": 254,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "12b8562c-c75f-451b-a40f-95249d035b22",
+            "type": "text",
+            "data": {
+              "text": "You own the sound. You will write the hook that gets stuck in people's heads, then produce it as a jingle in Music Lab.\n\nTo Do:\n- Produce a jingle in Music Lab to support your product.\n- Place a QR code screenshot in social media post template above.\n- Add a note in your Keep / Modify / Reject log.\n",
+              "strokeColor": "transparent",
+              "rotation": 0,
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 4214.267039514515,
+              "y": 1989.7938970650898
+            },
+            "width": 456.29904505201364,
+            "height": 83.68310730899668,
+            "measured": {
+              "width": 456,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "56c91bb9-e2dc-48f2-ab38-80d6307ce3b2",
+            "type": "text",
+            "data": {
+              "text": "Commercial Director",
+              "fontFamily": "sans",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 5039.908076047633,
+              "y": 1864.426851959813
+            },
+            "width": 323.374011178476,
+            "height": 68,
+            "measured": {
+              "width": 323,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "7dbaee83-7d7f-4830-af03-9c96a42e422f",
+            "type": "text",
+            "data": {
+              "text": "You own the pitch. You will write a 15 to 30 second commercial script, words only, that sells the product without promising anything the spec sheet cannot deliver.\n\nTo Do:\n- Draft a 15 to 30 second script with AI: opening hook, the problem, the product, the price.\n- Cut any line that oversells. If the spec sheet cannot back it up, it does not air.\n- Paste your final script next to the social media post template above.\n- Add any notes in your Keep / Modify / Reject log.\n",
+              "strokeColor": "transparent",
+              "rotation": 0,
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 4998.861258779902,
+              "y": 2032.1874146353998
+            },
+            "width": 456.29904505201364,
+            "height": 83.68310730899668,
+            "measured": {
+              "width": 456,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "fbd2daf2-df28-49cf-b752-e5b57361a502",
+            "type": "text",
+            "data": {
+              "text": "Community Manager",
+              "fontFamily": "sans",
+              "textAlign": "center",
+              "fontSize": "extra-large",
+              "locked": true
+            },
+            "position": {
+              "x": 5822.932784646463,
+              "y": 1862.6857508332205
+            },
+            "width": 337.30282019121347,
+            "height": 68,
+            "measured": {
+              "width": 337,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "55d5d355-6631-4f2e-aa57-8073ed18b2c7",
+            "type": "text",
+            "data": {
+              "text": "You own the comments. You will predict what people will ask under the post, test those questions on your team's chatbot, and write the pinned reply.\n\nTo Do:\n- Predict the first three comments or questions your post will receive.\n- Ask your team's chatbot each one. If it invents an answer or cannot respond, tell your team so they can fix the spec sheet or the prompt.\n- Write a short pinned FAQ reply and paste it next to the social media post template above.\n- Add a note in your Keep / Modify / Reject log.\n",
+              "strokeColor": "transparent",
+              "rotation": 0,
+              "locked": true,
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 5781.167807720485,
+              "y": 2039.4092275676444
+            },
+            "width": 456.29904505201364,
+            "height": 83.68310730899668,
+            "measured": {
+              "width": 456,
+              "height": 84
+            },
+            "dragging": false
+          },
+          {
+            "id": "78fbc0c5-8544-4614-a516-b72acee7be15",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/ca593e93-4f07-497a-8b39-5abcc302533b.png",
+              "altText": "clapper-open",
+              "locked": true
+            },
+            "position": {
+              "x": 5122.032192737018,
+              "y": 1725.1442999871033
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4b125d07-ac63-45b4-8924-aa0c3119c328",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/problem-solving-with-ai-project-prototype-2-template/uuid/e46ac12f-3bdf-40a7-94c0-a471d183459a.png",
+              "altText": "network-user",
+              "locked": true
+            },
+            "position": {
+              "x": 5910.751003083306,
+              "y": 1728.626502240288
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "c77504c0-03ad-45c0-b5d3-de9261995f0e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": ""
+            },
+            "position": {
+              "x": 4002.504168338202,
+              "y": 1652.0180526702284
+            },
+            "width": 80,
+            "height": 654.5180458638199,
+            "measured": {
+              "width": 80,
+              "height": 655
             },
             "dragging": false
           }
@@ -2875,14 +3176,14 @@
           }
         ],
         "viewport": {
-          "x": 694.0908941865907,
-          "y": 631.1904909035102,
-          "zoom": 0.6062866266041613
+          "x": 966.4942975262729,
+          "y": 319.5760447937026,
+          "zoom": 0.12500000000000014
         }
       }
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-28T19:02:19.373+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-project-prototype-2\\\"\"],\"cloned_from\":\"problem-solving-with-ai-project-prototype-2\"},{\"changed_at\":\"2026-07-28 19:02:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:18:53 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:43:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:45:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 18:56:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:13:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-29 19:42:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:15:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:29:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:34:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:38:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:53:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 14:57:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:11:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:18:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:24:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:46:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 15:47:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:48:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 18:50:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:01:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:10:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 19:30:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 20:14:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:33:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-30 21:54:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-07-31 19:45:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 20:55:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 21:31:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -10568,6 +10568,8 @@ en:
               name: AID Playground
             lesson-19:
               name: HoAI26 Sandbox
+            lesson-20:
+              name: HoAI26 Testing w T&L
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff

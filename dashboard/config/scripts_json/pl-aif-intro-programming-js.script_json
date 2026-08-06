@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-08-04 17:12:54 UTC",
+    "serialized_at": "2026-08-05 15:51:49 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -67,7 +67,7 @@
       "name": "Design Foundations",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -99,6 +99,18 @@
       "seeding_key": {
         "lesson_activity.key": "3bc41f1d-24c6-4277-8051-2f81126d1117",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js"
+      }
+    },
+    {
+      "key": "a86e7808-a323-434a-8cc9-111cc8b6e066",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a86e7808-a323-434a-8cc9-111cc8b6e066",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js"
       }
@@ -147,6 +159,17 @@
       "seeding_key": {
         "activity_section.key": "8620c7ca-5a2e-410d-ad9d-32b6a1f855a8",
         "lesson_activity.key": "3bc41f1d-24c6-4277-8051-2f81126d1117"
+      }
+    },
+    {
+      "key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introducing CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47",
+        "lesson_activity.key": "a86e7808-a323-434a-8cc9-111cc8b6e066"
       }
     }
   ],
@@ -458,6 +481,182 @@
       "level_keys": [
         "pl-aif1-js-weblab-tips"
       ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-user-centerd-design"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-user-centerd-design"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-introducing-css"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-introducing-css"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-css-properties"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-css-properties"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-style-sheet"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-style-sheet"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-developer-prompting"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-developer-prompting"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-what-is-markdown-file"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-what-is-markdown-file"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-md-file-weblab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-md-file-weblab"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif1-js-stylesheet-weblab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      },
+      "level_keys": [
+        "pl-aif1-js-stylesheet-weblab"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -627,6 +826,102 @@
         "lesson_group.key": "",
         "script.name": "pl-aif-intro-programming-js",
         "activity_section.key": "8620c7ca-5a2e-410d-ad9d-32b6a1f855a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-user-centerd-design",
+        "script_level.level_keys": [
+          "pl-aif1-js-user-centerd-design"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-introducing-css",
+        "script_level.level_keys": [
+          "pl-aif1-js-introducing-css"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-css-properties",
+        "script_level.level_keys": [
+          "pl-aif1-js-css-properties"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-style-sheet",
+        "script_level.level_keys": [
+          "pl-aif1-js-style-sheet"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-developer-prompting",
+        "script_level.level_keys": [
+          "pl-aif1-js-developer-prompting"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-what-is-markdown-file",
+        "script_level.level_keys": [
+          "pl-aif1-js-what-is-markdown-file"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-md-file-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-md-file-weblab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif1-js-stylesheet-weblab",
+        "script_level.level_keys": [
+          "pl-aif1-js-stylesheet-weblab"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "pl-aif-intro-programming-js",
+        "activity_section.key": "e139a2c2-d9e4-4573-b5fb-ac5f1fe56b47"
       }
     }
   ],

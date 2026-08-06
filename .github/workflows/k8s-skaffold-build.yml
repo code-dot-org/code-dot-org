@@ -151,10 +151,14 @@ jobs:
       # Run `skaffold build` to build the docker image for the current runner's architecture
       # We pass skaffold the branch tag NOT the git sha tag because we want skaffold to
       # re-use the layer cache from this branch for fast rebuilds. We later tag with the git sha.
+      #
+      # -p release: the base skaffold config builds a backend-only image; the
+      # release profile builds the full production-flavored runtime image.
       - name: skaffold build
         run: |
           skaffold \
             build \
+            -p release \
             -v info \
             --tag $BRANCH_DOCKER_TAG \
             --push

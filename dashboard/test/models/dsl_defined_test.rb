@@ -103,4 +103,29 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
     end
     assert_includes e.message, 'file "config/scripts/my_level_name.external" already exists'
   end
+
+  test 'canonical_filename is in the test/ui tree for UI Test levels' do
+    regular = Match.new(name: 'DSLDefined Filename Test')
+    assert_equal 'config/scripts/dsldefined_filename_test.match', regular.canonical_filename
+
+    ui_test = Match.new(name: 'UI Test DSLDefined Filename Test')
+    assert_equal 'test/ui/config/scripts/ui_test_dsldefined_filename_test.match', ui_test.canonical_filename
+  end
+
+  test 'existing_filename greps only the tree selected by the level name' do
+    level_name = 'UI Test DSLDefined existing_filename probe'
+    contents = "name '#{level_name}'\n"
+    prod_file = Rails.root.join('config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+    ui_test_file = Rails.root.join('test/ui/config/scripts/ui_test_dsldefined_existing_filename_probe.match')
+    [prod_file, ui_test_file].each do |file|
+      FileUtils.mkdir_p(File.dirname(file))
+      File.write(file, contents)
+    end
+
+    level = Match.new(name: level_name)
+    assert_equal ui_test_file.to_s, level.existing_filename
+  ensure
+    FileUtils.rm_f(prod_file)
+    FileUtils.rm_f(ui_test_file)
+  end
 end

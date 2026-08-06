@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI as a College Admissions Officer\r\n\r\n**1. Attach Resources:** Click [_Add File_] and then [_From Library_], and select PDF file that contains information about the student applications that you reviewed.\r\n\r\n**2. Ask :** Interview the AI Chatbot to determine which students it would admit and why.\r\n\r\n**3. Document:** Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n",
+    "long_instructions": "## AI as a College Admissions Officer\r\n\r\n**1. Attach Resources:** Click [_Add File_] and then [_From Library_]. Select PDF file that contains information about the student applications and click [_Attach_].\r\n\r\n**2. Ask :** Interview the AI Chatbot to determine which students it would admit and why.\r\n\r\n**3. Document:** Find the section in your Activity Guide called \"AI’s Selections\" and answer the questions.\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gemini-2.5-flash",
@@ -54,6 +54,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:02.770+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_v2_2026\"},{\"changed_at\":\"2026-08-04 20:36:22 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 20:41:29 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-07-29T13:22:02.770+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-level4b_v2_2026\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-level4b_v2_2026\"},{\"changed_at\":\"2026-08-04 20:36:22 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 20:41:29 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-05 14:24:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
