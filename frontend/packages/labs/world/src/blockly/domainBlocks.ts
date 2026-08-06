@@ -3673,14 +3673,34 @@ const worldRule = defineBlock({
 // exactly one rule, so there is nothing to disambiguate and nothing to wire up.
 const worldRuleTrait = defineBlock({
   type: 'world_rule_trait',
-  message0: 'define trait %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'My Trait'}],
+  message0: 'define trait %1 for %2',
+  args0: [
+    {type: 'field_input', name: 'NAME', text: 'My Trait'},
+    // What elects it. A FIELD rather than a second declaration block: the
+    // subject is which kind of thing a trait's members belong to, and this
+    // project already models that as a member's SCOPE, derived from where it
+    // was declared. `world_rule_block` took the same road — one block with a
+    // field, rather than one block per kind.
+    //
+    // Defaults to `actor`, so every trait that exists reads and behaves
+    // unchanged, and so does every trait saved before the field existed.
+    {
+      type: 'field_dropdown',
+      name: 'SUBJECT',
+      options: [
+        ['an actor', 'actor'],
+        ['a camera', 'camera'],
+      ],
+    },
+  ],
   // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
   style: 'setup_blocks',
   tooltip:
-    'Define a trait an actor may take, for the rule in this file. Its actor ' +
-    'properties, events, actions and queries chain below it.',
+    'Define a trait for the rule in this file, and say what takes it. An ' +
+    'actor trait is the usual kind; a camera trait is how a camera is told to ' +
+    'behave — “follows the player” is one. Its properties, events, actions ' +
+    'and queries chain below it.',
   generator: noGenerator,
 });
 

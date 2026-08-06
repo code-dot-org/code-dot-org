@@ -429,6 +429,9 @@ export class World {
       this.cameraList.unshift(makeCamera({id: DEFAULT_CAMERA_ID}));
     }
     this.cameraCollection = new CameraCollection(this.cameraList);
+    for (const camera of this.cameraList) {
+      camera.world = this;
+    }
 
     for (const [id, effects] of Object.entries(init.layerEffects ?? {})) {
       const layer = this.layer(id);
@@ -530,7 +533,10 @@ export class World {
    */
   defineCamera(init: CameraInit): this {
     if (!this.cameraList.some(camera => camera.id === init.id)) {
-      this.cameraList.push(makeCamera(init));
+      const camera = makeCamera(init);
+      // The back-reference a camera-scoped body reads (see `Camera.world`).
+      camera.world = this;
+      this.cameraList.push(camera);
     }
     return this;
   }

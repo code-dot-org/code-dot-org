@@ -25,6 +25,7 @@ import type {Trait} from './Trait';
 import {Traited} from './Traited';
 import type {Property} from './types';
 import {Vector} from './Vector';
+import type {World} from './World';
 
 /**
  * The camera every world draws through unless something says otherwise.
@@ -61,6 +62,17 @@ export interface CameraInit {
  * in `world.actors`.
  */
 export class Camera {
+  /**
+   * The world this camera is in, set when the world takes it.
+   *
+   * The same back-reference an Actor carries, for the same reason: a
+   * camera-scoped body is invoked as `(camera, …args)` — the engine has no
+   * world to hand it — and a body like "follow the player" is a question about
+   * the world asked of a camera. The generated preamble binds `const world =
+   * camera.world`, exactly as an actor's binds it from the actor.
+   */
+  world: World | undefined;
+
   readonly id: string;
   readonly name: string;
   /** Mutable: moving the camera is the whole point of having one. */
