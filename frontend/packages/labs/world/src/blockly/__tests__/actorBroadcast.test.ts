@@ -85,6 +85,21 @@ describe('a statement over an actor value', () => {
         'world.removeActor(actor));\n',
     );
   });
+
+  it('is how "remove every coin" is written — no bulk block needed', () => {
+    // The same pair as above, stated as the thing a learner is trying to do.
+    // `remove actor` over a value holding several IS the bulk operation, so a
+    // separate "remove all of a kind" block would be a second way to say one
+    // thing — and the two would have to be kept agreeing forever.
+    const one = emit('world_remove_actor', {}, ONE, {ACTOR: 'actor'});
+    const every = emit('world_remove_actor', {}, KIND, {
+      ACTOR: 'world.actors.ofType("actors/coin")',
+    });
+
+    expect(one).toBe('world.removeActor(actor);\n');
+    expect(every).toContain('WorldLab.each(');
+    expect(every).toContain('world.removeActor(actor)');
+  });
 });
 
 describe('a value over an actor value', () => {

@@ -118,6 +118,29 @@ describe('World.removeActor', () => {
     expect(gem.world).toBe(world);
   });
 
+  it('takes out every actor of one kind, and leaves the rest', () => {
+    // What `remove actor ⟨any Coin⟩` compiles to: the broadcast over
+    // `world.actors.ofType(…)`. Removing all of a kind needs no block of its
+    // own — this pair is it — so this pins down that the pair does the job.
+    const world = makeWorld();
+    for (const id of ['coin1', 'coin2', 'coin3']) {
+      world.addActor(
+        new ActorBuilder({id: 'coin', name: 'Coin'})
+          .set(PositionProperty, new Vector(10, 10))
+          .instantiate(id),
+      );
+    }
+    place(world, 'gem');
+
+    // `WorldLab.each` over a snapshot, which is what the generated code does:
+    // `ofType` already returns a new array, so the walk is not the list.
+    for (const coin of world.actors.ofType('coin')) {
+      world.removeActor(coin);
+    }
+
+    expect(ids(world)).toEqual(['ground', 'gem']);
+  });
+
   it('empties the world at setup, where nothing is ticking', () => {
     // `WorldBuilder.clear`'s case: place, then replace. Immediate, because
     // there is no walk in progress to disturb.

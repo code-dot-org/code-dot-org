@@ -2086,13 +2086,28 @@ const worldThisActor = defineBlock({
  * .instantiate`), so a handler has to be registered before the actors are
  * placed — which is what `assembleWorldModule` orders (event hats above the
  * world block).
+ *
+ * The two context guards are for the OTHER compilation, the one that reads the
+ * live world: `world.actors.ofType(…)` needs a `world`, and needs it to be the
+ * running one. Neither fires on the hat-subject case, which names the template
+ * and touches no world at all — an event hat stops both walks (`inWorldContext`
+ * counts it as binding `world`; `inBuilderContext` stops before reaching
+ * `define world`). What they do catch is `any ⟨Coin⟩` read as a value where
+ * there is no live world to read it from: inside `define actor`, where `world`
+ * is unbound, and directly under `define world`, where the name is the builder
+ * — which has no `actors` at all, so the call would be a TypeError on a line
+ * the learner never wrote.
  */
 const worldActorKind = defineBlock({
   type: 'world_actor_kind',
   message0: 'any %1',
   args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
   output: 'Actor',
-  extensions: [actorOptionsExtension],
+  extensions: [
+    actorOptionsExtension,
+    worldContextExtension,
+    runtimeWorldExtension,
+  ],
   // Actor values share the sprite style — the color that groups the actors.
   style: 'sprite_blocks',
   tooltip:
@@ -3750,6 +3765,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',
+      // Here as well as in Actor, because this is the category a world file is
+      // built from and `any ⟨Coin⟩` is what its blocks take as a subject. It is
+      // also how "remove every coin" is written: `remove actor` over a value
+      // holding several broadcasts, so the two blocks together are the bulk
+      // operation, and no third block has to exist to say it.
+      'world_actor_kind',
       // Many of one kind, arranged on a map that lives in this world (MAPS.md).
       'world_create_in_map',
       'world_add_world_effect',
