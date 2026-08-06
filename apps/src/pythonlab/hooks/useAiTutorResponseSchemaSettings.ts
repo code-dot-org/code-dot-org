@@ -10,19 +10,15 @@ import {aiTutorResponseJsonSchema} from '../helpers/aiTutorStructuredResponseHel
 
 /**
  * Custom hook that provides AI tutor response schema settings for Python Lab.
- * Python Lab uses copy-paste only (no accept/reject flow).
+ * Python Lab uses copy-paste only (no accept/reject flow), so a response only
+ * ever needs formatting -- there is nothing to do when one arrives.
  */
 export const useAiTutorResponseSchemaSettings = (): ResponseSchemaSettings => {
   return useMemo(() => {
     return {
       jsonSchema: aiTutorResponseJsonSchema,
-      // Only ever invoked with the already-parsed jsonSchema response --
-      // submitChatContents parses it once, upstream of this callback.
-      jsonSchemaResponseCallback: (response: unknown) => {
+      formatForDisplay: (response: unknown) => {
         const jsonResponse = response as {answer: AiTutorCopyPasteResponse};
-        console.log('🤖: AI Tutor response (in jsonSchema callback):', {
-          jsonResponse,
-        });
         return formatCopyPasteResponse(jsonResponse.answer);
       },
     };

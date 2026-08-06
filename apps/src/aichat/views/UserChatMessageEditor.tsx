@@ -40,6 +40,10 @@ interface UserChatMessageEditorProps {
 
   lessonId?: number;
 
+  // Forwarded to submitChatContents, which invokes it once for a schema lab's
+  // response after that response has been logged.
+  onSchemaResponse?: (response: unknown) => void;
+
   /** UploadButton props */
   uploadDisabled?: UploadButtonProps['isDisabled'];
   levelName?: UploadButtonProps['levelName'];
@@ -71,6 +75,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   chatDisabled,
   sendDisabled = false,
   onMessageSent,
+  onSchemaResponse,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
   const isWaitingForChatResponse = useAppSelector(
@@ -127,6 +132,7 @@ const UserChatMessageEditor: React.FunctionComponent<
                 ? Object.values(userAddedSelectionContext)
                 : undefined,
             lessonId,
+            onSchemaResponse,
           })
         );
         onMessageSent?.();
@@ -144,6 +150,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       userAddedSelectionContext,
       lessonId,
       onMessageSent,
+      onSchemaResponse,
     ]
   );
 

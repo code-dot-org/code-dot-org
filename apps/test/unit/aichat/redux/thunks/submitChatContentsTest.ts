@@ -100,11 +100,6 @@ describe('submitChatContents', () => {
     mockSendAnalytics.mockReturnValue({type: 'analytics/send'});
   });
 
-  // jsonSchemaResponseCallback used to run here, rewriting chatMessageText
-  // before the message was saved. It now runs at render time instead
-  // (applySchemaDisplayTransform), so what gets saved is the model's response
-  // verbatim -- which is what lets the server check saved history against what
-  // the model actually produced.
   it('saves the model response verbatim, without reshaping it', async () => {
     mockPostAichatCompletionMessage.mockResolvedValue(
       makeMessages({
@@ -159,6 +154,99 @@ describe('submitChatContents', () => {
           status: Status.ERROR,
           chatMessageText: 'Error: service account missing',
         }),
+      ])
+    );
+  });
+
+  it('hands a structured response to onSchemaResponse once, parsed', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({
+        chatMessageText: '{"answer":{"explanation":"do this"}}',
+        status: Status.OK,
+      })
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).toHaveBeenCalledTimes(1);
+    expect(onSchemaResponse).toHaveBeenCalledWith({
+      answer: {explanation: 'do this'},
+    });
+  });
+
+  it('does not notify onSchemaResponse for a non-schema response', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: 'just prose', status: Status.OK})
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).not.toHaveBeenCalled();
+  });
+
+  it('does not notify onSchemaResponse for an errored response', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({
+        chatMessageText: '{"answer":"nope"}',
+        status: Status.ERROR,
+      })
+    );
+    const onSchemaResponse = jest.fn();
+    const store = makeStore();
+
+    await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse,
+      })
+    );
+
+    expect(onSchemaResponse).not.toHaveBeenCalled();
+  });
+
+  // A lab that throws while loading the model's code must not fail the send:
+  // the response is already saved and on screen by then.
+  it('still fulfills when onSchemaResponse throws', async () => {
+    mockPostAichatCompletionMessage.mockResolvedValue(
+      makeMessages({chatMessageText: '{"answer":"x"}', status: Status.OK})
+    );
+    const store = makeStore();
+
+    const result = await store.dispatch(
+      submitChatContents({
+        text: 'Hello',
+        modelParameters,
+        clientType: AiChatClientTypes.AI_TUTOR,
+        onSchemaResponse: () => {
+          throw new Error('lab blew up');
+        },
+      })
+    );
+
+    expect(submitChatContents.fulfilled.match(result)).toBe(true);
+    expect(store.getState().aichat.chatEventsCurrent).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({chatMessageText: '{"answer":"x"}'}),
       ])
     );
   });
