@@ -2248,6 +2248,51 @@ const worldCountActors = defineBlock({
   },
 });
 
+/**
+ * Whether a value holds any actor at all.
+ *
+ * The question `first actor … where …` created the need for. A search that
+ * matches nothing answers with a value holding NO actors (specs/ACTOR_LISTS.md),
+ * which is what keeps `remove actor ⟨first actor … where …⟩` from failing — but
+ * a program that wants to do something ELSE when there was no match has to be
+ * able to ask, and until now the only way to ask was `how many actors in ⟨…⟩ >
+ * 0`, which is arithmetic standing in for a yes-or-no question.
+ *
+ * `any actors in ⟨…⟩` rather than `any ⟨…⟩`, which is what it was asked for:
+ * `any ⟨Coin⟩` is already a block, and it is an ACTOR — so `any ⟨…⟩` returning
+ * a Boolean would put two different answers behind one word, and `any ⟨any
+ * ⟨Coin⟩⟩` would be a sentence nobody should have to parse. The longer name
+ * also lines this up with the two questions it belongs beside: `how many actors
+ * in ⟨…⟩` and `⟨x⟩ is in ⟨…⟩`.
+ */
+const worldAnyActors = defineBlock({
+  type: 'world_any_actors',
+  message0: 'any actors in %1',
+  args0: [{type: 'input_value', name: 'LIST', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Boolean',
+  // The socket is a LIST, so it seeds `all actors` — not `actorInput`'s `this
+  // actor`, which would make the block dragged out read `any actors in ⟨this
+  // actor⟩` and answer true forever.
+  extensions: [valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'Whether there is at least one actor in the list. Answers no for a value ' +
+    'holding none — what a search that matched nothing gives back.',
+  generator: {
+    javascript(block, generator) {
+      const list = actorTarget(block, generator, Order.NONE, 'LIST');
+      return [`WorldLab.all(${list.code}).length > 0`, Order.RELATIONAL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_any_actors', [
+  {name: 'LIST', shadow: {type: 'world_all_actors'}},
+]);
+
 /** Whether an actor is among the actors a value holds. */
 const worldIsInActors = defineBlock({
   type: 'world_is_in_actors',
@@ -2306,6 +2351,77 @@ const worldForEach = defineBlock({
   },
 });
 registerValueShadows('world_for_each', [
+  {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
+  {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
+]);
+
+/**
+ * The first actor a test accepts — `for each … where` that stops and hands one
+ * back.
+ *
+ * The same three parts in the same order, so the two read as one idea in two
+ * moods: a variable to call the actor being considered, a source to look
+ * through, a test to apply. What differs is what comes out. The loop is a
+ * statement and runs a body; this is a value, and the answer is the actor.
+ *
+ * It exists because the alternative is a paragraph: declare a variable, loop,
+ * test, assign, and remember to stop — five blocks and a bug (the loop that
+ * forgets to stop keeps going and answers with the LAST match, not the first).
+ * "The coin I am touching" is one thought and should be one block.
+ *
+ * NOTHING MATCHING answers with an actor value holding NONE — not with an
+ * error, and not with some other actor. That is the language's existing answer
+ * for "no actors" (specs/ACTOR_LISTS.md): `empty ⟨var⟩` makes such a value, and
+ * a statement over one runs no times. So `remove actor ⟨first actor … where …⟩`
+ * that matches nothing removes nothing, which is what the block is reaching for.
+ * `how many actors in ⟨…⟩` is how a program asks whether there was a match, and
+ * reading a property off no match fails the way a deleted actor does.
+ *
+ * Which is why this is in `manyActors`' MANY_BY_TYPE: the value is zero-or-one,
+ * never guaranteed-one, and a statement over it needs the same broadcast
+ * wrapper a many-valued one does.
+ *
+ * The loop variable is bound for the WHERE socket the same way the loop binds
+ * it for its body — Blockly variables are workspace-wide, so the two blocks
+ * behave alike here too, including sharing a variable if both name the same one.
+ */
+const worldFirstWhere = defineBlock({
+  type: 'world_first_where',
+  message0: 'first actor %1 in %2 where %3',
+  args0: [
+    ActorVariable.field('VAR'),
+    {type: 'input_value', name: 'SOURCE', check: 'Actor'},
+    {type: 'input_value', name: 'WHERE', check: 'Boolean'},
+  ],
+  output: 'Actor',
+  // Same guard and same shadows as the loop: the default source is the world's
+  // own actors, so `world` has to be bound, and a block dragged out reads as
+  // `first actor ⟨other⟩ in ⟨all actors⟩ where ⟨true⟩`.
+  extensions: [worldContextExtension, valueShadowExtension],
+  // Actor values share the sprite style — the colour that groups the actors —
+  // rather than the loop colour of the block it mirrors. What a block hands
+  // over is what its colour says, and this one hands over an actor.
+  style: 'sprite_blocks',
+  tooltip:
+    'The first actor the “where” test accepts, looking through the actors in ' +
+    'the list. Bind the variable to read the actor being considered. When none ' +
+    'of them match it answers with no actors, so a statement using it does ' +
+    'nothing rather than failing.',
+  generator: {
+    javascript(block, generator) {
+      const variable = generator.getVariableName(block.getFieldValue('VAR'));
+      const where = generator.valueToCode(block, 'WHERE', Order.NONE) || 'true';
+      // `actorSource` hands back exactly what the loop walks — `world.actors`
+      // for the common case, `WorldLab.all(…)` otherwise — and `firstWhere`
+      // takes an iterable so that both work without a copy.
+      return [
+        `WorldLab.firstWhere(${actorSource(block, generator)}, ${variable} => ${where})`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
+    },
+  },
+});
+registerValueShadows('world_first_where', [
   {name: 'SOURCE', shadow: {type: 'world_all_actors'}},
   {name: 'WHERE', shadow: {type: 'logic_boolean', fields: {BOOL: 'TRUE'}}},
 ]);
@@ -3663,8 +3779,10 @@ export const DOMAIN_BLOCKS = [
   worldPushActor,
   worldClearActors,
   worldCountActors,
+  worldAnyActors,
   worldIsInActors,
   worldForEach,
+  worldFirstWhere,
   worldIsA,
   worldAddActor,
   worldRemoveActor,
@@ -3749,6 +3867,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_push_actor',
       'world_clear_actors',
       'world_count_actors',
+      'world_any_actors',
       'world_is_in_actors',
       ActorVariable.getterType,
       'world_is_a',
@@ -3834,7 +3953,8 @@ const ENGINE_CATEGORY: ToolboxCategory = {
 };
 
 const TOOLBOX_TAIL: ToolboxCategory[] = [
-  {name: 'Loops', blocks: ['world_for_each']},
+  // The loop, and the same question asked for one answer instead of a body.
+  {name: 'Loops', blocks: ['world_for_each', 'world_first_where']},
   {name: 'Console', blocks: ['world_log', 'world_print', 'world_event_value']},
   {
     name: 'Logic',
@@ -3845,6 +3965,9 @@ const TOOLBOX_TAIL: ToolboxCategory[] = [
       'logic_negate',
       'logic_boolean',
       'world_has_trait', // whether an actor has a trait
+      // …and whether there is an actor to ask about at all, which is how a
+      // program tests a search that may have matched nothing.
+      'world_any_actors',
     ],
   },
   {

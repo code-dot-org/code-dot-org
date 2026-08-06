@@ -20,8 +20,20 @@
 
 import type {Blockly} from '@code-dot-org/blockly';
 
-/** Blocks that hand out more than one actor whatever the workspace says. */
-const MANY_BY_TYPE = new Set(['world_actor_kind', 'world_all_actors']);
+/**
+ * Blocks that do not hand out exactly one actor, whatever the workspace says.
+ *
+ * More than one for the first two. NONE, possibly, for `first actor … where`:
+ * a search that matches nothing answers with a value holding no actors, and
+ * zero needs the wrapper for the same reason many does — `WorldLab.each` over
+ * it runs the statement no times, where the bare call would run it once on
+ * nothing and throw.
+ */
+const MANY_BY_TYPE = new Set([
+  'world_actor_kind',
+  'world_all_actors',
+  'world_first_where',
+]);
 
 /** The blocks that make a variable a list by naming it. */
 const MAKES_MANY = new Set(['world_push_actor', 'world_clear_actors']);

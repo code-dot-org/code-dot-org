@@ -86,6 +86,21 @@ describe('a statement over an actor value', () => {
     );
   });
 
+  it('wraps `first actor … where …`, which may hold no actor at all', () => {
+    // Zero needs the wrapper for the same reason many does, and this is the
+    // block that can answer zero: a search that matches nothing. Broadcast, the
+    // statement runs no times; called bare it would run once on nothing and
+    // throw — a TypeError naming a value the learner never wrote.
+    const code = emit('world_remove_actor', {}, 'world_first_where', {
+      ACTOR: 'WorldLab.firstWhere(world.actors, other => true)',
+    });
+
+    expect(code).toBe(
+      'WorldLab.each(WorldLab.firstWhere(world.actors, other => true), ' +
+        'actor => world.removeActor(actor));\n',
+    );
+  });
+
   it('is how "remove every coin" is written — no bulk block needed', () => {
     // The same pair as above, stated as the thing a learner is trying to do.
     // `remove actor` over a value holding several IS the bulk operation, so a
@@ -262,6 +277,22 @@ describe('building a group', () => {
     ) as [string, number];
 
     expect(code).toBe('WorldLab.all([...world.actors]).length');
+  });
+
+  it('asks whether there is any actor at all', () => {
+    // The question `first actor … where …` needs: a search that matched
+    // nothing answers with a value holding none, and this is how a program
+    // tests for that without doing arithmetic to ask a yes-or-no question.
+    const [code] = emitWith(
+      'world_any_actors',
+      {},
+      {LIST: 'world_first_where'},
+      {LIST: 'WorldLab.firstWhere(world.actors, other => true)'},
+    ) as [string, number];
+
+    expect(code).toBe(
+      'WorldLab.all(WorldLab.firstWhere(world.actors, other => true)).length > 0',
+    );
   });
 
   it('asks whether an actor is among them', () => {

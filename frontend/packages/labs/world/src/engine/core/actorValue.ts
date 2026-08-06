@@ -44,6 +44,46 @@ export function each(value: ActorValue, body: (actor: Actor) => void): void {
 }
 
 /**
+ * The first actor `where` accepts — `for each … where` stopped at the match.
+ *
+ * Takes an iterable rather than an `ActorValue` because it is handed exactly
+ * what the loop's `for … of` walks: `world.actors` (a collection) when the
+ * source is `all actors`, and `all(…)` otherwise. Both iterate; only one is an
+ * array, so anything that needed indexing would have to copy first, and copying
+ * the world to look at its first actor is the wrong shape for a search.
+ *
+ * STOPS at the match, which is the whole difference from the loop. A world with
+ * a thousand actors asked for the nearest one still walks a thousand; asked for
+ * "a Coin" it walks until it finds one.
+ *
+ * ANSWERS WITH A LIST — of one actor, or of none. A search that finds nothing
+ * is an ordinary outcome, and this is already the language's answer for it: an
+ * actor value holds one actor or several (specs/ACTOR_LISTS.md), `empty ⟨var⟩`
+ * makes one holding none, and the rule for a value holding none is settled —
+ * {@link each} runs nothing, because "a broadcast to nothing should not be an
+ * error a learner has to guard". So `remove actor ⟨first actor … where …⟩` with
+ * no match removes nothing, quietly and correctly, which is what the block is
+ * usually reaching for.
+ *
+ * Returning the bare actor instead would answer `undefined`, and that would
+ * crash the same program on a `TypeError` about a value the learner never
+ * named. Reading a PROPERTY off no match still fails — `one([])` is undefined,
+ * as {@link one} documents — but that is the case where failing is right, and
+ * `how many actors in ⟨…⟩` is the guard for it that already exists.
+ */
+export function firstWhere(
+  actors: Iterable<Actor>,
+  where: (actor: Actor) => boolean,
+): readonly Actor[] {
+  for (const actor of actors) {
+    if (where(actor)) {
+      return [actor];
+    }
+  }
+  return [];
+}
+
+/**
  * `value` with `actor` added — what `push … to ⟨var⟩` assigns back.
  *
  * A value already holding several is appended to IN PLACE, because a set built
