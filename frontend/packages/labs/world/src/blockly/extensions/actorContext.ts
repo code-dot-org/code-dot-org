@@ -144,6 +144,33 @@ export const runtimeWorldExtension = runtimeContextExtension(
   'This happens while the game runs. Try placing it inside an event, not under "define world".',
 );
 
+export const BUILDER_WORLD_EXTENSION = 'world_needs_world_builder';
+
+/**
+ * For the blocks that PLACE actors: `add actor`, `load map`, `create … in map`.
+ *
+ * Placement is a `WorldBuilder` method and only that. `WorldBuilder` has
+ * `define`, `loadMap` and an `addActor(builder, id, type)` that instantiates a
+ * template; the live `World` has none of the first two and an `addActor(actor)`
+ * that takes an already-made Actor. So `world.addActor(Coin, "c1", "actors/coin")`
+ * — which is what the block generates — reaches the wrong object entirely once
+ * `world` is the live one, and pushes an `ActorBuilder` into the actor list
+ * rather than failing. Nothing throws; the game simply has a thing in it that
+ * is not an actor, and every rule that walks the actors meets it.
+ *
+ * That is the whole reason this is a warning and not a comment somewhere: the
+ * failure is silent, and it is silent in the one place a learner is most likely
+ * to try it — spawning something from an event ("when the button is pressed,
+ * add a coin"). Runtime spawning is a real thing to want and is not built; until
+ * it is, saying so in the editor is the honest answer.
+ */
+export const builderWorldExtension = builderContextExtension(
+  BUILDER_WORLD_EXTENSION,
+  ['world_world'],
+  'This places actors as the world is built. Chain it under "define world" — ' +
+    'inside an event there is no world being built to add to.',
+);
+
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';
 
 /**
