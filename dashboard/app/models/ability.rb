@@ -23,6 +23,7 @@ class Ability
       ReferenceGuide, # see override below
       Rubric,
       :reports,
+      :widget2, # levelbuilder only, see override below
       User,
       UserPermission,
       Follower,
@@ -518,6 +519,8 @@ class Ability
       can [:upload, :upload_by_uuid, :destroy], :level_starter_asset
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
+
+      can :manage, :widget2
 
       can [:validate_form, :validate_library_question], :pd_foorm
     end

@@ -1685,4 +1685,75 @@ class LevelTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test 'ui_test_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_name?('UI Test Some Level')
+    assert Level.ui_test_name?('ui test lowercase')
+    refute Level.ui_test_name?('Some Level')
+    refute Level.ui_test_name?('My UI Test Level')
+    refute Level.ui_test_name?('UI Testless')
+    refute Level.ui_test_name?(nil)
+
+    assert create(:level, name: 'UI Test predicate probe').ui_test?
+    refute create(:level, name: 'Regular predicate probe').ui_test?
+  end
+
+  test 'cannot rename a level across the UI Test boundary while used by a script' do
+    level = create(:level, name: 'LevelTest boundary rename')
+    create(:script_level, levels: [level])
+
+    level.name = 'UI Test LevelTest boundary rename'
+    refute level.valid?
+    assert_includes level.errors.full_messages.first, 'UI Test'
+
+    # renames within the same partition are unaffected
+    level.reload.name = 'LevelTest boundary rename 2'
+    assert level.valid?
+  end
+
+  test 'can rename a level across the UI Test boundary when not used by a script' do
+    level = create(:level, name: 'LevelTest free rename')
+    level.name = 'UI Test LevelTest free rename'
+    assert level.valid?
+  end
+
+  test 'UI test levels cannot be created, edited, or destroyed on levelbuilder' do
+    ui_test_level = create(:level, name: 'UI Test LevelTest levelbuilder guard')
+    prod_level = create(:level, name: 'LevelTest levelbuilder guard')
+
+    CDO.stubs(:rack_env).returns(:levelbuilder)
+
+    refute build(:level, name: 'UI Test LevelTest levelbuilder create').valid?
+
+    ui_test_level.notes = 'edited'
+    refute ui_test_level.valid?
+    assert_includes ui_test_level.errors.full_messages.first, 'levelbuilder'
+
+    # renaming a UI Test level to a production name is still an edit
+    ui_test_level.reload.name = 'LevelTest levelbuilder rename'
+    refute ui_test_level.valid?
+
+    refute ui_test_level.reload.destroy
+    refute ui_test_level.destroyed?
+
+    # production levels are unaffected
+    prod_level.notes = 'edited'
+    assert prod_level.valid?
+    assert prod_level.destroy
+  end
+
+  test 'cannot rename a level across the UI Test boundary while attached to another level' do
+    child = create(:level, name: 'LevelTest attached child')
+    parent = create(:level, name: 'LevelTest attached parent', child_levels: [child])
+
+    # a child with no script_levels of its own is still pinned by its parent
+    child.name = 'UI Test LevelTest attached child'
+    refute child.valid?
+    assert_includes child.errors[:name].first, 'UI Test'
+
+    # and a parent is pinned by its children
+    parent.name = 'UI Test LevelTest attached parent'
+    refute parent.valid?
+    assert_includes parent.errors[:name].first, 'UI Test'
+  end
 end

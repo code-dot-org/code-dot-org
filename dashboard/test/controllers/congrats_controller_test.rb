@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class CongratsControllerTest < ActionController::TestCase
-  setup_all do
-    # The page header falls back to the hourofcode unit,
-    # so full page renders need it to exist.
-    create_hourofcode_unit_and_levels
-  end
-
   test "shows congrats page for HoC course" do
     hoc_course = create(:hoc_course)
     get :index, params: {s: Base64.urlsafe_encode64(hoc_course.name)}
