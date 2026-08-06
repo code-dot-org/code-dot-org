@@ -238,6 +238,70 @@ export const commands = {
     return touching;
   },
 
+  // isDirectlyAbove with a tolerance band: block-implemented gravity moves
+  // in whole-frame steps, so a landing's feet end up to one frame's fall
+  // past the surface, where the exact-equality check never sees them.
+  isStandingOn(spriteArg, targetArg) {
+    const STANDING_TOLERANCE = 16;
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let standing = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      if (spriteCollider.bottom >= APP_HEIGHT) {
+        standing = true;
+        return;
+      }
+      for (const target of targets) {
+        const targetCollider = createSpriteCollider(target);
+        if (
+          spriteCollider.bottom >= targetCollider.top &&
+          spriteCollider.bottom <= targetCollider.top + STANDING_TOLERANCE &&
+          spriteCollider.left <= targetCollider.right &&
+          spriteCollider.right >= targetCollider.left
+        ) {
+          standing = true;
+          break;
+        }
+      }
+    });
+    return standing;
+  },
+
+  // isStandingOn's horizontal sibling, with the same whole-frame-step band.
+  // The vertical-overlap floor keeps the tile a sprite merely stands on from
+  // reading as a side block.
+  isBumpingSide(spriteArg, targetArg, side) {
+    const SIDE_TOLERANCE = 8;
+    const MIN_VERTICAL_OVERLAP = 12;
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let bumping = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      for (const target of targets) {
+        const targetCollider = createSpriteCollider(target);
+        const verticalOverlap =
+          Math.min(spriteCollider.bottom, targetCollider.bottom) -
+          Math.max(spriteCollider.top, targetCollider.top);
+        if (verticalOverlap <= MIN_VERTICAL_OVERLAP) {
+          continue;
+        }
+        const blockedRight =
+          spriteCollider.left < targetCollider.left &&
+          spriteCollider.right >= targetCollider.left - SIDE_TOLERANCE;
+        const blockedLeft =
+          spriteCollider.right > targetCollider.right &&
+          spriteCollider.left <= targetCollider.right + SIDE_TOLERANCE;
+        if (side === 'right' ? blockedRight : blockedLeft) {
+          bumping = true;
+          break;
+        }
+      }
+    });
+    return bumping;
+  },
+
   jumpTo(spriteArg, location) {
     if (!location) {
       return;

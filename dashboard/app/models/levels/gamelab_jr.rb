@@ -42,6 +42,7 @@ class GamelabJr < Gamelab
     guide_mode
     show_world_tab
     show_large_world
+    show_behavior2_tab
   )
 
   def shared_blocks

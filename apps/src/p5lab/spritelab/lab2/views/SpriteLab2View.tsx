@@ -38,6 +38,16 @@ import {
   uploadAssetToProject,
   UploadImageFunction,
 } from '../ai/items/itemGeneration';
+import {compileBehavior2Sources} from '../blockly/behavior2';
+import {
+  BEHAVIOR2_SYSTEMS,
+  customBehavior2Meta,
+  setBehavior2Registry,
+} from '../blockly/behavior2Meta';
+import {
+  DEFAULT_BEHAVIOR2S,
+  emptySystemSource,
+} from '../blockly/defaultBehavior2s';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {compileWorkspaceSource} from '../blockly/setup';
@@ -77,6 +87,8 @@ import {
   WorldCell,
 } from '../world';
 
+import Behavior2Selector from './Behavior2Selector';
+import Behavior2Tab from './Behavior2Tab';
 import {isPointerClick} from './blurAfterPointerClick';
 import TabShell from './components/TabShell';
 import GenerateImagePane from './GenerateImagePane';
@@ -119,6 +131,9 @@ function getWorldTabParams() {
   return {
     enabled: params.get('world-tab') === 'true',
     large: params.get('world') === 'large',
+    // Behavior2 prototype: compose the project's system implementations into
+    // every run (the Systems category's start block dispatches into them).
+    behavior2: params.get('behavior2') === 'true',
   };
 }
 
@@ -198,7 +213,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     enabled: worldTabParams.enabled || !!levelProperties.showWorldTab,
     large: worldTabParams.large || !!levelProperties.showLargeWorld,
   };
-  const tabs = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
+  const behavior2Enabled =
+    worldTabParams.behavior2 || !!levelProperties.showBehavior2Tab;
+  const tabs = useMemo(() => {
+    const base = worldTab.enabled ? WORLD_TABS : ENABLED_TABS;
+    if (!behavior2Enabled) {
+      return base;
+    }
+    // Systems sits between Images and the scene-editing group.
+    return ['Images' as const, 'Systems' as const, ...base.slice(1)];
+  }, [worldTab.enabled, behavior2Enabled]);
   // The Images tab mounts once (idle pre-mount after seeding, or first
   // visit) and stays mounted clipped, so no visit pays the mount cost.
   const [imagesMounted, setImagesMounted] = useState(false);
@@ -537,6 +561,58 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeWorldRef.current = activeScene?.world;
   }, [activeScene]);
 
+  // The system implementations, stored merged over defaults by name: an
+  // edited system shadows its default, an untouched one keeps tracking the
+  // bundle, created systems follow.
+  const behavior2s = useMemo(() => {
+    const stored = currentSources.behavior2s ?? [];
+    return [
+      ...DEFAULT_BEHAVIOR2S.map(d => stored.find(b => b.name === d.name) ?? d),
+      ...stored.filter(b => !DEFAULT_BEHAVIOR2S.some(d => d.name === b.name)),
+    ];
+  }, [currentSources.behavior2s]);
+  // Which system the Systems tab shows.
+  const [activeSystemName, setActiveSystemName] = useState(
+    DEFAULT_BEHAVIOR2S[0].name
+  );
+  const activeSystem =
+    behavior2s.find(b => b.name === activeSystemName) ?? behavior2s[0];
+
+  // Keep the system dropdowns' registry in step with this project's systems
+  // (built-in meta for the built-ins, generic strength meta for created
+  // ones), so a new system appears in every system dropdown.
+  useEffect(() => {
+    setBehavior2Registry(
+      behavior2s.map(
+        b =>
+          BEHAVIOR2_SYSTEMS.find(meta => meta.name === b.name) ??
+          customBehavior2Meta(b.name)
+      )
+    );
+  }, [behavior2s]);
+
+  // Composed ahead of every run. Compiled at run time (block types register
+  // when the workspace injects — an early compile would fail and stick) and
+  // read through a ref (the debounced preview fires with a stale runProgram
+  // closure but must see edits saved since).
+  const behavior2sRef = useRef(behavior2s);
+  useEffect(() => {
+    behavior2sRef.current = behavior2s;
+  }, [behavior2s]);
+  const getBehavior2Code = useCallback(() => {
+    if (!behavior2Enabled) {
+      return '';
+    }
+    try {
+      return compileBehavior2Sources(behavior2sRef.current);
+    } catch (e) {
+      // A system that fails to compile shouldn't take the scene down; the
+      // start block dispatches through the registry and skips it.
+      console.error('Failed to compile behavior2 systems', e);
+      return '';
+    }
+  }, [behavior2Enabled]);
+
   // Run the current program as the live preview (cheap: the engine reuses p5).
   const runProgram = useCallback(() => {
     const engine = engineRef.current;
@@ -545,9 +621,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     dispatch(setIsRunning(true));
     engine.runProgram(
-      compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+      getBehavior2Code() +
+        compileWorldPrelude(activeWorldRef.current) +
+        (getCode() ?? '')
     );
-  }, [dispatch, getCode]);
+  }, [dispatch, getCode, getBehavior2Code]);
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -583,9 +661,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         console.error('Failed to compile scene', scene.id, e);
       }
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      engine.runProgram(getBehavior2Code() + prelude + code);
     },
-    [dispatch, activeSceneId, getCode]
+    [dispatch, activeSceneId, getCode, getBehavior2Code]
   );
 
   const runScene = useCallback(
@@ -686,9 +764,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ),
       };
       dispatch(setIsRunning(true));
-      engine.runProgram(prelude + code);
+      // The local project's systems, not the external one's: behavior2s
+      // aren't part of the external fetch (prototype simplification).
+      engine.runProgram(getBehavior2Code() + prelude + code);
     },
-    [dispatch, compileExternalScene]
+    [dispatch, compileExternalScene, getBehavior2Code]
   );
 
   // Fetch the classmate's project fresh (their scenes may have changed);
@@ -924,6 +1004,41 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [updateSources, activeSceneId, scheduleRun]
   );
 
+  // Save a Systems-tab edit and refresh the preview. Only the edited system
+  // is stored — untouched systems stay on the bundle defaults through the
+  // per-name merge above.
+  const handleSystemSourceChange = useCallback(
+    (name: string, source: WorkspaceSerialization) => {
+      updateSources(prev => {
+        const stored = prev.behavior2s ?? [];
+        return {
+          ...prev,
+          behavior2s: stored.some(b => b.name === name)
+            ? stored.map(b => (b.name === name ? {...b, source} : b))
+            : [...stored, {name, source}],
+        };
+      });
+      scheduleRun();
+    },
+    [updateSources, scheduleRun]
+  );
+
+  // Create a named system with the bare-loop starter and show it. Both
+  // updates land in one commit, so the selector sees the new entry.
+  const handleCreateSystem = useCallback(
+    (name: string) => {
+      updateSources(prev => ({
+        ...prev,
+        behavior2s: [
+          ...(prev.behavior2s ?? []),
+          {name, source: emptySystemSource()},
+        ],
+      }));
+      setActiveSystemName(name);
+    },
+    [updateSources]
+  );
+
   // A user edit: the workspace already displays this content; persist it
   // and refresh the preview.
   const handleWorkspaceChange = useCallback(
@@ -1095,6 +1210,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         enabledTabs={tabs}
         visibleTabs={tabs}
         onClickStartOver={isEditable ? () => setShowStartOver(true) : undefined}
+        systemsTabExtra={
+          behavior2Enabled && animationsSeeded ? (
+            <Behavior2Selector
+              behavior2s={behavior2s}
+              activeName={activeSystem.name}
+              disabled={activeTab !== 'Systems'}
+              onSelect={setActiveSystemName}
+              onCreate={handleCreateSystem}
+            />
+          ) : undefined
+        }
         codeTabExtra={
           animationsSeeded ? (
             <SceneSelector
@@ -1148,6 +1274,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
           )}
         </div>
+
+        {/* Kept mounted (clipped) like the Code tab, so the systems workspace
+          survives tab switches. */}
+        {behavior2Enabled && animationsSeeded && (
+          <div
+            className={moduleStyles.codeTabWrapper}
+            style={{
+              clipPath: activeTab === 'Systems' ? 'none' : 'inset(100%)',
+              pointerEvents: activeTab === 'Systems' ? 'auto' : 'none',
+            }}
+          >
+            <Behavior2Tab
+              enabled={animationsSeeded}
+              theme={theme}
+              system={activeSystem}
+              sourcesReinitializedCount={sourcesReinitializedCount}
+              onSourceChange={handleSystemSourceChange}
+            />
+          </div>
+        )}
 
         {/* Kept mounted (clipped) like the Code tab: mounting mid-switch eats
           the guide's transition frames, and remounting loses gallery state. */}

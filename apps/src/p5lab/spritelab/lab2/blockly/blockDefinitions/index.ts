@@ -1,5 +1,6 @@
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import behavior2Blocks from './behavior2Blocks';
 import goToExternalScene from './goToExternalScene';
 import goToScene from './goToScene';
 import makePlatformBlocks from './makePlatformBlocks';
@@ -26,6 +27,7 @@ const labBlockDefinitions: {
   makePlatformPlayer,
   makeSpriteAtGrid,
   makePlatformBlocks,
+  ...behavior2Blocks,
 ];
 
 export default labBlockDefinitions;

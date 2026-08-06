@@ -28,6 +28,12 @@ export const commands = {
     }
   },
 
+  // Polls a key (names match the keyPressed block's), for code that runs
+  // every frame anyway and can't use the registration-based events.
+  isKeyHeld(key) {
+    return this.p5.keyDown(key);
+  },
+
   repeatForever(callback) {
     this.addEvent('repeatForever', {}, callback);
   },

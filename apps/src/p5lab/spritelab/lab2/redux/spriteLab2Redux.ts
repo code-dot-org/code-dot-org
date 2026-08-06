@@ -1,7 +1,14 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-// The full set of tabs for the SpriteLab2 full-screen UI.
-export const SPRITE_LAB2_TABS = ['Images', 'World', 'Code', 'Play'] as const;
+// The full set of tabs for the SpriteLab2 full-screen UI. Systems is the
+// behavior2 prototype's tab (visible behind its flag).
+export const SPRITE_LAB2_TABS = [
+  'Images',
+  'Systems',
+  'World',
+  'Code',
+  'Play',
+] as const;
 export type SpriteLab2Tab = (typeof SPRITE_LAB2_TABS)[number];
 
 // AI code-generation lifecycle, modeled on Music's GenerateCode state machine.

@@ -74,6 +74,12 @@ export const commands = {
     return this.addSprite({animation, group, location});
   },
 
+  // The group enumeration interpreted code lacks: getSpriteArray is
+  // engine-side, and events marshal single ids.
+  getSpriteIdsByGroup(group) {
+    return this.getSpriteArray({group}).map(sprite => sprite.id);
+  },
+
   makeNumSprites(numSprites, animation) {
     if (this.reachedSpriteMax()) {
       return;

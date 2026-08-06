@@ -22,6 +22,8 @@ interface TabShellProps {
   // Rendered in the tab bar immediately after the Code button (the scene
   // selector).
   codeTabExtra?: React.ReactNode;
+  // Rendered immediately after the Systems button (the system selector).
+  systemsTabExtra?: React.ReactNode;
   // Rendered immediately after the Play button (the restart controls).
   playTabExtra?: React.ReactNode;
   children: React.ReactNode;
@@ -40,6 +42,7 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
   enabledTabs,
   visibleTabs = SPRITE_LAB2_TABS,
   codeTabExtra,
+  systemsTabExtra,
   playTabExtra,
   children,
   onClickStartOver,
@@ -53,6 +56,9 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
       role="tab"
       aria-selected={activeTab === tab}
       disabled={!enabledTabs.includes(tab)}
+      // The stylesheet reserves the bold (active) width from this copy of
+      // the label, so activating a tab can't widen it and shift the bar.
+      data-text={tab}
       className={classNames(
         moduleStyles.tab,
         activeTab === tab && moduleStyles.tabActive
@@ -103,6 +109,29 @@ const TabShell: React.FunctionComponent<TabShellProps> = ({
                     {codeTabExtra}
                     {button}
                     {renderTab('Code')}
+                  </div>
+                );
+              }
+              // The Systems tab and its selector read as one group, like the
+              // Code tab's below.
+              if (tab === 'Systems' && systemsTabExtra) {
+                return (
+                  <div
+                    key={tab}
+                    className={classNames(
+                      moduleStyles.tabGroup,
+                      activeTab === 'Systems' && moduleStyles.tabGroupActive
+                    )}
+                    // The selector is disabled (pointer-events: none) off the
+                    // Systems tab, so clicks on it land here and activate it.
+                    onClick={() => {
+                      if (activeTab !== 'Systems' && enabled) {
+                        onTabChange('Systems');
+                      }
+                    }}
+                  >
+                    {button}
+                    {systemsTabExtra}
                   </div>
                 );
               }

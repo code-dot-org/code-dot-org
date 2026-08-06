@@ -9,6 +9,7 @@ import {
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
+import {FIELD_SYSTEM_DROPDOWN_TYPE, SystemDropdown} from './behavior2Fields';
 import labBlockDefinitions from './blockDefinitions';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from './blockDefinitions/goToExternalScene';
 import {
@@ -72,6 +73,7 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  Blockly.fieldRegistry.register(FIELD_SYSTEM_DROPDOWN_TYPE, SystemDropdown);
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
       init: function (this: BlocklyCore.Block) {
@@ -80,6 +82,13 @@ function installLabBlocks(): void {
     };
     Blockly.getGenerator().forBlock[definition.type] = generator;
   }
+  // The behavior2 system blocks compile to these identifiers (bound by
+  // compileBehavior2Sources' wrapper and startSystem's helper); keep the
+  // variable name mapper from handing them to a student variable.
+  Blockly.getGenerator().addReservedWords(
+    '__behavior2s,__group,__option,__current,' +
+      'startBehavior2,forEachSpriteOfType'
+  );
 }
 
 /**
@@ -144,6 +153,14 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
     'spritelab2_makeSpriteAtGrid',
     platformerGrid((row, col) => (row === 4 && col === 5 ? 1 : 0)),
   ],
+  [
+    'spritelab2_makeTypedSprites',
+    platformerGrid(row => (row === PLATFORMER_GRID_SIZE - 1 ? 1 : 0)),
+  ],
+  [
+    'spritelab2_makeSpritesWithSystem',
+    platformerGrid((row, col) => (row === 4 && col === 3 ? 1 : 0)),
+  ],
 ]);
 
 // Lab-injected toolbox categories, inserted at the top of every level's
@@ -151,6 +168,23 @@ const GRID_FIELD_DEFAULTS = new Map<string, string>([
 // name is used as written, an EMPTY one suppresses the category, and the
 // default lineup appears only when the level doesn't mention the name.
 const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
+  {
+    // Behavior2 prototype: typed sprites plus the start-system block. The
+    // implementations these start live on the Systems tab.
+    name: 'Systems',
+    types: [
+      'gamelab_setBackgroundImageAs',
+      // The classic platform-tile block: block-image picker, walls group —
+      // what players land on.
+      'spritelab2_makePlatformBlocks',
+      'spritelab2_makeTypedSprites',
+      'spritelab2_makeSpritesWithSystem',
+      'spritelab2_startSystem',
+      'spritelab2_setSystem',
+      'spritelab2_whenSystemReports',
+      'spritelab2_reportedSprite',
+    ],
+  },
   {
     // The platformer composites plus the core event blocks.
     name: 'Platform',
