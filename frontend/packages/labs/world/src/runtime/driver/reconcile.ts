@@ -36,6 +36,8 @@ interface ReconcilableWorld {
     effectDocs: Record<string, string>;
     /** What each layer's background draws, in stack order. */
     backdrops: Array<{layer: string; sprite?: string}>;
+    /** And what each draws in front of its actors. */
+    foregrounds: Array<{layer: string; sprite?: string}>;
     /** The one colour behind everything (engine color.ts). */
     clearColor: [number, number, number, number];
     world: Record<string, unknown>;
@@ -44,6 +46,7 @@ interface ReconcilableWorld {
   setWorldProperty(path: string, value: unknown): boolean;
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: string): unknown;
+  setForeground(sprite: string | undefined, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   setEffectValues(
@@ -113,6 +116,7 @@ export function reconcile(
   // structural and live in `effectIds`.
   const backdropChanged =
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
+    stable(previous.foregrounds) !== stable(snapshot.foregrounds) ||
     stable(previous.clearColor) !== stable(snapshot.clearColor);
 
   // Actor values the LEARNER changed — not values that have merely moved.
@@ -183,6 +187,9 @@ export function reconcile(
     }
     for (const backdrop of snapshot.backdrops) {
       running.setBackground(backdrop.sprite, backdrop.layer);
+    }
+    for (const foreground of snapshot.foregrounds) {
+      running.setForeground(foreground.sprite, foreground.layer);
     }
     // One sky, the world's — not a layer's (World.setBackgroundColor).
     running.setBackgroundColor(snapshot.clearColor);

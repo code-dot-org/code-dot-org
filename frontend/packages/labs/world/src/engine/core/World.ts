@@ -15,6 +15,7 @@ import {
   type Layer,
   type LayerInit,
   type LayerSlot,
+  type SlotName,
 } from './Layer';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
@@ -111,6 +112,8 @@ export interface WorldSnapshot {
    * structural exactly as it is on an actor.
    */
   backdrops: Array<{layer: string; sprite?: string}>;
+  /** The same for what each layer draws in front of its actors. */
+  foregrounds: Array<{layer: string; sprite?: string}>;
   /** The one colour behind everything — a value, patched like the sky above. */
   clearColor: Rgba;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
@@ -186,6 +189,8 @@ export interface WorldInit {
   clearColor?: Rgba;
   /** Backgrounds by layer id — what each layer draws behind its actors. */
   backgrounds?: Record<string, BackdropState>;
+  /** Foregrounds by layer id — what each layer draws in front of them. */
+  foregrounds?: Record<string, BackdropState>;
   /**
    * The layers actors are drawn in, back to front (core/Layer).
    *
@@ -324,11 +329,15 @@ export class World {
     // Backgrounds described before the world existed, copied onto the layers
     // they name. Copied, not adopted, for the reason the effects are: a builder
     // may instantiate more than one world from one description.
-    for (const [id, slot] of Object.entries(init.backgrounds ?? {})) {
-      const layer = this.layer(id);
-      if (layer) {
-        layer.background.sprite = slot.sprite;
-        layer.background.effects = [...slot.effects];
+    for (const which of ['background', 'foreground'] as const) {
+      const described =
+        which === 'background' ? init.backgrounds : init.foregrounds;
+      for (const [id, slot] of Object.entries(described ?? {})) {
+        const layer = this.layer(id);
+        if (layer) {
+          layer[which].sprite = slot.sprite;
+          layer[which].effects = [...slot.effects];
+        }
       }
     }
 
@@ -572,6 +581,18 @@ export class World {
     return this.layerList.map(layer => layer.background);
   }
 
+  /**
+   * The same for the foregrounds — what each layer draws IN FRONT of its
+   * actors, in stack order.
+   *
+   * A second list rather than a second field on the first: the driver draws the
+   * two at different depths and holds a separate image cache for each, so it
+   * wants them apart, and there is nothing either needs to know about the other.
+   */
+  foregroundSnapshot(): readonly BackdropState[] {
+    return this.layerList.map(layer => layer.foreground);
+  }
+
   /** The one colour behind everything, as the driver clears to it. */
   backdropColor(): Rgba {
     return this.clearColor;
@@ -585,9 +606,13 @@ export class World {
    * block, and deleting that block while a `set background` still names it
    * should paint somewhere visible instead of taking the world down.
    */
+  private slotAt(layer: string, which: SlotName): LayerSlot {
+    return (this.layer(layer) ??
+      this.layerList[this.depthOf(DEFAULT_LAYER_ID)])[which];
+  }
+
   private backdropAt(layer: string): LayerSlot {
-    return (this.layer(layer) ?? this.layerList[this.depthOf(DEFAULT_LAYER_ID)])
-      .background;
+    return this.slotAt(layer, 'background');
   }
 
   /**
@@ -600,6 +625,18 @@ export class World {
    */
   setBackground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
     this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /**
+   * Draw `sprite` in FRONT of this layer's actors — fog, snow, a vignette.
+   *
+   * The background's twin in every respect but depth. `undefined` clears it,
+   * leaving nothing drawn: unlike the background there is no colour behind a
+   * foreground, because a colour in front of everything would be a wall.
+   */
+  setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
+    this.slotAt(layer, 'foreground').sprite = sprite;
     return this;
   }
 
@@ -645,6 +682,34 @@ export class World {
     return this;
   }
 
+  /** Play an effect on a layer's FOREGROUND. See {@link addBackgroundEffect}. */
+  addForegroundEffect(
+    path: string,
+    document: AppliedEffectSpec['document'],
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    const spec = values ? {path, document, values} : {path, document};
+    const effects = this.slotAt(layer, 'foreground').effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects[index] = spec;
+      return this;
+    }
+    effects.push(spec);
+    return this;
+  }
+
+  /** Stop an effect on a layer's foreground. Removing one not playing is a no-op. */
+  removeForegroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    const effects = this.slotAt(layer, 'foreground').effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
+    return this;
+  }
+
   /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
   removeBackgroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
     const effects = this.backdropAt(layer).effects;
@@ -665,7 +730,10 @@ export class World {
   allEffects(): AppliedEffectSpec[] {
     return [
       ...this.appliedEffects,
-      ...this.layerList.flatMap(layer => [...layer.background.effects]),
+      ...this.layerList.flatMap(layer => [
+        ...layer.background.effects,
+        ...layer.foreground.effects,
+      ]),
       ...this.actorList.flatMap(actor => [...actor.effects()]),
     ];
   }
@@ -683,12 +751,16 @@ export class World {
       ...this.appliedEffects.map(
         effect => ['world', effect] as [string, AppliedEffectSpec],
       ),
-      ...this.layerList.flatMap(layer =>
-        layer.background.effects.map(
+      ...this.layerList.flatMap(layer => [
+        ...layer.background.effects.map(
           effect =>
             [`backdrop:${layer.id}`, effect] as [string, AppliedEffectSpec],
         ),
-      ),
+        ...layer.foreground.effects.map(
+          effect =>
+            [`foreground:${layer.id}`, effect] as [string, AppliedEffectSpec],
+        ),
+      ]),
       ...this.actorList.flatMap(actor =>
         actor
           .effects()
@@ -728,10 +800,12 @@ export class World {
     if (owner === 'world') {
       return retune(this.appliedEffects);
     }
-    const backdrop = /^backdrop:(.+)$/.exec(owner);
-    if (backdrop) {
-      const layer = this.layer(backdrop[1]);
-      return layer ? retune(layer.background.effects) : false;
+    const slot = /^(backdrop|foreground):(.+)$/.exec(owner);
+    if (slot) {
+      const layer = this.layer(slot[2]);
+      const which: SlotName =
+        slot[1] === 'backdrop' ? 'background' : 'foreground';
+      return layer ? retune(layer[which].effects) : false;
     }
     const actor = this.actorList.find(candidate => candidate.id === owner);
     return actor ? actor.setEffectValues(path, values) : false;
@@ -763,6 +837,7 @@ export class World {
     patch(this.appliedEffects);
     for (const layer of this.layerList) {
       patch(layer.background.effects);
+      patch(layer.foreground.effects);
     }
     for (const actor of this.actorList) {
       actor.setEffectDocument(path, document);
@@ -1031,6 +1106,12 @@ export class World {
         ...(layer.background.sprite === undefined
           ? {}
           : {sprite: layer.background.sprite}),
+      })),
+      foregrounds: this.layerList.map(layer => ({
+        layer: layer.id,
+        ...(layer.foreground.sprite === undefined
+          ? {}
+          : {sprite: layer.foreground.sprite}),
       })),
       clearColor: [...this.clearColor] as Rgba,
       world,

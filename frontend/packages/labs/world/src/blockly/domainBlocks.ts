@@ -3120,7 +3120,53 @@ const worldSetBackground = defineBlock({
       }
       // A whole image, never a cell: a backdrop is not a spritesheet, so this
       // field never carries the `name.png#3` a `set sprite` field can.
-      return `world.setBackground(${str(name)});\n`;
+      // Named with its layer, so a `set background` inside a `define layer`
+      // paints that layer and not the world's default one.
+      return `world.setBackground(${str(name)}, ${str(layerOf(block))});\n`;
+    },
+  },
+});
+
+/**
+ * Draw an image in FRONT of a layer's actors — fog, snow, a vignette.
+ *
+ * The background's twin, and deliberately identical in every respect but the
+ * depth it lands at: same picker, same stretching, same effects, same
+ * everywhere-valid context. Which side of the actors it lands on is a number,
+ * not a kind of thing, which is why nobody has to make a "foreground layer" —
+ * every layer already has both.
+ *
+ * It sets the slot on the layer it is written in, so a `set foreground` inside
+ * a `define layer` fogs that layer and nothing else (blockly/layers).
+ */
+const worldSetForeground = defineBlock({
+  type: 'world_set_foreground',
+  message0: 'set foreground to %1',
+  args0: [
+    {
+      type: 'field_dropdown',
+      name: 'BACKGROUND',
+      options: backgroundFieldOptions,
+    },
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [
+    backgroundOptionsExtension,
+    worldContextExtension,
+    backgroundImportFieldExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw an image in front of this layer’s actors, stretched to fill the ' +
+    'view — fog, snow, a vignette. The images are the project’s backgrounds.',
+  generator: {
+    javascript(block) {
+      const name = block.getFieldValue('BACKGROUND');
+      if (!name || name === IMPORT_BACKGROUND_VALUE) {
+        return '';
+      }
+      return `world.setForeground(${str(name)}, ${str(layerOf(block))});\n`;
     },
   },
 });
@@ -3196,8 +3242,8 @@ const worldAddBackgroundEffect = defineBlock({
       );
       const values = effectParamValuesCode(block, generator);
       return values
-        ? `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, ${values});\n`
-        : `world.addBackgroundEffect(${str(path)}, ${importVar(path)});\n`;
+        ? `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, ${values}, ${str(layerOf(block))});\n`
+        : `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, undefined, ${str(layerOf(block))});\n`;
     },
   },
 });
@@ -3223,7 +3269,7 @@ const worldRemoveBackgroundEffect = defineBlock({
       if (!path) {
         return '';
       }
-      return `world.removeBackgroundEffect(${str(path)});\n`;
+      return `world.removeBackgroundEffect(${str(path)}, ${str(layerOf(block))});\n`;
     },
   },
 });
@@ -3891,6 +3937,7 @@ export const DOMAIN_BLOCKS = [
   worldIsA,
   worldDefineLayer,
   worldWithinLayer,
+  worldSetForeground,
   worldAddActor,
   worldRemoveActor,
   worldClearWorld,
@@ -4007,6 +4054,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // What is behind everything: an image, a colour, and effects on that
       // image alone (BACKGROUNDS.md).
       'world_set_background',
+      'world_set_foreground',
       'world_set_background_color',
       'world_add_background_effect',
       'world_remove_background_effect',

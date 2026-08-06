@@ -8,6 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {EffectDocument} from '../../effect/model/types';
 import {DEFAULT_LAYER_ID} from '../core/Layer';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
 import type {World} from '../index';
@@ -18,6 +19,16 @@ const actor = (id: string) =>
     .instantiate(id);
 
 const world = () => new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+
+/** A minimal parsed `.effect`, for the slots that carry effects. */
+const RIPPLE: EffectDocument = {
+  version: 1,
+  name: 'Ripple',
+  parameters: [],
+  nodes: [],
+  edges: [],
+  functions: [],
+};
 
 /** Every actor's layer depth, by actor id, as the driver would read it. */
 const depths = (built: World): Record<string, number> =>
@@ -147,19 +158,7 @@ describe('a layer’s background', () => {
     // An index would silently renumber every effect below a layer declared
     // above it, and each would come back attached to the wrong background.
     const world = built();
-    world.addBackgroundEffect(
-      'effects/ripple',
-      {
-        version: 1,
-        name: 'Ripple',
-        parameters: [],
-        nodes: [],
-        edges: [],
-        functions: [],
-      },
-      undefined,
-      'sky',
-    );
+    world.addBackgroundEffect('effects/ripple', RIPPLE, undefined, 'sky');
 
     expect(world.snapshot().effectIds).toContain(
       '["backdrop:sky","effects/ripple"]',
@@ -174,6 +173,45 @@ describe('a layer’s background', () => {
 
     expect(world.snapshot().clearColor).toEqual(world.backdropColor());
     expect(world.backdropSnapshot()[0]).not.toHaveProperty('color');
+  });
+});
+
+describe('a layer’s foreground', () => {
+  const built = () =>
+    new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'game'})
+      .defineLayer({id: DEFAULT_LAYER_ID})
+      .instantiate();
+
+  it('is the background’s twin, on the other side of the actors', () => {
+    const world = built();
+    world.setBackground('sky.png', 'game');
+    world.setForeground('fog.png', 'game');
+
+    expect(world.backdropSnapshot()[0].sprite).toBe('sky.png');
+    expect(world.foregroundSnapshot()[0].sprite).toBe('fog.png');
+    // Independent slots: setting one does not disturb the other.
+    world.setBackground(undefined, 'game');
+    expect(world.foregroundSnapshot()[0].sprite).toBe('fog.png');
+  });
+
+  it('is empty on every layer until something says otherwise', () => {
+    expect(built().foregroundSnapshot()).toEqual([
+      {effects: []},
+      {effects: []},
+    ]);
+  });
+
+  it('carries effects under a key of its own', () => {
+    // `backdrop:` and `foreground:` on the same layer are two carriers, not
+    // one — otherwise fogging a layer would retune its sky.
+    const world = built();
+    world.addBackgroundEffect('effects/ripple', RIPPLE, undefined, 'game');
+    world.addForegroundEffect('effects/ripple', RIPPLE, undefined, 'game');
+
+    const {effectIds} = world.snapshot();
+    expect(effectIds).toContain('["backdrop:game","effects/ripple"]');
+    expect(effectIds).toContain('["foreground:game","effects/ripple"]');
   });
 });
 

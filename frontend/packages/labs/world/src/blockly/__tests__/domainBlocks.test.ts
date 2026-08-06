@@ -1672,7 +1672,7 @@ describe('world block generators', () => {
     // The sprite field can carry `coinSpin.png#3`; this one cannot. A backdrop
     // is stretched over the viewport, so a grid of it means nothing.
     expect(run('world_set_background', {BACKGROUND: 'cave.png'}, {}, '')).toBe(
-      'world.setBackground("cave.png");\n',
+      'world.setBackground("cave.png", "main");\n',
     );
   });
 
@@ -1700,7 +1700,9 @@ describe('world block generators', () => {
       defs,
       '',
     );
-    expect(code).toBe('world.addBackgroundEffect("effects/ripple", Ripple);\n');
+    expect(code).toBe(
+      'world.addBackgroundEffect("effects/ripple", Ripple, undefined, "main");\n',
+    );
     expect(defs['mod:effects/ripple']).toBe(
       'import Ripple from "effects/ripple";',
     );
@@ -1726,7 +1728,9 @@ describe('world block generators', () => {
       defs,
       '',
     );
-    expect(code).toBe('world.removeBackgroundEffect("effects/ripple");\n');
+    expect(code).toBe(
+      'world.removeBackgroundEffect("effects/ripple", "main");\n',
+    );
     expect(Object.keys(defs)).toEqual([]);
   });
 
