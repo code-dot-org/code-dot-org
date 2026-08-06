@@ -799,6 +799,9 @@ describe('domain block generators', () => {
         // Taking actors out belongs beside putting them in, one or all.
         'world_remove_actor',
         'world_clear_world',
+        // The subject a world file's blocks take, and half of "remove every
+        // coin" — offered in the category that file is built from.
+        'world_actor_kind',
       ]),
     );
   });
@@ -1989,6 +1992,19 @@ describe('builder-context warnings', () => {
     expect(extensionsOf('world_remove_world_effect')).toContain(
       WORLD_CONTEXT_EXTENSION,
     );
+  });
+
+  it('guards `any ⟨kind⟩`, which reads the live world when it is a value', () => {
+    // Read as a value it compiles to `world.actors.ofType(…)`: under `define
+    // world` that name is the builder, which has no `actors` at all, and in an
+    // actor template there is no `world` to read. Both are caught in the editor
+    // rather than as a TypeError on a line the learner never wrote.
+    //
+    // Neither guard fires on the case that made this block — plugged into an
+    // event hat's subject socket it names the TEMPLATE and touches no world, and
+    // a hat stops both walks.
+    expect(extensionsOf('world_actor_kind')).toContain(WORLD_CONTEXT_EXTENSION);
+    expect(extensionsOf('world_actor_kind')).toContain(RUNTIME_WORLD_EXTENSION);
   });
 
   it('leaves `add effect` alone, because `addEffect` exists on both', () => {
