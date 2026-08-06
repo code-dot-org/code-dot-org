@@ -119,6 +119,19 @@ function createRspackConfig({
   minify = false,
   piskelDevMode = false,
 } = {}) {
+  // RSPACK-DIFF: APPS_DEVTOOL_SCOPE=music,lab2 maps only the named src/
+  // subtrees back to original source (module-level eval maps, no columns
+  // — the fidelity of eval-cheap-module-source-map) and leaves every
+  // other module unmapped.  rspack's blanket -module map modes exceed
+  // 22GB at our module count while this costs less than APPS_DEVTOOL=eval,
+  // because unmapped modules skip eval wrapping entirely.  Known rough
+  // edge: unmapped modules show numeric internal names in DevTools.
+  const devtoolScope =
+    !minify && envConstants.APPS_DEVTOOL_SCOPE
+      ? envConstants.APPS_DEVTOOL_SCOPE.split(',')
+          .map(s => s.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+          .filter(Boolean)
+      : null;
   return {
     output: {
       path: p('build/package/js'),
@@ -130,7 +143,7 @@ function createRspackConfig({
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
     stats: envConstants.DEV ? 'normal' : 'errors-only',
-    devtool: devtool({minify}),
+    devtool: devtoolScope ? false : devtool({minify}),
     entry: {
       ...addPolyfillsToEntryPoints(
         {
@@ -612,6 +625,17 @@ function createRspackConfig({
               },
             }),
           ]),
+      ...(devtoolScope
+        ? [
+            new rspack.EvalSourceMapDevToolPlugin({
+              module: true,
+              columns: false,
+              test: new RegExp(
+                `src[\\\\/](?:${devtoolScope.join('|')})[\\\\/]`
+              ),
+            }),
+          ]
+        : []),
       new rspack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
