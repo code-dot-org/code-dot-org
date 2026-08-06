@@ -350,7 +350,7 @@ describe('setEffectValues', () => {
       world.setEffectValues('world', 'effects/underwater', {murk: 0.8}),
     ).toBe(true);
     expect(
-      world.setEffectValues('backdrop:0', 'effects/ripple', {speed: 4}),
+      world.setEffectValues('backdrop:main', 'effects/ripple', {speed: 4}),
     ).toBe(true);
 
     expect(world.effects()[0].values).toEqual({murk: 0.8});

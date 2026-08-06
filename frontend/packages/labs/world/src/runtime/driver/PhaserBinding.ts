@@ -53,10 +53,13 @@ const ACTOR_SIZE = 24;
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
 const DEGREES_TO_RADIANS = Math.PI / 180;
-// Where the backdrops sit. Below every actor (which draw at Phaser's default
-// depth of 0) with room between the layers, so a background set mid-game lands
-// behind the actors that were created before it.
-const BACKDROP_DEPTH = -1000;
+// Depths, per layer. A layer occupies a span so its background can sit behind
+// its own actors without reaching the layer below: background at the base,
+// actors one above, and the foreground slot (not built yet) one above that.
+// Spelled out here rather than imported, like everything else in the driver.
+const LAYER_SPAN = 10;
+const backgroundDepth = (layer: number) => layer * LAYER_SPAN;
+const actorDepth = (layer: number) => layer * LAYER_SPAN + 1;
 
 /**
  * The name of a texture frame for `cell`, registering it on first use.
@@ -276,9 +279,9 @@ export class PhaserBinding {
     const syncBackdrops = (scene: Phaser.Scene) => {
       const layers = world.backdropSnapshot() as BackdropState[];
 
-      // One sky, from layer 0: a colour on any other layer is behind the layer
-      // under it and can never be seen.
-      const [r, g, b, a] = layers[0]?.color ?? [0, 0, 0, 1];
+      // One sky, the world's: a colour on any layer but the bottom is behind
+      // the layer under it and can never be seen (BACKGROUNDS.md).
+      const [r, g, b, a] = world.backdropColor();
       const byte = (channel: number) => Math.round(channel * 255);
       scene.cameras.main.setBackgroundColor(
         Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
@@ -296,8 +299,8 @@ export class PhaserBinding {
         }
         if (!image) {
           image = scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
-          // Below every actor, and layers in order among themselves.
-          image.setDepth(BACKDROP_DEPTH + index);
+          // Behind its OWN layer's actors, and in front of everything below it.
+          image.setDepth(backgroundDepth(index));
           backdrops[index] = image;
         }
         image.setTexture(sprite);
@@ -354,7 +357,7 @@ export class PhaserBinding {
         // display list is rebuilt on every reload and a depth set once would
         // survive only until the first restart. Backdrops sit below all of
         // these at BACKDROP_DEPTH, which is why layer depths start at 0.
-        object.setDepth(state.layer);
+        object.setDepth(actorDepth(state.layer));
         // Effects are reconciled every frame, not applied once at creation: an
         // event handler can add or remove one while the game runs, and the
         // engine's list is re-read here each tick. `reconcile` attaches only

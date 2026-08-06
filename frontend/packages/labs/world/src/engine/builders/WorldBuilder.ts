@@ -23,10 +23,10 @@
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
-import {rgba, type ColorValue} from '../core/color';
-import type {LayerInit} from '../core/Layer';
+import {rgba, type ColorValue, type Rgba} from '../core/color';
+import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
-import {DEFAULT_BACKDROP_COLOR, World, type BackdropState} from '../core/World';
+import {World, type BackdropState} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {SpatialRule} from '../rules/spatial';
 
@@ -66,9 +66,14 @@ export class WorldBuilder {
   private readonly effects: AppliedEffectSpec[] = [];
   // Backdrop layers as described, back to front. Empty until something says
   // otherwise; the World fills in the default layer either way.
-  private readonly backdrops: Array<
+  // Backgrounds as described, by the layer each belongs to. Empty until
+  // something says otherwise; the World gives every layer an empty slot.
+  private readonly backgrounds = new Map<
+    string,
     BackdropState & {effects: AppliedEffectSpec[]}
-  > = [];
+  >();
+  /** The one colour behind everything, if it was set before the world existed. */
+  private clearColor: Rgba | undefined;
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
@@ -188,7 +193,7 @@ export class WorldBuilder {
    * or in an event handler, `world` is this builder in one and the live World in
    * the other, and the same call has to be right in both.
    */
-  setBackground(sprite: string | undefined, layer = 0): this {
+  setBackground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
     if (this.built) {
       this.built.setBackground(sprite, layer);
       return this;
@@ -203,7 +208,7 @@ export class WorldBuilder {
       this.built.setBackgroundColor(color);
       return this;
     }
-    this.backdropAt(0).color = rgba(color);
+    this.clearColor = rgba(color);
     return this;
   }
 
@@ -213,13 +218,14 @@ export class WorldBuilder {
    * @param path     the effect's module path (`effects/ripple`)
    * @param document the parsed `.effect` file, imported as JSON by the bundler
    * @param values   values for the effect's declared parameters, by parameter id
-   * @param layer    which backdrop; 0 is the one the blocks address
+   * @param layer    which layer's background; the default is the one the
+   *                 blocks address
    */
   addBackgroundEffect(
     path: string,
     document: EffectDocument,
     values?: AppliedEffectSpec['values'],
-    layer = 0,
+    layer = DEFAULT_LAYER_ID,
   ): this {
     if (this.built) {
       this.built.addBackgroundEffect(path, document, values, layer);
@@ -235,7 +241,7 @@ export class WorldBuilder {
   }
 
   /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
-  removeBackgroundEffect(path: string, layer = 0): this {
+  removeBackgroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
     if (this.built) {
       this.built.removeBackgroundEffect(path, layer);
       return this;
@@ -249,25 +255,21 @@ export class WorldBuilder {
   }
 
   /**
-   * The described layer `n`, creating the layers up to it. Mirrors the World's
-   * own, so a description and a live world grow alike.
+   * The described background of a layer, made on first use.
+   *
+   * Keyed by layer id, so a background set before its `define layer` is emitted
+   * still lands on the right layer — and one naming a layer that never existed
+   * is simply never applied (`World`'s constructor drops it).
    */
-  private backdropAt(layer: number): BackdropState & {
+  private backdropAt(layer: string): BackdropState & {
     effects: AppliedEffectSpec[];
   } {
-    const index = Math.max(0, Math.floor(layer));
-    while (this.backdrops.length <= index) {
-      // Layer 0 is the one that has ever been drawn on its own, so it is the
-      // one that carries the default colour; a layer above it starts clear.
-      this.backdrops.push({
-        color:
-          this.backdrops.length === 0
-            ? rgba(DEFAULT_BACKDROP_COLOR)
-            : [0, 0, 0, 0],
-        effects: [],
-      });
+    let slot = this.backgrounds.get(layer);
+    if (!slot) {
+      slot = {effects: []};
+      this.backgrounds.set(layer, slot);
     }
-    return this.backdrops[index];
+    return slot;
   }
 
   /**
@@ -462,7 +464,10 @@ export class WorldBuilder {
       overrides: [...this.overrides],
       animations: Object.entries(this.animations),
       effects: [...this.effects],
-      backdrops: this.backdrops.map(backdrop => ({...backdrop})),
+      clearColor: this.clearColor,
+      backgrounds: Object.fromEntries(
+        [...this.backgrounds].map(([id, slot]) => [id, {...slot}]),
+      ),
       layers: this.layers.map(layer => ({...layer})),
     });
   }

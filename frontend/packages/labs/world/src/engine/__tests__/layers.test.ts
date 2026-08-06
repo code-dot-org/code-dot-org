@@ -118,6 +118,65 @@ describe('a world that names layers', () => {
   });
 });
 
+describe('a layer’s background', () => {
+  // What a 'backdrop' was. The world used to hold a flat stack of them at a
+  // fixed negative depth; they belong to a layer, which is already the thing
+  // with a depth (and later a parallax factor) for a slot to inherit.
+  const built = () =>
+    new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'sky'})
+      .defineLayer({id: DEFAULT_LAYER_ID})
+      .instantiate();
+
+  it('is empty on every layer until something says otherwise', () => {
+    expect(built().backdropSnapshot()).toEqual([{effects: []}, {effects: []}]);
+  });
+
+  it('is reported in stack order, one per layer', () => {
+    const world = built();
+    world.setBackground('clouds.png', 'sky');
+    world.setBackground('cave.png');
+
+    expect(world.backdropSnapshot().map(slot => slot.sprite)).toEqual([
+      'clouds.png',
+      'cave.png',
+    ]);
+  });
+
+  it('carries effects keyed by the LAYER, not by a stack index', () => {
+    // An index would silently renumber every effect below a layer declared
+    // above it, and each would come back attached to the wrong background.
+    const world = built();
+    world.addBackgroundEffect(
+      'effects/ripple',
+      {
+        version: 1,
+        name: 'Ripple',
+        parameters: [],
+        nodes: [],
+        edges: [],
+        functions: [],
+      },
+      undefined,
+      'sky',
+    );
+
+    expect(world.snapshot().effectIds).toContain(
+      '["backdrop:sky","effects/ripple"]',
+    );
+  });
+
+  it('leaves the colour to the world — there is one sky', () => {
+    // A colour on any layer but the bottom is behind the layer under it and can
+    // never be seen, so it is not a per-layer thing at all (BACKGROUNDS.md).
+    const world = built();
+    world.setBackgroundColor('#88ccff');
+
+    expect(world.snapshot().clearColor).toEqual(world.backdropColor());
+    expect(world.backdropSnapshot()[0]).not.toHaveProperty('color');
+  });
+});
+
 describe('leaving a layer', () => {
   it('is what removal means, along with leaving the world', () => {
     const built = world();

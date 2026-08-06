@@ -34,20 +34,16 @@ interface ReconcilableWorld {
     >;
     /** The graph behind each effect in play, hashed, by module path. */
     effectDocs: Record<string, string>;
-    /**
-     * What each backdrop layer draws. The colour is four floats (engine
-     * color.ts); spelled out rather than imported, like everything else here.
-     */
-    backdrops: Array<{
-      sprite?: string;
-      color: [number, number, number, number];
-    }>;
+    /** What each layer's background draws, in stack order. */
+    backdrops: Array<{layer: string; sprite?: string}>;
+    /** The one colour behind everything (engine color.ts). */
+    clearColor: [number, number, number, number];
     world: Record<string, unknown>;
     actors: Record<string, Record<string, unknown>>;
   };
   setWorldProperty(path: string, value: unknown): boolean;
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
-  setBackground(sprite: string | undefined, layer?: number): unknown;
+  setBackground(sprite: string | undefined, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   setEffectValues(
@@ -116,7 +112,8 @@ export function reconcile(
   // still has the old sky — the change silently lost. Their EFFECTS are
   // structural and live in `effectIds`.
   const backdropChanged =
-    stable(previous.backdrops) !== stable(snapshot.backdrops);
+    stable(previous.backdrops) !== stable(snapshot.backdrops) ||
+    stable(previous.clearColor) !== stable(snapshot.clearColor);
 
   // Actor values the LEARNER changed — not values that have merely moved.
   //
@@ -184,13 +181,11 @@ export function reconcile(
     for (const [actorId, path, value] of actorEdits) {
       running.setActorProperty(actorId, path, value);
     }
-    snapshot.backdrops.forEach((backdrop, layer) =>
-      running.setBackground(backdrop.sprite, layer),
-    );
-    // One sky: only layer 0 carries a colour anyone can see (World.setBackgroundColor).
-    if (snapshot.backdrops[0]) {
-      running.setBackgroundColor(snapshot.backdrops[0].color);
+    for (const backdrop of snapshot.backdrops) {
+      running.setBackground(backdrop.sprite, backdrop.layer);
     }
+    // One sky, the world's — not a layer's (World.setBackgroundColor).
+    running.setBackgroundColor(snapshot.clearColor);
     // Retune each slot whose knobs moved. By slot, so the same effect on two
     // actors keeps two sets of settings.
     for (const slot of retunedEffects) {
