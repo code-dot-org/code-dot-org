@@ -75,6 +75,8 @@ describe('builtinRuleMeta', () => {
             ruleName: 'Has Gravity',
           },
           requires: [],
+          // Every built-in trait is an actor's; a camera trait is authored.
+          subject: 'actor',
         },
         {
           id: 'ground',
@@ -85,6 +87,7 @@ describe('builtinRuleMeta', () => {
             ruleName: 'Has Gravity',
           },
           requires: [],
+          subject: 'actor',
         },
       ]),
     );
@@ -203,12 +206,20 @@ const event = (name: string): object => ({
   type: 'world_rule_event',
   extraState: {parts: [{kind: 'label', text: name}]},
 });
-const trait = (name: string, ...body: object[]): object => {
+const trait = (name: string, ...body: object[]): object =>
+  subjectTrait(name, 'actor', ...body);
+
+/** A trait declaring what elects it — an actor, or a camera. */
+const subjectTrait = (
+  name: string,
+  subject: 'actor' | 'camera',
+  ...body: object[]
+): object => {
   const inner = chain(body);
   return {
     __root: {
       type: 'world_rule_trait',
-      fields: {NAME: name},
+      fields: {NAME: name, SUBJECT: subject},
       ...(inner ? {next: {block: inner}} : {}),
     },
   };
@@ -246,6 +257,90 @@ const step = (name: string, order = 'free', anchor = ''): object => ({
           type: `world_rule_step_${order}`,
           fields: {NAME: name, STEP: anchor},
         },
+});
+
+describe('a trait for a camera', () => {
+  // The engine's `Trait` knows nothing of this. A trait is a trait; the subject
+  // decides what a generated body calls its argument, and which dropdown offers
+  // the trait — nothing about the trait object itself.
+  const meta = () =>
+    parseRuleMeta(
+      'rules/follow',
+      ruleFile(
+        'Camera Follow',
+        subjectTrait('Follows', 'camera', prop('number', 'ease', '0.2')),
+      ),
+    );
+
+  it('says what elects it', () => {
+    expect(meta()?.traits[0]).toMatchObject({
+      id: 'Follows',
+      subject: 'camera',
+    });
+  });
+
+  it('makes its members camera-scoped rather than actor-scoped', () => {
+    // Where an actor trait's property is `scope: 'actor'`, this is `'camera'`,
+    // and that is the whole of what the generator needs to bind the right name.
+    expect(meta()?.properties).toContainEqual(
+      expect.objectContaining({id: 'ease', scope: 'camera'}),
+    );
+  });
+
+  it('leaves the rule’s own members world-scoped', () => {
+    const withBoth = parseRuleMeta(
+      'rules/follow',
+      ruleFile(
+        'Camera Follow',
+        prop('number', 'speed', '1'),
+        subjectTrait('Follows', 'camera', prop('number', 'ease', '0.2')),
+      ),
+    );
+
+    expect(withBoth?.properties).toContainEqual(
+      expect.objectContaining({id: 'speed', scope: 'world'}),
+    );
+    expect(withBoth?.properties).toContainEqual(
+      expect.objectContaining({id: 'ease', scope: 'camera'}),
+    );
+  });
+
+  it('binds `camera` in its bodies, and the world from the camera', () => {
+    // The engine invokes a member as `(subject, …args)`, so an actor trait's
+    // body opens with `actor` and a camera trait's with `camera`. Both then
+    // bind `world` from their own back-reference, which is what lets a body
+    // ask a question about the world — "where is the player?" — without the
+    // generator knowing which kind of body it is in.
+    const module_ = ruleMetaToModule(
+      parseRuleMeta(
+        'rules/follow',
+        ruleFile(
+          'Camera Follow',
+          subjectTrait('Follows', 'camera', designed('recentre')),
+        ),
+      )!,
+    );
+
+    expect(module_).toContain('(camera) => {');
+    expect(module_).toContain('const world = camera.world;');
+    expect(module_).not.toContain('const world = actor.world;');
+  });
+
+  it('reads a trait saved before the field existed as an actor’s', () => {
+    // The field is absent in every `.rule` written so far, and those files must
+    // keep meaning what they meant.
+    const older = parseRuleMeta(
+      'rules/wind',
+      ruleFile('Has Wind', {
+        __root: {
+          type: 'world_rule_trait',
+          fields: {NAME: 'Windblown'},
+        },
+      }),
+    );
+
+    expect(older?.traits[0].subject).toBe('actor');
+  });
 });
 
 describe('parseRuleMeta', () => {
@@ -286,6 +381,9 @@ describe('parseRuleMeta', () => {
           modulePath: 'rules/wind',
         },
         requires: [],
+        // Absent on a workspace saved before the field existed, which reads as
+        // `actor` — the behaviour those files already had.
+        subject: 'actor',
       },
     ]);
     // The rule-level property is world-scoped, with its authored default.

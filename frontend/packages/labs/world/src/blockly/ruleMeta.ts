@@ -56,6 +56,19 @@ export interface MemberRef {
   readonly modulePath?: string;
 }
 
+/**
+ * Whose member this is — and so what its body's first argument is called.
+ *
+ * A rule's own members are world-scoped. A trait's belong to whatever elects
+ * that trait, which is an actor or a CAMERA (specs/VIEWPORT.md): "follows the
+ * player" is a trait a camera takes, and its body needs to say `camera` where
+ * an actor trait's says `actor`.
+ *
+ * The engine's `Trait` knows nothing of this. A trait is a trait; the subject
+ * only decides what the generated body binds and which dropdown offers it.
+ */
+export type MemberScope = 'world' | 'actor' | 'camera';
+
 export interface TraitMeta {
   readonly id: string;
   readonly name: string;
@@ -67,6 +80,13 @@ export interface TraitMeta {
    * and are not surfaced for authoring).
    */
   readonly requires: readonly string[];
+  /**
+   * What elects this trait — an actor, or a camera.
+   *
+   * Absent on a trait saved before the field existed, which reads as `actor`:
+   * the behaviour those files already had.
+   */
+  readonly subject: 'actor' | 'camera';
 }
 
 export interface PropertyMeta {
@@ -75,7 +95,7 @@ export interface PropertyMeta {
   readonly type: PropertyType;
   readonly default: unknown;
   readonly readonly: boolean;
-  readonly scope: 'world' | 'actor';
+  readonly scope: MemberScope;
   /** The trait that owns an actor-scoped property (absent for world-scoped). */
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
@@ -115,7 +135,7 @@ export interface ActionMeta {
   readonly parts?: readonly MemberPart[];
   /** The author's one-line explanation — the call-site block's tooltip. */
   readonly description?: string;
-  readonly scope: 'world' | 'actor';
+  readonly scope: MemberScope;
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
 }
@@ -129,7 +149,7 @@ export interface QueryMeta {
   readonly parts?: readonly MemberPart[];
   /** The author's one-line explanation — the call-site block's tooltip. */
   readonly description?: string;
-  readonly scope: 'world' | 'actor';
+  readonly scope: MemberScope;
   readonly ownerTraitId?: string;
   readonly ref: MemberRef;
 }
@@ -252,7 +272,7 @@ export function builtinRuleMeta(
   });
   const action = (
     a: WorldAction | ActorAction,
-    scope: 'world' | 'actor',
+    scope: MemberScope,
     ownerTraitId?: string,
   ): ActionMeta => ({
     id: a.id,
@@ -264,7 +284,7 @@ export function builtinRuleMeta(
   });
   const query = (
     q: WorldQuery | Query,
-    scope: 'world' | 'actor',
+    scope: MemberScope,
     ownerTraitId?: string,
   ): QueryMeta => ({
     id: q.id,
@@ -295,6 +315,9 @@ export function builtinRuleMeta(
         name: trait.name,
         ref: ref(trait),
         requires: [],
+        // Every built-in trait is an actor's; nothing in the engine declares a
+        // camera trait, and a rule that wants one authors it.
+        subject: 'actor',
       });
       for (const p of Object.values(trait.properties)) {
         properties.push(prop(p, trait.id));
@@ -513,7 +536,11 @@ export function parseRuleMeta(
 
   // A `define property` block → a PropertyMeta. World-scoped at the rule level;
   // actor-scoped (owned by `ownerTraitId`) inside a `define trait`'s `do`.
-  const addProperty = (block: RuleBlock, ownerTraitId?: string): void => {
+  const addProperty = (
+    block: RuleBlock,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
+  ): void => {
     const name = field(block, 'NAME');
     if (!name) {
       return;
@@ -530,7 +557,7 @@ export function parseRuleMeta(
       // Absent on a workspace saved before the field existed, which reads as
       // writable — the behaviour those files already had.
       readonly: field(block, 'ACCESS') === 'readonly',
-      scope: ownerTraitId ? 'actor' : 'world',
+      scope: ownerTraitId ? ownerSubject : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Property`),
     });
@@ -577,7 +604,11 @@ export function parseRuleMeta(
    * parts, in order. The parts are kept as well, so the call-site block can be
    * built in the arrangement that was designed rather than name-then-arguments.
    */
-  const addDesignedBlock = (block: RuleBlock, ownerTraitId?: string): void => {
+  const addDesignedBlock = (
+    block: RuleBlock,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
+  ): void => {
     const raw = block.extraState?.parts ?? [];
     const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
       if (part.kind === 'param') {
@@ -608,7 +639,7 @@ export function parseRuleMeta(
       params,
       parts,
       description: field(block, 'DESCRIPTION') || undefined,
-      scope: (ownerTraitId ? 'actor' : 'world') as 'actor' | 'world',
+      scope: (ownerTraitId ? ownerSubject : 'world') as MemberScope,
       ownerTraitId,
     };
     if (returns && returns !== 'none' && QUERY_RETURN_TYPES.has(returns)) {
@@ -733,6 +764,10 @@ export function parseRuleMeta(
       continue;
     }
     const traitId = slug(name);
+    // What elects it. Absent on a trait saved before the field existed, which
+    // reads as `actor` — the behaviour those files already had.
+    const subject: 'actor' | 'camera' =
+      field(traitBlock, 'SUBJECT') === 'camera' ? 'camera' : 'actor';
     const traitRequires: string[] = [];
     for (
       let member: RuleBlock | undefined = traitBlock.next?.block;
@@ -745,9 +780,9 @@ export function parseRuleMeta(
           traitRequires.push(dep);
         }
       } else if (member.type === 'world_rule_property') {
-        addProperty(member, traitId);
+        addProperty(member, traitId, subject);
       } else if (member.type === 'world_rule_block') {
-        addDesignedBlock(member, traitId);
+        addDesignedBlock(member, traitId, subject);
       } else if (member.type === 'world_rule_event') {
         addEvent(member);
       }
@@ -757,6 +792,7 @@ export function parseRuleMeta(
       name,
       ref: ref(`${pascal(name)}Trait`),
       requires: traitRequires,
+      subject,
     });
   }
 
@@ -794,7 +830,7 @@ export function parseRuleMeta(
 /** A member's body key: the scope, owning trait (if any), kind, and id. */
 export const ruleBodyKey = (
   kind: 'action' | 'query' | 'step',
-  scope: 'world' | 'actor',
+  scope: MemberScope,
   ownerTraitId: string | undefined,
   id: string,
 ): string => `${kind}:${scope}:${ownerTraitId ?? ''}:${id}`;
@@ -848,7 +884,7 @@ export function extractRuleBodies(
   const bodies = new Map<string, RuleBody>();
   const record = (
     kind: 'action' | 'query' | 'step',
-    scope: 'world' | 'actor',
+    scope: MemberScope,
     ownerTraitId: string | undefined,
     member: LiveBlock,
     /** For a member with no NAME field, the id derived some other way. */
@@ -865,7 +901,7 @@ export function extractRuleBodies(
   };
   const visit = (
     first: LiveBlock | null,
-    scope: 'world' | 'actor',
+    scope: MemberScope,
     ownerTraitId: string | undefined,
   ): void => {
     for (let block = first; block; block = block.getNextBlock()) {
@@ -898,10 +934,12 @@ export function extractRuleBodies(
     } else if (root.type === 'world_rule') {
       visit(root.getNextBlock(), 'world', undefined);
     } else if (root.type === 'world_rule_trait') {
-      // A trait's members are actor-scoped and owned by it.
+      // A trait's members belong to whatever elects it — an actor, or a camera
+      // (`TraitMeta.subject`). That decides what their bodies call the subject,
+      // so it has to be known here as well as at parse time.
       visit(
         root.getNextBlock(),
-        'actor',
+        root.getFieldValue('SUBJECT') === 'camera' ? 'camera' : 'actor',
         slug(root.getFieldValue('NAME') ?? ''),
       );
     }
@@ -1140,7 +1178,7 @@ export function ruleMetaToModule(
 
   for (const property of meta.properties) {
     const owner =
-      property.scope === 'actor' && property.ownerTraitId
+      property.scope !== 'world' && property.ownerTraitId
         ? traitExportById.get(property.ownerTraitId)
         : undefined;
     const target = owner ?? 'rule';
@@ -1161,14 +1199,14 @@ export function ruleMetaToModule(
   // parameters follow the subject in the signature — the body extractor resolved
   // them to the same identifiers the body's getters read.
   const memberTarget = (member: {
-    scope: 'world' | 'actor';
+    scope: MemberScope;
     ownerTraitId?: string;
   }): string =>
     (member.scope === 'actor' && member.ownerTraitId
       ? traitExportById.get(member.ownerTraitId)
       : undefined) ?? 'rule';
-  const subject = (member: {scope: 'world' | 'actor'}): string =>
-    member.scope === 'actor' ? 'actor' : 'world';
+  const subject = (member: {scope: MemberScope}): string =>
+    member.scope === 'world' ? 'world' : member.scope;
   /**
    * The line that opens an actor-scoped body.
    *
@@ -1178,10 +1216,10 @@ export function ruleMetaToModule(
    * back-reference means every block that names `world` works in one, with no
    * generator anywhere needing to know which kind of body it is in.
    */
-  const preamble = (member: {scope: 'world' | 'actor'}): string =>
-    member.scope === 'actor' ? '  const world = actor.world;\n' : '';
+  const preamble = (member: {scope: MemberScope}): string =>
+    member.scope === 'world' ? '' : `  const world = ${member.scope}.world;\n`;
   // The closure's argument list: the subject, then each parameter identifier.
-  const signature = (member: {scope: 'world' | 'actor'}, code?: RuleBody) =>
+  const signature = (member: {scope: MemberScope}, code?: RuleBody) =>
     [subject(member), ...(code?.params ?? [])].join(', ');
 
   for (const action of meta.actions) {
