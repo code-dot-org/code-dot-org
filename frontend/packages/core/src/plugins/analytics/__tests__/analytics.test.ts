@@ -381,6 +381,24 @@ describe('analytics consent gate', () => {
     expect(statsigInstances).toHaveLength(0);
   });
 
+  it('reports a name-less event under the missing-name stand-in', async () => {
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    reportConsent(analytics, true);
+    await drain();
+
+    analytics.sendEvent('', {a: 1});
+
+    expect(latestStatsig().logEvent).toHaveBeenCalledWith(
+      'NO_VALID_EVENT_NAME_LOG_ERROR',
+      'NO_VALID_EVENT_NAME_LOG_ERROR',
+      {a: 1},
+    );
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('without an event name'),
+    );
+  });
+
   it('sends buffered events after a grant, and persists the stable id', async () => {
     const analytics = await loadAnalytics();
     analytics.onCoreReady(STATSIG_CONFIG);
