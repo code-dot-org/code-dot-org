@@ -454,6 +454,38 @@ describe('the camera', () => {
     expect([...built.actors]).toHaveLength(0);
   });
 
+  it('can be joined by another, and the view cut to it', () => {
+    const built = world();
+    built.defineCamera({id: 'overview', name: 'Overview'});
+    built.setCameraPosition(new Vector(500, 0), 'overview');
+
+    // Still looking through the default until told otherwise.
+    expect(built.activeCamera().id).toBe('main');
+
+    built.setActiveCamera('overview');
+    expect(built.activeCamera().position).toEqual(new Vector(500, 0));
+    expect(built.cameraSnapshot().find(c => c.active)?.id).toBe('overview');
+  });
+
+  it('ignores a cut to a camera that is not there', () => {
+    // Leaving the view where it is beats blacking it out: the id comes from
+    // generated code naming a block that may have been deleted.
+    const built = world();
+    built.setActiveCamera('a-camera-that-was-deleted');
+
+    expect(built.activeCamera().id).toBe('main');
+  });
+
+  it('does not stack duplicates when the same camera is declared twice', () => {
+    // A reload runs the world body again; two cameras with one id would be two
+    // entries the dropdown shows twice.
+    const built = world();
+    built.defineCamera({id: 'overview'});
+    built.defineCamera({id: 'overview'});
+
+    expect(built.cameras).toHaveLength(2);
+  });
+
   it('travels as structure AND as a value, which are different questions', () => {
     // Which cameras exist is a reload — a viewport is built to draw through
     // one. Where they look is a patch, written every tick by a follow step.
@@ -464,6 +496,18 @@ describe('the camera', () => {
 
     expect(after.cameras).toEqual(before.cameras);
     expect(after.cameraPositions).not.toEqual(before.cameraPositions);
+  });
+
+  it('cuts between cameras as a value, so the game does not restart', () => {
+    const built = world();
+    built.defineCamera({id: 'overview'});
+    const before = built.snapshot();
+    built.setActiveCamera('overview');
+    const after = built.snapshot();
+
+    // Which cameras EXIST is unchanged; which one draws is not structure.
+    expect(after.cameras).toEqual(before.cameras);
+    expect(after.activeCamera).not.toEqual(before.activeCamera);
   });
 });
 

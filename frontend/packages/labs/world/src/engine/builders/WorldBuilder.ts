@@ -225,6 +225,22 @@ export class WorldBuilder {
     return this;
   }
 
+  /** Declare a camera. See {@link World.defineCamera}. */
+  defineCamera(init: CameraInit): this {
+    if (this.built) {
+      this.built.defineCamera(init);
+      return this;
+    }
+    this.cameras.push(init);
+    return this;
+  }
+
+  /** Take the view through a different camera. See {@link World.setActiveCamera}. */
+  setActiveCamera(id: string): this {
+    this.getWorld().setActiveCamera(id);
+    return this;
+  }
+
   /** How much of the camera's motion a layer takes. See {@link World.setLayerParallax}. */
   setLayerParallax(parallax: Vector, layer?: string): this {
     this.getWorld().setLayerParallax(parallax, layer);

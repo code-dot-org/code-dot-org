@@ -31,6 +31,12 @@ import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 import {actorInputExtension, actorSubjectExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {BUILTIN_RULE_META} from './builtinMeta';
+import {
+  cameraId,
+  cameraIdFromValue,
+  cameraOptions,
+  cameraOptionsExtension,
+} from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {editingRuleFor} from './editingRule';
@@ -3460,22 +3466,95 @@ const EFFECT_OWNER_BLOCKS = [
  */
 const worldMoveCamera = defineBlock({
   type: 'world_move_camera',
-  message0: 'move camera to %1',
-  args0: [{type: 'input_value', name: 'POSITION', check: 'Vector'}],
+  message0: 'move camera %1 to %2',
+  args0: [
+    {type: 'field_dropdown', name: 'CAMERA', options: cameraOptions},
+    {type: 'input_value', name: 'POSITION', check: 'Vector'},
+  ],
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  extensions: [worldContextExtension, valueShadowExtension],
+  extensions: [
+    cameraOptionsExtension,
+    worldContextExtension,
+    valueShadowExtension,
+  ],
   style: 'setup_blocks',
   tooltip:
-    'Point the camera at a place in the world. Everything moves with it except ' +
+    'Point a camera at a place in the world. Everything moves with it except ' +
     'layers fixed to the screen.',
   generator: {
     javascript(block, generator) {
       const position =
         generator.valueToCode(block, 'POSITION', Order.NONE) ||
         'new WorldLab.Vector(0, 0)';
-      return `world.setCameraPosition(${position});\n`;
+      const camera = cameraIdFromValue(
+        block,
+        String(block.getFieldValue('CAMERA') ?? ''),
+      );
+      return `world.setCameraPosition(${position}, ${str(camera)});\n`;
+    },
+  },
+});
+
+/**
+ * Declare a camera — a second place to look from.
+ *
+ * Not hoisted, unlike `define layer`: a camera is an entry in a list rather
+ * than a place in a scene graph, so one can be added to a world that already
+ * exists and there is nothing to order. Declaring it before you name it is
+ * therefore just reading order, which is how the block chain runs anyway.
+ *
+ * A world has one without asking. This is for the second: an overview to cut to
+ * when the player dies, a fixed shot for a boss room.
+ */
+const worldDefineCamera = defineBlock({
+  type: 'world_define_camera',
+  message0: 'define camera %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Camera'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'A place to look from. Every world has one already; define another to cut ' +
+    'between views.',
+  generator: {
+    javascript(block) {
+      return `world.defineCamera({id: ${str(cameraId(block.id))}, name: ${str(
+        String(block.getFieldValue('NAME') ?? 'Camera'),
+      )}});\n`;
+    },
+  },
+});
+
+/**
+ * Take the view through a camera — the cut.
+ *
+ * Which camera draws is a VALUE rather than structure: it moves a transform and
+ * rebuilds nothing, so a game may cut between cameras mid-play without the
+ * preview restarting around the learner.
+ *
+ * This is the default viewport's camera by another name. When viewports arrive
+ * a viewport is told which camera to use, and this becomes that for the one
+ * viewport every world already has.
+ */
+const worldUseCamera = defineBlock({
+  type: 'world_use_camera',
+  message0: 'look through camera %1',
+  args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [cameraOptionsExtension, worldContextExtension],
+  style: 'setup_blocks',
+  tooltip: 'Draw the world through this camera from now on.',
+  generator: {
+    javascript(block) {
+      const camera = cameraIdFromValue(
+        block,
+        String(block.getFieldValue('CAMERA') ?? ''),
+      );
+      return `world.setActiveCamera(${str(camera)});\n`;
     },
   },
 });
@@ -4185,6 +4264,8 @@ export const DOMAIN_BLOCKS = [
   worldLayerParallax,
   worldLayerFixed,
   worldWithinLayer,
+  worldDefineCamera,
+  worldUseCamera,
   worldMoveCamera,
   worldAddActor,
   worldRemoveActor,
@@ -4293,7 +4374,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_layer_parallax',
       'world_layer_fixed',
       'world_within_layer',
-      // Where the view is taken from; layers respond by their own depth.
+      // Where the view is taken from; layers respond by their own parallax.
+      'world_define_camera',
+      'world_use_camera',
       'world_move_camera',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',

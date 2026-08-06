@@ -128,7 +128,9 @@ const world = (actors: string[]) => {
       layerSnapshot: () => [
         {id: 'main', effects: [], parallax: {x: 1, y: 1}, fit: false},
       ],
-      cameraSnapshot: () => [{id: 'main', position: {x: 0, y: 0}}],
+      cameraSnapshot: () => [
+        {id: 'main', position: {x: 0, y: 0}, active: true},
+      ],
       renderSnapshot: () =>
         live.map((id, index) => ({
           actor: id,

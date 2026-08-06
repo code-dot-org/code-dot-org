@@ -81,6 +81,8 @@ export interface WorldSnapshot {
   cameras: string[];
   /** Where each camera looks from, by id. A value, patched like a property. */
   cameraPositions: Record<string, {x: number; y: number}>;
+  /** Which one the view is taken through. A value: cutting between them is not a reload. */
+  activeCamera: string;
   /**
    * Which effects are in play and what carries each — `[owner, path]` per
    * applied effect, across the world, its backdrops and every actor
@@ -324,6 +326,11 @@ export class World {
   // layer list is not: a view taken through no camera would be a second kind of
   // view, and every question about the view would have to answer twice.
   private readonly cameraList: Camera[];
+  // Which camera the view is taken through. One today, because a VIEWPORT is
+  // what would give a layer a different one and viewports are not built — so
+  // this is the default viewport's camera by another name, and generalises to
+  // that rather than being replaced by it.
+  private activeCameraId: string = DEFAULT_CAMERA_ID;
   // Layer id -> its index, which is its depth. Built once; layers cannot be
   // added or removed while the world runs (they are structural — a layer cannot
   // be spliced into a live scene graph, see `snapshot`).
@@ -487,6 +494,40 @@ export class World {
    * block that may since have been deleted, and a world with no view at all is
    * not a better answer than a world looking through its default.
    */
+  /**
+   * Declare a camera.
+   *
+   * Not hoisted, unlike a layer: a camera is an entry in a list rather than a
+   * place in a scene graph, so one can be added to a world that already exists.
+   * Declaring the same id twice is the earlier one, so a reload cannot stack
+   * duplicates.
+   */
+  defineCamera(init: CameraInit): this {
+    if (!this.cameraList.some(camera => camera.id === init.id)) {
+      this.cameraList.push(makeCamera(init));
+    }
+    return this;
+  }
+
+  /**
+   * Take the view through a different camera.
+   *
+   * A VALUE, not structure: switching cameras moves a transform and rebuilds
+   * nothing, so a game may cut between them without restarting. An unknown id
+   * leaves the view where it is rather than blacking it out.
+   */
+  setActiveCamera(id: string): this {
+    if (this.cameraList.some(camera => camera.id === id)) {
+      this.activeCameraId = id;
+    }
+    return this;
+  }
+
+  /** The camera the view is currently taken through. */
+  activeCamera(): Camera {
+    return this.camera(this.activeCameraId);
+  }
+
   camera(id: string = DEFAULT_CAMERA_ID): Camera {
     return (
       this.cameraList.find(camera => camera.id === id) ??
@@ -911,10 +952,13 @@ export class World {
   cameraSnapshot(): ReadonlyArray<{
     id: string;
     position: {x: number; y: number};
+    /** Whether the view is taken through this one. Exactly one is. */
+    active: boolean;
   }> {
     return this.cameraList.map(camera => ({
       id: camera.id,
       position: {x: camera.position.x, y: camera.position.y},
+      active: camera.id === this.activeCameraId,
     }));
   }
 
@@ -1309,6 +1353,7 @@ export class World {
       ),
       actorIds: this.actorList.map(actor => actor.id).sort(),
       cameras: this.cameraList.map(camera => camera.id),
+      activeCamera: this.activeCameraId,
       cameraPositions: Object.fromEntries(
         this.cameraList.map(camera => [
           camera.id,

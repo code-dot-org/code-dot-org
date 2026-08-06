@@ -432,9 +432,11 @@ export class PhaserBinding {
       // with an effect and nothing in it yet is still a layer) and brings each
       // one's filters in line.
       const layers = world.layerSnapshot();
-      // Where the view is taken from. One camera today — viewports, which is
-      // what would give a layer a different one, are not built.
-      const [view] = world.cameraSnapshot();
+      // Where the view is taken from: the ACTIVE camera. A world may hold
+      // several — a game camera and an overview, say — and cutting between them
+      // is a value change rather than a reload, so this is read every frame.
+      const cameras = world.cameraSnapshot();
+      const view = cameras.find(camera => camera.active) ?? cameras[0];
       layers.forEach((layer, index) => {
         const container = containerFor(scene, index);
         effectRegistry.reconcile(scene, container as never, layer.effects);

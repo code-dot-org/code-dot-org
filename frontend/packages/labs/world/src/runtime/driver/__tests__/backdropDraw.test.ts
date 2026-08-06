@@ -236,7 +236,12 @@ const world = (
         parallax: parallaxes[index] ?? {x: 1, y: 1},
         fit: fits[index] ?? false,
       })),
-    cameraSnapshot: () => [{id: 'main', position: camera}],
+    cameraSnapshot: () => [
+      // An inactive camera first, so a driver that took `[0]` rather than the
+      // active one would draw through the wrong view.
+      {id: 'unused', position: {x: -999, y: -999}, active: false},
+      {id: 'main', position: camera, active: true},
+    ],
     snapshot: () => ({world: {}}),
   }) as never;
 
