@@ -164,7 +164,7 @@ describe('placing a world’s own actor', () => {
     );
 
     expect(code).toContain(
-      `world.addActor(${localActorVar('Coin', 'a1')}, "p1", "Coin")`,
+      `world.addActor(${localActorVar('Coin', 'a1')}, "p1", "Coin", "main")`,
     );
     // There is no module to import — that is the whole point of a local actor.
     expect(imports).toEqual([]);
