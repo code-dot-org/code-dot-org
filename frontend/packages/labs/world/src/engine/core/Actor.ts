@@ -6,7 +6,7 @@
 
 import {fnv1a} from './hash';
 import {Trait} from './Trait';
-import {DependencySet} from './traits';
+import {Traited} from './Traited';
 import type {
   ActorAction,
   AppliedEffectSpec,
@@ -15,7 +15,6 @@ import type {
   Property,
   Query,
 } from './types';
-import {Vector} from './Vector';
 import type {World} from './World';
 
 /** The data an ActorBuilder hands the Actor constructor. */
@@ -34,33 +33,6 @@ export interface ActorInit {
   /** Effects played on this actor's image, in application order. */
   effects?: AppliedEffectSpec[];
 }
-
-// A `vector` (directional) and a `point` (an x/y pair, e.g. scale) are both
-// stored as a `Vector`; they differ only in how the editor presents them.
-const coerce = <T>(property: Property<T>, value: unknown): T => {
-  if (property.type === 'vector' || property.type === 'point') {
-    return Vector.from(value as Vector) as unknown as T;
-  }
-  // An actors property always holds a list, and always its OWN.
-  //
-  // Its own because a declaration's default is one value and every actor is
-  // seeded from it: sharing it would make one actor's contacts every actor's.
-  // A list because that is what the property means, so `set contacts to ⟨that
-  // actor⟩` stores a list of one rather than something to special-case later.
-  // Anything that is not actors at all — the empty text a declaration carries
-  // when it has no default to give — is no actors.
-  if (property.type === 'actors') {
-    if (Array.isArray(value)) {
-      return [...value] as unknown as T;
-    }
-    return (isActor(value) ? [value] : []) as unknown as T;
-  }
-  return value as T;
-};
-
-/** An Actor by duck type — importing the class here would be this file. */
-const isActor = (value: unknown): boolean =>
-  typeof value === 'object' && value !== null && 'traits' in value;
 
 export class Actor {
   /**
@@ -91,11 +63,8 @@ export class Actor {
   /** The template (ActorBuilder id) this instance came from — a type tag. */
   readonly type: string;
   readonly name: string;
-  private readonly membership = new DependencySet<Trait>(
-    trait => trait.requiredTraits,
-    trait => trait.id,
-  );
-  private readonly store = new Map<Property, unknown>();
+  /** Its traits, and a slot for every property they declare (core/Traited). */
+  private readonly traited: Traited;
   private readonly handlers = new Map<GameEvent, EventHandler[]>();
   // Held, not interpreted: the engine never looks inside an effect document.
   // Mutable because effects can be added and removed while the game runs — the
@@ -106,19 +75,11 @@ export class Actor {
     this.id = init.id;
     this.type = init.type ?? init.id;
     this.name = init.name;
-    for (const trait of init.traits) {
-      this.membership.add(trait);
-    }
-    // Seed the store from every present trait's property defaults, then apply
-    // the initial overrides on top.
-    for (const trait of this.membership.items()) {
-      for (const property of Object.values(trait.properties)) {
-        this.store.set(property, coerce(property, property.default));
-      }
-    }
-    for (const [property, value] of init.overrides) {
-      this.store.set(property, coerce(property, value));
-    }
+    this.traited = new Traited(
+      `Actor '${init.id}'`,
+      init.traits,
+      init.overrides,
+    );
     for (const [event, handler] of init.handlers) {
       this.on(event, handler);
     }
@@ -126,24 +87,18 @@ export class Actor {
   }
 
   get<T>(property: Property<T>): T {
-    if (!this.store.has(property)) {
-      throw new Error(
-        `Actor '${this.id}' has no property '${property.id}' ` +
-          `(is trait '${property.ownerId}' applied?)`,
-      );
-    }
-    return this.store.get(property) as T;
+    return this.traited.get(property);
   }
 
   /** Set a property's value; returns `this` so instance setup can chain. */
   set<T>(property: Property<T>, value: T): this {
-    this.store.set(property, coerce(property, value));
+    this.traited.set(property, value);
     return this;
   }
 
   /** Whether this actor has the given trait (directly or by dependency). */
   has(trait: Trait): boolean {
-    return this.membership.has(trait);
+    return this.traited.has(trait);
   }
 
   query<T>(query: Query<T>, ...args: unknown[]): T {
@@ -199,7 +154,7 @@ export class Actor {
 
   /** The traits present on this actor, in application order. */
   traits(): readonly Trait[] {
-    return this.membership.items();
+    return this.traited.traits();
   }
 
   /** The effects played on this actor's image, in application order. */
@@ -291,6 +246,6 @@ export class Actor {
 
   /** Whether this actor carries `property` (seeded by one of its traits). */
   hasProperty(property: Property): boolean {
-    return this.store.has(property);
+    return this.traited.hasProperty(property);
   }
 }

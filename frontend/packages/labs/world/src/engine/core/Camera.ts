@@ -21,6 +21,9 @@
 // — so the distinction is carried in the model and is invisible until zoom
 // arrives. Adding it here later changes no authoring.
 
+import type {Trait} from './Trait';
+import {Traited} from './Traited';
+import type {Property} from './types';
 import {Vector} from './Vector';
 
 /**
@@ -38,23 +41,72 @@ export interface CameraInit {
   name?: string;
   /** Where it looks from, in world pixels; defaults to the origin. */
   position?: Vector;
+  /** Traits it elects — how it behaves, authored in a rule. */
+  traits?: Trait[];
+  /** Initial values for the properties those traits declare. */
+  overrides?: Array<[Property, unknown]>;
 }
 
-/** A camera, as the world holds it. */
-export interface Camera {
+/**
+ * A camera, as the world holds it.
+ *
+ * A class rather than a plain object because it holds traits, and holding
+ * traits is what makes a camera something a rule can act on: "follows the
+ * player" is a trait a camera elects, and a rule's step walks the cameras that
+ * have it — exactly as gravity's step walks the actors with its own.
+ *
+ * The trait machinery is the SAME one an actor uses (core/Traited), because
+ * there is nothing actor-specific about holding traits. What a camera does not
+ * get is the rest of an Actor: no appearance, no effects of its own, no place
+ * in `world.actors`.
+ */
+export class Camera {
   readonly id: string;
   readonly name: string;
   /** Mutable: moving the camera is the whole point of having one. */
   position: Vector;
+  private readonly traited: Traited;
+
+  constructor(init: CameraInit) {
+    this.id = init.id;
+    this.name = init.name ?? init.id;
+    this.position = init.position
+      ? new Vector(init.position.x, init.position.y)
+      : new Vector(0, 0);
+    this.traited = new Traited(
+      `Camera '${init.id}'`,
+      init.traits ?? [],
+      init.overrides ?? [],
+    );
+  }
+
+  /** Whether this camera has the given trait, directly or by dependency. */
+  has(trait: Trait): boolean {
+    return this.traited.has(trait);
+  }
+
+  /** The traits in play on it, dependencies included. */
+  traits(): readonly Trait[] {
+    return this.traited.traits();
+  }
+
+  get<T>(property: Property<T>): T {
+    return this.traited.get(property);
+  }
+
+  /** Set a property; returns `this` so setup can chain, as an actor's does. */
+  set<T>(property: Property<T>, value: T): this {
+    this.traited.set(property, value);
+    return this;
+  }
+
+  /** Whether the slot exists at all — distinct from what is in it. */
+  hasProperty(property: Property): boolean {
+    return this.traited.hasProperty(property);
+  }
 }
 
 /** A camera with its defaults filled in. */
 export function makeCamera(init: CameraInit): Camera {
-  return {
-    id: init.id,
-    name: init.name ?? init.id,
-    position: init.position
-      ? new Vector(init.position.x, init.position.y)
-      : new Vector(0, 0),
-  };
+  return new Camera(init);
 }
