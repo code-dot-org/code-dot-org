@@ -65,9 +65,8 @@ interface UseLineEdgeDragOptions {
 // anchor at the current handle position, rewrite the edge to point at it,
 // and treat it like any other dragging anchor from then on.
 //
-// When the line is part of a multi-selection, the drag instead translates the
-// whole selection, matching what React Flow does when a selected node is
-// dragged.
+// When the line is part of a multi-selection the drag translates the whole
+// selection instead, matching React Flow's behavior for a selected node.
 export function useLineEdgeDrag({
   readOnly,
   setNodes,
@@ -85,12 +84,8 @@ export function useLineEdgeDrag({
   const draggingSelectionRef = useRef<SelectionDragState | null>(null);
   const [isLineDragging, setIsLineDragging] = useState(false);
 
-  // Mouseup at the end of a selection drag is followed by a click on the line,
-  // which would clear the selection the drag just moved. Set on drag end and
-  // read by the edge-click handler. The browser dispatches that click in the
-  // same task as the mouseup, so a timeout clears the flag right afterwards
-  // whether or not the click ever arrives — the same trick d3-drag uses to
-  // suppress the click after a node drag.
+  // Suppresses the click on the line that follows the mouseup ending a
+  // selection drag, which would otherwise clear the selection just moved.
   const completedSelectionDragRef = useRef(false);
 
   const consumeSelectionDragClick = useCallback(() => {
@@ -225,9 +220,8 @@ export function useLineEdgeDrag({
     [handleLineEdgeMouseMove, setEdges]
   );
 
-  // Translates every element in the selection by the pointer delta. Endpoint
-  // snapping is deliberately skipped: a selection moves as a rigid body, so a
-  // line inside it shouldn't reattach to whatever it passes over.
+  // No endpoint snapping: a selection moves as a rigid body, so a line inside
+  // it shouldn't reattach to whatever it passes over.
   const handleSelectionMouseMove = useCallback(
     (event: MouseEvent) => {
       const dragState = draggingSelectionRef.current;
@@ -272,6 +266,8 @@ export function useLineEdgeDrag({
     window.removeEventListener('mouseup', stopSelectionDrag);
     if (dragState?.hasMoved) {
       completedSelectionDragRef.current = true;
+      // The click arrives in the same task as this mouseup, so clear the flag
+      // right after in case no click ever lands on the line.
       setTimeout(() => {
         completedSelectionDragRef.current = false;
       }, 0);
@@ -288,10 +284,9 @@ export function useLineEdgeDrag({
         return;
       }
 
-      // The line belongs to the multi-selection: drag the whole selection, the
-      // same rule the arrow keys use. getSelectionMoveIds returns nothing for a
-      // selection of just this line, which falls through to the single-line
-      // drag below.
+      // The line belongs to the multi-selection, so drag the whole selection.
+      // A selection of just this line yields no ids and falls through to the
+      // single-line drag below.
       const anchorIds = getStandaloneLineAnchorIds(edge, getNode);
       if (anchorIds?.every(id => multiSelectedNodeIds.has(id))) {
         const currentNodes = getNodes();

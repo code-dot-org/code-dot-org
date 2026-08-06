@@ -301,8 +301,7 @@ export default function ReactFlowCanvas({
     closeToolbar,
   });
 
-  // Groupable elements within the current selection. Already-grouped and
-  // locked nodes are excluded.
+  // Groupable elements within the current selection.
   const groupableCount = useMemo(
     () =>
       countLogicalElements(
@@ -562,11 +561,11 @@ export default function ReactFlowCanvas({
     if (selectedIds.length === 0) return;
     const groupId = createUuid();
 
-    // groupSelectedNodes returns the input unchanged when the selection
-    // doesn't meet the minimum threshold (e.g. a single standalone line).
-    // Pre-check so pushSnapshot / announce / focus don't fire when no group
-    // is actually created. The updater re-runs against authoritative current
-    // state in case nodes changed between this render and the flush.
+    // groupSelectedNodes returns the input unchanged when the selection is
+    // below the minimum (e.g. a single standalone line); pre-check so
+    // pushSnapshot / announce / focus don't fire when no group is created.
+    // The updater below re-runs it against current state, in case nodes
+    // changed between this render and the flush.
     if (groupSelectedNodes(selectedIds, nodes, groupId) === nodes) return;
 
     pushSnapshot();
@@ -606,7 +605,6 @@ export default function ReactFlowCanvas({
     [nodes, edges]
   );
 
-  // A finished drag selection selects; the user groups it explicitly afterwards.
   const handleDragSelectComplete = useCallback(
     (selectedIds: Set<string>) => {
       setMultiSelectedNodeIds(selectedIds);
@@ -622,9 +620,8 @@ export default function ReactFlowCanvas({
           ? '1 element selected.'
           : `${elementCount} elements selected. Choose Group Elements to group them.`
       );
-      // Park focus on a selected element so arrow keys move the selection
-      // rather than falling through to nothing. A selection of nothing but
-      // lines has no focusable node, so focus one of the line edges.
+      // Park focus on a selected element so arrow keys move the selection. A
+      // lines-only selection has no focusable node, so focus a line edge.
       const focusNode = selectedNodes.find(node => node.type !== 'lineAnchor');
       const focusEdge = focusNode
         ? undefined

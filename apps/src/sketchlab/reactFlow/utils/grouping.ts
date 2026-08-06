@@ -23,9 +23,8 @@ export function getGroupChildren(
 }
 
 /**
- * Counts what a user would call elements: a regular node is one, and each pair
- * of lineAnchor nodes is one standalone line. A group needs two of these, so
- * two anchors on their own are just a line, not a group.
+ * Counts elements as a user sees them: a regular node is one, and each pair of
+ * lineAnchor nodes is one standalone line.
  */
 export function countLogicalElements(
   nodes: Pick<SketchLabNode, 'type'>[]
@@ -35,9 +34,8 @@ export function countLogicalElements(
 }
 
 /**
- * Ids a whole-selection move should translate, in node order. Empty when the
- * selection isn't worth treating as a multi-element move, which leaves the
- * caller on its single-element path.
+ * Ids a whole-selection move should translate, in node order; empty when fewer
+ * than two elements survive filtering.
  *
  * Locked nodes and grouped children are dropped: undo can restore either
  * state while the selection that predates it is still live.
@@ -52,8 +50,6 @@ export function getSelectionMoveIds(
       !node.data?.locked &&
       !isGroupedChildNode(node)
   );
-  // A lone standalone line is two anchor nodes but one element, so it stays on
-  // the single-element path where endpoint snapping still applies.
   return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];
 }
 

@@ -126,11 +126,10 @@ function screenBoxToCanvas(
   return {canvasMin, canvasMax};
 }
 
-// Drag-to-select on the canvas pane. Mousedown on the pane starts tracking;
-// once the pointer moves past DRAG_THRESHOLD_PX a selection box appears.
-// pendingSelectedIds updates live as the box changes so elements highlight
-// in real time. Mouseup hands the overlapping elements to onSelectNodes as a
-// multi-selection; grouping them is a separate, explicit step.
+// Drag-to-select on the canvas pane. A selection box appears once the pointer
+// moves past DRAG_THRESHOLD_PX, and pendingSelectedIds tracks what it overlaps
+// so those elements can highlight live. Mouseup hands them to onSelectNodes;
+// grouping them is a separate, explicit step.
 export function useDragSelection({
   nodes,
   edges,
@@ -152,12 +151,8 @@ export function useDragSelection({
     active: boolean;
   } | null>(null);
 
-  // Mouseup at the end of a drag selection is followed by a click on the pane,
-  // which would clear the selection the drag just made. Set on mouseup and read
-  // by the pane-click handler. The browser dispatches that click in the same
-  // task as the mouseup, so a timeout clears the flag right afterwards whether
-  // or not the click ever arrives — a drag released over the toolbar produces
-  // no pane click, and must not swallow a later one.
+  // Suppresses the pane click that follows the mouseup ending a drag
+  // selection, which would otherwise clear the selection the drag just made.
   const completedDragRef = useRef(false);
 
   const consumeDragSelectClick = useCallback(() => {
@@ -234,11 +229,12 @@ export function useDragSelection({
         screenToFlowPosition
       );
       const selectedIds = computeOverlapIds(nodes, edges, canvasMin, canvasMax);
-      // A drag that caught nothing should land like a plain pane click, which
-      // clears the selection and leaves group mode. Only guard the click when
-      // there is a fresh selection to protect.
+      // A drag that caught nothing should land like a plain pane click.
       if (selectedIds.size > 0) {
         completedDragRef.current = true;
+        // The click arrives in the same task as this mouseup, so clear the flag
+        // right after: a drag released over the toolbar produces no pane click
+        // and must not swallow a later one.
         setTimeout(() => {
           completedDragRef.current = false;
         }, 0);

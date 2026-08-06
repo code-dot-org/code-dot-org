@@ -105,13 +105,9 @@ export function useFocusManagement(
       setLastFocusedEntry(entry);
       setNodeOrEdgeFocused(true);
       element.focus();
-      // Same rule handleFocusCapture applies below: pan an off-screen element
-      // into view for keyboard navigation, but leave the viewport where it is
-      // when a pointer drove the focus — the user is already looking at the
-      // spot they clicked or dragged. The pan stays here rather than relying
-      // on the focus event, because focusing an element that already has
-      // focus fires no event, which is the case while arrow keys walk an
-      // element off-screen.
+      // Keyboard-only pan, as in handleFocusCapture below. Repeated here
+      // because refocusing an already-focused element fires no focus event,
+      // which is what happens while arrow keys walk it off-screen.
       if (!focusFromPointerRef.current) {
         panToEntryIfNeeded(entry, element);
       }
