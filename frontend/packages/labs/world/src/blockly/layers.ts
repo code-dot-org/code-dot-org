@@ -169,43 +169,43 @@ const placesDirectly = (block: Blockly.Block): boolean => {
 };
 
 /**
- * How a layer responds to the camera, as words rather than numbers.
+ * How a layer responds to the camera drawing it.
  *
- * The value carries both knobs: a parallax vector, or `fit`. Presets because
- * the numbers that matter are few and the ones a learner would guess are
- * wrong — the commonest parallax in a side-scroller is HORIZONTAL ONLY, so the
- * scenery shifts as the player walks and stays put when they jump, and a sky
- * that bobs on every jump is what a naive `0.2` on both axes produces.
+ * Two things, and they are genuinely two: a FACTOR, which is how much of the
+ * camera's motion the layer takes, and FIXED, which is not a factor at all.
+ * `(0, 0)` and fixed look identical until a camera has a zoom — a layer at zero
+ * still zooms, a fixed one does not — so the choice is a word and never a
+ * number a learner might type by accident.
  *
- * It also keeps `fit` and "no parallax" from looking like the same choice.
- * They are not: a `(0, 0)` layer still zooms with the camera and a `fit` one
- * does not, so "fixed to the screen" is a word here and never a number.
+ * An earlier draft offered five presets instead ("far behind", "in front", …).
+ * They were dropped: the factor was made a vector precisely so per-axis control
+ * existed, and a closed list of five took it away again. Vertical parallax, a
+ * top-down game, a climbing game — none of them were sayable. A preset is a
+ * good DEFAULT and a bad vocabulary.
  */
-export const LAYER_DEPTH_OPTIONS: Array<[string, string]> = [
-  ['with the camera', '1,1'],
-  ['far behind', '0.2,0'],
-  ['behind', '0.5,0'],
-  ['in front', '1.2,0'],
-  ['fixed to the screen', 'fit'],
+export const LAYER_MOTION_OPTIONS: Array<[string, string]> = [
+  ['moves with the camera', 'moves'],
+  ['is fixed to the screen', 'fixed'],
 ];
 
-/** One entry of a world's layer stack, as `defineLayer` takes it. */
+/**
+ * The factor a layer starts with: all of the camera's motion, both axes.
+ *
+ * The value that makes a new layer behave like the game — which is what a
+ * learner adding their first layer almost always means.
+ */
+export const DEFAULT_PARALLAX = {x: 1, y: 1};
+
+/**
+ * One entry of a world's layer stack, as `defineLayer` takes it.
+ *
+ * An id and nothing else. How a layer responds to the camera is set by a block
+ * in its body (`world_layer_motion`), not declared here — it is read every
+ * frame and builds nothing, so it is a value rather than part of the structure.
+ */
 export interface LayerPlanEntry {
   id: string;
-  parallax?: {x: number; y: number};
-  fit?: boolean;
 }
-
-/** A depth preset as the engine takes it. */
-const layerDepthInit = (
-  value: string,
-): {parallax?: {x: number; y: number}; fit?: boolean} => {
-  if (value === 'fit') {
-    return {fit: true};
-  }
-  const [x, y] = value.split(',').map(Number);
-  return {parallax: {x: x || 0, y: y || 0}};
-};
 
 /**
  * The layers a world declares, in stack order — the argument order for the
@@ -232,15 +232,11 @@ export const layerPlan = (worldBlock: Blockly.Block): LayerPlanEntry[] => {
     block = block.getNextBlock?.() ?? null
   ) {
     if (block.type === DEFINE_LAYER) {
-      plan.push({
-        id: layerId(block.id),
-        ...layerDepthInit(String(block.getFieldValue?.('DEPTH') ?? '1,1')),
-      });
+      plan.push({id: layerId(block.id)});
       continue;
     }
     if (!defaulted && placesDirectly(block)) {
-      // The default moves with the camera, which is what a game layer wants.
-      plan.push({id: DEFAULT_LAYER_ID, parallax: {x: 1, y: 1}});
+      plan.push({id: DEFAULT_LAYER_ID});
       defaulted = true;
     }
   }

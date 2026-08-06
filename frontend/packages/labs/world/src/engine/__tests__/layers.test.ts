@@ -488,14 +488,19 @@ describe('the snapshot', () => {
     expect(snapshotOf('sky', 'hud')).not.toEqual(snapshotOf('hud', 'sky'));
   });
 
-  it('differs when a layer’s settings change', () => {
-    const withFactor = (x: number) =>
-      new WorldBuilder({id: 'w', name: 'W'})
-        .defineLayer({id: 'sky', parallax: new Vector(x, 0)})
-        .instantiate()
-        .snapshot().layers;
+  it('does NOT differ when a layer’s motion changes', () => {
+    // How a layer responds to the camera is read every frame and builds
+    // nothing, so it is a value: turning it must patch the running game rather
+    // than restart it. A rule may turn it every tick.
+    const built = new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'sky'})
+      .instantiate();
+    const before = built.snapshot();
+    built.setLayerParallax(new Vector(0.2, 0), 'sky');
+    const after = built.snapshot();
 
-    expect(withFactor(0.2)).not.toEqual(withFactor(0.5));
+    expect(after.layers).toEqual(before.layers);
+    expect(after.layerMotion).not.toEqual(before.layerMotion);
   });
 });
 

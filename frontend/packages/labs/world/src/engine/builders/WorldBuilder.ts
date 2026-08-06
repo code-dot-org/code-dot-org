@@ -225,6 +225,18 @@ export class WorldBuilder {
     return this;
   }
 
+  /** How much of the camera's motion a layer takes. See {@link World.setLayerParallax}. */
+  setLayerParallax(parallax: Vector, layer?: string): this {
+    this.getWorld().setLayerParallax(parallax, layer);
+    return this;
+  }
+
+  /** Whether a layer ignores the camera. See {@link World.setLayerFit}. */
+  setLayerFit(fit: boolean, layer?: string): this {
+    this.getWorld().setLayerFit(fit, layer);
+    return this;
+  }
+
   /** Play an effect on a whole layer. See {@link World.addLayerEffect}. */
   addLayerEffect(
     path: string,
