@@ -9,9 +9,9 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 /**
- * Returns true if the model is served via the Google Gemini API (includes
- * LearnLM). These models are blocked for international users; see
- * currentUser.aiChatGeminiModelsBlocked and User::AiAccessible on the server.
+ * Returns true if the model is served via the Google Gemini API. These models
+ * are blocked for international users; see currentUser.aiChatGeminiModelsBlocked
+ * and User::AiAccessible on the server.
  */
 export const isGeminiModelId = (modelId: string): boolean =>
   (AiChatGeminiModelIds as readonly string[]).includes(modelId);

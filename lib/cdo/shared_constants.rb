@@ -852,7 +852,6 @@ module SharedConstants
   AI_CHAT_MODEL_IDS = {
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     CHATGPT: "gpt-4o-mini",
-    LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
@@ -860,11 +859,11 @@ module SharedConstants
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
-  # Models served via the Google Gemini API (includes LearnLM, which is built
-  # on Gemini and routed through the same client). These are unavailable to
-  # international users; see User::AiAccessible#can_use_aichat_model?.
+  # Models served via the Google Gemini API. Single source of truth for both
+  # which client serves a model (apps/src/aichat/api/client/helpers/modelHelpers)
+  # and which models are unavailable to international users (see
+  # User::AiAccessible#can_use_aichat_model?).
   AI_CHAT_GEMINI_MODEL_IDS = [
-    AI_CHAT_MODEL_IDS[:LEARNLM],
     AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],

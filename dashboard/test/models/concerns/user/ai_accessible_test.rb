@@ -274,7 +274,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
   describe '#can_use_aichat_model?' do
     let(:gemini_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH]}
     let(:image_model) {SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE]}
-    let(:learnlm_model) {SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM]}
+    let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
 
     context 'when gemini models are blocked' do
@@ -282,14 +282,16 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:gemini_models_blocked?).and_return(true)
       end
 
-      it 'blocks gemini chat, image, and learnlm models' do
-        _(user.can_use_aichat_model?(gemini_model)).must_equal false
+      it 'blocks every gemini model, including image generation' do
+        SharedConstants::AI_CHAT_GEMINI_MODEL_IDS.each do |model_id|
+          _(user.can_use_aichat_model?(model_id)).must_equal false
+        end
         _(user.can_use_aichat_model?(image_model)).must_equal false
-        _(user.can_use_aichat_model?(learnlm_model)).must_equal false
       end
 
       it 'allows non-gemini models' do
         _(user.can_use_aichat_model?(openai_model)).must_equal true
+        _(user.can_use_aichat_model?(mistral_model)).must_equal true
       end
     end
 

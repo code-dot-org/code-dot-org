@@ -45,7 +45,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
   private def openai_or_gemini?(model_id)
     [
       SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
-      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
       SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],

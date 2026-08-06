@@ -3,7 +3,10 @@ import {createOpenAI} from '@ai-sdk/openai';
 import {type LanguageModel} from 'ai';
 
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatGeminiModelIds,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 
 type ModelId = ValueOf<typeof AiChatModelIds>;
 
@@ -15,26 +18,18 @@ const openAiProvider = createOpenAI({
   apiKey: '',
 });
 
-// All models served via the Google provider. isGeminiModel is derived from this
-// list, so adding a model here is the only change needed to extend gateway support.
-const googleModelIds: ModelId[] = [
-  AiChatModelIds.GEMINI_2_5_FLASH_IMAGE,
-  AiChatModelIds.GEMINI_2_5_FLASH,
-  AiChatModelIds.GEMINI_2_0_FLASH,
-  AiChatModelIds.GEMINI_2_5_PRO,
-  AiChatModelIds.GEMINI_2_5_FLASH_LITE,
-];
-
+// Models served via the Google provider, from the shared constant that also
+// decides which models are region-blocked, so the two can't drift. Use
+// isGeminiModelId (aichat/helpers/aiChatAccess) to test membership — it doesn't
+// pull in the AI SDK.
 const modelMap: {
   [key in ModelId]?: LanguageModel;
 } = {
-  ...Object.fromEntries(googleModelIds.map(id => [id, googleProvider(id)])),
+  ...Object.fromEntries(
+    AiChatGeminiModelIds.map(id => [id, googleProvider(id)])
+  ),
   [AiChatModelIds.CHATGPT]: openAiProvider(AiChatModelIds.CHATGPT),
 };
-
-export function isGeminiModel(modelId: ModelId): boolean {
-  return googleModelIds.includes(modelId);
-}
 
 export function getModel(modelId: ModelId) {
   if (!modelMap[modelId]) {
