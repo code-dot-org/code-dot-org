@@ -282,6 +282,100 @@ export class WorldBuilder {
     return this;
   }
 
+  /**
+   * Stop an effect covering the whole view. See {@link World.removeEffect}.
+   *
+   * On the builder as well as the live world, like every other remove here: the
+   * block that emits it warns when it is placed under `define world`, but a
+   * warning does not prevent, and a learner who ignores one should meet an
+   * effect that does not play rather than `world.removeEffect is not a
+   * function`.
+   */
+  removeEffect(path: string): this {
+    if (this.built) {
+      this.built.removeEffect(path);
+      return this;
+    }
+    const index = this.effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      this.effects.splice(index, 1);
+    }
+    return this;
+  }
+
+  /** Play an effect on a layer's foreground. See {@link World.addForegroundEffect}. */
+  addForegroundEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    if (this.built) {
+      this.built.addForegroundEffect(path, document, values, layer);
+      return this;
+    }
+    const effects = this.slotAt(this.foregrounds, layer).effects;
+    if (effects.some(effect => effect.path === path)) {
+      return this;
+    }
+    effects.push(values ? {path, document, values} : {path, document});
+    return this;
+  }
+
+  /** Stop an effect on a layer's foreground. */
+  removeForegroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.removeForegroundEffect(path, layer);
+      return this;
+    }
+    const effects = this.slotAt(this.foregrounds, layer).effects;
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
+    return this;
+  }
+
+  /** Slide a layer's background. See {@link World.setBackgroundOffset}. */
+  setBackgroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.setBackgroundOffset(offset, layer);
+      return this;
+    }
+    this.slotAt(this.backgrounds, layer).offset = {x: offset.x, y: offset.y};
+    return this;
+  }
+
+  /** Slide a layer's foreground. */
+  setForegroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.setForegroundOffset(offset, layer);
+      return this;
+    }
+    this.slotAt(this.foregrounds, layer).offset = {x: offset.x, y: offset.y};
+    return this;
+  }
+
+  /** Tile a layer's background rather than stretching it. */
+  setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.setBackgroundRepeat(repeat, layer);
+      return this;
+    }
+    this.slotAt(this.backgrounds, layer).repeat = repeat;
+    return this;
+  }
+
+  /** Tile a layer's foreground rather than stretching it. */
+  setForegroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.setForegroundRepeat(repeat, layer);
+      return this;
+    }
+    this.slotAt(this.foregrounds, layer).repeat = repeat;
+    return this;
+  }
+
   /** Set the colour behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     if (this.built) {
