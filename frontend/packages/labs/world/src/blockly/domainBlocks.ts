@@ -45,6 +45,7 @@ import {
   type EnumMeta,
 } from './enums';
 import {
+  builderWorldExtension,
   runtimeActorExtension,
   runtimeWorldExtension,
   traitContextExtension,
@@ -2500,7 +2501,9 @@ const worldAddActor = defineBlock({
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [actorOptionsExtension],
+  // Builder-only: `world.addActor(Template, id, type)` is `WorldBuilder`'s, and
+  // the live `World.addActor` takes an already-made Actor (see the extension).
+  extensions: [actorOptionsExtension, builderWorldExtension],
   style: 'behavior_blocks',
   tooltip: 'Place an instance of an actor and set its per-instance properties.',
   generator: {
@@ -2623,7 +2626,11 @@ const worldCreateInMap = defineBlock({
   ],
   previousStatement: true,
   nextStatement: true,
-  extensions: [actorOptionsExtension, worldContextExtension],
+  // `builderWorld` rather than `worldContext`: it subsumes it here. Anywhere
+  // `world` is unbound this also warns, and it additionally catches `world`
+  // being bound to the LIVE world, which has no `define` or `loadMap` at all.
+  // Both would be two warnings saying one thing.
+  extensions: [actorOptionsExtension, builderWorldExtension],
   style: 'behavior_blocks',
   tooltip:
     'Place several actors of one kind, arranged on the map. Their positions ' +
@@ -2677,7 +2684,9 @@ const worldLoadMap = defineBlock({
   args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [mapOptionsExtension],
+  // Builder-only for the same reason as its siblings: `define` and `loadMap`
+  // are `WorldBuilder`'s and the live `World` has neither.
+  extensions: [mapOptionsExtension, builderWorldExtension],
   style: 'setup_blocks',
   tooltip: 'Place all the actors a map file describes into the world.',
   generator: {

@@ -12,6 +12,7 @@ import {
   ROOT_BLOCK_TYPES,
 } from '../domainBlocks';
 import {
+  BUILDER_WORLD_EXTENSION,
   RUNTIME_ACTOR_EXTENSION,
   RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
@@ -2113,6 +2114,30 @@ describe('builder-context warnings', () => {
       RUNTIME_WORLD_EXTENSION,
     );
     expect(extensionsOf('world_remove_world_effect')).toContain(
+      WORLD_CONTEXT_EXTENSION,
+    );
+  });
+
+  it('guards the three blocks that place actors, which need the builder', () => {
+    // `add actor` generates `world.addActor(Template, id, type)` —
+    // `WorldBuilder`'s three-argument form. The live `World.addActor` takes an
+    // already-made Actor, and has no `define` or `loadMap` at all. Unguarded,
+    // one of these in a handler pushes an `ActorBuilder` into the actor list
+    // and throws nothing: the game just has a thing in it that is not an actor.
+    for (const type of [
+      'world_add_actor',
+      'world_load_map',
+      'world_create_in_map',
+    ]) {
+      expect(extensionsOf(type), type).toContain(BUILDER_WORLD_EXTENSION);
+    }
+  });
+
+  it('does not double-warn on `create ⟨x⟩ in map`', () => {
+    // It carried `worldContext` before. `builderWorld` subsumes it — anywhere
+    // `world` is unbound this warns too — so keeping both would put two
+    // warnings on one block saying one thing.
+    expect(extensionsOf('world_create_in_map')).not.toContain(
       WORLD_CONTEXT_EXTENSION,
     );
   });

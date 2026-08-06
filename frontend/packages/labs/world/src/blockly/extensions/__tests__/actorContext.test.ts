@@ -115,3 +115,65 @@ describe('inBuilderContext, for `use trait`', () => {
     expect(inBuilderContext(block, ACTOR_ROOTS)).toBe(false);
   });
 });
+
+/** Where the three placing blocks are valid: a world's own body, and nowhere else. */
+const WORLD_ROOTS = ['world_world'];
+
+describe('inBuilderContext, for the blocks that place actors', () => {
+  // `add actor`, `load map` and `create … in map` all call `WorldBuilder`
+  // methods — `define`, `loadMap`, and an `addActor(builder, id, type)` that
+  // instantiates a template. The live `World` has neither of the first two and
+  // an `addActor(actor)` that takes an already-made Actor, so the generated
+  // call reaches the wrong object entirely and pushes an `ActorBuilder` into
+  // the actor list. Nothing throws, which is why the editor has to say so.
+
+  it('accepts a placement chained under `define world`', () => {
+    expect(
+      inBuilderContext(chain('world_add_actor', 'world_world'), WORLD_ROOTS),
+    ).toBe(true);
+  });
+
+  it('accepts one nested deeper in the world body', () => {
+    expect(
+      inBuilderContext(
+        chain('world_load_map', 'controls_if', 'world_world'),
+        WORLD_ROOTS,
+      ),
+    ).toBe(true);
+  });
+
+  it('rejects a placement inside an event handler', () => {
+    // The case a learner reaches first — "when the button is pressed, add a
+    // coin". Runtime spawning is a real thing to want and is not built.
+    expect(
+      inBuilderContext(
+        chain('world_add_actor', 'world_on_startsFalling'),
+        WORLD_ROOTS,
+      ),
+    ).toBe(false);
+  });
+
+  it('rejects a handler nested inside the world file', () => {
+    // Hats sit beside `define world` in a `.world`, but even nested the nearest
+    // binder decides: inside the handler `world` is the live one.
+    expect(
+      inBuilderContext(
+        chain('world_create_in_map', 'world_on_startsFalling', 'world_world'),
+        WORLD_ROOTS,
+      ),
+    ).toBe(false);
+  });
+
+  it('rejects a placement inside a rule step, where `world` is live', () => {
+    expect(
+      inBuilderContext(
+        chain('world_add_actor', 'world_rule_step_tick', 'world_rule'),
+        WORLD_ROOTS,
+      ),
+    ).toBe(false);
+  });
+
+  it('rejects a floating placement', () => {
+    expect(inBuilderContext(chain('world_add_actor'), WORLD_ROOTS)).toBe(false);
+  });
+});
