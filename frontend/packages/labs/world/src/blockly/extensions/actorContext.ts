@@ -174,15 +174,17 @@ export const builderWorldExtension = builderContextExtension(
 export const TRAIT_CONTEXT_EXTENSION = 'world_needs_trait_context';
 
 /**
- * For `use trait`, which has two homes.
+ * For `use trait`, which has three homes.
  *
  * Under `define actor` it generates `actor.useTraits([…])` on the builder.
  * Inside `define trait` it declares that trait's own dependencies, and is read
  * statically into `RuleMeta` — the rule blocks carry no generator, so nothing
- * is called there at all. Both are correct; a handler is not.
+ * is called there at all. Inside `define camera` the declaration collects it
+ * and passes it to `defineCamera` in one call, so the block itself generates
+ * nothing. All three are correct; a handler is not.
  */
 export const traitContextExtension = builderContextExtension(
   TRAIT_CONTEXT_EXTENSION,
-  ['world_actor', 'world_rule_trait'],
+  ['world_actor', 'world_rule_trait', 'world_define_camera'],
   'This is part of describing an actor or a trait. Try placing it under "define actor" or inside "define trait".',
 );
