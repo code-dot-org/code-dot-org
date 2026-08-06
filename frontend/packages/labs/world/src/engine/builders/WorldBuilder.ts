@@ -72,6 +72,11 @@ export class WorldBuilder {
     string,
     BackdropState & {effects: AppliedEffectSpec[]}
   >();
+  /** The same for what each layer draws in front of its actors. */
+  private readonly foregrounds = new Map<
+    string,
+    BackdropState & {effects: AppliedEffectSpec[]}
+  >();
   /** The one colour behind everything, if it was set before the world existed. */
   private clearColor: Rgba | undefined;
   // Layers as declared, back to front. Empty until something says otherwise;
@@ -202,6 +207,16 @@ export class WorldBuilder {
     return this;
   }
 
+  /** Draw an image in front of a layer's actors. See {@link World.setForeground}. */
+  setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.setForeground(sprite, layer);
+      return this;
+    }
+    this.slotAt(this.foregrounds, layer).sprite = sprite;
+    return this;
+  }
+
   /** Set the colour behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     if (this.built) {
@@ -264,10 +279,17 @@ export class WorldBuilder {
   private backdropAt(layer: string): BackdropState & {
     effects: AppliedEffectSpec[];
   } {
-    let slot = this.backgrounds.get(layer);
+    return this.slotAt(this.backgrounds, layer);
+  }
+
+  private slotAt(
+    slots: Map<string, BackdropState & {effects: AppliedEffectSpec[]}>,
+    layer: string,
+  ): BackdropState & {effects: AppliedEffectSpec[]} {
+    let slot = slots.get(layer);
     if (!slot) {
       slot = {effects: []};
-      this.backgrounds.set(layer, slot);
+      slots.set(layer, slot);
     }
     return slot;
   }
@@ -467,6 +489,9 @@ export class WorldBuilder {
       clearColor: this.clearColor,
       backgrounds: Object.fromEntries(
         [...this.backgrounds].map(([id, slot]) => [id, {...slot}]),
+      ),
+      foregrounds: Object.fromEntries(
+        [...this.foregrounds].map(([id, slot]) => [id, {...slot}]),
       ),
       layers: this.layers.map(layer => ({...layer})),
     });

@@ -60,6 +60,7 @@ const DEGREES_TO_RADIANS = Math.PI / 180;
 const LAYER_SPAN = 10;
 const backgroundDepth = (layer: number) => layer * LAYER_SPAN;
 const actorDepth = (layer: number) => layer * LAYER_SPAN + 1;
+const foregroundDepth = (layer: number) => layer * LAYER_SPAN + 2;
 
 /**
  * The name of a texture frame for `cell`, registering it on first use.
@@ -162,6 +163,9 @@ export class PhaserBinding {
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
     const backdrops: Array<Phaser.GameObjects.Image | undefined> = [];
+    // The foregrounds' own images. A separate cache because they are separate
+    // objects at separate depths; nothing either holds concerns the other.
+    const foregrounds: Array<Phaser.GameObjects.Image | undefined> = [];
     // Every key currently held (by our name, `engine/core/keys`); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
@@ -276,9 +280,41 @@ export class PhaserBinding {
      * starts, but not for one set during it — that image would be made after the
      * actors' and would cover them.
      */
-    const syncBackdrops = (scene: Phaser.Scene) => {
-      const layers = world.backdropSnapshot() as BackdropState[];
+    const syncSlots = (
+      scene: Phaser.Scene,
+      slots: readonly BackdropState[],
+      images: Array<Phaser.GameObjects.Image | undefined>,
+      depthOf: (layer: number) => number,
+    ) => {
+      slots.forEach((slot, index) => {
+        let image = images[index];
+        const sprite = slot.sprite;
+        if (sprite === undefined || !scene.textures.exists(sprite)) {
+          // No image, or one the project no longer holds: nothing to draw.
+          image?.destroy();
+          images[index] = undefined;
+          return;
+        }
+        if (!image) {
+          image = scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
+          image.setDepth(depthOf(index));
+          images[index] = image;
+        }
+        image.setTexture(sprite);
+        image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
+        // A slot's effects filter its own pixels — unlike a world effect,
+        // which filters the camera and so covers the actors too.
+        effectRegistry.reconcile(scene, image, slot.effects);
+      });
 
+      // Layers the world dropped: their images go with them.
+      for (let index = slots.length; index < images.length; index++) {
+        images[index]?.destroy();
+        images[index] = undefined;
+      }
+    };
+
+    const syncBackdrops = (scene: Phaser.Scene) => {
       // One sky, the world's: a colour on any layer but the bottom is behind
       // the layer under it and can never be seen (BACKGROUNDS.md).
       const [r, g, b, a] = world.backdropColor();
@@ -287,34 +323,18 @@ export class PhaserBinding {
         Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
       );
 
-      layers.forEach((layer, index) => {
-        let image = backdrops[index];
-        const sprite = layer.sprite;
-        if (sprite === undefined || !scene.textures.exists(sprite)) {
-          // No image, or one the project no longer holds: nothing to draw, and
-          // the colour behind it is already set.
-          image?.destroy();
-          backdrops[index] = undefined;
-          return;
-        }
-        if (!image) {
-          image = scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
-          // Behind its OWN layer's actors, and in front of everything below it.
-          image.setDepth(backgroundDepth(index));
-          backdrops[index] = image;
-        }
-        image.setTexture(sprite);
-        image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
-        // A layer's effects filter its own pixels — unlike a world effect,
-        // which filters the camera and so covers the actors too.
-        effectRegistry.reconcile(scene, image, layer.effects);
-      });
-
-      // Layers the world dropped: their images go with them.
-      for (let index = layers.length; index < backdrops.length; index++) {
-        backdrops[index]?.destroy();
-        backdrops[index] = undefined;
-      }
+      syncSlots(
+        scene,
+        world.backdropSnapshot() as BackdropState[],
+        backdrops,
+        backgroundDepth,
+      );
+      syncSlots(
+        scene,
+        world.foregroundSnapshot() as BackdropState[],
+        foregrounds,
+        foregroundDepth,
+      );
     };
 
     const sync = (scene: Phaser.Scene) => {

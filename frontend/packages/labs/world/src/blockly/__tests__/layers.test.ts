@@ -97,6 +97,20 @@ describe('the layer a placement lands in', () => {
   });
 });
 
+describe('the slot blocks', () => {
+  it('paint the layer they are written in', () => {
+    // `set background` / `set foreground` name their layer for the same reason
+    // a placement does: the block's ancestor is the answer, so fogging inside
+    // a `define layer` fogs that layer and nothing else.
+    const block = chain('world_set_foreground', {
+      type: 'world_define_layer',
+      id: 'game',
+    });
+
+    expect(layerOf(block)).toBe(layerId('game'));
+  });
+});
+
 describe('the layer plan a world declares', () => {
   /** A `define world` whose next-chain is the given blocks, in order. */
   const world = (

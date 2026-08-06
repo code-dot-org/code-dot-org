@@ -37,6 +37,9 @@ import {Vector} from './Vector';
  */
 export const DEFAULT_LAYER_ID = 'main';
 
+/** Which of a layer's two image slots is meant. */
+export type SlotName = 'background' | 'foreground';
+
 /**
  * An image drawn with a layer — behind its actors, or in front of them.
  *
@@ -77,6 +80,15 @@ export interface Layer {
   readonly fit: boolean;
   /** Drawn behind this layer's actors. Mutable: a handler may change it. */
   readonly background: LayerSlot;
+  /**
+   * Drawn in front of this layer's actors.
+   *
+   * The same object as the background and drawn by the same code — fog over the
+   * game, a vignette, snow. Which side of the actors it lands on is the only
+   * difference, and it is a depth rather than a kind. That is why a "foreground
+   * layer" is not a thing anyone has to make: any layer has one.
+   */
+  readonly foreground: LayerSlot;
 }
 
 /** A layer with its defaults filled in. */
@@ -87,5 +99,6 @@ export function makeLayer(init: LayerInit): Layer {
     parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
     fit: init.fit ?? false,
     background: emptySlot(),
+    foreground: emptySlot(),
   };
 }

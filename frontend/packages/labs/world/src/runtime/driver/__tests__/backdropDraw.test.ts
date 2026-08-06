@@ -133,6 +133,7 @@ const world = (
     renderSnapshot: () => [],
     backdropSnapshot: () =>
       backdrops.map(backdrop => ({...backdrop, effects: []})),
+    foregroundSnapshot: () => backdrops.map(() => ({effects: []})),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
     backdropColor: () => clearColor,
     snapshot: () => ({world: {}}),
