@@ -10,8 +10,11 @@ const PREFIX = '[STATSIG ANALYTICS EVENT]';
 /** Transmits nothing and logs what a transmitting environment would send. */
 export class ConsoleAdapter implements AnalyticsClient {
   init(config: AnalyticsConfig, session: AnalyticsSession): void {
-    void config;
     console.log(`${PREFIX}: Statsig Stable ID: ${session.stableId}`);
+    if (!config.user) return;
+    console.log(
+      `${PREFIX}: Seeded identity: userId: ${config.user.userId}, userType: ${config.user.userType}`,
+    );
   }
 
   sendEvent(name: string, payload?: Record<string, unknown>): void {

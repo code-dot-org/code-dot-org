@@ -2,6 +2,8 @@
 export interface AnalyticsConfig {
   provider: 'statsig' | 'none';
   statsig?: {clientKey: string};
+  /** Identity the page was rendered for, when the server knows one. */
+  user?: {userId: string; userType?: string};
 }
 
 /** Anonymous session dimensions, resolved once at boot. */

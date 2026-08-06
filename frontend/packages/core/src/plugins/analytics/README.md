@@ -65,6 +65,28 @@ production ones.
 `setUser(null)` is a no-op. The signature accepts `null` so callers can pass a
 signed-out auth outcome without branching, but no identity is cleared.
 
+#### Where identity comes from
+
+Two independent sources, in precedence order:
+
+1. **A server-rendered seed.** When the page's app-config carries
+   `analytics.user`, the client boots already identified — the first events of
+   the page load carry `userID` and `userType` rather than landing anonymous
+   and being re-attributed.
+2. **`setUser`.** Always authoritative afterward, and carrying the fuller set
+   of dimensions (`isVerifiedInstructor`, `educatorRole`), which the seed does
+   not include.
+
+The two are decoupled by design: **the plugin never requires the server to
+render identity.** A signed-out page, a cached layout, a static host, and the
+standalone shells all boot anonymous and are identified entirely through
+`setUser`. Seeding is an optimization, not a dependency.
+
+A seeded boot followed by `setUser` for the same person is the normal signed-in
+sequence and is not suppressed — the repeat-call short-circuit only drops
+byte-identical updates, and the seed and a full `setUser` never serialize
+alike.
+
 ## Runtime config shape
 
 Rails injects the config through the `<meta name="app-config">` tag:
@@ -73,10 +95,14 @@ Rails injects the config through the `<meta name="app-config">` tag:
 {
   "analytics": {
     "provider": "statsig",
-    "statsig": {"clientKey": "client-..."}
+    "statsig": {"clientKey": "client-..."},
+    "user": {"userId": "42", "userType": "teacher"}
   }
 }
 ```
+
+`user` is present only when the page was rendered for a signed-in person; it is
+absent entirely otherwise.
 
 Whether an environment transmits is decided server-side — only production and
 the chef-managed test server do — and a non-transmitting environment is served

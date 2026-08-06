@@ -17,10 +17,16 @@ module StatsigAnalyticsHelper
   # the key defaults to blank and the page is served provider 'none'. A
   # developer enables the provider locally by setting a real
   # statsig_api_client_key in locals.yml.
+  # A signed-in page seeds the identity so the first events carry it. The
+  # frontend treats this as optional and identifies over its API when absent,
+  # so a signed-out page, a cached layout, or a static shell simply omits it.
   def analytics_config
     client_key = CDO.safe_statsig_api_client_key
     return {provider: 'none'} if client_key.blank?
 
-    {provider: 'statsig', statsig: {clientKey: client_key}}
+    config = {provider: 'statsig', statsig: {clientKey: client_key}}
+    return config unless current_user
+
+    config.merge(user: {userId: current_user.id.to_s, userType: current_user.user_type})
   end
 end

@@ -37,8 +37,10 @@ export class StatsigAdapter implements AnalyticsClient {
       custom: {
         enabledExperiments: session.enabledExperiments,
         geRegion: session.geRegion ?? undefined,
+        ...(config.user && {userType: config.user.userType}),
       },
       customIDs: {stableID: session.stableId},
+      ...(config.user && {userID: formatUserId(config.user.userId)}),
     };
     this.appliedUser = JSON.stringify(user);
 

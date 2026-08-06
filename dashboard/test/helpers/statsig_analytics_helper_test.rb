@@ -30,6 +30,10 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
   end
 
   describe '#analytics_config' do
+    # Defined here rather than inherited, so these cases never depend on
+    # whatever sign-in state Devise happens to leave behind.
+    let(:current_user) {nil}
+
     it 'reports the client key when one is provisioned' do
       CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
       _(analytics_config).must_equal(
@@ -41,6 +45,26 @@ class StatsigAnalyticsHelperTest < ActionView::TestCase
       set_env :production
       CDO.stubs(:safe_statsig_api_client_key).returns('')
       _(analytics_config).must_equal({provider: 'none'})
+    end
+
+    context 'when a user is signed in' do
+      let(:current_user) {build(:teacher, id: 42)}
+
+      it 'seeds the identity alongside the client key' do
+        CDO.stubs(:safe_statsig_api_client_key).returns('client-test-key')
+        _(analytics_config).must_equal(
+          {
+            provider: 'statsig',
+            statsig: {clientKey: 'client-test-key'},
+            user: {userId: '42', userType: 'teacher'},
+          }
+        )
+      end
+
+      it 'omits the identity when there is no provider to carry it' do
+        CDO.stubs(:safe_statsig_api_client_key).returns('')
+        _(analytics_config).must_equal({provider: 'none'})
+      end
     end
   end
 end
