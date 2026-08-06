@@ -86,25 +86,19 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
-### Looking like Studio
+### Styling, and what it is not
 
-Studio renders these components inside a Rails page that loads Bootstrap 3 and
-application.css. With no globals at all the shell falls back to browser
-defaults — Times New Roman, content-box, unstyled buttons — so
-`src/dev/productionResets.css` carries the rules from those sheets that reach
-this feature, `index.html` declares the `data-brand` that selects a palette in
-`component-library-styles/brandOverrides.css`, and webfonts come from
-`@code-dot-org/fonts`.
+The shell uses the same foundation as every other package dev host: MUI's
+`CssBaseline`, the `codeai-next` MUI theme, and the `component-library-styles`
+token sheets, with webfonts from `@code-dot-org/fonts`.
 
-That file is a hand-picked subset, not a transcript. Measured against the real
-`/s/<unit>/lessons/<n>/tutor` page signed in as a student, it puts all 11 boxes
-on identical DOM, geometry and computed styles. Screenshots are close but not
-identical: the packaged Geist is a different subset build from the one Rails
-serves out of `shared/fonts`, so glyph edges rasterize a shade differently.
-Layout is right; pixels are not maintained.
+That is deliberately not what Studio loads. Studio renders these components
+inside a Rails page carrying Bootstrap 3 and application.css, whose body
+typography and global `button` skin this feature partly inherits rather than
+declares. So the shell is a development tool, not a fidelity reference:
+component behaviour, data flow and layout are faithful, appearance is close but
+not authoritative.
 
-Markup added later can pick up a global rule the subset does not carry. If
-something looks off here, check it in Studio before chasing it.
-
-The chat panel is further out still: `AiTutorChat` is a stub and does not
-resemble the real component at all.
+Check anything appearance-critical in Studio. Two known gaps: text the feature
+does not size itself picks up MUI's scale rather than Studio's 13px/18px, and
+`AiTutorChat` is a stub that does not resemble the real component at all.

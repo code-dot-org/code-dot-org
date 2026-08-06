@@ -8,13 +8,20 @@
 
 import './nodeShims';
 
-import {StrictMode, type ComponentProps} from 'react';
-import {Provider} from 'react-redux';
-
 // Studio serves Geist and Noto Sans from application.css @font-face; these are
 // the same families, packaged.
 import '@code-dot-org/fonts/brands/code.org/index.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 
+import {CssBaseline, ThemeProvider} from '@mui/material';
+import {StrictMode, type ComponentProps} from 'react';
+import {Provider} from 'react-redux';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
@@ -22,8 +29,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {LESSON_DEEP_DIVE_DATA} from './fixtures';
 import {registerLessonDeepDiveMocks} from './mocks';
-
-import './productionResets.css';
 
 type ProviderStore = ComponentProps<typeof Provider>['store'];
 
@@ -60,9 +65,12 @@ async function boot(): Promise<void> {
 
   createReactRoot(
     <StrictMode>
-      <Provider store={createDevStore()}>
-        <LessonDeepDiveContainer lessonDeepDiveData={LESSON_DEEP_DIVE_DATA} />
-      </Provider>
+      <ThemeProvider theme={getMuiThemeForBrand('codeai-next')}>
+        <CssBaseline />
+        <Provider store={createDevStore()}>
+          <LessonDeepDiveContainer lessonDeepDiveData={LESSON_DEEP_DIVE_DATA} />
+        </Provider>
+      </ThemeProvider>
     </StrictMode>,
     document.getElementById('lesson-deep-dive-container')!,
   );
