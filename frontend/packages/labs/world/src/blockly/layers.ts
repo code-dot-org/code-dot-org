@@ -169,22 +169,23 @@ const placesDirectly = (block: Blockly.Block): boolean => {
 };
 
 /**
- * How a layer responds to the camera drawing it.
+ * Whether a layer consults the camera at all.
  *
- * Two things, and they are genuinely two: a FACTOR, which is how much of the
- * camera's motion the layer takes, and FIXED, which is not a factor at all.
- * `(0, 0)` and fixed look identical until a camera has a zoom — a layer at zero
- * still zooms, a fixed one does not — so the choice is a word and never a
- * number a learner might type by accident.
+ * Separate from the parallax FACTOR, and genuinely a different question. A
+ * factor says how much of the camera's motion a layer takes; this says whether
+ * it looks at the camera in the first place. `(0, 0)` and fixed appear the same
+ * until a camera has a zoom — a layer at zero still zooms, a fixed one does not
+ * — so being fixed is a word and never a number a learner might type by
+ * accident.
  *
- * An earlier draft offered five presets instead ("far behind", "in front", …).
- * They were dropped: the factor was made a vector precisely so per-axis control
- * existed, and a closed list of five took it away again. Vertical parallax, a
- * top-down game, a climbing game — none of them were sayable. A preset is a
- * good DEFAULT and a bad vocabulary.
+ * An earlier draft offered five presets for the factor ("far behind", "in
+ * front", …). They were dropped: the factor was made a vector precisely so
+ * per-axis control existed, and a closed list of five took it away again.
+ * Vertical parallax, a top-down game, a climbing game — none of them were
+ * sayable. A preset is a good DEFAULT and a bad vocabulary.
  */
-export const LAYER_MOTION_OPTIONS: Array<[string, string]> = [
-  ['moves with the camera', 'moves'],
+export const LAYER_FIXED_OPTIONS: Array<[string, string]> = [
+  ['follows the camera', 'follows'],
   ['is fixed to the screen', 'fixed'],
 ];
 
