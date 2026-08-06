@@ -1,8 +1,8 @@
 // Seed a block's value inputs with default "shadow" blocks — the greyed-out
 // placeholder a learner can type over or replace by dropping in another block
 // (a getter, a math expression). Set-property blocks use this so their value is
-// a real socket, not a bare field: `set world strength to (9)` where the 9
-// is a `math_number` shadow that a `get world strength` or `(_ + 1)` can
+// a real socket, not a bare field: `set amount of gravity to (9)` where the 9
+// is a `math_number` shadow that a `get amount of gravity` or `(_ + 1)` can
 // replace. Attached as an extension — like `actorInput`'s `this actor` shadow —
 // because the simplified toolbox lists blocks by type only and can't carry
 // per-input shadow specs; the per-block defaults live in a registry keyed by
