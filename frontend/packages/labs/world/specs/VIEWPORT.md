@@ -22,26 +22,51 @@ down such that the map fits. The units, in either case, remain the same. The
 viewport camera itself is what is effectively scaling. So, jumping, positioning,
 etc, are all the same behavior regardless of how large actors are on the screen.
 
-We will do the second option. It is the least surprising and the most applicable
-to beginners since we will likely hide layers, cameras, and other tricks that
-allow for more content than fits on the screen. They will gain access to those
-extra primitives and engine capabilities over time. So, the default will be an
-ever constrained map as the map gets larger. The screen and viewport remain the
-small square until they gain the ability to change its shape.
+WE DO THE FIRST OPTION. This is a correction: the paragraph that stood here
+chose the second, and the second was never built. The driver has never scaled
+anything — it sets no zoom and no scroll, so the viewport is a fixed 320x320
+window onto world space and a 40x40 map shows its top-left corner. What follows
+records the decision that the code was already making.
 
-### The fit rule
+Three things argue for it, and they only became clear once maps could actually
+be resized:
 
-Fitting is a uniform scale, centered. When the aspect ratio of what is being fit
-differs from the viewport's, bars appear on the two short sides. It is never a
-stretch and never a crop, so a circle is a circle and nothing is ever cut off.
+- Scale-to-fit degrades to illegibility. A 40x40 map draws every actor at a
+  sixteenth of its size. The map is technically all visible and practically
+  unreadable, which is a worse failure than an honest edge — it looks like the
+  game is broken rather than like the map is bigger than the screen.
+- The band it would serve is one step from a camera. Beginners never enter it:
+  their map size controls are hidden (below), so they are pinned to 10x10 and
+  see everything at 1:1. The only people who meet a map bigger than the viewport
+  are people who went looking for one, and the thing they want next is a camera.
+- Resizing a map was scoped to the map EDITOR (see the width/height controls and
+  the dashed viewport rectangle they draw). Scale-to-fit would have been a
+  second, invisible answer to the same question the editor already answers
+  visibly.
 
-This is one rule and it applies to every layer, including the interface layer.
-There is no separate screen-space coordinate system anywhere: a HUD is a map in
-a layer, fit to the viewport by that layer's default camera like any other. A
-HUD map with the viewport's own dimensions gets a 1:1 scale and a camera that
-never moves, which is screen space, arrived at by the general rule rather than
-beside it. A HUD map of some other aspect ratio gets bars, which is the fit rule
-telling the author their map is the wrong shape.
+So a map bigger than the viewport shows as much as fits, and the camera is how
+you see the rest. The map editor draws the viewport as a dashed rectangle over
+any map that is larger, which is the editor saying exactly this.
+
+### Fit, which is a LAYER's business and not the map's
+
+`fit` survives this correction, because it was never about scaling the map. It
+is one of the two ways a LAYER responds to the camera drawing it:
+
+- **camera-driven**, with a parallax factor (see Layers);
+- **fit** — ignore the camera entirely.
+
+That is what an interface layer is, and it is why one is not a special kind of
+object. There is no separate screen-space coordinate system anywhere: a HUD is a
+map in a layer, and what makes it a HUD is that its layer does not consult the
+camera. A HUD map with the viewport's own dimensions therefore sits 1:1 and
+never scrolls, which is screen space, arrived at by the general rule rather than
+beside it.
+
+`fit` also means ignoring the camera's SCALE, once a camera has one. That is why
+a parallax factor of `(0, 0)` is not the same thing: a factor covers translation
+only, so a layer at zero still zooms with the camera, and a score that shrinks
+when the player zooms out is not a HUD.
 
 Two things follow, both for later:
 
@@ -52,33 +77,18 @@ Two things follow, both for later:
   a HUD map is an ordinary map, and what makes it a HUD is the layer it is
   loaded into. Nothing about the editing mode belongs in the file.
 
-The fit does NOT snap to integer scale factors, and this is a decision rather
-than an oversight. Against a 320px viewport very few map sizes scale exactly —
-5 tiles (2x), 10 (1x), 20 (1/2), 40 (1/4) — and snapping the rest down to the
-nearest exact factor wastes most of the surface: a 13-tile map would drop from
-0.77 to 0.5 and use 208 of 320 pixels to avoid an artifact most authors would
-not have noticed.
-
-Crispness is a real concern and it is not the fit's to solve. It is a FILTERING
-and DISPLAY-SCALE question, decided with the other renderer options when the
-viewport gains settable size (see below). What belongs here instead is feedback:
-the map editor's width and height controls should report the resulting scale, so
-an author resizing can see when they have left an exact one. That is the same
-one line of UI as the legibility readout and now has two reasons to exist.
-
-Note where the residue actually lives. A beginner is pinned to 10x10 and exact;
-an advanced creator scrolls a camera at 1:1 and is exact. Only the band between
-— resized maps, no camera yet — is fractional, and that band shrinks as the
-progression continues rather than growing.
-
 ### Beginners
 
-Scale-to-fit degrades — a 40x40 map draws every actor at a sixteenth of the size
-— and a beginner has no camera with which to fix it. This is handled by not
-giving them the rope: the map editor's width and height controls are hidden for
-beginners, or the map editor is hidden entirely, which pins them to the 10x10
-default. The same lever the toolbox already uses for categories (`levelData`,
-`toolboxFilter`).
+A map bigger than the viewport shows only part of itself, and a beginner has no
+camera with which to move it. This is handled by not giving them the rope: the
+map editor's width and height controls are hidden for beginners, or the map
+editor is hidden entirely, which pins them to the 10x10 default and to seeing
+all of it at 1:1. The same lever the toolbox already uses for categories
+(`levelData`, `toolboxFilter`).
+
+The whole progression falls out of that: resize the map, discover the edge, want
+a camera. The edge is the thing that teaches what a camera is FOR, which is a
+better introduction than a scale factor silently shrinking everything.
 
 ## Cameras
 
@@ -244,7 +254,7 @@ drawing it. That is one choice and one number:
 - **camera-driven**, with a parallax factor for how much of the camera's motion
   it takes. The game layer is 1.0. Distant scenery is 0.2. Something in front of
   the action is 1.2 — a near thing moves faster, which is what parallax is.
-- **fit** — ignore the camera and fit this layer's own extent to the surface.
+- **fit** — ignore the camera entirely.
 
 The factor is a VECTOR, one multiplier per axis, applied component-wise. This is
 not generality for its own sake: the commonest parallax in a side-scrolling game
@@ -253,16 +263,18 @@ jump. A single number cannot say that, and a sky that bobs with every jump is
 the thing that reads as broken.
 
 `fit` is what makes an interface layer work, and it is why one is not a special
-kind of object. The factor covers translation only; SCALE comes from the camera,
-so a factor of 0 would still leave a HUD drawn at whatever scale a large map put
-the camera at (a 40x40 map is quarter scale, and the score would shrink with the
-level). `fit` does not consult the camera at all, which is the wanted behavior
-and is also why an interface layer does not need a camera of its own.
+kind of object. Nothing SCALES a layer to anything — the viewport is a fixed
+window (see the correction above) — so a `fit` layer sits at 1:1 and never
+scrolls, which is screen space. A HUD map larger than the viewport shows only
+what fits, exactly as a game map does; making the HUD the viewport's size is the
+answer, and the map editor's resize-to-viewport is meant to make that one click.
 
-A FACTOR OF `(0, 0)` IS NOT `fit`. It means "do not translate with the camera",
-and the camera's scale still applies. `fit` means "do not consult the camera at
-all". The two look identical until a map is large enough to move the camera off
-1:1, and then only one of them keeps a HUD readable. They are different answers
+A FACTOR OF `(0, 0)` IS NOT `fit`, and the difference arrives with the camera's
+zoom rather than with the map's size. A factor covers translation only, so a
+layer at zero still zooms when the camera does; `fit` does not consult the
+camera at all. A score that shrinks when the player zooms out is not a HUD. The
+two look identical for as long as no camera has a zoom, which is today. They are
+different answers
 and both are wanted.
 
 ### A layer's background and foreground
