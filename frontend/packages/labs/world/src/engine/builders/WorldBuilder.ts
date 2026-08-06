@@ -7,28 +7,41 @@
 // of world operations rather than an abstraction. What it really owned was the
 // actor-type registry that `loadMap` needs, which lives here now.
 //
-// The first call that needs actors (`loadMap`, `addActor`, `clear`, `getWorld`)
-// builds the World. What that means for a call arriving afterwards depends on
-// the call, and the test is whether the live World can still answer it:
+// A builder is a DESCRIPTION, and the description is a call log. Everything a
+// World can be told after it exists is recorded here and replayed into one —
+// now, if the world is already built, and again from the top whenever another
+// is made (`instantiate`). Only what a World must know AT CONSTRUCTION, because
+// it derives something global from the whole set, is accumulated separately:
 //
-//   - `set` and `addEffect` have exact counterparts on `World`, so they FORWARD.
-//     Both are also blocks that a learner can place in an event handler, where
-//     they land on the live world and mean the same thing; making them care
-//     where they sit inside a `.world` file would be an arbitrary rule.
-//   - `useRules` and `useAnimations` have none. Rules decide trait membership
-//     for every actor, and the animation registry is seeded once at
-//     construction, so neither can be applied to a world that already exists.
-//     They THROW, because silently doing nothing is worse.
+//   - `useRules`: rule membership resolves through a DependencySet, seeds every
+//     world-scoped property default, and fixes the per-tick step order
+//     (`new Scheduler(steps)`). None of those has an incremental form.
+//   - `useAnimations`: the registry is seeded once, from the active rules.
+//   - `defineLayer`: declaration order IS draw order, so a layer arriving later
+//     would have to be spliced into a scene graph the driver already made.
+//
+// Those three THROW when they arrive too late — silently dropping a rule a
+// learner can see they asked for is worse. Everything else is a one-line
+// `defer`, which is the point: there is no per-method decision to get wrong.
+// A method that forwards to a World it does not have was this file's recurring
+// bug (`world.setLayerParallax is not a function`), and `defer` makes the
+// forwarding one piece of code with the method name checked by the compiler.
+//
+// "Too late" means AFTER THE ACTORS ARE PLACED, which is what the error says
+// and now what it tests. The world existing is not itself a problem: reading a
+// camera or the actor list builds one, and a declaration arriving after that
+// but before any actor is placed simply rebuilds and replays. It is actors
+// constructed under the old laws that cannot be undone.
 
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
 import type {Camera, CameraInit} from '../core/Camera';
-import {rgba, type ColorValue, type Rgba} from '../core/color';
+import type {ColorValue} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
-import {Vector} from '../core/Vector';
-import {World, type BackdropState} from '../core/World';
+import type {Vector} from '../core/Vector';
+import {World} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {SpatialRule} from '../rules/spatial';
 
@@ -58,37 +71,49 @@ export interface WorldMap {
   }>;
 }
 
+/** Any method name on World — what a recorded call may name. */
+type WorldOp = {
+  [K in keyof World]: World[K] extends (...args: never[]) => unknown
+    ? K
+    : never;
+}[keyof World];
+
+/** The arguments that method takes. */
+type OpArgs<K extends WorldOp> = Parameters<
+  Extract<World[K], (...args: never[]) => unknown>
+>;
+
+/**
+ * One recorded call, name and arguments together.
+ *
+ * Distributed over the union so the pair stays matched: a `{name, args}` here
+ * is always some K's name beside that same K's arguments, never one method's
+ * name beside another's.
+ */
+type OpCall<K extends WorldOp = WorldOp> = K extends WorldOp
+  ? {name: K; args: OpArgs<K>}
+  : never;
+
 export class WorldBuilder {
   private readonly id: string;
   private readonly name: string;
   private rules: Rule[] = [];
   private readonly hidden = new Set<Rule>();
-  private readonly overrides: Array<[Property, unknown]> = [];
   private readonly animations: Record<string, AnimationDef> = {};
-  private readonly effects: AppliedEffectSpec[] = [];
-  // Backdrop layers as described, back to front. Empty until something says
-  // otherwise; the World fills in the default layer either way.
-  // Backgrounds as described, by the layer each belongs to. Empty until
-  // something says otherwise; the World gives every layer an empty slot.
-  private readonly backgrounds = new Map<
-    string,
-    BackdropState & {effects: AppliedEffectSpec[]}
-  >();
-  /** The same for what each layer draws in front of its actors. */
-  private readonly foregrounds = new Map<
-    string,
-    BackdropState & {effects: AppliedEffectSpec[]}
-  >();
-  /** The one colour behind everything, if it was set before the world existed. */
-  private clearColor: Rgba | undefined;
-  /** Effects on the layers themselves, by layer id. */
-  private readonly layerEffects = new Map<string, AppliedEffectSpec[]>();
-  /** Cameras as declared; the World supplies the default either way. */
-  private readonly cameras: CameraInit[] = [];
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
+  /**
+   * Every call made on this description, in order.
+   *
+   * Order is the whole of the semantics — `add effect` then `remove effect`
+   * leaves none, the other way round leaves one — so replay walks it forward
+   * and never merges or de-duplicates. The World's own methods are already
+   * idempotent where it matters (`addEffect` by path), so nothing here has to
+   * be.
+   */
+  private readonly log: OpCall[] = [];
   /** The live world, once something has needed one. See `getWorld`. */
   private built: World | undefined;
 
@@ -98,25 +123,53 @@ export class WorldBuilder {
   }
 
   /**
-   * Refuse a declaration the live world could not be given after the fact.
+   * Record a call, and make it now if there is a world to make it on.
    *
-   * Only for the two that have no counterpart on `World` — see the note at the
-   * top. Blocks can be reordered in the workspace, so `use rule` below
-   * `load map` is a mistake a learner can make by dragging, and silently
-   * ignoring it would give them a world missing a rule they can plainly see
-   * they asked for.
+   * The single point where the builder's surface meets the World's. `name` is
+   * `keyof World`, so a method that does not exist there — or one whose
+   * arguments do not match — is a compile error rather than a TypeError in a
+   * learner's game, which is what the old hand-written `if (this.built)` pairs
+   * kept producing.
    */
-  private requireUnbuilt(what: string): void {
+  private defer<K extends WorldOp>(name: K, ...args: OpArgs<K>): this {
+    const call = {name, args} as OpCall;
+    this.log.push(call);
     if (this.built) {
+      apply(this.built, call);
+    }
+    return this;
+  }
+
+  /**
+   * Refuse a declaration the actors already placed could not be given.
+   *
+   * Blocks can be reordered in the workspace, so `use rule` below `load map` is
+   * a mistake a learner can make by dragging.
+   *
+   * When the world exists but is EMPTY the declaration is still in time, and
+   * the world is thrown away rather than refused — the log makes rebuilding it
+   * exact. That matters because reading a camera or the actor list builds a
+   * world (`camera`, `actors`), and a read has never been the thing that makes
+   * a later declaration unsafe.
+   */
+  private requireNoActors(what: string): void {
+    if (!this.built) {
+      return;
+    }
+    if (this.built.actorCount() > 0) {
       throw new Error(
         `World '${this.id}': ${what} must come before the actors are placed ` +
           `(move it above "load map" / "add actor").`,
       );
     }
+    // Empty: nothing has been built under the old laws, so start over. Anything
+    // holding the discarded world (a Camera read out of it) is now looking at a
+    // world nothing else refers to — see `camera`.
+    this.built = undefined;
   }
 
   useRules(rules: Rule[]): this {
-    this.requireUnbuilt('use rule');
+    this.requireNoActors('use rule');
     this.rules = [...this.rules, ...rules];
     return this;
   }
@@ -133,286 +186,103 @@ export class WorldBuilder {
   }
 
   /**
-   * Set a world-scoped property.
-   *
-   * Before the world is built this is its initial value; after, it is a plain
-   * assignment on the live world, which is what `World.set` does anyway. The
-   * generated `set …` blocks emit `world.set(…)` in a `.world` body and in an
-   * event handler alike, so the two must agree — the same reason `set position`
-   * works on an actor template and a live actor both.
-   */
-  set<T>(property: Property<T>, value: T): this {
-    if (this.built) {
-      this.built.set(property, value);
-      return this;
-    }
-    this.overrides.push([property, value]);
-    return this;
-  }
-
-  /**
    * Register animations (typically from imported `.anim` files) by id, in
    * addition to the stock animations the active rules ship.
    */
   useAnimations(defs: Record<string, AnimationDef>): this {
-    this.requireUnbuilt('use animations');
+    this.requireNoActors('use animations');
     Object.assign(this.animations, defs);
     return this;
   }
 
   /**
-   * Play an effect across the whole viewport (specs/EFFECT_EDITOR.md).
+   * Declare a layer, at the back of the stack as it stands.
+   *
+   * Declaration order IS draw order (core/Layer), so this is one of the calls
+   * that must come before the actors: a layer added afterwards would have to be
+   * spliced into a scene graph the driver has already made, and the ordering a
+   * learner can see in their blocks would stop being the ordering they get.
+   */
+  defineLayer(layer: LayerInit): this {
+    this.requireNoActors('define layer');
+    this.layers.push(layer);
+    return this;
+  }
+
+  /**
+   * Register an actor template under the name a Map refers to it by.
+   *
+   * Declarative — it records a template rather than placing anything — so it
+   * may come before or after the world is built.
+   */
+  define(type: string, builder: ActorBuilder): this {
+    this.types.set(type, builder);
+    return this;
+  }
+
+  // The rest is the World's surface, deferred. Each is one line on purpose:
+  // the doc comment says what the block means here, `World`'s says what the
+  // call does, and there is no third thing to keep in step.
+
+  /** Set a world-scoped property. See {@link World.set}. */
+  set<T>(property: Property<T>, value: T): this {
+    return this.defer('set', property as Property<unknown>, value);
+  }
+
+  /**
+   * Play an effect across the whole viewport. See {@link World.addEffect}.
    *
    * The World counterpart to `ActorBuilder.addEffect`: that one filters one
    * actor's own pixels, this one filters everything the camera has drawn — the
    * underwater distortion covering the whole view, rather than a wobble on one
    * fish. Same document, same parameters; only the surface it lands on differs.
-   *
-   * Named to match `World.addEffect` so one Blockly block covers both: in a
-   * `.world` file `world` is this builder, in an event handler it is the live
-   * World, and `world.addEffect(…)` is right in both places. Once the world
-   * exists this forwards to it, for the same reason — a viewport filter has no
-   * relationship to the actors, so where the block sits relative to `load map`
-   * must not decide whether it works.
-   *
-   * @param path     the effect's module path (`effects/underwater`)
-   * @param document the parsed `.effect` file, imported as JSON by the bundler
-   * @param values   values for the effect's declared parameters, by parameter id
    */
   addEffect(
     path: string,
     document: EffectDocument,
     values?: AppliedEffectSpec['values'],
   ): this {
-    if (this.built) {
-      this.built.addEffect(path, document, values);
-      return this;
-    }
-    // Idempotent by path, matching the live World — see ActorBuilder.addEffect.
-    if (this.effects.some(effect => effect.path === path)) {
-      return this;
-    }
-    this.effects.push(values ? {path, document, values} : {path, document});
-    return this;
+    return this.defer('addEffect', path, document, values);
   }
 
-  /**
-   * Draw an image behind everything (BACKGROUNDS.md).
-   *
-   * Forwards once the world exists, for the reason `set` and `addEffect` do:
-   * `set background to …` is a block a learner can place under `define world`
-   * or in an event handler, `world` is this builder in one and the live World in
-   * the other, and the same call has to be right in both.
-   */
+  /** Stop an effect covering the whole view. See {@link World.removeEffect}. */
+  removeEffect(path: string): this {
+    return this.defer('removeEffect', path);
+  }
+
+  /** Draw an image behind everything (BACKGROUNDS.md). */
   setBackground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setBackground(sprite, layer);
-      return this;
-    }
-    this.backdropAt(layer).sprite = sprite;
-    return this;
-  }
-
-  /**
-   * Move a camera. See {@link World.setCameraPosition}.
-   *
-   * Forwards once the world exists, for the reason `set` and `addEffect` do:
-   * `move camera to …` is a block a learner can place under `define world` or
-   * in an event handler, and the same call has to be right in both.
-   */
-  setCameraPosition(position: Vector, id?: string): this {
-    this.getWorld().setCameraPosition(position, id);
-    return this;
-  }
-
-  /** Declare a camera. See {@link World.defineCamera}. */
-  defineCamera(init: CameraInit): this {
-    if (this.built) {
-      this.built.defineCamera(init);
-      return this;
-    }
-    this.cameras.push(init);
-    return this;
-  }
-
-  /**
-   * A camera by id. See {@link World.camera}.
-   *
-   * On the builder because a world body sets things on a camera — `set actor to
-   * follow of ⟨camera ⟨Chase⟩⟩` — and inside `define world` the name `world` is
-   * this. Building the world here is safe: every call that refuses to run after
-   * the build (`useRules`, `useAnimations`, `defineLayer`) is emitted above the
-   * body by the world root's generator.
-   */
-  camera(id?: string): Camera {
-    return this.getWorld().camera(id);
-  }
-
-  /** Take the view through a different camera. See {@link World.setActiveCamera}. */
-  setActiveCamera(id: string): this {
-    this.getWorld().setActiveCamera(id);
-    return this;
-  }
-
-  /** How much of the camera's motion a layer takes. See {@link World.setLayerParallax}. */
-  setLayerParallax(parallax: Vector, layer?: string): this {
-    this.getWorld().setLayerParallax(parallax, layer);
-    return this;
-  }
-
-  /** Whether a layer ignores the camera. See {@link World.setLayerFit}. */
-  setLayerFit(fit: boolean, layer?: string): this {
-    this.getWorld().setLayerFit(fit, layer);
-    return this;
-  }
-
-  /** Play an effect on a whole layer. See {@link World.addLayerEffect}. */
-  addLayerEffect(
-    path: string,
-    document: EffectDocument,
-    values?: AppliedEffectSpec['values'],
-    layer = DEFAULT_LAYER_ID,
-  ): this {
-    if (this.built) {
-      this.built.addLayerEffect(path, document, values, layer);
-      return this;
-    }
-    const effects = this.layerEffects.get(layer) ?? [];
-    this.layerEffects.set(layer, effects);
-    // Idempotent by path, matching the live World — see World.addEffect.
-    if (effects.some(effect => effect.path === path)) {
-      return this;
-    }
-    effects.push(values ? {path, document, values} : {path, document});
-    return this;
-  }
-
-  /** Stop an effect on a whole layer. Removing one not playing is a no-op. */
-  removeLayerEffect(path: string, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.removeLayerEffect(path, layer);
-      return this;
-    }
-    const effects = this.layerEffects.get(layer) ?? [];
-    const index = effects.findIndex(effect => effect.path === path);
-    if (index >= 0) {
-      effects.splice(index, 1);
-    }
-    return this;
+    return this.defer('setBackground', sprite, layer);
   }
 
   /** Draw an image in front of a layer's actors. See {@link World.setForeground}. */
   setForeground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setForeground(sprite, layer);
-      return this;
-    }
-    this.slotAt(this.foregrounds, layer).sprite = sprite;
-    return this;
-  }
-
-  /**
-   * Stop an effect covering the whole view. See {@link World.removeEffect}.
-   *
-   * On the builder as well as the live world, like every other remove here: the
-   * block that emits it warns when it is placed under `define world`, but a
-   * warning does not prevent, and a learner who ignores one should meet an
-   * effect that does not play rather than `world.removeEffect is not a
-   * function`.
-   */
-  removeEffect(path: string): this {
-    if (this.built) {
-      this.built.removeEffect(path);
-      return this;
-    }
-    const index = this.effects.findIndex(effect => effect.path === path);
-    if (index >= 0) {
-      this.effects.splice(index, 1);
-    }
-    return this;
-  }
-
-  /** Play an effect on a layer's foreground. See {@link World.addForegroundEffect}. */
-  addForegroundEffect(
-    path: string,
-    document: EffectDocument,
-    values?: AppliedEffectSpec['values'],
-    layer = DEFAULT_LAYER_ID,
-  ): this {
-    if (this.built) {
-      this.built.addForegroundEffect(path, document, values, layer);
-      return this;
-    }
-    const effects = this.slotAt(this.foregrounds, layer).effects;
-    if (effects.some(effect => effect.path === path)) {
-      return this;
-    }
-    effects.push(values ? {path, document, values} : {path, document});
-    return this;
-  }
-
-  /** Stop an effect on a layer's foreground. */
-  removeForegroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.removeForegroundEffect(path, layer);
-      return this;
-    }
-    const effects = this.slotAt(this.foregrounds, layer).effects;
-    const index = effects.findIndex(effect => effect.path === path);
-    if (index >= 0) {
-      effects.splice(index, 1);
-    }
-    return this;
-  }
-
-  /** Slide a layer's background. See {@link World.setBackgroundOffset}. */
-  setBackgroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setBackgroundOffset(offset, layer);
-      return this;
-    }
-    this.slotAt(this.backgrounds, layer).offset = {x: offset.x, y: offset.y};
-    return this;
-  }
-
-  /** Slide a layer's foreground. */
-  setForegroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setForegroundOffset(offset, layer);
-      return this;
-    }
-    this.slotAt(this.foregrounds, layer).offset = {x: offset.x, y: offset.y};
-    return this;
-  }
-
-  /** Tile a layer's background rather than stretching it. */
-  setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setBackgroundRepeat(repeat, layer);
-      return this;
-    }
-    this.slotAt(this.backgrounds, layer).repeat = repeat;
-    return this;
-  }
-
-  /** Tile a layer's foreground rather than stretching it. */
-  setForegroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.setForegroundRepeat(repeat, layer);
-      return this;
-    }
-    this.slotAt(this.foregrounds, layer).repeat = repeat;
-    return this;
+    return this.defer('setForeground', sprite, layer);
   }
 
   /** Set the colour behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
-    if (this.built) {
-      this.built.setBackgroundColor(color);
-      return this;
-    }
-    this.clearColor = rgba(color);
-    return this;
+    return this.defer('setBackgroundColor', color);
+  }
+
+  /** Slide a layer's background. See {@link World.setBackgroundOffset}. */
+  setBackgroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('setBackgroundOffset', offset, layer);
+  }
+
+  /** Slide a layer's foreground. */
+  setForegroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('setForegroundOffset', offset, layer);
+  }
+
+  /** Tile a layer's background rather than stretching it. */
+  setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('setBackgroundRepeat', repeat, layer);
+  }
+
+  /** Tile a layer's foreground rather than stretching it. */
+  setForegroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('setForegroundRepeat', repeat, layer);
   }
 
   /**
@@ -430,56 +300,94 @@ export class WorldBuilder {
     values?: AppliedEffectSpec['values'],
     layer = DEFAULT_LAYER_ID,
   ): this {
-    if (this.built) {
-      this.built.addBackgroundEffect(path, document, values, layer);
-      return this;
-    }
-    // Idempotent by path, matching the live World — see World.addEffect.
-    const effects = this.backdropAt(layer).effects;
-    if (effects.some(effect => effect.path === path)) {
-      return this;
-    }
-    effects.push(values ? {path, document, values} : {path, document});
-    return this;
+    return this.defer('addBackgroundEffect', path, document, values, layer);
   }
 
   /** Stop an effect on the backdrop. Removing one not playing is a no-op. */
   removeBackgroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
-    if (this.built) {
-      this.built.removeBackgroundEffect(path, layer);
-      return this;
-    }
-    const effects = this.backdropAt(layer).effects;
-    const index = effects.findIndex(effect => effect.path === path);
-    if (index >= 0) {
-      effects.splice(index, 1);
-    }
-    return this;
+    return this.defer('removeBackgroundEffect', path, layer);
+  }
+
+  /** Play an effect on a layer's foreground. See {@link World.addForegroundEffect}. */
+  addForegroundEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    return this.defer('addForegroundEffect', path, document, values, layer);
+  }
+
+  /** Stop an effect on a layer's foreground. */
+  removeForegroundEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('removeForegroundEffect', path, layer);
+  }
+
+  /** Play an effect on a whole layer. See {@link World.addLayerEffect}. */
+  addLayerEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    return this.defer('addLayerEffect', path, document, values, layer);
+  }
+
+  /** Stop an effect on a whole layer. Removing one not playing is a no-op. */
+  removeLayerEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    return this.defer('removeLayerEffect', path, layer);
+  }
+
+  /** How much of the camera's motion a layer takes. See {@link World.setLayerParallax}. */
+  setLayerParallax(parallax: Vector, layer?: string): this {
+    return this.defer('setLayerParallax', parallax, layer);
+  }
+
+  /** Whether a layer ignores the camera. See {@link World.setLayerFit}. */
+  setLayerFit(fit: boolean, layer?: string): this {
+    return this.defer('setLayerFit', fit, layer);
+  }
+
+  /** Declare a camera. See {@link World.defineCamera}. */
+  defineCamera(init: CameraInit): this {
+    return this.defer('defineCamera', init);
+  }
+
+  /** Take the view through a different camera. See {@link World.setActiveCamera}. */
+  setActiveCamera(id: string): this {
+    return this.defer('setActiveCamera', id);
+  }
+
+  /** Move a camera. See {@link World.setCameraPosition}. */
+  setCameraPosition(position: Vector, id?: string): this {
+    return this.defer('setCameraPosition', position, id);
   }
 
   /**
-   * The described background of a layer, made on first use.
+   * A camera by id. See {@link World.camera}.
    *
-   * Keyed by layer id, so a background set before its `define layer` is emitted
-   * still lands on the right layer — and one naming a layer that never existed
-   * is simply never applied (`World`'s constructor drops it).
+   * Builds the world, because it hands back an object out of it rather than
+   * telling it something — a world body sets things ON a camera (`set actor to
+   * follow of ⟨camera ⟨Chase⟩⟩`), and inside `define world` the name `world` is
+   * this. A declaration arriving afterwards is still fine while no actor has
+   * been placed (`requireNoActors`), though the Camera read here belongs to the
+   * world that is then discarded; generated code never holds one across a
+   * declaration, since the world root emits every declaration above the body.
    */
-  private backdropAt(layer: string): BackdropState & {
-    effects: AppliedEffectSpec[];
-  } {
-    return this.slotAt(this.backgrounds, layer);
+  camera(id?: string): Camera {
+    return this.getWorld().camera(id);
   }
 
-  private slotAt(
-    slots: Map<string, BackdropState & {effects: AppliedEffectSpec[]}>,
-    layer: string,
-  ): BackdropState & {effects: AppliedEffectSpec[]} {
-    let slot = slots.get(layer);
-    if (!slot) {
-      slot = {effects: [], offset: {x: 0, y: 0}, repeat: false};
-      slots.set(layer, slot);
-    }
-    return slot;
+  /**
+   * The actors in the world, as it stands. See {@link World.actors}.
+   *
+   * Builds the world for the reason `camera` does. Read before anything is
+   * placed this is empty, which is the truth rather than an error: `first actor
+   * of type ⟨Player⟩` above `load map` finds none because at that point there
+   * are none.
+   */
+  get actors(): World['actors'] {
+    return this.getWorld().actors;
   }
 
   /**
@@ -493,32 +401,6 @@ export class WorldBuilder {
   getWorld(): World {
     this.built ??= this.instantiate();
     return this.built;
-  }
-
-  /**
-   * Register an actor template under the name a Map refers to it by.
-   *
-   * Declarative — it records a template rather than placing anything — so it
-   * may come before or after the world is built.
-   */
-  define(type: string, builder: ActorBuilder): this {
-    this.types.set(type, builder);
-    return this;
-  }
-
-  /**
-   * Declare a layer, at the back of the stack as it stands.
-   *
-   * Declaration order IS draw order (core/Layer), so this is one of the calls
-   * that must come before the world is built: a layer added afterwards would
-   * have to be spliced into a scene graph the driver has already made, and the
-   * ordering a learner can see in their blocks would stop being the ordering
-   * they get.
-   */
-  defineLayer(layer: LayerInit): this {
-    this.requireUnbuilt('define layer');
-    this.layers.push(layer);
-    return this;
   }
 
   /**
@@ -660,32 +542,31 @@ export class WorldBuilder {
   }
 
   /**
-   * Build a NEW World from this description.
+   * Build a NEW World from this description: construct, then replay the log.
    *
    * Distinct from `getWorld`, which memoizes: this is for callers that want a
    * throwaway (the thumbnail renderer builds one per picker refresh, and tests
-   * build many).
+   * build many). Two worlds made this way are independent — the log holds the
+   * arguments a call was given, and the World copies what it stores (a Vector,
+   * a colour), so replaying it twice shares nothing.
    */
   instantiate(): World {
-    return new World({
+    const world = new World({
       id: this.id,
       name: this.name,
       rules: this.rulesInPlay(),
-      overrides: [...this.overrides],
       animations: Object.entries(this.animations),
-      effects: [...this.effects],
-      clearColor: this.clearColor,
-      backgrounds: Object.fromEntries(
-        [...this.backgrounds].map(([id, slot]) => [id, {...slot}]),
-      ),
-      foregrounds: Object.fromEntries(
-        [...this.foregrounds].map(([id, slot]) => [id, {...slot}]),
-      ),
-      cameras: this.cameras.map(camera => ({...camera})),
-      layerEffects: Object.fromEntries(
-        [...this.layerEffects].map(([id, effects]) => [id, [...effects]]),
-      ),
       layers: this.layers.map(layer => ({...layer})),
     });
+    for (const call of this.log) {
+      apply(world, call);
+    }
+    return world;
   }
+}
+
+/** Make a recorded call on a world. */
+function apply(world: World, call: OpCall): void {
+  const method = world[call.name] as (...args: unknown[]) => unknown;
+  method.apply(world, call.args as unknown[]);
 }
