@@ -37,7 +37,7 @@ module Metrics
 
         if CDO.rack_env?(:development) && !ALWAYS_SEND
           log_event_to_stdout(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
-        elsif CDO.rack_env?(:production) || CDO.managed_test_server? || ALWAYS_SEND
+        elsif (CDO.rack_env?(:production) || CDO.managed_test_server? || ALWAYS_SEND) && DCDO.get('statsig-enabled', true)
           log_statsig_event_with_cdo_user(user: user, event_name: event_name, event_value: event_value, metadata: metadata, enabled_experiments: enabled_experiments, statsig_stable_id: statsig_stable_id)
         else
           # We don't want to log in other environments, just return silently
