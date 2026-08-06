@@ -52,6 +52,26 @@ const ACTOR_SIZE = 24;
 // (preview.html), so it is never scaled *above* native.
 const GAME_WIDTH = VIEWPORT_WIDTH;
 const GAME_HEIGHT = VIEWPORT_HEIGHT;
+
+/**
+ * How far the view has moved from where a camera rests.
+ *
+ * A camera's position is the point it shows at the MIDDLE of the view
+ * (core/Camera), and its resting position is the middle of the world's own
+ * rectangle — so a camera that has not been moved is an offset of zero, and the
+ * world draws where it always did.
+ *
+ * Subtracting here rather than after the parallax factor is deliberate: a layer
+ * at factor 0 must not move AT ALL, and `(centre - camera) * 0` is zero where
+ * `centre - camera * 0` is half a screen. It also leaves every slot image where
+ * it is placed, centred in the viewport, with nothing to compensate for.
+ */
+const cameraOffset = (
+  view: {position: {x: number; y: number}} | undefined,
+) => ({
+  x: (view?.position.x ?? GAME_WIDTH / 2) - GAME_WIDTH / 2,
+  y: (view?.position.y ?? GAME_HEIGHT / 2) - GAME_HEIGHT / 2,
+});
 const DEGREES_TO_RADIANS = Math.PI / 180;
 // Depths WITHIN one layer's container. The container itself carries the layer's
 // place in the stack, so these three are all the ordering a layer needs: its
@@ -445,9 +465,18 @@ export class PhaserBinding {
         // `(0.2, 0)` is a sky that shifts as the player walks and stays put
         // when they jump, and `fit` does not consult the camera at all — which
         // is what makes an interface layer an interface layer.
+        //
+        // Measured from the camera's RESTING position, not from the world
+        // origin, because a camera's position is the point it shows at the
+        // middle of the view (core/Camera). Folding the centre in HERE, before
+        // the parallax factor, is what keeps the rest of the driver unchanged:
+        // a layer at factor 0 gets a translation of exactly 0 whatever the
+        // camera does, so the slot images stay centred in the viewport where
+        // they are placed, and a resting camera moves nothing at all.
+        const offset = cameraOffset(view);
         container.setPosition(
-          layer.fit ? 0 : -(view?.position.x ?? 0) * layer.parallax.x,
-          layer.fit ? 0 : -(view?.position.y ?? 0) * layer.parallax.y,
+          layer.fit ? 0 : -(offset.x * layer.parallax.x),
+          layer.fit ? 0 : -(offset.y * layer.parallax.y),
         );
         if (unsorted.has(container)) {
           container.sort('depth');

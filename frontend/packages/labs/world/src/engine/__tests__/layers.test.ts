@@ -10,6 +10,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {EffectDocument} from '../../effect/model/types';
 import {DEFAULT_LAYER_ID} from '../core/Layer';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../core/viewport';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
 import type {World} from '../index';
 
@@ -416,12 +417,19 @@ describe('asking which actors are in a layer', () => {
 describe('the camera', () => {
   // A pose, and nothing else. It is not in `world.actors`, so no rule has to
   // learn to skip it and `clear world` does not take it away with the level.
-  it('exists without being asked for, at the origin', () => {
+  it('exists without being asked for, resting on the middle of the view', () => {
+    // Not the origin. A camera's position is the point it shows at the MIDDLE
+    // of the view — the same meaning an actor's position has, which it must
+    // have, since they are the same `PositionProperty`. So a camera reporting
+    // (0, 0) would be one showing the world origin in the middle of the screen,
+    // half a viewport from where every map is drawn.
     const built = world();
 
     expect([...built.cameras]).toHaveLength(1);
     expect(built.camera().id).toBe('main');
-    expect(built.camera().position).toEqual(new Vector(0, 0));
+    expect(built.camera().position).toEqual(
+      new Vector(VIEWPORT_WIDTH / 2, VIEWPORT_HEIGHT / 2),
+    );
   });
 
   it('moves where it is told', () => {
