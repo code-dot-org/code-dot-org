@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #
-# End-to-end verification of the cdo-dashboard image: boots the artifact and
+# End-to-end verification of the cdo-rails image: boots the artifact and
 # drives it through every interaction model it ships for. Usage:
 #   ./verify.sh <image-ref> <engine>
 # e.g.
-#   ./verify.sh cdo-dashboard:test docker
-#   ./verify.sh cdo-dashboard:test podman
+#   ./verify.sh cdo-rails:test docker
+#   ./verify.sh cdo-rails:test podman
 #
 # Orchestration is compose.yaml, configuration is adhoc.env, and the phase
 # payloads live in verify/ — this script only sequences and asserts.
@@ -26,7 +26,7 @@ DIR="$(cd "$(dirname "$0")" && pwd)"
 export PODMAN_COMPOSE_WARNING_LOGS=false
 compose() {
   "$ENGINE" compose --ansi never --progress quiet \
-    -f "$DIR/compose.yaml" -p "cdo-dash-verify-$$" "$@"
+    -f "$DIR/compose.yaml" -p "cdo-rails-verify-$$" "$@"
 }
 
 cleanup() { compose down -v --timeout 5 > /dev/null 2>&1; }

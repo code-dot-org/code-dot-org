@@ -1,8 +1,8 @@
-# cdo-dashboard: cdo-deps plus the Rails source tree. Runs as api or worker;
-# migrate and web layer on top. See README.md.
+# cdo-rails: cdo-deps plus the Rails source tree, sliced to what the api and
+# worker roles read. See README.md.
 #
 # Context is the repo root, not this directory:
-#   docker build -f docker/dashboard/Dockerfile --build-arg DEPS_IMAGE=... .
+#   docker build -f docker/rails/Dockerfile --build-arg DEPS_IMAGE=... .
 
 ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-gems:latest
 

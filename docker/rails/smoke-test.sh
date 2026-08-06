@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# Smoke-test the cdo-dashboard image. Usage:
+# Smoke-test the cdo-rails image. Usage:
 #   ./smoke-test.sh <image-ref> <engine>
 # e.g.
-#   ./smoke-test.sh cdo-dashboard:test docker
-#   ./smoke-test.sh cdo-dashboard:test podman
+#   ./smoke-test.sh cdo-rails:test docker
+#   ./smoke-test.sh cdo-rails:test podman
 #
 # DB-less checks of the source slice; the full boot is verify.sh's job.
 # Rationale for each check: README.md.

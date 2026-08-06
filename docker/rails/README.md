@@ -1,4 +1,4 @@
-# cdo-dashboard
+# cdo-rails
 
 `cdo-deps` plus the Rails source tree, sliced down to what the api and worker
 roles read at boot or at request time. The Dockerfile is three instructions:
@@ -31,9 +31,9 @@ The build context is the repo root; the Dockerfile is selected with `-f`.
 
 ```
 git lfs pull --include='dashboard/config/locales/**'
-docker build -f docker/dashboard/Dockerfile \
+docker build -f docker/rails/Dockerfile \
   --build-arg DEPS_IMAGE=ghcr.io/code-dot-org/cdo-gems:<bundle-key> \
-  -t cdo-dashboard:test .
+  -t cdo-rails:test .
 ```
 
 The LFS step is not optional. `dashboard/config/locales/**` is git-LFS tracked
@@ -62,8 +62,8 @@ commands and asserts the slice is what it should be: `bundle check` passes,
 the kept paths above are present, and no toolchain came along.
 
 ```
-./docker/dashboard/smoke-test.sh cdo-dashboard:test docker
-./docker/dashboard/smoke-test.sh cdo-dashboard:test podman
+./docker/rails/smoke-test.sh cdo-rails:test docker
+./docker/rails/smoke-test.sh cdo-rails:test podman
 ```
 
 `verify.sh` boots the artifact against real MySQL and Redis and drives it
@@ -72,8 +72,8 @@ configuration is `adhoc.env`, and the phase payloads are in `verify/`; the
 script only sequences and asserts.
 
 ```
-./docker/dashboard/verify.sh cdo-dashboard:test docker
-./docker/dashboard/verify.sh cdo-dashboard:test podman
+./docker/rails/verify.sh cdo-rails:test docker
+./docker/rails/verify.sh cdo-rails:test podman
 ```
 
 | phase | what it proves |
@@ -95,8 +95,8 @@ worker count come from `config/puma.rb` via CDO, which defaults to
 `0.0.0.0:3000`.
 
 ```
-export IMAGE=cdo-dashboard:test
-cd docker/dashboard
+export IMAGE=cdo-rails:test
+cd docker/rails
 
 docker compose up -d --wait mysql redis
 docker compose exec mysql mysql -uroot \
@@ -169,7 +169,7 @@ when you add something the running app reads from disk.
 
 ## Published image
 
-`ghcr.io/code-dot-org/cdo-dashboard`, amd64 only.
+`ghcr.io/code-dot-org/cdo-rails`, amd64 only.
 
 | tag | published from | meaning |
 |---|---|---|
@@ -182,7 +182,7 @@ image-definition changes and on the `cdo-deps` chain, not on every staging
 commit, so most shas never get a tag. Do not treat the tag set as a per-commit
 contract.
 
-`.github/workflows/cdo-dashboard-image.yml` runs the smoke matrix on docker and
+`.github/workflows/cdo-rails-image.yml` runs the smoke matrix on docker and
 podman, runs `verify.sh`, and publishes from staging. It is not triggered by
 source changes — only by changes to this directory, to the key action, or to
 the workflow, plus the chain from `cdo-deps-image` and manual dispatch. The

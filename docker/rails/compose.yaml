@@ -16,7 +16,7 @@ services:
     image: docker.io/library/redis:7
 
   web:
-    image: ${IMAGE:?set IMAGE to the cdo-dashboard image to run}
+    image: ${IMAGE:?set IMAGE to the cdo-rails image to run}
     env_file: adhoc.env
     # The systemd unit's shape: WorkingDirectory=app_root, bundle exec puma.
     # Bind and workers come from config/puma.rb via CDO (0.0.0.0:3000).

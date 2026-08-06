@@ -5,7 +5,7 @@ Python virtualenv. It carries no source tree and no compile toolchain — the
 gems and the venv are built in `cdo-build` and copied onto `cdo-base`, so the
 compilers, headers, Node, and git that produced them do not ship.
 
-`cdo-dashboard` stacks on it: `FROM cdo-deps` plus the Rails source slice.
+`cdo-rails` stacks on it: `FROM cdo-deps` plus the Rails source slice.
 
 Contents:
 
