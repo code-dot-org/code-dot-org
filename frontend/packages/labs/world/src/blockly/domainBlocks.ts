@@ -26,6 +26,7 @@ import {
   IMPORT_SPRITE_VALUE,
 } from '../appearance/appearanceImport';
 import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
+import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 
 import {actorInputExtension, actorSubjectExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
@@ -77,6 +78,12 @@ import {fieldMapPlacementsArg} from './fields/FieldMapPlacements';
 import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
+import {
+  layerOf,
+  layerOptions,
+  layerOptionsExtension,
+  layerPlan,
+} from './layers';
 import {
   actorIdFromName,
   definesWorld,
@@ -2531,10 +2538,13 @@ const worldAddActor = defineBlock({
       // (e.g. set position) target it. The block id is the stable instance id;
       // the module path is the actor's kind (its `type`), so "for each … I'm
       // touching" matches it regardless of the template's authored name.
+      // Which layer it lands in — its nearest layer ancestor, or the default
+      // (blockly/layers). Resolved lexically, so no layer context exists at
+      // runtime and nothing has to track one.
       return (
         `{\nconst actor = world.addActor(${template}, ${str(
           block.id,
-        )}, ${str(type)});\n` + `${body}}\n`
+        )}, ${str(type)}, ${str(layerOf(block))});\n` + `${body}}\n`
       );
     },
   },
@@ -2581,6 +2591,73 @@ const worldRemoveActor = defineBlock({
     javascript(block, generator) {
       const target = actorTarget(block, generator, Order.MEMBER);
       return forEachActor(target, actor => `world.removeActor(${actor})`);
+    },
+  },
+});
+
+/**
+ * A layer, and the actors in it (specs/VIEWPORT.md).
+ *
+ * A group drawn together, at a depth given by where this block sits: layers
+ * draw in the order they are declared, so the first is furthest back. The body
+ * is what is IN it — a layer owns its contents, so a placement inside this
+ * block is placed in this layer and you can see which by looking at it.
+ *
+ * The declaration itself is HOISTED by `define world`, not emitted here: a
+ * layer must be declared before the first actor is placed, because the first
+ * placement builds the World and a layer cannot be spliced into one that
+ * exists. So this block generates only its contents (`layerPlan`).
+ *
+ * No parallax or fit fields yet, deliberately. Both are stored by the engine
+ * and neither is READ until there is a camera to be a factor of — a knob that
+ * does nothing is worse than no knob.
+ */
+const worldDefineLayer = defineBlock({
+  type: 'world_define_layer',
+  message0: 'define layer %1',
+  args0: [{type: 'field_input', name: 'NAME', text: 'Layer'}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [builderWorldExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'A group of actors drawn together. Layers draw in the order you define ' +
+    'them, so the first one is furthest back.',
+  generator: {
+    javascript(block, generator) {
+      return generator.statementToCode(block, 'DO');
+    },
+  },
+});
+
+/**
+ * Place into a layer declared somewhere else.
+ *
+ * The reopener. `define layer`'s own body covers the common case by
+ * containment; this covers the one it cannot — adding to a layer that was
+ * declared earlier, beside other things. Innermost wins when they nest.
+ *
+ * It declares nothing, so it does not appear in `layerPlan`: naming a layer is
+ * not defining one.
+ */
+const worldWithinLayer = defineBlock({
+  type: 'world_within_layer',
+  message0: 'within layer %1',
+  args0: [{type: 'field_dropdown', name: 'LAYER', options: layerOptions}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [layerOptionsExtension, builderWorldExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Place the actors inside into a layer you defined earlier, rather than ' +
+    'into the one this block sits in.',
+  generator: {
+    javascript(block, generator) {
+      return generator.statementToCode(block, 'DO');
     },
   },
 });
@@ -2672,7 +2749,7 @@ const worldCreateInMap = defineBlock({
         .join(', ');
       return (
         `world.define(${str(type)}, ${template});\n` +
-        `world.loadMap({actors: [${actors}]});\n`
+        `world.loadMap({actors: [${actors}]}, ${str(layerOf(block))});\n`
       );
     },
   },
@@ -2710,7 +2787,7 @@ const worldLoadMap = defineBlock({
         `map:${map}`,
         `import ${importVar(map)} from ${str(map)};`,
       );
-      return `${defines}world.loadMap(${importVar(map)});\n`;
+      return `${defines}world.loadMap(${importVar(map)}, ${str(layerOf(block))});\n`;
     },
   },
 });
@@ -2782,12 +2859,24 @@ const worldWorld = defineBlock({
           )}));\n`;
         })
         .join('');
+      // Layers, hoisted (blockly/layers). Every `defineLayer` has to precede
+      // the first placement — the first placement builds the World, and a
+      // layer cannot be spliced into one that exists — so the declarations
+      // cannot be emitted where their blocks sit. `layerPlan` reads the body's
+      // order and reports the stack, including where the default belongs.
+      // Emitted only when the world declares one: a world with no layers says
+      // nothing about layers, and the engine supplies the default.
+      const plan = layerPlan(block);
+      const layers = plan.some(id => id !== DEFAULT_LAYER_ID)
+        ? plan.map(id => `world.defineLayer({id: ${str(id)}});\n`).join('')
+        : '';
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
           name,
         )}});\n` +
         foundation +
         animations +
+        layers +
         body
       );
     },
@@ -3800,6 +3889,8 @@ export const DOMAIN_BLOCKS = [
   worldForEach,
   worldFirstWhere,
   worldIsA,
+  worldDefineLayer,
+  worldWithinLayer,
   worldAddActor,
   worldRemoveActor,
   worldClearWorld,
@@ -3897,6 +3988,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
+      // Grouping what is placed, and what draws in front of what.
+      'world_define_layer',
+      'world_within_layer',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',

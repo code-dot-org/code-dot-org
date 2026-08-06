@@ -1331,7 +1331,7 @@ describe('actor-placing block generators', () => {
       'actor.set(X);\n',
     );
     expect(code).toBe(
-      '{\nconst actor = world.addActor(Coin, "add-coin", "actors/coin");\n' +
+      '{\nconst actor = world.addActor(Coin, "add-coin", "actors/coin", "main");\n' +
         'actor.set(X);\n}\n',
     );
     expect(defs['mod:actors/coin']).toBe('import Coin from "actors/coin";');
@@ -1819,7 +1819,7 @@ describe('world_load_map generator', () => {
     expect(code).toBe(
       'world.define("actors/player", Player);\n' +
         'world.define("actors/coin", Coin);\n' +
-        'world.loadMap(Level1);\n',
+        'world.loadMap(Level1, "main");\n',
     );
     expect(defs['mod:actors/player']).toBe(
       'import Player from "actors/player";',

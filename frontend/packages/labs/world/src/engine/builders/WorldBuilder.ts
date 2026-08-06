@@ -340,8 +340,12 @@ export class WorldBuilder {
    *
    * A world may load several — a level and a HUD, say. Loading is additive, so
    * they stack in call order; `clear()` first to replace rather than add.
+   *
+   * `layer` puts every actor the map describes into one layer, which is what
+   * makes a HUD a HUD: the map is an ordinary map, and the layer it is loaded
+   * into is the whole of what makes it an interface (specs/VIEWPORT.md).
    */
-  loadMap(map: WorldMap): Actor[] {
+  loadMap(map: WorldMap, layer?: string): Actor[] {
     const world = this.getWorld();
     const lookup = this.propertyLookup(world);
     const added: Actor[] = [];
@@ -367,7 +371,7 @@ export class WorldBuilder {
           }
         }
       }
-      world.addActor(actor);
+      world.addActor(actor, layer);
       added.push(actor);
     }
     return added;
