@@ -153,9 +153,11 @@ export function useDragSelection({
   } | null>(null);
 
   // Mouseup at the end of a drag selection is followed by a click on the pane,
-  // which would clear the selection the drag just made. Set here, read once by
-  // the pane-click handler, and reset on the next mousedown so a drag that ends
-  // over a node (no pane click follows) can't swallow a later one.
+  // which would clear the selection the drag just made. Set on mouseup and read
+  // by the pane-click handler. The browser dispatches that click in the same
+  // task as the mouseup, so a timeout clears the flag right afterwards whether
+  // or not the click ever arrives — a drag released over the toolbar produces
+  // no pane click, and must not swallow a later one.
   const completedDragRef = useRef(false);
 
   const consumeDragSelectClick = useCallback(() => {
@@ -171,7 +173,6 @@ export function useDragSelection({
       const target = event.target;
       if (!(target instanceof Element)) return;
       if (!target.classList.contains('react-flow__pane')) return;
-      completedDragRef.current = false;
       dragRef.current = {
         startX: event.clientX,
         startY: event.clientY,
@@ -224,7 +225,6 @@ export function useDragSelection({
       setSelectionBox(null);
       setPendingSelectedIds(EMPTY_SET);
       if (!drag?.active) return;
-      completedDragRef.current = true;
 
       const {canvasMin, canvasMax} = screenBoxToCanvas(
         drag.startX,
@@ -234,6 +234,15 @@ export function useDragSelection({
         screenToFlowPosition
       );
       const selectedIds = computeOverlapIds(nodes, edges, canvasMin, canvasMax);
+      // A drag that caught nothing should land like a plain pane click, which
+      // clears the selection and leaves group mode. Only guard the click when
+      // there is a fresh selection to protect.
+      if (selectedIds.size > 0) {
+        completedDragRef.current = true;
+        setTimeout(() => {
+          completedDragRef.current = false;
+        }, 0);
+      }
       onSelectNodes(selectedIds);
     },
     [nodes, edges, screenToFlowPosition, onSelectNodes]
