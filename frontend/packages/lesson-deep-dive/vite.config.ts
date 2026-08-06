@@ -30,6 +30,13 @@ const devHostAliases: Alias[] = [
     replacement: `${repoRoot}/apps/generated-scripts/`,
   },
   {find: /^@codebridge\//, replacement: `${repoRoot}/apps/src/codebridge/`},
+  // Views that have moved here are imported back by apps through the package
+  // name, which the exports map answers with dist/. Point it at source so
+  // editing a moved view still hot-reloads instead of needing a rebuild.
+  {
+    find: '@code-dot-org/lesson-deep-dive',
+    replacement: path.resolve(__dirname, 'src/index.ts'),
+  },
 ];
 
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
