@@ -118,6 +118,43 @@ describe('World.removeActor', () => {
     expect(gem.world).toBe(world);
   });
 
+  it('empties the world at setup, where nothing is ticking', () => {
+    // `WorldBuilder.clear`'s case: place, then replace. Immediate, because
+    // there is no walk in progress to disturb.
+    const world = makeWorld();
+    place(world, 'coin');
+    const [, coin] = [...world.actors];
+
+    world.clearActors();
+
+    expect(ids(world)).toEqual([]);
+    expect(coin.world).toBeUndefined();
+  });
+
+  it('waits until the tick is over when the world is cleared during one', () => {
+    // Same hazard as a single removal, and the likelier one: "the exit was
+    // touched, take the room away" comes from a handler, which runs inside the
+    // walk of the list this empties.
+    const world = makeWorld();
+    place(world, 'coin');
+    place(world, 'gem');
+    const [, coin] = [...world.actors];
+
+    let duringHandler: string[] = [];
+    coin.on(StartsFallingEvent, inWorld => {
+      inWorld.clearActors();
+      duringHandler = [...inWorld.actors].map(each => each.id);
+    });
+    world.emit(StartsFallingEvent, coin);
+
+    world.tick(0.1);
+
+    // Still whole mid-tick, and empty by the time the tick returns.
+    expect(duringHandler).toEqual(['ground', 'coin', 'gem']);
+    expect(ids(world)).toEqual([]);
+    expect(coin.world).toBeUndefined();
+  });
+
   it('leaves the actors after it in place', () => {
     // What deferral is for: a walk that removes one actor must still visit the
     // rest.

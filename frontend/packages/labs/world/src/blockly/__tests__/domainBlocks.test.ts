@@ -792,7 +792,15 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === 'World',
       )?.blocks,
-    ).toEqual(expect.arrayContaining(['world_load_map', 'world_add_actor']));
+    ).toEqual(
+      expect.arrayContaining([
+        'world_load_map',
+        'world_add_actor',
+        // Taking actors out belongs beside putting them in, one or all.
+        'world_remove_actor',
+        'world_clear_world',
+      ]),
+    );
   });
 
   it('surfaces generated property setters in their rule categories', () => {
@@ -1470,6 +1478,14 @@ describe('world block generators', () => {
     // actor whose handler this is.
     expect(run('world_remove_actor', {}, {}, '', {})).toBe(
       'world.removeActor(actor);\n',
+    );
+  });
+
+  it('world_clear_world empties the world, taking no subject at all', () => {
+    // "All of them" is the whole meaning of the block, so there is nothing to
+    // read off it — not a socket, not a field, not even `this actor`.
+    expect(run('world_clear_world', {}, {}, '', {})).toBe(
+      'world.clearActors();\n',
     );
   });
 
