@@ -6,7 +6,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 
-import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
+import {DRAG_THRESHOLD_PX, LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
 import {getSelectionMoveIds} from '../utils/grouping';
 import {attachEdgeEndpoint} from '../utils/handleSnap';
 import {
@@ -42,6 +42,9 @@ interface DragState {
 interface SelectionDragState {
   startPositions: Map<string, XYPosition>;
   startPointer: XYPosition;
+  // Same point in client coordinates, so the drag threshold is measured in
+  // screen pixels and doesn't change with zoom.
+  startScreenPointer: XYPosition;
   hasMoved: boolean;
 }
 
@@ -226,9 +229,17 @@ export function useLineEdgeDrag({
       if (!dragState) {
         return;
       }
-      // Snapshot before the first mutation so a bare click doesn't create a
-      // history entry.
+      // Wait for the pointer to clear the drag threshold, then snapshot before
+      // the first mutation.
       if (!dragState.hasMoved) {
+        const screenDeltaX = event.clientX - dragState.startScreenPointer.x;
+        const screenDeltaY = event.clientY - dragState.startScreenPointer.y;
+        if (
+          Math.abs(screenDeltaX) < DRAG_THRESHOLD_PX &&
+          Math.abs(screenDeltaY) < DRAG_THRESHOLD_PX
+        ) {
+          return;
+        }
         pushSnapshot();
         dragState.hasMoved = true;
       }
@@ -304,6 +315,7 @@ export function useLineEdgeDrag({
               x: event.clientX,
               y: event.clientY,
             }),
+            startScreenPointer: {x: event.clientX, y: event.clientY},
             hasMoved: false,
           };
           window.addEventListener('mousemove', handleSelectionMouseMove);

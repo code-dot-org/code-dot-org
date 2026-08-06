@@ -202,6 +202,7 @@ export function useKeyboardNavigation({
     getEdge,
     getEdges,
     getNode,
+    getNodes,
     getZoom,
     screenToFlowPosition,
     flowToScreenPosition,
@@ -472,7 +473,7 @@ export function useKeyboardNavigation({
     (event: ArrowMoveEvent, deltaX: number, deltaY: number): boolean => {
       const idsToMove = getSelectionMoveIds(
         multiSelectedNodeIds,
-        nodes,
+        getNodes(),
         getEdges()
       );
       if (idsToMove.length === 0) return false;
@@ -488,7 +489,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [multiSelectedNodeIds, nodes, getEdges, pushSnapshot, setNodes, announce]
+    [multiSelectedNodeIds, getNodes, getEdges, pushSnapshot, setNodes, announce]
   );
 
   const handleMoveNode = useCallback(

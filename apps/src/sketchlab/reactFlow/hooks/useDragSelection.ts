@@ -9,11 +9,11 @@ import type {
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
+  DRAG_THRESHOLD_PX,
   LINE_ANCHOR_SIZE_PX,
 } from '../constants';
 import {isGroupedChildNode} from '../utils/grouping';
 
-const DRAG_THRESHOLD_PX = 4;
 const EMPTY_SET: ReadonlySet<string> = new Set();
 
 export interface DragSelectionBox {
