@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import {
   Breadcrumbs as MuiBreadcrumbs,
   Button as MuiButton,
@@ -326,20 +327,15 @@ function Certificate(props) {
                   <Typography variant="h3" gutterBottom>
                     {i18n.congratsCertificatePersonalize()}
                   </Typography>
-                  <Typography
-                    className={style.enterName}
-                    variant="body3"
-                    gutterBottom
-                  >
-                    {i18n.enterYourName()}
-                  </Typography>
                   <div className={style.inputButtonContainer}>
-                    <input
-                      id="name"
-                      type="text"
-                      className={classNames(style.nameInput, 'form-control')}
-                      placeholder={i18n.yourName()}
+                    <TextField
                       ref={nameInputRef}
+                      id="name"
+                      name="name"
+                      label={i18n.enterYourName()}
+                      placeholder={i18n.yourName()}
+                      size="m"
+                      className={style.nameInput}
                     />
                     <MuiButton
                       variant="contained"

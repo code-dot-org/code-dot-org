@@ -14,6 +14,12 @@ $border-radius: 4px;
   color: var(--text-neutral-primary);
   flex-direction: column;
   gap: 48px;
+
+  // dashboard/app/assets/stylesheets/application.scss paints every <hr> with
+  // the brand teal; these dividers are neutral.
+  hr {
+    border-color: var(--borders-neutral-strong);
+  }
 }
 
 .certificate {

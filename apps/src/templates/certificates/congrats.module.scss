@@ -69,6 +69,12 @@ h1.heading {
 .container {
   float: left;
   width: 100%;
+
+  // dashboard/app/assets/stylesheets/application.scss paints every <hr> with
+  // the brand teal; these dividers are neutral.
+  hr {
+    border-color: var(--borders-neutral-strong);
+  }
 }
 
 h1.mobileHeading {
@@ -87,27 +93,29 @@ h1.mobileHeading {
   float: left;
 }
 
-// Use a high-specificity selector to take priority over bootstrap's .form-control
-input.nameInput {
-  height: 36px;
+// DSCO TextField. FormFieldWrapper is a column flex with
+// align-items: flex-start, so the input needs an explicit width to span the
+// field. min-width overrides the wrapper's 18.75rem floor so the field can
+// still shrink alongside the button on narrow screens.
+.nameInput {
   flex: 2;
-  border: 1px solid var(--borders-neutral-strong);
-  background-color: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
+  min-width: 0;
+
+  input {
+    width: 100%;
+  }
 }
 
 .confetti {
   top: 100px;
 }
-p.enterName {
-  font-weight: bold;
-  margin: 0;
-}
 
+// TextField stacks its label above the input, so bottom-align the row to put
+// the Submit button level with the input rather than with the label.
 .inputButtonContainer {
   display: flex;
   gap: 0.5rem;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .swiperContainer {
