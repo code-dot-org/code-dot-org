@@ -220,8 +220,6 @@ export function useLineEdgeDrag({
     [handleLineEdgeMouseMove, setEdges]
   );
 
-  // No endpoint snapping: a selection moves as a rigid body, so a line inside
-  // it shouldn't reattach to whatever it passes over.
   const handleSelectionMouseMove = useCallback(
     (event: MouseEvent) => {
       const dragState = draggingSelectionRef.current;

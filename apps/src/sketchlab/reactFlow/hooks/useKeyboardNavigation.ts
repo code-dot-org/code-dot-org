@@ -468,8 +468,6 @@ export function useKeyboardNavigation({
     [getEdges, getNode, getZoom, flowToScreenPosition, setEdges, focusEntry]
   );
 
-  // No endpoint snapping: a selection moves as a rigid body, so a line inside
-  // it shouldn't reattach to whatever it passes over.
   const moveSelectionByDelta = useCallback(
     (event: ArrowMoveEvent, deltaX: number, deltaY: number): boolean => {
       const idsToMove = getSelectionMoveIds(
