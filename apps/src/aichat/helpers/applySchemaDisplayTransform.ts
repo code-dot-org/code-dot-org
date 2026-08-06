@@ -4,29 +4,19 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {ChatEvent, isChatMessage} from '../types';
 
 /**
- * Applies a level's jsonSchemaResponseCallback to assistant messages at render
- * time.
+ * Applies a level's jsonSchemaResponseCallback to assistant messages for
+ * display. Stored messages hold the model's response as-is; the callback
+ * reshapes it for the reader.
  *
- * WHY AT RENDER TIME
+ * Two representations are in play, and nothing in the message distinguishes
+ * them: the raw JSON the model returned, and prose. So the choice is made by
+ * attempting a parse -- objects and arrays get the callback, anything else is
+ * rendered unchanged.
  *
- * This transform used to run in submitChatContents, rewriting
- * chatMessageText before the event was logged. That made stored chat history a
- * client-side derivation of the model's response rather than the response
- * itself, so nothing on the server could check it against what the model
- * actually produced. The transform is presentational, so it belongs here.
- *
- * MIXED HISTORY
- *
- * Events logged before that change hold already-transformed prose; events
- * logged after hold the raw JSON the model returned. Nothing marks which is
- * which, so we distinguish by trying to parse: raw JSON parses and gets the
- * callback applied, prose does not and is rendered unchanged.
- *
- * This is a heuristic, and it is wrong in one direction: an old transformed
- * message whose text happens to be valid JSON would be passed to the callback.
- * Prose is not valid JSON in practice, and the callback is guarded below, so
- * the failure mode is rendering the original text rather than throwing. This
- * can be removed once no pre-transition events remain.
+ * The prose case exists because these messages once had the callback applied
+ * before they were saved. It cannot be dropped until no such rows remain, and
+ * aichat_events has no retention policy, so that needs either a backfill or a
+ * deliberate cutoff date. Until then this stays.
  */
 export function applySchemaDisplayTransform(
   events: ChatEvent[],
@@ -46,7 +36,7 @@ export function applySchemaDisplayTransform(
   });
 
   // Preserve referential identity when nothing changed, so memoized consumers
-  // downstream do not re-render on every call.
+  // do not re-render on every call.
   return changed ? transformed : events;
 }
 
@@ -57,7 +47,7 @@ function transformEvent(
   if (!isChatMessage(event)) {
     return event;
   }
-  // Only successful model output is schema-shaped. User messages are the user's
+  // Only successful model output is schema-shaped: user messages are the user's
   // own words, and errored assistant messages carry a placeholder, not JSON.
   if (event.role !== Role.ASSISTANT || event.status !== Status.OK) {
     return event;
@@ -72,7 +62,7 @@ function transformEvent(
     return {...event, chatMessageText: jsonSchemaResponseCallback(parsed)};
   } catch {
     // A callback that cannot handle this payload must not blank the message or
-    // crash the transcript; fall back to the stored text.
+    // crash the transcript.
     return event;
   }
 }

@@ -3,8 +3,8 @@ import {ChatEvent} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-// Stands in for a level's jsonSchemaResponseCallback: pulls one field out of the
-// parsed response, which is what weblab2/pythonlab AI Tutor callbacks do.
+// Stands in for a level's jsonSchemaResponseCallback: pulls one field out of
+// the parsed response, as the weblab2/pythonlab AI Tutor callbacks do.
 const callback = (response: unknown) =>
   `ANSWER: ${(response as {answer: string}).answer}`;
 
@@ -40,8 +40,8 @@ describe('applySchemaDisplayTransform', () => {
   });
 
   it('leaves already-transformed history alone', () => {
-    // Rows saved before the transform moved to render time hold prose, not
-    // JSON. Passing them to the callback would corrupt them.
+    // Prose is not a schema response; passing it to the callback would corrupt
+    // it.
     const prose = 'Try moving the sprite to the left instead.';
     const result = applySchemaDisplayTransform(
       [assistantMessage(prose)],

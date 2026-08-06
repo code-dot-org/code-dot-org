@@ -301,10 +301,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     const storedChatEvents = selectedStudent
       ? studentChatHistory
       : visibleItems;
-    // Applied here rather than before logging: the transform is presentational,
-    // and running it earlier would make stored history a client-side derivation
-    // of the model's response instead of the response itself. Covers the
-    // teacher's view of a student's history too, since both paths feed this
+    // Covers a teacher viewing a student's history too: both paths feed this
     // same list.
     const chatEvents = useMemo(
       () =>

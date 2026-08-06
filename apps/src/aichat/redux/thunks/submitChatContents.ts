@@ -228,13 +228,6 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
-        // The model's response is logged verbatim. A level's
-        // jsonSchemaResponseCallback used to rewrite chatMessageText here,
-        // before the message was saved, which made stored history a client-side derivation of
-        // the response instead of the response itself -- nothing server-side
-        // could then check it against what the model actually produced. The
-        // transform is presentational, so ChatWorkspace now applies it when
-        // rendering (see applySchemaDisplayTransform).
         dispatch(addChatEvent(message));
       }
       if (message.role === Role.USER) {
