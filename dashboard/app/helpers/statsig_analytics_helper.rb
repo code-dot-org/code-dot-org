@@ -12,19 +12,21 @@ module StatsigAnalyticsHelper
 
   # Returns the analytics section of the frontend app-config as a hash.
   #
-  # An environment transmits iff it provisions a client key: production and
-  # the chef-managed test web server do (config/*.yml.erb); everywhere else
-  # the key defaults to blank and the page is served provider 'none'. A
-  # developer enables the provider locally by setting a real
-  # statsig_api_client_key in locals.yml.
+  # `provider` reports what is configured: a client key is provisioned in
+  # production and on the chef-managed test web server (config/*.yml.erb), and
+  # a developer provisions one locally by setting statsig_api_client_key in
+  # locals.yml. `enabled` reports the feature flag separately, so the frontend
+  # owns the decision and a disabled page still describes itself fully.
+  #
   # A signed-in page seeds the identity so the first events carry it. The
   # frontend treats this as optional and identifies over its API when absent,
   # so a signed-out page, a cached layout, or a static shell simply omits it.
   def analytics_config
+    enabled = DCDO.get('statsig-enabled', true)
     client_key = CDO.safe_statsig_api_client_key
-    return {provider: 'none'} if client_key.blank?
+    return {provider: 'none', enabled: enabled} if client_key.blank?
 
-    config = {provider: 'statsig', statsig: {clientKey: client_key}}
+    config = {provider: 'statsig', enabled: enabled, statsig: {clientKey: client_key}}
     return config unless current_user
 
     config.merge(user: {userId: current_user.id.to_s, userType: current_user.user_type})

@@ -147,6 +147,22 @@ describe('SiteConfig analytics (parseRuntimeConfig)', () => {
     expect(config.analytics.statsig?.clientKey).toBe('client-abc');
   });
 
+  it('carries the enabled flag through from the meta tag', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {provider: 'statsig', enabled: false},
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.enabled).toBe(false);
+  });
+
+  it('leaves enabled undefined when the meta tag omits it', () => {
+    setMetaConfig(JSON.stringify({analytics: {provider: 'statsig'}}));
+    const config = new SiteConfig();
+    expect(config.analytics.enabled).toBeUndefined();
+  });
+
   it('carries a server-seeded user through from the meta tag', () => {
     setMetaConfig(
       JSON.stringify({

@@ -1,6 +1,8 @@
 /** Runtime analytics configuration, read from the app-config meta tag. */
 export interface AnalyticsConfig {
   provider: 'statsig' | 'none';
+  /** Runtime feature flag. Anything but an explicit `false` leaves analytics on. */
+  enabled?: boolean;
   statsig?: {clientKey: string};
   /** Identity the page was rendered for, when the server knows one. */
   user?: {userId: string; userType?: string};

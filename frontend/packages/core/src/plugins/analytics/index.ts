@@ -101,6 +101,8 @@ export const analyticsPlugin: CorePlugin = {
     booted = true;
 
     const analytics = config.analytics as AnalyticsConfig | undefined;
+    if (analytics?.enabled === false) return;
+
     const provider = analytics?.provider ?? 'none';
 
     const kind: AnalyticsClientKind | null =
