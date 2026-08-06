@@ -26,7 +26,7 @@ import {
   IMPORT_SPRITE_VALUE,
 } from '../appearance/appearanceImport';
 import {DEFAULT_BACKDROP_COLOR, type PropertyType} from '../engine';
-import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
+import {DEFAULT_LAYER_ID, type SlotName} from '../engine/core/Layer';
 
 import {actorInputExtension, actorSubjectExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
@@ -3084,92 +3084,145 @@ const backgroundOptionsExtension = liveDropdown(
   backgroundFieldOptions,
 );
 
-const worldSetBackground = defineBlock({
-  type: 'world_set_background',
-  message0: 'set background to %1',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'BACKGROUND',
-      options: backgroundFieldOptions,
-    },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  // Chained under `define world` it is the world's background from the start;
-  // in a handler or a rule step it changes it mid-game. `setBackground` is on
-  // the builder and the live World alike, so there is no context guard.
-  // The options extension first, then the import one, so the latter wraps that
-  // validator rather than being wrapped by it (see appearanceImportField).
-  extensions: [
-    backgroundOptionsExtension,
-    worldContextExtension,
-    backgroundImportFieldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip:
-    'Draw an image behind everything, stretched to fill the view. Backgrounds ' +
-    'are the images in the project’s backgrounds folder.',
-  generator: {
-    javascript(block) {
-      const name = block.getFieldValue('BACKGROUND');
-      // Nothing chosen, or the `(import…)` row still sitting in the field
-      // because no editor was there to answer it (the headless generator).
-      if (!name || name === IMPORT_BACKGROUND_VALUE) {
-        return '';
-      }
-      // A whole image, never a cell: a backdrop is not a spritesheet, so this
-      // field never carries the `name.png#3` a `set sprite` field can.
-      // Named with its layer, so a `set background` inside a `define layer`
-      // paints that layer and not the world's default one.
-      return `world.setBackground(${str(name)}, ${str(layerOf(block))});\n`;
-    },
-  },
-});
-
 /**
- * Draw an image in FRONT of a layer's actors — fog, snow, a vignette.
+ * The blocks for one of a layer's two image slots, generated.
  *
- * The background's twin, and deliberately identical in every respect but the
- * depth it lands at: same picker, same stretching, same effects, same
- * everywhere-valid context. Which side of the actors it lands on is a number,
- * not a kind of thing, which is why nobody has to make a "foreground layer" —
- * every layer already has both.
+ * A slot has an image, an offset and a repeat, and there are two slots — six
+ * blocks that differ in one word. They were hand-written, and `set foreground`
+ * was already a copy of `set background` with the noun changed; a second copy
+ * per setting is how a family like this stops agreeing with itself. Generating
+ * them is the house idiom rather than a new one: every property, action, query,
+ * event and emit block in this file already comes from a factory over metadata.
  *
- * It sets the slot on the layer it is written in, so a `set foreground` inside
- * a `define layer` fogs that layer and nothing else (blockly/layers).
+ * The block TYPES are the names they already had (`world_set_background`), so
+ * nothing a learner has saved changes.
  */
-const worldSetForeground = defineBlock({
-  type: 'world_set_foreground',
-  message0: 'set foreground to %1',
-  args0: [
+const defineSlotBlocks = (slot: {
+  /** The slot's name, in the block type and in the engine method. */
+  id: SlotName;
+  /** What it is called in front of a learner. */
+  label: string;
+  /** `Background` / `Foreground` — the engine's method suffix. */
+  method: string;
+  /** Where the image is drawn, for the tooltip. */
+  where: string;
+}) => {
+  const setImage = defineBlock({
+    type: `world_set_${slot.id}`,
+    message0: `set ${slot.label} to %1`,
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'BACKGROUND',
+        options: backgroundFieldOptions,
+      },
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    // Chained under `define world` it is the image from the start; in a handler
+    // or a rule step it changes it mid-game. Both engine objects have the
+    // method, so there is no context guard. The options extension first, then
+    // the import one, so the latter wraps that validator rather than being
+    // wrapped by it (see appearanceImportField).
+    extensions: [
+      backgroundOptionsExtension,
+      worldContextExtension,
+      backgroundImportFieldExtension,
+    ],
+    style: 'sprite_blocks',
+    tooltip:
+      `Draw an image ${slot.where}, stretched to fill the view. The images ` +
+      'are the ones in the project’s backgrounds folder.',
+    generator: {
+      javascript(block) {
+        const name = block.getFieldValue('BACKGROUND');
+        // Nothing chosen, or the `(import…)` row still sitting in the field
+        // because no editor was there to answer it (the headless generator).
+        if (!name || name === IMPORT_BACKGROUND_VALUE) {
+          return '';
+        }
+        // A whole image, never a cell: a backdrop is not a spritesheet, so this
+        // field never carries the `name.png#3` a `set sprite` field can.
+        return `world.set${slot.method}(${str(name)}, ${str(layerOf(block))});\n`;
+      },
+    },
+  });
+
+  const setOffset = defineBlock({
+    type: `world_set_${slot.id}_offset`,
+    message0: `slide ${slot.label} to %1`,
+    args0: [{type: 'input_value', name: 'OFFSET', check: 'Vector'}],
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [worldContextExtension, valueShadowExtension],
+    style: 'sprite_blocks',
+    tooltip:
+      `Move the ${slot.label} image, in pixels. Written every tick this is ` +
+      'how a sky drifts; pair it with “draw … tiled” or the image slides off ' +
+      'its own edge.',
+    generator: {
+      javascript(block, generator) {
+        const offset =
+          generator.valueToCode(block, 'OFFSET', Order.NONE) ||
+          'new WorldLab.Vector(0, 0)';
+        return `world.set${slot.method}Offset(${offset}, ${str(layerOf(block))});\n`;
+      },
+    },
+  });
+  registerValueShadows(`world_set_${slot.id}_offset`, [
     {
-      type: 'field_dropdown',
-      name: 'BACKGROUND',
-      options: backgroundFieldOptions,
+      name: 'OFFSET',
+      shadow: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}},
     },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    backgroundOptionsExtension,
-    worldContextExtension,
-    backgroundImportFieldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip:
-    'Draw an image in front of this layer’s actors, stretched to fill the ' +
-    'view — fog, snow, a vignette. The images are the project’s backgrounds.',
-  generator: {
-    javascript(block) {
-      const name = block.getFieldValue('BACKGROUND');
-      if (!name || name === IMPORT_BACKGROUND_VALUE) {
-        return '';
-      }
-      return `world.setForeground(${str(name)}, ${str(layerOf(block))});\n`;
+  ]);
+
+  const setRepeat = defineBlock({
+    type: `world_set_${slot.id}_repeat`,
+    message0: `draw ${slot.label} %1`,
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'REPEAT',
+        options: [
+          ['stretched', 'false'],
+          ['tiled', 'true'],
+        ],
+      },
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    extensions: [worldContextExtension],
+    style: 'sprite_blocks',
+    tooltip:
+      'Stretch the image over the whole view, or tile it. Tiled is what a ' +
+      'sliding image needs: a stretched one leaves a gap as it moves.',
+    generator: {
+      javascript(block) {
+        const repeat = block.getFieldValue('REPEAT') === 'true';
+        return `world.set${slot.method}Repeat(${repeat}, ${str(layerOf(block))});\n`;
+      },
     },
-  },
-});
+  });
+
+  return [setImage, setOffset, setRepeat];
+};
+
+/** The two slots, and the six blocks they generate between them. */
+const SLOT_BLOCKS = [
+  defineSlotBlocks({
+    id: 'background',
+    label: 'background',
+    method: 'Background',
+    where: 'behind this layer’s actors',
+  }),
+  defineSlotBlocks({
+    id: 'foreground',
+    label: 'foreground',
+    method: 'Foreground',
+    where: 'in front of this layer’s actors',
+  }),
+].flat();
 
 const worldSetBackgroundColor = defineBlock({
   type: 'world_set_background_color',
@@ -3901,7 +3954,7 @@ export const DOMAIN_BLOCKS = [
   worldRemoveEffect,
   worldAddWorldEffect,
   worldRemoveWorldEffect,
-  worldSetBackground,
+  ...SLOT_BLOCKS,
   worldSetBackgroundColor,
   worldAddBackgroundEffect,
   worldRemoveBackgroundEffect,
@@ -3937,7 +3990,6 @@ export const DOMAIN_BLOCKS = [
   worldIsA,
   worldDefineLayer,
   worldWithinLayer,
-  worldSetForeground,
   worldAddActor,
   worldRemoveActor,
   worldClearWorld,
@@ -4054,7 +4106,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // What is behind everything: an image, a colour, and effects on that
       // image alone (BACKGROUNDS.md).
       'world_set_background',
+      'world_set_background_offset',
+      'world_set_background_repeat',
       'world_set_foreground',
+      'world_set_foreground_offset',
+      'world_set_foreground_repeat',
       'world_set_background_color',
       'world_add_background_effect',
       'world_remove_background_effect',
