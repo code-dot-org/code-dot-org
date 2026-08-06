@@ -95,18 +95,30 @@ Rails injects the config through the `<meta name="app-config">` tag:
 {
   "analytics": {
     "provider": "statsig",
+    "enabled": true,
     "statsig": {"clientKey": "client-..."},
     "user": {"userId": "42", "userType": "teacher"}
   }
 }
 ```
 
+`enabled` is a runtime feature flag, always present. When it is `false` the page
+sends nothing at all — no provider client is built and the development console
+adapter does not run either, so a disabled page is silent everywhere. Anything
+other than an explicit `false`, including an absent key, leaves analytics on.
+
+`provider` reports what is _configured_, independently of `enabled`, so the
+client key and identity seed still ride a disabled section and the page
+describes itself fully.
+
 `user` is present only when the page was rendered for a signed-in person; it is
 absent entirely otherwise.
 
 Whether an environment transmits is decided server-side — only production and
 the chef-managed test server do — and a non-transmitting environment is served
-`provider: 'none'`. There is no browser-side switch.
+`provider: 'none'`. There is no browser-side switch. The server can also serve
+`provider: 'none'` at runtime through a dynamic-config feature flag, so a page
+that transmitted on the last load may boot silent on the next.
 
 The Statsig adapter loads through a dynamic import, so the SDK becomes a
 separate chunk rather than landing in the initial core payload.

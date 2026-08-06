@@ -32,6 +32,7 @@ export interface SiteConfigExtensions {}
 export interface AnalyticsRuntimeConfig {
   analytics?: {
     provider?: 'statsig' | 'none';
+    enabled?: boolean;
     statsig?: {clientKey: string};
     user?: {userId: string; userType?: string};
   };

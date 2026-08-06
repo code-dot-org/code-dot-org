@@ -219,6 +219,62 @@ describe('analytics plugin bootstrap', () => {
     );
   });
 
+  it('stays silent when the switch is off, even with a provider configured', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({...STATSIG_CONFIG, enabled: false});
+    await Promise.resolve();
+    await Promise.resolve();
+
+    analytics.sendEvent('ignored');
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(log).not.toHaveBeenCalled();
+  });
+
+  it('stays silent when the switch is off in development', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({provider: 'none', enabled: false}, 'development');
+    await Promise.resolve();
+    await Promise.resolve();
+
+    analytics.sendEvent('ignored');
+
+    expect(statsigInstances).toHaveLength(0);
+    expect(log).not.toHaveBeenCalled();
+  });
+
+  it('boots normally when the switch is explicitly on', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({...STATSIG_CONFIG, enabled: true});
+    await drain();
+
+    expect(statsigInstances).toHaveLength(1);
+  });
+
+  it('boots normally when the config omits the switch', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    await drain();
+
+    expect(statsigInstances).toHaveLength(1);
+  });
+
+  it('logs in development when the config omits the switch', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady({provider: 'none'}, 'development');
+
+    await vi.waitFor(() =>
+      expect(log).toHaveBeenCalledWith(
+        expect.stringContaining('Statsig Stable ID'),
+      ),
+    );
+  });
+
   it('buffers an event sent synchronously after onCoreReady', async () => {
     const analytics = await loadAnalytics();
     analytics.onCoreReady(STATSIG_CONFIG);
