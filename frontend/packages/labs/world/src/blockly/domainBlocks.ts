@@ -79,6 +79,7 @@ import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
+  layerIdFromValue,
   layerOf,
   layerOptions,
   layerOptionsExtension,
@@ -2243,6 +2244,65 @@ const worldClearActors = defineBlock({
 });
 
 /** How many actors a value holds — one, for a value holding one. */
+/**
+ * Every actor drawn in one layer (specs/VIEWPORT.md).
+ *
+ * `all actors` narrowed to a group. Most programs never need it — you place
+ * game actors in a game layer and widgets in an interface layer, so a loop over
+ * "all actors" is usually already the ones you meant — but a rule that must not
+ * reach the HUD has no other way to say so.
+ *
+ * A copy, like `all actors`, because a source is read once at the top of a
+ * loop: a rule that adds actors while iterating them terminates.
+ */
+const worldAllActorsInLayer = defineBlock({
+  type: 'world_all_actors_in_layer',
+  message0: 'all actors in layer %1',
+  args0: [{type: 'field_dropdown', name: 'LAYER', options: layerOptions}],
+  output: 'Actor',
+  extensions: [layerOptionsExtension, worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip: 'Every actor drawn in one layer, as it is now.',
+  generator: {
+    javascript(block) {
+      return [
+        `world.actors.inLayer(${str(layerIdFromValue(block, String(block.getFieldValue('LAYER') ?? '')))})`,
+        Order.MEMBER,
+      ] as [string, number];
+    },
+  },
+});
+
+/** Whether an actor is drawn in a layer — the question, rather than the list. */
+const worldIsInLayer = defineBlock({
+  type: 'world_is_in_layer',
+  message0: '%1 is in layer %2',
+  args0: [
+    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
+    {type: 'field_dropdown', name: 'LAYER', options: layerOptions},
+  ],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [actorInputExtension, layerOptionsExtension],
+  style: 'logic_blocks',
+  tooltip: 'Whether an actor is drawn in a given layer.',
+  generator: {
+    javascript(block, generator) {
+      // A value over several actors reads the first, as every value does
+      // (specs/ACTOR_LISTS.md).
+      const target = actorTarget(block, generator, Order.MEMBER);
+      const layer = layerIdFromValue(
+        block,
+        String(block.getFieldValue('LAYER') ?? ''),
+      );
+      return [
+        `${oneActor(target)}.layer === ${str(layer)}`,
+        Order.EQUALITY,
+      ] as [string, number];
+    },
+  },
+});
+
 const worldCountActors = defineBlock({
   type: 'world_count_actors',
   message0: 'how many actors in %1',
@@ -3967,6 +4027,8 @@ export const DOMAIN_BLOCKS = [
   worldClearActors,
   worldCountActors,
   worldAnyActors,
+  worldAllActorsInLayer,
+  worldIsInLayer,
   worldIsInActors,
   worldForEach,
   worldFirstWhere,
@@ -4058,6 +4120,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_count_actors',
       'world_any_actors',
       'world_is_in_actors',
+      // Narrowing to a layer: the list, and the question (specs/VIEWPORT.md).
+      'world_all_actors_in_layer',
+      'world_is_in_layer',
       ActorVariable.getterType,
       'world_is_a',
     ],

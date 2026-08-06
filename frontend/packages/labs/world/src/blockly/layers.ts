@@ -116,6 +116,31 @@ export const layerOf = (block: Blockly.Block): string => {
   return DEFAULT_LAYER_ID;
 };
 
+/**
+ * The runtime layer id a LAYER dropdown's value names.
+ *
+ * Two shapes reach this: a `layer:<blockId>` chosen from the list, and the bare
+ * default that {@link layerOptions} offers when a workspace declares no layers.
+ * A value naming a definition that has since been deleted resolves to the
+ * default, exactly as {@link layerOf} does for a `within layer` — the value
+ * outlives the block it names, and answering "no layer" is not an option.
+ */
+export const layerIdFromValue = (
+  block: Blockly.Block,
+  value: string,
+): string => {
+  const blockId = layerBlockId(value);
+  // `undefined` means the value is not a layer reference at all — the bare
+  // default. An EMPTY id means it is one, naming nothing, which is the deleted
+  // case and must not be mistaken for the bare default.
+  if (blockId === undefined) {
+    return value || DEFAULT_LAYER_ID;
+  }
+  return blockId && block.workspace?.getBlockById?.(blockId)
+    ? layerId(blockId)
+    : DEFAULT_LAYER_ID;
+};
+
 /** Whether this subtree places anything, not counting nested layers' contents. */
 const placesDirectly = (block: Blockly.Block): boolean => {
   if (PLACING_BLOCKS.includes(block.type)) {

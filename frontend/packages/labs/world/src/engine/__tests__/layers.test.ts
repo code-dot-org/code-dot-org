@@ -300,6 +300,59 @@ describe('leaving a layer', () => {
   });
 });
 
+describe('asking which actors are in a layer', () => {
+  const built = () => {
+    const world = new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'game'})
+      .defineLayer({id: 'hud'})
+      .instantiate();
+    world.addActor(actor('player'), 'game');
+    world.addActor(actor('coin'), 'game');
+    world.addActor(actor('score'), 'hud');
+    world.addActor(actor('stray'));
+    return world;
+  };
+
+  it('gives every actor drawn in it', () => {
+    expect(
+      built()
+        .actors.inLayer('game')
+        .map(a => a.id),
+    ).toEqual(['player', 'coin']);
+  });
+
+  it('does not reach the actors of another layer', () => {
+    // The reason the filter exists: a rule that must not touch the HUD has no
+    // other way to say so.
+    expect(
+      built()
+        .actors.inLayer('hud')
+        .map(a => a.id),
+    ).toEqual(['score']);
+  });
+
+  it('finds the ones nothing placed deliberately, in the default', () => {
+    expect(
+      built()
+        .actors.inLayer(DEFAULT_LAYER_ID)
+        .map(a => a.id),
+    ).toEqual(['stray']);
+  });
+
+  it('gives none for a layer that is not there', () => {
+    // Rather than throwing: the id comes from generated code naming a block.
+    expect(built().actors.inLayer('a-layer-that-was-deleted')).toEqual([]);
+  });
+
+  it('is a copy, so a loop that places actors terminates', () => {
+    const world = built();
+    const walked = world.actors.inLayer('game');
+    world.addActor(actor('late'), 'game');
+
+    expect(walked).toHaveLength(2);
+  });
+});
+
 describe('the snapshot', () => {
   // Layers are structural: a layer cannot be spliced into a live scene graph,
   // and reordering two changes what draws on top of what. Both are reloads.
