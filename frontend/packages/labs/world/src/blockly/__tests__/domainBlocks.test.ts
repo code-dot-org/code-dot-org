@@ -23,7 +23,7 @@ import {setProjectAnimationFiles, setProjectMaps} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {setProjectGrids} from '../spriteCells';
-import {VALUE_SHADOW_EXTENSION} from '../valueShadow';
+import {shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -339,6 +339,93 @@ describe('domain block generators', () => {
         'if (each.type === "actors/coin") {\n' +
         'each.set(X, Y);\n}\n}\n',
     );
+  });
+
+  it('world_any_actors asks whether a value holds any actor at all', () => {
+    const [code] = generatorFor('world_any_actors')(
+      {getFieldValue: () => ''} as never,
+      {
+        valueToCode: (_b: unknown, name: string) =>
+          name === 'LIST' ? 'coins' : '',
+      } as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('WorldLab.all(coins).length > 0');
+  });
+
+  it('world_any_actors seeds `all actors`, not `this actor`', () => {
+    // Its socket is a LIST. Seeded with `this actor` it would read "any actors
+    // in ⟨this actor⟩" and answer true forever, which is a block that teaches
+    // nothing and hides the question it exists to ask.
+    expect(shadowsFor('world_any_actors')).toEqual([
+      {name: 'LIST', shadow: {type: 'world_all_actors'}},
+    ]);
+  });
+
+  it('world_first_where asks the loop’s question and answers with one actor', () => {
+    // The same source and the same predicate as `world_for_each` above — what
+    // differs is that this hands the actor back instead of running a body.
+    const block = {
+      getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
+    };
+    const generator = {
+      getVariableName: (id: string) => (id === 'vid' ? 'each' : id),
+      valueToCode: (_b: unknown, name: string) =>
+        name === 'WHERE' ? 'each.type === "actors/coin"' : '',
+    };
+    const [code] = generatorFor('world_first_where')(
+      block as never,
+      generator as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe(
+      'WorldLab.firstWhere(world.actors, each => each.type === "actors/coin")',
+    );
+  });
+
+  it('world_first_where walks a plugged source through WorldLab.all', () => {
+    // `all actors` is already every actor and already iterable; anything else
+    // is an actor value, one or many, and has to be made a list first — the
+    // same rule the loop follows, because it is the same `actorSource`.
+    const block = {
+      getFieldValue: (name: string) => (name === 'VAR' ? 'vid' : ''),
+      getInputTargetBlock: (name: string) =>
+        name === 'SOURCE' ? {type: 'world_actor_kind'} : null,
+    };
+    const generator = {
+      getVariableName: () => 'each',
+      valueToCode: (_b: unknown, name: string) =>
+        name === 'SOURCE'
+          ? 'world.actors.ofType("actors/coin")'
+          : 'each.get(P) > 3',
+    };
+    const [code] = generatorFor('world_first_where')(
+      block as never,
+      generator as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe(
+      'WorldLab.firstWhere(WorldLab.all(world.actors.ofType("actors/coin")), ' +
+        'each => each.get(P) > 3)',
+    );
+  });
+
+  it('world_first_where defaults its predicate to true, as the loop does', () => {
+    // An emptied WHERE socket means "no test", which answers with the first
+    // actor in the source rather than generating `if ()`.
+    const [code] = generatorFor('world_first_where')(
+      {getFieldValue: () => 'vid'} as never,
+      {
+        getVariableName: () => 'each',
+        valueToCode: () => '',
+      } as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('WorldLab.firstWhere(world.actors, each => true)');
   });
 
   it('world_set_sprite sets the sprite on the ACTOR value (no trait election)', () => {
