@@ -1132,6 +1132,42 @@ describe('the block that raises an event', () => {
       'import {GustedEvent} from "rules/wind";',
     );
   });
+
+  it('is offered only while a `.rule` is being edited', () => {
+    // Raising an event is a rule-authoring act. An event is a rule's own
+    // vocabulary and the rule is the authority on when it happened — gravity
+    // is what knows a fall started. An `.actor` or a `.world` firing one is
+    // announcing something it is not the authority on, and every listener then
+    // believes it. So the category carries the hat everywhere and the emit only
+    // where the rule is being written.
+    const hat = 'world_on_HasWind_GustedEvent';
+    const raise = 'world_emit_HasWind_GustedEvent';
+
+    // The palette an `.actor` or `.world` editor gets: no ownRuleModule.
+    expect(projectCategory('Has Wind')).toContain(hat);
+    expect(projectCategory('Has Wind')).not.toContain(raise);
+
+    // …and the rule's own editor, which gets both.
+    const editing = buildDomainPalette([PROJECT_RULE], {
+      ownRuleModule: 'rules/wind',
+    });
+    const blocks =
+      (editing.toolbox as Array<{name: string; blocks: string[]}>).find(
+        category => category.name === 'Has Wind',
+      )?.blocks ?? [];
+    expect(blocks).toContain(hat);
+    expect(blocks).toContain(raise);
+  });
+
+  it('stays REGISTERED where it is not offered', () => {
+    // Taking it off the menu is not emptying the kitchen. An `.actor` that
+    // already holds one has to keep loading and generating: a palette that
+    // could not define the block would fail the whole project rather than the
+    // one block (see shippedBlocks).
+    expect(PROJECT_BLOCKS.blocks.map(block => block.type)).toContain(
+      'world_emit_HasWind_GustedEvent',
+    );
+  });
 });
 
 describe('vector arithmetic', () => {

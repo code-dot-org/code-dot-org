@@ -4033,6 +4033,22 @@ const ALL_RULE_MODULES = '\u0000all';
 function generateRulePalette(
   rules: readonly RuleMeta[],
   ownRuleModule?: string,
+  /**
+   * Whether to LIST the `emit` blocks in each rule's category.
+   *
+   * Raising an event is a rule-authoring act: an event is a rule's own
+   * vocabulary, and the code that decides the moment it happened is the rule's
+   * — gravity is what knows a fall started. An `.actor` or a `.world` firing
+   * one is announcing something it is not the authority on, and every listener
+   * then believes it. So the blocks are offered while a `.rule` is being
+   * edited, and nowhere else.
+   *
+   * Only about the TOOLBOX. The blocks are registered whatever this says (see
+   * the loop below), because a file that already holds one has to keep loading
+   * and generating — a palette that could not define it would take the whole
+   * project down rather than the one block.
+   */
+  offerEmits = false,
 ): {
   blocks: DomainBlock[];
   categories: ToolboxCategory[];
@@ -4097,10 +4113,14 @@ function generateRulePalette(
       blocks.push(block);
       ruleEventTypes.push(block.type);
       eventTypes.push(block.type);
-      // The block that raises it, next to the one that hears it.
+      // The block that raises it, next to the one that hears it — but only in
+      // the palette of a `.rule`. Defined either way: an `.actor` that already
+      // has one still has to load and generate.
       const emit = defineEmitBlock(event);
       blocks.push(emit);
-      ruleEventTypes.push(emit.type);
+      if (offerEmits) {
+        ruleEventTypes.push(emit.type);
+      }
     }
     // A chip per set of choices this rule declares — the block an enum-typed
     // socket wears, and the only way to name one of the choices anywhere else
@@ -4178,6 +4198,9 @@ export function buildDomainPalette(
   const palette = generateRulePalette(
     projectRules,
     options.allRuleModules ? ALL_RULE_MODULES : options.ownRuleModule,
+    // `emit` is offered while writing a rule, and to the headless generator,
+    // whose palette is never shown and is deliberately everything.
+    editingRule || Boolean(options.allRuleModules),
   );
   const toolbox: ToolboxCategory[] = [
     ...TOOLBOX_HEAD,
