@@ -349,6 +349,12 @@ export class PhaserBinding {
           object = create(scene, state);
           objects.set(state.actor, object);
         }
+        // Which layer draws it, as its depth (`RenderState.layer`). Every frame
+        // rather than at creation: an actor cannot change layer today, but the
+        // display list is rebuilt on every reload and a depth set once would
+        // survive only until the first restart. Backdrops sit below all of
+        // these at BACKDROP_DEPTH, which is why layer depths start at 0.
+        object.setDepth(state.layer);
         // Effects are reconciled every frame, not applied once at creation: an
         // event handler can add or remove one while the game runs, and the
         // engine's list is re-read here each tick. `reconcile` attaches only

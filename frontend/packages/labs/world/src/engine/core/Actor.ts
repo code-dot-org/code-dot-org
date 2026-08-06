@@ -77,6 +77,16 @@ export class Actor {
    */
   world: World | undefined;
 
+  /**
+   * The layer this actor is drawn in, set when it is placed.
+   *
+   * Set by the same call and for the same reason as {@link world}: placement is
+   * what decides both. Undefined until placed, and the world's default layer
+   * whenever nothing said otherwise — never "no layer", which would make every
+   * question about layers have two answers (core/Layer).
+   */
+  layer: string | undefined;
+
   readonly id: string;
   /** The template (ActorBuilder id) this instance came from — a type tag. */
   readonly type: string;

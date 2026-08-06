@@ -279,12 +279,19 @@ proto-layer, and now becomes a layer reference meaning exactly what it means
 today: the default layer's background. No block changes, no migration, and the
 word 'backdrop' retires in favour of 'a layer's background'.
 
-Parallax is then layers, and needs no cameras at all. Distant mountains are a
-layer with a background and no actors at 0.2; near hills are another at 0.5; the
-game is 1.0; fog in front is a foreground on the game layer, or a layer of its
-own at 1.2. Nothing is hand-wired, and none of it requires a learner to have met
-a Camera — which matters, because parallax is the likeliest reason anyone
-reaches for layers in the first place.
+Parallax is then layers. Distant mountains are a layer with a background and no
+actors at 0.2; near hills are another at 0.5; the game is 1.0; fog in front is a
+foreground on the game layer, or a layer of its own at 1.2. Nothing is
+hand-wired, and no Camera has to be DECLARED for any of it.
+
+A Camera does have to MOVE, though, and that is worth being exact about. The
+composition below is `camera position (*) parallax + offset`; with no camera the
+view never moves, the camera position is constant, and every factor produces the
+same picture. So a factor is inert until something moves the view. What layers
+give before cameras is the draw ORDER, somewhere for effects to live, and the
+background and foreground slots with their own offsets — drift, which is
+author-driven and needs no camera at all. Parallax proper arrives with the
+Camera that the factor is a factor OF.
 
 An earlier draft of this document built parallax out of separate 'backdrop'
 objects and out of camera-move events wired between layers. Both are retired:

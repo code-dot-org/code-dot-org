@@ -9,6 +9,7 @@ import type {AnimationDef, FrameState} from './animationTypes';
 import {rgba, type ColorValue, type Rgba} from './color';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
+import {DEFAULT_LAYER_ID, makeLayer, type Layer, type LayerInit} from './Layer';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
@@ -44,6 +45,16 @@ export interface WorldSnapshot {
    */
   ruleCode: Record<string, string>;
   actorIds: string[];
+  /**
+   * The layers, in stack order (core/Layer).
+   *
+   * Structural, and ORDERED rather than sorted: a layer cannot be spliced into
+   * a live scene graph, and reordering two of them changes what is drawn on top
+   * of what — both are reloads, not patches. Each entry carries the layer's
+   * settings as well as its id, because changing a parallax factor changes the
+   * scene graph the driver built just as surely as adding a layer does.
+   */
+  layers: string[];
   /**
    * Which effects are in play and what carries each — `[owner, path]` per
    * applied effect, across the world, its backdrops and every actor
@@ -119,6 +130,12 @@ export interface RenderState {
   effects: readonly AppliedEffectSpec[];
   /** The current appearance frame to draw; absent means draw a plain rectangle. */
   frame?: FrameState;
+  /**
+   * Which layer draws this actor, as its DEPTH — the layer's position in the
+   * stack, not its id. The driver wants a number to sort by and nothing else,
+   * and resolving the id here keeps the layer list an engine concern.
+   */
+  layer: number;
 }
 
 /**
@@ -167,6 +184,14 @@ export interface WorldInit {
   effects?: AppliedEffectSpec[];
   /** Backdrop layers, back to front; layer 0 is what the blocks address. */
   backdrops?: BackdropState[];
+  /**
+   * The layers actors are drawn in, back to front (core/Layer).
+   *
+   * A world that names none still has one — the default — so there is never a
+   * placed actor with nowhere to be. A world that names some gets exactly
+   * those, in the order given, which IS the draw order.
+   */
+  layers?: LayerInit[];
 }
 
 // `vector` and `point` are both stored as a `Vector` (see Actor's coerce).
@@ -226,6 +251,13 @@ export class World {
   // background block addresses, and a world that was told nothing about its
   // background still has one, in the default colour.
   private readonly backdropList: BackdropSlot[];
+  // The layers actors are drawn in, back to front. Never empty: index 0 is the
+  // default, which is where an actor placed without being told a layer goes.
+  private readonly layerList: Layer[];
+  // Layer id -> its index, which is its depth. Built once; layers cannot be
+  // added or removed while the world runs (they are structural — a layer cannot
+  // be spliced into a live scene graph, see `snapshot`).
+  private readonly layerIndex = new Map<string, number>();
   // The set of currently-pressed input keys, refreshed by the driver each frame
   // before `tick` (the engine is DOM-free, so input arrives as plain data).
   // Rule steps read it through `isKeyDown`; keys carry OUR names — 'left arrow',
@@ -285,6 +317,17 @@ export class World {
       });
     }
 
+    // Layers, back to front, with the default guaranteed. A world told nothing
+    // has exactly one, which is every world today — so an actor always has
+    // somewhere to be and nothing has to special-case its absence.
+    this.layerList = (init.layers ?? []).map(makeLayer);
+    if (!this.layerList.some(layer => layer.id === DEFAULT_LAYER_ID)) {
+      this.layerList.unshift(makeLayer({id: DEFAULT_LAYER_ID}));
+    }
+    this.layerList.forEach((layer, index) =>
+      this.layerIndex.set(layer.id, index),
+    );
+
     // The per-tick order is fixed by the active rules' steps.
     const steps: Step[] = [];
     for (const rule of rules) {
@@ -324,12 +367,38 @@ export class World {
   /** Whether a tick is running, which is what makes removal deferred. */
   private ticking = false;
 
-  addActor(actor: Actor): void {
+  /**
+   * Place an actor, in `layer` or in the default one.
+   *
+   * An unknown layer id is the default rather than an error: the id comes from
+   * generated code naming a `define layer` block, and a layer deleted while a
+   * `within layer` still names it should put its actors somewhere visible
+   * rather than take the world down. The same reasoning as a `use rule` naming
+   * a rule that has gone.
+   */
+  addActor(actor: Actor, layer: string = DEFAULT_LAYER_ID): void {
     // The back-reference an actor-scoped action or query reads to reach the
     // world (see `Actor.world`). Set here because placement is what makes it
     // true, and cleared by `clearActors` for the same reason.
     actor.world = this;
+    actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
     this.actorList.push(actor);
+  }
+
+  /** The layers, back to front. Index is depth; index 0 is the default. */
+  get layers(): readonly Layer[] {
+    return this.layerList;
+  }
+
+  /** A layer by id, or undefined. */
+  layer(id: string): Layer | undefined {
+    const index = this.layerIndex.get(id);
+    return index === undefined ? undefined : this.layerList[index];
+  }
+
+  /** How deep a layer draws — its position in the stack. */
+  depthOf(layer: string): number {
+    return this.layerIndex.get(layer) ?? 0;
   }
 
   /**
@@ -369,9 +438,10 @@ export class World {
     if (index >= 0) {
       this.actorList.splice(index, 1);
     }
-    // The back-reference `addActor` set; an actor that is nowhere should not
-    // be able to reach the world it used to be in.
+    // The back-references `addActor` set; an actor that is nowhere should not
+    // be able to reach the world it used to be in, nor claim a layer in it.
     actor.world = undefined;
+    actor.layer = undefined;
   }
 
   /** Whether an actor with `id` is already in this world. */
@@ -802,6 +872,7 @@ export class World {
         skew: skewProp ? actor.get(skewProp) : 0,
         frame: frameFor(actor),
         effects: actor.effects(),
+        layer: this.depthOf(actor.layer ?? DEFAULT_LAYER_ID),
       });
     }
     return states;
@@ -826,6 +897,7 @@ export class World {
     }
     for (const actor of this.actorList) {
       actor.world = undefined;
+      actor.layer = undefined;
     }
     this.actorList.length = 0;
   }
@@ -909,6 +981,10 @@ export class World {
         rules.map(rule => [rule.id, ruleContentHash(rule)]),
       ),
       actorIds: this.actorList.map(actor => actor.id).sort(),
+      layers: this.layerList.map(
+        layer =>
+          `${layer.id}:${layer.parallax.x},${layer.parallax.y}:${layer.fit}`,
+      ),
       // By actor id so the list is stable, but NOT sorted within an actor:
       // handlers for one event run in registration order, so a reorder is a
       // real change and should read as one.
