@@ -1787,6 +1787,50 @@ describe('world block generators', () => {
     expect(Object.keys(defs)).toEqual([]);
   });
 
+  it('generates an add/remove pair for each non-actor effect owner', () => {
+    const types = DOMAIN_BLOCKS.map(block => block.type);
+    for (const owner of ['world', 'background', 'foreground']) {
+      expect(types).toContain(`world_add_${owner}_effect`);
+      expect(types).toContain(`world_remove_${owner}_effect`);
+    }
+  });
+
+  it('keeps the ACTOR pair out of that factory, because it takes a socket', () => {
+    // The asymmetry is the point rather than an omission: an actor effect must
+    // be able to name the coin that was touched, or `any ⟨Coin⟩`, and a
+    // dropdown cannot say either.
+    const actorAdd = DOMAIN_BLOCKS.find(
+      block => block.type === 'world_add_effect',
+    ) as {args0: Array<{type: string; name: string}>};
+
+    expect(actorAdd.args0.some(arg => arg.type === 'input_value')).toBe(true);
+  });
+
+  it('names the layer for a slot effect, and does not for the world’s', () => {
+    // A world effect covers the whole screen and belongs to no layer; a slot's
+    // belongs to the layer its block is written in.
+    const defs: Record<string, string> = {};
+    const run = (type: string) =>
+      generatorFor(type)(
+        {getFieldValue: () => 'effects/ripple'} as never,
+        {definitions_: defs, valueToCode: () => ''} as never,
+        {} as never,
+      ) as string;
+
+    expect(run('world_add_foreground_effect')).toBe(
+      'world.addForegroundEffect("effects/ripple", Ripple, undefined, "main");\n',
+    );
+    expect(run('world_add_world_effect')).toBe(
+      'world.addEffect("effects/ripple", Ripple);\n',
+    );
+    expect(run('world_remove_foreground_effect')).toBe(
+      'world.removeForegroundEffect("effects/ripple", "main");\n',
+    );
+    expect(run('world_remove_world_effect')).toBe(
+      'world.removeEffect("effects/ripple");\n',
+    );
+  });
+
   it('the background blocks emit nothing before they are filled in', () => {
     // A "(none)" dropdown and an emptied socket both read as ''; emitting a
     // call with it would be a runtime error for a half-built block.

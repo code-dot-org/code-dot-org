@@ -2975,93 +2975,6 @@ const worldUseRule = defineBlock({
   },
 });
 
-/**
- * Play an effect across the whole viewport.
- *
- * The world's counterpart to `add effect … to <actor>`, and the same one-block
- * arrangement: an actor's effect filters that actor's own pixels before it is
- * composited, a world's filters everything the camera has drawn — the
- * underwater view from the spec, rather than a wobble on one fish. Same
- * `.effect` file either way.
- *
- * Chained under `define world` it gives the world an effect from the start;
- * inside an event handler or a rule step it turns one on mid-game — "when the
- * player falls in, go underwater". `WorldBuilder.addEffect` and
- * `World.addEffect` agree on name, arguments, and meaning, and both contexts
- * bind `world`, so one block covers both.
- *
- * There is no subject socket. The world is the subject.
- */
-const worldAddWorldEffect = defineBlock({
-  type: 'world_add_world_effect',
-  message0: 'add effect %1 to the world',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'EFFECT',
-      options: effectFileImportOptions,
-    },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  mutator: effectParamsMutator,
-  // `worldContext` still applies — it asks whether `world` is bound at all —
-  // but there is no builder/runtime guard, because `addEffect` is on both.
-  extensions: [
-    effectFileImportOptionsExtension,
-    worldContextExtension,
-    effectParamsInitExtension,
-    effectImportFieldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip:
-    'Play a visual effect over the whole view (authored in an .effect file). Adding one already playing changes nothing.',
-  generator: {
-    javascript(block, generator) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        return '';
-      }
-      addImport(
-        generator,
-        `mod:${path}`,
-        `import ${importVar(path)} from ${str(path)};`,
-      );
-      const values = effectParamValuesCode(block, generator);
-      return values
-        ? `world.addEffect(${str(path)}, ${importVar(path)}, ${values});\n`
-        : `world.addEffect(${str(path)}, ${importVar(path)});\n`;
-    },
-  },
-});
-
-/** Stop a viewport-wide effect. Removing one not playing is a no-op. */
-const worldRemoveWorldEffect = defineBlock({
-  type: 'world_remove_world_effect',
-  message0: 'remove effect %1 from the world',
-  args0: [{type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  // Runtime-only, for the same reason as `remove effect … from <actor>`.
-  extensions: [
-    effectFileOptionsExtension,
-    worldContextExtension,
-    runtimeWorldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip: 'Stop playing an effect over the whole view.',
-  generator: {
-    javascript(block) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        return '';
-      }
-      // No import: removing needs only the effect's identity, not its graph.
-      return `world.removeEffect(${str(path)});\n`;
-    },
-  },
-});
-
 // ── Backgrounds (BACKGROUNDS.md) ─────────────────────────────────────────────
 // A backdrop is the appearance half of an actor with none of the body: something
 // to draw behind everything, a colour behind that, and effects of its own. It is
@@ -3224,6 +3137,147 @@ const SLOT_BLOCKS = [
   }),
 ].flat();
 
+/**
+ * The add/remove effect pair for one non-actor owner, generated.
+ *
+ * An effect can land on the world, on a layer's background, or on its
+ * foreground, and those six blocks differ in a noun and a method name. They
+ * were hand-written, and the background pair was already a copy of the world
+ * pair; a foreground pair would have been a third. Generating them is what the
+ * rest of this file already does for every property, action, query, event and
+ * emit block.
+ *
+ * THE ACTOR PAIR IS NOT HERE, and that asymmetry is the point rather than an
+ * omission: an actor effect must be able to name the coin that was touched, a
+ * loop's actor, `any <Coin>` — so it takes a SOCKET, and a socket is a
+ * different block. Everything else is singular or named by its layer.
+ *
+ * The block TYPES are the names they already had, so nothing saved changes.
+ */
+const defineEffectBlocks = (owner: {
+  /** Block type infix: `world_add_<infix>_effect`. */
+  infix: string;
+  /** What it reads as: "add effect … to THE WORLD". */
+  noun: string;
+  /** The engine method's middle: `addEffect` / `addBackgroundEffect`. */
+  method: string;
+  /**
+   * Whether the call names a layer.
+   *
+   * The world's effect covers the whole screen and belongs to no layer; a
+   * slot's belongs to the layer the block is written in (blockly/layers).
+   */
+  layered: boolean;
+  /** The tooltip's description of what gets filtered. */
+  filters: string;
+}) => {
+  const add = defineBlock({
+    type: `world_add_${owner.infix}_effect`,
+    message0: `add effect %1 to ${owner.noun}`,
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'EFFECT',
+        options: effectFileImportOptions,
+      },
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    mutator: effectParamsMutator,
+    // `worldContext` still applies — it asks whether `world` is bound at all —
+    // but there is no builder/runtime guard, because `addEffect` and its
+    // siblings are on the builder and the live World alike.
+    extensions: [
+      effectFileImportOptionsExtension,
+      worldContextExtension,
+      effectParamsInitExtension,
+      effectImportFieldExtension,
+    ],
+    style: 'sprite_blocks',
+    tooltip:
+      `Play a visual effect on ${owner.filters} (authored in an .effect ` +
+      'file). Adding one already playing changes nothing.',
+    generator: {
+      javascript(block, generator) {
+        const path = block.getFieldValue('EFFECT');
+        if (!path) {
+          return '';
+        }
+        addImport(
+          generator,
+          `mod:${path}`,
+          `import ${importVar(path)} from ${str(path)};`,
+        );
+        const values = effectParamValuesCode(block, generator);
+        const layer = owner.layered ? `, ${str(layerOf(block))}` : '';
+        // `undefined` rather than nothing when a layer follows: the layer is
+        // the fourth argument, so the third cannot simply be left off.
+        const settings = values || (owner.layered ? 'undefined' : '');
+        return `world.add${owner.method}Effect(${str(path)}, ${importVar(path)}${
+          settings ? `, ${settings}` : ''
+        }${layer});\n`;
+      },
+    },
+  });
+
+  const remove = defineBlock({
+    type: `world_remove_${owner.infix}_effect`,
+    message0: `remove effect %1 from ${owner.noun}`,
+    args0: [
+      {type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions},
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    // Runtime-only, for the same reason as `remove effect … from <actor>`:
+    // un-declaring something described once has no meaning on a builder.
+    extensions: [
+      effectFileOptionsExtension,
+      worldContextExtension,
+      runtimeWorldExtension,
+    ],
+    style: 'sprite_blocks',
+    tooltip: `Stop playing an effect on ${owner.filters}.`,
+    generator: {
+      javascript(block) {
+        const path = block.getFieldValue('EFFECT');
+        if (!path) {
+          return '';
+        }
+        // No import: removing needs only the effect's identity, not its graph.
+        const layer = owner.layered ? `, ${str(layerOf(block))}` : '';
+        return `world.remove${owner.method}Effect(${str(path)}${layer});\n`;
+      },
+    },
+  });
+
+  return [add, remove];
+};
+
+/** The three non-actor owners, and the six blocks they generate. */
+const EFFECT_OWNER_BLOCKS = [
+  defineEffectBlocks({
+    infix: 'world',
+    noun: 'the world',
+    method: '',
+    layered: false,
+    filters: 'the whole view',
+  }),
+  defineEffectBlocks({
+    infix: 'background',
+    noun: 'the background',
+    method: 'Background',
+    layered: true,
+    filters: 'the background only — the actors in front of it are not affected',
+  }),
+  defineEffectBlocks({
+    infix: 'foreground',
+    noun: 'the foreground',
+    method: 'Foreground',
+    layered: true,
+    filters: 'the foreground only — the actors behind it are not affected',
+  }),
+].flat();
+
 const worldSetBackgroundColor = defineBlock({
   type: 'world_set_background_color',
   message0: 'set background color to %1',
@@ -3258,74 +3312,6 @@ registerValueShadows('world_set_background_color', [
     shadow: {type: 'colour_picker', fields: {COLOUR: DEFAULT_BACKDROP_COLOR}},
   },
 ]);
-
-const worldAddBackgroundEffect = defineBlock({
-  type: 'world_add_background_effect',
-  message0: 'add effect %1 to the background',
-  args0: [
-    {
-      type: 'field_dropdown',
-      name: 'EFFECT',
-      options: effectFileImportOptions,
-    },
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  mutator: effectParamsMutator,
-  extensions: [
-    effectFileImportOptionsExtension,
-    worldContextExtension,
-    effectParamsInitExtension,
-    effectImportFieldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip:
-    'Play a visual effect on the background only — the actors in front of it ' +
-    'are not affected. Use “add effect … to the world” for the whole view.',
-  generator: {
-    javascript(block, generator) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        return '';
-      }
-      addImport(
-        generator,
-        `mod:${path}`,
-        `import ${importVar(path)} from ${str(path)};`,
-      );
-      const values = effectParamValuesCode(block, generator);
-      return values
-        ? `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, ${values}, ${str(layerOf(block))});\n`
-        : `world.addBackgroundEffect(${str(path)}, ${importVar(path)}, undefined, ${str(layerOf(block))});\n`;
-    },
-  },
-});
-
-/** Stop an effect on the background. Removing one not playing is a no-op. */
-const worldRemoveBackgroundEffect = defineBlock({
-  type: 'world_remove_background_effect',
-  message0: 'remove effect %1 from the background',
-  args0: [{type: 'field_dropdown', name: 'EFFECT', options: effectFileOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  // Runtime-only, for the same reason as the world's and an actor's.
-  extensions: [
-    effectFileOptionsExtension,
-    worldContextExtension,
-    runtimeWorldExtension,
-  ],
-  style: 'sprite_blocks',
-  tooltip: 'Stop playing an effect on the background.',
-  generator: {
-    javascript(block) {
-      const path = block.getFieldValue('EFFECT');
-      if (!path) {
-        return '';
-      }
-      return `world.removeBackgroundEffect(${str(path)}, ${str(layerOf(block))});\n`;
-    },
-  },
-});
 
 /**
  * The domain blocks — pass to a workspace/provider `blocks` prop. The standard
@@ -3952,12 +3938,9 @@ export const DOMAIN_BLOCKS = [
   worldUseTrait,
   worldAddEffect,
   worldRemoveEffect,
-  worldAddWorldEffect,
-  worldRemoveWorldEffect,
+  ...EFFECT_OWNER_BLOCKS,
   ...SLOT_BLOCKS,
   worldSetBackgroundColor,
-  worldAddBackgroundEffect,
-  worldRemoveBackgroundEffect,
   worldSetPosition,
   worldSetSprite,
   worldPlayAnimation,
@@ -4114,6 +4097,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_set_background_color',
       'world_add_background_effect',
       'world_remove_background_effect',
+      'world_add_foreground_effect',
+      'world_remove_foreground_effect',
     ],
   },
   {
