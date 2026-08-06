@@ -3148,6 +3148,17 @@ const backgroundOptionsExtension = liveDropdown(
  * The block TYPES are the names they already had (`world_set_background`), so
  * nothing a learner has saved changes.
  */
+/**
+ * Engine methods the block FACTORIES generate calls to.
+ *
+ * Recorded rather than scanned for. A factory emits `world.set${slot.method}
+ * Repeat(…)`, and no amount of reading this file's source finds the name
+ * `setBackgroundRepeat` in it — which is how a missing `WorldBuilder` method
+ * survived the guard that exists to catch exactly that (`builderSurface.test`).
+ * The factory is the only thing that knows, so the factory says.
+ */
+export const GENERATED_WORLD_CALLS: string[] = [];
+
 const defineSlotBlocks = (slot: {
   /** The slot's name, in the block type and in the engine method. */
   id: SlotName;
@@ -3158,6 +3169,12 @@ const defineSlotBlocks = (slot: {
   /** Where the image is drawn, for the tooltip. */
   where: string;
 }) => {
+  GENERATED_WORLD_CALLS.push(
+    `set${slot.method}`,
+    `set${slot.method}Offset`,
+    `set${slot.method}Repeat`,
+  );
+
   const setImage = defineBlock({
     type: `world_set_${slot.id}`,
     message0: `set ${slot.label} to %1`,
@@ -3309,6 +3326,11 @@ const defineEffectBlocks = (owner: {
   /** The tooltip's description of what gets filtered. */
   filters: string;
 }) => {
+  GENERATED_WORLD_CALLS.push(
+    `add${owner.method}Effect`,
+    `remove${owner.method}Effect`,
+  );
+
   const add = defineBlock({
     type: `world_add_${owner.infix}_effect`,
     message0: `add effect %1 to ${owner.noun}`,

@@ -19,6 +19,7 @@ import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {describe, expect, it} from 'vitest';
 
+import {GENERATED_WORLD_CALLS} from '../../blockly/domainBlocks';
 import {World, WorldBuilder} from '../index';
 
 /**
@@ -53,7 +54,16 @@ const RUNTIME_ONLY: Record<string, string> = {
   removeActor: 'nothing is placed to remove',
 };
 
-/** Every `world.<name>(` the block generators can emit. */
+/**
+ * Every `world.<name>(` the block generators can emit.
+ *
+ * Two sources, because one is not enough. The regex finds the calls written
+ * out literally; the FACTORIES cannot be found that way at all, since they emit
+ * `world.set${slot.method}Repeat(…)` and the name never appears in the source.
+ * Scanning alone reported a clean surface while `setBackgroundRepeat` was
+ * missing from the builder — so the factories declare what they call, and both
+ * sets are checked.
+ */
 const called = (): string[] => {
   // From the package root, which is vitest's cwd — `import.meta.url` is a
   // transformed module URL here, not a file path.
@@ -64,6 +74,9 @@ const called = (): string[] => {
   const names = new Set<string>();
   for (const match of source.matchAll(/\bworld\.(\w+)\(/g)) {
     names.add(match[1]);
+  }
+  for (const name of GENERATED_WORLD_CALLS) {
+    names.add(name);
   }
   return [...names].sort();
 };
@@ -77,9 +90,11 @@ describe('the `world` surface the blocks generate against', () => {
     // every assertion below, for every possible engine.
     const names = called();
 
-    expect(names.length).toBeGreaterThanOrEqual(15);
+    expect(names.length).toBeGreaterThanOrEqual(25);
     expect(names).toContain('addActor');
     expect(names).toContain('setBackgroundColor');
+    // A factory-generated one, which the regex alone cannot see.
+    expect(names).toContain('setBackgroundRepeat');
   });
 
   it('exists on the WorldBuilder unless it is runtime-only', () => {
@@ -96,6 +111,27 @@ describe('the `world` surface the blocks generate against', () => {
     );
 
     expect(missing).toEqual([]);
+  });
+
+  it('sees through the block FACTORIES, which no regex can', () => {
+    // The hole this file had. A factory emits `world.set${slot.method}Repeat`,
+    // so the name `setBackgroundRepeat` appears nowhere in the source, and the
+    // scan reported a clean surface while seven builder methods were missing.
+    // The factories declare what they call; this pins that they still do.
+    const names = called();
+
+    for (const name of [
+      'setBackground',
+      'setBackgroundOffset',
+      'setBackgroundRepeat',
+      'setForeground',
+      'setForegroundOffset',
+      'setForegroundRepeat',
+      'addLayerEffect',
+      'removeForegroundEffect',
+    ]) {
+      expect(names, name).toContain(name);
+    }
   });
 
   it('does not excuse a method that is actually on both', () => {
