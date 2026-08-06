@@ -399,14 +399,42 @@ describe('domain block generators', () => {
     expect(run('follows')).toBe('world.setLayerFit(false, "main");\n');
   });
 
-  it('world_move_camera points the view at a place', () => {
+  it('world_move_camera points a named camera at a place', () => {
     const code = generatorFor('world_move_camera')(
-      {getFieldValue: () => null} as never,
+      {getFieldValue: () => 'main', workspace: {}} as never,
       {valueToCode: () => 'new WorldLab.Vector(64, 0)'} as never,
       {} as never,
     ) as string;
 
-    expect(code).toBe('world.setCameraPosition(new WorldLab.Vector(64, 0));\n');
+    expect(code).toBe(
+      'world.setCameraPosition(new WorldLab.Vector(64, 0), "main");\n',
+    );
+  });
+
+  it('world_use_camera cuts the view to another camera', () => {
+    // Which camera draws is a value, not structure: it moves a transform and
+    // rebuilds nothing, so a game may cut mid-play without a restart.
+    const code = generatorFor('world_use_camera')(
+      {getFieldValue: () => 'main', workspace: {}} as never,
+      {} as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe('world.setActiveCamera("main");\n');
+  });
+
+  it('world_define_camera declares one by its own block id', () => {
+    // By block id, like a layer and a world's own actors — renaming the camera
+    // then breaks nothing that names it.
+    const code = generatorFor('world_define_camera')(
+      {id: 'cam1', getFieldValue: () => 'Overview'} as never,
+      {} as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe(
+      'world.defineCamera({id: "camera_cam1", name: "Overview"});\n',
+    );
   });
 
   it('world_all_actors_in_layer narrows the source to one layer', () => {

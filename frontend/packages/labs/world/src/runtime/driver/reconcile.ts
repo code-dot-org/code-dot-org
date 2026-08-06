@@ -40,6 +40,8 @@ interface ReconcilableWorld {
     cameras: string[];
     /** Where each looks from — a value, written every tick by a follow step. */
     cameraPositions: Record<string, {x: number; y: number}>;
+    /** Which one the view uses — a value: cutting between them is not a reload. */
+    activeCamera: string;
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
     /** Which effects are in play, and what carries each (effectIds.ts). */
@@ -69,6 +71,7 @@ interface ReconcilableWorld {
   setBackground(sprite: string | undefined, layer?: string): unknown;
   setForeground(sprite: string | undefined, layer?: string): unknown;
   setCameraPosition(position: {x: number; y: number}, id?: string): unknown;
+  setActiveCamera(id: string): unknown;
   setLayerParallax(parallax: {x: number; y: number}, layer?: string): unknown;
   setLayerFit(fit: boolean, layer?: string): unknown;
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
@@ -147,6 +150,7 @@ export function reconcile(
   // structural and live in `effectIds`.
   const backdropChanged =
     stable(previous.cameraPositions) !== stable(snapshot.cameraPositions) ||
+    previous.activeCamera !== snapshot.activeCamera ||
     stable(previous.layerMotion) !== stable(snapshot.layerMotion) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
     stable(previous.foregrounds) !== stable(snapshot.foregrounds) ||
@@ -221,6 +225,7 @@ export function reconcile(
     for (const [id, position] of Object.entries(snapshot.cameraPositions)) {
       running.setCameraPosition(position, id);
     }
+    running.setActiveCamera(snapshot.activeCamera);
     for (const [id, motion] of Object.entries(snapshot.layerMotion)) {
       running.setLayerParallax(motion.parallax, id);
       running.setLayerFit(motion.fit, id);
