@@ -21,7 +21,7 @@ import {
   inputRule,
   motionRule,
 } from './rules/stock';
-import {TILE_SIZE} from './runtime/viewport';
+import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
 
 /**
  * The world the game starts in — the driver's compile + run entry point
@@ -165,6 +165,10 @@ const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 const LEVEL1_MAP = JSON.stringify(
   {
     type: 'map',
+    // Said out loud rather than left to the default, so the shipped map is a
+    // worked example of the field: how many tiles across and down (the map
+    // editor's Width/Height), against `tile`, which is how big ONE is.
+    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
     actors: [
       place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
