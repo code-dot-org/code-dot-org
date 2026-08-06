@@ -33,7 +33,7 @@ export interface AnalyticsRuntimeConfig {
   analytics?: {
     provider?: 'statsig' | 'none';
     enabled?: boolean;
-    statsig?: {clientKey: string};
+    statsig?: {clientKey: string; autoCapture?: boolean};
     user?: {userId: string; userType?: string};
   };
 }

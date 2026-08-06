@@ -21,12 +21,21 @@ module StatsigAnalyticsHelper
   # A signed-in page seeds the identity so the first events carry it. The
   # frontend treats this as optional and identifies over its API when absent,
   # so a signed-out page, a cached layout, or a static shell simply omits it.
+  #
+  # `autoCapture` reuses the same path gate that decides whether the legacy
+  # bundle loads, read from the view's implicit `request`, so the path list has
+  # one owner. It rides under `statsig` because autocapture is a capability of
+  # that provider rather than something the provider-agnostic layer knows about.
   def analytics_config
     enabled = DCDO.get('statsig-enabled', true)
     client_key = CDO.safe_statsig_api_client_key
     return {provider: 'none', enabled: enabled} if client_key.blank?
 
-    config = {provider: 'statsig', enabled: enabled, statsig: {clientKey: client_key}}
+    config = {
+      provider: 'statsig',
+      enabled: enabled,
+      statsig: {clientKey: client_key, autoCapture: load_web_analytics?(request)},
+    }
     return config unless current_user
 
     config.merge(user: {userId: current_user.id.to_s, userType: current_user.user_type})

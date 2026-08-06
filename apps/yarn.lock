@@ -3944,6 +3944,7 @@ __metadata:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
     "@statsig/js-client": ^3.25.5
+    "@statsig/web-analytics": ^3.25.5
     "@tanstack/react-query": "*"
     js-cookie: ^3.0.5
     ky: ^1.14.3

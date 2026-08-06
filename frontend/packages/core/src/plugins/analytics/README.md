@@ -96,7 +96,7 @@ Rails injects the config through the `<meta name="app-config">` tag:
   "analytics": {
     "provider": "statsig",
     "enabled": true,
-    "statsig": {"clientKey": "client-..."},
+    "statsig": {"clientKey": "client-...", "autoCapture": true},
     "user": {"userId": "42", "userType": "teacher"}
   }
 }
@@ -120,8 +120,46 @@ the chef-managed test server do — and a non-transmitting environment is served
 `provider: 'none'` at runtime through a dynamic-config feature flag, so a page
 that transmitted on the last load may boot silent on the next.
 
+`statsig.autoCapture` turns on web-analytics autocapture; see below. It is
+nested under `statsig` because autocapture is a capability of that provider,
+not something the provider-agnostic layer knows about.
+
 The Statsig adapter loads through a dynamic import, so the SDK becomes a
 separate chunk rather than landing in the initial core payload.
+
+## Autocapture
+
+With `statsig.autoCapture` set, the adapter runs Statsig's web-analytics
+autocapture, which instruments the page and emits events nobody calls
+`sendEvent` for.
+
+**The gate is server-side.** Rails decides per request, from the same path list
+that decides whether the legacy autocapture bundle loads, so the two stacks
+cover exactly the same pages and the list has one owner. There is no
+browser-side switch and no way to ask for autocapture from feature code.
+
+**Nine of the SDK's eleven events ship.** `auto_capture::performance` and
+`auto_capture::page_view_end` are filtered out, matching legacy. The rest —
+`click`, `copy`, `dead_click`, `error`, `form_submit`, `page_view`,
+`rage_click`, `session_start`, `web_vitals` — are sent. Console capture
+(`statsig::log_line`) is a separate SDK option, off by default, and is left
+off.
+
+**One client, unlike legacy.** The legacy reporter builds a _second_
+`StatsigClient` on the same SDK key to carry autocapture. Two clients sharing a
+key collide in the SDK's client registry and its shared failed-logs store, and
+the SDK warns about it. This adapter binds autocapture to the client it already
+built: same events, one fewer bug.
+
+The package is pulled in through a dynamic import inside the flag's
+conditional, so it lands in a chunk of its own and a page without autocapture
+never fetches it. Autocapture is started right after the client is
+constructed, without waiting for `initializeAsync`; the client queues whatever
+autocapture emits in the meantime.
+
+Nothing extra gates autocapture: it rides the client, so `enabled: false`, an
+unconfigured provider, and a CMP that never settles each silence it for the
+same reason they silence everything else — no client is ever built.
 
 ## Consent
 

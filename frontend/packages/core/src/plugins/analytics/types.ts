@@ -3,7 +3,8 @@ export interface AnalyticsConfig {
   provider: 'statsig' | 'none';
   /** Runtime feature flag. Anything but an explicit `false` leaves analytics on. */
   enabled?: boolean;
-  statsig?: {clientKey: string};
+  /** `autoCapture` turns on the provider's web-analytics event capture. */
+  statsig?: {clientKey: string; autoCapture?: boolean};
   /** Identity the page was rendered for, when the server knows one. */
   user?: {userId: string; userType?: string};
 }
