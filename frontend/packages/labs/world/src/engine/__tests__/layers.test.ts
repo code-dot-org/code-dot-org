@@ -277,6 +277,61 @@ describe('sliding a slot', () => {
   });
 });
 
+describe('an effect on a layer itself', () => {
+  // The scope between a slot's and the world's: a slot effect filters one
+  // image, a world effect filters the whole screen after everything is
+  // composited, and this filters one layer's worth of it.
+  const built = () =>
+    new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'game'})
+      .defineLayer({id: 'hud'})
+      .instantiate();
+
+  it('is carried by the layer, and by no other', () => {
+    const world = built();
+    world.addLayerEffect('effects/blur', RIPPLE, undefined, 'game');
+
+    // By id, not by position: a world that names no `main` gets one prepended,
+    // so the declared layers are not the first entries.
+    const of = (id: string) =>
+      world.layerSnapshot().find(layer => layer.id === id)!.effects;
+    expect(of('game').map(effect => effect.path)).toEqual(['effects/blur']);
+    expect(of('hud')).toEqual([]);
+  });
+
+  it('is retuned rather than stacked, like every other owner', () => {
+    const world = built();
+    world.addLayerEffect('effects/blur', RIPPLE, {amount: 1}, 'game');
+    world.addLayerEffect('effects/blur', RIPPLE, {amount: 4}, 'game');
+
+    const game = world.layerSnapshot().find(layer => layer.id === 'game')!;
+    expect(game.effects).toHaveLength(1);
+    expect(game.effects[0].values).toEqual({amount: 4});
+  });
+
+  it('travels under a key of its own, beside the slots’', () => {
+    // Three carriers on one layer — the layer, its background, its foreground —
+    // so filtering the layer must not retune its sky.
+    const world = built();
+    world.addLayerEffect('effects/blur', RIPPLE, undefined, 'game');
+    world.addBackgroundEffect('effects/blur', RIPPLE, undefined, 'game');
+
+    const {effectIds} = world.snapshot();
+    expect(effectIds).toContain('["layer:game","effects/blur"]');
+    expect(effectIds).toContain('["backdrop:game","effects/blur"]');
+  });
+
+  it('stops when it is removed', () => {
+    const world = built();
+    world.addLayerEffect('effects/blur', RIPPLE, undefined, 'game');
+    world.removeLayerEffect('effects/blur', 'game');
+
+    expect(
+      world.layerSnapshot().find(layer => layer.id === 'game')!.effects,
+    ).toEqual([]);
+  });
+});
+
 describe('leaving a layer', () => {
   it('is what removal means, along with leaving the world', () => {
     const built = world();

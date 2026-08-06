@@ -19,25 +19,44 @@ import {
 } from '../layers';
 
 /**
- * A block with a parent chain, innermost first — the same shape
- * `actorContext.test` builds, plus the fields a layer block carries.
+ * A block chain, innermost first.
+ *
+ * Two ways a block can sit under another, and telling them apart is the whole
+ * point of this helper: INSIDE a `do` mouth, or chained BELOW in the same
+ * stack. Blockly makes the second a parent relationship too — `getParent()` on
+ * a statement returns the statement above it — so a block written after a
+ * `define layer` has that layer as its parent while plainly sitting outside it.
+ * `getSurroundParent()` skips those siblings, and that is what `layerOf` walks.
+ *
+ * Mark an entry `after: true` to say it is chained below its superior rather
+ * than nested inside it.
  */
 function chain(
-  ...blocks: Array<string | {type: string; id?: string; layer?: string}>
+  ...blocks: Array<
+    string | {type: string; id?: string; layer?: string; after?: boolean}
+  >
 ): Blockly.Block {
   let parent: Blockly.Block | null = null;
+  let parentSurround: Blockly.Block | null = null;
   for (const entry of [...blocks].reverse()) {
     const spec = typeof entry === 'string' ? {type: entry} : entry;
-    const above = parent;
+    const superior = parent;
+    // Chained below its superior ⇒ whatever surrounds the superior surrounds
+    // this too. Nested inside it ⇒ the superior is what surrounds it.
+    const surround: Blockly.Block | null = spec.after
+      ? parentSurround
+      : superior;
     parent = {
       type: spec.type,
       id: spec.id ?? spec.type,
-      getParent: () => above,
+      getParent: () => superior,
+      getSurroundParent: () => surround,
       getFieldValue: (name: string) =>
         name === 'LAYER' ? (spec.layer ?? null) : null,
       // `within layer` looks its target up to see whether it still exists.
       workspace: {getBlockById: (id: string) => (id ? {id} : null)},
     } as unknown as Blockly.Block;
+    parentSurround = surround;
   }
   return parent as Blockly.Block;
 }
@@ -89,6 +108,32 @@ describe('the layer a placement lands in', () => {
     );
 
     expect(layerOf(block)).toBe(layerId('hud'));
+  });
+
+  it('is NOT the layer a block merely sits BELOW', () => {
+    // The bug this helper exists to catch. `add actor` chained under a
+    // `define layer` — outside its `do` mouth, plainly after it — was landing
+    // in that layer, because Blockly makes the block above a block its parent.
+    const block = chain(
+      {type: 'world_add_actor', after: true},
+      {type: 'world_define_layer', id: 'sky'},
+      'world_world',
+    );
+
+    expect(layerOf(block)).toBe(DEFAULT_LAYER_ID);
+  });
+
+  it('is the enclosing layer when one sits below another inside it', () => {
+    // Chained after an inner layer but still inside an outer one: the sibling
+    // above is skipped, the enclosing layer is not.
+    const block = chain(
+      {type: 'world_add_actor', after: true},
+      {type: 'world_define_layer', id: 'inner'},
+      {type: 'world_define_layer', id: 'outer'},
+      'world_world',
+    );
+
+    expect(layerOf(block)).toBe(layerId('outer'));
   });
 
   it('is the default when a `within layer` names a deleted definition', () => {

@@ -92,13 +92,24 @@ export const layerOptions = (
  * invent an answer for the second kind, forever (core/Layer).
  */
 export const layerOf = (block: Blockly.Block): string => {
+  // SURROUND parent, not parent. In Blockly a block chained BELOW another is
+  // that block's child — `getParent()` on a statement returns the statement
+  // above it in the same stack. Walking that chain put every block written
+  // after a `define layer` into it, however plainly it sat outside the `do`
+  // mouth. `getSurroundParent` skips the siblings above and answers with what
+  // actually encloses the block, which is the question containment asks.
+  //
+  // Only `layerOf` wants this. `inBuilderContext` and `inWorldContext` walk
+  // ordinary parents on purpose: `define world` has no `do` mouth — its body
+  // chains below it — so for those, being next-connected IS being inside.
+  //
   // Optional calls, like `actorTarget`'s `getInputTargetBlock?.`: a generator is
   // also run against a plain object in tests, and a block with no parent chain
   // is a block in no layer, which is the default.
   for (
-    let parent = block.getParent?.() ?? null;
+    let parent = block.getSurroundParent?.() ?? null;
     parent;
-    parent = parent.getParent?.() ?? null
+    parent = parent.getSurroundParent?.() ?? null
   ) {
     if (parent.type === DEFINE_LAYER) {
       return layerId(parent.id);

@@ -111,6 +111,15 @@ export interface Layer {
   /** Drawn behind this layer's actors. Mutable: a handler may change it. */
   readonly background: LayerSlot;
   /**
+   * Effects filtering everything this layer draws — its actors and both its
+   * images, together.
+   *
+   * Distinct from a slot's effects, which filter one image, and from the
+   * world's, which filter the whole screen after every layer is composited.
+   * This is the one in between: blur the game and leave the HUD sharp.
+   */
+  readonly effects: AppliedEffectSpec[];
+  /**
    * Drawn in front of this layer's actors.
    *
    * The same object as the background and drawn by the same code — fog over the
@@ -128,6 +137,7 @@ export function makeLayer(init: LayerInit): Layer {
     name: init.name ?? init.id,
     parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
     fit: init.fit ?? false,
+    effects: [],
     background: emptySlot(),
     foreground: emptySlot(),
   };

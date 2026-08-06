@@ -79,6 +79,8 @@ export class WorldBuilder {
   >();
   /** The one colour behind everything, if it was set before the world existed. */
   private clearColor: Rgba | undefined;
+  /** Effects on the layers themselves, by layer id. */
+  private readonly layerEffects = new Map<string, AppliedEffectSpec[]>();
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
@@ -204,6 +206,41 @@ export class WorldBuilder {
       return this;
     }
     this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /** Play an effect on a whole layer. See {@link World.addLayerEffect}. */
+  addLayerEffect(
+    path: string,
+    document: EffectDocument,
+    values?: AppliedEffectSpec['values'],
+    layer = DEFAULT_LAYER_ID,
+  ): this {
+    if (this.built) {
+      this.built.addLayerEffect(path, document, values, layer);
+      return this;
+    }
+    const effects = this.layerEffects.get(layer) ?? [];
+    this.layerEffects.set(layer, effects);
+    // Idempotent by path, matching the live World — see World.addEffect.
+    if (effects.some(effect => effect.path === path)) {
+      return this;
+    }
+    effects.push(values ? {path, document, values} : {path, document});
+    return this;
+  }
+
+  /** Stop an effect on a whole layer. Removing one not playing is a no-op. */
+  removeLayerEffect(path: string, layer = DEFAULT_LAYER_ID): this {
+    if (this.built) {
+      this.built.removeLayerEffect(path, layer);
+      return this;
+    }
+    const effects = this.layerEffects.get(layer) ?? [];
+    const index = effects.findIndex(effect => effect.path === path);
+    if (index >= 0) {
+      effects.splice(index, 1);
+    }
     return this;
   }
 
@@ -492,6 +529,9 @@ export class WorldBuilder {
       ),
       foregrounds: Object.fromEntries(
         [...this.foregrounds].map(([id, slot]) => [id, {...slot}]),
+      ),
+      layerEffects: Object.fromEntries(
+        [...this.layerEffects].map(([id, effects]) => [id, [...effects]]),
       ),
       layers: this.layers.map(layer => ({...layer})),
     });
