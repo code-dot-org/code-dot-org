@@ -86,29 +86,25 @@ reading `script[data-lessondeepdivedata]`. Rebuilding it from
 `LessonsController#tutor` in `rails runner` is easy to get subtly wrong —
 `unitLabel` comes from the unit-group context, not the lesson.
 
-### Matching how Studio renders
+### Looking like Studio
 
-`src/dev/productionResets.css` restates the global CSS Rails would have loaded
-(Bootstrap 3 plus `application.css`), and `src/dev/productionFonts.css` points
-at the same Geist faces Rails serves out of `shared/fonts`. Without them the
-feature renders at browser defaults: Times New Roman, no border-box, and none
-of the global `button` skin its own SCSS only partly overrides.
+Studio renders these components inside a Rails page that loads Bootstrap 3 and
+application.css. With no globals at all the shell falls back to browser
+defaults — Times New Roman, content-box, unstyled buttons — so
+`src/dev/productionResets.css` carries the rules from those sheets that reach
+this feature, `index.html` declares the `data-brand` that selects a palette in
+`component-library-styles/brandOverrides.css`, and webfonts come from
+`@code-dot-org/fonts`.
 
-Both files are derived, not authored. To refresh them against a running
-dashboard, take `/assets/application.css` and pull out every rule whose
-selector list is only bare type selectors (plus `*`, `html`, `body`), outside
-`@media print`, in source order — the cascade only resolves the same way if the
-order does — and every `@font-face` for Geist, rewriting `/fonts/…` to a path
-under `shared/fonts`.
+That file is a hand-picked subset, not a transcript. Measured against the real
+`/s/<unit>/lessons/<n>/tutor` page signed in as a student, it puts all 11 boxes
+on identical DOM, geometry and computed styles. Screenshots are close but not
+identical: the packaged Geist is a different subset build from the one Rails
+serves out of `shared/fonts`, so glyph edges rasterize a shade differently.
+Layout is right; pixels are not maintained.
 
-`index.html` reproduces the DOM the Rails layout puts above the feature
-(`.wrapper > main#main_content > .full_container`) and the `data-brand`
-attribute, which selects a whole palette in
-`component-library-styles/brandOverrides.css`.
+Markup added later can pick up a global rule the subset does not carry. If
+something looks off here, check it in Studio before chasing it.
 
-Measured against a page built from the real `application.css`, `code-studio.css`
-and the real `js/lessons/tutor.js` webpack entry, fed the same payload and the
-same API responses, all 11 boxes match on DOM shape, text, geometry and 39
-computed style properties, and every screenshot is bit-identical at 1280×900.
-The chat panel is outside that comparison: `AiTutorChat` is a stub and cannot
-match by construction.
+The chat panel is further out still: `AiTutorChat` is a stub and does not
+resemble the real component at all.

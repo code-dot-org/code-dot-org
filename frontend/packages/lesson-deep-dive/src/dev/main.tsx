@@ -11,6 +11,10 @@ import './nodeShims';
 import {StrictMode, type ComponentProps} from 'react';
 import {Provider} from 'react-redux';
 
+// Studio serves Geist and Noto Sans from application.css @font-face; these are
+// the same families, packaged.
+import '@code-dot-org/fonts/brands/code.org/index.css';
+
 import {injectFontAwesome} from '@code-dot-org/fonts';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
@@ -19,7 +23,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {LESSON_DEEP_DIVE_DATA} from './fixtures';
 import {registerLessonDeepDiveMocks} from './mocks';
 
-import './productionFonts.css';
 import './productionResets.css';
 
 type ProviderStore = ComponentProps<typeof Provider>['store'];
