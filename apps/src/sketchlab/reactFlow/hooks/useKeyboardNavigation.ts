@@ -650,8 +650,13 @@ export function useKeyboardNavigation({
       const anchorIds = focusedEdge
         ? getStandaloneLineAnchorIds(focusedEdge, getNode)
         : null;
-      if (anchorIds?.every(id => multiSelectedNodeIds.has(id))) {
-        if (!moveSelectionByDelta(event, deltaX, deltaY)) return false;
+      // The line belongs to the multi-selection, so move the whole selection.
+      // A selection of just this line yields no ids and falls through to the
+      // single-line move below.
+      if (
+        anchorIds?.every(id => multiSelectedNodeIds.has(id)) &&
+        moveSelectionByDelta(event, deltaX, deltaY)
+      ) {
         // Moving the anchors can drop focus from the edge wrapper, so keep the
         // window fallback pointed at this line and put focus back on it.
         keyboardMovingEdgeRef.current = edgeId;
