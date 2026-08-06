@@ -57,10 +57,40 @@ export interface LayerSlot {
   sprite?: string;
   /** Effects filtering this image's own pixels — not the whole camera. */
   effects: AppliedEffectSpec[];
+  /**
+   * Where the image sits, in world pixels — motion the author owns.
+   *
+   * The other term in `camera position (*) parallax + offset`. A parallax
+   * factor ties an image to the camera and to nothing else, so a background on
+   * a still camera never moves however the factor is set; drifting clouds, a
+   * scrolling starfield and a conveyor texture are all motion with no camera
+   * involved, and none of them is expressible as a multiplier. Neither term
+   * says what the other says.
+   *
+   * Written every tick by a drifting layer, so it is a VALUE in the snapshot
+   * rather than structure — the line `effectValues` already draws.
+   */
+  offset: Vector;
+  /**
+   * Whether the image tiles instead of stretching to fill the surface.
+   *
+   * Pairs with {@link offset}: a stretched image slid sideways leaves a gap at
+   * the edge, a repeating one wraps. Both are legal — stretch plus offset is a
+   * mistake worth warning about rather than forbidding — but repeat plus offset
+   * is the combination that means something.
+   *
+   * Stretch is the default, because one sky filling the view is the common case
+   * and stretching is right for it.
+   */
+  repeat: boolean;
 }
 
-/** An empty slot: nothing drawn, nothing filtering it. */
-export const emptySlot = (): LayerSlot => ({effects: []});
+/** An empty slot: nothing drawn, nothing filtering it, sitting where it is. */
+export const emptySlot = (): LayerSlot => ({
+  effects: [],
+  offset: new Vector(0, 0),
+  repeat: false,
+});
 
 /** What a layer is asked for when it is declared. */
 export interface LayerInit {

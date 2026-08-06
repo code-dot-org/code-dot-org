@@ -115,7 +115,12 @@ describe('a world backdrop', () => {
 
     const snapshot = w.snapshot();
     expect(snapshot.backdrops).toEqual([
-      {layer: DEFAULT_LAYER_ID, sprite: 'cave.png'},
+      {
+        layer: DEFAULT_LAYER_ID,
+        sprite: 'cave.png',
+        offset: {x: 0, y: 0},
+        repeat: false,
+      },
     ]);
     // The colour is the world's, so it travels on its own.
     expect(snapshot.clearColor).toEqual(rgba('#88ccff'));
@@ -186,7 +191,7 @@ describe('a described backdrop', () => {
     builder.setBackgroundColor('#88ccff');
     builder.addBackgroundEffect('effects/ripple', doc('a'));
 
-    expect(built.backdropSnapshot()[0]).toEqual({
+    expect(built.backdropSnapshot()[0]).toMatchObject({
       sprite: 'cave.png',
       effects: [{path: 'effects/ripple', document: doc('a')}],
     });

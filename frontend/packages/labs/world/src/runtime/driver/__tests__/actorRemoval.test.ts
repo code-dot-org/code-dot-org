@@ -102,8 +102,12 @@ const world = (actors: string[]) => {
       setInput: () => {},
       tick: () => {},
       effects: () => [],
-      backdropSnapshot: () => [{effects: []}],
-      foregroundSnapshot: () => [{effects: []}],
+      backdropSnapshot: () => [
+        {effects: [], offset: {x: 0, y: 0}, repeat: false},
+      ],
+      foregroundSnapshot: () => [
+        {effects: [], offset: {x: 0, y: 0}, repeat: false},
+      ],
       backdropColor: () => [0, 0, 0, 1],
       renderSnapshot: () =>
         live.map((id, index) => ({

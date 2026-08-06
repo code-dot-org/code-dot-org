@@ -84,6 +84,14 @@ function cellFrame(
   return name;
 }
 
+/**
+ * A drawn image slot: stretched (an Image) or tiled (a TileSprite).
+ *
+ * Two objects rather than one with a flag, because Phaser draws them
+ * differently — only a TileSprite wraps its texture.
+ */
+type SlotObject = Phaser.GameObjects.Image | Phaser.GameObjects.TileSprite;
+
 /** A drawn actor — a textured image or the fallback rectangle. */
 type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
 
@@ -162,10 +170,10 @@ export class PhaserBinding {
     const objects = new Map<Actor, GameObject>();
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
-    const backdrops: Array<Phaser.GameObjects.Image | undefined> = [];
+    const backdrops: Array<SlotObject | undefined> = [];
     // The foregrounds' own images. A separate cache because they are separate
     // objects at separate depths; nothing either holds concerns the other.
-    const foregrounds: Array<Phaser.GameObjects.Image | undefined> = [];
+    const foregrounds: Array<SlotObject | undefined> = [];
     // Every key currently held (by our name, `engine/core/keys`); fed to the
     // engine each frame. `update` reads it; the listeners below keep it current.
     const downKeys = new Set<string>();
@@ -280,10 +288,19 @@ export class PhaserBinding {
      * starts, but not for one set during it — that image would be made after the
      * actors' and would cover them.
      */
+    /**
+     * Draw one list of image slots — the backgrounds, or the foregrounds.
+     *
+     * A slot is an Image when it stretches and a TileSprite when it repeats,
+     * because those are two different Phaser objects and only the second can
+     * wrap. Toggling `repeat` therefore rebuilds the object; that is a rare
+     * authoring act, and the alternative is a stretched image sliding off its
+     * own edge.
+     */
     const syncSlots = (
       scene: Phaser.Scene,
       slots: readonly BackdropState[],
-      images: Array<Phaser.GameObjects.Image | undefined>,
+      images: Array<SlotObject | undefined>,
       depthOf: (layer: number) => number,
     ) => {
       slots.forEach((slot, index) => {
@@ -295,13 +312,44 @@ export class PhaserBinding {
           images[index] = undefined;
           return;
         }
+        const wantsTile = slot.repeat;
+        const isTile = image instanceof Phaser.GameObjects.TileSprite;
+        if (image && wantsTile !== isTile) {
+          effectRegistry.release(image);
+          image.destroy();
+          image = undefined;
+        }
         if (!image) {
-          image = scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
+          image = wantsTile
+            ? scene.add.tileSprite(
+                GAME_WIDTH / 2,
+                GAME_HEIGHT / 2,
+                GAME_WIDTH,
+                GAME_HEIGHT,
+                sprite,
+              )
+            : scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
           image.setDepth(depthOf(index));
           images[index] = image;
         }
         image.setTexture(sprite);
-        image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
+        if (image instanceof Phaser.GameObjects.TileSprite) {
+          // A tiled slot stays put and scrolls its texture under itself, so it
+          // covers the surface at every offset. Negated so a rising offset
+          // moves the picture the way a rising position moves an actor.
+          image.setSize(GAME_WIDTH, GAME_HEIGHT);
+          image.setPosition(GAME_WIDTH / 2, GAME_HEIGHT / 2);
+          image.setTilePosition(-slot.offset.x, -slot.offset.y);
+        } else {
+          // A stretched slot moves bodily, which is why an offset on one leaves
+          // a gap at the edge — legal, and almost always a sign that `repeat`
+          // was wanted.
+          image.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
+          image.setPosition(
+            GAME_WIDTH / 2 + slot.offset.x,
+            GAME_HEIGHT / 2 + slot.offset.y,
+          );
+        }
         // A slot's effects filter its own pixels — unlike a world effect,
         // which filters the camera and so covers the actors too.
         effectRegistry.reconcile(scene, image, slot.effects);
