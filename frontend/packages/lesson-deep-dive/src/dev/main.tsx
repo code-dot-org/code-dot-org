@@ -17,7 +17,7 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
 import '@code-dot-org/component-library-styles/brandOverrides.css';
 
-import {CssBaseline, ThemeProvider} from '@mui/material';
+import {CssBaseline, GlobalStyles, ThemeProvider} from '@mui/material';
 import {StrictMode, type ComponentProps} from 'react';
 import {Provider} from 'react-redux';
 
@@ -29,6 +29,18 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import {LESSON_DEEP_DIVE_DATA} from './fixtures';
 import {registerLessonDeepDiveMocks} from './mocks';
+
+// The feature is height: calc(100vh - 50px), sizing itself to sit under
+// Studio's 50px header. Reserve that band rather than letting the feature
+// float in it, so its own arithmetic comes out right here too; paint it the
+// colour of .container in lesson-deep-dive-container.module.scss so the strip
+// does not read as a gap.
+//
+// Through GlobalStyles because CssBaseline writes body styles at render time
+// and beats a plain stylesheet.
+const pageFrame = (
+  <GlobalStyles styles={{body: {background: '#292f36', paddingTop: '50px'}}} />
+);
 
 type ProviderStore = ComponentProps<typeof Provider>['store'];
 
@@ -67,6 +79,7 @@ async function boot(): Promise<void> {
     <StrictMode>
       <ThemeProvider theme={getMuiThemeForBrand('codeai-next')}>
         <CssBaseline />
+        {pageFrame}
         <Provider store={createDevStore()}>
           <LessonDeepDiveContainer lessonDeepDiveData={LESSON_DEEP_DIVE_DATA} />
         </Provider>
