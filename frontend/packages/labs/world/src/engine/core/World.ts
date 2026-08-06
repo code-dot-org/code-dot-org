@@ -255,6 +255,18 @@ class ActorCollection {
     return this.list.filter(actor => actor.type === type);
   }
 
+  /**
+   * Every actor drawn in a layer.
+   *
+   * A copy, like `ofType`, because a source is read once at the top of a loop —
+   * a rule that adds actors while iterating them terminates. An unknown id
+   * gives none rather than throwing, for the reason `addActor` gives about ids
+   * that come from generated code naming a block.
+   */
+  inLayer(layer: string): Actor[] {
+    return this.list.filter(actor => actor.layer === layer);
+  }
+
   [Symbol.iterator](): Iterator<Actor> {
     return this.list[Symbol.iterator]();
   }

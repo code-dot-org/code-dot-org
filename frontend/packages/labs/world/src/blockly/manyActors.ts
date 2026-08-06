@@ -32,6 +32,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 const MANY_BY_TYPE = new Set([
   'world_actor_kind',
   'world_all_actors',
+  'world_all_actors_in_layer',
   'world_first_where',
 ]);
 

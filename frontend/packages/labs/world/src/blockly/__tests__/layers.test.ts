@@ -10,7 +10,13 @@ import {describe, expect, it} from 'vitest';
 import type {Blockly} from '@code-dot-org/blockly';
 
 import {DEFAULT_LAYER_ID} from '../../engine/core/Layer';
-import {layerId, layerOf, layerPlan, layerValue} from '../layers';
+import {
+  layerId,
+  layerIdFromValue,
+  layerOf,
+  layerPlan,
+  layerValue,
+} from '../layers';
 
 /**
  * A block with a parent chain, innermost first — the same shape
@@ -108,6 +114,30 @@ describe('the slot blocks', () => {
     });
 
     expect(layerOf(block)).toBe(layerId('game'));
+  });
+});
+
+describe('resolving a LAYER dropdown value', () => {
+  it('is the layer the value names', () => {
+    const block = chain({type: 'world_all_actors_in_layer', id: 'q'});
+
+    expect(layerIdFromValue(block, layerValue('game'))).toBe(layerId('game'));
+  });
+
+  it('is the default for the bare value an empty world offers', () => {
+    // With no `define layer` in the workspace the dropdown offers the default
+    // outright, so the value is not prefixed at all.
+    const block = chain({type: 'world_all_actors_in_layer', id: 'q'});
+
+    expect(layerIdFromValue(block, DEFAULT_LAYER_ID)).toBe(DEFAULT_LAYER_ID);
+  });
+
+  it('is the default when the definition it names has gone', () => {
+    // A dropdown value outlives the block it names; answering "no layer" is
+    // not an option, so it answers with the one every world has.
+    const block = chain({type: 'world_all_actors_in_layer', id: 'q'});
+
+    expect(layerIdFromValue(block, layerValue(''))).toBe(DEFAULT_LAYER_ID);
   });
 });
 

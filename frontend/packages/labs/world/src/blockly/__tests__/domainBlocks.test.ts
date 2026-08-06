@@ -364,6 +364,27 @@ describe('domain block generators', () => {
     ]);
   });
 
+  it('world_all_actors_in_layer narrows the source to one layer', () => {
+    const [code] = generatorFor('world_all_actors_in_layer')(
+      {getFieldValue: () => 'main', workspace: {}} as never,
+      {} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('world.actors.inLayer("main")');
+  });
+
+  it('world_is_in_layer asks the same question of one actor', () => {
+    // A value over several actors reads the first, as every value does.
+    const [code] = generatorFor('world_is_in_layer')(
+      {getFieldValue: () => 'main', workspace: {}} as never,
+      {valueToCode: () => 'touched'} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('touched.layer === "main"');
+  });
+
   it('world_first_where asks the loop’s question and answers with one actor', () => {
     // The same source and the same predicate as `world_for_each` above — what
     // differs is that this hands the actor back instead of running a body.
