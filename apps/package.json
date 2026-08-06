@@ -22,7 +22,7 @@
     "clean": "grunt clean",
     "build": "DEV=1 yarn grunt build",
     "build:analyze": "ANALYZE_BUNDLE=1 DEV=1 yarn grunt build",
-    "build:rspack": "DEV=1 NODE_OPTIONS=--max-old-space-size=4096 rspack build --config rspack.config.js",
+    "build:rspack": "DEV=1 NODE_ENV=development NODE_OPTIONS=--max-old-space-size=4096 rspack build --config rspack.config.js",
     "build:rspack:swc": "RSPACK_SWC=ts yarn build:rspack",
     "build:dist": "NODE_ENV=production ./build-in-parallel.sh",
     "build:dist:debug": "DEBUG_MINIFIED=1 yarn build:dist",
