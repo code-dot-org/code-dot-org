@@ -24,7 +24,7 @@ import {
 } from '../utils/computeTabOrder';
 import {isLineAnchorNodeId} from '../utils/connectionRules';
 import {getNodeLabel} from '../utils/elementLabel';
-import {countLogicalElements, isGroupedChildNode} from '../utils/grouping';
+import {getSelectionMoveIds, isGroupedChildNode} from '../utils/grouping';
 import {
   endpointPatch,
   findNearestHandleInRadius,
@@ -58,29 +58,6 @@ function moveNodesByDelta(
         }
       : node
   );
-}
-
-/**
- * Ids the arrow keys should translate for a whole-selection move, in node
- * order. Empty when the selection isn't worth treating as a multi-element
- * move, which leaves the caller on its single-element path.
- *
- * Locked nodes and grouped children are dropped: undo can restore either
- * state while the selection that predates it is still live.
- */
-export function getSelectionMoveIds(
-  selectedIds: ReadonlySet<string>,
-  nodes: SketchlabReactFlowNode[]
-): string[] {
-  const movable = nodes.filter(
-    node =>
-      selectedIds.has(node.id) &&
-      !node.data?.locked &&
-      !isGroupedChildNode(node)
-  );
-  // A lone standalone line is two anchor nodes but one element, so it stays on
-  // the single-element path where endpoint snapping still applies.
-  return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];
 }
 
 /**

@@ -1,3 +1,5 @@
+import type {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
+
 import {
   DEFAULT_NODE_HEIGHT,
   DEFAULT_NODE_WIDTH,
@@ -30,6 +32,29 @@ export function countLogicalElements(
 ): number {
   const anchorCount = nodes.filter(node => node.type === 'lineAnchor').length;
   return nodes.length - anchorCount + Math.floor(anchorCount / 2);
+}
+
+/**
+ * Ids a whole-selection move should translate, in node order. Empty when the
+ * selection isn't worth treating as a multi-element move, which leaves the
+ * caller on its single-element path.
+ *
+ * Locked nodes and grouped children are dropped: undo can restore either
+ * state while the selection that predates it is still live.
+ */
+export function getSelectionMoveIds(
+  selectedIds: ReadonlySet<string>,
+  nodes: SketchlabReactFlowNode[]
+): string[] {
+  const movable = nodes.filter(
+    node =>
+      selectedIds.has(node.id) &&
+      !node.data?.locked &&
+      !isGroupedChildNode(node)
+  );
+  // A lone standalone line is two anchor nodes but one element, so it stays on
+  // the single-element path where endpoint snapping still applies.
+  return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];
 }
 
 function computeBounds(nodes: SketchLabNode[]) {

@@ -715,14 +715,26 @@ export default function ReactFlowCanvas({
       onCannotGroup: handleCannotGroup,
     });
 
-  const {handleEdgeMouseDown, isLineDragging} = useLineEdgeDrag({
-    readOnly,
-    setNodes,
-    setEdges,
-    screenToFlowPosition,
-    flowToScreenPosition,
-    pushSnapshot,
-  });
+  const {handleEdgeMouseDown, isLineDragging, consumeSelectionDragClick} =
+    useLineEdgeDrag({
+      readOnly,
+      setNodes,
+      setEdges,
+      screenToFlowPosition,
+      flowToScreenPosition,
+      pushSnapshot,
+      multiSelectedNodeIds,
+    });
+
+  // The click that ends a drag of the whole selection also lands on the line
+  // it started from; it must not clear the selection the drag just moved.
+  const handleEdgeClickAfterDrag = useCallback(
+    (event: React.MouseEvent, edge: {id: string}) => {
+      if (consumeSelectionDragClick()) return;
+      handleEdgeClick(event, edge);
+    },
+    [consumeSelectionDragClick, handleEdgeClick]
+  );
   const isAnchorDragging =
     isDirectAnchorDragging || isLineDragging || keyboardMovingLineId !== null;
 
@@ -1033,7 +1045,7 @@ export default function ReactFlowCanvas({
     nodesFocusable: !isGrabMode,
     edgesFocusable: !isGrabMode,
     onNodeClick: isGrabMode ? undefined : handleNodeClick,
-    onEdgeClick: isGrabMode ? undefined : handleEdgeClick,
+    onEdgeClick: isGrabMode ? undefined : handleEdgeClickAfterDrag,
     deleteKeyCode: !readOnly && !isGrabMode ? ['Delete', 'Backspace'] : null,
   };
 

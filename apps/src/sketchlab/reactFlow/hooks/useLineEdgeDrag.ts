@@ -7,10 +7,12 @@ import {
 } from '@cdo/apps/lab2/types';
 
 import {LINE_RECONNECT_SNAP_RADIUS_PX} from '../constants';
+import {getSelectionMoveIds} from '../utils/grouping';
 import {attachEdgeEndpoint} from '../utils/handleSnap';
 import {
   attachEdgeToFreshAnchor,
   findAnchorHandleSnap,
+  getStandaloneLineAnchorIds,
   resolveEdgeEndpoint,
 } from '../utils/lineAnchors';
 
@@ -36,6 +38,13 @@ interface DragState {
   hasMoved: boolean;
 }
 
+// A whole-selection drag started from the body of a line inside it.
+interface SelectionDragState {
+  startPositions: Map<string, XYPosition>;
+  startPointer: XYPosition;
+  hasMoved: boolean;
+}
+
 interface UseLineEdgeDragOptions {
   readOnly: boolean;
   setNodes: (
@@ -47,6 +56,7 @@ interface UseLineEdgeDragOptions {
   screenToFlowPosition: (position: XYPosition) => XYPosition;
   flowToScreenPosition: (position: XYPosition) => XYPosition;
   pushSnapshot: () => void;
+  multiSelectedNodeIds: ReadonlySet<string>;
 }
 
 // Dragging the body of a line edge moves the line as a whole. Free
@@ -54,6 +64,10 @@ interface UseLineEdgeDragOptions {
 // endpoints (real nodes) get detached on first move; we spawn a fresh
 // anchor at the current handle position, rewrite the edge to point at it,
 // and treat it like any other dragging anchor from then on.
+//
+// When the line is part of a multi-selection, the drag instead translates the
+// whole selection, matching what React Flow does when a selected node is
+// dragged.
 export function useLineEdgeDrag({
   readOnly,
   setNodes,
@@ -61,13 +75,29 @@ export function useLineEdgeDrag({
   screenToFlowPosition,
   flowToScreenPosition,
   pushSnapshot,
+  multiSelectedNodeIds,
 }: UseLineEdgeDragOptions) {
-  const {getNode} = useReactFlow<
+  const {getNode, getNodes} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
   const draggingLineEdgeRef = useRef<DragState | null>(null);
+  const draggingSelectionRef = useRef<SelectionDragState | null>(null);
   const [isLineDragging, setIsLineDragging] = useState(false);
+
+  // Mouseup at the end of a selection drag is followed by a click on the line,
+  // which would clear the selection the drag just moved. Set on drag end and
+  // read by the edge-click handler. The browser dispatches that click in the
+  // same task as the mouseup, so a timeout clears the flag right afterwards
+  // whether or not the click ever arrives — the same trick d3-drag uses to
+  // suppress the click after a node drag.
+  const completedSelectionDragRef = useRef(false);
+
+  const consumeSelectionDragClick = useCallback(() => {
+    const completed = completedSelectionDragRef.current;
+    completedSelectionDragRef.current = false;
+    return completed;
+  }, []);
 
   const handleLineEdgeMouseMove = useCallback(
     (event: MouseEvent) => {
@@ -195,6 +225,59 @@ export function useLineEdgeDrag({
     [handleLineEdgeMouseMove, setEdges]
   );
 
+  // Translates every element in the selection by the pointer delta. Endpoint
+  // snapping is deliberately skipped: a selection moves as a rigid body, so a
+  // line inside it shouldn't reattach to whatever it passes over.
+  const handleSelectionMouseMove = useCallback(
+    (event: MouseEvent) => {
+      const dragState = draggingSelectionRef.current;
+      if (!dragState) {
+        return;
+      }
+      // Snapshot before the first mutation so a bare click doesn't create a
+      // history entry.
+      if (!dragState.hasMoved) {
+        pushSnapshot();
+        dragState.hasMoved = true;
+      }
+
+      const currentPointer = screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+      const deltaX = currentPointer.x - dragState.startPointer.x;
+      const deltaY = currentPointer.y - dragState.startPointer.y;
+      setNodes(currentNodes =>
+        currentNodes.map(node => {
+          const startPosition = dragState.startPositions.get(node.id);
+          return startPosition
+            ? {
+                ...node,
+                position: {
+                  x: startPosition.x + deltaX,
+                  y: startPosition.y + deltaY,
+                },
+              }
+            : node;
+        })
+      );
+    },
+    [screenToFlowPosition, setNodes, pushSnapshot]
+  );
+
+  const stopSelectionDrag = useCallback(() => {
+    const dragState = draggingSelectionRef.current;
+    draggingSelectionRef.current = null;
+    window.removeEventListener('mousemove', handleSelectionMouseMove);
+    window.removeEventListener('mouseup', stopSelectionDrag);
+    if (dragState?.hasMoved) {
+      completedSelectionDragRef.current = true;
+      setTimeout(() => {
+        completedSelectionDragRef.current = false;
+      }, 0);
+    }
+  }, [handleSelectionMouseMove]);
+
   const handleEdgeMouseDown = useCallback(
     (event: React.MouseEvent, edge: SketchlabReactFlowEdge) => {
       if (readOnly || event.button !== 0) {
@@ -203,6 +286,37 @@ export function useLineEdgeDrag({
       // Grouped lines are not movable individually.
       if (getNode(edge.source)?.parentId || getNode(edge.target)?.parentId) {
         return;
+      }
+
+      // The line belongs to the multi-selection: drag the whole selection, the
+      // same rule the arrow keys use. getSelectionMoveIds returns nothing for a
+      // selection of just this line, which falls through to the single-line
+      // drag below.
+      const anchorIds = getStandaloneLineAnchorIds(edge, getNode);
+      if (anchorIds?.every(id => multiSelectedNodeIds.has(id))) {
+        const currentNodes = getNodes();
+        const idsToMove = new Set(
+          getSelectionMoveIds(multiSelectedNodeIds, currentNodes)
+        );
+        if (idsToMove.size > 0) {
+          event.preventDefault();
+          event.stopPropagation();
+          draggingSelectionRef.current = {
+            startPositions: new Map(
+              currentNodes
+                .filter(node => idsToMove.has(node.id))
+                .map(node => [node.id, {...node.position}])
+            ),
+            startPointer: screenToFlowPosition({
+              x: event.clientX,
+              y: event.clientY,
+            }),
+            hasMoved: false,
+          };
+          window.addEventListener('mousemove', handleSelectionMouseMove);
+          window.addEventListener('mouseup', stopSelectionDrag);
+          return;
+        }
       }
 
       const anchors: DraggingAnchor[] = [];
@@ -256,9 +370,13 @@ export function useLineEdgeDrag({
     [
       readOnly,
       getNode,
+      getNodes,
+      multiSelectedNodeIds,
       screenToFlowPosition,
       handleLineEdgeMouseMove,
       stopLineEdgeDrag,
+      handleSelectionMouseMove,
+      stopSelectionDrag,
     ]
   );
 
@@ -266,8 +384,15 @@ export function useLineEdgeDrag({
     return () => {
       window.removeEventListener('mousemove', handleLineEdgeMouseMove);
       window.removeEventListener('mouseup', stopLineEdgeDrag);
+      window.removeEventListener('mousemove', handleSelectionMouseMove);
+      window.removeEventListener('mouseup', stopSelectionDrag);
     };
-  }, [handleLineEdgeMouseMove, stopLineEdgeDrag]);
+  }, [
+    handleLineEdgeMouseMove,
+    stopLineEdgeDrag,
+    handleSelectionMouseMove,
+    stopSelectionDrag,
+  ]);
 
-  return {handleEdgeMouseDown, isLineDragging};
+  return {handleEdgeMouseDown, isLineDragging, consumeSelectionDragClick};
 }
