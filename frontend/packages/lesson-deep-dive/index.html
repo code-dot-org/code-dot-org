@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- The html attributes come from application.html.haml: locale, and the brand
+     code Cdo::Brand.current_brand_code returns. They select whole palettes in
+     component-library-styles/brandOverrides.css, so the dev shell has to
+     declare the brand Studio would. -->
+<html class="nav-reskin" data-brand="codeai-next" dir="ltr" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="minimal-ui" />
+    <title>Tutor+ Lesson Deep Dive</title>
+  </head>
+  <body>
+    <!-- Mirrors the DOM the Rails layout puts above the feature on
+         lessons#tutor, which sets full_width + no_padding_container:
+         .wrapper > main#main_content > .full_container[padding: 0]. -->
+    <div class="wrapper">
+      <main id="main_content">
+        <div class="full_container" style="padding: 0">
+          <div id="lesson-deep-dive-container"></div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/dev/main.tsx"></script>
+  </body>
+</html>

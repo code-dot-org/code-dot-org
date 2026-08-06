@@ -1,0 +1,313 @@
+/*
+ * Production CSS environment resets.
+ *
+ * In Studio the deep dive renders inside a Rails page that loads Bootstrap 3,
+ * code-studio.css and application.css. Those set body typography, the global
+ * border-box reset, link colors, heading margins and a global `button` style
+ * the components were developed against. The dev shell loads none of them, so
+ * it restates the global rules that can reach the feature's subtree.
+ *
+ * This is every bare-type-selector rule in /assets/application.css outside
+ * `@media print`, in source order — the cascade only resolves the same way if
+ * the order does. code-studio.css contributes none. Provenance is the SCSS
+ * file and line the asset pipeline records in its comments.
+ *
+ * Regenerate the list with the offline scan described in README.md after
+ * pulling a fresh /assets/application.css.
+ *
+ * The Geist and Noto Sans webfonts come from @code-dot-org/fonts, imported
+ * next to this file; Rails serves the same faces out of dashboard/public/fonts.
+ */
+
+/* --- bootstrap-sass-3.4.1 _normalize.scss -------------------------------- */
+
+body {
+  margin: 0;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* --- bootstrap-sass-3.4.1 _scaffolding.scss ------------------------------ */
+
+/* stylelint-disable no-duplicate-selectors -- a selector repeats here exactly
+   as often as it repeats in application.css; collapsing the blocks would move
+   declarations across other rules of equal specificity and change the result. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+body {
+  font-family: Geist, 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian',
+    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
+    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math', sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: #0596ce;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #036083;
+  text-decoration: underline;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* --- bootstrap-sass-3.4.1 _type.scss, _tables.scss, _forms.scss ---------- */
+
+p {
+  margin: 0 0 10px;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+table {
+  background-color: transparent;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* --- app/assets/stylesheets/bootstrap/v2-to-v3.scss ---------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  line-height: 20px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+
+li {
+  line-height: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+strong {
+  font-style: normal;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form {
+  margin: 0 0 20px;
+}
+
+input {
+  width: 220px;
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+/* --- app/assets/stylesheets/application.scss ----------------------------- */
+
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+p,
+pre,
+span {
+  user-select: text;
+}
+
+body {
+  font-style: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+strong,
+em {
+  font-family: Geist, 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian',
+    'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans Devanagari',
+    'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+    'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar',
+    'Noto Sans Sinhala', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Thai', 'Noto Sans Thaana', 'Noto Sans Math', sans-serif;
+}
+
+h2 {
+  margin: 25px 0 10px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+
+/* "Buttons from apps" — a global button skin the feature's own SCSS only
+   partly overrides, so its padding, border and `large` font-size leak in. */
+button {
+  padding: 10px;
+  margin: 5px;
+  font-size: large;
+  color: #000;
+  background-color: #e7e8ea;
+  border: 1px solid #e7e8ea;
+  border-radius: 4px;
+}
+
+/* --- app/assets/stylesheets/scaffolds.scss ------------------------------- */
+
+body {
+  font-size: 13px;
+  line-height: 18px;
+  color: #333;
+  background-color: var(--background-neutral-primary, #fff);
+}
+
+p,
+ol,
+ul,
+td {
+  font-size: 13px;
+  line-height: 18px;
+}
