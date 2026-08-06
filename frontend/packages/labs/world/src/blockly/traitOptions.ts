@@ -9,7 +9,7 @@ import type {Blockly} from '@code-dot-org/blockly';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {liveDropdown} from './moduleOptions';
-import type {RuleMeta, StepMeta} from './ruleMeta';
+import {pascal, type RuleMeta, type StepMeta} from './ruleMeta';
 import {memberValue, ruleByName} from './ruleRegistry';
 
 // The project's declarative `.rule` rules, indexed by module path (what a world's
@@ -135,15 +135,90 @@ export function traitSubjectFor(field?: {
   return 'actor';
 }
 
-export function traitOptions(
-  field?: Blockly.FieldDropdown,
+/**
+ * The traits in play, optionally narrowed to what one kind of thing can take.
+ *
+ * TWO CALLERS ASKING TWO QUESTIONS. `use trait` is ELECTING one, and knows from
+ * where it sits what is doing the electing — filtering there is what keeps
+ * "Affected by Gravity" off a camera. `has trait` is ASKING about whatever is
+ * plugged into its socket, and that is undecidable at edit time: a camera's
+ * value is Actor-typed on purpose, so a `for each actor` walking `all cameras`
+ * looks exactly like one walking actors. Filtering there hid every camera trait
+ * from the one loop that needed them.
+ */
+/**
+ * The traits THIS workspace declares, when it is a `.rule`.
+ *
+ * A rule must always see its own traits, however no world attaches it yet.
+ * `rulesInPlay` answers "what may a world use", which is the right question in
+ * an `.actor` or a `.world` and the wrong one in the rule being written: a
+ * learner defining a trait cannot then name it in the same file's step, which
+ * is the very next thing they will try.
+ *
+ * Read from the workspace's own blocks rather than from the parsed registry so
+ * a trait appears the moment it is named — a registry refreshes on a parse, and
+ * waiting for one is the same delay by a different route (`localActorsIn` and
+ * `layersIn` do this for the same reason).
+ */
+function ownTraitOptions(
+  field: {getSourceBlock(): unknown} | undefined,
+  wanted?: 'actor' | 'camera',
 ): Array<[string, string]> {
-  const wanted = traitSubjectFor(field);
+  const source = field?.getSourceBlock() as
+    | {workspace?: Blockly.WorkspaceSvg & {targetWorkspace?: unknown}}
+    | null
+    | undefined;
+  const raw = source?.workspace;
+  const workspace = (raw?.isFlyout ? raw.targetWorkspace : raw) as
+    | {getTopBlocks?(ordered: boolean): unknown[]}
+    | undefined;
+  const tops = (workspace?.getTopBlocks?.(false) ?? []) as Array<{
+    type?: string;
+    getFieldValue?(name: string): string | null;
+  }>;
+  const rule = tops.find(block => block.type === 'world_rule');
+  if (!rule) {
+    return []; // not a `.rule` workspace — nothing of its own to offer
+  }
+  const ruleName = String(rule.getFieldValue?.('NAME') ?? '') || 'Rule';
+  return tops
+    .filter(block => block.type === 'world_rule_trait')
+    .map(block => ({
+      name: String(block.getFieldValue?.('NAME') ?? ''),
+      subject:
+        block.getFieldValue?.('SUBJECT') === 'camera' ? 'camera' : 'actor',
+    }))
+    .filter(
+      trait => trait.name && (wanted === undefined || trait.subject === wanted),
+    )
+    .map(
+      trait =>
+        [trait.name, `${ruleName}#${pascal(trait.name)}Trait`] as [
+          string,
+          string,
+        ],
+    );
+}
+
+function traitOptionsFor(
+  wanted?: 'actor' | 'camera',
+  field?: {getSourceBlock(): unknown},
+): Array<[string, string]> {
   const seen = new Set<string>();
   const options: Array<[string, string]> = [];
+  // Its own first, so a rule being written can always name what it declares.
+  for (const own of ownTraitOptions(field, wanted)) {
+    if (!seen.has(own[1])) {
+      seen.add(own[1]);
+      options.push(own);
+    }
+  }
   for (const rule of rulesInPlay(projectRuleRefs)) {
     for (const trait of rule.traits) {
-      if (!trait.ref.exportName || (trait.subject ?? 'actor') !== wanted) {
+      if (
+        !trait.ref.exportName ||
+        (wanted !== undefined && (trait.subject ?? 'actor') !== wanted)
+      ) {
         continue;
       }
       const value = memberValue(trait.ref);
@@ -157,11 +232,32 @@ export function traitOptions(
   return options.length ? options : [['(none)', '']];
 }
 
-/** Make a block's `TRAIT` dropdown reflect the traits currently in play. */
+/** For `use trait`: only what the thing electing here can actually take. */
+export function traitOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  return traitOptionsFor(traitSubjectFor(field), field);
+}
+
+/** For `has trait`: every trait, because the subject is a value, not a place. */
+export function anyTraitOptions(
+  field?: Blockly.FieldDropdown,
+): Array<[string, string]> {
+  return traitOptionsFor(undefined, field);
+}
+
+/** Make `use trait`'s dropdown reflect the traits the subject here can take. */
 export const traitOptionsExtension = liveDropdown(
   'world_trait_options',
   'TRAIT',
   traitOptions,
+);
+
+/** Make `has trait`'s dropdown reflect every trait in play. */
+export const anyTraitOptionsExtension = liveDropdown(
+  'world_any_trait_options',
+  'TRAIT',
+  anyTraitOptions,
 );
 
 // ── Step anchors (for `define step`'s before/after ordering) ─────────────────

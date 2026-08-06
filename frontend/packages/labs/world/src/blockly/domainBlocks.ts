@@ -134,6 +134,8 @@ import {
   projectRuleIdentities,
   stepOptions,
   stepOptionsExtension,
+  anyTraitOptions,
+  anyTraitOptionsExtension,
   traitOptions,
   traitOptionsExtension,
   traitSubjectFor,
@@ -1305,19 +1307,24 @@ const valueStyle = (type: PropertyType): string =>
  */
 const defineSetPropertyBlock = (property: PropertyMeta) => {
   const name = property.name;
-  const actorScoped = property.scope === 'actor';
+  // Anything that is not the world's own has a SUBJECT, and so takes a socket
+  // to say which one. A camera-scoped property is a subject property like an
+  // actor's — testing `=== 'actor'` here made a camera trait's property
+  // generate `world.get(…)` and fail at runtime looking for a slot the world
+  // never had (`MemberScope`).
+  const subjectScoped = property.scope !== 'world';
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
-  const value = typedValueInputs(property, actorScoped ? 2 : 1);
+  const value = typedValueInputs(property, subjectScoped ? 2 : 1);
   // No `world` in front of a world property: the name is the whole label. What
   // tells the two apart is the subject — an actor property says whose it is
   // (`set health of ⟨this actor⟩`) and a world property has nobody to name, so
   // the prefix was answering a question the block never asked. It also read
   // badly the moment a property named itself properly: "set world amount of
   // gravity to" against "set amount of gravity to".
-  const message0 = actorScoped
+  const message0 = subjectScoped
     ? `set ${name} of %1 to ${value.message}`
     : `set ${name} to ${value.message}`;
-  const args0: BlockArgDefinition[] = actorScoped
+  const args0: BlockArgDefinition[] = subjectScoped
     ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
     : value.args;
   const type = setPropertyBlockType(memberKey(property.ref));
@@ -1331,11 +1338,11 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
     previousStatement: true,
     nextStatement: true,
     // A world property sets on `world`; warn if placed where `world` is unbound.
-    extensions: actorScoped
+    extensions: subjectScoped
       ? [actorInputExtension, valueShadowExtension]
       : [valueShadowExtension, worldContextExtension],
     style: 'default',
-    tooltip: actorScoped
+    tooltip: subjectScoped
       ? `Set an actor's ${name}.`
       : `Set the world's ${name}.`,
     generator: {
@@ -1343,7 +1350,7 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
         const value = typedValueCode(property, block, generator);
         const set = (subject: string) =>
           `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
-        return actorScoped
+        return subjectScoped
           ? forEachActor(actorTarget(block, generator, Order.MEMBER), set)
           : `${set('world')};\n`;
       },
@@ -1360,7 +1367,12 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
  */
 const defineGetPropertyBlock = (property: PropertyMeta) => {
   const name = property.name;
-  const actorScoped = property.scope === 'actor';
+  // Anything that is not the world's own has a SUBJECT, and so takes a socket
+  // to say which one. A camera-scoped property is a subject property like an
+  // actor's — testing `=== 'actor'` here made a camera trait's property
+  // generate `world.get(…)` and fail at runtime looking for a slot the world
+  // never had (`MemberScope`).
+  const subjectScoped = property.scope !== 'world';
   // A point is read one axis at a time (an x/y dropdown → a Number); a vector is
   // read whole. Everything else is a plain scalar read.
   const hasComponent = property.type === 'point';
@@ -1385,7 +1397,7 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     slot({type: 'input_value', name: 'ACTOR', check: 'Actor'});
 
   // Unprefixed for a world property, as the setter is above.
-  const message0 = actorScoped
+  const message0 = subjectScoped
     ? hasComponent
       ? `get ${name} ${component()} of ${actorSocket()}`
       : `get ${name} of ${actorSocket()}`
@@ -1400,16 +1412,16 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     inputsInline: true,
     output: outputForType(property.type),
     // A world property reads from `world`; warn if placed where it is unbound.
-    extensions: actorScoped ? [actorInputExtension] : [worldContextExtension],
+    extensions: subjectScoped ? [actorInputExtension] : [worldContextExtension],
     // Style by the value it reports: a boolean reads as logic, a whole vector as
     // a location, a number/point axis as math.
     style: valueStyle(property.type),
-    tooltip: actorScoped
+    tooltip: subjectScoped
       ? `Get an actor's ${name}.`
       : `Get the world's ${name}.`,
     generator: {
       javascript(block, generator) {
-        const subject = actorScoped
+        const subject = subjectScoped
           ? oneActor(actorTarget(block, generator, Order.MEMBER))
           : 'world';
         const component = hasComponent
@@ -1478,7 +1490,7 @@ const paramValueNames = (name: string): ValueNames => {
  * by name ("nudge amount %1 direction %2") to keep them apart.
  */
 const defineActionBlock = (action: ActionMeta) => {
-  const actorScoped = action.scope === 'actor';
+  const subjectScoped = action.scope !== 'world';
   const name = action.name;
   const params = action.params;
   const labelled = params.length > 1;
@@ -1528,7 +1540,7 @@ const defineActionBlock = (action: ActionMeta) => {
         : ` ${built.message}`;
     });
   }
-  if (actorScoped) {
+  if (subjectScoped) {
     // Target socket last, like `play animation … on …`.
     args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
     message0 = `${message0} on %${args0.length}`;
@@ -1547,14 +1559,14 @@ const defineActionBlock = (action: ActionMeta) => {
     nextStatement: true,
     // A world action runs on `world`; warn if placed where `world` is unbound.
     extensions: [
-      ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
+      ...(subjectScoped ? [actorInputExtension] : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
     ],
     style: 'default',
     // The author's own sentence, when they wrote one.
     tooltip:
-      action.description || (actorScoped ? `${name} — for an actor.` : name),
+      action.description || (subjectScoped ? `${name} — for an actor.` : name),
     generator: {
       javascript(block, generator) {
         const argCode = params
@@ -1565,7 +1577,7 @@ const defineActionBlock = (action: ActionMeta) => {
           .join('');
         const call = (subject: string) =>
           `${subject}.act(${refCode(action.ref, generator)}${argCode})`;
-        return actorScoped
+        return subjectScoped
           ? forEachActor(actorTarget(block, generator, Order.MEMBER), call)
           : `${call('world')};\n`;
       },
@@ -1612,7 +1624,7 @@ const queryBlockType = (exportName: string): string =>
  * subject, passed positionally to `query`.
  */
 const defineQueryBlock = (query: QueryMeta) => {
-  const actorScoped = query.scope === 'actor';
+  const subjectScoped = query.scope !== 'world';
   const name = query.name;
   const returns = query.returns ?? 'boolean';
   const type = queryBlockType(memberKey(query.ref));
@@ -1630,7 +1642,7 @@ const defineQueryBlock = (query: QueryMeta) => {
     // own words, not what it is asked of.
     let designed = '';
     let paramIndex = 0;
-    if (actorScoped) {
+    if (subjectScoped) {
       args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
       designed = '%1';
     }
@@ -1651,7 +1663,7 @@ const defineQueryBlock = (query: QueryMeta) => {
       designed += `${designed ? ' ' : ''}${built.message}`;
     }
     message0 = designed;
-  } else if (actorScoped) {
+  } else if (subjectScoped) {
     // The name reads as a predicate ("is on the ground?"), so the subject leads:
     // "this actor is on the ground?"; any params trail, each labelled by name.
     message0 = `%1 ${name}`;
@@ -1693,14 +1705,14 @@ const defineQueryBlock = (query: QueryMeta) => {
     inputsInline: true,
     output: outputForType(returns),
     extensions: [
-      ...(actorScoped ? [actorInputExtension] : [worldContextExtension]),
+      ...(subjectScoped ? [actorInputExtension] : [worldContextExtension]),
       ...(shadows.length ? [valueShadowExtension] : []),
       ...slotExtensions,
     ],
     style: valueStyle(returns),
     tooltip:
       query.description ||
-      (actorScoped ? `Whether an actor ${name}` : `The world's ${name}`),
+      (subjectScoped ? `Whether an actor ${name}` : `The world's ${name}`),
     generator: {
       javascript(block, generator) {
         const argCode = params
@@ -1709,7 +1721,7 @@ const defineQueryBlock = (query: QueryMeta) => {
               `, ${typedValueCode(param, block, generator, paramNames[i])}`,
           )
           .join('');
-        if (actorScoped) {
+        if (subjectScoped) {
           const subject = oneActor(actorTarget(block, generator, Order.MEMBER));
           return [
             `${subject}.query(${refCode(query.ref, generator)}${argCode})`,
@@ -2217,6 +2229,74 @@ const worldAllActors = defineBlock({
  * is appended to in place, so a set built across a loop is one list and not a
  * chain of copies.
  */
+/**
+ * One camera, by name, as an actor value.
+ *
+ * The piece that lets a WORLD wire a camera up. `all cameras` hands over the
+ * set, which is what a rule wants ("whichever have this trait"); a world body
+ * knows exactly which one it means, and needs to say so:
+ *
+ *   load map ⟨Level 1⟩
+ *   set actor to follow of ⟨camera ⟨Chase⟩⟩ to ⟨first actor … is a ⟨Player⟩⟩
+ *
+ * Actor-typed like every camera value, so the generated property setters — the
+ * ones a camera TRAIT brings — take it without knowing what it is.
+ *
+ * Naming a camera the world has not defined yet reads as the default one, the
+ * same answer `World.camera` gives: the id comes from a dropdown whose block
+ * may have been deleted, and a view through no camera is not an answer.
+ */
+const worldCameraValue = defineBlock({
+  type: 'world_camera',
+  message0: 'camera %1',
+  args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
+  output: 'Actor',
+  extensions: [cameraOptionsExtension, worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'One camera, to read or set something on. Its traits’ properties are set ' +
+    'like an actor’s.',
+  generator: {
+    javascript(block) {
+      const camera = cameraIdFromValue(
+        block,
+        String(block.getFieldValue('CAMERA') ?? ''),
+      );
+      return [`world.camera(${str(camera)})`, Order.MEMBER] as [string, number];
+    },
+  },
+});
+
+/**
+ * Every camera in the world, as an actor value.
+ *
+ * Actor-typed on purpose, so the whole existing vocabulary reaches a camera:
+ * `for each actor ⟨c⟩ in ⟨all cameras⟩ where ⟨⟨c⟩ has trait ⟨Follows⟩⟩` then
+ * `set position of ⟨c⟩` is how a rule makes a camera follow something, built
+ * entirely from blocks that already existed. A separate Camera type would have
+ * meant a second loop, a second filter and a second set-position.
+ *
+ * It is the only way a rule can reach a camera at all: `move camera ⟨C⟩` names
+ * one from a dropdown, which cannot say "whichever cameras have this trait".
+ *
+ * A copy, like `all actors`, because a source is read once at the top of a loop.
+ */
+const worldAllCameras = defineBlock({
+  type: 'world_all_cameras',
+  message0: 'all cameras',
+  output: 'Actor',
+  extensions: [worldContextExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Every camera in the world. Loop over them to move the ones with a trait ' +
+    '— which is how a camera is made to follow something.',
+  generator: {
+    javascript() {
+      return ['[...world.cameras]', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
 const worldPushActor = defineBlock({
   type: 'world_push_actor',
   message0: 'add %1 to %2',
@@ -4255,13 +4335,20 @@ const worldHasTrait = defineBlock({
   message0: '%1 has trait %2',
   args0: [
     {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-    {type: 'field_dropdown', name: 'TRAIT', options: traitOptions},
+    // EVERY trait, not just an actor's. What is plugged into the socket decides
+    // the subject, and that cannot be read at edit time — a camera's value is
+    // Actor-typed on purpose, so a `for each actor` over `all cameras` is
+    // indistinguishable from one over actors. Narrowing this by where the block
+    // sits hid every camera trait from the one loop that needed them.
+    {type: 'field_dropdown', name: 'TRAIT', options: anyTraitOptions},
   ],
   inputsInline: true,
   output: 'Boolean',
-  extensions: [actorInputExtension, traitOptionsExtension],
+  extensions: [actorInputExtension, anyTraitOptionsExtension],
   style: 'logic_blocks',
-  tooltip: 'Whether an actor has a given trait.',
+  tooltip:
+    'Whether an actor — or a camera — has a given trait. Every trait in play ' +
+    'is offered, because what you ask about is whatever you plug in.',
   generator: {
     javascript(block, generator) {
       const target = actorTarget(block, generator, Order.MEMBER);
@@ -4304,6 +4391,8 @@ export const DOMAIN_BLOCKS = [
   worldActorKind,
   ActorVariable.getterBlock,
   worldAllActors,
+  worldCameraValue,
+  worldAllCameras,
   worldPushActor,
   worldClearActors,
   worldCountActors,
@@ -4432,6 +4521,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_define_camera',
       'world_use_camera',
       'world_move_camera',
+      // One camera by name, for a world wiring one up; and all of them, which
+      // is the only way a RULE can reach a camera — a dropdown cannot say
+      // "whichever cameras have this trait".
+      'world_camera',
+      'world_all_cameras',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',

@@ -23,7 +23,7 @@
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
-import type {CameraInit} from '../core/Camera';
+import type {Camera, CameraInit} from '../core/Camera';
 import {rgba, type ColorValue, type Rgba} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
@@ -233,6 +233,19 @@ export class WorldBuilder {
     }
     this.cameras.push(init);
     return this;
+  }
+
+  /**
+   * A camera by id. See {@link World.camera}.
+   *
+   * On the builder because a world body sets things on a camera — `set actor to
+   * follow of ⟨camera ⟨Chase⟩⟩` — and inside `define world` the name `world` is
+   * this. Building the world here is safe: every call that refuses to run after
+   * the build (`useRules`, `useAnimations`, `defineLayer`) is emitted above the
+   * body by the world root's generator.
+   */
+  camera(id?: string): Camera {
+    return this.getWorld().camera(id);
   }
 
   /** Take the view through a different camera. See {@link World.setActiveCamera}. */

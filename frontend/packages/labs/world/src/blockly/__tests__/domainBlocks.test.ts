@@ -480,6 +480,82 @@ describe('domain block generators', () => {
     );
   });
 
+  it('gives a camera trait’s property a socket, not the world', () => {
+    // The bug a hand-authored camera-follow rule hit. A camera-scoped property
+    // is a SUBJECT property like an actor's — it belongs to whatever elected
+    // the trait — so its blocks take a socket saying which. Testing for
+    // `scope === 'actor'` sent it down the world-scoped path, and the game
+    // died looking for a slot the world never had.
+    const followRule = parseRuleMeta(
+      'rules/follow',
+      JSON.stringify({
+        blocks: {
+          languageVersion: 0,
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Camera Follow'}},
+            {
+              type: 'world_rule_trait',
+              fields: {NAME: 'Follows', SUBJECT: 'camera'},
+              next: {
+                block: {
+                  type: 'world_rule_property',
+                  fields: {
+                    TYPE: 'actors',
+                    ACCESS: 'writable',
+                    NAME: 'actor to follow',
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    const palette = buildDomainPalette([followRule]);
+    const block = (type: string) =>
+      palette.blocks.find(b => b.type === type) as
+        | {message0: string; args0?: Array<{type: string; name: string}>}
+        | undefined;
+
+    // Keyed by the RULE's name, like every other generated member.
+    const getter = block('world_get_CameraFollow_ActorToFollowProperty');
+    const setter = block('world_set_CameraFollow_ActorToFollowProperty');
+
+    // Reads as a question about one camera, and takes one.
+    expect(getter?.message0).toBe('get actor to follow of %1');
+    expect(getter?.args0?.[0]).toMatchObject({
+      type: 'input_value',
+      name: 'ACTOR',
+    });
+    expect(setter?.message0).toContain('set actor to follow of %1');
+  });
+
+  it('world_camera names the one a world means', () => {
+    // A world body knows which camera it is wiring up; a rule does not, and
+    // uses `all cameras` instead. Actor-typed, so the property setters a camera
+    // TRAIT brings take it without knowing what it is.
+    const [code] = generatorFor('world_camera')(
+      {getFieldValue: () => 'main', workspace: {}} as never,
+      {} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('world.camera("main")');
+  });
+
+  it('world_all_cameras is how a rule reaches a camera at all', () => {
+    // Actor-typed on purpose: `for each actor ⟨c⟩ in ⟨all cameras⟩ where ⟨…⟩`
+    // then `set position of ⟨c⟩` is built entirely from blocks that already
+    // existed. A dropdown cannot say "whichever cameras have this trait".
+    const [code] = generatorFor('world_all_cameras')(
+      {} as never,
+      {} as never,
+      {} as never,
+    ) as unknown as [string, number];
+
+    expect(code).toBe('[...world.cameras]');
+  });
+
   it('world_all_actors_in_layer narrows the source to one layer', () => {
     const [code] = generatorFor('world_all_actors_in_layer')(
       {getFieldValue: () => 'main', workspace: {}} as never,

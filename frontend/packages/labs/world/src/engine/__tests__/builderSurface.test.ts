@@ -71,8 +71,14 @@ const called = (): string[] => {
     join(process.cwd(), 'src/blockly/domainBlocks.ts'),
     'utf8',
   );
+  // Comments first. They are prose ABOUT the calls and full of examples —
+  // "generate `world.get(…)` and fail at runtime" is a sentence explaining a
+  // bug, not a call site. Scanning them made writing a comment about a method
+  // fail this test, and the obvious way to make that green again is to weaken
+  // the guard, which is exactly the wrong repair.
+  const code = source.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
   const names = new Set<string>();
-  for (const match of source.matchAll(/\bworld\.(\w+)\(/g)) {
+  for (const match of code.matchAll(/\bworld\.(\w+)\(/g)) {
     names.add(match[1]);
   }
   for (const name of GENERATED_WORLD_CALLS) {
