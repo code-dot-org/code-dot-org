@@ -29,6 +29,9 @@ let images: FakeImage[] = [];
 /** One per engine layer — the container its drawing is parented into. */
 interface FakeLayer {
   depth: number;
+  /** Where the camera put it — the parallax transform. */
+  x: number;
+  y: number;
   children: Array<FakeImage | undefined>;
   destroyed: boolean;
 }
@@ -119,12 +122,26 @@ vi.mock('phaser', () => {
         return new TileSprite(record);
       },
       /** The per-layer container everything is parented into. */
-      layer() {
-        const record: FakeLayer = {depth: 0, children: [], destroyed: false};
+      container() {
+        const record: FakeLayer = {
+          depth: 0,
+          x: 0,
+          y: 0,
+          children: [],
+          destroyed: false,
+        };
         layers.push(record);
         return {
           setDepth(depth: number) {
             record.depth = depth;
+            return this;
+          },
+          setPosition(x: number, y: number) {
+            record.x = x;
+            record.y = y;
+            return this;
+          },
+          sort() {
             return this;
           },
           add(child: {record?: FakeImage}) {
@@ -191,6 +208,10 @@ const world = (
     repeat?: boolean;
   }>,
   clearColor: [number, number, number, number] = [0, 0, 0, 1],
+  /** Where the one camera looks from, and how each layer responds to it. */
+  camera: {x: number; y: number} = {x: 0, y: 0},
+  parallaxes: Array<{x: number; y: number}> = [],
+  fits: boolean[] = [],
 ) =>
   ({
     setInput: () => {},
@@ -212,7 +233,10 @@ const world = (
       backdrops.map((_, index) => ({
         id: index === 0 ? 'main' : `layer${index}`,
         effects: [],
+        parallax: parallaxes[index] ?? {x: 1, y: 1},
+        fit: fits[index] ?? false,
       })),
+    cameraSnapshot: () => [{id: 'main', position: camera}],
     snapshot: () => ({world: {}}),
   }) as never;
 
@@ -306,6 +330,34 @@ describe('drawing the backdrop', () => {
 
     expect(layers).toHaveLength(2);
     expect(layers.map(layer => layer.depth)).toEqual([0, 1]);
+  });
+
+  it('moves each layer opposite the camera, scaled by its own parallax', () => {
+    // The whole of what parallax means. Opposite, because moving the view right
+    // moves the world left; per axis, because the commonest setting in a
+    // side-scroller is horizontal only.
+    new PhaserBinding(
+      world([{}, {}], [0, 0, 0, 1], {x: 100, y: 50}, [
+        {x: 0.2, y: 0},
+        {x: 1, y: 1},
+      ]),
+      pane(),
+    );
+
+    expect(layers.map(layer => [layer.x, layer.y])).toEqual([
+      [-20, -0],
+      [-100, -50],
+    ]);
+  });
+
+  it('leaves a layer fixed to the screen where it is', () => {
+    // What an interface layer is: it does not consult the camera at all.
+    new PhaserBinding(
+      world([{}, {}], [0, 0, 0, 1], {x: 100, y: 50}, [], [false, true]),
+      pane(),
+    );
+
+    expect(layers[1]).toMatchObject({x: 0, y: 0});
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {

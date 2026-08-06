@@ -169,6 +169,45 @@ const placesDirectly = (block: Blockly.Block): boolean => {
 };
 
 /**
+ * How a layer responds to the camera, as words rather than numbers.
+ *
+ * The value carries both knobs: a parallax vector, or `fit`. Presets because
+ * the numbers that matter are few and the ones a learner would guess are
+ * wrong — the commonest parallax in a side-scroller is HORIZONTAL ONLY, so the
+ * scenery shifts as the player walks and stays put when they jump, and a sky
+ * that bobs on every jump is what a naive `0.2` on both axes produces.
+ *
+ * It also keeps `fit` and "no parallax" from looking like the same choice.
+ * They are not: a `(0, 0)` layer still zooms with the camera and a `fit` one
+ * does not, so "fixed to the screen" is a word here and never a number.
+ */
+export const LAYER_DEPTH_OPTIONS: Array<[string, string]> = [
+  ['with the camera', '1,1'],
+  ['far behind', '0.2,0'],
+  ['behind', '0.5,0'],
+  ['in front', '1.2,0'],
+  ['fixed to the screen', 'fit'],
+];
+
+/** One entry of a world's layer stack, as `defineLayer` takes it. */
+export interface LayerPlanEntry {
+  id: string;
+  parallax?: {x: number; y: number};
+  fit?: boolean;
+}
+
+/** A depth preset as the engine takes it. */
+const layerDepthInit = (
+  value: string,
+): {parallax?: {x: number; y: number}; fit?: boolean} => {
+  if (value === 'fit') {
+    return {fit: true};
+  }
+  const [x, y] = value.split(',').map(Number);
+  return {parallax: {x: x || 0, y: y || 0}};
+};
+
+/**
  * The layers a world declares, in stack order — the argument order for the
  * hoisted `defineLayer` calls.
  *
@@ -184,8 +223,8 @@ const placesDirectly = (block: Blockly.Block): boolean => {
  * first placement: the first placement builds the World, and a layer cannot be
  * spliced into one that exists (`WorldBuilder.requireUnbuilt`).
  */
-export const layerPlan = (worldBlock: Blockly.Block): string[] => {
-  const plan: string[] = [];
+export const layerPlan = (worldBlock: Blockly.Block): LayerPlanEntry[] => {
+  const plan: LayerPlanEntry[] = [];
   let defaulted = false;
   for (
     let block: Blockly.Block | null = worldBlock.getNextBlock?.() ?? null;
@@ -193,11 +232,15 @@ export const layerPlan = (worldBlock: Blockly.Block): string[] => {
     block = block.getNextBlock?.() ?? null
   ) {
     if (block.type === DEFINE_LAYER) {
-      plan.push(layerId(block.id));
+      plan.push({
+        id: layerId(block.id),
+        ...layerDepthInit(String(block.getFieldValue?.('DEPTH') ?? '1,1')),
+      });
       continue;
     }
     if (!defaulted && placesDirectly(block)) {
-      plan.push(DEFAULT_LAYER_ID);
+      // The default moves with the camera, which is what a game layer wants.
+      plan.push({id: DEFAULT_LAYER_ID, parallax: {x: 1, y: 1}});
       defaulted = true;
     }
   }

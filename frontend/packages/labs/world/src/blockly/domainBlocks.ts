@@ -79,6 +79,7 @@ import {fieldSliderArg} from './fields/FieldSlider';
 import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
+  LAYER_DEPTH_OPTIONS,
   layerIdFromValue,
   layerOf,
   layerOptions,
@@ -2674,8 +2675,11 @@ const worldRemoveActor = defineBlock({
  */
 const worldDefineLayer = defineBlock({
   type: 'world_define_layer',
-  message0: 'define layer %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'Layer'}],
+  message0: 'define layer %1 %2',
+  args0: [
+    {type: 'field_input', name: 'NAME', text: 'Layer'},
+    {type: 'field_dropdown', name: 'DEPTH', options: LAYER_DEPTH_OPTIONS},
+  ],
   message1: 'do %1',
   args1: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
@@ -2684,7 +2688,8 @@ const worldDefineLayer = defineBlock({
   style: 'setup_blocks',
   tooltip:
     'A group of actors drawn together. Layers draw in the order you define ' +
-    'them, so the first one is furthest back.',
+    'them, so the first one is furthest back, and each one chooses how much ' +
+    'it moves when the camera does.',
   generator: {
     javascript(block, generator) {
       return generator.statementToCode(block, 'DO');
@@ -2927,8 +2932,21 @@ const worldWorld = defineBlock({
       // Emitted only when the world declares one: a world with no layers says
       // nothing about layers, and the engine supplies the default.
       const plan = layerPlan(block);
-      const layers = plan.some(id => id !== DEFAULT_LAYER_ID)
-        ? plan.map(id => `world.defineLayer({id: ${str(id)}});\n`).join('')
+      const layers = plan.some(entry => entry.id !== DEFAULT_LAYER_ID)
+        ? plan
+            .map(entry => {
+              const settings = [`id: ${str(entry.id)}`];
+              if (entry.parallax) {
+                settings.push(
+                  `parallax: new WorldLab.Vector(${entry.parallax.x}, ${entry.parallax.y})`,
+                );
+              }
+              if (entry.fit) {
+                settings.push('fit: true');
+              }
+              return `world.defineLayer({${settings.join(', ')}});\n`;
+            })
+            .join('')
         : '';
       return (
         `const world = new WorldLab.WorldBuilder({id: ${str(id_from_name(name))}, name: ${str(
@@ -3346,6 +3364,45 @@ const EFFECT_OWNER_BLOCKS = [
     filters: 'the foreground only — the actors behind it are not affected',
   }),
 ].flat();
+
+/**
+ * Move the camera — where the view is taken from.
+ *
+ * The whole of what a camera does today. Layers respond to it by their own
+ * depth setting, so moving it by (32, 0) scrolls the game a tile, drifts the
+ * scenery a fifth of that, and leaves anything fixed to the screen alone.
+ *
+ * Runtime-shaped but valid anywhere `world` is bound: setting it under
+ * `define world` chooses where the view starts, and setting it in a step is how
+ * a camera follows a player.
+ */
+const worldMoveCamera = defineBlock({
+  type: 'world_move_camera',
+  message0: 'move camera to %1',
+  args0: [{type: 'input_value', name: 'POSITION', check: 'Vector'}],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Point the camera at a place in the world. Everything moves with it except ' +
+    'layers fixed to the screen.',
+  generator: {
+    javascript(block, generator) {
+      const position =
+        generator.valueToCode(block, 'POSITION', Order.NONE) ||
+        'new WorldLab.Vector(0, 0)';
+      return `world.setCameraPosition(${position});\n`;
+    },
+  },
+});
+registerValueShadows('world_move_camera', [
+  {
+    name: 'POSITION',
+    shadow: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}},
+  },
+]);
 
 const worldSetBackgroundColor = defineBlock({
   type: 'world_set_background_color',
@@ -4044,6 +4101,7 @@ export const DOMAIN_BLOCKS = [
   worldIsA,
   worldDefineLayer,
   worldWithinLayer,
+  worldMoveCamera,
   worldAddActor,
   worldRemoveActor,
   worldClearWorld,
@@ -4147,6 +4205,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Grouping what is placed, and what draws in front of what.
       'world_define_layer',
       'world_within_layer',
+      // Where the view is taken from; layers respond by their own depth.
+      'world_move_camera',
       // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
       'world_clear_world',

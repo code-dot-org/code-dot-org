@@ -23,9 +23,11 @@
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
+import type {CameraInit} from '../core/Camera';
 import {rgba, type ColorValue, type Rgba} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
+import {Vector} from '../core/Vector';
 import {World, type BackdropState} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {SpatialRule} from '../rules/spatial';
@@ -81,6 +83,8 @@ export class WorldBuilder {
   private clearColor: Rgba | undefined;
   /** Effects on the layers themselves, by layer id. */
   private readonly layerEffects = new Map<string, AppliedEffectSpec[]>();
+  /** Cameras as declared; the World supplies the default either way. */
+  private readonly cameras: CameraInit[] = [];
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
@@ -206,6 +210,18 @@ export class WorldBuilder {
       return this;
     }
     this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /**
+   * Move a camera. See {@link World.setCameraPosition}.
+   *
+   * Forwards once the world exists, for the reason `set` and `addEffect` do:
+   * `move camera to …` is a block a learner can place under `define world` or
+   * in an event handler, and the same call has to be right in both.
+   */
+  setCameraPosition(position: Vector, id?: string): this {
+    this.getWorld().setCameraPosition(position, id);
     return this;
   }
 
@@ -530,6 +546,7 @@ export class WorldBuilder {
       foregrounds: Object.fromEntries(
         [...this.foregrounds].map(([id, slot]) => [id, {...slot}]),
       ),
+      cameras: this.cameras.map(camera => ({...camera})),
       layerEffects: Object.fromEntries(
         [...this.layerEffects].map(([id, effects]) => [id, [...effects]]),
       ),
