@@ -12,9 +12,8 @@ export interface EdgeSelectionBox {
 
 /**
  * The tightest rectangle, oriented along the straight line joining an edge's
- * endpoints, that contains the edge's clickable band. For the straight line
- * shape this is the band exactly; the curved and stepped shapes bow away from
- * that line, so the rectangle grows to cover the bow.
+ * endpoints, that contains the edge's clickable band. The curved and stepped
+ * line shapes bow away from that line, so the rectangle grows to cover the bow.
  *
  * Coordinates come back in the path's own user space, which for a React Flow
  * edge is canvas space.
@@ -57,8 +56,12 @@ export function computeEdgeSelectionBox(
   }
 
   // The band is centered on the path, so it reaches half its width to either
-  // side. Its ends are square, so it doesn't reach past the endpoints.
+  // side. Extending the same distance past the endpoints keeps the rectangle
+  // clear of the anchor handles that sit there, rather than cutting through
+  // them. Those ends stay grabbable — they drag the anchor, not the whole line.
   const halfBand = bandWidth / 2;
+  minAlong -= halfBand;
+  maxAlong += halfBand;
   minAcross -= halfBand;
   maxAcross += halfBand;
 

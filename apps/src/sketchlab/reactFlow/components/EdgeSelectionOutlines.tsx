@@ -29,8 +29,8 @@ function sameBox(
 
 /**
  * Draws the selection ring for each selected or focused edge: a node-style ring
- * around the band that actually accepts clicks, rotated onto the line rather
- * than boxing its endpoints.
+ * around the band that accepts clicks, rotated onto the line rather than boxing
+ * its endpoints.
  *
  * The ring is measured off the rendered path so it fits every line shape. React
  * Flow renders that path from its own store, which syncs a commit behind the
