@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-07-28T19:47:35.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-logic-based-ai-lesson10-2026 + template",
+    "long_instructions": "**Implement prefix matching, just like you learned about in class.**\r\n\r\n**☑️ Do This:**\r\n\r\n- Ask AI how to check if one string begins with another.\r\n- Complete the `is_match` function. If `prediction` begins with `fragment`, `is_match` should return `True`. Otherwise, it should return `False`.\r\n- Choose your own fragments and predictions to test your program. Be creative! Does the program work for words you frequently type?\r\n- Stop and wait for your teacher before continuing.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "example",
+        "explainCode",
+        "testCase",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-07-28 19:53:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

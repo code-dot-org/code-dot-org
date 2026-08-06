@@ -77,12 +77,10 @@ const createdResponse = {
   user_id: 1,
   student_text: null,
   transcript: null,
-  student_feedback: null,
-  evaluation_result: null,
   is_final: true,
-  evaluated_at: null,
   created_at: '2024-01-01',
-  assets: [{id: 9, asset_type: 'video', upload_url: ''}],
+  // No download_url: bytes are not uploaded yet at create time.
+  assets: [{id: 9, asset_type: 'video'}],
 };
 
 const fakeChallenge = {
@@ -189,6 +187,12 @@ describe('VideoChallenge', () => {
       true,
       {'Content-Type': 'video/webm'}
     );
+    // Kicks off AI evaluation after the upload, fire-and-forget.
+    expect(post).toHaveBeenCalledWith(
+      '/challenge_responses/7/evaluate',
+      '',
+      true
+    );
   });
 
   it('disables submit while upload is in progress', async () => {
@@ -242,5 +246,7 @@ describe('VideoChallenge', () => {
     await waitFor(() =>
       expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled()
     );
+    // A failed upload must not be confirmed as submitted.
+    expect(submitCallback).not.toHaveBeenCalled();
   });
 });

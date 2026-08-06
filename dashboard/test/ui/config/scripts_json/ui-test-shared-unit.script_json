@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-29 14:49:45 UTC",
+    "serialized_at": "2026-07-08 07:03:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -118,11 +118,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test Sample Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Sample Free Response"
+          "UI Test Sample Free Response"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -130,7 +133,7 @@
         "activity_section.key": "d91a3a7c-2208-4e4c-8d56-eae5e0d1858c"
       },
       "level_keys": [
-        "Sample Free Response"
+        "UI Test Sample Free Response"
       ]
     },
     {
@@ -139,11 +142,14 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "UI Test Test longassessment levelgroup new"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Test longassessment levelgroup new"
+          "UI Test Test longassessment levelgroup new"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -151,16 +157,40 @@
         "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56"
       },
       "level_keys": [
-        "Test longassessment levelgroup new"
+        "UI Test Test longassessment levelgroup new"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "blockly:Maze:2_14"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Maze:2_14"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit",
+        "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56"
+      },
+      "level_keys": [
+        "blockly:Maze:2_14"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "Sample Free Response",
+        "level.key": "UI Test Sample Free Response",
         "script_level.level_keys": [
-          "Sample Free Response"
+          "UI Test Sample Free Response"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -170,9 +200,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "Test longassessment levelgroup new",
+        "level.key": "UI Test Test longassessment levelgroup new",
         "script_level.level_keys": [
-          "Test longassessment levelgroup new"
+          "UI Test Test longassessment levelgroup new"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ui-test-shared-unit",
+        "activity_section.key": "a71da6c8-35ea-4498-a75e-1663498a9c56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Maze:2_14",
+        "script_level.level_keys": [
+          "blockly:Maze:2_14"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -209,6 +251,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

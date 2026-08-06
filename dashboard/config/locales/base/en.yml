@@ -507,6 +507,7 @@ en:
       poetry_hoc: 'Poem Art'
       pythonlab: 'Python Lab'
       scratch: 'Scratch'
+      sketchlab: 'Sketch Lab'
       sports: 'Sports'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
@@ -658,7 +659,7 @@ en:
     third_party_login: "You cannot move students to a section that is synced with a third party tool."
     not_correct_participant_type: "You cannot move these users because they do not have permissions to be participants in the new section."
   share:
-    title: "Learn on Code Studio"
+    title: "Learn on %{brand_name}"
     description: "Anyone can learn computer science. Make games, apps and art with code."
     try_hour_of_code: 'Try an Hour of Code!'
   gender:
@@ -741,7 +742,7 @@ en:
     flappy_og_title: "Check out my Flappy Game"
     studio_og_title: "Check out my Play Lab App"
     check_out_what_i_made: "Check out what I made"
-    og_description: "I wrote the code myself with Code.org"
+    og_description: "I wrote the code myself with %{brand_name}"
     phone_number_not_allowed: "It looks like there is a phone number in it. Try changing the text."
     address_not_allowed: "It looks like there is an address in it. Try changing the text."
     email_not_allowed: "It looks like there is an email in it. Try changing the text."

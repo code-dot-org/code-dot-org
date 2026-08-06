@@ -161,9 +161,12 @@ namespace :test do
     report_url = Cdo::PlaywrightReport.upload(File.join(e2e_dir, 'playwright-report'))
     summary = playwright_results_summary(File.join(e2e_dir, 'test-results', 'results.json'))
 
+    playwright_pass_fail_line = playwright_pass_fail_summary(summary, duration)
+    PLAYWRIGHT_ROLLUP[:line] = playwright_rollup_line(passed, playwright_pass_fail_line, report_url)
+
     status = passed ? '<b>✅ PASSED</b>' : '<b>❌ FAILED</b> (non-blocking)'
     report = "Playwright e2e tests for <b>dashboard</b>: #{status}\n"
-    report += playwright_pass_fail_summary(summary, duration)
+    report += playwright_pass_fail_line
     report += %(\nSee <a href="#{report_url}">the HTML report</a>.) if report_url
     ChatClient.log report, color: (passed ? 'green' : 'red')
   end
@@ -180,21 +183,37 @@ namespace :test do
     ChatClient.log "Could not dispatch dtt.yml Playwright run (non-blocking): #{exception.message}", color: 'red'
   end
 
-  # Run the deploy-time UI suites in parallel. If one suite
-  # raises, allow the others to complete, then make sure this task raises.
-  # :playwright_ui rescues its own failure, so it never makes ui_all raise.
-  # After the daemon suites finish, dispatch the experimental off-daemon GHA run
-  # (test daemon only). It runs alongside the daemon :playwright_ui for comparison.
+  # Run the deploy-time UI suites in parallel. If one suite raises, allow the
+  # others to complete, then make sure this task raises. :playwright_ui rescues
+  # its own failure, so it never makes ui_all raise.
+  #
+  # The GHA run is dispatched first because from the ensure block its ~18
+  # minutes straddled the next deploy's Puma restart, which is where its 502s
+  # in late-scheduled firefox and webkit came from.
   timed_task_with_logging :ui_all do
-    Parallel.each(
-      [:eyes_ui, :saucelabs_ui, :devicefarm_desktop_ui, :playwright_ui],
-      in_threads: 4,
-    ) do |target|
-      Rake::Task["test:#{target}"].invoke
+    # Rescued out here too: TimedTaskWithLogging logs its start event before
+    # entering its own rescue, and that must not cost us the suites.
+    begin
+      Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
+    rescue StandardError => exception
+      ChatClient.log "Could not dispatch the GHA Playwright run (non-blocking): #{exception.message}", color: 'red'
     end
-  ensure
-    # dispatch even if a suite raised; the GHA run isn't gated on the daemon suites.
-    Rake::Task['test:dispatch_gha_dtt'].invoke if CDO.test_system?
+
+    # map returns each suite's exception in order, so the rollup needs no state
+    # shared across the threads.
+    exceptions = Parallel.map(UI_SUITES.keys, in_threads: 4) do |target|
+      Rake::Task["test:#{target}"].invoke
+      nil
+    rescue StandardError => exception
+      exception
+    end
+    failures = UI_SUITES.keys.zip(exceptions).to_h.compact
+
+    ChatClient.log ui_all_rollup(failures), color: (failures.empty? ? 'green' : 'red')
+
+    # aws/ci_build turns the DTT red off this raise. Which exception surfaces
+    # is arbitrary.
+    raise failures.values.first unless failures.empty?
   end
 
   timed_task_with_logging :wait_for_test_server do
@@ -611,6 +630,34 @@ GLOBS_AFFECTING_EVERYTHING = %w(
   config/**/*
   docker/ci/**/*
 )
+
+# The suites test:ui_all dispatches, and the names its rollup gives them.
+UI_SUITES = {
+  eyes_ui: 'Eyes',
+  saucelabs_ui: 'Safari + iPad + iPhone UI',
+  devicefarm_desktop_ui: 'Chrome + Firefox UI',
+  playwright_ui: 'Playwright',
+}.freeze
+
+# :playwright_ui never raises, being non-blocking, so ui_all_rollup cannot read
+# its outcome from an exception like the others. It leaves its line here.
+PLAYWRIGHT_ROLLUP = {}
+
+def playwright_rollup_line(passed, pass_fail_line, report_url)
+  line = "#{passed ? '✅' : '❌'} #{UI_SUITES[:playwright_ui]} (non-blocking): #{pass_fail_line}"
+  line += %( <a href="#{report_url}">HTML report</a>.) if report_url
+  line
+end
+
+# The suites report minutes apart and interleaved with everything else in the
+# room, so this is the only place the whole deploy window can be read at once.
+def ui_all_rollup(failures)
+  lines = UI_SUITES.map do |target, label|
+    next PLAYWRIGHT_ROLLUP[:line] if target == :playwright_ui && PLAYWRIGHT_ROLLUP[:line]
+    failures[target] ? "❌ #{label}: #{failures[target].message}." : "✅ #{label}: passed."
+  end
+  ['Deploy-time UI suites:', *lines].join("\n")
+end
 
 def playwright_results_summary(results_json)
   return nil unless File.file?(results_json)

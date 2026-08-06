@@ -1,3 +1,4 @@
+import {Button} from '@mui/material';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -50,7 +51,7 @@ describe('ProgrammingEnvironmentCard', () => {
       'description of spritelab'
     );
     expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
-    expect(wrapper.find('Button').props().href).toBe('/docs/spritelab');
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 
   it('doesnt render description and image for each IDE if there arent ones', () => {
@@ -67,7 +68,7 @@ describe('ProgrammingEnvironmentCard', () => {
     expect(wrapper.text().includes('Sprite Lab'));
     expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(0);
     expect(wrapper.find('img').length).toBe(0);
-    expect(wrapper.find('Button').props().href).toBe('/docs/spritelab');
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 
   it('doesnt render title if there isnt one', () => {
@@ -86,6 +87,6 @@ describe('ProgrammingEnvironmentCard', () => {
       'description of spritelab'
     );
     expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
-    expect(wrapper.find('Button').props().href).toBe('/docs/spritelab');
+    expect(wrapper.find(Button).props().href).toBe('/docs/spritelab');
   });
 });

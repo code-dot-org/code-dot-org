@@ -1,3 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  IconButton as MuiIconButton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -59,9 +64,7 @@ class SoundListEntry extends React.Component {
     const selectedClass = this.props.isSelected
       ? styles.selected
       : styles.notSelected;
-    const playIcon = this.state.isPlaying
-      ? 'fa-circle-pause'
-      : 'fa-circle-play';
+    const playIcon = this.state.isPlaying ? 'circle-pause' : 'circle-play';
 
     return (
       <div
@@ -70,19 +73,32 @@ class SoundListEntry extends React.Component {
         onClick={this.props.assetChosen.bind(null, this.props.soundMetadata)}
       >
         <div className={styles.icon}>
-          <i
+          <MuiIconButton
+            size="small"
             onClick={this.clickSoundControl}
-            className={'fa-solid ' + playIcon + ' fa-2x'}
-          />
+            aria-label={this.state.isPlaying ? 'Pause sound' : 'Play sound'}
+            sx={{'& i': {fontSize: '1.5rem', width: 'auto'}}}
+          >
+            <FontAwesomeV6Icon iconName={playIcon} iconStyle="solid" />
+          </MuiIconButton>
         </div>
         <div className={styles.metadata}>
-          <span className={styles.soundName}>
+          <MuiTypography
+            variant="body3"
+            component="span"
+            sx={{lineHeight: 1.2}}
+          >
             {this.props.soundMetadata.name + '.mp3'}
-          </span>
+          </MuiTypography>
           <br />
-          <span className={styles.time}>
+          <MuiTypography
+            variant="body4"
+            component="span"
+            className={styles.time}
+            sx={{lineHeight: 1.2}}
+          >
             {getTimeString(this.props.soundMetadata.time)}
-          </span>
+          </MuiTypography>
         </div>
       </div>
     );

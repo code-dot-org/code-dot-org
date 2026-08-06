@@ -15,23 +15,29 @@ From `frontend/`:
 `TARGET_URL` overrides the default target (`test-studio.code.org`). With no
 `TARGET_URL`, `test:ui` runs against test-studio.
 
-## Why GitHub Actions, and why not (just) Drone
+## Where this suite runs
 
-This suite runs in three places, each with a distinct purpose:
-
-- **GitHub Actions** (`e2e-tests-ci.yml`) — runs against the deployed
-  `test-studio.code.org` with no CDO secrets and no local Rails build. It proves
-  the suite is portable: runnable outside Drone/DTT by external contributors or
-  sandboxed agents, and horizontally shardable. It gates on changes to this
-  package (and the Playwright version), not on a PR's product code — that code
-  is not visible on test-studio.
 - **Drone** — runs the suite against the PR's own locally-built dashboard + apps,
-  after the Cucumber tests. This is where a PR's code changes are gated.
-- **DTT** — runs the suite against test-studio's dashboard + apps, after the
-  Cucumber tests.
+  before the Cucumber tests. This is where a PR's code changes are gated.
+- **DTT** — runs the suite against test-studio's dashboard + apps, alongside the
+  Cucumber tests: `test:ui_all` starts all four deploy-time suites at once.
+- **DTT → GitHub Actions** (`dtt.yml` → `e2e-tests-ci.yml`) — `test:ui_all` also
+  dispatches a GHA run at the start of its window, fire-and-forget, so the same
+  suite runs off the single daemon on GitHub runners with the full browser
+  matrix. It needs no CDO secrets and no local Rails build, which keeps the
+  suite portable: runnable outside Drone/DTT by external contributors or
+  sandboxed agents, and horizontally sharded.
 
-GitHub Actions is not a stepping stone to Drone; it is a parallel track that
-keeps the suite secret-free and independently runnable.
+Sharding splits the Playwright test report too: each shard can only report on
+the tests it ran. So each writes its slice using Playwright's `blob` reporter, a
+format meant to be merged rather than read, and an `e2e-report` job merges the
+slices into one whole-run report, published as the `e2e-tests-report` artifact
+and printed as a pass/fail list in that job's own log.
+
+A passing `e2e-report` job means the merge succeeded, not that the tests passed.
+If any e2e shard jobs failed, read the merged `e2e-tests-report` artifact to see
+which tests failed. Shard count is the length of the `shard` list in
+`e2e-tests-ci.yml`.
 
 ## Agent skill setup
 

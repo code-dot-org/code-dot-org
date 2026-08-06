@@ -96,8 +96,7 @@ class ProgressPill extends React.Component {
 
     const dynamicStyle = {
       ...((url || onClick) && isHovered && hoverRules),
-      ...(!multiLevelStep &&
-        levelProgressStyle(firstLevel.status, firstLevel.kind)),
+      ...(!multiLevelStep && levelProgressStyle(firstLevel.status)),
     };
 
     // Adjust icon margins if locale is RTL

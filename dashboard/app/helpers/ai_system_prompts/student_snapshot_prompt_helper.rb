@@ -73,15 +73,25 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   FEEDBACK_PROMPT
 
   def self.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    template = fetch_prompt_template("teaching-assistant/lesson-insight", LESSON_INSIGHT_PROMPT_FALLBACK)
+    template = fetch_prompt_template("teaching-assistant/student-snapshot/lesson-insight", LESSON_INSIGHT_PROMPT_FALLBACK)
     variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
-    compile_prompt(template, variables)
+    {
+      content: compile_prompt(template[:prompt], variables),
+      prompt_name: template[:name],
+      prompt_version: template[:version],
+      variables: variables,
+    }
   end
 
   def self.get_feedback_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
-    template = fetch_prompt_template("teaching-assistant/lesson-feedback", LESSON_FEEDBACK_PROMPT_FALLBACK)
+    template = fetch_prompt_template("teaching-assistant/student-snapshot/lesson-feedback", LESSON_FEEDBACK_PROMPT_FALLBACK)
     variables = get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
-    compile_prompt(template, variables)
+    {
+      content: compile_prompt(template[:prompt], variables),
+      prompt_name: template[:name],
+      prompt_version: template[:version],
+      variables: variables,
+    }
   end
 
   def self.compile_prompt(template, variables)
@@ -89,13 +99,14 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
   end
 
   def self.fetch_prompt_template(langfuse_prompt_name, fallback)
-    Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development? || ENV.fetch('CI', nil)) do
-      response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name)
-      response[:status] == :ok ? response[:json]['prompt'] : nil
-    end || fallback
+    label = Rails.env.development? ? 'development' : nil
+    Rails.cache.fetch("langfuse_prompt/#{langfuse_prompt_name}/#{label}", expires_in: 60.minutes, force: Rails.env.test? || Rails.env.development?) do
+      response = LangfuseHelper.fetch_ta_prompt(langfuse_prompt_name, label: label)
+      response[:status] == :ok ? {prompt: response[:json]['prompt'], name: langfuse_prompt_name, version: response[:json]['version']} : nil
+    end || {prompt: fallback, name: nil, version: nil}
   rescue => exception
     Rails.logger.warn("StudentSnapshotPromptHelper.fetch_prompt_template failed for #{langfuse_prompt_name}: #{exception.message}")
-    fallback
+    {prompt: fallback, name: nil, version: nil}
   end
 
   def self.get_snapshot_prompt_variables(lesson_id, unit_id, student_id, teacher_id, section_id)
@@ -106,7 +117,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     objectives = lesson.objectives.sort_by(&:description).map(&:description).to_json
 
     levels = lesson.levels.order(:position)
-    assessment_level = lesson.levels.where(type: 'Pythonlab').last
+    assessment_level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
     level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
 
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}

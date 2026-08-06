@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ChallengeResponsesControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
+  include ActiveJob::TestHelper
 
   let(:student) {create(:student)}
   let(:teacher) {create(:teacher)}
@@ -114,6 +115,23 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         _(response_json['assets'].length).must_equal 1
         _(response_json['assets'].first['download_url']).must_equal 'https://s3.example/download'
       end
+
+      it 'includes their feedback and status but not the scored evaluation' do
+        challenge_response.update!(
+          evaluation_result: {'evaluations' => []},
+          student_feedback: 'Nice work!',
+          evaluation_status: :success
+        )
+
+        get :show, params: {id: challenge_response.id}
+
+        assert_response :success
+        _(response_json['student_feedback']).must_equal 'Nice work!'
+        _(response_json['evaluation_status']).must_equal 'success'
+        %w[evaluation_result evaluated_at].each do |field|
+          _(response_json).wont_include field
+        end
+      end
     end
 
     context "when signed in as the student's teacher" do
@@ -122,11 +140,15 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
         sign_in teacher
       end
 
-      it 'returns the response' do
+      it 'returns the response including the evaluation fields' do
+        challenge_response.update!(evaluation_result: {'evaluations' => []}, evaluation_status: :success)
+
         get :show, params: {id: challenge_response.id}
 
         assert_response :success
         _(response_json['id']).must_equal challenge_response.id
+        _(response_json['evaluation_result']).must_equal({'evaluations' => []})
+        _(response_json['evaluation_status']).must_equal 'success'
       end
     end
 
@@ -135,6 +157,90 @@ class ChallengeResponsesControllerTest < ActionController::TestCase
 
       it 'is forbidden' do
         get :show, params: {id: challenge_response.id}
+        assert_response :forbidden
+      end
+    end
+  end
+
+  describe 'POST #evaluate' do
+    let(:challenge) {create(:challenge, :with_rubric)}
+    let(:challenge_response) {create(:challenge_response, challenge:, user: student, is_final: true)}
+
+    context 'when signed in as the owner student' do
+      before {sign_in student}
+
+      it 'enqueues an evaluation job and returns accepted' do
+        assert_enqueued_with job: EvaluateChallengeResponseJob,
+          args: [{challenge_response_id: challenge_response.id}] do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :accepted
+      end
+
+      it 'rejects a challenge with no rubric' do
+        challenge.update!(rubric: nil)
+
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :unprocessable_entity
+      end
+
+      it 'rejects a response that is not a final submission' do
+        challenge_response.update!(is_final: false)
+
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :unprocessable_entity
+      end
+
+      it 'rejects a response whose asset bytes are not uploaded yet' do
+        create(:challenge_response_asset, challenge_response:)
+        AWS::S3.stubs(:exists_in_bucket).returns(false)
+
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :unprocessable_entity
+      end
+
+      it 'rejects a duplicate request while an evaluation is queued or finished' do
+        challenge_response.update!(evaluation_status: :queued)
+
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :conflict
+      end
+
+      it 'allows re-requesting after a failed evaluation' do
+        challenge_response.update!(evaluation_status: :failure)
+
+        assert_enqueued_with job: EvaluateChallengeResponseJob do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
+        assert_response :accepted
+      end
+    end
+
+    context "when signed in as the student's teacher" do
+      before do
+        create(:follower, section: create(:section, user: teacher), student_user: student)
+        sign_in teacher
+      end
+
+      it 'is forbidden' do
+        assert_no_enqueued_jobs do
+          post :evaluate, params: {id: challenge_response.id}
+        end
+
         assert_response :forbidden
       end
     end

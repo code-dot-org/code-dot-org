@@ -176,11 +176,14 @@ export async function handleRunClick(
       /* onValidationResult */ onValidationResult
     );
 
-    if (overrideSources) {
+    if (overrideSources && overrideValidation) {
+      // Levelbuilder-only endpoint; only start mode sets overrideValidation.
       activeConnection.connectJavabuilderWithOverrides(
         overrideSources,
         overrideValidation
       );
+    } else if (overrideSources) {
+      activeConnection.connectJavabuilderWithOverrideSources(overrideSources);
     } else {
       activeConnection.connectJavabuilder();
     }

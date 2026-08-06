@@ -1279,16 +1279,9 @@ FactoryBot.define do
   # ProjectsController tests, to fail with: `Mysql2::Error::TimeoutError`
   # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
-    transient do
-      owner {create(:user)}
-    end
+    association :owner, factory: :user
 
-    updated_ip {'127.0.0.1'}
-
-    after(:build) do |project, evaluator|
-      project_storage = create(:project_storage, user_id: evaluator.owner.id)
-      project.storage_id = project_storage.id
-    end
+    updated_ip {Faker::Internet.unique.public_ip_v4_address}
   end
 
   factory :featured_project do
@@ -1468,6 +1461,31 @@ FactoryBot.define do
   factory :challenge do
     association :lesson
     question {'What is 2 + 2?'}
+
+    trait :with_rubric do
+      rubric do
+        {
+          'criteria' => [
+            {
+              'key' => 'accuracy',
+              'description' => 'The answer is mathematically correct',
+              'scale' => [
+                {'level' => 'meets', 'description' => 'Answer is correct'},
+                {'level' => 'developing', 'description' => 'Answer is partially correct'},
+              ],
+            },
+            {
+              'key' => 'explanation',
+              'description' => 'The reasoning is clearly explained',
+              'scale' => [
+                {'level' => 'meets', 'description' => 'Reasoning is complete and clear'},
+                {'level' => 'developing', 'description' => 'Reasoning is incomplete'},
+              ],
+            },
+          ],
+        }
+      end
+    end
   end
 
   factory :challenge_response do
@@ -2122,11 +2140,6 @@ FactoryBot.define do
     after(:build) do |contact, evaluator|
       contact.data[:updated_at] = evaluator.data_updated_at
     end
-  end
-
-  factory :contact_rollups_final do
-    sequence(:email) {|n| "contact_#{n}@example.domain"}
-    data {{'opt_in' => true}}
   end
 
   factory :contact_rollups_pardot_memory do

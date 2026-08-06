@@ -137,7 +137,7 @@ class ActivityCard extends Component {
                       value={activity.displayName}
                       style={{width: 200}}
                       onChange={this.handleChangeDisplayName}
-                      className="uitest-activity-name-input"
+                      className="uitest-activity-name-input form-control"
                     />
                   </label>
                 </div>
@@ -148,7 +148,7 @@ class ActivityCard extends Component {
                   value={activity.duration}
                   style={{width: 35}}
                   onChange={this.handleChangeDuration}
-                  className="uitest-activity-duration-input"
+                  className="uitest-activity-duration-input form-control"
                 />
                 <span style={{fontSize: 10}}>{'(mins)'}</span>
               </label>
