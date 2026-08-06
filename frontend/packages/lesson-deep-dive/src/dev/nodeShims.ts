@@ -5,6 +5,9 @@
 // that needs `process`.
 //
 // Imported first from main.tsx so it runs before any apps module evaluates.
+//
+// TODO: drop this once nothing in the closure reads Node globals in the
+// browser — redactable-markdown is the one holdout.
 
 const globals = globalThis as unknown as Record<string, unknown>;
 

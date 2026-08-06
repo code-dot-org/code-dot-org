@@ -10,17 +10,17 @@ in.
 ## Dev shell
 
 ```bash
-yarn dev            # http://localhost:5173/?enableExperiments=lesson-tutor
+yarn dev            # http://localhost:5173/
 ```
 
-The container returns `null` unless the `lesson-tutor` experiment is on, so the
-query parameter is required. Other knobs:
+In Studio the flow is gated behind the `lesson-tutor` and
+`lesson-tutor-challenge` experiments. The shell turns both on by default —
+running it is already the decision to look at the feature. Knobs:
 
-| Parameter                                     | Effect                                                                                                 |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `?enableExperiments=lesson-tutor`             | required — gates the whole flow                                                                        |
-| `?enableExperiments=…,lesson-tutor-challenge` | adds the whiteboard/video challenge modality                                                           |
-| `?displayName=Ada`                            | greeting name; absent renders the "friend" fallback Studio shows until `/api/v1/users/current` returns |
+| Parameter                    | Effect                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `?enableExperiments=foo,bar` | turns on further experiments, on top of the two the feature needs                                      |
+| `?displayName=Ada`           | greeting name; absent renders the "friend" fallback Studio shows until `/api/v1/users/current` returns |
 
 ### Prerequisite
 
