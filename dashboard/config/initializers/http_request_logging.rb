@@ -8,15 +8,19 @@
 # and Honeybadger already capture it.
 #
 # Only relevant when lograge is enabled (production, staging, adhoc, managed
-# test). When it is disabled the subscriber is never attached and this prepend
+# test). When it is disabled, the subscriber is never attached and this prepend
 # sits inert.
 require 'request_store'
 require 'cdo/http_request_logging'
 
 module Cdo
   # Replaces lograge's fixed-severity, always-emit logging with the status-based
-  # policy above. Prepended onto Lograge::RequestLogSubscriber (whose
-  # process_exception is an alias of process_action, so this covers both).
+  # policy above. Prepended onto Lograge::RequestLogSubscriber.
+  #
+  # The subscriber handles two events: process_action.action_controller for a
+  # request that completes, and process_exception.action_controller (via the
+  # lograge fork's DebugExceptions hook) for one whose exception reaches the
+  # DebugExceptions middleware.
   module LogragePerRequestSeverity
     def process_action(event)
       return if Lograge.ignore?(event)
@@ -33,6 +37,10 @@ module Cdo
       return unless Cdo::HttpRequestLogging.should_log?(severity)
 
       logger.public_send(severity, Lograge.formatter.call(data))
+    end
+
+    def process_exception(event)
+      process_action(event)
     end
   end
 end

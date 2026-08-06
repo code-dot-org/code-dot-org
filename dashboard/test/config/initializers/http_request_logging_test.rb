@@ -5,7 +5,8 @@ require 'request_store'
 # config/initializers/http_request_logging.rb. lograge is disabled in unit tests
 # (so its subscriber is never attached to live requests), but the initializer
 # still prepends Cdo::LogragePerRequestSeverity onto the subscriber class at load
-# time, so we can drive its process_action directly with a synthetic event.
+# time, so we can drive its process_action and process_exception directly with
+# synthetic events.
 class HttpRequestLoggingTest < ActiveSupport::TestCase
   # Records (severity, message) pairs in place of the real syslog logger.
   class CapturingLogger
@@ -103,6 +104,18 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
     refute data.key?('backtrace')
   end
 
+  test 'routes process_exception through the override, not stock lograge' do
+    # Regression guard: lograge binds process_exception to the original
+    # process_action via `alias` at class-definition time, so a prepend that
+    # overrides only process_action would leave this event logging at stock
+    # :info. It must instead pick up our status-derived severity.
+    @subscriber.process_exception(exception_event(message: 'kaboom'))
+    severity, data = only_entry
+    assert_equal :error, severity
+    assert_equal 500, data['status']
+    assert_equal 'RuntimeError: kaboom', data['error']
+  end
+
   test 'drops sub-threshold lines but still claims the request' do
     Cdo::HttpRequestLogging.stubs(:threshold).returns(:warn)
     @subscriber.process_action(event(status: 200)) # info, below warn
@@ -110,11 +123,12 @@ class HttpRequestLoggingTest < ActiveSupport::TestCase
     assert RequestStore.store[Cdo::HttpRequestLogging::LOGGED_KEY]
   end
 
-  test 'logs each request only once across process_action and process_exception' do
+  test 'logs each request once across the process_action/process_exception pair' do
+    # A raising action fires process_action first, then process_exception via
+    # the DebugExceptions hook. The second delivery must be deduped, not logged
+    # a second time.
     @subscriber.process_action(event(status: 500))
-    # process_exception is an alias; a second delivery for the same request
-    # must not produce a second line.
-    @subscriber.process_action(event(status: 500))
+    @subscriber.process_exception(exception_event(message: 'boom'))
     assert_equal 1, @logger.entries.size
   end
 end
