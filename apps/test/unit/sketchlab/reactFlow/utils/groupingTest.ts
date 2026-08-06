@@ -106,7 +106,9 @@ describe('getSelectionMoveIds', () => {
       makeLineAnchorNode('a2', 0, 0),
     ];
     const edges: TestEdge[] = [{id: 'line', source: 'a1', target: 'a2'}];
-    expect(getSelectionMoveIds(new Set(['a1', 'a2']), nodes, edges)).toEqual([]);
+    expect(getSelectionMoveIds(new Set(['a1', 'a2']), nodes, edges)).toEqual(
+      []
+    );
   });
 
   it('moves a line together with another node', () => {
@@ -171,10 +173,9 @@ describe('getSelectionMoveIds', () => {
 
   it('ignores selected ids with no matching node', () => {
     const nodes = [makeTextNode('a', 0, 0), makeTextNode('b', 0, 0)];
-    expect(getSelectionMoveIds(new Set(['a', 'b', 'gone']), nodes, [])).toEqual([
-      'a',
-      'b',
-    ]);
+    expect(getSelectionMoveIds(new Set(['a', 'b', 'gone']), nodes, [])).toEqual(
+      ['a', 'b']
+    );
   });
 });
 
