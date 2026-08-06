@@ -124,7 +124,8 @@ describe('safetyHelpers', () => {
           ],
           output: expect.anything(),
           model: expect.anything(),
-        })
+        }),
+        {phase: 'llm_safety_judge'}
       );
       expect(mockGetModel).toHaveBeenCalledWith(
         AiChatModelIds.GEMINI_2_5_FLASH
