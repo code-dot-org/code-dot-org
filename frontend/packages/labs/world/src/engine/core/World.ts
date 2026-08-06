@@ -111,9 +111,9 @@ export interface WorldSnapshot {
    * they are in `effectIds` with everyone else's, so gaining or losing one is
    * structural exactly as it is on an actor.
    */
-  backdrops: Array<{layer: string; sprite?: string}>;
+  backdrops: SlotValues[];
   /** The same for what each layer draws in front of its actors. */
-  foregrounds: Array<{layer: string; sprite?: string}>;
+  foregrounds: SlotValues[];
   /** The one colour behind everything — a value, patched like the sky above. */
   clearColor: Rgba;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
@@ -121,6 +121,26 @@ export interface WorldSnapshot {
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
   actors: Record<string, Record<string, unknown>>;
 }
+
+/**
+ * One image slot's values, as the snapshot carries them.
+ *
+ * All of it patchable. An offset is written every tick by a drifting layer, so
+ * restarting the game for one would restart it sixty times a second.
+ */
+export interface SlotValues {
+  layer: string;
+  sprite?: string;
+  offset: {x: number; y: number};
+  repeat: boolean;
+}
+
+const slotValues = (layer: string, slot: LayerSlot): SlotValues => ({
+  layer,
+  ...(slot.sprite === undefined ? {} : {sprite: slot.sprite}),
+  offset: {x: slot.offset.x, y: slot.offset.y},
+  repeat: slot.repeat,
+});
 
 /**
  * A renderer-friendly view of one positional actor. The driver's Phaser binding
@@ -163,6 +183,10 @@ export interface BackdropState {
   sprite?: string;
   /** Effects filtering this image's own pixels — not the whole camera. */
   effects: readonly AppliedEffectSpec[];
+  /** Where it sits, in world pixels — author-driven motion (core/Layer). */
+  offset: {x: number; y: number};
+  /** Whether it tiles rather than stretching to the surface. */
+  repeat: boolean;
 }
 
 /**
@@ -337,6 +361,8 @@ export class World {
         if (layer) {
           layer[which].sprite = slot.sprite;
           layer[which].effects = [...slot.effects];
+          layer[which].offset = new Vector(slot.offset.x, slot.offset.y);
+          layer[which].repeat = slot.repeat;
         }
       }
     }
@@ -625,6 +651,40 @@ export class World {
    */
   setBackground(sprite: string | undefined, layer = DEFAULT_LAYER_ID): this {
     this.backdropAt(layer).sprite = sprite;
+    return this;
+  }
+
+  /**
+   * Slide a layer's background, in world pixels.
+   *
+   * Motion the author owns, independent of any camera — which is what makes
+   * drifting clouds expressible before cameras exist at all (core/Layer). Pair
+   * it with `setBackgroundRepeat` unless the image is meant to leave a gap.
+   */
+  setBackgroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    // Copied, never adopted. `Vector.from` hands back the same instance when it
+    // is already a Vector, and a step writing this every tick would then share
+    // one object with the world — mutating it in place would move the sky with
+    // no call at all.
+    this.slotAt(layer, 'background').offset = new Vector(offset.x, offset.y);
+    return this;
+  }
+
+  /** The same for a layer's foreground. */
+  setForegroundOffset(offset: Vector, layer = DEFAULT_LAYER_ID): this {
+    this.slotAt(layer, 'foreground').offset = new Vector(offset.x, offset.y);
+    return this;
+  }
+
+  /** Tile a layer's background rather than stretching it to the surface. */
+  setBackgroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    this.slotAt(layer, 'background').repeat = repeat;
+    return this;
+  }
+
+  /** The same for a layer's foreground. */
+  setForegroundRepeat(repeat: boolean, layer = DEFAULT_LAYER_ID): this {
+    this.slotAt(layer, 'foreground').repeat = repeat;
     return this;
   }
 
@@ -1101,18 +1161,12 @@ export class World {
       ),
       // Per layer, in stack order, plus the world's one colour. Values, not
       // structure: changing the sky patches the running game.
-      backdrops: this.layerList.map(layer => ({
-        layer: layer.id,
-        ...(layer.background.sprite === undefined
-          ? {}
-          : {sprite: layer.background.sprite}),
-      })),
-      foregrounds: this.layerList.map(layer => ({
-        layer: layer.id,
-        ...(layer.foreground.sprite === undefined
-          ? {}
-          : {sprite: layer.foreground.sprite}),
-      })),
+      backdrops: this.layerList.map(layer =>
+        slotValues(layer.id, layer.background),
+      ),
+      foregrounds: this.layerList.map(layer =>
+        slotValues(layer.id, layer.foreground),
+      ),
       clearColor: [...this.clearColor] as Rgba,
       world,
       actors,

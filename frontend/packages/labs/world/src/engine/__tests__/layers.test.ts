@@ -20,6 +20,13 @@ const actor = (id: string) =>
 
 const world = () => new WorldBuilder({id: 'w', name: 'W'}).instantiate();
 
+/** A slot nothing has touched: nothing drawn, where it was, stretched. */
+const EMPTY_SLOT = {
+  effects: [],
+  offset: new Vector(0, 0),
+  repeat: false,
+};
+
 /** A minimal parsed `.effect`, for the slots that carry effects. */
 const RIPPLE: EffectDocument = {
   version: 1,
@@ -140,7 +147,7 @@ describe('a layer’s background', () => {
       .instantiate();
 
   it('is empty on every layer until something says otherwise', () => {
-    expect(built().backdropSnapshot()).toEqual([{effects: []}, {effects: []}]);
+    expect(built().backdropSnapshot()).toEqual([EMPTY_SLOT, EMPTY_SLOT]);
   });
 
   it('is reported in stack order, one per layer', () => {
@@ -196,10 +203,7 @@ describe('a layer’s foreground', () => {
   });
 
   it('is empty on every layer until something says otherwise', () => {
-    expect(built().foregroundSnapshot()).toEqual([
-      {effects: []},
-      {effects: []},
-    ]);
+    expect(built().foregroundSnapshot()).toEqual([EMPTY_SLOT, EMPTY_SLOT]);
   });
 
   it('carries effects under a key of its own', () => {
@@ -212,6 +216,64 @@ describe('a layer’s foreground', () => {
     const {effectIds} = world.snapshot();
     expect(effectIds).toContain('["backdrop:game","effects/ripple"]');
     expect(effectIds).toContain('["foreground:game","effects/ripple"]');
+  });
+});
+
+describe('sliding a slot', () => {
+  // The other term in `camera position (*) parallax + offset`. A factor ties an
+  // image to the camera and to nothing else, so a background on a still camera
+  // never moves however it is set — drift is the part that works before there
+  // is a camera at all.
+  const built = () =>
+    new WorldBuilder({id: 'w', name: 'W'})
+      .defineLayer({id: 'sky'})
+      .defineLayer({id: DEFAULT_LAYER_ID})
+      .instantiate();
+
+  it('starts where it is, stretched', () => {
+    const [slot] = built().backdropSnapshot();
+
+    expect(slot.offset).toEqual(new Vector(0, 0));
+    expect(slot.repeat).toBe(false);
+  });
+
+  it('moves the slot it is told, and no other', () => {
+    const world = built();
+    world.setBackgroundOffset(new Vector(12, -4), 'sky');
+
+    expect(world.backdropSnapshot()[0].offset).toEqual(new Vector(12, -4));
+    expect(world.backdropSnapshot()[1].offset).toEqual(new Vector(0, 0));
+    // A layer's two slots drift independently — fog and sky at once.
+    expect(world.foregroundSnapshot()[0].offset).toEqual(new Vector(0, 0));
+  });
+
+  it('copies the vector rather than holding the caller’s', () => {
+    // A step writing this every tick would otherwise share one Vector with the
+    // world, and mutating it in place would move the sky with no call at all.
+    const world = built();
+    const drift = new Vector(1, 0);
+    world.setBackgroundOffset(drift, 'sky');
+    // Reaching past `readonly`, which is what a mutating step would do anyway.
+    (drift as {x: number}).x = 99;
+
+    expect(world.backdropSnapshot()[0].offset.x).toBe(1);
+  });
+
+  it('is a VALUE in the snapshot, beside what the slot draws', () => {
+    // Written every tick by a drifting layer: structural would restart the game
+    // sixty times a second.
+    const world = built();
+    world.setBackgroundOffset(new Vector(8, 0), 'sky');
+    world.setBackgroundRepeat(true, 'sky');
+
+    const [slot] = world.snapshot().backdrops;
+    expect(slot).toMatchObject({
+      layer: 'sky',
+      offset: {x: 8, y: 0},
+      repeat: true,
+    });
+    // And not in the structure, which is what decides reload versus patch.
+    expect(world.snapshot().layers.join()).not.toContain('8');
   });
 });
 

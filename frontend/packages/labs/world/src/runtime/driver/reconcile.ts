@@ -13,6 +13,14 @@
 
 import type {ReloadMode} from '../messages';
 
+/** One image slot's patchable values; spelled out, like everything else here. */
+interface SlotValues {
+  layer: string;
+  sprite?: string;
+  offset: {x: number; y: number};
+  repeat: boolean;
+}
+
 // The subset of the world-lab `World` this module needs. Structural typing keeps
 // it decoupled from the engine instance the learner's module created.
 interface ReconcilableWorld {
@@ -34,10 +42,14 @@ interface ReconcilableWorld {
     >;
     /** The graph behind each effect in play, hashed, by module path. */
     effectDocs: Record<string, string>;
-    /** What each layer's background draws, in stack order. */
-    backdrops: Array<{layer: string; sprite?: string}>;
+    /**
+     * What each layer's background draws, in stack order, with the values that
+     * place it. All patchable — an offset is written every tick by a drifting
+     * layer, and restarting for one would restart sixty times a second.
+     */
+    backdrops: SlotValues[];
     /** And what each draws in front of its actors. */
-    foregrounds: Array<{layer: string; sprite?: string}>;
+    foregrounds: SlotValues[];
     /** The one colour behind everything (engine color.ts). */
     clearColor: [number, number, number, number];
     world: Record<string, unknown>;
@@ -47,6 +59,10 @@ interface ReconcilableWorld {
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: string): unknown;
   setForeground(sprite: string | undefined, layer?: string): unknown;
+  setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
+  setForegroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
+  setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
+  setForegroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   setEffectValues(
@@ -185,11 +201,15 @@ export function reconcile(
     for (const [actorId, path, value] of actorEdits) {
       running.setActorProperty(actorId, path, value);
     }
-    for (const backdrop of snapshot.backdrops) {
-      running.setBackground(backdrop.sprite, backdrop.layer);
+    for (const slot of snapshot.backdrops) {
+      running.setBackground(slot.sprite, slot.layer);
+      running.setBackgroundOffset(slot.offset, slot.layer);
+      running.setBackgroundRepeat(slot.repeat, slot.layer);
     }
-    for (const foreground of snapshot.foregrounds) {
-      running.setForeground(foreground.sprite, foreground.layer);
+    for (const slot of snapshot.foregrounds) {
+      running.setForeground(slot.sprite, slot.layer);
+      running.setForegroundOffset(slot.offset, slot.layer);
+      running.setForegroundRepeat(slot.repeat, slot.layer);
     }
     // One sky, the world's — not a layer's (World.setBackgroundColor).
     running.setBackgroundColor(snapshot.clearColor);

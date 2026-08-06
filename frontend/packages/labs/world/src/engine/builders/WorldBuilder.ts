@@ -288,7 +288,7 @@ export class WorldBuilder {
   ): BackdropState & {effects: AppliedEffectSpec[]} {
     let slot = slots.get(layer);
     if (!slot) {
-      slot = {effects: []};
+      slot = {effects: [], offset: {x: 0, y: 0}, repeat: false};
       slots.set(layer, slot);
     }
     return slot;

@@ -20,6 +20,10 @@ interface FakeImage {
   width: number;
   height: number;
   destroyed: boolean;
+  /** Set on the repeating kind, with the texture scroll it was given. */
+  tiled?: boolean;
+  tileX?: number;
+  tileY?: number;
 }
 let images: FakeImage[] = [];
 /** The most recent game's scene, so a test can run frames against it. */
@@ -52,8 +56,26 @@ vi.mock('phaser', () => {
       this.record.height = height;
       return this;
     }
+    setPosition(x: number, y: number) {
+      this.record.x = x;
+      this.record.y = y;
+      return this;
+    }
     destroy() {
       this.record.destroyed = true;
+    }
+  }
+  /** The repeating kind: same record, plus the texture scroll a tile has. */
+  class TileSprite extends Image {
+    setSize(width: number, height: number) {
+      this.record.width = width;
+      this.record.height = height;
+      return this;
+    }
+    setTilePosition(x: number, y: number) {
+      this.record.tileX = x;
+      this.record.tileY = y;
+      return this;
     }
   }
   const scene = {
@@ -74,6 +96,20 @@ vi.mock('phaser', () => {
         };
         images.push(record);
         return new Image(record);
+      },
+      tileSprite(x: number, y: number, _w: number, _h: number, key: string) {
+        const record: FakeImage = {
+          key,
+          x,
+          y,
+          depth: 0,
+          width: 0,
+          height: 0,
+          destroyed: false,
+          tiled: true,
+        };
+        images.push(record);
+        return new TileSprite(record);
       },
       rectangle: () => ({setDepth: () => {}}),
     },
@@ -104,6 +140,7 @@ vi.mock('phaser', () => {
     GameObjects: {
       Components: {TransformMatrix: class {}},
       Image,
+      TileSprite,
     },
   };
   return {default: Phaser, ...Phaser};
@@ -123,7 +160,11 @@ import {PhaserBinding} from '../PhaserBinding';
 
 /** A World stub whose backdrop is whatever a test says it is. */
 const world = (
-  backdrops: Array<{sprite?: string}>,
+  backdrops: Array<{
+    sprite?: string;
+    offset?: {x: number; y: number};
+    repeat?: boolean;
+  }>,
   clearColor: [number, number, number, number] = [0, 0, 0, 1],
 ) =>
   ({
@@ -132,8 +173,14 @@ const world = (
     effects: () => [],
     renderSnapshot: () => [],
     backdropSnapshot: () =>
-      backdrops.map(backdrop => ({...backdrop, effects: []})),
-    foregroundSnapshot: () => backdrops.map(() => ({effects: []})),
+      backdrops.map(backdrop => ({
+        offset: {x: 0, y: 0},
+        repeat: false,
+        ...backdrop,
+        effects: [],
+      })),
+    foregroundSnapshot: () =>
+      backdrops.map(() => ({effects: [], offset: {x: 0, y: 0}, repeat: false})),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
     backdropColor: () => clearColor,
     snapshot: () => ({world: {}}),
@@ -180,6 +227,40 @@ describe('drawing the backdrop', () => {
     // Explicit depths rather than creation order: a background set mid-game is
     // made after the actors and would otherwise cover them.
     expect(images.map(image => image.depth)).toEqual([0, 10]);
+  });
+
+  it('slides a stretched slot bodily, which is where the gap comes from', () => {
+    // Offset is motion the author owns, and on a stretched image it moves the
+    // picture off its own edge. Legal, and almost always a sign that `repeat`
+    // was wanted (core/Layer).
+    new PhaserBinding(
+      world([{sprite: 'cave.png', offset: {x: 12, y: -4}}]),
+      pane(),
+    );
+
+    expect(images[0]).toMatchObject({
+      x: VIEWPORT_WIDTH / 2 + 12,
+      y: VIEWPORT_HEIGHT / 2 - 4,
+    });
+  });
+
+  it('tiles a repeating slot, scrolling the texture under it', () => {
+    // A TileSprite rather than an Image, because only that wraps — so the slot
+    // stays put covering the surface and the picture moves inside it.
+    new PhaserBinding(
+      world([{sprite: 'cave.png', repeat: true, offset: {x: 8, y: 0}}]),
+      pane(),
+    );
+
+    expect(images[0]).toMatchObject({
+      tiled: true,
+      x: VIEWPORT_WIDTH / 2,
+      y: VIEWPORT_HEIGHT / 2,
+      // Negated, so a rising offset moves the picture the way a rising
+      // position moves an actor.
+      tileX: -8,
+      tileY: -0,
+    });
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {
