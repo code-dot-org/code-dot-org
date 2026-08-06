@@ -41,10 +41,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 7.0
 
-    # Continue to use old, 6.1-only cache format version while we figure out
-    # some issues with 7.0
-    config.active_support.cache_format_version = 6.1
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host

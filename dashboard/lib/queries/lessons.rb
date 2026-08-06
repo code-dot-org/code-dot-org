@@ -6,6 +6,6 @@ class Queries::Lessons
   # @param lesson [Lesson]
   # @return [Level, nil]
   def self.get_assessment_level_for_lesson(lesson)
-    lesson.levels.where(type: 'Pythonlab').last
+    lesson.levels.where(type: %w[Pythonlab Weblab2]).last
   end
 end
