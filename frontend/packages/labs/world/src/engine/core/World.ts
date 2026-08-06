@@ -807,8 +807,23 @@ export class World {
     return states;
   }
 
-  /** Remove every actor (used by `WorldBuilder.clear`). */
+  /**
+   * Remove every actor (used by `WorldBuilder.clear` and the `clear world` block).
+   *
+   * DEFERRED while a tick is running, exactly as {@link removeActor} is and for
+   * the same reason: clearing the world is something a handler does — "the
+   * player reached the exit, take it all away" — and a handler runs inside the
+   * walk of the very list this empties. Emptying it underneath that walk skips
+   * whatever came next. `WorldBuilder.clear` calls this at setup, where nothing
+   * is ticking and it takes effect at once.
+   */
   clearActors(): void {
+    if (this.ticking) {
+      for (const actor of this.actorList) {
+        this.leaving.add(actor);
+      }
+      return;
+    }
     for (const actor of this.actorList) {
       actor.world = undefined;
     }

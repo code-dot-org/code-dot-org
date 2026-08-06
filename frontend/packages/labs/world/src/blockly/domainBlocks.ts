@@ -2444,6 +2444,36 @@ const worldRemoveActor = defineBlock({
   },
 });
 
+/**
+ * Take every actor out of the world at once.
+ *
+ * `remove actor` in bulk, and the block a learner reaches for at the end of a
+ * level: the exit is touched, the room empties, the next one is placed. Doing it
+ * one at a time needs a loop over a list that is being emptied as it is walked,
+ * which is the sort of thing that works until it does not.
+ *
+ * Runtime-only, like `remove actor`: under `define world` the name `world` is
+ * the builder, and the world it is building has nothing in it yet.
+ *
+ * No socket and no field — "all of them" is the whole meaning of the block.
+ */
+const worldClearWorld = defineBlock({
+  type: 'world_clear_world',
+  message0: 'clear world',
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension, runtimeWorldExtension],
+  style: 'behavior_blocks',
+  tooltip:
+    'Remove every actor from the world. Nothing is left to draw or for the ' +
+    'rules to see. The world itself, and the rules it uses, stay as they are.',
+  generator: {
+    javascript() {
+      return 'world.clearActors();\n';
+    },
+  },
+});
+
 const worldCreateInMap = defineBlock({
   type: 'world_create_in_map',
   message0: 'create %1 in map %2',
@@ -3623,6 +3653,7 @@ export const DOMAIN_BLOCKS = [
   worldIsA,
   worldAddActor,
   worldRemoveActor,
+  worldClearWorld,
   worldCreateInMap,
   worldLoadMap,
   worldWorld,
@@ -3716,8 +3747,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Placing actors: from a map file, or one at a time.
       'world_load_map',
       'world_add_actor',
-      // …and taking one back out again, while the game runs.
+      // …and taking one back out again, while the game runs — or all of them.
       'world_remove_actor',
+      'world_clear_world',
       // Many of one kind, arranged on a map that lives in this world (MAPS.md).
       'world_create_in_map',
       'world_add_world_effect',
