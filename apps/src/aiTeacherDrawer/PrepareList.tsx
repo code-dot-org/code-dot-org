@@ -144,9 +144,8 @@ const PrepareList: React.FC<PrepareListProps> = ({onNavigateToChats}) => {
               avatarEmoji={section.avatar_emoji ?? 0}
               lesson={lesson}
               onSectionClick={
-                lesson != null
-                  ? () =>
-                      setDetailInfo({lesson, sectionName: section.name})
+                lesson !== null
+                  ? () => setDetailInfo({lesson, sectionName: section.name})
                   : undefined
               }
             />

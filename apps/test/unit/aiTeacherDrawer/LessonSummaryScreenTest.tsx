@@ -16,7 +16,7 @@ jest.mock('@cdo/apps/aiDifferentiation/redux', () => ({
 }));
 jest.mock('@cdo/apps/sharedComponents/Spinner', () => ({
   __esModule: true,
-  default: () => <div data-testid="spinner" />,
+  default: () => <div role="status" aria-label="Loading" />,
 }));
 
 const LESSON = {
@@ -67,12 +67,14 @@ describe('LessonSummaryScreen', () => {
   it('shows spinner while loading', () => {
     (HttpClient.fetchJson as jest.Mock).mockReturnValue(new Promise(() => {}));
     render(<LessonSummaryScreen {...DEFAULT_PROPS} />);
-    expect(screen.getByTestId('spinner')).toBeInTheDocument();
+    expect(screen.getByRole('status', {name: 'Loading'})).toBeInTheDocument();
   });
 
   it('always shows the Teaching Tips heading', async () => {
     await renderAndSettle(<LessonSummaryScreen {...DEFAULT_PROPS} />);
-    expect(screen.getByRole('heading', {name: 'Teaching Tips'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'Teaching Tips'})
+    ).toBeInTheDocument();
   });
 
   it('shows summary content after successful fetch', async () => {
@@ -116,10 +118,7 @@ describe('LessonSummaryScreen', () => {
 
   it('shows no-summary message when lesson has no lesson_id', async () => {
     await renderAndSettle(
-      <LessonSummaryScreen
-        {...DEFAULT_PROPS}
-        lesson={{completed_unit: true}}
-      />
+      <LessonSummaryScreen {...DEFAULT_PROPS} lesson={{completed_unit: true}} />
     );
     expect(
       screen.getByText(/no lesson summary is available/i)
