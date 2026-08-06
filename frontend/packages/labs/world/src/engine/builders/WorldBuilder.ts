@@ -24,6 +24,7 @@ import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
 import type {AnimationDef} from '../core/animationTypes';
 import {rgba, type ColorValue} from '../core/color';
+import type {LayerInit} from '../core/Layer';
 import type {AppliedEffectSpec, Property, Rule} from '../core/types';
 import {DEFAULT_BACKDROP_COLOR, World, type BackdropState} from '../core/World';
 import {AnimationRule} from '../rules/animation';
@@ -68,6 +69,9 @@ export class WorldBuilder {
   private readonly backdrops: Array<
     BackdropState & {effects: AppliedEffectSpec[]}
   > = [];
+  // Layers as declared, back to front. Empty until something says otherwise;
+  // the World fills in the default layer either way.
+  private readonly layers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
   /** The live world, once something has needed one. See `getWorld`. */
   private built: World | undefined;
@@ -291,15 +295,38 @@ export class WorldBuilder {
   }
 
   /**
-   * Place one actor now, and hand it back so the caller can set values on it.
+   * Declare a layer, at the back of the stack as it stands.
+   *
+   * Declaration order IS draw order (core/Layer), so this is one of the calls
+   * that must come before the world is built: a layer added afterwards would
+   * have to be spliced into a scene graph the driver has already made, and the
+   * ordering a learner can see in their blocks would stop being the ordering
+   * they get.
    */
-  addActor(builder: ActorBuilder, id?: string, type?: string): Actor {
+  defineLayer(layer: LayerInit): this {
+    this.requireUnbuilt('define layer');
+    this.layers.push(layer);
+    return this;
+  }
+
+  /**
+   * Place one actor now, and hand it back so the caller can set values on it.
+   *
+   * `layer` names one declared by {@link defineLayer}; omitted, or naming one
+   * that is not there, it is the default layer (see `World.addActor`).
+   */
+  addActor(
+    builder: ActorBuilder,
+    id?: string,
+    type?: string,
+    layer?: string,
+  ): Actor {
     const world = this.getWorld();
     const actor = builder.instantiate(
       this.resolveInstanceId(world, builder, id),
       type,
     );
-    world.addActor(actor);
+    world.addActor(actor, layer);
     return actor;
   }
 
@@ -432,6 +459,7 @@ export class WorldBuilder {
       animations: Object.entries(this.animations),
       effects: [...this.effects],
       backdrops: this.backdrops.map(backdrop => ({...backdrop})),
+      layers: this.layers.map(layer => ({...layer})),
     });
   }
 }

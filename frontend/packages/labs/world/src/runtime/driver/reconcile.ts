@@ -21,6 +21,8 @@ interface ReconcilableWorld {
     /** Each rule's code, hashed (`ruleIds.ts`) — a rule EDITED, not swapped. */
     ruleCode: Record<string, string>;
     actorIds: string[];
+    /** The layers in stack order, each with its settings (core/Layer). */
+    layers: string[];
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
     /** Which effects are in play, and what carries each (effectIds.ts). */
@@ -99,6 +101,12 @@ export function reconcile(
     stable(previous.ruleIds) === stable(snapshot.ruleIds) &&
     stable(previous.ruleCode) === stable(snapshot.ruleCode) &&
     stable(previous.actorIds) === stable(snapshot.actorIds) &&
+    // Layers are the scene graph the driver built, so any difference — one
+    // added, one removed, two reordered, a parallax factor retuned — is a
+    // reload rather than a patch. Nothing here can be spliced into a live
+    // Phaser display list, and the ORDER is part of the value for exactly that
+    // reason (see WorldSnapshot.layers).
+    stable(previous.layers) === stable(snapshot.layers) &&
     stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
