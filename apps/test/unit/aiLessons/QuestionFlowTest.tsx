@@ -193,6 +193,23 @@ describe('QuestionFlow', () => {
     expect(onAnswer.mock.calls[0][0].attempts).toBe(3);
   });
 
+  it('badges the resolver-recommended option', async () => {
+    render(
+      <QuestionFlow
+        step={branchStep}
+        inputs={{}}
+        onAnswer={jest.fn()}
+        onComplete={jest.fn()}
+        getRecommendation={async () => 'more-html'}
+      />
+    );
+    // The recommendation resolves asynchronously.
+    await act(async () => {});
+    expect(screen.getByText('✨ Suggested')).toBeDefined();
+    const button = screen.getByText('✨ Suggested').closest('button');
+    expect(button?.textContent).toContain('More HTML');
+  });
+
   it('navigates back and forward via the progress dots', () => {
     render(
       <QuestionFlow

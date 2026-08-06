@@ -257,17 +257,28 @@
             {
               "id": "more-html",
               "label": "Learn more about HTML",
-              "goTo": "html-extra-lists"
+              "goTo": "html-extra-lists",
+              "recommendWhen": [
+                {"questionId": "tag-check", "outcome": "incorrect"},
+                {"questionId": "tag-check", "minAttempts": 2}
+              ]
             },
             {
               "id": "more-css",
               "label": "Learn more about CSS",
-              "goTo": "css-extra-fonts"
+              "goTo": "css-extra-fonts",
+              "recommendWhen": [
+                {"questionId": "css-check", "outcome": "incorrect"},
+                {"questionId": "css-check", "minAttempts": 2}
+              ]
             },
             {
               "id": "stay",
               "label": "Work on my website",
-              "goTo": "free-play"
+              "goTo": "free-play",
+              "recommendWhen": [
+                {"questionId": "confidence", "answeredOptionId": "very"}
+              ]
             }
           ]
         }

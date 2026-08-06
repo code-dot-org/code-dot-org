@@ -37,6 +37,10 @@ interface QuestionFlowProps {
   // Called when the step is finished: the last question was answered, or
   // a branch option was chosen (passed through so the resolver sees it).
   onComplete: (selectedOptionId?: string) => void;
+  // Asks the navigation resolver which option (if any) to highlight as
+  // the suggested path for this question.  Purely advisory — never a
+  // gate.
+  getRecommendation?: (question: Question) => Promise<string | null>;
 }
 
 function answerRecord(
@@ -75,6 +79,7 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
   path,
   onAnswer,
   onComplete,
+  getRecommendation,
 }) => {
   const [qIndex, setQIndex] = useState(0);
   const [freeText, setFreeText] = useState('');
@@ -112,6 +117,23 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
     setFeedback(undefined);
     // `inputs` is deliberately not a dependency: prefill happens on
     // question change, not on every answer save.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step.id, qIndex]);
+
+  // Ask the resolver for a suggested option whenever the active question
+  // changes.  Advisory badge only; a slow answer just appears late.
+  const [recommendedId, setRecommendedId] = useState<string | null>(null);
+  useEffect(() => {
+    setRecommendedId(null);
+    if (!question || !getRecommendation) return;
+    let cancelled = false;
+    getRecommendation(question).then(id => {
+      if (!cancelled) setRecommendedId(id);
+    });
+    return () => {
+      cancelled = true;
+    };
+    // Keyed on the question identity, like prefill above.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step.id, qIndex]);
 
@@ -269,6 +291,9 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
                   }}
                 >
                   {o.label}
+                  {o.id === recommendedId && (
+                    <span className={styles.suggestedBadge}>✨ Suggested</span>
+                  )}
                 </button>
               );
             })}
@@ -307,6 +332,9 @@ const QuestionFlow: React.FunctionComponent<QuestionFlowProps> = ({
             >
               {o.label}
               {o.goTo && visited.has(o.goTo) ? ' ✓' : ''}
+              {o.id === recommendedId && (
+                <span className={styles.suggestedBadge}>✨ Suggested</span>
+              )}
             </button>
           ))}
         </div>

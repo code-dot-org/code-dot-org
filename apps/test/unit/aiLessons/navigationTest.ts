@@ -6,7 +6,8 @@ import {
   deterministicResolver,
   NavContext,
 } from '@cdo/apps/aiLessons/navigation';
-import {LessonPlan, Step} from '@cdo/apps/aiLessons/types';
+import {AnswerRecord, StudentInputs} from '@cdo/apps/aiLessons/studentInputs';
+import {LessonPlan, Question, Step} from '@cdo/apps/aiLessons/types';
 
 function lab(id: string, extra: Partial<Step> = {}): Step {
   return {
@@ -123,10 +124,96 @@ describe('deterministicResolver.resolveNext', () => {
 });
 
 describe('deterministicResolver.recommend', () => {
-  it('has no suggestion until student inputs exist', async () => {
+  const answer = (extra: Partial<AnswerRecord>): AnswerRecord => ({
+    questionId: 'q',
+    stepId: 's',
+    prompt: 'p',
+    answer: 'a',
+    at: '2026-01-01T00:00:00Z',
+    ...extra,
+  });
+
+  const hubQuestion: Question = {
+    id: 'choice',
+    type: 'multipleChoice',
+    prompt: 'pick',
+    options: [
+      {
+        id: 'html',
+        label: 'HTML',
+        recommendWhen: [
+          {questionId: 'quiz', outcome: 'incorrect'},
+          {questionId: 'quiz', minAttempts: 2},
+        ],
+      },
+      {
+        id: 'css',
+        label: 'CSS',
+        recommendWhen: [{questionId: 'experience', scaleAtMost: 4}],
+      },
+      {
+        id: 'stay',
+        label: 'Stay',
+        recommendWhen: [{questionId: 'mood', answeredOptionId: 'confident'}],
+      },
+    ],
+  };
+
+  const recommendWith = (inputs: StudentInputs) =>
+    deterministicResolver.recommend(ctx({inputs}), hubQuestion);
+
+  it('has no suggestion without inputs or matching rules', async () => {
     const question = (lesson.steps[1] as Extract<Step, {kind: 'questions'}>)
       .questions[1];
     expect(await deterministicResolver.recommend(ctx({}), question)).toBeNull();
+    expect(await recommendWith({})).toBeNull();
+    // An answered question that satisfies no rule.
+    expect(
+      await recommendWith({
+        quiz: answer({questionId: 'quiz', outcome: 'correct'}),
+      })
+    ).toBeNull();
+  });
+
+  it('matches graded outcomes and attempt counts', async () => {
+    expect(
+      await recommendWith({
+        quiz: answer({questionId: 'quiz', outcome: 'incorrect'}),
+      })
+    ).toBe('html');
+    // Struggled-then-correct: outcome is correct but attempts >= 2.
+    expect(
+      await recommendWith({
+        quiz: answer({questionId: 'quiz', outcome: 'correct', attempts: 3}),
+      })
+    ).toBe('html');
+  });
+
+  it('matches scale bounds and chosen options', async () => {
+    expect(
+      await recommendWith({
+        experience: answer({questionId: 'experience', value: 3}),
+      })
+    ).toBe('css');
+    expect(
+      await recommendWith({
+        experience: answer({questionId: 'experience', value: 9}),
+      })
+    ).toBeNull();
+    expect(
+      await recommendWith({
+        mood: answer({questionId: 'mood', optionId: 'confident'}),
+      })
+    ).toBe('stay');
+  });
+
+  it('prefers the first matching option in authored order', async () => {
+    expect(
+      await recommendWith({
+        quiz: answer({questionId: 'quiz', outcome: 'incorrect'}),
+        experience: answer({questionId: 'experience', value: 2}),
+      })
+    ).toBe('html');
   });
 });
 

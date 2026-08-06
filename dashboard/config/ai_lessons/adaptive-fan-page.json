@@ -170,22 +170,26 @@
             {
               "id": "html-text",
               "label": "What will it say? — HTML text",
-              "goTo": "lang-html-text"
+              "goTo": "lang-html-text",
+              "recommendWhen": [{"questionId": "experience", "scaleAtMost": 2}]
             },
             {
               "id": "html-tags",
               "label": "What goes where? — HTML tags",
-              "goTo": "lang-html-tags"
+              "goTo": "lang-html-tags",
+              "recommendWhen": [{"questionId": "experience", "scaleAtMost": 5}]
             },
             {
               "id": "css",
               "label": "What's the style? — CSS",
-              "goTo": "lang-css"
+              "goTo": "lang-css",
+              "recommendWhen": [{"questionId": "experience", "scaleAtMost": 8}]
             },
             {
               "id": "js",
               "label": "What has motion? — JavaScript",
-              "goTo": "lang-js"
+              "goTo": "lang-js",
+              "recommendWhen": [{"questionId": "experience", "scaleAtLeast": 9}]
             },
             {
               "id": "done",

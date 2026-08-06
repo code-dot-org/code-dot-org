@@ -8,7 +8,14 @@
 // story for now: branch option wins, then the step's `next` pointer, then
 // array order, then end.
 
-import {LessonPlan, Question, QuestionsStep, Step} from './types';
+import {StudentInputs} from './studentInputs';
+import {
+  LessonPlan,
+  Question,
+  QuestionsStep,
+  RecommendRule,
+  Step,
+} from './types';
 
 export interface NavContext {
   lesson: LessonPlan;
@@ -18,6 +25,8 @@ export interface NavContext {
   // Set when the step completed via a multiple-choice selection whose
   // option may carry a branch target.
   selectedOptionId?: string;
+  // The student's recorded answers; what recommend() rules match against.
+  inputs?: StudentInputs;
 }
 
 export type NavDecision = {kind: 'goto'; stepId: string} | {kind: 'end'};
@@ -27,8 +36,8 @@ export interface NavigationResolver {
   // Which option of a multiple-choice question to highlight as the
   // suggested path (a hub's "one choice is suggested but all are
   // available").  Null means no suggestion.  The deterministic resolver
-  // has nothing to base a suggestion on until student inputs land; the
-  // seam exists so the adaptive version drops in without UI changes.
+  // matches authored `recommendWhen` rules against the student's
+  // recorded answers; an AI resolver can later weigh anything in ctx.
   recommend(ctx: NavContext, question: Question): Promise<string | null>;
 }
 
@@ -85,7 +94,50 @@ export const deterministicResolver: NavigationResolver = {
     return {kind: 'end'};
   },
 
-  async recommend(): Promise<string | null> {
+  async recommend(ctx: NavContext, question: Question): Promise<string | null> {
+    const inputs = ctx.inputs;
+    if (!inputs) return null;
+    for (const option of question.options || []) {
+      if (
+        (option.recommendWhen || []).some(rule => ruleMatches(rule, inputs))
+      ) {
+        return option.id;
+      }
+    }
     return null;
   },
 };
+
+// Every field present in the rule must hold against the referenced
+// answer; an unanswered question matches nothing.
+function ruleMatches(rule: RecommendRule, inputs: StudentInputs): boolean {
+  const record = inputs[rule.questionId];
+  if (!record) return false;
+  if (rule.answeredOptionId !== undefined) {
+    const chosen =
+      record.optionIds || (record.optionId ? [record.optionId] : []);
+    if (!chosen.includes(rule.answeredOptionId)) return false;
+  }
+  if (rule.outcome !== undefined && record.outcome !== rule.outcome) {
+    return false;
+  }
+  if (
+    rule.minAttempts !== undefined &&
+    (record.attempts || 0) < rule.minAttempts
+  ) {
+    return false;
+  }
+  if (
+    rule.scaleAtMost !== undefined &&
+    (record.value === undefined || record.value > rule.scaleAtMost)
+  ) {
+    return false;
+  }
+  if (
+    rule.scaleAtLeast !== undefined &&
+    (record.value === undefined || record.value < rule.scaleAtLeast)
+  ) {
+    return false;
+  }
+  return true;
+}

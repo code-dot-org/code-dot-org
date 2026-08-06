@@ -101,6 +101,17 @@ step-id path persisted in the progress snapshot, so branched
 playthroughs resume exactly where they left off (old index-only
 snapshots fall back to last-completed + 1).
 
+The resolver's `recommend()` also picks which branch option to badge as
+"✨ Suggested" — authored `recommendWhen` rules on a question option,
+matched against the student's recorded answers (chosen options, graded
+outcomes, attempt counts, scale bounds; conditions AND within a rule,
+rules OR across the list, first matching option in authored order
+wins).  Purely advisory — every option stays clickable.  Both exemplar
+hubs carry rules: the musical-artist check-in suggests more HTML/CSS
+practice from quiz outcomes, the fan-page hub suggests a mini lesson
+from the experience slider and AI rating.  An AI-backed resolver can
+later replace the rule matching without any UI change.
+
 ### Questions and student inputs
 
 Questions steps render through `QuestionFlow.tsx`: one question at a

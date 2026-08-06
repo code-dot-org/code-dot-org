@@ -663,6 +663,17 @@ const StudentPageInner: React.FunctionComponent<StudentPageInnerProps> = ({
             path={path}
             onAnswer={handleAnswer}
             onComplete={optionId => completeStep(optionId)}
+            getRecommendation={question =>
+              deterministicResolver.recommend(
+                {
+                  lesson,
+                  currentStepId: step.id,
+                  path,
+                  inputs: inputsRef.current,
+                },
+                question
+              )
+            }
           />
         ) : (
           <EmbeddedLab

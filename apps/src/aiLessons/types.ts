@@ -100,6 +100,23 @@ export interface PanelsStep extends StepBase {
 
 export type QuestionType = 'freeResponse' | 'multipleChoice' | 'scale';
 
+// One condition set against the student's recorded answers.  All fields
+// present in a rule must hold (AND); a rule list on an option matches
+// when any rule does (OR).  Rules reference answers by question id.
+export interface RecommendRule {
+  questionId: string;
+  // Multiple choice: the student chose this option (single or check-all).
+  answeredOptionId?: string;
+  // Graded questions: the latest outcome equals this.
+  outcome?: 'correct' | 'incorrect';
+  // Graded questions: took at least this many submissions (catches
+  // struggled-then-correct).
+  minAttempts?: number;
+  // Scale questions.
+  scaleAtMost?: number;
+  scaleAtLeast?: number;
+}
+
 export interface QuestionOption {
   id: string;
   label: string;
@@ -108,6 +125,11 @@ export interface QuestionOption {
   // Branching: selecting this option routes the lesson to the given step
   // id after the questions step completes.
   goTo?: string;
+  // Adaptive suggestion: when any rule matches the student's recorded
+  // answers, the resolver highlights this option ("Suggested").  The
+  // first matching option in authored order wins.  All options always
+  // stay available — a suggestion is never a gate.
+  recommendWhen?: RecommendRule[];
 }
 
 export interface Question {
