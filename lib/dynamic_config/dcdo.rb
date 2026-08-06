@@ -99,7 +99,8 @@ class DCDO < DynamicConfigBase
       # Whether the AI gateway serves users with blocked providers from another provider;
       # also lets dashboard mint gateway tokens for those users.
       ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false),
-      builders_challenge_url: DCDO.get('builders_challenge_url', nil)
+      builders_challenge_url: DCDO.get('builders_challenge_url', nil),
+      'statsig-enabled': DCDO.get('statsig-enabled', true)
     }
   end
 end
