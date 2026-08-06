@@ -7,7 +7,7 @@ module StatsigAnalyticsHelper
   TARGET_PATH_PATTERNS = Regexp.union(TARGET_PATHS).freeze
 
   def load_web_analytics?(request)
-    TARGET_PATH_PATTERNS.match?(request.path)
+    DCDO.get('statsig-enabled', true) && TARGET_PATH_PATTERNS.match?(request.path)
   end
 
   # Returns the analytics section of the frontend app-config as a hash.
