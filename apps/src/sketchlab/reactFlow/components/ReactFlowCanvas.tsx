@@ -562,7 +562,7 @@ export default function ReactFlowCanvas({
     const groupId = createUuid();
 
     // groupSelectedNodes returns the input unchanged when the selection is
-    // below the minimum (e.g. a single standalone line); pre-check so
+    // below the minimum threshold (e.g. a single standalone line). Pre-check so
     // pushSnapshot / announce / focus don't fire when no group is created.
     // The updater below re-runs it against current state, in case nodes
     // changed between this render and the flush.
