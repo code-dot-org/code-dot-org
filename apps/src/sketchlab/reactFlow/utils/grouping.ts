@@ -7,6 +7,12 @@ import {
 } from '../constants';
 import type {GroupNodeType, SketchLabNode} from '../types';
 
+type LockableEdge = {
+  source: string;
+  target: string;
+  data?: {locked?: boolean};
+};
+
 export function isGroupNode(node: SketchLabNode): node is GroupNodeType {
   return node.type === 'group';
 }
@@ -34,20 +40,44 @@ export function countLogicalElements(
 }
 
 /**
+ * Anchor pseudo-nodes at the ends of a locked line. A line's lock lives on its
+ * edge, so the anchors themselves carry no lock and have to inherit one.
+ * Endpoints that are real nodes are left alone; they have their own lock state.
+ */
+export function getLockedLineAnchorIds(
+  nodes: SketchlabReactFlowNode[],
+  edges: LockableEdge[]
+): Set<string> {
+  const anchorIds = new Set(
+    nodes.filter(node => node.type === 'lineAnchor').map(node => node.id)
+  );
+  const lockedAnchorIds = new Set<string>();
+  for (const edge of edges) {
+    if (edge.data?.locked !== true) continue;
+    if (anchorIds.has(edge.source)) lockedAnchorIds.add(edge.source);
+    if (anchorIds.has(edge.target)) lockedAnchorIds.add(edge.target);
+  }
+  return lockedAnchorIds;
+}
+
+/**
  * Ids a whole-selection move should translate, in node order; empty when fewer
  * than two elements survive filtering.
  *
- * Locked nodes and grouped children are dropped: undo can restore either
+ * Locked elements and grouped children are dropped: undo can restore either
  * state while the selection that predates it is still live.
  */
 export function getSelectionMoveIds(
   selectedIds: ReadonlySet<string>,
-  nodes: SketchlabReactFlowNode[]
+  nodes: SketchlabReactFlowNode[],
+  edges: LockableEdge[]
 ): string[] {
+  const lockedAnchorIds = getLockedLineAnchorIds(nodes, edges);
   const movable = nodes.filter(
     node =>
       selectedIds.has(node.id) &&
       !node.data?.locked &&
+      !lockedAnchorIds.has(node.id) &&
       !isGroupedChildNode(node)
   );
   return countLogicalElements(movable) >= 2 ? movable.map(node => node.id) : [];

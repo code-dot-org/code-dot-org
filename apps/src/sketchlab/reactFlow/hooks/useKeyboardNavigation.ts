@@ -472,7 +472,11 @@ export function useKeyboardNavigation({
   // it shouldn't reattach to whatever it passes over.
   const moveSelectionByDelta = useCallback(
     (event: ArrowMoveEvent, deltaX: number, deltaY: number): boolean => {
-      const idsToMove = getSelectionMoveIds(multiSelectedNodeIds, nodes);
+      const idsToMove = getSelectionMoveIds(
+        multiSelectedNodeIds,
+        nodes,
+        getEdges()
+      );
       if (idsToMove.length === 0) return false;
       event.preventDefault();
       event.stopPropagation();
@@ -486,7 +490,7 @@ export function useKeyboardNavigation({
       );
       return true;
     },
-    [multiSelectedNodeIds, nodes, pushSnapshot, setNodes, announce]
+    [multiSelectedNodeIds, nodes, getEdges, pushSnapshot, setNodes, announce]
   );
 
   const handleMoveNode = useCallback(

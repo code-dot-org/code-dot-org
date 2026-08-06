@@ -76,7 +76,7 @@ export function useLineEdgeDrag({
   pushSnapshot,
   multiSelectedNodeIds,
 }: UseLineEdgeDragOptions) {
-  const {getNode, getNodes} = useReactFlow<
+  const {getNode, getNodes, getEdges} = useReactFlow<
     SketchlabReactFlowNode,
     SketchlabReactFlowEdge
   >();
@@ -291,7 +291,7 @@ export function useLineEdgeDrag({
       if (anchorIds?.every(id => multiSelectedNodeIds.has(id))) {
         const currentNodes = getNodes();
         const idsToMove = new Set(
-          getSelectionMoveIds(multiSelectedNodeIds, currentNodes)
+          getSelectionMoveIds(multiSelectedNodeIds, currentNodes, getEdges())
         );
         if (idsToMove.size > 0) {
           event.preventDefault();
@@ -366,6 +366,7 @@ export function useLineEdgeDrag({
       readOnly,
       getNode,
       getNodes,
+      getEdges,
       multiSelectedNodeIds,
       screenToFlowPosition,
       handleLineEdgeMouseMove,
