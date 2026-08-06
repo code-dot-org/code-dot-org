@@ -147,6 +147,30 @@ describe('SiteConfig analytics (parseRuntimeConfig)', () => {
     expect(config.analytics.statsig?.clientKey).toBe('client-abc');
   });
 
+  it('carries a server-seeded user through from the meta tag', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {
+          provider: 'statsig',
+          statsig: {clientKey: 'client-abc'},
+          user: {userId: '42', userType: 'teacher'},
+        },
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.user).toEqual({userId: '42', userType: 'teacher'});
+  });
+
+  it('leaves the user undefined when the meta tag omits it', () => {
+    setMetaConfig(
+      JSON.stringify({
+        analytics: {provider: 'statsig', statsig: {clientKey: 'client-abc'}},
+      }),
+    );
+    const config = new SiteConfig();
+    expect(config.analytics.user).toBeUndefined();
+  });
+
   it('defaults provider to "none" when the tag carries only observability', () => {
     setMetaConfig(JSON.stringify({observability: {provider: 'sentry'}}));
     const config = new SiteConfig();

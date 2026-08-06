@@ -438,6 +438,97 @@ describe('analytics session dimensions', () => {
   });
 });
 
+describe('analytics seeded identity', () => {
+  const SEEDED_CONFIG: AnalyticsConfig = {
+    ...STATSIG_CONFIG,
+    user: {userId: '42', userType: 'teacher'},
+  };
+
+  it('boots anonymous when the page rendered no identity', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(STATSIG_CONFIG);
+    await drain();
+
+    expect(latestStatsig().user).not.toHaveProperty('userID');
+    expect(latestStatsig().user.custom).not.toHaveProperty('userType');
+  });
+
+  it('carries a server-rendered identity into the init user', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(SEEDED_CONFIG);
+    await drain();
+
+    expect(latestStatsig().user).toMatchObject({
+      userID: 'test-42',
+      custom: expect.objectContaining({userType: 'teacher'}),
+    });
+  });
+
+  it('keeps the anonymous session dimensions alongside the seed', async () => {
+    document.cookie = `${COOKIE_NAME}=persisted-id; ${COOKIE_SCOPE}`;
+    document.documentElement.dataset.geRegion = 'fa';
+
+    const analytics = await loadAnalytics();
+    analytics.onCoreReady(SEEDED_CONFIG);
+    reportConsent(analytics, true);
+    await drain();
+
+    expect(latestStatsig().user).toEqual({
+      userID: 'test-42',
+      custom: {enabledExperiments: [], geRegion: 'fa', userType: 'teacher'},
+      customIDs: {stableID: 'persisted-id'},
+    });
+
+    delete document.documentElement.dataset.geRegion;
+  });
+
+  it('still applies a later setUser, which carries the fuller dimensions', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(SEEDED_CONFIG);
+    await drain();
+
+    analytics.setUser({
+      userId: '42',
+      userType: 'teacher',
+      isVerifiedInstructor: true,
+      educatorRole: 'librarian',
+    });
+
+    // The seed and the update never serialize alike, so the same-user
+    // short-circuit cannot swallow the first identify after a seeded boot.
+    expect(latestStatsig().updateUserAsync).toHaveBeenCalledWith({
+      userID: 'test-42',
+      custom: {
+        userType: 'teacher',
+        isVerifiedInstructor: true,
+        enabledExperiments: [],
+        educatorRole: 'librarian',
+      },
+    });
+  });
+
+  it('logs the seeded identity on the console adapter', async () => {
+    const analytics = await loadAnalytics();
+    analytics.markConsentSettled();
+    analytics.onCoreReady(
+      {provider: 'none', user: {userId: '42', userType: 'teacher'}},
+      'development',
+    );
+    await vi.waitFor(() =>
+      expect(log).toHaveBeenCalledWith(
+        expect.stringContaining('Seeded identity'),
+      ),
+    );
+
+    expect(log).toHaveBeenCalledWith(
+      '[STATSIG ANALYTICS EVENT]: Seeded identity: userId: 42, userType: teacher',
+    );
+  });
+});
+
 describe('analytics identity', () => {
   it('sends the identity update without customIDs', async () => {
     document.cookie = `${COOKIE_NAME}=persisted-id; ${COOKIE_SCOPE}`;
