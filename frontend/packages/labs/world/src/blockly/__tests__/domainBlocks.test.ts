@@ -1676,6 +1676,59 @@ describe('world block generators', () => {
     );
   });
 
+  it('generates the same six blocks for both image slots', () => {
+    // They differ in one word, so they come from one factory over the two
+    // slots rather than six hand-written near-copies — the house idiom, and
+    // what stops `set foreground` drifting away from `set background`.
+    const types = DOMAIN_BLOCKS.map(block => block.type);
+    for (const slot of ['background', 'foreground']) {
+      expect(types).toContain(`world_set_${slot}`);
+      expect(types).toContain(`world_set_${slot}_offset`);
+      expect(types).toContain(`world_set_${slot}_repeat`);
+    }
+  });
+
+  it('slides a slot by a vector, naming the layer it is written in', () => {
+    const code = generatorFor('world_set_foreground_offset')(
+      {getFieldValue: () => null} as never,
+      {
+        valueToCode: () => 'new WorldLab.Vector(8, 0)',
+      } as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe(
+      'world.setForegroundOffset(new WorldLab.Vector(8, 0), "main");\n',
+    );
+  });
+
+  it('defaults a slide to no movement rather than to nothing', () => {
+    // An emptied socket is a vector of zero, not a syntax error.
+    const code = generatorFor('world_set_background_offset')(
+      {getFieldValue: () => null} as never,
+      {valueToCode: () => ''} as never,
+      {} as never,
+    ) as string;
+
+    expect(code).toBe(
+      'world.setBackgroundOffset(new WorldLab.Vector(0, 0), "main");\n',
+    );
+  });
+
+  it('turns tiling on and off with a word rather than a boolean socket', () => {
+    // Whether an image tiles is an authoring choice, not something a program
+    // computes — so it reads `draw background ⟨tiled⟩`.
+    const run = (value: string) =>
+      generatorFor('world_set_background_repeat')(
+        {getFieldValue: () => value} as never,
+        {} as never,
+        {} as never,
+      ) as string;
+
+    expect(run('true')).toBe('world.setBackgroundRepeat(true, "main");\n');
+    expect(run('false')).toBe('world.setBackgroundRepeat(false, "main");\n');
+  });
+
   it('world_set_background_color hands the color over as it arrived', () => {
     // Not through `WorldLab.rgb`, unlike an effect's color parameter: a uniform
     // needs floats, `setBackgroundColor` takes either, and converting here
