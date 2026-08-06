@@ -169,27 +169,47 @@ export class PhaserBinding {
     // The backdrop layers' images, by layer index — created on demand, because
     // a world may be told about its background mid-game.
     /**
-     * One Phaser Layer per engine layer, in stack order.
+     * One Phaser Container per engine layer, in stack order.
      *
      * A container rather than a depth range, because a layer is a thing effects
      * attach TO — `blur the game and leave the HUD sharp` has nothing to filter
-     * unless the game's drawing is one object. Phaser's Layer takes filters
-     * (it has `enableFilters`, like every Game Object) and draws its children
-     * in their own depth order, so the container carries the layer's place in
-     * the stack and its children carry only their place within it.
+     * unless the game's drawing is one object.
+     *
+     * A Container and not a `GameObjects.Layer`, which is the other grouping
+     * Phaser offers: a Layer carries depth and filters but NOT a transform, and
+     * a layer that cannot be moved cannot do parallax. Container has both, and
+     * its children's coordinates become relative to it — which is exactly what
+     * is wanted here, since actors are positioned in world space and the
+     * container carries the view offset.
+     *
+     * Children are sorted by depth on demand rather than every frame: a
+     * Container draws in insertion order until told otherwise, and actors
+     * arrive whenever they are placed, so a background added after them would
+     * otherwise cover them.
      */
-    const containers: Array<Phaser.GameObjects.Layer | undefined> = [];
+    const containers: Array<Phaser.GameObjects.Container | undefined> = [];
+    const unsorted = new Set<Phaser.GameObjects.Container>();
     const containerFor = (
       scene: Phaser.Scene,
       index: number,
-    ): Phaser.GameObjects.Layer => {
+    ): Phaser.GameObjects.Container => {
       let container = containers[index];
       if (!container) {
-        container = scene.add.layer();
+        container = scene.add.container(0, 0);
         container.setDepth(index);
         containers[index] = container;
       }
       return container;
+    };
+    /** Put a new child in its layer, and remember the order needs redoing. */
+    const intoLayer = (
+      scene: Phaser.Scene,
+      index: number,
+      child: Phaser.GameObjects.GameObject,
+    ) => {
+      const container = containerFor(scene, index);
+      container.add(child);
+      unsorted.add(container);
     };
 
     const backdrops: Array<SlotObject | undefined> = [];
@@ -352,7 +372,7 @@ export class PhaserBinding {
               )
             : scene.add.image(GAME_WIDTH / 2, GAME_HEIGHT / 2, sprite);
           image.setDepth(depth);
-          containerFor(scene, index).add(image);
+          intoLayer(scene, index, image);
           images[index] = image;
         }
         image.setTexture(sprite);
@@ -412,12 +432,25 @@ export class PhaserBinding {
       // with an effect and nothing in it yet is still a layer) and brings each
       // one's filters in line.
       const layers = world.layerSnapshot();
+      // Where the view is taken from. One camera today — viewports, which is
+      // what would give a layer a different one, are not built.
+      const [view] = world.cameraSnapshot();
       layers.forEach((layer, index) => {
-        effectRegistry.reconcile(
-          scene,
-          containerFor(scene, index) as never,
-          layer.effects,
+        const container = containerFor(scene, index);
+        effectRegistry.reconcile(scene, container as never, layer.effects);
+        // The whole of what a layer's parallax means: move the container
+        // opposite the camera, scaled per axis. `(1, 1)` moves with the view,
+        // `(0.2, 0)` is a sky that shifts as the player walks and stays put
+        // when they jump, and `fit` does not consult the camera at all — which
+        // is what makes an interface layer an interface layer.
+        container.setPosition(
+          layer.fit ? 0 : -(view?.position.x ?? 0) * layer.parallax.x,
+          layer.fit ? 0 : -(view?.position.y ?? 0) * layer.parallax.y,
         );
+        if (unsorted.has(container)) {
+          container.sort('depth');
+          unsorted.delete(container);
+        }
       });
       // Layers the world dropped take their container — and every child still
       // in it — with them.
@@ -466,7 +499,7 @@ export class PhaserBinding {
           object = create(scene, state);
           // Into its layer's container, at the actors' depth within it.
           object.setDepth(ACTOR_DEPTH);
-          containerFor(scene, state.layer).add(object);
+          intoLayer(scene, state.layer, object);
           objects.set(state.actor, object);
         }
         // Effects are reconciled every frame, not applied once at creation: an

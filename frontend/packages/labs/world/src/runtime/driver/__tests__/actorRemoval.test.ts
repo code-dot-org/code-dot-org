@@ -57,8 +57,14 @@ vi.mock('phaser', () => {
         return new Image(record);
       },
       // The per-layer container actors are parented into.
-      layer: () => ({
+      container: () => ({
         setDepth() {
+          return this;
+        },
+        setPosition() {
+          return this;
+        },
+        sort() {
           return this;
         },
         add() {
@@ -119,7 +125,10 @@ const world = (actors: string[]) => {
         {effects: [], offset: {x: 0, y: 0}, repeat: false},
       ],
       backdropColor: () => [0, 0, 0, 1],
-      layerSnapshot: () => [{id: 'main', effects: []}],
+      layerSnapshot: () => [
+        {id: 'main', effects: [], parallax: {x: 1, y: 1}, fit: false},
+      ],
+      cameraSnapshot: () => [{id: 'main', position: {x: 0, y: 0}}],
       renderSnapshot: () =>
         live.map((id, index) => ({
           actor: id,

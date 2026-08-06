@@ -408,6 +408,65 @@ describe('asking which actors are in a layer', () => {
   });
 });
 
+describe('the camera', () => {
+  // A pose, and nothing else. It is not in `world.actors`, so no rule has to
+  // learn to skip it and `clear world` does not take it away with the level.
+  it('exists without being asked for, at the origin', () => {
+    const built = world();
+
+    expect(built.cameras).toHaveLength(1);
+    expect(built.camera().id).toBe('main');
+    expect(built.camera().position).toEqual(new Vector(0, 0));
+  });
+
+  it('moves where it is told', () => {
+    const built = world();
+    built.setCameraPosition(new Vector(64, -32));
+
+    expect(built.camera().position).toEqual(new Vector(64, -32));
+    expect(built.cameraSnapshot()[0].position).toEqual({x: 64, y: -32});
+  });
+
+  it('copies the vector rather than holding the caller’s', () => {
+    // A follow step writes this every tick; sharing one Vector with the world
+    // would let a later mutation move the view with no call at all.
+    const built = world();
+    const at = new Vector(10, 0);
+    built.setCameraPosition(at);
+    (at as {x: number}).x = 99;
+
+    expect(built.camera().position.x).toBe(10);
+  });
+
+  it('answers with the default for an id nothing declares', () => {
+    // The id comes from generated code; a world with no view at all is not a
+    // better answer than a world looking through its default.
+    expect(world().camera('a-camera-that-was-deleted').id).toBe('main');
+  });
+
+  it('is not an actor', () => {
+    const built = world();
+    built.addActor(actor('player'));
+    built.clearActors();
+
+    // The level went; the view did not.
+    expect(built.cameras).toHaveLength(1);
+    expect([...built.actors]).toHaveLength(0);
+  });
+
+  it('travels as structure AND as a value, which are different questions', () => {
+    // Which cameras exist is a reload — a viewport is built to draw through
+    // one. Where they look is a patch, written every tick by a follow step.
+    const built = world();
+    const before = built.snapshot();
+    built.setCameraPosition(new Vector(5, 0));
+    const after = built.snapshot();
+
+    expect(after.cameras).toEqual(before.cameras);
+    expect(after.cameraPositions).not.toEqual(before.cameraPositions);
+  });
+});
+
 describe('the snapshot', () => {
   // Layers are structural: a layer cannot be spliced into a live scene graph,
   // and reordering two changes what draws on top of what. Both are reloads.

@@ -6,6 +6,12 @@
 
 import type {Actor} from './Actor';
 import type {AnimationDef, FrameState} from './animationTypes';
+import {
+  DEFAULT_CAMERA_ID,
+  makeCamera,
+  type Camera,
+  type CameraInit,
+} from './Camera';
 import {rgba, type ColorValue, type Rgba} from './color';
 import {effectContentHash, effectSlotId} from './effectIds';
 import {EventQueue} from './EventQueue';
@@ -62,6 +68,17 @@ export interface WorldSnapshot {
    * scene graph the driver built just as surely as adding a layer does.
    */
   layers: string[];
+  /**
+   * Which cameras exist, in declaration order.
+   *
+   * Structural for the reason layers are: a viewport is built to draw through
+   * one, so gaining or losing a camera is a reload. Where each is LOOKING is
+   * not here — see {@link cameraPositions}, which is written every tick by a
+   * camera that follows something.
+   */
+  cameras: string[];
+  /** Where each camera looks from, by id. A value, patched like a property. */
+  cameraPositions: Record<string, {x: number; y: number}>;
   /**
    * Which effects are in play and what carries each — `[owner, path]` per
    * applied effect, across the world, its backdrops and every actor
@@ -217,6 +234,8 @@ export interface WorldInit {
   foregrounds?: Record<string, BackdropState>;
   /** Effects on the layers themselves, by layer id. */
   layerEffects?: Record<string, AppliedEffectSpec[]>;
+  /** The cameras this world can draw through (core/Camera). */
+  cameras?: CameraInit[];
   /**
    * The layers actors are drawn in, back to front (core/Layer).
    *
@@ -299,6 +318,10 @@ export class World {
   // The layers actors are drawn in, back to front. Never empty: index 0 is the
   // default, which is where an actor placed without being told a layer goes.
   private readonly layerList: Layer[];
+  // The cameras, and the default among them. Never empty, for the reason the
+  // layer list is not: a view taken through no camera would be a second kind of
+  // view, and every question about the view would have to answer twice.
+  private readonly cameraList: Camera[];
   // Layer id -> its index, which is its depth. Built once; layers cannot be
   // added or removed while the world runs (they are structural — a layer cannot
   // be spliced into a live scene graph, see `snapshot`).
@@ -367,6 +390,11 @@ export class World {
     // Backgrounds described before the world existed, copied onto the layers
     // they name. Copied, not adopted, for the reason the effects are: a builder
     // may instantiate more than one world from one description.
+    this.cameraList = (init.cameras ?? []).map(makeCamera);
+    if (!this.cameraList.some(camera => camera.id === DEFAULT_CAMERA_ID)) {
+      this.cameraList.unshift(makeCamera({id: DEFAULT_CAMERA_ID}));
+    }
+
     for (const [id, effects] of Object.entries(init.layerEffects ?? {})) {
       const layer = this.layer(id);
       if (layer) {
@@ -442,6 +470,39 @@ export class World {
     actor.world = this;
     actor.layer = this.layerIndex.has(layer) ? layer : DEFAULT_LAYER_ID;
     this.actorList.push(actor);
+  }
+
+  /** The cameras this world holds. Never empty; the default is among them. */
+  get cameras(): readonly Camera[] {
+    return this.cameraList;
+  }
+
+  /**
+   * A camera by id, or the default.
+   *
+   * An unknown id is the default rather than an error, for the reason
+   * `addActor` gives about layers: the id comes from generated code naming a
+   * block that may since have been deleted, and a world with no view at all is
+   * not a better answer than a world looking through its default.
+   */
+  camera(id: string = DEFAULT_CAMERA_ID): Camera {
+    return (
+      this.cameraList.find(camera => camera.id === id) ??
+      this.cameraList.find(entry => entry.id === DEFAULT_CAMERA_ID) ??
+      this.cameraList[0]
+    );
+  }
+
+  /**
+   * Move a camera, in world pixels.
+   *
+   * Copied rather than adopted, like a slot's offset and for the same reason: a
+   * step that follows the player writes this every tick, and sharing one Vector
+   * with the world would let a later mutation move the view with no call.
+   */
+  setCameraPosition(position: Vector, id: string = DEFAULT_CAMERA_ID): this {
+    this.camera(id).position = new Vector(position.x, position.y);
+    return this;
   }
 
   /** The layers, back to front. Index is depth; index 0 is the default. */
@@ -807,10 +868,32 @@ export class World {
   layerSnapshot(): ReadonlyArray<{
     id: string;
     effects: readonly AppliedEffectSpec[];
+    /** How much of the camera's motion this layer takes, per axis. */
+    parallax: {x: number; y: number};
+    /** Whether it ignores the camera entirely — an interface layer. */
+    fit: boolean;
   }> {
     return this.layerList.map(layer => ({
       id: layer.id,
       effects: layer.effects,
+      parallax: {x: layer.parallax.x, y: layer.parallax.y},
+      fit: layer.fit,
+    }));
+  }
+
+  /**
+   * Where each camera is looking from, in declaration order.
+   *
+   * Read every frame beside `renderSnapshot`, so a camera moved by a handler or
+   * a step shows up on the next one.
+   */
+  cameraSnapshot(): ReadonlyArray<{
+    id: string;
+    position: {x: number; y: number};
+  }> {
+    return this.cameraList.map(camera => ({
+      id: camera.id,
+      position: {x: camera.position.x, y: camera.position.y},
     }));
   }
 
@@ -1204,6 +1287,13 @@ export class World {
         rules.map(rule => [rule.id, ruleContentHash(rule)]),
       ),
       actorIds: this.actorList.map(actor => actor.id).sort(),
+      cameras: this.cameraList.map(camera => camera.id),
+      cameraPositions: Object.fromEntries(
+        this.cameraList.map(camera => [
+          camera.id,
+          {x: camera.position.x, y: camera.position.y},
+        ]),
+      ),
       layers: this.layerList.map(
         layer =>
           `${layer.id}:${layer.parallax.x},${layer.parallax.y}:${layer.fit}`,

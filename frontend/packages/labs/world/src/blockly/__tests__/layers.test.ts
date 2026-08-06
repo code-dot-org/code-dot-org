@@ -189,13 +189,15 @@ describe('resolving a LAYER dropdown value', () => {
 describe('the layer plan a world declares', () => {
   /** A `define world` whose next-chain is the given blocks, in order. */
   const world = (
-    ...body: Array<string | {type: string; id?: string}>
+    ...body: Array<string | {type: string; id?: string; depth?: string}>
   ): Blockly.Block => {
     const built = body.map(entry => {
       const spec = typeof entry === 'string' ? {type: entry} : entry;
       return {
         type: spec.type,
         id: spec.id ?? spec.type,
+        getFieldValue: (name: string) =>
+          name === 'DEPTH' ? (spec.depth ?? '1,1') : null,
         getChildren: () => [],
         getNextBlock: () => null,
       } as unknown as Blockly.Block & {getNextBlock: () => unknown};
@@ -210,54 +212,79 @@ describe('the layer plan a world declares', () => {
     } as unknown as Blockly.Block;
   };
 
+  /** The plan's ids, which is what most of these are about. */
+  const ids = (block: Blockly.Block) => layerPlan(block).map(entry => entry.id);
+
   it('is empty for a world that declares none', () => {
-    expect(layerPlan(world('world_use_rule', 'world_add_actor'))).toEqual([
+    expect(ids(world('world_use_rule', 'world_add_actor'))).toEqual([
       DEFAULT_LAYER_ID,
     ]);
   });
 
   it('is the layers in declaration order, which is depth', () => {
-    const plan = layerPlan(
-      world(
-        {type: 'world_define_layer', id: 'sky'},
-        {type: 'world_define_layer', id: 'game'},
+    expect(
+      ids(
+        world(
+          {type: 'world_define_layer', id: 'sky'},
+          {type: 'world_define_layer', id: 'game'},
+        ),
       ),
-    );
-
-    expect(plan).toEqual([layerId('sky'), layerId('game')]);
+    ).toEqual([layerId('sky'), layerId('game')]);
   });
 
   it('puts the default where the first unplaced placement is', () => {
     // The whole point of choosing this over pinning it to the bottom: a Sky
     // declared above draws behind, an Interface declared below draws in front.
-    const plan = layerPlan(
-      world({type: 'world_define_layer', id: 'sky'}, 'world_add_actor', {
-        type: 'world_define_layer',
-        id: 'hud',
-      }),
-    );
-
-    expect(plan).toEqual([layerId('sky'), DEFAULT_LAYER_ID, layerId('hud')]);
+    expect(
+      ids(
+        world({type: 'world_define_layer', id: 'sky'}, 'world_add_actor', {
+          type: 'world_define_layer',
+          id: 'hud',
+        }),
+      ),
+    ).toEqual([layerId('sky'), DEFAULT_LAYER_ID, layerId('hud')]);
   });
 
   it('adds the default once, however many placements are loose', () => {
-    const plan = layerPlan(
-      world('world_add_actor', 'world_load_map', 'world_create_in_map'),
-    );
-
-    expect(plan).toEqual([DEFAULT_LAYER_ID]);
+    expect(
+      ids(world('world_add_actor', 'world_load_map', 'world_create_in_map')),
+    ).toEqual([DEFAULT_LAYER_ID]);
   });
 
   it('does not count placements that belong to a layer', () => {
     // A `define layer` holding every placement needs no default at all — the
     // world has one anyway (the engine supplies it), it just is not declared.
-    const plan = layerPlan(world({type: 'world_define_layer', id: 'game'}));
+    expect(ids(world({type: 'world_define_layer', id: 'game'}))).toEqual([
+      layerId('game'),
+    ]);
+  });
 
-    expect(plan).toEqual([layerId('game')]);
+  it('carries each layer’s depth preset, decoded', () => {
+    // Presets rather than two numbers, because the numbers that matter are few
+    // and the ones a learner would guess are wrong: scenery parallax is
+    // HORIZONTAL ONLY, and a sky that bobs on every jump is what `0.2` on both
+    // axes produces.
+    const plan = layerPlan(
+      world(
+        {type: 'world_define_layer', id: 'sky', depth: '0.2,0'},
+        {type: 'world_define_layer', id: 'hud', depth: 'fit'},
+      ),
+    );
+
+    expect(plan[0]).toEqual({id: layerId('sky'), parallax: {x: 0.2, y: 0}});
+    // `fit` is a word and never a number: a `(0,0)` layer still zooms with the
+    // camera and a fixed one does not.
+    expect(plan[1]).toEqual({id: layerId('hud'), fit: true});
+  });
+
+  it('gives the default layer the camera’s own motion', () => {
+    const [entry] = layerPlan(world('world_add_actor'));
+
+    expect(entry).toEqual({id: DEFAULT_LAYER_ID, parallax: {x: 1, y: 1}});
   });
 
   it('names no layer twice', () => {
-    const plan = layerPlan(
+    const plan = ids(
       world(
         {type: 'world_define_layer', id: 'sky'},
         'world_add_actor',

@@ -31,6 +31,10 @@ interface ReconcilableWorld {
     actorIds: string[];
     /** The layers in stack order, each with its settings (core/Layer). */
     layers: string[];
+    /** Which cameras exist — structural, like the layers. */
+    cameras: string[];
+    /** Where each looks from — a value, written every tick by a follow step. */
+    cameraPositions: Record<string, {x: number; y: number}>;
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
     /** Which effects are in play, and what carries each (effectIds.ts). */
@@ -59,6 +63,7 @@ interface ReconcilableWorld {
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: string): unknown;
   setForeground(sprite: string | undefined, layer?: string): unknown;
+  setCameraPosition(position: {x: number; y: number}, id?: string): unknown;
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setForegroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
@@ -122,6 +127,9 @@ export function reconcile(
     // Phaser display list, and the ORDER is part of the value for exactly that
     // reason (see WorldSnapshot.layers).
     stable(previous.layers) === stable(snapshot.layers) &&
+    // Which cameras exist is structural for the reason layers are: a viewport
+    // is built to draw through one. Where they LOOK is a value, patched below.
+    stable(previous.cameras) === stable(snapshot.cameras) &&
     stable(previous.handlerIds) === stable(snapshot.handlerIds) &&
     stable(previous.effectIds) === stable(snapshot.effectIds);
   const worldChanged = stable(previous.world) !== stable(snapshot.world);
@@ -131,6 +139,7 @@ export function reconcile(
   // still has the old sky — the change silently lost. Their EFFECTS are
   // structural and live in `effectIds`.
   const backdropChanged =
+    stable(previous.cameraPositions) !== stable(snapshot.cameraPositions) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
     stable(previous.foregrounds) !== stable(snapshot.foregrounds) ||
     stable(previous.clearColor) !== stable(snapshot.clearColor);
@@ -200,6 +209,9 @@ export function reconcile(
     }
     for (const [actorId, path, value] of actorEdits) {
       running.setActorProperty(actorId, path, value);
+    }
+    for (const [id, position] of Object.entries(snapshot.cameraPositions)) {
+      running.setCameraPosition(position, id);
     }
     for (const slot of snapshot.backdrops) {
       running.setBackground(slot.sprite, slot.layer);
