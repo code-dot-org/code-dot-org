@@ -123,7 +123,8 @@ import {PhaserBinding} from '../PhaserBinding';
 
 /** A World stub whose backdrop is whatever a test says it is. */
 const world = (
-  backdrops: Array<{sprite?: string; color: [number, number, number, number]}>,
+  backdrops: Array<{sprite?: string}>,
+  clearColor: [number, number, number, number] = [0, 0, 0, 1],
 ) =>
   ({
     setInput: () => {},
@@ -132,6 +133,8 @@ const world = (
     renderSnapshot: () => [],
     backdropSnapshot: () =>
       backdrops.map(backdrop => ({...backdrop, effects: []})),
+    // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
+    backdropColor: () => clearColor,
     snapshot: () => ({world: {}}),
   }) as never;
 
@@ -153,10 +156,7 @@ describe('drawing the backdrop', () => {
   });
 
   it('stretches the image over the whole viewport, centred', () => {
-    new PhaserBinding(
-      world([{sprite: 'cave.png', color: [0, 0, 0, 1]}]),
-      pane(),
-    );
+    new PhaserBinding(world([{sprite: 'cave.png'}]), pane());
 
     expect(images).toHaveLength(1);
     expect(images[0]).toMatchObject({
@@ -168,32 +168,27 @@ describe('drawing the backdrop', () => {
     });
   });
 
-  it('puts it below the actors, and the layers in order', () => {
+  it('puts each background below its own layer, and the layers in order', () => {
     new PhaserBinding(
-      world([
-        {sprite: 'cave.png', color: [0, 0, 0, 1]},
-        {sprite: 'trees.png', color: [0, 0, 0, 0]},
-      ]),
+      world([{sprite: 'cave.png'}, {sprite: 'trees.png'}]),
       pane(),
     );
 
-    // Negative, so a background set mid-game still lands behind actors that
-    // were created before it; ascending, so layer 1 draws over layer 0.
-    expect(images.map(image => image.depth)).toEqual([-1000, -999]);
-    expect(images.every(image => image.depth < 0)).toBe(true);
+    // Each background sits at the base of its own layer's depth span, so it is
+    // below that layer's actors and above everything in the layer beneath.
+    // Explicit depths rather than creation order: a background set mid-game is
+    // made after the actors and would otherwise cover them.
+    expect(images.map(image => image.depth)).toEqual([0, 10]);
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {
-    new PhaserBinding(
-      world([{color: [0, 0, 0, 1]}, {sprite: 'gone.png', color: [0, 0, 0, 0]}]),
-      pane(),
-    );
+    new PhaserBinding(world([{}, {sprite: 'gone.png'}]), pane());
 
     expect(images).toHaveLength(0);
   });
 
-  it('sets the camera colour from layer 0', () => {
-    new PhaserBinding(world([{color: [1, 0, 0.5, 1]}]), pane());
+  it('sets the camera colour from the world, not from a layer', () => {
+    new PhaserBinding(world([{}], [1, 0, 0.5, 1]), pane());
 
     // 255,0,128 at full alpha, through the fake's GetColor32.
     expect(cameraColor).toBe((255 << 24) | (255 << 16) | (0 << 8) | 128);

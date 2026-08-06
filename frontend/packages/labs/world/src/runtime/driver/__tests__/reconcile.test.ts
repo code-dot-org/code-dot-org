@@ -291,10 +291,8 @@ describe('reconcile', () => {
     expect(mode).toBe('reconciled');
     // And it actually landed: without the patch this reconciles to a running
     // world that still has the old sky, and the change is silently lost.
-    expect(running.backdropSnapshot()[0]).toMatchObject({
-      sprite: 'cave.png',
-      color: rgba('#88ccff'),
-    });
+    expect(running.backdropSnapshot()[0]).toMatchObject({sprite: 'cave.png'});
+    expect(running.backdropColor()).toEqual(rgba('#88ccff'));
   });
 
   it('restarts when the backdrop gains an effect', () => {

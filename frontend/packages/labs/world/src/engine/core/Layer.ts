@@ -25,6 +25,7 @@
 // factor is carried because the layer is where it belongs, not because it is
 // read.
 
+import type {AppliedEffectSpec} from './types';
 import {Vector} from './Vector';
 
 /**
@@ -35,6 +36,28 @@ import {Vector} from './Vector';
  * layers to invent an answer for the second kind, forever.
  */
 export const DEFAULT_LAYER_ID = 'main';
+
+/**
+ * An image drawn with a layer — behind its actors, or in front of them.
+ *
+ * This is what a 'backdrop' was. A world used to hold a flat stack of them at
+ * a fixed negative depth; they belong to a layer, because a layer is already
+ * the thing with a depth and (later) a parallax factor, and a slot that is part
+ * of one inherits both for free. There is nothing to name and nothing to order.
+ *
+ * No colour here. There is ONE sky, and it is the world's: a colour on any
+ * layer but the bottom is behind the layer under it and can never be seen
+ * (BACKGROUNDS.md).
+ */
+export interface LayerSlot {
+  /** An image file name, as a frame names one; absent means nothing drawn. */
+  sprite?: string;
+  /** Effects filtering this image's own pixels — not the whole camera. */
+  effects: AppliedEffectSpec[];
+}
+
+/** An empty slot: nothing drawn, nothing filtering it. */
+export const emptySlot = (): LayerSlot => ({effects: []});
 
 /** What a layer is asked for when it is declared. */
 export interface LayerInit {
@@ -52,6 +75,8 @@ export interface Layer {
   readonly name: string;
   readonly parallax: Vector;
   readonly fit: boolean;
+  /** Drawn behind this layer's actors. Mutable: a handler may change it. */
+  readonly background: LayerSlot;
 }
 
 /** A layer with its defaults filled in. */
@@ -61,5 +86,6 @@ export function makeLayer(init: LayerInit): Layer {
     name: init.name ?? init.id,
     parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
     fit: init.fit ?? false,
+    background: emptySlot(),
   };
 }
