@@ -14,7 +14,6 @@ import {
 import {
   BUILDER_WORLD_EXTENSION,
   RUNTIME_ACTOR_EXTENSION,
-  RUNTIME_WORLD_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
 } from '../extensions/actorContext';
 import {paramSockets} from '../extensions/effectParamsMutator';
@@ -2421,12 +2420,14 @@ describe('builder-context warnings', () => {
     );
   });
 
-  it('guards `remove effect from the world`, which needs a live world', () => {
-    // It also carries `worldContext`, which catches `world` being unbound
-    // entirely — the two warnings answer different questions.
-    expect(extensionsOf('world_remove_world_effect')).toContain(
-      RUNTIME_WORLD_EXTENSION,
-    );
+  it('leaves `remove effect from the world` alone under `define world`', () => {
+    // It was guarded there, on the grounds that un-declaring something
+    // described once means nothing. That was true of a builder accumulating
+    // state and false of one recording calls: `add effect` then `remove effect`
+    // is a sequence, and replaying it leaves no effect.
+    //
+    // It still carries `worldContext`, which answers a different question —
+    // whether `world` is bound to anything at all.
     expect(extensionsOf('world_remove_world_effect')).toContain(
       WORLD_CONTEXT_EXTENSION,
     );
@@ -2456,17 +2457,30 @@ describe('builder-context warnings', () => {
     );
   });
 
-  it('guards `any ⟨kind⟩`, which reads the live world when it is a value', () => {
-    // Read as a value it compiles to `world.actors.ofType(…)`: under `define
-    // world` that name is the builder, which has no `actors` at all, and in an
-    // actor template there is no `world` to read. Both are caught in the editor
-    // rather than as a TypeError on a line the learner never wrote.
-    //
-    // Neither guard fires on the case that made this block — plugged into an
-    // event hat's subject socket it names the TEMPLATE and touches no world, and
-    // a hat stops both walks.
+  it('guards `any ⟨kind⟩` only where `world` is unbound', () => {
+    // Read as a value it compiles to `world.actors.ofType(…)`, so it needs a
+    // `world` — caught in the editor rather than as a TypeError on a line the
+    // learner never wrote. It does not fire on the case that made this block:
+    // plugged into an event hat's subject socket it names the TEMPLATE and
+    // touches no world, and a hat counts as binding one.
     expect(extensionsOf('world_actor_kind')).toContain(WORLD_CONTEXT_EXTENSION);
-    expect(extensionsOf('world_actor_kind')).toContain(RUNTIME_WORLD_EXTENSION);
+  });
+
+  it('lets the actor-reading blocks sit under `define world`', () => {
+    // `load map` then `set actor to follow ⟨camera⟩` ← `first actor of type
+    // ⟨Player⟩` is the program this is for. It warned before, correctly: the
+    // builder had no `actors`, so the call was a TypeError. It has them now —
+    // it hands back the actors of the world it is describing — so the warning
+    // would be about a program that works, which is worse than none.
+    for (const type of [
+      'world_actor_kind',
+      'world_all_actors',
+      'world_remove_actor',
+      'world_clear_world',
+      'world_remove_world_effect',
+    ]) {
+      expect(extensionsOf(type), type).not.toContain('world_needs_live_world');
+    }
   });
 
   it('leaves `add effect` alone, because `addEffect` exists on both', () => {
@@ -2479,7 +2493,6 @@ describe('builder-context warnings', () => {
     expect(names).not.toContain(TRAIT_CONTEXT_EXTENSION);
 
     const worldNames = extensionsOf('world_add_world_effect');
-    expect(worldNames).not.toContain(RUNTIME_WORLD_EXTENSION);
     // …but `world` must still be bound to something.
     expect(worldNames).toContain(WORLD_CONTEXT_EXTENSION);
   });

@@ -394,7 +394,7 @@ describe('WorldBuilder.loadMap (Map data)', () => {
     expect(builder.getWorld().snapshot().actorIds.sort()).toEqual(['a', 'b']);
 
     // …and `clear()` is how you replace instead of add.
-    builder.clear();
+    builder.clearActors();
     builder.loadMap({actors: [{type: 'faller', id: 'c'}]});
     expect(builder.getWorld().snapshot().actorIds).toEqual(['c']);
   });

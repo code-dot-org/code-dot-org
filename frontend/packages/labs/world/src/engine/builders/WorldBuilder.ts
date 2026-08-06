@@ -424,8 +424,28 @@ export class WorldBuilder {
     return actor;
   }
 
-  /** Remove every actor. */
-  clear(): void {
+  /**
+   * Remove one actor. See {@link World.removeActor}.
+   *
+   * Direct, not logged, for the reason `addActor` is: actors are not part of
+   * the description. `instantiate` replays the log into a world with nothing
+   * placed in it, so a recorded removal would be a call about an actor that
+   * world never had.
+   */
+  removeActor(actor: Actor | string): boolean {
+    return this.getWorld().removeActor(actor);
+  }
+
+  /**
+   * Remove every actor. See {@link World.clearActors}.
+   *
+   * Named as the World names it, because one block calls whichever it lands on:
+   * `clear world` generates `world.clearActors()` under `define world` and in a
+   * handler alike. It reads as a strange thing to do while describing a world
+   * until you want a second map to REPLACE the first rather than stack on it,
+   * which is what `loadMap`'s note points at.
+   */
+  clearActors(): void {
     this.getWorld().clearActors();
   }
 

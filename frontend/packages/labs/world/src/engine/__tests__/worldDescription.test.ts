@@ -141,7 +141,7 @@ describe('when a declaration is too late', () => {
     // the honest answer is that a world with nothing in it can be relaid.
     const made = builder();
     made.addActor(new ActorBuilder({id: 'a', name: 'A'}));
-    made.clear();
+    made.clearActors();
 
     expect(() => made.useRules([GravityRule])).not.toThrow();
   });
