@@ -33,10 +33,19 @@ function geRegion(): string | null {
 
 let booted = false;
 
+/** Stands in for an event whose caller supplied no name; dashboards count these. */
+const MISSING_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
+
 export function sendEvent(
   name: string,
   payload?: Record<string, unknown>,
 ): void {
+  if (!name) {
+    console.warn('[analytics] sendEvent was called without an event name');
+    analyticsClient.sendEvent(MISSING_EVENT_NAME, payload);
+    return;
+  }
+
   analyticsClient.sendEvent(name, payload);
 }
 

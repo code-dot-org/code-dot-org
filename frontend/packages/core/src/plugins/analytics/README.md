@@ -45,6 +45,10 @@ sendEvent('Account Settings Page Visited', {'user type': 'teacher'});
 Event names and payload keys are a contract with the dashboards that consume
 them, down to keys containing spaces. Copy them verbatim.
 
+An event sent without a name is reported as `NO_VALID_EVENT_NAME_LOG_ERROR`
+carrying its original payload, so a caller bug stays visible in the data
+instead of vanishing.
+
 ### Identity
 
 ```typescript
