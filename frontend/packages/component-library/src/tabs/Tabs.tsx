@@ -25,8 +25,6 @@ export interface TabsProps {
    * (```_tabGroup``` is ONLY for internal DSCO usage for now.
    *  If you need to use it - go to TabGroup component) */
   type?: 'primary' | 'secondary' | '_tabGroup';
-  /** Mode (color) of Tabs */
-  mode?: 'light' | 'dark';
   /** Size of Tabs */
   size?: ComponentSizeXSToL;
   /** Custom className for Tabs container */
@@ -66,7 +64,6 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabPanelsContainerClassName,
   hidePanels,
   type = 'primary',
-  mode = 'light',
   size = 'm',
 }) => {
   const [selectedTabValue, setSelectedValue] = useState(
@@ -111,7 +108,6 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
           moduleStyles.tabs,
           moduleStyles[`tabs-${size}`],
           moduleStyles[`tabs-${type}`],
-          moduleStyles[`tabs-${mode}`],
           tabsContainerClassName,
         )}
         id={tabsContainerId}

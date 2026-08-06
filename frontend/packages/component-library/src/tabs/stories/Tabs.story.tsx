@@ -20,11 +20,7 @@ export default {
           },
           {
             // Disable color-contrast rule for Tabs.
-            // We decided to ignore this rule for now since one issue is about teal,
-            // and the other seems to be white tabs failing bc they are on a white background,
-            // but that variant will only be used on a dark background so should be fine.
-            // Since that is one of the variants that will eventually go away for theming,
-            // we're not too worried about them.
+            // We decided to ignore this rule for now since one issue is about teal.
             id: 'color-contrast',
             enabled: false,
           },
@@ -241,109 +237,6 @@ GroupOfTypesOfTabs.args = {
       name: 'secondary_tabs',
       tabs: [
         {value: 'tab1', text: 'Tab 1', tabContent: <div>Tab 1 Content</div>},
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          tabContent: <div>Tab 2 Content</div>,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'secondary',
-    },
-  ],
-};
-
-export const GroupOfModesOfTabs = MultipleTemplate.bind({});
-GroupOfModesOfTabs.args = {
-  components: [
-    {
-      name: 'primary_light_tabs',
-      mode: 'light',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content(Primary Light)</div>,
-        },
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          tabContent: <div>Tab 2 Content</div>,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'primary',
-    },
-    {
-      name: 'primary_dark_tabs',
-      mode: 'dark',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content(Primary Dark)</div>,
-        },
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          tabContent: <div>Tab 2 Content</div>,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'primary',
-    },
-
-    {
-      name: 'secondary_light_tabs',
-      mode: 'light',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content (Secondary Light)</div>,
-        },
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          tabContent: <div>Tab 2 Content</div>,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'secondary',
-    },
-    {
-      name: 'secondary_dark_tabs',
-      mode: 'dark',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content (Secondary Dark)</div>,
-        },
         {
           value: 'tab2',
           text: 'Tab 2',
@@ -724,62 +617,6 @@ GroupOfTabsWithClosableTabs.args = {
       defaultSelectedTabValue: 'tab1',
       onChange: () => null,
       type: 'secondary',
-    },
-    {
-      name: 'primary_tabs_with_closable_tabs_dark',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content</div>,
-          isClosable: true,
-        },
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          tabContent: <div>Tab 2 Content</div>,
-          isClosable: true,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-          isClosable: true,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'primary',
-      mode: 'dark',
-    },
-    {
-      name: 'secondary_tabs_with_closable_tabs_dark',
-      tabs: [
-        {
-          value: 'tab1',
-          text: 'Tab 1',
-          tabContent: <div>Tab 1 Content</div>,
-          isClosable: true,
-        },
-        {
-          value: 'tab2',
-          text: 'Tab 2',
-          iconLeft: {iconName: 'check', iconStyle: 'solid'},
-          iconRight: {iconName: 'check', iconStyle: 'solid'},
-          tabContent: <div>Tab 2 Content</div>,
-          isClosable: true,
-        },
-        {
-          value: 'tab3',
-          text: 'Tab 3',
-          tabContent: <div>Tab 3 Content</div>,
-          isClosable: true,
-        },
-      ],
-      defaultSelectedTabValue: 'tab1',
-      onChange: () => null,
-      type: 'secondary',
-      mode: 'dark',
     },
   ],
 };
