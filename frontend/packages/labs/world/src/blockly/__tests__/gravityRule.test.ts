@@ -11,6 +11,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {starterFile} from '../../constants';
+import {buildDomainPalette} from '../domainBlocks';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -38,9 +39,13 @@ describe('rules/gravity.rule', () => {
       'AffectedByGravityTrait',
       'ActsAsGroundTrait',
     ]);
+    // The two world properties say what they are OF: a block reading `set
+    // amount of gravity to ⟨9⟩` needs no other context, where `set world
+    // strength to ⟨9⟩` was strength of what. The export names derive from those
+    // names, which is why they are this long.
     expect(meta.properties.map(property => property.ref.exportName)).toEqual([
-      'DirectionProperty',
-      'StrengthProperty',
+      'DirectionOfGravityProperty',
+      'AmountOfGravityProperty',
       'GravityScaleProperty',
       'FallingProperty',
     ]);
@@ -48,6 +53,38 @@ describe('rules/gravity.rule', () => {
       'StartsFallingEvent',
       'StopsFallingEvent',
     ]);
+  });
+
+  it('names its world properties in blocks that read on their own', () => {
+    // The blocks a learner actually sees. `set amount of gravity to ⟨9⟩` and
+    // `set direction of gravity to ⟨0, 1⟩` say what they are of; `set world
+    // strength to ⟨9⟩` was strength of what. The `world` prefix is gone with
+    // them — an actor property names its subject (`… of ⟨this actor⟩`) and a
+    // world property has none, so the word answered nothing.
+    const palette = buildDomainPalette([meta], {
+      ownRuleModule: 'rules/gravity',
+    });
+    const message = (type: string) =>
+      (
+        palette.blocks.find(block => block.type === type) as
+          | {message0: string}
+          | undefined
+      )?.message0;
+
+    expect(message('world_set_Gravity_AmountOfGravityProperty')).toBe(
+      'set amount of gravity to %1',
+    );
+    expect(message('world_get_Gravity_AmountOfGravityProperty')).toBe(
+      'get amount of gravity',
+    );
+    expect(message('world_set_Gravity_DirectionOfGravityProperty')).toBe(
+      'set direction of gravity to %1',
+    );
+
+    // The contrast: an actor property still says whose it is.
+    expect(message('world_set_Gravity_GravityScaleProperty')).toBe(
+      'set gravity scale of %1 to %2',
+    );
   });
 
   it('explains each block it defines', () => {

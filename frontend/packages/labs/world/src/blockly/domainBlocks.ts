@@ -1284,9 +1284,15 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
   const actorScoped = property.scope === 'actor';
   // The value inputs start at %2 after the ACTOR input (%1), else at %1.
   const value = typedValueInputs(property, actorScoped ? 2 : 1);
+  // No `world` in front of a world property: the name is the whole label. What
+  // tells the two apart is the subject — an actor property says whose it is
+  // (`set health of ⟨this actor⟩`) and a world property has nobody to name, so
+  // the prefix was answering a question the block never asked. It also read
+  // badly the moment a property named itself properly: "set world amount of
+  // gravity to" against "set amount of gravity to".
   const message0 = actorScoped
     ? `set ${name} of %1 to ${value.message}`
-    : `set world ${name} to ${value.message}`;
+    : `set ${name} to ${value.message}`;
   const args0: BlockArgDefinition[] = actorScoped
     ? [{type: 'input_value', name: 'ACTOR', check: 'Actor'}, ...value.args]
     : value.args;
@@ -1354,13 +1360,14 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
   const actorSocket = (): string =>
     slot({type: 'input_value', name: 'ACTOR', check: 'Actor'});
 
+  // Unprefixed for a world property, as the setter is above.
   const message0 = actorScoped
     ? hasComponent
       ? `get ${name} ${component()} of ${actorSocket()}`
       : `get ${name} of ${actorSocket()}`
     : hasComponent
-      ? `get world ${name} ${component()}`
-      : `get world ${name}`;
+      ? `get ${name} ${component()}`
+      : `get ${name}`;
 
   return defineBlock({
     type: getPropertyBlockType(memberKey(property.ref)),

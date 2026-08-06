@@ -295,7 +295,7 @@ describe('what changed between two states of a rule', () => {
     )!;
     const keys = memberKeys(meta);
     expect(keys).toContainEqual(key('AffectedByGravityTrait', 'trait'));
-    expect(keys).toContainEqual(key('StrengthProperty', 'property'));
+    expect(keys).toContainEqual(key('AmountOfGravityProperty', 'property'));
     expect(keys).toContainEqual(key('StartsFallingEvent', 'event'));
     expect(keys).toContainEqual(key('RestHeightOfQuery', 'query'));
     expect(keys.filter(k => k.kind === 'step').length).toBeGreaterThan(0);
