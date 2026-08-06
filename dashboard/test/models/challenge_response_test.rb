@@ -42,15 +42,17 @@ class ChallengeResponseTest < ActiveSupport::TestCase
       )
     end
 
-    it 'omits evaluation fields by default' do
+    it 'includes student feedback and status but omits the scores by default' do
       summary = challenge_response.summarize
 
-      %i[student_feedback evaluation_result evaluation_status evaluated_at].each do |field|
+      _(summary[:student_feedback]).must_equal 'feedback'
+      _(summary[:evaluation_status]).must_equal 'success'
+      %i[evaluation_result evaluated_at].each do |field|
         _(summary).wont_include field
       end
     end
 
-    it 'includes evaluation fields when include_evaluation is set' do
+    it 'includes the scored evaluation when include_evaluation is set' do
       summary = challenge_response.summarize(include_evaluation: true)
 
       _(summary[:student_feedback]).must_equal 'feedback'

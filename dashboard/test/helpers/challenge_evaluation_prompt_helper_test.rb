@@ -21,6 +21,13 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
       _(prompt).must_include 'meets: Answer is correct'
       _(prompt).must_include 'developing: Reasoning is incomplete'
     end
+
+    it 'instructs the model to write score-free feedback for the student' do
+      prompt = ChallengeEvaluationPromptHelper.system_prompt(challenge)
+
+      _(prompt).must_include 'addressed directly to the student'
+      _(prompt).must_include 'never mention scores, levels, grades, or the rubric'
+    end
   end
 
   describe '.user_content' do
@@ -71,6 +78,13 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
       _(format[:type]).must_equal 'json_schema'
       key_schema = format.dig(:json_schema, :schema, :properties, :evaluations, :items, :properties, :key)
       _(key_schema[:enum]).must_equal %w[accuracy explanation]
+    end
+
+    it 'requires a student_feedback field' do
+      schema = ChallengeEvaluationPromptHelper.response_format(challenge).dig(:json_schema, :schema)
+
+      _(schema[:properties]).must_include :student_feedback
+      _(schema[:required]).must_include 'student_feedback'
     end
 
     it 'raises when the challenge has no rubric criteria' do

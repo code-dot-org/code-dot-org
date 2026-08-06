@@ -7,23 +7,55 @@ import {
   Challenge,
   challengeValidator,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
+import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
-  default: {fetchJson: jest.fn()},
+  default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
 }));
 
+jest.mock(
+  '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob',
+  () => ({
+    createSketchSnapshotBlob: jest.fn(),
+  })
+);
+
 // React Flow does not render in jsdom; the whiteboard canvas is stubbed out.
+// The stub's button reports one node through updateSources, simulating the
+// student drawing (which enables the submit button).
 jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
   const React = require('react');
   return {
     __esModule: true,
-    default: () => React.createElement('div', null, 'Whiteboard canvas stub'),
+    default: (props: {
+      updateSources: (sources: ReactFlowSketchLabSources) => void;
+    }) =>
+      React.createElement(
+        'div',
+        null,
+        'Whiteboard canvas stub',
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            onClick: () =>
+              props.updateSources({
+                source: {nodes: [{id: 'n1'}], edges: []},
+              } as unknown as ReactFlowSketchLabSources),
+          },
+          'Draw something'
+        )
+      ),
   };
 });
 
 const fetchJson = HttpClient.fetchJson as jest.Mock;
+const post = HttpClient.post as jest.Mock;
+const put = HttpClient.put as jest.Mock;
+const snapshot = createSketchSnapshotBlob as jest.Mock;
 
 const fakeChallenge: Challenge = {
   id: 1,
@@ -36,6 +68,9 @@ const fakeChallenge: Challenge = {
 describe('ChallengeBox', () => {
   beforeEach(() => {
     fetchJson.mockReset();
+    post.mockReset();
+    put.mockReset();
+    snapshot.mockReset();
   });
 
   it('fetches the challenge for the lesson and shows its question', async () => {
@@ -99,5 +134,37 @@ describe('ChallengeBox', () => {
         screen.getByText(/Camera recording is not available/)
       ).toBeInTheDocument()
     );
+  });
+
+  it('shows a confirmation dialog once the response is submitted', async () => {
+    fetchJson.mockResolvedValue({value: [fakeChallenge]});
+    snapshot.mockResolvedValue({
+      blob: new Blob(['png-bytes'], {type: 'image/png'}),
+    });
+    post.mockResolvedValue({
+      json: async () => ({
+        id: 7,
+        assets: [{id: 9, asset_type: 'whiteboard_image'}],
+      }),
+    });
+    put.mockResolvedValue({});
+
+    render(<ChallengeBox lessonId={42} />);
+
+    await waitFor(() =>
+      expect(
+        screen.getByText('Draw a flowchart of the algorithm.')
+      ).toBeInTheDocument()
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+
+    await waitFor(() =>
+      expect(screen.getByText('Response submitted')).toBeInTheDocument()
+    );
+
+    // Dismissing the dialog leaves the challenge in its submitted state.
+    fireEvent.click(screen.getByRole('button', {name: 'OK'}));
+    expect(screen.queryByText('Response submitted')).not.toBeInTheDocument();
   });
 });
