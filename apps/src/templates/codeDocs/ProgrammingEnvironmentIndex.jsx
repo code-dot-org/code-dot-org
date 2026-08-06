@@ -1,7 +1,7 @@
+import {Button} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -26,11 +26,12 @@ export function ProgrammingEnvironmentCard({programmingEnvironment}) {
         )}
       </div>
       <Button
-        __useDeprecatedTag
-        color={Button.Orange}
+        variant="contained"
+        color="primary"
         href={programmingEnvironment.showPath}
-        text={i18n.viewCodeDocs()}
-      />
+      >
+        {i18n.viewCodeDocs()}
+      </Button>
     </div>
   );
 }
@@ -78,7 +79,7 @@ const styles = {
     borderWidth: 1,
     borderRadius: 5,
     width: '30%',
-    padding: '5px 5px 10px',
+    padding: '10px',
     margin: 5,
     display: 'flex',
     flexDirection: 'column',
