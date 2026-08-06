@@ -256,6 +256,30 @@ const coerce = <T>(property: Property<T>, value: unknown): T =>
     ? (Vector.from(value as Vector) as unknown as T)
     : (value as T);
 
+/**
+ * `world.cameras` — iterable, with the same trait filter the actors have.
+ *
+ * A rule's step walks the cameras that elected its trait, exactly as gravity's
+ * step walks the actors that elected `Affected by Gravity`. That symmetry is
+ * the whole point of a camera holding traits.
+ */
+class CameraCollection {
+  private readonly list: Camera[];
+
+  constructor(list: Camera[]) {
+    this.list = list;
+  }
+
+  /** Every camera with a trait — a copy, so a body may add one while walking. */
+  with(trait: Parameters<Camera['has']>[0]): Camera[] {
+    return this.list.filter(camera => camera.has(trait));
+  }
+
+  [Symbol.iterator](): Iterator<Camera> {
+    return this.list[Symbol.iterator]();
+  }
+}
+
 /** `world.actors` — iterable, with a trait filter (`world.actors.with(t)`). */
 class ActorCollection {
   private readonly list: Actor[];
@@ -331,6 +355,7 @@ export class World {
   // this is the default viewport's camera by another name, and generalises to
   // that rather than being replaced by it.
   private activeCameraId: string = DEFAULT_CAMERA_ID;
+  private readonly cameraCollection: CameraCollection;
   // Layer id -> its index, which is its depth. Built once; layers cannot be
   // added or removed while the world runs (they are structural — a layer cannot
   // be spliced into a live scene graph, see `snapshot`).
@@ -403,6 +428,7 @@ export class World {
     if (!this.cameraList.some(camera => camera.id === DEFAULT_CAMERA_ID)) {
       this.cameraList.unshift(makeCamera({id: DEFAULT_CAMERA_ID}));
     }
+    this.cameraCollection = new CameraCollection(this.cameraList);
 
     for (const [id, effects] of Object.entries(init.layerEffects ?? {})) {
       const layer = this.layer(id);
@@ -482,8 +508,8 @@ export class World {
   }
 
   /** The cameras this world holds. Never empty; the default is among them. */
-  get cameras(): readonly Camera[] {
-    return this.cameraList;
+  get cameras(): CameraCollection {
+    return this.cameraCollection;
   }
 
   /**

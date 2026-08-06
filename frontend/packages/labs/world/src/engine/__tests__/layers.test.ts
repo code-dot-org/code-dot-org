@@ -13,6 +13,11 @@ import {DEFAULT_LAYER_ID} from '../core/Layer';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
 import type {World} from '../index';
 
+import {
+  AffectedByGravityTrait,
+  GravityScaleProperty,
+} from './fixtures/gravityRule';
+
 const actor = (id: string) =>
   new ActorBuilder({id, name: id})
     .set(PositionProperty, new Vector(10, 10))
@@ -414,7 +419,7 @@ describe('the camera', () => {
   it('exists without being asked for, at the origin', () => {
     const built = world();
 
-    expect(built.cameras).toHaveLength(1);
+    expect([...built.cameras]).toHaveLength(1);
     expect(built.camera().id).toBe('main');
     expect(built.camera().position).toEqual(new Vector(0, 0));
   });
@@ -450,7 +455,7 @@ describe('the camera', () => {
     built.clearActors();
 
     // The level went; the view did not.
-    expect(built.cameras).toHaveLength(1);
+    expect([...built.cameras]).toHaveLength(1);
     expect([...built.actors]).toHaveLength(0);
   });
 
@@ -483,7 +488,41 @@ describe('the camera', () => {
     built.defineCamera({id: 'overview'});
     built.defineCamera({id: 'overview'});
 
-    expect(built.cameras).toHaveLength(2);
+    expect([...built.cameras]).toHaveLength(2);
+  });
+
+  it('holds traits, which is what makes it something a rule can act on', () => {
+    // The symmetry the whole design rests on: a rule's step walks the CAMERAS
+    // that elected its trait exactly as gravity's step walks the ACTORS that
+    // elected its own. Same trait machinery, different collection.
+    const built = world();
+    built.defineCamera({id: 'follower', traits: [AffectedByGravityTrait]});
+    built.defineCamera({id: 'static'});
+
+    expect(built.cameras.with(AffectedByGravityTrait).map(c => c.id)).toEqual([
+      'follower',
+    ]);
+    expect(built.camera('follower').has(AffectedByGravityTrait)).toBe(true);
+    expect(built.camera('static').has(AffectedByGravityTrait)).toBe(false);
+  });
+
+  it('carries the properties its traits declare', () => {
+    const built = world();
+    built.defineCamera({id: 'follower', traits: [AffectedByGravityTrait]});
+    const camera = built.camera('follower');
+
+    // The slot exists because the trait brought it, and takes a value.
+    expect(camera.hasProperty(GravityScaleProperty)).toBe(true);
+    camera.set(GravityScaleProperty, 3);
+    expect(camera.get(GravityScaleProperty)).toBe(3);
+  });
+
+  it('says which camera has no such property, not which actor', () => {
+    // The shared store is told what to call its holder, so an error names a
+    // camera rather than claiming an Actor is missing something.
+    expect(() => world().camera().get(GravityScaleProperty)).toThrow(
+      /Camera 'main'/,
+    );
   });
 
   it('travels as structure AND as a value, which are different questions', () => {
