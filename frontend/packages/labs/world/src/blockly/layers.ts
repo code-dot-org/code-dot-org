@@ -200,9 +200,10 @@ export const DEFAULT_PARALLAX = {x: 1, y: 1};
 /**
  * One entry of a world's layer stack, as `defineLayer` takes it.
  *
- * An id and nothing else. How a layer responds to the camera is set by a block
- * in its body (`world_layer_motion`), not declared here — it is read every
- * frame and builds nothing, so it is a value rather than part of the structure.
+ * An id and nothing else. How a layer responds to the camera is set by blocks
+ * in its body (`world_layer_parallax`, `world_layer_fixed`) rather than
+ * declared here: both are read every frame and build nothing, so they are
+ * values rather than part of the structure.
  */
 export interface LayerPlanEntry {
   id: string;
