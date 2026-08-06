@@ -45,7 +45,6 @@ class ProgressBubbleSet extends React.Component {
 
     const backgroundStyleProp = {
       ...inlineStyles.background,
-      ...(isSublevel && inlineStyles.backgroundSublevel),
       ...(!isSublevel && index === 0 && backgroundFirstStyle),
       ...(!isSublevel &&
         !level.sublevels &&
@@ -56,7 +55,6 @@ class ProgressBubbleSet extends React.Component {
     const containerStyleProp = {
       ...inlineStyles.container,
       ...(level.isUnplugged && inlineStyles.pillContainer),
-      ...(isSublevel && inlineStyles.containerSublevel),
     };
 
     return (
@@ -104,8 +102,11 @@ class ProgressBubbleSet extends React.Component {
 }
 
 // Height of a bubble row: full circle bubble (dot plus 2px borders) plus its
-// 3px top and bottom margins. Every bubble shape is centered within this
-// height so pills, diamonds and circles share one vertical center.
+// 3px top and bottom margins. Every bubble — pills, diamonds, circles and
+// small sublevel dots alike — is centered within this height so all shapes
+// share one vertical center. Sublevel dots deliberately get no special
+// placement: they used to hang off tuned pixel nudges whose effective
+// position moved with surrounding font metrics.
 const ROW_HEIGHT = DOT_SIZE + 4 + 6;
 
 const inlineStyles = {
@@ -116,9 +117,6 @@ const inlineStyles = {
     left: 0,
     right: 0,
     top: (ROW_HEIGHT - 10) / 2,
-  },
-  backgroundSublevel: {
-    top: 9,
   },
   backgroundFirst: {
     left: 15,
@@ -131,11 +129,6 @@ const inlineStyles = {
     height: ROW_HEIGHT,
     display: 'flex',
     alignItems: 'center',
-  },
-  containerSublevel: {
-    top: 5,
-    height: 'auto',
-    display: 'block',
   },
   pillContainer: {
     marginRight: 2,
