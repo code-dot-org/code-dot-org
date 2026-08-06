@@ -9,6 +9,8 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
+import {SafeAndSupportedImageTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -80,6 +82,8 @@ export default class AssetManager extends React.Component {
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
       projectType: '',
+      pendingUploadData: null,
+      showFlaggedModal: false,
     };
   }
 
@@ -158,14 +162,36 @@ export default class AssetManager extends React.Component {
    * Called when user initiates an upload.
    * @param data - Upload data from jquery.fileupload
    */
-  onUploadStart = data => {
+  onUploadStart = async data => {
     const file = data?.files?.[0];
     if (!file) {
       console.error('No file found in upload data.');
       this.setState({statusMessage: 'Error: No file selected for upload.'});
       return;
     }
-    this.setState({statusMessage: 'Uploading...'});
+
+    const shouldModerate =
+      !this.props.isStartMode &&
+      SafeAndSupportedImageTypes.includes(file.type || '');
+
+    if (!shouldModerate) {
+      this.setState({statusMessage: 'Uploading...'});
+      data.submit();
+      return;
+    }
+
+    this.setState({pendingUploadData: data, statusMessage: 'Uploading...'});
+
+    const moderationStatus = await moderateImage(file, this.state.projectType, {
+      uploaderType: 'AssetManager',
+      assetUrl: this.uploadApi().getUploadUrl(),
+    });
+
+    if (moderationStatus === 'flagged') {
+      this.setState({showFlaggedModal: true, statusMessage: ''});
+      return;
+    }
+
     data.submit();
   };
 
