@@ -1,8 +1,13 @@
 import Modal from '@code-dot-org/component-library/modal';
 import {Typography} from '@mui/material';
 import React from 'react';
+import {createPortal} from 'react-dom';
 
 import i18n from '@cdo/locale';
+
+// Portal to document.body: when nested under another dialog, CustomDialog's
+// height:100% overlay collapses the Modal flex body. z-index keeps this modal on top.
+const FLAGGED_IMAGE_MODAL_Z_INDEX = 1100;
 
 interface FlaggedImageModalProps {
   appName: string;
@@ -17,9 +22,10 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   errorMessage,
   appName,
 }) => {
-  return (
+  return createPortal(
     <Modal
       id="image-flagged-modal"
+      {...{zIndex: FLAGGED_IMAGE_MODAL_Z_INDEX}}
       onClose={() => onCancel(appName)}
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
@@ -60,7 +66,8 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
         children: i18n.cancel(),
         onClick: () => onCancel(appName),
       }}
-    />
+    />,
+    document.body
   );
 };
 
