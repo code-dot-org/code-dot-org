@@ -364,31 +364,39 @@ describe('domain block generators', () => {
     ]);
   });
 
-  it('world_layer_motion sets the layer it is written in', () => {
+  it('world_layer_parallax sets the factor for the layer it is written in', () => {
     // Not part of `define layer`: a new layer moves with the camera like the
     // game does, and parallax is a thing you go and ask for.
-    const run = (motion: string, parallax?: {x: number; y: number}) =>
-      generatorFor('world_layer_motion')(
-        {
-          getFieldValue: (name: string) =>
-            name === 'MOTION' ? motion : parallax,
-        } as never,
+    const run = (parallax: {x: number; y: number}) =>
+      generatorFor('world_layer_parallax')(
+        {getFieldValue: () => parallax} as never,
         {} as never,
         {} as never,
       ) as string;
 
-    expect(run('moves', {x: 0.2, y: 0})).toBe(
+    expect(run({x: 0.2, y: 0})).toBe(
       'world.setLayerParallax(new WorldLab.Vector(0.2, 0), "main");\n',
     );
     // Vertical-only, which a fixed list of presets could not have said.
-    expect(run('moves', {x: 0, y: 0.5})).toBe(
+    expect(run({x: 0, y: 0.5})).toBe(
       'world.setLayerParallax(new WorldLab.Vector(0, 0.5), "main");\n',
     );
-    // Fixed is a word, never the vector (0, 0): a layer at zero still zooms
-    // with the camera and a fixed one does not.
-    expect(run('fixed', {x: 9, y: 9})).toBe(
-      'world.setLayerFit(true, "main");\n',
-    );
+  });
+
+  it('world_layer_fixed is a separate block, and a word not a number', () => {
+    // Its own question: the factor says how much of the camera's motion a layer
+    // takes, this says whether it looks at the camera at all. Folding them
+    // together left a vector on the block doing nothing whenever the answer was
+    // "fixed" — a field that lies about mattering.
+    const run = (fixed: string) =>
+      generatorFor('world_layer_fixed')(
+        {getFieldValue: () => fixed} as never,
+        {} as never,
+        {} as never,
+      ) as string;
+
+    expect(run('fixed')).toBe('world.setLayerFit(true, "main");\n');
+    expect(run('follows')).toBe('world.setLayerFit(false, "main");\n');
   });
 
   it('world_move_camera points the view at a place', () => {

@@ -80,7 +80,7 @@ import {fieldVectorArg, type VectorValue} from './fields/FieldVector';
 import {FOUNDATIONAL_STOCK_RULES} from './foundation';
 import {
   DEFAULT_PARALLAX,
-  LAYER_MOTION_OPTIONS,
+  LAYER_FIXED_OPTIONS,
   layerIdFromValue,
   layerOf,
   layerOptions,
@@ -2706,53 +2706,74 @@ const worldDefineLayer = defineBlock({
  * not defining one.
  */
 /**
- * How this layer responds to the camera — the opt-in to parallax.
+ * How much of the camera's motion this layer takes — the opt-in to parallax.
  *
  * Deliberately NOT part of `define layer`. A new layer moves with the camera
  * like the game does, which is what a learner adding their first one means, and
- * a declaration carrying two settings nobody needs yet is two settings to read
- * past. Parallax is a thing you go and ask for.
+ * a declaration carrying settings nobody needs yet is settings to read past.
+ * Parallax is a thing you go and ask for.
  *
  * It names no layer: it sets the one it is written in, like `set background`
  * and every other slot block (blockly/layers).
  *
- * The vector is how much of the camera's motion the layer takes, per axis.
  * `1, 1` is the game itself. `0.2, 0` is a sky that shifts as the player walks
  * and stays put when they jump — horizontal only, because a sky that bobs on
  * every jump reads as broken. `0, 0.5` is the same idea in a climbing game,
  * which is the case a fixed list of presets could not have said and the reason
  * this is a vector at all.
- *
- * `is fixed to the screen` is a WORD and never the vector `0, 0`. The two look
- * identical until a camera has a zoom — a layer at zero still zooms, a fixed
- * one does not — so a HUD must not be expressible by typing two zeros.
  */
-const worldLayerMotion = defineBlock({
-  type: 'world_layer_motion',
-  message0: 'this layer %1 %2',
-  args0: [
-    {type: 'field_dropdown', name: 'MOTION', options: LAYER_MOTION_OPTIONS},
-    fieldVectorArg('PARALLAX', DEFAULT_PARALLAX),
-  ],
+const worldLayerParallax = defineBlock({
+  type: 'world_layer_parallax',
+  message0: 'this layer moves %1 with the camera',
+  args0: [fieldVectorArg('PARALLAX', DEFAULT_PARALLAX)],
   previousStatement: true,
   nextStatement: true,
   extensions: [worldContextExtension],
   style: 'setup_blocks',
   tooltip:
     'How much of the camera’s motion this layer takes, across and down. 1 and ' +
-    '1 moves with the game; smaller drifts behind; larger runs ahead. Fixed to ' +
-    'the screen ignores the camera altogether, which is what a HUD wants.',
+    '1 moves with the game; smaller drifts behind it; larger runs ahead of it; ' +
+    '0 on an axis does not move along it at all.',
   generator: {
     javascript(block) {
-      const layer = str(layerOf(block));
-      if (block.getFieldValue('MOTION') === 'fixed') {
-        return `world.setLayerFit(true, ${layer});\n`;
-      }
       const value = (block.getFieldValue('PARALLAX') ?? {
         x: 1,
         y: 1,
       }) as VectorValue;
-      return `world.setLayerParallax(new WorldLab.Vector(${Number(value.x)}, ${Number(value.y)}), ${layer});\n`;
+      return `world.setLayerParallax(new WorldLab.Vector(${Number(value.x)}, ${Number(value.y)}), ${str(layerOf(block))});\n`;
+    },
+  },
+});
+
+/**
+ * Whether this layer consults the camera at all — what a HUD is.
+ *
+ * A separate block from the factor above, because it is a separate question.
+ * Folding them together left a vector sitting on the block doing nothing
+ * whenever the answer was "fixed", which is a field that lies about mattering.
+ *
+ * A WORD and never the vector `0, 0`. The two look identical until a camera has
+ * a zoom — a layer at zero still zooms, a fixed one does not — so a score that
+ * would shrink when the player zooms out must not be expressible by typing two
+ * zeros into the block above.
+ */
+const worldLayerFixed = defineBlock({
+  type: 'world_layer_fixed',
+  message0: 'this layer %1',
+  args0: [
+    {type: 'field_dropdown', name: 'FIXED', options: LAYER_FIXED_OPTIONS},
+  ],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Fixed to the screen ignores the camera altogether, which is what an ' +
+    'interface layer wants. Following the camera is what every other layer does.',
+  generator: {
+    javascript(block) {
+      const fixed = block.getFieldValue('FIXED') === 'fixed';
+      return `world.setLayerFit(${fixed}, ${str(layerOf(block))});\n`;
     },
   },
 });
@@ -4139,7 +4160,8 @@ export const DOMAIN_BLOCKS = [
   worldFirstWhere,
   worldIsA,
   worldDefineLayer,
-  worldLayerMotion,
+  worldLayerParallax,
+  worldLayerFixed,
   worldWithinLayer,
   worldMoveCamera,
   worldAddActor,
@@ -4244,8 +4266,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_add_actor',
       // Grouping what is placed, and what draws in front of what.
       'world_define_layer',
-      // The opt-in to parallax; a layer moves with the camera without it.
-      'world_layer_motion',
+      // The opt-in to parallax, and the separate question of whether the
+      // layer looks at the camera at all.
+      'world_layer_parallax',
+      'world_layer_fixed',
       'world_within_layer',
       // Where the view is taken from; layers respond by their own depth.
       'world_move_camera',
