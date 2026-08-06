@@ -14,7 +14,13 @@
 //   - `set` is on both, so `set sprite` / `set position` are legitimately valid
 //     in a template body *and* at runtime.
 //   - `addEffect` is on both, so `add effect` is too — one block, either place.
-//   - `useTraits` is builder-only; `removeEffect` is live-only.
+//   - `useTraits` is builder-only; `Actor.removeEffect` is live-only.
+//
+// There WAS a world counterpart to the actor guard below, for the blocks whose
+// call `WorldBuilder` had no method for. It is gone: the builder records calls
+// and replays them, so its surface is the World's by construction and the
+// guard could only ever warn about programs that work. `ActorBuilder` still
+// accumulates, so its guard stays.
 //
 // Guarding a block that is valid in both would warn about correct programs,
 // which is worse than not warning at all. Where a guard IS right, it catches
@@ -121,27 +127,6 @@ export const runtimeActorExtension = runtimeContextExtension(
   RUNTIME_ACTOR_EXTENSION,
   ['world_actor'],
   'This happens while the game runs. Try placing it inside an event, not under "define actor".',
-);
-
-export const RUNTIME_WORLD_EXTENSION = 'world_needs_live_world';
-
-/**
- * For `remove effect from the world`.
- *
- * `World.removeEffect` is a method of the live world; `WorldBuilder` has no
- * counterpart, for the same reason the actor builder has none. Inside
- * `define world` the name `world` is the builder, so the call would be to a
- * method that is not there.
- *
- * Everywhere else `world` is the live instance: an event handler is
- * `(world, actor, eventValue)` and a rule step is `(world, delta)`. A block
- * with `world` unbound entirely is `worldContext`'s job, not this one, and the
- * two warnings coexist by using different ids.
- */
-export const runtimeWorldExtension = runtimeContextExtension(
-  RUNTIME_WORLD_EXTENSION,
-  ['world_world'],
-  'This happens while the game runs. Try placing it inside an event, not under "define world".',
 );
 
 export const BUILDER_WORLD_EXTENSION = 'world_needs_world_builder';

@@ -54,7 +54,6 @@ import {
 import {
   builderWorldExtension,
   runtimeActorExtension,
-  runtimeWorldExtension,
   traitContextExtension,
 } from './extensions/actorContext';
 import {
@@ -2130,27 +2129,24 @@ const worldThisActor = defineBlock({
  * placed — which is what `assembleWorldModule` orders (event hats above the
  * world block).
  *
- * The two context guards are for the OTHER compilation, the one that reads the
- * live world: `world.actors.ofType(…)` needs a `world`, and needs it to be the
- * running one. Neither fires on the hat-subject case, which names the template
- * and touches no world at all — an event hat stops both walks (`inWorldContext`
- * counts it as binding `world`; `inBuilderContext` stops before reaching
- * `define world`). What they do catch is `any ⟨Coin⟩` read as a value where
- * there is no live world to read it from: inside `define actor`, where `world`
- * is unbound, and directly under `define world`, where the name is the builder
- * — which has no `actors` at all, so the call would be a TypeError on a line
- * the learner never wrote.
+ * The context guard is for the OTHER compilation, the one that reads the world:
+ * `world.actors.ofType(…)` needs a `world` to read from. It does not fire on
+ * the hat-subject case, which names the template and touches no world at all —
+ * an event hat counts as binding `world`. What it catches is `any ⟨Coin⟩` read
+ * as a value inside `define actor`, where the name is unbound entirely.
+ *
+ * Under `define world` this is FINE, and used to warn. The builder now hands
+ * back the actors of the world it is describing (`WorldBuilder.actors`), so
+ * `load map` followed by `first actor of type ⟨Player⟩` reads the actors the
+ * map just placed. Read before anything is placed it finds none, which is the
+ * truth about that point in the program rather than an error.
  */
 const worldActorKind = defineBlock({
   type: 'world_actor_kind',
   message0: 'any %1',
   args0: [{type: 'field_dropdown', name: 'ACTOR', options: actorFieldOptions}],
   output: 'Actor',
-  extensions: [
-    actorOptionsExtension,
-    worldContextExtension,
-    runtimeWorldExtension,
-  ],
+  extensions: [actorOptionsExtension, worldContextExtension],
   // Actor values share the sprite style — the color that groups the actors.
   style: 'sprite_blocks',
   tooltip:
@@ -2733,11 +2729,7 @@ const worldRemoveActor = defineBlock({
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  extensions: [
-    actorInputExtension,
-    worldContextExtension,
-    runtimeWorldExtension,
-  ],
+  extensions: [actorInputExtension, worldContextExtension],
   style: 'behavior_blocks',
   tooltip:
     'Remove an actor from the world. It stops being drawn and stops being ' +
@@ -2909,7 +2901,7 @@ const worldClearWorld = defineBlock({
   message0: 'clear world',
   previousStatement: true,
   nextStatement: true,
-  extensions: [worldContextExtension, runtimeWorldExtension],
+  extensions: [worldContextExtension],
   style: 'behavior_blocks',
   tooltip:
     'Remove every actor from the world. Nothing is left to draw or for the ' +
@@ -3481,13 +3473,13 @@ const defineEffectBlocks = (owner: {
     ],
     previousStatement: true,
     nextStatement: true,
-    // Runtime-only, for the same reason as `remove effect … from <actor>`:
-    // un-declaring something described once has no meaning on a builder.
-    extensions: [
-      effectFileOptionsExtension,
-      worldContextExtension,
-      runtimeWorldExtension,
-    ],
+    // Valid wherever `world` is bound, `define world` included. It used to be
+    // guarded there on the grounds that un-declaring something described once
+    // has no meaning — true of a builder that accumulated state, false of one
+    // that records calls: `add effect` then `remove effect` is a sequence, and
+    // replaying it leaves no effect. The actor counterpart is still guarded,
+    // because `ActorBuilder` does accumulate.
+    extensions: [effectFileOptionsExtension, worldContextExtension],
     style: 'sprite_blocks',
     tooltip: `Stop playing an effect on ${owner.filters}.`,
     generator: {

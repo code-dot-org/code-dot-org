@@ -45,19 +45,18 @@ const BUILDER_ONLY: Record<string, string> = {
 };
 
 /**
- * Runtime-only, because the builder has no counterpart.
+ * Runtime-only, because the question has no answer while a world is described.
  *
- * Their blocks carry `runtimeWorldExtension`. Removing an actor that has not
- * been placed, raising an event before anything can hear it, or asking which
- * key is down while the world is still being described are all questions with
- * no answer at build time.
+ * This list used to be longer. `clearActors` and `removeActor` were on it —
+ * "nothing is placed to remove" — which stopped being true once `loadMap`
+ * placed actors into a world the builder holds: `load map`, `clear world`,
+ * `load map` is a world replacing its level, not a mistake. What is left is
+ * the three that need a world that is RUNNING, not merely populated.
  */
 const RUNTIME_ONLY: Record<string, string> = {
-  clearActors: 'there is nothing placed to clear while the world is described',
-  emit: 'nothing can hear an event before the actors exist',
+  emit: 'nothing can hear an event before a tick dispatches it',
   isKeyDown: 'there is no frame yet, so no key is down',
   query: 'a query reads a running world',
-  removeActor: 'nothing is placed to remove',
 };
 
 /**
