@@ -13,10 +13,10 @@ import {ChatEvent, isChatMessage} from '../types';
  * attempting a parse -- objects and arrays get formatted, anything else is
  * rendered unchanged.
  *
- * The prose case exists because these messages once had the callback applied
- * before they were saved. It cannot be dropped until no such rows remain, and
- * aichat_events has no retention policy, so that needs either a backfill or a
- * deliberate cutoff date. Until then this stays.
+ * The prose case exists because these messages once had formatForDisplay
+ * applied before they were saved. bin/cron/delete_old_ai_chat_data drops
+ * aichat_events rows after 90 days, so the prose branch can go 90 days after
+ * this ships -- there is nothing to backfill, just a date to wait for.
  */
 export function applySchemaDisplayTransform(
   events: ChatEvent[],
