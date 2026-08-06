@@ -75,12 +75,7 @@ function write(
   if (has(source, folderId, file.name)) {
     return source;
   }
-  // `getNextFileId` is max-numeric-id + 1, which is NaN when a project holds a
-  // non-numeric id; fall back to a count so a write never lands on `NaN` twice.
-  const numeric = getNextFileId(Object.values(source.files));
-  const id = Number.isNaN(Number(numeric))
-    ? String(Object.keys(source.files).length + 1)
-    : numeric;
+  const id = getNextFileId(Object.values(source.files));
   return {
     ...source,
     files: {

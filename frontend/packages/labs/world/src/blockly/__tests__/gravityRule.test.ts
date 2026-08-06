@@ -10,7 +10,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {starterFile} from '../../constants';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -19,13 +19,13 @@ import {registerDefaultProjectRules} from './defaultProjectRules';
 // before a module can be generated from it — the same call the editor makes.
 registerDefaultProjectRules();
 
-const source = DEFAULT_PROJECT.source.files.gravityRule.contents;
+const source = starterFile('gravityRule').contents;
 const meta = parseRuleMeta('rules/gravity', source)!;
 const module_ = ruleMetaToModule(meta);
 
 describe('rules/gravity.rule', () => {
   it('ships as a .rule, not a shim', () => {
-    expect(DEFAULT_PROJECT.source.files.gravityRule.name).toBe('gravity.rule');
+    expect(starterFile('gravityRule').name).toBe('gravity.rule');
     expect(source).not.toContain('world-lab');
   });
 
@@ -81,7 +81,7 @@ describe('rules/gravity.rule', () => {
     // `world_on_Gravity_StartsFallingEvent`. Both are built from the rule's NAME
     // and its members' export names, so renaming either here — the rule in its
     // `define rule` block, or a member — silently unhooks the tutorial.
-    const player = DEFAULT_PROJECT.source.files.player.contents;
+    const player = starterFile('player').contents;
     expect(player).toContain('Gravity#AffectedByGravityTrait');
     expect(player).toContain('world_on_Gravity_StartsFallingEvent');
   });
@@ -165,7 +165,7 @@ describe('rules/gravity.rule', () => {
     // `actors/ground.js` kept importing the built-in `GroundTrait` after the
     // rule moved into the project, so the authored rule's ground loop matched
     // nothing: the player fell, was held up by collision, and never landed.
-    const ground = DEFAULT_PROJECT.source.files.ground.contents;
+    const ground = starterFile('ground').contents;
     expect(ground).toContain("from 'rules/gravity'");
     expect(ground).toContain('ActsAsGroundTrait');
     // …and its `world-lab` import no longer names a ground trait, which would
@@ -271,6 +271,6 @@ describe('rules/gravity.rule', () => {
   it('is what the world puts in play', () => {
     // By name — the world says which rule, and the generator works out which
     // file that is when it comes to write the import.
-    expect(DEFAULT_PROJECT.source.files.main.contents).toContain('"Gravity"');
+    expect(starterFile('main').contents).toContain('"Gravity"');
   });
 });

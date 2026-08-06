@@ -7,6 +7,7 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {DEFAULT_PROJECT} from '../../constants';
 import {importStockEffect} from '../importStockEffect';
 import {parseEffectDocument} from '../model';
 import {stockEffect} from '../stock';
@@ -87,6 +88,39 @@ describe('importStockEffect', () => {
     });
 
     expect(importStockEffect(existing, ripple).path).toBe('effects/ripple-3');
+  });
+
+  it('keeps the first effect when a second is imported', () => {
+    // The two files have to get different ids, and once did not: every id in a
+    // world project made `getNextFileId` hand back the string "NaN", so the
+    // second import landed on the first one's key and replaced it. Both names
+    // were free, so nothing collided and nothing was said — the dropdown went
+    // on offering an effect whose file had gone.
+    const first = importStockEffect(project(), ripple);
+    const second = importStockEffect(first.source, tint);
+
+    expect(
+      Object.values(second.source.files)
+        .map(file => file.name)
+        .sort(),
+    ).toEqual(['ripple.effect', 'tint.effect']);
+  });
+
+  it('keeps both when imported into the starter project', () => {
+    // The same thing by the route a learner takes: two `add effect` dropdowns
+    // on the project they were given, one after the other. The starter already
+    // ships `ripple.effect`, so the first import is the renamed copy.
+    const before = DEFAULT_PROJECT.source;
+    const first = importStockEffect(before, ripple);
+    const second = importStockEffect(first.source, tint);
+
+    expect(Object.keys(second.source.files)).toHaveLength(
+      Object.keys(before.files).length + 2,
+    );
+    const names = Object.values(second.source.files).map(file => file.name);
+    expect(names).toContain('ripple.effect');
+    expect(names).toContain('ripple-2.effect');
+    expect(names).toContain('tint.effect');
   });
 
   it('ignores same-named files in other folders', () => {

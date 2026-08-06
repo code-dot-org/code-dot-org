@@ -26,13 +26,27 @@ export const getEmptyProject = (): MultiFileSource => ({
 export const getFileExtension = (filename: string): string =>
   filename.split('.').pop()?.toLowerCase() || '';
 
+/**
+ * One past the highest integer id in `ids`, as a string.
+ *
+ * Ids that are not integers are ignored rather than folded into the maximum.
+ * `Number('main')` is `NaN` and `Math.max` propagates it, so a project holding
+ * a single non-integer id used to get back the string `"NaN"` — for every
+ * caller, every time. Two files written in a row then both landed on `"NaN"`,
+ * and the second silently replaced the first: a learner's work destroyed with
+ * nothing said. Skipping them cannot collide, because an integer id is never
+ * one of the ids being skipped.
+ */
+const nextId = (ids: string[]): string =>
+  String(Math.max(0, ...ids.map(Number).filter(Number.isInteger)) + 1);
+
 /** Next available file id, one past the current max numeric id. */
 export const getNextFileId = (files: ProjectFile[]): FileId =>
-  String(Math.max(0, ...files.map(f => Number(f.id))) + 1);
+  nextId(files.map(f => f.id));
 
 /** Next available folder id, one past the current max numeric id. */
 export const getNextFolderId = (folders: ProjectFolder[]): FolderId =>
-  String(Math.max(0, ...folders.map(f => Number(f.id))) + 1);
+  nextId(folders.map(f => f.id));
 
 /** Ids of every folder nested (at any depth) under `parentId`. */
 export const findSubFolders = (

@@ -20,7 +20,7 @@
 import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
-import {DEFAULT_PROJECT} from '../../constants';
+import {DEFAULT_PROJECT, starterFile} from '../../constants';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectRuleMetas} from '../projectModules';
@@ -107,8 +107,8 @@ describe('the shipped project', () => {
       expect(`${path}: ${count > 0}`).toBe(`${path}: true`);
     }
     // The deep ones: gravity's steps and the world's own body.
-    expect(
-      typesIn(DEFAULT_PROJECT.source.files.gravityRule.contents).length,
-    ).toBeGreaterThan(40);
+    expect(typesIn(starterFile('gravityRule').contents).length).toBeGreaterThan(
+      40,
+    );
   });
 });
