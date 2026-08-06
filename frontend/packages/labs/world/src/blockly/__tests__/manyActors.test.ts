@@ -10,7 +10,11 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {manyActorVariables, yieldsMany} from '../manyActors';
+import {
+  manyActorVariables,
+  registerManyActorBlock,
+  yieldsMany,
+} from '../manyActors';
 
 /** A stand-in workspace: blocks by type, with the fields they carry. */
 const workspace = (
@@ -113,5 +117,41 @@ describe('yieldsMany', () => {
 
   it('is false for an empty socket', () => {
     expect(yieldsMany(null)).toBe(false);
+  });
+});
+
+describe('a property that holds actors', () => {
+  // `actor to follow`, declared `actors` on a camera trait. Such a property is
+  // ALWAYS a list — `Traited.coerce` wraps a lone actor into one — so its
+  // getter hands over `[player]`, never `player`.
+  //
+  // Its block type is generated per property, so it cannot be listed with the
+  // literals; the generator registers it instead. Before that, `get position of
+  // ⟨get actor to follow⟩` compiled to `[player].get(PositionProperty)` — the
+  // property read off the array, which is not a method an array has. Every
+  // socket that reads one actor was blind to the list.
+  const GETTER = 'world_get_CameraFollowActorToFollow';
+
+  it('yields many once the generator has registered it', () => {
+    expect(yieldsMany({type: GETTER} as never)).toBe(false);
+
+    registerManyActorBlock(GETTER);
+
+    expect(yieldsMany({type: GETTER} as never)).toBe(true);
+  });
+
+  it('carries into a variable set from it', () => {
+    // The same reasoning `set ⟨a⟩ to ⟨any Coin⟩` already got: what a list is
+    // assigned to is a list.
+    registerManyActorBlock(GETTER);
+    const space = workspace([
+      {
+        type: 'variables_set_Actor',
+        fields: {VAR: 'target'},
+        value: {type: GETTER},
+      },
+    ]);
+
+    expect(manyActorVariables(space as never).has('target')).toBe(true);
   });
 });

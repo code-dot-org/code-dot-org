@@ -37,6 +37,31 @@ const MANY_BY_TYPE = new Set([
   'world_first_where',
 ]);
 
+/**
+ * Generated blocks that hand out an actor LIST, registered as they are defined.
+ *
+ * A property declared `actors` always holds a list — `Traited.coerce` wraps a
+ * lone actor into one, so `actor to follow` is `[player]` and never `player` —
+ * and its getter is generated per property, so its block type cannot be written
+ * down here. The generator knows the type and says so (`domainBlocks`), which
+ * is the same arrangement `GENERATED_WORLD_CALLS` uses for the calls a factory
+ * emits and no regex can see.
+ *
+ * Without this, `get position of ⟨get actor to follow⟩` read the property off
+ * the ARRAY: `[player].get(PositionProperty)`, which is not a method an array
+ * has. The list was invisible to every socket that reads one actor.
+ */
+const MANY_GENERATED = new Set<string>();
+
+/** Declare that a generated block hands out an actor list. */
+export function registerManyActorBlock(type: string): void {
+  MANY_GENERATED.add(type);
+}
+
+/** Whether a block type hands out an actor list, literal or generated. */
+const isManyType = (type: string): boolean =>
+  MANY_BY_TYPE.has(type) || MANY_GENERATED.has(type);
+
 /** The blocks that make a variable a list by naming it. */
 const MAKES_MANY = new Set(['world_push_actor', 'world_clear_actors']);
 
@@ -84,7 +109,7 @@ export function manyActorVariables(
         continue;
       }
       const fromMany =
-        MANY_BY_TYPE.has(from.type) ||
+        isManyType(from.type) ||
         (from.type === 'variables_get_Actor' &&
           many.has(from.getFieldValue('VAR') ?? ''));
       if (fromMany) {
@@ -106,7 +131,7 @@ export function yieldsMany(plugged: Blockly.Block | null | undefined): boolean {
   if (!plugged) {
     return false;
   }
-  if (MANY_BY_TYPE.has(plugged.type)) {
+  if (isManyType(plugged.type)) {
     return true;
   }
   if (plugged.type !== 'variables_get_Actor') {

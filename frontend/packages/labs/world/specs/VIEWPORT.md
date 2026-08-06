@@ -316,10 +316,25 @@ is two layers, which is cheap now that a layer holding no actors costs nothing.
 Two terms, composed:
 
 ```
-image position = camera position (*) layer parallax + slot offset
+image position = (camera position - camera rest) (*) layer parallax + slot offset
 ```
 
 `(*)` is component-wise, since the factor is per-axis.
+
+A camera's position is the point it shows at the MIDDLE of the view, which is
+the same thing an actor's position means — an actor is drawn centred on its own,
+and the two are literally the same `PositionProperty`, so they cannot mean
+different things without that property meaning two things by whoever holds it.
+`set position of ⟨camera⟩ to ⟨get position of ⟨player⟩⟩` therefore centres the
+player, with no arithmetic to write.
+
+That is why the term is measured from the camera's REST position — the middle of
+the world's own rectangle — rather than from the world origin. Resting, the
+whole expression is zero for every layer at every factor, so a world that never
+mentions a camera draws exactly where it drew before cameras existed. Folding
+the rest position in before the factor rather than after is what buys that: a
+layer at factor 0 must not move at all, and `(rest - camera) * 0` is zero where
+`rest - camera * 0` is half a screen.
 
 The FACTOR ties the image to the camera. The OFFSET is motion the author owns,
 and it is why a factor alone is not enough: a factor ties an image to the camera

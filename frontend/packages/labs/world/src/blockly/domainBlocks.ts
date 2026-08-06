@@ -99,7 +99,7 @@ import {
   localActorFor,
   localActorVar,
 } from './localActors';
-import {yieldsMany} from './manyActors';
+import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {instanceId, type MapPlacement} from './mapPlacements';
 import {
   actorFieldOptions,
@@ -1404,8 +1404,15 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
       ? `get ${name} ${component()}`
       : `get ${name}`;
 
+  const type = getPropertyBlockType(memberKey(property.ref));
+  if (property.type === 'actors') {
+    // It reports a LIST, always — see `registerManyActorBlock`. A socket that
+    // reads one actor has to know, or it reads the property off the array.
+    registerManyActorBlock(type);
+  }
+
   return defineBlock({
-    type: getPropertyBlockType(memberKey(property.ref)),
+    type,
     message0,
     args0,
     inputsInline: true,

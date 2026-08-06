@@ -209,7 +209,13 @@ const world = (
   }>,
   clearColor: [number, number, number, number] = [0, 0, 0, 1],
   /** Where the one camera looks from, and how each layer responds to it. */
-  camera: {x: number; y: number} = {x: 0, y: 0},
+  // Resting, as a real World's default camera is: its position is the point it
+  // shows at the MIDDLE of the view (core/Camera), so (0, 0) is a camera that
+  // has been moved half a viewport up and left, not one left alone.
+  camera: {x: number; y: number} = {
+    x: VIEWPORT_WIDTH / 2,
+    y: VIEWPORT_HEIGHT / 2,
+  },
   parallaxes: Array<{x: number; y: number}> = [],
   fits: boolean[] = [],
 ) =>
@@ -341,8 +347,14 @@ describe('drawing the backdrop', () => {
     // The whole of what parallax means. Opposite, because moving the view right
     // moves the world left; per axis, because the commonest setting in a
     // side-scroller is horizontal only.
+    //
+    // Measured from where the camera RESTS, the middle of the view, because
+    // that is what its position names (core/Camera). The camera below sits one
+    // whole viewport right and down from the middle, so the game layer moves a
+    // viewport the other way and the sky moves a fifth of that horizontally.
+    const away = {x: VIEWPORT_WIDTH * 1.5, y: VIEWPORT_HEIGHT * 1.5};
     new PhaserBinding(
-      world([{}, {}], [0, 0, 0, 1], {x: 100, y: 50}, [
+      world([{}, {}], [0, 0, 0, 1], away, [
         {x: 0.2, y: 0},
         {x: 1, y: 1},
       ]),
@@ -350,8 +362,28 @@ describe('drawing the backdrop', () => {
     );
 
     expect(layers.map(layer => [layer.x, layer.y])).toEqual([
-      [-20, -0],
-      [-100, -50],
+      [-VIEWPORT_WIDTH * 0.2, -0],
+      [-VIEWPORT_WIDTH, -VIEWPORT_HEIGHT],
+    ]);
+  });
+
+  it('moves nothing at all while the camera rests', () => {
+    // The reason the centre is folded in BEFORE the parallax factor. A world
+    // that never mentions a camera has one, sitting in the middle of the view,
+    // and it must draw exactly where it drew before cameras existed — including
+    // a layer at factor 0, which `centre - camera * 0` would have shoved half a
+    // screen sideways.
+    new PhaserBinding(
+      world([{}, {}], [0, 0, 0, 1], undefined, [
+        {x: 0, y: 0},
+        {x: 1, y: 1},
+      ]),
+      pane(),
+    );
+
+    expect(layers.map(layer => [layer.x, layer.y])).toEqual([
+      [-0, -0],
+      [-0, -0],
     ]);
   });
 

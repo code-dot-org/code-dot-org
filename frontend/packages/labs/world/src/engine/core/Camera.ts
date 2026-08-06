@@ -1,6 +1,13 @@
 // A camera: where the view is taken from (specs/VIEWPORT.md).
 //
-// A POSE, and nothing else. A camera has a position and no pixels of its own —
+// A POSE, and nothing else. Its position is the point it shows at the MIDDLE of
+// the view — the same meaning an actor's position has (an actor is drawn centred
+// on its own), which it must have, because the two are literally the same
+// `PositionProperty`. A camera whose position meant the top-left corner would be
+// one property meaning two things by whoever held it, and `set position of
+// ⟨camera⟩ to ⟨get position of ⟨player⟩⟩` would put the player in the corner.
+//
+// A camera has a position and no pixels of its own —
 // the drawing exists only where a camera is applied to a surface — which is why
 // an effect "on a camera" is defined as applying to every viewport rendering
 // through it, and why a camera is not a thing that draws.
@@ -26,6 +33,7 @@ import type {Trait} from './Trait';
 import {Traited} from './Traited';
 import type {Property} from './types';
 import {Vector} from './Vector';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
 import type {World} from './World';
 
 /**
@@ -37,11 +45,25 @@ import type {World} from './World';
  */
 export const DEFAULT_CAMERA_ID = 'main';
 
+/**
+ * Where a camera rests: the middle of the view, so a fresh world frames the
+ * world's origin at the top-left corner exactly as it did before cameras.
+ *
+ * The consequence of a position meaning the CENTRE. A camera reporting (0, 0)
+ * would be one showing the world origin in the middle of the screen, which is
+ * half a viewport from where every map is drawn.
+ */
+const RESTING_POSITION = (): Vector =>
+  new Vector(VIEWPORT_WIDTH / 2, VIEWPORT_HEIGHT / 2);
+
 /** What a camera is asked for when it is declared. */
 export interface CameraInit {
   id: string;
   name?: string;
-  /** Where it looks from, in world pixels; defaults to the origin. */
+  /**
+   * The point it shows at the MIDDLE of the view, in world pixels; defaults to
+   * the middle of the world's own rectangle.
+   */
   position?: Vector;
   /** Traits it elects — how it behaves, authored in a rule. */
   traits?: Trait[];
@@ -101,7 +123,7 @@ export class Camera {
     this.name = init.name ?? init.id;
     this.position = init.position
       ? new Vector(init.position.x, init.position.y)
-      : new Vector(0, 0);
+      : RESTING_POSITION();
     this.traited = new Traited(
       `Camera '${init.id}'`,
       init.traits ?? [],
