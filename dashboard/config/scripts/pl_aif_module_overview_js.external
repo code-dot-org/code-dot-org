@@ -3,67 +3,73 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Module Overview
+<img src="https://images.code.org/11d7634b4267f4aa8afc6a3caa340a9b-MS17.png" alt="Insert alt text here" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
-This professional learning module is made up of **five lessons:**
+# Getting Ready for the Curriculum
 
-<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+This professional learning module gives you a guided preview of the key concepts and instructional approaches used throughout the unit.
 
-  <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Lesson 1 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; font-size: 14pt;">
-            <h3>Lesson 1 - Introduction to Web Apps</h3>
-            <div><strong>⭐️ You are here!⭐️</strong></div>
-            <div>This lesson introduces what a web app is, how users interact with one, and the core parts of a website. You will build a shared vocabulary for the structural components you will be teaching throughout the unit.<br><br><em>10 minutes</em></div>
-        </div>
-    </div>
+Think of this module as a head start: a chance to build familiarity with the ideas your students will encounter, and to start thinking about how you'll teach them in your classroom.
 
-  <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/3d11b3154389d2caa405683ffda44ff6-image-1740592165845.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #E4E2F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
-            <h3>Lesson 2 - Intro to CSS</h3>
-            <div>This lesson covers CSS and how it shapes the user experience of a web app. You will learn the POUR accessibility principles and how to apply them when styling a page.<br><br><em>20 minutes</em></div>
-        </div>
-    </div>
+This module highlights important concepts and teaching strategies, but it doesn't replace reviewing individual lesson materials. Take time to review each lesson before teaching it with students.
 
-  <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/76c4e5b2632895e2ff6513ffb63ee5fc-image-1785425093199.png" alt="Lesson 3 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; font-size: 14pt;">
-            <h3>Lesson 3 - Interactivity in Web Apps</h3>
-            <div>This lesson introduces JavaScript as the language that makes a web app respond to users. You will learn how event listeners and handlers work together with the DOM to update a page in real time.<br><br><em>25 minutes</em></div>
-        </div>
-    </div>
+<div style="clear:both;"></div>
 
-  <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/3f12c0d8b05f89f5ee40071c08233249-image-1785425200781.png" alt="Lesson 4 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #E4E2F8; padding: 15px; border-radius: 10px; font-size: 14pt;">
-            <h3>Lesson 4 - JS Functions, Conditionals, and Loops</h3>
-            <div>This lesson covers three core building blocks of JavaScript: reusable functions, if/else conditionals, and loops. You will see how these pieces let students build programs that make decisions and repeat actions.<br><br><em>25 minutes</em></div>
-        </div>
-    </div>
+---
 
-  <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="https://images.code.org/b39dda06cfbafec7aef8b85d0c3caed1-image-1740592349350.png" alt="Lesson 5 Icon" style="width: 20%; max-width: 120px; height: auto;">
-        <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; font-size: 14pt;">
-            <h3>Lesson 5 - Preparing for the Final Project</h3>
-            <div>This lesson focuses on key instructional strategies for guiding students through their final project, including collaboration methods, structured feedback, and time management planning.<br><br><em>10 minutes</em></div>
-        </div>
-    </div>
+## This Module Covers 6 Lessons
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 25px auto;">
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 1 - Module Introduction</h3>
+    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-size: 11pt; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
+    <div>A short orientation to what this module covers and how to move through it.<br><br><em>5 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 2 - Web Apps</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 1-2</div>
+    <div>Here's the foundation you'll return to all unit: what makes something a web app, and how users actually interact with one. You'll build a shared vocabulary for the structural components you'll be teaching throughout the unit.<br><br><em>10 minutes</em></div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 3 - Design Foundations</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 3-5</div>
+    <div>Styling decisions are where accessibility either happens on purpose or gets missed entirely. This lesson covers CSS and how it shapes the user experience of a web app, along with the POUR accessibility principles and how to apply them when styling a page.<br><br><em>20 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 4 - Interactivity in Web Apps</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 6-8</div>
+    <div>Event listeners and handlers are the mechanism behind every button click and page update your students will build. This lesson introduces JavaScript as the language that makes a web app respond to users, and how the DOM updates a page in real time.<br><br><em>25 minutes</em></div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 5 - JS Functions, Conditionals, and Loops</h3>
+    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 9-11</div>
+    <div>Reusable functions, if/else conditionals, and loops: these three building blocks show up in nearly everything students write from here on. You'll see how these pieces let students build programs that make decisions and repeat actions.<br><br><em>25 minutes</em></div>
+  </div>
+
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Lesson 6 - Preparing for the Final Project</h3>
+    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lesson 12</div>
+    <div>Guiding students through a final project takes more than good code checks. This lesson focuses on key instructional strategies including collaboration methods, structured feedback, and time management planning.<br><br><em>10 minutes</em></div>
+  </div>
 
 </div>
-
-
-
 
 ---
 
 ## Engaging with This Module
 
-Feel free to complete as much or as little of this module as is useful for you and your students! 
+As you move through the module, focus on building confidence with the concepts, noticing instructional strategies, and making connections to how students may experience the learning in your classroom.
 
-Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
+Throughout these lessons, you'll also see how **AI-supported teaching strategies** connect to each concept along the way.
 
-You'll be able to give Code.org your feedback on the last level of this module.
 
-![]()
+
+
+
+
 MARKDOWN

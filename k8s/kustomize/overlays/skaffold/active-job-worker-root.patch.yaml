@@ -1,0 +1,13 @@
+# skaffold sync only works when the user is root, matching the user.*
+# overrides in the Helm skaffold config. See deployment-root.patch.yaml.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-active-job-worker
+spec:
+  template:
+    spec:
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0

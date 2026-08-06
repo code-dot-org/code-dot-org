@@ -162,7 +162,11 @@ class LevelsController < ApplicationController
     # TODO: TEACH-1864 pass in unit_group_unit
     properties = {}
     additional_parameters = {}
-    additional_parameters[:widget2_start_sources] = params[:widget2] if params[:widget2].present?
+    # This action is open to signed out users and the parameter names a directory to
+    # read, so honor it only for a user who could edit a widget2.
+    if params[:widget2].present? && can?(:manage, :widget2)
+      additional_parameters[:widget2_start_sources] = params[:widget2]
+    end
     properties[@level.id] = @level.summarize_for_lab2_properties(nil, nil, current_user, **additional_parameters)
     if @level.is_a?(BubbleChoice)
       @level.sublevels.each do |sublevel|

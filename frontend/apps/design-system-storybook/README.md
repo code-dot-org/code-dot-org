@@ -20,13 +20,12 @@ story under each brand in the rebrand. Selecting a brand drives
 This mirrors production, where `data-brand` is set server-side on `<html>` by
 `Cdo::Brand` (see `lib/cdo/brand.rb`). The brand codes:
 
-| Code           | Toolbar label         | Tokens                                         |
-| -------------- | --------------------- | ---------------------------------------------- |
-| `code`         | code.org              | legacy `:root` ramp (== `codeai`)              |
-| `codeai`       | CodeAI                | legacy `:root` ramp — **default**              |
-| `codeai-next`  | CodeAI · CADS         | CADS ramp (`[data-brand='codeai-next']`)       |
-| `codeai-audit` | CodeAI · Audit (pink) | all-pink audit (`[data-brand='codeai-audit']`) |
+| Code           | Toolbar label         | Tokens                                                 |
+| -------------- | --------------------- | ------------------------------------------------------ |
+| `code`         | code.org              | legacy `:root` ramp (== `codeai`)                      |
+| `codeai`       | CodeAI                | legacy `:root` ramp                                    |
+| `codeai-next`  | CodeAI · CADS         | CADS ramp (`[data-brand='codeai-next']`) — **default** |
+| `codeai-audit` | CodeAI · Audit (pink) | all-pink audit (`[data-brand='codeai-audit']`)         |
 
-The default is `codeai`, matching the production `default-brand` DCDO key.
-`code` and `codeai` render identically until the brand cutover, so only
-`codeai-next` and `codeai-audit` visibly differ today.
+The default is `codeai-next`, matching the production `default-brand` DCDO key.
+`code` and `codeai` render identically until the brand cutover.

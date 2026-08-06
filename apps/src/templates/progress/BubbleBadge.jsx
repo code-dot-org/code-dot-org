@@ -82,18 +82,18 @@ export function AssessmentBadge() {
       <FontAwesomeV6Icon
         iconName="circle"
         className="fa-stack-2x"
-        style={styles.purple}
+        style={styles.badgeBackground}
       />
       <FontAwesomeV6Icon
         iconName="circle"
         iconStyle="regular"
         className="fa-stack-2x"
-        style={styles.white}
+        style={styles.badgeOutline}
       />
       <FontAwesomeV6Icon
-        iconName="check"
+        iconName="star"
         className="fa-stack-1x"
-        style={styles.white}
+        style={styles.badgeStar}
       />
     </span>
   );
@@ -109,19 +109,25 @@ const styles = {
   },
   bubblePosition: {
     position: 'absolute',
-    top: -7,
-    right: -7,
+    top: -4,
+    right: -10,
   },
   diamondBubblePosition: {
     position: 'absolute',
-    top: -13,
-    right: -17,
+    top: -10,
+    right: -20,
   },
-  purple: {
-    color: 'var(--text-brand-purple-primary)',
+  badgeBackground: {
+    color: 'var(--background-neutral-primary)',
   },
-  white: {
-    color: 'var(--text-neutral-inverse)',
+  badgeOutline: {
+    color: 'var(--text-neutral-primary)',
+  },
+  badgeStar: {
+    color: 'var(--text-neutral-primary)',
+    // The star glyph rides low in the fa-stack line box; nudge it up so it
+    // sits centered in the badge circle.
+    transform: 'translateY(-1px)',
   },
   keepWorkingSmallBadgePosition: {
     position: 'absolute',
